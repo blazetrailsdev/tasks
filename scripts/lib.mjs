@@ -1,0 +1,75 @@
+// Shared helpers for build-index.mjs and validate.mjs.
+import { readFileSync, readdirSync, statSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import yaml from "js-yaml";
+
+export const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+// 0000-template/ is the literal starter directory — copy-this content
+// with placeholder frontmatter that intentionally fails validation. It
+// is excluded from index generation and validation.
+const RFC_DIR_RE = /^(?!0000-)\d{4}-[a-z0-9][a-z0-9-]*$/;
+const STORY_FILE_RE = /^[a-z0-9][a-z0-9-]*\.md$/;
+
+export const RFC_STATUSES = ["draft", "active", "closed", "postponed", "superseded"];
+export const STORY_STATUSES = ["draft", "ready", "claimed", "in-progress", "done", "blocked"];
+
+export function parseFrontmatter(filePath) {
+  const text = readFileSync(filePath, "utf8");
+  const match = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  if (!match) return { frontmatter: null, body: text, lines: text.split("\n").length };
+  return {
+    frontmatter: yaml.load(match[1]) ?? {},
+    body: match[2],
+    lines: text.split("\n").length,
+  };
+}
+
+export function loadAll() {
+  const rfcs = [];
+  const stories = [];
+  for (const name of readdirSync(REPO_ROOT)) {
+    if (!RFC_DIR_RE.test(name)) continue;
+    const rfcDir = join(REPO_ROOT, name);
+    if (!statSync(rfcDir).isDirectory()) continue;
+    const readme = join(rfcDir, "README.md");
+    let rfcEntry = null;
+    try {
+      const { frontmatter, body, lines } = parseFrontmatter(readme);
+      rfcEntry = { dir: name, file: readme, frontmatter, body, lines };
+      rfcs.push(rfcEntry);
+    } catch (err) {
+      rfcs.push({ dir: name, file: readme, frontmatter: null, body: "", lines: 0, error: err.message });
+      continue;
+    }
+    const storiesDir = join(rfcDir, "stories");
+    let entries;
+    try {
+      entries = readdirSync(storiesDir);
+    } catch {
+      continue;
+    }
+    for (const fname of entries) {
+      if (!STORY_FILE_RE.test(fname)) continue;
+      const file = join(storiesDir, fname);
+      const id = fname.slice(0, -3);
+      try {
+        const { frontmatter, body, lines } = parseFrontmatter(file);
+        stories.push({ id, rfc: name, file, frontmatter, body, lines });
+      } catch (err) {
+        stories.push({ id, rfc: name, file, frontmatter: null, body: "", lines: 0, error: err.message });
+      }
+    }
+  }
+  return { rfcs, stories };
+}
+
+export function firstHeading(body) {
+  const m = body.match(/^#+\s+(.+)$/m);
+  return m ? m[1].trim() : "";
+}
+
+export function relPath(absolute) {
+  return absolute.startsWith(REPO_ROOT + "/") ? absolute.slice(REPO_ROOT.length + 1) : absolute;
+}

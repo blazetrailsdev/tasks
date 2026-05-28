@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-05-28T17:34:28.366Z",
+  "items": [
+    {
+      "id": "0001-task-system",
+      "type": "rfc",
+      "title": "Task system (RFCs + story files + fast index)",
+      "terms": "0001-task-system task system (rfcs + story files + fast index) scaffold conversion rfc 0001 — task system"
+    },
+    {
+      "id": "convert-pool-rfc",
+      "type": "story",
+      "title": "Convert connection-pool plan doc to RFC 0002",
+      "terms": "convert-pool-rfc convert connection-pool plan doc to rfc 0002 conversion 0001-task-system context"
+    },
+    {
+      "id": "scaffold-tooling",
+      "type": "story",
+      "title": "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI",
+      "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the trails-tasks cli scaffold 0001-task-system context"
+    },
+    {
+      "id": "wire-spawn-loop",
+      "type": "story",
+      "title": "Wire spawn-loop to trails-tasks next-bundle",
+      "terms": "wire-spawn-loop wire spawn-loop to trails-tasks next-bundle scaffold 0001-task-system context"
+    }
+  ]
+}

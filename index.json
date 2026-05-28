@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-05-28T17:34:28.366Z",
+  "rfcs": [
+    {
+      "id": "0001-task-system",
+      "title": "Task system (RFCs + story files + fast index)",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-05-28T00:00:00.000Z",
+      "updated": "2026-05-28T00:00:00.000Z",
+      "packages": [],
+      "clusters": [
+        "scaffold",
+        "conversion"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "0001-task-system/README.md"
+    }
+  ],
+  "stories": [
+    {
+      "id": "convert-pool-rfc",
+      "rfc": "0001-task-system",
+      "title": "Convert connection-pool plan doc to RFC 0002",
+      "status": "draft",
+      "cluster": "conversion",
+      "deps": [
+        "scaffold-tooling"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "0001-task-system/stories/convert-pool-rfc.md"
+    },
+    {
+      "id": "scaffold-tooling",
+      "rfc": "0001-task-system",
+      "title": "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI",
+      "status": "claimed",
+      "cluster": "scaffold",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": "2026-05-28T17:26:39Z",
+      "assignee": "scaffold-tooling",
+      "blocked_by": null,
+      "file_path": "0001-task-system/stories/scaffold-tooling.md"
+    },
+    {
+      "id": "wire-spawn-loop",
+      "rfc": "0001-task-system",
+      "title": "Wire spawn-loop to trails-tasks next-bundle",
+      "status": "draft",
+      "cluster": "scaffold",
+      "deps": [
+        "scaffold-tooling"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "0001-task-system/stories/wire-spawn-loop.md"
+    }
+  ]
+}

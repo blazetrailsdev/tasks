@@ -27,5 +27,10 @@ if [ -n "$STAGED_MD" ]; then
   npx --no-install markdownlint-cli2 $STAGED_MD || exit 1
 fi
 
-# 3. TODO(scaffold-tooling): regenerate index.md / index.json / search.json
-# and `git add` the results here.
+# 3. Validate frontmatter and regenerate indices. Both are mtime-gated by
+# js-yaml itself (it only re-parses files it reads); the whole step
+# completes in well under 500ms on a warm tree because there are at most
+# a few hundred markdown files in the repo.
+node scripts/validate.mjs >&2
+node scripts/build-index.mjs >&2
+git add index.md index.json search.json
