@@ -1,0 +1,17 @@
+{
+  "name": "@blazetrails/rfcs",
+  "private": true,
+  "version": "0.0.0",
+  "description": "RFCs and structured work tracking for blazetrailsdev/trails",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.18.0",
+    "prettier": "^3.8.1"
+  }
+}

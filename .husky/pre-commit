@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+# Pre-commit hook for blazetrailsdev/rfcs.
+#
+# Runs prettier + markdownlint on staged files and regenerates the
+# committed indices (index.md / index.json / search.json). Must complete
+# in <500ms on a warm working tree — keep additions mtime-gated and
+# incremental.
+#
+# Implementation of the index generator is tracked by RFC 0001 story
+# `scaffold-tooling`. Until that ships, this hook is a stub.
+
+set -e
+
+# Format check on staged markdown only (fast).
+STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
+if [ -n "$STAGED_MD" ]; then
+  npx --no-install prettier --check $STAGED_MD || {
+    echo "prettier failed — run 'pnpm format' and re-stage." >&2
+    exit 1
+  }
+  npx --no-install markdownlint-cli2 $STAGED_MD || exit 1
+fi
+
+# TODO(scaffold-tooling): regenerate index.md / index.json / search.json
+# and `git add` the results here.
