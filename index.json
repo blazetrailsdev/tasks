@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T17:38:55.324Z",
+  "generated_at": "2026-05-28T21:14:06.675Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -40,7 +40,7 @@
       "id": "scaffold-tooling",
       "rfc": "0001-task-system",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "scaffold",
       "deps": [],
       "deps_rfc": [],

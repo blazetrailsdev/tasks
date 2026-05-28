@@ -1,6 +1,6 @@
 ---
 title: "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI"
-status: in-progress
+status: done
 rfc: "0001-task-system"
 cluster: scaffold
 deps: []
