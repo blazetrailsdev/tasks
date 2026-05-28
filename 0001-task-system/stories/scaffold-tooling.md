@@ -1,13 +1,13 @@
 ---
 title: "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI"
-status: ready
+status: claimed
 rfc: "0001-task-system"
 cluster: scaffold
 deps: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-05-28T17:26:39Z"
+assignee: "scaffold-tooling"
 blocked-by: null
 ---
 
