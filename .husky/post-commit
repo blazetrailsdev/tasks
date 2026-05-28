@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+# Post-commit hook for blazetrailsdev/rfcs.
+#
+# Auto-pushes commits on main to origin in the background. Matches the
+# loose-rules / direct-to-main velocity of this repo — every story flip,
+# every new RFC, every triage commit lands on origin immediately so
+# other clones and the trails-side CLI see it without manual push.
+#
+# Skipped automatically when:
+#   - HEAD is not main (topic branches stay local until you push)
+#   - a rebase / cherry-pick / merge is in progress
+#   - the RFCS_NO_AUTOPUSH env var is set (escape hatch)
+
+set -e
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+GIT_DIR=$(git rev-parse --git-dir 2>/dev/null || echo "")
+
+if [ "$BRANCH" != "main" ]; then exit 0; fi
+if [ -n "$RFCS_NO_AUTOPUSH" ]; then exit 0; fi
+if [ -d "$GIT_DIR/rebase-merge" ] || [ -d "$GIT_DIR/rebase-apply" ] \
+   || [ -f "$GIT_DIR/CHERRY_PICK_HEAD" ] || [ -f "$GIT_DIR/MERGE_HEAD" ]; then
+  exit 0
+fi
+
+# Background push; suppress noise on success, warn on failure.
+(
+  git push --quiet origin main 2>/tmp/rfcs-push.err || \
+    echo "rfcs auto-push failed: $(cat /tmp/rfcs-push.err)" >&2
+) &
