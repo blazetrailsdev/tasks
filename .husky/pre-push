@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+# Pre-push hook for blazetrailsdev/rfcs.
+#
+# Enforces linear history on main: rejects any push that introduces
+# merge commits. GitHub Free private repos can't enforce this server-
+# side; this hook is the local fallback. When the repo moves to a paid
+# plan or goes public, replace with a server-side ruleset.
+
+set -e
+
+remote="$1"
+zero=$(git hash-object --stdin </dev/null | tr '[:lower:]' '0')
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  # branch deletion — allow
+  [ "$local_sha" = "$zero" ] && continue
+
+  # only enforce on main
+  case "$remote_ref" in
+    refs/heads/main) ;;
+    *) continue ;;
+  esac
+
+  if [ "$remote_sha" = "$zero" ]; then
+    range="$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+
+  merges=$(git rev-list --merges "$range" 2>/dev/null || true)
+  if [ -n "$merges" ]; then
+    echo "error: push to $remote_ref contains merge commits — main must be linear:" >&2
+    echo "$merges" | sed 's/^/  /' >&2
+    echo "fix: 'git rebase' your branch before pushing." >&2
+    exit 1
+  fi
+done
+
+exit 0
