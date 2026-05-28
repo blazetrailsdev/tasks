@@ -1,17 +1,23 @@
 #!/usr/bin/env sh
 # Pre-commit hook for blazetrailsdev/rfcs.
 #
-# Runs prettier + markdownlint on staged files and regenerates the
-# committed indices (index.md / index.json / search.json). Must complete
-# in <500ms on a warm working tree — keep additions mtime-gated and
-# incremental.
+# Order matters — fail fast on the worst-case mistake (committed secret)
+# before doing formatting work.
 #
-# Implementation of the index generator is tracked by RFC 0001 story
-# `scaffold-tooling`. Until that ships, this hook is a stub.
+# Must complete in <500ms on a warm working tree. Keep additions
+# mtime-gated and incremental.
 
 set -e
 
-# Format check on staged markdown only (fast).
+# 1. Secret scan (staged changes only — fast).
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact --config .gitleaks.toml --no-banner
+else
+  echo "warning: gitleaks not installed — skipping secret scan." >&2
+  echo "  install:  brew install gitleaks" >&2
+fi
+
+# 2. Prettier + markdownlint on staged markdown only.
 STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
 if [ -n "$STAGED_MD" ]; then
   npx --no-install prettier --check $STAGED_MD || {
@@ -21,5 +27,5 @@ if [ -n "$STAGED_MD" ]; then
   npx --no-install markdownlint-cli2 $STAGED_MD || exit 1
 fi
 
-# TODO(scaffold-tooling): regenerate index.md / index.json / search.json
+# 3. TODO(scaffold-tooling): regenerate index.md / index.json / search.json
 # and `git add` the results here.
