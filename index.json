@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T18:10:45.346Z",
+  "generated_at": "2026-05-29T20:56:16.347Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -16,14 +16,32 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0001-task-system/README.md"
+    },
+    {
+      "id": "0002-bootstrap-databasetasks",
+      "title": "Drop bootstrap-test-handler, route test setup through DatabaseTasks",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-29T00:00:00.000Z",
+      "updated": "2026-05-29T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "bootstrap",
+        "followup"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0002-bootstrap-databasetasks/README.md"
     }
   ],
   "stories": [
     {
-      "id": "convert-pool-rfc",
+      "id": "convert-bootstrap-rfc",
       "rfc": "0001-task-system",
-      "title": "Convert connection-pool plan doc to RFC 0002",
-      "status": "draft",
+      "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
+      "status": "done",
       "cluster": "conversion",
       "deps": [
         "scaffold-tooling"
@@ -34,7 +52,107 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0001-task-system/stories/convert-pool-rfc.md"
+      "file_path": "rfcs/0001-task-system/stories/convert-bootstrap-rfc.md"
+    },
+    {
+      "id": "define-schema-preload-cleanup",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Phase 5 — retire canonical-preload signature machinery",
+      "status": "draft",
+      "cluster": "followup",
+      "deps": [
+        "delete-bootstrap-handler"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/define-schema-preload-cleanup.md"
+    },
+    {
+      "id": "delete-bootstrap-handler",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [
+        "rework-test-setup"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/delete-bootstrap-handler.md"
+    },
+    {
+      "id": "memory-loadschema-spike",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
+    },
+    {
+      "id": "pg-mysql-purge-handlers",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Follow-up — persistent PG/MySQL purge handlers",
+      "status": "ready",
+      "cluster": "followup",
+      "deps": [
+        "rework-test-setup"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/pg-mysql-purge-handlers.md"
+    },
+    {
+      "id": "reconstruct-from-schema-parity",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Bring reconstructFromSchema to Rails parity",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/reconstruct-from-schema-parity.md"
+    },
+    {
+      "id": "rework-test-setup",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [
+        "schema-file-generator-config",
+        "memory-loadschema-spike",
+        "reconstruct-from-schema-parity"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/rework-test-setup.md"
     },
     {
       "id": "scaffold-tooling",
@@ -50,6 +168,38 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
+    },
+    {
+      "id": "schema-file-generator-config",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [
+        "visitor-on-establish"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/schema-file-generator-config.md"
+    },
+    {
+      "id": "visitor-on-establish",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 0 — install Arel visitor on establishConnection",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/visitor-on-establish.md"
     },
     {
       "id": "wire-tasks-loop",

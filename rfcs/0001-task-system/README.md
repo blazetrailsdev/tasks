@@ -85,11 +85,11 @@ tasks/
       stories/
         scaffold-tooling.md
         wire-tasks-loop.md
-        convert-pool-rfc.md
-    0002-connection-pool/
+        convert-bootstrap-rfc.md
+    0002-bootstrap-databasetasks/
       README.md
       stories/
-        pool-d1-transactions.md
+        visitor-on-establish.md
         ...
 ```
 
@@ -377,9 +377,10 @@ Each phase below maps to a story file in `stories/`.
 3. **Wire tasks-loop** — `wire-tasks-loop`. A new `tasks-loop` skill (copy of
    `spawn-loop`) prefers `tasks next-bundle` and falls back to grep for any
    plan doc without a corresponding RFC.
-4. **Second RFC** — `convert-pool-rfc`. Convert
-   `docs/activerecord/connection-pooled-test-adapter-plan.md` to
-   `docs/rfcs/0002-connection-pool/`.
+4. **Second RFC** — `convert-bootstrap-rfc`. Convert a live activerecord plan
+   doc to RFC 0002. (Original pool target shipped before conversion, so it was
+   repointed to `docs/activerecord/bootstrap-to-databasetasks-plan.md` →
+   `rfcs/0002-bootstrap-databasetasks/`.)
 5. **Remaining `docs/` plan docs** — most existing `docs/*.md` and
    `docs/activerecord/*.md` files are incomplete implementation plans, not
    reference documentation. The default disposition is **convert to an
@@ -465,11 +466,11 @@ state.
 
 ## Stories
 
-| ID                                              | Title                                                        | Status | Est LOC | Cluster    |
-| ----------------------------------------------- | ------------------------------------------------------------ | ------ | ------- | ---------- |
-| [scaffold-tooling](stories/scaffold-tooling.md) | Scaffold `docs/rfcs/`, `scripts/tasks/`, CLI                 | ready  | 250     | scaffold   |
-| [wire-tasks-loop](stories/wire-tasks-loop.md)   | New `tasks-loop` skill prefers `tasks next-bundle` over grep | draft  | 80      | scaffold   |
-| [convert-pool-rfc](stories/convert-pool-rfc.md) | Convert connection-pool plan to RFC 0002                     | draft  | 200     | conversion |
+| ID                                                        | Title                                                        | Status | Est LOC | Cluster    |
+| --------------------------------------------------------- | ------------------------------------------------------------ | ------ | ------- | ---------- |
+| [scaffold-tooling](stories/scaffold-tooling.md)           | Scaffold `docs/rfcs/`, `scripts/tasks/`, CLI                 | ready  | 250     | scaffold   |
+| [wire-tasks-loop](stories/wire-tasks-loop.md)             | New `tasks-loop` skill prefers `tasks next-bundle` over grep | draft  | 80      | scaffold   |
+| [convert-bootstrap-rfc](stories/convert-bootstrap-rfc.md) | Convert a live AR plan doc to RFC 0002                       | done   | 200     | conversion |
 
 ---
 

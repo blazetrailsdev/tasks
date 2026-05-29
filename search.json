@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T18:10:45.346Z",
+  "generated_at": "2026-05-29T20:56:16.347Z",
   "items": [
     {
       "id": "0001-task-system",
@@ -8,16 +8,70 @@
       "terms": "0001-task-system task system (rfcs + story files + fast index) scaffold conversion rfc 0001 — task system"
     },
     {
-      "id": "convert-pool-rfc",
+      "id": "0002-bootstrap-databasetasks",
+      "type": "rfc",
+      "title": "Drop bootstrap-test-handler, route test setup through DatabaseTasks",
+      "terms": "0002-bootstrap-databasetasks drop bootstrap-test-handler, route test setup through databasetasks activerecord bootstrap followup rfc 0002 — drop bootstrap-test-handler, route test setup through databasetasks"
+    },
+    {
+      "id": "convert-bootstrap-rfc",
       "type": "story",
-      "title": "Convert connection-pool plan doc to RFC 0002",
-      "terms": "convert-pool-rfc convert connection-pool plan doc to rfc 0002 conversion 0001-task-system context"
+      "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
+      "terms": "convert-bootstrap-rfc convert a real plan doc to rfc 0002 (bootstrap→databasetasks) conversion 0001-task-system context"
+    },
+    {
+      "id": "define-schema-preload-cleanup",
+      "type": "story",
+      "title": "Phase 5 — retire canonical-preload signature machinery",
+      "terms": "define-schema-preload-cleanup phase 5 — retire canonical-preload signature machinery followup 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "delete-bootstrap-handler",
+      "type": "story",
+      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
+      "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "memory-loadschema-spike",
+      "type": "story",
+      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
+      "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "pg-mysql-purge-handlers",
+      "type": "story",
+      "title": "Follow-up — persistent PG/MySQL purge handlers",
+      "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "reconstruct-from-schema-parity",
+      "type": "story",
+      "title": "Bring reconstructFromSchema to Rails parity",
+      "terms": "reconstruct-from-schema-parity bring reconstructfromschema to rails parity bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "rework-test-setup",
+      "type": "story",
+      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
+      "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
     },
     {
       "id": "scaffold-tooling",
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
+    },
+    {
+      "id": "schema-file-generator-config",
+      "type": "story",
+      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
+      "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "visitor-on-establish",
+      "type": "story",
+      "title": "PR 0 — install Arel visitor on establishConnection",
+      "terms": "visitor-on-establish pr 0 — install arel visitor on establishconnection bootstrap 0002-bootstrap-databasetasks context"
     },
     {
       "id": "wire-tasks-loop",
