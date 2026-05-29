@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T17:30:36.254Z",
+  "generated_at": "2026-05-29T18:10:45.346Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -55,7 +55,7 @@
       "id": "wire-tasks-loop",
       "rfc": "0001-task-system",
       "title": "Wire tasks-loop to next-bundle",
-      "status": "draft",
+      "status": "done",
       "cluster": "scaffold",
       "deps": [
         "scaffold-tooling"

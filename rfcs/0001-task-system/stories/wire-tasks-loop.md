@@ -1,6 +1,6 @@
 ---
 title: "Wire tasks-loop to next-bundle"
-status: draft
+status: done
 rfc: "0001-task-system"
 cluster: scaffold
 deps: ["scaffold-tooling"]
@@ -26,13 +26,13 @@ See RFC 0001 §Workflow integration and §Rollout coexistence rule.
 
 ## Acceptance criteria
 
-- [ ] `tasks-loop` skill calls `pnpm tasks next-bundle --max-loc 250 --json`
+- [x] `tasks-loop` skill calls `pnpm tasks next-bundle --max-loc 250 --json`
       first; uses the returned story's `file_path` for prompt context
-- [ ] Skill calls `pnpm tasks claim <id> --assignee <worktree>` before
+- [x] Skill calls `pnpm tasks claim <id> --assignee <worktree>` before
       launching the agent; retries `next-bundle` on claim failure
-- [ ] Skill falls back to the existing grep path for plan docs not yet
+- [x] Skill falls back to the existing grep path for plan docs not yet
       converted to RFCs
-- [ ] Skill documentation updated to describe both paths
+- [x] Skill documentation updated to describe both paths
 
 ## Notes
 
