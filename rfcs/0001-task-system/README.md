@@ -68,7 +68,7 @@ edits.
 
 **`tasks/`** (sibling repo, loose rules):
 
-```
+```text
 tasks/
   README.md                    ← repo overview + §Lifecycle (status definitions)
   index.md                     ← registry of all RFCs (auto-generated)
@@ -84,7 +84,7 @@ tasks/
       README.md                ← this file (lives here post-bootstrap)
       stories/
         scaffold-tooling.md
-        wire-spawn-loop.md
+        wire-tasks-loop.md
         convert-pool-rfc.md
     0002-connection-pool/
       README.md
@@ -95,7 +95,7 @@ tasks/
 
 **`trails/`** (this repo):
 
-```
+```text
 scripts/tasks/
   build-index.ts               ← reads story frontmatter → sqlite db
   cli.ts                       ← tasks CLI entry point
@@ -127,28 +127,28 @@ empty (omit the heading; do not leave it stubbed).
 
 #### RFC frontmatter schema
 
-| Field           | Type     | Notes                                                                                       |
-|-----------------|----------|---------------------------------------------------------------------------------------------|
-| `rfc`           | string   | Slug matching the directory name, e.g. `"0001-task-system"`.                                |
-| `title`         | string   | Short prose title.                                                                          |
-| `status`        | enum     | `draft` `active` `closed` `postponed` `superseded`. See §Lifecycle.                         |
-| `created`       | date     | ISO date.                                                                                   |
-| `updated`       | date     | ISO date — bumped on substantive edits.                                                     |
-| `owner`         | string   | GitHub handle.                                                                              |
-| `packages`      | string[] | Trails packages this RFC touches, e.g. `["activerecord", "arel"]`. Drives search faceting.  |
-| `clusters`      | string[] | **Closed set of cluster names this RFC's stories may use.** Validated by build-index.       |
-| `superseded-by` | string?  | RFC slug that replaces this one. Required when `status: superseded`.                        |
-| `related-rfcs`  | string[]? | Non-blocking cross-references to other RFCs (meta-RFC coordination).                        |
+| Field           | Type      | Notes                                                                                      |
+| --------------- | --------- | ------------------------------------------------------------------------------------------ |
+| `rfc`           | string    | Slug matching the directory name, e.g. `"0001-task-system"`.                               |
+| `title`         | string    | Short prose title.                                                                         |
+| `status`        | enum      | `draft` `active` `closed` `postponed` `superseded`. See §Lifecycle.                        |
+| `created`       | date      | ISO date.                                                                                  |
+| `updated`       | date      | ISO date — bumped on substantive edits.                                                    |
+| `owner`         | string    | GitHub handle.                                                                             |
+| `packages`      | string[]  | Trails packages this RFC touches, e.g. `["activerecord", "arel"]`. Drives search faceting. |
+| `clusters`      | string[]  | **Closed set of cluster names this RFC's stories may use.** Validated by build-index.      |
+| `superseded-by` | string?   | RFC slug that replaces this one. Required when `status: superseded`.                       |
+| `related-rfcs`  | string[]? | Non-blocking cross-references to other RFCs (meta-RFC coordination).                       |
 
 #### Lifecycle
 
-| Status       | Meaning                                                                            |
-|--------------|------------------------------------------------------------------------------------|
-| `draft`      | Under design. No story work happens yet.                                           |
-| `active`     | Accepted. Stories may be claimed and worked.                                       |
-| `closed`     | All stories `done` (or explicitly abandoned). Terminal.                            |
-| `postponed`  | Deferred indefinitely. Not abandoned — may return to `active` later.               |
-| `superseded` | Replaced by another RFC. Carries `superseded-by` pointer. Terminal.                |
+| Status       | Meaning                                                              |
+| ------------ | -------------------------------------------------------------------- |
+| `draft`      | Under design. No story work happens yet.                             |
+| `active`     | Accepted. Stories may be claimed and worked.                         |
+| `closed`     | All stories `done` (or explicitly abandoned). Terminal.              |
+| `postponed`  | Deferred indefinitely. Not abandoned — may return to `active` later. |
+| `superseded` | Replaced by another RFC. Carries `superseded-by` pointer. Terminal.  |
 
 Transitions are direct-push edits to the frontmatter, no PR required.
 Documented in full in `rfcs/README.md` §Lifecycle.
@@ -207,23 +207,23 @@ Optional. Hazards, Rails source pointers, non-obvious context.
 
 ### Frontmatter schema
 
-| Field        | Type             | Values                                                              | Required               |
-|--------------|------------------|---------------------------------------------------------------------|------------------------|
-| `title`      | string           | prose                                                               | yes                    |
-| `status`     | enum             | `draft` `ready` `claimed` `in-progress` `done` `blocked`            | yes                    |
-| `rfc`        | string           | RFC slug, e.g. `"0001-task-system"`                                 | yes                    |
-| `cluster`    | string           | must match one of the parent RFC's declared `clusters`              | yes                    |
-| `deps`       | string[]         | story IDs this story depends on                                     | yes (empty `[]` if none) |
-| `deps-rfc`   | string[]         | RFC slugs that must reach `status: closed` before this story is ready | no                   |
-| `est-loc`    | integer \| null  | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown | yes (field present)    |
-| `pr`         | integer \| null  | GitHub PR number once open                                          | no                     |
-| `claim`      | string \| null   | ISO timestamp when claimed                                          | no                     |
-| `assignee`   | string \| null   | worktree name or agent ID                                           | no                     |
-| `blocked-by` | string \| null   | freetext reason if status is `blocked`                              | no                     |
+| Field        | Type            | Values                                                                       | Required                 |
+| ------------ | --------------- | ---------------------------------------------------------------------------- | ------------------------ |
+| `title`      | string          | prose                                                                        | yes                      |
+| `status`     | enum            | `draft` `ready` `claimed` `in-progress` `done` `blocked`                     | yes                      |
+| `rfc`        | string          | RFC slug, e.g. `"0001-task-system"`                                          | yes                      |
+| `cluster`    | string          | must match one of the parent RFC's declared `clusters`                       | yes                      |
+| `deps`       | string[]        | story IDs this story depends on                                              | yes (empty `[]` if none) |
+| `deps-rfc`   | string[]        | RFC slugs that must reach `status: closed` before this story is ready        | no                       |
+| `est-loc`    | integer \| null | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown | yes (field present)      |
+| `pr`         | integer \| null | GitHub PR number once open                                                   | no                       |
+| `claim`      | string \| null  | ISO timestamp when claimed                                                   | no                       |
+| `assignee`   | string \| null  | worktree name or agent ID                                                    | no                       |
+| `blocked-by` | string \| null  | freetext reason if status is `blocked`                                       | no                       |
 
 Status lifecycle:
 
-```
+```text
 draft → ready → claimed → in-progress → done
                         ↓
                      blocked (→ ready once unblocked)
@@ -276,15 +276,15 @@ Idempotent. Auto-rebuilds when any story `.md` is newer than `index.db`.
 
 `pnpm tasks <command>`:
 
-| Command                                              | Purpose                                                  |
-|------------------------------------------------------|----------------------------------------------------------|
-| `ready [--json] [--rfc <slug>]`                      | List stories with status `ready` and all deps `done`.    |
-| `next-bundle [--max-loc 250] [--cluster <n>] [--json]` | Greedy same-cluster bundle ≤ `--max-loc`.              |
-| `claim <id> [--assignee <name>]`                     | Atomic claim: writes frontmatter + index.                |
-| `done <id> --pr <number>`                            | Mark merged.                                             |
-| `block <id> --reason "<text>"`                       | Record blocker.                                          |
-| `list [--rfc <slug>] [--status <v>] [--cluster <n>]` | Filtered listing.                                        |
-| `status`                                             | Counts by status across all RFCs.                        |
+| Command                                                | Purpose                                               |
+| ------------------------------------------------------ | ----------------------------------------------------- |
+| `ready [--json] [--rfc <slug>]`                        | List stories with status `ready` and all deps `done`. |
+| `next-bundle [--max-loc 250] [--cluster <n>] [--json]` | Greedy same-cluster bundle ≤ `--max-loc`.             |
+| `claim <id> [--assignee <name>]`                       | Atomic claim: writes frontmatter + index.             |
+| `done <id> --pr <number>`                              | Mark merged.                                          |
+| `block <id> --reason "<text>"`                         | Record blocker.                                       |
+| `list [--rfc <slug>] [--status <v>] [--cluster <n>]`   | Filtered listing.                                     |
+| `status`                                               | Counts by status across all RFCs.                     |
 
 The CLI is the canonical way to transition status. Humans may edit
 frontmatter directly; `pnpm tasks:build` reconciles.
@@ -328,15 +328,15 @@ The `tasks` repo runs **loose rules** compared to the trails repo:
   - `search.json` — lightweight inverted index over story `id`, `title`,
     `cluster`, and the first heading of the body (lets `pnpm tasks search`
     grep without scanning every file)
-  The hook must complete in well under a second on a warm working tree;
-  it only re-reads files whose mtime changed since the last index build.
+    The hook must complete in well under a second on a warm working tree;
+    it only re-reads files whose mtime changed since the last index build.
 - **Direct-to-main pushes are the default** for story creation, status
   flips, and post-merge bookkeeping. PRs are reserved for substantive RFC
   README edits where design review adds value.
 - **Both authorship paths land in the same repo:**
-  1. *RFC-time* — stories committed alongside the RFC `README.md` (typically
+  1. _RFC-time_ — stories committed alongside the RFC `README.md` (typically
      in the same PR or push, in the tasks repo).
-  2. *Implementation-time* — stories created by `post-merge-findings` or by
+  2. _Implementation-time_ — stories created by `post-merge-findings` or by
      an agent mid-implementation. These push directly to `main` of the
      tasks repo.
 
@@ -374,8 +374,9 @@ Each phase below maps to a story file in `stories/`.
 2. **First conversion** — this RFC's own stories are the proof. After
    scaffold lands, `pnpm tasks ready` returns at least one row sourced from
    the sibling repo.
-3. **Wire spawn-loop** — `wire-spawn-loop`. spawn-loop falls back to grep for
-   any plan doc without a corresponding RFC.
+3. **Wire tasks-loop** — `wire-tasks-loop`. A new `tasks-loop` skill (copy of
+   `spawn-loop`) prefers `tasks next-bundle` and falls back to grep for any
+   plan doc without a corresponding RFC.
 4. **Second RFC** — `convert-pool-rfc`. Convert
    `docs/activerecord/connection-pooled-test-adapter-plan.md` to
    `docs/rfcs/0002-connection-pool/`.
@@ -464,11 +465,11 @@ state.
 
 ## Stories
 
-| ID | Title | Status | Est LOC | Cluster |
-|----|-------|--------|---------|---------|
-| [scaffold-tooling](stories/scaffold-tooling.md) | Scaffold `docs/rfcs/`, `scripts/tasks/`, CLI | ready | 250 | scaffold |
-| [wire-spawn-loop](stories/wire-spawn-loop.md) | Replace spawn-loop grep with `tasks next-bundle` | draft | 80 | scaffold |
-| [convert-pool-rfc](stories/convert-pool-rfc.md) | Convert connection-pool plan to RFC 0002 | draft | 200 | conversion |
+| ID                                              | Title                                                        | Status | Est LOC | Cluster    |
+| ----------------------------------------------- | ------------------------------------------------------------ | ------ | ------- | ---------- |
+| [scaffold-tooling](stories/scaffold-tooling.md) | Scaffold `docs/rfcs/`, `scripts/tasks/`, CLI                 | ready  | 250     | scaffold   |
+| [wire-tasks-loop](stories/wire-tasks-loop.md)   | New `tasks-loop` skill prefers `tasks next-bundle` over grep | draft  | 80      | scaffold   |
+| [convert-pool-rfc](stories/convert-pool-rfc.md) | Convert connection-pool plan to RFC 0002                     | draft  | 200     | conversion |
 
 ---
 

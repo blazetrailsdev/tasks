@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:35:14.362Z",
+  "generated_at": "2026-05-29T17:30:36.254Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -52,9 +52,9 @@
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
     },
     {
-      "id": "wire-spawn-loop",
+      "id": "wire-tasks-loop",
       "rfc": "0001-task-system",
-      "title": "Wire spawn-loop to rfcs next-bundle",
+      "title": "Wire tasks-loop to next-bundle",
       "status": "draft",
       "cluster": "scaffold",
       "deps": [
@@ -66,7 +66,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0001-task-system/stories/wire-spawn-loop.md"
+      "file_path": "rfcs/0001-task-system/stories/wire-tasks-loop.md"
     }
   ]
 }

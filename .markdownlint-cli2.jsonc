@@ -3,8 +3,9 @@
     "default": true,
     "MD013": false,
     "MD024": { "siblings_only": true },
+    "MD025": { "front_matter_title": "" },
     "MD033": false,
     "MD041": false
   },
-  "ignores": ["node_modules/**", "index.md", "0000-template/**"]
+  "ignores": ["node_modules/**", "index.md", "rfcs/0000-template/**"]
 }

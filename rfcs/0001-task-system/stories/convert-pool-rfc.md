@@ -16,7 +16,7 @@ blocked-by: null
 `docs/activerecord/connection-pooled-test-adapter-plan.md` is the most
 active epic and the most frequent spawn-loop target. Converting it first
 exercises the RFC template against real, complex content and gives
-spawn-loop something to bind to once `wire-spawn-loop` ships.
+tasks-loop something to bind to once `wire-tasks-loop` ships.
 
 The existing plan doc already itemizes phases A–G with clear blocking
 relationships, which map cleanly onto stories.
