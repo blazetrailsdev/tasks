@@ -29,8 +29,8 @@ See RFC 0001 §Rollout step 4.
 - [x] Story files exist for the phased PRs (PR 0–3) plus the spike, the
       reconstruct-parity prerequisite, and the two follow-ups, with accurate
       `deps`
-- [ ] Source plan doc gains a redirect notice pointing to the new RFC (handled
-      on the trails side via a worktree PR — see Notes)
+- [ ] Source plan doc removed from trails (migrated to RFC 0002) — trails
+      PR #2663, awaiting merge
 - [x] `pnpm tasks ready --rfc 0002-bootstrap-databasetasks` returns the
       expected unblocked stories
 
