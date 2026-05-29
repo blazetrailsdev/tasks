@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T23:52:12.676Z",
+  "generated_at": "2026-05-29T23:59:21.221Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -34,9 +34,110 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0002-bootstrap-databasetasks/README.md"
+    },
+    {
+      "id": "0003-activerecord-cli",
+      "title": "Standalone ActiveRecord DX + activerecord-cli package",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-05-29T00:00:00.000Z",
+      "updated": "2026-05-29T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "activerecord-cli",
+        "trails-tsc",
+        "trailties"
+      ],
+      "clusters": [
+        "core",
+        "cli",
+        "deferred"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0003-activerecord-cli/README.md"
+    },
+    {
+      "id": "0004-query-cache-mixin",
+      "title": "Wire the live query-cache mixin, retire the wrapper",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-29T00:00:00.000Z",
+      "updated": "2026-05-29T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "query-cache"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0004-query-cache-mixin/README.md"
     }
   ],
   "stories": [
+    {
+      "id": "abstract-class-own-property-fix",
+      "rfc": "0003-activerecord-cli",
+      "title": "Fix _abstractClass own-property check (core bug)",
+      "status": "ready",
+      "cluster": "core",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/abstract-class-own-property-fix.md"
+    },
+    {
+      "id": "ci-examples-job",
+      "rfc": "0003-activerecord-cli",
+      "title": "Optional — lightweight examples/ CI job",
+      "status": "draft",
+      "cluster": "deferred",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/ci-examples-job.md"
+    },
+    {
+      "id": "cli-generators-manifest",
+      "rfc": "0003-activerecord-cli",
+      "title": "Generators + generated models/index.ts manifest + ar init",
+      "status": "draft",
+      "cluster": "cli",
+      "deps": [
+        "cli-package-scaffold"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-generators-manifest.md"
+    },
+    {
+      "id": "cli-package-scaffold",
+      "rfc": "0003-activerecord-cli",
+      "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
+      "status": "draft",
+      "cluster": "cli",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-package-scaffold.md"
+    },
     {
       "id": "convert-bootstrap-rfc",
       "rfc": "0001-task-system",
@@ -89,6 +190,21 @@
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/delete-bootstrap-handler.md"
     },
     {
+      "id": "lazy-async-schema-reflection",
+      "rfc": "0003-activerecord-cli",
+      "title": "Lazy async schema reflection (delete explicit loadSchema)",
+      "status": "ready",
+      "cluster": "core",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/lazy-async-schema-reflection.md"
+    },
+    {
       "id": "memory-loadschema-spike",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
@@ -102,6 +218,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
+    },
+    {
+      "id": "migrate-tests-delete-wrapper",
+      "rfc": "0004-query-cache-mixin",
+      "title": "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks",
+      "status": "ready",
+      "cluster": "query-cache",
+      "deps": [
+        "pool-based-query-cache"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0004-query-cache-mixin/stories/migrate-tests-delete-wrapper.md"
     },
     {
       "id": "pg-mysql-purge-handlers",
@@ -121,6 +254,23 @@
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/pg-mysql-purge-handlers.md"
     },
     {
+      "id": "pool-based-query-cache",
+      "rfc": "0004-query-cache-mixin",
+      "title": "Phase 2 — pool-based ActiveRecord::QueryCache",
+      "status": "ready",
+      "cluster": "query-cache",
+      "deps": [
+        "wire-mixin-cache"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0004-query-cache-mixin/stories/pool-based-query-cache.md"
+    },
+    {
       "id": "reconstruct-from-schema-parity",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Bring reconstructFromSchema to Rails parity",
@@ -134,6 +284,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/reconstruct-from-schema-parity.md"
+    },
+    {
+      "id": "relocate-tsc-wrapper",
+      "rfc": "0003-activerecord-cli",
+      "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
+      "status": "draft",
+      "cluster": "cli",
+      "deps": [
+        "cli-package-scaffold"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/relocate-tsc-wrapper.md"
     },
     {
       "id": "rework-test-setup",
@@ -200,6 +367,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/visitor-on-establish.md"
+    },
+    {
+      "id": "wire-mixin-cache",
+      "rfc": "0004-query-cache-mixin",
+      "title": "Phase 1 — wire the mixin cache into the live query path",
+      "status": "ready",
+      "cluster": "query-cache",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0004-query-cache-mixin/stories/wire-mixin-cache.md"
     },
     {
       "id": "wire-tasks-loop",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T23:52:12.676Z",
+  "generated_at": "2026-05-29T23:59:21.221Z",
   "items": [
     {
       "id": "0001-task-system",
@@ -12,6 +12,42 @@
       "type": "rfc",
       "title": "Drop bootstrap-test-handler, route test setup through DatabaseTasks",
       "terms": "0002-bootstrap-databasetasks drop bootstrap-test-handler, route test setup through databasetasks activerecord bootstrap followup rfc 0002 — drop bootstrap-test-handler, route test setup through databasetasks"
+    },
+    {
+      "id": "0003-activerecord-cli",
+      "type": "rfc",
+      "title": "Standalone ActiveRecord DX + activerecord-cli package",
+      "terms": "0003-activerecord-cli standalone activerecord dx + activerecord-cli package activerecord activerecord-cli trails-tsc trailties core cli deferred rfc 0003 — standalone activerecord dx + activerecord-cli package"
+    },
+    {
+      "id": "0004-query-cache-mixin",
+      "type": "rfc",
+      "title": "Wire the live query-cache mixin, retire the wrapper",
+      "terms": "0004-query-cache-mixin wire the live query-cache mixin, retire the wrapper activerecord query-cache rfc 0004 — wire the live query-cache mixin, retire the wrapper"
+    },
+    {
+      "id": "abstract-class-own-property-fix",
+      "type": "story",
+      "title": "Fix _abstractClass own-property check (core bug)",
+      "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
+    },
+    {
+      "id": "ci-examples-job",
+      "type": "story",
+      "title": "Optional — lightweight examples/ CI job",
+      "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-generators-manifest",
+      "type": "story",
+      "title": "Generators + generated models/index.ts manifest + ar init",
+      "terms": "cli-generators-manifest generators + generated models/index.ts manifest + ar init cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-package-scaffold",
+      "type": "story",
+      "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
+      "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
     },
     {
       "id": "convert-bootstrap-rfc",
@@ -32,10 +68,22 @@
       "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "lazy-async-schema-reflection",
+      "type": "story",
+      "title": "Lazy async schema reflection (delete explicit loadSchema)",
+      "terms": "lazy-async-schema-reflection lazy async schema reflection (delete explicit loadschema) core 0003-activerecord-cli context"
+    },
+    {
       "id": "memory-loadschema-spike",
       "type": "story",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
       "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "migrate-tests-delete-wrapper",
+      "type": "story",
+      "title": "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks",
+      "terms": "migrate-tests-delete-wrapper phase 3 — migrate tests, delete the wrapper, collapse .inner walks query-cache 0004-query-cache-mixin context"
     },
     {
       "id": "pg-mysql-purge-handlers",
@@ -44,10 +92,22 @@
       "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "pool-based-query-cache",
+      "type": "story",
+      "title": "Phase 2 — pool-based ActiveRecord::QueryCache",
+      "terms": "pool-based-query-cache phase 2 — pool-based activerecord::querycache query-cache 0004-query-cache-mixin context"
+    },
+    {
       "id": "reconstruct-from-schema-parity",
       "type": "story",
       "title": "Bring reconstructFromSchema to Rails parity",
       "terms": "reconstruct-from-schema-parity bring reconstructfromschema to rails parity bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "relocate-tsc-wrapper",
+      "type": "story",
+      "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
+      "terms": "relocate-tsc-wrapper relocate ar tsc-wrapper + bins into activerecord-cli cli 0003-activerecord-cli context"
     },
     {
       "id": "rework-test-setup",
@@ -72,6 +132,12 @@
       "type": "story",
       "title": "PR 0 — install Arel visitor on establishConnection",
       "terms": "visitor-on-establish pr 0 — install arel visitor on establishconnection bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "wire-mixin-cache",
+      "type": "story",
+      "title": "Phase 1 — wire the mixin cache into the live query path",
+      "terms": "wire-mixin-cache phase 1 — wire the mixin cache into the live query path query-cache 0004-query-cache-mixin context"
     },
     {
       "id": "wire-tasks-loop",
