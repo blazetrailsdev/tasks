@@ -1,5 +1,5 @@
 ---
-title: "Wire spawn-loop to trails-tasks next-bundle"
+title: "Wire spawn-loop to rfcs next-bundle"
 status: draft
 rfc: "0001-task-system"
 cluster: scaffold

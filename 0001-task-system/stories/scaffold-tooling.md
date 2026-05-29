@@ -1,5 +1,5 @@
 ---
-title: "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI"
+title: "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI"
 status: done
 rfc: "0001-task-system"
 cluster: scaffold

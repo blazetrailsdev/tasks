@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T21:14:06.675Z",
+  "generated_at": "2026-05-29T15:54:42.200Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -39,7 +39,7 @@
     {
       "id": "scaffold-tooling",
       "rfc": "0001-task-system",
-      "title": "Scaffold rfcs repo, scripts/tasks/, and the trails-tasks CLI",
+      "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "status": "done",
       "cluster": "scaffold",
       "deps": [],
@@ -54,7 +54,7 @@
     {
       "id": "wire-spawn-loop",
       "rfc": "0001-task-system",
-      "title": "Wire spawn-loop to trails-tasks next-bundle",
+      "title": "Wire spawn-loop to rfcs next-bundle",
       "status": "draft",
       "cluster": "scaffold",
       "deps": [
