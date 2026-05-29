@@ -16,7 +16,7 @@ const storiesSorted = [...stories].sort((a, b) => a.id.localeCompare(b.id));
 // ---- index.md ----
 const rows = rfcsSorted.map((r) => {
   const fm = r.frontmatter ?? {};
-  const link = `[${r.dir}](${r.dir}/README.md)`;
+  const link = `[${r.dir}](rfcs/${r.dir}/README.md)`;
   const title = fm.title ?? "—";
   const status = fm.status ?? "—";
   const owner = fm.owner ?? "—";

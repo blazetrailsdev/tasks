@@ -4,4 +4,4 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0001-task-system](0001-task-system/README.md) | Task system (RFCs + story files + fast index) | draft | @dmarano | — |
+| [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | draft | @dmarano | — |

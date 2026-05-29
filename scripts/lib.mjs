@@ -5,6 +5,9 @@ import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
 
 export const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+// RFCs live under rfcs/ inside the tasks repo; the repo root holds the
+// generated indices (index.md/json, search.json) and tooling.
+export const RFCS_ROOT = join(REPO_ROOT, "rfcs");
 
 // 0000-template/ is the literal starter directory — copy-this content
 // with placeholder frontmatter that intentionally fails validation. It
@@ -29,9 +32,9 @@ export function parseFrontmatter(filePath) {
 export function loadAll() {
   const rfcs = [];
   const stories = [];
-  for (const name of readdirSync(REPO_ROOT)) {
+  for (const name of readdirSync(RFCS_ROOT)) {
     if (!RFC_DIR_RE.test(name)) continue;
-    const rfcDir = join(REPO_ROOT, name);
+    const rfcDir = join(RFCS_ROOT, name);
     if (!statSync(rfcDir).isDirectory()) continue;
     const readme = join(rfcDir, "README.md");
     let rfcEntry = null;

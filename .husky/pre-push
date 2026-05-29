@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Pre-push hook for blazetrailsdev/rfcs.
+# Pre-push hook for blazetrailsdev/tasks.
 #
 # Enforces linear history on main: rejects any push that introduces
 # merge commits. GitHub Free private repos can't enforce this server-

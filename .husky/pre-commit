@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Pre-commit hook for blazetrailsdev/rfcs.
+# Pre-commit hook for blazetrailsdev/tasks.
 #
 # Order matters — fail fast on the worst-case mistake (committed secret)
 # before doing formatting work.

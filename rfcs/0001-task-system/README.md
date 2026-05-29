@@ -57,7 +57,7 @@ truth and a derived, disposable index.
 ### Repository split
 
 RFCs and stories live in a **separate git repo** —
-`blazetrailsdev/rfcs` — cloned as a sibling of `trails/`. The trails
+`blazetrailsdev/tasks` — cloned as a sibling of `trails/`. The trails
 repo holds only the CLI that consumes the sibling repo. This isolates
 high-churn task state (story creation, status flips, post-merge bookkeeping)
 from the code repo's `git log`, CI runs, and PR-review rules. The trails
@@ -66,29 +66,31 @@ edits.
 
 ### Directory layout
 
-**`rfcs/`** (sibling repo, loose rules):
+**`tasks/`** (sibling repo, loose rules):
 
 ```
-rfcs/
+tasks/
   README.md                    ← repo overview + §Lifecycle (status definitions)
   index.md                     ← registry of all RFCs (auto-generated)
   index.json                   ← flat story metadata (auto-generated)
   search.json                  ← lightweight search index (auto-generated)
-  0000-template/               ← copy this to start a new RFC
-    README.md
-    stories/
-      template-story.md
-  0001-task-system/
-    README.md                  ← this file (lives here post-bootstrap)
-    stories/
-      scaffold-tooling.md
-      wire-spawn-loop.md
-      convert-pool-rfc.md
-  0002-connection-pool/
-    README.md
-    stories/
-      pool-d1-transactions.md
-      ...
+  scripts/                     ← validate + build-index tooling
+  rfcs/
+    0000-template/             ← copy this to start a new RFC
+      README.md
+      stories/
+        template-story.md
+    0001-task-system/
+      README.md                ← this file (lives here post-bootstrap)
+      stories/
+        scaffold-tooling.md
+        wire-spawn-loop.md
+        convert-pool-rfc.md
+    0002-connection-pool/
+      README.md
+      stories/
+        pool-d1-transactions.md
+        ...
 ```
 
 **`trails/`** (this repo):
@@ -96,13 +98,13 @@ rfcs/
 ```
 scripts/tasks/
   build-index.ts               ← reads story frontmatter → sqlite db
-  cli.ts                       ← rfcs CLI entry point
+  cli.ts                       ← tasks CLI entry point
 .tasks/
   index.db                     ← generated, gitignored
 ```
 
-The CLI locates the sibling repo via `RFCS_DIR` env var, falling
-back to `../rfcs/` relative to the trails repo root. Cloning is a
+The CLI locates the sibling repo via `TASKS_DIR` env var, falling
+back to `../tasks/` relative to the trails repo root. Cloning is a
 one-time setup step; agents and humans never think about which repo holds
 what — `pnpm tasks <cmd>` is the only seam.
 
@@ -309,7 +311,7 @@ human picking them up is responsible for estimating before claim.
 
 ### Story authorship and review rules
 
-The `rfcs` repo runs **loose rules** compared to the trails repo:
+The `tasks` repo runs **loose rules** compared to the trails repo:
 
 - **No code-style LOC ceiling.** A generous markdown file ceiling
   (default 2000 lines per file) catches pathological cases; anything
@@ -362,7 +364,7 @@ push.
 
 Each phase below maps to a story file in `stories/`.
 
-1. **Scaffold** — `scaffold-tooling`. Create the `blazetrailsdev/rfcs`
+1. **Scaffold** — `scaffold-tooling`. Create the `blazetrailsdev/tasks`
    repo with the bootstrap directory layout. Add `scripts/tasks/`,
    `.gitignore` entry for `.tasks/`, and the root `package.json` script in
    the trails repo. Move this RFC and its stories from
@@ -421,7 +423,7 @@ subdirectory — not deleted. The index-build script reads both.
 
 ### Concurrent claim
 
-The `rfcs` repo is the synchronization point. `pnpm tasks claim <id>`:
+The `tasks` repo is the synchronization point. `pnpm tasks claim <id>`:
 
 1. `git pull --rebase` in the rfcs repo
 2. Verify the story's `claim` field is still `null` (else abort)
@@ -446,7 +448,7 @@ state.
   variants (single template until pain), more than 5 lifecycle states.
 - **Meta-RFCs:** flat numbering, no nesting. Cross-references via
   `related-rfcs` frontmatter and story-level `deps-rfc`.
-- **Repo split** — RFCs and stories live in a separate `rfcs` repo,
+- **Repo split** — RFCs and stories live in a separate `tasks` repo,
   not under `docs/rfcs/` in trails. Loose rules in the tasks repo; trails
   CI and LOC ceilings do not apply there.
 - **Claim TTL** — no TTL. Stale claims are progressed manually as needed.

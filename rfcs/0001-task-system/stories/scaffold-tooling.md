@@ -14,7 +14,7 @@ blocked-by: null
 ## Context
 
 The task system needs four things before any RFC content can be authored:
-the sibling `rfcs` repo, the directory skeleton inside it, the index
+the sibling `tasks` repo, the directory skeleton inside it, the index
 builder, and the CLI. This story delivers all four with zero functional
 impact on the trails repo — no plan doc is modified, no skill behavior
 changes.
@@ -23,23 +23,24 @@ See RFC 0001 §Repository split, §Directory layout, and §CLI surface.
 
 ## Acceptance criteria
 
-- [ ] `blazetrailsdev/rfcs` repo created with bootstrap layout
-      (`README.md` with §Lifecycle, `index.md`, `0000-template/`,
-      `0001-task-system/README.md`, `0001-task-system/stories/*.md`)
+- [ ] `blazetrailsdev/tasks` repo created with bootstrap layout
+      (`README.md` with §Lifecycle, `index.md`, `rfcs/0000-template/`,
+      `rfcs/0001-task-system/README.md`, `rfcs/0001-task-system/stories/*.md`)
 - [ ] `0000-template/` contains a copy-ready RFC README with placeholder
       frontmatter and one `stories/template-story.md` showing the story
       shape
-- [ ] `rfcs/README.md` documents the RFC lifecycle (draft / active /
+- [ ] `tasks/README.md` documents the RFC lifecycle (draft / active /
       closed / postponed / superseded) per RFC 0001 §Lifecycle
 - [ ] This RFC's README and three stories moved from
-      `trails/docs/rfcs/0001-task-system/` into the sibling repo; bootstrap
+      `trails/docs/rfcs/0001-task-system/` into the sibling repo's
+      `rfcs/`; bootstrap
       copy deleted from trails
-- [ ] `rfcs` repo has prettier + markdownlint configured with a pre-commit
+- [ ] `tasks` repo has prettier + markdownlint configured with a pre-commit
       hook (husky or simple-git-hooks) and a CI job running both
 - [ ] Pre-commit hook also regenerates `index.md`, `index.json`, and
       `search.json` from current frontmatter, staging the regenerated files;
       hook completes in <500ms on warm cache (mtime-gated, incremental)
-- [ ] `rfcs` repo CI runs frontmatter validation (schema, dep-cycle, ID
+- [ ] `tasks` repo CI runs frontmatter validation (schema, dep-cycle, ID
       uniqueness, cluster match against parent RFC), a file-size check that
       fails any `.md` over 2000 lines, and verifies the committed indices
       match a fresh rebuild
@@ -47,7 +48,7 @@ See RFC 0001 §Repository split, §Directory layout, and §CLI surface.
       §Concurrent claim (pull-rebase, verify, edit, push, retry on
       non-fast-forward)
 - [ ] `scripts/tasks/build-index.ts` in the trails repo parses story
-      frontmatter from `$RFCS_DIR` (default `../rfcs/`) and writes
+      frontmatter from `$TASKS_DIR` (default `../tasks/`) and writes
       `.tasks/index.db` per the schema in RFC 0001
 - [ ] `scripts/tasks/cli.ts` implements `ready`, `next-bundle`, `claim`,
       `done`, `block`, `list`, `status` — all with `--json` where applicable
@@ -64,7 +65,7 @@ Use `better-sqlite3` (already transitive via the SQLite adapter) and
 `js-yaml` (already in the workspace via vitest). Do not add new deps to
 trails.
 
-The `rfcs` repo can take its own minimal devDeps for prettier +
+The `tasks` repo can take its own minimal devDeps for prettier +
 markdownlint — no need to share trails' toolchain.
 
 LOC budget is tight (250). Keep the CLI argument parsing minimal —

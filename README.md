@@ -1,11 +1,11 @@
-# blazetrailsdev/rfcs
+# blazetrailsdev/tasks
 
 Design documents and structured work tracking for
 [`blazetrailsdev/trails`](https://github.com/blazetrailsdev/trails).
 
 This repo is the source of truth for:
 
-- **RFCs** — long-lived design documents (see [`0001-task-system`](0001-task-system/))
+- **RFCs** — long-lived design documents under [`rfcs/`](rfcs/) (see [`rfcs/0001-task-system`](rfcs/0001-task-system/))
 - **Stories** — discrete units of work, machine-readable via YAML frontmatter
 - **Indices** — `index.md` / `index.json` / `search.json`, auto-generated on commit
 
@@ -16,7 +16,7 @@ The trails repo holds the CLI (`pnpm tasks`) that consumes this repo's contents.
 ```bash
 # Clone as a sibling of trails/
 cd ~/github/blazetrailsdev
-git clone git@github.com:blazetrailsdev/rfcs.git
+git clone git@github.com:blazetrailsdev/tasks.git
 
 # In the trails repo
 pnpm tasks ready        # list unblocked stories
@@ -28,7 +28,7 @@ pnpm tasks done <id> --pr <n>
 ## Authoring an RFC
 
 ```bash
-cp -r 0000-template NNNN-your-slug
+cp -r rfcs/0000-template rfcs/NNNN-your-slug
 # Edit README.md frontmatter (rfc, title, owner, packages, clusters)
 # Add story files under stories/
 git commit -am "RFC NNNN: <title>"
@@ -53,17 +53,17 @@ This repo runs **loose rules** compared to trails:
 
 RFCs progress through five statuses, set via the `status:` frontmatter field:
 
-| Status       | Meaning                                                                   | Terminal? |
-|--------------|---------------------------------------------------------------------------|-----------|
-| `draft`      | Under design. Stories may exist but should not be claimed.                | no        |
-| `active`     | Accepted. Stories are open for pickup.                                    | no        |
-| `closed`     | All stories `done` (or explicitly abandoned). Work complete.              | yes       |
-| `postponed`  | Deferred indefinitely — not abandoned. May return to `active` later.      | no        |
-| `superseded` | Replaced by another RFC. Carries `superseded-by: "NNNN-slug"` pointer.    | yes       |
+| Status       | Meaning                                                                | Terminal? |
+| ------------ | ---------------------------------------------------------------------- | --------- |
+| `draft`      | Under design. Stories may exist but should not be claimed.             | no        |
+| `active`     | Accepted. Stories are open for pickup.                                 | no        |
+| `closed`     | All stories `done` (or explicitly abandoned). Work complete.           | yes       |
+| `postponed`  | Deferred indefinitely — not abandoned. May return to `active` later.   | no        |
+| `superseded` | Replaced by another RFC. Carries `superseded-by: "NNNN-slug"` pointer. | yes       |
 
 Stories progress independently:
 
-```
+```text
 draft → ready → claimed → in-progress → done
                         ↓
                      blocked (→ ready once unblocked)
@@ -73,22 +73,24 @@ Transitions are direct-push frontmatter edits. No PR gate on status changes.
 
 ## Layout
 
-```
+```text
 .
 ├── README.md                  ← you are here
 ├── index.md                   ← RFC registry (auto-generated)
 ├── index.json                 ← story metadata (auto-generated)
 ├── search.json                ← search index (auto-generated)
-├── 0000-template/             ← copy this to start a new RFC
-│   ├── README.md
-│   └── stories/template-story.md
-├── 0001-task-system/
-│   ├── README.md
-│   └── stories/
-└── NNNN-your-rfc/
-    ├── README.md
-    └── stories/
+├── scripts/                   ← validate + build-index tooling
+└── rfcs/
+    ├── 0000-template/         ← copy this to start a new RFC
+    │   ├── README.md
+    │   └── stories/template-story.md
+    ├── 0001-task-system/
+    │   ├── README.md
+    │   └── stories/
+    └── NNNN-your-rfc/
+        ├── README.md
+        └── stories/
 ```
 
-See [`0001-task-system/README.md`](0001-task-system/README.md) for the
+See [`rfcs/0001-task-system/README.md`](rfcs/0001-task-system/README.md) for the
 full design of how this repo works.

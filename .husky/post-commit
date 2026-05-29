@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Post-commit hook for blazetrailsdev/rfcs.
+# Post-commit hook for blazetrailsdev/tasks.
 #
 # Auto-pushes commits on main to origin in the background. Matches the
 # loose-rules / direct-to-main velocity of this repo — every story flip,

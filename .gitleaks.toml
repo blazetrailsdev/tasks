@@ -1,4 +1,4 @@
-# gitleaks config for blazetrailsdev/rfcs
+# gitleaks config for blazetrailsdev/tasks
 #
 # Extends gitleaks' default ruleset and adds allowlist tuning for a
 # markdown-only repo where most "matches" are documentation examples.
