@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T00:36:33.102Z",
+  "generated_at": "2026-05-30T00:55:11.338Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -92,6 +92,24 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0005-activerecord-gaps/README.md"
+    },
+    {
+      "id": "0006-collection-store-unification",
+      "title": "Collection-store unification",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-05-29T00:00:00.000Z",
+      "updated": "2026-05-29T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "activerecord",
+        "associations"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0006-collection-store-unification/README.md"
     }
   ],
   "stories": [
@@ -746,6 +764,89 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/rf3-inorderof-type-cast.md"
+    },
+    {
+      "id": "s1-proxy-backed-read-api",
+      "rfc": "0006-collection-store-unification",
+      "title": "Proxy-backed read API with deprecated cache shim",
+      "status": "draft",
+      "cluster": "associations",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0006-collection-store-unification/stories/s1-proxy-backed-read-api.md"
+    },
+    {
+      "id": "s2-migrate-preloader-writes",
+      "rfc": "0006-collection-store-unification",
+      "title": "Migrate preloader writes through the proxy",
+      "status": "draft",
+      "cluster": "associations",
+      "deps": [
+        "S1"
+      ],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0006-collection-store-unification/stories/s2-migrate-preloader-writes.md"
+    },
+    {
+      "id": "s3-migrate-findtarget-reads",
+      "rfc": "0006-collection-store-unification",
+      "title": "Migrate findTarget and instance-method reads through the proxy",
+      "status": "draft",
+      "cluster": "associations",
+      "deps": [
+        "S2"
+      ],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0006-collection-store-unification/stories/s3-migrate-findtarget-reads.md"
+    },
+    {
+      "id": "s4-delete-cached-associations",
+      "rfc": "0006-collection-store-unification",
+      "title": "Delete _cachedAssociations and resolve singular-association cache",
+      "status": "draft",
+      "cluster": "associations",
+      "deps": [
+        "S3"
+      ],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0006-collection-store-unification/stories/s4-delete-cached-associations.md"
+    },
+    {
+      "id": "s5-unskip-dedup-tests",
+      "rfc": "0006-collection-store-unification",
+      "title": "Unskip inverse-dedup tests gated on the removed seam",
+      "status": "draft",
+      "cluster": "associations",
+      "deps": [
+        "S4"
+      ],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0006-collection-store-unification/stories/s5-unskip-dedup-tests.md"
     },
     {
       "id": "scaffold-tooling",

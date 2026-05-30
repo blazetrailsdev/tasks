@@ -9,3 +9,4 @@
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | draft | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
 | [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | active | @dmarano | activerecord |
 | [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @dmarano | activerecord |
+| [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | draft | @dmarano | activerecord |
