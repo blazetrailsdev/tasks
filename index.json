@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T00:57:13.385Z",
+  "generated_at": "2026-05-30T11:14:12.734Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -32,7 +32,9 @@
         "followup"
       ],
       "superseded_by": null,
-      "related_rfcs": [],
+      "related_rfcs": [
+        "0007-remove-global-arel-visitor"
+      ],
       "file_path": "rfcs/0002-bootstrap-databasetasks/README.md"
     },
     {
@@ -110,9 +112,146 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0006-collection-store-unification/README.md"
+    },
+    {
+      "id": "0007-remove-global-arel-visitor",
+      "title": "Remove the global Arel visitor — route toSql through connection.toSql",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-30T00:00:00.000Z",
+      "updated": "2026-05-30T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "arel"
+      ],
+      "clusters": [
+        "arel-visitor"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0002-bootstrap-databasetasks"
+      ],
+      "file_path": "rfcs/0007-remove-global-arel-visitor/README.md"
+    },
+    {
+      "id": "0008-test-perf-template-clone",
+      "title": "AR test perf — canonical schema as a clonable template",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-30T00:00:00.000Z",
+      "updated": "2026-05-30T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "test-perf"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0008-test-perf-template-clone/README.md"
+    },
+    {
+      "id": "0009-type-audit",
+      "title": "ActiveRecord type-audit remainder (W1b + follow-ups + W4)",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-30T00:00:00.000Z",
+      "updated": "2026-05-30T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "type-cleanup"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0009-type-audit/README.md"
+    },
+    {
+      "id": "0010-adapter-cleanup",
+      "title": "Adapter → Connection collapse — remaining cleanup",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-05-30T00:00:00.000Z",
+      "updated": "2026-05-30T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "adapter-cleanup"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0007-remove-global-arel-visitor"
+      ],
+      "file_path": "rfcs/0010-adapter-cleanup/README.md"
     }
   ],
   "stories": [
+    {
+      "id": "a1-ddl-metadata-callers",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a1-ddl-metadata-callers.md"
+    },
+    {
+      "id": "a2-persistence-base-ternary",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase A2 — make persistence.ts + base.ts ternary callers unconditional",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a2-persistence-base-ternary.md"
+    },
+    {
+      "id": "a3-calculations-statement-cache-insert",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a3-calculations-statement-cache-insert.md"
+    },
+    {
+      "id": "a4-sweep-remaining-callers",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [
+        "a1-ddl-metadata-callers",
+        "a2-persistence-base-ternary",
+        "a3-calculations-statement-cache-insert"
+      ],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a4-sweep-remaining-callers.md"
+    },
     {
       "id": "abstract-class-own-property-fix",
       "rfc": "0003-activerecord-cli",
@@ -189,6 +328,23 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/assoc-scope-polymorphic-through-alias.md"
     },
     {
+      "id": "b-drop-global-sync-sites",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase B — drop AR's global-visitor sync sites",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [
+        "a4-sweep-remaining-callers"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/b-drop-global-sync-sites.md"
+    },
+    {
       "id": "belongsto-accessor-null-bug",
       "rfc": "0005-activerecord-gaps",
       "title": "Investigate belongsTo accessor returning null despite valid FK",
@@ -202,6 +358,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/belongsto-accessor-null-bug.md"
+    },
+    {
+      "id": "c-collapse-into-bootstrap",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)",
+      "status": "ready",
+      "cluster": "arel-visitor",
+      "deps": [
+        "b-drop-global-sync-sites"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/c-collapse-into-bootstrap.md"
     },
     {
       "id": "ci-examples-job",
@@ -501,6 +674,55 @@
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/pg-mysql-purge-handlers.md"
     },
     {
+      "id": "phase0-sqlite-template-spike",
+      "rfc": "0008-test-perf-template-clone",
+      "title": "Phase 0 — sqlite clonable-template spike",
+      "status": "ready",
+      "cluster": "test-perf",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0008-test-perf-template-clone/stories/phase0-sqlite-template-spike.md"
+    },
+    {
+      "id": "phase1-pg-template",
+      "rfc": "0008-test-perf-template-clone",
+      "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
+      "status": "draft",
+      "cluster": "test-perf",
+      "deps": [
+        "phase0-sqlite-template-spike"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0008-test-perf-template-clone/stories/phase1-pg-template.md"
+    },
+    {
+      "id": "phase2-mariadb-template",
+      "rfc": "0008-test-perf-template-clone",
+      "title": "Phase 2 — MariaDB template (measure before committing)",
+      "status": "draft",
+      "cluster": "test-perf",
+      "deps": [
+        "phase0-sqlite-template-spike"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0008-test-perf-template-clone/stories/phase2-mariadb-template.md"
+    },
+    {
       "id": "pool-allow-retry-forwarding",
       "rfc": "0005-activerecord-gaps",
       "title": "Forward allowRetry through concrete execQuery overrides",
@@ -668,6 +890,36 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/pool-sqlite-open-uri.md"
+    },
+    {
+      "id": "pr-a-delete-adapter-barrel",
+      "rfc": "0010-adapter-cleanup",
+      "title": "PR A — delete adapter.ts barrel + DatabaseAdapter interface",
+      "status": "blocked",
+      "cluster": "adapter-cleanup",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": "Phase G fixture adoption must rewrite the ~134 import sites still re-exporting through adapter.ts (trails fixtures-adoption-plan)",
+      "file_path": "rfcs/0010-adapter-cleanup/stories/pr-a-delete-adapter-barrel.md"
+    },
+    {
+      "id": "pr-b-schema-ar-models-audit",
+      "rfc": "0010-adapter-cleanup",
+      "title": "PR B — schema-ar-models.ts set connection() audit",
+      "status": "ready",
+      "cluster": "adapter-cleanup",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/pr-b-schema-ar-models-audit.md"
     },
     {
       "id": "r3-reorder-test-alignment",
@@ -869,9 +1121,7 @@
       "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
       "status": "ready",
       "cluster": "bootstrap",
-      "deps": [
-        "visitor-on-establish"
-      ],
+      "deps": [],
       "deps_rfc": [],
       "est_loc": 250,
       "pr": null,
@@ -879,6 +1129,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/schema-file-generator-config.md"
+    },
+    {
+      "id": "small-followups-bundle",
+      "rfc": "0009-type-audit",
+      "title": "Type-audit small follow-ups bundle (~150 LOC)",
+      "status": "ready",
+      "cluster": "type-cleanup",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0009-type-audit/stories/small-followups-bundle.md"
     },
     {
       "id": "strict-loading-cascade-proxy",
@@ -913,8 +1178,8 @@
     {
       "id": "visitor-on-establish",
       "rfc": "0002-bootstrap-databasetasks",
-      "title": "PR 0 — install Arel visitor on establishConnection",
-      "status": "ready",
+      "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
+      "status": "blocked",
       "cluster": "bootstrap",
       "deps": [],
       "deps_rfc": [],
@@ -922,8 +1187,38 @@
       "pr": null,
       "claim": null,
       "assignee": null,
-      "blocked_by": null,
+      "blocked_by": "Superseded by RFC 0007 (0007-remove-global-arel-visitor). Do not work this story.",
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/visitor-on-establish.md"
+    },
+    {
+      "id": "w1b-variadic-rest-overloads",
+      "rfc": "0009-type-audit",
+      "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
+      "status": "ready",
+      "cluster": "type-cleanup",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0009-type-audit/stories/w1b-variadic-rest-overloads.md"
+    },
+    {
+      "id": "w4-reflection-discriminated-union",
+      "rfc": "0009-type-audit",
+      "title": "W4 — Reflection discriminated union (deferred, high risk)",
+      "status": "draft",
+      "cluster": "type-cleanup",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0009-type-audit/stories/w4-reflection-discriminated-union.md"
     },
     {
       "id": "wire-mixin-cache",

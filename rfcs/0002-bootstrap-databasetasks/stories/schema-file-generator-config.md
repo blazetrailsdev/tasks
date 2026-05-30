@@ -3,7 +3,7 @@ title: "PR 1 — schema-file generator + test DatabaseConfigurations"
 status: ready
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
-deps: ["visitor-on-establish"]
+deps: []
 deps-rfc: []
 est-loc: 250
 pr: null

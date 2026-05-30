@@ -84,7 +84,8 @@ otherwise. Pick by cluster: `tasks next-bundle --cluster associations`
 Recorded for rationale; do not lift into the ready queue without a decision.
 
 **Associations — architectural / deferred:** collection-store unification
-(`_cachedAssociations` + CollectionProxy `_target` → one store);
+(`_cachedAssociations` + CollectionProxy `_target` → one store) — now its own
+**RFC 0006** (`0006-collection-store-unification`), no longer deferred here;
 `join_middle_table_alias` (blocked on reflection + composite-PK join infra);
 persisted-owner HABTM source-FK governance; callback-dispatch collapse + Rails
 all-or-nothing `catch(:abort)`; CPK fixture demodulize gap; `Relation#extending`

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T00:57:13.385Z",
+  "generated_at": "2026-05-30T11:14:12.734Z",
   "items": [
     {
       "id": "0001-task-system",
@@ -38,6 +38,54 @@
       "terms": "0006-collection-store-unification collection-store unification activerecord activerecord associations rfc 0006 — collection-store unification"
     },
     {
+      "id": "0007-remove-global-arel-visitor",
+      "type": "rfc",
+      "title": "Remove the global Arel visitor — route toSql through connection.toSql",
+      "terms": "0007-remove-global-arel-visitor remove the global arel visitor — route tosql through connection.tosql activerecord arel arel-visitor rfc 0007 — remove the global arel visitor"
+    },
+    {
+      "id": "0008-test-perf-template-clone",
+      "type": "rfc",
+      "title": "AR test perf — canonical schema as a clonable template",
+      "terms": "0008-test-perf-template-clone ar test perf — canonical schema as a clonable template activerecord test-perf rfc 0008 — ar test perf: clonable schema template"
+    },
+    {
+      "id": "0009-type-audit",
+      "type": "rfc",
+      "title": "ActiveRecord type-audit remainder (W1b + follow-ups + W4)",
+      "terms": "0009-type-audit activerecord type-audit remainder (w1b + follow-ups + w4) activerecord type-cleanup rfc 0009 — activerecord type-audit remainder"
+    },
+    {
+      "id": "0010-adapter-cleanup",
+      "type": "rfc",
+      "title": "Adapter → Connection collapse — remaining cleanup",
+      "terms": "0010-adapter-cleanup adapter → connection collapse — remaining cleanup activerecord adapter-cleanup rfc 0010 — adapter → connection collapse cleanup"
+    },
+    {
+      "id": "a1-ddl-metadata-callers",
+      "type": "story",
+      "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
+      "terms": "a1-ddl-metadata-callers phase a1 — route ddl/metadata tosql callers through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
+      "id": "a2-persistence-base-ternary",
+      "type": "story",
+      "title": "Phase A2 — make persistence.ts + base.ts ternary callers unconditional",
+      "terms": "a2-persistence-base-ternary phase a2 — make persistence.ts + base.ts ternary callers unconditional arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
+      "id": "a3-calculations-statement-cache-insert",
+      "type": "story",
+      "title": "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql",
+      "terms": "a3-calculations-statement-cache-insert phase a3 — route calculations / statement-cache / insert-all through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
+      "id": "a4-sweep-remaining-callers",
+      "type": "story",
+      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
+      "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
       "id": "abstract-class-own-property-fix",
       "type": "story",
       "title": "Fix _abstractClass own-property check (core bug)",
@@ -68,10 +116,22 @@
       "terms": "assoc-scope-polymorphic-through-alias association-scope polymorphic-through alias coverage associations 0005-activerecord-gaps context"
     },
     {
+      "id": "b-drop-global-sync-sites",
+      "type": "story",
+      "title": "Phase B — drop AR's global-visitor sync sites",
+      "terms": "b-drop-global-sync-sites phase b — drop ar's global-visitor sync sites arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
       "id": "belongsto-accessor-null-bug",
       "type": "story",
       "title": "Investigate belongsTo accessor returning null despite valid FK",
       "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "c-collapse-into-bootstrap",
+      "type": "story",
+      "title": "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)",
+      "terms": "c-collapse-into-bootstrap phase c — delete synchandlervisitor / beforeeach (folds into rfc 0002) arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
       "id": "ci-examples-job",
@@ -188,6 +248,24 @@
       "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "phase0-sqlite-template-spike",
+      "type": "story",
+      "title": "Phase 0 — sqlite clonable-template spike",
+      "terms": "phase0-sqlite-template-spike phase 0 — sqlite clonable-template spike test-perf 0008-test-perf-template-clone context"
+    },
+    {
+      "id": "phase1-pg-template",
+      "type": "story",
+      "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
+      "terms": "phase1-pg-template phase 1 — pg create database ... template test-perf 0008-test-perf-template-clone context"
+    },
+    {
+      "id": "phase2-mariadb-template",
+      "type": "story",
+      "title": "Phase 2 — MariaDB template (measure before committing)",
+      "terms": "phase2-mariadb-template phase 2 — mariadb template (measure before committing) test-perf 0008-test-perf-template-clone context"
+    },
+    {
       "id": "pool-allow-retry-forwarding",
       "type": "story",
       "title": "Forward allowRetry through concrete execQuery overrides",
@@ -252,6 +330,18 @@
       "type": "story",
       "title": "Enable SQLITE_OPEN_URI for shared-cache :memory:",
       "terms": "pool-sqlite-open-uri enable sqlite_open_uri for shared-cache :memory: connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pr-a-delete-adapter-barrel",
+      "type": "story",
+      "title": "PR A — delete adapter.ts barrel + DatabaseAdapter interface",
+      "terms": "pr-a-delete-adapter-barrel pr a — delete adapter.ts barrel + databaseadapter interface adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
+      "id": "pr-b-schema-ar-models-audit",
+      "type": "story",
+      "title": "PR B — schema-ar-models.ts set connection() audit",
+      "terms": "pr-b-schema-ar-models-audit pr b — schema-ar-models.ts set connection() audit adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "r3-reorder-test-alignment",
@@ -332,6 +422,12 @@
       "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "small-followups-bundle",
+      "type": "story",
+      "title": "Type-audit small follow-ups bundle (~150 LOC)",
+      "terms": "small-followups-bundle type-audit small follow-ups bundle (~150 loc) type-cleanup 0009-type-audit context"
+    },
+    {
       "id": "strict-loading-cascade-proxy",
       "type": "story",
       "title": "Strict-loading cascade on collection proxy reader + mode propagation",
@@ -346,8 +442,20 @@
     {
       "id": "visitor-on-establish",
       "type": "story",
-      "title": "PR 0 — install Arel visitor on establishConnection",
-      "terms": "visitor-on-establish pr 0 — install arel visitor on establishconnection bootstrap 0002-bootstrap-databasetasks context"
+      "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
+      "terms": "visitor-on-establish pr 0 — install arel visitor on establishconnection (superseded) bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "w1b-variadic-rest-overloads",
+      "type": "story",
+      "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
+      "terms": "w1b-variadic-rest-overloads w1b — variadic rest overloads (drop relation.ts as-any spreads) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "w4-reflection-discriminated-union",
+      "type": "story",
+      "title": "W4 — Reflection discriminated union (deferred, high risk)",
+      "terms": "w4-reflection-discriminated-union w4 — reflection discriminated union (deferred, high risk) type-cleanup 0009-type-audit context"
     },
     {
       "id": "wire-mixin-cache",
