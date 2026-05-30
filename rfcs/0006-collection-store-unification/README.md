@@ -1,5 +1,5 @@
 ---
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Collection-store unification"
 status: draft
 created: 2026-05-29
@@ -9,7 +9,7 @@ clusters: [activerecord, associations]
 packages: [activerecord]
 ---
 
-# RFC 0008 — Collection-store unification
+# RFC 0006 — Collection-store unification
 
 ## Summary
 

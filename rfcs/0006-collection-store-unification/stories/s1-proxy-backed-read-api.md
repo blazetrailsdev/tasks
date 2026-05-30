@@ -1,11 +1,14 @@
 ---
-id: S1
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Proxy-backed read API with deprecated cache shim"
 status: draft
 cluster: associations
 deps: []
-est_loc: 180
+est-loc: 180
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 # S1 — Proxy-backed read API with deprecated cache shim

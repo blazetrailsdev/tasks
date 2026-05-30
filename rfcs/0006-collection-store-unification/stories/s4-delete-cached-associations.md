@@ -1,11 +1,14 @@
 ---
-id: S4
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Delete _cachedAssociations and resolve singular-association cache"
 status: draft
 cluster: associations
-deps: [S3]
-est_loc: 200
+deps: ["s3-migrate-findtarget-reads"]
+est-loc: 200
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 # S4 — Delete \_cachedAssociations and resolve singular-association cache

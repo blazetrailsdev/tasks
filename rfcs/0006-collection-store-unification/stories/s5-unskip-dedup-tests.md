@@ -1,11 +1,14 @@
 ---
-id: S5
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Unskip inverse-dedup tests gated on the removed seam"
 status: draft
 cluster: associations
-deps: [S4]
-est_loc: 80
+deps: ["s4-delete-cached-associations"]
+est-loc: 80
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 # S5 — Unskip inverse-dedup tests gated on the removed seam

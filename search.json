@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T00:55:11.338Z",
+  "generated_at": "2026-05-30T00:57:13.385Z",
   "items": [
     {
       "id": "0001-task-system",
@@ -35,7 +35,7 @@
       "id": "0006-collection-store-unification",
       "type": "rfc",
       "title": "Collection-store unification",
-      "terms": "0006-collection-store-unification collection-store unification activerecord activerecord associations rfc 0008 — collection-store unification"
+      "terms": "0006-collection-store-unification collection-store unification activerecord activerecord associations rfc 0006 — collection-store unification"
     },
     {
       "id": "abstract-class-own-property-fix",

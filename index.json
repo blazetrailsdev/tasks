@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T00:55:11.338Z",
+  "generated_at": "2026-05-30T00:57:13.385Z",
   "rfcs": [
     {
       "id": "0001-task-system",
@@ -773,7 +773,7 @@
       "cluster": "associations",
       "deps": [],
       "deps_rfc": [],
-      "est_loc": null,
+      "est_loc": 180,
       "pr": null,
       "claim": null,
       "assignee": null,
@@ -787,10 +787,10 @@
       "status": "draft",
       "cluster": "associations",
       "deps": [
-        "S1"
+        "s1-proxy-backed-read-api"
       ],
       "deps_rfc": [],
-      "est_loc": null,
+      "est_loc": 160,
       "pr": null,
       "claim": null,
       "assignee": null,
@@ -804,10 +804,10 @@
       "status": "draft",
       "cluster": "associations",
       "deps": [
-        "S2"
+        "s2-migrate-preloader-writes"
       ],
       "deps_rfc": [],
-      "est_loc": null,
+      "est_loc": 140,
       "pr": null,
       "claim": null,
       "assignee": null,
@@ -821,10 +821,10 @@
       "status": "draft",
       "cluster": "associations",
       "deps": [
-        "S3"
+        "s3-migrate-findtarget-reads"
       ],
       "deps_rfc": [],
-      "est_loc": null,
+      "est_loc": 200,
       "pr": null,
       "claim": null,
       "assignee": null,
@@ -838,10 +838,10 @@
       "status": "draft",
       "cluster": "associations",
       "deps": [
-        "S4"
+        "s4-delete-cached-associations"
       ],
       "deps_rfc": [],
-      "est_loc": null,
+      "est_loc": 80,
       "pr": null,
       "claim": null,
       "assignee": null,

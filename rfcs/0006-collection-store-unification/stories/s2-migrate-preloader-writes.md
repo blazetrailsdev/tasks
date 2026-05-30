@@ -1,11 +1,14 @@
 ---
-id: S2
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Migrate preloader writes through the proxy"
 status: draft
 cluster: associations
-deps: [S1]
-est_loc: 160
+deps: ["s1-proxy-backed-read-api"]
+est-loc: 160
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 # S2 — Migrate preloader writes through the proxy

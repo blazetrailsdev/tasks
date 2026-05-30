@@ -1,11 +1,14 @@
 ---
-id: S3
-rfc: "0008-collection-store-unification"
+rfc: "0006-collection-store-unification"
 title: "Migrate findTarget and instance-method reads through the proxy"
 status: draft
 cluster: associations
-deps: [S2]
-est_loc: 140
+deps: ["s2-migrate-preloader-writes"]
+est-loc: 140
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 # S3 — Migrate findTarget and instance-method reads through the proxy
