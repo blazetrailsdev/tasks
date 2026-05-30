@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T23:59:21.221Z",
+  "generated_at": "2026-05-30T00:36:33.102Z",
   "items": [
     {
       "id": "0001-task-system",
@@ -26,10 +26,46 @@
       "terms": "0004-query-cache-mixin wire the live query-cache mixin, retire the wrapper activerecord query-cache rfc 0004 — wire the live query-cache mixin, retire the wrapper"
     },
     {
+      "id": "0005-activerecord-gaps",
+      "type": "rfc",
+      "title": "ActiveRecord parity gaps — associations, connection-pool, relation",
+      "terms": "0005-activerecord-gaps activerecord parity gaps — associations, connection-pool, relation activerecord associations connection-pool relation rfc 0005 — activerecord parity gaps"
+    },
+    {
       "id": "abstract-class-own-property-fix",
       "type": "story",
       "title": "Fix _abstractClass own-property check (core bug)",
       "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
+    },
+    {
+      "id": "af11-strict-loading-test-unblocks",
+      "type": "story",
+      "title": "AF11 — wire remaining strict-loading test stubs",
+      "terms": "af11-strict-loading-test-unblocks af11 — wire remaining strict-loading test stubs associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "af12-preload-through-where-placement",
+      "type": "story",
+      "title": "AF12 — fix through-WHERE placement in includes-only preload path",
+      "terms": "af12-preload-through-where-placement af12 — fix through-where placement in includes-only preload path associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "af5-eager-load-raise-semantics",
+      "type": "story",
+      "title": "AF5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks",
+      "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "assoc-scope-polymorphic-through-alias",
+      "type": "story",
+      "title": "Association-scope polymorphic-through alias coverage",
+      "terms": "assoc-scope-polymorphic-through-alias association-scope polymorphic-through alias coverage associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "belongsto-accessor-null-bug",
+      "type": "story",
+      "title": "Investigate belongsTo accessor returning null despite valid FK",
+      "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
     },
     {
       "id": "ci-examples-job",
@@ -50,10 +86,22 @@
       "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
     },
     {
+      "id": "collection-size-identity-reconciliation",
+      "type": "story",
+      "title": "Collection size / add-to-target AR-id identity reconciliation",
+      "terms": "collection-size-identity-reconciliation collection size / add-to-target ar-id identity reconciliation associations 0005-activerecord-gaps context"
+    },
+    {
       "id": "convert-bootstrap-rfc",
       "type": "story",
       "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
       "terms": "convert-bootstrap-rfc convert a real plan doc to rfc 0002 (bootstrap→databasetasks) conversion 0001-task-system context"
+    },
+    {
+      "id": "d2-has-one-fixture-bodies",
+      "type": "story",
+      "title": "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)",
+      "terms": "d2-has-one-fixture-bodies d2 — fill has_one test fixture bodies (~24 fixture-gated tests) associations 0005-activerecord-gaps context"
     },
     {
       "id": "define-schema-preload-cleanup",
@@ -66,6 +114,30 @@
       "type": "story",
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
       "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "dependent-dispatch-consolidation",
+      "type": "story",
+      "title": "Consolidate dependent-handling dispatch paths",
+      "terms": "dependent-dispatch-consolidation consolidate dependent-handling dispatch paths associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "error-message-dead-code-hygiene",
+      "type": "story",
+      "title": "Inverse-of error wording + dead-code hygiene",
+      "terms": "error-message-dead-code-hygiene inverse-of error wording + dead-code hygiene associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "hmt-scope-join-aware",
+      "type": "story",
+      "title": "Make HMT scope() join-aware like Rails",
+      "terms": "hmt-scope-join-aware make hmt scope() join-aware like rails associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "hmt-self-ref-belongs-to-push",
+      "type": "story",
+      "title": "Self-referential belongsTo-source push for has_many :through",
+      "terms": "hmt-self-ref-belongs-to-push self-referential belongsto-source push for has_many :through associations 0005-activerecord-gaps context"
     },
     {
       "id": "lazy-async-schema-reflection",
@@ -86,16 +158,100 @@
       "terms": "migrate-tests-delete-wrapper phase 3 — migrate tests, delete the wrapper, collapse .inner walks query-cache 0004-query-cache-mixin context"
     },
     {
+      "id": "nested-through-remainder",
+      "type": "story",
+      "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",
+      "terms": "nested-through-remainder nested-through remainder (scope, default_scope, shared-source reset, hmt autosave) associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "p13-standalone-connection",
+      "type": "story",
+      "title": "P13 — implement StandaloneConnection class",
+      "terms": "p13-standalone-connection p13 — implement standaloneconnection class connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pf5-connection-handler-reaudit",
+      "type": "story",
+      "title": "Re-audit 11 still-skipped connection-handler.test.ts tests",
+      "terms": "pf5-connection-handler-reaudit re-audit 11 still-skipped connection-handler.test.ts tests connection-pool 0005-activerecord-gaps context"
+    },
+    {
       "id": "pg-mysql-purge-handlers",
       "type": "story",
       "title": "Follow-up — persistent PG/MySQL purge handlers",
       "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "pool-allow-retry-forwarding",
+      "type": "story",
+      "title": "Forward allowRetry through concrete execQuery overrides",
+      "terms": "pool-allow-retry-forwarding forward allowretry through concrete execquery overrides connection-pool 0005-activerecord-gaps context"
+    },
+    {
       "id": "pool-based-query-cache",
       "type": "story",
       "title": "Phase 2 — pool-based ActiveRecord::QueryCache",
       "terms": "pool-based-query-cache phase 2 — pool-based activerecord::querycache query-cache 0004-query-cache-mixin context"
+    },
+    {
+      "id": "pool-cached-find-by-statement-cache",
+      "type": "story",
+      "title": "Reconcile cachedFindBy with StatementCache and allowRetry",
+      "terms": "pool-cached-find-by-statement-cache reconcile cachedfindby with statementcache and allowretry connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-env-resolution-unify",
+      "type": "story",
+      "title": "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution",
+      "terms": "pool-env-resolution-unify unify fromenv currentenv vs forcurrentenv defaultenv resolution connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-merge-resolve-url-config-unskip",
+      "type": "story",
+      "title": "Unskip 7 merge-and-resolve-default-url-config tests",
+      "terms": "pool-merge-resolve-url-config-unskip unskip 7 merge-and-resolve-default-url-config tests connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-node-sqlite-restore-verify",
+      "type": "story",
+      "title": "Verify node:sqlite restoreFromPath on a Node 22.5+ CI lane",
+      "terms": "pool-node-sqlite-restore-verify verify node:sqlite restorefrompath on a node 22.5+ ci lane connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-per-class-callback-registry",
+      "type": "story",
+      "title": "Per-class clone-on-write callback registry on AbstractAdapter",
+      "terms": "pool-per-class-callback-registry per-class clone-on-write callback registry on abstractadapter connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-pg-reconnect-loop",
+      "type": "story",
+      "title": "Port retry loop + raw-connection ownership to PostgreSQLAdapter#reconnectBang",
+      "terms": "pool-pg-reconnect-loop port retry loop + raw-connection ownership to postgresqladapter#reconnectbang connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-raw-connection-initialize-overload",
+      "type": "story",
+      "title": "Port deprecated raw-connection initialize overload to base adapter",
+      "terms": "pool-raw-connection-initialize-overload port deprecated raw-connection initialize overload to base adapter connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-reap-flush-expire-audit",
+      "type": "story",
+      "title": "Audit _available re-add sites that skip expire()",
+      "terms": "pool-reap-flush-expire-audit audit _available re-add sites that skip expire() connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-sqlite-open-uri",
+      "type": "story",
+      "title": "Enable SQLITE_OPEN_URI for shared-cache :memory:",
+      "terms": "pool-sqlite-open-uri enable sqlite_open_uri for shared-cache :memory: connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "r3-reorder-test-alignment",
+      "type": "story",
+      "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
+      "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
     },
     {
       "id": "reconstruct-from-schema-parity",
@@ -116,6 +272,18 @@
       "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
     },
     {
+      "id": "rf1-fk-derivation-consolidation",
+      "type": "story",
+      "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
+      "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "rf3-inorderof-type-cast",
+      "type": "story",
+      "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
+      "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
+    },
+    {
       "id": "scaffold-tooling",
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
@@ -126,6 +294,18 @@
       "type": "story",
       "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
       "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "strict-loading-cascade-proxy",
+      "type": "story",
+      "title": "Strict-loading cascade on collection proxy reader + mode propagation",
+      "terms": "strict-loading-cascade-proxy strict-loading cascade on collection proxy reader + mode propagation associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "track9-single-test-gaps",
+      "type": "story",
+      "title": "Track 9 — scattered single-test association gaps",
+      "terms": "track9-single-test-gaps track 9 — scattered single-test association gaps associations 0005-activerecord-gaps context"
     },
     {
       "id": "visitor-on-establish",
