@@ -184,6 +184,27 @@
         "0007-remove-global-arel-visitor"
       ],
       "file_path": "rfcs/0010-adapter-cleanup/README.md"
+    },
+    {
+      "id": "draft-ar-test-isolation-helper",
+      "title": "AR test harness — one isolation helper (useHandlerFixtures) + Rails config fidelity",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-03T00:00:00.000Z",
+      "updated": "2026-06-03T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "test-isolation-helper",
+        "test-config-fidelity"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0008-test-perf-template-clone",
+        "0010-adapter-cleanup"
+      ],
+      "file_path": "rfcs/draft-ar-test-isolation-helper/README.md"
     }
   ],
   "stories": [
@@ -423,6 +444,21 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-package-scaffold.md"
     },
     {
+      "id": "collapse-handler-txn-helper",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Make `fixtures` optional; delete useHandlerTransactionalFixtures",
+      "status": "ready",
+      "cluster": "test-isolation-helper",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/collapse-handler-txn-helper.md"
+    },
+    {
       "id": "collection-size-identity-reconciliation",
       "rfc": "0005-activerecord-gaps",
       "title": "Collection size / add-to-target AR-id identity reconciliation",
@@ -594,6 +630,40 @@
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
     },
     {
+      "id": "migrate-defineschema-pilot",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Migrate a pilot directory onto useHandlerFixtures + measure",
+      "status": "ready",
+      "cluster": "test-isolation-helper",
+      "deps": [
+        "collapse-handler-txn-helper"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/migrate-defineschema-pilot.md"
+    },
+    {
+      "id": "migrate-defineschema-remaining",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Migrate remaining defineSchema-per-file tests (batched)",
+      "status": "draft",
+      "cluster": "test-isolation-helper",
+      "deps": [
+        "migrate-defineschema-pilot"
+      ],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/migrate-defineschema-remaining.md"
+    },
+    {
       "id": "migrate-tests-delete-wrapper",
       "rfc": "0004-query-cache-mixin",
       "title": "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks",
@@ -671,6 +741,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/pg-mysql-purge-handlers.md"
+    },
+    {
+      "id": "pg-prepared-statements-off-ci",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Add prepared_statements: false CI dimension (PG + MySQL toggle)",
+      "status": "ready",
+      "cluster": "test-config-fidelity",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/pg-prepared-statements-off-ci.md"
     },
     {
       "id": "phase0-sqlite-template-spike",
@@ -968,6 +1053,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/relocate-tsc-wrapper.md"
     },
     {
+      "id": "retire-setup-adapter-suite",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Route adapter-cluster tests through handler conn; delete setupAdapterSuite",
+      "status": "draft",
+      "cluster": "test-isolation-helper",
+      "deps": [
+        "collapse-handler-txn-helper"
+      ],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/retire-setup-adapter-suite.md"
+    },
+    {
       "id": "rework-test-setup",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
@@ -1158,6 +1260,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/strict-loading-cascade-proxy.md"
+    },
+    {
+      "id": "test-db-hygiene-settings",
+      "rfc": "draft-ar-test-isolation-helper",
+      "title": "Collation split, UTC pin, SQLite strict, PG min_messages",
+      "status": "draft",
+      "cluster": "test-config-fidelity",
+      "deps": [
+        "pg-prepared-statements-off-ci"
+      ],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-ar-test-isolation-helper/stories/test-db-hygiene-settings.md"
     },
     {
       "id": "track9-single-test-gaps",
