@@ -31,7 +31,7 @@ jobs:
             echo "::error::committed indices are stale — run 'pnpm build-index' locally and recommit" >&2
             exit 1
           }
-      - name: gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Secret scanning runs locally via the `.husky/pre-commit` hook
+      # (`gitleaks protect --staged`, the OSS CLI — no license needed).
+      # The gitleaks-action was removed from CI: gitleaks-action@v2 requires a
+      # paid GITLEAKS_LICENSE for organization repos and fails without it.
