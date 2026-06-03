@@ -125,7 +125,7 @@ machinery; it does not introduce a committed dump.
 
 ## Rollout
 
-Each PR ≤300 LOC, off `main`, non-overlapping files.
+Each PR ≤500 LOC, off `main`, non-overlapping files.
 
 1. ~~**PR 0** — visitor-on-establish~~ **SUPERSEDED by RFC 0007** (the global
    visitor is removed there, not installed-on-establish). See

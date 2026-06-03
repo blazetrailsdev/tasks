@@ -30,7 +30,7 @@ Self-pacing loop for parallel PR work across one or more plan docs.
 5. **Spawn ONE prompt-agent** via `Skill(prompt-agent)` (or call `run.sh` directly). The spawned prompt MUST:
    - Reference the source: for RFC picks, the story `file_path` + story id; for grep picks, the plan doc + the specific PR id.
    - List Rails source path under `scripts/api-compare/.rails-source/`.
-   - Include the standard hard-rules block (NO `node:*` imports, NO `process.*`, async fs only, 300 LOC ceiling, NO STACKED PRs, draft + `/link`, conventional commits, no Co-Authored-By, camelCase only).
+   - Include the standard hard-rules block (NO `node:*` imports, NO `process.*`, async fs only, 500 LOC ceiling, NO STACKED PRs, draft + `/link`, conventional commits, no Co-Authored-By, camelCase only).
    - Pass an `EXPLICIT_NAME=<kebab-slug>` so worktree names don't collide — for RFC picks this MUST match the `--assignee` used at claim time.
    - For RFC picks, instruct the worker to mark progress via `pnpm tasks in-progress <id> --pr <N>` after opening the PR and `pnpm tasks done <id> --pr <N>` once merged.
 6. **Reschedule** via `ScheduleWakeup` with the same prompt back, default `delaySeconds=660` (11 min). Pass plan-doc paths verbatim in the prompt so the next firing re-reads them.
@@ -78,7 +78,7 @@ Hard rules:
 - NO process.* references.
 - Async fs only.
 - No new third-party runtime deps.
-- 300 LOC ceiling. NO STACKED PRs. Single PR from main.
+- 500 LOC ceiling. NO STACKED PRs. Single PR from main.
 - Test names match Rails verbatim.
 
 Constraints (CLAUDE.md):

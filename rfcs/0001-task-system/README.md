@@ -37,7 +37,7 @@ checklists. Humans read them well; agents do not. Concretely:
   Format drift across docs causes missed or duplicate picks.
 - `post-merge-findings` appends bullet text. There is no structured record of
   "what PR closed which task."
-- The "bundle adjacent tasks toward 250–300 LOC" rule lives only in CLAUDE.md
+- The "bundle adjacent tasks toward 250–500 LOC" rule lives only in CLAUDE.md
   and MEMORY.md prose. Agents cannot programmatically compute a valid bundle.
 - Dependency relationships are expressed as prose ("gated on D-1 completion").
   There is no way to query "what is unblocked right now?" without parsing text.
@@ -302,10 +302,10 @@ during triage, updates the RFC's stories table, and calls
 `pnpm tasks done <id> --pr <number>` for the merged story. No other source
 file is modified.
 
-**Bundle ceiling:** the 250–300 LOC rule currently lives only in CLAUDE.md
+**Bundle ceiling:** the 250–500 LOC rule currently lives only in CLAUDE.md
 prose. With `est-loc` + `next-bundle --max-loc`, the rule is enforced
 algorithmically. `build-index.ts` warns when a single story declares
-`est-loc > 300`. Stories with `est-loc: null` are excluded from
+`est-loc > 500`. Stories with `est-loc: null` are excluded from
 `next-bundle` (they still appear in `ready` and `list`) — the agent or
 human picking them up is responsible for estimating before claim.
 
@@ -402,7 +402,7 @@ Each phase below maps to a story file in `stories/`.
 ## Open questions
 
 1. **`est-loc` enforcement.** Warn (non-blocking) or error (blocking) when
-   `est-loc > 300`? Recommendation: warn at build time, error in CI.
+   `est-loc > 500`? Recommendation: warn at build time, error in CI.
 2. **Cross-cluster bundles.** `next-bundle` is same-cluster only. Allow
    cross-cluster bundles when a single cluster has fewer than `--max-loc`
    available? Recommendation: no — mixing clusters in one PR makes review

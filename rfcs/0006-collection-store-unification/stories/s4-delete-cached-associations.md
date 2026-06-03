@@ -34,5 +34,5 @@ poke `_cachedAssociations`.
 ## Notes
 
 This is the riskiest story (touches the singular path + tests). If option B
-exceeds the 300-LOC ceiling, ship option A here and split B into a follow-up
+exceeds the 500-LOC ceiling, ship option A here and split B into a follow-up
 story off `main`.

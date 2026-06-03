@@ -64,7 +64,7 @@ depending on it.
 
 ## Rollout
 
-Off `main`, ≤300 LOC each, non-overlapping files.
+Off `main`, ≤500 LOC each, non-overlapping files.
 
 1. **Phase A** — route production callers through `connection.toSql`:
    [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md),

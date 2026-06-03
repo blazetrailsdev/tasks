@@ -71,7 +71,7 @@ for (const s of stories) {
   if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
   if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
     if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
-    else if (fm["est-loc"] > 300) err(s.file, `est-loc ${fm["est-loc"]} exceeds 300 LOC ceiling`);
+    else if (fm["est-loc"] > 500) err(s.file, `est-loc ${fm["est-loc"]} exceeds 500 LOC ceiling`);
   }
   storyById.set(s.id, s);
 }

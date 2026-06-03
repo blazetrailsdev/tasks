@@ -33,4 +33,4 @@ See RFC 0009 §Pattern taxonomy (P2) and §Wave 4.
 
 Status `draft` — **deferred indefinitely**: high risk (reflection is consumed
 everywhere), multi-PR. Do last, after all other type-audit waves are clean, or
-accept the casts as Rails-parity tax. ~300 LOC cap is nominal — will split.
+accept the casts as Rails-parity tax. ~500 LOC cap is nominal — will split.
