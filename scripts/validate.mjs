@@ -59,12 +59,16 @@ for (const s of stories) {
   if (fm.status && !STORY_STATUSES.includes(fm.status)) {
     err(s.file, `invalid status "${fm.status}" — expected one of ${STORY_STATUSES.join(", ")}`);
   }
-  if (fm.rfc && fm.rfc !== s.rfc) err(s.file, `rfc field "${fm.rfc}" must match parent dir "${s.rfc}"`);
+  if (fm.rfc && fm.rfc !== s.rfc)
+    err(s.file, `rfc field "${fm.rfc}" must match parent dir "${s.rfc}"`);
   const parent = rfcById.get(s.rfc);
   if (parent && fm.cluster) {
     const clusters = parent.frontmatter?.clusters ?? [];
     if (!clusters.includes(fm.cluster)) {
-      err(s.file, `cluster "${fm.cluster}" not declared in ${s.rfc}/README.md clusters: [${clusters.join(", ")}]`);
+      err(
+        s.file,
+        `cluster "${fm.cluster}" not declared in ${s.rfc}/README.md clusters: [${clusters.join(", ")}]`,
+      );
     }
   }
   if (fm.deps && !Array.isArray(fm.deps)) err(s.file, `deps must be an array`);
@@ -89,7 +93,9 @@ for (const s of stories) {
 }
 
 // DFS cycle detection over story deps
-const WHITE = 0, GRAY = 1, BLACK = 2;
+const WHITE = 0,
+  GRAY = 1,
+  BLACK = 2;
 const color = new Map([...storyById.keys()].map((id) => [id, WHITE]));
 function visit(id, stack) {
   if (color.get(id) === GRAY) {
@@ -111,4 +117,6 @@ if (errors.length) {
   for (const e of errors) console.error(`  ${e}`);
   process.exit(1);
 }
-console.log(`validated ${rfcs.length} RFC${rfcs.length === 1 ? "" : "s"} and ${stories.length} stor${stories.length === 1 ? "y" : "ies"}.`);
+console.log(
+  `validated ${rfcs.length} RFC${rfcs.length === 1 ? "" : "s"} and ${stories.length} stor${stories.length === 1 ? "y" : "ies"}.`,
+);

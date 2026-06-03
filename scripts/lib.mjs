@@ -43,7 +43,14 @@ export function loadAll() {
       rfcEntry = { dir: name, file: readme, frontmatter, body, lines };
       rfcs.push(rfcEntry);
     } catch (err) {
-      rfcs.push({ dir: name, file: readme, frontmatter: null, body: "", lines: 0, error: err.message });
+      rfcs.push({
+        dir: name,
+        file: readme,
+        frontmatter: null,
+        body: "",
+        lines: 0,
+        error: err.message,
+      });
       continue;
     }
     const storiesDir = join(rfcDir, "stories");
@@ -61,7 +68,15 @@ export function loadAll() {
         const { frontmatter, body, lines } = parseFrontmatter(file);
         stories.push({ id, rfc: name, file, frontmatter, body, lines });
       } catch (err) {
-        stories.push({ id, rfc: name, file, frontmatter: null, body: "", lines: 0, error: err.message });
+        stories.push({
+          id,
+          rfc: name,
+          file,
+          frontmatter: null,
+          body: "",
+          lines: 0,
+          error: err.message,
+        });
       }
     }
   }

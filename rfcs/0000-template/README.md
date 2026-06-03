@@ -43,9 +43,9 @@ Ordered phases, referencing story IDs for each phase.
 
 ## Stories
 
-| ID | Title | Status | Est LOC | Cluster |
-|----|-------|--------|---------|---------|
-| [template-story](stories/template-story.md) | Template story | draft | null | cluster-name-1 |
+| ID                                          | Title          | Status | Est LOC | Cluster        |
+| ------------------------------------------- | -------------- | ------ | ------- | -------------- |
+| [template-story](stories/template-story.md) | Template story | draft  | null    | cluster-name-1 |
 
 ## Changelog
 
