@@ -1,14 +1,14 @@
 ---
 title: "Phase A1 — route DDL/metadata toSql callers through connection.toSql"
-status: ready
+status: claimed
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: []
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-03T20:11:16Z"
+assignee: "a1-ddl-metadata-callers"
 blocked-by: null
 ---
 
