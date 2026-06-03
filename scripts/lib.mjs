@@ -12,7 +12,12 @@ export const RFCS_ROOT = join(REPO_ROOT, "rfcs");
 // 0000-template/ is the literal starter directory — copy-this content
 // with placeholder frontmatter that intentionally fails validation. It
 // is excluded from index generation and validation.
-const RFC_DIR_RE = /^(?!0000-)\d{4}-[a-z0-9][a-z0-9-]*$/;
+//
+// Two dir shapes count as RFCs: numbered `NNNN-slug` (merged, on main) and
+// `draft-slug` placeholders (unnumbered, live on a PR branch). Including
+// drafts means CI validates + indexes them before merge; `finalize-rfc.mjs`
+// renames `draft-slug` → `NNNN-slug` at merge time.
+const RFC_DIR_RE = /^(?!0000-)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
 const STORY_FILE_RE = /^[a-z0-9][a-z0-9-]*\.md$/;
 
 export const RFC_STATUSES = ["draft", "active", "closed", "postponed", "superseded"];
