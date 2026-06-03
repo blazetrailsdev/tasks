@@ -27,15 +27,33 @@ pnpm tasks done <id> --pr <n>
 
 ## Authoring an RFC
 
+RFCs are **unnumbered until merge.** You author against a `draft-<slug>`
+placeholder; the **PR is where the design discussion happens**; the number is
+assigned when the PR is finalized, right before merge. Nobody pre-claims an
+integer, so concurrent RFCs never collide on the index.
+
 ```bash
-cp -r rfcs/0000-template rfcs/NNNN-your-slug
-# Edit README.md frontmatter (rfc, title, owner, packages, clusters)
-# Add story files under stories/
-git commit -am "RFC NNNN: <title>"
+# 1. Branch + scaffold a placeholder (note the `draft-` prefix, no number).
+git checkout -b rfc-your-slug
+cp -r rfcs/0000-template rfcs/draft-your-slug
+#    Edit README.md: frontmatter `rfc: "draft-your-slug"` (+ title, owner,
+#    packages, clusters) and the H1 (`# RFC — Title`). Add stories under
+#    stories/ — each story's `rfc:` field is also "draft-your-slug".
+git add rfcs/draft-your-slug && git commit -m "RFC (draft): <title>"
+
+# 2. Open a PR. Discuss / revise there. CI validates the placeholder as-is.
+
+# 3. Right before merge, assign the next free number:
+node scripts/finalize-rfc.mjs draft-your-slug        # add --dry-run to preview
+#    → renames the dir to NNNN-your-slug, rewrites every `rfc:` reference,
+#    injects the number into the H1, and rebuilds the indices.
+git add -A && git commit -m "RFC NNNN: assign number" && # merge the PR
 ```
 
-Numbering is **strictly sequential** — pick the next free integer. The
-pre-commit hook regenerates `index.md`, `index.json`, and `search.json`.
+`main` only ever holds numbered RFCs; `draft-*` placeholders live on PR
+branches. The pre-commit hook regenerates `index.md`, `index.json`, and
+`search.json`. Reference an RFC from prose as "this RFC" (number-agnostic) so
+nothing needs rewriting at finalize time beyond the H1 and `rfc:` fields.
 
 ## Rules
 
@@ -44,10 +62,12 @@ This repo runs **loose rules** compared to trails:
 - No code-style LOC ceiling; 2000-line cap per `.md` only catches pathologies
 - Prettier + markdownlint via pre-commit
 - Frontmatter validation in CI (schema, dep-cycle, ID uniqueness, cluster match)
-- **Direct-to-main pushes are the default.** PRs are reserved for substantive
-  RFC README design review.
-- Story status flips (`claim`, `done`, `block`) go straight to `main` via
-  `pnpm tasks` — git push is the atomic claim mechanism.
+- **New RFCs always go through a PR** — that's what assigns the number and
+  hosts design review (placeholder → discussion → numbered at merge; see
+  _Authoring an RFC_). Editing an already-merged RFC's README is also PR-gated.
+- **Everything else is direct-to-main.** Story status flips (`claim`, `done`,
+  `block`) go straight to `main` via `pnpm tasks` — git push is the atomic
+  claim mechanism.
 
 ## Lifecycle
 
@@ -84,10 +104,10 @@ Transitions are direct-push frontmatter edits. No PR gate on status changes.
     ├── 0000-template/         ← copy this to start a new RFC
     │   ├── README.md
     │   └── stories/template-story.md
-    ├── 0001-task-system/
+    ├── 0001-task-system/      ← numbered (merged)
     │   ├── README.md
     │   └── stories/
-    └── NNNN-your-rfc/
+    └── draft-your-rfc/        ← placeholder; lives on a PR branch, numbered at merge
         ├── README.md
         └── stories/
 ```

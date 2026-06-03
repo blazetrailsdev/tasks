@@ -1,5 +1,5 @@
 ---
-rfc: "NNNN-your-slug"
+rfc: "draft-your-slug"
 title: "Short prose title"
 status: draft
 created: YYYY-MM-DD
@@ -11,7 +11,10 @@ clusters:
   - cluster-name-2
 ---
 
-# RFC NNNN — Title
+<!-- Unnumbered until merge: keep `rfc:` as draft-your-slug and the H1 below
+     number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
+
+# RFC — Title
 
 ## Summary
 
