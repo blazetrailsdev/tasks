@@ -35,14 +35,23 @@ files onto it, and — separately — closes the Rails test-connection-config ga
 (`prepared_statements: false`, divergent collation, etc.) that we don't yet
 exercise in CI.
 
-Migrated from
+Originated from the Rails-CI test-config comparison first drafted in
 [`trails/docs/activerecord/adapter-test-ci-coverage-plan.md`](https://github.com/blazetrailsdev/trails/blob/main/docs/activerecord/adapter-test-ci-coverage-plan.md)
-§9–§10.
+(§9–§10, since removed) — **this RFC is now the sole source of truth** for that
+work. The coverage-plan doc retains §1–§8 (getting adapter dirs green in CI) and
+a back-pointer here.
 
 ## Motivation
 
-**Isolation cost (cluster `test-isolation-helper`).** Adoption of the
-rollback path is the problem:
+**Isolation cost (cluster `test-isolation-helper`).** Rails keeps its (much
+larger) AR suite fast with two structural choices we only _partially_ adopt:
+(1) schema is built once at suite start (`test/schema/schema.rb`), never re-run
+between tests; (2) every test is wrapped in a transaction that rolls back on
+teardown (`ActiveRecord::TestFixtures`), so isolation costs a `ROLLBACK`, not a
+table rebuild — combined with `parallelize(workers: :number_of_processors)`,
+that lands large Rails-based suites in the low single-digit minutes (e.g.
+PlanetScale's app: ~1–4 min on 64 workers). Adoption of the rollback path is our
+problem:
 
 | Isolation strategy                                                  | AR test files      | Per-test cost                        |
 | ------------------------------------------------------------------- | ------------------ | ------------------------------------ |
@@ -62,16 +71,23 @@ connections
 ([`config.example.yml`](https://github.com/rails/rails/blob/main/activerecord/test/config.example.yml))
 exercise dimensions our CI never does:
 
-- A dedicated `prepared_statements: false` connection
-  (`arunit_without_prepared_statements`) plus a `MYSQL_PREPARED_STATEMENTS`
-  toggle. We have the feature (`statement-cache.ts`) but CI only runs PS-on, so
-  the unprepared bind/cast path is effectively untested.
-- The two test DBs use **deliberately different collations**
-  (`utf8mb4_unicode_ci` vs `utf8mb4_general_ci`); `arunit` is pinned
-  `time_zone: UTC`; SQLite runs `strict: true`; PG runs `min_messages: warning`.
+| Dimension                                  | What Rails does                                                                                                                                       | Our state                                                                                                                                                              | Est. effort                                                                |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **`prepared_statements: false`**           | Dedicated PG conn `arunit_without_prepared_statements`; MySQL `MYSQL_PREPARED_STATEMENTS` env toggle. Material parts of the suite run with PS off.    | Feature exists (`statement-cache.ts`, `prepared-statements-disabled.test.ts`) but **CI only runs PS-on**. The unprepared bind/cast path is effectively untested in CI. | M — 2nd PG vitest step (or env toggle) with PS disabled; mirror for MySQL. |
+| **Divergent collation across the two DBs** | `arunit` = `utf8mb4_unicode_ci`, `arunit2` = `utf8mb4_general_ci` — intentionally different, to catch code assuming both connections share collation. | Second pool exists (`arunit2-model.ts`, Story 4.2) but both DBs use defaults; collation not deliberately split.                                                        | S — set distinct collations when provisioning the 2nd DB.                  |
+| **`time_zone: UTC` pin**                   | `arunit` pinned to UTC.                                                                                                                               | Not pinned in the harness.                                                                                                                                             | S                                                                          |
+| **SQLite `strict: true`**                  | File + in-memory SQLite both run `strict: true` (closer type affinity to other adapters).                                                             | Not set in our SQLite test setup.                                                                                                                                      | S — flip a flag; may surface latent affinity assumptions.                  |
+| **PG `min_messages: warning`**             | Quiets PG notice noise.                                                                                                                               | Not set.                                                                                                                                                               | XS — log hygiene only.                                                     |
+
+Recommended order: the `prepared_statements: false` dimension is the
+highest-value gap (most untested production code behind it, and exactly how
+Rails catches that bug class); the rest are cheap hygiene that can ride along on
+the same PR that provisions the 2nd DB.
 
 > Already covered, do NOT re-add: in-memory SQLite (we already run `:memory:`
-> per fork) and mysql:8-over-MariaDB (tracked as a coverage-plan §6 decision).
+> per fork, per `vitest.config.ts`) and mysql:8-over-MariaDB (a resolved
+> coverage-plan §6 decision — Rails tests `mysql2`/`trilogy` against real MySQL,
+> never MariaDB).
 
 ## Design
 
