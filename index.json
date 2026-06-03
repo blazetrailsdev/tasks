@@ -191,7 +191,7 @@
       "id": "a1-ddl-metadata-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [],
       "deps_rfc": [],
