@@ -8,7 +8,6 @@ import { join } from "node:path";
 import { firstHeading, loadAll, relPath, REPO_ROOT } from "./lib.mjs";
 
 const { rfcs, stories } = loadAll();
-const generatedAt = new Date().toISOString();
 
 const rfcsSorted = [...rfcs].sort((a, b) => a.dir.localeCompare(b.dir));
 const storiesSorted = [...stories].sort((a, b) => a.id.localeCompare(b.id));
@@ -35,7 +34,6 @@ writeFileSync(join(REPO_ROOT, "index.md"), indexMd);
 
 // ---- index.json ----
 const indexJson = {
-  generated_at: generatedAt,
   rfcs: rfcsSorted.map((r) => {
     const fm = r.frontmatter ?? {};
     return {
@@ -100,6 +98,6 @@ const haystack = [
     };
   }),
 ];
-writeFileSync(join(REPO_ROOT, "search.json"), JSON.stringify({ generated_at: generatedAt, items: haystack }, null, 2) + "\n");
+writeFileSync(join(REPO_ROOT, "search.json"), JSON.stringify({ items: haystack }, null, 2) + "\n");
 
 console.log(`built index: ${rfcsSorted.length} RFCs, ${storiesSorted.length} stories`);
