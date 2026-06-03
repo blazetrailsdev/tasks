@@ -61,12 +61,6 @@
       "terms": "0010-adapter-cleanup adapter → connection collapse — remaining cleanup activerecord adapter-cleanup rfc 0010 — adapter → connection collapse cleanup"
     },
     {
-      "id": "0011-ar-test-isolation-helper",
-      "type": "rfc",
-      "title": "AR test harness — one isolation helper (useHandlerFixtures) + Rails config fidelity",
-      "terms": "0011-ar-test-isolation-helper ar test harness — one isolation helper (usehandlerfixtures) + rails config fidelity activerecord test-isolation-helper test-config-fidelity rfc 0011 — one ar test isolation helper + rails config fidelity"
-    },
-    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -157,12 +151,6 @@
       "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
     },
     {
-      "id": "collapse-handler-txn-helper",
-      "type": "story",
-      "title": "Make `fixtures` optional; delete useHandlerTransactionalFixtures",
-      "terms": "collapse-handler-txn-helper make `fixtures` optional; delete usehandlertransactionalfixtures test-isolation-helper 0011-ar-test-isolation-helper context"
-    },
-    {
       "id": "collection-size-identity-reconciliation",
       "type": "story",
       "title": "Collection size / add-to-target AR-id identity reconciliation",
@@ -229,18 +217,6 @@
       "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
     },
     {
-      "id": "migrate-defineschema-pilot",
-      "type": "story",
-      "title": "Migrate a pilot directory onto useHandlerFixtures + measure",
-      "terms": "migrate-defineschema-pilot migrate a pilot directory onto usehandlerfixtures + measure test-isolation-helper 0011-ar-test-isolation-helper context"
-    },
-    {
-      "id": "migrate-defineschema-remaining",
-      "type": "story",
-      "title": "Migrate remaining defineSchema-per-file tests (batched)",
-      "terms": "migrate-defineschema-remaining migrate remaining defineschema-per-file tests (batched) test-isolation-helper 0011-ar-test-isolation-helper context"
-    },
-    {
       "id": "migrate-tests-delete-wrapper",
       "type": "story",
       "title": "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks",
@@ -269,12 +245,6 @@
       "type": "story",
       "title": "Follow-up — persistent PG/MySQL purge handlers",
       "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
-    },
-    {
-      "id": "pg-prepared-statements-off-ci",
-      "type": "story",
-      "title": "Add prepared_statements: false CI dimension (PG + MySQL toggle)",
-      "terms": "pg-prepared-statements-off-ci add prepared_statements: false ci dimension (pg + mysql toggle) test-config-fidelity 0011-ar-test-isolation-helper context"
     },
     {
       "id": "phase0-sqlite-template-spike",
@@ -391,12 +361,6 @@
       "terms": "relocate-tsc-wrapper relocate ar tsc-wrapper + bins into activerecord-cli cli 0003-activerecord-cli context"
     },
     {
-      "id": "retire-setup-adapter-suite",
-      "type": "story",
-      "title": "Route adapter-cluster tests through handler conn; delete setupAdapterSuite",
-      "terms": "retire-setup-adapter-suite route adapter-cluster tests through handler conn; delete setupadaptersuite test-isolation-helper 0011-ar-test-isolation-helper context"
-    },
-    {
       "id": "rework-test-setup",
       "type": "story",
       "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
@@ -467,12 +431,6 @@
       "type": "story",
       "title": "Strict-loading cascade on collection proxy reader + mode propagation",
       "terms": "strict-loading-cascade-proxy strict-loading cascade on collection proxy reader + mode propagation associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "test-db-hygiene-settings",
-      "type": "story",
-      "title": "Collation split, UTC pin, SQLite strict, PG min_messages",
-      "terms": "test-db-hygiene-settings collation split, utc pin, sqlite strict, pg min_messages test-config-fidelity 0011-ar-test-isolation-helper context"
     },
     {
       "id": "track9-single-test-gaps",
