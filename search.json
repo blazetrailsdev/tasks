@@ -61,6 +61,12 @@
       "terms": "0010-adapter-cleanup adapter → connection collapse — remaining cleanup activerecord adapter-cleanup rfc 0010 — adapter → connection collapse cleanup"
     },
     {
+      "id": "draft-docs-cutover",
+      "type": "rfc",
+      "title": "Full cutover — retire trails/docs, make tasks the only source of truth",
+      "terms": "draft-docs-cutover full cutover — retire trails/docs, make tasks the only source of truth reconcile migrate decommission guardrails rfc — full cutover: retire `trails/docs`, make `tasks` the only source of truth"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",

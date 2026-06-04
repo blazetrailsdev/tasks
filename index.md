@@ -14,3 +14,4 @@
 | [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | active | @dmarano | activerecord |
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @dmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @dmarano | activerecord |
+| [draft-docs-cutover](rfcs/draft-docs-cutover/README.md) | Full cutover — retire trails/docs, make tasks the only source of truth | draft | @dmarano | — |
