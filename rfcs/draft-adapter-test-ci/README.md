@@ -82,10 +82,10 @@ right after each job's core `pnpm vitest run packages/activerecord/` step
 (`ci.yml:580` in `postgres-tests`), reusing the same service container + build,
 in its own process so it never interleaves with the shared suite.
 
-- **PG step** runs only the excluded targets — `adapters/postgresql/**` +
-  `tasks/postgresql-database-tasks.test.ts`. The `connection-adapters/postgresql/**`
-  - top-level `postgresql-adapter*.test.ts` files are **not** excluded and
-    already run in the shared suite; adding them double-runs.
+- **PG step** runs only the excluded targets: `adapters/postgresql/**` and
+  `tasks/postgresql-database-tasks.test.ts`. Note `connection-adapters/postgresql/**`
+  and the top-level `postgresql-adapter*.test.ts` are **not** excluded — they
+  already run in the shared suite, so adding them here would double-run.
 - **MySQL step** runs `adapters/abstract-mysql-adapter`, `adapters/mysql2`,
   `connection-adapters/mysql` (the substring that catches the excluded
   `connection-adapters/mysql2-adapter.test.ts`), and explicitly

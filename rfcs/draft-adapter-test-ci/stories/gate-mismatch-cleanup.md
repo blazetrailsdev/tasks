@@ -32,9 +32,10 @@ the pinned vendored Rails (`vendor/sources.ts`; `pnpm vendor:fetch`):
 
 - adapter gate → Rails `current_adapter?(:XAdapter)` (`activerecord/test/cases/helper.rb`)
   or the `activerecord/test/cases/adapters/<db>/` directory.
-- feature gate → Rails `supports_<key>?` (`connection_adapters/abstract/database_statements.rb`
-  - per-adapter `*_adapter.rb`). Mirror its real branching (e.g. `supports_json?`
-    = `!mariadb? && version >= 5.7.8`), already documented in `supports.ts`.
+- feature gate → Rails `supports_<key>?`, defined in
+  `connection_adapters/abstract/database_statements.rb` and the per-adapter
+  `*_adapter.rb`. Mirror its real branching (e.g. `supports_json?` =
+  `!mariadb? && version >= 5.7.8`), already documented in `supports.ts`.
 
 ## Scope boundary (who owns what)
 
