@@ -19,6 +19,25 @@
       "file_path": "rfcs/0000-adapter-test-ci/README.md"
     },
     {
+      "id": "0000-pg-rawconn-convergence",
+      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "pg-rawconn-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0010-adapter-cleanup"
+      ],
+      "file_path": "rfcs/0000-pg-rawconn-convergence/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -1011,6 +1030,72 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase2-mariadb-template.md"
+    },
+    {
+      "id": "phase2a-read-path",
+      "rfc": "0000-pg-rawconn-convergence",
+      "title": "Phase 2a — PG read path through withRawConnection",
+      "status": "draft",
+      "cluster": "pg-rawconn-convergence",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2a-read-path.md"
+    },
+    {
+      "id": "phase2b-write-path",
+      "rfc": "0000-pg-rawconn-convergence",
+      "title": "Phase 2b — PG write/mutation path through withRawConnection",
+      "status": "draft",
+      "cluster": "pg-rawconn-convergence",
+      "deps": [
+        "phase2a-read-path"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2b-write-path.md"
+    },
+    {
+      "id": "phase2c-txn-control-retire-withclient",
+      "rfc": "0000-pg-rawconn-convergence",
+      "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
+      "status": "draft",
+      "cluster": "pg-rawconn-convergence",
+      "deps": [
+        "phase2b-write-path"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2c-txn-control-retire-withclient.md"
+    },
+    {
+      "id": "phase3-unify-connection-slot",
+      "rfc": "0000-pg-rawconn-convergence",
+      "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
+      "status": "draft",
+      "cluster": "pg-rawconn-convergence",
+      "deps": [
+        "phase2c-txn-control-retire-withclient"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase3-unify-connection-slot.md"
     },
     {
       "id": "pool-allow-retry-forwarding",

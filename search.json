@@ -7,6 +7,12 @@
       "terms": "0000-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
     },
     {
+      "id": "0000-pg-rawconn-convergence",
+      "type": "rfc",
+      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
+      "terms": "0000-pg-rawconn-convergence pg raw-connection acquisition through the abstract withrawconnection loop activerecord pg-rawconn-convergence rfc — pg raw-connection acquisition through the abstract `withrawconnection` loop"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -365,6 +371,30 @@
       "type": "story",
       "title": "Phase 2 — MariaDB template (measure before committing)",
       "terms": "phase2-mariadb-template phase 2 — mariadb template (measure before committing) test-perf 0008-test-perf-template-clone context"
+    },
+    {
+      "id": "phase2a-read-path",
+      "type": "story",
+      "title": "Phase 2a — PG read path through withRawConnection",
+      "terms": "phase2a-read-path phase 2a — pg read path through withrawconnection pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+    },
+    {
+      "id": "phase2b-write-path",
+      "type": "story",
+      "title": "Phase 2b — PG write/mutation path through withRawConnection",
+      "terms": "phase2b-write-path phase 2b — pg write/mutation path through withrawconnection pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+    },
+    {
+      "id": "phase2c-txn-control-retire-withclient",
+      "type": "story",
+      "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
+      "terms": "phase2c-txn-control-retire-withclient phase 2c — txn-control + ddl sites, retire withclient bespoke reconnect pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+    },
+    {
+      "id": "phase3-unify-connection-slot",
+      "type": "story",
+      "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
+      "terms": "phase3-unify-connection-slot phase 3 — unify pg connection onto the single _connection slot (delete the seam) pg-rawconn-convergence 0000-pg-rawconn-convergence context"
     },
     {
       "id": "pool-allow-retry-forwarding",
