@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-adapter-test-ci](rfcs/0000-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -15,4 +16,3 @@
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @dmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @dmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @dmarano | activerecord |
-| [draft-adapter-test-ci](rfcs/draft-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |

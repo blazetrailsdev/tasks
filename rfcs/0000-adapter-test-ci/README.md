@@ -1,5 +1,5 @@
 ---
-rfc: "draft-adapter-test-ci"
+rfc: "0000-adapter-test-ci"
 title: "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery"
 status: draft
 created: 2026-06-04
@@ -12,7 +12,7 @@ clusters:
   - gates
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as draft-adapter-test-ci and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0000-adapter-test-ci and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
 # RFC — Adapter test-CI: wire the live-DB lane + the test:compare gate machinery

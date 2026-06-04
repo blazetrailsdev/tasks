@@ -1,6 +1,24 @@
 {
   "rfcs": [
     {
+      "id": "0000-adapter-test-ci",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "ci-lane",
+        "gates"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0000-adapter-test-ci/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -204,24 +222,6 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0011-activerecord-docs-cutover/README.md"
-    },
-    {
-      "id": "draft-adapter-test-ci",
-      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-04T00:00:00.000Z",
-      "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "ci-lane",
-        "gates"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/draft-adapter-test-ci/README.md"
     }
   ],
   "stories": [
@@ -726,7 +726,7 @@
     },
     {
       "id": "gate-mismatch-cleanup",
-      "rfc": "draft-adapter-test-ci",
+      "rfc": "0000-adapter-test-ci",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
       "status": "ready",
       "cluster": "gates",
@@ -737,7 +737,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/draft-adapter-test-ci/stories/gate-mismatch-cleanup.md"
+      "file_path": "rfcs/0000-adapter-test-ci/stories/gate-mismatch-cleanup.md"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -803,7 +803,7 @@
       "id": "migrate-adapter-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from adapter-test-ci + ci-gates",
-      "status": "draft",
+      "status": "in-progress",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
@@ -1561,7 +1561,7 @@
     },
     {
       "id": "wire-adapter-dir-lane",
-      "rfc": "draft-adapter-test-ci",
+      "rfc": "0000-adapter-test-ci",
       "title": "Wire the live-DB adapter-dir lane into CI",
       "status": "ready",
       "cluster": "ci-lane",
@@ -1572,7 +1572,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/draft-adapter-test-ci/stories/wire-adapter-dir-lane.md"
+      "file_path": "rfcs/0000-adapter-test-ci/stories/wire-adapter-dir-lane.md"
     },
     {
       "id": "wire-mixin-cache",

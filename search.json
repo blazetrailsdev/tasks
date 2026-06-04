@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "id": "0000-adapter-test-ci",
+      "type": "rfc",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "terms": "0000-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -65,12 +71,6 @@
       "type": "rfc",
       "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
       "terms": "0011-activerecord-docs-cutover activerecord docs cutover — retire docs/activerecord, tasks as sole source of truth activerecord reconcile migrate decommission guardrails rfc 0011 — activerecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth"
-    },
-    {
-      "id": "draft-adapter-test-ci",
-      "type": "rfc",
-      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
-      "terms": "draft-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
     },
     {
       "id": "a1-ddl-metadata-callers",
@@ -262,7 +262,7 @@
       "id": "gate-mismatch-cleanup",
       "type": "story",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
-      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates draft-adapter-test-ci context"
+      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0000-adapter-test-ci context"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -580,7 +580,7 @@
       "id": "wire-adapter-dir-lane",
       "type": "story",
       "title": "Wire the live-DB adapter-dir lane into CI",
-      "terms": "wire-adapter-dir-lane wire the live-db adapter-dir lane into ci ci-lane draft-adapter-test-ci context"
+      "terms": "wire-adapter-dir-lane wire the live-db adapter-dir lane into ci ci-lane 0000-adapter-test-ci context"
     },
     {
       "id": "wire-mixin-cache",

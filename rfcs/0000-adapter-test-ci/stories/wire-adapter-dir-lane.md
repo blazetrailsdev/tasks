@@ -1,7 +1,7 @@
 ---
 title: "Wire the live-DB adapter-dir lane into CI"
 status: ready
-rfc: "draft-adapter-test-ci"
+rfc: "0000-adapter-test-ci"
 cluster: ci-lane
 deps: []
 deps-rfc: []
