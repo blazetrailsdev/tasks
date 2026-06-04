@@ -1,7 +1,7 @@
 ---
-rfc: "draft-activerecord-docs-cutover"
+rfc: "0011-activerecord-docs-cutover"
 title: "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth"
-status: draft
+status: active
 created: 2026-06-04
 updated: 2026-06-04
 owner: "@dmarano"
@@ -14,11 +14,11 @@ clusters:
   - guardrails
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as draft-activerecord-docs-cutover and
+<!-- Unnumbered until merge: keep `rfc:` as 0011-activerecord-docs-cutover and
      the H1 below number-free. `scripts/finalize-rfc.mjs` assigns the number at
      merge. -->
 
-# RFC — ActiveRecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth
+# RFC 0011 — ActiveRecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth
 
 ## Summary
 
@@ -224,6 +224,6 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
   `docs/activerecord/*`; dropped the actionpack/actionview/rack/activesupport/
   html-sanitizer/system-testing/trailties/infra/frontiers/launch-roadmap
   migrations (deferred to a later cutover); guardrail now polices only
-  `docs/activerecord/`; renamed slug to `draft-activerecord-docs-cutover`
+  `docs/activerecord/`; renamed slug to `0011-activerecord-docs-cutover`
   (10 stories).
   </content>

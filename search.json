@@ -61,10 +61,10 @@
       "terms": "0010-adapter-cleanup adapter → connection collapse — remaining cleanup activerecord adapter-cleanup rfc 0010 — adapter → connection collapse cleanup"
     },
     {
-      "id": "draft-activerecord-docs-cutover",
+      "id": "0011-activerecord-docs-cutover",
       "type": "rfc",
       "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
-      "terms": "draft-activerecord-docs-cutover activerecord docs cutover — retire docs/activerecord, tasks as sole source of truth activerecord reconcile migrate decommission guardrails rfc — activerecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth"
+      "terms": "0011-activerecord-docs-cutover activerecord docs cutover — retire docs/activerecord, tasks as sole source of truth activerecord reconcile migrate decommission guardrails rfc 0011 — activerecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth"
     },
     {
       "id": "a1-ddl-metadata-callers",
