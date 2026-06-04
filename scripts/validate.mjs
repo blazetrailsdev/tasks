@@ -77,6 +77,10 @@ for (const s of stories) {
     if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
     else if (fm["est-loc"] > 500) err(s.file, `est-loc ${fm["est-loc"]} exceeds 500 LOC ceiling`);
   }
+  // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
+  if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
+    err(s.file, `priority must be a non-negative integer or absent`);
+  }
   storyById.set(s.id, s);
 }
 

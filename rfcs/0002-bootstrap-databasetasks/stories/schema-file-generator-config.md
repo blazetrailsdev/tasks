@@ -6,6 +6,7 @@ cluster: bootstrap
 deps: []
 deps-rfc: []
 est-loc: 250
+priority: 70
 pr: null
 claim: null
 assignee: null

@@ -6,6 +6,7 @@ cluster: test-perf
 deps: []
 deps-rfc: []
 est-loc: 250
+priority: 80
 pr: null
 claim: null
 assignee: null

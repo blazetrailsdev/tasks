@@ -6,6 +6,7 @@ cluster: associations
 deps: []
 deps-rfc: []
 est-loc: 100
+priority: 39
 pr: null
 claim: null
 assignee: null

@@ -1,12 +1,12 @@
 ---
 title: "Wire the live-DB adapter-dir lane into CI"
-status: ready
+status: in-progress
 rfc: "0012-adapter-test-ci"
 cluster: ci-lane
 deps: []
 deps-rfc: []
 est-loc: 40
-pr: null
+pr: 2938
 claim: null
 assignee: null
 blocked-by: null
