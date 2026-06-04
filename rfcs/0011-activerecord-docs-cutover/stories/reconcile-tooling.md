@@ -1,6 +1,6 @@
 ---
 title: "Build story↔shipped-PR reconcile report"
-status: in-progress
+status: done
 rfc: "0011-activerecord-docs-cutover"
 cluster: reconcile
 deps: []

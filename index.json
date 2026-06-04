@@ -1099,7 +1099,7 @@
       "id": "reconcile-tooling",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "Build story↔shipped-PR reconcile report",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "reconcile",
       "deps": [],
       "deps_rfc": [],
