@@ -770,7 +770,7 @@
       "id": "migrate-adapter-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from adapter-test-ci + ci-gates",
-      "status": "draft",
+      "status": "in-progress",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
@@ -787,14 +787,14 @@
       "id": "migrate-ar-followups",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "Reconcile + delete gaps/type-audit/adapter-cleanup docs",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
       ],
       "deps_rfc": [],
       "est_loc": 120,
-      "pr": null,
+      "pr": 3,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
