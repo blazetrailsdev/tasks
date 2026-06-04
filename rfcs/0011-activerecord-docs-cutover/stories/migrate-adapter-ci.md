@@ -1,12 +1,12 @@
 ---
 title: "RFC from adapter-test-ci + ci-gates"
-status: in-progress
+status: done
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
 deps: ["reconcile-existing-rfcs"]
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: 4
 claim: null
 assignee: null
 blocked-by: null

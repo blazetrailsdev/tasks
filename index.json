@@ -839,14 +839,14 @@
       "id": "migrate-adapter-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from adapter-test-ci + ci-gates",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
       ],
       "deps_rfc": [],
       "est_loc": 150,
-      "pr": null,
+      "pr": 4,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
@@ -890,14 +890,14 @@
       "id": "migrate-fixtures",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from 3 fixtures docs",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
       ],
       "deps_rfc": [],
       "est_loc": 200,
-      "pr": null,
+      "pr": 6,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
