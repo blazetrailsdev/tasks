@@ -19,6 +19,23 @@
       "file_path": "rfcs/0000-adapter-test-ci/README.md"
     },
     {
+      "id": "0000-fixtures-adoption",
+      "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "fixtures"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0000-fixtures-adoption/README.md"
+    },
+    {
       "id": "0000-pg-rawconn-convergence",
       "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
       "status": "draft",
@@ -873,7 +890,7 @@
       "id": "migrate-fixtures",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from 3 fixtures docs",
-      "status": "draft",
+      "status": "in-progress",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
@@ -1583,6 +1600,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/strict-loading-cascade-proxy.md"
+    },
+    {
+      "id": "tier1-opportunistic-conversion",
+      "rfc": "0000-fixtures-adoption",
+      "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
+      "status": "ready",
+      "cluster": "fixtures",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-fixtures-adoption/stories/tier1-opportunistic-conversion.md"
     },
     {
       "id": "track9-single-test-gaps",
