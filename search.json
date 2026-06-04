@@ -261,8 +261,8 @@
     {
       "id": "gate-mismatch-cleanup",
       "type": "story",
-      "title": "Reduce test:compare gate-mismatches toward zero",
-      "terms": "gate-mismatch-cleanup reduce test:compare gate-mismatches toward zero gates draft-adapter-test-ci context"
+      "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
+      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates draft-adapter-test-ci context"
     },
     {
       "id": "hmt-scope-join-aware",
