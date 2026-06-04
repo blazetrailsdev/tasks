@@ -907,7 +907,7 @@
       "id": "migrate-schema-ts",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from 2 schema.ts migration docs",
-      "status": "draft",
+      "status": "done",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"
@@ -936,6 +936,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0004-query-cache-mixin/stories/migrate-tests-delete-wrapper.md"
+    },
+    {
+      "id": "models-dump-composite-fk-roundtrip",
+      "rfc": "0003-activerecord-cli",
+      "title": "trails-models-dump: composite-FK synthesized name round-trip",
+      "status": "draft",
+      "cluster": "deferred",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/models-dump-composite-fk-roundtrip.md"
     },
     {
       "id": "nested-through-remainder",

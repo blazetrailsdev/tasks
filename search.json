@@ -337,6 +337,12 @@
       "terms": "migrate-tests-delete-wrapper phase 3 — migrate tests, delete the wrapper, collapse .inner walks query-cache 0004-query-cache-mixin context"
     },
     {
+      "id": "models-dump-composite-fk-roundtrip",
+      "type": "story",
+      "title": "trails-models-dump: composite-FK synthesized name round-trip",
+      "terms": "models-dump-composite-fk-roundtrip trails-models-dump: composite-fk synthesized name round-trip deferred 0003-activerecord-cli context"
+    },
+    {
       "id": "nested-through-remainder",
       "type": "story",
       "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",
