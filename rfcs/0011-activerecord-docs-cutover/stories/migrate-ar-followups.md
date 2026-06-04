@@ -1,6 +1,6 @@
 ---
 title: "Reconcile + delete gaps/type-audit/adapter-cleanup docs"
-status: draft
+status: in-progress
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
 deps: ["reconcile-existing-rfcs"]

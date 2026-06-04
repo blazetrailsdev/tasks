@@ -115,7 +115,7 @@
     {
       "id": "0007-remove-global-arel-visitor",
       "title": "Remove the global Arel visitor — route toSql through connection.toSql",
-      "status": "closed",
+      "status": "active",
       "owner": "@dmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
@@ -256,7 +256,7 @@
       "id": "a4-sweep-remaining-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
-      "status": "done",
+      "status": "ready",
       "cluster": "arel-visitor",
       "deps": [
         "a1-ddl-metadata-callers",
@@ -672,7 +672,7 @@
       "id": "migrate-ar-followups",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "Reconcile + delete gaps/type-audit/adapter-cleanup docs",
-      "status": "draft",
+      "status": "in-progress",
       "cluster": "migrate",
       "deps": [
         "reconcile-existing-rfcs"

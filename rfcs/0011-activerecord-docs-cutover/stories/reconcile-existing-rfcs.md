@@ -46,8 +46,12 @@ PRs (e.g. `#2645`=AF7 cited by the AF11 story; `#2651`=a docs-plan PR; `#2638`
 shared across three 0003 stories). Each flip below was confirmed against actual
 trails repo state, not the ref:
 
-- **0007 (closed):** `setToSqlVisitor` has zero AR callers + `bootstrap-test-handler.ts`
-  has no visitor refs → a2/a3/a4/b/c done.
+- **0007 (closed, then REOPENED):** `setToSqlVisitor` has zero AR callers +
+  `bootstrap-test-handler.ts` has no visitor refs → a1/a2/a3/b/c done. **a4
+  was wrongly flipped** — 33 production `.toSql()` callers remain (relation.ts
+  13, query-methods 8, …), so the "~35-site `toSql` migration" RFC 0010 defers
+  to 0007 is not done. Corrected on the gap-doc re-pass: 0007 → active, a4 →
+  ready. (AR's dialect injection IS gone; only the call-site migration remains.)
 - **0004 (closed):** `QueryCacheAdapter` retired (comment-only remnant);
   `cache`/`uncached` are pool-based statics; mixin live.
 - **0003:** CLI package fully built (scaffold/generators done); `relocate-tsc-wrapper`
