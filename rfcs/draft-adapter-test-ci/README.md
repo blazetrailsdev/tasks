@@ -28,65 +28,113 @@ into CI** (~40 LOC). Separately, the `test:compare` **gate machinery**
 the residual work is a per-file gate-mismatch cleanup. This RFC tracks those two
 remainders; everything else is recorded as shipped in §Done.
 
+**Both initiatives are "do as Rails does" exercises**, not new design:
+
+- **The lane mirrors Rails' per-adapter test execution.** Rails keeps
+  adapter-specific tests under `activerecord/test/cases/adapters/{postgresql,
+mysql2,sqlite3}/` and runs each backend's suite in a separate process with that
+  backend connected (`bin/test` with the adapter selected via `ARCONN`). Our
+  `adapters/<db>/**` layout is the structural mirror; the lane just runs each in
+  its own process under the matching CI service — exactly Rails' model.
+- **The gate machinery mirrors Rails' test conditionals.** `describeIfPg` ≙
+  Rails `current_adapter?(:PostgreSQLAdapter)` (`activerecord/test/cases/helper.rb`);
+  `itIfSupports("json", …)` ≙ Rails `skip unless supports_json?`
+  (`supports_<feature>?` in `connection_adapters/*_adapter.rb` +
+  `abstract/database_statements.rb`); the `adapters/<db>/` directory gate ≙
+  Rails' directory layout. The cleanup's job is to make our gate **equal** the
+  vendored Rails gate test-for-test.
+
+Vendored Rails is pinned in `vendor/sources.ts` (+ `vendor/sources.lock.json`)
+and fetched via `pnpm vendor:fetch`; the Ruby gate extractor reads it
+(`scripts/test-compare/extract-ruby-tests.rb`). Cite Rails by its canonical
+upstream path — the vendored copy mirrors it.
+
 ## Motivation
 
-`vitest.config.ts` excludes the live-DB adapter suites (`adapters/postgresql/**`,
-`adapters/mysql2/**`, `adapters/abstract-mysql-adapter/**`, the `tasks/<db>-*`
-and `connection-adapters/mysql2-*` files) from the shared
-`pnpm vitest run packages/activerecord/` invocation — they build their own
-adapter and assume their tables survive a `describe`, so interleaving with the
-shared suite (which drops tables) corrupts state. As a result those ~135 tests
-**never ran in CI** — they were local-verify-only, so regressions in PG/MySQL
-adapter behavior were invisible to the gate.
+The repo-root `vitest.config.ts` excludes the live-DB adapter suites from the
+shared `pnpm vitest run packages/activerecord/` invocation
+(`ADAPTER_SPECIFIC_EXCLUDE`, `vitest.config.ts:34`, applied at
+`vitest.config.ts:187`): `adapters/postgresql/**`, `adapters/mysql2/**`,
+`adapters/abstract-mysql-adapter/**`, the `tasks/<db>-*` and
+`connection-adapters/mysql2-*` files. They build their own adapter and assume
+their tables survive a `describe`, so interleaving with the shared suite (which
+drops tables) corrupts state. As a result those ~135 tests **never ran in CI** —
+local-verify-only — so PG/MySQL adapter regressions were invisible to the gate.
 
 The probe (PR #2863, do-not-merge) surfaced ~38 pre-existing failures; the
-bucket-fix campaign drove that to **0** (PG and MySQL both green). The lane is
-now safe to turn on — that's the payoff this RFC closes.
+bucket-fix campaign drove that to **0** (PG and MySQL both green — see §Done).
+The lane is now safe to turn on.
 
 ## Design
 
 ### Cluster `ci-lane` — turn the adapter dirs into a green CI gate
 
 The `RUN_ADAPTER_DIRS=1` env gate (drops `ADAPTER_SPECIFIC_EXCLUDE` for one
-vitest process) is already on `main`. Productionizing is ~40 LOC: add a second
-vitest **step** to the existing `postgres-tests` and `mysql-tests` jobs (reusing
-the service container + build), running in its own process so it never
-interleaves with the shared suite.
+vitest process — `vitest.config.ts:32-35`) is **already on `main`**.
+**Decision (was an open question): keep that env gate as the production
+mechanism** — no separate vitest config. It is the minimal, already-shipped
+lever and mirrors Rails selecting the adapter per process rather than maintaining
+a parallel config file.
+
+Productionizing is ~40 LOC: add a second vitest **step** to the existing
+`postgres-tests` (`ci.yml:542`) and `mysql-tests` (`ci.yml:588`) jobs, inserted
+right after each job's core `pnpm vitest run packages/activerecord/` step
+(`ci.yml:580` in `postgres-tests`), reusing the same service container + build,
+in its own process so it never interleaves with the shared suite.
 
 - **PG step** runs only the excluded targets — `adapters/postgresql/**` +
-  `tasks/postgresql-database-tasks.test.ts` (the `connection-adapters/postgresql/**`
+  `tasks/postgresql-database-tasks.test.ts`. The `connection-adapters/postgresql/**`
   - top-level `postgresql-adapter*.test.ts` files are **not** excluded and
-    already run in the shared suite; adding them double-runs).
+    already run in the shared suite; adding them double-runs.
 - **MySQL step** runs `adapters/abstract-mysql-adapter`, `adapters/mysql2`,
   `connection-adapters/mysql` (the substring that catches the excluded
   `connection-adapters/mysql2-adapter.test.ts`), and explicitly
   `tasks/mysql-database-tasks.test.ts` (no dir prefix is a substring of it).
-- Keep `AR_DB_FORKS=4` + the PG/MySQL `retry: 2`. Start MySQL `continue-on-error`
-  if needed; PG can go straight to a **hard gate** (0 failures). Relocate from
-  PR #2863's prototype `*-adapter-tests` jobs.
+- Keep `AR_DB_FORKS=4` + the PG/MySQL `retry: 2`. **Decision (was an open
+  question): PG goes straight to a hard gate** (0 failures, stable across rebases);
+  **MySQL runs one `continue-on-error` shakedown round, then flips to a hard
+  gate** in a one-line follow-up (the mysql:8 service is newer — #2897 — so it
+  earns one observed-green CI round before blocking merges). Relocate from PR
+  #2863's prototype `*-adapter-tests` jobs.
 
 ### Cluster `gates` — finish the advisory gate-mismatch cleanup
 
-The gate machinery shipped (#2856/#2880/#2884): `describeIfPg/Mysql/Sqlite`,
-`itIfSupports` + the `SUPPORTS` registry, Ruby + TS gate extraction, and the
-`test:compare --gates` mismatch classifier (should-gate / missing-gate /
-wrong-gate / over-gated). It is **advisory — never fails CI**. The remaining
-work is reducing the mismatch count toward 0 per file:
+The gate machinery shipped (#2856/#2880/#2884): `describeIfPg/Mysql/Sqlite`
+(`adapters/<db>/test-helper.ts`), `itIfSupports` + the `SUPPORTS` registry
+(`test-helpers/supports.ts:32`), Ruby + TS gate extraction
+(`scripts/test-compare/extract-ruby-tests.rb`, `extract-ts-core.ts`), and the
+mismatch classifier (`scripts/test-compare/gates.ts`) surfaced by
+`pnpm test:compare --gates` (`package.json:30` → `scripts/test-compare/run.sh`).
+It is **advisory — never fails CI**.
 
-- **wrong-gate / over-gated** — reconcile our gate to Rails' (prefer
-  `itIfSupports("<feature>")` where Rails gates by feature). Mechanical.
-- **missing-gate** — judgment call: if our impl passes on every backend, leave
-  it un-gated (we're legitimately more portable) and note it; else add the gate.
-- **should-gate is NOT a mechanical win.** Empirically ~all should-gate
-  `it.skip`s are unimplemented-feature/infra **stubs**, not "flip the skip to a
-  gate" cases — they are _implementation-time guidance_ (gate it when you build
-  the feature), not backlog. Do not bulk-convert.
+**Do as Rails does:** every mismatch is reconciled by making our gate equal the
+**vendored Rails** gate for that test, verified against the pinned Rails
+(`vendor/sources.ts`):
+
+- **wrong-gate / over-gated** — reconcile our gate to Rails'. Prefer
+  `itIfSupports("<feature>")` where Rails gates by `supports_<feature>?`, so the
+  sets line up by construction; add the key to `SUPPORTS` (`supports.ts:32`),
+  verified against the vendored Rails `supports_<key>?` for pg17 / mysql8 /
+  sqlite. Mechanical.
+- **missing-gate** — judgment call: if our impl passes on the adapter Rails
+  excludes, leave it un-gated and **note we are deliberately more portable**
+  (a documented divergence, the only acceptable un-reconciled case); else add
+  the gate.
+- **should-gate is NOT a mechanical win** and is **out of this cluster's scope.**
+  Empirically ~all should-gate `it.skip`s are unimplemented-feature/infra stubs
+  — Rails gates a feature we haven't built. The gate is added _when the feature
+  is built_, which is owned by the feature's RFC (the test-compare-100 attack
+  plan), not here. See §Open questions for the done-criterion this implies.
 
 ## Alternatives considered
 
 - **A dedicated adapter-only CI job.** Rejected by the owner — extend the
   existing `postgres-tests` / `mysql-tests` jobs with a second step instead, so
   no extra runner slot and the service/build are reused.
+- **A separate vitest config for the adapter dirs** (vs the `RUN_ADAPTER_DIRS`
+  env gate). Rejected — the env gate already exists (`vitest.config.ts:32`) and a
+  parallel config file is exactly the kind of duplicate Rails avoids by
+  selecting the adapter per run.
 - **Fold the adapter dirs into the core vitest invocation.** Rejected — the
   shared suite drops tables; a separate process is required (see Motivation).
 - **Bulk-convert should-gate skips to gates.** Rejected — they're feature stubs;
@@ -95,21 +143,24 @@ work is reducing the mismatch count toward 0 per file:
 ## Rollout
 
 1. **`ci-lane`:** [wire-adapter-dir-lane](stories/wire-adapter-dir-lane.md) —
-   the last step of the coverage plan; PG hard-gate, MySQL once confirmed.
+   the last step of the coverage plan; PG hard-gate, MySQL shakedown→hard-gate.
 2. **`gates`:** [gate-mismatch-cleanup](stories/gate-mismatch-cleanup.md) —
-   ongoing, advisory; per-file until `grandGateMismatch → 0`.
+   per-file, until `(wrong-gate + over-gated + reconciled-missing-gate) → 0`.
 
 ## Open questions
 
-1. **MySQL lane: hard gate vs continue-on-error at first.** PG is 0-failures and
-   can hard-gate immediately. MySQL is also 0 but newer (mysql:8 swap landed in
-   #2897) — start non-blocking for one or two runs, or trust the probe and
-   hard-gate directly?
+1. **Done-criterion for `gate-mismatch-cleanup`.** `grandGateMismatch → 0`
+   literally **cannot** be reached while should-gate items exist, because they
+   are deliberately _not_ converted (feature stubs — gated when the feature
+   ships). The story's target is therefore **wrong-gate = 0, over-gated = 0, and
+   every missing-gate either gated or documented-as-portable** — should-gate is
+   tracked separately and excluded. Confirm this is the intended bar (the story
+   encodes it).
 2. **mysql:8 CI cost.** mysql:8 is ~2.5× slower than the old MariaDB service
    (intrinsic transactional-DDL cost); tmpfs (#2907) recovered ~20%. The owner
    accepted mysql:8 for dialect fidelity; per-test DDL reduction rides on the
-   fixtures-migration effort (separate RFC). Tracked here only as context — not
-   a story.
+   fixtures-migration effort (separate RFC). Context only — not a story, and not
+   a blocker for wiring the lane.
 
 ## Done (shipped — recorded so the source docs can be deleted)
 
@@ -117,12 +168,14 @@ work is reducing the mismatch count toward 0 per file:
   exclusion (now unconditional) + gate adapter-dir tests (#2897); mysql data dir
   on tmpfs (#2907); sqlite3 adapter tests gated behind `describeIfSqlite`
   (#2908).
-- **PG buckets:** §4 cross-file isolation / search_path restore (#2878); P-1 /
-  P-7 / M-5 re-confirmed resolved; P-3 virtual/stored `createTable` GENERATED
-  clause (#2898); P-6 hstore store accessors (#2893); P-8 network IPv4-mapped
-  IPv6 (#2881); Epic 3.3-U3 `emitTable`→`columnSpec` / PR C (#2899); P-9
-  schema-dump shorthand serial/bigserial/bitVarying/array (#2904); P-money
-  multi-cast `splitPgDefault` regex (#2915).
+- **PG buckets:** §4 cross-file isolation / `search_path` restore (#2878,
+  mirroring Rails `schema_test.rb` teardown); P-1 / P-7 / M-5 re-confirmed
+  resolved; P-3 virtual/stored `createTable` GENERATED clause (#2898, mirroring
+  `PostgreSQL::SchemaCreation#add_column_options!`); P-6 hstore store accessors
+  (#2893, mirroring `store.rb` + `OID::Hstore`); P-8 network IPv4-mapped IPv6
+  (#2881); Epic 3.3-U3 `emitTable`→`columnSpec` / PR C (#2899); P-9 schema-dump
+  shorthand serial/bigserial/bitVarying/array (#2904); P-money multi-cast
+  `splitPgDefault` regex (#2915).
 - **MySQL buckets:** M-2/M-3/M-4 re-confirmed against mysql:8 (#2900); M-1a/M-1b
   addColumn charset/collation + LOWER/BINARY uniqueness (#2906).
 - **Gate machinery:** Ruby gate extraction + `TestGate` + helper (#2856); TS
