@@ -6,6 +6,7 @@ cluster: bootstrap
 deps: ["rework-test-setup"]
 deps-rfc: []
 est-loc: 150
+priority: 74
 pr: null
 claim: null
 assignee: null

@@ -85,6 +85,222 @@
       "terms": "0014-fixtures-adoption fixtures adoption — opportunistic tier-1 conversion; defer the sweep activerecord fixtures rfc 0014 — fixtures adoption: opportunistic tier-1 conversion, defer the sweep"
     },
     {
+      "id": "abstract-class-own-property-fix",
+      "type": "story",
+      "title": "Fix _abstractClass own-property check (core bug)",
+      "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
+    },
+    {
+      "id": "belongsto-accessor-null-bug",
+      "type": "story",
+      "title": "Investigate belongsTo accessor returning null despite valid FK",
+      "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-merge-resolve-url-config-unskip",
+      "type": "story",
+      "title": "Unskip 7 merge-and-resolve-default-url-config tests",
+      "terms": "pool-merge-resolve-url-config-unskip unskip 7 merge-and-resolve-default-url-config tests connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "hmt-scope-join-aware",
+      "type": "story",
+      "title": "Make HMT scope() join-aware like Rails",
+      "terms": "hmt-scope-join-aware make hmt scope() join-aware like rails associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "rf3-inorderof-type-cast",
+      "type": "story",
+      "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
+      "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "r3-reorder-test-alignment",
+      "type": "story",
+      "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
+      "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "database-tasks-migrate-status-stdout",
+      "type": "story",
+      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
+      "terms": "database-tasks-migrate-status-stdout databasetasks.migratestatus stdout fidelity (p3-5) cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-manifest-path-jsdoc",
+      "type": "story",
+      "title": "Fix ManifestResult.path JSDoc / resolution",
+      "terms": "cli-manifest-path-jsdoc fix manifestresult.path jsdoc / resolution cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-init-node-sqlite-driver",
+      "type": "story",
+      "title": "ar init: support --driver node-sqlite",
+      "terms": "cli-init-node-sqlite-driver ar init: support --driver node-sqlite cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-generator-name-validation",
+      "type": "story",
+      "title": "ar generate: reject illegal migration/model names",
+      "terms": "cli-generator-name-validation ar generate: reject illegal migration/model names cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-console-runner-empty-config",
+      "type": "story",
+      "title": "ar console / runner: error on empty config for env",
+      "terms": "cli-console-runner-empty-config ar console / runner: error on empty config for env cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-e2e-shared-helpers",
+      "type": "story",
+      "title": "Extract shared E2E scaffold/teardown helpers",
+      "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "pool-reap-flush-expire-audit",
+      "type": "story",
+      "title": "Audit _available re-add sites that skip expire()",
+      "terms": "pool-reap-flush-expire-audit audit _available re-add sites that skip expire() connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pool-env-resolution-unify",
+      "type": "story",
+      "title": "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution",
+      "terms": "pool-env-resolution-unify unify fromenv currentenv vs forcurrentenv defaultenv resolution connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pr-b-schema-ar-models-audit",
+      "type": "story",
+      "title": "PR B — schema-ar-models.ts set connection() audit",
+      "terms": "pr-b-schema-ar-models-audit pr b — schema-ar-models.ts set connection() audit adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
+      "id": "error-message-dead-code-hygiene",
+      "type": "story",
+      "title": "Inverse-of error wording + dead-code hygiene",
+      "terms": "error-message-dead-code-hygiene inverse-of error wording + dead-code hygiene associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "af12-preload-through-where-placement",
+      "type": "story",
+      "title": "AF12 — fix through-WHERE placement in includes-only preload path",
+      "terms": "af12-preload-through-where-placement af12 — fix through-where placement in includes-only preload path associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "collection-size-identity-reconciliation",
+      "type": "story",
+      "title": "Collection size / add-to-target AR-id identity reconciliation",
+      "terms": "collection-size-identity-reconciliation collection size / add-to-target ar-id identity reconciliation associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "assoc-scope-polymorphic-through-alias",
+      "type": "story",
+      "title": "Association-scope polymorphic-through alias coverage",
+      "terms": "assoc-scope-polymorphic-through-alias association-scope polymorphic-through alias coverage associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "af11-strict-loading-test-unblocks",
+      "type": "story",
+      "title": "AF11 — wire remaining strict-loading test stubs",
+      "terms": "af11-strict-loading-test-unblocks af11 — wire remaining strict-loading test stubs associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "strict-loading-cascade-proxy",
+      "type": "story",
+      "title": "Strict-loading cascade on collection proxy reader + mode propagation",
+      "terms": "strict-loading-cascade-proxy strict-loading cascade on collection proxy reader + mode propagation associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "pf5-connection-handler-reaudit",
+      "type": "story",
+      "title": "Re-audit 11 still-skipped connection-handler.test.ts tests",
+      "terms": "pf5-connection-handler-reaudit re-audit 11 still-skipped connection-handler.test.ts tests connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "a4-sweep-remaining-callers",
+      "type": "story",
+      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
+      "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
+      "id": "gate-mismatch-cleanup",
+      "type": "story",
+      "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
+      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0012-adapter-test-ci context"
+    },
+    {
+      "id": "track9-single-test-gaps",
+      "type": "story",
+      "title": "Track 9 — scattered single-test association gaps",
+      "terms": "track9-single-test-gaps track 9 — scattered single-test association gaps associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "hmt-self-ref-belongs-to-push",
+      "type": "story",
+      "title": "Self-referential belongsTo-source push for has_many :through",
+      "terms": "hmt-self-ref-belongs-to-push self-referential belongsto-source push for has_many :through associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "w1b-variadic-rest-overloads",
+      "type": "story",
+      "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
+      "terms": "w1b-variadic-rest-overloads w1b — variadic rest overloads (drop relation.ts as-any spreads) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "small-followups-bundle",
+      "type": "story",
+      "title": "Type-audit small follow-ups bundle (~150 LOC)",
+      "terms": "small-followups-bundle type-audit small follow-ups bundle (~150 loc) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "tier1-opportunistic-conversion",
+      "type": "story",
+      "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
+      "terms": "tier1-opportunistic-conversion convert unconverted tier-1 files to canonical fixtures (opportunistic) fixtures 0014-fixtures-adoption context"
+    },
+    {
+      "id": "schema-file-generator-config",
+      "type": "story",
+      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
+      "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "memory-loadschema-spike",
+      "type": "story",
+      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
+      "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "reconstruct-from-schema-parity",
+      "type": "story",
+      "title": "Bring reconstructFromSchema to Rails parity",
+      "terms": "reconstruct-from-schema-parity bring reconstructfromschema to rails parity bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "rework-test-setup",
+      "type": "story",
+      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
+      "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "delete-bootstrap-handler",
+      "type": "story",
+      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
+      "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "pg-mysql-purge-handlers",
+      "type": "story",
+      "title": "Follow-up — persistent PG/MySQL purge handlers",
+      "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "phase0-sqlite-template-spike",
+      "type": "story",
+      "title": "Phase 0 — sqlite clonable-template spike",
+      "terms": "phase0-sqlite-template-spike phase 0 — sqlite clonable-template spike test-perf 0008-test-perf-template-clone context"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -103,34 +319,10 @@
       "terms": "a3-calculations-statement-cache-insert phase a3 — route calculations / statement-cache / insert-all through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
-      "id": "a4-sweep-remaining-callers",
-      "type": "story",
-      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
-      "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
-    },
-    {
-      "id": "abstract-class-own-property-fix",
-      "type": "story",
-      "title": "Fix _abstractClass own-property check (core bug)",
-      "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
-    },
-    {
       "id": "adapter-hash-only-constructor",
       "type": "story",
       "title": "Adapter hash-only constructor (Initiative 3)",
       "terms": "adapter-hash-only-constructor adapter hash-only constructor (initiative 3) adapter-cleanup 0010-adapter-cleanup context"
-    },
-    {
-      "id": "af11-strict-loading-test-unblocks",
-      "type": "story",
-      "title": "AF11 — wire remaining strict-loading test stubs",
-      "terms": "af11-strict-loading-test-unblocks af11 — wire remaining strict-loading test stubs associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "af12-preload-through-where-placement",
-      "type": "story",
-      "title": "AF12 — fix through-WHERE placement in includes-only preload path",
-      "terms": "af12-preload-through-where-placement af12 — fix through-where placement in includes-only preload path associations 0005-activerecord-gaps context"
     },
     {
       "id": "af5-eager-load-raise-semantics",
@@ -139,22 +331,10 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
-      "id": "assoc-scope-polymorphic-through-alias",
-      "type": "story",
-      "title": "Association-scope polymorphic-through alias coverage",
-      "terms": "assoc-scope-polymorphic-through-alias association-scope polymorphic-through alias coverage associations 0005-activerecord-gaps context"
-    },
-    {
       "id": "b-drop-global-sync-sites",
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",
       "terms": "b-drop-global-sync-sites phase b — drop ar's global-visitor sync sites arel-visitor 0007-remove-global-arel-visitor context"
-    },
-    {
-      "id": "belongsto-accessor-null-bug",
-      "type": "story",
-      "title": "Investigate belongsTo accessor returning null despite valid FK",
-      "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
     },
     {
       "id": "c-collapse-into-bootstrap",
@@ -169,52 +349,16 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
-      "id": "cli-console-runner-empty-config",
-      "type": "story",
-      "title": "ar console / runner: error on empty config for env",
-      "terms": "cli-console-runner-empty-config ar console / runner: error on empty config for env cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-e2e-shared-helpers",
-      "type": "story",
-      "title": "Extract shared E2E scaffold/teardown helpers",
-      "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-generator-name-validation",
-      "type": "story",
-      "title": "ar generate: reject illegal migration/model names",
-      "terms": "cli-generator-name-validation ar generate: reject illegal migration/model names cli 0003-activerecord-cli context"
-    },
-    {
       "id": "cli-generators-manifest",
       "type": "story",
       "title": "Generators + generated models/index.ts manifest + ar init",
       "terms": "cli-generators-manifest generators + generated models/index.ts manifest + ar init cli 0003-activerecord-cli context"
     },
     {
-      "id": "cli-init-node-sqlite-driver",
-      "type": "story",
-      "title": "ar init: support --driver node-sqlite",
-      "terms": "cli-init-node-sqlite-driver ar init: support --driver node-sqlite cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-manifest-path-jsdoc",
-      "type": "story",
-      "title": "Fix ManifestResult.path JSDoc / resolution",
-      "terms": "cli-manifest-path-jsdoc fix manifestresult.path jsdoc / resolution cli 0003-activerecord-cli context"
-    },
-    {
       "id": "cli-package-scaffold",
       "type": "story",
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
       "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "collection-size-identity-reconciliation",
-      "type": "story",
-      "title": "Collection size / add-to-target AR-id identity reconciliation",
-      "terms": "collection-size-identity-reconciliation collection size / add-to-target ar-id identity reconciliation associations 0005-activerecord-gaps context"
     },
     {
       "id": "convert-bootstrap-rfc",
@@ -229,12 +373,6 @@
       "terms": "d2-has-one-fixture-bodies d2 — fill has_one test fixture bodies (~24 fixture-gated tests) associations 0005-activerecord-gaps context"
     },
     {
-      "id": "database-tasks-migrate-status-stdout",
-      "type": "story",
-      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
-      "terms": "database-tasks-migrate-status-stdout databasetasks.migratestatus stdout fidelity (p3-5) cli 0003-activerecord-cli context"
-    },
-    {
       "id": "decommission-docs",
       "type": "story",
       "title": "Delete migrated AR docs + trim docs/index.md AR rows",
@@ -245,12 +383,6 @@
       "type": "story",
       "title": "Phase 5 — retire canonical-preload signature machinery",
       "terms": "define-schema-preload-cleanup phase 5 — retire canonical-preload signature machinery followup 0002-bootstrap-databasetasks context"
-    },
-    {
-      "id": "delete-bootstrap-handler",
-      "type": "story",
-      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
-      "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
     },
     {
       "id": "dependent-dispatch-consolidation",
@@ -265,40 +397,10 @@
       "terms": "drift-prevention-ci ci gate: no new docs/activerecord trackers + claude edit guardrails 0011-activerecord-docs-cutover context"
     },
     {
-      "id": "error-message-dead-code-hygiene",
-      "type": "story",
-      "title": "Inverse-of error wording + dead-code hygiene",
-      "terms": "error-message-dead-code-hygiene inverse-of error wording + dead-code hygiene associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "gate-mismatch-cleanup",
-      "type": "story",
-      "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
-      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0012-adapter-test-ci context"
-    },
-    {
-      "id": "hmt-scope-join-aware",
-      "type": "story",
-      "title": "Make HMT scope() join-aware like Rails",
-      "terms": "hmt-scope-join-aware make hmt scope() join-aware like rails associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "hmt-self-ref-belongs-to-push",
-      "type": "story",
-      "title": "Self-referential belongsTo-source push for has_many :through",
-      "terms": "hmt-self-ref-belongs-to-push self-referential belongsto-source push for has_many :through associations 0005-activerecord-gaps context"
-    },
-    {
       "id": "lazy-async-schema-reflection",
       "type": "story",
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
       "terms": "lazy-async-schema-reflection lazy async schema reflection (delete explicit loadschema) core 0003-activerecord-cli context"
-    },
-    {
-      "id": "memory-loadschema-spike",
-      "type": "story",
-      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
-      "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
     },
     {
       "id": "migrate-adapter-ci",
@@ -355,24 +457,6 @@
       "terms": "p13-standalone-connection p13 — implement standaloneconnection class connection-pool 0005-activerecord-gaps context"
     },
     {
-      "id": "pf5-connection-handler-reaudit",
-      "type": "story",
-      "title": "Re-audit 11 still-skipped connection-handler.test.ts tests",
-      "terms": "pf5-connection-handler-reaudit re-audit 11 still-skipped connection-handler.test.ts tests connection-pool 0005-activerecord-gaps context"
-    },
-    {
-      "id": "pg-mysql-purge-handlers",
-      "type": "story",
-      "title": "Follow-up — persistent PG/MySQL purge handlers",
-      "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
-    },
-    {
-      "id": "phase0-sqlite-template-spike",
-      "type": "story",
-      "title": "Phase 0 — sqlite clonable-template spike",
-      "terms": "phase0-sqlite-template-spike phase 0 — sqlite clonable-template spike test-perf 0008-test-perf-template-clone context"
-    },
-    {
       "id": "phase1-pg-template",
       "type": "story",
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
@@ -427,18 +511,6 @@
       "terms": "pool-cached-find-by-statement-cache reconcile cachedfindby with statementcache and allowretry connection-pool 0005-activerecord-gaps context"
     },
     {
-      "id": "pool-env-resolution-unify",
-      "type": "story",
-      "title": "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution",
-      "terms": "pool-env-resolution-unify unify fromenv currentenv vs forcurrentenv defaultenv resolution connection-pool 0005-activerecord-gaps context"
-    },
-    {
-      "id": "pool-merge-resolve-url-config-unskip",
-      "type": "story",
-      "title": "Unskip 7 merge-and-resolve-default-url-config tests",
-      "terms": "pool-merge-resolve-url-config-unskip unskip 7 merge-and-resolve-default-url-config tests connection-pool 0005-activerecord-gaps context"
-    },
-    {
       "id": "pool-node-sqlite-restore-verify",
       "type": "story",
       "title": "Verify node:sqlite restoreFromPath on a Node 22.5+ CI lane",
@@ -463,12 +535,6 @@
       "terms": "pool-raw-connection-initialize-overload port deprecated raw-connection initialize overload to base adapter connection-pool 0005-activerecord-gaps context"
     },
     {
-      "id": "pool-reap-flush-expire-audit",
-      "type": "story",
-      "title": "Audit _available re-add sites that skip expire()",
-      "terms": "pool-reap-flush-expire-audit audit _available re-add sites that skip expire() connection-pool 0005-activerecord-gaps context"
-    },
-    {
       "id": "pool-sqlite-open-uri",
       "type": "story",
       "title": "Enable SQLITE_OPEN_URI for shared-cache :memory:",
@@ -479,18 +545,6 @@
       "type": "story",
       "title": "PR A — delete adapter.ts barrel + DatabaseAdapter interface",
       "terms": "pr-a-delete-adapter-barrel pr a — delete adapter.ts barrel + databaseadapter interface adapter-cleanup 0010-adapter-cleanup context"
-    },
-    {
-      "id": "pr-b-schema-ar-models-audit",
-      "type": "story",
-      "title": "PR B — schema-ar-models.ts set connection() audit",
-      "terms": "pr-b-schema-ar-models-audit pr b — schema-ar-models.ts set connection() audit adapter-cleanup 0010-adapter-cleanup context"
-    },
-    {
-      "id": "r3-reorder-test-alignment",
-      "type": "story",
-      "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
-      "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
     },
     {
       "id": "reconcile-existing-rfcs",
@@ -505,12 +559,6 @@
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
     },
     {
-      "id": "reconstruct-from-schema-parity",
-      "type": "story",
-      "title": "Bring reconstructFromSchema to Rails parity",
-      "terms": "reconstruct-from-schema-parity bring reconstructfromschema to rails parity bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "relocate-tsc-wrapper",
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
@@ -523,22 +571,10 @@
       "terms": "repoint-references repoint trails readme/claude ar-doc links decommission 0011-activerecord-docs-cutover context"
     },
     {
-      "id": "rework-test-setup",
-      "type": "story",
-      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
-      "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "rf1-fk-derivation-consolidation",
       "type": "story",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
       "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
-    },
-    {
-      "id": "rf3-inorderof-type-cast",
-      "type": "story",
-      "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
-      "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
     },
     {
       "id": "s1-proxy-backed-read-api",
@@ -577,46 +613,10 @@
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
     },
     {
-      "id": "schema-file-generator-config",
-      "type": "story",
-      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
-      "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
-      "id": "small-followups-bundle",
-      "type": "story",
-      "title": "Type-audit small follow-ups bundle (~150 LOC)",
-      "terms": "small-followups-bundle type-audit small follow-ups bundle (~150 loc) type-cleanup 0009-type-audit context"
-    },
-    {
-      "id": "strict-loading-cascade-proxy",
-      "type": "story",
-      "title": "Strict-loading cascade on collection proxy reader + mode propagation",
-      "terms": "strict-loading-cascade-proxy strict-loading cascade on collection proxy reader + mode propagation associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "tier1-opportunistic-conversion",
-      "type": "story",
-      "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
-      "terms": "tier1-opportunistic-conversion convert unconverted tier-1 files to canonical fixtures (opportunistic) fixtures 0014-fixtures-adoption context"
-    },
-    {
-      "id": "track9-single-test-gaps",
-      "type": "story",
-      "title": "Track 9 — scattered single-test association gaps",
-      "terms": "track9-single-test-gaps track 9 — scattered single-test association gaps associations 0005-activerecord-gaps context"
-    },
-    {
       "id": "visitor-on-establish",
       "type": "story",
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
       "terms": "visitor-on-establish pr 0 — install arel visitor on establishconnection (superseded) bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
-      "id": "w1b-variadic-rest-overloads",
-      "type": "story",
-      "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
-      "terms": "w1b-variadic-rest-overloads w1b — variadic rest overloads (drop relation.ts as-any spreads) type-cleanup 0009-type-audit context"
     },
     {
       "id": "w4-reflection-discriminated-union",

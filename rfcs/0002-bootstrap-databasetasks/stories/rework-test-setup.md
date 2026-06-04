@@ -6,6 +6,7 @@ cluster: bootstrap
 deps: ["schema-file-generator-config", "memory-loadschema-spike", "reconstruct-from-schema-parity"]
 deps-rfc: []
 est-loc: 300
+priority: 73
 pr: null
 claim: null
 assignee: null

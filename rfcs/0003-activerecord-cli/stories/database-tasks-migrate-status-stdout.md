@@ -6,6 +6,7 @@ cluster: cli
 deps: []
 deps-rfc: []
 est-loc: 20
+priority: 16
 pr: null
 claim: null
 assignee: null

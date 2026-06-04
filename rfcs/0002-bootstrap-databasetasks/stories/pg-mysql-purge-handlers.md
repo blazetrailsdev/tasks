@@ -6,6 +6,7 @@ cluster: followup
 deps: ["rework-test-setup"]
 deps-rfc: []
 est-loc: 150
+priority: 75
 pr: null
 claim: null
 assignee: null

@@ -6,6 +6,7 @@ cluster: cli
 deps: ["cli-generators-manifest"]
 deps-rfc: []
 est-loc: 5
+priority: 18
 pr: null
 claim: null
 assignee: null
