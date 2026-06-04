@@ -37,4 +37,3 @@ baseline is clean.
 
 `workplan.md` warns Waves 4–7 anchors are doc-sourced and drift — re-grep
 before trusting any cited line.
-</content>

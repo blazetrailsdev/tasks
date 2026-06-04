@@ -37,4 +37,3 @@ prerequisite for `reconcile-existing-rfcs`. See RFC 0011 §Phase 1.
 
 Trails repo is a sibling at `../trails`; `gh` is authenticated. Keep it
 dependency-light — reuse `lib.mjs` loaders; no new npm deps.
-</content>

@@ -32,4 +32,3 @@ backlog.md`. Consolidate the actionable backlog into one RFC. See RFC 0011
 
 Many fixture migrations are recorded done/blocked in the memory index (HABTM,
 callbacks, length-validation, query-logs, etc.) — reconcile against those.
-</content>

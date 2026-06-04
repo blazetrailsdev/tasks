@@ -226,4 +226,3 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
   migrations (deferred to a later cutover); guardrail now polices only
   `docs/activerecord/`; renamed slug to `0011-activerecord-docs-cutover`
   (10 stories).
-  </content>

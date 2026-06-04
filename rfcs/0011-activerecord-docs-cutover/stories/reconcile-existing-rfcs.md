@@ -1,6 +1,6 @@
 ---
 title: "Reconcile + close RFCs 0001–0010"
-status: ready
+status: done
 rfc: "0011-activerecord-docs-cutover"
 cluster: reconcile
 deps: ["reconcile-tooling"]
@@ -33,4 +33,35 @@ for the residue. See RFC 0011 §Phase 1.
 
 This is the validation pass that makes `tasks ready` trustworthy again. Lean on
 the memory index for the AR features known to have shipped.
-</content>
+
+## Result (2026-06-04)
+
+Baseline **4 done / 39 ready / 15 draft / 11 blocked** → **19 done / 31 ready /
+10 draft / 8 blocked**. Closed RFCs **0001, 0004, 0007**; bumped **0003** to
+active (5/6 shipped).
+
+Key finding: the reconcile tool's 18 `likely-done` were mostly **false
+positives** — `#NNNN` body refs are usually _context_ citations, not shipping
+PRs (e.g. `#2645`=AF7 cited by the AF11 story; `#2651`=a docs-plan PR; `#2638`
+shared across three 0003 stories). Each flip below was confirmed against actual
+trails repo state, not the ref:
+
+- **0007 (closed):** `setToSqlVisitor` has zero AR callers + `bootstrap-test-handler.ts`
+  has no visitor refs → a2/a3/a4/b/c done.
+- **0004 (closed):** `QueryCacheAdapter` retired (comment-only remnant);
+  `cache`/`uncached` are pool-based statics; mixin live.
+- **0003:** CLI package fully built (scaffold/generators done); `relocate-tsc-wrapper`
+  done (no `tsc-wrapper/` + no `trails-tsc` dep); `lazy-async-schema-reflection`
+  done (`await ensureSchemaLoaded()` on query+persistence paths).
+  `abstract-class-own-property-fix` stays ready (no own-property check yet).
+- **0005:** `nested-through-remainder` done (0 skips); `pool-merge-resolve-url-config-unskip`
+  unblocked → ready (ConnectionHandler/P9 ported, 1 skip left).
+- **0002:** `visitor-on-establish` done (superseded by the now-closed 0007).
+
+Blocked re-verify: the remaining 8 blocked stories have **live** blockers
+(Rails-snapshot refresh, internal pool wiring, Phase-G fixtures, missing Node
+22.5+ lane, adapter.ts deletion gated on ~134 import sites) — left blocked.
+
+Conservative residue: the `likely-open` set (0005 gaps, 0006 draft
+architectural, 0008/0009 remainder) had **no shipped signal** and is left at its
+authored status (genuinely open) — the safe direction (open, not falsely done).

@@ -30,4 +30,3 @@ code changes. Lands in the **trails** repo. See RFC 0011 §Phase 3.
 ## Notes
 
 Confirm the no-automated-reader assumption with a grep before closing.
-</content>

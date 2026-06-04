@@ -39,7 +39,7 @@
     {
       "id": "0003-activerecord-cli",
       "title": "Standalone ActiveRecord DX + activerecord-cli package",
-      "status": "draft",
+      "status": "active",
       "owner": "@dmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
@@ -1082,7 +1082,7 @@
       "id": "reconcile-existing-rfcs",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "Reconcile + close RFCs 0001–0010",
-      "status": "ready",
+      "status": "done",
       "cluster": "reconcile",
       "deps": [
         "reconcile-tooling"

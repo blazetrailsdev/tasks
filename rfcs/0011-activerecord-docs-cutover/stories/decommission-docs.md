@@ -37,4 +37,3 @@ RFC 0011 §Phase 3.
 
 Trails PR; respects the 500-LOC ceiling (deletions count, but this is mostly
 removals). Pair with `repoint-references` in sequence.
-</content>

@@ -33,4 +33,3 @@ as a story), then queue the docs for deletion. See RFC 0011 §Phase 2.
 
 These three are "reconcile + delete" in the disposition table — no new RFC,
 just close the coverage gap against the existing ones.
-</content>

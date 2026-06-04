@@ -27,4 +27,3 @@ Consolidate into one RFC. See RFC 0011 §Phase 2.
 ## Notes
 
 Confirm against `main` which phases already shipped before storying them.
-</content>

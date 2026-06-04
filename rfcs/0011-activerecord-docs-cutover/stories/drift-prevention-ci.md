@@ -33,4 +33,3 @@ Without a guardrail the two-source-of-truth split self-heals. Lands in the
 ## Notes
 
 Implement as a small CI step (path filter + allowlist), not a heavyweight tool.
-</content>

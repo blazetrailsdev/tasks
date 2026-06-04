@@ -1,7 +1,7 @@
 ---
 rfc: "0003-activerecord-cli"
 title: "Standalone ActiveRecord DX + activerecord-cli package"
-status: draft
+status: active
 created: 2026-05-29
 updated: 2026-05-29
 owner: "@dmarano"

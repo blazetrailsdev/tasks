@@ -33,4 +33,3 @@ being edited as recently as the current branch. See RFC 0011 §Phase 2.
 
 See memory: CI runs sqlite/postgres/mysql:8; full live-adapter drop proven
 infeasible; live dirs gated on §4/§5 fixes.
-</content>
