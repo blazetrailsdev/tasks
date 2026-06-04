@@ -625,7 +625,7 @@
       "id": "lazy-async-schema-reflection",
       "rfc": "0003-activerecord-cli",
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
-      "status": "ready",
+      "status": "done",
       "cluster": "core",
       "deps": [],
       "deps_rfc": [],
@@ -1129,7 +1129,7 @@
       "id": "relocate-tsc-wrapper",
       "rfc": "0003-activerecord-cli",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
-      "status": "draft",
+      "status": "done",
       "cluster": "cli",
       "deps": [
         "cli-package-scaffold"

@@ -1,6 +1,6 @@
 ---
 title: "Relocate AR tsc-wrapper + bins into activerecord-cli"
-status: draft
+status: done
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-package-scaffold"]
