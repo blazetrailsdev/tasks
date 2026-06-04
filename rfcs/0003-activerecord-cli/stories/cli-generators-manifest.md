@@ -1,6 +1,6 @@
 ---
 title: "Generators + generated models/index.ts manifest + ar init"
-status: draft
+status: done
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-package-scaffold"]

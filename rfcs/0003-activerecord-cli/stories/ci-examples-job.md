@@ -1,6 +1,6 @@
 ---
 title: "Optional — lightweight examples/ CI job"
-status: draft
+status: done
 rfc: "0003-activerecord-cli"
 cluster: deferred
 deps: []

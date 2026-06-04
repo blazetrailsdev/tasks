@@ -1,7 +1,7 @@
 ---
 rfc: "0001-task-system"
 title: "Task system (RFCs + story files + fast index)"
-status: draft
+status: closed
 created: 2026-05-28
 updated: 2026-05-28
 owner: "@dmarano"

@@ -1,6 +1,6 @@
 ---
 title: "Phase A2 — make persistence.ts + base.ts ternary callers unconditional"
-status: ready
+status: done
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: []

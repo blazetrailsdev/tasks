@@ -1,6 +1,6 @@
 ---
 title: "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql"
-status: ready
+status: done
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: []

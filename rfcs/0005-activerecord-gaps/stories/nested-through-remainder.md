@@ -1,6 +1,6 @@
 ---
 title: "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)"
-status: blocked
+status: done
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
@@ -9,7 +9,7 @@ est-loc: 200
 pr: null
 claim: null
 assignee: null
-blocked-by: "Nested-through remainder work (H2 self-join landing)"
+blocked-by: null
 ---
 
 ## Context

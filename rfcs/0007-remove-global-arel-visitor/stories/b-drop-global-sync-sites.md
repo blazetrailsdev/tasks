@@ -1,6 +1,6 @@
 ---
 title: "Phase B — drop AR's global-visitor sync sites"
-status: ready
+status: done
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: ["a4-sweep-remaining-callers"]

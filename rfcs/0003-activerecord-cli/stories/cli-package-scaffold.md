@@ -1,6 +1,6 @@
 ---
 title: "Scaffold @blazetrails/activerecord-cli + db:* commands"
-status: draft
+status: done
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: []

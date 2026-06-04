@@ -1,6 +1,6 @@
 ---
 title: "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)"
-status: ready
+status: done
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: ["b-drop-global-sync-sites"]

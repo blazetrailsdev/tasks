@@ -3,7 +3,7 @@
     {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
-      "status": "draft",
+      "status": "closed",
       "owner": "@dmarano",
       "created": "2026-05-28T00:00:00.000Z",
       "updated": "2026-05-28T00:00:00.000Z",
@@ -115,7 +115,7 @@
     {
       "id": "0007-remove-global-arel-visitor",
       "title": "Remove the global Arel visitor — route toSql through connection.toSql",
-      "status": "active",
+      "status": "closed",
       "owner": "@dmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
@@ -226,7 +226,7 @@
       "id": "a2-persistence-base-ternary",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A2 — make persistence.ts + base.ts ternary callers unconditional",
-      "status": "ready",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [],
       "deps_rfc": [],
@@ -241,7 +241,7 @@
       "id": "a3-calculations-statement-cache-insert",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql",
-      "status": "ready",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [],
       "deps_rfc": [],
@@ -256,7 +256,7 @@
       "id": "a4-sweep-remaining-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
-      "status": "ready",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [
         "a1-ddl-metadata-callers",
@@ -350,7 +350,7 @@
       "id": "b-drop-global-sync-sites",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase B — drop AR's global-visitor sync sites",
-      "status": "ready",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [
         "a4-sweep-remaining-callers"
@@ -382,7 +382,7 @@
       "id": "c-collapse-into-bootstrap",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)",
-      "status": "ready",
+      "status": "done",
       "cluster": "arel-visitor",
       "deps": [
         "b-drop-global-sync-sites"
@@ -399,7 +399,7 @@
       "id": "ci-examples-job",
       "rfc": "0003-activerecord-cli",
       "title": "Optional — lightweight examples/ CI job",
-      "status": "draft",
+      "status": "done",
       "cluster": "deferred",
       "deps": [],
       "deps_rfc": [],
@@ -414,7 +414,7 @@
       "id": "cli-generators-manifest",
       "rfc": "0003-activerecord-cli",
       "title": "Generators + generated models/index.ts manifest + ar init",
-      "status": "draft",
+      "status": "done",
       "cluster": "cli",
       "deps": [
         "cli-package-scaffold"
@@ -431,7 +431,7 @@
       "id": "cli-package-scaffold",
       "rfc": "0003-activerecord-cli",
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
-      "status": "draft",
+      "status": "done",
       "cluster": "cli",
       "deps": [],
       "deps_rfc": [],
@@ -757,7 +757,7 @@
       "id": "nested-through-remainder",
       "rfc": "0005-activerecord-gaps",
       "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",
-      "status": "blocked",
+      "status": "done",
       "cluster": "associations",
       "deps": [],
       "deps_rfc": [],
@@ -765,7 +765,7 @@
       "pr": null,
       "claim": null,
       "assignee": null,
-      "blocked_by": "Nested-through remainder work (H2 self-join landing)",
+      "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/nested-through-remainder.md"
     },
     {

@@ -1,6 +1,6 @@
 ---
 title: "Phase A4 — sweep remaining direct .toSql() production callers"
-status: ready
+status: done
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps:
