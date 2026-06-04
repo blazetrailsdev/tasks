@@ -7,7 +7,7 @@
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | draft | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
-| [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | active | @dmarano | activerecord |
+| [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | closed | @dmarano | activerecord |
 | [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @dmarano | activerecord |
 | [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | draft | @dmarano | activerecord |
 | [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | closed | @dmarano | activerecord, arel |

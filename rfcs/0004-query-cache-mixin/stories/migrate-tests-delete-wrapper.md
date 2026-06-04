@@ -1,12 +1,12 @@
 ---
 title: "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks"
-status: ready
+status: done
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: ["pool-based-query-cache"]
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 2639
 claim: null
 assignee: null
 blocked-by: null

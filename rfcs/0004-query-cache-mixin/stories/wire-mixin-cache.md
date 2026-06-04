@@ -1,6 +1,6 @@
 ---
 title: "Phase 1 — wire the mixin cache into the live query path"
-status: ready
+status: done
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: []

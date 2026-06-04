@@ -1,12 +1,12 @@
 ---
 title: "Phase 2 — pool-based ActiveRecord::QueryCache"
-status: ready
+status: done
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: ["wire-mixin-cache"]
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: 2654
 claim: null
 assignee: null
 blocked-by: null
