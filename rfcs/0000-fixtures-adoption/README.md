@@ -1,5 +1,5 @@
 ---
-rfc: "draft-fixtures-adoption"
+rfc: "0000-fixtures-adoption"
 title: "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep"
 status: active
 created: 2026-06-04
@@ -11,7 +11,7 @@ clusters:
   - fixtures
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as draft-fixtures-adoption and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0000-fixtures-adoption and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
 # RFC — Fixtures adoption: opportunistic Tier-1 conversion, defer the sweep
