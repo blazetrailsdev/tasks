@@ -932,7 +932,7 @@
       "id": "pool-merge-resolve-url-config-unskip",
       "rfc": "0005-activerecord-gaps",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
-      "status": "blocked",
+      "status": "ready",
       "cluster": "connection-pool",
       "deps": [],
       "deps_rfc": [],
@@ -940,7 +940,7 @@
       "pr": null,
       "claim": null,
       "assignee": null,
-      "blocked_by": "ConnectionHandler must be fully ported (P9 scope)",
+      "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/pool-merge-resolve-url-config-unskip.md"
     },
     {
@@ -1370,7 +1370,7 @@
       "id": "visitor-on-establish",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
-      "status": "blocked",
+      "status": "done",
       "cluster": "bootstrap",
       "deps": [],
       "deps_rfc": [],
@@ -1378,7 +1378,7 @@
       "pr": null,
       "claim": null,
       "assignee": null,
-      "blocked_by": "Superseded by RFC 0007 (0007-remove-global-arel-visitor). Do not work this story.",
+      "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/visitor-on-establish.md"
     },
     {

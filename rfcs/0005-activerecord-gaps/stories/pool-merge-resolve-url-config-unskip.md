@@ -1,6 +1,6 @@
 ---
 title: "Unskip 7 merge-and-resolve-default-url-config tests"
-status: blocked
+status: ready
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -9,7 +9,7 @@ est-loc: 20
 pr: null
 claim: null
 assignee: null
-blocked-by: "ConnectionHandler must be fully ported (P9 scope)"
+blocked-by: null
 ---
 
 ## Context

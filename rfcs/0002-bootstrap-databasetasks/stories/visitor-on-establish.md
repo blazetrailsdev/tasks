@@ -1,6 +1,6 @@
 ---
 title: "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)"
-status: blocked
+status: done
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []
@@ -9,7 +9,7 @@ est-loc: 150
 pr: null
 claim: null
 assignee: null
-blocked-by: "Superseded by RFC 0007 (0007-remove-global-arel-visitor). Do not work this story."
+blocked-by: null
 ---
 
 ## Context
