@@ -15,3 +15,4 @@
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @dmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @dmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @dmarano | activerecord |
+| [draft-adapter-test-ci](rfcs/draft-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |

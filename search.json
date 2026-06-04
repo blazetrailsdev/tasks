@@ -67,6 +67,12 @@
       "terms": "0011-activerecord-docs-cutover activerecord docs cutover — retire docs/activerecord, tasks as sole source of truth activerecord reconcile migrate decommission guardrails rfc 0011 — activerecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth"
     },
     {
+      "id": "draft-adapter-test-ci",
+      "type": "rfc",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "terms": "draft-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -251,6 +257,12 @@
       "type": "story",
       "title": "Inverse-of error wording + dead-code hygiene",
       "terms": "error-message-dead-code-hygiene inverse-of error wording + dead-code hygiene associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "gate-mismatch-cleanup",
+      "type": "story",
+      "title": "Reduce test:compare gate-mismatches toward zero",
+      "terms": "gate-mismatch-cleanup reduce test:compare gate-mismatches toward zero gates draft-adapter-test-ci context"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -563,6 +575,12 @@
       "type": "story",
       "title": "W4 — Reflection discriminated union (deferred, high risk)",
       "terms": "w4-reflection-discriminated-union w4 — reflection discriminated union (deferred, high risk) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "wire-adapter-dir-lane",
+      "type": "story",
+      "title": "Wire the live-DB adapter-dir lane into CI",
+      "terms": "wire-adapter-dir-lane wire the live-db adapter-dir lane into ci ci-lane draft-adapter-test-ci context"
     },
     {
       "id": "wire-mixin-cache",

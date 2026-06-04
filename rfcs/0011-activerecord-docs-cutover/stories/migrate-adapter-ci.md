@@ -1,6 +1,6 @@
 ---
 title: "RFC from adapter-test-ci + ci-gates"
-status: draft
+status: in-progress
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
 deps: ["reconcile-existing-rfcs"]

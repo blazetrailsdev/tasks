@@ -204,6 +204,24 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0011-activerecord-docs-cutover/README.md"
+    },
+    {
+      "id": "draft-adapter-test-ci",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "ci-lane",
+        "gates"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/draft-adapter-test-ci/README.md"
     }
   ],
   "stories": [
@@ -705,6 +723,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/error-message-dead-code-hygiene.md"
+    },
+    {
+      "id": "gate-mismatch-cleanup",
+      "rfc": "draft-adapter-test-ci",
+      "title": "Reduce test:compare gate-mismatches toward zero",
+      "status": "ready",
+      "cluster": "gates",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-adapter-test-ci/stories/gate-mismatch-cleanup.md"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -1525,6 +1558,21 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0009-type-audit/stories/w4-reflection-discriminated-union.md"
+    },
+    {
+      "id": "wire-adapter-dir-lane",
+      "rfc": "draft-adapter-test-ci",
+      "title": "Wire the live-DB adapter-dir lane into CI",
+      "status": "ready",
+      "cluster": "ci-lane",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 40,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/draft-adapter-test-ci/stories/wire-adapter-dir-lane.md"
     },
     {
       "id": "wire-mixin-cache",
