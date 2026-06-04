@@ -490,6 +490,27 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/d2-has-one-fixture-bodies.md"
     },
     {
+      "id": "decommission-docs",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "Delete migrated AR docs + trim docs/index.md AR rows",
+      "status": "draft",
+      "cluster": "decommission",
+      "deps": [
+        "migrate-ar-test-compare",
+        "migrate-ar-followups",
+        "migrate-adapter-ci",
+        "migrate-fixtures",
+        "migrate-schema-ts"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/decommission-docs.md"
+    },
+    {
       "id": "define-schema-preload-cleanup",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Phase 5 — retire canonical-preload signature machinery",
@@ -537,6 +558,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/dependent-dispatch-consolidation.md"
+    },
+    {
+      "id": "drift-prevention-ci",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "CI gate: no new docs/activerecord trackers + CLAUDE edit",
+      "status": "draft",
+      "cluster": "guardrails",
+      "deps": [
+        "repoint-references"
+      ],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/drift-prevention-ci.md"
     },
     {
       "id": "error-message-dead-code-hygiene",
@@ -612,6 +650,91 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
+    },
+    {
+      "id": "migrate-adapter-ci",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "RFC from adapter-test-ci + ci-gates",
+      "status": "draft",
+      "cluster": "migrate",
+      "deps": [
+        "reconcile-existing-rfcs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/migrate-adapter-ci.md"
+    },
+    {
+      "id": "migrate-ar-followups",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "Reconcile + delete gaps/type-audit/adapter-cleanup docs",
+      "status": "draft",
+      "cluster": "migrate",
+      "deps": [
+        "reconcile-existing-rfcs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/migrate-ar-followups.md"
+    },
+    {
+      "id": "migrate-ar-test-compare",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "RFC from workplan + attack-plan + 100-plan + index",
+      "status": "draft",
+      "cluster": "migrate",
+      "deps": [
+        "reconcile-existing-rfcs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/migrate-ar-test-compare.md"
+    },
+    {
+      "id": "migrate-fixtures",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "RFC from 3 fixtures docs",
+      "status": "draft",
+      "cluster": "migrate",
+      "deps": [
+        "reconcile-existing-rfcs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/migrate-fixtures.md"
+    },
+    {
+      "id": "migrate-schema-ts",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "RFC from 2 schema.ts migration docs",
+      "status": "draft",
+      "cluster": "migrate",
+      "deps": [
+        "reconcile-existing-rfcs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/migrate-schema-ts.md"
     },
     {
       "id": "migrate-tests-delete-wrapper",
@@ -956,6 +1079,38 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/r3-reorder-test-alignment.md"
     },
     {
+      "id": "reconcile-existing-rfcs",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "Reconcile + close RFCs 0001–0010",
+      "status": "ready",
+      "cluster": "reconcile",
+      "deps": [
+        "reconcile-tooling"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-existing-rfcs.md"
+    },
+    {
+      "id": "reconcile-tooling",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "Build story↔shipped-PR reconcile report",
+      "status": "in-progress",
+      "cluster": "reconcile",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": "reconcile-tooling",
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-tooling.md"
+    },
+    {
       "id": "reconstruct-from-schema-parity",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Bring reconstructFromSchema to Rails parity",
@@ -986,6 +1141,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/relocate-tsc-wrapper.md"
+    },
+    {
+      "id": "repoint-references",
+      "rfc": "0011-activerecord-docs-cutover",
+      "title": "Repoint trails README/CLAUDE AR-doc links",
+      "status": "draft",
+      "cluster": "decommission",
+      "deps": [
+        "decommission-docs"
+      ],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0011-activerecord-docs-cutover/stories/repoint-references.md"
     },
     {
       "id": "rework-test-setup",

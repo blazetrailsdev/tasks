@@ -175,6 +175,12 @@
       "terms": "d2-has-one-fixture-bodies d2 — fill has_one test fixture bodies (~24 fixture-gated tests) associations 0005-activerecord-gaps context"
     },
     {
+      "id": "decommission-docs",
+      "type": "story",
+      "title": "Delete migrated AR docs + trim docs/index.md AR rows",
+      "terms": "decommission-docs delete migrated ar docs + trim docs/index.md ar rows decommission 0011-activerecord-docs-cutover context"
+    },
+    {
       "id": "define-schema-preload-cleanup",
       "type": "story",
       "title": "Phase 5 — retire canonical-preload signature machinery",
@@ -191,6 +197,12 @@
       "type": "story",
       "title": "Consolidate dependent-handling dispatch paths",
       "terms": "dependent-dispatch-consolidation consolidate dependent-handling dispatch paths associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "drift-prevention-ci",
+      "type": "story",
+      "title": "CI gate: no new docs/activerecord trackers + CLAUDE edit",
+      "terms": "drift-prevention-ci ci gate: no new docs/activerecord trackers + claude edit guardrails 0011-activerecord-docs-cutover context"
     },
     {
       "id": "error-message-dead-code-hygiene",
@@ -221,6 +233,36 @@
       "type": "story",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
       "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "migrate-adapter-ci",
+      "type": "story",
+      "title": "RFC from adapter-test-ci + ci-gates",
+      "terms": "migrate-adapter-ci rfc from adapter-test-ci + ci-gates migrate 0011-activerecord-docs-cutover context"
+    },
+    {
+      "id": "migrate-ar-followups",
+      "type": "story",
+      "title": "Reconcile + delete gaps/type-audit/adapter-cleanup docs",
+      "terms": "migrate-ar-followups reconcile + delete gaps/type-audit/adapter-cleanup docs migrate 0011-activerecord-docs-cutover context"
+    },
+    {
+      "id": "migrate-ar-test-compare",
+      "type": "story",
+      "title": "RFC from workplan + attack-plan + 100-plan + index",
+      "terms": "migrate-ar-test-compare rfc from workplan + attack-plan + 100-plan + index migrate 0011-activerecord-docs-cutover context"
+    },
+    {
+      "id": "migrate-fixtures",
+      "type": "story",
+      "title": "RFC from 3 fixtures docs",
+      "terms": "migrate-fixtures rfc from 3 fixtures docs migrate 0011-activerecord-docs-cutover context"
+    },
+    {
+      "id": "migrate-schema-ts",
+      "type": "story",
+      "title": "RFC from 2 schema.ts migration docs",
+      "terms": "migrate-schema-ts rfc from 2 schema.ts migration docs migrate 0011-activerecord-docs-cutover context"
     },
     {
       "id": "migrate-tests-delete-wrapper",
@@ -355,6 +397,18 @@
       "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
     },
     {
+      "id": "reconcile-existing-rfcs",
+      "type": "story",
+      "title": "Reconcile + close RFCs 0001–0010",
+      "terms": "reconcile-existing-rfcs reconcile + close rfcs 0001–0010 reconcile 0011-activerecord-docs-cutover context"
+    },
+    {
+      "id": "reconcile-tooling",
+      "type": "story",
+      "title": "Build story↔shipped-PR reconcile report",
+      "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
+    },
+    {
       "id": "reconstruct-from-schema-parity",
       "type": "story",
       "title": "Bring reconstructFromSchema to Rails parity",
@@ -365,6 +419,12 @@
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
       "terms": "relocate-tsc-wrapper relocate ar tsc-wrapper + bins into activerecord-cli cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "repoint-references",
+      "type": "story",
+      "title": "Repoint trails README/CLAUDE AR-doc links",
+      "terms": "repoint-references repoint trails readme/claude ar-doc links decommission 0011-activerecord-docs-cutover context"
     },
     {
       "id": "rework-test-setup",
