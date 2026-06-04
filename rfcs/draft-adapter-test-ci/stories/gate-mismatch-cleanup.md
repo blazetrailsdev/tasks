@@ -5,7 +5,7 @@ rfc: "draft-adapter-test-ci"
 cluster: gates
 deps: []
 deps-rfc: []
-est-loc: 150
+est-loc: 300
 pr: null
 claim: null
 assignee: null
@@ -66,8 +66,10 @@ the pinned vendored Rails (`vendor/sources.ts`; `pnpm vendor:fetch`):
 
 ## Batching
 
-The `--gates` report is per-file, so each file is a natural unit; cap **300 LOC
-per PR**. Suggested order (cheapest, highest parity-yield first):
+This is an **umbrella worked in ~300-LOC batches** (the `est-loc` is one batch,
+not the whole set), re-claimed until the §Acceptance bar is met — the `--gates`
+report is per-file, so each file is a natural unit. Suggested order (cheapest,
+highest parity-yield first):
 
 1. **over-gated (7)** — smallest, pure deletions.
 2. **wrong-gate (57)** — mechanical `adapter → itIfSupports` swaps; batch by the
