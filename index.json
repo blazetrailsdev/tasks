@@ -267,6 +267,7 @@
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
       "status": "done",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -282,6 +283,7 @@
       "title": "Phase A2 — make persistence.ts + base.ts ternary callers unconditional",
       "status": "done",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -297,6 +299,7 @@
       "title": "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql",
       "status": "done",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -312,6 +315,7 @@
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
       "status": "ready",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [
         "a1-ddl-metadata-callers",
         "a2-persistence-base-ternary",
@@ -331,6 +335,7 @@
       "title": "Fix _abstractClass own-property check (core bug)",
       "status": "ready",
       "cluster": "core",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 30,
@@ -346,6 +351,7 @@
       "title": "Adapter hash-only constructor (Initiative 3)",
       "status": "blocked",
       "cluster": "adapter-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -361,6 +367,7 @@
       "title": "AF11 — wire remaining strict-loading test stubs",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 90,
@@ -376,6 +383,7 @@
       "title": "AF12 — fix through-WHERE placement in includes-only preload path",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 50,
@@ -391,6 +399,7 @@
       "title": "AF5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks",
       "status": "done",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -406,6 +415,7 @@
       "title": "Association-scope polymorphic-through alias coverage",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 50,
@@ -421,6 +431,7 @@
       "title": "Phase B — drop AR's global-visitor sync sites",
       "status": "done",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [
         "a4-sweep-remaining-callers"
       ],
@@ -438,6 +449,7 @@
       "title": "Investigate belongsTo accessor returning null despite valid FK",
       "status": "ready",
       "cluster": "relation",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 40,
@@ -453,6 +465,7 @@
       "title": "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)",
       "status": "done",
       "cluster": "arel-visitor",
+      "priority": null,
       "deps": [
         "b-drop-global-sync-sites"
       ],
@@ -470,6 +483,7 @@
       "title": "Optional — lightweight examples/ CI job",
       "status": "done",
       "cluster": "deferred",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 50,
@@ -485,6 +499,7 @@
       "title": "ar console / runner: error on empty config for env",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-package-scaffold"
       ],
@@ -502,6 +517,7 @@
       "title": "Extract shared E2E scaffold/teardown helpers",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-package-scaffold"
       ],
@@ -519,6 +535,7 @@
       "title": "ar generate: reject illegal migration/model names",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-generators-manifest"
       ],
@@ -536,6 +553,7 @@
       "title": "Generators + generated models/index.ts manifest + ar init",
       "status": "done",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-package-scaffold"
       ],
@@ -553,6 +571,7 @@
       "title": "ar init: support --driver node-sqlite",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-generators-manifest"
       ],
@@ -570,6 +589,7 @@
       "title": "Fix ManifestResult.path JSDoc / resolution",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-generators-manifest"
       ],
@@ -587,6 +607,7 @@
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
       "status": "done",
       "cluster": "cli",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 300,
@@ -602,6 +623,7 @@
       "title": "Collection size / add-to-target AR-id identity reconciliation",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 70,
@@ -617,6 +639,7 @@
       "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
       "status": "done",
       "cluster": "conversion",
+      "priority": null,
       "deps": [
         "scaffold-tooling"
       ],
@@ -634,6 +657,7 @@
       "title": "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)",
       "status": "blocked",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -649,6 +673,7 @@
       "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
       "status": "ready",
       "cluster": "cli",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 20,
@@ -664,6 +689,7 @@
       "title": "Delete migrated AR docs + trim docs/index.md AR rows",
       "status": "draft",
       "cluster": "decommission",
+      "priority": null,
       "deps": [
         "migrate-ar-test-compare",
         "migrate-ar-followups",
@@ -685,6 +711,7 @@
       "title": "Phase 5 — retire canonical-preload signature machinery",
       "status": "draft",
       "cluster": "followup",
+      "priority": null,
       "deps": [
         "delete-bootstrap-handler"
       ],
@@ -702,6 +729,7 @@
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
       "status": "ready",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [
         "rework-test-setup"
       ],
@@ -719,6 +747,7 @@
       "title": "Consolidate dependent-handling dispatch paths",
       "status": "done",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 80,
@@ -734,6 +763,7 @@
       "title": "CI gate: no new docs/activerecord trackers + CLAUDE edit",
       "status": "draft",
       "cluster": "guardrails",
+      "priority": null,
       "deps": [
         "repoint-references"
       ],
@@ -751,6 +781,7 @@
       "title": "Inverse-of error wording + dead-code hygiene",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 60,
@@ -766,6 +797,7 @@
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
       "status": "ready",
       "cluster": "gates",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 300,
@@ -781,6 +813,7 @@
       "title": "Make HMT scope() join-aware like Rails",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 15,
@@ -796,6 +829,7 @@
       "title": "Self-referential belongsTo-source push for has_many :through",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 100,
@@ -811,6 +845,7 @@
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
       "status": "done",
       "cluster": "core",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -826,6 +861,7 @@
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
       "status": "ready",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 50,
@@ -841,6 +877,7 @@
       "title": "RFC from adapter-test-ci + ci-gates",
       "status": "done",
       "cluster": "migrate",
+      "priority": null,
       "deps": [
         "reconcile-existing-rfcs"
       ],
@@ -858,6 +895,7 @@
       "title": "Reconcile + delete gaps/type-audit/adapter-cleanup docs",
       "status": "done",
       "cluster": "migrate",
+      "priority": null,
       "deps": [
         "reconcile-existing-rfcs"
       ],
@@ -875,6 +913,7 @@
       "title": "RFC from workplan + attack-plan + 100-plan + index",
       "status": "draft",
       "cluster": "migrate",
+      "priority": null,
       "deps": [
         "reconcile-existing-rfcs"
       ],
@@ -892,6 +931,7 @@
       "title": "RFC from 3 fixtures docs",
       "status": "done",
       "cluster": "migrate",
+      "priority": null,
       "deps": [
         "reconcile-existing-rfcs"
       ],
@@ -909,6 +949,7 @@
       "title": "RFC from 2 schema.ts migration docs",
       "status": "done",
       "cluster": "migrate",
+      "priority": null,
       "deps": [
         "reconcile-existing-rfcs"
       ],
@@ -926,6 +967,7 @@
       "title": "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks",
       "status": "done",
       "cluster": "query-cache",
+      "priority": null,
       "deps": [
         "pool-based-query-cache"
       ],
@@ -943,6 +985,7 @@
       "title": "trails-models-dump: composite-FK synthesized name round-trip",
       "status": "draft",
       "cluster": "deferred",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 30,
@@ -958,6 +1001,7 @@
       "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",
       "status": "done",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -973,6 +1017,7 @@
       "title": "P13 — implement StandaloneConnection class",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 40,
@@ -988,6 +1033,7 @@
       "title": "Re-audit 11 still-skipped connection-handler.test.ts tests",
       "status": "ready",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 50,
@@ -1003,6 +1049,7 @@
       "title": "Follow-up — persistent PG/MySQL purge handlers",
       "status": "ready",
       "cluster": "followup",
+      "priority": null,
       "deps": [
         "rework-test-setup"
       ],
@@ -1020,6 +1067,7 @@
       "title": "Phase 0 — sqlite clonable-template spike",
       "status": "ready",
       "cluster": "test-perf",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 250,
@@ -1035,6 +1083,7 @@
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
       "status": "draft",
       "cluster": "test-perf",
+      "priority": null,
       "deps": [
         "phase0-sqlite-template-spike"
       ],
@@ -1052,6 +1101,7 @@
       "title": "Phase 2 — MariaDB template (measure before committing)",
       "status": "draft",
       "cluster": "test-perf",
+      "priority": null,
       "deps": [
         "phase0-sqlite-template-spike"
       ],
@@ -1069,6 +1119,7 @@
       "title": "Phase 2a — PG read path through withRawConnection",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -1084,6 +1135,7 @@
       "title": "Phase 2b — PG write/mutation path through withRawConnection",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
+      "priority": null,
       "deps": [
         "phase2a-read-path"
       ],
@@ -1101,6 +1153,7 @@
       "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
+      "priority": null,
       "deps": [
         "phase2b-write-path"
       ],
@@ -1118,6 +1171,7 @@
       "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
+      "priority": null,
       "deps": [
         "phase2c-txn-control-retire-withclient"
       ],
@@ -1135,6 +1189,7 @@
       "title": "Forward allowRetry through concrete execQuery overrides",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 25,
@@ -1150,6 +1205,7 @@
       "title": "Phase 2 — pool-based ActiveRecord::QueryCache",
       "status": "done",
       "cluster": "query-cache",
+      "priority": null,
       "deps": [
         "wire-mixin-cache"
       ],
@@ -1167,6 +1223,7 @@
       "title": "Reconcile cachedFindBy with StatementCache and allowRetry",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [
         "pool-allow-retry-forwarding"
       ],
@@ -1184,6 +1241,7 @@
       "title": "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution",
       "status": "ready",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 40,
@@ -1199,6 +1257,7 @@
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
       "status": "ready",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 20,
@@ -1214,6 +1273,7 @@
       "title": "Verify node:sqlite restoreFromPath on a Node 22.5+ CI lane",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 20,
@@ -1229,6 +1289,7 @@
       "title": "Per-class clone-on-write callback registry on AbstractAdapter",
       "status": "draft",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 15,
@@ -1244,6 +1305,7 @@
       "title": "Port retry loop + raw-connection ownership to PostgreSQLAdapter#reconnectBang",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 100,
@@ -1259,6 +1321,7 @@
       "title": "Port deprecated raw-connection initialize overload to base adapter",
       "status": "blocked",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -1274,6 +1337,7 @@
       "title": "Audit _available re-add sites that skip expire()",
       "status": "ready",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 25,
@@ -1289,6 +1353,7 @@
       "title": "Enable SQLITE_OPEN_URI for shared-cache :memory:",
       "status": "done",
       "cluster": "connection-pool",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 30,
@@ -1304,6 +1369,7 @@
       "title": "PR A — delete adapter.ts barrel + DatabaseAdapter interface",
       "status": "blocked",
       "cluster": "adapter-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -1319,6 +1385,7 @@
       "title": "PR B — schema-ar-models.ts set connection() audit",
       "status": "ready",
       "cluster": "adapter-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 30,
@@ -1334,6 +1401,7 @@
       "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
       "status": "ready",
       "cluster": "relation",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 20,
@@ -1349,6 +1417,7 @@
       "title": "Reconcile + close RFCs 0001–0010",
       "status": "done",
       "cluster": "reconcile",
+      "priority": null,
       "deps": [
         "reconcile-tooling"
       ],
@@ -1366,6 +1435,7 @@
       "title": "Build story↔shipped-PR reconcile report",
       "status": "done",
       "cluster": "reconcile",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -1381,6 +1451,7 @@
       "title": "Bring reconstructFromSchema to Rails parity",
       "status": "ready",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -1396,6 +1467,7 @@
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
       "status": "done",
       "cluster": "cli",
+      "priority": null,
       "deps": [
         "cli-package-scaffold"
       ],
@@ -1413,6 +1485,7 @@
       "title": "Repoint trails README/CLAUDE AR-doc links",
       "status": "draft",
       "cluster": "decommission",
+      "priority": null,
       "deps": [
         "decommission-docs"
       ],
@@ -1430,6 +1503,7 @@
       "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
       "status": "ready",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [
         "schema-file-generator-config",
         "memory-loadschema-spike",
@@ -1449,6 +1523,7 @@
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
       "status": "done",
       "cluster": "relation",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 60,
@@ -1464,6 +1539,7 @@
       "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
       "status": "ready",
       "cluster": "relation",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 20,
@@ -1479,6 +1555,7 @@
       "title": "Proxy-backed read API with deprecated cache shim",
       "status": "draft",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 180,
@@ -1494,6 +1571,7 @@
       "title": "Migrate preloader writes through the proxy",
       "status": "draft",
       "cluster": "associations",
+      "priority": null,
       "deps": [
         "s1-proxy-backed-read-api"
       ],
@@ -1511,6 +1589,7 @@
       "title": "Migrate findTarget and instance-method reads through the proxy",
       "status": "draft",
       "cluster": "associations",
+      "priority": null,
       "deps": [
         "s2-migrate-preloader-writes"
       ],
@@ -1528,6 +1607,7 @@
       "title": "Delete _cachedAssociations and resolve singular-association cache",
       "status": "draft",
       "cluster": "associations",
+      "priority": null,
       "deps": [
         "s3-migrate-findtarget-reads"
       ],
@@ -1545,6 +1625,7 @@
       "title": "Unskip inverse-dedup tests gated on the removed seam",
       "status": "draft",
       "cluster": "associations",
+      "priority": null,
       "deps": [
         "s4-delete-cached-associations"
       ],
@@ -1562,6 +1643,7 @@
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "status": "done",
       "cluster": "scaffold",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 250,
@@ -1577,6 +1659,7 @@
       "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
       "status": "ready",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 250,
@@ -1592,6 +1675,7 @@
       "title": "Type-audit small follow-ups bundle (~150 LOC)",
       "status": "ready",
       "cluster": "type-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -1607,6 +1691,7 @@
       "title": "Strict-loading cascade on collection proxy reader + mode propagation",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 80,
@@ -1622,6 +1707,7 @@
       "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
       "status": "ready",
       "cluster": "fixtures",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -1637,6 +1723,7 @@
       "title": "Track 9 — scattered single-test association gaps",
       "status": "ready",
       "cluster": "associations",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 110,
@@ -1652,6 +1739,7 @@
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
       "status": "done",
       "cluster": "bootstrap",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 150,
@@ -1667,6 +1755,7 @@
       "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
       "status": "ready",
       "cluster": "type-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 100,
@@ -1682,6 +1771,7 @@
       "title": "W4 — Reflection discriminated union (deferred, high risk)",
       "status": "draft",
       "cluster": "type-cleanup",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 300,
@@ -1697,6 +1787,7 @@
       "title": "Wire the live-DB adapter-dir lane into CI",
       "status": "ready",
       "cluster": "ci-lane",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 40,
@@ -1712,6 +1803,7 @@
       "title": "Phase 1 — wire the mixin cache into the live query path",
       "status": "done",
       "cluster": "query-cache",
+      "priority": null,
       "deps": [],
       "deps_rfc": [],
       "est_loc": 200,
@@ -1727,6 +1819,7 @@
       "title": "Wire tasks-loop to next-bundle",
       "status": "done",
       "cluster": "scaffold",
+      "priority": null,
       "deps": [
         "scaffold-tooling"
       ],

@@ -6,6 +6,7 @@ cluster: cluster-name-1
 deps: []
 deps-rfc: []
 est-loc: null
+priority: null # optional integer; LOWER = higher ready-queue priority (absent = unprioritized)
 pr: null
 claim: null
 assignee: null

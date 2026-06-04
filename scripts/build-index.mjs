@@ -9,8 +9,18 @@ import { firstHeading, loadAll, relPath, REPO_ROOT } from "./lib.mjs";
 
 const { rfcs, stories } = loadAll();
 
+// Story priority: optional integer in frontmatter, LOWER = higher priority
+// (sorts first). Absent ⇒ unprioritized, sorts after all prioritized stories.
+// The spawn loop reads index.json in this order, so this sort IS the ready-queue
+// ranking; ties broken by id for determinism.
+const PRIORITY_UNSET = 1_000_000;
+const prio = (s) => {
+  const p = s.frontmatter?.priority;
+  return Number.isInteger(p) ? p : PRIORITY_UNSET;
+};
+
 const rfcsSorted = [...rfcs].sort((a, b) => a.dir.localeCompare(b.dir));
-const storiesSorted = [...stories].sort((a, b) => a.id.localeCompare(b.id));
+const storiesSorted = [...stories].sort((a, b) => prio(a) - prio(b) || a.id.localeCompare(b.id));
 
 // ---- index.md ----
 const rows = rfcsSorted.map((r) => {
@@ -58,6 +68,7 @@ const indexJson = {
       title: fm.title ?? null,
       status: fm.status ?? null,
       cluster: fm.cluster ?? null,
+      priority: Number.isInteger(fm.priority) ? fm.priority : null,
       deps: fm.deps ?? [],
       deps_rfc: fm["deps-rfc"] ?? [],
       est_loc: fm["est-loc"] ?? null,
