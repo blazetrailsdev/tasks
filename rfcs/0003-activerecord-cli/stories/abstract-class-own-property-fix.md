@@ -1,6 +1,6 @@
 ---
 title: "Fix _abstractClass own-property check (core bug)"
-status: ready
+status: claimed
 rfc: "0003-activerecord-cli"
 cluster: core
 deps: []
@@ -8,8 +8,8 @@ deps-rfc: []
 est-loc: 30
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-04T23:37:13Z"
+assignee: "abstract-class-own-property-fix"
 blocked-by: null
 ---
 
