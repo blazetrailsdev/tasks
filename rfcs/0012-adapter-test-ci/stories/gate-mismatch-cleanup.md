@@ -1,7 +1,7 @@
 ---
 title: "Reconcile test:compare wrong/over/missing-gate mismatches to Rails"
 status: ready
-rfc: "0000-adapter-test-ci"
+rfc: "0012-adapter-test-ci"
 cluster: gates
 deps: []
 deps-rfc: []

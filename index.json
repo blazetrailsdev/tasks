@@ -1,60 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-adapter-test-ci",
-      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-04T00:00:00.000Z",
-      "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "ci-lane",
-        "gates"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-adapter-test-ci/README.md"
-    },
-    {
-      "id": "0000-fixtures-adoption",
-      "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
-      "status": "active",
-      "owner": "@dmarano",
-      "created": "2026-06-04T00:00:00.000Z",
-      "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "fixtures"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-fixtures-adoption/README.md"
-    },
-    {
-      "id": "0000-pg-rawconn-convergence",
-      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-04T00:00:00.000Z",
-      "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "pg-rawconn-convergence"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [
-        "0010-adapter-cleanup"
-      ],
-      "file_path": "rfcs/0000-pg-rawconn-convergence/README.md"
-    },
-    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -258,6 +204,60 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0011-activerecord-docs-cutover/README.md"
+    },
+    {
+      "id": "0012-adapter-test-ci",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "ci-lane",
+        "gates"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0012-adapter-test-ci/README.md"
+    },
+    {
+      "id": "0013-pg-rawconn-convergence",
+      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "pg-rawconn-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0010-adapter-cleanup"
+      ],
+      "file_path": "rfcs/0013-pg-rawconn-convergence/README.md"
+    },
+    {
+      "id": "0014-fixtures-adoption",
+      "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "fixtures"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0014-fixtures-adoption/README.md"
     }
   ],
   "stories": [
@@ -762,7 +762,7 @@
     },
     {
       "id": "gate-mismatch-cleanup",
-      "rfc": "0000-adapter-test-ci",
+      "rfc": "0012-adapter-test-ci",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
       "status": "ready",
       "cluster": "gates",
@@ -773,7 +773,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-adapter-test-ci/stories/gate-mismatch-cleanup.md"
+      "file_path": "rfcs/0012-adapter-test-ci/stories/gate-mismatch-cleanup.md"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -1050,7 +1050,7 @@
     },
     {
       "id": "phase2a-read-path",
-      "rfc": "0000-pg-rawconn-convergence",
+      "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2a — PG read path through withRawConnection",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
@@ -1061,11 +1061,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2a-read-path.md"
+      "file_path": "rfcs/0013-pg-rawconn-convergence/stories/phase2a-read-path.md"
     },
     {
       "id": "phase2b-write-path",
-      "rfc": "0000-pg-rawconn-convergence",
+      "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2b — PG write/mutation path through withRawConnection",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
@@ -1078,11 +1078,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2b-write-path.md"
+      "file_path": "rfcs/0013-pg-rawconn-convergence/stories/phase2b-write-path.md"
     },
     {
       "id": "phase2c-txn-control-retire-withclient",
-      "rfc": "0000-pg-rawconn-convergence",
+      "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
@@ -1095,11 +1095,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase2c-txn-control-retire-withclient.md"
+      "file_path": "rfcs/0013-pg-rawconn-convergence/stories/phase2c-txn-control-retire-withclient.md"
     },
     {
       "id": "phase3-unify-connection-slot",
-      "rfc": "0000-pg-rawconn-convergence",
+      "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
       "status": "draft",
       "cluster": "pg-rawconn-convergence",
@@ -1112,7 +1112,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-pg-rawconn-convergence/stories/phase3-unify-connection-slot.md"
+      "file_path": "rfcs/0013-pg-rawconn-convergence/stories/phase3-unify-connection-slot.md"
     },
     {
       "id": "pool-allow-retry-forwarding",
@@ -1603,7 +1603,7 @@
     },
     {
       "id": "tier1-opportunistic-conversion",
-      "rfc": "0000-fixtures-adoption",
+      "rfc": "0014-fixtures-adoption",
       "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
       "status": "ready",
       "cluster": "fixtures",
@@ -1614,7 +1614,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-fixtures-adoption/stories/tier1-opportunistic-conversion.md"
+      "file_path": "rfcs/0014-fixtures-adoption/stories/tier1-opportunistic-conversion.md"
     },
     {
       "id": "track9-single-test-gaps",
@@ -1678,7 +1678,7 @@
     },
     {
       "id": "wire-adapter-dir-lane",
-      "rfc": "0000-adapter-test-ci",
+      "rfc": "0012-adapter-test-ci",
       "title": "Wire the live-DB adapter-dir lane into CI",
       "status": "ready",
       "cluster": "ci-lane",
@@ -1689,7 +1689,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-adapter-test-ci/stories/wire-adapter-dir-lane.md"
+      "file_path": "rfcs/0012-adapter-test-ci/stories/wire-adapter-dir-lane.md"
     },
     {
       "id": "wire-mixin-cache",

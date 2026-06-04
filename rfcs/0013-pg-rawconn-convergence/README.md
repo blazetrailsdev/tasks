@@ -1,5 +1,5 @@
 ---
-rfc: "0000-pg-rawconn-convergence"
+rfc: "0013-pg-rawconn-convergence"
 title: "PG raw-connection acquisition through the abstract withRawConnection loop"
 status: draft
 created: 2026-06-04
@@ -13,10 +13,10 @@ related-rfcs:
   - "0010-adapter-cleanup"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-pg-rawconn-convergence and the
+<!-- Unnumbered until merge: keep `rfc:` as 0013-pg-rawconn-convergence and the
      H1 below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC — PG raw-connection acquisition through the abstract `withRawConnection` loop
+# RFC 0013 — PG raw-connection acquisition through the abstract `withRawConnection` loop
 
 ## Summary
 

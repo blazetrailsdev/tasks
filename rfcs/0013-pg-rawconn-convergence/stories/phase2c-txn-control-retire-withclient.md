@@ -1,7 +1,7 @@
 ---
 title: "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect"
 status: draft
-rfc: "0000-pg-rawconn-convergence"
+rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
   - phase2b-write-path

@@ -1,24 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-adapter-test-ci",
-      "type": "rfc",
-      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
-      "terms": "0000-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
-    },
-    {
-      "id": "0000-fixtures-adoption",
-      "type": "rfc",
-      "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
-      "terms": "0000-fixtures-adoption fixtures adoption — opportunistic tier-1 conversion; defer the sweep activerecord fixtures rfc — fixtures adoption: opportunistic tier-1 conversion, defer the sweep"
-    },
-    {
-      "id": "0000-pg-rawconn-convergence",
-      "type": "rfc",
-      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
-      "terms": "0000-pg-rawconn-convergence pg raw-connection acquisition through the abstract withrawconnection loop activerecord pg-rawconn-convergence rfc — pg raw-connection acquisition through the abstract `withrawconnection` loop"
-    },
-    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -83,6 +65,24 @@
       "type": "rfc",
       "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
       "terms": "0011-activerecord-docs-cutover activerecord docs cutover — retire docs/activerecord, tasks as sole source of truth activerecord reconcile migrate decommission guardrails rfc 0011 — activerecord docs cutover: retire `docs/activerecord`, make `tasks` the sole source of truth"
+    },
+    {
+      "id": "0012-adapter-test-ci",
+      "type": "rfc",
+      "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
+      "terms": "0012-adapter-test-ci adapter test-ci: wire the live-db lane + the test:compare gate machinery activerecord ci-lane gates rfc 0012 — adapter test-ci: wire the live-db lane + the test:compare gate machinery"
+    },
+    {
+      "id": "0013-pg-rawconn-convergence",
+      "type": "rfc",
+      "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
+      "terms": "0013-pg-rawconn-convergence pg raw-connection acquisition through the abstract withrawconnection loop activerecord pg-rawconn-convergence rfc 0013 — pg raw-connection acquisition through the abstract `withrawconnection` loop"
+    },
+    {
+      "id": "0014-fixtures-adoption",
+      "type": "rfc",
+      "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
+      "terms": "0014-fixtures-adoption fixtures adoption — opportunistic tier-1 conversion; defer the sweep activerecord fixtures rfc 0014 — fixtures adoption: opportunistic tier-1 conversion, defer the sweep"
     },
     {
       "id": "a1-ddl-metadata-callers",
@@ -274,7 +274,7 @@
       "id": "gate-mismatch-cleanup",
       "type": "story",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
-      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0000-adapter-test-ci context"
+      "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0012-adapter-test-ci context"
     },
     {
       "id": "hmt-scope-join-aware",
@@ -382,25 +382,25 @@
       "id": "phase2a-read-path",
       "type": "story",
       "title": "Phase 2a — PG read path through withRawConnection",
-      "terms": "phase2a-read-path phase 2a — pg read path through withrawconnection pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+      "terms": "phase2a-read-path phase 2a — pg read path through withrawconnection pg-rawconn-convergence 0013-pg-rawconn-convergence context"
     },
     {
       "id": "phase2b-write-path",
       "type": "story",
       "title": "Phase 2b — PG write/mutation path through withRawConnection",
-      "terms": "phase2b-write-path phase 2b — pg write/mutation path through withrawconnection pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+      "terms": "phase2b-write-path phase 2b — pg write/mutation path through withrawconnection pg-rawconn-convergence 0013-pg-rawconn-convergence context"
     },
     {
       "id": "phase2c-txn-control-retire-withclient",
       "type": "story",
       "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
-      "terms": "phase2c-txn-control-retire-withclient phase 2c — txn-control + ddl sites, retire withclient bespoke reconnect pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+      "terms": "phase2c-txn-control-retire-withclient phase 2c — txn-control + ddl sites, retire withclient bespoke reconnect pg-rawconn-convergence 0013-pg-rawconn-convergence context"
     },
     {
       "id": "phase3-unify-connection-slot",
       "type": "story",
       "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
-      "terms": "phase3-unify-connection-slot phase 3 — unify pg connection onto the single _connection slot (delete the seam) pg-rawconn-convergence 0000-pg-rawconn-convergence context"
+      "terms": "phase3-unify-connection-slot phase 3 — unify pg connection onto the single _connection slot (delete the seam) pg-rawconn-convergence 0013-pg-rawconn-convergence context"
     },
     {
       "id": "pool-allow-retry-forwarding",
@@ -592,7 +592,7 @@
       "id": "tier1-opportunistic-conversion",
       "type": "story",
       "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
-      "terms": "tier1-opportunistic-conversion convert unconverted tier-1 files to canonical fixtures (opportunistic) fixtures 0000-fixtures-adoption context"
+      "terms": "tier1-opportunistic-conversion convert unconverted tier-1 files to canonical fixtures (opportunistic) fixtures 0014-fixtures-adoption context"
     },
     {
       "id": "track9-single-test-gaps",
@@ -622,7 +622,7 @@
       "id": "wire-adapter-dir-lane",
       "type": "story",
       "title": "Wire the live-DB adapter-dir lane into CI",
-      "terms": "wire-adapter-dir-lane wire the live-db adapter-dir lane into ci ci-lane 0000-adapter-test-ci context"
+      "terms": "wire-adapter-dir-lane wire the live-db adapter-dir lane into ci ci-lane 0012-adapter-test-ci context"
     },
     {
       "id": "wire-mixin-cache",

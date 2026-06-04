@@ -1,7 +1,7 @@
 ---
 title: "Phase 2b — PG write/mutation path through withRawConnection"
 status: draft
-rfc: "0000-pg-rawconn-convergence"
+rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
   - phase2a-read-path
