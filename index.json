@@ -184,6 +184,26 @@
         "0007-remove-global-arel-visitor"
       ],
       "file_path": "rfcs/0010-adapter-cleanup/README.md"
+    },
+    {
+      "id": "draft-activerecord-docs-cutover",
+      "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "reconcile",
+        "migrate",
+        "decommission",
+        "guardrails"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/draft-activerecord-docs-cutover/README.md"
     }
   ],
   "stories": [
