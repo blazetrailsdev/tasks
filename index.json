@@ -1785,7 +1785,7 @@
       "id": "wire-adapter-dir-lane",
       "rfc": "0012-adapter-test-ci",
       "title": "Wire the live-DB adapter-dir lane into CI",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "ci-lane",
       "priority": null,
       "deps": [],
