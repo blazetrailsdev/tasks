@@ -189,9 +189,13 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
 
 1. ~~**`parity-verification.md`.**~~ **Decided: leave in place** (reference/
    how-to, allowlisted by the Phase-4 guardrail; not migrated, not deleted).
-2. **In-flight RFC 0011.** A config-fidelity RFC is already on a PR branch. No
-   AR doc in the disposition table is config-fidelity, so no content overlap;
-   still confirm the number isn't double-claimed at `finalize-rfc` time.
+2. ~~**In-flight RFC 0011.**~~ **No conflict.** "RFC 0011" never merged — it was
+   direct-committed then reverted to re-enter via the placeholder flow (commit
+   `54c3079`), and now lives unnumbered on PR #1 (`rfc-isolation-helper`, AR
+   test-harness/config-fidelity). So no number is pre-claimed: the two open
+   draft-RFC PRs (#1, this one) each get numbered at `finalize-rfc` in merge
+   order. No content overlap — the isolation helper isn't in the disposition
+   table.
 3. ~~**Spawn-loop coupling.**~~ **Decided: nothing reads `docs/`** — the
    spawn-loop (`tasks/tooling/tasks-loop`) and skills do not consume `docs/`
    paths, so `repoint-references` only touches prose links, not code.
