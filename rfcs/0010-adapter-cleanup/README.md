@@ -65,15 +65,22 @@ Two discrete, independent cleanups (both branch from `main`, no stacking):
   migration + global removal. Not duplicated here.
 - The `get adapter()` / `set connection()` long-tail removal is a separate future
   initiative, gated on Phase G.
+- **Initiative 3 — adapter hash-only constructor** (the third initiative in
+  `adapter-architecture-cleanup.md`) is captured as a blocked story below
+  (gated on trails #2700), so the source doc can be deleted.
 
 ## Stories
 
-| ID                                                                    | Title                           | Status  | Est LOC |
-| --------------------------------------------------------------------- | ------------------------------- | ------- | ------- |
-| [pr-b-schema-ar-models-audit](stories/pr-b-schema-ar-models-audit.md) | PR B — schema-ar-models audit   | ready   | 30      |
-| [pr-a-delete-adapter-barrel](stories/pr-a-delete-adapter-barrel.md)   | PR A — delete adapter.ts barrel | blocked | 150     |
+| ID                                                                        | Title                                | Status  | Est LOC |
+| ------------------------------------------------------------------------- | ------------------------------------ | ------- | ------- |
+| [pr-b-schema-ar-models-audit](stories/pr-b-schema-ar-models-audit.md)     | PR B — schema-ar-models audit        | ready   | 30      |
+| [pr-a-delete-adapter-barrel](stories/pr-a-delete-adapter-barrel.md)       | PR A — delete adapter.ts barrel      | blocked | 150     |
+| [adapter-hash-only-constructor](stories/adapter-hash-only-constructor.md) | Hash-only constructor (Initiative 3) | blocked | 150     |
 
 ## Changelog
 
+- 2026-06-04: folded in Initiative 3 (adapter hash-only constructor, blocked on
+  trails #2700) from `adapter-architecture-cleanup.md` during the RFC 0011
+  cutover, so the source doc can be deleted.
 - 2026-05-30: initial RFC, migrated from
   `trails/docs/activerecord/adapter-cleanup-plan.md`.

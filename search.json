@@ -97,6 +97,12 @@
       "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
     },
     {
+      "id": "adapter-hash-only-constructor",
+      "type": "story",
+      "title": "Adapter hash-only constructor (Initiative 3)",
+      "terms": "adapter-hash-only-constructor adapter hash-only constructor (initiative 3) adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "af11-strict-loading-test-unblocks",
       "type": "story",
       "title": "AF11 — wire remaining strict-loading test stubs",
@@ -145,10 +151,40 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
+      "id": "cli-console-runner-empty-config",
+      "type": "story",
+      "title": "ar console / runner: error on empty config for env",
+      "terms": "cli-console-runner-empty-config ar console / runner: error on empty config for env cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-e2e-shared-helpers",
+      "type": "story",
+      "title": "Extract shared E2E scaffold/teardown helpers",
+      "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-generator-name-validation",
+      "type": "story",
+      "title": "ar generate: reject illegal migration/model names",
+      "terms": "cli-generator-name-validation ar generate: reject illegal migration/model names cli 0003-activerecord-cli context"
+    },
+    {
       "id": "cli-generators-manifest",
       "type": "story",
       "title": "Generators + generated models/index.ts manifest + ar init",
       "terms": "cli-generators-manifest generators + generated models/index.ts manifest + ar init cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-init-node-sqlite-driver",
+      "type": "story",
+      "title": "ar init: support --driver node-sqlite",
+      "terms": "cli-init-node-sqlite-driver ar init: support --driver node-sqlite cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-manifest-path-jsdoc",
+      "type": "story",
+      "title": "Fix ManifestResult.path JSDoc / resolution",
+      "terms": "cli-manifest-path-jsdoc fix manifestresult.path jsdoc / resolution cli 0003-activerecord-cli context"
     },
     {
       "id": "cli-package-scaffold",
@@ -173,6 +209,12 @@
       "type": "story",
       "title": "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)",
       "terms": "d2-has-one-fixture-bodies d2 — fill has_one test fixture bodies (~24 fixture-gated tests) associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "database-tasks-migrate-status-stdout",
+      "type": "story",
+      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
+      "terms": "database-tasks-migrate-status-stdout databasetasks.migratestatus stdout fidelity (p3-5) cli 0003-activerecord-cli context"
     },
     {
       "id": "decommission-docs",
