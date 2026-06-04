@@ -6,7 +6,7 @@ cluster: query-cache
 deps: ["pool-based-query-cache"]
 deps-rfc: []
 est-loc: 250
-pr: 2639
+pr: 2684
 claim: null
 assignee: null
 blocked-by: null

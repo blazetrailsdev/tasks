@@ -1,6 +1,6 @@
 ---
 title: "Consolidate dependent-handling dispatch paths"
-status: ready
+status: done
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

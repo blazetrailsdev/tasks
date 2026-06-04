@@ -1,6 +1,6 @@
 ---
 title: "Enable SQLITE_OPEN_URI for shared-cache :memory:"
-status: ready
+status: done
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []

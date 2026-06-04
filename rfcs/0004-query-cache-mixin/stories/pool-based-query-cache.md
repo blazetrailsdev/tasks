@@ -6,7 +6,7 @@ cluster: query-cache
 deps: ["wire-mixin-cache"]
 deps-rfc: []
 est-loc: 150
-pr: 2654
+pr: 2672
 claim: null
 assignee: null
 blocked-by: null
