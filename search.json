@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "id": "0000-ar-framework-gaps",
+      "type": "rfc",
+      "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
+      "terms": "0000-ar-framework-gaps activerecord framework gaps — dirty-tracking + readonly (test-port surfaced) activerecord dirty-tracking readonly rfc — activerecord framework gaps: dirty-tracking + readonly"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -217,16 +223,34 @@
       "terms": "pf5-connection-handler-reaudit re-audit 11 still-skipped connection-handler.test.ts tests connection-pool 0005-activerecord-gaps context"
     },
     {
+      "id": "readonly-hmt-collection-flag",
+      "type": "story",
+      "title": "HMT collection not implicitly marked readonly",
+      "terms": "readonly-hmt-collection-flag hmt collection not implicitly marked readonly readonly 0000-ar-framework-gaps context"
+    },
+    {
       "id": "a4-sweep-remaining-callers",
       "type": "story",
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
       "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
+      "id": "readonly-collection-proxy-propagation",
+      "type": "story",
+      "title": "Collection-proxy readonly propagation",
+      "terms": "readonly-collection-proxy-propagation collection-proxy readonly propagation readonly 0000-ar-framework-gaps context"
+    },
+    {
       "id": "gate-mismatch-cleanup",
       "type": "story",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
       "terms": "gate-mismatch-cleanup reconcile test:compare wrong/over/missing-gate mismatches to rails gates 0012-adapter-test-ci context"
+    },
+    {
+      "id": "readonly-collection-method-missing",
+      "type": "story",
+      "title": "Collection proxy method_missing delegation (+ Comment.allAsMethod)",
+      "terms": "readonly-collection-method-missing collection proxy method_missing delegation (+ comment.allasmethod) readonly 0000-ar-framework-gaps context"
     },
     {
       "id": "track9-single-test-gaps",
@@ -241,16 +265,94 @@
       "terms": "hmt-self-ref-belongs-to-push self-referential belongsto-source push for has_many :through associations 0005-activerecord-gaps context"
     },
     {
+      "id": "dirty-create-time-capture",
+      "type": "story",
+      "title": "Create-time dirty capture for mass-assigned attributes",
+      "terms": "dirty-create-time-capture create-time dirty capture for mass-assigned attributes dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-serialize-content-topic",
+      "type": "story",
+      "title": "serialize :content on canonical Topic (+ schema)",
+      "terms": "dirty-serialize-content-topic serialize :content on canonical topic (+ schema) dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-attribute-will-change-api",
+      "type": "story",
+      "title": "Public attribute_will_change! API",
+      "terms": "dirty-attribute-will-change-api public attribute_will_change! api dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-parrot-virtual-attr-registry",
+      "type": "story",
+      "title": "Canonical Parrot virtual attr + model registry",
+      "terms": "dirty-parrot-virtual-attr-registry canonical parrot virtual attr + model registry dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-enum-from-to-casting",
+      "type": "story",
+      "title": "Enum dirty from:/to: casting",
+      "terms": "dirty-enum-from-to-casting enum dirty from:/to: casting dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-reflected-in-memory-defaults",
+      "type": "story",
+      "title": "Reflected in-memory defaults applied on new",
+      "terms": "dirty-reflected-in-memory-defaults reflected in-memory defaults applied on new dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-alias-under-reflection",
+      "type": "story",
+      "title": "Alias dirty under reflection",
+      "terms": "dirty-alias-under-reflection alias dirty under reflection dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-missing-attribute-error",
+      "type": "story",
+      "title": "MissingAttributeError on unselected access",
+      "terms": "dirty-missing-attribute-error missingattributeerror on unselected access dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-query-count-parity",
+      "type": "story",
+      "title": "No-op UPDATE / query-count parity",
+      "terms": "dirty-query-count-parity no-op update / query-count parity dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-tz-datetime-roundtrip",
+      "type": "story",
+      "title": "TZ-aware datetime string round-trip",
+      "terms": "dirty-tz-datetime-roundtrip tz-aware datetime string round-trip dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
+      "id": "dirty-js-date-coercion",
+      "type": "story",
+      "title": "JS Date <-> datetime attribute coercion",
+      "terms": "dirty-js-date-coercion js date <-> datetime attribute coercion dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
       "id": "w1b-variadic-rest-overloads",
       "type": "story",
       "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
       "terms": "w1b-variadic-rest-overloads w1b — variadic rest overloads (drop relation.ts as-any spreads) type-cleanup 0009-type-audit context"
     },
     {
+      "id": "dirty-sql-function-defaults",
+      "type": "story",
+      "title": "SQL-function column defaults in defineSchema",
+      "terms": "dirty-sql-function-defaults sql-function column defaults in defineschema dirty-tracking 0000-ar-framework-gaps context"
+    },
+    {
       "id": "small-followups-bundle",
       "type": "story",
       "title": "Type-audit small follow-ups bundle (~150 LOC)",
       "terms": "small-followups-bundle type-audit small follow-ups bundle (~150 loc) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "dirty-custom-changed-in-place-hook",
+      "type": "story",
+      "title": "Custom attribute-type changed_in_place? hook",
+      "terms": "dirty-custom-changed-in-place-hook custom attribute-type changed_in_place? hook dirty-tracking 0000-ar-framework-gaps context"
     },
     {
       "id": "tier1-opportunistic-conversion",
