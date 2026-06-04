@@ -186,13 +186,15 @@
       "file_path": "rfcs/0010-adapter-cleanup/README.md"
     },
     {
-      "id": "draft-docs-cutover",
-      "title": "Full cutover — retire trails/docs, make tasks the only source of truth",
+      "id": "draft-activerecord-docs-cutover",
+      "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
       "status": "draft",
       "owner": "@dmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [],
+      "packages": [
+        "activerecord"
+      ],
       "clusters": [
         "reconcile",
         "migrate",
@@ -201,7 +203,7 @@
       ],
       "superseded_by": null,
       "related_rfcs": [],
-      "file_path": "rfcs/draft-docs-cutover/README.md"
+      "file_path": "rfcs/draft-activerecord-docs-cutover/README.md"
     }
   ],
   "stories": [
