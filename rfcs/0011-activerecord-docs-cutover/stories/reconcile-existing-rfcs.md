@@ -58,6 +58,17 @@ trails repo state, not the ref:
   unblocked → ready (ConnectionHandler/P9 ported, 1 skip left).
 - **0002:** `visitor-on-establish` done (superseded by the now-closed 0007).
 
+Second pass against `docs/activerecord/activerecord-gaps.md` (the 2026-06-01
+consolidated snapshot) + code verified 4 more 0005 stories done:
+`dependent-dispatch-consolidation` (`processDependentAssociations` gone),
+`rf1-fk-derivation-consolidation` (`_deriveForeignKey` helper), `pool-sqlite-open-uri`
+(`SQLITE_OPEN_URI` wired), `af5-eager-load-raise-semantics` (`EagerLoadPolymorphicError`
+raised in production). Also corrected 0004's PRs to the gap doc's canonical
+trio (2662 mixin / 2672 pool class / 2684 wrapper-delete). **Caveat proven:**
+absence from the gap doc ≠ done —
+`strict-loading.test.ts` still has 11 skips, so `af11` / `strict-loading-cascade-proxy`
+stay open despite the gap doc not listing strict-loading. Only code is decisive.
+
 Blocked re-verify: the remaining 8 blocked stories have **live** blockers
 (Rails-snapshot refresh, internal pool wiring, Phase-G fixtures, missing Node
 22.5+ lane, adapter.ts deletion gated on ~134 import sites) — left blocked.
