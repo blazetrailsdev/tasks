@@ -1,6 +1,6 @@
 ---
 title: "RFC from 2 schema.ts migration docs"
-status: draft
+status: done
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
 deps: ["reconcile-existing-rfcs"]
@@ -16,7 +16,7 @@ blocked-by: null
 
 `trails-models-dump-schema-ts-migration.md` and
 `trails-tsc-schema-ts-migration.md` cover the schema.ts dump/consume migration.
-Consolidate into one RFC. See RFC 0011 §Phase 2.
+See RFC 0011 §Phase 2.
 
 ## Acceptance criteria
 
@@ -27,3 +27,18 @@ Consolidate into one RFC. See RFC 0011 §Phase 2.
 ## Notes
 
 Confirm against `main` which phases already shipped before storying them.
+
+## Result (2026-06-04)
+
+**Both docs are COMPLETE** at `origin/main` — `trails-tsc-schema-ts-migration.md`
+(status: complete, #2759/#2894) and `trails-models-dump-schema-ts-migration.md`
+("COMPLETE — PRs 1–4 #2851/#2861/#2889/#2895; live-DB path dropped #2896").
+schema.ts is now the single committed schema artifact (Rails `db/schema.rb`
+analog), consumed statically by both `trails-tsc` and `trails-models-dump`.
+
+Per decision, **no RFC is authored for completed work.** The one residual — the
+composite-FK synthesized-name round-trip (codegen-only, documented as harmless)
+— was folded into **RFC 0003** as a low-priority `deferred` story
+([models-dump-composite-fk-roundtrip](../../0003-activerecord-cli/stories/models-dump-composite-fk-roundtrip.md)),
+the relevant `activerecord-cli` bucket. Both source docs are queued for deletion
+in `decommission-docs`.

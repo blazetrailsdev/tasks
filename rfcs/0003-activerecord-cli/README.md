@@ -144,23 +144,26 @@ Standardize the bare-AR path on `config/database.ts` keyed by `TRAILS_ENV`
 
 ## Stories
 
-| ID                                                                                      | Title                                        | Status | Est LOC | Cluster  |
-| --------------------------------------------------------------------------------------- | -------------------------------------------- | ------ | ------- | -------- |
-| [abstract-class-own-property-fix](stories/abstract-class-own-property-fix.md)           | Fix \_abstractClass own-property check (bug) | ready  | 30      | core     |
-| [lazy-async-schema-reflection](stories/lazy-async-schema-reflection.md)                 | Lazy async schema reflection                 | ready  | 200     | core     |
-| [cli-package-scaffold](stories/cli-package-scaffold.md)                                 | Scaffold activerecord-cli + db:\* commands   | draft  | 300     | cli      |
-| [relocate-tsc-wrapper](stories/relocate-tsc-wrapper.md)                                 | Relocate AR tsc-wrapper + bins into the CLI  | draft  | 250     | cli      |
-| [cli-generators-manifest](stories/cli-generators-manifest.md)                           | Generators + manifest + ar init              | draft  | 300     | cli      |
-| [ci-examples-job](stories/ci-examples-job.md)                                           | Optional lightweight examples/ CI job        | draft  | 50      | deferred |
-| [cli-generator-name-validation](stories/cli-generator-name-validation.md)               | Reject illegal migration/model names         | ready  | 10      | cli      |
-| [cli-manifest-path-jsdoc](stories/cli-manifest-path-jsdoc.md)                           | Fix ManifestResult.path JSDoc / resolution   | ready  | 5       | cli      |
-| [cli-console-runner-empty-config](stories/cli-console-runner-empty-config.md)           | console / runner empty-config error          | ready  | 30      | cli      |
-| [cli-e2e-shared-helpers](stories/cli-e2e-shared-helpers.md)                             | Extract shared E2E scaffold/teardown         | ready  | 50      | cli      |
-| [cli-init-node-sqlite-driver](stories/cli-init-node-sqlite-driver.md)                   | ar init --driver node-sqlite                 | ready  | 5       | cli      |
-| [database-tasks-migrate-status-stdout](stories/database-tasks-migrate-status-stdout.md) | DatabaseTasks.migrateStatus stdout (P3-5)    | ready  | 20      | cli      |
+| ID                                                                                      | Title                                           | Status | Est LOC | Cluster  |
+| --------------------------------------------------------------------------------------- | ----------------------------------------------- | ------ | ------- | -------- |
+| [abstract-class-own-property-fix](stories/abstract-class-own-property-fix.md)           | Fix \_abstractClass own-property check (bug)    | ready  | 30      | core     |
+| [lazy-async-schema-reflection](stories/lazy-async-schema-reflection.md)                 | Lazy async schema reflection                    | ready  | 200     | core     |
+| [cli-package-scaffold](stories/cli-package-scaffold.md)                                 | Scaffold activerecord-cli + db:\* commands      | draft  | 300     | cli      |
+| [relocate-tsc-wrapper](stories/relocate-tsc-wrapper.md)                                 | Relocate AR tsc-wrapper + bins into the CLI     | draft  | 250     | cli      |
+| [cli-generators-manifest](stories/cli-generators-manifest.md)                           | Generators + manifest + ar init                 | draft  | 300     | cli      |
+| [ci-examples-job](stories/ci-examples-job.md)                                           | Optional lightweight examples/ CI job           | draft  | 50      | deferred |
+| [cli-generator-name-validation](stories/cli-generator-name-validation.md)               | Reject illegal migration/model names            | ready  | 10      | cli      |
+| [cli-manifest-path-jsdoc](stories/cli-manifest-path-jsdoc.md)                           | Fix ManifestResult.path JSDoc / resolution      | ready  | 5       | cli      |
+| [cli-console-runner-empty-config](stories/cli-console-runner-empty-config.md)           | console / runner empty-config error             | ready  | 30      | cli      |
+| [cli-e2e-shared-helpers](stories/cli-e2e-shared-helpers.md)                             | Extract shared E2E scaffold/teardown            | ready  | 50      | cli      |
+| [cli-init-node-sqlite-driver](stories/cli-init-node-sqlite-driver.md)                   | ar init --driver node-sqlite                    | ready  | 5       | cli      |
+| [database-tasks-migrate-status-stdout](stories/database-tasks-migrate-status-stdout.md) | DatabaseTasks.migrateStatus stdout (P3-5)       | ready  | 20      | cli      |
+| [models-dump-composite-fk-roundtrip](stories/models-dump-composite-fk-roundtrip.md)     | trails-models-dump composite-FK name round-trip | draft  | 30      | deferred |
 
 ## Changelog
 
+- 2026-06-04: folded in the composite-FK round-trip residual from the completed
+  schema.ts migration docs (RFC 0011 cutover — no separate RFC for shipped work).
 - 2026-06-04: folded in 6 post-merge follow-ups (5 ar-cli findings + DatabaseTasks
   P3-5) migrated from `activerecord-gaps.md` during the RFC 0011 cutover.
 - 2026-05-29: initial RFC, migrated from
