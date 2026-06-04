@@ -1,13 +1,15 @@
 #!/usr/bin/env node
-// Finalize a draft RFC: assign the next free sequential number, rename the
-// directory, rewrite every `draft-<slug>` reference to `NNNN-<slug>`, inject
+// Finalize a placeholder RFC: assign the next free sequential number, rename
+// the directory, rewrite every `0000-<slug>` reference to `NNNN-<slug>`, inject
 // the number into the README H1 (`# RFC — Title` → `# RFC NNNN — Title`), and
 // rebuild the indices.
 //
 // Run this on the RFC's PR branch right before merge — `main` only ever holds
-// numbered RFCs; `draft-*` placeholders live on PR branches.
+// numbered RFCs; `0000-*` placeholders live on PR branches.
 //
-//   node scripts/finalize-rfc.mjs draft-<slug> [--dry-run]
+//   node scripts/finalize-rfc.mjs 0000-<slug> [--dry-run]
+//
+// Legacy `draft-<slug>` placeholders are still accepted for in-flight PRs.
 //
 import {
   readdirSync,
@@ -26,19 +28,24 @@ const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const draftDir = args.find((a) => !a.startsWith("--"));
 
-if (!draftDir || !draftDir.startsWith("draft-")) {
-  console.error("usage: node scripts/finalize-rfc.mjs draft-<slug> [--dry-run]");
+const prefix = draftDir?.startsWith("0000-")
+  ? "0000-"
+  : draftDir?.startsWith("draft-")
+    ? "draft-"
+    : null;
+if (!draftDir || !prefix) {
+  console.error("usage: node scripts/finalize-rfc.mjs 0000-<slug> [--dry-run]");
   process.exit(1);
 }
-const slug = draftDir.slice("draft-".length);
+const slug = draftDir.slice(prefix.length);
 if (!slug) {
-  console.error("error: draft slug is empty");
+  console.error("error: placeholder slug is empty");
   process.exit(1);
 }
 
 const src = join(RFCS, draftDir);
 if (!existsSync(src) || !statSync(src).isDirectory()) {
-  console.error(`error: no such draft RFC dir: rfcs/${draftDir}`);
+  console.error(`error: no such placeholder RFC dir: rfcs/${draftDir}`);
   process.exit(1);
 }
 

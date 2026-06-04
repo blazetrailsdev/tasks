@@ -10,14 +10,18 @@ export const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 export const RFCS_ROOT = join(REPO_ROOT, "rfcs");
 
 // 0000-template/ is the literal starter directory — copy-this content
-// with placeholder frontmatter that intentionally fails validation. It
-// is excluded from index generation and validation.
+// with placeholder frontmatter that intentionally fails validation. It is
+// the ONLY 0000-* dir excluded from index generation and validation.
 //
 // Two dir shapes count as RFCs: numbered `NNNN-slug` (merged, on main) and
-// `draft-slug` placeholders (unnumbered, live on a PR branch). Including
-// drafts means CI validates + indexes them before merge; `finalize-rfc.mjs`
-// renames `draft-slug` → `NNNN-slug` at merge time.
-const RFC_DIR_RE = /^(?!0000-)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
+// `0000-slug` placeholders (unnumbered, live on a PR branch). `0000-` is the
+// "number not yet assigned" sentinel — it never collides with the `draft`
+// lifecycle *status*, which the legacy `draft-slug` prefix did. Including
+// placeholders means CI validates + indexes them before merge;
+// `finalize-rfc.mjs` swaps `0000` for the assigned number (`0000-slug` →
+// `NNNN-slug`) at merge time. Legacy `draft-slug` is still accepted so any
+// in-flight pre-convention PR keeps working until it finalizes.
+const RFC_DIR_RE = /^(?!0000-template$)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
 const STORY_FILE_RE = /^[a-z0-9][a-z0-9-]*\.md$/;
 
 export const RFC_STATUSES = ["draft", "active", "closed", "postponed", "superseded"];

@@ -27,30 +27,38 @@ pnpm tasks done <id> --pr <n>
 
 ## Authoring an RFC
 
-RFCs are **unnumbered until merge.** You author against a `draft-<slug>`
+RFCs are **unnumbered until merge.** You author against a **`0000-<slug>`**
 placeholder; the **PR is where the design discussion happens**; the number is
 assigned when the PR is finalized, right before merge. Nobody pre-claims an
 integer, so concurrent RFCs never collide on the index.
 
+> **Use the `0000-` dir prefix, never `draft-`.** `0000` is the "number not yet
+> assigned" sentinel — `finalize-rfc.mjs` swaps it for the real number at merge.
+> It deliberately does **not** reuse the word `draft`, which is already a
+> lifecycle _status_ value (`status: draft`); a `draft-` dir prefix collides
+> with that and reads ambiguously. (Legacy `draft-` placeholders still validate
+> so any pre-convention PR finalizes cleanly, but author all new RFCs as
+> `0000-`.)
+
 ```bash
-# 1. Branch + scaffold a placeholder (note the `draft-` prefix, no number).
+# 1. Branch + scaffold a placeholder (note the `0000-` prefix — number at merge).
 git checkout -b rfc-your-slug
-cp -r rfcs/0000-template rfcs/draft-your-slug
-#    Edit README.md: frontmatter `rfc: "draft-your-slug"` (+ title, owner,
+cp -r rfcs/0000-template rfcs/0000-your-slug
+#    Edit README.md: frontmatter `rfc: "0000-your-slug"` (+ title, owner,
 #    packages, clusters) and the H1 (`# RFC — Title`). Add stories under
-#    stories/ — each story's `rfc:` field is also "draft-your-slug".
-git add rfcs/draft-your-slug && git commit -m "RFC (draft): <title>"
+#    stories/ — each story's `rfc:` field is also "0000-your-slug".
+git add rfcs/0000-your-slug && git commit -m "RFC (draft): <title>"
 
 # 2. Open a PR. Discuss / revise there. CI validates the placeholder as-is.
 
 # 3. Right before merge, assign the next free number:
-node scripts/finalize-rfc.mjs draft-your-slug        # add --dry-run to preview
+node scripts/finalize-rfc.mjs 0000-your-slug         # add --dry-run to preview
 #    → renames the dir to NNNN-your-slug, rewrites every `rfc:` reference,
 #    injects the number into the H1, and rebuilds the indices.
 git add -A && git commit -m "RFC NNNN: assign number" && # merge the PR
 ```
 
-`main` only ever holds numbered RFCs; `draft-*` placeholders live on PR
+`main` only ever holds numbered RFCs; `0000-*` placeholders live on PR
 branches. The pre-commit hook regenerates `index.md`, `index.json`, and
 `search.json`. Reference an RFC from prose as "this RFC" (number-agnostic) so
 nothing needs rewriting at finalize time beyond the H1 and `rfc:` fields.
@@ -107,7 +115,7 @@ Transitions are direct-push frontmatter edits. No PR gate on status changes.
     ├── 0001-task-system/      ← numbered (merged)
     │   ├── README.md
     │   └── stories/
-    └── draft-your-rfc/        ← placeholder; lives on a PR branch, numbered at merge
+    └── 0000-your-rfc/         ← placeholder; lives on a PR branch, numbered at merge
         ├── README.md
         └── stories/
 ```

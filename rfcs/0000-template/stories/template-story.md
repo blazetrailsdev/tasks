@@ -1,7 +1,7 @@
 ---
 title: "Short prose title"
 status: draft
-rfc: "draft-your-slug"
+rfc: "0000-your-slug"
 cluster: cluster-name-1
 deps: []
 deps-rfc: []

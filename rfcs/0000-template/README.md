@@ -1,5 +1,5 @@
 ---
-rfc: "draft-your-slug"
+rfc: "0000-your-slug"
 title: "Short prose title"
 status: draft
 created: YYYY-MM-DD
@@ -11,8 +11,10 @@ clusters:
   - cluster-name-2
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as draft-your-slug and the H1 below
-     number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
+<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
+     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
+     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
+     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
 
 # RFC — Title
 
