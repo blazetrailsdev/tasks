@@ -64,7 +64,10 @@ content**. Every actionable item lives as a story under an RFC here; ordering,
 deferred items, and permanent-skips live in RFC prose (the RFC 0005 §Deferred
 pattern). The `pnpm tasks` CLI + this repo's indices are the only queue. The
 docs are deleted outright — no stub pointers (a stub is just a smaller second
-source of truth).
+source of truth) — with **two explicit carve-outs that are kept in place**:
+`parity-verification.md` (reference/how-to, not a tracker) and
+`launch-roadmap.md` (cross-cutting roadmap). Both are allowlisted by the
+Phase-4 guardrail; everything else in `docs/` goes.
 
 Four phases, each its own cluster.
 
@@ -114,14 +117,14 @@ stays in the RFC body. Priority order: P0/P1 first.
 | `activerecord/fixtures-migration-backlog.md`             | migrate                      | **new:** fixtures-migration                                                                   |
 | `activerecord/trails-models-dump-schema-ts-migration.md` | migrate                      | **new:** schema.ts migration                                                                  |
 | `activerecord/trails-tsc-schema-ts-migration.md`         | migrate                      | **new:** schema.ts migration                                                                  |
-| `activerecord/parity-verification.md`                    | **open question**            | reference doc, not a tracker — see §Open questions                                            |
+| `activerecord/parity-verification.md`                    | **leave** (reference)        | stays in `trails/docs` — allowlisted (decided)                                                |
 | `actionpack-100-percent.md`                              | migrate                      | **new:** actionpack-parity                                                                    |
 | `actionview-100-percent.md`                              | migrate                      | **new:** actionview-parity                                                                    |
 | `rack-100-percent.md`                                    | migrate                      | **new:** rack-parity                                                                          |
 | `activesupport.md`                                       | migrate                      | **new:** activesupport-scope                                                                  |
 | `html-sanitizer-plan.md`                                 | migrate                      | **new:** html-sanitizer                                                                       |
 | `system-testing-plan.md`                                 | migrate                      | **new:** system-testing                                                                       |
-| `launch-roadmap.md`                                      | migrate (cross-cutting)      | **new:** launch-roadmap meta-RFC                                                              |
+| `launch-roadmap.md`                                      | **leave** (roadmap)          | stays in `trails/docs` — allowlisted (decided)                                                |
 | `index.md`                                               | delete                       | replaced by this repo's `index.md`                                                            |
 | `trailties/*.md` (4)                                     | migrate                      | **new:** trailties (plan/template-builder/thor/tse)                                           |
 | `infrastructure/*.md` (5)                                | migrate                      | **new:** infra (browser-compat, lint-deps, file-mirror, runner-restart, virtual-source-files) |
@@ -134,19 +137,21 @@ doc is **not** deleted in Phase 3 until its target RFC is merged and reconciled.
 ### Phase 3 — Decommission `trails/docs` (`decommission`)
 
 1. `decommission-docs` — delete each migrated doc + `docs/index.md`
-   (deps: the doc's migration story). No stubs.
-2. `repoint-references` — update everything in trails that points at `docs/`:
-   `README.md` links, `CLAUDE.md` "Measuring progress" section, any skills /
-   the spawn-loop (`tasks/tooling/tasks-loop`) so they read the tasks index,
-   not `docs/`.
+   (deps: the doc's migration story). No stubs. `parity-verification.md` and
+   `launch-roadmap.md` are retained.
+2. `repoint-references` — no automated consumer reads `docs/` (decided: the
+   spawn-loop and skills do not read `docs/` paths), so this is limited to
+   **prose links** — `README.md` and the `CLAUDE.md` "Measuring progress"
+   section — repointed at the tasks index / `pnpm tasks`.
 
 ### Phase 4 — Guardrails (`guardrails`)
 
 `drift-prevention-ci` — a CI check in trails that **fails on any new or edited
-`docs/**/\*.md`work-tracking file** (allowlist whatever reference docs survive
-the Phase-2 open question). Plus a`CLAUDE.md`working-principles edit: "all
-work tracking lives in the`tasks`repo; pick work via`pnpm tasks`, never by
-hand-editing a plan doc." Without this, the two-SoT split returns.
+work-tracking file under `docs/`**, with a two-entry allowlist:
+`docs/activerecord/parity-verification.md` and `docs/launch-roadmap.md`. Plus a
+`CLAUDE.md` working-principles edit: "all work tracking lives in the `tasks`
+repo; pick work via `pnpm tasks`, never by hand-editing a plan doc." Without
+this, the two-SoT split returns.
 
 ## Alternatives considered
 
@@ -170,33 +175,27 @@ hand-editing a plan doc." Without this, the two-SoT split returns.
    `migrate-schema-ts`, `migrate-actionpack`, `migrate-actionview`,
    `migrate-rack`, `migrate-activesupport`, `migrate-html-sanitizer`,
    `migrate-system-testing`, `migrate-trailties`, `migrate-infra`,
-   `migrate-frontiers`, `migrate-launch-roadmap`.
+   `migrate-frontiers`.
 3. **Phase 3 — decommission:** `decommission-docs` (deps: all `migrate-*`) →
    `repoint-references`.
 4. **Phase 4 — guardrails:** `drift-prevention-ci`.
 
 Stories are enumerated in §Stories but **not yet scaffolded** — they get
 materialized at execution kickoff (this RFC is the plan doc; scaffolding the
-~20 story files is the first execution step, gated on accepting the plan).
+18 story files is the first execution step, gated on accepting the plan).
 
 ## Open questions
 
-1. **`parity-verification.md`.** It's a reference/how-to (parity pipelines), not
-   a backlog. Cutover says "no work tracking in docs," but this is closer to the
-   deviation guides under `packages/website/docs/`. Options: (a) move it to
-   `packages/website/docs/guides/` as true reference; (b) fold its residual
-   "add fixtures / format bump" steps into the fixtures RFC and delete; (c)
-   allowlist it as the one surviving `docs/` reference. Recommend (a).
-2. **`launch-roadmap.md` home.** It's the P0 cross-cutting "what blocks launch"
-   doc that every other doc feeds. As an RFC it's more of a meta-index than a
-   work cluster. Make it a meta-RFC that links the others, or model it as the
-   `tasks` repo's top-level `index.md` framing? Recommend a thin meta-RFC.
-3. **In-flight RFC 0011.** A config-fidelity RFC is already on a PR branch.
-   Confirm it doesn't overlap any doc in the disposition table before
-   finalizing numbers, to avoid a collision at `finalize-rfc`.
-4. **Spawn-loop coupling.** Confirm whether `tasks/tooling/tasks-loop` (and any
-   trails skill) currently reads `docs/` paths; if so, `repoint-references`
-   must land in the same change that deletes those docs to avoid a broken loop.
+1. ~~**`parity-verification.md`.**~~ **Decided: leave in place** (reference/
+   how-to, allowlisted by the Phase-4 guardrail; not migrated, not deleted).
+2. ~~**`launch-roadmap.md` home.**~~ **Decided: leave in place** (cross-cutting
+   roadmap, allowlisted; not migrated, not deleted).
+3. **In-flight RFC 0011.** A config-fidelity RFC is already on a PR branch. No
+   doc in the disposition table is config-fidelity, so no content overlap;
+   still confirm the number isn't double-claimed at `finalize-rfc` time.
+4. ~~**Spawn-loop coupling.**~~ **Decided: nothing reads `docs/`** — the
+   spawn-loop (`tasks/tooling/tasks-loop`) and skills do not consume `docs/`
+   paths, so `repoint-references` only touches prose links, not code.
 
 ## Stories
 
@@ -218,7 +217,6 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
 | migrate-trailties       | RFC from 4 trailties docs                               | draft  | 250     | migrate      |
 | migrate-infra           | RFC from 5 infrastructure docs                          | draft  | 200     | migrate      |
 | migrate-frontiers       | RFC from 6 frontiers docs                               | draft  | 200     | migrate      |
-| migrate-launch-roadmap  | Thin meta-RFC from launch-roadmap                       | draft  | 60      | migrate      |
 | decommission-docs       | Delete migrated docs + docs/index.md                    | draft  | 50      | decommission |
 | repoint-references      | Repoint trails README/CLAUDE/skills/loop                | draft  | 80      | decommission |
 | drift-prevention-ci     | CI gate: no new docs/ trackers + CLAUDE principle       | draft  | 120     | guardrails   |
@@ -226,5 +224,6 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
 ## Changelog
 
 - 2026-06-04: initial RFC — plan the full cutover and `trails/docs` retirement.
-  </content>
-  </invoke>
+- 2026-06-04: resolved open questions — keep `parity-verification.md` and
+  `launch-roadmap.md` in place (allowlisted); no automated consumer reads
+  `docs/`; dropped `migrate-launch-roadmap` (19 → 18 stories).
