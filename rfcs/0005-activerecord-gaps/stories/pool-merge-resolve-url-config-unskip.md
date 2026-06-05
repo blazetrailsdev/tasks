@@ -1,13 +1,13 @@
 ---
 title: "Unskip 7 merge-and-resolve-default-url-config tests"
-status: claimed
+status: in-progress
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
 deps-rfc: []
 est-loc: 20
 priority: 12
-pr: null
+pr: 2603
 claim: "2026-06-05T02:01:41Z"
 assignee: "pool-merge-resolve-url-config-unskip"
 blocked-by: null
