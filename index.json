@@ -1721,7 +1721,7 @@
       "status": "ready",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-05T00:00:00.000Z",
       "deps": [
         "phase2a-read-path"
       ],
@@ -1737,7 +1737,7 @@
       "id": "phase2c-txn-control-retire-withclient",
       "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
-      "status": "ready",
+      "status": "draft",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
       "updated": "2026-06-04T00:00:00.000Z",
@@ -1756,7 +1756,7 @@
       "id": "phase3-unify-connection-slot",
       "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
-      "status": "ready",
+      "status": "draft",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
       "updated": "2026-06-04T00:00:00.000Z",
