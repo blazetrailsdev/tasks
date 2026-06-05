@@ -299,7 +299,7 @@
       "id": "pool-merge-resolve-url-config-unskip",
       "rfc": "0005-activerecord-gaps",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "connection-pool",
       "priority": 12,
       "deps": [],
