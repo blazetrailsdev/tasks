@@ -296,22 +296,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/abstract-class-own-property-fix.md"
     },
     {
-      "id": "belongsto-accessor-null-bug",
-      "rfc": "0005-activerecord-gaps",
-      "title": "Investigate belongsTo accessor returning null despite valid FK",
-      "status": "ready",
-      "cluster": "relation",
-      "priority": 11,
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 40,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0005-activerecord-gaps/stories/belongsto-accessor-null-bug.md"
-    },
-    {
       "id": "pool-merge-resolve-url-config-unskip",
       "rfc": "0005-activerecord-gaps",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
@@ -1232,6 +1216,22 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/b-drop-global-sync-sites.md"
+    },
+    {
+      "id": "belongsto-accessor-null-bug",
+      "rfc": "0005-activerecord-gaps",
+      "title": "Investigate belongsTo accessor returning null despite valid FK",
+      "status": "done",
+      "cluster": "relation",
+      "priority": null,
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 40,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/belongsto-accessor-null-bug.md"
     },
     {
       "id": "c-collapse-into-bootstrap",

@@ -97,12 +97,6 @@
       "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
     },
     {
-      "id": "belongsto-accessor-null-bug",
-      "type": "story",
-      "title": "Investigate belongsTo accessor returning null despite valid FK",
-      "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
-    },
-    {
       "id": "pool-merge-resolve-url-config-unskip",
       "type": "story",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
@@ -437,6 +431,12 @@
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",
       "terms": "b-drop-global-sync-sites phase b — drop ar's global-visitor sync sites arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
+      "id": "belongsto-accessor-null-bug",
+      "type": "story",
+      "title": "Investigate belongsTo accessor returning null despite valid FK",
+      "terms": "belongsto-accessor-null-bug investigate belongsto accessor returning null despite valid fk relation 0005-activerecord-gaps context"
     },
     {
       "id": "c-collapse-into-bootstrap",
