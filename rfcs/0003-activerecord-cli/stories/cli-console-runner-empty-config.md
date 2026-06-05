@@ -7,7 +7,7 @@ cluster: cli
 deps: ["cli-package-scaffold"]
 deps-rfc: []
 est-loc: 30
-priority: 20
+priority: 55
 pr: null
 claim: null
 assignee: null

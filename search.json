@@ -91,12 +91,6 @@
       "terms": "0014-fixtures-adoption fixtures adoption — opportunistic tier-1 conversion; defer the sweep activerecord fixtures rfc 0014 — fixtures adoption: opportunistic tier-1 conversion, defer the sweep"
     },
     {
-      "id": "abstract-class-own-property-fix",
-      "type": "story",
-      "title": "Fix _abstractClass own-property check (core bug)",
-      "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
-    },
-    {
       "id": "pool-merge-resolve-url-config-unskip",
       "type": "story",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
@@ -119,42 +113,6 @@
       "type": "story",
       "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
       "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
-    },
-    {
-      "id": "database-tasks-migrate-status-stdout",
-      "type": "story",
-      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
-      "terms": "database-tasks-migrate-status-stdout databasetasks.migratestatus stdout fidelity (p3-5) cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-manifest-path-jsdoc",
-      "type": "story",
-      "title": "Fix ManifestResult.path JSDoc / resolution",
-      "terms": "cli-manifest-path-jsdoc fix manifestresult.path jsdoc / resolution cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-init-node-sqlite-driver",
-      "type": "story",
-      "title": "ar init: support --driver node-sqlite",
-      "terms": "cli-init-node-sqlite-driver ar init: support --driver node-sqlite cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-generator-name-validation",
-      "type": "story",
-      "title": "ar generate: reject illegal migration/model names",
-      "terms": "cli-generator-name-validation ar generate: reject illegal migration/model names cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-console-runner-empty-config",
-      "type": "story",
-      "title": "ar console / runner: error on empty config for env",
-      "terms": "cli-console-runner-empty-config ar console / runner: error on empty config for env cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "cli-e2e-shared-helpers",
-      "type": "story",
-      "title": "Extract shared E2E scaffold/teardown helpers",
-      "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -289,6 +247,12 @@
       "terms": "dirty-enum-from-to-casting enum dirty from:/to: casting dirty-tracking 0000-ar-framework-gaps context"
     },
     {
+      "id": "abstract-class-own-property-fix",
+      "type": "story",
+      "title": "Fix _abstractClass own-property check (core bug)",
+      "terms": "abstract-class-own-property-fix fix _abstractclass own-property check (core bug) core 0003-activerecord-cli context"
+    },
+    {
       "id": "dirty-reflected-in-memory-defaults",
       "type": "story",
       "title": "Reflected in-memory defaults applied on new",
@@ -331,6 +295,12 @@
       "terms": "w1b-variadic-rest-overloads w1b — variadic rest overloads (drop relation.ts as-any spreads) type-cleanup 0009-type-audit context"
     },
     {
+      "id": "database-tasks-migrate-status-stdout",
+      "type": "story",
+      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
+      "terms": "database-tasks-migrate-status-stdout databasetasks.migratestatus stdout fidelity (p3-5) cli 0003-activerecord-cli context"
+    },
+    {
       "id": "dirty-sql-function-defaults",
       "type": "story",
       "title": "SQL-function column defaults in defineSchema",
@@ -343,6 +313,12 @@
       "terms": "small-followups-bundle type-audit small follow-ups bundle (~150 loc) type-cleanup 0009-type-audit context"
     },
     {
+      "id": "cli-manifest-path-jsdoc",
+      "type": "story",
+      "title": "Fix ManifestResult.path JSDoc / resolution",
+      "terms": "cli-manifest-path-jsdoc fix manifestresult.path jsdoc / resolution cli 0003-activerecord-cli context"
+    },
+    {
       "id": "dirty-custom-changed-in-place-hook",
       "type": "story",
       "title": "Custom attribute-type changed_in_place? hook",
@@ -353,6 +329,30 @@
       "type": "story",
       "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
       "terms": "tier1-opportunistic-conversion convert unconverted tier-1 files to canonical fixtures (opportunistic) fixtures 0014-fixtures-adoption context"
+    },
+    {
+      "id": "cli-init-node-sqlite-driver",
+      "type": "story",
+      "title": "ar init: support --driver node-sqlite",
+      "terms": "cli-init-node-sqlite-driver ar init: support --driver node-sqlite cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-generator-name-validation",
+      "type": "story",
+      "title": "ar generate: reject illegal migration/model names",
+      "terms": "cli-generator-name-validation ar generate: reject illegal migration/model names cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-console-runner-empty-config",
+      "type": "story",
+      "title": "ar console / runner: error on empty config for env",
+      "terms": "cli-console-runner-empty-config ar console / runner: error on empty config for env cli 0003-activerecord-cli context"
+    },
+    {
+      "id": "cli-e2e-shared-helpers",
+      "type": "story",
+      "title": "Extract shared E2E scaffold/teardown helpers",
+      "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
       "id": "schema-file-generator-config",

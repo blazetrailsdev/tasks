@@ -280,23 +280,6 @@
   ],
   "stories": [
     {
-      "id": "abstract-class-own-property-fix",
-      "rfc": "0003-activerecord-cli",
-      "title": "Fix _abstractClass own-property check (core bug)",
-      "status": "done",
-      "cluster": "core",
-      "priority": 10,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 30,
-      "pr": 2657,
-      "claim": "2026-06-04T23:37:13Z",
-      "assignee": "abstract-class-own-property-fix",
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/abstract-class-own-property-fix.md"
-    },
-    {
       "id": "pool-merge-resolve-url-config-unskip",
       "rfc": "0005-activerecord-gaps",
       "title": "Unskip 7 merge-and-resolve-default-url-config tests",
@@ -363,118 +346,6 @@
       "assignee": "r3-reorder-test-alignment",
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/r3-reorder-test-alignment.md"
-    },
-    {
-      "id": "database-tasks-migrate-status-stdout",
-      "rfc": "0003-activerecord-cli",
-      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
-      "status": "done",
-      "cluster": "cli",
-      "priority": 16,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 20,
-      "pr": 2954,
-      "claim": "2026-06-05T16:11:39Z",
-      "assignee": "database-tasks-migrate-status-stdout",
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/database-tasks-migrate-status-stdout.md"
-    },
-    {
-      "id": "cli-manifest-path-jsdoc",
-      "rfc": "0003-activerecord-cli",
-      "title": "Fix ManifestResult.path JSDoc / resolution",
-      "status": "done",
-      "cluster": "cli",
-      "priority": 17,
-      "updated": "2026-06-05T00:00:00.000Z",
-      "deps": [
-        "cli-generators-manifest"
-      ],
-      "deps_rfc": [],
-      "est_loc": 5,
-      "pr": 2956,
-      "claim": "2026-06-05T17:48:14Z",
-      "assignee": "cli-manifest-path-jsdoc",
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/cli-manifest-path-jsdoc.md"
-    },
-    {
-      "id": "cli-init-node-sqlite-driver",
-      "rfc": "0003-activerecord-cli",
-      "title": "ar init: support --driver node-sqlite",
-      "status": "ready",
-      "cluster": "cli",
-      "priority": 18,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "cli-generators-manifest"
-      ],
-      "deps_rfc": [],
-      "est_loc": 5,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/cli-init-node-sqlite-driver.md"
-    },
-    {
-      "id": "cli-generator-name-validation",
-      "rfc": "0003-activerecord-cli",
-      "title": "ar generate: reject illegal migration/model names",
-      "status": "ready",
-      "cluster": "cli",
-      "priority": 19,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "cli-generators-manifest"
-      ],
-      "deps_rfc": [],
-      "est_loc": 10,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/cli-generator-name-validation.md"
-    },
-    {
-      "id": "cli-console-runner-empty-config",
-      "rfc": "0003-activerecord-cli",
-      "title": "ar console / runner: error on empty config for env",
-      "status": "ready",
-      "cluster": "cli",
-      "priority": 20,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "cli-package-scaffold"
-      ],
-      "deps_rfc": [],
-      "est_loc": 30,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/cli-console-runner-empty-config.md"
-    },
-    {
-      "id": "cli-e2e-shared-helpers",
-      "rfc": "0003-activerecord-cli",
-      "title": "Extract shared E2E scaffold/teardown helpers",
-      "status": "ready",
-      "cluster": "cli",
-      "priority": 21,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "cli-package-scaffold"
-      ],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -857,6 +728,23 @@
       "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-enum-from-to-casting.md"
     },
     {
+      "id": "abstract-class-own-property-fix",
+      "rfc": "0003-activerecord-cli",
+      "title": "Fix _abstractClass own-property check (core bug)",
+      "status": "done",
+      "cluster": "core",
+      "priority": 45,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": 2657,
+      "claim": "2026-06-04T23:37:13Z",
+      "assignee": "abstract-class-own-property-fix",
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/abstract-class-own-property-fix.md"
+    },
+    {
       "id": "dirty-reflected-in-memory-defaults",
       "rfc": "0000-ar-framework-gaps",
       "title": "Reflected in-memory defaults applied on new",
@@ -976,6 +864,23 @@
       "file_path": "rfcs/0009-type-audit/stories/w1b-variadic-rest-overloads.md"
     },
     {
+      "id": "database-tasks-migrate-status-stdout",
+      "rfc": "0003-activerecord-cli",
+      "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
+      "status": "done",
+      "cluster": "cli",
+      "priority": 51,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 20,
+      "pr": 2954,
+      "claim": "2026-06-05T16:11:39Z",
+      "assignee": "database-tasks-migrate-status-stdout",
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/database-tasks-migrate-status-stdout.md"
+    },
+    {
       "id": "dirty-sql-function-defaults",
       "rfc": "0000-ar-framework-gaps",
       "title": "SQL-function column defaults in defineSchema",
@@ -1010,6 +915,25 @@
       "file_path": "rfcs/0009-type-audit/stories/small-followups-bundle.md"
     },
     {
+      "id": "cli-manifest-path-jsdoc",
+      "rfc": "0003-activerecord-cli",
+      "title": "Fix ManifestResult.path JSDoc / resolution",
+      "status": "done",
+      "cluster": "cli",
+      "priority": 52,
+      "updated": "2026-06-05T00:00:00.000Z",
+      "deps": [
+        "cli-generators-manifest"
+      ],
+      "deps_rfc": [],
+      "est_loc": 5,
+      "pr": 2956,
+      "claim": "2026-06-05T17:48:14Z",
+      "assignee": "cli-manifest-path-jsdoc",
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-manifest-path-jsdoc.md"
+    },
+    {
       "id": "dirty-custom-changed-in-place-hook",
       "rfc": "0000-ar-framework-gaps",
       "title": "Custom attribute-type changed_in_place? hook",
@@ -1042,6 +966,82 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0014-fixtures-adoption/stories/tier1-opportunistic-conversion.md"
+    },
+    {
+      "id": "cli-init-node-sqlite-driver",
+      "rfc": "0003-activerecord-cli",
+      "title": "ar init: support --driver node-sqlite",
+      "status": "ready",
+      "cluster": "cli",
+      "priority": 53,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [
+        "cli-generators-manifest"
+      ],
+      "deps_rfc": [],
+      "est_loc": 5,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-init-node-sqlite-driver.md"
+    },
+    {
+      "id": "cli-generator-name-validation",
+      "rfc": "0003-activerecord-cli",
+      "title": "ar generate: reject illegal migration/model names",
+      "status": "ready",
+      "cluster": "cli",
+      "priority": 54,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [
+        "cli-generators-manifest"
+      ],
+      "deps_rfc": [],
+      "est_loc": 10,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-generator-name-validation.md"
+    },
+    {
+      "id": "cli-console-runner-empty-config",
+      "rfc": "0003-activerecord-cli",
+      "title": "ar console / runner: error on empty config for env",
+      "status": "ready",
+      "cluster": "cli",
+      "priority": 55,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [
+        "cli-package-scaffold"
+      ],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-console-runner-empty-config.md"
+    },
+    {
+      "id": "cli-e2e-shared-helpers",
+      "rfc": "0003-activerecord-cli",
+      "title": "Extract shared E2E scaffold/teardown helpers",
+      "status": "ready",
+      "cluster": "cli",
+      "priority": 56,
+      "updated": "2026-06-04T00:00:00.000Z",
+      "deps": [
+        "cli-package-scaffold"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
       "id": "schema-file-generator-config",
