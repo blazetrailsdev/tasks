@@ -1,6 +1,7 @@
 ---
 title: "W1b — variadic rest overloads (drop relation.ts as-any spreads)"
 status: ready
+updated: 2026-06-04
 rfc: "0009-type-audit"
 cluster: type-cleanup
 deps: []

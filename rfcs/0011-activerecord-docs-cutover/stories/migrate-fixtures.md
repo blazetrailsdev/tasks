@@ -1,6 +1,7 @@
 ---
 title: "RFC from 3 fixtures docs"
 status: done
+updated: 2026-06-04
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
 deps: ["reconcile-existing-rfcs"]

@@ -1,6 +1,7 @@
 ---
 title: "PR 1 — schema-file generator + test DatabaseConfigurations"
 status: ready
+updated: 2026-06-04
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []

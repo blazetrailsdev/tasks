@@ -1,6 +1,7 @@
 ---
 title: "Phase 0 — sqlite clonable-template spike"
 status: ready
+updated: 2026-06-04
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
 deps: []

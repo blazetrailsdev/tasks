@@ -1,6 +1,7 @@
 ---
 title: "ar init: support --driver node-sqlite"
 status: ready
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-generators-manifest"]

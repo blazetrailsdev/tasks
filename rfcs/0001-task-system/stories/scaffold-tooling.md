@@ -1,6 +1,7 @@
 ---
 title: "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI"
 status: done
+updated: 2026-05-29
 rfc: "0001-task-system"
 cluster: scaffold
 deps: []

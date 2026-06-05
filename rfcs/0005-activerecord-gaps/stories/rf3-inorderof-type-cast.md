@@ -1,6 +1,7 @@
 ---
 title: "RF3 — add type_cast_for_database value casting in inOrderOf"
 status: done
+updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []

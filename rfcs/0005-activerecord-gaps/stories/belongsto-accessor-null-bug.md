@@ -1,6 +1,7 @@
 ---
 title: "Investigate belongsTo accessor returning null despite valid FK"
 status: done
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []

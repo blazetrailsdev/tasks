@@ -1,6 +1,7 @@
 ---
 title: "PR 2 — rework test-setup-dy + setupHandlerSuite"
 status: ready
+updated: 2026-06-04
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: ["schema-file-generator-config", "memory-loadschema-spike", "reconstruct-from-schema-parity"]

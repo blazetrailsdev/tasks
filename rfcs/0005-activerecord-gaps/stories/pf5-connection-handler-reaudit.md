@@ -1,6 +1,7 @@
 ---
 title: "Re-audit 11 still-skipped connection-handler.test.ts tests"
 status: ready
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []

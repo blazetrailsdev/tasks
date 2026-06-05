@@ -69,6 +69,7 @@ const indexJson = {
       status: fm.status ?? null,
       cluster: fm.cluster ?? null,
       priority: Number.isInteger(fm.priority) ? fm.priority : null,
+      updated: fm.updated ?? null,
       deps: fm.deps ?? [],
       deps_rfc: fm["deps-rfc"] ?? [],
       est_loc: fm["est-loc"] ?? null,

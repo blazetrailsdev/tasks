@@ -1,6 +1,7 @@
 ---
 title: "Fix ManifestResult.path JSDoc / resolution"
 status: ready
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-generators-manifest"]

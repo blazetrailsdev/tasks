@@ -1,6 +1,7 @@
 ---
 title: "AF5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks"
 status: done
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

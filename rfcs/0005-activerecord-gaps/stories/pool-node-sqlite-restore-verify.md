@@ -1,6 +1,7 @@
 ---
 title: "Verify node:sqlite restoreFromPath on a Node 22.5+ CI lane"
 status: blocked
+updated: 2026-05-29
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []

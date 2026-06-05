@@ -1,6 +1,7 @@
 ---
 title: "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)"
 status: done
+updated: 2026-06-04
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []

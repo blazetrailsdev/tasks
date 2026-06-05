@@ -1,6 +1,7 @@
 ---
 title: "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)"
 status: done
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

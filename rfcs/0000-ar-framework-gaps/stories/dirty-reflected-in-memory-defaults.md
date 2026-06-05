@@ -1,6 +1,7 @@
 ---
 title: "Reflected in-memory defaults applied on new"
 status: ready
+updated: 2026-06-04
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []

@@ -1,6 +1,7 @@
 ---
 title: "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)"
 status: blocked
+updated: 2026-05-29
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

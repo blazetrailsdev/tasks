@@ -1,6 +1,7 @@
 ---
 title: "Reconcile + close RFCs 0001–0010"
 status: done
+updated: 2026-06-04
 rfc: "0011-activerecord-docs-cutover"
 cluster: reconcile
 deps: ["reconcile-tooling"]

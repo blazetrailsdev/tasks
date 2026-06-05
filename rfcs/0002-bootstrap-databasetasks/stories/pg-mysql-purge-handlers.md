@@ -1,6 +1,7 @@
 ---
 title: "Follow-up — persistent PG/MySQL purge handlers"
 status: ready
+updated: 2026-06-04
 rfc: "0002-bootstrap-databasetasks"
 cluster: followup
 deps: ["rework-test-setup"]

@@ -1,6 +1,7 @@
 ---
 title: "Unskip 7 merge-and-resolve-default-url-config tests"
 status: done
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []

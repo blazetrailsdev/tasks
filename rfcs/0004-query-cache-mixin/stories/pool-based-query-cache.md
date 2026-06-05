@@ -1,6 +1,7 @@
 ---
 title: "Phase 2 — pool-based ActiveRecord::QueryCache"
 status: done
+updated: 2026-06-04
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: ["wire-mixin-cache"]

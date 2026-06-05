@@ -1,6 +1,7 @@
 ---
 title: "RF1 — fold four derive_foreign_key reimplementations into one helper"
 status: done
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []

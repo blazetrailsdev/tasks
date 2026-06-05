@@ -1,6 +1,7 @@
 ---
 title: "Lazy async schema reflection (delete explicit loadSchema)"
 status: done
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: core
 deps: []

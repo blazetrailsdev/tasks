@@ -1,6 +1,7 @@
 ---
 title: "Phase 1 — PG CREATE DATABASE ... TEMPLATE"
 status: draft
+updated: 2026-05-30
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
 deps: ["phase0-sqlite-template-spike"]

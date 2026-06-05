@@ -1,6 +1,7 @@
 ---
 title: "trails-models-dump: composite-FK synthesized name round-trip"
 status: draft
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: deferred
 deps: []

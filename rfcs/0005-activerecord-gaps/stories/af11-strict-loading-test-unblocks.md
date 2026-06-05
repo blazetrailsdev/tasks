@@ -1,6 +1,7 @@
 ---
 title: "AF11 — wire remaining strict-loading test stubs"
 status: ready
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

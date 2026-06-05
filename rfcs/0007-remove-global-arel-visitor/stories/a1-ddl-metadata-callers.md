@@ -1,6 +1,7 @@
 ---
 title: "Phase A1 — route DDL/metadata toSql callers through connection.toSql"
 status: done
+updated: 2026-06-03
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps: []

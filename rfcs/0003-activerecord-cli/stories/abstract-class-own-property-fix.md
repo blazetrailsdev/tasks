@@ -1,6 +1,7 @@
 ---
 title: "Fix _abstractClass own-property check (core bug)"
 status: done
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: core
 deps: []

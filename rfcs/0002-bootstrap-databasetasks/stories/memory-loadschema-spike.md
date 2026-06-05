@@ -1,6 +1,7 @@
 ---
 title: "Spike — reconstructFromSchema on sqlite :memory: pool:1"
 status: ready
+updated: 2026-06-04
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []

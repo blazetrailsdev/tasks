@@ -1,6 +1,7 @@
 ---
 title: "Phase 1 — wire the mixin cache into the live query path"
 status: done
+updated: 2026-06-04
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: []

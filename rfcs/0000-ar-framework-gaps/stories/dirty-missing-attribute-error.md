@@ -1,6 +1,7 @@
 ---
 title: "MissingAttributeError on unselected access"
 status: ready
+updated: 2026-06-04
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []

@@ -1,6 +1,7 @@
 ---
 title: "Adapter hash-only constructor (Initiative 3)"
 status: blocked
+updated: 2026-06-04
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []

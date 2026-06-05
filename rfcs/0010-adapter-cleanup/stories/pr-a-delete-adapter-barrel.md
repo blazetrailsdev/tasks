@@ -1,6 +1,7 @@
 ---
 title: "PR A — delete adapter.ts barrel + DatabaseAdapter interface"
 status: blocked
+updated: 2026-05-30
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []

@@ -1,6 +1,7 @@
 ---
 title: "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)"
 status: done
+updated: 2026-05-29
 rfc: "0001-task-system"
 cluster: conversion
 deps: ["scaffold-tooling"]

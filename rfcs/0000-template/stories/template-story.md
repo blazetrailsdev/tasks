@@ -1,6 +1,7 @@
 ---
 title: "Short prose title"
 status: draft
+updated: 2026-06-04
 rfc: "0000-your-slug"
 cluster: cluster-name-1
 deps: []

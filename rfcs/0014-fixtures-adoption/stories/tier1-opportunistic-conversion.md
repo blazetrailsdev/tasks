@@ -1,6 +1,7 @@
 ---
 title: "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)"
 status: ready
+updated: 2026-06-04
 rfc: "0014-fixtures-adoption"
 cluster: fixtures
 deps: []

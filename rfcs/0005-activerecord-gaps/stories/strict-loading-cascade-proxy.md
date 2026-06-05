@@ -1,6 +1,7 @@
 ---
 title: "Strict-loading cascade on collection proxy reader + mode propagation"
 status: ready
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

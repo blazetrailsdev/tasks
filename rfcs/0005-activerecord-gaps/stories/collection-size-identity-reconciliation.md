@@ -1,6 +1,7 @@
 ---
 title: "Collection size / add-to-target AR-id identity reconciliation"
 status: ready
+updated: 2026-06-04
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []

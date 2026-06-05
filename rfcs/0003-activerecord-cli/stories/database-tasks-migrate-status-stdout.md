@@ -1,6 +1,7 @@
 ---
 title: "DatabaseTasks.migrateStatus stdout fidelity (P3-5)"
 status: ready
+updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: []

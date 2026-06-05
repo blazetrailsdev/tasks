@@ -1,6 +1,7 @@
 ---
 title: "Phase 3 — migrate tests, delete the wrapper, collapse .inner walks"
 status: done
+updated: 2026-06-04
 rfc: "0004-query-cache-mixin"
 cluster: query-cache
 deps: ["pool-based-query-cache"]
