@@ -1,6 +1,6 @@
 ---
 title: "R3 — align the 3 reorder-replaces-existing-order tests to Rails"
-status: in-progress
+status: done
 updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: relation
