@@ -1,13 +1,13 @@
 ---
 title: "R3 — align the 3 reorder-replaces-existing-order tests to Rails"
-status: claimed
+status: in-progress
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
 deps-rfc: []
 est-loc: 20
 priority: 15
-pr: null
+pr: 2952
 claim: "2026-06-05T15:29:41Z"
 assignee: "r3-reorder-test-alignment"
 blocked-by: null
