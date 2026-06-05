@@ -1,6 +1,6 @@
 ---
 title: "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution"
-status: claimed
+status: in-progress
 updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 23
-pr: null
+pr: 2960
 claim: "2026-06-05T19:37:42Z"
 assignee: "pool-env-resolution-unify"
 blocked-by: null
