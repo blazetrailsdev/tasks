@@ -1,7 +1,7 @@
 ---
 title: "Create-time dirty capture for mass-assigned attributes"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-05
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-05T17:46:33Z"
+assignee: "dirty-create-time-capture"
 blocked-by: null
 ---
 
