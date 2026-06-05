@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.migrateStatus stdout fidelity (P3-5)"
-status: claimed
+status: in-progress
 updated: 2026-06-04
 rfc: "0003-activerecord-cli"
 cluster: cli
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 16
-pr: null
+pr: 2954
 claim: "2026-06-05T16:11:39Z"
 assignee: "database-tasks-migrate-status-stdout"
 blocked-by: null
