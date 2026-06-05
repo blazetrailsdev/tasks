@@ -1,6 +1,6 @@
 ---
 title: "PR B — schema-ar-models.ts set connection() audit"
-status: claimed
+status: in-progress
 updated: 2026-06-05
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 24
-pr: null
+pr: 2961
 claim: "2026-06-05T23:26:52Z"
 assignee: "pr-b-schema-ar-models-audit"
 blocked-by: null
