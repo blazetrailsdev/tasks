@@ -1,9 +1,9 @@
 ---
 rfc: "0013-pg-rawconn-convergence"
 title: "PG raw-connection acquisition through the abstract withRawConnection loop"
-status: draft
+status: active
 created: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-05
 owner: "@dmarano"
 packages:
   - activerecord
@@ -62,26 +62,26 @@ below.
 
 All sites are in
 `packages/activerecord/src/connection-adapters/postgresql-adapter.ts`. Lines are
-**as of `main` @ `c844148` (post-#2935)** — re-verify before editing, they drift.
+**as of `main` @ `ccf78346a` (post-#2935)** — re-verify before editing, they drift.
 "materialize" = the `materializeTransactions` value to pass when routing through
 `withRawConnection` (replicating each site's current behavior — see §Per-site
 materializeTransactions).
 
-| Method (def → `withClient`)           | line            | class                                     | mat.  | phase | notes                                                                                                                                                                       |
-| ------------------------------------- | --------------- | ----------------------------------------- | ----- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `execQuery`                           | 735→775         | leaf / read                               | false | 2a    | read-before-write; has explicit no-materialize comment                                                                                                                      |
-| `explain`                             | 1756→1761       | leaf / read                               | false | 2a    | verify current behavior; read, no write-state needed                                                                                                                        |
-| `execute` (`execUpdate`/`execDelete`) | 1325→1350       | leaf / write                              | true  | 2b    |                                                                                                                                                                             |
-| `executeMutation`                     | 1372→1393       | **composite** / write                     | true  | 2b    | savepoint ops already run via `client.query()` on the **yielded** conn — keep that                                                                                          |
-| `execInsert` (RETURNING)              | 1942→1968       | leaf / write                              | true  | 2b    |                                                                                                                                                                             |
-| `execInsert` (legacy currval)         | 1942→1992       | **composite** / write                     | true  | 2b    | `INSERT` + `SELECT currval(...)` on the **same yielded** conn                                                                                                               |
-| `createSavepoint`                     | 1721→1722       | leaf / txn-ctrl                           | false | 2c    | in-txn; must NOT re-begin                                                                                                                                                   |
-| `releaseSavepoint`                    | 1730→1731       | leaf / txn-ctrl                           | false | 2c    |                                                                                                                                                                             |
-| `rollbackToSavepoint`                 | 1739→1740       | leaf / txn-ctrl                           | false | 2c    |                                                                                                                                                                             |
-| `exec` (raw DDL)                      | 2040→2041       | leaf / DDL                                | true  | 2c    |                                                                                                                                                                             |
-| `disableExtension`                    | 2802→2812       | leaf / DDL                                | true  | 2c    | RFC previously said `dropExtension` — the actual site is `disableExtension`                                                                                                 |
-| `getDatabaseVersion`                  | 2380→2384, 2391 | **OFF the loop** — bootstrap probe        | n/a   | 2c    | memoized; lock-free; runs during init/schema introspection — must stay off `withRawConnection`                                                                              |
-| `reconfigureConnectionTimezone`       | 5249→5251       | **OFF the loop** — inside-loop re-entrant | n/a   | 2c    | called from `performQuery` via `updateTypemapForDefaultTimezone`, i.e. **already inside** a `withRawConnection` scope — routing it would re-enter `_lockQueue` and deadlock |
+| Method (def → `withClient`)     | line            | class                                     | mat.  | phase | notes                                                                                                                                                                       |
+| ------------------------------- | --------------- | ----------------------------------------- | ----- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `execQuery`                     | 735→775         | leaf / read                               | false | 2a    | read-before-write; has explicit no-materialize comment                                                                                                                      |
+| `explain`                       | 1756→1761       | leaf / read                               | false | 2a    | verify current behavior; read, no write-state needed                                                                                                                        |
+| `execute` (admin SQL)           | 1325→1350       | leaf / write                              | true  | 2b    | used for ROLLBACK/SET/FK-check admin SQL; NOT the execUpdate/execDelete path — those route through `internalExecute→rawExecute→withRawConnection` already (post-Phase-1)    |
+| `executeMutation`               | 1372→1393       | **composite** / write                     | true  | 2b    | savepoint ops already run via `client.query()` on the **yielded** conn — keep that                                                                                          |
+| `execInsert` (RETURNING)        | 1942→1968       | leaf / write                              | true  | 2b    |                                                                                                                                                                             |
+| `execInsert` (legacy currval)   | 1942→1992       | **composite** / write                     | true  | 2b    | `INSERT` + `SELECT currval(...)` on the **same yielded** conn                                                                                                               |
+| `createSavepoint`               | 1721→1722       | leaf / txn-ctrl                           | false | 2c    | in-txn; must NOT re-begin                                                                                                                                                   |
+| `releaseSavepoint`              | 1730→1731       | leaf / txn-ctrl                           | false | 2c    |                                                                                                                                                                             |
+| `rollbackToSavepoint`           | 1739→1740       | leaf / txn-ctrl                           | false | 2c    |                                                                                                                                                                             |
+| `exec` (raw DDL)                | 2040→2041       | leaf / DDL                                | true  | 2c    |                                                                                                                                                                             |
+| `disableExtension`              | 2802→2812       | leaf / DDL                                | true  | 2c    | RFC previously said `dropExtension` — the actual site is `disableExtension`                                                                                                 |
+| `getDatabaseVersion`            | 2380→2384, 2391 | **OFF the loop** — bootstrap probe        | n/a   | 2c    | memoized; lock-free; runs during init/schema introspection — must stay off `withRawConnection`                                                                              |
+| `reconfigureConnectionTimezone` | 5249→5251       | **OFF the loop** — inside-loop re-entrant | n/a   | 2c    | called from `performQuery` via `updateTypemapForDefaultTimezone`, i.e. **already inside** a `withRawConnection` scope — routing it would re-enter `_lockQueue` and deadlock |
 
 ## Design
 
@@ -282,7 +282,7 @@ Per-phase unskip targets. Files (full paths):
 - B = `packages/activerecord/src/adapters/postgresql/postgresql-adapter.test.ts`
   (PG adapter dir — proves the PG path end-to-end)
 
-Lines are as of `main` @ `c844148`; re-verify.
+Lines are as of `main` @ `ccf78346a`; re-verify.
 
 | Phase | File:line     | `it.skip(...)` name                                                                                                               | Rails mirror                                           |
 | ----- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -343,6 +343,16 @@ and expand this RFC's Design rather than forcing a fragile change.
   Rails yields one `@raw_connection` directly with no acquisition hook, so the
   seam is a trails-only intermediate. Separate from Phase 2 (larger blast radius;
   depends on 2c).
+- 2026-06-05: refinement pass against trails `main` @ `ccf78346a`. All 14 `withClient`
+  line numbers confirmed unchanged (no drift). All 8 verification test lines confirmed
+  unchanged. Phase-1 boundary verified (#2935 merged, zero Phase-2/3 changes). Status
+  flipped `draft → active`; all four stories flipped `draft → ready`. Corrected the
+  `execute` site label: was "(execUpdate/execDelete)" — actually used for admin SQL
+  (ROLLBACK, SET, FK checks); `execUpdate`/`execDelete` already route through
+  `internalExecute → rawExecute → withRawConnection` post-Phase-1, so they are NOT a
+  Phase-2 target. Site still requires conversion (for the admin-SQL callers). Old sha
+  ref `c844148` (not in repo history; artefact of original authoring environment)
+  replaced with `ccf78346a`.
 - 2026-06-04: hardening pass (review grade B− → A−). Added §Site inventory (14
   `withClient` sites with `file:line`, category, materialize, phase); resolved
   the re-entrancy open question via prior-art investigation (per-site
