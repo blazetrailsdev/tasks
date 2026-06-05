@@ -223,6 +223,12 @@
       "terms": "readonly-hmt-collection-flag hmt collection not implicitly marked readonly readonly 0000-ar-framework-gaps context"
     },
     {
+      "id": "a4-sweep-remaining-callers",
+      "type": "story",
+      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
+      "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
+    },
+    {
       "id": "readonly-collection-proxy-propagation",
       "type": "story",
       "title": "Collection-proxy readonly propagation",
@@ -407,12 +413,6 @@
       "type": "story",
       "title": "Phase A3 — route calculations / statement-cache / insert-all through connection.toSql",
       "terms": "a3-calculations-statement-cache-insert phase a3 — route calculations / statement-cache / insert-all through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
-    },
-    {
-      "id": "a4-sweep-remaining-callers",
-      "type": "story",
-      "title": "",
-      "terms": "a4-sweep-remaining-callers 0007-remove-global-arel-visitor"
     },
     {
       "id": "adapter-hash-only-constructor",

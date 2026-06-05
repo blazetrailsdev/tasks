@@ -664,6 +664,27 @@
       "file_path": "rfcs/0000-ar-framework-gaps/stories/readonly-hmt-collection-flag.md"
     },
     {
+      "id": "a4-sweep-remaining-callers",
+      "rfc": "0007-remove-global-arel-visitor",
+      "title": "Phase A4 — sweep remaining direct .toSql() production callers",
+      "status": "done",
+      "cluster": "arel-visitor",
+      "priority": 36,
+      "updated": "2026-06-05T00:00:00.000Z",
+      "deps": [
+        "a1-ddl-metadata-callers",
+        "a2-persistence-base-ternary",
+        "a3-calculations-statement-cache-insert"
+      ],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": 2945,
+      "claim": "2026-06-05T00:38:29Z",
+      "assignee": "a4-sweep-remaining-callers",
+      "blocked_by": null,
+      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a4-sweep-remaining-callers.md"
+    },
+    {
       "id": "readonly-collection-proxy-propagation",
       "rfc": "0000-ar-framework-gaps",
       "title": "Collection-proxy readonly propagation",
@@ -1199,23 +1220,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a3-calculations-statement-cache-insert.md"
-    },
-    {
-      "id": "a4-sweep-remaining-callers",
-      "rfc": "0007-remove-global-arel-visitor",
-      "title": null,
-      "status": null,
-      "cluster": null,
-      "priority": null,
-      "updated": null,
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a4-sweep-remaining-callers.md"
     },
     {
       "id": "adapter-hash-only-constructor",
