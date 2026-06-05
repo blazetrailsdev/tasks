@@ -385,7 +385,7 @@
       "id": "cli-manifest-path-jsdoc",
       "rfc": "0003-activerecord-cli",
       "title": "Fix ManifestResult.path JSDoc / resolution",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "cli",
       "priority": 17,
       "updated": "2026-06-05T00:00:00.000Z",

@@ -1,6 +1,6 @@
 ---
 title: "Fix ManifestResult.path JSDoc / resolution"
-status: in-progress
+status: done
 updated: 2026-06-05
 rfc: "0003-activerecord-cli"
 cluster: cli
