@@ -645,7 +645,7 @@
       "id": "a4-sweep-remaining-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
-      "status": "claimed",
+      "status": "in-progress",
       "cluster": "arel-visitor",
       "priority": 36,
       "deps": [
@@ -655,7 +655,7 @@
       ],
       "deps_rfc": [],
       "est_loc": 100,
-      "pr": null,
+      "pr": 2945,
       "claim": "2026-06-05T00:38:29Z",
       "assignee": "a4-sweep-remaining-callers",
       "blocked_by": null,

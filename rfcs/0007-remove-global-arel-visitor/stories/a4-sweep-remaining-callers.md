@@ -1,6 +1,6 @@
 ---
 title: "Phase A4 — sweep remaining direct .toSql() production callers"
-status: claimed
+status: in-progress
 rfc: "0007-remove-global-arel-visitor"
 cluster: arel-visitor
 deps:
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: 36
-pr: null
+pr: 2945
 claim: "2026-06-05T00:38:29Z"
 assignee: "a4-sweep-remaining-callers"
 blocked-by: null
