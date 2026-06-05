@@ -1,7 +1,7 @@
 ---
 title: "Fix ManifestResult.path JSDoc / resolution"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-05
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-generators-manifest"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 5
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-05T17:48:14Z"
+assignee: "cli-manifest-path-jsdoc"
 blocked-by: null
 ---
 
