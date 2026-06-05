@@ -645,7 +645,7 @@
       "id": "a4-sweep-remaining-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A4 — sweep remaining direct .toSql() production callers",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "arel-visitor",
       "priority": 36,
       "deps": [
