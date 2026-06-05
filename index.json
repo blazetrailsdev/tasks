@@ -1737,10 +1737,10 @@
       "id": "phase2c-txn-control-retire-withclient",
       "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect",
-      "status": "draft",
+      "status": "ready",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-05T00:00:00.000Z",
       "deps": [
         "phase2b-write-path"
       ],

@@ -1,7 +1,7 @@
 ---
 title: "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect"
-status: draft
-updated: 2026-06-04
+status: ready
+updated: 2026-06-05
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
