@@ -1,6 +1,6 @@
 ---
 title: "Unskip 7 merge-and-resolve-default-url-config tests"
-status: ready
+status: claimed
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -8,8 +8,8 @@ deps-rfc: []
 est-loc: 20
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-05T02:01:41Z"
+assignee: "pool-merge-resolve-url-config-unskip"
 blocked-by: null
 ---
 
