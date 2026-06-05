@@ -1,6 +1,6 @@
 ---
 title: "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution"
-status: in-progress
+status: done
 updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool

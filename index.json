@@ -368,7 +368,7 @@
       "id": "pool-env-resolution-unify",
       "rfc": "0005-activerecord-gaps",
       "title": "Unify fromEnv currentEnv vs forCurrentEnv defaultEnv resolution",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "connection-pool",
       "priority": 23,
       "updated": "2026-06-05T00:00:00.000Z",
