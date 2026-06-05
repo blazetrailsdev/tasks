@@ -1,14 +1,14 @@
 ---
 title: "Association-scope polymorphic-through alias coverage"
-status: ready
-updated: 2026-06-04
+status: done
+updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
 deps-rfc: []
 est-loc: 50
 priority: 32
-pr: null
+pr: 2665
 claim: null
 assignee: null
 blocked-by: null
