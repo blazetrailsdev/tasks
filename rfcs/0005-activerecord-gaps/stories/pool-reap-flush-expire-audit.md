@@ -1,6 +1,6 @@
 ---
 title: "Audit _available re-add sites that skip expire()"
-status: claimed
+status: in-progress
 updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 22
-pr: null
+pr: 2959
 claim: "2026-06-05T18:54:59Z"
 assignee: "pool-reap-flush-expire-audit"
 blocked-by: null
