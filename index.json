@@ -315,7 +315,7 @@
       "id": "hmt-scope-join-aware",
       "rfc": "0005-activerecord-gaps",
       "title": "Make HMT scope() join-aware like Rails",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "associations",
       "priority": 13,
       "deps": [],

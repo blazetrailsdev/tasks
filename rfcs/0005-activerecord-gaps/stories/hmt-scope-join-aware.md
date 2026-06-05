@@ -1,6 +1,6 @@
 ---
 title: "Make HMT scope() join-aware like Rails"
-status: in-progress
+status: done
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
