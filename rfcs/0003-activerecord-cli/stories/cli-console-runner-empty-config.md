@@ -15,17 +15,24 @@ blocked-by: null
 
 ## Context
 
-Post-merge finding from the ar-cli series (#2736). Neither `ar console` nor
-`ar runner` errors when `configsFor()` returns an empty array for the requested
-environment, whereas the `db:*` commands do. Add the same guard for Rails
-fidelity.
+Post-merge finding from the ar-cli series (#2736). Still live as of 2026-06-05.
+Both `arConsole` (`console.ts:29-30`) and `arRunner` (`runner.ts:39-40`) call
+`DatabaseTasks.configsFor(currentEnv())` and only connect `if (configs.length > 0)`
+— when the array is **empty** they silently fall through (no connection, no
+error): `ar console` drops into a REPL with no DB, `ar runner` runs the script
+with no connection. The `db:*` commands instead hard-error in this case — e.g.
+`dbPrepare` (`db-tasks.ts:306-309`) logs
+`ar: no database configuration found for environment "<env>"` and returns `1`.
+Add the same guard to `console`/`runner` for Rails fidelity.
 
 ## Acceptance criteria
 
-- [ ] `ar console` errors with a clear message when no config resolves for the
-      environment (mirroring the `db:*` guard).
-- [ ] `ar runner` gets the same guard.
-- [ ] `console.ts` / `runner.ts` covered by a test.
+- [ ] `ar console` errors with a clear message and non-zero exit when
+      `configsFor(currentEnv())` is empty, replacing the silent
+      `if (configs.length > 0)` skip at `console.ts:29-30` (mirror the `db:*`
+      guard at `db-tasks.ts:306-309`).
+- [ ] `ar runner` gets the same guard at `runner.ts:39-40`.
+- [ ] `console.ts` / `runner.ts` covered by a test (empty-config → error + exit 1).
 
 ## Notes
 

@@ -15,16 +15,20 @@ blocked-by: null
 
 ## Context
 
-Post-merge finding from the ar-cli series (#2752). The three E2E suites
-(`sqlite-happy-path`, `postgres-happy-path`, `mysql-happy-path`) each inline the
-same tmp-dir scaffold + `DatabaseTasks` teardown block. Extract into
+Post-merge finding from the ar-cli series (#2752). Still live as of 2026-06-05 —
+`src/__e2e__/` holds only the three suite files, no `helpers.ts`. Each suite
+inlines the same `mkdtemp(join(tmpdir(), "ar-cli-e2e-"))` scaffold (e.g.
+`sqlite-happy-path.test.ts:30`) and the same `DatabaseTasks` singleton-reset +
+`rm(tmpDir, …)` teardown block (`sqlite-happy-path.test.ts:44-49`, duplicated in
+`postgres-happy-path.test.ts` and `mysql-happy-path.test.ts`). Extract into
 `src/__e2e__/helpers.ts`. No behavior change.
 
 ## Acceptance criteria
 
-- [ ] Shared tmp-dir scaffold + teardown extracted to
-      `packages/activerecord-cli/src/__e2e__/helpers.ts`.
-- [ ] All three E2E suites use the helper; no behavior change.
+- [ ] Shared `mkdtemp` scaffold + `DatabaseTasks`-reset/`rm` teardown extracted
+      to `packages/activerecord-cli/src/__e2e__/helpers.ts`.
+- [ ] All three E2E suites (`sqlite-/postgres-/mysql-happy-path.test.ts`) use the
+      helper; no behavior change.
 
 ## Notes
 

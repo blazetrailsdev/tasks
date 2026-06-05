@@ -15,17 +15,24 @@ blocked-by: null
 
 ## Context
 
-Post-merge finding from the ar-cli series (#2705). `ManifestResult.path` JSDoc
-says "absolute path" but `generateManifest(modelsDir)` returns
-`join(modelsDir, "index.ts")` — relative when a direct library caller passes a
-relative `modelsDir`. The CLI is unaffected (always resolves against cwd first).
+Post-merge finding from the ar-cli series (#2705). Still live as of 2026-06-05:
+the `ManifestResult.path` JSDoc (`generate-manifest.ts:294`) says
+`// absolute path of the manifest file`, but `generateManifest` computes it as
+`(await getPathAsync()).join(modelsDir, MANIFEST_NAME)` (`generate-manifest.ts:318`,
+with `MANIFEST_NAME = "index.ts"` at `:10`) and returns it unresolved
+(`generate-manifest.ts:323`). So when a direct library caller passes a relative
+`modelsDir`, `path` is **relative**, contradicting the JSDoc. The CLI is
+unaffected — it always resolves `modelsDir` against cwd first.
+
+No Rails analog (pure-TS codegen detail).
 
 ## Acceptance criteria
 
-- [ ] Either resolve the path inside `generateManifest` (so it is always
-      absolute) or soften the JSDoc to match actual behavior.
-- [ ] `packages/activerecord-cli/src/generate-manifest.ts` JSDoc and return
-      value agree.
+- [ ] Either resolve the path inside `generateManifest` (`generate-manifest.ts:318`,
+      so the returned `path` is always absolute) or soften the JSDoc at
+      `generate-manifest.ts:294` to match actual behavior.
+- [ ] `packages/activerecord-cli/src/generate-manifest.ts` `ManifestResult.path`
+      JSDoc (`:294`) and the returned value (`:318`/`:323`) agree.
 
 ## Notes
 

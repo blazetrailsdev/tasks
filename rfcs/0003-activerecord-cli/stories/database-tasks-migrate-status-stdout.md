@@ -15,20 +15,27 @@ blocked-by: null
 
 ## Context
 
-DatabaseTasks P3-5 from `activerecord-gaps.md`. The formatted up/down migration
-table shipped at the CLI layer (`ar db:migrate:status`, #2743), but Rails prints
-it from `DatabaseTasks.migrate_status` itself (`database_tasks.rb:302` —
-`puts "database: …"`, a header, then `puts` per `migrations_status` row).
-Trails' `DatabaseTasks.migrateStatus()` (`tasks/database-tasks.ts:911`) still
-only returns the structured array; the formatting lives in the CLI. Lower
-priority now that the user-facing table exists.
+DatabaseTasks P3-5 from `activerecord-gaps.md`. Still live as of 2026-06-05. The
+formatted up/down migration table shipped at the CLI layer
+(`ar db:migrate:status`, #2743), but Rails prints it from
+`DatabaseTasks.migrate_status` itself
+(`vendor/rails/activerecord/lib/active_record/tasks/database_tasks.rb:302` — body
+at `:308-314`: `puts "\ndatabase: …"`, the `'Status'.center(8) … 'Migration ID'.ljust(14)`
+header, a `"-" * 50` rule, then `puts` per `migrations_status` row).
+Trails' `DatabaseTasks.migrateStatus()`
+(`packages/activerecord/src/tasks/database-tasks.ts:923`) still only returns the
+structured array (`return migrator.migrationsStatus()`, `:929`); the Rails-shaped
+formatting lives in the CLI instead — `printMigrateStatusTable`
+(`packages/activerecord-cli/src/db-tasks.ts:372`, called from `dbMigrateStatus` at
+`:385`). Lower priority now that the user-facing table exists.
 
 ## Acceptance criteria
 
-- [ ] `DatabaseTasks.migrateStatus()` emits the Rails-shaped `puts` output
-      (database header + per-row status) itself, matching `database_tasks.rb`.
-- [ ] CLI `ar db:migrate:status` keeps working (delegates to / doesn't
-      double-print).
+- [ ] `DatabaseTasks.migrateStatus()` (`database-tasks.ts:923`) emits the
+      Rails-shaped `puts` output (database header + per-row status) itself,
+      matching `database_tasks.rb:308-314`.
+- [ ] CLI `ar db:migrate:status` keeps working — `printMigrateStatusTable`
+      (`db-tasks.ts:372`) delegates to / doesn't double-print.
 - [ ] Test: "migrate status table".
 
 ## Notes
