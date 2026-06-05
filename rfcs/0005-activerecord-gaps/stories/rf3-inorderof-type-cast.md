@@ -1,13 +1,13 @@
 ---
 title: "RF3 — add type_cast_for_database value casting in inOrderOf"
-status: ready
+status: done
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
 deps-rfc: []
 est-loc: 20
 priority: 14
-pr: null
+pr: 2671
 claim: null
 assignee: null
 blocked-by: null
