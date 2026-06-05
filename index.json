@@ -351,7 +351,7 @@
       "id": "pool-reap-flush-expire-audit",
       "rfc": "0005-activerecord-gaps",
       "title": "Audit _available re-add sites that skip expire()",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "connection-pool",
       "priority": 22,
       "updated": "2026-06-05T00:00:00.000Z",

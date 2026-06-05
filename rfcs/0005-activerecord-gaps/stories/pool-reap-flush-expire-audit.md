@@ -1,6 +1,6 @@
 ---
 title: "Audit _available re-add sites that skip expire()"
-status: in-progress
+status: done
 updated: 2026-06-05
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
