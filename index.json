@@ -368,7 +368,7 @@
       "id": "database-tasks-migrate-status-stdout",
       "rfc": "0003-activerecord-cli",
       "title": "DatabaseTasks.migrateStatus stdout fidelity (P3-5)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "cli",
       "priority": 16,
       "updated": "2026-06-04T00:00:00.000Z",
