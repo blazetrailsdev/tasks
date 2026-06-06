@@ -1,6 +1,6 @@
 ---
 title: "Inverse-of error wording + dead-code hygiene"
-status: in-progress
+status: done
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
