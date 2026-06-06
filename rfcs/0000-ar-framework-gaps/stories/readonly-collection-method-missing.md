@@ -1,6 +1,6 @@
 ---
 title: "Collection proxy method_missing delegation (+ Comment.allAsMethod)"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: readonly
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 37
-pr: null
+pr: 2969
 claim: "2026-06-06T14:31:11Z"
 assignee: "readonly-collection-method-missing"
 blocked-by: null
