@@ -1,7 +1,7 @@
 ---
 title: "JS Date <-> datetime attribute coercion"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T23:30:56Z"
+assignee: "dirty-js-date-coercion"
 blocked-by: null
 ---
 
