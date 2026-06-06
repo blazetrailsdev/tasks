@@ -1,7 +1,7 @@
 ---
 title: "Canonical Parrot virtual attr + model registry"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 43
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T17:05:28Z"
+assignee: "dirty-parrot-virtual-attr-registry"
 blocked-by: null
 ---
 
