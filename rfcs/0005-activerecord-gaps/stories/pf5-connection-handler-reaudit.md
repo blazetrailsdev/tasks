@@ -1,6 +1,6 @@
 ---
 title: "Re-audit 11 still-skipped connection-handler.test.ts tests"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 35
-pr: null
+pr: 2966
 claim: "2026-06-06T11:39:11Z"
 assignee: "pf5-connection-handler-reaudit"
 blocked-by: null
