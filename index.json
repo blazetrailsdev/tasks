@@ -644,7 +644,7 @@
       "id": "hmt-self-ref-belongs-to-push",
       "rfc": "0005-activerecord-gaps",
       "title": "Self-referential belongsTo-source push for has_many :through",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "associations",
       "priority": 39,
       "updated": "2026-06-06T00:00:00.000Z",
