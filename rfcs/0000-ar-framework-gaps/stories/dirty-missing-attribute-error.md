@@ -1,6 +1,6 @@
 ---
 title: "MissingAttributeError on unselected access"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 47
-pr: null
+pr: 2980
 claim: "2026-06-06T20:15:56Z"
 assignee: "dirty-missing-attribute-error"
 blocked-by: null
