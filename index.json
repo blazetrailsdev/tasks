@@ -695,7 +695,7 @@
       "id": "dirty-attribute-will-change-api",
       "rfc": "0000-ar-framework-gaps",
       "title": "Public attribute_will_change! API",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 42,
       "updated": "2026-06-06T00:00:00.000Z",
