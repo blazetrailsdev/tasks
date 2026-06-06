@@ -1,6 +1,6 @@
 ---
 title: "Collection size / add-to-target AR-id identity reconciliation"
-status: claimed
+status: done
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 31
-pr: null
+pr: 2685
 claim: "2026-06-06T00:45:20Z"
 assignee: "collection-size-identity-reconciliation"
 blocked-by: null
