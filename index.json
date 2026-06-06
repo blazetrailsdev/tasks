@@ -782,7 +782,7 @@
       "id": "dirty-alias-under-reflection",
       "rfc": "0000-ar-framework-gaps",
       "title": "Alias dirty under reflection",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 46,
       "updated": "2026-06-06T00:00:00.000Z",
