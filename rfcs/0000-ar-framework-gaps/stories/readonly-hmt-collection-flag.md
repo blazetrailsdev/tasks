@@ -1,7 +1,7 @@
 ---
 title: "HMT collection not implicitly marked readonly"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: readonly
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 35
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T12:03:03Z"
+assignee: "readonly-hmt-collection-flag"
 blocked-by: null
 ---
 
