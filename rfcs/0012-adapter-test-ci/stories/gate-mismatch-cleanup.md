@@ -1,7 +1,7 @@
 ---
 title: "Reconcile test:compare wrong/over/missing-gate mismatches to Rails"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0012-adapter-test-ci"
 cluster: gates
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 37
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T14:01:10Z"
+assignee: "gate-mismatch-cleanup"
 blocked-by: null
 ---
 
