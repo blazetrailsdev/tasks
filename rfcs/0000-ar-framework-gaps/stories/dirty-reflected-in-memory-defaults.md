@@ -1,6 +1,6 @@
 ---
 title: "Reflected in-memory defaults applied on new"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 45
-pr: null
+pr: 2976
 claim: "2026-06-06T18:05:27Z"
 assignee: "dirty-reflected-in-memory-defaults"
 blocked-by: null
