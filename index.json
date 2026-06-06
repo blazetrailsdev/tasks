@@ -833,7 +833,7 @@
       "id": "dirty-tz-datetime-roundtrip",
       "rfc": "0000-ar-framework-gaps",
       "title": "TZ-aware datetime string round-trip",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 49,
       "updated": "2026-06-06T00:00:00.000Z",
