@@ -765,7 +765,7 @@
       "id": "dirty-reflected-in-memory-defaults",
       "rfc": "0000-ar-framework-gaps",
       "title": "Reflected in-memory defaults applied on new",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 45,
       "updated": "2026-06-06T00:00:00.000Z",
