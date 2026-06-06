@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy — unify toArray/load to a single exec-queries path (Rails parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 36
-pr: null
+pr: 2965
 claim: "2026-06-06T01:52:11Z"
 assignee: "cp-unified-load-path"
 blocked-by: null
