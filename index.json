@@ -627,7 +627,7 @@
       "id": "track9-single-test-gaps",
       "rfc": "0005-activerecord-gaps",
       "title": "Track 9 — scattered single-test association gaps",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "associations",
       "priority": 38,
       "updated": "2026-06-06T00:00:00.000Z",

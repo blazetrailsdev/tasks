@@ -1,6 +1,6 @@
 ---
 title: "Track 9 — scattered single-test association gaps"
-status: in-progress
+status: done
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
