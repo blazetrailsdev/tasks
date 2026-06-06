@@ -1,6 +1,6 @@
 ---
 title: "No-op UPDATE / query-count parity"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 48
-pr: null
+pr: 2981
 claim: "2026-06-06T20:30:56Z"
 assignee: "dirty-query-count-parity"
 blocked-by: null
