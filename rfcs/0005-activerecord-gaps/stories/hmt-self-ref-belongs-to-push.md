@@ -1,7 +1,7 @@
 ---
 title: "Self-referential belongsTo-source push for has_many :through"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 39
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T15:01:08Z"
+assignee: "hmt-self-ref-belongs-to-push"
 blocked-by: null
 ---
 
