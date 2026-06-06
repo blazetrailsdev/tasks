@@ -1,6 +1,6 @@
 ---
 title: "Strict-loading cascade on collection proxy reader + mode propagation"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 34
-pr: null
+pr: 2964
 claim: "2026-06-06T00:45:30Z"
 assignee: "strict-loading-cascade-proxy"
 blocked-by: null
