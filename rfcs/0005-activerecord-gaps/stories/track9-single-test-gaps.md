@@ -1,6 +1,6 @@
 ---
 title: "Track 9 — scattered single-test association gaps"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 38
-pr: null
+pr: 2970
 claim: "2026-06-06T14:32:04Z"
 assignee: "track9-single-test-gaps"
 blocked-by: null
