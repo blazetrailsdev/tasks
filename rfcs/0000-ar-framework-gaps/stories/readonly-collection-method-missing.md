@@ -1,6 +1,6 @@
 ---
 title: "Collection proxy method_missing delegation (+ Comment.allAsMethod)"
-status: in-progress
+status: done
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: readonly
