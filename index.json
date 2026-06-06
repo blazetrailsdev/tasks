@@ -556,6 +556,23 @@
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a4-sweep-remaining-callers.md"
     },
     {
+      "id": "cp-unified-load-path",
+      "rfc": "0005-activerecord-gaps",
+      "title": "CollectionProxy — unify toArray/load to a single exec-queries path (Rails parity)",
+      "status": "ready",
+      "cluster": "associations",
+      "priority": 36,
+      "updated": "2026-06-06T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/cp-unified-load-path.md"
+    },
+    {
       "id": "readonly-collection-proxy-propagation",
       "rfc": "0000-ar-framework-gaps",
       "title": "Collection-proxy readonly propagation",

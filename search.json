@@ -187,6 +187,12 @@
       "terms": "a4-sweep-remaining-callers phase a4 — sweep remaining direct .tosql() production callers arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
+      "id": "cp-unified-load-path",
+      "type": "story",
+      "title": "CollectionProxy — unify toArray/load to a single exec-queries path (Rails parity)",
+      "terms": "cp-unified-load-path collectionproxy — unify toarray/load to a single exec-queries path (rails parity) associations 0005-activerecord-gaps context"
+    },
+    {
       "id": "readonly-collection-proxy-propagation",
       "type": "story",
       "title": "Collection-proxy readonly propagation",
