@@ -1,7 +1,7 @@
 ---
 title: "W1b — variadic rest overloads (drop relation.ts as-any spreads)"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0009-type-audit"
 cluster: type-cleanup
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T23:54:01Z"
+assignee: "w1b-variadic-rest-overloads"
 blocked-by: null
 ---
 
