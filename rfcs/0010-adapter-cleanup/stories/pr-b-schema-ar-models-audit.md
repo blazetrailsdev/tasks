@@ -1,7 +1,7 @@
 ---
 title: "PR B — schema-ar-models.ts set connection() audit"
-status: in-progress
-updated: 2026-06-05
+status: done
+updated: 2026-06-06
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
