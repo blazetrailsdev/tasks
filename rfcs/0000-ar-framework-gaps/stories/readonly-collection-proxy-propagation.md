@@ -1,6 +1,6 @@
 ---
 title: "Collection-proxy readonly propagation"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: readonly
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 36
-pr: null
+pr: 2968
 claim: "2026-06-06T13:31:11Z"
 assignee: "readonly-collection-proxy-propagation"
 blocked-by: null
