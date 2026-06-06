@@ -1,6 +1,6 @@
 ---
 title: "Public attribute_will_change! API"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 42
-pr: null
+pr: 2977
 claim: "2026-06-06T16:50:27Z"
 assignee: "dirty-attribute-will-change-api"
 blocked-by: null
