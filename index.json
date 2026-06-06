@@ -799,7 +799,7 @@
       "id": "dirty-missing-attribute-error",
       "rfc": "0000-ar-framework-gaps",
       "title": "MissingAttributeError on unselected access",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 47,
       "updated": "2026-06-06T00:00:00.000Z",
