@@ -576,7 +576,7 @@
       "id": "readonly-collection-proxy-propagation",
       "rfc": "0000-ar-framework-gaps",
       "title": "Collection-proxy readonly propagation",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "readonly",
       "priority": 36,
       "updated": "2026-06-06T00:00:00.000Z",
