@@ -1,6 +1,6 @@
 ---
 title: "Enum dirty from:/to: casting"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: ["dirty-parrot-virtual-attr-registry"]
 deps-rfc: []
 est-loc: 30
 priority: 44
-pr: null
+pr: 2975
 claim: "2026-06-06T17:35:47Z"
 assignee: "dirty-enum-from-to-casting"
 blocked-by: null
