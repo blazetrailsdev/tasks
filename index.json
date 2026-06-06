@@ -504,7 +504,7 @@
       "id": "pf5-connection-handler-reaudit",
       "rfc": "0005-activerecord-gaps",
       "title": "Re-audit 11 still-skipped connection-handler.test.ts tests",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "connection-pool",
       "priority": 35,
       "updated": "2026-06-06T00:00:00.000Z",
