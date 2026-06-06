@@ -1,6 +1,6 @@
 ---
 title: "TZ-aware datetime string round-trip"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 49
-pr: null
+pr: 2982
 claim: "2026-06-06T23:15:56Z"
 assignee: "dirty-tz-datetime-roundtrip"
 blocked-by: null
