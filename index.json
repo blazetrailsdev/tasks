@@ -593,7 +593,7 @@
       "id": "gate-mismatch-cleanup",
       "rfc": "0012-adapter-test-ci",
       "title": "Reconcile test:compare wrong/over/missing-gate mismatches to Rails",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "gates",
       "priority": 37,
       "updated": "2026-06-06T00:00:00.000Z",
