@@ -729,18 +729,18 @@
       "id": "dirty-enum-from-to-casting",
       "rfc": "0000-ar-framework-gaps",
       "title": "Enum dirty from:/to: casting",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "dirty-tracking",
       "priority": 44,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-06T00:00:00.000Z",
       "deps": [
         "dirty-parrot-virtual-attr-registry"
       ],
       "deps_rfc": [],
       "est_loc": 30,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-06T17:35:47Z",
+      "assignee": "dirty-enum-from-to-casting",
       "blocked_by": null,
       "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-enum-from-to-casting.md"
     },
