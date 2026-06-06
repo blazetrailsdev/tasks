@@ -1,6 +1,6 @@
 ---
 title: "serialize :content on canonical Topic (+ schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 41
-pr: null
+pr: 2973
 claim: "2026-06-06T16:31:09Z"
 assignee: "dirty-serialize-content-topic"
 blocked-by: null
