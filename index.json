@@ -678,7 +678,7 @@
       "id": "dirty-serialize-content-topic",
       "rfc": "0000-ar-framework-gaps",
       "title": "serialize :content on canonical Topic (+ schema)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 41,
       "updated": "2026-06-06T00:00:00.000Z",
