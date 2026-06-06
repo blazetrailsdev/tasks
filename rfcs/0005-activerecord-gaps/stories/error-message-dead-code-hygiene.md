@@ -1,6 +1,6 @@
 ---
 title: "Inverse-of error wording + dead-code hygiene"
-status: claimed
+status: in-progress
 updated: 2026-06-06
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: null
+pr: 2962
 claim: "2026-06-06T00:45:11Z"
 assignee: "error-message-dead-code-hygiene"
 blocked-by: null
