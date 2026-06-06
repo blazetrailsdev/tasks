@@ -1,7 +1,7 @@
 ---
 title: "Alias dirty under reflection"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 46
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-06T19:30:56Z"
+assignee: "dirty-alias-under-reflection"
 blocked-by: null
 ---
 
