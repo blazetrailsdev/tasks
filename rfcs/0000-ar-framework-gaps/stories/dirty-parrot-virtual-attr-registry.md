@@ -1,6 +1,6 @@
 ---
 title: "Canonical Parrot virtual attr + model registry"
-status: in-progress
+status: done
 updated: 2026-06-06
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking

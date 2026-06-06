@@ -712,7 +712,7 @@
       "id": "dirty-parrot-virtual-attr-registry",
       "rfc": "0000-ar-framework-gaps",
       "title": "Canonical Parrot virtual attr + model registry",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 43,
       "updated": "2026-06-06T00:00:00.000Z",
