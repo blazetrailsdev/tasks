@@ -1061,25 +1061,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
-      "id": "delete-bootstrap-handler",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
-      "status": "ready",
-      "cluster": "bootstrap",
-      "priority": 74,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "rework-test-setup"
-      ],
-      "deps_rfc": [],
-      "est_loc": 150,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/delete-bootstrap-handler.md"
-    },
-    {
       "id": "pg-mysql-purge-handlers",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Follow-up — persistent PG/MySQL purge handlers",
@@ -2232,6 +2213,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/rework-test-setup.md"
+    },
+    {
+      "id": "delete-bootstrap-handler",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "priority": 1000005,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [
+        "rework-test-setup"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/delete-bootstrap-handler.md"
     }
   ]
 }
