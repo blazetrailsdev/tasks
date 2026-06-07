@@ -1,13 +1,13 @@
 ---
 title: "Phase 2a — PG read path through withRawConnection"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 3000
 claim: "2026-06-07T16:55:53Z"
 assignee: "phase2a-read-path"
 blocked-by: null
