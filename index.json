@@ -1064,7 +1064,7 @@
       "id": "phase0-sqlite-template-spike",
       "rfc": "0008-test-perf-template-clone",
       "title": "Phase 0 — sqlite clonable-template spike",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "test-perf",
       "priority": 80,
       "updated": "2026-06-07T00:00:00.000Z",
