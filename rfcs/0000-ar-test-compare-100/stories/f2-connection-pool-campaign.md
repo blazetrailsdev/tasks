@@ -1,6 +1,6 @@
 ---
 title: "F-2 — connection-pool / multi-db campaign"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
