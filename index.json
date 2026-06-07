@@ -1061,27 +1061,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
-      "id": "rework-test-setup",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
-      "status": "ready",
-      "cluster": "bootstrap",
-      "priority": 73,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [
-        "schema-file-generator-config",
-        "memory-loadschema-spike",
-        "reconstruct-from-schema-parity"
-      ],
-      "deps_rfc": [],
-      "est_loc": 300,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/rework-test-setup.md"
-    },
-    {
       "id": "delete-bootstrap-handler",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
@@ -2232,6 +2211,27 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/reconstruct-from-schema-parity.md"
+    },
+    {
+      "id": "rework-test-setup",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "priority": 1000004,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [
+        "schema-file-generator-config",
+        "memory-loadschema-spike",
+        "reconstruct-from-schema-parity"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/rework-test-setup.md"
     }
   ]
 }

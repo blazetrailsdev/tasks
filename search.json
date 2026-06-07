@@ -361,12 +361,6 @@
       "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
-      "id": "rework-test-setup",
-      "type": "story",
-      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
-      "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "delete-bootstrap-handler",
       "type": "story",
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
@@ -749,6 +743,12 @@
       "type": "story",
       "title": "Bring reconstructFromSchema to Rails parity",
       "terms": "reconstruct-from-schema-parity bring reconstructfromschema to rails parity bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "rework-test-setup",
+      "type": "story",
+      "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
+      "terms": "rework-test-setup pr 2 — rework test-setup-dy + setuphandlersuite bootstrap 0002-bootstrap-databasetasks context"
     }
   ]
 }
