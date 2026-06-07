@@ -1,7 +1,7 @@
 ---
 title: "PR 1 — schema-file generator + test DatabaseConfigurations"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 70
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T15:19:51Z"
+assignee: "schema-file-generator-config"
 blocked-by: null
 ---
 
