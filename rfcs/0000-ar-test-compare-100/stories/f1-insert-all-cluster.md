@@ -1,13 +1,13 @@
 ---
 title: "F-1 — insert_all cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 3007
 claim: "2026-06-07T20:55:51Z"
 assignee: "f1-insert-all-cluster"
 blocked-by: null
