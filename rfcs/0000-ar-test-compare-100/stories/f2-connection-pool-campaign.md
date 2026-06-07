@@ -1,13 +1,13 @@
 ---
 title: "F-2 — connection-pool / multi-db campaign"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 3009
 claim: "2026-06-07T22:07:51Z"
 assignee: "f2-connection-pool-campaign"
 blocked-by: null
