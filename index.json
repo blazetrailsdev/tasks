@@ -1081,7 +1081,7 @@
       "id": "memory-loadschema-spike",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "bootstrap",
       "priority": 71,
       "updated": "2026-06-07T00:00:00.000Z",
