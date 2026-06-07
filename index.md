@@ -5,6 +5,7 @@
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
 | [0000-ar-framework-gaps](rfcs/0000-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
+| [0000-ar-test-compare-100](rfcs/0000-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
