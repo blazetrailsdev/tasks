@@ -1,6 +1,6 @@
 ---
 title: "SQL-function column defaults in defineSchema"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 51
-pr: null
+pr: 2986
 claim: "2026-06-07T00:00:58Z"
 assignee: "dirty-sql-function-defaults"
 blocked-by: null
