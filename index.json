@@ -1310,10 +1310,10 @@
       "id": "decommission-docs",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "Delete migrated AR docs + trim docs/index.md AR rows",
-      "status": "draft",
+      "status": "ready",
       "cluster": "decommission",
       "priority": null,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "migrate-ar-test-compare",
         "migrate-ar-followups",
