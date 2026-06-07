@@ -1026,18 +1026,18 @@
       "id": "cli-console-runner-empty-config",
       "rfc": "0003-activerecord-cli",
       "title": "ar console / runner: error on empty config for env",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "cli",
       "priority": 55,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "cli-package-scaffold"
       ],
       "deps_rfc": [],
       "est_loc": 30,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-07T14:20:14Z",
+      "assignee": "cli-console-runner-empty-config",
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-console-runner-empty-config.md"
     },

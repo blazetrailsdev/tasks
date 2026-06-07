@@ -1,7 +1,7 @@
 ---
 title: "ar console / runner: error on empty config for env"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-package-scaffold"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 55
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T14:20:14Z"
+assignee: "cli-console-runner-empty-config"
 blocked-by: null
 ---
 
