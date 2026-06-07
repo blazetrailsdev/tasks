@@ -7,6 +7,12 @@
       "terms": "0000-ar-framework-gaps activerecord framework gaps — dirty-tracking + readonly (test-port surfaced) activerecord dirty-tracking readonly rfc — activerecord framework gaps: dirty-tracking + readonly"
     },
     {
+      "id": "0000-ar-test-compare-100",
+      "type": "rfc",
+      "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
+      "terms": "0000-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc — activerecord test:compare 100%: phase-ordered un-skip campaign"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -463,6 +469,72 @@
       "terms": "drift-prevention-ci ci gate: no new docs/activerecord trackers + claude edit guardrails 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "f1-insert-all-cluster",
+      "type": "story",
+      "title": "F-1 — insert_all cluster",
+      "terms": "f1-insert-all-cluster f-1 — insert_all cluster clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f2-connection-pool-campaign",
+      "type": "story",
+      "title": "F-2 — connection-pool / multi-db campaign",
+      "terms": "f2-connection-pool-campaign f-2 — connection-pool / multi-db campaign clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f3-migration-runner-campaign",
+      "type": "story",
+      "title": "F-3 — migration runner campaign",
+      "terms": "f3-migration-runner-campaign f-3 — migration runner campaign clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f4-transactions-campaign",
+      "type": "story",
+      "title": "F-4 — transactions + callbacks + touch",
+      "terms": "f4-transactions-campaign f-4 — transactions + callbacks + touch clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f5-query-cache-residuals",
+      "type": "story",
+      "title": "F-5 — query-cache residuals",
+      "terms": "f5-query-cache-residuals f-5 — query-cache residuals clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f6-nested-attributes",
+      "type": "story",
+      "title": "F-6 — nested-attributes cluster",
+      "terms": "f6-nested-attributes f-6 — nested-attributes cluster clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f7-fixtures-backed-clusters",
+      "type": "story",
+      "title": "F-7 — fixtures-backed clusters",
+      "terms": "f7-fixtures-backed-clusters f-7 — fixtures-backed clusters clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f8-small-core-leftovers",
+      "type": "story",
+      "title": "F-8 — small core leftovers",
+      "terms": "f8-small-core-leftovers f-8 — small core leftovers clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "h3-reclassify-permanent-skips",
+      "type": "story",
+      "title": "H-3 — reclassify permanent skips",
+      "terms": "h3-reclassify-permanent-skips h-3 — reclassify permanent skips hygiene 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "i1-schema-dumper-columnspec-u3",
+      "type": "story",
+      "title": "I-1 — Epic 3.3-U3: schema-dumper columnSpec wiring",
+      "terms": "i1-schema-dumper-columnspec-u3 i-1 — epic 3.3-u3: schema-dumper columnspec wiring unblockers 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "i2-enum-cast",
+      "type": "story",
+      "title": "I-2 — type_for_attribute enum write-casting",
+      "terms": "i2-enum-cast i-2 — type_for_attribute enum write-casting unblockers 0000-ar-test-compare-100 context"
+    },
+    {
       "id": "lazy-async-schema-reflection",
       "type": "story",
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
@@ -521,6 +593,12 @@
       "type": "story",
       "title": "P13 — implement StandaloneConnection class",
       "terms": "p13-standalone-connection p13 — implement standaloneconnection class connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "p3-adapter-type-families",
+      "type": "story",
+      "title": "P3 — adapter type-families (PG ~94 + MySQL ~41)",
+      "terms": "p3-adapter-type-families p3 — adapter type-families (pg ~94 + mysql ~41) adapter 0000-ar-test-compare-100 context"
     },
     {
       "id": "phase1-pg-template",
@@ -689,6 +767,18 @@
       "type": "story",
       "title": "W4 — Reflection discriminated union (deferred, high risk)",
       "terms": "w4-reflection-discriminated-union w4 — reflection discriminated union (deferred, high risk) type-cleanup 0009-type-audit context"
+    },
+    {
+      "id": "w7-associations-relation-tail",
+      "type": "story",
+      "title": "W7 — associations + relation tail (audit-gated)",
+      "terms": "w7-associations-relation-tail w7 — associations + relation tail (audit-gated) integrated 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "w7-named-inner-joins-fix",
+      "type": "story",
+      "title": "W7 — _namedInnerJoins merger/scope fix",
+      "terms": "w7-named-inner-joins-fix w7 — _namedinnerjoins merger/scope fix integrated 0000-ar-test-compare-100 context"
     },
     {
       "id": "wire-adapter-dir-lane",
