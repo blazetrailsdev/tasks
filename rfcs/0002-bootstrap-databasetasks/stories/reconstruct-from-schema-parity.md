@@ -1,6 +1,6 @@
 ---
 title: "Bring reconstructFromSchema to Rails parity"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap

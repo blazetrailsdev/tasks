@@ -2142,7 +2142,7 @@
       "id": "reconstruct-from-schema-parity",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Bring reconstructFromSchema to Rails parity",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "bootstrap",
       "priority": 1000003,
       "updated": "2026-06-07T00:00:00.000Z",
