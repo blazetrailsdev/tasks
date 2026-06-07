@@ -1,7 +1,7 @@
 ---
 title: "Phase 0 — sqlite clonable-template spike"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-07
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 80
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T15:55:52Z"
+assignee: "phase0-sqlite-template-spike"
 blocked-by: null
 ---
 
