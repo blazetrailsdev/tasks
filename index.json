@@ -1061,23 +1061,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
-      "id": "reconstruct-from-schema-parity",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "Bring reconstructFromSchema to Rails parity",
-      "status": "ready",
-      "cluster": "bootstrap",
-      "priority": 72,
-      "updated": "2026-06-04T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 150,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/reconstruct-from-schema-parity.md"
-    },
-    {
       "id": "rework-test-setup",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 2 — rework test-setup-dy + setupHandlerSuite",
@@ -2232,6 +2215,23 @@
       "assignee": "memory-loadschema-spike",
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
+    },
+    {
+      "id": "reconstruct-from-schema-parity",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Bring reconstructFromSchema to Rails parity",
+      "status": "ready",
+      "cluster": "bootstrap",
+      "priority": 1000003,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/reconstruct-from-schema-parity.md"
     }
   ]
 }

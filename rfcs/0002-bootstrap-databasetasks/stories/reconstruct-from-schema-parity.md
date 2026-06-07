@@ -1,13 +1,13 @@
 ---
 title: "Bring reconstructFromSchema to Rails parity"
 status: ready
-updated: 2026-06-04
+updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 72
+priority: 1000003
 pr: null
 claim: null
 assignee: null
