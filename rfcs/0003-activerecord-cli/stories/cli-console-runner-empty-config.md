@@ -1,6 +1,6 @@
 ---
 title: "ar console / runner: error on empty config for env"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli

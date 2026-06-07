@@ -1026,7 +1026,7 @@
       "id": "cli-console-runner-empty-config",
       "rfc": "0003-activerecord-cli",
       "title": "ar console / runner: error on empty config for env",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "cli",
       "priority": 55,
       "updated": "2026-06-07T00:00:00.000Z",
