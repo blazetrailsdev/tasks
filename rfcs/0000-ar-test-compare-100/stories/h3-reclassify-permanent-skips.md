@@ -1,6 +1,6 @@
 ---
 title: "H-3 — reclassify permanent skips"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: hygiene
