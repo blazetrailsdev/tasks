@@ -1045,7 +1045,7 @@
       "id": "cli-e2e-shared-helpers",
       "rfc": "0003-activerecord-cli",
       "title": "Extract shared E2E scaffold/teardown helpers",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "cli",
       "priority": 56,
       "updated": "2026-06-07T00:00:00.000Z",

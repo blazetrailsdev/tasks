@@ -1,6 +1,6 @@
 ---
 title: "Extract shared E2E scaffold/teardown helpers"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli
