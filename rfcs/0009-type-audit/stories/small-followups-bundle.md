@@ -1,6 +1,6 @@
 ---
 title: "Type-audit small follow-ups bundle (~150 LOC)"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0009-type-audit"
 cluster: type-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 51
-pr: null
+pr: 2987
 claim: "2026-06-07T01:15:57Z"
 assignee: "small-followups-bundle"
 blocked-by: null
