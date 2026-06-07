@@ -867,7 +867,7 @@
       "id": "w1b-variadic-rest-overloads",
       "rfc": "0009-type-audit",
       "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "type-cleanup",
       "priority": 50,
       "updated": "2026-06-07T00:00:00.000Z",
