@@ -1,6 +1,6 @@
 ---
 title: "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0014-fixtures-adoption"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 52
-pr: null
+pr: 2991
 claim: "2026-06-07T02:30:57Z"
 assignee: "tier1-opportunistic-conversion"
 blocked-by: null
