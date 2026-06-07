@@ -2464,7 +2464,7 @@
       "id": "pg-mysql-purge-handlers",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Follow-up — persistent PG/MySQL purge handlers",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "followup",
       "priority": 1000006,
       "updated": "2026-06-07T00:00:00.000Z",
