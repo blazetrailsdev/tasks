@@ -1,6 +1,6 @@
 ---
 title: "Extract shared E2E scaffold/teardown helpers"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli
@@ -8,7 +8,7 @@ deps: ["cli-package-scaffold"]
 deps-rfc: []
 est-loc: 50
 priority: 56
-pr: null
+pr: 2997
 claim: "2026-06-07T15:43:52Z"
 assignee: "cli-e2e-shared-helpers"
 blocked-by: null
