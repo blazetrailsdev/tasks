@@ -1,6 +1,6 @@
 ---
 title: "Type-audit small follow-ups bundle (~150 LOC)"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0009-type-audit"
 cluster: type-cleanup

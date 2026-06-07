@@ -918,7 +918,7 @@
       "id": "small-followups-bundle",
       "rfc": "0009-type-audit",
       "title": "Type-audit small follow-ups bundle (~150 LOC)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "type-cleanup",
       "priority": 51,
       "updated": "2026-06-07T00:00:00.000Z",
