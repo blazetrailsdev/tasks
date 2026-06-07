@@ -1,6 +1,6 @@
 ---
 title: "RFC from workplan + attack-plan + 100-plan + index"
-status: ready
+status: claimed
 updated: 2026-06-07
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate
@@ -8,8 +8,8 @@ deps: ["reconcile-existing-rfcs"]
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T19:07:51Z"
+assignee: "migrate-ar-test-compare"
 blocked-by: null
 ---
 
