@@ -1,6 +1,6 @@
 ---
 title: "PR 2 — rework test-setup-dy + setupHandlerSuite"
-status: ready
+status: claimed
 updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 1000004
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T18:31:53Z"
+assignee: "rework-test-setup"
 blocked-by: null
 ---
 
