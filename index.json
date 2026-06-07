@@ -954,7 +954,7 @@
       "id": "dirty-custom-changed-in-place-hook",
       "rfc": "0000-ar-framework-gaps",
       "title": "Custom attribute-type changed_in_place? hook",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "dirty-tracking",
       "priority": 52,
       "updated": "2026-06-07T00:00:00.000Z",

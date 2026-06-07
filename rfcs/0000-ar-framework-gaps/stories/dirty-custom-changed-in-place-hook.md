@@ -1,6 +1,6 @@
 ---
 title: "Custom attribute-type changed_in_place? hook"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
