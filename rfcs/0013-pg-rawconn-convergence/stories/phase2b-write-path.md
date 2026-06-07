@@ -1,6 +1,6 @@
 ---
 title: "Phase 2b — PG write/mutation path through withRawConnection"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence

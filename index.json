@@ -1835,7 +1835,7 @@
       "id": "phase2b-write-path",
       "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 2b — PG write/mutation path through withRawConnection",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
       "updated": "2026-06-07T00:00:00.000Z",
