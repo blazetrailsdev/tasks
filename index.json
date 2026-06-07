@@ -988,18 +988,18 @@
       "id": "cli-init-node-sqlite-driver",
       "rfc": "0003-activerecord-cli",
       "title": "ar init: support --driver node-sqlite",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "cli",
       "priority": 53,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "cli-generators-manifest"
       ],
       "deps_rfc": [],
       "est_loc": 5,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-07T02:45:56Z",
+      "assignee": "cli-init-node-sqlite-driver",
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-init-node-sqlite-driver.md"
     },
