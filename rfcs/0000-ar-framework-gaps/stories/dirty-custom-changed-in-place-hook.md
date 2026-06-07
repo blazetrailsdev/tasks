@@ -1,6 +1,6 @@
 ---
 title: "Custom attribute-type changed_in_place? hook"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 52
-pr: null
+pr: 2988
 claim: "2026-06-07T01:30:56Z"
 assignee: "dirty-custom-changed-in-place-hook"
 blocked-by: null
