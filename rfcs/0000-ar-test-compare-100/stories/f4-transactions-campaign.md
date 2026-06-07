@@ -1,13 +1,13 @@
 ---
 title: "F-4 — transactions + callbacks + touch"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 3010
 claim: "2026-06-07T22:40:41Z"
 assignee: "f4-transactions-campaign"
 blocked-by: null
