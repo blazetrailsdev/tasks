@@ -1,6 +1,6 @@
 ---
 title: "SQL-function column defaults in defineSchema"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
