@@ -1,7 +1,7 @@
 ---
 title: "Spike — reconstructFromSchema on sqlite :memory: pool:1"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: 71
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T15:32:02Z"
+assignee: "memory-loadschema-spike"
 blocked-by: null
 ---
 
