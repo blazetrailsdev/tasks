@@ -451,12 +451,6 @@
       "terms": "decommission-docs delete migrated ar docs + trim docs/index.md ar rows decommission 0011-activerecord-docs-cutover context"
     },
     {
-      "id": "define-schema-preload-cleanup",
-      "type": "story",
-      "title": "Phase 5 — retire canonical-preload signature machinery",
-      "terms": "define-schema-preload-cleanup phase 5 — retire canonical-preload signature machinery followup 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "dependent-dispatch-consolidation",
       "type": "story",
       "title": "Consolidate dependent-handling dispatch paths",
@@ -749,6 +743,12 @@
       "type": "story",
       "title": "Follow-up — persistent PG/MySQL purge handlers",
       "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "define-schema-preload-cleanup",
+      "type": "story",
+      "title": "Phase 5 — retire canonical-preload signature machinery",
+      "terms": "define-schema-preload-cleanup phase 5 — retire canonical-preload signature machinery followup 0002-bootstrap-databasetasks context"
     }
   ]
 }

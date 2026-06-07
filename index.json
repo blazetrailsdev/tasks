@@ -1330,25 +1330,6 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/decommission-docs.md"
     },
     {
-      "id": "define-schema-preload-cleanup",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "Phase 5 — retire canonical-preload signature machinery",
-      "status": "draft",
-      "cluster": "followup",
-      "priority": null,
-      "updated": "2026-05-29T00:00:00.000Z",
-      "deps": [
-        "delete-bootstrap-handler"
-      ],
-      "deps_rfc": [],
-      "est_loc": 150,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/define-schema-preload-cleanup.md"
-    },
-    {
       "id": "dependent-dispatch-consolidation",
       "rfc": "0005-activerecord-gaps",
       "title": "Consolidate dependent-handling dispatch paths",
@@ -2232,6 +2213,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/pg-mysql-purge-handlers.md"
+    },
+    {
+      "id": "define-schema-preload-cleanup",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Phase 5 — retire canonical-preload signature machinery",
+      "status": "draft",
+      "cluster": "followup",
+      "priority": 1000007,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [
+        "delete-bootstrap-handler"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/define-schema-preload-cleanup.md"
     }
   ]
 }
