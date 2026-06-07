@@ -361,12 +361,6 @@
       "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
-      "id": "pg-mysql-purge-handlers",
-      "type": "story",
-      "title": "Follow-up — persistent PG/MySQL purge handlers",
-      "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "phase0-sqlite-template-spike",
       "type": "story",
       "title": "Phase 0 — sqlite clonable-template spike",
@@ -749,6 +743,12 @@
       "type": "story",
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
       "terms": "delete-bootstrap-handler pr 3 — migrate direct importers and delete bootstrap-test-handler bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "pg-mysql-purge-handlers",
+      "type": "story",
+      "title": "Follow-up — persistent PG/MySQL purge handlers",
+      "terms": "pg-mysql-purge-handlers follow-up — persistent pg/mysql purge handlers followup 0002-bootstrap-databasetasks context"
     }
   ]
 }
