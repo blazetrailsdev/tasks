@@ -361,12 +361,6 @@
       "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
-      "id": "memory-loadschema-spike",
-      "type": "story",
-      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
-      "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "reconstruct-from-schema-parity",
       "type": "story",
       "title": "Bring reconstructFromSchema to Rails parity",
@@ -749,6 +743,12 @@
       "type": "story",
       "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
       "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "memory-loadschema-spike",
+      "type": "story",
+      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
+      "terms": "memory-loadschema-spike spike — reconstructfromschema on sqlite :memory: pool:1 bootstrap 0002-bootstrap-databasetasks context"
     }
   ]
 }

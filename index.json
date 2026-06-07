@@ -1061,23 +1061,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
-      "id": "memory-loadschema-spike",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
-      "status": "done",
-      "cluster": "bootstrap",
-      "priority": 71,
-      "updated": "2026-06-07T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": 2996,
-      "claim": "2026-06-07T15:32:02Z",
-      "assignee": "memory-loadschema-spike",
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
-    },
-    {
       "id": "reconstruct-from-schema-parity",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Bring reconstructFromSchema to Rails parity",
@@ -2232,6 +2215,23 @@
       "assignee": "schema-file-generator-config",
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/schema-file-generator-config.md"
+    },
+    {
+      "id": "memory-loadschema-spike",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
+      "status": "done",
+      "cluster": "bootstrap",
+      "priority": 1000002,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": 2996,
+      "claim": "2026-06-07T15:32:02Z",
+      "assignee": "memory-loadschema-spike",
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/memory-loadschema-spike.md"
     }
   ]
 }

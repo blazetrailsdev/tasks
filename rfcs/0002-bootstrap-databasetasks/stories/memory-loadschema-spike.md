@@ -7,7 +7,7 @@ cluster: bootstrap
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 71
+priority: 1000002
 pr: 2996
 claim: "2026-06-07T15:32:02Z"
 assignee: "memory-loadschema-spike"
