@@ -1,7 +1,7 @@
 ---
 title: "Enum dirty from:/to: casting"
-status: in-progress
-updated: 2026-06-06
+status: done
+updated: 2026-06-07
 rfc: "0000-ar-framework-gaps"
 cluster: dirty-tracking
 deps: ["dirty-parrot-virtual-attr-registry"]
