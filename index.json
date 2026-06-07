@@ -1061,23 +1061,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-e2e-shared-helpers.md"
     },
     {
-      "id": "schema-file-generator-config",
-      "rfc": "0002-bootstrap-databasetasks",
-      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
-      "status": "in-progress",
-      "cluster": "bootstrap",
-      "priority": 70,
-      "updated": "2026-06-07T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 250,
-      "pr": 2995,
-      "claim": "2026-06-07T15:19:51Z",
-      "assignee": "schema-file-generator-config",
-      "blocked_by": null,
-      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/schema-file-generator-config.md"
-    },
-    {
       "id": "memory-loadschema-spike",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
@@ -2232,6 +2215,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/wire-tasks-loop.md"
+    },
+    {
+      "id": "schema-file-generator-config",
+      "rfc": "0002-bootstrap-databasetasks",
+      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
+      "status": "in-progress",
+      "cluster": "bootstrap",
+      "priority": 1000001,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": 2995,
+      "claim": "2026-06-07T15:19:51Z",
+      "assignee": "schema-file-generator-config",
+      "blocked_by": null,
+      "file_path": "rfcs/0002-bootstrap-databasetasks/stories/schema-file-generator-config.md"
     }
   ]
 }

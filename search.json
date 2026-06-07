@@ -361,12 +361,6 @@
       "terms": "cli-e2e-shared-helpers extract shared e2e scaffold/teardown helpers cli 0003-activerecord-cli context"
     },
     {
-      "id": "schema-file-generator-config",
-      "type": "story",
-      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
-      "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
-    },
-    {
       "id": "memory-loadschema-spike",
       "type": "story",
       "title": "Spike — reconstructFromSchema on sqlite :memory: pool:1",
@@ -749,6 +743,12 @@
       "type": "story",
       "title": "Wire tasks-loop to next-bundle",
       "terms": "wire-tasks-loop wire tasks-loop to next-bundle scaffold 0001-task-system context"
+    },
+    {
+      "id": "schema-file-generator-config",
+      "type": "story",
+      "title": "PR 1 — schema-file generator + test DatabaseConfigurations",
+      "terms": "schema-file-generator-config pr 1 — schema-file generator + test databaseconfigurations bootstrap 0002-bootstrap-databasetasks context"
     }
   ]
 }
