@@ -1424,7 +1424,7 @@
       "id": "f3-migration-runner-campaign",
       "rfc": "0000-ar-test-compare-100",
       "title": "F-3 — migration runner campaign",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "clusters",
       "priority": null,
       "updated": "2026-06-07T00:00:00.000Z",
