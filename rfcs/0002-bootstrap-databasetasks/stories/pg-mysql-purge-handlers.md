@@ -1,6 +1,6 @@
 ---
 title: "Follow-up — persistent PG/MySQL purge handlers"
-status: ready
+status: claimed
 updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: followup
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1000006
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T20:51:00Z"
+assignee: "pg-mysql-purge-handlers"
 blocked-by: null
 ---
 
