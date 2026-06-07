@@ -1,6 +1,6 @@
 ---
 title: "ar generate: reject illegal migration/model names"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli

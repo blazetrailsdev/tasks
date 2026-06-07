@@ -1007,7 +1007,7 @@
       "id": "cli-generator-name-validation",
       "rfc": "0003-activerecord-cli",
       "title": "ar generate: reject illegal migration/model names",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "cli",
       "priority": 54,
       "updated": "2026-06-07T00:00:00.000Z",
