@@ -1,6 +1,6 @@
 ---
 title: "F-2 — connection-pool / multi-db campaign"
-status: ready
+status: claimed
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T22:07:51Z"
+assignee: "f2-connection-pool-campaign"
 blocked-by: null
 ---
 
