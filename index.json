@@ -1424,10 +1424,10 @@
       "id": "migrate-ar-test-compare",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from workplan + attack-plan + 100-plan + index",
-      "status": "draft",
+      "status": "ready",
       "cluster": "migrate",
       "priority": null,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "reconcile-existing-rfcs"
       ],
