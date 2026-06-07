@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy — unify toArray/load to a single exec-queries path (Rails parity)"
-status: in-progress
-updated: 2026-06-06
+status: done
+updated: 2026-06-07
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
