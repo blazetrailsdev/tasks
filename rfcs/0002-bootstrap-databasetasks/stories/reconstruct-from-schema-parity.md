@@ -1,6 +1,6 @@
 ---
 title: "Bring reconstructFromSchema to Rails parity"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1000003
-pr: null
+pr: 2999
 claim: "2026-06-07T16:43:51Z"
 assignee: "reconstruct-from-schema-parity"
 blocked-by: null
