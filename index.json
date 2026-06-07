@@ -1570,10 +1570,10 @@
       "id": "phase2-mariadb-template",
       "rfc": "0008-test-perf-template-clone",
       "title": "Phase 2 — MariaDB template (measure before committing)",
-      "status": "draft",
+      "status": "ready",
       "cluster": "test-perf",
       "priority": null,
-      "updated": "2026-05-30T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "phase0-sqlite-template-spike"
       ],
