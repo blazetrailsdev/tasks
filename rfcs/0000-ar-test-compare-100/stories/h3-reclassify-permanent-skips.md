@@ -1,13 +1,13 @@
 ---
 title: "H-3 — reclassify permanent skips"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: hygiene
 deps: []
 deps-rfc: []
 est-loc: 40
-pr: null
+pr: 3006
 claim: "2026-06-07T20:51:46Z"
 assignee: "h3-reclassify-permanent-skips"
 blocked-by: null
