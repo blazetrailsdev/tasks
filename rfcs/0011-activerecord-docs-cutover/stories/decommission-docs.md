@@ -1,6 +1,6 @@
 ---
 title: "Delete migrated AR docs + trim docs/index.md AR rows"
-status: ready
+status: draft
 updated: 2026-06-07
 rfc: "0011-activerecord-docs-cutover"
 cluster: decommission
