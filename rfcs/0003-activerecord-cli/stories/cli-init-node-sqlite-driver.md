@@ -1,6 +1,6 @@
 ---
 title: "ar init: support --driver node-sqlite"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli
@@ -8,7 +8,7 @@ deps: ["cli-generators-manifest"]
 deps-rfc: []
 est-loc: 5
 priority: 53
-pr: null
+pr: 2990
 claim: "2026-06-07T02:45:56Z"
 assignee: "cli-init-node-sqlite-driver"
 blocked-by: null
