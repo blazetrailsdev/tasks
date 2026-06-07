@@ -50,3 +50,24 @@ Gated by the [[memory-loadschema-spike]] result and
 [[reconstruct-from-schema-parity]] (for the PG/MySQL path). First cut ships
 without PG/MySQL purge handlers (see [[pg-mysql-purge-handlers]]); sqlite
 `:memory:` purge is a no-op.
+
+## Spike findings (memory-loadschema-spike, 2026-06-07)
+
+Both paths are **safe** on sqlite `:memory: pool:1` — no deadlock observed:
+
+- **`loadSchema`** — completes cleanly. `_migrationAdapter()` leases a connection
+  (sticky for the execution context), runs the schema file via `MigrationContext`,
+  then stamps SHA1 via the same sticky connection. Pool:1 is not exhausted because
+  the same connection is reused within the async call chain.
+
+- **`reconstructFromSchema`** — completes cleanly. `schemaUpToDate` leases a
+  connection, finds no `ar_internal_metadata` (fresh DB), returns false. `purge`
+  calls `disconnect()` + `reconnect()` (for `:memory:` this re-establishes a new
+  pool; drop/create are no-ops). `loadSchema` then leases from the fresh pool
+  without contention.
+
+**Driver-path recommendation for PR 2:**
+
+- sqlite `:memory:` → `DatabaseTasks.loadSchema` (simpler, no purge needed, but
+  `reconstructFromSchema` also works)
+- PG/MySQL persistent per-worker DBs → `DatabaseTasks.reconstructFromSchema`
