@@ -1,13 +1,13 @@
 ---
 title: "F-3 — migration runner campaign"
-status: claimed
+status: in-progress
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 3008
 claim: "2026-06-07T22:28:41Z"
 assignee: "f3-migration-runner-campaign"
 blocked-by: null
