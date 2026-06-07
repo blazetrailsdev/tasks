@@ -1390,7 +1390,7 @@
       "id": "f1-insert-all-cluster",
       "rfc": "0000-ar-test-compare-100",
       "title": "F-1 — insert_all cluster",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "clusters",
       "priority": null,
       "updated": "2026-06-07T00:00:00.000Z",

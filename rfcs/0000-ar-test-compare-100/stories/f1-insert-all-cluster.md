@@ -1,6 +1,6 @@
 ---
 title: "F-1 — insert_all cluster"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
