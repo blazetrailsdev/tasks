@@ -1007,18 +1007,18 @@
       "id": "cli-generator-name-validation",
       "rfc": "0003-activerecord-cli",
       "title": "ar generate: reject illegal migration/model names",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "cli",
       "priority": 54,
-      "updated": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
       "deps": [
         "cli-generators-manifest"
       ],
       "deps_rfc": [],
       "est_loc": 10,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-07T14:08:17Z",
+      "assignee": "cli-generator-name-validation",
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-generator-name-validation.md"
     },

@@ -1,7 +1,7 @@
 ---
 title: "ar generate: reject illegal migration/model names"
-status: ready
-updated: 2026-06-04
+status: claimed
+updated: 2026-06-07
 rfc: "0003-activerecord-cli"
 cluster: cli
 deps: ["cli-generators-manifest"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 10
 priority: 54
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T14:08:17Z"
+assignee: "cli-generator-name-validation"
 blocked-by: null
 ---
 
