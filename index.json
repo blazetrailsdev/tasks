@@ -971,7 +971,7 @@
       "id": "tier1-opportunistic-conversion",
       "rfc": "0014-fixtures-adoption",
       "title": "Convert unconverted Tier-1 files to canonical fixtures (opportunistic)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 52,
       "updated": "2026-06-07T00:00:00.000Z",
