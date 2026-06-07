@@ -1,7 +1,7 @@
 ---
 title: "Per-class clone-on-write callback registry on AbstractAdapter"
-status: draft
-updated: 2026-05-29
+status: ready
+updated: 2026-06-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
