@@ -1,7 +1,7 @@
 ---
 title: "Phase 2b — PG write/mutation path through withRawConnection"
-status: ready
-updated: 2026-06-05
+status: claimed
+updated: 2026-06-07
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-07T17:43:52Z"
+assignee: "phase2b-write-path"
 blocked-by: null
 ---
 
