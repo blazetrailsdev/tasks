@@ -1491,6 +1491,42 @@
       "file_path": "rfcs/0000-ar-test-compare-100/stories/f6-nested-attributes.md"
     },
     {
+      "id": "f6b-repair-validations-helper",
+      "rfc": "0000-ar-test-compare-100",
+      "title": "F-6b — repair_validations test helper",
+      "status": "ready",
+      "cluster": "clusters",
+      "priority": null,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ar-test-compare-100/stories/f6b-repair-validations-helper.md"
+    },
+    {
+      "id": "f6c-nested-attrs-canonical-models",
+      "rfc": "0000-ar-test-compare-100",
+      "title": "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models",
+      "status": "ready",
+      "cluster": "clusters",
+      "priority": null,
+      "updated": "2026-06-07T00:00:00.000Z",
+      "deps": [
+        "f6b-repair-validations-helper"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ar-test-compare-100/stories/f6c-nested-attrs-canonical-models.md"
+    },
+    {
       "id": "f7-fixtures-backed-clusters",
       "rfc": "0000-ar-test-compare-100",
       "title": "F-7 — fixtures-backed clusters",

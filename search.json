@@ -505,6 +505,18 @@
       "terms": "f6-nested-attributes f-6 — nested-attributes cluster clusters 0000-ar-test-compare-100 context"
     },
     {
+      "id": "f6b-repair-validations-helper",
+      "type": "story",
+      "title": "F-6b — repair_validations test helper",
+      "terms": "f6b-repair-validations-helper f-6b — repair_validations test helper clusters 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "f6c-nested-attrs-canonical-models",
+      "type": "story",
+      "title": "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models",
+      "terms": "f6c-nested-attrs-canonical-models f-6c — migrate nested-attributes.test.ts to canonical human/interest models clusters 0000-ar-test-compare-100 context"
+    },
+    {
       "id": "f7-fixtures-backed-clusters",
       "type": "story",
       "title": "F-7 — fixtures-backed clusters",
