@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: 3032
+pr: 3033
 claim: "2026-06-08T00:40:43Z"
 assignee: "p3-adapter-type-families"
 blocked-by: null
