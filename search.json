@@ -13,6 +13,12 @@
       "terms": "0000-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc — activerecord test:compare 100%: phase-ordered un-skip campaign"
     },
     {
+      "id": "0000-ddl-visitor-convergence",
+      "type": "rfc",
+      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
+      "terms": "0000-ddl-visitor-convergence converge all create table ddl onto the schemacreation visitor — eliminate hand-rolled tabledefinition#tosql activerecord ddl-visitor-convergence rfc — converge all create table ddl onto the schemacreation visitor"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -839,6 +845,30 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
+    },
+    {
+      "id": "step1-delete-dead-mysql-branches",
+      "type": "story",
+      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
+      "terms": "step1-delete-dead-mysql-branches step 1 — delete dead mysql branches from abstracttabledefinition.tosql() ddl-visitor-convergence 0000-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step2-sqlite-visitor-wire",
+      "type": "story",
+      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
+      "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0000-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step3-pg-tosql-via-visitor",
+      "type": "story",
+      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
+      "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0000-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step4-delete-abstract-tosql",
+      "type": "story",
+      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
+      "terms": "step4-delete-abstract-tosql step 4 — delete abstracttabledefinition.tosql() ddl-visitor-convergence 0000-ddl-visitor-convergence context"
     },
     {
       "id": "visitor-on-establish",

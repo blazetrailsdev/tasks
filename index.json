@@ -40,6 +40,26 @@
       "file_path": "rfcs/0000-ar-test-compare-100/README.md"
     },
     {
+      "id": "0000-ddl-visitor-convergence",
+      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-08T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "ddl-visitor-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0010-adapter-cleanup",
+        "0013-pg-rawconn-convergence"
+      ],
+      "file_path": "rfcs/0000-ddl-visitor-convergence/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -2495,6 +2515,81 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
+    },
+    {
+      "id": "step1-delete-dead-mysql-branches",
+      "rfc": "0000-ddl-visitor-convergence",
+      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
+      "status": "draft",
+      "cluster": "ddl-visitor-convergence",
+      "priority": null,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 40,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step1-delete-dead-mysql-branches.md"
+    },
+    {
+      "id": "step2-sqlite-visitor-wire",
+      "rfc": "0000-ddl-visitor-convergence",
+      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
+      "status": "draft",
+      "cluster": "ddl-visitor-convergence",
+      "priority": null,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step1-delete-dead-mysql-branches"
+      ],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step2-sqlite-visitor-wire.md"
+    },
+    {
+      "id": "step3-pg-tosql-via-visitor",
+      "rfc": "0000-ddl-visitor-convergence",
+      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
+      "status": "draft",
+      "cluster": "ddl-visitor-convergence",
+      "priority": null,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step1-delete-dead-mysql-branches"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step3-pg-tosql-via-visitor.md"
+    },
+    {
+      "id": "step4-delete-abstract-tosql",
+      "rfc": "0000-ddl-visitor-convergence",
+      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
+      "status": "draft",
+      "cluster": "ddl-visitor-convergence",
+      "priority": null,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step2-sqlite-visitor-wire",
+        "step3-pg-tosql-via-visitor"
+      ],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step4-delete-abstract-tosql.md"
     },
     {
       "id": "visitor-on-establish",
