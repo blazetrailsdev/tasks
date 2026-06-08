@@ -1,6 +1,6 @@
 ---
 title: "RFC from workplan + attack-plan + 100-plan + index"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0011-activerecord-docs-cutover"
 cluster: migrate

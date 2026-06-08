@@ -1,6 +1,6 @@
 ---
 title: "PR 2 — rework test-setup-dy + setupHandlerSuite"
-status: in-progress
+status: done
 updated: 2026-06-07
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
