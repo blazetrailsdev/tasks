@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL auto-increment (4 skips)"
-status: claimed
+status: in-progress
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
+pr: 3050
 claim: "2026-06-08T23:10:05Z"
 assignee: "p3-mysql-auto-increment"
 blocked-by: null
