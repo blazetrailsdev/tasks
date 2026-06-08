@@ -20,11 +20,11 @@ blocked-by: null
 Convert the three `ToSql` subclasses:
 
 - **`mysql.ts`** — 12 `protected override visitArel*` methods
-- **`postgresql.ts`** — 13 `protected override visitArel*` methods in `PostgreSQL`
-  - `PostgreSQLWithBinds` refactor (2 methods + `bindIndex` state migration)
+- **`postgresql.ts`** — 13 methods total: 11 in `PostgreSQL` + 2 in
+  `PostgreSQLWithBinds` (plus `bindIndex` state migration)
 - **`sqlite.ts`** — 6 `protected override visitArel*` methods
 
-Total: 31 override methods. Also resolves the `bindIndex` instance-field issue
+Total: 31 override methods (12 + 13 + 6). Also resolves the `bindIndex` instance-field issue
 in `PostgreSQLWithBinds`.
 
 See RFC §Design — "Blast radius" and "PostgreSQLWithBinds.bindIndex".

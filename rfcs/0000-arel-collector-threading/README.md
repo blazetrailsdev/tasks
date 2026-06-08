@@ -293,8 +293,8 @@ modified.
 
 **`mysql.ts`** — 12 `protected override visitArel*` methods.
 
-**`postgresql.ts`** — 13 `protected override visitArel*` methods in `PostgreSQL` +
-2 in `PostgreSQLWithBinds`. Plus `bindIndex` refactor.
+**`postgresql.ts`** — 13 methods total: 11 in `PostgreSQL` + 2 in
+`PostgreSQLWithBinds`. Plus `bindIndex` refactor.
 
 **`sqlite.ts`** — 6 `protected override visitArel*` methods.
 
@@ -385,11 +385,15 @@ the touched arel test files.
    Rails' pattern). Validate in Phase 3 that no other consumer relies on the
    `bindIndex` instance field directly.
 
-2. **`compileWithCollector` simplification.** After threading,
-   `compileWithCollector(node, collector)` becomes `this.visit(node, collector)`.
-   The Phase 2 story should confirm no caller passes `null`/`undefined`
-   (currently the `if (externalCollector)` guard handles that) and remove
-   the method or keep it as a thin wrapper for backward compatibility.
+2. **`compileWithCollector` callers — resolved.** `database-statements.ts:284`
+   calls `visitor.compileWithCollector(node, collector)` where `collector` is a
+   real external collector (`SubstituteBinds` or `PartialQueryCollector` from
+   `adapter.collector()`). After threading this call becomes
+   `this.visit(node, collector)` — the collector's own `addBind` handles
+   routing unconditionally, which is exactly what `_extractBinds = true` was
+   doing before. No behavior change. Phase 2 should remove the `if
+(externalCollector)` guard (it was only needed to set `_extractBinds`) and
+   keep the method as a one-liner delegating to `this.visit`.
 
 ## Stories
 
