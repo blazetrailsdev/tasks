@@ -1799,7 +1799,7 @@
       "id": "p3-adapter-type-families",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — adapter type-families (PG ~94 + MySQL ~41)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
@@ -1837,7 +1837,9 @@
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
       "deps_rfc": [],
       "est_loc": 40,
       "pr": null,
@@ -1871,7 +1873,9 @@
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
       "deps_rfc": [],
       "est_loc": 60,
       "pr": null,
@@ -1922,7 +1926,9 @@
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
       "deps_rfc": [],
       "est_loc": 80,
       "pr": null,
@@ -1939,7 +1945,9 @@
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
       "deps_rfc": [],
       "est_loc": 50,
       "pr": null,
@@ -1956,7 +1964,9 @@
       "cluster": "adapter",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
       "deps_rfc": [],
       "est_loc": 200,
       "pr": null,
