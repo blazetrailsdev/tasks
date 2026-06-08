@@ -1,13 +1,13 @@
 ---
 title: "I-2 — type_for_attribute enum write-casting"
-status: claimed
+status: in-progress
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: unblockers
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: 3013
 claim: "2026-06-08T00:28:40Z"
 assignee: "i2-enum-cast"
 blocked-by: null
