@@ -1,6 +1,6 @@
 ---
 title: "I-1 — Epic 3.3-U3: schema-dumper columnSpec wiring"
-status: in-progress
+status: done
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: unblockers
