@@ -1511,6 +1511,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/ci-examples-job.md"
     },
     {
+      "id": "claims-concurrency-lock",
+      "rfc": "0001-task-system",
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "status": "draft",
+      "cluster": "scaffold",
+      "priority": null,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
+    },
+    {
       "id": "cli-generators-manifest",
       "rfc": "0003-activerecord-cli",
       "title": "Generators + generated models/index.ts manifest + ar init",

@@ -511,6 +511,12 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
+      "id": "claims-concurrency-lock",
+      "type": "story",
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
+    },
+    {
       "id": "cli-generators-manifest",
       "type": "story",
       "title": "Generators + generated models/index.ts manifest + ar init",
