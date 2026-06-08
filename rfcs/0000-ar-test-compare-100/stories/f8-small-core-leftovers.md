@@ -1,15 +1,15 @@
 ---
 title: "F-8 — small core leftovers"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-08T00:04:43Z"
+assignee: "f8-small-core-leftovers"
 blocked-by: null
 ---
 
