@@ -13,6 +13,12 @@
       "terms": "0000-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc — activerecord test:compare 100%: phase-ordered un-skip campaign"
     },
     {
+      "id": "0000-arel-collector-threading",
+      "type": "rfc",
+      "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
+      "terms": "0000-arel-collector-threading thread the arel query visitor collector — eliminate tosql instance state arel activerecord arel-collector-threading rfc — thread the arel query visitor collector"
+    },
+    {
       "id": "0000-ddl-visitor-convergence",
       "type": "rfc",
       "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
@@ -607,10 +613,22 @@
       "terms": "nested-through-remainder nested-through remainder (scope, default_scope, shared-source reset, hmt autosave) associations 0005-activerecord-gaps context"
     },
     {
+      "id": "p1-visitor-base-types",
+      "type": "story",
+      "title": "Phase 1 — Visitor base type strengthening",
+      "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0000-arel-collector-threading context"
+    },
+    {
       "id": "p13-standalone-connection",
       "type": "story",
       "title": "P13 — implement StandaloneConnection class",
       "terms": "p13-standalone-connection p13 — implement standaloneconnection class connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "p2-to-sql-threading",
+      "type": "story",
+      "title": "Phase 2 — Thread collector through to-sql.ts",
+      "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0000-arel-collector-threading context"
     },
     {
       "id": "p3-adapter-type-families",
@@ -689,6 +707,18 @@
       "type": "story",
       "title": "P3 — PG transaction error types (10 skips)",
       "terms": "p3-pg-transactions p3 — pg transaction error types (10 skips) adapter 0000-ar-test-compare-100 context"
+    },
+    {
+      "id": "p3-subclass-threading",
+      "type": "story",
+      "title": "Phase 3 — Thread collector through subclasses",
+      "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0000-arel-collector-threading context"
+    },
+    {
+      "id": "p4-verification",
+      "type": "story",
+      "title": "Phase 4 — Verification and cleanup",
+      "terms": "p4-verification phase 4 — verification and cleanup arel-collector-threading 0000-arel-collector-threading context"
     },
     {
       "id": "phase1-pg-template",
