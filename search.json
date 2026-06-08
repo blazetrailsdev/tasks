@@ -619,6 +619,12 @@
       "terms": "f8-small-core-leftovers f-8 — small core leftovers clusters 0000-ar-test-compare-100 context"
     },
     {
+      "id": "fix-tasks-new-command",
+      "type": "story",
+      "title": "Fix `tasks new`: emit hook-clean stories and validate --cluster",
+      "terms": "fix-tasks-new-command fix `tasks new`: emit hook-clean stories and validate --cluster scaffold 0001-task-system context"
+    },
+    {
       "id": "h3-reclassify-permanent-skips",
       "type": "story",
       "title": "H-3 — reclassify permanent skips",
