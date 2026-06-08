@@ -1,7 +1,7 @@
 ---
 title: "F-6 — nested-attributes cluster"
-status: in-progress
-updated: 2026-06-07
+status: done
+updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
 deps: []
