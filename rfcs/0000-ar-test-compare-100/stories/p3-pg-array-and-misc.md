@@ -1,12 +1,13 @@
 ---
 title: "P3 — PG array and misc adapter (17 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 200
+priority: 12
 pr: null
 claim: null
 assignee: null

@@ -1,12 +1,13 @@
 ---
 title: "P3 — MySQL unsigned type (6 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 80
+priority: 8
 pr: null
 claim: null
 assignee: null

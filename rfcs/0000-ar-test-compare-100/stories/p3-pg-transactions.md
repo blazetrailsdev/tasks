@@ -1,12 +1,13 @@
 ---
 title: "P3 — PG transaction error types (10 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 150
+priority: 5
 pr: null
 claim: null
 assignee: null

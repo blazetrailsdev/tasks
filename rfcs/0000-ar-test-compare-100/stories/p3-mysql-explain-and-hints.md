@@ -1,12 +1,13 @@
 ---
 title: "P3 — MySQL EXPLAIN and optimizer hints (4 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 60
+priority: 3
 pr: null
 claim: null
 assignee: null

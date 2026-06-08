@@ -1,12 +1,13 @@
 ---
 title: "P3 — MySQL virtual column (2 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 50
+priority: 11
 pr: null
 claim: null
 assignee: null

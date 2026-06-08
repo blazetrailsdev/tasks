@@ -1,12 +1,13 @@
 ---
 title: "P3 — PG referential integrity and adapter (10 skips)"
-status: draft
+status: ready
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 150
+priority: 6
 pr: null
 claim: null
 assignee: null
