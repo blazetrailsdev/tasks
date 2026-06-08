@@ -1,6 +1,6 @@
 ---
 title: "F-8 — small core leftovers"
-status: in-progress
+status: done
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: clusters
