@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL EXPLAIN and optimizer hints (4 skips)"
-status: ready
+status: claimed
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-08T23:30:45Z"
+assignee: "p3-mysql-explain-and-hints"
 blocked-by: null
 ---
 
