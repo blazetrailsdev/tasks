@@ -176,10 +176,12 @@ collation + generated columns, and `visitForeignKeyDefinition` handling deferrab
 Two sub-steps:
 
 **2a — Add `SQLite3Adapter.createTableDefinition` override** that returns a
-`SQLite3TableDefinition`, mirroring `AbstractMysqlAdapter.createTableDefinition` and
-`PostgreSQLAdapter.createTableDefinition`. The `sqlite3/schema-statements.ts:132`
-function already has the right body — promote it, export it, and call it from the
-adapter method.
+`new SQLite3TableDefinition(name, options)`, mirroring
+`AbstractMysqlAdapter.createTableDefinition` and
+`PostgreSQLAdapter.createTableDefinition`. Define this directly on the adapter class
+(in `sqlite3-adapter.ts`). The dead internal `createTableDefinition` function at
+`sqlite3/schema-statements.ts:132` has the same body and should be deleted rather
+than promoted — it is `@internal`, never exported, and never called.
 
 **2b — Add `SQLite3TableDefinition.toSql()` override** that calls
 `SQLite3SchemaCreation.accept(this)`, analogous to
@@ -276,8 +278,24 @@ cover it. Rails raises `ArgumentError("invalid column type:")` from `type_to_sql
 the equivalent check belongs in `SchemaCreation.typeToSql` or the abstract
 `visitColumnDefinition`.
 
+Also required in this step: `migration.ts:MigrationContext.createTable` currently
+calls `this.connection.toSql(td)`, which routes through `database-statements.ts:174`'s
+`typeof (node as any).toSql === "function"` check. Once `toSql()` is removed from
+`AbstractTableDefinition` that check returns `false` and the call errors at runtime.
+`MigrationContext.createTable` must be updated to call the visitor directly, e.g.:
+
+```typescript
+await this.connection.executeMutation(this.connection.schemaCreation.accept(td));
+```
+
+This is the final cleanup that makes `MigrationContext.createTable`'s DDL path
+structurally identical to `SchemaStatements.createTable`.
+
 Files touched: `abstract/schema-definitions.ts` (delete method + dead helpers),
-`abstract/schema-definitions.test.ts` (migrate tests).
+`abstract/schema-definitions.test.ts` (migrate tests),
+`abstract/schema-creation.ts` (blank-type guard),
+`abstract/schema-creation.test.ts` (blank-type guard test),
+`migration.ts` (`MigrationContext.createTable` visitor call).
 
 ### Blast radius
 

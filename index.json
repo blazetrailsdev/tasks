@@ -2584,7 +2584,7 @@
         "step3-pg-tosql-via-visitor"
       ],
       "deps_rfc": [],
-      "est_loc": 30,
+      "est_loc": 50,
       "pr": null,
       "claim": null,
       "assignee": null,
