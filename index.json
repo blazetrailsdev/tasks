@@ -1600,7 +1600,7 @@
       "id": "i2-enum-cast",
       "rfc": "0000-ar-test-compare-100",
       "title": "I-2 — type_for_attribute enum write-casting",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "unblockers",
       "priority": null,
       "updated": "2026-06-08T00:00:00.000Z",
