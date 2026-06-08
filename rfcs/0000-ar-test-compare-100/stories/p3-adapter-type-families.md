@@ -1,13 +1,13 @@
 ---
 title: "P3 — adapter type-families (PG ~94 + MySQL ~41)"
-status: claimed
+status: in-progress
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: null
+pr: 3014
 claim: "2026-06-08T00:40:43Z"
 assignee: "p3-adapter-type-families"
 blocked-by: null
