@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL stored procedures / multi-result (3 skips)"
-status: ready
+status: in-progress
 updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 2
-pr: null
+pr: 3048
 claim: null
 assignee: null
 blocked-by: null
