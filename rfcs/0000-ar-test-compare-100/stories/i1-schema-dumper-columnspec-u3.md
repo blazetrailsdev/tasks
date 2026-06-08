@@ -1,15 +1,15 @@
 ---
 title: "I-1 — Epic 3.3-U3: schema-dumper columnSpec wiring"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-08
 rfc: "0000-ar-test-compare-100"
 cluster: unblockers
 deps: []
 deps-rfc: []
 est-loc: 120
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-08T00:16:41Z"
+assignee: "i1-schema-dumper-columnspec-u3"
 blocked-by: null
 ---
 
