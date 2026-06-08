@@ -1,6 +1,6 @@
 ---
 title: "Fix `tasks new`: emit hook-clean stories and validate --cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-08
 rfc: "0001-task-system"
 cluster: scaffold
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3049
 claim: "2026-06-08T20:52:13Z"
 assignee: "fix-tasks-new-command"
 blocked-by: null
