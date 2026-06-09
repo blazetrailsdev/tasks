@@ -1,7 +1,7 @@
 ---
 title: "P3 — MySQL auto-increment (4 skips)"
-status: in-progress
-updated: 2026-06-08
+status: done
+updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
