@@ -436,7 +436,7 @@
       "id": "p1-visitor-base-types",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 1 — Visitor base type strengthening",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "arel-collector-threading",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",

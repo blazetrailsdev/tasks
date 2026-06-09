@@ -1,6 +1,6 @@
 ---
 title: "Phase 1 — Visitor base type strengthening"
-status: in-progress
+status: done
 updated: 2026-06-09
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
