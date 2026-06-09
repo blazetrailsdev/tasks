@@ -7,12 +7,6 @@
       "terms": "0000-api-compare-arity-divergences close the genuine api:compare arity divergences — fix the code, document the noise activerecord actiondispatch actionview api-compare-arity-divergences rfc — close the genuine api:compare arity divergences"
     },
     {
-      "id": "0000-canonical-schema-burndown",
-      "type": "rfc",
-      "title": "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word",
-      "terms": "0000-canonical-schema-burndown canonical-schema ratchet burndown — convert the ar test suite to test_schema + rails fixtures, word-for-word activerecord fixtures rfc — canonical-schema ratchet burndown"
-    },
-    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -121,10 +115,10 @@
       "terms": "0018-ddl-visitor-convergence converge all create table ddl onto the schemacreation visitor — eliminate hand-rolled tabledefinition#tosql activerecord ddl-visitor-convergence rfc 0018 — converge all create table ddl onto the schemacreation visitor"
     },
     {
-      "id": "attribute-types-cluster",
+      "id": "claims-concurrency-lock",
       "type": "story",
-      "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
-      "terms": "attribute-types-cluster attributes + type/precision cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
     },
     {
       "id": "p1-visitor-base-types",
@@ -133,82 +127,10 @@
       "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0017-arel-collector-threading context"
     },
     {
-      "id": "relation-mutation-cluster",
-      "type": "story",
-      "title": "relation/ mutation cluster → canonical schema + Rails fixtures",
-      "terms": "relation-mutation-cluster relation/ mutation cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "relation-select-order-cluster",
-      "type": "story",
-      "title": "relation/ select + order cluster → canonical schema + Rails fixtures",
-      "terms": "relation-select-order-cluster relation/ select + order cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "relation-where-cluster",
-      "type": "story",
-      "title": "relation/ where + predicate cluster → canonical schema + Rails fixtures",
-      "terms": "relation-where-cluster relation/ where + predicate cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
       "id": "s1-insert-returning",
       "type": "story",
       "title": "Thread `returning` through `_insert_record`",
       "terms": "s1-insert-returning thread `returning` through `_insert_record` api-compare-arity-divergences 0000-api-compare-arity-divergences context"
-    },
-    {
-      "id": "scoping-suite",
-      "type": "story",
-      "title": "scoping/ suite → canonical schema + Rails fixtures",
-      "terms": "scoping-suite scoping/ suite → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "secure-token-cluster",
-      "type": "story",
-      "title": "secure-password / token cluster → canonical schema + Rails fixtures",
-      "terms": "secure-token-cluster secure-password / token cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "serialization-cluster",
-      "type": "story",
-      "title": "serialization + store cluster → canonical schema + Rails fixtures",
-      "terms": "serialization-cluster serialization + store cluster → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "shared-table-convergence",
-      "type": "story",
-      "title": "Converge collision-prone scratch tables (people / posts / items / HABTM joins)",
-      "terms": "shared-table-convergence converge collision-prone scratch tables (people / posts / items / habtm joins) fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "validations-suite",
-      "type": "story",
-      "title": "validations/ suite → canonical schema + Rails fixtures",
-      "terms": "validations-suite validations/ suite → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "calculations-aggregations",
-      "type": "story",
-      "title": "calculations + aggregations → canonical schema + Rails fixtures",
-      "terms": "calculations-aggregations calculations + aggregations → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "callbacks-transactions-cluster",
-      "type": "story",
-      "title": "callbacks / transactions / locking → canonical schema + Rails fixtures",
-      "terms": "callbacks-transactions-cluster callbacks / transactions / locking → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "inheritance-modules-cluster",
-      "type": "story",
-      "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",
-      "terms": "inheritance-modules-cluster inheritance / modules / reflection → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "misc-core-cluster",
-      "type": "story",
-      "title": "explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema",
-      "terms": "misc-core-cluster explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema fixtures 0000-canonical-schema-burndown context"
     },
     {
       "id": "p2-to-sql-threading",
@@ -217,52 +139,10 @@
       "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
     },
     {
-      "id": "persistence-dup-cluster",
-      "type": "story",
-      "title": "persistence / dup / clone / insert-all → canonical schema + Rails fixtures",
-      "terms": "persistence-dup-cluster persistence / dup / clone / insert-all → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "relation-core-cluster",
-      "type": "story",
-      "title": "relation / relations / querying core → canonical schema + Rails fixtures",
-      "terms": "relation-core-cluster relation / relations / querying core → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
       "id": "s2-genuine-divergences",
       "type": "story",
       "title": "Confirm + fix borderline genuine arity divergences",
       "terms": "s2-genuine-divergences confirm + fix borderline genuine arity divergences api-compare-arity-divergences 0000-api-compare-arity-divergences context"
-    },
-    {
-      "id": "associations-collection-cluster",
-      "type": "story",
-      "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
-      "terms": "associations-collection-cluster has-many / belongs-to / has-one / collection → canonical schema + fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "associations-disable-joins-cluster",
-      "type": "story",
-      "title": "disable-joins association family → canonical schema + Rails fixtures",
-      "terms": "associations-disable-joins-cluster disable-joins association family → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "associations-eager-join-cluster",
-      "type": "story",
-      "title": "eager / join / habtm → canonical schema + Rails fixtures",
-      "terms": "associations-eager-join-cluster eager / join / habtm → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "associations-scope-cache-cluster",
-      "type": "story",
-      "title": "association-scope / inverse / assoc-callbacks → canonical schema + fixtures",
-      "terms": "associations-scope-cache-cluster association-scope / inverse / assoc-callbacks → canonical schema + fixtures fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "associations-through-nested-cluster",
-      "type": "story",
-      "title": "through / nested-through associations → canonical schema + Rails fixtures",
-      "terms": "associations-through-nested-cluster through / nested-through associations → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
     },
     {
       "id": "p3-subclass-threading",
@@ -275,18 +155,6 @@
       "type": "story",
       "title": "Document the convention-noise residual ledger",
       "terms": "s3-document-residual document the convention-noise residual ledger api-compare-arity-divergences 0000-api-compare-arity-divergences context"
-    },
-    {
-      "id": "adapter-tests-cluster",
-      "type": "story",
-      "title": "adapters/ (sqlite / pg / mysql) → canonical schema or isolated-by-design",
-      "terms": "adapter-tests-cluster adapters/ (sqlite / pg / mysql) → canonical schema or isolated-by-design fixtures 0000-canonical-schema-burndown context"
-    },
-    {
-      "id": "encryption-cluster",
-      "type": "story",
-      "title": "encryption/ suite → canonical schema + Rails fixtures",
-      "terms": "encryption-cluster encryption/ suite → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
     },
     {
       "id": "p4-verification",
@@ -719,12 +587,6 @@
       "type": "story",
       "title": "Optional — lightweight examples/ CI job",
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
-    },
-    {
-      "id": "claims-concurrency-lock",
-      "type": "story",
-      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
-      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
     },
     {
       "id": "cli-generators-manifest",
