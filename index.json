@@ -483,18 +483,18 @@
       "id": "p3-mysql-set-and-enum",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — MySQL SET and ENUM types (4 skips)",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "adapter",
       "priority": 9,
-      "updated": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
       "deps": [
         "i1-schema-dumper-columnspec-u3"
       ],
       "deps_rfc": [],
       "est_loc": 60,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-09T14:06:45Z",
+      "assignee": "p3-mysql-set-and-enum",
       "blocked_by": null,
       "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-set-and-enum.md"
     },

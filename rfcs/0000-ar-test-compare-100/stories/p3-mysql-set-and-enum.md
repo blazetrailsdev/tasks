@@ -1,7 +1,7 @@
 ---
 title: "P3 — MySQL SET and ENUM types (4 skips)"
-status: ready
-updated: 2026-06-08
+status: claimed
+updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-09T14:06:45Z"
+assignee: "p3-mysql-set-and-enum"
 blocked-by: null
 ---
 
