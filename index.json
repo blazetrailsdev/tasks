@@ -961,7 +961,7 @@
       "id": "step1-delete-dead-mysql-branches",
       "rfc": "0018-ddl-visitor-convergence",
       "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "ddl-visitor-convergence",
       "priority": 5,
       "updated": "2026-06-09T00:00:00.000Z",
