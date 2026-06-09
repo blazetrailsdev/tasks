@@ -1,6 +1,6 @@
 ---
 title: "Phase 1 — Visitor base type strengthening"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 1
-pr: null
+pr: 3065
 claim: "2026-06-09T19:15:40Z"
 assignee: "p1-visitor-base-types"
 blocked-by: null
