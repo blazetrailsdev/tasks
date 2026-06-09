@@ -470,7 +470,7 @@
       "id": "phase1-dirty-on-any-query",
       "rfc": "0000-mysql-rawconn-convergence",
       "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "mysql-rawconn-convergence",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
