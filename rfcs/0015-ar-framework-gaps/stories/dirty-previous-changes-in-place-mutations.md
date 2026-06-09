@@ -1,6 +1,6 @@
 ---
 title: "Dirty: previous_changes must include in-place mutations after save"
-status: ready
+status: claimed
 updated: 2026-06-09
 rfc: "0015-ar-framework-gaps"
 cluster: dirty-tracking
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-09T21:30:51Z"
+assignee: "dirty-previous-changes-in-place-mutations"
 blocked-by: null
 ---
 
