@@ -379,7 +379,7 @@
       "id": "p3-mysql-explain-and-hints",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
