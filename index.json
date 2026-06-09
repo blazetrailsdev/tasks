@@ -521,18 +521,18 @@
       "id": "p3-mysql-virtual-column",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL virtual column (2 skips)",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "adapter",
       "priority": 11,
-      "updated": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
       "deps": [
         "i1-schema-dumper-columnspec-u3"
       ],
       "deps_rfc": [],
       "est_loc": 50,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-09T15:44:56Z",
+      "assignee": "p3-mysql-virtual-column",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
     },
