@@ -1,6 +1,6 @@
 ---
 title: "Phase 2 — Thread collector through to-sql.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
+pr: 3070
 claim: "2026-06-09T21:10:53Z"
 assignee: "p2-to-sql-threading"
 blocked-by: null
