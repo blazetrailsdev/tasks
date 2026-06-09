@@ -121,6 +121,12 @@
       "terms": "0018-ddl-visitor-convergence converge all create table ddl onto the schemacreation visitor — eliminate hand-rolled tabledefinition#tosql activerecord ddl-visitor-convergence rfc 0018 — converge all create table ddl onto the schemacreation visitor"
     },
     {
+      "id": "claims-concurrency-lock",
+      "type": "story",
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
+    },
+    {
       "id": "attribute-types-cluster",
       "type": "story",
       "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
@@ -721,12 +727,6 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
-      "id": "claims-concurrency-lock",
-      "type": "story",
-      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
-      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
-    },
-    {
       "id": "cli-generators-manifest",
       "type": "story",
       "title": "Generators + generated models/index.ts manifest + ar init",
@@ -761,6 +761,12 @@
       "type": "story",
       "title": "Consolidate dependent-handling dispatch paths",
       "terms": "dependent-dispatch-consolidation consolidate dependent-handling dispatch paths associations 0005-activerecord-gaps context"
+    },
+    {
+      "id": "dirty-previous-changes-in-place-mutations",
+      "type": "story",
+      "title": "Dirty: previous_changes must include in-place mutations after save",
+      "terms": "dirty-previous-changes-in-place-mutations dirty: previous_changes must include in-place mutations after save dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "drift-prevention-ci",
@@ -851,6 +857,12 @@
       "type": "story",
       "title": "I-2 — type_for_attribute enum write-casting",
       "terms": "i2-enum-cast i-2 — type_for_attribute enum write-casting unblockers 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "insert-all-scope-attribute-precedence",
+      "type": "story",
+      "title": "insert_all: scope attributes must take precedence over row values",
+      "terms": "insert-all-scope-attribute-precedence insert_all: scope attributes must take precedence over row values relation 0005-activerecord-gaps context"
     },
     {
       "id": "lazy-async-schema-reflection",
@@ -1027,6 +1039,12 @@
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "relation-includes-count-join-dependency",
+      "type": "story",
+      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
+      "terms": "relation-includes-count-join-dependency relation: count and count(\"*\") with includes must apply join dependency relation 0005-activerecord-gaps context"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
@@ -1079,6 +1097,12 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
+    },
+    {
+      "id": "view-insert-record-adapter-scope",
+      "type": "story",
+      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
+      "terms": "view-insert-record-adapter-scope view: adapter-scope the over-broad updateableviewtest insert-record skip clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "visitor-on-establish",

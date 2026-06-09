@@ -381,6 +381,23 @@
   ],
   "stories": [
     {
+      "id": "claims-concurrency-lock",
+      "rfc": "0001-task-system",
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "status": "draft",
+      "cluster": "scaffold",
+      "priority": 0,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 100,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
+    },
+    {
       "id": "attribute-types-cluster",
       "rfc": "0000-canonical-schema-burndown",
       "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
@@ -2142,23 +2159,6 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/ci-examples-job.md"
     },
     {
-      "id": "claims-concurrency-lock",
-      "rfc": "0001-task-system",
-      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
-      "status": "draft",
-      "cluster": "scaffold",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 100,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
-    },
-    {
       "id": "cli-generators-manifest",
       "rfc": "0003-activerecord-cli",
       "title": "Generators + generated models/index.ts manifest + ar init",
@@ -2269,6 +2269,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/dependent-dispatch-consolidation.md"
+    },
+    {
+      "id": "dirty-previous-changes-in-place-mutations",
+      "rfc": "0015-ar-framework-gaps",
+      "title": "Dirty: previous_changes must include in-place mutations after save",
+      "status": "draft",
+      "cluster": "dirty-tracking",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 25,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-previous-changes-in-place-mutations.md"
     },
     {
       "id": "drift-prevention-ci",
@@ -2532,6 +2549,23 @@
       "assignee": "i2-enum-cast",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/i2-enum-cast.md"
+    },
+    {
+      "id": "insert-all-scope-attribute-precedence",
+      "rfc": "0005-activerecord-gaps",
+      "title": "insert_all: scope attributes must take precedence over row values",
+      "status": "draft",
+      "cluster": "relation",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 5,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/insert-all-scope-attribute-precedence.md"
     },
     {
       "id": "lazy-async-schema-reflection",
@@ -3055,6 +3089,23 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-tooling.md"
     },
     {
+      "id": "relation-includes-count-join-dependency",
+      "rfc": "0005-activerecord-gaps",
+      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
+      "status": "draft",
+      "cluster": "relation",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/relation-includes-count-join-dependency.md"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "rfc": "0003-activerecord-cli",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
@@ -3218,6 +3269,23 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
+    },
+    {
+      "id": "view-insert-record-adapter-scope",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
+      "status": "draft",
+      "cluster": "clusters",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 15,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/view-insert-record-adapter-scope.md"
     },
     {
       "id": "visitor-on-establish",
