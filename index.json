@@ -453,7 +453,7 @@
       "id": "partial-inserts-load-defaults",
       "rfc": "0000-load-defaults-config",
       "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "config-defaults",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
