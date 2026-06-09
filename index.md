@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-canonical-schema-burndown](rfcs/0000-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | draft | @dmarano | activerecord |
 | [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @dmarano | activerecord, trailties |
 | [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
@@ -19,7 +20,7 @@
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @dmarano | activerecord |
 | [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |
 | [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @dmarano | activerecord |
-| [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | active | @dmarano | activerecord |
+| [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @dmarano | activerecord |
 | [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
 | [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @dmarano | activerecord |
 | [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | active | @dmarano | arel, activerecord |
