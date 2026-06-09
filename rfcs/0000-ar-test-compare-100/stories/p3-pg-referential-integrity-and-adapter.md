@@ -1,6 +1,6 @@
 ---
 title: "P3 — PG referential integrity and adapter (10 skips)"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: null
+pr: 3055
 claim: "2026-06-09T12:59:59Z"
 assignee: "p3-pg-referential-integrity-and-adapter"
 blocked-by: null
