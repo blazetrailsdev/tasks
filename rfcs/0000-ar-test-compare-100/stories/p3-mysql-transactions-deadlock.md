@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)"
-status: in-progress
+status: done
 updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter

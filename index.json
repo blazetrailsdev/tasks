@@ -396,7 +396,7 @@
       "id": "p3-mysql-transactions-deadlock",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 4,
       "updated": "2026-06-09T00:00:00.000Z",
