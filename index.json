@@ -1,6 +1,28 @@
 {
   "rfcs": [
     {
+      "id": "0000-api-compare-arity-divergences",
+      "title": "Close the genuine api:compare arity divergences — fix the code, document the noise",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "actiondispatch",
+        "actionview"
+      ],
+      "clusters": [
+        "api-compare-arity-divergences"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0000-arel-collector-threading",
+        "0005-activerecord-gaps"
+      ],
+      "file_path": "rfcs/0000-api-compare-arity-divergences/README.md"
+    },
+    {
       "id": "0000-arel-collector-threading",
       "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
       "status": "draft",
@@ -359,6 +381,23 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
     },
     {
+      "id": "s1-insert-returning",
+      "rfc": "0000-api-compare-arity-divergences",
+      "title": "Thread `returning` through `_insert_record`",
+      "status": "draft",
+      "cluster": "api-compare-arity-divergences",
+      "priority": 1,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s1-insert-returning.md"
+    },
+    {
       "id": "p3-mysql-stored-procedures",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
@@ -376,6 +415,23 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
     },
     {
+      "id": "s2-genuine-divergences",
+      "rfc": "0000-api-compare-arity-divergences",
+      "title": "Confirm + fix borderline genuine arity divergences",
+      "status": "draft",
+      "cluster": "api-compare-arity-divergences",
+      "priority": 2,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s2-genuine-divergences.md"
+    },
+    {
       "id": "p3-mysql-explain-and-hints",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
@@ -391,6 +447,23 @@
       "assignee": "p3-mysql-explain-and-hints",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-explain-and-hints.md"
+    },
+    {
+      "id": "s3-document-residual",
+      "rfc": "0000-api-compare-arity-divergences",
+      "title": "Document the convention-noise residual ledger",
+      "status": "draft",
+      "cluster": "api-compare-arity-divergences",
+      "priority": 3,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s3-document-residual.md"
     },
     {
       "id": "p3-mysql-transactions-deadlock",

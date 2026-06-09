@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "id": "0000-api-compare-arity-divergences",
+      "type": "rfc",
+      "title": "Close the genuine api:compare arity divergences — fix the code, document the noise",
+      "terms": "0000-api-compare-arity-divergences close the genuine api:compare arity divergences — fix the code, document the noise activerecord actiondispatch actionview api-compare-arity-divergences rfc — close the genuine api:compare arity divergences"
+    },
+    {
       "id": "0000-arel-collector-threading",
       "type": "rfc",
       "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
@@ -115,16 +121,34 @@
       "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "s1-insert-returning",
+      "type": "story",
+      "title": "Thread `returning` through `_insert_record`",
+      "terms": "s1-insert-returning thread `returning` through `_insert_record` api-compare-arity-divergences 0000-api-compare-arity-divergences context"
+    },
+    {
       "id": "p3-mysql-stored-procedures",
       "type": "story",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
       "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "s2-genuine-divergences",
+      "type": "story",
+      "title": "Confirm + fix borderline genuine arity divergences",
+      "terms": "s2-genuine-divergences confirm + fix borderline genuine arity divergences api-compare-arity-divergences 0000-api-compare-arity-divergences context"
+    },
+    {
       "id": "p3-mysql-explain-and-hints",
       "type": "story",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
       "terms": "p3-mysql-explain-and-hints p3 — mysql explain and optimizer hints (4 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "s3-document-residual",
+      "type": "story",
+      "title": "Document the convention-noise residual ledger",
+      "terms": "s3-document-residual document the convention-noise residual ledger api-compare-arity-divergences 0000-api-compare-arity-divergences context"
     },
     {
       "id": "p3-mysql-transactions-deadlock",

@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-api-compare-arity-divergences](rfcs/0000-api-compare-arity-divergences/README.md) | Close the genuine api:compare arity divergences — fix the code, document the noise | draft | @dmarano | activerecord, actiondispatch, actionview |
 | [0000-arel-collector-threading](rfcs/0000-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | draft | @dmarano | arel, activerecord |
 | [0000-ddl-visitor-convergence](rfcs/0000-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
