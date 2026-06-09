@@ -540,18 +540,18 @@
       "id": "p3-pg-array-and-misc",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG array and misc adapter (17 skips)",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "adapter",
       "priority": 12,
-      "updated": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
       "deps": [
         "i1-schema-dumper-columnspec-u3"
       ],
       "deps_rfc": [],
       "est_loc": 200,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-09T15:51:02Z",
+      "assignee": "p3-pg-array-and-misc",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
     },
