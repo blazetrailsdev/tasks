@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL virtual column (2 skips)"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0016-ar-test-compare-100"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 50
 priority: 19
-pr: null
+pr: 3060
 claim: "2026-06-09T15:44:56Z"
 assignee: "p3-mysql-virtual-column"
 blocked-by: null
