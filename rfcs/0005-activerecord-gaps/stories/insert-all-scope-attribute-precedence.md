@@ -1,13 +1,13 @@
 ---
 title: "insert_all: scope attributes must take precedence over row values"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
 deps-rfc: []
 est-loc: 5
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

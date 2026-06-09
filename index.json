@@ -414,6 +414,59 @@
       "file_path": "rfcs/0017-arel-collector-threading/stories/p1-visitor-base-types.md"
     },
     {
+      "id": "partial-inserts-load-defaults",
+      "rfc": "0000-load-defaults-config",
+      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
+      "status": "ready",
+      "cluster": "config-defaults",
+      "priority": 1,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-load-defaults-config/stories/partial-inserts-load-defaults.md"
+    },
+    {
+      "id": "phase1-dirty-on-any-query",
+      "rfc": "0000-mysql-rawconn-convergence",
+      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
+      "status": "ready",
+      "cluster": "mysql-rawconn-convergence",
+      "priority": 1,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase1-dirty-on-any-query.md"
+    },
+    {
+      "id": "phase2-route-data-path-through-withrawconnection",
+      "rfc": "0000-mysql-rawconn-convergence",
+      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
+      "status": "ready",
+      "cluster": "mysql-rawconn-convergence",
+      "priority": 1,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "phase1-dirty-on-any-query"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase2-route-data-path-through-withrawconnection.md"
+    },
+    {
       "id": "p2-to-sql-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 2 — Thread collector through to-sql.ts",
@@ -809,6 +862,40 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
     },
     {
+      "id": "dirty-previous-changes-in-place-mutations",
+      "rfc": "0015-ar-framework-gaps",
+      "title": "Dirty: previous_changes must include in-place mutations after save",
+      "status": "ready",
+      "cluster": "dirty-tracking",
+      "priority": 20,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 25,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-previous-changes-in-place-mutations.md"
+    },
+    {
+      "id": "insert-all-scope-attribute-precedence",
+      "rfc": "0005-activerecord-gaps",
+      "title": "insert_all: scope attributes must take precedence over row values",
+      "status": "ready",
+      "cluster": "relation",
+      "priority": 20,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 5,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/insert-all-scope-attribute-precedence.md"
+    },
+    {
       "id": "p3-pg-array-and-misc",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG array and misc adapter (17 skips)",
@@ -826,6 +913,40 @@
       "assignee": "p3-pg-array-and-misc",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
+    },
+    {
+      "id": "relation-includes-count-join-dependency",
+      "rfc": "0005-activerecord-gaps",
+      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
+      "status": "ready",
+      "cluster": "relation",
+      "priority": 20,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/relation-includes-count-join-dependency.md"
+    },
+    {
+      "id": "view-insert-record-adapter-scope",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
+      "status": "ready",
+      "cluster": "clusters",
+      "priority": 20,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 15,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/view-insert-record-adapter-scope.md"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -1558,6 +1679,25 @@
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase0-sqlite-template-spike.md"
     },
     {
+      "id": "mariadb-coverage-lane",
+      "rfc": "0012-adapter-test-ci",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "status": "ready",
+      "cluster": "ci-lane",
+      "priority": 99,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "wire-adapter-dir-lane"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -1827,23 +1967,6 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/dependent-dispatch-consolidation.md"
     },
     {
-      "id": "dirty-previous-changes-in-place-mutations",
-      "rfc": "0015-ar-framework-gaps",
-      "title": "Dirty: previous_changes must include in-place mutations after save",
-      "status": "draft",
-      "cluster": "dirty-tracking",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 25,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-previous-changes-in-place-mutations.md"
-    },
-    {
       "id": "drift-prevention-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "CI gate: no new docs/activerecord trackers + CLAUDE edit",
@@ -2107,23 +2230,6 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/i2-enum-cast.md"
     },
     {
-      "id": "insert-all-scope-attribute-precedence",
-      "rfc": "0005-activerecord-gaps",
-      "title": "insert_all: scope attributes must take precedence over row values",
-      "status": "draft",
-      "cluster": "relation",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 5,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0005-activerecord-gaps/stories/insert-all-scope-attribute-precedence.md"
-    },
-    {
       "id": "lazy-async-schema-reflection",
       "rfc": "0003-activerecord-cli",
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
@@ -2139,25 +2245,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/lazy-async-schema-reflection.md"
-    },
-    {
-      "id": "mariadb-coverage-lane",
-      "rfc": "0012-adapter-test-ci",
-      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
-      "status": "draft",
-      "cluster": "ci-lane",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "wire-adapter-dir-lane"
-      ],
-      "deps_rfc": [],
-      "est_loc": 80,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
     },
     {
       "id": "migrate-adapter-ci",
@@ -2359,40 +2446,6 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
     },
     {
-      "id": "partial-inserts-load-defaults",
-      "rfc": "0000-load-defaults-config",
-      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
-      "status": "draft",
-      "cluster": "config-defaults",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 60,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-load-defaults-config/stories/partial-inserts-load-defaults.md"
-    },
-    {
-      "id": "phase1-dirty-on-any-query",
-      "rfc": "0000-mysql-rawconn-convergence",
-      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
-      "status": "draft",
-      "cluster": "mysql-rawconn-convergence",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 30,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase1-dirty-on-any-query.md"
-    },
-    {
       "id": "phase1-pg-template",
       "rfc": "0008-test-perf-template-clone",
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
@@ -2429,25 +2482,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase2-mariadb-template.md"
-    },
-    {
-      "id": "phase2-route-data-path-through-withrawconnection",
-      "rfc": "0000-mysql-rawconn-convergence",
-      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
-      "status": "draft",
-      "cluster": "mysql-rawconn-convergence",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "phase1-dirty-on-any-query"
-      ],
-      "deps_rfc": [],
-      "est_loc": 250,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase2-route-data-path-through-withrawconnection.md"
     },
     {
       "id": "phase2a-read-path",
@@ -2717,23 +2751,6 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-tooling.md"
     },
     {
-      "id": "relation-includes-count-join-dependency",
-      "rfc": "0005-activerecord-gaps",
-      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
-      "status": "draft",
-      "cluster": "relation",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 30,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0005-activerecord-gaps/stories/relation-includes-count-join-dependency.md"
-    },
-    {
       "id": "relocate-tsc-wrapper",
       "rfc": "0003-activerecord-cli",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
@@ -2897,23 +2914,6 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
-    },
-    {
-      "id": "view-insert-record-adapter-scope",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
-      "status": "draft",
-      "cluster": "clusters",
-      "priority": null,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 15,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/view-insert-record-adapter-scope.md"
     },
     {
       "id": "visitor-on-establish",

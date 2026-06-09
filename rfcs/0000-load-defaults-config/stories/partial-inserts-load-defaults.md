@@ -1,13 +1,13 @@
 ---
 title: "Establish config.load_defaults + land partial_inserts as the 7.0 entry"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0000-load-defaults-config"
 cluster: config-defaults
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

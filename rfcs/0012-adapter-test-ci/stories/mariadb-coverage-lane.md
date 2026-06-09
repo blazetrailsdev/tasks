@@ -1,6 +1,6 @@
 ---
 title: "MariaDB coverage lane — exercise the never-run MariaDB-specific branches"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0012-adapter-test-ci"
 cluster: ci-lane
@@ -8,7 +8,7 @@ deps:
   - wire-adapter-dir-lane
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 99
 pr: null
 claim: null
 assignee: null

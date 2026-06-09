@@ -1,13 +1,13 @@
 ---
 title: "View: adapter-scope the over-broad UpdateableViewTest insert-record skip"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 15
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

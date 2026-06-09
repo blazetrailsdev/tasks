@@ -133,6 +133,24 @@
       "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0017-arel-collector-threading context"
     },
     {
+      "id": "partial-inserts-load-defaults",
+      "type": "story",
+      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
+      "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0000-load-defaults-config context"
+    },
+    {
+      "id": "phase1-dirty-on-any-query",
+      "type": "story",
+      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
+      "terms": "phase1-dirty-on-any-query phase 1 — mysql2 dirties the current transaction on any materialized query mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+    },
+    {
+      "id": "phase2-route-data-path-through-withrawconnection",
+      "type": "story",
+      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
+      "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+    },
+    {
       "id": "p2-to-sql-threading",
       "type": "story",
       "title": "Phase 2 — Thread collector through to-sql.ts",
@@ -265,10 +283,34 @@
       "terms": "p3-mysql-virtual-column p3 — mysql virtual column (2 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "dirty-previous-changes-in-place-mutations",
+      "type": "story",
+      "title": "Dirty: previous_changes must include in-place mutations after save",
+      "terms": "dirty-previous-changes-in-place-mutations dirty: previous_changes must include in-place mutations after save dirty-tracking 0015-ar-framework-gaps context"
+    },
+    {
+      "id": "insert-all-scope-attribute-precedence",
+      "type": "story",
+      "title": "insert_all: scope attributes must take precedence over row values",
+      "terms": "insert-all-scope-attribute-precedence insert_all: scope attributes must take precedence over row values relation 0005-activerecord-gaps context"
+    },
+    {
       "id": "p3-pg-array-and-misc",
       "type": "story",
       "title": "P3 — PG array and misc adapter (17 skips)",
       "terms": "p3-pg-array-and-misc p3 — pg array and misc adapter (17 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "relation-includes-count-join-dependency",
+      "type": "story",
+      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
+      "terms": "relation-includes-count-join-dependency relation: count and count(\"*\") with includes must apply join dependency relation 0005-activerecord-gaps context"
+    },
+    {
+      "id": "view-insert-record-adapter-scope",
+      "type": "story",
+      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
+      "terms": "view-insert-record-adapter-scope view: adapter-scope the over-broad updateableviewtest insert-record skip clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -523,6 +565,12 @@
       "terms": "phase0-sqlite-template-spike phase 0 — sqlite clonable-template spike test-perf 0008-test-perf-template-clone context"
     },
     {
+      "id": "mariadb-coverage-lane",
+      "type": "story",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "terms": "mariadb-coverage-lane mariadb coverage lane — exercise the never-run mariadb-specific branches ci-lane 0012-adapter-test-ci context"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -611,12 +659,6 @@
       "type": "story",
       "title": "Consolidate dependent-handling dispatch paths",
       "terms": "dependent-dispatch-consolidation consolidate dependent-handling dispatch paths associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "dirty-previous-changes-in-place-mutations",
-      "type": "story",
-      "title": "Dirty: previous_changes must include in-place mutations after save",
-      "terms": "dirty-previous-changes-in-place-mutations dirty: previous_changes must include in-place mutations after save dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "drift-prevention-ci",
@@ -709,22 +751,10 @@
       "terms": "i2-enum-cast i-2 — type_for_attribute enum write-casting unblockers 0016-ar-test-compare-100 context"
     },
     {
-      "id": "insert-all-scope-attribute-precedence",
-      "type": "story",
-      "title": "insert_all: scope attributes must take precedence over row values",
-      "terms": "insert-all-scope-attribute-precedence insert_all: scope attributes must take precedence over row values relation 0005-activerecord-gaps context"
-    },
-    {
       "id": "lazy-async-schema-reflection",
       "type": "story",
       "title": "Lazy async schema reflection (delete explicit loadSchema)",
       "terms": "lazy-async-schema-reflection lazy async schema reflection (delete explicit loadschema) core 0003-activerecord-cli context"
-    },
-    {
-      "id": "mariadb-coverage-lane",
-      "type": "story",
-      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
-      "terms": "mariadb-coverage-lane mariadb coverage lane — exercise the never-run mariadb-specific branches ci-lane 0012-adapter-test-ci context"
     },
     {
       "id": "migrate-adapter-ci",
@@ -793,18 +823,6 @@
       "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
     },
     {
-      "id": "partial-inserts-load-defaults",
-      "type": "story",
-      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
-      "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0000-load-defaults-config context"
-    },
-    {
-      "id": "phase1-dirty-on-any-query",
-      "type": "story",
-      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
-      "terms": "phase1-dirty-on-any-query phase 1 — mysql2 dirties the current transaction on any materialized query mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
-    },
-    {
       "id": "phase1-pg-template",
       "type": "story",
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
@@ -815,12 +833,6 @@
       "type": "story",
       "title": "Phase 2 — MariaDB template (measure before committing)",
       "terms": "phase2-mariadb-template phase 2 — mariadb template (measure before committing) test-perf 0008-test-perf-template-clone context"
-    },
-    {
-      "id": "phase2-route-data-path-through-withrawconnection",
-      "type": "story",
-      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
-      "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
     },
     {
       "id": "phase2a-read-path",
@@ -913,12 +925,6 @@
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
     },
     {
-      "id": "relation-includes-count-join-dependency",
-      "type": "story",
-      "title": "Relation: count and count(\"*\") with includes must apply join dependency",
-      "terms": "relation-includes-count-join-dependency relation: count and count(\"*\") with includes must apply join dependency relation 0005-activerecord-gaps context"
-    },
-    {
       "id": "relocate-tsc-wrapper",
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
@@ -971,12 +977,6 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
-    },
-    {
-      "id": "view-insert-record-adapter-scope",
-      "type": "story",
-      "title": "View: adapter-scope the over-broad UpdateableViewTest insert-record skip",
-      "terms": "view-insert-record-adapter-scope view: adapter-scope the over-broad updateableviewtest insert-record skip clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "visitor-on-establish",
