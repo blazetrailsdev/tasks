@@ -1,7 +1,7 @@
 ---
 title: "P3 — PG transaction error types (10 skips)"
-status: ready
-updated: 2026-06-08
+status: claimed
+updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-09T00:20:47Z"
+assignee: "p3-pg-transactions"
 blocked-by: null
 ---
 
