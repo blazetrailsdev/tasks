@@ -1,6 +1,6 @@
 ---
 title: "Phase 1 — mysql2 dirties the current transaction on any materialized query"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0000-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: null
+pr: 3067
 claim: "2026-06-09T20:13:46Z"
 assignee: "phase1-dirty-on-any-query"
 blocked-by: null
