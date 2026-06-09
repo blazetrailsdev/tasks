@@ -502,7 +502,7 @@
       "id": "p3-mysql-charset-collation",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL charset/collation and check-constraint quoting (2 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 10,
       "updated": "2026-06-09T00:00:00.000Z",
