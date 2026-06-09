@@ -6,6 +6,8 @@
 |-----|-------|--------|-------|----------|
 | [0000-api-compare-arity-divergences](rfcs/0000-api-compare-arity-divergences/README.md) | Close the genuine api:compare arity divergences — fix the code, document the noise | draft | @dmarano | activerecord, actiondispatch, actionview |
 | [0000-canonical-schema-burndown](rfcs/0000-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | draft | @dmarano | activerecord |
+| [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @dmarano | activerecord, trailties |
+| [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |

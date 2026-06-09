@@ -40,6 +40,44 @@
       "file_path": "rfcs/0000-canonical-schema-burndown/README.md"
     },
     {
+      "id": "0000-load-defaults-config",
+      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "trailties"
+      ],
+      "clusters": [
+        "config-defaults"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0000-load-defaults-config/README.md"
+    },
+    {
+      "id": "0000-mysql-rawconn-convergence",
+      "title": "mysql2 query methods through the abstract withRawConnection loop",
+      "status": "draft",
+      "owner": "@dmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "mysql-rawconn-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0013-pg-rawconn-convergence",
+        "0010-adapter-cleanup"
+      ],
+      "file_path": "rfcs/0000-mysql-rawconn-convergence/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -2608,6 +2646,25 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/lazy-async-schema-reflection.md"
     },
     {
+      "id": "mariadb-coverage-lane",
+      "rfc": "0012-adapter-test-ci",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "status": "draft",
+      "cluster": "ci-lane",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "wire-adapter-dir-lane"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
+    },
+    {
       "id": "migrate-adapter-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from adapter-test-ci + ci-gates",
@@ -2807,6 +2864,40 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
     },
     {
+      "id": "partial-inserts-load-defaults",
+      "rfc": "0000-load-defaults-config",
+      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
+      "status": "draft",
+      "cluster": "config-defaults",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-load-defaults-config/stories/partial-inserts-load-defaults.md"
+    },
+    {
+      "id": "phase1-dirty-on-any-query",
+      "rfc": "0000-mysql-rawconn-convergence",
+      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
+      "status": "draft",
+      "cluster": "mysql-rawconn-convergence",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 30,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase1-dirty-on-any-query.md"
+    },
+    {
       "id": "phase1-pg-template",
       "rfc": "0008-test-perf-template-clone",
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
@@ -2843,6 +2934,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase2-mariadb-template.md"
+    },
+    {
+      "id": "phase2-route-data-path-through-withrawconnection",
+      "rfc": "0000-mysql-rawconn-convergence",
+      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
+      "status": "draft",
+      "cluster": "mysql-rawconn-convergence",
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "phase1-dirty-on-any-query"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase2-route-data-path-through-withrawconnection.md"
     },
     {
       "id": "phase2a-read-path",
