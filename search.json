@@ -7,6 +7,18 @@
       "terms": "0000-api-compare-arity-divergences close the genuine api:compare arity divergences — fix the code, document the noise activerecord actiondispatch actionview api-compare-arity-divergences rfc — close the genuine api:compare arity divergences"
     },
     {
+      "id": "0000-load-defaults-config",
+      "type": "rfc",
+      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
+      "terms": "0000-load-defaults-config versioned framework defaults (config.load_defaults) — partial_inserts first activerecord trailties config-defaults rfc — versioned framework defaults (`config.load_defaults`)"
+    },
+    {
+      "id": "0000-mysql-rawconn-convergence",
+      "type": "rfc",
+      "title": "mysql2 query methods through the abstract withRawConnection loop",
+      "terms": "0000-mysql-rawconn-convergence mysql2 query methods through the abstract withrawconnection loop activerecord mysql-rawconn-convergence rfc — mysql2 query methods through the abstract `withrawconnection` loop"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -733,6 +745,12 @@
       "terms": "lazy-async-schema-reflection lazy async schema reflection (delete explicit loadschema) core 0003-activerecord-cli context"
     },
     {
+      "id": "mariadb-coverage-lane",
+      "type": "story",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "terms": "mariadb-coverage-lane mariadb coverage lane — exercise the never-run mariadb-specific branches ci-lane 0012-adapter-test-ci context"
+    },
+    {
       "id": "migrate-adapter-ci",
       "type": "story",
       "title": "RFC from adapter-test-ci + ci-gates",
@@ -799,6 +817,18 @@
       "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
     },
     {
+      "id": "partial-inserts-load-defaults",
+      "type": "story",
+      "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
+      "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0000-load-defaults-config context"
+    },
+    {
+      "id": "phase1-dirty-on-any-query",
+      "type": "story",
+      "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
+      "terms": "phase1-dirty-on-any-query phase 1 — mysql2 dirties the current transaction on any materialized query mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+    },
+    {
       "id": "phase1-pg-template",
       "type": "story",
       "title": "Phase 1 — PG CREATE DATABASE ... TEMPLATE",
@@ -809,6 +839,12 @@
       "type": "story",
       "title": "Phase 2 — MariaDB template (measure before committing)",
       "terms": "phase2-mariadb-template phase 2 — mariadb template (measure before committing) test-perf 0008-test-perf-template-clone context"
+    },
+    {
+      "id": "phase2-route-data-path-through-withrawconnection",
+      "type": "story",
+      "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
+      "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
     },
     {
       "id": "phase2a-read-path",
