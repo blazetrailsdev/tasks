@@ -1,45 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-ar-framework-gaps",
-      "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
-      "status": "active",
-      "owner": "@dmarano",
-      "created": "2026-06-04T00:00:00.000Z",
-      "updated": "2026-06-04T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "dirty-tracking",
-        "readonly"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-ar-framework-gaps/README.md"
-    },
-    {
-      "id": "0000-ar-test-compare-100",
-      "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-07T00:00:00.000Z",
-      "updated": "2026-06-07T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "hygiene",
-        "unblockers",
-        "clusters",
-        "adapter",
-        "integrated"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-ar-test-compare-100/README.md"
-    },
-    {
       "id": "0000-arel-collector-threading",
       "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
       "status": "draft",
@@ -338,12 +299,51 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0014-fixtures-adoption/README.md"
+    },
+    {
+      "id": "0015-ar-framework-gaps",
+      "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-04T00:00:00.000Z",
+      "updated": "2026-06-04T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "dirty-tracking",
+        "readonly"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0015-ar-framework-gaps/README.md"
+    },
+    {
+      "id": "0016-ar-test-compare-100",
+      "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-07T00:00:00.000Z",
+      "updated": "2026-06-07T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "hygiene",
+        "unblockers",
+        "clusters",
+        "adapter",
+        "integrated"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0016-ar-test-compare-100/README.md"
     }
   ],
   "stories": [
     {
       "id": "p3-mysql-auto-increment",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL auto-increment (4 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -356,11 +356,11 @@
       "claim": "2026-06-08T23:10:05Z",
       "assignee": "p3-mysql-auto-increment",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
     },
     {
       "id": "p3-mysql-stored-procedures",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -373,11 +373,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
     },
     {
       "id": "p3-mysql-explain-and-hints",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -390,11 +390,11 @@
       "claim": "2026-06-08T23:30:45Z",
       "assignee": "p3-mysql-explain-and-hints",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-explain-and-hints.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-explain-and-hints.md"
     },
     {
       "id": "p3-mysql-transactions-deadlock",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -407,11 +407,11 @@
       "claim": "2026-06-08T23:55:45Z",
       "assignee": "p3-mysql-transactions-deadlock",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-transactions-deadlock.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-transactions-deadlock.md"
     },
     {
       "id": "p3-pg-transactions",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG transaction error types (10 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -424,11 +424,11 @@
       "claim": "2026-06-09T00:20:47Z",
       "assignee": "p3-pg-transactions",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-transactions.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-transactions.md"
     },
     {
       "id": "p3-pg-referential-integrity-and-adapter",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG referential integrity and adapter (10 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -441,11 +441,11 @@
       "claim": "2026-06-09T12:59:59Z",
       "assignee": "p3-pg-referential-integrity-and-adapter",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-referential-integrity-and-adapter.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-referential-integrity-and-adapter.md"
     },
     {
       "id": "p3-pg-optimizer-hints-and-enum",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -458,11 +458,11 @@
       "claim": "2026-06-09T11:52:02Z",
       "assignee": "p3-pg-optimizer-hints-and-enum",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-optimizer-hints-and-enum.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-optimizer-hints-and-enum.md"
     },
     {
       "id": "p3-mysql-unsigned-type",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL unsigned type (6 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -477,11 +477,11 @@
       "claim": "2026-06-09T13:54:41Z",
       "assignee": "p3-mysql-unsigned-type",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-unsigned-type.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-unsigned-type.md"
     },
     {
       "id": "p3-mysql-set-and-enum",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL SET and ENUM types (4 skips)",
       "status": "done",
       "cluster": "adapter",
@@ -496,11 +496,11 @@
       "claim": "2026-06-09T14:06:45Z",
       "assignee": "p3-mysql-set-and-enum",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-set-and-enum.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-set-and-enum.md"
     },
     {
       "id": "p3-mysql-charset-collation",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL charset/collation and check-constraint quoting (2 skips)",
       "status": "in-progress",
       "cluster": "adapter",
@@ -515,11 +515,11 @@
       "claim": "2026-06-09T14:18:46Z",
       "assignee": "p3-mysql-charset-collation",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-charset-collation.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-charset-collation.md"
     },
     {
       "id": "p3-mysql-virtual-column",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL virtual column (2 skips)",
       "status": "ready",
       "cluster": "adapter",
@@ -534,11 +534,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
     },
     {
       "id": "p3-pg-array-and-misc",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG array and misc adapter (17 skips)",
       "status": "ready",
       "cluster": "adapter",
@@ -553,7 +553,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
     },
     {
       "id": "pool-merge-resolve-url-config-unskip",
@@ -795,7 +795,7 @@
     },
     {
       "id": "readonly-hmt-collection-flag",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "HMT collection not implicitly marked readonly",
       "status": "done",
       "cluster": "readonly",
@@ -808,7 +808,7 @@
       "claim": "2026-06-06T12:03:03Z",
       "assignee": "readonly-hmt-collection-flag",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/readonly-hmt-collection-flag.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/readonly-hmt-collection-flag.md"
     },
     {
       "id": "a4-sweep-remaining-callers",
@@ -850,7 +850,7 @@
     },
     {
       "id": "readonly-collection-proxy-propagation",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Collection-proxy readonly propagation",
       "status": "done",
       "cluster": "readonly",
@@ -863,7 +863,7 @@
       "claim": "2026-06-06T13:31:11Z",
       "assignee": "readonly-collection-proxy-propagation",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/readonly-collection-proxy-propagation.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/readonly-collection-proxy-propagation.md"
     },
     {
       "id": "gate-mismatch-cleanup",
@@ -884,7 +884,7 @@
     },
     {
       "id": "readonly-collection-method-missing",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Collection proxy method_missing delegation (+ Comment.allAsMethod)",
       "status": "done",
       "cluster": "readonly",
@@ -897,7 +897,7 @@
       "claim": "2026-06-06T14:31:11Z",
       "assignee": "readonly-collection-method-missing",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/readonly-collection-method-missing.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/readonly-collection-method-missing.md"
     },
     {
       "id": "track9-single-test-gaps",
@@ -935,7 +935,7 @@
     },
     {
       "id": "dirty-create-time-capture",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Create-time dirty capture for mass-assigned attributes",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -948,11 +948,11 @@
       "claim": "2026-06-05T17:46:33Z",
       "assignee": "dirty-create-time-capture",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-create-time-capture.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-create-time-capture.md"
     },
     {
       "id": "dirty-serialize-content-topic",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "serialize :content on canonical Topic (+ schema)",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -965,11 +965,11 @@
       "claim": "2026-06-06T16:31:09Z",
       "assignee": "dirty-serialize-content-topic",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-serialize-content-topic.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-serialize-content-topic.md"
     },
     {
       "id": "dirty-attribute-will-change-api",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Public attribute_will_change! API",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -982,11 +982,11 @@
       "claim": "2026-06-06T16:50:27Z",
       "assignee": "dirty-attribute-will-change-api",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-attribute-will-change-api.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-attribute-will-change-api.md"
     },
     {
       "id": "dirty-parrot-virtual-attr-registry",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Canonical Parrot virtual attr + model registry",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -999,11 +999,11 @@
       "claim": "2026-06-06T17:05:28Z",
       "assignee": "dirty-parrot-virtual-attr-registry",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-parrot-virtual-attr-registry.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-parrot-virtual-attr-registry.md"
     },
     {
       "id": "dirty-enum-from-to-casting",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Enum dirty from:/to: casting",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1018,7 +1018,7 @@
       "claim": "2026-06-06T17:35:47Z",
       "assignee": "dirty-enum-from-to-casting",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-enum-from-to-casting.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-enum-from-to-casting.md"
     },
     {
       "id": "abstract-class-own-property-fix",
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "dirty-reflected-in-memory-defaults",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Reflected in-memory defaults applied on new",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1052,11 +1052,11 @@
       "claim": "2026-06-06T18:05:27Z",
       "assignee": "dirty-reflected-in-memory-defaults",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-reflected-in-memory-defaults.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-reflected-in-memory-defaults.md"
     },
     {
       "id": "dirty-alias-under-reflection",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Alias dirty under reflection",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1069,11 +1069,11 @@
       "claim": "2026-06-06T19:30:56Z",
       "assignee": "dirty-alias-under-reflection",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-alias-under-reflection.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-alias-under-reflection.md"
     },
     {
       "id": "dirty-missing-attribute-error",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "MissingAttributeError on unselected access",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1086,11 +1086,11 @@
       "claim": "2026-06-06T20:15:56Z",
       "assignee": "dirty-missing-attribute-error",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-missing-attribute-error.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-missing-attribute-error.md"
     },
     {
       "id": "dirty-query-count-parity",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "No-op UPDATE / query-count parity",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1103,11 +1103,11 @@
       "claim": "2026-06-06T20:30:56Z",
       "assignee": "dirty-query-count-parity",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-query-count-parity.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-query-count-parity.md"
     },
     {
       "id": "dirty-tz-datetime-roundtrip",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "TZ-aware datetime string round-trip",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1120,11 +1120,11 @@
       "claim": "2026-06-06T23:15:56Z",
       "assignee": "dirty-tz-datetime-roundtrip",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-tz-datetime-roundtrip.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-tz-datetime-roundtrip.md"
     },
     {
       "id": "dirty-js-date-coercion",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "JS Date <-> datetime attribute coercion",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1137,7 +1137,7 @@
       "claim": "2026-06-06T23:30:56Z",
       "assignee": "dirty-js-date-coercion",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-js-date-coercion.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-js-date-coercion.md"
     },
     {
       "id": "w1b-variadic-rest-overloads",
@@ -1175,7 +1175,7 @@
     },
     {
       "id": "dirty-sql-function-defaults",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "SQL-function column defaults in defineSchema",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1188,7 +1188,7 @@
       "claim": "2026-06-07T00:00:58Z",
       "assignee": "dirty-sql-function-defaults",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-sql-function-defaults.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-sql-function-defaults.md"
     },
     {
       "id": "small-followups-bundle",
@@ -1228,7 +1228,7 @@
     },
     {
       "id": "dirty-custom-changed-in-place-hook",
-      "rfc": "0000-ar-framework-gaps",
+      "rfc": "0015-ar-framework-gaps",
       "title": "Custom attribute-type changed_in_place? hook",
       "status": "done",
       "cluster": "dirty-tracking",
@@ -1241,7 +1241,7 @@
       "claim": "2026-06-07T01:30:56Z",
       "assignee": "dirty-custom-changed-in-place-hook",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-framework-gaps/stories/dirty-custom-changed-in-place-hook.md"
+      "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-custom-changed-in-place-hook.md"
     },
     {
       "id": "tier1-opportunistic-conversion",
@@ -1660,7 +1660,7 @@
     },
     {
       "id": "f1-insert-all-cluster",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-1 — insert_all cluster",
       "status": "done",
       "cluster": "clusters",
@@ -1673,11 +1673,11 @@
       "claim": "2026-06-07T20:55:51Z",
       "assignee": "f1-insert-all-cluster",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f1-insert-all-cluster.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f1-insert-all-cluster.md"
     },
     {
       "id": "f2-connection-pool-campaign",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-2 — connection-pool / multi-db campaign",
       "status": "done",
       "cluster": "clusters",
@@ -1690,11 +1690,11 @@
       "claim": "2026-06-07T22:07:51Z",
       "assignee": "f2-connection-pool-campaign",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f2-connection-pool-campaign.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f2-connection-pool-campaign.md"
     },
     {
       "id": "f3-migration-runner-campaign",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-3 — migration runner campaign",
       "status": "done",
       "cluster": "clusters",
@@ -1707,11 +1707,11 @@
       "claim": "2026-06-07T22:28:41Z",
       "assignee": "f3-migration-runner-campaign",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f3-migration-runner-campaign.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f3-migration-runner-campaign.md"
     },
     {
       "id": "f4-transactions-campaign",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-4 — transactions + callbacks + touch",
       "status": "done",
       "cluster": "clusters",
@@ -1724,11 +1724,11 @@
       "claim": "2026-06-07T22:40:41Z",
       "assignee": "f4-transactions-campaign",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f4-transactions-campaign.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f4-transactions-campaign.md"
     },
     {
       "id": "f5-query-cache-residuals",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-5 — query-cache residuals",
       "status": "ready",
       "cluster": "clusters",
@@ -1743,11 +1743,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f5-query-cache-residuals.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f5-query-cache-residuals.md"
     },
     {
       "id": "f6-nested-attributes",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-6 — nested-attributes cluster",
       "status": "done",
       "cluster": "clusters",
@@ -1760,11 +1760,11 @@
       "claim": "2026-06-07T22:52:40Z",
       "assignee": "f6-nested-attributes",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f6-nested-attributes.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f6-nested-attributes.md"
     },
     {
       "id": "f6b-repair-validations-helper",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-6b — repair_validations test helper",
       "status": "ready",
       "cluster": "clusters",
@@ -1777,11 +1777,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f6b-repair-validations-helper.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f6b-repair-validations-helper.md"
     },
     {
       "id": "f6c-nested-attrs-canonical-models",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models",
       "status": "ready",
       "cluster": "clusters",
@@ -1796,11 +1796,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f6c-nested-attrs-canonical-models.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f6c-nested-attrs-canonical-models.md"
     },
     {
       "id": "f7-fixtures-backed-clusters",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-7 — fixtures-backed clusters",
       "status": "ready",
       "cluster": "clusters",
@@ -1815,11 +1815,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f7-fixtures-backed-clusters.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f7-fixtures-backed-clusters.md"
     },
     {
       "id": "f8-small-core-leftovers",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "F-8 — small core leftovers",
       "status": "done",
       "cluster": "clusters",
@@ -1832,7 +1832,7 @@
       "claim": "2026-06-08T00:04:43Z",
       "assignee": "f8-small-core-leftovers",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/f8-small-core-leftovers.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/f8-small-core-leftovers.md"
     },
     {
       "id": "fix-tasks-new-command",
@@ -1853,7 +1853,7 @@
     },
     {
       "id": "h3-reclassify-permanent-skips",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "H-3 — reclassify permanent skips",
       "status": "done",
       "cluster": "hygiene",
@@ -1866,11 +1866,11 @@
       "claim": "2026-06-07T20:51:46Z",
       "assignee": "h3-reclassify-permanent-skips",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/h3-reclassify-permanent-skips.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/h3-reclassify-permanent-skips.md"
     },
     {
       "id": "i1-schema-dumper-columnspec-u3",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "I-1 — Epic 3.3-U3: schema-dumper columnSpec wiring",
       "status": "done",
       "cluster": "unblockers",
@@ -1883,11 +1883,11 @@
       "claim": "2026-06-08T00:16:41Z",
       "assignee": "i1-schema-dumper-columnspec-u3",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/i1-schema-dumper-columnspec-u3.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/i1-schema-dumper-columnspec-u3.md"
     },
     {
       "id": "i2-enum-cast",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "I-2 — type_for_attribute enum write-casting",
       "status": "done",
       "cluster": "unblockers",
@@ -1900,7 +1900,7 @@
       "claim": "2026-06-08T00:28:40Z",
       "assignee": "i2-enum-cast",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/i2-enum-cast.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/i2-enum-cast.md"
     },
     {
       "id": "lazy-async-schema-reflection",
@@ -2122,7 +2122,7 @@
     },
     {
       "id": "p3-adapter-type-families",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — adapter type-families (PG ~94 + MySQL ~41)",
       "status": "done",
       "cluster": "adapter",
@@ -2135,11 +2135,11 @@
       "claim": "2026-06-08T00:40:43Z",
       "assignee": "p3-adapter-type-families",
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-adapter-type-families.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-adapter-type-families.md"
     },
     {
       "id": "p3-pg-enum-orm-and-schema",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
       "status": "draft",
       "cluster": null,
@@ -2152,7 +2152,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
     },
     {
       "id": "p3-subclass-threading",
@@ -2773,7 +2773,7 @@
     },
     {
       "id": "w7-associations-relation-tail",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "W7 — associations + relation tail (audit-gated)",
       "status": "ready",
       "cluster": "integrated",
@@ -2788,11 +2788,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/w7-associations-relation-tail.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/w7-associations-relation-tail.md"
     },
     {
       "id": "w7-named-inner-joins-fix",
-      "rfc": "0000-ar-test-compare-100",
+      "rfc": "0016-ar-test-compare-100",
       "title": "W7 — _namedInnerJoins merger/scope fix",
       "status": "ready",
       "cluster": "integrated",
@@ -2805,7 +2805,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-ar-test-compare-100/stories/w7-named-inner-joins-fix.md"
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/w7-named-inner-joins-fix.md"
     },
     {
       "id": "wire-adapter-dir-lane",

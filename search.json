@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-ar-framework-gaps",
-      "type": "rfc",
-      "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
-      "terms": "0000-ar-framework-gaps activerecord framework gaps — dirty-tracking + readonly (test-port surfaced) activerecord dirty-tracking readonly rfc — activerecord framework gaps: dirty-tracking + readonly"
-    },
-    {
-      "id": "0000-ar-test-compare-100",
-      "type": "rfc",
-      "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
-      "terms": "0000-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc — activerecord test:compare 100%: phase-ordered un-skip campaign"
-    },
-    {
       "id": "0000-arel-collector-threading",
       "type": "rfc",
       "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
@@ -109,76 +97,88 @@
       "terms": "0014-fixtures-adoption fixtures adoption — opportunistic tier-1 conversion; defer the sweep activerecord fixtures rfc 0014 — fixtures adoption: opportunistic tier-1 conversion, defer the sweep"
     },
     {
+      "id": "0015-ar-framework-gaps",
+      "type": "rfc",
+      "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
+      "terms": "0015-ar-framework-gaps activerecord framework gaps — dirty-tracking + readonly (test-port surfaced) activerecord dirty-tracking readonly rfc 0015 — activerecord framework gaps: dirty-tracking + readonly"
+    },
+    {
+      "id": "0016-ar-test-compare-100",
+      "type": "rfc",
+      "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
+      "terms": "0016-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc 0016 — activerecord test:compare 100%: phase-ordered un-skip campaign"
+    },
+    {
       "id": "p3-mysql-auto-increment",
       "type": "story",
       "title": "P3 — MySQL auto-increment (4 skips)",
-      "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-stored-procedures",
       "type": "story",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
-      "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-explain-and-hints",
       "type": "story",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
-      "terms": "p3-mysql-explain-and-hints p3 — mysql explain and optimizer hints (4 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-explain-and-hints p3 — mysql explain and optimizer hints (4 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-transactions-deadlock",
       "type": "story",
       "title": "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)",
-      "terms": "p3-mysql-transactions-deadlock p3 — mysql transactions, deadlock, lock-row delete (5 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-transactions-deadlock p3 — mysql transactions, deadlock, lock-row delete (5 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-pg-transactions",
       "type": "story",
       "title": "P3 — PG transaction error types (10 skips)",
-      "terms": "p3-pg-transactions p3 — pg transaction error types (10 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-pg-transactions p3 — pg transaction error types (10 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-pg-referential-integrity-and-adapter",
       "type": "story",
       "title": "P3 — PG referential integrity and adapter (10 skips)",
-      "terms": "p3-pg-referential-integrity-and-adapter p3 — pg referential integrity and adapter (10 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-pg-referential-integrity-and-adapter p3 — pg referential integrity and adapter (10 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-pg-optimizer-hints-and-enum",
       "type": "story",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
-      "terms": "p3-pg-optimizer-hints-and-enum p3 — pg optimizer hints and enum (10 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-pg-optimizer-hints-and-enum p3 — pg optimizer hints and enum (10 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-unsigned-type",
       "type": "story",
       "title": "P3 — MySQL unsigned type (6 skips)",
-      "terms": "p3-mysql-unsigned-type p3 — mysql unsigned type (6 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-unsigned-type p3 — mysql unsigned type (6 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-set-and-enum",
       "type": "story",
       "title": "P3 — MySQL SET and ENUM types (4 skips)",
-      "terms": "p3-mysql-set-and-enum p3 — mysql set and enum types (4 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-set-and-enum p3 — mysql set and enum types (4 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-charset-collation",
       "type": "story",
       "title": "P3 — MySQL charset/collation and check-constraint quoting (2 skips)",
-      "terms": "p3-mysql-charset-collation p3 — mysql charset/collation and check-constraint quoting (2 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-charset-collation p3 — mysql charset/collation and check-constraint quoting (2 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-mysql-virtual-column",
       "type": "story",
       "title": "P3 — MySQL virtual column (2 skips)",
-      "terms": "p3-mysql-virtual-column p3 — mysql virtual column (2 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-mysql-virtual-column p3 — mysql virtual column (2 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-pg-array-and-misc",
       "type": "story",
       "title": "P3 — PG array and misc adapter (17 skips)",
-      "terms": "p3-pg-array-and-misc p3 — pg array and misc adapter (17 skips) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-pg-array-and-misc p3 — pg array and misc adapter (17 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "pool-merge-resolve-url-config-unskip",
@@ -268,7 +268,7 @@
       "id": "readonly-hmt-collection-flag",
       "type": "story",
       "title": "HMT collection not implicitly marked readonly",
-      "terms": "readonly-hmt-collection-flag hmt collection not implicitly marked readonly readonly 0000-ar-framework-gaps context"
+      "terms": "readonly-hmt-collection-flag hmt collection not implicitly marked readonly readonly 0015-ar-framework-gaps context"
     },
     {
       "id": "a4-sweep-remaining-callers",
@@ -286,7 +286,7 @@
       "id": "readonly-collection-proxy-propagation",
       "type": "story",
       "title": "Collection-proxy readonly propagation",
-      "terms": "readonly-collection-proxy-propagation collection-proxy readonly propagation readonly 0000-ar-framework-gaps context"
+      "terms": "readonly-collection-proxy-propagation collection-proxy readonly propagation readonly 0015-ar-framework-gaps context"
     },
     {
       "id": "gate-mismatch-cleanup",
@@ -298,7 +298,7 @@
       "id": "readonly-collection-method-missing",
       "type": "story",
       "title": "Collection proxy method_missing delegation (+ Comment.allAsMethod)",
-      "terms": "readonly-collection-method-missing collection proxy method_missing delegation (+ comment.allasmethod) readonly 0000-ar-framework-gaps context"
+      "terms": "readonly-collection-method-missing collection proxy method_missing delegation (+ comment.allasmethod) readonly 0015-ar-framework-gaps context"
     },
     {
       "id": "track9-single-test-gaps",
@@ -316,31 +316,31 @@
       "id": "dirty-create-time-capture",
       "type": "story",
       "title": "Create-time dirty capture for mass-assigned attributes",
-      "terms": "dirty-create-time-capture create-time dirty capture for mass-assigned attributes dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-create-time-capture create-time dirty capture for mass-assigned attributes dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-serialize-content-topic",
       "type": "story",
       "title": "serialize :content on canonical Topic (+ schema)",
-      "terms": "dirty-serialize-content-topic serialize :content on canonical topic (+ schema) dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-serialize-content-topic serialize :content on canonical topic (+ schema) dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-attribute-will-change-api",
       "type": "story",
       "title": "Public attribute_will_change! API",
-      "terms": "dirty-attribute-will-change-api public attribute_will_change! api dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-attribute-will-change-api public attribute_will_change! api dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-parrot-virtual-attr-registry",
       "type": "story",
       "title": "Canonical Parrot virtual attr + model registry",
-      "terms": "dirty-parrot-virtual-attr-registry canonical parrot virtual attr + model registry dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-parrot-virtual-attr-registry canonical parrot virtual attr + model registry dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-enum-from-to-casting",
       "type": "story",
       "title": "Enum dirty from:/to: casting",
-      "terms": "dirty-enum-from-to-casting enum dirty from:/to: casting dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-enum-from-to-casting enum dirty from:/to: casting dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "abstract-class-own-property-fix",
@@ -352,37 +352,37 @@
       "id": "dirty-reflected-in-memory-defaults",
       "type": "story",
       "title": "Reflected in-memory defaults applied on new",
-      "terms": "dirty-reflected-in-memory-defaults reflected in-memory defaults applied on new dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-reflected-in-memory-defaults reflected in-memory defaults applied on new dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-alias-under-reflection",
       "type": "story",
       "title": "Alias dirty under reflection",
-      "terms": "dirty-alias-under-reflection alias dirty under reflection dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-alias-under-reflection alias dirty under reflection dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-missing-attribute-error",
       "type": "story",
       "title": "MissingAttributeError on unselected access",
-      "terms": "dirty-missing-attribute-error missingattributeerror on unselected access dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-missing-attribute-error missingattributeerror on unselected access dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-query-count-parity",
       "type": "story",
       "title": "No-op UPDATE / query-count parity",
-      "terms": "dirty-query-count-parity no-op update / query-count parity dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-query-count-parity no-op update / query-count parity dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-tz-datetime-roundtrip",
       "type": "story",
       "title": "TZ-aware datetime string round-trip",
-      "terms": "dirty-tz-datetime-roundtrip tz-aware datetime string round-trip dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-tz-datetime-roundtrip tz-aware datetime string round-trip dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "dirty-js-date-coercion",
       "type": "story",
       "title": "JS Date <-> datetime attribute coercion",
-      "terms": "dirty-js-date-coercion js date <-> datetime attribute coercion dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-js-date-coercion js date <-> datetime attribute coercion dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "w1b-variadic-rest-overloads",
@@ -400,7 +400,7 @@
       "id": "dirty-sql-function-defaults",
       "type": "story",
       "title": "SQL-function column defaults in defineSchema",
-      "terms": "dirty-sql-function-defaults sql-function column defaults in defineschema dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-sql-function-defaults sql-function column defaults in defineschema dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "small-followups-bundle",
@@ -418,7 +418,7 @@
       "id": "dirty-custom-changed-in-place-hook",
       "type": "story",
       "title": "Custom attribute-type changed_in_place? hook",
-      "terms": "dirty-custom-changed-in-place-hook custom attribute-type changed_in_place? hook dirty-tracking 0000-ar-framework-gaps context"
+      "terms": "dirty-custom-changed-in-place-hook custom attribute-type changed_in_place? hook dirty-tracking 0015-ar-framework-gaps context"
     },
     {
       "id": "tier1-opportunistic-conversion",
@@ -562,61 +562,61 @@
       "id": "f1-insert-all-cluster",
       "type": "story",
       "title": "F-1 — insert_all cluster",
-      "terms": "f1-insert-all-cluster f-1 — insert_all cluster clusters 0000-ar-test-compare-100 context"
+      "terms": "f1-insert-all-cluster f-1 — insert_all cluster clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f2-connection-pool-campaign",
       "type": "story",
       "title": "F-2 — connection-pool / multi-db campaign",
-      "terms": "f2-connection-pool-campaign f-2 — connection-pool / multi-db campaign clusters 0000-ar-test-compare-100 context"
+      "terms": "f2-connection-pool-campaign f-2 — connection-pool / multi-db campaign clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f3-migration-runner-campaign",
       "type": "story",
       "title": "F-3 — migration runner campaign",
-      "terms": "f3-migration-runner-campaign f-3 — migration runner campaign clusters 0000-ar-test-compare-100 context"
+      "terms": "f3-migration-runner-campaign f-3 — migration runner campaign clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f4-transactions-campaign",
       "type": "story",
       "title": "F-4 — transactions + callbacks + touch",
-      "terms": "f4-transactions-campaign f-4 — transactions + callbacks + touch clusters 0000-ar-test-compare-100 context"
+      "terms": "f4-transactions-campaign f-4 — transactions + callbacks + touch clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f5-query-cache-residuals",
       "type": "story",
       "title": "F-5 — query-cache residuals",
-      "terms": "f5-query-cache-residuals f-5 — query-cache residuals clusters 0000-ar-test-compare-100 context"
+      "terms": "f5-query-cache-residuals f-5 — query-cache residuals clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f6-nested-attributes",
       "type": "story",
       "title": "F-6 — nested-attributes cluster",
-      "terms": "f6-nested-attributes f-6 — nested-attributes cluster clusters 0000-ar-test-compare-100 context"
+      "terms": "f6-nested-attributes f-6 — nested-attributes cluster clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f6b-repair-validations-helper",
       "type": "story",
       "title": "F-6b — repair_validations test helper",
-      "terms": "f6b-repair-validations-helper f-6b — repair_validations test helper clusters 0000-ar-test-compare-100 context"
+      "terms": "f6b-repair-validations-helper f-6b — repair_validations test helper clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f6c-nested-attrs-canonical-models",
       "type": "story",
       "title": "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models",
-      "terms": "f6c-nested-attrs-canonical-models f-6c — migrate nested-attributes.test.ts to canonical human/interest models clusters 0000-ar-test-compare-100 context"
+      "terms": "f6c-nested-attrs-canonical-models f-6c — migrate nested-attributes.test.ts to canonical human/interest models clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f7-fixtures-backed-clusters",
       "type": "story",
       "title": "F-7 — fixtures-backed clusters",
-      "terms": "f7-fixtures-backed-clusters f-7 — fixtures-backed clusters clusters 0000-ar-test-compare-100 context"
+      "terms": "f7-fixtures-backed-clusters f-7 — fixtures-backed clusters clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "f8-small-core-leftovers",
       "type": "story",
       "title": "F-8 — small core leftovers",
-      "terms": "f8-small-core-leftovers f-8 — small core leftovers clusters 0000-ar-test-compare-100 context"
+      "terms": "f8-small-core-leftovers f-8 — small core leftovers clusters 0016-ar-test-compare-100 context"
     },
     {
       "id": "fix-tasks-new-command",
@@ -628,19 +628,19 @@
       "id": "h3-reclassify-permanent-skips",
       "type": "story",
       "title": "H-3 — reclassify permanent skips",
-      "terms": "h3-reclassify-permanent-skips h-3 — reclassify permanent skips hygiene 0000-ar-test-compare-100 context"
+      "terms": "h3-reclassify-permanent-skips h-3 — reclassify permanent skips hygiene 0016-ar-test-compare-100 context"
     },
     {
       "id": "i1-schema-dumper-columnspec-u3",
       "type": "story",
       "title": "I-1 — Epic 3.3-U3: schema-dumper columnSpec wiring",
-      "terms": "i1-schema-dumper-columnspec-u3 i-1 — epic 3.3-u3: schema-dumper columnspec wiring unblockers 0000-ar-test-compare-100 context"
+      "terms": "i1-schema-dumper-columnspec-u3 i-1 — epic 3.3-u3: schema-dumper columnspec wiring unblockers 0016-ar-test-compare-100 context"
     },
     {
       "id": "i2-enum-cast",
       "type": "story",
       "title": "I-2 — type_for_attribute enum write-casting",
-      "terms": "i2-enum-cast i-2 — type_for_attribute enum write-casting unblockers 0000-ar-test-compare-100 context"
+      "terms": "i2-enum-cast i-2 — type_for_attribute enum write-casting unblockers 0016-ar-test-compare-100 context"
     },
     {
       "id": "lazy-async-schema-reflection",
@@ -718,13 +718,13 @@
       "id": "p3-adapter-type-families",
       "type": "story",
       "title": "P3 — adapter type-families (PG ~94 + MySQL ~41)",
-      "terms": "p3-adapter-type-families p3 — adapter type-families (pg ~94 + mysql ~41) adapter 0000-ar-test-compare-100 context"
+      "terms": "p3-adapter-type-families p3 — adapter type-families (pg ~94 + mysql ~41) adapter 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-pg-enum-orm-and-schema",
       "type": "story",
       "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
-      "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0000-ar-test-compare-100 context"
+      "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
     },
     {
       "id": "p3-subclass-threading",
@@ -934,13 +934,13 @@
       "id": "w7-associations-relation-tail",
       "type": "story",
       "title": "W7 — associations + relation tail (audit-gated)",
-      "terms": "w7-associations-relation-tail w7 — associations + relation tail (audit-gated) integrated 0000-ar-test-compare-100 context"
+      "terms": "w7-associations-relation-tail w7 — associations + relation tail (audit-gated) integrated 0016-ar-test-compare-100 context"
     },
     {
       "id": "w7-named-inner-joins-fix",
       "type": "story",
       "title": "W7 — _namedInnerJoins merger/scope fix",
-      "terms": "w7-named-inner-joins-fix w7 — _namedinnerjoins merger/scope fix integrated 0000-ar-test-compare-100 context"
+      "terms": "w7-named-inner-joins-fix w7 — _namedinnerjoins merger/scope fix integrated 0016-ar-test-compare-100 context"
     },
     {
       "id": "wire-adapter-dir-lane",

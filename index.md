@@ -4,8 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-ar-framework-gaps](rfcs/0000-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
-| [0000-ar-test-compare-100](rfcs/0000-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | draft | @dmarano | activerecord |
 | [0000-arel-collector-threading](rfcs/0000-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | draft | @dmarano | arel, activerecord |
 | [0000-ddl-visitor-convergence](rfcs/0000-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
@@ -22,3 +20,5 @@
 | [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |
 | [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @dmarano | activerecord |
 | [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | active | @dmarano | activerecord |
+| [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
+| [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @dmarano | activerecord |
