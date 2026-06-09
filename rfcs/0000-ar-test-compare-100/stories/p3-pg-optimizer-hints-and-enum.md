@@ -1,6 +1,6 @@
 ---
 title: "P3 — PG optimizer hints and enum (10 skips)"
-status: claimed
+status: in-progress
 updated: 2026-06-09
 rfc: "0000-ar-test-compare-100"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 7
-pr: null
+pr: 3054
 claim: "2026-06-09T11:52:02Z"
 assignee: "p3-pg-optimizer-hints-and-enum"
 blocked-by: null
