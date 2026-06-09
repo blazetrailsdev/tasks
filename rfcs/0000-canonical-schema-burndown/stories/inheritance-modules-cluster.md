@@ -4,7 +4,7 @@ status: draft
 updated: 2026-06-09
 rfc: "0000-canonical-schema-burndown"
 cluster: fixtures
-deps: []
+deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
 priority: 2
@@ -38,5 +38,6 @@ Files (remove each from the exclude JSON as it lands):
 
 ## Notes
 
-- `reflection.test.ts` declares a `people:{name,age,active}` scratch shape — rename
-  or rely on `shared-table-convergence` if the body needs those columns.
+- `reflection.test.ts` declares a `people:{name,age,active}` scratch shape — a known
+  `people`-collision file; `deps` on `shared-table-convergence` guarantees it is
+  converged first, so ride the canonical `people` table.

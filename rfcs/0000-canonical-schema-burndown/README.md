@@ -270,7 +270,7 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 | [calculations-aggregations](stories/calculations-aggregations.md)                     | calculations + aggregations             | 2        | ~500    | draft  | shared-table-convergence        |
 | [persistence-dup-cluster](stories/persistence-dup-cluster.md)                         | persistence / dup / clone / insert-all  | 2        | ~450    | draft  | —                               |
 | [callbacks-transactions-cluster](stories/callbacks-transactions-cluster.md)           | callbacks / transactions / locking      | 2        | ~500    | draft  | shared-table-convergence        |
-| [inheritance-modules-cluster](stories/inheritance-modules-cluster.md)                 | inheritance / modules / reflection      | 2        | ~450    | draft  | —                               |
+| [inheritance-modules-cluster](stories/inheritance-modules-cluster.md)                 | inheritance / modules / reflection      | 2        | ~450    | draft  | shared-table-convergence        |
 | [misc-core-cluster](stories/misc-core-cluster.md)                                     | explain / strict-loading / suppressor   | 2        | ~350    | draft  | —                               |
 | [associations-collection-cluster](stories/associations-collection-cluster.md)         | has-many / belongs-to / collection      | 3        | ~500    | draft  | shared-table-convergence        |
 | [associations-eager-join-cluster](stories/associations-eager-join-cluster.md)         | eager / join / habtm                    | 3        | ~500    | draft  | shared-table-convergence        |
@@ -290,3 +290,8 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
   framework-blocked `has-many-through-disable-joins-associations.test.ts` out of
   `associations-disable-joins-cluster` into its own `hmt-disable-joins-conversion`
   story with an explicit `blocked-by`.
+- 2026-06-09: re-review (PR #14) — added `deps: shared-table-convergence` to
+  `inheritance-modules-cluster` (known `people` collider in `reflection.test.ts`)
+  with a definitive note; repointed `hmt-disable-joins-conversion`'s `blocked-by`
+  from `0015-ar-framework-gaps` to `0005-activerecord-gaps` (the association-gaps
+  RFC) since both blockers are association-layer, not dirty/readonly.

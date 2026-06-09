@@ -11,7 +11,7 @@ priority: 3
 pr: null
 claim: null
 assignee: null
-blocked-by: "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Register/track these as framework-fix stories (0015-ar-framework-gaps or a new RFC) before claiming."
+blocked-by: "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Both are association-layer gaps — register/track them as framework-fix stories under 0005-activerecord-gaps (associations parity) before claiming."
 ---
 
 ## Context
@@ -41,5 +41,5 @@ Rails counterpart: `associations/has_many_through_disable_joins_associations_tes
 - The two gaps (memory `hmt_disable_joins_fixture_parity_blocked`): counter_cache +
   alias_attribute unresolved in `updateCounters`; `ThroughReflection.klass` resolves
   via `_delegate` rather than `sourceReflection` so `disableJoins` source assocs miss
-  the registry. Both are core fixes — they belong in a framework RFC
-  (`0015-ar-framework-gaps`), not in this fixtures story.
+  the registry. Both are association-layer fixes — they belong under
+  `0005-activerecord-gaps` (associations parity), not in this fixtures story.

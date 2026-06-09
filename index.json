@@ -674,7 +674,9 @@
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "shared-table-convergence"
+      ],
       "deps_rfc": [],
       "est_loc": 450,
       "pr": null,
@@ -883,7 +885,7 @@
       "pr": null,
       "claim": null,
       "assignee": null,
-      "blocked_by": "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Register/track these as framework-fix stories (0015-ar-framework-gaps or a new RFC) before claiming.",
+      "blocked_by": "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Both are association-layer gaps — register/track them as framework-fix stories under 0005-activerecord-gaps (associations parity) before claiming.",
       "file_path": "rfcs/0000-canonical-schema-burndown/stories/hmt-disable-joins-conversion.md"
     },
     {
