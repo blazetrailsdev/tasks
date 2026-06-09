@@ -7,7 +7,7 @@ cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 200
-priority: 12
+priority: 20
 pr: null
 claim: "2026-06-09T15:51:02Z"
 assignee: "p3-pg-array-and-misc"

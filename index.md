@@ -5,8 +5,6 @@
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
 | [0000-api-compare-arity-divergences](rfcs/0000-api-compare-arity-divergences/README.md) | Close the genuine api:compare arity divergences — fix the code, document the noise | draft | @dmarano | activerecord, actiondispatch, actionview |
-| [0000-arel-collector-threading](rfcs/0000-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | draft | @dmarano | arel, activerecord |
-| [0000-ddl-visitor-convergence](rfcs/0000-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -23,3 +21,5 @@
 | [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | active | @dmarano | activerecord |
 | [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
 | [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @dmarano | activerecord |
+| [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | active | @dmarano | arel, activerecord |
+| [0018-ddl-visitor-convergence](rfcs/0018-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | active | @dmarano | activerecord |

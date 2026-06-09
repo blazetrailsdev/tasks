@@ -12,13 +12,13 @@ packages:
 clusters:
   - api-compare-arity-divergences
 related-rfcs:
-  - "0000-arel-collector-threading"
+  - "0017-arel-collector-threading"
   - "0005-activerecord-gaps"
 ---
 
 <!-- Unnumbered until merge: keep `rfc:` as 0000-api-compare-arity-divergences and
      the H1 below number-free. `scripts/finalize-rfc.mjs` assigns the number at
-     merge. Sibling RFC 0000-arel-collector-threading clears the 132 arel
+     merge. Sibling RFC 0017-arel-collector-threading clears the 132 arel
      `visit_*(o, collector)` arity mismatches as a *side-effect* of a fidelity
      refactor; THIS RFC owns the non-arel residual — the handful of genuine
      code-level signature divergences hiding in it. -->
@@ -39,7 +39,7 @@ explicit positional args, kwargs collapse to a single options object, and the
 Ruby/TS extractors miss aliases and `**`-splats.
 
 Of the 303, **132 are the arel `visit_*(o, collector)` visitor methods** owned by
-the sibling RFC [0000-arel-collector-threading](../0000-arel-collector-threading/README.md),
+the sibling RFC [0017-arel-collector-threading](../0017-arel-collector-threading/README.md),
 which clears them as a side-effect of a structural-fidelity refactor. That leaves
 a **171-mismatch non-arel residual**. This RFC triages those 171 to a definitive
 ledger, **fixes the small set that are genuine code divergences** (chiefly:
@@ -208,7 +208,7 @@ convention noise is moved to the s3 ledger, not forced.
 - **No fan-out.** Each story is one PR from `main`, ≤500 LOC, non-overlapping
   files (the trails 500-LOC ceiling applies; docs-only stories are exempt).
 
-### Relationship to RFC 0000-arel-collector-threading
+### Relationship to RFC 0017-arel-collector-threading
 
 That RFC converts the arel `ToSql` visitor to thread the collector as a second
 arg (Rails' stateless-visitor design), which incidentally clears all 132 arel

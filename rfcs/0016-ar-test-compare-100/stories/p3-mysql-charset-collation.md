@@ -7,7 +7,7 @@ cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 40
-priority: 10
+priority: 18
 pr: 3058
 claim: "2026-06-09T14:18:46Z"
 assignee: "p3-mysql-charset-collation"

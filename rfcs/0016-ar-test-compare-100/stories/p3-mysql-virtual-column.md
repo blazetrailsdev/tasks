@@ -7,7 +7,7 @@ cluster: adapter
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 50
-priority: 11
+priority: 19
 pr: null
 claim: "2026-06-09T15:44:56Z"
 assignee: "p3-mysql-virtual-column"

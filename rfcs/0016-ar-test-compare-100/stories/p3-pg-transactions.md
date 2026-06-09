@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 5
+priority: 13
 pr: 3053
 claim: "2026-06-09T00:20:47Z"
 assignee: "p3-pg-transactions"

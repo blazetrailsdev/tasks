@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 6
+priority: 14
 pr: 3055
 claim: "2026-06-09T12:59:59Z"
 assignee: "p3-pg-referential-integrity-and-adapter"

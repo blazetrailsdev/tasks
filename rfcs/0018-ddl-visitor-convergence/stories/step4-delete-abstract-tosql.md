@@ -1,14 +1,15 @@
 ---
 title: "Step 4 — Delete AbstractTableDefinition.toSql()"
-status: draft
+status: ready
 updated: 2026-06-08
-rfc: "0000-ddl-visitor-convergence"
+rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
 deps:
   - step2-sqlite-visitor-wire
   - step3-pg-tosql-via-visitor
 deps-rfc: []
 est-loc: 50
+priority: 8
 pr: null
 claim: null
 assignee: null

@@ -17,51 +17,10 @@
       ],
       "superseded_by": null,
       "related_rfcs": [
-        "0000-arel-collector-threading",
+        "0017-arel-collector-threading",
         "0005-activerecord-gaps"
       ],
       "file_path": "rfcs/0000-api-compare-arity-divergences/README.md"
-    },
-    {
-      "id": "0000-arel-collector-threading",
-      "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-08T00:00:00.000Z",
-      "updated": "2026-06-08T00:00:00.000Z",
-      "packages": [
-        "arel",
-        "activerecord"
-      ],
-      "clusters": [
-        "arel-collector-threading"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [
-        "0007-remove-global-arel-visitor",
-        "0000-ddl-visitor-convergence"
-      ],
-      "file_path": "rfcs/0000-arel-collector-threading/README.md"
-    },
-    {
-      "id": "0000-ddl-visitor-convergence",
-      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-08T00:00:00.000Z",
-      "updated": "2026-06-08T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "ddl-visitor-convergence"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [
-        "0010-adapter-cleanup",
-        "0013-pg-rawconn-convergence"
-      ],
-      "file_path": "rfcs/0000-ddl-visitor-convergence/README.md"
     },
     {
       "id": "0001-task-system",
@@ -360,25 +319,66 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0016-ar-test-compare-100/README.md"
+    },
+    {
+      "id": "0017-arel-collector-threading",
+      "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-08T00:00:00.000Z",
+      "packages": [
+        "arel",
+        "activerecord"
+      ],
+      "clusters": [
+        "arel-collector-threading"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0007-remove-global-arel-visitor",
+        "0018-ddl-visitor-convergence"
+      ],
+      "file_path": "rfcs/0017-arel-collector-threading/README.md"
+    },
+    {
+      "id": "0018-ddl-visitor-convergence",
+      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-08T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "ddl-visitor-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0010-adapter-cleanup",
+        "0013-pg-rawconn-convergence"
+      ],
+      "file_path": "rfcs/0018-ddl-visitor-convergence/README.md"
     }
   ],
   "stories": [
     {
-      "id": "p3-mysql-auto-increment",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL auto-increment (4 skips)",
-      "status": "done",
-      "cluster": "adapter",
+      "id": "p1-visitor-base-types",
+      "rfc": "0017-arel-collector-threading",
+      "title": "Phase 1 — Visitor base type strengthening",
+      "status": "ready",
+      "cluster": "arel-collector-threading",
       "priority": 1,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-08T00:00:00.000Z",
       "deps": [],
       "deps_rfc": [],
-      "est_loc": 60,
-      "pr": 3050,
-      "claim": "2026-06-08T23:10:05Z",
-      "assignee": "p3-mysql-auto-increment",
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
+      "file_path": "rfcs/0017-arel-collector-threading/stories/p1-visitor-base-types.md"
     },
     {
       "id": "s1-insert-returning",
@@ -398,21 +398,23 @@
       "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s1-insert-returning.md"
     },
     {
-      "id": "p3-mysql-stored-procedures",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
-      "status": "done",
-      "cluster": "adapter",
+      "id": "p2-to-sql-threading",
+      "rfc": "0017-arel-collector-threading",
+      "title": "Phase 2 — Thread collector through to-sql.ts",
+      "status": "ready",
+      "cluster": "arel-collector-threading",
       "priority": 2,
       "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "p1-visitor-base-types"
+      ],
       "deps_rfc": [],
-      "est_loc": 80,
-      "pr": 3048,
+      "est_loc": 400,
+      "pr": null,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
+      "file_path": "rfcs/0017-arel-collector-threading/stories/p2-to-sql-threading.md"
     },
     {
       "id": "s2-genuine-divergences",
@@ -432,21 +434,23 @@
       "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s2-genuine-divergences.md"
     },
     {
-      "id": "p3-mysql-explain-and-hints",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
-      "status": "done",
-      "cluster": "adapter",
+      "id": "p3-subclass-threading",
+      "rfc": "0017-arel-collector-threading",
+      "title": "Phase 3 — Thread collector through subclasses",
+      "status": "ready",
+      "cluster": "arel-collector-threading",
       "priority": 3,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "p2-to-sql-threading"
+      ],
       "deps_rfc": [],
-      "est_loc": 60,
-      "pr": 3051,
-      "claim": "2026-06-08T23:30:45Z",
-      "assignee": "p3-mysql-explain-and-hints",
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-explain-and-hints.md"
+      "file_path": "rfcs/0017-arel-collector-threading/stories/p3-subclass-threading.md"
     },
     {
       "id": "s3-document-residual",
@@ -466,12 +470,157 @@
       "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s3-document-residual.md"
     },
     {
+      "id": "p4-verification",
+      "rfc": "0017-arel-collector-threading",
+      "title": "Phase 4 — Verification and cleanup",
+      "status": "ready",
+      "cluster": "arel-collector-threading",
+      "priority": 4,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "p3-subclass-threading"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0017-arel-collector-threading/stories/p4-verification.md"
+    },
+    {
+      "id": "step1-delete-dead-mysql-branches",
+      "rfc": "0018-ddl-visitor-convergence",
+      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
+      "status": "ready",
+      "cluster": "ddl-visitor-convergence",
+      "priority": 5,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 40,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step1-delete-dead-mysql-branches.md"
+    },
+    {
+      "id": "step2-sqlite-visitor-wire",
+      "rfc": "0018-ddl-visitor-convergence",
+      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
+      "status": "ready",
+      "cluster": "ddl-visitor-convergence",
+      "priority": 6,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step1-delete-dead-mysql-branches"
+      ],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step2-sqlite-visitor-wire.md"
+    },
+    {
+      "id": "step3-pg-tosql-via-visitor",
+      "rfc": "0018-ddl-visitor-convergence",
+      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
+      "status": "ready",
+      "cluster": "ddl-visitor-convergence",
+      "priority": 7,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step1-delete-dead-mysql-branches"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step3-pg-tosql-via-visitor.md"
+    },
+    {
+      "id": "step4-delete-abstract-tosql",
+      "rfc": "0018-ddl-visitor-convergence",
+      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
+      "status": "ready",
+      "cluster": "ddl-visitor-convergence",
+      "priority": 8,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [
+        "step2-sqlite-visitor-wire",
+        "step3-pg-tosql-via-visitor"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step4-delete-abstract-tosql.md"
+    },
+    {
+      "id": "p3-mysql-auto-increment",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL auto-increment (4 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 9,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": 3050,
+      "claim": "2026-06-08T23:10:05Z",
+      "assignee": "p3-mysql-auto-increment",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
+    },
+    {
+      "id": "p3-mysql-stored-procedures",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 10,
+      "updated": "2026-06-08T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": 3048,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
+    },
+    {
+      "id": "p3-mysql-explain-and-hints",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 11,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": 3051,
+      "claim": "2026-06-08T23:30:45Z",
+      "assignee": "p3-mysql-explain-and-hints",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-explain-and-hints.md"
+    },
+    {
       "id": "p3-mysql-transactions-deadlock",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)",
       "status": "done",
       "cluster": "adapter",
-      "priority": 4,
+      "priority": 12,
       "updated": "2026-06-09T00:00:00.000Z",
       "deps": [],
       "deps_rfc": [],
@@ -481,152 +630,6 @@
       "assignee": "p3-mysql-transactions-deadlock",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-transactions-deadlock.md"
-    },
-    {
-      "id": "p3-pg-transactions",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — PG transaction error types (10 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 5,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 150,
-      "pr": 3053,
-      "claim": "2026-06-09T00:20:47Z",
-      "assignee": "p3-pg-transactions",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-transactions.md"
-    },
-    {
-      "id": "p3-pg-referential-integrity-and-adapter",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — PG referential integrity and adapter (10 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 6,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 150,
-      "pr": 3055,
-      "claim": "2026-06-09T12:59:59Z",
-      "assignee": "p3-pg-referential-integrity-and-adapter",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-referential-integrity-and-adapter.md"
-    },
-    {
-      "id": "p3-pg-optimizer-hints-and-enum",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — PG optimizer hints and enum (10 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 7,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 120,
-      "pr": 3054,
-      "claim": "2026-06-09T11:52:02Z",
-      "assignee": "p3-pg-optimizer-hints-and-enum",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-optimizer-hints-and-enum.md"
-    },
-    {
-      "id": "p3-mysql-unsigned-type",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL unsigned type (6 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 8,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "i1-schema-dumper-columnspec-u3"
-      ],
-      "deps_rfc": [],
-      "est_loc": 80,
-      "pr": 3056,
-      "claim": "2026-06-09T13:54:41Z",
-      "assignee": "p3-mysql-unsigned-type",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-unsigned-type.md"
-    },
-    {
-      "id": "p3-mysql-set-and-enum",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL SET and ENUM types (4 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 9,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "i1-schema-dumper-columnspec-u3"
-      ],
-      "deps_rfc": [],
-      "est_loc": 60,
-      "pr": 3057,
-      "claim": "2026-06-09T14:06:45Z",
-      "assignee": "p3-mysql-set-and-enum",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-set-and-enum.md"
-    },
-    {
-      "id": "p3-mysql-charset-collation",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL charset/collation and check-constraint quoting (2 skips)",
-      "status": "done",
-      "cluster": "adapter",
-      "priority": 10,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "i1-schema-dumper-columnspec-u3"
-      ],
-      "deps_rfc": [],
-      "est_loc": 40,
-      "pr": 3058,
-      "claim": "2026-06-09T14:18:46Z",
-      "assignee": "p3-mysql-charset-collation",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-charset-collation.md"
-    },
-    {
-      "id": "p3-mysql-virtual-column",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — MySQL virtual column (2 skips)",
-      "status": "claimed",
-      "cluster": "adapter",
-      "priority": 11,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "i1-schema-dumper-columnspec-u3"
-      ],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": null,
-      "claim": "2026-06-09T15:44:56Z",
-      "assignee": "p3-mysql-virtual-column",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
-    },
-    {
-      "id": "p3-pg-array-and-misc",
-      "rfc": "0016-ar-test-compare-100",
-      "title": "P3 — PG array and misc adapter (17 skips)",
-      "status": "claimed",
-      "cluster": "adapter",
-      "priority": 12,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [
-        "i1-schema-dumper-columnspec-u3"
-      ],
-      "deps_rfc": [],
-      "est_loc": 200,
-      "pr": null,
-      "claim": "2026-06-09T15:51:02Z",
-      "assignee": "p3-pg-array-and-misc",
-      "blocked_by": null,
-      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
     },
     {
       "id": "pool-merge-resolve-url-config-unskip",
@@ -663,6 +666,40 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/hmt-scope-join-aware.md"
     },
     {
+      "id": "p3-pg-transactions",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — PG transaction error types (10 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 13,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": 3053,
+      "claim": "2026-06-09T00:20:47Z",
+      "assignee": "p3-pg-transactions",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-transactions.md"
+    },
+    {
+      "id": "p3-pg-referential-integrity-and-adapter",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — PG referential integrity and adapter (10 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 14,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": 3055,
+      "claim": "2026-06-09T12:59:59Z",
+      "assignee": "p3-pg-referential-integrity-and-adapter",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-referential-integrity-and-adapter.md"
+    },
+    {
       "id": "rf3-inorderof-type-cast",
       "rfc": "0005-activerecord-gaps",
       "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
@@ -680,6 +717,23 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/rf3-inorderof-type-cast.md"
     },
     {
+      "id": "p3-pg-optimizer-hints-and-enum",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — PG optimizer hints and enum (10 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 15,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": 3054,
+      "claim": "2026-06-09T11:52:02Z",
+      "assignee": "p3-pg-optimizer-hints-and-enum",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-optimizer-hints-and-enum.md"
+    },
+    {
       "id": "r3-reorder-test-alignment",
       "rfc": "0005-activerecord-gaps",
       "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
@@ -695,6 +749,101 @@
       "assignee": "r3-reorder-test-alignment",
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/r3-reorder-test-alignment.md"
+    },
+    {
+      "id": "p3-mysql-unsigned-type",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL unsigned type (6 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 16,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": 3056,
+      "claim": "2026-06-09T13:54:41Z",
+      "assignee": "p3-mysql-unsigned-type",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-unsigned-type.md"
+    },
+    {
+      "id": "p3-mysql-set-and-enum",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL SET and ENUM types (4 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 17,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": 3057,
+      "claim": "2026-06-09T14:06:45Z",
+      "assignee": "p3-mysql-set-and-enum",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-set-and-enum.md"
+    },
+    {
+      "id": "p3-mysql-charset-collation",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL charset/collation and check-constraint quoting (2 skips)",
+      "status": "done",
+      "cluster": "adapter",
+      "priority": 18,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
+      "deps_rfc": [],
+      "est_loc": 40,
+      "pr": 3058,
+      "claim": "2026-06-09T14:18:46Z",
+      "assignee": "p3-mysql-charset-collation",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-charset-collation.md"
+    },
+    {
+      "id": "p3-mysql-virtual-column",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — MySQL virtual column (2 skips)",
+      "status": "claimed",
+      "cluster": "adapter",
+      "priority": 19,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": "2026-06-09T15:44:56Z",
+      "assignee": "p3-mysql-virtual-column",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-virtual-column.md"
+    },
+    {
+      "id": "p3-pg-array-and-misc",
+      "rfc": "0016-ar-test-compare-100",
+      "title": "P3 — PG array and misc adapter (17 skips)",
+      "status": "claimed",
+      "cluster": "adapter",
+      "priority": 20,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "i1-schema-dumper-columnspec-u3"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": "2026-06-09T15:51:02Z",
+      "assignee": "p3-pg-array-and-misc",
+      "blocked_by": null,
+      "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-array-and-misc.md"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -2141,23 +2290,6 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/nested-through-remainder.md"
     },
     {
-      "id": "p1-visitor-base-types",
-      "rfc": "0000-arel-collector-threading",
-      "title": "Phase 1 — Visitor base type strengthening",
-      "status": "draft",
-      "cluster": "arel-collector-threading",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-arel-collector-threading/stories/p1-visitor-base-types.md"
-    },
-    {
       "id": "p13-standalone-connection",
       "rfc": "0005-activerecord-gaps",
       "title": "P13 — implement StandaloneConnection class",
@@ -2173,25 +2305,6 @@
       "assignee": null,
       "blocked_by": "Rails source refresh — StandaloneConnection absent from the vendored snapshot",
       "file_path": "rfcs/0005-activerecord-gaps/stories/p13-standalone-connection.md"
-    },
-    {
-      "id": "p2-to-sql-threading",
-      "rfc": "0000-arel-collector-threading",
-      "title": "Phase 2 — Thread collector through to-sql.ts",
-      "status": "draft",
-      "cluster": "arel-collector-threading",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "p1-visitor-base-types"
-      ],
-      "deps_rfc": [],
-      "est_loc": 400,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-arel-collector-threading/stories/p2-to-sql-threading.md"
     },
     {
       "id": "p3-adapter-type-families",
@@ -2226,44 +2339,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
-    },
-    {
-      "id": "p3-subclass-threading",
-      "rfc": "0000-arel-collector-threading",
-      "title": "Phase 3 — Thread collector through subclasses",
-      "status": "draft",
-      "cluster": "arel-collector-threading",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "p2-to-sql-threading"
-      ],
-      "deps_rfc": [],
-      "est_loc": 200,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-arel-collector-threading/stories/p3-subclass-threading.md"
-    },
-    {
-      "id": "p4-verification",
-      "rfc": "0000-arel-collector-threading",
-      "title": "Phase 4 — Verification and cleanup",
-      "status": "draft",
-      "cluster": "arel-collector-threading",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "p3-subclass-threading"
-      ],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-arel-collector-threading/stories/p4-verification.md"
     },
     {
       "id": "phase1-pg-template",
@@ -2734,81 +2809,6 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
-    },
-    {
-      "id": "step1-delete-dead-mysql-branches",
-      "rfc": "0000-ddl-visitor-convergence",
-      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
-      "status": "draft",
-      "cluster": "ddl-visitor-convergence",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 40,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step1-delete-dead-mysql-branches.md"
-    },
-    {
-      "id": "step2-sqlite-visitor-wire",
-      "rfc": "0000-ddl-visitor-convergence",
-      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
-      "status": "draft",
-      "cluster": "ddl-visitor-convergence",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "step1-delete-dead-mysql-branches"
-      ],
-      "deps_rfc": [],
-      "est_loc": 120,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step2-sqlite-visitor-wire.md"
-    },
-    {
-      "id": "step3-pg-tosql-via-visitor",
-      "rfc": "0000-ddl-visitor-convergence",
-      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
-      "status": "draft",
-      "cluster": "ddl-visitor-convergence",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "step1-delete-dead-mysql-branches"
-      ],
-      "deps_rfc": [],
-      "est_loc": 80,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step3-pg-tosql-via-visitor.md"
-    },
-    {
-      "id": "step4-delete-abstract-tosql",
-      "rfc": "0000-ddl-visitor-convergence",
-      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
-      "status": "draft",
-      "cluster": "ddl-visitor-convergence",
-      "priority": null,
-      "updated": "2026-06-08T00:00:00.000Z",
-      "deps": [
-        "step2-sqlite-visitor-wire",
-        "step3-pg-tosql-via-visitor"
-      ],
-      "deps_rfc": [],
-      "est_loc": 50,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-ddl-visitor-convergence/stories/step4-delete-abstract-tosql.md"
     },
     {
       "id": "visitor-on-establish",

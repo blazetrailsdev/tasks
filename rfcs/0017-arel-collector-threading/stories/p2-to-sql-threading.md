@@ -1,14 +1,14 @@
 ---
 title: "Phase 2 — Thread collector through to-sql.ts"
-status: draft
+status: ready
 updated: 2026-06-08
-rfc: "0000-arel-collector-threading"
+rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
 deps:
   - p1-visitor-base-types
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

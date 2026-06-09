@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 3
+priority: 11
 pr: 3051
 claim: "2026-06-08T23:30:45Z"
 assignee: "p3-mysql-explain-and-hints"

@@ -1,7 +1,7 @@
 ---
-rfc: "0000-ddl-visitor-convergence"
+rfc: "0018-ddl-visitor-convergence"
 title: "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql"
-status: draft
+status: active
 created: 2026-06-08
 updated: 2026-06-08
 owner: "@dmarano"
@@ -14,10 +14,10 @@ related-rfcs:
   - "0013-pg-rawconn-convergence"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-ddl-visitor-convergence and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0018-ddl-visitor-convergence and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC — Converge all CREATE TABLE DDL onto the SchemaCreation visitor
+# RFC 0018 — Converge all CREATE TABLE DDL onto the SchemaCreation visitor
 
 ## Summary
 

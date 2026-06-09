@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 7
+priority: 15
 pr: 3054
 claim: "2026-06-09T11:52:02Z"
 assignee: "p3-pg-optimizer-hints-and-enum"

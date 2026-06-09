@@ -1,7 +1,7 @@
 ---
-rfc: "0000-arel-collector-threading"
+rfc: "0017-arel-collector-threading"
 title: "Thread the Arel query visitor collector — eliminate ToSql instance state"
-status: draft
+status: active
 created: 2026-06-08
 updated: 2026-06-08
 owner: "@dmarano"
@@ -12,16 +12,16 @@ clusters:
   - arel-collector-threading
 related-rfcs:
   - "0007-remove-global-arel-visitor"
-  - "0000-ddl-visitor-convergence"
+  - "0018-ddl-visitor-convergence"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-arel-collector-threading and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0017-arel-collector-threading and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge.
-     Note: 0000-ddl-visitor-convergence is the *schema* SchemaCreation visitor
+     Note: 0018-ddl-visitor-convergence is the *schema* SchemaCreation visitor
      (DDL generation); this RFC concerns the *query* ToSql visitor (SELECT/INSERT/
      UPDATE/DELETE SQL rendering). They are distinct visitor hierarchies. -->
 
-# RFC — Thread the Arel query visitor collector
+# RFC 0017 — Thread the Arel query visitor collector
 
 ## Summary
 
@@ -322,7 +322,7 @@ _internal visit-chain_ level. Orthogonal and order-independent: RFC 0007's
 `connection.toSql()` calls `visitor.compile(node)`, which after this RFC calls
 `this.visit(node, new SQLString())`. Either can land first.
 
-**RFC 0000-ddl-visitor-convergence** concerns `SchemaCreation` — the DDL visitor
+**RFC 0018-ddl-visitor-convergence** concerns `SchemaCreation` — the DDL visitor
 hierarchy that generates `CREATE TABLE` SQL. This RFC concerns `ToSql` — the
 query visitor hierarchy that generates `SELECT`/`INSERT`/`UPDATE`/`DELETE` SQL.
 They are entirely separate class hierarchies. Do not conflate them.

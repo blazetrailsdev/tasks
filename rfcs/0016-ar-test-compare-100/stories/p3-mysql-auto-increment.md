@@ -7,7 +7,7 @@ cluster: adapter
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 1
+priority: 9
 pr: 3050
 claim: "2026-06-08T23:10:05Z"
 assignee: "p3-mysql-auto-increment"

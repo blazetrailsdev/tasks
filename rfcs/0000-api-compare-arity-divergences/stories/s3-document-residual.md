@@ -48,7 +48,7 @@ shows up).
 
 - Generate the raw list with `pnpm api:compare --arity` →
   `scripts/api-compare/output/arity-mismatches.json` (exclude the 132 arel
-  `visitors/**` rows owned by RFC 0000-arel-collector-threading).
+  `visitors/**` rows owned by RFC 0017-arel-collector-threading).
 - This is the canonical answer to "why are there N advisory arity mismatches?" so
   future agents don't re-audit. Keep it terse and table-driven.
 - Do last (depends on s1/s2 having settled the genuine vs noise split).

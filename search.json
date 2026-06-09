@@ -7,18 +7,6 @@
       "terms": "0000-api-compare-arity-divergences close the genuine api:compare arity divergences — fix the code, document the noise activerecord actiondispatch actionview api-compare-arity-divergences rfc — close the genuine api:compare arity divergences"
     },
     {
-      "id": "0000-arel-collector-threading",
-      "type": "rfc",
-      "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
-      "terms": "0000-arel-collector-threading thread the arel query visitor collector — eliminate tosql instance state arel activerecord arel-collector-threading rfc — thread the arel query visitor collector"
-    },
-    {
-      "id": "0000-ddl-visitor-convergence",
-      "type": "rfc",
-      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
-      "terms": "0000-ddl-visitor-convergence converge all create table ddl onto the schemacreation visitor — eliminate hand-rolled tabledefinition#tosql activerecord ddl-visitor-convergence rfc — converge all create table ddl onto the schemacreation visitor"
-    },
-    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -115,10 +103,22 @@
       "terms": "0016-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc 0016 — activerecord test:compare 100%: phase-ordered un-skip campaign"
     },
     {
-      "id": "p3-mysql-auto-increment",
+      "id": "0017-arel-collector-threading",
+      "type": "rfc",
+      "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
+      "terms": "0017-arel-collector-threading thread the arel query visitor collector — eliminate tosql instance state arel activerecord arel-collector-threading rfc 0017 — thread the arel query visitor collector"
+    },
+    {
+      "id": "0018-ddl-visitor-convergence",
+      "type": "rfc",
+      "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
+      "terms": "0018-ddl-visitor-convergence converge all create table ddl onto the schemacreation visitor — eliminate hand-rolled tabledefinition#tosql activerecord ddl-visitor-convergence rfc 0018 — converge all create table ddl onto the schemacreation visitor"
+    },
+    {
+      "id": "p1-visitor-base-types",
       "type": "story",
-      "title": "P3 — MySQL auto-increment (4 skips)",
-      "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0016-ar-test-compare-100 context"
+      "title": "Phase 1 — Visitor base type strengthening",
+      "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0017-arel-collector-threading context"
     },
     {
       "id": "s1-insert-returning",
@@ -127,10 +127,10 @@
       "terms": "s1-insert-returning thread `returning` through `_insert_record` api-compare-arity-divergences 0000-api-compare-arity-divergences context"
     },
     {
-      "id": "p3-mysql-stored-procedures",
+      "id": "p2-to-sql-threading",
       "type": "story",
-      "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
-      "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0016-ar-test-compare-100 context"
+      "title": "Phase 2 — Thread collector through to-sql.ts",
+      "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
     },
     {
       "id": "s2-genuine-divergences",
@@ -139,10 +139,10 @@
       "terms": "s2-genuine-divergences confirm + fix borderline genuine arity divergences api-compare-arity-divergences 0000-api-compare-arity-divergences context"
     },
     {
-      "id": "p3-mysql-explain-and-hints",
+      "id": "p3-subclass-threading",
       "type": "story",
-      "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
-      "terms": "p3-mysql-explain-and-hints p3 — mysql explain and optimizer hints (4 skips) adapter 0016-ar-test-compare-100 context"
+      "title": "Phase 3 — Thread collector through subclasses",
+      "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0017-arel-collector-threading context"
     },
     {
       "id": "s3-document-residual",
@@ -151,10 +151,70 @@
       "terms": "s3-document-residual document the convention-noise residual ledger api-compare-arity-divergences 0000-api-compare-arity-divergences context"
     },
     {
+      "id": "p4-verification",
+      "type": "story",
+      "title": "Phase 4 — Verification and cleanup",
+      "terms": "p4-verification phase 4 — verification and cleanup arel-collector-threading 0017-arel-collector-threading context"
+    },
+    {
+      "id": "step1-delete-dead-mysql-branches",
+      "type": "story",
+      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
+      "terms": "step1-delete-dead-mysql-branches step 1 — delete dead mysql branches from abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step2-sqlite-visitor-wire",
+      "type": "story",
+      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
+      "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step3-pg-tosql-via-visitor",
+      "type": "story",
+      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
+      "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
+      "id": "step4-delete-abstract-tosql",
+      "type": "story",
+      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
+      "terms": "step4-delete-abstract-tosql step 4 — delete abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
+      "id": "p3-mysql-auto-increment",
+      "type": "story",
+      "title": "P3 — MySQL auto-increment (4 skips)",
+      "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "p3-mysql-stored-procedures",
+      "type": "story",
+      "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
+      "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "p3-mysql-explain-and-hints",
+      "type": "story",
+      "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
+      "terms": "p3-mysql-explain-and-hints p3 — mysql explain and optimizer hints (4 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
       "id": "p3-mysql-transactions-deadlock",
       "type": "story",
       "title": "P3 — MySQL transactions, deadlock, lock-row delete (5 skips)",
       "terms": "p3-mysql-transactions-deadlock p3 — mysql transactions, deadlock, lock-row delete (5 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "pool-merge-resolve-url-config-unskip",
+      "type": "story",
+      "title": "Unskip 7 merge-and-resolve-default-url-config tests",
+      "terms": "pool-merge-resolve-url-config-unskip unskip 7 merge-and-resolve-default-url-config tests connection-pool 0005-activerecord-gaps context"
+    },
+    {
+      "id": "hmt-scope-join-aware",
+      "type": "story",
+      "title": "Make HMT scope() join-aware like Rails",
+      "terms": "hmt-scope-join-aware make hmt scope() join-aware like rails associations 0005-activerecord-gaps context"
     },
     {
       "id": "p3-pg-transactions",
@@ -169,10 +229,22 @@
       "terms": "p3-pg-referential-integrity-and-adapter p3 — pg referential integrity and adapter (10 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "rf3-inorderof-type-cast",
+      "type": "story",
+      "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
+      "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
+    },
+    {
       "id": "p3-pg-optimizer-hints-and-enum",
       "type": "story",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
       "terms": "p3-pg-optimizer-hints-and-enum p3 — pg optimizer hints and enum (10 skips) adapter 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "r3-reorder-test-alignment",
+      "type": "story",
+      "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
+      "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
     },
     {
       "id": "p3-mysql-unsigned-type",
@@ -203,30 +275,6 @@
       "type": "story",
       "title": "P3 — PG array and misc adapter (17 skips)",
       "terms": "p3-pg-array-and-misc p3 — pg array and misc adapter (17 skips) adapter 0016-ar-test-compare-100 context"
-    },
-    {
-      "id": "pool-merge-resolve-url-config-unskip",
-      "type": "story",
-      "title": "Unskip 7 merge-and-resolve-default-url-config tests",
-      "terms": "pool-merge-resolve-url-config-unskip unskip 7 merge-and-resolve-default-url-config tests connection-pool 0005-activerecord-gaps context"
-    },
-    {
-      "id": "hmt-scope-join-aware",
-      "type": "story",
-      "title": "Make HMT scope() join-aware like Rails",
-      "terms": "hmt-scope-join-aware make hmt scope() join-aware like rails associations 0005-activerecord-gaps context"
-    },
-    {
-      "id": "rf3-inorderof-type-cast",
-      "type": "story",
-      "title": "RF3 — add type_cast_for_database value casting in inOrderOf",
-      "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
-    },
-    {
-      "id": "r3-reorder-test-alignment",
-      "type": "story",
-      "title": "R3 — align the 3 reorder-replaces-existing-order tests to Rails",
-      "terms": "r3-reorder-test-alignment r3 — align the 3 reorder-replaces-existing-order tests to rails relation 0005-activerecord-gaps context"
     },
     {
       "id": "pool-reap-flush-expire-audit",
@@ -721,22 +769,10 @@
       "terms": "nested-through-remainder nested-through remainder (scope, default_scope, shared-source reset, hmt autosave) associations 0005-activerecord-gaps context"
     },
     {
-      "id": "p1-visitor-base-types",
-      "type": "story",
-      "title": "Phase 1 — Visitor base type strengthening",
-      "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0000-arel-collector-threading context"
-    },
-    {
       "id": "p13-standalone-connection",
       "type": "story",
       "title": "P13 — implement StandaloneConnection class",
       "terms": "p13-standalone-connection p13 — implement standaloneconnection class connection-pool 0005-activerecord-gaps context"
-    },
-    {
-      "id": "p2-to-sql-threading",
-      "type": "story",
-      "title": "Phase 2 — Thread collector through to-sql.ts",
-      "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0000-arel-collector-threading context"
     },
     {
       "id": "p3-adapter-type-families",
@@ -749,18 +785,6 @@
       "type": "story",
       "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
       "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
-    },
-    {
-      "id": "p3-subclass-threading",
-      "type": "story",
-      "title": "Phase 3 — Thread collector through subclasses",
-      "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0000-arel-collector-threading context"
-    },
-    {
-      "id": "p4-verification",
-      "type": "story",
-      "title": "Phase 4 — Verification and cleanup",
-      "terms": "p4-verification phase 4 — verification and cleanup arel-collector-threading 0000-arel-collector-threading context"
     },
     {
       "id": "phase1-pg-template",
@@ -917,30 +941,6 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
-    },
-    {
-      "id": "step1-delete-dead-mysql-branches",
-      "type": "story",
-      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
-      "terms": "step1-delete-dead-mysql-branches step 1 — delete dead mysql branches from abstracttabledefinition.tosql() ddl-visitor-convergence 0000-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step2-sqlite-visitor-wire",
-      "type": "story",
-      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
-      "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0000-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step3-pg-tosql-via-visitor",
-      "type": "story",
-      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
-      "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0000-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step4-delete-abstract-tosql",
-      "type": "story",
-      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
-      "terms": "step4-delete-abstract-tosql step 4 — delete abstracttabledefinition.tosql() ddl-visitor-convergence 0000-ddl-visitor-convergence context"
     },
     {
       "id": "visitor-on-establish",

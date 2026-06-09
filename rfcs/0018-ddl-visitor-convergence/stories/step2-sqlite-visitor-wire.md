@@ -1,13 +1,14 @@
 ---
 title: "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor"
-status: draft
+status: ready
 updated: 2026-06-08
-rfc: "0000-ddl-visitor-convergence"
+rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
 deps:
   - step1-delete-dead-mysql-branches
 deps-rfc: []
 est-loc: 120
+priority: 6
 pr: null
 claim: null
 assignee: null

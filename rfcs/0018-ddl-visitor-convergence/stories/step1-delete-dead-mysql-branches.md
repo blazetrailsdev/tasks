@@ -1,12 +1,13 @@
 ---
 title: "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()"
-status: draft
+status: ready
 updated: 2026-06-08
-rfc: "0000-ddl-visitor-convergence"
+rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
 deps: []
 deps-rfc: []
 est-loc: 40
+priority: 5
 pr: null
 claim: null
 assignee: null
