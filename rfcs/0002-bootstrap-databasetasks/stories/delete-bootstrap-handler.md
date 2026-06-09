@@ -1,7 +1,7 @@
 ---
 title: "PR 3 — migrate direct importers and delete bootstrap-test-handler"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-09
 rfc: "0002-bootstrap-databasetasks"
 cluster: bootstrap
 deps: ["rework-test-setup"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1000005
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-09T15:57:22Z"
+assignee: "delete-bootstrap-handler"
 blocked-by: null
 ---
 

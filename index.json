@@ -2936,18 +2936,18 @@
       "id": "delete-bootstrap-handler",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 3 — migrate direct importers and delete bootstrap-test-handler",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "bootstrap",
       "priority": 1000005,
-      "updated": "2026-06-07T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
       "deps": [
         "rework-test-setup"
       ],
       "deps_rfc": [],
       "est_loc": 150,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-09T15:57:22Z",
+      "assignee": "delete-bootstrap-handler",
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/delete-bootstrap-handler.md"
     },
