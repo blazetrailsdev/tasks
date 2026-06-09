@@ -430,7 +430,7 @@
       "id": "p3-pg-referential-integrity-and-adapter",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — PG referential integrity and adapter (10 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 6,
       "updated": "2026-06-09T00:00:00.000Z",
