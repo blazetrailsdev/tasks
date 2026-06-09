@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-api-compare-arity-divergences",
-      "type": "rfc",
-      "title": "Close the genuine api:compare arity divergences — fix the code, document the noise",
-      "terms": "0000-api-compare-arity-divergences close the genuine api:compare arity divergences — fix the code, document the noise activerecord actiondispatch actionview api-compare-arity-divergences rfc — close the genuine api:compare arity divergences"
-    },
-    {
       "id": "0000-load-defaults-config",
       "type": "rfc",
       "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
@@ -139,34 +133,16 @@
       "terms": "p1-visitor-base-types phase 1 — visitor base type strengthening arel-collector-threading 0017-arel-collector-threading context"
     },
     {
-      "id": "s1-insert-returning",
-      "type": "story",
-      "title": "Thread `returning` through `_insert_record`",
-      "terms": "s1-insert-returning thread `returning` through `_insert_record` api-compare-arity-divergences 0000-api-compare-arity-divergences context"
-    },
-    {
       "id": "p2-to-sql-threading",
       "type": "story",
       "title": "Phase 2 — Thread collector through to-sql.ts",
       "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
     },
     {
-      "id": "s2-genuine-divergences",
-      "type": "story",
-      "title": "Confirm + fix borderline genuine arity divergences",
-      "terms": "s2-genuine-divergences confirm + fix borderline genuine arity divergences api-compare-arity-divergences 0000-api-compare-arity-divergences context"
-    },
-    {
       "id": "p3-subclass-threading",
       "type": "story",
       "title": "Phase 3 — Thread collector through subclasses",
       "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0017-arel-collector-threading context"
-    },
-    {
-      "id": "s3-document-residual",
-      "type": "story",
-      "title": "Document the convention-noise residual ledger",
-      "terms": "s3-document-residual document the convention-noise residual ledger api-compare-arity-divergences 0000-api-compare-arity-divergences context"
     },
     {
       "id": "p4-verification",

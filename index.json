@@ -1,28 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-api-compare-arity-divergences",
-      "title": "Close the genuine api:compare arity divergences — fix the code, document the noise",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-09T00:00:00.000Z",
-      "updated": "2026-06-09T00:00:00.000Z",
-      "packages": [
-        "activerecord",
-        "actiondispatch",
-        "actionview"
-      ],
-      "clusters": [
-        "api-compare-arity-divergences"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [
-        "0017-arel-collector-threading",
-        "0005-activerecord-gaps"
-      ],
-      "file_path": "rfcs/0000-api-compare-arity-divergences/README.md"
-    },
-    {
       "id": "0000-load-defaults-config",
       "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
       "status": "draft",
@@ -436,23 +414,6 @@
       "file_path": "rfcs/0017-arel-collector-threading/stories/p1-visitor-base-types.md"
     },
     {
-      "id": "s1-insert-returning",
-      "rfc": "0000-api-compare-arity-divergences",
-      "title": "Thread `returning` through `_insert_record`",
-      "status": "draft",
-      "cluster": "api-compare-arity-divergences",
-      "priority": 1,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 250,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s1-insert-returning.md"
-    },
-    {
       "id": "p2-to-sql-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 2 — Thread collector through to-sql.ts",
@@ -472,23 +433,6 @@
       "file_path": "rfcs/0017-arel-collector-threading/stories/p2-to-sql-threading.md"
     },
     {
-      "id": "s2-genuine-divergences",
-      "rfc": "0000-api-compare-arity-divergences",
-      "title": "Confirm + fix borderline genuine arity divergences",
-      "status": "draft",
-      "cluster": "api-compare-arity-divergences",
-      "priority": 2,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": 200,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s2-genuine-divergences.md"
-    },
-    {
       "id": "p3-subclass-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 3 — Thread collector through subclasses",
@@ -506,23 +450,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0017-arel-collector-threading/stories/p3-subclass-threading.md"
-    },
-    {
-      "id": "s3-document-residual",
-      "rfc": "0000-api-compare-arity-divergences",
-      "title": "Document the convention-noise residual ledger",
-      "status": "draft",
-      "cluster": "api-compare-arity-divergences",
-      "priority": 3,
-      "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0000-api-compare-arity-divergences/stories/s3-document-residual.md"
     },
     {
       "id": "p4-verification",

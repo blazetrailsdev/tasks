@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-api-compare-arity-divergences](rfcs/0000-api-compare-arity-divergences/README.md) | Close the genuine api:compare arity divergences — fix the code, document the noise | draft | @dmarano | activerecord, actiondispatch, actionview |
 | [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @dmarano | activerecord, trailties |
 | [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
