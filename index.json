@@ -447,7 +447,7 @@
       "id": "p3-pg-optimizer-hints-and-enum",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 7,
       "updated": "2026-06-09T00:00:00.000Z",
