@@ -413,7 +413,7 @@
       "id": "p3-pg-transactions",
       "rfc": "0000-ar-test-compare-100",
       "title": "P3 — PG transaction error types (10 skips)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter",
       "priority": 5,
       "updated": "2026-06-09T00:00:00.000Z",
