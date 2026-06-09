@@ -1970,7 +1970,7 @@
       "id": "f6b-repair-validations-helper",
       "rfc": "0016-ar-test-compare-100",
       "title": "F-6b — repair_validations test helper",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "clusters",
       "priority": null,
       "updated": "2026-06-09T00:00:00.000Z",
