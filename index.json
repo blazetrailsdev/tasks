@@ -2138,6 +2138,23 @@
       "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-adapter-type-families.md"
     },
     {
+      "id": "p3-pg-enum-orm-and-schema",
+      "rfc": "0000-ar-test-compare-100",
+      "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
+    },
+    {
       "id": "p3-subclass-threading",
       "rfc": "0000-arel-collector-threading",
       "title": "Phase 3 — Thread collector through subclasses",

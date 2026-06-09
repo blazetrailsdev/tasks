@@ -721,6 +721,12 @@
       "terms": "p3-adapter-type-families p3 — adapter type-families (pg ~94 + mysql ~41) adapter 0000-ar-test-compare-100 context"
     },
     {
+      "id": "p3-pg-enum-orm-and-schema",
+      "type": "story",
+      "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
+      "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0000-ar-test-compare-100 context"
+    },
+    {
       "id": "p3-subclass-threading",
       "type": "story",
       "title": "Phase 3 — Thread collector through subclasses",
