@@ -209,7 +209,8 @@ fidelity for the least risk, so they go first. The largest and most bespoke
    `inheritance-modules-cluster`, `misc-core-cluster`.
 3. **P3 associations** — `associations-collection-cluster`,
    `associations-eager-join-cluster`, `associations-through-nested-cluster`,
-   `associations-disable-joins-cluster`, `associations-scope-cache-cluster`.
+   `associations-disable-joins-cluster`, `hmt-disable-joins-conversion`
+   (framework-blocked), `associations-scope-cache-cluster`.
 4. **P4 adapter/encryption** — `adapter-tests-cluster`, `encryption-cluster`.
 
 Each cluster story enumerates its files, splits per-`describe` as needed, and
@@ -259,10 +260,10 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 | [shared-table-convergence](stories/shared-table-convergence.md)                       | Converge collision-prone scratch tables | 1        | ~300    | draft  | —                               |
 | [validations-suite](stories/validations-suite.md)                                     | validations/ suite                      | 1        | ~400    | draft  | —                               |
 | [scoping-suite](stories/scoping-suite.md)                                             | scoping/ suite                          | 1        | ~300    | draft  | shared-table-convergence        |
-| [relation-where-cluster](stories/relation-where-cluster.md)                           | relation/ where + predicate cluster     | 1        | ~450    | draft  | —                               |
+| [relation-where-cluster](stories/relation-where-cluster.md)                           | relation/ where + predicate cluster     | 1        | ~450    | draft  | shared-table-convergence        |
 | [relation-select-order-cluster](stories/relation-select-order-cluster.md)             | relation/ select + order cluster        | 1        | ~400    | draft  | —                               |
 | [relation-mutation-cluster](stories/relation-mutation-cluster.md)                     | relation/ mutation cluster              | 1        | ~350    | draft  | —                               |
-| [attribute-types-cluster](stories/attribute-types-cluster.md)                         | attributes + type/precision cluster     | 1        | ~450    | draft  | —                               |
+| [attribute-types-cluster](stories/attribute-types-cluster.md)                         | attributes + type/precision cluster     | 1        | ~450    | draft  | shared-table-convergence        |
 | [serialization-cluster](stories/serialization-cluster.md)                             | serialization + store cluster           | 1        | ~350    | draft  | —                               |
 | [secure-token-cluster](stories/secure-token-cluster.md)                               | secure-password / token cluster         | 1        | ~250    | draft  | —                               |
 | [relation-core-cluster](stories/relation-core-cluster.md)                             | relation / relations / querying core    | 2        | ~500    | draft  | shared-table-convergence        |
@@ -274,7 +275,8 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 | [associations-collection-cluster](stories/associations-collection-cluster.md)         | has-many / belongs-to / collection      | 3        | ~500    | draft  | shared-table-convergence        |
 | [associations-eager-join-cluster](stories/associations-eager-join-cluster.md)         | eager / join / habtm                    | 3        | ~500    | draft  | shared-table-convergence        |
 | [associations-through-nested-cluster](stories/associations-through-nested-cluster.md) | through / nested-through                | 3        | ~500    | draft  | associations-collection-cluster |
-| [associations-disable-joins-cluster](stories/associations-disable-joins-cluster.md)   | disable-joins family                    | 3        | ~450    | draft  | associations-collection-cluster |
+| [associations-disable-joins-cluster](stories/associations-disable-joins-cluster.md)   | disable-joins family (7 files)          | 3        | ~450    | draft  | associations-collection-cluster |
+| [hmt-disable-joins-conversion](stories/hmt-disable-joins-conversion.md)               | hmt disable-joins (framework-blocked)   | 3        | ~150    | draft  | associations-collection-cluster |
 | [associations-scope-cache-cluster](stories/associations-scope-cache-cluster.md)       | association-scope / inverse / callbacks | 3        | ~450    | draft  | shared-table-convergence        |
 | [adapter-tests-cluster](stories/adapter-tests-cluster.md)                             | adapters/ (sqlite / pg / mysql)         | 4        | ~400    | draft  | —                               |
 | [encryption-cluster](stories/encryption-cluster.md)                                   | encryption/ suite                       | 4        | ~250    | draft  | —                               |
@@ -282,3 +284,9 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 ## Changelog
 
 - 2026-06-09: initial RFC; supersedes 0014-fixtures-adoption.
+- 2026-06-09: review (PR #14) — added `deps: shared-table-convergence` to
+  `relation-where-cluster` and `attribute-types-cluster` (known `people`/`items`
+  colliders) and removed the conditional collision notes; split the
+  framework-blocked `has-many-through-disable-joins-associations.test.ts` out of
+  `associations-disable-joins-cluster` into its own `hmt-disable-joins-conversion`
+  story with an explicit `blocked-by`.

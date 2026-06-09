@@ -405,7 +405,9 @@
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "shared-table-convergence"
+      ],
       "deps_rfc": [],
       "est_loc": 450,
       "pr": null,
@@ -473,7 +475,9 @@
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
-      "deps": [],
+      "deps": [
+        "shared-table-convergence"
+      ],
       "deps_rfc": [],
       "est_loc": 450,
       "pr": null,
@@ -824,6 +828,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-through-nested-cluster.md"
+    },
+    {
+      "id": "hmt-disable-joins-conversion",
+      "rfc": "0000-canonical-schema-burndown",
+      "title": "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 3,
+      "updated": "2026-06-09T00:00:00.000Z",
+      "deps": [
+        "associations-collection-cluster"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Register/track these as framework-fix stories (0015-ar-framework-gaps or a new RFC) before claiming.",
+      "file_path": "rfcs/0000-canonical-schema-burndown/stories/hmt-disable-joins-conversion.md"
     },
     {
       "id": "p3-subclass-threading",

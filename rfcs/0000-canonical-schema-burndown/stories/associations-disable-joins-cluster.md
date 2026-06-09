@@ -28,10 +28,14 @@ Files (remove each from the exclude JSON as it lands):
 - `associations/disable-joins-polymorphic-nonid-pk.test.ts`
 - `associations/disable-joins-routing-widening.test.ts`
 - `associations/cp-count-disable-joins-through.test.ts`
-- `associations/has-many-through-disable-joins-associations.test.ts`
 
-Rails counterpart: `associations/has_many_through_disable_joins_associations_test.rb`
-and the disable-joins cases scattered across the association suites.
+Rails counterpart: the disable-joins cases scattered across the association
+suites.
+
+> `associations/has-many-through-disable-joins-associations.test.ts` is **not** in
+> this cluster — it is blocked on framework gaps and owned by its own story,
+> [hmt-disable-joins-conversion](hmt-disable-joins-conversion.md), so the seven
+> files above stay cleanly claimable.
 
 ## Acceptance criteria
 
@@ -41,10 +45,3 @@ and the disable-joins cases scattered across the association suites.
       unchanged.
 - [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; files
       removed from the exclude JSON.
-
-## Notes
-
-- `has-many-through-disable-joins-associations.test.ts` migration is blocked on two
-  real core gaps (counter_cache+alias_attribute; ThroughReflection.klass via
-  `_delegate`) per memory `hmt_disable_joins_fixture_parity_blocked` — fix those
-  first or register a framework-fix prerequisite story.

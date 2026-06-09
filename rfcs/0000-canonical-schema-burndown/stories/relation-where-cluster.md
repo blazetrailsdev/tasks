@@ -4,7 +4,7 @@ status: draft
 updated: 2026-06-09
 rfc: "0000-canonical-schema-burndown"
 cluster: fixtures
-deps: []
+deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
 priority: 1
@@ -22,9 +22,9 @@ These map to Rails `activerecord/test/cases/relation/*_test.rb` and the top-leve
 
 Files (remove each from the exclude JSON as it lands):
 
-- `relation/where.test.ts` → `relations_test.rb` / `where_test.rb`
-- `relation/where-chain.test.ts` → `where_chain_test.rb`
-- `relation/composite-where.test.ts` → `where_test.rb` (composite-key cases)
+- `relation/where.test.ts` → `relation/where_test.rb` (+ `relations_test.rb`)
+- `relation/where-chain.test.ts` → `relation/where_chain_test.rb`
+- `relation/composite-where.test.ts` → `relation/where_test.rb` (composite-key cases)
 - `relation/predicate-builder.test.ts` → `relation/predicate_builder_test.rb`
 - `relation/and.test.ts` → `relation/and_test.rb`
 - `relation/or.test.ts` → `relation/or_test.rb`
@@ -41,7 +41,8 @@ Files (remove each from the exclude JSON as it lands):
 
 ## Notes
 
-- `relation/where.test.ts` mixes canonical and inline `people` tables today
-  (RFC motivation) — check `shared-table-convergence` has handled the `people`
-  scratch shape, or rename here.
+- `relation/where.test.ts` mixes canonical and inline `people` tables today (RFC
+  motivation); `deps: shared-table-convergence` guarantees the `people` scratch
+  shape is already converged before this story starts, so ride the canonical
+  `people` table — no ad-hoc rename needed here.
 - Split across sibling PRs off `main` to stay ≤500 LOC.

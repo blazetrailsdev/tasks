@@ -4,7 +4,7 @@ status: draft
 updated: 2026-06-09
 rfc: "0000-canonical-schema-burndown"
 cluster: fixtures
-deps: []
+deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
 priority: 1
@@ -41,6 +41,8 @@ Files (remove each from the exclude JSON as it lands):
 
 ## Notes
 
-- `defaults.test.ts` declares an `items:{count}` scratch shape implicated in the
-  `items` flake — coordinate with `shared-table-convergence` if it touches `items`.
+- `defaults.test.ts` declares an `items:{count}` scratch shape — a known member of
+  the `items` collision group that `shared-table-convergence` converges. This story
+  `deps` on it, so `items` is already converged before `defaults.test.ts` is
+  touched; ride the canonical `items` table.
 - Split across sibling PRs off `main` to stay ≤500 LOC.

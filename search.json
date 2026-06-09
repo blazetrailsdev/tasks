@@ -271,6 +271,12 @@
       "terms": "associations-through-nested-cluster through / nested-through associations → canonical schema + rails fixtures fixtures 0000-canonical-schema-burndown context"
     },
     {
+      "id": "hmt-disable-joins-conversion",
+      "type": "story",
+      "title": "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures",
+      "terms": "hmt-disable-joins-conversion has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures fixtures 0000-canonical-schema-burndown context"
+    },
+    {
       "id": "p3-subclass-threading",
       "type": "story",
       "title": "Phase 3 — Thread collector through subclasses",
