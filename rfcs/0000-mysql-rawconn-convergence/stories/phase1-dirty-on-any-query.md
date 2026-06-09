@@ -1,13 +1,13 @@
 ---
 title: "Phase 1 — mysql2 dirties the current transaction on any materialized query"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0000-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

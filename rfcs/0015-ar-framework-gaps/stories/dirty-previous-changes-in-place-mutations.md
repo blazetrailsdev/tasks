@@ -1,13 +1,13 @@
 ---
 title: "Dirty: previous_changes must include in-place mutations after save"
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0015-ar-framework-gaps"
 cluster: dirty-tracking
 deps: []
 deps-rfc: []
 est-loc: 25
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

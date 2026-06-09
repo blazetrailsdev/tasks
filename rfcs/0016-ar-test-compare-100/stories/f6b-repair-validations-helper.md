@@ -1,6 +1,6 @@
 ---
 title: "F-6b — repair_validations test helper"
-status: in-progress
+status: done
 updated: 2026-06-09
 rfc: "0016-ar-test-compare-100"
 cluster: clusters

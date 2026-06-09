@@ -1,13 +1,13 @@
 ---
 title: 'Relation: count and count("*") with includes must apply join dependency'
-status: draft
+status: ready
 updated: 2026-06-09
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
