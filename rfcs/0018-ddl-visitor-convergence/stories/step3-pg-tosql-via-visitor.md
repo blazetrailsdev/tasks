@@ -1,7 +1,7 @@
 ---
 title: "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation"
-status: ready
-updated: 2026-06-08
+status: claimed
+updated: 2026-06-10
 rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T11:19:14Z"
+assignee: "step3-pg-tosql-via-visitor"
 blocked-by: null
 ---
 
