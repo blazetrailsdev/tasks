@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-load-defaults-config",
-      "type": "rfc",
-      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
-      "terms": "0000-load-defaults-config versioned framework defaults (config.load_defaults) — partial_inserts first activerecord trailties config-defaults rfc — versioned framework defaults (`config.load_defaults`)"
-    },
-    {
-      "id": "0000-mysql-rawconn-convergence",
-      "type": "rfc",
-      "title": "mysql2 query methods through the abstract withRawConnection loop",
-      "terms": "0000-mysql-rawconn-convergence mysql2 query methods through the abstract withrawconnection loop activerecord mysql-rawconn-convergence rfc — mysql2 query methods through the abstract `withrawconnection` loop"
-    },
-    {
       "id": "0000-singular-association-holder",
       "type": "rfc",
       "title": "Singular-association holder & _cachedAssociations deletion",
@@ -133,6 +121,18 @@
       "terms": "0019-canonical-schema-burndown canonical-schema ratchet burndown — convert the ar test suite to test_schema + rails fixtures, word-for-word activerecord fixtures rfc 0019 — canonical-schema ratchet burndown"
     },
     {
+      "id": "0020-load-defaults-config",
+      "type": "rfc",
+      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
+      "terms": "0020-load-defaults-config versioned framework defaults (config.load_defaults) — partial_inserts first activerecord trailties config-defaults rfc 0020 — versioned framework defaults (`config.load_defaults`)"
+    },
+    {
+      "id": "0021-mysql-rawconn-convergence",
+      "type": "rfc",
+      "title": "mysql2 query methods through the abstract withRawConnection loop",
+      "terms": "0021-mysql-rawconn-convergence mysql2 query methods through the abstract withrawconnection loop activerecord mysql-rawconn-convergence rfc 0021 — mysql2 query methods through the abstract `withrawconnection` loop"
+    },
+    {
       "id": "s1-proxy-backed-read-api",
       "type": "story",
       "title": "Proxy-backed read API with deprecated cache shim",
@@ -154,19 +154,19 @@
       "id": "partial-inserts-load-defaults",
       "type": "story",
       "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
-      "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0000-load-defaults-config context"
+      "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0020-load-defaults-config context"
     },
     {
       "id": "phase1-dirty-on-any-query",
       "type": "story",
       "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
-      "terms": "phase1-dirty-on-any-query phase 1 — mysql2 dirties the current transaction on any materialized query mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+      "terms": "phase1-dirty-on-any-query phase 1 — mysql2 dirties the current transaction on any materialized query mysql-rawconn-convergence 0021-mysql-rawconn-convergence context"
     },
     {
       "id": "phase2-route-data-path-through-withrawconnection",
       "type": "story",
       "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
-      "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+      "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0021-mysql-rawconn-convergence context"
     },
     {
       "id": "s2-migrate-preloader-writes",

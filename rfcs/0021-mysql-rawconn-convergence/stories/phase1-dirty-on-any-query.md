@@ -2,7 +2,7 @@
 title: "Phase 1 — mysql2 dirties the current transaction on any materialized query"
 status: done
 updated: 2026-06-09
-rfc: "0000-mysql-rawconn-convergence"
+rfc: "0021-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
 deps: []
 deps-rfc: []

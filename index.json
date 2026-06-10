@@ -1,44 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-load-defaults-config",
-      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
-      "status": "draft",
-      "owner": "@deanmarano",
-      "created": "2026-06-09T00:00:00.000Z",
-      "updated": "2026-06-09T00:00:00.000Z",
-      "packages": [
-        "activerecord",
-        "trailties"
-      ],
-      "clusters": [
-        "config-defaults"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-load-defaults-config/README.md"
-    },
-    {
-      "id": "0000-mysql-rawconn-convergence",
-      "title": "mysql2 query methods through the abstract withRawConnection loop",
-      "status": "draft",
-      "owner": "@deanmarano",
-      "created": "2026-06-09T00:00:00.000Z",
-      "updated": "2026-06-09T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "mysql-rawconn-convergence"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [
-        "0013-pg-rawconn-convergence",
-        "0010-adapter-cleanup"
-      ],
-      "file_path": "rfcs/0000-mysql-rawconn-convergence/README.md"
-    },
-    {
       "id": "0000-singular-association-holder",
       "title": "Singular-association holder & _cachedAssociations deletion",
       "status": "draft",
@@ -412,6 +374,44 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0019-canonical-schema-burndown/README.md"
+    },
+    {
+      "id": "0020-load-defaults-config",
+      "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
+      "status": "draft",
+      "owner": "@deanmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "trailties"
+      ],
+      "clusters": [
+        "config-defaults"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0020-load-defaults-config/README.md"
+    },
+    {
+      "id": "0021-mysql-rawconn-convergence",
+      "title": "mysql2 query methods through the abstract withRawConnection loop",
+      "status": "draft",
+      "owner": "@deanmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "mysql-rawconn-convergence"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0013-pg-rawconn-convergence",
+        "0010-adapter-cleanup"
+      ],
+      "file_path": "rfcs/0021-mysql-rawconn-convergence/README.md"
     }
   ],
   "stories": [
@@ -468,7 +468,7 @@
     },
     {
       "id": "partial-inserts-load-defaults",
-      "rfc": "0000-load-defaults-config",
+      "rfc": "0020-load-defaults-config",
       "title": "Establish config.load_defaults + land partial_inserts as the 7.0 entry",
       "status": "done",
       "cluster": "config-defaults",
@@ -481,11 +481,11 @@
       "claim": "2026-06-09T19:45:28Z",
       "assignee": "partial-inserts-load-defaults",
       "blocked_by": null,
-      "file_path": "rfcs/0000-load-defaults-config/stories/partial-inserts-load-defaults.md"
+      "file_path": "rfcs/0020-load-defaults-config/stories/partial-inserts-load-defaults.md"
     },
     {
       "id": "phase1-dirty-on-any-query",
-      "rfc": "0000-mysql-rawconn-convergence",
+      "rfc": "0021-mysql-rawconn-convergence",
       "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
       "status": "done",
       "cluster": "mysql-rawconn-convergence",
@@ -498,11 +498,11 @@
       "claim": "2026-06-09T20:13:46Z",
       "assignee": "phase1-dirty-on-any-query",
       "blocked_by": null,
-      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase1-dirty-on-any-query.md"
+      "file_path": "rfcs/0021-mysql-rawconn-convergence/stories/phase1-dirty-on-any-query.md"
     },
     {
       "id": "phase2-route-data-path-through-withrawconnection",
-      "rfc": "0000-mysql-rawconn-convergence",
+      "rfc": "0021-mysql-rawconn-convergence",
       "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
       "status": "done",
       "cluster": "mysql-rawconn-convergence",
@@ -517,7 +517,7 @@
       "claim": "2026-06-10T01:31:18Z",
       "assignee": "phase2-route-data-path-through-withrawconnection",
       "blocked_by": null,
-      "file_path": "rfcs/0000-mysql-rawconn-convergence/stories/phase2-route-data-path-through-withrawconnection.md"
+      "file_path": "rfcs/0021-mysql-rawconn-convergence/stories/phase2-route-data-path-through-withrawconnection.md"
     },
     {
       "id": "s2-migrate-preloader-writes",

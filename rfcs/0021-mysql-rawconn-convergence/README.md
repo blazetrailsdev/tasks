@@ -1,5 +1,5 @@
 ---
-rfc: "0000-mysql-rawconn-convergence"
+rfc: "0021-mysql-rawconn-convergence"
 title: "mysql2 query methods through the abstract withRawConnection loop"
 status: draft
 created: 2026-06-09
@@ -14,10 +14,10 @@ related-rfcs:
   - "0010-adapter-cleanup"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-mysql-rawconn-convergence and the
+<!-- Unnumbered until merge: keep `rfc:` as 0021-mysql-rawconn-convergence and the
      H1 below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC — mysql2 query methods through the abstract `withRawConnection` loop
+# RFC 0021 — mysql2 query methods through the abstract `withRawConnection` loop
 
 ## Summary
 

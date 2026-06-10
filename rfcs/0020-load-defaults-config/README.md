@@ -1,5 +1,5 @@
 ---
-rfc: "0000-load-defaults-config"
+rfc: "0020-load-defaults-config"
 title: "Versioned framework defaults (config.load_defaults) — partial_inserts first"
 status: draft
 created: 2026-06-09
@@ -12,10 +12,10 @@ clusters:
   - config-defaults
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-load-defaults-config and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0020-load-defaults-config and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC — Versioned framework defaults (`config.load_defaults`)
+# RFC 0020 — Versioned framework defaults (`config.load_defaults`)
 
 ## Summary
 

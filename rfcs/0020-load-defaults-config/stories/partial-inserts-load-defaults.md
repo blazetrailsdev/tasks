@@ -2,7 +2,7 @@
 title: "Establish config.load_defaults + land partial_inserts as the 7.0 entry"
 status: done
 updated: 2026-06-09
-rfc: "0000-load-defaults-config"
+rfc: "0020-load-defaults-config"
 cluster: config-defaults
 deps: []
 deps-rfc: []

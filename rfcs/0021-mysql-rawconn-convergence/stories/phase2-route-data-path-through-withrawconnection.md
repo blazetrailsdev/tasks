@@ -2,7 +2,7 @@
 title: "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection"
 status: done
 updated: 2026-06-10
-rfc: "0000-mysql-rawconn-convergence"
+rfc: "0021-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
 deps:
   - phase1-dirty-on-any-query
