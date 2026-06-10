@@ -1,15 +1,15 @@
 ---
 title: "Phase 1 — PG CREATE DATABASE ... TEMPLATE"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-10
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
 deps: ["phase0-sqlite-template-spike"]
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T13:40:36Z"
+assignee: "phase1-pg-template"
 blocked-by: null
 ---
 
