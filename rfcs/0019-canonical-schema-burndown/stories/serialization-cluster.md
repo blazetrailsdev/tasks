@@ -1,6 +1,6 @@
 ---
 title: "serialization + store cluster → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: null
+pr: 3094
 claim: "2026-06-10T18:55:22Z"
 assignee: "serialization-cluster"
 blocked-by: null
