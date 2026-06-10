@@ -1200,18 +1200,18 @@
       "id": "scoping-suite",
       "rfc": "0019-canonical-schema-burndown",
       "title": "scoping/ suite → canonical schema + Rails fixtures",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "fixtures",
       "priority": 6,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "shared-table-convergence"
       ],
       "deps_rfc": [],
       "est_loc": 300,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T23:47:14Z",
+      "assignee": "scoping-suite",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/scoping-suite.md"
     },

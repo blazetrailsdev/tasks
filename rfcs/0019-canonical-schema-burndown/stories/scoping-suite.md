@@ -1,7 +1,7 @@
 ---
 title: "scoping/ suite → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T23:47:14Z"
+assignee: "scoping-suite"
 blocked-by: null
 ---
 
