@@ -1,7 +1,7 @@
 ---
 title: "Phase 2c — txn-control + DDL sites, retire withClient bespoke reconnect"
-status: ready
-updated: 2026-06-05
+status: claimed
+updated: 2026-06-10
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T15:13:20Z"
+assignee: "phase2c-txn-control-retire-withclient"
 blocked-by: null
 ---
 
