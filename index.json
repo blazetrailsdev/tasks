@@ -815,6 +815,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/posts-table-convergence.md"
     },
     {
+      "id": "relation-composite-where",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/composite-where.test.ts → canonical CPK models + where_test.rb composite cases",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-composite-where.md"
+    },
+    {
       "id": "relation-field-ordered-values-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)",

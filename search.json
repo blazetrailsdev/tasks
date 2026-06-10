@@ -265,6 +265,12 @@
       "terms": "posts-table-convergence converge bespoke posts scratch tables to file-unique names fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-composite-where",
+      "type": "story",
+      "title": "relation/composite-where.test.ts → canonical CPK models + where_test.rb composite cases",
+      "terms": "relation-composite-where relation/composite-where.test.ts → canonical cpk models + where_test.rb composite cases fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-field-ordered-values-canonical",
       "type": "story",
       "title": "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)",
