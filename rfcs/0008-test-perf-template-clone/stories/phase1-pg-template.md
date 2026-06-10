@@ -1,6 +1,6 @@
 ---
 title: "Phase 1 — PG CREATE DATABASE ... TEMPLATE"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
