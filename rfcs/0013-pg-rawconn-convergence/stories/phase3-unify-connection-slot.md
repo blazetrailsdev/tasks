@@ -1,6 +1,6 @@
 ---
 title: "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
