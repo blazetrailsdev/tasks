@@ -1,6 +1,6 @@
 ---
 title: "W7 — associations + relation tail (audit-gated)"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: integrated
