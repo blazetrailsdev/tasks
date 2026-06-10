@@ -547,6 +547,12 @@
       "terms": "p3-mysql-auto-increment p3 — mysql auto-increment (4 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "abstract-sqlite3-adapter",
+      "type": "story",
+      "title": "Rails-fy SQLite driver abstraction: AbstractSqlite3Adapter + per-lib subclasses",
+      "terms": "abstract-sqlite3-adapter rails-fy sqlite driver abstraction: abstractsqlite3adapter + per-lib subclasses adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "p3-mysql-stored-procedures",
       "type": "story",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
@@ -595,6 +601,12 @@
       "terms": "rf3-inorderof-type-cast rf3 — add type_cast_for_database value casting in inorderof relation 0005-activerecord-gaps context"
     },
     {
+      "id": "index-comments-mysql-pg",
+      "type": "story",
+      "title": "Index comment introspection + dump emission (MySQL INDEX_COMMENT, PG obj_description)",
+      "terms": "index-comments-mysql-pg index comment introspection + dump emission (mysql index_comment, pg obj_description) adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "p3-pg-optimizer-hints-and-enum",
       "type": "story",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
@@ -625,6 +637,12 @@
       "terms": "p3-mysql-charset-collation p3 — mysql charset/collation and check-constraint quoting (2 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "where-nested-hash-assoc-name-table-resolution",
+      "type": "story",
+      "title": "where() nested-hash keyed by camelCase association name doesn't resolve to table",
+      "terms": "where-nested-hash-assoc-name-table-resolution where() nested-hash keyed by camelcase association name doesn't resolve to table relation 0005-activerecord-gaps context"
+    },
+    {
       "id": "p3-mysql-virtual-column",
       "type": "story",
       "title": "P3 — MySQL virtual column (2 skips)",
@@ -635,6 +653,12 @@
       "type": "story",
       "title": "Dirty: previous_changes must include in-place mutations after save",
       "terms": "dirty-previous-changes-in-place-mutations dirty: previous_changes must include in-place mutations after save dirty-tracking 0015-ar-framework-gaps context"
+    },
+    {
+      "id": "habtm-proxy-size-nondistinct",
+      "type": "story",
+      "title": "HABTM collection proxy size() returns deduped count for non-distinct collections",
+      "terms": "habtm-proxy-size-nondistinct habtm collection proxy size() returns deduped count for non-distinct collections associations 0005-activerecord-gaps context"
     },
     {
       "id": "insert-all-scope-attribute-precedence",
