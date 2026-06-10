@@ -1,13 +1,13 @@
 ---
 title: "Per-class clone-on-write callback registry on AbstractAdapter"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
 deps-rfc: []
 est-loc: 15
-pr: null
+pr: 3087
 claim: "2026-06-10T15:35:04Z"
 assignee: "pool-per-class-callback-registry"
 blocked-by: null
