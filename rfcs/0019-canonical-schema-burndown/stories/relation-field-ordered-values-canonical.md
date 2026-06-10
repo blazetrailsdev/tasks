@@ -1,6 +1,6 @@
 ---
 title: "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
