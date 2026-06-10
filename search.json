@@ -229,6 +229,12 @@
       "terms": "json-serialization-canonical json_serialization_test.rb → canonical models + fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "posts-table-convergence",
+      "type": "story",
+      "title": "Converge bespoke posts scratch tables to file-unique names",
+      "terms": "posts-table-convergence converge bespoke posts scratch tables to file-unique names fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-field-ordered-values-canonical",
       "type": "story",
       "title": "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)",
