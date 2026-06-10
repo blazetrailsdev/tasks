@@ -1,13 +1,13 @@
 ---
 title: "W7 — _namedInnerJoins merger/scope fix"
-status: claimed
+status: done
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: integrated
 deps: []
 deps-rfc: []
 est-loc: 60
-pr: null
+pr: 2849
 claim: "2026-06-10T15:57:23Z"
 assignee: "w7-named-inner-joins-fix"
 blocked-by: null
