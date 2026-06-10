@@ -1,6 +1,6 @@
 ---
 title: "Converge collision-prone scratch tables (people / posts / items / HABTM joins)"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures

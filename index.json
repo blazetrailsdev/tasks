@@ -967,7 +967,7 @@
       "id": "shared-table-convergence",
       "rfc": "0019-canonical-schema-burndown",
       "title": "Converge collision-prone scratch tables (people / posts / items / HABTM joins)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 6,
       "updated": "2026-06-10T00:00:00.000Z",
