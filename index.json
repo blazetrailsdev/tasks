@@ -3096,6 +3096,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/lazy-async-schema-reflection.md"
     },
     {
+      "id": "materialize-declares-rollout",
+      "rfc": "0014-fixtures-adoption",
+      "title": "Materialize model declares: synthesize fixes + rollout beyond topic/developer",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 450,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0014-fixtures-adoption/stories/materialize-declares-rollout.md"
+    },
+    {
       "id": "migrate-adapter-ci",
       "rfc": "0011-activerecord-docs-cutover",
       "title": "RFC from adapter-test-ci + ci-gates",
