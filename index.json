@@ -3385,18 +3385,18 @@
       "id": "w7-associations-relation-tail",
       "rfc": "0016-ar-test-compare-100",
       "title": "W7 — associations + relation tail (audit-gated)",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "integrated",
       "priority": null,
-      "updated": "2026-06-07T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "w7-named-inner-joins-fix"
       ],
       "deps_rfc": [],
       "est_loc": 300,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T16:32:25Z",
+      "assignee": "w7-associations-relation-tail",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/w7-associations-relation-tail.md"
     },
