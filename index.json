@@ -2472,18 +2472,18 @@
       "id": "f5-query-cache-residuals",
       "rfc": "0016-ar-test-compare-100",
       "title": "F-5 — query-cache residuals",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "clusters",
       "priority": null,
-      "updated": "2026-06-07T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "f7-fixtures-backed-clusters"
       ],
       "deps_rfc": [],
       "est_loc": 50,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T13:29:37Z",
+      "assignee": "f5-query-cache-residuals",
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/f5-query-cache-residuals.md"
     },

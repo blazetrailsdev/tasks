@@ -1,15 +1,15 @@
 ---
 title: "F-5 — query-cache residuals"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
 deps: ["f7-fixtures-backed-clusters"]
 deps-rfc: []
 est-loc: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T13:29:37Z"
+assignee: "f5-query-cache-residuals"
 blocked-by: null
 ---
 
