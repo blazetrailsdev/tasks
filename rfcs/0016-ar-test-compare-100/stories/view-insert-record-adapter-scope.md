@@ -1,6 +1,6 @@
 ---
 title: "View: adapter-scope the over-broad UpdateableViewTest insert-record skip"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 20
-pr: null
+pr: 3072
 claim: "2026-06-10T00:42:48Z"
 assignee: "view-insert-record-adapter-scope"
 blocked-by: null
