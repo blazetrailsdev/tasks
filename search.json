@@ -223,6 +223,12 @@
       "terms": "relation-mutation-cluster relation/ mutation cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-mutation-cluster-followup",
+      "type": "story",
+      "title": "relation/ mutation cluster (cont.) → canonical schema + Rails fixtures",
+      "terms": "relation-mutation-cluster-followup relation/ mutation cluster (cont.) → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-select-order-cluster",
       "type": "story",
       "title": "relation/ select + order cluster → canonical schema + Rails fixtures",
@@ -1103,12 +1109,6 @@
       "type": "story",
       "title": "Build story↔shipped-PR reconcile report",
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
-    },
-    {
-      "id": "relation-mutation-cluster-followup",
-      "type": "story",
-      "title": "relation-mutation-cluster-followup",
-      "terms": "relation-mutation-cluster-followup relation-mutation-cluster-followup 0019-canonical-schema-burndown context"
     },
     {
       "id": "relocate-tsc-wrapper",

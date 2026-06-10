@@ -687,6 +687,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-mutation-cluster.md"
     },
     {
+      "id": "relation-mutation-cluster-followup",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/ mutation cluster (cont.) → canonical schema + Rails fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-mutation-cluster-followup.md"
+    },
+    {
       "id": "relation-select-order-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ select + order cluster → canonical schema + Rails fixtures",
@@ -3293,23 +3310,6 @@
       "assignee": "reconcile-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-tooling.md"
-    },
-    {
-      "id": "relation-mutation-cluster-followup",
-      "rfc": "0019-canonical-schema-burndown",
-      "title": "relation-mutation-cluster-followup",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-10T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-mutation-cluster-followup.md"
     },
     {
       "id": "relocate-tsc-wrapper",
