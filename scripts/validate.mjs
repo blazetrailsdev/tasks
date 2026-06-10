@@ -53,8 +53,14 @@ for (const s of stories) {
   if (seenIds.has(s.id)) err(s.file, `duplicate story id "${s.id}"`);
   seenIds.add(s.id);
   const fm = s.frontmatter ?? {};
-  for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc"]) {
+  for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc", "claim"]) {
     if (fm[key] === undefined) err(s.file, `missing required frontmatter: ${key}`);
+  }
+  // claim must be the unclaimed sentinel (null) or a claim timestamp (string).
+  // Absence is caught above; a present-but-mistyped claim would make the CLI's
+  // claimState misread the story (a missing claim reads as already-claimed).
+  if (fm.claim !== undefined && fm.claim !== null && typeof fm.claim !== "string") {
+    err(s.file, `claim must be null or a timestamp string`);
   }
   if (fm.status && !STORY_STATUSES.includes(fm.status)) {
     err(s.file, `invalid status "${fm.status}" — expected one of ${STORY_STATUSES.join(", ")}`);

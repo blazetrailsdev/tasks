@@ -7,6 +7,8 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 50
+claim: null
+assignee: null
 blocked-by: null
 pr: 3062
 ---
