@@ -760,6 +760,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/json-serialization-canonical.md"
     },
     {
+      "id": "normalized-attribute-test-cluster",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "normalized-attribute.test.ts → normalized_attribute_test.rb canonical schema port",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/normalized-attribute-test-cluster.md"
+    },
+    {
       "id": "posts-table-convergence",
       "rfc": "0019-canonical-schema-burndown",
       "title": "Converge bespoke posts scratch tables to file-unique names",

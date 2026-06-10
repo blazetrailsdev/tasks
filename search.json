@@ -247,6 +247,12 @@
       "terms": "json-serialization-canonical json_serialization_test.rb → canonical models + fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "normalized-attribute-test-cluster",
+      "type": "story",
+      "title": "normalized-attribute.test.ts → normalized_attribute_test.rb canonical schema port",
+      "terms": "normalized-attribute-test-cluster normalized-attribute.test.ts → normalized_attribute_test.rb canonical schema port fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "posts-table-convergence",
       "type": "story",
       "title": "Converge bespoke posts scratch tables to file-unique names",
