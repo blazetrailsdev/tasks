@@ -3603,7 +3603,7 @@
       "id": "mariadb-coverage-lane",
       "rfc": "0012-adapter-test-ci",
       "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "ci-lane",
       "priority": 1000008,
       "updated": "2026-06-10T00:00:00.000Z",
@@ -3613,8 +3613,8 @@
       "deps_rfc": [],
       "est_loc": 80,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T16:08:21Z",
+      "assignee": "mariadb-coverage-lane",
       "blocked_by": null,
       "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
     }
