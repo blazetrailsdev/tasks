@@ -1,6 +1,6 @@
 ---
 title: "Phase 3 — Thread collector through subclasses"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
