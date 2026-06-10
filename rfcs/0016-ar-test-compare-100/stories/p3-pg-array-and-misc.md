@@ -1,6 +1,6 @@
 ---
 title: "P3 — PG array and misc adapter (17 skips)"
-status: in-progress
+status: done
 updated: 2026-06-09
 rfc: "0016-ar-test-compare-100"
 cluster: adapter

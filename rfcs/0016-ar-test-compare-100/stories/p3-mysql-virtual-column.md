@@ -1,6 +1,6 @@
 ---
 title: "P3 — MySQL virtual column (2 skips)"
-status: in-progress
+status: done
 updated: 2026-06-09
 rfc: "0016-ar-test-compare-100"
 cluster: adapter

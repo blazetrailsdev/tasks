@@ -1,6 +1,6 @@
 ---
 title: "Fix `tasks new`: emit hook-clean stories and validate --cluster"
-status: in-progress
+status: done
 updated: 2026-06-08
 rfc: "0001-task-system"
 cluster: scaffold
