@@ -217,6 +217,12 @@
       "terms": "attribute-types-cluster attributes + type/precision cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "items-table-convergence",
+      "type": "story",
+      "title": "Converge bespoke items scratch tables to file-unique names",
+      "terms": "items-table-convergence converge bespoke items scratch tables to file-unique names fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "json-serialization-canonical",
       "type": "story",
       "title": "json_serialization_test.rb → canonical models + fixtures",
