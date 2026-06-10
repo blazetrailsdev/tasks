@@ -277,6 +277,12 @@
       "terms": "relation-merge-hash-and-proc-fidelity relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-merging",
+      "type": "story",
+      "title": "relation/merging.test.ts → canonical schema + merging_test.rb",
+      "terms": "relation-merging relation/merging.test.ts → canonical schema + merging_test.rb fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-mutation-cluster",
       "type": "story",
       "title": "relation/ mutation cluster → canonical schema + Rails fixtures",

@@ -849,6 +849,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-merge-hash-and-proc-fidelity.md"
     },
     {
+      "id": "relation-merging",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/merging.test.ts → canonical schema + merging_test.rb",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-merging.md"
+    },
+    {
       "id": "relation-mutation-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ mutation cluster → canonical schema + Rails fixtures",
