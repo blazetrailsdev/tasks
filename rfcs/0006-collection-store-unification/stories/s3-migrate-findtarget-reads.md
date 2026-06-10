@@ -1,15 +1,15 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Migrate findTarget and instance-method reads through the proxy"
-status: ready
-updated: 2026-05-29
+status: claimed
+updated: 2026-06-10
 cluster: associations
 deps: ["s2-migrate-preloader-writes"]
 est-loc: 140
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T20:30:45Z"
+assignee: "s3-migrate-findtarget-reads"
 blocked-by: null
 ---
 
