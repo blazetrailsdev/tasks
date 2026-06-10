@@ -1,6 +1,6 @@
 ---
 title: "relation/order.test.ts → canonical Book/Author + fixtures (order_test.rb)"
-status: ready
+status: claimed
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T22:15:35Z"
+assignee: "relation-order-test-canonical"
 blocked-by: null
 ---
 
