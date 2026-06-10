@@ -106,7 +106,7 @@
       "id": "0016-ar-test-compare-100",
       "type": "rfc",
       "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
-      "terms": "0016-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated rfc 0016 — activerecord test:compare 100%: phase-ordered un-skip campaign"
+      "terms": "0016-ar-test-compare-100 activerecord test:compare 100%: phase-ordered un-skip campaign activerecord hygiene unblockers clusters adapter integrated core-residuals rfc 0016 — activerecord test:compare 100%: phase-ordered un-skip campaign"
     },
     {
       "id": "0017-arel-collector-threading",
@@ -947,6 +947,48 @@
       "type": "story",
       "title": "F-8 — small core leftovers",
       "terms": "f8-small-core-leftovers f-8 — small core leftovers clusters 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-adapter-core-behaviors",
+      "type": "story",
+      "title": "F-9a — adapter_test core behaviors",
+      "terms": "f9-adapter-core-behaviors f-9a — adapter_test core behaviors core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-autosave-association",
+      "type": "story",
+      "title": "F-9d — autosave_association residuals",
+      "terms": "f9-autosave-association f-9d — autosave_association residuals core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-core-misc-tail",
+      "type": "story",
+      "title": "F-9g — core misc skip tail",
+      "terms": "f9-core-misc-tail f-9g — core misc skip tail core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-counter-cache-reset",
+      "type": "story",
+      "title": "F-9f — counter_cache reset variants",
+      "terms": "f9-counter-cache-reset f-9f — counter_cache reset variants core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-optimistic-locking-residuals",
+      "type": "story",
+      "title": "F-9e — optimistic locking residuals",
+      "terms": "f9-optimistic-locking-residuals f-9e — optimistic locking residuals core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-quoting-and-typecast",
+      "type": "story",
+      "title": "F-9c — quoting + type-cast edge cases",
+      "terms": "f9-quoting-and-typecast f-9c — quoting + type-cast edge cases core-residuals 0016-ar-test-compare-100 context"
+    },
+    {
+      "id": "f9-statement-cache-and-binds",
+      "type": "story",
+      "title": "F-9b — statement cache + bind parameters",
+      "terms": "f9-statement-cache-and-binds f-9b — statement cache + bind parameters core-residuals 0016-ar-test-compare-100 context"
     },
     {
       "id": "fix-tasks-new-command",

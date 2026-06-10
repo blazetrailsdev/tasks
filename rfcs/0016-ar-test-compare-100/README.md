@@ -13,6 +13,7 @@ clusters:
   - clusters
   - adapter
   - integrated
+  - core-residuals
 ---
 
 <!-- Unnumbered until merge: keep `rfc:` as 0016-ar-test-compare-100. -->
@@ -41,7 +42,15 @@ Phase 2  parallel clusters (CI-runnable on all three backends):
 Phase 3  adapter type-families: PG (~94) + MySQL (~41)
          local-verify until RFC 0012 wire-adapter-dir-lane adds the CI lane
 Phase 4  integrated tail: associations (265) + relation (170) — LAST, audit-gated
+Phase 5  core-residuals: un-owned core skips surfaced after F-8 (#3012) closed —
+         F-9a adapter (~44) · F-9b stmt-cache/binds (20) · F-9c quoting (15)
+         F-9d autosave (11) · F-9e locking (11) · F-9f counter-cache (5) · F-9g tail (~50)
 ```
+
+**Snapshot 2026-06-10:** `test:compare --package activerecord` = **92.6%**
+(7241/7816, **575 skipped**). All 575 bucket into the phases above; Phase 5 captures
+the ~175 core skips that F-8 (`f8-small-core-leftovers`, done #3012, scoped ~29) never
+covered. `defaults_test.rb` (13, schema-dump defaults) stays under I-1.
 
 **Adapter CI structure:** core + `adapters/sqlite3/**` run on all three backends
 via `describeIfPg`/`describeIfMysql`. `adapters/postgresql/**` + MySQL dirs are
@@ -87,8 +96,16 @@ excluded from the shared run; need `TEST_ADAPTER=postgresql/mysql2` (RFC 0012).
 | [p3-pg-array-and-misc](stories/p3-pg-array-and-misc.md)                                       | PG array and misc adapter                                    |   3   |     17 | draft  | i1                       |
 | [w7-named-inner-joins-fix](stories/w7-named-inner-joins-fix.md)                               | \_namedInnerJoins merger fix                                 |   4   |   gate | ready  | —                        |
 | [w7-associations-relation-tail](stories/w7-associations-relation-tail.md)                     | Associations + relation tail                                 |   4   |   ~435 | ready  | w7-named-inner-joins-fix |
+| [f9-adapter-core-behaviors](stories/f9-adapter-core-behaviors.md)                             | adapter_test core behaviors                                  |   5   |    ~44 | draft  | —                        |
+| [f9-statement-cache-and-binds](stories/f9-statement-cache-and-binds.md)                       | Statement cache + bind parameters                            |   5   |     20 | draft  | —                        |
+| [f9-quoting-and-typecast](stories/f9-quoting-and-typecast.md)                                 | Quoting + type-cast edge cases                               |   5   |     15 | draft  | —                        |
+| [f9-autosave-association](stories/f9-autosave-association.md)                                 | autosave_association residuals                               |   5   |     11 | draft  | —                        |
+| [f9-optimistic-locking-residuals](stories/f9-optimistic-locking-residuals.md)                 | Optimistic locking residuals                                 |   5   |     11 | draft  | —                        |
+| [f9-counter-cache-reset](stories/f9-counter-cache-reset.md)                                   | counter_cache reset variants                                 |   5   |      5 | draft  | —                        |
+| [f9-core-misc-tail](stories/f9-core-misc-tail.md)                                             | Core misc skip tail                                          |   5   |    ~50 | draft  | —                        |
 
 ## Changelog
 
+- 2026-06-10: add Phase 5 core-residuals (F-9a…F-9g) for the ~175 un-owned core skips surfaced after F-8 (#3012) closed; snapshot refreshed to 92.6% (575 skipped).
 - 2026-06-08: decompose p3-adapter-type-families into 12 child stories (8 MySQL + 4 PG residual).
 - 2026-06-07: initial RFC, migrated from `workplan.md`, attack-plan, 100-plan, index.
