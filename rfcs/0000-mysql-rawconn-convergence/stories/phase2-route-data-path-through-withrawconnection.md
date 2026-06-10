@@ -1,7 +1,7 @@
 ---
 title: "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0000-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T01:31:18Z"
+assignee: "phase2-route-data-path-through-withrawconnection"
 blocked-by: null
 ---
 
