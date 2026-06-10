@@ -2113,25 +2113,6 @@
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase0-sqlite-template-spike.md"
     },
     {
-      "id": "mariadb-coverage-lane",
-      "rfc": "0012-adapter-test-ci",
-      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
-      "status": "claimed",
-      "cluster": "ci-lane",
-      "priority": 99,
-      "updated": "2026-06-10T00:00:00.000Z",
-      "deps": [
-        "wire-adapter-dir-lane"
-      ],
-      "deps_rfc": [],
-      "est_loc": 80,
-      "pr": null,
-      "claim": "2026-06-10T13:18:34Z",
-      "assignee": "mariadb-coverage-lane",
-      "blocked_by": null,
-      "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
-    },
-    {
       "id": "a1-ddl-metadata-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -3617,6 +3598,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0002-bootstrap-databasetasks/stories/define-schema-preload-cleanup.md"
+    },
+    {
+      "id": "mariadb-coverage-lane",
+      "rfc": "0012-adapter-test-ci",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "status": "claimed",
+      "cluster": "ci-lane",
+      "priority": 1000008,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "wire-adapter-dir-lane"
+      ],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": "2026-06-10T13:18:34Z",
+      "assignee": "mariadb-coverage-lane",
+      "blocked_by": null,
+      "file_path": "rfcs/0012-adapter-test-ci/stories/mariadb-coverage-lane.md"
     }
   ]
 }

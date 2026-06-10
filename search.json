@@ -709,12 +709,6 @@
       "terms": "phase0-sqlite-template-spike phase 0 — sqlite clonable-template spike test-perf 0008-test-perf-template-clone context"
     },
     {
-      "id": "mariadb-coverage-lane",
-      "type": "story",
-      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
-      "terms": "mariadb-coverage-lane mariadb coverage lane — exercise the never-run mariadb-specific branches ci-lane 0012-adapter-test-ci context"
-    },
-    {
       "id": "a1-ddl-metadata-callers",
       "type": "story",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -1211,6 +1205,12 @@
       "type": "story",
       "title": "Phase 5 — retire canonical-preload signature machinery",
       "terms": "define-schema-preload-cleanup phase 5 — retire canonical-preload signature machinery followup 0002-bootstrap-databasetasks context"
+    },
+    {
+      "id": "mariadb-coverage-lane",
+      "type": "story",
+      "title": "MariaDB coverage lane — exercise the never-run MariaDB-specific branches",
+      "terms": "mariadb-coverage-lane mariadb coverage lane — exercise the never-run mariadb-specific branches ci-lane 0012-adapter-test-ci context"
     }
   ]
 }

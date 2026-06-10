@@ -8,7 +8,7 @@ deps:
   - wire-adapter-dir-lane
 deps-rfc: []
 est-loc: 80
-priority: 99
+priority: 1000008
 pr: null
 claim: "2026-06-10T13:18:34Z"
 assignee: "mariadb-coverage-lane"
