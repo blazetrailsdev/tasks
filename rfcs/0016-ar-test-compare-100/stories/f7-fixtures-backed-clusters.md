@@ -1,13 +1,13 @@
 ---
 title: "F-7 — fixtures-backed clusters"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 3081
 claim: "2026-06-10T12:01:40Z"
 assignee: "f7-fixtures-backed-clusters"
 blocked-by: null
