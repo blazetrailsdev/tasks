@@ -1,7 +1,7 @@
 ---
 title: "MariaDB coverage lane — exercise the never-run MariaDB-specific branches"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0012-adapter-test-ci"
 cluster: ci-lane
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 99
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T13:18:34Z"
+assignee: "mariadb-coverage-lane"
 blocked-by: null
 ---
 
