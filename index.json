@@ -2544,7 +2544,7 @@
       "id": "f6c-nested-attrs-canonical-models",
       "rfc": "0016-ar-test-compare-100",
       "title": "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "clusters",
       "priority": null,
       "updated": "2026-06-10T00:00:00.000Z",
