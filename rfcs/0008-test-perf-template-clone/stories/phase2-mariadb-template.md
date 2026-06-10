@@ -1,15 +1,15 @@
 ---
 title: "Phase 2 — MariaDB template (measure before committing)"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-10
 rfc: "0008-test-perf-template-clone"
 cluster: test-perf
 deps: ["phase0-sqlite-template-spike"]
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T14:40:19Z"
+assignee: "phase2-mariadb-template"
 blocked-by: null
 ---
 
