@@ -978,18 +978,18 @@
       "id": "step2-sqlite-visitor-wire",
       "rfc": "0018-ddl-visitor-convergence",
       "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "ddl-visitor-convergence",
       "priority": 6,
-      "updated": "2026-06-08T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "step1-delete-dead-mysql-branches"
       ],
       "deps_rfc": [],
       "est_loc": 120,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T01:43:16Z",
+      "assignee": "step2-sqlite-visitor-wire",
       "blocked_by": null,
       "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step2-sqlite-visitor-wire.md"
     },
