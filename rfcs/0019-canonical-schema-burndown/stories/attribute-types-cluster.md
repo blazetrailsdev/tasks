@@ -19,16 +19,24 @@ blocked-by: null
 Convert the attribute/type/precision files (RFC §Rollout phase 1). Mostly
 self-contained type tests with clean Rails counterparts.
 
-Files (remove each from the exclude JSON as it lands):
+**Scope narrowed** (2026-06-10): the 8-file cluster did not fit one ≤300 LOC
+PR, so this story ships the small type/precision trio + the trails roundtrip
+test, and the four heavy inline-class rewrites were carved into their own
+follow-up stories rather than fanned out as sibling PRs (per CLAUDE.md).
 
-- `attributes.test.ts` → `attributes_test.rb`
-- `defaults.test.ts` → `defaults_test.rb`
+This story (PR shipped) covers:
+
 - `date.test.ts` → `date_test.rb`
 - `date-time-precision.test.ts` → `date_time_precision_test.rb`
 - `time-precision.test.ts` → `time_precision_test.rb`
-- `timestamp.test.ts` → `timestamp_test.rb`
 - `bigint-roundtrip.test.ts` → no direct Rails counterpart (trails type-roundtrip test); convert schema/fixtures only, no body to match
-- `normalized-attribute.test.ts` → `normalized_attribute_test.rb`
+
+Carved into follow-up stories:
+
+- `attributes.test.ts` → `attributes-test-cluster`
+- `defaults.test.ts` → `defaults-test-cluster`
+- `timestamp.test.ts` → `timestamp-test-cluster`
+- `normalized-attribute.test.ts` → `normalized-attribute-test-cluster`
 
 ## Acceptance criteria
 
