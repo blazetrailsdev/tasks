@@ -1,7 +1,7 @@
 ---
 title: "insert_all: scope attributes must take precedence over row values"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 5
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T00:42:36Z"
+assignee: "insert-all-scope-attribute-precedence"
 blocked-by: null
 ---
 
