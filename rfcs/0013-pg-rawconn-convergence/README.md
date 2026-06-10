@@ -4,7 +4,7 @@ title: "PG raw-connection acquisition through the abstract withRawConnection loo
 status: active
 created: 2026-06-04
 updated: 2026-06-05
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

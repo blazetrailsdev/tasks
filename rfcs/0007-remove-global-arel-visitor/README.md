@@ -4,7 +4,7 @@ title: "Remove the global Arel visitor — route toSql through connection.toSql"
 status: active
 created: 2026-05-30
 updated: 2026-05-30
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
   - arel

@@ -4,7 +4,7 @@ title: "Wire the live query-cache mixin, retire the wrapper"
 status: closed
 created: 2026-05-29
 updated: 2026-05-29
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

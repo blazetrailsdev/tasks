@@ -4,7 +4,7 @@ title: "Thread the Arel query visitor collector — eliminate ToSql instance sta
 status: active
 created: 2026-06-08
 updated: 2026-06-08
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - arel
   - activerecord

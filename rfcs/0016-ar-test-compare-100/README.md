@@ -4,7 +4,7 @@ title: "ActiveRecord test:compare 100%: phase-ordered un-skip campaign"
 status: active
 created: 2026-06-07
 updated: 2026-06-07
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

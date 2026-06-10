@@ -4,7 +4,7 @@ title: "ActiveRecord type-audit remainder (W1b + follow-ups + W4)"
 status: active
 created: 2026-05-30
 updated: 2026-05-30
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

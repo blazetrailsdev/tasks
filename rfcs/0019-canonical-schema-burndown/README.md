@@ -4,7 +4,7 @@ title: "Canonical-schema ratchet burndown — convert the AR test suite to TEST_
 status: active
 created: 2026-06-09
 updated: 2026-06-09
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

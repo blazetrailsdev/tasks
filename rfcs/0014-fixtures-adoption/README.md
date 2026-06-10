@@ -5,7 +5,7 @@ status: superseded
 superseded-by: "0019-canonical-schema-burndown"
 created: 2026-06-04
 updated: 2026-06-09
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

@@ -4,7 +4,7 @@ title: "Adapter → Connection collapse — remaining cleanup"
 status: active
 created: 2026-05-30
 updated: 2026-05-30
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

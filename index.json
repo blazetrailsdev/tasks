@@ -4,7 +4,7 @@
       "id": "0000-load-defaults-config",
       "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
       "status": "draft",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-09T00:00:00.000Z",
       "updated": "2026-06-09T00:00:00.000Z",
       "packages": [
@@ -22,7 +22,7 @@
       "id": "0000-mysql-rawconn-convergence",
       "title": "mysql2 query methods through the abstract withRawConnection loop",
       "status": "draft",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-09T00:00:00.000Z",
       "updated": "2026-06-09T00:00:00.000Z",
       "packages": [
@@ -39,10 +39,28 @@
       "file_path": "rfcs/0000-mysql-rawconn-convergence/README.md"
     },
     {
+      "id": "0000-singular-association-holder",
+      "title": "Singular-association holder & _cachedAssociations deletion",
+      "status": "draft",
+      "owner": "@deanmarano",
+      "created": "2026-06-10T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "activemodel"
+      ],
+      "clusters": [
+        "associations"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0000-singular-association-holder/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-28T00:00:00.000Z",
       "updated": "2026-05-28T00:00:00.000Z",
       "packages": [],
@@ -58,7 +76,7 @@
       "id": "0002-bootstrap-databasetasks",
       "title": "Drop bootstrap-test-handler, route test setup through DatabaseTasks",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
       "packages": [
@@ -78,7 +96,7 @@
       "id": "0003-activerecord-cli",
       "title": "Standalone ActiveRecord DX + activerecord-cli package",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
       "packages": [
@@ -100,7 +118,7 @@
       "id": "0004-query-cache-mixin",
       "title": "Wire the live query-cache mixin, retire the wrapper",
       "status": "closed",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
       "packages": [
@@ -117,7 +135,7 @@
       "id": "0005-activerecord-gaps",
       "title": "ActiveRecord parity gaps — associations, connection-pool, relation",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
       "packages": [
@@ -136,7 +154,7 @@
       "id": "0006-collection-store-unification",
       "title": "Collection-store unification",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-29T00:00:00.000Z",
       "updated": "2026-05-29T00:00:00.000Z",
       "packages": [
@@ -154,7 +172,7 @@
       "id": "0007-remove-global-arel-visitor",
       "title": "Remove the global Arel visitor — route toSql through connection.toSql",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
       "packages": [
@@ -174,7 +192,7 @@
       "id": "0008-test-perf-template-clone",
       "title": "AR test perf — canonical schema as a clonable template",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
       "packages": [
@@ -191,7 +209,7 @@
       "id": "0009-type-audit",
       "title": "ActiveRecord type-audit remainder (W1b + follow-ups + W4)",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
       "packages": [
@@ -208,7 +226,7 @@
       "id": "0010-adapter-cleanup",
       "title": "Adapter → Connection collapse — remaining cleanup",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-05-30T00:00:00.000Z",
       "updated": "2026-05-30T00:00:00.000Z",
       "packages": [
@@ -227,7 +245,7 @@
       "id": "0011-activerecord-docs-cutover",
       "title": "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-04T00:00:00.000Z",
       "packages": [
@@ -247,7 +265,7 @@
       "id": "0012-adapter-test-ci",
       "title": "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery",
       "status": "draft",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-04T00:00:00.000Z",
       "packages": [
@@ -265,7 +283,7 @@
       "id": "0013-pg-rawconn-convergence",
       "title": "PG raw-connection acquisition through the abstract withRawConnection loop",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-05T00:00:00.000Z",
       "packages": [
@@ -284,7 +302,7 @@
       "id": "0014-fixtures-adoption",
       "title": "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep",
       "status": "superseded",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-09T00:00:00.000Z",
       "packages": [
@@ -301,7 +319,7 @@
       "id": "0015-ar-framework-gaps",
       "title": "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-04T00:00:00.000Z",
       "updated": "2026-06-04T00:00:00.000Z",
       "packages": [
@@ -319,7 +337,7 @@
       "id": "0016-ar-test-compare-100",
       "title": "ActiveRecord test:compare 100%: phase-ordered un-skip campaign",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-07T00:00:00.000Z",
       "updated": "2026-06-07T00:00:00.000Z",
       "packages": [
@@ -341,7 +359,7 @@
       "id": "0017-arel-collector-threading",
       "title": "Thread the Arel query visitor collector — eliminate ToSql instance state",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-08T00:00:00.000Z",
       "updated": "2026-06-08T00:00:00.000Z",
       "packages": [
@@ -362,7 +380,7 @@
       "id": "0018-ddl-visitor-convergence",
       "title": "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-08T00:00:00.000Z",
       "updated": "2026-06-08T00:00:00.000Z",
       "packages": [
@@ -382,7 +400,7 @@
       "id": "0019-canonical-schema-burndown",
       "title": "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word",
       "status": "active",
-      "owner": "@dmarano",
+      "owner": "@deanmarano",
       "created": "2026-06-09T00:00:00.000Z",
       "updated": "2026-06-09T00:00:00.000Z",
       "packages": [
@@ -413,6 +431,23 @@
       "assignee": "s1-proxy-backed-read-api",
       "blocked_by": null,
       "file_path": "rfcs/0006-collection-store-unification/stories/s1-proxy-backed-read-api.md"
+    },
+    {
+      "id": "b1-singular-association-holder",
+      "rfc": "0000-singular-association-holder",
+      "title": "Singular-association holder + writer/reader migration",
+      "status": "draft",
+      "cluster": "associations",
+      "priority": 1,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-singular-association-holder/stories/b1-singular-association-holder.md"
     },
     {
       "id": "p1-visitor-base-types",
@@ -504,6 +539,25 @@
       "file_path": "rfcs/0006-collection-store-unification/stories/s2-migrate-preloader-writes.md"
     },
     {
+      "id": "b2-serialization-via-reader",
+      "rfc": "0000-singular-association-holder",
+      "title": "Serialization include through the reader",
+      "status": "draft",
+      "cluster": "associations",
+      "priority": 2,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "b1-singular-association-holder"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-singular-association-holder/stories/b2-serialization-via-reader.md"
+    },
+    {
       "id": "p2-to-sql-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 2 — Thread collector through to-sql.ts",
@@ -540,6 +594,25 @@
       "assignee": "s3-migrate-findtarget-reads",
       "blocked_by": null,
       "file_path": "rfcs/0006-collection-store-unification/stories/s3-migrate-findtarget-reads.md"
+    },
+    {
+      "id": "b3-migrate-singular-readers",
+      "rfc": "0000-singular-association-holder",
+      "title": "Migrate counter-cache / validation / autosave / persistence readers",
+      "status": "draft",
+      "cluster": "associations",
+      "priority": 3,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "b1-singular-association-holder"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-singular-association-holder/stories/b3-migrate-singular-readers.md"
     },
     {
       "id": "p3-subclass-threading",
@@ -580,6 +653,27 @@
       "file_path": "rfcs/0006-collection-store-unification/stories/s4-delete-cached-associations.md"
     },
     {
+      "id": "b4-delete-cached-associations",
+      "rfc": "0000-singular-association-holder",
+      "title": "Delete _cachedAssociations + migrate test pokes",
+      "status": "draft",
+      "cluster": "associations",
+      "priority": 4,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "b1-singular-association-holder",
+        "b2-serialization-via-reader",
+        "b3-migrate-singular-readers"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-singular-association-holder/stories/b4-delete-cached-associations.md"
+    },
+    {
       "id": "p4-verification",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 4 — Verification and cleanup",
@@ -616,6 +710,25 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0006-collection-store-unification/stories/s5-unskip-dedup-tests.md"
+    },
+    {
+      "id": "b5-converge-association-cache",
+      "rfc": "0000-singular-association-holder",
+      "title": "(optional) Converge onto one @association_cache map",
+      "status": "draft",
+      "cluster": "associations",
+      "priority": 5,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "b4-delete-cached-associations"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0000-singular-association-holder/stories/b5-converge-association-cache.md"
     },
     {
       "id": "claims-concurrency-lock",
