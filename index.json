@@ -690,6 +690,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/attributes-test-cluster.md"
     },
     {
+      "id": "date-test-mysql-native",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "date.test.ts → date_test.rb canonical port + native MySQL date columns",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/date-test-mysql-native.md"
+    },
+    {
       "id": "defaults-test-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "defaults.test.ts → defaults_test.rb canonical schema port",

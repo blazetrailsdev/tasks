@@ -223,6 +223,12 @@
       "terms": "attributes-test-cluster attributes.test.ts → attributes_test.rb canonical schema port fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "date-test-mysql-native",
+      "type": "story",
+      "title": "date.test.ts → date_test.rb canonical port + native MySQL date columns",
+      "terms": "date-test-mysql-native date.test.ts → date_test.rb canonical port + native mysql date columns fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "defaults-test-cluster",
       "type": "story",
       "title": "defaults.test.ts → defaults_test.rb canonical schema port",
