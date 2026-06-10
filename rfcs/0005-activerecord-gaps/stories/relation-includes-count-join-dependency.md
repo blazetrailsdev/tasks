@@ -1,7 +1,7 @@
 ---
 title: 'Relation: count and count("*") with includes must apply join dependency'
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T11:31:13Z"
+assignee: "relation-includes-count-join-dependency"
 blocked-by: null
 ---
 
