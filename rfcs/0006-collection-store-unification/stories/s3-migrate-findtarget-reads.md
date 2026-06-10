@@ -1,7 +1,7 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Migrate findTarget and instance-method reads through the proxy"
-status: in-progress
+status: done
 updated: 2026-06-10
 cluster: associations
 deps: ["s2-migrate-preloader-writes"]
