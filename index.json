@@ -1557,6 +1557,23 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-auto-increment.md"
     },
     {
+      "id": "abstract-sqlite3-adapter",
+      "rfc": "0010-adapter-cleanup",
+      "title": "Rails-fy SQLite driver abstraction: AbstractSqlite3Adapter + per-lib subclasses",
+      "status": "ready",
+      "cluster": "adapter-cleanup",
+      "priority": 10,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/abstract-sqlite3-adapter.md"
+    },
+    {
       "id": "p3-mysql-stored-procedures",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL stored procedures / multi-result (3 skips)",
@@ -1693,6 +1710,23 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/rf3-inorderof-type-cast.md"
     },
     {
+      "id": "index-comments-mysql-pg",
+      "rfc": "0010-adapter-cleanup",
+      "title": "Index comment introspection + dump emission (MySQL INDEX_COMMENT, PG obj_description)",
+      "status": "ready",
+      "cluster": "adapter-cleanup",
+      "priority": 15,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/index-comments-mysql-pg.md"
+    },
+    {
       "id": "p3-pg-optimizer-hints-and-enum",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — PG optimizer hints and enum (10 skips)",
@@ -1784,6 +1818,23 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-charset-collation.md"
     },
     {
+      "id": "where-nested-hash-assoc-name-table-resolution",
+      "rfc": "0005-activerecord-gaps",
+      "title": "where() nested-hash keyed by camelCase association name doesn't resolve to table",
+      "status": "ready",
+      "cluster": "relation",
+      "priority": 18,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 80,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/where-nested-hash-assoc-name-table-resolution.md"
+    },
+    {
       "id": "p3-mysql-virtual-column",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL virtual column (2 skips)",
@@ -1818,6 +1869,23 @@
       "assignee": "dirty-previous-changes-in-place-mutations",
       "blocked_by": null,
       "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-previous-changes-in-place-mutations.md"
+    },
+    {
+      "id": "habtm-proxy-size-nondistinct",
+      "rfc": "0005-activerecord-gaps",
+      "title": "HABTM collection proxy size() returns deduped count for non-distinct collections",
+      "status": "ready",
+      "cluster": "associations",
+      "priority": 20,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 50,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0005-activerecord-gaps/stories/habtm-proxy-size-nondistinct.md"
     },
     {
       "id": "insert-all-scope-attribute-precedence",
