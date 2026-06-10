@@ -1,6 +1,6 @@
 ---
 title: 'Relation: count and count("*") with includes must apply join dependency'
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0005-activerecord-gaps"
 cluster: relation
