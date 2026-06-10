@@ -1,7 +1,7 @@
 ---
 title: "Step 4 — Delete AbstractTableDefinition.toSql()"
-status: ready
-updated: 2026-06-08
+status: claimed
+updated: 2026-06-10
 rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
 deps:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 50
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T14:29:27Z"
+assignee: "step4-delete-abstract-tosql"
 blocked-by: null
 ---
 
