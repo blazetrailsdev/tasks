@@ -1,6 +1,6 @@
 ---
 title: "secure-password / token cluster → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: null
+pr: 3096
 claim: "2026-06-10T18:44:54Z"
 assignee: "secure-token-cluster"
 blocked-by: null
