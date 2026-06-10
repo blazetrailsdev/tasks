@@ -1,13 +1,13 @@
 ---
 title: "W7 — associations + relation tail (audit-gated)"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: integrated
 deps: ["w7-named-inner-joins-fix"]
 deps-rfc: []
 est-loc: 300
-pr: null
+pr: 3089
 claim: "2026-06-10T16:32:25Z"
 assignee: "w7-associations-relation-tail"
 blocked-by: null
