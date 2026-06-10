@@ -217,6 +217,12 @@
       "terms": "attribute-types-cluster attributes + type/precision cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-field-ordered-values-canonical",
+      "type": "story",
+      "title": "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)",
+      "terms": "relation-field-ordered-values-canonical relation/field-ordered-values.test.ts → canonical post/book/author + fixtures (field_ordered_values_test.rb) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-mutation-cluster",
       "type": "story",
       "title": "relation/ mutation cluster → canonical schema + Rails fixtures",
