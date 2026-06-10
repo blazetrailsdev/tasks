@@ -1,6 +1,6 @@
 ---
 title: "relation/ select + order cluster → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 6
-pr: null
+pr: 3093
 claim: "2026-06-10T18:33:23Z"
 assignee: "relation-select-order-cluster"
 blocked-by: null
