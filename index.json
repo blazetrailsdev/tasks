@@ -1316,7 +1316,7 @@
       "id": "insert-all-scope-attribute-precedence",
       "rfc": "0005-activerecord-gaps",
       "title": "insert_all: scope attributes must take precedence over row values",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "relation",
       "priority": 20,
       "updated": "2026-06-10T00:00:00.000Z",
