@@ -1,6 +1,6 @@
 ---
 title: "relation/select.test.ts → canonical Post + posts/comments fixtures (select_test.rb)"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: null
+pr: 3103
 claim: "2026-06-10T22:37:36Z"
 assignee: "relation-select-test-canonical"
 blocked-by: null
