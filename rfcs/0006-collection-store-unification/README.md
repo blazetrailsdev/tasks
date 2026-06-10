@@ -81,6 +81,12 @@ is the only store; inverse wiring and preloading both write to it directly.
   as the intermediate state after has_many is migrated. Story 4 chooses between
   finishing (B) and stopping at (A) based on the cost surfaced in Stories 2–3.
 
+  **Update (2026-06-10):** S1–S3 shipped and S4 chose to **stop at (A)** — the
+  cost of (B) (a singular holder + serialization moved onto the reader + ~150
+  test-poke migrations across 13 files) exceeds one PR. The (B) convergence is
+  now its own RFC, `0000-singular-association-holder` (stories b1–b5), which
+  supersedes this RFC's (B) sketch and the original S4 "delete entirely" goal.
+
 ## Constraints
 
 - Test names match Rails verbatim — no test renames (trails `CLAUDE.md`).
