@@ -865,6 +865,12 @@
       "terms": "f7-fixtures-backed-clusters f-7 — fixtures-backed clusters clusters 0016-ar-test-compare-100 context"
     },
     {
+      "id": "f7b-adapter-model-comment-clusters",
+      "type": "story",
+      "title": "f7b-adapter-model-comment-clusters",
+      "terms": "f7b-adapter-model-comment-clusters f7b-adapter-model-comment-clusters 0016-ar-test-compare-100 context"
+    },
+    {
       "id": "f8-small-core-leftovers",
       "type": "story",
       "title": "F-8 — small core leftovers",
