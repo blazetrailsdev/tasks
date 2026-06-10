@@ -953,6 +953,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-where-cluster.md"
     },
     {
+      "id": "relation-where-core",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/where.test.ts → canonical schema + where_test.rb/relations_test.rb",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-where-core.md"
+    },
+    {
       "id": "relation-with-test-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/with.test.ts → canonical Post/Comment/Company + fixtures (with_test.rb)",

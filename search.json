@@ -313,6 +313,12 @@
       "terms": "relation-where-cluster relation/ where + predicate cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-where-core",
+      "type": "story",
+      "title": "relation/where.test.ts → canonical schema + where_test.rb/relations_test.rb",
+      "terms": "relation-where-core relation/where.test.ts → canonical schema + where_test.rb/relations_test.rb fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-with-test-canonical",
       "type": "story",
       "title": "relation/with.test.ts → canonical Post/Comment/Company + fixtures (with_test.rb)",
