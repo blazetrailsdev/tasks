@@ -4,7 +4,7 @@ title: "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — elimin
 status: active
 created: 2026-06-08
 updated: 2026-06-08
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

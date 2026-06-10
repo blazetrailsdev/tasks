@@ -4,7 +4,7 @@ title: "Drop bootstrap-test-handler, route test setup through DatabaseTasks"
 status: active
 created: 2026-05-29
 updated: 2026-05-29
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

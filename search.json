@@ -13,6 +13,12 @@
       "terms": "0000-mysql-rawconn-convergence mysql2 query methods through the abstract withrawconnection loop activerecord mysql-rawconn-convergence rfc — mysql2 query methods through the abstract `withrawconnection` loop"
     },
     {
+      "id": "0000-singular-association-holder",
+      "type": "rfc",
+      "title": "Singular-association holder & _cachedAssociations deletion",
+      "terms": "0000-singular-association-holder singular-association holder & _cachedassociations deletion activerecord activemodel associations rfc — singular-association holder & `_cachedassociations` deletion"
+    },
+    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -133,6 +139,12 @@
       "terms": "s1-proxy-backed-read-api proxy-backed read api with deprecated cache shim associations 0006-collection-store-unification s1 — proxy-backed read api with deprecated cache shim"
     },
     {
+      "id": "b1-singular-association-holder",
+      "type": "story",
+      "title": "Singular-association holder + writer/reader migration",
+      "terms": "b1-singular-association-holder singular-association holder + writer/reader migration associations 0000-singular-association-holder context"
+    },
+    {
       "id": "p1-visitor-base-types",
       "type": "story",
       "title": "Phase 1 — Visitor base type strengthening",
@@ -163,6 +175,12 @@
       "terms": "s2-migrate-preloader-writes migrate preloader writes through the proxy associations 0006-collection-store-unification s2 — migrate preloader writes through the proxy"
     },
     {
+      "id": "b2-serialization-via-reader",
+      "type": "story",
+      "title": "Serialization include through the reader",
+      "terms": "b2-serialization-via-reader serialization include through the reader associations 0000-singular-association-holder context"
+    },
+    {
       "id": "p2-to-sql-threading",
       "type": "story",
       "title": "Phase 2 — Thread collector through to-sql.ts",
@@ -173,6 +191,12 @@
       "type": "story",
       "title": "Migrate findTarget and instance-method reads through the proxy",
       "terms": "s3-migrate-findtarget-reads migrate findtarget and instance-method reads through the proxy associations 0006-collection-store-unification s3 — migrate findtarget and instance-method reads through the proxy"
+    },
+    {
+      "id": "b3-migrate-singular-readers",
+      "type": "story",
+      "title": "Migrate counter-cache / validation / autosave / persistence readers",
+      "terms": "b3-migrate-singular-readers migrate counter-cache / validation / autosave / persistence readers associations 0000-singular-association-holder context"
     },
     {
       "id": "p3-subclass-threading",
@@ -187,6 +211,12 @@
       "terms": "s4-delete-cached-associations delete _cachedassociations and resolve singular-association cache associations 0006-collection-store-unification s4 — delete \\_cachedassociations and resolve singular-association cache"
     },
     {
+      "id": "b4-delete-cached-associations",
+      "type": "story",
+      "title": "Delete _cachedAssociations + migrate test pokes",
+      "terms": "b4-delete-cached-associations delete _cachedassociations + migrate test pokes associations 0000-singular-association-holder context"
+    },
+    {
       "id": "p4-verification",
       "type": "story",
       "title": "Phase 4 — Verification and cleanup",
@@ -197,6 +227,12 @@
       "type": "story",
       "title": "Unskip inverse-dedup tests gated on the removed seam",
       "terms": "s5-unskip-dedup-tests unskip inverse-dedup tests gated on the removed seam associations 0006-collection-store-unification s5 — unskip inverse-dedup tests gated on the removed seam"
+    },
+    {
+      "id": "b5-converge-association-cache",
+      "type": "story",
+      "title": "(optional) Converge onto one @association_cache map",
+      "terms": "b5-converge-association-cache (optional) converge onto one @association_cache map associations 0000-singular-association-holder context"
     },
     {
       "id": "claims-concurrency-lock",

@@ -4,7 +4,7 @@ title: "ActiveRecord framework gaps — dirty-tracking + readonly (test-port sur
 status: active
 created: 2026-06-04
 updated: 2026-06-04
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

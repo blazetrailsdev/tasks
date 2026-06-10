@@ -4,7 +4,7 @@ title: "Task system (RFCs + story files + fast index)"
 status: closed
 created: 2026-05-28
 updated: 2026-05-28
-owner: "@dmarano"
+owner: "@deanmarano"
 clusters:
   - scaffold
   - conversion

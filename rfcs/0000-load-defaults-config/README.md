@@ -4,7 +4,7 @@ title: "Versioned framework defaults (config.load_defaults) — partial_inserts 
 status: draft
 created: 2026-06-09
 updated: 2026-06-09
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
   - trailties

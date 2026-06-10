@@ -4,24 +4,25 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @dmarano | activerecord, trailties |
-| [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @dmarano | activerecord |
-| [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
-| [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @dmarano | activerecord |
-| [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @dmarano | activerecord, activerecord-cli, trails-tsc, trailties |
-| [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | closed | @dmarano | activerecord |
-| [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @dmarano | activerecord |
-| [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | active | @dmarano | activerecord |
-| [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | active | @dmarano | activerecord, arel |
-| [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | active | @dmarano | activerecord |
-| [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @dmarano | activerecord |
-| [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @dmarano | activerecord |
-| [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @dmarano | activerecord |
-| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @dmarano | activerecord |
-| [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @dmarano | activerecord |
-| [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @dmarano | activerecord |
-| [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @dmarano | activerecord |
-| [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @dmarano | activerecord |
-| [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | active | @dmarano | arel, activerecord |
-| [0018-ddl-visitor-convergence](rfcs/0018-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | active | @dmarano | activerecord |
-| [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | active | @dmarano | activerecord |
+| [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @deanmarano | activerecord, trailties |
+| [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @deanmarano | activerecord |
+| [0000-singular-association-holder](rfcs/0000-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | draft | @deanmarano | activerecord, activemodel |
+| [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
+| [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
+| [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
+| [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | closed | @deanmarano | activerecord |
+| [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @deanmarano | activerecord |
+| [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | active | @deanmarano | activerecord |
+| [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | active | @deanmarano | activerecord, arel |
+| [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | active | @deanmarano | activerecord |
+| [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @deanmarano | activerecord |
+| [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @deanmarano | activerecord |
+| [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @deanmarano | activerecord |
+| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @deanmarano | activerecord |
+| [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @deanmarano | activerecord |
+| [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @deanmarano | activerecord |
+| [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @deanmarano | activerecord |
+| [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @deanmarano | activerecord |
+| [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | active | @deanmarano | arel, activerecord |
+| [0018-ddl-visitor-convergence](rfcs/0018-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | active | @deanmarano | activerecord |
+| [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | active | @deanmarano | activerecord |

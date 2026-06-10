@@ -4,7 +4,7 @@ title: "ActiveRecord parity gaps — associations, connection-pool, relation"
 status: active
 created: 2026-05-29
 updated: 2026-05-29
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

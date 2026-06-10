@@ -4,7 +4,7 @@ title: "mysql2 query methods through the abstract withRawConnection loop"
 status: draft
 created: 2026-06-09
 updated: 2026-06-09
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:

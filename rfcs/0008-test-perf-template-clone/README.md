@@ -4,7 +4,7 @@ title: "AR test perf — canonical schema as a clonable template"
 status: active
 created: 2026-05-30
 updated: 2026-05-30
-owner: "@dmarano"
+owner: "@deanmarano"
 packages:
   - activerecord
 clusters:
