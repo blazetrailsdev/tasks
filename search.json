@@ -307,6 +307,12 @@
       "terms": "relation-order-test-canonical relation/order.test.ts → canonical book/author + fixtures (order_test.rb) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-predicate-builder",
+      "type": "story",
+      "title": "relation/predicate-builder.test.ts → canonical schema + predicate_builder_test.rb",
+      "terms": "relation-predicate-builder relation/predicate-builder.test.ts → canonical schema + predicate_builder_test.rb fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-select-order-cluster",
       "type": "story",
       "title": "relation/ select + order cluster → canonical schema + Rails fixtures",
