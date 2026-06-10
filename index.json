@@ -1032,7 +1032,7 @@
       "id": "relation-where-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ where + predicate cluster → canonical schema + Rails fixtures",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 6,
       "updated": "2026-06-10T00:00:00.000Z",
