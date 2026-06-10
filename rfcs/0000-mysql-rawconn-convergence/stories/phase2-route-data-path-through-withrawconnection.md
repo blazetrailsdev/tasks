@@ -1,6 +1,6 @@
 ---
 title: "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0000-mysql-rawconn-convergence"
 cluster: mysql-rawconn-convergence
