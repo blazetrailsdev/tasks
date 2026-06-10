@@ -934,6 +934,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-select-test-canonical.md"
     },
     {
+      "id": "relation-where-chain",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/where-chain.test.ts → canonical schema + where_chain_test.rb",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-where-chain.md"
+    },
+    {
       "id": "relation-where-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ where + predicate cluster → canonical schema + Rails fixtures",
