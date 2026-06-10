@@ -2,7 +2,7 @@
 rfc: "0014-fixtures-adoption"
 title: "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep"
 status: superseded
-superseded-by: "0000-canonical-schema-burndown"
+superseded-by: "0019-canonical-schema-burndown"
 created: 2026-06-04
 updated: 2026-06-09
 owner: "@dmarano"
@@ -13,7 +13,7 @@ clusters:
 ---
 
 > **Superseded (2026-06-09)** by the canonical-schema ratchet burndown RFC
-> (`0000-canonical-schema-burndown`; numbered at merge). That RFC reverses this
+> (`0019-canonical-schema-burndown`; numbered at merge). That RFC reverses this
 > one's "defer the sweep" decision: the `blazetrails/require-canonical-schema`
 > ESLint ratchet now provides an enforced 123-file exclusion list to burn down,
 > and reframes the work around Rails word-for-word fidelity rather than

@@ -1,23 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-canonical-schema-burndown",
-      "title": "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word",
-      "status": "draft",
-      "owner": "@dmarano",
-      "created": "2026-06-09T00:00:00.000Z",
-      "updated": "2026-06-09T00:00:00.000Z",
-      "packages": [
-        "activerecord"
-      ],
-      "clusters": [
-        "fixtures"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-canonical-schema-burndown/README.md"
-    },
-    {
       "id": "0000-load-defaults-config",
       "title": "Versioned framework defaults (config.load_defaults) — partial_inserts first",
       "status": "draft",
@@ -310,7 +293,7 @@
       "clusters": [
         "fixtures"
       ],
-      "superseded_by": "0000-canonical-schema-burndown",
+      "superseded_by": "0019-canonical-schema-burndown",
       "related_rfcs": [],
       "file_path": "rfcs/0014-fixtures-adoption/README.md"
     },
@@ -393,6 +376,23 @@
         "0013-pg-rawconn-convergence"
       ],
       "file_path": "rfcs/0018-ddl-visitor-convergence/README.md"
+    },
+    {
+      "id": "0019-canonical-schema-burndown",
+      "title": "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word",
+      "status": "active",
+      "owner": "@dmarano",
+      "created": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-09T00:00:00.000Z",
+      "packages": [
+        "activerecord"
+      ],
+      "clusters": [
+        "fixtures"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0019-canonical-schema-burndown/README.md"
     }
   ],
   "stories": [
@@ -415,9 +415,9 @@
     },
     {
       "id": "attribute-types-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -430,7 +430,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/attribute-types-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/attribute-types-cluster.md"
     },
     {
       "id": "p1-visitor-base-types",
@@ -504,9 +504,9 @@
     },
     {
       "id": "relation-mutation-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ mutation cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -517,13 +517,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/relation-mutation-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-mutation-cluster.md"
     },
     {
       "id": "relation-select-order-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ select + order cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -534,13 +534,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/relation-select-order-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-select-order-cluster.md"
     },
     {
       "id": "relation-where-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "relation/ where + predicate cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -553,13 +553,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/relation-where-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-where-cluster.md"
     },
     {
       "id": "scoping-suite",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "scoping/ suite → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -572,13 +572,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/scoping-suite.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/scoping-suite.md"
     },
     {
       "id": "secure-token-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "secure-password / token cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -589,13 +589,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/secure-token-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/secure-token-cluster.md"
     },
     {
       "id": "serialization-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "serialization + store cluster → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -606,13 +606,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/serialization-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/serialization-cluster.md"
     },
     {
       "id": "shared-table-convergence",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "Converge collision-prone scratch tables (people / posts / items / HABTM joins)",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -623,13 +623,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/shared-table-convergence.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/shared-table-convergence.md"
     },
     {
       "id": "validations-suite",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "validations/ suite → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 1,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -640,13 +640,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/validations-suite.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/validations-suite.md"
     },
     {
       "id": "calculations-aggregations",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -659,13 +659,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/calculations-aggregations.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-aggregations.md"
     },
     {
       "id": "callbacks-transactions-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "callbacks / transactions / locking → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -678,13 +678,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/callbacks-transactions-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/callbacks-transactions-cluster.md"
     },
     {
       "id": "inheritance-modules-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -697,13 +697,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/inheritance-modules-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/inheritance-modules-cluster.md"
     },
     {
       "id": "misc-core-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -714,7 +714,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/misc-core-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/misc-core-cluster.md"
     },
     {
       "id": "p2-to-sql-threading",
@@ -737,9 +737,9 @@
     },
     {
       "id": "persistence-dup-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "persistence / dup / clone / insert-all → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -750,13 +750,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/persistence-dup-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/persistence-dup-cluster.md"
     },
     {
       "id": "relation-core-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "relation / relations / querying core → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 2,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -769,13 +769,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/relation-core-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-core-cluster.md"
     },
     {
       "id": "associations-collection-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -788,13 +788,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-collection-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-collection-cluster.md"
     },
     {
       "id": "associations-disable-joins-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "disable-joins association family → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -807,13 +807,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-disable-joins-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-disable-joins-cluster.md"
     },
     {
       "id": "associations-eager-join-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "eager / join / habtm → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -826,13 +826,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-eager-join-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-eager-join-cluster.md"
     },
     {
       "id": "associations-scope-cache-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "association-scope / inverse / assoc-callbacks → canonical schema + fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -845,13 +845,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-scope-cache-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-scope-cache-cluster.md"
     },
     {
       "id": "associations-through-nested-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "through / nested-through associations → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -864,13 +864,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/associations-through-nested-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-through-nested-cluster.md"
     },
     {
       "id": "hmt-disable-joins-conversion",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 3,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -883,7 +883,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Both are association-layer gaps — register/track them as framework-fix stories under 0005-activerecord-gaps (associations parity) before claiming.",
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/hmt-disable-joins-conversion.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/hmt-disable-joins-conversion.md"
     },
     {
       "id": "p3-subclass-threading",
@@ -906,9 +906,9 @@
     },
     {
       "id": "adapter-tests-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "adapters/ (sqlite / pg / mysql) → canonical schema or isolated-by-design",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 4,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -919,13 +919,13 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/adapter-tests-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/adapter-tests-cluster.md"
     },
     {
       "id": "encryption-cluster",
-      "rfc": "0000-canonical-schema-burndown",
+      "rfc": "0019-canonical-schema-burndown",
       "title": "encryption/ suite → canonical schema + Rails fixtures",
-      "status": "draft",
+      "status": "ready",
       "cluster": "fixtures",
       "priority": 4,
       "updated": "2026-06-09T00:00:00.000Z",
@@ -936,7 +936,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-canonical-schema-burndown/stories/encryption-cluster.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/encryption-cluster.md"
     },
     {
       "id": "p4-verification",

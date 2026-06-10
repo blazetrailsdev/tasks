@@ -1,7 +1,7 @@
 ---
-rfc: "0000-canonical-schema-burndown"
+rfc: "0019-canonical-schema-burndown"
 title: "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word"
-status: draft
+status: active
 created: 2026-06-09
 updated: 2026-06-09
 owner: "@dmarano"
@@ -11,12 +11,12 @@ clusters:
   - fixtures
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-canonical-schema-burndown and
+<!-- Unnumbered until merge: keep `rfc:` as 0019-canonical-schema-burndown and
      the H1 below number-free. The supersede link is carried by 0014's
-     `superseded-by: 0000-canonical-schema-burndown`; `scripts/finalize-rfc.mjs`
+     `superseded-by: 0019-canonical-schema-burndown`; `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge (rewriting that pointer too). -->
 
-# RFC — Canonical-schema ratchet burndown
+# RFC 0019 — Canonical-schema ratchet burndown
 
 ## Summary
 

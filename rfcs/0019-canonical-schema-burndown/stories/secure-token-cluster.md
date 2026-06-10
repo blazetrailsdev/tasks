@@ -1,12 +1,12 @@
 ---
-title: "serialization + store cluster → canonical schema + Rails fixtures"
-status: draft
+title: "secure-password / token cluster → canonical schema + Rails fixtures"
+status: ready
 updated: 2026-06-09
-rfc: "0000-canonical-schema-burndown"
+rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
-est-loc: 350
+est-loc: 250
 priority: 1
 pr: null
 claim: null
@@ -16,14 +16,15 @@ blocked-by: null
 
 ## Context
 
-Convert the serialization files (RFC §Rollout phase 1).
+Convert the secure-password / token files (RFC §Rollout phase 1). Small,
+self-contained, clean Rails counterparts.
 
 Files (remove each from the exclude JSON as it lands):
 
-- `serialization.test.ts` → `serialization_test.rb`
-- `json-serialization.test.ts` → `json_serialization_test.rb`
-- `serialized-attribute.test.ts` → `serialized_attribute_test.rb`
-- `store.test.ts` → `store_test.rb`
+- `secure-password.test.ts` → `secure_password_test.rb`
+- `secure-token.test.ts` → `secure_token_test.rb`
+- `signed-id.test.ts` → `signed_id_test.rb`
+- `token-for.test.ts` → `token_for_test.rb`
 
 ## Acceptance criteria
 

@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-canonical-schema-burndown](rfcs/0000-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | draft | @dmarano | activerecord |
 | [0000-load-defaults-config](rfcs/0000-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @dmarano | activerecord, trailties |
 | [0000-mysql-rawconn-convergence](rfcs/0000-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @dmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @dmarano | — |
@@ -25,3 +24,4 @@
 | [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | active | @dmarano | activerecord |
 | [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | active | @dmarano | arel, activerecord |
 | [0018-ddl-visitor-convergence](rfcs/0018-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | active | @dmarano | activerecord |
+| [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | active | @dmarano | activerecord |

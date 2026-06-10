@@ -1,8 +1,8 @@
 ---
 title: "callbacks / transactions / locking → canonical schema + Rails fixtures"
-status: draft
+status: ready
 updated: 2026-06-09
-rfc: "0000-canonical-schema-burndown"
+rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
 deps-rfc: []

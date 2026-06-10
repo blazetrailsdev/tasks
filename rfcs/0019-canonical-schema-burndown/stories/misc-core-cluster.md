@@ -1,8 +1,8 @@
 ---
 title: "explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema"
-status: draft
+status: ready
 updated: 2026-06-09
-rfc: "0000-canonical-schema-burndown"
+rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
