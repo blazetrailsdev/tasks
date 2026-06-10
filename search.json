@@ -307,6 +307,12 @@
       "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
+      "id": "store-canonical",
+      "type": "story",
+      "title": "store_test.rb → canonical Admin::User + fixtures",
+      "terms": "store-canonical store_test.rb → canonical admin::user + fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "validations-suite",
       "type": "story",
       "title": "validations/ suite → canonical schema + Rails fixtures",
