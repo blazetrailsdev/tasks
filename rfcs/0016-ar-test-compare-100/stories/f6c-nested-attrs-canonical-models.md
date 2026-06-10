@@ -1,6 +1,6 @@
 ---
 title: "F-6c — migrate nested-attributes.test.ts to canonical Human/Interest models"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
@@ -10,6 +10,7 @@ est-loc: 300
 blocked-by: null
 claim: "2026-06-10T01:31:59Z"
 assignee: "f6c-nested-attrs-canonical-models"
+pr: 3076
 ---
 
 ## Context
