@@ -1195,6 +1195,12 @@
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "relation-merge-hash-and-proc-fidelity",
+      "type": "story",
+      "title": "relation-merge-hash-and-proc-fidelity",
+      "terms": "relation-merge-hash-and-proc-fidelity relation-merge-hash-and-proc-fidelity 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
