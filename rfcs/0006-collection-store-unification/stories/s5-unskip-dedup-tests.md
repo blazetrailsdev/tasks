@@ -1,11 +1,12 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Unskip inverse-dedup tests gated on the removed seam"
-status: draft
+status: ready
 updated: 2026-05-29
 cluster: associations
 deps: ["s4-delete-cached-associations"]
 est-loc: 80
+priority: 4
 pr: null
 claim: null
 assignee: null

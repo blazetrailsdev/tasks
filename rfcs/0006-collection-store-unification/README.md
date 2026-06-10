@@ -1,7 +1,7 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Collection-store unification"
-status: draft
+status: active
 created: 2026-05-29
 updated: 2026-05-29
 owner: "@dmarano"

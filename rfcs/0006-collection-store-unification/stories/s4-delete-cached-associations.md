@@ -1,11 +1,12 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Delete _cachedAssociations and resolve singular-association cache"
-status: draft
+status: ready
 updated: 2026-06-03
 cluster: associations
 deps: ["s3-migrate-findtarget-reads"]
 est-loc: 200
+priority: 3
 pr: null
 claim: null
 assignee: null

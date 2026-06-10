@@ -1,11 +1,12 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Proxy-backed read API with deprecated cache shim"
-status: draft
+status: ready
 updated: 2026-05-29
 cluster: associations
 deps: []
 est-loc: 180
+priority: 0
 pr: null
 claim: null
 assignee: null

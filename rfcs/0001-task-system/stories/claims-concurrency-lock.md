@@ -7,7 +7,7 @@ cluster: scaffold
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: 0
+priority: 5
 pr: null
 claim: null
 assignee: null

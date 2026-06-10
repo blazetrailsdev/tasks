@@ -127,16 +127,10 @@
       "terms": "0019-canonical-schema-burndown canonical-schema ratchet burndown — convert the ar test suite to test_schema + rails fixtures, word-for-word activerecord fixtures rfc 0019 — canonical-schema ratchet burndown"
     },
     {
-      "id": "claims-concurrency-lock",
+      "id": "s1-proxy-backed-read-api",
       "type": "story",
-      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
-      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
-    },
-    {
-      "id": "attribute-types-cluster",
-      "type": "story",
-      "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
-      "terms": "attribute-types-cluster attributes + type/precision cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+      "title": "Proxy-backed read API with deprecated cache shim",
+      "terms": "s1-proxy-backed-read-api proxy-backed read api with deprecated cache shim associations 0006-collection-store-unification s1 — proxy-backed read api with deprecated cache shim"
     },
     {
       "id": "p1-visitor-base-types",
@@ -161,6 +155,66 @@
       "type": "story",
       "title": "Phase 2 — route mysql2 execute/executeMutation/execQuery through withRawConnection",
       "terms": "phase2-route-data-path-through-withrawconnection phase 2 — route mysql2 execute/executemutation/execquery through withrawconnection mysql-rawconn-convergence 0000-mysql-rawconn-convergence context"
+    },
+    {
+      "id": "s2-migrate-preloader-writes",
+      "type": "story",
+      "title": "Migrate preloader writes through the proxy",
+      "terms": "s2-migrate-preloader-writes migrate preloader writes through the proxy associations 0006-collection-store-unification s2 — migrate preloader writes through the proxy"
+    },
+    {
+      "id": "p2-to-sql-threading",
+      "type": "story",
+      "title": "Phase 2 — Thread collector through to-sql.ts",
+      "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
+    },
+    {
+      "id": "s3-migrate-findtarget-reads",
+      "type": "story",
+      "title": "Migrate findTarget and instance-method reads through the proxy",
+      "terms": "s3-migrate-findtarget-reads migrate findtarget and instance-method reads through the proxy associations 0006-collection-store-unification s3 — migrate findtarget and instance-method reads through the proxy"
+    },
+    {
+      "id": "p3-subclass-threading",
+      "type": "story",
+      "title": "Phase 3 — Thread collector through subclasses",
+      "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0017-arel-collector-threading context"
+    },
+    {
+      "id": "s4-delete-cached-associations",
+      "type": "story",
+      "title": "Delete _cachedAssociations and resolve singular-association cache",
+      "terms": "s4-delete-cached-associations delete _cachedassociations and resolve singular-association cache associations 0006-collection-store-unification s4 — delete \\_cachedassociations and resolve singular-association cache"
+    },
+    {
+      "id": "p4-verification",
+      "type": "story",
+      "title": "Phase 4 — Verification and cleanup",
+      "terms": "p4-verification phase 4 — verification and cleanup arel-collector-threading 0017-arel-collector-threading context"
+    },
+    {
+      "id": "s5-unskip-dedup-tests",
+      "type": "story",
+      "title": "Unskip inverse-dedup tests gated on the removed seam",
+      "terms": "s5-unskip-dedup-tests unskip inverse-dedup tests gated on the removed seam associations 0006-collection-store-unification s5 — unskip inverse-dedup tests gated on the removed seam"
+    },
+    {
+      "id": "claims-concurrency-lock",
+      "type": "story",
+      "title": "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)",
+      "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
+    },
+    {
+      "id": "step1-delete-dead-mysql-branches",
+      "type": "story",
+      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
+      "terms": "step1-delete-dead-mysql-branches step 1 — delete dead mysql branches from abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
+      "id": "attribute-types-cluster",
+      "type": "story",
+      "title": "attributes + type/precision cluster → canonical schema + Rails fixtures",
+      "terms": "attribute-types-cluster attributes + type/precision cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
       "id": "relation-mutation-cluster",
@@ -205,6 +259,12 @@
       "terms": "shared-table-convergence converge collision-prone scratch tables (people / posts / items / habtm joins) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "step2-sqlite-visitor-wire",
+      "type": "story",
+      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
+      "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0018-ddl-visitor-convergence context"
+    },
+    {
       "id": "validations-suite",
       "type": "story",
       "title": "validations/ suite → canonical schema + Rails fixtures",
@@ -235,12 +295,6 @@
       "terms": "misc-core-cluster explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
-      "id": "p2-to-sql-threading",
-      "type": "story",
-      "title": "Phase 2 — Thread collector through to-sql.ts",
-      "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
-    },
-    {
       "id": "persistence-dup-cluster",
       "type": "story",
       "title": "persistence / dup / clone / insert-all → canonical schema + Rails fixtures",
@@ -251,6 +305,12 @@
       "type": "story",
       "title": "relation / relations / querying core → canonical schema + Rails fixtures",
       "terms": "relation-core-cluster relation / relations / querying core → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
+      "id": "step3-pg-tosql-via-visitor",
+      "type": "story",
+      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
+      "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
       "id": "associations-collection-cluster",
@@ -289,10 +349,10 @@
       "terms": "hmt-disable-joins-conversion has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
-      "id": "p3-subclass-threading",
+      "id": "step4-delete-abstract-tosql",
       "type": "story",
-      "title": "Phase 3 — Thread collector through subclasses",
-      "terms": "p3-subclass-threading phase 3 — thread collector through subclasses arel-collector-threading 0017-arel-collector-threading context"
+      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
+      "terms": "step4-delete-abstract-tosql step 4 — delete abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
       "id": "adapter-tests-cluster",
@@ -305,36 +365,6 @@
       "type": "story",
       "title": "encryption/ suite → canonical schema + Rails fixtures",
       "terms": "encryption-cluster encryption/ suite → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
-    },
-    {
-      "id": "p4-verification",
-      "type": "story",
-      "title": "Phase 4 — Verification and cleanup",
-      "terms": "p4-verification phase 4 — verification and cleanup arel-collector-threading 0017-arel-collector-threading context"
-    },
-    {
-      "id": "step1-delete-dead-mysql-branches",
-      "type": "story",
-      "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
-      "terms": "step1-delete-dead-mysql-branches step 1 — delete dead mysql branches from abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step2-sqlite-visitor-wire",
-      "type": "story",
-      "title": "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor",
-      "terms": "step2-sqlite-visitor-wire step 2 — wire sqlite createtabledefinition + sqlite3tabledefinition.tosql() through visitor ddl-visitor-convergence 0018-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step3-pg-tosql-via-visitor",
-      "type": "story",
-      "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
-      "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
-    },
-    {
-      "id": "step4-delete-abstract-tosql",
-      "type": "story",
-      "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
-      "terms": "step4-delete-abstract-tosql step 4 — delete abstracttabledefinition.tosql() ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
       "id": "p3-mysql-auto-increment",
@@ -1085,36 +1115,6 @@
       "type": "story",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
       "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
-    },
-    {
-      "id": "s1-proxy-backed-read-api",
-      "type": "story",
-      "title": "Proxy-backed read API with deprecated cache shim",
-      "terms": "s1-proxy-backed-read-api proxy-backed read api with deprecated cache shim associations 0006-collection-store-unification s1 — proxy-backed read api with deprecated cache shim"
-    },
-    {
-      "id": "s2-migrate-preloader-writes",
-      "type": "story",
-      "title": "Migrate preloader writes through the proxy",
-      "terms": "s2-migrate-preloader-writes migrate preloader writes through the proxy associations 0006-collection-store-unification s2 — migrate preloader writes through the proxy"
-    },
-    {
-      "id": "s3-migrate-findtarget-reads",
-      "type": "story",
-      "title": "Migrate findTarget and instance-method reads through the proxy",
-      "terms": "s3-migrate-findtarget-reads migrate findtarget and instance-method reads through the proxy associations 0006-collection-store-unification s3 — migrate findtarget and instance-method reads through the proxy"
-    },
-    {
-      "id": "s4-delete-cached-associations",
-      "type": "story",
-      "title": "Delete _cachedAssociations and resolve singular-association cache",
-      "terms": "s4-delete-cached-associations delete _cachedassociations and resolve singular-association cache associations 0006-collection-store-unification s4 — delete \\_cachedassociations and resolve singular-association cache"
-    },
-    {
-      "id": "s5-unskip-dedup-tests",
-      "type": "story",
-      "title": "Unskip inverse-dedup tests gated on the removed seam",
-      "terms": "s5-unskip-dedup-tests unskip inverse-dedup tests gated on the removed seam associations 0006-collection-store-unification s5 — unskip inverse-dedup tests gated on the removed seam"
     },
     {
       "id": "scaffold-tooling",

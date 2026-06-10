@@ -7,7 +7,7 @@ cluster: fixtures
 deps: ["associations-collection-cluster"]
 deps-rfc: []
 est-loc: 150
-priority: 3
+priority: 8
 pr: null
 claim: null
 assignee: null

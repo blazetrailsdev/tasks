@@ -7,7 +7,7 @@ cluster: fixtures
 deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
-priority: 2
+priority: 7
 pr: null
 claim: null
 assignee: null

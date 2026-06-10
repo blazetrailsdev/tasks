@@ -1,11 +1,12 @@
 ---
 rfc: "0006-collection-store-unification"
 title: "Migrate preloader writes through the proxy"
-status: draft
+status: ready
 updated: 2026-05-29
 cluster: associations
 deps: ["s1-proxy-backed-read-api"]
 est-loc: 160
+priority: 1
 pr: null
 claim: null
 assignee: null

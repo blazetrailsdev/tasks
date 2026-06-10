@@ -7,7 +7,7 @@ cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 4
+priority: 9
 pr: null
 claim: null
 assignee: null
