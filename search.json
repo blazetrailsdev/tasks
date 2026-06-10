@@ -229,6 +229,12 @@
       "terms": "relation-field-ordered-values-canonical relation/field-ordered-values.test.ts → canonical post/book/author + fixtures (field_ordered_values_test.rb) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-merge-hash-and-proc-fidelity",
+      "type": "story",
+      "title": "Relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs)",
+      "terms": "relation-merge-hash-and-proc-fidelity relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-mutation-cluster",
       "type": "story",
       "title": "relation/ mutation cluster → canonical schema + Rails fixtures",
@@ -1193,12 +1199,6 @@
       "type": "story",
       "title": "Build story↔shipped-PR reconcile report",
       "terms": "reconcile-tooling build story↔shipped-pr reconcile report reconcile 0011-activerecord-docs-cutover context"
-    },
-    {
-      "id": "relation-merge-hash-and-proc-fidelity",
-      "type": "story",
-      "title": "relation-merge-hash-and-proc-fidelity",
-      "terms": "relation-merge-hash-and-proc-fidelity relation-merge-hash-and-proc-fidelity 0019-canonical-schema-burndown context"
     },
     {
       "id": "relocate-tsc-wrapper",
