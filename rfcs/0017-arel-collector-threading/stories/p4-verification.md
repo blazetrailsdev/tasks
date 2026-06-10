@@ -1,7 +1,7 @@
 ---
 title: "Phase 4 — Verification and cleanup"
-status: ready
-updated: 2026-06-08
+status: claimed
+updated: 2026-06-10
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T11:55:13Z"
+assignee: "p4-verification"
 blocked-by: null
 ---
 
