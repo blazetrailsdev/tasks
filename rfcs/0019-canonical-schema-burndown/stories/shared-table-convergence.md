@@ -1,7 +1,7 @@
 ---
 title: "Converge collision-prone scratch tables (people / posts / items / HABTM joins)"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T19:20:40Z"
+assignee: "shared-table-convergence"
 blocked-by: null
 ---
 
