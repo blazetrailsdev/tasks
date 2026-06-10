@@ -3,7 +3,7 @@ rfc: "0006-collection-store-unification"
 title: "Collection-store unification"
 status: active
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-06-10
 owner: "@deanmarano"
 clusters: [activerecord, associations]
 packages: [activerecord]
@@ -86,6 +86,8 @@ is the only store; inverse wiring and preloading both write to it directly.
   test-poke migrations across 13 files) exceeds one PR. The (B) convergence is
   now its own RFC, `0000-singular-association-holder` (stories b1–b5), which
   supersedes this RFC's (B) sketch and the original S4 "delete entirely" goal.
+  This RFC stays `active` for its one remaining piece — the optional S5 (unskip
+  inverse-dedup tests); all (B) convergence work tracks under the new RFC.
 
 ## Constraints
 

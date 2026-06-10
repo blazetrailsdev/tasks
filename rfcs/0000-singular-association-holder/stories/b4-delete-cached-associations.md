@@ -29,9 +29,11 @@ that RFC 0006 S4 deferred when it chose Option A.
 - [ ] `_cachedAssociations` deleted from `base.ts` and from the host interfaces
       in `persistence.ts`, `validations.ts`, `autosave-association.ts`,
       `association-relation.ts`, and `activemodel/src/serialization.ts`.
-- [ ] The S1 `_cachedAssociationTarget` shim is either deleted or renamed to the
-      permanent `_associationCache(name)` accessor (RFC open question 3: return the
-      Association object).
+- [ ] The b2 `_loadedAssociationTarget` host-interface method is either removed
+      (if callers went through `association(name)` directly in b3) or retained and
+      renamed to the permanent `_associationCache(name)` accessor (RFC open
+      question 3: return the Association object, so callers read `.target`). Note:
+      the RFC-0006 S1 `_cachedAssociationTarget` shim is also removed here.
 - [ ] All ~150 test pokes (13 files: `autosave.test.ts`,
       `autosave-association.test.ts`, `associations.test.ts`,
       `json-serialization.test.ts`, `nested-attributes.test.ts`,
