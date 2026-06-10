@@ -1,6 +1,6 @@
 ---
 title: "W4 — Reflection discriminated union (deferred, high risk)"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0009-type-audit"
 cluster: type-cleanup
