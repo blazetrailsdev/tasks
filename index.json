@@ -774,6 +774,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-where-cluster.md"
     },
     {
+      "id": "relation-with-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/with.test.ts → canonical Post/Comment/Company + fixtures (with_test.rb)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 350,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-with-test-canonical.md"
+    },
+    {
       "id": "scoping-suite",
       "rfc": "0019-canonical-schema-burndown",
       "title": "scoping/ suite → canonical schema + Rails fixtures",
