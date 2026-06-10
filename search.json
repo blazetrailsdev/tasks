@@ -289,6 +289,12 @@
       "terms": "relation-mutation-cluster-followup relation/ mutation cluster (cont.) → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relation-or",
+      "type": "story",
+      "title": "relation/or.test.ts → canonical schema + or_test.rb",
+      "terms": "relation-or relation/or.test.ts → canonical schema + or_test.rb fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-order-test-canonical",
       "type": "story",
       "title": "relation/order.test.ts → canonical Book/Author + fixtures (order_test.rb)",

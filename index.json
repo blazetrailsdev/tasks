@@ -883,6 +883,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-mutation-cluster-followup.md"
     },
     {
+      "id": "relation-or",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation/or.test.ts → canonical schema + or_test.rb",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-or.md"
+    },
+    {
       "id": "relation-order-test-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation/order.test.ts → canonical Book/Author + fixtures (order_test.rb)",
