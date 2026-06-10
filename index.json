@@ -564,18 +564,18 @@
       "id": "s4-delete-cached-associations",
       "rfc": "0006-collection-store-unification",
       "title": "Delete _cachedAssociations and resolve singular-association cache",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "associations",
       "priority": 3,
-      "updated": "2026-06-03T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "s3-migrate-findtarget-reads"
       ],
       "deps_rfc": [],
       "est_loc": 200,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T22:04:33Z",
+      "assignee": "s4-delete-cached-associations",
       "blocked_by": null,
       "file_path": "rfcs/0006-collection-store-unification/stories/s4-delete-cached-associations.md"
     },
