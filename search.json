@@ -289,6 +289,12 @@
       "terms": "serialization-cluster serialization + store cluster → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "serialized-attribute-canonical",
+      "type": "story",
+      "title": "serialized_attribute_test.rb → canonical models + fixtures",
+      "terms": "serialized-attribute-canonical serialized_attribute_test.rb → canonical models + fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "shared-table-convergence",
       "type": "story",
       "title": "Converge collision-prone scratch tables (people / posts / items / HABTM joins)",
