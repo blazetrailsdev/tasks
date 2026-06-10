@@ -1,6 +1,6 @@
 ---
 title: "Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
+pr: 3075
 claim: "2026-06-10T01:43:16Z"
 assignee: "step2-sqlite-visitor-wire"
 blocked-by: null
