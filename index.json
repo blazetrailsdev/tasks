@@ -720,7 +720,7 @@
       "id": "p2-to-sql-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 2 — Thread collector through to-sql.ts",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "arel-collector-threading",
       "priority": 2,
       "updated": "2026-06-10T00:00:00.000Z",

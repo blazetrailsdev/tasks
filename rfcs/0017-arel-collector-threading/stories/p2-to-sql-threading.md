@@ -1,6 +1,6 @@
 ---
 title: "Phase 2 — Thread collector through to-sql.ts"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
