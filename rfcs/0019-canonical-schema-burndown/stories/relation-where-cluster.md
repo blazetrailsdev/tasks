@@ -1,7 +1,7 @@
 ---
 title: "relation/ where + predicate cluster → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T22:48:34Z"
+assignee: "relation-where-cluster"
 blocked-by: null
 ---
 
