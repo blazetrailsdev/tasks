@@ -1033,6 +1033,12 @@
       "terms": "phase3-unify-connection-slot phase 3 — unify pg connection onto the single _connection slot (delete the seam) pg-rawconn-convergence 0013-pg-rawconn-convergence context"
     },
     {
+      "id": "phase4-async-connectbang-eager-reconnect",
+      "type": "story",
+      "title": "Phase 4 — async connectBang + eager PG reconnect to delete the rawConnectionForBlock seam",
+      "terms": "phase4-async-connectbang-eager-reconnect phase 4 — async connectbang + eager pg reconnect to delete the rawconnectionforblock seam pg-rawconn-convergence 0013-pg-rawconn-convergence context"
+    },
+    {
       "id": "pool-allow-retry-forwarding",
       "type": "story",
       "title": "Forward allowRetry through concrete execQuery overrides",
