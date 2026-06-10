@@ -18,24 +18,36 @@ blocked-by: null
 
 Convert the select/order/projection `relation/` files (RFC §Rollout phase 1).
 
-Files (remove each from the exclude JSON as it lands):
+**Re-scoped (2026-06-10):** every file in this cluster edits the shared
+`eslint/require-canonical-schema-exclude.json`, so they cannot ship as parallel
+sibling PRs (exclude-list conflicts). This story now covers only the two
+mechanically-clean files shipped in **PR #3093**; the four substantive faithful
+Rails ports are carved into their own sequential stories:
 
-- `relation/select.test.ts` → `relation/select_test.rb`
-- `relation/select-star-join-collision.test.ts` → `relation/select_test.rb`
-- `relation/order.test.ts` → `relation/order_test.rb`
-- `relation/field-ordered-values.test.ts` → `relation/order_test.rb` (field-ordered)
-- `relation/with.test.ts` → `relation/with_test.rb`
-- `relation/annotations.test.ts` → `annotate_test.rb`
+- `relation-select-test-canonical` — `select.test.ts` → `select_test.rb`
+- `relation-order-test-canonical` — `order.test.ts` → `order_test.rb`
+- `relation-with-test-canonical` — `with.test.ts` → `with_test.rb`
+- `relation-field-ordered-values-canonical` — `field-ordered-values.test.ts`
+  → `field_ordered_values_test.rb`
+
+### Done in this story (PR #3093)
+
+- `relation/annotations.test.ts` → **deleted** (redundant; `annotate_test.rb` is
+  already faithfully ported in `src/annotate.test.ts`, 2/2 matched). Removed from
+  the exclude JSON.
+- `relation/select-star-join-collision.test.ts` → synthetic regression tables
+  kept inline behind the rule's `eslint-disable` escape hatch (no canonical-table
+  equivalent). Removed from the exclude JSON.
 
 ## Acceptance criteria
 
-- [ ] Each file rides `TEST_SCHEMA` + canonical models + `fixtures`/`name(:label)`
-      lookups where Rails does.
-- [ ] Each test body matches its Rails counterpart word-for-word; test names
-      unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; files
-      removed from the exclude JSON.
+- [x] `annotations.test.ts` resolved (deleted; Rails parity preserved via
+      `annotate.test.ts`).
+- [x] `select-star-join-collision.test.ts` resolved (eslint-disable; 3/3 pass).
+- [x] Both removed from the exclude JSON; 0 `require-canonical-schema` errors;
+      `test:compare` delta = 0 (annotate_test.rb still 2/2).
 
 ## Notes
 
-- Split across sibling PRs off `main` to stay ≤500 LOC.
+- Mark `done` against PR #3093 once it merges. The four carved-out ports proceed
+  sequentially off `main`, one at a time, because of the shared exclude JSON.
