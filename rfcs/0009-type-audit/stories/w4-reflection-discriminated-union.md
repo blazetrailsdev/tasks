@@ -1,15 +1,15 @@
 ---
 title: "W4 — Reflection discriminated union (deferred, high risk)"
-status: ready
-updated: 2026-06-07
+status: claimed
+updated: 2026-06-10
 rfc: "0009-type-audit"
 cluster: type-cleanup
 deps: []
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T15:46:03Z"
+assignee: "w4-reflection-discriminated-union"
 blocked-by: null
 ---
 
