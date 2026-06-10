@@ -1,6 +1,6 @@
 ---
 title: "relation/with.test.ts → canonical Post/Comment/Company + fixtures (with_test.rb)"
-status: claimed
+status: in-progress
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: null
+pr: 3105
 claim: "2026-06-10T23:30:18Z"
 assignee: "relation-with-test-canonical"
 blocked-by: null
