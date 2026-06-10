@@ -1,6 +1,6 @@
 ---
 title: "Phase 4 — Verification and cleanup"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0017-arel-collector-threading"
 cluster: arel-collector-threading
