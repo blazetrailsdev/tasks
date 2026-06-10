@@ -2974,18 +2974,18 @@
       "id": "phase3-unify-connection-slot",
       "rfc": "0013-pg-rawconn-convergence",
       "title": "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "pg-rawconn-convergence",
       "priority": null,
-      "updated": "2026-06-05T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
       "deps": [
         "phase2c-txn-control-retire-withclient"
       ],
       "deps_rfc": [],
       "est_loc": 300,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-10T18:00:26Z",
+      "assignee": "phase3-unify-connection-slot",
       "blocked_by": null,
       "file_path": "rfcs/0013-pg-rawconn-convergence/stories/phase3-unify-connection-slot.md"
     },

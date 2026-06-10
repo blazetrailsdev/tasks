@@ -1,7 +1,7 @@
 ---
 title: "Phase 3 — unify PG connection onto the single _connection slot (delete the seam)"
-status: ready
-updated: 2026-06-05
+status: claimed
+updated: 2026-06-10
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps:
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T18:00:26Z"
+assignee: "phase3-unify-connection-slot"
 blocked-by: null
 ---
 
