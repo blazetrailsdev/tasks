@@ -1,6 +1,6 @@
 ---
 title: "relation/field-ordered-values.test.ts → canonical Post/Book/Author + fixtures (field_ordered_values_test.rb)"
-status: ready
+status: claimed
 updated: 2026-06-10
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-10T21:20:35Z"
+assignee: "relation-field-ordered-values-canonical"
 blocked-by: null
 ---
 
