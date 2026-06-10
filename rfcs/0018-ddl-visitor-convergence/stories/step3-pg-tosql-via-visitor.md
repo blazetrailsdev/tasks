@@ -1,6 +1,6 @@
 ---
 title: "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation"
-status: in-progress
+status: done
 updated: 2026-06-10
 rfc: "0018-ddl-visitor-convergence"
 cluster: ddl-visitor-convergence
