@@ -1711,6 +1711,12 @@
       "terms": "repoint-references repoint trails readme/claude ar-doc links decommission 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "require-table-teardown-burndown",
+      "type": "story",
+      "title": "require-table-teardown-burndown",
+      "terms": "require-table-teardown-burndown require-table-teardown-burndown 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "require-table-teardown-ratchet-burndown",
       "type": "story",
       "title": "Burn down require-table-teardown exclude baseline (18 files)",
