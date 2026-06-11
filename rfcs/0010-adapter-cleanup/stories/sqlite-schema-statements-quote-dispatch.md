@@ -1,6 +1,6 @@
 ---
 title: "SQLite schema-statements: dispatch quoting through the adapter instance"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T18:39:05Z"
+assignee: "sqlite-schema-statements-quote-dispatch"
 blocked-by: null
 ---
 
