@@ -1711,6 +1711,12 @@
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
     },
     {
+      "id": "sqlite-schema-statements-quote-dispatch",
+      "type": "story",
+      "title": "sqlite-schema-statements-quote-dispatch",
+      "terms": "sqlite-schema-statements-quote-dispatch sqlite-schema-statements-quote-dispatch 0010-adapter-cleanup context"
+    },
+    {
       "id": "visitor-on-establish",
       "type": "story",
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
