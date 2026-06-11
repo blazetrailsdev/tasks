@@ -3835,6 +3835,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/models-dump-composite-fk-roundtrip.md"
     },
     {
+      "id": "named-scoping-suite",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "named-scoping/ → canonical schema + Rails fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/named-scoping-suite.md"
+    },
+    {
       "id": "nested-through-remainder",
       "rfc": "0005-activerecord-gaps",
       "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",

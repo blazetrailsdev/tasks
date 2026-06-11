@@ -1285,6 +1285,12 @@
       "terms": "models-dump-composite-fk-roundtrip trails-models-dump: composite-fk synthesized name round-trip deferred 0003-activerecord-cli context"
     },
     {
+      "id": "named-scoping-suite",
+      "type": "story",
+      "title": "named-scoping/ → canonical schema + Rails fixtures",
+      "terms": "named-scoping-suite named-scoping/ → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "nested-through-remainder",
       "type": "story",
       "title": "Nested-through remainder (scope, default_scope, shared-source reset, HMT autosave)",
