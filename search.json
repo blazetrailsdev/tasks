@@ -1015,6 +1015,12 @@
       "terms": "c-collapse-into-bootstrap phase c — delete synchandlervisitor / beforeeach (folds into rfc 0002) arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
+      "id": "calculations-test-canonical",
+      "type": "story",
+      "title": "calculations-test-canonical",
+      "terms": "calculations-test-canonical calculations-test-canonical 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "ci-examples-job",
       "type": "story",
       "title": "Optional — lightweight examples/ CI job",

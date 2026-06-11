@@ -3026,6 +3026,23 @@
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/c-collapse-into-bootstrap.md"
     },
     {
+      "id": "calculations-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "calculations-test-canonical",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-test-canonical.md"
+    },
+    {
       "id": "ci-examples-job",
       "rfc": "0003-activerecord-cli",
       "title": "Optional — lightweight examples/ CI job",
