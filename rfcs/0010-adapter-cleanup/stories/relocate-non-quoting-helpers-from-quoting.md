@@ -1,6 +1,6 @@
 ---
 title: "Relocate non-quoting helpers out of the quoting.ts modules"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
