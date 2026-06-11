@@ -3321,23 +3321,6 @@
       "file_path": "rfcs/0015-ar-framework-gaps/stories/dirty-js-date-coercion.md"
     },
     {
-      "id": "pg-referential-integrity-quote-dispatch",
-      "rfc": "0010-adapter-cleanup",
-      "title": "pg-referential-integrity-quote-dispatch",
-      "status": "draft",
-      "cluster": null,
-      "priority": 50,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/pg-referential-integrity-quote-dispatch.md"
-    },
-    {
       "id": "w1b-variadic-rest-overloads",
       "rfc": "0009-type-audit",
       "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
@@ -4639,6 +4622,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
+    },
+    {
+      "id": "pg-referential-integrity-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "pg-referential-integrity-quote-dispatch",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/pg-referential-integrity-quote-dispatch.md"
     },
     {
       "id": "phase1-pg-template",
