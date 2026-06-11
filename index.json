@@ -1672,18 +1672,18 @@
       "id": "inheritance-modules-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "fixtures",
       "priority": 7,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
       "deps": [
         "shared-table-convergence"
       ],
       "deps_rfc": [],
       "est_loc": 450,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-11T01:07:11Z",
+      "assignee": "inheritance-modules-cluster",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/inheritance-modules-cluster.md"
     },

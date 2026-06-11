@@ -1,7 +1,7 @@
 ---
 title: "inheritance / modules / reflection → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T01:07:11Z"
+assignee: "inheritance-modules-cluster"
 blocked-by: null
 ---
 
