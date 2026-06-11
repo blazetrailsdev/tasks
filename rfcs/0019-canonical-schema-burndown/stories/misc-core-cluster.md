@@ -1,7 +1,7 @@
 ---
 title: "explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T02:12:48Z"
+assignee: "misc-core-cluster"
 blocked-by: null
 ---
 
