@@ -1669,6 +1669,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/counter-cache-test-canonical.md"
     },
     {
+      "id": "excluding-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "excluding.test.ts -> excluding_test.rb canonical port",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/excluding-test-canonical.md"
+    },
+    {
       "id": "inheritance-modules-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",

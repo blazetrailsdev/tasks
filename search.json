@@ -547,6 +547,12 @@
       "terms": "counter-cache-test-canonical counter-cache.test.ts → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "excluding-test-canonical",
+      "type": "story",
+      "title": "excluding.test.ts -> excluding_test.rb canonical port",
+      "terms": "excluding-test-canonical excluding.test.ts -> excluding_test.rb canonical port fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "inheritance-modules-cluster",
       "type": "story",
       "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",
