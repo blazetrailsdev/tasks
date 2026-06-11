@@ -1,6 +1,6 @@
 ---
 title: "Collapse abstract-identical quoting overrides to inherit from the base"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T20:54:05Z"
+assignee: "collapse-identical-quoting-overrides"
 blocked-by: null
 priority: 6
 ---
