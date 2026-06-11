@@ -1315,6 +1315,12 @@
       "terms": "drift-prevention-ci ci gate: no new docs/activerecord trackers + claude edit guardrails 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "encryption-message-serializer-double-base64",
+      "type": "story",
+      "title": "Encryption MessageSerializer double-base64 wire-format divergence from MRI",
+      "terms": "encryption-message-serializer-double-base64 encryption messageserializer double-base64 wire-format divergence from mri 0023-surfaced-deviations context"
+    },
+    {
       "id": "f1-insert-all-cluster",
       "type": "story",
       "title": "F-1 — insert_all cluster",

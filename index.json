@@ -3956,6 +3956,23 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/drift-prevention-ci.md"
     },
     {
+      "id": "encryption-message-serializer-double-base64",
+      "rfc": "0023-surfaced-deviations",
+      "title": "Encryption MessageSerializer double-base64 wire-format divergence from MRI",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0023-surfaced-deviations/stories/encryption-message-serializer-double-base64.md"
+    },
+    {
       "id": "f1-insert-all-cluster",
       "rfc": "0016-ar-test-compare-100",
       "title": "F-1 — insert_all cluster",
