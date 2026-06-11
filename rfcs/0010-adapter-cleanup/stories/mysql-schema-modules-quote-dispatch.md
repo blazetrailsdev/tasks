@@ -1,6 +1,6 @@
 ---
 title: "MySQL schema modules: dispatch quoting through the adapter instance"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T18:54:05Z"
+assignee: "mysql-schema-modules-quote-dispatch"
 blocked-by: null
 ---
 
