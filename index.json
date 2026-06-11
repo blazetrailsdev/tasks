@@ -1432,6 +1432,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-with-test-canonical.md"
     },
     {
+      "id": "require-table-teardown-burndown",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Burn down the require-table-teardown exclude list (18 files, 3 dropAllTables)",
+      "status": "ready",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/require-table-teardown-burndown.md"
+    },
+    {
       "id": "scoping-suite",
       "rfc": "0019-canonical-schema-burndown",
       "title": "scoping/ suite → canonical schema + Rails fixtures",
@@ -5120,23 +5137,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/repoint-references.md"
-    },
-    {
-      "id": "require-table-teardown-burndown",
-      "rfc": "0019-canonical-schema-burndown",
-      "title": "require-table-teardown-burndown",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0019-canonical-schema-burndown/stories/require-table-teardown-burndown.md"
     },
     {
       "id": "require-table-teardown-ratchet-burndown",
