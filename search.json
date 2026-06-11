@@ -1243,6 +1243,12 @@
       "terms": "assoc-left-outer-join-canonical left-outer-join-association.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-required-loader-rails-reconcile",
+      "type": "story",
+      "title": "Reconcile non-Rails tests in required/loader-methods to Rails fidelity",
+      "terms": "assoc-required-loader-rails-reconcile reconcile non-rails tests in required/loader-methods to rails fidelity fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "b-drop-global-sync-sites",
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",

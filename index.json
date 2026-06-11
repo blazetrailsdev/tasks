@@ -3734,6 +3734,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-left-outer-join-canonical.md"
     },
     {
+      "id": "assoc-required-loader-rails-reconcile",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Reconcile non-Rails tests in required/loader-methods to Rails fidelity",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "associations-eager-join-cluster"
+      ],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-required-loader-rails-reconcile.md"
+    },
+    {
       "id": "b-drop-global-sync-sites",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase B — drop AR's global-visitor sync sites",
