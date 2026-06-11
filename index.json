@@ -4014,6 +4014,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-package-scaffold.md"
     },
     {
+      "id": "cli-status-transition-command",
+      "rfc": "0001-task-system",
+      "title": "cli-status-transition-command",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0001-task-system/stories/cli-status-transition-command.md"
+    },
+    {
       "id": "convert-bootstrap-rfc",
       "rfc": "0001-task-system",
       "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
