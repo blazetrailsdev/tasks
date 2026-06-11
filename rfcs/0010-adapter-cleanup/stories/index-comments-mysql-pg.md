@@ -1,7 +1,7 @@
 ---
 title: "Index comment introspection + dump emission (MySQL INDEX_COMMENT, PG obj_description)"
-status: ready
-updated: 2026-06-10
+status: claimed
+updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T16:39:06Z"
+assignee: "index-comments-mysql-pg"
 blocked-by: null
 ---
 
