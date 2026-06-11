@@ -499,6 +499,12 @@
       "terms": "callbacks-transactions-cluster callbacks / transactions / locking → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "counter-cache-test-canonical",
+      "type": "story",
+      "title": "counter-cache.test.ts → canonical schema + Rails fixtures",
+      "terms": "counter-cache-test-canonical counter-cache.test.ts → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "inheritance-modules-cluster",
       "type": "story",
       "title": "inheritance / modules / reflection → canonical schema + Rails fixtures",
