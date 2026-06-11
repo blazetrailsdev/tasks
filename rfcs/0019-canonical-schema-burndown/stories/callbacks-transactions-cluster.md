@@ -1,6 +1,6 @@
 ---
 title: "callbacks / transactions / locking → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 7
-pr: null
+pr: 3108
 claim: "2026-06-11T00:17:12Z"
 assignee: "callbacks-transactions-cluster"
 blocked-by: null
