@@ -1165,6 +1165,12 @@
       "terms": "assoc-cascaded-eager-canonical cascaded-eager-loading.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-extension-canonical",
+      "type": "story",
+      "title": "extension.test.ts → canonical schema (posts-collision)",
+      "terms": "assoc-extension-canonical extension.test.ts → canonical schema (posts-collision) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-left-outer-join-canonical",
       "type": "story",
       "title": "left-outer-join-association.test.ts → canonical schema",

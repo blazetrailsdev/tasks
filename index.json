@@ -3499,6 +3499,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-cascaded-eager-canonical.md"
     },
     {
+      "id": "assoc-extension-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "extension.test.ts → canonical schema (posts-collision)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-extension-canonical.md"
+    },
+    {
       "id": "assoc-left-outer-join-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "left-outer-join-association.test.ts → canonical schema",
