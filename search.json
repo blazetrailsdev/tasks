@@ -577,6 +577,12 @@
       "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
+      "id": "strict-loading-canonical-schema",
+      "type": "story",
+      "title": "strict-loading.test.ts + strict-loading-sync-reader.test.ts → canonical schema",
+      "terms": "strict-loading-canonical-schema strict-loading.test.ts + strict-loading-sync-reader.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "suppressor-canonical-schema",
       "type": "story",
       "title": "suppressor.test.ts → canonical Notification/User (needs save-suppression impl fix)",
