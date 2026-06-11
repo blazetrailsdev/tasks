@@ -2,7 +2,7 @@
 title: "Delete _cachedAssociations + migrate test pokes"
 status: draft
 updated: 2026-06-10
-rfc: "0000-singular-association-holder"
+rfc: "0022-singular-association-holder"
 cluster: associations
 deps:
   ["b1-singular-association-holder", "b2-serialization-via-reader", "b3-migrate-singular-readers"]

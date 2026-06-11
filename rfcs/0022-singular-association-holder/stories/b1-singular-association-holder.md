@@ -1,8 +1,8 @@
 ---
 title: "Singular-association holder + writer/reader migration"
-status: draft
+status: ready
 updated: 2026-06-10
-rfc: "0000-singular-association-holder"
+rfc: "0022-singular-association-holder"
 cluster: associations
 deps: []
 deps-rfc: []

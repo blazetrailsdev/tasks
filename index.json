@@ -1,24 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-singular-association-holder",
-      "title": "Singular-association holder & _cachedAssociations deletion",
-      "status": "draft",
-      "owner": "@deanmarano",
-      "created": "2026-06-10T00:00:00.000Z",
-      "updated": "2026-06-10T00:00:00.000Z",
-      "packages": [
-        "activerecord",
-        "activemodel"
-      ],
-      "clusters": [
-        "associations"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-singular-association-holder/README.md"
-    },
-    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
@@ -433,6 +415,24 @@
       "superseded_by": null,
       "related_rfcs": [],
       "file_path": "rfcs/0022-relation-arel-ast-convergence/README.md"
+    },
+    {
+      "id": "0022-singular-association-holder",
+      "title": "Singular-association holder & _cachedAssociations deletion",
+      "status": "draft",
+      "owner": "@deanmarano",
+      "created": "2026-06-10T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "activemodel"
+      ],
+      "clusters": [
+        "associations"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0022-singular-association-holder/README.md"
     }
   ],
   "stories": [
@@ -455,9 +455,9 @@
     },
     {
       "id": "b1-singular-association-holder",
-      "rfc": "0000-singular-association-holder",
+      "rfc": "0022-singular-association-holder",
       "title": "Singular-association holder + writer/reader migration",
-      "status": "draft",
+      "status": "ready",
       "cluster": "associations",
       "priority": 1,
       "updated": "2026-06-10T00:00:00.000Z",
@@ -468,7 +468,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-singular-association-holder/stories/b1-singular-association-holder.md"
+      "file_path": "rfcs/0022-singular-association-holder/stories/b1-singular-association-holder.md"
     },
     {
       "id": "cte-build-with-expression-ast",
@@ -612,7 +612,7 @@
     },
     {
       "id": "b2-serialization-via-reader",
-      "rfc": "0000-singular-association-holder",
+      "rfc": "0022-singular-association-holder",
       "title": "Serialization include through the reader",
       "status": "draft",
       "cluster": "associations",
@@ -627,7 +627,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-singular-association-holder/stories/b2-serialization-via-reader.md"
+      "file_path": "rfcs/0022-singular-association-holder/stories/b2-serialization-via-reader.md"
     },
     {
       "id": "p2-to-sql-threading",
@@ -728,7 +728,7 @@
     },
     {
       "id": "b3-migrate-singular-readers",
-      "rfc": "0000-singular-association-holder",
+      "rfc": "0022-singular-association-holder",
       "title": "Migrate counter-cache / validation / autosave / persistence readers",
       "status": "draft",
       "cluster": "associations",
@@ -743,7 +743,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-singular-association-holder/stories/b3-migrate-singular-readers.md"
+      "file_path": "rfcs/0022-singular-association-holder/stories/b3-migrate-singular-readers.md"
     },
     {
       "id": "p3-subclass-threading",
@@ -785,7 +785,7 @@
     },
     {
       "id": "b4-delete-cached-associations",
-      "rfc": "0000-singular-association-holder",
+      "rfc": "0022-singular-association-holder",
       "title": "Delete _cachedAssociations + migrate test pokes",
       "status": "draft",
       "cluster": "associations",
@@ -802,7 +802,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-singular-association-holder/stories/b4-delete-cached-associations.md"
+      "file_path": "rfcs/0022-singular-association-holder/stories/b4-delete-cached-associations.md"
     },
     {
       "id": "p4-verification",
@@ -844,7 +844,7 @@
     },
     {
       "id": "b5-converge-association-cache",
-      "rfc": "0000-singular-association-holder",
+      "rfc": "0022-singular-association-holder",
       "title": "(optional) Converge onto one @association_cache map",
       "status": "draft",
       "cluster": "associations",
@@ -859,7 +859,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-singular-association-holder/stories/b5-converge-association-cache.md"
+      "file_path": "rfcs/0022-singular-association-holder/stories/b5-converge-association-cache.md"
     },
     {
       "id": "claims-concurrency-lock",

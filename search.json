@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-singular-association-holder",
-      "type": "rfc",
-      "title": "Singular-association holder & _cachedAssociations deletion",
-      "terms": "0000-singular-association-holder singular-association holder & _cachedassociations deletion activerecord activemodel associations rfc — singular-association holder & `_cachedassociations` deletion"
-    },
-    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -139,6 +133,12 @@
       "terms": "0022-relation-arel-ast-convergence relation arel-ast convergence — replace string-based sql assembly with arel nodes (cte/unionall, set-ops, from) activerecord arel cte set-ops from verify rfc 0022 — relation arel-ast convergence"
     },
     {
+      "id": "0022-singular-association-holder",
+      "type": "rfc",
+      "title": "Singular-association holder & _cachedAssociations deletion",
+      "terms": "0022-singular-association-holder singular-association holder & _cachedassociations deletion activerecord activemodel associations rfc 0022 — singular-association holder & `_cachedassociations` deletion"
+    },
+    {
       "id": "s1-proxy-backed-read-api",
       "type": "story",
       "title": "Proxy-backed read API with deprecated cache shim",
@@ -148,7 +148,7 @@
       "id": "b1-singular-association-holder",
       "type": "story",
       "title": "Singular-association holder + writer/reader migration",
-      "terms": "b1-singular-association-holder singular-association holder + writer/reader migration associations 0000-singular-association-holder context"
+      "terms": "b1-singular-association-holder singular-association holder + writer/reader migration associations 0022-singular-association-holder context"
     },
     {
       "id": "cte-build-with-expression-ast",
@@ -202,7 +202,7 @@
       "id": "b2-serialization-via-reader",
       "type": "story",
       "title": "Serialization include through the reader",
-      "terms": "b2-serialization-via-reader serialization include through the reader associations 0000-singular-association-holder context"
+      "terms": "b2-serialization-via-reader serialization include through the reader associations 0022-singular-association-holder context"
     },
     {
       "id": "p2-to-sql-threading",
@@ -238,7 +238,7 @@
       "id": "b3-migrate-singular-readers",
       "type": "story",
       "title": "Migrate counter-cache / validation / autosave / persistence readers",
-      "terms": "b3-migrate-singular-readers migrate counter-cache / validation / autosave / persistence readers associations 0000-singular-association-holder context"
+      "terms": "b3-migrate-singular-readers migrate counter-cache / validation / autosave / persistence readers associations 0022-singular-association-holder context"
     },
     {
       "id": "p3-subclass-threading",
@@ -256,7 +256,7 @@
       "id": "b4-delete-cached-associations",
       "type": "story",
       "title": "Delete _cachedAssociations + migrate test pokes",
-      "terms": "b4-delete-cached-associations delete _cachedassociations + migrate test pokes associations 0000-singular-association-holder context"
+      "terms": "b4-delete-cached-associations delete _cachedassociations + migrate test pokes associations 0022-singular-association-holder context"
     },
     {
       "id": "p4-verification",
@@ -274,7 +274,7 @@
       "id": "b5-converge-association-cache",
       "type": "story",
       "title": "(optional) Converge onto one @association_cache map",
-      "terms": "b5-converge-association-cache (optional) converge onto one @association_cache map associations 0000-singular-association-holder context"
+      "terms": "b5-converge-association-cache (optional) converge onto one @association_cache map associations 0022-singular-association-holder context"
     },
     {
       "id": "claims-concurrency-lock",

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-singular-association-holder"
+rfc: "0022-singular-association-holder"
 title: "Singular-association holder & _cachedAssociations deletion"
 status: draft
 created: 2026-06-10
@@ -10,10 +10,10 @@ clusters:
   - associations
 ---
 
-<!-- Unnumbered until merge: dir stays `0000-singular-association-holder`,
+<!-- Unnumbered until merge: dir stays `0022-singular-association-holder`,
      `rfc:` stays 0000-…, H1 number-free. finalize-rfc.mjs assigns the number. -->
 
-# RFC — Singular-association holder & `_cachedAssociations` deletion
+# RFC 0022 — Singular-association holder & `_cachedAssociations` deletion
 
 ## Summary
 
