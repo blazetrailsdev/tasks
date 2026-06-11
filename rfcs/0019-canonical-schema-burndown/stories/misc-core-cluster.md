@@ -1,6 +1,6 @@
 ---
 title: "explain / strict-loading / suppressor / unsafe-raw-sql → canonical schema"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
