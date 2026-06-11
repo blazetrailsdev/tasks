@@ -24,11 +24,14 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm validate
-      - name: indices up-to-date
+      - name: index builds + index.md up-to-date
         run: |
+          # Smoke: a malformed story makes build-index throw. index.json /
+          # search.json are gitignored caches (not diffed); only index.md
+          # (the tracked human registry) must be fresh.
           pnpm build-index
-          git diff --exit-code index.md index.json search.json || {
-            echo "::error::committed indices are stale — run 'pnpm build-index' locally and recommit" >&2
+          git diff --exit-code index.md || {
+            echo "::error::committed index.md is stale — run 'pnpm build-index' locally and recommit" >&2
             exit 1
           }
       # Secret scanning runs locally via the `.husky/pre-commit` hook

@@ -33,4 +33,6 @@ fi
 # a few hundred markdown files in the repo.
 node scripts/validate.mjs >&2
 node scripts/build-index.mjs >&2
-git add index.md index.json search.json
+# index.json / search.json are gitignored machine caches (rebuilt on demand);
+# only index.md (the human registry) is tracked.
+git add index.md
