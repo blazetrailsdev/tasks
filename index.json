@@ -13,7 +13,10 @@
         "followup"
       ],
       "superseded_by": null,
-      "related_rfcs": [],
+      "related_rfcs": [
+        "0005-activerecord-gaps",
+        "0015-ar-framework-gaps"
+      ],
       "file_path": "rfcs/0000-surfaced-deviations/README.md"
     },
     {
