@@ -1,6 +1,6 @@
 ---
 title: "CTE array values → Arel::Nodes::UnionAll AST (build_with_expression_from_value)"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0022-relation-arel-ast-convergence"
 cluster: cte
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T21:13:58Z"
+assignee: "cte-build-with-expression-ast"
 blocked-by: null
 ---
 
