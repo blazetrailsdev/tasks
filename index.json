@@ -3818,21 +3818,59 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/lazy-async-schema-reflection.md"
     },
     {
-      "id": "materialize-declares-rollout",
-      "rfc": "0014-fixtures-adoption",
-      "title": "Materialize model declares: synthesize fixes + rollout beyond topic/developer",
-      "status": "draft",
+      "id": "materialize-declares-generator-fixes",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Materialize model declares: virtualizer/walker gap fixes (post/author/comment)",
+      "status": "ready",
       "cluster": null,
       "priority": null,
       "updated": "2026-06-10T00:00:00.000Z",
       "deps": [],
       "deps_rfc": [],
-      "est_loc": 450,
+      "est_loc": 200,
       "pr": null,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0014-fixtures-adoption/stories/materialize-declares-rollout.md"
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/materialize-declares-generator-fixes.md"
+    },
+    {
+      "id": "materialize-declares-rollout-waves",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Materialize model declares: roll the generator across test-helpers/models in waves",
+      "status": "ready",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "materialize-declares-generator-fixes"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/materialize-declares-rollout-waves.md"
+    },
+    {
+      "id": "materialize-declares-strip-asany",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Materialize model declares: migrate test-local model classes + strip redundant as any",
+      "status": "ready",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-10T00:00:00.000Z",
+      "deps": [
+        "materialize-declares-rollout-waves"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/materialize-declares-strip-asany.md"
     },
     {
       "id": "migrate-adapter-ci",

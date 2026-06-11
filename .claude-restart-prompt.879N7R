@@ -1,0 +1,28 @@
+You are restructuring backlog stories in the TASKS repo (you are in a tasks-repo worktree on a branch off main). This is prose/planning work, NOT code — do not touch the trails repo.
+
+BACKGROUND: trails PR #3099 (merged) added a "materialize model declares" generator (packages/activerecord/scripts/materialize-model-declares.ts) and materialized declares into topic.ts + developer.ts. It deferred the rest to a rollout story `materialize-declares-rollout`, filed in RFC 0014-fixtures-adoption — but 0014 is now SUPERSEDED (by 0019-canonical-schema-burndown), so that story is stranded and will never be picked up. Re-home it into 0019 and split it into 3 stories.
+
+STEPS:
+1. READ the source story for full detail: rfcs/0014-fixtures-adoption/stories/materialize-declares-rollout.md (it has the complete context + acceptance criteria — draw the new stories' content from it).
+2. READ rfcs/0019-canonical-schema-burndown/README.md to find that RFC's DECLARED clusters — validate.mjs requires `cluster` to be a declared cluster of that RFC, OR `cluster: null`. Use a valid declared cluster if one fits, else `cluster: null` (the source story used null). Also read an existing 0019 story file + rfcs/0000-template for the EXACT frontmatter shape.
+3. DELETE the stranded story: `git rm rfcs/0014-fixtures-adoption/stories/materialize-declares-rollout.md` (0014 is superseded; the work moves to 0019). Leave 0014's other story (tier1-opportunistic-conversion) alone.
+4. CREATE 3 stories in rfcs/0019-canonical-schema-burndown/stories/, each referencing PR #3099 in its Context:
+   a. materialize-declares-generator-fixes.md — status: ready, deps: [], est-loc 200. The 3 virtualizer/walker gap fixes that block the rest of the pilot: (i) `synthesize` falls back to `Base` for unported association targets (post.ts/author.ts, ~92 TS2304; emit a warning listing dropped targets; add a virtualize fixture); (ii) subclass loader-override composition typed `Base["loadBelongsTo"] & (own overloads)` so a subclass adding its own belongsTo stays assignable (comment.ts, TS2416; add a fixture); (iii) walker also captures `static _tableName` for schema-column lookup (canonical models use _tableName, not tableName; add a fixture); then materialize post.ts/author.ts/comment.ts and confirm whole-repo `pnpm typecheck` green.
+   b. materialize-declares-rollout-waves.md — status: ready, deps: ["materialize-declares-generator-fixes"], est-loc 300. Run the generator across the rest of test-helpers/models/** in <=500-LOC waves; each wave reports the `as any` delta; typecheck green after each wave.
+   c. materialize-declares-strip-asany.md — status: ready, deps: ["materialize-declares-rollout-waves"], est-loc 300. The actual payoff: migrate test files that define a test-local `class Topic extends Base` (inside it() bodies) to the canonical model imports and strip the now-redundant `as any` casts — the pilot proved materializing alone drops ~0 casts because tests use test-local class bodies. Convert representative files, strip casts, typecheck green, measure the delta.
+   Frontmatter for each: rfc "0019-canonical-schema-burndown", deps-rfc [], priority null, pr/claim/assignee/blocked-by null, updated = today's date. Keep bodies markdownlint- and prettier-clean: NO double blank lines, proper headings.
+5. VERIFY + COMMIT (do NOT open a PR — commit straight to main, the way tasks mutations do):
+   - `npx prettier --write` the 3 new files; `npx markdownlint-cli2 <files>` must show 0 errors; `node scripts/build-index.mjs`; `node scripts/validate.mjs` must exit 0.
+   - `git add -A` && `git commit -m "stories(0019): re-home + split materialize-declares-rollout from superseded 0014"`.
+   - Push with a retry loop (the tasks repo has heavy push contention): up to 8 attempts of { `git fetch origin`; `git rebase origin/main` — on conflict run `node scripts/build-index.mjs`, `git add -A`, `git rebase --continue`; then `git push origin HEAD:main` }, stopping on first successful push.
+6. REPORT: the 3 created story IDs, the deleted story, and confirm validate exit 0 + the push landed on origin (`git cat-file -e origin/main:rfcs/0019-canonical-schema-burndown/stories/materialize-declares-generator-fixes.md`).
+
+Do NOT add Co-Authored-By / Generated-with lines. Do NOT spawn sub-agents. Do NOT modify code or the trails repo.
+
+---
+
+## Operating constraints (added by /prompt-agent)
+
+You are the worker for this task. **Do NOT call the `/prompt-agent` skill or otherwise spawn sub-agents.** That tool is a parent-orchestrator tool; spawning a sub-agent in your own worktree is recursive and wasteful. If the task is too big for one PR/story, do NOT split it into more PRs yourself — add a new story to the epic with `pnpm tasks new <rfc> <slug>` and keep this PR scoped to your claimed story; the parent will schedule and own the new story separately.
+
+**Do NOT add attribution to PR bodies or commits.** No `🤖 Generated with [Claude Code]` line in the PR description. No `Co-Authored-By: Claude` trailer in commits. This is a hard CLAUDE.md rule (line 63-64). If you used `gh pr create` boilerplate that includes this line, remove it before submitting.

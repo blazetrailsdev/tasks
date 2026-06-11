@@ -1279,10 +1279,22 @@
       "terms": "lazy-async-schema-reflection lazy async schema reflection (delete explicit loadschema) core 0003-activerecord-cli context"
     },
     {
-      "id": "materialize-declares-rollout",
+      "id": "materialize-declares-generator-fixes",
       "type": "story",
-      "title": "Materialize model declares: synthesize fixes + rollout beyond topic/developer",
-      "terms": "materialize-declares-rollout materialize model declares: synthesize fixes + rollout beyond topic/developer 0014-fixtures-adoption context"
+      "title": "Materialize model declares: virtualizer/walker gap fixes (post/author/comment)",
+      "terms": "materialize-declares-generator-fixes materialize model declares: virtualizer/walker gap fixes (post/author/comment) 0019-canonical-schema-burndown context"
+    },
+    {
+      "id": "materialize-declares-rollout-waves",
+      "type": "story",
+      "title": "Materialize model declares: roll the generator across test-helpers/models in waves",
+      "terms": "materialize-declares-rollout-waves materialize model declares: roll the generator across test-helpers/models in waves 0019-canonical-schema-burndown context"
+    },
+    {
+      "id": "materialize-declares-strip-asany",
+      "type": "story",
+      "title": "Materialize model declares: migrate test-local model classes + strip redundant as any",
+      "terms": "materialize-declares-strip-asany materialize model declares: migrate test-local model classes + strip redundant as any 0019-canonical-schema-burndown context"
     },
     {
       "id": "migrate-adapter-ci",
