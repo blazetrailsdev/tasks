@@ -1,6 +1,6 @@
 ---
 title: "Burn down the require-table-teardown exclude list (18 files, 3 dropAllTables)"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
