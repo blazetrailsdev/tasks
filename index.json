@@ -1574,6 +1574,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/aggregations-remaining-describes.md"
     },
     {
+      "id": "batches-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "batches.test.ts -> batches_test.rb canonical port",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/batches-test-canonical.md"
+    },
+    {
       "id": "calculations-aggregations",
       "rfc": "0019-canonical-schema-burndown",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",

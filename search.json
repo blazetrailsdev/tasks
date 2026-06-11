@@ -517,6 +517,12 @@
       "terms": "aggregations-remaining-describes aggregations.test.ts — retire remaining non-rails describes + drop exclude fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "batches-test-canonical",
+      "type": "story",
+      "title": "batches.test.ts -> batches_test.rb canonical port",
+      "terms": "batches-test-canonical batches.test.ts -> batches_test.rb canonical port fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "calculations-aggregations",
       "type": "story",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
