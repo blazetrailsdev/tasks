@@ -1,6 +1,25 @@
 {
   "rfcs": [
     {
+      "id": "0000-surfaced-deviations",
+      "title": "Surfaced deviations & follow-ups — standing backlog for port-discovered work",
+      "status": "active",
+      "owner": "@deanmarano",
+      "created": "2026-06-11T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
+      "packages": [],
+      "clusters": [
+        "rails-deviation",
+        "followup"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [
+        "0005-activerecord-gaps",
+        "0015-ar-framework-gaps"
+      ],
+      "file_path": "rfcs/0000-surfaced-deviations/README.md"
+    },
+    {
       "id": "0001-task-system",
       "title": "Task system (RFCs + story files + fast index)",
       "status": "closed",
