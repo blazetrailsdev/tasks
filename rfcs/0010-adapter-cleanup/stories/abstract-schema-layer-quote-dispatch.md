@@ -1,6 +1,6 @@
 ---
 title: "Abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: null
+pr: 3130
 claim: "2026-06-11T19:09:06Z"
 assignee: "abstract-schema-layer-quote-dispatch"
 blocked-by: null
