@@ -1725,18 +1725,18 @@
       "id": "relation-core-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "relation / relations / querying core → canonical schema + Rails fixtures",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "fixtures",
       "priority": 7,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
       "deps": [
         "shared-table-convergence"
       ],
       "deps_rfc": [],
       "est_loc": 500,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-11T02:32:49Z",
+      "assignee": "relation-core-cluster",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-core-cluster.md"
     },
