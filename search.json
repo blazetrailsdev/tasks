@@ -571,6 +571,12 @@
       "terms": "persistence-dup-cluster persistence / dup / clone / insert-all → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "querying-finder-canonical",
+      "type": "story",
+      "title": "querying.test.ts + querying-methods-delegation.test.ts -> finder_test.rb canonical port",
+      "terms": "querying-finder-canonical querying.test.ts + querying-methods-delegation.test.ts -> finder_test.rb canonical port fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "relation-core-cluster",
       "type": "story",
       "title": "relation / relations / querying core → canonical schema + Rails fixtures",
