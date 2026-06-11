@@ -16,30 +16,50 @@ blocked-by: null
 
 ## Context
 
-Convert the through / nested-through association files (RFC §Rollout phase 3).
-Depends on `associations-collection-cluster` (shared through-models + canonical
-join fixtures land there first).
+Convert the nested-through association family onto the canonical schema. Owns
+the Rails-backed file plus the trails-internal nested-through harnesses:
 
-Files (remove each from the exclude JSON as it lands):
+- `associations/nested-through-associations.test.ts` (~2853 LOC, 60 tbl) →
+  `associations/nested_through_associations_test.rb`
+- `associations/nested-through-advanced.test.ts` (~322 LOC, 8 tbl) — internal,
+  no Rails counterpart (step 4 N/A)
+- `associations/nested-through-preloader.test.ts` (~241 LOC, 4 tbl) — internal,
+  no Rails counterpart (step 4 N/A)
+- `associations/polymorphic-sti-through.test.ts` (~332 LOC, 5 tbl) — internal
+- `associations/through-association-scope.test.ts` (~116 LOC, 3 tbl) — internal
+- `associations/source-type-validation.test.ts` (~264 LOC, 4 tbl) — internal
 
-- `associations/nested-through-associations.test.ts` → `nested_through_associations_test.rb`
-- `associations/nested-through-advanced.test.ts` → nested-through advanced cases
-- `associations/nested-through-preloader.test.ts` → nested-through preload cases
-- `associations/polymorphic-sti-through.test.ts` → polymorphic STI through cases
-- `associations/through-association-scope.test.ts` → through-scope cases
-- `associations/source-type-validation.test.ts` → source-type cases
-- `associations/constructor-form-and-hmt-insert.test.ts` → hmt insert/constructor cases
+Rails drives `Author`/`Post`/`Tagging`/`Tag`/`Category`/`Member`/`Organization`
+nested `:through` chains — all canonical.
 
 ## Acceptance criteria
 
-- [ ] Each file rides `TEST_SCHEMA` + canonical models + `fixtures`/`name(:label)`
-      lookups where Rails does.
-- [ ] Each test body matches its Rails counterpart word-for-word; test names
-      unchanged.
-- [ ] `pnpm vitest run` passes (co-run colliding siblings under `maxForks=1`);
-      zero `require-canonical-schema` errors; files removed from the exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] For the Rails-backed file: open `nested_through_associations_test.rb`
+      FIRST; port each body word-for-word. Test names unchanged.
+- [ ] Internal files: ride `TEST_SCHEMA` + canonical models + fixtures with no
+      inline tables (step 4 N/A — no body to match).
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Each file removed from the exclude JSON; `pnpm lint` clean, no
+      `eslint-disable`.
+- [ ] `pnpm vitest run <each file>` passes.
 
 ## Notes
 
-- Nested-through impl already complete (memory `nested_through_already_done`); this
-  is a schema/fixtures + body-fidelity conversion, not a feature build.
+- The Rails-backed file alone is ~2853 LOC, 60 tables: multi-PR, split
+  per-describe across sibling PRs off `main` (NOT stacked). Register remaining
+  waves as new stories — do not fan out yourself.
+
+## Definition of done
+
+Fidelity is the deliverable for the Rails-backed file; internal files ride the
+canonical schema with no inline tables. An `eslint-disable` or leaving a file
+excluded does **not** close this story.

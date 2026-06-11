@@ -16,29 +16,28 @@ blocked-by: null
 
 ## Context
 
-Follow-up to the declare-materialization pilot (trails PR #3099). This is the
-actual payoff of the materialization program. The pilot proved that
-materializing canonical models alone drops ~0 `as any` casts because most
-attribute/Topic tests define a **test-local** `class Topic extends Base` inside
-the `it(...)` body — the materialized canonical declares never apply to those
-ad-hoc classes. With the whole graph materialized
-(`materialize-declares-rollout-waves`), those test-local classes can be replaced
-by the canonical model imports and the now-redundant casts removed.
+Final materialize sub-track step. With baked declares on the canonical models
+(dep), the `as any` casts AR tests used to reach typed `.replies`/`.mentor`/
+columns/enums are now redundant. This story:
+
+1. migrates remaining test-local `class X extends Base` definitions onto the
+   canonical materialized models (where a canonical model exists), and
+2. strips the now-redundant `as any` casts those tests carried.
+
+This compounds with the canonical-schema burndown: tests that ride canonical
+models AND drop their casts read like the Rails source.
 
 ## Acceptance criteria
 
-- [ ] Migrate representative test files that define a test-local
-      `class X extends Base` inside `it(...)` bodies to import the canonical
-      model from the registry instead.
-- [ ] Strip the `as any` casts those test-local classes forced, where the
-      canonical declares now make them redundant.
-- [ ] `pnpm typecheck` green after each conversion.
-- [ ] Report the measured `as any` delta per converted file to validate the
-      end-to-end payoff.
+- [ ] Replace test-local model classes with canonical materialized models where
+      one exists (otherwise leave the local class, but typed).
+- [ ] Remove `as any` casts that the baked declares make redundant; a cast that
+      is still load-bearing stays (with a one-line reason if non-obvious).
+- [ ] No `@ts-expect-error`/`as any` is added to mask a real type gap — fix the
+      model/generator instead.
+- [ ] `pnpm tsc` passes; touched test files still pass `pnpm vitest run`.
 
-## Notes
+## Definition of done
 
-Some remaining casts target framework-internal members not in the declare set
-(`readAttribute`, `idWas`, `_dirty`, `columnsHash`, `connection`); those are
-out of scope here and should be left in place. Keep each PR ≤500 LOC and
-register continuation work as new stories rather than stacking.
+Test-local model duplicates are migrated to canonical models and redundant
+`as any` casts are gone. No new casts mask real gaps.

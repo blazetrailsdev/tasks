@@ -1,5 +1,5 @@
 ---
-title: "excluding.test.ts -> excluding_test.rb canonical port"
+title: "collection-cache-key.test.ts → collection_cache_key_test.rb canonical port"
 status: draft
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
@@ -16,14 +16,15 @@ blocked-by: null
 
 ## Context
 
-Convert `packages/activerecord/src/excluding.test.ts` (~223 LOC, 2 inline
-tables) onto the canonical schema, matched to Rails.
+Coverage-gap story: `packages/activerecord/src/collection-cache-key.test.ts`
+(~288 LOC, 1 inline table) is on the exclude list with **no owning story**.
+Convert it onto the canonical schema, matched to Rails.
 
-- trails: `excluding.test.ts`
-- Rails: `vendor/rails/activerecord/test/cases/excluding_test.rb`
+- trails: `collection-cache-key.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/collection_cache_key_test.rb`
 
-Rails drives `Post`/`Comment` for `excluding`/`without` — both canonical. Ride
-the canonical tables.
+Rails drives `Developer`/`Comment`/`Post` for `cache_key` / `cache_version` over
+a relation — all canonical.
 
 ## Acceptance criteria
 
@@ -33,16 +34,17 @@ the canonical tables.
       pre-built once per worker by `template-global-setup.ts`, so a converged
       file calls `defineSchema` **zero** times and constructs no
       `createTestAdapter`.
-- [ ] Open `excluding_test.rb` FIRST; port each body word-for-word. Test names
-      unchanged.
+- [ ] Open `collection_cache_key_test.rb` FIRST; port each body word-for-word.
+      Test names unchanged.
 - [ ] No `defineSchema` left in the file. If a needed column has no canonical
       home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
       has it (parity-check first); otherwise keep a single scoped, file-unique
       `defineSchema` + teardown for that one table (never the shared name).
-- [ ] Use canonical `Post`/`Comment`; rows via `fixtures` + `name(:label)` where
-      Rails does.
+- [ ] Use canonical `Developer`/`Comment`/`Post`; rows via `fixtures` +
+      `name(:label)` where Rails does.
 - [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
-- [ ] `pnpm vitest run packages/activerecord/src/excluding.test.ts` passes.
+- [ ] `pnpm vitest run packages/activerecord/src/collection-cache-key.test.ts`
+      passes.
 
 ## Definition of done
 

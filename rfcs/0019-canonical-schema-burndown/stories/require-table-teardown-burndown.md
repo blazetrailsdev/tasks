@@ -16,73 +16,38 @@ blocked-by: null
 
 ## Context
 
-PR #3123 (merged, `feat(eslint): add require-table-teardown rule for AR tests`)
-added the `blazetrails/require-table-teardown` ESLint rule over
-`packages/activerecord/src/**/*.test.ts`:
+Sibling ratchet to `require-canonical-schema`. The
+`blazetrails/require-table-teardown` ESLint rule (added in #3123,
+`eslint/require-table-teardown.mjs`) requires every AR test that creates a table
+to tear it down, and grandfathers **18 files** in
+`eslint/require-table-teardown-exclude.json`. This story burns that list to zero.
 
-1. Every `createTable("foo", …)` must be balanced by an explicit
-   `dropTable("foo")` in the same file (per static table name).
-2. `dropAllTables()` is **forbidden** (`noDropAllTables`) — a test must drop the
-   specific tables it created, by name.
-
-This is the enforcement machinery that makes per-table teardown possible and is a
-sibling ratchet to `require-canonical-schema` (this RFC's main lever). It shipped
-with **18 grandfathered violators** in `eslint/require-table-teardown-exclude.json`
-as the ratchet baseline. This story is the program to **burn that list to zero**:
-give each file explicit per-table teardown and remove its exclude entry. New/fixed
-files are already enforced at `"error"`; `test-helpers/**` is exempt by design.
-
-The 18 files (remove each from the exclude JSON as it's fixed):
-
-- `active-record-schema.test.ts` _(uses dropAllTables)_
-- `normalized-attribute.test.ts` _(uses dropAllTables; also grandfathered in
-  require-canonical-schema-exclude — converge both in one pass)_
-- `statement-cache.test.ts` _(uses dropAllTables; already on canonical schema —
-  the `afterAll(dropAllTables)` is redundant teardown, see the
-  `drop-legacy-crutches` audit Bucket 4)_
-- `adapters/abstract-mysql-adapter/active-schema.test.ts`
-- `adapters/postgresql/collation.test.ts`
-- `adapters/postgresql/invertible-migration.test.ts`
-- `adapters/postgresql/range.test.ts`
-- `adapters/postgresql/schema.test.ts`
-- `adapters/postgresql/uuid.test.ts`
-- `adapters/postgresql/virtual-column.test.ts`
-- `connection-adapters/abstract/schema-statements-on-adapter.test.ts`
-- `invertible-migration.test.ts`
-- `migration.test.ts`
-- `query-cache.test.ts`
-- `reserved-word.test.ts`
-- `schema-dumper.test.ts`
-- `schema-introspection.test.ts`
-- `timestamp.test.ts`
-
-The 3 `dropAllTables` files are the highest-value: replace the carpet-bomb
-teardown with explicit `dropTable(name)` for each table the file creates (the rule
-rejects `dropAllTables` as satisfying a create). The other 15 are migration/DDL
-feature tests that create bespoke tables and currently leak them.
-
-### Scope / splitting
-
-18 files is more than one 500-LOC PR. **Do NOT fan out sibling PRs from this
-story.** Claim it for the first bite-sized batch (e.g. the 3 `dropAllTables`
-files, ~200 LOC), ship that, and register follow-on batches as additional stories
-under this RFC via `pnpm tasks new 0019-canonical-schema-burndown <slug>` so each
-gets its own owner/PR. Coordinate with the parallel `require-canonical-schema`
-burndown where files overlap (e.g. `normalized-attribute`) to convert schema +
-teardown together rather than touching the file twice.
-
-`dropAllTables` itself remains the load-bearing global-isolation primitive
-(`resetTestAdapterState`); this story removes only the **per-file** `dropAllTables`
-call sites, not the helper.
+A file leaks tables when it `create_table`s (or `defineSchema`s a non-canonical
+table) without a matching teardown — the root cause of shared-worker-DB
+collisions. 3 of the 18 currently lean on a broad `dropAllTables` in
+`afterAll`; prefer per-table teardown (or riding the canonical schema, which
+needs no teardown) over the blunt `dropAllTables` where practical.
 
 ## Acceptance criteria
 
-- [ ] Each file converted gives every `createTable(name)` an explicit
-      `dropTable(name)` (or rides canonical `TEST_SCHEMA` so it creates nothing
-      bespoke); no per-file `dropAllTables()` remains in converted files
-- [ ] Each converted file's entry is removed from
-      `eslint/require-table-teardown-exclude.json`
-- [ ] No new shared-DB flakes (run the touched files locally on all relevant
-      adapters; do NOT run the full suite)
-- [ ] Remaining files (not in this batch) registered as follow-on stories under
-      this RFC; exclude list strictly shrinks
+- [ ] For each of the 18 files: add explicit per-table teardown, OR convert the
+      file to ride `TEST_SCHEMA` (canonical tables need no teardown), then remove
+      it from `require-table-teardown-exclude.json`.
+- [ ] The 3 `dropAllTables` users: keep `dropAllTables` only where a file
+      genuinely owns many short-lived tables; otherwise narrow to per-table
+      teardown.
+- [ ] `pnpm lint` shows zero `require-table-teardown` errors; no file-level
+      `eslint-disable`.
+- [ ] `pnpm vitest run <each touched file>` passes; co-run prior collision
+      siblings under `maxForks=1`.
+
+## Notes
+
+- Overlaps with `require-table-teardown-ratchet-burndown` (draft) — they target
+  the same 18-file list. This `ready` story is the owner; the draft should be
+  closed as a duplicate (do not work both).
+
+## Definition of done
+
+`require-table-teardown-exclude.json` is empty (or only genuinely-justified
+entries remain, each with a one-line reason). No file-level disables.

@@ -77,14 +77,33 @@ means moving it onto that shape, never inventing one (table reproduced from
 | `ActiveRecord::FixtureSet`, `test/fixtures/*.yml`  | the fixtures registry (`test-helpers/fixtures-registry.ts`)           |
 | canonical shared schema (`schema.rb`, loaded once) | `TEST_SCHEMA` (`test-helpers/test-schema.ts`), seeded via globalSetup |
 
+**The converged target shape — no `defineSchema` in the file.** The full
+canonical schema (all of `TEST_SCHEMA`) is built **once per worker** by
+`test-helpers/template-global-setup.ts` (`defineSchema(adapter, TEST_SCHEMA)`),
+so the tables already exist before any test runs. A converged file therefore
+calls `defineSchema` **zero** times and constructs no `createTestAdapter` — it
+wires data with `setupHandlerSuite()` + `useHandlerFixtures([...])` (which
+bundles the handler suite + transactional rollback + fixtures) and reads rows by
+`name(:label)`. The 37 files already on `useHandlerFixtures` call `defineSchema`
+0 times — that is the end state.
+
+Note the two tiers, because the `require-canonical-schema` lint only enforces
+the weaker one: `defineSchema(TEST_SCHEMA.posts)` is **lint-green but still
+transitional** (it shouldn't appear in a converged file at all); the deliverable
+is the `useHandlerFixtures` shape with no `defineSchema`. (There is no
+`defineHandlerFixtures` symbol — the helper is `useHandlerFixtures`.) `defineSchema`
+the function does not disappear: it stays as the global-setup primitive and for
+genuine adapter/DDL tests that legitimately own a bespoke table.
+
 A faithful conversion of one file is:
 
-1. **Schema** — delete the inline `defineSchema({...bespoke...})`; ride
-   `TEST_SCHEMA` (cache-hit, zero DDL) — or, if the file needs a column the
-   canonical schema lacks, **add it to `TEST_SCHEMA` only when Rails' `schema.rb`
-   has it** (parity check first), else **rename the scratch table** to a
-   file-unique name (`aco_people`, `sr_people`, …) so it cannot clobber the
-   shared one. **Renaming a table is allowed; renaming a test is not.**
+1. **Schema** — remove `defineSchema` from the file entirely and ride the
+   pre-built `TEST_SCHEMA` via `useHandlerFixtures`. If the file needs a column
+   the canonical schema lacks, **add it to `TEST_SCHEMA` only when Rails'
+   `schema.rb` has it** (parity check first), else keep a single scoped,
+   file-unique scratch table (`aco_people`, `sr_people`, …) — declared with a
+   narrowly-scoped `defineSchema` + teardown — so it cannot clobber the shared
+   one. **Renaming a table is allowed; renaming a test is not.**
 2. **Models** — replace inline `class X extends Base` with the **canonical model**
    from the registry (PR #2766 / PessimisticLocking is the gold standard; the
    shallow #2764 boilerplate-only trim is the anti-pattern — see

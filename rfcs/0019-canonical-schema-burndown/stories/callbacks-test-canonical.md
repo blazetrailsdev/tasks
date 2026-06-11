@@ -16,34 +16,41 @@ blocked-by: null
 
 ## Context
 
-Split out of the blocked `associations-scope-cache-cluster`. The
-`associations/callbacks.test.ts` body-port landed (#2838) but the file stays on
-the `require-canonical-schema` exclude list, and an `eslint-disable` shortcut was
-rejected — it must genuinely ride canonical.
+Convert `packages/activerecord/src/callbacks.test.ts` (~1729 LOC, 23 inline
+tables) onto the canonical schema, matched to Rails.
 
-Why it isn't a mechanical swap:
+- trails: `callbacks.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/callbacks_test.rb`
 
-- describes 1 & 2 use throwaway `Post`/`Comment` models that create posts with
-  only `title`; canonical `posts`/`comments` declare `body` NOT NULL
-  (test-schema.ts), so every `Post.create` needs a `body` and the models need a
-  `body` attribute.
-- describe 2 also declares `profiles`, `firms`, `clients` — none exist in Rails
-  `schema.rb`, so they cannot be added to canonical (which mirrors Rails). The
-  belongs_to/has_one callback variants built on those must be re-expressed on
-  existing canonical associations.
-- the third describe already uses canonical `Developer`/`Project` fixtures.
-
-Care: do NOT mutate the shared canonical `Post`/`Comment` model classes'
-association lists (other files in the worker reuse them). Use local model
-classes whose `_tableName` points at the canonical tables so the canonical
-tables are shared but association wiring stays test-local.
+Rails drives `CallbackDeveloper`/`Topic`/`Reply`/`Person` with the full
+before/after/around lifecycle — all canonical. NOTE: a sibling file
+`associations/callbacks.test.ts` covers association callbacks separately; this
+story owns the top-level `callbacks.test.ts` only.
 
 ## Acceptance criteria
 
-- [ ] `callbacks.test.ts` rides canonical tables (`posts`/`comments` + canonical
-      models for the belongs_to/has_one variants) with no synthetic
-      `profiles`/`firms`/`clients` tables and no `eslint-disable`.
-- [ ] Test bodies match `associations/callbacks_test.rb` where it applies; test
-      names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; file
-      removed from the exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `callbacks_test.rb` FIRST; port each body word-for-word. Test names
+      unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical models + Rails callback declarations; rows via `fixtures` +
+      `name(:label)` where Rails does.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/callbacks.test.ts` passes.
+
+## Notes
+
+- ~1729 LOC: split per-describe across sibling PRs off `main` (NOT stacked).
+
+## Definition of done
+
+Fidelity is the deliverable. An `eslint-disable` or leaving the file excluded
+does **not** close this story.

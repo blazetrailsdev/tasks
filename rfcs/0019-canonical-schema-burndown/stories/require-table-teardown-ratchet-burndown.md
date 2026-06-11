@@ -16,44 +16,25 @@ blocked-by: null
 
 ## Context
 
-PR #3123 introduced the `blazetrails/require-table-teardown` ESLint rule:
-every `createTable("foo")` in an AR test must have an explicit
-`dropTable("foo")` in the same file, and `dropAllTables()` is forbidden
-(carpet-bomb teardown). 18 pre-existing violators are grandfathered in
-`eslint/require-table-teardown-exclude.json` as a ratchet baseline. This
-story burns that list down to zero, mirroring the
-require-canonical-schema / expected-fixtures ratchets.
+**Duplicate of `require-table-teardown-burndown` (status: ready).** Both target
+the same 18-entry `eslint/require-table-teardown-exclude.json` baseline. To keep
+the one-agent-per-work-item model intact, this draft should be **closed as a
+duplicate** rather than worked in parallel — two agents converting the same 18
+files will collide.
 
-Two categories to triage (drop entries from the exclude JSON as each is fixed):
-
-- **Conservative false-positives — dynamic teardown that functionally cleans
-  up.** e.g. `reserved-word.test.ts` drops via
-  `for (const t of RESERVED_TABLES) await conn.dropTable(t)` — the rule can't
-  match a loop variable to literal-named creates. Either switch to explicit
-  literal `dropTable("…")` calls (preferred — makes ownership obvious) or, if
-  the loop is genuinely cleaner, keep the file excluded / use a scoped
-  `eslint-disable`. Not real leaks.
-- **`dropAllTables()` users needing per-table drops.** The 3 files added to
-  the baseline when the carpet-bomb ban landed —
-  `active-record-schema.test.ts`, `normalized-attribute.test.ts`,
-  `statement-cache.test.ts` — must replace `dropAllTables()` with explicit
-  `dropTable("…")` for each table they create.
-- **Possible real leak:** `query-cache.test.ts` creates `qc_mig_tasks` with no
-  literal drop — verify and add teardown.
-
-Rule + baseline live in `eslint/require-table-teardown.{mjs,test.mjs}` and
-`eslint/require-table-teardown-exclude.json`. Regenerate-the-baseline recipe:
-set the JSON to `[]`, run eslint over `packages/activerecord/src/**/*.test.ts`,
-collect the violating files. `test-helpers/**` is exempt by config.
-
-Keep within the 500-LOC PR ceiling — split across multiple PRs from `main`
-(non-overlapping files) if needed; do not stack.
+If kept, scope it to a disjoint slice of the 18 files agreed with the owner of
+`require-table-teardown-burndown` (non-overlapping files, off `main`, NOT
+stacked).
 
 ## Acceptance criteria
 
-- `eslint/require-table-teardown-exclude.json` reduced toward `[]` (fully, or
-  in tranches if split across PRs).
-- Each removed file either drops every table it creates by explicit
-  `dropTable("…")`, or carries a justified scoped `eslint-disable`.
-- No `dropAllTables()` remains in any de-grandfathered file.
-- `pnpm vitest run` green for each touched test file on sqlite (CI covers PG/MySQL).
+- [ ] Confirm with the `require-table-teardown-burndown` owner before claiming;
+      if that story is active, close this as a duplicate.
+- [ ] If proceeding on a disjoint slice: same bar as the sibling — per-table
+      teardown or ride `TEST_SCHEMA`, remove files from the exclude JSON, no
+      file-level `eslint-disable`.
+
+## Definition of done
+
+Either closed as a duplicate, or its disjoint slice of the 18 files is out of
+the exclude JSON with no collisions introduced.

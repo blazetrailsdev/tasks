@@ -16,31 +16,48 @@ blocked-by: null
 
 ## Context
 
-Split out of the blocked `associations-scope-cache-cluster`. Hardest file
-(~1167 LOC), likely multiple PRs. `associations/association-scope.test.ts`
-unit-tests the internal scope resolver (`AssociationScope`/`ReflectionProxy`)
-with a large bank of synthetic prefixed tables, each encoding a distinct
-resolver scenario:
+Convert `packages/activerecord/src/associations/association-scope.test.ts`
+(~1168 LOC, 24 inline tables) onto the canonical schema.
 
-- `wr_*` write reflection, `st_*`/`np_*` STI + namespaced polymorphic (incl. a
-  uuid string primary key, `np_photos.primaryKey: ["uuid"]`), `ho1_*`
-  has-one-through chains, `hs_*` has-many-through, `hot_*` hot-path hooks,
-  `mg_*` multi-grouping, `int_*` intersection, `pst_*` polymorphic.
+- trails: `associations/association-scope.test.ts`
+- Rails: **no 1:1 counterpart** — trails-internal `AssociationScope` resolver
+  harness covering STI, namespaced-polymorphic, composite-key and self-ref edge
+  cases. Fidelity step 4 N/A; bar is steps 1–3.
 
-No dedicated Rails file (covered across the association suites). Blocker: these
-schemas have no 1:1 canonical analog, and `eslint-disable` is rejected. Each
-scenario must be re-expressed on an existing canonical construct that reproduces
-the same resolver shape — canonical already has STI, polymorphic
-(`faces`/`taggings`/`images`), through chains, and composite/uuid-PK tables
-(`cpk_*`, `string_key_objects`, `guids`). Where a scenario has no canonical
-analog, decide per-case: re-model onto the nearest canonical shape that still
-exercises the branch, or escalate. Split per scenario-group (one PR per
-`wr_/st_/np_/...` family), each off `main` with non-overlapping describes.
+Map each edge case to the canonical table that already models it: STI →
+`Company`/`Firm`/`Client`; polymorphic → `Tagging`/`taggable`; self-ref → the
+canonical self-join. Genuinely synthetic shapes (uuid-PK, namespaced
+polymorphic with no `schema.rb` row) stay bespoke but **file-unique**, never the
+shared name.
 
 ## Acceptance criteria
 
-- [ ] Every `defineSchema` table references a canonical table (or a per-scenario
-      rewrite onto one); no synthetic prefixed tables; no `eslint-disable`.
-- [ ] Resolver assertions preserved; test names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; file
-      removed from the exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] No collisions with shared `posts`/`comments`/`users`/`companies` tables.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`
+      (a genuinely un-canonical resolver shape may keep a scoped disable with a
+      one-line reason — not as a shortcut).
+- [ ] `pnpm vitest run packages/activerecord/src/associations/association-scope.test.ts`
+      passes.
+
+## Notes
+
+- ~1168 LOC: split per-describe across sibling PRs off `main` (NOT stacked).
+- This is part of the cluster that blocked PR #3121 (see
+  `associations-scope-cache-cluster`): canonical-schema gaps must be filled
+  first. Add any missing STI/polymorphic table to `test-schema.ts` (parity with
+  `schema.rb`) as the enabling first PR.
+
+## Definition of done
+
+Rides canonical tables (or file-unique scratch where no analog exists) with no
+shared-table collisions. Blanket `eslint-disable` does **not** close this story.

@@ -16,26 +16,41 @@ blocked-by: null
 
 ## Context
 
-Split out of `misc-core-cluster` (which shipped explain + unsafe-raw-sql in
-that PR). `suppressor.test.ts` is still in `require-canonical-schema-exclude.json`.
+Convert `packages/activerecord/src/suppressor.test.ts` (~229 LOC, 8 inline
+tables) onto the canonical schema, matched to Rails. This story may also need a
+small **implementation fix** to `ActiveRecord::Suppressor` (save-suppression).
 
-Port `suppressor.test.ts` to the canonical `Notification` / `User` /
-`UserWithNotification` models (`test-helpers/models/notification.ts`,
-`.../user.ts`) + `TEST_SCHEMA.notifications` / `TEST_SCHEMA.users`, matching
-`vendor/rails/.../suppressor_test.rb` word-for-word.
+- trails: `suppressor.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/suppressor_test.rb`
 
-**Blocker — implementation gap:** Rails' `Suppressor` overrides `save` / `save!`
-to return `true` _before_ validation runs. Our suppression short-circuits only
-in `_performInsert` / `_performUpdate` (base.ts ~2723/2818), i.e. _after_
-validation. So `Notification.create!` (no `message`, which fails presence)
-under `suppress` raises `RecordInvalid` in trails but is a silent no-op in
-Rails. The faithful `test_suppresses_create` body needs the save path to
-short-circuit on `isSuppressed` before validating. Fix that in the save flow
-(instance `save` / `saveBang` / `_createOrUpdate`) first, then port the test.
+Rails drives `Notification`/`User` where creating a `User` would normally create
+a `Notification`, but `Notification.suppress { … }` suppresses the dependent
+save — both canonical models.
 
 ## Acceptance criteria
 
-- [ ] Bodies match `suppressor_test.rb` word-for-word; test names unchanged.
-- [ ] Rides `TEST_SCHEMA` + canonical models.
-- [ ] `suppress`-before-validation parity fixed; `pnpm vitest run` passes.
-- [ ] Removed from `require-canonical-schema-exclude.json`.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `suppressor_test.rb` FIRST; port each body word-for-word. Test names
+      unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Notification`/`User`; rows via `fixtures` + `name(:label)`
+      where Rails does.
+- [ ] If a faithful Rails body fails because `suppress` does not actually
+      prevent the dependent save, fix `Suppressor` — do NOT weaken the test.
+      Cite the Rails source in the PR.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/suppressor.test.ts` passes.
+
+## Definition of done
+
+Fidelity is the deliverable; if an impl gap blocks a faithful body, fix the
+impl. An `eslint-disable` or leaving the file excluded does **not** close this
+story.

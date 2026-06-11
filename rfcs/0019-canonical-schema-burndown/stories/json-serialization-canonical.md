@@ -1,7 +1,7 @@
 ---
 title: "json_serialization_test.rb → canonical models + fixtures"
 status: draft
-updated: 2026-06-10
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -16,19 +16,39 @@ blocked-by: null
 
 ## Context
 
-Split out of the original `serialization-cluster` story (which shipped only
-`serialization.test.ts`). Convert `json-serialization.test.ts` →
-`json_serialization_test.rb` onto canonical models + `TEST_SCHEMA` + fixtures.
+Convert `packages/activerecord/src/json-serialization.test.ts` (~379 LOC,
+**26 inline tables**) onto the canonical schema, matched to Rails.
 
-NOTE: the current TS file is built on ~20 synthetic ad-hoc tables
-(`post_j1s`, `comment_j2s`, `author_j7s`, …) that have NO Rails counterpart.
-A faithful port means rewriting the bodies onto canonical Author/Post/Comment
-models, not a mechanical `defineSchema` → `TEST_SCHEMA` swap. Remove
-`packages/activerecord/src/json-serialization.test.ts` from
-`eslint/require-canonical-schema-exclude.json` when done.
+- trails: `json-serialization.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/json_serialization_test.rb`
+
+Rails drives `Contact` (`contacts`) plus `Admin::User`/`Tag`/`Post` for nested
+`include:` cases — all canonical. The 26 inline tables are per-test scratch
+shapes (a major collision surface); collapse them onto canonical
+`contacts`/`posts`/`tags`/`comments` or rename file-unique where no `schema.rb`
+analog exists.
 
 ## Acceptance criteria
 
-- [ ] Rides `TEST_SCHEMA` + canonical models + `fixtures`/`name(:label)` lookups.
-- [ ] Test bodies match `json_serialization_test.rb` word-for-word; names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; removed from exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `json_serialization_test.rb` FIRST; port each body word-for-word.
+      Test names unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Contact`/`Admin::User`/`Tag`/`Post`; rows via `fixtures` +
+      `name(:label)` where Rails does.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/json-serialization.test.ts`
+      passes.
+
+## Definition of done
+
+Fidelity is the deliverable. An `eslint-disable` or leaving the file excluded
+does **not** close this story.

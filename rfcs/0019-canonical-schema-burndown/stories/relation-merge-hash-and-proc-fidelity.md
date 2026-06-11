@@ -1,7 +1,7 @@
 ---
 title: "Relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs)"
 status: draft
-updated: 2026-06-10
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -16,62 +16,31 @@ blocked-by: null
 
 ## Context
 
-Surfaced during review of PR #3092 (relation-mutation-cluster). The faithful
-rewrite of `relation/mutation.test.ts` exposed two pre-existing `Relation#merge`
-implementation gaps that the test currently works around (with documented
-comments). Both should be fixed, then the test restored to the exact Rails form.
+This is an **implementation-fix** story, not a file port: two `Relation#merge`
+bugs surface when `relation/merging.test.ts` is ported word-for-word to
+`merging_test.rb`. Fix the implementation so the faithful Rails bodies pass.
 
-### Bug 1 — `HashMerger.merge()` doesn't dispatch per-key
+- impl: `packages/activerecord/src/relation.ts` (and `relation/query-methods.ts`)
+- Rails ref: `relation/merging_test.rb`
 
-`relation/merger.ts:150` — `HashMerger.merge()` does
-`return this.relation.where(this.hash)`, treating **every** hash key as a WHERE
-condition. So `relation.merge!({ select: :foo })` silently becomes a WHERE
-filter instead of a select-merge.
+The two gaps (confirm against current `merge()` before fixing):
 
-Rails (`activerecord/lib/active_record/relation/merger.rb` `HashMerger#other`,
-~lines 24-36) builds a fresh relation and dispatches each hash key to its bang
-method (`select:` -> `_select!`, arrays splat), then merges via `Merger`:
-
-```ruby
-def merge
-  Merger.new(relation, other).merge
-end
-def other
-  other = Relation.create(relation.model, table:, predicate_builder:)
-  hash.each do |k, v|
-    k = :_select if k == :select
-    Array === v ? other.public_send("#{k}!", *v) : other.public_send("#{k}!", v)
-  end
-  other
-end
-```
-
-Fix: rewrite `HashMerger.merge()` to mirror this — iterate the hash, dispatch
-each key to the matching `${k}Bang` (`select` -> `_selectBang`) on a fresh/bare
-relation, then `new Merger(this.relation, other).merge()`. Mind the fresh
-relation's default scope (Rails uses a bare `Relation.create`, not `all()`).
-
-### Bug 2 — `performMerge` (non-bang `merge`) throws on a proc/function arg
-
-`relation/spawn-methods.ts:29` — `performMerge` passes its arg straight to
-`new Merger(this, other)`, which immediately dereferences
-`other._whereClause.isEmpty()`. If `other` is a function, this throws
-(`undefined.isEmpty`). `mergeBang` already has a `typeof other === "function"`
-branch, but the non-bang `merge(fn)` (the form Rails tests) is broken.
-
-Rails `merge!` proc branch is `instance_exec(&other)` (and `merge` spawns
-first), returning the proc's evaluated relation. Fix: add a function guard to
-`performMerge` mirroring that semantic, then verify against Rails
-`RelationMutationTest#test_merge_with_a_proc`.
+1. **Hash-argument dispatch** — `merge({...})` must route a plain object through
+   the same where/dispatch path Rails uses, not treat it as a Relation.
+2. **Proc / lambda argument** — `merge(-> { ... })` (Rails accepts a callable
+   scope) must be instance-exec'd against the relation and merged.
 
 ## Acceptance criteria
 
-- [ ] `HashMerger.merge()` dispatches each hash key to its bang method per Rails
-      `HashMerger#other`; `relation.merge!({ select: ... })` merges selects (not
-      a WHERE filter). Covered by tests for `select`/`group`/`order` hash merge.
-- [ ] `Relation#merge(fn)` (non-bang) handles a proc/function arg without
-      throwing, matching Rails' `instance_exec` semantic.
-- [ ] Restore `relation/mutation.test.ts` `merge!` to the hash form
-      (`merge!({ select: ... })`) and `merge with a proc` to `merge(fn)` (drop
-      the documented-workaround comments).
-- [ ] `pnpm vitest run` green; no regressions across existing merge callers.
+- [ ] Reproduce both failures by porting the relevant `merging_test.rb` cases
+      first (do NOT weaken or rename the tests to make them pass).
+- [ ] Fix `Relation#merge` hash-dispatch and proc-arg handling to match Rails
+      semantics; cite the Rails source method in the PR body.
+- [ ] `pnpm vitest run packages/activerecord/src/relation/merging.test.ts` and
+      the broader relation tests pass; `api:compare` for `merge` still matches.
+
+## Definition of done
+
+The implementation matches Rails' `merge` semantics and the faithful Rails
+bodies pass unmodified. Skipping or renaming a failing test does **not** close
+this story.

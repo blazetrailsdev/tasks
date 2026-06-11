@@ -16,26 +16,39 @@ blocked-by: null
 
 ## Context
 
-Split out of the blocked `associations-scope-cache-cluster`.
-`associations/association-relation.test.ts` exercises `AssociationRelation`
-chaining/validation/inverse semantics on synthetic `ar_blogs`/`ar_posts`
-(+ `ar_validated_*`, `ar_strict_*`, `ar_inv_*`) tables. No dedicated Rails file
-(behavior maps to `relations_test.rb` AssociationRelation cases).
+Convert `packages/activerecord/src/associations/association-relation.test.ts`
+(~197 LOC, 8 inline tables) off its synthetic `ar_blogs`/`ar_posts` scratch
+tables onto the canonical schema.
 
-Blockers to a real canonical conversion:
+- trails: `associations/association-relation.test.ts`
+- Rails: **no 1:1 counterpart** — `AssociationRelation` behaviour lives across
+  `relations_test.rb` / `has_many_associations_test.rb`. Fidelity step 4 N/A;
+  the bar is steps 1–3.
 
-- `ar_blogs` has no canonical/Rails counterpart (`blogs` is not in Rails
-  `schema.rb`); rewrite the owner->collection relationship onto a canonical pair
-  such as `Author has_many :posts`.
-- `ar_posts.published` (boolean) does not exist on canonical `posts`; re-express
-  the `where({ published: true })` assertions using an existing canonical
-  column/predicate, or drop the predicate if the assertion doesn't depend on it.
-- `eslint-disable` is not acceptable.
+The `ar_blogs`/`ar_posts` synthetic names exist only to dodge collisions; the
+underlying shape is `Author has_many :posts`. Rewrite onto canonical
+`Author`/`Post`/`Comment`. A `blogs`/`published` column that the canonical
+schema lacks but `schema.rb` does NOT have → keep on a file-unique table.
 
 ## Acceptance criteria
 
-- [ ] Rides canonical tables + models (e.g. `Author`/`Post`) with no synthetic
-      `ar_*` tables and no `eslint-disable`.
-- [ ] AssociationRelation behavior assertions preserved; test names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; file
-      removed from the exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Author`/`Post`/`Comment`; rows via `fixtures` +
+      `name(:label)`. Test names unchanged.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/associations/association-relation.test.ts`
+      passes.
+
+## Definition of done
+
+Riding the canonical schema with no synthetic collision tables. An
+`eslint-disable` or leaving the file excluded does **not** close this story.

@@ -16,33 +16,41 @@ blocked-by: null
 
 ## Context
 
-Split out of the blocked `associations-scope-cache-cluster`.
-`associations/inverse-associations.test.ts` (~2077 LOC) stays on the
-`require-canonical-schema` exclude list and needs a real fixture port — it is
-NOT a mechanical schema-ref swap, and `eslint-disable` is not acceptable.
+Convert `packages/activerecord/src/associations/inverse-associations.test.ts`
+(~2078 LOC, 20 inline tables) onto the canonical schema, matched to Rails.
 
-- The file invents test-local tables (`men`, `humen`, `hobbies`, `cached_men`,
-  `null_men`/`null_faces`, `cpk_men`/`cpk_interests`) that exist in neither
-  Rails nor `TEST_SCHEMA`. Rails `inverse_associations_test.rb` uses
-  `humans`/`faces`/`interests` with a `human_id` FK + `polymorphic_human_*`
-  columns; the trails port instead models `men` + `man_id`.
-- Because the bodies are built around `man_id`/`man` associations, pointing
-  `faces`/`interests`/`posts`/`comments` at the canonical tables (which use
-  `human_id`) breaks every insert — the inline `faces: { man_id }`,
-  `posts: { title }`, `comments: { body, post_id }` are exactly the
-  collision-prone shapes the rule targets, so `eslint-disable` would perpetuate
-  the shared-DB collision rather than fix it.
+- trails: `associations/inverse-associations.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/associations/inverse_associations_test.rb`
 
-From-scratch rewrite onto canonical `Human`/`Face`/`Interest` models +
-`humans`/`faces`/`interests` fixtures with `human_id`, mirroring Rails
-`inverse_associations_test.rb` word-for-word. 9 `defineSchema` blocks; likely
-multiple PRs.
+Rails drives `Human`/`Face`/`Interest` (plus `Man`→`Human` rename history) for
+`inverse_of` two-way association integrity — all canonical
+(`humans`/`faces`/`interests` in `schema.rb`).
 
 ## Acceptance criteria
 
-- [ ] Rides `TEST_SCHEMA` + canonical `Human`/`Face`/`Interest` models +
-      fixtures where Rails does; no invented `men`/`humen`/`man_id` tables.
-- [ ] Test bodies match `inverse_associations_test.rb` word-for-word; test names
-      unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; file
-      removed from the exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `inverse_associations_test.rb` FIRST; port each body word-for-word.
+      Test names unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Human`/`Face`/`Interest` with `inverse_of`; rows via
+      `fixtures` + `name(:label)` where Rails does.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/associations/inverse-associations.test.ts`
+      passes.
+
+## Notes
+
+- ~2078 LOC: split per-describe across sibling PRs off `main` (NOT stacked).
+
+## Definition of done
+
+Fidelity is the deliverable. An `eslint-disable` or leaving the file excluded
+does **not** close this story.

@@ -16,29 +16,32 @@ blocked-by: null
 
 ## Context
 
-Follow-up to the declare-materialization pilot (trails PR #3099). With the
-virtualizer/walker gaps closed (`materialize-declares-generator-fixes`), the
-generator can run cleanly across the rest of the canonical model graph. The
-pilot established that the `as any` payoff only materializes once the **whole**
-graph is materialized — integration tests reach unmaterialized models
-(`developer.projects[0].name` → `Project` untyped), so partial coverage keeps
-the casts. This story materializes the remainder of `test-helpers/models/**`.
+With the virtualizer gaps fixed (dep), roll
+`materialize-model-declares.ts` across the full
+`packages/activerecord/src/test-helpers/models/` directory in reviewable waves,
+baking typed `declare` members into each model's source.
+
+Each wave: run the generator on a batch of models, verify they typecheck green,
+commit. Keep each PR ≤500 LOC (the generated declares count as LOC).
 
 ## Acceptance criteria
 
-- [ ] Run `materialize-model-declares.ts` across the rest of
-      `test-helpers/models/**`, sequenced in waves of ≤500 LOC each (the
-      claimable per-PR unit).
-- [ ] Each wave reports the `as any` delta it produces (counts before/after over
-      the AR test suite).
-- [ ] `pnpm typecheck` is green after each wave; no wave is merged red.
-- [ ] Continuation waves that exceed the per-PR ceiling are registered as new
-      stories via `pnpm tasks new canonical-schema-burndown <slug>` rather than
-      stacked.
+- [ ] Run the generator over `test-helpers/models/` in batches; each batch
+      typechecks green with no hand-edits.
+- [ ] Models that still hit an unresolved-target/loader/`_tableName` gap are
+      reported (not force-written with broken declares) and registered as a
+      follow-up generator-fix story — do not paper over with `as any`.
+- [ ] `pnpm tsc` (or the AR typecheck task) passes after each wave.
+- [ ] Each wave is its own PR off `main`, ≤500 LOC, non-overlapping files
+      (NOT stacked).
 
 ## Notes
 
-Measure the `as any` drop after each wave, not per single model — the pilot
-showed single-model materialization drops ~0 casts. The cumulative graph
-coverage is what unlocks the strip work in
+- Do NOT fan out all waves as sibling PRs yourself; ship one wave, register the
+  next as a new story.
+
+## Definition of done
+
+The materializable models under `test-helpers/models/` carry baked typed
+declares. Remaining gaps are registered, not hidden. Unblocks
 `materialize-declares-strip-asany`.

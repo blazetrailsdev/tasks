@@ -16,30 +16,42 @@ blocked-by: "Two core AR gaps must land first (per memory hmt_disable_joins_fixt
 
 ## Context
 
-`associations/has-many-through-disable-joins-associations.test.ts` is the one
-disable-joins file the canonical-fixtures migration **cannot** complete today: it
-is blocked on two real ActiveRecord framework gaps, not on schema/fixtures work.
-Split out of [associations-disable-joins-cluster](associations-disable-joins-cluster.md)
-(per PR #14 review) so that cluster's seven other files stay cleanly claimable and
-this gap is visible in the queue via `blocked-by`.
+Convert `packages/activerecord/src/associations/has-many-through-disable-joins-associations.test.ts`
+(~643 LOC, 6 inline tables) onto canonical fixtures, matched to Rails.
 
-Rails counterpart: `associations/has_many_through_disable_joins_associations_test.rb`.
+- trails: `associations/has-many-through-disable-joins-associations.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/associations/has_many_through_disable_joins_associations_test.rb`
+
+**This story is framework-blocked** (see `blocked-by`): a faithful port surfaces
+two association-layer gaps. Do NOT paper over them with an `eslint-disable` or a
+weakened test — the prerequisite framework fixes must land under
+`0005-activerecord-gaps` first.
 
 ## Acceptance criteria
 
-- [ ] The two framework gaps in `blocked-by` are resolved (or a downstream
-      framework-fix story is `done`) before this story is claimed.
-- [ ] File rides `TEST_SCHEMA` + canonical models + `fixtures`/`name(:label)`
-      lookups where Rails does.
-- [ ] Test bodies match `has_many_through_disable_joins_associations_test.rb`
-      word-for-word; test names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; file
-      removed from `require-canonical-schema-exclude.json`.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Prerequisite framework fixes landed: (1) `updateCounters` honors
+      `counter_cache` + `alias_attribute`; (2) `ThroughReflection.klass` resolves
+      via `sourceReflection`. Register these as 0005 stories before claiming.
+- [ ] Open `has_many_through_disable_joins_associations_test.rb` FIRST; port
+      each body word-for-word. Test names unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Author`/`Post`/`Comment` with `has_many :through,
+disable_joins: true`; rows via `fixtures` + `name(:label)`.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/associations/has-many-through-disable-joins-associations.test.ts`
+      passes.
 
-## Notes
+## Definition of done
 
-- The two gaps (memory `hmt_disable_joins_fixture_parity_blocked`): counter_cache +
-  alias_attribute unresolved in `updateCounters`; `ThroughReflection.klass` resolves
-  via `_delegate` rather than `sourceReflection` so `disableJoins` source assocs miss
-  the registry. Both are association-layer fixes — they belong under
-  `0005-activerecord-gaps` (associations parity), not in this fixtures story.
+Fidelity is the deliverable, AFTER the framework gaps are fixed. An
+`eslint-disable`, a weakened test, or leaving the file excluded does **not**
+close this story.

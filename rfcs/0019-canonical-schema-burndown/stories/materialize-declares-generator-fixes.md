@@ -16,39 +16,35 @@ blocked-by: null
 
 ## Context
 
-Follow-up to the declare-materialization pilot (trails PR #3099), which landed
-`packages/activerecord/scripts/materialize-model-declares.ts` — runs the
-trails-tsc type-virtualizer + auto-import + schema passes and writes the
-synthesized `declare` members back into model source — and materialized declares
-for `topic.ts` and `developer.ts` (typecheck-green). Three of the five pilot
-models could not be materialized cleanly; each exposes a real gap in the
-type-virtualization coverage that blocks the rest of the rollout. This story
-fixes those three gaps, then materializes the remaining pilot models.
+Tooling sub-track that supports the burndown (lets converted tests drop `as any`
+casts). `packages/activerecord/scripts/materialize-model-declares.ts` runs the
+trails-tsc virtualizer and bakes `declare` members into canonical test-helper
+model source so models carry their typed surface directly.
+
+The pilot set is `["topic.ts", "developer.ts"]`. `post.ts`/`author.ts`/
+`comment.ts` are explicitly excluded because each hits a virtualizer/walker gap
+that would write **broken** declares:
+
+- unresolved association target (a `has_many`/`belongs_to` whose target the
+  resolver can't find),
+- subclass loader-method override not reflected by the walker,
+- `_tableName` gap (model whose table name isn't statically resolvable).
+
+This story fixes those gaps in `src/type-virtualization/` (walker / virtualize /
+resolve-target) so `post.ts`/`author.ts`/`comment.ts` materialize typecheck-green.
 
 ## Acceptance criteria
 
-- [ ] `synthesize` falls back to `Base` for unresolved association targets. When
-      a target model is neither in scope nor in the model registry (e.g.
-      `hasMany("commentsWithOrder")` → `CommentsWithOrder`, `AuditLog`-style
-      targets), emit `AssociationProxy<Base>` rather than an unimported class,
-      mirroring how polymorphic belongsTo already degrades to `Base`. Surface a
-      `log()`/warning listing the dropped targets. Fixes `post.ts`/`author.ts`
-      (~92 TS2304). Add a virtualize fixture covering the fallback.
-- [ ] `synthesize` composes subclass loader overrides as
-      `Base["loadBelongsTo"] & (own overloads)` so a subclass adding its own
-      `belongsTo` stays assignable to the inherited loader (e.g. `SpecialComment`
-      vs `Comment`). Guard on whether the base chain actually emits that loader.
-      Fixes `comment.ts` (TS2416). Add a fixture.
-- [ ] The walker captures `static _tableName` in addition to `static tableName`
-      for schema-column lookup; canonical models use `_tableName`, so models like
-      `WebTopic` (`_tableName = "topics"`) currently get no column declares. Add a
-      fixture.
-- [ ] Materialize `post.ts`, `author.ts`, and `comment.ts`; commit the declares;
-      whole-repo `pnpm typecheck` green.
+- [ ] Reproduce each gap by running the generator on `post.ts`/`author.ts`/
+      `comment.ts` and capturing the broken/missing declare.
+- [ ] Fix the virtualizer/walker/resolve-target gap (cite the failing input).
+- [ ] `pnpm tsx packages/activerecord/scripts/materialize-model-declares.ts
+post.ts author.ts comment.ts` writes typecheck-green declares; the three
+      models compile with no hand-edits.
+- [ ] Existing pilot (`topic.ts`/`developer.ts`) still materializes green
+      (no regression).
 
-## Notes
+## Definition of done
 
-Schema columns attach via the class-name convention
-(`pluralize(underscore(name))`) and, after this story, via `_tableName`. Keep the
-warning surface concise — one line per dropped association target is enough to
-audit coverage gaps in later waves.
+`post.ts`/`author.ts`/`comment.ts` materialize green via the generator. This
+unblocks `materialize-declares-rollout-waves`.

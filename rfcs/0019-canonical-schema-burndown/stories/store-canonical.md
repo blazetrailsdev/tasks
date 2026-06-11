@@ -1,7 +1,7 @@
 ---
 title: "store_test.rb → canonical Admin::User + fixtures"
 status: draft
-updated: 2026-06-10
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -16,10 +16,43 @@ blocked-by: null
 
 ## Context
 
-Split out of the original `serialization-cluster` story (which shipped only `serialization.test.ts`). `store.test.ts` (1123 LOC) → `store_test.rb`. Rails uses `Admin::User` with `store :settings`/`store :preferences`; current TS uses inline `users` models. Large; likely needs splitting under the 300-LOC ceiling. Remove the file from `eslint/require-canonical-schema-exclude.json` when done.
+Convert `packages/activerecord/src/store.test.ts` (~1124 LOC, 3 inline tables)
+onto the canonical schema, matched to Rails.
+
+- trails: `store.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/store_test.rb`
+
+Rails drives `Admin::User` (`admin_users`, with `store`/`store_accessor` on a
+`settings`/`preferences` text+json column) — canonical and already in
+`TEST_SCHEMA`. Replace the inline tables and bespoke class with the registry
+`Admin::User`.
 
 ## Acceptance criteria
 
-- [ ] Rides `TEST_SCHEMA` + canonical models + `fixtures`/`name(:label)` lookups.
-- [ ] Test bodies match the Rails counterpart word-for-word; names unchanged.
-- [ ] `pnpm vitest run` passes; zero `require-canonical-schema` errors; removed from exclude JSON.
+- [ ] **Converged setup, not `defineSchema`:** wire the file with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `store_test.rb` FIRST; port each body word-for-word. Test names
+      unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical `Admin::User` with `store_accessor`; rows via `fixtures` +
+      `name(:label)` where Rails does.
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/store.test.ts` passes.
+
+## Notes
+
+- ~1124 LOC exceeds the 500-LOC ceiling: split across sibling PRs off `main`
+  (NOT stacked). Ship what fits; register the remainder as a new story — do not
+  fan out yourself.
+
+## Definition of done
+
+Fidelity is the deliverable. An `eslint-disable` or leaving the file excluded
+does **not** close this story.

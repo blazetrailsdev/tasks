@@ -16,27 +16,30 @@ blocked-by: null
 
 ## Context
 
-Follow-up to `calculations-aggregations` (PR #3107), which converted the
-`AggregationsTest` describe to the canonical Customer model + `customers`
-fixtures. `aggregations.test.ts` still carries non-Rails invented describes that
-use redundant `defineSchema`:
+Finish `packages/activerecord/src/aggregations.test.ts` (~700 LOC, 3 inline
+tables). The `calculations-aggregations` story (dep) converted the
+Rails-counterpart describes; this story retires the remaining trails-only
+describes and drops the file from the exclude JSON.
 
-- `Aggregations` (should sum/average/minimum/maximum field, empty-relation cases)
-- `Aggregation edge cases`
-- `composed_of`
-- `composed_of (Rails-guided)`
+- trails: `aggregations.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/aggregations_test.rb`
 
-These have no `aggregations_test.rb` counterpart (the sum/avg/min/max ones belong
-conceptually to calculations). Per the burndown's fidelity-first rule they should
-be retired or moved to faithful Rails-matching homes, after which the file leaves
-`defineSchema` behind entirely.
+Rails drives `Customer` with `composed_of` (value-object aggregations) against
+canonical tables. The leftover non-Rails describes have no counterpart —
+fidelity step 4 does not apply; they must still ride `TEST_SCHEMA` (no inline
+tables) or be deleted if they duplicate a canonical case.
 
 ## Acceptance criteria
 
-- [ ] Remove or relocate the non-Rails `Aggregations` / `composed_of` describes
-      so `aggregations.test.ts` no longer calls `defineSchema`.
-- [ ] `OverridingAggregationsTest` retained (it mirrors a real Rails test).
-- [ ] Remove `aggregations.test.ts` from `eslint/require-canonical-schema-exclude.json`
-      and `eslint/expected-fixtures-exclude.json`; eslint passes with zero
-      `require-canonical-schema` errors.
+- [ ] For Rails-backed describes: confirm they match `aggregations_test.rb`
+      word-for-word (the dep story should have done this). Test names unchanged.
+- [ ] Retire/convert the remaining trails-only describes: ride `TEST_SCHEMA`,
+      delete inline tables, or delete a describe that only duplicated a
+      canonical case (never rename a surviving test).
+- [ ] File removed from the exclude JSON; `pnpm lint` clean, no `eslint-disable`.
 - [ ] `pnpm vitest run packages/activerecord/src/aggregations.test.ts` passes.
+
+## Definition of done
+
+The file rides the canonical schema with no inline tables and is out of the
+exclude JSON. An `eslint-disable` does **not** close this story.

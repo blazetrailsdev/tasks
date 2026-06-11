@@ -16,28 +16,43 @@ blocked-by: null
 
 ## Context
 
-Carved out of `calculations-aggregations`. `calculations.test.ts` is the largest
-file in the suite (~7.3k LOC) and must be converted per-`describe` across sibling
-PRs off `main` — too large for a single 300-LOC PR. It touches shared tables
-(`accounts`, `companies`, `people`) so it depends on `shared-table-convergence`
-(done).
+Convert `packages/activerecord/src/calculations.test.ts` (~7345 LOC, 31 inline
+tables) onto the canonical schema, matched to Rails. One of the three largest
+files in the burndown — MUST ship per-describe across sibling PRs.
 
-Convert each describe to ride `TEST_SCHEMA` + canonical models (Account, Company,
-…) + `fixtures` / `name(:label)` lookups where `calculations_test.rb` does. Match
-each test body word-for-word; test names unchanged.
+- trails: `calculations.test.ts`
+- Rails: `vendor/rails/activerecord/test/cases/calculations_test.rb`
+
+Rails drives `Account`/`Company`/`Post`/`Topic`/`NumericData` for
+sum/count/average/group/pluck — all canonical.
 
 ## Acceptance criteria
 
-- [ ] Each converted describe rides `TEST_SCHEMA` + canonical models + fixture
-      lookups; no redundant `defineSchema`.
-- [ ] Test bodies match `calculations_test.rb`; test names unchanged.
-- [ ] `pnpm vitest run packages/activerecord/src/calculations.test.ts` passes
-      (co-run colliding siblings under `maxForks=1`).
-- [ ] When the whole file is converted, remove `calculations.test.ts` from
-      `eslint/require-canonical-schema-exclude.json` +
-      `eslint/expected-fixtures-exclude.json`; zero `require-canonical-schema` errors.
+- [ ] **Converged setup, not `defineSchema`:** wire each describe with
+      `setupHandlerSuite()` + `useHandlerFixtures([...])` (Rails `fixtures :name`);
+      load rows via `name(:label)` registry lookups. The canonical tables are
+      pre-built once per worker by `template-global-setup.ts`, so a converged
+      file calls `defineSchema` **zero** times and constructs no
+      `createTestAdapter`.
+- [ ] Open `calculations_test.rb` FIRST; port each body word-for-word. Test
+      names unchanged.
+- [ ] No `defineSchema` left in the file. If a needed column has no canonical
+      home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
+      has it (parity-check first); otherwise keep a single scoped, file-unique
+      `defineSchema` + teardown for that one table (never the shared name).
+- [ ] Use canonical models; rows via `fixtures` + `name(:label)` where Rails
+      does.
+- [ ] File removed from the exclude JSON ONLY in the final PR, after the whole
+      file lint-passes with no `eslint-disable`.
+- [ ] `pnpm vitest run packages/activerecord/src/calculations.test.ts` passes.
 
 ## Notes
 
-- Multi-PR by necessity — ship one describe (or a small group) per PR off `main`,
-  non-overlapping; do NOT stack. Register further continuation stories as needed.
+- ~7345 LOC: many sibling PRs off `main` (non-overlapping describes, NOT
+  stacked), each ≤500 LOC. Register each wave as a new story — do not fan out
+  yourself.
+
+## Definition of done
+
+Fidelity is the deliverable. An `eslint-disable` or leaving the file excluded
+does **not** close this story.
