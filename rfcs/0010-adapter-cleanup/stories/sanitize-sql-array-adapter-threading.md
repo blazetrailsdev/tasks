@@ -1,6 +1,6 @@
 ---
 title: "sanitizeSqlArray: thread the adapter quoter, drop the ABSTRACT_QUOTER fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 4
-pr: null
+pr: 3131
 claim: "2026-06-11T19:39:05Z"
 assignee: "sanitize-sql-array-adapter-threading"
 blocked-by: null
