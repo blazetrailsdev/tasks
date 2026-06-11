@@ -2668,7 +2668,7 @@
       "id": "where-nested-hash-assoc-name-table-resolution",
       "rfc": "0005-activerecord-gaps",
       "title": "where() nested-hash keyed by camelCase association name doesn't resolve to table",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "relation",
       "priority": 18,
       "updated": "2026-06-11T00:00:00.000Z",

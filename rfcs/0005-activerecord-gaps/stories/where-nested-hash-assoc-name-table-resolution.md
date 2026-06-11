@@ -1,6 +1,6 @@
 ---
 title: "where() nested-hash keyed by camelCase association name doesn't resolve to table"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0005-activerecord-gaps"
 cluster: relation
