@@ -4244,6 +4244,23 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/reconcile-tooling.md"
     },
     {
+      "id": "relation-scoping-suite",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation-scoping/ → canonical schema + Rails fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-scoping-suite.md"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "rfc": "0003-activerecord-cli",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
