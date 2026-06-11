@@ -1,7 +1,7 @@
 ---
 title: "Singular-association holder + writer/reader migration"
-status: ready
-updated: 2026-06-10
+status: claimed
+updated: 2026-06-11
 rfc: "0022-singular-association-holder"
 cluster: associations
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T01:17:12Z"
+assignee: "b1-singular-association-holder"
 blocked-by: null
 ---
 
