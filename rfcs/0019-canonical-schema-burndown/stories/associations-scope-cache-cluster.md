@@ -1,6 +1,6 @@
 ---
 title: "association-scope / inverse / assoc-callbacks → canonical schema + fixtures"
-status: in-progress
+status: blocked
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -11,7 +11,7 @@ priority: 8
 pr: 3121
 claim: "2026-06-11T12:35:21Z"
 assignee: "associations-scope-cache-cluster"
-blocked-by: null
+blocked-by: "Genuine canonical conversion blocked on canonical-schema gaps: callbacks needs profiles/firms/clients; association-relation needs blogs+published; association-scope/-alias-tracker are internal scope-resolver harnesses (uuid PK, STI/namespaced-polymorphic, self-ref at_users) with no canonical analog. Requires adding missing tables to test-schema.ts first, then per-file ports. eslint-disable rejected. PR #3121 closed."
 ---
 
 ## Context
