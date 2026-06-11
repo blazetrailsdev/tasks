@@ -1231,6 +1231,12 @@
       "terms": "a3-calculations-statement-cache-insert phase a3 — route calculations / statement-cache / insert-all through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
+      "id": "abstract-schema-layer-quote-dispatch",
+      "type": "story",
+      "title": "abstract-schema-layer-quote-dispatch",
+      "terms": "abstract-schema-layer-quote-dispatch abstract-schema-layer-quote-dispatch 0010-adapter-cleanup context"
+    },
+    {
       "id": "adapter-hash-only-constructor",
       "type": "story",
       "title": "Adapter hash-only constructor (Initiative 3)",

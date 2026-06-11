@@ -3688,6 +3688,23 @@
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a3-calculations-statement-cache-insert.md"
     },
     {
+      "id": "abstract-schema-layer-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "abstract-schema-layer-quote-dispatch",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/abstract-schema-layer-quote-dispatch.md"
+    },
+    {
       "id": "adapter-hash-only-constructor",
       "rfc": "0010-adapter-cleanup",
       "title": "Adapter hash-only constructor (Initiative 3)",
