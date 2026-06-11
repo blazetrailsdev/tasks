@@ -3537,6 +3537,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-extension-canonical.md"
     },
     {
+      "id": "assoc-habtm-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "habtm + has-and-belongs-to-many → canonical schema (split)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 500,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-habtm-canonical.md"
+    },
+    {
       "id": "assoc-join-model-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "join-model.test.ts → canonical schema (split)",

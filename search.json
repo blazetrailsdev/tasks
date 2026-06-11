@@ -1177,6 +1177,12 @@
       "terms": "assoc-extension-canonical extension.test.ts → canonical schema (posts-collision) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-habtm-canonical",
+      "type": "story",
+      "title": "habtm + has-and-belongs-to-many → canonical schema (split)",
+      "terms": "assoc-habtm-canonical habtm + has-and-belongs-to-many → canonical schema (split) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-join-model-canonical",
       "type": "story",
       "title": "join-model.test.ts → canonical schema (split)",
