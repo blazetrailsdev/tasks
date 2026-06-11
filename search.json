@@ -1159,6 +1159,12 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
+      "id": "assoc-left-outer-join-canonical",
+      "type": "story",
+      "title": "left-outer-join-association.test.ts → canonical schema",
+      "terms": "assoc-left-outer-join-canonical left-outer-join-association.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "b-drop-global-sync-sites",
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",
