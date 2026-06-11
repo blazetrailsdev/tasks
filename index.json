@@ -2079,6 +2079,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-has-one.md"
     },
     {
+      "id": "association-relation-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "association-relation.test.ts → canonical (rewrite off synthetic ar_blogs/ar_posts)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 8,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/association-relation-test-canonical.md"
+    },
+    {
       "id": "associations-collection-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",

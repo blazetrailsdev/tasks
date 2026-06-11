@@ -679,6 +679,12 @@
       "terms": "assoc-has-one port has-one-associations.test.ts to canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "association-relation-test-canonical",
+      "type": "story",
+      "title": "association-relation.test.ts → canonical (rewrite off synthetic ar_blogs/ar_posts)",
+      "terms": "association-relation-test-canonical association-relation.test.ts → canonical (rewrite off synthetic ar_blogs/ar_posts) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "associations-collection-cluster",
       "type": "story",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
