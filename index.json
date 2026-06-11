@@ -1946,6 +1946,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/transactions-test-canonical.md"
     },
     {
+      "id": "assoc-belongs-to",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Port belongs-to-associations.test.ts to canonical schema",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 8,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 500,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-belongs-to.md"
+    },
+    {
       "id": "assoc-collection-proxy",
       "rfc": "0019-canonical-schema-burndown",
       "title": "Port collection-proxy.test.ts to canonical schema",
