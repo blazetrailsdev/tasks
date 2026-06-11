@@ -577,6 +577,12 @@
       "terms": "relation-test-canonical relation.test.ts -> relation_test.rb canonical port fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relations-test-canonical",
+      "type": "story",
+      "title": "relations.test.ts -> relations_test.rb canonical port (split per-describe)",
+      "terms": "relations-test-canonical relations.test.ts -> relations_test.rb canonical port (split per-describe) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "step3-pg-tosql-via-visitor",
       "type": "story",
       "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
