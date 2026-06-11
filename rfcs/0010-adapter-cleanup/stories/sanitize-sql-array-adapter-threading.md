@@ -1,6 +1,6 @@
 ---
 title: "sanitizeSqlArray: thread the adapter quoter, drop the ABSTRACT_QUOTER fallback"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
