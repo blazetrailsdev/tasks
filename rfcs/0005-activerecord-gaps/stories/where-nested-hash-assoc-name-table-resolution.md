@@ -1,7 +1,7 @@
 ---
 title: "where() nested-hash keyed by camelCase association name doesn't resolve to table"
-status: ready
-updated: 2026-06-10
+status: claimed
+updated: 2026-06-11
 rfc: "0005-activerecord-gaps"
 cluster: relation
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T16:56:18Z"
+assignee: "where-nested-hash-assoc-name-table-resolution"
 blocked-by: null
 ---
 
