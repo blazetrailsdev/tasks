@@ -1,6 +1,6 @@
 ---
 title: "Burn down the require-table-teardown exclude list (18 files, 3 dropAllTables)"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
+pr: 3134
 claim: "2026-06-11T20:55:16Z"
 assignee: "require-table-teardown-burndown"
 blocked-by: null
