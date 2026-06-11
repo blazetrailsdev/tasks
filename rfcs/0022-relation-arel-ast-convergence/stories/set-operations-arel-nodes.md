@@ -1,6 +1,6 @@
 ---
 title: "Compose union/unionAll/intersect/except as Arel Union* nodes (drop string concat)"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: null
+pr: 3137
 claim: "2026-06-11T21:39:58Z"
 assignee: "set-operations-arel-nodes"
 blocked-by: null
