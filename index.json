@@ -2022,6 +2022,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-collection-proxy.md"
     },
     {
+      "id": "assoc-has-many",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Port has-many-associations.test.ts to canonical schema (split per-describe)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 8,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 500,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/assoc-has-many.md"
+    },
+    {
       "id": "assoc-has-one",
       "rfc": "0019-canonical-schema-burndown",
       "title": "Port has-one-associations.test.ts to canonical schema",
