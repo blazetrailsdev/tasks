@@ -4014,6 +4014,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-generators-manifest.md"
     },
     {
+      "id": "cli-inspect-and-list-ergonomics",
+      "rfc": "0001-task-system",
+      "title": "cli-inspect-and-list-ergonomics",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0001-task-system/stories/cli-inspect-and-list-ergonomics.md"
+    },
+    {
       "id": "cli-package-scaffold",
       "rfc": "0003-activerecord-cli",
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",

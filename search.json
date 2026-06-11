@@ -1339,6 +1339,12 @@
       "terms": "cli-generators-manifest generators + generated models/index.ts manifest + ar init cli 0003-activerecord-cli context"
     },
     {
+      "id": "cli-inspect-and-list-ergonomics",
+      "type": "story",
+      "title": "cli-inspect-and-list-ergonomics",
+      "terms": "cli-inspect-and-list-ergonomics cli-inspect-and-list-ergonomics 0001-task-system context"
+    },
+    {
       "id": "cli-package-scaffold",
       "type": "story",
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
