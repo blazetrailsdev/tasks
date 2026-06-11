@@ -1,6 +1,6 @@
 ---
 title: "Relocate SQL date/time serializers (and residual PG range/int helpers) out of quoting.ts"
-status: draft
+status: ready
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup

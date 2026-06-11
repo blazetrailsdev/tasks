@@ -1,7 +1,7 @@
 ---
 title: "CTE array values → Arel::Nodes::UnionAll AST (build_with_expression_from_value)"
-status: draft
-updated: 2026-06-10
+status: ready
+updated: 2026-06-11
 rfc: "0022-relation-arel-ast-convergence"
 cluster: cte
 deps: []

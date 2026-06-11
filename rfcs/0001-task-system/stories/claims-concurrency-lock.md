@@ -1,7 +1,7 @@
 ---
 title: "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)"
-status: draft
-updated: 2026-06-08
+status: ready
+updated: 2026-06-11
 rfc: "0001-task-system"
 cluster: scaffold
 deps: []

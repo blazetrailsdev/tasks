@@ -1,7 +1,7 @@
 ---
 title: "Serialization include through the reader"
-status: draft
-updated: 2026-06-10
+status: ready
+updated: 2026-06-11
 rfc: "0022-singular-association-holder"
 cluster: associations
 deps: ["b1-singular-association-holder"]
