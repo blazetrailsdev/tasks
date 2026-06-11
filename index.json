@@ -3535,6 +3535,23 @@
       "file_path": "rfcs/0008-test-perf-template-clone/stories/phase0-sqlite-template-spike.md"
     },
     {
+      "id": "collapse-identical-quoting-overrides",
+      "rfc": "0010-adapter-cleanup",
+      "title": "collapse-identical-quoting-overrides",
+      "status": "draft",
+      "cluster": null,
+      "priority": 99,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
+    },
+    {
       "id": "a1-ddl-metadata-callers",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase A1 — route DDL/metadata toSql callers through connection.toSql",
@@ -3876,23 +3893,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-package-scaffold.md"
-    },
-    {
-      "id": "collapse-identical-quoting-overrides",
-      "rfc": "0010-adapter-cleanup",
-      "title": "collapse-identical-quoting-overrides",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
     },
     {
       "id": "convert-bootstrap-rfc",
