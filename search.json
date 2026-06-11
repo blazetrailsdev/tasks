@@ -1105,6 +1105,12 @@
       "terms": "dirty-js-date-coercion js date <-> datetime attribute coercion dirty-tracking 0015-ar-framework-gaps context"
     },
     {
+      "id": "pg-referential-integrity-quote-dispatch",
+      "type": "story",
+      "title": "pg-referential-integrity-quote-dispatch",
+      "terms": "pg-referential-integrity-quote-dispatch pg-referential-integrity-quote-dispatch 0010-adapter-cleanup context"
+    },
+    {
       "id": "w1b-variadic-rest-overloads",
       "type": "story",
       "title": "W1b — variadic rest overloads (drop relation.ts as-any spreads)",
@@ -1541,12 +1547,6 @@
       "type": "story",
       "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
       "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
-    },
-    {
-      "id": "pg-referential-integrity-quote-dispatch",
-      "type": "story",
-      "title": "pg-referential-integrity-quote-dispatch",
-      "terms": "pg-referential-integrity-quote-dispatch pg-referential-integrity-quote-dispatch 0010-adapter-cleanup context"
     },
     {
       "id": "phase1-pg-template",
