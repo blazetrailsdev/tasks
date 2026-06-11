@@ -751,6 +751,12 @@
       "terms": "p3-mysql-stored-procedures p3 — mysql stored procedures / multi-result (3 skips) adapter 0016-ar-test-compare-100 context"
     },
     {
+      "id": "sqlite3-adapter-subclasses-registry-removal",
+      "type": "story",
+      "title": "SQLite adapter subclasses (Node/Expo) + retire driver registry",
+      "terms": "sqlite3-adapter-subclasses-registry-removal sqlite adapter subclasses (node/expo) + retire driver registry adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "p3-mysql-explain-and-hints",
       "type": "story",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
@@ -1625,12 +1631,6 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
-    },
-    {
-      "id": "sqlite3-adapter-subclasses-registry-removal",
-      "type": "story",
-      "title": "sqlite3-adapter-subclasses-registry-removal",
-      "terms": "sqlite3-adapter-subclasses-registry-removal sqlite3-adapter-subclasses-registry-removal 0010-adapter-cleanup context"
     },
     {
       "id": "visitor-on-establish",

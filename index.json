@@ -2298,6 +2298,25 @@
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-mysql-stored-procedures.md"
     },
     {
+      "id": "sqlite3-adapter-subclasses-registry-removal",
+      "rfc": "0010-adapter-cleanup",
+      "title": "SQLite adapter subclasses (Node/Expo) + retire driver registry",
+      "status": "draft",
+      "cluster": "adapter-cleanup",
+      "priority": 10,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "abstract-sqlite3-adapter"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/sqlite3-adapter-subclasses-registry-removal.md"
+    },
+    {
       "id": "p3-mysql-explain-and-hints",
       "rfc": "0016-ar-test-compare-100",
       "title": "P3 — MySQL EXPLAIN and optimizer hints (4 skips)",
@@ -4876,23 +4895,6 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
-    },
-    {
-      "id": "sqlite3-adapter-subclasses-registry-removal",
-      "rfc": "0010-adapter-cleanup",
-      "title": "sqlite3-adapter-subclasses-registry-removal",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/sqlite3-adapter-subclasses-registry-removal.md"
     },
     {
       "id": "visitor-on-establish",
