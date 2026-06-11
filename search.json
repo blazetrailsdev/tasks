@@ -1327,6 +1327,12 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
+      "id": "cli-dirty-worktree-safe-index-build",
+      "type": "story",
+      "title": "cli-dirty-worktree-safe-index-build",
+      "terms": "cli-dirty-worktree-safe-index-build cli-dirty-worktree-safe-index-build 0001-task-system context"
+    },
+    {
       "id": "cli-generators-manifest",
       "type": "story",
       "title": "Generators + generated models/index.ts manifest + ar init",
