@@ -913,6 +913,23 @@
       "file_path": "rfcs/0006-collection-store-unification/stories/s5-unskip-dedup-tests.md"
     },
     {
+      "id": "sanitize-sql-array-adapter-threading",
+      "rfc": "0010-adapter-cleanup",
+      "title": "sanitize-sql-array-adapter-threading",
+      "status": "draft",
+      "cluster": null,
+      "priority": 4,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/sanitize-sql-array-adapter-threading.md"
+    },
+    {
       "id": "b5-converge-association-cache",
       "rfc": "0022-singular-association-holder",
       "title": "(optional) Converge onto one @association_cache map",
@@ -5137,23 +5154,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0005-activerecord-gaps/stories/rf1-fk-derivation-consolidation.md"
-    },
-    {
-      "id": "sanitize-sql-array-adapter-threading",
-      "rfc": "0010-adapter-cleanup",
-      "title": "sanitize-sql-array-adapter-threading",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/sanitize-sql-array-adapter-threading.md"
     },
     {
       "id": "scaffold-tooling",

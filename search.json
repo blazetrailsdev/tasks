@@ -295,6 +295,12 @@
       "terms": "s5-unskip-dedup-tests unskip inverse-dedup tests gated on the removed seam associations 0006-collection-store-unification s5 — unskip inverse-dedup tests gated on the removed seam"
     },
     {
+      "id": "sanitize-sql-array-adapter-threading",
+      "type": "story",
+      "title": "sanitize-sql-array-adapter-threading",
+      "terms": "sanitize-sql-array-adapter-threading sanitize-sql-array-adapter-threading 0010-adapter-cleanup context"
+    },
+    {
       "id": "b5-converge-association-cache",
       "type": "story",
       "title": "(optional) Converge onto one @association_cache map",
@@ -1715,12 +1721,6 @@
       "type": "story",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
       "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
-    },
-    {
-      "id": "sanitize-sql-array-adapter-threading",
-      "type": "story",
-      "title": "sanitize-sql-array-adapter-threading",
-      "terms": "sanitize-sql-array-adapter-threading sanitize-sql-array-adapter-threading 0010-adapter-cleanup context"
     },
     {
       "id": "scaffold-tooling",
