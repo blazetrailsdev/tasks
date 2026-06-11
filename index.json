@@ -1741,6 +1741,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-core-cluster.md"
     },
     {
+      "id": "relation-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "relation.test.ts -> relation_test.rb canonical port",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-test-canonical.md"
+    },
+    {
       "id": "step3-pg-tosql-via-visitor",
       "rfc": "0018-ddl-visitor-convergence",
       "title": "Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation",
