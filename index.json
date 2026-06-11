@@ -3978,6 +3978,23 @@
       "file_path": "rfcs/0003-activerecord-cli/stories/ci-examples-job.md"
     },
     {
+      "id": "cli-authoring-ergonomics",
+      "rfc": "0001-task-system",
+      "title": "cli-authoring-ergonomics",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0001-task-system/stories/cli-authoring-ergonomics.md"
+    },
+    {
       "id": "cli-dirty-worktree-safe-index-build",
       "rfc": "0001-task-system",
       "title": "cli-dirty-worktree-safe-index-build",

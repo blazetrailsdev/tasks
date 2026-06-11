@@ -1327,6 +1327,12 @@
       "terms": "ci-examples-job optional — lightweight examples/ ci job deferred 0003-activerecord-cli context"
     },
     {
+      "id": "cli-authoring-ergonomics",
+      "type": "story",
+      "title": "cli-authoring-ergonomics",
+      "terms": "cli-authoring-ergonomics cli-authoring-ergonomics 0001-task-system context"
+    },
+    {
       "id": "cli-dirty-worktree-safe-index-build",
       "type": "story",
       "title": "cli-dirty-worktree-safe-index-build",
