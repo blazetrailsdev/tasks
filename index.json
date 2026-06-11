@@ -2207,7 +2207,7 @@
       "id": "associations-eager-join-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "eager / join / habtm → canonical schema + Rails fixtures",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 8,
       "updated": "2026-06-11T00:00:00.000Z",
