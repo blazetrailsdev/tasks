@@ -1,6 +1,6 @@
 ---
 title: "eager / join / habtm → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 8
-pr: null
+pr: 3117
 claim: "2026-06-11T12:30:52Z"
 assignee: "associations-eager-join-cluster"
 blocked-by: null
