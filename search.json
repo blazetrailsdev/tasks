@@ -1207,6 +1207,12 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
+      "id": "alias-joins-to-association-name",
+      "type": "story",
+      "title": "Alias JOINs to the association name (Rails parity) to enable self-join where-hash disambiguation",
+      "terms": "alias-joins-to-association-name alias joins to the association name (rails parity) to enable self-join where-hash disambiguation 0005-activerecord-gaps context"
+    },
+    {
       "id": "assoc-cascaded-eager-canonical",
       "type": "story",
       "title": "cascaded-eager-loading.test.ts → canonical schema",
