@@ -5118,6 +5118,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-scoping-suite.md"
     },
     {
+      "id": "relocate-non-quoting-helpers-from-quoting",
+      "rfc": "0010-adapter-cleanup",
+      "title": "relocate-non-quoting-helpers-from-quoting",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/relocate-non-quoting-helpers-from-quoting.md"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "rfc": "0003-activerecord-cli",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",

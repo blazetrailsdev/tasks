@@ -1711,6 +1711,12 @@
       "terms": "relation-scoping-suite relation-scoping/ → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "relocate-non-quoting-helpers-from-quoting",
+      "type": "story",
+      "title": "relocate-non-quoting-helpers-from-quoting",
+      "terms": "relocate-non-quoting-helpers-from-quoting relocate-non-quoting-helpers-from-quoting 0010-adapter-cleanup context"
+    },
+    {
       "id": "relocate-tsc-wrapper",
       "type": "story",
       "title": "Relocate AR tsc-wrapper + bins into activerecord-cli",
