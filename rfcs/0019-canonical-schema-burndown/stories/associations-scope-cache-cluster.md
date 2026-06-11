@@ -1,6 +1,6 @@
 ---
 title: "association-scope / inverse / assoc-callbacks → canonical schema + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
 priority: 8
-pr: null
+pr: 3121
 claim: "2026-06-11T12:35:21Z"
 assignee: "associations-scope-cache-cluster"
 blocked-by: null
