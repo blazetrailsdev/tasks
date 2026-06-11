@@ -1,7 +1,7 @@
 ---
 title: "relation/select.test.ts → canonical Post + posts/comments fixtures (select_test.rb)"
-status: in-progress
-updated: 2026-06-10
+status: done
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
