@@ -561,7 +561,7 @@
       "id": "pg-referential-integrity-quote-dispatch",
       "rfc": "0010-adapter-cleanup",
       "title": "PG referential-integrity SQL: dispatch quoting through the adapter instance",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter-cleanup",
       "priority": 1,
       "updated": "2026-06-11T00:00:00.000Z",
