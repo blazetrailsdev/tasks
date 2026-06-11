@@ -1,6 +1,6 @@
 ---
 title: "relation / relations / querying core → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 7
-pr: null
+pr: 3115
 claim: "2026-06-11T02:32:49Z"
 assignee: "relation-core-cluster"
 blocked-by: null
