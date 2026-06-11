@@ -802,7 +802,7 @@
       "id": "mysql-schema-modules-quote-dispatch",
       "rfc": "0010-adapter-cleanup",
       "title": "MySQL schema modules: dispatch quoting through the adapter instance",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter-cleanup",
       "priority": 3,
       "updated": "2026-06-11T00:00:00.000Z",
