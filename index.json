@@ -1854,18 +1854,18 @@
       "id": "associations-collection-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "fixtures",
       "priority": 8,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
       "deps": [
         "shared-table-convergence"
       ],
       "deps_rfc": [],
       "est_loc": 500,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-11T02:42:48Z",
+      "assignee": "associations-collection-cluster",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-collection-cluster.md"
     },

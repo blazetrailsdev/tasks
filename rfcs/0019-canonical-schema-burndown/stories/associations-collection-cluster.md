@@ -1,7 +1,7 @@
 ---
 title: "has-many / belongs-to / has-one / collection → canonical schema + fixtures"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T02:42:48Z"
+assignee: "associations-collection-cluster"
 blocked-by: null
 ---
 
