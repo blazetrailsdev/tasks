@@ -439,6 +439,12 @@
       "terms": "timestamp-test-cluster timestamp.test.ts → timestamp_test.rb canonical schema port fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "validations-association",
+      "type": "story",
+      "title": "validations/association-validation → canonical schema + Rails fixtures",
+      "terms": "validations-association validations/association-validation → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "validations-suite",
       "type": "story",
       "title": "validations/ suite → canonical schema + Rails fixtures",

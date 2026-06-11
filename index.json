@@ -1339,6 +1339,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/timestamp-test-cluster.md"
     },
     {
+      "id": "validations-association",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "validations/association-validation → canonical schema + Rails fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 200,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/validations-association.md"
+    },
+    {
       "id": "validations-suite",
       "rfc": "0019-canonical-schema-burndown",
       "title": "validations/ suite → canonical schema + Rails fixtures",
