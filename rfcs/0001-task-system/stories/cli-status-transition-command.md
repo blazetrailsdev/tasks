@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: add a draft → ready status-transition command"
-status: draft
+status: ready
 updated: 2026-06-11
 rfc: "0001-task-system"
 cluster: null

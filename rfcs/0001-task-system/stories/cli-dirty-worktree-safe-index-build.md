@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: make index build + auto-push safe against a dirty/divergent worktree"
-status: draft
+status: ready
 updated: 2026-06-11
 rfc: "0001-task-system"
 cluster: null

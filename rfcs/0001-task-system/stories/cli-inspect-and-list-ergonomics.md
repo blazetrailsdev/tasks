@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: add `show <id>` and richer `list` columns (priority, est-loc)"
-status: draft
+status: ready
 updated: 2026-06-11
 rfc: "0001-task-system"
 cluster: null
