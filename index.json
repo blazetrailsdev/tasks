@@ -2193,6 +2193,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/hmt-disable-joins-conversion.md"
     },
     {
+      "id": "inverse-associations-fixture-port",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "inverse-associations.test.ts → canonical Human/Face/Interest fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 8,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 400,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/inverse-associations-fixture-port.md"
+    },
+    {
       "id": "step4-delete-abstract-tosql",
       "rfc": "0018-ddl-visitor-convergence",
       "title": "Step 4 — Delete AbstractTableDefinition.toSql()",

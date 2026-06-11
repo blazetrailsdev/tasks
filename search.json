@@ -715,6 +715,12 @@
       "terms": "hmt-disable-joins-conversion has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "inverse-associations-fixture-port",
+      "type": "story",
+      "title": "inverse-associations.test.ts → canonical Human/Face/Interest fixtures",
+      "terms": "inverse-associations-fixture-port inverse-associations.test.ts → canonical human/face/interest fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "step4-delete-abstract-tosql",
       "type": "story",
       "title": "Step 4 — Delete AbstractTableDefinition.toSql()",
