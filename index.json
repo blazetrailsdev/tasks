@@ -4878,6 +4878,23 @@
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
     },
     {
+      "id": "sqlite3-adapter-subclasses-registry-removal",
+      "rfc": "0010-adapter-cleanup",
+      "title": "sqlite3-adapter-subclasses-registry-removal",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/sqlite3-adapter-subclasses-registry-removal.md"
+    },
+    {
       "id": "visitor-on-establish",
       "rfc": "0002-bootstrap-databasetasks",
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",

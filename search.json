@@ -1627,6 +1627,12 @@
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
     },
     {
+      "id": "sqlite3-adapter-subclasses-registry-removal",
+      "type": "story",
+      "title": "sqlite3-adapter-subclasses-registry-removal",
+      "terms": "sqlite3-adapter-subclasses-registry-removal sqlite3-adapter-subclasses-registry-removal 0010-adapter-cleanup context"
+    },
+    {
       "id": "visitor-on-establish",
       "type": "story",
       "title": "PR 0 — install Arel visitor on establishConnection (SUPERSEDED)",
