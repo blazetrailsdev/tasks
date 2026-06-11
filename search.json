@@ -457,6 +457,12 @@
       "terms": "validations-suite validations/ suite → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "validations-uniqueness",
+      "type": "story",
+      "title": "validations/uniqueness-validation → canonical schema + Rails fixtures",
+      "terms": "validations-uniqueness validations/uniqueness-validation → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "calculations-aggregations",
       "type": "story",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
