@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "id": "0000-relation-arel-ast-convergence",
+      "type": "rfc",
+      "title": "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)",
+      "terms": "0000-relation-arel-ast-convergence relation arel-ast convergence — replace string-based sql assembly with arel nodes (cte/unionall, set-ops, from) activerecord arel cte set-ops from verify rfc — relation arel-ast convergence"
+    },
+    {
       "id": "0000-singular-association-holder",
       "type": "rfc",
       "title": "Singular-association holder & _cachedAssociations deletion",
@@ -145,6 +151,18 @@
       "terms": "b1-singular-association-holder singular-association holder + writer/reader migration associations 0000-singular-association-holder context"
     },
     {
+      "id": "cte-build-with-expression-ast",
+      "type": "story",
+      "title": "CTE array values → Arel::Nodes::UnionAll AST (build_with_expression_from_value)",
+      "terms": "cte-build-with-expression-ast cte array values → arel::nodes::unionall ast (build_with_expression_from_value) cte 0000-relation-arel-ast-convergence context"
+    },
+    {
+      "id": "from-clause-arel-manager",
+      "type": "story",
+      "title": "from(): set FROM on the arel manager pre-compile (build_from), drop the regex rewrite",
+      "terms": "from-clause-arel-manager from(): set from on the arel manager pre-compile (build_from), drop the regex rewrite from 0000-relation-arel-ast-convergence context"
+    },
+    {
       "id": "p1-visitor-base-types",
       "type": "story",
       "title": "Phase 1 — Visitor base type strengthening",
@@ -175,6 +193,12 @@
       "terms": "s2-migrate-preloader-writes migrate preloader writes through the proxy associations 0006-collection-store-unification s2 — migrate preloader writes through the proxy"
     },
     {
+      "id": "set-operations-arel-nodes",
+      "type": "story",
+      "title": "Compose union/unionAll/intersect/except as Arel Union* nodes (drop string concat)",
+      "terms": "set-operations-arel-nodes compose union/unionall/intersect/except as arel union* nodes (drop string concat) set-ops 0000-relation-arel-ast-convergence context"
+    },
+    {
       "id": "b2-serialization-via-reader",
       "type": "story",
       "title": "Serialization include through the reader",
@@ -187,10 +211,28 @@
       "terms": "p2-to-sql-threading phase 2 — thread collector through to-sql.ts arel-collector-threading 0017-arel-collector-threading context"
     },
     {
+      "id": "pluck-from-cte-threading",
+      "type": "story",
+      "title": "pluck: thread from()/CTE through the manager (remove arel_table-only projection)",
+      "terms": "pluck-from-cte-threading pluck: thread from()/cte through the manager (remove arel_table-only projection) from 0000-relation-arel-ast-convergence context"
+    },
+    {
       "id": "s3-migrate-findtarget-reads",
       "type": "story",
       "title": "Migrate findTarget and instance-method reads through the proxy",
       "terms": "s3-migrate-findtarget-reads migrate findtarget and instance-method reads through the proxy associations 0006-collection-store-unification s3 — migrate findtarget and instance-method reads through the proxy"
+    },
+    {
+      "id": "set-operations-bind-threading",
+      "type": "story",
+      "title": "Set-ops: thread binds through the collector; drop the $N regex renumber",
+      "terms": "set-operations-bind-threading set-ops: thread binds through the collector; drop the $n regex renumber set-ops 0000-relation-arel-ast-convergence context"
+    },
+    {
+      "id": "arel-ast-convergence-verify",
+      "type": "story",
+      "title": "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0",
+      "terms": "arel-ast-convergence-verify verify arel-ast convergence: test:compare / api:compare deltas ≥ 0 verify 0000-relation-arel-ast-convergence context"
     },
     {
       "id": "b3-migrate-singular-readers",

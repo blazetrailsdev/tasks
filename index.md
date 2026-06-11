@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-relation-arel-ast-convergence](rfcs/0000-relation-arel-ast-convergence/README.md) | Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM) | draft | @deanmarano | activerecord, arel |
 | [0000-singular-association-holder](rfcs/0000-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | draft | @deanmarano | activerecord, activemodel |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
