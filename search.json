@@ -445,6 +445,12 @@
       "terms": "validations-association validations/association-validation → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "validations-core",
+      "type": "story",
+      "title": "validations_test.rb (validations.test.ts) → canonical Topic/Person + fixtures",
+      "terms": "validations-core validations_test.rb (validations.test.ts) → canonical topic/person + fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "validations-numericality",
       "type": "story",
       "title": "validations/numericality-validation → NumericData canonical model + fixtures",

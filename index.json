@@ -1356,6 +1356,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/validations-association.md"
     },
     {
+      "id": "validations-core",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "validations_test.rb (validations.test.ts) → canonical Topic/Person + fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 6,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/validations-core.md"
+    },
+    {
       "id": "validations-numericality",
       "rfc": "0019-canonical-schema-burndown",
       "title": "validations/numericality-validation → NumericData canonical model + fixtures",
