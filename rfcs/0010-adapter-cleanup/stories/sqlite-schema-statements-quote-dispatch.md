@@ -1,6 +1,6 @@
 ---
 title: "SQLite schema-statements: dispatch quoting through the adapter instance"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
