@@ -827,18 +827,18 @@
       "id": "s5-unskip-dedup-tests",
       "rfc": "0006-collection-store-unification",
       "title": "Unskip inverse-dedup tests gated on the removed seam",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "associations",
       "priority": 4,
-      "updated": "2026-05-29T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
       "deps": [
         "s4-delete-cached-associations"
       ],
       "deps_rfc": [],
       "est_loc": 80,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-11T01:57:13Z",
+      "assignee": "s5-unskip-dedup-tests",
       "blocked_by": null,
       "file_path": "rfcs/0006-collection-store-unification/stories/s5-unskip-dedup-tests.md"
     },
