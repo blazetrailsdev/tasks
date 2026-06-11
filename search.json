@@ -319,6 +319,12 @@
       "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
     },
     {
+      "id": "relocate-datetime-serializers-from-quoting",
+      "type": "story",
+      "title": "Relocate SQL date/time serializers (and residual PG range/int helpers) out of quoting.ts",
+      "terms": "relocate-datetime-serializers-from-quoting relocate sql date/time serializers (and residual pg range/int helpers) out of quoting.ts adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "relocate-non-quoting-helpers-from-quoting",
       "type": "story",
       "title": "Relocate non-quoting helpers out of the quoting.ts modules",

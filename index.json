@@ -983,6 +983,23 @@
       "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
     },
     {
+      "id": "relocate-datetime-serializers-from-quoting",
+      "rfc": "0010-adapter-cleanup",
+      "title": "Relocate SQL date/time serializers (and residual PG range/int helpers) out of quoting.ts",
+      "status": "draft",
+      "cluster": "adapter-cleanup",
+      "priority": 5,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/relocate-datetime-serializers-from-quoting.md"
+    },
+    {
       "id": "relocate-non-quoting-helpers-from-quoting",
       "rfc": "0010-adapter-cleanup",
       "title": "Relocate non-quoting helpers out of the quoting.ts modules",
