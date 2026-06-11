@@ -181,6 +181,12 @@
       "terms": "partial-inserts-load-defaults establish config.load_defaults + land partial_inserts as the 7.0 entry config-defaults 0020-load-defaults-config context"
     },
     {
+      "id": "pg-referential-integrity-quote-dispatch",
+      "type": "story",
+      "title": "pg-referential-integrity-quote-dispatch",
+      "terms": "pg-referential-integrity-quote-dispatch pg-referential-integrity-quote-dispatch 0010-adapter-cleanup context"
+    },
+    {
       "id": "phase1-dirty-on-any-query",
       "type": "story",
       "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
@@ -1565,12 +1571,6 @@
       "type": "story",
       "title": "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)",
       "terms": "p3-pg-enum-orm-and-schema p3 — pg enum orm + schema-dump/load scoped to schemas (5 skips) 0016-ar-test-compare-100 context"
-    },
-    {
-      "id": "pg-referential-integrity-quote-dispatch",
-      "type": "story",
-      "title": "pg-referential-integrity-quote-dispatch",
-      "terms": "pg-referential-integrity-quote-dispatch pg-referential-integrity-quote-dispatch 0010-adapter-cleanup context"
     },
     {
       "id": "phase1-pg-template",

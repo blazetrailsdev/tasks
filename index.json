@@ -558,6 +558,23 @@
       "file_path": "rfcs/0020-load-defaults-config/stories/partial-inserts-load-defaults.md"
     },
     {
+      "id": "pg-referential-integrity-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "pg-referential-integrity-quote-dispatch",
+      "status": "draft",
+      "cluster": null,
+      "priority": 1,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/pg-referential-integrity-quote-dispatch.md"
+    },
+    {
       "id": "phase1-dirty-on-any-query",
       "rfc": "0021-mysql-rawconn-convergence",
       "title": "Phase 1 — mysql2 dirties the current transaction on any materialized query",
@@ -4690,23 +4707,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0016-ar-test-compare-100/stories/p3-pg-enum-orm-and-schema.md"
-    },
-    {
-      "id": "pg-referential-integrity-quote-dispatch",
-      "rfc": "0010-adapter-cleanup",
-      "title": "pg-referential-integrity-quote-dispatch",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/pg-referential-integrity-quote-dispatch.md"
     },
     {
       "id": "phase1-pg-template",
