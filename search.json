@@ -1171,6 +1171,12 @@
       "terms": "assoc-extension-canonical extension.test.ts → canonical schema (posts-collision) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-join-model-canonical",
+      "type": "story",
+      "title": "join-model.test.ts → canonical schema (split)",
+      "terms": "assoc-join-model-canonical join-model.test.ts → canonical schema (split) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-left-outer-join-canonical",
       "type": "story",
       "title": "left-outer-join-association.test.ts → canonical schema",
