@@ -2,7 +2,7 @@
 title: "Migrate counter-cache / validation / autosave / persistence readers"
 status: draft
 updated: 2026-06-10
-rfc: "0000-singular-association-holder"
+rfc: "0022-singular-association-holder"
 cluster: associations
 deps: ["b1-singular-association-holder"]
 deps-rfc: []

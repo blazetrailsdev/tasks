@@ -84,7 +84,7 @@ is the only store; inverse wiring and preloading both write to it directly.
   **Update (2026-06-10):** S1–S3 shipped and S4 chose to **stop at (A)** — the
   cost of (B) (a singular holder + serialization moved onto the reader + ~150
   test-poke migrations across 13 files) exceeds one PR. The (B) convergence is
-  now its own RFC, `0000-singular-association-holder` (stories b1–b5), which
+  now its own RFC, `0022-singular-association-holder` (stories b1–b5), which
   supersedes this RFC's (B) sketch and the original S4 "delete entirely" goal.
   This RFC stays `active` for its one remaining piece — the optional S5 (unskip
   inverse-dedup tests); all (B) convergence work tracks under the new RFC.
