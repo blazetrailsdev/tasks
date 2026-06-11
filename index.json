@@ -1424,6 +1424,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/validations-uniqueness.md"
     },
     {
+      "id": "aggregations-remaining-describes",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "aggregations.test.ts — retire remaining non-Rails describes + drop exclude",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "calculations-aggregations"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/aggregations-remaining-describes.md"
+    },
+    {
       "id": "calculations-aggregations",
       "rfc": "0019-canonical-schema-burndown",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
@@ -1441,6 +1460,25 @@
       "assignee": "calculations-aggregations",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-aggregations.md"
+    },
+    {
+      "id": "calculations-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "calculations.test.ts → canonical schema + Rails fixtures (per-describe series)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 500,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-test-canonical.md"
     },
     {
       "id": "callbacks-transactions-cluster",
@@ -2954,23 +2992,6 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/af5-eager-load-raise-semantics.md"
     },
     {
-      "id": "aggregations-remaining-describes",
-      "rfc": "0019-canonical-schema-burndown",
-      "title": "aggregations-remaining-describes",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0019-canonical-schema-burndown/stories/aggregations-remaining-describes.md"
-    },
-    {
       "id": "b-drop-global-sync-sites",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase B — drop AR's global-visitor sync sites",
@@ -3024,23 +3045,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/c-collapse-into-bootstrap.md"
-    },
-    {
-      "id": "calculations-test-canonical",
-      "rfc": "0019-canonical-schema-burndown",
-      "title": "calculations-test-canonical",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-test-canonical.md"
     },
     {
       "id": "ci-examples-job",

@@ -469,10 +469,22 @@
       "terms": "validations-uniqueness validations/uniqueness-validation → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "aggregations-remaining-describes",
+      "type": "story",
+      "title": "aggregations.test.ts — retire remaining non-Rails describes + drop exclude",
+      "terms": "aggregations-remaining-describes aggregations.test.ts — retire remaining non-rails describes + drop exclude fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "calculations-aggregations",
       "type": "story",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
       "terms": "calculations-aggregations calculations + aggregations → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
+      "id": "calculations-test-canonical",
+      "type": "story",
+      "title": "calculations.test.ts → canonical schema + Rails fixtures (per-describe series)",
+      "terms": "calculations-test-canonical calculations.test.ts → canonical schema + rails fixtures (per-describe series) fixtures 0019-canonical-schema-burndown context"
     },
     {
       "id": "callbacks-transactions-cluster",
@@ -991,12 +1003,6 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
-      "id": "aggregations-remaining-describes",
-      "type": "story",
-      "title": "aggregations-remaining-describes",
-      "terms": "aggregations-remaining-describes aggregations-remaining-describes 0019-canonical-schema-burndown context"
-    },
-    {
       "id": "b-drop-global-sync-sites",
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",
@@ -1013,12 +1019,6 @@
       "type": "story",
       "title": "Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)",
       "terms": "c-collapse-into-bootstrap phase c — delete synchandlervisitor / beforeeach (folds into rfc 0002) arel-visitor 0007-remove-global-arel-visitor context"
-    },
-    {
-      "id": "calculations-test-canonical",
-      "type": "story",
-      "title": "calculations-test-canonical",
-      "terms": "calculations-test-canonical calculations-test-canonical 0019-canonical-schema-burndown context"
     },
     {
       "id": "ci-examples-job",
