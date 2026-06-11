@@ -637,6 +637,12 @@
       "terms": "transactions-test-canonical transactions.test.ts → canonical schema (split per-describe) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-autosave",
+      "type": "story",
+      "title": "Port autosave-association.test.ts to canonical schema",
+      "terms": "assoc-autosave port autosave-association.test.ts to canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-belongs-to",
       "type": "story",
       "title": "Port belongs-to-associations.test.ts to canonical schema",
