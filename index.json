@@ -799,6 +799,23 @@
       "file_path": "rfcs/0022-singular-association-holder/stories/b3-migrate-singular-readers.md"
     },
     {
+      "id": "mysql-schema-modules-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "mysql-schema-modules-quote-dispatch",
+      "status": "draft",
+      "cluster": null,
+      "priority": 3,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/mysql-schema-modules-quote-dispatch.md"
+    },
+    {
       "id": "p3-subclass-threading",
       "rfc": "0017-arel-collector-threading",
       "title": "Phase 3 — Thread collector through subclasses",
@@ -4622,23 +4639,6 @@
       "assignee": "models-dump-composite-fk-roundtrip",
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/models-dump-composite-fk-roundtrip.md"
-    },
-    {
-      "id": "mysql-schema-modules-quote-dispatch",
-      "rfc": "0010-adapter-cleanup",
-      "title": "mysql-schema-modules-quote-dispatch",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/mysql-schema-modules-quote-dispatch.md"
     },
     {
       "id": "named-scoping-suite",
