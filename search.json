@@ -991,6 +991,12 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
+      "id": "aggregations-remaining-describes",
+      "type": "story",
+      "title": "aggregations-remaining-describes",
+      "terms": "aggregations-remaining-describes aggregations-remaining-describes 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "b-drop-global-sync-sites",
       "type": "story",
       "title": "Phase B — drop AR's global-visitor sync sites",

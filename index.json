@@ -2954,6 +2954,23 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/af5-eager-load-raise-semantics.md"
     },
     {
+      "id": "aggregations-remaining-describes",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "aggregations-remaining-describes",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/aggregations-remaining-describes.md"
+    },
+    {
       "id": "b-drop-global-sync-sites",
       "rfc": "0007-remove-global-arel-visitor",
       "title": "Phase B — drop AR's global-visitor sync sites",
