@@ -1,6 +1,6 @@
 ---
 title: "Abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup

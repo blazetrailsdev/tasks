@@ -857,7 +857,7 @@
       "id": "abstract-schema-layer-quote-dispatch",
       "rfc": "0010-adapter-cleanup",
       "title": "Abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter-cleanup",
       "priority": 4,
       "updated": "2026-06-11T00:00:00.000Z",
