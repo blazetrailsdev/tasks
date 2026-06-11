@@ -1329,14 +1329,14 @@
     {
       "id": "cli-authoring-ergonomics",
       "type": "story",
-      "title": "cli-authoring-ergonomics",
-      "terms": "cli-authoring-ergonomics cli-authoring-ergonomics 0001-task-system context"
+      "title": "tasks CLI: authoring ergonomics — new --status/--body-file, standalone reindex + fmt",
+      "terms": "cli-authoring-ergonomics tasks cli: authoring ergonomics — new --status/--body-file, standalone reindex + fmt 0001-task-system context"
     },
     {
       "id": "cli-dirty-worktree-safe-index-build",
       "type": "story",
-      "title": "cli-dirty-worktree-safe-index-build",
-      "terms": "cli-dirty-worktree-safe-index-build cli-dirty-worktree-safe-index-build 0001-task-system context"
+      "title": "tasks CLI: make index build + auto-push safe against a dirty/divergent worktree",
+      "terms": "cli-dirty-worktree-safe-index-build tasks cli: make index build + auto-push safe against a dirty/divergent worktree 0001-task-system context"
     },
     {
       "id": "cli-generators-manifest",
@@ -1347,8 +1347,8 @@
     {
       "id": "cli-inspect-and-list-ergonomics",
       "type": "story",
-      "title": "cli-inspect-and-list-ergonomics",
-      "terms": "cli-inspect-and-list-ergonomics cli-inspect-and-list-ergonomics 0001-task-system context"
+      "title": "tasks CLI: add `show <id>` and richer `list` columns (priority, est-loc)",
+      "terms": "cli-inspect-and-list-ergonomics tasks cli: add `show <id>` and richer `list` columns (priority, est-loc) 0001-task-system context"
     },
     {
       "id": "cli-package-scaffold",
@@ -1359,8 +1359,8 @@
     {
       "id": "cli-status-transition-command",
       "type": "story",
-      "title": "cli-status-transition-command",
-      "terms": "cli-status-transition-command cli-status-transition-command 0001-task-system context"
+      "title": "tasks CLI: add a draft → ready status-transition command",
+      "terms": "cli-status-transition-command tasks cli: add a draft → ready status-transition command 0001-task-system context"
     },
     {
       "id": "convert-bootstrap-rfc",
