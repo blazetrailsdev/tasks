@@ -649,6 +649,12 @@
       "terms": "assoc-collection-proxy port collection-proxy.test.ts to canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-has-one",
+      "type": "story",
+      "title": "Port has-one-associations.test.ts to canonical schema",
+      "terms": "assoc-has-one port has-one-associations.test.ts to canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "associations-collection-cluster",
       "type": "story",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
