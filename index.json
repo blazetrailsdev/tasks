@@ -2354,7 +2354,7 @@
       "id": "encryption-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "encryption/ suite → canonical schema + Rails fixtures",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 9,
       "updated": "2026-06-11T00:00:00.000Z",
