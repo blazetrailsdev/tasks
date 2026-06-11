@@ -854,6 +854,23 @@
       "file_path": "rfcs/0006-collection-store-unification/stories/s4-delete-cached-associations.md"
     },
     {
+      "id": "abstract-schema-layer-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "Abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters",
+      "status": "ready",
+      "cluster": "adapter-cleanup",
+      "priority": 4,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/abstract-schema-layer-quote-dispatch.md"
+    },
+    {
       "id": "b4-delete-cached-associations",
       "rfc": "0022-singular-association-holder",
       "title": "Delete _cachedAssociations + migrate test pokes",
@@ -966,21 +983,21 @@
       "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
     },
     {
-      "id": "collapse-identical-quoting-overrides",
+      "id": "relocate-non-quoting-helpers-from-quoting",
       "rfc": "0010-adapter-cleanup",
-      "title": "Collapse abstract-identical quoting overrides to inherit from the base",
+      "title": "Relocate non-quoting helpers out of the quoting.ts modules",
       "status": "ready",
       "cluster": "adapter-cleanup",
       "priority": 5,
       "updated": "2026-06-11T00:00:00.000Z",
       "deps": [],
       "deps_rfc": [],
-      "est_loc": 150,
+      "est_loc": 200,
       "pr": null,
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
+      "file_path": "rfcs/0010-adapter-cleanup/stories/relocate-non-quoting-helpers-from-quoting.md"
     },
     {
       "id": "step1-delete-dead-mysql-branches",
@@ -1036,6 +1053,23 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/attributes-test-cluster.md"
+    },
+    {
+      "id": "collapse-identical-quoting-overrides",
+      "rfc": "0010-adapter-cleanup",
+      "title": "Collapse abstract-identical quoting overrides to inherit from the base",
+      "status": "ready",
+      "cluster": "adapter-cleanup",
+      "priority": 6,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 150,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
     },
     {
       "id": "date-test-mysql-native",
@@ -3688,23 +3722,6 @@
       "file_path": "rfcs/0007-remove-global-arel-visitor/stories/a3-calculations-statement-cache-insert.md"
     },
     {
-      "id": "abstract-schema-layer-quote-dispatch",
-      "rfc": "0010-adapter-cleanup",
-      "title": "abstract-schema-layer-quote-dispatch",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/abstract-schema-layer-quote-dispatch.md"
-    },
-    {
       "id": "adapter-hash-only-constructor",
       "rfc": "0010-adapter-cleanup",
       "title": "Adapter hash-only constructor (Initiative 3)",
@@ -5116,23 +5133,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/relation-scoping-suite.md"
-    },
-    {
-      "id": "relocate-non-quoting-helpers-from-quoting",
-      "rfc": "0010-adapter-cleanup",
-      "title": "relocate-non-quoting-helpers-from-quoting",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/relocate-non-quoting-helpers-from-quoting.md"
     },
     {
       "id": "relocate-tsc-wrapper",

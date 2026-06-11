@@ -277,6 +277,12 @@
       "terms": "s4-delete-cached-associations delete _cachedassociations and resolve singular-association cache associations 0006-collection-store-unification s4 — delete \\_cachedassociations and resolve singular-association cache"
     },
     {
+      "id": "abstract-schema-layer-quote-dispatch",
+      "type": "story",
+      "title": "Abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters",
+      "terms": "abstract-schema-layer-quote-dispatch abstract schema layer: dispatch quoting through the adapter, tighten fallback quoters adapter-cleanup 0010-adapter-cleanup context"
+    },
+    {
       "id": "b4-delete-cached-associations",
       "type": "story",
       "title": "Delete _cachedAssociations + migrate test pokes",
@@ -313,10 +319,10 @@
       "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
     },
     {
-      "id": "collapse-identical-quoting-overrides",
+      "id": "relocate-non-quoting-helpers-from-quoting",
       "type": "story",
-      "title": "Collapse abstract-identical quoting overrides to inherit from the base",
-      "terms": "collapse-identical-quoting-overrides collapse abstract-identical quoting overrides to inherit from the base adapter-cleanup 0010-adapter-cleanup context"
+      "title": "Relocate non-quoting helpers out of the quoting.ts modules",
+      "terms": "relocate-non-quoting-helpers-from-quoting relocate non-quoting helpers out of the quoting.ts modules adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "step1-delete-dead-mysql-branches",
@@ -335,6 +341,12 @@
       "type": "story",
       "title": "attributes.test.ts → attributes_test.rb canonical schema port",
       "terms": "attributes-test-cluster attributes.test.ts → attributes_test.rb canonical schema port fixtures 0019-canonical-schema-burndown context"
+    },
+    {
+      "id": "collapse-identical-quoting-overrides",
+      "type": "story",
+      "title": "Collapse abstract-identical quoting overrides to inherit from the base",
+      "terms": "collapse-identical-quoting-overrides collapse abstract-identical quoting overrides to inherit from the base adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "date-test-mysql-native",
@@ -1231,12 +1243,6 @@
       "terms": "a3-calculations-statement-cache-insert phase a3 — route calculations / statement-cache / insert-all through connection.tosql arel-visitor 0007-remove-global-arel-visitor context"
     },
     {
-      "id": "abstract-schema-layer-quote-dispatch",
-      "type": "story",
-      "title": "abstract-schema-layer-quote-dispatch",
-      "terms": "abstract-schema-layer-quote-dispatch abstract-schema-layer-quote-dispatch 0010-adapter-cleanup context"
-    },
-    {
       "id": "adapter-hash-only-constructor",
       "type": "story",
       "title": "Adapter hash-only constructor (Initiative 3)",
@@ -1709,12 +1715,6 @@
       "type": "story",
       "title": "relation-scoping/ → canonical schema + Rails fixtures",
       "terms": "relation-scoping-suite relation-scoping/ → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
-    },
-    {
-      "id": "relocate-non-quoting-helpers-from-quoting",
-      "type": "story",
-      "title": "relocate-non-quoting-helpers-from-quoting",
-      "terms": "relocate-non-quoting-helpers-from-quoting relocate-non-quoting-helpers-from-quoting 0010-adapter-cleanup context"
     },
     {
       "id": "relocate-tsc-wrapper",
