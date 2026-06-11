@@ -1,6 +1,6 @@
 ---
 title: "PG referential-integrity SQL: dispatch quoting through the adapter instance"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 80
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T18:24:05Z"
+assignee: "pg-referential-integrity-quote-dispatch"
 blocked-by: null
 priority: 1
 ---
