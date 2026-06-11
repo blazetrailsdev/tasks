@@ -1675,6 +1675,12 @@
       "terms": "repoint-references repoint trails readme/claude ar-doc links decommission 0011-activerecord-docs-cutover context"
     },
     {
+      "id": "require-table-teardown-ratchet-burndown",
+      "type": "story",
+      "title": "Burn down require-table-teardown exclude baseline (18 files)",
+      "terms": "require-table-teardown-ratchet-burndown burn down require-table-teardown exclude baseline (18 files) 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "rf1-fk-derivation-consolidation",
       "type": "story",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",

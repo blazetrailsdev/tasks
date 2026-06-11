@@ -5020,6 +5020,23 @@
       "file_path": "rfcs/0011-activerecord-docs-cutover/stories/repoint-references.md"
     },
     {
+      "id": "require-table-teardown-ratchet-burndown",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Burn down require-table-teardown exclude baseline (18 files)",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/require-table-teardown-ratchet-burndown.md"
+    },
+    {
       "id": "rf1-fk-derivation-consolidation",
       "rfc": "0005-activerecord-gaps",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
