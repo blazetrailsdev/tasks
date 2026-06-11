@@ -1634,7 +1634,7 @@
       "id": "callbacks-transactions-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "callbacks / transactions / locking → canonical schema + Rails fixtures",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 7,
       "updated": "2026-06-11T00:00:00.000Z",
