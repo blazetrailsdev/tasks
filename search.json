@@ -1159,6 +1159,12 @@
       "terms": "af5-eager-load-raise-semantics af5 — distinguish raise-worthy eager_load errors from capability-gap fallbacks associations 0005-activerecord-gaps context"
     },
     {
+      "id": "assoc-cascaded-eager-canonical",
+      "type": "story",
+      "title": "cascaded-eager-loading.test.ts → canonical schema",
+      "terms": "assoc-cascaded-eager-canonical cascaded-eager-loading.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-left-outer-join-canonical",
       "type": "story",
       "title": "left-outer-join-association.test.ts → canonical schema",
