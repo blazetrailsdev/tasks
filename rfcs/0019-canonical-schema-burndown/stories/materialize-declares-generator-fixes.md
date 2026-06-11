@@ -1,7 +1,7 @@
 ---
 title: "Materialize model declares: virtualizer/walker gap fixes (post/author/comment)"
-status: ready
-updated: 2026-06-10
+status: draft
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
