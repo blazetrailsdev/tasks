@@ -15,6 +15,15 @@ blocked-by: null
 
 # S4 — Delete \_cachedAssociations and resolve singular-association cache
 
+> **Superseded (2026-06-11).** Scoping this story surfaced that full Option B
+> (singular holder + serialization-via-reader + ~150 test-poke migrations across
+> 13 files) far exceeds one PR, and that `_cachedAssociations` is also overloaded
+> as a generic serialization include-bag with no Rails counterpart. The Option B
+> convergence was therefore lifted into its own RFC,
+> **`0022-singular-association-holder`** (stories b1–b5; PR #15 = the RFC, PR #16 =
+> finalize). The already-shipped Option A intermediate (S1–S3) stands. This story
+> is marked `done` as superseded — `pr: 15` points at the RFC PR, not shipped code.
+
 ## Goal
 
 Remove the `_cachedAssociations` map now that has_many no longer uses it, and
