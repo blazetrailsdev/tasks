@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-surfaced-deviations",
-      "type": "rfc",
-      "title": "Surfaced deviations & follow-ups — standing backlog for port-discovered work",
-      "terms": "0000-surfaced-deviations surfaced deviations & follow-ups — standing backlog for port-discovered work rails-deviation followup rfc — surfaced deviations & follow-ups"
-    },
-    {
       "id": "0001-task-system",
       "type": "rfc",
       "title": "Task system (RFCs + story files + fast index)",
@@ -143,6 +137,12 @@
       "type": "rfc",
       "title": "Singular-association holder & _cachedAssociations deletion",
       "terms": "0022-singular-association-holder singular-association holder & _cachedassociations deletion activerecord activemodel associations rfc 0022 — singular-association holder & `_cachedassociations` deletion"
+    },
+    {
+      "id": "0023-surfaced-deviations",
+      "type": "rfc",
+      "title": "Surfaced deviations & follow-ups — standing backlog for port-discovered work",
+      "terms": "0023-surfaced-deviations surfaced deviations & follow-ups — standing backlog for port-discovered work rails-deviation followup rfc 0023 — surfaced deviations & follow-ups"
     },
     {
       "id": "s1-proxy-backed-read-api",

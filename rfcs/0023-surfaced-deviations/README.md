@@ -1,5 +1,5 @@
 ---
-rfc: "0000-surfaced-deviations"
+rfc: "0023-surfaced-deviations"
 title: "Surfaced deviations & follow-ups — standing backlog for port-discovered work"
 status: active
 created: 2026-06-11
@@ -14,10 +14,10 @@ related-rfcs:
   - "0015-ar-framework-gaps"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-surfaced-deviations and the H1
+<!-- Unnumbered until merge: keep `rfc:` as 0023-surfaced-deviations and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC — Surfaced deviations & follow-ups
+# RFC 0023 — Surfaced deviations & follow-ups
 
 ## Summary
 
