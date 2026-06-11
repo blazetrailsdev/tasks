@@ -183,8 +183,8 @@
     {
       "id": "pg-referential-integrity-quote-dispatch",
       "type": "story",
-      "title": "pg-referential-integrity-quote-dispatch",
-      "terms": "pg-referential-integrity-quote-dispatch pg-referential-integrity-quote-dispatch 0010-adapter-cleanup context"
+      "title": "PG referential-integrity SQL: dispatch quoting through the adapter instance",
+      "terms": "pg-referential-integrity-quote-dispatch pg referential-integrity sql: dispatch quoting through the adapter instance adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "phase1-dirty-on-any-query",
@@ -243,8 +243,8 @@
     {
       "id": "sqlite-schema-statements-quote-dispatch",
       "type": "story",
-      "title": "sqlite-schema-statements-quote-dispatch",
-      "terms": "sqlite-schema-statements-quote-dispatch sqlite-schema-statements-quote-dispatch 0010-adapter-cleanup context"
+      "title": "SQLite schema-statements: dispatch quoting through the adapter instance",
+      "terms": "sqlite-schema-statements-quote-dispatch sqlite schema-statements: dispatch quoting through the adapter instance adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "arel-ast-convergence-verify",
@@ -261,8 +261,8 @@
     {
       "id": "mysql-schema-modules-quote-dispatch",
       "type": "story",
-      "title": "mysql-schema-modules-quote-dispatch",
-      "terms": "mysql-schema-modules-quote-dispatch mysql-schema-modules-quote-dispatch 0010-adapter-cleanup context"
+      "title": "MySQL schema modules: dispatch quoting through the adapter instance",
+      "terms": "mysql-schema-modules-quote-dispatch mysql schema modules: dispatch quoting through the adapter instance adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "p3-subclass-threading",
@@ -297,8 +297,8 @@
     {
       "id": "sanitize-sql-array-adapter-threading",
       "type": "story",
-      "title": "sanitize-sql-array-adapter-threading",
-      "terms": "sanitize-sql-array-adapter-threading sanitize-sql-array-adapter-threading 0010-adapter-cleanup context"
+      "title": "sanitizeSqlArray: thread the adapter quoter, drop the ABSTRACT_QUOTER fallback",
+      "terms": "sanitize-sql-array-adapter-threading sanitizesqlarray: thread the adapter quoter, drop the abstract_quoter fallback adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "b5-converge-association-cache",
@@ -315,8 +315,8 @@
     {
       "id": "collapse-identical-quoting-overrides",
       "type": "story",
-      "title": "collapse-identical-quoting-overrides",
-      "terms": "collapse-identical-quoting-overrides collapse-identical-quoting-overrides 0010-adapter-cleanup context"
+      "title": "Collapse abstract-identical quoting overrides to inherit from the base",
+      "terms": "collapse-identical-quoting-overrides collapse abstract-identical quoting overrides to inherit from the base adapter-cleanup 0010-adapter-cleanup context"
     },
     {
       "id": "step1-delete-dead-mysql-branches",
