@@ -1760,6 +1760,23 @@
       "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step3-pg-tosql-via-visitor.md"
     },
     {
+      "id": "suppressor-canonical-schema",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "suppressor.test.ts → canonical Notification/User (needs save-suppression impl fix)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/suppressor-canonical-schema.md"
+    },
+    {
       "id": "touch-later-test-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "touch-later.test.ts → canonical Topic/Owner/Pet + fixtures",

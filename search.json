@@ -577,6 +577,12 @@
       "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
+      "id": "suppressor-canonical-schema",
+      "type": "story",
+      "title": "suppressor.test.ts → canonical Notification/User (needs save-suppression impl fix)",
+      "terms": "suppressor-canonical-schema suppressor.test.ts → canonical notification/user (needs save-suppression impl fix) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "touch-later-test-canonical",
       "type": "story",
       "title": "touch-later.test.ts → canonical Topic/Owner/Pet + fixtures",
