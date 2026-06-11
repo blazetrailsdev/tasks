@@ -1,7 +1,7 @@
 ---
 title: "encryption/ suite → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-09
+status: claimed
+updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T12:55:21Z"
+assignee: "encryption-cluster"
 blocked-by: null
 ---
 
