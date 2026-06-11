@@ -2174,6 +2174,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-through-nested-cluster.md"
     },
     {
+      "id": "bidirectional-destroy-dependent-cycle-guard",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "bidirectional-destroy-dependencies → canonical fixtures (needs dependent-destroy cycle guard)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 8,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 120,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/bidirectional-destroy-dependent-cycle-guard.md"
+    },
+    {
       "id": "hmt-disable-joins-conversion",
       "rfc": "0019-canonical-schema-burndown",
       "title": "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures",

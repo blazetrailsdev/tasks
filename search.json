@@ -709,6 +709,12 @@
       "terms": "associations-through-nested-cluster through / nested-through associations → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "bidirectional-destroy-dependent-cycle-guard",
+      "type": "story",
+      "title": "bidirectional-destroy-dependencies → canonical fixtures (needs dependent-destroy cycle guard)",
+      "terms": "bidirectional-destroy-dependent-cycle-guard bidirectional-destroy-dependencies → canonical fixtures (needs dependent-destroy cycle guard) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "hmt-disable-joins-conversion",
       "type": "story",
       "title": "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures",
