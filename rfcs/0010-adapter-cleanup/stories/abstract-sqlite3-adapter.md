@@ -1,6 +1,6 @@
 ---
 title: "Rails-fy SQLite driver abstraction: AbstractSqlite3Adapter + per-lib subclasses"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 10
-pr: null
+pr: 3120
 claim: "2026-06-11T13:05:21Z"
 assignee: "abstract-sqlite3-adapter"
 blocked-by: null
