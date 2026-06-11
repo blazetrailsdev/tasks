@@ -2139,18 +2139,18 @@
       "id": "associations-scope-cache-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "association-scope / inverse / assoc-callbacks → canonical schema + fixtures",
-      "status": "ready",
+      "status": "claimed",
       "cluster": "fixtures",
       "priority": 8,
-      "updated": "2026-06-09T00:00:00.000Z",
+      "updated": "2026-06-11T00:00:00.000Z",
       "deps": [
         "shared-table-convergence"
       ],
       "deps_rfc": [],
       "est_loc": 450,
       "pr": null,
-      "claim": null,
-      "assignee": null,
+      "claim": "2026-06-11T12:35:21Z",
+      "assignee": "associations-scope-cache-cluster",
       "blocked_by": null,
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/associations-scope-cache-cluster.md"
     },
