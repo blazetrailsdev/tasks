@@ -1771,12 +1771,6 @@
       "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
     },
     {
-      "id": "sanitize-sql-blank-guard-alias",
-      "type": "story",
-      "title": "sanitize-sql-blank-guard-alias",
-      "terms": "sanitize-sql-blank-guard-alias sanitize-sql-blank-guard-alias 0010-adapter-cleanup context"
-    },
-    {
       "id": "scaffold-tooling",
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
