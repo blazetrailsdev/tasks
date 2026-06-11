@@ -1165,6 +1165,12 @@
       "terms": "assoc-cascaded-eager-canonical cascaded-eager-loading.test.ts → canonical schema fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-eager-split-canonical",
+      "type": "story",
+      "title": "eager.test.ts → canonical schema (multi-PR split)",
+      "terms": "assoc-eager-split-canonical eager.test.ts → canonical schema (multi-pr split) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-extension-canonical",
       "type": "story",
       "title": "extension.test.ts → canonical schema (posts-collision)",
