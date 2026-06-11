@@ -1,6 +1,6 @@
 ---
 title: "from(): set FROM on the arel manager pre-compile (build_from), drop the regex rewrite"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0022-relation-arel-ast-convergence"
 cluster: from
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T21:26:58Z"
+assignee: "from-clause-arel-manager"
 blocked-by: null
 ---
 
