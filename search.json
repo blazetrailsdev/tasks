@@ -241,6 +241,12 @@
       "terms": "set-operations-bind-threading set-ops: thread binds through the collector; drop the $n regex renumber set-ops 0022-relation-arel-ast-convergence context"
     },
     {
+      "id": "sqlite-schema-statements-quote-dispatch",
+      "type": "story",
+      "title": "sqlite-schema-statements-quote-dispatch",
+      "terms": "sqlite-schema-statements-quote-dispatch sqlite-schema-statements-quote-dispatch 0010-adapter-cleanup context"
+    },
+    {
       "id": "arel-ast-convergence-verify",
       "type": "story",
       "title": "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0",
@@ -1721,12 +1727,6 @@
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
       "terms": "scaffold-tooling scaffold rfcs repo, scripts/tasks/, and the rfcs cli scaffold 0001-task-system context"
-    },
-    {
-      "id": "sqlite-schema-statements-quote-dispatch",
-      "type": "story",
-      "title": "sqlite-schema-statements-quote-dispatch",
-      "terms": "sqlite-schema-statements-quote-dispatch sqlite-schema-statements-quote-dispatch 0010-adapter-cleanup context"
     },
     {
       "id": "visitor-on-establish",

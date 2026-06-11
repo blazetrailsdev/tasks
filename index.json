@@ -742,6 +742,23 @@
       "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/set-operations-bind-threading.md"
     },
     {
+      "id": "sqlite-schema-statements-quote-dispatch",
+      "rfc": "0010-adapter-cleanup",
+      "title": "sqlite-schema-statements-quote-dispatch",
+      "status": "draft",
+      "cluster": null,
+      "priority": 2,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/sqlite-schema-statements-quote-dispatch.md"
+    },
+    {
       "id": "arel-ast-convergence-verify",
       "rfc": "0022-relation-arel-ast-convergence",
       "title": "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0",
@@ -5154,23 +5171,6 @@
       "assignee": "scaffold-tooling",
       "blocked_by": null,
       "file_path": "rfcs/0001-task-system/stories/scaffold-tooling.md"
-    },
-    {
-      "id": "sqlite-schema-statements-quote-dispatch",
-      "rfc": "0010-adapter-cleanup",
-      "title": "sqlite-schema-statements-quote-dispatch",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/sqlite-schema-statements-quote-dispatch.md"
     },
     {
       "id": "visitor-on-establish",
