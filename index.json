@@ -1481,6 +1481,25 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/calculations-test-canonical.md"
     },
     {
+      "id": "callbacks-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "callbacks.test.ts → canonical schema + Rails fixtures (split per-describe)",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 300,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/callbacks-test-canonical.md"
+    },
+    {
       "id": "callbacks-transactions-cluster",
       "rfc": "0019-canonical-schema-burndown",
       "title": "callbacks / transactions / locking → canonical schema + Rails fixtures",

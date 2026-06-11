@@ -487,6 +487,12 @@
       "terms": "calculations-test-canonical calculations.test.ts → canonical schema + rails fixtures (per-describe series) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "callbacks-test-canonical",
+      "type": "story",
+      "title": "callbacks.test.ts → canonical schema + Rails fixtures (split per-describe)",
+      "terms": "callbacks-test-canonical callbacks.test.ts → canonical schema + rails fixtures (split per-describe) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "callbacks-transactions-cluster",
       "type": "story",
       "title": "callbacks / transactions / locking → canonical schema + Rails fixtures",
