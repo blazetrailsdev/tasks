@@ -1705,6 +1705,12 @@
       "terms": "rf1-fk-derivation-consolidation rf1 — fold four derive_foreign_key reimplementations into one helper relation 0005-activerecord-gaps context"
     },
     {
+      "id": "sanitize-sql-array-adapter-threading",
+      "type": "story",
+      "title": "sanitize-sql-array-adapter-threading",
+      "terms": "sanitize-sql-array-adapter-threading sanitize-sql-array-adapter-threading 0010-adapter-cleanup context"
+    },
+    {
       "id": "scaffold-tooling",
       "type": "story",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",

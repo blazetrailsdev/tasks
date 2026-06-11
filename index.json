@@ -5105,6 +5105,23 @@
       "file_path": "rfcs/0005-activerecord-gaps/stories/rf1-fk-derivation-consolidation.md"
     },
     {
+      "id": "sanitize-sql-array-adapter-threading",
+      "rfc": "0010-adapter-cleanup",
+      "title": "sanitize-sql-array-adapter-threading",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/sanitize-sql-array-adapter-threading.md"
+    },
+    {
       "id": "scaffold-tooling",
       "rfc": "0001-task-system",
       "title": "Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI",
