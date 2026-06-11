@@ -637,6 +637,12 @@
       "terms": "transactions-test-canonical transactions.test.ts → canonical schema (split per-describe) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-collection-proxy",
+      "type": "story",
+      "title": "Port collection-proxy.test.ts to canonical schema",
+      "terms": "assoc-collection-proxy port collection-proxy.test.ts to canonical schema fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "associations-collection-cluster",
       "type": "story",
       "title": "has-many / belongs-to / has-one / collection → canonical schema + fixtures",
