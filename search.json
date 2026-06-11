@@ -445,6 +445,12 @@
       "terms": "validations-association validations/association-validation → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "validations-numericality",
+      "type": "story",
+      "title": "validations/numericality-validation → NumericData canonical model + fixtures",
+      "terms": "validations-numericality validations/numericality-validation → numericdata canonical model + fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "validations-suite",
       "type": "story",
       "title": "validations/ suite → canonical schema + Rails fixtures",
