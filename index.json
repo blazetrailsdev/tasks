@@ -1610,6 +1610,25 @@
       "file_path": "rfcs/0018-ddl-visitor-convergence/stories/step3-pg-tosql-via-visitor.md"
     },
     {
+      "id": "transaction-callbacks-test-canonical",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "transaction-callbacks.test.ts → canonical schema + Rails fixtures",
+      "status": "draft",
+      "cluster": "fixtures",
+      "priority": 7,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [
+        "shared-table-convergence"
+      ],
+      "deps_rfc": [],
+      "est_loc": 250,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/transaction-callbacks-test-canonical.md"
+    },
+    {
       "id": "transactions-test-canonical",
       "rfc": "0019-canonical-schema-burndown",
       "title": "transactions.test.ts → canonical schema (split per-describe)",

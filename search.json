@@ -529,6 +529,12 @@
       "terms": "step3-pg-tosql-via-visitor step 3 — route pgtabledefinition.tosql() through pgschemacreation ddl-visitor-convergence 0018-ddl-visitor-convergence context"
     },
     {
+      "id": "transaction-callbacks-test-canonical",
+      "type": "story",
+      "title": "transaction-callbacks.test.ts → canonical schema + Rails fixtures",
+      "terms": "transaction-callbacks-test-canonical transaction-callbacks.test.ts → canonical schema + rails fixtures fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "transactions-test-canonical",
       "type": "story",
       "title": "transactions.test.ts → canonical schema (split per-describe)",
