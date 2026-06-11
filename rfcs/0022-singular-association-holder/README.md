@@ -10,9 +10,6 @@ clusters:
   - associations
 ---
 
-<!-- Unnumbered until merge: dir stays `0022-singular-association-holder`,
-     `rfc:` stays 0000-…, H1 number-free. finalize-rfc.mjs assigns the number. -->
-
 # RFC 0022 — Singular-association holder & `_cachedAssociations` deletion
 
 ## Summary
@@ -189,7 +186,7 @@ Each story branches from `main`, is independently shippable, and keeps
 
 | ID                                                                          | Title                                       | Status | Est LOC | Cluster      |
 | --------------------------------------------------------------------------- | ------------------------------------------- | ------ | ------- | ------------ |
-| [b1-singular-association-holder](stories/b1-singular-association-holder.md) | Singular-association holder + writer/reader | draft  | 250     | associations |
+| [b1-singular-association-holder](stories/b1-singular-association-holder.md) | Singular-association holder + writer/reader | ready  | 250     | associations |
 | [b2-serialization-via-reader](stories/b2-serialization-via-reader.md)       | Serialization include through the reader    | draft  | 200     | associations |
 | [b3-migrate-singular-readers](stories/b3-migrate-singular-readers.md)       | Migrate counter-cache/validation/autosave   | draft  | 200     | associations |
 | [b4-delete-cached-associations](stories/b4-delete-cached-associations.md)   | Delete `_cachedAssociations` + test pokes   | draft  | 250     | associations |
