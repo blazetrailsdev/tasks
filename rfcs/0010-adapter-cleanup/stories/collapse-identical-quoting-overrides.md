@@ -1,6 +1,6 @@
 ---
 title: "Collapse abstract-identical quoting overrides to inherit from the base"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
