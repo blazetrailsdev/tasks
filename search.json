@@ -1291,6 +1291,12 @@
       "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
     },
     {
+      "id": "collapse-identical-quoting-overrides",
+      "type": "story",
+      "title": "collapse-identical-quoting-overrides",
+      "terms": "collapse-identical-quoting-overrides collapse-identical-quoting-overrides 0010-adapter-cleanup context"
+    },
+    {
       "id": "convert-bootstrap-rfc",
       "type": "story",
       "title": "Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)",
