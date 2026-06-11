@@ -1,6 +1,6 @@
 ---
 title: "Relocate non-quoting helpers out of the quoting.ts modules"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T20:39:06Z"
+assignee: "relocate-non-quoting-helpers-from-quoting"
 blocked-by: null
 ---
 
