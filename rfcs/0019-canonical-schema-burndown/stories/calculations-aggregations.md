@@ -1,6 +1,6 @@
 ---
 title: "calculations + aggregations → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 7
-pr: null
+pr: 3107
 claim: "2026-06-11T00:07:12Z"
 assignee: "calculations-aggregations"
 blocked-by: null
