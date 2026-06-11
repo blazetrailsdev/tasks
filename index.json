@@ -2560,7 +2560,7 @@
       "id": "index-comments-mysql-pg",
       "rfc": "0010-adapter-cleanup",
       "title": "Index comment introspection + dump emission (MySQL INDEX_COMMENT, PG obj_description)",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "adapter-cleanup",
       "priority": 15,
       "updated": "2026-06-11T00:00:00.000Z",

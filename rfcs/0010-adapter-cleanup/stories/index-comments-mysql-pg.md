@@ -1,6 +1,6 @@
 ---
 title: "Index comment introspection + dump emission (MySQL INDEX_COMMENT, PG obj_description)"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
