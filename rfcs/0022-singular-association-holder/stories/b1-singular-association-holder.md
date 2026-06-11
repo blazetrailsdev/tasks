@@ -1,6 +1,6 @@
 ---
 title: "Singular-association holder + writer/reader migration"
-status: in-progress
+status: done
 updated: 2026-06-11
 rfc: "0022-singular-association-holder"
 cluster: associations

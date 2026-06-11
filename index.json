@@ -457,7 +457,7 @@
       "id": "b1-singular-association-holder",
       "rfc": "0022-singular-association-holder",
       "title": "Singular-association holder + writer/reader migration",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "associations",
       "priority": 1,
       "updated": "2026-06-11T00:00:00.000Z",
