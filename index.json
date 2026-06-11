@@ -1577,7 +1577,7 @@
       "id": "calculations-aggregations",
       "rfc": "0019-canonical-schema-burndown",
       "title": "calculations + aggregations → canonical schema + Rails fixtures",
-      "status": "in-progress",
+      "status": "done",
       "cluster": "fixtures",
       "priority": 7,
       "updated": "2026-06-11T00:00:00.000Z",
