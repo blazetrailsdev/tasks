@@ -1723,6 +1723,12 @@
       "terms": "require-table-teardown-ratchet-burndown burn down require-table-teardown exclude baseline (18 files) 0019-canonical-schema-burndown context"
     },
     {
+      "id": "require-table-teardown-rule-recognize-loops",
+      "type": "story",
+      "title": "Harden require-table-teardown rule to recognize loop/array-based teardown",
+      "terms": "require-table-teardown-rule-recognize-loops harden require-table-teardown rule to recognize loop/array-based teardown 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "rf1-fk-derivation-consolidation",
       "type": "story",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",

@@ -5156,6 +5156,23 @@
       "file_path": "rfcs/0019-canonical-schema-burndown/stories/require-table-teardown-ratchet-burndown.md"
     },
     {
+      "id": "require-table-teardown-rule-recognize-loops",
+      "rfc": "0019-canonical-schema-burndown",
+      "title": "Harden require-table-teardown rule to recognize loop/array-based teardown",
+      "status": "draft",
+      "cluster": null,
+      "priority": null,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": 60,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0019-canonical-schema-burndown/stories/require-table-teardown-rule-recognize-loops.md"
+    },
+    {
       "id": "rf1-fk-derivation-consolidation",
       "rfc": "0005-activerecord-gaps",
       "title": "RF1 — fold four derive_foreign_key reimplementations into one helper",
