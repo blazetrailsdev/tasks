@@ -1,6 +1,6 @@
 ---
 title: "adapters/ (sqlite / pg / mysql) → canonical schema or isolated-by-design"
-status: claimed
+status: in-progress
 updated: 2026-06-11
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 9
-pr: null
+pr: 3118
 claim: "2026-06-11T12:45:21Z"
 assignee: "adapter-tests-cluster"
 blocked-by: null
