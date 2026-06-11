@@ -2,7 +2,7 @@
 title: "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0"
 status: draft
 updated: 2026-06-10
-rfc: "0000-relation-arel-ast-convergence"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
 deps: ["cte-build-with-expression-ast", "set-operations-bind-threading", "pluck-from-cte-threading"]
 deps-rfc: []

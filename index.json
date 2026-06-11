@@ -1,27 +1,6 @@
 {
   "rfcs": [
     {
-      "id": "0000-relation-arel-ast-convergence",
-      "title": "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)",
-      "status": "draft",
-      "owner": "@deanmarano",
-      "created": "2026-06-10T00:00:00.000Z",
-      "updated": "2026-06-10T00:00:00.000Z",
-      "packages": [
-        "activerecord",
-        "arel"
-      ],
-      "clusters": [
-        "cte",
-        "set-ops",
-        "from",
-        "verify"
-      ],
-      "superseded_by": null,
-      "related_rfcs": [],
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/README.md"
-    },
-    {
       "id": "0000-singular-association-holder",
       "title": "Singular-association holder & _cachedAssociations deletion",
       "status": "draft",
@@ -433,6 +412,27 @@
         "0010-adapter-cleanup"
       ],
       "file_path": "rfcs/0021-mysql-rawconn-convergence/README.md"
+    },
+    {
+      "id": "0022-relation-arel-ast-convergence",
+      "title": "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)",
+      "status": "draft",
+      "owner": "@deanmarano",
+      "created": "2026-06-10T00:00:00.000Z",
+      "updated": "2026-06-10T00:00:00.000Z",
+      "packages": [
+        "activerecord",
+        "arel"
+      ],
+      "clusters": [
+        "cte",
+        "set-ops",
+        "from",
+        "verify"
+      ],
+      "superseded_by": null,
+      "related_rfcs": [],
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/README.md"
     }
   ],
   "stories": [
@@ -472,7 +472,7 @@
     },
     {
       "id": "cte-build-with-expression-ast",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "CTE array values → Arel::Nodes::UnionAll AST (build_with_expression_from_value)",
       "status": "draft",
       "cluster": "cte",
@@ -485,11 +485,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/cte-build-with-expression-ast.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/cte-build-with-expression-ast.md"
     },
     {
       "id": "from-clause-arel-manager",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "from(): set FROM on the arel manager pre-compile (build_from), drop the regex rewrite",
       "status": "draft",
       "cluster": "from",
@@ -502,7 +502,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/from-clause-arel-manager.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/from-clause-arel-manager.md"
     },
     {
       "id": "p1-visitor-base-types",
@@ -595,7 +595,7 @@
     },
     {
       "id": "set-operations-arel-nodes",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "Compose union/unionAll/intersect/except as Arel Union* nodes (drop string concat)",
       "status": "draft",
       "cluster": "set-ops",
@@ -608,7 +608,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/set-operations-arel-nodes.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/set-operations-arel-nodes.md"
     },
     {
       "id": "b2-serialization-via-reader",
@@ -650,7 +650,7 @@
     },
     {
       "id": "pluck-from-cte-threading",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "pluck: thread from()/CTE through the manager (remove arel_table-only projection)",
       "status": "draft",
       "cluster": "from",
@@ -665,7 +665,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/pluck-from-cte-threading.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/pluck-from-cte-threading.md"
     },
     {
       "id": "s3-migrate-findtarget-reads",
@@ -688,7 +688,7 @@
     },
     {
       "id": "set-operations-bind-threading",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "Set-ops: thread binds through the collector; drop the $N regex renumber",
       "status": "draft",
       "cluster": "set-ops",
@@ -703,11 +703,11 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/set-operations-bind-threading.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/set-operations-bind-threading.md"
     },
     {
       "id": "arel-ast-convergence-verify",
-      "rfc": "0000-relation-arel-ast-convergence",
+      "rfc": "0022-relation-arel-ast-convergence",
       "title": "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0",
       "status": "draft",
       "cluster": "verify",
@@ -724,7 +724,7 @@
       "claim": null,
       "assignee": null,
       "blocked_by": null,
-      "file_path": "rfcs/0000-relation-arel-ast-convergence/stories/arel-ast-convergence-verify.md"
+      "file_path": "rfcs/0022-relation-arel-ast-convergence/stories/arel-ast-convergence-verify.md"
     },
     {
       "id": "b3-migrate-singular-readers",

@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-relation-arel-ast-convergence](rfcs/0000-relation-arel-ast-convergence/README.md) | Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM) | draft | @deanmarano | activerecord, arel |
 | [0000-singular-association-holder](rfcs/0000-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | draft | @deanmarano | activerecord, activemodel |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
@@ -27,3 +26,4 @@
 | [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | active | @deanmarano | activerecord |
 | [0020-load-defaults-config](rfcs/0020-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | draft | @deanmarano | activerecord, trailties |
 | [0021-mysql-rawconn-convergence](rfcs/0021-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | draft | @deanmarano | activerecord |
+| [0022-relation-arel-ast-convergence](rfcs/0022-relation-arel-ast-convergence/README.md) | Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM) | draft | @deanmarano | activerecord, arel |

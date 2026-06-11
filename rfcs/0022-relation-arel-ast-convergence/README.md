@@ -1,5 +1,5 @@
 ---
-rfc: "0000-relation-arel-ast-convergence"
+rfc: "0022-relation-arel-ast-convergence"
 title: "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)"
 status: draft
 created: 2026-06-10
@@ -15,11 +15,11 @@ clusters:
   - verify
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-relation-arel-ast-convergence
+<!-- Unnumbered until merge: keep `rfc:` as 0022-relation-arel-ast-convergence
      and the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
      assigned number at merge. Never use a `draft-` prefix. -->
 
-# RFC — Relation arel-AST convergence
+# RFC 0022 — Relation arel-AST convergence
 
 ## Summary
 

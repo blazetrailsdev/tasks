@@ -2,7 +2,7 @@
 title: "from(): set FROM on the arel manager pre-compile (build_from), drop the regex rewrite"
 status: draft
 updated: 2026-06-10
-rfc: "0000-relation-arel-ast-convergence"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: from
 deps: []
 deps-rfc: []

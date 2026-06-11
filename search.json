@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "id": "0000-relation-arel-ast-convergence",
-      "type": "rfc",
-      "title": "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)",
-      "terms": "0000-relation-arel-ast-convergence relation arel-ast convergence — replace string-based sql assembly with arel nodes (cte/unionall, set-ops, from) activerecord arel cte set-ops from verify rfc — relation arel-ast convergence"
-    },
-    {
       "id": "0000-singular-association-holder",
       "type": "rfc",
       "title": "Singular-association holder & _cachedAssociations deletion",
@@ -139,6 +133,12 @@
       "terms": "0021-mysql-rawconn-convergence mysql2 query methods through the abstract withrawconnection loop activerecord mysql-rawconn-convergence rfc 0021 — mysql2 query methods through the abstract `withrawconnection` loop"
     },
     {
+      "id": "0022-relation-arel-ast-convergence",
+      "type": "rfc",
+      "title": "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)",
+      "terms": "0022-relation-arel-ast-convergence relation arel-ast convergence — replace string-based sql assembly with arel nodes (cte/unionall, set-ops, from) activerecord arel cte set-ops from verify rfc 0022 — relation arel-ast convergence"
+    },
+    {
       "id": "s1-proxy-backed-read-api",
       "type": "story",
       "title": "Proxy-backed read API with deprecated cache shim",
@@ -154,13 +154,13 @@
       "id": "cte-build-with-expression-ast",
       "type": "story",
       "title": "CTE array values → Arel::Nodes::UnionAll AST (build_with_expression_from_value)",
-      "terms": "cte-build-with-expression-ast cte array values → arel::nodes::unionall ast (build_with_expression_from_value) cte 0000-relation-arel-ast-convergence context"
+      "terms": "cte-build-with-expression-ast cte array values → arel::nodes::unionall ast (build_with_expression_from_value) cte 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "from-clause-arel-manager",
       "type": "story",
       "title": "from(): set FROM on the arel manager pre-compile (build_from), drop the regex rewrite",
-      "terms": "from-clause-arel-manager from(): set from on the arel manager pre-compile (build_from), drop the regex rewrite from 0000-relation-arel-ast-convergence context"
+      "terms": "from-clause-arel-manager from(): set from on the arel manager pre-compile (build_from), drop the regex rewrite from 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "p1-visitor-base-types",
@@ -196,7 +196,7 @@
       "id": "set-operations-arel-nodes",
       "type": "story",
       "title": "Compose union/unionAll/intersect/except as Arel Union* nodes (drop string concat)",
-      "terms": "set-operations-arel-nodes compose union/unionall/intersect/except as arel union* nodes (drop string concat) set-ops 0000-relation-arel-ast-convergence context"
+      "terms": "set-operations-arel-nodes compose union/unionall/intersect/except as arel union* nodes (drop string concat) set-ops 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "b2-serialization-via-reader",
@@ -214,7 +214,7 @@
       "id": "pluck-from-cte-threading",
       "type": "story",
       "title": "pluck: thread from()/CTE through the manager (remove arel_table-only projection)",
-      "terms": "pluck-from-cte-threading pluck: thread from()/cte through the manager (remove arel_table-only projection) from 0000-relation-arel-ast-convergence context"
+      "terms": "pluck-from-cte-threading pluck: thread from()/cte through the manager (remove arel_table-only projection) from 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "s3-migrate-findtarget-reads",
@@ -226,13 +226,13 @@
       "id": "set-operations-bind-threading",
       "type": "story",
       "title": "Set-ops: thread binds through the collector; drop the $N regex renumber",
-      "terms": "set-operations-bind-threading set-ops: thread binds through the collector; drop the $n regex renumber set-ops 0000-relation-arel-ast-convergence context"
+      "terms": "set-operations-bind-threading set-ops: thread binds through the collector; drop the $n regex renumber set-ops 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "arel-ast-convergence-verify",
       "type": "story",
       "title": "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0",
-      "terms": "arel-ast-convergence-verify verify arel-ast convergence: test:compare / api:compare deltas ≥ 0 verify 0000-relation-arel-ast-convergence context"
+      "terms": "arel-ast-convergence-verify verify arel-ast convergence: test:compare / api:compare deltas ≥ 0 verify 0022-relation-arel-ast-convergence context"
     },
     {
       "id": "b3-migrate-singular-readers",

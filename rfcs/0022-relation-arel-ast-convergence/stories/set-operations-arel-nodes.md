@@ -2,7 +2,7 @@
 title: "Compose union/unionAll/intersect/except as Arel Union* nodes (drop string concat)"
 status: draft
 updated: 2026-06-10
-rfc: "0000-relation-arel-ast-convergence"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: []
 deps-rfc: []
