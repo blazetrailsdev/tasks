@@ -11,6 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+priority: 5
 ---
 
 ## Context

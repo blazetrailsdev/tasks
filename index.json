@@ -966,6 +966,23 @@
       "file_path": "rfcs/0001-task-system/stories/claims-concurrency-lock.md"
     },
     {
+      "id": "collapse-identical-quoting-overrides",
+      "rfc": "0010-adapter-cleanup",
+      "title": "collapse-identical-quoting-overrides",
+      "status": "draft",
+      "cluster": null,
+      "priority": 5,
+      "updated": "2026-06-11T00:00:00.000Z",
+      "deps": [],
+      "deps_rfc": [],
+      "est_loc": null,
+      "pr": null,
+      "claim": null,
+      "assignee": null,
+      "blocked_by": null,
+      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
+    },
+    {
       "id": "step1-delete-dead-mysql-branches",
       "rfc": "0018-ddl-visitor-convergence",
       "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
@@ -3944,23 +3961,6 @@
       "assignee": null,
       "blocked_by": null,
       "file_path": "rfcs/0003-activerecord-cli/stories/cli-package-scaffold.md"
-    },
-    {
-      "id": "collapse-identical-quoting-overrides",
-      "rfc": "0010-adapter-cleanup",
-      "title": "collapse-identical-quoting-overrides",
-      "status": "draft",
-      "cluster": null,
-      "priority": null,
-      "updated": "2026-06-11T00:00:00.000Z",
-      "deps": [],
-      "deps_rfc": [],
-      "est_loc": null,
-      "pr": null,
-      "claim": null,
-      "assignee": null,
-      "blocked_by": null,
-      "file_path": "rfcs/0010-adapter-cleanup/stories/collapse-identical-quoting-overrides.md"
     },
     {
       "id": "convert-bootstrap-rfc",

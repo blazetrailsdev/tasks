@@ -313,6 +313,12 @@
       "terms": "claims-concurrency-lock serialize concurrent tasks-cli mutations (file lock or per-agent worktree) scaffold 0001-task-system context"
     },
     {
+      "id": "collapse-identical-quoting-overrides",
+      "type": "story",
+      "title": "collapse-identical-quoting-overrides",
+      "terms": "collapse-identical-quoting-overrides collapse-identical-quoting-overrides 0010-adapter-cleanup context"
+    },
+    {
       "id": "step1-delete-dead-mysql-branches",
       "type": "story",
       "title": "Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()",
@@ -1313,12 +1319,6 @@
       "type": "story",
       "title": "Scaffold @blazetrails/activerecord-cli + db:* commands",
       "terms": "cli-package-scaffold scaffold @blazetrails/activerecord-cli + db:* commands cli 0003-activerecord-cli context"
-    },
-    {
-      "id": "collapse-identical-quoting-overrides",
-      "type": "story",
-      "title": "collapse-identical-quoting-overrides",
-      "terms": "collapse-identical-quoting-overrides collapse-identical-quoting-overrides 0010-adapter-cleanup context"
     },
     {
       "id": "convert-bootstrap-rfc",
