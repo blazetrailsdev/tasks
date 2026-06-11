@@ -667,6 +667,12 @@
       "terms": "assoc-has-many port has-many-associations.test.ts to canonical schema (split per-describe) fixtures 0019-canonical-schema-burndown context"
     },
     {
+      "id": "assoc-has-many-through",
+      "type": "story",
+      "title": "Port has-many-through-associations.test.ts to canonical schema (split per-describe)",
+      "terms": "assoc-has-many-through port has-many-through-associations.test.ts to canonical schema (split per-describe) fixtures 0019-canonical-schema-burndown context"
+    },
+    {
       "id": "assoc-has-one",
       "type": "story",
       "title": "Port has-one-associations.test.ts to canonical schema",
