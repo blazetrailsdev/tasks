@@ -1,6 +1,6 @@
 ---
 title: "Serialization include through the reader"
-status: ready
+status: claimed
 updated: 2026-06-11
 rfc: "0022-singular-association-holder"
 cluster: associations
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-11T23:36:57Z"
+assignee: "b2-serialization-via-reader"
 blocked-by: null
 ---
 
