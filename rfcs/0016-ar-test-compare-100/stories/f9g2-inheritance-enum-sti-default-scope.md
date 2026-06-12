@@ -16,4 +16,21 @@ blocked-by: null
 
 ## Context
 
+Split out of f9g2-attributes-and-loading (PR #3155 review). Rails matches
+`SelectedMembership.count(:all) == 1` (`activerecord/test/cases/inheritance_test.rb:500-501`)
+where `Membership.enum :type` (`activerecord/test/models/membership.rb:3-4`)
+backs an _integer_ STI column (`activerecord/test/schema/schema.rb:783-787`).
+STI must filter `WHERE type = <enum int for SelectedMembership>`. The canonical
+trails `Membership` model declares the enum but does not wire STI dispatch on
+the enum-backed column, so `SelectedMembership.count()` returns all rows (6),
+not 1. Enum-backed STI inheritance-column dispatch is the real gap.
+
+Skipped matched test in `packages/activerecord/src/inheritance.test.ts`:
+
+- "inheritance with default scope"
+
 ## Acceptance criteria
+
+- [ ] Enum-backed STI inheritance-column dispatch so STI subclass queries filter
+      by the enum integer; the test un-skipped and passing using the canonical
+      Membership/SelectedMembership models + memberships fixtures. ≤500 LOC.
