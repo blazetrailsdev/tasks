@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: make index build + auto-push safe against a dirty/divergent worktree"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0001-task-system"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 12
-pr: null
+pr: 3151
 claim: "2026-06-12T16:54:56Z"
 assignee: "cli-dirty-worktree-safe-index-build"
 blocked-by: null
