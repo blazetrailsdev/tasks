@@ -16,4 +16,19 @@ blocked-by: null
 
 ## Context
 
+Split out of f9g2-attributes-and-loading (PR pending). Strict-loading must be
+_ignored_ when building/writing brand-new (unpersisted) association records,
+and ignored for records loaded from fixtures. The violation check is wired into
+the lazy-load path but not the association build/writer path.
+
+Skipped matched tests in `packages/activerecord/src/strict-loading.test.ts`:
+
+- "strict loading with new record on build is ignored"
+- "strict loading with new record on writer is ignored"
+- "strict loading with has one through does not prevent creation of association"
+- "strict loading violations are ignored on fixtures"
+
 ## Acceptance criteria
+
+- [ ] All four tests un-skipped and passing; strict-loading not triggered on
+      new-record association build/writer. ≤500 LOC.

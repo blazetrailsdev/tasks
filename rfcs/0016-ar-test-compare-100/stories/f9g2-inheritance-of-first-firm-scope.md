@@ -16,4 +16,17 @@ blocked-by: null
 
 ## Context
 
+Split out of f9g2-attributes-and-loading (PR pending). Rails' `of_first_firm`
+scope is `joins(account: :firm).where("companies.id": 1)`. Exercising it needs
+the companies↔accounts association graph (Account `belongs_to :firm`
+class_name "Company"; Company `has_one :account` foreign_key "firm_id") plus an
+`accounts` fixture table.
+
+Skipped matched test in `packages/activerecord/src/inheritance.test.ts`:
+
+- "scope inherited properly"
+
 ## Acceptance criteria
+
+- [ ] Company/Client STI with the `of_first_firm` join-scope + accounts fixtures;
+      the test un-skipped and passing. ≤500 LOC.
