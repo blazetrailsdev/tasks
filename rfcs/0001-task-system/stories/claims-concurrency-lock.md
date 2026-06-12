@@ -1,6 +1,6 @@
 ---
 title: "Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0001-task-system"
 cluster: scaffold
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 5
-pr: null
+pr: 3140
 claim: "2026-06-12T00:28:58Z"
 assignee: "claims-concurrency-lock"
 blocked-by: null
