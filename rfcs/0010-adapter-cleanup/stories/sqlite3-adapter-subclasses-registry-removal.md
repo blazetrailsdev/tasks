@@ -1,7 +1,7 @@
 ---
 title: "SQLite adapter subclasses (Node/Expo) + retire driver registry"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-12
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: ["abstract-sqlite3-adapter"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T01:07:59Z"
+assignee: "sqlite3-adapter-subclasses-registry-removal"
 blocked-by: null
 ---
 
