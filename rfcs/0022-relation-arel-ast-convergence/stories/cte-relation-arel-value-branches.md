@@ -1,6 +1,6 @@
 ---
 title: "CTE Relation/SelectManager values → real value.arel (not pre-rendered SQL)"
-status: ready
+status: claimed
 updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: cte
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T15:49:13Z"
+assignee: "cte-relation-arel-value-branches"
 blocked-by: null
 ---
 
