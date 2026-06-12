@@ -1,6 +1,6 @@
 ---
 title: "Set-ops: thread binds through the collector; drop the $N regex renumber"
-status: ready
+status: claimed
 updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T16:18:05Z"
+assignee: "set-operations-bind-threading"
 blocked-by: null
 ---
 
