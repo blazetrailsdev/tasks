@@ -1,6 +1,6 @@
 ---
 title: "Migrate counter-cache / validation / autosave / persistence readers"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0022-singular-association-holder"
 cluster: associations
@@ -8,7 +8,7 @@ deps: ["b1-singular-association-holder"]
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
+pr: 3139
 claim: "2026-06-12T00:02:59Z"
 assignee: "b3-migrate-singular-readers"
 blocked-by: null
