@@ -6,7 +6,7 @@ rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: null
 pr: null
 claim: null
