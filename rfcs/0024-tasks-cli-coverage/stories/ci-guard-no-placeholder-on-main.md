@@ -1,7 +1,7 @@
 ---
 title: "Guardrail — fail CI when a 0000- placeholder RFC lands on main"
-status: draft
-updated: 2026-06-11
+status: ready
+updated: 2026-06-12
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
 deps: []

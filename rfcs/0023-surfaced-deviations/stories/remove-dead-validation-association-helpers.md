@@ -1,6 +1,6 @@
 ---
 title: "Remove dead validations/association-helpers.ts module"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0023-surfaced-deviations"
 cluster: null

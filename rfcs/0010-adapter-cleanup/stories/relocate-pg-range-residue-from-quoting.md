@@ -1,6 +1,6 @@
 ---
 title: "Relocate residual PG encodeRange helper out of postgresql/quoting.ts"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0010-adapter-cleanup"
 cluster: null

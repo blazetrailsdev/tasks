@@ -1,7 +1,7 @@
 ---
 title: "CTE Relation/SelectManager values → real value.arel (not pre-rendered SQL)"
-status: draft
-updated: 2026-06-11
+status: ready
+updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: cte
 deps: ["cte-build-with-expression-ast"]

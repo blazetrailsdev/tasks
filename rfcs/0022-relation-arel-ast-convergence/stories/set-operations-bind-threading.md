@@ -1,7 +1,7 @@
 ---
 title: "Set-ops: thread binds through the collector; drop the $N regex renumber"
-status: draft
-updated: 2026-06-10
+status: ready
+updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: ["set-operations-arel-nodes"]

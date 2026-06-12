@@ -1,6 +1,6 @@
 ---
 title: "Recover a tasks-CLI lock wedged by a crashed holder (safe stale-lock cleanup)"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0001-task-system"
 cluster: null
