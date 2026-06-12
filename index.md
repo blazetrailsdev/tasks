@@ -29,3 +29,4 @@
 | [0022-singular-association-holder](rfcs/0022-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | draft | @deanmarano | activerecord, activemodel |
 | [0023-surfaced-deviations](rfcs/0023-surfaced-deviations/README.md) | Surfaced deviations & follow-ups — standing backlog for port-discovered work | active | @deanmarano | — |
 | [0024-tasks-cli-coverage](rfcs/0024-tasks-cli-coverage/README.md) | tasks CLI full coverage — no hand-editing the tasks repo | draft | @deanmarano | — |
+| [0025-fidelity-verification-tooling](rfcs/0025-fidelity-verification-tooling/README.md) | Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules | draft | @deanmarano | activerecord, arel |
