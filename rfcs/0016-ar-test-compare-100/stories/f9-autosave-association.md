@@ -1,6 +1,6 @@
 ---
 title: "F-9d — autosave_association residuals"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: null
+pr: 3152
 claim: "2026-06-12T17:16:32Z"
 assignee: "f9-autosave-association"
 blocked-by: null
