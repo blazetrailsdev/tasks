@@ -36,8 +36,9 @@ adapter tree.
 Measured 2026-06-12 (code lines, comments/blanks excluded):
 
 - `postgresql-adapter.ts` is 4,089 code lines vs Rails' 853 (**4.8×**).
-  Roughly lines 2,671–4,443 (~1,800 lines) are schema-management
-  implementations that Rails keeps in `postgresql/schema_statements.rb`. The
+  ~2,000 lines (the 2,671–4,443 block plus the exclusion/unique-constraint
+  methods at ~4,845–5,200) are schema-management implementations that Rails
+  keeps in `postgresql/schema_statements.rb`. The
   TS `postgresql/schema-statements.ts` is a declarations-only interface (all
   95 Rails method names are covered — nothing is missing, just mis-placed) and
   `postgresql/schema-statements-class.ts` holds only `dropTable`.
@@ -65,7 +66,7 @@ safety net.
 
 Code motion counts double against the 500 LOC PR ceiling (every moved line is
 a deletion plus an addition), so stories are sized to ~200–250 moved lines
-each: six for the PG block, two for mysql2, one for sqlite3. Stories touching
+each: eight for the PG block, two for mysql2, one for sqlite3. Stories touching
 the same files are dependency-chained and ship sequentially from `main` (no
 stacking); if a group still exceeds the ceiling, the implementer ships the
 slice that fits and registers the remainder with `pnpm tasks new`.
@@ -85,8 +86,10 @@ slice that fits and registers the remainder with `pnpm tasks new`.
    `extract-pg-schema-statements-schemas-databases` →
    `extract-pg-schema-statements-tables-introspection` →
    `extract-pg-schema-statements-indexes` →
-   `extract-pg-schema-statements-columns-alter-table` →
-   `extract-pg-schema-statements-constraints-fks` →
+   `extract-pg-schema-statements-columns-types` →
+   `extract-pg-schema-statements-alter-table` →
+   `extract-pg-schema-statements-fks` →
+   `extract-pg-schema-statements-constraints` →
    `extract-pg-schema-statements-enums-ranges-sequences`
 2. MySQL extraction (chained) — `extract-mysql2-schema-introspection` →
    `extract-mysql2-schema-statements-class`
@@ -98,22 +101,30 @@ slice that fits and registers the remainder with `pnpm tasks new`.
    The class skeletons exist and mirror Rails' module-per-class shape;
    recommendation is class-based unless a method needs adapter-private state,
    in which case host-interface functions per CLAUDE.md.
+2. ~~Where do `typeToSql` / `defaultPreparedStatements` belong?~~ Resolved
+   against the Rails source: `type_to_sql` is in
+   `postgresql/schema_statements.rb` (moves);
+   `default_prepared_statements` is overridden in `mysql2_adapter.rb`
+   (stays).
 
 ## Stories
 
-| ID                                                                                                                    | Title                                   | Status | Est LOC |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------ | ------- |
-| [extract-pg-schema-statements-schemas-databases](stories/extract-pg-schema-statements-schemas-databases.md)           | PG schema/database/session extraction   | draft  | 350     |
-| [extract-pg-schema-statements-tables-introspection](stories/extract-pg-schema-statements-tables-introspection.md)     | PG table/view introspection extraction  | draft  | 400     |
-| [extract-pg-schema-statements-indexes](stories/extract-pg-schema-statements-indexes.md)                               | PG index statements extraction          | draft  | 480     |
-| [extract-pg-schema-statements-columns-alter-table](stories/extract-pg-schema-statements-columns-alter-table.md)       | PG column/alter-table extraction        | draft  | 480     |
-| [extract-pg-schema-statements-constraints-fks](stories/extract-pg-schema-statements-constraints-fks.md)               | PG FK/constraint extraction             | draft  | 450     |
-| [extract-pg-schema-statements-enums-ranges-sequences](stories/extract-pg-schema-statements-enums-ranges-sequences.md) | PG enum/range/sequence extraction       | draft  | 450     |
-| [extract-mysql2-schema-introspection](stories/extract-mysql2-schema-introspection.md)                                 | MySQL introspection extraction          | draft  | 480     |
-| [extract-mysql2-schema-statements-class](stories/extract-mysql2-schema-statements-class.md)                           | MySQL SchemaStatements class relocation | draft  | 450     |
-| [extract-sqlite3-schema-introspection](stories/extract-sqlite3-schema-introspection.md)                               | SQLite schema-introspection slice       | draft  | 300     |
+| ID                                                                                                                    | Title                                          | Status | Est LOC |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------ | ------- |
+| [extract-pg-schema-statements-schemas-databases](stories/extract-pg-schema-statements-schemas-databases.md)           | PG schema/database/session extraction          | draft  | 350     |
+| [extract-pg-schema-statements-tables-introspection](stories/extract-pg-schema-statements-tables-introspection.md)     | PG table/view introspection extraction         | draft  | 400     |
+| [extract-pg-schema-statements-indexes](stories/extract-pg-schema-statements-indexes.md)                               | PG index statements extraction                 | draft  | 480     |
+| [extract-pg-schema-statements-columns-types](stories/extract-pg-schema-statements-columns-types.md)                   | PG column introspection + typeToSql extraction | draft  | 480     |
+| [extract-pg-schema-statements-alter-table](stories/extract-pg-schema-statements-alter-table.md)                       | PG alter-table extraction                      | draft  | 450     |
+| [extract-pg-schema-statements-fks](stories/extract-pg-schema-statements-fks.md)                                       | PG foreign-key extraction                      | draft  | 480     |
+| [extract-pg-schema-statements-constraints](stories/extract-pg-schema-statements-constraints.md)                       | PG exclusion/unique-constraint extraction      | draft  | 420     |
+| [extract-pg-schema-statements-enums-ranges-sequences](stories/extract-pg-schema-statements-enums-ranges-sequences.md) | PG enum/range/sequence extraction              | draft  | 450     |
+| [extract-mysql2-schema-introspection](stories/extract-mysql2-schema-introspection.md)                                 | MySQL introspection extraction                 | draft  | 480     |
+| [extract-mysql2-schema-statements-class](stories/extract-mysql2-schema-statements-class.md)                           | MySQL SchemaStatements class relocation        | draft  | 400     |
+| [extract-sqlite3-schema-introspection](stories/extract-sqlite3-schema-introspection.md)                               | SQLite schema-introspection slice              | draft  | 300     |
 
 ## Changelog
 
 - 2026-06-12: initial RFC; PG stories moved in from 0010-adapter-cleanup
 - 2026-06-12: re-sized stories to respect the doubled diff cost of code motion (3 PG stories → 6; mysql2 → 2)
+- 2026-06-12: resolved placement questions against Rails source (`type_to_sql` moves, `default_prepared_statements` stays); counted the ~4,845–5,200 constraint block, re-cut PG to 8 stories

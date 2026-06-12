@@ -22,8 +22,8 @@ blocked-by: null
 `connection-adapters/mysql/` directory mirrors Rails file-for-file, but
 `mysql/schema-statements.ts` is interface-only.
 
-**This story (~250 moved lines):** `columns` (~153 lines), `indexes` (~87),
-`foreignKeys` (~58), and `parseMysqlName`. Move into
+**This story (~240 moved lines):** `columns` (~153 lines) and `indexes`
+(~87). Move into
 `connection-adapters/mysql/schema-statements.ts` (or a sibling class file),
 leaving the adapter delegating. Methods shared with MariaDB belong in
 `abstract-mysql-adapter.ts` (already a healthy 1.7×) — only move what Rails

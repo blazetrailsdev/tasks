@@ -6,7 +6,7 @@ rfc: "0000-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-mysql2-schema-introspection"]
 deps-rfc: []
-est-loc: 450
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -16,14 +16,15 @@ blocked-by: null
 
 ## Context
 
-**This story (~220 moved lines):** the inline
+**This story (~190 moved lines):** the inline
 `MysqlSchemaStatements extends SchemaStatements` class at the top of
 `mysql2-adapter.ts` moves to a `mysql/` class file mirroring Rails'
-`MySQL::SchemaStatements` module, and `defaultPreparedStatements` (~154 lines)
-moves to its Rails placement (check `abstract_mysql_adapter.rb` vs
-`mysql2_adapter.rb` first). Driver glue (connect-error translation, URI
-parsing, mysql2-npm type mapping) stays in the adapter — in Ruby it lives in
-the `mysql2` gem, so the adapter is its faithful home.
+`MySQL::SchemaStatements` module, along with `foreignKeys` (~58 lines) and
+`parseMysqlName` (~69). `defaultPreparedStatements` STAYS in the adapter —
+confirmed: Rails overrides `default_prepared_statements` in
+`mysql2_adapter.rb` itself. Driver glue (connect-error translation, URI
+parsing, mysql2-npm type mapping) also stays — in Ruby it lives in the
+`mysql2` gem, so the adapter is its faithful home.
 
 ## Acceptance criteria
 

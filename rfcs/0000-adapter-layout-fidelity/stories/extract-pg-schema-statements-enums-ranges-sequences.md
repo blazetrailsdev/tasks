@@ -4,7 +4,7 @@ status: draft
 updated: 2026-06-12
 rfc: "0000-adapter-layout-fidelity"
 cluster: adapter-layout
-deps: ["extract-pg-schema-statements-constraints-fks"]
+deps: ["extract-pg-schema-statements-constraints"]
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -17,7 +17,7 @@ blocked-by: null
 ## Context
 
 `packages/activerecord/src/connection-adapters/postgresql-adapter.ts` inlines
-~1,600 lines of schema-management implementation (lines ~2,671–4,443) that
+~2,000 lines of schema-management implementation (lines ~2,671–4,443) that
 Rails keeps in `postgresql/schema_statements.rb`. The TS
 `postgresql/schema-statements.ts` interface already covers all 95 Rails method
 names; `postgresql/schema-statements-class.ts` holds only `dropTable`. This
