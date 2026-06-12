@@ -1,6 +1,6 @@
 ---
 title: "api:compare: per-method Ruby option-key vs TS options-interface diff"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 15
-pr: null
+pr: 3164
 claim: "2026-06-12T21:27:16Z"
 assignee: "options-kwargs-key-parity"
 blocked-by: null
