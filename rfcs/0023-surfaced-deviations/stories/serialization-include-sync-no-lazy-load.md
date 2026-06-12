@@ -74,6 +74,13 @@ implemented by returning a thenable — NOT by branching on call style.
   real readers (built on PR #3138's send-through-the-reader foundation).
 - Cross-cutting: touches every `asJson` / `serializableHash` / `toJson` caller's
   type (now thenable). Audit call sites; keep `toJSON` strictly sync.
+- **Singular asymmetry (also surfaced by #3138):** an unloaded `belongsTo` /
+  `hasOne` include currently serializes **silently absent**, not fail-loud — the
+  sync reader returns `null` for both "unloaded" and "genuinely nil", so there
+  is no `loaded`-style flag to distinguish them (unlike `CollectionProxy`). The
+  async path must load these on `await`; decide whether the sync path should
+  also fail-loud for an unloaded-but-loadable singular (needs the holder's
+  `loaded` state, not just the reader's return) or accept the silent skip.
 
 ## Acceptance criteria
 
@@ -82,6 +89,8 @@ implemented by returning a thenable — NOT by branching on call style.
 - [ ] `await record.asJson({ include })` loads unloaded `has_many` / `has_one` /
       `belongs_to` includes (nested includes too) and serializes the rows,
       matching Rails' `to_ary` behavior.
+- [ ] Singular (`belongsTo` / `hasOne`) unloaded-include behavior decided and
+      implemented consistently with collections (see Singular asymmetry note).
 - [ ] Synchronous `JSON.stringify(record)` / `toJSON` still throw on an unloaded
       include (documented: sync paths cannot lazy-load).
 - [ ] No `_cachedAssociations` / include-bag reintroduced; loading routes
