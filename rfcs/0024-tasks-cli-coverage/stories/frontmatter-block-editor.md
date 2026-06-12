@@ -1,6 +1,6 @@
 ---
 title: "Array-safe, comment-preserving frontmatter setter"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0024-tasks-cli-coverage"
 cluster: frontmatter-editor
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 15
-pr: null
+pr: 3161
 claim: "2026-06-12T21:03:14Z"
 assignee: "frontmatter-block-editor"
 blocked-by: null
