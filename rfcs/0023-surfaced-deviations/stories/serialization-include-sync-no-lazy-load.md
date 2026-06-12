@@ -6,7 +6,7 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 5
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -40,19 +40,61 @@ included collection reports `loaded === false`, directing the caller to preload
 emitting `comments: []`. That is safe (no silently-wrong output) but is still a
 behavior change from Rails, which loads-and-includes.
 
-The only way to match Rails' lazy-load is to make the serialization path
-`async` (so it can `await proxy.toArray()`), which breaks Rails-sync parity and
-ripples across every `asJson` / `serializableHash` / `toJson` caller — a
-cross-cutting change well beyond b2's scope, tracked here.
+## Desired end state
+
+`asJson` / `serializableHash` return a **thenable hash** — one object usable
+both ways, mirroring the existing `CollectionProxy` thenable
+(`collection-proxy.ts`, wired via `applyThenable`). The call site, not the
+method, picks the mode:
+
+- **Sync use** — `const h = record.asJson({ include: "comments" })` then reading
+  `h.comments`, or `JSON.stringify(record)` (via `toJSON`) — builds the hash
+  eagerly. An unloaded `include`d association **throws** (the b2 / PR #3138
+  fail-loud behavior, unchanged). `JSON.stringify` / `toJSON` are inherently
+  synchronous and therefore always fail-loud on an unloaded include.
+- **Awaited use** — `await record.asJson({ include: "comments" })` — runs the
+  async path: preload the unloaded `include`d associations (through the reader /
+  `CollectionProxy.load` / singular `load*`), then resolve the complete hash
+  with the rows. This matches Rails' `to_ary`-driven load-and-serialize for
+  `post.as_json(include: :comments)`.
+
+A function cannot detect whether its return value will be awaited, so this is
+implemented by returning a thenable — NOT by branching on call style.
+
+### Design notes / constraints
+
+- The eager build must not throw _before_ `.then()` can run, or `await` can
+  never reach the async path. So the returned object computes scalars +
+  already-loaded includes eagerly and **defers** unloaded includes; the
+  fail-loud throw fires only on synchronous property access / key enumeration
+  (e.g. a Proxy `get` / `ownKeys` trap), while `.then()` loads them first.
+- Async path resolves a **plain object** (not a thenable) so nested
+  serialization and `JSON.stringify` of the awaited result behave normally.
+- No `_cachedAssociations` / include-bag reintroduced — loading goes through the
+  real readers (built on PR #3138's send-through-the-reader foundation).
+- Cross-cutting: touches every `asJson` / `serializableHash` / `toJson` caller's
+  type (now thenable). Audit call sites; keep `toJSON` strictly sync.
 
 ## Acceptance criteria
 
-- [ ] Decide whether trails should offer an async serialization path (e.g.
-      `await record.asJsonAsync({ include })` / `loadForSerialization`) that
-      lazily loads unloaded `include`d associations, matching Rails'
-      `to_ary`-driven load, while keeping the sync `asJson` fail-loud.
-- [ ] If pursued: unloaded `has_many` / `has_one` / `belongs_to` includes load
-      on demand through the async path; the sync path keeps the b2 fail-loud
-      behavior. No `_cachedAssociations` reintroduced.
-- [ ] If declined: record the rationale and close, leaving the b2 fail-loud as
-      the accepted deviation.
+- [ ] `asJson` / `serializableHash` return a thenable; sync access fails loud on
+      an unloaded include, `await` lazy-loads then resolves the full hash.
+- [ ] `await record.asJson({ include })` loads unloaded `has_many` / `has_one` /
+      `belongs_to` includes (nested includes too) and serializes the rows,
+      matching Rails' `to_ary` behavior.
+- [ ] Synchronous `JSON.stringify(record)` / `toJSON` still throw on an unloaded
+      include (documented: sync paths cannot lazy-load).
+- [ ] No `_cachedAssociations` / include-bag reintroduced; loading routes
+      through the readers.
+- [ ] Existing sync `asJson` / `serializableHash` callers and their types
+      audited for the thenable return; `serialization.rb` / `serializers/json.rb`
+      api:compare delta stays non-negative.
+
+## Relationship to PR #3138 (b2)
+
+Additive, not a replacement. #3138 removed the include-bag and routed includes
+through `send`/the reader, and made the **sync** path fail loud on an unloaded
+include — which is exactly the sync-branch behavior of this end state. The
+thenable async path layers on top of that foundation; it cannot be built
+cleanly without it. #3138 should merge as-is; this story delivers the async
+path later.
