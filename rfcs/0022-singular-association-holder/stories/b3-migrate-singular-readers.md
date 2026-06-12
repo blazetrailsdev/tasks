@@ -1,6 +1,6 @@
 ---
 title: "Migrate counter-cache / validation / autosave / persistence readers"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0022-singular-association-holder"
 cluster: associations
