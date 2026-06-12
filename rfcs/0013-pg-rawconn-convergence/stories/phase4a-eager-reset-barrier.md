@@ -106,23 +106,28 @@ into this story so they land together with the reset-barrier rework.
       `_connection !== null`). Fold in here or split to its own story.
 - [ ] `pnpm tsc --build` clean; PG adapter dirs (connection, transaction,
       transaction-nested, statement-pool, money) green under ARCONN=postgresql +
-      live PG — in particular `PostgresqlConnectionTest > reset` and `> reset
-      with transaction`; Phase-2/3 retry/reconnect mirrors stay green;
+      live PG — in particular `PostgresqlConnectionTest > reset` and
+      `> reset with transaction`; Phase-2/3 retry/reconnect mirrors stay green;
       api:compare and test:compare deltas non-negative.
 
 ## Notes
 
-- Repro for the regression (the test that gates this story): run
-  `ARCONN=postgresql PG_TEST_URL=<url> pnpm vitest run
-  packages/activerecord/src/adapters/postgresql/connection.test.ts -t "reset
-  with transaction"` with the seam replaced by `return this._connection`.
+- Repro for the regression (the test that gates this story), with the seam
+  replaced by `return this._connection`:
+
+  ```sh
+  ARCONN=postgresql PG_TEST_URL=<url> pnpm vitest run \
+    packages/activerecord/src/adapters/postgresql/connection.test.ts \
+    -t "reset with transaction"
+  ```
+
 - Live PG locally: the default `postgres://localhost:5432/rails_js_test` host
   port is often occupied by other services; start a throwaway container on an
   alt port and pass `PG_TEST_URL`.
 - The reset barrier lives in `postgresql-adapter.ts`: `_inFlightReset`
-  (declared ~L297), drained in `_acquireFreshClient` (`while
-  (this._inFlightReset) ...`), set up in `resetBang` (the `work.then(() =>
-  live.query("DISCARD ALL"))` chain).
+  (declared ~L297), drained in `_acquireFreshClient`
+  (`while (this._inFlightReset) ...`), set up in `resetBang`
+  (the `work.then(() => live.query("DISCARD ALL"))` chain).
 - Hard rules carried from Phase 4: NO `node:*` imports; NO `process.*`; async fs
   only; no new runtime deps; 300-LOC ceiling; no stacked PRs; single PR from
   main; test names match Rails verbatim; camelCase only; draft PR; run `/link`
