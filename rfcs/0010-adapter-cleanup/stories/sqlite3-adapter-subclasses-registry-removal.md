@@ -1,6 +1,6 @@
 ---
 title: "SQLite adapter subclasses (Node/Expo) + retire driver registry"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
