@@ -1,6 +1,6 @@
 ---
 title: "F-9d — autosave_association residuals"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
