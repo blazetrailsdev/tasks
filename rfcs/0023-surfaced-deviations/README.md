@@ -14,9 +14,6 @@ related-rfcs:
   - "0015-ar-framework-gaps"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0023-surfaced-deviations and the H1
-     below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
-
 # RFC 0023 — Surfaced deviations & follow-ups
 
 ## Summary
