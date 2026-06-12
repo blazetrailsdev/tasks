@@ -39,8 +39,11 @@ v2 additions to `CanonicalTable`:
 
 ```ts
 foreignKeys: Array<{
-  // sorted by name ASC (D1 sorts indexes; mirror it)
-  name: string; // constraint name; SQLite's implicit FKs get null
+  // sorted by name ASC, null names last (D1 sorts indexes; mirror it)
+  name: string | null; // constraint name; SQLite's unnamed/implicit FKs → null
+  // (Rails synthesizes fk_rails_* names on its own DDL, but raw schema.sql
+  // fixtures can declare anonymous FKs — both canonicalizers must emit null
+  // for those, NOT a synthesized name, so the two sides stay comparable.)
   column: string[]; // referencing columns, declaration order
   toTable: string;
   primaryKey: string[]; // referenced columns
