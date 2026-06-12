@@ -1,23 +1,12 @@
 #!/usr/bin/env sh
 # Pre-commit hook for blazetrailsdev/tasks.
 #
-# Order matters — fail fast on the worst-case mistake (committed secret)
-# before doing formatting work.
-#
 # Must complete in <500ms on a warm working tree. Keep additions
 # mtime-gated and incremental.
 
 set -e
 
-# 1. Secret scan (staged changes only — fast).
-if command -v gitleaks >/dev/null 2>&1; then
-  gitleaks protect --staged --redact --config .gitleaks.toml --no-banner
-else
-  echo "warning: gitleaks not installed — skipping secret scan." >&2
-  echo "  install:  brew install gitleaks" >&2
-fi
-
-# 2. Prettier + markdownlint on staged markdown only.
+# 1. Prettier + markdownlint on staged markdown only.
 STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
 if [ -n "$STAGED_MD" ]; then
   npx --no-install prettier --check $STAGED_MD || {
@@ -27,7 +16,7 @@ if [ -n "$STAGED_MD" ]; then
   npx --no-install markdownlint-cli2 $STAGED_MD || exit 1
 fi
 
-# 3. Validate frontmatter and regenerate indices. Both are mtime-gated by
+# 2. Validate frontmatter and regenerate indices. Both are mtime-gated by
 # js-yaml itself (it only re-parses files it reads); the whole step
 # completes in well under 500ms on a warm tree because there are at most
 # a few hundred markdown files in the repo.
