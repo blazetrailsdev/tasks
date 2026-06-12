@@ -34,7 +34,3 @@ jobs:
             echo "::error::committed index.md is stale — run 'pnpm build-index' locally and recommit" >&2
             exit 1
           }
-      # Secret scanning runs locally via the `.husky/pre-commit` hook
-      # (`gitleaks protect --staged`, the OSS CLI — no license needed).
-      # The gitleaks-action was removed from CI: gitleaks-action@v2 requires a
-      # paid GITLEAKS_LICENSE for organization repos and fails without it.
