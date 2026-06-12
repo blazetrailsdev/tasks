@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 — attributes + loading behavior tail"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: null
+pr: 3155
 claim: "2026-06-12T17:43:15Z"
 assignee: "f9g2-attributes-and-loading"
 blocked-by: null
