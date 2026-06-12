@@ -1,6 +1,6 @@
 ---
 title: "F-9a — adapter_test core behaviors"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 11
-pr: null
+pr: 3150
 claim: "2026-06-12T16:43:01Z"
 assignee: "f9-adapter-core-behaviors"
 blocked-by: null
