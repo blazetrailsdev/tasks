@@ -1,6 +1,6 @@
 ---
 title: "Alias JOINs to the association name (Rails parity) to enable self-join where-hash disambiguation"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0005-activerecord-gaps"
 cluster: null
