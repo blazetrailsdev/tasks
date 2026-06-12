@@ -1,0 +1,61 @@
+name: auto-finalize-rfc
+
+# `main` is only ever supposed to hold numbered RFCs. Finalizing (assigning the
+# next number, renaming `0000-<slug>` → `NNNN-<slug>`) was a manual pre-merge
+# step that the merge button doesn't run, so placeholders kept landing on main
+# and needed manual repair PRs. This job finalizes them automatically the moment
+# they land — no human, no repair PR.
+
+on:
+  push:
+    branches: [main]
+
+# Serialize runs so two RFCs merging close together can't race on the next
+# number. Queue rather than cancel — every placeholder must be processed.
+concurrency:
+  group: auto-finalize-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Finalize any placeholder RFCs on main
+        run: |
+          set -euo pipefail
+          changed=0
+          shopt -s nullglob
+          for dir in rfcs/0000-* rfcs/draft-*; do
+            [ -d "$dir" ] || continue
+            slug="$(basename "$dir")"
+            # 0000-template is the scaffold, not a placeholder awaiting a number.
+            [ "$slug" = "0000-template" ] && continue
+            echo "::notice::auto-finalizing $slug"
+            node scripts/finalize-rfc.mjs "$slug"
+            changed=1
+          done
+          if [ "$changed" = 0 ]; then
+            echo "no placeholder RFCs to finalize"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "auto-finalize: assign RFC number(s) on main"
+          # This push re-triggers ci.yml (validates the finalized state) and this
+          # workflow (which then finds no placeholder and no-ops). Self-terminating.
+          git push

@@ -82,6 +82,11 @@ for (const f of mdFiles) {
   text = text.split(draftDir).join(newId); // draft-<slug> → NNNN-<slug>
   if (f.endsWith("README.md")) {
     text = text.replace(/^# RFC —/m, `# RFC ${next} —`); // inject number into H1
+    // Strip the template's pre-merge placeholder comment — once numbered it is
+    // stale and self-contradictory (it tells readers the RFC is still unnumbered
+    // and points at this very script). Remove the whole HTML comment block plus
+    // one trailing blank line.
+    text = text.replace(/<!--[^]*?Unnumbered until merge[^]*?-->\n\n?/, "");
   }
   if (text !== before) console.log(`  rewrite ${f.slice(REPO_ROOT.length + 1)}`);
   if (!dryRun) writeFileSync(f, text);
