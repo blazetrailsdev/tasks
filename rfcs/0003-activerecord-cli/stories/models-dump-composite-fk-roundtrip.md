@@ -7,6 +7,7 @@ cluster: deferred
 deps: []
 deps-rfc: []
 est-loc: 30
+priority: 30
 pr: null
 claim: "2026-06-07T19:19:52Z"
 assignee: "models-dump-composite-fk-roundtrip"

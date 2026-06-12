@@ -7,7 +7,7 @@ cluster: null
 deps: ["materialize-declares-rollout-waves"]
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

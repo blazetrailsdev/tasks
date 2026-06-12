@@ -7,7 +7,7 @@ cluster: rfc-commands
 deps: [frontmatter-block-editor]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null

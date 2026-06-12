@@ -7,6 +7,7 @@ cluster: connection-pool
 deps: []
 deps-rfc: []
 est-loc: 200
+priority: 13
 pr: null
 claim: null
 assignee: null

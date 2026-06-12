@@ -7,6 +7,7 @@ cluster: guardrails
 deps: ["repoint-references"]
 deps-rfc: []
 est-loc: 100
+priority: 26
 pr: null
 claim: null
 assignee: null

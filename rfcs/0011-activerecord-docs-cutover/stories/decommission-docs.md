@@ -12,6 +12,7 @@ deps:
   - "migrate-schema-ts"
 deps-rfc: []
 est-loc: 50
+priority: 25
 pr: null
 claim: null
 assignee: null

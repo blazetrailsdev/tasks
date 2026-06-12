@@ -7,7 +7,7 @@ cluster: set-ops
 deps: ["set-operations-arel-nodes"]
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

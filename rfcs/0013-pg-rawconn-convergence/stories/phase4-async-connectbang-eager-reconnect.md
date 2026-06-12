@@ -7,7 +7,7 @@ cluster: pg-rawconn-convergence
 deps: ["phase3-unify-connection-slot"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

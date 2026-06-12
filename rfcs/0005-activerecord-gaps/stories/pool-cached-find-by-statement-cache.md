@@ -7,6 +7,7 @@ cluster: connection-pool
 deps: ["pool-allow-retry-forwarding"]
 deps-rfc: []
 est-loc: 50
+priority: 12
 pr: null
 claim: null
 assignee: null

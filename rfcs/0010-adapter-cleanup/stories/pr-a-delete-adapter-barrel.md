@@ -7,6 +7,7 @@ cluster: adapter-cleanup
 deps: []
 deps-rfc: []
 est-loc: 150
+priority: 14
 pr: null
 claim: null
 assignee: null

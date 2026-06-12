@@ -7,7 +7,7 @@ cluster: api-compare
 deps: ["options-kwargs-key-parity"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null
