@@ -2,7 +2,7 @@
 title: "Audit: map every TS JoinDependency member to its Rails counterpart"
 status: draft
 updated: 2026-06-12
-rfc: "0000-join-dependency-fidelity"
+rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
 deps: []
 deps-rfc: []

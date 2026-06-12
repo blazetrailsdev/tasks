@@ -1,12 +1,12 @@
 ---
-title: "Extract PG exclusion/unique-constraint statements into PostgreSQLSchemaStatements"
+title: "Extract PG foreign-key statements into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
-rfc: "0000-adapter-layout-fidelity"
+rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
-deps: ["extract-pg-schema-statements-fks"]
+deps: ["extract-pg-schema-statements-alter-table"]
 deps-rfc: []
-est-loc: 420
+est-loc: 480
 priority: null
 pr: null
 claim: null
@@ -29,11 +29,14 @@ addition), so the group is sized to ~200–250 moved lines; if it still exceeds
 the 500 LOC ceiling, ship the slice that fits and register the remainder with
 `pnpm tasks new`.
 
-**This story (~190 moved lines):** the constraint block at adapter
-lines ~4,845–5,200 — `addExclusionConstraint`, `removeExclusionConstraint`,
-`addUniqueConstraint`, `removeUniqueConstraint`, `exclusionConstraints`,
-`uniqueConstraints`, `checkConstraints`, and their name/options resolution
-helpers.
+**This story (~250 moved lines):** `foreignKeys` (~49),
+`addForeignKey`, `foreignKeyExists` (~53), `foreignKeyColumnFor`,
+`checkAllForeignKeysValidBang`, `validateConstraint`,
+`validateCheckConstraint`, `validateForeignKey`, and the extract helpers
+`assertValidDeferrable`, `extractForeignKeyAction`,
+`extractConstraintDeferrable`. `disableReferentialIntegrity` is confirmed to
+live in Rails' `postgresql/referential_integrity.rb` — move it to the mirrored
+`postgresql/referential-integrity.ts`, not to schema-statements.
 
 ## Acceptance criteria
 

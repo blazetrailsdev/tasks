@@ -1,5 +1,5 @@
 ---
-rfc: "0000-adapter-layout-fidelity"
+rfc: "0026-adapter-layout-fidelity"
 title: "Adapter layout fidelity — adapter classes hold only what their Rails counterpart holds"
 status: draft
 created: 2026-06-12
@@ -14,11 +14,7 @@ related-rfcs:
   - "0025-fidelity-verification-tooling"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-adapter-layout-fidelity and
-     the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. Never use a `draft-` prefix. -->
-
-# RFC — Adapter layout fidelity
+# RFC 0026 — Adapter layout fidelity
 
 ## Summary
 

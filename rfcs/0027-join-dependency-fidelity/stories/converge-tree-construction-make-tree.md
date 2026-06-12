@@ -2,7 +2,7 @@
 title: "Converge tree construction to Rails' build-once make_tree/walk_tree"
 status: draft
 updated: 2026-06-12
-rfc: "0000-join-dependency-fidelity"
+rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
 deps: ["audit-join-dependency-rails-mapping"]
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "Extract PG alter-table statements into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
-rfc: "0000-adapter-layout-fidelity"
+rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-columns-types"]
 deps-rfc: []

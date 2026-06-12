@@ -1,5 +1,5 @@
 ---
-rfc: "0000-join-dependency-fidelity"
+rfc: "0027-join-dependency-fidelity"
 title: "JoinDependency fidelity — converge internal state model to Rails' build-once walk/construct shape"
 status: draft
 created: 2026-06-12
@@ -13,11 +13,7 @@ related-rfcs:
   - "0022-relation-arel-ast-convergence"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-join-dependency-fidelity and
-     the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. Never use a `draft-` prefix. -->
-
-# RFC — JoinDependency fidelity
+# RFC 0027 — JoinDependency fidelity
 
 ## Summary
 

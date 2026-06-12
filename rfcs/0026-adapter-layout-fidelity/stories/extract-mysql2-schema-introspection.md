@@ -2,7 +2,7 @@
 title: "Extract MySQL introspection statements from mysql2-adapter into mysql/schema-statements"
 status: draft
 updated: 2026-06-12
-rfc: "0000-adapter-layout-fidelity"
+rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: []
 deps-rfc: []
