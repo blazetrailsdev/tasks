@@ -1,7 +1,7 @@
 ---
 title: "Phase 4 — async connectBang + eager PG reconnect to delete the rawConnectionForBlock seam"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-12
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
 deps: ["phase3-unify-connection-slot"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T18:14:52Z"
+assignee: "phase4-async-connectbang-eager-reconnect"
 blocked-by: null
 ---
 
