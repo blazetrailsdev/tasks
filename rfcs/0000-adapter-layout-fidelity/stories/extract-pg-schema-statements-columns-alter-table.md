@@ -1,12 +1,12 @@
 ---
-title: "Extract PG schema/database/session statements into PostgreSQLSchemaStatements"
+title: "Extract PG column/alter-table statements into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
 rfc: "0000-adapter-layout-fidelity"
 cluster: adapter-layout
-deps: []
+deps: ["extract-pg-schema-statements-indexes"]
 deps-rfc: []
-est-loc: 350
+est-loc: 480
 priority: null
 pr: null
 claim: null
@@ -30,12 +30,13 @@ the `extensions` family) stay put. Code motion counts double in the diff
 still exceeds the 500 LOC ceiling, ship the slice that fits and register the
 remainder with `pnpm tasks new`.
 
-**This story (~150 moved lines):** `createSchema`, `dropSchema`,
-`schemaExists`, `schemaNames`, `currentSchema`, `schemaSearchPath` /
-`setSchemaSearchPath`, `createDatabase`, `dropDatabase`, `recreateDatabase`,
-`databaseExists`, `currentDatabase`, `encoding`, `collation`, `ctype`,
-`clientMinMessages` / `setClientMinMessages`, plus private helpers they own
-(e.g. `quoteSchemaName`).
+**This story (~250 moved lines):** `columns` (~112 lines),
+`addColumn`, `changeColumn`, `renameColumn`, `changeColumnDefault`,
+`changeColumnNull`, `buildChangeColumnDefinition`,
+`buildChangeColumnDefaultDefinition`, `changeColumnComment`,
+`changeTableComment`, `createJoinTable`, `columnNamesFromColumnNumbers`, and
+`columnsForDistinct`. `typeToSql` moves only if Rails houses it in
+`schema_statements.rb` — check placement first.
 
 ## Acceptance criteria
 

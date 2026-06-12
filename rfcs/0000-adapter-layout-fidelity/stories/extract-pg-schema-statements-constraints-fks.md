@@ -1,12 +1,12 @@
 ---
-title: "Extract PG schema/database/session statements into PostgreSQLSchemaStatements"
+title: "Extract PG foreign-key/constraint statements into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
 rfc: "0000-adapter-layout-fidelity"
 cluster: adapter-layout
-deps: []
+deps: ["extract-pg-schema-statements-columns-alter-table"]
 deps-rfc: []
-est-loc: 350
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -30,12 +30,14 @@ the `extensions` family) stay put. Code motion counts double in the diff
 still exceeds the 500 LOC ceiling, ship the slice that fits and register the
 remainder with `pnpm tasks new`.
 
-**This story (~150 moved lines):** `createSchema`, `dropSchema`,
-`schemaExists`, `schemaNames`, `currentSchema`, `schemaSearchPath` /
-`setSchemaSearchPath`, `createDatabase`, `dropDatabase`, `recreateDatabase`,
-`databaseExists`, `currentDatabase`, `encoding`, `collation`, `ctype`,
-`clientMinMessages` / `setClientMinMessages`, plus private helpers they own
-(e.g. `quoteSchemaName`).
+**This story (~230 moved lines):** `foreignKeys`, `addForeignKey`,
+`foreignKeyExists`, `foreignKeyColumnFor`, `checkAllForeignKeysValidBang`,
+`validateConstraint`, `validateCheckConstraint`, `validateForeignKey`,
+exclusion/unique-constraint methods, and the extract helpers
+`assertValidDeferrable`, `extractForeignKeyAction`,
+`extractConstraintDeferrable`. `disableReferentialIntegrity` belongs to
+`postgresql/referential-integrity.ts` (mirrors Rails) — move it there, not to
+schema-statements.
 
 ## Acceptance criteria
 

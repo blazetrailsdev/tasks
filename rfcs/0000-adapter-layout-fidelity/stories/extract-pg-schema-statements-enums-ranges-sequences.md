@@ -1,12 +1,12 @@
 ---
-title: "Extract PG enum/range/sequence statements from adapter into PostgreSQLSchemaStatements"
+title: "Extract PG enum/range/sequence statements into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
 rfc: "0000-adapter-layout-fidelity"
 cluster: adapter-layout
-deps: ["extract-pg-schema-statements-indexes-constraints"]
+deps: ["extract-pg-schema-statements-constraints-fks"]
 deps-rfc: []
-est-loc: 400
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -17,34 +17,29 @@ blocked-by: null
 ## Context
 
 `packages/activerecord/src/connection-adapters/postgresql-adapter.ts` inlines
-~1,800 lines of schema-management implementation (roughly lines 2,671–4,443)
-that Rails keeps in a separate mixin module,
-`activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb`.
-The TS destination files already exist:
-`postgresql/schema-statements.ts` holds the (complete) `SchemaStatements`
-interface — all 95 Rails method names are covered — and
-`postgresql/schema-statements-class.ts` holds `PostgreSQLSchemaStatements
-extends SchemaStatements` with only `dropTable` so far. This is pure code
-motion: move implementations out of `PostgreSQLAdapter` into
-`PostgreSQLSchemaStatements` (or host-interface functions per the repo mixin
-convention), leaving the adapter delegating. No behavior change; existing
-tests are the safety net. The three extraction stories touch the same two
-files, so they are dependency-chained and must ship sequentially from `main`
-(no stacking).
+~1,600 lines of schema-management implementation (lines ~2,671–4,443) that
+Rails keeps in `postgresql/schema_statements.rb`. The TS
+`postgresql/schema-statements.ts` interface already covers all 95 Rails method
+names; `postgresql/schema-statements-class.ts` holds only `dropTable`. This
+story is pure code motion: move the listed group into
+`PostgreSQLSchemaStatements` (or host-interface functions per the CLAUDE.md
+mixin convention), leaving the adapter delegating. Verify each method's
+placement against the Rails file — methods Rails keeps in the adapter (e.g.
+the `extensions` family) stay put. Code motion counts double in the diff
+(deletion + addition), so the group is sized to ~200–250 moved lines; if it
+still exceeds the 500 LOC ceiling, ship the slice that fits and register the
+remainder with `pnpm tasks new`.
 
-**This story:** the enum / range / sequence group — `createEnum`,
-`dropEnum`, `renameEnum`, `addEnumValue`, `renameEnumValue`, `enumTypes`,
-`createRange`, `dropRange`, `defaultSequenceName`, `serialSequence`,
-`setPkSequenceBang`, `resetPkSequenceBang`, `pkAndSequenceFor`,
-`primaryKeys`, plus table-introspection residue that belongs to the Rails
-module (`tableOptions`, `tableComment`, `tablePartitionDefinition`,
-`inheritedTableNames`) and remaining private helpers. Closes out the
-extraction: after this story the adapter should hold no inline
-schema-statements implementations.
+**This story (~230 moved lines):** `createEnum`, `dropEnum`,
+`renameEnum`, `addEnumValue`, `renameEnumValue`, `enumTypes`, `createRange`,
+`dropRange`, `defaultSequenceName`, `serialSequence`,
+`serialFromDefaultFunction`, `sequenceNameFromParts`, `setPkSequence`,
+`resetPkSequence`, `pkAndSequenceFor`, and `primaryKeys`. Closes out the PG
+extraction: after this story the adapter should hold no inline implementation
+of a method Rails houses in `postgresql/schema_statements.rb`.
 
 ## Acceptance criteria
 
-- [ ] Listed methods live in `postgresql/schema-statements-class.ts`; the adapter only delegates.
-- [ ] Adapter retains no inline implementation of any `SchemaStatements` interface method.
+- [ ] Listed methods live in the mirrored module file; the adapter only delegates.
 - [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters.
-- [ ] Diff under the 500 LOC ceiling (pure motion; excluding `.md`).
+- [ ] PR diff under the 500 LOC ceiling; if the group exceeds it, ship the slice that fits and register the remainder as a new story.

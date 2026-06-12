@@ -61,8 +61,14 @@ module file (`*-schema-statements-class.ts` extending the abstract
 convention), leaving the adapter delegating. The already-written interfaces in
 `postgresql/schema-statements.ts` / `mysql/schema-statements.ts` are the
 contracts to satisfy. No behavior change; the existing test suite is the
-safety net. Stories touching the same files are dependency-chained and ship
-sequentially from `main` (no stacking).
+safety net.
+
+Code motion counts double against the 500 LOC PR ceiling (every moved line is
+a deletion plus an addition), so stories are sized to ~200–250 moved lines
+each: six for the PG block, two for mysql2, one for sqlite3. Stories touching
+the same files are dependency-chained and ship sequentially from `main` (no
+stacking); if a group still exceeds the ceiling, the implementer ships the
+slice that fits and registers the remainder with `pnpm tasks new`.
 
 ## Alternatives considered
 
@@ -76,10 +82,14 @@ sequentially from `main` (no stacking).
 ## Rollout
 
 1. PostgreSQL extraction (chained) —
-   `extract-pg-schema-statements-schemas-databases`,
-   `extract-pg-schema-statements-indexes-constraints`,
+   `extract-pg-schema-statements-schemas-databases` →
+   `extract-pg-schema-statements-tables-introspection` →
+   `extract-pg-schema-statements-indexes` →
+   `extract-pg-schema-statements-columns-alter-table` →
+   `extract-pg-schema-statements-constraints-fks` →
    `extract-pg-schema-statements-enums-ranges-sequences`
-2. MySQL extraction — `extract-mysql2-schema-statements`
+2. MySQL extraction (chained) — `extract-mysql2-schema-introspection` →
+   `extract-mysql2-schema-statements-class`
 3. SQLite slice — `extract-sqlite3-schema-introspection`
 
 ## Open questions
@@ -91,14 +101,19 @@ sequentially from `main` (no stacking).
 
 ## Stories
 
-| ID                                                                                                                    | Title                                     | Status | Est LOC |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------ | ------- |
-| [extract-pg-schema-statements-schemas-databases](stories/extract-pg-schema-statements-schemas-databases.md)           | PG schema/database/search-path extraction | draft  | 400     |
-| [extract-pg-schema-statements-indexes-constraints](stories/extract-pg-schema-statements-indexes-constraints.md)       | PG index/FK/constraint extraction         | draft  | 450     |
-| [extract-pg-schema-statements-enums-ranges-sequences](stories/extract-pg-schema-statements-enums-ranges-sequences.md) | PG enum/range/sequence extraction         | draft  | 400     |
-| [extract-mysql2-schema-statements](stories/extract-mysql2-schema-statements.md)                                       | MySQL schema-statements extraction        | draft  | 450     |
-| [extract-sqlite3-schema-introspection](stories/extract-sqlite3-schema-introspection.md)                               | SQLite schema-introspection slice         | draft  | 300     |
+| ID                                                                                                                    | Title                                   | Status | Est LOC |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------ | ------- |
+| [extract-pg-schema-statements-schemas-databases](stories/extract-pg-schema-statements-schemas-databases.md)           | PG schema/database/session extraction   | draft  | 350     |
+| [extract-pg-schema-statements-tables-introspection](stories/extract-pg-schema-statements-tables-introspection.md)     | PG table/view introspection extraction  | draft  | 400     |
+| [extract-pg-schema-statements-indexes](stories/extract-pg-schema-statements-indexes.md)                               | PG index statements extraction          | draft  | 480     |
+| [extract-pg-schema-statements-columns-alter-table](stories/extract-pg-schema-statements-columns-alter-table.md)       | PG column/alter-table extraction        | draft  | 480     |
+| [extract-pg-schema-statements-constraints-fks](stories/extract-pg-schema-statements-constraints-fks.md)               | PG FK/constraint extraction             | draft  | 450     |
+| [extract-pg-schema-statements-enums-ranges-sequences](stories/extract-pg-schema-statements-enums-ranges-sequences.md) | PG enum/range/sequence extraction       | draft  | 450     |
+| [extract-mysql2-schema-introspection](stories/extract-mysql2-schema-introspection.md)                                 | MySQL introspection extraction          | draft  | 480     |
+| [extract-mysql2-schema-statements-class](stories/extract-mysql2-schema-statements-class.md)                           | MySQL SchemaStatements class relocation | draft  | 450     |
+| [extract-sqlite3-schema-introspection](stories/extract-sqlite3-schema-introspection.md)                               | SQLite schema-introspection slice       | draft  | 300     |
 
 ## Changelog
 
 - 2026-06-12: initial RFC; PG stories moved in from 0010-adapter-cleanup
+- 2026-06-12: re-sized stories to respect the doubled diff cost of code motion (3 PG stories → 6; mysql2 → 2)
