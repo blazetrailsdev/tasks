@@ -2,7 +2,7 @@
 title: "ESLint: ban raw SQL strings outside connection-adapters/tasks (enforce the arel-only rule)"
 status: draft
 updated: 2026-06-12
-rfc: "0000-fidelity-verification-tooling"
+rfc: "0025-fidelity-verification-tooling"
 cluster: lint
 deps: []
 deps-rfc: []

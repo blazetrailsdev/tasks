@@ -1,5 +1,5 @@
 ---
-rfc: "0000-fidelity-verification-tooling"
+rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
 status: draft
 created: 2026-06-12
@@ -13,11 +13,7 @@ clusters:
   - lint
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-fidelity-verification-tooling
-     and the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. Never use a `draft-` prefix. -->
-
-# RFC — Fidelity verification tooling
+# RFC 0025 — Fidelity verification tooling
 
 ## Summary
 

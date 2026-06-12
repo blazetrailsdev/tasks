@@ -2,7 +2,7 @@
 title: "api:compare: per-method Ruby option-key vs TS options-interface diff"
 status: draft
 updated: 2026-06-12
-rfc: "0000-fidelity-verification-tooling"
+rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
 deps: []
 deps-rfc: []
