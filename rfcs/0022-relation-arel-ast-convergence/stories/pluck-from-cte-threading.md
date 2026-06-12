@@ -1,6 +1,6 @@
 ---
 title: "pluck: thread from()/CTE through the manager (remove arel_table-only projection)"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: from
