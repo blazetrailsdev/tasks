@@ -1,6 +1,6 @@
 ---
 title: "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)"
-status: claimed
+status: done
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 14
-pr: null
+pr: 3160
 claim: "2026-06-12T20:39:17Z"
 assignee: "p3-pg-enum-orm-and-schema"
 blocked-by: null
