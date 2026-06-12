@@ -36,6 +36,10 @@ single command, mirroring how `new` already creates stories via
 - [ ] `--packages` / `--clusters` / `--related` arrays render correctly (reuse
       the block writer from [[frontmatter-block-editor]] if landed, else write the
       template arrays directly since this writes a whole new file).
+- [ ] `--body-file <path>` (optional) seeds the README body from a file instead of
+      the template's placeholder prose, so the full RFC (frontmatter + body) can be
+      authored non-interactively without ever hand-editing the `.md`. Interactive
+      body revision is covered by [[cli-edit-story-body]].
 
 ## Notes
 

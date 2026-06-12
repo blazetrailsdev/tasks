@@ -24,7 +24,7 @@ related-rfcs:
 
 Extend the `pnpm tasks` CLI so that **every** routine operation on this repo —
 authoring and finalizing RFCs, transitioning RFC status, setting array-valued
-frontmatter, editing story bodies — goes through a command, never a hand-edit of
+frontmatter, editing story and RFC bodies — goes through a command, never a hand-edit of
 a `.md` file or a direct call to a standalone script. The goal: an agent (or a
 human) should be able to drive the whole backlog without ever opening a file in an
 editor, and the canonical-checkout safety invariants stay intact.
@@ -102,13 +102,16 @@ below, so it ships first.
   CLI calls it _before_ commit so `new-rfc` and friends fail fast with a clear
   message, rather than producing a commit the pre-commit hook then rejects.
 
-### 5. Story bodies
+### 5. Story and RFC bodies
 
-`refine` already commits arbitrary edited content (body + arrays) from a worktree;
-that remains **the** path for large body edits and needs no change. Optionally, a
-thin `tasks edit <id>` that opens `$EDITOR` on a temp copy and commits via a
-mutator would close the last hand-edit case for humans — proposed as a low-priority
-story, not a blocker.
+`refine` already commits arbitrary edited **story** content (body + arrays) from a
+worktree and needs no change. But there is **no path for an RFC README body** —
+the Summary / Motivation / Design prose — which would leave the "no hand-editing"
+goal unmet for the most common authoring task. Two complementary additions close
+it: `tasks edit <id-or-rfc-slug>` opens `$EDITOR` on a temp copy of a story **or
+an RFC README** and commits via a mutator, and `tasks new-rfc --body-file <path>`
+seeds an RFC body non-interactively at creation. Together with §2 they make RFC
+authoring — frontmatter **and** body — require no hand-edits.
 
 ## Alternatives considered
 
@@ -128,7 +131,8 @@ story, not a blocker.
 3. **story-fields** — `cli-set-deps` (depends on the block editor).
 4. **guardrails** — `ci-guard-no-placeholder-on-main`, `validate-as-library` (both
    independent; land any time).
-5. **story-fields (optional)** — `cli-edit-story-body`.
+5. **story-fields** — `cli-edit-story-body` (story + RFC body editing; required
+   for the "no hand-editing bodies" scope, independent of the rest).
 
 ## Open questions
 
@@ -142,19 +146,23 @@ story, not a blocker.
 
 ## Stories
 
-| ID                                                                            | Title                                | Status | Cluster            | Est LOC |
-| ----------------------------------------------------------------------------- | ------------------------------------ | ------ | ------------------ | ------- |
-| [frontmatter-block-editor](stories/frontmatter-block-editor.md)               | Array-safe frontmatter setter        | draft  | frontmatter-editor | 130     |
-| [cli-new-rfc](stories/cli-new-rfc.md)                                         | `tasks new-rfc` — scaffold an RFC    | draft  | rfc-commands       | 110     |
-| [cli-finalize-rfc](stories/cli-finalize-rfc.md)                               | `tasks finalize` — assign RFC number | draft  | rfc-commands       | 90      |
-| [cli-rfc-edit](stories/cli-rfc-edit.md)                                       | `tasks rfc` — RFC frontmatter edits  | draft  | rfc-commands       | 120     |
-| [cli-set-deps](stories/cli-set-deps.md)                                       | `tasks set-deps` / `set-deps-rfc`    | draft  | story-fields       | 90      |
-| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Block `0000-` placeholders on main   | draft  | guardrails         | 70      |
-| [validate-as-library](stories/validate-as-library.md)                         | Export `validate()` for CLI-time use | draft  | guardrails         | 90      |
-| [cli-edit-story-body](stories/cli-edit-story-body.md)                         | `tasks edit` — `$EDITOR` body edits  | draft  | story-fields       | 80      |
+| ID                                                                            | Title                                 | Status | Cluster            | Est LOC |
+| ----------------------------------------------------------------------------- | ------------------------------------- | ------ | ------------------ | ------- |
+| [frontmatter-block-editor](stories/frontmatter-block-editor.md)               | Array-safe frontmatter setter         | draft  | frontmatter-editor | 130     |
+| [cli-new-rfc](stories/cli-new-rfc.md)                                         | `tasks new-rfc` — scaffold an RFC     | draft  | rfc-commands       | 110     |
+| [cli-finalize-rfc](stories/cli-finalize-rfc.md)                               | `tasks finalize` — assign RFC number  | draft  | rfc-commands       | 90      |
+| [cli-rfc-edit](stories/cli-rfc-edit.md)                                       | `tasks rfc` — RFC frontmatter edits   | draft  | rfc-commands       | 120     |
+| [cli-set-deps](stories/cli-set-deps.md)                                       | `tasks set-deps` / `set-deps-rfc`     | draft  | story-fields       | 90      |
+| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Block `0000-` placeholders on main    | draft  | guardrails         | 70      |
+| [validate-as-library](stories/validate-as-library.md)                         | Export `validate()` for CLI-time use  | draft  | guardrails         | 90      |
+| [cli-edit-story-body](stories/cli-edit-story-body.md)                         | `tasks edit` — story + RFC body edits | draft  | story-fields       | 100     |
 
 ## Changelog
 
 - 2026-06-11: initial RFC — eliminate hand-editing of the tasks repo by extending
   the `pnpm tasks` CLI; surfaced while cleaning up after a skipped-finalize
   incident that left a `0000-` placeholder on `main`.
+- 2026-06-12: review pass — extend `cli-edit-story-body` to cover RFC README
+  bodies (+ `new-rfc --body-file`) so the "no hand-editing bodies" scope is
+  actually met; point the CI guard's remediation at the existing
+  `scripts/finalize-rfc.mjs` so it stays landable before `tasks finalize` exists.

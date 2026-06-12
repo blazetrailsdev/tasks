@@ -29,7 +29,10 @@ remembered.
 - [ ] The check is scoped so it does **not** fire on PR branches (placeholders are
       legitimate there) — e.g. gated on branch/ref or run as a dedicated CI step
       on the merge target only.
-- [ ] Failure message names the offending dir and points at `tasks finalize`.
+- [ ] Failure message names the offending dir and points at the existing
+      `scripts/finalize-rfc.mjs` (switching to `tasks finalize` once
+      [[cli-finalize-rfc]] lands). The remediation it names must always exist — so
+      this story stays landable before the CLI wrapper does.
 - [ ] A test/fixture demonstrates the guard tripping and passing.
 
 ## Notes
