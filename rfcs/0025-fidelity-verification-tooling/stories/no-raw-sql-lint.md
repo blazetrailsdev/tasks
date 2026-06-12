@@ -1,6 +1,6 @@
 ---
 title: "ESLint: ban raw SQL strings outside connection-adapters/tasks (enforce the arel-only rule)"
-status: ready
+status: claimed
 updated: 2026-06-12
 rfc: "0025-fidelity-verification-tooling"
 cluster: lint
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T21:15:15Z"
+assignee: "no-raw-sql-lint"
 blocked-by: null
 ---
 
