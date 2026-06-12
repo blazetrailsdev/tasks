@@ -2,7 +2,7 @@
 title: "Array-safe, comment-preserving frontmatter setter"
 status: draft
 updated: 2026-06-11
-rfc: "0000-tasks-cli-coverage"
+rfc: "0024-tasks-cli-coverage"
 cluster: frontmatter-editor
 deps: []
 deps-rfc: []

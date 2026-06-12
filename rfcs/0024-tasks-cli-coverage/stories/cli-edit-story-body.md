@@ -2,7 +2,7 @@
 title: "tasks edit — $EDITOR body edits for stories AND RFC READMEs"
 status: draft
 updated: 2026-06-11
-rfc: "0000-tasks-cli-coverage"
+rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
 deps: []
 deps-rfc: []
