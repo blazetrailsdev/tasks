@@ -1,6 +1,6 @@
 ---
 title: "pluck: thread from()/CTE through the manager (remove arel_table-only projection)"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0022-relation-arel-ast-convergence"
 cluster: from
@@ -8,7 +8,7 @@ deps: ["from-clause-arel-manager"]
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
+pr: 3148
 claim: "2026-06-12T16:17:56Z"
 assignee: "pluck-from-cte-threading"
 blocked-by: null
