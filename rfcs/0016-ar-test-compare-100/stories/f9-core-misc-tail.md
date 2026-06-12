@@ -1,6 +1,6 @@
 ---
 title: "F-9g1 — calculations + SQL-sanitization tail"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
