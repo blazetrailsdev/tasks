@@ -91,9 +91,12 @@ below, so it ships first.
 
 ### 4. Guardrails (the process fix)
 
-- **CI / validator rule:** fail when any `rfcs/0000-*` (or legacy `draft-*`)
-  directory is present on `main`. This makes finalize unskippable — a forgotten
-  finalize fails the branch instead of silently corrupting `main`.
+- **Auto-finalize on merge (shipped):** the `auto-finalize-rfc` workflow finalizes
+  any `0000-*`/`draft-*` placeholder the instant it lands on `main` and pushes the
+  renamed result — finalize is no longer a remembered human step (landed ahead of
+  this RFC in #24). The `ci-guard-no-placeholder-on-main` story is now a
+  belt-and-suspenders backstop for the rare case a placeholder _persists_ (action
+  disabled/failed), scoped so it never false-alarms against the self-healing push.
 - **`validate()` as a library:** refactor `validate.mjs` so its core is an
   importable function returning structured errors (today it `process.exit`s). The
   CLI calls it _before_ commit so `new-rfc` and friends fail fast with a clear
@@ -150,7 +153,7 @@ authoring — frontmatter **and** body — require no hand-edits.
 | [cli-finalize-rfc](stories/cli-finalize-rfc.md)                               | `tasks finalize` — assign RFC number  | draft  | rfc-commands       | 90      |
 | [cli-rfc-edit](stories/cli-rfc-edit.md)                                       | `tasks rfc` — RFC frontmatter edits   | draft  | rfc-commands       | 120     |
 | [cli-set-deps](stories/cli-set-deps.md)                                       | `tasks set-deps` / `set-deps-rfc`     | draft  | story-fields       | 90      |
-| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Block `0000-` placeholders on main    | draft  | guardrails         | 70      |
+| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Backstop for placeholders on main     | draft  | guardrails         | 50      |
 | [validate-as-library](stories/validate-as-library.md)                         | Export `validate()` for CLI-time use  | draft  | guardrails         | 90      |
 | [cli-edit-story-body](stories/cli-edit-story-body.md)                         | `tasks edit` — story + RFC body edits | draft  | story-fields       | 100     |
 
@@ -163,3 +166,6 @@ authoring — frontmatter **and** body — require no hand-edits.
   bodies (+ `new-rfc --body-file`) so the "no hand-editing bodies" scope is
   actually met; point the CI guard's remediation at the existing
   `scripts/finalize-rfc.mjs` so it stays landable before `tasks finalize` exists.
+- 2026-06-12: auto-finalize shipped (#24) — `cli-finalize-rfc`'s intent now runs
+  as a push-to-main GitHub Action. Reframed `ci-guard-no-placeholder-on-main` from
+  primary mechanism to a backstop that never races the self-healing finalize push.
