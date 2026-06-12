@@ -1,7 +1,7 @@
 ---
 title: "F-9f — counter_cache reset variants"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T19:52:51Z"
+assignee: "f9-counter-cache-reset"
 blocked-by: null
 ---
 
