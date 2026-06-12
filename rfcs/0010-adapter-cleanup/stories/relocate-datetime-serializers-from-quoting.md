@@ -1,7 +1,7 @@
 ---
 title: "Relocate SQL date/time serializers (and residual PG range/int helpers) out of quoting.ts"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-12
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T00:41:59Z"
+assignee: "relocate-datetime-serializers-from-quoting"
 blocked-by: null
 ---
 
