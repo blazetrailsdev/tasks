@@ -79,6 +79,7 @@ Two discrete, independent cleanups (both branch from `main`, no stacking):
 
 ## Changelog
 
+- 2026-06-12: extract-pg-schema-statements-\* stories moved to 0000-adapter-layout-fidelity
 - 2026-06-04: folded in Initiative 3 (adapter hash-only constructor, blocked on
   trails #2700) from `adapter-architecture-cleanup.md` during the RFC 0011
   cutover, so the source doc can be deleted.
