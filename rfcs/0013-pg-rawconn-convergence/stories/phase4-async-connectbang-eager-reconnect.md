@@ -1,6 +1,6 @@
 ---
 title: "Phase 4 — async connectBang + eager PG reconnect to delete the rawConnectionForBlock seam"
-status: claimed
+status: blocked
 updated: 2026-06-12
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
@@ -11,7 +11,7 @@ priority: 12
 pr: null
 claim: "2026-06-12T18:14:52Z"
 assignee: "phase4-async-connectbang-eager-reconnect"
-blocked-by: null
+blocked-by: "Blocked on phase4a-eager-reset-barrier: deleting the rawConnectionForBlock seam regresses PG's async reset lifecycle (third structural blocker — _inFlightReset drain + post-reset configure_connection must run unconditionally per use; base 'return this._connection' bypasses it; confirmed by 'reset with transaction' failing). Phase-3 seam is the resting point until phase4a lands. Investigated 2026-06-12; tree reverted clean, no PR."
 ---
 
 ## Context
