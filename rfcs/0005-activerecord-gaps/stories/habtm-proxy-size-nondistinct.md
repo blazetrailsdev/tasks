@@ -1,6 +1,6 @@
 ---
 title: "HABTM collection proxy size() returns deduped count for non-distinct collections"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 20
-pr: null
+pr: 3143
 claim: "2026-06-12T01:20:59Z"
 assignee: "habtm-proxy-size-nondistinct"
 blocked-by: null
