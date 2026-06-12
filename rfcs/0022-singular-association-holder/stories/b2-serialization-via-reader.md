@@ -1,7 +1,7 @@
 ---
 title: "Serialization include through the reader"
-status: in-progress
-updated: 2026-06-11
+status: done
+updated: 2026-06-12
 rfc: "0022-singular-association-holder"
 cluster: associations
 deps: ["b1-singular-association-holder"]
