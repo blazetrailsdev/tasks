@@ -1,6 +1,6 @@
 ---
 title: "Array-safe, comment-preserving frontmatter setter"
-status: in-progress
+status: done
 updated: 2026-06-12
 rfc: "0024-tasks-cli-coverage"
 cluster: frontmatter-editor
