@@ -1,10 +1,10 @@
 ---
-title: "Extract PG enum/range/sequence statements from adapter into PostgreSQLSchemaStatements"
+title: "Extract PG schema/database/search-path statements from adapter into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
-rfc: "0010-adapter-cleanup"
-cluster: adapter-cleanup
-deps: ["extract-pg-schema-statements-indexes-constraints"]
+rfc: "0000-adapter-layout-fidelity"
+cluster: adapter-layout
+deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
@@ -32,19 +32,15 @@ tests are the safety net. The three extraction stories touch the same two
 files, so they are dependency-chained and must ship sequentially from `main`
 (no stacking).
 
-**This story:** the enum / range / sequence group — `createEnum`,
-`dropEnum`, `renameEnum`, `addEnumValue`, `renameEnumValue`, `enumTypes`,
-`createRange`, `dropRange`, `defaultSequenceName`, `serialSequence`,
-`setPkSequenceBang`, `resetPkSequenceBang`, `pkAndSequenceFor`,
-`primaryKeys`, plus table-introspection residue that belongs to the Rails
-module (`tableOptions`, `tableComment`, `tablePartitionDefinition`,
-`inheritedTableNames`) and remaining private helpers. Closes out the
-extraction: after this story the adapter should hold no inline
-schema-statements implementations.
+**This story:** the schema/database/session group — `createDatabase`,
+`dropDatabase`, `recreateDatabase`, `createSchema`, `dropSchema`,
+`schemaExists`, `schemaNames`, `currentSchema`, `schemaSearchPath` /
+`setSchemaSearchPath`, `currentDatabase`, `encoding`, `collation`, `ctype`,
+`clientMinMessages` / `setClientMinMessages`, plus their private helpers
+(e.g. `parseSchemaQualifiedName`, `quoteSchemaName`).
 
 ## Acceptance criteria
 
-- [ ] Listed methods live in `postgresql/schema-statements-class.ts`; the adapter only delegates.
-- [ ] Adapter retains no inline implementation of any `SchemaStatements` interface method.
+- [ ] Listed methods live in `postgresql/schema-statements-class.ts` (or host-interface functions in `postgresql/schema-statements.ts`); the adapter only delegates.
 - [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters.
 - [ ] Diff under the 500 LOC ceiling (pure motion; excluding `.md`).

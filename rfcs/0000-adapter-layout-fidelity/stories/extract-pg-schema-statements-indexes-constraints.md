@@ -1,12 +1,12 @@
 ---
-title: "Extract PG schema/database/search-path statements from adapter into PostgreSQLSchemaStatements"
+title: "Extract PG index/foreign-key/constraint statements from adapter into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
-rfc: "0010-adapter-cleanup"
-cluster: adapter-cleanup
-deps: []
+rfc: "0000-adapter-layout-fidelity"
+cluster: adapter-layout
+deps: ["extract-pg-schema-statements-schemas-databases"]
 deps-rfc: []
-est-loc: 400
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -32,15 +32,17 @@ tests are the safety net. The three extraction stories touch the same two
 files, so they are dependency-chained and must ship sequentially from `main`
 (no stacking).
 
-**This story:** the schema/database/session group — `createDatabase`,
-`dropDatabase`, `recreateDatabase`, `createSchema`, `dropSchema`,
-`schemaExists`, `schemaNames`, `currentSchema`, `schemaSearchPath` /
-`setSchemaSearchPath`, `currentDatabase`, `encoding`, `collation`, `ctype`,
-`clientMinMessages` / `setClientMinMessages`, plus their private helpers
-(e.g. `parseSchemaQualifiedName`, `quoteSchemaName`).
+**This story:** the index / foreign-key / constraint group — `indexes`,
+`indexNameExists`, `addIndex`/`removeIndex`/`renameIndex` PG overrides,
+`foreignKeys`, `foreignKeyColumnFor`, exclusion-constraint and
+unique-constraint methods (`add/removeExclusionConstraint`,
+`add/removeUniqueConstraint`, `exclusionConstraints`, `uniqueConstraints`),
+`checkConstraints`, `renameTable`, `renameColumn`, and their private
+helpers (quoted include-columns, constraint-name/options resolution,
+deferrable validation).
 
 ## Acceptance criteria
 
-- [ ] Listed methods live in `postgresql/schema-statements-class.ts` (or host-interface functions in `postgresql/schema-statements.ts`); the adapter only delegates.
+- [ ] Listed methods live in `postgresql/schema-statements-class.ts`; the adapter only delegates.
 - [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters.
 - [ ] Diff under the 500 LOC ceiling (pure motion; excluding `.md`).

@@ -1,12 +1,12 @@
 ---
-title: "Extract PG index/foreign-key/constraint statements from adapter into PostgreSQLSchemaStatements"
+title: "Extract PG enum/range/sequence statements from adapter into PostgreSQLSchemaStatements"
 status: draft
 updated: 2026-06-12
-rfc: "0010-adapter-cleanup"
-cluster: adapter-cleanup
-deps: ["extract-pg-schema-statements-schemas-databases"]
+rfc: "0000-adapter-layout-fidelity"
+cluster: adapter-layout
+deps: ["extract-pg-schema-statements-indexes-constraints"]
 deps-rfc: []
-est-loc: 450
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -32,17 +32,19 @@ tests are the safety net. The three extraction stories touch the same two
 files, so they are dependency-chained and must ship sequentially from `main`
 (no stacking).
 
-**This story:** the index / foreign-key / constraint group — `indexes`,
-`indexNameExists`, `addIndex`/`removeIndex`/`renameIndex` PG overrides,
-`foreignKeys`, `foreignKeyColumnFor`, exclusion-constraint and
-unique-constraint methods (`add/removeExclusionConstraint`,
-`add/removeUniqueConstraint`, `exclusionConstraints`, `uniqueConstraints`),
-`checkConstraints`, `renameTable`, `renameColumn`, and their private
-helpers (quoted include-columns, constraint-name/options resolution,
-deferrable validation).
+**This story:** the enum / range / sequence group — `createEnum`,
+`dropEnum`, `renameEnum`, `addEnumValue`, `renameEnumValue`, `enumTypes`,
+`createRange`, `dropRange`, `defaultSequenceName`, `serialSequence`,
+`setPkSequenceBang`, `resetPkSequenceBang`, `pkAndSequenceFor`,
+`primaryKeys`, plus table-introspection residue that belongs to the Rails
+module (`tableOptions`, `tableComment`, `tablePartitionDefinition`,
+`inheritedTableNames`) and remaining private helpers. Closes out the
+extraction: after this story the adapter should hold no inline
+schema-statements implementations.
 
 ## Acceptance criteria
 
 - [ ] Listed methods live in `postgresql/schema-statements-class.ts`; the adapter only delegates.
+- [ ] Adapter retains no inline implementation of any `SchemaStatements` interface method.
 - [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters.
 - [ ] Diff under the 500 LOC ceiling (pure motion; excluding `.md`).
