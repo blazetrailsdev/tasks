@@ -7,7 +7,7 @@ cluster: frontmatter-editor
 deps: []
 deps-rfc: []
 est-loc: 130
-priority: 30
+priority: 15
 pr: null
 claim: null
 assignee: null
