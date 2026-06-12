@@ -1,6 +1,6 @@
 ---
 title: "F-9g1 — calculations + SQL-sanitization tail"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 13
-pr: null
+pr: 3156
 claim: "2026-06-12T18:25:50Z"
 assignee: "f9-core-misc-tail"
 blocked-by: null
