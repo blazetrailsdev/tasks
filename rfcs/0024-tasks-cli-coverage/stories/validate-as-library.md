@@ -2,7 +2,7 @@
 title: "Export validate() as a library for CLI-time, fail-fast checks"
 status: draft
 updated: 2026-06-11
-rfc: "0000-tasks-cli-coverage"
+rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
 deps: []
 deps-rfc: []

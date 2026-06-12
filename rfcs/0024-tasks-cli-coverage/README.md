@@ -1,5 +1,5 @@
 ---
-rfc: "0000-tasks-cli-coverage"
+rfc: "0024-tasks-cli-coverage"
 title: "tasks CLI full coverage — no hand-editing the tasks repo"
 status: draft
 created: 2026-06-11
@@ -15,10 +15,7 @@ related-rfcs:
   - "0001-task-system"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-tasks-cli-coverage and the H1
-     below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
-
-# RFC — tasks CLI full coverage
+# RFC 0024 — tasks CLI full coverage
 
 ## Summary
 
