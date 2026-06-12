@@ -34,6 +34,11 @@ mutation.
       changing nothing.
 - [ ] Errors clearly if the slug is not a `0000-` (or legacy `draft-`) placeholder
       or the dir is absent.
+- [ ] **Strips the template's "Unnumbered until merge" HTML comment** from the
+      README as part of finalization — `finalize-rfc.mjs` leaves it today, so every
+      numbered RFC ends up with a stale, self-contradictory pre-merge note (caught
+      in review of #18). Fix it in the shared core so both the script and the
+      command benefit.
 
 ## Notes
 
