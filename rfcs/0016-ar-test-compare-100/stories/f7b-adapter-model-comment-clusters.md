@@ -1,7 +1,7 @@
 ---
 title: "f7b-adapter-model-comment-clusters"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: clusters
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T15:37:37Z"
+assignee: "f7b-adapter-model-comment-clusters"
 blocked-by: null
 ---
 
