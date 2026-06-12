@@ -1,6 +1,6 @@
 ---
 title: "ESLint: Rails error-class manifest parity + ban bare throw new Error in Rails-mirroring source"
-status: ready
+status: claimed
 updated: 2026-06-12
 rfc: "0025-fidelity-verification-tooling"
 cluster: lint
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-12T20:51:15Z"
+assignee: "error-class-parity-lint"
 blocked-by: null
 ---
 
