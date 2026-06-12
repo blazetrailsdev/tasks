@@ -1,6 +1,6 @@
 ---
 title: "F-9g3 — persistence, instrumentation + single-skip tail"
-status: claimed
+status: in-progress
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 12
-pr: null
+pr: 3154
 claim: "2026-06-12T18:03:50Z"
 assignee: "f9g3-persistence-and-instrumentation"
 blocked-by: null
