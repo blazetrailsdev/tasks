@@ -4,7 +4,7 @@ status: draft
 updated: 2026-06-12
 rfc: "0000-fidelity-verification-tooling"
 cluster: lint
-deps: ["behavioral-stub-lint"]
+deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -62,8 +62,6 @@ Implementation plan:
 
 ## Notes
 
-The dep on [[behavioral-stub-lint]] exists only because both stories extend
-`scripts/build-rails-privates-manifest.ts` (new emit passes) — serializing
-them avoids a same-file conflict between parallel agents. There is no logical
-dependency; if behavioral-stub is deprioritized, this can run first instead —
-swap the dep direction rather than running both concurrently.
+This story adds an emit pass to `scripts/build-rails-privates-manifest.ts`;
+if a future story also extends that script, serialize via `deps` rather than
+running both concurrently (same-file conflict between parallel agents).
