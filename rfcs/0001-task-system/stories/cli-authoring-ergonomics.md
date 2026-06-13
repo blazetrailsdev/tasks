@@ -1,7 +1,7 @@
 ---
 title: "tasks CLI: authoring ergonomics — new --status/--body-file, standalone reindex + fmt"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-13
 rfc: "0001-task-system"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T01:32:05Z"
+assignee: "cli-authoring-ergonomics"
 blocked-by: null
 ---
 
