@@ -1,6 +1,6 @@
 ---
 title: "api:compare: literal parameter-default + constant parity report"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: ["options-kwargs-key-parity"]
 deps-rfc: []
 est-loc: 250
 priority: 16
-pr: null
+pr: 3191
 claim: "2026-06-13T13:19:11Z"
 assignee: "constants-defaults-parity"
 blocked-by: null
