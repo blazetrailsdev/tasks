@@ -1,6 +1,6 @@
 ---
 title: "F-9c — adapter_test exception translation + referential integrity (MySQL/PG)"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 170
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T02:19:09Z"
+assignee: "f9c-adapter-exception-translation-refint"
 blocked-by: null
 ---
 
