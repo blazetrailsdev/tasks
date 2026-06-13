@@ -1,7 +1,7 @@
 ---
 title: "(optional) Converge onto one @association_cache map"
-status: draft
-updated: 2026-06-10
+status: ready
+updated: 2026-06-13
 rfc: "0022-singular-association-holder"
 cluster: associations
 deps: ["b4-delete-cached-associations"]
