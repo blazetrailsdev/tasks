@@ -1,6 +1,6 @@
 ---
 title: "Enum assertValidValue not enforced on mass-assignment/writeAttribute"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: null
+pr: 3220
 claim: "2026-06-13T21:42:34Z"
 assignee: "enum-assert-valid-value-only-on-setter"
 blocked-by: null
