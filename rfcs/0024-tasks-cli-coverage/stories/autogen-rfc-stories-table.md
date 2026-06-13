@@ -1,6 +1,6 @@
 ---
 title: "Auto-regenerate the Stories table in RFC READMEs from frontmatter"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 31
 claim: "2026-06-13T20:42:34Z"
 assignee: "autogen-rfc-stories-table"
 blocked-by: null
