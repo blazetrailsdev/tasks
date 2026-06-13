@@ -1,7 +1,7 @@
 ---
 title: "Extract PG foreign-key statements into PostgreSQLSchemaStatements"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-alter-table"]
