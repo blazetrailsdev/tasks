@@ -29,15 +29,20 @@ materialize the limited DISTINCT primary keys, then rewrites the relation as
 than parents, and MySQL rejects `IN`+`LIMIT` subqueries outright.
 
 trails' `PredicateBuilder` is synchronous and side-effect-free, so it cannot
-run that query mid-construction. The convergence PR approximates: it keeps the
-join (joined-table predicates/orders stay valid) and applies `DISTINCT` on the
-parent key under the same `LIMIT`, which yields the correct distinct-parent set
-on SQLite/PostgreSQL. The residual gaps to close here:
+run that query mid-construction. Rather than emit non-parity SQL, the
+convergence PR **rejects** this combination explicitly
+(`NotImplementedError` from `relation.ts#applyJoinDependencyForArel`) — every
+other eager-subquery shape (no limit, or limit over limitable
+belongs_to/has_one reflections) converts the eager-load to a `LEFT OUTER JOIN`
+faithfully. This story is to lift the restriction by mirroring Rails'
+materialized-ID behavior:
 
-- MySQL/MariaDB still cannot execute `IN (SELECT … LIMIT n)`; faithful behavior
-  needs the materialized-id rewrite.
-- The DISTINCT approximation diverges from Rails' emitted SQL (an `IN (ids)`
-  list) even where it returns the same rows.
+- Execute the limited DISTINCT-pk query (honoring
+  `columns_for_distinct(..., order_values)` for ordered relations), rewrite the
+  value relation as `where(pk: ids)`, and clear limit/offset — so the subquery
+  is portable (works on MySQL/MariaDB, which reject `IN (SELECT … LIMIT n)`).
+- This requires the predicate-builder / `RelationHandler` path to support an
+  async/materializing step, or pre-materialization at `where` time.
 
 See `relation.ts#applyJoinDependencyForArel` and
 `predicate-builder/relation-handler.ts`.
