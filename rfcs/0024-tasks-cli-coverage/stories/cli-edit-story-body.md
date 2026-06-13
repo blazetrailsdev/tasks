@@ -1,6 +1,6 @@
 ---
 title: "tasks edit — $EDITOR body edits for stories AND RFC READMEs"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T19:24:33Z"
+assignee: "cli-edit-story-body"
 blocked-by: null
 ---
 
