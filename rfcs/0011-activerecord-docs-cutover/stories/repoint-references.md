@@ -1,6 +1,6 @@
 ---
 title: "Repoint trails README/CLAUDE AR-doc links"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0011-activerecord-docs-cutover"
 cluster: decommission
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T15:03:15Z"
+assignee: "repoint-references"
 blocked-by: null
 ---
 
