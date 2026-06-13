@@ -1,6 +1,6 @@
 ---
 title: "Aes256Gcm decrypt may downgrade EncryptedContentIntegrity to Decryption error under legacy base64 fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: null
+pr: 3214
 claim: "2026-06-13T21:30:34Z"
 assignee: "encryption-aes-gcm-authtag-integrity-error-parity"
 blocked-by: null
