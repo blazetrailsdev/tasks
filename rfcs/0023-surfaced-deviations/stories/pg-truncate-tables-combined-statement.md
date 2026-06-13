@@ -16,4 +16,25 @@ blocked-by: null
 
 ## Context
 
+Surfaced while porting `adapter_test.rb`'s truncate tests in #3178
+(f9d-adapter-querycache-truncate-pkreset).
+
+Rails' PG adapter overrides `build_truncate_statements` to emit a single
+combined `TRUNCATE TABLE "a", "b", "c"` statement
+(`postgresql/database_statements.rb`), which is atomic and avoids per-table
+referential-integrity ordering problems. Trails already has the PG override
+(`connection-adapters/postgresql/database-statements.ts` `buildTruncateStatements`)
+but it is **not wired onto the PG adapter class**, so `truncateTables` falls back
+to the abstract per-table form (`connection-adapters/abstract/database-statements.ts`
+`truncateTables` → `this.buildTruncateStatements ?? buildTruncateStatements`),
+emitting N separate `TRUNCATE TABLE` statements inside `disableReferentialIntegrity`.
+
+Functionally passes today (the abstract path works under `disableReferentialIntegrity`),
+but deviates from Rails' call graph and loses single-statement atomicity.
+
 ## Acceptance criteria
+
+- [ ] Wire `pgBuildTruncateStatements` onto the PG adapter so `truncateTables`
+      emits Rails' combined `TRUNCATE TABLE a, b, c` form.
+- [ ] `truncate tables` / `truncate tables with query cache` still pass on PG.
+- [ ] `api:compare` / `test:compare` deltas non-negative.
