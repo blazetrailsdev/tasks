@@ -1,6 +1,6 @@
 ---
 title: "calculations: set from() on the count/aggregate manager pre-compile; drop applyFromClause regex + manual bind prepend"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["from-clause-arel-manager"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: 3183
 claim: "2026-06-13T11:18:12Z"
 assignee: "calculations-from-arel-manager"
 blocked-by: null
