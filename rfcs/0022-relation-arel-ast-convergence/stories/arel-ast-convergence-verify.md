@@ -1,6 +1,6 @@
 ---
 title: "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
@@ -8,7 +8,7 @@ deps: ["cte-build-with-expression-ast", "set-operations-bind-threading", "pluck-
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: null
+pr: 3184
 claim: "2026-06-13T11:40:09Z"
 assignee: "arel-ast-convergence-verify"
 blocked-by: null
