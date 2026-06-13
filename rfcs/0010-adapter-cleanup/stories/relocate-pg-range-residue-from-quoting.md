@@ -1,7 +1,7 @@
 ---
 title: "Relocate residual PG encodeRange helper out of postgresql/quoting.ts"
-status: ready
-updated: 2026-06-12
+status: claimed
+updated: 2026-06-13
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T00:32:00Z"
+assignee: "relocate-pg-range-residue-from-quoting"
 blocked-by: null
 ---
 
