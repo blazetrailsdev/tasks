@@ -1,6 +1,6 @@
 ---
 title: "tasks new-rfc — scaffold a placeholder RFC from the template"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T19:36:33Z"
+assignee: "cli-new-rfc"
 blocked-by: null
 ---
 
