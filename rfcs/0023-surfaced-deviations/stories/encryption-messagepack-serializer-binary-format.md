@@ -1,6 +1,6 @@
 ---
 title: "Encryption MessagePackMessageSerializer uses JSON+latin1, not real MessagePack binary (MRI-incompatible)"
-status: draft
+status: ready
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
