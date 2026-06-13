@@ -1,6 +1,6 @@
 ---
 title: "Repoint trails README/CLAUDE AR-doc links"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0011-activerecord-docs-cutover"
 cluster: decommission
