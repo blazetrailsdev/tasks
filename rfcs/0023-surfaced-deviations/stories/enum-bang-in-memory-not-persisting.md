@@ -1,7 +1,7 @@
 ---
 title: "Enum _enum bang setter is in-memory only; Rails persists via update!"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
