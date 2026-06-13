@@ -1,6 +1,6 @@
 ---
 title: "tasks rfc — RFC frontmatter mutations (status, supersede, relate, clusters, packages)"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T19:42:34Z"
+assignee: "cli-rfc-edit"
 blocked-by: null
 ---
 
