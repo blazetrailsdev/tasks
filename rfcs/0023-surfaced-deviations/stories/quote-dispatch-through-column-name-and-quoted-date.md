@@ -1,7 +1,7 @@
 ---
 title: "quote_table_name/quote don't dispatch through quote_column_name/quoted_date"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
