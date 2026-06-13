@@ -1,7 +1,7 @@
 ---
 title: "api:compare: per-method Ruby option-key vs TS options-interface diff"
-status: in-progress
-updated: 2026-06-12
+status: done
+updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
 deps: []
