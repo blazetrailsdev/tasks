@@ -1,7 +1,7 @@
 ---
 title: "Reconcile error-class hierarchy gaps surfaced by rails-error-parity (missing AsynchronousQueryInsideTransactionError/TableNotSpecified; AM RangeError renamed ActiveModelRangeError)"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
