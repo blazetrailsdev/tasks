@@ -43,6 +43,15 @@ materialized-ID behavior:
   is portable (works on MySQL/MariaDB, which reject `IN (SELECT … LIMIT n)`).
 - This requires the predicate-builder / `RelationHandler` path to support an
   async/materializing step, or pre-materialization at `where` time.
+- The limitability check must also account for the relation's pre-existing
+  `joins_values` / `left_outer_joins_values` reflections, not just the eager
+  specs: Rails gates on `using_limitable_reflections?(join_dependency.reflections)`
+  **and** `construct_join_dependency(select_association_list(joins_values).concat(
+select_association_list(left_outer_joins_values)), nil).reflections`
+  (finder_methods.rb:463). The convergence PR's `_eagerReflectionsAreLimitable`
+  only inspects the eager specs, so e.g.
+  `leftOuterJoins(collectionAssoc).eagerLoad(belongsTo).limit(5)` as a subquery
+  value is not yet routed to this branch.
 
 See `relation.ts#applyJoinDependencyForArel` and
 `predicate-builder/relation-handler.ts`.
@@ -53,5 +62,8 @@ See `relation.ts#applyJoinDependencyForArel` and
       limited distinct primary keys (mirroring `distinct_relation_for_primary_key`)
       so the subquery is portable (works on MySQL) and bounds distinct parents.
 - [ ] Joined-table predicates/orders on the eager relation are preserved.
+- [ ] The unsupported/materialization branch also triggers when the value
+      relation's pre-existing `joins`/`leftOuterJoins` association reflections
+      are collections (not only its eager specs).
 - [ ] Cite `finder_methods.rb` / `schema_statements.rb` line ranges; no test
       renames; `test:compare`/`api:compare` deltas ≥ 0.
