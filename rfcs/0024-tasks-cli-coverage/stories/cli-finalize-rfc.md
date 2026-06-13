@@ -1,6 +1,6 @@
 ---
 title: "tasks finalize — assign an RFC number through the CLI"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T19:30:33Z"
+assignee: "cli-finalize-rfc"
 blocked-by: null
 ---
 
