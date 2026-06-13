@@ -1,12 +1,12 @@
 ---
-title: "defineenum-bang-uses-update-column-not-update-bang"
+title: "defineEnum bang setters use update_column, not Rails update!"
 status: draft
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
