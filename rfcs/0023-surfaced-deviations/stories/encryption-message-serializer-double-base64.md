@@ -1,6 +1,6 @@
 ---
 title: "Encryption MessageSerializer double-base64 wire-format divergence from MRI"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
