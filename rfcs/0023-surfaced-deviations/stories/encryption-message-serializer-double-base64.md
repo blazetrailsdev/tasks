@@ -1,7 +1,7 @@
 ---
 title: "Encryption MessageSerializer double-base64 wire-format divergence from MRI"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T00:26:49Z"
+assignee: "encryption-message-serializer-double-base64"
 blocked-by: null
 ---
 
