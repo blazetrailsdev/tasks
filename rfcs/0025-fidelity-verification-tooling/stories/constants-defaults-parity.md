@@ -1,7 +1,7 @@
 ---
 title: "api:compare: literal parameter-default + constant parity report"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
 deps: ["options-kwargs-key-parity"]
