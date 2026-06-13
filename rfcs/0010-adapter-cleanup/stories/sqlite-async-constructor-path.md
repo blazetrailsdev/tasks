@@ -1,6 +1,6 @@
 ---
 title: "Async SQLite adapter constructor path: enable expo-sqlite / async-only drivers"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0010-adapter-cleanup"
 cluster: null
