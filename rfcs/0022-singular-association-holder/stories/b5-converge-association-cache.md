@@ -1,6 +1,6 @@
 ---
 title: "(optional) Converge onto one @association_cache map"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0022-singular-association-holder"
 cluster: associations
