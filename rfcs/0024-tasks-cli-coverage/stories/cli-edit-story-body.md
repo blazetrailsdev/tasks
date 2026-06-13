@@ -1,6 +1,6 @@
 ---
 title: "tasks edit — $EDITOR body edits for stories AND RFC READMEs"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
