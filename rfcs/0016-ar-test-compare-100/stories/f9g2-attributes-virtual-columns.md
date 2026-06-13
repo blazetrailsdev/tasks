@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 follow-up — virtual attributes (no DB column)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
