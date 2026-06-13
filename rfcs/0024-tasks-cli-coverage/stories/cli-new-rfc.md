@@ -1,6 +1,6 @@
 ---
 title: "tasks new-rfc — scaffold a placeholder RFC from the template"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
