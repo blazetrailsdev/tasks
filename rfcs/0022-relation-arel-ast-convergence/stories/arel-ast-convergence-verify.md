@@ -1,6 +1,6 @@
 ---
 title: "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
