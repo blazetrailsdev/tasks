@@ -1,7 +1,7 @@
 ---
 title: "F-9b follow-up — bind_params_to_sql collector + bind-from-join subquery"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
