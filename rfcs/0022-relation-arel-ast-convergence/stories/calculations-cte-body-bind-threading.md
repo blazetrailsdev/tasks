@@ -1,6 +1,6 @@
 ---
 title: "calculations: collect CTE-body binds through the visitor instead of inlining (prependCtes)"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T22:48:34Z"
+assignee: "calculations-cte-body-bind-threading"
 blocked-by: null
 ---
 
