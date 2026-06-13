@@ -1,7 +1,7 @@
 ---
 title: "CI gate: no new docs/activerecord trackers + CLAUDE edit"
-status: draft
-updated: 2026-06-04
+status: ready
+updated: 2026-06-13
 rfc: "0011-activerecord-docs-cutover"
 cluster: guardrails
 deps: ["repoint-references"]
