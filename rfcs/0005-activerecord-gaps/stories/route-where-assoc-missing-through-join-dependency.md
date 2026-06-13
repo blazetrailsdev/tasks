@@ -1,7 +1,7 @@
 ---
 title: "Route where.associated/where.missing joins through JoinDependency/AliasTracker instead of the flat string ON-rebind path"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
