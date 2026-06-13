@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 follow-up — of_first_firm join-scope inheritance fixtures"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T11:07:15Z"
+assignee: "f9g2-inheritance-of-first-firm-scope"
 blocked-by: null
 ---
 
