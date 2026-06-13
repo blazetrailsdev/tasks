@@ -1,7 +1,7 @@
 ---
 title: "No BigDecimal type: quote(decimal) lacks arbitrary precision and trailing .0"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
