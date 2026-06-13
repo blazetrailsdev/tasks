@@ -152,14 +152,21 @@ scope convergence, not 0027.
 
 ## Stories
 
-| ID                                                                                                | Title                                                 | Status | Est LOC |
-| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------ | ------- |
-| [audit-join-dependency-rails-mapping](stories/audit-join-dependency-rails-mapping.md)             | Audit: map TS JoinDependency to Rails                 | draft  | 0       |
-| [converge-tree-construction-make-tree](stories/converge-tree-construction-make-tree.md)           | Converge tree construction to make_tree               | draft  | 450     |
-| [converge-alias-tracking](stories/converge-alias-tracking.md)                                     | Converge alias handling to AliasTracker/Aliases       | draft  | 400     |
-| [converge-join-constraints-references](stories/converge-join-constraints-references.md)           | Converge join_constraints & references                | draft  | 400     |
-| [converge-instantiate-construct](stories/converge-instantiate-construct.md)                       | Converge instantiate/construct                        | draft  | 450     |
-| [converge-references-lazy-make-constraints](stories/converge-references-lazy-make-constraints.md) | Converge references to lazy make_constraints aliasing | draft  | 250     |
+<!-- generated: stories table -->
+
+| ID                                                                                                                    | Title                                                                                         | Status | Est LOC | Cluster         |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------ | ------- | --------------- |
+| [construct-no-primary-key-join-primary-key-branch](stories/construct-no-primary-key-join-primary-key-branch.md)       | construct: handle no-primary-key nodes via join_primary_key (id=nil, skip caching)            | draft  | 60      | —               |
+| [converge-references-lazy-make-constraints](stories/converge-references-lazy-make-constraints.md)                     | Converge references consumption to Rails' lazy make_constraints aliasing                      | draft  | 250     | join-dependency |
+| [fold-named-inner-joins-into-build-join-dependencies](stories/fold-named-inner-joins-into-build-join-dependencies.md) | Fold plain .joins(:assoc) into buildJoinDependencies (drop \_joinClauses SQL pre-resolution)  | draft  | 400     | —               |
+| [join-dependency-associations-map-key-consistency](stories/join-dependency-associations-map-key-consistency.md)       | Unify instantiateFromRows parent-key accessor (readAttribute vs \_readAttribute, raw vs cast) | draft  | 40      | —               |
+| [thread-references-through-through-associations](stories/thread-references-through-through-associations.md)           | Thread references aliasing through \_addThroughViaJoinAssociation                             | ready  | 80      | —               |
+| [audit-join-dependency-rails-mapping](stories/audit-join-dependency-rails-mapping.md)                                 | Audit: map every TS JoinDependency member to its Rails counterpart                            | done   | 0       | join-dependency |
+| [converge-alias-tracking](stories/converge-alias-tracking.md)                                                         | Converge alias handling to the AliasTracker + Aliases pair                                    | done   | 400     | join-dependency |
+| [converge-collision-alias-naming](stories/converge-collision-alias-naming.md)                                         | Route non-through self-join collision naming through AliasTracker.aliasedTableFor             | done   | 150     | join-dependency |
+| [converge-instantiate-construct](stories/converge-instantiate-construct.md)                                           | Converge instantiateFromRows/\_constructRecursive to Rails' instantiate/construct             | done   | 450     | join-dependency |
+| [converge-join-constraints-references](stories/converge-join-constraints-references.md)                               | Converge join_constraints and the references path to Rails' signatures                        | done   | 400     | join-dependency |
+| [converge-tree-construction-make-tree](stories/converge-tree-construction-make-tree.md)                               | Converge tree construction to Rails' build-once make_tree/walk_tree                           | done   | 450     | join-dependency |
 
 ## Changelog
 

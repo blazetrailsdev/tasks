@@ -148,16 +148,28 @@ authoring — frontmatter **and** body — require no hand-edits.
 
 ## Stories
 
-| ID                                                                            | Title                                 | Status | Cluster            | Est LOC |
-| ----------------------------------------------------------------------------- | ------------------------------------- | ------ | ------------------ | ------- |
-| [frontmatter-block-editor](stories/frontmatter-block-editor.md)               | Array-safe frontmatter setter         | draft  | frontmatter-editor | 130     |
-| [cli-new-rfc](stories/cli-new-rfc.md)                                         | `tasks new-rfc` — scaffold an RFC     | draft  | rfc-commands       | 110     |
-| [cli-finalize-rfc](stories/cli-finalize-rfc.md)                               | `tasks finalize` — assign RFC number  | draft  | rfc-commands       | 90      |
-| [cli-rfc-edit](stories/cli-rfc-edit.md)                                       | `tasks rfc` — RFC frontmatter edits   | draft  | rfc-commands       | 120     |
-| [cli-set-deps](stories/cli-set-deps.md)                                       | `tasks set-deps` / `set-deps-rfc`     | draft  | story-fields       | 90      |
-| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Backstop for placeholders on main     | done   | guardrails         | 50      |
-| [validate-as-library](stories/validate-as-library.md)                         | Export `validate()` for CLI-time use  | draft  | guardrails         | 90      |
-| [cli-edit-story-body](stories/cli-edit-story-body.md)                         | `tasks edit` — story + RFC body edits | draft  | story-fields       | 100     |
+<!-- generated: stories table -->
+
+| ID                                                                                    | Title                                                                                                 | Status      | Est LOC | Cluster            |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------- | ------- | ------------------ |
+| [new-rfc-body-full-template-sections](stories/new-rfc-body-full-template-sections.md) | new-rfc scaffold body should match full 0000-template sections (Alternatives/Rollout/Open questions)  | ready       | 45      | rfc-commands       |
+| [reconcile-all-active-rfcs](stories/reconcile-all-active-rfcs.md)                     | Generalize reconcile.mjs beyond RFCs 0001-0010                                                        | ready       | 80      | guardrails         |
+| [set-deps-share-validator](stories/set-deps-share-validator.md)                       | set-deps: reuse validate-as-library's shared cycle/reference check                                    | ready       | 40      | —                  |
+| [storyfilepath-restore-generated](stories/storyfilepath-restore-generated.md)         | storyFilePath: restore generated index files before error exit (matches rfcFilePath/priority pattern) | ready       | 30      | —                  |
+| [template-quality-sections](stories/template-quality-sections.md)                     | Templates: Definition of done / Verification / Non-goals sections                                     | ready       | 80      | story-fields       |
+| [validate-status-consistency](stories/validate-status-consistency.md)                 | Validator: cross-field status consistency invariants                                                  | ready       | 250     | guardrails         |
+| [validate-story-body-quality](stories/validate-story-body-quality.md)                 | Validator: story body content gates (AC checkboxes, Context, Rails refs)                              | ready       | 150     | guardrails         |
+| [autogen-rfc-stories-table](stories/autogen-rfc-stories-table.md)                     | Auto-regenerate the Stories table in RFC READMEs from frontmatter                                     | in-progress | 120     | rfc-commands       |
+| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md)         | Guardrail — fail CI when a 0000- placeholder RFC lands on main                                        | done        | 70      | guardrails         |
+| [cli-done-completion-guards](stories/cli-done-completion-guards.md)                   | tasks done: unchecked-checkbox guard + est-loc vs actual delta                                        | done        | 150     | guardrails         |
+| [cli-edit-story-body](stories/cli-edit-story-body.md)                                 | tasks edit — $EDITOR body edits for stories AND RFC READMEs                                           | done        | 100     | story-fields       |
+| [cli-finalize-rfc](stories/cli-finalize-rfc.md)                                       | tasks finalize — assign an RFC number through the CLI                                                 | done        | 90      | rfc-commands       |
+| [cli-new-rfc](stories/cli-new-rfc.md)                                                 | tasks new-rfc — scaffold a placeholder RFC from the template                                          | done        | 110     | rfc-commands       |
+| [cli-rfc-edit](stories/cli-rfc-edit.md)                                               | tasks rfc — RFC frontmatter mutations (status, supersede, relate, clusters, packages)                 | done        | 120     | rfc-commands       |
+| [cli-set-deps](stories/cli-set-deps.md)                                               | tasks set-deps / set-deps-rfc — edit story dependency arrays                                          | done        | 90      | story-fields       |
+| [cli-stale-claim-warning](stories/cli-stale-claim-warning.md)                         | tasks status: warn on stale claims with no PR                                                         | done        | 80      | guardrails         |
+| [frontmatter-block-editor](stories/frontmatter-block-editor.md)                       | Array-safe, comment-preserving frontmatter setter                                                     | done        | 130     | frontmatter-editor |
+| [validate-as-library](stories/validate-as-library.md)                                 | Export validate() as a library for CLI-time, fail-fast checks                                         | done        | 90      | guardrails         |
 
 ## Changelog
 

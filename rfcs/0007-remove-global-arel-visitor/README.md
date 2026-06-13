@@ -93,14 +93,16 @@ merge.
 
 ## Stories
 
-| ID                                                                                          | Title                               | Status | Est LOC |
-| ------------------------------------------------------------------------------------------- | ----------------------------------- | ------ | ------- |
-| [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                               | Phase A1 — DDL/metadata callers     | ready  | 150     |
-| [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                       | Phase A2 — persistence/base ternary | ready  | 150     |
-| [a3-calculations-statement-cache-insert](stories/a3-calculations-statement-cache-insert.md) | Phase A3 — calc/stmt-cache/insert   | ready  | 150     |
-| [a4-sweep-remaining-callers](stories/a4-sweep-remaining-callers.md)                         | Phase A4 — sweep remaining callers  | ready  | 100     |
-| [b-drop-global-sync-sites](stories/b-drop-global-sync-sites.md)                             | Phase B — drop global sync sites    | ready  | 80      |
-| [c-collapse-into-bootstrap](stories/c-collapse-into-bootstrap.md)                           | Phase C — delete syncHandlerVisitor | ready  | 50      |
+<!-- generated: stories table -->
+
+| ID                                                                                          | Title                                                                                 | Status | Est LOC | Cluster      |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------ | ------- | ------------ |
+| [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                               | Phase A1 — route DDL/metadata toSql callers through connection.toSql                  | done   | 150     | arel-visitor |
+| [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                       | Phase A2 — make persistence.ts + base.ts ternary callers unconditional                | done   | 150     | arel-visitor |
+| [a3-calculations-statement-cache-insert](stories/a3-calculations-statement-cache-insert.md) | Phase A3 — route calculations / statement-cache / insert-all through connection.toSql | done   | 150     | arel-visitor |
+| [a4-sweep-remaining-callers](stories/a4-sweep-remaining-callers.md)                         | Phase A4 — sweep remaining direct .toSql() production callers                         | done   | 100     | arel-visitor |
+| [b-drop-global-sync-sites](stories/b-drop-global-sync-sites.md)                             | Phase B — drop AR's global-visitor sync sites                                         | done   | 80      | arel-visitor |
+| [c-collapse-into-bootstrap](stories/c-collapse-into-bootstrap.md)                           | Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)                | done   | 50      | arel-visitor |
 
 ## Changelog
 

@@ -98,11 +98,13 @@ lookups (`adapter.constructor.columnNameMatcher?.()`). See
 
 ## Stories
 
-| ID                                                                      | Title                                         | Status | Est LOC | Cluster     |
-| ----------------------------------------------------------------------- | --------------------------------------------- | ------ | ------- | ----------- |
-| [wire-mixin-cache](stories/wire-mixin-cache.md)                         | Phase 1 — wire mixin cache into live path     | ready  | 200     | query-cache |
-| [pool-based-query-cache](stories/pool-based-query-cache.md)             | Phase 2 — pool-based ActiveRecord::QueryCache | ready  | 150     | query-cache |
-| [migrate-tests-delete-wrapper](stories/migrate-tests-delete-wrapper.md) | Phase 3 — migrate tests, delete wrapper       | ready  | 250     | query-cache |
+<!-- generated: stories table -->
+
+| ID                                                                      | Title                                                              | Status | Est LOC | Cluster     |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ | ------- | ----------- |
+| [migrate-tests-delete-wrapper](stories/migrate-tests-delete-wrapper.md) | Phase 3 — migrate tests, delete the wrapper, collapse .inner walks | done   | 250     | query-cache |
+| [pool-based-query-cache](stories/pool-based-query-cache.md)             | Phase 2 — pool-based ActiveRecord::QueryCache                      | done   | 150     | query-cache |
+| [wire-mixin-cache](stories/wire-mixin-cache.md)                         | Phase 1 — wire the mixin cache into the live query path            | done   | 200     | query-cache |
 
 ## Changelog
 

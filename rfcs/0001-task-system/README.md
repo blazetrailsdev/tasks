@@ -466,11 +466,21 @@ state.
 
 ## Stories
 
-| ID                                                        | Title                                                        | Status | Est LOC | Cluster    |
-| --------------------------------------------------------- | ------------------------------------------------------------ | ------ | ------- | ---------- |
-| [scaffold-tooling](stories/scaffold-tooling.md)           | Scaffold `docs/rfcs/`, `scripts/tasks/`, CLI                 | ready  | 250     | scaffold   |
-| [wire-tasks-loop](stories/wire-tasks-loop.md)             | New `tasks-loop` skill prefers `tasks next-bundle` over grep | draft  | 80      | scaffold   |
-| [convert-bootstrap-rfc](stories/convert-bootstrap-rfc.md) | Convert a live AR plan doc to RFC 0002                       | done   | 200     | conversion |
+<!-- generated: stories table -->
+
+| ID                                                                                                  | Title                                                                                | Status | Est LOC | Cluster    |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------ | ------- | ---------- |
+| [claims-concurrency-lock](stories/claims-concurrency-lock.md)                                       | Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)           | done   | 100     | scaffold   |
+| [cli-authoring-ergonomics](stories/cli-authoring-ergonomics.md)                                     | tasks CLI: authoring ergonomics — new --status/--body-file, standalone reindex + fmt | done   | 110     | —          |
+| [cli-dirty-worktree-safe-index-build](stories/cli-dirty-worktree-safe-index-build.md)               | tasks CLI: make index build + auto-push safe against a dirty/divergent worktree      | done   | 120     | —          |
+| [cli-inspect-and-list-ergonomics](stories/cli-inspect-and-list-ergonomics.md)                       | tasks CLI: add `show <id>` and richer `list` columns (priority, est-loc)             | done   | 90      | —          |
+| [cli-status-transition-command](stories/cli-status-transition-command.md)                           | tasks CLI: add a draft → ready status-transition command                             | done   | 60      | —          |
+| [cli-trim-generated-index-files-to-index-md](stories/cli-trim-generated-index-files-to-index-md.md) | tasks CLI: trim GENERATED_INDEX_FILES to index.md (json now gitignored)              | done   | 50      | —          |
+| [convert-bootstrap-rfc](stories/convert-bootstrap-rfc.md)                                           | Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)                        | done   | 200     | conversion |
+| [fix-tasks-new-command](stories/fix-tasks-new-command.md)                                           | Fix `tasks new`: emit hook-clean stories and validate --cluster                      | done   | 120     | scaffold   |
+| [scaffold-tooling](stories/scaffold-tooling.md)                                                     | Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI                                 | done   | 250     | scaffold   |
+| [tasks-cli-lock-crashed-holder-recovery](stories/tasks-cli-lock-crashed-holder-recovery.md)         | Recover a tasks-CLI lock wedged by a crashed holder (safe stale-lock cleanup)        | done   | 80      | —          |
+| [wire-tasks-loop](stories/wire-tasks-loop.md)                                                       | Wire tasks-loop to next-bundle                                                       | done   | 80      | scaffold   |
 
 ---
 

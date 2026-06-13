@@ -70,11 +70,13 @@ the trendline.
 
 ## Stories
 
-| ID                                                                                | Title                               | Status | Est LOC |
-| --------------------------------------------------------------------------------- | ----------------------------------- | ------ | ------- |
-| [w1b-variadic-rest-overloads](stories/w1b-variadic-rest-overloads.md)             | W1b — variadic rest overloads       | ready  | 100     |
-| [small-followups-bundle](stories/small-followups-bundle.md)                       | Small follow-ups bundle             | ready  | 150     |
-| [w4-reflection-discriminated-union](stories/w4-reflection-discriminated-union.md) | W4 — reflection discriminated union | draft  | 300     |
+<!-- generated: stories table -->
+
+| ID                                                                                | Title                                                           | Status | Est LOC | Cluster      |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------ | ------- | ------------ |
+| [small-followups-bundle](stories/small-followups-bundle.md)                       | Type-audit small follow-ups bundle (~150 LOC)                   | done   | 150     | type-cleanup |
+| [w1b-variadic-rest-overloads](stories/w1b-variadic-rest-overloads.md)             | W1b — variadic rest overloads (drop relation.ts as-any spreads) | done   | 100     | type-cleanup |
+| [w4-reflection-discriminated-union](stories/w4-reflection-discriminated-union.md) | W4 — Reflection discriminated union (deferred, high risk)       | done   | 300     | type-cleanup |
 
 ## Changelog
 

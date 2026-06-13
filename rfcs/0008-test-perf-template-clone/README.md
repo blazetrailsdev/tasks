@@ -69,11 +69,13 @@ concurrent local worktrees don't collide.
 
 ## Stories
 
-| ID                                                                      | Title                                 | Status | Est LOC |
-| ----------------------------------------------------------------------- | ------------------------------------- | ------ | ------- |
-| [phase0-sqlite-template-spike](stories/phase0-sqlite-template-spike.md) | Phase 0 — sqlite template spike       | ready  | 250     |
-| [phase1-pg-template](stories/phase1-pg-template.md)                     | Phase 1 — PG CREATE DATABASE TEMPLATE | draft  | 150     |
-| [phase2-mariadb-template](stories/phase2-mariadb-template.md)           | Phase 2 — MariaDB (measure first)     | draft  | 150     |
+<!-- generated: stories table -->
+
+| ID                                                                      | Title                                                  | Status | Est LOC | Cluster   |
+| ----------------------------------------------------------------------- | ------------------------------------------------------ | ------ | ------- | --------- |
+| [phase0-sqlite-template-spike](stories/phase0-sqlite-template-spike.md) | Phase 0 — sqlite clonable-template spike               | done   | 250     | test-perf |
+| [phase1-pg-template](stories/phase1-pg-template.md)                     | Phase 1 — PG CREATE DATABASE ... TEMPLATE              | done   | 150     | test-perf |
+| [phase2-mariadb-template](stories/phase2-mariadb-template.md)           | Phase 2 — MariaDB template (measure before committing) | done   | 150     | test-perf |
 
 ## Changelog
 

@@ -30,11 +30,12 @@ export const STORY_STATUSES = ["draft", "ready", "claimed", "in-progress", "done
 export function parseFrontmatter(filePath) {
   const text = readFileSync(filePath, "utf8");
   const match = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-  if (!match) return { frontmatter: null, body: text, lines: text.split("\n").length };
+  if (!match) return { frontmatter: null, body: text, lines: text.split("\n").length, raw: text };
   return {
     frontmatter: yaml.load(match[1]) ?? {},
     body: match[2],
     lines: text.split("\n").length,
+    raw: text,
   };
 }
 
@@ -48,8 +49,8 @@ export function loadAll() {
     const readme = join(rfcDir, "README.md");
     let rfcEntry = null;
     try {
-      const { frontmatter, body, lines } = parseFrontmatter(readme);
-      rfcEntry = { dir: name, file: readme, frontmatter, body, lines };
+      const { frontmatter, body, lines, raw } = parseFrontmatter(readme);
+      rfcEntry = { dir: name, file: readme, frontmatter, body, lines, raw };
       rfcs.push(rfcEntry);
     } catch (err) {
       rfcs.push({

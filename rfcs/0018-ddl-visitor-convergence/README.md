@@ -415,12 +415,15 @@ Step 3 requires PG adapter-dir validation. All steps branch from `main`; no stac
 
 ## Stories
 
-| ID                                                                              | Title                                                       | Status | Est LOC | Cluster                 |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | ----------------------- |
-| [step1-delete-dead-mysql-branches](stories/step1-delete-dead-mysql-branches.md) | Delete dead MySQL branches from toSql()                     | draft  | 40      | ddl-visitor-convergence |
-| [step2-sqlite-visitor-wire](stories/step2-sqlite-visitor-wire.md)               | Wire SQLite createTableDefinition + toSql() through visitor | draft  | 120     | ddl-visitor-convergence |
-| [step3-pg-tosql-via-visitor](stories/step3-pg-tosql-via-visitor.md)             | Route PgTableDefinition.toSql() through PgSchemaCreation    | draft  | 80      | ddl-visitor-convergence |
-| [step4-delete-abstract-tosql](stories/step4-delete-abstract-tosql.md)           | Delete AbstractTableDefinition.toSql()                      | draft  | 30      | ddl-visitor-convergence |
+<!-- generated: stories table -->
+
+| ID                                                                              | Title                                                                                       | Status | Est LOC | Cluster                 |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------ | ------- | ----------------------- |
+| [burn-down-tabledefinition-tosql](stories/burn-down-tabledefinition-tosql.md)   | Route TableDefinition#toSql through the DDL visitor (burn down rails-arel-tosql exclude)    | done   | 150     | —                       |
+| [step1-delete-dead-mysql-branches](stories/step1-delete-dead-mysql-branches.md) | Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()                    | done   | 40      | ddl-visitor-convergence |
+| [step2-sqlite-visitor-wire](stories/step2-sqlite-visitor-wire.md)               | Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor | done   | 120     | ddl-visitor-convergence |
+| [step3-pg-tosql-via-visitor](stories/step3-pg-tosql-via-visitor.md)             | Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation                           | done   | 80      | ddl-visitor-convergence |
+| [step4-delete-abstract-tosql](stories/step4-delete-abstract-tosql.md)           | Step 4 — Delete AbstractTableDefinition.toSql()                                             | done   | 50      | ddl-visitor-convergence |
 
 ## Prompt accuracy notes
 
