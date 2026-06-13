@@ -1,6 +1,6 @@
 ---
 title: "F-9c — adapter_test exception translation + referential integrity (MySQL/PG)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
