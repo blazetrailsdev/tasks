@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 follow-up — enum-backed STI inheritance column dispatch"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3180
 claim: "2026-06-13T11:01:43Z"
 assignee: "f9g2-inheritance-enum-sti-default-scope"
 blocked-by: null
