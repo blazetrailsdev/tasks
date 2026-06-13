@@ -1,6 +1,6 @@
 ---
 title: "F-9c — adapter_test exception translation + referential integrity (MySQL/PG)"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -16,10 +16,8 @@ blocked-by: null
 
 ## Context
 
-## Acceptance criteria
-
 Residue from F-9a (#3150). Backend-gated (`describeIfMysql`/`describeIfPg`),
-local-verify-only until RFC 0012 `wire-adapter-dir-lane` merges. Skipped
+CI-gated via the ARCONN-keyed adapter lanes (RFC 0012 lane is wired). Skipped
 `adapter.test.ts` entries:
 
 - `value limit violations are translated to specific exception` (non-SQLite; Event model, limited title)
@@ -33,7 +31,7 @@ local-verify-only until RFC 0012 `wire-adapter-dir-lane` merges. Skipped
   is true (mysql2-adapter override; false on abstract/sqlite/pg), matching Rails
   `savepoint_errors_invalidate_transactions?`.
 
-## Additional acceptance criteria
+## Acceptance criteria
 
 - [ ] Listed tests pass under MySQL/PG gating; SQLite remains correctly skipped.
 - [ ] `test:compare --cached --package activerecord` delta non-negative.

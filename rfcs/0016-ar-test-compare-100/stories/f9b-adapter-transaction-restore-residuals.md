@@ -1,6 +1,6 @@
 ---
 title: "F-9b — adapter_test transaction restore/remote-disconnection (non-in-memory)"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -15,8 +15,6 @@ blocked-by: null
 ---
 
 ## Context
-
-## Acceptance criteria
 
 Residue from F-9a (#3150), which shipped the SQLite-runnable transaction-state
 _reset_ tests in `adapter.test.ts`. These remaining `AdapterConnectionTest`
@@ -36,7 +34,7 @@ Ours: `packages/activerecord/src/adapter.test.ts`. Rails:
 `activerecord/test/cases/adapter_test.rb` (`AdapterConnectionTest`).
 Test names match Rails verbatim.
 
-## Additional acceptance criteria
+## Acceptance criteria
 
 - [ ] Restore/remote-disconnection tests pass against a file-backed (non-in-memory)
       SQLite adapter, or are reclassified in `unported-files.ts` if reopen wiring

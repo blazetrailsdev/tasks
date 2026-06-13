@@ -1,6 +1,6 @@
 ---
 title: "F-9d — adapter_test query-cache + truncate + pk-reset"
-status: draft
+status: ready
 updated: 2026-06-12
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -16,8 +16,6 @@ blocked-by: null
 
 ## Context
 
-## Acceptance criteria
-
 Residue from F-9a (#3150). Skipped `AdapterTestWithoutTransaction` entries in
 `adapter.test.ts`:
 
@@ -31,7 +29,7 @@ Residue from F-9a (#3150). Skipped `AdapterTestWithoutTransaction` entries in
 The pk-reset pair is PG-gated; the truncate/query-cache set is SQLite-runnable
 with posts/authors/author_addresses fixtures.
 
-## Additional acceptance criteria
+## Acceptance criteria
 
 - [ ] Query-cache + truncate tests pass on SQLite; pk-reset pass under PG gating.
 - [ ] `test:compare --cached --package activerecord` delta non-negative.
