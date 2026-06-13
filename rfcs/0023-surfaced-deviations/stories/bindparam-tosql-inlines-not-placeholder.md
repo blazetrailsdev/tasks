@@ -1,6 +1,6 @@
 ---
 title: "Arel BindParam#toSql inlines the value instead of emitting a ? bind placeholder"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3209
 claim: "2026-06-13T21:06:33Z"
 assignee: "bindparam-tosql-inlines-not-placeholder"
 blocked-by: null
