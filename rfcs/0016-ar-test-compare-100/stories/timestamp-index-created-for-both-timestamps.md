@@ -1,7 +1,7 @@
 ---
 title: "timestamp: index is created for both timestamps (fixture-dependent)"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: []
