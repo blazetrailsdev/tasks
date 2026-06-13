@@ -1,6 +1,6 @@
 ---
 title: "F-9d — adapter_test query-cache + truncate + pk-reset"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: null
+pr: 3178
 claim: "2026-06-13T02:30:08Z"
 assignee: "f9d-adapter-querycache-truncate-pkreset"
 blocked-by: null
