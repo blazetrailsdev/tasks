@@ -1,6 +1,6 @@
 ---
 title: "Relation#arel/#toArel: converge on full build_arel (joins/HAVING/FROM/LOCK/CTEs), not projection-only"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T12:02:10Z"
+assignee: "relation-arel-build-arel-convergence"
 blocked-by: null
 ---
 
