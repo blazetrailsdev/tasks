@@ -1,7 +1,7 @@
 ---
 title: "Through/HABTM proxy scope() uses id IN (subquery) instead of Rails' JOIN, deduping join-row multiplicity"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
