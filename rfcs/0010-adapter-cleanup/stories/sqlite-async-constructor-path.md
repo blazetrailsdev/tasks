@@ -1,6 +1,6 @@
 ---
 title: "Async SQLite adapter constructor path: enable expo-sqlite / async-only drivers"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 14
-pr: null
+pr: 3190
 claim: "2026-06-13T13:08:10Z"
 assignee: "sqlite-async-constructor-path"
 blocked-by: null
