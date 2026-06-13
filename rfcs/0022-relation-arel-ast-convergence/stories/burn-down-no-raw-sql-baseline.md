@@ -1,6 +1,6 @@
 ---
 title: "Burn down no-raw-sql baseline: migrate flagged raw-SQL/string-surgery sites to arel"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 3211
 claim: "2026-06-13T21:12:35Z"
 assignee: "burn-down-no-raw-sql-baseline"
 blocked-by: null
