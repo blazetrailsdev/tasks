@@ -94,9 +94,10 @@ below, so it ships first.
 - **Auto-finalize on merge (shipped):** the `auto-finalize-rfc` workflow finalizes
   any `0000-*`/`draft-*` placeholder the instant it lands on `main` and pushes the
   renamed result — finalize is no longer a remembered human step (landed ahead of
-  this RFC in #24). The `ci-guard-no-placeholder-on-main` story is now a
-  belt-and-suspenders backstop for the rare case a placeholder _persists_ (action
-  disabled/failed), scoped so it never false-alarms against the self-healing push.
+  this RFC in #24). The `ci-guard-no-placeholder-on-main` story is closed without
+  implementation — a backstop guard could only false-alarm against the
+  self-healing push or duplicate a failure mode the visible `0000-*` dir
+  already surfaces.
 - **`validate()` as a library:** refactor `validate.mjs` so its core is an
   importable function returning structured errors (today it `process.exit`s). The
   CLI calls it _before_ commit so `new-rfc` and friends fail fast with a clear
@@ -129,8 +130,9 @@ authoring — frontmatter **and** body — require no hand-edits.
 2. **rfc-commands** — `cli-new-rfc`, `cli-finalize-rfc`, `cli-rfc-edit` (the last
    depends on the block editor for its array flags).
 3. **story-fields** — `cli-set-deps` (depends on the block editor).
-4. **guardrails** — `ci-guard-no-placeholder-on-main`, `validate-as-library` (both
-   independent; land any time).
+4. **guardrails** — `validate-as-library` (independent; land any time).
+   `ci-guard-no-placeholder-on-main` closed without implementation
+   (superseded by auto-finalize, #24).
 5. **story-fields** — `cli-edit-story-body` (story + RFC body editing; required
    for the "no hand-editing bodies" scope, independent of the rest).
 
@@ -153,12 +155,13 @@ authoring — frontmatter **and** body — require no hand-edits.
 | [cli-finalize-rfc](stories/cli-finalize-rfc.md)                               | `tasks finalize` — assign RFC number  | draft  | rfc-commands       | 90      |
 | [cli-rfc-edit](stories/cli-rfc-edit.md)                                       | `tasks rfc` — RFC frontmatter edits   | draft  | rfc-commands       | 120     |
 | [cli-set-deps](stories/cli-set-deps.md)                                       | `tasks set-deps` / `set-deps-rfc`     | draft  | story-fields       | 90      |
-| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Backstop for placeholders on main     | draft  | guardrails         | 50      |
+| [ci-guard-no-placeholder-on-main](stories/ci-guard-no-placeholder-on-main.md) | Backstop for placeholders on main     | done   | guardrails         | 50      |
 | [validate-as-library](stories/validate-as-library.md)                         | Export `validate()` for CLI-time use  | draft  | guardrails         | 90      |
 | [cli-edit-story-body](stories/cli-edit-story-body.md)                         | `tasks edit` — story + RFC body edits | draft  | story-fields       | 100     |
 
 ## Changelog
 
+- 2026-06-12: closed ci-guard-no-placeholder-on-main without implementation — superseded by auto-finalize (#24)
 - 2026-06-11: initial RFC — eliminate hand-editing of the tasks repo by extending
   the `pnpm tasks` CLI; surfaced while cleaning up after a skipped-finalize
   incident that left a `0000-` placeholder on `main`.

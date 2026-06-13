@@ -1,6 +1,6 @@
 ---
 title: "Guardrail — fail CI when a 0000- placeholder RFC lands on main"
-status: ready
+status: done
 updated: 2026-06-12
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -16,11 +16,20 @@ blocked-by: null
 
 ## Context
 
-`main` is supposed to hold only numbered RFCs; `0000-*` (and legacy `draft-*`)
-placeholders live on PR branches until finalize assigns a number. Finalize is a
-manual pre-merge step, and skipping it silently corrupts `main` — this has already
-required a repair PR. This story makes the invariant enforced instead of
-remembered.
+**Closed 2026-06-12 without implementation — superseded by auto-finalize
+(#24).** The failure this story was written to prevent (a forgotten manual
+finalize silently corrupting `main`) structurally cannot happen anymore: the
+`auto-finalize-rfc` workflow renames any `0000-*`/`draft-*` placeholder the
+moment it lands on `main` and pushes the result. A failing guard would only
+ever fire in the minute-long window before that self-healing push (a false
+alarm on every RFC merge) or if the Action itself were disabled — a scenario
+better noticed via the visible `0000-*` dir than defended with a second CI
+mechanism sharing the same failure modes.
+
+Original context (pre-#24): `main` is supposed to hold only numbered RFCs;
+`0000-*` placeholders live on PR branches until finalize assigns a number.
+Finalize was a manual pre-merge step, and skipping it silently corrupted
+`main`, requiring a repair PR.
 
 ## Acceptance criteria
 
