@@ -1,7 +1,7 @@
 ---
 title: "calculations: collect CTE-body binds through the visitor instead of inlining (prependCtes)"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
