@@ -1,7 +1,7 @@
 ---
 title: "Set-ops: fold CTE/eager operands into the composed Union* AST (remove the string fallback)"
-status: draft
-updated: 2026-06-11
+status: ready
+updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: ["set-operations-arel-nodes"]
