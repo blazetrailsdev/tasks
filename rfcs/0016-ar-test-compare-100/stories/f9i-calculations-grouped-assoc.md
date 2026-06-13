@@ -1,7 +1,7 @@
 ---
 title: "F-9i — calculations grouped-association + includes/offset tail"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
