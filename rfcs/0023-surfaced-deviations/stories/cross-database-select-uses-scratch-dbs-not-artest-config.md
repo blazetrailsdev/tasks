@@ -1,6 +1,6 @@
 ---
 title: "Cross-database select test self-provisions scratch DBs instead of ARTest arunit/arunit2 config"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
