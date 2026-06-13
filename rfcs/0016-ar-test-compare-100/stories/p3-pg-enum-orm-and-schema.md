@@ -1,7 +1,7 @@
 ---
 title: "P3 — PG enum ORM + schema-dump/load scoped to schemas (5 skips)"
 status: done
-updated: 2026-06-12
+updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: []
