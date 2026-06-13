@@ -1,7 +1,7 @@
 ---
 title: "tasks CLI: add `show <id>` and richer `list` columns (priority, est-loc)"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-13
 rfc: "0001-task-system"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T01:44:01Z"
+assignee: "cli-inspect-and-list-ergonomics"
 blocked-by: null
 ---
 
