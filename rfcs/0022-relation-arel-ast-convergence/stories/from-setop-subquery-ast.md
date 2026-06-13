@@ -1,7 +1,7 @@
 ---
 title: "from(setOpRelation): route through live-AST once set-ops are Arel nodes; drop BoundSqlLiteral inlining fallback"
-status: draft
-updated: 2026-06-11
+status: ready
+updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: ["set-operations-arel-nodes", "from-clause-arel-manager"]
