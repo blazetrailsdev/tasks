@@ -1,6 +1,6 @@
 ---
 title: "Export validate() as a library for CLI-time, fail-fast checks"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
