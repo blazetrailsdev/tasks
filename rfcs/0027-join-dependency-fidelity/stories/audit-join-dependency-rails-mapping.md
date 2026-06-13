@@ -1,6 +1,6 @@
 ---
 title: "Audit: map every TS JoinDependency member to its Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
+pr: 3207
 claim: "2026-06-13T20:36:35Z"
 assignee: "audit-join-dependency-rails-mapping"
 blocked-by: null
