@@ -1,6 +1,6 @@
 ---
 title: "F-9b — adapter_test transaction restore/remote-disconnection (non-in-memory)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
