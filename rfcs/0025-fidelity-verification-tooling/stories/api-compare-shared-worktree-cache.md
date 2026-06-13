@@ -1,6 +1,6 @@
 ---
 title: "api:compare cross-worktree shared cache (rails-api.json + ts per-package), version-keyed"
-status: draft
+status: ready
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
