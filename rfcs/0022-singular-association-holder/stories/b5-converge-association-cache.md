@@ -1,6 +1,6 @@
 ---
 title: "(optional) Converge onto one @association_cache map"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-singular-association-holder"
 cluster: associations
@@ -8,7 +8,7 @@ deps: ["b4-delete-cached-associations"]
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
+pr: 3194
 claim: "2026-06-13T14:31:14Z"
 assignee: "b5-converge-association-cache"
 blocked-by: null
