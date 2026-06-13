@@ -1,7 +1,7 @@
 ---
 title: "Remove dead validations/association-helpers.ts module"
-status: ready
-updated: 2026-06-12
+status: claimed
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T01:19:59Z"
+assignee: "remove-dead-validation-association-helpers"
 blocked-by: null
 ---
 
