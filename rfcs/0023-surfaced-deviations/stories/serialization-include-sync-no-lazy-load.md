@@ -1,6 +1,6 @@
 ---
 title: "Serialization include of an unloaded collection cannot lazy-load (sync vs Rails to_ary)"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T12:46:13Z"
+assignee: "serialization-include-sync-no-lazy-load"
 blocked-by: null
 ---
 
