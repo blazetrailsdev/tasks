@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter quoting helpers diverge from Rails abstract (concrete quoteColumnName default, dot-splitting quoteTableName)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
