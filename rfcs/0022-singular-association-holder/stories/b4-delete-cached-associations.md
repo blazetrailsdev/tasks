@@ -1,6 +1,6 @@
 ---
 title: "Delete _cachedAssociations + migrate test pokes"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-singular-association-holder"
 cluster: associations
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
+pr: 3188
 claim: "2026-06-13T12:35:10Z"
 assignee: "b4-delete-cached-associations"
 blocked-by: null
