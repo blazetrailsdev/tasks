@@ -1,6 +1,6 @@
 ---
 title: "removeIndex positional expression resolves index name without generate_index_name length/hash fallback"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T22:30:33Z"
+assignee: "removeindex-expression-name-hashing"
 blocked-by: null
 ---
 
