@@ -1,7 +1,7 @@
 ---
 title: "Converge alias handling to the AliasTracker + Aliases pair"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
 deps: ["converge-tree-construction-make-tree"]
