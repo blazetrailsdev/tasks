@@ -1,6 +1,6 @@
 ---
 title: "tasks set-deps / set-deps-rfc — edit story dependency arrays"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
