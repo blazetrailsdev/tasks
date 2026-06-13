@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 follow-up — lazy attribute-method generation (define_attribute_methods)"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3192
 claim: "2026-06-13T13:43:15Z"
 assignee: "f9g2-read-lazy-attribute-methods"
 blocked-by: null
