@@ -1,6 +1,6 @@
 ---
 title: "F-9e — adapter_test backend introspection probes (MySQL/PG)"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T02:41:09Z"
+assignee: "f9e-adapter-backend-introspection"
 blocked-by: null
 ---
 
