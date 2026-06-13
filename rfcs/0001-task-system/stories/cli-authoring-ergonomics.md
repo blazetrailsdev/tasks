@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: authoring ergonomics — new --status/--body-file, standalone reindex + fmt"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0001-task-system"
 cluster: null
