@@ -1,6 +1,6 @@
 ---
 title: "api:compare cross-worktree shared cache (rails-api.json + ts per-package), version-keyed"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T20:30:32Z"
+assignee: "api-compare-shared-worktree-cache"
 blocked-by: null
 ---
 
