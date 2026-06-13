@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter quoting helpers diverge from Rails abstract (concrete quoteColumnName default, dot-splitting quoteTableName)"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3168
 claim: "2026-06-13T00:26:53Z"
 assignee: "abstract-quoting-helpers-broader-than-rails"
 blocked-by: null
