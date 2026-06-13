@@ -8,7 +8,7 @@ deps: ["decommission-docs"]
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 3199
+pr: 3169
 claim: "2026-06-13T15:03:15Z"
 assignee: "repoint-references"
 blocked-by: null
