@@ -1,6 +1,6 @@
 ---
 title: "F-9g2 follow-up — Rails-style immediate in-memory nested-attribute build"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3193
 claim: "2026-06-13T13:35:14Z"
 assignee: "f9g2-nested-attributes-immediate-build"
 blocked-by: null
