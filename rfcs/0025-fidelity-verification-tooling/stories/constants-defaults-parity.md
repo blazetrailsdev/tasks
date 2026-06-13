@@ -1,6 +1,6 @@
 ---
 title: "api:compare: literal parameter-default + constant parity report"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
