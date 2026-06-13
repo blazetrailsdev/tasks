@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: trim GENERATED_INDEX_FILES to index.md (json now gitignored)"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0001-task-system"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 31
-pr: null
+pr: 3175
 claim: "2026-06-13T02:08:31Z"
 assignee: "cli-trim-generated-index-files-to-index-md"
 blocked-by: null
