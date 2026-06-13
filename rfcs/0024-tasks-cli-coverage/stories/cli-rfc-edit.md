@@ -1,6 +1,6 @@
 ---
 title: "tasks rfc — RFC frontmatter mutations (status, supersede, relate, clusters, packages)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
