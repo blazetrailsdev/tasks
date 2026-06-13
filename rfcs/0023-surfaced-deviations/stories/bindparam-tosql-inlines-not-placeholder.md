@@ -1,6 +1,6 @@
 ---
 title: "Arel BindParam#toSql inlines the value instead of emitting a ? bind placeholder"
-status: draft
+status: ready
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
