@@ -1,7 +1,7 @@
 ---
 title: "Composite-FK belongs_to does not increment/decrement counter cache on create/destroy"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
