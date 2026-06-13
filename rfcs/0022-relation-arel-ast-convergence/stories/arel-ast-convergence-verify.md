@@ -1,6 +1,6 @@
 ---
 title: "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T11:40:09Z"
+assignee: "arel-ast-convergence-verify"
 blocked-by: null
 ---
 
