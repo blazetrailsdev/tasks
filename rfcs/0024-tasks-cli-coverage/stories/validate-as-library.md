@@ -1,7 +1,7 @@
 ---
 title: "Export validate() as a library for CLI-time, fail-fast checks"
-status: ready
-updated: 2026-06-12
+status: claimed
+updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T02:07:59Z"
+assignee: "validate-as-library"
 blocked-by: null
 ---
 
