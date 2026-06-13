@@ -1,6 +1,6 @@
 ---
 title: "Add connection-adapter schema option keys missing vs Rails (ifNotExists, column, as/stored, autoIncrement/collation/comment, pg primary_key default)"
-status: draft
+status: ready
 updated: 2026-06-13
 rfc: "0023-surfaced-deviations"
 cluster: null
