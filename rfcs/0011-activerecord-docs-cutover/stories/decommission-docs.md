@@ -1,6 +1,6 @@
 ---
 title: "Delete migrated AR docs + trim docs/index.md AR rows"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0011-activerecord-docs-cutover"
 cluster: decommission
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: 25
-pr: null
+pr: 3169
 claim: "2026-06-13T01:07:59Z"
 assignee: "decommission-docs"
 blocked-by: null
