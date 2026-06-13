@@ -1,6 +1,6 @@
 ---
 title: "CI gate: no new docs/activerecord trackers + CLAUDE edit"
-status: ready
+status: claimed
 updated: 2026-06-13
 rfc: "0011-activerecord-docs-cutover"
 cluster: guardrails
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-13T21:00:34Z"
+assignee: "drift-prevention-ci"
 blocked-by: null
 ---
 
