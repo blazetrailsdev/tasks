@@ -1,7 +1,7 @@
 ---
 title: "where({ assocName: {...} }) resolves to the self-join alias when the association is joined under an AliasTracker alias"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
