@@ -1,6 +1,6 @@
 ---
 title: "Delete _cachedAssociations + migrate test pokes"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0022-singular-association-holder"
 cluster: associations
