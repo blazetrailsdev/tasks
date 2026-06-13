@@ -1,7 +1,7 @@
 ---
 title: "F-9j — reflection join_table derivation + includes-accepts-symbols"
-status: draft
-updated: 2026-06-12
+status: ready
+updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
