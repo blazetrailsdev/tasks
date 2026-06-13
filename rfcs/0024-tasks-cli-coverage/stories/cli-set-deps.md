@@ -1,6 +1,6 @@
 ---
 title: "tasks set-deps / set-deps-rfc — edit story dependency arrays"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
@@ -8,7 +8,7 @@ deps: [frontmatter-block-editor]
 deps-rfc: []
 est-loc: 90
 priority: 31
-pr: null
+pr: 3204
 claim: "2026-06-13T19:48:35Z"
 assignee: "cli-set-deps"
 blocked-by: null
