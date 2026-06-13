@@ -62,6 +62,53 @@ test-suite-gated:
 5. **Instantiation** — converge `instantiateFromRows`/`_constructRecursive` to
    Rails' `instantiate`/`construct` shape.
 
+### Target shape (from the audit)
+
+The audit ([full mapping report][audit-report]) maps every member of the TS
+`JoinDependency`, `Aliases`, and `JoinLeaf` classes to its Rails counterpart.
+Top-level finding: **the deviation is one root cause with many symptoms — the
+TS class is built incrementally** (`relation.ts` constructs an empty instance
+and calls `addAssociation`/`addAssociationSpec` per spec), whereas Rails builds
+the whole tree once in the constructor (`make_tree` → `build`). Nearly all
+port-only state exists to support incremental construction: rollback machinery
+(`_snapshotTree`/`_restoreTree`/`_rollbackTree`), the path index
+(`_treeNodesByPath`), eager alias bookkeeping (`_nextTableIndex`/`_aliases`/
+`_arelTablesByIndex`), and the after-the-fact predicate rebinding
+(`rebindTableReferences`/`_rebindChildOnPredicates`). The build-once half of
+the class (`joinConstraints`, `makeJoinConstraints`, `walk`, `aliases`,
+`instantiate`/`construct`, `findReflection`, `build`) is already a faithful or
+renamed-equivalent port, so convergence is mostly _deleting_ the incremental
+layer and routing through methods that already exist.
+
+Target, story by story:
+
+1. **Build-once constructor.** `JoinDependency(base, associations, joinType)`
+   calls `makeTree`/`walkTree` → `build` in the constructor; `relation.ts`
+   passes the full eager-load hash instead of calling `addAssociation*`
+   incrementally. Deletes `_treeNodesByPath`, snapshot/restore/rollback, the
+   whole `addAssociation*`/`_walkSpec`/`_addOrReuse`/`_insertTreeNode` family,
+   `_nextTableIndex`, and the vestigial `_resolveTreeParent`/`_baseTableIndex`.
+   Adopts the currently-unused static `makeTree`/`walkTree`.
+2. **Lazy `Aliases` from the tree.** Build `aliases()` from a
+   `join_root.each_with_index` walk and move arel-table ownership onto
+   `Aliases::Table`. Deletes `_aliases`, `_arelTablesByIndex`,
+   `_buildBaseAliases`, and the `_buildSelectArelNodes` side-map.
+3. **Alias resolution at constraint time.** Un-hollow `make_constraints` to
+   resolve aliases via `AliasTracker.aliased_table_for` + `@joined_tables`.
+   Deletes `rebindTableReferences`, `_rebindChildOnPredicates`, and
+   `setReferences` (references thread through `joinConstraints`).
+4. **`through` via `reflection.chain`.** Drive the chain inside
+   `make_constraints` so intermediates are `JoinAssociation` nodes; deletes
+   `_addThroughViaJoinAssociation` and allows deleting `JoinLeaf`.
+5. **`instantiate`/`construct` to Rails shape.** Converge to Rails' `seen` /
+   `model_cache` / `compare_by_identity` structure and move `_isNodeReadonly`/
+   `_isNodeStrictLoading` onto `JoinPart` (`readonly?`/`strict_loading?`).
+
+Out of scope (flag separately): `_addStiConstraintArel` belongs to association
+scope convergence, not 0027.
+
+[audit-report]: https://github.com/blazetrailsdev/trails/blob/main/docs/activerecord/rfc-0027-join-dependency-audit.md
+
 ## Alternatives considered
 
 - **Port more enumerable helpers to activesupport first.** Rejected — measured
@@ -83,12 +130,25 @@ test-suite-gated:
 
 ## Open questions
 
-1. **Is `eagerSpecToTree`/`_walkSpec` validation truly port-only?** Rails
-   validates eager-load specs elsewhere (`Relation#eager_loading?` path); the
-   audit decides whether this layer moves, stays, or dissolves.
-2. **Stop-or-go after the audit.** If the mapping shows most port-only state
-   is load-bearing for TS-specific reasons (e.g. no `method_missing` on join
-   rows), close stories 2–5 unscheduled rather than force the shape.
+1. **Is `eagerSpecToTree`/`_walkSpec` validation truly port-only?**
+   **Resolved (audit): stays, not vestigial.** `validateEagerLoadSpec` (with
+   `build`/`findReflection`/`eagerSpecToTree`) is load-bearing — the
+   calculation/exists path (`relation.ts:2945`) needs eager-spec validation
+   (`ConfigurationError`/`EagerLoadPolymorphicError`) _without_ building the
+   real join tree. It is already a faithful port of Rails `build` (where the
+   validation is a side effect of `build` during `construct_join_dependency`).
+   Post-story-2 it collapses into a thin entry point over the shared `build`.
+   `_walkSpec` itself (the incremental spec walker) _is_ absorbable into
+   `make_tree`/`walk_tree` and dissolves in story 2.
+2. **Stop-or-go after the audit. Resolved: GO on stories 2–5.** The port-only
+   state is overwhelmingly _incremental scaffolding_, not TS-language
+   necessity — the one genuine TS-specific concern (no `method_missing` on
+   join rows) lives in small proxy-wiring helpers that survive convergence.
+   The build-once half of the class already exists and is faithful, so
+   convergence is mostly _deleting_ the incremental layer. Scheduling notes:
+   story 2 (build-once tree) is the keystone and must land first and alone
+   (it migrates `relation.ts` callers); story 4 (`through` + constraints) is
+   the highest behavioral risk and needs extra review.
 
 ## Stories
 
