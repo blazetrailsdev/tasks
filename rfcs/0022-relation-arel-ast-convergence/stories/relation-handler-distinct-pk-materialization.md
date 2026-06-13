@@ -16,4 +16,37 @@ blocked-by: null
 
 ## Context
 
+Spun out of [[relation-arel-build-arel-convergence]] (PR #3186). When a
+relation value passed to `where(id: …)` is eager-loading with a limit/offset
+over a **collection** (non-limitable) reflection — e.g.
+`Widget.where(id: Author.eagerLoad(:posts).where("posts.x = 1").limit(5))` —
+Rails `apply_join_dependency` (finder_methods.rb:457) keeps the join
+dependency and replaces the relation with `distinct_relation_for_primary_key`
+(schema_statements.rb:1429), which **executes a query** (`select_rows`) to
+materialize the limited DISTINCT primary keys, then rewrites the relation as
+`where(pk: ids)` with limit/offset cleared. This is required because a bare
+`IN (SELECT … LIMIT n)` over a row-multiplying join limits joined rows rather
+than parents, and MySQL rejects `IN`+`LIMIT` subqueries outright.
+
+trails' `PredicateBuilder` is synchronous and side-effect-free, so it cannot
+run that query mid-construction. The convergence PR approximates: it keeps the
+join (joined-table predicates/orders stay valid) and applies `DISTINCT` on the
+parent key under the same `LIMIT`, which yields the correct distinct-parent set
+on SQLite/PostgreSQL. The residual gaps to close here:
+
+- MySQL/MariaDB still cannot execute `IN (SELECT … LIMIT n)`; faithful behavior
+  needs the materialized-id rewrite.
+- The DISTINCT approximation diverges from Rails' emitted SQL (an `IN (ids)`
+  list) even where it returns the same rows.
+
+See `relation.ts#applyJoinDependencyForArel` and
+`predicate-builder/relation-handler.ts`.
+
 ## Acceptance criteria
+
+- [ ] `where(id: rel.eagerLoad(collectionAssoc).limit(n))` materializes the
+      limited distinct primary keys (mirroring `distinct_relation_for_primary_key`)
+      so the subquery is portable (works on MySQL) and bounds distinct parents.
+- [ ] Joined-table predicates/orders on the eager relation are preserved.
+- [ ] Cite `finder_methods.rb` / `schema_statements.rb` line ranges; no test
+      renames; `test:compare`/`api:compare` deltas ≥ 0.
