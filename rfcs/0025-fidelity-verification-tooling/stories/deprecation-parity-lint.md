@@ -1,7 +1,7 @@
 ---
 title: "ESLint: require @deprecated JSDoc where Rails deprecates (deprecation parity)"
-status: in-progress
-updated: 2026-06-12
+status: done
+updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: lint
 deps: []
