@@ -1,6 +1,6 @@
 ---
 title: "Fix re-entrant savepoint materialization (mutual autosave cycle) + un-skip Eye/Iris twice tests"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0016-ar-test-compare-100"
 cluster: null
