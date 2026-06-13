@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: trim GENERATED_INDEX_FILES to index.md (json now gitignored)"
-status: in-progress
+status: done
 updated: 2026-06-13
 rfc: "0001-task-system"
 cluster: null
