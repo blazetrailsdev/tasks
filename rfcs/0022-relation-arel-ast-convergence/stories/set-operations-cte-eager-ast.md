@@ -1,6 +1,6 @@
 ---
 title: "Set-ops: fold CTE/eager operands into the composed Union* AST (remove the string fallback)"
-status: claimed
+status: in-progress
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["set-operations-arel-nodes"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
+pr: 3187
 claim: "2026-06-13T12:13:11Z"
 assignee: "set-operations-cte-eager-ast"
 blocked-by: null
