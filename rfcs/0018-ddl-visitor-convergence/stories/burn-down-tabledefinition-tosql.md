@@ -1,6 +1,6 @@
 ---
 title: "Route TableDefinition#toSql through the DDL visitor (burn down rails-arel-tosql exclude)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0018-ddl-visitor-convergence"
 cluster: null
