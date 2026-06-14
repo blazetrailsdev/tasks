@@ -25,7 +25,7 @@ absorbed into the walk the way Rails' `walk` reuses matched outer-join tables
 
 ## Acceptance criteria
 
-- [ ] `setReferences` and the stored `_references` field are gone; references arrive as a join_constraints argument.
-- [ ] `walk` handles outer-join reuse per Rails (partition on table match); rebind helpers deleted or reduced to the Rails-visible behavior.
-- [ ] All references()/eager_load tests pass unchanged.
-- [ ] Diff under the 500 LOC ceiling.
+- [x] `setReferences` and the stored `_references` field are gone; references arrive as a join_constraints argument.
+- [x] `walk` handles outer-join reuse per Rails (partition on table match); rebind helpers deleted or reduced to the Rails-visible behavior.
+- [x] All references()/eager_load tests pass unchanged.
+- [x] Diff under the 500 LOC ceiling.
