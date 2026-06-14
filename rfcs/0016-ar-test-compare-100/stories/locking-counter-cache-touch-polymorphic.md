@@ -1,6 +1,6 @@
 ---
 title: "F-9e residual: lock_version bump on belongs-to counter cache touch + polymorphic destroy"
-status: claimed
+status: done
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3248
 claim: "2026-06-14T23:15:12Z"
 assignee: "locking-counter-cache-touch-polymorphic"
 blocked-by: null
