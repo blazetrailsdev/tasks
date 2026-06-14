@@ -1,6 +1,6 @@
 ---
 title: "Fold _associationInstances/_collectionProxies/_preloadedAssociations into one @association_cache slot"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T22:05:11Z"
+assignee: "fold-three-association-maps-into-one"
 blocked-by: null
 ---
 
