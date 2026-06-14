@@ -1,6 +1,6 @@
 ---
 title: "create alias double-clears query cache (delegates to wrapped insert vs Rails original-body alias)"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: 3288
 claim: "2026-06-14T21:16:11Z"
 assignee: "create-alias-double-dirties-query-cache"
 blocked-by: null
