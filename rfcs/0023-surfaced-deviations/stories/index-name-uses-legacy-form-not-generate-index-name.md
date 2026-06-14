@@ -1,6 +1,6 @@
 ---
 title: "index_name(table, {column}) uses legacy _and_ form instead of generate_index_name (no length/hash fallback)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
