@@ -1,7 +1,7 @@
 ---
 title: "removeIndex positional expression resolves index name without generate_index_name length/hash fallback"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
