@@ -1,6 +1,6 @@
 ---
 title: "Extract MySQL indexes introspection from mysql2-adapter into mysql/schema-statements"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 3280
 claim: "2026-06-14T19:12:36Z"
 assignee: "extract-mysql2-indexes-introspection"
 blocked-by: null
