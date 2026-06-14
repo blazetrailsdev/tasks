@@ -1,6 +1,6 @@
 ---
 title: "Extract PG column introspection and typeToSql into PostgreSQLSchemaStatements"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-indexes"]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: 3307
 claim: "2026-06-14T23:36:11Z"
 assignee: "extract-pg-schema-statements-columns-types"
 blocked-by: null
