@@ -1,6 +1,6 @@
 ---
 title: "Remove defineEnum; route all enum call sites through Base.enum"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
