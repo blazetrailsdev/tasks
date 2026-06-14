@@ -1,6 +1,6 @@
 ---
 title: "Apply all_queries default scopes on reload/update_columns (route reload through _findRecord + apply_scoping)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0005-activerecord-gaps"
 cluster: null
