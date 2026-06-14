@@ -1,6 +1,6 @@
 ---
 title: "tasks status: warn on stale claims with no PR"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
