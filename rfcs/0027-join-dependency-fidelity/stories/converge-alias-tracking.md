@@ -1,6 +1,6 @@
 ---
 title: "Converge alias handling to the AliasTracker + Aliases pair"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
@@ -8,7 +8,7 @@ deps: ["converge-tree-construction-make-tree"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 3238
 claim: "2026-06-14T02:18:35Z"
 assignee: "converge-alias-tracking"
 blocked-by: null
