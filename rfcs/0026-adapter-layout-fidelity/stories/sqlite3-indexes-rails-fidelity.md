@@ -1,6 +1,6 @@
 ---
 title: "Close SQLite3 indexes() fidelity gaps vs SQLite3::SchemaStatements#indexes"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
