@@ -1,6 +1,6 @@
 ---
 title: "Relation#toSql via unprepared_statement { conn.to_sql(arel) } (drop _lastSelectNode/_inlineBindQuoter)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
