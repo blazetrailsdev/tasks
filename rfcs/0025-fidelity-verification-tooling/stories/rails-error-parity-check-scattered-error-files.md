@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity: check scattered (non-errors.ts) error-class files"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
