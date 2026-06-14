@@ -1,6 +1,6 @@
 ---
 title: "Wire create=insert alias onto adapter host (Rails alias_method create, insert)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T14:36:34Z"
+assignee: "adapter-create-alias-missing"
 blocked-by: null
 ---
 
