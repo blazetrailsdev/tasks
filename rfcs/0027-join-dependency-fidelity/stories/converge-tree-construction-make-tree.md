@@ -1,6 +1,6 @@
 ---
 title: "Converge tree construction to Rails' build-once make_tree/walk_tree"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
