@@ -1,6 +1,6 @@
 ---
 title: "Default inheritance_column to 'type' and gate STI dispatch on column-aware _has_attribute?"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3302
 claim: "2026-06-14T22:26:15Z"
 assignee: "inheritance-column-default-type-and-has-attribute-gate"
 blocked-by: null
