@@ -1,14 +1,14 @@
 ---
 title: "trails-models-dump: composite-FK synthesized name round-trip"
-status: claimed
-updated: 2026-06-07
+status: done
+updated: 2026-06-14
 rfc: "0003-activerecord-cli"
 cluster: deferred
 deps: []
 deps-rfc: []
 est-loc: 30
 priority: 30
-pr: null
+pr: 3003
 claim: "2026-06-07T19:19:52Z"
 assignee: "models-dump-composite-fk-roundtrip"
 blocked-by: null
