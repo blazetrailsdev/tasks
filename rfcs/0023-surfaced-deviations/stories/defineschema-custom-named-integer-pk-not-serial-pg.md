@@ -35,8 +35,8 @@ would let these tests drop their per-file recreation workarounds.
 
 ## Acceptance criteria
 
-- [ ] `defineSchema` emits an auto-increment/identity column for a custom-named
+- [x] `defineSchema` emits an auto-increment/identity column for a custom-named
       single integer PK on PG (and the equivalent on MySQL).
-- [ ] `movies`/`keyboards`/`mixed_case_monkeys` test workarounds can be removed
+- [x] `movies`/`keyboards`/`mixed_case_monkeys` test workarounds can be removed
       (or are no longer needed) and the affected tests still pass on all adapters.
-- [ ] `test:compare` delta non-negative.
+- [x] `test:compare` delta non-negative.
