@@ -1,7 +1,7 @@
 ---
 title: "Type remaining schema option keys flagged vs Rails (new_column_definition :type on mysql/pg/sqlite, index_name :name)"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
