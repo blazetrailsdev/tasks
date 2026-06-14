@@ -1,6 +1,6 @@
 ---
 title: "pg-dropschema-cascade-and-searchpath-memoization-fidelity"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
