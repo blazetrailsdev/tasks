@@ -1,6 +1,6 @@
 ---
 title: "Widen rails-error-parity rule scope to activesupport (manifest already includes it; add eslint.config scope + baseline)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
