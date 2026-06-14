@@ -1,6 +1,6 @@
 ---
 title: "Route non-through self-join collision naming through AliasTracker.aliasedTableFor"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
