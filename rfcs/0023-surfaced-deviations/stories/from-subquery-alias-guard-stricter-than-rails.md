@@ -1,6 +1,6 @@
 ---
 title: "from() rejects subquery aliases Rails accepts (TS-only safe-identifier guard)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
