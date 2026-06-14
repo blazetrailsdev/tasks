@@ -1,6 +1,6 @@
 ---
 title: "Inline bind rendering via a SubstituteBinds collector (drop post-hoc regex)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T22:33:11Z"
+assignee: "inline-bind-rendering-via-substitute-binds-collector"
 blocked-by: null
 ---
 
