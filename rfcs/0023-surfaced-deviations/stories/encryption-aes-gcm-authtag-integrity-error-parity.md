@@ -1,7 +1,7 @@
 ---
 title: "Aes256Gcm decrypt may downgrade EncryptedContentIntegrity to Decryption error under legacy base64 fallback"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
