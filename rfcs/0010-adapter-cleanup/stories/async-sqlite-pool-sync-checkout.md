@@ -1,6 +1,6 @@
 ---
 title: "Support async-only SQLite drivers on the synchronous pool checkout path"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T15:06:34Z"
+assignee: "async-sqlite-pool-sync-checkout"
 blocked-by: null
 ---
 
