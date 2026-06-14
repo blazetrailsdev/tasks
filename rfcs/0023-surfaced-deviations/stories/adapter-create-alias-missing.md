@@ -1,6 +1,6 @@
 ---
 title: "Wire create=insert alias onto adapter host (Rails alias_method create, insert)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
