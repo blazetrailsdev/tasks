@@ -1,6 +1,6 @@
 ---
 title: "joins(:assoc) should retain target klass so aggregate/where cast-type resolution works without a registry scan"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
