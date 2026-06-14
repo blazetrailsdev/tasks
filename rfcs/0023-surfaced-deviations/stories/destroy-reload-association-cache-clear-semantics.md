@@ -34,8 +34,8 @@ the divergent post-destroy / post-reload cache state before changing.
 
 ## Acceptance criteria
 
-- [ ] destroy: either drop the post-freeze map clear to match Rails, or record
+- [x] destroy: either drop the post-freeze map clear to match Rails, or record
       the divergence with rationale.
-- [ ] reload: either adopt wholesale-replace-from-fresh, or record the
+- [x] reload: either adopt wholesale-replace-from-fresh, or record the
       divergence with rationale.
-- [ ] No test renames; `api:compare`/`test:compare` delta non-negative.
+- [x] No test renames; `api:compare`/`test:compare` delta non-negative.
