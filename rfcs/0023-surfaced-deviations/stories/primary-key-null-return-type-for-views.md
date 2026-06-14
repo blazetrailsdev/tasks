@@ -1,6 +1,6 @@
 ---
 title: "primary_key return type omits null for key-less data sources (views)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
