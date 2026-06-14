@@ -7,7 +7,7 @@ cluster: set-ops
 deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
