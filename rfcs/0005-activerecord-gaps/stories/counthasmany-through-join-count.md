@@ -1,6 +1,6 @@
 ---
 title: "countHasMany loads rows (loadHasManyThrough.length) for through assocs instead of COUNT(*) over the JOIN"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0005-activerecord-gaps"
 cluster: null
