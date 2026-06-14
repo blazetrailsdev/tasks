@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency resolves references aliasing eagerly at build, not in make_constraints"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
