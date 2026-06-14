@@ -1,6 +1,6 @@
 ---
 title: "Arel ToSql inlines binds via post-process, not Rails' collector-driven SubstituteBinds/SQLString"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
