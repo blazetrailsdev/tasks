@@ -1,6 +1,6 @@
 ---
 title: "find_by statement cache: resolve attribute aliases + belongs_to FK before cache check"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T21:58:12Z"
+assignee: "find-by-cache-alias-belongs-to-resolution"
 blocked-by: null
 ---
 
