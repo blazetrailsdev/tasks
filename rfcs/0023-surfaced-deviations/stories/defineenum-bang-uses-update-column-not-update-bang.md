@@ -1,6 +1,6 @@
 ---
 title: "defineEnum bang setters use update_column, not Rails update!"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
