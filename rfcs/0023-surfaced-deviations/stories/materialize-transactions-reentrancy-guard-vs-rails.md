@@ -1,6 +1,6 @@
 ---
 title: "materializeTransactions re-entrancy guard (AsyncContext owner-match) diverges from Rails @materializing_transactions"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T23:29:13Z"
+assignee: "materialize-transactions-reentrancy-guard-vs-rails"
 blocked-by: null
 ---
 
