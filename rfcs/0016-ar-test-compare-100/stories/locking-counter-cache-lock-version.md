@@ -1,6 +1,6 @@
 ---
 title: "F-9e residual: lock_version bump on counter cache/increment/decrement/update_counters + polymorphic destroy"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
