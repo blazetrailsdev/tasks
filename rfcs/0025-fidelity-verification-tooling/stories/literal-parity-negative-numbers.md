@@ -1,6 +1,6 @@
 ---
 title: "literals.ts: restore negative-number literal default/constant comparison"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T23:01:11Z"
+assignee: "literal-parity-negative-numbers"
 blocked-by: null
 ---
 
