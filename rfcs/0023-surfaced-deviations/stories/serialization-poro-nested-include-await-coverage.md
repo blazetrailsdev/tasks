@@ -1,7 +1,7 @@
 ---
 title: "Add activemodel-level test for awaited nested-include preload on an _attributes-less PORO"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
