@@ -1,6 +1,6 @@
 ---
 title: 'BigDecimal#toString does not implement scientific ("E") notation'
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T16:36:38Z"
+assignee: "bigdecimal-tostring-scientific-e-notation"
 blocked-by: null
 ---
 
