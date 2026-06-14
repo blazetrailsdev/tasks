@@ -1,6 +1,6 @@
 ---
 title: "DecimalType#cast returns a plain string, so decimal attributes quote as quoted strings not via BigDecimal F-form"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T18:24:34Z"
+assignee: "decimaltype-cast-returns-string-not-bigdecimal"
 blocked-by: null
 ---
 
