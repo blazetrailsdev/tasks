@@ -1,7 +1,7 @@
 ---
 title: "no-raw-sql: scope out test-helpers/test-setup DDL infra instead of baseline-grandfathering"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T12:12:34Z"
+assignee: "no-raw-sql-scope-out-ddl-infra"
 blocked-by: null
 ---
 
