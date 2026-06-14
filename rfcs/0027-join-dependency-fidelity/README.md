@@ -152,14 +152,22 @@ scope convergence, not 0027.
 
 ## Stories
 
-| ID                                                                                      | Title                                           | Status | Est LOC |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------- | ------ | ------- |
-| [audit-join-dependency-rails-mapping](stories/audit-join-dependency-rails-mapping.md)   | Audit: map TS JoinDependency to Rails           | draft  | 0       |
-| [converge-tree-construction-make-tree](stories/converge-tree-construction-make-tree.md) | Converge tree construction to make_tree         | draft  | 450     |
-| [converge-alias-tracking](stories/converge-alias-tracking.md)                           | Converge alias handling to AliasTracker/Aliases | draft  | 400     |
-| [converge-join-constraints-references](stories/converge-join-constraints-references.md) | Converge join_constraints & references          | draft  | 400     |
-| [converge-instantiate-construct](stories/converge-instantiate-construct.md)             | Converge instantiate/construct                  | draft  | 450     |
+| ID                                                                                                | Title                                                 | Status | Est LOC |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------ | ------- |
+| [audit-join-dependency-rails-mapping](stories/audit-join-dependency-rails-mapping.md)             | Audit: map TS JoinDependency to Rails                 | draft  | 0       |
+| [converge-tree-construction-make-tree](stories/converge-tree-construction-make-tree.md)           | Converge tree construction to make_tree               | draft  | 450     |
+| [converge-alias-tracking](stories/converge-alias-tracking.md)                                     | Converge alias handling to AliasTracker/Aliases       | draft  | 400     |
+| [converge-join-constraints-references](stories/converge-join-constraints-references.md)           | Converge join_constraints & references                | draft  | 400     |
+| [converge-instantiate-construct](stories/converge-instantiate-construct.md)                       | Converge instantiate/construct                        | draft  | 450     |
+| [converge-references-lazy-make-constraints](stories/converge-references-lazy-make-constraints.md) | Converge references to lazy make_constraints aliasing | draft  | 250     |
 
 ## Changelog
 
 - 2026-06-12: initial RFC
+- 2026-06-14: add `converge-references-lazy-make-constraints` — the signature
+  convergence (#3253) left reference _consumption_ eager (`void references` in
+  `joinConstraints`, aliasing resolved at build in `addAssociation`). This
+  story finishes the convergence: `make_constraints` consumes references lazily
+  per Rails `join_dependency.rb:202`. Surfaced by RFC 0023's deviation story
+  (PR #3299), which now documents the divergence as pending-convergence rather
+  than wontfix.
