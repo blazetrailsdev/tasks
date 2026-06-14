@@ -33,15 +33,15 @@ unchecked, and nobody is forced to reconcile "what the story asked" against
 
 ## Acceptance criteria
 
-- [ ] `tasks done` exits non-zero with the list of unchecked items when the
+- [x] `tasks done` exits non-zero with the list of unchecked items when the
       story body has any `- [ ]` checkbox; `--force` bypasses with a printed
       warning.
-- [ ] Checked boxes (`- [x]`, case-insensitive) and non-checkbox bullets are
+- [x] Checked boxes (`- [x]`, case-insensitive) and non-checkbox bullets are
       ignored; stories with no checkboxes at all pass the guard unchanged.
-- [ ] On success, `done` prints `est-loc <E> vs actual <A> (<delta>)` when
+- [x] On success, `done` prints `est-loc <E> vs actual <A> (<delta>)` when
       both are available; gh failures or `est-loc: null` degrade to silence,
       never an error.
-- [ ] Unit tests cover: unchecked-blocks, `--force` bypass, checked-passes,
+- [x] Unit tests cover: unchecked-blocks, `--force` bypass, checked-passes,
       and the delta line (gh stubbed, matching the existing `checkPrNotOpen`
       test pattern in `cli.test.ts`).
 
