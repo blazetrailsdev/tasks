@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveSupport::MessagePack into activesupport; delegate encryption serializer to it"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: ["encryption-messagepack-serializer-binary-format"]
