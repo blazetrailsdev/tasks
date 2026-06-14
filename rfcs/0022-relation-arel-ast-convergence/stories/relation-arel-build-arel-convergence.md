@@ -1,7 +1,7 @@
 ---
 title: "Relation#arel/#toArel: converge on full build_arel (joins/HAVING/FROM/LOCK/CTEs), not projection-only"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: ["from-clause-arel-manager"]
