@@ -21,11 +21,11 @@ renders through `Collectors.SubstituteBinds(inspectQuoter, …)`. `inspectQuoter
 is a bespoke `'…'`/NULL/`String(val)` renderer — NOT the connection's `quote` —
 and the method uses a module-level `new Visitors.ToSql()` with no connection.
 
-Rails' `ActiveRecord::Relation::WhereClause` has **no `to_sql` method**. trails
-added `WhereClause#toSql` as a debug/inspect convenience. So "exactly how Rails
-does it" means: either there is no such method (callers render the predicates'
-SQL some other way), or the inline rendering must go through the connection like
-every other Rails inline path.
+Rails' `ActiveRecord::Relation::WhereClause` has **no `to_sql` method**
+(verified, v8.0.2 `relation/where_clause.rb`). The entire trails
+`WhereClause#toSql` method plus `inspectQuoter` is a trails-ism. "Exactly how
+Rails does it" = the method does not exist; callers must render predicate SQL
+the Rails way (e.g. through the relation / `connection.toSql`).
 
 ## Acceptance criteria
 

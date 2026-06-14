@@ -33,12 +33,12 @@ directly in the visitor**, after which a plain `SQLString` reproduces Arel's
 bare-`compile` behavior (Casted inlined, BindParam `?`) and `InlineBinds` is
 unnecessary.
 
-NOTE: the audit story must first confirm the targeted Arel version's
-`visit_Casted` mechanism and what `to_sql_test.rb` asserts. If that version
-routes `Casted` through `add_bind` (Rails 7.1+ prepared-statement support), the
-correct target is instead `compile` defaulting to `SQLString` (Casted → `?`) and
-updating the mirrored test expectations — this story's direction is set by the
-audit.
+CONFIRMED by the audit (Rails v8.0.2): `visit_Arel_Nodes_Casted` is
+`collector << quote(o.value_for_database)` and `visit_Arel_Nodes_Quoted` is an
+alias of it — both inline directly; only `BindParam` uses `add_bind`. `compile`
+defaults to `SQLString`. So the fix is the visitor-inline direction below; there
+is NO `add_bind`-for-Casted variant to consider. `HomogeneousIn` keeps
+`add_binds` (already faithful, `to-sql.ts:710`).
 
 ## Acceptance criteria
 
