@@ -39,6 +39,6 @@ shared private helpers `relkindExists`, `dataSourceSql`, `quotedScope`,
 
 ## Acceptance criteria
 
-- [ ] Listed methods live in the mirrored module file; the adapter only delegates.
-- [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters.
-- [ ] PR diff under the 500 LOC ceiling; if the group exceeds it, ship the slice that fits and register the remainder as a new story.
+- [x] Listed methods live in the mirrored module file; the adapter only delegates.
+- [x] No behavior change: no test edits beyond import paths; CI green on all three adapters.
+- [x] PR diff under the 500 LOC ceiling; if the group exceeds it, ship the slice that fits and register the remainder as a new story.
