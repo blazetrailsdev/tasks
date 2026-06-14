@@ -1,6 +1,6 @@
 ---
 title: "Extract MySQL indexes introspection from mysql2-adapter into mysql/schema-statements"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
