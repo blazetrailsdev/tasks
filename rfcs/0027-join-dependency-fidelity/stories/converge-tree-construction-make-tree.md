@@ -1,6 +1,6 @@
 ---
 title: "Converge tree construction to Rails' build-once make_tree/walk_tree"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
@@ -8,7 +8,7 @@ deps: ["audit-join-dependency-rails-mapping"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: 3229
 claim: "2026-06-14T01:06:34Z"
 assignee: "converge-tree-construction-make-tree"
 blocked-by: null
