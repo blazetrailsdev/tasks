@@ -76,7 +76,7 @@ into this story so they land together with the reset-barrier rework.
 
 ## Acceptance criteria
 
-- [ ] Make PG's async reset (`resetBang`'s deferred `ROLLBACK` + `DISCARD ALL`
+- [x] Make PG's async reset (`resetBang`'s deferred `ROLLBACK` + `DISCARD ALL`
       via `_inFlightReset`, plus the post-reset `configure_connection` re-run)
       compatible with eager acquisition, so a connection yielded by the base
       `withRawConnection` loop is guaranteed drained + reconfigured WITHOUT a
@@ -87,24 +87,24 @@ into this story so they land together with the reset-barrier rework.
       reset path so the pre-loop eager `connectBang` becomes the unconditional
       drain point; (c) another approach that keeps `ROLLBACK` → `DISCARD ALL`
       ordering and socket identity.
-- [ ] Land the Phase-4 eager-connect/eager-reconnect work: `connectBang()`
+- [x] Land the Phase-4 eager-connect/eager-reconnect work: `connectBang()`
       async on `AbstractAdapter` (base no-op stays a no-op; SQLite/MySQL inherit
       unchanged); PG overrides `connectBang()` to eagerly populate
       `this._connection`; PG `reconnect()` repopulates `_connection` eagerly.
-- [ ] PG's `rawConnectionForBlock` override **deleted**; the base loop yields
+- [x] PG's `rawConnectionForBlock` override **deleted**; the base loop yields
       `this._connection` for PG. (`Mysql2Adapter` still overrides — the base
       seam stays.)
-- [ ] `getClient()` reduced to a thin accessor of `_connection` (or removed
+- [x] `getClient()` reduced to a thin accessor of `_connection` (or removed
       where callers can read `_connection` directly); no caller depends on a
       lazy second-acquire path.
-- [ ] Statement-pool and `configure_connection` lifecycle stay correct under
+- [x] Statement-pool and `configure_connection` lifecycle stay correct under
       eager acquisition (no double-open, race-guard preserved, `DISCARD ALL`
       ordering preserved, socket identity preserved across reset).
-- [ ] Consider the pre-existing `connected?` `finished?` fidelity gap deferred
+- [x] Consider the pre-existing `connected?` `finished?` fidelity gap deferred
       from Phase 3/4 (Rails PG `connected?` is `!(@raw_connection.nil? ||
 @raw_connection.finished?)`; trails base `isConnected()` only checks
       `_connection !== null`). Fold in here or split to its own story.
-- [ ] `pnpm tsc --build` clean; PG adapter dirs (connection, transaction,
+- [x] `pnpm tsc --build` clean; PG adapter dirs (connection, transaction,
       transaction-nested, statement-pool, money) green under ARCONN=postgresql +
       live PG — in particular `PostgresqlConnectionTest > reset` and
       `> reset with transaction`; Phase-2/3 retry/reconnect mirrors stay green;
