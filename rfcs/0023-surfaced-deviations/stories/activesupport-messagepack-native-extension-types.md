@@ -1,6 +1,6 @@
 ---
 title: "Register the remaining ActiveSupport::MessagePack native extension types"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
