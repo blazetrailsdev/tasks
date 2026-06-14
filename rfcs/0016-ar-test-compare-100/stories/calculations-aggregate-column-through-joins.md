@@ -1,6 +1,6 @@
 ---
 title: "calculations-aggregate-column-through-joins"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: null
