@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::MessagePack into activesupport; delegate encryption serializer to it"
-status: claimed
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["encryption-messagepack-serializer-binary-format"]
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
+pr: 3255
 claim: "2026-06-14T14:24:37Z"
 assignee: "activesupport-messagepack-port"
 blocked-by: null
