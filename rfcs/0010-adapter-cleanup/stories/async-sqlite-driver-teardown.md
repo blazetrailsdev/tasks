@@ -1,6 +1,6 @@
 ---
 title: "Async-driver connection teardown for SQLite (await driver.close in disconnectBang)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T15:00:34Z"
+assignee: "async-sqlite-driver-teardown"
 blocked-by: null
 ---
 
