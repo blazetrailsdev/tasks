@@ -1,7 +1,7 @@
 ---
 title: "DecimalType#cast returns a plain string, so decimal attributes quote as quoted strings not via BigDecimal F-form"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
