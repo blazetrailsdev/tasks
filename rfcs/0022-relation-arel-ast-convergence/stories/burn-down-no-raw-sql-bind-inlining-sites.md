@@ -1,7 +1,7 @@
 ---
 title: "Burn down remaining no-raw-sql baseline: bind-inlining and sanitize_sql sites"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
