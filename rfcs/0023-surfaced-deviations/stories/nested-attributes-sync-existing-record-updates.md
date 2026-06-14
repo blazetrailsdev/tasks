@@ -1,7 +1,7 @@
 ---
 title: "Nested attributes: id-bearing/update_only updates & destroys defer to async flush instead of Rails' synchronous in-memory existing_record handling"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
