@@ -1,7 +1,7 @@
 ---
 title: "Default inheritance_column to 'type' and gate STI dispatch on column-aware _has_attribute?"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
