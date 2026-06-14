@@ -1,6 +1,6 @@
 ---
 title: "tasks done: unchecked-checkbox guard + est-loc vs actual delta"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3227
 claim: "2026-06-14T00:54:35Z"
 assignee: "cli-done-completion-guards"
 blocked-by: null
