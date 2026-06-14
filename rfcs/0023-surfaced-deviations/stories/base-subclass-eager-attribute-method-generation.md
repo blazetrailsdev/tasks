@@ -1,6 +1,6 @@
 ---
 title: "Real Base subclasses generate attribute accessors eagerly at attribute() declaration (Rails generates lazily via define_attribute_methods)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
