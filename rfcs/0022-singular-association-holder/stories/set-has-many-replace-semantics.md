@@ -1,7 +1,7 @@
 ---
 title: "setHasMany should mirror Rails CollectionAssociation#replace (FK-diff true replace)"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0022-singular-association-holder"
 cluster: null
 deps: []
