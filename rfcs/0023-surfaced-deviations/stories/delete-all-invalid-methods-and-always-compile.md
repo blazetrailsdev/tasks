@@ -1,6 +1,6 @@
 ---
 title: "delete_all: raise on distinct/with and always compile_delete (structural parity)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T18:48:34Z"
+assignee: "delete-all-invalid-methods-and-always-compile"
 blocked-by: null
 ---
 
