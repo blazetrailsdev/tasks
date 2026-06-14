@@ -1,6 +1,6 @@
 ---
 title: "Converge instantiateSti onto discriminateClassForRecord (single STI dispatch path)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T18:12:35Z"
+assignee: "converge-instantiate-sti-discriminate-class"
 blocked-by: null
 ---
 
