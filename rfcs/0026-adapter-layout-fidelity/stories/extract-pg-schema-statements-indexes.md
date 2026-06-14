@@ -1,6 +1,6 @@
 ---
 title: "Extract PG index statements into PostgreSQLSchemaStatements"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-tables-introspection"]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: 3301
 claim: "2026-06-14T22:40:12Z"
 assignee: "extract-pg-schema-statements-indexes"
 blocked-by: null
