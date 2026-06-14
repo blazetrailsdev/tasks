@@ -1,6 +1,6 @@
 ---
 title: "f9g3b4-finder-eager-load-collection-ordering"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T21:51:11Z"
+assignee: "f9g3b4-finder-eager-load-collection-ordering"
 blocked-by: null
 ---
 
