@@ -1,7 +1,7 @@
 ---
 title: "Verify and fix remaining options-key parity findings vs Rails (delegated_type :scope, _find_record :all_queries, dbconsole :include_password/:header/:mode)"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
