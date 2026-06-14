@@ -1,6 +1,6 @@
 ---
 title: "Register the remaining ActiveSupport::MessagePack native extension types"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["activesupport-messagepack-port"]
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: null
+pr: 3282
 claim: "2026-06-14T19:24:12Z"
 assignee: "activesupport-messagepack-native-extension-types"
 blocked-by: null
