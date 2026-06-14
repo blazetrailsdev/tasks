@@ -1,7 +1,7 @@
 ---
 title: "Converge instantiateFromRows/_constructRecursive to Rails' instantiate/construct"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
 deps: ["converge-join-constraints-references"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T18:06:34Z"
+assignee: "converge-instantiate-construct"
 blocked-by: null
 ---
 
