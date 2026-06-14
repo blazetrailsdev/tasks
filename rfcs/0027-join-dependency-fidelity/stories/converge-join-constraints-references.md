@@ -1,6 +1,6 @@
 ---
 title: "Converge join_constraints and the references path to Rails' signatures"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
