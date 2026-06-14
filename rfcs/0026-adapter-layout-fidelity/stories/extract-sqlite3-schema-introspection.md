@@ -1,6 +1,6 @@
 ---
 title: "Move SQLite schema-introspection slice from sqlite3-adapter into sqlite3/schema-statements"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
