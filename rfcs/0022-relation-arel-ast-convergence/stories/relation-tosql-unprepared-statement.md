@@ -7,7 +7,7 @@ cluster: set-ops
 deps: ["audit-bind-inlining-rails-fidelity", "connection-tosql-via-collector"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null
