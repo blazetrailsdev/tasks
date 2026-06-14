@@ -1,7 +1,7 @@
 ---
 title: "f9g3b-persistence-feature-gap-tail"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T02:12:36Z"
+assignee: "f9g3b-persistence-feature-gap-tail"
 blocked-by: null
 ---
 
