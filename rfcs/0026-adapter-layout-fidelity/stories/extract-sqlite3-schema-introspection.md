@@ -1,7 +1,7 @@
 ---
 title: "Move SQLite schema-introspection slice from sqlite3-adapter into sqlite3/schema-statements"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T01:54:33Z"
+assignee: "extract-sqlite3-schema-introspection"
 blocked-by: null
 ---
 
