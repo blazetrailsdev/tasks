@@ -1,6 +1,6 @@
 ---
 title: "Support async-only SQLite drivers in synchronous adapter getters (encoding, etc.)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0010-adapter-cleanup"
 cluster: null
