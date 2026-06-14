@@ -1,6 +1,6 @@
 ---
 title: "Relocate inline MysqlSchemaStatements class and statement defaults out of mysql2-adapter"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["extract-mysql2-schema-introspection"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 3252
 claim: "2026-06-14T14:18:33Z"
 assignee: "extract-mysql2-schema-statements-class"
 blocked-by: null
