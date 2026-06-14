@@ -1,6 +1,6 @@
 ---
 title: "Mixed all_queries/non-all_queries default scopes apply correctly on create+update (un-skip combined test)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T19:52:11Z"
+assignee: "combined-mixed-all-queries-default-scope-on-create-update"
 blocked-by: null
 ---
 
