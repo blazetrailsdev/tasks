@@ -1,7 +1,7 @@
 ---
 title: "column_names sync introspection excludes virtual attributes (cold cache)"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
