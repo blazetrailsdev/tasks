@@ -1,6 +1,6 @@
 ---
 title: "WhereClause#toSql: route through the connection (or remove) — drop bespoke inspectQuoter"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
