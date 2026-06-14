@@ -1,6 +1,6 @@
 ---
 title: "f9g3b3-touch-later-association-propagation"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: null
