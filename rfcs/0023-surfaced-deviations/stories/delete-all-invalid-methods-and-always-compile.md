@@ -1,6 +1,6 @@
 ---
 title: "delete_all: raise on distinct/with and always compile_delete (structural parity)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
