@@ -1,7 +1,7 @@
 ---
 title: "Enum assertValidValue not enforced on mass-assignment/writeAttribute"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
