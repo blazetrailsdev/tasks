@@ -1,7 +1,7 @@
 ---
 title: "MySQL mysqlBinds does not unwrap ActiveModel::Attribute (QueryAttribute) to value_for_database"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
