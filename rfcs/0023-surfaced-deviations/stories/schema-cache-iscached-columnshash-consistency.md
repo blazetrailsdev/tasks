@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache.isCached checks _columns but readers use _columnsHash — make consistent"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
