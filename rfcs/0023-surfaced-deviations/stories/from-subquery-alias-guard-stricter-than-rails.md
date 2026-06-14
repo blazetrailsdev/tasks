@@ -1,6 +1,6 @@
 ---
 title: "from() rejects subquery aliases Rails accepts (TS-only safe-identifier guard)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T22:12:13Z"
+assignee: "from-subquery-alias-guard-stricter-than-rails"
 blocked-by: null
 ---
 
