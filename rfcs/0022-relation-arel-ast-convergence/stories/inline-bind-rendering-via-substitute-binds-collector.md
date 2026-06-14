@@ -1,6 +1,6 @@
 ---
 title: "Inline bind rendering via a SubstituteBinds collector (drop post-hoc regex)"
-status: in-progress
+status: blocked
 updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: 3300
 claim: "2026-06-14T22:33:11Z"
 assignee: "inline-bind-rendering-via-substitute-binds-collector"
-blocked-by: null
+blocked-by: "Superseded: audit (audit-bind-inlining-rails-fidelity) found InlineBinds is a wrong-layer fix vs Rails v8.0.2 (visit_Casted inlines via <<, not add_bind). PR #3300 closed unmerged. Work folds into compile-casted-inline-in-visitor + connection-tosql-via-collector + relation-tosql-unprepared-statement + whereclause-tosql-drop-inspectquoter."
 ---
 
 ## Context
