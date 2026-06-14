@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency resolves references aliasing eagerly at build, not in make_constraints"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T22:47:13Z"
+assignee: "join-dependency-references-resolved-at-build-not-make-constraints"
 blocked-by: null
 ---
 
