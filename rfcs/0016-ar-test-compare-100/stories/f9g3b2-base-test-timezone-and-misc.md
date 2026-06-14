@@ -1,6 +1,6 @@
 ---
 title: "f9g3b2-base-test-timezone-and-misc"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3292
 claim: "2026-06-14T21:37:10Z"
 assignee: "f9g3b2-base-test-timezone-and-misc"
 blocked-by: null
