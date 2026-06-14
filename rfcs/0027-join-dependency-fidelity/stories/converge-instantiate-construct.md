@@ -26,7 +26,7 @@ hold no methods without a Rails counterpart (audit-verified).
 
 ## Acceptance criteria
 
-- [ ] Instantiation methods correspond one-to-one with Rails' instantiate/construct/construct_model.
-- [ ] Eager-load instantiation tests (incl. STI and duplicate-row cases) pass unchanged.
-- [ ] File holds no port-only members except those the audit verdicted must-stay.
-- [ ] Diff under the 500 LOC ceiling.
+- [x] Instantiation methods correspond one-to-one with Rails' instantiate/construct/construct_model.
+- [x] Eager-load instantiation tests (incl. STI and duplicate-row cases) pass unchanged.
+- [x] File holds no port-only members except those the audit verdicted must-stay.
+- [x] Diff under the 500 LOC ceiling.
