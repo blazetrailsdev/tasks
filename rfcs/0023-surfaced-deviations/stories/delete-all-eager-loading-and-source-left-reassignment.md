@@ -1,6 +1,6 @@
 ---
 title: "delete_all: apply_join_dependency for eager_loading? and force arel.source.left = table"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3290
 claim: "2026-06-14T21:23:15Z"
 assignee: "delete-all-eager-loading-and-source-left-reassignment"
 blocked-by: null
