@@ -1,6 +1,6 @@
 ---
 title: "Align connected?/isConnected with Rails' @raw_connection.finished? check (PG fidelity gap)"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0013-pg-rawconn-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3267
 claim: "2026-06-14T17:12:36Z"
 assignee: "connected-finished-fidelity"
 blocked-by: null
