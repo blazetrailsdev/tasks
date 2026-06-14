@@ -1,6 +1,6 @@
 ---
 title: "Thread references aliasing through _addThroughViaJoinAssociation"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: null
