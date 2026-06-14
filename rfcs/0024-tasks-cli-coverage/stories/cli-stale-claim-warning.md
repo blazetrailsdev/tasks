@@ -1,7 +1,7 @@
 ---
 title: "tasks status: warn on stale claims with no PR"
-status: ready
-updated: 2026-06-12
+status: claimed
+updated: 2026-06-14
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T01:00:35Z"
+assignee: "cli-stale-claim-warning"
 blocked-by: null
 ---
 
