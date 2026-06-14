@@ -1,6 +1,6 @@
 ---
 title: "Eagerly warm schema cache at connection/boot in production (not just defineSchema)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
