@@ -1,6 +1,6 @@
 ---
 title: "Converge declare/defineEnum onto Rails-faithful _enum (remove integer-storing defineEnum)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
