@@ -24,6 +24,6 @@ owns column-alias lookup for instantiation.
 
 ## Acceptance criteria
 
-- [ ] Table aliasing flows only through AliasTracker; column aliases only through Aliases; the index-keyed maps and counters are deleted.
-- [ ] Sibling/self-join alias tests (#3145 coverage) pass unchanged.
-- [ ] Diff under the 500 LOC ceiling.
+- [x] Table aliasing flows only through AliasTracker; column aliases only through Aliases; the index-keyed maps and counters are deleted. (Residual: the non-through self-join collision branch still emits `t{tableIndex}` as the SQL alias — tracked by converge-collision-alias-naming.)
+- [x] Sibling/self-join alias tests (#3145 coverage) pass unchanged.
+- [x] Diff under the 500 LOC ceiling.
