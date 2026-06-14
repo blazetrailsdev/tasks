@@ -1,7 +1,7 @@
 ---
 title: "Extract PG schema/database/session statements into PostgreSQLSchemaStatements"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T01:48:34Z"
+assignee: "extract-pg-schema-statements-schemas-databases"
 blocked-by: null
 ---
 
