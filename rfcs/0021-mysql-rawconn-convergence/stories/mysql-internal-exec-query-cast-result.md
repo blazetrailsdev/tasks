@@ -1,7 +1,7 @@
 ---
 title: "Implement internalExecQuery/castResult on Mysql2Adapter so query_value/update work"
 status: ready
-updated: 2026-06-13
+updated: 2026-06-14
 rfc: "0021-mysql-rawconn-convergence"
 cluster: null
 deps: []
@@ -36,3 +36,7 @@ MySQL/MariaDB suite. Worked around by routing through `selectValue`/`execute`
 - [ ] `Mysql2Adapter` implements `internalExecQuery` (and `castResult`/`execute`)
 - [ ] `query_value`/`update`/`execute` work on MySQL without throwing
 - [ ] revisit the `selectValue`/`execute` workaround in `disableReferentialIntegrity`
+- [ ] Read the corresponding Rails test(s) first and mirror names verbatim; add
+      coverage for `query_value`/`update`/`execute` on the mysql2 adapter
+- [ ] CI green on all three adapters (MySQL path is the one exercised)
+- [ ] api:compare / test:compare delta non-negative

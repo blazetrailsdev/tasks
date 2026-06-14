@@ -38,10 +38,12 @@ omissions from Rails `delete_all` (`relation.rb:1023-1024`):
 
 ## Acceptance criteria
 
-- `deleteAll` applies the eager-load join dependency when `eager_loading?` is
-  true, mirroring `relation.rb:1023`.
-- `deleteAll` forces `source.left` back to the model table before
-  `compileDelete`, so `from(custom).deleteAll()` still targets the table —
-  matching `relation.rb:1024`.
-- Tests mirror any corresponding Rails `delete_all` cases verbatim
-  (`test_delete_all_with_includes`, `test_delete_all_with_left_joins`, etc.).
+- [ ] `deleteAll` applies the eager-load join dependency when `eager_loading?`
+      is true, mirroring `relation.rb:1023`.
+- [ ] `deleteAll` forces `source.left` back to the model table before
+      `compileDelete`, so `from(custom).deleteAll()` still targets the table —
+      matching `relation.rb:1024`.
+- [ ] Tests mirror any corresponding Rails `delete_all` cases verbatim
+      (`test_delete_all_with_includes`, `test_delete_all_with_left_joins`, etc.).
+- [ ] CI green on all three adapters; api:compare / test:compare delta
+      non-negative.

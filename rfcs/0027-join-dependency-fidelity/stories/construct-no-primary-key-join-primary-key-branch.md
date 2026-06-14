@@ -49,12 +49,11 @@ reconstruction (the `construct`/instantiate path in
 this branch — it assumes every node has a primary key, so a no-PK joined node
 would mis-key or wrongly dedupe via the cache.
 
-This converges alongside the sibling story `converge-instantiate-construct`
-(which introduces the `instantiateFromRows` / `_constructRecursive` /
-`applyColumnAliases` trio mirroring Rails' `instantiate`/`construct`/
-`construct_model`); this story is the no-PK sub-branch of that `construct`. It
-is likely **blocked by** that convergence landing first — confirm and set
-`blocked-by` if so.
+The sibling story `converge-instantiate-construct` (PR #3272, **merged**) already
+introduced the `instantiateFromRows` / `_constructRecursive` / `applyColumnAliases`
+trio mirroring Rails' `instantiate`/`construct`/`construct_model`. This story is
+the no-PK sub-branch of that `construct` — the prerequisite has landed, so this
+is unblocked and edits the existing trio directly.
 
 ## Acceptance criteria
 
@@ -69,5 +68,3 @@ is likely **blocked by** that convergence landing first — confirm and set
       verbatim) reconstructs correctly without spurious dedupe.
 - [ ] CI green on all three adapters; api:compare / test:compare delta
       non-negative.
-- [ ] If `converge-instantiate-construct` is not yet merged, set this story's
-      `blocked-by` to it.

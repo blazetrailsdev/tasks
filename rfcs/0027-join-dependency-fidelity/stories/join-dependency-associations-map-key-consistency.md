@@ -38,8 +38,9 @@ associations/`seen` map is derived the same way on write and read (matching
 Rails' single `column_alias`-based path), removing the raw-vs-cast /
 `readAttribute`-vs-`_readAttribute` divergence.
 
-Likely **depends on** `converge-instantiate-construct` (which lands the
-`instantiateFromRows` trio this story refers to) — confirm and set `blocked-by`.
+`converge-instantiate-construct` (PR #3272, **merged**) already landed the
+`instantiateFromRows` trio this story refers to, so this is unblocked and tunes
+the existing parent-key accessor on that path.
 
 ## Acceptance criteria
 
@@ -55,5 +56,3 @@ Likely **depends on** `converge-instantiate-construct` (which lands the
       verbatim.
 - [ ] CI green on all three adapters; api:compare / test:compare delta
       non-negative.
-- [ ] Set `blocked-by: converge-instantiate-construct` if that story has not
-      yet merged.
