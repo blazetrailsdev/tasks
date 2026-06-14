@@ -1,6 +1,6 @@
 ---
 title: "Fold _associationInstances/_collectionProxies/_preloadedAssociations into one @association_cache slot"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0022-singular-association-holder"
 cluster: null
