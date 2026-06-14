@@ -1,6 +1,6 @@
 ---
 title: "F-9e residual: dirty primary key update/delete/destroy"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
