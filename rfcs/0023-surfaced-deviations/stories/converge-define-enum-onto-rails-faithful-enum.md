@@ -1,6 +1,6 @@
 ---
 title: "Converge declare/defineEnum onto Rails-faithful _enum (remove integer-storing defineEnum)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T17:24:37Z"
+assignee: "converge-define-enum-onto-rails-faithful-enum"
 blocked-by: null
 ---
 
