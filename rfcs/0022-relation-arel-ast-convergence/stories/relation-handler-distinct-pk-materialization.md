@@ -1,7 +1,7 @@
 ---
 title: "relation-handler-distinct-pk-materialization"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
