@@ -1,7 +1,7 @@
 ---
 title: "destroy/reload association-cache clear diverges from Rails (clear+repopulate vs freeze/wholesale-replace)"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
