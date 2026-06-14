@@ -1,6 +1,6 @@
 ---
 title: "Distinct-count subquery path (aggregateColumn/buildCountSubquery) does not resolve a qualified/joined column through joins"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
