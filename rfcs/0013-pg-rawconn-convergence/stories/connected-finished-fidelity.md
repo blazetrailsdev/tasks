@@ -1,6 +1,6 @@
 ---
 title: "Align connected?/isConnected with Rails' @raw_connection.finished? check (PG fidelity gap)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0013-pg-rawconn-convergence"
 cluster: null
