@@ -1,7 +1,7 @@
 ---
 title: "Support async-only SQLite drivers on the synchronous pool checkout path"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
