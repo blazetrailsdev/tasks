@@ -1,7 +1,7 @@
 ---
 title: "pluck: apply join dependency for has_include? columns (apply_join_dependency)"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
