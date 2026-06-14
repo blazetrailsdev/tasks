@@ -1,6 +1,6 @@
 ---
 title: "Burn down rails-error-parity bare-throw baseline: replace throw new Error with ported Rails error classes (491 sites / 142 files)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
