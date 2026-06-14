@@ -1,6 +1,6 @@
 ---
 title: "indexNameForRemoveFrom inline can_remove_index_by_name check ignores :algorithm and uses column==null vs Rails except(:name,:algorithm)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
