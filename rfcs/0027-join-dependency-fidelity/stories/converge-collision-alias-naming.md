@@ -1,6 +1,6 @@
 ---
 title: "Route non-through self-join collision naming through AliasTracker.aliasedTableFor"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
@@ -8,7 +8,7 @@ deps: ["converge-alias-tracking"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3266
 claim: "2026-06-14T17:18:33Z"
 assignee: "converge-collision-alias-naming"
 blocked-by: null
