@@ -1,6 +1,6 @@
 ---
 title: "DecimalType: BigDecimal Infinity sentinel (±Infinity casts to null instead of preserving)"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
