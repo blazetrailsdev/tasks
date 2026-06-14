@@ -1,7 +1,7 @@
 ---
 title: "set-deps: reuse validate-as-library's shared cycle/reference check"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0024-tasks-cli-coverage"
 cluster: null
 deps: []
