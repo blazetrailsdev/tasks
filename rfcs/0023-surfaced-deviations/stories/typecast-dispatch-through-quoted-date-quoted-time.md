@@ -1,6 +1,6 @@
 ---
 title: "type_cast inlines date/time formatting instead of dispatching through quoted_date/quoted_time"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
