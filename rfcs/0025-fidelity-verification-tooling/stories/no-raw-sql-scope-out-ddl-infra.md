@@ -1,6 +1,6 @@
 ---
 title: "no-raw-sql: scope out test-helpers/test-setup DDL infra instead of baseline-grandfathering"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
