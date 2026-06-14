@@ -1,6 +1,6 @@
 ---
 title: "column_names sync introspection excludes virtual attributes (cold cache)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T17:06:34Z"
+assignee: "columnnames-sync-virtual-exclusion"
 blocked-by: null
 ---
 
