@@ -1,6 +1,6 @@
 ---
 title: "defineSchema leaves custom-named integer PK sequence-less on PostgreSQL"
-status: claimed
+status: in-progress
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3276
 claim: "2026-06-14T18:36:37Z"
 assignee: "defineschema-custom-named-integer-pk-not-serial-pg"
 blocked-by: null
