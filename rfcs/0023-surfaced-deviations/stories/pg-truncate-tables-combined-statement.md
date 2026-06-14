@@ -1,7 +1,7 @@
 ---
 title: "PG truncate_tables emits per-table TRUNCATE, not Rails' combined statement"
-status: draft
-updated: 2026-06-13
+status: ready
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
