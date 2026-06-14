@@ -1,6 +1,6 @@
 ---
 title: "Relocate inline MysqlSchemaStatements class and statement defaults out of mysql2-adapter"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
