@@ -1,6 +1,6 @@
 ---
 title: "delete_all: composite-PK limited/ordered subselect (currently falls through to plain delete)"
-status: ready
+status: claimed
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T18:42:34Z"
+assignee: "delete-all-composite-pk-limited-subselect"
 blocked-by: null
 ---
 
