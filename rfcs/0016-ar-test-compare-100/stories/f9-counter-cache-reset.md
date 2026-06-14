@@ -1,7 +1,7 @@
 ---
 title: "F-9f — counter_cache reset variants"
-status: in-progress
-updated: 2026-06-12
+status: done
+updated: 2026-06-14
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
