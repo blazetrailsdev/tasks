@@ -1,6 +1,6 @@
 ---
 title: "Make PG's async reset barrier (_inFlightReset + post-reset configure) eager-compatible so the rawConnectionForBlock seam can be deleted"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
