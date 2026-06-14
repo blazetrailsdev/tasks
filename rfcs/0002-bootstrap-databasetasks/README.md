@@ -153,16 +153,18 @@ Each PR ≤500 LOC, off `main`, non-overlapping files.
 
 ## Stories
 
-| ID                                                                          | Title                                                               | Status  | Est LOC | Cluster   |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------- | ------- | --------- |
-| [visitor-on-establish](stories/visitor-on-establish.md)                     | PR 0 — Arel visitor on establishConnection (superseded by RFC 0007) | blocked | 150     | bootstrap |
-| [schema-file-generator-config](stories/schema-file-generator-config.md)     | PR 1 — generator + test DatabaseConfigurations                      | ready   | 250     | bootstrap |
-| [memory-loadschema-spike](stories/memory-loadschema-spike.md)               | Spike — reconstructFromSchema on sqlite :memory:                    | ready   | 50      | bootstrap |
-| [reconstruct-from-schema-parity](stories/reconstruct-from-schema-parity.md) | Bring reconstructFromSchema to Rails parity                         | ready   | 150     | bootstrap |
-| [rework-test-setup](stories/rework-test-setup.md)                           | PR 2 — rework test-setup-dy + setupHandlerSuite                     | ready   | 300     | bootstrap |
-| [delete-bootstrap-handler](stories/delete-bootstrap-handler.md)             | PR 3 — migrate importers + delete handler                           | ready   | 150     | bootstrap |
-| [pg-mysql-purge-handlers](stories/pg-mysql-purge-handlers.md)               | Follow-up — persistent PG/MySQL purge handlers                      | ready   | 150     | followup  |
-| [define-schema-preload-cleanup](stories/define-schema-preload-cleanup.md)   | Phase 5 — retire canonical-preload machinery                        | draft   | 150     | followup  |
+<!-- generated: stories table -->
+
+| ID                                                                          | Title                                                             | Status | Est LOC | Cluster   |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------ | ------- | --------- |
+| [define-schema-preload-cleanup](stories/define-schema-preload-cleanup.md)   | Phase 5 — retire canonical-preload signature machinery            | ready  | 150     | followup  |
+| [delete-bootstrap-handler](stories/delete-bootstrap-handler.md)             | PR 3 — migrate direct importers and delete bootstrap-test-handler | done   | 150     | bootstrap |
+| [memory-loadschema-spike](stories/memory-loadschema-spike.md)               | Spike — reconstructFromSchema on sqlite :memory: pool:1           | done   | 50      | bootstrap |
+| [pg-mysql-purge-handlers](stories/pg-mysql-purge-handlers.md)               | Follow-up — persistent PG/MySQL purge handlers                    | done   | 150     | followup  |
+| [reconstruct-from-schema-parity](stories/reconstruct-from-schema-parity.md) | Bring reconstructFromSchema to Rails parity                       | done   | 150     | bootstrap |
+| [rework-test-setup](stories/rework-test-setup.md)                           | PR 2 — rework test-setup-dy + setupHandlerSuite                   | done   | 300     | bootstrap |
+| [schema-file-generator-config](stories/schema-file-generator-config.md)     | PR 1 — schema-file generator + test DatabaseConfigurations        | done   | 250     | bootstrap |
+| [visitor-on-establish](stories/visitor-on-establish.md)                     | PR 0 — install Arel visitor on establishConnection (SUPERSEDED)   | done   | 150     | bootstrap |
 
 ## Changelog
 

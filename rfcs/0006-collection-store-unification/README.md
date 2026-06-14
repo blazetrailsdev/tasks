@@ -114,6 +114,16 @@ See `stories/` for the breakdown. Sketch:
 - **S5 (optional) — unskip dedup tests**: flip the skipped inverse-dedup tests
   now that the seam is gone.
 
+<!-- generated: stories table -->
+
+| ID                                                                        | Title                                                              | Status | Est LOC | Cluster      |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ | ------- | ------------ |
+| [s1-proxy-backed-read-api](stories/s1-proxy-backed-read-api.md)           | Proxy-backed read API with deprecated cache shim                   | done   | 180     | associations |
+| [s2-migrate-preloader-writes](stories/s2-migrate-preloader-writes.md)     | Migrate preloader writes through the proxy                         | done   | 160     | associations |
+| [s3-migrate-findtarget-reads](stories/s3-migrate-findtarget-reads.md)     | Migrate findTarget and instance-method reads through the proxy     | done   | 140     | associations |
+| [s4-delete-cached-associations](stories/s4-delete-cached-associations.md) | Delete \_cachedAssociations and resolve singular-association cache | done   | 200     | associations |
+| [s5-unskip-dedup-tests](stories/s5-unskip-dedup-tests.md)                 | Unskip inverse-dedup tests gated on the removed seam               | done   | 80      | associations |
+
 ## Open questions
 
 - Should has_one / belongs_to also go through a `SingularAssociation`-style

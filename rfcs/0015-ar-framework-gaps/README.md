@@ -56,29 +56,27 @@ virtual-attr fix).
 
 ### dirty-tracking (`dirty_test.rb`)
 
-| ID                                                                                  | Title                                        | Status | Pri | Est LOC | Un-skips |
-| ----------------------------------------------------------------------------------- | -------------------------------------------- | ------ | --- | ------- | -------- |
-| [dirty-create-time-capture](stories/dirty-create-time-capture.md)                   | Create-time dirty capture (mass-assign)      | ready  | 40  | 60      | 6        |
-| [dirty-serialize-content-topic](stories/dirty-serialize-content-topic.md)           | `serialize :content` on canonical Topic      | ready  | 41  | 60      | 4        |
-| [dirty-attribute-will-change-api](stories/dirty-attribute-will-change-api.md)       | Public `attribute_will_change!` API          | ready  | 42  | 40      | 3        |
-| [dirty-query-count-parity](stories/dirty-query-count-parity.md)                     | No-op UPDATE / query-count parity            | ready  | 48  | 80      | 2        |
-| [dirty-parrot-virtual-attr-registry](stories/dirty-parrot-virtual-attr-registry.md) | Canonical Parrot virtual attr + registry     | ready  | 43  | 40      | 1        |
-| [dirty-enum-from-to-casting](stories/dirty-enum-from-to-casting.md)                 | Enum dirty `from:`/`to:` casting             | ready  | 44  | 30      | 1        |
-| [dirty-reflected-in-memory-defaults](stories/dirty-reflected-in-memory-defaults.md) | Reflected in-memory defaults on `new`        | ready  | 45  | 40      | 1        |
-| [dirty-alias-under-reflection](stories/dirty-alias-under-reflection.md)             | Alias dirty under reflection                 | ready  | 46  | 30      | 1        |
-| [dirty-missing-attribute-error](stories/dirty-missing-attribute-error.md)           | `MissingAttributeError` on unselected access | ready  | 47  | 40      | 1        |
-| [dirty-tz-datetime-roundtrip](stories/dirty-tz-datetime-roundtrip.md)               | TZ-aware datetime string round-trip          | ready  | 49  | 40      | 1        |
-| [dirty-js-date-coercion](stories/dirty-js-date-coercion.md)                         | JS `Date` ⇄ datetime coercion                | ready  | 50  | 40      | 1        |
-| [dirty-sql-function-defaults](stories/dirty-sql-function-defaults.md)               | SQL-function column defaults in defineSchema | ready  | 51  | 40      | 1        |
-| [dirty-custom-changed-in-place-hook](stories/dirty-custom-changed-in-place-hook.md) | Custom-type `changed_in_place?` hook         | ready  | 52  | 60      | 1        |
+<!-- generated: stories table -->
 
-### readonly (`readonly_test.rb`)
-
-| ID                                                                                        | Title                                      | Status | Pri | Est LOC | Un-skips |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------ | ------ | --- | ------- | -------- |
-| [readonly-collection-proxy-propagation](stories/readonly-collection-proxy-propagation.md) | Collection-proxy readonly propagation      | ready  | 36  | 40      | 1        |
-| [readonly-hmt-collection-flag](stories/readonly-hmt-collection-flag.md)                   | HMT collection not implicitly readonly     | ready  | 35  | 60      | 4        |
-| [readonly-collection-method-missing](stories/readonly-collection-method-missing.md)       | Collection proxy method_missing delegation | ready  | 37  | 40      | 1        |
+| ID                                                                                                | Title                                                              | Status | Est LOC | Cluster        |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ | ------- | -------------- |
+| [dirty-alias-under-reflection](stories/dirty-alias-under-reflection.md)                           | Alias dirty under reflection                                       | done   | 30      | dirty-tracking |
+| [dirty-attribute-will-change-api](stories/dirty-attribute-will-change-api.md)                     | Public attribute_will_change! API                                  | done   | 40      | dirty-tracking |
+| [dirty-create-time-capture](stories/dirty-create-time-capture.md)                                 | Create-time dirty capture for mass-assigned attributes             | done   | 60      | dirty-tracking |
+| [dirty-custom-changed-in-place-hook](stories/dirty-custom-changed-in-place-hook.md)               | Custom attribute-type changed_in_place? hook                       | done   | 60      | dirty-tracking |
+| [dirty-enum-from-to-casting](stories/dirty-enum-from-to-casting.md)                               | Enum dirty from:/to: casting                                       | done   | 30      | dirty-tracking |
+| [dirty-js-date-coercion](stories/dirty-js-date-coercion.md)                                       | JS Date <-> datetime attribute coercion                            | done   | 40      | dirty-tracking |
+| [dirty-missing-attribute-error](stories/dirty-missing-attribute-error.md)                         | MissingAttributeError on unselected access                         | done   | 40      | dirty-tracking |
+| [dirty-parrot-virtual-attr-registry](stories/dirty-parrot-virtual-attr-registry.md)               | Canonical Parrot virtual attr + model registry                     | done   | 40      | dirty-tracking |
+| [dirty-previous-changes-in-place-mutations](stories/dirty-previous-changes-in-place-mutations.md) | Dirty: previous_changes must include in-place mutations after save | done   | 25      | dirty-tracking |
+| [dirty-query-count-parity](stories/dirty-query-count-parity.md)                                   | No-op UPDATE / query-count parity                                  | done   | 80      | dirty-tracking |
+| [dirty-reflected-in-memory-defaults](stories/dirty-reflected-in-memory-defaults.md)               | Reflected in-memory defaults applied on new                        | done   | 40      | dirty-tracking |
+| [dirty-serialize-content-topic](stories/dirty-serialize-content-topic.md)                         | serialize :content on canonical Topic (+ schema)                   | done   | 60      | dirty-tracking |
+| [dirty-sql-function-defaults](stories/dirty-sql-function-defaults.md)                             | SQL-function column defaults in defineSchema                       | done   | 40      | dirty-tracking |
+| [dirty-tz-datetime-roundtrip](stories/dirty-tz-datetime-roundtrip.md)                             | TZ-aware datetime string round-trip                                | done   | 40      | dirty-tracking |
+| [readonly-collection-method-missing](stories/readonly-collection-method-missing.md)               | Collection proxy method_missing delegation (+ Comment.allAsMethod) | done   | 40      | readonly       |
+| [readonly-collection-proxy-propagation](stories/readonly-collection-proxy-propagation.md)         | Collection-proxy readonly propagation                              | done   | 40      | readonly       |
+| [readonly-hmt-collection-flag](stories/readonly-hmt-collection-flag.md)                           | HMT collection not implicitly marked readonly                      | done   | 60      | readonly       |
 
 ## Deferred / out-of-scope (NOT stories)
 
