@@ -1,6 +1,6 @@
 ---
 title: "updateColumns/insertAll serialize gates are type-specific allowlists, not general"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
