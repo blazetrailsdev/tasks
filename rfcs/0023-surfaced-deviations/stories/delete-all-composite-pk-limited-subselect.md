@@ -1,6 +1,6 @@
 ---
 title: "delete_all: composite-PK limited/ordered subselect (currently falls through to plain delete)"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
