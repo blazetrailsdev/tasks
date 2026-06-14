@@ -1,7 +1,7 @@
 ---
 title: "Auto-regenerate the Stories table in RFC READMEs from frontmatter"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
 deps: []
