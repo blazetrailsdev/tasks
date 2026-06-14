@@ -1,6 +1,6 @@
 ---
 title: "Extract PG schema/database/session statements into PostgreSQLSchemaStatements"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
