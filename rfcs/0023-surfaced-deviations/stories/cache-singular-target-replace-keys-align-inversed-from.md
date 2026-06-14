@@ -19,7 +19,7 @@ blocked-by: null
 Surfaced while implementing `locking-belongs-to-inverse-stale-state` (PR #3305).
 
 Rails' `BelongsToAssociation#inversed_from(record)` runs `replace_keys(record)`
-(writing the owner's FK) *before* `super` snapshots `@stale_state` via
+(writing the owner's FK) _before_ `super` snapshots `@stale_state` via
 `loaded!`. trails' shared inverse primitive
 `associations.ts#_cacheSingularTarget` caches the target with `setTarget`
 WITHOUT the `replace_keys` FK write, so the holder's `_staleState` snapshots a
