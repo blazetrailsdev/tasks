@@ -1,6 +1,6 @@
 ---
 title: "delete_all: apply_join_dependency for eager_loading? and force arel.source.left = table"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
