@@ -1,6 +1,6 @@
 ---
 title: "defineSchema leaves custom-named integer PK sequence-less on PostgreSQL"
-status: in-progress
+status: done
 updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
