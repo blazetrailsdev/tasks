@@ -1,6 +1,6 @@
 ---
 title: "Inline Casted in the visitor (Arel-faithful) and delete the InlineBinds collector"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
