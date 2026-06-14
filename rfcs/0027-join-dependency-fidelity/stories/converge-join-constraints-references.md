@@ -1,7 +1,7 @@
 ---
 title: "Converge join_constraints and the references path to Rails' signatures"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-14
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
 deps: ["converge-alias-tracking"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-14T14:12:35Z"
+assignee: "converge-join-constraints-references"
 blocked-by: null
 ---
 
