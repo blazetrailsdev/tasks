@@ -1,7 +1,7 @@
 ---
 title: "Model lacks Rails QueryCache::ClassMethods cache/uncached delegation"
-status: in-progress
-updated: 2026-06-13
+status: done
+updated: 2026-06-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
