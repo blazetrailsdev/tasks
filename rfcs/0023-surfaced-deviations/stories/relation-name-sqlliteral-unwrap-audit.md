@@ -1,6 +1,6 @@
 ---
 title: "Audit relation-name string consumers for SqlLiteral unwrap (SqlLiteral is not a String subclass)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
