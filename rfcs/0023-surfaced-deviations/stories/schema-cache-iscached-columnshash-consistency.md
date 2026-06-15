@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache.isCached checks _columns but readers use _columnsHash — make consistent"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3387
 claim: "2026-06-15T18:12:28Z"
 assignee: "schema-cache-iscached-columnshash-consistency"
 blocked-by: null
