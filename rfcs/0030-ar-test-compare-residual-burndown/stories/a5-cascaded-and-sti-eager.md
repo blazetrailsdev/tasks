@@ -1,6 +1,6 @@
 ---
 title: "A5 — cascaded eager + nested-include + full-STI-class"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 3407
 claim: "2026-06-15T20:33:56Z"
 assignee: "a5-cascaded-and-sti-eager"
 blocked-by: null
