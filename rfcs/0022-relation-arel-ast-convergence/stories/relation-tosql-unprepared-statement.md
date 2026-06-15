@@ -1,7 +1,7 @@
 ---
-title: "Relation#toSql via unprepared_statement { conn.to_sql(arel) } (drop _lastSelectNode/_inlineBindQuoter)"
+title: "Relation#toSql via unprepared_statement { conn.to_sql(arel) } (drop the post-hoc substituteBoundValues inliner)"
 status: ready
-updated: 2026-06-14
+updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: ["audit-bind-inlining-rails-fidelity", "connection-tosql-via-collector"]
@@ -16,37 +16,45 @@ blocked-by: null
 
 ## Context
 
-`Relation#toSql` (`packages/activerecord/src/relation.ts:4167`) was converted in
-PR #3300 to re-render the cached `_lastSelectNode` through a `SubstituteBinds`
-collector with a bespoke `_inlineBindQuoter`. That removed the regex but kept two
-trails-isms:
+> Reconciled against `main` by the audit (audit-bind-inlining-rails-fidelity).
+> The `_lastSelectNode` / `_inlineBindQuoter` names came from the closed PR
+> #3300 design and do **not** exist on `main`. The actual trails-ism is a
+> post-hoc `substituteBoundValues` inliner.
 
-- `_lastSelectNode` bookkeeping (set in `_compileSelectSql` and
-  `_toSqlSetOperation`) so `toSql()` can recompile the node.
-- `_inlineBindQuoter` (`relation.ts`), a hand-rolled quoter with a no-connection
-  fallback, instead of the connection.
+**trails (`main`).** `Relation#toSql` (`packages/activerecord/src/relation.ts:4193`)
+calls `this._toSql()` (:4630) to render placeholder SQL, then re-inlines the
+binds with a post-hoc `Visitors.substituteBoundValues(sql, …)` pass
+(`relation.ts:4202`) whose callback quotes each value via
+`this._resolveAdapter().quote(val)` (with a hand-rolled `'…'`/NULL/`String(val)`
+fallback when no adapter). The binds come from `_lastSelectBinds`, set in
+`_compileSelectSql` (`relation.ts:4607`) via `compileWithBinds`.
 
-Rails' `Relation#to_sql` is simply:
+**Rails (vendor/rails v8.0.2).** `Relation#to_sql` (`relation.rb:1210-1219`) is:
 
 ```ruby
-conn = connection
-conn.unprepared_statement { conn.to_sql(arel) }
+model.with_connection do |conn|
+  conn.unprepared_statement { conn.to_sql(arel) }
+end
 ```
 
 `unprepared_statement` forces `prepared_statements = false`, so `conn.to_sql`
-compiles through the `SubstituteBinds` collector with the connection as quoter.
-No cached node, no bespoke quoter, no paren bookkeeping beyond what the visitor
-emits.
+compiles through the `SubstituteBinds` collector
+(`abstract_adapter.rb:1176` → `database_statements.rb:12-58`) with the
+connection as quoter. No cached node, no bespoke quoter, no post-hoc pass — the
+values are inlined during AST traversal.
 
 ## Acceptance criteria
 
 - `Relation#toSql` builds the arel (the same node `_toSql` compiles) and renders
   it via `connection.unpreparedStatement(() => connection.toSql(arel))` (sync
-  scope per the connection-tosql-via-collector story), matching Rails.
-- `_lastSelectNode` and `_inlineBindQuoter` are deleted; the execution paths keep
-  using `_lastSelectBinds` from `compileWithBinds` as before.
-- Eager-load and set-operation branches still produce identical SQL (set-op paren
-  handling comes from the visitor, as Rails).
+  scope per connection-tosql-via-collector), matching `relation.rb:1217-1218`.
+- The post-hoc `substituteBoundValues` block at `relation.ts:4202` and its
+  hand-rolled fallback quoter are deleted; execution paths keep using
+  `_lastSelectBinds` from `compileWithBinds` as before.
+- Eager-load and set-operation branches still produce identical SQL (set-op
+  paren handling comes from the visitor, as in Rails).
+- Depends on connection-tosql-via-collector landing first (so `connection.toSql`
+  already inlines through `collector()` rather than `compileInlined`).
 - No behavior change in existing snapshot output; api:compare and test:compare
   deltas non-negative.
 
