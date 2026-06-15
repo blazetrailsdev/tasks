@@ -1,6 +1,6 @@
 ---
 title: "counter-cache column derives from belongs_to"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3418
 claim: "2026-06-15T22:58:27Z"
 assignee: "b2-counter-cache-column-from-belongsto"
 blocked-by: null
