@@ -1,6 +1,6 @@
 ---
 title: "Autosave persists built has_many children on owner save"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3414
 claim: "2026-06-15T22:52:26Z"
 assignee: "autosave-has-many-save-on-parent"
 blocked-by: null
