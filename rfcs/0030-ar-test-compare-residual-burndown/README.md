@@ -115,32 +115,37 @@ files, not this table.
 
 <!-- generated: stories table -->
 
-| ID                                                                                              | Title                                                                    | Status | Est LOC | Cluster        |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------ | ------- | -------------- |
-| [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md)                         | A1 — eager_test: preloader eager-loading semantics                       | draft  | 400     | associations   |
-| [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                   | A2 — join_model: has_many :through join-model semantics                  | draft  | 300     | associations   |
-| [a3-has-one-and-through](stories/a3-has-one-and-through.md)                                     | A3 — has_one + has_one_through residuals                                 | draft  | 250     | associations   |
-| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                     | A4 — habtm: alias intermediate join table                                | draft  | 120     | associations   |
-| [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md)                               | A5 — cascaded eager + nested-include + full-STI-class                    | draft  | 200     | associations   |
-| [a6-inverse-and-association-tail](stories/a6-inverse-and-association-tail.md)                   | A6 — inverse-of + bidirectional + collection tail                        | draft  | 150     | associations   |
-| [b1-relation-scoping](stories/b1-relation-scoping.md)                                           | B1 — relation_scoping parity                                             | draft  | 200     | clusters       |
-| [b2-default-scoping](stories/b2-default-scoping.md)                                             | B2 — default_scoping parity                                              | draft  | 200     | clusters       |
-| [b3-relation-select-joins](stories/b3-relation-select-joins.md)                                 | B3 — relation select + multi-join table aliasing                         | draft  | 150     | clusters       |
-| [b4-relation-query-tail](stories/b4-relation-query-tail.md)                                     | B4 — relation query tail (with/where_chain/update_all/predicate/batches) | draft  | 150     | clusters       |
-| [c1-schema-dumper-parity](stories/c1-schema-dumper-parity.md)                                   | C1 — schema_dumper parity                                                | draft  | 250     | unblockers     |
-| [c2-defaults-expression-dump](stories/c2-defaults-expression-dump.md)                           | C2 — defaults: expression-default dump/load                              | draft  | 150     | unblockers     |
-| [c3-primary-keys](stories/c3-primary-keys.md)                                                   | C3 — primary_keys residuals                                              | draft  | 120     | core-residuals |
-| [c4-migration-column-def-tail](stories/c4-migration-column-def-tail.md)                         | C4 — migration + column_definition + invertible tail                     | draft  | 120     | core-residuals |
-| [d1-transactions-commit-destroy-callbacks](stories/d1-transactions-commit-destroy-callbacks.md) | D1 — transactions: committed/destroy callback firing                     | draft  | 250     | clusters       |
-| [d2-insert-all-on-duplicate](stories/d2-insert-all-on-duplicate.md)                             | D2 — insert_all: onDuplicate/upsert non-native semantics                 | draft  | 200     | clusters       |
-| [d3-nested-attributes-cpk-callbacks](stories/d3-nested-attributes-cpk-callbacks.md)             | D3 — nested-attributes: CPK + before_add callback timing                 | draft  | 250     | clusters       |
-| [d4-dirty-force-dirty](stories/d4-dirty-force-dirty.md)                                         | D4 — dirty: attribute_will_change! force-dirty path                      | draft  | 150     | core-residuals |
-| [d5-autosave-locking-residuals](stories/d5-autosave-locking-residuals.md)                       | D5 — autosave + optimistic-locking-with-includes residuals               | draft  | 150     | core-residuals |
-| [e1-bind-parameter](stories/e1-bind-parameter.md)                                               | E1 — bind_parameter residuals                                            | draft  | 100     | adapter        |
-| [e2-pg-ddl-via-exec](stories/e2-pg-ddl-via-exec.md)                                             | E2 — PG array/uuid/hstore/virtual-column DDL-via-exec                    | draft  | 120     | adapter        |
-| [e3-connection-handling](stories/e3-connection-handling.md)                                     | E3 — standalone-connection + multi-db connection handling                | draft  | 120     | adapter        |
-| [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md)                 | E4 — adapter_test notifications + explain tail                           | draft  | 100     | adapter        |
-| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                             | F1 — prevent-writes + hot-compat + misc tail                             | draft  | 150     | core-residuals |
+| ID | Title | Status | Est LOC | Cluster |
+| --- | --- | --- | --- | --- |
+| [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md) | A1 — eager\_test: preloader eager-loading semantics | draft | 400 | associations |
+| [a2-join-model-semantics](stories/a2-join-model-semantics.md) | A2 — join\_model: has\_many :through join-model semantics | draft | 300 | associations |
+| [a3-has-one-and-through](stories/a3-has-one-and-through.md) | A3 — has\_one + has\_one\_through residuals | draft | 250 | associations |
+| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md) | A4 — habtm: alias intermediate join table | draft | 120 | associations |
+| [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md) | A5 — cascaded eager + nested-include + full-STI-class | draft | 200 | associations |
+| [a6-inverse-and-association-tail](stories/a6-inverse-and-association-tail.md) | A6 — inverse-of + bidirectional + collection tail | draft | 150 | associations |
+| [b1-relation-scoping](stories/b1-relation-scoping.md) | B1 — relation\_scoping parity | draft | 200 | clusters |
+| [b2-default-scoping](stories/b2-default-scoping.md) | B2 — default\_scoping parity | draft | 200 | clusters |
+| [b3-relation-select-joins](stories/b3-relation-select-joins.md) | B3 — relation select + multi-join table aliasing | draft | 150 | clusters |
+| [b4-relation-query-tail](stories/b4-relation-query-tail.md) | B4 — relation query tail (with/where\_chain/update\_all/predicate/batches) | draft | 150 | clusters |
+| [c1-schema-dumper-parity](stories/c1-schema-dumper-parity.md) | C1 — schema\_dumper parity | draft | 250 | unblockers |
+| [c2-defaults-expression-dump](stories/c2-defaults-expression-dump.md) | C2 — defaults: expression-default dump/load | draft | 150 | unblockers |
+| [c3-primary-keys](stories/c3-primary-keys.md) | C3 — primary\_keys residuals | draft | 120 | core-residuals |
+| [c4-migration-column-def-tail](stories/c4-migration-column-def-tail.md) | C4 — migration + column\_definition + invertible tail | draft | 120 | core-residuals |
+| [d1-transactions-commit-destroy-callbacks](stories/d1-transactions-commit-destroy-callbacks.md) | D1 — transactions: committed/destroy callback firing | draft | 250 | clusters |
+| [d2-insert-all-on-duplicate](stories/d2-insert-all-on-duplicate.md) | D2 — insert\_all: onDuplicate/upsert non-native semantics | draft | 200 | clusters |
+| [d3-nested-attributes-cpk-callbacks](stories/d3-nested-attributes-cpk-callbacks.md) | D3 — nested-attributes: CPK + before\_add callback timing | draft | 250 | clusters |
+| [d4-dirty-force-dirty](stories/d4-dirty-force-dirty.md) | D4 — dirty: attribute\_will\_change! force-dirty path | draft | 150 | core-residuals |
+| [d5-autosave-locking-residuals](stories/d5-autosave-locking-residuals.md) | D5 — autosave + optimistic-locking-with-includes residuals | draft | 150 | core-residuals |
+| [e1-bind-parameter](stories/e1-bind-parameter.md) | E1 — bind\_parameter residuals | draft | 100 | adapter |
+| [e2-pg-ddl-via-exec](stories/e2-pg-ddl-via-exec.md) | E2 — PG array/uuid/hstore/virtual-column DDL-via-exec | draft | 120 | adapter |
+| [e3-connection-handling](stories/e3-connection-handling.md) | E3 — standalone-connection + multi-db connection handling | draft | 120 | adapter |
+| [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md) | E4 — adapter\_test notifications + explain tail | draft | 100 | adapter |
+| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md) | F1 — prevent-writes + hot-compat + misc tail | draft | 150 | core-residuals |
+| [persistence-query-constraints-save-reload-tests](stories/persistence-query-constraints-save-reload-tests.md) | Port remaining query\_constraints persistence tests (save/reload/update\_attribute/update-parts) from stubs | draft | 80 | — |
+| [sqlite3-copy-table-test-port](stories/sqlite3-copy-table-test-port.md) | Port copy\_table\_test.rb to a sqlite3 copy\_table.test.ts convention file (copyTable already implemented) | draft | 150 | — |
+| [strict-loading-new-record-gate-in-loaders](stories/strict-loading-new-record-gate-in-loaders.md) | Gate strict-loading violation behind find\_target? new-record check in functional loaders | ready | 80 | — |
+| [timestamp-index-created-for-both-timestamps](stories/timestamp-index-created-for-both-timestamps.md) | timestamp: index is created for both timestamps (fixture-dependent) | ready | 30 | — |
+| [virtual-reconcile-warm-schema-cache](stories/virtual-reconcile-warm-schema-cache.md) | Memoize schema cache when virtual reconciliation reflects on cold cache | ready | 40 | core-residuals |
 
 ## Changelog
 
