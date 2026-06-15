@@ -1,6 +1,6 @@
 ---
 title: "adapter-select-all-accepts-relation"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["adapter-select-all-accepts-arel"]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3319
 claim: "2026-06-15T02:20:08Z"
 assignee: "adapter-select-all-accepts-relation"
 blocked-by: null
