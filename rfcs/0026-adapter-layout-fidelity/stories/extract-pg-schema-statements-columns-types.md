@@ -1,7 +1,7 @@
 ---
 title: "Extract PG column introspection and typeToSql into PostgreSQLSchemaStatements"
-status: in-progress
-updated: 2026-06-14
+status: done
+updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-indexes"]
