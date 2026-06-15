@@ -1,7 +1,7 @@
 ---
 title: "SelectManager#as: model alias as SqlLiteral; drop TableAlias Grouping-shape heuristic"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T18:36:28Z"
+assignee: "select-manager-as-alias-sqlliteral"
 blocked-by: null
 ---
 
