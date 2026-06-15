@@ -1,6 +1,6 @@
 ---
 title: "buildCountSubquery in calculations.ts is exported but has no callers — remove or wire it"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
