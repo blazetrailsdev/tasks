@@ -1,6 +1,6 @@
 ---
 title: "A2 — join_model: has_many :through join-model semantics"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: 3405
 claim: "2026-06-15T20:15:24Z"
 assignee: "a2-join-model-semantics"
 blocked-by: null
