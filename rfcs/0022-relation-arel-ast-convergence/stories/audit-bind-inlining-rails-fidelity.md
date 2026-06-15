@@ -1,7 +1,7 @@
 ---
 title: "Audit: bind-inlining vs Rails — pin exact mechanism for compile/to_sql/where-clause"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T00:00:39Z"
+assignee: "audit-bind-inlining-rails-fidelity"
 blocked-by: null
 ---
 
