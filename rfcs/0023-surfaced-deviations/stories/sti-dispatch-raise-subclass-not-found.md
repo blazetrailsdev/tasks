@@ -1,7 +1,7 @@
 ---
 title: "STI dispatch at new() returns null instead of raising SubclassNotFound for out-of-hierarchy type"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T19:54:05Z"
+assignee: "sti-dispatch-raise-subclass-not-found"
 blocked-by: null
 ---
 
