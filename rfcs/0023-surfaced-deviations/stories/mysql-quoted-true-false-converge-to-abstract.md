@@ -1,6 +1,6 @@
 ---
 title: "MySQL quoted_true/quoted_false return 1/0 but vendored Rails 8.0.2 MySQL inherits abstract TRUE/FALSE (no override)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 3363
 claim: "2026-06-15T15:29:09Z"
 assignee: "mysql-quoted-true-false-converge-to-abstract"
 blocked-by: null
