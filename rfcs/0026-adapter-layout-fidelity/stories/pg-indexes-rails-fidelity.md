@@ -1,6 +1,6 @@
 ---
 title: "Close PG indexes() / addIndex / renameIndex Rails-fidelity gaps"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T12:55:07Z"
+assignee: "pg-indexes-rails-fidelity"
 blocked-by: null
 ---
 
