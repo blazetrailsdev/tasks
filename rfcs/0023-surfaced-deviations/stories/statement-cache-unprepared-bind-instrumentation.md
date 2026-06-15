@@ -1,6 +1,6 @@
 ---
 title: "StatementCache unprepared path: log-only binds so find/find_by cache in the !preparedStatements bucket"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
