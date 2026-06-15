@@ -1,6 +1,6 @@
 ---
 title: "scope_attributes? drops the respond_to?(:default_scope) clause (proc-based default_scope override unsupported)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 3389
 claim: "2026-06-15T18:24:26Z"
 assignee: "scope-attributes-respond-to-default-scope-clause"
 blocked-by: null
