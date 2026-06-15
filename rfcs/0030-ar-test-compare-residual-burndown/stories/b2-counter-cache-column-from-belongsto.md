@@ -31,5 +31,5 @@ the INSERT references a non-existent column (StatementInvalid: no such column).
 
 ## Acceptance criteria
 
-- [ ] Creating through the custom-named hasMany updates the `comments_count` counter (the belongs_to-derived column), not an association-name-derived one.
-- [ ] Un-skip all three "default scope with references works ..." tests in default-scoping.test.ts; they pass on sqlite.
+- [x] Creating through the custom-named hasMany updates the `comments_count` counter (the belongs_to-derived column), not an association-name-derived one.
+- [x] Un-skip all three "default scope with references works ..." tests in default-scoping.test.ts; they pass on sqlite.
