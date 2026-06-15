@@ -1,7 +1,7 @@
 ---
 title: "Set-ops: compose eager-load operands as a JoinDependency-instantiated UNION (replace preload fallback)"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T19:18:28Z"
+assignee: "set-operations-eager-joindependency-composition"
 blocked-by: null
 ---
 
