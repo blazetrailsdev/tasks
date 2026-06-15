@@ -1,6 +1,6 @@
 ---
 title: "storyFilePath: restore generated index files before error exit (matches rfcFilePath/priority pattern)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: null
