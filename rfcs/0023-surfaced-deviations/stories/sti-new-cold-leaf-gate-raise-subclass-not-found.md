@@ -1,12 +1,12 @@
 ---
-title: "sti-new-cold-leaf-gate-raise-subclass-not-found"
+title: "STI new() cold-leaf gate should raise SubclassNotFound (column-aware _has_attribute? parity)"
 status: draft
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

@@ -35,8 +35,8 @@ unknown one and raise correctly.
 
 ## Acceptance criteria
 
-- [ ] `Company.new(type: "<not-a-subclass>")` raises `SubclassNotFound`,
+- [x] `Company.new(type: "<not-a-subclass>")` raises `SubclassNotFound`,
       matching Rails, without reintroducing cross-test-file registry ambiguity.
-- [ ] `findStiClassInHierarchy` / `subclassFromAttributesForNew` keep the
+- [x] `findStiClassInHierarchy` / `subclassFromAttributesForNew` keep the
       registry-safe resolution for valid in-hierarchy types.
-- [ ] Existing STI-at-new tests stay green.
+- [x] Existing STI-at-new tests stay green.
