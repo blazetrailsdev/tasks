@@ -1,0 +1,62 @@
+name: autoformat
+
+# `main` takes direct pushes from the `pnpm tasks` CLI (claim/done/status-set,
+# etc.), which bypass PR CI entirely. A commit authored with the pre-commit hook
+# uninstalled or `--no-verify` can therefore land unformatted on main and red the
+# `ci` `format:check` for every open PR's merge-check (see #35/#36). The
+# pre-commit hook only helps contributors who actually run it; this job is the
+# hard guarantee: it self-heals main's formatting no matter how the commit
+# arrived.
+
+on:
+  push:
+    branches: [main]
+
+# Serialize so close-together pushes can't race on the reformat-and-push.
+# Queue rather than cancel — every landed commit must be checked.
+concurrency:
+  group: autoformat-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  autoformat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Prettier-format main and push any fixes
+        run: |
+          set -euo pipefail
+          # .prettierignore already excludes index.md, lockfile, caches, and
+          # node_modules; generated README tables are prettier-stable so this is
+          # a no-op on them.
+          pnpm exec prettier --write .
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "main is already prettier-clean"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "style: auto-format main (prettier)"
+          # main may have advanced since checkout; rebase-retry the push. The
+          # reformat is idempotent, so a re-trigger of this workflow finds a
+          # clean tree and no-ops — self-terminating.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "::error::could not push autoformat commit after retries" >&2
+          exit 1
