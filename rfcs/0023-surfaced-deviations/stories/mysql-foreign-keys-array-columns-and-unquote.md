@@ -1,14 +1,14 @@
 ---
 title: "MySQL foreignKeys: return composite FK columns as array and unquote_identifier on column/to_table"
-status: claimed
-updated: 2026-06-14
+status: in-progress
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3309
 claim: "2026-06-14T23:50:11Z"
 assignee: "mysql-foreign-keys-array-columns-and-unquote"
 blocked-by: null
