@@ -1,6 +1,6 @@
 ---
 title: "Converge PG alter-table methods to Rails (clear_cache!, validation, single-ALTER)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3354
 claim: "2026-06-15T14:28:29Z"
 assignee: "converge-pg-alter-table-clear-cache"
 blocked-by: null
