@@ -29,7 +29,7 @@ assert_match(/database: :memory:/, output)                # :1172 (an output ass
 
 The other ~28 trails sites stand in for cases where Rails uses a configured
 HashConfig with a real/file database name (DatabaseTasks create/drop/purge/
-load_schema are about _named_ databases — `:memory:` cannot meaningfully be
+load*schema are about \_named* databases — `:memory:` cannot meaningfully be
 created or dropped). These are divergences.
 
 ## Acceptance criteria
@@ -47,7 +47,7 @@ created or dropped). These are divergences.
 - [ ] **PR stays under the trails 500-LOC ceiling.** If converging all 28 sites
       exceeds it, ship the cohesive subset that fits and register the remainder
       as a follow-up story (`pnpm tasks new 0000-sqlite-memory-fidelity
-    database-tasks-test-config-fidelity-2`) — do NOT open a sibling PR.
+database-tasks-test-config-fidelity-2`) — do NOT open a sibling PR.
 - [ ] CI green on all three adapters; `test:compare` delta non-negative.
 
 ## Notes
