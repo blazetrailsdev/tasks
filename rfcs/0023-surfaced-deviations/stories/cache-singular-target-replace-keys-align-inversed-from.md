@@ -1,6 +1,6 @@
 ---
 title: "Align _cacheSingularTarget with Rails inversed_from (replace_keys) so isStaleTarget is authoritative"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T14:22:30Z"
+assignee: "cache-singular-target-replace-keys-align-inversed-from"
 blocked-by: null
 ---
 
