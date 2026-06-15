@@ -1,6 +1,6 @@
 ---
 title: "PG sqlKey should scope statement-pool key to schema_search_path (Rails parity)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T15:54:30Z"
+assignee: "pg-sql-key-scoped-to-search-path"
 blocked-by: null
 ---
 
