@@ -1,6 +1,6 @@
 ---
 title: "RelationHandler: live eager-loading apply_join_dependency + Rails-faithful distinctRelationForPrimaryKey (sync slice)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
