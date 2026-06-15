@@ -1,6 +1,6 @@
 ---
 title: "Continue rails-error-parity bare-throw burndown (ar/am remaining ~126 files); port missing Ruby bases (RuntimeError, FrozenError) needed by guard sites"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
