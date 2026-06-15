@@ -1,6 +1,6 @@
 ---
 title: "connection.toSql compiles via collector() (drop the compileInlined regex)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 3315
 claim: "2026-06-15T02:16:18Z"
 assignee: "connection-tosql-via-collector"
 blocked-by: null
