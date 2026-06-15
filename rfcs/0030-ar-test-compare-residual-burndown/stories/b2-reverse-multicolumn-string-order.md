@@ -1,6 +1,6 @@
 ---
 title: "reverseOrder handles multi-column string order"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T23:10:30Z"
+assignee: "b2-reverse-multicolumn-string-order"
 blocked-by: null
 ---
 
