@@ -1,6 +1,6 @@
 ---
 title: "PG sqlKey should scope statement-pool key to schema_search_path (Rails parity)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
