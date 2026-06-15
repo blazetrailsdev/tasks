@@ -27,5 +27,5 @@ but not the `leftJoins` alias.
 
 ## Acceptance criteria
 
-- [ ] `unscope("leftJoins", ...)` is accepted and unscopes the left-outer-joins clause.
-- [ ] Un-skip "unscope left joins" in default-scoping.test.ts; it passes on sqlite.
+- [x] `unscope("leftJoins", ...)` is accepted and unscopes the left-outer-joins clause.
+- [x] Un-skip "unscope left joins" in default-scoping.test.ts; it passes on sqlite.
