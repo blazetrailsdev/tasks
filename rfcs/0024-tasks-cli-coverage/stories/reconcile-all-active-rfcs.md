@@ -1,6 +1,6 @@
 ---
 title: "Generalize reconcile.mjs beyond RFCs 0001-0010"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 41
 claim: "2026-06-15T17:00:30Z"
 assignee: "reconcile-all-active-rfcs"
 blocked-by: null
