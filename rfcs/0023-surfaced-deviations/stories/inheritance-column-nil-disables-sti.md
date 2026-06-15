@@ -1,7 +1,7 @@
 ---
 title: "inheritance_column = nil should disable STI (Rails parity)"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
