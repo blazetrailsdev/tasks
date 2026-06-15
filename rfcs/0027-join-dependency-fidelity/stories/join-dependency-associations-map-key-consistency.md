@@ -1,7 +1,7 @@
 ---
 title: "Unify instantiateFromRows parent-key accessor (readAttribute vs _readAttribute, raw vs cast)"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
