@@ -1,6 +1,6 @@
 ---
 title: "PG tables() omits partitioned tables (relkind p) vs Rails data_source_sql BASE TABLE"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T13:15:08Z"
+assignee: "pg-tables-include-partitioned"
 blocked-by: null
 ---
 
