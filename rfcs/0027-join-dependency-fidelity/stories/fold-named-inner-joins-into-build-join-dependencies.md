@@ -1,6 +1,6 @@
 ---
 title: "Fold plain .joins(:assoc) into buildJoinDependencies (drop _joinClauses SQL pre-resolution)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
