@@ -1,6 +1,6 @@
 ---
 title: "STI type predicate survives unscope(where)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3419
 claim: "2026-06-15T23:22:27Z"
 assignee: "b2-sti-type-survives-unscope"
 blocked-by: null
