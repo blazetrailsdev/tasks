@@ -174,6 +174,19 @@ in-memory database name, URL parsing, database-tasks no-op-on-`:memory:`
 branches) are Rails-faithful production behavior and are explicitly out of
 scope.
 
+The audit is **one-directional** — it asks "where _trails_ uses `:memory:`,
+does Rails?" The reverse direction (Rails uses `:memory:` where trails does
+not) is out of scope but was observed and is recorded here so it is not
+mistaken for a clean bidirectional match: Rails' `database_configurations_test.rb`
+(2 sites) has a trails counterpart `database-configurations.test.ts` that uses
+**no** `:memory:`; `migration/foreign_key_test.rb:625` and
+`fixtures_test.rb:606` (`ENV["DATABASE_URL"] = "sqlite3::memory:"`) likewise have
+no `:memory:` in their trails equivalents. These are config/URL-parsing cases
+where `:memory:` is often the fidelity-correct value to _add_. They are
+candidate follow-ups, not stories in this RFC; flag them to a future
+reverse-direction sweep (or `0023-surfaced-deviations`) rather than widening
+this RFC's trails→Rails scope.
+
 ## Alternatives considered
 
 - **Flip `AR_TEST_WORKER_DB` default to a file and call it done.** Rejected as
