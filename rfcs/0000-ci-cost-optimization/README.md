@@ -29,10 +29,13 @@ job-minutes in ~1h45m**, and **34% of that went to runs that were ultimately
 cancelled** by the PR concurrency guard.
 
 This RFC ranks every job by **measured** billed minutes (pulled from the GitHub
-API across 60 recent runs), then proposes a prioritized set of independently
-shippable stories that cut billed minutes and/or time-to-green. Each story
-names the exact job(s)/YAML to change, a diff mechanism, acceptance criteria, a
-risk level, and an estimated minutes-saved-per-run.
+API across 60 recent runs), then proposes **eight independently shippable,
+coverage-neutral stories** that cut billed minutes and/or time-to-green. Each
+story names the exact job(s)/YAML to change, a diff mechanism, acceptance
+criteria, a risk level, and an estimated minutes-saved-per-run. Two
+higher-savings but higher-risk dimensions (PR adapter sampling; runner
+sizing / self-hosted) were analyzed and **rejected by the owner** — see
+"Rejected dimensions".
 
 ### Important billing context: this is a **public** repo
 
@@ -160,10 +163,10 @@ stories, because this repo's #1 principle is Rails fidelity.
 
 ### Cluster: change-gating
 
-- `gate-ar-jobs-behind-build` — make the AR adapter jobs `needs:
-[changes, build-and-typecheck]` so a re-push cancels them **before** they
-  burn minutes. Cost-vs-latency tradeoff (adds ~build-time latency to the AR
-  happy path) — quantified in the story.
+- `gate-ar-jobs-behind-build` — add `build-and-typecheck` to the AR adapter
+  jobs' `needs:` so a re-push cancels them **before** they burn minutes.
+  Cost-vs-latency tradeoff (adds ~build-time latency to the AR happy path) —
+  quantified in the story.
 - `tighten-rails-comparison-and-lint-gating` — `rails-comparison` (2.86 min)
   and `lint` run on **every** non-docs PR even when no package source or
   compare script changed; gate them on relevant affected-paths.
