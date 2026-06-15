@@ -1,6 +1,6 @@
 ---
 title: "Set-ops: compose eager-load operands as a JoinDependency-instantiated UNION (replace preload fallback)"
-status: in-progress
+status: blocked
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -11,7 +11,7 @@ priority: null
 pr: 3398
 claim: "2026-06-15T19:18:28Z"
 assignee: "set-operations-eager-joindependency-composition"
-blocked-by: null
+blocked-by: "Abandoned (PR #3398 closed unmerged). Relation#union/intersect/except are non-Rails surface; enhancing them conflicts with fidelity-first. Superseded by 0023-surfaced-deviations/relation-remove-non-rails-set-operation-methods, which removes the non-Rails methods instead."
 ---
 
 ## Context
