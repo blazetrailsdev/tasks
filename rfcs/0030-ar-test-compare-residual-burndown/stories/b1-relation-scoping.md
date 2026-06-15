@@ -1,6 +1,6 @@
 ---
 title: "B1 — relation_scoping parity"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "relation-scoping"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 3413
 claim: "2026-06-15T22:34:28Z"
 assignee: "b1-relation-scoping"
 blocked-by: null
