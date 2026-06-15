@@ -49,6 +49,11 @@ at it.
 
 ## Savings & risk
 
+- **Expected wall-time impact: MOVER on non-package PRs, neutral on AR PRs.** On
+  a tasks/tooling/website-only PR the AR jobs are skipped, so `rails-comparison`
+  (~2.86 min) sits near the long pole and skipping it shortens time-to-green. On
+  an AR PR the 6–10 min adapter jobs dominate and this changes nothing — so it
+  must be **measured on a non-package PR** to clear the gate.
 - **Est. savings:** ~2–3 billed job-min on the subset of PRs that touch no
   package source (tasks-CLI, tooling, website-only). Lower frequency than the
   AR-affecting majority, but cheap and pure-win on those PRs.
@@ -57,6 +62,23 @@ at it.
   `docs/ruby-ts-conventions.md`). Mirror the existing AR gate's path set exactly
   and force-true on push/main so the post-merge sweep always runs the full
   comparison as a backstop.
+
+## Measurement & go/no-go
+
+Measure on the scenario this actually helps — a **non-package PR** (see the
+RFC's "Measurement protocol").
+
+- [ ] Baseline: median time-to-green of a representative non-package PR (e.g.
+      a `scripts/tasks/`-only change) on `main` over ≥5 runs, where
+      `rails-comparison` currently runs.
+- [ ] After gating, confirm `rails-comparison` is skipped on that PR shape and
+      re-measure time-to-green over ≥5 runs.
+- [ ] **Go:** median time-to-green on the non-package PR drops by ≥10% or ≥15 s.
+      **No-go:** within noise (e.g. another job is the long pole) → close the PR
+      and record the finding.
+- [ ] PR description includes the before/after table and a confirmation that an
+      AR PR and a push to `main` still run the full comparison (no coverage
+      loss).
 
 ## Notes
 

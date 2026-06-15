@@ -53,12 +53,31 @@ coverage — every affected package's tests still run.
 
 ## Savings & risk
 
-- **Est. savings:** ~3–4 billed job-min per full run; ~1–2 on typical
-  single-leaf PRs.
+- **Expected wall-time impact: CONTENTION-ONLY (high close-risk).** The leaf
+  jobs are sub-minute and run in parallel off the critical path (the AR jobs
+  dominate), so consolidating them barely moves end-to-end time-to-green on an
+  uncontended run; the benefit is fewer concurrent jobs → less queueing. Under
+  the wall-time bar this **defaults to no-go** unless contention is measured.
+- **Est. savings:** ~3–4 billed job-min per full run (rounding — a **cost**
+  number); ~1–2 on typical single-leaf PRs.
 - **Risk:** medium. Not a coverage cut, but it reduces gating granularity and
   couples leaf flakiness (a flaky rack test now re-runs actionview/tse with it).
   Keep notoriously-flaky packages out of the merged job. Verify the combined
   job stays under ~2 billed minutes or the rounding win shrinks.
+
+## Measurement & go/no-go
+
+The win, if any, is queue-wait under contention — measure under load (see the
+RFC's "Measurement protocol").
+
+- [ ] Baseline: median time-to-green over ≥5 full runs **during a saturation
+      window**, plus median runner queue-wait.
+- [ ] After consolidation, re-measure under comparable load.
+- [ ] **Go:** median time-to-green or queue-wait drops by ≥10% or ≥15 s.
+      **No-go (the default):** if contention can't be reproduced or the metric
+      is within noise, **close the PR** (don't merge on the rounding argument)
+      and record the finding.
+- [ ] PR description includes the under-load before/after table.
 
 ## Notes
 

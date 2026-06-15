@@ -29,13 +29,25 @@ job-minutes in ~1h45m**, and **34% of that went to runs that were ultimately
 cancelled** by the PR concurrency guard.
 
 This RFC ranks every job by **measured** billed minutes (pulled from the GitHub
-API across 60 recent runs), then proposes **eight independently shippable,
-coverage-neutral stories** that cut billed minutes and/or time-to-green. Each
-story names the exact job(s)/YAML to change, a diff mechanism, acceptance
-criteria, a risk level, and an estimated minutes-saved-per-run. Two
-higher-savings but higher-risk dimensions (PR adapter sampling; runner
-sizing / self-hosted) were analyzed and **rejected by the owner** — see
-"Rejected dimensions".
+API across 60 recent runs), then proposes **seven independently shippable,
+coverage-neutral stories** that cut wall time and/or billed minutes. Each story
+names the exact job(s)/YAML to change, a diff mechanism, acceptance criteria, a
+risk level, and an estimated savings. Two higher-savings but higher-risk
+dimensions (PR adapter sampling; runner sizing / self-hosted) were analyzed and
+**rejected by the owner** — see "Rejected dimensions".
+
+### Wall time is the merge bar
+
+The owner's primary objective is **wall time (time-to-green), not billed
+minutes** (the repo is public, so the GitHub invoice is already $0). Every story
+is therefore gated: its PR **merges only if it measurably improves wall time**,
+and **is closed — not merged — if the before/after comparison shows no real
+gain**. See "Measurement protocol & go/no-go gate" for the exact metric and
+threshold. This reframes the per-story estimates: billed-minute savings are now
+**secondary evidence**; the deciding number is median time-to-green vs `main`.
+Stories are classified MOVER / ENABLER / CONTENTION-ONLY by their expected
+wall-time effect so the at-risk ones are obvious before any implementation
+effort is spent.
 
 ### Important billing context: this is a **public** repo
 
@@ -150,43 +162,66 @@ dimensions were analyzed and explicitly **rejected by the owner** (2026-06-14);
 they are documented under "Rejected dimensions" below rather than carried as
 stories, because this repo's #1 principle is Rails fidelity.
 
+Each bullet is tagged with its **expected wall-time impact** (the merge bar):
+**MOVER** = directly shortens the critical path; **ENABLER** = little wall-time
+effect alone, justified only as a prerequisite for a MOVER; **CONTENTION-ONLY**
+= no effect on an uncontended run (the jobs are off the critical path), helps
+only via reduced runner-pool queueing — the highest close-risk under the gate.
+
 ### Cluster: caching-install
 
-- `route-all-jobs-through-setup-pnpm-composite` — foundational. Several jobs
+- `cache-build-dist-across-jobs` — **MOVER.** Build the workspace once and
+  restore the `dist/` outputs in the 5 jobs that currently re-run `pnpm build`,
+  keyed on a source-tree hash (no job-dependency edge, so parallelism is
+  preserved). Removes ~30–45 s of `pnpm build` from the AR critical-path jobs.
+- `route-all-jobs-through-setup-pnpm-composite` — **ENABLER.** Several jobs
   inline `pnpm/action-setup` + `setup-node` instead of using the
   `./.github/actions/setup-pnpm` composite. Unify them and add
-  `--prefer-offline` to installs. Centralizes the self-hosted/cache strategy so
-  later tuning lands in one place. Unblocks `cache-build-dist-across-jobs`.
-- `cache-build-dist-across-jobs` — build the workspace once and restore the
-  `dist/` outputs in the 5 jobs that currently re-run `pnpm build`, keyed on a
-  source-tree hash (no job-dependency edge, so parallelism is preserved).
+  `--prefer-offline`. Marginal wall-time on its own; merges only as the
+  prerequisite for `cache-build-dist-across-jobs` (and is closed with it if that
+  story shows no gain).
 
 ### Cluster: change-gating
 
-- `gate-ar-jobs-behind-build` — add `build-and-typecheck` to the AR adapter
-  jobs' `needs:` so a re-push cancels them **before** they burn minutes.
-  Cost-vs-latency tradeoff (adds ~build-time latency to the AR happy path) —
-  quantified in the story.
-- `tighten-rails-comparison-and-lint-gating` — `rails-comparison` (2.86 min)
-  and `lint` run on **every** non-docs PR even when no package source or
-  compare script changed; gate them on relevant affected-paths.
+- `tighten-rails-comparison-and-lint-gating` — **MOVER on non-package PRs,
+  neutral on AR PRs.** `rails-comparison` (2.86 min) and `lint` run on **every**
+  non-docs PR even when no package source or compare script changed; gate them
+  on relevant affected-paths. On a tasks/tooling-only PR (AR jobs skipped)
+  `rails-comparison` is near the long pole, so skipping it shortens
+  time-to-green; on an AR PR the 6–10 min adapter jobs dominate and this is
+  neutral.
 
 ### Cluster: parallelism-rounding
 
-- `consolidate-preflight-micro-jobs` — fold the three sub-minute PR-only checks
-  (Prettier, Docs-Freeze, PR-Attribution) into one preflight job (or into
-  `changes`) to reclaim the per-minute rounding tax.
-- `consolidate-leaf-test-jobs` — collapse the tiny leaf test jobs (Rack,
-  Action View, TSE, DX-Type, …) into a single job that internally runs only the
-  affected packages, trading a little gating granularity for rounding savings.
-- `tune-ar-db-forks-to-runner-cores` — `AR_DB_FORKS: 8` on 2-core hosted
-  runners over-subscribes; right-size to recover wall-clock (latency lever).
+- `tune-ar-db-forks-to-runner-cores` — **MOVER.** `AR_DB_FORKS: 8` on 2-core
+  hosted runners over-subscribes; right-size to recover wall-clock on the two
+  longest jobs (PG 9.86, MariaDB 8.43).
+- `consolidate-preflight-micro-jobs` — **CONTENTION-ONLY.** Fold the three
+  sub-minute PR-only checks (Prettier, Docs-Freeze, PR-Attribution) into one
+  preflight job. Reclaims billed-minute rounding, but those jobs are sub-minute
+  and run in parallel off the critical path, so on an uncontended run wall time
+  is unchanged — benefit only shows as reduced queueing.
+- `consolidate-leaf-test-jobs` — **CONTENTION-ONLY.** Collapse the tiny leaf
+  test jobs (Rack, Action View, TSE, DX-Type, …) into one affected-aware job.
+  Same profile as above: parallel sub-minute jobs are off the critical path.
 
 ### Cluster: flake-cost
 
-- `flake-elimination-as-ci-cost` — quantify and attack the top shared-table
-  flakes as a direct cost line (each rerun re-bills a 6–10 min job).
-  Depends on RFC 0019 (canonical-schema burndown).
+- `flake-elimination-as-ci-cost` — **MOVER (tail/median).** Each flaky rerun
+  adds a full 6–10 min AR job to time-to-green; eliminating the top shared-table
+  collisions removes those excursions. Depends on RFC 0019 (canonical-schema
+  burndown).
+
+### Reconsidered under the wall-time bar
+
+- **`gate-ar-jobs-behind-build` (dropped 2026-06-15).** Adding
+  `build-and-typecheck` to the AR jobs' `needs:` would cut the 34%
+  cancelled-run billed-minute waste, but it **adds ~build-time latency to the AR
+  happy path — i.e. it makes per-PR wall time worse, not better.** Under the
+  wall-time merge bar it fails by construction (its before/after would show a
+  regression on every non-cancelled PR), so it is not carried as a story. The
+  cancellation-waste finding is preserved in "Where the money goes" for the
+  record.
 
 ### Rejected dimensions (owner decision, 2026-06-14)
 
@@ -202,6 +237,45 @@ here so the analysis is preserved and not re-proposed:
   larger-paid-runner vs self-hosted). **Rejected — stay on free hosted
   runners.** No real-dollar spend or self-hosted/WAN exposure will be taken on;
   current queue contention is accepted as-is.
+
+## Measurement protocol & go/no-go gate
+
+Every story's PR is an **experiment with a kill switch**. None merges on the
+strength of its estimate; it merges only on a measured wall-time win, and is
+**closed** otherwise. This section is the contract each story's "Measurement &
+go/no-go" section instantiates.
+
+**Primary metric — median time-to-green.** Workflow run `created_at` → the last
+required check completing, which includes runner-queue wait (so contention
+relief counts). Take the **median over ≥5 runs** of the affected scenario
+(e.g. an AR-affecting PR for the AR stories; a tasks-only PR for the gating
+story) to average out flake/queue noise. Compare against a `main` baseline
+measured over the same window (CI conditions drift, so re-baseline per
+experiment — do not compare against numbers in this RFC).
+
+**Secondary metrics.** The targeted job's median wall-clock (for MOVER stories
+this should move even when end-to-end doesn't) and total billed job-minutes
+(cost, now secondary).
+
+**The gate.**
+
+- **Go (merge):** median time-to-green **or** the targeted job's wall-clock
+  drops beyond run-to-run noise — use **≥10% or ≥15 s, whichever is larger** —
+  with no correctness or coverage regression.
+- **No-go (close):** the change is within noise. Close the PR, record the
+  before/after table in it, and mark the story `blocked` with the negative
+  finding so it is not silently retried.
+- **CONTENTION-ONLY stories** can only pass if measured **while the runner pool
+  is saturated** (the win is queue-wait, invisible on a quiet repo). If
+  contention can't be reproduced/measured, default to **no-go** rather than
+  merging on the theoretical argument.
+- **ENABLER stories** (`route-all-jobs-through-setup-pnpm-composite`) are judged
+  on their dependent: merge only bundled with / ahead of a MOVER that clears the
+  gate; if the MOVER is closed, close the enabler too.
+
+**Every PR description must include the before/after table** (time-to-green
+median, targeted-job wall-clock, billed minutes; run count and dates). A PR
+without it is not reviewable.
 
 ## Alternatives considered
 
@@ -219,29 +293,39 @@ here so the analysis is preserved and not re-proposed:
 
 ## Rollout
 
-1. **Foundational** — `route-all-jobs-through-setup-pnpm-composite`.
-2. **Safe quick wins (parallel, independent)** —
-   `consolidate-preflight-micro-jobs`, `gate-ar-jobs-behind-build`,
-   `tighten-rails-comparison-and-lint-gating`,
-   `cache-build-dist-across-jobs` (after #1).
-3. **Medium** — `consolidate-leaf-test-jobs`, `tune-ar-db-forks-to-runner-cores`,
-   `flake-elimination-as-ci-cost`.
+Sequenced highest-confidence-MOVER first, so effort is spent where the gate is
+most likely to pass:
+
+1. **MOVERs (do first, independent)** — `cache-build-dist-across-jobs` (bundle
+   its ENABLER `route-all-jobs-through-setup-pnpm-composite`),
+   `tune-ar-db-forks-to-runner-cores`, `flake-elimination-as-ci-cost`,
+   `tighten-rails-comparison-and-lint-gating` (measured on non-package PRs).
+2. **CONTENTION-ONLY (only if a saturation window can be measured; else defer)**
+   — `consolidate-preflight-micro-jobs`, `consolidate-leaf-test-jobs`.
+
+Each proceeds through its own go/no-go gate; a no-go closes that PR without
+affecting the others.
 
 ## Open questions
 
 1. **Is queue contention actually binding today?** The throughput argument rests
    on the concurrency pool saturating at ~370 runs/day. Measuring queue-wait
    time (run `created_at` → first job `started_at`) would confirm or weaken it.
-   Not blocking any of the coverage-neutral stories.
+   This is **decisive for the two CONTENTION-ONLY stories** — without measurable
+   saturation they default to no-go — but does not affect the MOVER stories,
+   which shorten the critical path regardless.
 
 ## Stories
 
 Est-LOC is the implementer's PR-size budget (additions + deletions), capped at
-the trails 500-LOC ceiling. Risk and estimated savings live in each story's
-body. All eight stories are coverage-neutral. **Top 5 by ROI:**
-`gate-ar-jobs-behind-build`, `consolidate-preflight-micro-jobs`,
-`consolidate-leaf-test-jobs`, `cache-build-dist-across-jobs`,
-`tighten-rails-comparison-and-lint-gating`.
+the trails 500-LOC ceiling. Risk, expected wall-time impact, and the go/no-go
+gate live in each story's body. All seven stories are coverage-neutral and each
+merges only if its before/after measurement clears the gate (see "Measurement
+protocol"). **Highest-confidence MOVERs:** `cache-build-dist-across-jobs`,
+`tune-ar-db-forks-to-runner-cores`, `flake-elimination-as-ci-cost`,
+`tighten-rails-comparison-and-lint-gating` (non-package PRs). **Highest
+close-risk (CONTENTION-ONLY):** `consolidate-preflight-micro-jobs`,
+`consolidate-leaf-test-jobs`.
 
 <!-- generated: stories table -->
 
@@ -251,7 +335,6 @@ body. All eight stories are coverage-neutral. **Top 5 by ROI:**
 | [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft  | 160     | parallelism-rounding |
 | [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
 | [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft  | 200     | flake-cost           |
-| [gate-ar-jobs-behind-build](stories/gate-ar-jobs-behind-build.md)                                     | Gate the AR adapter jobs behind build-and-typecheck to cut cancelled-run waste  | draft  | 40      | change-gating        |
 | [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | draft  | 120     | caching-install      |
 | [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | draft  | 90      | change-gating        |
 | [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | draft  | 30      | parallelism-rounding |
@@ -265,3 +348,8 @@ body. All eight stories are coverage-neutral. **Top 5 by ROI:**
 - 2026-06-14: review fixes — corrected frontmatter dates, retitled the preflight
   story "sub-minute" (checks run 3–14 s, not sub-second), and scoped the
   AR_DB_FORKS story to the two live DB jobs (mysql-tests is disabled).
+- 2026-06-15: wall-time merge bar — every story now carries a "Measurement &
+  go/no-go" gate (merge only on a measured time-to-green win vs `main`, else
+  close); added the "Measurement protocol" section; tagged each story MOVER /
+  ENABLER / CONTENTION-ONLY; dropped `gate-ar-jobs-behind-build` (wall-time-
+  negative by design). 7 stories remain.

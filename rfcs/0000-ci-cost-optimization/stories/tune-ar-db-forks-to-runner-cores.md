@@ -46,6 +46,9 @@ touching coverage.
 
 ## Savings & risk
 
+- **Expected wall-time impact: MOVER.** Directly targets the wall-clock of the
+  two longest jobs (PG 9.86, MariaDB 8.43); the measurement (below) is also the
+  deliverable, so a no-result outcome is a documented finding, not a failure.
 - **Est. savings:** primarily **wall-clock / latency** on the two longest jobs;
   possibly ~1–2 billed job-min/run if the change crosses minute boundaries.
   Could be net-zero billed minutes if it only shifts wall-clock without crossing
@@ -53,6 +56,21 @@ touching coverage.
 - **Risk:** low–medium. Fork count interacts with the shared-table flakes
   documented in repo memory; a different fork count can change test scheduling
   and surface (or hide) collisions. Validate across a few reruns before landing.
+
+## Measurement & go/no-go
+
+The fork sweep already produces the before/after data; this gate just makes the
+merge decision explicit (see the RFC's "Measurement protocol").
+
+- [ ] Record median wall-clock of `postgres-tests` and `maria-tests` at the
+      current `AR_DB_FORKS: 8` over ≥5 runs (baseline) and at each candidate
+      fork count over ≥5 runs each.
+- [ ] **Go:** the chosen fork count cuts the median PG/MariaDB job wall-clock by
+      ≥10% or ≥15 s without new flake failures. **No-go:** if no count beats 8
+      beyond noise, keep 8, record the finding, and close the PR as a
+      documented no-op (the measurement is the value).
+- [ ] PR description includes the per-fork-count wall-clock table + the flake
+      check across reruns.
 
 ## Notes
 

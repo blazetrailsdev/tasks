@@ -48,11 +48,32 @@ independently legible in the step log.
 
 ## Savings & risk
 
-- **Est. savings:** ~2 billed job-min per PR. PRs are ~73% of runs, so this is
-  high-frequency, low-risk recurring savings.
+- **Expected wall-time impact: CONTENTION-ONLY (high close-risk).** These checks
+  are sub-minute and run in parallel **off the critical path**, so on an
+  uncontended run consolidating them changes end-to-end time-to-green by ~0. The
+  only wall-time benefit is fewer concurrent jobs → less runner-pool queueing,
+  which is invisible unless the pool is saturated. Under the wall-time bar this
+  story **defaults to no-go** unless contention can be measured.
+- **Est. savings:** ~2 billed job-min per PR (rounding) — a **cost** number, not
+  a wall-time one. PRs are ~73% of runs.
 - **Risk:** low. The checks are independent and fast; the only subtlety is
   faithfully reproducing each step's event/author guard as a step-level `if:`
   and updating the `ci` aggregate gate. No coverage change.
+
+## Measurement & go/no-go
+
+The win, if any, is queue-wait under contention — so it must be measured under
+load, not on a quiet repo (see the RFC's "Measurement protocol").
+
+- [ ] Baseline: median time-to-green over ≥5 PR runs **captured during a
+      saturation window** (many concurrent runs queued), plus median runner
+      queue-wait (run `created_at` → first job `started_at`).
+- [ ] After consolidation, re-measure under comparable load.
+- [ ] **Go:** median time-to-green or queue-wait drops by ≥10% or ≥15 s.
+      **No-go (the default):** if contention can't be reproduced, or the metric
+      is within noise, **close the PR** — do not merge on the rounding argument
+      alone — and record the finding.
+- [ ] PR description includes the under-load before/after table.
 
 ## Notes
 

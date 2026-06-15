@@ -52,15 +52,37 @@ a few seconds per job across ~18 jobs.
 
 ## Savings & risk
 
+- **Expected wall-time impact: ENABLER (marginal alone).** Shaves only a few
+  seconds of install per job and is not itself a critical-path win. Its purpose
+  is to give `cache-build-dist-across-jobs` one consistent setup path — so it
+  merges **bundled with / ahead of** that MOVER and is **closed with it** if
+  that story fails its gate. It must not regress wall time (the go/no-go check
+  below is "no regression," not "improvement").
 - **Est. savings:** ~0.5–1 billed job-min/run (install shaved a few seconds
   across ~18 jobs; mostly sub-rounding but compounds with cancellation/rerun
   volume). Primary value is **foundational + WAN-safety**, not raw minutes.
 - **Risk:** low. Pure setup-step substitution; the composite already encodes
   the hosted path identically to the inlined steps.
 
+## Measurement & go/no-go
+
+As an ENABLER this is judged on its dependent, not a standalone win (see the
+RFC's "Measurement protocol").
+
+- [ ] Confirm **no wall-time regression**: median time-to-green over ≥5 runs is
+      within noise of `main` (every job still gets a pnpm cache hit — check the
+      setup-node cache logs).
+- [ ] **Go:** no regression **and** `cache-build-dist-across-jobs` clears its
+      own gate (ship them together or this first, that immediately after).
+      **No-go:** if `cache-build-dist-across-jobs` is closed for no gain, close
+      this too — there is no independent justification to keep it.
+- [ ] PR description includes the time-to-green table and per-job cache-hit
+      confirmation.
+
 ## Notes
 
 The composite's self-hosted branch keys on `runner.environment != 'github-hosted'`.
 `vars.RUNNER` is currently unset so everything resolves hosted today; routing
-all jobs through the composite is what makes the self-hosted lever actually
-usable later (see `runner-sizing-and-self-hosted-decision`).
+all jobs through the composite is also what would make the self-hosted lever
+usable if it is ever revisited (the runner-sizing dimension was rejected for
+now — see the RFC's "Rejected dimensions").

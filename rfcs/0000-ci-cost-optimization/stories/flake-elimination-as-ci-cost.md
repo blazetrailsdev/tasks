@@ -47,6 +47,10 @@ structural fix.
 
 ## Savings & risk
 
+- **Expected wall-time impact: MOVER (tail/median).** A flaky rerun adds a full
+  6–10 min AR job to time-to-green when it fires; eliminating the top collisions
+  removes those excursions, improving median and p90 time-to-green even though a
+  single clean run is unchanged.
 - **Est. savings:** variable but recurring — each eliminated flake removes its
   rerun's 6–10 billed min at the flake's hit rate. Even a couple of flakes at a
   few percent hit rate across ~370 runs/day is a meaningful recurring line.
@@ -55,6 +59,22 @@ structural fix.
   riding the canonical table Rails uses; fall back to `afterAll(dropAllTables)`.
   Fidelity first: never adjust a test name or invent a schema to dodge a
   collision.
+
+## Measurement & go/no-go
+
+The metric here is statistical (reruns are intermittent), so measure over a
+larger window (see the RFC's "Measurement protocol").
+
+- [ ] Baseline: AR-job failure-then-pass-on-rerun rate and median + p90
+      time-to-green over the last ~100–200 AR-affecting runs.
+- [ ] After fixing the targeted collision(s), re-measure over a comparable
+      window (or a forced-rerun stress loop of the affected files).
+- [ ] **Go:** the targeted collision no longer reproduces across repeated runs
+      and the rerun rate / p90 time-to-green drops. **No-go:** if the collision
+      persists or the fix perturbs scheduling without net improvement, close the
+      PR and record the finding (and, per Notes, hand the structural fix to
+      RFC 0019).
+- [ ] PR description includes the before/after rerun-rate + p90 table.
 
 ## Notes
 

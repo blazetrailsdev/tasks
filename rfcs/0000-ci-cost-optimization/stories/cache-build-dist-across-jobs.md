@@ -48,6 +48,9 @@ each job restores the cache populated by whichever job built first.
 
 ## Savings & risk
 
+- **Expected wall-time impact: MOVER.** `pnpm build` (~30–45 s) sits inside the
+  AR adapter jobs, which are the critical-path long pole — removing it shortens
+  end-to-end time-to-green, not just billed minutes.
 - **Est. savings:** ~1–3 billed job-min/run (build is ~30–45 s; removing it from
   ~5 jobs crosses a minute boundary on 1–3 of them per run) **plus** meaningful
   wall-clock on the AR critical path.
@@ -56,6 +59,22 @@ each job restores the cache populated by whichever job built first.
   of `src/` + tsconfigs + lockfile (exact-match, no `restore-keys`), so any
   source change misses the cache and rebuilds. Verify `tsc --build` treats a
   restored `.tsbuildinfo` as authoritative.
+
+## Measurement & go/no-go
+
+Merge only on a measured wall-time win; otherwise close the PR (see the RFC's
+"Measurement protocol").
+
+- [ ] Baseline (over ≥5 AR-affecting runs on `main`): median time-to-green and
+      the median wall-clock of the SQLite/PostgreSQL/MariaDB jobs (the cache
+      consumers).
+- [ ] Re-measure the same on this branch (≥5 runs), confirming a cache **hit**
+      (the `pnpm build` step skipped/instant) on each consumer job.
+- [ ] **Go:** the targeted AR jobs' wall-clock and/or median time-to-green drop
+      by ≥10% or ≥15 s (whichever larger). **No-go:** within noise → close the
+      PR, record the table, mark the story `blocked`.
+- [ ] PR description includes the before/after table (time-to-green, per-AR-job
+      wall-clock, billed minutes; run count + dates).
 
 ## Notes
 
