@@ -1,6 +1,6 @@
 ---
 title: "Remove dead initializeGeneratedModules no-op now that defineAttributeMethods gates on own _attributeMethodsGenerated"
-status: in-progress
+status: blocked
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: 3381
 claim: "2026-06-15T17:36:27Z"
 assignee: "remove-dead-initialize-generated-modules-noop"
-blocked-by: null
+blocked-by: "Premise invalid: the stub is the Rails-correct-file (attribute_methods.rb:42) port of initialize_generated_modules; deleting it regresses api:compare 69->68. Superseded by converge-attribute-methods-initialize-generated-modules. PR #3381 closed."
 ---
 
 ## Context
