@@ -32,10 +32,12 @@ independently legible in the step log.
 ## Acceptance criteria
 
 - [ ] Create one `preflight` job containing the prettier, docs-AR-freeze, and
-      pr-attribution checks as separate named steps, preserving each step's
-      current `if:`/permissions semantics: - prettier runs on push + PR (uses `changes.outputs.prettier_files`); - docs-AR-freeze runs only on `pull_request`; - pr-attribution runs only on deanmarano-authored PRs.
-      Use per-step `if:` conditions so a step no-ops when its event/author
-      condition isn't met, rather than skipping the whole job.
+      pr-attribution checks as separate named steps. Preserve each step's
+      current event/author semantics via per-step `if:` so a step no-ops when
+      its condition isn't met (rather than skipping the whole job): prettier
+      runs on push + PR (uses `changes.outputs.prettier_files`); docs-AR-freeze
+      runs only on `pull_request`; pr-attribution runs only on
+      deanmarano-authored PRs.
 - [ ] The job needs `changes` (for `prettier_files`) and keeps
       `permissions: pull-requests: read` for the attribution step.
 - [ ] Remove the three standalone jobs and update the aggregate `ci` job's
