@@ -1,7 +1,7 @@
 ---
 title: "Extract PG enum/range/sequence statements into PostgreSQLSchemaStatements"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-constraints"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T15:41:14Z"
+assignee: "extract-pg-schema-statements-enums-ranges-sequences"
 blocked-by: null
 ---
 
