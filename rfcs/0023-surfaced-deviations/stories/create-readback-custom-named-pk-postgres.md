@@ -1,7 +1,7 @@
 ---
 title: "create does not read DB-generated value back into a custom-named serial PK on PostgreSQL"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
