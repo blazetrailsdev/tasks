@@ -1,6 +1,6 @@
 ---
 title: "Convert associations.test bespoke models to canonical fixtures (subselect/references/limitable)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3423
 claim: "2026-06-15T23:34:27Z"
 assignee: "associations-test-canonical-fixtures-convergence"
 blocked-by: null
