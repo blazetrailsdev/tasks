@@ -46,8 +46,12 @@ created or dropped). These are divergences.
 - [ ] Test names unchanged; behavior matches `database_tasks_test.rb`.
 - [ ] **PR stays under the trails 500-LOC ceiling.** If converging all 28 sites
       exceeds it, ship the cohesive subset that fits and register the remainder
-      as a follow-up story (`pnpm tasks new 0000-sqlite-memory-fidelity
-database-tasks-test-config-fidelity-2`) — do NOT open a sibling PR.
+      as a follow-up story (do NOT open a sibling PR) with:
+
+  ```bash
+  pnpm tasks new 0000-sqlite-memory-fidelity database-tasks-test-config-fidelity-2
+  ```
+
 - [ ] CI green on all three adapters; `test:compare` delta non-negative.
 
 ## Notes

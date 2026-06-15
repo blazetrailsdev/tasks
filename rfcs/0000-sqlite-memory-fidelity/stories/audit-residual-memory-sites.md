@@ -60,9 +60,12 @@ and all non-test source files.
 
 ## Notes
 
-This is an **analysis/authoring story** (spike-style — done when the
-classification + spun stories land; the PR may be docs-only or closed-unmerged
-per memory `project_spike_audit_done_when_closed`). It should be claimed early
-in the sweep so its spun stories exist before agents touch the long-tail files.
-Do not converge code here — keep ownership one-story-per-file.
+This is an **analysis/authoring story** (spike-style). Closing convention:
+claim-close once all per-file classifications are recorded and any convergence
+stories have been spun (committed to this RFC's `stories/`). The PR itself may
+contain only the new story files / divergence-map updates with **no test-code
+changes** — a docs-only or closed-unmerged PR is acceptable for this spike and
+is not a defect. It should be claimed early in the sweep so its spun stories
+exist before agents touch the long-tail files. Do not converge code here — keep
+ownership one-story-per-file.
 </content>
