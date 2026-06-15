@@ -1,7 +1,7 @@
 ---
 title: "Route update/delete/destroy WHERE through _query_constraints_hash"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T12:45:08Z"
+assignee: "persistence-query-constraints-where"
 blocked-by: null
 ---
 
