@@ -1,7 +1,7 @@
 ---
 title: "Close SQLite3 indexes() fidelity gaps vs SQLite3::SchemaStatements#indexes"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T19:30:27Z"
+assignee: "sqlite3-indexes-rails-fidelity"
 blocked-by: null
 ---
 
