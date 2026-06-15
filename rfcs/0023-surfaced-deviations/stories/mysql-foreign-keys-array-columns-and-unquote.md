@@ -1,6 +1,6 @@
 ---
 title: "MySQL foreignKeys: return composite FK columns as array and unquote_identifier on column/to_table"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
