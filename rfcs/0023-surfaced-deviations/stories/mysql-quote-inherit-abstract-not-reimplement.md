@@ -1,6 +1,6 @@
 ---
 title: "MySQL quote reimplements branches inline instead of inheriting the abstract quote"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
