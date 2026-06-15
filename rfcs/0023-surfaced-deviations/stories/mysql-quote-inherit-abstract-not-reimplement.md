@@ -1,7 +1,7 @@
 ---
 title: "MySQL quote reimplements branches inline instead of inheriting the abstract quote"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T00:13:01Z"
+assignee: "mysql-quote-inherit-abstract-not-reimplement"
 blocked-by: null
 ---
 
