@@ -1,6 +1,6 @@
 ---
 title: "Make addIndexOptions async and route PG addIndex through it"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T14:16:02Z"
+assignee: "addindexoptions-async-route-pg-addindex"
 blocked-by: null
 ---
 
