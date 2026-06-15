@@ -1,6 +1,6 @@
 ---
 title: "Thread _compileArelNode embedded binds through the outer collector (drop text inlining)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: null
+pr: 3317
 claim: "2026-06-15T02:16:41Z"
 assignee: "compile-arel-node-bind-threading"
 blocked-by: null
