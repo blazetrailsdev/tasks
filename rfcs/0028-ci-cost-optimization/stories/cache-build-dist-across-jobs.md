@@ -1,6 +1,6 @@
 ---
 title: "Cache the workspace build output so jobs stop re-running pnpm build"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0028-ci-cost-optimization"
 cluster: caching-install
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T18:42:28Z"
+assignee: "cache-build-dist-across-jobs"
 blocked-by: null
 ---
 
