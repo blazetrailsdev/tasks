@@ -1,6 +1,6 @@
 ---
 title: "a2-join-model-semantics-residual"
-status: draft
+status: blocked
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Folded into join-model-canonical-conversion (covers all 35 HMT tests on canonical models)."
 ---
 
 ## Context

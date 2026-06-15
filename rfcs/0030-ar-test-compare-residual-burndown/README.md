@@ -172,7 +172,6 @@ files, not this table.
 | [a1-eager-sti-through](stories/a1-eager-sti-through.md)                                                       | A1e — eager_test: preload/eager-load through STI join models                                              | draft   | null    | associations     |
 | [a1-eager-string-and-scoped-joins](stories/a1-eager-string-and-scoped-joins.md)                               | A1a — eager_test: string/scoped/same-table/intersection joins                                             | draft   | null    | associations     |
 | [a1-eager-where-references-and-from](stories/a1-eager-where-references-and-from.md)                           | A1c — eager_test: where/from references association name + implicit references                            | draft   | null    | associations     |
-| [a2-join-model-semantics-residual](stories/a2-join-model-semantics-residual.md)                               | a2-join-model-semantics-residual                                                                          | draft   | null    | —                |
 | [ho-through-source-klass-resolution](stories/ho-through-source-klass-resolution.md)                           | ho-through-source-klass-resolution                                                                        | draft   | null    | —                |
 | [join-model-canonical-conversion](stories/join-model-canonical-conversion.md)                                 | join-model-canonical-conversion                                                                           | draft   | 480     | associations     |
 | [store-full-sti-class-name](stories/store-full-sti-class-name.md)                                             | store-full-sti-class-name                                                                                 | draft   | null    | —                |
@@ -205,6 +204,7 @@ files, not this table.
 | [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                                   | A4 — habtm: alias intermediate join table                                                                 | claimed | 100     | associations     |
 | [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md)                                             | A5 — cascaded eager + nested-include + full-STI-class                                                     | claimed | 140     | associations     |
 | [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                                 | A2 — join_model: has_many :through join-model semantics                                                   | blocked | 280     | associations     |
+| [a2-join-model-semantics-residual](stories/a2-join-model-semantics-residual.md)                               | a2-join-model-semantics-residual                                                                          | blocked | null    | —                |
 
 ## Changelog
 
