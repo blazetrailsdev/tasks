@@ -1,6 +1,6 @@
 ---
 title: "defineSchema serial path skips big_integer custom PKs (no BIGSERIAL branch)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
