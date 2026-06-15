@@ -1,6 +1,6 @@
 ---
 title: "primary_key return type omits null for key-less data sources (views)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3372
 claim: "2026-06-15T16:18:28Z"
 assignee: "primary-key-null-return-type-for-views"
 blocked-by: null
