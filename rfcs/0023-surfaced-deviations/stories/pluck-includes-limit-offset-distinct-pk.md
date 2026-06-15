@@ -1,6 +1,6 @@
 ---
 title: "pluck: materialize distinct PKs for limit/offset over collection includes (distinct_relation_for_primary_key)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
