@@ -1,6 +1,6 @@
 ---
 title: "MySQL indexes introspection: surface prefix lengths and DESC orders"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
