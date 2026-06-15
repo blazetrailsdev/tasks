@@ -1,6 +1,6 @@
 ---
 title: "pluck/arel_column: bare unknown column resolves to joined table (not_auto_table_name_prefix_if_column_included)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
