@@ -1,6 +1,6 @@
 ---
 title: "defineSchema serial path skips big_integer custom PKs (no BIGSERIAL branch)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T03:00:08Z"
+assignee: "defineschema-bigint-custom-pk-serial"
 blocked-by: null
 ---
 
