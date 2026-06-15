@@ -1,6 +1,6 @@
 ---
 title: "E2 — PG array/uuid/hstore/virtual-column DDL-via-exec"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
