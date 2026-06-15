@@ -1,6 +1,6 @@
 ---
 title: "MySQL indexes introspection: surface prefix lengths and DESC orders"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T13:47:34Z"
+assignee: "mysql-indexes-introspection-fidelity-gaps"
 blocked-by: null
 ---
 
