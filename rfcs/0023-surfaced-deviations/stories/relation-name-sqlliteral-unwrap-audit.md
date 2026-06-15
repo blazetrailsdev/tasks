@@ -1,7 +1,7 @@
 ---
 title: "Audit relation-name string consumers for SqlLiteral unwrap (SqlLiteral is not a String subclass)"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T17:12:27Z"
+assignee: "relation-name-sqlliteral-unwrap-audit"
 blocked-by: null
 ---
 
