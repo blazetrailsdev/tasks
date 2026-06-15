@@ -1,6 +1,6 @@
 ---
 title: "MySQL unsignedDecimal precision/scale ArgumentError message deviates from Rails ('precision is required' vs Rails 'precision cannot be empty if scale is specified')"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3342
 claim: "2026-06-15T12:10:10Z"
 assignee: "mysql-unsigned-decimal-precision-scale-message"
 blocked-by: null
