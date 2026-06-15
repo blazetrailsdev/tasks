@@ -1,6 +1,6 @@
 ---
 title: "SQLite quote reimplements branches inline instead of super + dispatched quoted_time"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3399
 claim: "2026-06-15T19:24:26Z"
 assignee: "sqlite-quote-dispatch-through-super"
 blocked-by: null
