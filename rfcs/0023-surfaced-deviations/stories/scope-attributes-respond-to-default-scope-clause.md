@@ -42,13 +42,13 @@ scoped, so its default-scope attributes are not applied on build/create.
 
 ## Acceptance criteria
 
-- [ ] The trails `scope_attributes?` equivalent (`base.ts:534`) includes the
+- [x] The trails `scope_attributes?` equivalent (`base.ts:534`) includes the
       third clause: a model that defines a `default_scope` method (not just via
       the `default_scope { }` registry) reports `scope_attributes?` true,
       matching `default.rb:55-56`.
-- [ ] `super`/`default_scopes.any?` behavior is unchanged.
-- [ ] Read the Rails `scoping`/`default_scoping` test covering the
+- [x] `super`/`default_scopes.any?` behavior is unchanged.
+- [x] Read the Rails `scoping`/`default_scoping` test covering the
       method-form `default_scope` and mirror its name verbatim; add a regression
       test that `new`/`create` seeds the default-scope attributes for the
       method-form override.
-- [ ] api:compare / test:compare delta non-negative.
+- [x] api:compare / test:compare delta non-negative.
