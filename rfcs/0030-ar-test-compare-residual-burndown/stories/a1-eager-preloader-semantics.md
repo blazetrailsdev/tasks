@@ -1,6 +1,6 @@
 ---
 title: "A1 — eager_test: preloader eager-loading semantics"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 470
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T20:10:22Z"
+assignee: "a1-eager-preloader-semantics"
 blocked-by: null
 ---
 
