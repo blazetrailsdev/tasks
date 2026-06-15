@@ -1,6 +1,6 @@
 ---
 title: "Fold plain .joins(:assoc) into buildJoinDependencies (drop _joinClauses SQL pre-resolution)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 3359
 claim: "2026-06-15T14:47:08Z"
 assignee: "fold-named-inner-joins-into-build-join-dependencies"
 blocked-by: null
