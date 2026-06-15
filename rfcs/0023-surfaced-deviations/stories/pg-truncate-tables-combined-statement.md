@@ -1,6 +1,6 @@
 ---
 title: "PG truncate_tables emits per-table TRUNCATE, not Rails' combined statement"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3346
 claim: "2026-06-15T13:55:33Z"
 assignee: "pg-truncate-tables-combined-statement"
 blocked-by: null
