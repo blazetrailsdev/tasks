@@ -1,6 +1,6 @@
 ---
 title: "buildCountSubquery in calculations.ts is exported but has no callers — remove or wire it"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T17:24:26Z"
+assignee: "remove-dead-buildcountsubquery"
 blocked-by: null
 ---
 
@@ -42,7 +42,7 @@ tested then, not left as an orphan export.
 - [ ] Delete the `buildCountSubquery` export at `calculations.ts:1184` (and any
       imports it alone pulled in).
 - [ ] Confirm nothing references it: `grep -rn buildCountSubquery
-    packages/activerecord/src` returns no hits after removal; it is not
+packages/activerecord/src` returns no hits after removal; it is not
       re-exported from `index.ts`.
 - [ ] `pnpm vitest run packages/activerecord/src/calculations.test.ts` stays
       green; api:compare / test:compare delta non-negative.
