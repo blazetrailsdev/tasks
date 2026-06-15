@@ -1,6 +1,6 @@
 ---
 title: "Eagerly warm schema cache at connection/boot in production (not just defineSchema)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3373
 claim: "2026-06-15T16:42:28Z"
 assignee: "production-eager-schema-cache-warm-at-connection"
 blocked-by: null
