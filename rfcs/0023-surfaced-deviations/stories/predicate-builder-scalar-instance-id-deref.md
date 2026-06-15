@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder#build derefs an AR instance value to its id (where(col: instance))"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
