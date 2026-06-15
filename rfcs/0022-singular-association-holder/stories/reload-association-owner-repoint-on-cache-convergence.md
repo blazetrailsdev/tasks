@@ -1,6 +1,6 @@
 ---
 title: "reload must re-point association owner to self after adopting fresh's @association_cache"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0022-singular-association-holder"
 cluster: null
