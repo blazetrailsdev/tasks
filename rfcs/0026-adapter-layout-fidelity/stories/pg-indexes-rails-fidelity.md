@@ -50,8 +50,8 @@ Rails source: `activerecord/lib/active_record/connection_adapters/postgresql/sch
 
 ## Acceptance criteria
 
-- [ ] `indexes()` returns `valid` and the SQL mirrors Rails (relkind filter +
+- [x] `indexes()` returns `valid` and the SQL mirrors Rails (relkind filter +
       indisvalid select).
-- [ ] `renameIndex` validates new-index-name length per Rails.
-- [ ] `addIndex` quotes a bare-column-name `:where` value.
-- [ ] api:compare / test:compare delta non-negative; tests cover each behavior.
+- [x] `renameIndex` validates new-index-name length per Rails.
+- [x] `addIndex` quotes a bare-column-name `:where` value.
+- [x] api:compare / test:compare delta non-negative; tests cover each behavior.
