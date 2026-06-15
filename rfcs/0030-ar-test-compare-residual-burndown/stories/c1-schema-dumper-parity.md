@@ -1,6 +1,6 @@
 ---
 title: "C1 — schema_dumper parity"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "unblockers"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T23:56:55Z"
+assignee: "c1-schema-dumper-parity"
 blocked-by: null
 ---
 
