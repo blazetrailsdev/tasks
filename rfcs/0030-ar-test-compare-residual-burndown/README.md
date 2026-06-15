@@ -91,6 +91,36 @@ Sequencing favours the **unblockers first** (schema-dumper / defaults, which gat
 downstream schema-dependent assertions), then the **largest single-file blocks**
 (eager_test 59, join_model 35), then everything else in parallel.
 
+### Test-writing direction (applies to every story)
+
+Un-skipping is **not** "make the test green"; it is "make the port faithful to
+Rails." Fidelity to the upstream suite is the #1 priority. For every story:
+
+- **Read the corresponding Rails test first** (`activerecord/test/cases/...`) and
+  mirror its structure, models, and assertions. Never reword or rename a test.
+- **Use the official/canonical schema** (`TEST_SCHEMA`, mirroring Rails'
+  `schema.rb`) and the **official canonical models** in
+  `packages/activerecord/src/test-helpers/models/` (~200 already ported — Author,
+  Post, Tag, Tagging, Comment, Category, Categorization, and many more, matching
+  Rails' `activerecord/test/models/`). **Do not create your own custom tables or
+  models: table, column, and model names must match Rails exactly.** If Rails uses
+  `Author`/`authors`, use the canonical model — never rename it or substitute a
+  bespoke one.
+- **Use `useHandlerFixtures`** for fixture-backed setup (mirrors Rails'
+  `fixtures :name` + transactional tests). Look up the real fixtures Rails uses.
+- **Move away from `defineSchema`** / bespoke per-test schemas. A perceived gap in
+  the canonical schema is a signal to mirror Rails' own setup, not to hand-roll one.
+- **Skip rather than deviate.** If a test cannot pass without diverging from Rails
+  (an implementation gap or genuine divergence), do **not** contort the test,
+  schema, or assertion to force it green. Leave it `it.skip` with a
+  `BLOCKED:`/`ROOT-CAUSE:` tag and **file an upstream-fix story** via
+  `pnpm tasks new <rfc-slug> <story-slug>`. Always converge to Rails — never
+  ratify a deviation.
+
+PR [#3405](https://github.com/blazetrailsdev/trails/pull/3405) is the
+**anti-pattern** to avoid: it stood up bespoke/custom-named tables and per-test
+schemas instead of riding the canonical schema + fixtures. Don't do that.
+
 ### Deferred / permanent-skip
 
 | Category                        | Scope                                   | Action                                                          |
