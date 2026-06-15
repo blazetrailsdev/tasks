@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ci-cost-optimization"
+rfc: "0028-ci-cost-optimization"
 title: "CI cost optimization — cut billed Actions minutes and time-to-green"
 status: draft
 created: 2026-06-14
@@ -16,7 +16,7 @@ related-rfcs:
   - "0019-canonical-schema-burndown"
 ---
 
-# RFC — CI cost optimization
+# RFC 0028 — CI cost optimization
 
 ## Summary
 

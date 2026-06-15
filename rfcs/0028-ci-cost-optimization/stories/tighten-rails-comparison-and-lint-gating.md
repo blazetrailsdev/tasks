@@ -2,7 +2,7 @@
 title: "Gate rails-comparison and lint on relevant changes instead of every non-docs PR"
 status: draft
 updated: 2026-06-14
-rfc: "0000-ci-cost-optimization"
+rfc: "0028-ci-cost-optimization"
 cluster: change-gating
 deps: []
 deps-rfc: []

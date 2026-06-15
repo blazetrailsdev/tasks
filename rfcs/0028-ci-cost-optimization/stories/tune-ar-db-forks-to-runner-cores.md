@@ -2,7 +2,7 @@
 title: "Right-size AR_DB_FORKS to the runner core count"
 status: draft
 updated: 2026-06-14
-rfc: "0000-ci-cost-optimization"
+rfc: "0028-ci-cost-optimization"
 cluster: parallelism-rounding
 deps: []
 deps-rfc: []
