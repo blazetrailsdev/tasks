@@ -1,6 +1,6 @@
 ---
 title: "Remove Relation#toSql connectionless fallback (resolve a connection like model.with_connection)"
-status: ready
+status: draft
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
