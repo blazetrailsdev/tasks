@@ -1,6 +1,6 @@
 ---
 title: "Make git hooks install-independent so the format gate fires in every worktree"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T19:48:08Z"
+assignee: "hooks-install-independent-format-gate"
 blocked-by: null
 ---
 
