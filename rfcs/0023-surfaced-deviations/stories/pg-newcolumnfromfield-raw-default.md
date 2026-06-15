@@ -1,7 +1,7 @@
 ---
 title: "PG newColumnFromField stores deserialized column default (Rails stores raw); before_type_cast deviates"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
