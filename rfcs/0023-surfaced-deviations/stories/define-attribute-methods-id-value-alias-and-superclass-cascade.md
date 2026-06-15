@@ -1,6 +1,6 @@
 ---
 title: "define_attribute_methods omits alias_attribute :id_value, :id and the superclass.define_attribute_methods cascade"
-status: claimed
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3326
 claim: "2026-06-15T02:55:11Z"
 assignee: "define-attribute-methods-id-value-alias-and-superclass-cascade"
 blocked-by: null
