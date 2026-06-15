@@ -1,6 +1,6 @@
 ---
 title: "A3 — has_one + has_one_through residuals"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 230
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T20:20:26Z"
+assignee: "a3-has-one-and-through"
 blocked-by: null
 ---
 
