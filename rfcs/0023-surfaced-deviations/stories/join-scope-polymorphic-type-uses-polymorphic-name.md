@@ -1,6 +1,6 @@
 ---
 title: "join_scope polymorphic type predicate should use foreign_klass.polymorphic_name not .name"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
