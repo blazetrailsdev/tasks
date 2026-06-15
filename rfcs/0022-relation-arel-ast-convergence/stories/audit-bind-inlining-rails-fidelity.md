@@ -126,11 +126,12 @@ Source: `vendor/rails/activerecord/lib/arel/visitors/to_sql.rb`,
 6. **`connection.to_sql`** (`database_statements.rb:12-50`) compiles through
    `collector()` (`abstract_adapter.rb:1176` — `SubstituteBinds` when
    `!prepared_statements`); no regex anywhere. trails' `compileInlined`
-   `sql.replace(/\?|\$\d+/)` (database_statements.ts:164) is a pure TS-ism.
+   `sql.replace(/\?|\$\d+/)` (database-statements.ts:161-172) is a pure TS-ism.
 
 7. **`WhereClause#to_sql` does NOT exist in Rails** (`relation/where_clause.rb`).
-   The whole trails method + `inspectQuoter` is a trails-ism → remove and migrate
-   callers (story whereclause-tosql-drop-inspectquoter).
+   The whole trails method + its bespoke inline quoter (where-clause.ts:105/113)
+   is a trails-ism → remove and migrate the single caller `Relation#inspect`
+   (relation.ts:1201) (story whereclause-tosql-drop-inspectquoter).
 
 ### Verdict on PR #3300
 
@@ -139,3 +140,43 @@ Source: `vendor/rails/activerecord/lib/arel/visitors/to_sql.rb`,
 `SQLString` reproduces Rails and `InlineBinds` is deleted. Recommend NOT merging
 PR #3300; fold its intent into compile-casted-inline-in-visitor + the
 connection/relation/where-clause stories. Dependency order unchanged.
+
+### trails `main`-side inventory (verified, not the #3300 branch)
+
+The findings above pin the Rails mechanism. The follow-up stories were written
+against PR #3300's (now closed-unmerged) design, so several named the #3300
+constructs `InlineBinds` / `inspectQuoter` / `_inlineBindQuoter` /
+`_lastSelectNode`, which do **not** exist on `main`. The audit deliverable is
+delivered as **updated story bodies** (no standalone doc). Actual `main` inline
+surface, verified via `git grep`:
+
+- `visitArelNodesCasted` (`packages/arel/src/visitors/to-sql.ts:243`) — routes
+  `Casted` through `collector.addBind`; comment claiming `add_bind` parity is
+  wrong for v8.0.2. → compile-casted-inline-in-visitor.
+- `ToSql#compile` no-collector path (`to-sql.ts:~109-124`) — `Composite(SQLString,
+Bind)` + post-hoc `substituteBoundValues`, the on-`main` stand-in for the
+  speculative `InlineBinds`. → compile-casted-inline-in-visitor.
+- `compileInlined` (`packages/activerecord/src/connection-adapters/abstract/
+database-statements.ts:161-172`) — the one real `sql.replace(/\?|\$\d+/g)`
+  regex, called from `connection.toSql` (:200) and explain (:312). →
+  connection-tosql-via-collector.
+- `Relation#toSql` (`relation.ts:4193`) — post-hoc `substituteBoundValues`
+  (:4202) + adapter-quote callback over `_lastSelectBinds`. →
+  relation-tosql-unprepared-statement.
+- `Relation#_compileArelNode` (`relation.ts:4613`, ~13 callers) — post-hoc
+  `substituteBoundValues` (:4617) for JOIN ON / order / select fragments;
+  `_compileArelNodeWithBinds` (:4631) already threads correctly. →
+  compile-arel-node-bind-threading (overlaps RFC 0017).
+- `WhereClause#toSql` (`packages/activerecord/src/relation/where-clause.ts:105`)
+  — post-hoc `substituteBoundValues` (:113) with a bespoke inline quoter; only
+  caller is `Relation#inspect` (`relation.ts:1201`). →
+  whereclause-tosql-drop-inspectquoter.
+
+Correction to a first-pass scope note: `_compileArelNode` **is** present on
+`main` (an early plain-`grep` miss); only `InlineBinds` / `inspectQuoter` /
+`_inlineBindQuoter` / `_lastSelectNode` are absent.
+
+Dependency order (unchanged, confirmed): connection-tosql-via-collector →
+compile-casted-inline-in-visitor → relation-tosql-unprepared-statement →
+whereclause-tosql-drop-inspectquoter; compile-arel-node-bind-threading
+coordinates with RFC 0017.
