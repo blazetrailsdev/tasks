@@ -1,6 +1,6 @@
 ---
 title: "no-raw-sql: only flag the SQL argument of sink calls, not op-name labels"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
