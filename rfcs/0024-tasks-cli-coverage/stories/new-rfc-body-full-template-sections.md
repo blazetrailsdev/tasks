@@ -1,6 +1,6 @@
 ---
 title: "new-rfc scaffold body should match full 0000-template sections (Alternatives/Rollout/Open questions)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: rfc-commands
