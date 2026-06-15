@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-06-15
 rfc: "0005-activerecord-gaps"
 cluster: null
-deps: []
+deps:
+  - unify-alias-tracker-across-join-buckets
 deps-rfc: []
 est-loc: 250
 priority: null
