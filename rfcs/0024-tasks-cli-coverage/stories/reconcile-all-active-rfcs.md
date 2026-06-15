@@ -1,6 +1,6 @@
 ---
 title: "Generalize reconcile.mjs beyond RFCs 0001-0010"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
