@@ -1,6 +1,6 @@
 ---
 title: "Remove Relation#toSql connectionless fallback (resolve a connection like model.with_connection)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["relation-tosql-unprepared-statement"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3386
 claim: "2026-06-15T17:54:26Z"
 assignee: "remove-tosql-connectionless-fallback"
 blocked-by: null
