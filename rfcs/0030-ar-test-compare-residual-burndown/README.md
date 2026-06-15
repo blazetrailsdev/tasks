@@ -144,5 +144,6 @@ files, not this table.
 
 ## Changelog
 
+- 2026-06-15: adopt the 5 still-open stories from RFC 0016 (persistence-query-constraints-save-reload-tests, sqlite3-copy-table-test-port, strict-loading-new-record-gate-in-loaders, timestamp-index-created-for-both-timestamps, virtual-reconcile-warm-schema-cache); 0016's residual-skip campaign is now superseded by this RFC.
 - 2026-06-15: initial RFC; inventory of 439 counted skips migrated from live
   `test:compare` output, successor to 0016-ar-test-compare-100 (94.3%).

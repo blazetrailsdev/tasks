@@ -3,7 +3,7 @@ rfc: "0016-ar-test-compare-100"
 title: "ActiveRecord test:compare 100%: phase-ordered un-skip campaign"
 status: active
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-06-15
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -158,6 +158,7 @@ excluded from the shared run; need `TEST_ADAPTER=postgresql/mysql2` (RFC 0012).
 
 ## Changelog
 
+- 2026-06-15: move the 5 remaining open stories (persistence-query-constraints-save-reload-tests, sqlite3-copy-table-test-port, strict-loading-new-record-gate-in-loaders, timestamp-index-created-for-both-timestamps, virtual-reconcile-warm-schema-cache) to RFC 0030-ar-test-compare-residual-burndown, which supersedes this RFC's residual-skip campaign. The 83 closed stories stay here as the historical record.
 - 2026-06-10: add Phase 5 core-residuals (F-9a…F-9g) for the ~175 un-owned core skips surfaced after F-8 (#3012) closed; snapshot refreshed to 92.6% (575 skipped).
 - 2026-06-08: decompose p3-adapter-type-families into 12 child stories (8 MySQL + 4 PG residual).
 - 2026-06-07: initial RFC, migrated from `workplan.md`, attack-plan, 100-plan, index.
