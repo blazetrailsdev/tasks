@@ -29,13 +29,16 @@ fi
 # fixes drift isn't rejected by its own pre-fix state.
 node scripts/validate.mjs >&2
 
-# 3. Prettier + markdownlint on staged markdown (including the just-staged
-# regenerated files).
+# 3. Prettier-format and re-stage staged markdown (including the just-staged
+# regenerated files), then markdownlint. We `--write` rather than `--check`:
+# hand-authored stories (e.g. emphasis written as `*x*` where the config wants
+# `_x_`) are auto-fixed at commit time instead of being rejected and left for
+# the author to run `pnpm format` — which, when skipped or with husky uninstalled,
+# lands unformatted files on main and reds the CI `format:check` for every PR.
+# Mirrors the regen --write above; CI `prettier --check .` stays the backstop.
 STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
 if [ -n "$STAGED_MD" ]; then
-  npx --no-install prettier --check $STAGED_MD || {
-    echo "prettier failed — run 'pnpm format' and re-stage." >&2
-    exit 1
-  }
+  npx --no-install prettier --write $STAGED_MD
+  git add $STAGED_MD
   npx --no-install markdownlint-cli2 $STAGED_MD || exit 1
 fi
