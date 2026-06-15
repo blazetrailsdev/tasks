@@ -1,6 +1,6 @@
 ---
 title: "WhereClause#toSql: route through the connection (or remove) — drop bespoke inspectQuoter"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
+pr: 3316
 claim: "2026-06-15T02:16:27Z"
 assignee: "whereclause-tosql-drop-inspectquoter"
 blocked-by: null
