@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder#build derefs an AR instance value to its id (where(col: instance))"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -57,7 +57,7 @@ its id, producing wrong SQL / a bind of the whole object rather than `record.id`
 
 - [ ] `build` dereferences an Active Record instance to its id at the top,
       mirroring `predicate_builder.rb:58` (`value = value.id if
-      value.respond_to?(:id)` — in TS, "looks like an AR record / responds to
+    value.respond_to?(:id)` — in TS, "looks like an AR record / responds to
       `id`" → use `value.id`), before Set/Array/Range/Relation dispatch.
 - [ ] No regression to the association/polymorphic hash-expansion path (which
       already coerces records via `AssociationQueryValue`); the deref must not
