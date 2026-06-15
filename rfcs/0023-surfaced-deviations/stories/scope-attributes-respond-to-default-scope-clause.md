@@ -1,6 +1,6 @@
 ---
 title: "scope_attributes? drops the respond_to?(:default_scope) clause (proc-based default_scope override unsupported)"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
