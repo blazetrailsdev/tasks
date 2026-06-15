@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes: unloaded collection assignment populates the in-memory target synchronously so grandchild/autosave saves use it"
-status: claimed
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 3348
 claim: "2026-06-15T13:51:46Z"
 assignee: "nested-attributes-collection-sync-in-memory-grandchild"
 blocked-by: null
