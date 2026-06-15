@@ -34,8 +34,8 @@ already supports optional `lengths`/`orders` (`schema-dumper.ts:73-76,
 
 ## Acceptance criteria
 
-- [ ] `indexes` surfaces per-column prefix `lengths` from `Sub_part`.
-- [ ] `indexes` surfaces per-column `orders` (`desc` when `Collation == "D"`),
+- [x] `indexes` surfaces per-column prefix `lengths` from `Sub_part`.
+- [x] `indexes` surfaces per-column `orders` (`desc` when `Collation == "D"`),
       including the expression case for descending functional indexes.
-- [ ] schema dump emits `length:` / `order:` for affected indexes; verified on
+- [x] schema dump emits `length:` / `order:` for affected indexes; verified on
       MySQL 8 + MariaDB.
