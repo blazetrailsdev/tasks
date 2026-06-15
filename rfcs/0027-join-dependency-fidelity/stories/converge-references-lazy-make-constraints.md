@@ -1,6 +1,6 @@
 ---
 title: "Converge references consumption to Rails' lazy make_constraints aliasing"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: join-dependency
@@ -8,7 +8,7 @@ deps: ["converge-join-constraints-references"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 3355
 claim: "2026-06-15T14:34:31Z"
 assignee: "converge-references-lazy-make-constraints"
 blocked-by: null
