@@ -11,6 +11,55 @@ import { relPath, RFC_STATUSES, STORY_STATUSES } from "./lib.mjs";
 
 export const MAX_LINES = 2000;
 
+// Reference + cycle checks over the story dep graph, factored out so the full
+// validator and the CLI's set-deps pre-commit guard share one traversal rather
+// than maintaining drifting copies of the WHITE/GRAY/BLACK DFS.
+//
+// Inputs are graph accessors so a caller can run it against either the whole
+// index (validate.mjs, seeding from every story) or a single post-edit node
+// (cli.ts set-deps, seeding from just the edited id with its deps overridden):
+//   storyIds    Set<string>       known story ids (for `deps` resolution)
+//   rfcIds      Set<string>       known rfc ids (for `deps-rfc` resolution)
+//   depsOf      (id) => string[]  a story's `deps` edges
+//   depsRfcOf   (id) => string[]  a story's `deps-rfc` edges (optional)
+//   seeds       Iterable<string>  story ids to walk references and seed the DFS from
+//
+// Returns structured violations — no file attribution or message formatting, so
+// each caller renders them in its own voice:
+//   refViolations [{ from, dep, kind: "dep" | "deps-rfc" }]  // in seed order, deps then deps-rfc per story
+//   cycles        [string[]]                                  // each path ends at its repeated node, in DFS-discovery order
+export function checkDepGraph({ storyIds, rfcIds, depsOf, depsRfcOf, seeds }) {
+  const seedList = [...seeds];
+  const refViolations = [];
+  for (const from of seedList) {
+    for (const dep of depsOf(from)) {
+      if (!storyIds.has(dep)) refViolations.push({ from, dep, kind: "dep" });
+    }
+    for (const dep of depsRfcOf?.(from) ?? []) {
+      if (!rfcIds.has(dep)) refViolations.push({ from, dep, kind: "deps-rfc" });
+    }
+  }
+
+  const WHITE = 0,
+    GRAY = 1,
+    BLACK = 2;
+  const color = new Map();
+  const cycles = [];
+  const visit = (id, stack) => {
+    if (color.get(id) === GRAY) {
+      cycles.push([...stack, id]);
+      return;
+    }
+    if (color.get(id) === BLACK) return;
+    color.set(id, GRAY);
+    for (const dep of depsOf(id)) if (storyIds.has(dep)) visit(dep, [...stack, id]);
+    color.set(id, BLACK);
+  };
+  for (const id of seedList) visit(id, []);
+
+  return { refViolations, cycles };
+}
+
 export function validate({ rfcs, stories }) {
   const errors = [];
   const err = (file, msg) => errors.push(`${relPath(file)}: ${msg}`);
@@ -94,37 +143,23 @@ export function validate({ rfcs, stories }) {
     storyById.set(s.id, s);
   }
 
-  // Validate deps & deps-rfc references and detect cycles
-  for (const s of stories) {
-    if (s.error) continue;
-    const fm = s.frontmatter ?? {};
-    for (const dep of fm.deps ?? []) {
-      if (!storyById.has(dep)) err(s.file, `dep "${dep}" does not exist`);
-    }
-    for (const dep of fm["deps-rfc"] ?? []) {
-      if (!rfcById.has(dep)) err(s.file, `deps-rfc "${dep}" does not exist`);
-    }
+  // Validate deps & deps-rfc references and detect cycles via the shared
+  // graph check (also used by the CLI's set-deps pre-commit guard).
+  const { refViolations, cycles } = checkDepGraph({
+    storyIds: new Set(storyById.keys()),
+    rfcIds: new Set(rfcById.keys()),
+    depsOf: (id) => storyById.get(id).frontmatter?.deps ?? [],
+    depsRfcOf: (id) => storyById.get(id).frontmatter?.["deps-rfc"] ?? [],
+    seeds: storyById.keys(),
+  });
+  for (const { from, dep, kind } of refViolations) {
+    err(storyById.get(from).file, `${kind} "${dep}" does not exist`);
   }
-
-  // DFS cycle detection over story deps
-  const WHITE = 0,
-    GRAY = 1,
-    BLACK = 2;
-  const color = new Map([...storyById.keys()].map((id) => [id, WHITE]));
-  function visit(id, stack) {
-    if (color.get(id) === GRAY) {
-      err(storyById.get(id).file, `dep cycle detected: ${[...stack, id].join(" → ")}`);
-      return;
-    }
-    if (color.get(id) === BLACK) return;
-    color.set(id, GRAY);
-    const fm = storyById.get(id).frontmatter ?? {};
-    for (const dep of fm.deps ?? []) {
-      if (storyById.has(dep)) visit(dep, [...stack, id]);
-    }
-    color.set(id, BLACK);
+  for (const cycle of cycles) {
+    // The repeated node (last element) is where validate.mjs historically
+    // attributed the cycle error.
+    err(storyById.get(cycle[cycle.length - 1]).file, `dep cycle detected: ${cycle.join(" → ")}`);
   }
-  for (const id of storyById.keys()) visit(id, []);
 
   return { errors };
 }
