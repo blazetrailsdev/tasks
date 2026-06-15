@@ -1,7 +1,7 @@
 ---
 title: "Extract PG exclusion/unique-constraint statements into PostgreSQLSchemaStatements"
-status: ready
-updated: 2026-06-13
+status: claimed
+updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-fks"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 420
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T14:41:09Z"
+assignee: "extract-pg-schema-statements-constraints"
 blocked-by: null
 ---
 
