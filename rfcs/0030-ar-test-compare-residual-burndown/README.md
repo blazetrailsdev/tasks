@@ -133,7 +133,6 @@ files, not this table.
 
 | ID                                                                                                            | Title                                                                                                     | Status  | Est LOC | Cluster          |
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------- | ------- | ---------------- |
-| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                                   | A4 — habtm: alias intermediate join table                                                                 | ready   | 100     | associations     |
 | [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md)                                             | A5 — cascaded eager + nested-include + full-STI-class                                                     | ready   | 140     | associations     |
 | [a6-inverse-and-association-tail](stories/a6-inverse-and-association-tail.md)                                 | A6 — inverse-of + bidirectional + collection tail                                                         | ready   | 140     | associations     |
 | [b1-relation-scoping](stories/b1-relation-scoping.md)                                                         | B1 — relation_scoping parity                                                                              | ready   | 160     | relation-scoping |
@@ -162,6 +161,7 @@ files, not this table.
 | [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md)                                       | A1 — eager_test: preloader eager-loading semantics                                                        | claimed | 470     | associations     |
 | [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                                 | A2 — join_model: has_many :through join-model semantics                                                   | claimed | 280     | associations     |
 | [a3-has-one-and-through](stories/a3-has-one-and-through.md)                                                   | A3 — has_one + has_one_through residuals                                                                  | claimed | 230     | associations     |
+| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                                   | A4 — habtm: alias intermediate join table                                                                 | claimed | 100     | associations     |
 
 ## Changelog
 
