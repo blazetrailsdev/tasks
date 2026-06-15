@@ -1,6 +1,6 @@
 ---
 title: "join_scope polymorphic type predicate should use foreign_klass.polymorphic_name not .name"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 3357
 claim: "2026-06-15T14:59:08Z"
 assignee: "join-scope-polymorphic-type-uses-polymorphic-name"
 blocked-by: null
