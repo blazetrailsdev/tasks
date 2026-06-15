@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes: collection load merges unsaved nested updates/destroys with DB rows (Rails load_target merge), not async flush"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: 3382
 claim: "2026-06-15T17:30:26Z"
 assignee: "nested-attributes-collection-merge-on-load"
 blocked-by: null
