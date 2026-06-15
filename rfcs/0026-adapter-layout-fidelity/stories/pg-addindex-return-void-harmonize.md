@@ -1,6 +1,6 @@
 ---
 title: "Harmonize PG addIndex return type Promise<string> -> Promise<void>"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["addindexoptions-async-route-pg-addindex"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3367
 claim: "2026-06-15T15:47:08Z"
 assignee: "pg-addindex-return-void-harmonize"
 blocked-by: null
