@@ -1,7 +1,7 @@
 ---
 title: "Move JoinDependency STI predicate into association scope (Rails-faithful)"
-status: in-progress
-updated: 2026-06-14
+status: done
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
