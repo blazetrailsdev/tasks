@@ -1,6 +1,6 @@
 ---
 title: "connection.toSql compiles via collector() (drop the compileInlined regex)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
