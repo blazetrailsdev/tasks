@@ -3,8 +3,36 @@
 #
 # Must complete in <500ms on a warm working tree. Keep additions
 # mtime-gated and incremental.
+#
+# Install-independent setup
+# -------------------------
+# `core.hooksPath` points at this tracked `.husky/` directory (NOT husky v9's
+# generated `.husky/_/` wrapper). The `prepare` script in package.json sets it
+# on `pnpm install`, and the value lives in the shared common `.git/config`, so
+# every worktree — including one created with a raw `git worktree add` and no
+# `pnpm install` — resolves it to its own checked-out `.husky/` and runs this
+# hook immediately. The old `.husky/_` indirection was untracked and absent in
+# such worktrees, so git silently ran no hook and unformatted markdown reached
+# main and reddened CI. These scripts are plain `sh` (no husky sourcing line),
+# so they are directly runnable as a hooksPath target.
 
 set -e
+
+# Fail closed: these gates need `node` plus the devDependencies (js-yaml,
+# prettier, markdownlint-cli2). If the tooling is absent the commit MUST be
+# blocked with an actionable message, never silently skipped. `npx --no-install`
+# already exits non-zero when a binary is missing; the checks below surface a
+# clear error before any work runs.
+if ! command -v node > /dev/null 2>&1; then
+  echo "pre-commit: \`node\` not found on PATH — cannot run the format/lint gate." >&2
+  echo "Install Node and run \`pnpm install\`, then retry the commit." >&2
+  exit 1
+fi
+if [ ! -d node_modules ]; then
+  echo "pre-commit: node_modules is missing — the prettier/markdownlint gate cannot run." >&2
+  echo "Run \`pnpm install\` in this worktree, then retry the commit." >&2
+  exit 1
+fi
 
 # 1. Regenerate the tracked generated artifacts BEFORE the prettier/lint gates
 # so generated output is formatted, not rejected: each RFC README's `## Stories`
