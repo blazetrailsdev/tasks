@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes: singular (belongsTo/hasOne) assignment populates/reuses the in-memory target synchronously (Rails one-to-one existing_record reuse)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
