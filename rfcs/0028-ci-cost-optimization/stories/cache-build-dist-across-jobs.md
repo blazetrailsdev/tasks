@@ -1,6 +1,6 @@
 ---
 title: "Cache the workspace build output so jobs stop re-running pnpm build"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0028-ci-cost-optimization"
 cluster: caching-install
