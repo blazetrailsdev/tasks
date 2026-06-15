@@ -1,6 +1,6 @@
 ---
 title: "Unify instantiateFromRows parent-key accessor (readAttribute vs _readAttribute, raw vs cast)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3332
 claim: "2026-06-15T11:55:11Z"
 assignee: "join-dependency-associations-map-key-consistency"
 blocked-by: null
