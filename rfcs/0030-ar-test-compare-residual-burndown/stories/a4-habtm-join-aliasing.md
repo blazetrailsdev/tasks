@@ -1,6 +1,6 @@
 ---
 title: "A4 — habtm: alias intermediate join table"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 3408
 claim: "2026-06-15T20:25:53Z"
 assignee: "a4-habtm-join-aliasing"
 blocked-by: null
