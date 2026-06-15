@@ -1,6 +1,6 @@
 ---
 title: "Relation#toSql via unprepared_statement { conn.to_sql(arel) } (drop the post-hoc substituteBoundValues inliner)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T11:45:09Z"
+assignee: "relation-tosql-unprepared-statement"
 blocked-by: null
 ---
 
