@@ -1,7 +1,7 @@
 ---
 title: "mysql2 execQuery derives columns from row keys, not field descriptors (cast_result parity)"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T12:15:08Z"
+assignee: "mysql2-cast-result-fields-not-row-keys"
 blocked-by: null
 ---
 
