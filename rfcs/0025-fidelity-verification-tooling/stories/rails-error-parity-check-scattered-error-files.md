@@ -1,7 +1,7 @@
 ---
 title: "rails-error-parity: check scattered (non-errors.ts) error-class files"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-15
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T16:54:25Z"
+assignee: "rails-error-parity-check-scattered-error-files"
 blocked-by: null
 ---
 
