@@ -96,7 +96,7 @@ without making `.where()` async. That async work is split into
 ## Acceptance criteria
 
 - [ ] `RelationHandler`'s eager-loading branch is live: `where(x:
-  Model.includes(:assoc).where(...))` converts the include to an OUTER join
+Model.includes(:assoc).where(...))` converts the include to an OUTER join
       on the subquery arel (no `applyJoinDependencyForArel`-missing no-op).
 - [ ] `distinctRelationForPrimaryKey` builds table-qualified compiled pk columns
       and reads via `selectRows`; covered by direct unit tests on SQLite (+ PG
