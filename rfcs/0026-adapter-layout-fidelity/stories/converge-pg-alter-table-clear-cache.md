@@ -42,6 +42,24 @@ they were not introduced by #3314):
    incompatible with the abstract base method's `AlterTable` return, which
    surfaces as a TS override error only in a real subclass. It remains on
    the adapter. Resolving may require widening the base signature.
+7. `addColumn` — Rails `PostgreSQL#add_column`
+   (`postgresql/schema_statements.rb:460-464`) calls `clear_cache!` before
+   `super`. The moved TS override goes straight to `super.addColumn(...)`
+   without `this.pg.clearCacheBang()` (same missing-`clear_cache!` class as
+   items 1–3).
+8. `changeColumnComment` / `changeTableComment` skip the `{from:, to:}`
+   hash-unwrap Rails does via `extract_new_comment_value`
+   (`abstract/schema_statements.rb:1820-1827`): the TS signatures narrow the
+   argument to `string | null`. (Convergence companion to item 2.)
+9. `changeColumnNull` guards the pre-`ALTER` `UPDATE` with `if column` in
+   Rails (`postgresql/schema_statements.rb:503`); the TS calls
+   `quoteDefaultExpression(defaultValue, col)` unconditionally even when `col`
+   is `undefined`. (Convergence companion to item 3.)
+
+Note: #3314 already converged the moved DDL methods to route through
+`executeMutation` (query-cache clearing) and added
+`createTableDefinition`/`createAlterTable` overrides (PG column
+normalization) — those are done, not part of this story.
 
 ## Acceptance criteria
 
