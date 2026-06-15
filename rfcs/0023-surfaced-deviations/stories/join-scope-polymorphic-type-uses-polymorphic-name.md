@@ -1,6 +1,6 @@
 ---
 title: "join_scope polymorphic type predicate should use foreign_klass.polymorphic_name not .name"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -36,7 +36,7 @@ trails' `joinScope` (`packages/activerecord/src/reflection.ts:262`) instead uses
 `foreignKlass.name`:
 
 ```ts
-scope = scope.where({ [typeCol]: foreignKlass.name });   // reflection.ts:267
+scope = scope.where({ [typeCol]: foreignKlass.name }); // reflection.ts:267
 ```
 
 `foreignKlass.name` is the concrete class name, so for an STI subclass on the
