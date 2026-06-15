@@ -1,6 +1,6 @@
 ---
 title: "Implement internalExecQuery/castResult on Mysql2Adapter so query_value/update work"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0021-mysql-rawconn-convergence"
 cluster: null
