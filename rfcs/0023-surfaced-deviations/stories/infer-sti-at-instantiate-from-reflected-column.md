@@ -1,6 +1,6 @@
 ---
 title: "Infer STI at instantiate from the reflected inheritance column"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
