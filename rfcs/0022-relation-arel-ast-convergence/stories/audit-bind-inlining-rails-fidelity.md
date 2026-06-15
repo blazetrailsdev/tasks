@@ -1,6 +1,6 @@
 ---
 title: "Audit: bind-inlining vs Rails — pin exact mechanism for compile/to_sql/where-clause"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
