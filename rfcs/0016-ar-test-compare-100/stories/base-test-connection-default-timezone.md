@@ -1,6 +1,6 @@
 ---
 title: "base-test-connection-default-timezone"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T02:30:07Z"
+assignee: "base-test-connection-default-timezone"
 blocked-by: null
 ---
 
