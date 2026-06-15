@@ -41,6 +41,6 @@ Rails, and verify partitioned-table coverage.
 
 ## Acceptance criteria
 
-- [ ] `tables()` returns partitioned tables (`relkind = 'p'`) in addition to ordinary tables, matching Rails.
-- [ ] Implementation routes through the `dataSourceSql`/`quotedScope` BASE TABLE path rather than `pg_tables`.
-- [ ] Test covering a partitioned table appears in `tables()`; CI green on all three adapters.
+- [x] `tables()` returns partitioned tables (`relkind = 'p'`) in addition to ordinary tables, matching Rails.
+- [x] Implementation routes through the `dataSourceSql`/`quotedScope` BASE TABLE path rather than `pg_tables`.
+- [x] Test covering a partitioned table appears in `tables()`; CI green on all three adapters.
