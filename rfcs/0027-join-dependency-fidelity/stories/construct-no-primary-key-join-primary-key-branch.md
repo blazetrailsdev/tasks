@@ -1,6 +1,6 @@
 ---
 title: "construct: handle no-primary-key nodes via join_primary_key (id=nil, skip caching)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T02:45:09Z"
+assignee: "construct-no-primary-key-join-primary-key-branch"
 blocked-by: null
 ---
 
