@@ -4,7 +4,8 @@ status: draft
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - join-model-canonical-conversion
 deps-rfc: []
 est-loc: null
 priority: null
