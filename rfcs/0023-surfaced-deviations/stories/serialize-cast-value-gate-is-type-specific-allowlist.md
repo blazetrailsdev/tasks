@@ -1,6 +1,6 @@
 ---
 title: "updateColumns/insertAll serialize gates are type-specific allowlists, not general"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3397
 claim: "2026-06-15T19:00:27Z"
 assignee: "serialize-cast-value-gate-is-type-specific-allowlist"
 blocked-by: null
