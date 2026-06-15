@@ -1,6 +1,6 @@
 ---
 title: "Drain async SQLite driver close() at pool-level teardown (await _closingDriver through ConnectionPool/PoolConfig)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3318
 claim: "2026-06-15T02:25:08Z"
 assignee: "async-sqlite-pool-teardown-drain"
 blocked-by: null
