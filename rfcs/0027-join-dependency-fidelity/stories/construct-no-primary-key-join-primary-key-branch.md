@@ -1,7 +1,7 @@
 ---
 title: "construct: handle no-primary-key nodes via join_primary_key (id=nil, skip caching)"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
