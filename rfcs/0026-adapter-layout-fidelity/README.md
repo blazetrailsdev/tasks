@@ -118,7 +118,6 @@ slice that fits and registers the remainder with `pnpm tasks new`.
 | [pg-addindex-return-void-harmonize](stories/pg-addindex-return-void-harmonize.md)                                                     | Harmonize PG addIndex return type Promise<string> -> Promise<void>                         | ready       | 60      | adapter-layout |
 | [sqlite3-indexes-rails-fidelity](stories/sqlite3-indexes-rails-fidelity.md)                                                           | Close SQLite3 indexes() fidelity gaps vs SQLite3::SchemaStatements#indexes                 | ready       | 150     | adapter-layout |
 | [extract-pg-schema-statements-fks](stories/extract-pg-schema-statements-fks.md)                                                       | Extract PG foreign-key statements into PostgreSQLSchemaStatements                          | in-progress | 480     | adapter-layout |
-| [pg-indexes-rails-fidelity](stories/pg-indexes-rails-fidelity.md)                                                                     | Close PG indexes() / addIndex / renameIndex Rails-fidelity gaps                            | in-progress | 120     | adapter-layout |
 | [extract-mysql2-indexes-introspection](stories/extract-mysql2-indexes-introspection.md)                                               | Extract MySQL indexes introspection from mysql2-adapter into mysql/schema-statements       | done        | 180     | adapter-layout |
 | [extract-mysql2-schema-introspection](stories/extract-mysql2-schema-introspection.md)                                                 | Extract MySQL introspection statements from mysql2-adapter into mysql/schema-statements    | done        | 480     | adapter-layout |
 | [extract-mysql2-schema-statements-class](stories/extract-mysql2-schema-statements-class.md)                                           | Relocate inline MysqlSchemaStatements class and statement defaults out of mysql2-adapter   | done        | 400     | adapter-layout |
@@ -129,6 +128,7 @@ slice that fits and registers the remainder with `pnpm tasks new`.
 | [extract-pg-schema-statements-tables-introspection](stories/extract-pg-schema-statements-tables-introspection.md)                     | Extract PG table/view introspection statements into PostgreSQLSchemaStatements             | done        | 400     | adapter-layout |
 | [extract-sqlite3-schema-introspection](stories/extract-sqlite3-schema-introspection.md)                                               | Move SQLite schema-introspection slice from sqlite3-adapter into sqlite3/schema-statements | done        | 300     | adapter-layout |
 | [pg-dropschema-cascade-and-searchpath-memoization-fidelity](stories/pg-dropschema-cascade-and-searchpath-memoization-fidelity.md)     | pg-dropschema-cascade-and-searchpath-memoization-fidelity                                  | done        | null    | —              |
+| [pg-indexes-rails-fidelity](stories/pg-indexes-rails-fidelity.md)                                                                     | Close PG indexes() / addIndex / renameIndex Rails-fidelity gaps                            | done        | 120     | adapter-layout |
 
 ## Changelog
 
