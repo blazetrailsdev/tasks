@@ -1,9 +1,9 @@
 ---
 rfc: "0019-canonical-schema-burndown"
 title: "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word"
-status: active
+status: closed
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-15
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -385,6 +385,7 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 
 ## Changelog
 
+- 2026-06-15: status → closed; shelved for now. The ~104 open stories stay as the historical record and can be reopened by flipping status back to active.
 - 2026-06-09: initial RFC; supersedes 0014-fixtures-adoption.
 - 2026-06-09: review (PR #14) — added `deps: shared-table-convergence` to
   `relation-where-cluster` and `attribute-types-cluster` (known `people`/`items`
