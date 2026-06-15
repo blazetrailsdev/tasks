@@ -1,6 +1,6 @@
 ---
 title: "Converge PG alter-table methods to Rails (clear_cache!, validation, single-ALTER)"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
