@@ -6,7 +6,7 @@ rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
 deps: []
 deps-rfc: []
-est-loc: 400
+est-loc: 470
 priority: null
 pr: null
 claim: null
@@ -18,7 +18,7 @@ blocked-by: null
 
 Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). Largest single block. `associations/eager.ts` / `preloader.ts` miss eager-loading semantics (nested includes, join-for-count, STI, ordering).
 
-Counted `test:compare` skips covered by this story: **59** (snapshot 2026-06-15, `pnpm test:compare --cached --json --package activerecord`).
+**59** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **59** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -26,7 +26,7 @@ Counted `test:compare` skips covered by this story: **59** (snapshot 2026-06-15,
 
 ### Skipped tests to un-skip
 
-- `associations/eager_test.rb` → `associations/eager.test.ts` — **59** counted skips:
+- `associations/eager_test.rb` → `associations/eager.test.ts` — **59** to un-skip:
   - loading polymorphic association with mixed table conditions
   - loading association with string joins
   - loading with scope including joins
@@ -67,10 +67,29 @@ Counted `test:compare` skips covered by this story: **59** (snapshot 2026-06-15,
   - including associations with where.not adds implicit references
   - including association based on sql condition and no database column
   - preloading a polymorphic association with references to the associated table
+  - eager-loading a polymorphic association with references to the associated table
+  - preloading belongs_to association associated by a composite query_constraints
+  - preloading belongs_to association SQL
+  - preloading has_many association associated by a composite query_constraints
+  - preloading has_many through association associated by a composite query_constraints
+  - preloading belongs_to CPK model with one of the keys being shared between models
+  - preloading too many ids
+  - eager loading too many ids
+  - eager with has one through join model with conditions on the through
+  - loading with one association with non preload
+  - loading with multiple associations
+  - loading from an association that has a hash of conditions
+  - eager with has one dependent does not destroy dependent
+  - preconfigured includes with belongs to
+  - preconfigured includes with has many
+  - preload belongs to uses exclusive scope
+  - preload has many uses exclusive scope
+  - preload has one using primary key
+  - include has one using primary key
 
 ## Acceptance criteria
 
-- Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- `pnpm test:compare --package activerecord` shows this story's files at **0 matchedSkipped** (or any residual reclassified to a permanent-skip with a recorded reason per the RFC's Deferred table).
-- No new gate-mismatches introduced for these files.
-- Refresh the RFC snapshot count after merge.
+- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
+- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [ ] No new gate-mismatches introduced for these files.
+- [ ] Refresh the RFC snapshot count after merge.

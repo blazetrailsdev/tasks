@@ -3,10 +3,10 @@ title: "D2 — insert_all: onDuplicate/upsert non-native semantics"
 status: draft
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
-cluster: "clusters"
+cluster: "persistence"
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 330
 priority: null
 pr: null
 claim: null
@@ -18,7 +18,7 @@ blocked-by: null
 
 Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). Reopens f1. insertAll only supports onDuplicate="raise" via DB-native constraints; needs returning/unique-by/update semantics.
 
-Counted `test:compare` skips covered by this story: **25** (snapshot 2026-06-15, `pnpm test:compare --cached --json --package activerecord`).
+**41** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **25** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -26,18 +26,11 @@ Counted `test:compare` skips covered by this story: **25** (snapshot 2026-06-15,
 - returning clause currently passes through to executeMutation which returns affected-row counts; PG-only RETURNING extraction (Result rows + type-cast) is not wired through Builder.toSql + execute path.
 - insert-all.ts#mapKeyWithValue seeds created_at/updated_at via timestampsForCreate() on insert only; upsert/on-duplicate paths in Builder.toSql do not refresh updated_at, do not honor recordTimestamps overrides, and ignore precision config.
 - schema-cache.indexes() returns IndexDefinition without partial-index where clause, expression-index sql, or inverted column-order match; findUniqueIndexFor falls back to first match and Builder.conflictTarget emits raw columns only.
-- insertAll uses
-- returning clause currently passes through to executeMutation which returns affected-row counts; PG-only RETURNING extraction (Resu
-- insert-all.ts does not consult model.readonlyAttributes() when building keysIncludingTimestamps or \_updatableColumns, so readonly columns flow into both INSERT column list and ON CONFLICT update set.
-- insertAll uses onDuplicat
-- insertAll uses onDuplicate="raise" semantics only via DB-native constraint violation; current path swallows the adapter error and returns affected-row count rather than re-raising as RecordNot
-- schema-c
-- schema-cache.indexes() returns IndexDefinition without partial-index where clause, expression-index sql, or inverted column-order match; findUniqueIndexFor falls back to first match and Builder.conflictTarget emits raw colu
-- returning clause currently passes through to executeMutation which returns affected-row counts; PG-only RETURNING extraction (Result rows + type-cast) is not wired through Builder.toSql +
+- insert-all.ts does not consult model.readonlyAttributes() when building keysIncludingTimestamps or _updatableColumns, so readonly columns flow into both INSERT column list and ON CONFLICT update set.
 
 ### Skipped tests to un-skip
 
-- `insert_all_test.rb` → `insert-all.test.ts` — **25** counted skips:
+- `insert_all_test.rb` → `insert-all.test.ts` — **41** to un-skip:
   - insert all raises on duplicate records
   - insert all with returning
   - upsert all updates changed columns only
@@ -77,11 +70,12 @@ Counted `test:compare` skips covered by this story: **25** (snapshot 2026-06-15,
   - upsert all updates using values function on duplicate raw sql
   - insert all when table name contains database
   - insert all can skip duplicate records
-  - insert all generates correct sql
+  - insert all returns primary key if returning is supported
+  - insert all succeeds when passed no attributes
 
 ## Acceptance criteria
 
-- Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- `pnpm test:compare --package activerecord` shows this story's files at **0 matchedSkipped** (or any residual reclassified to a permanent-skip with a recorded reason per the RFC's Deferred table).
-- No new gate-mismatches introduced for these files.
-- Refresh the RFC snapshot count after merge.
+- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
+- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [ ] No new gate-mismatches introduced for these files.
+- [ ] Refresh the RFC snapshot count after merge.

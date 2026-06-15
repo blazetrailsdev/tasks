@@ -6,7 +6,7 @@ rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "unblockers"
 deps: []
 deps-rfc: []
-est-loc: 250
+est-loc: 180
 priority: null
 pr: null
 claim: null
@@ -18,7 +18,7 @@ blocked-by: null
 
 Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). `schema-dumper.ts` / `abstract/schema-statements.ts` missing Rails dump parity (columnSpec residuals after I-1).
 
-Counted `test:compare` skips covered by this story: **22** (snapshot 2026-06-15, `pnpm test:compare --cached --json --package activerecord`).
+**22** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **22** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -26,7 +26,7 @@ Counted `test:compare` skips covered by this story: **22** (snapshot 2026-06-15,
 
 ### Skipped tests to un-skip
 
-- `schema_dumper_test.rb` → `schema-dumper.test.ts` — **22** counted skips:
+- `schema_dumper_test.rb` → `schema-dumper.test.ts` — **22** to un-skip:
   - schema dumps index length
   - schema dump aliased types
   - schema dump includes length for mysql binary fields
@@ -52,7 +52,7 @@ Counted `test:compare` skips covered by this story: **22** (snapshot 2026-06-15,
 
 ## Acceptance criteria
 
-- Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- `pnpm test:compare --package activerecord` shows this story's files at **0 matchedSkipped** (or any residual reclassified to a permanent-skip with a recorded reason per the RFC's Deferred table).
-- No new gate-mismatches introduced for these files.
-- Refresh the RFC snapshot count after merge.
+- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
+- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [ ] No new gate-mismatches introduced for these files.
+- [ ] Refresh the RFC snapshot count after merge.

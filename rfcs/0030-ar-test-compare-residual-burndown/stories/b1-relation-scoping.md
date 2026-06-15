@@ -3,10 +3,10 @@ title: "B1 — relation_scoping parity"
 status: draft
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
-cluster: "clusters"
+cluster: "relation-scoping"
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 160
 priority: null
 pr: null
 claim: null
@@ -18,7 +18,7 @@ blocked-by: null
 
 Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). `relation/scoping.ts#scopeFor` / `Relation#scoped` missing Rails parity (scoping stack, merge).
 
-Counted `test:compare` skips covered by this story: **20** (snapshot 2026-06-15, `pnpm test:compare --cached --json --package activerecord`).
+**20** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **20** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -26,7 +26,7 @@ Counted `test:compare` skips covered by this story: **20** (snapshot 2026-06-15,
 
 ### Skipped tests to un-skip
 
-- `scoping/relation_scoping_test.rb` → `scoping/relation-scoping.test.ts` — **20** counted skips:
+- `scoping/relation_scoping_test.rb` → `scoping/relation-scoping.test.ts` — **20** to un-skip:
   - unscoped breaks caching
   - scope breaks caching on collections
   - scoped find include
@@ -50,7 +50,7 @@ Counted `test:compare` skips covered by this story: **20** (snapshot 2026-06-15,
 
 ## Acceptance criteria
 
-- Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- `pnpm test:compare --package activerecord` shows this story's files at **0 matchedSkipped** (or any residual reclassified to a permanent-skip with a recorded reason per the RFC's Deferred table).
-- No new gate-mismatches introduced for these files.
-- Refresh the RFC snapshot count after merge.
+- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
+- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [ ] No new gate-mismatches introduced for these files.
+- [ ] Refresh the RFC snapshot count after merge.
