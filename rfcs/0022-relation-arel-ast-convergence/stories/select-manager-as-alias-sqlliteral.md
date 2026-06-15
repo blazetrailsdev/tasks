@@ -39,8 +39,8 @@ then drop the `node.relation instanceof Nodes.Grouping` branch from
 
 ## Acceptance criteria
 
-- [ ] `SelectManager#as(name)` stores the alias as a `Nodes.SqlLiteral`.
-- [ ] `visitArelNodesTableAlias` renders bare-vs-quoted purely from `node.name`
+- [x] `SelectManager#as(name)` stores the alias as a `Nodes.SqlLiteral`.
+- [x] `visitArelNodesTableAlias` renders bare-vs-quoted purely from `node.name`
       (no `instanceof Nodes.Grouping` relation-shape check).
-- [ ] Existing subquery-alias SQL (bare for `as()`, quoted for `Table#alias`)
+- [x] Existing subquery-alias SQL (bare for `as()`, quoted for `Table#alias`)
       is unchanged; `test:compare` delta >= 0.
