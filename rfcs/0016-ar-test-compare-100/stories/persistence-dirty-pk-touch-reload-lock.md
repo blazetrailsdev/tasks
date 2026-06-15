@@ -1,6 +1,6 @@
 ---
 title: "Honor id_in_database in touch/reload/pessimistic-lock row targeting"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 3343
 claim: "2026-06-15T12:40:11Z"
 assignee: "persistence-dirty-pk-touch-reload-lock"
 blocked-by: null
