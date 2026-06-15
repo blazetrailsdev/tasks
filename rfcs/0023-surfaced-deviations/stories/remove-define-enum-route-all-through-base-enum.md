@@ -1,6 +1,6 @@
 ---
 title: "Remove defineEnum; route all enum call sites through Base.enum"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: 3395
 claim: "2026-06-15T17:42:27Z"
 assignee: "remove-define-enum-route-all-through-base-enum"
 blocked-by: null
