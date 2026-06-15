@@ -1,6 +1,6 @@
 ---
 title: "Thread _compileArelNode embedded binds through the outer collector (drop text inlining)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T02:16:41Z"
+assignee: "compile-arel-node-bind-threading"
 blocked-by: null
 ---
 
