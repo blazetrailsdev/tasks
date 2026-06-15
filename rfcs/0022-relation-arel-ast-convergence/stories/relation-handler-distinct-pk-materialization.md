@@ -1,6 +1,6 @@
 ---
 title: "RelationHandler: live eager-loading apply_join_dependency + Rails-faithful distinctRelationForPrimaryKey (sync slice)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 3383
 claim: "2026-06-15T17:06:27Z"
 assignee: "relation-handler-distinct-pk-materialization"
 blocked-by: null
@@ -96,7 +96,7 @@ without making `.where()` async. That async work is split into
 ## Acceptance criteria
 
 - [ ] `RelationHandler`'s eager-loading branch is live: `where(x:
-    Model.includes(:assoc).where(...))` converts the include to an OUTER join
+  Model.includes(:assoc).where(...))` converts the include to an OUTER join
       on the subquery arel (no `applyJoinDependencyForArel`-missing no-op).
 - [ ] `distinctRelationForPrimaryKey` builds table-qualified compiled pk columns
       and reads via `selectRows`; covered by direct unit tests on SQLite (+ PG
