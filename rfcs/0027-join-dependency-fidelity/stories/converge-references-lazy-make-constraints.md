@@ -41,19 +41,19 @@ rather than ratifying it. This story is that convergence.
 
 ## Acceptance criteria
 
-- [ ] `joinConstraints` populates a `@references`-equivalent map from the
+- [x] `joinConstraints` populates a `@references`-equivalent map from the
       `references` argument (mirroring `join_dependency.rb:88–92`); `void
 references` is removed.
-- [ ] `makeConstraints` resolves the referenced-table alias lazily via the
+- [x] `makeConstraints` resolves the referenced-table alias lazily via the
       reflection name (`@references[reflection.name]` → `aliasedTableFor`),
       mirroring `join_dependency.rb:202`.
-- [ ] The eager `referencedAlias`/`keyName` aliasing block in `addAssociation`
+- [x] The eager `referencedAlias`/`keyName` aliasing block in `addAssociation`
       is removed, and `references` no longer threads through
       `addAssociationSpec`/`_buildSpecTree`/`_addOrReuse`/`addAssociation`.
-- [ ] All `references()`/`order(assoc:)`/eager_load tests pass unchanged
+- [x] All `references()`/`order(assoc:)`/eager_load tests pass unchanged
       (referenced association still aliased to its reference name, e.g.
       `authors AS author`).
-- [ ] Diff under the 300 LOC ceiling.
+- [x] Diff under the 300 LOC ceiling.
 
 ## Notes
 
