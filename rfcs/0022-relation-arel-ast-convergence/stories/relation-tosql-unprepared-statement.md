@@ -1,6 +1,6 @@
 ---
 title: "Relation#toSql via unprepared_statement { conn.to_sql(arel) } (drop the post-hoc substituteBoundValues inliner)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity", "connection-tosql-via-collector"]
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: null
+pr: 3330
 claim: "2026-06-15T11:45:09Z"
 assignee: "relation-tosql-unprepared-statement"
 blocked-by: null
