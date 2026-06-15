@@ -1,6 +1,6 @@
 ---
 title: "Honor id_in_database in touch/reload/pessimistic-lock row targeting"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: core-residuals
