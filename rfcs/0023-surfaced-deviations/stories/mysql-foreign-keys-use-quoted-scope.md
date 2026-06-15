@@ -1,6 +1,6 @@
 ---
 title: "MySQL foreignKeys: scope query via quoted_scope(table_name), not this.quote + DATABASE()"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -57,7 +57,7 @@ calls it.)
 ## Acceptance criteria
 
 - [ ] `mysql/schema-statements.ts#foreignKeys` derives `scope =
-      quotedScope.call(this, tableName)` and interpolates `scope.schema` /
+    quotedScope.call(this, tableName)` and interpolates `scope.schema` /
       `scope.name` for both the `fk.*` and `rc.*` predicates, matching Rails
       `abstract_mysql_adapter.rb:465-485`; no remaining `DATABASE()` /
       `this.quote(tableName)` in the foreign-keys SQL.
