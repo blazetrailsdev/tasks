@@ -11,8 +11,6 @@ clusters:
   - change-gating
   - parallelism-rounding
   - flake-cost
-  - runner-sizing
-  - coverage-reduction
 related-rfcs:
   - "0012-adapter-test-ci"
   - "0019-canonical-schema-burndown"
@@ -143,12 +141,11 @@ the repo ever goes private or moves heavy jobs to self-hosted/paid runners.
 
 ## Design
 
-Stories are grouped into six clusters. **Default-safe** stories
-(caching/install, change-gating, parallelism/rounding, flake-elimination) do
-**not** reduce test or adapter coverage. Any story that **reduces or samples
-real coverage** — or spends real dollars — is a separate, clearly-labeled
-**`needs-approval`** story with the fidelity/cost tradeoff spelled out, because
-this repo's #1 principle is Rails fidelity.
+Stories are grouped into four clusters, all **coverage-neutral**: none reduces
+test or adapter coverage and none spends real dollars. Two higher-risk
+dimensions were analyzed and explicitly **rejected by the owner** (2026-06-15);
+they are documented under "Rejected dimensions" below rather than carried as
+stories, because this repo's #1 principle is Rails fidelity.
 
 ### Cluster: caching-install
 
@@ -188,29 +185,31 @@ this repo's #1 principle is Rails fidelity.
   flakes as a direct cost line (each rerun re-bills a 6–10 min job).
   Depends on RFC 0019 (canonical-schema burndown).
 
-### Cluster: runner-sizing (needs approval)
+### Rejected dimensions (owner decision, 2026-06-15)
 
-- `runner-sizing-and-self-hosted-decision` — analyze the `vars.RUNNER` /
-  larger-runner / self-hosted break-even and decide a policy. Real-dollar and
-  infra implications → explicit user approval.
+Two higher-savings levers were analyzed and **rejected** — they are recorded
+here so the analysis is preserved and not re-proposed:
 
-### Cluster: coverage-reduction (needs approval)
-
-- `sample-ar-adapters-on-prs` — the single biggest lever: run only SQLite on
-  PRs and the full PG+MariaDB trio on `main` + the nightly schedule. Saves
-  ~18 billed min/PR but **reduces adapter coverage on PRs** (fidelity risk) →
-  explicit user approval.
+- **Adapter sampling on PRs** (would have been the single biggest lever,
+  ~18 billed min/PR: run only SQLite on PRs, full PG+MariaDB trio on `main` +
+  nightly). **Rejected — coverage cut not acceptable.** The fidelity cost of
+  catching PG/MariaDB-specific regressions only post-merge outweighs the
+  minutes; all three adapters continue to run on every AR PR.
+- **Runner sizing / self-hosted move** (`vars.RUNNER` break-even,
+  larger-paid-runner vs self-hosted). **Rejected — stay on free hosted
+  runners.** No real-dollar spend or self-hosted/WAN exposure will be taken on;
+  current queue contention is accepted as-is.
 
 ## Alternatives considered
 
-- **Swap MariaDB back to mysql:8 / drop a DB engine outright.** Rejected as a
-  default — already analyzed in repo memory (mysql:8 is ~2.15× slower; MariaDB
-  is the current stand-in). Any further engine cut belongs in the
-  coverage-reduction cluster behind approval.
-- **Move everything to a larger paid runner for speed.** Rejected as a default
-  — on a public repo that converts $0 into real spend and is cost-negative
-  unless queue contention is proven to be the binding constraint. Captured as
-  the runner-sizing decision story instead.
+- **Swap MariaDB back to mysql:8 / drop a DB engine outright.** Rejected —
+  already analyzed in repo memory (mysql:8 is ~2.15× slower; MariaDB is the
+  current stand-in), and the owner has ruled out adapter-coverage cuts (see
+  "Rejected dimensions").
+- **Move everything to a larger paid runner for speed.** Rejected — on a public
+  repo that converts $0 into real spend and is cost-negative unless queue
+  contention is proven binding; the owner has chosen to stay on free hosted
+  runners (see "Rejected dimensions").
 - **Do nothing (minutes are free on a public repo).** Rejected — throughput
   contention and self-hosted/private-repo exposure are real, and the
   rounding/cancellation waste is cheap to remove.
@@ -224,43 +223,39 @@ this repo's #1 principle is Rails fidelity.
    `cache-build-dist-across-jobs` (after #1).
 3. **Medium** — `consolidate-leaf-test-jobs`, `tune-ar-db-forks-to-runner-cores`,
    `flake-elimination-as-ci-cost`.
-4. **Approval-gated** — `runner-sizing-and-self-hosted-decision`,
-   `sample-ar-adapters-on-prs`.
 
 ## Open questions
 
-1. **Is queue contention actually binding today?** If the GitHub Actions
-   concurrency pool is rarely saturated, the throughput argument weakens and the
-   case rests on self-hosted/private-repo exposure. The runner-sizing story
-   should measure queue wait time first.
-2. **PR adapter coverage floor.** If we sample adapters on PRs, is nightly +
-   `main` coverage an acceptable fidelity floor, or do we need a per-adapter
-   label to opt a PR back into the full trio? (The `run-parity-*` label
-   mechanism is a precedent.)
+1. **Is queue contention actually binding today?** The throughput argument rests
+   on the concurrency pool saturating at ~370 runs/day. Measuring queue-wait
+   time (run `created_at` → first job `started_at`) would confirm or weaken it.
+   Not blocking any of the coverage-neutral stories.
 
 ## Stories
 
 Est-LOC is the implementer's PR-size budget (additions + deletions), capped at
 the trails 500-LOC ceiling. Risk and estimated savings live in each story's
-body. **Top 5 by ROI:** `sample-ar-adapters-on-prs` (highest raw savings,
-needs approval), `gate-ar-jobs-behind-build`, `consolidate-preflight-micro-jobs`,
-`consolidate-leaf-test-jobs`, `cache-build-dist-across-jobs`.
+body. All eight stories are coverage-neutral. **Top 5 by ROI:**
+`gate-ar-jobs-behind-build`, `consolidate-preflight-micro-jobs`,
+`consolidate-leaf-test-jobs`, `cache-build-dist-across-jobs`,
+`tighten-rails-comparison-and-lint-gating`.
 
 <!-- generated: stories table -->
 
-| ID                                                                                                    | Title                                                                                   | Status | Est LOC | Cluster              |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------ | ------- | -------------------- |
-| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build                     | draft  | 180     | caching-install      |
-| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                         | draft  | 160     | parallelism-rounding |
-| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-second preflight checks into one job to reclaim rounding            | draft  | 120     | parallelism-rounding |
-| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                             | draft  | 200     | flake-cost           |
-| [gate-ar-jobs-behind-build](stories/gate-ar-jobs-behind-build.md)                                     | Gate the AR adapter jobs behind build-and-typecheck to cut cancelled-run waste          | draft  | 40      | change-gating        |
-| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline                | draft  | 120     | caching-install      |
-| [runner-sizing-and-self-hosted-decision](stories/runner-sizing-and-self-hosted-decision.md)           | Decide runner-sizing / self-hosted policy (vars.RUNNER break-even)                      | draft  | 80      | runner-sizing        |
-| [sample-ar-adapters-on-prs](stories/sample-ar-adapters-on-prs.md)                                     | Sample AR adapters on PRs (SQLite-only) with full trio on main + nightly [COVERAGE CUT] | draft  | 120     | coverage-reduction   |
-| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR         | draft  | 90      | change-gating        |
-| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                         | draft  | 30      | parallelism-rounding |
+| ID                                                                                                    | Title                                                                           | Status | Est LOC | Cluster              |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------ | ------- | -------------------- |
+| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | draft  | 180     | caching-install      |
+| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft  | 160     | parallelism-rounding |
+| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-second preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
+| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft  | 200     | flake-cost           |
+| [gate-ar-jobs-behind-build](stories/gate-ar-jobs-behind-build.md)                                     | Gate the AR adapter jobs behind build-and-typecheck to cut cancelled-run waste  | draft  | 40      | change-gating        |
+| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | draft  | 120     | caching-install      |
+| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | draft  | 90      | change-gating        |
+| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | draft  | 30      | parallelism-rounding |
 
 ## Changelog
 
 - 2026-06-15: initial RFC; cost analysis over 60-run window; 10 stories.
+- 2026-06-15: owner rejected both needs-approval dimensions (adapter sampling,
+  runner sizing / self-hosted); dropped those two stories. 8 coverage-neutral
+  stories remain.
