@@ -1,6 +1,6 @@
 ---
 title: "Inline Casted in the visitor (Arel-faithful) so a plain SQLString reproduces Arel"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: verify
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T11:40:08Z"
+assignee: "compile-casted-inline-in-visitor"
 blocked-by: null
 ---
 
