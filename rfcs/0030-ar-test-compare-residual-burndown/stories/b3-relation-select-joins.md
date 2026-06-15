@@ -1,6 +1,6 @@
 ---
 title: "B3 — relation select + multi-join table aliasing"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "relation-scoping"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 3416
 claim: "2026-06-15T22:46:28Z"
 assignee: "b3-relation-select-joins"
 blocked-by: null
