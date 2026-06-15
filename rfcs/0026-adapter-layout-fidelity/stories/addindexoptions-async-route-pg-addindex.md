@@ -1,6 +1,6 @@
 ---
 title: "Make addIndexOptions async and route PG addIndex through it"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
