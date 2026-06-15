@@ -1,6 +1,6 @@
 ---
 title: "SELECT toSql: collect CTE-body binds through the visitor instead of inlining (buildCteSql)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
