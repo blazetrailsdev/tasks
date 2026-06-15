@@ -1,7 +1,7 @@
 ---
 title: "Remove dead initializeGeneratedModules no-op now that defineAttributeMethods gates on own _attributeMethodsGenerated"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
