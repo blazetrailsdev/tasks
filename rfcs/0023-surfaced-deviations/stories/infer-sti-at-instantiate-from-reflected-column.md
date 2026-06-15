@@ -1,6 +1,6 @@
 ---
 title: "Infer STI at instantiate from the reflected inheritance column"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 3329
 claim: "2026-06-15T11:35:10Z"
 assignee: "infer-sti-at-instantiate-from-reflected-column"
 blocked-by: null
