@@ -1,6 +1,6 @@
 ---
 title: "reload must re-point association owner to self after adopting fresh's @association_cache"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["fold-three-association-maps-into-one"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3379
 claim: "2026-06-15T17:18:27Z"
 assignee: "reload-association-owner-repoint-on-cache-convergence"
 blocked-by: null
