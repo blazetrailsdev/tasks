@@ -1,6 +1,6 @@
 ---
 title: "createWith merge precedence (last-wins)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
