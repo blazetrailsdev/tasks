@@ -16,13 +16,13 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). Notifications._notify swallows subscriber errors + EXPLAIN parity across adapters.
+Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). Notifications.\_notify swallows subscriber errors + EXPLAIN parity across adapters.
 
 **6** `it.skip` tests to un-skip across 4 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **6** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
-- activesupport Notifications._notify swallows subscriber errors on the
+- activesupport Notifications.\_notify swallows subscriber errors on the
 - trails inlines string literals into INSERT SQL rather than binding
 - trails' defineSchema emits the canonical `books` primary key as the
 - adapters/sqlite3/explain.ts missing Rails parity

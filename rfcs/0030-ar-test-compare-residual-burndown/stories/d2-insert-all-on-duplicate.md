@@ -26,7 +26,7 @@ Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndo
 - returning clause currently passes through to executeMutation which returns affected-row counts; PG-only RETURNING extraction (Result rows + type-cast) is not wired through Builder.toSql + execute path.
 - insert-all.ts#mapKeyWithValue seeds created_at/updated_at via timestampsForCreate() on insert only; upsert/on-duplicate paths in Builder.toSql do not refresh updated_at, do not honor recordTimestamps overrides, and ignore precision config.
 - schema-cache.indexes() returns IndexDefinition without partial-index where clause, expression-index sql, or inverted column-order match; findUniqueIndexFor falls back to first match and Builder.conflictTarget emits raw columns only.
-- insert-all.ts does not consult model.readonlyAttributes() when building keysIncludingTimestamps or _updatableColumns, so readonly columns flow into both INSERT column list and ON CONFLICT update set.
+- insert-all.ts does not consult model.readonlyAttributes() when building keysIncludingTimestamps or \_updatableColumns, so readonly columns flow into both INSERT column list and ON CONFLICT update set.
 
 ### Skipped tests to un-skip
 

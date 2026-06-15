@@ -58,7 +58,7 @@ Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndo
   - automatic savepoint in outer transaction
   - no automatic savepoint for inner transaction
   - the uuid is lazily computed
-  - transaction isolation  read committed
+  - transaction isolation read committed
   - after current transaction commit multidb nested transactions
   - concurrent Promise.all top-level transactions are serialized (no shared TM frame)
 - `transaction_callbacks_test.rb` → `transaction-callbacks.test.ts` — **7** to un-skip:

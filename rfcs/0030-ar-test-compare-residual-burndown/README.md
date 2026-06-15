@@ -65,15 +65,15 @@ than `it.skip` (flagged per-file in the stories), and dedupe/permanent exclusion
 nets out close. Each story states both counts. The six clusters, with the
 **un-skip targets** each owns (summing to 444):
 
-| Cluster (frontmatter slug) | Un-skip targets | Stories | Dominant root cause |
-| -------------------------- | --------------: | ------- | ------------------- |
-| A. associations / eager-loading (`associations`) | 172 | a1–a6 | `associations/*.ts` + `preloader.ts` missing eager/join-model/has-one semantics |
-| D. persistence / transactions / nested-attrs (`persistence` + `core-residuals`) | 116 | d1–d5 | committed/destroy callbacks, insert_all upsert, CPK nested-attrs, dirty force-dirty |
-| B. relation / scoping (`relation-scoping`) | 62 | b1–b4 | `relation/scoping.ts`, default_scope, multi-join aliasing, relation tail |
-| C. schema / migration / defaults (`unblockers` + `core-residuals`) | 49 | c1–c4 | schema-dumper parity, expression-default dump, migrator residuals |
-| E. adapter / connection (`adapter`) | 28 | e1–e4 | DDL-via-`exec()`, standalone/multi-db connection, notifications, EXPLAIN |
-| F. long tail (`core-residuals`) | 17 | f1 | prevent-writes, hot-compat schema cache, lazy-connection query cache |
-| **Total** | **444** | 24 | |
+| Cluster (frontmatter slug)                                                      | Un-skip targets | Stories | Dominant root cause                                                                 |
+| ------------------------------------------------------------------------------- | --------------: | ------- | ----------------------------------------------------------------------------------- |
+| A. associations / eager-loading (`associations`)                                |             172 | a1–a6   | `associations/*.ts` + `preloader.ts` missing eager/join-model/has-one semantics     |
+| D. persistence / transactions / nested-attrs (`persistence` + `core-residuals`) |             116 | d1–d5   | committed/destroy callbacks, insert_all upsert, CPK nested-attrs, dirty force-dirty |
+| B. relation / scoping (`relation-scoping`)                                      |              62 | b1–b4   | `relation/scoping.ts`, default_scope, multi-join aliasing, relation tail            |
+| C. schema / migration / defaults (`unblockers` + `core-residuals`)              |              49 | c1–c4   | schema-dumper parity, expression-default dump, migrator residuals                   |
+| E. adapter / connection (`adapter`)                                             |              28 | e1–e4   | DDL-via-`exec()`, standalone/multi-db connection, notifications, EXPLAIN            |
+| F. long tail (`core-residuals`)                                                 |              17 | f1      | prevent-writes, hot-compat schema cache, lazy-connection query cache                |
+| **Total**                                                                       |         **444** | 24      |                                                                                     |
 
 Cluster frontmatter slugs are exactly the six in the RFC `clusters:` block, so the
 auto-generated Stories table `Cluster` column is informative; the A–F letters above
@@ -131,37 +131,37 @@ files, not this table.
 
 <!-- generated: stories table -->
 
-| ID | Title | Status | Est LOC | Cluster |
-| --- | --- | --- | --- | --- |
-| [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md) | A1 — eager\_test: preloader eager-loading semantics | draft | 470 | associations |
-| [a2-join-model-semantics](stories/a2-join-model-semantics.md) | A2 — join\_model: has\_many :through join-model semantics | draft | 280 | associations |
-| [a3-has-one-and-through](stories/a3-has-one-and-through.md) | A3 — has\_one + has\_one\_through residuals | draft | 230 | associations |
-| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md) | A4 — habtm: alias intermediate join table | draft | 100 | associations |
-| [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md) | A5 — cascaded eager + nested-include + full-STI-class | draft | 140 | associations |
-| [a6-inverse-and-association-tail](stories/a6-inverse-and-association-tail.md) | A6 — inverse-of + bidirectional + collection tail | draft | 140 | associations |
-| [b1-relation-scoping](stories/b1-relation-scoping.md) | B1 — relation\_scoping parity | draft | 160 | relation-scoping |
-| [b2-default-scoping](stories/b2-default-scoping.md) | B2 — default\_scoping parity | draft | 130 | relation-scoping |
-| [b3-relation-select-joins](stories/b3-relation-select-joins.md) | B3 — relation select + multi-join table aliasing | draft | 140 | relation-scoping |
-| [b4-relation-query-tail](stories/b4-relation-query-tail.md) | B4 — relation query tail (with/where\_chain/update\_all/predicate/batches) | draft | 70 | relation-scoping |
-| [c1-schema-dumper-parity](stories/c1-schema-dumper-parity.md) | C1 — schema\_dumper parity | draft | 180 | unblockers |
-| [c2-defaults-expression-dump](stories/c2-defaults-expression-dump.md) | C2 — defaults: expression-default dump/load | draft | 90 | unblockers |
-| [c3-primary-keys](stories/c3-primary-keys.md) | C3 — primary\_keys residuals | draft | 70 | core-residuals |
-| [c4-migration-column-def-tail](stories/c4-migration-column-def-tail.md) | C4 — migration + column\_definition + invertible tail | draft | 60 | core-residuals |
-| [d1-transactions-commit-destroy-callbacks](stories/d1-transactions-commit-destroy-callbacks.md) | D1 — transactions: committed/destroy callback firing | draft | 330 | persistence |
-| [d2-insert-all-on-duplicate](stories/d2-insert-all-on-duplicate.md) | D2 — insert\_all: onDuplicate/upsert non-native semantics | draft | 330 | persistence |
-| [d3-nested-attributes-cpk-callbacks](stories/d3-nested-attributes-cpk-callbacks.md) | D3 — nested-attributes: CPK + before\_add callback timing | draft | 120 | persistence |
-| [d4-dirty-force-dirty](stories/d4-dirty-force-dirty.md) | D4 — dirty: attribute\_will\_change! force-dirty path | draft | 80 | core-residuals |
-| [d5-autosave-locking-residuals](stories/d5-autosave-locking-residuals.md) | D5 — autosave + optimistic-locking-with-includes residuals | draft | 70 | core-residuals |
-| [e1-bind-parameter](stories/e1-bind-parameter.md) | E1 — bind\_parameter residuals | draft | 60 | adapter |
-| [e2-pg-ddl-via-exec](stories/e2-pg-ddl-via-exec.md) | E2 — PG array/uuid/hstore/virtual-column DDL-via-exec | draft | 70 | adapter |
-| [e3-connection-handling](stories/e3-connection-handling.md) | E3 — standalone-connection + multi-db connection handling | draft | 50 | adapter |
-| [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md) | E4 — adapter\_test notifications + explain tail | draft | 50 | adapter |
-| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md) | F1 — prevent-writes + hot-compat + misc tail | draft | 140 | core-residuals |
-| [persistence-query-constraints-save-reload-tests](stories/persistence-query-constraints-save-reload-tests.md) | Port remaining query\_constraints persistence tests (save/reload/update\_attribute/update-parts) from stubs | draft | 80 | — |
-| [sqlite3-copy-table-test-port](stories/sqlite3-copy-table-test-port.md) | Port copy\_table\_test.rb to a sqlite3 copy\_table.test.ts convention file (copyTable already implemented) | draft | 150 | — |
-| [strict-loading-new-record-gate-in-loaders](stories/strict-loading-new-record-gate-in-loaders.md) | Gate strict-loading violation behind find\_target? new-record check in functional loaders | ready | 80 | — |
-| [timestamp-index-created-for-both-timestamps](stories/timestamp-index-created-for-both-timestamps.md) | timestamp: index is created for both timestamps (fixture-dependent) | ready | 30 | — |
-| [virtual-reconcile-warm-schema-cache](stories/virtual-reconcile-warm-schema-cache.md) | Memoize schema cache when virtual reconciliation reflects on cold cache | ready | 40 | core-residuals |
+| ID                                                                                                            | Title                                                                                                     | Status | Est LOC | Cluster          |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------ | ------- | ---------------- |
+| [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md)                                       | A1 — eager_test: preloader eager-loading semantics                                                        | draft  | 470     | associations     |
+| [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                                 | A2 — join_model: has_many :through join-model semantics                                                   | draft  | 280     | associations     |
+| [a3-has-one-and-through](stories/a3-has-one-and-through.md)                                                   | A3 — has_one + has_one_through residuals                                                                  | draft  | 230     | associations     |
+| [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                                   | A4 — habtm: alias intermediate join table                                                                 | draft  | 100     | associations     |
+| [a5-cascaded-and-sti-eager](stories/a5-cascaded-and-sti-eager.md)                                             | A5 — cascaded eager + nested-include + full-STI-class                                                     | draft  | 140     | associations     |
+| [a6-inverse-and-association-tail](stories/a6-inverse-and-association-tail.md)                                 | A6 — inverse-of + bidirectional + collection tail                                                         | draft  | 140     | associations     |
+| [b1-relation-scoping](stories/b1-relation-scoping.md)                                                         | B1 — relation_scoping parity                                                                              | draft  | 160     | relation-scoping |
+| [b2-default-scoping](stories/b2-default-scoping.md)                                                           | B2 — default_scoping parity                                                                               | draft  | 130     | relation-scoping |
+| [b3-relation-select-joins](stories/b3-relation-select-joins.md)                                               | B3 — relation select + multi-join table aliasing                                                          | draft  | 140     | relation-scoping |
+| [b4-relation-query-tail](stories/b4-relation-query-tail.md)                                                   | B4 — relation query tail (with/where_chain/update_all/predicate/batches)                                  | draft  | 70      | relation-scoping |
+| [c1-schema-dumper-parity](stories/c1-schema-dumper-parity.md)                                                 | C1 — schema_dumper parity                                                                                 | draft  | 180     | unblockers       |
+| [c2-defaults-expression-dump](stories/c2-defaults-expression-dump.md)                                         | C2 — defaults: expression-default dump/load                                                               | draft  | 90      | unblockers       |
+| [c3-primary-keys](stories/c3-primary-keys.md)                                                                 | C3 — primary_keys residuals                                                                               | draft  | 70      | core-residuals   |
+| [c4-migration-column-def-tail](stories/c4-migration-column-def-tail.md)                                       | C4 — migration + column_definition + invertible tail                                                      | draft  | 60      | core-residuals   |
+| [d1-transactions-commit-destroy-callbacks](stories/d1-transactions-commit-destroy-callbacks.md)               | D1 — transactions: committed/destroy callback firing                                                      | draft  | 330     | persistence      |
+| [d2-insert-all-on-duplicate](stories/d2-insert-all-on-duplicate.md)                                           | D2 — insert_all: onDuplicate/upsert non-native semantics                                                  | draft  | 330     | persistence      |
+| [d3-nested-attributes-cpk-callbacks](stories/d3-nested-attributes-cpk-callbacks.md)                           | D3 — nested-attributes: CPK + before_add callback timing                                                  | draft  | 120     | persistence      |
+| [d4-dirty-force-dirty](stories/d4-dirty-force-dirty.md)                                                       | D4 — dirty: attribute_will_change! force-dirty path                                                       | draft  | 80      | core-residuals   |
+| [d5-autosave-locking-residuals](stories/d5-autosave-locking-residuals.md)                                     | D5 — autosave + optimistic-locking-with-includes residuals                                                | draft  | 70      | core-residuals   |
+| [e1-bind-parameter](stories/e1-bind-parameter.md)                                                             | E1 — bind_parameter residuals                                                                             | draft  | 60      | adapter          |
+| [e2-pg-ddl-via-exec](stories/e2-pg-ddl-via-exec.md)                                                           | E2 — PG array/uuid/hstore/virtual-column DDL-via-exec                                                     | draft  | 70      | adapter          |
+| [e3-connection-handling](stories/e3-connection-handling.md)                                                   | E3 — standalone-connection + multi-db connection handling                                                 | draft  | 50      | adapter          |
+| [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md)                               | E4 — adapter_test notifications + explain tail                                                            | draft  | 50      | adapter          |
+| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                                           | F1 — prevent-writes + hot-compat + misc tail                                                              | draft  | 140     | core-residuals   |
+| [persistence-query-constraints-save-reload-tests](stories/persistence-query-constraints-save-reload-tests.md) | Port remaining query_constraints persistence tests (save/reload/update_attribute/update-parts) from stubs | draft  | 80      | —                |
+| [sqlite3-copy-table-test-port](stories/sqlite3-copy-table-test-port.md)                                       | Port copy_table_test.rb to a sqlite3 copy_table.test.ts convention file (copyTable already implemented)   | draft  | 150     | —                |
+| [strict-loading-new-record-gate-in-loaders](stories/strict-loading-new-record-gate-in-loaders.md)             | Gate strict-loading violation behind find_target? new-record check in functional loaders                  | ready  | 80      | —                |
+| [timestamp-index-created-for-both-timestamps](stories/timestamp-index-created-for-both-timestamps.md)         | timestamp: index is created for both timestamps (fixture-dependent)                                       | ready  | 30      | —                |
+| [virtual-reconcile-warm-schema-cache](stories/virtual-reconcile-warm-schema-cache.md)                         | Memoize schema cache when virtual reconciliation reflects on cold cache                                   | ready  | 40      | core-residuals   |
 
 ## Changelog
 
