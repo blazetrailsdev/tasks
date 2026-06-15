@@ -1,7 +1,7 @@
 ---
 title: "adapter-select-all-accepts-relation"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: ["adapter-select-all-accepts-arel"]
