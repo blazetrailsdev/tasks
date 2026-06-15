@@ -1,38 +1,50 @@
 #!/usr/bin/env node
-// Read-only reconcile report (RFC 0011, story reconcile-tooling).
+// Read-only reconcile report (RFC 0024, story reconcile-all-active-rfcs).
 //
-// For every story in the numbered RFCs 0001–0010, gather shipped-signals and
-// print a triage verdict — likely-done / likely-open / unknown — with the
-// evidence behind it. This NEVER edits story frontmatter; it only reports.
-// `reconcile-existing-rfcs` consumes the output and applies status flips.
+// For every story in a non-terminal RFC (status draft / active / postponed),
+// gather shipped-signals and print a triage verdict — likely-done /
+// likely-open / unknown — with the evidence behind it. This NEVER edits story
+// frontmatter; it only reports. A human (or a follow-up `tasks done`/`refine`)
+// consumes the output and applies status flips.
+//
+// The "ready ≠ undone, verify before claiming" drift it catches applies to
+// every RFC: a story silently goes stale whenever its PR merges without the
+// agent flipping status. The summary footer surfaces that drift as a single
+// number — likely-done stories not yet marked `done` — so a periodic run
+// (cron, or a tasks-loop preamble) can alert on one line.
 //
 // Signals:
 //   1. `pr:` frontmatter set       → is that trails PR merged?
 //   2. `#NNNN` refs in the body     → are those trails PRs merged?
-//   3. trails merged-PR title match → distinctive token overlap (weak)
-//   4. memory-index seed            → a memory line names the story as
+//   3. memory-index seed            → a memory line names the story as
 //                                     done/shipped/resolved/no-op
+//   4. trails merged-PR title match → distinctive token overlap. Non-decisive
+//                                     (enriches evidence only, never sets the
+//                                     verdict): at full RFC scope title-token
+//                                     overlap is too noisy to be trusted alone.
 //
 // Usage:
-//   node scripts/reconcile.mjs            # human table
-//   node scripts/reconcile.mjs --json     # machine-readable
+//   node scripts/reconcile.mjs            # all non-terminal RFCs, human table
+//   node scripts/reconcile.mjs --rfc 0024-tasks-cli-coverage   # one RFC
+//   node scripts/reconcile.mjs --json     # machine-readable (incl. per-row rfc)
 //
 // Env:
 //   TRAILS_REPO   default "blazetrailsdev/trails" (passed to `gh --repo`)
 //   MEMORY_DIR    default the Claude project memory dir; skipped if absent.
 
 import { execFileSync } from "node:child_process";
-import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { loadAll } from "./lib.mjs";
 
 const JSON_OUT = process.argv.includes("--json");
+const RFC_ARG = argValue("--rfc"); // restrict to one RFC (dir name or bare slug)
+const NON_TERMINAL = new Set(["draft", "active", "postponed"]);
 const TRAILS_REPO = process.env.TRAILS_REPO ?? "blazetrailsdev/trails";
 const MEMORY_DIR =
   process.env.MEMORY_DIR ??
   join(process.env.HOME ?? "", ".claude/projects/-home-dean-github-blazetrailsdev-trails/memory");
 
-const EXISTING_RFC_RE = /^00(0[1-9]|10)-/; // 0001–0010 only
 const PR_REF_RE = /#(\d{2,5})\b/g;
 const DONE_WORDS = /\b(shipped|done|resolved|no-?op|already|complete|closed|merged)\b/i;
 const STOPWORDS = new Set(
@@ -42,6 +54,11 @@ const STOPWORDS = new Set(
     "via through per use using new"
   ).split(" "),
 );
+
+function argValue(flag) {
+  const i = process.argv.indexOf(flag);
+  return i !== -1 && i + 1 < process.argv.length ? process.argv[i + 1] : null;
+}
 
 function sh(file, args) {
   try {
@@ -170,21 +187,45 @@ function assess(story, merged, memory) {
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────
-const { stories } = loadAll();
+const { rfcs, stories } = loadAll();
+// dir → RFC status, so we can scope to non-terminal RFCs by default.
+const rfcStatus = new Map(rfcs.map((r) => [r.dir, r.frontmatter?.status ?? null]));
+
+// `--rfc <slug>` accepts the full dir name (`0024-tasks-cli-coverage`), the
+// bare number (`0024`, also matches the `0000-` placeholder), or the slug
+// without the number prefix. Scoping to one RFC ignores its status, so a
+// closed/superseded RFC can still be inspected explicitly.
+function rfcMatchesArg(dir) {
+  if (dir === RFC_ARG) return true;
+  const num = dir.match(/^(\d{4}|draft)-/)?.[1];
+  const slug = dir.replace(/^(?:\d{4}|draft)-/, "");
+  return RFC_ARG === num || RFC_ARG === slug;
+}
+
+const inScope = RFC_ARG
+  ? (dir) => rfcMatchesArg(dir)
+  : (dir) => NON_TERMINAL.has(rfcStatus.get(dir));
+
 const targets = stories
-  .filter((s) => EXISTING_RFC_RE.test(s.rfc) && !s.error)
+  .filter((s) => inScope(s.rfc) && !s.error)
   .sort((a, b) => (a.rfc + a.id).localeCompare(b.rfc + b.id));
 
 const merged = loadMergedPRs();
 const memory = loadMemory();
 const results = targets.map((s) => assess(s, merged, memory));
 
+// Actionable drift: stories the signals say shipped but whose status hasn't
+// been flipped to `done`. This single number is what a periodic run alerts on.
+const drift = results.filter((r) => r.verdict === "likely-done" && r.status !== "done");
+
 if (JSON_OUT) {
   console.log(
     JSON.stringify(
       {
         sources: { mergedPRs: merged.available, memory: memory.available },
+        scope: RFC_ARG ?? "non-terminal-rfcs",
         counts: tally(results),
+        drift: drift.map((r) => ({ rfc: r.rfc, id: r.id, status: r.status })),
         results,
       },
       null,
@@ -207,6 +248,8 @@ if (JSON_OUT) {
   console.log(
     `\ntotals: ${c["likely-done"] ?? 0} likely-done · ${c["likely-open"] ?? 0} likely-open · ${c.unknown ?? 0} unknown  (of ${results.length})`,
   );
+  console.log(`drift: ${drift.length} likely-done stories not marked done`);
+  for (const r of drift) console.log(`  · ${r.rfc}/${r.id} (status: ${r.status})`);
 }
 
 function tally(rs) {
