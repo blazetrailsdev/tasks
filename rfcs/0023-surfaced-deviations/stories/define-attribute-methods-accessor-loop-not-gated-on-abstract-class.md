@@ -1,6 +1,6 @@
 ---
 title: "defineAttributeMethods accessor-generation loop runs unconditionally; Rails wraps it in unless abstract_class?"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T15:11:08Z"
+assignee: "define-attribute-methods-accessor-loop-not-gated-on-abstract-class"
 blocked-by: null
 ---
 
