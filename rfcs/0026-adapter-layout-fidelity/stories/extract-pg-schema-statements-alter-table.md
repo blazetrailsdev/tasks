@@ -1,6 +1,6 @@
 ---
 title: "Extract PG alter-table statements into PostgreSQLSchemaStatements"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-columns-types"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: 3314
 claim: "2026-06-15T00:19:00Z"
 assignee: "extract-pg-schema-statements-alter-table"
 blocked-by: null
