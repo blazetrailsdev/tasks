@@ -1,6 +1,6 @@
 ---
 title: "destroy must reset _previouslyNewRecord to false before freeze (Rails persistence.rb:457)"
-status: in-progress
+status: done
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
