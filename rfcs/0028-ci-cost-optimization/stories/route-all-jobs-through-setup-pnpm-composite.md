@@ -1,6 +1,6 @@
 ---
 title: "Route all jobs through the setup-pnpm composite and add --prefer-offline"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0028-ci-cost-optimization"
 cluster: caching-install
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T18:00:27Z"
+assignee: "route-all-jobs-through-setup-pnpm-composite"
 blocked-by: null
 ---
 

@@ -329,15 +329,15 @@ close-risk (CONTENTION-ONLY):** `consolidate-preflight-micro-jobs`,
 
 <!-- generated: stories table -->
 
-| ID                                                                                                    | Title                                                                           | Status | Est LOC | Cluster              |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------ | ------- | -------------------- |
-| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft  | 160     | parallelism-rounding |
-| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
-| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft  | 200     | flake-cost           |
-| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | ready  | 180     | caching-install      |
-| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | ready  | 120     | caching-install      |
-| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | ready  | 90      | change-gating        |
-| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | ready  | 30      | parallelism-rounding |
+| ID                                                                                                    | Title                                                                           | Status  | Est LOC | Cluster              |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------- | ------- | -------------------- |
+| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft   | 160     | parallelism-rounding |
+| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft   | 120     | parallelism-rounding |
+| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft   | 200     | flake-cost           |
+| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | ready   | 180     | caching-install      |
+| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | ready   | 90      | change-gating        |
+| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | ready   | 30      | parallelism-rounding |
+| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | claimed | 120     | caching-install      |
 
 ## Changelog
 
