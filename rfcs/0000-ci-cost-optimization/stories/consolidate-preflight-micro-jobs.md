@@ -1,7 +1,7 @@
 ---
-title: "Consolidate the sub-second preflight checks into one job to reclaim rounding"
+title: "Consolidate the sub-minute preflight checks into one job to reclaim rounding"
 status: draft
-updated: 2026-06-15
+updated: 2026-06-14
 rfc: "0000-ci-cost-optimization"
 cluster: parallelism-rounding
 deps: []

@@ -2,8 +2,8 @@
 rfc: "0000-ci-cost-optimization"
 title: "CI cost optimization — cut billed Actions minutes and time-to-green"
 status: draft
-created: 2026-06-15
-updated: 2026-06-15
+created: 2026-06-14
+updated: 2026-06-14
 owner: "@deanmarano"
 packages: []
 clusters:
@@ -146,7 +146,7 @@ the repo ever goes private or moves heavy jobs to self-hosted/paid runners.
 
 Stories are grouped into four clusters, all **coverage-neutral**: none reduces
 test or adapter coverage and none spends real dollars. Two higher-risk
-dimensions were analyzed and explicitly **rejected by the owner** (2026-06-15);
+dimensions were analyzed and explicitly **rejected by the owner** (2026-06-14);
 they are documented under "Rejected dimensions" below rather than carried as
 stories, because this repo's #1 principle is Rails fidelity.
 
@@ -173,7 +173,7 @@ stories, because this repo's #1 principle is Rails fidelity.
 
 ### Cluster: parallelism-rounding
 
-- `consolidate-preflight-micro-jobs` — fold the three sub-second PR-only checks
+- `consolidate-preflight-micro-jobs` — fold the three sub-minute PR-only checks
   (Prettier, Docs-Freeze, PR-Attribution) into one preflight job (or into
   `changes`) to reclaim the per-minute rounding tax.
 - `consolidate-leaf-test-jobs` — collapse the tiny leaf test jobs (Rack,
@@ -188,7 +188,7 @@ stories, because this repo's #1 principle is Rails fidelity.
   flakes as a direct cost line (each rerun re-bills a 6–10 min job).
   Depends on RFC 0019 (canonical-schema burndown).
 
-### Rejected dimensions (owner decision, 2026-06-15)
+### Rejected dimensions (owner decision, 2026-06-14)
 
 Two higher-savings levers were analyzed and **rejected** — they are recorded
 here so the analysis is preserved and not re-proposed:
@@ -249,7 +249,7 @@ body. All eight stories are coverage-neutral. **Top 5 by ROI:**
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------ | ------- | -------------------- |
 | [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | draft  | 180     | caching-install      |
 | [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft  | 160     | parallelism-rounding |
-| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-second preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
+| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
 | [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft  | 200     | flake-cost           |
 | [gate-ar-jobs-behind-build](stories/gate-ar-jobs-behind-build.md)                                     | Gate the AR adapter jobs behind build-and-typecheck to cut cancelled-run waste  | draft  | 40      | change-gating        |
 | [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | draft  | 120     | caching-install      |
@@ -258,7 +258,10 @@ body. All eight stories are coverage-neutral. **Top 5 by ROI:**
 
 ## Changelog
 
-- 2026-06-15: initial RFC; cost analysis over 60-run window; 10 stories.
-- 2026-06-15: owner rejected both needs-approval dimensions (adapter sampling,
+- 2026-06-14: initial RFC; cost analysis over 60-run window; 10 stories.
+- 2026-06-14: owner rejected both needs-approval dimensions (adapter sampling,
   runner sizing / self-hosted); dropped those two stories. 8 coverage-neutral
   stories remain.
+- 2026-06-14: review fixes — corrected frontmatter dates, retitled the preflight
+  story "sub-minute" (checks run 3–14 s, not sub-second), and scoped the
+  AR_DB_FORKS story to the two live DB jobs (mysql-tests is disabled).

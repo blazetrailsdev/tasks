@@ -1,7 +1,7 @@
 ---
 title: "Right-size AR_DB_FORKS to the runner core count"
 status: draft
-updated: 2026-06-15
+updated: 2026-06-14
 rfc: "0000-ci-cost-optimization"
 cluster: parallelism-rounding
 deps: []
@@ -34,9 +34,11 @@ touching coverage.
       vitest run on a 2-core hosted runner (compare at least 8 vs 4 vs 2, and
       vs `--maxWorkers`-derived auto). Record the measured wall-clocks in the PR
       description.
-- [ ] Set `AR_DB_FORKS` to the measured-best value across `postgres-tests`,
-      `maria-tests`, and `mysql-tests` (keep them consistent). If 8 turns out to
-      be optimal, document that with the measurements and close as a no-op
+- [ ] Set `AR_DB_FORKS` to the measured-best value across the two live AR DB
+      jobs, `postgres-tests` and `maria-tests` (keep them consistent). Also
+      update the disabled `mysql-tests` job for consistency so it is correct when
+      re-enabled, but it is not exercised by CI today. If 8 turns out to be
+      optimal, document that with the measurements and close as a no-op
       finding — the measurement is the deliverable.
 - [ ] CI green; confirm the AR suites still pass deterministically at the new
       fork count (watch for newly-surfaced shared-table flakes — see

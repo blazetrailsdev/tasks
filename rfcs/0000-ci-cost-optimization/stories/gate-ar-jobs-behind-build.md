@@ -1,7 +1,7 @@
 ---
 title: "Gate the AR adapter jobs behind build-and-typecheck to cut cancelled-run waste"
 status: draft
-updated: 2026-06-15
+updated: 2026-06-14
 rfc: "0000-ci-cost-optimization"
 cluster: change-gating
 deps: []

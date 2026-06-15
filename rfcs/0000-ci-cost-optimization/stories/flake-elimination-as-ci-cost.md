@@ -1,7 +1,7 @@
 ---
 title: "Attack the top shared-table flakes as a direct CI-cost line"
 status: draft
-updated: 2026-06-15
+updated: 2026-06-14
 rfc: "0000-ci-cost-optimization"
 cluster: flake-cost
 deps: []
