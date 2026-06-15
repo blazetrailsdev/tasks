@@ -1,6 +1,6 @@
 ---
 title: "Extract PG foreign-key statements into PostgreSQLSchemaStatements"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-alter-table"]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: 3331
 claim: "2026-06-15T11:50:09Z"
 assignee: "extract-pg-schema-statements-fks"
 blocked-by: null
