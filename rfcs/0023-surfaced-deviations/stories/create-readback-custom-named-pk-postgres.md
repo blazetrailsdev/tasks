@@ -1,6 +1,6 @@
 ---
 title: "create does not read DB-generated value back into a custom-named serial PK on PostgreSQL"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 3327
 claim: "2026-06-15T02:50:08Z"
 assignee: "create-readback-custom-named-pk-postgres"
 blocked-by: null
