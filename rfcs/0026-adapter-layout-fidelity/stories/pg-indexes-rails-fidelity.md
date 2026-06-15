@@ -1,7 +1,7 @@
 ---
 title: "Close PG indexes() / addIndex / renameIndex Rails-fidelity gaps"
-status: draft
-updated: 2026-06-14
+status: ready
+updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
 deps: ["extract-pg-schema-statements-indexes"]
