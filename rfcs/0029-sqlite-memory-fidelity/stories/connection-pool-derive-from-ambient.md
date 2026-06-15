@@ -2,7 +2,7 @@
 title: "connection-pool.test.ts: derive PoolConfig from ambient db_config like Rails"
 status: draft
 updated: 2026-06-15
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
 deps: []
 deps-rfc: []

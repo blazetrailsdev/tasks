@@ -2,7 +2,7 @@
 title: "adapter.test.ts: derive connection from ambient test config, not :memory:"
 status: draft
 updated: 2026-06-15
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
 deps: []
 deps-rfc: []

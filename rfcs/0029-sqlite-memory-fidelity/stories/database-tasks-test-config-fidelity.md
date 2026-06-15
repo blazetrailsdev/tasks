@@ -2,7 +2,7 @@
 title: "database-tasks.test.ts: converge 28 excess :memory: sites to Rails config fidelity"
 status: draft
 updated: 2026-06-15
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
 deps: []
 deps-rfc: []
@@ -49,7 +49,7 @@ created or dropped). These are divergences.
       as a follow-up story (do NOT open a sibling PR) with:
 
   ```bash
-  pnpm tasks new 0000-sqlite-memory-fidelity database-tasks-test-config-fidelity-2
+  pnpm tasks new 0029-sqlite-memory-fidelity database-tasks-test-config-fidelity-2
   ```
 
 - [ ] CI green on all three adapters; `test:compare` delta non-negative.

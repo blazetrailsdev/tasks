@@ -1,5 +1,5 @@
 ---
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 title: "SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern"
 status: draft
 created: 2026-06-15
@@ -16,7 +16,7 @@ related-rfcs:
   - "0026-adapter-layout-fidelity"
 ---
 
-# RFC — SQLite `:memory:` test fidelity
+# RFC 0029 — SQLite `:memory:` test fidelity
 
 ## Summary
 

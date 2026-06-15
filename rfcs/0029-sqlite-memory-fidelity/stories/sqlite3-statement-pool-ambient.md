@@ -2,7 +2,7 @@
 title: "adapters/sqlite3/statement-pool.test.ts: use ambient connection like Rails"
 status: draft
 updated: 2026-06-15
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
 deps: []
 deps-rfc: []

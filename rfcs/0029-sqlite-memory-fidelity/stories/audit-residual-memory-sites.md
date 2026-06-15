@@ -2,7 +2,7 @@
 title: "Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories"
 status: draft
 updated: 2026-06-15
-rfc: "0000-sqlite-memory-fidelity"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
 deps: []
 deps-rfc: []
@@ -50,7 +50,7 @@ and all non-test source files.
       for every residual `:memory:` test site, each with its Rails counterpart
       cited (file + line) or an explicit "no counterpart → judged" note.
 - [ ] For each confirmed divergence, a convergence story registered via
-      `pnpm tasks new 0000-sqlite-memory-fidelity <slug>` (best-fit cluster),
+      `pnpm tasks new 0029-sqlite-memory-fidelity <slug>` (best-fit cluster),
       so it is owned and scheduled separately — this audit story does NOT itself
       change test code.
 - [ ] The partial-audit count deltas (multi-db 13/1, sharding 22/6) resolved to
