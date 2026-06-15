@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL addIndex inlines legacy _and_ index name instead of generateIndexName (no length/hash fallback)"
-status: ready
+status: claimed
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-15T15:35:08Z"
+assignee: "pg-add-index-inlines-legacy-index-name"
 blocked-by: null
 ---
 
