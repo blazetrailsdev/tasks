@@ -1,6 +1,6 @@
 ---
 title: "Thread JOIN ON _compileArelNode binds through outer collector (node-level alias rebinding)"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: ["compile-arel-node-bind-threading"]
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: null
+pr: 3350
 claim: "2026-06-15T14:02:35Z"
 assignee: "compile-arel-node-join-on-threading"
 blocked-by: null
