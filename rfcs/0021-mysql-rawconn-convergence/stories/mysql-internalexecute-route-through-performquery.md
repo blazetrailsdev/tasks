@@ -1,6 +1,6 @@
 ---
 title: "Route mysql2 internalExecute read path through rawExecute/performQuery for full Rails fidelity"
-status: claimed
+status: in-progress
 updated: 2026-06-15
 rfc: "0021-mysql-rawconn-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 3362
 claim: "2026-06-15T15:23:11Z"
 assignee: "mysql-internalexecute-route-through-performquery"
 blocked-by: null
