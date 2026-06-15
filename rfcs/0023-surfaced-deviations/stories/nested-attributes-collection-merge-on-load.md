@@ -4,7 +4,9 @@ status: ready
 updated: 2026-06-15
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - nested-attributes-singular-sync-in-memory-target
+  - nested-attributes-collection-sync-in-memory-grandchild
 deps-rfc: []
 est-loc: 280
 priority: null
