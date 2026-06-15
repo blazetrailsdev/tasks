@@ -37,8 +37,8 @@ at it.
       `vendor/**`, or cross-cutting infra path changed (reuse the existing
       `INFRA_RE` + per-package logic; force-true on push/schedule/dispatch as
       the other gates do).
-- [ ] `rails-comparison` adds `&& needs.changes.outputs.comparison_affected ==
-    'true'` to its `if:`.
+- [ ] `rails-comparison` adds a `comparison_affected == 'true'` clause to its
+      `if:` (alongside the existing `docs_only != 'true'` check).
 - [ ] Update the aggregate `ci` job's skip-allowlist to accept a legitimate
       `rails-comparison` skip when `comparison_affected == 'false'`.
 - [ ] (Optional, same PR if it fits) gate `lint` similarly so a docs/tooling
