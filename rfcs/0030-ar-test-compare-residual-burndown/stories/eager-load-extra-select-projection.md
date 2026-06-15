@@ -46,5 +46,5 @@ trails: `packages/activerecord/src/associations/join-dependency.ts`
       `t0_r*` column list.
 - [ ] Un-skip `type casted extra select with eager loading` and restore the
       omitted `eager_load(:comments)` assertion in `non select columns wont be
-  loaded`; both pass against canonical SQLite (and PG/MySQL per the ruby gate).
+loaded`; both pass against canonical SQLite (and PG/MySQL per the ruby gate).
 - [ ] No regressions in eager-load column projection / hydration tests.
