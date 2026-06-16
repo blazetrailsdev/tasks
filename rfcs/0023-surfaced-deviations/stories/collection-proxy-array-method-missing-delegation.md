@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy/Relation method_missing → Array delegation (e.g. .sort)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T20:12:45Z"
+assignee: "collection-proxy-array-method-missing-delegation"
 blocked-by: null
 ---
 
