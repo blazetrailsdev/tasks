@@ -1,6 +1,6 @@
 ---
 title: "associations.test.ts wave 2: delete remaining duplicate describes (RFC 0019)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T15:46:16Z"
+assignee: "assoc-associations-test-wave2-delete-dup-describes"
 blocked-by: null
 ---
 
