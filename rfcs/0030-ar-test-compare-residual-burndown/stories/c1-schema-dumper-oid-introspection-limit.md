@@ -1,6 +1,6 @@
 ---
 title: "PG oid introspection surfaces spurious limit: 8"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3439
 claim: "2026-06-16T02:34:09Z"
 assignee: "c1-schema-dumper-oid-introspection-limit"
 blocked-by: null
