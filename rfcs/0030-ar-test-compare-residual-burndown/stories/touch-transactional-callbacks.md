@@ -1,6 +1,6 @@
 ---
 title: "touch enrolls in transactional commit/rollback callbacks"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T21:00:42Z"
+assignee: "touch-transactional-callbacks"
 blocked-by: null
 ---
 
