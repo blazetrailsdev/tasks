@@ -1,6 +1,6 @@
 ---
 title: 'throw :abort halt semantics — converge throw "abort" vs return false'
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T19:36:44Z"
+assignee: "callback-throw-abort-halt-semantics"
 blocked-by: null
 ---
 
