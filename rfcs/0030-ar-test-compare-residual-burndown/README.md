@@ -128,6 +128,8 @@ schemas instead of riding the canonical schema + fixtures. Don't do that.
 | Phase G — nested error indexing | `associations/nested_error_test.rb` (4) | stays skipped; needs in-memory nested-attribute build (Phase G) |
 | Ruby-only types                 | `relation/where_test.rb` Rational (1)   | permanent `it.skip` — no JS equivalent                          |
 | YAML / Marshal / thread / fork  | (already excluded from the 439)         | inherited from RFC 0016 `unported-files.ts`                     |
+| Schema dumper PK rendering      | `primary_keys_test.rb` (5)              | stays skipped; tracked by `cc-schema-dumper-pk-rendering`       |
+| `id=` MissingAttributeError     | `primary_keys_test.rb` (1)              | stays skipped; tracked by `cc-id-setter-missing-attribute`      |
 
 ## Rollout
 
