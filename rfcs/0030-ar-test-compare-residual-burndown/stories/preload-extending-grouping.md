@@ -1,13 +1,13 @@
 ---
 title: "Preloader groups same-SQL second-level assocs differing by extending"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
