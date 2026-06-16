@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical schema (multi-PR split)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: null
+pr: 3458
 claim: "2026-06-16T14:13:37Z"
 assignee: "assoc-eager-split-canonical"
 blocked-by: null
