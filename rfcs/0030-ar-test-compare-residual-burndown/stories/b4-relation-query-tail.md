@@ -1,14 +1,14 @@
 ---
 title: "B4 — relation query tail (with/where_chain/update_all/predicate/batches)"
-status: claimed
-updated: 2026-06-15
+status: in-progress
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "relation-scoping"
 deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 3424
 claim: "2026-06-15T23:46:28Z"
 assignee: "b4-relation-query-tail"
 blocked-by: null
