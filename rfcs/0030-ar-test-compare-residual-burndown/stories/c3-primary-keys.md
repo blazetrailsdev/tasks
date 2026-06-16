@@ -1,7 +1,7 @@
 ---
 title: "C3 — primary_keys residuals"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T00:12:53Z"
+assignee: "c3-primary-keys"
 blocked-by: null
 ---
 
