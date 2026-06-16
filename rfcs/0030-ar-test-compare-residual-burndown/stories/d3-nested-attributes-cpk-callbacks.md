@@ -1,7 +1,7 @@
 ---
 title: "D3 — nested-attributes: CPK + before_add callback timing"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "persistence"
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T12:11:00Z"
+assignee: "d3-nested-attributes-cpk-callbacks"
 blocked-by: null
 ---
 
