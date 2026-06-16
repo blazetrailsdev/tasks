@@ -1,6 +1,6 @@
 ---
 title: "assoc-habtm-big-canonical"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3480
 claim: "2026-06-16T16:43:31Z"
 assignee: "assoc-habtm-big-canonical"
 blocked-by: null
