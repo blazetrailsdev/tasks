@@ -69,7 +69,7 @@ priority, not green checkmarks:
 
 ## Acceptance criteria
 
-- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
-- [ ] No new gate-mismatches introduced for these files.
-- [ ] Refresh the RFC snapshot count after merge.
+- [x] 6 of 7 un-skipped and passing (column-definition ×3, invertible SQLite ×1, invertible PG ×1, migration-instance-has-connection ×1). The 7th, `name collision across dbs`, stays skipped — genuine MigrationContext filesystem-loader gap, BLOCKED-tagged in-place and tracked as story `migration-context-filesystem-loader`.
+- [x] `test:compare` shows the column-definition/invertible files with 0 skips; `migration_test.rb` retains 1 skip = the deferred filesystem-loader test (reclassified with a recorded reason + filed story).
+- [x] No new gate-mismatches introduced for these files.
+- [x] RFC snapshot count refreshed via the post-merge `pnpm tasks` index rebuild.
