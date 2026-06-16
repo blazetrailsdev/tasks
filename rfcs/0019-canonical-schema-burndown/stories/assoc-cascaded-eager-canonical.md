@@ -1,13 +1,13 @@
 ---
 title: "cascaded-eager-loading.test.ts → canonical schema"
 status: draft
-updated: 2026-06-11
+updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 250
-priority: 8
+priority: 1
 pr: null
 claim: null
 assignee: null
