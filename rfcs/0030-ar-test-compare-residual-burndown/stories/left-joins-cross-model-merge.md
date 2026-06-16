@@ -29,5 +29,5 @@ Rails ref: `vendor/rails/activerecord/test/cases/associations/left_outer_join_as
 
 ## Acceptance criteria
 
-- [ ] Cross-model `merge` of a relation preserves left-join rows + merged wheres.
-- [ ] Un-skip `merging left joins should be left joins` using canonical `Author`/`Post` (+ `no_comments` scope) and fixtures; it passes (count 5).
+- [x] Cross-model `merge` of a relation preserves left-join rows + merged wheres.
+- [x] Un-skip `merging left joins should be left joins` using canonical `Author`/`Post` (+ `no_comments` scope) and fixtures; it passes (count 5).
