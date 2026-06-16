@@ -1,6 +1,6 @@
 ---
 title: "c1-schema-dumper-timestamptz-version-compat"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -54,7 +54,7 @@ Shipped in PR #3433 (datetime_type family — 3 of 7 tests):
 - [x] datetime_type-aware dumper rewrites timestamp/timestamptz per `datetimeType`.
 - [x] The 3 datetime_type-family `it.skip` tests un-skipped (PG-gated) and passing
       on postgres (`timestamptz datetime format`, `changing datetime type for an
-    existing app`, `create table and t timestamptz`).
+  existing app`, `create table and t timestamptz`).
 - [x] Test names match Rails verbatim. No new gate-mismatches.
 
 Split off to follow-up story `c1-schema-dumper-migration-version-compat`
