@@ -1,6 +1,6 @@
 ---
 title: "c2-defaults-nonstrict-null-coercion"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3434
 claim: "2026-06-16T01:48:52Z"
 assignee: "c2-defaults-nonstrict-null-coercion"
 blocked-by: null
