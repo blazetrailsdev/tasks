@@ -1,7 +1,7 @@
 ---
 rfc: "0032-ar-gate-fidelity-burndown"
 title: "ActiveRecord test:compare gate-mismatch burndown to zero"
-status: draft
+status: active
 created: 2026-06-16
 updated: 2026-06-16
 owner: "@deanmarano"

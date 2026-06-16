@@ -36,4 +36,4 @@
 | [0029-sqlite-memory-fidelity](rfcs/0029-sqlite-memory-fidelity/README.md) | SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern | draft | @deanmarano | activerecord |
 | [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | active | @deanmarano | activerecord |
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | draft | @deanmarano | activerecord |
-| [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | draft | @deanmarano | activerecord |
+| [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | active | @deanmarano | activerecord |
