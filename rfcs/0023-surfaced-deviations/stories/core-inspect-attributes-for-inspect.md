@@ -35,8 +35,8 @@ Rails ref: `activerecord/lib/active_record/core.rb` (`#inspect` →
 
 ## Acceptance criteria
 
-- [ ] `Core#inspect` routes through `attributesForInspect` /
+- [x] `Core#inspect` routes through `attributesForInspect` /
       `inspectWithAttributes`, honoring a per-model `attributesForInspect`.
-- [ ] Default (`"all"` / unset) preserves current full-attribute output.
-- [ ] Add/port the Rails test covering a model with a restricted
+- [x] Default (`"all"` / unset) preserves current full-attribute output.
+- [x] Add/port the Rails test covering a model with a restricted
       `attributes_for_inspect`.
