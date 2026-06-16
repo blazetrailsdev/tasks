@@ -47,5 +47,5 @@ per-record owner resolver in the shared query block or per-loader re-instantiati
       `LoaderQuery#loadRecordsForKeys` / `Relation#_instantiateBlock`).
 - [ ] Join-dependency eager-loaded children likewise wire inverse before callbacks.
 - [ ] Extend the TS `inverse instance should be set before find/initialize
-  callbacks are run` tests to cover the `includes` and `joins+includes`
+callbacks are run` tests to cover the `includes` and `joins+includes`
       scenarios from Rails (currently only the direct `reload` path is tested).
