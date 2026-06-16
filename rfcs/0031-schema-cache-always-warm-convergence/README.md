@@ -136,5 +136,6 @@ tests; R3 deletes borrow.
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                                                        | Title                                                                    | Status | Est LOC | Cluster |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------ | ------- | ------- |
+| [r1-eager-persistent-schema-cache-test-harness](stories/r1-eager-persistent-schema-cache-test-harness.md) | R1: eager-warm + persistent per-test schema cache in the AR test harness | ready  | 150     | —       |
