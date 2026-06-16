@@ -1,6 +1,6 @@
 ---
 title: "C4 — migration + column_definition + invertible tail"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3430
 claim: "2026-06-16T00:20:55Z"
 assignee: "c4-migration-column-def-tail"
 blocked-by: null
