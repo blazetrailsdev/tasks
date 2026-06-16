@@ -1,6 +1,6 @@
 ---
 title: "check_if_method_has_arguments! flatten! parity (arrays-only, not hashes)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
