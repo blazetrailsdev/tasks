@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-wave4-delete-dup-describes"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
