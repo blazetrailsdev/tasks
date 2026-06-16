@@ -1,6 +1,6 @@
 ---
 title: "B4 — relation query tail (with/where_chain/update_all/predicate/batches)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "relation-scoping"
