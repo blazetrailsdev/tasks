@@ -1,6 +1,6 @@
 ---
 title: "has_many reads ignore class current_scope"
-status: claimed
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 15
-pr: null
+pr: 3498
 claim: "2026-06-16T20:24:41Z"
 assignee: "has-many-current-scope-isolation"
 blocked-by: null
