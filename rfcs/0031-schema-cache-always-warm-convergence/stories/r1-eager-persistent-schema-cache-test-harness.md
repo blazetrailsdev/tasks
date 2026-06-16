@@ -2,7 +2,7 @@
 title: "R1: eager-warm + persistent per-test schema cache in the AR test harness"
 status: ready
 updated: 2026-06-16
-rfc: "0000-schema-cache-always-warm-convergence"
+rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-RFC `0000-schema-cache-always-warm-convergence` phase R1. trails' sync
+RFC `0031-schema-cache-always-warm-convergence` phase R1. trails' sync
 `columnsHash()` cannot reflect a cold table (async drivers), so the AR test
 harness blanket-clears the per-connection `SchemaCache` every teardown
 (`packages/activerecord/src/test-helpers/with-transactional-fixtures.ts`
