@@ -1,7 +1,7 @@
 ---
 title: "B3 — relation select + multi-join table aliasing"
-status: in-progress
-updated: 2026-06-15
+status: done
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "relation-scoping"
 deps: []
