@@ -52,3 +52,44 @@ cache entry directly and applies its own `ignoredColumns` at read time.
 - [ ] `relation/select.test.ts` `reselect with default scope select` and the
       `model-schema-columnshash-recovery.test.ts` regression still pass in
       full-file order (SQLite canonical; PG/MySQL per gate).
+
+## Findings — attempt abandoned (2026-06-16, PR #3445 closed)
+
+The prescribed convergence (make trails' schema cache persistent across tests,
+so a fresh same-table model reads the live cache entry the way Rails' shared
+schema-cache entry serves all same-table models) is **architecturally blocked**
+in trails. Two independent walls, both confirmed by CI on PR #3445:
+
+1. **Per-test cache clearing is load-bearing.** `withTransactionalFixtures`
+   blanket-clears the per-connection `SchemaCache` on every teardown
+   (`with-transactional-fixtures.ts` `clearSchemaCache`). A large class of tests
+   defines ad-hoc model classes on _real_ table names (e.g. `class Topic` /
+   `class User` on `topics` / `users` in `base.test.ts`, `calculations.test.ts`,
+   `associations.test.ts`, `cache-key.test.ts`) and relies on the cache being
+   cold so `columnNames()`/`columnsHash()` **synthesize from the model's
+   declared `attribute()` set** rather than reflecting the real table. Any
+   persistence — full snapshot/restore _or_ the story's suggested
+   "clear only DDL-touched tables" (`clear_data_source_cache!`) — preserves the
+   real-table warmth and breaks these synthesize-from-attributes assertions.
+   CI showed deterministic failures across all three adapters in >=4 files
+   (`base:2533/2664`, `calculations:5283`, `associations:2738/2785`,
+   `cache-key:349`).
+
+2. **No synchronous DB reflection.** `base.test.ts` "clear cache!" expects
+   `columnsHash()` after `resetColumnInformation()` to equal the pre-reset hash
+   (Rails reloads from the DB synchronously via `schema_cache.columns_hash`).
+   trails' drivers are async, so after the reset clears the table entry the sync
+   path can only synthesize from attribute defs. The test only "passed"
+   pre-change because `clear()` kept _both_ sides cold (minimal). Persistence
+   makes the pre-reset side full and exposes the irreducible sync/async gap —
+   the same gap `borrowSameTableColumns` exists to paper over.
+
+**Conclusion:** faithful convergence requires synchronous schema reflection (or
+a redesign of the test cache-clearing contract) — neither is in scope here.
+`borrowSameTableColumns` stays as defense-in-depth. A viable _narrower_ path
+(not pursued, available if re-scoped): an `@internal` per-adapter store of
+reflected column names that survives `clear()` and is consulted **only** in the
+`_attributeDefinitions.size === 0` cold-recovery branch (where borrow already
+fires) — this fixes borrow's best-effort `ignoredColumns` null-gap and matches
+AC1's "synchronously-reloadable" wording **without** disturbing the
+cold-cache-per-test behavior the suite depends on.
