@@ -1,6 +1,6 @@
 ---
 title: "Await async before_validation callbacks on the validation chain"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T20:00:41Z"
+assignee: "async-before-validation-sync-chain"
 blocked-by: null
 ---
 
