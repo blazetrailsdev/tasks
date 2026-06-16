@@ -1,6 +1,6 @@
 ---
 title: "before_add proc cannot synchronously force-load association target"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 13
-pr: null
+pr: 3494
 claim: "2026-06-16T20:04:53Z"
 assignee: "before-add-callback-sync-target-load"
 blocked-by: null
