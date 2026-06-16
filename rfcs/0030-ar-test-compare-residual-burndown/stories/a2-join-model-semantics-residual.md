@@ -1,7 +1,7 @@
 ---
 title: "a2-join-model-semantics-residual"
 status: blocked
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Folded into join-model-canonical-conversion (covers all 35 HMT tests on canonical models)."
+blocked-by: "Blocked behind RFC 0019 assoc-join-model-canonical (join-model.test.ts is grandfathered on require-canonical-schema-exclude.json). Convert the file to canonical TEST_SCHEMA + drop the exclude entry first, then un-skip here."
 ---
 
 ## Context
