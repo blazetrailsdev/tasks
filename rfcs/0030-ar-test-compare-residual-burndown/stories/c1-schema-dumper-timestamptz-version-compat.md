@@ -48,9 +48,17 @@ Rails source: `vendor/rails/activerecord/test/cases/schema_dumper_test.rb`
 
 ## Acceptance criteria
 
-- [ ] All seven listed `it.skip` tests un-skipped (PG-gated) and passing on postgres.
-- [ ] `t.timestamptz` TableDefinition helper added.
-- [ ] datetime_type-aware dumper rewrites timestamp/timestamptz per `datetimeType`.
-- [ ] `Migration[6.1]` version compatibility emits the pre-Rails-7 datetime forms.
-- [ ] Test names match Rails verbatim. No new gate-mismatches. Likely >1 PR —
-      split per non-overlapping files if so.
+Shipped in PR #3433 (datetime_type family — 3 of 7 tests):
+
+- [x] `t.timestamptz` TableDefinition helper added.
+- [x] datetime_type-aware dumper rewrites timestamp/timestamptz per `datetimeType`.
+- [x] The 3 datetime_type-family `it.skip` tests un-skipped (PG-gated) and passing
+      on postgres (`timestamptz datetime format`, `changing datetime type for an
+    existing app`, `create table and t timestamptz`).
+- [x] Test names match Rails verbatim. No new gate-mismatches.
+
+Split off to follow-up story `c1-schema-dumper-migration-version-compat`
+(needs `Migration[6.1]` — out of scope for this PR; tracked separately):
+
+- [x] `Migration[6.1]` version compatibility + remaining 4 migration-version-compat
+      tests — moved to `c1-schema-dumper-migration-version-compat`.
