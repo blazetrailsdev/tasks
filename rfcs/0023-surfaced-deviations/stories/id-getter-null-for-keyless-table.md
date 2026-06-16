@@ -1,6 +1,6 @@
 ---
 title: "id getter reads undefined column for key-less table instead of returning null"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: null
+pr: 3491
 claim: "2026-06-16T19:25:02Z"
 assignee: "id-getter-null-for-keyless-table"
 blocked-by: null
