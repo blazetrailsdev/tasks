@@ -1,6 +1,6 @@
 ---
 title: "insert-all.test.ts: migrate to canonical models + fixtures"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
