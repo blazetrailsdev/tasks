@@ -1,6 +1,6 @@
 ---
 title: "Gate strict-loading violation behind find_target? new-record check in functional loaders"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T23:24:44Z"
+assignee: "strict-loading-new-record-gate-in-loaders"
 blocked-by: null
 ---
 
