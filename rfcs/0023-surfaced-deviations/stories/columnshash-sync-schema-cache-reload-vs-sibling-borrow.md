@@ -1,6 +1,6 @@
 ---
 title: "Converge sync columnsHash schema-cache reload (remove sibling-borrow workaround)"
-status: in-progress
+status: blocked
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: 3445
 claim: "2026-06-16T11:46:09Z"
 assignee: "columnshash-sync-schema-cache-reload-vs-sibling-borrow"
-blocked-by: null
+blocked-by: "Architecturally blocked: persistent schema cache breaks cold-cache-per-test suite (base/calculations/associations/cache-key, all adapters); trails has no sync DB reflection. See Findings in story. PR #3445 closed. Re-scope behind sync-reflection or as size===0 recovery-store."
 ---
 
 ## Context
