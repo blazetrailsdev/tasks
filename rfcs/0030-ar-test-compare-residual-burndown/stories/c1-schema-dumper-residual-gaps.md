@@ -44,11 +44,9 @@ Rails source: `vendor/rails/activerecord/test/cases/schema_dumper_test.rb`.
    surfaced by mysql `indexes()` introspection, so `SchemaDumper#indexParts`
    never emits them. Fix in mysql adapter index introspection + addIndex.
 
-4. **`schema dump allows array of decimal defaults`** — a `decimal[]` column with
-   an array default introspects with a bogus base type (`"value"`), so the dump
-   emits `t.column("decimal_array_default", "value", …)` instead of
-   `t.decimal(…, { default: [...], array: true })`. Fix in PG decimal-array
-   introspection type resolution.
+4. ~~**`schema dump allows array of decimal defaults`**~~ — RESOLVED on `main`
+   (the decimal-array introspection was converged independently; the test now
+   passes against PG). No longer a gap.
 
 5. **timestamptz / datetime_type family** (`schema dump with timestamptz
 datetime format`, `schema dump when changing datetime type for an existing
