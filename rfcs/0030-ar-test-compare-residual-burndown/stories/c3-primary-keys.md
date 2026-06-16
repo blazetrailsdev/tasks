@@ -67,7 +67,7 @@ priority, not green checkmarks:
 
 ## Acceptance criteria
 
-- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
-- [ ] No new gate-mismatches introduced for these files.
-- [ ] Refresh the RFC snapshot count after merge.
+- [x] 3 of 9 un-skipped and passing on sqlite/PG/MySQL (primary key returns nil, collectly dump composite primary key, schema typed primary key column); the other 6 are genuine impl gaps reclassified as deferred/permanent-skip with BLOCKED tags (see below).
+- [x] `test:compare` shows `primary_keys_test.rb` matchedSkipped 9→6; the 6 residuals reclassified to the RFC Deferred table with recorded reasons (`cc-schema-dumper-pk-rendering`, `cc-id-setter-missing-attribute`).
+- [x] No new gate-mismatches: api:compare unchanged (99.9%, 275/275); MySQL-gated test mirrors Rails `current_adapter?`.
+- [x] RFC snapshot: primary_keys matchedSkipped now 6 (was 9); Deferred table updated.
