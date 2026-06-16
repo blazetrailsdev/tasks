@@ -1,6 +1,6 @@
 ---
 title: "expose current_savepoint_name / Transaction#savepoint_name"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T12:17:23Z"
+assignee: "current-savepoint-name-accessor"
 blocked-by: null
 ---
 
