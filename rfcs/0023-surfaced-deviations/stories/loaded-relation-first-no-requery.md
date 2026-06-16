@@ -36,10 +36,10 @@ Rails: `activerecord/lib/active_record/relation/finder_methods.rb#first` →
 
 ## Acceptance criteria
 
-- [ ] `performFirst` (and `performFirstBang`) return from the cached
+- [x] `performFirst` (and `performFirstBang`) return from the cached
       `_records` when `this._loaded` is true, with no new query — mirroring
       Rails `first`/`first!` loaded-relation behavior. Preserve the ordering
       semantics (implicit PK order applied at load time).
-- [ ] The multi-db test can assert `relation.first` directly (drop the
+- [x] The multi-db test can assert `relation.first` directly (drop the
       `records[0].readAttribute(...)` workaround) and still pass.
-- [ ] No regression in existing finder-methods tests.
+- [x] No regression in existing finder-methods tests.
