@@ -1,6 +1,6 @@
 ---
 title: "c1-schema-dumper-timestamptz-version-compat"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3433
 claim: "2026-06-16T01:00:54Z"
 assignee: "c1-schema-dumper-timestamptz-version-compat"
 blocked-by: null
