@@ -1,6 +1,6 @@
 ---
 title: "Auto-detect query-time STI type condition from inheritance-column presence (drop enableSti opt-in)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T02:50:11Z"
+assignee: "converge-query-sti-type-condition-auto-detect"
 blocked-by: null
 ---
 
