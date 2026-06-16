@@ -1,6 +1,6 @@
 ---
 title: "Bulb create/load raises 'this.readAttribute is not a function'"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
