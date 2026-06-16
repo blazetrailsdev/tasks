@@ -1,13 +1,13 @@
 ---
 title: "Wire TableNotSpecified (load_schema!) and AsynchronousQueryInsideTransactionError (async select) throw sites"
 status: ready
-updated: 2026-06-14
+updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: ["error-class-hierarchy-parity-gaps"]
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
