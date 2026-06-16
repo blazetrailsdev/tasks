@@ -1,6 +1,6 @@
 ---
 title: "Converge wrong-gate tests to Rails gates (49 across 19 files)"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: wrong-gate
