@@ -1,7 +1,7 @@
 ---
 title: "E4 — adapter_test notifications + explain tail"
-status: ready
-updated: 2026-06-15
+status: blocked
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocked behind RFC 0019 conversion of mysql-explain.test.ts (grandfathered on require-canonical-schema-exclude.json; covered by 0019 adapter-tests-cluster). Convert to canonical + drop the exclude entry first, then un-skip."
 ---
 
 ## Context
