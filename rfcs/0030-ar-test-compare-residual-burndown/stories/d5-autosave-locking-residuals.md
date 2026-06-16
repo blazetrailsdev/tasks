@@ -1,6 +1,6 @@
 ---
 title: "D5 — autosave + optimistic-locking-with-includes residuals"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
