@@ -1,6 +1,6 @@
 ---
 title: "habtm + has-and-belongs-to-many → canonical schema (split)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: null
+pr: 3462
 claim: "2026-06-16T14:31:40Z"
 assignee: "assoc-habtm-canonical"
 blocked-by: null
