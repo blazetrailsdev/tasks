@@ -27,22 +27,18 @@ Rails source: `vendor/rails/activerecord/test/cases/schema_dumper_test.rb`.
 ### Gaps
 
 1. **`schema dump aliased types`** — abstract `TableDefinition` has no
-   `blob`/`numeric` aliases (Rails registers them as aliases of binary/decimal).
-   `blob` exists only on the mysql definition; `numeric` is unregistered.
-   Fix in `connection-adapters/abstract/schema-definitions.ts` + type-alias
-   registration so `t.blob`/`t.numeric` round-trip to `t.binary`/`t.decimal`.
+   `blob`/`numeric` aliases. ~~RESOLVED on `main`~~ — `t.blob`/`t.numeric` now
+   round-trip to `t.binary`/`t.decimal`; the test passes. No longer a gap.
 
-2. **`schema dump includes length for mysql blob and text fields`** — the
-   `size:` option on `t.binary`/`t.text` is dropped on the _creation_ path, so
-   `t.binary "x", size: :tiny` creates a plain BLOB and the dump omits the size.
-   `t.tinyblob`/`t.tinytext` round-trip fine; the `size:`-option form does not.
-   Fix in mysql schema-statements size: → DDL type mapping.
+2. ~~**`schema dump includes length for mysql blob and text fields`**~~ —
+   RESOLVED on `main`: the `size:` option on `t.binary`/`t.text` is now honored
+   on the creation path and round-trips, so the test passes on mysql. No longer
+   a gap.
 
-3. **`schema dumps index type`** (mysql `type: :fulltext`) and the mysql branch
-   of **`schema dumps index length`** (`length: 10`) — index `type:` and
-   sub-part `length:` are neither honored on the addIndex creation path nor
-   surfaced by mysql `indexes()` introspection, so `SchemaDumper#indexParts`
-   never emits them. Fix in mysql adapter index introspection + addIndex.
+3. ~~**`schema dumps index type`** (mysql `type: :fulltext`) and the mysql
+   branch of **`schema dumps index length`** (`length: 10`)~~ — RESOLVED on
+   `main`: index `type:` and sub-part `length:` are now honored and surfaced by
+   mysql `indexes()` introspection; both tests pass. No longer a gap.
 
 4. ~~**`schema dump allows array of decimal defaults`**~~ — RESOLVED on `main`
    (the decimal-array introspection was converged independently; the test now
