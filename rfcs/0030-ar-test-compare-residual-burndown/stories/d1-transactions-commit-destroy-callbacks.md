@@ -1,6 +1,6 @@
 ---
 title: "D1 — transactions: committed/destroy callback firing"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "persistence"
