@@ -123,13 +123,19 @@ schemas instead of riding the canonical schema + fixtures. Don't do that.
 
 ### Deferred / permanent-skip
 
-| Category                        | Scope                                   | Action                                                          |
-| ------------------------------- | --------------------------------------- | --------------------------------------------------------------- |
-| Phase G — nested error indexing | `associations/nested_error_test.rb` (4) | stays skipped; needs in-memory nested-attribute build (Phase G) |
-| Ruby-only types                 | `relation/where_test.rb` Rational (1)   | permanent `it.skip` — no JS equivalent                          |
-| YAML / Marshal / thread / fork  | (already excluded from the 439)         | inherited from RFC 0016 `unported-files.ts`                     |
-| Schema dumper PK rendering      | `primary_keys_test.rb` (5)              | stays skipped; tracked by `cc-schema-dumper-pk-rendering`       |
-| `id=` MissingAttributeError     | `primary_keys_test.rb` (1)              | stays skipped; tracked by `cc-id-setter-missing-attribute`      |
+| Category                         | Scope                                            | Action                                                                          |
+| -------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Phase G — nested error indexing  | `associations/nested_error_test.rb` (4)          | stays skipped; needs in-memory nested-attribute build (Phase G)                 |
+| Ruby-only types                  | `relation/where_test.rb` Rational (1)            | permanent `it.skip` — no JS equivalent                                          |
+| YAML / Marshal / thread / fork   | (already excluded from the 439)                  | inherited from RFC 0016 `unported-files.ts`                                     |
+| Schema dumper PK rendering       | `primary_keys_test.rb` (5)                       | stays skipped; tracked by `cc-schema-dumper-pk-rendering`                       |
+| `id=` MissingAttributeError      | `primary_keys_test.rb` (1)                       | stays skipped; tracked by `cc-id-setter-missing-attribute`                      |
+| PG DDL exec exception xlate      | `adapters/postgresql/array_test.rb` (1)          | stays skipped; tracked by `pg-ddl-exec-exception-translation`                   |
+| PG array OID element subtypes    | `adapters/postgresql/array_test.rb` (3)          | stays skipped; tracked by `pg-array-oid-element-subtypes`                       |
+| Legacy Migration[5.0] uuid       | `adapters/postgresql/uuid_test.rb` (2)           | stays skipped; tracked by `legacy-migration-5-0-uuid-default`                   |
+| change_table recorder shorthands | `adapters/postgresql/hstore_test.rb` (1)         | stays skipped; tracked by `change-table-recorder-adapter-column-methods`        |
+| Schema dumper virtual columns    | `adapters/postgresql/virtual_column_test.rb` (1) | stays skipped; tracked by `schema-dumper-emittable-virtual-column-options`      |
+| Key-less data source nil PK      | `adapters/postgresql/foreign_table_test.rb` (1)  | stays skipped; tracked by `model-loadschema-nil-primary-key-from-introspection` |
 
 ## Rollout
 
