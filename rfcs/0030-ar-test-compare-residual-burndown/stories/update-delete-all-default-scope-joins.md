@@ -1,13 +1,13 @@
 ---
 title: "update_all/delete_all preserve default-scope JOIN via subquery"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null
