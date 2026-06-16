@@ -146,10 +146,11 @@ into pre-planned sibling PRs here.
 
 <!-- generated: stories table -->
 
-| ID                                                                  | Title                                                            | Status | Est LOC | Cluster      |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------- | ------ | ------- | ------------ |
-| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md) | Converge missing-gate tests to Rails gates (173 across 21 files) | draft  | 400     | missing-gate |
-| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)     | Converge wrong-gate tests to Rails gates (49 across 19 files)    | draft  | 250     | wrong-gate   |
+| ID                                                                  | Title                                                                    | Status | Est LOC | Cluster      |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------ | ------- | ------------ |
+| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md) | Converge missing-gate tests to Rails gates (173 across 21 files)         | draft  | 400     | missing-gate |
+| [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)     | Remove over-gating to match Rails unconditional runs (24 across 8 files) | draft  | 150     | over-gated   |
+| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)     | Converge wrong-gate tests to Rails gates (49 across 19 files)            | draft  | 250     | wrong-gate   |
 
 ## Changelog
 
