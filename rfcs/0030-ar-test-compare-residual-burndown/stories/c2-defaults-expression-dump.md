@@ -1,6 +1,6 @@
 ---
 title: "C2 — defaults: expression-default dump/load"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "unblockers"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 3425
 claim: "2026-06-16T00:04:54Z"
 assignee: "c2-defaults-expression-dump"
 blocked-by: null
