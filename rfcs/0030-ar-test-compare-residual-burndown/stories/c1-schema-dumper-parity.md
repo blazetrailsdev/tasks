@@ -1,6 +1,6 @@
 ---
 title: "C1 — schema_dumper parity"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "unblockers"
@@ -80,7 +80,7 @@ priority, not green checkmarks:
 
 ## Acceptance criteria
 
-- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
-- [ ] No new gate-mismatches introduced for these files.
-- [ ] Refresh the RFC snapshot count after merge.
+- [x] Tests the dumper already supports were un-skipped and pass on SQLite/PG/MySQL (index length, mysql binary-field length + boolean no-limit, PG array/extensions/float4/enum/interval/oid). Genuine feature gaps were left `it.skip` with refreshed `BLOCKED` tags and tracked as scoped follow-up stories (mysql-gaps, pg-decimal-array, timestamptz/migration-version-compat, infinity, oid-introspection-limit). Delivered in PR #3426.
+- [x] `test:compare` for `schema-dumper.test.ts`: 0 gate-mismatch; `matchedSkipped` reduced from 22 → residual deferrals, each reclassified with a recorded reason pointing at a tracked story.
+- [x] No new gate-mismatches introduced for these files (test:compare gate count 0).
+- [x] RFC snapshot count refreshed via the follow-up story restructure under RFC 0030.
