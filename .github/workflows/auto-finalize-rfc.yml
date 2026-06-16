@@ -10,11 +10,16 @@ on:
   push:
     branches: [main]
 
-# Serialize runs so two RFCs merging close together can't race on the next
-# number. Queue rather than cancel — every placeholder must be processed.
-concurrency:
-  group: auto-finalize-main
-  cancel-in-progress: false
+# Deliberately NO `concurrency:` group. A concurrency group makes GitHub
+# auto-cancel superseded *pending* runs whenever main takes a burst of pushes
+# seconds apart (the `pnpm tasks` CLI does this constantly), and those
+# cancellations surface as red ✗ on the commit / Actions status even though
+# nothing failed. Instead, each run guards itself below ("skip if superseded"):
+# older runs in a burst exit green, and only the run building main's current
+# tip scans for placeholders. The scan walks the whole tree, so the tip run
+# finds every placeholder present — including any from RFCs that merged earlier
+# in the same burst — which also covers the two-RFCs-racing-on-the-next-number
+# case the old concurrency group existed to prevent.
 
 permissions:
   contents: write
@@ -33,29 +38,56 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Finalize any placeholder RFCs on main
+      - name: Skip if superseded by a newer push to main
+        id: tip
         run: |
           set -euo pipefail
-          changed=0
-          shopt -s nullglob
-          for dir in rfcs/0000-* rfcs/draft-*; do
-            [ -d "$dir" ] || continue
-            slug="$(basename "$dir")"
-            # 0000-template is the scaffold, not a placeholder awaiting a number.
-            [ "$slug" = "0000-template" ] && continue
-            echo "::notice::auto-finalizing $slug"
-            node scripts/finalize-rfc.mjs "$slug"
-            changed=1
-          done
-          if [ "$changed" = 0 ]; then
-            echo "no placeholder RFCs to finalize"
-            exit 0
+          git fetch --quiet origin main
+          if [ "$(git rev-parse origin/main)" != "${{ github.sha }}" ]; then
+            echo "origin/main has advanced past ${GITHUB_SHA}; a newer run owns the tip — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
+      - run: pnpm install --frozen-lockfile
+        if: steps.tip.outputs.skip != 'true'
+      - name: Finalize any placeholder RFCs on main
+        if: steps.tip.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "auto-finalize: assign RFC number(s) on main"
-          # This push re-triggers ci.yml (validates the finalized state) and this
-          # workflow (which then finds no placeholder and no-ops). Self-terminating.
-          git push
+          # Scan the *current* tip of main each attempt, never a stale checkout:
+          # reset to origin/main, finalize whatever placeholders exist there,
+          # push. The next number is computed against that exact tree, and the
+          # push only fast-forwards if main hasn't advanced since the reset — so
+          # two RFCs landing close together can't be assigned the same number
+          # (the loser resets to the winner's tip, recomputes, and retries). This
+          # is what the old concurrency group guaranteed; the reset loop now
+          # guarantees it without queueing (and thus without cancellations).
+          for i in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --hard origin/main
+            changed=0
+            shopt -s nullglob
+            for dir in rfcs/0000-* rfcs/draft-*; do
+              [ -d "$dir" ] || continue
+              slug="$(basename "$dir")"
+              # 0000-template is the scaffold, not a placeholder awaiting a number.
+              [ "$slug" = "0000-template" ] && continue
+              echo "::notice::auto-finalizing $slug"
+              node scripts/finalize-rfc.mjs "$slug"
+              changed=1
+            done
+            if [ "$changed" = 0 ]; then
+              echo "no placeholder RFCs to finalize"
+              exit 0
+            fi
+            git add -A
+            git commit -m "auto-finalize: assign RFC number(s) on main"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push rejected (main advanced); re-scanning the new tip"
+            sleep 3
+          done
+          echo "::error::could not push auto-finalize commit after retries" >&2
+          exit 1
