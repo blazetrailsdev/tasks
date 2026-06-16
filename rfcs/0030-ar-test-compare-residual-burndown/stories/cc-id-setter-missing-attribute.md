@@ -1,6 +1,6 @@
 ---
 title: "cc-id-setter-missing-attribute"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3428
 claim: "2026-06-16T00:36:52Z"
 assignee: "cc-id-setter-missing-attribute"
 blocked-by: null
