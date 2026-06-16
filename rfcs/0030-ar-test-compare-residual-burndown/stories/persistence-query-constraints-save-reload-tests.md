@@ -34,9 +34,20 @@ priority, not green checkmarks:
 - **Use `useHandlerFixtures`** for fixture-backed setup — the one-call wiring that
   mirrors Rails' `fixtures :name` + transactional tests. Look up the real
   fixtures Rails uses instead of hand-building records.
-- **Move away from `defineSchema`** / bespoke per-test schemas. If the canonical
-  schema seems to lack something, mirror Rails' own setup (canonical model +
-  fixture) rather than hand-rolling a schema.
+- **`defineSchema` is canonical-only.** It may pass **only** the canonical
+  `TEST_SCHEMA` (the `blazetrails/require-canonical-schema` ESLint rule enforces
+  this). Never hand-roll a bespoke per-test schema or free table name. Prefer
+  `useHandlerFixtures` / `setupHandlerSuite` on the default canonical tables over
+  `defineSchema` wherever possible.
+- **Gating — check the exclude list first.** If your target file is still listed
+  in `eslint/require-canonical-schema-exclude.json` (grandfathered), it is **not
+  yet canonical** and the lint is OFF for it — un-skipping there would pile new
+  tests onto bespoke schema. That file's **RFC 0019 canonical conversion must land
+  first** (it converts the file to `TEST_SCHEMA` + canonical models/fixtures and
+  **removes the file from the exclude list**). Do not un-skip ahead of it. If the
+  canonical schema/models genuinely lack something the test needs, that is a 0019
+  gap to fill (add it to the canonical schema), never a reason to reintroduce a
+  bespoke `defineSchema`.
 - **Skip rather than deviate.** If a test cannot pass without diverging from Rails
   behavior (an implementation gap, missing feature, or genuine divergence), do
   **not** contort the test, schema, or assertion to force it green. Leave it

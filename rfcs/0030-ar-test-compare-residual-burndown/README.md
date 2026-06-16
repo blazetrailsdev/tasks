@@ -106,10 +106,12 @@ Rails." Fidelity to the upstream suite is the #1 priority. For every story:
   models: table, column, and model names must match Rails exactly.** If Rails uses
   `Author`/`authors`, use the canonical model — never rename it or substitute a
   bespoke one.
-- **Use `useHandlerFixtures`** for fixture-backed setup (mirrors Rails'
-  `fixtures :name` + transactional tests). Look up the real fixtures Rails uses.
-- **Move away from `defineSchema`** / bespoke per-test schemas. A perceived gap in
-  the canonical schema is a signal to mirror Rails' own setup, not to hand-roll one.
+- **Use `useHandlerFixtures` / `setupHandlerSuite`** for fixture-backed setup on
+  the default canonical tables (mirrors Rails' `fixtures :name` + transactional
+  tests). Look up the real fixtures Rails uses. Prefer this over `defineSchema`.
+- **`defineSchema` is canonical-only.** It may pass **only** the canonical
+  `TEST_SCHEMA` — enforced by the `blazetrails/require-canonical-schema` ESLint
+  rule. Never hand-roll a bespoke per-test schema or free table name anywhere.
 - **Skip rather than deviate.** If a test cannot pass without diverging from Rails
   (an implementation gap or genuine divergence), do **not** contort the test,
   schema, or assertion to force it green. Leave it `it.skip` with a
@@ -120,6 +122,27 @@ Rails." Fidelity to the upstream suite is the #1 priority. For every story:
 PR [#3405](https://github.com/blazetrailsdev/trails/pull/3405) is the
 **anti-pattern** to avoid: it stood up bespoke/custom-named tables and per-test
 schemas instead of riding the canonical schema + fixtures. Don't do that.
+
+### Gating: blocked behind RFC 0019 for grandfathered files
+
+**This RFC is gated behind [RFC 0019](../0019-canonical-schema-burndown/) for any
+file that is still on `eslint/require-canonical-schema-exclude.json`.** That
+exclude list grandfathers ~91 legacy files where the canonical-schema lint is
+turned OFF — so un-skipping tests in them does **not** trip the lint, and an agent
+can pile new tests onto bespoke `defineSchema`. That is exactly the future
+cleanup we are avoiding.
+
+Rule: **a 0030 un-skip story whose target file is grandfathered must wait for that
+file's RFC 0019 canonical conversion to land first.** The 0019 conversion converts
+the file to `TEST_SCHEMA` + canonical models/fixtures **and removes the file from
+the exclude list**; only then does the 0030 un-skip ride the clean file. Large
+files (eager.test.ts, join_model.test.ts, transactions.test.ts, …) convert over
+**multiple ≤500-LOC PRs** — the exclude entry is removed in the **final** PR that
+makes the file fully canonical.
+
+Before claiming a 0030 story, grep the exclude list for your target file. If it is
+listed, the story is `blocked` (or should be) until 0019 clears it. The
+association front (a1–a6) is already blocked/redirected accordingly.
 
 ### Deferred / permanent-skip
 
@@ -275,6 +298,7 @@ files, not this table.
 
 ## Changelog
 
+- 2026-06-16: gate this RFC behind RFC 0019 (reopened) for grandfathered files. Added the "Gating: blocked behind RFC 0019" section and the strict `defineSchema`-canonical-only rule; tightened the per-story test-writing direction to require the file's 0019 canonical conversion (and its removal from `require-canonical-schema-exclude.json`) before un-skipping. Blocked the not-yet-live association stories (a6, a2-residual, a1-string-and-scoped-joins) behind their 0019 conversion; the live a1–a5 agents are redirected to fold the conversion in.
 - 2026-06-15: adopt the 5 still-open stories from RFC 0016 (persistence-query-constraints-save-reload-tests, sqlite3-copy-table-test-port, strict-loading-new-record-gate-in-loaders, timestamp-index-created-for-both-timestamps, virtual-reconcile-warm-schema-cache); 0016's residual-skip campaign is now superseded by this RFC.
 - 2026-06-15: initial RFC; inventory of 439 counted skips migrated from live
   `test:compare` output, successor to 0016-ar-test-compare-100 (94.3%).

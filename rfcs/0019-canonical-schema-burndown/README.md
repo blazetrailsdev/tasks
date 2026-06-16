@@ -34,6 +34,35 @@ word-for-word test bodies, same assertions, same logic, same call structure.**
 This is not a boilerplate trim. The conversion target is Rails' `test/cases`
 shape, and the bar is fidelity, not just "the lint passes."
 
+## Strict rule + relationship to RFC 0030
+
+This RFC **gates [RFC 0030](../0030-ar-test-compare-residual-burndown/)** (the
+`test:compare` 94→100 un-skip campaign). The two RFCs overlap on the same files,
+and doing 0030's un-skips on a still-grandfathered file piles new tests onto
+bespoke `defineSchema` — more cleanup later. So:
+
+- **Strict rule.** `defineSchema()` may pass **only** the canonical `TEST_SCHEMA`.
+  No bespoke per-test schemas, no free table names, anywhere. Prefer
+  `useHandlerFixtures` / `setupHandlerSuite` on the default canonical tables over
+  `defineSchema` entirely. The `blazetrails/require-canonical-schema` lint enforces
+  this for every file **not** on `require-canonical-schema-exclude.json`.
+- **Converting a file means removing it from the exclude list** in the same effort
+  — that is what flips the lint ON for it and what "done" means for a file. A
+  conversion PR that does not shrink the exclude list has not finished its file.
+- **0030 is blocked behind this RFC per-file.** A 0030 un-skip story whose target
+  file is grandfathered waits until that file's conversion here lands and the file
+  is off the exclude list. The association front (0030 a1–a6 ↔ this RFC's
+  `assoc-*` stories) is prioritized first (priority 1–2) since 5 agents are live
+  in those files.
+- **Large files convert over multiple PRs.** Files like `eager.test.ts`,
+  `join-model.test.ts`, `transactions.test.ts`, `has-many-associations.test.ts`
+  exceed the 500-LOC PR ceiling. Convert them in **≤500-LOC slices** (by
+  describe-block / Rails test section), registering follow-on stories with
+  `pnpm tasks new 0019-canonical-schema-burndown <slug>` as needed. Keep the file
+  on the exclude list until the **final** slice makes it fully canonical, then
+  remove the entry in that PR. Do **not** fan out sibling PRs yourself — one PR per
+  claimed slice; register the rest as stories.
+
 ## Relationship to RFC 0014 (supersede)
 
 RFC 0014 (`0014-fixtures-adoption`, `active`) studied the same suite and
@@ -385,6 +414,7 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 
 ## Changelog
 
+- 2026-06-16: status → active (reopened). This RFC gates RFC 0030's `test:compare` un-skip campaign — un-skipping on still-grandfathered files adds bespoke-`defineSchema` debt, so the canonical conversion must come first. Added the strict-rule + RFC-0030-relationship + multi-PR breakdown section; prioritized the association conversion stories (assoc-eager/join-model/has-one/habtm/cascaded = priority 1; associations/has-many/inverse/left-outer/bidirectional = priority 2) and flipped them ready, since 5 agents are live in those files.
 - 2026-06-15: status → closed; shelved for now. The ~104 open stories stay as the historical record and can be reopened by flipping status back to active.
 - 2026-06-09: initial RFC; supersedes 0014-fixtures-adoption.
 - 2026-06-09: review (PR #14) — added `deps: shared-table-convergence` to
