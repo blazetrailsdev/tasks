@@ -1,6 +1,6 @@
 ---
 title: "c1-schema-dumper-mysql-gaps"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3432
 claim: "2026-06-16T00:44:53Z"
 assignee: "c1-schema-dumper-mysql-gaps"
 blocked-by: null
