@@ -1,6 +1,6 @@
 ---
 title: "Autosave INSERT collides with CRC32 fixture id (sqlite rowid seq not advanced)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
+pr: 3490
 claim: "2026-06-16T18:56:57Z"
 assignee: "autosave-insert-fixture-id-rowid-collision"
 blocked-by: null
