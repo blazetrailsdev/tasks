@@ -1,6 +1,6 @@
 ---
 title: "Proc/block callbacks bind this to record (Rails instance_exec), not class"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: null
+pr: 3493
 claim: "2026-06-16T19:48:42Z"
 assignee: "proc-callback-this-instance-exec-binding"
 blocked-by: null
