@@ -40,7 +40,7 @@ callback flow, so an async callback should be supported.
       `before_validation` / `after_validation` callbacks instead of throwing
       "before returned a Promise".
 - [ ] Un-skip `association with validate false does not run associated
-  validation callbacks on update` in
+validation callbacks on update` in
       `associations/has-and-belongs-to-many-associations.test.ts` (verbatim
       name) and assert as Rails does (haabtm_test.rb:874-885).
 - [ ] No regression in the validations + callbacks suites.
