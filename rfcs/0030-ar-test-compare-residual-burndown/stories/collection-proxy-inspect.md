@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#inspect loads target without premature reload"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 3437
 claim: "2026-06-16T02:12:51Z"
 assignee: "collection-proxy-inspect"
 blocked-by: null
