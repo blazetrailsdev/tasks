@@ -68,6 +68,17 @@ timestamptz setting`) — needs `Migration[6.1]` version compatibility, which
    `Infinity`/`-Infinity`/`NaN` literals, so float/datetime/date columns with
    infinity defaults do not round-trip. Fix in `schema-dumper.ts` `cleanDefault`.
 
+8. **PG oid introspection surfaces a bogus `limit: 8`** — Rails' oid column
+   reports `limit == nil` (`NATIVE_DATABASE_TYPES[:oid]` carries no `:limit`,
+   postgresql_adapter.rb:177); trails PG introspection surfaces limit 8. The
+   `c1-schema-dumper-parity` PR works around this with a `schemaType === "oid"`
+   guard in `schema_limit` (abstract/schema-dumper.ts) so `t.oid` dumps bare,
+   but the root-cause fix is in PG column introspection (oid should not carry a
+   limit), or a general `native_database_types` limit comparison in
+   `schema_limit` (mirroring the existing `isSerial` special-case). Until then,
+   any oid-typed path that does not route through that dumper guard still sees
+   the spurious limit.
+
 ## Acceptance criteria
 
 - [ ] Each listed `it.skip` in `schema-dumper.test.ts` is un-skipped and passes
