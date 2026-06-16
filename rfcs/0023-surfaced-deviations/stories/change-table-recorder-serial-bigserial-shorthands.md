@@ -1,6 +1,6 @@
 ---
 title: "change_table proxy surfaces t.serial/t.bigserial (PG ColumnMethods not in NATIVE_DATABASE_TYPES)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
