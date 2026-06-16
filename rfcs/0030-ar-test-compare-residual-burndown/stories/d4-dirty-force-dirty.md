@@ -1,6 +1,6 @@
 ---
 title: "D4 — dirty: attribute_will_change! force-dirty path"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3449
 claim: "2026-06-16T12:23:01Z"
 assignee: "d4-dirty-force-dirty"
 blocked-by: null
