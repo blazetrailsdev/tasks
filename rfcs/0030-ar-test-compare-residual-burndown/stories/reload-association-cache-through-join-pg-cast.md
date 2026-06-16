@@ -1,6 +1,6 @@
 ---
 title: "Un-skip reload-association-cache (PG through-JOIN type-cast + publication callback fix)"
-status: ready
+status: draft
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
