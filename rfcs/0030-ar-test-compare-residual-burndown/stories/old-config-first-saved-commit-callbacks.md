@@ -32,6 +32,6 @@ Blocks un-skipping (transaction-callbacks.test.ts):
 
 ## Acceptance criteria
 
-- [ ] The deprecated old-config behaviour fires update/destroy commit callbacks on
+- [x] The deprecated old-config behaviour fires update/destroy commit callbacks on
       the first-saved instance; `before commit actions` reverse ordering matches Rails.
-- [ ] The 3 tests above are un-skipped and pass; no new gate-mismatches.
+- [x] The 3 tests above are un-skipped and pass; no new gate-mismatches.
