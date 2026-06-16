@@ -1,6 +1,6 @@
 ---
 title: "assoc-eager-split-canonical-belongsto-wave2"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3476
 claim: "2026-06-16T16:13:35Z"
 assignee: "assoc-eager-split-canonical-belongsto-wave2"
 blocked-by: null
