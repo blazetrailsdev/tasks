@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-wave4-delete-dup-describes"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3474
 claim: "2026-06-16T16:18:33Z"
 assignee: "assoc-associations-test-wave4-delete-dup-describes"
 blocked-by: null
