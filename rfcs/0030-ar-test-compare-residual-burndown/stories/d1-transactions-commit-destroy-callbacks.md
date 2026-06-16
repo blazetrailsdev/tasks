@@ -1,6 +1,6 @@
 ---
 title: "D1 — transactions: committed/destroy callback firing"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "persistence"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 330
 priority: null
-pr: null
+pr: 3443
 claim: "2026-06-16T02:58:11Z"
 assignee: "d1-transactions-commit-destroy-callbacks"
 blocked-by: null
