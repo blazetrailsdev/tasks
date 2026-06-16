@@ -217,7 +217,6 @@ files, not this table.
 | [update-delete-all-default-scope-joins](stories/update-delete-all-default-scope-joins.md)                       | update_all/delete_all preserve default-scope JOIN via subquery                                            | ready       | 90      | relation-scoping |
 | [virtual-reconcile-warm-schema-cache](stories/virtual-reconcile-warm-schema-cache.md)                           | Memoize schema cache when virtual reconciliation reflects on cold cache                                   | ready       | 40      | core-residuals   |
 | [where-hash-keys-resolve-to-join-alias](stories/where-hash-keys-resolve-to-join-alias.md)                       | where-hash-keys-resolve-to-join-alias                                                                     | ready       | null    | —                |
-| [c1-schema-dumper-migration-version-compat](stories/c1-schema-dumper-migration-version-compat.md)               | c1-schema-dumper-migration-version-compat                                                                 | claimed     | null    | —                |
 | [b2-sti-type-survives-unscope](stories/b2-sti-type-survives-unscope.md)                                         | STI type predicate survives unscope(where)                                                                | in-progress | 50      | —                |
 | [b4-relation-query-tail](stories/b4-relation-query-tail.md)                                                     | B4 — relation query tail (with/where_chain/update_all/predicate/batches)                                  | in-progress | 70      | relation-scoping |
 | [c1-schema-dumper-mysql-gaps](stories/c1-schema-dumper-mysql-gaps.md)                                           | c1-schema-dumper-mysql-gaps                                                                               | in-progress | null    | —                |
@@ -247,6 +246,7 @@ files, not this table.
 | [c4-migration-column-def-tail](stories/c4-migration-column-def-tail.md)                                         | C4 — migration + column_definition + invertible tail                                                      | done        | 60      | core-residuals   |
 | [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                                   | A2 — join_model: has_many :through join-model semantics                                                   | blocked     | 280     | associations     |
 | [a2-join-model-semantics-residual](stories/a2-join-model-semantics-residual.md)                                 | a2-join-model-semantics-residual                                                                          | blocked     | null    | —                |
+| [c1-schema-dumper-migration-version-compat](stories/c1-schema-dumper-migration-version-compat.md)               | c1-schema-dumper-migration-version-compat                                                                 | blocked     | null    | —                |
 
 ## Changelog
 
