@@ -1,6 +1,6 @@
 ---
 title: "associations.test.ts wave 3: convert associations_test.rb describes to canonical schema (RFC 0019)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 3475
 claim: "2026-06-16T16:00:50Z"
 assignee: "assoc-associations-test-wave3-convert-canonical"
 blocked-by: null
