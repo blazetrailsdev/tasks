@@ -1,6 +1,6 @@
 ---
 title: "Mutation commands must be atomic (rollback partial write) and surface errors, not leave a blocked dirty checkout"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
