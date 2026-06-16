@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - pg-default-pk-bigserial-cascade
 deps-rfc: []
 est-loc: null
 priority: null
