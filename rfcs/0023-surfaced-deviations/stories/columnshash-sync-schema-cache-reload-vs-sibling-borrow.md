@@ -5,7 +5,8 @@ updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc:
+  - 0031-schema-cache-always-warm-convergence
 est-loc: 120
 priority: null
 pr: 3445
