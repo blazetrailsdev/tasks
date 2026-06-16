@@ -1,6 +1,6 @@
 ---
 title: "Bulb create/load raises 'this.readAttribute is not a function'"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T18:26:55Z"
+assignee: "bulb-read-attribute-crash-on-create"
 blocked-by: null
 ---
 
