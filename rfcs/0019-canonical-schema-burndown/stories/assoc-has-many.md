@@ -1,6 +1,6 @@
 ---
 title: "Port has-many-associations.test.ts to canonical schema (split per-describe)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T15:04:36Z"
+assignee: "assoc-has-many"
 blocked-by: null
 ---
 
