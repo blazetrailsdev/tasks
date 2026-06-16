@@ -48,17 +48,17 @@ test names verbatim.
 
 ## Acceptance criteria
 
-- [ ] Convert all 3 describe blocks to canonical: no `defineSchema`, no
+- [x] Convert all 3 describe blocks to canonical: no `defineSchema`, no
       `createTestAdapter`/`freshAdapter`. Use `setupHandlerSuite()` +
       `useHandlerFixtures([...])` + `name(:label)`.
-- [ ] For any bespoke scratch table (countries/treaties, custom join tables):
+- [x] For any bespoke scratch table (countries/treaties, custom join tables):
       parity-check Rails `schema.rb` first — add to canonical `test-schema.ts`
       ONLY if schema.rb has it; otherwise a single scoped, file-unique
       `defineSchema` + teardown for that one table (never a shared name).
-- [ ] Test names unchanged. No `eslint-disable`.
-- [ ] Remove `has-and-belongs-to-many-associations.test.ts` from
+- [x] Test names unchanged. No `eslint-disable`.
+- [x] Remove `has-and-belongs-to-many-associations.test.ts` from
       `eslint/require-canonical-schema-exclude.json`.
-- [ ] `pnpm lint` clean; `pnpm vitest run <file>` passes.
+- [x] `pnpm lint` clean; `pnpm vitest run <file>` passes.
 
 ## Notes
 
