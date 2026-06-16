@@ -1,6 +1,6 @@
 ---
 title: "cascaded-eager-loading.test.ts → canonical schema"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
