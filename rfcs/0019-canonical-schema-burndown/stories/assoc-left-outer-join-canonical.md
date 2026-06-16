@@ -1,6 +1,6 @@
 ---
 title: "left-outer-join-association.test.ts → canonical schema"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T15:10:41Z"
+assignee: "assoc-left-outer-join-canonical"
 blocked-by: null
 ---
 
