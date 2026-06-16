@@ -1,6 +1,6 @@
 ---
 title: "Finalize/rebase race leaves duplicate 0000-/NNNN- RFC dirs with orphaned stories"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
