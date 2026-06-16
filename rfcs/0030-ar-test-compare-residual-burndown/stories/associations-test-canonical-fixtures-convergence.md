@@ -39,6 +39,6 @@ bespoke models reconciled, not a per-test swap.
 
 ## Acceptance criteria
 
-- [ ] Reconcile `associations.test.ts` bespoke models so canonical `Author` / `AuthorFavorite`, `Firm` / `Client`, and `Tagging` / `Tag` / `Developer` can be imported without registry collisions.
-- [ ] Rewrite `subselect`, `association with references`, and `using limitable reflections helper` against canonical models + real fixture lookups (`useHandlerFixtures`).
-- [ ] All three tests still pass; no regressions in the rest of the file.
+- [x] Reconcile `associations.test.ts` bespoke models so canonical `Author` / `AuthorFavorite`, `Firm` / `Client`, and `Tagging` / `Tag` / `Developer` can be imported without registry collisions.
+- [x] Rewrite `subselect`, `association with references`, and `using limitable reflections helper` against canonical models + real fixture lookups (`useHandlerFixtures`).
+- [x] All three tests still pass; no regressions in the rest of the file.
