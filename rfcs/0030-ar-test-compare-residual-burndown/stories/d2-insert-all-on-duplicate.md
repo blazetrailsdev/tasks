@@ -1,7 +1,7 @@
 ---
 title: "D2 — insert_all: onDuplicate/upsert non-native semantics"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "persistence"
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 330
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T03:06:11Z"
+assignee: "d2-insert-all-on-duplicate"
 blocked-by: null
 ---
 
