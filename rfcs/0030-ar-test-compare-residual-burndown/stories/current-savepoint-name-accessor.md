@@ -27,7 +27,7 @@ Blocks un-skipping `savepoints name` (transactions.test.ts), which asserts
 
 ## Acceptance criteria
 
-- [ ] Adapter `currentSavepointName()` returns `current_transaction.savepoint_name`.
-- [ ] `savepointName` returns `null` on Real/Null transactions, the savepoint id
+- [x] Adapter `currentSavepointName()` returns `current_transaction.savepoint_name`.
+- [x] `savepointName` returns `null` on Real/Null transactions, the savepoint id
       on SavepointTransaction.
-- [ ] `savepoints name` un-skipped and passes; no new gate-mismatches.
+- [x] `savepoints name` un-skipped and passes; no new gate-mismatches.
