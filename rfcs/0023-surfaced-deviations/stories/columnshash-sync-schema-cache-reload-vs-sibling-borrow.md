@@ -1,6 +1,6 @@
 ---
 title: "Converge sync columnsHash schema-cache reload (remove sibling-borrow workaround)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T11:46:09Z"
+assignee: "columnshash-sync-schema-cache-reload-vs-sibling-borrow"
 blocked-by: null
 ---
 
