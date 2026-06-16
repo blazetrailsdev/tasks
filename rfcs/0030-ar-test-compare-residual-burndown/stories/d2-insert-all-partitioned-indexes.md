@@ -1,6 +1,6 @@
 ---
 title: "insert-all.test.ts: unblock upsert_all partitioned-indexes test (PG)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T13:35:00Z"
+assignee: "d2-insert-all-partitioned-indexes"
 blocked-by: null
 ---
 
