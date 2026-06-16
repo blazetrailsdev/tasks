@@ -1,6 +1,6 @@
 ---
 title: "change_table proxy surfaces t.serial/t.bigserial (PG ColumnMethods not in NATIVE_DATABASE_TYPES)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: 3484
 claim: "2026-06-16T18:11:27Z"
 assignee: "change-table-recorder-serial-bigserial-shorthands"
 blocked-by: null
