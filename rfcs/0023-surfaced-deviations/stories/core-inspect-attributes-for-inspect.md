@@ -1,6 +1,6 @@
 ---
 title: "Core#inspect honors attributes_for_inspect"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
