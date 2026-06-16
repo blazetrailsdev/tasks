@@ -1,6 +1,6 @@
 ---
 title: "before_add proc cannot synchronously force-load association target"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
