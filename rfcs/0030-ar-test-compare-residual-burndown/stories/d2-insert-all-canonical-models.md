@@ -37,6 +37,6 @@ ON CONFLICT update set, not the INSERT column list.
 
 ## Acceptance criteria
 
-- [ ] insert-all.test.ts migrated to canonical models + useHandlerFixtures.
-- [ ] has_many_through insert_all/upsert_all raise ArgumentError (Rails parity).
-- [ ] Non-Rails stub names removed or converted to the real Rails assertions.
+- [x] insert-all.test.ts migrated to canonical models + useHandlerFixtures.
+- [x] has_many_through insert_all/upsert_all raise ArgumentError (Rails parity).
+- [x] Non-Rails stub names removed or converted to the real Rails assertions.
