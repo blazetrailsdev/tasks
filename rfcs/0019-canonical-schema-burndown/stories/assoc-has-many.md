@@ -1,6 +1,6 @@
 ---
 title: "Port has-many-associations.test.ts to canonical schema (split per-describe)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
