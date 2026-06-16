@@ -1,7 +1,7 @@
 ---
 title: "STI hasMany eager/preload foreign key derivation"
-status: in-progress
-updated: 2026-06-15
+status: done
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
