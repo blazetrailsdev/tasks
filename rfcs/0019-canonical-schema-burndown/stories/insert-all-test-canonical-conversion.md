@@ -16,6 +16,12 @@ blocked-by: null
 
 ## Context
 
+> **OBSOLETE (2026-06-16) — close on triage, do not pick up.** `main` has since
+> fully converted `insert-all.test.ts` to canonical schema and removed it from
+> `eslint/require-canonical-schema-exclude.json` (the canonical-schema lint now
+> passes on it). This story was filed before that landed; there is nothing left
+> to convert. Superseded by main's conversion.
+
 `packages/activerecord/src/insert-all.test.ts` (1611 LOC) is on
 `eslint/require-canonical-schema-exclude.json` (grandfathered, canonical-schema
 lint OFF). It uses bespoke `defineSchema` across 5 describe blocks
