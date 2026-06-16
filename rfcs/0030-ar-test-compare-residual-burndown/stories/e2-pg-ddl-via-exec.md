@@ -1,6 +1,6 @@
 ---
 title: "E2 — PG array/uuid/hstore/virtual-column DDL-via-exec"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 3453
 claim: "2026-06-16T13:23:01Z"
 assignee: "e2-pg-ddl-via-exec"
 blocked-by: null
