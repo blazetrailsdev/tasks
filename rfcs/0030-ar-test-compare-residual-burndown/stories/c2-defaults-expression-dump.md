@@ -1,6 +1,6 @@
 ---
 title: "C2 — defaults: expression-default dump/load"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "unblockers"
