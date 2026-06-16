@@ -1,6 +1,6 @@
 ---
 title: "Inverse-of wiring on single-association access path (recursive/STI/callbacks/autosave)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
