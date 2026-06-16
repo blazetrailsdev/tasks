@@ -1,6 +1,6 @@
 ---
 title: "associations.test.ts wave 2: delete remaining duplicate describes (RFC 0019)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
