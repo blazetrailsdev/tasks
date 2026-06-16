@@ -1,6 +1,6 @@
 ---
 title: "old-config first-saved-instance commit callbacks + before_commit order"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 19
-pr: null
+pr: 3502
 claim: "2026-06-16T21:12:43Z"
 assignee: "old-config-first-saved-commit-callbacks"
 blocked-by: null
