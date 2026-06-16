@@ -1,6 +1,6 @@
 ---
 title: "R2: drop synthesize-from-attributes for table-backed models; converge ad-hoc-model tests"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
