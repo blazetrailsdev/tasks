@@ -49,9 +49,9 @@ composite-unique-index lookup; sequence after that lands.
 
 ## Acceptance criteria
 
-- [ ] `upsert all works with partitioned indexes` un-skipped and passing on the
+- [x] `upsert all works with partitioned indexes` un-skipped and passing on the
       PG lane (PG >= 11), still skipped on sqlite/mysql via skipIf.
-- [ ] `measurements` partitioned table + partitions created via PG raw DDL,
+- [x] `measurements` partitioned table + partitions created via PG raw DDL,
       mirroring postgresql_specific_schema.rb (no invented columns).
-- [ ] Assertions match insert_all_test.rb:703-706 verbatim.
-- [ ] Test name matches Rails verbatim.
+- [x] Assertions match insert_all_test.rb:703-706 verbatim.
+- [x] Test name matches Rails verbatim.
