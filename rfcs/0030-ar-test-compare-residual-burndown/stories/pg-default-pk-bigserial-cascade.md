@@ -1,6 +1,6 @@
 ---
 title: "PG default PK → BIGSERIAL cascade (BigInt-id convergence campaign)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 3485
 claim: "2026-06-16T18:06:48Z"
 assignee: "pg-default-pk-bigserial-cascade"
 blocked-by: null
