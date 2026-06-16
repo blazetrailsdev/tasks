@@ -1,6 +1,6 @@
 ---
 title: "touch enrolls in transactional commit/rollback callbacks"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
