@@ -1,6 +1,6 @@
 ---
 title: "bidirectional-destroy-dependencies → canonical fixtures (needs dependent-destroy cycle guard)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 3469
 claim: "2026-06-16T15:16:42Z"
 assignee: "bidirectional-destroy-dependent-cycle-guard"
 blocked-by: null
