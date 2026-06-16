@@ -37,10 +37,10 @@ Related (type-level, already shipped): `0023-surfaced-deviations`
 
 ## Acceptance criteria
 
-- [ ] `instance.id` returns `null` (no raise) when the model's primary key
+- [x] `instance.id` returns `null` (no raise) when the model's primary key
       resolves to `null` (key-less table / view), matching Rails
       `AttributeMethods::PrimaryKey#id`.
-- [ ] Add a test mirroring the Rails behavior (anon class on `dashboards`,
+- [x] Add a test mirroring the Rails behavior (anon class on `dashboards`,
       `new().id === null`).
-- [ ] No behavior change for models with a real (scalar or composite) primary key.
-- [ ] Single PR from main, ≤ ceiling.
+- [x] No behavior change for models with a real (scalar or composite) primary key.
+- [x] Single PR from main, ≤ ceiling.
