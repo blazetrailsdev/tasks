@@ -1,6 +1,6 @@
 ---
 title: "left_outer_joins dedupes association shared with inner joins to a single INNER JOIN"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: null
+pr: 3501
 claim: "2026-06-16T21:24:43Z"
 assignee: "left-outer-joins-inner-dedup"
 blocked-by: null
