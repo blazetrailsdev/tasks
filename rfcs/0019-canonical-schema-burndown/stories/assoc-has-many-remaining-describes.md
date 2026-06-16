@@ -1,6 +1,6 @@
 ---
 title: "Convert remaining has-many-associations.test.ts describes to canonical (waves 2+)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
