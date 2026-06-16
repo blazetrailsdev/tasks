@@ -1,6 +1,6 @@
 ---
 title: "Auto-detect query-time STI type condition from inheritance-column presence (drop enableSti opt-in)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
