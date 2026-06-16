@@ -1,13 +1,13 @@
 ---
 title: "Unify AliasTracker across inner/left-outer/eager join buckets (one JoinDependency alias namespace)"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
