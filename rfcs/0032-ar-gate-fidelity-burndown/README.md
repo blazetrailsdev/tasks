@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ar-gate-fidelity-burndown"
+rfc: "0032-ar-gate-fidelity-burndown"
 title: "ActiveRecord test:compare gate-mismatch burndown to zero"
 status: draft
 created: 2026-06-16
@@ -15,7 +15,7 @@ clusters:
   - "enforcement"
 ---
 
-# RFC — ActiveRecord test:compare gate-mismatch burndown to zero
+# RFC 0032 — ActiveRecord test:compare gate-mismatch burndown to zero
 
 ## Summary
 

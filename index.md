@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-ar-gate-fidelity-burndown](rfcs/0000-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | draft | @deanmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -37,3 +36,4 @@
 | [0029-sqlite-memory-fidelity](rfcs/0029-sqlite-memory-fidelity/README.md) | SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern | draft | @deanmarano | activerecord |
 | [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | active | @deanmarano | activerecord |
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | draft | @deanmarano | activerecord |
+| [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | draft | @deanmarano | activerecord |
