@@ -1,6 +1,6 @@
 ---
 title: "Mutation commands must be atomic (rollback partial write) and surface errors, not leave a blocked dirty checkout"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T18:41:56Z"
+assignee: "cli-mutation-atomic-rollback-and-error-surfacing"
 blocked-by: null
 ---
 
