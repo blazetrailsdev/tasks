@@ -1,6 +1,6 @@
 ---
 title: "MariaDB uuid()/concat() expression-default reflection"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T01:40:53Z"
+assignee: "c2-defaults-mariadb-expression-reflection"
 blocked-by: null
 ---
 
