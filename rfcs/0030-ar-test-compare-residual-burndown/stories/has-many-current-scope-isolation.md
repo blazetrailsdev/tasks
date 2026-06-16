@@ -1,13 +1,13 @@
 ---
 title: "has_many reads ignore class current_scope"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null
