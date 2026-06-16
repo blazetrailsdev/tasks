@@ -39,8 +39,8 @@ Rails source: `vendor/rails/activerecord/test/cases/schema_dumper_test.rb`
 
 ## Acceptance criteria
 
-- [ ] `schema dump includes length for mysql blob and text fields` un-skipped, passes on mysql.
-- [ ] `schema dumps index type` un-skipped, passes on mysql.
-- [ ] The mysql branch of `schema dumps index length` restored (currently
+- [x] `schema dump includes length for mysql blob and text fields` un-skipped, passes on mysql.
+- [x] `schema dumps index type` un-skipped, passes on mysql.
+- [x] The mysql branch of `schema dumps index length` restored (currently
       `skipIf(adapterType === "mysql")`) and passes on mysql.
-- [ ] Test names match Rails verbatim. No new gate-mismatches.
+- [x] Test names match Rails verbatim. No new gate-mismatches.
