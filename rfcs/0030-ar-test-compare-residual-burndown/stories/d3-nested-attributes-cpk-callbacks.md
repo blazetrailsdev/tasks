@@ -1,6 +1,6 @@
 ---
 title: "D3 — nested-attributes: CPK + before_add callback timing"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "persistence"
