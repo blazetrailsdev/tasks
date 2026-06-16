@@ -1,6 +1,6 @@
 ---
 title: "insert-all.test.ts: migrate to canonical models + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3446
 claim: "2026-06-16T11:53:00Z"
 assignee: "d2-insert-all-canonical-models"
 blocked-by: null
