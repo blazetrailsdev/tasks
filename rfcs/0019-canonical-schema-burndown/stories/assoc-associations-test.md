@@ -1,6 +1,6 @@
 ---
 title: "Port associations.test.ts to canonical schema (split per-describe)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
+pr: 3465
 claim: "2026-06-16T14:52:35Z"
 assignee: "assoc-associations-test"
 blocked-by: null
