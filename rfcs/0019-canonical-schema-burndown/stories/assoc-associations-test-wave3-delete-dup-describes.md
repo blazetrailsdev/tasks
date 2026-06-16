@@ -39,9 +39,9 @@ any cross-describe registry/schema leak the deletion exposes.
 
 ## Acceptance criteria
 
-- [ ] Delete each remaining trails-invented duplicate describe after confirming
+- [x] Delete each remaining trails-invented duplicate describe after confirming
       via `test:compare` the dedicated port already provides the Rails matches.
-- [ ] Fix any registry/schema leak each deletion exposes; surviving describes
+- [x] Fix any registry/schema leak each deletion exposes; surviving describes
       self-sufficient.
-- [ ] `test:compare` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
-- [ ] Do NOT remove the file from `eslint/require-canonical-schema-exclude.json`.
+- [x] `test:compare` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
+- [x] Do NOT remove the file from `eslint/require-canonical-schema-exclude.json`.
