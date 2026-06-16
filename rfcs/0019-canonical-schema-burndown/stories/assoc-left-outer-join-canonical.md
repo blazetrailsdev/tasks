@@ -1,6 +1,6 @@
 ---
 title: "left-outer-join-association.test.ts → canonical schema"
-status: claimed
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: 3468
 claim: "2026-06-16T15:10:41Z"
 assignee: "assoc-left-outer-join-canonical"
 blocked-by: null
