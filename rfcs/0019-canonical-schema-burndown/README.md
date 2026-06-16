@@ -1,9 +1,9 @@
 ---
 rfc: "0019-canonical-schema-burndown"
 title: "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word"
-status: closed
+status: active
 created: 2026-06-09
-updated: 2026-06-15
+updated: 2026-06-16
 owner: "@deanmarano"
 packages:
   - activerecord
