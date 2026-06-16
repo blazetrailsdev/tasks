@@ -30,8 +30,8 @@ raising. The write is a no-op rather than an error.
 
 ## Acceptance criteria
 
-- [ ] `instance.id = value` raises the MissingAttributeError equivalent when
+- [x] `instance.id = value` raises the MissingAttributeError equivalent when
       the model's primary key resolves to null (no PK column on the table),
       matching Rails `AttributeMethods::PrimaryKey#id=`.
-- [ ] Un-skip `assign id raises error if primary key doesnt exist` in
+- [x] Un-skip `assign id raises error if primary key doesnt exist` in
       `primary-keys.test.ts` and confirm it passes.
