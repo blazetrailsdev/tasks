@@ -1,6 +1,6 @@
 ---
 title: "cascaded-eager-loading.test.ts → canonical schema"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T13:52:59Z"
+assignee: "assoc-cascaded-eager-canonical"
 blocked-by: null
 ---
 
