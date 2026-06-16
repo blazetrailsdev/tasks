@@ -1,6 +1,6 @@
 ---
 title: "Relation#first returns cached records[0] when already loaded (no re-query)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 16
-pr: null
+pr: 3499
 claim: "2026-06-16T20:36:43Z"
 assignee: "loaded-relation-first-no-requery"
 blocked-by: null
