@@ -1,6 +1,6 @@
 ---
 title: "left_joins cross-model merge preserves left joins + wheres"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
