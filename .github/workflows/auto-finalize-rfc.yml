@@ -10,11 +10,16 @@ on:
   push:
     branches: [main]
 
-# Serialize runs so two RFCs merging close together can't race on the next
-# number. Queue rather than cancel — every placeholder must be processed.
-concurrency:
-  group: auto-finalize-main
-  cancel-in-progress: false
+# Deliberately NO `concurrency:` group. A concurrency group makes GitHub
+# auto-cancel superseded *pending* runs whenever main takes a burst of pushes
+# seconds apart (the `pnpm tasks` CLI does this constantly), and those
+# cancellations surface as red ✗ on the commit / Actions status even though
+# nothing failed. Instead, each run guards itself below ("skip if superseded"):
+# older runs in a burst exit green, and only the run building main's current
+# tip scans for placeholders. The scan walks the whole tree, so the tip run
+# finds every placeholder present — including any from RFCs that merged earlier
+# in the same burst — which also covers the two-RFCs-racing-on-the-next-number
+# case the old concurrency group existed to prevent.
 
 permissions:
   contents: write
@@ -33,8 +38,19 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      - name: Skip if superseded by a newer push to main
+        id: tip
+        run: |
+          set -euo pipefail
+          git fetch --quiet origin main
+          if [ "$(git rev-parse origin/main)" != "${{ github.sha }}" ]; then
+            echo "origin/main has advanced past ${GITHUB_SHA}; a newer run owns the tip — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
       - run: pnpm install --frozen-lockfile
+        if: steps.tip.outputs.skip != 'true'
       - name: Finalize any placeholder RFCs on main
+        if: steps.tip.outputs.skip != 'true'
         run: |
           set -euo pipefail
           changed=0
@@ -56,6 +72,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "auto-finalize: assign RFC number(s) on main"
-          # This push re-triggers ci.yml (validates the finalized state) and this
+          # main may have advanced since checkout; rebase-retry the push. This
+          # push re-triggers ci.yml (validates the finalized state) and this
           # workflow (which then finds no placeholder and no-ops). Self-terminating.
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "::error::could not push auto-finalize commit after retries" >&2
+          exit 1

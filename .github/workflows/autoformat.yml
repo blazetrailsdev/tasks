@@ -12,11 +12,15 @@ on:
   push:
     branches: [main]
 
-# Serialize so close-together pushes can't race on the reformat-and-push.
-# Queue rather than cancel — every landed commit must be checked.
-concurrency:
-  group: autoformat-main
-  cancel-in-progress: false
+# Deliberately NO `concurrency:` group. A concurrency group makes GitHub
+# auto-cancel superseded *pending* runs whenever the `pnpm tasks` CLI lands a
+# burst of pushes on main seconds apart (cancel-in-progress only protects the
+# running job, never the queued ones). Those cancellations surface as red ✗ on
+# the commit / Actions status even though nothing failed. Instead, each run
+# guards itself below ("skip if superseded"): older runs in a burst exit green
+# without touching main, and only the run building main's current tip formats
+# and pushes. The reformat is whole-tree idempotent, so the tip run subsumes
+# every commit in the burst — "every landed commit is checked" still holds.
 
 permissions:
   contents: write
@@ -35,8 +39,19 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      - name: Skip if superseded by a newer push to main
+        id: tip
+        run: |
+          set -euo pipefail
+          git fetch --quiet origin main
+          if [ "$(git rev-parse origin/main)" != "${{ github.sha }}" ]; then
+            echo "origin/main has advanced past ${GITHUB_SHA}; a newer run owns the tip — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
       - run: pnpm install --frozen-lockfile
+        if: steps.tip.outputs.skip != 'true'
       - name: Prettier-format main and push any fixes
+        if: steps.tip.outputs.skip != 'true'
         run: |
           set -euo pipefail
           # .prettierignore already excludes index.md, lockfile, caches, and
