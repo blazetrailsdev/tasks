@@ -35,15 +35,21 @@ from `associations_test.rb`.
 
 ## Acceptance criteria
 
-- [ ] Open `associations_test.rb` first; port each kept body word-for-word
+- [x] Open `associations_test.rb` first; port each kept body word-for-word
       (same assertions, order, control structure). Test names unchanged.
-- [ ] Replace inline `defineSchema` + bespoke classes with canonical
+- [x] Replace inline `defineSchema` + bespoke classes with canonical
       `test-helpers/models/*` (incl. `cpk/*`, `sharded/*`) and `useHandlerFixtures`.
       Add a column to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
       has it (parity-check); otherwise a single scoped file-unique `defineSchema` + teardown (never a shared name).
-- [ ] Split across non-overlapping ≤500 LOC sibling PRs off main (NOT stacked);
+- [x] Split across non-overlapping ≤500 LOC sibling PRs off main (NOT stacked);
       register additional waves with `pnpm tasks new` rather than fanning out.
-- [ ] FINAL wave only: remove `associations.test.ts` from
+      Shipped the sharded/cpk batch (14 bodies) in #3475; remaining waves tracked
+      as `assoc-associations-test-wave4-convert-canonical` /
+      `assoc-associations-test-wave5-delete-rails-guided-describes`; the append
+      convergence shipped in #3478.
+- [x] FINAL wave only: remove `associations.test.ts` from
       `eslint/require-canonical-schema-exclude.json` once the whole file
       lint-passes with no `eslint-disable`; `test:compare` delta non-negative;
       `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
+      (N/A this wave — deferred to the final wave; this wave's `test:compare`
+      delta is non-negative and the file passes.)
