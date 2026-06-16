@@ -85,7 +85,7 @@ priority, not green checkmarks:
 
 ## Acceptance criteria
 
-- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
-- [ ] No new gate-mismatches introduced for these files.
-- [ ] Refresh the RFC snapshot count after merge.
+- [x] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
+- [x] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [x] No new gate-mismatches introduced for these files.
+- [x] Refresh the RFC snapshot count after merge.
