@@ -44,8 +44,8 @@ Rails ref: `vendor/rails/activerecord/test/cases/associations/inverse_associatio
 
 ## Acceptance criteria
 
-- [ ] Wire inverse-of onto the single-association access path (load block), before find/initialize callbacks.
-- [ ] STI scoped has_many collections load + share the parent inverse.
-- [ ] `check_validity!` recursion check fires on direct association access (raises `InverseOfAssociationRecursiveError`).
-- [ ] Autosave loads the not-yet-loaded inverse has_one after owner save.
-- [ ] Un-skip the 5 listed tests in `inverse-associations.test.ts`; they pass.
+- [x] Wire inverse-of onto the single-association access path (load block), before find/initialize callbacks.
+- [x] STI scoped has_many collections load + share the parent inverse.
+- [x] `check_validity!` recursion check fires on direct association access (raises `InverseOfAssociationRecursiveError`).
+- [x] Autosave loads the not-yet-loaded inverse has_one after owner save.
+- [x] Un-skip the 5 listed tests in `inverse-associations.test.ts`; they pass.
