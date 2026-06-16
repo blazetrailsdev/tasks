@@ -1,6 +1,6 @@
 ---
 title: "inverse-associations.test.ts → canonical Human/Face/Interest fixtures"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
