@@ -1,6 +1,6 @@
 ---
 title: "c1-schema-dumper-migration-version-compat"
-status: claimed
+status: blocked
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-06-16T01:32:52Z"
 assignee: "c1-schema-dumper-migration-version-compat"
-blocked-by: null
+blocked-by: "Depends on machinery (datetimePhysicalType / pgRealTypeUnlessAliased / datetime_type-aware dumper) from parent story c1-schema-dumper-timestamptz-version-compat, whose PR #3433 is still OPEN/unmerged. The 2 timestamptz tests require the parent's dumper-side rewrite, and this story must edit the same schema-dumper.ts/schema-dumper.test.ts the parent already changes — building from main would require stacking or duplicating unmerged code (both forbidden). Unblock once #3433 merges."
 ---
 
 ## Context
