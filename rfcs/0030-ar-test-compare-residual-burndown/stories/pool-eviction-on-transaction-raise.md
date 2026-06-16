@@ -1,6 +1,6 @@
 ---
 title: "pool evicts connection on begin/commit/rollback failure"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T22:12:43Z"
+assignee: "pool-eviction-on-transaction-raise"
 blocked-by: null
 ---
 
