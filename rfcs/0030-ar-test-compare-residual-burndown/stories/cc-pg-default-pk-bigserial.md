@@ -1,6 +1,6 @@
 ---
 title: "cc-pg-default-pk-bigserial"
-status: claimed
+status: blocked
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-06-16T02:20:53Z"
 assignee: "cc-pg-default-pk-bigserial"
-blocked-by: null
+blocked-by: "Blocked on pg-default-pk-bigserial-cascade: the createTable→BIGSERIAL + dumper-narrowing change is correct but cascades BigInt ids across the PG lane, surfacing genuine code bugs (IN-clause BigInt coercion, int8-on-untyped-attr raw-string deserialize). Cannot land green in one 300-LOC PR; escalated to the cascade campaign story which sequences the code-bug fixes before the createTable change."
 ---
 
 ## Context
