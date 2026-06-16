@@ -1,6 +1,6 @@
 ---
 title: "transaction() option-key validation + DDL-in-transaction"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 27
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T23:36:41Z"
+assignee: "transaction-option-validation-and-ddl"
 blocked-by: null
 ---
 
