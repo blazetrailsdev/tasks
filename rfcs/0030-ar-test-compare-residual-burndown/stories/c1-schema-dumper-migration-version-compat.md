@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - c1-schema-dumper-timestamptz-version-compat
 deps-rfc: []
 est-loc: null
 priority: null
