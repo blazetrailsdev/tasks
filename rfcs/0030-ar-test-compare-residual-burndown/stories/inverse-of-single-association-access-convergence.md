@@ -1,6 +1,6 @@
 ---
 title: "Inverse-of wiring on single-association access path (recursive/STI/callbacks/autosave)"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T20:48:46Z"
+assignee: "inverse-of-single-association-access-convergence"
 blocked-by: null
 ---
 
