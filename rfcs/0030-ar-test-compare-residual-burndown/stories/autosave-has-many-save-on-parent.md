@@ -1,7 +1,7 @@
 ---
 title: "Autosave persists built has_many children on owner save"
-status: in-progress
-updated: 2026-06-15
+status: done
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
