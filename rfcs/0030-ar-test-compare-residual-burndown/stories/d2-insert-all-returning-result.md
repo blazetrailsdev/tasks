@@ -1,6 +1,6 @@
 ---
 title: "insert_all/upsert_all returning → ActiveRecord::Result"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3447
 claim: "2026-06-16T11:59:00Z"
 assignee: "d2-insert-all-returning-result"
 blocked-by: null
