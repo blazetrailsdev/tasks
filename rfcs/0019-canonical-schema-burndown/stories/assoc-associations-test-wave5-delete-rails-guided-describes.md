@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-wave5-delete-rails-guided-describes"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T16:33:31Z"
+assignee: "assoc-associations-test-wave5-delete-rails-guided-describes"
 blocked-by: null
 ---
 
