@@ -138,6 +138,6 @@ tests; R3 deletes borrow.
 
 | ID                                                                                                        | Title                                                                                    | Status | Est LOC | Cluster |
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------ | ------- | ------- |
-| [r3-remove-sibling-borrow-and-recovery](stories/r3-remove-sibling-borrow-and-recovery.md)                 | R3: remove sibling-borrow + recovery test once cache is always-warm                      | draft  | 120     | —       |
 | [r1-eager-persistent-schema-cache-test-harness](stories/r1-eager-persistent-schema-cache-test-harness.md) | R1: eager-warm + persistent per-test schema cache in the AR test harness                 | ready  | 150     | —       |
 | [r2-drop-synthesize-converge-adhoc-model-tests](stories/r2-drop-synthesize-converge-adhoc-model-tests.md) | R2: drop synthesize-from-attributes for table-backed models; converge ad-hoc-model tests | ready  | 250     | —       |
+| [r3-remove-sibling-borrow-and-recovery](stories/r3-remove-sibling-borrow-and-recovery.md)                 | R3: remove sibling-borrow + recovery test once cache is always-warm                      | ready  | 120     | —       |

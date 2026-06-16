@@ -1,6 +1,6 @@
 ---
 title: "R3: remove sibling-borrow + recovery test once cache is always-warm"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
