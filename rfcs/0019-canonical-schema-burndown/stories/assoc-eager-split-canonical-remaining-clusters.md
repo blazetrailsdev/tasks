@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical schema: remaining bespoke clusters (multi-PR)"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 3477
 claim: "2026-06-16T16:23:30Z"
 assignee: "assoc-eager-split-canonical-remaining-clusters"
 blocked-by: null
