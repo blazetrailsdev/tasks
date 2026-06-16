@@ -1,6 +1,6 @@
 ---
 title: "db_warnings_action :raise escalates DB warnings to exceptions"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 23
-pr: null
+pr: 3506
 claim: "2026-06-16T22:00:42Z"
 assignee: "db-warnings-action-raise-escalation"
 blocked-by: null
