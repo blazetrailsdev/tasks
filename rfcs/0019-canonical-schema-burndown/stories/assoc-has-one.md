@@ -1,6 +1,6 @@
 ---
 title: "Port has-one-associations.test.ts to canonical schema"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: null
+pr: 3466
 claim: "2026-06-16T14:34:37Z"
 assignee: "assoc-has-one"
 blocked-by: null
