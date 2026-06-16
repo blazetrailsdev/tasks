@@ -1,6 +1,6 @@
 ---
 title: "left_joins cross-model merge preserves left joins + wheres"
-status: ready
+status: claimed
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 21
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T21:36:55Z"
+assignee: "left-joins-cross-model-merge"
 blocked-by: null
 ---
 
