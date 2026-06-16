@@ -213,7 +213,6 @@ files, not this table.
 | [where-hash-keys-resolve-to-join-alias](stories/where-hash-keys-resolve-to-join-alias.md)                       | where-hash-keys-resolve-to-join-alias                                                                     | ready       | null    | —                |
 | [cc-pg-default-pk-bigserial](stories/cc-pg-default-pk-bigserial.md)                                             | cc-pg-default-pk-bigserial                                                                                | claimed     | null    | —                |
 | [d5-autosave-locking-residuals](stories/d5-autosave-locking-residuals.md)                                       | D5 — autosave + optimistic-locking-with-includes residuals                                                | claimed     | 70      | core-residuals   |
-| [e1-bind-parameter](stories/e1-bind-parameter.md)                                                               | E1 — bind_parameter residuals                                                                             | claimed     | 60      | adapter          |
 | [c1-schema-dumper-parity](stories/c1-schema-dumper-parity.md)                                                   | C1 — schema_dumper parity                                                                                 | in-progress | 180     | unblockers       |
 | [current-savepoint-name-accessor](stories/current-savepoint-name-accessor.md)                                   | expose current_savepoint_name / Transaction#savepoint_name                                                | in-progress | 50      | —                |
 | [d2-insert-all-canonical-models](stories/d2-insert-all-canonical-models.md)                                     | insert-all.test.ts: migrate to canonical models + fixtures                                                | in-progress | 200     | persistence      |
@@ -258,6 +257,7 @@ files, not this table.
 | [a2-join-model-semantics](stories/a2-join-model-semantics.md)                                                   | A2 — join_model: has_many :through join-model semantics                                                   | blocked     | 280     | associations     |
 | [a2-join-model-semantics-residual](stories/a2-join-model-semantics-residual.md)                                 | a2-join-model-semantics-residual                                                                          | blocked     | null    | —                |
 | [c1-schema-dumper-migration-version-compat](stories/c1-schema-dumper-migration-version-compat.md)               | c1-schema-dumper-migration-version-compat                                                                 | blocked     | null    | —                |
+| [e1-bind-parameter](stories/e1-bind-parameter.md)                                                               | E1 — bind_parameter residuals                                                                             | blocked     | 60      | adapter          |
 
 ## Changelog
 
