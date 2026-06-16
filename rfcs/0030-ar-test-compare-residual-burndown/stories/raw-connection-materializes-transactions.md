@@ -1,6 +1,6 @@
 ---
 title: "rawConnection materializes txn + disables lazy transactions"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 25
-pr: null
+pr: 3508
 claim: "2026-06-16T23:12:42Z"
 assignee: "raw-connection-materializes-transactions"
 blocked-by: null
