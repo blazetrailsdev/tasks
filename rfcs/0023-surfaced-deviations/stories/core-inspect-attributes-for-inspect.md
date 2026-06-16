@@ -1,6 +1,6 @@
 ---
 title: "Core#inspect honors attributes_for_inspect"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3444
 claim: "2026-06-16T11:38:09Z"
 assignee: "core-inspect-attributes-for-inspect"
 blocked-by: null
