@@ -1,6 +1,6 @@
 ---
 title: "inverse-associations.test.ts → canonical Human/Face/Interest fixtures"
-status: claimed
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
+pr: 3471
 claim: "2026-06-16T15:34:14Z"
 assignee: "inverse-associations-fixture-port"
 blocked-by: null
