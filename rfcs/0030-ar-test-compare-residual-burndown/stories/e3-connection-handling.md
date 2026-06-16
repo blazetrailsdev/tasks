@@ -1,6 +1,6 @@
 ---
 title: "E3 — standalone-connection + multi-db connection handling"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3460
 claim: "2026-06-16T13:47:10Z"
 assignee: "e3-connection-handling"
 blocked-by: null
