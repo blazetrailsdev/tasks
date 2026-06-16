@@ -1,6 +1,6 @@
 ---
 title: "Converge missing-gate tests to Rails gates (173 across 21 files)"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
