@@ -1,5 +1,5 @@
 ---
-rfc: "0000-schema-cache-always-warm-convergence"
+rfc: "0031-schema-cache-always-warm-convergence"
 title: "Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow)"
 status: draft
 created: 2026-06-16
@@ -13,7 +13,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Schema cache always-warm convergence
+# RFC 0031 — Schema cache always-warm convergence
 
 ## Summary
 
