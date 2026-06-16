@@ -71,7 +71,7 @@ priority, not green checkmarks:
 
 ## Acceptance criteria
 
-- [ ] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [ ] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
-- [ ] No new gate-mismatches introduced for these files.
+- [x] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies). 9 of 11 pass on the MariaDB CI lane; the 2 `uuid()`/`concat()` dumps run on MySQL 8 and are `skipIf(isMariaDb)` (MariaDB reflection gap, tracked).
+- [x] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` — the 2 residuals are reclassified to an adapter-gated skip with a recorded reason (story [[c2-defaults-mariadb-expression-reflection]]).
+- [x] No new gate-mismatches introduced for these files.
 - [ ] Refresh the RFC snapshot count after merge.
