@@ -1,6 +1,6 @@
 ---
 title: "change_table recorder proxy surfaces adapter column-type shorthands (t.hstore)"
-status: claimed
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3455
 claim: "2026-06-16T13:41:02Z"
 assignee: "change-table-recorder-adapter-column-methods"
 blocked-by: null
