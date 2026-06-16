@@ -1,13 +1,13 @@
 ---
 title: "timestamp: index is created for both timestamps (fixture-dependent)"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
