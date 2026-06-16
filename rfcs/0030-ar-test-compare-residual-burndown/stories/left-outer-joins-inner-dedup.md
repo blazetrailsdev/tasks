@@ -1,6 +1,6 @@
 ---
 title: "left_outer_joins dedupes association shared with inner joins to a single INNER JOIN"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
