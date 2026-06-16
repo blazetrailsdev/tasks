@@ -33,4 +33,4 @@ Rails insert_all_test.rb:666.
 - [ ] `_physicalTimestampCols` resolves timestamp aliases regardless of the
       alias key's case (or the canonical Developer aliases are snake_case).
 - [ ] Un-skip `upsert all implicitly sets timestamps even when columns are
-  aliased`; passes on SQLite.
+aliased`; passes on SQLite.
