@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical schema: remaining bespoke clusters (multi-PR)"
-status: in-progress
+status: done
 updated: 2026-06-16
 rfc: "0019-canonical-schema-burndown"
 cluster: null
