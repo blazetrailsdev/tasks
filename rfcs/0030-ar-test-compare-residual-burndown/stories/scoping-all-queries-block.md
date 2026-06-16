@@ -1,13 +1,13 @@
 ---
 title: "Relation#scoping(all_queries:) block-form parity"
 status: ready
-updated: 2026-06-15
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
