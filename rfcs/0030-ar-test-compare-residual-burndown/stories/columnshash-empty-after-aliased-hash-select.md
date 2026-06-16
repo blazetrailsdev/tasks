@@ -44,11 +44,11 @@ fallback), `packages/activerecord/src/table-metadata.ts` `associatedTable`
 
 ## Acceptance criteria
 
-- [ ] After resolving an aliased-table hash select, a fresh
+- [x] After resolving an aliased-table hash select, a fresh
       `columnsHash()`/`loadSchema()` on a same-table model returns the table's real
       columns (qualified projection), not an empty hash.
-- [ ] Remove the `PostWithDefaultSelect.columnsHash()` warm-up in
+- [x] Remove the `PostWithDefaultSelect.columnsHash()` warm-up in
       `select.test.ts` `beforeAll`; _reselect with default scope select_ still
       passes in full-file order against canonical SQLite (and PG/MySQL per gate).
-- [ ] Add a focused regression test reproducing the corruption (aliased hash
+- [x] Add a focused regression test reproducing the corruption (aliased hash
       select followed by a same-table model's first `columnsHash()` load).
