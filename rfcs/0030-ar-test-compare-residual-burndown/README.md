@@ -213,7 +213,6 @@ files, not this table.
 | [store-full-sti-class-name](stories/store-full-sti-class-name.md)                                                     | store-full-sti-class-name                                                                                 | draft       | null    | —                |
 | [cascaded-eager-nil-and-proxy-preload-convergence](stories/cascaded-eager-nil-and-proxy-preload-convergence.md)       | cascaded-eager-nil-and-proxy-preload-convergence                                                          | ready       | null    | —                |
 | [eager-load-extra-select-projection](stories/eager-load-extra-select-projection.md)                                   | eager-load-extra-select-projection                                                                        | ready       | null    | —                |
-| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                                                   | F1 — prevent-writes + hot-compat + misc tail                                                              | ready       | 140     | core-residuals   |
 | [has-many-current-scope-isolation](stories/has-many-current-scope-isolation.md)                                       | has_many reads ignore class current_scope                                                                 | ready       | 70      | relation-scoping |
 | [inclusion-validator-string-range](stories/inclusion-validator-string-range.md)                                       | inclusion-validator-string-range                                                                          | ready       | null    | —                |
 | [inverse-of-single-association-access-convergence](stories/inverse-of-single-association-access-convergence.md)       | Inverse-of wiring on single-association access path (recursive/STI/callbacks/autosave)                    | ready       | 200     | associations     |
@@ -297,6 +296,7 @@ files, not this table.
 | [cc-pg-default-pk-bigserial](stories/cc-pg-default-pk-bigserial.md)                                                   | cc-pg-default-pk-bigserial                                                                                | blocked     | null    | —                |
 | [e1-bind-parameter](stories/e1-bind-parameter.md)                                                                     | E1 — bind_parameter residuals                                                                             | blocked     | 60      | adapter          |
 | [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md)                                       | E4 — adapter_test notifications + explain tail                                                            | blocked     | 50      | adapter          |
+| [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                                                   | F1 — prevent-writes + hot-compat + misc tail                                                              | blocked     | 140     | core-residuals   |
 
 ## Changelog
 

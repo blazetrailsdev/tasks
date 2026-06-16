@@ -1,7 +1,7 @@
 ---
 title: "F1 — prevent-writes + hot-compat + misc tail"
-status: ready
-updated: 2026-06-15
+status: blocked
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocked behind RFC 0019 conversion of timestamp.test.ts (grandfathered; covered by 0019 timestamp-test-cluster / require-table-teardown-burndown-migration). Convert to canonical + drop the exclude entry first, then un-skip."
 ---
 
 ## Context
