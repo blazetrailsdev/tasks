@@ -1,6 +1,6 @@
 ---
 title: "has_many on new-record owner with custom PK present wrongly applies none (AND 1=0)"
-status: ready
+status: done
 updated: 2026-06-16
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3467
 claim: null
 assignee: null
 blocked-by: null
