@@ -7,7 +7,7 @@ cluster: persistence
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null
