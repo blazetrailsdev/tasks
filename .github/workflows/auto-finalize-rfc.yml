@@ -53,31 +53,41 @@ jobs:
         if: steps.tip.outputs.skip != 'true'
         run: |
           set -euo pipefail
-          changed=0
-          shopt -s nullglob
-          for dir in rfcs/0000-* rfcs/draft-*; do
-            [ -d "$dir" ] || continue
-            slug="$(basename "$dir")"
-            # 0000-template is the scaffold, not a placeholder awaiting a number.
-            [ "$slug" = "0000-template" ] && continue
-            echo "::notice::auto-finalizing $slug"
-            node scripts/finalize-rfc.mjs "$slug"
-            changed=1
-          done
-          if [ "$changed" = 0 ]; then
-            echo "no placeholder RFCs to finalize"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "auto-finalize: assign RFC number(s) on main"
-          # main may have advanced since checkout; rebase-retry the push. This
-          # push re-triggers ci.yml (validates the finalized state) and this
-          # workflow (which then finds no placeholder and no-ops). Self-terminating.
+          # Scan the *current* tip of main each attempt, never a stale checkout:
+          # reset to origin/main, finalize whatever placeholders exist there,
+          # push. The next number is computed against that exact tree, and the
+          # push only fast-forwards if main hasn't advanced since the reset — so
+          # two RFCs landing close together can't be assigned the same number
+          # (the loser resets to the winner's tip, recomputes, and retries). This
+          # is what the old concurrency group guaranteed; the reset loop now
+          # guarantees it without queueing (and thus without cancellations).
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
-            sleep 5
+            git fetch --quiet origin main
+            git reset --hard origin/main
+            changed=0
+            shopt -s nullglob
+            for dir in rfcs/0000-* rfcs/draft-*; do
+              [ -d "$dir" ] || continue
+              slug="$(basename "$dir")"
+              # 0000-template is the scaffold, not a placeholder awaiting a number.
+              [ "$slug" = "0000-template" ] && continue
+              echo "::notice::auto-finalizing $slug"
+              node scripts/finalize-rfc.mjs "$slug"
+              changed=1
+            done
+            if [ "$changed" = 0 ]; then
+              echo "no placeholder RFCs to finalize"
+              exit 0
+            fi
+            git add -A
+            git commit -m "auto-finalize: assign RFC number(s) on main"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push rejected (main advanced); re-scanning the new tip"
+            sleep 3
           done
           echo "::error::could not push auto-finalize commit after retries" >&2
           exit 1

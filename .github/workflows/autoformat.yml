@@ -54,24 +54,34 @@ jobs:
         if: steps.tip.outputs.skip != 'true'
         run: |
           set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Format the *current* tip of main each attempt, never a stale checkout:
+          # reset to origin/main, reformat, push. The push only fast-forwards if
+          # main hasn't advanced since the reset — so a successful push always
+          # lands the format fix on the exact tree it formatted, leaving main
+          # provably prettier-clean. If main advanced (lost the race, or a
+          # bot-token push doesn't re-trigger us), reset to the new tip and
+          # reformat — this is what closes the gap where a rebase could otherwise
+          # carry unformatted commits past the formatter.
           # .prettierignore already excludes index.md, lockfile, caches, and
           # node_modules; generated README tables are prettier-stable so this is
           # a no-op on them.
-          pnpm exec prettier --write .
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "main is already prettier-clean"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "style: auto-format main (prettier)"
-          # main may have advanced since checkout; rebase-retry the push. The
-          # reformat is idempotent, so a re-trigger of this workflow finds a
-          # clean tree and no-ops — self-terminating.
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
-            sleep 5
+            git fetch --quiet origin main
+            git reset --hard origin/main
+            pnpm exec prettier --write .
+            if [ -z "$(git status --porcelain)" ]; then
+              echo "main is already prettier-clean"
+              exit 0
+            fi
+            git add -A
+            git commit -m "style: auto-format main (prettier)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push rejected (main advanced); re-formatting the new tip"
+            sleep 3
           done
           echo "::error::could not push autoformat commit after retries" >&2
           exit 1
