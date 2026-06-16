@@ -1,7 +1,7 @@
 ---
 title: "columnshash-empty-after-aliased-hash-select"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-16T02:42:10Z"
+assignee: "columnshash-empty-after-aliased-hash-select"
 blocked-by: null
 ---
 
