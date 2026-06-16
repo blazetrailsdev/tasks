@@ -146,8 +146,9 @@ into pre-planned sibling PRs here.
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                  | Title                                                            | Status | Est LOC | Cluster      |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------- | ------ | ------- | ------------ |
+| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md) | Converge missing-gate tests to Rails gates (173 across 21 files) | draft  | 400     | missing-gate |
 
 ## Changelog
 
