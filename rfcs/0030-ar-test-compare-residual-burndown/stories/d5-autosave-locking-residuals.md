@@ -1,6 +1,6 @@
 ---
 title: "D5 — autosave + optimistic-locking-with-includes residuals"
-status: claimed
+status: in-progress
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 3461
 claim: "2026-06-16T12:29:02Z"
 assignee: "d5-autosave-locking-residuals"
 blocked-by: null
