@@ -39,8 +39,15 @@ that have the same reciprocal name from different models".
 
 ## Acceptance criteria
 
-- [ ] After loading fixtures, an autosaved/created new record of the same model
-      inserts without an id collision (sequence advanced past fixture ids, or
-      equivalent), on sqlite (and pg/mysql).
-- [ ] Un-skip the 3 affected `inverse-associations.test.ts` tests (and any others
-      hitting the same collision) as part of, or following, the fix.
+- [x] After loading fixtures, an autosaved/created new record of the same model
+      inserts without an id collision. Root cause was not the sequence (a plain
+      `create` after fixtures correctly draws `MAX(id)+1`); it was
+      `SingularAssociation#scopeForCreate` surfacing the target PK. Fixed by
+      mirroring Rails `super.except!(*Array(klass.primary_key))`.
+- [x] Un-skipped the 2 affected `inverse-associations.test.ts` tests that hit the
+      collision ("child instance should be shared with newly created parent",
+      "that we can create associations that have the same reciprocal name from
+      different models"). The 3rd listed test ("building has many parent
+      association inverses one record") clears the collision but fails on a
+      separate has_many-inversing build gap — tracked as
+      build-human-inverses-has-many.
