@@ -1,6 +1,6 @@
 ---
 title: "MariaDB string/char/enum literal default quotes not stripped in columns() reflection"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
