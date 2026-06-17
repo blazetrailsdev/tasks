@@ -46,8 +46,8 @@ resolution (or a deferred returning computation) through `execute()`.
 
 ## Acceptance criteria
 
-- [ ] `returning` default and `readonlyColumns()` consult the database primary
+- [x] `returning` default and `readonlyColumns()` consult the database primary
       keys (schema_cache), matching Rails `InsertAll#primary_keys`.
-- [ ] A test covers insert_all/upsert_all on an id-less, configured-PK table
+- [x] A test covers insert_all/upsert_all on an id-less, configured-PK table
       (Speedometer-style) confirming no spurious RETURNING / readonly column.
-- [ ] No regression for normal models (model PK == db PK).
+- [x] No regression for normal models (model PK == db PK).
