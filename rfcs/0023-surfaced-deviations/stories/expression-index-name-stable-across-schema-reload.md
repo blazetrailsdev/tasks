@@ -1,7 +1,7 @@
 ---
 title: "Expression-index name diverges between addIndex and schema dump/reload build path"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T02:01:24Z"
+assignee: "expression-index-name-stable-across-schema-reload"
 blocked-by: null
 ---
 
