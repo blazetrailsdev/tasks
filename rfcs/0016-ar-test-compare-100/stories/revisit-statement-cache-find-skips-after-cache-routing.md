@@ -1,7 +1,7 @@
 ---
 title: "Populate + introspect the connection statement pool so bind_parameter statement-cache tests pass"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0016-ar-test-compare-100"
 cluster: adapter
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T13:01:27Z"
+assignee: "revisit-statement-cache-find-skips-after-cache-routing"
 blocked-by: null
 ---
 
