@@ -34,7 +34,7 @@ Blocks `adapters/postgresql/virtual-column.test.ts` test `schema dumping`
 
 ## Acceptance criteria
 
-- [ ] `dumpTableSchema` routes virtual/generated columns through the PG dialect
+- [x] `dumpTableSchema` routes virtual/generated columns through the PG dialect
       `prepareColumnOptions` (emitting `type:`/`as:`/`stored: true`).
-- [ ] Generation expression carried through the dumper column mapping.
-- [ ] Un-skip `schema dumping` in `virtual-column.test.ts`; it passes under PG.
+- [x] Generation expression carried through the dumper column mapping.
+- [x] Un-skip `schema dumping` in `virtual-column.test.ts`; it passes under PG.
