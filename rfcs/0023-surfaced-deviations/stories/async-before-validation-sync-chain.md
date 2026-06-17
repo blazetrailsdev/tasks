@@ -36,11 +36,18 @@ callback flow, so an async callback should be supported.
 
 ## Acceptance criteria
 
-- [ ] The validation callback chain awaits Promise-returning
+- [x] ~~The validation callback chain awaits Promise-returning
       `before_validation` / `after_validation` callbacks instead of throwing
-      "before returned a Promise".
-- [ ] Un-skip `association with validate false does not run associated
+      "before returned a Promise".~~ SUPERSEDED (PR #3495): owner decided to
+      keep validation synchronous and converge the deviation at its source —
+      RichPerson's `before_validation` callbacks only do synchronous
+      `writeAttribute` and Rails declares them sync
+      (activerecord/test/models/person.rb:98-114), so the `async` wrappers were
+      an unfaithful port artifact and were made synchronous. The general
+      this-binding gap is owned by the done story
+      `proc-callback-this-instance-exec-binding` (PR #3493).
+- [x] Un-skip `association with validate false does not run associated
 validation callbacks on update` in
       `associations/has-and-belongs-to-many-associations.test.ts` (verbatim
       name) and assert as Rails does (haabtm_test.rb:874-885).
-- [ ] No regression in the validations + callbacks suites.
+- [x] No regression in the validations + callbacks suites.
