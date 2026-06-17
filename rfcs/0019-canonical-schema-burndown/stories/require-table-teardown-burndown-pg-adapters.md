@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown: 6 postgresql adapter test files (collation, invertible-migration, range, schema, uuid, virtual-column)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
