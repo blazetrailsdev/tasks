@@ -1,6 +1,6 @@
 ---
 title: "Expression-index name diverges between addIndex and schema dump/reload build path"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
