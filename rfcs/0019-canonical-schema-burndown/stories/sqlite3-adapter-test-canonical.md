@@ -1,6 +1,6 @@
 ---
 title: "Port sqlite3-adapter.test.ts to canonical schema or isolated-by-design"
-status: ready
+status: claimed
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T16:11:39Z"
+assignee: "sqlite3-adapter-test-canonical"
 blocked-by: null
 ---
 
