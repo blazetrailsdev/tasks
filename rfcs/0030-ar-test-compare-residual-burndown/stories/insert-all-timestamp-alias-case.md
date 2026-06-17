@@ -30,7 +30,7 @@ Rails insert_all_test.rb:666.
 
 ## Acceptance criteria
 
-- [ ] `_physicalTimestampCols` resolves timestamp aliases regardless of the
+- [x] `_physicalTimestampCols` resolves timestamp aliases regardless of the
       alias key's case (or the canonical Developer aliases are snake_case).
-- [ ] Un-skip `upsert all implicitly sets timestamps even when columns are
+- [x] Un-skip `upsert all implicitly sets timestamps even when columns are
 aliased`; passes on SQLite.
