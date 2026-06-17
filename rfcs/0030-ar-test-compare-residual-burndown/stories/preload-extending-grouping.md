@@ -29,5 +29,5 @@ Rails ref: `vendor/rails/activerecord/test/cases/associations_test.rb`
 
 ## Acceptance criteria
 
-- [ ] Preloader groups same-SQL second-level associations differing only by `extending`.
-- [ ] Un-skip `preload groups queries with same sql at second level`; it passes (4 queries).
+- [x] Preloader groups same-SQL second-level associations differing only by `extending`.
+- [x] Un-skip `preload groups queries with same sql at second level`; it passes (4 queries).
