@@ -1,7 +1,7 @@
 ---
 title: "Gate strict-loading violation behind find_target? new-record check in functional loaders"
-status: in-progress
-updated: 2026-06-16
+status: done
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
