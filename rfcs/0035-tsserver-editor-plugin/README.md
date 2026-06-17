@@ -114,6 +114,28 @@ per-file and Program-less, so the registry pass is held by the **shell**
 threaded into the plugin via plugin config or a registry callback. This is the
 key interface question (see Open Questions).
 
+### The node-free boundary
+
+`@blazetrails/activerecord` is bound by the framework's hard rules — **no
+`node:*` imports, no `process.*`, async-fs only**. The existing `.tse` LSP
+shell (`packages/trails-tsc/src/lsp-plugin.ts`) imports `node:fs` / `node:path`
+and reads files synchronously — fine there, because `trails-tsc` is build
+tooling outside those rules. The AR plugin keeps the rules satisfied by
+contributing **only the pure `virtualize()` transform** (string in, string +
+deltas out — no I/O, no globals). All filesystem and host interaction stays in
+the `trails-tsc` shell. So `createArModelsPlugin()` adds zero `node:*` surface
+to `activerecord`; the boundary is the `TscPlugin` interface itself.
+
+### Coexistence with the `.tse` plugin
+
+One LSP shell, many `TscPlugin`s. `lsp-plugin.ts` today dispatches on the
+`.tse` extension; the design generalizes that to consult the **registered
+plugin list** keyed by extension — `.tse` → tse plugin, `.ts` → `ar-models`
+plugin (gated by the fast pre-filter so non-model `.ts` files pass through
+untouched). The two never claim the same file, so there is no override
+contention; load order is irrelevant between them. The shell composes deltas
+per file regardless of which plugin produced them.
+
 ### MVP feature cut
 
 **In (MVP):** completions, hover/quickInfo, go-to-definition on synthesized
@@ -157,6 +179,44 @@ override path and the existing `deltas`/`remapLine` removes ~2 PRs' worth.
 Realistic MVP: **~600–800 LOC across 3 PRs** (each ≤500 LOC); full parity
 (diagnostics + perf + cross-editor) adds ~2–3 more PRs post-MVP. Numbers are
 estimates to be confirmed per story.
+
+## Risks & mitigations
+
+- **tsserver plugin API stability.** The plugin surface is public but evolves
+  across TS versions. Mitigation: use only documented `LanguageServiceHost` /
+  `LanguageService` methods (the `.tse` shell already does); pin
+  `typescript` as a peer dep and add a contract test across the supported TS
+  range in `editor-docs-and-smoke`.
+- **Snapshot staleness vs. thrashing.** A wrong script-version scheme makes
+  edits invisible or re-parses every keystroke. Mitigation: the `.tse` shell's
+  snapshot path is already proven in tsserver; `lsp-perf-incremental`
+  re-virtualizes only the changed file and rebuilds the registry only on
+  program-identity change, with a perf harness guarding regressions.
+- **Walker needs a `Program`; the plugin interface is per-file.** Resolved by
+  holding the registry in the shell and threading `baseNames` / `modelRegistry`
+  in (Open Question 1) — `virtualize()` itself stays pure and Program-less.
+- **Auto-import resolution in the editor.** Injected `import type` lines must
+  resolve through the virtualized snapshot or go-to-def breaks. Mitigation:
+  first integration test in `lsp-position-remap-mvp` asserts go-to-def through
+  an auto-imported target (Open Question 2).
+- **CLI/editor drift.** Avoided by construction — both consume the same
+  `TscPlugin.virtualize`; `lsp-plugin-ar-dispatch` asserts byte-identical
+  snapshots between host and LSP on the Phase 1b fixtures.
+
+## Exit criteria
+
+- **MVP (Phase 1):** with the plugin installed, VS Code shows correct
+  completions, hover/quickInfo, and go-to-definition on synthesized members
+  (attributes, associations, scopes, enums) of a zero-`declare`, zero-import
+  model — every returned span in the user's original coordinates. LSP and CLI
+  `virtualize` output match byte-for-byte on the Phase 1b fixtures.
+- **Parity (Phase 2):** editor diagnostics land on the user's original lines
+  with original message text; code-fixes/refactors never edit injected
+  ranges; p95 file-open overhead under budget on a 500-model synthetic repo
+  with no per-keystroke walker runs; `docs/editor-setup.md` covers tier-1
+  editors with a pinned TS compatibility note; tsserver smoke test green in CI.
+- **Handoff (Phase 3):** the plan doc's Phase 2 is a pointer to this RFC;
+  remaining docs/consumer cutover proceeds under the plan doc's Phase 3.
 
 ## Alternatives considered
 
