@@ -5,7 +5,7 @@ updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
 deps:
-  - converge-partial-decl-models-updated-at
+  - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: 40
 priority: 50
