@@ -1,7 +1,7 @@
 ---
 title: "PG array OID element subtypes: hstore[] / tz-aware datetime[] / timestamp[] precision"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T11:16:24Z"
+assignee: "pg-array-oid-element-subtypes"
 blocked-by: null
 ---
 
