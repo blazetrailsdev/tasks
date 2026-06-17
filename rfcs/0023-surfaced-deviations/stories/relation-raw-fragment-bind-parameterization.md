@@ -1,6 +1,6 @@
 ---
 title: "Relation#where raw ? fragments should bind, not inline (PG type-cast parity)"
-status: ready
+status: draft
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
