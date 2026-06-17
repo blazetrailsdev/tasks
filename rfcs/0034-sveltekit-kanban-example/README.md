@@ -220,8 +220,9 @@ this RFC is finalized.
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                | Title                                                 | Status | Est LOC | Cluster  |
+| ----------------------------------------------------------------- | ----------------------------------------------------- | ------ | ------- | -------- |
+| [sveltekit-kanban-scaffold](stories/sveltekit-kanban-scaffold.md) | Kanban example: scaffold SvelteKit app + AR bootstrap | draft  | 120     | examples |
 
 ## Changelog
 
