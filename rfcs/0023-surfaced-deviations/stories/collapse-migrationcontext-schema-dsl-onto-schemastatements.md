@@ -1,12 +1,12 @@
 ---
-title: "collapse-migrationcontext-schema-dsl-onto-schemastatements"
+title: "Collapse MigrationContext bespoke schema-DSL onto SchemaStatements (single source of truth, Rails-faithful)"
 status: draft
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 450
 priority: null
 pr: null
 claim: null
