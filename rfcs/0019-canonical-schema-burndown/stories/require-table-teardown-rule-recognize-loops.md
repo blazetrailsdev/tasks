@@ -1,6 +1,6 @@
 ---
 title: "Harden require-table-teardown rule to recognize loop/array-based teardown"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
