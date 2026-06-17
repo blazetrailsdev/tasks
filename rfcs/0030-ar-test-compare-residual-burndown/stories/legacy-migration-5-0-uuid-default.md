@@ -1,6 +1,6 @@
 ---
 title: "Legacy Migration[5.0] uuid PK default (uuid_generate_v4) via migrator"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
