@@ -30,6 +30,6 @@ Two small transaction-surface gaps (transactions.test.ts):
 
 ## Acceptance criteria
 
-- [ ] `transaction()` raises on unknown option keys (matching Rails ArgumentError).
-- [ ] `add_column`/`remove_column`/`reset_column_information` work inside a
+- [x] `transaction()` raises on unknown option keys (matching Rails ArgumentError).
+- [x] `add_column`/`remove_column`/`reset_column_information` work inside a
       transaction on SQLite; both tests un-skipped and pass; no new gate-mismatches.
