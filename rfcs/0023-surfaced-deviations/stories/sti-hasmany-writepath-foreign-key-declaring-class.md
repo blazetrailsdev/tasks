@@ -41,10 +41,10 @@ eager/preload), so the regression is latent. Rails derives all of these from
 
 ## Acceptance criteria
 
-- [ ] hasMany build / push / `setOwnerAttributes` / nullify on an STI subclass
+- [x] hasMany build / push / `setOwnerAttributes` / nullify on an STI subclass
       owner write the declaring-class FK (`post_id`), not `special_post_id`.
-- [ ] Route the four write-path derivations through `reflection.foreignKey`
+- [x] Route the four write-path derivations through `reflection.foreignKey`
       (mirroring the `computeHasManyWhere` fix), keeping the `ctor.name` fallback
       only for anonymous inline associations with no registered reflection.
-- [ ] Add a faithful test: build/push/nullify a `SpecialComment` through a
+- [x] Add a faithful test: build/push/nullify a `SpecialComment` through a
       `SpecialPost` owner and assert `post_id` is set.
