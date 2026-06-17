@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown: migration/DDL feature tests (invertible-migration, migration, query-cache, reserved-word, schema-dumper, schema-introspection, timestamp)"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 9
-pr: null
+pr: 3554
 claim: "2026-06-17T16:35:25Z"
 assignee: "require-table-teardown-burndown-migration"
 blocked-by: null
