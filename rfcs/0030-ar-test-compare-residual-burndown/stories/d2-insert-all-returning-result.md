@@ -1,7 +1,7 @@
 ---
 title: "insert_all/upsert_all returning → ActiveRecord::Result"
-status: in-progress
-updated: 2026-06-16
+status: done
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
 deps: []
