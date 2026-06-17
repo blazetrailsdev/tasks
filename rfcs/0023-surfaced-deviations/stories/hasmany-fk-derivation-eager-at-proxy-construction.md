@@ -46,7 +46,7 @@ Rails: `vendor/rails/activerecord/test/cases/associations_test.rb:244`
       await), matching Rails, rather than at proxy construction.
 - [ ] If converged, update the wave-5 test
       (`query constraints over three without defining explicit foreign key query
-  constraints raises`) to assert the throw on load instead of on the accessor,
+constraints raises`) to assert the throw on load instead of on the accessor,
       and drop the divergence note in its comment.
 - [ ] If ratified as an intentional deviation, document it in the surfaced-
       deviations ledger with the rationale (per deviation policy: prefer converge).
