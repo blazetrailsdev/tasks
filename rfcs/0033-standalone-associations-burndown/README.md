@@ -1,5 +1,5 @@
 ---
-rfc: "0000-standalone-associations-burndown"
+rfc: "0033-standalone-associations-burndown"
 title: "Standalone-association call burndown"
 status: draft
 created: 2026-06-17
