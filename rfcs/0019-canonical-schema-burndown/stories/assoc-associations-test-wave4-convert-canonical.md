@@ -1,7 +1,7 @@
 ---
 title: "assoc-associations-test-wave4-convert-canonical"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T19:09:51Z"
+assignee: "assoc-associations-test-wave4-convert-canonical"
 blocked-by: null
 ---
 
