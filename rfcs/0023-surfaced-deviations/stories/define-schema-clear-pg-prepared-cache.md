@@ -1,6 +1,6 @@
 ---
 title: "defineSchema/useFixtures rebuild should clear PG prepared-statement cache (clear_cache!)"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 36
-pr: null
+pr: 3519
 claim: "2026-06-17T01:31:25Z"
 assignee: "define-schema-clear-pg-prepared-cache"
 blocked-by: null
