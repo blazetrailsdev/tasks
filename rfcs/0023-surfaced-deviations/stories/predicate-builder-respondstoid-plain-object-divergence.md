@@ -1,7 +1,7 @@
 ---
 title: "PredicateBuilder respondsToId derefs any {id} object where Rails respond_to?(:id) excludes a bare Hash"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
