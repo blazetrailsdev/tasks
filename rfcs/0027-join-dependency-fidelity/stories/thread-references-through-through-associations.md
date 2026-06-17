@@ -1,7 +1,7 @@
 ---
 title: "Thread references aliasing through _addThroughViaJoinAssociation"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T14:16:24Z"
+assignee: "thread-references-through-through-associations"
 blocked-by: null
 ---
 
