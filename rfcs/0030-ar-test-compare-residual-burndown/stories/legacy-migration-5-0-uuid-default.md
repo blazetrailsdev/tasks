@@ -39,3 +39,18 @@ the gap is purely the legacy migrator path. Multi-PR framework effort.
       migrator (uuid PK -> `uuid_generate_v4()` implicit default; `default: nil`
       honored).
 - [ ] Un-skip the two legacy-migration uuid tests; they pass under PG.
+
+## Resolution: won't do
+
+Closed as **won't do** (2026-06-17). Implementing this requires porting an
+`ActiveRecord::Migration::Compatibility::V5_0` shim, but legacy Rails migration
+compatibility shims are deliberately **unported** by policy —
+`scripts/api-compare/unported-files.ts:53-54` marks `migration/compatibility`
+as _"Pre-1.0: legacy Rails version migration compatibility shims."_ The attempt
+(PR #3524, which added a `V5_0` class) was closed unmerged because it
+contradicted that decision.
+
+The two `uuid_test.rb` legacy-migration tests stay skipped by that policy; they
+are not a fidelity gap to converge but out-of-scope by the unported-shim
+decision. If the project ever reverses the unported call for
+`migration/compatibility`, re-open this work then.
