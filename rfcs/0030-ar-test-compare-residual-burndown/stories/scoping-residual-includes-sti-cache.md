@@ -1,7 +1,7 @@
 ---
 title: "relation_scoping residuals: includes-scoping, STI find constraint, unscoped cache busting"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T13:46:27Z"
+assignee: "scoping-residual-includes-sti-cache"
 blocked-by: null
 ---
 
