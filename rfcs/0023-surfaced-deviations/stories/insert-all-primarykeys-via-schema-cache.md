@@ -1,14 +1,14 @@
 ---
 title: "InsertAll#primaryKeys reads model.primaryKey, not schema_cache.primary_keys (insert_all.rb:61)"
-status: claimed
-updated: 2026-06-16
+status: in-progress
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: 28
-pr: null
+pr: 3511
 claim: "2026-06-16T23:48:42Z"
 assignee: "insert-all-primarykeys-via-schema-cache"
 blocked-by: null
