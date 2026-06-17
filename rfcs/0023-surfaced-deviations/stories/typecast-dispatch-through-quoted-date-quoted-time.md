@@ -1,6 +1,6 @@
 ---
 title: "type_cast inlines date/time formatting instead of dispatching through quoted_date/quoted_time"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 50
-pr: null
+pr: 3550
 claim: "2026-06-17T15:51:38Z"
 assignee: "typecast-dispatch-through-quoted-date-quoted-time"
 blocked-by: null
