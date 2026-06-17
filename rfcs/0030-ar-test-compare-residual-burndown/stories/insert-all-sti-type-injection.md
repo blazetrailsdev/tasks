@@ -1,7 +1,7 @@
 ---
 title: "insert_all resolveSti ignores registerSubclass STI"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 29
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T00:00:42Z"
+assignee: "insert-all-sti-type-injection"
 blocked-by: null
 ---
 
