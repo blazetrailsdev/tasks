@@ -29,5 +29,5 @@ Rails ref: `vendor/rails/activerecord/test/cases/associations_test.rb`
 
 ## Acceptance criteria
 
-- [ ] Polymorphic preload resolves same-named tables across distinct pooled connections.
-- [ ] Un-skip `multi database polymorphic preload with same table name`; it passes.
+- [x] Polymorphic preload resolves same-named tables across distinct pooled connections.
+- [x] Un-skip `multi database polymorphic preload with same table name`; it passes.
