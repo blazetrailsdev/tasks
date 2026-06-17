@@ -38,4 +38,4 @@ difference that DOES leak into toSql) could group/split wrongly.
 - [ ] `LoaderQuery._valuesForQueries` consumes it directly, dropping the
       toSql/where-count fallback heuristic.
 - [ ] Existing preloader grouping tests (`preload groups queries with same
-  scope/sql at second level`) still pass.
+scope/sql at second level`) still pass.
