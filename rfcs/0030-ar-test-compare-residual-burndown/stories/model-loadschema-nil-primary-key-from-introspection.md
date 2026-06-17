@@ -1,6 +1,6 @@
 ---
 title: "loadSchema consults adapter.primaryKey so key-less data sources yield nil PK"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
