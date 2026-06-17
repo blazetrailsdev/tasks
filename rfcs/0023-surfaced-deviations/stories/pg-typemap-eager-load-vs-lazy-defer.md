@@ -1,6 +1,6 @@
 ---
 title: "PG type-map lazy+defer diverges from Rails eager initialize_type_map load"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 50
-pr: null
+pr: 3532
 claim: "2026-06-17T11:46:25Z"
 assignee: "pg-typemap-eager-load-vs-lazy-defer"
 blocked-by: null
