@@ -28,5 +28,5 @@ status enum, Card=Story; self-referential `hasMany :through` for dependencies.
       ready/blocked/assignedTo/byCluster, title presence + slug uniqueness),
       User, StoryDependency.
 - [ ] `db/schema.ts` dumped; `pnpm typecheck` via `trails-tsc --schema
-  db/schema.ts --noEmit` passes (separate from Vite bundling).
+db/schema.ts --noEmit` passes (separate from Vite bundling).
 - [ ] `db/seeds.ts` loads a sample board.
