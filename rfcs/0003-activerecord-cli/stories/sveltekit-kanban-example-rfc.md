@@ -1,6 +1,6 @@
 ---
 title: "Author RFC: SvelteKit example app (Kanban modeled on tasks/rfcs)"
-status: claimed
+status: done
 updated: 2026-06-17
 rfc: "0003-activerecord-cli"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: 3542
 claim: "2026-06-17T15:16:26Z"
 assignee: "sveltekit-kanban-example-rfc"
 blocked-by: null
