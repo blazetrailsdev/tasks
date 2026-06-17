@@ -1,7 +1,7 @@
 ---
 title: "loadSchema consults adapter.primaryKey so key-less data sources yield nil PK"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T03:46:26Z"
+assignee: "model-loadschema-nil-primary-key-from-introspection"
 blocked-by: null
 ---
 
