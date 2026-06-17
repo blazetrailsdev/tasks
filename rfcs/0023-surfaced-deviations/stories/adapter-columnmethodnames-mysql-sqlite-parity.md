@@ -1,7 +1,7 @@
 ---
 title: "columnMethodNames() parity: mirror MySQL/SQLite define_column_methods exactly (not nativeDatabaseTypes)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T18:54:44Z"
+assignee: "adapter-columnmethodnames-mysql-sqlite-parity"
 blocked-by: null
 ---
 
