@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown: 6 postgresql adapter test files (collation, invertible-migration, range, schema, uuid, virtual-column)"
-status: ready
+status: claimed
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T16:48:25Z"
+assignee: "require-table-teardown-burndown-pg-adapters"
 blocked-by: null
 ---
 
