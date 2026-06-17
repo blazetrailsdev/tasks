@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown exclude baseline (18 files)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 9
-pr: 3557
+pr: 3556
 claim: "2026-06-17T17:24:43Z"
 assignee: "require-table-teardown-ratchet-burndown"
 blocked-by: null
