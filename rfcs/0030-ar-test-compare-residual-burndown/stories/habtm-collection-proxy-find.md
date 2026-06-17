@@ -1,7 +1,7 @@
 ---
 title: "habtm: CollectionProxy include/transaction/preloaded-size"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
