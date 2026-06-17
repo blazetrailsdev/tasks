@@ -1,6 +1,6 @@
 ---
 title: "InsertAll#primaryKeys reads model.primaryKey, not schema_cache.primary_keys (insert_all.rb:61)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
