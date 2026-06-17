@@ -1,7 +1,7 @@
 ---
 title: "insert_all RETURNING does not resolve aliased attributes"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T00:12:45Z"
+assignee: "insert-all-returning-alias-resolution"
 blocked-by: null
 ---
 
