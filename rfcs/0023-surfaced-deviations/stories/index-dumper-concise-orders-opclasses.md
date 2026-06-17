@@ -1,6 +1,6 @@
 ---
 title: "SchemaDumper: collapse index orders/opclasses via concise_options (lengths-only today)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
