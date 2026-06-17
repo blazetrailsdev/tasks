@@ -1,7 +1,7 @@
 ---
 title: "Narrow ComparisonValidator catch to ArgumentError (Rails rescue parity)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
