@@ -1,14 +1,14 @@
 ---
 title: "Converge mysql-explain.test.ts trails-only EXPLAIN probes to canonical schema"
-status: ready
-updated: 2026-06-16
+status: done
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3551
 claim: null
 assignee: null
 blocked-by: null
