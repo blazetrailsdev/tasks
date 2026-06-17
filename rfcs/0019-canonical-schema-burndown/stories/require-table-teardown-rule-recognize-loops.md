@@ -1,6 +1,6 @@
 ---
 title: "Harden require-table-teardown rule to recognize loop/array-based teardown"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: null
+pr: 3558
 claim: "2026-06-17T17:39:43Z"
 assignee: "require-table-teardown-rule-recognize-loops"
 blocked-by: null
