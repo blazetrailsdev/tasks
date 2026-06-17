@@ -1,6 +1,6 @@
 ---
 title: "recorder-camelcase-column-type-normalization"
-status: ready
+status: draft
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
