@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown: abstract-mysql active-schema + schema-statements-on-adapter test files"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 9
-pr: null
+pr: 3556
 claim: "2026-06-17T17:01:24Z"
 assignee: "require-table-teardown-burndown-schema-statements"
 blocked-by: null
