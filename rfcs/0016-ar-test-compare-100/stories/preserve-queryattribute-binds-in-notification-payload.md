@@ -1,7 +1,7 @@
 ---
 title: "Preserve QueryAttribute bind objects on the sql.active_record payload (binds are logged)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0016-ar-test-compare-100"
 cluster: adapter
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T12:31:26Z"
+assignee: "preserve-queryattribute-binds-in-notification-payload"
 blocked-by: null
 ---
 
