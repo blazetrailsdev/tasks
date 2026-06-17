@@ -1,7 +1,7 @@
 ---
 title: "Burn down require-table-teardown exclude baseline (18 files)"
-status: draft
-updated: 2026-06-11
+status: ready
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
