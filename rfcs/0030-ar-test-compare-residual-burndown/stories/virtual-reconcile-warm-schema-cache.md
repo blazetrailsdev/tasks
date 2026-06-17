@@ -12,7 +12,7 @@ priority: 50
 pr: 3560
 claim: "2026-06-17T17:54:46Z"
 assignee: "virtual-reconcile-warm-schema-cache"
-blocked-by: "Warming the shared schema cache converges partial-declaration models to their real columns (Rails-faithful), which breaks bespoke tests that mask updated_at (cache-key/integration/associations/named-scoping). Blocked on converge-partial-decl-models-updated-at (RFC 0019). See PR #3560 investigation."
+blocked-by: "Schema-cache warming converges partial-declaration models to real columns (Rails-faithful), breaking bespoke tests that fake schemas. converge-partial-decl-models-updated-at (PR #3569) fixed cache-key+associations but left integration.test.ts (5 cacheKey tests) and named-scoping STI failing. Blocked on converge-integration-namedscoping-remainder. PR #3560 closed/parked."
 ---
 
 ## Context
