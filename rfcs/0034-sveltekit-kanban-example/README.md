@@ -1,5 +1,5 @@
 ---
-rfc: "0000-sveltekit-kanban-example"
+rfc: "0034-sveltekit-kanban-example"
 title: "SvelteKit example app (Kanban modeled on tasks/rfcs)"
 status: draft
 created: 2026-06-17
@@ -11,7 +11,7 @@ clusters:
   - "examples"
 ---
 
-# RFC — SvelteKit example app (Kanban modeled on tasks/rfcs)
+# RFC 0034 — SvelteKit example app (Kanban modeled on tasks/rfcs)
 
 ## Summary
 
