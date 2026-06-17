@@ -1,7 +1,7 @@
 ---
 title: "Materialize model declares: roll the generator across test-helpers/models in waves"
-status: draft
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: ["materialize-declares-generator-fixes"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T14:31:50Z"
+assignee: "materialize-declares-rollout-waves"
 blocked-by: null
 ---
 
