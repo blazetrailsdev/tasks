@@ -1,7 +1,7 @@
 ---
 title: "d2-insert-all-db-primary-keys-convergence"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 33
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T00:48:43Z"
+assignee: "d2-insert-all-db-primary-keys-convergence"
 blocked-by: null
 ---
 
