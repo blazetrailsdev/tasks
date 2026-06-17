@@ -1,6 +1,6 @@
 ---
 title: "insert_all resolveSti ignores registerSubclass STI"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
