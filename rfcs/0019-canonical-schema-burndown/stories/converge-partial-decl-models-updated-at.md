@@ -1,6 +1,6 @@
 ---
 title: "Converge partial-declaration models that mask updated_at (cache-key/integration/associations/named-scoping)"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: null
+pr: 3569
 claim: "2026-06-17T20:26:29Z"
 assignee: "converge-partial-decl-models-updated-at"
 blocked-by: null
