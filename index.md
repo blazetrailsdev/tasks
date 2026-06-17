@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-tsserver-editor-plugin](rfcs/0000-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | active | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -40,3 +39,4 @@
 | [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | active | @deanmarano | activerecord |
 | [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | draft | @your-handle | activerecord |
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |
+| [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-tsserver-editor-plugin"
+rfc: "0035-tsserver-editor-plugin"
 title: "tsserver / editor plugin for zero-declare AR models"
 status: draft
 created: 2026-06-17
