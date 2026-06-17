@@ -1,6 +1,6 @@
 ---
 title: "MariaDB string/char/enum literal default quotes not stripped in columns() reflection"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: null
+pr: 3526
 claim: "2026-06-17T03:16:26Z"
 assignee: "mariadb-string-literal-default-unquote"
 blocked-by: null
