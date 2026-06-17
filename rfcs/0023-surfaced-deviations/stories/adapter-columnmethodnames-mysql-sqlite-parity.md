@@ -32,9 +32,9 @@ that adapter's `nativeDatabaseTypes` keys.
 
 ## Acceptance criteria
 
-- [ ] Diff each adapter's `nativeDatabaseTypes` keys against its Rails
+- [x] Diff each adapter's `nativeDatabaseTypes` keys against its Rails
       `define_column_methods` list (MySQL, SQLite, Abstract).
-- [ ] Where they diverge, override `columnMethodNames()` on that adapter to
+- [x] Where they diverge, override `columnMethodNames()` on that adapter to
       mirror the explicit Rails list exactly (as PG now does), so the
       `change_table` proxy surfaces the same `t.<type>` shorthands as Rails.
-- [ ] Add round-trip / recording coverage for any newly-surfaced shorthands.
+- [x] Add round-trip / recording coverage for any newly-surfaced shorthands.
