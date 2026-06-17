@@ -1,6 +1,6 @@
 ---
 title: "relation_scoping residuals: includes-scoping, STI find constraint, unscoped cache busting"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: relation-scoping
