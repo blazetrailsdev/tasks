@@ -1,6 +1,6 @@
 ---
 title: "exec_insert_all should route through internalExecQuery (impl SQLite castResult)"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 32
-pr: null
+pr: 3515
 claim: "2026-06-17T00:36:42Z"
 assignee: "exec-insert-all-route-via-internal-exec-query"
 blocked-by: null
