@@ -1,6 +1,6 @@
 ---
 title: "Preloader groups same-SQL second-level assocs differing by extending"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: null
+pr: 3533
 claim: "2026-06-17T12:01:25Z"
 assignee: "preload-extending-grouping"
 blocked-by: null
