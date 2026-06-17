@@ -1,6 +1,6 @@
 ---
 title: "Converge partial-declaration models that mask updated_at (cache-key/integration/associations/named-scoping)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
