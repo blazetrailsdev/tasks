@@ -1,7 +1,7 @@
 ---
 title: "Await async before_validation callbacks on the validation chain"
-status: in-progress
-updated: 2026-06-16
+status: done
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
