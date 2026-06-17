@@ -1,6 +1,6 @@
 ---
 title: "insert_all timestamp-alias resolution is snake_case-only"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 31
-pr: null
+pr: 3514
 claim: "2026-06-17T00:24:42Z"
 assignee: "insert-all-timestamp-alias-case"
 blocked-by: null
