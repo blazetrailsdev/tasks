@@ -1,6 +1,6 @@
 ---
 title: "eager-load-extra-select-projection"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3520
 claim: "2026-06-17T01:46:26Z"
 assignee: "eager-load-extra-select-projection"
 blocked-by: null
