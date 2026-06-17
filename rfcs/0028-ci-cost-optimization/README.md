@@ -331,6 +331,7 @@ close-risk (CONTENTION-ONLY):** `consolidate-preflight-micro-jobs`,
 
 | ID                                                                                                    | Title                                                                           | Status | Est LOC | Cluster              |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------ | ------- | -------------------- |
+| [ar-sqlite-lane-coverage-reporting](stories/ar-sqlite-lane-coverage-reporting.md)                     | ar-sqlite-lane-coverage-reporting                                               | draft  | null    | —                    |
 | [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft  | 160     | parallelism-rounding |
 | [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft  | 120     | parallelism-rounding |
 | [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft  | 200     | flake-cost           |
