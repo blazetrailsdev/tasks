@@ -1,6 +1,6 @@
 ---
 title: "migration-context-filesystem-loader"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3527
 claim: "2026-06-17T03:31:24Z"
 assignee: "migration-context-filesystem-loader"
 blocked-by: null
