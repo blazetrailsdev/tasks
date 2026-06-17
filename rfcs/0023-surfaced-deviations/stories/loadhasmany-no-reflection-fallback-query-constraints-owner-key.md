@@ -1,6 +1,6 @@
 ---
 title: "loadHasMany/loadHasOne no-reflection fallback: resolve composite query_constraints owner key"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 50
-pr: null
+pr: 3525
 claim: "2026-06-17T03:01:25Z"
 assignee: "loadhasmany-no-reflection-fallback-query-constraints-owner-key"
 blocked-by: null
