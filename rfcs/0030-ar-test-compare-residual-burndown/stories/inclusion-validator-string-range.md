@@ -1,6 +1,6 @@
 ---
 title: "inclusion-validator-string-range"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
