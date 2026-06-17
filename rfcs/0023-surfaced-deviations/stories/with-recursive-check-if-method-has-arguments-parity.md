@@ -1,6 +1,6 @@
 ---
 title: "with_recursive routes through check_if_method_has_arguments! (parity with #with)"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 50
-pr: null
+pr: 3563
 claim: "2026-06-17T18:39:44Z"
 assignee: "with-recursive-check-if-method-has-arguments-parity"
 blocked-by: null
