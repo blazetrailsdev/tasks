@@ -40,11 +40,11 @@ trails: `packages/activerecord/src/associations/join-dependency.ts`
 
 ## Acceptance criteria
 
-- [ ] Under eager loading, a relation's explicit `select`/extra-select columns are
+- [x] Under eager loading, a relation's explicit `select`/extra-select columns are
       preserved on the base table's projection and hydrated onto the base record
       (type-cast applied), instead of being replaced by the JoinDependency's
       `t0_r*` column list.
-- [ ] Un-skip `type casted extra select with eager loading` and restore the
+- [x] Un-skip `type casted extra select with eager loading` and restore the
       omitted `eager_load(:comments)` assertion in `non select columns wont be
 loaded`; both pass against canonical SQLite (and PG/MySQL per the ruby gate).
-- [ ] No regressions in eager-load column projection / hydration tests.
+- [x] No regressions in eager-load column projection / hydration tests.
