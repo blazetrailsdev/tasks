@@ -1,6 +1,6 @@
 ---
 title: "Resolve attribute aliases in timestamp/cache-key reads (Rails timestamp.rb parity)"
-status: ready
+status: claimed
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T22:13:12Z"
+assignee: "timestamp-alias-resolution-fidelity"
 blocked-by: null
 ---
 
