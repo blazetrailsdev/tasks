@@ -1,6 +1,6 @@
 ---
 title: "Preloader groups same-SQL second-level assocs differing by extending"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
