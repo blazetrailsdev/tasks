@@ -1,6 +1,6 @@
 ---
 title: "with_recursive routes through check_if_method_has_arguments! (parity with #with)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
