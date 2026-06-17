@@ -1,6 +1,6 @@
 ---
 title: "Author#firstPosts missing Rails where(id: [0,1]) default scope"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 35
-pr: null
+pr: 3517
 claim: "2026-06-17T01:12:42Z"
 assignee: "author-first-posts-missing-scope"
 blocked-by: null
