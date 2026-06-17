@@ -32,9 +32,9 @@ in PR #3482's `has_many sti subselect count` describe).
 
 ## Acceptance criteria
 
-- [ ] Have `defineSchema` (and the `useFixtures` `{ schema }` rebuild path)
+- [x] Have `defineSchema` (and the `useFixtures` `{ schema }` rebuild path)
       invoke `clearCacheBang()` after DROP/CREATE DDL, mirroring Rails
       `clear_cache!`.
-- [ ] Remove the manual `clearCacheBang()` workaround from
+- [x] Remove the manual `clearCacheBang()` workaround from
       `has-many-associations.test.ts`.
-- [ ] Verify the full file passes on postgres without the manual call.
+- [x] Verify the full file passes on postgres without the manual call.
