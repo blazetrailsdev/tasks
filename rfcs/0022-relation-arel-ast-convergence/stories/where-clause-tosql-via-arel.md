@@ -1,6 +1,6 @@
 ---
 title: "Build WhereClause SQL through Arel AST instead of bespoke toSql (burn down rails-arel-tosql exclude)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
