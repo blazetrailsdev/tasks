@@ -1,7 +1,7 @@
 ---
 title: "reverse-single-term-balanced-paren-order"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T12:46:24Z"
+assignee: "reverse-single-term-balanced-paren-order"
 blocked-by: null
 ---
 
