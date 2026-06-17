@@ -1,7 +1,7 @@
 ---
 title: "Convert remaining has-many-associations.test.ts describes to canonical (wave 3)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T19:39:44Z"
+assignee: "assoc-has-many-describes-wave3"
 blocked-by: null
 ---
 
