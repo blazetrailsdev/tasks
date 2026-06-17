@@ -1,6 +1,6 @@
 ---
 title: "Preserve QueryAttribute bind objects on the sql.active_record payload (binds are logged)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0016-ar-test-compare-100"
 cluster: adapter
