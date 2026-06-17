@@ -36,19 +36,19 @@ and `readAttribute("updated_at")` resolves, but `_readAttribute` does not.
 
 ## Acceptance criteria
 
-- [ ] `timestampAttributesForCreate/UpdateInModel` resolve `created_at`/
+- [x] `timestampAttributesForCreate/UpdateInModel` resolve `created_at`/
       `updated_at`/`*_on` through `_attributeAliases` to the real column names
       before intersecting with `columnNames()`, matching Rails timestamp.rb:92-97.
-- [ ] `maxUpdatedColumnTimestamp` reads via the alias-aware reader (Rails
+- [x] `maxUpdatedColumnTimestamp` reads via the alias-aware reader (Rails
       `self[attr]`), so aliased timestamp models (e.g. `Developer` →
       `legacy_updated_at`) produce `model/id-<ts>` cache keys.
-- [ ] `cacheVersion` reads `updated_at` alias-aware (already partly: it uses
+- [x] `cacheVersion` reads `updated_at` alias-aware (already partly: it uses
       `readAttribute` — verify against Developer alias).
-- [ ] Blast radius checked: fixture auto-timestamp filling
+- [x] Blast radius checked: fixture auto-timestamp filling
       (`allTimestampAttributesInModel`), `touch`, and create-time timestamps now
       apply to aliased-timestamp models. Run touch/timestamp/fixtures/cache test
       files; rely on CI for the full suite.
-- [ ] Add focused tests proving `Developer.first.cacheKey()` is `developers/id-<ts>`.
+- [x] Add focused tests proving `Developer.first.cacheKey()` is `developers/id-<ts>`.
 
 ## Definition of done
 
