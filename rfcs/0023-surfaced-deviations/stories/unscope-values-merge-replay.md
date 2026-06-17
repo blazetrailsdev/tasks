@@ -1,6 +1,6 @@
 ---
 title: "Track unscope_values for merge-time replay"
-status: claimed
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: null
+pr: 3422
 claim: "2026-06-17T16:21:38Z"
 assignee: "unscope-values-merge-replay"
 blocked-by: null
