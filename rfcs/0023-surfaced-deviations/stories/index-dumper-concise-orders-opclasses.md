@@ -1,7 +1,7 @@
 ---
 title: "SchemaDumper: collapse index orders/opclasses via concise_options (lengths-only today)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-17T02:31:24Z"
+assignee: "index-dumper-concise-orders-opclasses"
 blocked-by: null
 ---
 
