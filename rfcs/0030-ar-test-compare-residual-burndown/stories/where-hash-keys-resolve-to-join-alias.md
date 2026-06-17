@@ -1,6 +1,6 @@
 ---
 title: "where-hash-keys-resolve-to-join-alias"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
