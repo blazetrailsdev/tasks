@@ -1,7 +1,7 @@
 ---
 title: "Port associations.test.ts to canonical schema (split per-describe)"
-status: in-progress
-updated: 2026-06-16
+status: done
+updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
