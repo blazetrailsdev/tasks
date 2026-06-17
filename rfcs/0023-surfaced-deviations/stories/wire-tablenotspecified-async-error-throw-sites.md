@@ -1,6 +1,6 @@
 ---
 title: "Wire TableNotSpecified (load_schema!) and AsynchronousQueryInsideTransactionError (async select) throw sites"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
