@@ -1,6 +1,6 @@
 ---
 title: "collapse-migrationcontext-schema-dsl-onto-schemastatements"
-status: ready
+status: draft
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
