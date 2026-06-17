@@ -1,6 +1,6 @@
 ---
 title: "Legacy Migration[5.0] uuid PK default (uuid_generate_v4) via migrator"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 50
-pr: null
+pr: 3524
 claim: "2026-06-17T02:46:24Z"
 assignee: "legacy-migration-5-0-uuid-default"
 blocked-by: null
