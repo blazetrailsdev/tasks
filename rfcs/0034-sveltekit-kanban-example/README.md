@@ -220,11 +220,12 @@ this RFC is finalized.
 
 <!-- generated: stories table -->
 
-| ID                                                                                  | Title                                                  | Status | Est LOC | Cluster  |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------ | ------ | ------- | -------- |
-| [sveltekit-kanban-migrations-models](stories/sveltekit-kanban-migrations-models.md) | Kanban example: migrations, models, schema dump, seeds | draft  | 200     | examples |
-| [sveltekit-kanban-routes-ui](stories/sveltekit-kanban-routes-ui.md)                 | Kanban example: routes, form actions, API, Svelte UI   | draft  | 300     | examples |
-| [sveltekit-kanban-scaffold](stories/sveltekit-kanban-scaffold.md)                   | Kanban example: scaffold SvelteKit app + AR bootstrap  | draft  | 120     | examples |
+| ID                                                                                  | Title                                                       | Status | Est LOC | Cluster  |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | -------- |
+| [sveltekit-kanban-migrations-models](stories/sveltekit-kanban-migrations-models.md) | Kanban example: migrations, models, schema dump, seeds      | draft  | 200     | examples |
+| [sveltekit-kanban-readme-ci](stories/sveltekit-kanban-readme-ci.md)                 | Kanban example: README, smoke, CI lane, link from AR README | draft  | 120     | examples |
+| [sveltekit-kanban-routes-ui](stories/sveltekit-kanban-routes-ui.md)                 | Kanban example: routes, form actions, API, Svelte UI        | draft  | 300     | examples |
+| [sveltekit-kanban-scaffold](stories/sveltekit-kanban-scaffold.md)                   | Kanban example: scaffold SvelteKit app + AR bootstrap       | draft  | 120     | examples |
 
 ## Changelog
 
