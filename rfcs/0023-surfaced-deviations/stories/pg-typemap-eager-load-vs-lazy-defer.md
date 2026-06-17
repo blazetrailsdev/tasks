@@ -40,12 +40,12 @@ populated the store).
 
 ## Acceptance criteria
 
-- [ ] Decide: either make the trails type-map build perform Rails' eager full
+- [x] Decide: either make the trails type-map build perform Rails' eager full
       `loadAdditionalTypes()` once per connection (closest to Rails, lets the
       deferral machinery be deleted), or ratify the lazy+deferral design as an
       intentional async-driven divergence and document it.
-- [ ] If converging: remove `deferredArrayOids`/`retryDeferredArrays` and
+- [x] If converging: remove `deferredArrayOids`/`retryDeferredArrays` and
       `deferredMultirangeOids`/`retryDeferredMultiranges` once eager load makes
       them dead, keeping array/range/multirange introspection green on PG.
-- [ ] No regression to `schema dump allows array of decimal defaults` or the
+- [x] No regression to `schema dump allows array of decimal defaults` or the
       bigint/multirange array dump tests.
