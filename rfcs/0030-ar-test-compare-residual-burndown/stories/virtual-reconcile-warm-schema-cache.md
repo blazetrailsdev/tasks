@@ -4,7 +4,8 @@ status: in-progress
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
-deps: []
+deps:
+  - converge-partial-decl-models-updated-at
 deps-rfc: []
 est-loc: 40
 priority: 50
