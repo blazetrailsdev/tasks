@@ -1,6 +1,6 @@
 ---
 title: "STI hasMany write-path FK derivation uses owner instance class"
-status: claimed
+status: in-progress
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: null
+pr: 3541
 claim: "2026-06-17T14:01:27Z"
 assignee: "sti-hasmany-writepath-foreign-key-declaring-class"
 blocked-by: null
