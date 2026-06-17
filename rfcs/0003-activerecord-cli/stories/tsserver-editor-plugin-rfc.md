@@ -1,6 +1,6 @@
 ---
 title: "Author RFC: tsserver / editor plugin (adopt + re-verify virtual-source-files Phase 2)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0003-activerecord-cli"
 cluster: null
