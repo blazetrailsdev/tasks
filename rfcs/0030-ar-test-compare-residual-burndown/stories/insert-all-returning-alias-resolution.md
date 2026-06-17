@@ -1,6 +1,6 @@
 ---
 title: "insert_all RETURNING does not resolve aliased attributes"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
