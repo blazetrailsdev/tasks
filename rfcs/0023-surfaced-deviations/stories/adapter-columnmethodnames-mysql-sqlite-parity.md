@@ -1,6 +1,6 @@
 ---
 title: "columnMethodNames() parity: mirror MySQL/SQLite define_column_methods exactly (not nativeDatabaseTypes)"
-status: in-progress
+status: done
 updated: 2026-06-17
 rfc: "0023-surfaced-deviations"
 cluster: null
