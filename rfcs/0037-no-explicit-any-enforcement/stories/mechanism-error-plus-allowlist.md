@@ -1,6 +1,6 @@
 ---
 title: "Flip AR no-explicit-any warn→error with shrinking allowlist (split src/test)"
-status: draft
+status: ready
 updated: 2026-06-18
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
