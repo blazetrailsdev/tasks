@@ -34,4 +34,4 @@ Item / FakeModel rows leak in: got [1,2,3,4,12,13], expected [1,2]).
 - [ ] Through-association SQL applies the polymorphic `*_type` condition from the
       source reflection.
 - [ ] Un-skip `has many through polymorphic has one` / `has many through
-  polymorphic has many` in join-model.test.ts.
+polymorphic has many` in join-model.test.ts.
