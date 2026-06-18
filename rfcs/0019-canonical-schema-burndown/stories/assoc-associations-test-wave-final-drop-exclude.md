@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-wave-final-drop-exclude"
-status: blocked
+status: ready
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-06-18T03:52:08Z"
-assignee: "assoc-associations-test-wave-final-drop-exclude"
-blocked-by: "Depends on unmerged prerequisite waves: PRs #3575 (wave8), #3576 (wave9), #3577 (finder-sql-inverse-on-create), #3578 (force-reload-async-validate) — all in-progress/open. The first AssociationsTest describe still contains the bespoke finder-sql/force-reload/wave8-9 Rails-counterpart bodies these PRs are converting; the final drop-exclude cannot run until they merge or it duplicates their work and conflicts. Re-ready once all four land in main."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
