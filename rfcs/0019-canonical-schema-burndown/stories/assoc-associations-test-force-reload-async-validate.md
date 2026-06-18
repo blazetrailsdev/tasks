@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-force-reload-async-validate"
-status: claimed
+status: in-progress
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3578
 claim: "2026-06-18T03:22:06Z"
 assignee: "assoc-associations-test-force-reload-async-validate"
 blocked-by: null
