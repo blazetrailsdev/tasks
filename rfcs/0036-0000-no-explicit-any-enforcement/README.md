@@ -1,5 +1,5 @@
 ---
-rfc: "0000-no-explicit-any-enforcement"
+rfc: "0036-0000-no-explicit-any-enforcement"
 title: "no-explicit-any enforcement & burndown (activerecord)"
 status: draft
 created: 2026-06-18
@@ -14,7 +14,7 @@ related-rfcs:
   - "0025-fidelity-verification-tooling"
 ---
 
-# RFC — `no-explicit-any` enforcement & burndown (activerecord)
+# RFC 0036 — `no-explicit-any` enforcement & burndown (activerecord)
 
 ## Summary
 
