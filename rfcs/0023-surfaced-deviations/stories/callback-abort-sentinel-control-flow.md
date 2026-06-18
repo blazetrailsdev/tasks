@@ -1,6 +1,6 @@
 ---
 title: "callback-abort-sentinel-control-flow"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0023-surfaced-deviations"
 cluster: null
