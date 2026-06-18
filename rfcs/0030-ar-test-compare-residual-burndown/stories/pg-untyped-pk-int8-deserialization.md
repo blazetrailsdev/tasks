@@ -1,6 +1,6 @@
 ---
 title: "PG untyped-PK int8 deserialization: resolve implicit PK type on schema-cache miss"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T17:13:10Z"
+assignee: "pg-untyped-pk-int8-deserialization"
 blocked-by: null
 ---
 
