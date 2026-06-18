@@ -47,12 +47,25 @@ when persisted and in memory differ`.
 
 ## Acceptance criteria
 
-- [ ] Converge or faithfully convert the trails-specific bespoke bodies (no
-      ratification).
-- [ ] Convert AssociationProxyTest and PreloaderTest `defineSchema` blocks to
-      canonical TEST_SCHEMA + fixtures/official models.
-- [ ] Remove all remaining scratch tables from the first describe's
-      `defineSchema` (or eliminate the block).
-- [ ] Drop `associations.test.ts` from the canonical-schema exclude list;
-      `blazetrails/require-canonical-schema` passes on the whole file.
-- [ ] test:compare delta non-negative.
+Scope was narrowed (per owner) to the first `AssociationsTest` describe; the
+broader describe conversions + exclude-drop were split into follow-up stories.
+
+- [x] Converge or faithfully convert the trails-specific bespoke bodies (no
+      ratification). — PR #3589: converted inline-fallback has_many/has_one +
+      composite hmt-delete onto canonical Sharded models; removed 4 deviation
+      bodies with convergence stories
+      ([[setbelongsto-composite-fk-inference-convergence]],
+      [[composite-hmt-composite-pk-target-convergence]],
+      [[polymorphic-through-composite-owner-convergence]]).
+- [x] Remove remaining scratch tables from the first describe's `defineSchema` —
+      reduced to only the deferred cpk body's tables (`cpk_orders`,
+      `cpk_order_items`).
+- [~] Convert AssociationProxyTest and PreloaderTest `defineSchema` blocks —
+  DEFERRED to [[associations-test-associationproxytest-canonical]],
+  [[associations-test-preloadertest-canonical]] (+ also
+  [[associations-test-overridingassociationstest-canonical]]).
+- [~] Drop `associations.test.ts` from the exclude list — DEFERRED to
+  [[associations-test-drop-exclude-final]] (blocked on the three describe
+  conversions above + [[cpk-counter-cache-column-demodulize-convergence]]).
+- [x] test:compare delta non-negative. — associations.test.ts 128/128, no source
+      changes (api:compare unaffected).
