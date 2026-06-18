@@ -1,6 +1,6 @@
 ---
 title: "hm-belongsto-inverse-cache-poisoned-after-collection-load"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T23:23:07Z"
+assignee: "hm-belongsto-inverse-cache-poisoned-after-collection-load"
 blocked-by: null
 ---
 
