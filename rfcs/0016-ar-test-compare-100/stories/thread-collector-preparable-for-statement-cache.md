@@ -1,6 +1,6 @@
 ---
 title: "thread-collector-preparable-for-statement-cache"
-status: claimed
+status: done
 updated: 2026-06-18
 rfc: "0016-ar-test-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 3598
 claim: "2026-06-18T19:18:48Z"
 assignee: "thread-collector-preparable-for-statement-cache"
 blocked-by: null
