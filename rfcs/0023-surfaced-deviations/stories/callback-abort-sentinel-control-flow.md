@@ -1,6 +1,6 @@
 ---
 title: "callback-abort-sentinel-control-flow"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T18:00:40Z"
+assignee: "callback-abort-sentinel-control-flow"
 blocked-by: null
 ---
 
