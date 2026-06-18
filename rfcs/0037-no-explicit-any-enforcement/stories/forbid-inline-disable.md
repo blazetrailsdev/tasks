@@ -1,6 +1,6 @@
 ---
 title: "Custom rule: forbid eslint-disable of no-explicit-any in AR"
-status: draft
+status: ready
 updated: 2026-06-18
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
