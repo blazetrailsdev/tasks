@@ -40,5 +40,4 @@
 | [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | draft | @your-handle | activerecord |
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |
 | [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
-| [0036-0000-no-explicit-any-enforcement](rfcs/0036-0000-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | draft | @deanmarano | activerecord |
 | [0037-no-explicit-any-enforcement](rfcs/0037-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | draft | @deanmarano | activerecord |
