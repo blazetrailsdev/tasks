@@ -1,6 +1,6 @@
 ---
 title: "Sweep PG-lane record.id assertions to tolerate BigInt (pre-BIGSERIAL-flip)"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T18:30:38Z"
+assignee: "pg-record-id-bigint-assertion-sweep"
 blocked-by: null
 ---
 
