@@ -1,11 +1,12 @@
 ---
 title: "Memoize schema cache when virtual reconciliation reflects on cold cache"
 status: blocked
-updated: 2026-06-17
+updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
 deps:
-  - converge-integration-namedscoping-remainder
+  - converge-integration-test-canonical-developer
+  - converge-named-scoping-canonical
 deps-rfc: []
 est-loc: 40
 priority: 50
