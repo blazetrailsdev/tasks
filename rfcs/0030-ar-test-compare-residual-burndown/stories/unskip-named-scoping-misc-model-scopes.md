@@ -33,6 +33,13 @@ scopes / engine details trails lacks:
   alias equivalence; trails materializes to a plain JS array with only
   `.filter`, so there is no distinct relation method to compare (may stay
   permanently descoped).
+- `class method in scope` — Rails `reply.rb` `scope :ordered, -> { Reply.order(:id) }`
+  references the Reply class directly, escaping the `approved_replies` association's
+  `parent_id` constraint so `topics(:first).approved_replies.ordered` returns both
+  approved replies (second + fourth). The canonical Reply.ordered chains off the
+  relation (`q.order("id")`) and does not escape; trails returns only [second].
+  Converge canonical Reply.ordered to reference the class and verify the
+  association proxy honors the class-scope escape, then assert the exact records.
 - `model class should respond to none` — Rails asserts `Topic.none?` (true only
   when no records exist). trails implements no `isNone` predicate at the
   relation/Querying layers, and `base.ts` delegates `isAny`/`isMany`/`isOne` but
@@ -54,6 +61,9 @@ Rails source: `vendor/rails/.../scoping/named_scoping_test.rb`
       `without_table` model as Rails defines them; un-skip those cases.
 - [ ] Add `Relation#isNone` + `Querying.isNone` + `base.ts` static delegation;
       un-skip `model class should respond to none`.
+- [ ] Converge canonical `Reply.ordered` to `-> { Reply.order(:id) }` (class
+      reference / association-scope escape); un-skip `class method in scope` with
+      the exact `[second, fourth]` assertion.
 - [ ] Decide `find all should behave like select` (implement or document
       permanent descope with rationale).
 
