@@ -1,6 +1,6 @@
 ---
 title: "Memoize schema cache when virtual reconciliation reflects on cold cache"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 40
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T15:50:05Z"
+assignee: "virtual-reconcile-warm-schema-cache"
 blocked-by: null
 ---
 
