@@ -1,6 +1,6 @@
 ---
 title: "PG untyped-PK int8 deserialization: resolve implicit PK type on schema-cache miss"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
