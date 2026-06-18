@@ -1,6 +1,6 @@
 ---
 title: "join-model.test.ts → canonical: eager/include + custom-key (wave 3)"
-status: claimed
+status: in-progress
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["assoc-join-model-canonical"]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: 3591
 claim: "2026-06-18T15:22:08Z"
 assignee: "assoc-join-model-canonical-wave3"
 blocked-by: null
