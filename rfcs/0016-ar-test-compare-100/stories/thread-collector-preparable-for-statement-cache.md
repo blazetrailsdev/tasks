@@ -1,13 +1,13 @@
 ---
 title: "thread-collector-preparable-for-statement-cache"
 status: ready
-updated: 2026-06-17
+updated: 2026-06-18
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
