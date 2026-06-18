@@ -6,6 +6,12 @@ rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
   - pg-record-id-bigint-assertion-sweep
+  - pg-record-id-bigint-sweep-batches
+  - pg-record-id-bigint-sweep-habtm
+  - pg-record-id-bigint-sweep-join-model
+  - pg-record-id-bigint-sweep-named-scoping
+  - pg-record-id-bigint-sweep-relation-with
+  - pg-record-id-bigint-sweep-relations
   - pg-untyped-pk-int8-deserialization
 deps-rfc: []
 est-loc: 60
