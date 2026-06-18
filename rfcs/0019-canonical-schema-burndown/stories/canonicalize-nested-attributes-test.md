@@ -1,13 +1,13 @@
 ---
 title: "Canonicalize nested-attributes.test.ts (drop makeModels/bespoke tables)"
 status: ready
-updated: 2026-06-16
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
