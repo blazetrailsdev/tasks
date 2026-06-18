@@ -1,7 +1,7 @@
 ---
 title: "join-model.test.ts → canonical: STI/self-ref/preload (wave 4)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["assoc-join-model-canonical"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 490
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T16:24:18Z"
+assignee: "assoc-join-model-canonical-wave4"
 blocked-by: null
 ---
 
