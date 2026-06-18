@@ -1,6 +1,6 @@
 ---
 title: "Convert OverridingAssociationsTest describe in associations.test.ts to canonical"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T20:28:56Z"
+assignee: "associations-test-overridingassociationstest-canonical"
 blocked-by: null
 ---
 
