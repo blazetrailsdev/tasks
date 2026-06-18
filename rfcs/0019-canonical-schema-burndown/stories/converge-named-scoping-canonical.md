@@ -1,7 +1,7 @@
 ---
 title: "Converge scoping/named-scoping.test.ts to canonical models"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T13:45:41Z"
+assignee: "converge-named-scoping-canonical"
 blocked-by: null
 ---
 
