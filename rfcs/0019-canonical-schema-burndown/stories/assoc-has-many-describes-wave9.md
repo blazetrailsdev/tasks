@@ -1,6 +1,6 @@
 ---
 title: "assoc-has-many-describes-wave9"
-status: claimed
+status: in-progress
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3582
 claim: "2026-06-18T12:52:08Z"
 assignee: "assoc-has-many-describes-wave9"
 blocked-by: null
