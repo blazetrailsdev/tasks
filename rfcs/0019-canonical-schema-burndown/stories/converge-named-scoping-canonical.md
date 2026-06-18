@@ -24,11 +24,11 @@ bespoke models that mask `updated_at` (story
 
 ## Acceptance criteria
 
-- [ ] Open `named_scope_test.rb` first; port bodies/assertions word-for-word.
-- [ ] Replace bespoke partial models with canonical models + fixtures carrying
+- [x] Open `named_scope_test.rb` first; port bodies/assertions word-for-word.
+- [x] Replace bespoke partial models with canonical models + fixtures carrying
       the full column set.
-- [ ] Rails-faithful cacheKey/column expectations; never ratify `model/id`.
-- [ ] Remove `scoping/named-scoping.test.ts` from
+- [x] Rails-faithful cacheKey/column expectations; never ratify `model/id`.
+- [x] Remove `scoping/named-scoping.test.ts` from
       `eslint/require-canonical-schema-exclude.json` in the converting PR.
 
 ## Definition of done
