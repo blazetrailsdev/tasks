@@ -1,6 +1,6 @@
 ---
 title: "Memoize schema cache when virtual reconciliation reflects on cold cache"
-status: blocked
+status: ready
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 3560
-claim: "2026-06-17T17:54:46Z"
-assignee: "virtual-reconcile-warm-schema-cache"
-blocked-by: "Schema-cache warming converges partial-declaration models to real columns (Rails-faithful), breaking bespoke tests that fake schemas. converge-partial-decl-models-updated-at (PR #3569, MERGED) fixed cache-key+associations. Remaining unmerged deps as of 2026-06-18: (1) converge-integration-test-canonical-developer — status=claimed/in-progress, no PR yet (its blocker timestamp-alias-resolution-fidelity/PR #3571 is now done, so it is unblocked); (2) converge-named-scoping-canonical — status=ready, not started, no PR. Both must merge into main before this story can rebuild PR #3560. PR #3560 closed/parked."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
