@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-wave7-convert-canonical"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
