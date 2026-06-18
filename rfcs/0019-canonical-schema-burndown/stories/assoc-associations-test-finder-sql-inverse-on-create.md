@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-finder-sql-inverse-on-create"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T02:52:06Z"
+assignee: "assoc-associations-test-finder-sql-inverse-on-create"
 blocked-by: null
 ---
 
