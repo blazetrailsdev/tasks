@@ -1,13 +1,13 @@
 ---
 title: "callback-abort-sentinel-control-flow"
 status: ready
-updated: 2026-06-16
+updated: 2026-06-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
