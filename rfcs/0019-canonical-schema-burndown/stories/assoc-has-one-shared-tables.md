@@ -1,6 +1,6 @@
 ---
 title: "Convert has-one-associations.test.ts bespoke firms/accounts/companies to canonical"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
