@@ -4,7 +4,9 @@ status: ready
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - pg-record-id-bigint-assertion-sweep
+  - pg-untyped-pk-int8-deserialization
 deps-rfc: []
 est-loc: 60
 priority: 40
