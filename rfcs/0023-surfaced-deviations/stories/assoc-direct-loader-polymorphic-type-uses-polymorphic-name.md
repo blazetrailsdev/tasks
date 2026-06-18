@@ -1,6 +1,6 @@
 ---
 title: "Direct-loader/build/through polymorphic _type sites should use polymorphic_name (base_class)"
-status: ready
+status: claimed
 updated: 2026-06-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-18T14:52:07Z"
+assignee: "assoc-direct-loader-polymorphic-type-uses-polymorphic-name"
 blocked-by: null
 ---
 
