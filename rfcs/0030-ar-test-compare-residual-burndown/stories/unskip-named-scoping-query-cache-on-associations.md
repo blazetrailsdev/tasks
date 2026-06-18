@@ -31,9 +31,9 @@ the second identical read issues no query (and that arg variants are keyed
 independently). trails has no `Model.cache`-block query cache around these
 association reads.
 
-`test_scopes_are_reset_on_association_reload` (named_scoping_test.rb:570) is the
+`test_scopes_are_reset_on_association_reload` (named*scoping_test.rb:570) is the
 flip side: it iterates `[:destroy_all, :reset, :delete_all]` and asserts the
-association proxy's _cached_ named-scope relation object differs (`assert_not_same`)
+association proxy's \_cached* named-scope relation object differs (`assert_not_same`)
 after each. trails does not cache named-scope relations on association proxies —
 each `post.comments.<scope>()` rebuilds a fresh relation (two consecutive calls
 are already `!==` with no reload), so there is nothing to reset/invalidate. Only
