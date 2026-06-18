@@ -1,13 +1,13 @@
 ---
 title: "Port ActiveSupport CacheKeyTest (expand_cache_key) against real code"
 status: ready
-updated: 2026-06-17
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
