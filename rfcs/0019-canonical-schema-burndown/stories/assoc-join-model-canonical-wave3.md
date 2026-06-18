@@ -1,6 +1,6 @@
 ---
 title: "join-model.test.ts → canonical: eager/include + custom-key (wave 3)"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
