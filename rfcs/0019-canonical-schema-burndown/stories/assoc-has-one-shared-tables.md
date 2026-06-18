@@ -1,6 +1,6 @@
 ---
 title: "Convert has-one-associations.test.ts bespoke firms/accounts/companies to canonical"
-status: claimed
+status: in-progress
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 3585
 claim: "2026-06-18T13:22:06Z"
 assignee: "assoc-has-one-shared-tables"
 blocked-by: null
