@@ -45,12 +45,12 @@ PG int8→BigInt path exposes it.
 
 ## Acceptance criteria
 
-- [ ] An ad-hoc model that declares some attributes but not `id`, sharing a
+- [x] An ad-hoc model that declares some attributes but not `id`, sharing a
       canonical table, resolves the implicit PK to the correct adapter type even
       on a schema-cache miss (so input-cast matches the read path on every lane).
-- [ ] `persistence.test.ts` `update columns changing id` passes on the PG
+- [x] `persistence.test.ts` `update columns changing id` passes on the PG
       bigint lane without weakening the assertion.
-- [ ] Green on all three lanes BEFORE the createTable flip (no-op on serial/
+- [x] Green on all three lanes BEFORE the createTable flip (no-op on serial/
       integer PKs) and correct after. Test names verbatim.
 
 ## Notes
