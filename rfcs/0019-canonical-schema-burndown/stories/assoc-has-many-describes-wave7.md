@@ -34,8 +34,10 @@ word-for-word to
 - size / empty / many? / none? describe — ~1485
 - the large `UNIVERSAL_HM_SCHEMA` describe — ~1822 (building/counter-cache/etc.)
 - STI build describe — ~7046
-- default-scope Car/Bulb (`DEFAULT_SCOPE_SCHEMA`) — ~7268, blocked on RFC 0030
-  `canonical-bulb-public-attribute-accessors`
+- default-scope Car/Bulb (`DEFAULT_SCOPE_SCHEMA`) — ~7268. The RFC 0030
+  `canonical-bulb-public-attribute-accessors` blocker no longer applies (wave 6
+  verified canonical `Bulb` creation works — `readAttribute` is inherited from
+  `Model`); canonical Car/Bulb is usable via `TEST_SCHEMA.cars`/`.bulbs`.
 - tail `HasManyAssociationsTestPrimaryKeys` (`TAIL_PRIMARY_KEYS_SCHEMA`, ~7397),
   HMT (`TAIL_HMT_SCHEMA`, ~7454), async (`TAIL_ASYNC_SCHEMA`, ~7748),
   HMT2 (`TAIL_HMT2_SCHEMA`, ~7786), counter-cache head
