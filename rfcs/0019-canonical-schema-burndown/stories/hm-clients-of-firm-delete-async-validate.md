@@ -1,13 +1,13 @@
 ---
 title: "hm-clients-of-firm-delete-async-validate"
 status: ready
-updated: 2026-06-17
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
