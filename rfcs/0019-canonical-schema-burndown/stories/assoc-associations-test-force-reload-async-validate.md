@@ -1,6 +1,6 @@
 ---
 title: "assoc-associations-test-force-reload-async-validate"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
