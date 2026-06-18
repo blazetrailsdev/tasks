@@ -1,6 +1,6 @@
 ---
 title: "Memoize schema cache when virtual reconciliation reflects on cold cache"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
