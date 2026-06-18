@@ -4,7 +4,9 @@ status: draft
 updated: 2026-06-18
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
-deps: []
+deps:
+  - mechanism-error-plus-allowlist
+  - strip-asany-codemod
 deps-rfc: []
 est-loc: 200
 priority: null
