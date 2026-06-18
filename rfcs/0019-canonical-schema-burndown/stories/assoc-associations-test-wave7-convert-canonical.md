@@ -22,8 +22,8 @@ converted the Sharded belongs*to / has_many composite-FK assign/nullify cluster
 assign/append with autosave, belongs_to-does-not-use-parent-query-constraints,
 polymorphic-belongs_to-uses-parent-query-constraints) onto canonical
 `Sharded::*`models + fixtures, moving them into the canonical (second)`AssociationsTest`describe and removing scratch tables`pbt*\_`, `cpk*owner2s`,
-`cpk*item2s`, `cpk_childs`, `cpk_parent2s/3s`, `cpk_child2s/3s`, `as_cpk\**`,
-`bt*nqc*\*`. Wave 6 also fixed a real impl gap surfaced by the conversion:
+`cpk\*item2s`, `cpk_childs`, `cpk_parent2s/3s`, `cpk_child2s/3s`, `as_cpk\**`,
+`bt*nqc\*\*`. Wave 6 also fixed a real impl gap surfaced by the conversion:
 `BelongsToAssociation#foreignKeyNames`/`associationPrimaryKeys`now derive the
 composite FK from the owner's`query_constraints`(Rails`derive_fk_query_constraints`/`association_primary_key`) instead of the scalar
 target PK, so a belongs_to writer on a query_constraints owner sets/nullifies
