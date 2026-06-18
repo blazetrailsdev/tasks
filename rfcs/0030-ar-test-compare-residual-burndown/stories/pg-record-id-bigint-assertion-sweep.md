@@ -1,6 +1,6 @@
 ---
 title: "Sweep PG-lane record.id assertions to tolerate BigInt (pre-BIGSERIAL-flip)"
-status: in-progress
+status: done
 updated: 2026-06-18
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
