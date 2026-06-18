@@ -74,16 +74,16 @@ Key references:
 
 ## Acceptance criteria
 
-- [ ] Add an abort sentinel + catch in the before-callback runner/terminator so
+- [x] Add an abort sentinel + catch in the before-callback runner/terminator so
       a callback can halt the chain by throwing the sentinel (faithful to Rails
       `throw :abort`), causing `destroy`/`save` to return false with no
       exception escaping.
-- [ ] Non-sentinel exceptions still propagate unchanged (regression test: a
+- [x] Non-sentinel exceptions still propagate unchanged (regression test: a
       beforeSave that throws a real Error aborts the save AND the error surfaces
       to the caller).
-- [ ] Regression test: a beforeDestroy that throws the abort sentinel makes
+- [x] Regression test: a beforeDestroy that throws the abort sentinel makes
       destroy() return false (not raise) and leaves the record persisted.
-- [ ] Decide and document the relationship to the existing `return false`
+- [x] Decide and document the relationship to the existing `return false`
       contract (keep as alias vs deprecate); update affected fixtures/tests
       consistently with that decision.
-- [ ] No test renamed; behavior matches Rails.
+- [x] No test renamed; behavior matches Rails.
