@@ -33,14 +33,12 @@ Remaining Rails tests (names verbatim):
 - `test_eager_load_has_many_through_has_many` (+ `_with_conditions`)
 - `test_eager_belongs_to_and_has_one_not_singularized`
 - `test_associating_unsaved_records_with_has_many_through`
-- `test_add_to_join_table_with_no_id`
 - `test_has_many_through_collection_size_doesnt_load_target_if_not_loaded`
 - `test_has_many_through_collection_size_uses_counter_cache_if_it_exists`
 - `test_adding_to_has_many_through_should_return_self`
 - `test_has_many_through_sum_uses_calculations`
 - `test_calculations_on_has_many_through_should_disambiguate_fields` (+ `..._unless_necessary`)
 - `test_preload_polymorphic_has_many_through`
-- `test_has_many_through_include_checks_if_record_exists_if_target_not_loaded`
 - `test_proper_error_message_for_eager_load_and_includes_association_errors`
 - `test_eager_association_with_scope_with_string_joins`
 
