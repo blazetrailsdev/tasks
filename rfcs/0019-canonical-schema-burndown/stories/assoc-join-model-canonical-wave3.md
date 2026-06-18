@@ -50,7 +50,7 @@ otherwise carry it forward with a tracked note.
 
 ## Acceptance criteria
 
-- [ ] Test bodies ported word-for-word; test names verbatim from Rails.
-- [ ] No `defineSchema`; canonical fixtures + `name(:label)` lookups only.
-- [ ] `pnpm vitest run .../join-model.test.ts` passes; `pnpm lint` clean.
-- [ ] 500 LOC ceiling, single PR off main.
+- [x] Test bodies ported word-for-word; test names verbatim from Rails.
+- [x] No `defineSchema`; canonical fixtures + `name(:label)` lookups only.
+- [x] `pnpm vitest run .../join-model.test.ts` passes; `pnpm lint` clean.
+- [x] 500 LOC ceiling, single PR off main.
