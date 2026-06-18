@@ -1,14 +1,14 @@
 ---
 title: "assoc-associations-test-wave6-convert-canonical"
-status: claimed
-updated: 2026-06-17
+status: in-progress
+updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3572
 claim: "2026-06-17T23:47:00Z"
 assignee: "assoc-associations-test-wave6-convert-canonical"
 blocked-by: null
