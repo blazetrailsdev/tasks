@@ -1,6 +1,6 @@
 ---
 title: "bound-sql-literal-cast-bound-value-in-visitor"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
