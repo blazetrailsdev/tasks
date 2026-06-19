@@ -1,6 +1,6 @@
 ---
 title: "insert-all-test-canonical-conversion-tail"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 2442
 claim: "2026-06-19T00:32:55Z"
 assignee: "insert-all-test-canonical-conversion-tail"
 blocked-by: null
