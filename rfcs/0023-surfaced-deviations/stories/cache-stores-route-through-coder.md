@@ -1,6 +1,6 @@
 ---
 title: "activesupport: route cache stores (FileStore/MemoryStore/entry-record) through fidelity Coder"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T21:54:11Z"
+assignee: "cache-stores-route-through-coder"
 blocked-by: null
 ---
 
