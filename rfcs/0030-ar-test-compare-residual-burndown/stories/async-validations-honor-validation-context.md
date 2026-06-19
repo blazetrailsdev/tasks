@@ -1,6 +1,6 @@
 ---
 title: "async-validations-honor-validation-context"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3627
 claim: "2026-06-19T03:24:28Z"
 assignee: "async-validations-honor-validation-context"
 blocked-by: null
