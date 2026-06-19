@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize TestNestedAttributesOnAHasOneAssociation makeModels() block"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3640
 claim: "2026-06-19T13:24:24Z"
 assignee: "canonicalize-nested-has-one-assoc-block"
 blocked-by: null
