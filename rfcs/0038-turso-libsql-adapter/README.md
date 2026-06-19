@@ -90,6 +90,7 @@ Connection modes map to existing construction paths:
 | ID                                                    | Title                                                       | Status | Est LOC | Cluster               |
 | ----------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
 | [libsql-local-driver](stories/libsql-local-driver.md) | libsql: local-file driver + adapter subclass + registration | draft  | 220     | adapter-test-fidelity |
+| [libsql-remote-mode](stories/libsql-remote-mode.md)   | libsql: remote Turso mode (network, async-open path)        | draft  | 180     | adapter-test-fidelity |
 
 ## Open questions
 
