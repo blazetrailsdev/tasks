@@ -1,7 +1,7 @@
 ---
 title: "Run reflection.check_validity! in Association#initialize for all macros (Rails parity)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T15:12:29Z"
+assignee: "check-validity-in-association-initialize"
 blocked-by: null
 ---
 
