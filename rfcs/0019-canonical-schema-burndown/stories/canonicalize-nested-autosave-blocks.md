@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize nested-attributes autosave describe blocks (Rails-guided + HasOne/HasMany autosave)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
