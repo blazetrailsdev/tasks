@@ -58,5 +58,5 @@ Rails: `HasManyThroughAssociation#delete_records` /
 - [ ] `CollectionProxy#toArray` delegates to `load` (hydrate + cache + mark
       loaded), matching Rails `to_a` → `load_target`, with the bang-mutation
       re-query path preserved (`toArray honors direct bang-mutation of
-  inherited Relation state` still passes).
+inherited Relation state` still passes).
 - [ ] No regression; `test:compare` delta non-negative.
