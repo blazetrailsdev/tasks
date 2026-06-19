@@ -1,6 +1,6 @@
 ---
 title: "converge Association#checkKlass to constructor (check_validity! timing deviation)"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3613
 claim: "2026-06-19T01:02:17Z"
 assignee: "assoc-check-validity-raises-at-load-not-constructor"
 blocked-by: null
