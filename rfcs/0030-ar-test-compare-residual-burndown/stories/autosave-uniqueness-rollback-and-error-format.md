@@ -60,11 +60,11 @@ conversion story), AND two implementation gaps converge:
 
 ## Acceptance criteria
 
-- [ ] `validates(attr, { uniqueness: true })` routes to the DB-backed
+- [x] `validates(attr, { uniqueness: true })` routes to the DB-backed
       UniquenessValidator (behaves identically to `validatesUniqueness`), with a
       direct test in `uniqueness-validation.test.ts`.
-- [ ] `propagateErrors` (all 4 call sites) converges to Rails' save-phase error
+- [x] `propagateErrors` (all 4 call sites) converges to Rails' save-phase error
       format without regressing existing autosave save-failure tests.
-- [ ] The two rollback tests are un-skipped (after the 0019 conversion) and pass
+- [x] The two rollback tests are un-skipped (after the 0019 conversion) and pass
       against canonical SQLite (and PG/MySQL per the ruby gate), asserting the
       exact Rails message `"Validation failed: Published books is invalid"`.
