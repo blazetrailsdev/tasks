@@ -1,7 +1,7 @@
 ---
 title: "Converge comments_on_first_posts through-scope tests onto canonical models"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T16:36:32Z"
+assignee: "comments-on-first-posts-through-scope-canonical"
 blocked-by: null
 ---
 
