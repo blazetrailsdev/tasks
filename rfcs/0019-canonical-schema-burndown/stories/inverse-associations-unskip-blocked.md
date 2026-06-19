@@ -1,6 +1,6 @@
 ---
 title: "inverse-associations-unskip-blocked"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
