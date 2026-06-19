@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy: pretty_print/PP.pp has no trails equivalent (test_pretty_print ports to inspect)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
