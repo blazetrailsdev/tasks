@@ -1,6 +1,6 @@
 ---
 title: "captureSql executes DDL instead of stubbing execute like Rails ActiveSchemaTest"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3646
 claim: "2026-06-19T14:48:26Z"
 assignee: "capturesql-stub-execute-mysql-active-schema"
 blocked-by: null
