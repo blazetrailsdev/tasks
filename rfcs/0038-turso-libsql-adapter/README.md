@@ -1,5 +1,5 @@
 ---
-rfc: "0000-turso-libsql-adapter"
+rfc: "0038-turso-libsql-adapter"
 title: "Turso / libSQL SQLite driver (beyond-parity extension)"
 status: draft
 created: 2026-06-19
@@ -11,7 +11,7 @@ clusters:
   - "adapter-test-fidelity"
 ---
 
-# RFC — Turso / libSQL SQLite driver (beyond-parity extension)
+# RFC 0038 — Turso / libSQL SQLite driver (beyond-parity extension)
 
 ## Summary
 
