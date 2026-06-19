@@ -1,6 +1,6 @@
 ---
 title: "activesupport: implement Cache::Entry compression (entry.rb:33-35, 76-98)"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3621
 claim: "2026-06-19T02:00:26Z"
 assignee: "activesupport-cache-entry-compression"
 blocked-by: null
