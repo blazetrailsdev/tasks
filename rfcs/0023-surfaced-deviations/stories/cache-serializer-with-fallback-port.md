@@ -1,6 +1,6 @@
 ---
 title: "cache-serializer-with-fallback-port"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3676
 claim: "2026-06-19T21:34:12Z"
 assignee: "cache-serializer-with-fallback-port"
 blocked-by: null
