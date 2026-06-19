@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#push should return self (the collection), not void"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
