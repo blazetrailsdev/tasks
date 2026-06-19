@@ -1,6 +1,6 @@
 ---
 title: "Convert AssociationProxyTest describe in associations.test.ts to canonical"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
