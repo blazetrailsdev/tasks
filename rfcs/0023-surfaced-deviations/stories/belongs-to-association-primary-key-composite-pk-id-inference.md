@@ -1,6 +1,6 @@
 ---
 title: "belongs_to associationPrimaryKeys: infer id from [tenant,id] composite PK target (reflection.rb:935-938)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
