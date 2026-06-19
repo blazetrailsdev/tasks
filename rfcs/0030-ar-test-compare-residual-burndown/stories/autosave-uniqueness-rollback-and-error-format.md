@@ -1,7 +1,7 @@
 ---
 title: "Un-skip autosave uniqueness-rollback tests (validates uniqueness routing + propagateErrors convergence)"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T02:48:28Z"
+assignee: "autosave-uniqueness-rollback-and-error-format"
 blocked-by: null
 ---
 
