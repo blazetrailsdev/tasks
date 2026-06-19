@@ -1,6 +1,6 @@
 ---
 title: "assoc-join-model-canonical-wave5"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3617
 claim: "2026-06-19T01:12:20Z"
 assignee: "assoc-join-model-canonical-wave5"
 blocked-by: null
