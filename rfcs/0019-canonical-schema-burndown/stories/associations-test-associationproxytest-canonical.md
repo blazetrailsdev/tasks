@@ -1,6 +1,6 @@
 ---
 title: "Convert AssociationProxyTest describe in associations.test.ts to canonical"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 50
-pr: null
+pr: 3663
 claim: "2026-06-19T18:02:40Z"
 blocked-by: null
 assignee: "associations-test-associationproxytest-canonical"
