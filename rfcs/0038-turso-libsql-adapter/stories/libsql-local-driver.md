@@ -1,6 +1,6 @@
 ---
 title: "libsql: local-file driver + adapter subclass + registration"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0038-turso-libsql-adapter"
 cluster: adapter-test-fidelity
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: null
+pr: 3664
 claim: "2026-06-19T18:27:30Z"
 assignee: "libsql-local-driver"
 blocked-by: null
