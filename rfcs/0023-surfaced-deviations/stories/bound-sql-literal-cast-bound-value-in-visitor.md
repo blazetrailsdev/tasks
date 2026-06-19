@@ -25,10 +25,10 @@ Two blockers prevent applying the cast in the visitor today:
 
 ## Acceptance criteria
 
-- [ ] Add `castBoundValue(value: unknown): unknown` to the `ArelConnection` interface and implement it on `defaultQuoter` / `mysqlDefaultQuoter` (identity is fine for the default; mysql returns the stringified numeric/bool per `connection-adapters/mysql/quoting.ts`).
-- [ ] `visitBindValue` wraps each non-Arel scalar (including the per-element scalar in the mixed-array branch and the `add_binds` array branch) in `this.connection.castBoundValue(...)`, mirroring Rails' `new_bind` lambda.
-- [ ] Remove the `DEVIATION (tracked)` note in `visitBindValue`.
-- [ ] arel + bind-parameter tests pass; `bind params to sql` still produces the inlined `1, 2, 3` via SubstituteBinds.
+- [x] Add `castBoundValue(value: unknown): unknown` to the `ArelConnection` interface and implement it on `defaultQuoter` / `mysqlDefaultQuoter` (identity is fine for the default; mysql returns the stringified numeric/bool per `connection-adapters/mysql/quoting.ts`).
+- [x] `visitBindValue` wraps each non-Arel scalar (including the per-element scalar in the mixed-array branch and the `add_binds` array branch) in `this.connection.castBoundValue(...)`, mirroring Rails' `new_bind` lambda.
+- [x] Remove the `DEVIATION (tracked)` note in `visitBindValue`.
+- [x] arel + bind-parameter tests pass; `bind params to sql` still produces the inlined `1, 2, 3` via SubstituteBinds.
 
 ## Notes
 
