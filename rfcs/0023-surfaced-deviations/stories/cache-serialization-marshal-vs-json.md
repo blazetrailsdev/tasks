@@ -37,8 +37,8 @@ TS files: `packages/activesupport/src/cache/entry.ts`, `cache/coder.ts`
 
 ## Acceptance criteria
 
-- [ ] Decide and document the cache serialization strategy (converge to a
+- [x] Decide and document the cache serialization strategy (converge to a
       Marshal-equivalent vs explicitly-ratified JSON encoding) consistently
       across `Entry`, `Coder`, and the stores.
-- [ ] `Entry` compression serialization aligned with that decision.
-- [ ] Unblocks the Marshal-dependent parts of cache-entry-remaining-methods.
+- [x] `Entry` compression serialization aligned with that decision.
+- [x] Unblocks the Marshal-dependent parts of cache-entry-remaining-methods.
