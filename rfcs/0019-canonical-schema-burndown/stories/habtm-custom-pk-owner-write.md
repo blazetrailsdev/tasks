@@ -1,14 +1,14 @@
 ---
 title: "habtm-custom-pk-owner-write"
-status: claimed
-updated: 2026-06-18
+status: done
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3609
 claim: "2026-06-18T23:03:07Z"
 assignee: "habtm-custom-pk-owner-write"
 blocked-by: null
