@@ -1,6 +1,6 @@
 ---
 title: "libsql: local-file driver + adapter subclass + registration"
-status: draft
+status: ready
 updated: 2026-06-19
 rfc: "0038-turso-libsql-adapter"
 cluster: adapter-test-fidelity
