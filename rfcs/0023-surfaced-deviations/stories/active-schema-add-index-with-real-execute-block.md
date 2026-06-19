@@ -1,6 +1,6 @@
 ---
 title: "active-schema add_index test omits with_real_execute index_exists/if_not_exists block"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T15:36:28Z"
+assignee: "active-schema-add-index-with-real-execute-block"
 blocked-by: null
 ---
 
