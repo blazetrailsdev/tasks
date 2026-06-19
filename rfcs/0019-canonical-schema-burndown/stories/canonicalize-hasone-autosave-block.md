@@ -1,6 +1,6 @@
 ---
 title: "canonicalize-hasone-autosave-block"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3639
 claim: "2026-06-19T13:05:28Z"
 assignee: "canonicalize-hasone-autosave-block"
 blocked-by: null
