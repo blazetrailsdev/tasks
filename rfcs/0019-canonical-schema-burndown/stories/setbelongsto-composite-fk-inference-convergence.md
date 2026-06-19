@@ -1,6 +1,6 @@
 ---
 title: "setBelongsTo composite foreign-key inference convergence"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3615
 claim: "2026-06-19T01:01:05Z"
 assignee: "setbelongsto-composite-fk-inference-convergence"
 blocked-by: null
