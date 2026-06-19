@@ -1,6 +1,6 @@
 ---
 title: "bound-sql-literal-cast-bound-value-in-visitor"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T14:00:27Z"
+assignee: "bound-sql-literal-cast-bound-value-in-visitor"
 blocked-by: null
 ---
 
