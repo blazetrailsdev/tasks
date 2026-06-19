@@ -1,6 +1,6 @@
 ---
 title: "activesupport: converge cache serialization off JSON-for-Marshal deviation (Entry/Coder)"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T14:36:26Z"
+assignee: "cache-serialization-marshal-vs-json"
 blocked-by: null
 ---
 
