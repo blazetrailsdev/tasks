@@ -1,14 +1,14 @@
 ---
 title: "hm-clients-of-firm-delete-async-validate"
-status: claimed
-updated: 2026-06-18
+status: done
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3610
 claim: "2026-06-18T23:43:08Z"
 assignee: "hm-clients-of-firm-delete-async-validate"
 blocked-by: null
