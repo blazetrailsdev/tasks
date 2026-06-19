@@ -1,6 +1,6 @@
 ---
 title: "Converge Store logger shim to real Cache::Store base class"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3679
 claim: "2026-06-19T22:34:11Z"
 assignee: "cache-store-logger-converge-to-base-class"
 blocked-by: null
