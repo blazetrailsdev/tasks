@@ -1,6 +1,6 @@
 ---
 title: "canonical-fixture-ref-resolves-explicit-id"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3635
 claim: "2026-06-19T12:00:26Z"
 assignee: "canonical-fixture-ref-resolves-explicit-id"
 blocked-by: null
