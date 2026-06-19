@@ -36,12 +36,12 @@ raise in Rails silently succeed in trails.
 
 ## Acceptance criteria
 
-- [ ] Decide convergence: restrict `delegateArrayMethod` to the Rails
+- [x] Decide convergence: restrict `delegateArrayMethod` to the Rails
       `delegate ... to: :records` set (mapped to JS equivalents where one
       exists; Ruby-only entries like `rotate`/`compact`/`sample`/`in_groups`
       have no JS analogue and are dropped), OR ratify the broader surface with a
       documented reason.
-- [ ] Per fidelity-first, prefer convergence to the curated list unless there is
+- [x] Per fidelity-first, prefer convergence to the curated list unless there is
       a concrete JS reason to keep the broad delegation.
-- [ ] Preserve current behavior for the curated members and the restored
+- [x] Preserve current behavior for the curated members and the restored
       `test_has_many_array_methods_called_by_method_missing`.
