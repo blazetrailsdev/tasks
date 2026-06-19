@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize NestedAttributesTest top block (bespoke per-test class pairs, lines 202-564)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 3644
 claim: "2026-06-19T14:12:26Z"
 assignee: "canonicalize-nested-top-block"
 blocked-by: null
