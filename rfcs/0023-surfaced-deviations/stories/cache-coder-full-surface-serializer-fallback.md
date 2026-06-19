@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port remaining Cache::Coder surface + SerializerWithFallback"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T17:24:31Z"
+assignee: "cache-coder-full-surface-serializer-fallback"
 blocked-by: null
 ---
 
