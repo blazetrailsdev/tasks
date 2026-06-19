@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#first/first! re-queries on a loaded proxy (should read loaded target)"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T22:14:11Z"
+assignee: "collection-proxy-first-no-requery-when-loaded"
 blocked-by: null
 ---
 
