@@ -43,14 +43,14 @@ default scope). The canonical `Author#commentsOnFirstPosts` already exists
 
 ## Acceptance criteria
 
-- [ ] Port `through scope is affected by unscoping` onto canonical
+- [x] Port `through scope is affected by unscoping` onto canonical
       `Author#commentsOnFirstPosts` with a real `FirstPost.unscoped { ... }`
       block, asserting it returns the full comment set.
-- [ ] Port `through scope isnt affected by scoping` onto canonical models with
+- [x] Port `through scope isnt affected by scoping` onto canonical models with
       a real `FirstPost.where(id: 2).scoping { ... }` block (or the trails
       equivalent), asserting the through result is unaffected by the scoping
       block.
-- [ ] Remove the bespoke `Tsu*` / `Tsi*` model definitions for these two tests.
-- [ ] Verify behavior against the corresponding Rails tests; test names match
+- [x] Remove the bespoke `Tsu*` / `Tsi*` model definitions for these two tests.
+- [x] Verify behavior against the corresponding Rails tests; test names match
       Rails verbatim.
-- [ ] Confirm `test:compare` delta for the file is non-negative.
+- [x] Confirm `test:compare` delta for the file is non-negative.
