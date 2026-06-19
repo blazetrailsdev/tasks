@@ -1,7 +1,7 @@
 ---
 title: "canonical-bulb-public-attribute-accessors"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T11:48:25Z"
+assignee: "canonical-bulb-public-attribute-accessors"
 blocked-by: null
 ---
 
