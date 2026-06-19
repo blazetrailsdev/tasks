@@ -1,6 +1,6 @@
 ---
 title: "Restore belongs_to inverse-seed regression guard with resolveModel spy"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
