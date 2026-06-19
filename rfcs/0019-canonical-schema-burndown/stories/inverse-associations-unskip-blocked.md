@@ -60,11 +60,11 @@ unsaved duplicate records when collection is loaded`.
 
 ## Acceptance criteria
 
-- [ ] Un-skip the listed tests, converging the implementation (never the test
+- [x] Un-skip the listed tests, converging the implementation (never the test
       name or assertion) to Rails. Split across sibling PRs off `main` by cluster
       as needed (the file is canonical now, so per-cluster PRs no longer collide).
-- [ ] Where a cluster needs a separate RFC/feature (e.g. RFC 0030 inverse-of
+- [x] Where a cluster needs a separate RFC/feature (e.g. RFC 0030 inverse-of
       single-association access), register/track it and skip only what is
       genuinely blocked, with a precise note.
-- [ ] No `eslint-disable`; `pnpm vitest run` for the file green (passing, not
+- [x] No `eslint-disable`; `pnpm vitest run` for the file green (passing, not
       skipped, for converged clusters).
