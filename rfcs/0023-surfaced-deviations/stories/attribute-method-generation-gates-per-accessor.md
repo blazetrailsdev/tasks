@@ -1,6 +1,6 @@
 ---
 title: "Setter-only override suppresses generated attribute reader (gate get/set independently)"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 3619
 claim: "2026-06-19T01:42:16Z"
 assignee: "attribute-method-generation-gates-per-accessor"
 blocked-by: null
