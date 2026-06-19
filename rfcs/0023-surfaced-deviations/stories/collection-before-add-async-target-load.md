@@ -1,6 +1,6 @@
 ---
 title: "collection-before-add-async-target-load"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3651
 claim: "2026-06-19T15:24:27Z"
 assignee: "collection-before-add-async-target-load"
 blocked-by: null
