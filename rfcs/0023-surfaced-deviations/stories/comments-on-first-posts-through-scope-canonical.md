@@ -1,6 +1,6 @@
 ---
 title: "Converge comments_on_first_posts through-scope tests onto canonical models"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
