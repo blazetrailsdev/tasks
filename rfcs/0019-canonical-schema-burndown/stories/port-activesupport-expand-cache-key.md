@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveSupport CacheKeyTest (expand_cache_key) against real code"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T01:00:08Z"
+assignee: "port-activesupport-expand-cache-key"
 blocked-by: null
 ---
 
