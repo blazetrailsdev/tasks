@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#push should return self (the collection), not void"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3655
 claim: "2026-06-19T16:12:26Z"
 assignee: "collection-proxy-push-returns-self"
 blocked-by: null
