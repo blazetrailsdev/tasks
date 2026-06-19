@@ -1,6 +1,6 @@
 ---
 title: "activesupport: converge cache serialization off JSON-for-Marshal deviation (Entry/Coder)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
