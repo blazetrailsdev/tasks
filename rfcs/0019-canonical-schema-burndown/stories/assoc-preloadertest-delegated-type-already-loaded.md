@@ -1,6 +1,6 @@
 ---
 title: "assoc-preloadertest-delegated-type-already-loaded"
-status: ready
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3665
 claim: null
 assignee: null
 blocked-by: null
