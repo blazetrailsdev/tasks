@@ -1,6 +1,6 @@
 ---
 title: "Convert PreloaderTest describe in associations.test.ts to canonical (multi-wave)"
-status: claimed
+status: ready
 updated: 2026-06-18
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,7 @@ deps-rfc: []
 est-loc: 500
 priority: 50
 pr: null
-claim: "2026-06-18T21:03:07Z"
-assignee: "associations-test-preloadertest-canonical"
+claim: null
 blocked-by: null
 ---
 

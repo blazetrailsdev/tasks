@@ -1,6 +1,6 @@
 ---
 title: "inverse-associations-unskip-blocked"
-status: claimed
+status: ready
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,7 @@ deps-rfc: []
 est-loc: null
 priority: 50
 pr: null
-claim: "2026-06-19T00:42:17Z"
-assignee: "inverse-associations-unskip-blocked"
+claim: null
 blocked-by: null
 ---
 
