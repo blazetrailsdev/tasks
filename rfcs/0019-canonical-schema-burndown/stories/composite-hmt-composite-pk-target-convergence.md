@@ -1,14 +1,14 @@
 ---
 title: "Composite has_many :through with composite-PK target convergence"
-status: claimed
-updated: 2026-06-18
+status: done
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3606
 claim: "2026-06-18T21:43:06Z"
 assignee: "composite-hmt-composite-pk-target-convergence"
 blocked-by: null
