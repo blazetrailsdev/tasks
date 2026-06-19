@@ -1,6 +1,6 @@
 ---
 title: "belongs_to associationPrimaryKeys: infer id from [tenant,id] composite PK target (reflection.rb:935-938)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3625
 claim: "2026-06-19T03:00:26Z"
 assignee: "belongs-to-association-primary-key-composite-pk-id-inference"
 blocked-by: null
