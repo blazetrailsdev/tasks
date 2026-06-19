@@ -1,6 +1,6 @@
 ---
 title: "cacheVersion fast path for raw DB timestamps (can_use_fast_cache_version? parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3633
 claim: "2026-06-19T11:36:27Z"
 assignee: "cache-version-fast-path-raw-timestamp"
 blocked-by: null
