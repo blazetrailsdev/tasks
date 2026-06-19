@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-relation-enumerable-partition"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3659
 claim: "2026-06-19T17:00:27Z"
 assignee: "collection-proxy-relation-enumerable-partition"
 blocked-by: null
