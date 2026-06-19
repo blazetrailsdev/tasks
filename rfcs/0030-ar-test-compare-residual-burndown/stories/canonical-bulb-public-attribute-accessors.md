@@ -1,6 +1,6 @@
 ---
 title: "canonical-bulb-public-attribute-accessors"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
