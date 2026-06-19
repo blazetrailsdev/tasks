@@ -87,11 +87,11 @@ Connection modes map to existing construction paths:
 
 <!-- generated: stories table -->
 
-| ID                                                            | Title                                                       | Status | Est LOC | Cluster               |
-| ------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
-| [libsql-embedded-replica](stories/libsql-embedded-replica.md) | libsql: embedded-replica mode + sync()                      | ready  | 160     | adapter-test-fidelity |
-| [libsql-remote-mode](stories/libsql-remote-mode.md)           | libsql: remote Turso mode (network, async-open path)        | ready  | 180     | adapter-test-fidelity |
-| [libsql-local-driver](stories/libsql-local-driver.md)         | libsql: local-file driver + adapter subclass + registration | done   | 220     | adapter-test-fidelity |
+| ID                                                            | Title                                                       | Status  | Est LOC | Cluster               |
+| ------------------------------------------------------------- | ----------------------------------------------------------- | ------- | ------- | --------------------- |
+| [libsql-embedded-replica](stories/libsql-embedded-replica.md) | libsql: embedded-replica mode + sync()                      | ready   | 160     | adapter-test-fidelity |
+| [libsql-remote-mode](stories/libsql-remote-mode.md)           | libsql: remote Turso mode (network, async-open path)        | claimed | 180     | adapter-test-fidelity |
+| [libsql-local-driver](stories/libsql-local-driver.md)         | libsql: local-file driver + adapter subclass + registration | done    | 220     | adapter-test-fidelity |
 
 ## Open questions
 
