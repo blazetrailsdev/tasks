@@ -1,13 +1,13 @@
 ---
 title: "legacy-migration-5-0-create-table-and-chain"
 status: ready
-updated: 2026-06-17
+updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 9000
 pr: null
 claim: null
 assignee: null
@@ -15,6 +15,20 @@ blocked-by: null
 ---
 
 ## Context
+
+> **DESCOPED — won't do (pre-release, no legacy-version support).** trails is
+> pre-release and only targets the current Rails migration schema version. We do
+> not support migrating against old Rails versions, so the
+> `ActiveRecord::Migration::Compatibility` version-shim ladder (`V5_0`, `V5_1`,
+> … `V7_x`) is intentionally not being ported. Confirmed against trails
+> origin/main: there is **no `V5_0` class**; the version registry in
+> `packages/activerecord/src/migration/compatibility.ts` only registers
+> `Current` (see `registerVersion(CURRENT_VERSION, Current)` in
+> `packages/activerecord/src/migration.ts`). The premise PR #3524 referenced
+> below is not on origin/main. This story (and its sibling legacy-version
+> stories) is obsolete; priority is set to 9000 so it stays out of the ready
+> queue. Do not re-refine — there is no Rails-fidelity gap to close here while
+> the legacy compatibility ladder is out of scope.
 
 Follow-up to `legacy-migration-5-0-uuid-default` (PR #3524), which ported only
 the PostgreSQL uuid primary-key implicit default branch of
