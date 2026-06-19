@@ -1,6 +1,6 @@
 ---
 title: "PreloaderTest wave 2+ — convert remaining ~42 bespoke tests to canonical"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 3620
 claim: "2026-06-19T01:32:16Z"
 assignee: "associations-test-preloadertest-canonical-wave2"
 blocked-by: null
