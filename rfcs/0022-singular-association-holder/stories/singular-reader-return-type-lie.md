@@ -1,0 +1,41 @@
+---
+title: "singular reader return type lies — Promise cast silences TS"
+status: draft
+updated: 2026-06-19
+rfc: "0022-singular-association-holder"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 40
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+---
+
+## Context
+
+`SingularAssociation#reader` is declared `get reader(): Base | null` but
+returns `Promise<Base | null>` when `findTargetNeeded()` is true (FK present,
+not loaded) — introduced in PR #3611. The double-cast
+`return this.loadTarget() as unknown as Base | null` silences TypeScript.
+
+Any sync consumer that does not `await` the result receives a live Promise
+object. Known call sites audited in PR #3611:
+
+- `BelongsToAssociation#default` — fixed in PR #3611 (made async, awaits reader).
+- All test call sites use `await record.assocName` — correct.
+
+The structural fix is to either:
+
+1. Change the return type to `Base | null | Promise<Base | null>` and propagate
+   the union through call sites (forces callers to handle both), or
+2. Introduce a separate `asyncReader(): Promise<Base | null>` and route the lazy
+   path through it, keeping `reader` purely sync for the already-loaded case.
+
+## Acceptance criteria
+
+- [ ] `get reader()` return type accurately reflects what it returns.
+- [ ] No sync consumer receives an unresolved Promise without TypeScript catching it.
+- [ ] Existing tests pass; `test:compare` delta non-negative.
