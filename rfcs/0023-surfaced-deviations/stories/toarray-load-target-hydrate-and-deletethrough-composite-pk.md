@@ -1,6 +1,6 @@
 ---
 title: "toarray-load-target-hydrate-and-deletethrough-composite-pk"
-status: ready
+status: draft
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
