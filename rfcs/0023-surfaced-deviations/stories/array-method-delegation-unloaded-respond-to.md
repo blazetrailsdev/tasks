@@ -1,6 +1,6 @@
 ---
 title: "Converge curated Array-method delegation respond-to/load on unloaded relations"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T19:35:02Z"
+assignee: "array-method-delegation-unloaded-respond-to"
 blocked-by: null
 ---
 
