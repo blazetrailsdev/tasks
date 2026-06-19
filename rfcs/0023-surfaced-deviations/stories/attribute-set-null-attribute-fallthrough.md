@@ -1,6 +1,6 @@
 ---
 title: "Attribute layer should resolve unknown names via Null attribute instead of bespoke pk==null guards in id/id="
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
