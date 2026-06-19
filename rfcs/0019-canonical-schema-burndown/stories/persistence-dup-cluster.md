@@ -1,7 +1,7 @@
 ---
 title: "persistence / dup / clone / insert-all → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-11
+status: claimed
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,9 @@ deps-rfc: []
 est-loc: 450
 priority: 7
 pr: null
-claim: null
+claim: "2026-06-19T17:36:29Z"
 blocked-by: null
+assignee: "persistence-dup-cluster"
 ---
 
 ## Context
