@@ -1,6 +1,6 @@
 ---
 title: "Run reflection.check_validity! in Association#initialize for all macros (Rails parity)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
