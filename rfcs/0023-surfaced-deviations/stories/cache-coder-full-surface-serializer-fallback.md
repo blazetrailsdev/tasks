@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port remaining Cache::Coder surface + SerializerWithFallback"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
