@@ -1,6 +1,6 @@
 ---
 title: "canUseFastCacheVersion should check default_timezone == utc (integration.rb:184)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3638
 claim: "2026-06-19T13:12:26Z"
 assignee: "cache-version-fast-path-utc-timezone-guard"
 blocked-by: null
