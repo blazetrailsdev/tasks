@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy/Relation Array delegation: restrict to Rails' curated delegate-to-records list"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3653
 claim: "2026-06-19T15:48:26Z"
 assignee: "collection-proxy-array-delegation-curated-list"
 blocked-by: null
