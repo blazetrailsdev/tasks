@@ -1,6 +1,6 @@
 ---
 title: "Restore belongs_to inverse-seed regression guard with resolveModel spy"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T11:00:27Z"
+assignee: "belongs-to-inverse-seed-spy-resolvemodel"
 blocked-by: null
 ---
 
