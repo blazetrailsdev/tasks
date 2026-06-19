@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#toArray must merge in-memory target like load() (Rails merge_target_lists)"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
