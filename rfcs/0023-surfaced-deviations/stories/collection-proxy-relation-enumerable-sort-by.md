@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-relation-enumerable-sort-by"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T17:12:27Z"
+assignee: "collection-proxy-relation-enumerable-sort-by"
 blocked-by: null
 ---
 
