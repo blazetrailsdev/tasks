@@ -1,6 +1,6 @@
 ---
 title: "captureSql executes DDL instead of stubbing execute like Rails ActiveSchemaTest"
-status: in-progress
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
