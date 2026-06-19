@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port remaining Cache::Entry methods (bytesize, pack/unpack, dup_value!, local?, marshal_load)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 3645
 claim: "2026-06-19T14:24:27Z"
 assignee: "cache-entry-remaining-methods"
 blocked-by: null
