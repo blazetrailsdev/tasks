@@ -1,6 +1,6 @@
 ---
 title: "build-human-inverses-has-many"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3631
 claim: "2026-06-19T11:12:25Z"
 assignee: "build-human-inverses-has-many"
 blocked-by: null
