@@ -1,7 +1,7 @@
 ---
 title: "fix(arel): BoundSqlLiteral visitor should use addBind for parameterized SQL, not inline quoting"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T03:12:25Z"
+assignee: "bound-sql-literal-addbind-visitor"
 blocked-by: null
 ---
 
