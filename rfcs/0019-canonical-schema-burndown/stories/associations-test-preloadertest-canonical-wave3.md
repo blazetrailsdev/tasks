@@ -1,6 +1,6 @@
 ---
 title: "associations-test-preloadertest-canonical-wave3"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3622
 claim: "2026-06-19T02:12:26Z"
 assignee: "associations-test-preloadertest-canonical-wave3"
 blocked-by: null
