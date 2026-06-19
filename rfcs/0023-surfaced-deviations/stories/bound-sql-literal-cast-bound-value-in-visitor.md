@@ -1,6 +1,6 @@
 ---
 title: "bound-sql-literal-cast-bound-value-in-visitor"
-status: claimed
+status: blocked
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-06-19T14:00:27Z"
 assignee: "bound-sql-literal-cast-bound-value-in-visitor"
-blocked-by: null
+blocked-by: "Built on PR #3641 (story bound-sql-literal-addbind-visitor) which is still OPEN/unmerged. AC #2 and #3 reference collector.addBind, this.bindBlock(), the add_binds array branch, and the DEVIATION (tracked) note — none exist in origin/main yet; they are introduced by #3641. Implementing now would edit the same visitBindValue function #3641 rewrites (stacked/overlapping PR, forbidden by CLAUDE.md). Unblock once #3641 merges."
 ---
 
 ## Context
