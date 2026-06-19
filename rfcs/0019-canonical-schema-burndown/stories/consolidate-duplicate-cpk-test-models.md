@@ -1,14 +1,14 @@
 ---
 title: "Consolidate duplicate CPK test-model definitions (cpk.ts vs cpk/) with divergent primary keys"
-status: claimed
-updated: 2026-06-18
+status: done
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
 priority: 50
-pr: null
+pr: 3605
 claim: "2026-06-18T22:03:09Z"
 assignee: "consolidate-duplicate-cpk-test-models"
 blocked-by: null
