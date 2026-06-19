@@ -42,14 +42,14 @@ in review). No current model exercises this exact shape, so it is latent.
 
 ## Acceptance criteria
 
-- [ ] `associationPrimaryKeys` mirrors reflection.rb:935-938: when the target
+- [x] `associationPrimaryKeys` mirrors reflection.rb:935-938: when the target
       has a composite primary key (and no query_constraints / explicit
       primaryKey), infer `"id"` when the composite PK includes `"id"`, else
       return the composite PK array.
-- [ ] Add a focused test exercising a belongs_to to a `[tenant_key, :id]`-PK
+- [x] Add a focused test exercising a belongs_to to a `[tenant_key, :id]`-PK
       target without query_constraints; assert the derived association primary
       key / FK columns match Rails.
-- [ ] No regression in existing composite-key / belongs_to suites.
+- [x] No regression in existing composite-key / belongs_to suites.
 
 - trails: `packages/activerecord/src/associations/belongs-to-association.ts`
   (`associationPrimaryKeys`)
