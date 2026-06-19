@@ -1,7 +1,7 @@
 ---
 title: "fix(activerecord): normalize Relation values in buildBoundSqlLiteral positional/named binds"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T03:36:25Z"
+assignee: "bound-sql-literal-relation-normalization"
 blocked-by: null
 ---
 
