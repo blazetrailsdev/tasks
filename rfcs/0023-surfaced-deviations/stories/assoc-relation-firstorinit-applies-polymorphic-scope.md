@@ -1,6 +1,6 @@
 ---
 title: "Relation#firstOrInitialize on an association relation must apply polymorphic scope_for_create"
-status: claimed
+status: done
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3618
 claim: "2026-06-19T01:22:20Z"
 assignee: "assoc-relation-firstorinit-applies-polymorphic-scope"
 blocked-by: null
