@@ -41,4 +41,4 @@
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |
 | [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
 | [0037-no-explicit-any-enforcement](rfcs/0037-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | draft | @deanmarano | activerecord |
-| [0038-turso-libsql-adapter](rfcs/0038-turso-libsql-adapter/README.md) | Turso / libSQL SQLite driver (beyond-parity extension) | draft | @deanmarano | activerecord |
+| [0038-turso-libsql-adapter](rfcs/0038-turso-libsql-adapter/README.md) | Turso / libSQL SQLite driver (beyond-parity extension) | closed | @deanmarano | activerecord |

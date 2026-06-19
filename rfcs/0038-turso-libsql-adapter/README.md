@@ -1,7 +1,7 @@
 ---
 rfc: "0038-turso-libsql-adapter"
 title: "Turso / libSQL SQLite driver (beyond-parity extension)"
-status: draft
+status: closed
 created: 2026-06-19
 updated: 2026-06-19
 owner: "@deanmarano"
@@ -16,12 +16,21 @@ clusters:
 ## Summary
 
 Add a **libSQL** driver to the ActiveRecord SQLite adapter so trails apps can
-target **Turso** (the managed libSQL service) in all three libSQL connection
-modes: local file, remote (Turso Cloud), and embedded replica. libSQL is an
-open-source SQLite fork; its JS client (`libsql`, aka libsql-js) is
-deliberately **better-sqlite3 API-compatible**, so it slots into trails'
-existing pluggable SQLite **driver abstraction** with no changes to the SQLite
-dialect core.
+use **libSQL** (the open-source SQLite fork that powers Turso) as a **local-file**
+SQLite backend. libSQL's JS client (`libsql`, aka libsql-js) is deliberately
+**better-sqlite3 API-compatible**, so it slots into trails' existing pluggable
+SQLite **driver abstraction** with no changes to the SQLite dialect core.
+
+**Shipped in PR #3664.** The local-file driver, adapter subclass, registration,
+and tests are merged; the `libsql` adapter is usable today.
+
+**Scope: local-file is the supported, tested path.** The libsql driver behaves
+as a drop-in alternate local SQLite backend alongside `better-sqlite3` and
+`node:sqlite`. Remote (Turso Cloud) / embedded-replica options (`authToken`,
+`syncUrl`) are **configurable** — the driver spreads `config.driverOptions`
+straight into `new Database(database, options)`, so a caller can set them — but
+they are explicitly **not a tested or supported feature**: no networked tests,
+no CI lane, no dedicated code path, best-effort pass-through only.
 
 ## Motivation
 
@@ -30,9 +39,8 @@ the `SqliteDriver` seam (`packages/activerecord/src/sqlite-adapter.ts`):
 `better-sqlite3` (default), `node:sqlite`, and `expo-sqlite`. Each is a small
 driver (`sqlite/*.ts`) plus a thin `AbstractSQLite3Adapter` subclass
 (`connection-adapters/*-adapter.ts`) registered in `connection-adapters.ts`.
-Turso/libSQL is the natural next driver: it is better-sqlite3-shaped for local
-use and adds remote + embedded-replica modes that no current driver offers
-(local-first reads with cloud-synced writes).
+libSQL is the natural next driver: it is better-sqlite3-shaped for local use, so
+it drops into that same shape as another local SQLite backend.
 
 ## Fidelity framing
 
@@ -45,67 +53,71 @@ adapter only uses the `sqlite3` Ruby gem). This RFC is therefore an explicit
 `test:compare` for the canonical `sqlite3` adapter, and adds no Rails-mismatch
 debt to the parity gate.
 
-## Design
+## What shipped
 
-The integration is a **new driver + thin adapter subclass + registration**,
-mirroring the `node-sqlite`/`expo-sqlite` precedent. The driver contract
-(`SqliteDriver` / `SqliteConnection` / `SqliteStatement` in `sqlite-adapter.ts`)
-is bytes-in / rows-out and opaque to query construction, so the dialect,
-quoting, and schema logic in `AbstractSQLite3Adapter` are reused verbatim.
+A **new driver + thin adapter subclass + registration**, mirroring the
+`node-sqlite`/`expo-sqlite` precedent. The driver contract (`SqliteDriver` /
+`SqliteConnection` / `SqliteStatement` in `sqlite-adapter.ts`) is bytes-in /
+rows-out and opaque to query construction, so the dialect, quoting, and schema
+logic in `AbstractSQLite3Adapter` are reused verbatim.
 
-Connection modes map to existing construction paths:
+Files added in PR #3664:
 
-- **Local file** — `new Database(path)`; sync API is better-sqlite3-compatible,
-  so `openSync()` is supported (eager connect in the sync constructor, like
-  better-sqlite3).
-- **Remote** — `new Database(url, { authToken })`; network-backed, so omit
-  `openSync()` for remote configs and use the **async** path already wired for
-  expo-sqlite (`AbstractSQLite3Adapter.openAsync()` / `completeAsyncConnect()`).
-- **Embedded replica** — `new Database(localPath, { syncUrl, authToken })` plus
-  a caller-driven `sync()` operation.
+- `packages/activerecord/src/sqlite/libsql.ts` — `libsqlDriver: SqliteDriver`
+  wrapping `import Database from "libsql"` (sync). `LibsqlStatement` /
+  `LibsqlConnection` mirror the better-sqlite3 driver
+  (`run/get/all/iterate/columns/setReadBigInts(safeIntegers)`). Capabilities:
+  `inProcessSync: true`, `loadExtension: false`, `foreignKeysOnByDefault: false`.
+  `databaseExists` does an fs check; `restoreFromPath` tries libsql's `backup()`
+  and falls back to an async file clone (the local build throws on `backup()`).
+- `packages/activerecord/src/connection-adapters/libsql-adapter.ts` —
+  `LibSQLAdapter extends AbstractSQLite3Adapter`, returns `libsqlDriver`.
+- `packages/activerecord/src/sqlite/libsql.test.ts` — driver tests.
+- Registered as `"libsql"` in `connection-adapters.ts`; `libsql` added as an
+  optional peer dep with a subpath export.
+
+Local construction uses the sync path: `new Database(path)`. Remote/replica
+options ride the generic `driverOptions` pass-through in `openDatabase()` — no
+async-open wiring (`AbstractSQLite3Adapter.openAsync()`) was added.
 
 ## Key facts about the `libsql` package
 
 - `import Database from "libsql"` — sync, better-sqlite3-shaped (`prepare`,
   `exec`, `pragma`, `transaction`, `.run/.get/.all/.iterate`, `.columns()`,
-  `safeIntegers()`). `libsql/promise` is the async variant.
+  `safeIntegers()`).
 - Local: `new Database("app.db")`; in-memory: `new Database(":memory:")`.
-- Remote: `new Database(url, { authToken })`.
-- Embedded replica: `new Database("local.db", { syncUrl, authToken })` +
-  `db.sync()`.
-- Inherits SQLite's single-writer model. No remote `backup()` primitive;
-  `loadExtension` is unavailable on remote.
+- Inherits SQLite's single-writer model. The local build throws on `backup()`
+  and disables `loadExtension`.
+- Remote/embedded-replica constructors (`{ authToken }`, `{ syncUrl }`) are
+  supported by the package; trails passes them through via `driverOptions` but
+  does not test or actively support them.
 
 ## Stories
 
 1. **libsql-local-driver** — local-file driver + thin subclass + registration
-   - optional dep. The MVP; standalone.
-2. **libsql-remote-mode** — remote URL + `authToken`, async-open dispatch,
-   config plumbing. Depends on story 1.
-3. **libsql-embedded-replica** — `syncUrl` replica mode + caller-driven
-   `sync()`. Depends on story 2.
+   - optional dep. Shipped in PR #3664. The whole supported RFC.
+
+Remote and embedded-replica were originally drafted as follow-on stories but
+**dropped**: remote is configurable via the `driverOptions` pass-through (no
+dedicated work), and we are not supporting networked Turso out of the box.
 
 <!-- generated: stories table -->
 
-| ID                                                            | Title                                                       | Status | Est LOC | Cluster               |
-| ------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
-| [libsql-embedded-replica](stories/libsql-embedded-replica.md) | libsql: embedded-replica mode + sync()                      | ready  | 160     | adapter-test-fidelity |
-| [libsql-remote-mode](stories/libsql-remote-mode.md)           | libsql: remote Turso mode (network, async-open path)        | ready  | 180     | adapter-test-fidelity |
-| [libsql-local-driver](stories/libsql-local-driver.md)         | libsql: local-file driver + adapter subclass + registration | done   | 220     | adapter-test-fidelity |
+| ID                                                    | Title                                                       | Status | Est LOC | Cluster               |
+| ----------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
+| [libsql-local-driver](stories/libsql-local-driver.md) | libsql: local-file driver + adapter subclass + registration | done   | 220     | adapter-test-fidelity |
 
 ## Open questions
 
-1. Verify the installed `libsql` version's API surface (esp. `backup()`,
-   `columns()` metadata fidelity, `safeIntegers`/bigint behavior) against the
-   `SqliteStatement`/`SqliteConnection` contract before finalizing story 1.
-2. libsql disables `loadExtension`; collation/virtual-table tests in
-   `adapters/sqlite3/` that rely on extensions must be capability-gated or
-   excluded for the libsql driver.
-3. Periodic embedded-replica sync ownership: caller-driven (`adapter.syncReplica()`)
-   first; defer adapter-owned auto-sync timer.
+Resolved by PR #3664:
+
+1. `libsql` API surface verified against the contract — `backup()` throws on the
+   local build (file-clone fallback used), `columns()`/`safeIntegers` behave as
+   better-sqlite3.
+2. `loadExtension` is off (`capabilities.loadExtension: false`); extension-
+   dependent tests are gated accordingly.
 
 ## References
 
 - [libsql-js (better-sqlite3-compatible API)](https://github.com/tursodatabase/libsql-js)
 - [@libsql/client (npm)](https://www.npmjs.com/package/@libsql/client)
-- [Turso JS/TS SDK docs](https://docs.turso.tech/libsql/client-access/javascript-typescript-sdk)
