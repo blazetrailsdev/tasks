@@ -1,6 +1,6 @@
 ---
 title: "cacheKey prefix should use model_name.cache_key, not tableName (integration.rb parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3632
 claim: "2026-06-19T11:24:27Z"
 assignee: "cache-key-uses-model-name-not-table-name"
 blocked-by: null
