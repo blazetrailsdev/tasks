@@ -87,8 +87,9 @@ Connection modes map to existing construction paths:
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                    | Title                                                       | Status | Est LOC | Cluster               |
+| ----------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
+| [libsql-local-driver](stories/libsql-local-driver.md) | libsql: local-file driver + adapter subclass + registration | draft  | 220     | adapter-test-fidelity |
 
 ## Open questions
 
