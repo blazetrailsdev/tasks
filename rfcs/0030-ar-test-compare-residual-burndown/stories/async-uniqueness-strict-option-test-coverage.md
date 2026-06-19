@@ -1,6 +1,6 @@
 ---
 title: "Direct test coverage for strict: on async uniqueness validations"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 3647
 claim: "2026-06-19T15:00:25Z"
 assignee: "async-uniqueness-strict-option-test-coverage"
 blocked-by: null
