@@ -1,14 +1,14 @@
 ---
 title: "expected-fixtures-rule-recognize-usehandlerfixtures"
-status: claimed
-updated: 2026-06-18
+status: done
+updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 3608
 claim: "2026-06-18T22:43:07Z"
 assignee: "expected-fixtures-rule-recognize-usehandlerfixtures-aa09"
 blocked-by: null
