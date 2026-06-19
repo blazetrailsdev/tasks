@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize ~15 single-test nested-attributes describe blocks (lines 1864-2680)"
-status: claimed
+status: in-progress
 updated: 2026-06-19
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 3643
 claim: "2026-06-19T13:48:26Z"
 assignee: "canonicalize-nested-small-blocks"
 blocked-by: null
