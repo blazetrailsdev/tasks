@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#lastBang/takeBang re-query on loaded proxy (should read loaded target)"
-status: ready
+status: claimed
 updated: 2026-06-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-19T23:54:11Z"
+assignee: "collection-proxy-last-take-bang-no-requery-when-loaded"
 blocked-by: null
 ---
 
