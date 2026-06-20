@@ -1,6 +1,6 @@
 ---
 title: "Converge missing-gate tests to Rails gates (173 across 21 files)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 3708
 claim: "2026-06-20T12:25:28Z"
 assignee: "gate-missing-gate-burndown"
 blocked-by: null
