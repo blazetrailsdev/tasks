@@ -1,14 +1,14 @@
 ---
 title: "assoc-preloadertest-scopes-canonical"
-status: claimed
-updated: 2026-06-19
+status: done
+updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3674
 claim: "2026-06-19T20:54:11Z"
 assignee: "assoc-preloadertest-scopes-canonical"
 blocked-by: null
