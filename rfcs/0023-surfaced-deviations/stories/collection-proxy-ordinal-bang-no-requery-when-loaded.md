@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#secondBang/thirdBang/fourthBang/fifthBang re-query on loaded proxy (should read loaded target)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T01:12:02Z"
+assignee: "collection-proxy-ordinal-bang-no-requery-when-loaded"
 blocked-by: null
 ---
 
