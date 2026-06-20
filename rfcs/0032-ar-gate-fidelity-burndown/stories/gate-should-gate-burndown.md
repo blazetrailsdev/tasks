@@ -1,7 +1,7 @@
 ---
 title: "Replace TODO skips with Rails gates (23 across 7 files)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: should-gate
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T12:49:28Z"
+assignee: "gate-should-gate-burndown"
 blocked-by: null
 ---
 

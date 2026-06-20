@@ -149,9 +149,9 @@ into pre-planned sibling PRs here.
 | ID                                                                                | Title                                                                    | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------- | ------- | ------------ |
 | [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md) | Arm hard-zero CI gate on activerecord gate-mismatch count                | ready       | 120     | enforcement  |
-| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                 | Replace TODO skips with Rails gates (23 across 7 files)                  | ready       | 150     | should-gate  |
 | [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                   | Converge wrong-gate tests to Rails gates (49 across 19 files)            | ready       | 250     | wrong-gate   |
 | [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                   | Remove over-gating to match Rails unconditional runs (24 across 8 files) | claimed     | 150     | over-gated   |
+| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                 | Replace TODO skips with Rails gates (23 across 7 files)                  | claimed     | 150     | should-gate  |
 | [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md)               | Converge missing-gate tests to Rails gates (173 across 21 files)         | in-progress | 400     | missing-gate |
 
 ## Changelog
