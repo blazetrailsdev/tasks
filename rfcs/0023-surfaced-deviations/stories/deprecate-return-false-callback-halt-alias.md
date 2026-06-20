@@ -1,6 +1,6 @@
 ---
 title: "Converge callback halt to throw-abort sentinel only (drop return-false alias)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
