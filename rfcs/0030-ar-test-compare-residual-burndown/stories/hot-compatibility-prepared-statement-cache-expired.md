@@ -1,6 +1,6 @@
 ---
 title: "PG prepared-statement-cache-expired cleanup mid-transaction"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
