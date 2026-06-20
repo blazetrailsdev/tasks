@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-partial-nulls-overgate"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3717
 claim: "2026-06-20T14:13:29Z"
 assignee: "converge-schema-dumper-partial-nulls-overgate"
 blocked-by: null
