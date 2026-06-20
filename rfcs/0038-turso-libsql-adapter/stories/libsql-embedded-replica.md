@@ -1,6 +1,6 @@
 ---
 title: "libsql: embedded-replica mode + sync()"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0038-turso-libsql-adapter"
 cluster: adapter-test-fidelity
