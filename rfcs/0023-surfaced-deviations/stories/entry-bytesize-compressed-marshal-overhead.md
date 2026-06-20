@@ -1,6 +1,6 @@
 ---
 title: "Converge Entry#bytesize compressed non-String branch to Rails Marshal.dump overhead"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
