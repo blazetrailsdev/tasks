@@ -1,14 +1,14 @@
 ---
 title: "Converge automatically_invert_plural_associations to global test default"
-status: claimed
-updated: 2026-06-19
+status: done
+updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3675
 claim: "2026-06-19T21:14:11Z"
 assignee: "automatically-invert-plural-global-config"
 blocked-by: null
