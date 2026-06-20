@@ -35,7 +35,7 @@ the live table.
 
 ## Acceptance criteria
 
-- [ ] Drop both `it.skip()`; tests run on all adapters (Rails does not gate them).
-- [ ] `remove_column` leaves the warmed column cache stale (count unchanged).
-- [ ] INSERT/UPDATE succeed using cached columns, omitting the dropped column.
-- [ ] `test:compare` delta non-negative; test names unchanged.
+- [x] Drop both `it.skip()`; tests run on all adapters (Rails does not gate them).
+- [x] `remove_column` leaves the warmed column cache stale (count unchanged).
+- [x] INSERT/UPDATE succeed using cached columns, omitting the dropped column.
+- [x] `test:compare` delta non-negative; test names unchanged.
