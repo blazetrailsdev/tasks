@@ -1,6 +1,6 @@
 ---
 title: "eager-load-extra-select-result-type-cast"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3707
 claim: "2026-06-20T03:26:45Z"
 assignee: "eager-load-extra-select-result-type-cast"
 blocked-by: null
