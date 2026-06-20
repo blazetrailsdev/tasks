@@ -1,6 +1,6 @@
 ---
 title: "Write-path binds round-trip prepared statement (null-byte values)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
