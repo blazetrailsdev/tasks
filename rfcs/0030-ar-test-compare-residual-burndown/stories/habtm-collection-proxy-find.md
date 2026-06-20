@@ -1,6 +1,6 @@
 ---
 title: "habtm: CollectionProxy include/transaction/preloaded-size"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3720
 claim: "2026-06-20T15:01:28Z"
 assignee: "habtm-collection-proxy-find"
 blocked-by: null
