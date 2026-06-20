@@ -1,6 +1,6 @@
 ---
 title: "Polymorphic has_one :as instance getter returns undefined (loadHasOne works)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
