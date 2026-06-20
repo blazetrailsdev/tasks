@@ -36,7 +36,7 @@ The `reflection` reader is not called externally in Rails' test suite, so this i
 
 ## Acceptance criteria
 
-- [ ] `CompositePrimaryKeyMismatchError` stores the reflection (or a reflection-shaped object) and exposes it as a readable property, matching `attr_reader :reflection`.
-- [ ] Constructor signature moves toward the Rails form: accept a reflection object (or `null`/`undefined`) and derive message fields from it, rather than accepting flat strings.
-- [ ] All existing call sites in `reflection.ts`, `associations.ts`, `autosave-association.ts`, `association-scope.ts`, and `collection-proxy.ts` updated to pass the reflection object.
-- [ ] Existing message assertions in the malformed-association tests still pass.
+- [x] `CompositePrimaryKeyMismatchError` declares a readable `reflection` property matching `attr_reader :reflection`. **Correction (PR #3690):** the premise that Rails _stores_ the reflection was wrong — vendored Rails 8.0.2 declares `attr_reader :reflection` but `initialize` never assigns `@reflection` (`errors.rb:190-200`), so `error.reflection` is always nil. Faithfully mirrored: the reader exists for API parity but stays `null`.
+- [x] Constructor signature moves toward the Rails form: accepts a reflection object (or `null`/`undefined`) and derives the message from it (branching on macro per `errors.rb:192-196`), rather than accepting flat strings.
+- [x] All existing call sites in `reflection.ts`, `associations.ts`, `autosave-association.ts`, `association-scope.ts`, and `collection-proxy.ts` updated to pass the reflection object. (`reflection.ts` passes the real reflection; trails-only guard sites pass a reflection-shaped object — tracked for convergence in `composite-pk-mismatch-extra-guard-raise-sites`.)
+- [x] Existing message assertions in the malformed-association tests still pass.
