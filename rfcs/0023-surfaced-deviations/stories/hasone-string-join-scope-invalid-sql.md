@@ -1,6 +1,6 @@
 ---
 title: "hasOne scope with raw string JOIN alias produces invalid SQL when joined"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3729
 claim: "2026-06-20T17:15:25Z"
 assignee: "hasone-string-join-scope-invalid-sql"
 blocked-by: null
