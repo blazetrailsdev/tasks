@@ -148,7 +148,6 @@ into pre-planned sibling PRs here.
 
 | ID                                                                                                        | Title                                                                                 | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
-| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | claimed     | 120     | enforcement  |
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed     | null    | —            |
 | [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | in-progress | 120     | —            |
 | [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md) | converge-schema-dumper-partial-nulls-overgate                                         | done        | null    | —            |
@@ -161,6 +160,7 @@ into pre-planned sibling PRs here.
 | [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                                           | Remove over-gating to match Rails unconditional runs (24 across 8 files)              | done        | 150     | over-gated   |
 | [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                                         | Replace TODO skips with Rails gates (23 across 7 files)                               | done        | 150     | should-gate  |
 | [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                                           | Converge wrong-gate tests to Rails gates (49 across 19 files)                         | done        | 250     | wrong-gate   |
+| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | blocked     | 120     | enforcement  |
 
 ## Changelog
 
