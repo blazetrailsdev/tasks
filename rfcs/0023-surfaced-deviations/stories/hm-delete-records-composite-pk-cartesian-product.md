@@ -1,6 +1,6 @@
 ---
 title: "fix: HasManyAssociation#deleteRecords scopes composite-PK via cartesian AND instead of tuple IN"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3731
 claim: "2026-06-20T17:37:32Z"
 assignee: "hm-delete-records-composite-pk-cartesian-product"
 blocked-by: null
