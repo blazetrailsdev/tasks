@@ -36,10 +36,10 @@ scenarios where Rails would not raise this error at all. Surfaced while porting
 
 ## Acceptance criteria
 
-- [ ] Audit each guard raise site against Rails: determine whether Rails raises
+- [x] Audit each guard raise site against Rails: determine whether Rails raises
       `CompositePrimaryKeyMismatchError` (or anything) on that path.
-- [ ] For sites that mirror a real Rails raise, pass the real reflection so the
+- [x] For sites that mirror a real Rails raise, pass the real reflection so the
       message derives from Rails' pk/fk accessors (converge to `new(self)`).
-- [ ] For sites with no Rails equivalent, document them as tracked deviations or
+- [x] For sites with no Rails equivalent, document them as tracked deviations or
       remove them if they mask a different convergence gap.
-- [ ] No change to the canonical `checkValidityBang` path (already faithful).
+- [x] No change to the canonical `checkValidityBang` path (already faithful).
