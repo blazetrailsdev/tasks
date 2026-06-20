@@ -1,6 +1,6 @@
 ---
 title: "instrument Cache::Store increment/decrement (cache_increment/cache_decrement)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3703
 claim: "2026-06-20T11:34:43Z"
 assignee: "cache-store-increment-decrement-instrument"
 blocked-by: null
