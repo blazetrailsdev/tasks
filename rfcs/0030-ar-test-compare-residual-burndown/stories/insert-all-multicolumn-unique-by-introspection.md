@@ -1,6 +1,6 @@
 ---
 title: "upsert_all multi-column unique_by index introspection"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T22:17:27Z"
+assignee: "insert-all-multicolumn-unique-by-introspection"
 blocked-by: null
 ---
 
