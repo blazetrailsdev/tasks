@@ -1,14 +1,14 @@
 ---
 title: "Port Cache::Store base class body (cache.rb)"
-status: claimed
-updated: 2026-06-19
+status: done
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 3682
 claim: "2026-06-19T23:34:11Z"
 assignee: "cache-store-base-class-full-port"
 blocked-by: null
