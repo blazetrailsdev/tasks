@@ -1,7 +1,7 @@
 ---
 title: "has_one writer defers persistence to save() instead of persisting on assignment"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T15:49:28Z"
+assignee: "has-one-writer-persist-on-assignment"
 blocked-by: null
 ---
 
