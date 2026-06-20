@@ -1,7 +1,7 @@
 ---
 title: "InsertAll::Builder inlines quotes instead of delegating to quote_column_name"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T20:37:27Z"
+assignee: "insert-all-builder-quote-delegation"
 blocked-by: null
 ---
 
