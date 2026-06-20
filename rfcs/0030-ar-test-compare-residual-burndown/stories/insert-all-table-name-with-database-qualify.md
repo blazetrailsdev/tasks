@@ -1,6 +1,6 @@
 ---
 title: "insert_all MySQL database-qualified table name under handler suite"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3748
 claim: "2026-06-20T23:11:30Z"
 assignee: "insert-all-table-name-with-database-qualify"
 blocked-by: null
