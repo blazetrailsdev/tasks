@@ -1,6 +1,6 @@
 ---
 title: "cache-store-read-multi-options"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3686
 claim: "2026-06-20T01:11:55Z"
 assignee: "cache-store-read-multi-options"
 blocked-by: null
