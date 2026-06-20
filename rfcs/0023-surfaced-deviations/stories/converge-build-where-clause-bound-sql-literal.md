@@ -1,7 +1,7 @@
 ---
 title: "converge-build-where-clause-bound-sql-literal"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T02:01:35Z"
+assignee: "converge-build-where-clause-bound-sql-literal"
 blocked-by: null
 ---
 
