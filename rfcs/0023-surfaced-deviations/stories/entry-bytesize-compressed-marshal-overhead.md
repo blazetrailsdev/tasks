@@ -1,6 +1,6 @@
 ---
 title: "Converge Entry#bytesize compressed non-String branch to Rails Marshal.dump overhead"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3702
 claim: "2026-06-20T03:34:42Z"
 assignee: "entry-bytesize-compressed-marshal-overhead"
 blocked-by: null
