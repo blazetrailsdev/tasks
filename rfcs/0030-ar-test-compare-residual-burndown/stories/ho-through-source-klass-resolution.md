@@ -1,6 +1,6 @@
 ---
 title: "ho-through-source-klass-resolution"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3735
 claim: "2026-06-20T18:49:28Z"
 assignee: "ho-through-source-klass-resolution"
 blocked-by: null
