@@ -44,10 +44,10 @@ it is an inconsistency with `reflection.activeRecordPrimaryKey`.
 
 ## Acceptance criteria
 
-- [ ] `_inlineOwnerKey` (or the loadHasMany/loadHasOne inline fallbacks)
+- [x] `_inlineOwnerKey` (or the loadHasMany/loadHasOne inline fallbacks)
       replicate the `composite_primary_key?` branch of
       `active_record_primary_key`: for a composite-PK owner without
       query_constraints, infer `"id"` when the PK array includes `"id"`,
       else the full composite PK.
-- [ ] A no-reflection test with a composite-PK owner of shape
+- [x] A no-reflection test with a composite-PK owner of shape
       `[tenant_key, id]` keys correctly via the inferred `"id"`.
