@@ -1,6 +1,6 @@
 ---
 title: "port Cache::Store instrumentation (ActiveSupport::Notifications)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T01:09:43Z"
+assignee: "cache-store-notifications-instrument"
 blocked-by: null
 ---
 
