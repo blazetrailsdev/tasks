@@ -1,6 +1,6 @@
 ---
 title: "Replace TODO skips with Rails gates (23 across 7 files)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: should-gate
