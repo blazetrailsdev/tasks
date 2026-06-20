@@ -41,12 +41,15 @@ Rails: `vendor/rails/activerecord/test/cases/associations_test.rb:244`
 
 ## Acceptance criteria
 
-- [ ] Decide whether to defer `foreignKey` derivation in the has_many path so
+- [x] Decide whether to defer `foreignKey` derivation in the has_many path so
       the underivable-FK ConfigurationError raises at load time (`.toArray()` /
-      await), matching Rails, rather than at proxy construction.
-- [ ] If converged, update the wave-5 test
+      await), matching Rails, rather than at proxy construction. **Converged**
+      (PR #3723): catch the error at proxy construction, re-throw from the single
+      load chokepoint `_execLoad`.
+- [x] If converged, update the wave-5 test
       (`query constraints over three without defining explicit foreign key query
 constraints raises`) to assert the throw on load instead of on the accessor,
       and drop the divergence note in its comment.
-- [ ] If ratified as an intentional deviation, document it in the surfaced-
+- [x] If ratified as an intentional deviation, document it in the surfaced-
       deviations ledger with the rationale (per deviation policy: prefer converge).
+      N/A — converged, not ratified.
