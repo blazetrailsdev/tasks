@@ -1,6 +1,6 @@
 ---
 title: "fix: counterCacheColumn() does not memoize like Rails @counter_cache_column ||="
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T11:49:30Z"
+assignee: "counter-cache-column-memoization"
 blocked-by: null
 ---
 
