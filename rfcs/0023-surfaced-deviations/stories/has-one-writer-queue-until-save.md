@@ -1,6 +1,6 @@
 ---
 title: "has_one writer queues until save (no floating promises), awaitable writer persists immediately"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T18:25:29Z"
+assignee: "has-one-writer-queue-until-save"
 blocked-by: null
 ---
 
