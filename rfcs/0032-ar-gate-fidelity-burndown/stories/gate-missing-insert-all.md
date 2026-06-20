@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate tests in insert_all_test.rb (53)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T13:49:29Z"
+assignee: "gate-missing-insert-all"
 blocked-by: null
 ---
 
