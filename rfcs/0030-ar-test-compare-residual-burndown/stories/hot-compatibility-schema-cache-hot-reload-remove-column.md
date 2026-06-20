@@ -1,6 +1,6 @@
 ---
 title: "Hot-compatibility insert/update after remove_column (schema-cache hot-reload)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T20:07:28Z"
+assignee: "hot-compatibility-schema-cache-hot-reload-remove-column"
 blocked-by: null
 ---
 
