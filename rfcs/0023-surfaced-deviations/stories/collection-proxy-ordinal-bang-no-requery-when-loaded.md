@@ -24,6 +24,6 @@ The fix is identical to PR #3683: add `secondBang`/`thirdBang`/`fourthBang`/`fif
 
 ## Acceptance criteria
 
-- [ ] `CollectionProxy` overrides `secondBang`, `thirdBang`, `fourthBang`, `fifthBang` to delegate to `this.second()` / `this.third()` / `this.fourth()` / `this.fifth()` and throw `RecordNotFound` if null.
-- [ ] Add `captureSql` / no-query assertions for each on a loaded proxy in `has-many-associations.test.ts` mirroring Rails `test_finder_bang_method_with_dirty_target`.
-- [ ] No regression in collection-proxy / has-many suites.
+- [x] `CollectionProxy` overrides Rails' actual override points — `findNthWithLimit` / `findNthFromLast` (`load_target if find_from_target?; super`) — so the inherited `second!`/`third!`/`fourth!`/`fifth!` (and `secondToLast!`/`thirdToLast!`) read a loaded/dirty target without re-querying; the `perform*` finders dispatch through these instance methods. (Reviewer-driven: replaced the initial per-method bang overrides, which materialized `toArray()` and sliced, with the faithful single override point.)
+- [x] `finder bang method with dirty target` test (in `HasManyAssociationsTest`) mirrors Rails `test_finder_bang_method_with_dirty_target`: builds unsaved children into an unloaded `clientsOfFirm`, asserts not loaded, then asserts exactly one query while `third!`/`fourth!`/`fifth!`/`third_to_last!`/`second_to_last!`/`last!` return them by identity.
+- [x] No regression in collection-proxy / has-many suites (finder-methods, finder, associations, has-many-associations, has-many-through, delegation all pass; api:compare & test:compare non-negative).
