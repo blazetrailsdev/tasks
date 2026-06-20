@@ -46,14 +46,14 @@ divergences and forcing less-faithful TS gates.
 
 ## Acceptance criteria
 
-- [ ] Ruby gate extractor parses compound trailing-`if` conditions combining
+- [x] Ruby gate extractor parses compound trailing-`if` conditions combining
       `supports_X?` with `!current_adapter?(...)` (and `current_adapter?(...)`),
       emitting both the `features` and the `adapters` restriction.
-- [ ] `persistence_test.rb` `model with no auto populated fields still returns
+- [x] `persistence_test.rb` `model with no auto populated fields still returns
 primary key after insert` extracts `features:["insert_returning"]` +
       adapter exclusion of sqlite.
-- [ ] Re-gate the TS test in `persistence.test.ts` to
+- [x] Re-gate the TS test in `persistence.test.ts` to
       `itIfSupports.skipIf(adapterType === "sqlite")` and confirm
       `test:compare --gates` classifies it `null` (0 wrong-gate).
-- [ ] Audit other compound-`if` Rails tests for newly-surfaced adapter gates;
+- [x] Audit other compound-`if` Rails tests for newly-surfaced adapter gates;
       reconcile or register follow-ups.
