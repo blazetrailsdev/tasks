@@ -1,6 +1,6 @@
 ---
 title: "test: rewrite faithless 'deleting models with composite keys' + 'sharded deleting models' as canonical Rails ports"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T19:58:04Z"
+assignee: "hm-composite-sharded-delete-tests-faithful-port"
 blocked-by: null
 ---
 
