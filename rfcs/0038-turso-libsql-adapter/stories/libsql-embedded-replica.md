@@ -1,6 +1,6 @@
 ---
 title: "libsql: embedded-replica mode + sync()"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0038-turso-libsql-adapter"
 cluster: adapter-test-fidelity
@@ -8,7 +8,7 @@ deps: ["libsql-remote-mode"]
 deps-rfc: []
 est-loc: 160
 priority: 4
-pr: null
+pr: 3692
 claim: "2026-06-20T01:51:35Z"
 assignee: "libsql-embedded-replica"
 blocked-by: null
