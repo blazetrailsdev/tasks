@@ -1,6 +1,6 @@
 ---
 title: "loadHasMany/loadHasOne polymorphic inline fallback: route owner key through _inlineOwnerKey"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T22:47:27Z"
+assignee: "inline-fallback-polymorphic-as-owner-key-query-constraints"
 blocked-by: null
 ---
 
