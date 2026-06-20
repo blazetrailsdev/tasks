@@ -1,6 +1,6 @@
 ---
 title: "CompositePrimaryKeyMismatchError: store reflection object (attr_reader :reflection parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 3690
 claim: "2026-06-20T01:21:43Z"
 assignee: "composite-primary-key-mismatch-error-reflection-attr"
 blocked-by: null
