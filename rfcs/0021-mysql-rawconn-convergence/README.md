@@ -1,9 +1,9 @@
 ---
 rfc: "0021-mysql-rawconn-convergence"
 title: "mysql2 query methods through the abstract withRawConnection loop"
-status: draft
+status: closed
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - activerecord
