@@ -1,6 +1,6 @@
 ---
 title: "dup-initialize-dup-convergence"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3701
 claim: "2026-06-20T03:18:42Z"
 assignee: "dup-initialize-dup-convergence"
 blocked-by: null
