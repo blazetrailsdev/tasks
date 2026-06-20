@@ -1,7 +1,7 @@
 ---
 title: "has_many FK derivation raises eagerly at proxy construction, not at load like Rails"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T16:01:29Z"
+assignee: "hasmany-fk-derivation-eager-at-proxy-construction"
 blocked-by: null
 ---
 
