@@ -1,6 +1,6 @@
 ---
 title: "insert_all serialize round-trip consistency (RETURNING)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
