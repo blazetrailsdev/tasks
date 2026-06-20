@@ -1,6 +1,6 @@
 ---
 title: "has_one writer queues until save (no floating promises), awaitable writer persists immediately"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
