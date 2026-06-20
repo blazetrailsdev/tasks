@@ -1,6 +1,6 @@
 ---
 title: "fix: CollectionProxy#delete non-through path ignores :dependent (always nullifies, never delete_all/destroy)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T19:57:52Z"
+assignee: "collection-proxy-delete-honor-dependent-strategy"
 blocked-by: null
 ---
 
