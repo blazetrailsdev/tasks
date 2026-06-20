@@ -1,6 +1,6 @@
 ---
 title: "converge-owner-fk-reflection-associations-modules"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3698
 claim: "2026-06-20T02:54:43Z"
 assignee: "converge-owner-fk-reflection-associations-modules"
 blocked-by: null
