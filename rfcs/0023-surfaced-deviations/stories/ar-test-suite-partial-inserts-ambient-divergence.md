@@ -1,6 +1,6 @@
 ---
 title: "AR test harness runs partial_inserts=false (load_defaults 7.0) vs Rails test-suite default true"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T22:37:27Z"
+assignee: "ar-test-suite-partial-inserts-ambient-divergence"
 blocked-by: null
 ---
 
