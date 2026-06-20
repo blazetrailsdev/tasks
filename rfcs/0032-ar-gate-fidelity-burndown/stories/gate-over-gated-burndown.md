@@ -1,6 +1,6 @@
 ---
 title: "Remove over-gating to match Rails unconditional runs (24 across 8 files)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: over-gated
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3709
 claim: "2026-06-20T12:37:27Z"
 assignee: "gate-over-gated-burndown"
 blocked-by: null
