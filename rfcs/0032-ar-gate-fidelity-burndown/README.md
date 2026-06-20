@@ -146,17 +146,18 @@ into pre-planned sibling PRs here.
 
 <!-- generated: stories table -->
 
-| ID                                                                                | Title                                                                    | Status      | Est LOC | Cluster      |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------- | ------- | ------------ |
-| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md) | Arm hard-zero CI gate on activerecord gate-mismatch count                | ready       | 120     | enforcement  |
-| [gate-missing-date-time-precision](stories/gate-missing-date-time-precision.md)   | Gate missing-gate tests in date_time_precision_test.rb (18)              | ready       | 120     | missing-gate |
-| [gate-missing-insert-all](stories/gate-missing-insert-all.md)                     | Gate missing-gate tests in insert_all_test.rb (53)                       | ready       | 250     | missing-gate |
-| [gate-missing-migration](stories/gate-missing-migration.md)                       | Gate missing-gate tests in migration_test.rb (20)                        | ready       | 120     | missing-gate |
-| [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)   | gate-wrong-gate-body-convergence                                         | ready       | null    | —            |
-| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md)               | Converge missing-gate tests to Rails gates (173 across 21 files)         | in-progress | 400     | missing-gate |
-| [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                   | Remove over-gating to match Rails unconditional runs (24 across 8 files) | in-progress | 150     | over-gated   |
-| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                 | Replace TODO skips with Rails gates (23 across 7 files)                  | in-progress | 150     | should-gate  |
-| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                   | Converge wrong-gate tests to Rails gates (49 across 19 files)            | in-progress | 250     | wrong-gate   |
+| ID                                                                                        | Title                                                                    | Status      | Est LOC | Cluster      |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------- | ------- | ------------ |
+| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)         | Arm hard-zero CI gate on activerecord gate-mismatch count                | ready       | 120     | enforcement  |
+| [gate-missing-date-time-precision](stories/gate-missing-date-time-precision.md)           | Gate missing-gate tests in date_time_precision_test.rb (18)              | ready       | 120     | missing-gate |
+| [gate-missing-insert-all](stories/gate-missing-insert-all.md)                             | Gate missing-gate tests in insert_all_test.rb (53)                       | ready       | 250     | missing-gate |
+| [gate-missing-migration](stories/gate-missing-migration.md)                               | Gate missing-gate tests in migration_test.rb (20)                        | ready       | 120     | missing-gate |
+| [gate-missing-schema-dumper-invertible](stories/gate-missing-schema-dumper-invertible.md) | Gate missing-gate tests in schema_dumper + invertible_migration (12)     | ready       | 90      | missing-gate |
+| [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)           | gate-wrong-gate-body-convergence                                         | ready       | null    | —            |
+| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md)                       | Converge missing-gate tests to Rails gates (173 across 21 files)         | in-progress | 400     | missing-gate |
+| [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                           | Remove over-gating to match Rails unconditional runs (24 across 8 files) | in-progress | 150     | over-gated   |
+| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                         | Replace TODO skips with Rails gates (23 across 7 files)                  | in-progress | 150     | should-gate  |
+| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                           | Converge wrong-gate tests to Rails gates (49 across 19 files)            | in-progress | 250     | wrong-gate   |
 
 ## Changelog
 
