@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delete-honor-dependent-non-through"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T20:27:28Z"
+assignee: "collection-proxy-delete-honor-dependent-non-through"
 blocked-by: null
 ---
 
@@ -48,7 +48,7 @@ making `CollectionProxy#delete` _reach_ that path for non-through associations.
 - [ ] `CollectionProxy#delete` for non-through has_many delegates to the
       dependent-aware association-layer `delete` (or otherwise honors
       `options[:dependent]`), matching Rails `delete_or_destroy(records,
-  options[:dependent])`: `:delete_all` DELETEs, `:destroy` destroys, no
+options[:dependent])`: `:delete_all` DELETEs, `:destroy` destroys, no
       dependent nullifies.
 - [ ] A `dependent: :delete_all` non-through association with a NOT-NULL
       (incl. composite-PK) FK is DELETEd, not nullified, via the proxy
