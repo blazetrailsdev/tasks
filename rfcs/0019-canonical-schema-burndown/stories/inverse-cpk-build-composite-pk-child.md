@@ -1,6 +1,6 @@
 ---
 title: "inverse-of: composite-PK build sets inverse on child (Cpk::Author/Book/Order)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3749
 claim: "2026-06-20T23:15:44Z"
 assignee: "inverse-cpk-build-composite-pk-child"
 blocked-by: null
