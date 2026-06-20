@@ -1,6 +1,6 @@
 ---
 title: "Converge PG anonymous-reflected-class datetime dirty-tracking gap"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T13:13:29Z"
+assignee: "dirty-pg-anon-class-datetime-tracking"
 blocked-by: null
 ---
 
