@@ -1,6 +1,6 @@
 ---
 title: "dup-initialize-dup-convergence"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: null
