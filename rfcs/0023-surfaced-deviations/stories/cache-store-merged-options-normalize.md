@@ -1,6 +1,6 @@
 ---
 title: "cache-store-merged-options-normalize"
-status: claimed
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3684
 claim: "2026-06-20T00:24:24Z"
 assignee: "cache-store-merged-options-normalize"
 blocked-by: null
