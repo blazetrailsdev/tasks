@@ -1,6 +1,6 @@
 ---
 title: "test: rewrite faithless 'deleting models with composite keys' + 'sharded deleting models' as canonical Rails ports"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
