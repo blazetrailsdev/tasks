@@ -1,6 +1,6 @@
 ---
 title: "has_many FK derivation raises eagerly at proxy construction, not at load like Rails"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
