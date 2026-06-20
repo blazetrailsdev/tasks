@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate tests in migration_test.rb (20)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3716
 claim: "2026-06-20T14:01:27Z"
 assignee: "gate-missing-migration"
 blocked-by: null
