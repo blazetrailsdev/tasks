@@ -4,7 +4,8 @@ status: ready
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - module-namespaced-sti-polymorphic-name
 deps-rfc: []
 est-loc: 180
 priority: null
