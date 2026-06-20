@@ -1,6 +1,6 @@
 ---
 title: "ordered finders (first(n)/second/last) leak connection under deprecated permanent checkout"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T18:13:28Z"
+assignee: "finder-nth-with-connection-shim"
 blocked-by: null
 ---
 
