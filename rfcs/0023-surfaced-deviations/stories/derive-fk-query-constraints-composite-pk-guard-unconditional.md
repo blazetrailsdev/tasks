@@ -1,6 +1,6 @@
 ---
 title: "deriveFkQueryConstraints skips primary-key guard for composite-PK owners (Rails checks unconditionally)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3732
 claim: "2026-06-20T18:01:31Z"
 assignee: "derive-fk-query-constraints-composite-pk-guard-unconditional"
 blocked-by: null
