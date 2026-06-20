@@ -148,8 +148,8 @@ into pre-planned sibling PRs here.
 
 | ID                                                                                                        | Title                                                                                 | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
-| [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | ready       | 120     | —            |
 | [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | ready       | 120     | enforcement  |
+| [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | claimed     | 120     | —            |
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed     | null    | —            |
 | [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                                         | Replace TODO skips with Rails gates (23 across 7 files)                               | in-progress | 150     | should-gate  |
 | [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md) | converge-schema-dumper-partial-nulls-overgate                                         | done        | null    | —            |
