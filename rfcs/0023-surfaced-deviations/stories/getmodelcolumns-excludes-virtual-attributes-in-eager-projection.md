@@ -1,7 +1,7 @@
 ---
 title: "getModelColumns must exclude virtual (column-less) declared attributes from the eager-load SELECT projection"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T13:25:29Z"
+assignee: "getmodelcolumns-excludes-virtual-attributes-in-eager-projection"
 blocked-by: null
 ---
 
