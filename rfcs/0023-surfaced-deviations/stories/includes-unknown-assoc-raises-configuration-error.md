@@ -1,7 +1,7 @@
 ---
 title: "includes/eager_load unknown association should raise ConfigurationError not ArgumentError"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T19:13:28Z"
+assignee: "includes-unknown-assoc-raises-configuration-error"
 blocked-by: null
 ---
 
