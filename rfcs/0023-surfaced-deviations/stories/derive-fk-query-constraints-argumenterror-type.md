@@ -1,6 +1,6 @@
 ---
 title: "derive-fk-query-constraints-argumenterror-type"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
