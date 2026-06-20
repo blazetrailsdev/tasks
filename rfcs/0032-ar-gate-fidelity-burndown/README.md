@@ -149,6 +149,7 @@ into pre-planned sibling PRs here.
 | ID                                                                                | Title                                                                    | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------- | ------- | ------------ |
 | [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md) | Arm hard-zero CI gate on activerecord gate-mismatch count                | ready       | 120     | enforcement  |
+| [gate-missing-date-time-precision](stories/gate-missing-date-time-precision.md)   | Gate missing-gate tests in date_time_precision_test.rb (18)              | ready       | 120     | missing-gate |
 | [gate-missing-insert-all](stories/gate-missing-insert-all.md)                     | Gate missing-gate tests in insert_all_test.rb (53)                       | ready       | 250     | missing-gate |
 | [gate-missing-migration](stories/gate-missing-migration.md)                       | Gate missing-gate tests in migration_test.rb (20)                        | ready       | 120     | missing-gate |
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)   | gate-wrong-gate-body-convergence                                         | ready       | null    | —            |
