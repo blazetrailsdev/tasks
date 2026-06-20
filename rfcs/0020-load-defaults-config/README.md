@@ -1,9 +1,9 @@
 ---
 rfc: "0020-load-defaults-config"
 title: "Versioned framework defaults (config.load_defaults) — partial_inserts first"
-status: draft
+status: closed
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - activerecord
