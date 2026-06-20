@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate tests in date_time_precision_test.rb (18)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3714
 claim: "2026-06-20T13:37:30Z"
 assignee: "gate-missing-date-time-precision"
 blocked-by: null
