@@ -1,6 +1,6 @@
 ---
 title: "loadHasMany/loadHasOne inline fallback: replicate composite_primary_key? branch of active_record_primary_key"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 3740
 claim: "2026-06-20T20:17:27Z"
 assignee: "inline-fallback-composite-pk-active-record-primary-key"
 blocked-by: null
