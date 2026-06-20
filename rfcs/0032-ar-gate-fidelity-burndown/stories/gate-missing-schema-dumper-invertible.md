@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate tests in schema_dumper + invertible_migration (12)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 3719
 claim: "2026-06-20T14:37:27Z"
 assignee: "gate-missing-schema-dumper-invertible"
 blocked-by: null
