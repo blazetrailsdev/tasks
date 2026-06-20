@@ -1,13 +1,13 @@
 ---
 title: "Phase 5 — retire canonical-preload signature machinery"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0002-bootstrap-databasetasks"
 cluster: followup
 deps: ["delete-bootstrap-handler"]
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: 3691
 claim: "2026-06-20T01:41:36Z"
 assignee: "define-schema-preload-cleanup"
 blocked-by: null
