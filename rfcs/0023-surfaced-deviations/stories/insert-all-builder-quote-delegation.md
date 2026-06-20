@@ -1,6 +1,6 @@
 ---
 title: "InsertAll::Builder inlines quotes instead of delegating to quote_column_name"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
