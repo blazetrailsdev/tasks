@@ -1,9 +1,9 @@
 ---
 rfc: "0008-test-perf-template-clone"
 title: "AR test perf — canonical schema as a clonable template"
-status: active
+status: closed
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - activerecord

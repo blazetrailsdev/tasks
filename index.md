@@ -11,7 +11,7 @@
 | [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @deanmarano | activerecord |
 | [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | closed | @deanmarano | activerecord |
 | [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | active | @deanmarano | activerecord, arel |
-| [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | active | @deanmarano | activerecord |
+| [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | closed | @deanmarano | activerecord |
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @deanmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @deanmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | active | @deanmarano | activerecord |
