@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delete-honor-dependent-non-through"
-status: claimed
+status: blocked
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-06-20T20:27:28Z"
 assignee: "collection-proxy-delete-honor-dependent-non-through"
-blocked-by: null
+blocked-by: "Duplicate of collection-proxy-delete-honor-dependent-strategy (in-progress, PR #3738), which covers the identical non-through CollectionProxy#delete :dependent deviation. Close/merge into that story during triage."
 ---
 
 ## Context
