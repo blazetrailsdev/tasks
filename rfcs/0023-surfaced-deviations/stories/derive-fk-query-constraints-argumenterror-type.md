@@ -1,6 +1,6 @@
 ---
 title: "derive-fk-query-constraints-argumenterror-type"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T16:37:30Z"
+assignee: "derive-fk-query-constraints-argumenterror-type"
 blocked-by: null
 ---
 
