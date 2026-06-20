@@ -1,13 +1,13 @@
 ---
 title: "fix(arel): restore collector.preparable threading reverted by #3601's stale squash"
 status: ready
-updated: 2026-06-19
+updated: 2026-06-20
 rfc: "0016-ar-test-compare-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 0
 pr: null
 claim: null
 assignee: null
