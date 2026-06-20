@@ -1,14 +1,14 @@
 ---
 title: "libsql: remote Turso mode (network, async-open path)"
-status: claimed
-updated: 2026-06-19
+status: done
+updated: 2026-06-20
 rfc: "0038-turso-libsql-adapter"
 cluster: adapter-test-fidelity
 deps: ["libsql-local-driver"]
 deps-rfc: []
 est-loc: 180
 priority: 3
-pr: null
+pr: 3670
 claim: "2026-06-19T19:53:24Z"
 assignee: "libsql-remote-mode"
 blocked-by: null
