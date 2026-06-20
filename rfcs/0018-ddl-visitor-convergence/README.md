@@ -1,9 +1,9 @@
 ---
 rfc: "0018-ddl-visitor-convergence"
 title: "Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql"
-status: active
+status: closed
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - activerecord
