@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-partial-nulls-overgate"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
