@@ -1,6 +1,6 @@
 ---
 title: "Gate extractor: capture !current_adapter? in compound trailing-if conditions"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3724
 claim: "2026-06-20T16:13:30Z"
 assignee: "gate-extractor-compound-if-current-adapter"
 blocked-by: null
