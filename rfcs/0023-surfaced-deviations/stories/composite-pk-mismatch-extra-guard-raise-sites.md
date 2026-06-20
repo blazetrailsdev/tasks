@@ -1,6 +1,6 @@
 ---
 title: "Converge trails-only CompositePrimaryKeyMismatchError guard raise sites to Rails' single check_validity! site"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3695
 claim: "2026-06-20T02:30:48Z"
 assignee: "composite-pk-mismatch-extra-guard-raise-sites"
 blocked-by: null
