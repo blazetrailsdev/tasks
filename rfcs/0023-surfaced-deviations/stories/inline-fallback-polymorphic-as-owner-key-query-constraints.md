@@ -38,9 +38,9 @@ instead of the owner's `query_constraints_list`, diverging from
 
 ## Acceptance criteria
 
-- [ ] The `options.as` scalar-FK fallback branches in `loadHasMany` /
+- [x] The `options.as` scalar-FK fallback branches in `loadHasMany` /
       `loadHasOne` resolve the owner key via `_inlineOwnerKey` (or otherwise
       honor query_constraints), matching `reflection.active_record_primary_key`.
-- [ ] A no-reflection test with a polymorphic association on a
+- [x] A no-reflection test with a polymorphic association on a
       query_constraints owner keys via the query_constraints list, not the
       scalar `id`.
