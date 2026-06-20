@@ -1,6 +1,6 @@
 ---
 title: "test: cover counterCacheColumn() memo invalidation on target re-registration"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 3706
 claim: "2026-06-20T12:13:27Z"
 assignee: "counter-cache-column-memo-reregistration-test"
 blocked-by: null
