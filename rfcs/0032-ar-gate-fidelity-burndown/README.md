@@ -146,22 +146,22 @@ into pre-planned sibling PRs here.
 
 <!-- generated: stories table -->
 
-| ID                                                                                                        | Title                                                                                 | Status      | Est LOC | Cluster      |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
-| [gate-extractor-compound-if-positive-adapter](stories/gate-extractor-compound-if-positive-adapter.md)     | Gate extractor: capture positive current_adapter? in compound conjunction conditions  | draft       | 120     | —            |
-| [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed     | null    | —            |
-| [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | in-progress | 120     | —            |
-| [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md) | converge-schema-dumper-partial-nulls-overgate                                         | done        | null    | —            |
-| [gate-missing-date-time-precision](stories/gate-missing-date-time-precision.md)                           | Gate missing-gate tests in date_time_precision_test.rb (18)                           | done        | 120     | missing-gate |
-| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md)                                       | Converge missing-gate tests to Rails gates (173 across 21 files)                      | done        | 400     | missing-gate |
-| [gate-missing-insert-all](stories/gate-missing-insert-all.md)                                             | Gate missing-gate tests in insert_all_test.rb (53)                                    | done        | 250     | missing-gate |
-| [gate-missing-migration](stories/gate-missing-migration.md)                                               | Gate missing-gate tests in migration_test.rb (20)                                     | done        | 120     | missing-gate |
-| [gate-missing-persistence-prevent-writes](stories/gate-missing-persistence-prevent-writes.md)             | Gate missing-gate duplicate-variant tests in persistence + adapter_prevent_writes (8) | done        | 90      | missing-gate |
-| [gate-missing-schema-dumper-invertible](stories/gate-missing-schema-dumper-invertible.md)                 | Gate missing-gate tests in schema_dumper + invertible_migration (12)                  | done        | 90      | missing-gate |
-| [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                                           | Remove over-gating to match Rails unconditional runs (24 across 8 files)              | done        | 150     | over-gated   |
-| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                                         | Replace TODO skips with Rails gates (23 across 7 files)                               | done        | 150     | should-gate  |
-| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                                           | Converge wrong-gate tests to Rails gates (49 across 19 files)                         | done        | 250     | wrong-gate   |
-| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | blocked     | 120     | enforcement  |
+| ID                                                                                                        | Title                                                                                 | Status  | Est LOC | Cluster      |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- | ------- | ------------ |
+| [gate-extractor-compound-if-positive-adapter](stories/gate-extractor-compound-if-positive-adapter.md)     | Gate extractor: capture positive current_adapter? in compound conjunction conditions  | draft   | 120     | —            |
+| [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed | null    | —            |
+| [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md) | converge-schema-dumper-partial-nulls-overgate                                         | done    | null    | —            |
+| [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | done    | 120     | —            |
+| [gate-missing-date-time-precision](stories/gate-missing-date-time-precision.md)                           | Gate missing-gate tests in date_time_precision_test.rb (18)                           | done    | 120     | missing-gate |
+| [gate-missing-gate-burndown](stories/gate-missing-gate-burndown.md)                                       | Converge missing-gate tests to Rails gates (173 across 21 files)                      | done    | 400     | missing-gate |
+| [gate-missing-insert-all](stories/gate-missing-insert-all.md)                                             | Gate missing-gate tests in insert_all_test.rb (53)                                    | done    | 250     | missing-gate |
+| [gate-missing-migration](stories/gate-missing-migration.md)                                               | Gate missing-gate tests in migration_test.rb (20)                                     | done    | 120     | missing-gate |
+| [gate-missing-persistence-prevent-writes](stories/gate-missing-persistence-prevent-writes.md)             | Gate missing-gate duplicate-variant tests in persistence + adapter_prevent_writes (8) | done    | 90      | missing-gate |
+| [gate-missing-schema-dumper-invertible](stories/gate-missing-schema-dumper-invertible.md)                 | Gate missing-gate tests in schema_dumper + invertible_migration (12)                  | done    | 90      | missing-gate |
+| [gate-over-gated-burndown](stories/gate-over-gated-burndown.md)                                           | Remove over-gating to match Rails unconditional runs (24 across 8 files)              | done    | 150     | over-gated   |
+| [gate-should-gate-burndown](stories/gate-should-gate-burndown.md)                                         | Replace TODO skips with Rails gates (23 across 7 files)                               | done    | 150     | should-gate  |
+| [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                                           | Converge wrong-gate tests to Rails gates (49 across 19 files)                         | done    | 250     | wrong-gate   |
+| [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | blocked | 120     | enforcement  |
 
 ## Changelog
 

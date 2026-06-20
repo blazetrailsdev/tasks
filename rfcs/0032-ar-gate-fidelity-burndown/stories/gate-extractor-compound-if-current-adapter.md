@@ -1,6 +1,6 @@
 ---
 title: "Gate extractor: capture !current_adapter? in compound trailing-if conditions"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
