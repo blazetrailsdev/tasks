@@ -1,7 +1,7 @@
 ---
 title: "fix: CpkOrder._counterCacheColumns gets cpk_books_count from pending flush instead of books_count"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T02:46:42Z"
+assignee: "cpk-counter-cache-columns-pending-flush"
 blocked-by: null
 ---
 
