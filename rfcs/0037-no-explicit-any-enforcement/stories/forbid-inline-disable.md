@@ -1,6 +1,6 @@
 ---
 title: "Custom rule: forbid eslint-disable of no-explicit-any in AR"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 3705
 claim: "2026-06-20T12:01:28Z"
 assignee: "forbid-inline-disable"
 blocked-by: null
