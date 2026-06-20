@@ -1,6 +1,6 @@
 ---
 title: "insert_all/upsert_all log message includes model name (SQL-log capture)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3743
 claim: "2026-06-20T22:07:27Z"
 assignee: "insert-all-log-message-model-name"
 blocked-by: null
