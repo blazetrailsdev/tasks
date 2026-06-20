@@ -37,7 +37,7 @@ trails source: `packages/activerecord/src/test-helpers/models/post.ts`
 
 ## Acceptance criteria
 
-- [ ] `Post.joins("verySpecialCommentWithStringJoins").first()` resolves
+- [x] `Post.joins("verySpecialCommentWithStringJoins").first()` resolves
       without error on all three adapters (SQLite, PG, MySQL).
-- [ ] `test_eager_association_with_scope_with_string_joins` in
+- [x] `test_eager_association_with_scope_with_string_joins` in
       `associations/join-model.test.ts` un-skipped and passing.
