@@ -1,7 +1,7 @@
 ---
 title: "Polymorphic has_one :as instance getter returns undefined (loadHasOne works)"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T17:01:28Z"
+assignee: "hasone-polymorphic-as-getter-returns-undefined"
 blocked-by: null
 ---
 
