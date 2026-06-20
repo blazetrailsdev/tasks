@@ -148,7 +148,7 @@ into pre-planned sibling PRs here.
 
 | ID                                                                                                        | Title                                                                                 | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
-| [gate-extractor-compound-if-positive-adapter](stories/gate-extractor-compound-if-positive-adapter.md)     | Gate extractor: capture positive current_adapter? in compound conjunction conditions  | ready       | 120     | —            |
+| [gate-extractor-compound-if-positive-adapter](stories/gate-extractor-compound-if-positive-adapter.md)     | Gate extractor: capture positive current_adapter? in compound conjunction conditions  | draft       | 120     | —            |
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed     | null    | —            |
 | [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | in-progress | 120     | —            |
 | [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md) | converge-schema-dumper-partial-nulls-overgate                                         | done        | null    | —            |
