@@ -1,6 +1,6 @@
 ---
 title: "create-record-timestamp-came-from-user"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3699
 claim: "2026-06-20T03:02:43Z"
 assignee: "create-record-timestamp-came-from-user"
 blocked-by: null
