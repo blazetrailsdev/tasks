@@ -1,6 +1,6 @@
 ---
 title: "Inline polymorphic fallback raises ArgumentError for underivable query_constraints (deriveFkQueryConstraints parity)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T23:58:57Z"
+assignee: "inline-polymorphic-fallback-argumenterror-underivable-query-constraints"
 blocked-by: null
 ---
 
