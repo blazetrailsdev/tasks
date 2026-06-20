@@ -1,14 +1,14 @@
 ---
 title: "assoc-preloadertest-cfk-cpk-canonical"
-status: claimed
-updated: 2026-06-19
+status: done
+updated: 2026-06-20
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3671
 claim: "2026-06-19T20:08:25Z"
 assignee: "assoc-preloadertest-cfk-cpk-canonical"
 blocked-by: null
