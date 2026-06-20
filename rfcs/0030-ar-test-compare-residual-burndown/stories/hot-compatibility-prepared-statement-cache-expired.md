@@ -1,6 +1,6 @@
 ---
 title: "PG prepared-statement-cache-expired cleanup mid-transaction"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3737
 claim: "2026-06-20T19:01:29Z"
 assignee: "hot-compatibility-prepared-statement-cache-expired"
 blocked-by: null
