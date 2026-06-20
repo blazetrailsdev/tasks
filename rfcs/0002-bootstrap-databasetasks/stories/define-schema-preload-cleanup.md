@@ -1,6 +1,6 @@
 ---
 title: "Phase 5 — retire canonical-preload signature machinery"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0002-bootstrap-databasetasks"
 cluster: followup
