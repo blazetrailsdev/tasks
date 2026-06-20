@@ -1,6 +1,6 @@
 ---
 title: "includes/eager_load unknown association should raise ConfigurationError not ArgumentError"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
