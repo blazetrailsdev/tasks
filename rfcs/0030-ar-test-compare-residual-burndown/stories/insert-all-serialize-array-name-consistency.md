@@ -1,6 +1,6 @@
 ---
 title: "insert_all serialize round-trip consistency (RETURNING)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3746
 claim: "2026-06-20T22:57:28Z"
 assignee: "insert-all-serialize-array-name-consistency"
 blocked-by: null
