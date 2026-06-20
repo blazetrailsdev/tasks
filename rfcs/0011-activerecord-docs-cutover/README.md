@@ -1,9 +1,9 @@
 ---
 rfc: "0011-activerecord-docs-cutover"
 title: "ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth"
-status: active
+status: closed
 created: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - activerecord
