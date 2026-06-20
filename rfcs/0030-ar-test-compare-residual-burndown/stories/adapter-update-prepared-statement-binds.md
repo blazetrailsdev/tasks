@@ -1,6 +1,6 @@
 ---
 title: "Write-path binds round-trip prepared statement (null-byte values)"
-status: claimed
+status: in-progress
 updated: 2026-06-20
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3727
 claim: "2026-06-20T16:25:30Z"
 assignee: "adapter-update-prepared-statement-binds"
 blocked-by: null
