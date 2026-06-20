@@ -40,11 +40,11 @@ only the duplicated proxy fast-path (added in #3610) ignores it.
 
 ## Acceptance criteria
 
-- [ ] `CollectionProxy#delete` non-through path branches on the effective
+- [x] `CollectionProxy#delete` non-through path branches on the effective
       `:dependent` strategy, matching Rails `CollectionProxy#delete` →
       `delete_records`: `:delete_all` → bulk DELETE scoped to the records,
       `:destroy` → per-record destroy, else → nullify.
-- [ ] Reuse the existing tuple-safe `where(cols, tuples)` scoping for the
+- [x] Reuse the existing tuple-safe `where(cols, tuples)` scoping for the
       composite-PK case in all branches.
-- [ ] Add/port coverage for `dependent: :delete_all` proxy delete actually
+- [x] Add/port coverage for `dependent: :delete_all` proxy delete actually
       removing rows (mirror the relevant Rails has_many test).
