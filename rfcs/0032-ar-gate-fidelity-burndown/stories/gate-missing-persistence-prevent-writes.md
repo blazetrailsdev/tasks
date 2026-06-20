@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate duplicate-variant tests in persistence + adapter_prevent_writes (8)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
