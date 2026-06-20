@@ -1,6 +1,6 @@
 ---
 title: "Gate missing-gate tests in date_time_precision_test.rb (18)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: missing-gate
