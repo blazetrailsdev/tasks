@@ -1,6 +1,6 @@
 ---
 title: "Cache::Store#fetchMulti accepts trailing options hash (extract_options!)"
-status: ready
+status: claimed
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T02:22:46Z"
+assignee: "cache-store-fetch-multi-options"
 blocked-by: null
 ---
 
