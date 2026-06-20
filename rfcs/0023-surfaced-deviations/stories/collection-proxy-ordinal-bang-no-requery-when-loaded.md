@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#secondBang/thirdBang/fourthBang/fifthBang re-query on loaded proxy (should read loaded target)"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
