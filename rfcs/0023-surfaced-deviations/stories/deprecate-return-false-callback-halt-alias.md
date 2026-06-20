@@ -1,7 +1,7 @@
 ---
 title: "Converge callback halt to throw-abort sentinel only (drop return-false alias)"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T03:10:43Z"
+assignee: "deprecate-return-false-callback-halt-alias"
 blocked-by: null
 ---
 
