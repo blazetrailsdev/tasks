@@ -1,7 +1,7 @@
 ---
 title: "Converge wrong-gate tests to Rails gates (49 across 19 files)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-20
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: wrong-gate
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-20T13:01:31Z"
+assignee: "gate-wrong-gate-burndown"
 blocked-by: null
 ---
 
