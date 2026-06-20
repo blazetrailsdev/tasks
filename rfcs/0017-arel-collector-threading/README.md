@@ -1,9 +1,9 @@
 ---
 rfc: "0017-arel-collector-threading"
 title: "Thread the Arel query visitor collector — eliminate ToSql instance state"
-status: active
+status: closed
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-20
 owner: "@deanmarano"
 packages:
   - arel
