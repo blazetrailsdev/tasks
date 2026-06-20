@@ -148,6 +148,7 @@ into pre-planned sibling PRs here.
 
 | ID                                                                                                        | Title                                                                                 | Status      | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
+| [gate-extractor-compound-if-current-adapter](stories/gate-extractor-compound-if-current-adapter.md)       | Gate extractor: capture !current_adapter? in compound trailing-if conditions          | ready       | 120     | —            |
 | [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                         | Arm hard-zero CI gate on activerecord gate-mismatch count                             | ready       | 120     | enforcement  |
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                           | gate-wrong-gate-body-convergence                                                      | claimed     | null    | —            |
 | [gate-missing-persistence-prevent-writes](stories/gate-missing-persistence-prevent-writes.md)             | Gate missing-gate duplicate-variant tests in persistence + adapter_prevent_writes (8) | in-progress | 90      | missing-gate |
