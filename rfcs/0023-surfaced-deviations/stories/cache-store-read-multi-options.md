@@ -1,6 +1,6 @@
 ---
 title: "cache-store-read-multi-options"
-status: in-progress
+status: done
 updated: 2026-06-20
 rfc: "0023-surfaced-deviations"
 cluster: null
