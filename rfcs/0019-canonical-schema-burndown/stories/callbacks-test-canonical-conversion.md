@@ -1,6 +1,6 @@
 ---
 title: "callbacks-test-canonical-conversion"
-status: claimed
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3758
 claim: "2026-06-21T00:31:25Z"
 assignee: "callbacks-test-canonical-conversion"
 blocked-by: null
