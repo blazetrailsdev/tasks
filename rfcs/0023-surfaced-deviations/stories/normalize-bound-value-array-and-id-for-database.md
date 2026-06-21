@@ -1,6 +1,6 @@
 ---
 title: "fix(activerecord): normalizeBoundValue handles array and idForDatabase bind shapes"
-status: claimed
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3693
 claim: "2026-06-21T11:58:42Z"
 assignee: "normalize-bound-value-array-and-id-for-database"
 blocked-by: null
