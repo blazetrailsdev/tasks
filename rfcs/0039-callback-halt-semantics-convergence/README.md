@@ -54,11 +54,11 @@ Three tracked items remain:
 
 <!-- generated: stories table -->
 
-| ID                                                                                                            | Title                                                                                 | Status  | Est LOC | Cluster |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- | ------- | ------- |
-| [model-callbacks-block-false-after-skip-fidelity](stories/model-callbacks-block-false-after-skip-fidelity.md) | ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap) | claimed | 120     | —       |
-| [deprecate-return-false-callback-halt-alias](stories/deprecate-return-false-callback-halt-alias.md)           | Converge callback halt to throw-abort sentinel only (drop return-false alias)         | done    | 150     | —       |
-| [callback-throw-abort-halt-semantics](stories/callback-throw-abort-halt-semantics.md)                         | throw :abort halt semantics — converge throw "abort" vs return false                  | blocked | 90      | —       |
+| ID                                                                                                            | Title                                                                                 | Status      | Est LOC | Cluster |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
+| [model-callbacks-block-false-after-skip-fidelity](stories/model-callbacks-block-false-after-skip-fidelity.md) | ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap) | in-progress | 120     | —       |
+| [deprecate-return-false-callback-halt-alias](stories/deprecate-return-false-callback-halt-alias.md)           | Converge callback halt to throw-abort sentinel only (drop return-false alias)         | done        | 150     | —       |
+| [callback-throw-abort-halt-semantics](stories/callback-throw-abort-halt-semantics.md)                         | throw :abort halt semantics — converge throw "abort" vs return false                  | blocked     | 90      | —       |
 
 ## Rollout
 
