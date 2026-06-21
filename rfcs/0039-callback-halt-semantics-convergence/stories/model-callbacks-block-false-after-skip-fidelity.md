@@ -1,7 +1,7 @@
 ---
 title: "ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap)"
-status: ready
-updated: 2026-06-20
+status: claimed
+updated: 2026-06-21
 rfc: "0039-callback-halt-semantics-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T03:10:43Z"
+assignee: "model-callbacks-block-false-after-skip-fidelity"
 blocked-by: null
 ---
 
