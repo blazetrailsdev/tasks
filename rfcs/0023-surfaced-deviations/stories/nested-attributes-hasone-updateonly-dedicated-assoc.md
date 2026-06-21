@@ -1,6 +1,6 @@
 ---
 title: "Converge hasOne updateOnly nested-attrs tests to canonical update_only_ship association"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3775
 claim: "2026-06-21T11:10:44Z"
 assignee: "nested-attributes-hasone-updateonly-dedicated-assoc"
 blocked-by: null
