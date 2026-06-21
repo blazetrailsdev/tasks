@@ -1,6 +1,6 @@
 ---
 title: "Utils.extractSchemaQualifiedName collapses 3+ dotted parts instead of taking first two (Rails scan)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3805
 claim: "2026-06-21T16:54:40Z"
 assignee: "pg-extract-schema-qualified-name-three-part"
 blocked-by: null
