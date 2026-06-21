@@ -1,6 +1,6 @@
 ---
 title: "Module-namespaced model names in STI/polymorphic type + model_name"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
