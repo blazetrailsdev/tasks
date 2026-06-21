@@ -1,6 +1,6 @@
 ---
 title: "new-foreign-key-definition-converge-prefix-suffix-and-options"
-status: ready
+status: draft
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
