@@ -13,6 +13,12 @@ related-rfcs:
   - "0030-ar-test-compare-residual-burndown"
 ---
 
+<!-- Unnumbered until merge: keep `rfc:` as 0000-bespoke-test-bloat-burndown and
+     the H1 number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the assigned
+     number at merge. -->
+
+# RFC — ActiveRecord bespoke TS-only test-bloat burndown
+
 ## Summary
 
 `@blazetrails/activerecord` carries **3403 "extra" (TS-only) tests** — `it`
