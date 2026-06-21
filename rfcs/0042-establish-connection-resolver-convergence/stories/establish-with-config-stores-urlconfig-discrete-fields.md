@@ -27,9 +27,9 @@ why `configurationHash` carries `url` + no `database`, which is why
 
 ## Acceptance criteria
 
-- [ ] `establishWithConfig` stores a `UrlConfig` (or HashConfig with the URL
+- [x] `establishWithConfig` stores a `UrlConfig` (or HashConfig with the URL
       decomposed) so `configurationHash` mirrors Rails' discrete-field shape.
-- [ ] Confirm whether the `buildAdapterArg` URL-forwarding branch
+- [x] Confirm whether the `buildAdapterArg` URL-forwarding branch
       (`adapter-args.ts:143`) is still needed or can be simplified/removed;
       document the outcome.
-- [ ] api:compare + test:compare delta non-negative.
+- [x] api:compare + test:compare delta non-negative.
