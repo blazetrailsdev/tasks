@@ -41,11 +41,11 @@ replay; the deep_dup approach yields empty `changes` (verified locally).
 
 ## Acceptance criteria
 
-- [ ] `new Model(attrs).changes` matches Rails (dirty against column defaults for
+- [x] `new Model(attrs).changes` matches Rails (dirty against column defaults for
       assigned attributes) — `Topic.new(title: "x").changed?` is true.
-- [ ] `_attributes.deepDup()` of a loaded record, when the record becomes a
+- [x] `_attributes.deepDup()` of a loaded record, when the record becomes a
       new_record (dup), reports changes-vs-default like Rails.
-- [ ] Converge `Persistence#dup` to Rails' `init_attributes` (deep_dup + reset
+- [x] Converge `Persistence#dup` to Rails' `init_attributes` (deep_dup + reset
       pk) instead of the `new ctor({}) + assignAttributes` replay, keeping
       `dup.test.ts` green (esp. `dup with changes`).
-- [ ] No regressions in dirty / persistence / dup suites.
+- [x] No regressions in dirty / persistence / dup suites.
