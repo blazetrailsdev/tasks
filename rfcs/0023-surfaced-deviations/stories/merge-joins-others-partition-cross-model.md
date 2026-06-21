@@ -1,6 +1,6 @@
 ---
 title: "merge_joins threads raw others alongside cross-klass JoinDependency"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
