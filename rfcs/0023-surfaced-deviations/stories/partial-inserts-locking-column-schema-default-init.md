@@ -1,6 +1,6 @@
 ---
 title: "Initialize locking column from schema default; drop nil guard (converge to optimistic.rb:82)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T12:38:43Z"
+assignee: "partial-inserts-locking-column-schema-default-init"
 blocked-by: null
 ---
 
