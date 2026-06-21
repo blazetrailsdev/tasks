@@ -1,6 +1,6 @@
 ---
 title: "ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0039-callback-halt-semantics-convergence"
 cluster: null
