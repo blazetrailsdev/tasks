@@ -1,6 +1,6 @@
 ---
 title: "Dead @internal unquote() helper in oid/range.ts has no callers"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
