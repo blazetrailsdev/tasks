@@ -37,9 +37,9 @@ handler suite sees the real database).
 
 ## Acceptance criteria
 
-- [ ] `Book.connectionDbConfig().database` returns the per-worker slot DB name
+- [x] `Book.connectionDbConfig().database` returns the per-worker slot DB name
       under the MySQL handler suite (not `undefined`).
-- [ ] insert-all.test.ts "insert all when table name contains database" reads
+- [x] insert-all.test.ts "insert all when table name contains database" reads
       `connectionDbConfig().database` (matching Rails) instead of
       `currentDatabase()`.
-- [ ] Test name unchanged; test:compare delta non-negative.
+- [x] Test name unchanged; test:compare delta non-negative.
