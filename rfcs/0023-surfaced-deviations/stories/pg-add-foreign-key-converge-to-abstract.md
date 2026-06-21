@@ -1,6 +1,6 @@
 ---
 title: "PG addForeignKey builds SQL inline instead of going through abstract add_foreign_key/schema_creation"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
