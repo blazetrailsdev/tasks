@@ -1,6 +1,6 @@
 ---
 title: "Nested-attr CPK composite FK derives from reflection owner, not ctor.name"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3778
 claim: "2026-06-21T11:34:45Z"
 assignee: "nested-attr-cpk-composite-fk-from-reflection"
 blocked-by: null
