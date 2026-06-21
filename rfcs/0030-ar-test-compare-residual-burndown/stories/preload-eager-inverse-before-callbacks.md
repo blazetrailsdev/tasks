@@ -1,6 +1,6 @@
 ---
 title: "Wire inverse_of before callbacks on preloader + join-dependency eager paths"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
