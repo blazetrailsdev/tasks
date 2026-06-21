@@ -1,6 +1,6 @@
 ---
 title: "establishConnection accepts a DatabaseConfig object (faithful run_without_connection restore)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T17:26:42Z"
+assignee: "establish-connection-accepts-databaseconfig-object"
 blocked-by: null
 ---
 
