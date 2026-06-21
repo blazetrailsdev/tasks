@@ -55,10 +55,10 @@ describe), referencing this story. The three sibling symbol-merge tests pass.
 
 ## Acceptance criteria
 
-- [ ] Thread a single shared `AliasTracker` across all `JoinDependency`s emitted
+- [x] Thread a single shared `AliasTracker` across all `JoinDependency`s emitted
       in `buildJoins` so cross-model merged joins onto an already-joined table
       get the Rails `*_<parent>` alias (`authors_categorizations`).
-- [ ] Un-skip the two tests in `relation.test.ts`; both pass with INNER JOIN
+- [x] Un-skip the two tests in `relation.test.ts`; both pass with INNER JOIN
       count 3 and the aliased child join.
-- [ ] No regression in existing join/merge tests; `test:compare` non-negative,
+- [x] No regression in existing join/merge tests; `test:compare` non-negative,
       0 misplaced.
