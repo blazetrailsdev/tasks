@@ -66,11 +66,11 @@ Key files:
 
 ## Acceptance criteria
 
-- [ ] Pin down Rails' actual halt mechanism for "after callbacks not executed
+- [x] Pin down Rails' actual halt mechanism for "after callbacks not executed
       when the block returns false" (cite callbacks.rb lines).
-- [ ] Either converge the trails engine so a faithful port (around/block return
+- [x] Either converge the trails engine so a faithful port (around/block return
       false, no throwAbort) reproduces Rails' skip, OR document the deviation as
       tracked-pending-convergence with a clear rationale.
-- [ ] Rewrite the trails test to faithfully mirror Rails `ModelCallbacks`
+- [x] Rewrite the trails test to faithfully mirror Rails `ModelCallbacks`
       (block-return mechanism), without renaming it; test:compare match preserved.
-- [ ] No regression in the abort-sentinel halting behavior from PR #3700.
+- [x] No regression in the abort-sentinel halting behavior from PR #3700.
