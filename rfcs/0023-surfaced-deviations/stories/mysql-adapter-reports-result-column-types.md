@@ -1,6 +1,6 @@
 ---
 title: "MySQL adapter reports Result.columnTypes so computed/extra select columns cast faithfully"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 3773
 claim: "2026-06-21T03:34:42Z"
 assignee: "mysql-adapter-reports-result-column-types"
 blocked-by: null
