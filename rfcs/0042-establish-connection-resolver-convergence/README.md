@@ -68,8 +68,9 @@ all accept a hash) as the only intentional deviation.
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                                                                            | Title                                                                           | Status | Est LOC | Cluster |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [route-establish-connection-string-hash-through-resolver](stories/route-establish-connection-string-hash-through-resolver.md) | Route establishConnection string/hash branch through resolveConfigForConnection | draft  | 120     | —       |
 
 ## Non-goals
 
