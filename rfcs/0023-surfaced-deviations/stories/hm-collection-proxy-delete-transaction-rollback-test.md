@@ -1,14 +1,14 @@
 ---
 title: "test: regression coverage for CollectionProxy#delete nullify transaction rollback"
-status: claimed
-updated: 2026-06-20
+status: in-progress
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3754
 claim: "2026-06-20T18:37:28Z"
 assignee: "hm-collection-proxy-delete-transaction-rollback-test"
 blocked-by: null
