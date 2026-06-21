@@ -1,5 +1,5 @@
 ---
-rfc: "0000-bespoke-test-bloat-burndown"
+rfc: "0043-bespoke-test-bloat-burndown"
 title: "ActiveRecord bespoke TS-only test-bloat burndown"
 status: draft
 created: 2026-06-21
