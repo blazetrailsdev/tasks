@@ -68,11 +68,11 @@ all accept a hash) as the only intentional deviation.
 
 <!-- generated: stories table -->
 
-| ID                                                                                                                            | Title                                                                                             | Status  | Est LOC | Cluster |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------- | ------- | ------- |
-| [funnel-autoconnect-through-object-path](stories/funnel-autoconnect-through-object-path.md)                                   | Funnel autoConnect through the single DatabaseConfig object path                                  | ready   | 100     | —       |
-| [route-establish-connection-string-hash-through-resolver](stories/route-establish-connection-string-hash-through-resolver.md) | Route establishConnection string/hash branch through resolveConfigForConnection                   | ready   | 120     | —       |
-| [establish-with-config-stores-urlconfig-discrete-fields](stories/establish-with-config-stores-urlconfig-discrete-fields.md)   | establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding | claimed | 90      | —       |
+| ID                                                                                                                            | Title                                                                                             | Status      | Est LOC | Cluster |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
+| [funnel-autoconnect-through-object-path](stories/funnel-autoconnect-through-object-path.md)                                   | Funnel autoConnect through the single DatabaseConfig object path                                  | ready       | 100     | —       |
+| [route-establish-connection-string-hash-through-resolver](stories/route-establish-connection-string-hash-through-resolver.md) | Route establishConnection string/hash branch through resolveConfigForConnection                   | ready       | 120     | —       |
+| [establish-with-config-stores-urlconfig-discrete-fields](stories/establish-with-config-stores-urlconfig-discrete-fields.md)   | establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding | in-progress | 90      | —       |
 
 ## Non-goals
 
