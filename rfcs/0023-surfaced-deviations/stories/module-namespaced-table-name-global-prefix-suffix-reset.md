@@ -1,6 +1,6 @@
 ---
 title: "module-namespaced-table-name-global-prefix-suffix-reset"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3807
 claim: "2026-06-21T17:13:54Z"
 assignee: "module-namespaced-table-name-global-prefix-suffix-reset"
 blocked-by: null
