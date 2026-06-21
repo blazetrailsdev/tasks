@@ -1,6 +1,6 @@
 ---
 title: "Derive cross-namespace className registry keys from moduleName"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3776
 claim: "2026-06-21T11:18:42Z"
 assignee: "module-namespaced-classname-resolution-cleanup"
 blocked-by: null
