@@ -38,15 +38,24 @@ the partial INSERT and the DB agree. Convergence: the canonical TEST_SCHEMA (and
 any model→DB default propagation) must mirror schema.rb column defaults so
 partial inserts behave as in Rails. Note this intersects the canonical-schema
 burndown (RFC 0019) — prefer fixing the canonical schema over per-test opt-outs.
+A complication specific to counter-cache.test.ts: its bespoke models give the
+same shared column (e.g. `views_count`, `replies_count`) **conflicting** per-test
+defaults (0/5/10), so a single `defineSchema` column default cannot satisfy them
+— the real fix needs per-model tables (canonical models) rather than one shared
+bespoke schema.
 
-Prerequisite for flipping the AR-test ambient to match Rails' test suite.
+The AR-test ambient was already flipped to `partial_inserts = true` (PR #3745,
+matching Rails helper.rb). As an interim, `counter-cache.test.ts` carries a
+**file-scoped opt-out** (`Base.partialInserts = false`, restored in afterAll)
+marked with this story id. This story's completion removes that opt-out.
 
 ## Acceptance criteria
 
 - [ ] Enumerate ported tests whose model declares a column default the test
       schema omits (start: counter-cache.test.ts).
-- [ ] Align the canonical TEST_SCHEMA column defaults with schema.rb (and/or
-      propagate model defaults to the created DB column) so partial inserts
-      read the Rails value.
-- [ ] Affected tests pass under `partial_inserts = true`; no regression under
-      `false`.
+- [ ] Give counter-cache its Rails-faithful per-model tables/defaults (canonical
+      models) so partial inserts read the model default without the file-scoped
+      opt-out.
+- [ ] Remove the `Base.partialInserts = false` opt-out block at the top of
+      `counter-cache.test.ts`; all its tests pass under `partial_inserts = true`.
+- [ ] No regression elsewhere.
