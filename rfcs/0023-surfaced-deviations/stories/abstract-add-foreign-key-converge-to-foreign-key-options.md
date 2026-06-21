@@ -1,6 +1,6 @@
 ---
 title: "abstract-add-foreign-key-converge-to-foreign-key-options"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3803
 claim: "2026-06-21T16:06:43Z"
 assignee: "abstract-add-foreign-key-converge-to-foreign-key-options"
 blocked-by: null
