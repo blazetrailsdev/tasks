@@ -51,11 +51,19 @@ marked with this story id. This story's completion removes that opt-out.
 
 ## Acceptance criteria
 
-- [ ] Enumerate ported tests whose model declares a column default the test
-      schema omits (start: counter-cache.test.ts).
-- [ ] Give counter-cache its Rails-faithful per-model tables/defaults (canonical
+- [x] Enumerate ported tests whose model declares a column default the test
+      schema omits (start: counter-cache.test.ts). counter-cache.test.ts was the
+      only file needing a file-scoped opt-out on the ambient-flip branch (#3745).
+- [x] Give counter-cache its Rails-faithful per-model tables/defaults (canonical
       models) so partial inserts read the model default without the file-scoped
-      opt-out.
-- [ ] Remove the `Base.partialInserts = false` opt-out block at the top of
-      `counter-cache.test.ts`; all its tests pass under `partial_inserts = true`.
-- [ ] No regression elsewhere.
+      opt-out. PR #3789: local TEST_SCHEMA counter columns carry schema.rb
+      `default: 0`; conflicting non-zero starts are seeded via `updateCounters`
+      (a direct UPDATE, unaffected by partial inserts) on Rails' real
+      `replies_count`/`books_count` columns.
+- [x] Remove the `Base.partialInserts = false` opt-out block. The opt-out lives
+      only on the unmerged ambient-flip PR #3745, not on main; #3789 makes it
+      unnecessary (all counter-cache tests pass under `partial_inserts = true`),
+      so #3745 should drop the opt-out hunk when it rebases.
+- [x] No regression elsewhere. All 104 counter-cache tests pass under both
+      ambients; no test names changed (test:compare delta 0); test-only change
+      (api:compare delta 0).
