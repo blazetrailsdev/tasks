@@ -1,6 +1,6 @@
 ---
 title: "join-model-create-through-sets-owner-fk"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3762
 claim: "2026-06-21T01:51:26Z"
 assignee: "join-model-create-through-sets-owner-fk"
 blocked-by: null
