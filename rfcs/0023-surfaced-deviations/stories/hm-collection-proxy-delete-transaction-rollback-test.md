@@ -1,6 +1,6 @@
 ---
 title: "test: regression coverage for CollectionProxy#delete nullify transaction rollback"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
