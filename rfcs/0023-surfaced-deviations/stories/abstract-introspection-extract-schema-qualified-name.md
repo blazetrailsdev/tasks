@@ -1,6 +1,6 @@
 ---
 title: "Abstract columns()/columnExists fallbacks ignore schema.table qualification (Rails extract_schema_qualified_name)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
