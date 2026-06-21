@@ -1,6 +1,6 @@
 ---
 title: "Composite-PK key columns dropped under partial_inserts=true"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3783
 claim: "2026-06-21T12:22:42Z"
 assignee: "partial-inserts-composite-pk-key-retention"
 blocked-by: null
