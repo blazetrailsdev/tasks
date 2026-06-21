@@ -1,6 +1,6 @@
 ---
 title: "fix: OO HasManyAssociation#deleteRecords :destroy branch skips counter-cache decrement (missing inverse_updates_counter_cache? guard)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
