@@ -1,6 +1,6 @@
 ---
 title: "inverse-of: polymorphic eager-load preloading shares parent instance"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
