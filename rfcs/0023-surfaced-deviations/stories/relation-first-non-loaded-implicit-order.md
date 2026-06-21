@@ -1,6 +1,6 @@
 ---
 title: "Relation#first applies implicit PK order on non-loaded path (match find_nth_with_limit)"
-status: claimed
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 3720
 claim: "2026-06-21T23:11:19Z"
 assignee: "relation-first-non-loaded-implicit-order"
 blocked-by: null
