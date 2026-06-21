@@ -1,7 +1,7 @@
 ---
 title: "ordered finders (first(n)/second/last) leak connection under deprecated permanent checkout"
-status: in-progress
-updated: 2026-06-20
+status: done
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
