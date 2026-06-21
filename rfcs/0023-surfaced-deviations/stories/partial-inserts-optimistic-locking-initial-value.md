@@ -1,6 +1,6 @@
 ---
 title: "Optimistic-locking column dropped under partial_inserts=true (StaleObjectError)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3788
 claim: "2026-06-21T13:10:41Z"
 assignee: "partial-inserts-optimistic-locking-initial-value"
 blocked-by: null
