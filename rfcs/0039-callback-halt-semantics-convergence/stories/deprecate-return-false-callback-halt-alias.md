@@ -2,7 +2,7 @@
 title: "Converge callback halt to throw-abort sentinel only (drop return-false alias)"
 status: done
 updated: 2026-06-20
-rfc: "0000-callback-halt-semantics-convergence"
+rfc: "0039-callback-halt-semantics-convergence"
 cluster: null
 deps: []
 deps-rfc: []

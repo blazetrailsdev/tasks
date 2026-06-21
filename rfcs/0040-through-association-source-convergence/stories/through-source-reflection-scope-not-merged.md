@@ -2,7 +2,7 @@
 title: "through-source-reflection-scope-not-merged"
 status: ready
 updated: 2026-06-18
-rfc: "0000-through-association-source-convergence"
+rfc: "0040-through-association-source-convergence"
 cluster: null
 deps: []
 deps-rfc: []
