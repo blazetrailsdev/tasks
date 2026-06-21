@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes collection assignment must sort hash keys numerically, not lexically"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3774
 claim: "2026-06-21T03:50:42Z"
 assignee: "nested-attributes-collection-numeric-key-sort"
 blocked-by: null
