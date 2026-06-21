@@ -1,6 +1,6 @@
 ---
 title: "PG addForeignKey generates fk_rails name with raw columns, not Rails SHA256 identifier"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3795
 claim: "2026-06-21T14:14:41Z"
 assignee: "pg-add-foreign-key-name-uses-sha256-identifier"
 blocked-by: null
