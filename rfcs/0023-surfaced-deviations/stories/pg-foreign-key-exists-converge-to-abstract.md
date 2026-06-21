@@ -1,6 +1,6 @@
 ---
 title: "PG foreignKeyExists uses bespoke information_schema query and narrowed signature vs Rails abstract"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
