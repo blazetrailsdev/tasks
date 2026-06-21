@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes collection assignment must sort hash keys numerically, not lexically"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
