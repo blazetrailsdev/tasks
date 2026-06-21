@@ -1,6 +1,6 @@
 ---
 title: "Converge Post#categorizations foreign key (post_id, not category_id)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T20:22:40Z"
+assignee: "post-categorizations-foreign-key-deviation"
 blocked-by: null
 ---
 
