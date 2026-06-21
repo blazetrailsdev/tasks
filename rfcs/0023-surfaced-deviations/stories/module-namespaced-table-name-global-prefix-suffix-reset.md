@@ -1,6 +1,6 @@
 ---
 title: "module-namespaced-table-name-global-prefix-suffix-reset"
-status: claimed
+status: blocked
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-06-21T11:42:41Z"
 assignee: "module-namespaced-table-name-global-prefix-suffix-reset"
-blocked-by: null
+blocked-by: "Depends on module-namespaced-table-name-nested-and-prefix (PR #3777, OPEN/unmerged): that PR introduces the two target skipped tests in modules.test.ts and the registerModuleTableName{Prefix,Suffix} registrations on the MyApplication::Business::* models that the global prefix/suffix + reset_table_name assertions rely on. Building now would stack on #3777 (forbidden). Unblock once #3777 merges to main."
 ---
 
 ## Context
