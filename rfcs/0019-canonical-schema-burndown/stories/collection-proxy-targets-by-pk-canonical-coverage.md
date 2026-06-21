@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-targets-by-pk-canonical-coverage"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T01:19:26Z"
+assignee: "collection-proxy-targets-by-pk-canonical-coverage"
 blocked-by: null
 ---
 
