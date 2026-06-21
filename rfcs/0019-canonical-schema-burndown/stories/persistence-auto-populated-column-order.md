@@ -1,6 +1,6 @@
 ---
 title: "Restore test_populates_autoincremented_id_pk_regardless_of_its_position (positioned PK + auto_populated reflection)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
