@@ -1,6 +1,6 @@
 ---
 title: "Converge advisory_locks enabled test to generic adapter construction"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T00:23:25Z"
+assignee: "adapter-advisory-locks-generic-construction"
 blocked-by: null
 ---
 
