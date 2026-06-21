@@ -1,6 +1,6 @@
 ---
 title: "Restore test_populates_autoincremented_id_pk_regardless_of_its_position (positioned PK + auto_populated reflection)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3833
 claim: "2026-06-21T20:38:44Z"
 assignee: "persistence-auto-populated-column-order"
 blocked-by: null
