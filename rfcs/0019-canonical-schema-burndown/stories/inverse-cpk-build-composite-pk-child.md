@@ -1,7 +1,7 @@
 ---
 title: "inverse-of: composite-PK build sets inverse on child (Cpk::Author/Book/Order)"
-status: in-progress
-updated: 2026-06-20
+status: done
+updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
