@@ -1,6 +1,6 @@
 ---
 title: "Route establishConnection string/hash branch through resolveConfigForConnection"
-status: draft
+status: ready
 updated: 2026-06-21
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
