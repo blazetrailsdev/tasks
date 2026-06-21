@@ -1,6 +1,6 @@
 ---
 title: "Port de-stubbed persistence Rails tests (cpk/becomes-sti/readonly/uuid) to canonical"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
