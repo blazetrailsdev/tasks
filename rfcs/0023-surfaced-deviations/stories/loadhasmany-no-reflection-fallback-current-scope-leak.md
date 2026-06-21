@@ -1,6 +1,6 @@
 ---
 title: "loadHasMany no-reflection fallback leaks class current_scope via targetModel.all()"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
