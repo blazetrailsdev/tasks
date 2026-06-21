@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3810
+pr: 3815
 claim: "2026-06-21T12:38:43Z"
 assignee: "partial-inserts-locking-column-schema-default-init"
 blocked-by: null
