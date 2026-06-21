@@ -1,6 +1,6 @@
 ---
 title: "Converge advisory_locks enabled test to generic adapter construction"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
