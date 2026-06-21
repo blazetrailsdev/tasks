@@ -1,6 +1,6 @@
 ---
 title: "persistence-test-canonical-wave5"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
