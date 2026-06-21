@@ -1,7 +1,7 @@
 ---
 title: "insert_all MySQL database-qualified table name under handler suite"
-status: in-progress
-updated: 2026-06-20
+status: done
+updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: persistence
 deps: []
