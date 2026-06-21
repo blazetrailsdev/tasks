@@ -1,6 +1,6 @@
 ---
 title: "tableExists/columnExists interpolate identifiers into SQL (unsafe; Rails parameterizes)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3782
 claim: "2026-06-21T12:14:43Z"
 assignee: "parameterize-table-column-exists-introspection"
 blocked-by: null
