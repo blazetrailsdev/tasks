@@ -1,6 +1,6 @@
 ---
 title: "merge_joins threads raw others alongside cross-klass JoinDependency"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3769
 claim: "2026-06-21T03:02:43Z"
 assignee: "merge-joins-others-partition-cross-model"
 blocked-by: null
