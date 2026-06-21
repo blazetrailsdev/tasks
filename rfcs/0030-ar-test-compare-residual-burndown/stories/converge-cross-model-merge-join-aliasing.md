@@ -1,6 +1,6 @@
 ---
 title: "Converge cross-model merge join aliasing (shared AliasTracker)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T18:54:41Z"
+assignee: "converge-cross-model-merge-join-aliasing"
 blocked-by: null
 ---
 
