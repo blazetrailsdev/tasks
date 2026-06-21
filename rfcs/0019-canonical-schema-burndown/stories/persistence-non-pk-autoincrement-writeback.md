@@ -1,6 +1,6 @@
 ---
 title: "Restore test_populates_non_primary_key_autoincremented_column (non-PK auto-increment write-back)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T20:54:43Z"
+assignee: "persistence-non-pk-autoincrement-writeback"
 blocked-by: null
 ---
 
