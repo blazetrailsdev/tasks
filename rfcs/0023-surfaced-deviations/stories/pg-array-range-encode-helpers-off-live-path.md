@@ -1,6 +1,6 @@
 ---
 title: "Reconcile PG encodeArray/encodeRange parity stubs with live OID-encoder path"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
