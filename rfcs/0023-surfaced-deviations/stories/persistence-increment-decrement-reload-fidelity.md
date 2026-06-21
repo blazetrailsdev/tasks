@@ -1,6 +1,6 @@
 ---
 title: "persistence_test increment/decrement tests should use bang+reload like Rails"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T14:46:41Z"
+assignee: "persistence-increment-decrement-reload-fidelity"
 blocked-by: null
 ---
 
