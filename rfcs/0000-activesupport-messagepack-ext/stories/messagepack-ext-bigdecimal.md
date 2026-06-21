@@ -2,7 +2,7 @@
 title: "MessagePack ext type 2 BigDecimal (_dump/_load Marshal-style codec)"
 status: draft
 updated: 2026-06-15
-rfc: "0023-surfaced-deviations"
+rfc: "0000-activesupport-messagepack-ext"
 cluster: null
 deps: []
 deps-rfc: []

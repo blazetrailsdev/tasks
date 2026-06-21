@@ -2,7 +2,7 @@
 title: "MessagePack ext types 3 Rational + 4 Complex (need JS numeric value classes)"
 status: draft
 updated: 2026-06-15
-rfc: "0023-surfaced-deviations"
+rfc: "0000-activesupport-messagepack-ext"
 cluster: null
 deps: []
 deps-rfc: []

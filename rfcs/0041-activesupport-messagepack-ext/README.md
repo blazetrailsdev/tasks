@@ -46,8 +46,12 @@ refs, trails `file:line`, and acceptance criteria.)
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                              | Title                                                                                                     | Status | Est LOC | Cluster |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [messagepack-ext-bigdecimal](stories/messagepack-ext-bigdecimal.md)             | MessagePack ext type 2 BigDecimal (\_dump/\_load Marshal-style codec)                                     | draft  | 150     | —       |
+| [messagepack-ext-rational-complex](stories/messagepack-ext-rational-complex.md) | MessagePack ext types 3 Rational + 4 Complex (need JS numeric value classes)                              | draft  | 200     | —       |
+| [messagepack-ext-temporal](stories/messagepack-ext-temporal.md)                 | MessagePack ext types 5-8,10 DateTime/Date/Time/TimeWithZone/Duration (nanosecond-faithful temporal reps) | draft  | 300     | —       |
+| [messagepack-ext-value-classes](stories/messagepack-ext-value-classes.md)       | MessagePack ext types 11,13-16 Range/URI/IPAddr/Pathname/Regexp (need value classes + Ruby-faithful to_s) | draft  | 300     | —       |
 
 ## Rollout
 
