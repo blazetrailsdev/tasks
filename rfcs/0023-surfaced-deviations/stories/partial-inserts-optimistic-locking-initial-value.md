@@ -60,9 +60,9 @@ Prerequisite for flipping the AR-test ambient to match Rails' test suite.
 
 ## Acceptance criteria
 
-- [ ] A new optimistic-locking record writes its initial lock version under
+- [x] A new optimistic-locking record writes its initial lock version under
       `partial_inserts = true` (in-memory and DB agree).
-- [ ] The two persistence.test.ts lock_version tests pass with
+- [x] The two persistence.test.ts lock_version tests pass with
       `partial_inserts = true`.
-- [ ] `locking.test.ts` (incl. "destroy dependents" / custom `version` column)
+- [x] `locking.test.ts` (incl. "destroy dependents" / custom `version` column)
       stays green.
