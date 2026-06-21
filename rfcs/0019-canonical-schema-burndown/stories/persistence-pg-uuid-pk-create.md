@@ -1,6 +1,6 @@
 ---
 title: "Restore PG uuid-PK create tests (chat_messages / chat_messages_custom_pk)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T21:02:42Z"
+assignee: "persistence-pg-uuid-pk-create"
 blocked-by: null
 ---
 
