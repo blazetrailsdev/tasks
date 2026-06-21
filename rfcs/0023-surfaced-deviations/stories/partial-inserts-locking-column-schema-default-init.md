@@ -1,6 +1,6 @@
 ---
 title: "Initialize locking column from schema default; drop nil guard (converge to optimistic.rb:82)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
