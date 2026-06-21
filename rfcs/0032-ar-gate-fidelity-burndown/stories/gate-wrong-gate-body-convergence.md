@@ -1,6 +1,6 @@
 ---
 title: "gate-wrong-gate-body-convergence"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
