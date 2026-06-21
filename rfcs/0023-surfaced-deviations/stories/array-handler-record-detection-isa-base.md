@@ -1,6 +1,6 @@
 ---
 title: "ArrayHandler derefs any {id}-bearing object where Rails checks is_a?(Base)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
