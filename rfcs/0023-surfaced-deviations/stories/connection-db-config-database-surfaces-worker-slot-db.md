@@ -1,6 +1,6 @@
 ---
 title: "connectionDbConfig().database surfaces per-worker slot DB under handler suite"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3767
 claim: "2026-06-21T02:46:41Z"
 assignee: "connection-db-config-database-surfaces-worker-slot-db"
 blocked-by: null
