@@ -1,6 +1,6 @@
 ---
 title: "inverse-of: .or/.unscope mark relation non-inversable"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3760
 claim: "2026-06-21T01:27:25Z"
 assignee: "inverse-relation-or-unscope-guard"
 blocked-by: null
