@@ -1,6 +1,6 @@
 ---
 title: "Restore becomes_default_sti_subclass + reset_column_information_resets_children (shared-topics DDL isolation)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3837
 claim: "2026-06-21T21:10:41Z"
 assignee: "persistence-shared-topics-ddl-isolation"
 blocked-by: null
