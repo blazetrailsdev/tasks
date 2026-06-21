@@ -1,6 +1,6 @@
 ---
 title: "inverse-of: polymorphic eager-load preloading shares parent instance"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3756
 claim: "2026-06-21T00:15:26Z"
 assignee: "inverse-polymorphic-eager-load-preload"
 blocked-by: null
