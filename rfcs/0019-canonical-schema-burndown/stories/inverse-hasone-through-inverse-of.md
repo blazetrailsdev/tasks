@@ -1,14 +1,14 @@
 ---
 title: "inverse-of: has_one :through automatic inverse (Firm/Project/Developer lead_developer)"
-status: claimed
-updated: 2026-06-20
+status: in-progress
+updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3752
 claim: "2026-06-20T23:59:25Z"
 assignee: "inverse-hasone-through-inverse-of"
 blocked-by: null
