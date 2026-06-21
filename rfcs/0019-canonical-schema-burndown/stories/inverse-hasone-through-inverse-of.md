@@ -1,6 +1,6 @@
 ---
 title: "inverse-of: has_one :through automatic inverse (Firm/Project/Developer lead_developer)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
