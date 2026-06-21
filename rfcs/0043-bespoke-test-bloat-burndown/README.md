@@ -13,6 +13,12 @@ related-rfcs:
   - "0030-ar-test-compare-residual-burndown"
 ---
 
+<!-- Unnumbered until merge: keep `rfc:` as 0000-bespoke-test-bloat-burndown and
+     the H1 number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the assigned
+     number at merge. -->
+
+# RFC — ActiveRecord bespoke TS-only test-bloat burndown
+
 ## Summary
 
 `@blazetrails/activerecord` carries **3403 "extra" (TS-only) tests** — `it`
@@ -50,7 +56,9 @@ activerecord --sort-extra`, **2026-06-21**: `@blazetrails/activerecord` carries
 | `enum.test.ts`         |   107 |           — |
 | `migration.test.ts`    |   107 |           — |
 
-…with a long tail across ~21 files at extra ≥ 50.
+(Blank "Rails tests" cells are values not captured in the 2026-06-21 snapshot;
+each deletion story re-derives its file's exact Rails count from the fresh
+`--json` run.) …with a long tail across ~21 files at extra ≥ 50.
 
 Why this is debt, not coverage:
 
@@ -124,8 +132,8 @@ _second, unrelated_ `*.test.ts` is not.
 Pure-deletion PRs registered under this RFC are **exempt from the 500 LOC
 ceiling** (CLAUDE.md "PR size ceiling: 500 LOC"). The ceiling exists to bound
 review cost on _added_ code; it actively penalizes the cleanup we want here,
-where the whole point is large negative diffs. Proposed CLAUDE.md wording to land
-_with this RFC_ (added to the "PR size ceiling" bullet):
+where the whole point is large negative diffs. Proposed CLAUDE.md wording
+(added to the "PR size ceiling" bullet):
 
 > **Exemption — RFC <n> test-deletion PRs.** A PR registered under RFC <n>
 > (bespoke TS-only test-bloat burndown) that _only_ deletes lines from exactly
@@ -142,6 +150,18 @@ RFC-<n> deletion PR the gate passes when the diff is deletion-dominant —
 concretely, when `insertions == 0` outside an optional single `*.trails.test.ts`
 relocation sibling. Reviewers verify "deletions-only (plus at most one relocation
 sibling)" rather than "≤ 500 changed lines".
+
+**Where these two edits land (cross-repo sequencing).** This RFC merges in the
+**tasks** repo, but the "PR size ceiling: 500 LOC" bullet and the
+`git diff --shortstat` guard live in **trails** (`CLAUDE.md`) — they cannot land
+in this PR. The carve-out is therefore owned by a dedicated **Phase 0** trails
+story, `add-rfc-deletion-loc-carve-out`, which edits trails `CLAUDE.md` (and any
+CI shortstat check) to add the exemption above with `<n>` resolved to this RFC's
+finalized number. That story is a **hard dependency of every deletion story** and
+must merge _before_ the first Phase 1 deletion PR — otherwise the very first
+deletion PR trips the 500 LOC ceiling it is meant to be exempt from. The deletion
+stories carry it as a `deps`/`blocked-by` edge so the scheduler cannot release a
+deletion PR ahead of it. See Open question 3.
 
 ### The hard invariant: `test:compare` must not move
 
@@ -198,6 +218,10 @@ Phased by the `--sort-extra` ranking. One story per file, or a small same-area
 cluster of low-extra siblings, each carrying the LOC carve-out note so it does not
 read as a ceiling violation.
 
+0. **Phase 0 — land the LOC carve-out (trails):** story
+   `add-rfc-deletion-loc-carve-out` edits trails `CLAUDE.md` (and any CI
+   shortstat check) to add the exemption wording, with `<n>` = this RFC's
+   finalized number. Hard dependency of every deletion story; must merge first.
 1. **Phase 1 — heavy hitters (extra ≥ 100):** `relations.test.ts` (414),
    `calculations.test.ts` (320), `finder.test.ts` (154), `base.test.ts` (148),
    `enum.test.ts` (107), `migration.test.ts` (107). One story per file.
@@ -213,16 +237,28 @@ created from this merged RFC.
 
 ## Open questions
 
-1. **Relocation file naming.** Proposed `*.trails.test.ts`. Confirm
-   `test:compare`'s pairing logic excludes that suffix from the `extra` tally (it
-   pairs `foo.test.ts` ↔ `foo_test.rb`; a `foo.trails.test.ts` has no `.rb`
-   partner so should be ignored). If the matcher would instead flag it as an
-   _unpaired TS file_, pick a suffix/dir the matcher already ignores. Recommend
-   verifying against `scripts/test-compare/test-compare.ts` in the first Phase 1
-   story and pinning the convention there.
+1. **Relocation file naming.** Proposed `*.trails.test.ts`. The convention map
+   is **Ruby-driven**: `rubyToConventionTs` (`scripts/test-compare/test-compare.ts:53-72`)
+   turns each `foo_test.rb` into exactly one `foo.test.ts` target — it never
+   emits a `foo.trails.test.ts`, so a relocated test is invisible to the
+   per-Ruby-file matching pass. The one thing to confirm is whether the `extra`
+   counter (trails PR #3825) is _also_ Ruby-driven (counts only TS tests sitting
+   in a convention-mapped file with no Ruby partner) or independently sweeps
+   _all_ globbed `*.test.ts`; if the latter, a `*.trails.test.ts` would still be
+   swept and a suffix/dir the sweep already ignores must be chosen instead.
+   First Phase 1 story must read the `extra`-counting code, confirm the suffix is
+   excluded, and pin the convention there.
 2. **Do relocated `*.trails.test.ts` tests need their own gate?** They run in CI
    like any test but are invisible to `test:compare`. Recommendation: yes — they
    stay subject to normal `vitest` CI; no special gate needed.
+3. **Where does the cross-repo carve-out land?** The CLAUDE.md exemption and the
+   `git diff --shortstat` guard live in **trails**, but this RFC merges in
+   **tasks** — they cannot ride this PR. Recommendation (adopted in the
+   LOC-ceiling carve-out section and Rollout Phase 0): a dedicated trails story
+   `add-rfc-deletion-loc-carve-out` lands them before any deletion PR, wired as a
+   hard `deps`/`blocked-by` edge on every deletion story so the scheduler cannot
+   release a deletion PR ahead of it. Confirm at finalize that `<n>` is
+   substituted with the assigned RFC number in the CLAUDE.md wording.
 
 ## Stories
 
