@@ -1,6 +1,6 @@
 ---
 title: "advisory-locks-enabled-lease-connection-fidelity"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
