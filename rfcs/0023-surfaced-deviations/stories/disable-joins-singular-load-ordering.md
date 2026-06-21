@@ -1,6 +1,6 @@
 ---
 title: "audit disable_joins singular-association load for Rails' ordered scope.first behavior"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3764
 claim: "2026-06-21T02:07:30Z"
 assignee: "disable-joins-singular-load-ordering"
 blocked-by: null
