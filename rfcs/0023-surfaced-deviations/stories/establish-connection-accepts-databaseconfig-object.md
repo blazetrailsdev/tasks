@@ -44,13 +44,16 @@ why `buildAdapterArg` needed the URL-forwarding fix in this PR
 
 ## Acceptance criteria
 
-- [ ] `Base.establishConnection` accepts a `DatabaseConfig` instance, mirroring
+- [x] `Base.establishConnection` accepts a `DatabaseConfig` instance, mirroring
       Rails `establish_connection(db_config)`; resolve adapter/args from the
       object rather than re-parsing a hash.
-- [ ] `runWithoutConnection` restores via the captured `DatabaseConfig` object
+- [x] `runWithoutConnection` restores via the captured `DatabaseConfig` object
       (drop the `configurationHash` workaround + its JSDoc caveat).
-- [ ] (Optional, evaluate) `establishWithConfig` stores a `UrlConfig` (or a
+- [x] (Optional, evaluate) `establishWithConfig` stores a `UrlConfig` (or a
       HashConfig with the URL decomposed) so `configurationHash` mirrors Rails'
       discrete-field shape; if done, confirm the `buildAdapterArg` URL-forwarding
-      branch is still needed or can be simplified.
-- [ ] api:compare + test:compare delta non-negative.
+      branch is still needed or can be simplified. — Evaluated: `establishWithConfig`
+      already stores a `UrlConfig` and the `buildAdapterArg` URL-forwarding branch
+      is still required. Full discrete-field convergence deferred to RFC 0042
+      story `establish-with-config-stores-urlconfig-discrete-fields`.
+- [x] api:compare + test:compare delta non-negative.
