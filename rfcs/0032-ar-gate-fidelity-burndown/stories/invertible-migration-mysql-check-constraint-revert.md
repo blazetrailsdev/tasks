@@ -1,6 +1,6 @@
 ---
 title: "Converge check-constraint revert test; verify mysql revert path"
-status: ready
+status: draft
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
