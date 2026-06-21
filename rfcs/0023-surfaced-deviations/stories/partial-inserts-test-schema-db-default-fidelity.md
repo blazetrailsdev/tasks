@@ -1,6 +1,6 @@
 ---
 title: "Test-schema column defaults missing vs schema.rb under partial_inserts=true"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
