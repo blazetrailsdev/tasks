@@ -1,6 +1,6 @@
 ---
 title: "Emit MySQL 8 expression-index schema dump syntax and converge gate"
-status: ready
+status: draft
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
