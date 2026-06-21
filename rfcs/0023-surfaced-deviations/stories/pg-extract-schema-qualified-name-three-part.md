@@ -1,6 +1,6 @@
 ---
 title: "Utils.extractSchemaQualifiedName collapses 3+ dotted parts instead of taking first two (Rails scan)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
