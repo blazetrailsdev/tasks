@@ -1,6 +1,6 @@
 ---
 title: "Nested-attr belongsTo composite FK threads from reflection, not created.id"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3787
 claim: "2026-06-21T13:02:41Z"
 assignee: "nested-attr-belongs-to-composite-fk-from-reflection"
 blocked-by: null
