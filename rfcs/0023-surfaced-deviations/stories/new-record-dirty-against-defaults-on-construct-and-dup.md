@@ -1,6 +1,6 @@
 ---
 title: "new Model(attrs) and deepDup-based dup should be dirty against column defaults (Rails parity)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
