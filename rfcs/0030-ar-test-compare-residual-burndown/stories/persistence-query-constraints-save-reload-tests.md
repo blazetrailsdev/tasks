@@ -1,7 +1,7 @@
 ---
 title: "Port remaining query_constraints persistence tests (save/reload/update_attribute/update-parts) from stubs"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T13:26:43Z"
+assignee: "persistence-query-constraints-save-reload-tests"
 blocked-by: null
 ---
 
