@@ -1,6 +1,6 @@
 ---
 title: "persistence-port-residual-cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3831
 claim: "2026-06-21T20:14:43Z"
 assignee: "persistence-port-residual-cluster"
 blocked-by: null
