@@ -1,6 +1,6 @@
 ---
 title: "MemoryStore/FileStore entry hooks preserve expiry+version so inherited fetchMulti honors expiration"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T23:34:43Z"
+assignee: "memory-store-entry-hooks-preserve-expiry-version"
 blocked-by: null
 ---
 
