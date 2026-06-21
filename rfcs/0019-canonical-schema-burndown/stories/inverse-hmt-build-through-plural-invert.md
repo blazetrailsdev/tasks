@@ -1,7 +1,7 @@
 ---
 title: "inverse-of: belongs_to finds has_many through plural inversion (Book/Subscriber)"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T00:07:25Z"
+assignee: "inverse-hmt-build-through-plural-invert"
 blocked-by: null
 ---
 
