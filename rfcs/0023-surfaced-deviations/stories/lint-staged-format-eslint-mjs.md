@@ -1,6 +1,6 @@
 ---
 title: "lint-staged pre-commit hook does not format eslint/*.mjs rule files"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 3763
 claim: "2026-06-21T01:59:26Z"
 assignee: "lint-staged-format-eslint-mjs"
 blocked-by: null
