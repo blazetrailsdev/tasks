@@ -1,6 +1,6 @@
 ---
 title: "Unify RangeType.encodeLiteral / Range.toString onto the converged encodeRange path"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
