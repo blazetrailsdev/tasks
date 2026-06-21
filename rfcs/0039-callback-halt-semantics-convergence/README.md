@@ -1,5 +1,5 @@
 ---
-rfc: "0000-callback-halt-semantics-convergence"
+rfc: "0039-callback-halt-semantics-convergence"
 title: "Callback-chain halt semantics convergence (throw :abort, drop return false)"
 status: draft
 created: 2026-06-21

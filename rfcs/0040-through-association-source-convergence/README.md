@@ -1,5 +1,5 @@
 ---
-rfc: "0000-through-association-source-convergence"
+rfc: "0040-through-association-source-convergence"
 title: "Through-association source/polymorphic reflection convergence"
 status: draft
 created: 2026-06-21
