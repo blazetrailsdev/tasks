@@ -33,8 +33,8 @@ Rails ref: `activerecord/lib/active_record/relation/merger.rb:122-133`.
 
 ## Acceptance criteria
 
-- [ ] Cross-model `merge` of a relation carrying raw SQL / Arel-node joins
+- [x] Cross-model `merge` of a relation carrying raw SQL / Arel-node joins
       (the `others` partition) preserves those join clauses, matching Rails
       `relation.joins!(join_dependency, *others)`.
-- [ ] Test mirrors a Rails cross-model merge that mixes an association join with
+- [x] Test mirrors a Rails cross-model merge that mixes an association join with
       a raw join clause; verify both survive.
