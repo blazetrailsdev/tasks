@@ -1,6 +1,6 @@
 ---
 title: "PG addForeignKey generates fk_rails name with raw columns, not Rails SHA256 identifier"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
