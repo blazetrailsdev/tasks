@@ -1,6 +1,6 @@
 ---
 title: "Nested-attr belongsTo composite FK threads from reflection, not created.id"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
