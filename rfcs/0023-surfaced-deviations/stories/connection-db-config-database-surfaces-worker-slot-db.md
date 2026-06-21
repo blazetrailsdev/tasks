@@ -1,6 +1,6 @@
 ---
 title: "connectionDbConfig().database surfaces per-worker slot DB under handler suite"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
