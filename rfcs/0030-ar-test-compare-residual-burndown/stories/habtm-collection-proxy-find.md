@@ -31,5 +31,5 @@ Three HABTM CollectionProxy feature tests in
 
 ## Acceptance criteria
 
-- [ ] All three tests un-skipped and green against canonical SQLite (and PG/MySQL per gate).
-- [ ] No new gate-mismatches for this file.
+- [x] All three tests un-skipped and green against canonical SQLite (and PG/MySQL per gate).
+- [x] No new gate-mismatches for this file.
