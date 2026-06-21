@@ -1,6 +1,6 @@
 ---
 title: "nested-attr-belongs-to-counter-cache-on-create"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3791
 claim: "2026-06-21T13:34:42Z"
 assignee: "nested-attr-belongs-to-counter-cache-on-create"
 blocked-by: null
