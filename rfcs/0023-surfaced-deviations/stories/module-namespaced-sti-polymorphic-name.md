@@ -1,6 +1,6 @@
 ---
 title: "Module-namespaced model names in STI/polymorphic type + model_name"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3771
 claim: "2026-06-21T03:18:42Z"
 assignee: "module-namespaced-sti-polymorphic-name"
 blocked-by: null
