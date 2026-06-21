@@ -1,6 +1,6 @@
 ---
 title: "partial-inserts-locking-column-default-col-init-seed"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T19:58:42Z"
+assignee: "partial-inserts-locking-column-default-col-init-seed"
 blocked-by: null
 ---
 
