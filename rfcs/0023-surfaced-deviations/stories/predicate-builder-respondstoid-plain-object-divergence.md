@@ -39,10 +39,10 @@ convergence.
 
 ## Acceptance criteria
 
-- [ ] `respondsToId` distinguishes AR record instances from plain objects, matching
+- [x] `respondsToId` distinguishes AR record instances from plain objects, matching
       Rails `respond_to?(:id)` (a bare object literal with an `id` key is NOT deref'd).
-- [ ] Apply consistently across `build`, `buildNegated`, and `buildNegatedArray`'s
+- [x] Apply consistently across `build`, `buildNegated`, and `buildNegatedArray`'s
       per-element record detection.
-- [ ] Add a regression test mirroring a Rails test name verbatim if one exists for
+- [x] Add a regression test mirroring a Rails test name verbatim if one exists for
       the plain-object-not-a-record case; otherwise document why none is added.
-- [ ] api:compare / test:compare delta non-negative.
+- [x] api:compare / test:compare delta non-negative.
