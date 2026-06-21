@@ -29,6 +29,6 @@ build-inverse.
 
 ## Acceptance criteria
 
-- [ ] Un-skip the test; converge composite-PK build inverse. Test name/assertion
+- [x] Un-skip the test; converge composite-PK build inverse. Test name/assertion
       unchanged.
-- [ ] `pnpm vitest run` for the file green.
+- [x] `pnpm vitest run` for the file green.
