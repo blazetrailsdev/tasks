@@ -1,7 +1,7 @@
 ---
 title: "nested-attr-hasmany-fk-from-reflection"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T03:42:41Z"
+assignee: "nested-attr-hasmany-fk-from-reflection"
 blocked-by: null
 ---
 
