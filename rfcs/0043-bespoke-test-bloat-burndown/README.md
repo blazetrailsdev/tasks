@@ -132,8 +132,8 @@ _second, unrelated_ `*.test.ts` is not.
 Pure-deletion PRs registered under this RFC are **exempt from the 500 LOC
 ceiling** (CLAUDE.md "PR size ceiling: 500 LOC"). The ceiling exists to bound
 review cost on _added_ code; it actively penalizes the cleanup we want here,
-where the whole point is large negative diffs. Proposed CLAUDE.md wording to land
-_with this RFC_ (added to the "PR size ceiling" bullet):
+where the whole point is large negative diffs. Proposed CLAUDE.md wording
+(added to the "PR size ceiling" bullet):
 
 > **Exemption — RFC <n> test-deletion PRs.** A PR registered under RFC <n>
 > (bespoke TS-only test-bloat burndown) that _only_ deletes lines from exactly
@@ -150,6 +150,18 @@ RFC-<n> deletion PR the gate passes when the diff is deletion-dominant —
 concretely, when `insertions == 0` outside an optional single `*.trails.test.ts`
 relocation sibling. Reviewers verify "deletions-only (plus at most one relocation
 sibling)" rather than "≤ 500 changed lines".
+
+**Where these two edits land (cross-repo sequencing).** This RFC merges in the
+**tasks** repo, but the "PR size ceiling: 500 LOC" bullet and the
+`git diff --shortstat` guard live in **trails** (`CLAUDE.md`) — they cannot land
+in this PR. The carve-out is therefore owned by a dedicated **Phase 0** trails
+story, `add-rfc-deletion-loc-carve-out`, which edits trails `CLAUDE.md` (and any
+CI shortstat check) to add the exemption above with `<n>` resolved to this RFC's
+finalized number. That story is a **hard dependency of every deletion story** and
+must merge _before_ the first Phase 1 deletion PR — otherwise the very first
+deletion PR trips the 500 LOC ceiling it is meant to be exempt from. The deletion
+stories carry it as a `deps`/`blocked-by` edge so the scheduler cannot release a
+deletion PR ahead of it. See Open question 3.
 
 ### The hard invariant: `test:compare` must not move
 
@@ -206,6 +218,10 @@ Phased by the `--sort-extra` ranking. One story per file, or a small same-area
 cluster of low-extra siblings, each carrying the LOC carve-out note so it does not
 read as a ceiling violation.
 
+0. **Phase 0 — land the LOC carve-out (trails):** story
+   `add-rfc-deletion-loc-carve-out` edits trails `CLAUDE.md` (and any CI
+   shortstat check) to add the exemption wording, with `<n>` = this RFC's
+   finalized number. Hard dependency of every deletion story; must merge first.
 1. **Phase 1 — heavy hitters (extra ≥ 100):** `relations.test.ts` (414),
    `calculations.test.ts` (320), `finder.test.ts` (154), `base.test.ts` (148),
    `enum.test.ts` (107), `migration.test.ts` (107). One story per file.
@@ -235,6 +251,14 @@ created from this merged RFC.
 2. **Do relocated `*.trails.test.ts` tests need their own gate?** They run in CI
    like any test but are invisible to `test:compare`. Recommendation: yes — they
    stay subject to normal `vitest` CI; no special gate needed.
+3. **Where does the cross-repo carve-out land?** The CLAUDE.md exemption and the
+   `git diff --shortstat` guard live in **trails**, but this RFC merges in
+   **tasks** — they cannot ride this PR. Recommendation (adopted in the
+   LOC-ceiling carve-out section and Rollout Phase 0): a dedicated trails story
+   `add-rfc-deletion-loc-carve-out` lands them before any deletion PR, wired as a
+   hard `deps`/`blocked-by` edge on every deletion story so the scheduler cannot
+   release a deletion PR ahead of it. Confirm at finalize that `<n>` is
+   substituted with the assigned RFC number in the CLAUDE.md wording.
 
 ## Stories
 
