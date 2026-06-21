@@ -1,6 +1,6 @@
 ---
 title: "Converge production cache stores to Rails second-unit Entry storage (inherit base read/write/fetch)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 3848
 claim: "2026-06-21T23:26:54Z"
 assignee: "cache-stores-converge-to-second-unit-entry-storage"
 blocked-by: null
