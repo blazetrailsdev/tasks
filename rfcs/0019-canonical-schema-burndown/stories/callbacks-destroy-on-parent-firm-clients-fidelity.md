@@ -1,6 +1,6 @@
 ---
 title: "Use canonical Firm/clients for callbacks.test.ts destroy-on-parent test"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3766
 claim: "2026-06-21T02:38:42Z"
 assignee: "callbacks-destroy-on-parent-firm-clients-fidelity"
 blocked-by: null
