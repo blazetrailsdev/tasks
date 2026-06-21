@@ -1,6 +1,6 @@
 ---
 title: "primary-key-reflects-nil-for-idless-tables"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T22:22:42Z"
+assignee: "primary-key-reflects-nil-for-idless-tables"
 blocked-by: null
 ---
 
