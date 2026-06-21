@@ -1,7 +1,7 @@
 ---
 title: "pg-record-id-bigint-sweep-habtm"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T15:18:46Z"
+assignee: "pg-record-id-bigint-sweep-habtm"
 blocked-by: null
 ---
 
