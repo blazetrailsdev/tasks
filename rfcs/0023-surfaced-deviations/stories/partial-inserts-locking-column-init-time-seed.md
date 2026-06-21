@@ -1,6 +1,6 @@
 ---
 title: "Seed optimistic-locking column at record init (in-memory fidelity)"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["partial-inserts-locking-column-schema-default-init"]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3826
+pr: 3302
 claim: "2026-06-21T19:26:43Z"
 assignee: "partial-inserts-locking-column-init-time-seed"
 blocked-by: null
