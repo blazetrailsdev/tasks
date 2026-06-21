@@ -1,6 +1,6 @@
 ---
 title: "file-store-converge-to-second-unit-entry-storage"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T23:42:42Z"
+assignee: "file-store-converge-to-second-unit-entry-storage"
 blocked-by: null
 ---
 
