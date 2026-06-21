@@ -1,6 +1,6 @@
 ---
 title: "establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T18:06:42Z"
+assignee: "establish-with-config-stores-urlconfig-discrete-fields"
 blocked-by: null
 ---
 
