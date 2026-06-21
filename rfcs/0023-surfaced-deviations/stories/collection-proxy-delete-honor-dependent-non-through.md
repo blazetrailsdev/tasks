@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delete-honor-dependent-non-through"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -45,19 +45,19 @@ making `CollectionProxy#delete` _reach_ that path for non-through associations.
 
 ## Acceptance criteria
 
-- [ ] `CollectionProxy#delete` for non-through has_many delegates to the
+- [x] `CollectionProxy#delete` for non-through has_many delegates to the
       dependent-aware association-layer `delete` (or otherwise honors
       `options[:dependent]`), matching Rails `delete_or_destroy(records,
 options[:dependent])`: `:delete_all` DELETEs, `:destroy` destroys, no
       dependent nullifies.
-- [ ] A `dependent: :delete_all` non-through association with a NOT-NULL
+- [x] A `dependent: :delete_all` non-through association with a NOT-NULL
       (incl. composite-PK) FK is DELETEd, not nullified, via the proxy
       `record.assoc.delete(child)`.
-- [ ] Update the two PR #3739 ports
+- [x] Update the two PR #3739 ports
       (`deleting models with composite keys`, `sharded deleting models` in
       `has-many-associations.test.ts`) to call the proxy
       (`great_author.books.delete(...)` / `blog_post.delete_comments.delete(...)`)
       exactly as Rails does, and drop the `tracked-pending-convergence` note.
-- [ ] Existing nullify behavior for non-dependent associations
+- [x] Existing nullify behavior for non-dependent associations
       (e.g. the `deleting` / `deleting a collection` tests on `clientsOfFirm`)
       is preserved.
