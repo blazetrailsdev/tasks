@@ -45,4 +45,4 @@
 | [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | draft | @deanmarano | activesupport, activerecord |
 | [0040-through-association-source-convergence](rfcs/0040-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | draft | @deanmarano | activerecord |
 | [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | draft | @deanmarano | activesupport |
-| [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | draft | @your-handle | activerecord |
+| [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | active | @your-handle | activerecord |
