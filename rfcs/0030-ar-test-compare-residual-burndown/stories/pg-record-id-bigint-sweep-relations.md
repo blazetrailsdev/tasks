@@ -1,6 +1,6 @@
 ---
 title: "pg-record-id-bigint-sweep-relations"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3820
 claim: "2026-06-21T18:38:40Z"
 assignee: "pg-record-id-bigint-sweep-relations"
 blocked-by: null
