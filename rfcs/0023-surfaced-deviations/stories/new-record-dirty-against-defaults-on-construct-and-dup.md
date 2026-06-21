@@ -1,6 +1,6 @@
 ---
 title: "new Model(attrs) and deepDup-based dup should be dirty against column defaults (Rails parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3780
 claim: "2026-06-21T11:50:43Z"
 assignee: "new-record-dirty-against-defaults-on-construct-and-dup"
 blocked-by: null
