@@ -1,10 +1,13 @@
 ---
 title: "AR test harness runs partial_inserts=false (load_defaults 7.0) vs Rails test-suite default true"
 status: in-progress
-updated: 2026-06-20
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - partial-inserts-dirty-baseline-db-column-default
+  - partial-inserts-composite-pk-key-retention
+  - partial-inserts-optimistic-locking-initial-value
 deps-rfc: []
 est-loc: 120
 priority: null
