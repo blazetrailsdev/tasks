@@ -1,6 +1,6 @@
 ---
 title: "ArrayHandler derefs any {id}-bearing object where Rails checks is_a?(Base)"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T20:06:42Z"
+assignee: "array-handler-record-detection-isa-base"
 blocked-by: null
 ---
 
