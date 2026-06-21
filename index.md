@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-callback-halt-semantics-convergence](rfcs/0000-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | draft | @deanmarano | activesupport, activerecord |
 | [0000-through-association-source-convergence](rfcs/0000-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | draft | @deanmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
