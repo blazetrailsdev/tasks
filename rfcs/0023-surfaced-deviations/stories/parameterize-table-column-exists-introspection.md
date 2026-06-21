@@ -46,12 +46,12 @@ Rails which scopes to the active schema.
 
 ## Acceptance criteria
 
-- [ ] `tableExists` and `columnExists` no longer interpolate raw identifier
+- [x] `tableExists` and `columnExists` no longer interpolate raw identifier
       values into SQL — use bind parameters (or strict identifier validation) so
       a value containing quotes/operators returns `false` instead of erroring.
-- [ ] The `/^\w+$/` guard added in #3340 (`postgresql-adapter.ts` addIndex
+- [x] The `/^\w+$/` guard added in #3340 (`postgresql-adapter.ts` addIndex
       where-clause) can be removed or simplified once the helper is safe;
       confirm the #3340 where-quoting tests still pass.
-- [ ] (If in scope) PG branches scope to the active search_path rather than
+- [x] (If in scope) PG branches scope to the active search_path rather than
       hardcoded `'public'`, matching Rails.
-- [ ] api:compare / test:compare delta non-negative.
+- [x] api:compare / test:compare delta non-negative.
