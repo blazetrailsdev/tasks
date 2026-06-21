@@ -1,6 +1,6 @@
 ---
 title: "ForeignKeyDefinition.isDefinedFor should slice lookup to stored option keys (defined_for? options.slice)"
-status: ready
+status: draft
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
