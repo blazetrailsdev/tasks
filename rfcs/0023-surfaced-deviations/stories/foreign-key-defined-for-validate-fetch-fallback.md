@@ -50,11 +50,11 @@ store `:validate` — not a typical `foreignKeyExists?` call.
 
 ## Acceptance criteria
 
-- [ ] `isDefinedFor` mirrors `validate == self.options.fetch(:validate, validate)`:
+- [x] `isDefinedFor` mirrors `validate == self.options.fetch(:validate, validate)`:
       when the definition did not store `validate`, a `validate` lookup is
       ignored (matches), rather than compared against the defaulted `true`.
-- [ ] Track `validate` storedness alongside the existing `storedOptionKeys`
+- [x] Track `validate` storedness alongside the existing `storedOptionKeys`
       mechanism (PG introspection stores it; mysql/sqlite do not; DSL/add paths
       store it only when explicitly passed, matching `foreign_key_options`).
-- [ ] Preserve existing element-wise comparison semantics for the other keys.
-- [ ] No test-name changes; verify on all three adapters.
+- [x] Preserve existing element-wise comparison semantics for the other keys.
+- [x] No test-name changes; verify on all three adapters.
