@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-establish-connection-resolver-convergence](rfcs/0000-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | draft | @your-handle | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | active | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -46,3 +45,4 @@
 | [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | draft | @deanmarano | activesupport, activerecord |
 | [0040-through-association-source-convergence](rfcs/0040-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | draft | @deanmarano | activerecord |
 | [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | draft | @deanmarano | activesupport |
+| [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | draft | @your-handle | activerecord |

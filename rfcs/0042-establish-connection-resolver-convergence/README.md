@@ -1,5 +1,5 @@
 ---
-rfc: "0000-establish-connection-resolver-convergence"
+rfc: "0042-establish-connection-resolver-convergence"
 title: "Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel)"
 status: draft
 created: 2026-06-21
