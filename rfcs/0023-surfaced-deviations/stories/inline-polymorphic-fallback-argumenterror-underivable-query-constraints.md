@@ -46,11 +46,11 @@ trails refs:
 
 ## Acceptance criteria
 
-- [ ] The inline polymorphic fallback (`_inlinePolymorphicKeys`, used by
+- [x] The inline polymorphic fallback (`_inlinePolymorphicKeys`, used by
       `loadHasMany`/`loadHasOne` and `computeHasManyWhere`) raises
       `ArgumentError` for the same three underivable query_constraints shapes
       that `deriveFkQueryConstraints` raises on, matching Rails messages.
-- [ ] A no-reflection test with a >2-attribute query_constraints owner
+- [x] A no-reflection test with a >2-attribute query_constraints owner
       (`ShardedBlogPostWithRevision`, qc `[blog_id, revision, id]`) and a
       polymorphic `as` association raises `ArgumentError` rather than silently
       scalar-keying.
