@@ -1,6 +1,6 @@
 ---
 title: "columns-pg-honor-search-path"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
