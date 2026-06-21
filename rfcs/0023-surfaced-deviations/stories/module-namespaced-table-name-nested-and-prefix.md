@@ -1,6 +1,6 @@
 ---
 title: "Module table_name: nested-AR-class contained prefix + module table_name_prefix"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
