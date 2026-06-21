@@ -1,14 +1,14 @@
 ---
 title: "gate-wrong-gate-body-convergence"
-status: claimed
-updated: 2026-06-20
+status: in-progress
+updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3755
 claim: "2026-06-20T14:49:30Z"
 assignee: "gate-wrong-gate-body-convergence"
 blocked-by: null
