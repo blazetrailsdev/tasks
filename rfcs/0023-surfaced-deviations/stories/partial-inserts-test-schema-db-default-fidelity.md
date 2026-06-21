@@ -1,7 +1,7 @@
 ---
 title: "Test-schema column defaults missing vs schema.rb under partial_inserts=true"
-status: ready
-updated: 2026-06-20
+status: claimed
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T13:18:54Z"
+assignee: "partial-inserts-test-schema-db-default-fidelity"
 blocked-by: null
 ---
 
