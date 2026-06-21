@@ -1,6 +1,6 @@
 ---
 title: "mysqlFk/sqliteFk slice-test mocks should leave :validate unstored"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 3818
 claim: "2026-06-21T18:22:42Z"
 assignee: "fk-slice-test-mocks-unstored-validate"
 blocked-by: null
