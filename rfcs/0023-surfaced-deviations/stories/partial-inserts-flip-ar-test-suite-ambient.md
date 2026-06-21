@@ -1,7 +1,7 @@
 ---
 title: "Flip AR test-suite ambient to partial_inserts=true (Rails helper.rb)"
-status: ready
-updated: 2026-06-20
+status: draft
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
