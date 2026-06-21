@@ -1,6 +1,6 @@
 ---
 title: "Port relation_test.rb merge-joins-as-symbols family from stubs"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
