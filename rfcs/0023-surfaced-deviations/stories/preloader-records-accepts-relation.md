@@ -1,7 +1,7 @@
 ---
 title: "Preloader: support Relation as records argument (materialize + preload in 2 queries)"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T21:18:42Z"
+assignee: "preloader-records-accepts-relation"
 blocked-by: null
 ---
 
