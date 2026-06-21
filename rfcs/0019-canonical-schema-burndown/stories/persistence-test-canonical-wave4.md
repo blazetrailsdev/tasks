@@ -1,6 +1,6 @@
 ---
 title: "persistence-test-canonical-wave4"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T17:34:43Z"
+assignee: "persistence-test-canonical-wave4"
 blocked-by: null
 ---
 
