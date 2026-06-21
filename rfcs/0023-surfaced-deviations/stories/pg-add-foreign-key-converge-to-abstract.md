@@ -1,6 +1,6 @@
 ---
 title: "PG addForeignKey builds SQL inline instead of going through abstract add_foreign_key/schema_creation"
-status: ready
+status: claimed
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T15:02:43Z"
+assignee: "pg-add-foreign-key-converge-to-abstract"
 blocked-by: null
 ---
 
