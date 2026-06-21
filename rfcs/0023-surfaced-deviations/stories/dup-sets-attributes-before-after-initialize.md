@@ -1,6 +1,6 @@
 ---
 title: "dup should set duped attributes before after_initialize fires (Rails Core#initialize_dup order)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3786
 claim: "2026-06-21T12:54:42Z"
 assignee: "dup-sets-attributes-before-after-initialize"
 blocked-by: null
