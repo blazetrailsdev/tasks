@@ -1,6 +1,6 @@
 ---
 title: "advisory-locks-enabled-lease-connection-fidelity"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3761
 claim: "2026-06-21T01:35:27Z"
 assignee: "advisory-locks-enabled-lease-connection-fidelity"
 blocked-by: null
