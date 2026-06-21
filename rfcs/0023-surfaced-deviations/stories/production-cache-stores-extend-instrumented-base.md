@@ -1,7 +1,7 @@
 ---
 title: "Production cache stores (MemoryStore/FileStore/NullStore) extend instrumented Store base"
-status: ready
-updated: 2026-06-20
+status: claimed
+updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T21:26:44Z"
+assignee: "production-cache-stores-extend-instrumented-base"
 blocked-by: null
 ---
 
