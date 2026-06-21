@@ -56,7 +56,9 @@ activerecord --sort-extra`, **2026-06-21**: `@blazetrails/activerecord` carries
 | `enum.test.ts`         |   107 |           — |
 | `migration.test.ts`    |   107 |           — |
 
-…with a long tail across ~21 files at extra ≥ 50.
+(Blank "Rails tests" cells are values not captured in the 2026-06-21 snapshot;
+each deletion story re-derives its file's exact Rails count from the fresh
+`--json` run.) …with a long tail across ~21 files at extra ≥ 50.
 
 Why this is debt, not coverage:
 
@@ -219,13 +221,17 @@ created from this merged RFC.
 
 ## Open questions
 
-1. **Relocation file naming.** Proposed `*.trails.test.ts`. Confirm
-   `test:compare`'s pairing logic excludes that suffix from the `extra` tally (it
-   pairs `foo.test.ts` ↔ `foo_test.rb`; a `foo.trails.test.ts` has no `.rb`
-   partner so should be ignored). If the matcher would instead flag it as an
-   _unpaired TS file_, pick a suffix/dir the matcher already ignores. Recommend
-   verifying against `scripts/test-compare/test-compare.ts` in the first Phase 1
-   story and pinning the convention there.
+1. **Relocation file naming.** Proposed `*.trails.test.ts`. The convention map
+   is **Ruby-driven**: `rubyToConventionTs` (`scripts/test-compare/test-compare.ts:53-72`)
+   turns each `foo_test.rb` into exactly one `foo.test.ts` target — it never
+   emits a `foo.trails.test.ts`, so a relocated test is invisible to the
+   per-Ruby-file matching pass. The one thing to confirm is whether the `extra`
+   counter (trails PR #3825) is _also_ Ruby-driven (counts only TS tests sitting
+   in a convention-mapped file with no Ruby partner) or independently sweeps
+   _all_ globbed `*.test.ts`; if the latter, a `*.trails.test.ts` would still be
+   swept and a suffix/dir the sweep already ignores must be chosen instead.
+   First Phase 1 story must read the `extra`-counting code, confirm the suffix is
+   excluded, and pin the convention there.
 2. **Do relocated `*.trails.test.ts` tests need their own gate?** They run in CI
    like any test but are invisible to `test:compare`. Recommendation: yes — they
    stay subject to normal `vitest` CI; no special gate needed.
