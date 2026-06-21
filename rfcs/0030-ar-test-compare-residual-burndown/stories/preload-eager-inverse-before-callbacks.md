@@ -1,6 +1,6 @@
 ---
 title: "Wire inverse_of before callbacks on preloader + join-dependency eager paths"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 3832
 claim: "2026-06-21T20:30:42Z"
 assignee: "preload-eager-inverse-before-callbacks"
 blocked-by: null
