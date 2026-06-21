@@ -1,6 +1,6 @@
 ---
 title: "columns-pg-honor-search-path"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3785
 claim: "2026-06-21T12:46:42Z"
 assignee: "columns-pg-honor-search-path"
 blocked-by: null
