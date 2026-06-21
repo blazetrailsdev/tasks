@@ -1,7 +1,7 @@
 ---
 title: "join-model-canonical-conversion"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-21
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T01:43:26Z"
+assignee: "join-model-canonical-conversion"
 blocked-by: null
 ---
 
