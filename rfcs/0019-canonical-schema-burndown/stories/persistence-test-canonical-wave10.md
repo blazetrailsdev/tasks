@@ -1,6 +1,6 @@
 ---
 title: "persistence.test.ts canonical burndown wave10 (remaining defineSchema blocks)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 3841
 claim: "2026-06-21T22:14:43Z"
 assignee: "persistence-test-canonical-wave10"
 blocked-by: null
