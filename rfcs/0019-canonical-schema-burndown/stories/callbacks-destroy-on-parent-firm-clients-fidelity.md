@@ -1,6 +1,6 @@
 ---
 title: "Use canonical Firm/clients for callbacks.test.ts destroy-on-parent test"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0019-canonical-schema-burndown"
 cluster: null
