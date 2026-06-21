@@ -1,6 +1,6 @@
 ---
 title: "Relation#explain should collect over exec_queries (always-execute), not cache-aware toArray (MySQL backtick fidelity)"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3845
 claim: "2026-06-21T23:11:11Z"
 assignee: "relation-explain-uses-exec-queries-not-cached-toarray"
 blocked-by: null
