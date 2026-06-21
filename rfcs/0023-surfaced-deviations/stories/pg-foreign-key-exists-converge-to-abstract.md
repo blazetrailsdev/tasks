@@ -37,9 +37,9 @@ confirm parity before removing it.
 
 ## Acceptance criteria
 
-- [ ] Decide: converge PG `foreignKeyExists` to the abstract
+- [x] Decide: converge PG `foreignKeyExists` to the abstract
       `foreign_keys`-based implementation (Rails layout), OR document a
       justified PG-specific override with the cross-schema rationale.
-- [ ] Restore the full Rails signature `(fromTable, toTable?, options?)` with
+- [x] Restore the full Rails signature `(fromTable, toTable?, options?)` with
       `column`/`name` support.
-- [ ] No test-name changes; verify on all three adapters.
+- [x] No test-name changes; verify on all three adapters.
