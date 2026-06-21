@@ -1,6 +1,6 @@
 ---
 title: "ForeignKeyDefinition.isDefinedFor ignores on_delete/primary_key option keys vs Rails defined_for?"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3804
 claim: "2026-06-21T16:46:41Z"
 assignee: "foreign-key-defined-for-generic-option-matching"
 blocked-by: null
