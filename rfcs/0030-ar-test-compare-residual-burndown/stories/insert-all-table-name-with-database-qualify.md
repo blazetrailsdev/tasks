@@ -26,8 +26,8 @@ open tracking story.
 
 ## Acceptance criteria
 
-- [ ] Either expose the per-worker database name to `currentDatabase()` or
+- [x] Either expose the per-worker database name to `currentDatabase()` or
       provide a harness path that lets a MySQL test assert a
       `database.table`-qualified INSERT.
-- [ ] Drop `ctx.skip()`; test runs on MySQL.
-- [ ] `test:compare` delta non-negative; test name unchanged.
+- [x] Drop `ctx.skip()`; test runs on MySQL.
+- [x] `test:compare` delta non-negative; test name unchanged.
