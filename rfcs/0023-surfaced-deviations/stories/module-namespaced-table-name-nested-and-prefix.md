@@ -1,6 +1,6 @@
 ---
 title: "Module table_name: nested-AR-class contained prefix + module table_name_prefix"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 3777
 claim: "2026-06-21T11:26:41Z"
 assignee: "module-namespaced-table-name-nested-and-prefix"
 blocked-by: null
