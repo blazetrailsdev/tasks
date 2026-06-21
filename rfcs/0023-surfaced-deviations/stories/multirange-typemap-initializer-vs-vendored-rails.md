@@ -1,6 +1,6 @@
 ---
 title: "PG multirange TypeMapInitializer is a trails-only extension beyond vendored Rails"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3779
 claim: "2026-06-21T03:26:44Z"
 assignee: "multirange-typemap-initializer-vs-vendored-rails"
 blocked-by: null
