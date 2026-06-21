@@ -1,6 +1,6 @@
 ---
 title: "foreign-key-defined-for-validate-fetch-fallback"
-status: claimed
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3813
 claim: "2026-06-21T17:42:42Z"
 assignee: "foreign-key-defined-for-validate-fetch-fallback"
 blocked-by: null
