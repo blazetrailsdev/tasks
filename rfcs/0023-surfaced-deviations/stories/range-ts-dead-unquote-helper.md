@@ -1,6 +1,6 @@
 ---
 title: "Dead @internal unquote() helper in oid/range.ts has no callers"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
+pr: 3843
 claim: "2026-06-21T23:11:02Z"
 assignee: "range-ts-dead-unquote-helper"
 blocked-by: null
