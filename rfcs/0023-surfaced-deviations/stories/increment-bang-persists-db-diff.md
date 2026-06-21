@@ -1,6 +1,6 @@
 ---
 title: "increment-bang-persists-db-diff"
-status: claimed
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3798
 claim: "2026-06-21T14:54:42Z"
 assignee: "increment-bang-persists-db-diff"
 blocked-by: null
