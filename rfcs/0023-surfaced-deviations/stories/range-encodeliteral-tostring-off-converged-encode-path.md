@@ -1,6 +1,6 @@
 ---
 title: "Unify RangeType.encodeLiteral / Range.toString onto the converged encodeRange path"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 3847
 claim: "2026-06-21T23:10:54Z"
 assignee: "range-encodeliteral-tostring-off-converged-encode-path"
 blocked-by: null
