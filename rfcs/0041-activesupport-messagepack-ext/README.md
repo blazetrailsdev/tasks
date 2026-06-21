@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activesupport-messagepack-ext"
+rfc: "0041-activesupport-messagepack-ext"
 title: "ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity)"
 status: draft
 created: 2026-06-21
