@@ -1,7 +1,7 @@
 ---
 title: "R1: eager-warm + persistent per-test schema cache in the AR test harness"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-21
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-21T22:30:43Z"
+assignee: "r1-eager-persistent-schema-cache-test-harness"
 blocked-by: null
 ---
 
