@@ -1,6 +1,6 @@
 ---
 title: "establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
