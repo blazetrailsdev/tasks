@@ -39,11 +39,18 @@ real implementation and may surface aliasing/dedup gaps.
 
 ## Acceptance criteria
 
-- [ ] Port all five tests faithfully onto canonical models
+- [x] Port all five tests faithfully onto canonical models
       (`Author`/`Post`/`Comment`/`Categorization`/`SpecialComment`) + real
       fixtures, replacing the stubs in `relation.test.ts`'s `RelationTest`
-      describe — keeping Rails test names verbatim.
-- [ ] Reproduce Rails' exact assertions (e.g. symbols count `{ 4 => 2 }`,
+      describe — keeping Rails test names verbatim. (3 live + passing; 2
+      `it.skip` pending the convergence story below — full faithful ports, not
+      stubs.)
+- [x] Reproduce Rails' exact assertions (e.g. symbols count `{ 4 => 2 }`,
       INNER-JOIN counts of 2/3, no LEFT JOIN, child-join aliasing).
-- [ ] `test:compare` delta non-negative, `0 misplaced`; any implementation gap
-      surfaced is either fixed or registered as its own deviation story.
+- [x] `0 misplaced`; implementation gap surfaced (cross-model merge child-join
+      aliasing) registered as its own deviation story
+      `converge-cross-model-merge-join-aliasing` (RFC 0030). NOTE: `test:compare`
+      delta is −2, not non-negative — the prior placeholder stubs counted as OK
+      and the 2 aliasing tests are now skipped pending convergence. Accepted by
+      explicit user decision (fidelity-over-gate); the 2 tests un-skip when the
+      convergence lands.
