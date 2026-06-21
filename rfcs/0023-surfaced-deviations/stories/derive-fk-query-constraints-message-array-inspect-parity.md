@@ -1,6 +1,6 @@
 ---
 title: "deriveFkQueryConstraints/_inlinePolymorphicKeys render query_constraints array as Ruby inspect in ArgumentError message"
-status: claimed
+status: in-progress
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 3768
 claim: "2026-06-21T02:54:41Z"
 assignee: "derive-fk-query-constraints-message-array-inspect-parity"
 blocked-by: null
