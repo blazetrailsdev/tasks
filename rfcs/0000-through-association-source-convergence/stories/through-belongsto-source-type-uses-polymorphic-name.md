@@ -2,7 +2,7 @@
 title: "createThroughAssociation belongs_to source _type fallback should use polymorphic_name"
 status: ready
 updated: 2026-06-18
-rfc: "0023-surfaced-deviations"
+rfc: "0000-through-association-source-convergence"
 cluster: null
 deps: []
 deps-rfc: []

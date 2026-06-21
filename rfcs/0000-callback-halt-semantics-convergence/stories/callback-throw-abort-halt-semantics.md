@@ -2,7 +2,7 @@
 title: 'throw :abort halt semantics — converge throw "abort" vs return false'
 status: blocked
 updated: 2026-06-16
-rfc: "0023-surfaced-deviations"
+rfc: "0000-callback-halt-semantics-convergence"
 cluster: null
 deps: []
 deps-rfc: []

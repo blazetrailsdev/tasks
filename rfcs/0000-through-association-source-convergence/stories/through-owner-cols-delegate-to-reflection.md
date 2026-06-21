@@ -2,7 +2,7 @@
 title: "Delegate _throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey"
 status: ready
 updated: 2026-06-20
-rfc: "0023-surfaced-deviations"
+rfc: "0000-through-association-source-convergence"
 cluster: null
 deps: []
 deps-rfc: []

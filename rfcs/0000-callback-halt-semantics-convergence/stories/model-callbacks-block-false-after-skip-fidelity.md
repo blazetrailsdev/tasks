@@ -2,7 +2,7 @@
 title: "ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap)"
 status: ready
 updated: 2026-06-20
-rfc: "0023-surfaced-deviations"
+rfc: "0000-callback-halt-semantics-convergence"
 cluster: null
 deps: []
 deps-rfc: []
