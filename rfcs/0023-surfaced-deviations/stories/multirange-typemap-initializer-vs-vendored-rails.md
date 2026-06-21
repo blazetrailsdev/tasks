@@ -1,6 +1,6 @@
 ---
 title: "PG multirange TypeMapInitializer is a trails-only extension beyond vendored Rails"
-status: in-progress
+status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
 cluster: null
