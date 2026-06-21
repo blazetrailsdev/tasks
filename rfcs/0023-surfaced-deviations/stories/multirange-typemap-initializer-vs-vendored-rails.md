@@ -37,12 +37,12 @@ simply older.
 
 ## Acceptance criteria
 
-- [ ] Re-vendor or diff against current upstream Rails
+- [x] Re-vendor or diff against current upstream Rails
       `postgresql/oid/type_map_initializer.rb` to obtain the canonical
       multirange registration (`register_multirange_type`, the `'m'` typtype
       condition, and how Rails resolves the range subtype for `typelem = 0`).
-- [ ] Converge trails' `registerMultirangeType` + `queryConditionsForKnownTypeTypes`
+- [x] Converge trails' `registerMultirangeType` + `queryConditionsForKnownTypeTypes`
       to match the real Rails implementation 1:1 (method name, query shape,
       subtype-resolution strategy), or document any deliberate residual
       divergence as tracked-pending-convergence.
-- [ ] Keep PG array/range/multirange introspection + schema-dump tests green.
+- [x] Keep PG array/range/multirange introspection + schema-dump tests green.
