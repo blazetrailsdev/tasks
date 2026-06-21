@@ -1,6 +1,6 @@
 ---
 title: "Funnel autoConnect through the single DatabaseConfig object path"
-status: draft
+status: ready
 updated: 2026-06-21
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
