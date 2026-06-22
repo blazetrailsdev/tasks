@@ -1,7 +1,7 @@
 ---
 title: "Remove _castAttributeValue parseInt untyped-PK fallback once schema cache is always warm"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T20:19:17Z"
+assignee: "remove-untyped-pk-parseint-cast-fallback"
 blocked-by: null
 ---
 
