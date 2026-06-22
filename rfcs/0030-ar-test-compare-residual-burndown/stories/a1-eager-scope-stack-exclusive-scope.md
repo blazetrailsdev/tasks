@@ -1,7 +1,7 @@
 ---
 title: "A1h — eager_test: scope-stack + exclusive/default scope preload"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T21:55:15Z"
+assignee: "a1-eager-scope-stack-exclusive-scope"
 blocked-by: null
 ---
 
