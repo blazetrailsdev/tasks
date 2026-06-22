@@ -1,7 +1,7 @@
 ---
 title: "persistence-createrecord-single-column-returning-gate"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T01:10:57Z"
+assignee: "persistence-createrecord-single-column-returning-gate"
 blocked-by: null
 ---
 
