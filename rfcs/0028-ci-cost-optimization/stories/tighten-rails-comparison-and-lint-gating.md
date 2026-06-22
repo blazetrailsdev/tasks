@@ -1,6 +1,6 @@
 ---
 title: "Gate rails-comparison and lint on relevant changes instead of every non-docs PR"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: change-gating
