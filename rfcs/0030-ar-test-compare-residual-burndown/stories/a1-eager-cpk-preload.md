@@ -1,6 +1,6 @@
 ---
 title: "A1g — eager_test: preload via composite query_constraints / CPK"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3927
 claim: "2026-06-22T21:23:14Z"
 assignee: "a1-eager-cpk-preload"
 blocked-by: null
