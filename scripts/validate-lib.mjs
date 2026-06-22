@@ -11,6 +11,26 @@ import { relPath, RFC_STATUSES, STORY_STATUSES } from "./lib.mjs";
 
 export const MAX_LINES = 2000;
 
+// Numeric-prefix pairs that legitimately share a four-digit prefix and predate
+// the duplicate-prefix guard below. Each entry is the shared prefix; the two
+// dirs were finalized concurrently before finalize-rfc.mjs serialized number
+// assignment, so neither can be renumbered without rewriting cross-references.
+// The guard still protects every *future* finalize — only these grandfathered
+// pairs are waived. Keep this list from growing: a new collision is a bug in
+// the finalize flow, not a candidate for this allowlist.
+export const DUP_PREFIX_ALLOWLIST = new Set(["0022"]);
+
+// created/updated are calendar dates. js-yaml's default schema coerces an
+// unquoted ISO date scalar (`updated: 2026-06-13`) into a JS Date, while the
+// template's literal `YYYY-MM-DD` placeholder — and any malformed/quoted value
+// — stays a string. So a field is valid iff it parsed to a real Date or is a
+// string in YYYY-MM-DD form; this rejects the unfilled placeholder while
+// accepting every real entry.
+function isYmdDate(value) {
+  if (value instanceof Date) return !Number.isNaN(value.getTime());
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+}
+
 // Reference + cycle checks over the story dep graph, factored out so the full
 // validator and the CLI's set-deps pre-commit guard share one traversal rather
 // than maintaining drifting copies of the WHITE/GRAY/BLACK DFS.
@@ -84,7 +104,36 @@ export function validate({ rfcs, stories }) {
     }
     if (fm.clusters && !Array.isArray(fm.clusters)) err(r.file, `clusters must be an array`);
     if (fm.packages && !Array.isArray(fm.packages)) err(r.file, `packages must be an array`);
+    for (const key of ["created", "updated"]) {
+      if (fm[key] != null && !isYmdDate(fm[key])) {
+        err(r.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);
+      }
+    }
     rfcById.set(r.dir, r);
+  }
+
+  // Two RFC dirs sharing a four-digit numeric prefix collide in every
+  // number-keyed reference (index ordering, "RFC 0022" prose). finalize-rfc.mjs
+  // is meant to hand out a unique number per merge; a duplicate means that
+  // serialization slipped, so flag it — except the grandfathered pairs above.
+  const prefixDirs = new Map();
+  for (const r of rfcs) {
+    const m = r.dir.match(/^(\d{4})-/);
+    if (!m) continue;
+    (prefixDirs.get(m[1]) ?? prefixDirs.set(m[1], []).get(m[1])).push(r);
+  }
+  for (const [prefix, group] of prefixDirs) {
+    if (group.length > 1 && !DUP_PREFIX_ALLOWLIST.has(prefix)) {
+      for (const r of group) {
+        err(
+          r.file,
+          `duplicate RFC numeric prefix "${prefix}" (shared with ${group
+            .filter((g) => g !== r)
+            .map((g) => g.dir)
+            .join(", ")})`,
+        );
+      }
+    }
   }
 
   // Resolve superseded-by pointers
@@ -140,6 +189,57 @@ export function validate({ rfcs, stories }) {
     if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
       err(s.file, `priority must be a non-negative integer or absent`);
     }
+    for (const key of ["created", "updated"]) {
+      if (fm[key] != null && !isYmdDate(fm[key])) {
+        err(s.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);
+      }
+    }
+
+    // Cross-field lifecycle invariants. Each field is already validated in
+    // isolation above (type/enum); here we enforce their *joint* validity so a
+    // hand-edit, crashed agent, or `--force` flip can't leave a story in a
+    // self-contradictory state that the per-field checks wave through. The
+    // shape mirrors exactly what the CLI's lifecycle verbs stamp (claim sets
+    // claim+assignee; in-progress/done stamp pr; block stamps blocked-by; the
+    // unblock path clears claim/assignee/pr/blocked-by back to the ready shape).
+    //
+    // `ready` with un-`done` deps is deliberately NOT an error: the CLI treats
+    // `ready` as "specified and open for pickup" and filters *claimability* by
+    // dep status (scripts/tasks/cli.ts `ready()`), so a ready story whose deps
+    // are still open is legal — it just won't surface in the ready queue yet.
+    // `done` with a null `pr` is likewise legal: a story can be completed
+    // before anyone reaches it (no PR of its own), the validate-clean path the
+    // CLI's done-without-PR escape hatch records.
+    switch (fm.status) {
+      case "draft":
+      case "ready":
+        for (const key of ["claim", "assignee", "pr"]) {
+          if (fm[key] != null)
+            err(
+              s.file,
+              `status: ${fm.status} must have null ${key} (got ${JSON.stringify(fm[key])})`,
+            );
+        }
+        break;
+      case "claimed":
+        if (!fm.claim) err(s.file, `status: claimed requires a claim timestamp`);
+        if (!fm.assignee) err(s.file, `status: claimed requires an assignee`);
+        break;
+      case "in-progress":
+        if (!fm.claim) err(s.file, `status: in-progress requires a claim timestamp`);
+        if (!fm.assignee) err(s.file, `status: in-progress requires an assignee`);
+        if (fm.pr == null) err(s.file, `status: in-progress requires a pr`);
+        break;
+      case "blocked":
+        if (!fm["blocked-by"]) err(s.file, `status: blocked requires blocked-by`);
+        break;
+    }
+    if (fm.status !== "blocked" && fm["blocked-by"] != null) {
+      err(
+        s.file,
+        `blocked-by is set but status is "${fm.status}" — only blocked stories carry blocked-by`,
+      );
+    }
     storyById.set(s.id, s);
   }
 
@@ -159,6 +259,23 @@ export function validate({ rfcs, stories }) {
     // The repeated node (last element) is where validate.mjs historically
     // attributed the cycle error.
     err(storyById.get(cycle[cycle.length - 1]).file, `dep cycle detected: ${cycle.join(" → ")}`);
+  }
+
+  // A `closed` RFC asserts its work is complete (README lifecycle table:
+  // "All stories done"). An un-`done` story under a closed RFC is a drift the
+  // per-field checks miss — either the RFC was closed prematurely or the story
+  // outlived it. Group stories by parent and flag any closed RFC with a
+  // non-done child.
+  const storiesByRfc = new Map();
+  for (const s of storyById.values()) {
+    (storiesByRfc.get(s.rfc) ?? storiesByRfc.set(s.rfc, []).get(s.rfc)).push(s);
+  }
+  for (const r of rfcs) {
+    if (r.frontmatter?.status !== "closed") continue;
+    const open = (storiesByRfc.get(r.dir) ?? []).filter((s) => s.frontmatter?.status !== "done");
+    for (const s of open) {
+      err(r.file, `status: closed but story "${s.id}" is "${s.frontmatter?.status}", not done`);
+    }
   }
 
   return { errors };

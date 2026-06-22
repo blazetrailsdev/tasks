@@ -1,7 +1,7 @@
 ---
 title: "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures"
-status: draft
-updated: 2026-06-11
+status: blocked
+updated: 2026-06-22
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["associations-collection-cluster"]

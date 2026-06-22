@@ -108,6 +108,24 @@ draft → ready → claimed → in-progress → done
 
 Transitions are direct-push frontmatter edits. No PR gate on status changes.
 
+`scripts/validate.mjs` enforces these statuses' **cross-field** consistency, so
+a hand-edit or `--force` flip can't leave a story self-contradictory:
+
+- `draft` / `ready` must have null `claim`, `assignee`, and `pr`.
+- `claimed` / `in-progress` require `claim` + `assignee`; `in-progress` also
+  requires `pr`.
+- `blocked` requires `blocked-by`; only `blocked` stories may carry it.
+- A `closed` RFC may not have any un-`done` story.
+
+Two cases are deliberately **legal**, matching what the CLI does rather than
+inventing a stricter rule:
+
+- **`ready` with un-`done` deps** — `ready` means "specified and open for
+  pickup"; `pnpm tasks ready` filters _claimability_ by dep status, so a ready
+  story whose deps are still open simply doesn't surface in the queue yet.
+- **`done` with null `pr`** — a story can be completed before anyone reaches it
+  (no PR of its own); the CLI's done-without-PR path records exactly this.
+
 ## Layout
 
 ```text
