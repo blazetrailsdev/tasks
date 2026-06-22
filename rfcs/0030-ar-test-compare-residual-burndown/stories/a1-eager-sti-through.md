@@ -1,6 +1,6 @@
 ---
 title: "A1e — eager_test: preload/eager-load through STI join models"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3932
 claim: "2026-06-22T22:03:15Z"
 assignee: "a1-eager-sti-through"
 blocked-by: null
