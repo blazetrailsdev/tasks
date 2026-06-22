@@ -1,7 +1,7 @@
 ---
 title: "partial-inserts-locking-column-default-col-init-seed"
 status: done
-updated: 2026-06-21
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
