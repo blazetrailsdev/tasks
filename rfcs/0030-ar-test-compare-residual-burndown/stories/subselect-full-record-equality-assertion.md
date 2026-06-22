@@ -1,7 +1,7 @@
 ---
 title: "subselect test: assert full-record equality to match Rails assert_equal (not id-only)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T02:43:57Z"
+assignee: "subselect-full-record-equality-assertion"
 blocked-by: null
 ---
 
