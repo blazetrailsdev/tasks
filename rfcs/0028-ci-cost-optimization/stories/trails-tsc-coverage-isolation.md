@@ -1,6 +1,6 @@
 ---
 title: "Collect trails-tsc coverage without voiding the shared run"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
+pr: 3925
 claim: "2026-06-22T20:59:15Z"
 assignee: "trails-tsc-coverage-isolation"
 blocked-by: null
