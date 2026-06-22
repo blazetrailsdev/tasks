@@ -1,6 +1,6 @@
 ---
 title: "MessagePack ext types 11,13-16 Range/URI/IPAddr/Pathname/Regexp (need value classes + Ruby-faithful to_s)"
-status: ready
+status: draft
 updated: 2026-06-15
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
