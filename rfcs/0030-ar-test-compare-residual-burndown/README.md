@@ -208,6 +208,7 @@ files, not this table.
 | [habtm-residual-features](stories/habtm-residual-features.md)                                                                 | habtm: polymorphic-through, alternate-db, belongs_to-required                                             | draft   | 150     | associations     |
 | [habtm-savepoint-lifecycle](stories/habtm-savepoint-lifecycle.md)                                                             | habtm: assign_ids savepoint lifecycle on PG/MySQL                                                         | draft   | 80      | associations     |
 | [isvalid-does-not-run-uniqueness-validations](stories/isvalid-does-not-run-uniqueness-validations.md)                         | isvalid-does-not-run-uniqueness-validations                                                               | draft   | null    | —                |
+| [pg-bigserial-createtable-dumper-flip](stories/pg-bigserial-createtable-dumper-flip.md)                                       | Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip                                           | ready   | 60      | —                |
 | [reload-association-cache-through-join-pg-cast](stories/reload-association-cache-through-join-pg-cast.md)                     | Un-skip reload-association-cache (PG through-JOIN type-cast + publication callback fix)                   | ready   | 80      | —                |
 | [schema-dumper-expression-default-pg-sqlite](stories/schema-dumper-expression-default-pg-sqlite.md)                           | Schema dumper reflects PG/SQLite expression-column defaults                                               | ready   | 100     | —                |
 | [schema-dumper-pg-infinity-float-default](stories/schema-dumper-pg-infinity-float-default.md)                                 | PG float infinity/NaN column default schema dump                                                          | ready   | 60      | —                |
@@ -335,7 +336,6 @@ files, not this table.
 | [e1-bind-parameter](stories/e1-bind-parameter.md)                                                                             | E1 — bind_parameter residuals                                                                             | blocked | 60      | adapter          |
 | [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md)                                               | E4 — adapter_test notifications + explain tail                                                            | blocked | 50      | adapter          |
 | [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                                                           | F1 — prevent-writes + hot-compat + misc tail                                                              | blocked | 140     | core-residuals   |
-| [pg-bigserial-createtable-dumper-flip](stories/pg-bigserial-createtable-dumper-flip.md)                                       | Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip                                           | blocked | 60      | —                |
 
 ## Changelog
 
