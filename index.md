@@ -44,6 +44,6 @@
 | [0038-turso-libsql-adapter](rfcs/0038-turso-libsql-adapter/README.md) | Turso / libSQL SQLite driver (beyond-parity extension) | active | @deanmarano | activerecord |
 | [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | draft | @deanmarano | activesupport, activerecord |
 | [0040-through-association-source-convergence](rfcs/0040-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | active | @deanmarano | activerecord |
-| [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | draft | @deanmarano | activesupport |
+| [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | active | @deanmarano | activesupport |
 | [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | active | @your-handle | activerecord |
 | [0043-bespoke-test-bloat-burndown](rfcs/0043-bespoke-test-bloat-burndown/README.md) | ActiveRecord bespoke TS-only test-bloat burndown | draft | @deanmarano | activerecord |

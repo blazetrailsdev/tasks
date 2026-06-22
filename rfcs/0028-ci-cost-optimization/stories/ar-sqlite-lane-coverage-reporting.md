@@ -1,6 +1,6 @@
 ---
 title: "ar-sqlite-lane-coverage-reporting"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 3897
 claim: "2026-06-22T17:14:05Z"
 assignee: "ar-sqlite-lane-coverage-reporting"
 blocked-by: null
