@@ -1,6 +1,6 @@
 ---
 title: "Strip-and-recompile codemod to remove redundant as any"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
