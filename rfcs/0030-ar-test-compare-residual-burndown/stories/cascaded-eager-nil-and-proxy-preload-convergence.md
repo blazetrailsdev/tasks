@@ -1,6 +1,6 @@
 ---
 title: "cascaded-eager-nil-and-proxy-preload-convergence"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3934
 claim: "2026-06-22T22:43:15Z"
 assignee: "cascaded-eager-nil-and-proxy-preload-convergence"
 blocked-by: null
