@@ -1,6 +1,6 @@
 ---
 title: "subselect test: assert full-record equality to match Rails assert_equal (not id-only)"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
