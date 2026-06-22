@@ -1,7 +1,7 @@
 ---
 title: "extend no-unnecessary-type-assertion coverage to tsconfig-uncovered files"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-22
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T19:23:16Z"
+assignee: "no-unnecessary-type-assertion-extend-tsconfig-coverage"
 blocked-by: null
 ---
 
