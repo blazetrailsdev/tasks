@@ -58,15 +58,15 @@ indirection to remove).
 
 ## Acceptance criteria
 
-- [ ] `associatedTable` aliases the resolved association table to the hash key
+- [x] `associatedTable` aliases the resolved association table to the hash key
       whenever `arelTable.name !== key` (Rails parity), for both the reflection
       and the join-dependency fallback branch -- no `aliasFor`/`joinTableAliasFor`
       guard.
-- [ ] `joinTableAliasFor` and the `aliasFor` plumbing on the where-hash block are
+- [x] `joinTableAliasFor` and the `aliasFor` plumbing on the where-hash block are
       removed (or reduced to what Rails actually needs), with the non-joined
       where-hash paths (association-query / through subqueries) verified to still
       produce correct SQL.
-- [ ] The where-hash join-alias regression guard in
+- [x] The where-hash join-alias regression guard in
       `relation/build-arel-helpers.test.ts` plus the `delete-all` / `relation/select`
       hash-alias tests still pass on SQLite/PG/MySQL, and api:compare / test:compare
       deltas stay non-negative.
