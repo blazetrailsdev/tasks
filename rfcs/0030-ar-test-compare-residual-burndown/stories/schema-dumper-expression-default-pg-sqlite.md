@@ -1,6 +1,6 @@
 ---
 title: "Schema dumper reflects PG/SQLite expression-column defaults"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 10
-pr: null
+pr: 3858
 claim: "2026-06-22T02:36:02Z"
 assignee: "schema-dumper-expression-default-pg-sqlite"
 blocked-by: null
