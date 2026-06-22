@@ -1,6 +1,6 @@
 ---
 title: "A1c — eager_test: where/from references association name + implicit references"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
