@@ -1,7 +1,7 @@
 ---
 title: "run_commit_callbacks_on_first_saved_instances_in_transaction default should be true (Rails class_attribute)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T17:07:56Z"
+assignee: "run-commit-callbacks-first-saved-default-true"
 blocked-by: null
 ---
 
