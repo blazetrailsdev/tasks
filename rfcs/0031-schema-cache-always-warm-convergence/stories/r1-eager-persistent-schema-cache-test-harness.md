@@ -1,6 +1,6 @@
 ---
 title: "R1: eager-warm + persistent per-test schema cache in the AR test harness"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
