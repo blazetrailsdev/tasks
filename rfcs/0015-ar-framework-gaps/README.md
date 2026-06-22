@@ -1,9 +1,9 @@
 ---
 rfc: "0015-ar-framework-gaps"
 title: "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)"
-status: closed
+status: active
 created: 2026-06-04
-updated: 2026-06-20
+updated: 2026-06-22
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -108,3 +108,6 @@ that).
 - 2026-06-04: initial RFC, migrated from `dirty-test-framework-gaps.md` +
   `readonly-test-framework-gaps.md` during the RFC 0011 cutover. Both source docs
   queued for deletion.
+- 2026-06-22: reopened `closed` → `active`. `wire-public-base-instantiate`
+  (surfaced by PR #3841, added after the RFC was closed) is still `draft`, so
+  the RFC is not yet complete.

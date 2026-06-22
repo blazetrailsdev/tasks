@@ -11,7 +11,7 @@ priority: 40
 pr: 3750
 claim: "2026-06-20T20:27:28Z"
 assignee: "collection-proxy-delete-honor-dependent-non-through"
-blocked-by: "Duplicate of collection-proxy-delete-honor-dependent-strategy (in-progress, PR #3738), which covers the identical non-through CollectionProxy#delete :dependent deviation. Close/merge into that story during triage."
+blocked-by: null
 ---
 
 ## Context
@@ -61,3 +61,11 @@ options[:dependent])`: `:delete_all` DELETEs, `:destroy` destroys, no
 - [ ] Existing nullify behavior for non-dependent associations
       (e.g. the `deleting` / `deleting a collection` tests on `clientsOfFirm`)
       is preserved.
+
+## Notes
+
+Possible duplicate of `collection-proxy-delete-honor-dependent-strategy`
+(in-progress, PR #3738), which covers the identical non-through
+`CollectionProxy#delete` `:dependent` deviation — close/merge into that story
+during triage. (This note was moved out of `blocked-by`, which only annotates
+`status: blocked` stories; this one is in-progress under PR #3750.)
