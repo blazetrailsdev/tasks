@@ -1,6 +1,6 @@
 ---
 title: "habtm: polymorphic-through, alternate-db, belongs_to-required"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: 3938
 claim: "2026-06-22T22:59:16Z"
 assignee: "habtm-residual-features"
 blocked-by: null
