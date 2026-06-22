@@ -1,6 +1,6 @@
 ---
 title: "Un-skip named-scoping misc model scopes (last-cache, newest, oops, without_table)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: null
+pr: 3875
 claim: "2026-06-22T12:27:58Z"
 assignee: "unskip-named-scoping-misc-model-scopes"
 blocked-by: null
