@@ -1,6 +1,6 @@
 ---
 title: "Un-skip named-scoping query-cache-on-associations cases"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: 3877
 claim: "2026-06-22T12:35:58Z"
 assignee: "unskip-named-scoping-query-cache-on-associations"
 blocked-by: null
