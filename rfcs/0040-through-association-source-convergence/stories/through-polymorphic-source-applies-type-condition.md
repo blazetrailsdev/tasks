@@ -1,7 +1,7 @@
 ---
 title: "through-polymorphic-source-applies-type-condition"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T03:31:57Z"
+assignee: "through-polymorphic-source-applies-type-condition"
 blocked-by: null
 ---
 
