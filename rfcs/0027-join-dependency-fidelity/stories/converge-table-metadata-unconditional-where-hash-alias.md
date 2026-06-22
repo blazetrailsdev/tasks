@@ -1,6 +1,6 @@
 ---
 title: "Converge table-metadata associatedTable to Rails unconditional where-hash aliasing"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: null
+pr: 3906
 claim: "2026-06-22T18:12:02Z"
 assignee: "converge-table-metadata-unconditional-where-hash-alias"
 blocked-by: null
