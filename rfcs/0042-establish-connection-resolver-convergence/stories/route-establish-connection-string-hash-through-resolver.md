@@ -1,6 +1,6 @@
 ---
 title: "Route establishConnection string/hash branch through resolveConfigForConnection"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3860
 claim: "2026-06-22T02:51:56Z"
 assignee: "route-establish-connection-string-hash-through-resolver"
 blocked-by: null
