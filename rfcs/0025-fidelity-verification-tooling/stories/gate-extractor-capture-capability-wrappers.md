@@ -1,6 +1,6 @@
 ---
 title: "test-compare gate extractor: capture respond_to?/supports_X? module wrappers"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: null
+pr: 3915
 claim: "2026-06-22T19:15:18Z"
 assignee: "gate-extractor-capture-capability-wrappers"
 blocked-by: null
