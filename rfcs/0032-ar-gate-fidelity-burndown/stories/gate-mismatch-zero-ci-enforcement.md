@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: "2026-06-20T16:49:38Z"
 assignee: "gate-mismatch-zero-ci-enforcement"

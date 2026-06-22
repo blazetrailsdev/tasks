@@ -8,7 +8,7 @@ deps:
   - join-model-canonical-conversion
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

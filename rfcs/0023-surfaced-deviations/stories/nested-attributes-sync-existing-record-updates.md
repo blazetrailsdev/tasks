@@ -10,7 +10,7 @@ deps:
   - nested-attributes-collection-sync-in-memory-grandchild
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 40
 pr: null
 claim: "2026-06-15T12:20:11Z"
 assignee: "nested-attributes-sync-existing-record-updates"

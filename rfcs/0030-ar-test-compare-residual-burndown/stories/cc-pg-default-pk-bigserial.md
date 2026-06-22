@@ -8,7 +8,7 @@ deps:
   - pg-default-pk-bigserial-cascade
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: "2026-06-16T02:20:53Z"
 assignee: "cc-pg-default-pk-bigserial"

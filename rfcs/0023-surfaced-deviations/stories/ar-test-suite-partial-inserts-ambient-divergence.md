@@ -10,7 +10,7 @@ deps:
   - partial-inserts-optimistic-locking-initial-value
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 40
 pr: 3745
 claim: "2026-06-20T22:37:27Z"
 assignee: "ar-test-suite-partial-inserts-ambient-divergence"

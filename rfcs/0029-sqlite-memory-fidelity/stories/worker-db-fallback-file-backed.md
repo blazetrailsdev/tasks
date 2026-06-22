@@ -7,7 +7,7 @@ cluster: worker-db
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 1
+priority: 20
 pr: null
 claim: null
 assignee: null

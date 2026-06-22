@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 3854
 claim: "2026-06-22T01:10:57Z"
 assignee: "persistence-createrecord-single-column-returning-gate"

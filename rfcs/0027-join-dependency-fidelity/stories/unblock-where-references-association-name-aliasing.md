@@ -7,7 +7,7 @@ cluster: null
 deps: ["converge-references-lazy-make-constraints"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

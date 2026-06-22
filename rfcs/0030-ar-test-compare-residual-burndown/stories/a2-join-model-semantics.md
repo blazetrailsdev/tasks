@@ -8,7 +8,7 @@ deps:
   - join-model-canonical-conversion
 deps-rfc: []
 est-loc: 280
-priority: null
+priority: 30
 pr: 3405
 claim: "2026-06-15T20:15:24Z"
 assignee: "a2-join-model-semantics"

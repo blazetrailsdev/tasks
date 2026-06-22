@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: "2026-06-20T23:58:46Z"
 assignee: "gate-residual-mismatch-burndown"

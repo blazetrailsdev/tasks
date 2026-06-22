@@ -7,7 +7,7 @@ cluster: null
 deps: ["route-establish-connection-string-hash-through-resolver"]
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

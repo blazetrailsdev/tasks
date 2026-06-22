@@ -8,7 +8,7 @@ deps: []
 deps-rfc:
   - 0031-schema-cache-always-warm-convergence
 est-loc: 120
-priority: null
+priority: 40
 pr: 3445
 claim: "2026-06-16T11:46:09Z"
 assignee: "columnshash-sync-schema-cache-reload-vs-sibling-borrow"

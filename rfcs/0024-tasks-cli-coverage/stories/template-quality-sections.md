@@ -7,7 +7,7 @@ cluster: story-fields
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

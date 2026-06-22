@@ -7,7 +7,7 @@ cluster: "adapter"
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 30
 pr: null
 claim: "2026-06-16T12:35:00Z"
 assignee: "e1-bind-parameter"

@@ -7,7 +7,7 @@ cluster: set-ops
 deps: ["relation-handler-distinct-pk-materialization"]
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 3851
 claim: "2026-06-22T00:06:42Z"
 assignee: "cache-increment-decrement-seed-on-miss-converge"

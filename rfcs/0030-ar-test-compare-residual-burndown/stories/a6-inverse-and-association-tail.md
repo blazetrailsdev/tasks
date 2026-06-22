@@ -7,7 +7,7 @@ cluster: "associations"
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 10
 pr: 3411
 claim: "2026-06-15T22:28:48Z"
 assignee: "a6-inverse-and-association-tail"

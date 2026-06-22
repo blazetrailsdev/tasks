@@ -8,7 +8,7 @@ deps:
   - r2-drop-synthesize-converge-adhoc-model-tests
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

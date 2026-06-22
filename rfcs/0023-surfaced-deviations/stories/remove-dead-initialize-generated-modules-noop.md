@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 15
-priority: null
+priority: 40
 pr: 3381
 claim: "2026-06-15T17:36:27Z"
 assignee: "remove-dead-initialize-generated-modules-noop"

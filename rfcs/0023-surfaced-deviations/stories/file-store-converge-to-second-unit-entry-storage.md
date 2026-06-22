@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 3850
 claim: "2026-06-21T23:42:42Z"
 assignee: "file-store-converge-to-second-unit-entry-storage"

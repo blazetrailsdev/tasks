@@ -8,7 +8,7 @@ deps:
   - r1-eager-persistent-schema-cache-test-harness
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

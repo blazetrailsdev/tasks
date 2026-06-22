@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 9000
+priority: 30
 pr: null
 claim: "2026-06-22T02:21:13Z"
 assignee: "legacy-migration-5-0-create-table-and-chain"

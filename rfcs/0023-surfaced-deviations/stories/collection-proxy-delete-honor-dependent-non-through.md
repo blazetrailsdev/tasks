@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 3750
 claim: "2026-06-20T20:27:28Z"
 assignee: "collection-proxy-delete-honor-dependent-non-through"

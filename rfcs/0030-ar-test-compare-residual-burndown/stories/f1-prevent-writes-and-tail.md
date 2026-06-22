@@ -7,7 +7,7 @@ cluster: "core-residuals"
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

@@ -8,7 +8,7 @@ deps:
   - c1-schema-dumper-timestamptz-version-compat
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: "2026-06-16T01:32:52Z"
 assignee: "c1-schema-dumper-migration-version-compat"

@@ -7,7 +7,7 @@ cluster: parallelism-rounding
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 3853
 claim: "2026-06-22T00:22:41Z"
 assignee: "memory-store-increment-deletematched-rails-fidelity"

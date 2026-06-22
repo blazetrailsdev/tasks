@@ -7,7 +7,7 @@ cluster: set-ops
 deps: []
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 20
 pr: 3398
 claim: "2026-06-15T19:18:28Z"
 assignee: "set-operations-eager-joindependency-composition"

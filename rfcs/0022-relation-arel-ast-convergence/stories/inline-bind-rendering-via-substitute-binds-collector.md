@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 20
 pr: 3300
 claim: "2026-06-14T22:33:11Z"
 assignee: "inline-bind-rendering-via-substitute-binds-collector"

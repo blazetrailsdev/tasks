@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 40
 pr: 3722
 claim: "2026-06-20T15:49:28Z"
 assignee: "has-one-writer-persist-on-assignment"

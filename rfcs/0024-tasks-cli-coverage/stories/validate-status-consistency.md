@@ -7,7 +7,7 @@ cluster: guardrails
 deps: ["validate-as-library"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

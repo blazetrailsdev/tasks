@@ -7,7 +7,7 @@ cluster: guardrails
 deps: ["validate-status-consistency"]
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

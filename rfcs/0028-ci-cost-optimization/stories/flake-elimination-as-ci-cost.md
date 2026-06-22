@@ -8,7 +8,7 @@ deps: []
 deps-rfc:
   - "0019-canonical-schema-burndown"
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
