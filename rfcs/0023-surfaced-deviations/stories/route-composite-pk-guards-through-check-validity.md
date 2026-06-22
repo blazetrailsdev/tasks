@@ -41,12 +41,12 @@ trails-computed join keys rather than Rails' pk/fk accessors.
 
 ## Acceptance criteria
 
-- [ ] Route the inline-fallback loaders, autosave save-path, association-scope
+- [x] Route the inline-fallback loaders, autosave save-path, association-scope
       and collection-proxy guard paths through the reflection's
       `checkValidityBang` (the canonical single Rails site) so composite PK/FK
       mismatches are caught once, from the real reflection, with the
       Rails-faithful message.
-- [ ] Remove the now-redundant trails-only guard raise sites once the canonical
+- [x] Remove the now-redundant trails-only guard raise sites once the canonical
       validation covers their cases.
-- [ ] Keep behavior for the no-reflection fallback paths: if a path genuinely
+- [x] Keep behavior for the no-reflection fallback paths: if a path genuinely
       cannot build a reflection, document why and keep a minimal guard.
