@@ -1,6 +1,6 @@
 ---
 title: "Extract PG disableReferentialIntegrity into its referential-integrity module"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3908
 claim: "2026-06-22T18:27:57Z"
 assignee: "extract-pg-referential-integrity"
 blocked-by: null
