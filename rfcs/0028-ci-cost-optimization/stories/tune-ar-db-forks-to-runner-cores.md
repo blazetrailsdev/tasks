@@ -1,6 +1,6 @@
 ---
 title: "Right-size AR_DB_FORKS to the runner core count"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: parallelism-rounding
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: null
+pr: 3870
 claim: "2026-06-22T11:32:47Z"
 assignee: "tune-ar-db-forks-to-runner-cores"
 blocked-by: null
