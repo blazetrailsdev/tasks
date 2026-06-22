@@ -1,7 +1,7 @@
 ---
 title: "belongs-to-join-association-name-alias"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T17:14:21Z"
+assignee: "belongs-to-join-association-name-alias"
 blocked-by: null
 ---
 
