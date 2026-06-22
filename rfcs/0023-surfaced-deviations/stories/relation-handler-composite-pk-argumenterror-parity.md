@@ -1,6 +1,6 @@
 ---
 title: "RelationHandler composite-PK subquery throws generic Error, not Rails ArgumentError"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
