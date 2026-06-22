@@ -1,6 +1,6 @@
 ---
 title: "Templates: Definition of done / Verification / Non-goals sections"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
