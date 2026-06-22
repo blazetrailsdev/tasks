@@ -1,6 +1,6 @@
 ---
 title: "ready() queue should exclude stories whose own RFC is not active"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: null
