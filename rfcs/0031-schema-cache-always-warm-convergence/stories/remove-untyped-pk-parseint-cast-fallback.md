@@ -46,13 +46,13 @@ cache is always warm, the cold-cache path can never be hit, and this
 
 ## Acceptance criteria
 
-- [ ] After the always-warm schema cache lands, remove the `parseInt` untyped-PK
+- [x] After the always-warm schema cache lands, remove the `parseInt` untyped-PK
       fallback branch in `Base._castAttributeValue` (and the now-redundant sync
       `ModelSchema.loadSchema` reflection guard there if subsumed by warm-cache
       guarantees).
-- [ ] The PK always casts through its adapter-resolved column type on every lane
+- [x] The PK always casts through its adapter-resolved column type on every lane
       (PG int8→BigInt, mysql/sqlite→number); no JS `number` leaks for a bigint PK.
-- [ ] Sequenced after / coordinated with `r3-remove-sibling-borrow-and-recovery`
+- [x] Sequenced after / coordinated with `r3-remove-sibling-borrow-and-recovery`
       so the model-schema borrow and this cast-path fallback are removed together.
-- [ ] No regression to `QueryCacheTest > query cached even when types are reset`
+- [x] No regression to `QueryCacheTest > query cached even when types are reset`
       (no DB queries on the post-reset cached `find`).
