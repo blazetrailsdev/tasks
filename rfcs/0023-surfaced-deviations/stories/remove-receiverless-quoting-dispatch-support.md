@@ -1,6 +1,6 @@
 ---
 title: "Drop receiverless quote/typeCast dispatch (require a host receiver)"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
