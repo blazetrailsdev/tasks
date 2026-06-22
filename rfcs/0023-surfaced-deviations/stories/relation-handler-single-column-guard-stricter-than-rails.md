@@ -1,7 +1,7 @@
 ---
 title: "RelationHandler single-column subquery guard is stricter than Rails (converge or justify)"
-status: in-progress
-updated: 2026-06-21
+status: done
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
