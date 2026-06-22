@@ -1,7 +1,7 @@
 ---
 title: "Relation#where raw ? fragments should bind, not inline (PG type-cast parity)"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T14:59:58Z"
+assignee: "relation-raw-fragment-bind-parameterization"
 blocked-by: null
 ---
 
