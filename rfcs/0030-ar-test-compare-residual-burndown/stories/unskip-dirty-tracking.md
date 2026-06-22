@@ -1,6 +1,6 @@
 ---
 title: "Un-skip dirty_test (10 skipped)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
+pr: 3905
 claim: "2026-06-22T17:55:57Z"
 assignee: "unskip-dirty-tracking"
 blocked-by: null
