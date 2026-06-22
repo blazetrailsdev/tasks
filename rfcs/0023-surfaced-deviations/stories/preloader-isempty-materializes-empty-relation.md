@@ -1,7 +1,7 @@
 ---
 title: "Preloader.isEmpty materializes an empty Relation to match Rails empty?"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T13:07:57Z"
+assignee: "preloader-isempty-materializes-empty-relation"
 blocked-by: null
 ---
 
