@@ -1,6 +1,6 @@
 ---
 title: "write-path-bind-all-column-types"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3880
 claim: "2026-06-22T13:00:01Z"
 assignee: "write-path-bind-all-column-types"
 blocked-by: null
