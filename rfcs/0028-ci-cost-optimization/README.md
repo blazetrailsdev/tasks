@@ -329,17 +329,17 @@ close-risk (CONTENTION-ONLY):** `consolidate-preflight-micro-jobs`,
 
 <!-- generated: stories table -->
 
-| ID                                                                                                    | Title                                                                           | Status  | Est LOC | Cluster              |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------- | ------- | -------------------- |
-| [ar-sqlite-lane-coverage-reporting](stories/ar-sqlite-lane-coverage-reporting.md)                     | ar-sqlite-lane-coverage-reporting                                               | draft   | null    | —                    |
-| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft   | 160     | parallelism-rounding |
-| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft   | 120     | parallelism-rounding |
-| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft   | 200     | flake-cost           |
-| [trails-tsc-coverage-isolation](stories/trails-tsc-coverage-isolation.md)                             | Collect trails-tsc coverage without voiding the shared run                      | draft   | 60      | —                    |
-| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | ready   | 30      | parallelism-rounding |
-| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | claimed | 90      | change-gating        |
-| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | done    | 180     | caching-install      |
-| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | done    | 120     | caching-install      |
+| ID                                                                                                    | Title                                                                           | Status      | Est LOC | Cluster              |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------- | ------- | -------------------- |
+| [ar-sqlite-lane-coverage-reporting](stories/ar-sqlite-lane-coverage-reporting.md)                     | ar-sqlite-lane-coverage-reporting                                               | draft       | null    | —                    |
+| [consolidate-leaf-test-jobs](stories/consolidate-leaf-test-jobs.md)                                   | Consolidate the tiny leaf test jobs into one affected-aware job                 | draft       | 160     | parallelism-rounding |
+| [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | draft       | 120     | parallelism-rounding |
+| [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | draft       | 200     | flake-cost           |
+| [trails-tsc-coverage-isolation](stories/trails-tsc-coverage-isolation.md)                             | Collect trails-tsc coverage without voiding the shared run                      | draft       | 60      | —                    |
+| [tune-ar-db-forks-to-runner-cores](stories/tune-ar-db-forks-to-runner-cores.md)                       | Right-size AR_DB_FORKS to the runner core count                                 | ready       | 30      | parallelism-rounding |
+| [tighten-rails-comparison-and-lint-gating](stories/tighten-rails-comparison-and-lint-gating.md)       | Gate rails-comparison and lint on relevant changes instead of every non-docs PR | in-progress | 90      | change-gating        |
+| [cache-build-dist-across-jobs](stories/cache-build-dist-across-jobs.md)                               | Cache the workspace build output so jobs stop re-running pnpm build             | done        | 180     | caching-install      |
+| [route-all-jobs-through-setup-pnpm-composite](stories/route-all-jobs-through-setup-pnpm-composite.md) | Route all jobs through the setup-pnpm composite and add --prefer-offline        | done        | 120     | caching-install      |
 
 ## Changelog
 

@@ -1,6 +1,6 @@
 ---
 title: "Gate rails-comparison and lint on relevant changes instead of every non-docs PR"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: change-gating
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: null
+pr: 3867
 claim: "2026-06-22T03:47:58Z"
 assignee: "tighten-rails-comparison-and-lint-gating"
 blocked-by: null
