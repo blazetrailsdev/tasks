@@ -40,11 +40,11 @@ populate-the-id tests but diverges from the exact Rails DDL.
 
 ## Acceptance criteria
 
-- [ ] Decide convergence path: enable the `uuid-ossp` extension on the postgres
+- [x] Decide convergence path: enable the `uuid-ossp` extension on the postgres
       test DB (mirroring Rails' `enable_extension!`) so `defineSchema` can emit
       `uuid_generate_v4()` for `chat_messages_custom_pk`, and apply the
       `supports_pgcrypto_uuid?`-conditional default for `chat_messages`.
-- [ ] `POSTGRESQL_SPECIFIC_SCHEMA` defaults match Rails' DDL exactly (pgcrypto
+- [x] `POSTGRESQL_SPECIFIC_SCHEMA` defaults match Rails' DDL exactly (pgcrypto
       split for `chat_messages`, `uuid_generate_v4()` for `chat_messages_custom_pk`).
-- [ ] Existing `create model with [custom named] uuid pk populates id` tests
+- [x] Existing `create model with [custom named] uuid pk populates id` tests
       still pass on the postgres lane; sqlite/mysql skip cleanly.
