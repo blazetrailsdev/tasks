@@ -1,7 +1,7 @@
 ---
 title: "habtm: namespaced/symbol className resolution"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T22:51:16Z"
+assignee: "habtm-namespaced-classname"
 blocked-by: null
 ---
 
