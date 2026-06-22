@@ -1,7 +1,7 @@
 ---
 rfc: "0033-standalone-associations-burndown"
 title: "Standalone-association call burndown"
-status: draft
+status: active
 created: 2026-06-17
 updated: 2026-06-17
 owner: "@your-handle"

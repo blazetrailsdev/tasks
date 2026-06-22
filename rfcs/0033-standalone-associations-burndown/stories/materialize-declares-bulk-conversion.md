@@ -1,6 +1,6 @@
 ---
 title: "Materialize declare accessors for PR #3672's bulk-converted in-class associations"
-status: draft
+status: ready
 updated: 2026-06-19
 rfc: "0033-standalone-associations-burndown"
 cluster: null
