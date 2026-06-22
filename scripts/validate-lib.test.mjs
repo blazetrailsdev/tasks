@@ -215,6 +215,14 @@ test("a malformed updated string on a story is rejected", () => {
   expectError(errors, "updated must be a YYYY-MM-DD date");
 });
 
+test("a Date carrying a time-of-day component is rejected", () => {
+  const errors = validate({
+    rfcs: [rfc({}, { updated: new Date("2026-06-13T10:00:00Z") })],
+    stories: [story()],
+  }).errors;
+  expectError(errors, "updated must be a YYYY-MM-DD date");
+});
+
 test("a real Date or YYYY-MM-DD string is accepted", () => {
   expectClean(
     validate({

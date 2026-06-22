@@ -20,14 +20,24 @@ export const MAX_LINES = 2000;
 // the finalize flow, not a candidate for this allowlist.
 export const DUP_PREFIX_ALLOWLIST = new Set(["0022"]);
 
-// created/updated are calendar dates. js-yaml's default schema coerces an
-// unquoted ISO date scalar (`updated: 2026-06-13`) into a JS Date, while the
-// template's literal `YYYY-MM-DD` placeholder — and any malformed/quoted value
-// — stays a string. So a field is valid iff it parsed to a real Date or is a
-// string in YYYY-MM-DD form; this rejects the unfilled placeholder while
-// accepting every real entry.
+// created/updated are calendar dates (YYYY-MM-DD). js-yaml's default schema
+// coerces an unquoted date-only scalar (`updated: 2026-06-13`) into a JS Date
+// at UTC midnight, while the template's literal `YYYY-MM-DD` placeholder — and
+// any malformed/quoted value — stays a string. A field is valid iff it is a
+// YYYY-MM-DD string OR a Date with a zero UTC time-of-day (a pure calendar
+// date): this rejects the unfilled placeholder and a full datetime
+// (`2026-06-13T10:00:00Z` carries a time component) while accepting every real
+// date-only entry.
 function isYmdDate(value) {
-  if (value instanceof Date) return !Number.isNaN(value.getTime());
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) return false;
+    return (
+      value.getUTCHours() === 0 &&
+      value.getUTCMinutes() === 0 &&
+      value.getUTCSeconds() === 0 &&
+      value.getUTCMilliseconds() === 0
+    );
+  }
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
 }
 
