@@ -1,6 +1,6 @@
 ---
 title: "ready() queue should exclude stories whose own RFC is not active"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
+pr: 3918
 claim: "2026-06-22T20:03:14Z"
 assignee: "ready-queue-gate-on-active-rfc"
 blocked-by: null
