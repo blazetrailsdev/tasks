@@ -40,11 +40,11 @@ Rails refs:
 
 ## Acceptance criteria
 
-- [ ] Add `Base.storeFullStiClass` and `Base.storeFullClassName` class
+- [x] Add `Base.storeFullStiClass` and `Base.storeFullClassName` class
       attributes (default `true`), inheritable and restorable.
-- [ ] STI type-column writes and polymorphic `*_type`-column writes honor the
+- [x] STI type-column writes and polymorphic `*_type`-column writes honor the
       flags (full namespaced name when `true`, demodulized when `false`).
-- [ ] Un-skip the 4 deduped tests in
+- [x] Un-skip the 4 deduped tests in
       `associations/eager-load-includes-full-sti-class.test.ts` (8 cases across
       the full/non-full + poly/non-poly variants) and make them pass against the
       canonical SQLite adapter using canonical models + TEST_SCHEMA.
