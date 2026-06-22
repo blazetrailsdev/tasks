@@ -1,6 +1,6 @@
 ---
 title: "test-compare gate extractor: capture respond_to?/supports_X? module wrappers"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
