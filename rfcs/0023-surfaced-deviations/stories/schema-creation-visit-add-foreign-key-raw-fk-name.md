@@ -1,6 +1,6 @@
 ---
 title: "3-arg visitAddForeignKey in pg/mysql schema-creation still defaults raw fk_rails name"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: null
+pr: 3939
 claim: "2026-06-22T23:39:15Z"
 assignee: "schema-creation-visit-add-foreign-key-raw-fk-name"
 blocked-by: null
