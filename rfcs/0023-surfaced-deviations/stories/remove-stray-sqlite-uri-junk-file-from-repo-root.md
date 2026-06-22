@@ -1,7 +1,7 @@
 ---
 title: "Remove stray 'file::memory:?cache=shared' junk file tracked at repo root"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T16:35:57Z"
+assignee: "remove-stray-sqlite-uri-junk-file-from-repo-root"
 blocked-by: null
 ---
 
