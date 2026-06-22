@@ -1,6 +1,6 @@
 ---
 title: "Funnel autoConnect through the single DatabaseConfig object path"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["route-establish-connection-string-hash-through-resolver"]
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: null
+pr: 3868
 claim: "2026-06-22T11:31:57Z"
 assignee: "funnel-autoconnect-through-object-path"
 blocked-by: null
