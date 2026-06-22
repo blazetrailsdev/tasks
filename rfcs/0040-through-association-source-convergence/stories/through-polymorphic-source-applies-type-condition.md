@@ -1,6 +1,6 @@
 ---
 title: "through-polymorphic-source-applies-type-condition"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null
