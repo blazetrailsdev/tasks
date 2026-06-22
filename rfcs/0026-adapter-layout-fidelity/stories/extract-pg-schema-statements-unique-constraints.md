@@ -37,7 +37,7 @@ Mirror Rails `postgresql/schema_statements.rb` unique-constraint group.
 
 ## Acceptance criteria
 
-- [ ] Listed methods live in the mirrored module file; the adapter only delegates.
-- [ ] No behavior change: no test edits beyond import paths; CI green on all three adapters (sqlite/pg/mysql).
-- [ ] PR diff under the 500 LOC ceiling; overflow registered as a new story, not a fanned-out PR.
-- [ ] `wc -l postgresql-adapter.ts` drops by roughly the moved-line count.
+- [x] Listed methods live in the mirrored module file; the adapter only delegates.
+- [x] No behavior change: no test edits beyond import paths; CI green on all three adapters (sqlite/pg/mysql).
+- [x] PR diff under the 500 LOC ceiling; overflow registered as a new story, not a fanned-out PR.
+- [x] `wc -l postgresql-adapter.ts` drops by roughly the moved-line count.
