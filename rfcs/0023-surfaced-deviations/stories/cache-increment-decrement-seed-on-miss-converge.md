@@ -1,6 +1,6 @@
 ---
 title: "cache-increment-decrement-seed-on-miss-converge"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3851
 claim: "2026-06-22T00:06:42Z"
 assignee: "cache-increment-decrement-seed-on-miss-converge"
 blocked-by: null
