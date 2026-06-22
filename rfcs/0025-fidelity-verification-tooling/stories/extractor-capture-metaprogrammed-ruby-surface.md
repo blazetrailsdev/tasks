@@ -1,7 +1,7 @@
 ---
 title: "api-compare extractor: capture class_attribute/alias/delegate-generated Ruby methods"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T19:07:15Z"
+assignee: "extractor-capture-metaprogrammed-ruby-surface"
 blocked-by: null
 ---
 
