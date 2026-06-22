@@ -1,6 +1,6 @@
 ---
 title: "Drop receiverless quote/typeCast dispatch (require a host receiver)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: 3892
 claim: "2026-06-22T16:19:57Z"
 assignee: "remove-receiverless-quoting-dispatch-support"
 blocked-by: null
