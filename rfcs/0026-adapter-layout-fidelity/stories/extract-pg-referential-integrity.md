@@ -1,6 +1,6 @@
 ---
 title: "Extract PG disableReferentialIntegrity into its referential-integrity module"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0026-adapter-layout-fidelity"
 cluster: adapter-layout
