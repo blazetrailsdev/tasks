@@ -1,6 +1,6 @@
 ---
 title: "store-full-sti-class-name"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3874
 claim: "2026-06-22T12:11:58Z"
 assignee: "store-full-sti-class-name"
 blocked-by: null
