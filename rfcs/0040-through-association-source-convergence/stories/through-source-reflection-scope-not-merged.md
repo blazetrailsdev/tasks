@@ -38,7 +38,7 @@ direct source scope works; only the through-merge drops it.)
 
 ## Acceptance criteria
 
-- [ ] has_many :through merges the source reflection's scope (WHERE) into the
+- [x] has_many :through merges the source reflection's scope (WHERE) into the
       through query.
-- [ ] Un-skip `has many through uses conditions specified on the has many association`
+- [x] Un-skip `has many through uses conditions specified on the has many association`
       in join-model.test.ts.
