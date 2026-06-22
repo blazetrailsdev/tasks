@@ -1,6 +1,6 @@
 ---
 title: "api-compare extractor: capture class_attribute/alias/delegate-generated Ruby methods"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
