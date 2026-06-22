@@ -221,7 +221,6 @@ files, not this table.
 | [unskip-named-scoping-scope-definition-guards](stories/unskip-named-scoping-scope-definition-guards.md)                       | Un-skip named-scoping scope-definition guards (callable + reserved/relation names)                        | ready   | 150     | core-residuals   |
 | [unskip-named-scoping-scoping-block-and-stats-scopes](stories/unskip-named-scoping-scoping-block-and-stats-scopes.md)         | Un-skip named-scoping scoping-block + stats/current-scope scopes                                          | ready   | 250     | core-residuals   |
 | [write-path-bind-all-column-types](stories/write-path-bind-all-column-types.md)                                               | write-path-bind-all-column-types                                                                          | ready   | null    | —                |
-| [legacy-migration-5-0-create-table-and-chain](stories/legacy-migration-5-0-create-table-and-chain.md)                         | legacy-migration-5-0-create-table-and-chain                                                               | claimed | null    | —                |
 | [a1-eager-preloader-semantics](stories/a1-eager-preloader-semantics.md)                                                       | A1 — eager_test: preloader eager-loading semantics                                                        | done    | 470     | associations     |
 | [a3-has-one-and-through](stories/a3-has-one-and-through.md)                                                                   | A3 — has_one + has_one_through residuals                                                                  | done    | 230     | associations     |
 | [a4-habtm-join-aliasing](stories/a4-habtm-join-aliasing.md)                                                                   | A4 — habtm: alias intermediate join table                                                                 | done    | 100     | associations     |
@@ -336,6 +335,7 @@ files, not this table.
 | [e1-bind-parameter](stories/e1-bind-parameter.md)                                                                             | E1 — bind_parameter residuals                                                                             | blocked | 60      | adapter          |
 | [e4-adapter-explain-notifications](stories/e4-adapter-explain-notifications.md)                                               | E4 — adapter_test notifications + explain tail                                                            | blocked | 50      | adapter          |
 | [f1-prevent-writes-and-tail](stories/f1-prevent-writes-and-tail.md)                                                           | F1 — prevent-writes + hot-compat + misc tail                                                              | blocked | 140     | core-residuals   |
+| [legacy-migration-5-0-create-table-and-chain](stories/legacy-migration-5-0-create-table-and-chain.md)                         | legacy-migration-5-0-create-table-and-chain                                                               | blocked | null    | —                |
 
 ## Changelog
 
