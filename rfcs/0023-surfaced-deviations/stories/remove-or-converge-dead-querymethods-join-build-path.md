@@ -34,10 +34,15 @@ silently reintroduce the regression.
 
 ## Acceptance criteria
 
-- [ ] Either remove the dead `buildArel` / `buildJoins` / `buildJoinBuckets`
+- [x] Either remove the dead `buildArel` / `buildJoins` / `buildJoinBuckets`
       exports from query-methods.ts (confirm no callers/tests first), OR
-- [ ] converge them to the same stashed-left-join dedup as
+      converge — **converged** (PR #3890): `buildArel` is live via the
+      `from(relation)` subquery path, and removing `buildJoinBuckets` would drop
+      the matched Rails `build_join_buckets` from api:compare, so removal was
+      rejected in favor of convergence.
+- [x] converge them to the same stashed-left-join dedup as
       `_applyJoinsToManager` (fold left-outer JD into the inner JD's
       `joinConstraints` as a stashed join, Rails `build_join_buckets`).
-- [ ] If removing, drop the now-unused `buildJoinBuckets`/`selectNamedJoins`
-      helpers only if they have no other consumers.
+- [x] If removing, drop the now-unused `buildJoinBuckets`/`selectNamedJoins`
+      helpers only if they have no other consumers — N/A (converged, not
+      removed; both helpers stay live).
