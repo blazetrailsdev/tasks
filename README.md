@@ -90,21 +90,25 @@ This repo runs **loose rules** compared to trails:
 
 RFCs progress through five statuses, set via the `status:` frontmatter field:
 
-| Status       | Meaning                                                                | Terminal? |
-| ------------ | ---------------------------------------------------------------------- | --------- |
-| `draft`      | Under design. Stories may exist but should not be claimed.             | no        |
-| `active`     | Accepted. Stories are open for pickup.                                 | no        |
-| `closed`     | All stories `done` (or explicitly abandoned). Work complete.           | yes       |
-| `postponed`  | Deferred indefinitely — not abandoned. May return to `active` later.   | no        |
-| `superseded` | Replaced by another RFC. Carries `superseded-by: "NNNN-slug"` pointer. | yes       |
+| Status       | Meaning                                                                                               | Terminal? |
+| ------------ | ----------------------------------------------------------------------------------------------------- | --------- |
+| `draft`      | Under design. Stories may exist but should not be claimed.                                            | no        |
+| `active`     | Accepted. Stories are open for pickup.                                                                | no        |
+| `closed`     | Every story `done`. Work complete. (Abandon a story by deleting it — there is no `abandoned` status.) | yes       |
+| `postponed`  | Deferred indefinitely — not abandoned. May return to `active` later.                                  | no        |
+| `superseded` | Replaced by another RFC. Carries `superseded-by: "NNNN-slug"` pointer.                                | yes       |
 
 Stories progress independently:
 
 ```text
 draft → ready → claimed → in-progress → done
-                        ↓
-                     blocked (→ ready once unblocked)
+  any pre-done state → blocked → ready (once unblocked)
 ```
+
+`blocked` is reachable from any pre-`done` state (not just post-claim): the only
+requirement is a `blocked-by` reason, and the unblock path returns the story to
+`ready`. So `draft → blocked` is legal when a story is specified but known to be
+gated on other work.
 
 Transitions are direct-push frontmatter edits. No PR gate on status changes.
 
@@ -116,6 +120,14 @@ a hand-edit or `--force` flip can't leave a story self-contradictory:
   requires `pr`.
 - `blocked` requires `blocked-by`; only `blocked` stories may carry it.
 - A `closed` RFC may not have any un-`done` story.
+- No two RFC dirs may share a four-digit numeric prefix (a finalize-flow bug);
+  the pre-convention `0022-*` pair is grandfathered via an in-code allowlist.
+- `created` / `updated` must be a `YYYY-MM-DD` calendar date — this is what
+  catches an unfilled `0000-` template placeholder (`created: YYYY-MM-DD`).
+
+`done` is deliberately **not** shape-constrained: it may carry a full
+`claim`/`assignee`/`pr` (normally worked) or have them all null (the
+completed-before-anyone-reached-it path below), so neither is required.
 
 Two cases are deliberately **legal**, matching what the CLI does rather than
 inventing a stricter rule:

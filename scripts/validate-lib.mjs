@@ -243,6 +243,13 @@ export function validate({ rfcs, stories }) {
       case "blocked":
         if (!fm["blocked-by"]) err(s.file, `status: blocked requires blocked-by`);
         break;
+      // `done` is intentionally not shape-constrained: it may carry a full
+      // claim/assignee/pr (normally worked) or have them all null (completed
+      // before anyone reached it — the done-without-PR path), so requiring
+      // either would reject a legitimate state. Only `blocked-by` is policed
+      // for done, by the cross-status check below.
+      case "done":
+        break;
     }
     if (fm.status !== "blocked" && fm["blocked-by"] != null) {
       err(
