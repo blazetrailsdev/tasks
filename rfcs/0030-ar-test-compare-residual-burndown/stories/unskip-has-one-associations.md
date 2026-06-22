@@ -1,6 +1,6 @@
 ---
 title: "Un-skip has_one_associations_test (41 skipped)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 3907
 claim: "2026-06-22T18:03:57Z"
 assignee: "unskip-has-one-associations"
 blocked-by: null
