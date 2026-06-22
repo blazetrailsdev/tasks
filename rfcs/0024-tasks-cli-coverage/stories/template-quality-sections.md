@@ -38,15 +38,15 @@ Template changes (`rfcs/0000-template/`):
 
 ## Acceptance criteria
 
-- [ ] `rfcs/0000-template/stories/template-story.md` gains
+- [x] `rfcs/0000-template/stories/template-story.md` gains
       `## Definition of done` and `## Verification` with one-line guidance
       comments; both marked optional (delete-if-empty, like `## Notes`).
-- [ ] `rfcs/0000-template/README.md` gains `## Non-goals` and
+- [x] `rfcs/0000-template/README.md` gains `## Non-goals` and
       `## Verification` sections with guidance, and the open-questions note.
-- [ ] `tasks new` scaffolding (`buildStoryContent` in trails
+- [x] `tasks new` scaffolding (`buildStoryContent` in trails
       `scripts/tasks/cli.ts`) stays in sync with the story template; its
       format test updated.
-- [ ] Top-level README's authoring section mentions the new sections in one
+- [x] Top-level README's authoring section mentions the new sections in one
       sentence each.
 
 ## Notes
