@@ -1,7 +1,7 @@
 ---
 title: "Schema cache should expose custom primary key for id:false tables (drop explicit _primaryKey)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T20:27:15Z"
+assignee: "schema-cache-custom-primary-key-inference"
 blocked-by: null
 ---
 
