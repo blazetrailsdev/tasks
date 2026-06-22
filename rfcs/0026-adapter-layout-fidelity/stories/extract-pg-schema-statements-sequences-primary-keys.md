@@ -1,6 +1,6 @@
 ---
 title: "Extract PG sequence/primary-key statements into PostgreSQLSchemaStatements"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
