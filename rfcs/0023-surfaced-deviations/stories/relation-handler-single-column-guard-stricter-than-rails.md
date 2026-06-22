@@ -38,15 +38,15 @@ backend tolerates, or a `*` projection a caller intends).
 
 ## Acceptance criteria
 
-- [ ] Decide convergence per feedback (always converge, never ratify): either
+- [x] Decide convergence per feedback (always converge, never ratify): either
       remove the bespoke `ensureSingleColumnSelect` throwing branches so the
       handler matches Rails (`attribute.in(value.arel)` regardless of projection
       shape, DB raises on mismatch), or document a precise Rails-source
       justification for keeping a guard.
-- [ ] Any trails test asserting the bespoke error message is reconciled (no test
+- [x] Any trails test asserting the bespoke error message is reconciled (no test
       renames; fix behavior, not names) and the corresponding Rails test
       (`relation_test.rb` / `where_test.rb` subquery cases) is mirrored.
-- [ ] `test:compare` / `api:compare` delta ≥ 0.
+- [x] `test:compare` / `api:compare` delta ≥ 0.
 
 ## Rails source
 
