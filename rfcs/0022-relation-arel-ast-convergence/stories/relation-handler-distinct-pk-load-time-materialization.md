@@ -1,7 +1,7 @@
 ---
 title: "Load-time deferred distinct-PK materialization for eager+limit/offset where-subqueries (MySQL IN-list parity)"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: ["relation-handler-distinct-pk-materialization"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T20:11:15Z"
+assignee: "relation-handler-distinct-pk-load-time-materialization"
 blocked-by: null
 ---
 
