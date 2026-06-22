@@ -36,10 +36,10 @@ predicate produced by `where(col: [])`.
 
 ## Acceptance criteria
 
-- [ ] `_toArrayInner` (or the shared exec path) short-circuits to `[]` when the
+- [x] `_toArrayInner` (or the shared exec path) short-circuits to `[]` when the
       where-clause is a contradiction, matching Rails `exec_main_query`, so no
       SELECT is issued.
-- [ ] `Relation#explain` on a contradiction relation collects zero queries
+- [x] `Relation#explain` on a contradiction relation collects zero queries
       (yields empty output), mirroring `.none()`.
-- [ ] Port the corresponding Rails coverage (contradiction returns `[]` with no
+- [x] Port the corresponding Rails coverage (contradiction returns `[]` with no
       query) on the canonical schema; test names match Rails verbatim.
