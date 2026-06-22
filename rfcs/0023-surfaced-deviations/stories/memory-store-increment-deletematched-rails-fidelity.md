@@ -1,6 +1,6 @@
 ---
 title: "memory-store-increment-deletematched-rails-fidelity"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3853
 claim: "2026-06-22T00:22:41Z"
 assignee: "memory-store-increment-deletematched-rails-fidelity"
 blocked-by: null
