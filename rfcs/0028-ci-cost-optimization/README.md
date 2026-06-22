@@ -331,6 +331,7 @@ close-risk (CONTENTION-ONLY):** `consolidate-preflight-micro-jobs`,
 
 | ID                                                                                                    | Title                                                                           | Status      | Est LOC | Cluster              |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------- | ------- | -------------------- |
+| [ar-cli-coverage-reporting](stories/ar-cli-coverage-reporting.md)                                     | Add reporting-only coverage for activerecord-cli                                | ready       | 40      | —                    |
 | [consolidate-preflight-micro-jobs](stories/consolidate-preflight-micro-jobs.md)                       | Consolidate the sub-minute preflight checks into one job to reclaim rounding    | ready       | 120     | parallelism-rounding |
 | [decouple-ar-slot-pool-from-worker-count](stories/decouple-ar-slot-pool-from-worker-count.md)         | Decouple AR advisory-slot pool from vitest worker count (add headroom)          | ready       | 40      | —                    |
 | [flake-elimination-as-ci-cost](stories/flake-elimination-as-ci-cost.md)                               | Attack the top shared-table flakes as a direct CI-cost line                     | ready       | 200     | flake-cost           |
