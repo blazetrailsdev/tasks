@@ -1,6 +1,6 @@
 ---
 title: "R2: drop synthesize-from-attributes for table-backed models; converge ad-hoc-model tests"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: null
+pr: 3869
 claim: "2026-06-22T11:32:40Z"
 assignee: "r2-drop-synthesize-converge-adhoc-model-tests"
 blocked-by: null
