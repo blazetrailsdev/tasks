@@ -1,7 +1,7 @@
 ---
 title: "Converge production cache stores to Rails second-unit Entry storage (inherit base read/write/fetch)"
-status: in-progress
-updated: 2026-06-21
+status: done
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
