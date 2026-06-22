@@ -1,6 +1,6 @@
 ---
 title: "Port copy_table_test.rb to a sqlite3 copy_table.test.ts convention file (copyTable already implemented)"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
