@@ -67,12 +67,12 @@ fires moves from `.where()` to `.toArray()`/`.load()`:
 
 ## Acceptance criteria
 
-- [ ] `where(x: EagerModel.includes(:collection).limit(n))` materializes distinct
+- [x] `where(x: EagerModel.includes(:collection).limit(n))` materializes distinct
       PKs at load time and emits `x IN (<id list>)` on **all three adapters**
       (MySQL parity is the key assertion — no `LIMIT`-in-subquery).
-- [ ] `.where()` stays synchronous/chainable; no public API returns a new Promise.
-- [ ] Empty id set → `none!` semantics (empty result, no error).
-- [ ] `test:compare` / `api:compare` delta ≥ 0.
+- [x] `.where()` stays synchronous/chainable; no public API returns a new Promise.
+- [x] Empty id set → `none!` semantics (empty result, no error).
+- [x] `test:compare` / `api:compare` delta ≥ 0.
 
 ## Notes
 
