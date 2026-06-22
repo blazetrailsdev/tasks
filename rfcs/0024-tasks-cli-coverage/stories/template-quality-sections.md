@@ -1,6 +1,6 @@
 ---
 title: "Templates: Definition of done / Verification / Non-goals sections"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: story-fields
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
+pr: 3862
 claim: "2026-06-22T03:07:56Z"
 assignee: "template-quality-sections"
 blocked-by: null
