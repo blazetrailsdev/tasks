@@ -1,6 +1,6 @@
 ---
 title: "Port copy_table_test.rb to a sqlite3 copy_table.test.ts convention file (copyTable already implemented)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: 3873
 claim: "2026-06-22T12:03:58Z"
 assignee: "sqlite3-copy-table-test-port"
 blocked-by: null
