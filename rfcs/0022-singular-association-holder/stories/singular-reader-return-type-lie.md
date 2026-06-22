@@ -1,7 +1,7 @@
 ---
 title: "singular reader return type lies — Promise cast silences TS"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-22
 rfc: "0022-singular-association-holder"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T20:35:15Z"
+assignee: "singular-reader-return-type-lie"
 blocked-by: null
 ---
 
