@@ -1,7 +1,7 @@
 ---
 title: "R3: remove sibling-borrow + recovery test once cache is always-warm"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T13:15:56Z"
+assignee: "r3-remove-sibling-borrow-and-recovery"
 blocked-by: null
 ---
 
