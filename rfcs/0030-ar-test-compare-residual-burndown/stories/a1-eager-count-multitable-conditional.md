@@ -1,6 +1,6 @@
 ---
 title: "A1d — eager_test: count/size with multi-table conditional"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
