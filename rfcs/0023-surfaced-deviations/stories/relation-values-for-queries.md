@@ -1,6 +1,6 @@
 ---
 title: "Add Relation#valuesForQueries; drop preloader LoaderQuery toSql fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 40
-pr: null
+pr: 3888
 claim: "2026-06-22T15:15:57Z"
 assignee: "relation-values-for-queries"
 blocked-by: null
