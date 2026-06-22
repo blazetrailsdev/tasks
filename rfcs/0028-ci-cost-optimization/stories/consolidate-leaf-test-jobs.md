@@ -1,6 +1,6 @@
 ---
 title: "Consolidate the tiny leaf test jobs into one affected-aware job"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: parallelism-rounding
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 20
-pr: null
+pr: 3901
 claim: "2026-06-22T17:31:58Z"
 assignee: "consolidate-leaf-test-jobs"
 blocked-by: null
