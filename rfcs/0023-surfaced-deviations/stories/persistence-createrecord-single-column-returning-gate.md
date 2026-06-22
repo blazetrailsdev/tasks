@@ -34,8 +34,10 @@ reintroduce the composite-PK regression.
 
 ## Acceptance criteria
 
-- [ ] `persistence.ts` `_createRecord` either reuses `Base#_performInsert`'s
+- [x] `persistence.ts` `_createRecord` either reuses `Base#_performInsert`'s
       single-column RETURNING gating, or is removed if confirmed dead.
-- [ ] If kept: composite-PK and id-less-table inserts via this path resolve
+      (PR #3854: removed — confirmed dead, non-exported module locals.)
+- [x] If kept: composite-PK and id-less-table inserts via this path resolve
       correctly on sqlite/postgres/mysql (no multi-column RETURNING mis-map).
-- [ ] `pnpm lint` + typecheck clean.
+      (N/A — path removed, not kept.)
+- [x] `pnpm lint` + typecheck clean.
