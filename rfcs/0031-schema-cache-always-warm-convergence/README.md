@@ -138,6 +138,7 @@ tests; R3 deletes borrow.
 
 | ID                                                                                                        | Title                                                                                          | Status      | Est LOC | Cluster |
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
+| [remove-cold-cache-insert-reflection-fallback](stories/remove-cold-cache-insert-reflection-fallback.md)   | remove-cold-cache-insert-reflection-fallback                                                   | draft       | 60      | —       |
 | [remove-untyped-pk-parseint-cast-fallback](stories/remove-untyped-pk-parseint-cast-fallback.md)           | Remove \_castAttributeValue parseInt untyped-PK fallback once schema cache is always warm      | draft       | 60      | —       |
 | [schema-cache-custom-primary-key-inference](stories/schema-cache-custom-primary-key-inference.md)         | Schema cache should expose custom primary key for id:false tables (drop explicit \_primaryKey) | draft       | 120     | —       |
 | [r2-drop-synthesize-converge-adhoc-model-tests](stories/r2-drop-synthesize-converge-adhoc-model-tests.md) | R2: drop synthesize-from-attributes for table-backed models; converge ad-hoc-model tests       | ready       | 250     | —       |
