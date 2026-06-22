@@ -1,6 +1,6 @@
 ---
 title: "Load-time deferred distinct-PK materialization for eager+limit/offset where-subqueries (MySQL IN-list parity)"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
