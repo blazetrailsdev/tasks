@@ -1,6 +1,6 @@
 ---
 title: "A1d — eager_test: count/size with multi-table conditional"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3926
 claim: "2026-06-22T21:15:16Z"
 assignee: "a1-eager-count-multitable-conditional"
 blocked-by: null
