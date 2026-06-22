@@ -1,6 +1,6 @@
 ---
 title: "Converge PG buildChangeColumnDefinition to route through createTableDefinition().newColumnDefinition"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
+pr: 3903
 claim: "2026-06-22T17:47:59Z"
 assignee: "converge-pg-build-change-column-definition-via-table-definition"
 blocked-by: null
