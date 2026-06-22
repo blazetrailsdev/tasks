@@ -1,7 +1,7 @@
 ---
 title: "Remove redundant manual clearCacheBang workarounds now that defineSchema clears the PG cache"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T16:27:56Z"
+assignee: "remove-redundant-clearcachebang-workarounds"
 blocked-by: null
 ---
 
