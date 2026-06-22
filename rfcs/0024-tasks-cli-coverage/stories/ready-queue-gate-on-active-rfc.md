@@ -35,14 +35,14 @@ enforcement can move into the queue cheaply.
 
 ## Acceptance criteria
 
-- [ ] `ready()` excludes any story whose own RFC status is not `active`
+- [x] `ready()` excludes any story whose own RFC status is not `active`
       (i.e. `draft`/`postponed`/`superseded`/`closed` RFCs do not contribute
       claimable stories), using `index.rfcs` status already in scope — no extra
       filesystem reads.
-- [ ] Decide and document the `closed`-RFC case: a `ready` story under a
+- [x] Decide and document the `closed`-RFC case: a `ready` story under a
       `closed` RFC is almost certainly stale; excluding it from the queue is
       consistent with "only active RFCs feed pickup."
-- [ ] Unit tests cover: `ready` story under active RFC (included), under draft
+- [x] Unit tests cover: `ready` story under active RFC (included), under draft
       RFC (excluded), under postponed/superseded/closed RFC (excluded).
-- [ ] No change to `next-bundle`/`list` semantics beyond what flows from
+- [x] No change to `next-bundle`/`list` semantics beyond what flows from
       `ready()` (verify `bestBundle` still operates on the filtered set).
