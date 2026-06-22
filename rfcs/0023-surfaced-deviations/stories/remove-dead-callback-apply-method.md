@@ -1,6 +1,6 @@
 ---
 title: "Remove dead Callback.apply dispatcher in activesupport callbacks"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 40
-pr: null
+pr: 3889
 claim: "2026-06-22T15:23:56Z"
 assignee: "remove-dead-callback-apply-method"
 blocked-by: null
