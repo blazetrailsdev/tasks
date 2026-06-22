@@ -1,6 +1,6 @@
 ---
 title: "Remove redundant manual clearCacheBang workarounds now that defineSchema clears the PG cache"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
