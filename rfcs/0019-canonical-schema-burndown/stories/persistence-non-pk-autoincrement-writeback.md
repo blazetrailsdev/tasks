@@ -1,7 +1,7 @@
 ---
 title: "Restore test_populates_non_primary_key_autoincremented_column (non-PK auto-increment write-back)"
-status: in-progress
-updated: 2026-06-21
+status: done
+updated: 2026-06-22
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
