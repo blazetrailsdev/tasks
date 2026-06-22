@@ -89,7 +89,7 @@ Connection modes map to existing construction paths:
 
 | ID                                                              | Title                                                       | Status | Est LOC | Cluster               |
 | --------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
-| [libsql-replica-auto-sync](stories/libsql-replica-auto-sync.md) | libsql: opt-in periodic auto-sync for embedded replicas     | draft  | 120     | —                     |
+| [libsql-replica-auto-sync](stories/libsql-replica-auto-sync.md) | libsql: opt-in periodic auto-sync for embedded replicas     | ready  | 120     | —                     |
 | [libsql-embedded-replica](stories/libsql-embedded-replica.md)   | libsql: embedded-replica mode + sync()                      | done   | 160     | adapter-test-fidelity |
 | [libsql-local-driver](stories/libsql-local-driver.md)           | libsql: local-file driver + adapter subclass + registration | done   | 220     | adapter-test-fidelity |
 | [libsql-remote-mode](stories/libsql-remote-mode.md)             | libsql: remote Turso mode (network, async-open path)        | done   | 180     | adapter-test-fidelity |
