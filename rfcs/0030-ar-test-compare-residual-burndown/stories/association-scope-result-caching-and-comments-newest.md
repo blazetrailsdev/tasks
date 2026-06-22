@@ -49,4 +49,4 @@ landed there, but these scope-cache cases were left skipped with rationale.
       mutation (`destroy_all`/`reset`/`delete_all`/reload) invalidates it.
 - [ ] Un-skip `scopes to get newest`, `scopes are cached on associations`,
       `scopes with arguments are cached on associations`, and `scopes are reset
-  on association reload` with faithful Rails bodies.
+on association reload` with faithful Rails bodies.
