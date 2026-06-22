@@ -1,6 +1,6 @@
 ---
 title: "Strip-and-recompile codemod to remove redundant as any"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 20
-pr: null
+pr: 3861
 claim: "2026-06-22T02:59:58Z"
 assignee: "strip-asany-codemod"
 blocked-by: null
