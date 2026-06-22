@@ -42,8 +42,8 @@ Rails refs: `activerecord/lib/active_record/inheritance.rb:212`
 
 ## Acceptance criteria
 
-- [ ] The `createThroughAssociation` belongs_to-source `_type` fallback uses
+- [x] The `createThroughAssociation` belongs_to-source `_type` fallback uses
       `polymorphicName(target.constructor)` instead of `.name`.
-- [ ] Regression test: a has_one/has_many `:through` with a polymorphic
+- [x] Regression test: a has_one/has_many `:through` with a polymorphic
       belongs_to source whose target is an STI subclass stores `base_class.name`.
-- [ ] No api:compare / test:compare regression.
+- [x] No api:compare / test:compare regression.
