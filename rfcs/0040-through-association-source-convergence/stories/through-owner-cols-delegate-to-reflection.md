@@ -34,13 +34,13 @@ come straight from `through_reflection.foreign_key` and
 
 ## Acceptance criteria
 
-- [ ] Replace the hand-rolled `_throughOwnerCols` derivation with direct
+- [x] Replace the hand-rolled `_throughOwnerCols` derivation with direct
       delegation to the through reflection's `foreignKey` /
       `activeRecordPrimaryKey` (mirroring `through_reflection.foreign_key` and
       `through_reflection.active_record_primary_key`), so the composite /
       query-constraint cases are no longer duplicated inline.
-- [ ] No behavior change: composite-PK / query-constraints through associations
+- [x] No behavior change: composite-PK / query-constraints through associations
       (e.g. Sharded::BlogPost) and the STI scalar case produce identical
       columns to today.
-- [ ] Keep `underscore(ctor.name)_id` only as the unregistered-anonymous
+- [x] Keep `underscore(ctor.name)_id` only as the unregistered-anonymous
       fallback.
