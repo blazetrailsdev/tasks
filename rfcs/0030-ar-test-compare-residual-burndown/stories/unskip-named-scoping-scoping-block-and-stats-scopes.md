@@ -1,6 +1,6 @@
 ---
 title: "Un-skip named-scoping scoping-block + stats/current-scope scopes"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
