@@ -1,6 +1,6 @@
 ---
 title: "Un-skip named-scoping scope-definition guards (callable + reserved/relation names)"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
