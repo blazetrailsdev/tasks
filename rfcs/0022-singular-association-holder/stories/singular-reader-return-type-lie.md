@@ -36,6 +36,6 @@ The structural fix is to either:
 
 ## Acceptance criteria
 
-- [ ] `get reader()` return type accurately reflects what it returns.
-- [ ] No sync consumer receives an unresolved Promise without TypeScript catching it.
-- [ ] Existing tests pass; `test:compare` delta non-negative.
+- [x] `get reader()` return type accurately reflects what it returns.
+- [x] No sync consumer receives an unresolved Promise without TypeScript catching it.
+- [x] Existing tests pass; `test:compare` delta non-negative.
