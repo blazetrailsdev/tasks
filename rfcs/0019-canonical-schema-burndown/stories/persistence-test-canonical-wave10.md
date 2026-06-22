@@ -1,7 +1,7 @@
 ---
 title: "persistence.test.ts canonical burndown wave10 (remaining defineSchema blocks)"
-status: in-progress
-updated: 2026-06-21
+status: done
+updated: 2026-06-22
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
