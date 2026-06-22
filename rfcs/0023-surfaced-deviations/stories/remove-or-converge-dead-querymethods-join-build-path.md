@@ -1,6 +1,6 @@
 ---
 title: "Remove or converge dead query-methods buildArel/buildJoins join path (latent left_outer dedup regression)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: null
+pr: 3890
 claim: "2026-06-22T15:32:00Z"
 assignee: "remove-or-converge-dead-querymethods-join-build-path"
 blocked-by: null
