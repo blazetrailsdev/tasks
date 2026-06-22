@@ -1,7 +1,7 @@
 ---
 title: "Mutator process.exit inside commitAndPush lock leaks the shared tasks lock"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T17:23:57Z"
+assignee: "commitandpush-mutator-exit-leaks-lock"
 blocked-by: null
 ---
 
