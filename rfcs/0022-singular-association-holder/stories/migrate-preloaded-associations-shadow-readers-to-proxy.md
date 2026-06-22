@@ -1,6 +1,6 @@
 ---
 title: "Migrate _preloadedAssociations shadow readers in associations.ts to read from the real CollectionProxy/Association"
-status: ready
+status: draft
 updated: 2026-06-14
 rfc: "0022-singular-association-holder"
 cluster: null

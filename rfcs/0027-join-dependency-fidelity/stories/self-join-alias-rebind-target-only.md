@@ -1,6 +1,6 @@
 ---
 title: "Self-join alias rebinding must alias only the target Table (not owner) for true self-associations"
-status: ready
+status: draft
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null
