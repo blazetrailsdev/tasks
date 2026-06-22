@@ -1,6 +1,6 @@
 ---
 title: "Burn the AR test no-explicit-any allowlist to zero (epic)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: null
+pr: 3898
 claim: "2026-06-22T17:16:01Z"
 assignee: "burndown-tests-allowlist"
 blocked-by: null
