@@ -1,6 +1,6 @@
 ---
 title: "Converge chat_messages uuid PK defaults to Rails' uuid_generate_v4() / pgcrypto split"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 12
 priority: null
-pr: null
+pr: 3852
 claim: "2026-06-22T00:14:42Z"
 assignee: "chat-messages-uuid-default-fn-fidelity"
 blocked-by: null
