@@ -1,6 +1,6 @@
 ---
 title: "legacy-migration-5-0-create-table-and-chain"
-status: blocked
+status: ready
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: 9000
 pr: null
-claim: "2026-06-19T19:12:37Z"
-assignee: "legacy-migration-5-0-create-table-and-chain"
-blocked-by: "Releasing stale claim (>50h, no PR) back to ready queue"
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
