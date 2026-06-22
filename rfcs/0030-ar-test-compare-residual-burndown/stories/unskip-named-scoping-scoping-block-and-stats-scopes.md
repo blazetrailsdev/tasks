@@ -1,7 +1,7 @@
 ---
 title: "Un-skip named-scoping scoping-block + stats/current-scope scopes"
-status: ready
-updated: 2026-06-18
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T12:51:59Z"
+assignee: "unskip-named-scoping-scoping-block-and-stats-scopes"
 blocked-by: null
 ---
 
