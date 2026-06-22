@@ -1,6 +1,6 @@
 ---
 title: "Validator: cross-field status consistency invariants"
-status: claimed
+status: done
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
@@ -8,7 +8,7 @@ deps: ["validate-as-library"]
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: null
+pr: 53
 claim: "2026-06-22T11:39:59Z"
 assignee: "validate-status-consistency"
 blocked-by: null
