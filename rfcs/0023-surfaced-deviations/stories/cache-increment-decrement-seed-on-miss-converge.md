@@ -1,6 +1,6 @@
 ---
 title: "cache-increment-decrement-seed-on-miss-converge"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
