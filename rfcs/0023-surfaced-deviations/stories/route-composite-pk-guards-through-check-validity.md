@@ -1,6 +1,6 @@
 ---
 title: "route-composite-pk-guards-through-check-validity"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
