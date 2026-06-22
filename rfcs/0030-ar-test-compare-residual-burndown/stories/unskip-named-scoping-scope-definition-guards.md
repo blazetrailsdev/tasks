@@ -1,6 +1,6 @@
 ---
 title: "Un-skip named-scoping scope-definition guards (callable + reserved/relation names)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: core-residuals
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: 3878
 claim: "2026-06-22T12:43:58Z"
 assignee: "unskip-named-scoping-scope-definition-guards"
 blocked-by: null
