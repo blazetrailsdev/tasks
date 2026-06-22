@@ -1,7 +1,7 @@
 ---
 title: "rails-error-parity: flag manifest error classes whose home file is entirely unported"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T19:39:16Z"
+assignee: "rails-error-parity-flag-unported-error-files"
 blocked-by: null
 ---
 
