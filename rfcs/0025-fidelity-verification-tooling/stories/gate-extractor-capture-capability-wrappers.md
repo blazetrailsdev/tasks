@@ -43,12 +43,12 @@ wrappers so `classifyGateMismatch` compares like-with-like.
 
 ## Acceptance criteria
 
-- [ ] `extract-ruby-tests.rb` emits a guard/feature gate for tests enclosed in
+- [x] `extract-ruby-tests.rb` emits a guard/feature gate for tests enclosed in
       a module-/class-/method-level `if connection.respond_to?(:X)` or
       `if connection.supports_X?` / `supports_X?` wrapper.
-- [ ] Tests defined in a `Concern`/module mixed into a class that sits under
+- [x] Tests defined in a `Concern`/module mixed into a class that sits under
       such an `if` inherit the enclosing gate (consistent with the class's own
       `def test_*`).
-- [ ] `test:compare --package activerecord --gates` no longer reports the
+- [x] `test:compare --package activerecord --gates` no longer reports the
       reset_pk_sequence / invalidate-transaction / view false positives, and no
       new false `missing-gate` is introduced.
