@@ -1,7 +1,7 @@
 ---
 title: "thread-yielded-connection-internal-query-path"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T12:19:57Z"
+assignee: "thread-yielded-connection-internal-query-path"
 blocked-by: null
 ---
 
