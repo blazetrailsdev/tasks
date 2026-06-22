@@ -1,6 +1,6 @@
 ---
 title: "Validator: story body content gates (AC checkboxes, Context, Rails refs)"
-status: claimed
+status: done
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: guardrails
