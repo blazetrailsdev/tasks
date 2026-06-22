@@ -1,6 +1,6 @@
 ---
 title: "createThroughAssociation belongs_to source _type fallback should use polymorphic_name"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null
