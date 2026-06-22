@@ -1,9 +1,9 @@
 ---
 rfc: "0016-ar-test-compare-100"
 title: "ActiveRecord test:compare 100%: phase-ordered un-skip campaign"
-status: active
+status: superseded
 created: 2026-06-07
-updated: 2026-06-15
+updated: 2026-06-22
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -14,6 +14,7 @@ clusters:
   - adapter
   - integrated
   - core-residuals
+superseded-by: "0030-ar-test-compare-residual-burndown"
 ---
 
 <!-- Unnumbered until merge: keep `rfc:` as 0016-ar-test-compare-100. -->
