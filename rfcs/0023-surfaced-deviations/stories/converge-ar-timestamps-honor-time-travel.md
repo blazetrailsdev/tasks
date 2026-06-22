@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-timestamps-honor-time-travel"
-status: ready
+status: claimed
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T02:27:57Z"
+assignee: "converge-ar-timestamps-honor-time-travel"
 blocked-by: null
 ---
 
