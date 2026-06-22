@@ -1,6 +1,6 @@
 ---
 title: "resolveOrderMatcher should not read the deprecated connection getter"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: null
+pr: 3894
 claim: "2026-06-22T16:43:56Z"
 assignee: "resolve-order-matcher-without-connection-getter"
 blocked-by: null
