@@ -1,6 +1,6 @@
 ---
 title: "A1f — eager_test: polymorphic custom-type/existential/references"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations

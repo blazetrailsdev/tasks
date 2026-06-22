@@ -1,6 +1,6 @@
 ---
 title: "cascaded-eager-nil-and-proxy-preload-convergence"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
