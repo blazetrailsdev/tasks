@@ -1,6 +1,6 @@
 ---
 title: "relation-inspect-unloaded-converge-to-rails"
-status: claimed
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: null
+pr: 3885
 claim: "2026-06-22T14:51:58Z"
 assignee: "relation-inspect-unloaded-converge-to-rails"
 blocked-by: null
