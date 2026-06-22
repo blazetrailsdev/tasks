@@ -1,6 +1,6 @@
 ---
 title: "A1b — eager_test: conditions/order/select/limit on joined tables"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3928
 claim: "2026-06-22T21:31:16Z"
 assignee: "a1-eager-joined-table-conditions-order"
 blocked-by: null
