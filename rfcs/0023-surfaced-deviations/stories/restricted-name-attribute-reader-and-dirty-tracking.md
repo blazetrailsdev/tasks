@@ -1,7 +1,7 @@
 ---
 title: "Converge: column named 'name' should get a reader and dirty-track on assign (not be a restricted attribute)"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T16:51:56Z"
+assignee: "restricted-name-attribute-reader-and-dirty-tracking"
 blocked-by: null
 ---
 
