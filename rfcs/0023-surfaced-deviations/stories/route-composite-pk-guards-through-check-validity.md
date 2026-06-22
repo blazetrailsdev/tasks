@@ -1,6 +1,6 @@
 ---
 title: "route-composite-pk-guards-through-check-validity"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: null
+pr: 3896
 claim: "2026-06-22T16:59:58Z"
 assignee: "route-composite-pk-guards-through-check-validity"
 blocked-by: null
