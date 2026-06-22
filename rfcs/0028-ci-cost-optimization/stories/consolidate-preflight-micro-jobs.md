@@ -1,6 +1,6 @@
 ---
 title: "Consolidate the sub-minute preflight checks into one job to reclaim rounding"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: parallelism-rounding
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3902
 claim: "2026-06-22T17:39:59Z"
 assignee: "consolidate-preflight-micro-jobs"
 blocked-by: null
