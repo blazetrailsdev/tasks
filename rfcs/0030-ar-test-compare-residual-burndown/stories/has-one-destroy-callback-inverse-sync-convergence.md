@@ -40,6 +40,17 @@ Observable difference: inside the callback `account.firm` returns the
 in-memory owner rather than a freshly-queried record — divergent only if the
 owner were dirty/stale relative to the DB row.
 
+The interim `seedDestroyInverseOwner` heuristic disambiguates FK-equal
+`belongs_to` by "most-general target class" (shallowest prototype-chain depth).
+This is a non-Rails invention that happens to match the `Account#firm` (klass
+`Company`) vs `Account#unautosaved_firm` (klass `Firm`) pair only because the
+primary back-reference is conventionally base-class-typed; on an exact
+depth tie (two unrelated sibling subclasses, or two aliases of the same class
+on one FK) it still falls back to reflection/declaration order. The real fix
+below — a sync `belongs_to` reader resolving the _actual_ reflection the
+callback reads — supersedes the heuristic entirely and removes this residual
+tie-break fragility.
+
 ## Acceptance criteria
 
 - Decide and implement the faithful convergence: either a sync-capable
