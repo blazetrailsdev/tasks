@@ -1,6 +1,6 @@
 ---
 title: "Relation#exec_main_query should short-circuit contradiction where-clause to [] without executing"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 40
-pr: null
+pr: 3883
 claim: "2026-06-22T13:23:57Z"
 assignee: "relation-exec-main-query-contradiction-short-circuit"
 blocked-by: null
