@@ -1,6 +1,6 @@
 ---
 title: "Pooled-pin transactional fixtures so concurrent-write scoping test runs on PG"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
