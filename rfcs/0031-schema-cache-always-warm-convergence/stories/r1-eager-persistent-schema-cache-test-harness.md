@@ -44,12 +44,12 @@ Primitives already present: `SchemaReflection.eagerLoadSchemaCache`,
 
 ## Acceptance criteria
 
-- [ ] The AR test harness pre-warms the per-connection `SchemaCache` for all
+- [x] The AR test harness pre-warms the per-connection `SchemaCache` for all
       tables after schema setup; a sync `columnsHash()` on a connected,
       table-backed model reads warm DB columns without a prior await.
-- [ ] `withTransactionalFixtures` teardown no longer blanket-clears; only
+- [x] `withTransactionalFixtures` teardown no longer blanket-clears; only
       DDL-touched tables are re-reflected, unchanged entries survive.
-- [ ] Full AR suite green on SQLite canonical; PG/MySQL per gate. Synthesize and
+- [x] Full AR suite green on SQLite canonical; PG/MySQL per gate. Synthesize and
       borrow remain unchanged in this story.
 
 ## Hard rules
