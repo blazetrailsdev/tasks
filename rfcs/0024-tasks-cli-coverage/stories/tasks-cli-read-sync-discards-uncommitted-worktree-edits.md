@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI read sync (reset --hard origin/main) silently discards uncommitted worktree edits"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 3923
 claim: "2026-06-22T20:51:16Z"
 assignee: "tasks-cli-read-sync-discards-uncommitted-worktree-edits"
 blocked-by: null
