@@ -1,6 +1,6 @@
 ---
 title: "through-source-reflection-scope-not-merged"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 3866
 claim: "2026-06-22T03:39:56Z"
 assignee: "through-source-reflection-scope-not-merged"
 blocked-by: null
