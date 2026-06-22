@@ -55,9 +55,9 @@ together avoids repeated context re-derivation and overlapping edits.
 | [through-create-source-type-verbatim-no-fallback](stories/through-create-source-type-verbatim-no-fallback.md)         | createThroughAssociation: write source \_type verbatim from source_type, drop inferred polymorphicName fallback | draft       | 50      | —       |
 | [through-source-type-source-scope-not-merged](stories/through-source-type-source-scope-not-merged.md)                 | has_many :through with source_type: drops the polymorphic source reflection's own scope                         | draft       | 70      | —       |
 | [through-belongsto-source-type-uses-polymorphic-name](stories/through-belongsto-source-type-uses-polymorphic-name.md) | createThroughAssociation belongs_to source \_type fallback should use polymorphic_name                          | in-progress | 40      | —       |
-| [through-owner-cols-delegate-to-reflection](stories/through-owner-cols-delegate-to-reflection.md)                     | Delegate \_throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey                          | in-progress | 60      | —       |
 | [through-polymorphic-source-applies-type-condition](stories/through-polymorphic-source-applies-type-condition.md)     | through-polymorphic-source-applies-type-condition                                                               | in-progress | null    | —       |
 | [through-source-reflection-scope-not-merged](stories/through-source-reflection-scope-not-merged.md)                   | through-source-reflection-scope-not-merged                                                                      | in-progress | null    | —       |
+| [through-owner-cols-delegate-to-reflection](stories/through-owner-cols-delegate-to-reflection.md)                     | Delegate \_throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey                          | done        | 60      | —       |
 
 ## Rollout
 
