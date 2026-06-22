@@ -1,7 +1,7 @@
 ---
 title: "cascaded-eager-join-alias-and-callbacks"
-status: ready
-updated: 2026-06-15
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T22:19:17Z"
+assignee: "cascaded-eager-join-alias-and-callbacks"
 blocked-by: null
 ---
 
