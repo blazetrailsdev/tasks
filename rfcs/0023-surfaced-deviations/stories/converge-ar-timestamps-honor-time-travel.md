@@ -45,13 +45,13 @@ to eliminate in Rails.
 
 ## Acceptance criteria
 
-- [ ] `currentTimeFromProperTimezone()` (and the `timestamp.ts:38,45` create
+- [x] `currentTimeFromProperTimezone()` (and the `timestamp.ts:38,45` create
       paths) resolve "now" through the ActiveSupport travel-aware clock
       (`currentTimeInstant()` / equivalent) so `travel`/`travelTo`/`freezeTime`
       affect AR-generated timestamps, matching Rails' `Time.current`.
-- [ ] Restore Rails' `travel(1.second)` wrapper in the persistence.test.ts
+- [x] Restore Rails' `travel(1.second)` wrapper in the persistence.test.ts
       increment/decrement-with-touch ports (and the wave12 sibling
       `decrement with touch an attribute updates timestamps`) so the
       timestamp-moved assertions are deterministic.
-- [ ] No regression in existing timestamp/touch tests (touch-later.test.ts,
+- [x] No regression in existing timestamp/touch tests (touch-later.test.ts,
       dirty.test.ts, etc.); `pnpm lint` + `node scripts/typecheck.mjs` clean.
