@@ -1,7 +1,7 @@
 ---
 title: "Defer JoinDependency alias assignment to emit-time shared tracker"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-22
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T18:19:57Z"
+assignee: "defer-join-alias-assignment-to-emit-time"
 blocked-by: null
 ---
 
