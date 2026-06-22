@@ -64,6 +64,14 @@ table); `index.json` and `search.json` are gitignored caches rebuilt on demand,
 not committed. Reference an RFC from prose as "this RFC" (number-agnostic) so
 nothing needs rewriting at finalize time beyond the H1 and `rfc:` fields.
 
+The RFC template carries a **`## Non-goals`** section — the canonical home for
+deliberately-descoped decisions, each with a one-line reason — and a
+**`## Verification`** section stating the concrete metric, count, or burndown
+target by which we'll judge the RFC worked. Story files mirror this: an
+optional **`## Definition of done`** captures the negative-space sentence (what
+does _not_ close the story) and an optional **`## Verification`** gives the
+exact command(s) that prove it — both are delete-if-empty like `## Notes`.
+
 ## Rules
 
 This repo runs **loose rules** compared to trails:
