@@ -34,11 +34,11 @@ gap is that the schema cache (`getCachedPrimaryKeys`) does not surface it.
 
 ## Acceptance criteria
 
-- [ ] `connection.schemaCache.getCachedPrimaryKeys(table)` returns the
+- [x] `connection.schemaCache.getCachedPrimaryKeys(table)` returns the
       configured primary key for `id: false` canonical tables (countries,
       treaties, …), so `Model.primaryKey` infers it without an explicit
       `_primaryKey`.
-- [ ] Remove the explicit `static _primaryKey` from `test-helpers/models/country.ts`
+- [x] Remove the explicit `static _primaryKey` from `test-helpers/models/country.ts`
       and `treaty.ts` (matching Rails country.rb / treaty.rb, which declare none)
       and confirm the HABTM tests still resolve the PK.
-- [ ] No regression in the schema-cache / primary-key suites.
+- [x] No regression in the schema-cache / primary-key suites.
