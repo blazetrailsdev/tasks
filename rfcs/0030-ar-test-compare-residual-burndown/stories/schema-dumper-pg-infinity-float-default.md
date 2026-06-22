@@ -1,7 +1,7 @@
 ---
 title: "PG float infinity/NaN column default schema dump"
-status: ready
-updated: 2026-06-20
+status: claimed
+updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-22T11:55:58Z"
+assignee: "schema-dumper-pg-infinity-float-default"
 blocked-by: null
 ---
 
