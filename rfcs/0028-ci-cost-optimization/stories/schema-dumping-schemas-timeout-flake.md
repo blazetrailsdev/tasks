@@ -1,6 +1,6 @@
 ---
 title: "Fix recurring 'dumping schemas' 5s timeout flake in postgresql/schema.test.ts"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null

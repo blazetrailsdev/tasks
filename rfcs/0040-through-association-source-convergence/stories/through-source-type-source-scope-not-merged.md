@@ -1,6 +1,6 @@
 ---
 title: "has_many :through with source_type: drops the polymorphic source reflection's own scope"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null

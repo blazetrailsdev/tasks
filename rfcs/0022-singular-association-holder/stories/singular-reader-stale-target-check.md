@@ -1,6 +1,6 @@
 ---
 title: "singular-reader-stale-target-check"
-status: draft
+status: ready
 updated: 2026-06-19
 rfc: "0022-singular-association-holder"
 cluster: null

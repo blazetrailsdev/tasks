@@ -1,6 +1,6 @@
 ---
 title: "CI guard: scaffold generators stay byte-identical to 0000-template"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0024-tasks-cli-coverage"
 cluster: null

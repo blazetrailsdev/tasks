@@ -1,7 +1,7 @@
 ---
 rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
-status: draft
+status: active
 created: 2026-06-12
 updated: 2026-06-12
 owner: "@deanmarano"

@@ -1,6 +1,6 @@
 ---
 title: "Converge table-metadata associatedTable to Rails unconditional where-hash aliasing"
-status: draft
+status: ready
 updated: 2026-06-17
 rfc: "0027-join-dependency-fidelity"
 cluster: null

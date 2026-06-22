@@ -1,7 +1,7 @@
 ---
 rfc: "0040-through-association-source-convergence"
 title: "Through-association source/polymorphic reflection convergence"
-status: draft
+status: active
 created: 2026-06-21
 updated: 2026-06-21
 owner: "@deanmarano"

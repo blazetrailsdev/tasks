@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity: flag manifest error classes whose home file is entirely unported"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0025-fidelity-verification-tooling"
 cluster: null

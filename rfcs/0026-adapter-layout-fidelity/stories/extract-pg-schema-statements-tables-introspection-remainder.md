@@ -1,6 +1,6 @@
 ---
 title: "extract-pg-schema-statements-tables-introspection-remainder"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0026-adapter-layout-fidelity"
 cluster: null

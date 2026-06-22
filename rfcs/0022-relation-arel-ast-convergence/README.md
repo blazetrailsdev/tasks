@@ -1,7 +1,7 @@
 ---
 rfc: "0022-relation-arel-ast-convergence"
 title: "Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM)"
-status: draft
+status: active
 created: 2026-06-10
 updated: 2026-06-10
 owner: "@deanmarano"

@@ -1,6 +1,6 @@
 ---
 title: "Batch-then-bisect strip-asany recompile to cut O(casts) builds"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null

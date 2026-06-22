@@ -1,6 +1,6 @@
 ---
 title: "Decouple AR advisory-slot pool from vitest worker count (add headroom)"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null

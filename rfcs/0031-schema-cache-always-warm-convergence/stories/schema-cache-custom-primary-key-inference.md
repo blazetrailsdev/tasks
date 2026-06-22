@@ -1,6 +1,6 @@
 ---
 title: "Schema cache should expose custom primary key for id:false tables (drop explicit _primaryKey)"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null

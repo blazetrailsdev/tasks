@@ -1,6 +1,6 @@
 ---
 title: "set-deps: consume shared checkDepGraph instead of restating the DFS"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: null

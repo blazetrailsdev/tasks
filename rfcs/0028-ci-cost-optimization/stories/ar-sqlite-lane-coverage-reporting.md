@@ -1,6 +1,6 @@
 ---
 title: "ar-sqlite-lane-coverage-reporting"
-status: draft
+status: ready
 updated: 2026-06-17
 rfc: "0028-ci-cost-optimization"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Burn the AR test no-explicit-any allowlist to zero (epic)"
-status: draft
+status: ready
 updated: 2026-06-18
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null

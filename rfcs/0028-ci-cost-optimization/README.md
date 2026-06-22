@@ -1,7 +1,7 @@
 ---
 rfc: "0028-ci-cost-optimization"
 title: "CI cost optimization — cut billed Actions minutes and time-to-green"
-status: draft
+status: active
 created: 2026-06-14
 updated: 2026-06-14
 owner: "@deanmarano"

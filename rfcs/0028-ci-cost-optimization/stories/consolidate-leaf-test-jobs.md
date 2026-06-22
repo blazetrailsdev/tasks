@@ -1,6 +1,6 @@
 ---
 title: "Consolidate the tiny leaf test jobs into one affected-aware job"
-status: draft
+status: ready
 updated: 2026-06-14
 rfc: "0028-ci-cost-optimization"
 cluster: parallelism-rounding

@@ -1,7 +1,7 @@
 ---
 rfc: "0026-adapter-layout-fidelity"
 title: "Adapter layout fidelity — adapter classes hold only what their Rails counterpart holds"
-status: draft
+status: active
 created: 2026-06-12
 updated: 2026-06-12
 owner: "@deanmarano"

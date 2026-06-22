@@ -1,6 +1,6 @@
 ---
 title: "Converge PG buildChangeColumnDefinition to route through createTableDefinition().newColumnDefinition"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0026-adapter-layout-fidelity"
 cluster: null

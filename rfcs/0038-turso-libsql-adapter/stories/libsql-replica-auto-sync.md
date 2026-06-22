@@ -1,6 +1,6 @@
 ---
 title: "libsql: opt-in periodic auto-sync for embedded replicas"
-status: draft
+status: ready
 updated: 2026-06-20
 rfc: "0038-turso-libsql-adapter"
 cluster: null

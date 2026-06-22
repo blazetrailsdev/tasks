@@ -1,6 +1,6 @@
 ---
 title: "Defer JoinDependency alias assignment to emit-time shared tracker"
-status: draft
+status: ready
 updated: 2026-06-21
 rfc: "0027-join-dependency-fidelity"
 cluster: null

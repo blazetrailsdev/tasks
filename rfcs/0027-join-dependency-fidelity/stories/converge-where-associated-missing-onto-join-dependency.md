@@ -1,6 +1,6 @@
 ---
 title: "Route whereAssociated/whereMissing through JoinDependency (retire flat _resolve*Join)"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null

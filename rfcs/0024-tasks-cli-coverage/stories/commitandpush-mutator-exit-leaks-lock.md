@@ -1,6 +1,6 @@
 ---
 title: "Mutator process.exit inside commitAndPush lock leaks the shared tasks lock"
-status: draft
+status: ready
 updated: 2026-06-16
 rfc: "0024-tasks-cli-coverage"
 cluster: null

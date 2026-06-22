@@ -1,6 +1,6 @@
 ---
 title: "Unblock the where-references-association-name eager-load tests covering lazy make_constraints aliasing"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0027-join-dependency-fidelity"
 cluster: null

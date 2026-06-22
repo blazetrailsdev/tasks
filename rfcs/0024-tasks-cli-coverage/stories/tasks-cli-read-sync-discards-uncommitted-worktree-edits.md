@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI read sync (reset --hard origin/main) silently discards uncommitted worktree edits"
-status: draft
+status: ready
 updated: 2026-06-15
 rfc: "0024-tasks-cli-coverage"
 cluster: null

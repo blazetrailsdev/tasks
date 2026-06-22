@@ -1,6 +1,6 @@
 ---
 title: "renameColumn/renameIndex must invalidate the schema cache (always-warm latent staleness)"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null

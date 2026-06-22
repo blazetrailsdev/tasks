@@ -1,6 +1,6 @@
 ---
 title: "extend no-unnecessary-type-assertion coverage to tsconfig-uncovered files"
-status: draft
+status: ready
 updated: 2026-06-19
 rfc: "0037-no-explicit-any-enforcement"
 cluster: null

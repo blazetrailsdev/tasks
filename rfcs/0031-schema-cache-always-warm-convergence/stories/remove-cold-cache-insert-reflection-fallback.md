@@ -1,6 +1,6 @@
 ---
 title: "remove-cold-cache-insert-reflection-fallback"
-status: draft
+status: ready
 updated: 2026-06-22
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
