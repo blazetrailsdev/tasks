@@ -1,6 +1,6 @@
 ---
 title: "habtm: assign_ids savepoint lifecycle on PG/MySQL"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: null
+pr: 3935
 claim: "2026-06-22T23:07:15Z"
 assignee: "habtm-savepoint-lifecycle"
 blocked-by: null
