@@ -1,6 +1,6 @@
 ---
 title: "Delegate _throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0040-through-association-source-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
+pr: 3864
 claim: "2026-06-22T03:23:56Z"
 assignee: "through-owner-cols-delegate-to-reflection"
 blocked-by: null

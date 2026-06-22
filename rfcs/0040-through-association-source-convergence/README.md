@@ -54,8 +54,8 @@ together avoids repeated context re-derivation and overlapping edits.
 | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
 | [through-polymorphic-source-applies-type-condition](stories/through-polymorphic-source-applies-type-condition.md)     | through-polymorphic-source-applies-type-condition                                      | ready       | null    | —       |
 | [through-source-reflection-scope-not-merged](stories/through-source-reflection-scope-not-merged.md)                   | through-source-reflection-scope-not-merged                                             | ready       | null    | —       |
-| [through-owner-cols-delegate-to-reflection](stories/through-owner-cols-delegate-to-reflection.md)                     | Delegate \_throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey | claimed     | 60      | —       |
 | [through-belongsto-source-type-uses-polymorphic-name](stories/through-belongsto-source-type-uses-polymorphic-name.md) | createThroughAssociation belongs_to source \_type fallback should use polymorphic_name | in-progress | 40      | —       |
+| [through-owner-cols-delegate-to-reflection](stories/through-owner-cols-delegate-to-reflection.md)                     | Delegate \_throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey | in-progress | 60      | —       |
 
 ## Rollout
 
