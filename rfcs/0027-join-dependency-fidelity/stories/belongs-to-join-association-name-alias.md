@@ -1,6 +1,6 @@
 ---
 title: "belongs-to-join-association-name-alias"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0027-join-dependency-fidelity"
 cluster: null
