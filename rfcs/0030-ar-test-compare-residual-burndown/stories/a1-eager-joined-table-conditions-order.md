@@ -1,6 +1,6 @@
 ---
 title: "A1b — eager_test: conditions/order/select/limit on joined tables"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
