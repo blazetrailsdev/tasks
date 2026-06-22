@@ -1,6 +1,6 @@
 ---
 title: "Collect trails-tsc coverage without voiding the shared run"
-status: in-progress
+status: done
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
