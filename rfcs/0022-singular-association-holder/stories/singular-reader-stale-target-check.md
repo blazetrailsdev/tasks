@@ -1,6 +1,6 @@
 ---
 title: "singular-reader-stale-target-check"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 3924
 claim: "2026-06-22T20:43:15Z"
 assignee: "singular-reader-stale-target-check"
 blocked-by: null
