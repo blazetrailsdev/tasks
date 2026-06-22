@@ -1,6 +1,6 @@
 ---
 title: "Extract remaining PG table/introspection statements into PostgreSQLSchemaStatements"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 20
-pr: null
+pr: 3910
 claim: "2026-06-22T18:44:00Z"
 assignee: "extract-pg-schema-statements-tables-introspection-remainder"
 blocked-by: null
