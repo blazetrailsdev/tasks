@@ -1,6 +1,6 @@
 ---
 title: "Un-skip reload-association-cache (PG through-JOIN type-cast + publication callback fix)"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: null
+pr: 3871
 claim: "2026-06-22T11:47:56Z"
 assignee: "reload-association-cache-through-join-pg-cast"
 blocked-by: null
