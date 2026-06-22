@@ -1,6 +1,6 @@
 ---
 title: "A1i — eager_test: notifications/i18n, too-many-ids, preload SQL, pk has_one"
-status: claimed
+status: in-progress
 updated: 2026-06-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3930
 claim: "2026-06-22T21:39:15Z"
 assignee: "a1-eager-misc-notifications-too-many-ids"
 blocked-by: null
