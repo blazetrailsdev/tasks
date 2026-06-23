@@ -1,6 +1,6 @@
 ---
 title: "Converge changes_applied dirty-state clearing in attribute-methods writes"
-status: draft
+status: ready
 updated: 2026-06-23
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
