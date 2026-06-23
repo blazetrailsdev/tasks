@@ -1,7 +1,7 @@
 ---
 title: "Route AssociationScope#applyScope qualified WHERE through predicate builder (drop hand-derived bind)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T03:15:15Z"
+assignee: "apply-scope-qualified-where-predicate-builder-convergence"
 blocked-by: null
 ---
 
