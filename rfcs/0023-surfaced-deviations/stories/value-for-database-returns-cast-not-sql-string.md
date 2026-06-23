@@ -1,6 +1,6 @@
 ---
 title: "value_for_database returns the cast value (not the serialized SQL string), matching Rails"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
