@@ -1,6 +1,6 @@
 ---
 title: "Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip"
-status: ready
+status: blocked
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -24,7 +24,7 @@ priority: 30
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "PG lane red: bigserial flip surfaces ~57 unconverged BigInt-PK assertion sites across 16 files (CI run 28040851821, PR #3966). The merged sweeps (#4010, #4018) only covered their 55-file manifest. Filed three convergence prereqs: pg-bigserial-assertion-sweep-querycache-associations, -bind-autosave-nullrel-reserved, -tail. All three must land before this flip retries. PR #3966 parked in draft."
 ---
 
 ## Context
