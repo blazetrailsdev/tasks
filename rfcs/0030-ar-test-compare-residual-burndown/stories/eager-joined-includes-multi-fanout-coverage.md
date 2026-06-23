@@ -1,6 +1,6 @@
 ---
 title: "eager_test: regression coverage for multi-include joins∩includes fan-out"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3988
 claim: "2026-06-23T12:57:40Z"
 assignee: "eager-joined-includes-multi-fanout-coverage"
 blocked-by: null
