@@ -1,6 +1,6 @@
 ---
 title: "Materialize declares for in-describe/it nested test models skipped by the top-level-only walker"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0033-standalone-associations-burndown"
 cluster: null
