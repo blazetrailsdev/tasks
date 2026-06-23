@@ -1,7 +1,7 @@
 ---
 title: "Decouple AR advisory-slot pool from vitest worker count (add headroom)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T12:27:45Z"
+assignee: "decouple-ar-slot-pool-from-worker-count"
 blocked-by: null
 ---
 
