@@ -1,6 +1,6 @@
 ---
 title: "writeFromUser raises for any unknown column name, not just null (full Rails strictness)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: null
+pr: 3960
 claim: "2026-06-23T02:59:17Z"
 assignee: "writefromuser-strict-unknown-name-fallthrough"
 blocked-by: null
