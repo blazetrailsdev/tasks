@@ -1,6 +1,6 @@
 ---
 title: "Converge SQLite columns() onto Rails new_column_from_field flow (generated default_function, dead-path removal)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
