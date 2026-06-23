@@ -1,6 +1,6 @@
 ---
 title: "mysql-rename-column-issue-real-ddl"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T22:00:42Z"
+assignee: "mysql-rename-column-issue-real-ddl"
 blocked-by: null
 ---
 
