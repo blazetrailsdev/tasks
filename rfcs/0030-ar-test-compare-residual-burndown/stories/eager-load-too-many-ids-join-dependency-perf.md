@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency instantiation perf: un-skip eager_load too-many-ids on MySQL-family lanes"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
