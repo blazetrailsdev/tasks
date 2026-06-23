@@ -1,7 +1,7 @@
 ---
 title: "singular-reader-stale-target-check"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
 deps: []
