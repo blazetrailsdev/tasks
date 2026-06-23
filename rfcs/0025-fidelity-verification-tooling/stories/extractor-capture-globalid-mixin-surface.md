@@ -1,6 +1,6 @@
 ---
 title: "api-compare: resolve cross-package GlobalID mixin into AR Base allowed-set"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
