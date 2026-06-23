@@ -1,7 +1,7 @@
 ---
 title: "Converge PG uniqueConstraintFor to unique_constraints.detect(defined_for?)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:57:40Z"
+assignee: "converge-pg-unique-constraint-for-via-detect"
 blocked-by: null
 ---
 
