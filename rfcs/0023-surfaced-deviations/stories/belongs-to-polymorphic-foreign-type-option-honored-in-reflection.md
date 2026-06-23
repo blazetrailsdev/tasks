@@ -1,6 +1,6 @@
 ---
 title: "Honor options[:foreign_type] for polymorphic belongs_to in reflection foreignType"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
