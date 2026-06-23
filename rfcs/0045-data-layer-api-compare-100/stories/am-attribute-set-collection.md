@@ -1,6 +1,6 @@
 ---
 title: "am-attribute-set-collection"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0045-data-layer-api-compare-100"
 cluster: activemodel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4031
 claim: "2026-06-23T19:33:10Z"
 assignee: "am-attribute-set-collection"
 blocked-by: null
