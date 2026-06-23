@@ -33,9 +33,9 @@ invisible to the static type, and `IntrospectedIndex`
 
 ## Acceptance criteria
 
-- [ ] Reconcile the abstract `indexes()` return type (and `IntrospectedIndex`)
+- [x] Reconcile the abstract `indexes()` return type (and `IntrospectedIndex`)
       so `where?`/`orders?` are statically visible, OR document why the cast is
       the faithful choice, converging `PgIndexDefinition` so the PG override
       stays assignable to a widened base type.
-- [ ] No production behavior change; api:compare / test:compare delta
+- [x] No production behavior change; api:compare / test:compare delta
       non-negative.
