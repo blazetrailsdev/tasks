@@ -33,9 +33,9 @@ transactional-callback machinery (PR #3500):
 
 ## Acceptance criteria
 
-- [ ] `touch` on a non-persisted record raises `ActiveRecordError`
+- [x] `touch` on a non-persisted record raises `ActiveRecordError`
       (mirror `_raise_record_not_touched_error`), not `return false`.
-- [ ] `touch` with no timestamp columns and no names returns `true`, matching Rails.
-- [ ] Find/port the corresponding Rails persistence_test.rb assertions; un-skip if a
+- [x] `touch` with no timestamp columns and no names returns `true`, matching Rails.
+- [x] Find/port the corresponding Rails persistence_test.rb assertions; un-skip if a
       matching skipped test exists, otherwise add one with a Rails-verbatim name.
-- [ ] No new api:compare / test:compare gate-mismatches.
+- [x] No new api:compare / test:compare gate-mismatches.
