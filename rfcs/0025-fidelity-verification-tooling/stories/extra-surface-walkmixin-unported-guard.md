@@ -1,6 +1,6 @@
 ---
 title: "api-compare: apply isSourceUnported guard to extra-surface walkMixin (parity with compare.ts)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
