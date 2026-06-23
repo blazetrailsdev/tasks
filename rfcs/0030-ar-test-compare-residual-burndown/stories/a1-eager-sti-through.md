@@ -1,7 +1,7 @@
 ---
 title: "A1e — eager_test: preload/eager-load through STI join models"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
