@@ -69,20 +69,20 @@ default so the only remaining consumers are arel's own tests.
 
 ## Acceptance criteria
 
-- [ ] No `activerecord` production path depends on `defaultQuoter` /
+- [x] No `activerecord` production path depends on `defaultQuoter` /
       `mysqlDefaultQuoter` for value quoting; every production `toSql` /
       value-quote routes through the connection-bound visitor
       (`connection.toSql` / the adapter's own `castBoundValue` / `quote` /
       `quotedBinary`), consistent with RFC 0007.
-- [ ] `predicate-builder.ts:505` force-equality shortcut no longer needs the
+- [x] `predicate-builder.ts:505` force-equality shortcut no longer needs the
       "fails under manager.toSql()'s defaultQuoter" dodge (or the comment is
       updated to reflect the connection-routed reality).
-- [ ] The arel-internal `defaultQuoter` / `mysqlDefaultQuoter` and
+- [x] The arel-internal `defaultQuoter` / `mysqlDefaultQuoter` and
       `setToSqlVisitor` remain (RFC 0007 "What stays") for arel's own
       dialect-agnostic tests; arel's ~41 connection-less `.toSql()` test files
       still pass unchanged.
-- [ ] `api:compare` and `test:compare` deltas are non-negative.
-- [ ] No stubs; no new global mutable connection state (do NOT implement
+- [x] `api:compare` and `test:compare` deltas are non-negative.
+- [x] No stubs; no new global mutable connection state (do NOT implement
       `Table.engine` — that reintroduces the global RFC 0007 is removing).
 
 ## Notes
