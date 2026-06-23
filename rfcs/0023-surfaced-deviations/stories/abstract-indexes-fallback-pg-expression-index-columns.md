@@ -1,6 +1,6 @@
 ---
 title: "Abstract fallback indexes() pg arm omits expression-index columns"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T13:27:45Z"
+assignee: "abstract-indexes-fallback-pg-expression-index-columns"
 blocked-by: null
 ---
 
