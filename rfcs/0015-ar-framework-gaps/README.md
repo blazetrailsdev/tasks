@@ -1,9 +1,9 @@
 ---
 rfc: "0015-ar-framework-gaps"
 title: "ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced)"
-status: active
+status: closed
 created: 2026-06-04
-updated: 2026-06-22
+updated: 2026-06-23
 owner: "@deanmarano"
 packages:
   - activerecord
