@@ -1,6 +1,6 @@
 ---
 title: "Dedup identical URI-aware resolveDatabasePath across node-sqlite and libsql drivers"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
