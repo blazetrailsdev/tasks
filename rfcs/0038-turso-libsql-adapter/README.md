@@ -1,9 +1,9 @@
 ---
 rfc: "0038-turso-libsql-adapter"
 title: "Turso / libSQL SQLite driver (beyond-parity extension)"
-status: active
+status: closed
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-23
 owner: "@deanmarano"
 packages:
   - "activerecord"
