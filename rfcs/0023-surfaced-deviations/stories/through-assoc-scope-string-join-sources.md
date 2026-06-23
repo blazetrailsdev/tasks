@@ -1,6 +1,6 @@
 ---
 title: "Through-association scope raw-string joins dropped from join constraints"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
