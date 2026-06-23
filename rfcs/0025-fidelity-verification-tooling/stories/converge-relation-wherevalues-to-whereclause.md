@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-wherevalues-to-whereclause"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T13:37:39Z"
+assignee: "converge-relation-wherevalues-to-whereclause"
 blocked-by: null
 ---
 
