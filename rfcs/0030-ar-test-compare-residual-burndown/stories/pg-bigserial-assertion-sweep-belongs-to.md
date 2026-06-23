@@ -1,6 +1,6 @@
 ---
 title: "Converge BigInt PK assertions: belongs-to-associations (flip prereq)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
