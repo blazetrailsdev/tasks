@@ -1,6 +1,6 @@
 ---
 title: "Wire public Base.instantiate class method"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0015-ar-framework-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: null
+pr: 4019
 claim: "2026-06-23T16:22:58Z"
 assignee: "wire-public-base-instantiate"
 blocked-by: null

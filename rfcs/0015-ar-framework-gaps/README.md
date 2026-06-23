@@ -58,26 +58,26 @@ virtual-attr fix).
 
 <!-- generated: stories table -->
 
-| ID                                                                                                | Title                                                              | Status  | Est LOC | Cluster        |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------- | ------- | -------------- |
-| [wire-public-base-instantiate](stories/wire-public-base-instantiate.md)                           | Wire public Base.instantiate class method                          | claimed | 60      | —              |
-| [dirty-alias-under-reflection](stories/dirty-alias-under-reflection.md)                           | Alias dirty under reflection                                       | done    | 30      | dirty-tracking |
-| [dirty-attribute-will-change-api](stories/dirty-attribute-will-change-api.md)                     | Public attribute_will_change! API                                  | done    | 40      | dirty-tracking |
-| [dirty-create-time-capture](stories/dirty-create-time-capture.md)                                 | Create-time dirty capture for mass-assigned attributes             | done    | 60      | dirty-tracking |
-| [dirty-custom-changed-in-place-hook](stories/dirty-custom-changed-in-place-hook.md)               | Custom attribute-type changed_in_place? hook                       | done    | 60      | dirty-tracking |
-| [dirty-enum-from-to-casting](stories/dirty-enum-from-to-casting.md)                               | Enum dirty from:/to: casting                                       | done    | 30      | dirty-tracking |
-| [dirty-js-date-coercion](stories/dirty-js-date-coercion.md)                                       | JS Date <-> datetime attribute coercion                            | done    | 40      | dirty-tracking |
-| [dirty-missing-attribute-error](stories/dirty-missing-attribute-error.md)                         | MissingAttributeError on unselected access                         | done    | 40      | dirty-tracking |
-| [dirty-parrot-virtual-attr-registry](stories/dirty-parrot-virtual-attr-registry.md)               | Canonical Parrot virtual attr + model registry                     | done    | 40      | dirty-tracking |
-| [dirty-previous-changes-in-place-mutations](stories/dirty-previous-changes-in-place-mutations.md) | Dirty: previous_changes must include in-place mutations after save | done    | 25      | dirty-tracking |
-| [dirty-query-count-parity](stories/dirty-query-count-parity.md)                                   | No-op UPDATE / query-count parity                                  | done    | 80      | dirty-tracking |
-| [dirty-reflected-in-memory-defaults](stories/dirty-reflected-in-memory-defaults.md)               | Reflected in-memory defaults applied on new                        | done    | 40      | dirty-tracking |
-| [dirty-serialize-content-topic](stories/dirty-serialize-content-topic.md)                         | serialize :content on canonical Topic (+ schema)                   | done    | 60      | dirty-tracking |
-| [dirty-sql-function-defaults](stories/dirty-sql-function-defaults.md)                             | SQL-function column defaults in defineSchema                       | done    | 40      | dirty-tracking |
-| [dirty-tz-datetime-roundtrip](stories/dirty-tz-datetime-roundtrip.md)                             | TZ-aware datetime string round-trip                                | done    | 40      | dirty-tracking |
-| [readonly-collection-method-missing](stories/readonly-collection-method-missing.md)               | Collection proxy method_missing delegation (+ Comment.allAsMethod) | done    | 40      | readonly       |
-| [readonly-collection-proxy-propagation](stories/readonly-collection-proxy-propagation.md)         | Collection-proxy readonly propagation                              | done    | 40      | readonly       |
-| [readonly-hmt-collection-flag](stories/readonly-hmt-collection-flag.md)                           | HMT collection not implicitly marked readonly                      | done    | 60      | readonly       |
+| ID                                                                                                | Title                                                              | Status      | Est LOC | Cluster        |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------- | ------- | -------------- |
+| [wire-public-base-instantiate](stories/wire-public-base-instantiate.md)                           | Wire public Base.instantiate class method                          | in-progress | 60      | —              |
+| [dirty-alias-under-reflection](stories/dirty-alias-under-reflection.md)                           | Alias dirty under reflection                                       | done        | 30      | dirty-tracking |
+| [dirty-attribute-will-change-api](stories/dirty-attribute-will-change-api.md)                     | Public attribute_will_change! API                                  | done        | 40      | dirty-tracking |
+| [dirty-create-time-capture](stories/dirty-create-time-capture.md)                                 | Create-time dirty capture for mass-assigned attributes             | done        | 60      | dirty-tracking |
+| [dirty-custom-changed-in-place-hook](stories/dirty-custom-changed-in-place-hook.md)               | Custom attribute-type changed_in_place? hook                       | done        | 60      | dirty-tracking |
+| [dirty-enum-from-to-casting](stories/dirty-enum-from-to-casting.md)                               | Enum dirty from:/to: casting                                       | done        | 30      | dirty-tracking |
+| [dirty-js-date-coercion](stories/dirty-js-date-coercion.md)                                       | JS Date <-> datetime attribute coercion                            | done        | 40      | dirty-tracking |
+| [dirty-missing-attribute-error](stories/dirty-missing-attribute-error.md)                         | MissingAttributeError on unselected access                         | done        | 40      | dirty-tracking |
+| [dirty-parrot-virtual-attr-registry](stories/dirty-parrot-virtual-attr-registry.md)               | Canonical Parrot virtual attr + model registry                     | done        | 40      | dirty-tracking |
+| [dirty-previous-changes-in-place-mutations](stories/dirty-previous-changes-in-place-mutations.md) | Dirty: previous_changes must include in-place mutations after save | done        | 25      | dirty-tracking |
+| [dirty-query-count-parity](stories/dirty-query-count-parity.md)                                   | No-op UPDATE / query-count parity                                  | done        | 80      | dirty-tracking |
+| [dirty-reflected-in-memory-defaults](stories/dirty-reflected-in-memory-defaults.md)               | Reflected in-memory defaults applied on new                        | done        | 40      | dirty-tracking |
+| [dirty-serialize-content-topic](stories/dirty-serialize-content-topic.md)                         | serialize :content on canonical Topic (+ schema)                   | done        | 60      | dirty-tracking |
+| [dirty-sql-function-defaults](stories/dirty-sql-function-defaults.md)                             | SQL-function column defaults in defineSchema                       | done        | 40      | dirty-tracking |
+| [dirty-tz-datetime-roundtrip](stories/dirty-tz-datetime-roundtrip.md)                             | TZ-aware datetime string round-trip                                | done        | 40      | dirty-tracking |
+| [readonly-collection-method-missing](stories/readonly-collection-method-missing.md)               | Collection proxy method_missing delegation (+ Comment.allAsMethod) | done        | 40      | readonly       |
+| [readonly-collection-proxy-propagation](stories/readonly-collection-proxy-propagation.md)         | Collection-proxy readonly propagation                              | done        | 40      | readonly       |
+| [readonly-hmt-collection-flag](stories/readonly-hmt-collection-flag.md)                           | HMT collection not implicitly marked readonly                      | done        | 60      | readonly       |
 
 ## Deferred / out-of-scope (NOT stories)
 
