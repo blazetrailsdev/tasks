@@ -68,12 +68,12 @@ all accept a hash) as the only intentional deviation.
 
 <!-- generated: stories table -->
 
-| ID                                                                                                                            | Title                                                                                             | Status      | Est LOC | Cluster |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
-| [infer-adapter-at-config-build-for-schemeless-url](stories/infer-adapter-at-config-build-for-schemeless-url.md)               | Infer adapter at config-build time for scheme-less URL shorthand                                  | in-progress | 60      | —       |
-| [establish-with-config-stores-urlconfig-discrete-fields](stories/establish-with-config-stores-urlconfig-discrete-fields.md)   | establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding | done        | 90      | —       |
-| [funnel-autoconnect-through-object-path](stories/funnel-autoconnect-through-object-path.md)                                   | Funnel autoConnect through the single DatabaseConfig object path                                  | done        | 100     | —       |
-| [route-establish-connection-string-hash-through-resolver](stories/route-establish-connection-string-hash-through-resolver.md) | Route establishConnection string/hash branch through resolveConfigForConnection                   | done        | 120     | —       |
+| ID                                                                                                                            | Title                                                                                             | Status | Est LOC | Cluster |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [establish-with-config-stores-urlconfig-discrete-fields](stories/establish-with-config-stores-urlconfig-discrete-fields.md)   | establishWithConfig stores a UrlConfig with discrete fields; audit buildAdapterArg URL-forwarding | done   | 90      | —       |
+| [funnel-autoconnect-through-object-path](stories/funnel-autoconnect-through-object-path.md)                                   | Funnel autoConnect through the single DatabaseConfig object path                                  | done   | 100     | —       |
+| [infer-adapter-at-config-build-for-schemeless-url](stories/infer-adapter-at-config-build-for-schemeless-url.md)               | Infer adapter at config-build time for scheme-less URL shorthand                                  | done   | 60      | —       |
+| [route-establish-connection-string-hash-through-resolver](stories/route-establish-connection-string-hash-through-resolver.md) | Route establishConnection string/hash branch through resolveConfigForConnection                   | done   | 120     | —       |
 
 ## Non-goals
 

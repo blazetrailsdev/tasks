@@ -1,6 +1,6 @@
 ---
 title: "Infer adapter at config-build time for scheme-less URL shorthand"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
