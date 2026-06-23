@@ -39,10 +39,10 @@ Functionally equivalent results, but a structural/perf deviation.
 
 ## Acceptance criteria
 
-- [ ] On the class-method delegation branch in both `wrapWithScopeProxy` and
+- [x] On the class-method delegation branch in both `wrapWithScopeProxy` and
       `wrapCollectionProxy`, after the guard passes and when the method is not in
       `uncacheableMethods`, register it via `generateRelationMethod` (mirroring
       `delegation.rb:127-129`).
-- [ ] Subsequent calls resolve through the generated method rather than the
+- [x] Subsequent calls resolve through the generated method rather than the
       proxy miss path.
-- [ ] No behavior change for uncacheable methods (`to_a`/`records`/`inspect`).
+- [x] No behavior change for uncacheable methods (`to_a`/`records`/`inspect`).
