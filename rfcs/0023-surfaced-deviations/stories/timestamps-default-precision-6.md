@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition#timestamps should default precision: 6 when adapter supports datetime-with-precision"
-status: claimed
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 40
-pr: null
+pr: 3068
 claim: "2026-06-23T01:55:16Z"
 assignee: "timestamps-default-precision-6"
 blocked-by: null
