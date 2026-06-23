@@ -1,6 +1,6 @@
 ---
 title: "Wire locking/optimistic _createRecord into the create path (thread attribute_names)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: 3949
 claim: "2026-06-23T01:39:16Z"
 assignee: "thread-attribute-names-through-create-record"
 blocked-by: null
