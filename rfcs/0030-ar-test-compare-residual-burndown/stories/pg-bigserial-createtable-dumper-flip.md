@@ -15,6 +15,9 @@ deps:
   - pg-untyped-pk-int8-deserialization
   - pg-bigint-pk-number-fk-association-key-match
   - pg-record-id-bigint-sweep-residual-55
+  - pg-bigserial-assertion-sweep-querycache-associations
+  - pg-bigserial-assertion-sweep-bind-autosave-nullrel-reserved
+  - pg-bigserial-assertion-sweep-tail
 deps-rfc: []
 est-loc: 60
 priority: 30
