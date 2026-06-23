@@ -72,12 +72,12 @@ the trendline.
 
 <!-- generated: stories table -->
 
-| ID                                                                                | Title                                                                                      | Status  | Est LOC | Cluster      |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------- | ------- | ------------ |
-| [pg-typemap-init-param-type-hole](stories/pg-typemap-init-param-type-hole.md)     | Remove HashLookupTypeMap cast in PG static initializeTypeMap (reconcile with base TypeMap) | claimed | 80      | —            |
-| [small-followups-bundle](stories/small-followups-bundle.md)                       | Type-audit small follow-ups bundle (~150 LOC)                                              | done    | 150     | type-cleanup |
-| [w1b-variadic-rest-overloads](stories/w1b-variadic-rest-overloads.md)             | W1b — variadic rest overloads (drop relation.ts as-any spreads)                            | done    | 100     | type-cleanup |
-| [w4-reflection-discriminated-union](stories/w4-reflection-discriminated-union.md) | W4 — Reflection discriminated union (deferred, high risk)                                  | done    | 300     | type-cleanup |
+| ID                                                                                | Title                                                                                      | Status      | Est LOC | Cluster      |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------- | ------- | ------------ |
+| [pg-typemap-init-param-type-hole](stories/pg-typemap-init-param-type-hole.md)     | Remove HashLookupTypeMap cast in PG static initializeTypeMap (reconcile with base TypeMap) | in-progress | 80      | —            |
+| [small-followups-bundle](stories/small-followups-bundle.md)                       | Type-audit small follow-ups bundle (~150 LOC)                                              | done        | 150     | type-cleanup |
+| [w1b-variadic-rest-overloads](stories/w1b-variadic-rest-overloads.md)             | W1b — variadic rest overloads (drop relation.ts as-any spreads)                            | done        | 100     | type-cleanup |
+| [w4-reflection-discriminated-union](stories/w4-reflection-discriminated-union.md) | W4 — Reflection discriminated union (deferred, high risk)                                  | done        | 300     | type-cleanup |
 
 ## Changelog
 
