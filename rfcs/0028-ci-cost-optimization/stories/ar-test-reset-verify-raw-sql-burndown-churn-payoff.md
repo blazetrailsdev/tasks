@@ -1,6 +1,6 @@
 ---
 title: "Verify the dropAllTables distinct-table fan-out actually shrank after the raw-SQL teardown burndown"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
