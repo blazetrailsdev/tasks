@@ -1,6 +1,6 @@
 ---
 title: "Association scope-result caching on proxies + Post comments newest extension"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 3969
 claim: "2026-06-23T11:02:40Z"
 assignee: "association-scope-result-caching-and-comments-newest"
 blocked-by: null
