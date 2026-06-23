@@ -1,9 +1,9 @@
 ---
 rfc: "0012-adapter-test-ci"
 title: "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery"
-status: draft
+status: closed
 created: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-23
 owner: "@deanmarano"
 packages:
   - activerecord

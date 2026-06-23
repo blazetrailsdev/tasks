@@ -15,7 +15,7 @@
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | active | @deanmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @deanmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | closed | @deanmarano | activerecord |
-| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | draft | @deanmarano | activerecord |
+| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | closed | @deanmarano | activerecord |
 | [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @deanmarano | activerecord |
 | [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @deanmarano | activerecord |
 | [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | active | @deanmarano | activerecord |
