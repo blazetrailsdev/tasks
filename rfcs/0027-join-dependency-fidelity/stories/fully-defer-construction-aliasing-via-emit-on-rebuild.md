@@ -1,7 +1,7 @@
 ---
 title: "Fully defer within-dependency and through-path join aliasing to emit-time (rebuild ON at emit)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T14:50:22Z"
+assignee: "fully-defer-construction-aliasing-via-emit-on-rebuild"
 blocked-by: null
 ---
 
