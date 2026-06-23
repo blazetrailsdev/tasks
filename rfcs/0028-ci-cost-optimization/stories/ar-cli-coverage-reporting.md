@@ -1,6 +1,6 @@
 ---
 title: "Add reporting-only coverage for activerecord-cli"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3964
 claim: "2026-06-23T10:45:43Z"
 assignee: "ar-cli-coverage-reporting"
 blocked-by: null
