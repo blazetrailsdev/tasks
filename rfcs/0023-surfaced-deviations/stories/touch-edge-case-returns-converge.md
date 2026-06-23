@@ -1,7 +1,7 @@
 ---
 title: "touch edge-case returns diverge from Rails (not-persisted, empty-names)"
-status: ready
-updated: 2026-06-16
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T02:03:16Z"
+assignee: "touch-edge-case-returns-converge"
 blocked-by: null
 ---
 
