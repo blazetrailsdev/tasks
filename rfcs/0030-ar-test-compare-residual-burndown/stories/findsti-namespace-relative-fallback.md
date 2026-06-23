@@ -1,6 +1,6 @@
 ---
 title: "findsti-namespace-relative-fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4005
 claim: "2026-06-23T14:14:30Z"
 assignee: "findsti-namespace-relative-fallback"
 blocked-by: null
