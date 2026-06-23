@@ -1,6 +1,6 @@
 ---
 title: "Migrate _preloadedAssociations shadow readers in associations.ts to read from the real CollectionProxy/Association"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T16:52:38Z"
+assignee: "migrate-preloaded-associations-shadow-readers-to-proxy"
 blocked-by: null
 ---
 
