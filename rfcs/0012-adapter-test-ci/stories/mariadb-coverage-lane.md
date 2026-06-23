@@ -1,7 +1,7 @@
 ---
 title: "MariaDB coverage lane — exercise the never-run MariaDB-specific branches"
-status: blocked
-updated: 2026-06-10
+status: ready
+updated: 2026-06-23
 rfc: "0012-adapter-test-ci"
 cluster: ci-lane
 deps:
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: 1000008
 pr: null
-claim: "2026-06-10T16:08:21Z"
-assignee: "mariadb-coverage-lane"
-blocked-by: "Postponed (not declined): tests already auto-detect MariaDB via VERSION() and gate themselves, so no test-code work is needed — the only deliverable is a way to run the MySQL-family adapter dirs against a live MariaDB (CI lane or local-verify script). Deferring the second MySQL-family runner until the rest of the adapter-dir/CI work settles; owner does not want to add CI runner cost yet. MariaDB-specific arms (analyzeWithoutExplain / EXPLAIN EXTENDED, OptimizerHints MariaDB skip, checkConstraints _mariadb filter+unescape, isMariaDb charset-collation arm) remain logic-only/unverified in the meantime. Unblock when ready to add the lane."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
