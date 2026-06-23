@@ -1,6 +1,6 @@
 ---
 title: "Converge association/through/inverse key-match for BigInt PK vs number FK (flip blocker)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
