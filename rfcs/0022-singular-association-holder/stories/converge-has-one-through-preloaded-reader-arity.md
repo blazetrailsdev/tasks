@@ -1,12 +1,12 @@
 ---
 title: "converge-has-one-through-preloaded-reader-arity"
-status: ready
+status: draft
 updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
