@@ -1,6 +1,6 @@
 ---
 title: "arel-node-accessor-aliases"
-status: draft
+status: ready
 updated: 2026-06-23
 rfc: "0045-data-layer-api-compare-100"
 cluster: arel
