@@ -1,18 +1,19 @@
 ---
-title: "Eliminate per-file mass DROP TABLE teardown churn (86k drops/run)"
+title: "Spike: locate the dominant DROP TABLE source in AR test teardown (86k/run)"
 status: ready
 updated: 2026-06-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 250
+est-loc: 60
 priority: null
 pr: null
 claim: null
 assignee: null
 blocked-by: null
 ---
+
 
 ## Context
 
@@ -37,11 +38,15 @@ cuts the merge bar.
 
 ## Acceptance criteria
 
-- Spike: identify which reset/teardown path issues the bulk of the 86k drops
-  (per-file `dropExisting`, `afterAll(dropAllTables)`, or schema-repair), with a
-  measured breakdown (reuse the DDL_PROFILE instrumentation from PR #3904).
-- Implement a shape-stable reset (TRUNCATE-only when the table shape matches the
-  canonical schema) OR clone-a-fresh-DB-per-file, eliminating the defensive
-  full-canonical DROP on the common path. Keep DROP only where shape actually drifted.
-- No fidelity regression (canonical schema/fixtures unchanged) and no new
-  shared-DB flakes; re-measure DROP count and AR job wall-clock to confirm the win.
+- Reuse the DDL_PROFILE instrumentation from PR #3904 to produce a **measured
+  per-path breakdown** of the 86k drops: how many originate from per-file
+  `defineSchema(..., {dropExisting:true})`, `afterAll(dropAllTables)`, and
+  `repairWorkerSchema` respectively.
+- Recommend ONE reset strategy with rationale: shape-stable TRUNCATE-only (DROP
+  only on detected shape drift) **vs** clone-a-fresh-DB-per-file. Note the
+  flake/fidelity risk of each and which test-helpers files each touches.
+- Output: an `audit-report` (no production code change) decomposing the
+  implementation into appropriately-sized follow-on stories. The implementation
+  story `ar-test-reset-shape-stable-impl` is the first of these and depends on
+  this spike.
+- Done-when-closed (spike): the PR may be closed-unmerged once the report lands.
