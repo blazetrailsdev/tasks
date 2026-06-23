@@ -1,6 +1,6 @@
 ---
 title: "Delegation: enable delegate_base_methods ban suite-wide in AR test harness (mirror helper.rb:29)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3996
 claim: "2026-06-23T13:42:38Z"
 assignee: "delegate-base-methods-ban-suite-wide"
 blocked-by: null
