@@ -1,6 +1,6 @@
 ---
 title: "Delegation: cache delegated class methods via generate_relation_method (delegation.rb:127-129)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3998
 claim: "2026-06-23T13:47:40Z"
 assignee: "delegation-generate-relation-method-cache"
 blocked-by: null
