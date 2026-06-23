@@ -1,6 +1,6 @@
 ---
 title: "Route AssociationScope#applyScope qualified WHERE fully through predicate-builder nested-hash (drop hand-built Arel node)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T10:45:35Z"
+assignee: "apply-scope-qualified-where-nested-hash-convergence"
 blocked-by: null
 ---
 
