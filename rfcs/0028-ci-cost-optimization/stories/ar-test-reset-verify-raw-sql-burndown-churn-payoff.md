@@ -1,6 +1,6 @@
 ---
 title: "Verify the dropAllTables distinct-table fan-out actually shrank after the raw-SQL teardown burndown"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3995
 claim: "2026-06-23T13:32:53Z"
 assignee: "ar-test-reset-verify-raw-sql-burndown-churn-payoff"
 blocked-by: null
