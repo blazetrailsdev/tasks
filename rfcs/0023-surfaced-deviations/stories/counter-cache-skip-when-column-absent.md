@@ -1,6 +1,6 @@
 ---
 title: "Skip counter-cache update when the counter column does not exist (Rails has_cached_counter?)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 3983
 claim: "2026-06-23T12:07:41Z"
 assignee: "counter-cache-skip-when-column-absent"
 blocked-by: null
