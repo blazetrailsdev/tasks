@@ -48,4 +48,4 @@
 | [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | active | @your-handle | activerecord |
 | [0043-bespoke-test-bloat-burndown](rfcs/0043-bespoke-test-bloat-burndown/README.md) | ActiveRecord bespoke TS-only test-bloat burndown | draft | @deanmarano | activerecord |
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | active | @deanmarano | activerecord |
-| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | draft | @deanmarano | arel, activerecord, activemodel |
+| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
