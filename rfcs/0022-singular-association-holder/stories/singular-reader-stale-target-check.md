@@ -37,8 +37,8 @@ Surfaced as a pre-existing deviation during PR #3611
 
 ## Acceptance criteria
 
-- [ ] `SingularAssociation#reader` checks `isStaleTarget()` when `this.loaded`,
+- [x] `SingularAssociation#reader` checks `isStaleTarget()` when `this.loaded`,
       and calls `loadTarget()` (returning a Promise, consistent with the
       lazy-load path introduced in PR #3611) when the target is stale.
-- [ ] Existing strict-loading tests pass.
-- [ ] `test:compare` delta is non-negative.
+- [x] Existing strict-loading tests pass.
+- [x] `test:compare` delta is non-negative.
