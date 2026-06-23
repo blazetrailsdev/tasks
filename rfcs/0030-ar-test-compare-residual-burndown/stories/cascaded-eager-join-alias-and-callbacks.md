@@ -1,14 +1,14 @@
 ---
 title: "cascaded-eager-join-alias-and-callbacks"
-status: claimed
-updated: 2026-06-22
+status: in-progress
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 3967
 claim: "2026-06-22T22:19:17Z"
 assignee: "cascaded-eager-join-alias-and-callbacks"
 blocked-by: null
