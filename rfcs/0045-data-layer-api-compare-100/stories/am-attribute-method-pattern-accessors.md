@@ -1,6 +1,6 @@
 ---
 title: "am-attribute-method-pattern-accessors"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0045-data-layer-api-compare-100"
 cluster: activemodel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4030
 claim: "2026-06-23T19:12:29Z"
 assignee: "am-attribute-method-pattern-accessors"
 blocked-by: null
