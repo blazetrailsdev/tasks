@@ -1,6 +1,6 @@
 ---
 title: "CI guard: scaffold generators stay byte-identical to 0000-template"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4004
 claim: "2026-06-23T14:49:50Z"
 assignee: "guard-scaffold-template-byte-fidelity"
 blocked-by: null
