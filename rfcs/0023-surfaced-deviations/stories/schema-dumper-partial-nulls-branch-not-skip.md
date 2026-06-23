@@ -1,6 +1,6 @@
 ---
 title: "Branch schema-dump partial-index/nulls-not-distinct assertions instead of skipping"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
