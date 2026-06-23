@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-table-teardown raw-SQL grandfather list to zero (Path D)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:22:44Z"
+assignee: "ar-test-reset-raw-sql-teardown-burndown"
 blocked-by: null
 ---
 
