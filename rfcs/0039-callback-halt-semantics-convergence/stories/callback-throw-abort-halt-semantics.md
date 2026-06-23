@@ -1,17 +1,17 @@
 ---
 title: 'throw :abort halt semantics — converge throw "abort" vs return false'
-status: blocked
-updated: 2026-06-16
+status: ready
+updated: 2026-06-23
 rfc: "0039-callback-halt-semantics-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: 10
-pr: 3492
-claim: "2026-06-16T19:36:44Z"
-assignee: "callback-throw-abort-halt-semantics"
-blocked-by: "Superseded by callback-abort-sentinel-control-flow. Approach (ratify return false) is a Rails-<=4 deviation; modern Rails halts only on throw :abort, not return false. PR #3492 closed. Fixture conversion folded into the sentinel story."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
