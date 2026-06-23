@@ -1,7 +1,7 @@
 ---
 title: "Converge PG addUniqueConstraint through create_alter_table/schema_creation"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:47:40Z"
+assignee: "converge-pg-add-unique-constraint-via-alter-table"
 blocked-by: null
 ---
 
