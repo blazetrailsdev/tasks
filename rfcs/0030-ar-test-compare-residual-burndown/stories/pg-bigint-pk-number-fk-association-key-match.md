@@ -46,13 +46,13 @@ mirroring Rails (Ruby Integer == regardless of width).
 
 ## Acceptance criteria
 
-- [ ] With the bigserial flip applied locally on the PG lane, association
+- [x] With the bigserial flip applied locally on the PG lane, association
       preloading / in-memory matching returns the correct rows when the owner PK
       is `BigInt` and the child FK is `number` (and vice versa).
-- [ ] The `[] length` / `null not to be null` / `loadRecordsInBatch` count
+- [x] The `[] length` / `null not to be null` / `loadRecordsInBatch` count
       failures in associations + eager-loading + through-association test files
       go green. Test names stay verbatim.
-- [ ] Green on all three lanes. Keep PR(s) <300 LOC; group by subsystem, file
+- [x] Green on all three lanes. Keep PR(s) <300 LOC; group by subsystem, file
       additional stories rather than fanning out PRs from one agent.
 
 ## Notes
