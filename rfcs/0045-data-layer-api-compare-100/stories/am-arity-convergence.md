@@ -1,6 +1,6 @@
 ---
 title: "am-arity-convergence"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0045-data-layer-api-compare-100"
 cluster: activemodel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4028
 claim: "2026-06-23T18:09:48Z"
 assignee: "am-arity-convergence"
 blocked-by: null
