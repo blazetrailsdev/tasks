@@ -1,7 +1,7 @@
 ---
 title: "update([dup ids]) shares one instance vs Rails' distinct objects"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T02:11:17Z"
+assignee: "update-duplicated-ids-shared-instance"
 blocked-by: null
 ---
 
