@@ -14,7 +14,6 @@ assignee: null
 blocked-by: null
 ---
 
-
 ## Context
 
 DDL-timing audit (PR #3904, audit `ddl-timing-profile`) profiled the full AR
