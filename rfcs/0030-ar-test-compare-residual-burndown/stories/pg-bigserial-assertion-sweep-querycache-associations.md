@@ -1,6 +1,6 @@
 ---
 title: "Converge BigInt PK assertions: query-cache + associations (flip prereq)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 4026
 claim: "2026-06-23T17:50:58Z"
 assignee: "pg-bigserial-assertion-sweep-querycache-associations"
 blocked-by: null
