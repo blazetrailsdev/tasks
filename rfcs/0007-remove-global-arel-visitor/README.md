@@ -95,16 +95,16 @@ merge.
 
 <!-- generated: stories table -->
 
-| ID                                                                                            | Title                                                                                           | Status      | Est LOC | Cluster      |
-| --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------- | ------- | ------------ |
-| [force-equality-bind-convergence](stories/force-equality-bind-convergence.md)                 | force-equality-bind-convergence                                                                 | ready       | null    | —            |
-| [drop-default-quoter-production-reliance](stories/drop-default-quoter-production-reliance.md) | Drop activerecord reliance on arel default quoters — route value quoting through the connection | in-progress | null    | —            |
-| [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                                 | Phase A1 — route DDL/metadata toSql callers through connection.toSql                            | done        | 150     | arel-visitor |
-| [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                         | Phase A2 — make persistence.ts + base.ts ternary callers unconditional                          | done        | 150     | arel-visitor |
-| [a3-calculations-statement-cache-insert](stories/a3-calculations-statement-cache-insert.md)   | Phase A3 — route calculations / statement-cache / insert-all through connection.toSql           | done        | 150     | arel-visitor |
-| [a4-sweep-remaining-callers](stories/a4-sweep-remaining-callers.md)                           | Phase A4 — sweep remaining direct .toSql() production callers                                   | done        | 100     | arel-visitor |
-| [b-drop-global-sync-sites](stories/b-drop-global-sync-sites.md)                               | Phase B — drop AR's global-visitor sync sites                                                   | done        | 80      | arel-visitor |
-| [c-collapse-into-bootstrap](stories/c-collapse-into-bootstrap.md)                             | Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)                          | done        | 50      | arel-visitor |
+| ID                                                                                            | Title                                                                                           | Status | Est LOC | Cluster      |
+| --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------ | ------- | ------------ |
+| [force-equality-bind-convergence](stories/force-equality-bind-convergence.md)                 | force-equality-bind-convergence                                                                 | ready  | null    | —            |
+| [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                                 | Phase A1 — route DDL/metadata toSql callers through connection.toSql                            | done   | 150     | arel-visitor |
+| [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                         | Phase A2 — make persistence.ts + base.ts ternary callers unconditional                          | done   | 150     | arel-visitor |
+| [a3-calculations-statement-cache-insert](stories/a3-calculations-statement-cache-insert.md)   | Phase A3 — route calculations / statement-cache / insert-all through connection.toSql           | done   | 150     | arel-visitor |
+| [a4-sweep-remaining-callers](stories/a4-sweep-remaining-callers.md)                           | Phase A4 — sweep remaining direct .toSql() production callers                                   | done   | 100     | arel-visitor |
+| [b-drop-global-sync-sites](stories/b-drop-global-sync-sites.md)                               | Phase B — drop AR's global-visitor sync sites                                                   | done   | 80      | arel-visitor |
+| [c-collapse-into-bootstrap](stories/c-collapse-into-bootstrap.md)                             | Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)                          | done   | 50      | arel-visitor |
+| [drop-default-quoter-production-reliance](stories/drop-default-quoter-production-reliance.md) | Drop activerecord reliance on arel default quoters — route value quoting through the connection | done   | null    | —            |
 
 ## Changelog
 
