@@ -1,6 +1,6 @@
 ---
 title: "Delegation: enable delegate_base_methods ban suite-wide in AR test harness (mirror helper.rb:29)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
