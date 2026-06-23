@@ -1,6 +1,6 @@
 ---
 title: "Add reporting-only coverage for activerecord-cli"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
