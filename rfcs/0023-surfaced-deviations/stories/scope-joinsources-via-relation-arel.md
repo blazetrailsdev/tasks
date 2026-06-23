@@ -1,7 +1,7 @@
 ---
 title: "Materialize scope join sources via Relation#arel() instead of _joinValues"
-status: ready
-updated: 2026-06-20
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T00:35:15Z"
+assignee: "scope-joinsources-via-relation-arel"
 blocked-by: null
 ---
 
