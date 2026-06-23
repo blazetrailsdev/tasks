@@ -62,8 +62,8 @@ Reference files:
       `anonymousClass`, namespaced (`::`), and STI resolution correct.
 - [ ] The two-file repro fails before, passes after:
       `pnpm vitest run --no-file-parallelism
-  packages/activerecord/src/associations/nested-through-associations.test.ts
-  packages/activerecord/src/associations.test.ts`
+packages/activerecord/src/associations/nested-through-associations.test.ts
+packages/activerecord/src/associations.test.ts`
 - [ ] Remove the PreloaderTest `beforeEach` cache-reset band-aid added in PR #4006
       (the framework fix makes it unnecessary) and confirm the repro still passes.
 - [ ] No regression in the broad associations/reflection suites; verify the hot-path
