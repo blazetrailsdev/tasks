@@ -1,7 +1,7 @@
 ---
 title: "Converge resolveDatabasePath relative file: URI handling across SQLite drivers"
-status: ready
-updated: 2026-06-19
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T01:23:16Z"
+assignee: "sqlite-resolvedatabasepath-relative-file-uri-parity"
 blocked-by: null
 ---
 
