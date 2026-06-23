@@ -1,6 +1,6 @@
 ---
 title: "Abstract SchemaStatements#indexes() return type omits where/orders carried at runtime"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:27:40Z"
+assignee: "abstract-indexes-return-type-omits-where-orders"
 blocked-by: null
 ---
 
