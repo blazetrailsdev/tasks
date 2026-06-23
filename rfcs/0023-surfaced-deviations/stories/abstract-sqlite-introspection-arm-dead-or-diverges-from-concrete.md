@@ -1,6 +1,6 @@
 ---
 title: "Abstract SchemaStatements sqlite introspection arm is dead/divergent vs concrete SQLite3 adapter"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
