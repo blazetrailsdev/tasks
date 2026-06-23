@@ -1,9 +1,9 @@
 ---
 rfc: "0009-type-audit"
 title: "ActiveRecord type-audit remainder (W1b + follow-ups + W4)"
-status: active
+status: closed
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-23
 owner: "@deanmarano"
 packages:
   - activerecord
