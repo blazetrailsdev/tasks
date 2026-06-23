@@ -46,11 +46,11 @@ individually (the adapter method shadows the abstract one).
 
 ## Acceptance criteria
 
-- [ ] `renameColumn` invalidates the touched table's schema-cache entry
+- [x] `renameColumn` invalidates the touched table's schema-cache entry
       (`clearDataSourceCacheBang`) before mutating, in the abstract method AND
       every adapter override (PG/MySQL/SQLite), matching the sibling DDL methods.
-- [ ] `renameIndex` invalidates likewise (abstract + overrides).
-- [ ] A test (in the always-warm harness) asserts a sync `columnsHash()` after
+- [x] `renameIndex` invalidates likewise (abstract + overrides).
+- [x] A test (in the always-warm harness) asserts a sync `columnsHash()` after
       `renameColumn`, and `indexes` after `renameIndex`, reflects the new name
       and not the stale one.
-- [ ] Green on SQLite canonical; PG/MySQL per gate.
+- [x] Green on SQLite canonical; PG/MySQL per gate.
