@@ -1,7 +1,7 @@
 ---
 title: "Converge PG buildChangeColumnDefinition: drop pre-populated sqlType to match Rails"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:52:43Z"
+assignee: "converge-pg-build-change-column-definition-drop-prepopulated-sqltype"
 blocked-by: null
 ---
 
