@@ -1,6 +1,6 @@
 ---
 title: "writeFromUser raises for any unknown column name, not just null (full Rails strictness)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
