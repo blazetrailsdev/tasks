@@ -1,13 +1,13 @@
 ---
 title: "createThroughAssociation: write source _type verbatim from source_type, drop inferred polymorphicName fallback"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-23
 rfc: "0040-through-association-source-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
