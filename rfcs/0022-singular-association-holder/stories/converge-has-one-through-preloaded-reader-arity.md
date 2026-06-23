@@ -1,12 +1,12 @@
 ---
 title: "converge-has-one-through-preloaded-reader-arity"
-status: ready
+status: draft
 updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -48,5 +48,5 @@ during convergence.
       including preload-with-`availableRecords`.
 - [ ] Remove the `Array.isArray(holderTarget) ? holderTarget[0] : holderTarget`
       unwrap workaround in `associations.test.ts` (`preload with available
-  records with through association`) and assert the holder target directly.
+records with through association`) and assert the holder target directly.
 - [ ] api:compare + test:compare deltas non-negative.
