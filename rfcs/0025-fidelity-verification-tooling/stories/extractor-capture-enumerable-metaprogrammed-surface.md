@@ -1,6 +1,6 @@
 ---
 title: "extractor-capture-enumerable-metaprogrammed-surface"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
