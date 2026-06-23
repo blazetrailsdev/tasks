@@ -1,6 +1,6 @@
 ---
 title: "Spike: locate the dominant DROP TABLE source in AR test teardown (86k/run)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
