@@ -48,10 +48,10 @@ block timing added in #3721 is already Rails-faithful (yields before save).
 
 ## Acceptance criteria
 
-- [ ] `SingularAssociation#_createRecord` calls `setNewRecord` **after** `save`,
+- [x] `SingularAssociation#_createRecord` calls `setNewRecord` **after** `save`,
       matching Rails' ordering — OR document why trails must diverge (FK not set
       by buildRecord alone) as tracked-pending-convergence with evidence.
-- [ ] has_one / belongs_to create + createBang still persist the FK / inverse
+- [x] has_one / belongs_to create + createBang still persist the FK / inverse
       correctly (inverse-associations + has-one-associations + belongs-to suites
       stay green).
-- [ ] No api:compare / test:compare regression.
+- [x] No api:compare / test:compare regression.
