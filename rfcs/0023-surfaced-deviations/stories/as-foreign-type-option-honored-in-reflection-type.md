@@ -48,7 +48,7 @@ Not exercised by the canonical fixtures (none declare `foreign_type:` on an
 
 ## Acceptance criteria
 
-- [ ] `foreignType` (and therefore `type`) honors `options.foreignType` for the
+- [x] `foreignType` (and therefore `type`) honors `options.foreignType` for the
       `as:` case, mirroring reflection.rb:519: `options[:foreign_type] || "#{as}_type"`.
-- [ ] Add coverage for an `as:` association declared with an explicit
+- [x] Add coverage for an `as:` association declared with an explicit
       `foreign_type:` (direct load + through-chain type predicate).
