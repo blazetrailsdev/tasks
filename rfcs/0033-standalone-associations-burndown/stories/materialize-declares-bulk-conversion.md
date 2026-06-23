@@ -1,6 +1,6 @@
 ---
 title: "Materialize declare accessors for PR #3672's bulk-converted in-class associations"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T15:41:25Z"
+assignee: "materialize-declares-bulk-conversion"
 blocked-by: null
 ---
 
