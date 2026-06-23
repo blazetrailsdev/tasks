@@ -1,6 +1,6 @@
 ---
 title: "dropAllTables: reconcile signature cache instead of blanket clear (Path C)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
