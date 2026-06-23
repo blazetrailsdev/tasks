@@ -1,6 +1,6 @@
 ---
 title: "Remove HashLookupTypeMap cast in PG static initializeTypeMap (reconcile with base TypeMap)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0009-type-audit"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T17:30:10Z"
+assignee: "pg-typemap-init-param-type-hole"
 blocked-by: null
 ---
 
