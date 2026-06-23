@@ -269,8 +269,9 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 
 <!-- generated: stories table -->
 
-| ID  | Title | Status | Est LOC | Cluster |
-| --- | ----- | ------ | ------- | ------- |
+| ID                                                                                                                      | Title                                                                                        | Status | Est LOC | Cluster |
+| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | draft  | 30      | —       |
 
 ## Changelog
 
