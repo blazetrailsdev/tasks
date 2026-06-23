@@ -1,6 +1,6 @@
 ---
 title: "Abstract SchemaStatements#indexes() return type omits where/orders carried at runtime"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
