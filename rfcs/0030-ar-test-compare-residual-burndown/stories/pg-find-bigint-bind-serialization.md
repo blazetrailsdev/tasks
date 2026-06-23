@@ -1,6 +1,6 @@
 ---
 title: "PG bigserial: find(BigInt) bind serialization throws under flip"
-status: ready
+status: draft
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
