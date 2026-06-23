@@ -37,9 +37,9 @@ relation.rb `eager_loading?`; finder_methods.rb:457 `apply_join_dependency`.
 
 ## Acceptance criteria
 
-- [ ] A regression test (canonical Post/Author/Comment models + fixtures) asserting
+- [x] A regression test (canonical Post/Author/Comment models + fixtures) asserting
       `Post.includes("comments","author").joins("comments")` eager-loads BOTH
       associations in a single query (`assertQueriesCount(1)`), with `comments`
       satisfied by the INNER join and `author` by an OUTER join, and both readable
       under `assertNoQueries`.
-- [ ] No new gate-mismatches.
+- [x] No new gate-mismatches.
