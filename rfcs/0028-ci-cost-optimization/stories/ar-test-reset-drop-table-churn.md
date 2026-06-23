@@ -1,7 +1,7 @@
 ---
 title: "Spike: locate the dominant DROP TABLE source in AR test teardown (86k/run)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T02:19:17Z"
+assignee: "ar-test-reset-drop-table-churn"
 blocked-by: null
 ---
 
