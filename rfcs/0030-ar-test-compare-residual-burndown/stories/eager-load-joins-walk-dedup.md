@@ -1,6 +1,6 @@
 ---
 title: "eager-load-joins-walk-dedup"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3990
 claim: "2026-06-23T13:02:39Z"
 assignee: "eager-load-joins-walk-dedup"
 blocked-by: null
