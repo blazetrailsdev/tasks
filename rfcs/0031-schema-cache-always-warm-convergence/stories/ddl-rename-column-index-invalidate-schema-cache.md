@@ -1,6 +1,6 @@
 ---
 title: "renameColumn/renameIndex must invalidate the schema cache (always-warm latent staleness)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 3985
 claim: "2026-06-23T12:22:41Z"
 assignee: "ddl-rename-column-index-invalidate-schema-cache"
 blocked-by: null
