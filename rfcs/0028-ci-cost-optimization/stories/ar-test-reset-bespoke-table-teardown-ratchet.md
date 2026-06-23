@@ -1,6 +1,6 @@
 ---
 title: "Tighten require-table-teardown ratchet to curb leaked bespoke tables (Path D)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3965
 claim: "2026-06-23T10:45:52Z"
 assignee: "ar-test-reset-bespoke-table-teardown-ratchet"
 blocked-by: null
