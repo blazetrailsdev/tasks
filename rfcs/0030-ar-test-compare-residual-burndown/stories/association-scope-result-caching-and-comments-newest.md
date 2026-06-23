@@ -54,6 +54,6 @@ landed there, but these scope-cache cases were left skipped with rationale.
       `post.comments.<scope>()` returns a fresh relation (`assert_not_same`).
       No separate cache layer is needed or faithful.
 - [x] Un-skip `scopes to get newest` (#3969). `scopes are cached on
-  associations`, `scopes with arguments are cached on associations`, and
+associations`, `scopes with arguments are cached on associations`, and
       `scopes are reset on association reload` were already un-skipped via the
       query cache in #3877.
