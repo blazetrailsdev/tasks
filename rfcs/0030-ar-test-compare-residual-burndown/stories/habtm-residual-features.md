@@ -1,7 +1,7 @@
 ---
 title: "habtm: polymorphic-through, alternate-db, belongs_to-required"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
