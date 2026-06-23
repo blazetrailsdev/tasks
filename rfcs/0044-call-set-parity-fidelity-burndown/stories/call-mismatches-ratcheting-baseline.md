@@ -1,6 +1,6 @@
 ---
 title: "Ratcheting baseline + CI gate for call-mismatches advisory"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: infra
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T15:13:45Z"
+assignee: "call-mismatches-ratcheting-baseline"
 blocked-by: null
 ---
 
