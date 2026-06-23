@@ -1,6 +1,6 @@
 ---
 title: "singular association loads recompile scope SQL each time (no association_scope_cache statement cache)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
