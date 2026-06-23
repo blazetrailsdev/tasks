@@ -37,10 +37,10 @@ reachable, just lower-fidelity than the concrete adapter.
 
 ## Acceptance criteria
 
-- [ ] Converge the abstract `indexes()` sqlite arm's result shape to
+- [x] Converge the abstract `indexes()` sqlite arm's result shape to
       `sqlite3/schema-statements.ts` `sqliteIndexes`: skip `sqlite_*` indexes,
       recover WHERE/expression indexes from the index SQL, handle nameless
       (expression) columns and DESC orders — or factor `sqliteIndexes` so both
       paths share it.
-- [ ] No production behavior change for the concrete SQLite3 adapter path.
-- [ ] api:compare / test:compare delta non-negative.
+- [x] No production behavior change for the concrete SQLite3 adapter path.
+- [x] api:compare / test:compare delta non-negative.
