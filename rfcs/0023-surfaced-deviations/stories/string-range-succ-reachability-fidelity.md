@@ -1,6 +1,6 @@
 ---
 title: "rangeIncludesStringValue: faithful String#succ reachability for mixed character classes"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 40
-pr: null
+pr: 3948
 claim: "2026-06-23T01:31:16Z"
 assignee: "string-range-succ-reachability-fidelity"
 blocked-by: null
