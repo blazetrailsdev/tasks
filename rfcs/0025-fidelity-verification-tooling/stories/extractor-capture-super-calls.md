@@ -1,6 +1,6 @@
 ---
 title: "Capture super calls in both extractors for call-set parity"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
