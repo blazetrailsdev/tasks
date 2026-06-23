@@ -1,7 +1,7 @@
 ---
 title: "Convert associations.test.ts standalone association calls to in-class form"
-status: ready
-updated: 2026-06-17
+status: claimed
+updated: 2026-06-23
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T12:02:40Z"
+assignee: "convert-associations-test"
 blocked-by: null
 ---
 
