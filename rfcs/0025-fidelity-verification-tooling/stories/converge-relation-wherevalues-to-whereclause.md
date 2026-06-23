@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-wherevalues-to-whereclause"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
