@@ -1,5 +1,5 @@
 ---
-rfc: "0000-data-layer-api-compare-100"
+rfc: "0045-data-layer-api-compare-100"
 title: "Data layer api:compare to 100% method parity"
 status: draft
 created: 2026-06-23
