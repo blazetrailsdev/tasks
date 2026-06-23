@@ -1,6 +1,6 @@
 ---
 title: "pg-bigint-pk-number-fk-association-key-match"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T15:18:54Z"
+assignee: "pg-bigint-pk-number-fk-association-key-match"
 blocked-by: null
 ---
 
