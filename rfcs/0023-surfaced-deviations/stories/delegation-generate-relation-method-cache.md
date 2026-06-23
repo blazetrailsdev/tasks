@@ -1,6 +1,6 @@
 ---
 title: "Delegation: cache delegated class methods via generate_relation_method (delegation.rb:127-129)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
