@@ -1,6 +1,6 @@
 ---
 title: "within_new_transaction: ConnectionFailed commit branch should invalidate! not rollback"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
