@@ -1,6 +1,6 @@
 ---
 title: "Honor options[:foreign_type] for polymorphic belongs_to in reflection foreignType"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 3973
 claim: "2026-06-23T11:32:39Z"
 assignee: "belongs-to-polymorphic-foreign-type-option-honored-in-reflection"
 blocked-by: null
