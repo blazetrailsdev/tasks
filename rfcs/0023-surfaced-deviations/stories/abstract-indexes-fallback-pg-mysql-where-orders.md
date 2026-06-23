@@ -1,6 +1,6 @@
 ---
 title: "Abstract fallback indexes() pg/mysql arms omit where/orders at runtime"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
