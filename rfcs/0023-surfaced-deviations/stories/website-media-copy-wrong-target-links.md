@@ -1,6 +1,6 @@
 ---
 title: "website: repoint _media-copy links that resolve to the wrong generated page"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
