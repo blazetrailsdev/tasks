@@ -1,5 +1,5 @@
 ---
-rfc: "0000-strict-write-attribute-internal-convergence"
+rfc: "0046-strict-write-attribute-internal-convergence"
 title: "Strict _write_attribute convergence (remove the writeFromUser internal-write bridge)"
 status: draft
 created: 2026-06-23
