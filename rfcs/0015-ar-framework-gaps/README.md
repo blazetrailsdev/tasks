@@ -60,7 +60,7 @@ virtual-attr fix).
 
 | ID                                                                                                | Title                                                              | Status | Est LOC | Cluster        |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ | ------- | -------------- |
-| [wire-public-base-instantiate](stories/wire-public-base-instantiate.md)                           | Wire public Base.instantiate class method                          | draft  | 60      | —              |
+| [wire-public-base-instantiate](stories/wire-public-base-instantiate.md)                           | Wire public Base.instantiate class method                          | ready  | 60      | —              |
 | [dirty-alias-under-reflection](stories/dirty-alias-under-reflection.md)                           | Alias dirty under reflection                                       | done   | 30      | dirty-tracking |
 | [dirty-attribute-will-change-api](stories/dirty-attribute-will-change-api.md)                     | Public attribute_will_change! API                                  | done   | 40      | dirty-tracking |
 | [dirty-create-time-capture](stories/dirty-create-time-capture.md)                                 | Create-time dirty capture for mass-assigned attributes             | done   | 60      | dirty-tracking |

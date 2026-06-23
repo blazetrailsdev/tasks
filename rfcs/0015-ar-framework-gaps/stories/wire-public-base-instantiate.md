@@ -1,7 +1,7 @@
 ---
 title: "Wire public Base.instantiate class method"
-status: draft
-updated: 2026-06-21
+status: ready
+updated: 2026-06-23
 rfc: "0015-ar-framework-gaps"
 cluster: null
 deps: []
