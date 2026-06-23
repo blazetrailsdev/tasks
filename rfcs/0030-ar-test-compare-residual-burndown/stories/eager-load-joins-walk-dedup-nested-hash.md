@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - eager-load-joins-walk-dedup
 deps-rfc: []
 est-loc: null
 priority: null
