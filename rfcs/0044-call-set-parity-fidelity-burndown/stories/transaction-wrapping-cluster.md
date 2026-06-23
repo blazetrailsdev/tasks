@@ -1,6 +1,6 @@
 ---
 title: "Audit transaction-wrapping call-set omissions"
-status: draft
+status: ready
 updated: 2026-06-23
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
