@@ -1,6 +1,6 @@
 ---
 title: "PG DateTime#serialize returns null for infinity/-infinity strings"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 3982
 claim: "2026-06-23T12:12:39Z"
 assignee: "datetime-serialize-infinity-string-returns-null"
 blocked-by: null
