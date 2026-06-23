@@ -1,6 +1,6 @@
 ---
 title: "extractor-capture-enumerable-metaprogrammed-surface"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 3991
 claim: "2026-06-23T13:12:40Z"
 assignee: "extractor-capture-enumerable-metaprogrammed-surface"
 blocked-by: null
