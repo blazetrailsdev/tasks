@@ -1,6 +1,6 @@
 ---
 title: "value_for_database returns the cast value (not the serialized SQL string), matching Rails"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 40
-pr: null
+pr: 3956
 claim: "2026-06-23T02:27:16Z"
 assignee: "value-for-database-returns-cast-not-sql-string"
 blocked-by: null
