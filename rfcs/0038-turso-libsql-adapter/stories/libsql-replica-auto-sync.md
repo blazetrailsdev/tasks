@@ -1,6 +1,6 @@
 ---
 title: "libsql: opt-in periodic auto-sync for embedded replicas"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0038-turso-libsql-adapter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
+pr: 4013
 claim: "2026-06-23T15:37:26Z"
 assignee: "libsql-replica-auto-sync"
 blocked-by: null
