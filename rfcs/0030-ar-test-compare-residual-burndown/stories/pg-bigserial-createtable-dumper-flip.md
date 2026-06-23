@@ -1,7 +1,7 @@
 ---
 title: "Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
@@ -17,8 +17,8 @@ deps-rfc: []
 est-loc: 60
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T10:52:40Z"
+assignee: "pg-bigserial-createtable-dumper-flip"
 blocked-by: null
 ---
 
