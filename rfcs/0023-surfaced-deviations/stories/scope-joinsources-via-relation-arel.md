@@ -1,6 +1,6 @@
 ---
 title: "Materialize scope join sources via Relation#arel() instead of _joinValues"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
