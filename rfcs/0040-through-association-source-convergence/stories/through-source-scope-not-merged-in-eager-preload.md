@@ -1,6 +1,6 @@
 ---
 title: "through-source-scope-not-merged-in-eager-preload"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0040-through-association-source-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: 4041
 claim: "2026-06-23T23:30:39Z"
 assignee: "through-source-scope-not-merged-in-eager-preload"
 blocked-by: null
