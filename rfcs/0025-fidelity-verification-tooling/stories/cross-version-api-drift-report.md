@@ -1,6 +1,6 @@
 ---
 title: "Cross-version Rails API drift report (upgrade worklist), scoped to ported surface"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T15:14:54Z"
+assignee: "cross-version-api-drift-report"
 blocked-by: null
 ---
 
