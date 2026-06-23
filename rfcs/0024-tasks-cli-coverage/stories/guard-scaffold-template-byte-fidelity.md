@@ -34,16 +34,16 @@ manually diffed via the worktree's `tasks/` symlink).
 
 ## Acceptance criteria
 
-- [ ] A check (CI job or `pnpm validate` step, in whichever repo can see both
+- [x] A check (CI job or `pnpm validate` step, in whichever repo can see both
       trees — likely tasks, which has the templates, comparing against the
       published trails scaffold output) fails when the scaffold's default
       `buildRfcContent` / `buildStoryContent` body diverges from
       `rfcs/0000-template/README.md` / `stories/template-story.md`.
-- [ ] The check compares the structural sections that must stay byte-identical
+- [x] The check compares the structural sections that must stay byte-identical
       (headings, ordering, placeholder prose) and tolerates the deliberate
       differences (story scaffold is headings-only; Stories/Changelog tables
       are regenerated).
-- [ ] Decide and document which repo owns the guard (the symlink only exists
+- [x] Decide and document which repo owns the guard (the symlink only exists
       in trails worktrees, not in CI runners for either repo).
 
 ## Notes
