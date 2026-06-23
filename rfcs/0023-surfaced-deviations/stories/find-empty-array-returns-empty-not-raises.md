@@ -38,10 +38,10 @@ PR #3883 ported correctly on the canonical schema in a separate file.
 
 ## Acceptance criteria
 
-- [ ] `Model.find([])` returns `[]` (no `RecordNotFound`), matching Rails
+- [x] `Model.find([])` returns `[]` (no `RecordNotFound`), matching Rails
       `find_with_ids` empty-array behavior.
-- [ ] Reconcile the bespoke `relations.test.ts:1917` "find in empty array"
+- [x] Reconcile the bespoke `relations.test.ts:1917` "find in empty array"
       test: either correct its body to match the Rails method of that name, or
       converge it to the canonical schema (the file is grandfathered in
       `require-canonical-schema-exclude.json`).
-- [ ] Verify `find` with empty array against Rails finder_methods test coverage.
+- [x] Verify `find` with empty array against Rails finder_methods test coverage.
