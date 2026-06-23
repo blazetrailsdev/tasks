@@ -38,11 +38,12 @@ from Rails (which keeps it in `locking/optimistic.rb`). The `optimistic.ts`
 
 ## Acceptance criteria
 
-- [ ] `_performInsert`/create path accepts and honors a threaded
+- [x] `_performInsert`/create path accepts and honors a threaded
       `attributeNames` so the Rails `_create_record` → `attributes_for_create`
       ordering is preserved.
-- [ ] `LockingOptimistic._createRecord` (and ideally `_touchRow`/`_updateRow`)
-      are wired into the persistence path and carry the locking-column union,
-      so it can be removed from the generic `attributesForCreate`.
-- [ ] `locking.test.ts` + `persistence.test.ts` stay green; no api:compare /
+- [x] `LockingOptimistic._createRecord` is wired into the persistence path and
+      carries the locking-column union, so it was removed from the generic
+      `attributesForCreate`. (`_touchRow`/`_updateRow` deferred to story
+      wire-locking-touch-update-row-into-persistence-path — out of create-path scope.)
+- [x] `locking.test.ts` + `persistence.test.ts` stay green; no api:compare /
       test:compare regression.
