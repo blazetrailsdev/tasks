@@ -1,6 +1,6 @@
 ---
 title: "api-compare: capture singleton_class.attr_accessor module config as Base statics"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 3993
 claim: "2026-06-23T13:22:50Z"
 assignee: "extractor-capture-singleton-class-attr-accessor-config"
 blocked-by: null
