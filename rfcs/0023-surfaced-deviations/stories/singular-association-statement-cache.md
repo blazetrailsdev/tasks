@@ -1,7 +1,7 @@
 ---
 title: "singular association loads recompile scope SQL each time (no association_scope_cache statement cache)"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T00:43:18Z"
+assignee: "singular-association-statement-cache"
 blocked-by: null
 ---
 
