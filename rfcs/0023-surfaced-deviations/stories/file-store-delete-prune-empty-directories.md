@@ -1,6 +1,6 @@
 ---
 title: "FileStore#deleteEntry prunes empty parent directories (Rails delete_empty_directories)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4000
 claim: "2026-06-23T14:02:38Z"
 assignee: "file-store-delete-prune-empty-directories"
 blocked-by: null
