@@ -97,6 +97,7 @@ merge.
 
 | ID                                                                                            | Title                                                                                           | Status  | Est LOC | Cluster      |
 | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------- | ------- | ------------ |
+| [force-equality-bind-convergence](stories/force-equality-bind-convergence.md)                 | force-equality-bind-convergence                                                                 | ready   | null    | —            |
 | [drop-default-quoter-production-reliance](stories/drop-default-quoter-production-reliance.md) | Drop activerecord reliance on arel default quoters — route value quoting through the connection | claimed | null    | —            |
 | [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                                 | Phase A1 — route DDL/metadata toSql callers through connection.toSql                            | done    | 150     | arel-visitor |
 | [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                         | Phase A2 — make persistence.ts + base.ts ternary callers unconditional                          | done    | 150     | arel-visitor |
