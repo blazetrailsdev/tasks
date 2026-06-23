@@ -1,6 +1,6 @@
 ---
 title: "Through-association scope raw-string joins dropped from join constraints"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: null
+pr: 3950
 claim: "2026-06-23T01:47:17Z"
 assignee: "through-assoc-scope-string-join-sources"
 blocked-by: null
