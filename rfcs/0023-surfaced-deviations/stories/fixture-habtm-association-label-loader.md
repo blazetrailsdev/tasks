@@ -1,6 +1,6 @@
 ---
 title: "Fixture loader: materialize HABTM join rows from owner association labels"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T14:18:10Z"
+assignee: "fixture-habtm-association-label-loader"
 blocked-by: null
 ---
 
