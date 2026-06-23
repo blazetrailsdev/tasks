@@ -1,6 +1,6 @@
 ---
 title: "Converge counter-cache absent-column silent-skip to Rails raise (or ratify as tracked policy)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
