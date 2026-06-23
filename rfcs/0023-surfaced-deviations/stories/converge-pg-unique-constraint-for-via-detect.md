@@ -1,6 +1,6 @@
 ---
 title: "Converge PG uniqueConstraintFor to unique_constraints.detect(defined_for?)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
