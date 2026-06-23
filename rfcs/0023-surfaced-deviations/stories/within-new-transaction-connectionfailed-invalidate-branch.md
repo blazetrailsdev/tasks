@@ -1,6 +1,6 @@
 ---
 title: "within_new_transaction: ConnectionFailed commit branch should invalidate! not rollback"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: null
+pr: 3957
 claim: "2026-06-23T02:51:17Z"
 assignee: "within-new-transaction-connectionfailed-invalidate-branch"
 blocked-by: null
