@@ -1,6 +1,6 @@
 ---
 title: "Converge association/through/inverse key-match for BigInt PK vs number FK (flip blocker)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 18
-pr: null
+pr: 4033
 claim: "2026-06-23T19:53:05Z"
 assignee: "pg-bigint-assoc-key-match-through-inverse-impl"
 blocked-by: null
