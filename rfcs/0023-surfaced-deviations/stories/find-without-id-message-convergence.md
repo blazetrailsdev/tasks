@@ -1,6 +1,6 @@
 ---
 title: "find-without-id-message-convergence"
-status: ready
+status: draft
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
