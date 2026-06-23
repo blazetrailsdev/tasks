@@ -1,7 +1,7 @@
 ---
 title: "JoinDependency instantiation perf: un-skip eager_load too-many-ids on MySQL-family lanes"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T13:07:47Z"
+assignee: "eager-load-too-many-ids-join-dependency-perf"
 blocked-by: null
 ---
 
