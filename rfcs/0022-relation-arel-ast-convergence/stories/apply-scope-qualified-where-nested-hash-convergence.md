@@ -37,6 +37,6 @@ Full convergence to `scope.where!(table.name => { key => value })` requires the 
 
 ## Acceptance criteria
 
-- [ ] `applyScope`'s qualified branch routes the full condition through `scope.where!(table.name => { key => value })` (or documented equivalent), eliminating the hand-built `table.get(key).eq(bind)` Arel node, while still qualifying by the alias for aliased/self-referential through chains.
-- [ ] No regression in through / nested-through / self-referential-through loads on SQLite, PostgreSQL, MySQL (incl. string-FK `publication.editors`).
-- [ ] If the predicate-builder alias-resolution work is out of scope, document the residual with the specific predicate-builder change required.
+- [x] `applyScope`'s qualified branch routes the full condition through `scope.where!(table.name => { key => value })` (or documented equivalent), eliminating the hand-built `table.get(key).eq(bind)` Arel node, while still qualifying by the alias for aliased/self-referential through chains.
+- [x] No regression in through / nested-through / self-referential-through loads on SQLite, PostgreSQL, MySQL (incl. string-FK `publication.editors`).
+- [x] If the predicate-builder alias-resolution work is out of scope, document the residual with the specific predicate-builder change required.
