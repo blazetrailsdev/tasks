@@ -1,6 +1,6 @@
 ---
 title: "where(col: []) should be a null relation (no WHERE 1=0 query)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: null
+pr: 3955
 claim: "2026-06-23T02:43:16Z"
 assignee: "where-empty-array-is-null-relation"
 blocked-by: null
