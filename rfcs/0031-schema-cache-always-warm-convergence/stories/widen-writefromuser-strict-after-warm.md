@@ -1,6 +1,6 @@
 ---
 title: "Widen writeFromUser to the Rails one-liner once the schema cache is warm at construction"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T17:45:27Z"
+assignee: "widen-writefromuser-strict-after-warm"
 blocked-by: null
 ---
 
