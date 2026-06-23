@@ -1,6 +1,6 @@
 ---
 title: "touch edge-case returns diverge from Rails (not-persisted, empty-names)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
