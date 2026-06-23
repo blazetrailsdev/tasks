@@ -51,9 +51,9 @@ to avoid overlap with the sweep stories):
 
 ## Acceptance criteria
 
-- [ ] Association/inverse/through/disable-joins key-matching treats BigInt PK
+- [x] Association/inverse/through/disable-joins key-matching treats BigInt PK
       and number FK as equal; the impl sites above resolve (no undefined
       target / TypeError) WITH the flip applied locally on PG.
-- [ ] Residual assertions in these files green on PG; green on sqlite/mysql.
-- [ ] Test names verbatim. Fix the matching code, not the schema (FK columns
+- [x] Residual assertions in these files green on PG; green on sqlite/mysql.
+- [x] Test names verbatim. Fix the matching code, not the schema (FK columns
       stay `integer` per Rails). Coordinate with #3966 (carries recordIdentity).
