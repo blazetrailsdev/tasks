@@ -1,6 +1,6 @@
 ---
 title: "Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip"
-status: in-progress
+status: blocked
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -21,7 +21,7 @@ priority: 30
 pr: 3966
 claim: "2026-06-23T10:52:40Z"
 assignee: "pg-bigserial-createtable-dumper-flip"
-blocked-by: null
+blocked-by: "PG lane red across 55 files under the flip (CI run 28021658047, PR #3966). Sweep was incomplete: filed pg-bigint-pk-number-fk-association-key-match (functional BigInt-PK/number-FK association key mismatch) + pg-record-id-bigint-sweep-residual-55 (residual id-assertion churn). Both must land before this flip. PR #3966 parked in draft."
 ---
 
 ## Context
