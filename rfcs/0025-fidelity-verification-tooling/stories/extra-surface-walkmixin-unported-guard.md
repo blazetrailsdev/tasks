@@ -1,6 +1,6 @@
 ---
 title: "api-compare: apply isSourceUnported guard to extra-surface walkMixin (parity with compare.ts)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T13:57:41Z"
+assignee: "extra-surface-walkmixin-unported-guard"
 blocked-by: null
 ---
 
