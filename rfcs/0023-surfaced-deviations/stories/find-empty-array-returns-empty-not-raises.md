@@ -1,6 +1,6 @@
 ---
 title: "Model.find([]) should return [] not raise RecordNotFound"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4001
 claim: "2026-06-23T14:07:39Z"
 assignee: "find-empty-array-returns-empty-not-raises"
 blocked-by: null
