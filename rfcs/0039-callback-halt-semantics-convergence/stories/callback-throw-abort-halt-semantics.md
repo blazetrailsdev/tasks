@@ -1,6 +1,6 @@
 ---
 title: 'throw :abort halt semantics — converge throw "abort" vs return false'
-status: ready
+status: done
 updated: 2026-06-23
 rfc: "0039-callback-halt-semantics-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 10
-pr: null
+pr: 3596
 claim: null
 assignee: null
 blocked-by: null

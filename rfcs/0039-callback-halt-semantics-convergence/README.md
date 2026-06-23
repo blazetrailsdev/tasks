@@ -56,7 +56,7 @@ Three tracked items remain:
 
 | ID                                                                                                            | Title                                                                                 | Status | Est LOC | Cluster |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------ | ------- | ------- |
-| [callback-throw-abort-halt-semantics](stories/callback-throw-abort-halt-semantics.md)                         | throw :abort halt semantics — converge throw "abort" vs return false                  | ready  | 90      | —       |
+| [callback-throw-abort-halt-semantics](stories/callback-throw-abort-halt-semantics.md)                         | throw :abort halt semantics — converge throw "abort" vs return false                  | done   | 90      | —       |
 | [deprecate-return-false-callback-halt-alias](stories/deprecate-return-false-callback-halt-alias.md)           | Converge callback halt to throw-abort sentinel only (drop return-false alias)         | done   | 150     | —       |
 | [model-callbacks-block-false-after-skip-fidelity](stories/model-callbacks-block-false-after-skip-fidelity.md) | ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap) | done   | 120     | —       |
 
