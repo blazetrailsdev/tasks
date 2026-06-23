@@ -1,6 +1,6 @@
 ---
 title: "Cross-version Rails API drift report (upgrade worklist), scoped to ported surface"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
