@@ -1,6 +1,6 @@
 ---
 title: "Wire locking/optimistic _createRecord into the create path (thread attribute_names)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
