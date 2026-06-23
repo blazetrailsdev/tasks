@@ -1,7 +1,7 @@
 ---
 title: "isvalid-does-not-run-uniqueness-validations"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
