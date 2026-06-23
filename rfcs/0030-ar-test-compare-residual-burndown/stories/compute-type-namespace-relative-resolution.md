@@ -43,11 +43,11 @@ demodulized stored type would fail to resolve where Rails succeeds.
 
 ## Acceptance criteria
 
-- [ ] `computeType` performs Ruby-style namespace-relative constant resolution
+- [x] `computeType` performs Ruby-style namespace-relative constant resolution
       (walk the model's module nesting), mirroring
       `ActiveRecord::Inheritance::ClassMethods#compute_type`.
-- [ ] `stiClassFor` and `polymorphicClassFor` branch on
+- [x] `stiClassFor` and `polymorphicClassFor` branch on
       `storeFullStiClass`/`storeFullClassName` (constantize vs compute_type),
       mirroring Rails.
-- [ ] A test exercises belongs_to -> class resolution of a demodulized
+- [x] A test exercises belongs_to -> class resolution of a demodulized
       polymorphic type for a model registered only under its namespaced key.
