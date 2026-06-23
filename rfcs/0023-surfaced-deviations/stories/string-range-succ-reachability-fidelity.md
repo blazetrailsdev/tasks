@@ -1,6 +1,6 @@
 ---
 title: "rangeIncludesStringValue: faithful String#succ reachability for mixed character classes"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
