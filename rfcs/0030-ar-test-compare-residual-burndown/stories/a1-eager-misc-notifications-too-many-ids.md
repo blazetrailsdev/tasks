@@ -1,7 +1,7 @@
 ---
 title: "A1i — eager_test: notifications/i18n, too-many-ids, preload SQL, pk has_one"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
