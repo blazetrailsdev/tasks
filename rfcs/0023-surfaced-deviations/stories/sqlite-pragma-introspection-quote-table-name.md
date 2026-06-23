@@ -1,6 +1,6 @@
 ---
 title: "SQLite columns()/indexes() interpolate table name into PRAGMA without quote_table_name escaping"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
