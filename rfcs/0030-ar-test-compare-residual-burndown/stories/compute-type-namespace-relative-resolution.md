@@ -1,7 +1,7 @@
 ---
 title: "compute-type-namespace-relative-resolution"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:42:40Z"
+assignee: "compute-type-namespace-relative-resolution"
 blocked-by: null
 ---
 
