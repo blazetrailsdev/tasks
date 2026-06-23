@@ -29,8 +29,8 @@ does not assert the name.
 
 ## Acceptance criteria
 
-- [ ] Determine whether the 3-arg `visitAddForeignKey` overrides are reachable
+- [x] Determine whether the 3-arg `visitAddForeignKey` overrides are reachable
       from any real add_foreign_key flow.
-- [ ] If reachable: default name via `foreignKeyName` (SHA256), matching Rails
+- [x] If reachable: default name via `foreignKeyName` (SHA256), matching Rails
       and PR #3795. If dead: remove the duplicate overrides.
-- [ ] No test-name changes.
+- [x] No test-name changes.
