@@ -1,7 +1,7 @@
 ---
 title: "SQLite columns()/indexes() interpolate table name into PRAGMA without quote_table_name escaping"
-status: ready
-updated: 2026-06-21
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T01:15:18Z"
+assignee: "sqlite-pragma-introspection-quote-table-name"
 blocked-by: null
 ---
 
