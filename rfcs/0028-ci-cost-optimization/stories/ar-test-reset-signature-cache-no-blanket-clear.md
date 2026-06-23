@@ -1,6 +1,6 @@
 ---
 title: "dropAllTables: reconcile signature cache instead of blanket clear (Path C)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T10:47:39Z"
+assignee: "ar-test-reset-signature-cache-no-blanket-clear"
 blocked-by: null
 ---
 
