@@ -1,9 +1,9 @@
 ---
 rfc: "0039-callback-halt-semantics-convergence"
 title: "Callback-chain halt semantics convergence (throw :abort, drop return false)"
-status: draft
+status: closed
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-06-23
 owner: "@deanmarano"
 packages:
   - "activesupport"

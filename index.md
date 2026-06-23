@@ -42,7 +42,7 @@
 | [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
 | [0037-no-explicit-any-enforcement](rfcs/0037-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | active | @deanmarano | activerecord |
 | [0038-turso-libsql-adapter](rfcs/0038-turso-libsql-adapter/README.md) | Turso / libSQL SQLite driver (beyond-parity extension) | active | @deanmarano | activerecord |
-| [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | draft | @deanmarano | activesupport, activerecord |
+| [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | closed | @deanmarano | activesupport, activerecord |
 | [0040-through-association-source-convergence](rfcs/0040-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | active | @deanmarano | activerecord |
 | [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | draft | @deanmarano | activesupport |
 | [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | active | @your-handle | activerecord |
