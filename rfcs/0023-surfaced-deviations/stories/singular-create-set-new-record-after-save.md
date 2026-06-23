@@ -1,6 +1,6 @@
 ---
 title: "singular-create-set-new-record-after-save"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
