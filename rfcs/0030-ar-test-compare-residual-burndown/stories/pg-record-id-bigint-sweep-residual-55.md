@@ -1,6 +1,6 @@
 ---
 title: "pg-record-id-bigint-sweep-residual-55"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
