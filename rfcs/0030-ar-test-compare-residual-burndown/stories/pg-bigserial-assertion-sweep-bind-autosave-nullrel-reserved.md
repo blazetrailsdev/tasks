@@ -1,6 +1,6 @@
 ---
 title: "Converge BigInt PK assertions: bind-parameter/autosave/null-relation/reserved-word (flip prereq)"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T17:45:35Z"
+assignee: "pg-bigserial-assertion-sweep-bind-autosave-nullrel-reserved"
 blocked-by: null
 ---
 
