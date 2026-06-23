@@ -1,6 +1,6 @@
 ---
 title: "Convert associations.test.ts standalone association calls to in-class form"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0033-standalone-associations-burndown"
 cluster: null
