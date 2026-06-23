@@ -1,6 +1,6 @@
 ---
 title: "SQLite changeColumn table-rebuild path (column-type change)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 40
-pr: null
+pr: 3944
 claim: "2026-06-23T00:59:14Z"
 assignee: "sqlite-change-column-table-rebuild"
 blocked-by: null
