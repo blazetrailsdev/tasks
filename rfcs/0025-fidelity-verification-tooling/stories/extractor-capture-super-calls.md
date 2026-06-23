@@ -1,6 +1,6 @@
 ---
 title: "Capture super calls in both extractors for call-set parity"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4011
 claim: "2026-06-23T15:22:53Z"
 assignee: "extractor-capture-super-calls"
 blocked-by: null
