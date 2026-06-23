@@ -1,6 +1,6 @@
 ---
 title: "Infer adapter at config-build time for scheme-less URL shorthand"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T15:33:24Z"
+assignee: "infer-adapter-at-config-build-for-schemeless-url"
 blocked-by: null
 ---
 
