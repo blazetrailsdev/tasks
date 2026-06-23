@@ -1,6 +1,6 @@
 ---
 title: "Fully defer within-dependency and through-path join aliasing to emit-time (rebuild ON at emit)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0027-join-dependency-fidelity"
 cluster: null
