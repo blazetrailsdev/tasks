@@ -35,14 +35,14 @@ SQL form.
 
 ## Acceptance criteria
 
-- [ ] `value_for_database` for the DateTime (and other affected) types returns
+- [x] `value_for_database` for the DateTime (and other affected) types returns
       the cast value, matching Rails; SQL-string quoting moves to the bind/quote
       layer so INSERT/UPDATE still emit correct SQL.
-- [ ] `forgetting_assignment` produces a `FromDatabase` whose
+- [x] `forgetting_assignment` produces a `FromDatabase` whose
       `value_before_type_cast` is the cast value for all save paths, not just
       create — letting PR #3699's bespoke `rebindFromDatabaseValue` workaround in
       `callbacks.ts` `_createRecord` be removed.
-- [ ] No regression in cache-key, dirty (incl. TZ-aware), persistence, or
+- [x] No regression in cache-key, dirty (incl. TZ-aware), persistence, or
       timestamp suites; api:compare / test:compare delta non-negative.
 
 ## Notes
