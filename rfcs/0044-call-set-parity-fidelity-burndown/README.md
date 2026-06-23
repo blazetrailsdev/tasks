@@ -1,5 +1,5 @@
 ---
-rfc: "0000-call-set-parity-fidelity-burndown"
+rfc: "0044-call-set-parity-fidelity-burndown"
 title: "ActiveRecord call-set parity fidelity burndown to zero"
 status: draft
 created: 2026-06-23
