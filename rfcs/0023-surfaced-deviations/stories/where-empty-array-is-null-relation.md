@@ -1,6 +1,6 @@
 ---
 title: "where(col: []) should be a null relation (no WHERE 1=0 query)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
