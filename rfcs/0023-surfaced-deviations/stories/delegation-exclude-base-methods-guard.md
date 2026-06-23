@@ -31,10 +31,10 @@ paths are consistent with each other but diverge from Rails.
 
 ## Acceptance criteria
 
-- [ ] Model the `delegate_base_methods` exclusion so plain-relation /
+- [x] Model the `delegate_base_methods` exclusion so plain-relation /
       collection-proxy delegation does NOT delegate methods defined on
       `ActiveRecord::Base` (matching `delegation.rb:122-126`).
-- [ ] Apply the guard to BOTH `wrapWithScopeProxy` and the collection-proxy
+- [x] Apply the guard to BOTH `wrapWithScopeProxy` and the collection-proxy
       `method_missing` path so they stay consistent.
-- [ ] Add a test asserting a Base-only class method called on a relation
+- [x] Add a test asserting a Base-only class method called on a relation
       behaves like Rails (raises / is not silently scoped-delegated).
