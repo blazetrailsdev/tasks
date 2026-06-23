@@ -1,6 +1,6 @@
 ---
 title: "eager-load-joins-walk-dedup-nested-hash"
-status: claimed
+status: blocked
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-06-23T13:52:41Z"
 assignee: "eager-load-joins-walk-dedup-nested-hash"
-blocked-by: null
+blocked-by: "Depends on open PR #3990 (story eager-load-joins-walk-dedup), still unmerged. That PR introduces the exact helpers this story extends (_specRootNames, _eagerRootNames, _joinedEagerValues, _dedupedManualJoinTables) and modifies the identical regions of relation.ts (_addEagerSpecsToJoinDependency, _buildEagerJoinManager, _buildEagerIdSubquery). A standalone PR from main would either stack on #3990 (forbidden) or duplicate/conflict with it (full file overlap). Re-claim once #3990 merges into main, then extend _joinedEagerValues/_specRootNames to walk hash/array manual-join specs at every nested level."
 ---
 
 ## Context
