@@ -34,13 +34,13 @@ intent.
 
 ## Acceptance criteria
 
-- [ ] Default `DelegateCache.delegateBaseMethods = false` in the trails AR test
+- [x] Default `DelegateCache.delegateBaseMethods = false` in the trails AR test
       harness (mirror `helper.rb:29`), in the shared test setup so it applies to
       every AR `*.test.ts`.
-- [ ] Fix or explicitly annotate any test fallout where trails code/tests
+- [x] Fix or explicitly annotate any test fallout where trails code/tests
       currently rely on delegating a Base method through a relation/proxy
       (each is a genuine deviation to converge, not to suppress).
-- [ ] Production default stays `true` (only the test harness flips it), matching
+- [x] Production default stays `true` (only the test harness flips it), matching
       Rails.
 
 ## Notes
