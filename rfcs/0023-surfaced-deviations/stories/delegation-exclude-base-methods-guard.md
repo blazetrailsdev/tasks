@@ -1,7 +1,7 @@
 ---
 title: "Delegation: honor delegate_base_methods guard (don't delegate Base methods on relations)"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T12:32:38Z"
+assignee: "delegation-exclude-base-methods-guard"
 blocked-by: null
 ---
 
