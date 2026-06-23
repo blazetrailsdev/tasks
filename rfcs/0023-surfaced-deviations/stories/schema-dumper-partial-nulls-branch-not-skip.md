@@ -1,6 +1,6 @@
 ---
 title: "Branch schema-dump partial-index/nulls-not-distinct assertions instead of skipping"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: null
+pr: 3940
 claim: "2026-06-23T00:27:22Z"
 assignee: "schema-dumper-partial-nulls-branch-not-skip"
 blocked-by: null
