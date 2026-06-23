@@ -1,7 +1,7 @@
 ---
 title: "Cache named-scope relations on association proxy + invalidate on reset"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T11:37:40Z"
+assignee: "collection-proxy-named-scope-relation-cache"
 blocked-by: null
 ---
 
