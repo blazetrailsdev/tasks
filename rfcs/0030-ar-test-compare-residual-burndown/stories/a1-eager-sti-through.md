@@ -29,5 +29,5 @@ Rails: vendor/rails/activerecord/test/cases/associations/eager_test.rb.
 
 ## Acceptance criteria
 
-- [ ] Each listed test un-skipped + passing (canonical STI models/fixtures, Rails-faithful) or reclassified permanent-skip with reason.
-- [ ] No new gate-mismatches.
+- [x] Each listed test un-skipped + passing (canonical STI models/fixtures, Rails-faithful) or reclassified permanent-skip with reason.
+- [x] No new gate-mismatches.
