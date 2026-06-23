@@ -1,7 +1,7 @@
 ---
 title: "extractor-capture-enumerable-metaprogrammed-surface"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T13:12:40Z"
+assignee: "extractor-capture-enumerable-metaprogrammed-surface"
 blocked-by: null
 ---
 
