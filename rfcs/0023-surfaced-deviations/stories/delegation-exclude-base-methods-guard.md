@@ -1,6 +1,6 @@
 ---
 title: "Delegation: honor delegate_base_methods guard (don't delegate Base methods on relations)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
