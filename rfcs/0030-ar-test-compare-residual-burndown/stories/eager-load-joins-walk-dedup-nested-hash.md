@@ -1,6 +1,6 @@
 ---
 title: "eager-load-joins-walk-dedup-nested-hash"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
