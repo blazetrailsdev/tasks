@@ -1,6 +1,6 @@
 ---
 title: "Drop activerecord reliance on arel default quoters — route value quoting through the connection"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T20:53:08Z"
+assignee: "drop-default-quoter-production-reliance"
 blocked-by: null
 ---
 
