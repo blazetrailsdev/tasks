@@ -18,6 +18,10 @@ deps:
   - pg-bigserial-assertion-sweep-querycache-associations
   - pg-bigserial-assertion-sweep-bind-autosave-nullrel-reserved
   - pg-bigserial-assertion-sweep-tail
+  - pg-bigint-assoc-key-match-through-inverse-impl
+  - pg-bigserial-assertion-sweep-belongs-to
+  - pg-bigserial-assertion-sweep-hasmany-hasone
+  - pg-bigserial-assertion-sweep-relation-fixtures-tail
 deps-rfc: []
 est-loc: 60
 priority: 30
