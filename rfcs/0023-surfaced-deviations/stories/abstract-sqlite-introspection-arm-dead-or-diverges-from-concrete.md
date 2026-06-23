@@ -1,6 +1,6 @@
 ---
 title: "Abstract SchemaStatements sqlite introspection arm is dead/divergent vs concrete SQLite3 adapter"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T03:07:16Z"
+assignee: "abstract-sqlite-introspection-arm-dead-or-diverges-from-concrete"
 blocked-by: null
 ---
 
