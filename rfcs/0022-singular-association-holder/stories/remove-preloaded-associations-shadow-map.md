@@ -1,6 +1,6 @@
 ---
 title: "remove-preloaded-associations-shadow-map"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T23:00:44Z"
+assignee: "remove-preloaded-associations-shadow-map"
 blocked-by: null
 ---
 
