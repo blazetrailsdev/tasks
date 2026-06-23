@@ -36,11 +36,11 @@ shared by both the manual hash-join and the eager spec should also collapse.
 
 ## Acceptance criteria
 
-- [ ] `Author.joins(posts: :comments).eager_load(posts: :comments)` emits ONE
+- [x] `Author.joins(posts: :comments).eager_load(posts: :comments)` emits ONE
       un-aliased `posts` and ONE `comments` join (manual INNER wins), matching
       Rails `walk`'s recursive dedup — no duplicate, no ambiguous column.
-- [ ] Dedup recurses to nested levels of a hash-form manual join, not just the
+- [x] Dedup recurses to nested levels of a hash-form manual join, not just the
       root (extend `_joinedEagerValues`/`_specRootNames` to walk hash/array
       manual-join specs, or implement a real cross-pass `walk`).
-- [ ] Do not regress the string-rooted dedup from PR #3990 or the
+- [x] Do not regress the string-rooted dedup from PR #3990 or the
       cascaded-eager / eager / through alias suites.
