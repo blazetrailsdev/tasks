@@ -1,6 +1,6 @@
 ---
 title: "createThroughAssociation: write source _type verbatim from source_type, drop inferred polymorphicName fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0040-through-association-source-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 5
-pr: null
+pr: 4022
 claim: "2026-06-23T17:32:57Z"
 assignee: "through-create-source-type-verbatim-no-fallback"
 blocked-by: null
