@@ -1,6 +1,6 @@
 ---
 title: "Tighten require-table-teardown ratchet to curb leaked bespoke tables (Path D)"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
