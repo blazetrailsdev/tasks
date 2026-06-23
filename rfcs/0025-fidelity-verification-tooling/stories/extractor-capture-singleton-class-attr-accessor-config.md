@@ -1,6 +1,6 @@
 ---
 title: "api-compare: capture singleton_class.attr_accessor module config as Base statics"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
