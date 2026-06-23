@@ -1,6 +1,6 @@
 ---
 title: "Materialize declares for in-describe/it nested test models skipped by the top-level-only walker"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T21:30:42Z"
+assignee: "materialize-declares-nested-class-models"
 blocked-by: null
 ---
 
