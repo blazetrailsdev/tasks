@@ -1,6 +1,6 @@
 ---
 title: "Dedup identical URI-aware resolveDatabasePath across node-sqlite and libsql drivers"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: null
+pr: 4040
 claim: "2026-06-23T23:23:01Z"
 assignee: "sqlite-uri-resolver-dedup-node-libsql"
 blocked-by: null
