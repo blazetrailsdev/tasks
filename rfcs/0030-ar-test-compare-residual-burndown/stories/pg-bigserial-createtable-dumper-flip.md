@@ -13,6 +13,8 @@ deps:
   - pg-record-id-bigint-sweep-relation-with
   - pg-record-id-bigint-sweep-relations
   - pg-untyped-pk-int8-deserialization
+  - pg-bigint-pk-number-fk-association-key-match
+  - pg-record-id-bigint-sweep-residual-55
 deps-rfc: []
 est-loc: 60
 priority: 30
