@@ -28,7 +28,7 @@ priority: 30
 pr: null
 claim: null
 assignee: null
-blocked-by: "PG lane red: bigserial flip surfaces ~57 unconverged BigInt-PK assertion sites across 16 files (CI run 28040851821, PR #3966). The merged sweeps (#4010, #4018) only covered their 55-file manifest. Filed three convergence prereqs: pg-bigserial-assertion-sweep-querycache-associations, -bind-autosave-nullrel-reserved, -tail. All three must land before this flip retries. PR #3966 parked in draft."
+blocked-by: "PG lane red: flip CI (run 28050673795) enumerated 146 int8->BigInt fallout sites across 26 files — mostly the associations/ subdir the earlier sweeps never touched (FK cols correctly stay integer per Rails). recordIdentity JSON.stringify(BigInt) fixed on-branch (#3966). Remaining split into 4 new deps: pg-bigint-assoc-key-match-through-inverse-impl (28 functional key-match sites), + 3 assertion sweeps (belongs-to / hasmany-hasone / relation-fixtures-tail, 118 sites). All must land before flip retries."
 ---
 
 ## Context
