@@ -1,6 +1,6 @@
 ---
 title: "singular-create-set-new-record-after-save"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: null
+pr: 3942
 claim: "2026-06-23T00:51:17Z"
 assignee: "singular-create-set-new-record-after-save"
 blocked-by: null
