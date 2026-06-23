@@ -1,6 +1,6 @@
 ---
 title: "abstract-sqlite-indexes-arm-result-shape-diverges-from-canonical"
-status: ready
+status: claimed
 updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T10:42:39Z"
+assignee: "abstract-sqlite-indexes-arm-result-shape-diverges-from-canonical"
 blocked-by: null
 ---
 
