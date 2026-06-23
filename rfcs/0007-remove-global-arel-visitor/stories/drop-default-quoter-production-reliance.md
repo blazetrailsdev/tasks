@@ -87,14 +87,35 @@ default so the only remaining consumers are arel's own tests.
 
 ## Notes
 
-- Decision trail: dropping the arel default quoters _entirely_ and requiring a
-  connection for `Node#toSql()` was considered, but contradicts RFC 0007's
-  "What stays" clause (arel keeps its dialect-agnostic default for its own
-  tests) and would churn ~41 arel test files for no fidelity gain — Rails'
-  no-arg `to_sql` is itself a test/debug convenience, not production. The
-  scoped version here (remove production reliance only) captures the
-  Rails-faithful intent without that churn.
-- Implementing `Table.engine` was explicitly rejected: it reintroduces the
-  process-global mutable connection state RFC 0007 is actively removing and
-  re-couples arel → activerecord.
+- **Correction (2026-06-23): the `Table.engine` framing below was wrong.** Rails
+  _does_ have `Arel::Table.engine` (defaults to `ActiveRecord::Base`), and no-arg
+  `Node#to_sql(engine = Table.engine)` routes through
+  `engine.connection.visitor` — i.e. the real connection's adapter visitor, NOT a
+  dialect-agnostic ANSI quoter. So Rails has no dialect-agnostic default quoter at
+  all; trails' `defaultQuoter` / `mysqlDefaultQuoter` are a trails invention. The
+  honest reason they stay is **structural**: trails splits arel into a standalone
+  package whose `package.json` cannot depend on `activerecord` (that would be a
+  cycle — `activerecord` → `arel` already), so arel's connectionless test path
+  cannot reach an AR connection without re-adding a process-global `Table.engine`
+  — exactly the global RFC 0007 removed because it caused the double-quoting bug.
+  The default quoter is therefore a tracked structural accommodation of the
+  package split, not a ratified preference; full convergence (drop it, route
+  `Node#toSql` through the connection) is blocked by the package boundary, not by
+  taste.
+- **Finding (the actual deliverable): production value-quoting was already
+  connection-routed.** RFC 0007 phases A1–A4/B/C (all done) routed the 74
+  production `.toSql()` callers through the adapter visitor and deleted the
+  `: x.toSql()` defensive arms. Production SELECTs compile via
+  `_compileSelectSql` → `_arelVisitor()` (the adapter's visitor), never
+  `manager.toSql()`. The `predicate-builder.ts` force-equality shortcut emits an
+  inline `Nodes.Quoted` whose `visitQuoted` calls the **adapter's** `quote()`, so
+  it too is connection-routed — the old comment claiming it "fails under
+  `manager.toSql()`'s defaultQuoter" was simply stale. This story's code change is
+  that comment correction; no production default-quoter leak remained to remove.
+- **Residual Rails deviation tracked separately:** trails inlines the
+  force-equality literal where Rails builds a bind
+  (`attribute.eq(build_bind_attribute(...))`). Converging to the bind requires the
+  pg bind path to apply the adapter's `typeCast` (range/array bind values
+  currently reach pg raw). Tracked in
+  `force-equality-bind-convergence` (RFC 0007).
 - Surfaced during PR #3649.
