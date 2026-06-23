@@ -1,6 +1,6 @@
 ---
 title: "Ratcheting baseline + CI gate for call-mismatches advisory"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: infra
