@@ -1,7 +1,7 @@
 ---
 title: "Honor options[:foreign_type] for as: associations in foreignType/type"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-23T10:57:39Z"
+assignee: "as-foreign-type-option-honored-in-reflection-type"
 blocked-by: null
 ---
 
