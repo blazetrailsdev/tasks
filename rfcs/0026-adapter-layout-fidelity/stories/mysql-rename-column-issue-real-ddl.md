@@ -1,6 +1,6 @@
 ---
 title: "mysql-rename-column-issue-real-ddl"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0026-adapter-layout-fidelity"
 cluster: null
