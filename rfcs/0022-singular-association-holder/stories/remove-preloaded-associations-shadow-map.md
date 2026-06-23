@@ -1,6 +1,6 @@
 ---
 title: "remove-preloaded-associations-shadow-map"
-status: in-progress
+status: done
 updated: 2026-06-23
 rfc: "0022-singular-association-holder"
 cluster: null
