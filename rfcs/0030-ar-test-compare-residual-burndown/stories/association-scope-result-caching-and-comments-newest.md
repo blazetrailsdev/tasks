@@ -41,12 +41,19 @@ landed there, but these scope-cache cases were left skipped with rationale.
 
 ## Acceptance criteria
 
-- [ ] Add the Post `comments` association-extension method `newest` =
-      `created.last` (matching post.rb:80-82), as an association block extension
-      (not a Comment scope).
-- [ ] Cache named-scope relations on association proxies so repeated
-      `post.comments.<scope>()` returns the same cached relation/result until a
-      mutation (`destroy_all`/`reset`/`delete_all`/reload) invalidates it.
-- [ ] Un-skip `scopes to get newest`, `scopes are cached on associations`,
-      `scopes with arguments are cached on associations`, and `scopes are reset
-on association reload` with faithful Rails bodies.
+- [x] Add the Post `comments` association-extension method `newest` =
+      `created.last` (matching post.rb:81-83), as an association block extension
+      (not a Comment scope). Done in #3969 — also fixed `extendingBang` to bind
+      extension `this` to the scope-proxy-wrapped relation so bare named-scope
+      calls (`created`) resolve inside extension bodies.
+- [x] ~~Cache named-scope relations on association proxies~~ — DROPPED as a
+      misframing. Modern Rails removed the separate proxy scope-result cache;
+      `test_scopes_are_cached_on_associations` relies on the **query cache**
+      (Rails comment `named_scoping_test.rb:535-537`), and
+      `test_scopes_are_reset_on_association_reload` holds because each
+      `post.comments.<scope>()` returns a fresh relation (`assert_not_same`).
+      No separate cache layer is needed or faithful.
+- [x] Un-skip `scopes to get newest` (#3969). `scopes are cached on
+    associations`, `scopes with arguments are cached on associations`, and
+      `scopes are reset on association reload` were already un-skipped via the
+      query cache in #3877.
