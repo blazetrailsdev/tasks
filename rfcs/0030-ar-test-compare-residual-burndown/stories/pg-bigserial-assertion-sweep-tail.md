@@ -1,6 +1,6 @@
 ---
 title: "Converge BigInt PK assertions: long-tail 10 files (flip prereq)"
-status: claimed
+status: in-progress
 updated: 2026-06-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: null
+pr: 4029
 claim: "2026-06-23T17:52:20Z"
 assignee: "pg-bigserial-assertion-sweep-tail"
 blocked-by: null
