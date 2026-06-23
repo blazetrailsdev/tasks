@@ -32,10 +32,10 @@ method). Test: `persistence_test.rb:128` `test_update_many_with_duplicated_ids`.
 
 ## Acceptance criteria
 
-- [ ] Decide converge-or-document: ideally `update([1,1,2], …)` returns distinct
+- [x] Decide converge-or-document: ideally `update([1,1,2], …)` returns distinct
       instances per requested id (re-find/dup per occurrence) to match Rails
       object identity, OR document this as a ratified, DB-equivalent divergence
       with rationale if convergence is not worthwhile.
-- [ ] If converging, no regression in the existing parallel-update tests
+- [x] If converging, no regression in the existing parallel-update tests
       (persistence.test.ts `update many with duplicated ids` and the
       `update with parallel ids + attrs arrays` test).
