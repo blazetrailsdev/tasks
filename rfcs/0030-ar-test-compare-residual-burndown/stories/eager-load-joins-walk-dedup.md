@@ -39,11 +39,11 @@ for `includes`, not `eager_load` or references-promoted roots.
 
 ## Acceptance criteria
 
-- [ ] `Author.joins(:posts).eager_load(posts: :comments)` emits ONE un-aliased
+- [x] `Author.joins(:posts).eager_load(posts: :comments)` emits ONE un-aliased
       `posts` join (manual INNER), with `comments` joined onto it — matching
       Rails `walk` dedup; no `posts_authors`.
-- [ ] Same for `joins(:x).eager_load(:x)` (single-step) and dotted/promoted roots.
-- [ ] Extend the dedup mechanism (`_joinedIncludesTables` skip, or a real
+- [x] Same for `joins(:x).eager_load(:x)` (single-step) and dotted/promoted roots.
+- [x] Extend the dedup mechanism (`_joinedIncludesTables` skip, or a real
       cross-pass `walk`) to eager_load/promoted roots that coincide with a manual
       join, not just `includes`.
-- [ ] Do not regress the cascaded-eager / eager / through alias suites.
+- [x] Do not regress the cascaded-eager / eager / through alias suites.
