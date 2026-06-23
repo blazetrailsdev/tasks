@@ -32,12 +32,12 @@ of the cache-reset semantics it names until the proxy memoizes scope relations.
 
 ## Acceptance criteria
 
-- [ ] CollectionProxy/CollectionAssociation memoizes named-scope relations so
+- [x] CollectionProxy/CollectionAssociation memoizes named-scope relations so
       two consecutive `post.comments.<scope>()` calls return the SAME object
       within one association load (matching Rails).
-- [ ] `destroyAll`/`reset`/`deleteAll` invalidate that cache so the next
+- [x] `destroyAll`/`reset`/`deleteAll` invalidate that cache so the next
       `<scope>()` returns a fresh object.
-- [ ] Strengthen `scopes are reset on association reload` in
+- [x] Strengthen `scopes are reset on association reload` in
       `scoping/named-scoping.test.ts` so `not.toBe(before)` is meaningful (the
       pre-reset two calls are `toBe`-same), removing the "structurally always
       true" inline note.
