@@ -40,9 +40,9 @@ Relevant Rails: `activerecord/lib/active_record/associations/builder/belongs_to.
 
 ## Acceptance criteria
 
-- [ ] `updateCounterCaches` skips the increment/decrement when the resolved
+- [x] `updateCounterCaches` skips the increment/decrement when the resolved
       counter column is not a real column on the owner (Rails `has_cached_counter?`).
-- [ ] The `_counterCacheColumns` allow-list entry in `ensureWritableAttribute`
+- [x] The `_counterCacheColumns` allow-list entry in `ensureWritableAttribute`
       (`readonly-attributes.ts`) can then be dropped (no phantom counter writes).
-- [ ] No regression to models whose counter column DOES exist
+- [x] No regression to models whose counter column DOES exist
       (e.g. `tags_count`, `legacy_comments_count`).
