@@ -1,7 +1,7 @@
 ---
 title: "Drain async SQLite close on remaining pool teardown seams (clearReloadableConnections / flush / discardBang / swap-discard / PoolConfig discard)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
