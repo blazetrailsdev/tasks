@@ -1,6 +1,6 @@
 ---
 title: "api:drift — guard base/target extractor-version skew"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
