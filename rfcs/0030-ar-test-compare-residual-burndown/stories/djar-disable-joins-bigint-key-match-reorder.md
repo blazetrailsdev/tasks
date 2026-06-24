@@ -1,6 +1,6 @@
 ---
 title: "Converge DisableJoinsAssociationRelation reorder + inverse find() key-match for BigInt PK vs number FK"
-status: claimed
+status: done
 updated: 2026-06-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4033
 claim: "2026-06-24T20:18:18Z"
 assignee: "djar-disable-joins-bigint-key-match-reorder"
 blocked-by: null
