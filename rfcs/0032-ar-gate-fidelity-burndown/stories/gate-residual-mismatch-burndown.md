@@ -1,6 +1,6 @@
 ---
 title: "gate-residual-mismatch-burndown"
-status: blocked
+status: ready
 updated: 2026-06-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: "2026-06-20T23:58:46Z"
-assignee: "gate-residual-mismatch-burndown"
-blocked-by: "Agent orphaned by host OOM 2026-06-24 17:47 EDT; releasing claim for re-pickup"
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context

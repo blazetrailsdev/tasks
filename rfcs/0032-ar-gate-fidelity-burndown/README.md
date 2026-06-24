@@ -155,6 +155,7 @@ into pre-planned sibling PRs here.
 | [schema-dumper-mysql-expression-index-dump](stories/schema-dumper-mysql-expression-index-dump.md)                     | Emit MySQL 8 expression-index schema dump syntax and converge gate                    | draft   | null    | —            |
 | [transaction-isolation-level-generic-dual-connection](stories/transaction-isolation-level-generic-dual-connection.md) | Converge transaction-isolation-level tests to generic dual connections                | draft   | null    | —            |
 | [view-insert-mysql-no-auto-value-on-zero](stories/view-insert-mysql-no-auto-value-on-zero.md)                         | Fix MySQL updatable-view insert auto-assigned primary key                             | draft   | null    | —            |
+| [gate-residual-mismatch-burndown](stories/gate-residual-mismatch-burndown.md)                                         | gate-residual-mismatch-burndown                                                       | ready   | null    | —            |
 | [adapter-advisory-locks-generic-construction](stories/adapter-advisory-locks-generic-construction.md)                 | Converge advisory_locks enabled test to generic adapter construction                  | done    | null    | —            |
 | [advisory-locks-enabled-lease-connection-fidelity](stories/advisory-locks-enabled-lease-connection-fidelity.md)       | advisory-locks-enabled-lease-connection-fidelity                                      | done    | null    | —            |
 | [converge-schema-dumper-partial-nulls-overgate](stories/converge-schema-dumper-partial-nulls-overgate.md)             | converge-schema-dumper-partial-nulls-overgate                                         | done    | null    | —            |
@@ -170,7 +171,6 @@ into pre-planned sibling PRs here.
 | [gate-wrong-gate-body-convergence](stories/gate-wrong-gate-body-convergence.md)                                       | gate-wrong-gate-body-convergence                                                      | done    | null    | —            |
 | [gate-wrong-gate-burndown](stories/gate-wrong-gate-burndown.md)                                                       | Converge wrong-gate tests to Rails gates (49 across 19 files)                         | done    | 250     | wrong-gate   |
 | [gate-mismatch-zero-ci-enforcement](stories/gate-mismatch-zero-ci-enforcement.md)                                     | Arm hard-zero CI gate on activerecord gate-mismatch count                             | blocked | 120     | enforcement  |
-| [gate-residual-mismatch-burndown](stories/gate-residual-mismatch-burndown.md)                                         | gate-residual-mismatch-burndown                                                       | blocked | null    | —            |
 
 ## Changelog
 
