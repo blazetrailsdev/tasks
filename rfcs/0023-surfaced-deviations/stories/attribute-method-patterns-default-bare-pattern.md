@@ -1,7 +1,7 @@
 ---
 title: "Converge attribute_method_patterns default to Rails bare-pattern seed"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T13:00:42Z"
+assignee: "attribute-method-patterns-default-bare-pattern"
 blocked-by: null
 ---
 
