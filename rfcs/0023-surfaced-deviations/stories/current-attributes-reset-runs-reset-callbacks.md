@@ -1,6 +1,6 @@
 ---
 title: "CurrentAttributes#reset must run :reset callbacks (run_callbacks :reset)"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4083
 claim: "2026-06-24T20:07:01Z"
 assignee: "current-attributes-reset-runs-reset-callbacks"
 blocked-by: null
