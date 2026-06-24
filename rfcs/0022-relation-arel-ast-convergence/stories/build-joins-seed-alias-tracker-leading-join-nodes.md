@@ -1,6 +1,6 @@
 ---
 title: "Seed build_joins AliasTracker with leading_joins + join_nodes (Rails alias_tracker)"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T19:26:48Z"
+assignee: "build-joins-seed-alias-tracker-leading-join-nodes"
 blocked-by: null
 ---
 
