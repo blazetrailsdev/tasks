@@ -1,6 +1,6 @@
 ---
 title: "Triage cross-package call-mismatch baseline entries (SIGNIFICANT_CALLS name-collisions)"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
