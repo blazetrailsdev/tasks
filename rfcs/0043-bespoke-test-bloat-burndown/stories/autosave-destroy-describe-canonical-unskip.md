@@ -1,6 +1,6 @@
 ---
 title: "Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
