@@ -1,6 +1,6 @@
 ---
 title: "Call-mismatches ratchet is environment-non-deterministic (local vs CI diverge)"
-status: claimed
+status: done
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4069
 claim: "2026-06-24T17:02:44Z"
 assignee: "call-mismatch-ratchet-env-nondeterminism"
 blocked-by: null
