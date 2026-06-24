@@ -1,7 +1,7 @@
 ---
 title: "Flip PG default PK to BIGSERIAL: createTable + dumper + un-skip"
-status: blocked
-updated: 2026-06-23
+status: ready
+updated: 2026-06-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
@@ -28,7 +28,7 @@ priority: 30
 pr: null
 claim: null
 assignee: null
-blocked-by: "PG lane red: flip CI (run 28050673795) enumerated 146 int8->BigInt fallout sites across 26 files — mostly the associations/ subdir the earlier sweeps never touched (FK cols correctly stay integer per Rails). recordIdentity JSON.stringify(BigInt) fixed on-branch (#3966). Remaining split into 4 new deps: pg-bigint-assoc-key-match-through-inverse-impl (28 functional key-match sites), + 3 assertion sweeps (belongs-to / hasmany-hasone / relation-fixtures-tail, 118 sites). All must land before flip retries."
+blocked-by: null
 ---
 
 ## Context
