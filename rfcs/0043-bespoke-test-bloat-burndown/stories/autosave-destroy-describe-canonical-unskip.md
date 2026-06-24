@@ -1,6 +1,6 @@
 ---
 title: "Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T18:14:41Z"
+assignee: "autosave-destroy-describe-canonical-unskip"
 blocked-by: null
 ---
 
