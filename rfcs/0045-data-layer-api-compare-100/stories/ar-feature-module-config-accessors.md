@@ -1,6 +1,6 @@
 ---
 title: "ar-feature-module-config-accessors"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-config
