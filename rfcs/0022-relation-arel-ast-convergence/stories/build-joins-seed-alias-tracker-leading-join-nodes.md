@@ -1,6 +1,6 @@
 ---
 title: "Seed build_joins AliasTracker with leading_joins + join_nodes (Rails alias_tracker)"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
