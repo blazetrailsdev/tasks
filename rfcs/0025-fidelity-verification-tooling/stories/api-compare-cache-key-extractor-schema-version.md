@@ -1,7 +1,7 @@
 ---
 title: "api-compare: key ts-api cache on extractor output-schema version so new fields (e.g. calls) bust stale entries"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T01:00:41Z"
+assignee: "api-compare-cache-key-extractor-schema-version"
 blocked-by: null
 ---
 
