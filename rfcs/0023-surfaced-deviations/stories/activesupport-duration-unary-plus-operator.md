@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Duration#+@ unary-plus + api:compare mapping"
-status: claimed
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4056
 claim: "2026-06-24T11:30:40Z"
 assignee: "activesupport-duration-unary-plus-operator"
 blocked-by: null
