@@ -1,6 +1,6 @@
 ---
 title: "Walk-dedup through-association intermediate join table against eager spec"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4088
 claim: "2026-06-24T23:22:33Z"
 assignee: "eager-load-walk-dedup-through-intermediate"
 blocked-by: null
