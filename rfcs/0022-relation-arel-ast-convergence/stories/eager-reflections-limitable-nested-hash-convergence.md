@@ -1,6 +1,6 @@
 ---
 title: "Converge _eagerReflectionsAreLimitable to resolve nested-hash/array eager specs via JoinDependency reflections"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4089
 claim: "2026-06-24T23:42:35Z"
 assignee: "eager-reflections-limitable-nested-hash-convergence"
 blocked-by: null
