@@ -1,13 +1,13 @@
 ---
 title: "Mirror Rails' second using_limitable_reflections? clause (joins ∪ left_outer_joins) across all three distinct-PK deferral sites"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: ["relation-handler-distinct-pk-load-time-materialization"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
