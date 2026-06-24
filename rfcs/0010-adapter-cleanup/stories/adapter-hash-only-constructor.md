@@ -1,6 +1,6 @@
 ---
 title: "Adapter hash-only constructor (Initiative 3)"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 14
-pr: null
+pr: 4064
 claim: "2026-06-24T15:42:28Z"
 assignee: "adapter-hash-only-constructor"
 blocked-by: null
