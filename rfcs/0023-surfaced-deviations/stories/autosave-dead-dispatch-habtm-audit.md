@@ -1,6 +1,6 @@
 ---
 title: "Audit + remove dead autosave dispatch chain (autosaveHabtm, autosaveAssociation(s), autosaveChildren/BelongsTo)"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T18:02:43Z"
+assignee: "autosave-dead-dispatch-habtm-audit"
 blocked-by: null
 ---
 
