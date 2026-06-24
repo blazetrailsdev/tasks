@@ -1,6 +1,6 @@
 ---
 title: "Triage cross-package call-mismatch baseline entries (SIGNIFICANT_CALLS name-collisions)"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4078
 claim: "2026-06-24T18:50:39Z"
 assignee: "cross-package-call-mismatch-false-positives"
 blocked-by: null
