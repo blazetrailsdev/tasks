@@ -1,6 +1,6 @@
 ---
 title: "Add remaining accepts_nested_attributes_for declarations to canonical Pirate model"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T18:26:41Z"
+assignee: "canonical-pirate-remaining-nested-attributes"
 blocked-by: null
 ---
 
