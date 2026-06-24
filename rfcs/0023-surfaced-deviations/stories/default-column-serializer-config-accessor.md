@@ -1,6 +1,6 @@
 ---
 title: "Port default_column_serializer class config + serialize fallback"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4080
 claim: "2026-06-24T19:02:41Z"
 assignee: "default-column-serializer-config-accessor"
 blocked-by: null
