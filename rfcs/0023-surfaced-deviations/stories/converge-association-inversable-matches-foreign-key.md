@@ -1,6 +1,6 @@
 ---
 title: "Converge Association#inversable() to Rails matches_foreign_key? (de-duplicate inline AR wiring)"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
