@@ -9,7 +9,10 @@ packages:
   - "activerecord"
   - "arel"
   - "activemodel"
-clusters: []
+clusters:
+  - infra
+  - real-omission
+  - equivalent-baseline
 related-rfcs:
   - "0044"
   - "0045"
