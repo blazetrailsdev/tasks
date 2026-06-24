@@ -1,6 +1,6 @@
 ---
 title: "Replace inert Duration#identity() with a +@ api-compare scoped-skip"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
