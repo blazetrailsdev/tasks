@@ -1,7 +1,7 @@
 ---
 title: "through-source-scope-not-merged-in-eager-preload"
-status: in-progress
-updated: 2026-06-23
+status: done
+updated: 2026-06-24
 rfc: "0040-through-association-source-convergence"
 cluster: null
 deps: []
