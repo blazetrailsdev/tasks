@@ -1,6 +1,6 @@
 ---
 title: "Converge Association#inversable() to Rails matches_foreign_key? (de-duplicate inline AR wiring)"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4071
 claim: "2026-06-24T17:26:39Z"
 assignee: "converge-association-inversable-matches-foreign-key"
 blocked-by: null
