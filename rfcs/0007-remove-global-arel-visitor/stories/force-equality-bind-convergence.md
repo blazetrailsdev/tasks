@@ -1,13 +1,13 @@
 ---
 title: "force-equality-bind-convergence"
 status: ready
-updated: 2026-06-23
+updated: 2026-06-24
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
