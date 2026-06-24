@@ -1,7 +1,7 @@
 ---
 title: "Widen writeFromUser to the Rails one-liner once the schema cache is warm at construction"
-status: in-progress
-updated: 2026-06-23
+status: done
+updated: 2026-06-24
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 deps: []
