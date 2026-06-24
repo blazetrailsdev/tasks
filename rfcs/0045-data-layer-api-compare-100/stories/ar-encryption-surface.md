@@ -1,6 +1,6 @@
 ---
 title: "ar-encryption-surface"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-feature
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 4047
 claim: "2026-06-24T02:01:44Z"
 assignee: "ar-encryption-surface"
 blocked-by: null
