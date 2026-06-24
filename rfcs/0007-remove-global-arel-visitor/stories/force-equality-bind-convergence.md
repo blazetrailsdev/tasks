@@ -1,6 +1,6 @@
 ---
 title: "force-equality-bind-convergence"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
