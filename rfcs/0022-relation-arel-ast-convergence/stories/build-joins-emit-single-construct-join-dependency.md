@@ -1,6 +1,6 @@
 ---
 title: "Converge emitJoinPlan to Rails' single construct_join_dependency(named_joins, join_type) shape"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
