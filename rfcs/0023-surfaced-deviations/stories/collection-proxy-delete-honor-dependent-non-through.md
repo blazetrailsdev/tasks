@@ -1,7 +1,7 @@
 ---
 title: "collection-proxy-delete-honor-dependent-non-through"
-status: in-progress
-updated: 2026-06-21
+status: done
+updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
