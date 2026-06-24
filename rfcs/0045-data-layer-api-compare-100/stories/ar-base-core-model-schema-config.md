@@ -1,6 +1,6 @@
 ---
 title: "ar-base-core-model-schema-config"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-config
@@ -8,7 +8,7 @@ deps: ["ar-feature-module-config-accessors", "ar-querying-async-finders"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 4060
 claim: "2026-06-24T14:09:58Z"
 assignee: "ar-base-core-model-schema-config"
 blocked-by: null
