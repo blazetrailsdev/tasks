@@ -1,13 +1,13 @@
 ---
 title: "legacy-migration-5-0-create-table-and-chain"
 status: claimed
-updated: 2026-06-22
+updated: 2026-06-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 9000
 pr: null
 claim: "2026-06-22T02:21:13Z"
 assignee: "legacy-migration-5-0-create-table-and-chain"
