@@ -1,6 +1,6 @@
 ---
 title: "ar-relation-except-setop-converge"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4052
 claim: "2026-06-24T04:30:41Z"
 assignee: "ar-relation-except-setop-converge"
 blocked-by: null
