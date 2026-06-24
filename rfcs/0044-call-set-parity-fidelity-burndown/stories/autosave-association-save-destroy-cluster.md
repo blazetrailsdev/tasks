@@ -1,6 +1,6 @@
 ---
 title: "Audit autosave save/destroy call-set omissions"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 4061
 claim: "2026-06-24T14:29:55Z"
 assignee: "autosave-association-save-destroy-cluster"
 blocked-by: null
