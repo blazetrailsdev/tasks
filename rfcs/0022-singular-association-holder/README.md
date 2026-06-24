@@ -1,9 +1,9 @@
 ---
 rfc: "0022-singular-association-holder"
 title: "Singular-association holder & _cachedAssociations deletion"
-status: active
+status: closed
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-24
 owner: "@deanmarano"
 packages: [activerecord, activemodel]
 clusters:
