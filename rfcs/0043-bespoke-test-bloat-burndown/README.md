@@ -273,7 +273,7 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
 | [immutable-strings-by-default-tests-converge-to-rails](stories/immutable-strings-by-default-tests-converge-to-rails.md) | Converge immutable_strings_by_default tests to Rails schema-inference fidelity               | ready       | 40      | —       |
 | [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models   | in-progress | 150     | —       |
-| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | in-progress | 30      | —       |
+| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | done        | 30      | —       |
 
 ## Changelog
 

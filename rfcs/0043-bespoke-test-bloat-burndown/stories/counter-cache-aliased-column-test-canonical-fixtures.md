@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
