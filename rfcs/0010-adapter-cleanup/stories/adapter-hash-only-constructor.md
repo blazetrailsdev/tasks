@@ -1,6 +1,6 @@
 ---
 title: "Adapter hash-only constructor (Initiative 3)"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
