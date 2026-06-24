@@ -1,6 +1,6 @@
 ---
 title: "Audit + remove dead autosave dispatch chain (autosaveHabtm, autosaveAssociation(s), autosaveChildren/BelongsTo)"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
