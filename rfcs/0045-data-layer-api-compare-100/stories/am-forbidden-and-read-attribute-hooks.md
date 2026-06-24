@@ -1,6 +1,6 @@
 ---
 title: "am-forbidden-and-read-attribute-hooks"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: activemodel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4043
 claim: "2026-06-24T00:30:40Z"
 assignee: "am-forbidden-and-read-attribute-hooks"
 blocked-by: null
