@@ -16,7 +16,7 @@
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | active | @deanmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | closed | @deanmarano | activerecord |
 | [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | closed | @deanmarano | activerecord |
-| [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | active | @deanmarano | activerecord |
+| [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | closed | @deanmarano | activerecord |
 | [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @deanmarano | activerecord |
 | [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | closed | @deanmarano | activerecord |
 | [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | superseded | @deanmarano | activerecord |
@@ -35,7 +35,7 @@
 | [0028-ci-cost-optimization](rfcs/0028-ci-cost-optimization/README.md) | CI cost optimization — cut billed Actions minutes and time-to-green | active | @deanmarano | — |
 | [0029-sqlite-memory-fidelity](rfcs/0029-sqlite-memory-fidelity/README.md) | SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern | draft | @deanmarano | activerecord |
 | [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | active | @deanmarano | activerecord |
-| [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | active | @deanmarano | activerecord |
+| [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | closed | @deanmarano | activerecord |
 | [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | active | @deanmarano | activerecord |
 | [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | active | @your-handle | activerecord |
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |

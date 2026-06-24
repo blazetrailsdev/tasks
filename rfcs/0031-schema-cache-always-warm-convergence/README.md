@@ -1,9 +1,9 @@
 ---
 rfc: "0031-schema-cache-always-warm-convergence"
 title: "Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow)"
-status: active
+status: closed
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-24
 owner: "@deanmarano"
 packages:
   - "activerecord"

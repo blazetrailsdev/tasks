@@ -1,9 +1,9 @@
 ---
 rfc: "0013-pg-rawconn-convergence"
 title: "PG raw-connection acquisition through the abstract withRawConnection loop"
-status: active
+status: closed
 created: 2026-06-04
-updated: 2026-06-05
+updated: 2026-06-24
 owner: "@deanmarano"
 packages:
   - activerecord
