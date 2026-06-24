@@ -1,6 +1,6 @@
 ---
 title: "Widen-calls significant-set knob + ratcheting baseline"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: infra
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 1
-pr: null
+pr: 4063
 claim: "2026-06-24T15:09:04Z"
 assignee: "wide-call-set-significant-knob-and-baseline"
 blocked-by: null
