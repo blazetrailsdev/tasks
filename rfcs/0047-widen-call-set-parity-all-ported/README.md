@@ -1,5 +1,5 @@
 ---
-rfc: "0000-widen-call-set-parity-all-ported"
+rfc: "0047-widen-call-set-parity-all-ported"
 title: "Widen call-set parity: converge all ported-method internal calls to Rails"
 status: draft
 created: 2026-06-24

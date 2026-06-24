@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-widen-call-set-parity-all-ported](rfcs/0000-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | draft | @your-handle | activerecord, arel, activemodel |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -51,3 +50,4 @@
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | active | @deanmarano | activerecord |
 | [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | draft | @deanmarano | activerecord |
+| [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | draft | @your-handle | activerecord, arel, activemodel |
