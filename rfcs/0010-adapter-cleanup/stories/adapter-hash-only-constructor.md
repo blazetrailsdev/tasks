@@ -17,14 +17,20 @@ blocked-by: "Phase 0 gated on trails #2700 (proposed; no code yet)"
 ## Context
 
 The third initiative consolidated into `adapter-architecture-cleanup.md`:
-Rails-faithful adapter construction via a hash-only constructor. Currently
-**proposed (no code)**; Phase 0 is gated on trails #2700. Captured here so the
-source doc can be deleted without losing the initiative.
+Rails-faithful adapter construction via a hash-only constructor. Captured here
+so the source doc can be deleted without losing the initiative.
+
+**Unblocked (verified 2026-06-24):** the Phase 0 gate, trails #2700
+("deprecate raw-connection AbstractAdapter#initialize overload"), **merged
+2026-05-30**. First task on claim is to re-scope the AC below against the
+now-current adapter constructors (post-deprecation). Related constructor
+restructure: `pool-raw-connection-initialize-overload` (RFC 0005), which
+threads PG/MySQL2 construction.
 
 ## Acceptance criteria
 
-- [ ] Phase 0 unblocked (#2700 resolved) — re-scope against the then-current
-      adapter constructors.
+- [x] Phase 0 unblocked (#2700 merged 2026-05-30) — re-scope against the
+      current adapter constructors on claim.
 - [ ] Concrete adapters (PG / MySQL2 / SQLite) accept a Rails-shaped hash-only
       constructor.
 - [ ] Existing positional construction paths migrated or bridged.
