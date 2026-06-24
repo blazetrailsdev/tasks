@@ -31,7 +31,7 @@ This repo holds **design documents and structured work tracking** for
 - **New RFCs always go through a PR.** Author against a `0000-<slug>`
   placeholder; the PR hosts design review and assigns the number at merge (see
   _Authoring an RFC_ in the README). Use the `0000-` dir prefix, never
-  `draft-`. Editing an already-merged RFC's README is also PR-gated.
+  `draft-`.
 - **Everything else is direct-to-main.** Story status flips (`claim`, `done`,
   `block`, `in-progress`) go straight to `main` via `pnpm tasks` — git push is
   the atomic claim mechanism. No PR gate on status changes.

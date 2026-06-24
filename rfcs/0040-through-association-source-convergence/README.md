@@ -1,9 +1,9 @@
 ---
 rfc: "0040-through-association-source-convergence"
 title: "Through-association source/polymorphic reflection convergence"
-status: active
+status: closed
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-06-24
 owner: "@deanmarano"
 packages:
   - "activerecord"

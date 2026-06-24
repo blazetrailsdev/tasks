@@ -1,9 +1,9 @@
 ---
 rfc: "0037-no-explicit-any-enforcement"
 title: "no-explicit-any enforcement & burndown (activerecord)"
-status: active
+status: closed
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-06-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
