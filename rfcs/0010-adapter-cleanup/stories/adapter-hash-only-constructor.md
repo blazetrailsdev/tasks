@@ -1,7 +1,7 @@
 ---
 title: "Adapter hash-only constructor (Initiative 3)"
-status: blocked
-updated: 2026-06-04
+status: ready
+updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
@@ -11,7 +11,7 @@ priority: 14
 pr: null
 claim: null
 assignee: null
-blocked-by: "Phase 0 gated on trails #2700 (proposed; no code yet)"
+blocked-by: null
 ---
 
 ## Context
