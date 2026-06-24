@@ -1,6 +1,6 @@
 ---
 title: "Converge read_attribute_for_serialization to pure send (drop store/attributes fallbacks)"
-status: ready
+status: draft
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
