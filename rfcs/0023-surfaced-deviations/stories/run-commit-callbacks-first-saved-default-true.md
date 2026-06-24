@@ -1,7 +1,7 @@
 ---
 title: "run_commit_callbacks_on_first_saved_instances_in_transaction default should be true (Rails class_attribute)"
-status: in-progress
-updated: 2026-06-22
+status: done
+updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
