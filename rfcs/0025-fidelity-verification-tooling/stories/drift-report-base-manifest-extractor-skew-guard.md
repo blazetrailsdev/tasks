@@ -1,6 +1,6 @@
 ---
 title: "api:drift — guard base/target extractor-version skew"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4085
 claim: "2026-06-24T20:36:49Z"
 assignee: "drift-report-base-manifest-extractor-skew-guard"
 blocked-by: null
