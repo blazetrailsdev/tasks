@@ -1,6 +1,6 @@
 ---
 title: "arel-visitors-primitive-dispatch"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: arel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4057
 claim: "2026-06-24T12:30:39Z"
 assignee: "arel-visitors-primitive-dispatch"
 blocked-by: null
