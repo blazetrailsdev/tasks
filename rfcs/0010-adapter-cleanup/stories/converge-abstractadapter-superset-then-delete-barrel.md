@@ -1,6 +1,6 @@
 ---
 title: "converge-abstractadapter-superset-then-delete-barrel"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4070
 claim: "2026-06-24T17:14:43Z"
 assignee: "converge-abstractadapter-superset-then-delete-barrel"
 blocked-by: null
