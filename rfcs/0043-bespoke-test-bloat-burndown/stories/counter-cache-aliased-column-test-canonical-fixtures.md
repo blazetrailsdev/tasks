@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T18:38:39Z"
+assignee: "counter-cache-aliased-column-test-canonical-fixtures"
 blocked-by: null
 ---
 
