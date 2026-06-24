@@ -1,6 +1,6 @@
 ---
 title: "ar-schema-creation-quoting"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 4053
 claim: "2026-06-24T10:00:41Z"
 assignee: "ar-schema-creation-quoting"
 blocked-by: null
