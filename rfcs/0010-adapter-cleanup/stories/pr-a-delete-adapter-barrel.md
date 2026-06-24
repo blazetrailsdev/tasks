@@ -1,6 +1,6 @@
 ---
 title: "PR A — delete adapter.ts barrel + DatabaseAdapter interface"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T16:12:31Z"
+assignee: "pr-a-delete-adapter-barrel"
 blocked-by: null
 ---
 
