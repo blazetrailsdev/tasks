@@ -1,7 +1,7 @@
 ---
 title: "ar-associations-source-reflection"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-feature
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T01:30:44Z"
+assignee: "ar-associations-source-reflection"
 blocked-by: null
 ---
 
