@@ -4,7 +4,8 @@ status: draft
 updated: 2026-06-24
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
-deps: []
+deps:
+  - wide-call-set-significant-knob-and-baseline
 deps-rfc: []
 est-loc: 150
 priority: null
