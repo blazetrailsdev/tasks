@@ -1,6 +1,6 @@
 ---
 title: "api-compare: resolve Ruby alias arity to target so faithful TS delegators don't false-flag"
-status: ready
+status: claimed
 updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T13:30:40Z"
+assignee: "api-compare-resolve-alias-arity"
 blocked-by: null
 ---
 
