@@ -1,6 +1,6 @@
 ---
 title: "Audit autosave save/destroy call-set omissions"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
