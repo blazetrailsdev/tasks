@@ -1,14 +1,14 @@
 ---
 title: "lockingEnabled must honour lock_optimistically (converge to locking_enabled?)"
-status: draft
-updated: 2026-06-21
+status: done
+updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
 priority: 40
-pr: null
+pr: 4048
 claim: null
 assignee: null
 blocked-by: null
