@@ -1,7 +1,7 @@
 ---
 title: "ar-querying-async-finders"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-config
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-24T03:30:43Z"
+assignee: "ar-querying-async-finders"
 blocked-by: null
 ---
 
