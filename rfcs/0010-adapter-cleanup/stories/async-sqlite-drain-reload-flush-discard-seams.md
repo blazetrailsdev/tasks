@@ -1,6 +1,6 @@
 ---
 title: "Drain async SQLite close on remaining pool teardown seams (clearReloadableConnections / flush / discardBang / swap-discard / PoolConfig discard)"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 14
-pr: null
+pr: 4065
 claim: "2026-06-24T15:57:32Z"
 assignee: "async-sqlite-drain-reload-flush-discard-seams"
 blocked-by: null
