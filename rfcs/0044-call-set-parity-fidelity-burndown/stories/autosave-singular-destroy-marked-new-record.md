@@ -1,6 +1,6 @@
 ---
 title: "autosave-singular-destroy-marked-new-record"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4067
 claim: "2026-06-24T16:53:57Z"
 assignee: "autosave-singular-destroy-marked-new-record"
 blocked-by: null
