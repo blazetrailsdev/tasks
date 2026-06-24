@@ -1,6 +1,6 @@
 ---
 title: "Add remaining accepts_nested_attributes_for declarations to canonical Pirate model"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
