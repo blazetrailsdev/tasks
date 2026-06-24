@@ -1,7 +1,7 @@
 ---
 rfc: "0047-widen-call-set-parity-all-ported"
 title: "Widen call-set parity: converge all ported-method internal calls to Rails"
-status: draft
+status: active
 created: 2026-06-24
 updated: 2026-06-24
 owner: "@your-handle"

@@ -50,4 +50,4 @@
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | active | @deanmarano | activerecord |
 | [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | draft | @deanmarano | activerecord |
-| [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | draft | @your-handle | activerecord, arel, activemodel |
+| [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | active | @your-handle | activerecord, arel, activemodel |
