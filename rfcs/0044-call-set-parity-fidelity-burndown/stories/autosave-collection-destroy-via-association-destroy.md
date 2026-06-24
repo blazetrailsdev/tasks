@@ -1,6 +1,6 @@
 ---
 title: "autosave-collection-destroy-via-association-destroy"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4068
 claim: "2026-06-24T16:42:27Z"
 assignee: "autosave-collection-destroy-via-association-destroy"
 blocked-by: null
