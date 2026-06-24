@@ -1,6 +1,6 @@
 ---
 title: "Port lock_optimistically class config + gate lockingEnabled on it"
-status: ready
+status: done
 updated: 2026-06-24
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4048
 claim: null
 assignee: null
 blocked-by: null
