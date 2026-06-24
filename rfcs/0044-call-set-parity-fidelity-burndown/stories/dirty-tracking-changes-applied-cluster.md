@@ -1,6 +1,6 @@
 ---
 title: "Converge changes_applied dirty-state clearing in attribute-methods writes"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4082
 claim: "2026-06-24T19:38:46Z"
 assignee: "dirty-tracking-changes-applied-cluster"
 blocked-by: null
