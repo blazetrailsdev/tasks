@@ -1,6 +1,6 @@
 ---
 title: "arel-node-accessor-aliases"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: arel
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4055
 claim: "2026-06-24T11:00:40Z"
 assignee: "arel-node-accessor-aliases"
 blocked-by: null
