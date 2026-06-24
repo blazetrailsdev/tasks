@@ -1,6 +1,6 @@
 ---
 title: "api:drift — surface gem-level package add/remove from upstream Gemfile"
-status: claimed
+status: blocked
 updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-06-24T20:56:50Z"
 assignee: "drift-report-gem-level-package-add-remove"
-blocked-by: null
+blocked-by: "Agent orphaned by host OOM 2026-06-24 17:47 EDT; releasing claim for re-pickup"
 ---
 
 ## Context
