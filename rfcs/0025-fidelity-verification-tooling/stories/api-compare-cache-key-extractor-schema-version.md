@@ -1,6 +1,6 @@
 ---
 title: "api-compare: key ts-api cache on extractor output-schema version so new fields (e.g. calls) bust stale entries"
-status: in-progress
+status: done
 updated: 2026-06-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
