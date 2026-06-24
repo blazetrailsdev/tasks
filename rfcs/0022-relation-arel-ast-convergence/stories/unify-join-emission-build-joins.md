@@ -1,13 +1,13 @@
 ---
 title: "Unify the two build_joins ports (_applyJoinsToManager + buildJoins) into one shared emitter"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-24
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
