@@ -1,6 +1,6 @@
 ---
 title: "ar-ddl-belongs-to-aliases"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-adapter
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4046
 claim: "2026-06-24T02:00:40Z"
 assignee: "ar-ddl-belongs-to-aliases"
 blocked-by: null
