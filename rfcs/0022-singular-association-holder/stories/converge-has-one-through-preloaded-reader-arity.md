@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-through-preloaded-reader-arity"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0022-singular-association-holder"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
+pr: 4066
 claim: "2026-06-24T16:27:37Z"
 assignee: "converge-has-one-through-preloaded-reader-arity"
 blocked-by: null
