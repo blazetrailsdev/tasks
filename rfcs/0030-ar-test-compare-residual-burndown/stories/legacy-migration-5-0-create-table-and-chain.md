@@ -1,6 +1,6 @@
 ---
 title: "legacy-migration-5-0-create-table-and-chain"
-status: claimed
+status: done
 updated: 2026-06-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
