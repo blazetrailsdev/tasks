@@ -1,6 +1,6 @@
 ---
 title: "ar-relation-surface"
-status: claimed
+status: in-progress
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: ar-relation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 4051
 claim: "2026-06-24T04:00:40Z"
 assignee: "ar-relation-surface"
 blocked-by: null
