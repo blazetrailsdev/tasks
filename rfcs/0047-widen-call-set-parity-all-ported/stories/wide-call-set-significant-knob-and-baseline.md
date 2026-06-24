@@ -1,6 +1,6 @@
 ---
 title: "Widen-calls significant-set knob + ratcheting baseline"
-status: draft
+status: ready
 updated: 2026-06-24
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: infra
