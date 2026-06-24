@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-06-24
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
-deps: []
+deps:
+  - ar-querying-async-finders
 deps-rfc: []
 est-loc: 30
 priority: null
