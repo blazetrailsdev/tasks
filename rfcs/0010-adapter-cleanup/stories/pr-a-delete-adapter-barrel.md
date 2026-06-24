@@ -1,7 +1,7 @@
 ---
 title: "PR A — delete adapter.ts barrel + DatabaseAdapter interface"
-status: blocked
-updated: 2026-05-30
+status: ready
+updated: 2026-06-24
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
@@ -11,7 +11,7 @@ priority: 14
 pr: null
 claim: null
 assignee: null
-blocked-by: "Phase G fixture adoption must rewrite the ~134 import sites still re-exporting through adapter.ts (trails fixtures-adoption-plan)"
+blocked-by: null
 ---
 
 ## Context
