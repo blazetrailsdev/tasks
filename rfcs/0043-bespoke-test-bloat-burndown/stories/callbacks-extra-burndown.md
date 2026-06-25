@@ -1,6 +1,6 @@
 ---
 title: "Burn down 61 extra (TS-only) tests in callbacks.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T16:30:30Z"
+assignee: "callbacks-extra-burndown"
 blocked-by: null
 ---
 
