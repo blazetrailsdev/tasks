@@ -413,18 +413,6 @@ Step 3 requires PG adapter-dir validation. All steps branch from `main`; no stac
    **Recommendation**: follow the MySQL/PG pattern — define the method directly on
    `SQLite3Adapter`, and delete the dead internal function in `schema-statements.ts`.
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                                              | Title                                                                                       | Status | Est LOC | Cluster                 |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------ | ------- | ----------------------- |
-| [burn-down-tabledefinition-tosql](stories/burn-down-tabledefinition-tosql.md)   | Route TableDefinition#toSql through the DDL visitor (burn down rails-arel-tosql exclude)    | done   | 150     | —                       |
-| [step1-delete-dead-mysql-branches](stories/step1-delete-dead-mysql-branches.md) | Step 1 — Delete dead MySQL branches from AbstractTableDefinition.toSql()                    | done   | 40      | ddl-visitor-convergence |
-| [step2-sqlite-visitor-wire](stories/step2-sqlite-visitor-wire.md)               | Step 2 — Wire SQLite createTableDefinition + SQLite3TableDefinition.toSql() through visitor | done   | 120     | ddl-visitor-convergence |
-| [step3-pg-tosql-via-visitor](stories/step3-pg-tosql-via-visitor.md)             | Step 3 — Route PgTableDefinition.toSql() through PgSchemaCreation                           | done   | 80      | ddl-visitor-convergence |
-| [step4-delete-abstract-tosql](stories/step4-delete-abstract-tosql.md)           | Step 4 — Delete AbstractTableDefinition.toSql()                                             | done   | 50      | ddl-visitor-convergence |
-
 ## Prompt accuracy notes
 
 The following claims in the RFC-authoring prompt were inaccurate against the current

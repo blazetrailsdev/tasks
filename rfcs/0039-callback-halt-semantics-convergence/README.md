@@ -42,26 +42,16 @@ Three tracked items remain:
 - a fidelity gap where after-callbacks are not skipped when an around/block
   returns false (Rails `callbacks_test.rb:81-87`).
 
-## Stories
-
-- `deprecate-return-false-callback-halt-alias` — remove the `return false`
-  halt alias now that the sentinel exists.
-- `callback-throw-abort-halt-semantics` (currently blocked) — make the
-  terminator catch the `throw "abort"` sentinel and converge fixture sites.
-- `model-callbacks-block-false-after-skip-fidelity` — close the
-  after-callback-skip gap (or document tracked-pending-convergence per the
-  story's open question).
-
-<!-- generated: stories table -->
-
-| ID                                                                                                            | Title                                                                                 | Status | Est LOC | Cluster |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------ | ------- | ------- |
-| [callback-throw-abort-halt-semantics](stories/callback-throw-abort-halt-semantics.md)                         | throw :abort halt semantics — converge throw "abort" vs return false                  | done   | 90      | —       |
-| [deprecate-return-false-callback-halt-alias](stories/deprecate-return-false-callback-halt-alias.md)           | Converge callback halt to throw-abort sentinel only (drop return-false alias)         | done   | 150     | —       |
-| [model-callbacks-block-false-after-skip-fidelity](stories/model-callbacks-block-false-after-skip-fidelity.md) | ModelCallbacks: after callbacks skipped when block returns false (Rails fidelity gap) | done   | 120     | —       |
-
 ## Rollout
 
 Sentinel-catch first (unblocks the fixtures), then drop the `return false`
 alias, then the after-skip fidelity. All converge toward Rails; none ratify a
 deviation.
+
+- `callback-throw-abort-halt-semantics` (currently blocked) — make the
+  terminator catch the `throw "abort"` sentinel and converge fixture sites.
+- `deprecate-return-false-callback-halt-alias` — remove the `return false`
+  halt alias now that the sentinel exists.
+- `model-callbacks-block-false-after-skip-fidelity` — close the
+  after-callback-skip gap (or document tracked-pending-convergence per the
+  story's open question).

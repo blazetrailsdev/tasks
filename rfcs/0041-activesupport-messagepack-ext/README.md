@@ -33,7 +33,11 @@ class, `Temporal`-based date/time, `Duration`), so each story is wiring an ext
 registration with a Ruby-exact wire format around an existing class — not porting
 the class itself. Cross-runtime byte fidelity is the crux throughout.
 
-## Stories
+## Rollout
+
+No hard ordering; ship smallest-first. The temporal story self-sequences (land
+5/6/10 first, follow-up 7/8 if the nanosecond `Time` rep exceeds one PR). Each
+story is independently mergeable; `api/test:compare` delta stays non-negative.
 
 - `messagepack-ext-bigdecimal` — ext type 2 (`_dump`/`_load` precision string).
 - `messagepack-ext-rational-complex` — Rational/Complex ext types.
@@ -43,18 +47,3 @@ the class itself. Cross-runtime byte fidelity is the crux throughout.
 
 (Authored under 0023; moved here verbatim — bodies carry `extensions.rb` line
 refs, trails `file:line`, and acceptance criteria.)
-
-<!-- generated: stories table -->
-
-| ID                                                                              | Title                                                                                                     | Status | Est LOC | Cluster |
-| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
-| [messagepack-ext-bigdecimal](stories/messagepack-ext-bigdecimal.md)             | MessagePack ext type 2 BigDecimal (\_dump/\_load Marshal-style codec)                                     | draft  | 150     | —       |
-| [messagepack-ext-rational-complex](stories/messagepack-ext-rational-complex.md) | MessagePack ext types 3 Rational + 4 Complex (need JS numeric value classes)                              | draft  | 200     | —       |
-| [messagepack-ext-temporal](stories/messagepack-ext-temporal.md)                 | MessagePack ext types 5-8,10 DateTime/Date/Time/TimeWithZone/Duration (nanosecond-faithful temporal reps) | draft  | 300     | —       |
-| [messagepack-ext-value-classes](stories/messagepack-ext-value-classes.md)       | MessagePack ext types 11,13-16 Range/URI/IPAddr/Pathname/Regexp (need value classes + Ruby-faithful to_s) | draft  | 300     | —       |
-
-## Rollout
-
-No hard ordering; ship smallest-first. The temporal story self-sequences (land
-5/6/10 first, follow-up 7/8 if the nanosecond `Time` rep exceeds one PR). Each
-story is independently mergeable; `api/test:compare` delta stays non-negative.

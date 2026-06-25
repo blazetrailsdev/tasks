@@ -231,34 +231,6 @@ this RFC's trails→Rails scope.
    (`adapter-test-ambient-connection`) introduce the helper if one is warranted;
    later stories reuse it. Do not pre-build an empty helper (CLAUDE.md: no stubs).
 
-## Stories
-
-One story per independently-shippable fidelity fix. The ambient-connection
-stories (cluster `test-connection-fidelity`) are mutually independent — each
-touches a single test file — and can be claimed in parallel. The audit story
-should be claimed first within the sweep so its findings can register any
-additional stories before agents touch the long-tail files.
-
-<!-- This table is AUTO-GENERATED from story frontmatter by
-     scripts/stories-table.mjs (run by the pre-commit hook). Do NOT hand-edit
-     it — edits are overwritten on commit, and `pnpm validate` fails on drift. -->
-
-<!-- generated: stories table -->
-
-| ID                                                                                          | Title                                                                                     | Status | Est LOC | Cluster                  |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------ | ------- | ------------------------ |
-| [adapter-test-ambient-connection](stories/adapter-test-ambient-connection.md)               | adapter.test.ts: derive connection from ambient test config, not :memory:                 | draft  | 60      | test-connection-fidelity |
-| [audit-residual-memory-sites](stories/audit-residual-memory-sites.md)                       | Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories | draft  | 30      | adapter-test-fidelity    |
-| [connection-handling-ambient-connection](stories/connection-handling-ambient-connection.md) | connection-handling.test.ts: use ambient/connects_to config, not :memory:                 | draft  | 55      | test-connection-fidelity |
-| [connection-pool-derive-from-ambient](stories/connection-pool-derive-from-ambient.md)       | connection-pool.test.ts: derive PoolConfig from ambient db_config like Rails              | draft  | 45      | test-connection-fidelity |
-| [connection-swapping-nested-file-based](stories/connection-swapping-nested-file-based.md)   | connection-swapping-nested: use file-backed per-database DBs like Rails                   | draft  | 90      | test-connection-fidelity |
-| [database-tasks-test-config-fidelity](stories/database-tasks-test-config-fidelity.md)       | database-tasks.test.ts: converge 28 excess :memory: sites to Rails config fidelity        | draft  | 150     | test-connection-fidelity |
-| [schema-statements-on-adapter-ambient](stories/schema-statements-on-adapter-ambient.md)     | schema-statements-on-adapter.test.ts: use ambient connection, not :memory:                | draft  | 50      | test-connection-fidelity |
-| [sqlite3-statement-pool-ambient](stories/sqlite3-statement-pool-ambient.md)                 | adapters/sqlite3/statement-pool.test.ts: use ambient connection like Rails                | draft  | 50      | adapter-test-fidelity    |
-| [statement-cache-ambient-connection](stories/statement-cache-ambient-connection.md)         | statement-cache.test.ts: run against ambient connection like Rails                        | draft  | 50      | test-connection-fidelity |
-| [transactions-ambient-connection](stories/transactions-ambient-connection.md)               | transactions.test.ts: run against ambient connection like Rails                           | draft  | 45      | test-connection-fidelity |
-| [worker-db-fallback-file-backed](stories/worker-db-fallback-file-backed.md)                 | Worker-DB fallback: file-backed default + fix stale :memory: comment                      | draft  | 40      | worker-db                |
-
 ## Changelog
 
 - 2026-06-15: initial RFC

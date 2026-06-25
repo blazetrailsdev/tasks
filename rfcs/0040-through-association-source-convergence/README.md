@@ -38,7 +38,10 @@ Each is small on its own, but they share fixtures, the same Rails source
 (`packages/activerecord/src/reflection.ts`, `associations/`), so converging them
 together avoids repeated context re-derivation and overlapping edits.
 
-## Stories
+## Rollout
+
+No hard ordering; ship smallest-first. Each story is independently mergeable and
+converges toward Rails (fidelity-first — no deviations are ratified).
 
 - `through-belongsto-source-type-uses-polymorphic-name`
 - `through-polymorphic-source-applies-type-condition`
@@ -47,20 +50,3 @@ together avoids repeated context re-derivation and overlapping edits.
 
 (Authored under 0023; moved here verbatim — bodies already carry Rails/trails
 `file:line` and acceptance criteria.)
-
-<!-- generated: stories table -->
-
-| ID                                                                                                                    | Title                                                                                                           | Status | Est LOC | Cluster |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
-| [through-belongsto-source-type-uses-polymorphic-name](stories/through-belongsto-source-type-uses-polymorphic-name.md) | createThroughAssociation belongs_to source \_type fallback should use polymorphic_name                          | done   | 40      | —       |
-| [through-create-source-type-verbatim-no-fallback](stories/through-create-source-type-verbatim-no-fallback.md)         | createThroughAssociation: write source \_type verbatim from source_type, drop inferred polymorphicName fallback | done   | 50      | —       |
-| [through-owner-cols-delegate-to-reflection](stories/through-owner-cols-delegate-to-reflection.md)                     | Delegate \_throughOwnerCols derivation to reflection.foreignKey/activeRecordPrimaryKey                          | done   | 60      | —       |
-| [through-polymorphic-source-applies-type-condition](stories/through-polymorphic-source-applies-type-condition.md)     | through-polymorphic-source-applies-type-condition                                                               | done   | null    | —       |
-| [through-source-reflection-scope-not-merged](stories/through-source-reflection-scope-not-merged.md)                   | through-source-reflection-scope-not-merged                                                                      | done   | null    | —       |
-| [through-source-scope-not-merged-in-eager-preload](stories/through-source-scope-not-merged-in-eager-preload.md)       | through-source-scope-not-merged-in-eager-preload                                                                | done   | null    | —       |
-| [through-source-type-source-scope-not-merged](stories/through-source-type-source-scope-not-merged.md)                 | has_many :through with source_type: drops the polymorphic source reflection's own scope                         | done   | 70      | —       |
-
-## Rollout
-
-No hard ordering; ship smallest-first. Each story is independently mergeable and
-converges toward Rails (fidelity-first — no deviations are ratified).
