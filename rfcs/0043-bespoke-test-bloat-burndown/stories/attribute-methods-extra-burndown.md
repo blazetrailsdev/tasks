@@ -1,6 +1,6 @@
 ---
 title: "Burn down 56 extra (TS-only) tests in attribute-methods.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T22:02:15Z"
+assignee: "attribute-methods-extra-burndown"
 blocked-by: null
 ---
 
