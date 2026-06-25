@@ -1,6 +1,6 @@
 ---
 title: "Burn down 6 extra (TS-only) tests in statement-pool.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 21
-pr: null
+pr: 4159
 claim: "2026-06-25T23:17:15Z"
 assignee: "statement-pool-bespoke-extra-triage"
 blocked-by: null
