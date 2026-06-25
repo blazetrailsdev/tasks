@@ -1,6 +1,6 @@
 ---
 title: "Converge immutable_strings_by_default tests to Rails schema-inference fidelity"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null

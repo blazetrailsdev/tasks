@@ -269,12 +269,12 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 
 <!-- generated: stories table -->
 
-| ID                                                                                                                      | Title                                                                                        | Status      | Est LOC | Cluster |
-| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------- | ------- | ------- |
-| [thread-column-limit-into-cast-type](stories/thread-column-limit-into-cast-type.md)                                     | thread-column-limit-into-cast-type                                                           | ready       | null    | —       |
-| [immutable-strings-by-default-tests-converge-to-rails](stories/immutable-strings-by-default-tests-converge-to-rails.md) | Converge immutable_strings_by_default tests to Rails schema-inference fidelity               | in-progress | 40      | —       |
-| [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models   | done        | 150     | —       |
-| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | done        | 30      | —       |
+| ID                                                                                                                      | Title                                                                                        | Status | Est LOC | Cluster |
+| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [thread-column-limit-into-cast-type](stories/thread-column-limit-into-cast-type.md)                                     | thread-column-limit-into-cast-type                                                           | ready  | null    | —       |
+| [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models   | done   | 150     | —       |
+| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | done   | 30      | —       |
+| [immutable-strings-by-default-tests-converge-to-rails](stories/immutable-strings-by-default-tests-converge-to-rails.md) | Converge immutable_strings_by_default tests to Rails schema-inference fidelity               | done   | 40      | —       |
 
 ## Changelog
 
