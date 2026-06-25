@@ -1,6 +1,6 @@
 ---
 title: "Burn down 57 extra (TS-only) tests in uniqueness-validation.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 8
-pr: null
+pr: 4135
 claim: "2026-06-25T17:12:52Z"
 assignee: "uniqueness-validation-extra-burndown"
 blocked-by: null
