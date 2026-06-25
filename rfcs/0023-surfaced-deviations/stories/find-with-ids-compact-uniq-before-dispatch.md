@@ -1,6 +1,6 @@
 ---
 title: "find_with_ids compacts + uniqs ids before size dispatch like Rails"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T13:19:32Z"
+assignee: "find-with-ids-compact-uniq-before-dispatch"
 blocked-by: null
 ---
 
