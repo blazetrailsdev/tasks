@@ -1,6 +1,6 @@
 ---
 title: "aggregations.test.ts redefines orders without billing/shipping cols, poisons autosave-association on shared worker DB"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: null
+pr: 4134
 claim: "2026-06-25T16:42:30Z"
 assignee: "harden-orders-table-shared-db-collision"
 blocked-by: null
