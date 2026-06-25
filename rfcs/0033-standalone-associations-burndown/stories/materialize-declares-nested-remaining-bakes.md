@@ -1,6 +1,6 @@
 ---
 title: "materialize-declares-nested-remaining-bakes"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4119
 claim: "2026-06-25T13:39:31Z"
 assignee: "materialize-declares-nested-remaining-bakes"
 blocked-by: null
