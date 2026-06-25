@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke accounts test schemas to canonical (firm_id) to remove shared-DB collisions"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T18:07:05Z"
+assignee: "converge-bespoke-accounts-test-schemas"
 blocked-by: null
 ---
 
