@@ -1,6 +1,6 @@
 ---
 title: "has-one-destroy-callback-inverse-sync-convergence"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
