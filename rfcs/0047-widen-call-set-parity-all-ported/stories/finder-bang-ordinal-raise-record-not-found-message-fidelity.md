@@ -1,6 +1,6 @@
 ---
 title: "finder-bang-ordinal-raise-record-not-found-message-fidelity"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T04:02:34Z"
+assignee: "finder-bang-ordinal-raise-record-not-found-message-fidelity"
 blocked-by: null
 ---
 
