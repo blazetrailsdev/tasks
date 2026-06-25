@@ -1,7 +1,7 @@
 ---
 title: "Converge JoinPart#table_name to a base_klass delegate"
-status: ready
-updated: 2026-06-24
+status: claimed
+updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T12:09:34Z"
+assignee: "join-part-table-name-delegate-to-base-klass"
 blocked-by: null
 ---
 
