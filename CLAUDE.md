@@ -43,10 +43,10 @@ This repo holds **design documents and structured work tracking** for
   `blocked → ready` once unblocked. Transitions are direct-push frontmatter
   edits via `pnpm tasks`.
 - 2000-line cap per `.md` (catches pathologies only). Prettier + markdownlint
-  run via pre-commit; the hook also regenerates `index.md` and each RFC's
-  `## Stories` table from story frontmatter, then stages them — don't hand-edit
-  those generated regions. `index.json` and `search.json` are gitignored caches
-  rebuilt on demand, not committed.
+  run via pre-commit; the hook also regenerates `index.md` from story
+  frontmatter, then stages it — don't hand-edit that generated file.
+  `index.json` and `search.json` are gitignored caches rebuilt on demand, not
+  committed.
 - Reference an RFC from prose as "this RFC" (number-agnostic) so nothing needs
   rewriting when the number is assigned at finalize time.
 - Do NOT add empty stubs or placeholder stories. `pnpm tasks new` refuses an

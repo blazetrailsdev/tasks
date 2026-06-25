@@ -10,7 +10,6 @@
     "validate": "node scripts/validate.mjs",
     "test": "node scripts/validate-lib.test.mjs",
     "build-index": "node scripts/build-index.mjs",
-    "stories-table": "node scripts/stories-table.mjs",
     "verify": "pnpm validate && pnpm build-index && git diff --exit-code index.md || (echo 'committed index.md is stale — run pnpm build-index and recommit' >&2; exit 1)",
     "prepare": "git rev-parse --git-dir > /dev/null 2>&1 && git config core.hooksPath .husky || true"
   },
