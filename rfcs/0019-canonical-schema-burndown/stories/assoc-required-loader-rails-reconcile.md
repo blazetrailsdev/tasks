@@ -1,6 +1,6 @@
 ---
 title: "Reconcile non-Rails tests in required/loader-methods to Rails fidelity"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
