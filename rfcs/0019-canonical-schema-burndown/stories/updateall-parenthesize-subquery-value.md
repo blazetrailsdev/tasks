@@ -1,6 +1,6 @@
 ---
 title: "updateall-parenthesize-subquery-value"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 4126
 claim: "2026-06-25T14:54:37Z"
 assignee: "updateall-parenthesize-subquery-value"
 blocked-by: null
