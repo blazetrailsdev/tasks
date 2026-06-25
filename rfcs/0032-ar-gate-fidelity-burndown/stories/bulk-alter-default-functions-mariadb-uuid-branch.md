@@ -1,6 +1,6 @@
 ---
 title: "Add UUID() else-branch to bulk_alter default-functions test for MariaDB"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T02:02:34Z"
+assignee: "bulk-alter-default-functions-mariadb-uuid-branch"
 blocked-by: null
 ---
 
