@@ -1,6 +1,6 @@
 ---
 title: "topic-serialize-content-read-null-convergence"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T14:44:37Z"
+assignee: "topic-serialize-content-read-null-convergence"
 blocked-by: null
 ---
 
