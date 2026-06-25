@@ -1,6 +1,6 @@
 ---
 title: "Core#find RecordNotFound messages converge to Rails format"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4114
 claim: "2026-06-25T13:09:37Z"
 assignee: "core-find-record-not-found-message-format-fidelity"
 blocked-by: null
