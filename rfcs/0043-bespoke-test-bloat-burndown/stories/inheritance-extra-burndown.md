@@ -1,6 +1,6 @@
 ---
 title: "Burn down 50 extra (TS-only) tests in inheritance.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T22:32:16Z"
+assignee: "inheritance-extra-burndown"
 blocked-by: null
 ---
 
