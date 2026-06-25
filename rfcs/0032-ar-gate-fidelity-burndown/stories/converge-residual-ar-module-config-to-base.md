@@ -1,6 +1,6 @@
 ---
 title: "converge-residual-ar-module-config-to-base"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4097
 claim: "2026-06-25T02:42:34Z"
 assignee: "converge-residual-ar-module-config-to-base"
 blocked-by: null
