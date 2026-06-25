@@ -1,6 +1,6 @@
 ---
 title: "Delegation: install generated relation methods as real methods (Rails GeneratedRelationMethods module) instead of WeakMap side-table"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4099
 claim: "2026-06-25T03:22:34Z"
 assignee: "generated-relation-methods-real-method-mechanism"
 blocked-by: null
