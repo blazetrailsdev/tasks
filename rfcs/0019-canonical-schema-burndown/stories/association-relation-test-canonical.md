@@ -1,6 +1,6 @@
 ---
 title: "association-relation.test.ts → canonical (rewrite off synthetic ar_blogs/ar_posts)"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
