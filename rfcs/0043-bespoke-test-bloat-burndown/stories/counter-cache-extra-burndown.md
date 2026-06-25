@@ -1,6 +1,6 @@
 ---
 title: "Burn down 50 extra (TS-only) tests in counter-cache.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 10
-pr: null
+pr: 4140
 claim: "2026-06-25T18:17:19Z"
 assignee: "counter-cache-extra-burndown"
 blocked-by: null
