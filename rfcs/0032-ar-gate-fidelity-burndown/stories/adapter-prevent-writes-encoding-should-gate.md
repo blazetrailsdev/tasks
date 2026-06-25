@@ -58,13 +58,13 @@ verified locally (no `PG_TEST_URL` in the dev environment).
 ## Acceptance criteria
 
 - [ ] Replace the `it.skip("doesnt error when a select query has encoding
-  errors")` in `adapter-prevent-writes.test.ts` with a real
+errors")` in `adapter-prevent-writes.test.ts` with a real
       PostgreSQL-gated test: `it.skipIf(adapterType !== "postgres")(...)`,
       body constructs a `PostgreSQLAdapter(PG_TEST_URL)`, runs
       `SELECT '\xC8'` under `withPreventedWrites`, and asserts it throws
       `StatementInvalid`. Do NOT rename the test.
 - [ ] `pnpm test:compare --package activerecord --gates` no longer reports
       the `[should-gate] "doesnt error when a select query has encoding
-  errors"` mismatch (gate becomes `adapters=[postgresql]`, matching
+errors"` mismatch (gate becomes `adapters=[postgresql]`, matching
       Rails).
 - [ ] Verify on the PostgreSQL CI lane (the body cannot run on sqlite).
