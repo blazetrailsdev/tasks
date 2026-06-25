@@ -1,6 +1,6 @@
 ---
 title: "association-scope-alias-tracker.test.ts → canonical (self-ref off synthetic at_users)"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T17:42:53Z"
+assignee: "association-scope-alias-tracker-test-canonical"
 blocked-by: null
 ---
 
