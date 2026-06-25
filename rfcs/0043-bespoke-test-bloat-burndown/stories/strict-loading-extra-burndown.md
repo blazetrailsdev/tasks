@@ -1,6 +1,6 @@
 ---
 title: "Burn down 54 extra (TS-only) tests in strict-loading.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 9
-pr: null
+pr: 4138
 claim: "2026-06-25T17:57:54Z"
 assignee: "strict-loading-extra-burndown"
 blocked-by: null
