@@ -1,7 +1,7 @@
 ---
 title: "live-create-path-uses-insert-record"
-status: ready
-updated: 2026-06-22
+status: claimed
+updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T12:19:31Z"
+assignee: "live-create-path-uses-insert-record"
 blocked-by: null
 ---
 
