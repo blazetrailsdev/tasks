@@ -1,6 +1,6 @@
 ---
 title: "Add UUID() else-branch to bulk_alter default-functions test for MariaDB"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
