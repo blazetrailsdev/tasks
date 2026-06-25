@@ -1,6 +1,6 @@
 ---
 title: "Burn down 85 extra (TS-only) tests in postgresql-adapter.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 15
-pr: null
+pr: 4149
 claim: "2026-06-25T20:19:03Z"
 assignee: "postgresql-adapter-extra-burndown"
 blocked-by: null
