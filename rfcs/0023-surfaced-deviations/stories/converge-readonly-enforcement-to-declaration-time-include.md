@@ -1,6 +1,6 @@
 ---
 title: "Converge readonly enforcement to Rails declaration-time HasReadonlyAttributes include"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4121
 claim: "2026-06-25T14:09:12Z"
 assignee: "converge-readonly-enforcement-to-declaration-time-include"
 blocked-by: null
