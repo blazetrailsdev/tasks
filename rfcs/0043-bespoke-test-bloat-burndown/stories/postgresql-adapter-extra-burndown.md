@@ -7,7 +7,7 @@ cluster: extra-burndown
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 8
+priority: 15
 pr: null
 claim: null
 assignee: null

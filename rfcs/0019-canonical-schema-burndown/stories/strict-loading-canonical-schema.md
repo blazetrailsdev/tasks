@@ -4,7 +4,7 @@ status: ready
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
-deps: []
+deps: ["strict-loading-extra-burndown"]
 deps-rfc: []
 est-loc: 400
 priority: 67
