@@ -1,7 +1,7 @@
 ---
 title: "HashLookupTypeMap.registerType: route factory through block param, not value positional (Rails fidelity)"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T10:02:38Z"
+assignee: "hashlookup-registertype-block-param-fidelity"
 blocked-by: null
 ---
 
