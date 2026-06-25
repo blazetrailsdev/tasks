@@ -1,6 +1,6 @@
 ---
 title: "Relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs)"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T22:47:17Z"
+assignee: "relation-merge-hash-and-proc-fidelity"
 blocked-by: null
 ---
 
