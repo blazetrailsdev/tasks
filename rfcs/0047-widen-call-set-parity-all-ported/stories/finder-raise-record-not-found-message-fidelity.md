@@ -1,6 +1,6 @@
 ---
 title: "Finder methods route through raiseRecordNotFoundExceptionBang for faithful messages"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
