@@ -1,6 +1,6 @@
 ---
 title: "Converge duplicate AR module-config homes to canonical ar-config bindings"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 4106
 claim: "2026-06-25T11:22:33Z"
 assignee: "converge-ar-module-config-duplicate-homes-to-canonical"
 blocked-by: null
