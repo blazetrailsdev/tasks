@@ -1,6 +1,6 @@
 ---
 title: "Converge raiseOnAssignToAttrReadonly module-local to canonical ar-config binding"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T12:29:32Z"
+assignee: "converge-raise-on-assign-to-attr-readonly-to-ar-config"
 blocked-by: null
 ---
 
