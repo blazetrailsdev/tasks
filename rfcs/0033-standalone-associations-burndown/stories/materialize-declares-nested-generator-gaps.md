@@ -40,12 +40,12 @@ declares that fail `pnpm typecheck`:
 
 ## Acceptance criteria
 
-- [ ] Generator skips emitting `declare id` (Base owns the `id` accessor),
+- [x] Generator skips emitting `declare id` (Base owns the `id` accessor),
       matching how the schema-merge path already skips `id`.
-- [ ] Generator resolves/aliases association targets whose runtime
+- [x] Generator resolves/aliases association targets whose runtime
       `className` differs from the in-file class name, OR skips emitting a
       typed declare when the target cannot be resolved (no broken TS2304).
-- [ ] Nullable columns render `T | null` consistently (no TS2322).
-- [ ] Bake declares into the three files above; `pnpm typecheck` and the
+- [x] Nullable columns render `T | null` consistently (no TS2322).
+- [x] Bake declares into the three files above; `pnpm typecheck` and the
       affected suites stay green. No behavior change.
-- [ ] 500-LOC ceiling; single PR from main.
+- [x] 500-LOC ceiling; single PR from main.
