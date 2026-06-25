@@ -28,7 +28,7 @@ actual implementation if/when it is prioritized.
 ### Why deferred (rationale captured now)
 
 Rails creates ONE per-model `GeneratedRelationMethods` module
-(`delegation.rb:64-90`) and `include`s it into all four dynamically-built
+(`delegation.rb:71-91`) and `include`s it into all four dynamically-built
 delegate subclasses — Relation / CollectionProxy / AssociationRelation /
 DisableJoinsAssociationRelation (`delegation.rb:32-45`). Generated methods
 become real methods resolved by normal Ruby method lookup.
