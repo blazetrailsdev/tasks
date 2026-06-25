@@ -1,6 +1,6 @@
 ---
 title: "belongs_to sync read in before_destroy on direct (non-cascade) destroy"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T11:39:32Z"
+assignee: "belongs-to-sync-read-direct-destroy-callback"
 blocked-by: null
 ---
 
