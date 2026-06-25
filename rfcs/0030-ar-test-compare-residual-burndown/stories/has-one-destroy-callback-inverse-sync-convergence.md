@@ -1,6 +1,6 @@
 ---
 title: "has-one-destroy-callback-inverse-sync-convergence"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4102
 claim: "2026-06-25T04:42:34Z"
 assignee: "has-one-destroy-callback-inverse-sync-convergence"
 blocked-by: null
