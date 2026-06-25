@@ -1,6 +1,6 @@
 ---
 title: "Burn down 63 extra (TS-only) tests in core.test.ts"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
