@@ -1,6 +1,6 @@
 ---
 title: "belongs_to sync read in before_destroy on direct (non-cascade) destroy"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
