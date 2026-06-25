@@ -1,6 +1,6 @@
 ---
 title: "relation/predicate-builder.test.ts → canonical schema + predicate_builder_test.rb"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
