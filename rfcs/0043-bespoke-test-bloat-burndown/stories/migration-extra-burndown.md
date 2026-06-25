@@ -1,6 +1,6 @@
 ---
 title: "Burn down 107 extra (TS-only) tests in migration.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T19:47:16Z"
+assignee: "migration-extra-burndown"
 blocked-by: null
 ---
 
