@@ -1,6 +1,6 @@
 ---
 title: "adapter-prevent-writes-encoding-should-gate"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4091
 claim: "2026-06-25T00:22:37Z"
 assignee: "adapter-prevent-writes-encoding-should-gate"
 blocked-by: null
