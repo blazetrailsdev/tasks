@@ -1,6 +1,6 @@
 ---
 title: "date.test.ts → date_test.rb canonical port + native MySQL date columns"
-status: claimed
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: null
+pr: 4141
 claim: "2026-06-25T18:32:15Z"
 assignee: "date-test-mysql-native"
 blocked-by: null
