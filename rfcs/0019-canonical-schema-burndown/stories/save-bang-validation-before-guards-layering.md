@@ -1,6 +1,6 @@
 ---
 title: "save-bang-validation-before-guards-layering"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T14:33:12Z"
+assignee: "save-bang-validation-before-guards-layering"
 blocked-by: null
 ---
 
