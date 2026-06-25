@@ -44,10 +44,10 @@ test's leading comment).
 
 ## Acceptance criteria
 
-- [ ] If/when MariaDB joins the CI matrix, the test body branches like Rails:
+- [x] If/when MariaDB joins the CI matrix, the test body branches like Rails:
       `gen_random_uuid()` on PostgreSQL, `UUID()` otherwise, using a
       backend-appropriate adapter rather than a hardcoded `PostgreSQLAdapter`.
-- [ ] `default_function` assertion matches Rails (`gen_random_uuid()` on PG,
+- [x] `default_function` assertion matches Rails (`gen_random_uuid()` on PG,
       `uuid()` on MariaDB).
-- [ ] No test name change; gate stays feature-only
+- [x] No test name change; gate stays feature-only
       (`bulk_alter && text_column_with_default`).
