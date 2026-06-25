@@ -1,6 +1,6 @@
 ---
 title: "Not-found conditions clause renders full arel (STI type_condition + default scope), not just where_clause"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
