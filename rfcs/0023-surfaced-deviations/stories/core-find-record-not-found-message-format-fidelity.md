@@ -48,11 +48,11 @@ names first (`finder_test.rb` `test_find_one_message_on_primary_key`,
 
 ## Acceptance criteria
 
-- [ ] `Core#find` raises the identical `RecordNotFound` message strings as
+- [x] `Core#find` raises the identical `RecordNotFound` message strings as
       Rails `raise_record_not_found_exception!` for: scalar miss,
       single-element-array miss, multi-id aggregate miss, and composite-PK miss.
-- [ ] The model path and relation path (`performFind`) produce the same message
+- [x] The model path and relation path (`performFind`) produce the same message
       for the same miss (no inter-path divergence).
-- [ ] `RecordNotFound` payload (model, primaryKey, id) unchanged.
-- [ ] Tests converged to Rails-exact strings, named to match the corresponding
+- [x] `RecordNotFound` payload (model, primaryKey, id) unchanged.
+- [x] Tests converged to Rails-exact strings, named to match the corresponding
       Rails `finder_test.rb` tests.
