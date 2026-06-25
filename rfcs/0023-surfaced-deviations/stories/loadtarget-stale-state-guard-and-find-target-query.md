@@ -1,6 +1,6 @@
 ---
 title: "load_target: mirror Rails @stale_state guard and query on stale (drop in-memory cache short-circuit)"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4112
 claim: "2026-06-25T12:49:45Z"
 assignee: "loadtarget-stale-state-guard-and-find-target-query"
 blocked-by: null
