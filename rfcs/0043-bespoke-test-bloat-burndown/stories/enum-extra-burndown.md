@@ -1,6 +1,6 @@
 ---
 title: "Burn down 107 extra (TS-only) tests in enum.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 13
-pr: null
+pr: 4144
 claim: "2026-06-25T19:17:17Z"
 assignee: "enum-extra-burndown"
 blocked-by: null
