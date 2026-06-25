@@ -1,6 +1,6 @@
 ---
 title: "finder-bang-ordinal-raise-record-not-found-message-fidelity"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
