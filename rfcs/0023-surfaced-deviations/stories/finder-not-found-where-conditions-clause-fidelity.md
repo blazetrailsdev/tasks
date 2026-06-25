@@ -1,6 +1,6 @@
 ---
 title: "Finder not-found messages include the Rails where_sql conditions clause"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T11:49:31Z"
+assignee: "finder-not-found-where-conditions-clause-fidelity"
 blocked-by: null
 ---
 
