@@ -1,6 +1,6 @@
 ---
 title: "Burn down 89 extra (TS-only) tests in reflection.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T15:27:44Z"
+assignee: "reflection-extra-burndown"
 blocked-by: null
 ---
 
