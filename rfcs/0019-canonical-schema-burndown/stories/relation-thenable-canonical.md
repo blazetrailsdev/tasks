@@ -1,6 +1,6 @@
 ---
 title: "relation/thenable.test.ts → canonical schema (internal, no Rails counterpart)"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T19:32:15Z"
+assignee: "relation-thenable-canonical"
 blocked-by: null
 ---
 
