@@ -1,6 +1,6 @@
 ---
 title: "Converge Association#inversable() short-circuit to Rails !persisted? (not isNewRecord)"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
