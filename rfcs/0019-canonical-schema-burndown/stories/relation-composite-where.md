@@ -1,6 +1,6 @@
 ---
 title: "relation/composite-where.test.ts → canonical CPK models + where_test.rb composite cases"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T22:17:18Z"
+assignee: "relation-composite-where"
 blocked-by: null
 ---
 
