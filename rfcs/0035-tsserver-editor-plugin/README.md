@@ -260,14 +260,15 @@ estimates to be confirmed per story.
 
 <!-- generated: stories table -->
 
-| ID                                                          | Title                                                        | Status | Est LOC | Cluster |
-| ----------------------------------------------------------- | ------------------------------------------------------------ | ------ | ------- | ------- |
-| [ar-models-tsc-plugin](stories/ar-models-tsc-plugin.md)     | Register ar-models TscPlugin wrapping the virtualizer        | draft  | 250     | —       |
-| [editor-docs-and-smoke](stories/editor-docs-and-smoke.md)   | Editor install docs + tsserver smoke; supersede plan Phase 2 | draft  | 200     | —       |
-| [lsp-diagnostic-remap](stories/lsp-diagnostic-remap.md)     | Diagnostic + code-fix remap (parity)                         | draft  | 300     | —       |
-| [lsp-perf-incremental](stories/lsp-perf-incremental.md)     | Incremental walker + perf budget                             | draft  | 350     | —       |
-| [lsp-plugin-ar-dispatch](stories/lsp-plugin-ar-dispatch.md) | Dispatch AR models through the ts-plugin LSP shell           | draft  | 300     | —       |
-| [lsp-position-remap-mvp](stories/lsp-position-remap-mvp.md) | Position remap for definition/quickInfo/completions (MVP)    | draft  | 350     | —       |
+| ID                                                                                                  | Title                                                                             | Status | Est LOC | Cluster |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------ | ------- | ------- |
+| [ar-models-tsc-plugin](stories/ar-models-tsc-plugin.md)                                             | Register ar-models TscPlugin wrapping the virtualizer                             | draft  | 250     | —       |
+| [converge-live-plugin-attribute-nullability](stories/converge-live-plugin-attribute-nullability.md) | Converge live tsc-plugin attribute() declares to nullable (match baked generator) | draft  | 120     | —       |
+| [editor-docs-and-smoke](stories/editor-docs-and-smoke.md)                                           | Editor install docs + tsserver smoke; supersede plan Phase 2                      | draft  | 200     | —       |
+| [lsp-diagnostic-remap](stories/lsp-diagnostic-remap.md)                                             | Diagnostic + code-fix remap (parity)                                              | draft  | 300     | —       |
+| [lsp-perf-incremental](stories/lsp-perf-incremental.md)                                             | Incremental walker + perf budget                                                  | draft  | 350     | —       |
+| [lsp-plugin-ar-dispatch](stories/lsp-plugin-ar-dispatch.md)                                         | Dispatch AR models through the ts-plugin LSP shell                                | draft  | 300     | —       |
+| [lsp-position-remap-mvp](stories/lsp-position-remap-mvp.md)                                         | Position remap for definition/quickInfo/completions (MVP)                         | draft  | 350     | —       |
 
 ## Changelog
 
