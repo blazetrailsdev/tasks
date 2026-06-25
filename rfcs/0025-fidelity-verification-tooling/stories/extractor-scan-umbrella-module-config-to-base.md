@@ -1,6 +1,6 @@
 ---
 title: "Scan top-level umbrella module config into ActiveRecord::Base, drop curated allowlist"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
