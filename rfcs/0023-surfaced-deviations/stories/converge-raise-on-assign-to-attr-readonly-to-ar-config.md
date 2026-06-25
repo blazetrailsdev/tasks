@@ -1,6 +1,6 @@
 ---
 title: "Converge raiseOnAssignToAttrReadonly module-local to canonical ar-config binding"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
