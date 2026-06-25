@@ -1,6 +1,6 @@
 ---
 title: "collection-cache-key.test.ts → collection_cache_key_test.rb canonical port"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 22
-pr: null
+pr: 4162
 claim: "2026-06-25T23:32:18Z"
 assignee: "collection-cache-key-canonical"
 blocked-by: null
