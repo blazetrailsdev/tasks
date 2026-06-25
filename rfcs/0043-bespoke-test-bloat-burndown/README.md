@@ -296,10 +296,10 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 | [calculations-extra-burndown](stories/calculations-extra-burndown.md)                                                   | Burn down 320 extra (TS-only) tests in calculations.test.ts                                  | in-progress | 500     | extra-burndown |
 | [reflection-extra-burndown](stories/reflection-extra-burndown.md)                                                       | Burn down 89 extra (TS-only) tests in reflection.test.ts                                     | in-progress | 150     | extra-burndown |
 | [relation-extra-burndown](stories/relation-extra-burndown.md)                                                           | Burn down 76 extra (TS-only) tests in relation.test.ts                                       | in-progress | 150     | extra-burndown |
-| [relations-extra-burndown](stories/relations-extra-burndown.md)                                                         | Burn down 412 extra (TS-only) tests in relations.test.ts                                     | in-progress | 500     | extra-burndown |
 | [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models   | done        | 150     | —              |
 | [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment | done        | 30      | —              |
 | [immutable-strings-by-default-tests-converge-to-rails](stories/immutable-strings-by-default-tests-converge-to-rails.md) | Converge immutable_strings_by_default tests to Rails schema-inference fidelity               | done        | 40      | —              |
+| [relations-extra-burndown](stories/relations-extra-burndown.md)                                                         | Burn down 412 extra (TS-only) tests in relations.test.ts                                     | done        | 500     | extra-burndown |
 
 ## Changelog
 
