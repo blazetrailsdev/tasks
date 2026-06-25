@@ -1,6 +1,6 @@
 ---
 title: "find([id]) dispatches to single-id path (message + array wrap) like Rails"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 4109
 claim: "2026-06-25T11:59:32Z"
 assignee: "finder-single-element-array-dispatches-find-one"
 blocked-by: null
