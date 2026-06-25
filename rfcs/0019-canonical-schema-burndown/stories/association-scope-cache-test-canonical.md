@@ -1,6 +1,6 @@
 ---
 title: "association-scope-cache.test.ts → canonical (rewrite cache_* onto canonical authors/posts/comments)"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
