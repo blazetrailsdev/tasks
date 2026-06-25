@@ -1,6 +1,6 @@
 ---
 title: "load_target: mirror Rails @stale_state guard and query on stale (drop in-memory cache short-circuit)"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
