@@ -1,6 +1,6 @@
 ---
 title: "Finder methods route through raiseRecordNotFoundExceptionBang for faithful messages"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4098
 claim: "2026-06-25T03:02:34Z"
 assignee: "finder-raise-record-not-found-message-fidelity"
 blocked-by: null
