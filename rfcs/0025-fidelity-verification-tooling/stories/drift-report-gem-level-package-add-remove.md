@@ -1,6 +1,6 @@
 ---
 title: "api:drift — surface gem-level package add/remove from upstream Gemfile"
-status: claimed
+status: done
 updated: 2026-06-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4086
 claim: "2026-06-25T00:42:32Z"
 assignee: "drift-report-gem-level-package-add-remove"
 blocked-by: null
