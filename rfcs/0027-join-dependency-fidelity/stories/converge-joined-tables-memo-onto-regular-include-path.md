@@ -1,6 +1,6 @@
 ---
 title: "Extend chain-tail @joined_tables memoization to the regular (non-through) include path"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
