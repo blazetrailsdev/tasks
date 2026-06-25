@@ -1,6 +1,6 @@
 ---
 title: "Burn down 56 extra (TS-only) tests in attribute-methods.test.ts"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
