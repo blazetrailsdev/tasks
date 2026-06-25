@@ -1,6 +1,6 @@
 ---
 title: "Converge duplicate AR module-config homes to canonical ar-config bindings"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
