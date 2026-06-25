@@ -1,7 +1,7 @@
 ---
 title: "emit-time-joined-tables-chain-tail-memoization"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T01:02:34Z"
+assignee: "emit-time-joined-tables-chain-tail-memoization"
 blocked-by: null
 ---
 
