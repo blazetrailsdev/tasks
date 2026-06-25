@@ -1,6 +1,6 @@
 ---
 title: "Extend chain-tail @joined_tables memoization to the regular (non-through) include path"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T02:22:47Z"
+assignee: "converge-joined-tables-memo-onto-regular-include-path"
 blocked-by: null
 ---
 
