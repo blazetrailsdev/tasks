@@ -1,6 +1,6 @@
 ---
 title: "association-relation.test.ts → canonical (rewrite off synthetic ar_blogs/ar_posts)"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 16
-pr: null
+pr: 4150
 claim: "2026-06-25T20:32:16Z"
 assignee: "association-relation-test-canonical"
 blocked-by: null
