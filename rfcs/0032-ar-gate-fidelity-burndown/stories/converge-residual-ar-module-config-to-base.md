@@ -1,6 +1,6 @@
 ---
 title: "converge-residual-ar-module-config-to-base"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
