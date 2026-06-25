@@ -1,6 +1,6 @@
 ---
 title: "Reconcile non-Rails tests in required/loader-methods to Rails fidelity"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["associations-eager-join-cluster"]
 deps-rfc: []
 est-loc: 150
 priority: 15
-pr: null
+pr: 4148
 claim: "2026-06-25T20:17:15Z"
 assignee: "assoc-required-loader-rails-reconcile"
 blocked-by: null
