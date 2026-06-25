@@ -1,6 +1,6 @@
 ---
 title: "constructor-form-and-hmt-insert.test.ts → canonical (internal, no Rails counterpart)"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T21:32:16Z"
+assignee: "constructor-form-hmt-insert-canonical"
 blocked-by: null
 ---
 
