@@ -1,6 +1,6 @@
 ---
 title: "collection-cache-key.test.ts → collection_cache_key_test.rb canonical port"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T23:32:18Z"
+assignee: "collection-cache-key-canonical"
 blocked-by: null
 ---
 
