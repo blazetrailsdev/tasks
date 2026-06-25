@@ -1,6 +1,6 @@
 ---
 title: "find_with_ids compacts + uniqs ids before size dispatch like Rails"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
