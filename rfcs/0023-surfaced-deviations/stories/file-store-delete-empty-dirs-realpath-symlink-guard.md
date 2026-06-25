@@ -1,6 +1,6 @@
 ---
 title: "FileStore.deleteEmptyDirectories: use realpath (not lexical resolve) for cacheDir guard to match Rails File.realpath"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
