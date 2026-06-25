@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke accounts test schemas to canonical (firm_id) to remove shared-DB collisions"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
