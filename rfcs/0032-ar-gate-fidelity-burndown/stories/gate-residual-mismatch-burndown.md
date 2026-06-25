@@ -1,7 +1,7 @@
 ---
 title: "gate-residual-mismatch-burndown"
-status: ready
-updated: 2026-06-24
+status: claimed
+updated: 2026-06-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T00:02:37Z"
+assignee: "gate-residual-mismatch-burndown"
 blocked-by: null
 ---
 
