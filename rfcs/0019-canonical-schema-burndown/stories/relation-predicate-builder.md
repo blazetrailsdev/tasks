@@ -1,6 +1,6 @@
 ---
 title: "relation/predicate-builder.test.ts → canonical schema + predicate_builder_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 150
 priority: 21
-pr: null
+pr: 4158
 claim: "2026-06-25T23:02:16Z"
 assignee: "relation-predicate-builder"
 blocked-by: null
