@@ -1,6 +1,6 @@
 ---
 title: "find([id]) dispatches to single-id path (message + array wrap) like Rails"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
