@@ -1,6 +1,6 @@
 ---
 title: "materialize-declares-nested-remaining-bakes"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0033-standalone-associations-burndown"
 cluster: null
