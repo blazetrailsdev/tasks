@@ -293,7 +293,6 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 | [transactions-call-after-commit-relocate](stories/transactions-call-after-commit-relocate.md)                           | Relocate misplaced call-after-commit test to the transaction_callbacks convention file               | ready       | 30      | —              |
 | [uniqueness-validation-extra-burndown](stories/uniqueness-validation-extra-burndown.md)                                 | Burn down 57 extra (TS-only) tests in uniqueness-validation.test.ts                                  | ready       | 150     | extra-burndown |
 | [callbacks-extra-burndown](stories/callbacks-extra-burndown.md)                                                         | Burn down 61 extra (TS-only) tests in callbacks.test.ts                                              | in-progress | 150     | extra-burndown |
-| [transactions-extra-burndown](stories/transactions-extra-burndown.md)                                                   | Burn down 74 extra (TS-only) tests in transactions.test.ts                                           | in-progress | 150     | extra-burndown |
 | [where-extra-burndown](stories/where-extra-burndown.md)                                                                 | Burn down 71 extra (TS-only) tests in where.test.ts                                                  | in-progress | 150     | extra-burndown |
 | [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models           | done        | 150     | —              |
 | [calculations-extra-burndown](stories/calculations-extra-burndown.md)                                                   | Burn down 320 extra (TS-only) tests in calculations.test.ts                                          | done        | 500     | extra-burndown |
@@ -302,6 +301,7 @@ Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
 | [reflection-extra-burndown](stories/reflection-extra-burndown.md)                                                       | Burn down 89 extra (TS-only) tests in reflection.test.ts                                             | done        | 150     | extra-burndown |
 | [relation-extra-burndown](stories/relation-extra-burndown.md)                                                           | Burn down 76 extra (TS-only) tests in relation.test.ts                                               | done        | 150     | extra-burndown |
 | [relations-extra-burndown](stories/relations-extra-burndown.md)                                                         | Burn down 412 extra (TS-only) tests in relations.test.ts                                             | done        | 500     | extra-burndown |
+| [transactions-extra-burndown](stories/transactions-extra-burndown.md)                                                   | Burn down 74 extra (TS-only) tests in transactions.test.ts                                           | done        | 150     | extra-burndown |
 
 ## Changelog
 
