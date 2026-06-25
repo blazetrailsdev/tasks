@@ -1,6 +1,6 @@
 ---
 title: "json-test-serialized-topic-rides-canonical"
-status: claimed
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 6
-pr: null
+pr: 3441
 claim: "2026-06-25T15:07:36Z"
 assignee: "json-test-serialized-topic-rides-canonical"
 blocked-by: null
