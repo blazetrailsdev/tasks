@@ -1,6 +1,6 @@
 ---
 title: "live-create-path-uses-insert-record"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
