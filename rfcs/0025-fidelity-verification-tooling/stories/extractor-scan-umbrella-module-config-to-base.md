@@ -1,6 +1,6 @@
 ---
 title: "Scan top-level umbrella module config into ActiveRecord::Base, drop curated allowlist"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 4093
 claim: "2026-06-25T01:22:34Z"
 assignee: "extractor-scan-umbrella-module-config-to-base"
 blocked-by: null
