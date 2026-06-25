@@ -14,8 +14,6 @@ assignee: "harden-orders-table-shared-db-collision"
 blocked-by: null
 ---
 
-> **Scope override (RFC 0019 prioritization, 2026-06-25):** This story is exempt from the 500-LOC PR ceiling. Ship the full file conversion as **one PR per file**, even if additions+deletions exceed 500 LOC. Do **not** split into sibling PRs or defer part of the file to a follow-up story — the goal is to drop the file from the canonical-schema exclude list in a single PR.
-
 ## Context
 
 Diagnosed during PR #3331 CI. `aggregations.test.ts:303` (and :402) calls
