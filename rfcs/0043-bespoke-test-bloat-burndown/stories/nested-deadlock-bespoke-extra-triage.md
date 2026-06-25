@@ -1,6 +1,6 @@
 ---
 title: "Burn down 3 extra (TS-only) tests in nested-deadlock.test.ts"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T23:47:24Z"
+assignee: "nested-deadlock-bespoke-extra-triage"
 blocked-by: null
 ---
 
