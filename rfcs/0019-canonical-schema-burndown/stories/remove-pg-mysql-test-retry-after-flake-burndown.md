@@ -4,7 +4,7 @@ status: ready
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: null
-deps: ["extend-schema-repair-reap-leaked-bespoke-tables"]
+deps: []
 deps-rfc: []
 est-loc: 20
 priority: 5
@@ -33,8 +33,13 @@ once it is no longer needed, so red CI means a real regression again.
 
 The retry is **broader** than shape drift. Per its own comment it also absorbs:
 
-- leaked **bespoke** tables (raw `createTable` never dropped) — tracked
-  separately in `extend-schema-repair-reap-leaked-bespoke-tables`;
+- leaked **bespoke** tables (raw `createTable` never dropped). These are
+  eliminated by the canonical-schema burndown itself (RFC 0019) — converting the
+  offending files onto canonical tables so no un-torn-down bespoke table can
+  leak — backstopped statically by the `require-table-teardown` ESLint ratchet.
+  We deliberately do **not** add a runtime reaper to clean leaked tables: that
+  would entrench the divergent (bespoke) path instead of removing it. Fidelity
+  goal is zero bespoke tables, not tolerated-and-swept ones.
 - `describeIfPg` / `describeIfMysql` backend-only intermittents that SQLite
   never exercises.
 
@@ -43,8 +48,11 @@ and erode trust again.
 
 ## Done-when (all required)
 
-1. `extend-schema-repair-reap-leaked-bespoke-tables` has landed (bespoke-leak
-   class also fixed, not just shape drift).
+1. The bespoke-leak class is gone by construction: no AR `*.test.ts` creates an
+   un-torn-down non-canonical table (canonical conversion complete for the
+   offending files; `require-table-teardown` exclude list burned to zero), so
+   shape drift is the only remaining shared-DB hazard and `repairWorkerSchema`
+   already covers it.
 2. At least ~5 consecutive green PG **and** MySQL CI runs on `main` with the
    `[schema-repair]` burndown logs showing drift hits trending to zero (or only
    known/tracked tables) — evidence the masked flakes are actually gone, not
