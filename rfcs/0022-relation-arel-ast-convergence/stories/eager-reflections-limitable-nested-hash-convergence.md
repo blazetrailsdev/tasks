@@ -1,7 +1,7 @@
 ---
 title: "Converge _eagerReflectionsAreLimitable to resolve nested-hash/array eager specs via JoinDependency reflections"
-status: in-progress
-updated: 2026-06-24
+status: done
+updated: 2026-06-25
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
