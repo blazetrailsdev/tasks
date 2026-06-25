@@ -1,6 +1,6 @@
 ---
 title: "suppressor.test.ts → canonical Notification/User (needs save-suppression impl fix)"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 14
-pr: null
+pr: 4147
 claim: "2026-06-25T20:02:15Z"
 assignee: "suppressor-canonical-schema"
 blocked-by: null
