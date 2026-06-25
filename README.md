@@ -59,9 +59,8 @@ git add -A && git commit -m "RFC NNNN: assign number" && # merge the PR
 ```
 
 `main` only ever holds numbered RFCs; `0000-*` placeholders live on PR
-branches. The pre-commit hook regenerates `index.md` (and each RFC's `## Stories`
-table); `index.json` and `search.json` are gitignored caches rebuilt on demand,
-not committed. Reference an RFC from prose as "this RFC" (number-agnostic) so
+branches. The pre-commit hook regenerates `index.md`; `index.json` and
+`search.json` are gitignored caches rebuilt on demand, not committed. Reference an RFC from prose as "this RFC" (number-agnostic) so
 nothing needs rewriting at finalize time beyond the H1 and `rfc:` fields.
 
 The RFC template carries a **`## Non-goals`** section — the canonical home for

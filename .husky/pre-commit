@@ -34,27 +34,23 @@ if [ ! -d node_modules ]; then
   exit 1
 fi
 
-# 1. Regenerate the tracked generated artifacts BEFORE the prettier/lint gates
-# so generated output is formatted, not rejected: each RFC README's `## Stories`
-# table (from story frontmatter) and index.md (the human registry). Both are
-# mtime-gated by js-yaml (it only re-parses files it reads) and complete well
-# under 500ms on a warm tree. index.json / search.json are gitignored machine
-# caches (rebuilt on demand) and don't need staging.
-node scripts/stories-table.mjs >&2
+# 1. Regenerate the tracked generated artifact BEFORE the prettier/lint gates
+# so generated output is formatted, not rejected: index.md (the human registry).
+# It is mtime-gated by js-yaml (it only re-parses files it reads) and completes
+# well under 500ms on a warm tree. index.json / search.json are gitignored
+# machine caches (rebuilt on demand) and don't need staging.
 node scripts/build-index.mjs >&2
 
-# Prettier-format and stage whatever the regeneration touched (changed RFC
-# READMEs + index.md), so the committed copy is canonical and reruns are no-ops.
-# Generated-region edits are exempt from the README PR gate, same as index.md.
-REGEN=$(git diff --name-only --diff-filter=ACM | grep -E '(^|/)README\.md$|^index\.md$' || true)
+# Prettier-format and stage whatever the regeneration touched (index.md), so the
+# committed copy is canonical and reruns are no-ops. index.md edits are exempt
+# from the README PR gate.
+REGEN=$(git diff --name-only --diff-filter=ACM | grep -E '^index\.md$' || true)
 if [ -n "$REGEN" ]; then
   npx --no-install prettier --write $REGEN
   git add $REGEN
 fi
 
-# 2. Validate frontmatter and that no committed stories table is stale (now
-# true, since we just regenerated). Run after regeneration so the commit that
-# fixes drift isn't rejected by its own pre-fix state.
+# 2. Validate frontmatter.
 node scripts/validate.mjs >&2
 
 # 3. Prettier-format and re-stage staged markdown (including the just-staged

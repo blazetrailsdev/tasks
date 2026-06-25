@@ -6,22 +6,9 @@
 // commands can reuse them against in-memory state and fail fast.
 import { loadAll } from "./lib.mjs";
 import { validate } from "./validate-lib.mjs";
-import { staleStoriesTables } from "./stories-table.mjs";
 
 const { rfcs, stories } = loadAll();
 const { errors } = validate({ rfcs, stories });
-
-// The `## Stories` table is generated from story frontmatter by
-// scripts/stories-table.mjs (run by the pre-commit hook). Fail if any
-// committed table has drifted from frontmatter — a hand-edit or a commit that
-// bypassed the hook. Lives in the CLI wrapper (not validate-lib) because it
-// reads README text from disk; the importable core stays pure over frontmatter.
-const stale = staleStoriesTables(rfcs, stories);
-for (const dir of stale) {
-  errors.push(
-    `rfcs/${dir}/README.md: stories table is stale — run \`pnpm stories-table\` (or commit, which regenerates it)`,
-  );
-}
 
 if (errors.length) {
   console.error(`validation failed (${errors.length} error${errors.length === 1 ? "" : "s"}):`);
