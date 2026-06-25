@@ -1,6 +1,6 @@
 ---
 title: "findTargetNeeded: mirror Rails find_target? && klass factor"
-status: claimed
+status: in-progress
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4120
 claim: "2026-06-25T13:57:11Z"
 assignee: "findtargetneeded-mirror-klass-guard"
 blocked-by: null
