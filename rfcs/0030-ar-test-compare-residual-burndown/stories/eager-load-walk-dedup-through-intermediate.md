@@ -1,7 +1,7 @@
 ---
 title: "Walk-dedup through-association intermediate join table against eager spec"
-status: in-progress
-updated: 2026-06-24
+status: done
+updated: 2026-06-25
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
