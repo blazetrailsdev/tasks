@@ -1,7 +1,7 @@
 ---
 title: "materialize-declares-nested-generator-gaps"
-status: ready
-updated: 2026-06-23
+status: claimed
+updated: 2026-06-25
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T12:59:32Z"
+assignee: "materialize-declares-nested-generator-gaps"
 blocked-by: null
 ---
 
