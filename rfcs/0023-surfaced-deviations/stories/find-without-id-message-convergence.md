@@ -1,7 +1,7 @@
 ---
 title: "find-without-id-message-convergence"
-status: draft
-updated: 2026-06-23
+status: done
+updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -13,6 +13,8 @@ claim: null
 assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — consolidated.** Folded into `performfind-converge-raise-record-not-found-builder` (the without-an-ID message is part of the same RecordNotFound builder convergence).
 
 ## Context
 

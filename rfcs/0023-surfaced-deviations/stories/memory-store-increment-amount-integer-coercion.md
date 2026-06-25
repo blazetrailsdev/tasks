@@ -1,7 +1,7 @@
 ---
 title: "MemoryStore.modifyValue coerce amount once like Rails Integer(amount)"
-status: ready
-updated: 2026-06-22
+status: done
+updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -13,6 +13,8 @@ claim: null
 assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — merged.** Folded into `memory-store-increment-integer-amount-raise`, which now covers coercing `amount` once and threading the coerced integer through the seed write, return value, and hit path (the two stories disagreed on trunc-vs-raise; the keeper uses the correct Ruby `Integer()` raise semantics).
 
 ## Context
 

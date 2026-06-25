@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#find RecordNotFound messages converge to Rails (pluralize + found/expected suffix)"
-status: ready
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,6 +13,8 @@ claim: null
 assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — consolidated.** Folded into `performfind-converge-raise-record-not-found-builder` (same bespoke `raiseNotFoundSingle`/`raiseNotFoundAll` → `raise_record_not_found_exception!` convergence, different call site).
 
 ## Context
 

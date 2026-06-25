@@ -35,11 +35,32 @@ The faithful path already exists — `raiseRecordNotFoundExceptionBang` (used by
 pluralization + the found/expected suffix. PR #4108 added the `[WHERE …]` clause
 to both paths but did not converge `performFind` onto the faithful builder.
 
+**Scope (consolidated 2026-06-25):** this is the umbrella for converging the
+bespoke `raiseNotFoundSingle`/`raiseNotFoundAll` helpers onto Rails'
+`raise_record_not_found_exception!`. It folds in two former siblings (both closed
+superseded), because converging on the single builder is the same edit at
+different call sites:
+
+- `collection-proxy-find-record-not-found-message-fidelity` — the in-memory
+  `CollectionProxy#find` path raises via the same bespoke helpers and must emit
+  the identical pluralized + found/expected message.
+- `find-without-id-message-convergence` — zero-arg `find()` raises
+  `"Couldn't find <Model> with an empty list of ids"`, but Rails'
+  `find_with_ids` `when 0` branch raises `"Couldn't find <Model> without an ID"`.
+
+(`core-find-record-not-found-message-format-fidelity` already converged the
+model-level `Core#find` path in PR #4114; `find-with-ids-compact-uniq-composite-pk-tuples`
+is a separate concern — tuple compaction, not message format.)
+
 ## Acceptance criteria
 
 - `performFind`'s not-found paths route through `raiseRecordNotFoundExceptionBang`
   (or otherwise emit the identical message), so the multi-id message pluralizes
   the model name and includes `(found N results, but was looking for M).`,
   matching Rails byte-for-byte.
-- Tests asserting the full multi-id message (mirror the relevant Rails
-  `finder_test.rb` cases).
+- The in-memory `CollectionProxy#find` path emits the identical message (no
+  bespoke `raiseNotFoundSingle`/`raiseNotFoundAll` divergence remains).
+- Zero-arg / empty-id `find()` raises `"Couldn't find <Model> without an ID"`
+  (Rails `find_with_ids` `when 0`), not the empty-list-of-ids wording.
+- Tests asserting the full multi-id message and the without-an-ID message
+  (mirror the relevant Rails `finder_test.rb` cases).

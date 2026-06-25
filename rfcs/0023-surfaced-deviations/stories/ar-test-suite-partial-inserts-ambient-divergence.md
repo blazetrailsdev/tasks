@@ -1,7 +1,7 @@
 ---
 title: "AR test harness runs partial_inserts=false (load_defaults 7.0) vs Rails test-suite default true"
-status: blocked
-updated: 2026-06-21
+status: done
+updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -11,11 +11,13 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 3745
+pr: null
 claim: "2026-06-20T22:37:27Z"
 assignee: "ar-test-suite-partial-inserts-ambient-divergence"
-blocked-by: "Flip blocked on partial-inserts-dirty-baseline-db-column-default: CI (PR #3745) shows new-record dirty tracking compares vs model default not DB column default, so user-provided attribute defaults aren't persisted under partial_inserts=true (attributes/encryption/counter-cache). Resume flip after baseline + composite-pk + locking land."
+blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — audit complete.** This was the audit/spike that codified the `restoreRailsTestPartialInserts` interim pattern and identified the systemic blockers. Audits are done-when-closed; the actual convergence work is owned by `partial-inserts-flip-ar-test-suite-ambient`.
 
 ## Context
 
