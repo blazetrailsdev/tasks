@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinPart#table_name to a base_klass delegate"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
