@@ -1,6 +1,6 @@
 ---
 title: "HashLookupTypeMap.registerType: route factory through block param, not value positional (Rails fidelity)"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
