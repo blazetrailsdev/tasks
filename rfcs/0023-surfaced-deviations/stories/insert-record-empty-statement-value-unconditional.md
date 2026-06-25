@@ -1,6 +1,6 @@
 ---
 title: "Drop emptyInsertStatementValue guard in _insertRecord (Rails unconditional)"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T13:29:36Z"
+assignee: "insert-record-empty-statement-value-unconditional"
 blocked-by: null
 ---
 
