@@ -1,6 +1,6 @@
 ---
 title: "emit-time-joined-tables-chain-tail-memoization"
-status: in-progress
+status: done
 updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
