@@ -200,23 +200,6 @@ materialized at execution kickoff (this RFC is the plan doc; scaffolding the
    spawn-loop (`tasks/tooling/tasks-loop`) and skills do not consume `docs/`
    paths, so `repoint-references` only touches prose links, not code.
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                            | Title                                                    | Status | Est LOC | Cluster      |
-| ------------------------------------------------------------- | -------------------------------------------------------- | ------ | ------- | ------------ |
-| [decommission-docs](stories/decommission-docs.md)             | Delete migrated AR docs + trim docs/index.md AR rows     | done   | 50      | decommission |
-| [drift-prevention-ci](stories/drift-prevention-ci.md)         | CI gate: no new docs/activerecord trackers + CLAUDE edit | done   | 100     | guardrails   |
-| [migrate-adapter-ci](stories/migrate-adapter-ci.md)           | RFC from adapter-test-ci + ci-gates                      | done   | 150     | migrate      |
-| [migrate-ar-followups](stories/migrate-ar-followups.md)       | Reconcile + delete gaps/type-audit/adapter-cleanup docs  | done   | 120     | migrate      |
-| [migrate-ar-test-compare](stories/migrate-ar-test-compare.md) | RFC from workplan + attack-plan + 100-plan + index       | done   | 300     | migrate      |
-| [migrate-fixtures](stories/migrate-fixtures.md)               | RFC from 3 fixtures docs                                 | done   | 200     | migrate      |
-| [migrate-schema-ts](stories/migrate-schema-ts.md)             | RFC from 2 schema.ts migration docs                      | done   | 150     | migrate      |
-| [reconcile-existing-rfcs](stories/reconcile-existing-rfcs.md) | Reconcile + close RFCs 0001–0010                         | done   | 150     | reconcile    |
-| [reconcile-tooling](stories/reconcile-tooling.md)             | Build story↔shipped-PR reconcile report                  | done   | 200     | reconcile    |
-| [repoint-references](stories/repoint-references.md)           | Repoint trails README/CLAUDE AR-doc links                | done   | 60      | decommission |
-
 ## Changelog
 
 - 2026-06-04: initial RFC — plan the full cutover and `trails/docs` retirement.

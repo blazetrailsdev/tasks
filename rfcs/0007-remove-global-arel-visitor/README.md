@@ -91,23 +91,6 @@ merge.
 - **Subsumes** adapter-cleanup PR C (RFC 0010) — the "migrate ~35 toSql sites +
   delete `setToSqlVisitor`" work is the same initiative; tracked here.
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                                                                            | Title                                                                                                   | Status | Est LOC | Cluster      |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------ | ------- | ------------ |
-| [pg-type-cast-all-binds-not-just-object-wrappers](stories/pg-type-cast-all-binds-not-just-object-wrappers.md) | Converge pg bind type_cast to all binds (Rails type_casted_binds), gated on pinned-client serialization | draft  | null    | —            |
-| [predicate-builder-force-equality-uniform-build](stories/predicate-builder-force-equality-uniform-build.md)   | Lift force_equality? to uniform build dispatch (PG array + serialized)                                  | draft  | null    | —            |
-| [a1-ddl-metadata-callers](stories/a1-ddl-metadata-callers.md)                                                 | Phase A1 — route DDL/metadata toSql callers through connection.toSql                                    | done   | 150     | arel-visitor |
-| [a2-persistence-base-ternary](stories/a2-persistence-base-ternary.md)                                         | Phase A2 — make persistence.ts + base.ts ternary callers unconditional                                  | done   | 150     | arel-visitor |
-| [a3-calculations-statement-cache-insert](stories/a3-calculations-statement-cache-insert.md)                   | Phase A3 — route calculations / statement-cache / insert-all through connection.toSql                   | done   | 150     | arel-visitor |
-| [a4-sweep-remaining-callers](stories/a4-sweep-remaining-callers.md)                                           | Phase A4 — sweep remaining direct .toSql() production callers                                           | done   | 100     | arel-visitor |
-| [b-drop-global-sync-sites](stories/b-drop-global-sync-sites.md)                                               | Phase B — drop AR's global-visitor sync sites                                                           | done   | 80      | arel-visitor |
-| [c-collapse-into-bootstrap](stories/c-collapse-into-bootstrap.md)                                             | Phase C — delete syncHandlerVisitor / beforeEach (folds into RFC 0002)                                  | done   | 50      | arel-visitor |
-| [drop-default-quoter-production-reliance](stories/drop-default-quoter-production-reliance.md)                 | Drop activerecord reliance on arel default quoters — route value quoting through the connection         | done   | null    | —            |
-| [force-equality-bind-convergence](stories/force-equality-bind-convergence.md)                                 | force-equality-bind-convergence                                                                         | done   | null    | —            |
-
 ## Changelog
 
 - 2026-05-30: initial RFC, migrated from

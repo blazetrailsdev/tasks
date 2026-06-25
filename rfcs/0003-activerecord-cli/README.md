@@ -142,28 +142,6 @@ Standardize the bare-AR path on `config/database.ts` keyed by `TRAILS_ENV`
    cycle) vs bins-only (low-risk increment, keeps `activerecord`'s `trails-tsc`
    dep). See [relocate-tsc-wrapper](stories/relocate-tsc-wrapper.md).
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                                                      | Title                                                                                 | Status | Est LOC | Cluster  |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------ | ------- | -------- |
-| [abstract-class-own-property-fix](stories/abstract-class-own-property-fix.md)           | Fix \_abstractClass own-property check (core bug)                                     | done   | 30      | core     |
-| [ci-examples-job](stories/ci-examples-job.md)                                           | Optional — lightweight examples/ CI job                                               | done   | 50      | deferred |
-| [cli-console-runner-empty-config](stories/cli-console-runner-empty-config.md)           | ar console / runner: error on empty config for env                                    | done   | 30      | cli      |
-| [cli-e2e-shared-helpers](stories/cli-e2e-shared-helpers.md)                             | Extract shared E2E scaffold/teardown helpers                                          | done   | 50      | cli      |
-| [cli-generator-name-validation](stories/cli-generator-name-validation.md)               | ar generate: reject illegal migration/model names                                     | done   | 10      | cli      |
-| [cli-generators-manifest](stories/cli-generators-manifest.md)                           | Generators + generated models/index.ts manifest + ar init                             | done   | 300     | cli      |
-| [cli-init-node-sqlite-driver](stories/cli-init-node-sqlite-driver.md)                   | ar init: support --driver node-sqlite                                                 | done   | 5       | cli      |
-| [cli-manifest-path-jsdoc](stories/cli-manifest-path-jsdoc.md)                           | Fix ManifestResult.path JSDoc / resolution                                            | done   | 5       | cli      |
-| [cli-package-scaffold](stories/cli-package-scaffold.md)                                 | Scaffold @blazetrails/activerecord-cli + db:\* commands                               | done   | 300     | cli      |
-| [database-tasks-migrate-status-stdout](stories/database-tasks-migrate-status-stdout.md) | DatabaseTasks.migrateStatus stdout fidelity (P3-5)                                    | done   | 20      | cli      |
-| [lazy-async-schema-reflection](stories/lazy-async-schema-reflection.md)                 | Lazy async schema reflection (delete explicit loadSchema)                             | done   | 200     | core     |
-| [models-dump-composite-fk-roundtrip](stories/models-dump-composite-fk-roundtrip.md)     | trails-models-dump: composite-FK synthesized name round-trip                          | done   | 30      | deferred |
-| [relocate-tsc-wrapper](stories/relocate-tsc-wrapper.md)                                 | Relocate AR tsc-wrapper + bins into activerecord-cli                                  | done   | 250     | cli      |
-| [sveltekit-kanban-example-rfc](stories/sveltekit-kanban-example-rfc.md)                 | Author RFC: SvelteKit example app (Kanban modeled on tasks/rfcs)                      | done   | null    | —        |
-| [tsserver-editor-plugin-rfc](stories/tsserver-editor-plugin-rfc.md)                     | Author RFC: tsserver / editor plugin (adopt + re-verify virtual-source-files Phase 2) | done   | null    | —        |
-
 ## Changelog
 
 - 2026-06-04: folded in the composite-FK round-trip residual from the completed

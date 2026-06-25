@@ -233,7 +233,9 @@ read as a ceiling violation.
 
 Phase N+1 is scheduled only after Phase N's snapshot is re-taken, so each phase
 works against fresh counts. Story IDs are filled in as the deletion stories are
-created from this merged RFC.
+created from this merged RFC. Each story body must cite its fresh `--sort-extra`
+per-file `extra`, carry the LOC carve-out note, and embed the before/after
+`test:compare --json` invariant as its acceptance gate.
 
 ## Open questions
 
@@ -259,49 +261,6 @@ created from this merged RFC.
    hard `deps`/`blocked-by` edge on every deletion story so the scheduler cannot
    release a deletion PR ahead of it. Confirm at finalize that `<n>` is
    substituted with the assigned RFC number in the CLAUDE.md wording.
-
-## Stories
-
-Deletion stories are created from this RFC after merge, one per file per the
-Rollout phases. Each story body must cite its fresh `--sort-extra` per-file
-`extra`, carry the LOC carve-out note, and embed the before/after
-`test:compare --json` invariant as its acceptance gate.
-
-<!-- generated: stories table -->
-
-| ID                                                                                                                      | Title                                                                                                | Status      | Est LOC | Cluster        |
-| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------- | ------- | -------------- |
-| [attribute-methods-extra-burndown](stories/attribute-methods-extra-burndown.md)                                         | Burn down 56 extra (TS-only) tests in attribute-methods.test.ts                                      | ready       | 150     | extra-burndown |
-| [base-extra-burndown](stories/base-extra-burndown.md)                                                                   | Burn down 151 extra (TS-only) tests in base.test.ts                                                  | ready       | 300     | extra-burndown |
-| [connection-pool-extra-burndown](stories/connection-pool-extra-burndown.md)                                             | Burn down 68 extra (TS-only) tests in connection-pool.test.ts                                        | ready       | 150     | extra-burndown |
-| [core-extra-burndown](stories/core-extra-burndown.md)                                                                   | Burn down 63 extra (TS-only) tests in core.test.ts                                                   | ready       | 150     | extra-burndown |
-| [count-deleted-rows-with-lock-bespoke-extra-triage](stories/count-deleted-rows-with-lock-bespoke-extra-triage.md)       | Burn down 1 extra (TS-only) tests in count-deleted-rows-with-lock.test.ts                            | ready       | 30      | extra-burndown |
-| [counter-cache-extra-burndown](stories/counter-cache-extra-burndown.md)                                                 | Burn down 50 extra (TS-only) tests in counter-cache.test.ts                                          | ready       | 150     | extra-burndown |
-| [database-tasks-extra-burndown](stories/database-tasks-extra-burndown.md)                                               | Burn down 72 extra (TS-only) tests in database-tasks.test.ts                                         | ready       | 150     | extra-burndown |
-| [disconnected-bespoke-extra-triage](stories/disconnected-bespoke-extra-triage.md)                                       | Burn down 1 extra (TS-only) tests in disconnected.test.ts                                            | ready       | 30      | extra-burndown |
-| [enum-extra-burndown](stories/enum-extra-burndown.md)                                                                   | Burn down 107 extra (TS-only) tests in enum.test.ts                                                  | ready       | 300     | extra-burndown |
-| [finder-extra-burndown](stories/finder-extra-burndown.md)                                                               | Burn down 152 extra (TS-only) tests in finder.test.ts                                                | ready       | 300     | extra-burndown |
-| [inheritance-extra-burndown](stories/inheritance-extra-burndown.md)                                                     | Burn down 50 extra (TS-only) tests in inheritance.test.ts                                            | ready       | 150     | extra-burndown |
-| [migration-extra-burndown](stories/migration-extra-burndown.md)                                                         | Burn down 107 extra (TS-only) tests in migration.test.ts                                             | ready       | 300     | extra-burndown |
-| [nested-deadlock-bespoke-extra-triage](stories/nested-deadlock-bespoke-extra-triage.md)                                 | Burn down 3 extra (TS-only) tests in nested-deadlock.test.ts                                         | ready       | 30      | extra-burndown |
-| [postgresql-adapter-extra-burndown](stories/postgresql-adapter-extra-burndown.md)                                       | Burn down 85 extra (TS-only) tests in postgresql-adapter.test.ts                                     | ready       | 150     | extra-burndown |
-| [prepared-statement-status-bespoke-extra-triage](stories/prepared-statement-status-bespoke-extra-triage.md)             | Burn down 1 extra (TS-only) tests in prepared-statement-status.test.ts                               | ready       | 30      | extra-burndown |
-| [reflection-inverse-tests-relocate](stories/reflection-inverse-tests-relocate.md)                                       | Relocate 8 misplaced inverse-detection tests from reflection.test.ts to inverse-associations.test.ts | ready       | 250     | —              |
-| [statement-pool-bespoke-extra-triage](stories/statement-pool-bespoke-extra-triage.md)                                   | Burn down 6 extra (TS-only) tests in statement-pool.test.ts                                          | ready       | 30      | extra-burndown |
-| [strict-loading-extra-burndown](stories/strict-loading-extra-burndown.md)                                               | Burn down 54 extra (TS-only) tests in strict-loading.test.ts                                         | ready       | 150     | extra-burndown |
-| [thread-column-limit-into-cast-type](stories/thread-column-limit-into-cast-type.md)                                     | thread-column-limit-into-cast-type                                                                   | ready       | null    | —              |
-| [transactions-call-after-commit-relocate](stories/transactions-call-after-commit-relocate.md)                           | Relocate misplaced call-after-commit test to the transaction_callbacks convention file               | ready       | 30      | —              |
-| [uniqueness-validation-extra-burndown](stories/uniqueness-validation-extra-burndown.md)                                 | Burn down 57 extra (TS-only) tests in uniqueness-validation.test.ts                                  | in-progress | 150     | extra-burndown |
-| [where-extra-burndown](stories/where-extra-burndown.md)                                                                 | Burn down 71 extra (TS-only) tests in where.test.ts                                                  | in-progress | 150     | extra-burndown |
-| [autosave-destroy-describe-canonical-unskip](stories/autosave-destroy-describe-canonical-unskip.md)                     | Convert + un-skip bespoke TestDestroyAsPartOfAutosaveAssociation block to canonical models           | done        | 150     | —              |
-| [calculations-extra-burndown](stories/calculations-extra-burndown.md)                                                   | Burn down 320 extra (TS-only) tests in calculations.test.ts                                          | done        | 500     | extra-burndown |
-| [callbacks-extra-burndown](stories/callbacks-extra-burndown.md)                                                         | Burn down 61 extra (TS-only) tests in callbacks.test.ts                                              | done        | 150     | extra-burndown |
-| [counter-cache-aliased-column-test-canonical-fixtures](stories/counter-cache-aliased-column-test-canonical-fixtures.md) | Converge bespoke legacy_posts/legacy_comments aliased-counter test to canonical Post/Comment         | done        | 30      | —              |
-| [immutable-strings-by-default-tests-converge-to-rails](stories/immutable-strings-by-default-tests-converge-to-rails.md) | Converge immutable_strings_by_default tests to Rails schema-inference fidelity                       | done        | 40      | —              |
-| [reflection-extra-burndown](stories/reflection-extra-burndown.md)                                                       | Burn down 89 extra (TS-only) tests in reflection.test.ts                                             | done        | 150     | extra-burndown |
-| [relation-extra-burndown](stories/relation-extra-burndown.md)                                                           | Burn down 76 extra (TS-only) tests in relation.test.ts                                               | done        | 150     | extra-burndown |
-| [relations-extra-burndown](stories/relations-extra-burndown.md)                                                         | Burn down 412 extra (TS-only) tests in relations.test.ts                                             | done        | 500     | extra-burndown |
-| [transactions-extra-burndown](stories/transactions-extra-burndown.md)                                                   | Burn down 74 extra (TS-only) tests in transactions.test.ts                                           | done        | 150     | extra-burndown |
 
 ## Changelog
 

@@ -188,7 +188,9 @@ example does not re-implement migration discovery.
 
 ## Rollout
 
-Ordered phases, each filed as a follow-on story under this RFC:
+Ordered phases, each filed as a follow-on story under this RFC. The
+RFC-authoring story (`sveltekit-kanban-example-rfc`, RFC 0003) is closed when
+this RFC is finalized.
 
 1. **Phase 1 — scaffold + bootstrap:** `sveltekit-kanban-scaffold`
    (SvelteKit app, `config/database.ts`, `hooks.server.ts` boot, `db.ts`).
@@ -211,21 +213,6 @@ Ordered phases, each filed as a follow-on story under this RFC:
    provide an equivalent that drives the model/transaction layer directly under
    `TRAILS_ENV=test` (in-memory DB), independent of the SvelteKit dev server, so
    CI need not boot a browser.
-
-## Stories
-
-The build is filed as the four follow-on stories listed under Rollout; this
-RFC-authoring story (`sveltekit-kanban-example-rfc`, RFC 0003) is closed when
-this RFC is finalized.
-
-<!-- generated: stories table -->
-
-| ID                                                                                  | Title                                                       | Status | Est LOC | Cluster  |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | -------- |
-| [sveltekit-kanban-migrations-models](stories/sveltekit-kanban-migrations-models.md) | Kanban example: migrations, models, schema dump, seeds      | draft  | 200     | examples |
-| [sveltekit-kanban-readme-ci](stories/sveltekit-kanban-readme-ci.md)                 | Kanban example: README, smoke, CI lane, link from AR README | draft  | 120     | examples |
-| [sveltekit-kanban-routes-ui](stories/sveltekit-kanban-routes-ui.md)                 | Kanban example: routes, form actions, API, Svelte UI        | draft  | 300     | examples |
-| [sveltekit-kanban-scaffold](stories/sveltekit-kanban-scaffold.md)                   | Kanban example: scaffold SvelteKit app + AR bootstrap       | draft  | 120     | examples |
 
 ## Changelog
 

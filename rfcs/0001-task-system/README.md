@@ -122,7 +122,7 @@ what — `pnpm tasks <cmd>` is the only seam.
 Every RFC `README.md` carries the YAML frontmatter block shown at the top of
 **this file** and uses the section order:
 Summary → Motivation → Design → Alternatives considered → Rollout →
-Open questions → Stories → Changelog. Skip a section only if it is genuinely
+Open questions → Changelog. Skip a section only if it is genuinely
 empty (omit the heading; do not leave it stubbed).
 
 #### RFC frontmatter schema
@@ -298,9 +298,8 @@ launches the agent. If claim fails (already taken) the skill retries
 `next-bundle`.
 
 **post-merge-findings:** creates new story files for follow-ups identified
-during triage, updates the RFC's stories table, and calls
-`pnpm tasks done <id> --pr <number>` for the merged story. No other source
-file is modified.
+during triage and calls `pnpm tasks done <id> --pr <number>` for the merged
+story. No other source file is modified.
 
 **Bundle ceiling:** the 250–500 LOC rule currently lives only in CLAUDE.md
 prose. With `est-loc` + `next-bundle --max-loc`, the rule is enforced
@@ -461,26 +460,6 @@ state.
   land in the tasks repo, direct-to-main by default (see §Story authorship
   and review rules).
 - **RFC numbering** — strictly sequential, no skips.
-
----
-
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                                                                  | Title                                                                                | Status | Est LOC | Cluster    |
-| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------ | ------- | ---------- |
-| [claims-concurrency-lock](stories/claims-concurrency-lock.md)                                       | Serialize concurrent tasks-CLI mutations (file lock or per-agent worktree)           | done   | 100     | scaffold   |
-| [cli-authoring-ergonomics](stories/cli-authoring-ergonomics.md)                                     | tasks CLI: authoring ergonomics — new --status/--body-file, standalone reindex + fmt | done   | 110     | —          |
-| [cli-dirty-worktree-safe-index-build](stories/cli-dirty-worktree-safe-index-build.md)               | tasks CLI: make index build + auto-push safe against a dirty/divergent worktree      | done   | 120     | —          |
-| [cli-inspect-and-list-ergonomics](stories/cli-inspect-and-list-ergonomics.md)                       | tasks CLI: add `show <id>` and richer `list` columns (priority, est-loc)             | done   | 90      | —          |
-| [cli-status-transition-command](stories/cli-status-transition-command.md)                           | tasks CLI: add a draft → ready status-transition command                             | done   | 60      | —          |
-| [cli-trim-generated-index-files-to-index-md](stories/cli-trim-generated-index-files-to-index-md.md) | tasks CLI: trim GENERATED_INDEX_FILES to index.md (json now gitignored)              | done   | 50      | —          |
-| [convert-bootstrap-rfc](stories/convert-bootstrap-rfc.md)                                           | Convert a real plan doc to RFC 0002 (bootstrap→DatabaseTasks)                        | done   | 200     | conversion |
-| [fix-tasks-new-command](stories/fix-tasks-new-command.md)                                           | Fix `tasks new`: emit hook-clean stories and validate --cluster                      | done   | 120     | scaffold   |
-| [scaffold-tooling](stories/scaffold-tooling.md)                                                     | Scaffold rfcs repo, scripts/tasks/, and the rfcs CLI                                 | done   | 250     | scaffold   |
-| [tasks-cli-lock-crashed-holder-recovery](stories/tasks-cli-lock-crashed-holder-recovery.md)         | Recover a tasks-CLI lock wedged by a crashed holder (safe stale-lock cleanup)        | done   | 80      | —          |
-| [wire-tasks-loop](stories/wire-tasks-loop.md)                                                       | Wire tasks-loop to next-bundle                                                       | done   | 80      | scaffold   |
 
 ---
 

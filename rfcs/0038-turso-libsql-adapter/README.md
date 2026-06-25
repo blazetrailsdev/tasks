@@ -64,6 +64,15 @@ Connection modes map to existing construction paths:
 - **Embedded replica** — `new Database(localPath, { syncUrl, authToken })` plus
   a caller-driven `sync()` operation.
 
+The work splits into three sequential stories:
+
+1. **libsql-local-driver** — local-file driver + thin subclass + registration
+   - optional dep. The MVP; standalone.
+2. **libsql-remote-mode** — remote URL + `authToken`, async-open dispatch,
+   config plumbing. Depends on story 1.
+3. **libsql-embedded-replica** — `syncUrl` replica mode + caller-driven
+   `sync()`. Depends on story 2.
+
 ## Key facts about the `libsql` package
 
 - `import Database from "libsql"` — sync, better-sqlite3-shaped (`prepare`,
@@ -75,24 +84,6 @@ Connection modes map to existing construction paths:
   `db.sync()`.
 - Inherits SQLite's single-writer model. No remote `backup()` primitive;
   `loadExtension` is unavailable on remote.
-
-## Stories
-
-1. **libsql-local-driver** — local-file driver + thin subclass + registration
-   - optional dep. The MVP; standalone.
-2. **libsql-remote-mode** — remote URL + `authToken`, async-open dispatch,
-   config plumbing. Depends on story 1.
-3. **libsql-embedded-replica** — `syncUrl` replica mode + caller-driven
-   `sync()`. Depends on story 2.
-
-<!-- generated: stories table -->
-
-| ID                                                              | Title                                                       | Status | Est LOC | Cluster               |
-| --------------------------------------------------------------- | ----------------------------------------------------------- | ------ | ------- | --------------------- |
-| [libsql-embedded-replica](stories/libsql-embedded-replica.md)   | libsql: embedded-replica mode + sync()                      | done   | 160     | adapter-test-fidelity |
-| [libsql-local-driver](stories/libsql-local-driver.md)           | libsql: local-file driver + adapter subclass + registration | done   | 220     | adapter-test-fidelity |
-| [libsql-remote-mode](stories/libsql-remote-mode.md)             | libsql: remote Turso mode (network, async-open path)        | done   | 180     | adapter-test-fidelity |
-| [libsql-replica-auto-sync](stories/libsql-replica-auto-sync.md) | libsql: opt-in periodic auto-sync for embedded replicas     | done   | 120     | —                     |
 
 ## Open questions
 

@@ -67,16 +67,6 @@ concurrent local worktrees don't collide.
 3. **fs-adapter on the hot path.** Confirm the async-fs template copy per worker
    isn't itself a bottleneck on CI disk.
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                                      | Title                                                  | Status | Est LOC | Cluster   |
-| ----------------------------------------------------------------------- | ------------------------------------------------------ | ------ | ------- | --------- |
-| [phase0-sqlite-template-spike](stories/phase0-sqlite-template-spike.md) | Phase 0 — sqlite clonable-template spike               | done   | 250     | test-perf |
-| [phase1-pg-template](stories/phase1-pg-template.md)                     | Phase 1 — PG CREATE DATABASE ... TEMPLATE              | done   | 150     | test-perf |
-| [phase2-mariadb-template](stories/phase2-mariadb-template.md)           | Phase 2 — MariaDB template (measure before committing) | done   | 150     | test-perf |
-
 ## Changelog
 
 - 2026-05-30: initial RFC, migrated from

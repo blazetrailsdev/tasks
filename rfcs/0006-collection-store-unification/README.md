@@ -89,18 +89,7 @@ is the only store; inverse wiring and preloading both write to it directly.
   This RFC stays `active` for its one remaining piece — the optional S5 (unskip
   inverse-dedup tests); all (B) convergence work tracks under the new RFC.
 
-## Constraints
-
-- Test names match Rails verbatim — no test renames (trails `CLAUDE.md`).
-- `api:compare` delta must be non-negative on the relevant Rails files.
-- Six test files poke `_cachedAssociations` directly today. They must either be
-  updated, or `_cachedAssociations` must survive as an internal proxy-backed
-  method/accessor with the same shape and name so the pokes keep working. See
-  Open questions.
-
-## Stories
-
-See `stories/` for the breakdown. Sketch:
+Story sketch (see `stories/` for the live breakdown):
 
 - **S1 — proxy-backed read API**: introduce a read path on the proxy that
   returns loaded targets; keep `_cachedAssociations` as a deprecated shim that
@@ -114,15 +103,14 @@ See `stories/` for the breakdown. Sketch:
 - **S5 (optional) — unskip dedup tests**: flip the skipped inverse-dedup tests
   now that the seam is gone.
 
-<!-- generated: stories table -->
+## Constraints
 
-| ID                                                                        | Title                                                              | Status | Est LOC | Cluster      |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ | ------- | ------------ |
-| [s1-proxy-backed-read-api](stories/s1-proxy-backed-read-api.md)           | Proxy-backed read API with deprecated cache shim                   | done   | 180     | associations |
-| [s2-migrate-preloader-writes](stories/s2-migrate-preloader-writes.md)     | Migrate preloader writes through the proxy                         | done   | 160     | associations |
-| [s3-migrate-findtarget-reads](stories/s3-migrate-findtarget-reads.md)     | Migrate findTarget and instance-method reads through the proxy     | done   | 140     | associations |
-| [s4-delete-cached-associations](stories/s4-delete-cached-associations.md) | Delete \_cachedAssociations and resolve singular-association cache | done   | 200     | associations |
-| [s5-unskip-dedup-tests](stories/s5-unskip-dedup-tests.md)                 | Unskip inverse-dedup tests gated on the removed seam               | done   | 80      | associations |
+- Test names match Rails verbatim — no test renames (trails `CLAUDE.md`).
+- `api:compare` delta must be non-negative on the relevant Rails files.
+- Six test files poke `_cachedAssociations` directly today. They must either be
+  updated, or `_cachedAssociations` must survive as an internal proxy-backed
+  method/accessor with the same shape and name so the pokes keep working. See
+  Open questions.
 
 ## Open questions
 

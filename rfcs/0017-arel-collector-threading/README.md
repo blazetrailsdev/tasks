@@ -395,17 +395,6 @@ the touched arel test files.
 (externalCollector)` guard (it was only needed to set `_extractBinds`) and
    keep the method as a one-liner delegating to `this.visit`.
 
-## Stories
-
-<!-- generated: stories table -->
-
-| ID                                                        | Title                                         | Status | Est LOC | Cluster                  |
-| --------------------------------------------------------- | --------------------------------------------- | ------ | ------- | ------------------------ |
-| [p1-visitor-base-types](stories/p1-visitor-base-types.md) | Phase 1 — Visitor base type strengthening     | done   | 50      | arel-collector-threading |
-| [p2-to-sql-threading](stories/p2-to-sql-threading.md)     | Phase 2 — Thread collector through to-sql.ts  | done   | 400     | arel-collector-threading |
-| [p3-subclass-threading](stories/p3-subclass-threading.md) | Phase 3 — Thread collector through subclasses | done   | 200     | arel-collector-threading |
-| [p4-verification](stories/p4-verification.md)             | Phase 4 — Verification and cleanup            | done   | 50      | arel-collector-threading |
-
 ## Changelog
 
 - 2026-06-08: initial RFC
