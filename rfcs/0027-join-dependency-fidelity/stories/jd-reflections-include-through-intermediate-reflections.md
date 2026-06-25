@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency#reflections should include through-intermediate reflections (join_root.drop(1).map!(:reflection))"
-status: ready
+status: claimed
 updated: 2026-06-25
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-25T11:02:35Z"
+assignee: "jd-reflections-include-through-intermediate-reflections"
 blocked-by: null
 ---
 
