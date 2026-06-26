@@ -1,6 +1,6 @@
 ---
 title: "defaults.test.ts → defaults_test.rb canonical schema port"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 350
 priority: 56
-pr: null
+pr: 4197
 claim: "2026-06-26T14:28:33Z"
 assignee: "defaults-test-cluster"
 blocked-by: null
