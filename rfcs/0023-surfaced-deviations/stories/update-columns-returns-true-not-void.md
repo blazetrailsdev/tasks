@@ -1,10 +1,11 @@
 ---
 title: "update_columns/update_column return true (Rails) not void"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - persistence-test-canonical-wave15
 deps-rfc: []
 est-loc: 40
 priority: null
