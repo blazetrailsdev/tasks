@@ -8,7 +8,7 @@ deps:
   - collection-proxy-destroy-transaction
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 90
 pr: null
 claim: null
 assignee: null
