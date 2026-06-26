@@ -4,7 +4,8 @@ status: ready
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
-deps: []
+deps:
+  - transactions-test-canonical
 deps-rfc: []
 est-loc: null
 priority: null
