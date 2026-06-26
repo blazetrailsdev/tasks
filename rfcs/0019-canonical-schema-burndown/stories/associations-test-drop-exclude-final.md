@@ -1,12 +1,13 @@
 ---
 title: "Drop associations.test.ts from canonical-schema exclude list"
 status: blocked
-updated: 2026-06-19
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps:
   - associations-test-associationproxytest-canonical
   - associations-test-preloadertest-canonical
+  - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: 50
 priority: 50
