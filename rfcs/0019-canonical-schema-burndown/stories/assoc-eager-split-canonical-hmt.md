@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical: has_many-through cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 41
-pr: null
+pr: 4182
 claim: "2026-06-26T10:44:46Z"
 assignee: "assoc-eager-split-canonical-hmt"
 blocked-by: null
