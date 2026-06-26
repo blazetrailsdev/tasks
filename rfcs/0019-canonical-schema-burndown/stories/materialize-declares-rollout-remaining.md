@@ -1,6 +1,6 @@
 ---
 title: "Materialize declares: roll generator over the 28 models skipped by PR #3545"
-status: ready
+status: claimed
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T13:41:40Z"
+assignee: "materialize-declares-rollout-remaining"
 blocked-by: null
 ---
 
