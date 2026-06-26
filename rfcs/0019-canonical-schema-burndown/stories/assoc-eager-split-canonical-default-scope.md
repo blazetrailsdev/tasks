@@ -1,7 +1,7 @@
 ---
 title: "eager.test.ts → canonical: default-scope cluster"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 39
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T10:10:45Z"
+assignee: "assoc-eager-split-canonical-default-scope"
 blocked-by: null
 ---
 
