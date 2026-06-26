@@ -1,7 +1,7 @@
 ---
 title: "aggregations.test.ts — retire remaining non-Rails describes + drop exclude"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["calculations-aggregations"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 33
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T03:22:45Z"
+assignee: "aggregations-remaining-describes"
 blocked-by: null
 ---
 
