@@ -1,6 +1,6 @@
 ---
 title: "normalized-attribute.test.ts → normalized_attribute_test.rb canonical schema port"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 27
-pr: null
+pr: 4171
 claim: "2026-06-26T01:51:57Z"
 assignee: "normalized-attribute-test-cluster"
 blocked-by: null
