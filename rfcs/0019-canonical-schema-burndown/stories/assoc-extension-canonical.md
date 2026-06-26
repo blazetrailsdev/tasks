@@ -1,6 +1,6 @@
 ---
 title: "extension.test.ts → canonical schema (posts-collision)"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 250
 priority: 34
-pr: null
+pr: 4177
 claim: "2026-06-26T03:39:47Z"
 assignee: "assoc-extension-canonical"
 blocked-by: null
