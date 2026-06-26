@@ -1,6 +1,6 @@
 ---
 title: "Burn down 1 extra (TS-only) tests in count-deleted-rows-with-lock.test.ts"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
