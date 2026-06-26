@@ -1,7 +1,7 @@
 ---
 title: "Materialize model declares: virtualizer/walker gap fixes (post/author/comment)"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T01:37:00Z"
+assignee: "materialize-declares-generator-fixes"
 blocked-by: null
 ---
 
