@@ -8,7 +8,7 @@ deps:
   - transactions-test-canonical
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 81
 pr: null
 claim: null
 assignee: null
