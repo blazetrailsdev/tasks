@@ -1,6 +1,6 @@
 ---
 title: "Burn down 1 extra (TS-only) tests in count-deleted-rows-with-lock.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 23
-pr: null
+pr: 4164
 claim: "2026-06-26T00:02:15Z"
 assignee: "count-deleted-rows-with-lock-bespoke-extra-triage"
 blocked-by: null
