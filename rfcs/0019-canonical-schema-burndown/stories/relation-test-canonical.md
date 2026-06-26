@@ -1,6 +1,6 @@
 ---
 title: "relation.test.ts -> relation_test.rb canonical port"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
