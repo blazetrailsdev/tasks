@@ -4,7 +4,8 @@ status: ready
 updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - relation-test-canonical
 deps-rfc: []
 est-loc: null
 priority: null
