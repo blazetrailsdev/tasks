@@ -1,7 +1,7 @@
 ---
 title: "Burn down 50 extra (TS-only) tests in inheritance.test.ts"
-status: in-progress
-updated: 2026-06-25
+status: done
+updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
 deps: []
