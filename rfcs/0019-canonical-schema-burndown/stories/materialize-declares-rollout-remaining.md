@@ -1,6 +1,6 @@
 ---
 title: "Materialize declares: roll generator over the 28 models skipped by PR #3545"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
