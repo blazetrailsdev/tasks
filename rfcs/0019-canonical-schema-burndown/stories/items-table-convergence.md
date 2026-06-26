@@ -1,7 +1,7 @@
 ---
 title: "Converge bespoke items scratch tables to file-unique names"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T01:06:58Z"
+assignee: "items-table-convergence"
 blocked-by: null
 ---
 
