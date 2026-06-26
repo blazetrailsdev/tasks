@@ -8,7 +8,7 @@ deps:
   - assoc-async-load-target-shares-proxy-state
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 88
 pr: null
 claim: null
 assignee: null
