@@ -1,10 +1,12 @@
 ---
 title: "Relation#inspect wrapper uses unqualified class name vs Rails' ActiveRecord::-namespaced name"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - calculations-test-canonical
+  - relations-test-canonical
 deps-rfc: []
 est-loc: 40
 priority: null
