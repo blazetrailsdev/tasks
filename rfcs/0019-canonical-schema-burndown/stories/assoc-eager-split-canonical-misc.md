@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical: misc cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 43
-pr: null
+pr: 4184
 claim: "2026-06-26T11:29:00Z"
 assignee: "assoc-eager-split-canonical-misc"
 blocked-by: null
