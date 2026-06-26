@@ -1,6 +1,6 @@
 ---
 title: "querying.test.ts + querying-methods-delegation.test.ts -> finder_test.rb canonical port"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 300
 priority: 50
-pr: null
+pr: 4191
 claim: "2026-06-26T13:05:38Z"
 assignee: "querying-finder-canonical"
 blocked-by: null
