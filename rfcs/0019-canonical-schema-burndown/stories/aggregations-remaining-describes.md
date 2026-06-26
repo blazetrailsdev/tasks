@@ -1,6 +1,6 @@
 ---
 title: "aggregations.test.ts — retire remaining non-Rails describes + drop exclude"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
