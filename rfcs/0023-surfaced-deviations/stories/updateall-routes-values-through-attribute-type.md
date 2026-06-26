@@ -44,8 +44,9 @@ the canonical schema in PR #4192. That test defines a custom
 `EnsureRoundTripTypeCasting` type and asserts `update_all` stores the
 `serialize`d value and reads back the `deserialize`d value. Against trails it
 fails: `updateAll` stores the raw `"value from user"` (the attribute type's
-`serialize` is bypassed). The faithful test is therefore committed as `it.skip`
-in `packages/activerecord/src/relation.test.ts` with a pointer to this story.
+`serialize` is bypassed). The faithful test is therefore committed as `it.fails`
+in `packages/activerecord/src/relation.test.ts` with a pointer to this story, so
+CI keeps running it and flips red once the deviation is fixed.
 
 **Known blocker (verified in PR #4192):** simply routing the SET value through
 `predicateBuilder.buildBindAttribute(key, val)` (producing a `QueryAttribute`)
