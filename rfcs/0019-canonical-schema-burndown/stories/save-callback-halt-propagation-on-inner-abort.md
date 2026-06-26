@@ -9,7 +9,7 @@ deps:
   - validations-core
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 80
 pr: null
 claim: null
 assignee: null
