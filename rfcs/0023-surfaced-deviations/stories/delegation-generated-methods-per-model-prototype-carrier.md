@@ -1,7 +1,7 @@
 ---
 title: "Delegation: install generated relation methods via per-model prototype carriers (deferred mechanism convergence)"
-status: claimed
-updated: 2026-06-25
+status: blocked
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-06-25T03:42:34Z"
 assignee: "delegation-generated-methods-per-model-prototype-carrier"
-blocked-by: null
+blocked-by: "Deferred mechanism-convergence; unclaiming pending approach decision (per-instance setPrototypeOf vs per-model subclasses vs shared dispatch proxy)"
 ---
 
 ## Context
