@@ -1,7 +1,7 @@
 ---
 title: "Relation#merge hash-dispatch + proc-arg fidelity (2 impl bugs)"
-status: in-progress
-updated: 2026-06-25
+status: done
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
