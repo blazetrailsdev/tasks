@@ -1,7 +1,7 @@
 ---
 title: "counter-cache.test.ts → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence", "counter-cache-extra-burndown"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 47
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T12:29:40Z"
+assignee: "counter-cache-test-canonical"
 blocked-by: null
 ---
 
