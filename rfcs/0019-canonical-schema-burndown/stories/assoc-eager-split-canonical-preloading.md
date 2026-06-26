@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical: preloading cluster"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 45
-pr: null
+pr: 4186
 claim: "2026-06-26T12:05:40Z"
 assignee: "assoc-eager-split-canonical-preloading"
 blocked-by: null
