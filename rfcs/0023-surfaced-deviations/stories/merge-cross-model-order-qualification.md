@@ -1,14 +1,14 @@
 ---
 title: "merge-cross-model-order-qualification"
-status: ready
-updated: 2026-06-25
+status: done
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4161
 claim: null
 assignee: null
 blocked-by: null
