@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts → canonical: nested-through-has-one cluster"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
