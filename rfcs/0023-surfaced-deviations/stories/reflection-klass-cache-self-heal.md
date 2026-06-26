@@ -1,10 +1,13 @@
 ---
 title: "Self-healing reflection klass resolution to eliminate cross-file _klassCache poisoning"
 status: ready
-updated: 2026-06-23
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - inheritance-modules-reflection-followup
+  - associations-through-nested-cluster
+  - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: 150
 priority: null
