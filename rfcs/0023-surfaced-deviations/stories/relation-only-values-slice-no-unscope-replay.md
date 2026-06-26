@@ -1,10 +1,11 @@
 ---
 title: "Relation#only should slice values without unscope_values merge-replay"
 status: ready
-updated: 2026-06-24
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - relations-test-canonical
 deps-rfc: []
 est-loc: 50
 priority: null
