@@ -1,6 +1,6 @@
 ---
 title: "validations/numericality-validation → NumericData canonical model + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 32
-pr: null
+pr: 4175
 claim: "2026-06-26T03:05:48Z"
 assignee: "validations-numericality"
 blocked-by: null
