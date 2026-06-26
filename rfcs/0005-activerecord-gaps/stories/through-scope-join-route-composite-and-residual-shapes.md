@@ -1,10 +1,11 @@
 ---
 title: "through-scope-join-route-composite-and-residual-shapes"
 status: ready
-updated: 2026-06-17
+updated: 2026-06-26
 rfc: "0005-activerecord-gaps"
 cluster: null
-deps: []
+deps:
+  - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: null
 priority: null
