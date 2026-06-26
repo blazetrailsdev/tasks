@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke HABTM-join scratch tables to file-unique names"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 24
-pr: null
+pr: 4167
 claim: "2026-06-26T00:51:59Z"
 assignee: "habtm-join-table-convergence"
 blocked-by: null
