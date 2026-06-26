@@ -4,7 +4,8 @@ status: ready
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
-deps: []
+deps:
+  - collection-proxy-destroy-transaction
 deps-rfc: []
 est-loc: 10
 priority: null
