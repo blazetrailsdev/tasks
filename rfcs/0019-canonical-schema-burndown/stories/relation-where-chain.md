@@ -1,7 +1,7 @@
 ---
 title: "relation/where-chain.test.ts → canonical schema + where_chain_test.rb"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 29
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T02:14:45Z"
+assignee: "relation-where-chain"
 blocked-by: null
 ---
 
