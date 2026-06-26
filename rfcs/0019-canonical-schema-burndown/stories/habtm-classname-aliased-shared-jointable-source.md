@@ -8,7 +8,7 @@ deps:
   - assoc-eager-split-canonical-preloading
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 93
 pr: null
 claim: null
 assignee: null
