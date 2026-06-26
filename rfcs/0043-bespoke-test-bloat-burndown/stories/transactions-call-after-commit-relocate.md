@@ -1,10 +1,11 @@
 ---
 title: "Relocate misplaced call-after-commit test to the transaction_callbacks convention file"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
-deps: []
+deps:
+  - transactions-test-canonical
 deps-rfc: []
 est-loc: 30
 priority: null
