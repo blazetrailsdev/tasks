@@ -76,3 +76,9 @@ story if convergence is tackled separately):
   strict-sync validation chain and the Topic `before_*_for_transaction` hook
   dispatch is invoked without `await`, so the async side effect can't be awaited
   or transactionally rolled back. Rails `transactions_test.rb:714`.
+- `unprepared statement materializes transaction` (gated to sqlite) — on
+  PG/MySQL trails does not materialize the pending lazy transaction for a
+  no-bind unprepared SELECT (`Topic.where("1=1").first`), so no `BEGIN` is
+  emitted; Rails runs it on every adapter. Related to
+  thread-collector-preparable-for-statement-cache. Rails
+  `transactions_test.rb:1485`.
