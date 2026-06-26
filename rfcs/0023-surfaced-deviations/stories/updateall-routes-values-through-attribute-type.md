@@ -47,11 +47,20 @@ fails: `updateAll` stores the raw `"value from user"` (the attribute type's
 `serialize` is bypassed). The faithful test is therefore committed as `it.skip`
 in `packages/activerecord/src/relation.test.ts` with a pointer to this story.
 
+**Known blocker (verified in PR #4192):** simply routing the SET value through
+`predicateBuilder.buildBindAttribute(key, val)` (producing a `QueryAttribute`)
+breaks 24 update-all tests — the UPDATE-SET visitor
+(`packages/arel/src/visitors/to-sql.ts` `visitArelNodesAssignment` →
+`visitNodeOrValue` → `quote`) tries to _quote_ the `QueryAttribute` object
+directly rather than threading it as a bind the way the WHERE path does. The fix
+must also teach the SET-clause path to collect `QueryAttribute` binds.
+
 ## Acceptance criteria
 
 - [ ] `Relation#updateAll` routes non-Arel scalar assignment values through the
       attribute type (mirror Rails `_substitute_values`: cast via
-      `type_for_attribute(name)` and bind so the type's `serialize` runs).
+      `type_for_attribute(name)` and bind so the type's `serialize` runs), and the
+      UPDATE-SET visitor threads those binds instead of quoting the object.
 - [ ] Un-skip `update all goes through normal type casting` in
       `packages/activerecord/src/relation.test.ts` (remove `.skip`); it passes.
 - [ ] No regressions in existing `updateAll` / persistence tests across all three
