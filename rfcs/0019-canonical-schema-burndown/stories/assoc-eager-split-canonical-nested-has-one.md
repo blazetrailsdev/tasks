@@ -1,7 +1,7 @@
 ---
 title: "eager.test.ts → canonical: nested-through-has-one cluster"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 44
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T11:53:40Z"
+assignee: "assoc-eager-split-canonical-nested-has-one"
 blocked-by: null
 ---
 
