@@ -4,7 +4,9 @@ status: ready
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
-deps: []
+deps:
+  - persistence-test-canonical-wave15
+  - validations-core
 deps-rfc: []
 est-loc: null
 priority: null
