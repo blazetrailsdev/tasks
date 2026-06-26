@@ -1,10 +1,11 @@
 ---
 title: "Wire Locking::Optimistic#_touch_row/_update_row into the touch/update persistence path"
 status: ready
-updated: 2026-06-23
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - persistence-test-canonical-wave15
 deps-rfc: []
 est-loc: 120
 priority: null
