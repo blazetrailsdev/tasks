@@ -1,7 +1,7 @@
 ---
 title: "Burn down 1 extra (TS-only) tests in disconnected.test.ts"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T00:32:15Z"
+assignee: "disconnected-bespoke-extra-triage"
 blocked-by: null
 ---
 
