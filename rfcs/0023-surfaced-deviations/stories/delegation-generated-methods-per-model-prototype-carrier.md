@@ -1,6 +1,6 @@
 ---
 title: "Delegation: install generated relation methods via per-model prototype carriers (deferred mechanism convergence)"
-status: ready
+status: draft
 updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
