@@ -1,6 +1,6 @@
 ---
 title: "validations/uniqueness-validation → canonical schema + Rails fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["uniqueness-validation-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 55
-pr: null
+pr: 4196
 claim: "2026-06-26T14:13:33Z"
 assignee: "validations-uniqueness"
 blocked-by: null
