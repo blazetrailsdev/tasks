@@ -1,10 +1,11 @@
 ---
 title: "thread-column-limit-into-cast-type"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
-deps: []
+deps:
+  - attributes-test-cluster
 deps-rfc: []
 est-loc: null
 priority: null
