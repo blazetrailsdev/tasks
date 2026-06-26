@@ -1,7 +1,7 @@
 ---
 title: "validations/association-validation → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T02:48:47Z"
+assignee: "validations-association"
 blocked-by: null
 ---
 
