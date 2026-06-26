@@ -1,7 +1,7 @@
 ---
 title: "collection-cache-key.test.ts → collection_cache_key_test.rb canonical port"
-status: in-progress
-updated: 2026-06-25
+status: done
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
