@@ -1,6 +1,6 @@
 ---
 title: "touch-later.test.ts → canonical Topic/Owner/Pet + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: null
+pr: 4173
 claim: "2026-06-26T02:31:57Z"
 assignee: "touch-later-test-canonical"
 blocked-by: null
