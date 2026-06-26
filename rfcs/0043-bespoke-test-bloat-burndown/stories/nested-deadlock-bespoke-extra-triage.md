@@ -1,6 +1,6 @@
 ---
 title: "Burn down 3 extra (TS-only) tests in nested-deadlock.test.ts"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: extra-burndown
