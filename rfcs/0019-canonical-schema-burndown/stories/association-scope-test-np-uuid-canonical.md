@@ -1,6 +1,6 @@
 ---
 title: "association-scope-test-np-uuid-canonical"
-status: ready
+status: draft
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
