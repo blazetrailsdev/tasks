@@ -1,6 +1,6 @@
 ---
 title: "transactions.test.ts → canonical schema (split per-describe)"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "transactions-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 53
-pr: null
+pr: 4194
 claim: "2026-06-26T13:29:41Z"
 assignee: "transactions-test-canonical"
 blocked-by: null
