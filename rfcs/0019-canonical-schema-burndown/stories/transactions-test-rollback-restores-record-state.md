@@ -59,3 +59,24 @@ Rails: `vendor/rails/activerecord/lib/active_record/transactions.rb`
       enclosing transaction rather than being converted to `RecordNotSaved`.
 - [ ] Un-skip the 7 `CONVERGENCE-PENDING` tests in `transactions.test.ts`; they
       pass on sqlite + PG with no body changes (names unchanged).
+
+## Related gaps surfaced by the same conversion (additional skipped tests)
+
+The conversion also surfaced these adjacent deviations, skipped faithfully in
+`transactions.test.ts` and linking here for tracking (each can move to its own
+story if convergence is tackled separately):
+
+- `transaction does not apply default scope` — needs relation-level
+  `Relation#transaction` (trails' `guardBaseMethodDelegation` throws
+  `NotImplementedError` for `transaction` on a Relation). Rails
+  `transactions_test.rb:224`.
+- `cancellation from before filters rollbacks in validation` / `validation!` /
+  `save` / `save!` — the cancelling before-filter performs a DB side effect
+  (`Book.create`) then `throw(:abort)`; trails' `before_validation` runs on the
+  strict-sync validation chain and the Topic `before_*_for_transaction` hook
+  dispatch is invoked without `await`, so the async side effect can't be awaited
+  or transactionally rolled back. Rails `transactions_test.rb:714`.
+- `after all transactions commit` invalidated-transaction subcase — Rails runs
+  the callback immediately on an invalidated transaction; trails models
+  invalidated as finalized, so the public `afterCommit` delegate raises instead.
+  Rails `transactions_test.rb:71`.
