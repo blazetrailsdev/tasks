@@ -1,6 +1,6 @@
 ---
 title: "attributes.test.ts → attributes_test.rb canonical schema port"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
