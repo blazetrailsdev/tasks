@@ -1,7 +1,7 @@
 ---
 title: "callbacks.test.ts → canonical schema + Rails fixtures (split per-describe)"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence", "callbacks-extra-burndown"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 46
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T12:17:42Z"
+assignee: "callbacks-test-canonical"
 blocked-by: null
 ---
 
