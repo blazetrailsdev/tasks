@@ -1,6 +1,6 @@
 ---
 title: "relation/where-chain.test.ts → canonical schema + where_chain_test.rb"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
