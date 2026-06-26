@@ -76,7 +76,3 @@ story if convergence is tackled separately):
   strict-sync validation chain and the Topic `before_*_for_transaction` hook
   dispatch is invoked without `await`, so the async side effect can't be awaited
   or transactionally rolled back. Rails `transactions_test.rb:714`.
-- `after all transactions commit` invalidated-transaction subcase — Rails runs
-  the callback immediately on an invalidated transaction; trails models
-  invalidated as finalized, so the public `afterCommit` delegate raises instead.
-  Rails `transactions_test.rb:71`.
