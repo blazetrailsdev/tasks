@@ -1,7 +1,7 @@
 ---
 title: "relation/merging.test.ts → canonical schema + merging_test.rb"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 35
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T03:56:45Z"
+assignee: "relation-merging"
 blocked-by: null
 ---
 
