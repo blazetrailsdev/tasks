@@ -1,10 +1,11 @@
 ---
 title: "Relocate 8 misplaced inverse-detection tests from reflection.test.ts to inverse-associations.test.ts"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-26
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
-deps: []
+deps:
+  - inheritance-modules-reflection-followup
 deps-rfc: []
 est-loc: 250
 priority: null
