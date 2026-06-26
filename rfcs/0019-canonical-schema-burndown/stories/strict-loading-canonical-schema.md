@@ -1,7 +1,7 @@
 ---
 title: "strict-loading.test.ts + strict-loading-sync-reader.test.ts → canonical schema"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["strict-loading-extra-burndown"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 67
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T19:12:57Z"
+assignee: "strict-loading-canonical-schema"
 blocked-by: null
 ---
 
