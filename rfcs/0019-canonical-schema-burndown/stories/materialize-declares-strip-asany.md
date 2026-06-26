@@ -1,6 +1,6 @@
 ---
 title: "Materialize model declares: migrate test-local model classes + strip redundant as any"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["materialize-declares-rollout-waves"]
 deps-rfc: []
 est-loc: 300
 priority: 49
-pr: null
+pr: 4190
 claim: "2026-06-26T12:53:40Z"
 assignee: "materialize-declares-strip-asany"
 blocked-by: null
