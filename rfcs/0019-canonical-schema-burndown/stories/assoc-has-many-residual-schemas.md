@@ -1,6 +1,6 @@
 ---
 title: "Converge has-many-associations.test.ts residual bespoke schemas → drop exclude entry"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
