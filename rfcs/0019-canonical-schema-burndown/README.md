@@ -3,7 +3,7 @@ rfc: "0019-canonical-schema-burndown"
 title: "Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word"
 status: active
 created: 2026-06-09
-updated: 2026-06-16
+updated: 2026-06-26
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -317,3 +317,22 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
   with a definitive note; repointed `hmt-disable-joins-conversion`'s `blocked-by`
   from `0015-ar-framework-gaps` to `0005-activerecord-gaps` (the association-gaps
   RFC) since both blockers are association-layer, not dirty/readonly.
+- 2026-06-26: scheduling discipline — **split oversized single-file stories as a
+  DEPENDENCY CHAIN, never parallel.** `eager.test.ts` was split into 7 parallel
+  `assoc-eager-split-canonical-*` stories with no deps between them; all went
+  `ready` at once, 4 agents claimed them, and every merge forced the others to
+  rebase. The scheduler (`ready`/`next-bundle`) is deps-aware but **file-unaware**,
+  so `deps` is the only lever that serializes same-file work. Rule: when one
+  `.test.ts` is too big for a ≤500-LOC PR, register sub-stories where each `deps`
+  on the previous (a chain), so only one is `ready` at a time. Remaining oversized
+  single-file targets that will need such a chain: `assoc-has-many-through`
+  (`has-many-through-associations.test.ts`, 8213 lines / 169 tests / 2 defineSchema
+  across 3 describes — split by describe: main / composite-PK-through / through-scope),
+  `assoc-belongs-to` (`belongs-to-associations.test.ts`, 3807 lines / 6 defineSchema),
+  and the `assoc-autosave` → `autosave-association-canonical-conversion` pair
+  (`autosave-association.test.ts`, 4956 lines / 7 defineSchema — already chained).
+  Same-file collisions across all open stories (including cross-RFC 0023/0030/0033/0043
+  deviation stories that edit a file still under 0019 conversion) were serialized
+  via `deps` on the owning 0019 canonical-conversion story (converge-canonical-first).
+  Filled the last exclude-list coverage gap with `counter-cache-trails-canonical`
+  (`counter-cache.trails.test.ts` was the only excluded file with no open story).
