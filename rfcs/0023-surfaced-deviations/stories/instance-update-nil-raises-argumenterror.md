@@ -1,10 +1,11 @@
 ---
 title: "instance #update(nil) should raise ArgumentError not TypeError"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-26
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - persistence-test-canonical-wave15
 deps-rfc: []
 est-loc: 30
 priority: null
