@@ -1,6 +1,6 @@
 ---
 title: "validations_test.rb (validations.test.ts) → canonical Topic/Person + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 54
-pr: null
+pr: 4195
 claim: "2026-06-26T13:58:35Z"
 assignee: "validations-core"
 blocked-by: null
