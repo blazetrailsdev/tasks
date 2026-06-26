@@ -1,7 +1,7 @@
 ---
 title: "eager.test.ts → canonical: inheritance/STI cluster"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 42
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T11:01:49Z"
+assignee: "assoc-eager-split-canonical-inheritance"
 blocked-by: null
 ---
 
