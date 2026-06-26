@@ -1,18 +1,20 @@
 ---
 title: "Converge bespoke HABTM-join scratch tables to file-unique names"
 status: done
-updated: 2026-06-26
+updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 200
 priority: 24
-pr: 4167
-claim: "2026-06-26T00:51:59Z"
-assignee: "habtm-join-table-convergence"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — approach rejected.** Same flawed premise: rename bespoke HABTM join tables file-unique + keep `defineSchema`. The fidelity fix is to ride the canonical join tables (delete `defineSchema`) in the per-file conversions, or delete bespoke no-Rails tests (RFC 0043) — not invent file-unique join names.
 
 ## Context
 

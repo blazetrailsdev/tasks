@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke posts scratch tables to file-unique names"
-status: ready
+status: done
 updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -13,6 +13,8 @@ claim: null
 assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — approach rejected.** Same flawed premise as `items-table-convergence`: rename divergent `posts` definitions file-unique + keep `defineSchema`. `posts` is canonical (schema.rb). The collision is resolved by the per-file `*-test-canonical` conversions (which delete `defineSchema` and ride canonical `posts`) + RFC 0043 bespoke-test deletion. No file-unique renames.
 
 ## Context
 

@@ -1,18 +1,20 @@
 ---
 title: "Converge bespoke items scratch tables to file-unique names"
-status: in-progress
-updated: 2026-06-26
+status: done
+updated: 2026-06-25
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 200
 priority: 25
-pr: 4168
-claim: "2026-06-26T01:06:58Z"
-assignee: "items-table-convergence"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 ---
+
+> **CLOSED 2026-06-25 — approach rejected.** This story prescribed renaming column-incompatible `items` definitions to file-unique names (`<prefix>_items`) while keeping `defineSchema`. That entrenches the divergent path and invents non-canonical tables (`items` IS a canonical schema.rb table, used via `fixtures :items`) — counter to fidelity-first and the `*-test-canonical` stories, which DELETE `defineSchema` and ride canonical `TEST_SCHEMA` + fixtures. The `items` collision is properly resolved by those per-file canonical conversions plus RFC 0043 (deleting bespoke no-Rails tests). PR #4168 (the rename PR) is closed unmerged.
 
 ## Context
 
