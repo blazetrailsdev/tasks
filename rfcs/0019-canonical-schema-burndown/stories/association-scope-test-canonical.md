@@ -1,6 +1,6 @@
 ---
 title: "association-scope.test.ts → canonical (rewrite resolver edge cases onto canonical STI/polymorphic tables)"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
