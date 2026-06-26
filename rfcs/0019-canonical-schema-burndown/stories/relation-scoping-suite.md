@@ -1,7 +1,7 @@
 ---
 title: "relation-scoping/ → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 64
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-26T17:42:57Z"
+assignee: "relation-scoping-suite"
 blocked-by: null
 ---
 
