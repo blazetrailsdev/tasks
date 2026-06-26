@@ -1,6 +1,6 @@
 ---
 title: "relation/or.test.ts → canonical schema + or_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 250
 priority: 36
-pr: null
+pr: 4178
 claim: "2026-06-26T04:13:46Z"
 assignee: "relation-or"
 blocked-by: null
