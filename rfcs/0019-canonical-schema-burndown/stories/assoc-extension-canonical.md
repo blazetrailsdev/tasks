@@ -1,6 +1,6 @@
 ---
 title: "extension.test.ts → canonical schema (posts-collision)"
-status: in-progress
+status: done
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
