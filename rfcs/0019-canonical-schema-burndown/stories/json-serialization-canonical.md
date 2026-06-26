@@ -1,6 +1,6 @@
 ---
 title: "json_serialization_test.rb → canonical models + fixtures"
-status: claimed
+status: in-progress
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 48
-pr: null
+pr: 4188
 claim: "2026-06-26T12:41:40Z"
 assignee: "json-serialization-canonical"
 blocked-by: null
