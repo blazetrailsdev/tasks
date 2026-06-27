@@ -1,7 +1,7 @@
 ---
 title: "timestamp.test.ts → timestamp_test.rb canonical schema port"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 77
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T15:28:19Z"
+assignee: "timestamp-test-cluster"
 blocked-by: null
 ---
 
