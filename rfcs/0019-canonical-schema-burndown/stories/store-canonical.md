@@ -1,14 +1,14 @@
 ---
 title: "store_test.rb → canonical Admin::User + fixtures"
-status: claimed
-updated: 2026-06-26
+status: done
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 400
 priority: 66
-pr: null
+pr: 4205
 claim: "2026-06-26T18:42:58Z"
 assignee: "store-canonical"
 blocked-by: null
