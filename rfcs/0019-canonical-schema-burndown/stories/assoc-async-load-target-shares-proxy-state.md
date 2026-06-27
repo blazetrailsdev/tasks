@@ -1,7 +1,7 @@
 ---
 title: "asyncLoadTarget should leave dotted collection proxy loaded"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 87
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T18:46:32Z"
+assignee: "assoc-async-load-target-shares-proxy-state"
 blocked-by: null
 ---
 
