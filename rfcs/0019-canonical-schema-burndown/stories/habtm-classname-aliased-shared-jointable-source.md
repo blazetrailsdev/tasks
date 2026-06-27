@@ -1,7 +1,7 @@
 ---
 title: "habtm-classname-aliased-shared-jointable-source"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 93
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T19:46:35Z"
+assignee: "habtm-classname-aliased-shared-jointable-source"
 blocked-by: null
 ---
 
