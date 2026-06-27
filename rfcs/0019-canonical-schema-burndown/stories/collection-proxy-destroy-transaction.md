@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#destroy: wrap batch in transaction (Rails delete_or_destroy parity)"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 89
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T19:06:33Z"
+assignee: "collection-proxy-destroy-transaction"
 blocked-by: null
 ---
 
