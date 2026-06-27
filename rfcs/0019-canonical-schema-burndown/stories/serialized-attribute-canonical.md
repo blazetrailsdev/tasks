@@ -1,14 +1,14 @@
 ---
 title: "serialized_attribute_test.rb → canonical models + fixtures"
-status: claimed
-updated: 2026-06-26
+status: done
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 400
 priority: 65
-pr: null
+pr: 4204
 claim: "2026-06-26T18:13:08Z"
 assignee: "serialized-attribute-canonical"
 blocked-by: null
