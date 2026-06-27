@@ -1,7 +1,7 @@
 ---
 title: "Port has-many-through-associations.test.ts to canonical schema (split per-describe)"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 71
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T12:58:18Z"
+assignee: "assoc-has-many-through"
 blocked-by: null
 ---
 
