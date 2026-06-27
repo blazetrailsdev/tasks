@@ -1,7 +1,7 @@
 ---
 title: "Converge has-many-associations.test.ts UNIVERSAL + tail bespoke schemas → drop exclude entry"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 84
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T17:46:35Z"
+assignee: "assoc-has-many-residual-schemas-universal"
 blocked-by: null
 ---
 
