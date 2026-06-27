@@ -1,6 +1,6 @@
 ---
 title: "counter-cache.trails.test.ts → canonical schema + Rails fixtures"
-status: claimed
+status: done
 updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 78
-pr: null
+pr: 4213
 claim: "2026-06-27T15:58:18Z"
 assignee: "counter-cache-trails-canonical"
 blocked-by: null
