@@ -1,7 +1,7 @@
 ---
 title: "through / nested-through associations → canonical schema + Rails fixtures"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["associations-collection-cluster"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 72
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T13:28:20Z"
+assignee: "associations-through-nested-cluster"
 blocked-by: null
 ---
 
