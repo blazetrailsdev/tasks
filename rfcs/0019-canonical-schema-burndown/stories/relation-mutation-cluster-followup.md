@@ -1,14 +1,14 @@
 ---
 title: "relation/ mutation cluster (cont.) → canonical schema + Rails fixtures"
-status: claimed
-updated: 2026-06-26
+status: done
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 400
 priority: 63
-pr: null
+pr: 4202
 claim: "2026-06-26T17:13:01Z"
 assignee: "relation-mutation-cluster-followup"
 blocked-by: null
