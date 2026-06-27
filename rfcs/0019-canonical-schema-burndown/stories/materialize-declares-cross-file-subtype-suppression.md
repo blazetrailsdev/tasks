@@ -1,7 +1,7 @@
 ---
 title: "Materialize declares: resolve cross-file subtype narrowing (classExtends in-file-only limitation)"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-27
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: 85
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-27T18:06:35Z"
+assignee: "materialize-declares-cross-file-subtype-suppression"
 blocked-by: null
 ---
 
