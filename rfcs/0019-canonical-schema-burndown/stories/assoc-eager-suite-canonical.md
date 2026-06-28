@@ -1,6 +1,6 @@
 ---
 title: "associations/eager.test.ts → canonical schema + eager_test.rb (multi-wave)"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: null
+pr: 4235
 claim: "2026-06-28T17:06:34Z"
 assignee: "assoc-eager-suite-canonical"
 blocked-by: null
