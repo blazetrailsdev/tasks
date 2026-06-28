@@ -1,13 +1,13 @@
 ---
 title: "persistence-test-canonical-wave16"
 status: ready
-updated: 2026-06-27
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
