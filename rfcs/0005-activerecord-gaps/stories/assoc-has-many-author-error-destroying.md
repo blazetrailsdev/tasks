@@ -1,6 +1,6 @@
 ---
 title: "assoc-has-many-author-error-destroying"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4237
 claim: "2026-06-28T20:32:06Z"
 assignee: "assoc-has-many-author-error-destroying"
 blocked-by: null
