@@ -1,6 +1,6 @@
 ---
 title: "associations.test.ts → canonical schema + associations_test.rb (multi-wave)"
-status: ready
+status: claimed
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T18:06:34Z"
+assignee: "assoc-associations-suite-canonical"
 blocked-by: null
 ---
 
