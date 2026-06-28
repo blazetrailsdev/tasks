@@ -2,7 +2,7 @@
 title: "save-callback-halt-propagation-on-inner-abort"
 status: ready
 updated: 2026-06-26
-rfc: "0019-canonical-schema-burndown"
+rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
   - persistence-test-canonical-wave15

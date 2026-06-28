@@ -2,7 +2,7 @@
 title: "Add pk_autopopulated_by_a_trigger_records to canonical adapter-specific schema and port persistence test"
 status: ready
 updated: 2026-06-27
-rfc: "0019-canonical-schema-burndown"
+rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []

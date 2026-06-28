@@ -2,7 +2,7 @@
 title: "sqlite-pk-not-null-ddl"
 status: ready
 updated: 2026-06-26
-rfc: "0019-canonical-schema-burndown"
+rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "assoc-has-many-counter-cache-clear"
 status: ready
 updated: 2026-06-27
-rfc: "0019-canonical-schema-burndown"
+rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []

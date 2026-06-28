@@ -2,7 +2,7 @@
 title: "hwia-symbol-key-normalization"
 status: ready
 updated: 2026-06-26
-rfc: "0019-canonical-schema-burndown"
+rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
