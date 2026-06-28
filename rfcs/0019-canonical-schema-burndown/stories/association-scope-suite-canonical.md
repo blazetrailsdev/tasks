@@ -1,6 +1,6 @@
 ---
 title: "associations/association-scope.test.ts → canonical schema + association_scope_test.rb"
-status: ready
+status: claimed
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T17:26:33Z"
+assignee: "association-scope-suite-canonical"
 blocked-by: null
 ---
 
