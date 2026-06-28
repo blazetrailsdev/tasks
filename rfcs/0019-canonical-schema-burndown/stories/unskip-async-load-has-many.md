@@ -1,6 +1,6 @@
 ---
 title: "Unskip AsyncHasManyAssociationsTest async-load-has-many test"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: 88
-pr: null
+pr: 4223
 claim: "2026-06-28T11:33:04Z"
 assignee: "unskip-async-load-has-many"
 blocked-by: null
