@@ -1,14 +1,14 @@
 ---
 title: "calculations.test.ts → canonical schema + Rails fixtures (per-describe series)"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence", "calculations-extra-burndown"]
 deps-rfc: []
 est-loc: 500
 priority: 74
-pr: null
+pr: 4211
 claim: "2026-06-27T13:58:20Z"
 assignee: "calculations-test-canonical"
 blocked-by: null
