@@ -1,6 +1,6 @@
 ---
 title: "assoc-eager-suite-canonical-wave-d"
-status: claimed
+status: in-progress
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4249
 claim: "2026-06-28T21:57:35Z"
 assignee: "assoc-eager-suite-canonical-wave-d"
 blocked-by: null
