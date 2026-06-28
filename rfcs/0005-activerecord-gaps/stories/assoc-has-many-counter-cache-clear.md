@@ -1,6 +1,6 @@
 ---
 title: "assoc-has-many-counter-cache-clear"
-status: claimed
+status: in-progress
 updated: 2026-06-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4245
 claim: "2026-06-28T20:56:52Z"
 assignee: "assoc-has-many-counter-cache-clear"
 blocked-by: null
