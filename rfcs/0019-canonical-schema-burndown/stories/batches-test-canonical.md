@@ -1,14 +1,14 @@
 ---
 title: "batches.test.ts -> batches_test.rb canonical port"
-status: claimed
-updated: 2026-06-26
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 400
 priority: 60
-pr: null
+pr: 4201
 claim: "2026-06-26T16:42:58Z"
 assignee: "batches-test-canonical"
 blocked-by: null
