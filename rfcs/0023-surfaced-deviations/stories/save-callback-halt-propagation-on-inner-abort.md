@@ -1,6 +1,6 @@
 ---
 title: "save-callback-halt-propagation-on-inner-abort"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 80
-pr: null
+pr: 4187
 claim: "2026-06-28T18:46:32Z"
 assignee: "save-callback-halt-propagation-on-inner-abort"
 blocked-by: null
