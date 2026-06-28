@@ -1,6 +1,6 @@
 ---
 title: "sqlite-pk-not-null-ddl"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 95
-pr: null
+pr: 4241
 claim: "2026-06-28T19:26:34Z"
 assignee: "sqlite-pk-not-null-ddl"
 blocked-by: null
