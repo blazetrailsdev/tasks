@@ -1,14 +1,14 @@
 ---
 title: "Materialize declares: remaining 6 models behind generator gaps A-D"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 300
 priority: 86
-pr: null
+pr: 4222
 claim: "2026-06-27T18:26:33Z"
 assignee: "materialize-declares-rollout-final-six"
 blocked-by: null
