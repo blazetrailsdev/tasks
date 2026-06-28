@@ -1,6 +1,6 @@
 ---
 title: "timestamp.test.ts → canonical models + timestamp_test.rb"
-status: ready
+status: claimed
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T17:46:36Z"
+assignee: "timestamp-suite-canonical"
 blocked-by: null
 ---
 
