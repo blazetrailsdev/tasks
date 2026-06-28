@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
-deps: []
+deps:
+  - assoc-eager-suite-canonical-wave-c
 deps-rfc: []
 est-loc: null
 priority: null
