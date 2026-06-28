@@ -1,6 +1,6 @@
 ---
 title: "Convert autosave-association.test.ts to canonical TEST_SCHEMA + official models"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 73
-pr: null
+pr: 4231
 claim: "2026-06-28T11:32:50Z"
 assignee: "autosave-association-canonical-conversion"
 blocked-by: null
