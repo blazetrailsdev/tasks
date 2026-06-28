@@ -1,14 +1,14 @@
 ---
 title: "post-first-comment-reader-returns-body"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 94
-pr: null
+pr: 4228
 claim: "2026-06-27T20:06:34Z"
 assignee: "post-first-comment-reader-returns-body"
 blocked-by: null
