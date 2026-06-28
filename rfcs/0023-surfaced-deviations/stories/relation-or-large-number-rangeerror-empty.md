@@ -1,7 +1,7 @@
 ---
 title: "relation-or-large-number-rangeerror-empty"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-28
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 92
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T19:06:33Z"
+assignee: "relation-or-large-number-rangeerror-empty"
 blocked-by: null
 ---
 
