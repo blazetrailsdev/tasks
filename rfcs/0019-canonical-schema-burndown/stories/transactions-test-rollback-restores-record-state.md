@@ -1,7 +1,7 @@
 ---
 title: "transactions-test-rollback-restores-record-state"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 81
-pr: null
+pr: 4218
 claim: "2026-06-27T16:46:34Z"
 assignee: "transactions-test-rollback-restores-record-state"
 blocked-by: null
