@@ -1,14 +1,14 @@
 ---
 title: "Unskip has-many transaction-when-deleting-persisted test"
 status: ready
-updated: 2026-06-26
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps:
   - collection-proxy-destroy-transaction
 deps-rfc: []
 est-loc: 10
-priority: 90
+priority: 3
 pr: null
 claim: null
 assignee: null
