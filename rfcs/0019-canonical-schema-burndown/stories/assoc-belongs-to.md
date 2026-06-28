@@ -1,14 +1,14 @@
 ---
 title: "Port belongs-to-associations.test.ts to canonical schema"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 70
-pr: null
+pr: 4209
 claim: "2026-06-27T12:28:20Z"
 assignee: "assoc-belongs-to"
 blocked-by: null
