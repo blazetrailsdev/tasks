@@ -1,14 +1,14 @@
 ---
 title: "Converge multiparameter-attributes.test.ts onto canonical Topic + strip as-any casts"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
 priority: 83
-pr: null
+pr: 4219
 claim: "2026-06-27T17:26:35Z"
 assignee: "multiparameter-attributes-canonical-strip-asany"
 blocked-by: null
