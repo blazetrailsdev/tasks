@@ -1,14 +1,14 @@
 ---
 title: "named-scoping/ → canonical schema + Rails fixtures"
 status: ready
-updated: 2026-06-26
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps:
   - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: 400
-priority: 62
+priority: 2
 pr: null
 claim: null
 assignee: null
