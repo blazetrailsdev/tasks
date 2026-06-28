@@ -1,6 +1,6 @@
 ---
 title: "convert remaining bespoke Eager*/Ej*/Sg* patterns in eager.test.ts to canonical (wave C+)"
-status: claimed
+status: in-progress
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 4248
 claim: "2026-06-28T21:26:51Z"
 assignee: "assoc-eager-suite-canonical-wave-c"
 blocked-by: null
