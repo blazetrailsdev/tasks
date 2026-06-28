@@ -1,14 +1,14 @@
 ---
 title: "inheritance / inherited / modules / reflection → canonical (followup: still excluded after #3112)"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence", "reflection-extra-burndown"]
 deps-rfc: []
 est-loc: 500
 priority: 75
-pr: null
+pr: 4212
 claim: "2026-06-27T14:28:19Z"
 assignee: "inheritance-modules-reflection-followup-6d2d"
 blocked-by: null
