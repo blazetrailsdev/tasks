@@ -1,7 +1,7 @@
 ---
 title: "Convert autosave-association.test.ts to canonical TEST_SCHEMA + official models"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: 73
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T11:32:50Z"
+assignee: "autosave-association-canonical-conversion"
 blocked-by: null
 ---
 
