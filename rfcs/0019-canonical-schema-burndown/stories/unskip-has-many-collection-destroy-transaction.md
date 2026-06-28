@@ -1,6 +1,6 @@
 ---
 title: "Unskip has-many transaction-when-deleting-persisted test"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: 3
-pr: null
+pr: 4225
 claim: "2026-06-28T16:41:57Z"
 assignee: "unskip-has-many-collection-destroy-transaction"
 blocked-by: null
