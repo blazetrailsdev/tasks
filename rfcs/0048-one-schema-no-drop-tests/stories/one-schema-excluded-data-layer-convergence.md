@@ -2,10 +2,10 @@
 title: "Converge one-schema-excluded data-layer files to canonical"
 status: ready
 updated: 2026-06-28
-rfc: "0019-canonical-schema-burndown"
+rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 500
 priority: null
 pr: null

@@ -2,10 +2,10 @@
 title: "Fix maria date/multiparameter reflection under one-schema warm cache"
 status: ready
 updated: 2026-06-28
-rfc: "0023-surfaced-deviations"
+rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 120
 priority: null
 pr: null
