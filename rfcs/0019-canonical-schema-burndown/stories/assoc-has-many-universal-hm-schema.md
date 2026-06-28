@@ -1,6 +1,6 @@
 ---
 title: "assoc-has-many-universal-hm-schema"
-status: claimed
+status: done
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 4237
 claim: "2026-06-28T16:46:36Z"
 assignee: "assoc-has-many-universal-hm-schema"
 blocked-by: null
