@@ -1,5 +1,5 @@
 ---
-rfc: "0000-one-schema-no-drop-tests"
+rfc: "0048-one-schema-no-drop-tests"
 title: "One-schema no-drop AR test suite"
 status: draft
 created: 2026-06-28
