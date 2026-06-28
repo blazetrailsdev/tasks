@@ -1,14 +1,14 @@
 ---
 title: "disable-joins association family → canonical schema + Rails fixtures"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["associations-collection-cluster"]
 deps-rfc: []
 est-loc: 450
 priority: 68
-pr: null
+pr: 4208
 claim: "2026-06-27T11:54:50Z"
 assignee: "associations-disable-joins-cluster"
 blocked-by: null
