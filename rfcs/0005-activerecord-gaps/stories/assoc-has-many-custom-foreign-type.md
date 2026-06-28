@@ -1,7 +1,7 @@
 ---
 title: "assoc-has-many-custom-foreign-type"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-06-28
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-28T21:11:50Z"
+assignee: "assoc-has-many-custom-foreign-type"
 blocked-by: null
 ---
 
