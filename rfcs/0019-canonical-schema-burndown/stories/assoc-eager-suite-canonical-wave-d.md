@@ -1,6 +1,6 @@
 ---
 title: "assoc-eager-suite-canonical-wave-d"
-status: claimed
+status: blocked
 updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-06-28T21:41:52Z"
 assignee: "assoc-eager-suite-canonical-wave-d"
-blocked-by: null
+blocked-by: "Blocked on assoc-eager-suite-canonical-wave-c (PR #4248, OPEN): wave C converts the explicit-join/invalid-ref cluster and edits the same TEST_SCHEMA block in eager.test.ts. Wave D is the FINAL wave (deletes TEST_SCHEMA entirely + drops the eslint exclude entry), which can only be done correctly and conflict-free after wave C merges. Re-open when #4248 lands."
 ---
 
 ## Context
