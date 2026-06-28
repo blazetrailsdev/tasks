@@ -1,14 +1,14 @@
 ---
 title: "relations.test.ts -> relations_test.rb canonical port (split per-describe)"
-status: claimed
-updated: 2026-06-27
+status: done
+updated: 2026-06-28
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["shared-table-convergence", "relations-extra-burndown"]
 deps-rfc: []
 est-loc: 500
 priority: 76
-pr: null
+pr: 4215
 claim: "2026-06-27T14:58:21Z"
 assignee: "relations-test-canonical"
 blocked-by: null
