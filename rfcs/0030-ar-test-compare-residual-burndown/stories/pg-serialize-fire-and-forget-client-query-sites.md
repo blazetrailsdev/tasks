@@ -1,6 +1,6 @@
 ---
 title: "Serialize fire-and-forget client.query sites on pinned pg.Client"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T18:23:40Z"
+assignee: "pg-serialize-fire-and-forget-client-query-sites"
 blocked-by: null
 ---
 
