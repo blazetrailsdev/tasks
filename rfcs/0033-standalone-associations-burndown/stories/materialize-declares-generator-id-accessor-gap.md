@@ -1,6 +1,6 @@
 ---
 title: "Generator: stop emitting declare id that collides with Base#id accessor (TS2610)"
-status: claimed
+status: done
 updated: 2026-06-29
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
+pr: 4115
 claim: "2026-06-29T17:53:32Z"
 assignee: "materialize-declares-generator-id-accessor-gap"
 blocked-by: null
