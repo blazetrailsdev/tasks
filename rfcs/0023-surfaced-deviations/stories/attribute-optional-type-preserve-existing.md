@@ -1,7 +1,7 @@
 ---
 title: "attribute-optional-type-preserve-existing"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T11:34:14Z"
+assignee: "attribute-optional-type-preserve-existing"
 blocked-by: null
 ---
 
