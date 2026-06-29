@@ -1,6 +1,6 @@
 ---
 title: "excluding/without: materialize unloaded relation args to literal ids at load time (not a subquery)"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 4286
 claim: "2026-06-29T18:53:46Z"
 assignee: "excluding-unloaded-relation-arg-load-time-id-materialization"
 blocked-by: null
