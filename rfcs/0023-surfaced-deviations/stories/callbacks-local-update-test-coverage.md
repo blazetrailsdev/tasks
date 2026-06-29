@@ -1,7 +1,7 @@
 ---
 title: 'Add local it("update") in callbacks.test.ts mirroring Rails test_update'
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T13:34:13Z"
+assignee: "callbacks-local-update-test-coverage"
 blocked-by: null
 ---
 
