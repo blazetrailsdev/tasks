@@ -1,6 +1,6 @@
 ---
 title: "belongs_to: out-of-range FK value should return nil, not raise RangeError"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4267
 claim: "2026-06-29T12:34:10Z"
 assignee: "belongs-to-out-of-range-fk-returns-nil"
 blocked-by: null
