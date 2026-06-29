@@ -1,7 +1,7 @@
 ---
 title: "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures"
-status: blocked
-updated: 2026-06-22
+status: ready
+updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: ["associations-collection-cluster"]
@@ -11,7 +11,7 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "Two core AR gaps must land first (per memory hmt_disable_joins_fixture_parity_blocked): (1) updateCounters must honor counter_cache + alias_attribute (comments_count → legacy_comments_count); (2) ThroughReflection.klass uses _delegate not sourceReflection, so disableJoins assocs (noJoinsComments → NoJoinsComment) fail registry lookup. Both are association-layer gaps — register/track them as framework-fix stories under 0005-activerecord-gaps (associations parity) before claiming."
+blocked-by: null
 ---
 
 ## Context
