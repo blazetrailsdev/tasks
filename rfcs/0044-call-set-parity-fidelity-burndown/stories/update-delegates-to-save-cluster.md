@@ -1,6 +1,6 @@
 ---
 title: "Classify+resolve update→save/update delegation call-set flags"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: equivalent-restructure
