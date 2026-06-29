@@ -1,6 +1,6 @@
 ---
 title: "belongs_to: out-of-range FK value should return nil, not raise RangeError"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
