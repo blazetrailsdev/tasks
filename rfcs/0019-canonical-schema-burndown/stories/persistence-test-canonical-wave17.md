@@ -1,6 +1,6 @@
 ---
 title: "persistence.test.ts final wave → drop last 4 defineSchema + delist"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
