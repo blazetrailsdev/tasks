@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#length/#size should not re-query when association is loaded"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4274
 claim: "2026-06-29T14:10:12Z"
 assignee: "collection-proxy-length-size-no-requery-when-loaded"
 blocked-by: null
