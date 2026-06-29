@@ -1,7 +1,7 @@
 ---
 title: "collection-proxy-destroy-through-transaction"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-06-29
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T13:46:09Z"
+assignee: "collection-proxy-destroy-through-transaction"
 blocked-by: null
 ---
 
