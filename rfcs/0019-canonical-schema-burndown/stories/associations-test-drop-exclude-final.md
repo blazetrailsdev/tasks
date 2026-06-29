@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 50
 priority: 50
 pr: null
-claim: "2026-06-18T20:18:45Z"
-assignee: "associations-test-drop-exclude-final"
+claim: null
+assignee: null
 blocked-by: "Blocked on two unfinished prerequisites: associations-test-associationproxytest-canonical (AssociationProxyTest bespoke ap_* defineSchema block was converted in #3600 but REGRESSED back onto main by #3601's stale-base merge) and associations-test-preloadertest-canonical (PreloaderTest defineSchema still present, multi-wave conversion ongoing). OverridingAssociationsTest (#3601) and cpk-counter (#3607) prerequisites are done. associations.test.ts still on the canonical-schema exclude list."
 ---
 
