@@ -1,6 +1,6 @@
 ---
 title: "Audit transaction-wrapping call-set omissions"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T19:23:39Z"
+assignee: "transaction-wrapping-cluster"
 blocked-by: null
 ---
 
