@@ -1,6 +1,6 @@
 ---
 title: "Cancelling before-filter with a DB side effect rolls back transactionally"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4264
 claim: "2026-06-29T11:58:10Z"
 assignee: "before-filter-db-side-effect-cancellation"
 blocked-by: null
