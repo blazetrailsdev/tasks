@@ -50,16 +50,31 @@ infra/adapter exclusions + harness polish.
 
 ## Scope
 
-- Burn `eslint/one-schema-exclude.json` toward only the legitimately-permanent
-  infra/adapter-machinery exclusions (migration/schema-dumper/adapter tests).
-- Close the harness gaps surfaced by the spike: per-backend flag-off coverage
-  for adapter excluded files; the MariaDB date/multiparameter warm-cache
-  reflection bug.
-- Decide the end-state CI shape (keep `AR_ONE_SCHEMA=1` standard; trim or keep
-  the DDL-profile discovery scaffolding).
+- Converge the data-layer files that invent bespoke tables/columns on canonical
+  tables (RFC 0019 surface) — the 7 `converge-*` clusters.
+- Converge the Rails-style migration/schema/adapter DDL tests so they RIDE the
+  single schema (most are not permanent exclusions — see the convention below).
+- Close the harness gaps: per-backend flag-off coverage for adapter excluded
+  files; the MariaDB date/multiparameter warm-cache reflection bug.
+- Burn `eslint/one-schema-exclude.json` toward only the genuinely-permanent
+  exclusions (own-DB tests + the `test-helpers/*` schema/fixtures self-tests).
+
+## Convention: scratch tables use non-canonical names
+
+Tests that exercise `create_table`/`drop_table` (migration, schema-dumper,
+adapter DDL) DO ride the single schema, exactly as Rails' migration suites do —
+**provided their scratch tables use names absent from the canonical
+`TEST_SCHEMA`** (mirror Rails' `horses`/`testings`). A test must never
+create/alter/drop a canonical table: the per-test reset truncates but never
+restores shape, and `repairWorkerSchema` only restores it for the next file.
+The trails ports that fail under one-schema do so because they reused canonical
+names (`items`, `users`, `widgets`) as scratch — the fix is to rename them, not
+to exclude the file. Direct `createTable`/`dropTable` never trip the one-schema
+guard (only `defineSchema` does).
 
 ## Stories
 
-See the stories directory. Initial set migrated from the spike:
-one-schema-excluded-data-layer-convergence, one-schema-excluded-backend-coverage,
-one-schema-maria-date-multiparameter-reflection.
+See the stories directory: 7 data-layer `converge-*` clusters (deps-rfc 0019),
+5 DDL/adapter `converge-*-one-schema` clusters (independent of 0019),
+`one-schema-excluded-backend-coverage`, and
+`one-schema-maria-date-multiparameter-reflection`.
