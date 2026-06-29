@@ -35,4 +35,3 @@ data-layer test on canonical tables. Bespoke posts.subtitle and similar.
 
 - `packages/activerecord/src/finder.test.ts`
 - `packages/activerecord/src/enum.test.ts`
-- `packages/activerecord/src/relation/where.test.ts`

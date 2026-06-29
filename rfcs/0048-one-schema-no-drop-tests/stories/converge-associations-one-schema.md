@@ -34,8 +34,6 @@ data-layer test on canonical tables. Association suites are large — expect mul
 ### Files
 
 - `packages/activerecord/src/associations/eager-singularization.test.ts`
-- `packages/activerecord/src/associations/eager.test.ts`
 - `packages/activerecord/src/associations/has-and-belongs-to-many-associations.test.ts`
-- `packages/activerecord/src/associations/has-many-through-disable-joins-associations.test.ts`
 - `packages/activerecord/src/associations/has-one-through-associations.test.ts`
 - `packages/activerecord/src/associations/inner-join-association.test.ts`
