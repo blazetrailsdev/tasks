@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#first(n)/last(n)/take(n) should use bounded findNthWithLimit, not toArray+slice"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4256
 claim: "2026-06-29T10:22:12Z"
 assignee: "assoc-collection-first-n-bounded-finder"
 blocked-by: null
