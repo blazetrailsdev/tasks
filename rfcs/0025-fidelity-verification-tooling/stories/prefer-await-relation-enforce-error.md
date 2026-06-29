@@ -1,6 +1,6 @@
 ---
 title: "Flip prefer-await-relation to error and autofix all .toArray() sites"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: null
+pr: 4281
 claim: "2026-06-29T16:22:22Z"
 assignee: "prefer-await-relation-enforce-error"
 blocked-by: null
