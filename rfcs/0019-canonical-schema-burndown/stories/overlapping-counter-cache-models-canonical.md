@@ -1,6 +1,6 @@
 ---
 title: "Add overlapping-counter-cache canonical models and un-skip the blocked test"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
