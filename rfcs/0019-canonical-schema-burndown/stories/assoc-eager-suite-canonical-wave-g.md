@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining eager.test.ts bespoke clusters to canonical (wave G)"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T09:02:14Z"
+assignee: "assoc-eager-suite-canonical-wave-g"
 blocked-by: null
 ---
 
