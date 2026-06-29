@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining eager.test.ts bespoke clusters to canonical (wave G)"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
