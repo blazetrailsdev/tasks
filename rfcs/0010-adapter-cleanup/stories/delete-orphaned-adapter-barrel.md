@@ -35,6 +35,6 @@ pure mechanical deletion, kept as a separate non-overlapping PR from main.
 - [ ] `git grep -n 'adapter\.ts\|/adapter\.js' -- 'packages/*/src/*'` returns
       zero non-incidental hits (abstract-adapter.js etc. are fine).
 - [ ] `pnpm exec tsc -b packages/activerecord` AND `pnpm exec tsc -b
-  packages/trailties` at 0 errors.
+packages/trailties` at 0 errors.
 - [ ] Branch from main (PR #4295 must be merged first so the file is truly
       unreferenced); NOT stacked.
