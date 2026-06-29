@@ -1,6 +1,6 @@
 ---
 title: "Serialize fire-and-forget client.query sites on pinned pg.Client"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
