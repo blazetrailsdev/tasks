@@ -1,6 +1,6 @@
 ---
 title: "has-many-through disable-joins conversion (framework-blocked) → canonical schema + fixtures"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T14:52:03Z"
+assignee: "hmt-disable-joins-conversion"
 blocked-by: null
 ---
 
