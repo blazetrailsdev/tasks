@@ -1,6 +1,6 @@
 ---
 title: "Generate has_many <association>_ids collection reader (collection_singular_ids)"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
