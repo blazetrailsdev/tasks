@@ -2,7 +2,7 @@
 title: "Remove PG/MySQL test retry:2 once shared-DB flake class is provably gone"
 status: blocked
 updated: 2026-06-25
-rfc: "0019-canonical-schema-burndown"
+rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
 deps-rfc: []
