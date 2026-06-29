@@ -1,6 +1,6 @@
 ---
 title: "persistence.test.ts final wave → drop last 4 defineSchema + delist"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T10:10:13Z"
+assignee: "persistence-test-canonical-wave17"
 blocked-by: null
 ---
 
