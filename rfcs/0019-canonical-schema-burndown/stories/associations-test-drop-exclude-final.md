@@ -1,6 +1,6 @@
 ---
 title: "Drop associations.test.ts from canonical-schema exclude list"
-status: blocked
+status: ready
 updated: 2026-06-26
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -14,7 +14,7 @@ priority: 50
 pr: null
 claim: null
 assignee: null
-blocked-by: "Blocked on two unfinished prerequisites: associations-test-associationproxytest-canonical (AssociationProxyTest bespoke ap_* defineSchema block was converted in #3600 but REGRESSED back onto main by #3601's stale-base merge) and associations-test-preloadertest-canonical (PreloaderTest defineSchema still present, multi-wave conversion ongoing). OverridingAssociationsTest (#3601) and cpk-counter (#3607) prerequisites are done. associations.test.ts still on the canonical-schema exclude list."
+blocked-by: null
 ---
 
 ## Context
