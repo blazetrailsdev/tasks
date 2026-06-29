@@ -1,6 +1,6 @@
 ---
 title: "validates_*_of helpers delegate to validatesWith + accept multiple attrs"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
