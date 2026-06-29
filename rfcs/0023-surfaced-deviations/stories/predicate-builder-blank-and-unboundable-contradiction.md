@@ -36,13 +36,23 @@ faithful ports of `where_test.rb` are skipped pending these:
   `{}`/`nil`/`""` (returns all rows); trails routes `where([])` into the
   composite-key tuple form and raises ArgumentError. Skipped:
   `where with blank conditions`.
+- **Out-of-range integer query value → contradiction.** Rails treats
+  `9223372036854775808` (2^63, one past signed-bigint max) as un-boundable, so
+  `where(id: [3, 2^63])` matches only id 3. trails' `MysqlBigInteger` / PG integer
+  type raises `ActiveModelRangeError` when casting the out-of-range query bind
+  (passes on sqlite, which has no range enforcement — an adapter split). Same
+  `boundable?` mechanism as the un-castable-scalar case. Skipped (MariaDB/PG
+  failure surfaced in CI): `where with large number`, `to sql with large number`.
 
 ## Acceptance criteria
 
 - [ ] `PredicateBuilder` emits a `1=0` contradiction for an empty nested/associated
       hash (Rails `expand_from_hash` empty-hash branch).
 - [ ] An un-boundable type-cast query value builds a contradiction, not `IS NULL`.
+- [ ] An out-of-range integer query value (e.g. 2^63 for a bigint column) binds a
+      contradiction instead of raising `ActiveModelRangeError` (consistent across
+      sqlite / MariaDB / PG).
 - [ ] Top-level `where([])` is treated as blank (no-op), matching `{}`/`nil`/`""`.
-- [ ] Un-skip the four tests in `relation/where.test.ts` (remove the `it.skip`
-      markers and the SKIP comments referencing this story); they pass on all
+- [ ] Un-skip the six tests in `relation/where.test.ts` (remove the `it.skip`
+      markers and the BLOCKED comments referencing this story); they pass on all
       three adapters.
