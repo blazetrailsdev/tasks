@@ -1,6 +1,6 @@
 ---
 title: "PoolConfig#discardPoolBang should call pool.discard! not disconnect! (Rails parity)"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T19:53:40Z"
+assignee: "poolconfig-discard-pool-use-discard-not-disconnect"
 blocked-by: null
 ---
 
