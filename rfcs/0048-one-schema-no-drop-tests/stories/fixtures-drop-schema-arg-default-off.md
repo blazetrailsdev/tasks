@@ -5,7 +5,8 @@ updated: 2026-06-29
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc:
+  - 0019-canonical-schema-burndown
 est-loc: 300
 priority: null
 pr: null
@@ -45,7 +46,7 @@ exactly what 0019 retires. Hence the gate.
       own-DB cases survive, document them explicitly rather than keeping the arg
       broadly available.
 - [ ] A converged canonical file reads `setupFixtures(); fixtures({ authors,
-  posts, comments });` — no schema, no registerModel, no "handler".
+posts, comments });` — no schema, no registerModel, no "handler".
 - [ ] test:compare does not regress; no test names change.
 
 ## Notes
