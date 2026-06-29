@@ -1,7 +1,7 @@
 ---
 title: "Composite-PK distinct_relation_for_primary_key materialization (eager+limit cache_version/pluck)"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T14:34:11Z"
+assignee: "composite-pk-distinct-relation-materialization"
 blocked-by: null
 ---
 
