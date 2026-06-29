@@ -1,14 +1,14 @@
 ---
 title: "assoc-associations-suite-canonical-wave-b"
-status: claimed
-updated: 2026-06-28
+status: done
+updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4242
 claim: "2026-06-28T20:26:39Z"
 assignee: "assoc-associations-suite-canonical-wave-b"
 blocked-by: null
