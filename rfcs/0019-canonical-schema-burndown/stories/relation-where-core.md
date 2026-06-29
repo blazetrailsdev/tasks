@@ -1,6 +1,6 @@
 ---
 title: "relation/where.test.ts → canonical schema + where_test.rb/relations_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "where-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
+pr: 4277
 claim: "2026-06-29T14:42:54Z"
 assignee: "relation-where-core"
 blocked-by: null
