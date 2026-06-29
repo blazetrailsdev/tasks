@@ -1,6 +1,6 @@
 ---
 title: "Add assert_not_called_on_instance_of-equivalent helper; strengthen preload-avoids-reader test"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
