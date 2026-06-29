@@ -1,7 +1,7 @@
 ---
 title: "attribute-names-column-order"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T11:22:10Z"
+assignee: "attribute-names-column-order"
 blocked-by: null
 ---
 
