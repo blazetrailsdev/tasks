@@ -1,6 +1,6 @@
 ---
 title: "belongs_to: default: proc option not implemented"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4266
 claim: "2026-06-29T12:22:10Z"
 assignee: "belongs-to-default-option"
 blocked-by: null
