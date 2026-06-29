@@ -1,6 +1,6 @@
 ---
 title: "Flip prefer-await-relation to error and autofix all .toArray() sites"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
