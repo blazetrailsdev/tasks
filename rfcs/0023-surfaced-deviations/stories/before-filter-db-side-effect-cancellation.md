@@ -1,6 +1,6 @@
 ---
 title: "Cancelling before-filter with a DB side effect rolls back transactionally"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
