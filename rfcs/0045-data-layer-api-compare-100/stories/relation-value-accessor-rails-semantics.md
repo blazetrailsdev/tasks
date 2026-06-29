@@ -1,13 +1,13 @@
 ---
 title: "relation-value-accessor-rails-semantics"
 status: ready
-updated: 2026-06-24
+updated: 2026-06-29
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
