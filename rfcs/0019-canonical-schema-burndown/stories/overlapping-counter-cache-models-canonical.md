@@ -1,6 +1,6 @@
 ---
 title: "Add overlapping-counter-cache canonical models and un-skip the blocked test"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T16:45:39Z"
+assignee: "overlapping-counter-cache-models-canonical"
 blocked-by: null
 ---
 
