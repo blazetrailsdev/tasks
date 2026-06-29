@@ -1,6 +1,6 @@
 ---
 title: "belongs_to: AssociationTypeMismatch not raised on wrong-type assignment"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4271
 claim: "2026-06-29T13:22:11Z"
 assignee: "belongs-to-type-mismatch-validation"
 blocked-by: null
