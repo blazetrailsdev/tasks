@@ -1,7 +1,7 @@
 ---
 title: "Generate has_many <association>_ids collection reader (collection_singular_ids)"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T14:22:12Z"
+assignee: "collection-singular-ids-reader"
 blocked-by: null
 ---
 
