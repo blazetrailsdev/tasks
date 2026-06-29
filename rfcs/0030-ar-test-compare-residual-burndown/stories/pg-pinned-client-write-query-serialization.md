@@ -9,7 +9,7 @@ deps:
   - pg-pinned-client-query-serializer-mutex
 deps-rfc: []
 est-loc: null
-priority: 1
+priority: 0
 pr: null
 claim: null
 assignee: null
