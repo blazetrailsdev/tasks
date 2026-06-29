@@ -1,6 +1,6 @@
 ---
 title: "Query methods call checkIfMethodHasArgumentsBang (empty-arg guard + flatten/compact)"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
