@@ -1,6 +1,6 @@
 ---
 title: "Honor custom foreignType on polymorphic-through write/read paths"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0005-activerecord-gaps"
 cluster: null
