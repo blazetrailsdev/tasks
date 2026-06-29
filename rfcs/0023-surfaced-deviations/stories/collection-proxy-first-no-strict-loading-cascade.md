@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#first cascades strict loading via toArray() instead of running LIMIT 1 (Rails parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4273
 claim: "2026-06-29T13:58:13Z"
 assignee: "collection-proxy-first-no-strict-loading-cascade"
 blocked-by: null
