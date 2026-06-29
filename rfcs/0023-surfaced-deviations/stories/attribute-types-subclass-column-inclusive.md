@@ -1,6 +1,6 @@
 ---
 title: "attribute-types-subclass-column-inclusive"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4263
 claim: "2026-06-29T11:46:10Z"
 assignee: "attribute-types-subclass-column-inclusive"
 blocked-by: null
