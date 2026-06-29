@@ -1,6 +1,6 @@
 ---
 title: "repoint-adapter-barrel-imports-then-delete"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4295
 claim: "2026-06-29T22:59:12Z"
 assignee: "repoint-adapter-barrel-imports-then-delete"
 blocked-by: null
