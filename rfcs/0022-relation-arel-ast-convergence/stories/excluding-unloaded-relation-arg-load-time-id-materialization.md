@@ -1,6 +1,6 @@
 ---
 title: "excluding/without: materialize unloaded relation args to literal ids at load time (not a subquery)"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
