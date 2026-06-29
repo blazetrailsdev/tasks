@@ -1,6 +1,6 @@
 ---
 title: "relation-value-accessor-rails-semantics"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4293
 claim: "2026-06-29T20:54:30Z"
 assignee: "relation-value-accessor-rails-semantics"
 blocked-by: null
