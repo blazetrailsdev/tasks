@@ -1,6 +1,6 @@
 ---
 title: "Converge touch + pessimistic-locking call-set omissions"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T19:08:38Z"
+assignee: "touch-and-pessimistic-locking-cluster"
 blocked-by: null
 ---
 
