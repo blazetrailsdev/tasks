@@ -1,6 +1,6 @@
 ---
 title: "assoc-eager-preload-readonly-through-habtm-propagation"
-status: ready
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4253
 claim: null
 assignee: null
 blocked-by: null
