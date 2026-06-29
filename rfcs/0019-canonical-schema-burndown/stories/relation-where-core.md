@@ -1,6 +1,6 @@
 ---
 title: "relation/where.test.ts → canonical schema + where_test.rb/relations_test.rb"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
