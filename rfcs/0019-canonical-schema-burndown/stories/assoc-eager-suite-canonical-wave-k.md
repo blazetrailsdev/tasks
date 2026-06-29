@@ -4,7 +4,10 @@ status: ready
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
-deps: []
+deps:
+  - assoc-eager-suite-canonical-wave-h
+  - assoc-eager-suite-canonical-wave-i
+  - assoc-eager-suite-canonical-wave-j
 deps-rfc: []
 est-loc: null
 priority: null
