@@ -1,6 +1,6 @@
 ---
 title: "Classify+resolve update→save/update delegation call-set flags"
-status: ready
+status: claimed
 updated: 2026-06-29
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: equivalent-restructure
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T19:38:40Z"
+assignee: "update-delegates-to-save-cluster"
 blocked-by: null
 ---
 
