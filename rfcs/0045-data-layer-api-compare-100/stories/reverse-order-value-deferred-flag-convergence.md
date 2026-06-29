@@ -1,6 +1,6 @@
 ---
 title: "reverse-order-value-deferred-flag-convergence"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4294
 claim: "2026-06-29T22:59:25Z"
 assignee: "reverse-order-value-deferred-flag-convergence"
 blocked-by: null
