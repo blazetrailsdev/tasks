@@ -1,6 +1,6 @@
 ---
 title: "Honor custom foreignType on polymorphic-through write/read paths"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4257
 claim: "2026-06-29T10:46:13Z"
 assignee: "assoc-poly-through-custom-foreign-type"
 blocked-by: null
