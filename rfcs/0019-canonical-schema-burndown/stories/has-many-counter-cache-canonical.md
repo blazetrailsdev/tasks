@@ -1,6 +1,6 @@
 ---
 title: "un-skip counter-cache tests in has-many-associations.test.ts using canonical Topic/Reply"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: null
