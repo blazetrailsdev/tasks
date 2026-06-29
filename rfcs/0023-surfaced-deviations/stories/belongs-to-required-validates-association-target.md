@@ -1,6 +1,6 @@
 ---
 title: "belongs-to-required-validates-association-target"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4270
 claim: "2026-06-29T12:58:11Z"
 assignee: "belongs-to-required-validates-association-target"
 blocked-by: null
