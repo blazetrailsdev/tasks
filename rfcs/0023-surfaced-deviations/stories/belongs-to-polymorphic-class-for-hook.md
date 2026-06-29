@@ -1,6 +1,6 @@
 ---
 title: "belongs_to polymorphic: polymorphic_name / polymorphic_class_for hooks not implemented"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
