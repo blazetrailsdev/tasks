@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter: expand DB path + create parent dir (Rails initialize parity)"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
+pr: 4296
 claim: "2026-06-29T23:24:29Z"
 assignee: "sqlite-db-path-expansion-mkdir"
 blocked-by: null
