@@ -33,6 +33,8 @@ data-layer test on canonical tables. Bespoke topics.score and similar.
 
 ### Files
 
+- `packages/activerecord/src/persistence.test.ts` (declares bespoke composite-PK `chat_messages`; add to canonical or scratch)
+
 - `packages/activerecord/src/validations.test.ts`
 - `packages/activerecord/src/autosave.test.ts`
 - `packages/activerecord/src/nested-attributes.test.ts`
