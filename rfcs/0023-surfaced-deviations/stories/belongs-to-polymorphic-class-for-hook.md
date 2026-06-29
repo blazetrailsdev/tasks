@@ -1,6 +1,6 @@
 ---
 title: "belongs_to polymorphic: polymorphic_name / polymorphic_class_for hooks not implemented"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4268
 claim: "2026-06-29T12:46:10Z"
 assignee: "belongs-to-polymorphic-class-for-hook"
 blocked-by: null
