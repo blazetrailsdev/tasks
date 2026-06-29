@@ -1,6 +1,6 @@
 ---
 title: "relation-include-exists-fast-path"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4291
 claim: "2026-06-29T20:23:39Z"
 assignee: "relation-include-exists-fast-path"
 blocked-by: null
