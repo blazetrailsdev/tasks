@@ -1,6 +1,6 @@
 ---
 title: "validates_*_of helpers delegate to validatesWith + accept multiple attrs"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: real-omission
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: null
+pr: 4285
 claim: "2026-06-29T18:38:44Z"
 assignee: "validates-helpers-delegate-to-validates-with"
 blocked-by: null
