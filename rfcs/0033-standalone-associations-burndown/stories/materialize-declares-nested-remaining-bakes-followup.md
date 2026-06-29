@@ -1,6 +1,6 @@
 ---
 title: "Bake remaining nested-class declares (13 files, after id-accessor generator fix)"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: null
+pr: 4282
 claim: "2026-06-29T17:59:35Z"
 assignee: "materialize-declares-nested-remaining-bakes-followup"
 blocked-by: null
