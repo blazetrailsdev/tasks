@@ -1,6 +1,6 @@
 ---
 title: "belongs_to touch: afterTouch callbacks not called on in-memory parent instance"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
