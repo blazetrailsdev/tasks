@@ -1,13 +1,13 @@
 ---
 title: "Bake remaining nested-class declares (13 files, after id-accessor generator fix)"
 status: ready
-updated: 2026-06-25
+updated: 2026-06-29
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
