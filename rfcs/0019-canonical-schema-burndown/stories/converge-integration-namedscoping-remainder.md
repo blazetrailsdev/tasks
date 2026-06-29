@@ -1,6 +1,6 @@
 ---
 title: "Converge integration.test.ts cacheKey + named-scoping STI partial-decl models (warming remainder)"
-status: blocked
+status: ready
 updated: 2026-06-17
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 350
 priority: 1
 pr: null
-claim: "2026-06-17T22:02:59Z"
-assignee: "converge-integration-namedscoping-remainder"
-blocked-by: "Superseded/redundant umbrella. Created last (after the finer decomposition) and its deps:[] is wrong: the integration cacheKey portion is genuinely blocked by the unlanded core fix timestamp-alias-resolution-fidelity (verified: canonical Developer.first().cacheKey() == 'developers/1', no embedded timestamp, because timestampAttributesForUpdateInModel + maxUpdatedColumnTimestamp do not resolve aliasAttribute updated_at->legacy_updated_at, and fixtures therefore do not auto-populate). Real work proceeds via the three existing finer stories in dep order: timestamp-alias-resolution-fidelity -> converge-integration-test-canonical-developer, and converge-named-scoping-canonical. Abandoned per owner decision 2026-06-17."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
