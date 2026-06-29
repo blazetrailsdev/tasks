@@ -1,13 +1,13 @@
 ---
 title: "Thread the shared build_joins AliasTracker through the eager-SELECT / limited-ids paths"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-29
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
