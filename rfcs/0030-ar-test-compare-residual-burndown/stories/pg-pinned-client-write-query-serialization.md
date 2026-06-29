@@ -1,13 +1,13 @@
 ---
 title: "PG pinned-client write-path query serialization"
 status: ready
-updated: 2026-06-22
+updated: 2026-06-29
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
