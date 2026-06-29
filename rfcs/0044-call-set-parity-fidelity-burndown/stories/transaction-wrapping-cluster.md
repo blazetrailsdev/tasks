@@ -1,13 +1,13 @@
 ---
 title: "Audit transaction-wrapping call-set omissions"
 status: ready
-updated: 2026-06-23
+updated: 2026-06-29
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: real-omission
 deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
