@@ -1,7 +1,7 @@
 ---
 title: "Generator: stop emitting declare id that collides with Base#id accessor (TS2610)"
 status: ready
-updated: 2026-06-26
+updated: 2026-06-29
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
   - timestamp-test-cluster
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
