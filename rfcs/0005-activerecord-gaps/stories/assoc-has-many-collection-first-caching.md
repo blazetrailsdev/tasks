@@ -1,14 +1,14 @@
 ---
 title: "assoc-has-many-collection-first-caching"
-status: claimed
-updated: 2026-06-28
+status: done
+updated: 2026-06-29
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4243
 claim: "2026-06-28T20:41:51Z"
 assignee: "assoc-has-many-collection-first-caching"
 blocked-by: null
