@@ -1,6 +1,6 @@
 ---
 title: "relation-delegation-rails-named-methods"
-status: claimed
+status: in-progress
 updated: 2026-06-29
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4292
 claim: "2026-06-29T20:08:41Z"
 assignee: "relation-delegation-rails-named-methods"
 blocked-by: null
