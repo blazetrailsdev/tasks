@@ -4,7 +4,9 @@ status: ready
 updated: 2026-06-29
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
-deps: []
+deps:
+  - pg-serialize-fire-and-forget-client-query-sites
+  - pg-pinned-client-query-serializer-mutex
 deps-rfc: []
 est-loc: null
 priority: 1
