@@ -1,14 +1,14 @@
 ---
 title: "Converge integration.test.ts cacheKey + named-scoping STI partial-decl models (warming remainder)"
-status: ready
-updated: 2026-06-17
+status: done
+updated: 2026-06-29
 rfc: "0019-canonical-schema-burndown"
 cluster: fixtures
 deps: []
 deps-rfc: []
 est-loc: 350
 priority: 1
-pr: null
+pr: 0
 claim: null
 assignee: null
 blocked-by: null
