@@ -1,13 +1,13 @@
 ---
 title: "SQLite3Adapter: expand DB path + create parent dir (Rails initialize parity)"
 status: ready
-updated: 2026-06-24
+updated: 2026-06-29
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
