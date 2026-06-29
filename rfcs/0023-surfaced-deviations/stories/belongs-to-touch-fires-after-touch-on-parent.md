@@ -1,7 +1,7 @@
 ---
 title: "belongs_to touch: afterTouch callbacks not called on in-memory parent instance"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-29T13:10:11Z"
+assignee: "belongs-to-touch-fires-after-touch-on-parent"
 blocked-by: null
 ---
 
