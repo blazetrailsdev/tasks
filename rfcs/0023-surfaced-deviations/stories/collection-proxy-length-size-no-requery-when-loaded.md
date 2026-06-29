@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#length/#size should not re-query when association is loaded"
-status: in-progress
+status: done
 updated: 2026-06-29
 rfc: "0023-surfaced-deviations"
 cluster: null
