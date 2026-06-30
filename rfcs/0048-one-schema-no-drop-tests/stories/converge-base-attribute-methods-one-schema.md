@@ -14,6 +14,10 @@ assignee: null
 blocked-by: null
 ---
 
+> **SUPERSEDED (RFC 0048 re-spec, 2026-06-30).** Folded into `redo-core-attribute-methods-faithful-port`.
+> Do not work this story — it overlapped a parent cluster story and used the
+> shallow-rename framing. Kept as draft for history.
+
 ## Context
 
 Follow-up to `converge-core-attribute-methods-one-schema` (RFC 0048). That story's
