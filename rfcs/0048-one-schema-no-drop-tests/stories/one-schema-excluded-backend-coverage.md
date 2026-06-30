@@ -7,7 +7,6 @@ cluster: null
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 60
-priority: 14
 pr: null
 claim: "2026-06-30T14:50:39Z"
 assignee: "one-schema-excluded-backend-coverage"
