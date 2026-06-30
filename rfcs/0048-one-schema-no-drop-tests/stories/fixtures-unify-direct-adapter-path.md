@@ -1,61 +1,51 @@
 ---
-title: "Unify direct-adapter and handler fixture paths under fixtures()"
-status: draft
-updated: 2026-06-29
+title: "Converge the legacy direct-adapter fixture path onto fixtures()"
+status: ready
+updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
-cluster: null
-deps: []
+cluster: "rails-deviation"
+deps: [fixtures-additive-surface]
 deps-rfc: []
-est-loc: 500
-priority: null
+est-loc: 400
+priority: 4
 pr: null
 claim: null
 assignee: null
 blocked-by: null
 ---
 
-# Unify the direct-adapter and handler fixture paths under `fixtures`
+# Converge the legacy direct-adapter fixture path onto `fixtures()`
 
-Part 3 of 4 converging the AR fixtures helper to the Rails surface (RFC 0048
-capstone). **No 0019 gate.** **This is a path unification, NOT a mechanical
-rename** — `useFixtures` already exists as the legacy direct-adapter
-`defineSchema(getAdapter(), …)` path, which is exactly the path this RFC retires.
-The substantive work is collapsing two code paths into one and deleting the loser.
+Converges the second alternate surface — the legacy direct-adapter path — onto
+the Rails `fixtures()` added by `fixtures-additive-surface`. **This is a path
+deletion, not a rename**: the substantive change is removing the direct-adapter
+path, not changing names.
 
 ## Context
 
-Two parallel fixture-wiring styles exist:
+Two fixture-wiring styles exist. `fixtures-additive-surface` establishes
+`fixtures()` over the handler-resolved path (the correct one). The remaining
+alternate is the **legacy direct-adapter** path:
+`useFixtures(map, () => getAdapter(), { schema })` (test-helpers/use-fixtures.ts)
+— it stands tables up via `defineSchema(getAdapter(), …)` per file instead of
+going through the real connection pool. Only **6 files** still use it directly.
 
-- **Legacy direct-adapter**: `useFixtures(..., () => getAdapter(), { schema })`
-  (test-helpers/use-fixtures.ts) — stands up tables via `defineSchema(getAdapter(),
-…)` per file.
-- **Handler-resolved**: `useHandlerFixtures` + `setupHandlerSuite`
-  (test-helpers/setup-handler-suite.ts:6-11) — bootstraps `Base.connectionHandler`
-  and goes through the real connection-pool path. Its own docstring says it
-  "Mirrors Rails' setup_fixtures/teardown_fixtures."
-
-Rails uses "handler" ONLY for ConnectionAdapters::ConnectionHandler (pooling),
-never on the fixtures API. The "handler" qualifier here encodes trails-internal
-migration state (which connection path), not a Rails concept. Rails' surface is
-`fixtures :authors, :posts`.
+The `{ schema }` arg only exists to drive that per-file `defineSchema` slice
+(use-fixtures.ts:434-437); on canonical tables (already built into the template
+clone) it is redundant, and it is exactly the bespoke-era escape hatch this RFC
+retires. (Final default-off lives in `fixtures-drop-schema-arg-default-off`.)
 
 ## Acceptance criteria
 
-- [ ] The handler-resolved path becomes the single fixture path; the legacy
-      direct-adapter `useFixtures` path is DELETED (this is the substantive change,
-      not the rename).
-- [ ] Public surface renamed to the Rails target: the declaration helper is
-      `fixtures({ authors, posts })` (single committed name — not `useFixtures`);
-      `setupHandlerSuite` → `setupFixtures`. All call sites migrated.
-- [ ] "handler" retained ONLY where it mirrors Rails' ConnectionHandler
-      (Base.connectionHandler, base.ts:820, and pool code).
-- [ ] test:compare does not regress; no test names change.
+- [ ] The 6 legacy direct-adapter `useFixtures(..., () => getAdapter(), …)` call
+      sites migrated to `fixtures()` (handler-resolved path).
+- [ ] The direct-adapter `useFixtures` path / overload is DELETED — the single
+      fixture path is the handler-resolved one. (Retain a documented bespoke-table
+      escape hatch only if a non-canonical table genuinely needs it.)
+- [ ] `test:compare` does not regress; no test names change.
 
 ## Notes
 
-- Call this out in the PR as a real merge + deletion, not the mechanical-rename
-  exception. Sweep across all fixture-backed test files — will exceed 500 LOC, so
-  split into non-overlapping PRs from main (rename batches by directory), each
-  standing alone; do NOT stack.
-- Declaration name is committed: `fixtures({ ... })`, mirroring Rails'
-  `fixtures :authors`.
+- Call this out in each PR as a real merge + deletion, not the mechanical-rename
+  exception. Coordinate the old-export removal with
+  `fixtures-rename-handler-callsites` (both must hit zero call sites first).
