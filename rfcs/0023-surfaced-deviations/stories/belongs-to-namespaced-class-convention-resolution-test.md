@@ -1,6 +1,6 @@
 ---
 title: "Faithful namespaced-class belongs_to type-mismatch test via convention resolution"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4306
 claim: "2026-06-30T02:54:32Z"
 assignee: "belongs-to-namespaced-class-convention-resolution-test"
 blocked-by: null
