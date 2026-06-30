@@ -1,6 +1,6 @@
 ---
 title: "extractor-resolve-call-dispatch-and-import-aliases"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4299
 claim: "2026-06-30T00:54:31Z"
 assignee: "extractor-resolve-call-dispatch-and-import-aliases"
 blocked-by: null
