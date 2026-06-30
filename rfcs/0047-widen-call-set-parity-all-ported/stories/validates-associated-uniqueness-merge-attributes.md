@@ -1,6 +1,6 @@
 ---
 title: "validatesAssociated/validatesUniquenessOf delegate through _mergeAttributes + multi-attr"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: null
+pr: 4301
 claim: "2026-06-30T01:24:31Z"
 assignee: "validates-associated-uniqueness-merge-attributes"
 blocked-by: null
