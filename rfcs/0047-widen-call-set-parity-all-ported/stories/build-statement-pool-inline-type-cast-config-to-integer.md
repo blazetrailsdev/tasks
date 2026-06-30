@@ -1,6 +1,6 @@
 ---
 title: "Converge build_statement_pool to inline type_cast_config_to_integer (PG/MySQL/SQLite adapters)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4323
 claim: "2026-06-30T14:53:29Z"
 assignee: "build-statement-pool-inline-type-cast-config-to-integer"
 blocked-by: null
