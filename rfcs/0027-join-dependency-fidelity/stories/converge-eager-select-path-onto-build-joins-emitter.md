@@ -1,6 +1,6 @@
 ---
 title: "Converge the eager SELECT path onto the single build_joins emitter (one shared AliasTracker via stashed-join fold)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T15:32:37Z"
+assignee: "converge-eager-select-path-onto-build-joins-emitter"
 blocked-by: null
 ---
 
