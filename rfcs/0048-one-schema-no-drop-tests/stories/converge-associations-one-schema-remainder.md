@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining association tests to canonical (one-schema)"
-status: ready
+status: draft
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
