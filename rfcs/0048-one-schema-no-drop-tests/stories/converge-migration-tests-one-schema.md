@@ -1,6 +1,6 @@
 ---
 title: "Converge migration tests to ride one-schema (scratch tables)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: null
+pr: 4328
 claim: "2026-06-30T15:50:40Z"
 assignee: "converge-migration-tests-one-schema"
 blocked-by: null
