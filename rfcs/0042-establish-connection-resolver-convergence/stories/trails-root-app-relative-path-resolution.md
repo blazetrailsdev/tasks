@@ -2,7 +2,7 @@
 title: "Introduce Trails.root and resolve ActiveRecord DB/config paths against it (Rails.root parity)"
 status: ready
 updated: 2026-06-30
-rfc: "0010-adapter-cleanup"
+rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
 deps: []
 deps-rfc: []
@@ -67,6 +67,7 @@ This removes the cwd deviation and unifies DB-path + database.yml resolution.
 
 - No `node:*` imports, no `process.*` in activerecord/activesupport runtime paths
   (use the fs adapter's `cwd()`).
-- RFC placement is provisional (filed under 0010 as the sibling of
-  `sqlite-db-path-expansion-mkdir`); may be re-homed to a config/trailties-integration
-  RFC if one fits better.
+- Homed in RFC 0042 (single DatabaseConfig funnel): app-root path resolution is
+  part of the same config-resolution convergence — `config/database.*` loading in
+  `connection-handling.ts` is exactly the funnel 0042 owns. Surfaced from sibling
+  story `sqlite-db-path-expansion-mkdir` (RFC 0010, PR #4296).
