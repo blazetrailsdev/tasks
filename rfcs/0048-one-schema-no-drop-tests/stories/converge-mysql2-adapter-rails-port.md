@@ -1,6 +1,6 @@
 ---
 title: "converge-mysql2-adapter-rails-port"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4352
 claim: "2026-06-30T22:24:46Z"
 assignee: "converge-mysql2-adapter-rails-port"
 blocked-by: null
