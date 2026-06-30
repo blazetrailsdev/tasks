@@ -1,6 +1,6 @@
 ---
 title: "adapter-configure-connection-failure-propagation"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T21:24:46Z"
+assignee: "adapter-configure-connection-failure-propagation"
 blocked-by: null
 ---
 
