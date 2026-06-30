@@ -1,6 +1,6 @@
 ---
 title: "Introduce Trails.root and resolve ActiveRecord DB/config paths against it (Rails.root parity)"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
