@@ -1,6 +1,6 @@
 ---
 title: "Converge build_statement_pool to inline type_cast_config_to_integer (PG/MySQL/SQLite adapters)"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
