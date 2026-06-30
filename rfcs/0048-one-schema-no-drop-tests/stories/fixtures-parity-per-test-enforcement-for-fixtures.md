@@ -14,6 +14,12 @@ assignee: null
 blocked-by: null
 ---
 
+> **SUBSUMED by PR #4347** (close on its merge). #4346 already moved `fixtures`
+> into `ACCESSOR_HELPERS`; PR #4347 adds the generator-regex fix (`(?<!\.)`
+> lookbehind in `buildAccessorRe`) + regenerated map, dropping the
+> `.references(...)` false positives (incl. eager_test.rb:202/:1398) so per-test
+> enforcement holds without excluding `eager.test.ts`. Do NOT claim this.
+
 ## Context
 
 `fixtures()` (the unified Rails-faithful surface, test-helpers/fixtures.ts) is
