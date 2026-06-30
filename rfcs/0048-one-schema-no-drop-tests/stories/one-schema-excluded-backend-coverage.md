@@ -1,6 +1,6 @@
 ---
 title: "Cover PG/MySQL adapter excluded files flag-off on their native backend"
-status: claimed
+status: blocked
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -11,7 +11,7 @@ priority: 14
 pr: null
 claim: "2026-06-30T14:50:39Z"
 assignee: "one-schema-excluded-backend-coverage"
-blocked-by: null
+blocked-by: "Blocked on PR #4246 (AR_ONE_SCHEMA no-drop test mode) which is still OPEN/unmerged. This story modifies the ar-one-schema-excluded CI lane and eslint/one-schema-exclude.json, neither of which exists on main yet. Per CLAUDE.md no-stacked-PRs rule, cannot build until #4246 merges."
 ---
 
 ## Context
