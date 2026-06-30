@@ -1,6 +1,6 @@
 ---
 title: "converge-migrator-one-schema"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4351
 claim: "2026-06-30T21:54:53Z"
 assignee: "converge-migrator-one-schema"
 blocked-by: null
