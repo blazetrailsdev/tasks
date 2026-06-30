@@ -1,6 +1,6 @@
 ---
 title: "Converge the eager SELECT path onto the single build_joins emitter (one shared AliasTracker via stashed-join fold)"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0027-join-dependency-fidelity"
 cluster: null
