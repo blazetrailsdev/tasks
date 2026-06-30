@@ -1,6 +1,6 @@
 ---
 title: "validatesAssociated/validatesUniquenessOf delegate through _mergeAttributes + multi-attr"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
