@@ -1,6 +1,6 @@
 ---
 title: "Converge migration tests to ride one-schema (scratch tables)"
-status: blocked
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 500
 priority: 1
 pr: null
-claim: "2026-06-30T11:34:26Z"
-assignee: "converge-migration-tests-one-schema"
-blocked-by: "Blocked on RFC 0048 infra spike PR #4246 (AR_ONE_SCHEMA mode + eslint/one-schema-exclude.json) which is still OPEN/unmerged on main. The one-schema flag, OneSchemaViolation matcher, and exclude list do not exist on main, so scratch-table convergence cannot be validated under AR_ONE_SCHEMA=1 nor removed from the (nonexistent) exclude file. Unblock once #4246 merges."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
