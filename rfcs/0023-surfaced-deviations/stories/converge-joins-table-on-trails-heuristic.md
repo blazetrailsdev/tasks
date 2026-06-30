@@ -1,6 +1,6 @@
 ---
 title: "Converge joins(table, on) trails-only two-string heuristic to Rails type-based dispatch"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
