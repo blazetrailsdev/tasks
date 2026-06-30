@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-connection-test-one-schema"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4350
 claim: "2026-06-30T20:35:56Z"
 assignee: "converge-adapter-connection-test-one-schema"
 blocked-by: null
