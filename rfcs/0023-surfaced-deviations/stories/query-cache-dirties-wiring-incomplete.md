@@ -36,12 +36,19 @@ RFC 0048) surfaced that trails' `dirties_query_cache` wiring diverges from Rails
    probes are not served from the query cache. Rails routes them through
    `select_rows → select_all` (cached) and also clears the cache on any public
    `execute`/`exec_query`.
+4. **`cache_notification_info` is not overridable per connection.** trails
+   builds the cached-hit notification payload from a module-level
+   `cacheNotificationInfo` invoked via `cacheNotificationInfoResult.call(this)`
+   (`connection-adapters/abstract/query-cache.ts`), not an instance method, so
+   Rails' `def connection.cache_notification_info; super.merge(neat: true); end`
+   per-connection override has no effect.
 
 These were left **tracked-pending-convergence** (skipped) in
 `packages/activerecord/src/query-cache.test.ts` rather than bending the tests:
 
 - QueryCacheTest: `execute clear cache`, `exec query clear cache`,
-  `exists queries with cache`, `query cache doesnt leak cached results of rolled back queries`
+  `exists queries with cache`, `cache notifications can be overridden`,
+  `query cache doesnt leak cached results of rolled back queries`
 - QueryCacheExpiryTest: `update`, `destroy`, `insert`, `insert all`,
   `insert all bang`, `upsert all`, `cache is expired by habtm update`,
   `cache is expired by habtm delete`
@@ -56,4 +63,6 @@ These were left **tracked-pending-convergence** (skipped) in
       rollbacks dirty the cache.
 - [ ] Route `Relation#exists` through the cached read path so repeated probes
       hit the query cache.
+- [ ] Dispatch the cached-hit notification payload through an overridable
+      per-connection `cacheNotificationInfo` method.
 - [ ] Un-skip the tracked cases listed above in `query-cache.test.ts`.
