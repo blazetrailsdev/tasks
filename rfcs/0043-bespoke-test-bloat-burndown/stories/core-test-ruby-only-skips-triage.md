@@ -1,6 +1,6 @@
 ---
 title: "Triage 11 Ruby-only CoreTest skips: delete-as-bloat vs keep"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T15:39:39Z"
+assignee: "core-test-ruby-only-skips-triage"
 blocked-by: null
 ---
 
