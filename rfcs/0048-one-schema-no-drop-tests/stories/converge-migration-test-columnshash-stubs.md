@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining columnsHash() stub cases in migration.test.ts to faithful Rails ports"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T22:54:48Z"
+assignee: "converge-migration-test-columnshash-stubs"
 blocked-by: null
 ---
 
