@@ -1,6 +1,6 @@
 ---
 title: "Converge finder/enum/relation-where to canonical (one-schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 350
 priority: 8
-pr: null
+pr: 4318
 claim: "2026-06-30T12:50:40Z"
 assignee: "converge-finder-enum-relation-one-schema"
 blocked-by: null
