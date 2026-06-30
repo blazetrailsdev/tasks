@@ -1,9 +1,9 @@
 ---
 rfc: "0048-one-schema-no-drop-tests"
 title: "One-schema no-drop AR test suite"
-status: draft
+status: active
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-06-30
 owner: "@deanmarano"
 packages:
   - "activerecord"
