@@ -1,6 +1,6 @@
 ---
 title: "Converge PostgreSQL adapter DDL tests to ride one-schema"
-status: blocked
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,10 +8,10 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: 4314
-claim: "2026-06-30T12:10:28Z"
-assignee: "converge-pg-adapter-ddl-one-schema"
-blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
