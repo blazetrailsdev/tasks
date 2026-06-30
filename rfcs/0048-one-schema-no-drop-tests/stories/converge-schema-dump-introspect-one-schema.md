@@ -16,36 +16,36 @@ blocked-by: null
 
 ## Context
 
-These are Rails-style `create_table`/`drop_table` tests parked in
-`eslint/one-schema-exclude.json`. They fail under `AR_ONE_SCHEMA=1` only because
-the trails ports reuse CANONICAL table names as scratch tables (e.g.
-`invertible-migration.test.ts` drops `items`; `schema-introspection.test.ts`
-touches `users`), so they drop a canonical table mid-file and later tests see
-"no such table". Rails scratches on non-schema.rb names so this never happens.
-schema-dumper.test.ts has ~110 direct DDL calls.
+Per the RFC 0048 re-spec (2026-06-30), this story is a **faithful Rails test
+port**, not a canonical-table rename. The earlier framing ("ride canonical
+`TEST_SCHEMA`, match table/column names") let agents satisfy the letter with
+shallow find-replace renames while keeping trails-invented test names and
+assertions. That is rejected. Read the **Convergence contract** in the RFC 0048
+README before starting — it is binding on this story.
 
-Independent of RFC 0019 (these create their own scratch tables — no canonical
-column convergence needed).
-
-## Convention
-
-Test scratch tables MUST use names NOT in the canonical `TEST_SCHEMA` (mirror
-Rails' `horses`/`testings`). A test must never create/alter/drop a canonical
-table: the one-schema per-test reset truncates but never restores shape, and
-`repairWorkerSchema` only restores it for the NEXT file. Direct
-`createTable`/`dropTable` do not trip the one-schema guard (only `defineSchema`
-does), so these convert by renaming scratch tables off canonical names and
-replacing any bespoke `defineSchema` setup with direct DDL.
+Drop all `AR_ONE_SCHEMA` / `one-schema-exclude.json` framing: the no-`DROP TABLE`
+performance mechanism moved to RFC `0000-one-schema-no-drop-perf`. This story is
+fidelity-only.
 
 ## Acceptance criteria
 
-- Rename scratch tables to non-canonical names (Rails-faithful); replace bespoke
-  `defineSchema` setup with direct `createTable`/`dropTable`.
-- Each file creates AND drops its own scratch tables, never touching a canonical
-  table; passes under `AR_ONE_SCHEMA=1` on all backends it runs on.
-- Remove each from `eslint/one-schema-exclude.json` as it lands.
+- [ ] For each file below, the trails test mirrors its named Rails source
+      **word-for-word as closely as TS allows**: same `describe`/`it` names,
+      same setup/fixtures, same assertions. Test names are how `test:compare`
+      maps to Rails — never invent or reword them.
+- [ ] Ride canonical `TEST_SCHEMA` + official `test-helpers/models/*` + real
+      fixtures only. No bespoke tables, no invented columns, and **no
+      `_tableName` hack** to paint a canonical name onto a bespoke suite. If the
+      canonical schema lacks something Rails' schema.rb has, add it to
+      `TEST_SCHEMA`.
+- [ ] Where a faithful port surfaces a trails impl gap, fix the impl to match
+      Rails or file a deviation under `0023-surfaced-deviations` and mark the
+      case tracked-pending-convergence. Do not bend the test to pass; a
+      temporary `test:compare` regression is acceptable (record the un-skip).
+- [ ] Confirm against the Rails source, not prior trails behavior. Split across
+      PRs by file under the 500-LOC ceiling; each file converts all-or-nothing.
 
-### Files
+### Files → Rails source
 
-- `packages/activerecord/src/schema-dumper.test.ts`
-- `packages/activerecord/src/schema-introspection.test.ts`
+- `packages/activerecord/src/schema-dumper.test.ts` → mirror `vendor/rails/activerecord/test/cases/schema_dumper_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
+- `packages/activerecord/src/schema-introspection.test.ts` → mirror `vendor/rails/activerecord/test/cases/schema_introspection_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
