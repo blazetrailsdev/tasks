@@ -1,6 +1,6 @@
 ---
 title: "composite-pk-eager-pluck-cache-preload-degrade"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4310
 claim: "2026-06-30T04:54:32Z"
 assignee: "composite-pk-eager-pluck-cache-preload-degrade"
 blocked-by: null
