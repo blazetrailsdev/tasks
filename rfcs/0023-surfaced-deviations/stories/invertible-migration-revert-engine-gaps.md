@@ -23,7 +23,10 @@ trails' behavior diverges from Rails. The affected cases are marked
 `it.skip` / `it.skipIf` in the ported file as tracked-pending-convergence and
 must be un-skipped once the impl is converged.
 
-Gaps (each with the Rails test name to un-skip):
+The ported file landed in PR #4328. Seven gaps remain `it.skip`
+tracked-pending-convergence (the `change_column_default` case was converged in
+that PR and now runs live, so it is NOT listed here). Each gap below names the
+exact Rails test(s) to un-skip once the impl is converged:
 
 1. **revert(fn) is not direction-aware** — `Migration#revert(fn)` always
    reverses the recorded ops regardless of the migration's own up/down
@@ -49,21 +52,31 @@ Gaps (each with the Rails test name to un-skip):
    `{cmd, args}` without the block. `test_revert_order` needs block-tracking.
    Un-skip: `revert order`.
 
-5. **Model default not seeded into new instances** — `new Horse().readAttribute("name")`
-   returns null after a `change_column_default` migration where Rails'
-   `Horse.new.name` returns the column default. Related to the restricted-`name`
-   attribute / default-seeding gap.
-   Un-skip: `migrate revert change column default`.
+5. **Column comments don't round-trip** — the inline `comment:` column option /
+   `changeColumnComment` is not reflected back through `columns()`, so
+   `columnsHash["name"].comment` stays `null` on PG/MariaDB (table comments DO
+   work). Restore the `comments` feature gate when un-skipping.
+   Un-skip: `migrate revert change column comment`.
 
-6. **SQLite addForeignKey via ALTER ADD CONSTRAINT** — the SQLite adapter emits
-   `ALTER TABLE ... ADD CONSTRAINT` which SQLite rejects (needs table
-   recreation). PG/MySQL run the test.
-   Un-skip (SQLite lane): `migrate revert add foreign key with invalid option`.
+6. **`change_table` `t.references` reversal + SQLite `removeColumn` index drop** —
+   the CommandRecorder change_table proxy (`RecorderTableProxy`) has no
+   `references`/`belongsTo`, so reverting `t.references` throws; and SQLite's
+   `removeColumn` table-rebuild can't drop a column an index still references
+   (`error in index ... after drop column`). Add `references`/`belongsTo` to the
+   recorder proxy and make the SQLite rebuild skip indexes on removed columns.
+   Un-skip: `migrations can handle foreign keys to specific tables`.
+
+7. **addForeignKey invalid-option reversal diverges on every adapter** — SQLite
+   emits `ALTER TABLE ... ADD CONSTRAINT` (rejected; needs table recreation),
+   and on PG/MariaDB the reverse names the constraint `fk_horses_parent_id`,
+   which does not match the hashed name `addForeignKey` created.
+   Un-skip: `migrate revert add foreign key with invalid option`.
 
 ## Acceptance criteria
 
 - [ ] Converge each gap above to Rails behavior in `migration.ts` /
-      `migration/command-recorder.ts` / the SQLite adapter.
+      `migration/command-recorder.ts` / the SQLite + PG/MySQL adapters.
 - [ ] Un-skip the listed cases in `invertible-migration.test.ts` and confirm
-      they pass on every adapter lane (respecting Rails' own feature gates).
+      they pass on every adapter lane (respecting Rails' own feature gates;
+      restore the `comments` gate on the column-comment case).
 - [ ] No regression in `migration.test.ts` / the migrator suites.
