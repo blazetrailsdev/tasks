@@ -1,6 +1,6 @@
 ---
 title: "array-to-xml-collection-serializer"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
