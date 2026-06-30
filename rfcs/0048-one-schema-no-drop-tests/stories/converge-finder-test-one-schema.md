@@ -14,6 +14,10 @@ assignee: null
 blocked-by: null
 ---
 
+> **SUPERSEDED (RFC 0048 re-spec, 2026-06-30).** Folded into `converge-finder-enum-relation-one-schema`.
+> Do not work this story — it overlapped a parent cluster story and used the
+> shallow-rename framing. Kept as draft for history.
+
 ## Context
 
 Split out from `converge-finder-enum-relation-one-schema`. That story's
