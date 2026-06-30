@@ -1,6 +1,6 @@
 ---
 title: "Converge instrumentation tests to canonical (one-schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 200
 priority: 11
-pr: null
+pr: 4334
 claim: "2026-06-30T16:44:40Z"
 assignee: "converge-instrumentation-one-schema"
 blocked-by: null
