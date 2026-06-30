@@ -7,7 +7,6 @@ cluster: null
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 120
-priority: 13
 pr: null
 claim: "2026-06-30T14:44:28Z"
 assignee: "one-schema-maria-date-multiparameter-reflection"
