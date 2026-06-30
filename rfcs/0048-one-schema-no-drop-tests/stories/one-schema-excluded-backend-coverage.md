@@ -1,13 +1,13 @@
 ---
 title: "Cover PG/MySQL adapter excluded files flag-off on their native backend"
 status: ready
-updated: 2026-06-28
+updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 60
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null
