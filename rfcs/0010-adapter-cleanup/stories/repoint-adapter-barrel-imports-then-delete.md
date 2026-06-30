@@ -1,7 +1,7 @@
 ---
 title: "repoint-adapter-barrel-imports-then-delete"
-status: in-progress
-updated: 2026-06-29
+status: done
+updated: 2026-06-30
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
