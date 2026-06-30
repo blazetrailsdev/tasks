@@ -1,6 +1,6 @@
 ---
 title: "compute-type-sibling-lookup"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4311
 claim: "2026-06-30T10:24:38Z"
 assignee: "compute-type-sibling-lookup"
 blocked-by: null
