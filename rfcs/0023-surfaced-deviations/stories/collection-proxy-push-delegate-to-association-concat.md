@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#push should delegate to association concat instead of reimplementing the insert loop"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
