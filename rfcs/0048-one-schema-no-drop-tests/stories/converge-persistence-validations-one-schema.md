@@ -1,6 +1,6 @@
 ---
 title: "Converge persistence/validations/autosave/nested-attributes to canonical (one-schema)"
-status: in-progress
+status: blocked
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -11,7 +11,7 @@ priority: 9
 pr: 4317
 claim: "2026-06-30T13:00:40Z"
 assignee: "converge-persistence-validations-one-schema"
-blocked-by: null
+blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
 ---
 
 ## Context
