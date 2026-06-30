@@ -1,7 +1,7 @@
 ---
 title: "reverse-order-value-deferred-flag-convergence"
-status: in-progress
-updated: 2026-06-29
+status: done
+updated: 2026-06-30
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
 deps: []
