@@ -1,7 +1,7 @@
 ---
 title: "belongs_to default: fires on before_save, breaking default+required"
-status: ready
-updated: 2026-06-29
+status: claimed
+updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T02:24:33Z"
+assignee: "belongs-to-default-with-required-before-validation"
 blocked-by: null
 ---
 
