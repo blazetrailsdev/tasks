@@ -1,13 +1,13 @@
 ---
 title: "Converge migrator/statement-cache/adapter to ride one-schema"
 status: ready
-updated: 2026-06-29
+updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
 deps: []
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
