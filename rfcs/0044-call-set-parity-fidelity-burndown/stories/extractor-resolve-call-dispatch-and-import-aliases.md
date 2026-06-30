@@ -1,13 +1,13 @@
 ---
 title: "extractor-resolve-call-dispatch-and-import-aliases"
 status: ready
-updated: 2026-06-29
+updated: 2026-06-30
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
