@@ -44,5 +44,5 @@ and instantiates (`.new`). Verify the real Rails method body and reconcile.
 - [ ] Converge `encryptAttribute` to make the genuinely-required calls, or
       document precisely why each is satisfied via a different path.
 - [ ] Drop the converged `encrypt_attribute → {new, scheme_for,
-  encrypted_attribute_was_declared}` entries from
+encrypted_attribute_was_declared}` entries from
       `call-mismatches-wide-exclude.json` once they no longer flag.
