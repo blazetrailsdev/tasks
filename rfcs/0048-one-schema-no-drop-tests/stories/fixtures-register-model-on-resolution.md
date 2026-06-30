@@ -1,6 +1,6 @@
 ---
 title: "Fold registerModel into fixture-set resolution"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
+pr: 4348
 claim: "2026-06-30T19:13:44Z"
 assignee: "fixtures-register-model-on-resolution"
 blocked-by: null
