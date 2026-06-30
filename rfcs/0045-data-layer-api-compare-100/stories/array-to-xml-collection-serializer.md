@@ -1,6 +1,6 @@
 ---
 title: "array-to-xml-collection-serializer"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4304
 claim: "2026-06-30T01:54:29Z"
 assignee: "array-to-xml-collection-serializer"
 blocked-by: null
