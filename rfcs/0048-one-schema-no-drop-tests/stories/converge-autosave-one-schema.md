@@ -14,6 +14,10 @@ assignee: null
 blocked-by: null
 ---
 
+> **SUPERSEDED (RFC 0048 re-spec, 2026-06-30).** Folded into `converge-persistence-validations-one-schema`.
+> Do not work this story — it overlapped a parent cluster story and was a
+> shallow-rename framing. Kept as draft for history.
+
 ## Context
 
 Split off from `converge-persistence-validations-one-schema` (RFC 0048). PR #4317
