@@ -1,6 +1,6 @@
 ---
 title: "Wide call analyzer: resolve calls through local bindings / helper delegation (kill false positives)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 1
-pr: null
+pr: 4302
 claim: "2026-06-30T01:34:32Z"
 assignee: "wide-call-analyzer-resolve-calls-through-locals"
 blocked-by: null
