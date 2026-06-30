@@ -1,6 +1,6 @@
 ---
 title: "Converge base/core/attribute-methods tests to canonical (one-schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 500
 priority: 7
-pr: null
+pr: 4316
 claim: "2026-06-30T12:40:42Z"
 assignee: "converge-core-attribute-methods-one-schema"
 blocked-by: null
