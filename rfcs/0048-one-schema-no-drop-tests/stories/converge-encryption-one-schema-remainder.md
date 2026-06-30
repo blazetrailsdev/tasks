@@ -1,6 +1,6 @@
 ---
 title: "converge-encryption-one-schema-remainder"
-status: ready
+status: draft
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
