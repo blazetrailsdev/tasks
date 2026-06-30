@@ -1,6 +1,6 @@
 ---
 title: "adapter-discardbang-abandon-handle-not-close"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0010-adapter-cleanup"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4303
 claim: "2026-06-30T01:35:35Z"
 assignee: "adapter-discardbang-abandon-handle-not-close"
 blocked-by: null
