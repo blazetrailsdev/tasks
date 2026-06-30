@@ -1,6 +1,6 @@
 ---
 title: "converge-persistence-chatmessages-one-schema"
-status: ready
+status: draft
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
