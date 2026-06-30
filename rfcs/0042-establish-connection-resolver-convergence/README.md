@@ -1,9 +1,9 @@
 ---
 rfc: "0042-establish-connection-resolver-convergence"
 title: "Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel)"
-status: closed
+status: active
 created: 2026-06-21
-updated: 2026-06-23
+updated: 2026-06-30
 owner: "@your-handle"
 packages:
   - "activerecord"
