@@ -1,6 +1,6 @@
 ---
 title: "Introduce Trails.root and resolve ActiveRecord DB/config paths against it (Rails.root parity)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0042-establish-connection-resolver-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T01:06:03Z"
+assignee: "trails-root-app-relative-path-resolution"
 blocked-by: null
 ---
 
