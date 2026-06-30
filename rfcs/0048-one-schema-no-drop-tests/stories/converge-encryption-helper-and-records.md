@@ -14,6 +14,10 @@ assignee: null
 blocked-by: null
 ---
 
+> **SUPERSEDED (RFC 0048 re-spec, 2026-06-30).** Folded into `converge-encryption-one-schema`.
+> Do not work this story — it overlapped a parent cluster story and was a
+> shallow-rename framing. Kept as draft for history.
+
 ## Context
 
 Follow-up to `converge-encryption-one-schema` (PR converting `encryption.test.ts`).
