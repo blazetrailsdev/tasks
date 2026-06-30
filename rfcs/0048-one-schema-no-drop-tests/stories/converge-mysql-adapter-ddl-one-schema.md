@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL/MariaDB adapter DDL tests to ride one-schema"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: null
+pr: 4330
 claim: "2026-06-30T16:08:43Z"
 assignee: "converge-mysql-adapter-ddl-one-schema"
 blocked-by: null
