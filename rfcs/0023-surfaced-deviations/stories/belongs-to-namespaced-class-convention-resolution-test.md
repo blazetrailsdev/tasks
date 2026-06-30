@@ -1,6 +1,6 @@
 ---
 title: "Faithful namespaced-class belongs_to type-mismatch test via convention resolution"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
