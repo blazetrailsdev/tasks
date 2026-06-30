@@ -1,6 +1,6 @@
 ---
 title: "belongs_to default: fires on before_save, breaking default+required"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
