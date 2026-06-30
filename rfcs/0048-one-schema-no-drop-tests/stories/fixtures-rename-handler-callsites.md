@@ -1,6 +1,6 @@
 ---
 title: "Converge useHandlerFixtures/setupHandlerSuite call sites onto fixtures()/setupFixtures()"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T19:08:36Z"
+assignee: "fixtures-rename-handler-callsites"
 blocked-by: null
 ---
 
