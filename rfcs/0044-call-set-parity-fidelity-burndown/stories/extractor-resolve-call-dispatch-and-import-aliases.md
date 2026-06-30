@@ -1,6 +1,6 @@
 ---
 title: "extractor-resolve-call-dispatch-and-import-aliases"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0044-call-set-parity-fidelity-burndown"
 cluster: null
