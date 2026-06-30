@@ -1,9 +1,9 @@
 ---
 rfc: "0044-call-set-parity-fidelity-burndown"
 title: "ActiveRecord call-set parity fidelity burndown to zero"
-status: active
+status: closed
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-06-30
 owner: "@deanmarano"
 packages:
   - "activerecord"
