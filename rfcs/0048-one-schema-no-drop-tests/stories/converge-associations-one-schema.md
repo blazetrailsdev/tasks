@@ -1,6 +1,6 @@
 ---
 title: "Converge association tests to canonical (one-schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 500
 priority: null
-pr: null
+pr: 4312
 claim: "2026-06-30T10:54:30Z"
 assignee: "converge-associations-one-schema"
 blocked-by: null
