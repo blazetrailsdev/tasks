@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#destroy on has_many :through must destroy only join rows, not source records"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0005-activerecord-gaps"
 cluster: null
