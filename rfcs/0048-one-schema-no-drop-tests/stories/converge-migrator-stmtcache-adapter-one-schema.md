@@ -1,6 +1,6 @@
 ---
 title: "Converge migrator/statement-cache/adapter to ride one-schema"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
+pr: 4327
 claim: "2026-06-30T15:56:41Z"
 assignee: "converge-migrator-stmtcache-adapter-one-schema"
 blocked-by: null
