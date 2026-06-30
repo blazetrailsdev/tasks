@@ -1,6 +1,6 @@
 ---
 title: "Converge the legacy direct-adapter fixture path onto fixtures()"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: [fixtures-additive-surface]
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: null
+pr: 4347
 claim: "2026-06-30T19:08:45Z"
 assignee: "fixtures-unify-direct-adapter-path"
 blocked-by: null
