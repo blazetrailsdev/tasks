@@ -1,6 +1,6 @@
 ---
 title: "Add Rails-faithful fixtures() / setupFixtures() surface (additive)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T18:09:01Z"
+assignee: "fixtures-additive-surface"
 blocked-by: null
 ---
 
