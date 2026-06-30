@@ -7,7 +7,6 @@ cluster: "rails-deviation"
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 500
-priority: 7
 pr: 4316
 claim: "2026-06-30T12:40:42Z"
 assignee: "converge-core-attribute-methods-one-schema"
