@@ -1,6 +1,6 @@
 ---
 title: "Converge migration tests to ride one-schema (scratch tables)"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
