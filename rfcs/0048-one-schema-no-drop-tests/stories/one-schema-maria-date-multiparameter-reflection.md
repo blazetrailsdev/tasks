@@ -1,6 +1,6 @@
 ---
 title: "Fix maria date/multiparameter reflection under one-schema warm cache"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 120
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T14:44:28Z"
+assignee: "one-schema-maria-date-multiparameter-reflection"
 blocked-by: null
 ---
 
