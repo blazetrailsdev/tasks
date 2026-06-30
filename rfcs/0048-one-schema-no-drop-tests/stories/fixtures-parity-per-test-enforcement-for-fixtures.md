@@ -1,6 +1,6 @@
 ---
 title: "fixtures-parity-per-test-enforcement-for-fixtures"
-status: ready
+status: done
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4347
 claim: null
 assignee: null
 blocked-by: null
