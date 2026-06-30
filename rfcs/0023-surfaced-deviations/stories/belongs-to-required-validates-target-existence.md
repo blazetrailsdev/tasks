@@ -1,6 +1,6 @@
 ---
 title: "Required belongs_to validates target existence, not just FK presence"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
