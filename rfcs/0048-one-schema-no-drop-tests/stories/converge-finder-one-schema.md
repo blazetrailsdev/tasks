@@ -1,6 +1,6 @@
 ---
 title: "converge-finder-one-schema"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4343
 claim: "2026-06-30T17:32:37Z"
 assignee: "converge-finder-one-schema"
 blocked-by: null
