@@ -1,6 +1,6 @@
 ---
 title: "Required belongs_to validates target existence, not just FK presence"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4307
 claim: "2026-06-30T03:24:31Z"
 assignee: "belongs-to-required-validates-target-existence"
 blocked-by: null
