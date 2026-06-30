@@ -1,6 +1,6 @@
 ---
 title: "converge-abstract-mysql-prevent-writes-rails-port"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T17:02:41Z"
+assignee: "converge-abstract-mysql-prevent-writes-rails-port"
 blocked-by: null
 ---
 
