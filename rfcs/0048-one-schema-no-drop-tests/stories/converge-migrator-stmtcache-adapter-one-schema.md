@@ -1,6 +1,6 @@
 ---
 title: "Converge migrator/statement-cache/adapter to ride one-schema"
-status: blocked
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 350
 priority: 2
 pr: null
-claim: "2026-06-30T11:46:26Z"
-assignee: "converge-migrator-stmtcache-adapter-one-schema"
-blocked-by: "Blocked on the one-schema infra spike PR #4246 (branch existing-db-schema-rc-9807c5), which is still OPEN/unmerged. None of the prerequisites exist in origin/main: no AR_ONE_SCHEMA flag, no no-op defineSchema path, no OneSchemaViolation matcher, and no eslint/one-schema-exclude.json to remove files from. Cannot rename/verify scratch tables under AR_ONE_SCHEMA=1 nor satisfy the 'remove from exclude list' acceptance criterion until #4246 merges. Unblock once #4246 lands in main."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
