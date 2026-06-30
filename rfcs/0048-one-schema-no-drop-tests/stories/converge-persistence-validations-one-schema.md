@@ -1,6 +1,6 @@
 ---
 title: "Converge persistence/validations/autosave/nested-attributes to canonical (one-schema)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 450
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T16:32:40Z"
+assignee: "converge-persistence-validations-one-schema"
 blocked-by: null
 ---
 
