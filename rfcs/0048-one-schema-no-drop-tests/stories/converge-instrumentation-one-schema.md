@@ -1,6 +1,6 @@
 ---
 title: "Converge instrumentation tests to canonical (one-schema)"
-status: blocked
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,10 +8,10 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 200
 priority: 11
-pr: 4320
-claim: "2026-06-30T13:20:41Z"
-assignee: "converge-instrumentation-one-schema"
-blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
