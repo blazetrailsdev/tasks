@@ -1,6 +1,6 @@
 ---
 title: "converge-abstract-mysql-schema-migrations-rails-port"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
