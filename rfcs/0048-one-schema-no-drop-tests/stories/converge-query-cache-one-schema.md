@@ -1,6 +1,6 @@
 ---
 title: "Converge query-cache tests to canonical (one-schema)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 200
 priority: 10
-pr: null
+pr: 4319
 claim: "2026-06-30T13:10:44Z"
 assignee: "converge-query-cache-one-schema"
 blocked-by: null
