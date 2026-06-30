@@ -1,6 +1,6 @@
 ---
 title: "Converge schema-dumper/introspection to ride one-schema"
-status: in-progress
+status: blocked
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -11,7 +11,7 @@ priority: 3
 pr: 4313
 claim: "2026-06-30T11:58:31Z"
 assignee: "converge-schema-dump-introspect-one-schema"
-blocked-by: null
+blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
 ---
 
 ## Context
