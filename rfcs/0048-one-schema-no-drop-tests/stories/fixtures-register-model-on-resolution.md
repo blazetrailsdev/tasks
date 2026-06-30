@@ -1,6 +1,6 @@
 ---
 title: "Fold registerModel into fixture-set resolution"
-status: draft
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
