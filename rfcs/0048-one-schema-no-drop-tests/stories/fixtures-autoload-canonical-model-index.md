@@ -1,7 +1,7 @@
 ---
 title: "Autoload fallback for canonical models (Zeitwerk analog)"
 status: draft
-updated: 2026-06-29
+updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -57,3 +57,20 @@ test/models/."
   test that is the desired resolution, but broad rollout assumes 0019 has retired
   bespoke same-named classes — land the mechanism, but only delete a given file's
   manual registrations once that file is canonical.
+
+## Findings (2026-06-30, from PR #4345 fixtures-additive-surface)
+
+- This part is specifically what lets `collection-proxy.test.ts` delete its LAST
+  4 `registerModel` lines. After part 1 auto-registers the 6 fixture-backed
+  models (`Author`/`Post`/`CpkAuthor`/`CpkBook`/`Pet`/`Toy`), the residue is the
+  4 association-_target_-only models with no fixture set of their own:
+  `Comment` (`Post hasMany comments`), `Tagging` + `Tag` (the taggings/tags
+  through-path), and `Owner` (`Pet belongsTo owner`). None is declared via
+  `fixtures([...])`, so only this autoload fallback registers them — making
+  collection-proxy the natural end-to-end demo that BOTH parts together fully
+  retire a file's registration block.
+- Empirical anchor for the "genuine miss still THROWS" criterion: with the
+  registration block removed, the current failure is `NameError: Model '...'
+not found in registry` at `reflection.ts:662` (`HasManyReflection._klass`).
+  The fallback must convert the _resolvable_ names to success while keeping a
+  truly-absent constant throwing there — assert both halves.
