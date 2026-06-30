@@ -59,7 +59,7 @@ never fixed.
 - [ ] `resolveObject` (and any other init-type check in the rule) unwraps
       `TSAsExpression` and `TSSatisfiesExpression` to reach the inner
       `ObjectExpression` before deciding canonicality, so `const X = {…} as
-  const; defineSchema(X)` is analyzed identically to the bare-object form.
+const; defineSchema(X)` is analyzed identically to the bare-object form.
 - [ ] Add `require-canonical-schema.test.mjs` cases covering `as const` and
       `satisfies` on both the whole-schema identifier form and per-table
       values; assert they report inline tables.
