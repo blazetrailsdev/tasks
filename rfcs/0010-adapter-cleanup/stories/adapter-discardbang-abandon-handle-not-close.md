@@ -1,6 +1,6 @@
 ---
 title: "adapter-discardbang-abandon-handle-not-close"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0010-adapter-cleanup"
 cluster: null
