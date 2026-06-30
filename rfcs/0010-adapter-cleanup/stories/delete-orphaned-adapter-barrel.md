@@ -1,14 +1,14 @@
 ---
 title: "delete-orphaned-adapter-barrel"
-status: ready
-updated: 2026-06-29
+status: done
+updated: 2026-06-30
 rfc: "0010-adapter-cleanup"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4295
 claim: null
 assignee: null
 blocked-by: null
