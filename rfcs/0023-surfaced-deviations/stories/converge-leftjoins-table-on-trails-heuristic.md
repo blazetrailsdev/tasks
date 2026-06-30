@@ -1,6 +1,6 @@
 ---
 title: "Converge leftJoins(table, on) trails-only two-string form to Rails variadic left_outer_joins"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
