@@ -1,5 +1,5 @@
 ---
-rfc: "0000-one-schema-no-drop-perf"
+rfc: "0049-one-schema-no-drop-perf"
 title: "One-schema no-drop test mode (perf)"
 status: draft
 created: 2026-06-30
