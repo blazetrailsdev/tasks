@@ -1,6 +1,6 @@
 ---
 title: "Redo core/attribute-methods as faithful Rails ports (#4316)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T16:20:40Z"
+assignee: "redo-core-attribute-methods-faithful-port"
 blocked-by: null
 ---
 
