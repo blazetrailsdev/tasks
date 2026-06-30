@@ -1,13 +1,13 @@
 ---
 title: "Converge schema-dumper/introspection to ride one-schema"
 status: ready
-updated: 2026-06-29
+updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
