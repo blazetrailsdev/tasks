@@ -1,6 +1,6 @@
 ---
 title: "compute-type-sibling-lookup"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0005-activerecord-gaps"
 cluster: null
