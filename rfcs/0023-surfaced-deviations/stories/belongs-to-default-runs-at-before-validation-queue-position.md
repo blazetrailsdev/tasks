@@ -1,6 +1,6 @@
 ---
 title: "belongs_to default hoisted ahead of before_validation queue (sync-chain deviation)"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T16:56:44Z"
+assignee: "belongs-to-default-runs-at-before-validation-queue-position"
 blocked-by: null
 ---
 
