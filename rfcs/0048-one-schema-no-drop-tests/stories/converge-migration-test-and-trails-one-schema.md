@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-test-and-trails-one-schema"
-status: in-progress
+status: done
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
