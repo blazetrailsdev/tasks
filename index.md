@@ -51,5 +51,5 @@
 | [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | draft | @deanmarano | activerecord |
 | [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | active | @your-handle | activerecord, arel, activemodel |
-| [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | One-schema no-drop AR test suite | active | @deanmarano | activerecord |
+| [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | Rails-faithful AR test convergence | active | @deanmarano | activerecord |
 | [0049-one-schema-no-drop-perf](rfcs/0049-one-schema-no-drop-perf/README.md) | One-schema no-drop test mode (perf) | draft | @deanmarano | activerecord |

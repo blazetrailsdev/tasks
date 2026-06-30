@@ -1,6 +1,6 @@
 ---
 rfc: "0048-one-schema-no-drop-tests"
-title: "One-schema no-drop AR test suite"
+title: "Rails-faithful AR test convergence"
 status: active
 created: 2026-06-28
 updated: 2026-06-30
@@ -11,70 +11,84 @@ clusters:
   - "rails-deviation"
 related-rfcs:
   - "0019-canonical-schema-burndown"
+  - "0000-one-schema-no-drop-perf"
 ---
 
 ## Summary
 
-Run the ActiveRecord test suite against a **single, once-built schema**: lay the
-canonical `TEST_SCHEMA` into each worker DB once at boot and **never `DROP
-TABLE`** during the run. Per-test cleanup truncates the canonical tables instead
-of dropping/recreating them, matching Rails' actual test posture
-(`use_transactional_tests = true`, `schema.rb` loaded once) rather than trails'
-per-test `dropAllTables`.
+Converge the ActiveRecord test suite to **faithful, word-for-word ports of the
+corresponding Rails tests**, riding the canonical `TEST_SCHEMA` + official
+fixtures/models. This is the same fidelity campaign RFC 0019 ran for the
+bespoke-table burndown, extended to the remaining data-layer and DDL test files:
+the deliverable is tests that mirror Rails' own `test/cases/**` — same test
+names, same assertions, same table/column names — not trails-invented suites
+that merely _touch_ canonical tables.
 
-The mechanism (`AR_ONE_SCHEMA=1`) landed in the spike PR #4246: a no-op
-`defineSchema` under the flag, a truncate-only `resetTestAdapterState`, a
-`force` escape hatch for boot/repair builders, and a canonical-compatibility
-matcher that flags genuine deviations (`OneSchemaViolation`). CI runs the three
-AR lanes in one-schema mode with DDL profiling; files that can't yet comply are
-listed in `eslint/one-schema-exclude.json` and covered flag-off by a dedicated
-sqlite lane.
+> **This RFC is fidelity-only.** The test-suite _performance_ mechanism it
+> originally bundled (`AR_ONE_SCHEMA=1` no-`DROP TABLE` mode, spike PR #4246) has
+> been split out to **RFC `0000-one-schema-no-drop-perf`** and is parked behind
+> this one. Do **not** reference `AR_ONE_SCHEMA`, `one-schema-exclude.json`, or
+> the no-drop machinery in convergence work here — that is the perf RFC's surface.
 
-## Motivation
+## Why this RFC was re-spec'd (2026-06-30)
 
-`DROP TABLE` dominates test DDL cost: a profiled run showed ~86k drops, with
-DROP responsible for 63% (Postgres) / 87% (MariaDB) of DDL milliseconds and a
-~12:1 drop:create ratio — teardown churn, not `CREATE`, is the lever. Eliminating
-inter-test drops removes that churn on the DDL-bound PG/MySQL lanes and converges
-the harness toward Rails' real schema-once + transactional-fixtures model.
+The first cut of these stories asked agents to "convert each file to canonical
+`TEST_SCHEMA`, match Rails table/column names." Agents satisfied that literally
+with **shallow find-replace renames** — e.g. PR #4322 renamed `User`/`ssn` →
+`EncryptedBook`/`name` and bolted on `_tableName = "encrypted_books"`, while
+keeping trails-invented `describe`/`it` names and hand-rolled assertions that
+exist nowhere in Rails. That passes the letter of the criteria and misses the
+entire point. PR #4316 (core-attribute-methods) merged in that shallow form and
+must be redone. All in-progress work was halted and the stories rewritten to the
+contract below.
+
+## Convergence contract (binding on every story in this RFC)
+
+**Convergence = port the Rails test file, not rename the trails one.**
+
+1. **Name the Rails source.** Each story names the exact Rails test file(s) to
+   mirror under `vendor/rails/activerecord/test/cases/`. The default mapping is
+   structural: `packages/activerecord/src/<area>/<name>.test.ts` ⇄
+   `vendor/rails/activerecord/test/cases/<area>/<name>_test.rb`. A trails file
+   with **no** 1:1 Rails counterpart is a bespoke suite — delete it and port the
+   real Rails test cases that cover the behavior.
+2. **Mirror names + assertions word-for-word** as closely as TypeScript allows.
+   Test names are how `test:compare` maps trails tests to Rails; never invent,
+   rename, or reword them. The Rails test body's setup, fixtures, and assertions
+   are the spec — reproduce them, do not paraphrase.
+3. **Ride canonical schema only.** Canonical `TEST_SCHEMA` + official
+   `test-helpers/models/*` + real fixtures. No bespoke tables, no invented
+   columns, and **no `_tableName` hacks** to paint a canonical name onto a
+   bespoke test. If the canonical schema lacks something Rails' schema.rb has,
+   add it to `TEST_SCHEMA`.
+4. **Fix the impl, not the test.** If a faithful port surfaces a trails behavior
+   gap, fix the implementation to match Rails, or file a deviation story under
+   `0023-surfaced-deviations` and mark the case tracked-pending-convergence.
+   Never bend the test to make it pass — fidelity over the gate (a temporary
+   `test:compare` regression is acceptable and expected; record the un-skip
+   follow-up).
+5. **All-or-nothing per file.** A file converts to its faithful Rails form in one
+   PR (split across PRs by file/sub-cluster under the 500-LOC ceiling), never a
+   half-renamed hybrid.
+
+## Scope (fidelity stories)
+
+The data-layer + DDL converge clusters, each rewritten to the contract:
+encryption, core-attribute-methods (redo of merged #4316), finder/enum/relation,
+instrumentation, persistence/validations, query-cache, associations,
+schema-dump/introspection, and the migration / migrator-stmtcache / pg-adapter-DDL
+/ mysql-adapter-DDL tests (faithful ports of Rails' migration & adapter suites,
+using Rails' own scratch-table names — `horses`, `testings` — never canonical
+names as scratch).
+
+## Out of scope (moved to RFC 0000-one-schema-no-drop-perf)
+
+The no-`DROP TABLE` performance mechanism, the `AR_ONE_SCHEMA` flag + spike
+PR #4246, `one-schema-exclude.json` burndown, per-backend flag-off coverage, and
+the MariaDB date/multiparameter warm-cache reflection bug surfaced under
+one-schema mode.
 
 ## Prerequisite
 
-This RFC assumes **RFC 0019 (canonical-schema-burndown) is complete** before it
-starts. One-schema mode requires every data-layer test to ride canonical
-`TEST_SCHEMA` tables/columns; the pre-canonical bespoke-table files (e.g.
-`users.name`, `posts.subtitle`, `topics.score`) that 0019 converges are exactly
-the files currently parked in the one-schema exclude list. With 0019 at zero,
-the data-layer exclusions collapse and this RFC is left with only the
-infra/adapter exclusions + harness polish.
-
-## Scope
-
-- Converge the data-layer files that invent bespoke tables/columns on canonical
-  tables (RFC 0019 surface) — the 7 `converge-*` clusters.
-- Converge the Rails-style migration/schema/adapter DDL tests so they RIDE the
-  single schema (most are not permanent exclusions — see the convention below).
-- Close the harness gaps: per-backend flag-off coverage for adapter excluded
-  files; the MariaDB date/multiparameter warm-cache reflection bug.
-- Burn `eslint/one-schema-exclude.json` toward only the genuinely-permanent
-  exclusions (own-DB tests + the `test-helpers/*` schema/fixtures self-tests).
-
-## Convention: scratch tables use non-canonical names
-
-Tests that exercise `create_table`/`drop_table` (migration, schema-dumper,
-adapter DDL) DO ride the single schema, exactly as Rails' migration suites do —
-**provided their scratch tables use names absent from the canonical
-`TEST_SCHEMA`** (mirror Rails' `horses`/`testings`). A test must never
-create/alter/drop a canonical table: the per-test reset truncates but never
-restores shape, and `repairWorkerSchema` only restores it for the next file.
-The trails ports that fail under one-schema do so because they reused canonical
-names (`items`, `users`, `widgets`) as scratch — the fix is to rename them, not
-to exclude the file. Direct `createTable`/`dropTable` never trip the one-schema
-guard (only `defineSchema` does).
-
-## Stories
-
-See the stories directory: 7 data-layer `converge-*` clusters (deps-rfc 0019),
-5 DDL/adapter `converge-*-one-schema` clusters (independent of 0019),
-`one-schema-excluded-backend-coverage`, and
-`one-schema-maria-date-multiparameter-reflection`.
+RFC 0019 (canonical-schema-burndown) is **complete** (closed; all stories done),
+so the canonical tables these ports ride already exist.
