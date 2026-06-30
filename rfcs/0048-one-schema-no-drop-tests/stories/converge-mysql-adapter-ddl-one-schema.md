@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL/MariaDB adapter DDL tests to ride one-schema"
-status: blocked
+status: ready
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,10 +8,10 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: 4315
-claim: "2026-06-30T12:30:40Z"
-assignee: "converge-mysql-adapter-ddl-one-schema"
-blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
