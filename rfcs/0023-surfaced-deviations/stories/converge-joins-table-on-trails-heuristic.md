@@ -1,6 +1,6 @@
 ---
 title: "Converge joins(table, on) trails-only two-string heuristic to Rails type-based dispatch"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4325
 claim: "2026-06-30T15:38:41Z"
 assignee: "converge-joins-table-on-trails-heuristic"
 blocked-by: null
