@@ -1,6 +1,6 @@
 ---
 title: "Converge leftJoins(table, on) trails-only two-string form to Rails variadic left_outer_joins"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4342
 claim: "2026-06-30T17:32:47Z"
 assignee: "converge-leftjoins-table-on-trails-heuristic"
 blocked-by: null
