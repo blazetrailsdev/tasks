@@ -1,7 +1,7 @@
 ---
 title: "Attack the top shared-table flakes as a direct CI-cost line"
-status: ready
-updated: 2026-06-14
+status: claimed
+updated: 2026-06-30
 rfc: "0028-ci-cost-optimization"
 cluster: flake-cost
 deps: []
@@ -10,8 +10,8 @@ deps-rfc:
 est-loc: 200
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T00:24:33Z"
+assignee: "flake-elimination-as-ci-cost"
 blocked-by: null
 ---
 
