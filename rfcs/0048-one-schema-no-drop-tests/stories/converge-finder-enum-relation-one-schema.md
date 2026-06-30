@@ -1,6 +1,6 @@
 ---
 title: "Converge finder/enum/relation-where to canonical (one-schema)"
-status: in-progress
+status: blocked
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -11,7 +11,7 @@ priority: 8
 pr: 4318
 claim: "2026-06-30T12:50:40Z"
 assignee: "converge-finder-enum-relation-one-schema"
-blocked-by: null
+blocked-by: "RFC0048 re-spec: reset for faithful-port rewrite"
 ---
 
 ## Context
