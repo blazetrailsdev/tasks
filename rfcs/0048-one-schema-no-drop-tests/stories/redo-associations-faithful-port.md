@@ -1,6 +1,6 @@
 ---
 title: "Redo association tests as faithful Rails ports (#4312)"
-status: claimed
+status: in-progress
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 6
-pr: null
+pr: 4332
 claim: "2026-06-30T16:14:51Z"
 assignee: "redo-associations-faithful-port"
 blocked-by: null
