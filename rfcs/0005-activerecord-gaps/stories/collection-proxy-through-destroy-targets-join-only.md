@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#destroy on has_many :through must destroy only join rows, not source records"
-status: ready
-updated: 2026-06-29
+status: claimed
+updated: 2026-06-30
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T04:24:31Z"
+assignee: "collection-proxy-through-destroy-targets-join-only"
 blocked-by: null
 ---
 
