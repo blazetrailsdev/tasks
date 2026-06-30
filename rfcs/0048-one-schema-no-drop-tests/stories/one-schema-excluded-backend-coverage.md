@@ -1,6 +1,6 @@
 ---
 title: "Cover PG/MySQL adapter excluded files flag-off on their native backend"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 60
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T14:50:39Z"
+assignee: "one-schema-excluded-backend-coverage"
 blocked-by: null
 ---
 
