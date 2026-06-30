@@ -50,8 +50,8 @@ These were left **tracked-pending-convergence** (skipped) in
 
 - [ ] Move `dirties_query_cache` wiring from `executeMutation` to the public
       write methods Rails wraps (`:create, :insert, :update, :delete,
-  :truncate, :truncate_tables, :rollback_to_savepoint,
-  :rollback_db_transaction, :restart_db_transaction, :exec_insert_all`,
+:truncate, :truncate_tables, :rollback_to_savepoint,
+:rollback_db_transaction, :restart_db_transaction, :exec_insert_all`,
       plus `:exec_query`/`:execute`), so each logical write clears once and
       rollbacks dirty the cache.
 - [ ] Route `Relation#exists` through the cached read path so repeated probes
