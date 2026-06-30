@@ -1,6 +1,6 @@
 ---
 title: "Converge schema-dumper/introspection to ride one-schema"
-status: ready
+status: claimed
 updated: 2026-06-30
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-06-30T11:58:31Z"
+assignee: "converge-schema-dump-introspect-one-schema"
 blocked-by: null
 ---
 
