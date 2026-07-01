@@ -1,5 +1,5 @@
 ---
-rfc: "0000-nested-through-association-fidelity"
+rfc: "0054-nested-through-association-fidelity"
 title: "Nested/through association direct-load fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Nested/through association direct-load fidelity
+# RFC 0054 — Nested/through association direct-load fidelity
 
 ## Summary
 
