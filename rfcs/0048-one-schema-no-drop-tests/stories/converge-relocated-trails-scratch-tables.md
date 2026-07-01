@@ -1,6 +1,6 @@
 ---
 title: "Converge relocated .trails DDL tests to ride one-schema (scratch tables)"
-status: ready
+status: blocked
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -11,7 +11,7 @@ priority: 5
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Gated on one-schema spike PR #4246 (draft, unmerged): eslint/one-schema-exclude.json and AR_ONE_SCHEMA infra exist only on that branch, not main. Unblock when #4246 lands."
 ---
 
 # Converge relocated `.trails` DDL tests to ride one-schema
