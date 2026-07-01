@@ -1,6 +1,6 @@
 ---
 title: "redo-has-one-through-faithful-port"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4375
 claim: "2026-07-01T15:03:17Z"
 assignee: "redo-has-one-through-faithful-port"
 blocked-by: null
