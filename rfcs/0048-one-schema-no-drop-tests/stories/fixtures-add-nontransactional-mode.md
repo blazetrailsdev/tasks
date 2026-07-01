@@ -1,6 +1,6 @@
 ---
 title: "Add non-transactional fixtures() mode; converge view.test.ts + signed-id.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 0
-pr: null
+pr: 4381
 claim: "2026-07-01T18:54:56Z"
 assignee: "fixtures-add-nontransactional-mode"
 blocked-by: null
