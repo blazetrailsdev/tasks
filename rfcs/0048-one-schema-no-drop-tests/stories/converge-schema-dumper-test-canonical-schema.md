@@ -1,6 +1,6 @@
 ---
 title: "Converge schema-dumper.test.ts faithful port onto canonical TEST_SCHEMA + fixtures"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T03:24:45Z"
+assignee: "converge-schema-dumper-test-canonical-schema"
 blocked-by: null
 ---
 
