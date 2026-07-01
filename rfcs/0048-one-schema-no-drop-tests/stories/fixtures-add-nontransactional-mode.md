@@ -1,6 +1,6 @@
 ---
 title: "Add non-transactional fixtures() mode; converge view.test.ts + signed-id.test.ts"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
