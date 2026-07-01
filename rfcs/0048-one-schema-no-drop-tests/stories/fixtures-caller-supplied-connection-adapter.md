@@ -1,6 +1,6 @@
 ---
 title: "Add caller-supplied connection/adapter knob to fixtures(); converge multiple-db + transaction-instrumentation"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
