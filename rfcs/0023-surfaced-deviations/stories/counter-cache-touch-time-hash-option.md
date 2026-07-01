@@ -1,7 +1,7 @@
 ---
 title: "counter-cache touch: accepts { time: } hash form (Rails update_counters/reset_counters)"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T03:54:49Z"
+assignee: "counter-cache-touch-time-hash-option"
 blocked-by: null
 ---
 
