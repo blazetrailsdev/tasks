@@ -1,6 +1,6 @@
 ---
 title: "validations-test-body-rails-fidelity"
-status: claimed
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 4195
 claim: "2026-07-01T15:38:13Z"
 assignee: "validations-test-body-rails-fidelity"
 blocked-by: null
