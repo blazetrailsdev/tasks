@@ -6,7 +6,7 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -16,16 +16,20 @@ blocked-by: null
 
 ## Context
 
-Rails' `cpk_orders` table is composite-PK `[shop_id, id]` (`activerecord/test/schema/schema.rb`), and its fixtures (`activerecord/test/fixtures/cpk_orders.yml`) omit both key columns — `ActiveRecord::FixtureSet.composite_identify` (`activerecord/lib/active_record/fixture_set/table_row.rb:86-90,127-133`) generates them from the label.
+Rails keeps the `cpk_orders` **table** on a plain autoincrement `id` (`activerecord/test/schema/schema.rb:282-284`) and declares the composite PK only on the **model** (`activerecord/test/models/cpk/order.rb:4-8`: `self.primary_key = [:shop_id, :id]`). Its fixtures (`activerecord/test/fixtures/cpk_orders.yml`) omit `shop_id` — `ActiveRecord::FixtureSet.composite_identify` (`activerecord/lib/active_record/fixture_set/table_row.rb:86-90,127-133`), keyed on `model_class.composite_primary_key?`, fills it from the label. So trails' single-`id` `cpk_orders` schema already matches Rails' table; the deviation is only in fixture loading.
 
-trails keeps `cpk_orders` on a single autoincrement `id` (`packages/activerecord/src/test-helpers/test-schema.ts`) and pins `shop_id` values in `cpk-orders.ts` fixtures as a bridge. The blocker for full convergence: `defineFixtures` cannot resolve a `ref()` to a specific column of a composite-PK target — composite-PK tables are deliberately left unregistered as `ref()` targets (`packages/activerecord/src/test-helpers/define-fixtures.ts:633-635`). So `cpk_order_agreements.order_id = ref("cpk_orders", "cpk_groceries_order_2")` resolves via single-column `identify(label)`, which no longer equals the row's `id` (`compositeIdentify(label)["id"] = identify << 1`) once the table is composite.
+trails' loader keys the composite fill on the SCHEMA pk (not `model_class.composite_primary_key?`), so it never fills `shop_id`; `packages/activerecord/src/test-helpers/fixtures/cpk-orders.ts` pins `shop_id` as a bridge. Two options for full convergence:
 
-Surfaced in PR #4364 (cpk-join-dependency-composite-pk-single-fk): converting the schema to composite-PK made the JoinDependency delete/update join tests fail on FK mismatch, so the pinned-shop_id bridge was kept.
+1. Key the composite fill on the model's `composite_primary_key?` like Rails, so `shop_id` is label-derived even for a single-`id` table (preferred — smallest, most faithful).
+2. Make the schema composite-PK. This is blocked: `defineFixtures` cannot resolve a `ref()` to a specific column of a composite-PK target — composite-PK tables are deliberately left unregistered as `ref()` targets (`packages/activerecord/src/test-helpers/define-fixtures.ts:633-635`) — so `cpk_order_agreements.order_id = ref("cpk_orders", "cpk_groceries_order_2")` resolves via single-column `identify(label)`, which no longer equals the row's `id` (`compositeIdentify(label)["id"] = identify << 1`).
+
+### What already shipped in PR #4364
+
+Option 1 (partial) landed: the loader now fills the model's **non-schema-PK** composite columns (`shop_id`) label-derived, keyed on the model's composite PK — so `cpk_orders.yml` no longer pins `shop_id`. What remains (flagged by Copilot review #8 on #4364) is FULL `composite_identify` parity: the schema-PK `id` is still seeded as the single-PK `identify(label)` instead of Rails' `composite_identify(label, [:shop_id, :id])[:id] = identify(label) << 1`. It is left unshifted because `ref()` targets resolve to `identify(label)` and composite-PK tables are unregistered as `ref()` targets (`define-fixtures.ts:633-635`), so shifting `id` would desync `cpk_order_agreements.order_id`.
 
 ## Acceptance criteria
 
-- `cpk_orders` test schema declares composite `primaryKey: ["shop_id", "id"]` (mirrors Rails schema.rb).
-- `cpk_orders.yml` fixtures omit `shop_id`/`id`; the loader fills both via `compositeIdentify` (mirrors Rails).
-- `defineFixtures` resolves a belongs_to `ref()`/association-label to the correct column of a composite-PK target, honoring the association's `primaryKey` (e.g. `cpk_order_agreements.order`/`order_id` → the order's `id` column).
-- The delete-all/update-all "composite model with join subquery" tests still pass with the pinned shop_id values removed.
+- `defineFixtures` resolves a belongs_to `ref()`/association-label to the correct column of a composite-PK (or composite-model-PK) target, honoring the association's `primaryKey` (e.g. `cpk_order_agreements.order`/`order_id` → the order's `id` column) — the prerequisite that unblocks shifting `id`.
+- With that in place, the composite-model-PK fill seeds `id = identify(label) << index` (full Rails `composite_identify` parity), not the single-PK `identify(label)`.
+- The delete-all/update-all "composite model with join subquery" tests still pass.
 - No regression in cpk belongs-to / has-many-through / inverse / use-fixtures suites.
