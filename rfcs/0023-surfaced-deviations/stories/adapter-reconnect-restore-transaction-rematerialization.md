@@ -1,6 +1,6 @@
 ---
 title: "adapter-reconnect-restore-transaction-rematerialization"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4356
 claim: "2026-07-01T00:54:48Z"
 assignee: "adapter-reconnect-restore-transaction-rematerialization"
 blocked-by: null
