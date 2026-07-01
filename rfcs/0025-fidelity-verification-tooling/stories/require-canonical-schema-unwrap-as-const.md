@@ -50,9 +50,15 @@ for the sibling `test-fixture-parity` rule in
 `0019/persistence-test-canonical-wave2`, but `require-canonical-schema` was
 never fixed.
 
-(The actual convergence of the two leaked files is already tracked under RFC
-0048: `converge-core-attribute-methods-one-schema` and
-`converge-finder-enum-relation-one-schema`. This story is only the rule hole.)
+NOTE (2026-07-01): the two RFC 0048 convergence stories
+`converge-core-attribute-methods-one-schema` and
+`converge-finder-enum-relation-one-schema` are both marked **done (tag:
+rails-deviation)**, but neither removed the bespoke `as const` `TEST_SCHEMA` —
+verified on `main` @642de682e: `attribute-methods.test.ts:17` still declares a
+bespoke `topics` (no `last_read`) / `posts`, and `finder.test.ts:174` likewise,
+and both lint clean (rule exit 0). So convergence will NOT clean these up; the
+rule fix must dispose of them directly (converge-or-exclude, below). This story
+is the rule hole plus the disposition of the two files it exposes.
 
 ## Acceptance criteria
 
@@ -65,9 +71,15 @@ const; defineSchema(X)` is analyzed identically to the bare-object form.
       values; assert they report inline tables.
 - [ ] Run the rule across the AR test tree and confirm it now flags
       `attribute-methods.test.ts` / `finder.test.ts` (expected — they are the
-      leaked contaminators); add them to
-      `require-canonical-schema-exclude.json` as the ratchet baseline ONLY if
-      they are not converged first under their RFC 0048 stories (prefer
-      convergence; do not silently re-grandfather without a tracked entry).
+      leaked contaminators). Their RFC 0048 convergence stories are already
+      closed as `done`/rails-deviation WITHOUT removing the bespoke schema, so
+      "converge first under the 0048 story" is no longer an available path.
+      Disposition for THIS PR: add both files to
+      `require-canonical-schema-exclude.json` as an explicit re-grandfather AND
+      register a new tracked convergence story for each (do NOT silently
+      re-grandfather with no follow-up). Keep this PR scoped to the rule fix +
+      exclude baseline; the actual schema convergence of the two files is
+      separate, larger work (their 0048 stories closed as rails-deviation) and
+      belongs in the newly-registered follow-up stories, not here.
 - [ ] No new lint violations elsewhere unless they are genuine evasions of the
       same kind.
