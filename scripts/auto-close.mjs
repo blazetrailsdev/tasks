@@ -8,7 +8,9 @@
 //   - only `active` RFCs are eligible (draft/postponed/superseded are left
 //     alone — closing those is a human decision);
 //   - the RFC must have at least one story (a story-less RFC is not "done");
-//   - every story must be `done`.
+//   - every story must be terminal — `done` (shipped) or `closed`
+//     (superseded/abandoned without code). Both are legitimate final states, so
+//     an RFC whose remaining work was all closed out still qualifies.
 //
 // Output: a single machine-readable marker line the handler greps for —
 //   AUTO_CLOSE_CLOSED=0031-...,0040-...   (comma-joined dirs, empty if none)
@@ -43,7 +45,8 @@ for (const rfc of rfcs) {
   if (rfc.frontmatter?.status !== "active") continue;
   const own = storiesByRfc.get(rfc.dir) ?? [];
   if (own.length === 0) continue; // no stories → not "done"
-  if (!own.every((s) => s.frontmatter?.status === "done")) continue;
+  const isTerminal = (st) => st === "done" || st === "closed";
+  if (!own.every((s) => isTerminal(s.frontmatter?.status))) continue;
 
   // Rewrite only inside the frontmatter block so a stray `status:`/`updated:`
   // line in the body can never be hit.
@@ -57,7 +60,7 @@ for (const rfc of rfcs) {
   fm = fm.replace(/^updated:[ \t]*.*$/m, `updated: ${today}`);
   const next = m[1] + fm + m[3] + m[4];
 
-  console.log(`auto-close: ${rfc.dir} (${own.length} stories done) active → closed`);
+  console.log(`auto-close: ${rfc.dir} (${own.length} stories done/closed) active → closed`);
   if (!dryRun) writeFileSync(rfc.file, next);
   closed.push(rfc.dir);
 }

@@ -142,6 +142,32 @@ test("blocked-by on a non-blocked story is rejected", () => {
   expectError(errors, "only blocked stories carry blocked-by");
 });
 
+// ── closed status + closed-reason ──
+test("closed without closed-reason is rejected", () => {
+  const errors = validate({
+    rfcs: [rfc()],
+    stories: [story({}, { status: "closed", "closed-reason": null })],
+  }).errors;
+  expectError(errors, "status: closed requires closed-reason");
+});
+
+test("closed with a closed-reason is legal", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc()],
+      stories: [story({}, { status: "closed", "closed-reason": "superseded by 0042" })],
+    }).errors,
+  );
+});
+
+test("closed-reason on a non-closed story is rejected", () => {
+  const errors = validate({
+    rfcs: [rfc()],
+    stories: [story({}, { status: "ready", "closed-reason": "superseded" })],
+  }).errors;
+  expectError(errors, "only closed stories carry closed-reason");
+});
+
 // ── deliberately-legal cases (match the CLI, don't invent a stricter rule) ──
 test("done with null pr is legal", () => {
   expectClean(
@@ -175,6 +201,21 @@ test("closed RFC with all stories done is clean", () => {
       rfcs: [rfc({}, { status: "closed" })],
       stories: [
         story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 }),
+      ],
+    }).errors,
+  );
+});
+
+test("closed RFC with a mix of done and closed stories is clean", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc({}, { status: "closed" })],
+      stories: [
+        story(
+          { id: "shipped" },
+          { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 },
+        ),
+        story({ id: "abandoned" }, { status: "closed", "closed-reason": "superseded" }),
       ],
     }).errors,
   );

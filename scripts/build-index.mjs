@@ -77,6 +77,7 @@ const indexJson = {
       claim: fm.claim ?? null,
       assignee: fm.assignee ?? null,
       blocked_by: fm["blocked-by"] ?? null,
+      closed_reason: fm["closed-reason"] ?? null,
       file_path: relPath(s.file),
     };
   }),

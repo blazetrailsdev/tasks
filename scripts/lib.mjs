@@ -25,7 +25,15 @@ const RFC_DIR_RE = /^(?!0000-template$)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
 const STORY_FILE_RE = /^[a-z0-9][a-z0-9-]*\.md$/;
 
 export const RFC_STATUSES = ["draft", "active", "closed", "postponed", "superseded"];
-export const STORY_STATUSES = ["draft", "ready", "claimed", "in-progress", "done", "blocked"];
+export const STORY_STATUSES = [
+  "draft",
+  "ready",
+  "claimed",
+  "in-progress",
+  "done",
+  "blocked",
+  "closed",
+];
 
 export function parseFrontmatter(filePath) {
   const text = readFileSync(filePath, "utf8");

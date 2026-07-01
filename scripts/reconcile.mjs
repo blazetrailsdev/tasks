@@ -248,7 +248,7 @@ const results = targets.map((s) => assess(s, merged, memory));
 // stories cite their surfacing PR, not a convergence PR), so a cron should
 // alert on the `pr` count, not the raw total.
 const drift = results
-  .filter((r) => r.verdict === "likely-done" && r.status !== "done")
+  .filter((r) => r.verdict === "likely-done" && r.status !== "done" && r.status !== "closed")
   .map((r) => ({ rfc: r.rfc, id: r.id, status: r.status, signal: decisiveSignal(r) }));
 const driftBySignal = tallyBy(drift, (d) => d.signal);
 const driftSegments = `pr=${driftBySignal.pr ?? 0}, body=${driftBySignal.body ?? 0}, memory=${driftBySignal.memory ?? 0}`;

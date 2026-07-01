@@ -102,12 +102,28 @@ Stories progress independently:
 ```text
 draft → ready → claimed → in-progress → done
   any pre-done state → blocked → ready (once unblocked)
+  any pre-done state → closed  → ready (once reopened)
 ```
 
 `blocked` is reachable from any pre-`done` state (not just post-claim): the only
 requirement is a `blocked-by` reason, and the unblock path returns the story to
 `ready`. So `draft → blocked` is legal when a story is specified but known to be
 gated on other work.
+
+`closed` is the terminal state for a story that will **never ship code** —
+superseded, abandoned, or won't-do. It is reachable from any pre-`done` state
+(`draft` / `ready` / `blocked` / `in-progress`) via `pnpm tasks close <id>
+--reason "<text>"`, and closing REQUIRES a `closed-reason` (the way `blocked`
+requires `blocked-by`; the reason text distinguishes superseded vs abandoned vs
+won't-do — there is no separate `superseded` status). This replaces the old
+`blocked → ready → done --force` dance for stories that were parked forever or
+faked as `done` against an RFC instead of shipped code. `done` (work shipped)
+and `closed` (work abandoned) are the two terminal states; a `done` story
+cannot be closed. Reopening a closed story returns it to `ready`, mirroring the
+unblock path. Both `done` and `closed` count as terminal for dependents — a
+story depending on a closed story is unblocked (closed will never ship, but
+never blocks either) — and for RFC rollup: an RFC whose every story is `done`
+or `closed` is eligible to close.
 
 Transitions are direct-push frontmatter edits. No PR gate on status changes.
 
@@ -118,7 +134,8 @@ a hand-edit or `--force` flip can't leave a story self-contradictory:
 - `claimed` / `in-progress` require `claim` + `assignee`; `in-progress` also
   requires `pr`.
 - `blocked` requires `blocked-by`; only `blocked` stories may carry it.
-- A `closed` RFC may not have any un-`done` story.
+- `closed` requires `closed-reason`; only `closed` stories may carry it.
+- A `closed` RFC may not have any story that is not `done` or `closed`.
 - No two RFC dirs may share a four-digit numeric prefix (a finalize-flow bug);
   the pre-convention `0022-*` pair is grandfathered via an in-code allowlist.
 - `created` / `updated` must be a `YYYY-MM-DD` calendar date — this is what

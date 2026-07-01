@@ -243,6 +243,13 @@ export function validate({ rfcs, stories }) {
       case "blocked":
         if (!fm["blocked-by"]) err(s.file, `status: blocked requires blocked-by`);
         break;
+      // `closed` is terminal for a story that will never ship code (superseded /
+      // abandoned / won't-do). Closing REQUIRES a reason, the way `blocked`
+      // requires `blocked-by`; the `closed-reason` cross-check below rejects it
+      // on any non-closed story.
+      case "closed":
+        if (!fm["closed-reason"]) err(s.file, `status: closed requires closed-reason`);
+        break;
       // `done` is intentionally not shape-constrained: it may carry a full
       // claim/assignee/pr (normally worked) or have them all null (completed
       // before anyone reached it — the done-without-PR path), so requiring
@@ -255,6 +262,12 @@ export function validate({ rfcs, stories }) {
       err(
         s.file,
         `blocked-by is set but status is "${fm.status}" — only blocked stories carry blocked-by`,
+      );
+    }
+    if (fm.status !== "closed" && fm["closed-reason"] != null) {
+      err(
+        s.file,
+        `closed-reason is set but status is "${fm.status}" — only closed stories carry closed-reason`,
       );
     }
     storyById.set(s.id, s);
@@ -278,20 +291,25 @@ export function validate({ rfcs, stories }) {
     err(storyById.get(cycle[cycle.length - 1]).file, `dep cycle detected: ${cycle.join(" → ")}`);
   }
 
-  // A `closed` RFC asserts its work is complete (README lifecycle table:
-  // "All stories done"). An un-`done` story under a closed RFC is a drift the
-  // per-field checks miss — either the RFC was closed prematurely or the story
-  // outlived it. Group stories by parent and flag any closed RFC with a
-  // non-done child.
+  // A `closed` RFC asserts its work is complete. An *open* story under a closed
+  // RFC is a drift the per-field checks miss — either the RFC was closed
+  // prematurely or the story outlived it. A story counts as terminal-complete
+  // when it is `done` (shipped) OR `closed` (abandoned/superseded); both are
+  // legitimate final states under a closed RFC. Group stories by parent and
+  // flag any closed RFC with a still-open child.
   const storiesByRfc = new Map();
   for (const s of storyById.values()) {
     (storiesByRfc.get(s.rfc) ?? storiesByRfc.set(s.rfc, []).get(s.rfc)).push(s);
   }
+  const isTerminal = (status) => status === "done" || status === "closed";
   for (const r of rfcs) {
     if (r.frontmatter?.status !== "closed") continue;
-    const open = (storiesByRfc.get(r.dir) ?? []).filter((s) => s.frontmatter?.status !== "done");
+    const open = (storiesByRfc.get(r.dir) ?? []).filter((s) => !isTerminal(s.frontmatter?.status));
     for (const s of open) {
-      err(r.file, `status: closed but story "${s.id}" is "${s.frontmatter?.status}", not done`);
+      err(
+        r.file,
+        `status: closed but story "${s.id}" is "${s.frontmatter?.status}", not done or closed`,
+      );
     }
   }
 
