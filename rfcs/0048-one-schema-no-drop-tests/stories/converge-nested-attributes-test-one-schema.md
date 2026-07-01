@@ -1,14 +1,14 @@
 ---
 title: "converge-nested-attributes-test-one-schema"
-status: claimed
-updated: 2026-06-30
+status: in-progress
+updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4354
 claim: "2026-06-30T23:24:50Z"
 assignee: "converge-nested-attributes-test-one-schema"
 blocked-by: null
