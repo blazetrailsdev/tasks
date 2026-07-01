@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency: join composite-PK model's composite-FK belongsTo association"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0027-join-dependency-fidelity"
 cluster: null
