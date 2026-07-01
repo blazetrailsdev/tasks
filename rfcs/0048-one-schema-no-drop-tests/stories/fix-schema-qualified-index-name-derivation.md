@@ -1,6 +1,6 @@
 ---
 title: "fix-schema-qualified-index-name-derivation"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
