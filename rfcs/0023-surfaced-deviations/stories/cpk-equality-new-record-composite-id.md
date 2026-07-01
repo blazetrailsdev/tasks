@@ -1,6 +1,6 @@
 ---
 title: "cpk-equality-new-record-composite-id"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
