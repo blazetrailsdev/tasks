@@ -1,5 +1,5 @@
 ---
-rfc: "0000-adapter-type-column-reflection-fidelity"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 title: "Adapter type & column reflection fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Adapter type & column reflection fidelity
+# RFC 0056 — Adapter type & column reflection fidelity
 
 ## Summary
 
