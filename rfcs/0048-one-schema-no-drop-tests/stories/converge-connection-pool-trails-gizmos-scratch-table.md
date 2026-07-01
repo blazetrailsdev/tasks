@@ -1,6 +1,6 @@
 ---
 title: "Converge connection-pool.trails.test.ts off invented 'gizmos' raw-CREATE scratch table"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
