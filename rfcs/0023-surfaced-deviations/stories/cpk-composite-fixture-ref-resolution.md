@@ -1,6 +1,6 @@
 ---
 title: "cpk-composite-fixture-ref-resolution"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
