@@ -1,5 +1,5 @@
 ---
-rfc: "0000-transaction-fidelity"
+rfc: "0057-transaction-fidelity"
 title: "Transaction semantics fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Transaction semantics fidelity
+# RFC 0057 — Transaction semantics fidelity
 
 ## Summary
 
