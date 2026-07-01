@@ -80,3 +80,18 @@ and reflection keys off `SHOW KEYS` `Collation = "D"`
 (`dumpsIndexSortOrder()` → `adapterType !== "mysql"`) stays. Real cause is most
 likely MariaDB not storing/reporting the descending `Collation` for a
 reconstruct-created index — start there with a live MariaDB.
+
+**Related pre-existing fidelity gap (PR #4377 review, not introduced here):**
+trails' MySQL DDL emission
+(`mysql/schema-creation.ts` `quotedColumns` → the standalone
+`mysql/schema-statements.ts` `addOptionsForIndexColumns`, ~lines 340-356) appends
+`ASC`/`DESC` UNCONDITIONALLY — it bypasses the generic version-gated
+`SchemaStatements#addOptionsForIndexColumns` (`schema-statements.ts:2083-2092`)
+that PG rides. Rails' `Mysql::SchemaStatements#add_options_for_index_columns`
+(`mysql/schema_statements.rb:236`) instead calls `super`, landing on the abstract
+version-gated impl (`abstract/schema_statements.rb:1639-1644`). So Rails is
+version-gated on the MySQL DDL-emission side where trails' reimplementation isn't.
+Moot in practice (an unsupported MySQL/MariaDB version ignores `DESC` in the DDL
+itself, so reflection shows ascending either way), but a real fidelity gap in the
+pre-existing `mysql/schema-creation.ts` worth converging if RFC 0048 tracks MySQL
+index-emission fidelity.
