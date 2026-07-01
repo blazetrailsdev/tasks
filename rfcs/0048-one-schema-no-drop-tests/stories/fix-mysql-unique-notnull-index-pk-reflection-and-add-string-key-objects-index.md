@@ -1,6 +1,6 @@
 ---
 title: "fix-mysql-unique-notnull-index-pk-reflection-and-add-string-key-objects-index"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
