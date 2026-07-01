@@ -188,6 +188,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
@@ -207,19 +208,20 @@ Optional. Hazards, Rails source pointers, non-obvious context.
 
 ### Frontmatter schema
 
-| Field        | Type            | Values                                                                       | Required                 |
-| ------------ | --------------- | ---------------------------------------------------------------------------- | ------------------------ |
-| `title`      | string          | prose                                                                        | yes                      |
-| `status`     | enum            | `draft` `ready` `claimed` `in-progress` `done` `blocked`                     | yes                      |
-| `rfc`        | string          | RFC slug, e.g. `"0001-task-system"`                                          | yes                      |
-| `cluster`    | string          | must match one of the parent RFC's declared `clusters`                       | yes                      |
-| `deps`       | string[]        | story IDs this story depends on                                              | yes (empty `[]` if none) |
-| `deps-rfc`   | string[]        | RFC slugs that must reach `status: closed` before this story is ready        | no                       |
-| `est-loc`    | integer \| null | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown | yes (field present)      |
-| `pr`         | integer \| null | GitHub PR number once open                                                   | no                       |
-| `claim`      | string \| null  | ISO timestamp when claimed                                                   | no                       |
-| `assignee`   | string \| null  | worktree name or agent ID                                                    | no                       |
-| `blocked-by` | string \| null  | freetext reason if status is `blocked`                                       | no                       |
+| Field           | Type            | Values                                                                       | Required                 |
+| --------------- | --------------- | ---------------------------------------------------------------------------- | ------------------------ |
+| `title`         | string          | prose                                                                        | yes                      |
+| `status`        | enum            | `draft` `ready` `claimed` `in-progress` `done` `blocked` `closed`            | yes                      |
+| `rfc`           | string          | RFC slug, e.g. `"0001-task-system"`                                          | yes                      |
+| `cluster`       | string          | must match one of the parent RFC's declared `clusters`                       | yes                      |
+| `deps`          | string[]        | story IDs this story depends on                                              | yes (empty `[]` if none) |
+| `deps-rfc`      | string[]        | RFC slugs that must reach `status: closed` before this story is ready        | no                       |
+| `est-loc`       | integer \| null | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown | yes (field present)      |
+| `pr`            | integer \| null | GitHub PR number once open                                                   | no                       |
+| `claim`         | string \| null  | ISO timestamp when claimed                                                   | no                       |
+| `assignee`      | string \| null  | worktree name or agent ID                                                    | no                       |
+| `blocked-by`    | string \| null  | freetext reason if status is `blocked`                                       | no                       |
+| `closed-reason` | string \| null  | freetext reason if status is `closed` (superseded/abandoned/won't-do)        | no                       |
 
 Status lifecycle:
 
@@ -227,7 +229,14 @@ Status lifecycle:
 draft → ready → claimed → in-progress → done
                         ↓
                      blocked (→ ready once unblocked)
+                        ↓
+                     closed  (terminal: superseded/abandoned; → ready once reopened)
 ```
+
+`closed` is terminal for a story that will never ship code, reachable from any
+pre-`done` state via `pnpm tasks close <id> --reason "<text>"`; it requires a
+`closed-reason` and clears the story's claim/assignee/blocked-by. See the repo
+README §Lifecycle for the full rules.
 
 ### Index
 
@@ -264,7 +273,7 @@ WHERE s.status = 'ready'
   AND NOT EXISTS (
     SELECT 1 FROM deps d
     JOIN stories dep ON dep.id = d.dep_id
-    WHERE d.story_id = s.id AND dep.status != 'done'
+    WHERE d.story_id = s.id AND dep.status NOT IN ('done', 'closed')
   );
 ```
 
