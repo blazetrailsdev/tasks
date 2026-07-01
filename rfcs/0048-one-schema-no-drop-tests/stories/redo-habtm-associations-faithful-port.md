@@ -1,7 +1,7 @@
 ---
 title: "redo-habtm-associations-faithful-port"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T14:24:49Z"
+assignee: "redo-habtm-associations-faithful-port"
 blocked-by: null
 ---
 
