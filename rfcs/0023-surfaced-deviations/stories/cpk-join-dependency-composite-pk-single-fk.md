@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency: support composite-PK model with single-column FK association join"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
