@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - converge-adapter-connection-test-one-schema
 deps-rfc: []
 est-loc: null
 priority: null
