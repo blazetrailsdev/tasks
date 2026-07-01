@@ -1,0 +1,74 @@
+---
+title: "hasone-through-write-side-and-nil-stale-gaps"
+status: ready
+updated: 2026-07-01
+rfc: "0023-surfaced-deviations"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+---
+
+## Context
+
+Surfaced while porting `has-one-through-associations.test.ts` to a faithful
+Rails mirror (RFC 0048, `redo-has-one-through-faithful-port`). Several
+write-side / stale-target has_one_through behaviors that Rails supports are
+unimplemented in trails; the ported tests are `it.skip` with
+`TRACKED-PENDING-CONVERGENCE` markers pointing here.
+
+trails source: `packages/activerecord/src/associations/has-one-through-association.ts`
+Rails: `vendor/rails/activerecord/lib/active_record/associations/has_one_through_association.rb`
+
+- `singular_association.rb` (`build`, `create`) and `through_association.rb`.
+
+Distinct gaps (each has a skipped test):
+
+1. **`build` does not build/persist the join record.**
+   `member.association("club").build()` sets the club target but never builds
+   the intermediate through record (`current_membership`); it stays nil even
+   after `member.save()`. Rails' `build_club` builds `current_membership` too.
+   Tests: `creating association builds through record`,
+   `association build constructor builds through record`.
+
+2. **`create` does not route through `createThroughRecord`.**
+   `member.association("club").create()` returns a target with a bogus id and
+   persists no join record. Test:
+   `association create constructor creates through record`.
+
+3. **New-owner assignment does not autosave the target.**
+   On a new owner, saving a has_one_through assignment creates the join record
+   but leaves the target unsaved (`club.id` nil). Tests:
+   `creating association builds through record for new`,
+   `creating association sets both parent ids for new`.
+
+4. **Stale reload after a nil target load.**
+   After a has_one_through belongs_to loads a nil target, `_staleState` is null
+   and the reader's stale-reload branch is guarded by `_staleState != null`
+   (`association.ts:381`), so setting the through FK never reloads the
+   previously-nil target. Test:
+   `has one through belongs to setting belongs to foreign key after nil target loaded`.
+
+5. **Unpersisted-owner read via in-memory through target.**
+   A has_one_through read on an unpersisted owner whose through belongs_to
+   target is already persisted does not resolve via the in-memory through
+   record. Test: `loading cpk association with unpersisted owner`.
+
+Note: this PR already fixed the sibling gap — `HasOneThroughAssociation` now
+overrides `staleState` (via `throughStaleState`), so
+`test_has_one_through_belongs_to_should_update_when_the_through_foreign_key_changes`
+and `test_cpk_stale_target` pass. Item 4 above is the remaining nil-load edge.
+
+## Acceptance criteria
+
+- [ ] Converge trails to Rails for each numbered gap (build/create construct the
+      through record; new-owner assignment autosaves the target; nil-load stale
+      reload; unpersisted-owner in-memory resolution).
+- [ ] Un-skip the corresponding `TRACKED-PENDING-CONVERGENCE` tests in
+      `has-one-through-associations.test.ts` (names unchanged).
+- [ ] No regression in has_one_through / has_many_through / nested-through suites.
