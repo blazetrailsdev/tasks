@@ -1,6 +1,6 @@
 ---
 title: "require-canonical-schema rule must unwrap as const / satisfies to close ratchet evasion"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: null
+pr: 4383
 claim: "2026-07-01T19:41:56Z"
 assignee: "require-canonical-schema-unwrap-as-const"
 blocked-by: null
