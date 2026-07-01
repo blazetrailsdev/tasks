@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-bespoke-shapes-one-schema"
-status: claimed
+status: blocked
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -11,7 +11,7 @@ priority: 1
 pr: null
 claim: "2026-07-01T21:46:15Z"
 assignee: "converge-schema-dumper-bespoke-shapes-one-schema"
-blocked-by: null
+blocked-by: "Premise infra absent from main: no AR_ONE_SCHEMA flag and no eslint/one-schema-exclude.json exist (grep across packages/ scripts/ eslint/ = 0 hits). The one-schema flag/exclude commits (655b058c8, d22acd3f3) never landed on main; only PR #4366 standard_dump convergence did (43c99381d). All 9 named tests already PASS in the only mode that exists (flag-off): full file 41 passed | 27 skipped. AC (AR_ONE_SCHEMA=1 run, remove from one-schema-exclude.json) is unverifiable/unsatisfiable. Blocked on the missing #4246 one-schema spike; hold per RFC 0048 mis-spec rewrite."
 ---
 
 ## Context
