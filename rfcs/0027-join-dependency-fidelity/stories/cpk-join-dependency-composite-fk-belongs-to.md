@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency: join composite-PK model's composite-FK belongsTo association"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T12:54:48Z"
+assignee: "cpk-join-dependency-composite-fk-belongs-to"
 blocked-by: null
 ---
 
