@@ -1,7 +1,7 @@
 ---
 title: "converge-adapter-connection-test-one-schema"
-status: in-progress
-updated: 2026-06-30
+status: done
+updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
