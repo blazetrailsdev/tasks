@@ -1,6 +1,6 @@
 ---
 title: "Converge schema-dumper.test.ts faithful port onto canonical TEST_SCHEMA + fixtures"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
