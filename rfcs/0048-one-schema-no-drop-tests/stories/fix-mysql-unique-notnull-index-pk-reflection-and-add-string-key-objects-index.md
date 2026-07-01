@@ -1,6 +1,6 @@
 ---
 title: "fix-mysql-unique-notnull-index-pk-reflection-and-add-string-key-objects-index"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T17:38:12Z"
+assignee: "fix-mysql-unique-notnull-index-pk-reflection-and-add-string-key-objects-index"
 blocked-by: null
 ---
 
