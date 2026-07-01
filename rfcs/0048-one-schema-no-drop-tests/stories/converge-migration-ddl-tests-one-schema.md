@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-ddl-tests-one-schema"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T20:46:14Z"
+assignee: "converge-migration-ddl-tests-one-schema"
 blocked-by: null
 ---
 
