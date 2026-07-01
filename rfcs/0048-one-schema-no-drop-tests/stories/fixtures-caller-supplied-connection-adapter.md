@@ -4,7 +4,8 @@ status: ready
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
-deps: []
+deps:
+  - fixtures-add-nontransactional-mode
 deps-rfc: []
 est-loc: 250
 priority: 8
