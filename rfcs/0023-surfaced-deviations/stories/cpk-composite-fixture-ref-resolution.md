@@ -1,6 +1,6 @@
 ---
 title: "cpk-composite-fixture-ref-resolution"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4369
 claim: "2026-07-01T11:24:48Z"
 assignee: "cpk-composite-fixture-ref-resolution"
 blocked-by: null
