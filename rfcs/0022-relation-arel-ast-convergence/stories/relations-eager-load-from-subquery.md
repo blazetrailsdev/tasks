@@ -2,7 +2,7 @@
 title: "eagerLoad/includes relation cannot be used as from() subquery source"
 status: ready
 updated: 2026-06-27
-rfc: "0023-surfaced-deviations"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []

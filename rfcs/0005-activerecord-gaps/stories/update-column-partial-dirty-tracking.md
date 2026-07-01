@@ -2,7 +2,7 @@
 title: "update_column clears all dirty state instead of only written-attribute dirty"
 status: ready
 updated: 2026-06-28
-rfc: "0023-surfaced-deviations"
+rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []

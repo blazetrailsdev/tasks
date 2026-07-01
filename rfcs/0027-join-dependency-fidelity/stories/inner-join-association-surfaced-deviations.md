@@ -2,7 +2,7 @@
 title: "inner-join-association-surfaced-deviations"
 status: ready
 updated: 2026-06-30
-rfc: "0023-surfaced-deviations"
+rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

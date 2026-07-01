@@ -2,7 +2,7 @@
 title: "SqlLiteral hash-keyed order should be reversible (not trigger dangerousQueryCheck)"
 status: ready
 updated: 2026-06-27
-rfc: "0023-surfaced-deviations"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []

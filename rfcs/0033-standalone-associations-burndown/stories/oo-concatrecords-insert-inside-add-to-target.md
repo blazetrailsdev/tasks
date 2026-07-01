@@ -2,7 +2,7 @@
 title: "OO concatRecords should run insert_record inside the add_to_target block, matching Rails' ordering"
 status: ready
 updated: 2026-06-30
-rfc: "0023-surfaced-deviations"
+rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
 deps-rfc: []

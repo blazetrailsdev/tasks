@@ -2,7 +2,7 @@
 title: "instance #update(nil) should raise ArgumentError not TypeError"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0005-activerecord-gaps"
 cluster: null
 deps:
   - persistence-test-canonical-wave15

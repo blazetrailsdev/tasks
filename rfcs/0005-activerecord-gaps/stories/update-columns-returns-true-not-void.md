@@ -2,7 +2,7 @@
 title: "update_columns/update_column return true (Rails) not void"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0005-activerecord-gaps"
 cluster: null
 deps:
   - persistence-test-canonical-wave15

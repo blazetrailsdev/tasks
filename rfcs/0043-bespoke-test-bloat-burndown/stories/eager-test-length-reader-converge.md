@@ -2,7 +2,7 @@
 title: "eager.test.ts: use proxy.length() reader instead of internal target.length"
 status: ready
 updated: 2026-06-29
-rfc: "0023-surfaced-deviations"
+rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
 deps: []
 deps-rfc: []

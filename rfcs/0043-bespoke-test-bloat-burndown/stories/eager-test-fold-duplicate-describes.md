@@ -2,7 +2,7 @@
 title: "Fold 22 duplicate EagerAssociationTest describes into one shared-fixture suite"
 status: draft
 updated: 2026-06-29
-rfc: "0023-surfaced-deviations"
+rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
 deps: []
 deps-rfc: []

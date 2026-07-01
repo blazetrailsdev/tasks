@@ -2,7 +2,7 @@
 title: "performCount limit-branch ignores requested aggregate column"
 status: draft
 updated: 2026-06-16
-rfc: "0023-surfaced-deviations"
+rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

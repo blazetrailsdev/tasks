@@ -2,7 +2,7 @@
 title: "assess 3 skipped has-many tests with non-canonical FK columns (thr_id, hc_author_id, ns_author_id)"
 status: ready
 updated: 2026-06-28
-rfc: "0023-surfaced-deviations"
+rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
 deps-rfc: []

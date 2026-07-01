@@ -2,7 +2,7 @@
 title: "from(rel, alias) generates wrong table qualifier in GROUP BY (uses original table, not alias)"
 status: ready
 updated: 2026-06-27
-rfc: "0023-surfaced-deviations"
+rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []
