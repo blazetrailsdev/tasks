@@ -1,6 +1,6 @@
 ---
 title: "Add caller-supplied connection/adapter knob to fixtures(); converge multiple-db + transaction-instrumentation"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: null
+pr: 4387
 claim: "2026-07-01T22:46:18Z"
 assignee: "fixtures-caller-supplied-connection-adapter"
 blocked-by: null
