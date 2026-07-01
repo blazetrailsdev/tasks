@@ -1,6 +1,6 @@
 ---
 title: "Rename canonical scratch tables in relocated .trails DDL tests (Rails fidelity)"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: null
+pr: 4367
 claim: "2026-07-01T12:24:48Z"
 assignee: "converge-relocated-trails-scratch-tables"
 blocked-by: null
