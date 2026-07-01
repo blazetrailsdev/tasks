@@ -1,6 +1,6 @@
 ---
 title: "Port Core#hash + Set dedup for composite-pk models"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T10:54:45Z"
+assignee: "composite-pk-models-hash-and-set"
 blocked-by: null
 ---
 
