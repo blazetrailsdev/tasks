@@ -1,6 +1,6 @@
 ---
 title: "fix-defineschema-materialization-precision-scale-limit-roundtrip"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
+pr: 4378
 claim: "2026-07-01T17:08:10Z"
 assignee: "fix-defineschema-materialization-precision-scale-limit-roundtrip"
 blocked-by: null
