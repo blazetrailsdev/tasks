@@ -1,13 +1,13 @@
 ---
-title: "enum-reserved-undeclared-override-alias"
+title: "enum-negative-scope-warn-not-raise"
 status: ready
 updated: 2026-06-30
-rfc: "0048-one-schema-no-drop-tests"
+rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 13
+priority: null
 pr: null
 claim: null
 assignee: null
@@ -16,28 +16,21 @@ blocked-by: null
 
 ## Context
 
-Surfaced converging `enum.test.ts` (PR #4318). Three independent enum-parity
-gaps in `packages/activerecord/src/enum.ts`:
-
-- Reserved enum _names_ (`column`, `logger`, `attributes`) are not guarded —
-  Rails raises; trails does not (`detectEnumConflictBang` only checks generated
-  value method names).
-- `enum` on an attribute with an undeclared type silently defaults the subtype
-  to `integer` (try/catch in `_enum`); Rails raises on `type_for_attribute`.
-- Re-defining an enum bang method (`def published!; super; end`) then declaring
-  the enum raises a conflict in trails; Rails allows it (override via `super`).
-- `alias_attribute` + `enum` on the alias does not resolve (the aliased enum
-  attribute reads nil).
+Surfaced converging `enum.test.ts` (PR #4318). Rails _warns_ when an enum
+element's auto-generated negative scope (`not_*`) collides with a
+positively-named element; trails' conflict-detection pass in
+`packages/activerecord/src/enum.ts` `_enum` _raises_ an ArgumentError instead,
+pre-empting `detectNegativeEnumConditionsBang` (which exists but is unwired).
 
 ## Acceptance criteria
 
-Implement the four behaviors and port these `enum_test.rb` cases in
-`enum.test.ts`:
+Convert the negative-scope-clash case from a hard conflict error to the Rails
+warning (via `detectNegativeEnumConditionsBang` / `setEnumWarn`), suppressed
+under `scopes: false`. Then port these `enum_test.rb` cases in `enum.test.ts`:
 
-- reserved enum names
-- raises for attributes with undeclared type
-- overriding enum method should not raise
-- enum with alias_attribute
+- enum logs a warning if auto-generated negative scopes would clash with other enum names
+- enum logs a warning if auto-generated negative scopes would clash with other enum names regardless of order
+- enum doesn't log a warning if opting out of scopes
 
 ## RFC 0048 working notes (added 2026-07-01)
 
