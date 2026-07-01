@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-ddl-tests-one-schema"
-status: claimed
+status: blocked
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -11,7 +11,7 @@ priority: 1
 pr: null
 claim: "2026-07-01T20:46:14Z"
 assignee: "converge-migration-ddl-tests-one-schema"
-blocked-by: null
+blocked-by: "Mis-specified + unverifiable on main: AR_ONE_SCHEMA flag and eslint/one-schema-exclude.json exist only in unmerged spike #4246; no DDL-isolation primitive (shared per-worker pool); people add/remove-column tests are already Rails-faithful and must NOT be scratch-tabled. Revisit once #4246 lands; fix is a flag-off DDL lane. See story body."
 ---
 
 ## Context
