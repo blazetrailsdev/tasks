@@ -1,5 +1,5 @@
 ---
-rfc: "0000-enum-fidelity"
+rfc: "0050-enum-fidelity"
 title: "Enum fidelity"
 status: draft
 created: 2026-07-01
@@ -15,7 +15,7 @@ related-rfcs:
   - "0048-one-schema-no-drop-tests"
 ---
 
-# RFC — Enum fidelity
+# RFC 0050 — Enum fidelity
 
 ## Summary
 
