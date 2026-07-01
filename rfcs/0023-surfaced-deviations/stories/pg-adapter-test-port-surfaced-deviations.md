@@ -20,10 +20,12 @@ Surfaced while converging
 `packages/activerecord/src/adapters/postgresql/postgresql-adapter.test.ts` to a
 faithful port of
 `vendor/rails/activerecord/test/cases/adapters/postgresql/postgresql_adapter_test.rb`
-(PR #4359). Two deviations were fixed in that PR (pkAndSequenceFor
-null-when-no-sequence; INCLUDE-column quote un-doubling). The following real
-impl gaps were deferred with tracked notes in the test file header and should be
-converged to Rails behavior:
+(PR #4359). Several deviations were fixed in that PR (pkAndSequenceFor
+null-vs-`[pk, nil]` matching Rails' fallback-query semantics; INCLUDE-column
+quote un-doubling; `indexExists` `valid:` option; `primaryKey` case-sensitive
+resolution via `to_regclass(quote_ident(...))`). The following real impl gaps
+were deferred with tracked notes in the test file header and should be converged
+to Rails behavior:
 
 1. **`indexExists` returns false for expression indexes.** Rails
    `test_expression_index` asserts
@@ -34,14 +36,7 @@ converged to Rails behavior:
    `connection-adapters/postgresql/schema-statements-class.ts` (indexes) and the
    `indexExists` path.
 
-2. **`primaryKey` does not resolve a raw case-sensitive table name.** Rails
-   `primary_key("CamelCase")` works on the raw name; trails requires the
-   identifier pre-quoted (`'"CamelCase"'`) because unquoted names fold to
-   lowercase via `to_regclass`. The port passes the quoted form. Fix: have
-   `primaryKey` (and siblings) resolve a case-sensitive relname without caller
-   quoting, mirroring Rails.
-
-3. **Standalone-adapter errors carry a ConnectionPool, never NullPool.** Rails
+2. **Standalone-adapter errors carry a ConnectionPool, never NullPool.** Rails
    `test_connection_error` / `test_reconnection_error` assert
    `error.connection_pool` is a `NullPool` (and `test_serial_sequence` /
    `test_bad_connection_to_postgres_database` assert pool identity). A standalone
