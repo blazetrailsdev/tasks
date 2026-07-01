@@ -1,6 +1,6 @@
 ---
 title: "Burn one-schema-exclude.json toward zero (un-exclude tracker)"
-status: claimed
+status: blocked
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -11,7 +11,7 @@ priority: 2
 pr: null
 claim: "2026-07-01T11:17:30Z"
 assignee: "unexclude-one-schema-burndown-tracker"
-blocked-by: null
+blocked-by: "Premise unworkable on main: eslint/one-schema-exclude.json and the entire AR_ONE_SCHEMA one-schema infrastructure (flag, repairWorkerSchema forcing, discovery lane) are NOT merged to main — they live only on the unmerged spike branch (9375746f3 / PR #4246). Only a passing prose comment mention exists on main. Cannot un-exclude files from a non-existent exclude list. RFC 0048 is flagged mis-specified and halted (2026-06-30) pending rewrite. Blocked until the one-schema spike (#4246) lands on main."
 ---
 
 # Burn `one-schema-exclude.json` toward zero (un-exclude tracker)
