@@ -63,3 +63,20 @@ path vs the direct-adapter one (the same divergence class that dropped scalar
 order on sqlite), or a `loadSchema`/`reconstructFromSchema` DSL-replay gap on
 MySQL. Needs a live MySQL/MariaDB to reproduce (not reproducible on the sqlite
 dev lane).
+
+**Ruled out (PR #4377, commit 58da2a018): cold `_databaseVersion` cache.** A
+review hypothesis held that `SchemaStatements#addIndex` runs against a cold
+version cache so `supportsIndexSortOrder()` silently returns `false` and drops
+the order. Tested empirically: primed the cache with
+`await this.adapter.getDatabaseVersion()` at the top of `addIndex` AND ungated
+the dumper test to the live `supportsIndexSortOrder()` predicate — the MariaDB 11
+CI lane still dumped `companies` with no order (both `company_index` and
+`index_companies_on_name_and_rating`). This is expected: the MySQL order path
+(`MysqlSchemaCreation` → the ungated mysql `addOptionsForIndexColumns`,
+`mysql/schema-statements.ts:340-356`) never consults `supportsIndexSortOrder()`,
+and reflection keys off `SHOW KEYS` `Collation = "D"`
+(`mysql/schema-statements.ts:907`) — neither depends on the version. The
+`getDatabaseVersion()` prime was kept as a harmless defensive fix; the test gate
+(`dumpsIndexSortOrder()` → `adapterType !== "mysql"`) stays. Real cause is most
+likely MariaDB not storing/reporting the descending `Collation` for a
+reconstruct-created index — start there with a live MariaDB.
