@@ -1,7 +1,7 @@
 ---
 title: "redo-eager-singularization-faithful-port"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T13:54:49Z"
+assignee: "redo-eager-singularization-faithful-port"
 blocked-by: null
 ---
 
