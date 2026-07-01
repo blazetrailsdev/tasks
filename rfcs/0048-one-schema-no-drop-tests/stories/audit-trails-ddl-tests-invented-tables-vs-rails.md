@@ -1,6 +1,6 @@
 ---
 title: "Audit .trails DDL tests: invented scratch tables have no Rails source (delete or canonicalize)"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
