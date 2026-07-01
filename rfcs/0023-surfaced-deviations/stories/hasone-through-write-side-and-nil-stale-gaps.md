@@ -72,3 +72,29 @@ and `test_cpk_stale_target` pass. Item 4 above is the remaining nil-load edge.
 - [ ] Un-skip the corresponding `TRACKED-PENDING-CONVERGENCE` tests in
       `has-one-through-associations.test.ts` (names unchanged).
 - [ ] No regression in has_one_through / has_many_through / nested-through suites.
+
+## PG/MariaDB-only gaps (added 2026-07-01, surfaced by PR #4375 CI)
+
+Two more `it.skip` tests in the same file — these pass on SQLite but fail
+deterministically (reproduced in isolation) on PostgreSQL and MariaDB:
+
+1. **has_one autosave does not persist a lone has_one child on `owner.save()`.**
+   `member.association("memberDetail").writer(md); await member.save()` leaves
+   `md` unpersisted on PG/MariaDB (its `member_id` is never written), so
+   `md.member_type` (has_one through member) resolves to nil. On SQLite the
+   child is saved. Test: `through belongs to after destroy`. (Note: the sibling
+   `assigning to has one through preserves decorated join record` passes on PG —
+   it also sets the `organization` writer, which appears to be what triggers the
+   child flush; the lone-child case does not.)
+
+2. **Eager-loading a has*one_through with a WHERE on the \_source* table nils on PG/MariaDB.**
+   `Member.includes(:hairy_club)` (scope `where(clubs: { name: … })`, through
+   `membership`, source `club`) preloads the club correctly on SQLite but nil on
+   PG/MariaDB — the source-table condition fails to match across the through
+   join. The through-table-condition arm (`favorite_club`) works on all adapters.
+   Test: `has one through with conditions eager loading`.
+
+Note: the `preloading has one through on belongs to` count test was NOT a trails
+gap — it needed a `member.reload()` to settle the deferred has_one_through write
+before the assert_queries_count block (trails persists has_one on `save`, not on
+assignment like Rails). That test now passes on all adapters.
