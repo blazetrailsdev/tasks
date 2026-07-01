@@ -1,6 +1,6 @@
 ---
 title: "adapter-connection-failure-error-classification"
-status: claimed
+status: blocked
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-01T00:24:47Z"
 assignee: "adapter-connection-failure-error-classification"
-blocked-by: null
+blocked-by: "Un-skippable tests live in PR #4350 (converge-adapter-connection-test-one-schema), still open/unmerged. The itBlocked AdapterConnectionTest cases + helpers (remoteDisconnect, killConnectionFromServer, activePredicate) don't exist on main; can't un-skip or verify the adapter fix without them, and no stacked PRs. Unblock when #4350 merges."
 ---
 
 ## Context
