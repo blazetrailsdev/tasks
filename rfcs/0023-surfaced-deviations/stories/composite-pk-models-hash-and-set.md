@@ -1,6 +1,6 @@
 ---
 title: "Port Core#hash + Set dedup for composite-pk models"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
