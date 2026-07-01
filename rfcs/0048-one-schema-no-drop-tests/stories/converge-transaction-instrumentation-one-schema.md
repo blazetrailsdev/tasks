@@ -1,6 +1,6 @@
 ---
 title: "converge-transaction-instrumentation-one-schema"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4358
 claim: "2026-07-01T02:24:48Z"
 assignee: "converge-transaction-instrumentation-one-schema"
 blocked-by: null
