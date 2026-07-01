@@ -1,5 +1,5 @@
 ---
-rfc: "0000-serialization-fidelity"
+rfc: "0055-serialization-fidelity"
 title: "Serialization fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Serialization fidelity
+# RFC 0055 — Serialization fidelity
 
 ## Summary
 
