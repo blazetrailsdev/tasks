@@ -1,6 +1,6 @@
 ---
 title: "Converge AR DDL tests off canonical-table scratching and bespoke tables (Rails fidelity)"
-status: claimed
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
+pr: 4367
 claim: "2026-07-01T11:54:48Z"
 assignee: "fidelity-audit-canonical-scratch-and-bespoke-tables"
 blocked-by: null
