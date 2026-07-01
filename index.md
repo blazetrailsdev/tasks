@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-migration-schema-statements-fidelity](rfcs/0000-migration-schema-statements-fidelity/README.md) | Migration & SchemaStatements fidelity | draft | @deanmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -55,3 +54,4 @@
 | [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | Rails-faithful AR test convergence | active | @deanmarano | activerecord |
 | [0049-one-schema-no-drop-perf](rfcs/0049-one-schema-no-drop-perf/README.md) | One-schema no-drop test mode (perf) | draft | @deanmarano | activerecord |
 | [0050-enum-fidelity](rfcs/0050-enum-fidelity/README.md) | Enum fidelity | draft | @deanmarano | activerecord |
+| [0051-migration-schema-statements-fidelity](rfcs/0051-migration-schema-statements-fidelity/README.md) | Migration & SchemaStatements fidelity | draft | @deanmarano | activerecord |

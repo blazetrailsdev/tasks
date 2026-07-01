@@ -1,5 +1,5 @@
 ---
-rfc: "0000-migration-schema-statements-fidelity"
+rfc: "0051-migration-schema-statements-fidelity"
 title: "Migration & SchemaStatements fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Migration & SchemaStatements fidelity
+# RFC 0051 — Migration & SchemaStatements fidelity
 
 ## Summary
 
