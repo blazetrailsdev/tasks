@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-test-people-migration-and-bespoke-schema"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T13:24:53Z"
+assignee: "converge-migration-test-people-migration-and-bespoke-schema"
 blocked-by: null
 ---
 
