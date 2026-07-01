@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-test-faithful-port"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
