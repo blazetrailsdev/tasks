@@ -1,6 +1,6 @@
 ---
 title: "counter-cache touch: accepts { time: } hash form (Rails update_counters/reset_counters)"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
