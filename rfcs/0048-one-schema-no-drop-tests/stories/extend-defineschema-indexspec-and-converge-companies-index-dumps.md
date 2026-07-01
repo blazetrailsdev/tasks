@@ -1,6 +1,6 @@
 ---
 title: "extend-defineschema-indexspec-and-converge-companies-index-dumps"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T16:38:11Z"
+assignee: "extend-defineschema-indexspec-and-converge-companies-index-dumps"
 blocked-by: null
 ---
 
