@@ -1,6 +1,6 @@
 ---
 title: "converge-mysql2-trails-ex-subscribers-to-canonical"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4385
 claim: "2026-07-01T21:16:15Z"
 assignee: "converge-mysql2-trails-ex-subscribers-to-canonical"
 blocked-by: null
