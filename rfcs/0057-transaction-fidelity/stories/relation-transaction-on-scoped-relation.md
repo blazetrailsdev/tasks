@@ -2,7 +2,7 @@
 title: "Relation#transaction opens a transaction on a scoped relation without applying its scope"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

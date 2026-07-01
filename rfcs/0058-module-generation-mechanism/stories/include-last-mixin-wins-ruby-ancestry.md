@@ -2,7 +2,7 @@
 title: "include() should match Ruby ancestry (last-included mixin wins), retiring manual prototype overrides"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
 deps-rfc: []

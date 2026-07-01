@@ -4,7 +4,7 @@ title: "Widen call-set parity: converge all ported-method internal calls to Rail
 status: active
 created: 2026-06-24
 updated: 2026-06-24
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "arel"

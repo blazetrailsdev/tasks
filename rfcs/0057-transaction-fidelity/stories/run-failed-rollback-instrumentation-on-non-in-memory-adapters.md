@@ -2,7 +2,7 @@
 title: "Run failed-rollback transaction-instrumentation tests on PG/MySQL lanes"
 status: ready
 updated: 2026-07-01
-rfc: "0023-surfaced-deviations"
+rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

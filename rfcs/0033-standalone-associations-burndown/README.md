@@ -4,7 +4,7 @@ title: "Standalone-association call burndown"
 status: active
 created: 2026-06-17
 updated: 2026-06-17
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

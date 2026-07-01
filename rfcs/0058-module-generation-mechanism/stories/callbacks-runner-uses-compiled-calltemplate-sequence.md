@@ -2,7 +2,7 @@
 title: "Callback runner should drive the compiled CallTemplate/CallbackSequence instead of bespoke _invoke"
 status: draft
 updated: 2026-06-16
-rfc: "0023-surfaced-deviations"
+rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
 deps-rfc: []

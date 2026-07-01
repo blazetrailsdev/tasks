@@ -2,7 +2,7 @@
 title: "save-runs-validations-inside-transaction"
 status: ready
 updated: 2026-06-29
-rfc: "0023-surfaced-deviations"
+rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

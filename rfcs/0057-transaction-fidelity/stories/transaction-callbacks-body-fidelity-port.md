@@ -2,7 +2,7 @@
 title: "transaction-callbacks.test.ts: port SetCallback/DestroyUpdateRace/ActionCondition bodies word-for-word from Rails"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

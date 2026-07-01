@@ -37,7 +37,7 @@
 | [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | active | @deanmarano | activerecord |
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | closed | @deanmarano | activerecord |
 | [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | active | @deanmarano | activerecord |
-| [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | active | @your-handle | activerecord |
+| [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | active | @deanmarano | activerecord |
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |
 | [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
 | [0037-no-explicit-any-enforcement](rfcs/0037-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | closed | @deanmarano | activerecord |
@@ -45,12 +45,12 @@
 | [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | closed | @deanmarano | activesupport, activerecord |
 | [0040-through-association-source-convergence](rfcs/0040-through-association-source-convergence/README.md) | Through-association source/polymorphic reflection convergence | closed | @deanmarano | activerecord |
 | [0041-activesupport-messagepack-ext](rfcs/0041-activesupport-messagepack-ext/README.md) | ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity) | draft | @deanmarano | activesupport |
-| [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | closed | @your-handle | activerecord |
+| [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | closed | @deanmarano | activerecord |
 | [0043-bespoke-test-bloat-burndown](rfcs/0043-bespoke-test-bloat-burndown/README.md) | ActiveRecord bespoke TS-only test-bloat burndown | active | @deanmarano | activerecord |
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | closed | @deanmarano | activerecord |
 | [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | draft | @deanmarano | activerecord |
-| [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | active | @your-handle | activerecord, arel, activemodel |
+| [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | active | @deanmarano | activerecord, arel, activemodel |
 | [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | Rails-faithful AR test convergence | active | @deanmarano | activerecord |
 | [0049-one-schema-no-drop-perf](rfcs/0049-one-schema-no-drop-perf/README.md) | One-schema no-drop test mode (perf) | draft | @deanmarano | activerecord |
 | [0050-enum-fidelity](rfcs/0050-enum-fidelity/README.md) | Enum fidelity | draft | @deanmarano | activerecord |

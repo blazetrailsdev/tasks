@@ -4,7 +4,7 @@ title: "Converge Base.establishConnection onto resolveConfigForConnection (singl
 status: closed
 created: 2026-06-21
 updated: 2026-06-30
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

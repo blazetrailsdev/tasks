@@ -2,7 +2,7 @@
 title: "Unprepared SELECT materializes the lazy transaction on PG/MySQL"
 status: ready
 updated: 2026-06-26
-rfc: "0023-surfaced-deviations"
+rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
