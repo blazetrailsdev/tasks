@@ -1,7 +1,7 @@
 ---
 title: "JoinDependency: support composite-PK model with single-column FK association join"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T10:24:48Z"
+assignee: "cpk-join-dependency-composite-pk-single-fk"
 blocked-by: null
 ---
 
