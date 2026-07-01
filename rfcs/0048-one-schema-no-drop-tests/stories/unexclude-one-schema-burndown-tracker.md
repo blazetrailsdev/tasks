@@ -1,6 +1,6 @@
 ---
 title: "Burn one-schema-exclude.json toward zero (un-exclude tracker)"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T11:17:30Z"
+assignee: "unexclude-one-schema-burndown-tracker"
 blocked-by: null
 ---
 
