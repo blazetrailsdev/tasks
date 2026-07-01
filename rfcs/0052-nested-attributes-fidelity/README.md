@@ -1,5 +1,5 @@
 ---
-rfc: "0000-nested-attributes-fidelity"
+rfc: "0052-nested-attributes-fidelity"
 title: "Nested attributes fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Nested attributes fidelity
+# RFC 0052 — Nested attributes fidelity
 
 ## Summary
 
