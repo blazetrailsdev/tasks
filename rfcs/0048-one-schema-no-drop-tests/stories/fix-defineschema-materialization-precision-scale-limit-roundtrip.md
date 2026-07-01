@@ -1,6 +1,6 @@
 ---
 title: "fix-defineschema-materialization-precision-scale-limit-roundtrip"
-status: in-progress
+status: done
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
