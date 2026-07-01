@@ -1,6 +1,6 @@
 ---
 title: "Audit .trails DDL tests: invented scratch tables have no Rails source (delete or canonicalize)"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: "rails-deviation"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T16:08:12Z"
+assignee: "audit-trails-ddl-tests-invented-tables-vs-rails"
 blocked-by: null
 ---
 
