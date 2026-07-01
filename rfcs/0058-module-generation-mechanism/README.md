@@ -1,5 +1,5 @@
 ---
-rfc: "0000-module-generation-mechanism"
+rfc: "0058-module-generation-mechanism"
 title: "Module/mixin generation mechanism convergence"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Module/mixin generation mechanism convergence
+# RFC 0058 — Module/mixin generation mechanism convergence
 
 ## Summary
 
