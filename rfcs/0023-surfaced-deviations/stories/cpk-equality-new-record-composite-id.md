@@ -1,6 +1,6 @@
 ---
 title: "cpk-equality-new-record-composite-id"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4362
 claim: "2026-07-01T04:24:47Z"
 assignee: "cpk-equality-new-record-composite-id"
 blocked-by: null
