@@ -1,6 +1,6 @@
 ---
 title: "fix-schema-qualified-index-name-derivation"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4386
 claim: "2026-07-01T22:16:14Z"
 assignee: "fix-schema-qualified-index-name-derivation"
 blocked-by: null
