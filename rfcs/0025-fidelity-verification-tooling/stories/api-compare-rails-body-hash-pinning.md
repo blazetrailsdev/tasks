@@ -1,6 +1,6 @@
 ---
 title: "api:compare source-hash pinning — detect upstream Rails body drift on matched methods"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4388
 claim: "2026-07-01T23:16:16Z"
 assignee: "api-compare-rails-body-hash-pinning"
 blocked-by: null
