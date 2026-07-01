@@ -45,6 +45,16 @@ to Rails behavior:
    with the mysql2 converge follow-up (same NullPool gap). Fix: expose a
    NullPool on errors raised before a real pool is established.
 
+3. **Adapter-level tests lack ambient fixtures.** Rails `test_serial_sequence` /
+   `test_default_sequence_name` exercise the loaded `accounts` fixture and assert
+   `"public.accounts_id_seq"`. trails adapter tests have no ambient fixtures, and
+   recreating the shared canonical `accounts` in the parallel PG lane would
+   corrupt sibling suites, so the port exercises the identical sequence-name
+   derivation against the ephemeral `ex` table (`"public.ex_id_seq"`). Fix:
+   provide a fixture-loading path for adapter-level PG tests so these can run
+   against the real `accounts` table as Rails does. (Test-infra convergence, not
+   an impl behavior gap.)
+
 ## Acceptance criteria
 
 - [ ] Each deviation above is either converged to Rails behavior (with the
