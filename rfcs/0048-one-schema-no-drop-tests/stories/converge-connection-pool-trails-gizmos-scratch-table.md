@@ -1,6 +1,6 @@
 ---
 title: "Converge connection-pool.trails.test.ts off invented 'gizmos' raw-CREATE scratch table"
-status: ready
+status: claimed
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T20:00:05Z"
+assignee: "converge-connection-pool-trails-gizmos-scratch-table"
 blocked-by: null
 ---
 
