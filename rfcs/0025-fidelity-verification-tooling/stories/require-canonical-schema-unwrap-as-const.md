@@ -1,13 +1,13 @@
 ---
 title: "require-canonical-schema rule must unwrap as const / satisfies to close ratchet evasion"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-01
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
