@@ -1,7 +1,7 @@
 ---
 title: "converge-pg-adapter-test-files-one-schema"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-01T01:24:47Z"
+assignee: "converge-pg-adapter-test-files-one-schema"
 blocked-by: null
 ---
 
