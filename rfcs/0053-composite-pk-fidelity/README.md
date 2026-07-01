@@ -1,5 +1,5 @@
 ---
-rfc: "0000-composite-pk-fidelity"
+rfc: "0053-composite-pk-fidelity"
 title: "Composite primary-key fidelity"
 status: draft
 created: 2026-07-01
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Composite primary-key fidelity
+# RFC 0053 — Composite primary-key fidelity
 
 ## Summary
 
