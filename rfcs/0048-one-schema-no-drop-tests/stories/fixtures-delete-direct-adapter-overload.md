@@ -1,6 +1,6 @@
 ---
 title: "Delete the direct-adapter useFixtures overload once callers are zero"
-status: claimed
+status: in-progress
 updated: 2026-07-01
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["fixtures-add-nontransactional-mode", "fixtures-caller-supplied-connectio
 deps-rfc: []
 est-loc: 80
 priority: 8
-pr: null
+pr: 4389
 claim: "2026-07-01T23:46:17Z"
 assignee: "fixtures-delete-direct-adapter-overload"
 blocked-by: null
