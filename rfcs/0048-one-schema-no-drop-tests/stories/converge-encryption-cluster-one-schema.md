@@ -1,6 +1,6 @@
 ---
 title: "Add encrypted_posts to canonical TEST_SCHEMA; converge 5 encryption test files off bespoke schema (one-schema)"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
