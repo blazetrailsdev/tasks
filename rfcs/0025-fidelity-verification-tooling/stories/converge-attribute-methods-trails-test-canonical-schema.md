@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-methods-trails-test-canonical-schema"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4392
 claim: "2026-07-02T01:19:58Z"
 assignee: "converge-attribute-methods-trails-test-canonical-schema"
 blocked-by: null
