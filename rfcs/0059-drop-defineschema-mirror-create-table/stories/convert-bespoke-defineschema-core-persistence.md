@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in core/persistence/locking tests (23 files)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T22:45:54Z"
+assignee: "convert-bespoke-defineschema-core-persistence"
 blocked-by: null
 closed-reason: null
 ---
