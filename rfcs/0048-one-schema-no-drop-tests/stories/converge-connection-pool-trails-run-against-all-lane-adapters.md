@@ -1,6 +1,6 @@
 ---
 title: "Converge connection-pool.trails.test.ts to run against all lane adapters (sqlite/postgres/mysql), not hardcoded SQLite"
-status: claimed
+status: done
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4396
 claim: "2026-07-02T02:10:02Z"
 assignee: "converge-connection-pool-trails-run-against-all-lane-adapters"
 blocked-by: null
