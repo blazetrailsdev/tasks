@@ -6,7 +6,7 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
