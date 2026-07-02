@@ -1,6 +1,6 @@
 ---
 title: "test:compare — compare literal assertion expected-values (phase 3)"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 4398
 claim: "2026-07-02T02:38:21Z"
 assignee: "assertion-expected-value-comparison"
 blocked-by: null
