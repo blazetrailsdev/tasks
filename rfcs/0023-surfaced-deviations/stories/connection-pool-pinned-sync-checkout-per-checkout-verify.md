@@ -1,6 +1,6 @@
 ---
 title: "connection-pool-pinned-sync-checkout-per-checkout-verify"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4443
 claim: "2026-07-02T21:45:51Z"
 assignee: "connection-pool-pinned-sync-checkout-per-checkout-verify"
 blocked-by: null
