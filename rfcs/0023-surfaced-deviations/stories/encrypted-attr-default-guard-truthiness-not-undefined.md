@@ -1,6 +1,6 @@
 ---
 title: "encrypted-attr-default-guard-truthiness-not-undefined"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4444
 claim: "2026-07-02T21:57:50Z"
 assignee: "encrypted-attr-default-guard-truthiness-not-undefined"
 blocked-by: null
