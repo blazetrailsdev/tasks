@@ -169,8 +169,12 @@ numbered). Work happens on branch `existing-db-schema-rc-9807c5`.
 3. **Convert bespoke** — the ~50 explicit-adapter sites → `create_table` +
    teardown, file-by-file, one PR each.
 4. **Retire** — delete `defineSchema`, `one-schema.ts`, `AR_ONE_SCHEMA`, the
-   exclude json + vitest block, and the `require-canonical-schema` rule; delete
-   `define-schema.test.ts`.
+   exclude json + vitest block, and `define-schema.test.ts`. **End by removing
+   every eslint rule made irrelevant by this work** — `require-canonical-schema`
+   (+ its exclude) and `use-fixtures-schema` (both keyed on `defineSchema`/
+   `TEST_SCHEMA`); audit `git grep -lE "defineSchema|TEST_SCHEMA|one.schema"
+eslint/` and delete each, keeping still-relevant rules like
+   `require-table-teardown`.
 
 ## Verification
 
@@ -178,6 +182,9 @@ numbered). Work happens on branch `existing-db-schema-rc-9807c5`.
 - `eslint/one-schema-exclude.json` and `require-canonical-schema-exclude.json`
   deleted; no `AR_ONE_SCHEMA` / "one schema" / `OneSchemaViolation` strings
   remain (`git grep -i "one.schema" = 0`).
+- Every eslint rule made irrelevant by dropping `defineSchema`/`TEST_SCHEMA`
+  removed (`require-canonical-schema`, `use-fixtures-schema`); no eslint rule
+  still references `defineSchema` or `TEST_SCHEMA`.
 - Schema-dump parity (`schema-dumper` tests, all 3 adapters) unchanged across the
   loader swap.
 - `test:compare` delta ≥ 0 across the whole migration.
