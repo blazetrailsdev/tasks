@@ -1,6 +1,6 @@
 ---
 title: "Thread column schema default into EncryptedAttributeType (Rails columns_hash default)"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
