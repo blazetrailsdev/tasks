@@ -1,7 +1,7 @@
 ---
 title: "Delete the direct-adapter useFixtures overload once callers are zero"
-status: in-progress
-updated: 2026-07-01
+status: done
+updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: ["fixtures-add-nontransactional-mode", "fixtures-caller-supplied-connection-adapter"]
