@@ -1,5 +1,5 @@
 ---
-rfc: "0000-drop-defineschema-mirror-create-table"
+rfc: "0059-drop-defineschema-mirror-create-table"
 title: "Drop defineSchema; mirror Rails create_table for test schema"
 status: draft
 created: 2026-07-02
@@ -15,7 +15,7 @@ related-rfcs:
   - "0049-one-schema-no-drop-perf"
 ---
 
-# RFC — Drop `defineSchema`; mirror Rails `create_table` for test schema
+# RFC 0059 — Drop `defineSchema`; mirror Rails `create_table` for test schema
 
 ## Summary
 
