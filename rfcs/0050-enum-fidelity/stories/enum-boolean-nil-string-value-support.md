@@ -1,6 +1,6 @@
 ---
 title: "enum-boolean-nil-string-value-support"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4409
 claim: "2026-07-02T14:09:49Z"
 assignee: "enum-boolean-nil-string-value-support"
 blocked-by: null
