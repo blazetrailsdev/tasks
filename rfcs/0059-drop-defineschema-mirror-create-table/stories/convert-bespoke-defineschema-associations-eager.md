@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in associations/eager.test.ts (21 calls)"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 4446
 claim: "2026-07-02T22:21:51Z"
 assignee: "convert-bespoke-defineschema-associations-eager"
 blocked-by: null
