@@ -1,6 +1,6 @@
 ---
 title: "Route Base.encrypts through scheme-based encryptAttribute and retire duplicate _preserveOriginalEncrypted"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
