@@ -1,6 +1,6 @@
 ---
 title: "Encrypted attr default should read true DB column default, not attribute() override"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
