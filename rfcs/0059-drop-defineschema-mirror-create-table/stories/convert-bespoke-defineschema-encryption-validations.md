@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in encryption/validations tests (5 files)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T22:57:49Z"
+assignee: "convert-bespoke-defineschema-encryption-validations"
 blocked-by: null
 closed-reason: null
 ---
