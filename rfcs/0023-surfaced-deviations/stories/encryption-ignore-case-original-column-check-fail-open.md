@@ -1,6 +1,6 @@
 ---
 title: "ignore_case original_<name> missing-column check is fail-open when adapter absent at declaration (Rails fail-closed)"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
