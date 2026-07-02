@@ -65,17 +65,18 @@ tests). Run each of the three files after conversion.
   `encryption.test.ts` (users.name) — not in scope here.
 - No test renames.
 
-## Also in scope: serialized-binary logo variants
+## Also in scope: fix serialized-binary logo round-trip (unskip a test)
 
-`EncryptedBookWithSerializedFirstBinary` / `...SecondBinary` still ride bespoke
-`text` tables (`encrypted_book_with_serialized_{first,second}_binaries`) instead
-of canonical `encrypted_books.logo` (binary), which is where Rails puts them.
-PR #4406 tried the canonical binary column and CI (PG + MariaDB) failed with
-`DecryptionError: Invalid data format: hash without payload`: these fixtures
-store a JSON-_text_ encrypted message (string, via `_JsonArrayType` + default
-MessageSerializer), and a string round-tripped through a bytea/BLOB column comes
-back as raw bytes. Ruby dodges this (String is a byte-string); trails' string-
-attribute-on-binary-column path does not. The message-pack variant is unaffected
-(genuine binary end-to-end). Converging these needs the encrypted-binary
-round-trip fixed (decode bytea/BLOB → utf-8 before the text serializer, or model
-logo as binary end-to-end) — an impl change, not just a table repoint.
+`EncryptedBookWithSerialized{First,Second}Binary` already ride canonical
+`encrypted_books.logo` (binary), matching Rails. But the test
+`encryptable-record.test.ts > "serialized binary data can be encrypted"` is
+`it.skip`-ped (tracked-pending-convergence): these fixtures store a JSON-_text_
+encrypted message via `_JsonArrayType` (a string castType, so
+`EncryptedAttributeType.isBinary()` is false and the bytea/BLOB round-trip
+coercion never runs). On PG/MariaDB the ciphertext returns as raw bytes and
+decryption throws `hash without payload`; SQLite is loose so it passes. Fix the
+round-trip (model `logo` as binary end-to-end — the canonical `book-encrypted.ts`
+uses `serialize("logo", { coder: JSON })` on a reflected binary column — or
+decode the DB value to a string before the text serializer), then remove the
+`it.skip`. A naive `attribute("logo","binary") + serialize({coder: JSON})` in the
+fresh factory double-encodes; the type-stack interaction needs care.
