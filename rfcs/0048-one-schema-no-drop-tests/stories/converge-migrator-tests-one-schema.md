@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: "2026-07-02T01:49:59Z"
-assignee: "converge-migrator-tests-one-schema"
+claim: null
+assignee: null
 blocked-by: "Blocked on unmerged spike PR #4246 (AR_ONE_SCHEMA no-drop test mode). Neither the AR_ONE_SCHEMA flag nor eslint/one-schema-exclude.json exist on main; they live only on branch existing-db-schema-rc-9807c5. Two of three acceptance criteria (pass under one-schema; remove from one-schema-exclude.json) are unsatisfiable/unverifiable on main. Same blocker as converge-migration-ddl-tests-one-schema. Re-open once #4246 merges."
 closed-reason: null
 ---
