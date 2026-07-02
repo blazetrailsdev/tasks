@@ -1,6 +1,6 @@
 ---
 title: "faithful-port-finder-relation-limit-offset-sti"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4422
 claim: "2026-07-02T16:57:53Z"
 assignee: "faithful-port-finder-relation-limit-offset-sti"
 blocked-by: null
