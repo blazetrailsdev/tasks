@@ -1,6 +1,6 @@
 ---
 title: "encrypt-route-primary-attribute-through-encrypt-attribute"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T16:33:53Z"
+assignee: "encrypt-route-primary-attribute-through-encrypt-attribute"
 blocked-by: null
 closed-reason: null
 ---
