@@ -1,6 +1,6 @@
 ---
 title: "enum-canonical-book-gaps"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4410
 claim: "2026-07-02T14:33:52Z"
 assignee: "enum-canonical-book-gaps"
 blocked-by: null
