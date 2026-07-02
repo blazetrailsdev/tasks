@@ -1,6 +1,6 @@
 ---
 title: "converge-where-composed-of-aggregate-expansion"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4431
 claim: "2026-07-02T18:33:51Z"
 assignee: "converge-where-composed-of-aggregate-expansion"
 blocked-by: null
