@@ -1,6 +1,6 @@
 ---
 title: "typeToSql defaults decimal precision to 10 instead of Rails' native nil"
-status: claimed
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4402
 claim: "2026-07-02T03:38:22Z"
 assignee: "decimal-typetosql-precision-default-diverges-from-rails-native"
 blocked-by: null
