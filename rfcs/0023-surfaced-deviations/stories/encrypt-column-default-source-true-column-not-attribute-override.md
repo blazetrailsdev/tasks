@@ -1,6 +1,6 @@
 ---
 title: "Encrypted attr default should read true DB column default, not attribute() override"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T21:33:51Z"
+assignee: "encrypt-column-default-source-true-column-not-attribute-override"
 blocked-by: null
 closed-reason: null
 ---
