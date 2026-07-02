@@ -1,6 +1,6 @@
 ---
 title: "enum-validate-option"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4416
 claim: "2026-07-02T15:57:52Z"
 assignee: "enum-validate-option"
 blocked-by: null
