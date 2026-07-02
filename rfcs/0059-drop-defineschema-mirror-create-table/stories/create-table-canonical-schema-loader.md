@@ -1,6 +1,6 @@
 ---
 title: "Phase 1: create_table canonical schema loader (schema.rb port), wire boot"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T21:21:42Z"
+assignee: "create-table-canonical-schema-loader"
 blocked-by: null
 closed-reason: null
 ---
