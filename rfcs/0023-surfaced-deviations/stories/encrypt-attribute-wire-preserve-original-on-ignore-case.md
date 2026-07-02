@@ -1,6 +1,6 @@
 ---
 title: "Wire preserve_original_encrypted for ignore_case on scheme-based encryptAttribute"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
