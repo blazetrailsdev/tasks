@@ -1,6 +1,6 @@
 ---
 title: "grouping_queries emits n-ary Or vs Rails' nested binary Or"
-status: ready
+status: draft
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
