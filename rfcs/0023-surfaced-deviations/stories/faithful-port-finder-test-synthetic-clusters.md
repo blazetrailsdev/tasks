@@ -1,6 +1,6 @@
 ---
 title: "Faithfully port finder.test.ts synthetic clusters onto real finder_test.rb models/fixtures"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
