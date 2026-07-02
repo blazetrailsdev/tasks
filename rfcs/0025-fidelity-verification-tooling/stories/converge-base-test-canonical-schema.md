@@ -1,7 +1,7 @@
 ---
 title: "converge-base-test-canonical-schema"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T01:29:59Z"
+assignee: "converge-base-test-canonical-schema"
 blocked-by: null
 ---
 
