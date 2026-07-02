@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts: use proxy.length() reader instead of internal target.length"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
