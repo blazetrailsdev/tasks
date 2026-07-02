@@ -1,6 +1,6 @@
 ---
 title: "test:compare — symmetric non-assert helper expansion for assertion counts"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
