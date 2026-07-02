@@ -1,7 +1,7 @@
 ---
 title: "defineSchema forces time/json columns to VARCHAR on MySQL (StringType deviation)"
-status: ready
-updated: 2026-06-25
+status: claimed
+updated: 2026-07-02
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T03:53:23Z"
+assignee: "defineschema-mysql-native-time-json-columns"
 blocked-by: null
 ---
 
