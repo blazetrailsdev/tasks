@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in MySQL/abstract adapter tests"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4450
 claim: "2026-07-02T23:09:50Z"
 assignee: "convert-bespoke-defineschema-mysql-adapters"
 blocked-by: null
