@@ -1,6 +1,6 @@
 ---
 title: "Establish body-pins baseline (floor policy + populate body-pins.json)"
-status: ready
+status: draft
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
