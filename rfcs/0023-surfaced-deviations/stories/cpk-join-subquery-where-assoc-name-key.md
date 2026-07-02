@@ -1,6 +1,6 @@
 ---
 title: "cpk join-subquery tests: key where-hash on association name, not table name"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 4400
 claim: "2026-07-02T03:23:22Z"
 assignee: "cpk-join-subquery-where-assoc-name-key"
 blocked-by: null
