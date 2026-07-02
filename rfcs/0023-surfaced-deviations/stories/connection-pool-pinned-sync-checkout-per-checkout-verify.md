@@ -4,7 +4,8 @@ status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - converge-connection-pool-checkout-lease-async
 deps-rfc: []
 est-loc: null
 priority: null
