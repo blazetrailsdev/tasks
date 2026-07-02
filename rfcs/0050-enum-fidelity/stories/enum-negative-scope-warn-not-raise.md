@@ -1,7 +1,7 @@
 ---
 title: "enum-negative-scope-warn-not-raise"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T15:33:51Z"
+assignee: "enum-negative-scope-warn-not-raise"
 blocked-by: null
 ---
 
