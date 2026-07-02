@@ -1,6 +1,6 @@
 ---
 title: "Reset migrator/internal-metadata state per Rails so migrator + migrator.trails pass under one-schema"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T01:49:59Z"
+assignee: "converge-migrator-tests-one-schema"
 blocked-by: null
 closed-reason: null
 ---
