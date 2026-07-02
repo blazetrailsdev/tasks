@@ -1,6 +1,6 @@
 ---
 title: "converge-finder-bignum-out-of-range"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4433
 claim: "2026-07-02T18:57:57Z"
 assignee: "converge-finder-bignum-out-of-range"
 blocked-by: null
