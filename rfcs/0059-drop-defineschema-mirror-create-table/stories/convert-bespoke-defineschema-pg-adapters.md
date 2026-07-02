@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in PG adapter tests (9 files)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T23:21:50Z"
+assignee: "convert-bespoke-defineschema-pg-adapters"
 blocked-by: null
 closed-reason: null
 ---
