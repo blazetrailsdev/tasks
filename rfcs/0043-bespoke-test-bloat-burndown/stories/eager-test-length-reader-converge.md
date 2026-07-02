@@ -1,6 +1,6 @@
 ---
 title: "eager.test.ts: use proxy.length() reader instead of internal target.length"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4404
 claim: "2026-07-02T04:23:22Z"
 assignee: "eager-test-length-reader-converge"
 blocked-by: null
