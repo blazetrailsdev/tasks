@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-bespoke-shapes-one-schema"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
