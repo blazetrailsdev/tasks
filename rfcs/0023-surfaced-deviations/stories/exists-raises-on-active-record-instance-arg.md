@@ -1,6 +1,6 @@
 ---
 title: "exists-raises-on-active-record-instance-arg"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4434
 claim: "2026-07-02T19:21:51Z"
 assignee: "exists-raises-on-active-record-instance-arg"
 blocked-by: null
