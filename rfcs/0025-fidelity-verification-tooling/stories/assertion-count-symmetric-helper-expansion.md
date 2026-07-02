@@ -1,7 +1,7 @@
 ---
 title: "test:compare — symmetric non-assert helper expansion for assertion counts"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T00:16:14Z"
+assignee: "assertion-count-symmetric-helper-expansion"
 blocked-by: null
 ---
 
