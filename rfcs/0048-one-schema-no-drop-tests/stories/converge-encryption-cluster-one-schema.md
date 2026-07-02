@@ -1,6 +1,6 @@
 ---
 title: "Add encrypted_posts to canonical TEST_SCHEMA; converge 5 encryption test files off bespoke schema (one-schema)"
-status: blocked
+status: ready
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: "2026-07-02T01:40:00Z"
-assignee: "converge-encryption-cluster-one-schema"
-blocked-by: "Depends on one-schema infra (AR_ONE_SCHEMA flag + eslint/one-schema-exclude.json + OneSchemaViolation in defineSchema) that is NOT on origin/main — it lives only on unmerged spike #4246 (branch existing-db-schema-rc-9807c5). The two verifiable acceptance criteria ('pass under one-schema', 'remove from one-schema-exclude.json') are impossible on main. Un-block once #4246 merges. Verified absent 2026-07-02."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
