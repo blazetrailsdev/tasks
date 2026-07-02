@@ -1,6 +1,6 @@
 ---
 title: "predicate-builder threads negation instead of inverting WhereClause (Rails)"
-status: ready
+status: draft
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
