@@ -1,6 +1,6 @@
 ---
 title: "converge-arrayhandler-homogeneous-in"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4440
 claim: "2026-07-02T21:23:58Z"
 assignee: "converge-arrayhandler-homogeneous-in"
 blocked-by: null
