@@ -1,6 +1,6 @@
 ---
 title: "Lay canonical schema into secondary adapters/pools under one-schema (converge transaction-instrumentation, multiple-db, habtm)"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 4430
 claim: "2026-07-02T18:31:54Z"
 assignee: "converge-secondary-pool-schema-layout-one-schema"
 blocked-by: null
