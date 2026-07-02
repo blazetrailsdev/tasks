@@ -1,6 +1,6 @@
 ---
 title: "find_with_ids compacts + uniqs composite-PK tuple lists like Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4424
 claim: "2026-07-02T17:21:53Z"
 assignee: "find-with-ids-compact-uniq-composite-pk-tuples"
 blocked-by: null
