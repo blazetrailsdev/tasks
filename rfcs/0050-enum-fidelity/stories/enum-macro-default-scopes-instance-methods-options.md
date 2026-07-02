@@ -30,5 +30,5 @@ disabled by :instance_methods".
 
 - [ ] `enum(name, mapping, { default })` seeds the attribute default.
 - [ ] `scopes: false` suppresses per-value scope generation; `instance_methods:
-  false` suppresses predicate/bang generation — matching Rails.
+false` suppresses predicate/bang generation — matching Rails.
 - [ ] Un-skip the three `enum.test.ts` cases (drop `it.skip` → `it`).
