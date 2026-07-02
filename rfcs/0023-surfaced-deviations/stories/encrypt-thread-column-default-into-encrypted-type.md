@@ -1,6 +1,6 @@
 ---
 title: "Thread column schema default into EncryptedAttributeType (Rails columns_hash default)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T19:09:50Z"
+assignee: "encrypt-thread-column-default-into-encrypted-type"
 blocked-by: null
 closed-reason: null
 ---
