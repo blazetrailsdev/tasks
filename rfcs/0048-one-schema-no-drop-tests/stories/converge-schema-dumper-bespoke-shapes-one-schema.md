@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-dumper-bespoke-shapes-one-schema"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4429
 claim: "2026-07-02T18:29:17Z"
 assignee: "converge-schema-dumper-bespoke-shapes-one-schema"
 blocked-by: null
