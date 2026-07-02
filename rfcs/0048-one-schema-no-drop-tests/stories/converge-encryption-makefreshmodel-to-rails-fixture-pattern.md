@@ -1,6 +1,6 @@
 ---
 title: "converge-encryption-makefreshmodel-to-rails-fixture-pattern"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T16:09:53Z"
+assignee: "converge-encryption-makefreshmodel-to-rails-fixture-pattern"
 blocked-by: null
 closed-reason: null
 ---
