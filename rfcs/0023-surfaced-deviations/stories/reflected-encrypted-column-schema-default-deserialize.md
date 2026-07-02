@@ -1,6 +1,6 @@
 ---
 title: "Reflected encrypted column with non-null schema default fails to decrypt (default seeded via deserialize)"
-status: ready
+status: draft
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
