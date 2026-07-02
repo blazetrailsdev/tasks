@@ -1,7 +1,7 @@
 ---
 title: "api:compare source-hash pinning — detect upstream Rails body drift on matched methods"
-status: in-progress
-updated: 2026-07-01
+status: done
+updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
