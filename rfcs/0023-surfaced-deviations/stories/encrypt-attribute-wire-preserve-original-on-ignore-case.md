@@ -1,6 +1,6 @@
 ---
 title: "Wire preserve_original_encrypted for ignore_case on scheme-based encryptAttribute"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T14:57:58Z"
+assignee: "encrypt-attribute-wire-preserve-original-on-ignore-case"
 blocked-by: null
 closed-reason: null
 ---
