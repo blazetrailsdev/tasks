@@ -1,6 +1,6 @@
 ---
 title: "Lay canonical schema into secondary adapters/pools under one-schema (converge transaction-instrumentation, multiple-db, habtm)"
-status: blocked
+status: ready
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 200
 priority: 1
 pr: null
-claim: "2026-07-02T02:00:00Z"
-assignee: "converge-secondary-pool-schema-layout-one-schema"
-blocked-by: "Stale pre-respec artifact. Every acceptance criterion depends on AR_ONE_SCHEMA / eslint/one-schema-exclude.json / the define-schema.ts:589 force no-op (spike PR #4246), which do NOT exist on main and were explicitly split out to parked RFC 0000-one-schema-no-drop-perf in the 2026-06-30 re-spec (see RFC 0048 README 'Out of scope'). Nothing to build here: the three named tests (transaction-instrumentation, multiple-db, has-and-belongs-to-many-associations) already pass on main; there is no one-schema mode to converge them under. Same blocker as sibling converge-migrator/migration-ddl-tests-one-schema. Re-spec or move to the perf RFC before re-claiming."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
