@@ -1,6 +1,6 @@
 ---
 title: "converge-exists-limit-offset-distinct"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T18:09:51Z"
+assignee: "converge-exists-limit-offset-distinct"
 blocked-by: null
 closed-reason: null
 ---
