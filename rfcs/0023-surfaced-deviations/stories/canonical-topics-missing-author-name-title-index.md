@@ -1,6 +1,6 @@
 ---
 title: "Canonical topics omits Rails author_name/title index"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T23:57:51Z"
+assignee: "canonical-topics-missing-author-name-title-index"
 blocked-by: null
 closed-reason: null
 ---
