@@ -1,7 +1,7 @@
 ---
 title: "enum min/max aggregate returns string key instead of Rails integer"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T15:21:51Z"
+assignee: "enum-min-max-deserialize-in-aggregates"
 blocked-by: null
 ---
 
