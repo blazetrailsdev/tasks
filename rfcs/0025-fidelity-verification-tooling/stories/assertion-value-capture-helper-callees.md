@@ -1,6 +1,6 @@
 ---
 title: "test:compare — capture expected values for helper-callee & receiver-form assertions"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4405
 claim: "2026-07-02T12:08:22Z"
 assignee: "assertion-value-capture-helper-callees"
 blocked-by: null
