@@ -1,6 +1,6 @@
 ---
 title: "Converge EncryptableRecord#encrypt_attribute calls (new, scheme_for, encrypted_attribute_was_declared)"
-status: claimed
+status: done
 updated: 2026-07-02
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4407
 claim: "2026-07-02T14:09:44Z"
 assignee: "encrypt-attribute-converge-scheme-for-declared-new"
 blocked-by: null
