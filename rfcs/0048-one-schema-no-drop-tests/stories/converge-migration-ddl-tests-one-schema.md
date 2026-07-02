@@ -1,7 +1,7 @@
 ---
 title: "converge-migration-ddl-tests-one-schema"
-status: blocked
-updated: 2026-07-01
+status: ready
+updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: "2026-07-01T20:46:14Z"
-assignee: "converge-migration-ddl-tests-one-schema"
-blocked-by: 'Blocked on unmerged spike #4246: one-schema lane infra (AR_ONE_SCHEMA flag + eslint/one-schema-exclude.json) does not exist on origin/main, so the 11 failures cannot be reproduced or verified. Additionally there is no DDL-isolation primitive (createTestAdapter and createSidecarTestAdapter share one per-worker pool/DB), and the people add/remove-column tests are already Rails-faithful (migration_test.rb runs add_column/remove_column "people","last_name" on canonical people with teardown strip) — moving them to invented scratch tables would deviate from Rails. Revisit after #4246 merges and RFC 0048 one-schema is respec''d.'
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
