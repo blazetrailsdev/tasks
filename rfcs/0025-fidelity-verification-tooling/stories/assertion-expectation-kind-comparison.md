@@ -1,7 +1,7 @@
 ---
 title: "test:compare — compare assertion kinds/expectations, not just counts"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T01:18:05Z"
+assignee: "assertion-expectation-kind-comparison"
 blocked-by: null
 ---
 
