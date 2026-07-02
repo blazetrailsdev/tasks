@@ -1,6 +1,6 @@
 ---
 title: "enum-reserved-undeclared-override-alias"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4417
 claim: "2026-07-02T15:46:02Z"
 assignee: "enum-reserved-undeclared-override-alias"
 blocked-by: null
