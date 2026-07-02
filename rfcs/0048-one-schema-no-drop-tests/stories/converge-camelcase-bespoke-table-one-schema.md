@@ -1,6 +1,6 @@
 ---
 title: "Make CamelCase quoted-identifier tests create+drop their own table so they pass under one-schema (PG relation-missing)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T02:19:59Z"
+assignee: "converge-camelcase-bespoke-table-one-schema"
 blocked-by: null
 closed-reason: null
 ---
