@@ -1,6 +1,6 @@
 ---
 title: "Faithfully port finder.test.ts exists cluster onto real finder_test.rb models/fixtures"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 4426
 claim: "2026-07-02T17:45:51Z"
 assignee: "faithful-port-finder-exists-cluster"
 blocked-by: null
