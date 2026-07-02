@@ -16,35 +16,32 @@ blocked-by: 'Blocked on unmerged spike #4246: one-schema lane infra (AR_ONE_SCHE
 
 ## Context
 
-> **BLOCKED / MIS-SPECIFIED (2026-07-01).** This story cannot be executed or
-> verified against `main`, and its scratch-table prescription is anti-fidelity
-> for the people-migration subset. Blocked on spike **#4246** (the one-schema
-> flag + DDL-lane infra). Details:
+> **CORRECTION (2026-07-01, supersedes an earlier "blocked on #4246" note).**
+> The one-schema harness (`AR_ONE_SCHEMA`, `eslint/one-schema-exclude.json`,
+> `test-helpers/one-schema.ts`) **is present on the `existing-db-schema-rc`
+> branch** — the earlier note was written against `origin/main`, which doesn't
+> carry it, and #4246 is NOT being merged. So this story is executable on that
+> branch and is NOT blocked. Two findings still hold and constrain the fix:
 >
-> 1. **The verification harness isn't on `main`.** `AR_ONE_SCHEMA` is
->    unreferenced and `eslint/one-schema-exclude.json` does not exist on
->    `origin/main` — both live only in unmerged spike #4246. So the acceptance
->    criteria (run under the flag, remove the exclude entry) are unrunnable and
->    the "11 failing tests" cannot be reproduced.
-> 2. **No DDL-isolation primitive exists.** `createTestAdapter()` and
->    `createSidecarTestAdapter()` both lease from the same shared per-worker
->    pool (`test-adapter.ts:194-229`) — there is no scratch DB. Moving DDL to
->    "per-test scratch tables" does not isolate at the schema level; the tables
->    still land in the one shared worker schema.
-> 3. **The people add/remove-column tests are ALREADY Rails-faithful.** Rails'
+> 1. **The people add/remove-column tests are ALREADY Rails-faithful.** Rails'
 >    `migration_test.rb` (≈lines 356-361, 384-385) runs `add_column`/
 >    `remove_column` against the canonical `people` table and strips it in
->    teardown; the trails port mirrors this, afterEach strip included. The flag's
->    "no canonical reshape" rule is _stricter than Rails_, so rewriting these
->    onto invented scratch tables would DEVIATE from Rails — the opposite of
->    fidelity-first. Do NOT scratch-table them.
+>    teardown; the trails port mirrors this, afterEach strip included. Under
+>    truncate-not-drop the reshape leaks — probed 2026-07-01 the file throws
+>    `StatementInvalid: duplicate column name: last_name`. The one-schema
+>    "no canonical reshape" rule is _stricter than Rails here_; do NOT rewrite
+>    these onto invented scratch tables (that would DEVIATE from Rails).
+> 2. **No separate scratch DB exists** — `createTestAdapter()` /
+>    `createSidecarTestAdapter()` lease from the one shared per-worker pool
+>    (`test-adapter.ts:194-229`), so "per-test scratch table" doesn't isolate at
+>    the schema level.
 >
-> **Fidelity-preserving fix (post-#4246):** route `migration.test.ts` to a
-> dedicated DDL lane that runs flag-off (the "OR" already noted below). Only the
-> tests that genuinely create their own tables in Rails (create_table-with-
-> indexes, name-collision-across-dbs, drop-index) build scratch tables; the
-> people column tests stay on canonical `people` exactly as Rails does. Revisit
-> once #4246 lands and rewrite the acceptance criteria around the lane.
+> **Fidelity-preserving fix:** give `migration.test.ts` a way to run its genuine
+> DDL flag-off (a dedicated DDL lane, or per-test create+drop of its own table
+> mirroring Rails for the create_table-with-indexes / name-collision / drop-index
+> cases) while the people add/remove-column tests keep mutating canonical
+> `people` exactly as Rails does + strip in teardown. Rewrite the acceptance
+> criteria below around that lane rather than the "no canonical reshape" absolute.
 
 `packages/activerecord/src/migration.test.ts` is on `eslint/one-schema-exclude.json`.
 PR #4370 (`converge-migration-tests-one-schema`) converged only the
