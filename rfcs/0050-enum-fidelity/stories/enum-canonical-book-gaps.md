@@ -1,6 +1,6 @@
 ---
 title: "enum-canonical-book-gaps"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
