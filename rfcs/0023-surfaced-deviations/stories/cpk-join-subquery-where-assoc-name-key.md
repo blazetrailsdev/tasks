@@ -1,6 +1,6 @@
 ---
 title: "cpk join-subquery tests: key where-hash on association name, not table name"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
