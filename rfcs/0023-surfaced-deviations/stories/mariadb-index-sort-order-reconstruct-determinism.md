@@ -1,6 +1,6 @@
 ---
 title: "Deterministic descending-index reconstruct for MariaDB schema-dumper sort-order tests"
-status: ready
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4397
 claim: null
 assignee: null
 blocked-by: null
