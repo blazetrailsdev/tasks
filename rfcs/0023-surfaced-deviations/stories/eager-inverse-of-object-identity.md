@@ -1,6 +1,6 @@
 ---
 title: "wire inverse_of on canonical Author.posts/Post.author for eager-load object identity"
-status: claimed
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4249
 claim: "2026-07-02T04:08:22Z"
 assignee: "eager-inverse-of-object-identity"
 blocked-by: null
