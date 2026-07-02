@@ -81,23 +81,34 @@ Crucially, the canonical schema is **already laid once at boot**
 is not a 247-site rewrite — it is a mechanism swap plus a delete-vs-convert
 split.
 
+## Guiding principle: Rails fidelity above all else
+
+The overriding constraint for every choice in this RFC is **Rails fidelity** —
+match `vendor/rails/activerecord/test/schema/schema.rb` and Rails' own test
+`create_table` usage as literally as possible. Where fidelity and convenience
+(churn, brevity, keeping an existing helper) conflict, fidelity wins. This
+directly resolves the canonical-source decision below.
+
 ## Design
 
 ### 1. `create_table`-based canonical loader (replaces the boot `defineSchema`)
 
-Port `vendor/rails/activerecord/test/schema/schema.rb` to a schema-definition
-module that issues real `connection.createTable(name, opts, t => { … })` calls
-(the block API already exists at
-`connection-adapters/abstract/schema-statements.ts:237`). This is the
-`ActiveRecord::Schema.define` equivalent. Wire `template-global-setup.ts` to run
-it against the template DB once at boot. The **boot-once + truncate-reset +
-no-`DROP TABLE`** behavior (the perf win — 86k drops/run eliminated) is
-preserved; it is orthogonal to `defineSchema` and stays.
+Port `vendor/rails/activerecord/test/schema/schema.rb` to a **hand-written
+schema-definition script** that issues real `connection.createTable(name, opts,
+t => { … })` calls, mirroring the Rails `ActiveRecord::Schema.define do … end`
+block **line-for-line** (the block API already exists at
+`connection-adapters/abstract/schema-statements.ts:237`). Wire
+`template-global-setup.ts` to run it against the template DB once at boot. The
+**boot-once + truncate-reset + no-`DROP TABLE`** behavior (the perf win — 86k
+drops/run eliminated) is preserved; it is orthogonal to `defineSchema` and stays.
 
-The canonical schema stays a single source of truth mirroring schema.rb; the
-open question below is whether that source is a hand-written `create_table`
-script (most Rails-faithful) or the existing `TEST_SCHEMA` object iterated by the
-loader.
+**Decision (fidelity above all else):** the canonical source is the hand-written
+`create_table` script that mirrors schema.rb — NOT the existing 1881-line
+`TEST_SCHEMA` object kept as loader data. Removing the bespoke DSL is half the
+point, and a faithful `create_table` script is what Rails actually ships. The
+`TEST_SCHEMA` object is retired with `defineSchema` in §4. (Rejected alternative:
+keep `TEST_SCHEMA` as data the loader iterates — less churn, but keeps the bespoke
+DSL this RFC exists to remove.)
 
 ### 2. Delete canonical `defineSchema(TEST_SCHEMA)` calls (~14 files)
 
@@ -173,10 +184,9 @@ numbered). Work happens on branch `existing-db-schema-rc-9807c5`.
 
 ## Open questions
 
-- **Canonical source form:** hand-written `create_table` script (most faithful,
-  matches schema.rb line-for-line) vs. keep the `TEST_SCHEMA` object as data the
-  loader iterates (less churn, but keeps a bespoke DSL). Recommendation lean:
-  faithful script, since removing the DSL is half the point.
+- ~~**Canonical source form**~~ — RESOLVED (fidelity above all else): hand-written
+  `create_table` script mirroring schema.rb line-for-line; the `TEST_SCHEMA`
+  object is retired. See Design §1.
 - **Loader naming** (the `ActiveRecord::Schema.define` equivalent) — must avoid
   "one schema".
 - **Secondary pools / `setup-second-pool.ts`** already moved to force-`create_table`
