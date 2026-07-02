@@ -1,6 +1,6 @@
 ---
 title: "encrypted-attr-default-guard-truthiness-not-undefined"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
