@@ -1,6 +1,6 @@
 ---
 title: "Convert encryption makeFreshModel off dynamic fresh_model_N tables onto canonical tables (one-schema)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T14:21:57Z"
+assignee: "converge-encryption-makefreshmodel-onto-canonical"
 blocked-by: null
 closed-reason: null
 ---
