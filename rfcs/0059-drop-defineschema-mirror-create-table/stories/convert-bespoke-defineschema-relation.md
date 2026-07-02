@@ -1,6 +1,6 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in relation tests (8 files)"
-status: ready
+status: claimed
 updated: 2026-07-02
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-02T23:33:50Z"
+assignee: "convert-bespoke-defineschema-relation"
 blocked-by: null
 closed-reason: null
 ---
