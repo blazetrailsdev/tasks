@@ -1,6 +1,6 @@
 ---
 title: "enum installEnumAttribute marks type as user-provided, suppressing DB column default on new records"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4413
 claim: "2026-07-02T15:09:52Z"
 assignee: "enum-install-attribute-suppresses-db-default"
 blocked-by: null
