@@ -64,3 +64,18 @@ tests). Run each of the three files after conversion.
 - Coordinate with RFC 0025 `converge-encryption-test-canonical-schema` for
   `encryption.test.ts` (users.name) — not in scope here.
 - No test renames.
+
+## Also in scope: serialized-binary logo variants
+
+`EncryptedBookWithSerializedFirstBinary` / `...SecondBinary` still ride bespoke
+`text` tables (`encrypted_book_with_serialized_{first,second}_binaries`) instead
+of canonical `encrypted_books.logo` (binary), which is where Rails puts them.
+PR #4406 tried the canonical binary column and CI (PG + MariaDB) failed with
+`DecryptionError: Invalid data format: hash without payload`: these fixtures
+store a JSON-_text_ encrypted message (string, via `_JsonArrayType` + default
+MessageSerializer), and a string round-tripped through a bytea/BLOB column comes
+back as raw bytes. Ruby dodges this (String is a byte-string); trails' string-
+attribute-on-binary-column path does not. The message-pack variant is unaffected
+(genuine binary end-to-end). Converging these needs the encrypted-binary
+round-trip fixed (decode bytea/BLOB → utf-8 before the text serializer, or model
+logo as binary end-to-end) — an impl change, not just a table repoint.
