@@ -1,6 +1,6 @@
 ---
 title: "port-finder-aggregate-find-by-cluster"
-status: ready
+status: draft
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
