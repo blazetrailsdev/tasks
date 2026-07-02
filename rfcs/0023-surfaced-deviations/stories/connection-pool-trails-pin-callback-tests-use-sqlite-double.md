@@ -1,6 +1,6 @@
 ---
 title: "connection-pool.trails pin/callback tests run against a sqlite-only double, not lane-native adapters"
-status: in-progress
+status: done
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
