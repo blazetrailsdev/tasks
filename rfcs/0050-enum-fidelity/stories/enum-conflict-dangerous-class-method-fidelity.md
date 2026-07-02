@@ -49,10 +49,20 @@ helper is currently module-private to `named.ts`.
   `methodName in this`. Watch for the `enum.ts -> named.ts -> base.ts -> enum.ts`
   import cycle (named.ts uses `Base`/`Relation` only at call time, so a value
   import should be safe, but verify no init-order break).
+- The **conflict-pass** class-method checks in `_enum` itself (the
+  `fullName in this` / `notScopeName in this` / friendly-name `in this` scope
+  guards) have the same over-broad flaw: they catch a scope inherited from a
+  _parent_ enum, so a subclass enum reusing a value name a parent enum generated
+  raises where Rails permits it. Make these faithful too (or drop them and rely
+  on `this.scope`'s own `isDangerousClassMethod` check), so both the class-method
+  and instance-method branches converge.
 - The reserved-name case (`enum :column` -> `columns` class method) still raises.
-- Add a regression test: an enum whose `pluralize(name)` matches a **user** class
-  method on an intermediate ancestor does NOT raise (mirrors the instance-branch
-  guard already in `enum.trails.test.ts`).
+- Add regression tests: (a) an enum whose `pluralize(name)` matches a **user**
+  class method on an intermediate ancestor does NOT raise; (b) a subclass enum
+  reusing a value method a **parent** enum generated does NOT raise (the
+  `_enumMethodsModuleNames` set is already per-class/non-inherited, so only the
+  scope pre-check blocks this today — mirrors the same-class conflict test in
+  `enum.trails.test.ts`).
 - Existing enum tests stay green; test names match Rails verbatim.
 
 ## Note
