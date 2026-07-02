@@ -17,6 +17,25 @@ closed-reason: null
 
 ## Context
 
+> **⚠️ HOW TO WORK THIS — read before blocking (2026-07-02).** This is live
+> one-schema burndown work, executed on branch **`existing-db-schema-rc-9807c5`**
+> — check that branch out before doing anything or judging feasibility.
+>
+> - The one-schema harness (`AR_ONE_SCHEMA`, `eslint/one-schema-exclude.json`,
+>   `test-helpers/one-schema.ts`, the `define-schema.ts` no-op/`force` path) is
+>   **committed on that branch, NOT on `main`.** Do not conclude "infra absent"
+>   from a `main` checkout.
+> - **Spike PR #4246 is ABANDONED and will NOT be merged.** Do NOT block on it or
+>   wait for it — "re-open once #4246 merges" is wrong. The infra was landed
+>   directly on the branch instead. Any prior blocked-by note saying otherwise is
+>   superseded.
+> - The RFC 0048 README's "one-schema mode is out of scope → RFC 0049" note is
+>   **superseded** for this burndown; it is being executed here, on the branch.
+> - The named tests **fail under the flag** even though they pass flag-off.
+>   Reproduce on the branch: remove this file's path from
+>   `eslint/one-schema-exclude.json`, then `AR_ONE_SCHEMA=1 pnpm vitest run <file>`.
+>   Fix until green and leave the path removed from the exclude in your PR.
+
 Under one-schema (`AR_ONE_SCHEMA=1`) the canonical `TEST_SCHEMA` is laid into the
 **main per-worker pool** once at boot, and `defineSchema` becomes a no-op that only
 asserts canonicality (`define-schema.ts:589` — skips real DDL unless `force`).
