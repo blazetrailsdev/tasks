@@ -1,6 +1,6 @@
 ---
 title: "find-by-statement-cache-introspection"
-status: claimed
+status: in-progress
 updated: 2026-07-02
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4423
 claim: "2026-07-02T17:09:59Z"
 assignee: "find-by-statement-cache-introspection"
 blocked-by: null
