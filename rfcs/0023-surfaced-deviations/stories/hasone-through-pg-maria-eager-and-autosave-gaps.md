@@ -1,6 +1,6 @@
 ---
 title: "hasone-through-pg-maria-eager-and-autosave-gaps"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T14:57:55Z"
+assignee: "hasone-through-pg-maria-eager-and-autosave-gaps"
 blocked-by: null
 closed-reason: null
 ---
