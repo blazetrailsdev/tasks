@@ -1,6 +1,6 @@
 ---
 title: "assess 3 skipped has-many tests with non-canonical FK columns (thr_id, hc_author_id, ns_author_id)"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0033-standalone-associations-burndown"
 cluster: null
