@@ -1,6 +1,6 @@
 ---
 title: "has_one_through build/create on persisted owner with UNLOADED existing join row should load+update, not duplicate"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
