@@ -1,6 +1,6 @@
 ---
 title: "has_one_through build/create on persisted owner defers join-row write to save() instead of persisting immediately"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T20:07:09Z"
+assignee: "has-one-through-create-persists-join-row-immediately"
 blocked-by: null
 closed-reason: null
 ---
