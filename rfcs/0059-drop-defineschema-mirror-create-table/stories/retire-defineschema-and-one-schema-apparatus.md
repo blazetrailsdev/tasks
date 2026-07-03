@@ -15,6 +15,11 @@ deps:
     "convert-bespoke-defineschema-core-persistence",
     "convert-bespoke-defineschema-encryption-validations",
     "convert-bespoke-defineschema-test-helpers",
+    "convert-core-persistence-bespoke-and-adapter-schemas",
+    "convert-core-persistence-dropexisting-shields",
+    "convert-defineschema-behavior-test-helpers",
+    "convert-defineschema-use-fixtures-test",
+    "convert-defineschema-residual-sweep",
   ]
 deps-rfc: []
 est-loc: 200
