@@ -1,7 +1,7 @@
 ---
 title: "instance #update(nil) should raise ArgumentError not TypeError"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-03
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T23:55:07Z"
+assignee: "instance-update-nil-raises-argumenterror"
 blocked-by: null
 ---
 
