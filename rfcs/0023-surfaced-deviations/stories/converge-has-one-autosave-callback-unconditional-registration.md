@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-autosave-callback-unconditional-registration"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
