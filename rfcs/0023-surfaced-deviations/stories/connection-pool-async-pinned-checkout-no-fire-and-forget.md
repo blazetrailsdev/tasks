@@ -1,14 +1,14 @@
 ---
 title: "connection-pool-async-pinned-checkout-no-fire-and-forget"
-status: claimed
-updated: 2026-07-02
+status: done
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4439
 claim: "2026-07-02T21:21:56Z"
 assignee: "connection-pool-async-pinned-checkout-no-fire-and-forget"
 blocked-by: null
