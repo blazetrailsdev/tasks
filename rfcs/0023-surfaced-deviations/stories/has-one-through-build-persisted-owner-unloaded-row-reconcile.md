@@ -1,6 +1,6 @@
 ---
 title: "has_one_through build/create on persisted owner with UNLOADED existing join row should load+update, not duplicate"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4494
 claim: "2026-07-03T16:33:57Z"
 assignee: "has-one-through-build-persisted-owner-unloaded-row-reconcile"
 blocked-by: null
