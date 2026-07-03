@@ -1,6 +1,6 @@
 ---
 title: "finder-array-conditions-composite-ambiguity"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4457
 claim: "2026-07-03T00:33:52Z"
 assignee: "finder-array-conditions-composite-ambiguity"
 blocked-by: null
