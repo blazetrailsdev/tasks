@@ -1,6 +1,6 @@
 ---
 title: "converge-habtm-jointable-preloader-batch-scheduling"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T13:33:52Z"
+assignee: "converge-habtm-jointable-preloader-batch-scheduling"
 blocked-by: null
 closed-reason: null
 ---
