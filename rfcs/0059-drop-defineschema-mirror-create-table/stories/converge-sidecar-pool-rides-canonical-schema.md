@@ -1,5 +1,5 @@
 ---
-title: "converge-sidecar-pool-rides-canonical-schema"
+title: "Eliminate the sidecar test pool; converge callers to Base.connection / in-test PoolConfig (mirror connection_pool_test.rb)"
 status: ready
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
@@ -7,7 +7,7 @@ cluster: null
 deps:
   - create-table-canonical-schema-loader
 deps-rfc: []
-est-loc: null
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -19,74 +19,74 @@ closed-reason: null
 ## Context
 
 RFC 0059 (drop-defineschema-mirror-create-table). **Guiding principle: Rails
-fidelity above all else.** Follow-up surfaced while converting the relation
-tests (PR #4452, `convert-bespoke-defineschema-relation`).
+fidelity above all else.** (Supersedes the earlier framing of this story — "make
+the sidecar ride the canonical schema" — which _ratified_ the sidecar instead of
+converging it. Surfaced converting the relation tests, PR #4452.)
 
-Rails has exactly ONE test database: `schema.rb` is loaded once
-(`ActiveRecord::Schema.define` via `maintain_test_schema!` / `db:test:prepare`)
-and every connection in the single pool sees the full canonical schema. Tests
-never `create_table` a canonical table.
+**Rails has no "sidecar test pool."** Confirmed against source:
+`grep -r sidecar vendor/rails/activerecord/test` = 0 hits. Rails has ONE test
+database and ONE pool; every test uses `ActiveRecord::Base.connection`. When a
+test genuinely needs its own pool (pool mechanics), it builds one **in-test from
+the primary config** — `vendor/rails/activerecord/test/cases/connection_pool_test.rb:16-30`:
 
-trails has an extra construct — the **sidecar test pool** (`_pool` in
-`packages/activerecord/src/test-adapter.ts`, leased via `createTestAdapter()` /
-`createSidecarTestAdapter()` / `createPooledTestAdapter()`), used by
-pool-lifecycle and raw-adapter suites that need a leased connection independent
-of the fixtures machinery. Its sqlite DB is resolved by `_pooledSqliteDatabase()`
-(`test-adapter.ts:75-83`):
-
-```text
-AR_TEST_WORKER_DB ?? `file:trails_test_${workerId}?mode=memory&cache=shared`
+```ruby
+# Keep a duplicate pool so we do not bother others
+config = ActiveRecord::Base.connection_pool.db_config
+@db_config = HashConfig.new(config.env_name, config.name,
+  config.configuration_hash.merge(checkout_timeout: 0.2))
+@pool_config = PoolConfig.new(ActiveRecord::Base, @db_config, :writing, :default)
+@pool = ConnectionPool.new(@pool_config)
 ```
 
-while the **primary** `Base.connection` DB is
-(`test-helpers/test-database-config.ts:39`):
+The `db_config` is derived FROM `Base.connection_pool.db_config`, so the
+constructed pool rides the SAME (schema-loaded) database — never a separate DB
+handle.
 
-```text
-AR_TEST_WORKER_DB ?? ":memory:"
-```
+trails instead has a standing **sidecar `_pool`** singleton
+(`packages/activerecord/src/test-adapter.ts`: `_establishPooledTestPool` at
+`:117`, module-boot `_pool` at `:194`) pointed at a DIFFERENT sqlite handle than
+`Base.connection` (`file:trails_test_N?mode=memory&cache=shared` vs the primary
+`:memory:`). That divergent handle is a trails invention with no Rails
+counterpart, and its schema-less `:memory:`-fallback path is exactly why
+sidecar-leased suites (e.g. `relation.trails.test.ts`'s `isBlank/isPresent`)
+had to `createTable("developers")` in-test. Patching the sidecar's schema
+ratifies the invention; eliminating it converges to Rails and deletes the bug.
 
-Consequences:
+Callers split cleanly:
 
-- **Template-clone mode** (`AR_TEST_WORKER_DB` set — the sqlite CI lane /
-  multi-worker): both resolve to the SAME on-disk file, which
-  `loadCanonicalSchema` stamped at boot (`template-global-setup.ts:54`). The
-  sidecar already carries the full canonical schema — Rails-faithful.
-- **`:memory:` fallback** (single-worker / local dev): the primary is an
-  anonymous private `:memory:` DB (schema loaded onto it by
-  `test-setup-dy.ts`'s `loadSchema`), whereas the sidecar is a DIFFERENT
-  shared-cache named memory DB (`file:trails_test_N?mode=memory&cache=shared`)
-  that NOTHING runs `loadCanonicalSchema` against. So in this path the sidecar
-  is schema-less.
-
-That schema-less fallback is exactly why `relation.trails.test.ts`'s
-`isBlank / isPresent` suite (which stubs `AR_NO_AUTO_SCHEMA` and drives a
-sidecar-leased connection) must `createTable("developers", { force: true }, …)`
-in-test — a bespoke create that would not exist if the sidecar rode the
-canonical schema like Rails. PR #4452 kept the explicit create (mirroring
-schema.rb `create_table :developers`, dropped by name in `afterAll`) because
-converging the pool wiring is out of scope for a per-file test conversion.
+- **Convenience — just need a connection** (use `Base.connection`, like Rails):
+  - `createSidecarTestAdapter()`: `attribute-methods/{query,read,write,
+time-zone-conversion}.test.ts`, `relation/{arel-ast-convergence,
+build-arel-helpers,unscope-coverage}.test.ts`.
+  - `createTestAdapter()` (18): the `associations/join-dependency-*` suite,
+    `associations/{collection-proxy-count,loader-methods,reload-owner-repoint,
+sti-owner-through-foreign-key}.test.ts`,
+    `persistence/reload-association-cache.test.ts`, and the `test-helpers/*`
+    self-tests.
+- **Genuine pool mechanics** (build the pool in-test, mirror connection_pool_test.rb):
+  - `createPooledTestAdapter()`: `test-helpers/pooled-test-adapter.test.ts`,
+    `test-helpers/with-transactional-fixtures.test.ts`.
 
 ## Acceptance criteria
 
-- The sidecar test pool rides the boot-laid canonical schema in ALL sqlite
-  configs, not just template-clone mode. Options to evaluate:
-  - Make the `:memory:` fallback resolve the sidecar `_pool` DB to the SAME
-    handle as the primary `Base.connection` (`test-database-config.ts:39`), so
-    it inherits the schema `test-setup-dy.ts` loads; or
-  - Run `loadCanonicalSchema` on the `_pool` at boot in the `:memory:` fallback
-    path (`_establishPooledTestPool`, `test-adapter.ts:116-189`).
-  - Pick whichever keeps the PG/MySQL URL-DB paths (which already share one
-    server DB) unaffected.
-- `relation.trails.test.ts`'s `isBlank / isPresent` suite drops its in-test
-  `createTable("developers")` + `dropTable("developers")` and rides the
-  canonical `developers` table (and its `AR_NO_AUTO_SCHEMA` stub is revisited —
-  keep only if still needed).
-- Audit other sidecar-pool suites (`createTestAdapter` / `createSidecarTestAdapter`
-  / `createPooledTestAdapter` callers) for the same schema-less-fallback
-  workaround and remove bespoke canonical `create_table`s that become
-  unnecessary.
-- No regressions in the sqlite `:memory:` single-worker local run or the
-  template-clone CI lane; PG/MySQL lanes unaffected. `test:compare` delta >= 0.
-- No test renames. No `node:*` imports, no `process.*` in test bodies (infra
-  files may read env via the existing `getEnv` helper). Single PR from main,
-  under 500 LOC.
+- Retire the standing sidecar `_pool` and its convenience helpers
+  (`createSidecarTestAdapter`, and `createTestAdapter` if it only exists to lease
+  from `_pool`) from `test-adapter.ts`. Convenience callers use `Base.connection`
+  (the primary, schema-loaded pool) exactly as the Rails counterpart test does.
+- Pool-mechanics callers construct their pool in-test from `Base.connection_pool`
+  / the primary `db_config` + a `PoolConfig`, mirroring
+  `connection_pool_test.rb:16-30` — so it rides the canonical schema DB, NOT a
+  separate handle. `createPooledTestAdapter` may remain only if reworked to
+  derive from the primary config (no bespoke second DB).
+- The schema-less-fallback disappears: `relation.trails.test.ts`'s
+  `isBlank/isPresent` suite drops its in-test `createTable/dropTable("developers")`
+  and rides the canonical `developers` table (revisit/remove its
+  `AR_NO_AUTO_SCHEMA` stub). Audit all former sidecar callers for the same
+  now-unnecessary bespoke `create_table` workaround and remove it.
+- No test renames; `test:compare` delta >= 0; sqlite `:memory:` single-worker,
+  template-clone CI lane, and PG/MySQL URL-DB lanes all unaffected.
+- Read the corresponding Rails test for each converted suite first (fidelity
+  above all else). This spans ~29 caller files and will exceed 500 LOC — do NOT
+  stack; ship it as per-area PRs and register follow-up stories per the epic
+  split rule (e.g. join-dependency batch, attribute-methods/relation batch,
+  pool-mechanics rework) rather than one mega-PR.
