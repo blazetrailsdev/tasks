@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the sidecar test pool; converge callers to Base.connection / in-test PoolConfig (mirror connection_pool_test.rb)"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: 4463
 claim: "2026-07-03T02:21:53Z"
 assignee: "converge-sidecar-pool-rides-canonical-schema"
 blocked-by: null
