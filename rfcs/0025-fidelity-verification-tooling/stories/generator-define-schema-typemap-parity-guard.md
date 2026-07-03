@@ -1,6 +1,6 @@
 ---
 title: "Guard: schema-file-generator type maps must match define-schema.ts COLUMN_TYPE_MAP_*"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4464
 claim: "2026-07-03T02:33:53Z"
 assignee: "generator-define-schema-typemap-parity-guard"
 blocked-by: null
