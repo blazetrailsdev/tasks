@@ -1,6 +1,6 @@
 ---
 title: "Flip the global beforeEach reset from dropAllTables to truncation"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
