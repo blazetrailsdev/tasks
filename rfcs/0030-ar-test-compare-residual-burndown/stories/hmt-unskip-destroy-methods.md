@@ -1,6 +1,6 @@
 ---
 title: "hmt-unskip-destroy-methods"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4490
 claim: "2026-07-03T15:45:51Z"
 assignee: "hmt-unskip-destroy-methods"
 blocked-by: null
