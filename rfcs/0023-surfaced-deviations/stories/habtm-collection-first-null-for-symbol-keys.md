@@ -1,7 +1,7 @@
 ---
 title: "HABTM collection proxy first() returns null for symbol/custom-key associations despite non-empty collection"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T01:21:52Z"
+assignee: "habtm-collection-first-null-for-symbol-keys"
 blocked-by: null
 ---
 
