@@ -1,7 +1,7 @@
 ---
 title: "assess 3 skipped has-many tests with non-canonical FK columns (thr_id, hc_author_id, ns_author_id)"
-status: ready
-updated: 2026-06-28
+status: claimed
+updated: 2026-07-03
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T02:57:51Z"
+assignee: "has-many-bespoke-fk-skips"
 blocked-by: null
 ---
 
