@@ -1,6 +1,6 @@
 ---
 title: "Converge pool disconnect/discard/flush/clearReloadable to async Rails-named methods"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["converge-connection-pool-checkout-lease-async"]
 deps-rfc: []
 est-loc: null
 priority: 60
-pr: null
+pr: 4472
 claim: "2026-07-03T11:45:54Z"
 assignee: "converge-connection-pool-lifecycle-async"
 blocked-by: null
