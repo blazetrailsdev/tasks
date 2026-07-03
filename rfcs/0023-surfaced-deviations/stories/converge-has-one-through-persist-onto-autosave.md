@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-through-persist-onto-autosave"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
