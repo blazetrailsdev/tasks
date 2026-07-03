@@ -1,6 +1,6 @@
 ---
 title: "convert-migration-test-defineschema-createtable"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4497
 claim: "2026-07-03T17:21:50Z"
 assignee: "convert-migration-test-defineschema-createtable"
 blocked-by: null
