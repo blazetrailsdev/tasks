@@ -1,6 +1,6 @@
 ---
 title: "Converge has_one persistence onto Rails autosave path; retire _pendingReplace machinery"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4489
 claim: "2026-07-03T15:33:52Z"
 assignee: "converge-has-one-persist-onto-autosave-drop-pendingreplace"
 blocked-by: null
