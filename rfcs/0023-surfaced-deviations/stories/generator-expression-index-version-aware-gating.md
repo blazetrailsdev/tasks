@@ -1,6 +1,6 @@
 ---
 title: "schema-file-generator drops expression indexes on all MySQL (coarse) vs runtime supportsExpressionIndex"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
