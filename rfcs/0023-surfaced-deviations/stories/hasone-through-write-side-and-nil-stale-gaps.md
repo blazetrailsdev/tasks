@@ -1,6 +1,6 @@
 ---
 title: "hasone-through-write-side-and-nil-stale-gaps"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4469
 claim: "2026-07-03T03:09:55Z"
 assignee: "hasone-through-write-side-and-nil-stale-gaps"
 blocked-by: null
