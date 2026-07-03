@@ -1,6 +1,6 @@
 ---
 title: "Converge pool checkout/leaseConnection to async Rails-named methods"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
