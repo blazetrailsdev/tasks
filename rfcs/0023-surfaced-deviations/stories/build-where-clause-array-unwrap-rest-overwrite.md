@@ -1,6 +1,6 @@
 ---
 title: "build-where-clause-array-unwrap-rest-overwrite"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T01:57:49Z"
+assignee: "build-where-clause-array-unwrap-rest-overwrite"
 blocked-by: null
 closed-reason: null
 ---
