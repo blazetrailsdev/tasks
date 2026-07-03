@@ -1,6 +1,6 @@
 ---
 title: "convert-defineschema-behavior-test-helpers"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 4476
 claim: "2026-07-03T12:33:51Z"
 assignee: "convert-defineschema-behavior-test-helpers"
 blocked-by: null
