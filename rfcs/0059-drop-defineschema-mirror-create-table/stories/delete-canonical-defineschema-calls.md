@@ -1,6 +1,6 @@
 ---
 title: "Phase 2: delete canonical defineSchema(TEST_SCHEMA) calls (~25 files)"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4455
 claim: "2026-07-03T00:09:51Z"
 assignee: "delete-canonical-defineschema-calls"
 blocked-by: null
