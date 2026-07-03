@@ -1,6 +1,6 @@
 ---
 title: "Converge migration/schema/dumper suites off sidecar _pool onto Base.connection"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4513
 claim: "2026-07-03T20:54:52Z"
 assignee: "converge-migration-schema-sidecar-callers"
 blocked-by: null
