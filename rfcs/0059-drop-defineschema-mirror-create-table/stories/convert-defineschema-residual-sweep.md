@@ -1,6 +1,6 @@
 ---
 title: "Residual sweep: resolve defineSchema calls in the 24 orphan test files (delete canonical-ride, convert bespoke)"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T11:57:54Z"
+assignee: "convert-defineschema-residual-sweep"
 blocked-by: null
 closed-reason: null
 ---
