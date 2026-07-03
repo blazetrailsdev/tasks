@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delete-destroy-nil-return-on-empty-or-abort"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4506
 claim: "2026-07-03T19:43:08Z"
 assignee: "collection-proxy-delete-destroy-nil-return-on-empty-or-abort"
 blocked-by: null
