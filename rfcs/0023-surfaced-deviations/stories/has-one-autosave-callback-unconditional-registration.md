@@ -1,6 +1,6 @@
 ---
 title: "has_one autosave callback should register unconditionally (not gated on options.autosave)"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
