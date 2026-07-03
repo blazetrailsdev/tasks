@@ -1,6 +1,6 @@
 ---
 title: "habtm-preloader-jointable-batch-conflation-investigation"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0005-activerecord-gaps"
 cluster: null
