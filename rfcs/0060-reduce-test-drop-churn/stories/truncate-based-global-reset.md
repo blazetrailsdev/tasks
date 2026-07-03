@@ -1,6 +1,6 @@
 ---
 title: "Flip the global beforeEach reset from dropAllTables to truncation"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 0
-pr: null
+pr: 4504
 claim: "2026-07-03T19:31:08Z"
 assignee: "truncate-based-global-reset"
 blocked-by: null
