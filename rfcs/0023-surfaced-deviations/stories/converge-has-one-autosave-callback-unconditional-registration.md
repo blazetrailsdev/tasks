@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-autosave-callback-unconditional-registration"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4495
 claim: "2026-07-03T16:57:54Z"
 assignee: "converge-has-one-autosave-callback-unconditional-registration"
 blocked-by: null
