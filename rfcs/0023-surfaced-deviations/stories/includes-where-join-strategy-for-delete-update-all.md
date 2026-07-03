@@ -1,6 +1,6 @@
 ---
 title: "deleteAll/updateAll: switch to JOIN strategy when includes references WHERE table"
-status: claimed
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 3290
 claim: "2026-07-03T23:19:07Z"
 assignee: "includes-where-join-strategy-for-delete-update-all"
 blocked-by: null
