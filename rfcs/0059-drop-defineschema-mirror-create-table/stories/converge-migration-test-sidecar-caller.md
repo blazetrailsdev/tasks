@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-test-sidecar-caller"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
