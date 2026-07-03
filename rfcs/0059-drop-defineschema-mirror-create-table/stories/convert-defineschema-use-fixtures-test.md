@@ -1,6 +1,6 @@
 ---
 title: "convert-defineschema-use-fixtures-test"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 4477
 claim: "2026-07-03T12:45:52Z"
 assignee: "convert-defineschema-use-fixtures-test"
 blocked-by: null
