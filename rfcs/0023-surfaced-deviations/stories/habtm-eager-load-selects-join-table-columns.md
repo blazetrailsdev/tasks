@@ -1,6 +1,6 @@
 ---
 title: "habtm-eager-load-selects-join-table-columns"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4460
 claim: "2026-07-03T01:33:52Z"
 assignee: "habtm-eager-load-selects-join-table-columns"
 blocked-by: null
