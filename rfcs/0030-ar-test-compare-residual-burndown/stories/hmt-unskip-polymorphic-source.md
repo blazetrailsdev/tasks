@@ -1,6 +1,6 @@
 ---
 title: "hmt-unskip-polymorphic-source"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4492
 claim: "2026-07-03T16:09:51Z"
 assignee: "hmt-unskip-polymorphic-source"
 blocked-by: null
