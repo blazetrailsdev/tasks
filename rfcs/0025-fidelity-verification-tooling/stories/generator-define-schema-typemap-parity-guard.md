@@ -1,6 +1,6 @@
 ---
 title: "Guard: schema-file-generator type maps must match define-schema.ts COLUMN_TYPE_MAP_*"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
