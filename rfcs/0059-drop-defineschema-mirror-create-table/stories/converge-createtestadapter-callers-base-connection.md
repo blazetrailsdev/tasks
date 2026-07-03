@@ -1,6 +1,6 @@
 ---
 title: "converge-createtestadapter-callers-base-connection"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T17:45:50Z"
+assignee: "converge-createtestadapter-callers-base-connection"
 blocked-by: null
 closed-reason: null
 ---
