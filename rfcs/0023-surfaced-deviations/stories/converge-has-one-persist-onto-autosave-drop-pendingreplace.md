@@ -1,6 +1,6 @@
 ---
 title: "Converge has_one persistence onto Rails autosave path; retire _pendingReplace machinery"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
