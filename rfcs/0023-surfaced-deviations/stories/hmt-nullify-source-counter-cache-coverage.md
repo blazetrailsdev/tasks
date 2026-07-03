@@ -1,6 +1,6 @@
 ---
 title: "Cover source-reflection counter_cache decrement on nullify-through delete"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T16:45:50Z"
+assignee: "hmt-nullify-source-counter-cache-coverage"
 blocked-by: null
 closed-reason: null
 ---
