@@ -1,7 +1,7 @@
 ---
 title: "inspect-dispatch-overridable-attribute-for-inspect"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T23:43:09Z"
+assignee: "inspect-dispatch-overridable-attribute-for-inspect"
 blocked-by: null
 ---
 
