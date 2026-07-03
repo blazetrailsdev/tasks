@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-test-sidecar-caller"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T21:31:09Z"
+assignee: "converge-migration-test-sidecar-caller"
 blocked-by: null
 closed-reason: null
 ---
