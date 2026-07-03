@@ -4,7 +4,8 @@ status: draft
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
-deps: []
+deps:
+  - create-table-canonical-schema-loader
 deps-rfc: []
 est-loc: null
 priority: null
