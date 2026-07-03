@@ -1,6 +1,6 @@
 ---
 title: "retire-sidecar-pool-rework-pool-mechanics"
-status: blocked
+status: ready
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: "2026-07-03T18:09:50Z"
-assignee: "retire-sidecar-pool-rework-pool-mechanics"
-blocked-by: "Depends on convenience-caller PRs #4500 (converge-createtestadapter-callers-base-connection) and #4501 (converge-sidecar-convenience-callers-base-connection) landing first — both still in-progress; createSidecarTestAdapter still has 13 test callers, so _pool cannot be retired yet."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
