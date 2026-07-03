@@ -1,6 +1,6 @@
 ---
 title: "hasone-through-source-condition-preload-selects-wrong-through-row"
-status: claimed
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4508
 claim: "2026-07-03T20:19:09Z"
 assignee: "hasone-through-source-condition-preload-selects-wrong-through-row"
 blocked-by: null
