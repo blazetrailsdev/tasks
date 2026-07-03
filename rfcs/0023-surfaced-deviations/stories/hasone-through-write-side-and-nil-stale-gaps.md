@@ -1,6 +1,6 @@
 ---
 title: "hasone-through-write-side-and-nil-stale-gaps"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
