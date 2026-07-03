@@ -1,6 +1,6 @@
 ---
 title: "Mutated CollectionProxy finder requery keeps stale 1=0 base when owner was new at mutation time"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T02:09:51Z"
+assignee: "collection-proxy-mutated-finder-scope-stale-new-owner-seed"
 blocked-by: null
 closed-reason: null
 ---
