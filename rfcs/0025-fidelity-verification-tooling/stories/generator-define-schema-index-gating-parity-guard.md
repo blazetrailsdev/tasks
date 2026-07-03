@@ -1,6 +1,6 @@
 ---
 title: "Guard: schema-file-generator index length/expression gating must match define-schema.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4471
 claim: "2026-07-03T11:33:51Z"
 assignee: "generator-define-schema-index-gating-parity-guard"
 blocked-by: null
