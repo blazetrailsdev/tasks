@@ -1,6 +1,6 @@
 ---
 title: "Extractor: detect include(Host, Mod) calls outside top-level scope so deferred-mixin hosts keep attribution"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4484
 claim: "2026-07-03T14:33:52Z"
 assignee: "extractor-detect-non-top-level-includes"
 blocked-by: null
