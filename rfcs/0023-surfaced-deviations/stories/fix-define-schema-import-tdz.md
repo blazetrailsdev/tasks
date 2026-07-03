@@ -1,6 +1,6 @@
 ---
 title: "Break adapter-graph circular init so define-schema imports without TDZ crash"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
