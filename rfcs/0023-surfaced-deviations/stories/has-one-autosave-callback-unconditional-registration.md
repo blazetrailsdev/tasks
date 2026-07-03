@@ -1,6 +1,6 @@
 ---
 title: "has_one autosave callback should register unconditionally (not gated on options.autosave)"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4480
 claim: "2026-07-03T13:21:53Z"
 assignee: "has-one-autosave-callback-unconditional-registration"
 blocked-by: null
