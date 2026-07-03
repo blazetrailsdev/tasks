@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-non-through-destroy-remove-records-parity"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
