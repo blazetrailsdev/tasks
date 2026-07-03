@@ -1,6 +1,6 @@
 ---
 title: "Converge pool checkout/leaseConnection to async Rails-named methods"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["connection-pool-async-pinned-checkout-no-fire-and-forget"]
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 4466
 claim: "2026-07-03T01:45:53Z"
 assignee: "converge-connection-pool-checkout-lease-async"
 blocked-by: null
