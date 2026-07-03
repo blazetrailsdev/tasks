@@ -1,6 +1,6 @@
 ---
 title: "Mutated CollectionProxy finder requery keeps stale 1=0 base when owner was new at mutation time"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
