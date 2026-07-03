@@ -1,6 +1,6 @@
 ---
 title: "converge GeneratedMethodsTest#included_module_overwrites_association_methods to Rails"
-status: claimed
+status: done
 updated: 2026-07-03
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4242
 claim: "2026-07-03T01:09:50Z"
 assignee: "generated-methods-included-module-overwrites-assoc"
 blocked-by: null
