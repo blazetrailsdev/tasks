@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-through-persist-onto-autosave"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4493
 claim: "2026-07-03T16:21:52Z"
 assignee: "converge-has-one-through-persist-onto-autosave"
 blocked-by: null
