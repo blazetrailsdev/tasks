@@ -1,6 +1,6 @@
 ---
 title: "has_one_through build/create on persisted owner defers join-row write to save() instead of persisting immediately"
-status: claimed
+status: closed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-07-03T20:07:09Z"
-assignee: "has-one-through-create-persists-join-row-immediately"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Invalid premise: Rails create_club/build also defers the join-row write to owner.save() (verified empirically against vendor/rails — Membership.count=0 and current_membership.new_record?=true after create_club with no save; only the writer club= persists immediately via replace(record, save=true)). trails already matches Rails: create defers, writer persists. Implementing 'persist immediately on create' would introduce a deviation from Rails, not converge. No code change warranted."
 ---
 
 ## Context
