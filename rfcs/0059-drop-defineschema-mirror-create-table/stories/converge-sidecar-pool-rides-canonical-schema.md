@@ -8,7 +8,7 @@ deps:
   - create-table-canonical-schema-loader
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 3
 pr: 4463
 claim: "2026-07-03T02:21:53Z"
 assignee: "converge-sidecar-pool-rides-canonical-schema"
