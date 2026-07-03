@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-destroy-fires-before-after-remove-callbacks"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T19:55:08Z"
+assignee: "collection-proxy-destroy-fires-before-after-remove-callbacks"
 blocked-by: null
 closed-reason: null
 ---
