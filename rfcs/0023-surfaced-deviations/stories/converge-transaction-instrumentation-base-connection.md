@@ -1,6 +1,6 @@
 ---
 title: "Converge transaction-instrumentation.test.ts onto Base.connection (fix TM savepoint-state leak across shared-pool tests)"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
