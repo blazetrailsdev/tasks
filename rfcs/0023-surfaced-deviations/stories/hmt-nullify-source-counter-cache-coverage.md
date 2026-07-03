@@ -1,6 +1,6 @@
 ---
 title: "Cover source-reflection counter_cache decrement on nullify-through delete"
-status: claimed
+status: closed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-07-03T16:45:50Z"
-assignee: "hmt-nullify-source-counter-cache-coverage"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't-cover: no reachable Rails fixture. Path 1 of updateThroughCounterCaches (source_reflection counter_cache -> klass.decrement_counter, has_many_through_association.rb:163-166) is a faithful port but structurally unreachable by any Rails fixture. Rails has exactly three has_many :through, dependent: :nullify associations: person.rb jobs_with_dependent_nullify and jobs (source :job, through :references) whose source belongs_to is reference.rb 'belongs_to :job' (no counter_cache), and post.rb tags_with_nullify (source :tag, through :taggings) whose source belongs_to is tagging.rb 'belongs_to :tag' (no counter_cache). No source belongs_to on any nullify-through carries a counter_cache, so Path 1 has no reachable fixture. Adding an invented model/counter_cache would violate the repo's canonical-fidelity rules (models/fixtures must mirror Rails exactly). Path 2 (owner reflection counter_cache) is already covered by the 'update counter caches on delete with dependent nullify' test."
 ---
 
 ## Context
