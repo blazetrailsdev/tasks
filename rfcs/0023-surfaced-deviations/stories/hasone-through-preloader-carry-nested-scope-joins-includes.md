@@ -1,6 +1,6 @@
 ---
 title: "has_one-through preloader: carry reflection-scope nested joins/includes onto the through query"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
