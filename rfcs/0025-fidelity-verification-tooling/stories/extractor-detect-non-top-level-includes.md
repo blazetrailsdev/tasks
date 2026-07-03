@@ -1,6 +1,6 @@
 ---
 title: "Extractor: detect include(Host, Mod) calls outside top-level scope so deferred-mixin hosts keep attribution"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
