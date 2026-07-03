@@ -1,6 +1,6 @@
 ---
 title: "Break adapter-graph circular init so define-schema imports without TDZ crash"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4458
 claim: "2026-07-03T00:45:51Z"
 assignee: "fix-define-schema-import-tdz"
 blocked-by: null
