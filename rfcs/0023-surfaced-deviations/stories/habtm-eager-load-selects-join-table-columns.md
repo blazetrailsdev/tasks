@@ -1,6 +1,6 @@
 ---
 title: "habtm-eager-load-selects-join-table-columns"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
