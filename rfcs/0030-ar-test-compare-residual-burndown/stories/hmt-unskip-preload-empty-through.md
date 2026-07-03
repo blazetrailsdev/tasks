@@ -1,6 +1,6 @@
 ---
 title: "hmt-unskip-preload-empty-through"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4509
 claim: "2026-07-03T20:31:07Z"
 assignee: "hmt-unskip-preload-empty-through"
 blocked-by: null
