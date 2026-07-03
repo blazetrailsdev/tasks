@@ -1,6 +1,6 @@
 ---
 title: "converge-pool-disconnect-discard-async"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["converge-connection-pool-lifecycle-async"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4483
 claim: "2026-07-03T14:21:53Z"
 assignee: "converge-pool-disconnect-discard-async"
 blocked-by: null
