@@ -1,6 +1,6 @@
 ---
 title: "retire-sidecar-pool-rework-pool-mechanics"
-status: claimed
+status: blocked
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -11,7 +11,7 @@ priority: 3
 pr: null
 claim: "2026-07-03T20:37:37Z"
 assignee: "retire-sidecar-pool-rework-pool-mechanics"
-blocked-by: null
+blocked-by: "Precondition false on latest main: the two convenience batches (PRs 4500/4501) only converged their enumerated association/attribute-method/relation suites. ~26 test files + 3 shared helper modules still lease from sidecar _pool via createTestAdapter/createSidecarTestAdapter, so the helpers cannot be deleted yet. Blocked on 4 new per-area convergence follow-ups: converge-migration-schema-sidecar-callers, converge-column-type-sidecar-callers, converge-misc-sidecar-callers, converge-test-helper-sidecar-callers. Once those land (removing the last _pool leases), this story does the pool-mechanics rework + final helper/_pool retirement."
 closed-reason: null
 ---
 
