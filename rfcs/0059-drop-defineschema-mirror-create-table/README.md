@@ -1,9 +1,9 @@
 ---
 rfc: "0059-drop-defineschema-mirror-create-table"
 title: "Drop defineSchema; mirror Rails create_table for test schema"
-status: draft
+status: active
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 owner: "@deanmarano"
 packages:
   - "activerecord"
