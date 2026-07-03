@@ -1,6 +1,6 @@
 ---
 title: "converge-sidecar-convenience-callers-base-connection"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 4501
 claim: "2026-07-03T17:57:50Z"
 assignee: "converge-sidecar-convenience-callers-base-connection"
 blocked-by: null
