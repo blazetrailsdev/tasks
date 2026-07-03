@@ -1,6 +1,6 @@
 ---
 title: "hmt-unskip-through-scope"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4518
 claim: "2026-07-03T21:43:07Z"
 assignee: "hmt-unskip-through-scope"
 blocked-by: null
