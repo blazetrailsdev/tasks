@@ -1,7 +1,7 @@
 ---
 title: "converge-finder-bignum-out-of-range"
 status: done
-updated: 2026-07-02
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
