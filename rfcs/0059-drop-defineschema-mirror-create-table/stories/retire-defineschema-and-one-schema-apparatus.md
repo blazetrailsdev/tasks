@@ -20,6 +20,8 @@ deps:
     "convert-defineschema-behavior-test-helpers",
     "convert-defineschema-use-fixtures-test",
     "convert-defineschema-residual-sweep",
+    "convert-migration-test-defineschema-createtable",
+    "decouple-tdz-guard-from-define-schema",
   ]
 deps-rfc: []
 est-loc: 200
