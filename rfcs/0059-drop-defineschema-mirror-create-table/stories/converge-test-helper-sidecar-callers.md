@@ -1,6 +1,6 @@
 ---
 title: "Converge shared transactional-fixture helpers off sidecar _pool onto Base.connection"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4515
 claim: "2026-07-03T21:19:09Z"
 assignee: "converge-test-helper-sidecar-callers"
 blocked-by: null
