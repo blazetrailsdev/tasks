@@ -1,6 +1,6 @@
 ---
 title: "Non-through CollectionProxy#destroy should resolve ids and raise on type mismatch"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T17:09:52Z"
+assignee: "collection-proxy-destroy-non-through-resolve-and-typecheck"
 blocked-by: null
 closed-reason: null
 ---
