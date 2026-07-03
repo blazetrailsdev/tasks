@@ -1,6 +1,6 @@
 ---
 title: "Converge pure-wiring join-dependency tests to canonical PKs so they ride fixtures({})"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T20:43:10Z"
+assignee: "converge-join-dependency-wiring-tests-canonical-pk"
 blocked-by: null
 closed-reason: null
 ---
