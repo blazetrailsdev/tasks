@@ -1,7 +1,7 @@
 ---
 title: "Faithfully port finder.test.ts exists cluster onto real finder_test.rb models/fixtures"
-status: in-progress
-updated: 2026-07-02
+status: done
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
