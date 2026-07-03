@@ -1,7 +1,7 @@
 ---
 title: "connection-pool-pinned-sync-checkout-per-checkout-verify"
-status: in-progress
-updated: 2026-07-02
+status: done
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
