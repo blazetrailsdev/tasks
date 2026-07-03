@@ -1,7 +1,7 @@
 ---
 title: "convert-defineschema-use-fixtures-test"
-status: draft
-updated: 2026-07-02
+status: ready
+updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
 deps: []
