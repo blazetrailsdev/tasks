@@ -1,6 +1,6 @@
 ---
 title: "Converge column/type suites off sidecar _pool onto Base.connection"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T20:54:46Z"
+assignee: "converge-column-type-sidecar-callers"
 blocked-by: null
 closed-reason: null
 ---
