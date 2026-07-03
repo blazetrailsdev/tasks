@@ -1,7 +1,7 @@
 ---
 title: "Phase 3: convert bespoke defineSchema -> create_table in relation tests (8 files)"
-status: in-progress
-updated: 2026-07-02
+status: done
+updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
 deps: ["create-table-canonical-schema-loader"]
