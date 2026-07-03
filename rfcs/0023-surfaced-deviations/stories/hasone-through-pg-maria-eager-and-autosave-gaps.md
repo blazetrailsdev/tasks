@@ -1,6 +1,6 @@
 ---
 title: "hasone-through-pg-maria-eager-and-autosave-gaps"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
