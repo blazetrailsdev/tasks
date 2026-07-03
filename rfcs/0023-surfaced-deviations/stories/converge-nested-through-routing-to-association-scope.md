@@ -1,6 +1,6 @@
 ---
 title: "Converge nested-through routing onto the JOIN-based AssociationScope (drop isNested bail)"
-status: in-progress
+status: done
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
