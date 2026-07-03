@@ -1,6 +1,6 @@
 ---
 title: "Converge test-adapter factories to async, drop leaseConnectionSync escape hatch"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T12:57:52Z"
+assignee: "converge-test-adapter-factories-async-drop-leaseconnectionsync"
 blocked-by: null
 closed-reason: null
 ---
