@@ -1,7 +1,7 @@
 ---
 title: "include() should match Ruby ancestry (last-included mixin wins), retiring manual prototype overrides"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-03
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T22:07:09Z"
+assignee: "include-last-mixin-wins-ruby-ancestry"
 blocked-by: null
 ---
 
