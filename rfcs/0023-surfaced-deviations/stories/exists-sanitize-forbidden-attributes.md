@@ -1,7 +1,7 @@
 ---
 title: "exists?: port sanitize_forbidden_attributes in construct_relation_for_exists"
-status: ready
-updated: 2026-07-02
+status: claimed
+updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T00:21:51Z"
+assignee: "exists-sanitize-forbidden-attributes"
 blocked-by: null
 closed-reason: null
 ---
