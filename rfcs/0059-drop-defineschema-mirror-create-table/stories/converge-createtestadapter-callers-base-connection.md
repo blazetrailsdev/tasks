@@ -1,6 +1,6 @@
 ---
 title: "converge-createtestadapter-callers-base-connection"
-status: draft
+status: ready
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
