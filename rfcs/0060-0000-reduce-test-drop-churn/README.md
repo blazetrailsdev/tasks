@@ -1,5 +1,5 @@
 ---
-rfc: "0000-0000-reduce-test-drop-churn"
+rfc: "0060-0000-reduce-test-drop-churn"
 title: "Reduce AR test DROP-TABLE churn on the boot-laid canonical schema"
 status: draft
 created: 2026-07-03
@@ -15,7 +15,7 @@ related-rfcs:
   - "0028-ci-cost-optimization"
 ---
 
-# RFC — Reduce AR test DROP-TABLE churn on the boot-laid canonical schema
+# RFC 0060 — Reduce AR test DROP-TABLE churn on the boot-laid canonical schema
 
 ## Summary
 
