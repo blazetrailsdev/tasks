@@ -1,6 +1,6 @@
 ---
 title: "inner-join-association-surfaced-deviations"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4523
 claim: "2026-07-03T23:31:08Z"
 assignee: "inner-join-association-surfaced-deviations"
 blocked-by: null
