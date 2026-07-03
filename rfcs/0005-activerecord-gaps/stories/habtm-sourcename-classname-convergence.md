@@ -1,7 +1,7 @@
 ---
 title: "habtm-sourcename-classname-convergence"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-07-03
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T02:45:52Z"
+assignee: "habtm-sourcename-classname-convergence"
 blocked-by: null
 ---
 
