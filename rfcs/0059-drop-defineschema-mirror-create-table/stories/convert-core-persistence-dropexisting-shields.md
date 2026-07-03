@@ -1,6 +1,6 @@
 ---
 title: "convert-core-persistence-dropexisting-shields"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 4475
 claim: "2026-07-03T12:21:53Z"
 assignee: "convert-core-persistence-dropexisting-shields"
 blocked-by: null
