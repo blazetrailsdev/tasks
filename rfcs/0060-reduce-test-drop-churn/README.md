@@ -1,7 +1,7 @@
 ---
 rfc: "0060-reduce-test-drop-churn"
 title: "Reduce AR test DROP-TABLE churn on the boot-laid canonical schema"
-status: draft
+status: active
 created: 2026-07-03
 updated: 2026-07-03
 owner: "@deanmarano"

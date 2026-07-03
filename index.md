@@ -63,4 +63,4 @@
 | [0057-transaction-fidelity](rfcs/0057-transaction-fidelity/README.md) | Transaction semantics fidelity | draft | @deanmarano | activerecord |
 | [0058-module-generation-mechanism](rfcs/0058-module-generation-mechanism/README.md) | Module/mixin generation mechanism convergence | draft | @deanmarano | activerecord |
 | [0059-drop-defineschema-mirror-create-table](rfcs/0059-drop-defineschema-mirror-create-table/README.md) | Drop defineSchema; mirror Rails create_table for test schema | active | @deanmarano | activerecord |
-| [0060-reduce-test-drop-churn](rfcs/0060-reduce-test-drop-churn/README.md) | Reduce AR test DROP-TABLE churn on the boot-laid canonical schema | draft | @deanmarano | activerecord |
+| [0060-reduce-test-drop-churn](rfcs/0060-reduce-test-drop-churn/README.md) | Reduce AR test DROP-TABLE churn on the boot-laid canonical schema | active | @deanmarano | activerecord |
