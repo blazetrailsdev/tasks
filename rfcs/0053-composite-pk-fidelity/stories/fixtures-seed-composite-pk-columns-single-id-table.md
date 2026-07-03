@@ -1,7 +1,7 @@
 ---
 title: "defineFixtures seeds model composite-PK columns (shop_id) like Rails composite_identify"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-03
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T00:57:52Z"
+assignee: "fixtures-seed-composite-pk-columns-single-id-table"
 blocked-by: null
 ---
 
