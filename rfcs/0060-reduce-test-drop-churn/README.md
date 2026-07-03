@@ -1,5 +1,5 @@
 ---
-rfc: "0060-0000-reduce-test-drop-churn"
+rfc: "0060-reduce-test-drop-churn"
 title: "Reduce AR test DROP-TABLE churn on the boot-laid canonical schema"
 status: draft
 created: 2026-07-03
