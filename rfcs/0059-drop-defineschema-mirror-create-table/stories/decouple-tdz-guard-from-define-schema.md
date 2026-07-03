@@ -1,6 +1,6 @@
 ---
 title: "Decouple adapter-graph TDZ guard test from define-schema before it is deleted"
-status: ready
+status: claimed
 updated: 2026-07-03
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T17:33:51Z"
+assignee: "decouple-tdz-guard-from-define-schema"
 blocked-by: null
 closed-reason: null
 ---
