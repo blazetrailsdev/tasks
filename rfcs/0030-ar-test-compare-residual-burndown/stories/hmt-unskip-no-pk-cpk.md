@@ -1,7 +1,7 @@
 ---
 title: "hmt-unskip-no-pk-cpk"
-status: ready
-updated: 2026-06-28
+status: claimed
+updated: 2026-07-03
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-03T15:57:50Z"
+assignee: "hmt-unskip-no-pk-cpk"
 blocked-by: null
 ---
 
