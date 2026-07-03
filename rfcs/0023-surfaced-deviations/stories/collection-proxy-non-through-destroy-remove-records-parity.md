@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-non-through-destroy-remove-records-parity"
-status: claimed
+status: in-progress
 updated: 2026-07-03
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4503
 claim: "2026-07-03T19:16:28Z"
 assignee: "collection-proxy-non-through-destroy-remove-records-parity"
 blocked-by: null
