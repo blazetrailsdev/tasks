@@ -4,7 +4,8 @@ status: draft
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
-deps: []
+deps:
+  - migrate-emittable-onto-columnspec-default-path
 deps-rfc: []
 est-loc: null
 priority: null
