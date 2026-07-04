@@ -1,13 +1,13 @@
 ---
 title: "skip-disable-referential-integrity-on-full-truncate"
 status: ready
-updated: 2026-07-03
+updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
