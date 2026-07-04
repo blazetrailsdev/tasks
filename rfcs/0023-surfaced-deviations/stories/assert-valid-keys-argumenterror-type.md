@@ -1,6 +1,6 @@
 ---
 title: "assertValidKeys should raise ArgumentError, not generic Error"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4566
 claim: "2026-07-04T19:27:07Z"
 assignee: "assert-valid-keys-argumenterror-type"
 blocked-by: null
