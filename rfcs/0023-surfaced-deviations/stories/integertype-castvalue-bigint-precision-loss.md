@@ -1,6 +1,6 @@
 ---
 title: "IntegerType#cast_value loses BigInt precision via Number() above MAX_SAFE_INTEGER"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
