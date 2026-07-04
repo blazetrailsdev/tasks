@@ -1,7 +1,7 @@
 ---
 title: "mysql2-adapter-nullpool-and-addreference-deviations"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T23:07:06Z"
+assignee: "mysql2-adapter-nullpool-and-addreference-deviations"
 blocked-by: null
 ---
 
