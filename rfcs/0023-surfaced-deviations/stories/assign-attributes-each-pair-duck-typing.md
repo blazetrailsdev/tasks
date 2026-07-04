@@ -1,6 +1,6 @@
 ---
 title: "assignAttributes guard should reject non-each_pair objects (Date/Time), not just non-object/array"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 4529
 claim: "2026-07-04T00:43:12Z"
 assignee: "assign-attributes-each-pair-duck-typing"
 blocked-by: null
