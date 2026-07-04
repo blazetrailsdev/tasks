@@ -1,6 +1,6 @@
 ---
 title: "integer-type-bigint-precise-range"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4533
 claim: "2026-07-04T01:51:34Z"
 assignee: "integer-type-bigint-precise-range"
 blocked-by: null
