@@ -1,6 +1,6 @@
 ---
 title: "left_outer_joins_values |= dedups hash specs structurally (eql?), not by reference"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
