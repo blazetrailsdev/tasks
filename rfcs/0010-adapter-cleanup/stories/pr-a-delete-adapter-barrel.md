@@ -1,7 +1,7 @@
 ---
 title: "PR A — delete adapter.ts barrel + DatabaseAdapter interface"
-status: blocked
-updated: 2026-06-24
+status: closed
+updated: 2026-07-04
 rfc: "0010-adapter-cleanup"
 cluster: adapter-cleanup
 deps: []
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 150
 priority: 14
 pr: null
-claim: "2026-06-24T16:12:31Z"
-assignee: "pr-a-delete-adapter-barrel"
-blocked-by: "Superseded by converge-abstractadapter-superset-then-delete-barrel. The 'AbstractAdapter is the superset per #2402' premise is false at the TS type level: repoint+delete produces 38 errors on a 0-error main (AbstractAdapter lacks explain?/createTableDefinition?/schemaCreation?, adapterName is string not AdapterName, two interfaces extend DatabaseAdapter, missed inline import() sites, cross-package trailties consumers). Deletion is reachable only after that convergence."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "superseded by converge-abstractadapter-superset-then-delete-barrel; barrel deletion reachable only after that convergence (AbstractAdapter is not the TS-level superset)"
 ---
 
 ## Context
