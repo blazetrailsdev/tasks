@@ -1,7 +1,7 @@
 ---
 title: "Composite-PK distinct_relation_for_primary_key materialization (eager+limit cache_version/pluck)"
-status: blocked
-updated: 2026-06-29
+status: closed
+updated: 2026-07-04
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-06-29T14:34:11Z"
-assignee: "composite-pk-distinct-relation-materialization"
-blocked-by: "Premise unreachable: composite-PK collection joins degrade to preload (join-dependency.ts:263 bails on composite source PK), so jd.reflections is empty, the relation is deemed limitable, and distinct_relation_for_primary_key / _materializeLimitedIds is never entered (would be dead code). The real, reachable bug is a leftOuterJoins crash in eager pluck/cache_version for unjoinable composite associations (occurs even without a limit). Superseded by 0023-surfaced-deviations/composite-pk-eager-pluck-cache-preload-degrade."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "superseded by composite-pk-eager-pluck-cache-preload-degrade; premise unreachable (composite-PK join degrades to preload, so the limited-ids path is dead code)"
 ---
 
 ## Context
