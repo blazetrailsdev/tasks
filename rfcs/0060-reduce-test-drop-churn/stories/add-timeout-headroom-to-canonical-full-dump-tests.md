@@ -1,6 +1,6 @@
 ---
 title: "Give canonical full-schema-dump tests timeout headroom under PG fork load"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
