@@ -1,6 +1,6 @@
 ---
 title: "Migrator.validate should tolerate nil version before the name-dup check (Rails parity)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
