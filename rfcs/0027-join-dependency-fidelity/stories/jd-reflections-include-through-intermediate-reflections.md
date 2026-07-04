@@ -1,7 +1,7 @@
 ---
 title: "JoinDependency#reflections should include through-intermediate reflections (join_root.drop(1).map!(:reflection))"
-status: blocked
-updated: 2026-06-25
+status: closed
+updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: "2026-06-25T11:02:35Z"
-assignee: "jd-reflections-include-through-intermediate-reflections"
-blocked-by: "Premise empirically false — no work. Ran Rails 8.0.2: Post.eager_load(tags: through taggings) gives join_root.drop(1).size==1, reflections==[tags] (intermediate taggings NOT included; build() makes one JoinAssociation per spec name, no intermediate through nodes). Trails current main already matches: JoinDependency#reflections returns ['zComments'] (one through reflection, synthetic _through_ leaves skipped). Including intermediates would DIVERGE from Rails and regress fidelity. Recommend close as invalid/wontfix."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "won't-do: premise empirically false vs Rails 8.0.2 (intermediate through reflections not included); trails main already matches, including them would diverge and regress fidelity"
 ---
 
 ## Context
