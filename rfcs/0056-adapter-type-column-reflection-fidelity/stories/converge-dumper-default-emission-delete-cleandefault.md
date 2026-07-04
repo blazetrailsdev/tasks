@@ -1,6 +1,6 @@
 ---
 title: "Route dumper default emission through cast-type schemaDefault; delete cleanDefault/cleanRawPgExpression"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 45
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T16:04:27Z"
+assignee: "converge-dumper-default-emission-delete-cleandefault"
 blocked-by: null
 closed-reason: null
 ---
