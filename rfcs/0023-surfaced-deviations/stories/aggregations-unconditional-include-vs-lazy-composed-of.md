@@ -1,6 +1,6 @@
 ---
 title: "Aggregations is unconditionally included on Base; Rails includes it lazily via composed_of"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
