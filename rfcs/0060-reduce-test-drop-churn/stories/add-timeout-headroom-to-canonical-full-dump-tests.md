@@ -1,6 +1,6 @@
 ---
 title: "Give canonical full-schema-dump tests timeout headroom under PG fork load"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T16:19:28Z"
+assignee: "add-timeout-headroom-to-canonical-full-dump-tests"
 blocked-by: null
 closed-reason: null
 ---
