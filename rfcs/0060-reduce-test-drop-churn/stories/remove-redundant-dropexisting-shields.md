@@ -1,6 +1,6 @@
 ---
 title: "Remove redundant per-file dropExisting rebuild shields"
-status: claimed
+status: done
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["truncate-based-global-reset"]
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 4475
 claim: "2026-07-04T13:34:28Z"
 assignee: "remove-redundant-dropexisting-shields"
 blocked-by: null
