@@ -1,7 +1,7 @@
 ---
 title: "Phase 4: retire defineSchema + one-schema apparatus + irrelevant eslint rules (terminal)"
-status: claimed
-updated: 2026-07-03
+status: in-progress
+updated: 2026-07-04
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
 deps:
@@ -26,7 +26,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
+pr: 4540
 claim: "2026-07-03T19:13:04Z"
 assignee: "retire-defineschema-and-one-schema-apparatus"
 blocked-by: null
