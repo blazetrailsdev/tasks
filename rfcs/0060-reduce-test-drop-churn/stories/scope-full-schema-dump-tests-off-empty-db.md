@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 2
+priority: 1
 pr: 4547
 claim: "2026-07-04T13:49:29Z"
 assignee: "scope-full-schema-dump-tests-off-empty-db"
