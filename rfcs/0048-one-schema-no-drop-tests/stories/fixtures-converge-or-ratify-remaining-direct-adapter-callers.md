@@ -1,7 +1,7 @@
 ---
 title: "Converge or ratify the 4 remaining direct-adapter useFixtures call sites (non-transactional / multi-DB / own-adapter)"
-status: blocked
-updated: 2026-07-01
+status: closed
+updated: 2026-07-04
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -11,7 +11,8 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "Superseded: split into fixtures-add-nontransactional-mode, fixtures-caller-supplied-connection-adapter, and fixtures-delete-direct-adapter-overload (deps on the first two)."
+blocked-by: null
+closed-reason: "superseded: split into fixtures-add-nontransactional-mode, fixtures-caller-supplied-connection-adapter, and fixtures-delete-direct-adapter-overload"
 ---
 
 ## Context
