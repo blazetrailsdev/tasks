@@ -1,7 +1,7 @@
 ---
 title: "Gate repairWorkerSchema DROP+CREATE behind real drift detection"
-status: draft
-updated: 2026-07-03
+status: ready
+updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
 deps: ["truncate-based-global-reset"]
