@@ -1,7 +1,7 @@
 ---
 title: "has_one writer defers persistence to save() instead of persisting on assignment"
-status: blocked
-updated: 2026-06-20
+status: closed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: 40
 pr: 3722
-claim: "2026-06-20T15:49:28Z"
-assignee: "has-one-writer-persist-on-assignment"
-blocked-by: "Closed unmerged: persist-on-assignment via the sync property setter requires a fire-and-forget floating promise (rejected by owner). Superseded by has-one-writer-queue-until-save (queue-until-save like has_many + awaitable immediate writer; no floating promises). PR #3722 closed; branch retained for salvage."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "superseded by has-one-writer-queue-until-save; PR #3722 closed unmerged (persist-on-assignment via sync setter needs a rejected floating promise)"
 ---
 
 ## Context
