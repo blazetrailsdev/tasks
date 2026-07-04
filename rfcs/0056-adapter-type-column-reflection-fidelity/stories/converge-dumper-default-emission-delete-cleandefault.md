@@ -8,7 +8,7 @@ deps:
   - migrate-emittable-onto-columnspec-default-path
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 45
 pr: null
 claim: null
 assignee: null
