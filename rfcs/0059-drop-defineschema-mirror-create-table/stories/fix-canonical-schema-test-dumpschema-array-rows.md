@@ -1,6 +1,6 @@
 ---
 title: "dumpSchema in canonical-schema.test.ts silently mismatches array-row selectAll shape"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T19:07:07Z"
+assignee: "fix-canonical-schema-test-dumpschema-array-rows"
 blocked-by: null
 closed-reason: null
 ---
