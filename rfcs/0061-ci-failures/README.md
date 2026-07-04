@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ci-failures"
+rfc: "0061-ci-failures"
 title: "CI Failures"
 status: draft
 created: 2026-07-04
@@ -9,7 +9,7 @@ packages: []
 clusters: []
 ---
 
-# RFC — CI Failures
+# RFC 0061 — CI Failures
 
 ## Summary
 
