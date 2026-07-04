@@ -1,6 +1,6 @@
 ---
 title: "Audit afterAll(dropAllTables) callers; drop where truncation reset covers"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T12:11:51Z"
+assignee: "audit-afterall-dropalltables-callers"
 blocked-by: null
 closed-reason: null
 ---
