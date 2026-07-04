@@ -1,6 +1,6 @@
 ---
 title: "Scope full-schema-dump tests off the empty-DB assumption (drop dropAllTables crutch)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
