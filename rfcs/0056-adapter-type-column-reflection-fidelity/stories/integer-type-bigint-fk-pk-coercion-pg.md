@@ -1,6 +1,6 @@
 ---
 title: "integer attribute type should cast BigInt to Number so FK=PK comparisons work without Number() wrapping on PG"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4530
 claim: "2026-07-04T01:19:43Z"
 assignee: "integer-type-bigint-fk-pk-coercion-pg"
 blocked-by: null
