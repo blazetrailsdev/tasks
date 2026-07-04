@@ -1,7 +1,7 @@
 ---
 title: "Gate mysql inline-index sort-order DDL on supports_index_sort_order?"
-status: ready
-updated: 2026-07-02
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T22:27:08Z"
+assignee: "mysql-inline-index-sort-order-version-gate"
 blocked-by: null
 closed-reason: null
 ---
