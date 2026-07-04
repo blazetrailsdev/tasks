@@ -1,6 +1,6 @@
 ---
 title: "Aggregations is unconditionally included on Base; Rails includes it lazily via composed_of"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4525
 claim: "2026-07-04T00:07:08Z"
 assignee: "aggregations-unconditional-include-vs-lazy-composed-of"
 blocked-by: null
