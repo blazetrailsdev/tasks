@@ -1,6 +1,6 @@
 ---
 title: "Scope full-schema-dump tests off the empty-DB assumption (drop dropAllTables crutch)"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: 4547
 claim: "2026-07-04T13:49:29Z"
 assignee: "scope-full-schema-dump-tests-off-empty-db"
 blocked-by: null
