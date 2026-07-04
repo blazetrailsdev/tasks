@@ -1,6 +1,6 @@
 ---
 title: "Port Rails insert_fixtures_set: one RI toggle per bulk fixture load"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T12:49:29Z"
+assignee: "port-insert-fixtures-set-single-ri-toggle"
 blocked-by: null
 closed-reason: null
 ---
