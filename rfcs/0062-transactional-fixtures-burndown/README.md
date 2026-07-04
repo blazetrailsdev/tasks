@@ -1,5 +1,5 @@
 ---
-rfc: "0000-transactional-fixtures-burndown"
+rfc: "0062-transactional-fixtures-burndown"
 title: "Transactional-fixtures burndown: fixtures({}) everywhere"
 status: draft
 created: 2026-07-04
@@ -14,7 +14,7 @@ related-rfcs:
   - "0014-fixtures-adoption"
 ---
 
-# RFC — Transactional-fixtures burndown: `fixtures({})` everywhere
+# RFC 0062 — Transactional-fixtures burndown: `fixtures({})` everywhere
 
 ## Summary
 
