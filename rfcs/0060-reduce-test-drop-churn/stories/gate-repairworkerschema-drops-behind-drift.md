@@ -1,6 +1,6 @@
 ---
 title: "Gate repairWorkerSchema DROP+CREATE behind real drift detection"
-status: claimed
+status: done
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["truncate-based-global-reset"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: 3351
 claim: "2026-07-04T13:19:26Z"
 assignee: "gate-repairworkerschema-drops-behind-drift"
 blocked-by: null
