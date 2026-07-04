@@ -1,6 +1,6 @@
 ---
 title: "has_one-through preloader: nest reflection-scope raw string/Arel joins onto through query"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 4526
 claim: "2026-07-04T00:19:08Z"
 assignee: "hasone-through-preloader-carry-raw-string-arel-joins"
 blocked-by: null
