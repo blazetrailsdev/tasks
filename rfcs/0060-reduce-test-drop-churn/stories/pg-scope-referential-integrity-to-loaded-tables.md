@@ -1,6 +1,6 @@
 ---
 title: "Scope PG disableReferentialIntegrity to loaded tables (69% of PG DDL ms)"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T12:08:31Z"
+assignee: "pg-scope-referential-integrity-to-loaded-tables"
 blocked-by: null
 closed-reason: null
 ---
