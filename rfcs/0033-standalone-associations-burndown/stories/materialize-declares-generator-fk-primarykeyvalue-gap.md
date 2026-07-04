@@ -1,7 +1,7 @@
 ---
 title: "materialize-declares-generator-fk-primarykeyvalue-gap"
-status: ready
-updated: 2026-06-29
+status: claimed
+updated: 2026-07-04
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T16:34:29Z"
+assignee: "materialize-declares-generator-fk-primarykeyvalue-gap"
 blocked-by: null
 ---
 
