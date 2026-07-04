@@ -1,6 +1,6 @@
 ---
 title: "Primary test config should inherit Rails' default pool size (5), not pin pool:1"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4542
 claim: "2026-07-04T11:56:50Z"
 assignee: "converge-primary-test-pool-size-to-rails-default"
 blocked-by: null
