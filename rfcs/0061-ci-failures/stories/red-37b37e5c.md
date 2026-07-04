@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Coverage (reporting-only) failing on main @37b37e5c"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0061-ci-failures"
 cluster: null
