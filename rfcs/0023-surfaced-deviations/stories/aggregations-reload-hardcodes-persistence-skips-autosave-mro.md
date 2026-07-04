@@ -1,6 +1,6 @@
 ---
 title: "aggregations-reload-hardcodes-persistence-skips-autosave-mro"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
