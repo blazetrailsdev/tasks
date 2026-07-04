@@ -1,6 +1,6 @@
 ---
 title: "Converge PG disableReferentialIntegrity to session_replication_role (saves ~46s PG DDL)"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T11:41:50Z"
+assignee: "pg-disable-referential-integrity-session-replication-role"
 blocked-by: null
 ---
 
