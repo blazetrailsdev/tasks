@@ -1,6 +1,6 @@
 ---
 title: "Shard PG/MariaDB AR suites 2-way with vitest --shard on free hosted jobs"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
