@@ -1,6 +1,6 @@
 ---
 title: "Make materialize-model-declares generator unit-testable + add regex regression test"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4562
 claim: "2026-07-04T18:04:26Z"
 assignee: "materialize-declares-generator-unit-testable"
 blocked-by: null
