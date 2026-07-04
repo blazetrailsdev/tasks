@@ -1,6 +1,6 @@
 ---
 title: "Shard PG/MariaDB AR suites 2-way with vitest --shard on free hosted jobs"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T13:04:30Z"
+assignee: "shard-ar-adapter-suites"
 blocked-by: null
 closed-reason: null
 ---
