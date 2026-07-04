@@ -1,6 +1,6 @@
 ---
 title: "model-new-unknown-attribute"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4573
 claim: "2026-07-04T21:47:05Z"
 assignee: "model-new-unknown-attribute"
 blocked-by: null
