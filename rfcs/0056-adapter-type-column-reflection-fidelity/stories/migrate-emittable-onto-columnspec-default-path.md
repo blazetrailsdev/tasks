@@ -1,6 +1,6 @@
 ---
 title: "Route dumper emitTable default emission through the columnSpec/schemaDefault cast-type path"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
