@@ -1,6 +1,6 @@
 ---
 title: "IntegerType#cast_value loses BigInt precision via Number() above MAX_SAFE_INTEGER"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T15:34:29Z"
+assignee: "integertype-castvalue-bigint-precision-loss"
 blocked-by: null
 closed-reason: null
 ---
