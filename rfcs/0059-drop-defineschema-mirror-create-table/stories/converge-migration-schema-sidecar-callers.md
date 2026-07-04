@@ -1,7 +1,7 @@
 ---
 title: "Converge migration/schema/dumper suites off sidecar _pool onto Base.connection"
-status: in-progress
-updated: 2026-07-03
+status: done
+updated: 2026-07-04
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
 deps: []
