@@ -1,6 +1,6 @@
 ---
 title: "widen MigrationContext.createTable id option to accept IdHashOptions (string-typed PK)"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4563
 claim: "2026-07-04T18:40:17Z"
 assignee: "migration-context-createtable-id-hash-options"
 blocked-by: null
