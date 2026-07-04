@@ -1,6 +1,6 @@
 ---
 title: "MariaDB columns() loses FLOAT vs DOUBLE limit (use SHOW FULL FIELDS)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
