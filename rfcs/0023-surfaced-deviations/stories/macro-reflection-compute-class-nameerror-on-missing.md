@@ -1,7 +1,7 @@
 ---
 title: "MacroReflection#computeClass should raise NameError for missing class (composed_of parity)"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T03:11:33Z"
+assignee: "macro-reflection-compute-class-nameerror-on-missing"
 blocked-by: null
 ---
 
