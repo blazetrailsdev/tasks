@@ -1,7 +1,7 @@
 ---
 title: "Route mysql2 internalExecute through withRawConnection so beginDbTransaction threads allowRetry (Rails single-call shape)"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T23:27:16Z"
+assignee: "mysql2-internalexecute-allowretry-through-withrawconnection"
 blocked-by: null
 ---
 
