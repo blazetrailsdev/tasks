@@ -7,7 +7,7 @@ cluster: null
 deps: ["truncate-based-global-reset"]
 deps-rfc: []
 est-loc: 150
-priority: 2
+priority: 1
 pr: 3351
 claim: "2026-07-04T13:19:26Z"
 assignee: "gate-repairworkerschema-drops-behind-drift"
