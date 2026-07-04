@@ -1,6 +1,6 @@
 ---
 title: "Route dumper default emission through cast-type schemaDefault; delete cleanDefault/cleanRawPgExpression"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
