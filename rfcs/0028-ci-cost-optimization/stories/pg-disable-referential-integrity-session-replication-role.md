@@ -23,6 +23,15 @@ _every_ table on each fixture load / truncateTables — **17,542 statements,
 45.9s = 29% of all PG DDL time**. (MariaDB uses `SET FOREIGN_KEY_CHECKS`, a cheap
 non-DDL SET, and has no equivalent cost.)
 
+**Re-measured 2026-07-04 (DDL_PROFILE re-run on current main, PR #4528, run
+28689759803): now 96.0% of all PG DDL time** — 28,420,280 REFERENTIAL_INTEGRITY
+ops / 289,979 ms, vs DROP_TABLE 5,817 / 6,422 ms and CREATE_TABLE 4,481 /
+4,820 ms. Its relative share jumped from 29% → 96% because RFC 0059/0060 (boot-laid
+canonical schema + truncate-instead-of-drop reset) collapsed the surrounding
+schema DDL (drops fell ~94%, drop:create inverted from ~20:1 to ~1.3:1), leaving
+`disableReferentialIntegrity` as the single dominant remaining PG DDL cost by a
+wide margin. This is now the #1 lever on the PG lane — hence priority 5.
+
 `disableReferentialIntegrity` lives in
 `packages/activerecord/src/connection-adapters/postgresql-adapter.ts`. Rails'
 PostgreSQLAdapter#disable_referential_integrity uses
