@@ -1,6 +1,6 @@
 ---
 title: "assertValidKeys message text should match Rails Hash#assert_valid_keys (#inspect symbols)"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4572
 claim: "2026-07-04T21:27:08Z"
 assignee: "assert-valid-keys-message-format-fidelity"
 blocked-by: null
