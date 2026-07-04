@@ -1,6 +1,6 @@
 ---
 title: "integer attribute type should cast BigInt to Number so FK=PK comparisons work without Number() wrapping on PG"
-status: in-progress
+status: closed
 updated: 2026-07-04
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: 4530
-claim: "2026-07-04T01:19:43Z"
-assignee: "integer-type-bigint-fk-pk-coercion-pg"
+claim: null
+assignee: null
 blocked-by: null
+closed-reason: "Superseded by big-integer-safe-range-number-representation. Accessor-level .id→number fix (PR #4530, closed unmerged) is unviable: CI (PG+MariaDB) shows it desyncs .id from pluck/ids/raw PK reads. Correct fix is in BigIntegerType (safe-range→number)."
 ---
 
 ## Context
