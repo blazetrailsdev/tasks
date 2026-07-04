@@ -1,7 +1,7 @@
 ---
 title: "inner-join-association-surfaced-deviations"
-status: in-progress
-updated: 2026-07-03
+status: done
+updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
