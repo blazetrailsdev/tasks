@@ -1,6 +1,6 @@
 ---
 title: "converge-eager-count-aggregate-path-onto-build-joins-emitter"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
