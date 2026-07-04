@@ -1,6 +1,6 @@
 ---
 title: "materialize-declares-generator-unresolvable-assoc-target-fallback"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T17:04:28Z"
+assignee: "materialize-declares-generator-unresolvable-assoc-target-fallback"
 blocked-by: null
 closed-reason: null
 ---
