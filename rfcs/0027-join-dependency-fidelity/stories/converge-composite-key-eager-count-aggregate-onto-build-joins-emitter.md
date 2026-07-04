@@ -1,6 +1,6 @@
 ---
 title: "Fold composite-key eager count/aggregate paths onto the shared build_joins emitter"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T14:19:28Z"
+assignee: "converge-composite-key-eager-count-aggregate-onto-build-joins-emitter"
 blocked-by: null
 closed-reason: null
 ---
