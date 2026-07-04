@@ -39,8 +39,8 @@ each matrix leg with its own service container (each leg gets a fresh
 container automatically). The `ci` aggregator's `needs`/skip-allowlist and the
 job-timing report must handle the matrix job names ("Active Record PostgreSQL
 Tests (1)" etc.). The `activerecord-cli` step should run on one shard only
-(or move out per the CLI-dedup quick win). DDL_PROFILE artifact names (PR
-PR #4528 wiring) must stay unique per shard if that measurement branch is ever
+(or move out per the CLI-dedup quick win). DDL_PROFILE artifact names (PR #4528
+wiring) must stay unique per shard if that measurement branch is ever
 rebased.
 
 Expected impact: PG lane 929s → ~500s, MariaDB 764s → ~430s; roughly 40–45%
