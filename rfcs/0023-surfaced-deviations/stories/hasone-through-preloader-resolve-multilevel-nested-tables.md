@@ -1,13 +1,13 @@
 ---
 title: "has_one-through preloader: resolve multi-level nested joined tables for through-query predicate carry"
 status: ready
-updated: 2026-07-03
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 9000000
 pr: null
 claim: null
 assignee: null
