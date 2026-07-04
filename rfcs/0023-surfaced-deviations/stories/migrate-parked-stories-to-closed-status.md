@@ -1,6 +1,6 @@
 ---
 title: "Migrate parked/superseded stories to the new closed status"
-status: claimed
+status: closed
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-07-04T18:19:28Z"
-assignee: "migrate-parked-stories-to-closed-status"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "completed direct-to-main (data-only): closed 8 superseded/abandoned/won't-do stories via the CLI close verb; no trails code PR. Closed: fixtures-converge-or-ratify-remaining-direct-adapter-callers, pr-a-delete-adapter-barrel, inline-bind-rendering-via-substitute-binds-collector, set-operations-eager-joindependency-composition, a2-join-model-semantics, has-one-writer-persist-on-assignment, composite-pk-distinct-relation-materialization, jd-reflections-include-through-intermediate-reflections"
 ---
 
 ## Context
