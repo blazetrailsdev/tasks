@@ -1,6 +1,6 @@
 ---
 title: "has_one-through preloader: nest reflection-scope raw string/Arel joins onto through query"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
