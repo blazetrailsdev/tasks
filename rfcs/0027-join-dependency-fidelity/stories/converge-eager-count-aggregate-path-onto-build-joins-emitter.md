@@ -1,6 +1,6 @@
 ---
 title: "converge-eager-count-aggregate-path-onto-build-joins-emitter"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4531
 claim: "2026-07-04T01:35:36Z"
 assignee: "converge-eager-count-aggregate-path-onto-build-joins-emitter"
 blocked-by: null
