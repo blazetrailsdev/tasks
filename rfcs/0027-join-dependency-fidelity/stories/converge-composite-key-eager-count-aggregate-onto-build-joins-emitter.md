@@ -1,6 +1,6 @@
 ---
 title: "Fold composite-key eager count/aggregate paths onto the shared build_joins emitter"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
