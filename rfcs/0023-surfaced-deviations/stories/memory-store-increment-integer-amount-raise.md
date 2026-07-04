@@ -1,6 +1,6 @@
 ---
 title: "MemoryStore increment seeds via Integer(amount) raise semantics, not Math.trunc"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4560
 claim: "2026-07-04T17:34:28Z"
 assignee: "memory-store-increment-integer-amount-raise"
 blocked-by: null
