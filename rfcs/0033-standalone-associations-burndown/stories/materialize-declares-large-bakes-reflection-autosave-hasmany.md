@@ -1,6 +1,6 @@
 ---
 title: "materialize-declares-large-bakes-reflection-autosave-hasmany"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0033-standalone-associations-burndown"
 cluster: null
