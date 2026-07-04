@@ -14,7 +14,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 100
-priority: 3
+priority: 1
 pr: null
 claim: null
 assignee: null
