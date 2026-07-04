@@ -1,6 +1,6 @@
 ---
 title: "retire-sidecar-pool-rework-pool-mechanics"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4532
 claim: "2026-07-04T01:12:16Z"
 assignee: "retire-sidecar-pool-rework-pool-mechanics"
 blocked-by: null
