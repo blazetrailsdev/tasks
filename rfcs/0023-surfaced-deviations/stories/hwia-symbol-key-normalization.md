@@ -1,7 +1,7 @@
 ---
 title: "hwia-symbol-key-normalization"
-status: in-progress
-updated: 2026-07-03
+status: done
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
