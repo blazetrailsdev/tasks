@@ -1,6 +1,6 @@
 ---
 title: "invertible-migration-revert-engine-gaps"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4535
 claim: "2026-07-04T02:07:37Z"
 assignee: "invertible-migration-revert-engine-gaps"
 blocked-by: null
