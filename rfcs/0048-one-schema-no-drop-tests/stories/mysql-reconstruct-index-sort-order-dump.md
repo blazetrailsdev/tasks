@@ -1,7 +1,7 @@
 ---
 title: "mysql-reconstruct-index-sort-order-dump"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-04
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T22:47:10Z"
+assignee: "mysql-reconstruct-index-sort-order-dump"
 blocked-by: null
 ---
 
