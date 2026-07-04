@@ -1,6 +1,6 @@
 ---
 title: "left_outer_joins raises lazily at build for non-Hash/Symbol/Array, not eager whitespace heuristic"
-status: claimed
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4536
 claim: "2026-07-04T02:39:31Z"
 assignee: "left-outer-joins-lazy-invalid-arg-raise"
 blocked-by: null
