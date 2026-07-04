@@ -1,6 +1,6 @@
 ---
 title: "Build join-dependency hydration test rows by column name, not hardcoded tN_rN offsets"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4534
 claim: "2026-07-04T02:23:35Z"
 assignee: "join-dependency-hydration-rows-by-column-name"
 blocked-by: null
