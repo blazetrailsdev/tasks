@@ -1,7 +1,7 @@
 ---
 title: "MigrationContext#addIndex/removeIndex should delegate DDL to the adapter (drop duplicated name derivation)"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T20:07:07Z"
+assignee: "migrationcontext-index-delegate-to-adapter"
 blocked-by: null
 closed-reason: null
 ---
