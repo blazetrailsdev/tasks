@@ -1,9 +1,9 @@
 ---
 rfc: "0010-adapter-cleanup"
 title: "Adapter → Connection collapse — remaining cleanup"
-status: active
+status: closed
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-04
 owner: "@deanmarano"
 packages:
   - activerecord
