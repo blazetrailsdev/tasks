@@ -1,13 +1,13 @@
 ---
 title: "Converge PG disableReferentialIntegrity to session_replication_role (saves ~46s PG DDL)"
 status: ready
-updated: 2026-06-22
+updated: 2026-07-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
