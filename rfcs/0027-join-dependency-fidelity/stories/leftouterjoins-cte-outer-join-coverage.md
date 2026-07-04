@@ -1,6 +1,6 @@
 ---
 title: "Test: leftOuterJoins(:cte) routes to a LEFT OUTER JOIN via build_with_join_node"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4553
 claim: "2026-07-04T15:49:28Z"
 assignee: "leftouterjoins-cte-outer-join-coverage"
 blocked-by: null
