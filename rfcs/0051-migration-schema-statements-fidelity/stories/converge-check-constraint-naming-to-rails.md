@@ -46,7 +46,7 @@ can't be removed by expression through trails today.
 - [ ] Converge `addCheckConstraint` (base + change*table `schema-definitions.ts`
       paths) to name un-named constraints via the Rails-faithful
       `checkConstraintName` (sha256 `chk_rails*<hex10>`), retiring
-  `\_checkConstraintName`.
+`\_checkConstraintName`.
 - [ ] `removeCheckConstraint` resolves the live constraint via
       `checkConstraintForBang(table, { name, expression }).name` and drops that,
       mirroring `removeForeignKey`/`foreignKeyForBang` — no name derivation.
