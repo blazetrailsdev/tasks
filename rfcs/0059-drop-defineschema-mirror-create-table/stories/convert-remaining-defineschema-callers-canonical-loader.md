@@ -1,6 +1,6 @@
 ---
 title: "convert-remaining-defineschema-callers-canonical-loader"
-status: ready
+status: claimed
 updated: 2026-07-04
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T14:49:31Z"
+assignee: "convert-remaining-defineschema-callers-canonical-loader"
 blocked-by: null
 closed-reason: null
 ---
