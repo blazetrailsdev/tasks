@@ -1,6 +1,6 @@
 ---
 title: "aggregations-reload-hardcodes-persistence-skips-autosave-mro"
-status: claimed
+status: in-progress
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4527
 claim: "2026-07-04T00:31:09Z"
 assignee: "aggregations-reload-hardcodes-persistence-skips-autosave-mro"
 blocked-by: null
