@@ -1,6 +1,6 @@
 ---
 title: "Scope PG disableReferentialIntegrity to loaded tables (69% of PG DDL ms)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
