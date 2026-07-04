@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
-deps: []
+deps:
+  - pg-scope-referential-integrity-to-loaded-tables
 deps-rfc: []
 est-loc: null
 priority: 1
