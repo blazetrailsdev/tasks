@@ -1,6 +1,6 @@
 ---
 title: "MacroReflection#computeClass should raise NameError for missing class (composed_of parity)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
