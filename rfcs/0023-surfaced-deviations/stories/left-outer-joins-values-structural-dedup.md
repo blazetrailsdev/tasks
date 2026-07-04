@@ -1,7 +1,7 @@
 ---
 title: "left_outer_joins_values |= dedups hash specs structurally (eql?), not by reference"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T02:55:34Z"
+assignee: "left-outer-joins-values-structural-dedup"
 blocked-by: null
 ---
 
