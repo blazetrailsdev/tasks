@@ -1,6 +1,6 @@
 ---
 title: "merge-hash-value-methods-key-validation"
-status: claimed
+status: done
 updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4561
 claim: "2026-07-04T17:49:27Z"
 assignee: "merge-hash-value-methods-key-validation"
 blocked-by: null
