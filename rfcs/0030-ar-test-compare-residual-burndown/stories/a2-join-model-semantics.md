@@ -1,7 +1,7 @@
 ---
 title: "A2 — join_model: has_many :through join-model semantics"
-status: blocked
-updated: 2026-06-15
+status: closed
+updated: 2026-07-04
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
 deps:
@@ -10,9 +10,10 @@ deps-rfc: []
 est-loc: 280
 priority: 30
 pr: 3405
-claim: "2026-06-15T20:15:24Z"
-assignee: "a2-join-model-semantics"
-blocked-by: "Superseded by join-model-canonical-conversion: join-model.test.ts must move to canonical models + fixtures before these HMT tests port faithfully (PR #3405 closed; synthetic approach rejected as antipattern)."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "superseded by join-model-canonical-conversion; PR #3405 closed unmerged (synthetic approach rejected as antipattern)"
 ---
 
 ## Context
