@@ -1,6 +1,6 @@
 ---
 title: "skip-disable-referential-integrity-on-full-truncate"
-status: claimed
+status: closed
 updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: "2026-07-04T12:10:40Z"
-assignee: "skip-disable-referential-integrity-on-full-truncate"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate"
 ---
 
 ## Context
