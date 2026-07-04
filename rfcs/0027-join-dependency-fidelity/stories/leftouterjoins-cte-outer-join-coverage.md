@@ -1,6 +1,6 @@
 ---
 title: "Test: leftOuterJoins(:cte) routes to a LEFT OUTER JOIN via build_with_join_node"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0027-join-dependency-fidelity"
 cluster: null
