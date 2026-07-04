@@ -1,7 +1,7 @@
 ---
 title: "Re-run DDL_PROFILE and verify DROP-churn reduction vs #4499 baseline"
-status: draft
-updated: 2026-07-03
+status: ready
+updated: 2026-07-04
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
 deps:
