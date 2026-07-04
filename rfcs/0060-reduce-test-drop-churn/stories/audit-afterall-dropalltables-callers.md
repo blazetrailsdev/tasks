@@ -7,7 +7,7 @@ cluster: null
 deps: ["truncate-based-global-reset"]
 deps-rfc: []
 est-loc: 120
-priority: 2
+priority: 1
 pr: 4544
 claim: "2026-07-04T12:11:51Z"
 assignee: "audit-afterall-dropalltables-callers"
