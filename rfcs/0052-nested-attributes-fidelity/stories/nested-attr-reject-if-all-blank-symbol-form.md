@@ -1,7 +1,7 @@
 ---
 title: "Support reject_if: :all_blank symbol form in acceptsNestedAttributesFor"
-status: ready
-updated: 2026-06-24
+status: claimed
+updated: 2026-07-04
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T23:47:05Z"
+assignee: "nested-attr-reject-if-all-blank-symbol-form"
 blocked-by: null
 ---
 
