@@ -1,6 +1,6 @@
 ---
 title: "Model#toXml type= attribute is JS-runtime-typed, not column-typed (PG/MariaDB BigInt ids drop type=integer)"
-status: in-progress
+status: done
 updated: 2026-07-04
 rfc: "0055-serialization-fidelity"
 cluster: null
