@@ -1,7 +1,7 @@
 ---
 title: "model-new-unknown-attribute"
-status: ready
-updated: 2026-06-30
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T21:47:05Z"
+assignee: "model-new-unknown-attribute"
 blocked-by: null
 ---
 
