@@ -1,7 +1,7 @@
 ---
 title: "Migrate parked/superseded stories to the new closed status"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-04T18:19:28Z"
+assignee: "migrate-parked-stories-to-closed-status"
 blocked-by: null
 closed-reason: null
 ---
