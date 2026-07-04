@@ -1,6 +1,6 @@
 ---
 title: "converge-check-constraint-naming-to-rails"
-status: draft
+status: done
 updated: 2026-07-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4535
 claim: null
 assignee: null
 blocked-by: null
