@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket A pair→fixtures([]): adapters + associations (1/4)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-a
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4597
 claim: "2026-07-05T04:37:27Z"
 assignee: "convert-pair-adapters-associations-a"
 blocked-by: null
