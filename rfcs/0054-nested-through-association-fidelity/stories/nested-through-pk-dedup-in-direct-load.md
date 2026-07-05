@@ -1,6 +1,6 @@
 ---
 title: "nested-through direct-load deduplicates by PK; Rails returns full multiset"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4611
 claim: "2026-07-05T13:52:25Z"
 assignee: "nested-through-pk-dedup-in-direct-load"
 blocked-by: null
