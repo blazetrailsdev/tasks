@@ -1,6 +1,6 @@
 ---
 title: "Audit non-preloader in-memory association matching for BigInt-PK/number-FK key mismatch"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T16:37:27Z"
+assignee: "pg-bigint-number-key-match-inmemory-association-audit"
 blocked-by: null
 ---
 
