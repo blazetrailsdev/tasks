@@ -1,13 +1,13 @@
 ---
 title: "normalizes-query-and-in-place-type-decoration"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
