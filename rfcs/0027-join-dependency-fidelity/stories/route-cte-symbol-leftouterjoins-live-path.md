@@ -1,6 +1,6 @@
 ---
 title: "leftOuterJoins(:cte) routes to LEFT OUTER JOIN on the live _applyJoinsToManager path, not only from-subquery"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: 4635
 claim: "2026-07-05T20:21:53Z"
 assignee: "route-cte-symbol-leftouterjoins-live-path"
 blocked-by: null
