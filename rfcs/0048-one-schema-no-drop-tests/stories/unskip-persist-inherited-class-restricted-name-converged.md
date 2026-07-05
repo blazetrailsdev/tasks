@@ -28,7 +28,7 @@ now persist/dirty-track the restricted `name` attribute, so
 ## Acceptance criteria
 
 - [ ] Drop the `it.skip(` → `it(` for `persist inherited class with different
-  table name` in packages/activerecord/src/persistence.test.ts and remove the
+table name` in packages/activerecord/src/persistence.test.ts and remove the
       restricted-name tracking note from the surrounding block comment.
 - [ ] Confirm it passes on all three adapters (sqlite/postgres/mysql) via
       test:compare (Skip count for persistence_test.rb drops from 2 to 1).
