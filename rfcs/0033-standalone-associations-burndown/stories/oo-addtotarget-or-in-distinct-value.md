@@ -1,6 +1,6 @@
 ---
 title: "oo-addtotarget-or-in-distinct-value"
-status: ready
+status: draft
 updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
