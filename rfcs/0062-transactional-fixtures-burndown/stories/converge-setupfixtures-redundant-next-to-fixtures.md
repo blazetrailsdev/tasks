@@ -1,6 +1,6 @@
 ---
 title: "Delete redundant setupFixtures() calls that sit beside a fixtures() call"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
