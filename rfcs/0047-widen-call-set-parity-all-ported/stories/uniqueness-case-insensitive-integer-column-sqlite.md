@@ -1,13 +1,13 @@
 ---
 title: "uniqueness-case-insensitive-integer-column-sqlite"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-05
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
