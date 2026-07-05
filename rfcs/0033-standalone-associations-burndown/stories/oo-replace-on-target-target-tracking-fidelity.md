@@ -1,6 +1,6 @@
 ---
 title: "OO replaceOnTarget: model @replaced_or_added_targets dedup, @_was_loaded append gate, and conditional @association_ids reset"
-status: ready
+status: draft
 updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
