@@ -1,6 +1,6 @@
 ---
 title: "Autoload fallback for canonical models (Zeitwerk analog)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
