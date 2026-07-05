@@ -1,6 +1,6 @@
 ---
 title: "Un-skip the 4 self-join where.associated/missing cases in where-chain.test.ts once RFC 0027 self-join aliasing lands"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 3
-pr: null
+pr: 4644
 claim: "2026-07-05T23:21:57Z"
 assignee: "unskip-where-chain-self-join-cases"
 blocked-by: null
