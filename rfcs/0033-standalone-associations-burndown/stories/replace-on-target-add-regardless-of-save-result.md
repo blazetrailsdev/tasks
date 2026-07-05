@@ -1,13 +1,13 @@
 ---
 title: "replace_on_target should buffer record into target regardless of insert_record result (drop save-success gate)"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
