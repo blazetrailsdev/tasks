@@ -1,6 +1,6 @@
 ---
 title: "Lift force_equality? to uniform build dispatch (PG array + serialized)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4614
 claim: "2026-07-05T14:37:27Z"
 assignee: "predicate-builder-force-equality-uniform-build"
 blocked-by: null
