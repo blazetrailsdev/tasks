@@ -1,6 +1,6 @@
 ---
 title: "nested-attributes-association-extend"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
