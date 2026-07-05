@@ -1,6 +1,6 @@
 ---
 title: "delete-defineschema-function-and-test"
-status: blocked
+status: ready
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-04T15:19:26Z"
-assignee: "delete-defineschema-function-and-test"
-blocked-by: "Precondition unmet: real defineSchema callers still exist on main (use-fixtures.ts, setup-adapter-suite.ts, setup-second-pool.ts, encryption/test-helpers.ts, schema-repair.ts, with-transactional-fixtures.ts). Depends on remove-usefixtures-public-surface (still 'ready') + remaining-callers conversion stories. git grep -c defineSchema is nonzero for real call-sites; deletion would break the boot path."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
