@@ -1,6 +1,6 @@
 ---
 title: "Retire the D1-migrate codemod (emits setupHandlerSuite/useHandlerTransactionalFixtures)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T20:02:00Z"
+assignee: "update-d1-migrate-codemod-off-setupfixtures-surface"
 blocked-by: null
 closed-reason: null
 ---
