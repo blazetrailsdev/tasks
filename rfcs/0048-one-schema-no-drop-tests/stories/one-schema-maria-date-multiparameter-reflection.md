@@ -1,16 +1,17 @@
 ---
 title: "Fix maria date/multiparameter reflection under one-schema warm cache"
-status: blocked
-updated: 2026-06-30
+status: closed
+updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 120
 pr: null
-claim: "2026-06-30T14:44:28Z"
-assignee: "one-schema-maria-date-multiparameter-reflection"
-blocked-by: "Requires AR_ONE_SCHEMA test mode + eslint/one-schema-exclude.json, which exist only on the open/unmerged spike PR #4246 (existing-db-schema-rc-9807c5). The two target files (date.test.ts, multiparameter-attributes.test.ts) are in the exclude list on that branch, and there is zero ONE_SCHEMA reference in origin/main. Cannot fix the warm-cache reflection or remove the exclude entries from main without stacking on #4246 (forbidden by CLAUDE.md). Unblock once #4246 merges."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Obsolete framing: repro was AR_ONE_SCHEMA=1 + removing from one-schema-exclude.json, both deleted by RFC 0059 #4540. The truncate-reset-without-cache-clear model is now the RFC 0060 default; date.test.ts + multiparameter-attributes.test.ts run green on maria in CI. If a maria warm-cache date flake resurfaces, re-file as a fresh fidelity story under 0060 (no dead-apparatus deps)."
 ---
 
 ## Context
