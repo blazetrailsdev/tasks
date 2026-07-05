@@ -1,13 +1,13 @@
 ---
 title: "Unify joins_values storage so the writer round-trips and builders use the accessor"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
