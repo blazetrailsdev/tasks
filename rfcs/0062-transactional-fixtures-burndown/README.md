@@ -4,7 +4,7 @@ title: "Transactional-fixtures burndown: fixtures({}) everywhere"
 status: draft
 created: 2026-07-04
 updated: 2026-07-04
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []
@@ -43,11 +43,20 @@ files, and kill the shared-DB row-leak flake class as a side effect.
 This is the natural successor to RFC 0060: 0060 made the _default reset_
 cheap; this RFC makes most tests _not need it_.
 
-## Approach (RFC 0019 burndown playbook)
+## Approach
 
-- Baseline exclude list = the non-`fixtures({})` AR test files; a lint/ratchet
-  forbids new files off the surface and fails on stale entries (mirror the
-  0019 `require-canonical-schema` ratchet mechanics).
+- **No eslint ratchet** (owner directive 2026-07-05): just do the migrations.
+  Drive the caller count down directly; no lint rule / exclude-list scaffolding.
+- Start with `audit-setupfixtures-caller-buckets`: the ~130 legacy callers are
+  NOT a uniform sweep. `fixtures({...})` (`test-helpers/fixtures.ts:64`) composes
+  `setupHandlerSuite()` + `withTransactionalFixtures(() => Base.connection)` +
+  `useFixtures()`, so `setupFixtures()` and `useHandlerTransactionalFixtures()`
+  are its decomposed pair. Three buckets: (a) `setupFixtures()` redundant beside
+  a `fixtures()` call → pure deletion (`fixtures()` already wires the suite);
+  (b) the pair with no fixture data (adapter/DDL suites that `createTable` in
+  `beforeAll`) → need suite-wiring + txn without a fixture map; (c) `setupFixtures`
+  alone → handler-wiring/shared-DB shield only. The audit emits the per-cluster
+  conversion cut with real file lists.
 - Convert in clusters (associations, persistence, relation, adapters, …),
   small PRs, no test renames, Rails-fidelity rules apply (canonical models +
   real fixture lookups — no shallow mechanical migrations).
@@ -69,20 +78,20 @@ transactional flip.
 
 ## Acceptance / exit criteria
 
-- Ratchet at zero: every AR test file uses `fixtures({...})` (with the
+- Every AR test file that can be transactional uses `fixtures({...})` (with the
   documented non-transactional escape hatch where Rails itself opts out).
-- `setupFixtures` deleted.
+- `setupFixtures` + `useHandlerTransactionalFixtures` deleted.
 - Measured: vitest wall time per lane before/after; shared-DB row-leak flake
   re-run rate down.
 
 ## Stories (initial cut)
 
-1. `txn-fixtures-ratchet-baseline` — lint rule + exclude-list baseline (no
-   conversions).
-2. `converge-setupfixtures-callers-fixtures` — mechanical-ish sweep of the 74
-   `setupFixtures` files onto `fixtures({})` (split by cluster if >500 LOC).
-3. Per-cluster conversion stories for the remaining bare files (associations /
-   persistence / relation / adapter suites), sized ~10–20 files each.
-4. `txn-fixtures-pg-nontransactional-escapes` — audit + annotate the
-   deliberate-error/DDL suites with the Rails-mirroring opt-out.
-5. `delete-setupfixtures-surface` — final removal once callers are at zero.
+1. `audit-setupfixtures-caller-buckets` (filed, ready) — categorize all legacy
+   callers into the three buckets; emit the per-cluster conversion cut. No code.
+2. `converge-setupfixtures-redundant-next-to-fixtures` (filed, ready) — bucket
+   (a): delete redundant `setupFixtures()` calls beside a `fixtures()` call.
+3. Per-cluster conversion stories (buckets b/c + bare-truncate files) — filed
+   from the audit's findings with real file lists, ~10–20 files / <500 LOC each.
+4. `txn-fixtures-pg-nontransactional-escapes` — annotate deliberate-error/DDL
+   suites with the Rails-mirroring `useTransactionalTests: false` opt-out.
+5. `delete-setupfixtures-surface` (filed) — terminal removal once callers hit zero.
