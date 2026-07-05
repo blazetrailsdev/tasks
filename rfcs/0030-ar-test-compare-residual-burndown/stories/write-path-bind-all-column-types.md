@@ -1,14 +1,14 @@
 ---
 title: "write-path-bind-all-column-types"
 status: blocked
-updated: 2026-06-22
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
   - pg-pinned-client-write-query-serialization
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 3
 pr: 3880
 claim: "2026-06-22T13:00:01Z"
 assignee: "write-path-bind-all-column-types"
