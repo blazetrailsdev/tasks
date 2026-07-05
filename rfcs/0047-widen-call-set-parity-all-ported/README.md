@@ -1,9 +1,9 @@
 ---
 rfc: "0047-widen-call-set-parity-all-ported"
 title: "Widen call-set parity: converge all ported-method internal calls to Rails"
-status: active
+status: closed
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 owner: "@deanmarano"
 packages:
   - "activerecord"
