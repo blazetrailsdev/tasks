@@ -1,6 +1,6 @@
 ---
 title: "Widen Relation#except/Querying#except skip type to accept arbitrary strings"
-status: blocked
+status: ready
 updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 30
 priority: 1
 pr: null
-claim: "2026-06-24T12:01:15Z"
-assignee: "ar-except-skip-key-widen-string"
-blocked-by: "Depends on ar-querying-async-finders (PR #4050, OPEN): the Querying#except delegator it widens does not exist in origin/main yet. Widening it here would overlap/stack on the open PR. Unblock when #4050 merges."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
