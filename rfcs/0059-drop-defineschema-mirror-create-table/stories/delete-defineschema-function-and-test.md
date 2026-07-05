@@ -1,6 +1,6 @@
 ---
 title: "delete-defineschema-function-and-test"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 4587
 claim: "2026-07-05T01:52:36Z"
 assignee: "delete-defineschema-function-and-test"
 blocked-by: null
