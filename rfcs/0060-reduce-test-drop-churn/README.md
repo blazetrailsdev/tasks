@@ -1,9 +1,9 @@
 ---
 rfc: "0060-reduce-test-drop-churn"
 title: "Reduce AR test DROP-TABLE churn on the boot-laid canonical schema"
-status: active
+status: closed
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-05
 owner: "@deanmarano"
 packages:
   - "activerecord"
