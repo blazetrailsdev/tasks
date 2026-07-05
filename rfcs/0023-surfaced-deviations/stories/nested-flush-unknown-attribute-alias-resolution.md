@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes flush path validates unknown keys without alias resolution"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
