@@ -1,6 +1,6 @@
 ---
 title: "Convert remaining 28 setupFixtures/useHandlerTransactionalFixtures callers to fixtures()"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 500
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T18:01:58Z"
+assignee: "convert-remaining-setupfixtures-callers-to-fixtures"
 blocked-by: null
 closed-reason: null
 ---
