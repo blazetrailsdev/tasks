@@ -1,6 +1,6 @@
 ---
 title: "joins(:cte) routes to INNER JOIN via build_with_join_node (currently raises Unknown node type: Symbol)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T19:41:55Z"
+assignee: "route-cte-symbol-joins-inner-join"
 blocked-by: null
 closed-reason: null
 ---
