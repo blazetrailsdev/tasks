@@ -1,14 +1,14 @@
 ---
 title: "a2-join-model-semantics-residual"
 status: blocked
-updated: 2026-06-16
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
   - join-model-canonical-conversion
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 3
 pr: null
 claim: null
 assignee: null
