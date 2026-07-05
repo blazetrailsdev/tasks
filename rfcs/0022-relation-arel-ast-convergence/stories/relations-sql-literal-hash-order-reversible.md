@@ -1,13 +1,13 @@
 ---
 title: "SqlLiteral hash-keyed order should be reversible (not trigger dangerousQueryCheck)"
 status: ready
-updated: 2026-06-27
+updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
