@@ -1,6 +1,6 @@
 ---
 title: "Terminal: delete setupFixtures + useHandlerTransactionalFixtures surface"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T17:45:14Z"
+assignee: "delete-setupfixtures-surface"
 blocked-by: null
 closed-reason: null
 ---
