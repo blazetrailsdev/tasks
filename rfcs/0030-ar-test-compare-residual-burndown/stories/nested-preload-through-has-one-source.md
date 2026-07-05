@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: 4609
 claim: "2026-07-05T13:22:26Z"
 assignee: "nested-preload-through-has-one-source"
