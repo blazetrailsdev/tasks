@@ -1,6 +1,6 @@
 ---
 title: "Thread connection through schema-reflection reads; drop the .connection getter bridge"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: null
+pr: 4641
 claim: "2026-07-05T22:41:54Z"
 assignee: "thread-connection-through-schema-reflection-reads"
 blocked-by: null
