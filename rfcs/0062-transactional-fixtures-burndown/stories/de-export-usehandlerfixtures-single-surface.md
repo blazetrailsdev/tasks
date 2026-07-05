@@ -1,6 +1,6 @@
 ---
 title: "De-export useHandlerFixtures so fixtures() is the sole public surface"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T02:52:29Z"
+assignee: "de-export-usehandlerfixtures-single-surface"
 blocked-by: null
 closed-reason: null
 ---
