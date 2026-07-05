@@ -1,6 +1,6 @@
 ---
 title: "SqlLiteral hash-keyed order should be reversible (not trigger dangerousQueryCheck)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
+pr: 4632
 claim: "2026-07-05T19:21:55Z"
 assignee: "relations-sql-literal-hash-order-reversible"
 blocked-by: null
