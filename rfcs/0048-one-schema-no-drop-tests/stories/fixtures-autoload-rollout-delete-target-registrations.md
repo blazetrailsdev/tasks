@@ -1,6 +1,6 @@
 ---
 title: "Roll out autoload opt-in and delete association-target registerModel blocks across converted canonical files"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
