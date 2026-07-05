@@ -1,6 +1,6 @@
 ---
 title: "Confirm Bucket C setupFixtures-only no-transaction intent (audit-only)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-c
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T03:52:29Z"
+assignee: "confirm-sfonly-no-txn-intent-c"
 blocked-by: null
 closed-reason: null
 ---
