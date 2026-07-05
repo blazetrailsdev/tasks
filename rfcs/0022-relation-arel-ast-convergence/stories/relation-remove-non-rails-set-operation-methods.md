@@ -1,13 +1,13 @@
 ---
 title: "Remove non-Rails set-operation methods (union/unionAll/intersect/except) from Relation; reconcile except with Rails semantics"
 status: draft
-updated: 2026-06-15
+updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 40
+priority: 2
 pr: null
 claim: null
 assignee: null
