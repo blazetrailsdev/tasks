@@ -1,7 +1,7 @@
 ---
 title: "PG pinned-client write-path query serialization"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
   - pg-pinned-client-query-serializer-mutex
 deps-rfc: []
 est-loc: null
-priority: 0
+priority: 3
 pr: null
 claim: null
 assignee: null
