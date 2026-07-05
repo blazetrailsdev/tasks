@@ -1,6 +1,6 @@
 ---
 title: "migrationcontext-index-using-bookkeeping-from-capability"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
