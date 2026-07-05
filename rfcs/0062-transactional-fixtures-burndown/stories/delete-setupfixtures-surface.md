@@ -1,6 +1,6 @@
 ---
 title: "Terminal: delete setupFixtures + useHandlerTransactionalFixtures surface"
-status: claimed
+status: blocked
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -13,7 +13,7 @@ priority: 0
 pr: null
 claim: "2026-07-05T17:45:14Z"
 assignee: "delete-setupfixtures-surface"
-blocked-by: null
+blocked-by: "Terminal removal not runnable: 28 caller files / 58 call-sites outside test-helpers still use setupFixtures/useHandlerTransactionalFixtures. Blocked on convert-remaining-setupfixtures-callers-to-fixtures (registered) to drive the grep gate to zero first."
 closed-reason: null
 ---
 
