@@ -1,6 +1,6 @@
 ---
 title: "De-export useHandlerFixtures so fixtures() is the sole public surface"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
