@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket D mixed per-describe: associations (1/2)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-d
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4595
 claim: "2026-07-05T04:07:26Z"
 assignee: "convert-mixed-perdescribe-associations-d"
 blocked-by: null
