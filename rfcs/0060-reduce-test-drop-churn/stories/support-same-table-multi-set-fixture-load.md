@@ -1,13 +1,13 @@
 ---
 title: "Lift resolveFixtureNames same-table guard: load multiple same-table fixture sets in one call"
 status: ready
-updated: 2026-07-04
+updated: 2026-07-05
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
