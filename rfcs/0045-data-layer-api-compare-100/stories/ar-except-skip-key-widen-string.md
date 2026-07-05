@@ -1,6 +1,6 @@
 ---
 title: "Widen Relation#except/Querying#except skip type to accept arbitrary strings"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
