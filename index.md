@@ -48,7 +48,7 @@
 | [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | closed | @deanmarano | activerecord |
 | [0043-bespoke-test-bloat-burndown](rfcs/0043-bespoke-test-bloat-burndown/README.md) | ActiveRecord bespoke TS-only test-bloat burndown | active | @deanmarano | activerecord |
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | closed | @deanmarano | activerecord |
-| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | active | @deanmarano | arel, activerecord, activemodel |
+| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | closed | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | draft | @deanmarano | activerecord |
 | [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | closed | @deanmarano | activerecord, arel, activemodel |
 | [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | Rails-faithful AR test convergence | active | @deanmarano | activerecord |

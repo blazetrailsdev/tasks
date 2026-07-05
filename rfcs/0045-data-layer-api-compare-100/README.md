@@ -1,9 +1,9 @@
 ---
 rfc: "0045-data-layer-api-compare-100"
 title: "Data layer api:compare to 100% method parity"
-status: active
+status: closed
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 owner: "@deanmarano"
 packages:
   - "arel"
