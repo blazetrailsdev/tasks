@@ -1,6 +1,6 @@
 ---
 title: "unskip-has-one-load-displaced-on-replace"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4642
 claim: "2026-07-05T23:01:54Z"
 assignee: "unskip-has-one-load-displaced-on-replace"
 blocked-by: null
