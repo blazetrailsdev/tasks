@@ -1,6 +1,6 @@
 ---
 title: "Drop the fixtures schema arg (default off) and delete escape hatches"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,7 +9,7 @@ deps-rfc:
   - 0019-canonical-schema-burndown
 est-loc: 300
 priority: 4
-pr: null
+pr: 4593
 claim: "2026-07-05T03:22:26Z"
 assignee: "fixtures-drop-schema-arg-default-off"
 blocked-by: null
