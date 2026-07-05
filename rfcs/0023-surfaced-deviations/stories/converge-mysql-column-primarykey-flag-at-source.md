@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL Column.primaryKey at the columns() source (promoted-unique, no query)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
