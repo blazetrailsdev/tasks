@@ -20,7 +20,7 @@ closed-reason: null
 RFC 0062 (transactional-fixtures burndown). Conversion cluster from the
 caller audit (`docs/infrastructure/setupfixtures-caller-buckets-audit.md`, story `audit-setupfixtures-caller-buckets`).
 
-**Bucket A.** Pair (setupFixtures + useHandlerTransactionalFixtures), no fixture data. Replace the two-line pair with a single `fixtures([], { … })` call; keep the bespoke `createTable()` in beforeAll unchanged.
+**Bucket A.** Pair(s) of setupFixtures + useHandlerTransactionalFixtures, no fixture data. The pair is per-`describe`, so a file may hold several (e.g. attribute-methods/base have 3) — convert EVERY pair to a single `fixtures([], { … })` call. Schema setup is orthogonal: some files createTable/defineSchema, ~30 of 54 ride the canonical schema with no table creation at all — leave whatever schema setup exists untouched (Rails fixture wiring is per-test transactional, independent of table creation: vendor/rails/activerecord/lib/active_record/test_fixtures.rb:108-133).
 
 See the audit doc for the wiring identity and the no-fixture-data surface
 decision (`fixtures([], { … })` — `use-fixtures.ts:439-443` treats an empty
