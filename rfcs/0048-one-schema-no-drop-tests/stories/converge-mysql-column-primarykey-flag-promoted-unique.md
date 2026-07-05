@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL Column.primaryKey flag off column_key (promoted-unique deviation)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
