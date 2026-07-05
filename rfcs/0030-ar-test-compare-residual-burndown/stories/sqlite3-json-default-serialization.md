@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-json-default-serialization"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T22:01:53Z"
+assignee: "sqlite3-json-default-serialization"
 blocked-by: null
 ---
 
