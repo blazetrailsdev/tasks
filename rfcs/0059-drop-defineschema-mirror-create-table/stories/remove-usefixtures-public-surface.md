@@ -1,13 +1,13 @@
 ---
 title: "remove-usefixtures-public-surface"
 status: ready
-updated: 2026-07-04
+updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
