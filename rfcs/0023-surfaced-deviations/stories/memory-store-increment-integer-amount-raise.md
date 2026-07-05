@@ -1,7 +1,7 @@
 ---
 title: "MemoryStore increment seeds via Integer(amount) raise semantics, not Math.trunc"
-status: in-progress
-updated: 2026-07-04
+status: done
+updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
