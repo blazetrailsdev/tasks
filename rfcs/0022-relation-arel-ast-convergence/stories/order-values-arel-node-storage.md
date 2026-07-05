@@ -1,6 +1,6 @@
 ---
 title: "Store order clauses as Arel nodes so order_values returns the stored reference"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T18:21:54Z"
+assignee: "order-values-arel-node-storage"
 blocked-by: null
 ---
 
