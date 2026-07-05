@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-persistence-test-cases-deviations"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T15:37:27Z"
+assignee: "port-remaining-persistence-test-cases-deviations"
 blocked-by: null
 closed-reason: null
 ---
