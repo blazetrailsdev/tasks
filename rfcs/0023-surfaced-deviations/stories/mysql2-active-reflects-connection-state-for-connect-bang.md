@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#active should reflect real connection state so connect!/reconnect! port faithfully"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4605
 claim: "2026-07-05T12:22:29Z"
 assignee: "mysql2-active-reflects-connection-state-for-connect-bang"
 blocked-by: null
