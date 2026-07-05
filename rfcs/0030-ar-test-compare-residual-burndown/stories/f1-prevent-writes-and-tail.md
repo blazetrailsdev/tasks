@@ -1,13 +1,13 @@
 ---
 title: "F1 — prevent-writes + hot-compat + misc tail"
 status: blocked
-updated: 2026-06-16
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: 10
+priority: 3
 pr: null
 claim: null
 assignee: null
