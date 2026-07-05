@@ -62,7 +62,7 @@
 | [0056-adapter-type-column-reflection-fidelity](rfcs/0056-adapter-type-column-reflection-fidelity/README.md) | Adapter type & column reflection fidelity | draft | @deanmarano | activerecord |
 | [0057-transaction-fidelity](rfcs/0057-transaction-fidelity/README.md) | Transaction semantics fidelity | draft | @deanmarano | activerecord |
 | [0058-module-generation-mechanism](rfcs/0058-module-generation-mechanism/README.md) | Module/mixin generation mechanism convergence | draft | @deanmarano | activerecord |
-| [0059-drop-defineschema-mirror-create-table](rfcs/0059-drop-defineschema-mirror-create-table/README.md) | Drop defineSchema; mirror Rails create_table for test schema | active | @deanmarano | activerecord |
+| [0059-drop-defineschema-mirror-create-table](rfcs/0059-drop-defineschema-mirror-create-table/README.md) | Drop defineSchema; mirror Rails create_table for test schema | closed | @deanmarano | activerecord |
 | [0060-reduce-test-drop-churn](rfcs/0060-reduce-test-drop-churn/README.md) | Reduce AR test DROP-TABLE churn on the boot-laid canonical schema | closed | @deanmarano | activerecord |
 | [0061-ci-failures](rfcs/0061-ci-failures/README.md) | CI Failures | draft | @your-handle | — |
 | [0062-transactional-fixtures-burndown](rfcs/0062-transactional-fixtures-burndown/README.md) | Transactional-fixtures burndown: fixtures({}) everywhere | active | @deanmarano | activerecord |
