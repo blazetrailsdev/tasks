@@ -1,6 +1,6 @@
 ---
 title: "Confirm Bucket C setupFixtures-only no-transaction intent (audit-only)"
-status: claimed
+status: closed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-c
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-07-05T03:52:29Z"
-assignee: "confirm-sfonly-no-txn-intent-c"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Audit-only, confirmed: all 31 files correctly use setupFixtures() no-transaction (PG-DDL/schema/type suites break under txn wrapping via 25P02; transaction-isolation must run outside a managed txn; pure metadata/type/validation suites have no persistent writes or fixture data). No file wants a transaction. No code change."
 ---
 
 ## Context
