@@ -1,6 +1,6 @@
 ---
 title: "Single-PK eager-count limit id subquery must apply order (distinct_relation_for_primary_key)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T20:42:01Z"
+assignee: "single-pk-eager-count-limit-id-subquery-applies-order"
 blocked-by: null
 closed-reason: null
 ---
