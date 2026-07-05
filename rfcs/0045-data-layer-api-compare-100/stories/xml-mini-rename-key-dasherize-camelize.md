@@ -1,6 +1,6 @@
 ---
 title: "xml-mini-rename-key-dasherize-camelize"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4617
 claim: "2026-07-05T15:22:28Z"
 assignee: "xml-mini-rename-key-dasherize-camelize"
 blocked-by: null
