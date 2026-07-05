@@ -1,7 +1,7 @@
 ---
 title: "Audit afterAll(dropAllTables) callers; drop where truncation reset covers"
-status: in-progress
-updated: 2026-07-04
+status: done
+updated: 2026-07-05
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
 deps: ["truncate-based-global-reset"]
