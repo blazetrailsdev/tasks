@@ -1,13 +1,13 @@
 ---
 title: "Expose Relation#slice and #name delegations under Rails names"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
