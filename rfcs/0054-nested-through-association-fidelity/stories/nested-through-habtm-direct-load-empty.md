@@ -1,6 +1,6 @@
 ---
 title: "hasMany-through-habtm direct-load returns empty; preload/joins work"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
