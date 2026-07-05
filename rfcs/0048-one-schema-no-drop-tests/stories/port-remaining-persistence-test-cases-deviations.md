@@ -6,7 +6,7 @@ rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
