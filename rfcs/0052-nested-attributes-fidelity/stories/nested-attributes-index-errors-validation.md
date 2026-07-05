@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: 4607
 claim: "2026-07-05T12:52:31Z"
 assignee: "nested-attributes-index-errors-validation"
