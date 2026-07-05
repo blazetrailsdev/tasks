@@ -1,6 +1,6 @@
 ---
 title: "nested-attributes-index-errors-validation"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4607
 claim: "2026-07-05T12:52:31Z"
 assignee: "nested-attributes-index-errors-validation"
 blocked-by: null
