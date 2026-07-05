@@ -1,6 +1,6 @@
 ---
 title: "delete-defineschema-function-and-test"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
