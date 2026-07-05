@@ -1,7 +1,7 @@
 ---
 title: "Nested attributes: id-bearing/update_only updates & destroys defer to async flush instead of Rails' synchronous in-memory existing_record handling"
 status: blocked
-updated: 2026-06-15
+updated: 2026-07-05
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
 deps:
@@ -10,7 +10,7 @@ deps:
   - nested-attributes-collection-sync-in-memory-grandchild
 deps-rfc: []
 est-loc: 200
-priority: 40
+priority: 1
 pr: null
 claim: "2026-06-15T12:20:11Z"
 assignee: "nested-attributes-sync-existing-record-updates"
