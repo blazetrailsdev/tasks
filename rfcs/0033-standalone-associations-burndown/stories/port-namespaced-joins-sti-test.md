@@ -1,6 +1,6 @@
 ---
 title: "port-namespaced-joins-sti-test"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4624
 claim: "2026-07-05T17:07:27Z"
 assignee: "port-namespaced-joins-sti-test"
 blocked-by: null
