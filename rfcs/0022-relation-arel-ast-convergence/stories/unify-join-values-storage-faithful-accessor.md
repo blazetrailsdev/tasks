@@ -1,6 +1,6 @@
 ---
 title: "Unify joins_values storage so the writer round-trips and builders use the accessor"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T21:21:55Z"
+assignee: "unify-join-values-storage-faithful-accessor"
 blocked-by: null
 ---
 
