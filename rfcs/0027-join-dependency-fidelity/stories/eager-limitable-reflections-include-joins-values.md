@@ -1,13 +1,13 @@
 ---
 title: "apply_join_dependency: AND using_limitable_reflections? over joins/left_outer_joins reflections (not just eager JD)"
 status: draft
-updated: 2026-06-15
+updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 40
+priority: 2
 pr: null
 claim: null
 assignee: null
