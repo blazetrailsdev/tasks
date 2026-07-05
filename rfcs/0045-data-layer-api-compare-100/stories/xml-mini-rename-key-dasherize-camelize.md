@@ -1,13 +1,13 @@
 ---
 title: "xml-mini-rename-key-dasherize-camelize"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
