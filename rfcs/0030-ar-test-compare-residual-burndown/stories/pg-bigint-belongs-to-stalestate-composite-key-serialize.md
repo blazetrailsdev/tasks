@@ -1,6 +1,6 @@
 ---
 title: "Normalize BigInt in BelongsToAssociation#staleState composite-FK JSON.stringify"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 3
-pr: null
+pr: 4620
 claim: "2026-07-05T16:22:29Z"
 assignee: "pg-bigint-belongs-to-stalestate-composite-key-serialize"
 blocked-by: null
