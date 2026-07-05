@@ -1,6 +1,6 @@
 ---
 title: "reconcile-addtotarget-save-falsy-early-return"
-status: ready
+status: closed
 updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of pre-existing replace-on-target-add-regardless-of-save-result (RFC 0033), which covers the same _addToTarget falsy-save gate with fuller context."
 ---
 
 ## Context
