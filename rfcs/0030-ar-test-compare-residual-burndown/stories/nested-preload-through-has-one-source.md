@@ -1,6 +1,6 @@
 ---
 title: "nested-preload-through-has-one-source"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4609
 claim: "2026-07-05T13:22:26Z"
 assignee: "nested-preload-through-has-one-source"
 blocked-by: null
