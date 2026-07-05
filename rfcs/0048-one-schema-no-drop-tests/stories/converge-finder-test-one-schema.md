@@ -1,7 +1,7 @@
 ---
 title: "converge-finder-test-one-schema"
-status: draft
-updated: 2026-06-30
+status: closed
+updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Superseded: folded into converge-finder-enum-relation-one-schema (done). Story body already marked SUPERSEDED / do-not-work."
 ---
 
 > **SUPERSEDED (RFC 0048 re-spec, 2026-06-30).** Folded into `converge-finder-enum-relation-one-schema`.
