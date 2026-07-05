@@ -1,6 +1,6 @@
 ---
 title: "Delete redundant setupFixtures beside fixtures(): core half (2/2)"
-status: ready
+status: closed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-b
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of pre-existing converge-setupfixtures-redundant-next-to-fixtures, which already covers all 28 Bucket B files. Audit references that story instead."
 ---
 
 ## Context
