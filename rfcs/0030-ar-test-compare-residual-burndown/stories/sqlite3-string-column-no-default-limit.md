@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-string-column-no-default-limit"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
