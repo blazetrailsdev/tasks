@@ -1,6 +1,6 @@
 ---
 title: "migrationcontext-index-using-bookkeeping-from-capability"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4606
 claim: "2026-07-05T12:37:27Z"
 assignee: "migrationcontext-index-using-bookkeeping-from-capability"
 blocked-by: null
