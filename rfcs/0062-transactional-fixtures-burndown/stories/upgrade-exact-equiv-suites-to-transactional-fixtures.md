@@ -1,6 +1,6 @@
 ---
 title: "Upgrade exact-equivalent {useTransactionalTests:false} canonical suites to transactional fixtures({})"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
