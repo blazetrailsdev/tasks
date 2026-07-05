@@ -1,6 +1,6 @@
 ---
 title: "from(rel, alias) generates wrong table qualifier in GROUP BY (uses original table, not alias)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 2
-pr: null
+pr: 4631
 claim: "2026-07-05T19:01:55Z"
 assignee: "relations-from-alias-group-by-qualifier"
 blocked-by: null
