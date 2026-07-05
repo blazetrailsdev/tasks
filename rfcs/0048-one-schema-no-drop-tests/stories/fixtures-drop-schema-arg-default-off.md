@@ -1,7 +1,7 @@
 ---
 title: "Drop the fixtures schema arg (default off) and delete escape hatches"
-status: draft
-updated: 2026-06-29
+status: ready
+updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
