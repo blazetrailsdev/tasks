@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket D mixed per-describe: associations (1/2)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-d
