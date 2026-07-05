@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket A pair→fixtures([]): core + relation (3/4)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-a
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 4599
 claim: "2026-07-05T10:07:26Z"
 assignee: "convert-pair-core-relation-a"
 blocked-by: null
