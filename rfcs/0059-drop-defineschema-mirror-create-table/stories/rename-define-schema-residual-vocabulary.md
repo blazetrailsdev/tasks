@@ -1,6 +1,6 @@
 ---
 title: "Rename define-schema.ts to its residual schema-type role and scrub stale defineSchema comments"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 0
-pr: null
+pr: 4613
 claim: "2026-07-05T14:22:27Z"
 assignee: "rename-define-schema-residual-vocabulary"
 blocked-by: null
