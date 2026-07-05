@@ -8,7 +8,7 @@ deps:
   - remove-usefixtures-public-surface
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
