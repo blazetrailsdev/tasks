@@ -1,6 +1,6 @@
 ---
 title: "leftOuterJoins(:cte) routes to LEFT OUTER JOIN on the live _applyJoinsToManager path, not only from-subquery"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
