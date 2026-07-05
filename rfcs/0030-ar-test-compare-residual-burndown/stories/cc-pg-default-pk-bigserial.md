@@ -1,14 +1,14 @@
 ---
 title: "cc-pg-default-pk-bigserial"
 status: blocked
-updated: 2026-06-16
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
   - pg-default-pk-bigserial-cascade
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 3
 pr: null
 claim: "2026-06-16T02:20:53Z"
 assignee: "cc-pg-default-pk-bigserial"
