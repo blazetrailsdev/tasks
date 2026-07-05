@@ -1,6 +1,6 @@
 ---
 title: "normalizes-query-and-in-place-type-decoration"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4621
 claim: "2026-07-05T15:52:28Z"
 assignee: "normalizes-query-and-in-place-type-decoration"
 blocked-by: null
