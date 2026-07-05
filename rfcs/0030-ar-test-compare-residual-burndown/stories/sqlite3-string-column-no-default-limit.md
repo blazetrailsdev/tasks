@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-string-column-no-default-limit"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4640
 claim: "2026-07-05T22:21:55Z"
 assignee: "sqlite3-string-column-no-default-limit"
 blocked-by: null
