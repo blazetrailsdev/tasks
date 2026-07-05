@@ -1,13 +1,13 @@
 ---
 title: "Converge pg bind type_cast to all binds (Rails type_casted_binds), gated on pinned-client serialization"
 status: draft
-updated: 2026-06-24
+updated: 2026-07-05
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps: ["pg-pinned-client-write-query-serialization"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
