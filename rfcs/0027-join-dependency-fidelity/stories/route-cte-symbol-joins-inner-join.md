@@ -1,6 +1,6 @@
 ---
 title: "joins(:cte) routes to INNER JOIN via build_with_join_node (currently raises Unknown node type: Symbol)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0027-join-dependency-fidelity"
 cluster: null
