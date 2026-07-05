@@ -1,6 +1,6 @@
 ---
 title: "Expose Relation#slice and #name delegations under Rails names"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T14:52:29Z"
+assignee: "relation-delegation-expose-slice-and-name"
 blocked-by: null
 ---
 
