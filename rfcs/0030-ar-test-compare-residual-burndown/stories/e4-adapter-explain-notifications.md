@@ -1,13 +1,13 @@
 ---
 title: "E4 — adapter_test notifications + explain tail"
 status: blocked
-updated: 2026-06-16
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 30
+priority: 3
 pr: null
 claim: null
 assignee: null
