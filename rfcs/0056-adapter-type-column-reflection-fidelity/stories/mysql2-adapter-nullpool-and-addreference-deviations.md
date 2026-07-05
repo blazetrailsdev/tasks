@@ -1,7 +1,7 @@
 ---
 title: "mysql2-adapter-nullpool-and-addreference-deviations"
-status: in-progress
-updated: 2026-07-04
+status: done
+updated: 2026-07-05
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
