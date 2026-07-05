@@ -1,6 +1,6 @@
 ---
 title: "Terminal: delete setupFixtures + useHandlerTransactionalFixtures surface"
-status: draft
+status: ready
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
