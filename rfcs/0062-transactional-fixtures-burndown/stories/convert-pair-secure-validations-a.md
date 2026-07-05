@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket A pair→fixtures([]): secure + type + validations (4/4)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-a
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4600
 claim: "2026-07-05T11:07:29Z"
 assignee: "convert-pair-secure-validations-a"
 blocked-by: null
