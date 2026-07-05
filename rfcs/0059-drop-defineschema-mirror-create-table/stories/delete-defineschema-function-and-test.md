@@ -8,7 +8,7 @@ deps:
   - remove-usefixtures-public-surface
 deps-rfc: []
 est-loc: null
-priority: 2
+priority: 1
 pr: 4587
 claim: "2026-07-05T01:52:36Z"
 assignee: "delete-defineschema-function-and-test"
