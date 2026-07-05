@@ -1,13 +1,13 @@
 ---
 title: "Gate extractor: capture positive current_adapter? in compound conjunction conditions"
 status: draft
-updated: 2026-06-20
+updated: 2026-07-05
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 20
+priority: 3
 pr: null
 claim: null
 assignee: null
