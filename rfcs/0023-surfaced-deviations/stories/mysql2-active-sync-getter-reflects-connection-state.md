@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#active sync getter should reflect real connection state (converge, not just eager connect!)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4612
 claim: "2026-07-05T14:07:44Z"
 assignee: "mysql2-active-sync-getter-reflects-connection-state"
 blocked-by: null
