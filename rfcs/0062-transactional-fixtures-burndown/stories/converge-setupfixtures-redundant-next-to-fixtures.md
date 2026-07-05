@@ -1,6 +1,6 @@
 ---
 title: "Delete redundant setupFixtures() calls that sit beside a fixtures() call"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T02:37:27Z"
+assignee: "converge-setupfixtures-redundant-next-to-fixtures"
 blocked-by: null
 closed-reason: null
 ---
