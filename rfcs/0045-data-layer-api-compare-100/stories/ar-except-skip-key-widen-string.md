@@ -1,6 +1,6 @@
 ---
 title: "Widen Relation#except/Querying#except skip type to accept arbitrary strings"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0045-data-layer-api-compare-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T17:30:08Z"
+assignee: "ar-except-skip-key-widen-string"
 blocked-by: null
 ---
 
