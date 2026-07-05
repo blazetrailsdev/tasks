@@ -1,16 +1,17 @@
 ---
 title: "Cover PG/MySQL adapter excluded files flag-off on their native backend"
-status: blocked
-updated: 2026-06-30
+status: closed
+updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 60
 pr: null
-claim: "2026-06-30T14:50:39Z"
-assignee: "one-schema-excluded-backend-coverage"
-blocked-by: "Blocked on PR #4246 (AR_ONE_SCHEMA no-drop test mode) which is still OPEN/unmerged. This story modifies the ar-one-schema-excluded CI lane and eslint/one-schema-exclude.json, neither of which exists on main yet. Per CLAUDE.md no-stacked-PRs rule, cannot build until #4246 merges."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Obsolete: eslint/one-schema-exclude.json and the ar-one-schema-excluded CI lane were deleted by RFC 0059 retire story (#4540). No exclude list to cover; blocking #4246 abandoned."
 ---
 
 ## Context
