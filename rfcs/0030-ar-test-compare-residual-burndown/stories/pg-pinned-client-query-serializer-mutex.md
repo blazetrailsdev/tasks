@@ -1,13 +1,13 @@
 ---
 title: "Serialize all pinned pg.Client queries via promise-chain mutex"
 status: draft
-updated: 2026-06-29
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: ["pg-serialize-fire-and-forget-client-query-sites"]
 deps-rfc: []
 est-loc: 150
-priority: 0
+priority: 3
 pr: null
 claim: null
 assignee: null
