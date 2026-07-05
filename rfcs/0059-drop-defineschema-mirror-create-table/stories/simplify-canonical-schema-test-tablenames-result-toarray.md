@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 15
-priority: 3
+priority: 1
 pr: 4592
 claim: "2026-07-05T03:07:25Z"
 assignee: "simplify-canonical-schema-test-tablenames-result-toarray"
