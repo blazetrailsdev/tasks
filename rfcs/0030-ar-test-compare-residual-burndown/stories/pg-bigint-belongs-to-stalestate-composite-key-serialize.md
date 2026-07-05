@@ -1,13 +1,13 @@
 ---
 title: "Normalize BigInt in BelongsToAssociation#staleState composite-FK JSON.stringify"
 status: ready
-updated: 2026-06-24
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
