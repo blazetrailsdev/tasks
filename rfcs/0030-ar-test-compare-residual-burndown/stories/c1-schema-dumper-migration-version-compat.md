@@ -1,14 +1,14 @@
 ---
 title: "c1-schema-dumper-migration-version-compat"
 status: blocked
-updated: 2026-06-16
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
   - c1-schema-dumper-timestamptz-version-compat
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 3
 pr: null
 claim: "2026-06-16T01:32:52Z"
 assignee: "c1-schema-dumper-migration-version-compat"
