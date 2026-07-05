@@ -55,6 +55,6 @@ abstract_mysql_adapter.rb:619) prepending aliased order columns.
       must stay unaliased so by-name extraction still finds them (single-PK
       relies on the same property).
 - [ ] Add a test: composite-PK `eager_load(:assoc).order(:non_pk_col).limit(n)
-  .count(:other)` returns the count over the ordered top-n rows, verified
+.count(:other)` returns the count over the ordered top-n rows, verified
       cross-adapter (must fail on PG/MySQL without the `columnsForDistinct`
       re-projection).
