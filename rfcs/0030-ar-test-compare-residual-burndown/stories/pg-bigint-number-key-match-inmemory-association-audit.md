@@ -1,6 +1,6 @@
 ---
 title: "Audit non-preloader in-memory association matching for BigInt-PK/number-FK key mismatch"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
