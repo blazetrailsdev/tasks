@@ -1,7 +1,7 @@
 ---
 title: "hasMany-through-habtm direct-load returns empty; preload/joins work"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-07-05
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T13:37:26Z"
+assignee: "nested-through-habtm-direct-load-empty"
 blocked-by: null
 ---
 
