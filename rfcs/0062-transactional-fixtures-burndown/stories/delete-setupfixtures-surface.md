@@ -4,7 +4,9 @@ status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
-deps: ["audit-setupfixtures-caller-buckets"]
+deps:
+  - audit-setupfixtures-caller-buckets
+  - convert-remaining-setupfixtures-callers-to-fixtures
 deps-rfc: []
 est-loc: 120
 priority: 0
