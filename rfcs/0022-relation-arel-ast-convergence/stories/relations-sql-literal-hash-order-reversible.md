@@ -1,6 +1,6 @@
 ---
 title: "SqlLiteral hash-keyed order should be reversible (not trigger dangerousQueryCheck)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
