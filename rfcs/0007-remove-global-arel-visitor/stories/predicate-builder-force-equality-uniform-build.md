@@ -1,6 +1,6 @@
 ---
 title: "Lift force_equality? to uniform build dispatch (PG array + serialized)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
