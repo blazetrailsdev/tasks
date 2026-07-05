@@ -1,7 +1,7 @@
 ---
 title: "force path should still run assertCanonicalSchema (skip only the no-op return)"
-status: ready
-updated: 2026-07-02
+status: closed
+updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Obsolete: the defineSchema force-path assertion and assertCanonicalSchema were deleted by RFC 0059 retire-defineschema-and-one-schema-apparatus (#4540). one-schema.ts gone from main; nothing left to guard."
 ---
 
 ## Context
