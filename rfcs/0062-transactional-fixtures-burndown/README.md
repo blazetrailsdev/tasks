@@ -7,7 +7,11 @@ updated: 2026-07-05
 owner: "@deanmarano"
 packages:
   - "activerecord"
-clusters: []
+clusters:
+  - fixtures-burndown-a
+  - fixtures-burndown-b
+  - fixtures-burndown-c
+  - fixtures-burndown-d
 related-rfcs:
   - "0060-reduce-test-drop-churn"
   - "0019-canonical-schema-burndown"
