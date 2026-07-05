@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket D mixed per-describe: core (2/2)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-d
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T04:22:30Z"
+assignee: "convert-mixed-perdescribe-core-d"
 blocked-by: null
 closed-reason: null
 ---
