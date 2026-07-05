@@ -1,6 +1,6 @@
 ---
 title: "FileStore increment coerces amount via Integer() raise semantics, not Math.trunc"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T00:47:09Z"
+assignee: "file-store-increment-integer-amount-raise"
 blocked-by: null
 closed-reason: null
 ---
