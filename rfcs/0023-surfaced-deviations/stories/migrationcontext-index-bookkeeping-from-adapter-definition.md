@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext#addIndex should source _indexes metadata from the adapter's IndexDefinition, not recompute per-adapter gating"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4604
 claim: "2026-07-05T12:07:28Z"
 assignee: "migrationcontext-index-bookkeeping-from-adapter-definition"
 blocked-by: null
