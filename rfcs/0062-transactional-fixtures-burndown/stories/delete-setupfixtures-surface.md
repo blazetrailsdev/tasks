@@ -7,7 +7,7 @@ cluster: null
 deps: ["audit-setupfixtures-caller-buckets"]
 deps-rfc: []
 est-loc: 120
-priority: 2
+priority: 0
 pr: null
 claim: null
 assignee: null
