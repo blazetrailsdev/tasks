@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-persistence-test-rails-cases"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
