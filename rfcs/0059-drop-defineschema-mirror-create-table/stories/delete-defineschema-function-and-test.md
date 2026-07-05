@@ -1,10 +1,11 @@
 ---
 title: "delete-defineschema-function-and-test"
 status: blocked
-updated: 2026-07-04
+updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
-deps: []
+deps:
+  - remove-usefixtures-public-surface
 deps-rfc: []
 est-loc: null
 priority: null
