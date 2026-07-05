@@ -1,6 +1,6 @@
 ---
 title: "Replace hand-rolled tableNames shape reader in canonical-schema.test.ts with Result#pluck/toArray"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 3
-pr: null
+pr: 4592
 claim: "2026-07-05T03:07:25Z"
 assignee: "simplify-canonical-schema-test-tablenames-result-toarray"
 blocked-by: null
