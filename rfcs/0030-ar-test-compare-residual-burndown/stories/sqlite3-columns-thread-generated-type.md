@@ -1,13 +1,13 @@
 ---
 title: "sqlite3-columns-thread-generated-type"
 status: ready
-updated: 2026-06-22
+updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
