@@ -1,6 +1,6 @@
 ---
 title: "uniqueness-case-insensitive-integer-column-sqlite"
-status: claimed
+status: done
 updated: 2026-07-05
 rfc: "0047-widen-call-set-parity-all-ported"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4616
 claim: "2026-07-05T15:07:28Z"
 assignee: "uniqueness-case-insensitive-integer-column-sqlite"
 blocked-by: null
