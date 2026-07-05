@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 1
+priority: 2
 pr: 4589
 claim: "2026-07-05T02:22:27Z"
 assignee: "audit-setupfixtures-caller-buckets"
