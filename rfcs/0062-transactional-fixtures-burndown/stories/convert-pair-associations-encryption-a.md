@@ -1,6 +1,6 @@
 ---
 title: "Convert Bucket A pair→fixtures([]): associations + encryption (2/4)"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: fixtures-burndown-a
