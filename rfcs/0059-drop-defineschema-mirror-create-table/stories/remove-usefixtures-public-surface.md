@@ -1,6 +1,6 @@
 ---
 title: "remove-usefixtures-public-surface"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0059-drop-defineschema-mirror-create-table"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 4584
 claim: "2026-07-05T01:00:47Z"
 assignee: "remove-usefixtures-public-surface"
 blocked-by: null
