@@ -1,6 +1,6 @@
 ---
 title: "Re-run DDL_PROFILE and verify DROP-churn reduction vs #4499 baseline"
-status: in-progress
+status: closed
 updated: 2026-07-05
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -16,10 +16,10 @@ deps-rfc: []
 est-loc: 100
 priority: 1
 pr: 4585
-claim: "2026-07-05T01:37:26Z"
-assignee: "remeasure-drop-churn-verification"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verification performed (PR #4585): all RFC 0060 targets passed — DROP_TABLE ops ~97% down on every adapter, schema-DDL ms ~94% down, PG REFERENTIAL_INTEGRITY ms −96%. PR closed unmerged; doc artifact not kept per owner decision. Measurement goal fulfilled."
 ---
 
 ## Context
