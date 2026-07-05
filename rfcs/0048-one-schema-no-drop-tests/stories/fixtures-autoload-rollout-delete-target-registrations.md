@@ -1,6 +1,6 @@
 ---
 title: "Roll out autoload opt-in and delete association-target registerModel blocks across converted canonical files"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T11:37:44Z"
+assignee: "fixtures-autoload-rollout-delete-target-registrations"
 blocked-by: null
 closed-reason: null
 ---
