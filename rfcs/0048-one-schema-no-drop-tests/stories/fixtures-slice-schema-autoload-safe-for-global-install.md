@@ -1,6 +1,6 @@
 ---
 title: "Bound fixture schema slicing so the canonical autoload index can install globally"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
