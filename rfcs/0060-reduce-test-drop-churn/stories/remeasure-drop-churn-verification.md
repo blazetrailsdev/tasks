@@ -1,6 +1,6 @@
 ---
 title: "Re-run DDL_PROFILE and verify DROP-churn reduction vs #4499 baseline"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0060-reduce-test-drop-churn"
 cluster: null
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: 1
-pr: null
+pr: 4585
 claim: "2026-07-05T01:37:26Z"
 assignee: "remeasure-drop-churn-verification"
 blocked-by: null
