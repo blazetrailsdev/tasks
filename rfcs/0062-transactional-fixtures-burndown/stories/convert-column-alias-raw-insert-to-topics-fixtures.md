@@ -1,6 +1,6 @@
 ---
 title: "Convert column-alias raw INSERT to topics fixtures and flip to transactional"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
