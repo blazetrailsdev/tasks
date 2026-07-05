@@ -17,32 +17,24 @@ closed-reason: null
 
 ## Context
 
-Follow-up to `port-remaining-persistence-test-rails-cases` (PR that ported 29 of
+Follow-up to `port-remaining-persistence-test-rails-cases` (PR that ported 30 of
 the 34 missing `def test_*` from
 `vendor/rails/activerecord/test/cases/persistence_test.rb` into
-`packages/activerecord/src/persistence.test.ts`). Five Rails cases were left
+`packages/activerecord/src/persistence.test.ts`). Four Rails cases were left
 unported because each surfaces a real trails deviation / needs adapter-specific
 schema, and porting them would either bend the test or exceed the PR's scope.
 This story completes AC #2 (0 missing) for persistence_test.rb.
 
 ### Impl-gap cases (fix impl to match Rails, or track under 0023-surfaced-deviations)
 
-1. **increment aliased attribute** (persistence_test.rb:301) — `increment!(:available_credit)`
-   where `available_credit` is `alias_attribute`'d to `credit_limit`. trails'
-   `increment`/`incrementBang` (persistence.ts:435/466) do NOT resolve attribute
-   aliases: `readAttribute`/`writeAttribute` and `updateCounters` use the raw name,
-   so the counter write targets a non-existent `availableCredit` column and the
-   value never persists. Fix: resolve `_attributeAliases` in the increment path
-   (Rails' `increment!` resolves via `read_attribute`/`[]`).
-
-2. **update attribute in before validation respects callback chain** (persistence_test.rb:813)
+1. **update attribute in before validation respects callback chain** (persistence_test.rb:813)
    — Rails' `before_validation :set_author_name` calls `update_attribute` (a DB
    write) inside validation. trails validations are SYNC-only (see
    `feedback_trails_validations_are_sync_only`): an async `beforeValidation` throws
    "Async callback on sync chain". Needs a sync-compatible port or a decision on
    whether trails supports async work in before_validation.
 
-3. **persist inherited class with different table name** (persistence_test.rb:1451)
+2. **persist inherited class with different table name** (persistence_test.rb:1451)
    — anon `Minimalistic` subclass on the `aircraft` table; asserts
    `Aircraft.last.name`. Blocked by the restricted-`name`-attribute deviation
    (`project_restricted_name_attribute_no_dirty_track`): `create({ name })` and
