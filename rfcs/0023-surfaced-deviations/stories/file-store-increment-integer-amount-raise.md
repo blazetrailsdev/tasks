@@ -1,6 +1,6 @@
 ---
 title: "FileStore increment coerces amount via Integer() raise semantics, not Math.trunc"
-status: in-progress
+status: done
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
