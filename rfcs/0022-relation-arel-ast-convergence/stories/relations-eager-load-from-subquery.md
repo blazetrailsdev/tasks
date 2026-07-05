@@ -1,6 +1,6 @@
 ---
 title: "eagerLoad/includes relation cannot be used as from() subquery source"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: 4630
 claim: "2026-07-05T18:41:55Z"
 assignee: "relations-eager-load-from-subquery"
 blocked-by: null
