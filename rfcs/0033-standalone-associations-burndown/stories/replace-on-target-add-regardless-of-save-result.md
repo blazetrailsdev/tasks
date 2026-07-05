@@ -1,6 +1,6 @@
 ---
 title: "replace_on_target should buffer record into target regardless of insert_record result (drop save-success gate)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0033-standalone-associations-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: null
+pr: 4626
 claim: "2026-07-05T17:31:16Z"
 assignee: "replace-on-target-add-regardless-of-save-result"
 blocked-by: null
