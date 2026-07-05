@@ -1,7 +1,7 @@
 ---
 title: "nested-attributes-association-extend"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-05
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T00:07:05Z"
+assignee: "nested-attributes-association-extend"
 blocked-by: null
 ---
 
