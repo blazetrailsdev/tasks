@@ -43,9 +43,23 @@ Delete the retired invention:
 - Consider renaming `define-schema.ts` to reflect its residual role (schema-type
   vocabulary) as a single mechanical rename, or fold its remaining exports into
   `canonical-schema.ts`. TEST_SCHEMA deletion is out of scope (130 live callers).
+- **Sweep the stale one-schema comment stragglers** the retire story (#4540)
+  left behind — the mode is deleted, so these comments now describe nonexistent
+  behavior. As of 2026-07-05 (`git grep -n "AR_ONE_SCHEMA\|one.schema" packages/`):
+  - `migration.test.ts:129` ("the one-schema..." comment) and `:785` ("under
+    AR_ONE_SCHEMA the shared..." comment) — the only `AR_ONE_SCHEMA` reference
+    left on main; reword to describe the current canonical/truncate-reset model.
+  - `encryption/test-helpers.ts:156` ("Under one-schema mode...") and
+    `persistence.trails.test.ts:3` ("one-schema convergence") — reword.
+  - `test-helpers/schema-file-generator.test.ts:344` references this very story
+    by name; update once the deletion lands.
+    Acceptance: `git grep -i "one.schema\|AR_ONE_SCHEMA" packages/ eslint/ scripts/`
+    -> 0.
 
 ## Acceptance criteria
 
 - No `defineSchema` function/`DefineSchemaOpts` symbol remains in
   `packages/activerecord/src` (dumper generated-name excepted).
+- `git grep -i "one.schema\|AR_ONE_SCHEMA" packages/ eslint/ scripts/` -> 0
+  (stale comment stragglers from #4540 swept).
 - `test:compare` delta >= 0; no test renames.
