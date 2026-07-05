@@ -1,6 +1,6 @@
 ---
 title: "Autoload fallback for canonical models (Zeitwerk analog)"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
+pr: 4588
 claim: "2026-07-05T02:07:26Z"
 assignee: "fixtures-autoload-canonical-model-index"
 blocked-by: null
