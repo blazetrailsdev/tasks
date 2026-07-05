@@ -1,6 +1,6 @@
 ---
 title: "Bound fixture schema slicing so the canonical autoload index can install globally"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4603
 claim: "2026-07-05T11:52:27Z"
 assignee: "fixtures-slice-schema-autoload-safe-for-global-install"
 blocked-by: null
