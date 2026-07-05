@@ -1,5 +1,5 @@
 ---
-title: "Update/retire D1-migrate codemod that emits setupHandlerSuite/useHandlerTransactionalFixtures"
+title: "Retire the D1-migrate codemod (emits setupHandlerSuite/useHandlerTransactionalFixtures)"
 status: ready
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
@@ -31,15 +31,22 @@ and its tests assert on the emitted strings:
 
 When `delete-setupfixtures-surface` removes the exports, these scripts will
 generate code that imports a non-existent symbol, and the codemod tests will
-fail. This tooling must be updated (emit `fixtures({...})` instead) or retired
-as part of terminal removal — it is NOT covered by the caller-conversion gate
+fail. This tooling is NOT covered by the caller-conversion gate
 (`git grep ... 'packages/activerecord/src'`), so it slips through unnoticed.
+
+**Resolution is deletion, not migration.** The D1-migrate codemod has done its
+job — the one-time migration is complete and `fixtures({...})` is the sole
+authored surface, so we no longer need this codemod at all. **Retire it: delete
+the codemod scripts and their tests.** Do NOT invest in teaching it to emit the
+new `fixtures({...})` surface — a one-shot migration tool we won't run again is
+not worth carrying.
 
 ## Acceptance criteria
 
-- The D1-migrate codemod (`scripts/d1-migrate*.ts`) no longer emits
-  `setupHandlerSuite`/`useHandlerTransactionalFixtures`; it emits the
-  `fixtures({...})` surface (or the tooling is retired if obsolete).
-- Codemod tests updated to match; green.
+- The D1-migrate codemod (`scripts/d1-migrate*.ts`) and its tests
+  (`scripts/d1-migrate*.test.ts`) are **deleted**, not rewritten — no code
+  emits `setupHandlerSuite`/`useHandlerTransactionalFixtures` anymore.
+- No dangling references to the removed scripts (package.json scripts, imports,
+  docs); repo builds and lints clean.
 - Sequence this with / fold into `delete-setupfixtures-surface` so the surface
-  removal and the codemod update land coherently.
+  removal and the codemod retirement land coherently.
