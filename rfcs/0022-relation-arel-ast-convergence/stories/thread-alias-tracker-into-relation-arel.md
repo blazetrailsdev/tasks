@@ -1,6 +1,6 @@
 ---
 title: "thread-alias-tracker-into-relation-arel"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T21:01:56Z"
+assignee: "thread-alias-tracker-into-relation-arel"
 blocked-by: null
 ---
 
