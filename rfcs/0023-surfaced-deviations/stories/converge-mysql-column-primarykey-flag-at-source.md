@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL Column.primaryKey at the columns() source (promoted-unique, no query)"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T11:22:27Z"
+assignee: "converge-mysql-column-primarykey-flag-at-source"
 blocked-by: null
 closed-reason: null
 ---
