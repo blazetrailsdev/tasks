@@ -1,6 +1,6 @@
 ---
 title: "nested-attributes-delegated-type-build"
-status: claimed
+status: in-progress
 updated: 2026-07-05
 rfc: "0052-nested-attributes-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4581
 claim: "2026-07-05T00:27:10Z"
 assignee: "nested-attributes-delegated-type-build"
 blocked-by: null
