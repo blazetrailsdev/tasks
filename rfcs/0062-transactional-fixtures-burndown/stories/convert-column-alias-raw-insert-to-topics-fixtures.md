@@ -1,6 +1,6 @@
 ---
 title: "Convert column-alias raw INSERT to topics fixtures and flip to transactional"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0062-transactional-fixtures-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T23:34:42Z"
+assignee: "convert-column-alias-raw-insert-to-topics-fixtures"
 blocked-by: null
 closed-reason: null
 ---
