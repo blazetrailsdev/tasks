@@ -1,6 +1,6 @@
 ---
 title: "converge Pirate.catchphrase declare: fix dirty.test.ts accessor pattern to drop skip-columns annotation"
-status: ready
+status: claimed
 updated: 2026-07-05
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-05T16:52:27Z"
+assignee: "pirate-catchphrase-skip-columns-converge"
 blocked-by: null
 ---
 
