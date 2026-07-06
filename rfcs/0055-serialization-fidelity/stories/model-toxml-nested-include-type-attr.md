@@ -1,7 +1,7 @@
 ---
 title: "model-toxml-nested-include-type-attr"
-status: draft
-updated: 2026-07-04
+status: ready
+updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
