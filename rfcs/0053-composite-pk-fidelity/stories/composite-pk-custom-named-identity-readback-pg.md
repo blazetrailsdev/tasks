@@ -1,6 +1,6 @@
 ---
 title: "Composite PK with a non-id identity column does not read DB-generated value back on PostgreSQL"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T18:23:54Z"
+assignee: "composite-pk-custom-named-identity-readback-pg"
 blocked-by: null
 ---
 
