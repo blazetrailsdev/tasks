@@ -1,6 +1,6 @@
 ---
 title: "Collapse MigrationContext bespoke schema-DSL onto SchemaStatements (single source of truth, Rails-faithful)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 12
-pr: null
+pr: 4699
 claim: "2026-07-06T20:23:55Z"
 assignee: "collapse-migrationcontext-schema-dsl-onto-schemastatements"
 blocked-by: null
