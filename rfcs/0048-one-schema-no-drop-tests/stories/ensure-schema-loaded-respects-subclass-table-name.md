@@ -58,7 +58,7 @@ schema and silently drops attribute writes instead of erroring.
       subclass overriding `_tableName` reflects its own table's columns.
 - [ ] Remove the `await MinimalisticAircraft.loadSchema()` workaround (and its
       explanatory comment) in persistence.test.ts's `persist inherited class
-  with different table name`; the test passes on sqlite/postgres/mysql in a
+with different table name`; the test passes on sqlite/postgres/mysql in a
       full-file run without it.
 - [ ] No regression to the virtual-attribute / enum-overlay reflection cases
       the fast path was added to protect (see base.ts:1243-1256 comment).
