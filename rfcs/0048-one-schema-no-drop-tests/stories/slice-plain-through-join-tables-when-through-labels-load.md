@@ -1,6 +1,6 @@
 ---
 title: "Slice plain has_many:through join tables when through-label loading is wired in"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
