@@ -1,6 +1,6 @@
 ---
 title: "Relocate 8 misplaced inverse-detection tests from reflection.test.ts to inverse-associations.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: 4667
 claim: "2026-07-06T11:26:24Z"
 assignee: "reflection-inverse-tests-relocate"
 blocked-by: null
