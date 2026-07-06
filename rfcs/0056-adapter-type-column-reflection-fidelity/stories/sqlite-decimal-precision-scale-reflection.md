@@ -1,13 +1,13 @@
 ---
 title: "Reflect precision/scale for SQLite decimal(p,s)/numeric(p,s) columns"
 status: ready
-updated: 2026-06-23
+updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 54
 pr: null
 claim: null
 assignee: null
