@@ -1,6 +1,6 @@
 ---
 title: "MySQL functional-index columns: collapse to SQL string via add_options_for_index_columns"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 21
-pr: null
+pr: 4708
 claim: "2026-07-06T22:23:52Z"
 assignee: "mysql-functional-index-columns-sql-string"
 blocked-by: null
