@@ -1,7 +1,7 @@
 ---
 title: "Converge read_attribute_for_serialization to pure send (drop store/attributes fallbacks)"
-status: draft
-updated: 2026-06-24
+status: ready
+updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
