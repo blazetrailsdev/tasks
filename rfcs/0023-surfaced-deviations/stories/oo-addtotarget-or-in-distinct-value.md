@@ -2,7 +2,7 @@
 title: "oo-addtotarget-or-in-distinct-value"
 status: draft
 updated: 2026-07-05
-rfc: "0033-standalone-associations-burndown"
+rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
