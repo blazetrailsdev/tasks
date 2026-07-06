@@ -1,6 +1,6 @@
 ---
 title: "Singular arelColumn missing Arel-node passthrough branch (crashes on raw Nodes.Node)"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
