@@ -1,7 +1,7 @@
 ---
 title: "MySQL functional-index columns: collapse to SQL string via add_options_for_index_columns"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
