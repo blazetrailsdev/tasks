@@ -1,6 +1,6 @@
 ---
 title: "acceptance/confirmation use validator setupBang via validatesWith (drop helper attribute() decls)"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T17:38:54Z"
+assignee: "acceptance-confirmation-setup-bang-via-validates-with"
 blocked-by: null
 ---
 
