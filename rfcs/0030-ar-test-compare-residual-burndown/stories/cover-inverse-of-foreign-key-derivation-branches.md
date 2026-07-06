@@ -1,6 +1,6 @@
 ---
 title: "Cover the untested inverse_of foreign-key derivation branches in _deriveForeignKey"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T02:26:23Z"
+assignee: "cover-inverse-of-foreign-key-derivation-branches"
 blocked-by: null
 closed-reason: null
 ---
