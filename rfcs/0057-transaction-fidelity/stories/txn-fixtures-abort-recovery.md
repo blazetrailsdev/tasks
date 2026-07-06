@@ -1,13 +1,13 @@
 ---
 title: "txn-fixtures-abort-recovery"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: rails-deviation
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 39
 pr: null
 claim: null
 assignee: null
