@@ -1,6 +1,6 @@
 ---
 title: "converge-enum-attribute-to-decorate-attributes"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 4707
 claim: "2026-07-06T22:08:58Z"
 assignee: "converge-enum-attribute-to-decorate-attributes"
 blocked-by: null
