@@ -1,9 +1,9 @@
 ---
 rfc: "0058-module-generation-mechanism"
 title: "Module/mixin generation mechanism convergence"
-status: draft
+status: active
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
