@@ -1,6 +1,6 @@
 ---
 title: "credit-value-accessor-reads-in-wide-call-gate"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4656
 claim: "2026-07-06T02:46:24Z"
 assignee: "credit-value-accessor-reads-in-wide-call-gate"
 blocked-by: null
