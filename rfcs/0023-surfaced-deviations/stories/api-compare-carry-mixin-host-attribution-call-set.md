@@ -1,6 +1,6 @@
 ---
 title: "api-compare: include()/extend()-mixed methods get empty-body host-file candidates, flag phantom missing calls"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
