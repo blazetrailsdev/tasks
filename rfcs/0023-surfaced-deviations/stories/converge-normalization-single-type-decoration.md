@@ -1,6 +1,6 @@
 ---
 title: "Converge normalizes onto a single read+write type-decoration path"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
