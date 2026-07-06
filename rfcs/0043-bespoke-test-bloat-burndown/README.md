@@ -1,9 +1,9 @@
 ---
 rfc: "0043-bespoke-test-bloat-burndown"
 title: "ActiveRecord bespoke TS-only test-bloat burndown"
-status: active
+status: closed
 created: 2026-06-21
-updated: 2026-06-24
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
