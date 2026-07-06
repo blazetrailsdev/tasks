@@ -1,9 +1,9 @@
 ---
 rfc: "0033-standalone-associations-burndown"
 title: "Standalone-association call burndown"
-status: active
+status: closed
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
