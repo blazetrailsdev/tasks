@@ -1,6 +1,6 @@
 ---
 title: "Extract shared join-folding helper so merge/merge! can't drift"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 11
-pr: null
+pr: 4676
 claim: "2026-07-06T14:29:05Z"
 assignee: "dedupe-merge-joins-fold-shared-helper"
 blocked-by: null
