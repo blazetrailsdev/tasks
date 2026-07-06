@@ -1,7 +1,7 @@
 ---
 title: "big-integer-safe-range-number-representation"
-status: draft
-updated: 2026-07-04
+status: ready
+updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
