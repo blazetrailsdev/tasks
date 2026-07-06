@@ -1,13 +1,13 @@
 ---
 title: "save-runs-validations-inside-transaction"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null
