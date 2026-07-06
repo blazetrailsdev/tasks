@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter connectBang/reconnect should populate base _connection so run-loop guard fires once per connect (Rails parity)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4686
 claim: "2026-07-06T16:41:01Z"
 assignee: "mysql2-connectbang-populate-base-connection-field"
 blocked-by: null
