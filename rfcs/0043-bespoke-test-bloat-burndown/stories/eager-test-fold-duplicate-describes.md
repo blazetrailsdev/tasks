@@ -55,14 +55,18 @@ references, taggings`. (Full set: accounts, authorAddresses, authorFavorites,
 
 **Do NOT fold these — they keep their own describe + setup:**
 
-- The **two sharded blocks** (lines 1184 and 2521). They load the
-  `shardedBlogs / shardedBlogPosts / shardedComments / shardedTags /
-shardedBlogPostsTags` fixtures, and block 2521 additionally passes
-  `{ schema: canonicalSchema }` and runs its own `beforeAll` registering the
-  sharded + CPK models. Their setup is not shared with the canonical union and
-  must stay local.
-- **`EagerLoadingTooManyIdsTest`** (line 1134) — mirrors a separate Rails class;
-  keeps its own `setupFixtures()` / `beforeAll`.
+- The **two sharded blocks** (the `shardedBlogs / shardedBlogPosts /
+shardedComments / shardedTags / shardedBlogPostsTags` describes). They load the
+  sharded fixtures and one runs its own `beforeAll` dynamically importing and
+  `registerModel`-ing the sharded + CPK models (`ShardedBlog`, `ShardedBlogPost`,
+  `ShardedComment`, `ShardedTag`, `ShardedBlogPostTag`, `CpkPost`, `CpkComment`).
+  That model-registration setup is not shared with the canonical union and must
+  stay local. (The `{ schema: canonicalSchema }` arg these once passed was
+  removed in PR #4593 — the fixtures schema arg is gone repo-wide — so it is no
+  longer a reason to keep them separate; the model registration is.)
+- **`EagerLoadingTooManyIdsTest`** — mirrors a separate Rails class and now runs
+  **non-transactionally** (`fixtures({}, { useTransactionalTests: false })`);
+  keeps its own describe + `beforeAll`.
 
 - trails: `associations/eager.test.ts`
 - Rails: `vendor/rails/activerecord/test/cases/associations/eager_test.rb`
