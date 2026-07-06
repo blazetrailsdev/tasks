@@ -1,6 +1,6 @@
 ---
 title: "Slice plain has_many:through join tables when through-label loading is wired in"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 7
-pr: null
+pr: 4672
 claim: "2026-07-06T13:41:00Z"
 assignee: "slice-plain-through-join-tables-when-through-labels-load"
 blocked-by: null
