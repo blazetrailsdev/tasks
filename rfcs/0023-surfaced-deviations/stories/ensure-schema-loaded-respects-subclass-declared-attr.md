@@ -1,6 +1,6 @@
 ---
 title: "ensureSchemaLoaded: subclass declaring attribute() before reflect still bails on ancestor's foreign table"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4687
 claim: "2026-07-06T16:53:04Z"
 assignee: "ensure-schema-loaded-respects-subclass-declared-attr"
 blocked-by: null
