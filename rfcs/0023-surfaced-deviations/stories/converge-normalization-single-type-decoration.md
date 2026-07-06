@@ -1,6 +1,6 @@
 ---
 title: "Converge normalizes onto a single read+write type-decoration path"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4655
 claim: "2026-07-06T02:06:26Z"
 assignee: "converge-normalization-single-type-decoration"
 blocked-by: null
