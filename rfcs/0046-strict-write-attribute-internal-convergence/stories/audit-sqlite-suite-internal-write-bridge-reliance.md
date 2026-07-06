@@ -1,6 +1,6 @@
 ---
 title: "Audit: which SQLite-suite models still depend on the internal-write bridge"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T19:53:54Z"
+assignee: "audit-sqlite-suite-internal-write-bridge-reliance"
 blocked-by: null
 ---
 
