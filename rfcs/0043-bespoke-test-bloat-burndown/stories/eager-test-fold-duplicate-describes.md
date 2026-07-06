@@ -87,7 +87,7 @@ as met (both waves closed).
       `fixtures([...])` scaffolding.
 - [ ] The **two sharded blocks** and `EagerLoadingTooManyIdsTest` stay as their
       own describes with their existing per-block `fixtures(...)` / `beforeAll`
-      model-registration / `{ schema }` setup intact.
+      model-registration / non-transactional setup intact.
 - [ ] Test names and bodies UNCHANGED (`test:compare` matches on names); only the
       surrounding describe/fixtures scaffolding of the folded blocks is removed.
 - [ ] No remaining per-slice `beforeAll` that only re-declares fixtures; any
