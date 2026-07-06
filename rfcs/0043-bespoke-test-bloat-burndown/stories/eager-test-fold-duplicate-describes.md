@@ -1,6 +1,6 @@
 ---
 title: "Fold the canonical EagerAssociationTest describes into one shared-fixture suite"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T13:29:08Z"
+assignee: "eager-test-fold-duplicate-describes"
 blocked-by: null
 ---
 
