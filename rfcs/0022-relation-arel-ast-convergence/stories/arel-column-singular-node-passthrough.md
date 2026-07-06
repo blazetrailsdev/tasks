@@ -1,6 +1,6 @@
 ---
 title: "Singular arelColumn missing Arel-node passthrough branch (crashes on raw Nodes.Node)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 4649
 claim: "2026-07-06T00:21:54Z"
 assignee: "arel-column-singular-node-passthrough"
 blocked-by: null
