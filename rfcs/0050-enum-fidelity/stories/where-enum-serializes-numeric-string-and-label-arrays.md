@@ -1,13 +1,13 @@
 ---
 title: "where() serializes numeric-string and label-array enum values through EnumType"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 65
 pr: null
 claim: null
 assignee: null
