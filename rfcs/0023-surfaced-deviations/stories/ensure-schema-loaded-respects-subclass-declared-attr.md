@@ -48,6 +48,6 @@ rather than inferring table identity from map ownership.
       `attribute()` before first reflection still reflects its own table's
       columns (writes to its own columns persist; reads return them).
 - [ ] Add a regression test mirroring `persist inherited class with different
-  table name` but with a `static attribute(...)` / virtual-attr declaration
+table name` but with a `static attribute(...)` / virtual-attr declaration
       on the subclass before the first create.
 - [ ] No regression to the STI fast-path or the PR #4680 owner-check case.
