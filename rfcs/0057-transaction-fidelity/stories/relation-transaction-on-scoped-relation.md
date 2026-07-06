@@ -1,6 +1,6 @@
 ---
 title: "Relation#transaction opens a transaction on a scoped relation without applying its scope"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
