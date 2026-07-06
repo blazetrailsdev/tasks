@@ -1,9 +1,9 @@
 ---
 rfc: "0027-join-dependency-fidelity"
 title: "JoinDependency fidelity — converge internal state model to Rails' build-once walk/construct shape"
-status: active
+status: closed
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - activerecord
