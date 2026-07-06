@@ -1,6 +1,6 @@
 ---
 title: "Move mysql char/varchar/enum/set string registration to concrete Mysql2/Trilogy adapter"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
