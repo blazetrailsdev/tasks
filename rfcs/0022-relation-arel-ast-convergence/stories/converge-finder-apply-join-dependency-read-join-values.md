@@ -1,6 +1,6 @@
 ---
 title: "finder-methods applyJoinDependency reads neither joins_values nor left_outer_joins_values"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 9
-pr: null
+pr: 4674
 claim: "2026-07-06T14:05:00Z"
 assignee: "converge-finder-apply-join-dependency-read-join-values"
 blocked-by: null
