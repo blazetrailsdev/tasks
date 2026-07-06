@@ -1,6 +1,6 @@
 ---
 title: "Join builders read private _leftOuterJoinsValues instead of public leftOuterJoinsValues accessor"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
