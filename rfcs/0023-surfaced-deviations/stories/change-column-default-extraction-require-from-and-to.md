@@ -1,6 +1,6 @@
 ---
 title: "changeColumnDefault extraction must require both :from and :to (abstract + PG)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4650
 claim: "2026-07-06T00:25:40Z"
 assignee: "change-column-default-extraction-require-from-and-to"
 blocked-by: null
