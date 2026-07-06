@@ -1,6 +1,6 @@
 ---
 title: "Rewrite hollow activemodel 'nested include' test to mirror Rails test_nested_include"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T18:53:52Z"
+assignee: "serialization-nested-include-test-hollow-body"
 blocked-by: null
 ---
 
