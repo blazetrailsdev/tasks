@@ -1,6 +1,6 @@
 ---
 title: "Add detect_enum_conflict! for enum accessor names (name, name=, pluralize)"
-status: claimed
+status: done
 updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: null
+pr: 4417
 claim: "2026-07-06T17:53:52Z"
 assignee: "enum-detect-conflict-for-accessor-names"
 blocked-by: null
