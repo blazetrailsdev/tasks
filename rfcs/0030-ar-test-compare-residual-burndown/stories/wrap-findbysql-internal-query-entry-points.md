@@ -1,14 +1,14 @@
 ---
 title: "Wrap findBySql/countBySql (raw-SQL query entry points) in withQueryConnection"
-status: claimed
-updated: 2026-07-05
+status: done
+updated: 2026-07-06
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: 3
-pr: null
+pr: 4646
 claim: "2026-07-05T23:41:57Z"
 assignee: "wrap-findbysql-internal-query-entry-points"
 blocked-by: null
