@@ -1,6 +1,6 @@
 ---
 title: "through-singular-association-statement-cache"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T22:38:52Z"
+assignee: "through-singular-association-statement-cache"
 blocked-by: null
 ---
 
