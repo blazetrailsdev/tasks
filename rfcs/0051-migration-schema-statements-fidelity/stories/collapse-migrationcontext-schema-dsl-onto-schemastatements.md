@@ -1,6 +1,6 @@
 ---
 title: "Collapse MigrationContext bespoke schema-DSL onto SchemaStatements (single source of truth, Rails-faithful)"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
