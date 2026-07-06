@@ -1,6 +1,6 @@
 ---
 title: "Mirror Rails joins_values.empty? short-circuit on live _applyJoinsToManager path"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0027-join-dependency-fidelity"
 cluster: null
