@@ -1,13 +1,13 @@
 ---
 title: "Serialized#cast should serialize-first like Rails Mutable#cast"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 53
 pr: null
 claim: null
 assignee: null
