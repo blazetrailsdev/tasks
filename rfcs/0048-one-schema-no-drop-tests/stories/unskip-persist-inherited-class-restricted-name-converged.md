@@ -1,13 +1,13 @@
 ---
 title: "Un-skip converged persist-inherited-class restricted-name test"
 status: ready
-updated: 2026-07-05
+updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null
