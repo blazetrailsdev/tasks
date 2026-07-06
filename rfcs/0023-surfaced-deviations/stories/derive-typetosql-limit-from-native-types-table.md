@@ -1,7 +1,7 @@
 ---
 title: "Derive abstract typeToSql string/type default limits from a per-adapter native-types table instead of adapterName branches"
-status: ready
-updated: 2026-07-05
+status: claimed
+updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T03:06:20Z"
+assignee: "derive-typetosql-limit-from-native-types-table"
 blocked-by: null
 closed-reason: null
 ---
