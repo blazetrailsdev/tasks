@@ -1,6 +1,6 @@
 ---
 title: "virtual-type-no-fallback-converge"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T21:08:53Z"
+assignee: "virtual-type-no-fallback-converge"
 blocked-by: null
 ---
 
