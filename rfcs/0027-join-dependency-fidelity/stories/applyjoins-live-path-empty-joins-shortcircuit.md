@@ -1,7 +1,7 @@
 ---
 title: "Mirror Rails joins_values.empty? short-circuit on live _applyJoinsToManager path"
-status: ready
-updated: 2026-07-05
+status: claimed
+updated: 2026-07-06
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T00:01:56Z"
+assignee: "applyjoins-live-path-empty-joins-shortcircuit"
 blocked-by: null
 closed-reason: null
 ---
