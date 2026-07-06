@@ -7,7 +7,7 @@ cluster: null
 deps: ["pg-serialize-fire-and-forget-client-query-sites"]
 deps-rfc: []
 est-loc: 150
-priority: 3
+priority: 5
 pr: null
 claim: null
 assignee: null
