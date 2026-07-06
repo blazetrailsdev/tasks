@@ -1,9 +1,9 @@
 ---
 rfc: "0062-transactional-fixtures-burndown"
 title: "Transactional-fixtures burndown: fixtures({}) everywhere"
-status: active
+status: closed
 created: 2026-07-04
-updated: 2026-07-05
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
