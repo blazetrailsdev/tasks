@@ -1,7 +1,7 @@
 ---
 title: "performCount limit-branch ignores requested aggregate column"
-status: draft
-updated: 2026-07-05
+status: closed
+updated: 2026-07-06
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Resolved: performCount now implements Rails build_count_subquery — calculations.ts projects the requested aggregate column as count_column when column != :all; the DIVERGENCE marker is gone."
 ---
 
 ## Context
