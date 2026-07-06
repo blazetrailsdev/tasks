@@ -1,6 +1,6 @@
 ---
 title: "Converge nested-through preloader to Rails' recursive per-reflection scope structuring (drop upfront flatten+strip)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
+pr: 4692
 claim: "2026-07-06T18:38:56Z"
 assignee: "nested-through-preloader-recursive-scope-structuring"
 blocked-by: null
