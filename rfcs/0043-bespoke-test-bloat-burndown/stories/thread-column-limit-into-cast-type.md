@@ -1,6 +1,6 @@
 ---
 title: "thread-column-limit-into-cast-type"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T12:46:25Z"
+assignee: "thread-column-limit-into-cast-type"
 blocked-by: null
 ---
 
