@@ -1,7 +1,7 @@
 ---
 title: "abstract-fk-mutators-use-foreign-keys-guard"
-status: draft
-updated: 2026-06-21
+status: ready
+updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
