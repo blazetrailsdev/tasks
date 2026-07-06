@@ -1,7 +1,7 @@
 ---
 title: "composite-pk-eager-count-limit-id-subquery-columns-for-distinct"
-status: ready
-updated: 2026-07-05
+status: claimed
+updated: 2026-07-06
 rfc: "0027-join-dependency-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T01:21:55Z"
+assignee: "composite-pk-eager-count-limit-id-subquery-columns-for-distinct"
 blocked-by: null
 closed-reason: null
 ---
