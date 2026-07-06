@@ -1,13 +1,13 @@
 ---
 title: "sqlite-remove-column-tolerate-missing"
 status: ready
-updated: 2026-06-30
+updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null
