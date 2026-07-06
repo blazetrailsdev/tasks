@@ -1,13 +1,13 @@
 ---
 title: "fix: SQLite bigint (int8) column type uses float64 range check, wrongly emits 1=0 for 2^63-1"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
