@@ -1,6 +1,6 @@
 ---
 title: "converge-sqlite-precision-to-register-class-with-precision"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4681
 claim: "2026-07-06T15:41:00Z"
 assignee: "converge-sqlite-precision-to-register-class-with-precision"
 blocked-by: null
