@@ -1,6 +1,6 @@
 ---
 title: "Drop dead disconnected.test.ts ref in normalize-skips.ts"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 5
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T10:26:20Z"
+assignee: "normalize-skips-drop-deleted-file-refs"
 blocked-by: null
 ---
 
