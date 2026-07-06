@@ -1,6 +1,6 @@
 ---
 title: "Extract shared join-folding helper so merge/merge! can't drift"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
