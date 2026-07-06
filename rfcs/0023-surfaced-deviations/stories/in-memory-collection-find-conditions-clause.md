@@ -1,6 +1,6 @@
 ---
 title: "in-memory-collection-find-conditions-clause"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
