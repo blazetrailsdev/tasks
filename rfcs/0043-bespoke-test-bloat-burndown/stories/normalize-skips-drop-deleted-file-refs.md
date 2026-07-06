@@ -1,13 +1,13 @@
 ---
 title: "Drop dead disconnected.test.ts ref in normalize-skips.ts"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 5
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
