@@ -1,7 +1,7 @@
 ---
 title: "Add detect_enum_conflict! for enum accessor names (name, name=, pluralize)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
