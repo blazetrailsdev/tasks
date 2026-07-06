@@ -1,6 +1,6 @@
 ---
 title: "Route _enum method generation through _enumMethodsModule().defineEnumMethods"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
