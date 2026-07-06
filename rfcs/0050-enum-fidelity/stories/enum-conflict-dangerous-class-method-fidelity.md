@@ -1,7 +1,7 @@
 ---
 title: "enum-conflict-dangerous-class-method-fidelity"
-status: draft
-updated: 2026-07-02
+status: ready
+updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
