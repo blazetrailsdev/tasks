@@ -1,6 +1,6 @@
 ---
 title: "in-memory-collection-find-conditions-clause"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T16:05:06Z"
+assignee: "in-memory-collection-find-conditions-clause"
 blocked-by: null
 closed-reason: null
 ---
