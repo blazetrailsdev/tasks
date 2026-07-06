@@ -1,6 +1,6 @@
 ---
 title: "Callback runner should drive the compiled CallTemplate/CallbackSequence instead of bespoke _invoke"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T19:38:55Z"
+assignee: "callbacks-runner-uses-compiled-calltemplate-sequence"
 blocked-by: null
 ---
 
