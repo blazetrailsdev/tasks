@@ -1,6 +1,6 @@
 ---
 title: "Preserve joins_values single-array order across .merge (no raw-then-named reorder)"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T04:06:20Z"
+assignee: "merge-joins-preserve-single-array-order"
 blocked-by: null
 closed-reason: null
 ---
