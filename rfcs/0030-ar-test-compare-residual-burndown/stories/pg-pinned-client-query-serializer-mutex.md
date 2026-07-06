@@ -1,6 +1,6 @@
 ---
 title: "Serialize all pinned pg.Client queries via promise-chain mutex"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T13:15:36Z"
+assignee: "pg-pinned-client-query-serializer-mutex"
 blocked-by: null
 ---
 
