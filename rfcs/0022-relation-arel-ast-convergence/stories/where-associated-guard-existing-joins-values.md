@@ -1,6 +1,6 @@
 ---
 title: "where.associated must skip joins! when association already in joins_values/left_outer_joins_values"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 12
-pr: null
+pr: 4677
 claim: "2026-07-06T14:40:59Z"
 assignee: "where-associated-guard-existing-joins-values"
 blocked-by: null
