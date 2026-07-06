@@ -1,6 +1,6 @@
 ---
 title: "ensure-schema-loaded-respects-subclass-table-name"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: 4680
 claim: "2026-07-06T15:29:00Z"
 assignee: "ensure-schema-loaded-respects-subclass-table-name"
 blocked-by: null
