@@ -1,6 +1,6 @@
 ---
 title: "Relation#transaction opens a transaction on a scoped relation without applying its scope"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: null
+pr: 4695
 claim: "2026-07-06T19:23:55Z"
 assignee: "relation-transaction-on-scoped-relation"
 blocked-by: null
