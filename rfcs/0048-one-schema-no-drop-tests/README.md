@@ -1,9 +1,9 @@
 ---
 rfc: "0048-one-schema-no-drop-tests"
 title: "Rails-faithful AR test convergence"
-status: active
+status: closed
 created: 2026-06-28
-updated: 2026-06-30
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
