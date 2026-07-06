@@ -1,7 +1,7 @@
 ---
 title: "Composite PK with a non-id identity column does not read DB-generated value back on PostgreSQL"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-06
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
