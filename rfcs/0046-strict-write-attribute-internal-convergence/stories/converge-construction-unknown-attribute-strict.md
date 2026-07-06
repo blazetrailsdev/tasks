@@ -1,6 +1,6 @@
 ---
 title: "Converge Model construction to raise UnknownAttributeError for unknown keys"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T21:53:52Z"
+assignee: "converge-construction-unknown-attribute-strict"
 blocked-by: null
 ---
 
