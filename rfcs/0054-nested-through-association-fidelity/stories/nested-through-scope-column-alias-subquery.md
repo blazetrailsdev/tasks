@@ -1,6 +1,6 @@
 ---
 title: "nested-through scope referencing intermediate table column fails in subquery context"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
