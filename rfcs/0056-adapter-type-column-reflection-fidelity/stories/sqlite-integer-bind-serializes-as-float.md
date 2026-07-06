@@ -2,7 +2,7 @@
 title: "SQLite driver binds integer-valued JS numbers as SQLITE_FLOAT, not SQLITE_INTEGER"
 status: ready
 updated: 2026-07-05
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

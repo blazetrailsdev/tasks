@@ -2,7 +2,7 @@
 title: "persistence-tablename-setter-schema-reset"
 status: ready
 updated: 2026-06-27
-rfc: "0005-activerecord-gaps"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

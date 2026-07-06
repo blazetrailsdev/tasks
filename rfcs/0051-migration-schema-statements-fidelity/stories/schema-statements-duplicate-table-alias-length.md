@@ -2,7 +2,7 @@
 title: "SchemaStatements defines a duplicate tableAliasLength; Rails only has it in DatabaseLimits"
 status: ready
 updated: 2026-07-03
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

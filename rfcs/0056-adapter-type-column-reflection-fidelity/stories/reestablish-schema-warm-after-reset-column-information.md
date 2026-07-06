@@ -2,7 +2,7 @@
 title: "Re-establish eager schema cache warm after resetColumnInformation (sync cold-after-reset gap)"
 status: draft
 updated: 2026-06-15
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

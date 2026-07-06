@@ -2,7 +2,7 @@
 title: "Port adapter-scoped Type.register/Type.lookup so mysql2 string resolves via lookup"
 status: ready
 updated: 2026-07-06
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

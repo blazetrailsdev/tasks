@@ -2,7 +2,7 @@
 title: "Scope SchemaDumperAdapterTest dumps to own tables (drop 60s timeout band-aid)"
 status: ready
 updated: 2026-07-05
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

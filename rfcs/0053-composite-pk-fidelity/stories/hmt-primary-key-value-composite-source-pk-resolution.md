@@ -2,7 +2,7 @@
 title: "HasManyThroughAssociation#primaryKeyValue resolves composite source association_primary_key"
 status: ready
 updated: 2026-07-06
-rfc: "0023-surfaced-deviations"
+rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

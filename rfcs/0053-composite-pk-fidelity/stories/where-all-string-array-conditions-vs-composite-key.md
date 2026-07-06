@@ -2,7 +2,7 @@
 title: "where(['sql = ?', bind]) all-string array misrouted to composite-key form"
 status: ready
 updated: 2026-07-03
-rfc: "0023-surfaced-deviations"
+rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "Converge sync columnsHash schema-cache reload (remove sibling-borrow workaround)"
 status: blocked
 updated: 2026-06-16
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc:

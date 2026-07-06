@@ -2,7 +2,7 @@
 title: "merge() does not propagate preload/includes across model boundary"
 status: ready
 updated: 2026-06-27
-rfc: "0023-surfaced-deviations"
+rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

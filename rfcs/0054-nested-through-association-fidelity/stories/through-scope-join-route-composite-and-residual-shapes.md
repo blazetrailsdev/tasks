@@ -2,7 +2,7 @@
 title: "through-scope-join-route-composite-and-residual-shapes"
 status: ready
 updated: 2026-06-26
-rfc: "0005-activerecord-gaps"
+rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
   - converge-integration-namedscoping-remainder

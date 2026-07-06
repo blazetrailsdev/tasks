@@ -2,7 +2,7 @@
 title: "Serialized-attribute WHERE: force_equality? must match plain object/array (un-skip 3 tests)"
 status: ready
 updated: 2026-07-05
-rfc: "0023-surfaced-deviations"
+rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

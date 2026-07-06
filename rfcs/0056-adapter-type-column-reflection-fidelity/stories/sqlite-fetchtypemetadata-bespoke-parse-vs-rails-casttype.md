@@ -2,7 +2,7 @@
 title: "sqlite3 fetchTypeMetadata parses sql_type by hand instead of sourcing from cast_type"
 status: ready
 updated: 2026-07-01
-rfc: "0023-surfaced-deviations"
+rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

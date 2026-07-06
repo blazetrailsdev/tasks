@@ -2,7 +2,7 @@
 title: "has_one-through preloader: resolve multi-level nested joined tables for through-query predicate carry"
 status: ready
 updated: 2026-07-04
-rfc: "0023-surfaced-deviations"
+rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

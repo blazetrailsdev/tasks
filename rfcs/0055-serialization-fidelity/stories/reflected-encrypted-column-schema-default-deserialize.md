@@ -2,7 +2,7 @@
 title: "Reflected encrypted column with non-null schema default fails to decrypt (default seeded via deserialize)"
 status: draft
 updated: 2026-07-02
-rfc: "0023-surfaced-deviations"
+rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

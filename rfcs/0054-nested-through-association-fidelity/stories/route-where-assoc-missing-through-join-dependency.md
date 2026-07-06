@@ -2,7 +2,7 @@
 title: "Route where.associated/where.missing joins through JoinDependency/AliasTracker instead of the flat string ON-rebind path"
 status: draft
 updated: 2026-06-15
-rfc: "0005-activerecord-gaps"
+rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
   - unify-alias-tracker-across-join-buckets
