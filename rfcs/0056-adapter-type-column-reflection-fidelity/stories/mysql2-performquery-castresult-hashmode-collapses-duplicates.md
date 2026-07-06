@@ -1,7 +1,7 @@
 ---
 title: "mysql2 performQuery/castResult path uses hash-keyed rows, collapsing duplicate columns (cast_result parity)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-06
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
