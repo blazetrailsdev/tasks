@@ -1,6 +1,6 @@
 ---
 title: "idsReader resolves pluck key via association_primary_key, not target model id"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T17:05:06Z"
+assignee: "idsreader-association-primary-key-resolution"
 blocked-by: null
 closed-reason: null
 ---
