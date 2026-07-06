@@ -1,7 +1,7 @@
 ---
 title: "enum/alias_attribute resolution must be order-independent (dynamic, not eager)"
-status: draft
-updated: 2026-07-02
+status: ready
+updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
