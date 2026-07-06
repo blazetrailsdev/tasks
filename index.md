@@ -25,7 +25,7 @@
 | [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | closed | @deanmarano | activerecord |
 | [0020-load-defaults-config](rfcs/0020-load-defaults-config/README.md) | Versioned framework defaults (config.load_defaults) — partial_inserts first | closed | @deanmarano | activerecord, trailties |
 | [0021-mysql-rawconn-convergence](rfcs/0021-mysql-rawconn-convergence/README.md) | mysql2 query methods through the abstract withRawConnection loop | closed | @deanmarano | activerecord |
-| [0022-relation-arel-ast-convergence](rfcs/0022-relation-arel-ast-convergence/README.md) | Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM) | active | @deanmarano | activerecord, arel |
+| [0022-relation-arel-ast-convergence](rfcs/0022-relation-arel-ast-convergence/README.md) | Relation arel-AST convergence — replace string-based SQL assembly with Arel nodes (CTE/UnionAll, set-ops, FROM) | closed | @deanmarano | activerecord, arel |
 | [0022-singular-association-holder](rfcs/0022-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | closed | @deanmarano | activerecord, activemodel |
 | [0023-surfaced-deviations](rfcs/0023-surfaced-deviations/README.md) | Surfaced deviations & follow-ups — standing backlog for port-discovered work | active | @deanmarano | — |
 | [0024-tasks-cli-coverage](rfcs/0024-tasks-cli-coverage/README.md) | tasks CLI full coverage — no hand-editing the tasks repo | closed | @deanmarano | — |
