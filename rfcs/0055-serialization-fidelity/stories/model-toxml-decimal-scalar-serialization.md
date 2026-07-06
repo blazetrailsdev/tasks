@@ -1,6 +1,6 @@
 ---
 title: 'Model#toXml serializes decimal as scalar type="decimal", not nested Decimal object'
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T20:53:57Z"
+assignee: "model-toxml-decimal-scalar-serialization"
 blocked-by: null
 closed-reason: null
 ---
