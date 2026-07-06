@@ -1,13 +1,13 @@
 ---
 title: "Serialize where-predicate value through coder for serialized columns"
 status: ready
-updated: 2026-06-24
+updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 43
 pr: null
 claim: null
 assignee: null
