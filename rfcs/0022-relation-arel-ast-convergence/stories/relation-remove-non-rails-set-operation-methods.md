@@ -1,6 +1,6 @@
 ---
 title: "Remove non-Rails set-operation methods (union/unionAll/intersect/exceptRelation) from Relation"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
