@@ -1,6 +1,6 @@
 ---
 title: "where.associated must skip joins! when association already in joins_values/left_outer_joins_values"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
