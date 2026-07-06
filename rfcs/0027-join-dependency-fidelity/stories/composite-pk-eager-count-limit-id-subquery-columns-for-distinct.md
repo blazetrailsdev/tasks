@@ -1,6 +1,6 @@
 ---
 title: "composite-pk-eager-count-limit-id-subquery-columns-for-distinct"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0027-join-dependency-fidelity"
 cluster: null
