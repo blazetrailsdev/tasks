@@ -1,6 +1,6 @@
 ---
 title: "Route _enum method generation through _enumMethodsModule().defineEnumMethods"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T20:08:55Z"
+assignee: "route-enum-generation-through-enum-methods-module"
 blocked-by: null
 ---
 
