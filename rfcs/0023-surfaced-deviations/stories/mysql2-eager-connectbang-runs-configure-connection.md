@@ -1,7 +1,7 @@
 ---
 title: "Mysql2Adapter eager connectBang()/connect() should run configureConnection on fresh connect (Rails parity)"
-status: ready
-updated: 2026-07-05
+status: claimed
+updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T04:26:23Z"
+assignee: "mysql2-eager-connectbang-runs-configure-connection"
 blocked-by: null
 closed-reason: null
 ---
