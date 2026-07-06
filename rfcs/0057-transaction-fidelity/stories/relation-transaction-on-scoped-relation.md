@@ -1,13 +1,13 @@
 ---
 title: "Relation#transaction opens a transaction on a scoped relation without applying its scope"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null
