@@ -55,7 +55,7 @@
 | [0049-one-schema-no-drop-perf](rfcs/0049-one-schema-no-drop-perf/README.md) | One-schema no-drop test mode (perf) | superseded | @deanmarano | activerecord |
 | [0050-enum-fidelity](rfcs/0050-enum-fidelity/README.md) | Enum fidelity | active | @deanmarano | activerecord |
 | [0051-migration-schema-statements-fidelity](rfcs/0051-migration-schema-statements-fidelity/README.md) | Migration & SchemaStatements fidelity | active | @deanmarano | activerecord |
-| [0052-nested-attributes-fidelity](rfcs/0052-nested-attributes-fidelity/README.md) | Nested attributes fidelity | draft | @deanmarano | activerecord |
+| [0052-nested-attributes-fidelity](rfcs/0052-nested-attributes-fidelity/README.md) | Nested attributes fidelity | active | @deanmarano | activerecord |
 | [0053-composite-pk-fidelity](rfcs/0053-composite-pk-fidelity/README.md) | Composite primary-key fidelity | draft | @deanmarano | activerecord |
 | [0054-nested-through-association-fidelity](rfcs/0054-nested-through-association-fidelity/README.md) | Nested/through association direct-load fidelity | draft | @deanmarano | activerecord |
 | [0055-serialization-fidelity](rfcs/0055-serialization-fidelity/README.md) | Serialization fidelity | draft | @deanmarano | activerecord |
