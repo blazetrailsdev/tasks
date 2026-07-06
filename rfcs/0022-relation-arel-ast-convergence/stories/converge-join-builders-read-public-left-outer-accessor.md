@@ -1,6 +1,6 @@
 ---
 title: "Join builders read private _leftOuterJoinsValues instead of public leftOuterJoinsValues accessor"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T14:17:00Z"
+assignee: "converge-join-builders-read-public-left-outer-accessor"
 blocked-by: null
 closed-reason: null
 ---
