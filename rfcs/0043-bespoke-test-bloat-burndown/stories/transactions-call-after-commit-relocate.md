@@ -1,6 +1,6 @@
 ---
 title: "Relocate misplaced call-after-commit test to the transaction_callbacks convention file"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 4
-pr: null
+pr: 4669
 claim: "2026-07-06T13:06:24Z"
 assignee: "transactions-call-after-commit-relocate"
 blocked-by: null
