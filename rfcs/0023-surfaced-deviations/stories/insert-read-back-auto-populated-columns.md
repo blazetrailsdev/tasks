@@ -1,6 +1,6 @@
 ---
 title: "insert-read-back-auto-populated-columns"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4659
 claim: "2026-07-06T03:46:25Z"
 assignee: "insert-read-back-auto-populated-columns"
 blocked-by: null
