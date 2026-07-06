@@ -1,6 +1,6 @@
 ---
 title: "Converge performFind not-found onto raise_record_not_found_exception! (pluralize + found/expected suffix)"
-status: claimed
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4665
 claim: "2026-07-06T10:51:03Z"
 assignee: "performfind-converge-raise-record-not-found-builder"
 blocked-by: null
