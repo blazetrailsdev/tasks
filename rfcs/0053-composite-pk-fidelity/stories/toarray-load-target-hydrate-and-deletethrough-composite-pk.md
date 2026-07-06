@@ -1,6 +1,6 @@
 ---
 title: "toarray-load-target-hydrate-and-deletethrough-composite-pk"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T19:53:59Z"
+assignee: "toarray-load-target-hydrate-and-deletethrough-composite-pk"
 blocked-by: null
 ---
 
