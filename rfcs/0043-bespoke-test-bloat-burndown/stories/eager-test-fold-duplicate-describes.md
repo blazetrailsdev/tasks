@@ -1,13 +1,13 @@
 ---
-title: "Fold 22 duplicate EagerAssociationTest describes into one shared-fixture suite"
-status: draft
-updated: 2026-06-29
+title: "Fold the canonical EagerAssociationTest describes into one shared-fixture suite"
+status: ready
+updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 300
-priority: null
+est-loc: 250
+priority: 6
 pr: null
 claim: null
 assignee: null
@@ -16,31 +16,53 @@ blocked-by: null
 
 ## Context
 
-`packages/activerecord/src/associations/eager.test.ts` is ~4,088 lines — 2.3x
-Rails' `eager_test.rb` (1,773 lines) for ~1.3x the tests (202 vs 157), i.e.
-~20 lines/test vs Rails' ~11. The inline schema is no longer the driver (~7% of
-the file). The bloat is **structural fragmentation**: the file contains **22
-separate `describe("EagerAssociationTest")` blocks** (plus 1
-`EagerLoadingTooManyIdsTest`), each repeating its own `setupHandlerSuite()` /
-`beforeAll` / `useHandlerFixtures(...)` scaffolding. Rails models the exact same
-suite as a **single** `EagerAssociationTest` class with one `fixtures`
-declaration.
+`packages/activerecord/src/associations/eager.test.ts` is **3,110 lines** — well
+over Rails' `eager_test.rb` (~1,773 lines) for a comparable test count. The inline
+schema is no longer the driver (the canonical conversion is done — `defineSchema`
+count in the file is **0**). The residual bloat is **structural fragmentation**:
+the file holds **22 separate `describe("EagerAssociationTest")` blocks** (plus a
+distinct `EagerLoadingTooManyIdsTest`), each repeating its own `fixtures([...])`
+declaration. Rails models the same suite as a **single** `EagerAssociationTest`
+class with one `fixtures` declaration.
 
-This is a conversion artifact: each canonical-schema wave carved its slice into
-a new same-named describe instead of merging into one shared-fixture suite.
-Collapsing the 22 blocks into one removes ~250–300 lines of repeated boilerplate
-and matches the Rails structure.
+This is a conversion artifact: each canonical-schema wave carved its slice into a
+new same-named describe instead of merging into one shared-fixture suite.
 
-Evidence the fold is safe (verified 2026-06-29):
+### Scope: this is a PARTIAL fold — not all 22 blocks are foldable
 
-- **No duplicate `it()` names** across the 22 blocks — merging will not collide
-  and will not disturb `test:compare` name matching.
-- Every block already pulls **canonical** fixtures; the union is 21 fixtures:
-  `accounts, authorFavorites, authors, clubs, comments, companies, developers,
-developersProjects, essays, jobs, members, memberships, owners, people, pets,
-posts, projects, references, sponsors, taggings, tags`.
-- Transactional fixtures roll back per-test, so a shared `beforeAll`/fixture
-  declaration does not leak mutations between the folded tests.
+Verified 2026-07-06 against the current file:
+
+- **No duplicate `it()` names** across the blocks — merging will not collide and
+  will not disturb `test:compare` name matching.
+- The file no longer uses `setupHandlerSuite()`/`useHandlerFixtures()`; the
+  current idiom is the endgame `fixtures([...])` surface (`test-helpers/fixtures.js`).
+  Transactional fixtures roll back per-test, so a shared fixture declaration does
+  not leak mutations between the folded tests — a superset load is correctness-safe
+  (only marginally slower per test).
+- **Fold host:** the primary block (line 83) already carries the shared
+  `beforeAll` that registers the CPK / default-scope models
+  (`PostWithDefaultScope`, `CpkOrder`, `CpkBook`, `Mentor`, `Contract`,
+  `AuditLog`, `FirstPost`) and declares 25 canonical fixtures. Fold the other
+  **plain-canonical** `describe("EagerAssociationTest")` blocks into it, extending
+  its `fixtures([...])` to the union.
+- **Canonical union = 32 fixtures**: the primary block's 25 plus the 7 that other
+  foldable blocks add — `categoriesPosts, categorizations, jobs, owners, pets,
+references, taggings`. (Full set: accounts, authorAddresses, authorFavorites,
+  authors, books, categories, categoriesPosts, categorizations, clubs, comments,
+  companies, developers, developersProjects, essays, jobs, mateys, members,
+  memberships, owners, parrots, people, pets, pirates, posts, projects, readers,
+  references, sponsors, subscribers, subscriptions, taggings, tags.)
+
+**Do NOT fold these — they keep their own describe + setup:**
+
+- The **two sharded blocks** (lines 1184 and 2521). They load the
+  `shardedBlogs / shardedBlogPosts / shardedComments / shardedTags /
+shardedBlogPostsTags` fixtures, and block 2521 additionally passes
+  `{ schema: canonicalSchema }` and runs its own `beforeAll` registering the
+  sharded + CPK models. Their setup is not shared with the canonical union and
+  must stay local.
+- **`EagerLoadingTooManyIdsTest`** (line 1134) — mirrors a separate Rails class;
+  keeps its own `setupFixtures()` / `beforeAll`.
 
 - trails: `associations/eager.test.ts`
 - Rails: `vendor/rails/activerecord/test/cases/associations/eager_test.rb`
@@ -48,30 +70,29 @@ posts, projects, references, sponsors, taggings, tags`.
 
 ## Dependency / ordering
 
-This is a **post-conversion consolidation** and must run AFTER the RFC 0019
-canonical conversion of this file (`assoc-eager-suite-canonical-wave-g` and any
-follow-on eager waves) lands — once the per-block `defineSchema(...)` calls are
-gone, the blocks differ only by their fixture list and fold trivially. Do NOT
-fold while bespoke `defineSchema` remains (that just merges scaffolding around
-tables that still collide). Set `deps` accordingly when the conversion story is
-known/closed.
+The blocking canonical conversion has **landed** — `assoc-eager-suite-canonical-wave-g`
+(PR #4253) and `assoc-eager-suite-canonical-wave-h` (PR #4258) are done, and the
+file's `defineSchema` count is 0. This story is now unblocked; deps are recorded
+as met (both waves closed).
 
 ## Acceptance criteria
 
-- [ ] Collapse the 22 `describe("EagerAssociationTest")` blocks into a SINGLE
-      `describe("EagerAssociationTest")` with one `setupHandlerSuite()` and one
-      `useHandlerFixtures([...])` declaring the unioned canonical fixture set.
-      (`EagerLoadingTooManyIdsTest` stays its own describe — it mirrors a
-      separate Rails class.)
-- [ ] Test names and bodies UNCHANGED (`test:compare` matches on names); only
-      the surrounding describe/setup scaffolding is removed.
-- [ ] No remaining per-slice `beforeAll` that only re-declares schema/fixtures;
-      any genuinely test-specific setup stays local to the relevant tests.
+- [ ] Fold the **plain-canonical** `describe("EagerAssociationTest")` blocks into
+      the primary block (line 83), extending its single `fixtures([...])` to the
+      32-fixture canonical union above. Delete the per-slice `describe` +
+      `fixtures([...])` scaffolding.
+- [ ] The **two sharded blocks** and `EagerLoadingTooManyIdsTest` stay as their
+      own describes with their existing per-block `fixtures(...)` / `beforeAll`
+      model-registration / `{ schema }` setup intact.
+- [ ] Test names and bodies UNCHANGED (`test:compare` matches on names); only the
+      surrounding describe/fixtures scaffolding of the folded blocks is removed.
+- [ ] No remaining per-slice `beforeAll` that only re-declares fixtures; any
+      genuinely test-specific setup stays local to the relevant tests.
 - [ ] `pnpm vitest run packages/activerecord/src/associations/eager.test.ts`
       passes on sqlite (and PG if any block is PG-gated); `pnpm lint` clean;
       `node scripts/typecheck.mjs` clean; test:compare delta non-negative.
-- [ ] Net line reduction (expect ~250–300 fewer lines) with zero test-count
-      change.
+- [ ] Net line reduction (deletion of repeated `describe`/`fixtures` scaffolding)
+      with zero test-count change.
 
 Hard rules: NO `node:*` imports, NO `process.*` refs, async fs only, no new
 runtime deps. 500 LOC ceiling (this is deletion-heavy; code-motion counts —
@@ -79,7 +100,7 @@ keep it to the one file). NO stacked PRs — single PR from main.
 
 ## Definition of done
 
-`eager.test.ts` has one `EagerAssociationTest` describe with a single shared
-canonical fixture declaration, no per-slice setup duplication, identical test
-names/bodies, and passes. Folding while bespoke `defineSchema` still remains is
-NOT done.
+`eager.test.ts` has one primary `EagerAssociationTest` describe holding all the
+canonical tests under a single shared `fixtures([...])` declaration, with the two
+sharded blocks and `EagerLoadingTooManyIdsTest` preserved as their own describes,
+identical test names/bodies, and passing.
