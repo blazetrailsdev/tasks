@@ -1,6 +1,6 @@
 ---
 title: "idswriter-association-primary-key-resolution"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T15:52:59Z"
+assignee: "idswriter-association-primary-key-resolution"
 blocked-by: null
 closed-reason: null
 ---
