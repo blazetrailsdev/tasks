@@ -1,9 +1,9 @@
 ---
 rfc: "0055-serialization-fidelity"
 title: "Serialization fidelity"
-status: draft
+status: active
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
