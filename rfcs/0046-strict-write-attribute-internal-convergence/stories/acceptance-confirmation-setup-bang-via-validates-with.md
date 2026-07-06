@@ -1,7 +1,7 @@
 ---
 title: "acceptance/confirmation use validator setupBang via validatesWith (drop helper attribute() decls)"
-status: draft
-updated: 2026-06-29
+status: ready
+updated: 2026-07-06
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
 deps: []
