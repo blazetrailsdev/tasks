@@ -1,6 +1,6 @@
 ---
 title: "Add pk_autopopulated_by_a_trigger_records to canonical adapter-specific schema and port persistence test"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4689
+pr: 4618
 claim: "2026-07-06T17:16:58Z"
 assignee: "persistence-pk-trigger-record-canonical-schema"
 blocked-by: null
