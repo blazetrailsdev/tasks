@@ -1,6 +1,6 @@
 ---
 title: "Remove non-Rails set-operation methods (union/unionAll/intersect/exceptRelation) from Relation"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: 4690
 claim: "2026-07-06T17:30:12Z"
 assignee: "relation-remove-non-rails-set-operation-methods"
 blocked-by: null
