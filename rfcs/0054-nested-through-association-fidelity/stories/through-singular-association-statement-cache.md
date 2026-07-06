@@ -1,13 +1,13 @@
 ---
 title: "through-singular-association-statement-cache"
 status: ready
-updated: 2026-06-23
+updated: 2026-07-06
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null
