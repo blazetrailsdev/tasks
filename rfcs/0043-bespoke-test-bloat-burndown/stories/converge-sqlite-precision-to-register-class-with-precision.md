@@ -1,6 +1,6 @@
 ---
 title: "converge-sqlite-precision-to-register-class-with-precision"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0043-bespoke-test-bloat-burndown"
 cluster: null
