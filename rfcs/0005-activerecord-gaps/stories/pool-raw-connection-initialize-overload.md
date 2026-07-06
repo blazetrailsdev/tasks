@@ -33,3 +33,11 @@ MySQL2 adapters.
 
 From the connection-pool gap plan (PF raw-connection-initialize). Likely splits;
 related to [[pool-pg-reconnect-loop]].
+
+PR #4686 (mysql2-connectbang-populate-base-connection-field) de-risks the MySQL2
+half: `_client` is now a typed accessor over the base `_connection` slot (no
+parallel field), so a promoted `_unconfiguredConnection` → `_connection` would
+be picked up by `_ensureClient()`'s `if (this._client) return this._client`
+short-circuit. The remaining MySQL2 work is wiring the promotion into that path
+(and dropping the `_isFakeConnection` inert-guard for the deprecated overload —
+mysql2-adapter.ts constructor ~L400-415), not a full pool restructure.
