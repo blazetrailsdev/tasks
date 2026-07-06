@@ -1,13 +1,13 @@
 ---
 title: "PG SchemaCreation quotedIncludeColumns should delegate to quotedIncludeColumnsForIndex"
 status: ready
-updated: 2026-06-23
+updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 56
 pr: null
 claim: null
 assignee: null
