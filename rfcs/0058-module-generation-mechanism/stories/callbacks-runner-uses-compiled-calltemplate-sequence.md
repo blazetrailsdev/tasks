@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 40
+priority: 9
 pr: null
 claim: null
 assignee: null
