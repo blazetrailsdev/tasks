@@ -1,6 +1,6 @@
 ---
 title: "abstract-fk-mutators-use-foreign-keys-guard"
-status: claimed
+status: done
 updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 4691
 claim: "2026-07-06T18:08:55Z"
 assignee: "abstract-fk-mutators-use-foreign-keys-guard"
 blocked-by: null
