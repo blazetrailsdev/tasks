@@ -1,6 +1,6 @@
 ---
 title: "Make internalExecQuery bind-aware and collapse per-adapter RETURNING read-back"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T16:16:59Z"
+assignee: "internal-exec-query-bind-aware-shared-returning-readback"
 blocked-by: null
 closed-reason: null
 ---
