@@ -1,6 +1,6 @@
 ---
 title: "Eager from() subquery emits plain star select, not Rails column-alias projection"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
