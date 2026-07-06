@@ -1,9 +1,9 @@
 ---
 rfc: "0057-transaction-fidelity"
 title: "Transaction semantics fidelity"
-status: draft
+status: active
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
