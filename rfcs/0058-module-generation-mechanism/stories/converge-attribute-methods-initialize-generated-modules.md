@@ -1,6 +1,6 @@
 ---
 title: "Converge AttributeMethods#initializeGeneratedModules to Rails (don't delete)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 18
-pr: null
+pr: 4705
 claim: "2026-07-06T21:38:53Z"
 assignee: "converge-attribute-methods-initialize-generated-modules"
 blocked-by: null
