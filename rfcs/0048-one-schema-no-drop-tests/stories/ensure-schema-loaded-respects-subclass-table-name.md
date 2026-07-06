@@ -1,6 +1,6 @@
 ---
 title: "ensure-schema-loaded-respects-subclass-table-name"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
