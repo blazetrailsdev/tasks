@@ -1,9 +1,9 @@
 ---
 rfc: "0049-one-schema-no-drop-perf"
 title: "One-schema no-drop test mode (perf)"
-status: draft
+status: superseded
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -11,6 +11,7 @@ clusters:
   - "rails-deviation"
 related-rfcs:
   - "0048-one-schema-no-drop-tests"
+superseded-by: "0060-reduce-test-drop-churn"
 ---
 
 ## Summary
