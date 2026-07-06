@@ -1,12 +1,12 @@
 ---
-title: "Remove non-Rails set-operation methods (union/unionAll/intersect/except) from Relation; reconcile except with Rails semantics"
-status: draft
-updated: 2026-07-05
+title: "Remove non-Rails set-operation methods (union/unionAll/intersect/exceptRelation) from Relation"
+status: ready
+updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: set-ops
 deps: []
 deps-rfc: []
-est-loc: 300
+est-loc: 250
 priority: 2
 pr: null
 claim: null
@@ -26,48 +26,59 @@ So trails carries non-Rails surface on `Relation`, and the prior work was _enhan
 deviation_ rather than porting anything. The project is fidelity-first ("always converge,
 never ratify"), so the correct move is to remove the non-Rails methods, not extend them.
 
-Confirmed non-Rails methods on `Relation` (trails `packages/activerecord/src/relation.ts`):
+Confirmed non-Rails methods on `Relation` (trails `packages/activerecord/src/relation.ts`,
+verified against `origin/main` 2026-07-06):
 
-- `union(other)` — relation.ts:1498. Comment claims `Mirrors: ActiveRecord::Relation#union`,
-  but Rails `Relation` has no `#union`; this mirrors `Arel::SelectManager#union`.
-- `unionAll(other)` — relation.ts:1509. Same: no Rails `Relation#union_all`.
-- `intersect(other)` — relation.ts:1520. Same: no Rails `Relation#intersect`.
-- `except(other)` — relation.ts:1531. **This is worse than an extra method: it shadows a
-  real Rails method.** Rails `ActiveRecord::SpawnMethods#except(*skips)` removes query
-  parts (e.g. `Post.order(:name).except(:order)`) and `#only(*onlies)` keeps only the
-  named parts (`spawn_methods.rb`). trails repurposed the name `except` for SQL EXCEPT
-  with a relation arg (comment at relation.ts:1668 even admits "our except is SQL EXCEPT,
-  not query-part removal"; the JSDoc says `Mirrors: …#except_` with a bogus trailing
-  underscore). trails' `spawn-methods.ts` is missing the real `except`/`only` entirely.
+- `union(other)` — `relation.ts` ~1845. Mirrors `Arel::SelectManager#union`, not any
+  `ActiveRecord::Relation#union` (which doesn't exist).
+- `unionAll(other)` — `relation.ts` ~1855. No Rails `Relation#union_all`.
+- `intersect(other)` — `relation.ts` ~1866. No Rails `Relation#intersect`.
+- `exceptRelation(other?)` — `relation.ts` ~1882. The SQL `EXCEPT` set operation, marked
+  `@internal` / "no Rails equivalent".
 
-Supporting machinery introduced only to serve these methods (candidates for removal once
-the public methods go): `_setOperation` field + `_buildSetOperationNode` /
-`_buildSetOperationOperandManager` / `_toSqlSetOperation` and the set-op branches threaded
-through `toArray`, `toSql`, `_cteBodyArelNode`, `_buildFromNode`, `_eagerLoadBypassesJoinDependency`,
-and `relation/query-methods.ts`. Tests: `relations.test.ts` "set operations" describe block,
-the union execution tests (~line 2677+), and the set-op cases in `relation/arel-ast-convergence.test.ts`.
+**Note — the `except` shadowing described in the original draft is already fixed.**
+PR #4052 (_"converge Relation#except to Rails SpawnMethods#except"_, merged 2026-06-24)
+already made `Relation#except(*skips)` the real Rails value-key remover
+(`spawn_methods.rb:59`) and **relocated** the SQL `EXCEPT` operation to the dedicated
+`exceptRelation` method. So there is no longer a mis-bound `except` and no missing
+`except`/`only` — that reconciliation is done. What remains is purely the removal of the
+four non-Rails set-operation methods and the machinery that serves only them.
+
+Supporting machinery introduced only to serve these methods (remove with them):
+`_setOperation` field (`relation.ts:550`, `type: "union" | "unionAll" | "intersect" |
+"except"`) + `_buildSetOperationNode` / `_buildSetOperationOperandManager` /
+`_toSqlSetOperation`, and the set-op branches threaded through `toArray`, `toSql`,
+`_cteBodyArelNode`, `_buildFromNode`, `_eagerLoadBypassesJoinDependency`, and
+`relation/query-methods.ts` (the `if (opts._setOperation)` branch at ~`:2449`).
+
+**No internal callers.** A monorepo grep (`origin/main`, non-test) finds no `.union(` /
+`.unionAll(` / `.intersect(` / `.exceptRelation(` call sites on a `Relation` — the only
+`.union(` hits are `WhereClause#union` (unrelated). So removal does not require fixing
+any internal use. Tests: the "set operations" describe in `relations.test.ts` (union
+execution cases) and the set-op cases in `relation/arel-ast-convergence.test.ts`.
 
 ## Acceptance criteria
 
 - [ ] Audit `Relation`'s public surface for methods with no `ActiveRecord::Relation`
       counterpart (start from the four above; verify each remaining public method against
       the Rails source / `api:compare`). Produce the list before deleting.
-- [ ] Remove `union`, `unionAll`, `intersect`, and the SQL-EXCEPT `except(other)` from
-      `Relation`, plus the `_setOperation` machinery that exists solely to support them,
-      and the corresponding tests. `api:compare` / `test:compare` delta must stay
-      non-negative (these are non-Rails methods + non-Rails tests, so removal does not
-      lose parity coverage).
-- [ ] Reconcile `except`: restore Rails' real `ActiveRecord::SpawnMethods#except(*skips)`
-      (query-part removal) and `#only(*onlies)` so the name maps to Rails semantics. If
-      that is larger than one PR, split it into its own story and remove the SQL-EXCEPT
-      `except` here so the name is at least no longer mis-bound.
-- [ ] No callers left referencing the removed methods (grep the monorepo; fix or remove
-      any internal uses).
-- [ ] Update any "Mirrors: ActiveRecord::Relation#union/…/#except\_" JSDoc that asserted a
-      non-existent Rails counterpart.
+- [ ] Remove `union`, `unionAll`, `intersect`, and `exceptRelation` from `Relation`, plus
+      the `_setOperation` machinery that exists solely to support them
+      (`_setOperation` field, `_buildSetOperationNode`,
+      `_buildSetOperationOperandManager`, `_toSqlSetOperation`, and the set-op branches in
+      `toArray` / `toSql` / `_cteBodyArelNode` / `_buildFromNode` /
+      `_eagerLoadBypassesJoinDependency` / `query-methods.ts`), and the corresponding
+      non-Rails tests. `api:compare` / `test:compare` delta must stay non-negative (these
+      are non-Rails methods + non-Rails tests, so removal loses no parity coverage).
+- [ ] Confirm no callers remain (grep the monorepo — expected already clean per the audit
+      above; re-verify and remove any that appear).
+- [ ] Update / delete any "Mirrors: `Arel::SelectManager#union`/…" JSDoc left orphaned by
+      the removal.
 
 ## Notes
 
+- `except`/`only` Rails-semantics reconciliation is **already done** (PR #4052) — this
+  story is now purely a removal, not a reconciliation.
 - PR #3398 (the eager-UNION enhancement) and its dependency story
   `set-operations-eager-joindependency-composition` are abandoned in favor of this
   convergence. `set-operations-cte-eager-ast` (PR #3187) introduced the original
