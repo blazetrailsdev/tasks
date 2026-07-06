@@ -1,6 +1,6 @@
 ---
 title: "Run failed-rollback transaction-instrumentation tests on PG/MySQL lanes"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T21:23:57Z"
+assignee: "run-failed-rollback-instrumentation-on-non-in-memory-adapters"
 blocked-by: null
 ---
 
