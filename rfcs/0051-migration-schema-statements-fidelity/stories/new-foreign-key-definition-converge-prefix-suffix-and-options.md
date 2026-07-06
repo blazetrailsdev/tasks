@@ -1,7 +1,7 @@
 ---
 title: "new-foreign-key-definition-converge-prefix-suffix-and-options"
-status: draft
-updated: 2026-06-21
+status: ready
+updated: 2026-07-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
