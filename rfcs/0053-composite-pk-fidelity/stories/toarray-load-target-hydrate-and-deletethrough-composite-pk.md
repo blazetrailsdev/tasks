@@ -1,7 +1,7 @@
 ---
 title: "toarray-load-target-hydrate-and-deletethrough-composite-pk"
-status: draft
-updated: 2026-06-19
+status: ready
+updated: 2026-07-06
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
