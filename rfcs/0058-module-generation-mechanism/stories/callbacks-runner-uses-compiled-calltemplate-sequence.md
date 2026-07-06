@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 9
-pr: 4696
+pr: 4702
 claim: "2026-07-06T19:38:55Z"
 assignee: "callbacks-runner-uses-compiled-calltemplate-sequence"
 blocked-by: null
