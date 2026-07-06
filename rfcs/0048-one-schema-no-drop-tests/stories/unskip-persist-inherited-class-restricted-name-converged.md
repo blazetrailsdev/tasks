@@ -1,6 +1,6 @@
 ---
 title: "Un-skip converged persist-inherited-class restricted-name test"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0048-one-schema-no-drop-tests"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 10
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T13:52:59Z"
+assignee: "unskip-persist-inherited-class-restricted-name-converged"
 blocked-by: null
 closed-reason: null
 ---
