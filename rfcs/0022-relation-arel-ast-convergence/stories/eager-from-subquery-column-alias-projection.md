@@ -1,6 +1,6 @@
 ---
 title: "Eager from() subquery emits plain star select, not Rails column-alias projection"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0022-relation-arel-ast-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4658
 claim: "2026-07-06T03:26:25Z"
 assignee: "eager-from-subquery-column-alias-projection"
 blocked-by: null
