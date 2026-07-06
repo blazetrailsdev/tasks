@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#create/createBang must raise RecordNotSaved on a new-record owner (match _create_record)"
-status: claimed
+status: in-progress
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4652
 claim: "2026-07-06T01:01:57Z"
 assignee: "collection-create-requires-persisted-owner-guard"
 blocked-by: null
