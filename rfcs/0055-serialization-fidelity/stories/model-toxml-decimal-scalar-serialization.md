@@ -1,7 +1,7 @@
 ---
 title: 'Model#toXml serializes decimal as scalar type="decimal", not nested Decimal object'
-status: draft
-updated: 2026-07-04
+status: ready
+updated: 2026-07-06
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
