@@ -1,13 +1,13 @@
 ---
 title: "transaction-callbacks.test.ts: port SetCallback/DestroyUpdateRace/ActionCondition bodies word-for-word from Rails"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-06
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null
