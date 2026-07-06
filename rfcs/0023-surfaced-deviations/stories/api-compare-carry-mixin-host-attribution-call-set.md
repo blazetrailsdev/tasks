@@ -1,6 +1,6 @@
 ---
 title: "api-compare: include()/extend()-mixed methods get empty-body host-file candidates, flag phantom missing calls"
-status: ready
+status: claimed
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-06T14:52:59Z"
+assignee: "api-compare-carry-mixin-host-attribution-call-set"
 blocked-by: null
 closed-reason: null
 ---
