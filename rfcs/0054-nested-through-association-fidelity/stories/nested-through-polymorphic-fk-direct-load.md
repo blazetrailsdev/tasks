@@ -1,6 +1,6 @@
 ---
 title: "nested-through direct-load with polymorphic source generates wrong FK column"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
