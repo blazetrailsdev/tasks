@@ -1,6 +1,6 @@
 ---
 title: "changeColumnDefault extraction must require both :from and :to (abstract + PG)"
-status: in-progress
+status: done
 updated: 2026-07-06
 rfc: "0023-surfaced-deviations"
 cluster: null
