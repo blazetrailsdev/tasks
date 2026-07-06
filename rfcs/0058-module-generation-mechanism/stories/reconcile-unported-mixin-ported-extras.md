@@ -1,13 +1,13 @@
 ---
 title: "Reconcile 4 surfaced moved-extras whose ported methods have unported source files"
 status: ready
-updated: 2026-06-23
+updated: 2026-07-06
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null
