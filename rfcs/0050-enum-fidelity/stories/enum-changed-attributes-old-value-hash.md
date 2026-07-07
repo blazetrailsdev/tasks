@@ -1,7 +1,7 @@
 ---
 title: "enum changed_attributes exposes name->old-value map"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 41
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T04:01:32Z"
+assignee: "enum-changed-attributes-old-value-hash"
 blocked-by: null
 closed-reason: null
 ---
