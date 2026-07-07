@@ -1,14 +1,14 @@
 ---
 title: "through-scope-join-route-composite-and-residual-shapes"
 status: ready
-updated: 2026-06-26
+updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
   - converge-integration-namedscoping-remainder
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 53
 pr: null
 claim: null
 assignee: null
