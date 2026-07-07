@@ -1,6 +1,6 @@
 ---
 title: "isForeignKeysEnabled reads adapter._config, not nonexistent .config"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: 62
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T19:37:53Z"
+assignee: "foreign-keys-enabled-reads-adapter-config"
 blocked-by: null
 closed-reason: null
 ---
