@@ -1,7 +1,7 @@
 ---
 title: "Gate index sub-part length to MySQL in abstract SchemaCreation"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 42
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T12:11:33Z"
+assignee: "abstract-schemacreation-subpart-length-mysql-only"
 blocked-by: null
 ---
 
