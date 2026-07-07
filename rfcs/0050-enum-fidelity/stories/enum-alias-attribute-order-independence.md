@@ -1,6 +1,6 @@
 ---
 title: "enum/alias_attribute resolution must be order-independent (dynamic, not eager)"
-status: in-progress
+status: closed
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: 28
 pr: 4715
-claim: "2026-07-07T01:13:36Z"
-assignee: "enum-alias-attribute-order-independence"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Mis-specified: acceptance asked trails to silently support enum-before-alias, but vendored Rails RAISES on that order (Undeclared attribute type for enum). Feature merged in #4715 reverted by #4719. True convergence (make trails raise) tracked by enum-before-alias-must-raise."
 ---
 
 ## Context
