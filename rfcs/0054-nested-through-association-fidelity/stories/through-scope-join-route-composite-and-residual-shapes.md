@@ -5,7 +5,7 @@ updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
-  - converge-integration-namedscoping-remainder
+  - route-composite-through-in-subquery-shapes-via-join-scope
 deps-rfc: []
 est-loc: null
 priority: 53
