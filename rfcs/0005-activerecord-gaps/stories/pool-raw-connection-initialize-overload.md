@@ -1,7 +1,7 @@
 ---
 title: "Port deprecated raw-connection initialize overload to base adapter"
-status: blocked
-updated: 2026-05-29
+status: ready
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -11,7 +11,7 @@ priority: 13
 pr: null
 claim: null
 assignee: null
-blocked-by: "Constructor restructure across PG/MySQL2 adapters; also gates AdapterConnectionTest integration tests"
+blocked-by: null
 ---
 
 ## Context
