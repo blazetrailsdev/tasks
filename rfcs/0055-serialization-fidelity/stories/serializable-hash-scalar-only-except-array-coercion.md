@@ -1,6 +1,6 @@
 ---
 title: "serializableHash coerces scalar only/except via Array() like Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 37
-pr: null
+pr: 4724
 claim: "2026-07-07T03:19:38Z"
 assignee: "serializable-hash-scalar-only-except-array-coercion"
 blocked-by: null
