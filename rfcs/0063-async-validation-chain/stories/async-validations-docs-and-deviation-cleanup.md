@@ -2,7 +2,7 @@
 title: "Remove sync-only deviation prose; verify Rails parity"
 status: draft
 updated: 2026-07-07
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["uniqueness-inline-delete-deferred-registry"]
 deps-rfc: []
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Cleanup + verification tail of RFC 0000-async-validation-chain. The
+Cleanup + verification tail of RFC 0063-async-validation-chain. The
 sync-only architecture left tracked-deviation prose and guard comments
 across the tree that become stale once the flip lands:
 

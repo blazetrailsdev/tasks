@@ -1,5 +1,5 @@
 ---
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 title: "Async validation chain (isValid returns Promise)"
 status: draft
 created: 2026-07-07

@@ -2,7 +2,7 @@
 title: "Flip ActiveModel validation chain to async; drop strict-sync validate guard"
 status: draft
 updated: 2026-07-07
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["lint-guard-unawaited-isvalid"]
 deps-rfc: []
@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 First half of the sync→async validation-chain flip (RFC
-0000-async-validation-chain): make the ActiveModel chain async and drop the
+0063-async-validation-chain): make the ActiveModel chain async and drop the
 activesupport guard that bars async validate callbacks.
 
 - `packages/activemodel/src/validations.ts:121` — host interface

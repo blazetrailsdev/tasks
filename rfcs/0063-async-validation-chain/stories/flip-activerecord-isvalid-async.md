@@ -2,7 +2,7 @@
 title: "Flip AR isValid/validate async + mechanical await sweep (LOC waived)"
 status: draft
 updated: 2026-07-07
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["flip-activemodel-validation-chain-async"]
 deps-rfc: []
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Second half of the flip (RFC 0000-async-validation-chain): make
+Second half of the flip (RFC 0063-async-validation-chain): make
 ActiveRecord's `isValid`/`validate` async and sweep awaits through the AR
 call sites and tests.
 

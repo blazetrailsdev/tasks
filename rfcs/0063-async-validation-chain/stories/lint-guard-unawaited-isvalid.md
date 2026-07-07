@@ -2,7 +2,7 @@
 title: "Lint guard: unawaited isValid/validate is an error"
 status: draft
 updated: 2026-07-07
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 cluster: null
 deps: []
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "Run uniqueness inline in valid?; delete _asyncValidations registry"
 status: draft
 updated: 2026-07-07
-rfc: "0000-async-validation-chain"
+rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["flip-activerecord-isvalid-async"]
 deps-rfc: []
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-With the chain async (RFC 0000-async-validation-chain), uniqueness no
+With the chain async (RFC 0063-async-validation-chain), uniqueness no
 longer needs the deferred registry. Converge `validatesUniqueness` to a
 normal validator running inside `valid?`, mirroring Rails
 `vendor/rails/activerecord/lib/active_record/validations/uniqueness.rb`.
