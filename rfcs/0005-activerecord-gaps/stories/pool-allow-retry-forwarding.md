@@ -1,6 +1,6 @@
 ---
 title: "Forward allowRetry through concrete execQuery overrides"
-status: ready
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 11
-pr: null
+pr: 4577
 claim: null
 assignee: null
 blocked-by: null
