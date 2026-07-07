@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 23
+priority: 15
 pr: 4710
 claim: "2026-07-06T23:53:54Z"
 assignee: "model-toxml-nested-include-type-attr"
