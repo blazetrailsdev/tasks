@@ -1,6 +1,6 @@
 ---
 title: "txn-fixtures-abort-recovery"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: rails-deviation
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 39
-pr: null
+pr: 4727
 claim: "2026-07-07T03:47:35Z"
 assignee: "txn-fixtures-abort-recovery"
 blocked-by: null
