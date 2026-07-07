@@ -1,6 +1,6 @@
 ---
 title: "Reflect precision/scale for SQLite decimal(p,s)/numeric(p,s) columns"
-status: claimed
+status: done
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 54
-pr: null
+pr: 4681
 claim: "2026-07-07T14:37:51Z"
 assignee: "sqlite-decimal-precision-scale-reflection"
 blocked-by: null
