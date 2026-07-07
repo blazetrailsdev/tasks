@@ -1,6 +1,6 @@
 ---
 title: "enum macro default:/scopes:/instance_methods: options"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 46
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T16:01:48Z"
+assignee: "enum-macro-default-scopes-instance-methods-options"
 blocked-by: null
 closed-reason: null
 ---
