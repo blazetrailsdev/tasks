@@ -1,13 +1,13 @@
 ---
 title: "Port base.test 'column types typecast' to Rails instantiate-with-types shape"
 status: ready
-updated: 2026-07-02
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 71
 pr: null
 claim: null
 assignee: null
