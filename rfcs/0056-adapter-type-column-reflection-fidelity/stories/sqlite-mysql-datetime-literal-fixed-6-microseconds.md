@@ -1,6 +1,6 @@
 ---
 title: "SQLite/MySQL datetime SQL literals use Rails fixed-6 microsecond form (quoted_date parity)"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T19:13:48Z"
+assignee: "sqlite-mysql-datetime-literal-fixed-6-microseconds"
 blocked-by: null
 ---
 
