@@ -1,6 +1,6 @@
 ---
 title: "enum *_before_type_cast / *_for_database accessors"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
