@@ -1,6 +1,6 @@
 ---
 title: "Declare real columns on MySQL/MariaDB adapter-suite bespoke test models"
-status: claimed
+status: done
 updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 27
-pr: null
+pr: 4714
 claim: "2026-07-07T00:59:32Z"
 assignee: "declare-mysql-adapter-suite-model-columns"
 blocked-by: null
