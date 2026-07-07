@@ -1,6 +1,6 @@
 ---
 title: "through-scope-join-route-composite-and-residual-shapes"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
