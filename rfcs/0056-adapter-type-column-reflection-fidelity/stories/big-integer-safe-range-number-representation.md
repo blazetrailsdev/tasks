@@ -1,6 +1,6 @@
 ---
 title: "big-integer-safe-range-number-representation"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 24
-pr: null
+pr: 4711
 claim: "2026-07-07T00:08:52Z"
 assignee: "big-integer-safe-range-number-representation"
 blocked-by: null
