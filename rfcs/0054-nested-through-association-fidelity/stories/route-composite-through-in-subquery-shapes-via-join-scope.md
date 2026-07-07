@@ -1,6 +1,6 @@
 ---
 title: "Route remaining composite has_many :through shapes through the JOIN scope instead of throwing"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 43
-pr: null
+pr: 4744
 claim: "2026-07-07T15:49:50Z"
 assignee: "route-composite-through-in-subquery-shapes-via-join-scope"
 blocked-by: null
