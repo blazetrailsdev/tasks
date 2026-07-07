@@ -1,13 +1,13 @@
 ---
 title: "virtual-type-no-fallback-converge"
 status: done
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 16
+priority: 7
 pr: 4703
 claim: "2026-07-06T21:08:53Z"
 assignee: "virtual-type-no-fallback-converge"
