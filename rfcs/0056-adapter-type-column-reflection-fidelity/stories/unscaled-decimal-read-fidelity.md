@@ -1,13 +1,13 @@
 ---
 title: "unscaled-decimal-read-fidelity"
 status: ready
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 66
+priority: 68
 pr: null
 claim: null
 assignee: null
