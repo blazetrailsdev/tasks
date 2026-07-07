@@ -1,7 +1,7 @@
 ---
 title: "update_columns/update_column return true (Rails) not void"
-status: ready
-updated: 2026-06-26
+status: done
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4586
 claim: null
 assignee: null
 blocked-by: null
