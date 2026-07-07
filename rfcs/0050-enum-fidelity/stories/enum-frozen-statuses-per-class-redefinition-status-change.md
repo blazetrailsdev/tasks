@@ -1,6 +1,6 @@
 ---
 title: "frozen statuses, per-class enum redefinition, status_change"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
