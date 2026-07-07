@@ -1,7 +1,7 @@
 ---
 title: "transaction-callbacks.test.ts: port SetCallback/DestroyUpdateRace/ActionCondition bodies word-for-word from Rails"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 32
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T02:09:35Z"
+assignee: "transaction-callbacks-body-fidelity-port"
 blocked-by: null
 ---
 
