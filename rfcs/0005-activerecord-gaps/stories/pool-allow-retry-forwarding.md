@@ -1,7 +1,7 @@
 ---
 title: "Forward allowRetry through concrete execQuery overrides"
-status: blocked
-updated: 2026-05-29
+status: ready
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -11,7 +11,7 @@ priority: 11
 pr: null
 claim: null
 assignee: null
-blocked-by: "Pool track wiring execute → withRawConnection must thread allowRetry first"
+blocked-by: null
 ---
 
 ## Context
