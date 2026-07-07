@@ -1,6 +1,6 @@
 ---
 title: "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: associations
