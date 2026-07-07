@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 44
+priority: 45
 pr: 4732
 claim: "2026-07-07T12:37:51Z"
 assignee: "savepoint-internalexecute-materialize-transactions-parent-dirty"
