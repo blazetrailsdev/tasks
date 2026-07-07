@@ -1,6 +1,6 @@
 ---
 title: "Converge read_attribute_for_serialization to pure send (drop store/attributes fallbacks)"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: null
+pr: 4717
 claim: "2026-07-07T01:41:37Z"
 assignee: "read-attribute-for-serialization-pure-send"
 blocked-by: null
