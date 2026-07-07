@@ -1,6 +1,6 @@
 ---
 title: "Re-establish eager schema cache warm after resetColumnInformation (sync cold-after-reset gap)"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 39
-pr: null
+pr: 4743
 claim: "2026-07-07T15:37:50Z"
 assignee: "reestablish-schema-warm-after-reset-column-information"
 blocked-by: null
