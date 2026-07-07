@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 42
+priority: 36
 pr: 4728
 claim: "2026-07-07T12:11:33Z"
 assignee: "abstract-schemacreation-subpart-length-mysql-only"
