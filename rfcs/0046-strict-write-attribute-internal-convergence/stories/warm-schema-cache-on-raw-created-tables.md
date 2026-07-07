@@ -1,6 +1,6 @@
 ---
 title: "Optional: warm schema cache after raw CREATE TABLE in adapter tests"
-status: claimed
+status: closed
 updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: 46
 pr: null
-claim: "2026-07-07T13:01:52Z"
-assignee: "warm-schema-cache-on-raw-created-tables"
+claim: null
+assignee: null
 blocked-by: null
+closed-reason: "Spike: systemic warm hook not viable safely; the viable primitive Model.loadSchema() is already applied by the declare-* stories (#4714 merged, #4729 in-progress). Findings recorded in story body. Deferring to the declare-* path."
 ---
 
 ## Context
