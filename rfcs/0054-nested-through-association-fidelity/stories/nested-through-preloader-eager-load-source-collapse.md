@@ -4,7 +4,8 @@ status: ready
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
-deps: []
+deps:
+  - converge-through-preload-single-query-join
 deps-rfc: []
 est-loc: 200
 priority: 30
