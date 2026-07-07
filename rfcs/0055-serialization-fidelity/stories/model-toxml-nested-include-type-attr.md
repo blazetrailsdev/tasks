@@ -1,14 +1,14 @@
 ---
 title: "model-toxml-nested-include-type-attr"
-status: claimed
-updated: 2026-07-06
+status: in-progress
+updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 23
-pr: null
+pr: 4710
 claim: "2026-07-06T23:53:54Z"
 assignee: "model-toxml-nested-include-type-attr"
 blocked-by: null
