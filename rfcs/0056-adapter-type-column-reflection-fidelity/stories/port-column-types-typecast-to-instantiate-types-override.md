@@ -1,6 +1,6 @@
 ---
 title: "Port base.test 'column types typecast' to Rails instantiate-with-types shape"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 71
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T22:40:23Z"
+assignee: "port-column-types-typecast-to-instantiate-types-override"
 blocked-by: null
 closed-reason: null
 ---
