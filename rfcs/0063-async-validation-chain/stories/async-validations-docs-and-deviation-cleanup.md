@@ -1,6 +1,6 @@
 ---
 title: "Remove sync-only deviation prose; verify Rails parity"
-status: draft
+status: ready
 updated: 2026-07-07
 rfc: "0063-async-validation-chain"
 cluster: null
