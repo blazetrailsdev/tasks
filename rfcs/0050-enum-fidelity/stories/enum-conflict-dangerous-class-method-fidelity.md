@@ -1,6 +1,6 @@
 ---
 title: "enum-conflict-dangerous-class-method-fidelity"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 47
-pr: null
+pr: 4734
 claim: "2026-07-07T13:13:52Z"
 assignee: "enum-conflict-dangerous-class-method-fidelity"
 blocked-by: null
