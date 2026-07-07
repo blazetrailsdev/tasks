@@ -1,6 +1,6 @@
 ---
 title: "Port retry loop + raw-connection ownership to PostgreSQLAdapter#reconnectBang"
-status: ready
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 12
-pr: null
+pr: 3249
 claim: null
 assignee: null
 blocked-by: null
