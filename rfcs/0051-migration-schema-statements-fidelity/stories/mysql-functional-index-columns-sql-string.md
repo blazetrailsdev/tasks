@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 21
+priority: 12
 pr: 4708
 claim: "2026-07-06T22:23:52Z"
 assignee: "mysql-functional-index-columns-sql-string"
