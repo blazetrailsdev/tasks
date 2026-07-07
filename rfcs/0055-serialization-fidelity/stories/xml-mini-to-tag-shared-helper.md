@@ -1,6 +1,6 @@
 ---
 title: "Port XmlMini.to_tag as a shared per-tag emitter (dedupe inline _hashToXml logic)"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
