@@ -1,7 +1,7 @@
 ---
 title: "save-runs-validations-inside-transaction"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T00:13:02Z"
+assignee: "save-runs-validations-inside-transaction"
 blocked-by: null
 ---
 
