@@ -1,7 +1,7 @@
 ---
 title: "Re-establish eager schema cache warm after resetColumnInformation (sync cold-after-reset gap)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
