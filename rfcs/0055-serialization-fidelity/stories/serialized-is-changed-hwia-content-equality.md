@@ -1,6 +1,6 @@
 ---
 title: "Serialized#isChanged uses reference equality for HWIA; Rails uses content equality"
-status: claimed
+status: done
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 54
-pr: null
+pr: 4746
 claim: "2026-07-07T16:13:49Z"
 assignee: "serialized-is-changed-hwia-content-equality"
 blocked-by: null
