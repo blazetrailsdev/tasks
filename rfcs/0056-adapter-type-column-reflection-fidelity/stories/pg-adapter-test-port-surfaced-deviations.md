@@ -1,7 +1,7 @@
 ---
 title: "pg-adapter-test-port-surfaced-deviations"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 38
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T03:33:35Z"
+assignee: "pg-adapter-test-port-surfaced-deviations"
 blocked-by: null
 ---
 
