@@ -37,6 +37,14 @@ See RFC 0001 §Workflow integration and §Rollout coexistence rule.
 
 ## Notes
 
+> **Deprecated / removed (2026-07-07).** The `tasks-loop` skill this story
+> wired up is gone. It was a per-session tmux-pane spawn loop, superseded by
+> the persistent `SpawnLoop` in the btwhooks server. `tooling/tasks-loop/`
+> no longer exists in this repo; the SKILL.md source is archived for history
+> in the btwebooks repo under `skills-archive/tasks-loop/`. This story is left
+> as a record of the original wiring; the paths it references below are
+> historical.
+
 `tasks-loop` is a copy of `spawn-loop`; the original is left untouched.
 Do not modify either loop's stop/restart semantics — see
 [[spawn-loop-stop-means-stop]] memory.

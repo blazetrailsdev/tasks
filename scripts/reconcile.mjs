@@ -11,7 +11,7 @@
 // every RFC: a story silently goes stale whenever its PR merges without the
 // agent flipping status. The summary footer surfaces that drift as a single
 // number — likely-done stories not yet marked `done` — so a periodic run
-// (cron, or a tasks-loop preamble) can alert on one line.
+// (cron, or a spawn-loop preamble) can alert on one line.
 //
 // Signals:
 //   1. `pr:` frontmatter set       → is that trails PR merged?
