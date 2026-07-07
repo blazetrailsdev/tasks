@@ -1,7 +1,7 @@
 ---
 title: "fix: SQLite bigint (int8) column type uses float64 range check, wrongly emits 1=0 for 2^63-1"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T13:49:53Z"
+assignee: "sqlite-bigint-int8-precision-gap"
 blocked-by: null
 ---
 
