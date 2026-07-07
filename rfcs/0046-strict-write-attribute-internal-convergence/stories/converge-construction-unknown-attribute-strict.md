@@ -1,7 +1,7 @@
 ---
 title: "Converge Model construction to raise UnknownAttributeError for unknown keys"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
 deps: []
