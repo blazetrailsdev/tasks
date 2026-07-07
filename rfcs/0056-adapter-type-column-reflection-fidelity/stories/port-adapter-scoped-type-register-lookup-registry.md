@@ -1,6 +1,6 @@
 ---
 title: "Port adapter-scoped Type.register/Type.lookup so mysql2 string resolves via lookup"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 70
-pr: null
+pr: 4759
 claim: "2026-07-07T22:21:22Z"
 assignee: "port-adapter-scoped-type-register-lookup-registry"
 blocked-by: null
