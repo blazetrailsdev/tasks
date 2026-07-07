@@ -1,7 +1,7 @@
 ---
 title: "Delegation: install generated relation methods via per-model prototype carriers (deferred mechanism convergence)"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T00:57:22Z"
+assignee: "delegation-generated-methods-per-model-prototype-carrier"
 blocked-by: null
 ---
 
