@@ -1,6 +1,6 @@
 ---
 title: "Flip AR isValid/validate async + mechanical await sweep (LOC waived)"
-status: draft
+status: ready
 updated: 2026-07-07
 rfc: "0063-async-validation-chain"
 cluster: null
