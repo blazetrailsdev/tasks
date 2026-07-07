@@ -1,6 +1,6 @@
 ---
 title: "recorder-camelcase-column-type-normalization"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 36
-pr: null
+pr: 4723
 claim: "2026-07-07T03:05:33Z"
 assignee: "recorder-camelcase-column-type-normalization"
 blocked-by: null
