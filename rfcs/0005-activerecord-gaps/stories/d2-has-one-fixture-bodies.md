@@ -1,6 +1,6 @@
 ---
 title: "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)"
-status: blocked
+status: ready
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -11,7 +11,7 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "Phase G fixture adoption (trails docs/activerecord/fixtures-adoption-plan.md) must land first"
+blocked-by: null
 ---
 
 ## Context
