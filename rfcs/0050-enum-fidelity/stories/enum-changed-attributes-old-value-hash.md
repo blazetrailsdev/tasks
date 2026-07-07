@@ -1,6 +1,6 @@
 ---
 title: "enum changed_attributes exposes name->old-value map"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
