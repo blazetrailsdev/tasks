@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 25
+priority: 17
 pr: 4713
 claim: "2026-07-07T00:13:02Z"
 assignee: "save-runs-validations-inside-transaction"
