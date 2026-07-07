@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 41
+priority: 28
 pr: 4726
 claim: "2026-07-07T04:01:32Z"
 assignee: "enum-changed-attributes-old-value-hash"
