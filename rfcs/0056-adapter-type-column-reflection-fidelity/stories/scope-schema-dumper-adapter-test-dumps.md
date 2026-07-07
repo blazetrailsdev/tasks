@@ -1,6 +1,6 @@
 ---
 title: "Scope SchemaDumperAdapterTest dumps to own tables (drop 60s timeout band-aid)"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 72
-pr: null
+pr: 4761
 claim: "2026-07-07T22:59:23Z"
 assignee: "scope-schema-dumper-adapter-test-dumps"
 blocked-by: null
