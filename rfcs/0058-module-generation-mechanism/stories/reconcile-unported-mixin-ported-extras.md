@@ -1,7 +1,7 @@
 ---
 title: "Reconcile 4 surfaced moved-extras whose ported methods have unported source files"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 33
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T02:23:32Z"
+assignee: "reconcile-unported-mixin-ported-extras"
 blocked-by: null
 ---
 
