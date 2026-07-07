@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 53
+priority: 49
 pr: 4738
 claim: "2026-07-07T14:25:51Z"
 assignee: "serialized-cast-mutable-serialize-first"
