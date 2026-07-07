@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 29
+priority: 21
 pr: 4716
 claim: "2026-07-07T01:27:36Z"
 assignee: "new-foreign-key-definition-converge-prefix-suffix-and-options"
