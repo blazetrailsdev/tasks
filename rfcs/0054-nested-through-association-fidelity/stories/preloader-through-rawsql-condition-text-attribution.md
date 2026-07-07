@@ -1,13 +1,13 @@
 ---
 title: "Through-preload raw-SQL condition relocation uses a text qualifier scan (string-literal false-positive)"
 status: in-progress
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 14
+priority: 5
 pr: 4700
 claim: "2026-07-06T20:38:57Z"
 assignee: "preloader-through-rawsql-condition-text-attribution"
