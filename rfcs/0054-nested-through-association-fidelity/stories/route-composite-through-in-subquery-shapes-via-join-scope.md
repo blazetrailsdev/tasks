@@ -1,6 +1,6 @@
 ---
 title: "Route remaining composite has_many :through shapes through the JOIN scope instead of throwing"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
