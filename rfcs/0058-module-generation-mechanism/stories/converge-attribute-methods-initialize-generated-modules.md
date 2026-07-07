@@ -1,7 +1,7 @@
 ---
 title: "Converge AttributeMethods#initializeGeneratedModules to Rails (don't delete)"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
