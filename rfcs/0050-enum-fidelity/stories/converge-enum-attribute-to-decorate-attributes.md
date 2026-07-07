@@ -1,7 +1,7 @@
 ---
 title: "converge-enum-attribute-to-decorate-attributes"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
