@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 18
+priority: 9
 pr: 4705
 claim: "2026-07-06T21:38:53Z"
 assignee: "converge-attribute-methods-initialize-generated-modules"
