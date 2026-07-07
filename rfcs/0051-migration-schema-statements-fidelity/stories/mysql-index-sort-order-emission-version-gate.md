@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 52
+priority: 47
 pr: 4575
 claim: "2026-07-07T14:13:49Z"
 assignee: "mysql-index-sort-order-emission-version-gate"
