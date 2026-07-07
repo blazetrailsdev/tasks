@@ -1,13 +1,13 @@
 ---
 title: "Resolve enum subtype lazily from reflected column type (not mapping shape)"
 status: ready
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 63
+priority: 56
 pr: null
 claim: null
 assignee: null
