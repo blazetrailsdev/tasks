@@ -475,3 +475,9 @@ state.
 ## Changelog
 
 - 2026-05-28: initial RFC (self-demonstrating template).
+- 2026-07-07: removed the `tasks-loop` skill wired up by the
+  [`wire-tasks-loop`](stories/wire-tasks-loop.md) story. It was a per-session
+  tmux-pane spawn loop, superseded by the persistent `SpawnLoop` in the
+  btwhooks server; `tooling/tasks-loop/` no longer exists and its SKILL.md is
+  archived in the btwebooks repo under `skills-archive/tasks-loop/`. The story
+  and the Rollout narrative above are left intact as historical record.
