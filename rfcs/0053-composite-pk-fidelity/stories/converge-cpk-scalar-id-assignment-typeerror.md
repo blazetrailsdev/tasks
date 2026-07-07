@@ -41,7 +41,7 @@ this leniency in scope-note form rather than converging it.
 
 - [ ] `setId` raises `TypeError` for a non-array value on a composite PK, matching
       `CompositePrimaryKey#id=` (message parity: `Expected value matching
-  [shop_id, id], got 5.`).
+[shop_id, id], got 5.`).
 - [ ] Migrate every scalar-`id` cpk construction/create call site in the test
       suite to the Rails array form (`id: [a, b]`) — or split into the individual
       key columns where that is what the test means.
