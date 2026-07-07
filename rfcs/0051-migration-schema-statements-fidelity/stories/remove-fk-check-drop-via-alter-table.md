@@ -1,6 +1,6 @@
 ---
 title: "Route removeForeignKey/removeCheckConstraint DROP through createAlterTable for adapter-specific syntax"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 57
-pr: null
+pr: 4749
 claim: "2026-07-07T18:37:49Z"
 assignee: "remove-fk-check-drop-via-alter-table"
 blocked-by: null
