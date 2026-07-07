@@ -1,6 +1,6 @@
 ---
 title: "persistence-tablename-setter-schema-reset"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 69
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T22:02:22Z"
+assignee: "persistence-tablename-setter-schema-reset"
 blocked-by: null
 ---
 
