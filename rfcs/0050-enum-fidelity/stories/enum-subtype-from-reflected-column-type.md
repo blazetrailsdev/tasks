@@ -1,6 +1,6 @@
 ---
 title: "Resolve enum subtype lazily from reflected column type (not mapping shape)"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
