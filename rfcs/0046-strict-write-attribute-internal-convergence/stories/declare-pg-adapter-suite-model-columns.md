@@ -1,6 +1,6 @@
 ---
 title: "Declare real columns on PG adapter-suite bespoke test models"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 34
-pr: null
+pr: 4729
 claim: "2026-07-07T02:37:33Z"
 assignee: "declare-pg-adapter-suite-model-columns"
 blocked-by: null
