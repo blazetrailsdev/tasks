@@ -1,6 +1,6 @@
 ---
 title: "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: associations
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 8
-pr: null
+pr: 4750
 claim: "2026-07-07T18:25:49Z"
 assignee: "d2-has-one-fixture-bodies"
 blocked-by: null
