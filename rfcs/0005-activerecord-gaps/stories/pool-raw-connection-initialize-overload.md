@@ -1,6 +1,6 @@
 ---
 title: "Port deprecated raw-connection initialize overload to base adapter"
-status: ready
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 13
-pr: null
+pr: 2700
 claim: null
 assignee: null
 blocked-by: null
