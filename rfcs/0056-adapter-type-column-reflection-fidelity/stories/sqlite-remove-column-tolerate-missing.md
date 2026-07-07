@@ -1,6 +1,6 @@
 ---
 title: "sqlite-remove-column-tolerate-missing"
-status: claimed
+status: done
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 64
-pr: null
+pr: 4535
 claim: "2026-07-07T20:27:25Z"
 assignee: "sqlite-remove-column-tolerate-missing"
 blocked-by: null
