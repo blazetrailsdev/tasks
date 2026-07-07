@@ -1,6 +1,6 @@
 ---
 title: "Remove unused typeForColumn helper in model-schema.ts"
-status: ready
+status: draft
 updated: 2026-07-07
 rfc: "0023-surfaced-deviations"
 cluster: null
