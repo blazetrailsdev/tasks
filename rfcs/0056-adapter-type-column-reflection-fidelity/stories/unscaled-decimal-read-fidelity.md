@@ -1,6 +1,6 @@
 ---
 title: "unscaled-decimal-read-fidelity"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 68
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T21:43:22Z"
+assignee: "unscaled-decimal-read-fidelity"
 blocked-by: null
 ---
 
