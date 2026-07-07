@@ -1,6 +1,6 @@
 ---
 title: "new-foreign-key-definition-converge-prefix-suffix-and-options"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 29
-pr: null
+pr: 4716
 claim: "2026-07-07T01:27:36Z"
 assignee: "new-foreign-key-definition-converge-prefix-suffix-and-options"
 blocked-by: null
