@@ -66,4 +66,4 @@
 | [0060-reduce-test-drop-churn](rfcs/0060-reduce-test-drop-churn/README.md) | Reduce AR test DROP-TABLE churn on the boot-laid canonical schema | closed | @deanmarano | activerecord |
 | [0061-ci-failures](rfcs/0061-ci-failures/README.md) | CI Failures | draft | @your-handle | — |
 | [0062-transactional-fixtures-burndown](rfcs/0062-transactional-fixtures-burndown/README.md) | Transactional-fixtures burndown: fixtures({}) everywhere | closed | @deanmarano | activerecord |
-| [0063-async-validation-chain](rfcs/0063-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | draft | @deanmarano | activemodel, activerecord, activesupport |
+| [0063-async-validation-chain](rfcs/0063-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | active | @deanmarano | activemodel, activerecord, activesupport |
