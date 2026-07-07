@@ -1,6 +1,6 @@
 ---
 title: "Port XmlMini.to_tag as a shared per-tag emitter (dedupe inline _hashToXml logic)"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: 59
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T19:01:50Z"
+assignee: "xml-mini-to-tag-shared-helper"
 blocked-by: null
 closed-reason: null
 ---
