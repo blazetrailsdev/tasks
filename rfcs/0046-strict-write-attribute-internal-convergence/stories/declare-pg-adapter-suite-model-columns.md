@@ -1,6 +1,6 @@
 ---
 title: "Declare real columns on PG adapter-suite bespoke test models"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
