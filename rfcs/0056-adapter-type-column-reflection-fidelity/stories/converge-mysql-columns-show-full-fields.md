@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 31
+priority: 24
 pr: 4718
 claim: "2026-07-07T01:55:34Z"
 assignee: "converge-mysql-columns-show-full-fields"
