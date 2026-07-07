@@ -1,7 +1,7 @@
 ---
 title: "Optional: warm schema cache after raw CREATE TABLE in adapter tests"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 46
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T13:01:52Z"
+assignee: "warm-schema-cache-on-raw-created-tables"
 blocked-by: null
 ---
 
