@@ -1,6 +1,6 @@
 ---
 title: "Gate index sub-part length to MySQL in abstract SchemaCreation"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
