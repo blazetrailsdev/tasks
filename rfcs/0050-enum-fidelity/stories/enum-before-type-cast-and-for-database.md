@@ -1,6 +1,6 @@
 ---
 title: "enum *_before_type_cast / *_for_database accessors"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 35
-pr: null
+pr: 4722
 claim: "2026-07-07T02:51:32Z"
 assignee: "enum-before-type-cast-and-for-database"
 blocked-by: null
