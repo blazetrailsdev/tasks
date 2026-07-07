@@ -1,6 +1,6 @@
 ---
 title: "serialized nil assignment marks attribute changed before cast (Rails: not dirty)"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 49
-pr: null
+pr: 4736
 claim: "2026-07-07T13:37:52Z"
 assignee: "serialize-nil-assignment-marks-changed-before-cast"
 blocked-by: null
