@@ -1,6 +1,6 @@
 ---
 title: "has_one-through preloader: resolve multi-level nested joined tables for through-query predicate carry"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 58
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T18:49:50Z"
+assignee: "hasone-through-preloader-resolve-multilevel-nested-tables"
 blocked-by: null
 closed-reason: null
 ---
