@@ -1,6 +1,6 @@
 ---
 title: "savepoint-internalexecute-materialize-transactions-parent-dirty"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 44
-pr: null
+pr: 4732
 claim: "2026-07-07T12:37:51Z"
 assignee: "savepoint-internalexecute-materialize-transactions-parent-dirty"
 blocked-by: null
