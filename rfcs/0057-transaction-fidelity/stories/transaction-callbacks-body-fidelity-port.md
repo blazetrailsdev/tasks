@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 32
+priority: 25
 pr: 4720
 claim: "2026-07-07T02:09:35Z"
 assignee: "transaction-callbacks-body-fidelity-port"
