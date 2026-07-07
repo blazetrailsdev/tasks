@@ -1,7 +1,7 @@
 ---
 title: "Serialize where-predicate value through coder for serialized columns"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 43
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T12:25:33Z"
+assignee: "serialize-column-where-predicate-coder-dump"
 blocked-by: null
 ---
 
