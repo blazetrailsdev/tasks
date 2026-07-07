@@ -1,7 +1,7 @@
 ---
 title: "enum-subtype-derived-from-column-type"
-status: ready
-updated: 2026-07-06
+status: closed
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of enum-subtype-from-reflected-column-type: both stories mandate resolving EnumType's subtype from the reflected column attribute type (Rails enum.rb decorate_attributes) instead of inferSubtype(mapping-shape); the surviving story additionally covers collapsing the duplicate enumTypeFor resolution path, subsuming this one."
 ---
 
 ## Context
