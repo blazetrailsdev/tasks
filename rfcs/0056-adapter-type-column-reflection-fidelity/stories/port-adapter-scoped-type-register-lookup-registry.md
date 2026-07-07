@@ -1,13 +1,13 @@
 ---
 title: "Port adapter-scoped Type.register/Type.lookup so mysql2 string resolves via lookup"
 status: ready
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 130
-priority: null
+priority: 70
 pr: null
 claim: null
 assignee: null
