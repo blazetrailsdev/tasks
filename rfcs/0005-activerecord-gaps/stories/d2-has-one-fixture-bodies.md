@@ -1,7 +1,7 @@
 ---
 title: "D2 — fill has_one test fixture bodies (~24 fixture-gated tests)"
 status: blocked
-updated: 2026-05-29
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: associations
 deps: []
@@ -16,16 +16,41 @@ blocked-by: "Phase G fixture adoption (trails docs/activerecord/fixtures-adoptio
 
 ## Context
 
-~24 skipped has_one tests need their bodies written against fixtures that only
-become available once Phase G fixture adoption lands.
+(Re-groomed 2026-07-07.) The original blocker — "Phase G fixture adoption" from
+the frozen docs/activerecord plan — is long satisfied:
+`packages/activerecord/src/associations/has-one-associations.test.ts` is fully
+canonical (RFC 0019 conversion), loading `companies`/`accounts` via
+`fixtures([...])` and the real Rails `Company`/`Firm`/`DependentFirm`/`Account`
+models. Unblocked.
+
+What remains is 38 `it.skip` empty-body tests mirroring
+`vendor/rails/activerecord/test/cases/associations/has_one_associations_test.rb`
+names (grep `it.skip` in the file). They cluster roughly into:
+
+- touch-option family (~9: "has one with touch option on create/update/touch/
+  destroy/empty update/nonpersisted built", polymorphic touch variants) —
+  needs `touch:` on has_one.
+- build/create `with block` + "association attributes are available to
+  after initialize" (~4).
+- replacement/creation-failure semantics (~5: "creation failure replaces
+  existing …", "replacement failure due to …").
+- polymorphic/cpk shapes (~5: "nullify on polymorphic association",
+  "nullification on cpk association", "with polymorphic has one with custom
+  columns name", "composite primary key malformed association (owner) class").
+- misc singles (marshal-nil-target, locale restrict error, query-cache reload,
+  interpolated condition, readonly save, private-method proxy respond_to,
+  enum-through-association, scope leakage on build/create, etc.).
+
+Write each body faithfully against the Rails test of the same name using the
+canonical fixtures/models; if a body needs a model or column the canonical
+schema lacks, check vendor schema.rb/models first (do not invent). Split into
+2-3 PRs by cluster if the total exceeds the 500-LOC ceiling — register
+follow-up stories rather than fanning out.
 
 ## Acceptance criteria
 
-- [ ] Test bodies written for the ~24 skipped has_one tests
-- [ ] Tests pass against the Phase G fixtures (verbatim Rails names)
-
-## Notes
-
-From the associations gap plan (D2). External blocker: Phase G fixture adoption
-(tracked in the trails fixtures-adoption-plan, not migrated as an RFC). Unblock
-when that lands.
+- [ ] The skipped has_one tests get real bodies (verbatim Rails names, no
+      renames); any that are blocked on a genuinely missing feature keep the
+      skip but gain an inline tracked-pending-convergence note naming the
+      story that covers the feature.
+- [ ] `test:compare` delta non-negative for has_one_associations_test.rb.
