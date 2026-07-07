@@ -1,6 +1,6 @@
 ---
 title: "Verify node:sqlite restoreFromPath on a Node 22.5+ CI lane"
-status: ready
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 40
-pr: null
+pr: 2905
 claim: null
 assignee: null
 blocked-by: null
