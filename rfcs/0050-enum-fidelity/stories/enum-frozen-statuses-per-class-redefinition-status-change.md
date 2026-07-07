@@ -1,7 +1,7 @@
 ---
 title: "frozen statuses, per-class enum redefinition, status_change"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 51
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T14:01:51Z"
+assignee: "enum-frozen-statuses-per-class-redefinition-status-change"
 blocked-by: null
 closed-reason: null
 ---
