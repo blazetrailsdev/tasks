@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-async-validation-chain](rfcs/0000-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | draft | @deanmarano | activemodel, activerecord, activesupport |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
