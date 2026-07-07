@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 fetchTypeMetadata parses sql_type by hand instead of sourcing from cast_type"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 73
-pr: null
+pr: 4762
 claim: "2026-07-07T23:18:24Z"
 assignee: "sqlite-fetchtypemetadata-bespoke-parse-vs-rails-casttype"
 blocked-by: null
