@@ -1,6 +1,6 @@
 ---
 title: "Route removeForeignKey/removeCheckConstraint DROP through createAlterTable for adapter-specific syntax"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
