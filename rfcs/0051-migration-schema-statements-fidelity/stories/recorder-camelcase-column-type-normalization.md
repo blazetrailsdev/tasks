@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 36
+priority: 29
 pr: 4723
 claim: "2026-07-07T03:05:33Z"
 assignee: "recorder-camelcase-column-type-normalization"
