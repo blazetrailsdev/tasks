@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 15
+priority: 6
 pr: 4701
 claim: "2026-07-06T20:53:57Z"
 assignee: "model-toxml-decimal-scalar-serialization"
