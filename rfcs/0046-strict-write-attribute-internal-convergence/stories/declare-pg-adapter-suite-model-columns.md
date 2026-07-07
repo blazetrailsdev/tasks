@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 34
+priority: 19
 pr: 4729
 claim: "2026-07-07T02:37:33Z"
 assignee: "declare-pg-adapter-suite-model-columns"
