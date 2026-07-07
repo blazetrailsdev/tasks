@@ -1,6 +1,6 @@
 ---
 title: "enum-before-alias-must-raise"
-status: ready
+status: draft
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
