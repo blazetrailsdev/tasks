@@ -1,7 +1,7 @@
 ---
 title: "enum/alias_attribute resolution must be order-independent (dynamic, not eager)"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 28
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T01:13:36Z"
+assignee: "enum-alias-attribute-order-independence"
 blocked-by: null
 closed-reason: null
 ---
