@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 43
+priority: 38
 pr: 4731
 claim: "2026-07-07T12:25:33Z"
 assignee: "serialize-column-where-predicate-coder-dump"
