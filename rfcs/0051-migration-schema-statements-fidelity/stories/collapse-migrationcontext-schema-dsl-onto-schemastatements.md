@@ -1,13 +1,13 @@
 ---
 title: "Collapse MigrationContext bespoke schema-DSL onto SchemaStatements (single source of truth, Rails-faithful)"
 status: done
-updated: 2026-07-06
+updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 450
-priority: 12
+priority: 3
 pr: 4699
 claim: "2026-07-06T20:23:55Z"
 assignee: "collapse-migrationcontext-schema-dsl-onto-schemastatements"
