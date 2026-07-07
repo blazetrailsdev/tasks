@@ -1,7 +1,7 @@
 ---
 title: "Version-gate MySQL index sort-order DDL emission (Rails super)"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 52
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T14:13:49Z"
+assignee: "mysql-index-sort-order-emission-version-gate"
 blocked-by: null
 ---
 
