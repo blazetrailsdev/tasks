@@ -1,7 +1,7 @@
 ---
 title: "Unprepared SELECT materializes the lazy transaction on PG/MySQL"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 45
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T12:49:50Z"
+assignee: "unprepared-statement-materializes-lazy-transaction-pg-mysql"
 blocked-by: null
 ---
 
