@@ -1,14 +1,14 @@
 ---
 title: "update_column clears all dirty state instead of only written-attribute dirty"
-status: ready
-updated: 2026-06-28
+status: done
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4586
 claim: null
 assignee: null
 blocked-by: null
