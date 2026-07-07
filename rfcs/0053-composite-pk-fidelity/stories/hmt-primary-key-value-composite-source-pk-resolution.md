@@ -1,6 +1,6 @@
 ---
 title: "HasManyThroughAssociation#primaryKeyValue resolves composite source association_primary_key"
-status: ready
+status: claimed
 updated: 2026-07-07
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T14:49:51Z"
+assignee: "hmt-primary-key-value-composite-source-pk-resolution"
 blocked-by: null
 closed-reason: null
 ---
