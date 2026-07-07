@@ -1,6 +1,6 @@
 ---
 title: "Seed _default_attributes from reflected type_for_column (drop enumReflectedSubtype stash)"
-status: ready
+status: draft
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
