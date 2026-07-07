@@ -1,7 +1,7 @@
 ---
 title: "Converge MySQL columns() onto SHOW FULL FIELDS, retiring information_schema path"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T01:55:34Z"
+assignee: "converge-mysql-columns-show-full-fields"
 blocked-by: null
 closed-reason: null
 ---
