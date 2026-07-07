@@ -1,6 +1,6 @@
 ---
 title: "txn-fixtures-abort-recovery"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: rails-deviation
