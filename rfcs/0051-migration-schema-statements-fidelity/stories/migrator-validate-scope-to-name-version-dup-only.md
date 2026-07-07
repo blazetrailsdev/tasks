@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 48
+priority: 42
 pr: 4735
 claim: "2026-07-07T13:25:50Z"
 assignee: "migrator-validate-scope-to-name-version-dup-only"
