@@ -1,13 +1,13 @@
 ---
 title: "merge() does not propagate preload/includes across model boundary"
 status: ready
-updated: 2026-06-27
+updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 37
 pr: null
 claim: null
 assignee: null
