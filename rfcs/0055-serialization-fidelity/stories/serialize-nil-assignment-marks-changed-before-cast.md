@@ -1,6 +1,6 @@
 ---
 title: "serialized nil assignment marks attribute changed before cast (Rails: not dirty)"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
