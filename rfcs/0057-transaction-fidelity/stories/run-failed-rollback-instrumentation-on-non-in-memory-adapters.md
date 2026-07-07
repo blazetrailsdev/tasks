@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 17
+priority: 8
 pr: 4704
 claim: "2026-07-06T21:23:57Z"
 assignee: "run-failed-rollback-instrumentation-on-non-in-memory-adapters"
