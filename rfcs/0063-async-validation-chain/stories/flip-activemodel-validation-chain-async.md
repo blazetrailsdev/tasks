@@ -1,6 +1,6 @@
 ---
 title: "Flip ActiveModel validation chain to async; drop strict-sync validate guard"
-status: draft
+status: ready
 updated: 2026-07-07
 rfc: "0063-async-validation-chain"
 cluster: null
