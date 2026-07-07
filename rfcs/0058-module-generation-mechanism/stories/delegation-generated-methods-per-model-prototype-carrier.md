@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: 26
+priority: 18
 pr: null
 claim: "2026-07-07T00:57:22Z"
 assignee: "delegation-generated-methods-per-model-prototype-carrier"
