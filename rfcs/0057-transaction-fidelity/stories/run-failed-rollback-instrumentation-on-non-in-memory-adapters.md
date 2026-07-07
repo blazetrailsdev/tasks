@@ -1,7 +1,7 @@
 ---
 title: "Run failed-rollback transaction-instrumentation tests on PG/MySQL lanes"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
