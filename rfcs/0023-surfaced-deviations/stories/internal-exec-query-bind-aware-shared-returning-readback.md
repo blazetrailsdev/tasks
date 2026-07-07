@@ -1,7 +1,7 @@
 ---
 title: "Make internalExecQuery bind-aware and collapse per-adapter RETURNING read-back"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
