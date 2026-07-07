@@ -43,6 +43,19 @@ converging: the two tests it keeps green
 (`associations.test.ts:1596`, `:1659`/`:1677`) assert a trails limitation, not
 Rails behavior. See the "always converge, never ratify" principle.
 
+Update (PR #4744, `route-composite-through-in-subquery-shapes-via-join-scope`):
+the composite gate has now been removed from `_buildThroughScope`'s _scope()_
+path — every composite shape `_routeThroughViaAssociationScope` accepts routes
+through `buildThroughJoinScope`, and the composite `ConfigurationError`s there
+remain only as backstops for router-declined shapes. Two composite guards were
+NOT touched and still need converging here: (1) the sibling **`find`-by-ids
+through path** (`collection-proxy.ts:~2283`/`~2310`) still throws
+`ConfigurationError` for a composite-PK target with no scalar source primaryKey
+instead of routing through the JOIN scope like `_buildThroughScope` now does;
+(2) the router-declined residual shapes (nested-through, polymorphic-has_many,
+polymorphic-belongsTo without `sourceType`) still fall to the IN-subquery
+fallback. Removing guard (1) is a small, self-contained follow-up.
+
 ## Acceptance criteria
 
 - `AssociationScope` / `buildThroughJoinScope` handle composite-PK
