@@ -1,6 +1,6 @@
 ---
 title: "through-scope-join-route-composite-and-residual-shapes"
-status: claimed
+status: in-progress
 updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 53
-pr: null
+pr: 4747
 claim: "2026-07-07T18:06:33Z"
 assignee: "through-scope-join-route-composite-and-residual-shapes"
 blocked-by: null
