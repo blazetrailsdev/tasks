@@ -1,7 +1,7 @@
 ---
 title: "through-singular-association-statement-cache"
-status: in-progress
-updated: 2026-07-06
+status: done
+updated: 2026-07-07
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
