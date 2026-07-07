@@ -1,6 +1,6 @@
 ---
 title: "HasManyThroughAssociation#primaryKeyValue resolves composite source association_primary_key"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0053-composite-pk-fidelity"
 cluster: null
