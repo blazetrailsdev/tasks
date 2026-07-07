@@ -1,13 +1,13 @@
 ---
 title: "where(['sql = ?', bind]) all-string array misrouted to composite-key form"
 status: ready
-updated: 2026-07-03
+updated: 2026-07-07
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null
