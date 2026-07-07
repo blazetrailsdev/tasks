@@ -1,7 +1,7 @@
 ---
 title: "Port retry loop + raw-connection ownership to PostgreSQLAdapter#reconnectBang"
-status: blocked
-updated: 2026-05-29
+status: ready
+updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -11,7 +11,7 @@ priority: 12
 pr: null
 claim: null
 assignee: null
-blocked-by: "Two internal design fixes: configureConnection(client) signature mismatch with base argless call; reconnect() calling resetTransaction() clobbers base lifecycle restore"
+blocked-by: null
 ---
 
 ## Context
