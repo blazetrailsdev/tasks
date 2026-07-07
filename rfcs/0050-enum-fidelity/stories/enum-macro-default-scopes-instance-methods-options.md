@@ -1,6 +1,6 @@
 ---
 title: "enum macro default:/scopes:/instance_methods: options"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0050-enum-fidelity"
 cluster: null
