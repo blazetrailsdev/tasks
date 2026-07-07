@@ -35,3 +35,43 @@ or warming only pooled adapters) that does not perturb migration/DDL tests.
 - [ ] If viable, it obsoletes the need for hand-declaring columns in the
       declare-\* stories (note the overlap; don't double-do the work).
 - [ ] If not viable safely, close with findings and defer to the declare-\* path.
+
+## Findings (2026-07-07) — not viable as a systemic hook; defer to declare-\*
+
+Investigated the third acceptance bullet. A fully-systemic "warm after raw
+`CREATE TABLE` in the harness so no hand-declaration is needed" hook is **not
+viable safely**, for three converging reasons:
+
+1. **The harness can't reach the models.** Bespoke adapter-suite models
+   (`class X extends Base { static _tableName = "unsigned_types" }`) are
+   defined _inside_ `it()` bodies, not at suite-setup time. A suite-level hook
+   in `setupAdapterSuite` / `withTransactionalFixtures` has no handle to those
+   classes to warm them.
+
+2. **Connection-cache warming no-ops for these suites.**
+   `eagerWarmSchemaCache` (`with-transactional-fixtures.ts:51`) already warms
+   the per-connection `SchemaCache` via `sc.addAll(pool)` before the first
+   test — but it requires `realPool(adapter.pool)`. The adapter suites use
+   raw, non-pooled wrapper adapters (`new Mysql2Adapter(...)` /
+   `new PostgreSQLAdapter(...)`), whose `pool === null`, so the warm is a
+   no-op there. This is the same non-pooled gap that sank the `#4027`
+   `_warmSchemaCache` default.
+
+3. **A warm connection cache still wouldn't populate the model.** Even with a
+   warm connection `SchemaCache`, a model needs `loadSchema()` /
+   `ensureSchemaLoaded()` to fold reflected columns into its own
+   `_attributeDefinitions`. `ensureSchemaLoaded` (`base.ts:1313`) _bails_ the
+   moment the model has a concrete `attribute()` — so the reflected-metadata
+   models (e.g. `UnsignedType`, whose range assertions read the reflected
+   `unsigned` flag) can't declare their PK anyway and must warm explicitly.
+
+**The viable warming primitive already exists and is already applied**:
+per-model `Model.loadSchema()`. That is exactly what the declare-\* stories
+use — `declare-mysql-adapter-suite-model-columns` (PR #4714, merged) warms
+`UnsignedType` via `UnsignedType.loadSchema()`;
+`declare-pg-adapter-suite-model-columns` (PR #4729, in-progress) declares real
+PKs and keeps `loadSchema()` on reflection-dependent models. A systemic hook
+would reduce to those same per-model calls, so it would double-do the
+declare-\* work with no reduction in surface.
+
+**Decision:** close; defer to the declare-\* path. No PR.
