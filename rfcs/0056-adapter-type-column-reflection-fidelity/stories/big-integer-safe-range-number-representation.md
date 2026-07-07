@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 24
+priority: 16
 pr: 4711
 claim: "2026-07-07T00:08:52Z"
 assignee: "big-integer-safe-range-number-representation"
