@@ -1,7 +1,7 @@
 ---
 title: "Serialized#cast should serialize-first like Rails Mutable#cast"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 53
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T14:25:51Z"
+assignee: "serialized-cast-mutable-serialize-first"
 blocked-by: null
 ---
 
