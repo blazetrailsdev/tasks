@@ -1,6 +1,6 @@
 ---
 title: "Serialize where-predicate value through coder for serialized columns"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
