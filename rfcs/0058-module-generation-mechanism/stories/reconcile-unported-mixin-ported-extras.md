@@ -1,6 +1,6 @@
 ---
 title: "Reconcile 4 surfaced moved-extras whose ported methods have unported source files"
-status: in-progress
+status: done
 updated: 2026-07-07
 rfc: "0058-module-generation-mechanism"
 cluster: null
