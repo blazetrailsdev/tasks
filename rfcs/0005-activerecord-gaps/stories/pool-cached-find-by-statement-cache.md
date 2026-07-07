@@ -1,6 +1,6 @@
 ---
 title: "Reconcile cachedFindBy with StatementCache and allowRetry"
-status: ready
+status: done
 updated: 2026-07-07
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: ["pool-allow-retry-forwarding"]
 deps-rfc: []
 est-loc: 50
 priority: 12
-pr: null
+pr: 3235
 claim: null
 assignee: null
 blocked-by: null
