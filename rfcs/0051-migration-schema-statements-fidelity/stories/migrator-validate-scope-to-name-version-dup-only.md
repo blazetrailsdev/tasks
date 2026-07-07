@@ -1,7 +1,7 @@
 ---
 title: "Move version-format/timestamp validation out of Migrator#validate to migration-load time (Rails parity)"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: 48
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-07T13:25:50Z"
+assignee: "migrator-validate-scope-to-name-version-dup-only"
 blocked-by: null
 closed-reason: null
 ---
