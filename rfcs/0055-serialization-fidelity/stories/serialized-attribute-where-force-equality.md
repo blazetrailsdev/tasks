@@ -1,13 +1,13 @@
 ---
 title: "Serialized-attribute WHERE: force_equality? must match plain object/array (un-skip 3 tests)"
 status: ready
-updated: 2026-07-05
+updated: 2026-07-07
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 66
 pr: null
 claim: null
 assignee: null
