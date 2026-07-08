@@ -1,6 +1,6 @@
 ---
 title: "collapse-migrationcontext-introspection-onto-adapter"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T03:25:23Z"
+assignee: "collapse-migrationcontext-introspection-onto-adapter"
 blocked-by: null
 closed-reason: null
 ---
