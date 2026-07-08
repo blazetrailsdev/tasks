@@ -1,6 +1,6 @@
 ---
 title: "enum detect_enum_conflict! Relation-method and :id class-method sub-branches"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T18:52:34Z"
+assignee: "enum-detect-conflict-relation-and-id-class-branches"
 blocked-by: null
 closed-reason: null
 ---
