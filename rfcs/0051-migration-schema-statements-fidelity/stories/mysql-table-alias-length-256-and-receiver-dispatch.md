@@ -1,6 +1,6 @@
 ---
 title: "mysql-table-alias-length-256-and-receiver-dispatch"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
