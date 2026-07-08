@@ -1,6 +1,6 @@
 ---
 title: "Abstract SchemaCreation quotedColumnsForIndex should delegate to the connection (dedup)"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
