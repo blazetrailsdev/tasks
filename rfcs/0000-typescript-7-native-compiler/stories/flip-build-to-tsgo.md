@@ -18,21 +18,19 @@ closed-reason: null
 ## Context
 
 Phase 3 of RFC 0000-typescript-7-native-compiler. With parity gated green
-on every package, make tsgo the authoritative batch compiler.
+on every package, make TS 7 the authoritative batch compiler. TS 7.0 GA'd
+2026-07-08, so there is no GA wait — this phase is unblocked once Phase 2
+is green.
 
-- Point `pnpm build` and `scripts/typecheck.mjs` at tsgo (`tsc` from the
-  7.0 line, or `tsgo` if still on the preview package).
-- Move the old TS 5.x `tsc --build` to the _parity_ side of the dual run
+- Point `pnpm build` and `scripts/typecheck.mjs` at the TS 7 `tsc`.
+- Move the TS 5.x `tsc --build` to the _parity_ side of the dual run
   (now the challenger, not the source of truth).
-- SHIP ONLY AFTER TS 7.0 GA is confirmed (RFC open question #1) — do not
-  flip the default on an RC.
 - Re-run `benchmark-tsc-vs-tsgo-baseline` post-flip and record the win.
 
 ## Acceptance criteria
 
-- `pnpm build` / `pnpm typecheck` run on tsgo; all typecheck jobs
+- `pnpm build` / `pnpm typecheck` run on the TS 7 `tsc`; all typecheck jobs
   (`Build & Type Check`, `guides-typecheck`, virtualized DX type tests)
   pass on every lane.
 - Post-flip wall-clock recorded; RFC speed targets met or the gap
   explained.
-- Landed only after confirmed TS 7.0 GA.

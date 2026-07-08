@@ -18,11 +18,11 @@ closed-reason: null
 ## Context
 
 Phase 4 of RFC 0000-typescript-7-native-compiler. The `typescript` 5.x
-package cannot be fully removed while Corsa's programmatic API is "not
-ready": `trails-tsc` (compiler wrapper + `./ts-plugin` LSP plugin) and
-`activerecord-cli`'s tsc-wrapper use `ts.createProgram`,
-`ts.LanguageService`, `ts.getPreEmitDiagnostics`, `ts.CompilerHost`, etc.
-at runtime.
+package cannot be fully removed while TS 7 ships no programmatic API (7.0
+has none; 7.1 is expected to introduce a new, different one): `trails-tsc`
+(compiler wrapper + `./ts-plugin` LSP plugin) and `activerecord-cli`'s
+tsc-wrapper use `ts.createProgram`, `ts.LanguageService`,
+`ts.getPreEmitDiagnostics`, `ts.CompilerHost`, etc. at runtime.
 
 - Confirm the remaining `typescript` dependency is declared only where a
   programmatic-API consumer needs it (move it off the root devDeps to the
