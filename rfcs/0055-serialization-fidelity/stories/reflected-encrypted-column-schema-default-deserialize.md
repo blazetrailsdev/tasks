@@ -1,6 +1,6 @@
 ---
 title: "Reflected encrypted column with non-null schema default fails to decrypt (default seeded via deserialize)"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
