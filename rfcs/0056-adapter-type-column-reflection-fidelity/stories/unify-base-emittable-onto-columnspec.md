@@ -1,6 +1,6 @@
 ---
 title: "Unify base SchemaDumper.emitTable onto the columnSpec/prepareColumnOptions path"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 27
-pr: null
+pr: 4777
 claim: "2026-07-07T21:24:24Z"
 assignee: "unify-base-emittable-onto-columnspec"
 blocked-by: null
