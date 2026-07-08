@@ -1,6 +1,6 @@
 ---
 title: "Add mysql2/PG live-adapter reconnect-mid-savepoint parent-dirty tests"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: null
+pr: 4784
 claim: "2026-07-08T12:31:54Z"
 assignee: "savepoint-reconnect-parent-dirty-live-adapter-tests"
 blocked-by: null
