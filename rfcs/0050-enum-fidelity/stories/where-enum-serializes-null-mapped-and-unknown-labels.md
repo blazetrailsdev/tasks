@@ -1,6 +1,6 @@
 ---
 title: "where() serializes null-mapped and unknown enum labels (last_read/prohibited/cover)"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: 34
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T22:37:35Z"
+assignee: "where-enum-serializes-null-mapped-and-unknown-labels"
 blocked-by: null
 closed-reason: null
 ---
