@@ -1,13 +1,13 @@
 ---
 title: "destroy-path-optimistic-lock-stale-check-affected-not-one"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null
