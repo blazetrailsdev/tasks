@@ -1,6 +1,6 @@
 ---
 title: "Sanitize forbidden attributes at Model construction (ActiveModel)"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
+pr: 4786
 claim: "2026-07-08T16:51:55Z"
 assignee: "model-construction-sanitize-forbidden-attributes"
 blocked-by: null
