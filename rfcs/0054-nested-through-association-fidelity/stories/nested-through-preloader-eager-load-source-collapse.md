@@ -8,7 +8,7 @@ deps:
   - converge-through-preload-single-query-join
 deps-rfc: []
 est-loc: 200
-priority: 12
+priority: 28
 pr: null
 claim: null
 assignee: null
