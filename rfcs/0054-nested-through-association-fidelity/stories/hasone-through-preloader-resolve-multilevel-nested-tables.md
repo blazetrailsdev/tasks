@@ -1,13 +1,13 @@
 ---
 title: "has_one-through preloader: resolve multi-level nested joined tables for through-query predicate carry"
 status: in-progress
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 58
+priority: 35
 pr: 4751
 claim: "2026-07-07T18:49:50Z"
 assignee: "hasone-through-preloader-resolve-multilevel-nested-tables"
