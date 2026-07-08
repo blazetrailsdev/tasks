@@ -1,6 +1,6 @@
 ---
 title: "destroy-path-optimistic-lock-stale-check-affected-not-one"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
