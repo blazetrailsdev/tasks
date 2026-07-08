@@ -1,7 +1,7 @@
 ---
 title: "unscaled-decimal-read-fidelity"
-status: in-progress
-updated: 2026-07-07
+status: done
+updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
