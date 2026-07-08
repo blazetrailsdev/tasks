@@ -1,6 +1,6 @@
 ---
 title: "foreignKeyExists must match composite array column/primaryKey by value"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T17:31:58Z"
+assignee: "foreign-key-exists-composite-column-value-match"
 blocked-by: null
 closed-reason: null
 ---
