@@ -25,7 +25,7 @@ check from advisory to required for them.
   `actionview`, `arel`, `rack`, `trailties`, `globalid`, `did-you-mean`,
   `html-sanitizer`, `nokogiri`, `tse-compiler`, and the programmatic-API
   consumers as _typecheck-only_ targets (`trails-tsc`, `activerecord-cli`
-  must type-check under tsgo even though they keep running on TS 5.x).
+  must type-check under TS 7 even though they keep running on TS 5.x).
 - Make the per-package parity result blocking for these; keep
   `activerecord` advisory (handled by the sibling story).
 

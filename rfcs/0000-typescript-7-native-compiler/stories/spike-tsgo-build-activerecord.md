@@ -1,5 +1,5 @@
 ---
-title: "Spike: get tsgo --build to complete on the AR graph"
+title: "Spike: get the TS 7 tsc --build to complete on the AR graph"
 status: ready
 updated: 2026-07-08
 rfc: "0000-typescript-7-native-compiler"

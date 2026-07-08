@@ -23,11 +23,11 @@ gets its own gate story separate from the leaves.
 
 - Curate the `activerecord` allowlist to a stable, fully-understood set
   (every entry links to an upstream issue or a documented-intentional
-  tsgo behavior).
+  TS 7 behavior).
 - Promote the `activerecord` per-package parity result to required.
 
 ## Acceptance criteria
 
 - `activerecord` parity is a required check.
 - Its allowlist is empty or every entry is justified with a linked
-  upstream issue / documented tsgo intentional-difference.
+  upstream issue / documented TS 7 intentional-difference.

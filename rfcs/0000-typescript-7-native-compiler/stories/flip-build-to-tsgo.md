@@ -1,5 +1,5 @@
 ---
-title: "Flip pnpm build / typecheck default to tsgo"
+title: "Flip pnpm build / typecheck default to TS 7"
 status: ready
 updated: 2026-07-08
 rfc: "0000-typescript-7-native-compiler"

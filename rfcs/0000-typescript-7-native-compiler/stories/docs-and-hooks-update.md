@@ -1,5 +1,5 @@
 ---
-title: "Update hooks/docs to reflect tsgo default"
+title: "Update hooks/docs to reflect TS 7 default"
 status: ready
 updated: 2026-07-08
 rfc: "0000-typescript-7-native-compiler"
@@ -21,14 +21,14 @@ Phase 3 of RFC 0000-typescript-7-native-compiler. Reconcile the prose and
 tooling with the new default compiler.
 
 - `scripts/typecheck.mjs` — update the "~60s cold `tsc --build`" comment
-  and any tsc-specific rationale.
-- Pre-commit hook wiring (husky) — confirm it invokes the tsgo path.
+  and any rationale that assumed the TS 5.x `tsc`.
+- Pre-commit hook wiring (husky) — confirm it invokes the TS 7 `tsc` path.
 - `CONTRIBUTING.md`, `CLAUDE.md`, `README.md` build/typecheck notes.
 - Note: `docs/activerecord/` is frozen — if a stale mention lives there,
   record it in the PR body instead of editing.
 
 ## Acceptance criteria
 
-- No committed prose/hook still describes `tsc --build` as the
+- No committed prose/hook still describes the TS 5.x `tsc --build` as the
   authoritative typecheck path (outside frozen `docs/activerecord/`).
-- Pre-commit typecheck runs on tsgo.
+- Pre-commit typecheck runs on the TS 7 `tsc`.

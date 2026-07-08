@@ -1,5 +1,5 @@
 ---
-title: "Add pinned @typescript/native-preview + typecheck:native script"
+title: "Add pinned TS 7 typescript + typecheck:native script"
 status: ready
 updated: 2026-07-08
 rfc: "0000-typescript-7-native-compiler"
