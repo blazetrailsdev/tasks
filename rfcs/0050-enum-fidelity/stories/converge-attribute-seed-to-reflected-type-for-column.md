@@ -1,6 +1,6 @@
 ---
 title: "Seed _default_attributes from reflected type_for_column (drop enumReflectedSubtype stash)"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T20:07:34Z"
+assignee: "converge-attribute-seed-to-reflected-type-for-column"
 blocked-by: null
 closed-reason: null
 ---
