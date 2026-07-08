@@ -1,6 +1,6 @@
 ---
 title: "callbacks-invoke-halted-callback-hook"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4771
 claim: "2026-07-08T02:47:22Z"
 assignee: "callbacks-invoke-halted-callback-hook"
 blocked-by: null
