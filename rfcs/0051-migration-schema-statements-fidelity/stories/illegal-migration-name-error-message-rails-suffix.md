@@ -1,13 +1,13 @@
 ---
 title: "illegal-migration-name-error-message-rails-suffix"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 38
 pr: null
 claim: null
 assignee: null
