@@ -1,6 +1,6 @@
 ---
 title: "Harden ConnectionPool adapter proxy against serialization/matcher probe keys"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0023-surfaced-deviations"
 cluster: null
