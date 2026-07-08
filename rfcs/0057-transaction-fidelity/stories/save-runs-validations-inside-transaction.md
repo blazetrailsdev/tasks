@@ -64,8 +64,8 @@ revive that approach — converge the behavior.)
       full validation pass — `before_validation` callbacks THEN the validators —
       runs inside the save transaction, with `before_validation` firing before
       the validators, matching Rails' `Transactions#save {
-    with_transaction_returning_status { Validations#save {
-    perform_validations; Persistence#save } } }` module layering
+with_transaction_returning_status { Validations#save {
+perform_validations; Persistence#save } } }` module layering
       (transactions.rb:360, validations.rb:47).
 - [ ] Delete the `_beforeValidationSideEffects` queue workaround introduced by
       PR #4264 and the canonical Topic wiring that feeds it
