@@ -1,7 +1,7 @@
 ---
 title: "Through-preload raw-SQL condition relocation uses a text qualifier scan (string-literal false-positive)"
-status: in-progress
-updated: 2026-07-07
+status: done
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
