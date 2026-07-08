@@ -1,6 +1,6 @@
 ---
 title: "through-preloader-raw-join-use-own-reflection-scope-nested"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
