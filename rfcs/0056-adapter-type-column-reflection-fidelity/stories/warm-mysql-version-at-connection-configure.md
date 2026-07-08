@@ -1,6 +1,6 @@
 ---
 title: "Warm MySQL server version at connection-configure time so isMariadb() isn't cold"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 31
-pr: null
+pr: 4805
 claim: "2026-07-08T21:52:34Z"
 assignee: "warm-mysql-version-at-connection-configure"
 blocked-by: null
