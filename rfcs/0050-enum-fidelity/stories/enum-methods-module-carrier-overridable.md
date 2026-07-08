@@ -1,13 +1,13 @@
 ---
 title: "Generated enum methods live on a module carrier so class-body overrides + super work"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null
