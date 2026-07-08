@@ -1,13 +1,13 @@
 ---
 title: "persistence-tablename-setter-schema-reset"
 status: in-progress
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 69
+priority: 37
 pr: 4758
 claim: "2026-07-07T22:02:22Z"
 assignee: "persistence-tablename-setter-schema-reset"
