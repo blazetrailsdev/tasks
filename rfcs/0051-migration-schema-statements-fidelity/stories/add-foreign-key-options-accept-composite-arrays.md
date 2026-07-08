@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 29
 pr: 4766
 claim: "2026-07-08T01:31:24Z"
 assignee: "add-foreign-key-options-accept-composite-arrays"
