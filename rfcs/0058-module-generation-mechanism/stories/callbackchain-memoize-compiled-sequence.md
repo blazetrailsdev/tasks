@@ -1,6 +1,6 @@
 ---
 title: "CallbackChain.compile should memoize the compiled sequence (Rails @all_callbacks)"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
