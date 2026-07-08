@@ -1,13 +1,13 @@
 ---
 title: "route-residual-polymorphic-through-shapes-via-join-scope"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null
