@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 68
+priority: 32
 pr: 4757
 claim: "2026-07-07T21:43:22Z"
 assignee: "unscaled-decimal-read-fidelity"
