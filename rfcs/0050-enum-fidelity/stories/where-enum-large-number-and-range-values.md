@@ -1,13 +1,13 @@
 ---
 title: "where() on enum column: OOR bignum and Range endpoints via EnumType"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: ["where-enum-serializes-numeric-string-and-label-arrays"]
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null
