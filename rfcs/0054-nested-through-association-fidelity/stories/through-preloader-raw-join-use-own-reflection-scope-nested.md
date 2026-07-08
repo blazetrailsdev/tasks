@@ -1,6 +1,6 @@
 ---
 title: "through-preloader-raw-join-use-own-reflection-scope-nested"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 25
-pr: null
+pr: 4800
 claim: "2026-07-08T20:22:34Z"
 assignee: "through-preloader-raw-join-use-own-reflection-scope-nested"
 blocked-by: null
