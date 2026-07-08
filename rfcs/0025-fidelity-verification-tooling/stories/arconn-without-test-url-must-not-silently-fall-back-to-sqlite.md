@@ -1,7 +1,7 @@
 ---
 title: "ARCONN=postgres/mysql without *_TEST_URL must fail loudly, not silently run SQLite"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-08
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T01:50:23Z"
+assignee: "arconn-without-test-url-must-not-silently-fall-back-to-sqlite"
 blocked-by: null
 closed-reason: null
 ---
