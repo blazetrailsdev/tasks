@@ -1,6 +1,6 @@
 ---
 title: "where() on enum column: OOR bignum and Range endpoints via EnumType"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 33
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T22:22:35Z"
+assignee: "where-enum-large-number-and-range-values"
 blocked-by: null
 closed-reason: null
 ---
