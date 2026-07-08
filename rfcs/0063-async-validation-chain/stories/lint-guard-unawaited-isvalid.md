@@ -1,6 +1,6 @@
 ---
 title: "Lint guard: unawaited isValid/validate is an error"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T19:11:20Z"
+assignee: "lint-guard-unawaited-isvalid"
 blocked-by: null
 closed-reason: null
 ---
