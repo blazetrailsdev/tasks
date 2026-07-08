@@ -1,13 +1,13 @@
 ---
 title: "has_many-through preloader: raise ConfigurationError for raw string/Arel join reflection scope, matching Rails"
 status: done
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 45
-priority: 22
+priority: 4
 pr: 4741
 claim: "2026-07-07T15:13:51Z"
 assignee: "hasmany-through-preloader-raise-raw-string-arel-join-scope"
