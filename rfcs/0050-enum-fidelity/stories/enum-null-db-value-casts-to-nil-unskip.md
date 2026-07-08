@@ -1,13 +1,13 @@
 ---
 title: "Un-skip enum NULL-from-database cast test (updateAll raw fragment now supported)"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null
