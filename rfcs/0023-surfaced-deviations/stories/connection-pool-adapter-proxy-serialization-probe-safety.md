@@ -1,6 +1,6 @@
 ---
 title: "Harden ConnectionPool adapter proxy against serialization/matcher probe keys"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4775
 claim: "2026-07-08T10:23:23Z"
 assignee: "connection-pool-adapter-proxy-serialization-probe-safety"
 blocked-by: null
