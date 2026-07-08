@@ -1,6 +1,6 @@
 ---
 title: "converge-merge-onto-single-merger-path"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4767
 claim: "2026-07-08T01:38:35Z"
 assignee: "converge-merge-onto-single-merger-path"
 blocked-by: null
