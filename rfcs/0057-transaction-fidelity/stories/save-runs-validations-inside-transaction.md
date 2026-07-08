@@ -1,17 +1,17 @@
 ---
 title: "save-runs-validations-inside-transaction"
-status: in-progress
-updated: 2026-07-07
+status: blocked
+updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc: ["0063-async-validation-chain"]
 est-loc: null
 priority: 17
-pr: 4713
-claim: "2026-07-07T00:13:02Z"
-assignee: "save-runs-validations-inside-transaction"
-blocked-by: null
+pr: null
+claim: null
+assignee: null
+blocked-by: "flip-activerecord-isvalid-async"
 ---
 
 ## Context
@@ -37,27 +37,48 @@ runs). The four cancellation tests in `transactions.test.ts` don't hit this
 (their validations pass). Documented inline at the drain site in
 `persistence.ts` ("ORDERING DEVIATION").
 
-The governing constraint is the architecturally-mandated strict-sync validation
-chain (`validations.ts#isValid` returns a boolean, never a Promise — same
-constraint behind `async-validations-honor-validation-context` and the
-deferred-uniqueness `_asyncValidations` path). Full convergence means moving
-`performValidations` inside the transaction so before_validation + validators run
-inside it in Rails order. That is blocked-on-architecture: it ripples through
-every synchronous `isValid`/`valid?` caller and interacts with the deferred
-async-validation drain. This is NOT a wontfix — it is gated on the sync-only
-validation decision being revisited.
+### Now unblocked in principle — sequenced after the async flip (RFC 0063)
+
+The old governing constraint was the strict-sync validation chain
+(`validations.ts#isValid` returned a `boolean`, never a `Promise`), which forced
+the async `before_validation` body to be deferred out of the sync `valid?` pass
+into `_beforeValidationSideEffects`. **RFC 0063-async-validation-chain reverses
+that sync-only decision** (decision reversed 2026-07-06): `isValid`/`validate`
+become async and the validate callback chain accepts async callbacks like the
+save chain already does.
+
+Once `flip-activerecord-isvalid-async` lands on `main`, an async
+`before_validation` can run and `throw :abort` **inside** the validation chain,
+so the `_beforeValidationSideEffects` deferral is no longer needed and the
+before_validation-before-validators ordering is reproducible natively. This story
+is therefore **blocked-by `flip-activerecord-isvalid-async`** (RFC 0063 rollout),
+not blocked-on-an-undecided-architecture. It is genuine convergence — NOT a
+documentation/baseline entry. (An earlier attempt, closed PR #4713, shipped a
+tracked-pending-convergence doc entry plus a green regression-lock asserting the
+divergent order; that ratifies the deviation and was closed unmerged. Do not
+revive that approach — converge the behavior.)
 
 ## Acceptance criteria
 
-- [ ] Move `performValidations` (and the deferred async-validation / before_validation
-      side-effect drain) inside `withTransactionReturningStatus` so the full
-      validation pass runs inside the save transaction, with `before_validation`
-      firing before the validators — matching Rails' module layering.
-- [ ] Remove the `_beforeValidationSideEffects` queue workaround introduced by
-      PR #4264 once before_validation runs inside the transaction natively (or
-      keep it only as the sync-chain async bridge if still required).
-- [ ] Add/port a test asserting that an aborting async `before_validation` on a
-      record with an otherwise-failing validation reports no errors (Rails order),
-      matching the Rails test name if one exists.
-- [ ] If full convergence stays blocked on the sync-only architecture, record a
-      justified tracked-pending-convergence baseline entry instead of a wontfix.
+- [ ] Move `performValidations` inside `withTransactionReturningStatus` so the
+      full validation pass — `before_validation` callbacks THEN the validators —
+      runs inside the save transaction, with `before_validation` firing before
+      the validators, matching Rails' `Transactions#save {
+    with_transaction_returning_status { Validations#save {
+    perform_validations; Persistence#save } } }` module layering
+      (transactions.rb:360, validations.rb:47).
+- [ ] Delete the `_beforeValidationSideEffects` queue workaround introduced by
+      PR #4264 and the canonical Topic wiring that feeds it
+      (`test-helpers/models/topic.ts`) — the async `before_validation` now runs
+      inline in the (async) validation chain. Remove the "ORDERING DEVIATION"
+      comment at the drain site in `persistence.ts`.
+- [ ] Un-skip / port the test asserting that an aborting async
+      `before_validation` on a record with an otherwise-failing validation
+      reports **no** errors (Rails order). Match the Rails test name if one
+      exists; delete any green regression-lock that asserts the divergent order.
+- [ ] The four existing cancellation tests in `transactions.test.ts`
+      (validation/save × save/save!) still pass with the async before_validation
+      running inline rather than via the deferred queue.
+- [ ] Remove the tracked-pending-convergence entry for this deviation from
+      `packages/website/docs/guides/activerecord-rails-deviations.md` if one was
+      added — the deviation is fixed, not tracked.
