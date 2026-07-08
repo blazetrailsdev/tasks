@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 22
 pr: 4771
 claim: "2026-07-08T02:47:22Z"
 assignee: "callbacks-invoke-halted-callback-hook"
