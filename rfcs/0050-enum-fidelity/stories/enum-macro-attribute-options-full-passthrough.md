@@ -1,6 +1,6 @@
 ---
 title: "enum() forwards all leftover attribute options to attribute(), not just default:"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 27
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T20:52:34Z"
+assignee: "enum-macro-attribute-options-full-passthrough"
 blocked-by: null
 closed-reason: null
 ---
