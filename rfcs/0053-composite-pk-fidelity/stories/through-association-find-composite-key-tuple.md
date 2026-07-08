@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#find resolves composite association_primary_key tuple on through associations"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T16:43:37Z"
+assignee: "through-association-find-composite-key-tuple"
 blocked-by: null
 closed-reason: null
 ---
