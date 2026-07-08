@@ -1,6 +1,6 @@
 ---
 title: "canonicalKey key-order sensitivity diverges from Rails Hash#== in Serialized#isChanged"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
