@@ -1,13 +1,13 @@
 ---
 title: "CollectionProxy#find resolves composite association_primary_key tuple on through associations"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null
