@@ -54,8 +54,8 @@ tableExists()` call sites in `migration.test.ts` and `migration.trails.test.ts`
 
 ## Acceptance criteria
 
-- [ ] `MigrationContext#columns()/#indexes()/#tables()/#columnExists()/
-  #tableExists()/#indexExists()` delegate to the adapter's async
+- [ ] `MigrationContext` `columns()/indexes()/tables()/columnExists()/
+tableExists()/indexExists()` delegate to the adapter's async
       `SchemaStatements` introspection; the `_tables`/`_columns`/`_columnMeta`/
       `_indexes` maps and their mutation code are removed.
 - [ ] `SchemaDumper.dump(ctx)` callers converge to the async dump path.
