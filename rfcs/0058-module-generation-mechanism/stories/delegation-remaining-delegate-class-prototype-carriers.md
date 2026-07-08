@@ -1,13 +1,13 @@
 ---
 title: "delegation-remaining-delegate-class-prototype-carriers"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null
