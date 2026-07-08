@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 73
+priority: 44
 pr: 4762
 claim: "2026-07-07T23:18:24Z"
 assignee: "sqlite-fetchtypemetadata-bespoke-parse-vs-rails-casttype"
