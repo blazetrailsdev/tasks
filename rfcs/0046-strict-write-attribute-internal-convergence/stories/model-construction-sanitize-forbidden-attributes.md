@@ -1,6 +1,6 @@
 ---
 title: "Sanitize forbidden attributes at Model construction (ActiveModel)"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
