@@ -1,6 +1,6 @@
 ---
 title: "enum() forwards all leftover attribute options to attribute(), not just default:"
-status: claimed
+status: closed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 30
 priority: 27
 pr: null
-claim: "2026-07-08T20:52:34Z"
-assignee: "enum-macro-attribute-options-full-passthrough"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No-op per acceptance criterion #3: only widen the enum→attribute() passthrough once a SECOND attribute-level enum option exists. Today enum()'s surface exposes exactly one attribute-level option (default:); prefix/suffix/scopes/instanceMethods/validate are all macro-level and stripped before attribute(). Widening now would be the speculative generic passthrough criterion #3 forbids. Re-open when a second attribute-level option (e.g. limit/precision) is added to the enum surface."
 ---
 
 ## Context
