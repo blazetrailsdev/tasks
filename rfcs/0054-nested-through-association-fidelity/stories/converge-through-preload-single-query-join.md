@@ -1,6 +1,6 @@
 ---
 title: "converge-through-preload-single-query-join"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T11:51:55Z"
+assignee: "converge-through-preload-single-query-join"
 blocked-by: null
 closed-reason: null
 ---
