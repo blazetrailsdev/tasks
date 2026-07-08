@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 24
 pr: 4764
 claim: "2026-07-08T01:12:26Z"
 assignee: "abstract-schema-creation-quoted-columns-for-index-delegate"
