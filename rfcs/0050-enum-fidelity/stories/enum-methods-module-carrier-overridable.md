@@ -1,6 +1,6 @@
 ---
 title: "Generated enum methods live on a module carrier so class-body overrides + super work"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T21:37:35Z"
+assignee: "enum-methods-module-carrier-overridable"
 blocked-by: null
 closed-reason: null
 ---
