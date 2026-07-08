@@ -1,6 +1,6 @@
 ---
 title: "mysql-table-alias-length-256-and-receiver-dispatch"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 4795
 claim: "2026-07-08T19:07:39Z"
 assignee: "mysql-table-alias-length-256-and-receiver-dispatch"
 blocked-by: null
