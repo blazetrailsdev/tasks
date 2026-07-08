@@ -1,7 +1,7 @@
 ---
 title: "collapse-migrationcontext-remaining-dsl-and-introspection"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T03:06:24Z"
+assignee: "collapse-migrationcontext-remaining-dsl-and-introspection"
 blocked-by: null
 closed-reason: null
 ---
