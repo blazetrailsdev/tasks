@@ -1,6 +1,6 @@
 ---
 title: "destroy-path-optimistic-lock-stale-check-affected-not-one"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: null
+pr: 4785
 claim: "2026-07-08T12:51:54Z"
 assignee: "destroy-path-optimistic-lock-stale-check-affected-not-one"
 blocked-by: null
