@@ -1,6 +1,6 @@
 ---
 title: "ARCONN=postgres/mysql without *_TEST_URL must fail loudly, not silently run SQLite"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
