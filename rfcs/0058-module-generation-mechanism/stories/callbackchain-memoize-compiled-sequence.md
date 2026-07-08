@@ -1,7 +1,7 @@
 ---
 title: "CallbackChain.compile should memoize the compiled sequence (Rails @all_callbacks)"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T02:09:22Z"
+assignee: "callbackchain-memoize-compiled-sequence"
 blocked-by: null
 closed-reason: null
 ---
