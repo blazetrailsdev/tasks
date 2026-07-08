@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 34
 pr: 4772
 claim: "2026-07-08T03:06:24Z"
 assignee: "collapse-migrationcontext-remaining-dsl-and-introspection"
