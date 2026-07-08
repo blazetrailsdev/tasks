@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ar-test-infra-layout-fidelity"
+rfc: "0064-ar-test-infra-layout-fidelity"
 title: "AR test-infra layout fidelity"
 status: draft
 created: 2026-07-08
