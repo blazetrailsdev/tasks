@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 71
+priority: 42
 pr: 4760
 claim: "2026-07-07T22:40:23Z"
 assignee: "port-column-types-typecast-to-instantiate-types-override"
