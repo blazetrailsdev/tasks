@@ -40,7 +40,7 @@ distinct from the introspection-collapse story.
 ## Acceptance criteria
 
 - [ ] `MigrationContext#createTable` with `ifNotExists: true` emits `CREATE
-  TABLE IF NOT EXISTS` (threaded through TableDefinition/schema_creation)
+TABLE IF NOT EXISTS` (threaded through TableDefinition/schema_creation)
       rather than short-circuiting in TS.
 - [ ] Block-declared indexes are still created (with `ifNotExists`) when the
       table pre-exists, matching Rails.
