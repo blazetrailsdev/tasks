@@ -1,6 +1,6 @@
 ---
 title: "Reflected encrypted column with non-null schema default fails to decrypt (default seeded via deserialize)"
-status: blocked
+status: ready
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 4776
-claim: "2026-07-07T20:08:23Z"
-assignee: "reflected-encrypted-column-schema-default-deserialize"
-blocked-by: "PR #4776 closed (approach rejected as unfaithful to Rails). Redo with configure-before-load: the encryption test harness must configure encryption globally BEFORE the canonical EncryptedBook* models are used, so encrypts resolves against real keys — no lazy/fallback encryptor machinery in buildScheme. NOTE: the deserialize-default seam this story originally described is already fixed on main (EncryptedAttributeType default guard, #4435/#4442/#4444); remaining work is the harness ordering + converging the encrypts-normalized-data / columns-with-default-values tests to canonical models."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
