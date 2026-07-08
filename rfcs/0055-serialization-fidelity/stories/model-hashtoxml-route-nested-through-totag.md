@@ -1,6 +1,6 @@
 ---
 title: "Route Model#_hashToXml nested-hash/array recursion through XmlMini.toTag (depth-aware builder + nested type threading)"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T19:37:36Z"
+assignee: "model-hashtoxml-route-nested-through-totag"
 blocked-by: null
 closed-reason: null
 ---
