@@ -1,6 +1,6 @@
 ---
 title: "delegation-remaining-delegate-class-prototype-carriers"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T18:37:35Z"
+assignee: "delegation-remaining-delegate-class-prototype-carriers"
 blocked-by: null
 closed-reason: null
 ---
