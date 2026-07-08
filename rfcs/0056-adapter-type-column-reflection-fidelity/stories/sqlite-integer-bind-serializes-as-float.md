@@ -1,7 +1,7 @@
 ---
 title: "SQLite driver binds integer-valued JS numbers as SQLITE_FLOAT, not SQLITE_INTEGER"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 74
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T00:53:23Z"
+assignee: "sqlite-integer-bind-serializes-as-float"
 blocked-by: null
 closed-reason: null
 ---
