@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 16
 pr: 4770
 claim: "2026-07-08T02:28:23Z"
 assignee: "callbacks-around-loop-drives-compiled-sequence"
