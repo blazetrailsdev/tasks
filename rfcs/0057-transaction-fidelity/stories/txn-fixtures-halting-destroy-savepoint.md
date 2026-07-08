@@ -1,6 +1,6 @@
 ---
 title: "txn-fixtures-halting-destroy-savepoint"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 17
-pr: null
+pr: 4792
 claim: "2026-07-08T18:22:34Z"
 assignee: "txn-fixtures-halting-destroy-savepoint"
 blocked-by: null
