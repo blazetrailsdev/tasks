@@ -1,6 +1,6 @@
 ---
 title: "txn-fixtures-halting-destroy-savepoint"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0057-transaction-fidelity"
 cluster: null
