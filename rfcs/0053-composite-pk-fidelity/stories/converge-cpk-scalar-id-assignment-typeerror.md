@@ -1,6 +1,6 @@
 ---
 title: "Converge composite-PK id= to raise TypeError for scalar assignment"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0053-composite-pk-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: null
+pr: 4781
 claim: "2026-07-08T11:31:55Z"
 assignee: "converge-cpk-scalar-id-assignment-typeerror"
 blocked-by: null
