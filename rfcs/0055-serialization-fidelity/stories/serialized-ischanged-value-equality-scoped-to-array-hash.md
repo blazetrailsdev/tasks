@@ -1,6 +1,6 @@
 ---
 title: "Serialized#isChanged value-equality only covers Array/Hash, not value-== coders (Date/Time)"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
