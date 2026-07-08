@@ -1,6 +1,6 @@
 ---
 title: "converge-through-preload-single-query-join"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
