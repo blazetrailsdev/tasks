@@ -54,7 +54,7 @@ Relevant trails files:
 - [ ] Add `validType?(type)` on the abstract adapter mirroring
       `abstract_adapter.rb:262` (`!nativeDatabaseTypes[type]`).
 - [ ] The schema dumper's per-column loop raises `Unknown type '<sqlType>' for
-  column '<name>'` when `validType?(column.type)` is false, matching
+column '<name>'` when `validType?(column.type)` is false, matching
       `schema_dumper.rb:196`.
 - [ ] `table` wraps the body in a rescue that emits the Rails
       `# Could not dump table ... because of following StandardError` comment
