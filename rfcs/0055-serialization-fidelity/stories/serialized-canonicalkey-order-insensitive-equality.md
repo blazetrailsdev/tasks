@@ -1,6 +1,6 @@
 ---
 title: "canonicalKey key-order sensitivity diverges from Rails Hash#== in Serialized#isChanged"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 45
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T12:11:54Z"
+assignee: "serialized-canonicalkey-order-insensitive-equality"
 blocked-by: null
 closed-reason: null
 ---
