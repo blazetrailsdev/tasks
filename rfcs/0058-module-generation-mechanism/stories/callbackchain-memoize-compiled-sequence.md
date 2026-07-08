@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 8
 pr: 4769
 claim: "2026-07-08T02:09:22Z"
 assignee: "callbackchain-memoize-compiled-sequence"
