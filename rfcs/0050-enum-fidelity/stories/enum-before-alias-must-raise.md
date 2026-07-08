@@ -1,6 +1,6 @@
 ---
 title: "enum-before-alias-must-raise"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: null
+pr: 4787
 claim: "2026-07-08T17:11:56Z"
 assignee: "enum-before-alias-must-raise"
 blocked-by: null
