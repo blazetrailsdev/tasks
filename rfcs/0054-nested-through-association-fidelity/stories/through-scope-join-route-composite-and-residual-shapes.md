@@ -1,14 +1,14 @@
 ---
 title: "through-scope-join-route-composite-and-residual-shapes"
 status: done
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
   - route-composite-through-in-subquery-shapes-via-join-scope
 deps-rfc: []
 est-loc: null
-priority: 53
+priority: 30
 pr: 4747
 claim: "2026-07-07T18:06:33Z"
 assignee: "through-scope-join-route-composite-and-residual-shapes"
