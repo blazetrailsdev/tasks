@@ -1,7 +1,7 @@
 ---
 title: "Scope SchemaDumperAdapterTest dumps to own tables (drop 60s timeout band-aid)"
-status: in-progress
-updated: 2026-07-07
+status: done
+updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
