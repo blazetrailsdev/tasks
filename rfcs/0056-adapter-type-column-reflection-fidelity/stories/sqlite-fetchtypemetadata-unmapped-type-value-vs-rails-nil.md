@@ -1,6 +1,6 @@
 ---
 title: "sqlite-fetchtypemetadata-unmapped-type-value-vs-rails-nil"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T20:37:36Z"
+assignee: "sqlite-fetchtypemetadata-unmapped-type-value-vs-rails-nil"
 blocked-by: null
 closed-reason: null
 ---
