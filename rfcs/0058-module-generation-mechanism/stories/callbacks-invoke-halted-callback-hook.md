@@ -1,6 +1,6 @@
 ---
 title: "callbacks-invoke-halted-callback-hook"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
