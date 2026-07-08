@@ -1,6 +1,6 @@
 ---
 title: "Reflected encrypted column with non-null schema default fails to decrypt (default seeded via deserialize)"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
+pr: 4776
 claim: "2026-07-07T20:08:23Z"
 assignee: "reflected-encrypted-column-schema-default-deserialize"
 blocked-by: null
