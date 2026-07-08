@@ -1,6 +1,6 @@
 ---
 title: "Converge eager destroy belongs_to preload to Rails lazy load (drop savepoint workaround)"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4809
 claim: "2026-07-08T22:52:33Z"
 assignee: "converge-destroy-belongs-to-preload-to-lazy"
 blocked-by: null
