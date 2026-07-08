@@ -111,8 +111,8 @@ typescript`) with the standard `tsc` binary; nightlies move to the `next`
   - Declaration (`.d.ts`) emit: **done**, but noted "differs greatly,
     intentionally" — our `.d.ts` outputs (we ship `types` for every package)
     must be byte/shape-diffed, not assumed identical.
-  - Watch mode: **rebuilt** on a Go port of Parcel's file watcher (resource
-    - cross-platform improvements over the JS watcher).
+  - Watch mode: **rebuilt** on a Go port of Parcel's file watcher, with
+    resource and cross-platform improvements over the JS watcher.
   - **No programmatic API in 7.0.** The GA post: _"TypeScript 7.0 does not
     ship with an API. We expect TypeScript 7.1 to ship with a new (and
     different) API."_ Tools that call the compiler/LS API programmatically
