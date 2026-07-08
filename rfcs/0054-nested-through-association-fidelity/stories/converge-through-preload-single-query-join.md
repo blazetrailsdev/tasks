@@ -1,13 +1,13 @@
 ---
 title: "converge-through-preload-single-query-join"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 39
 pr: null
 claim: null
 assignee: null
