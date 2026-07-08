@@ -1,6 +1,6 @@
 ---
 title: "Cover method-name and object around dispatch in invokeAround"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T16:31:53Z"
+assignee: "cover-method-name-around-dispatch"
 blocked-by: null
 closed-reason: null
 ---
