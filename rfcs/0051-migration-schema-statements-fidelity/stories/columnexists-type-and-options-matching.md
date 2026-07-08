@@ -1,6 +1,6 @@
 ---
 title: "columnexists-type-and-options-matching"
-status: ready
+status: done
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4774
 claim: null
 assignee: null
 blocked-by: null
