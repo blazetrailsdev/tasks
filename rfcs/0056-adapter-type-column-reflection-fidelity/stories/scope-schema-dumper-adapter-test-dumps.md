@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 72
+priority: 43
 pr: 4761
 claim: "2026-07-07T22:59:23Z"
 assignee: "scope-schema-dumper-adapter-test-dumps"
