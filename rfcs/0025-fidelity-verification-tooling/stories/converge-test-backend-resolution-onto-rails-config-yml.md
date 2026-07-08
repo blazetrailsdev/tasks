@@ -1,6 +1,6 @@
 ---
 title: "Converge test-backend resolution onto Rails config.yml + ARCONN (drop *_TEST_URL sniffing)"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T23:22:34Z"
+assignee: "converge-test-backend-resolution-onto-rails-config-yml"
 blocked-by: null
 closed-reason: null
 ---
