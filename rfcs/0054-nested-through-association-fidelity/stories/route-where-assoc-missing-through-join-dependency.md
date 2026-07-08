@@ -1,6 +1,6 @@
 ---
 title: "Route where.associated/where.missing joins through JoinDependency/AliasTracker instead of the flat string ON-rebind path"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 14
-pr: null
+pr: 4790
 claim: "2026-07-08T17:51:55Z"
 assignee: "route-where-assoc-missing-through-join-dependency"
 blocked-by: null
