@@ -1,13 +1,13 @@
 ---
 title: "enum() forwards all leftover attribute options to attribute(), not just default:"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 27
 pr: null
 claim: null
 assignee: null
