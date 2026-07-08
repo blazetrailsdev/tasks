@@ -1,6 +1,6 @@
 ---
 title: "instantiate: materialize override types for absent keys lacking a schema default"
-status: ready
+status: claimed
 updated: 2026-07-08
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 23
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T19:52:34Z"
+assignee: "instantiate-override-types-materialize-absent-nodefault-keys"
 blocked-by: null
 closed-reason: null
 ---
