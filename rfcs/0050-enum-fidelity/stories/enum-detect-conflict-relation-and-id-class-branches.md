@@ -1,6 +1,6 @@
 ---
 title: "enum detect_enum_conflict! Relation-method and :id class-method sub-branches"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
