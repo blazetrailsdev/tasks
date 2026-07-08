@@ -1,7 +1,7 @@
 ---
 title: "callbacks-around-loop-drives-compiled-sequence"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-08
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-08T02:28:23Z"
+assignee: "callbacks-around-loop-drives-compiled-sequence"
 blocked-by: null
 closed-reason: null
 ---
