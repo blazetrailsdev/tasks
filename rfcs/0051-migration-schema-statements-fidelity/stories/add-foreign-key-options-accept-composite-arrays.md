@@ -1,6 +1,6 @@
 ---
 title: "Widen AddForeignKeyOptions column/primaryKey to string|string[]"
-status: in-progress
+status: done
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
