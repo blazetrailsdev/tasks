@@ -1,7 +1,7 @@
 ---
 title: "Route where.associated/where.missing joins through JoinDependency/AliasTracker instead of the flat string ON-rebind path"
-status: draft
-updated: 2026-07-07
+status: ready
+updated: 2026-07-08
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
