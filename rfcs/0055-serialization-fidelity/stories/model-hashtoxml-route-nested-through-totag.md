@@ -1,13 +1,13 @@
 ---
 title: "Route Model#_hashToXml nested-hash/array recursion through XmlMini.toTag (depth-aware builder + nested type threading)"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-08
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null
