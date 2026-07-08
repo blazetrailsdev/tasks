@@ -1,6 +1,6 @@
 ---
 title: "Derive enum method names from one shared helper so acronym labels match across conflict-detection and generation"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 2
-pr: null
+pr: 4779
 claim: "2026-07-08T10:42:22Z"
 assignee: "enum-acronym-method-name-consistency"
 blocked-by: null
