@@ -1,6 +1,6 @@
 ---
 title: "Widen AddForeignKeyOptions column/primaryKey to string|string[]"
-status: claimed
+status: in-progress
 updated: 2026-07-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4766
 claim: "2026-07-08T01:31:24Z"
 assignee: "add-foreign-key-options-accept-composite-arrays"
 blocked-by: null
