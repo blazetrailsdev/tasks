@@ -1,7 +1,7 @@
 ---
 title: 'Drop trails-only primaryKey:"id" from CPK owner-side has_many/has_one canonical models'
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T11:29:34Z"
+assignee: "cpk-canonical-models-drop-owner-side-primarykey-id"
 blocked-by: null
 closed-reason: null
 ---
