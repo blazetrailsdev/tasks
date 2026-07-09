@@ -1,13 +1,13 @@
 ---
 title: "Serialize joined-table serialized-column WHERE predicates via coder (nested-hash conditions)"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null
