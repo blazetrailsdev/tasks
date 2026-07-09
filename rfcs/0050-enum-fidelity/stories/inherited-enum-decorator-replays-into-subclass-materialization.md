@@ -1,6 +1,6 @@
 ---
 title: "Replay superclass-declared enum decorator into concrete subclass _defaultAttributes materialization"
-status: in-progress
+status: done
 updated: 2026-07-09
 rfc: "0050-enum-fidelity"
 cluster: null
