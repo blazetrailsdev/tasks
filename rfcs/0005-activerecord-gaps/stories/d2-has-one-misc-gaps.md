@@ -1,6 +1,6 @@
 ---
 title: "has_one misc feature-gap singles"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4829
 claim: "2026-07-09T12:29:35Z"
 assignee: "d2-has-one-misc-gaps"
 blocked-by: null
