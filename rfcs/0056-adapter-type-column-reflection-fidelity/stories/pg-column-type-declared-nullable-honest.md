@@ -1,6 +1,6 @@
 ---
 title: "pg-column-type-declared-nullable-honest"
-status: in-progress
+status: done
 updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
