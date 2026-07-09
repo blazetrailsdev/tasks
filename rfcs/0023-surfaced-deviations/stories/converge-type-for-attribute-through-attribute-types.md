@@ -1,7 +1,7 @@
 ---
 title: "Resolve type_for_attribute/TypeCaster::Map through attribute_types to retire per-feature replay hooks"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
