@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#find resolves composite association_primary_key tuple on through associations"
-status: claimed
-updated: 2026-07-08
+status: closed
+updated: 2026-07-09
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 40
 priority: 13
 pr: null
-claim: "2026-07-08T16:43:37Z"
-assignee: "through-association-find-composite-key-tuple"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Mis-specified: premise contradicted by Rails. Story assumes blogPost.tags.find([blog_id, id]) should resolve the tuple as one composite key, but sharded_tags has a scalar DB primary key (schema.rb:351 create_table default; only name+blog_id added). Sharded::Tag gets its composite-ness purely from query_constraints :blog_id, :id, and query_constraints (persistence.rb:212-217) sets only @query_constraints_list -- it does NOT touch primary_key or composite_primary_key?. Rails find (finder_methods.rb:491-539) branches on model.composite_primary_key?, which is false here, so find([blog_id, id]) is treated as an id-list of 2 -> where(id: [blog_id, id]) -> 'found 1, looking for 2' RecordNotFound. That RecordNotFound is exactly what the story quotes as the bug -- it is Rails-faithful. No Rails test exists for composite-tuple find on a query_constraints model (checked finder_test.rb + query_constraints sites). Implementing the acceptance criteria would make trails MORE composite-aware than Rails, a divergence not convergence. Per 'always converge, never ratify', converging here means leaving trails as-is."
 ---
 
 ## Context
