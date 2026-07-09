@@ -1,7 +1,7 @@
 ---
 title: "Converge test-backend resolution onto Rails config.yml + ARCONN (drop *_TEST_URL sniffing)"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
