@@ -1,6 +1,6 @@
 ---
 title: "Serialize joined-table serialized-column WHERE predicates via coder (nested-hash conditions)"
-status: ready
+status: claimed
 updated: 2026-07-09
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T02:09:39Z"
+assignee: "serialize-column-where-predicate-coder-dump-joined-table"
 blocked-by: null
 closed-reason: null
 ---
