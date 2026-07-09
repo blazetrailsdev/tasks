@@ -1,7 +1,7 @@
 ---
 title: "Drop dead typeof-function guards around valueForDatabase getter"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T00:37:34Z"
+assignee: "converge-valuefordatabase-property-access-guards"
 blocked-by: null
 closed-reason: null
 ---
