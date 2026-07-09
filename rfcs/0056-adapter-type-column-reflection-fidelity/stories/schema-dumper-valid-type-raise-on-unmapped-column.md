@@ -1,6 +1,6 @@
 ---
 title: "schema-dumper-valid-type-raise-on-unmapped-column"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 212
-pr: null
+pr: 4822
 claim: "2026-07-09T04:09:34Z"
 assignee: "schema-dumper-valid-type-raise-on-unmapped-column"
 blocked-by: null
