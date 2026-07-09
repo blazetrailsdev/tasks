@@ -1,6 +1,6 @@
 ---
 title: "Model-agnostic generated delegator + STI carrier module inheritance"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 4815
 claim: "2026-07-09T01:22:34Z"
 assignee: "delegation-model-agnostic-delegator-sti-carrier-inheritance"
 blocked-by: null
