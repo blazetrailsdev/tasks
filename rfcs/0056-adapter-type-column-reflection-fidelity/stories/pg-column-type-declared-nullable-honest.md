@@ -1,6 +1,6 @@
 ---
 title: "pg-column-type-declared-nullable-honest"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 211
-pr: null
+pr: 4821
 claim: "2026-07-09T03:49:34Z"
 assignee: "pg-column-type-declared-nullable-honest"
 blocked-by: null
