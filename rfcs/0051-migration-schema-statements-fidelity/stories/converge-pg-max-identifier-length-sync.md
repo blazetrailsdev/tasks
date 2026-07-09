@@ -1,14 +1,14 @@
 ---
 title: "Converge PostgreSQL maxIdentifierLength to synchronous (drop bespoke limit overrides)"
-status: claimed
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4810
 claim: "2026-07-08T23:07:34Z"
 assignee: "converge-pg-max-identifier-length-sync"
 blocked-by: null
