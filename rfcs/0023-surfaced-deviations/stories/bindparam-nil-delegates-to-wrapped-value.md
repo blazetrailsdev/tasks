@@ -1,6 +1,6 @@
 ---
 title: "BindParam#isNil should delegate to wrapped value (raw-null binds emit IS NULL)"
-status: ready
+status: claimed
 updated: 2026-07-09
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T11:00:55Z"
+assignee: "bindparam-nil-delegates-to-wrapped-value"
 blocked-by: null
 closed-reason: null
 ---
