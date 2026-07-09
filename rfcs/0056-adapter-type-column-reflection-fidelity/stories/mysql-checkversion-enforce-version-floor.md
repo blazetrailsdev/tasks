@@ -1,13 +1,13 @@
 ---
 title: "mysql-checkversion-enforce-version-floor"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 210
 pr: null
 claim: null
 assignee: null
