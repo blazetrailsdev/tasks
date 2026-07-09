@@ -1,6 +1,6 @@
 ---
 title: "canonicalKey collapses NaN/undefined to null, diverging from Rails Hash#=="
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: null
+pr: 4817
 claim: "2026-07-09T02:29:36Z"
 assignee: "serialized-canonicalkey-nan-undefined-null-collapse"
 blocked-by: null
