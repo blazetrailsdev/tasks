@@ -1,13 +1,13 @@
 ---
 title: "pg-column-type-declared-nullable-honest"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 211
 pr: null
 claim: null
 assignee: null
