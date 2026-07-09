@@ -1,7 +1,7 @@
 ---
 title: "Collapse nested-through preload query count via source eager-load on the through query (4→2, drop table-name string matching)"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps:
