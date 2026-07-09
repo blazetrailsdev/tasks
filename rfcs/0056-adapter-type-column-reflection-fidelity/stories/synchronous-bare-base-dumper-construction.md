@@ -1,13 +1,13 @@
 ---
 title: "Make bare-base SchemaDumper construct the columnSpec emitter synchronously (no adapter-layer load race)"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 213
 pr: null
 claim: null
 assignee: null
