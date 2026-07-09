@@ -1,6 +1,6 @@
 ---
 title: "Unify the per-class prototype-carrier interposition into one shared helper (store/enum/delegation)"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
+pr: 4816
 claim: "2026-07-09T01:49:38Z"
 assignee: "unify-prototype-carrier-interposition-helper"
 blocked-by: null
