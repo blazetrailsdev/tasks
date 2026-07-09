@@ -1,13 +1,13 @@
 ---
 title: "schema-dumper-valid-type-raise-on-unmapped-column"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 212
 pr: null
 claim: null
 assignee: null
