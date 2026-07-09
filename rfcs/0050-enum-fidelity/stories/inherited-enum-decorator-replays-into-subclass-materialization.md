@@ -1,13 +1,13 @@
 ---
 title: "Replay superclass-declared enum decorator into concrete subclass _defaultAttributes materialization"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
