@@ -1,6 +1,6 @@
 ---
 title: "mysql-checkversion-enforce-version-floor"
-status: ready
+status: claimed
 updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 210
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T03:31:20Z"
+assignee: "mysql-checkversion-enforce-version-floor"
 blocked-by: null
 closed-reason: null
 ---
