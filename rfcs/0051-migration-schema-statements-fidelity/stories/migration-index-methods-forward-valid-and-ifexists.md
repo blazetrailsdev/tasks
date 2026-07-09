@@ -1,13 +1,13 @@
 ---
 title: "Migration#isIndexExists/removeIndex forward valid/ifExists to adapter"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 25
-priority: null
+priority: 200
 pr: null
 claim: null
 assignee: null
