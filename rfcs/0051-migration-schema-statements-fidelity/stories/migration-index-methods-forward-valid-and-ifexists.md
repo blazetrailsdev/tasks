@@ -1,6 +1,6 @@
 ---
 title: "Migration#isIndexExists/removeIndex forward valid/ifExists to adapter"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 200
-pr: null
+pr: 4818
 claim: "2026-07-09T02:49:37Z"
 assignee: "migration-index-methods-forward-valid-and-ifexists"
 blocked-by: null
