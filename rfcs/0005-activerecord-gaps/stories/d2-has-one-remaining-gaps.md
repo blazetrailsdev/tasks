@@ -1,7 +1,7 @@
 ---
 title: "d2-has-one-remaining-gaps"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-09
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T11:49:38Z"
+assignee: "d2-has-one-remaining-gaps"
 blocked-by: null
 closed-reason: null
 ---
