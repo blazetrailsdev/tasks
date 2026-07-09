@@ -1,6 +1,6 @@
 ---
 title: "has_one enum-through-association"
-status: claimed
+status: in-progress
 updated: 2026-07-09
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4828
 claim: "2026-07-09T12:09:34Z"
 assignee: "d2-has-one-assoc-enum"
 blocked-by: null
