@@ -1,6 +1,6 @@
 ---
 title: "thread-connection-table-alias-length-into-tracker-construction"
-status: ready
+status: claimed
 updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 201
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T03:09:35Z"
+assignee: "thread-connection-table-alias-length-into-tracker-construction"
 blocked-by: null
 closed-reason: null
 ---
