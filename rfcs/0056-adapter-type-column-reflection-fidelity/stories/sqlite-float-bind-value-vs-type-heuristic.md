@@ -1,7 +1,7 @@
 ---
 title: "SQLite bind keys INTEGER/FLOAT off value, not attribute type (whole-float binds as INTEGER)"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
