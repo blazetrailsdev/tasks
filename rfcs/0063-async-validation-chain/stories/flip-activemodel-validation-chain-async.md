@@ -1,6 +1,6 @@
 ---
 title: "Flip ActiveModel validation chain to async; drop strict-sync validate guard"
-status: ready
+status: claimed
 updated: 2026-07-09
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-09T00:52:35Z"
+assignee: "flip-activemodel-validation-chain-async"
 blocked-by: null
 closed-reason: null
 ---
