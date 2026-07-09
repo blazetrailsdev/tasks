@@ -1,7 +1,7 @@
 ---
 title: "where() serializes null-mapped and unknown enum labels (last_read/prohibited/cover)"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-09
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
