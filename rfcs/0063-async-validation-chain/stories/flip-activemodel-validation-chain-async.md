@@ -1,13 +1,13 @@
 ---
 title: "Flip ActiveModel validation chain to async; drop strict-sync validate guard"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-09
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["lint-guard-unawaited-isvalid"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 0
 pr: null
 claim: null
 assignee: null
