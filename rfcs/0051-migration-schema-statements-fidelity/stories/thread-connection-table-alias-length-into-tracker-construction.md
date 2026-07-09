@@ -1,13 +1,13 @@
 ---
 title: "thread-connection-table-alias-length-into-tracker-construction"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 201
 pr: null
 claim: null
 assignee: null
