@@ -1,6 +1,6 @@
 ---
 title: "thread-connection-table-alias-length-into-tracker-construction"
-status: in-progress
+status: done
 updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
