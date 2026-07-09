@@ -1,6 +1,6 @@
 ---
 title: "Drop dead typeof-function guards around valueForDatabase getter"
-status: in-progress
+status: done
 updated: 2026-07-09
 rfc: "0023-surfaced-deviations"
 cluster: null
