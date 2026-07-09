@@ -1,6 +1,6 @@
 ---
 title: "Migration#isIndexExists/removeIndex forward valid/ifExists to adapter"
-status: in-progress
+status: done
 updated: 2026-07-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
