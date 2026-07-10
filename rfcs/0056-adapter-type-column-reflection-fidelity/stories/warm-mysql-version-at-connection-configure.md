@@ -1,7 +1,7 @@
 ---
 title: "Warm MySQL server version at connection-configure time so isMariadb() isn't cold"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-10
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
