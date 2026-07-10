@@ -1,7 +1,7 @@
 ---
 title: "has_one enum-through-association"
 status: in-progress
-updated: 2026-07-09
+updated: 2026-07-10
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
