@@ -1,7 +1,7 @@
 ---
 title: 'Drop trails-only primaryKey:"id" from CPK owner-side has_many/has_one canonical models'
-status: in-progress
-updated: 2026-07-09
+status: done
+updated: 2026-07-10
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
