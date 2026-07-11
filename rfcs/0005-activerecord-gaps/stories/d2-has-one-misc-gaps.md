@@ -1,7 +1,7 @@
 ---
 title: "has_one misc feature-gap singles"
-status: in-progress
-updated: 2026-07-09
+status: done
+updated: 2026-07-11
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
