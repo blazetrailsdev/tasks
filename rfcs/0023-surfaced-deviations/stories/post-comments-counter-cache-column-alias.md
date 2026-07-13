@@ -1,7 +1,7 @@
 ---
 title: "post.comments.isEmpty() ignores counter cache due to legacy_comments_count alias"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T19:29:37Z"
+assignee: "post-comments-counter-cache-column-alias"
 blocked-by: null
 ---
 
