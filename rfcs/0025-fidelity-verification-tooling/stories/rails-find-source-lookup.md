@@ -1,6 +1,6 @@
 ---
 title: "pnpm rails:find — map trails test/method names to vendored Rails file:line"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 4855
 claim: "2026-07-13T21:22:33Z"
 assignee: "rails-find-source-lookup"
 blocked-by: null
