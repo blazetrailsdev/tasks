@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL execInsert must dirty the query cache on multi-column RETURNING read-back"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
