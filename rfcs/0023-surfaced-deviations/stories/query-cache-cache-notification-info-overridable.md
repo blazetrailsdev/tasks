@@ -1,6 +1,6 @@
 ---
 title: "Make cache_notification_info overridable per connection"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4847
 claim: "2026-07-13T20:12:35Z"
 assignee: "query-cache-cache-notification-info-overridable"
 blocked-by: null
