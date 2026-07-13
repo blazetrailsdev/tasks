@@ -1,7 +1,7 @@
 ---
 title: "has_one polymorphic/cpk shapes"
-status: ready
-updated: 2026-07-09
+status: claimed
+updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T16:49:24Z"
+assignee: "d2-has-one-poly-cpk-shapes"
 blocked-by: null
 closed-reason: null
 ---
