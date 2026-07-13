@@ -1,6 +1,6 @@
 ---
 title: "PG disconnect!/close in-flight acquire adoption race (generation token)"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4842
 claim: "2026-07-13T18:58:23Z"
 assignee: "pg-disconnect-close-inflight-acquire-adoption-race"
 blocked-by: null
