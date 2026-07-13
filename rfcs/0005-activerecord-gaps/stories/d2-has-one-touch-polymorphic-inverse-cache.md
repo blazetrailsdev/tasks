@@ -1,6 +1,6 @@
 ---
 title: "d2-has-one-touch-polymorphic-inverse-cache"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4836
 claim: "2026-07-13T17:48:28Z"
 assignee: "d2-has-one-touch-polymorphic-inverse-cache"
 blocked-by: null
