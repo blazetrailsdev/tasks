@@ -1,7 +1,7 @@
 ---
 title: "Unify the per-class prototype-carrier interposition into one shared helper (store/enum/delegation)"
-status: in-progress
-updated: 2026-07-10
+status: done
+updated: 2026-07-13
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
