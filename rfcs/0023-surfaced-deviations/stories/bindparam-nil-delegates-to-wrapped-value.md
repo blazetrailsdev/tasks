@@ -1,7 +1,7 @@
 ---
 title: "BindParam#isNil should delegate to wrapped value (raw-null binds emit IS NULL)"
-status: in-progress
-updated: 2026-07-09
+status: done
+updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
