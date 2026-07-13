@@ -1,6 +1,6 @@
 ---
 title: "d2-has-one-touch-nonpersisted-build-load"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4835
 claim: "2026-07-13T17:38:23Z"
 assignee: "d2-has-one-touch-nonpersisted-build-load"
 blocked-by: null
