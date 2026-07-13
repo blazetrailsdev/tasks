@@ -1,6 +1,6 @@
 ---
 title: "logSql should translate driver errors with sql+binds like Rails' log"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4837
 claim: "2026-07-13T18:08:27Z"
 assignee: "logsql-translate-exception-with-sql-binds-parity"
 blocked-by: null
