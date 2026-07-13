@@ -1,6 +1,6 @@
 ---
 title: "Port AutosaveAssociation#reload (reset marked_for_destruction on reload)"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4844
 claim: "2026-07-13T19:18:26Z"
 assignee: "port-autosave-association-reload-reset-marked-for-destruction"
 blocked-by: null
