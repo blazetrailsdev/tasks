@@ -1,6 +1,6 @@
 ---
 title: "Port query-cache multi-role connected_to tests once roles land"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4850
 claim: "2026-07-13T20:42:33Z"
 assignee: "query-cache-multi-role-connected-to-tests"
 blocked-by: null
