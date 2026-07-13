@@ -1,6 +1,6 @@
 ---
 title: "has_one touch: option cluster"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4833
 claim: "2026-07-13T17:18:22Z"
 assignee: "d2-has-one-touch-option"
 blocked-by: null
