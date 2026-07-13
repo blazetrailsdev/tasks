@@ -1,6 +1,6 @@
 ---
 title: "predicate-builder-out-of-range-bind-raises-on-cast"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
