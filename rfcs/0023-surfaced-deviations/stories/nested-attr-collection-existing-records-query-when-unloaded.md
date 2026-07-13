@@ -1,7 +1,7 @@
 ---
 title: "Query existing_records for unloaded collection in nested-attributes destroy marking"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T18:48:29Z"
+assignee: "nested-attr-collection-existing-records-query-when-unloaded"
 blocked-by: null
 closed-reason: null
 ---
