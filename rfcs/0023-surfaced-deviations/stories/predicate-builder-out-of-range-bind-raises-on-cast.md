@@ -1,6 +1,6 @@
 ---
 title: "predicate-builder-out-of-range-bind-raises-on-cast"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4849
 claim: "2026-07-13T20:22:34Z"
 assignee: "predicate-builder-out-of-range-bind-raises-on-cast"
 blocked-by: null
