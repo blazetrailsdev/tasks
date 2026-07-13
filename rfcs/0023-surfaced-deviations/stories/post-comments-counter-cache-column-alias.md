@@ -1,6 +1,6 @@
 ---
 title: "post.comments.isEmpty() ignores counter cache due to legacy_comments_count alias"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
