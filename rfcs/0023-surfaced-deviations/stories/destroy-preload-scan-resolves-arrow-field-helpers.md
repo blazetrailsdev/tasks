@@ -1,6 +1,6 @@
 ---
 title: "Destroy belongs_to preload scan resolves arrow-field helper methods, not just prototype methods"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
