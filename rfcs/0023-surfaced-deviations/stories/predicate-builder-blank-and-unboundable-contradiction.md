@@ -1,6 +1,6 @@
 ---
 title: "predicate-builder-blank-and-unboundable-contradiction"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4848
 claim: "2026-07-13T19:58:24Z"
 assignee: "predicate-builder-blank-and-unboundable-contradiction"
 blocked-by: null
