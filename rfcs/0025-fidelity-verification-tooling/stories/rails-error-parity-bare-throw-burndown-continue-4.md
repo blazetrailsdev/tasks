@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity-bare-throw-burndown-continue-4"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4856
 claim: "2026-07-13T21:32:36Z"
 assignee: "rails-error-parity-bare-throw-burndown-continue-4"
 blocked-by: null
