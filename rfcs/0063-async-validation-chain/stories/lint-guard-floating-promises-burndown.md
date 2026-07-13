@@ -1,6 +1,6 @@
 ---
 title: "lint-guard-floating-promises-burndown"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0063-async-validation-chain"
 cluster: null
