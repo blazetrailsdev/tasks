@@ -1,7 +1,7 @@
 ---
 title: "PG array-literal quoting threads dialect so datetime elements get quoted_date formatting"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T20:52:34Z"
+assignee: "quote-array-literal-threads-dialect-for-datetime-elements"
 blocked-by: null
 closed-reason: null
 ---
