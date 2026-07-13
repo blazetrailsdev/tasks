@@ -1,7 +1,7 @@
 ---
 title: "d2-has-one-assignment-before-child-saved"
-status: in-progress
-updated: 2026-07-09
+status: done
+updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
