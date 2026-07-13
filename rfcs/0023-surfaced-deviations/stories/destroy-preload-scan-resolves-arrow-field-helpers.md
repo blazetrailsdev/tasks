@@ -1,6 +1,6 @@
 ---
 title: "Destroy belongs_to preload scan resolves arrow-field helper methods, not just prototype methods"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4834
 claim: "2026-07-13T17:28:24Z"
 assignee: "destroy-preload-scan-resolves-arrow-field-helpers"
 blocked-by: null
