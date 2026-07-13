@@ -1,6 +1,6 @@
 ---
 title: "has_one touch: option cluster"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
