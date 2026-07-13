@@ -1,6 +1,6 @@
 ---
 title: "query-cache-dirties-wiring-incomplete"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4852
 claim: "2026-07-13T20:32:34Z"
 assignee: "query-cache-dirties-wiring-incomplete"
 blocked-by: null
