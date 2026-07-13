@@ -1,6 +1,6 @@
 ---
 title: "Narrow JoinDependency alias-length try/catch to no-connection only (Rails raises)"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4841
 claim: "2026-07-13T18:38:23Z"
 assignee: "narrow-alias-tracker-connection-length-fallback-catch"
 blocked-by: null
