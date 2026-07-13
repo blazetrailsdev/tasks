@@ -1,6 +1,6 @@
 ---
 title: "Narrow JoinDependency alias-length try/catch to no-connection only (Rails raises)"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
