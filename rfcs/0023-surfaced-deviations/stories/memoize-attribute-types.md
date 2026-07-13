@@ -1,6 +1,6 @@
 ---
 title: "Memoize attribute_types record + fallback Proxy instead of rebuilding per call"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
