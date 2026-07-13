@@ -1,6 +1,6 @@
 ---
 title: "Lint rule: ported AR methods must invoke run_callbacks events Rails declares"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: lint
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4853
 claim: "2026-07-13T21:02:39Z"
 assignee: "rails-callback-invocation-lint-rule"
 blocked-by: null
