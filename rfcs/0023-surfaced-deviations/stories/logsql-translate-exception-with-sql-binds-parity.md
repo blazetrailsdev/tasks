@@ -1,6 +1,6 @@
 ---
 title: "logSql should translate driver errors with sql+binds like Rails' log"
-status: in-progress
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
