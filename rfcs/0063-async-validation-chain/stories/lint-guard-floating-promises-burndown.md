@@ -1,7 +1,7 @@
 ---
 title: "lint-guard-floating-promises-burndown"
-status: ready
-updated: 2026-07-08
+status: claimed
+updated: 2026-07-13
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T17:58:26Z"
+assignee: "lint-guard-floating-promises-burndown"
 blocked-by: null
 closed-reason: null
 ---
