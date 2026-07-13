@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity bare-throw burndown (continue 3): remaining activemodel non-validator files"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 4854
 claim: "2026-07-13T21:12:40Z"
 assignee: "rails-error-parity-bare-throw-burndown-continue-3"
 blocked-by: null
