@@ -1,6 +1,6 @@
 ---
 title: "Mass-assignment empty-bag guard should delegate to wrapper empty?, not Object.keys"
-status: claimed
+status: done
 updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4838
 claim: "2026-07-13T18:18:25Z"
 assignee: "mass-assignment-empty-bag-delegates-to-wrapper-empty"
 blocked-by: null
