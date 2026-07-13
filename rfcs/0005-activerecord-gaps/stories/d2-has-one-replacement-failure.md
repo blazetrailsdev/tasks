@@ -1,6 +1,6 @@
 ---
 title: "has_one replacement/creation-failure semantics"
-status: claimed
+status: in-progress
 updated: 2026-07-13
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4832
 claim: "2026-07-13T16:59:31Z"
 assignee: "d2-has-one-replacement-failure"
 blocked-by: null
