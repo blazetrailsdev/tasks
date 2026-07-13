@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL execInsert must dirty the query cache on multi-column RETURNING read-back"
-status: ready
-updated: 2026-07-07
+status: claimed
+updated: 2026-07-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-13T19:08:24Z"
+assignee: "pg-execinsert-dirties-query-cache-on-returning-readback"
 blocked-by: null
 closed-reason: null
 ---
