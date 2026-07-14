@@ -52,9 +52,26 @@ The two are observably different. Locally on SQLite, swapping query-cache.ts to
 `[1]` to `[1n]` — the adapter `typeCast` yields a BigInt where the free function
 yields a Number.
 
-Converging only ONE path is a regression: it makes the cached and uncached
-payloads for the same query disagree. This must be done for both producers at
-once, which is why PR #4866 deliberately left it alone.
+This is NOT a two-producer fix. A full audit
+(`git grep -n "type_casted_binds:" -- packages/activerecord/src --include=*.ts`)
+finds 17 producers across 5 files using THREE different strategies:
+
+- free function (`database-statements.ts:1371`, all 4 mysql2 sites, 3 sqlite3
+  sites) — `temporalToBindString`, no adapter `type_cast`;
+- raw uncast binds (`postgresql-adapter.ts:977,1612,1703,1767,2155` pass
+  `bindArray` / `binds` straight through);
+- hardcoded `[]` (`sqlite3-adapter.ts:714`);
+- a pre-bound local (`abstract-adapter.ts:2350`).
+
+So the cached-vs-uncached payloads ALREADY disagree today on PG (uncached raw,
+cached free-function). Converging query-cache.ts alone would make the cached
+payload individually Rails-faithful while introducing a NEW cached-vs-uncached
+disagreement on SQLite, where the two currently agree (`[1]` vs `[1n]`), and
+would leave 16 other producers unconverged.
+
+The work is a systemic sweep of all 17 sites onto `this.typeCastedBinds`, with
+the Number→BigInt fallout checked per adapter — not a one-line change. PR #4866
+left it alone for that reason.
 
 ## Acceptance criteria
 
