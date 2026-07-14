@@ -1,6 +1,6 @@
 ---
 title: "cacheNotificationInfo: lazy type_casted_binds + pass-through name"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4866
 claim: "2026-07-14T16:38:40Z"
 assignee: "cache-notification-info-lazy-binds-and-name-passthrough"
 blocked-by: null
