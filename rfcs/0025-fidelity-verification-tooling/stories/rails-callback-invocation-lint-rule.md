@@ -1,7 +1,7 @@
 ---
 title: "Lint rule: ported AR methods must invoke run_callbacks events Rails declares"
-status: in-progress
-updated: 2026-07-13
+status: done
+updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: lint
 deps: []
