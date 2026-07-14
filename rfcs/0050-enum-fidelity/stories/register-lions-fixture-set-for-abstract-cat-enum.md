@@ -1,7 +1,7 @@
 ---
 title: "Register a lions fixture set so canonical Cat/Lion abstract-parent enum tests work"
-status: ready
-updated: 2026-07-09
+status: claimed
+updated: 2026-07-14
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T13:57:02Z"
+assignee: "register-lions-fixture-set-for-abstract-cat-enum"
 blocked-by: null
 closed-reason: null
 ---
