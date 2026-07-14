@@ -1,6 +1,6 @@
 ---
 title: "Register a lions fixture set so canonical Cat/Lion abstract-parent enum tests work"
-status: in-progress
+status: done
 updated: 2026-07-14
 rfc: "0050-enum-fidelity"
 cluster: null
