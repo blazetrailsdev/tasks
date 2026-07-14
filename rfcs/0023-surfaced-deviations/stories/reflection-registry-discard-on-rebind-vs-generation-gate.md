@@ -58,8 +58,8 @@ the shape of this one.
       `||=` shape; the generation counter, gates, and `stampGeneration` are deleted.
 - [ ] The `reflection-klass-cache-self-heal` two-file repro stays green either way:
       `pnpm vitest run --no-file-parallelism
-  packages/activerecord/src/associations/nested-through-associations.test.ts
-  packages/activerecord/src/associations.test.ts`
+packages/activerecord/src/associations/nested-through-associations.test.ts
+packages/activerecord/src/associations.test.ts`
 - [ ] `reflection.trails.test.ts` self-heal guards updated or removed to match the
       chosen design (they encode the gate's semantics, not Rails').
 - [ ] Ratifying the current gate is an acceptable outcome ONLY with a written
