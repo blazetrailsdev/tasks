@@ -1,6 +1,6 @@
 ---
 title: "arel-attribute-quoted-node-nil-builds-casted"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T20:51:13Z"
+assignee: "arel-attribute-quoted-node-nil-builds-casted"
 blocked-by: null
 closed-reason: null
 ---
