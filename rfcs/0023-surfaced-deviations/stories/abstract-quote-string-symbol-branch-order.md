@@ -1,6 +1,6 @@
 ---
 title: "Move abstract quote's String/Symbol branch to the rb:75 position"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4875
 claim: "2026-07-14T21:11:11Z"
 assignee: "abstract-quote-string-symbol-branch-order"
 blocked-by: null
