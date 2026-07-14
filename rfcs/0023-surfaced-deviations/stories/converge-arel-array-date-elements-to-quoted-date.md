@@ -17,13 +17,21 @@ closed-reason: null
 
 ## Context
 
-Surfaced during review of PR #4851
-(quote-array-literal-threads-dialect-for-datetime-elements), which threaded a
-dialect into the two ActiveRecord `base.ts` array-literal quoting sites so
-Temporal datetime elements route through `temporalToBindString` (PG
-`quoted_date`: BC suffix + fixed-6 μs). That PR intentionally left two sibling
-gaps in the SAME shared `quoteArrayLiteral` (`packages/arel/src/quote-array.ts`),
-both a scalar-vs-array split of the same shape:
+Surfaced during review of PR #4751/#4851
+(quote-array-literal-threads-dialect-for-datetime-elements). #4851 fixed the
+REAL inline `datetime[]` INSERT path — the PG `OID::Array#encode`
+(`packages/activerecord/src/connection-adapters/postgresql/oid/array.ts`), where
+`this._attributes.valuesForDatabase()` serializes the column to an `OID::Array`
+`Data` wrapper and `String(Data)` → `encode` formatted each element with a bare
+`String(value)` (ISO-8601 for a Temporal). It now routes Temporal elements
+through `temporalToBindString(el, "postgres")` (`quoted_date`: BC + fixed-6 μs),
+mirroring Rails' `encode_array` → `type_cast_array` → `type_cast` → `quoted_date`.
+
+That left the OTHER, trails-invented array-literal serializer,
+`quoteArrayLiteral` (`packages/arel/src/quote-array.ts`), still ISO-fallthrough.
+It is a parallel path to `encode` (Rails has only `encode_array`), reached by the
+Arel PG visitor's `quote()` and `quoteSqlValue`'s `asArray` branch. Two sibling
+gaps there, both the same scalar-vs-array split:
 
 1. **Arel PG visitor array path** — `packages/arel/src/visitors/postgresql.ts:134`
    calls `quoteArrayLiteral(value)` with NO `formatElement`, so a date-like
