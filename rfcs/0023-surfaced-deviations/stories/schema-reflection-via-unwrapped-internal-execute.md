@@ -51,4 +51,4 @@ The ~16 schema-reflection call sites currently use `this.execute(..., "SCHEMA")`
       (and its scoped wrapper) — `execute`/`execQuery` can then dirty
       unconditionally like the write methods.
 - [ ] No regression in `query-cache.test.ts` (esp. `query cached even when types
-  are reset`, which depends on schema reflection not evicting the cache).
+are reset`, which depends on schema reflection not evicting the cache).
