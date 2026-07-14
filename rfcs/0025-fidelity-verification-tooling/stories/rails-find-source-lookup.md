@@ -1,7 +1,7 @@
 ---
 title: "pnpm rails:find — map trails test/method names to vendored Rails file:line"
-status: in-progress
-updated: 2026-07-13
+status: done
+updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
