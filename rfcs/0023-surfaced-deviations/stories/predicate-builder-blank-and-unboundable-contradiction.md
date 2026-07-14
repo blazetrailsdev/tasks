@@ -1,7 +1,7 @@
 ---
 title: "predicate-builder-blank-and-unboundable-contradiction"
-status: in-progress
-updated: 2026-07-13
+status: done
+updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
