@@ -1,7 +1,7 @@
 ---
 title: "Rebase new-owner CollectionProxy seed for count/exists/pluck/find terminals, not just finders"
-status: ready
-updated: 2026-07-03
+status: claimed
+updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T01:32:37Z"
+assignee: "rebase-new-owner-seed-for-count-exists-pluck-terminals"
 blocked-by: null
 closed-reason: null
 ---
