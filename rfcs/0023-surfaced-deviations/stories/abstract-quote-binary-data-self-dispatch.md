@@ -1,6 +1,6 @@
 ---
 title: "abstract-quote-binary-data-self-dispatch"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4870
 claim: "2026-07-14T19:21:13Z"
 assignee: "abstract-quote-binary-data-self-dispatch"
 blocked-by: null
