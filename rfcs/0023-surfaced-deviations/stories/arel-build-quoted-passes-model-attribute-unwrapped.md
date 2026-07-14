@@ -1,6 +1,6 @@
 ---
 title: "arel-build-quoted-passes-model-attribute-unwrapped"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T23:41:12Z"
+assignee: "arel-build-quoted-passes-model-attribute-unwrapped"
 blocked-by: null
 closed-reason: null
 ---
