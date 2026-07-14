@@ -66,6 +66,17 @@ via `quotedNode` (`packages/arel/src/predications.ts:142-151`) into `Casted`
 nodes, which correctly route through `quote()` (`to_sql.rb:87-90`). This story
 concerns only raw values placed directly into nodes.
 
+**This is smaller than it looks: the ports already exist — only the dispatch is
+missing.** `visitNilClass`, `visitString`, `visitFloat`, `visitFalseClass`,
+`visitTrueClass`, `visitDate`, `visitTime`, `visitBigDecimal` etc. are all
+already written (`to-sql.ts` ~1391-1465, each delegating to the `unsupported`
+helper that raises `UnsupportedVisitError`, mirroring rb:828-845), and
+`visitInteger` is likewise a faithful `collector << o.to_s`. So this story does
+NOT need those ports authored. The entire deviation is that `visitNodeOrValue`
+renders inline instead of dispatching to them. #4871 wired the integral branches
+to `visitInteger`; the remaining work is routing the other branches to their
+existing `unsupported` ports and deleting the inline rendering.
+
 Converging is a caller-facing narrowing (it turns rendering into a raise), so it
 needs a caller audit first — this is why it was documented rather than widened
 into #4871 rather than being ratified as acceptable. Per the standing
@@ -76,10 +87,13 @@ converge-never-ratify rule, it is registered here to be converged, not accepted.
 - [ ] Audit callers that place raw non-Integer scalars directly into nodes
       (`git grep` for direct `new Nodes.*` construction with literals; the
       `predications` path is out of scope — it wraps in `Casted`).
-- [ ] Raw-value dispatch in `visitNodeOrValue` raises `UnsupportedVisitError`
-      for the scalars Rails aliases to `unsupported` (`to_sql.rb:828-845`), OR
-      each surviving branch is documented with the specific Rails anchor and the
-      caller that requires it.
+- [ ] `visitNodeOrValue` dispatches to the **already-existing** `unsupported`
+      ports (`visitNilClass`/`visitString`/`visitFloat`/`visitFalseClass`/
+      `visitTrueClass`/`visitDate`/`visitTime`/…, `to-sql.ts` ~1391-1465) for the
+      scalars Rails aliases to `unsupported` (`to_sql.rb:828-845`), so they raise
+      `UnsupportedVisitError` — OR each surviving branch is documented with the
+      specific Rails anchor and the caller that requires it. Do not author new
+      ports; they exist and are currently unreachable.
 - [ ] The `Number.isFinite` split is either replaced by the Rails-shaped
       `Number.isInteger` (Integer renders, Float raises) or documented as an
       invented condition with the caller requiring it.
