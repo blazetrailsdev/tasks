@@ -1,6 +1,6 @@
 ---
 title: "Arel quoteArrayLiteral duplicates the adapter's encodeArray and drifts from it"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
