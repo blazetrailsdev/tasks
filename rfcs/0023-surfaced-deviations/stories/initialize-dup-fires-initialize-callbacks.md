@@ -1,6 +1,6 @@
 ---
 title: "initializeDup must fire the initialize callback chain (core.rb#initialize_dup)"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T01:22:37Z"
+assignee: "initialize-dup-fires-initialize-callbacks"
 blocked-by: null
 closed-reason: null
 ---
