@@ -1,6 +1,6 @@
 ---
 title: "DDL via executeMutation should dirty the query cache (Rails execute-based DDL clears)"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4858
 claim: "2026-07-14T01:12:36Z"
 assignee: "ddl-execute-mutation-dirties-query-cache"
 blocked-by: null
