@@ -1,6 +1,6 @@
 ---
 title: "readattribute-missing-attribute-error-unselected-column"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4857
 claim: "2026-07-14T01:02:35Z"
 assignee: "readattribute-missing-attribute-error-unselected-column"
 blocked-by: null
