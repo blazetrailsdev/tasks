@@ -19,19 +19,20 @@ closed-reason: null
 
 Surfaced during review of PR #4751/#4851
 (quote-array-literal-threads-dialect-for-datetime-elements). #4851 fixed the
-REAL inline `datetime[]` INSERT path — the PG `OID::Array#encode`
-(`packages/activerecord/src/connection-adapters/postgresql/oid/array.ts`), where
-`this._attributes.valuesForDatabase()` serializes the column to an `OID::Array`
-`Data` wrapper and `String(Data)` → `encode` formatted each element with a bare
-`String(value)` (ISO-8601 for a Temporal). It now routes Temporal elements
-through `temporalToBindString(el, "postgres")` (`quoted_date`: BC + fixed-6 μs),
-mirroring Rails' `encode_array` → `type_cast_array` → `type_cast` → `quoted_date`.
+REAL inline `datetime[]` INSERT path by routing the two `base.ts` insert sites
+and `insert_all` through the adapter's `quote` (Rails' `quote(encode_array(value))`
+→ `type_cast_array` → `type_cast` → `quoted_date`), so array elements get
+per-element `type_cast` (datetimes → `quoted_date`, binary → hex) instead of the
+bare `String(Data)` → pure `OID::Array#encode` they fell to before. The encoder
+stays pure, matching Rails (`PG::TextEncoder::Array` never type-casts).
 
-That left the OTHER, trails-invented array-literal serializer,
+That leaves the OTHER, trails-invented array-literal serializer,
 `quoteArrayLiteral` (`packages/arel/src/quote-array.ts`), still ISO-fallthrough.
-It is a parallel path to `encode` (Rails has only `encode_array`), reached by the
-Arel PG visitor's `quote()` and `quoteSqlValue`'s `asArray` branch. Two sibling
-gaps there, both the same scalar-vs-array split:
+It is a parallel path to the adapter's `encode_array` (Rails has only
+`encode_array`), reached by the Arel PG visitor's `quote()`
+(`postgresql.ts:134`). Two sibling gaps there, both the same scalar-vs-array split
+(and ideally this trails-invented parallel is retired in favor of routing the
+visitor's array `quote()` through the adapter's `encode_array` too):
 
 1. **Arel PG visitor array path** — `packages/arel/src/visitors/postgresql.ts:134`
    calls `quoteArrayLiteral(value)` with NO `formatElement`, so a date-like
