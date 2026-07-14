@@ -1,6 +1,6 @@
 ---
 title: "File-scope rails-callback-invocations so cross-class name collisions stop forcing permanent grandfathers"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
