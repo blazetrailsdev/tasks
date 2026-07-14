@@ -1,5 +1,5 @@
 ---
-title: "rebase-new-owner-seed-for-collection-proxy-mutations"
+title: "Rebase new-owner seed for mutation terminals invoked on the CollectionProxy itself"
 status: ready
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"

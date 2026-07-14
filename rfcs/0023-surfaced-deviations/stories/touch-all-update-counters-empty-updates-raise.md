@@ -1,5 +1,5 @@
 ---
-title: "touch-all-update-counters-empty-updates-raise"
+title: "touchAll/updateCounters must raise ArgumentError on empty updates, not return 0"
 status: ready
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
