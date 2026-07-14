@@ -1,6 +1,6 @@
 ---
 title: "arel-visit-node-or-value-numerics-through-quote"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4871
 claim: "2026-07-14T19:31:14Z"
 assignee: "arel-visit-node-or-value-numerics-through-quote"
 blocked-by: null
