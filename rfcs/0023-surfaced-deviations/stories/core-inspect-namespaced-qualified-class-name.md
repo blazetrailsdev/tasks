@@ -1,6 +1,6 @@
 ---
 title: "Base#inspect / pretty_print render unqualified class name for namespaced models"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
