@@ -1,6 +1,6 @@
 ---
 title: "cacheNotificationInfo: lazy type_casted_binds + pass-through name"
-status: in-progress
+status: done
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
