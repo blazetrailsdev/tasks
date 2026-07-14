@@ -1,6 +1,6 @@
 ---
 title: "Arel Visitor#visit should class-dispatch raw values like Rails, retiring visitNodeOrValue"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
