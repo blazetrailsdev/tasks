@@ -1,6 +1,6 @@
 ---
 title: "Loaded records expose no dynamic reader for select aliases (record.post_count undefined)"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4861
 claim: "2026-07-14T01:42:32Z"
 assignee: "record-dynamic-reader-for-select-aliases"
 blocked-by: null
