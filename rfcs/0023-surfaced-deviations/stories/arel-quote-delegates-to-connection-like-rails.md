@@ -1,6 +1,6 @@
 ---
 title: "arel-quote-delegates-to-connection-like-rails"
-status: in-progress
+status: done
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
