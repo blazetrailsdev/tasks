@@ -1,6 +1,6 @@
 ---
 title: "converge-ddl-through-execute-drop-dirty-guard"
-status: claimed
+status: blocked
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-14T16:58:40Z"
 assignee: "converge-ddl-through-execute-drop-dirty-guard"
-blocked-by: null
+blocked-by: "Mis-specified: premise is that PR #4858 merged and left a _writeDirtyDepth guard to remove. #4858 is still OPEN (actively pushed 2026-07-14T16:34Z) — no guard exists on main, and the query-cache-ddl-dirties.trails.test.ts that AC#3 says to keep does not exist, so AC#2/AC#3 are unactionable. AC#1 as written (swap ~26 executeMutation DDL sites to execute) breaks every DDL on sqlite: trails' sqlite execute runs stmt.all(), and better-sqlite3 throws 'This statement does not return data. Use run() instead' on a non-reader statement (probed directly). Real convergence: Rails has no execute/executeMutation split at all — one perform_query branches on column_count.zero? (sqlite3/database_statements.rb:78-112) with affected-rows from a separate raw_connection.changes read. Once DDL routes through execute no guard is needed (execute is already wired via dirtiesQueryCacheExceptSchema on all 3 adapters), so the corrected work SUPERSEDES #4858. Re-spec'd as unify-execute-mutation-into-perform-query (RFC 0023); sequence with converge-execute-batch-through-raw-execute."
 closed-reason: null
 ---
 
