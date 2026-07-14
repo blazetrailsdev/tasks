@@ -1,6 +1,6 @@
 ---
 title: "Rebase new-owner seed for updateAll/deleteAll/touchAll mutation terminals"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 45
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T13:22:36Z"
+assignee: "rebase-new-owner-seed-for-mutation-terminals"
 blocked-by: null
 closed-reason: null
 ---
