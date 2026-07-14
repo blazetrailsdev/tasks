@@ -1,6 +1,6 @@
 ---
 title: "Self-healing reflection klass resolution to eliminate cross-file _klassCache poisoning"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 4863
 claim: "2026-07-14T13:41:11Z"
 assignee: "reflection-klass-cache-self-heal"
 blocked-by: null
