@@ -1,6 +1,6 @@
 ---
 title: "Correct the Rails citation for MySQL's bindless cached payload in query-cache.trails.test.ts"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
