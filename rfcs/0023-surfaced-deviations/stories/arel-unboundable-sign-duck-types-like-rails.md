@@ -1,6 +1,6 @@
 ---
 title: "arel-unboundable-sign-duck-types-like-rails"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4876
 claim: "2026-07-14T21:01:12Z"
 assignee: "arel-unboundable-sign-duck-types-like-rails"
 blocked-by: null
