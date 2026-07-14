@@ -1,6 +1,6 @@
 ---
 title: "api:compare regenerates eslint/rails-*.json unformatted, dirtying every worktree"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
