@@ -1,7 +1,7 @@
 ---
 title: "rails-error-parity-bare-throw-burndown-continue-4"
-status: in-progress
-updated: 2026-07-13
+status: done
+updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
