@@ -1,6 +1,6 @@
 ---
 title: "converge-arel-array-booleans-to-unquoted-true"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4869
 claim: "2026-07-14T18:41:12Z"
 assignee: "converge-arel-array-booleans-to-unquoted-true"
 blocked-by: null
