@@ -1,6 +1,6 @@
 ---
 title: "readattribute-missing-attribute-error-unselected-column"
-status: in-progress
+status: done
 updated: 2026-07-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
