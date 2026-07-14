@@ -53,25 +53,49 @@ The two are observably different. Locally on SQLite, swapping query-cache.ts to
 yields a Number.
 
 This is NOT a two-producer fix. A full audit
-(`git grep -n "type_casted_binds:" -- packages/activerecord/src --include=*.ts`)
-finds 17 producers across 5 files using THREE different strategies:
+(`git grep -n "type_casted_binds:" -- packages/activerecord/src --include=*.ts | grep -v '\.test\.ts'`)
+finds **16 producers across 6 files** using FOUR different strategies. This list
+is the sweep checklist — it is exact, verified 2026-07-14:
 
-- free function (`database-statements.ts:1371`, all 4 mysql2 sites, 3 sqlite3
-  sites) — `temporalToBindString`, no adapter `type_cast`;
-- raw uncast binds (`postgresql-adapter.ts:977,1612,1703,1767,2155` pass
-  `bindArray` / `binds` straight through);
-- hardcoded `[]` (`sqlite3-adapter.ts:714`);
-- a pre-bound local (`abstract-adapter.ts:2350`).
+**Strategy A — standalone free function (9 sites)**, `temporalToBindString`, no
+adapter `type_cast`:
+
+- `abstract/database-statements.ts:1371`
+- `abstract/query-cache.ts:598` (the cached payload; the one this story is about)
+- `mysql2-adapter.ts:630,914,979,1165`
+- `sqlite3-adapter.ts:462,575,779`
+
+**Strategy B — raw uncast binds (5 sites)**, passed straight through:
+
+- `postgresql-adapter.ts:977,1612,1703,1767,2155`
+
+**Strategy C — hardcoded `[]` (1 site)**:
+
+- `sqlite3-adapter.ts:714`
+
+**Strategy D — forwarded caller-supplied param (1 site)**:
+
+- `abstract-adapter.ts:2350` — `log(sql, name, binds, typeCastedBinds = [], ...)`.
+  NOTE: this one is Rails-SHAPED, not a divergence in itself. Rails' `log`
+  (`abstract_adapter.rb:1134`) also takes `type_casted_binds = []` as a
+  parameter, and its callers pass the value (sometimes a lambda) in. So the fix
+  for D is at its callers, not the signature. Do not "converge" D by making it
+  self-dispatch.
+
+Counting note: an earlier draft said 17 — that included `bind-parameter.test.ts:63`,
+which is a consumer-side test (and is already correct: it uses
+`conn.typeCastedBinds`), not a producer.
 
 So the cached-vs-uncached payloads ALREADY disagree today on PG (uncached raw,
 cached free-function). Converging query-cache.ts alone would make the cached
 payload individually Rails-faithful while introducing a NEW cached-vs-uncached
 disagreement on SQLite, where the two currently agree (`[1]` vs `[1n]`), and
-would leave 16 other producers unconverged.
+would leave the other 15 producers unconverged.
 
-The work is a systemic sweep of all 17 sites onto `this.typeCastedBinds`, with
-the Number→BigInt fallout checked per adapter — not a one-line change. PR #4866
-left it alone for that reason.
+The work is a systemic sweep of the 15 A/B/C sites onto `this.typeCastedBinds`
+(D is Rails-shaped — fix its callers instead), with the Number→BigInt fallout
+checked per adapter — not a one-line change. PR #4866 left it alone for that
+reason.
 
 ## Acceptance criteria
 
