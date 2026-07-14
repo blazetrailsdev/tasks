@@ -1,6 +1,6 @@
 ---
 title: "tasks new hides markdownlint body failures behind a git commit stack trace"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
