@@ -1,6 +1,6 @@
 ---
 title: "Establish the real cross-file reflection-memo poison mechanism (zero rebinds observed; documented cause is wrong)"
-status: ready
+status: draft
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
