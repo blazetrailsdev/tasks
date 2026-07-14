@@ -1,6 +1,6 @@
 ---
 title: "converge-arel-array-string-elements-to-content-based-quoting"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T19:41:18Z"
+assignee: "converge-arel-array-string-elements-to-content-based-quoting"
 blocked-by: null
 closed-reason: null
 ---
