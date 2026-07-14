@@ -41,7 +41,8 @@ alias :visit_Time       :unsupported
 alias :visit_TrueClass  :unsupported
 ```
 
-Trails' `visitNodeOrValue` (`packages/arel/src/visitors/to-sql.ts:2026-2064`) is
+Trails' `visitNodeOrValue` (in `packages/arel/src/visitors/to-sql.ts`; grep the
+method name rather than trusting a line range — it has already drifted once) is
 the port of that raw-value path — see PR #4871, which established the mapping and
 documented this residue in place. It **renders** where Rails raises:
 
@@ -50,7 +51,10 @@ documented this residue in place. It **renders** where Rails raises:
 - non-integral `number` e.g. `1.5` → bare `String(v)` (Rails: `visit_Float` raises)
 - non-finite `number` (`Infinity`/`NaN`) → `quote(v)` (Rails: Float → raises)
 - `boolean` → `quote(v)` (Rails: `visit_TrueClass`/`visit_FalseClass` raise)
-- date-like → `quotedDate(v)` (Rails: `visit_Date`/`visit_Time` raise)
+- dates / binary / unknown objects → the trailing `else` → `quote(v)` → the
+  connection (Rails: `visit_Date` rb:836 / `visit_Time` rb:844 raise). #4868
+  removed the old dedicated `quotedDate` branch, so do not go hunting for a
+  `quotedDate` call in this method — there is none.
 
 Two of these are _invented conditions_ rather than merely permissive dispatch:
 the branch splits on `Number.isFinite`, where Rails' analogous split is
