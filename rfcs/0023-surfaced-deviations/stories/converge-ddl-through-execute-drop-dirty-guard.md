@@ -1,6 +1,6 @@
 ---
 title: "converge-ddl-through-execute-drop-dirty-guard"
-status: ready
+status: claimed
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-14T16:58:40Z"
+assignee: "converge-ddl-through-execute-drop-dirty-guard"
 blocked-by: null
 closed-reason: null
 ---
