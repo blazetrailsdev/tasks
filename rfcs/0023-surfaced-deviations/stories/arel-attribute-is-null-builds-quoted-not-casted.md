@@ -1,6 +1,6 @@
 ---
 title: "arel-attribute-is-null-builds-quoted-not-casted"
-status: claimed
+status: in-progress
 updated: 2026-07-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4878
 claim: "2026-07-14T23:31:12Z"
 assignee: "arel-attribute-is-null-builds-quoted-not-casted"
 blocked-by: null
