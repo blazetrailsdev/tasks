@@ -1,6 +1,6 @@
 ---
 title: "converge-instrumenter-event-payload-dup"
-status: ready
+status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T19:21:10Z"
+assignee: "converge-instrumenter-event-payload-dup"
 blocked-by: null
 closed-reason: null
 ---
