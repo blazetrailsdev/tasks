@@ -1,6 +1,6 @@
 ---
 title: "schema-migration-assume-migrated-upto-version-coverage"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
