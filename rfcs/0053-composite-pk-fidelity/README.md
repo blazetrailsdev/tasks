@@ -1,9 +1,9 @@
 ---
 rfc: "0053-composite-pk-fidelity"
 title: "Composite primary-key fidelity"
-status: active
+status: closed
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-15
 owner: "@deanmarano"
 packages:
   - "activerecord"

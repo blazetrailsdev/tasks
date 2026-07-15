@@ -56,7 +56,7 @@
 | [0050-enum-fidelity](rfcs/0050-enum-fidelity/README.md) | Enum fidelity | active | @deanmarano | activerecord |
 | [0051-migration-schema-statements-fidelity](rfcs/0051-migration-schema-statements-fidelity/README.md) | Migration & SchemaStatements fidelity | closed | @deanmarano | activerecord |
 | [0052-nested-attributes-fidelity](rfcs/0052-nested-attributes-fidelity/README.md) | Nested attributes fidelity | closed | @deanmarano | activerecord |
-| [0053-composite-pk-fidelity](rfcs/0053-composite-pk-fidelity/README.md) | Composite primary-key fidelity | active | @deanmarano | activerecord |
+| [0053-composite-pk-fidelity](rfcs/0053-composite-pk-fidelity/README.md) | Composite primary-key fidelity | closed | @deanmarano | activerecord |
 | [0054-nested-through-association-fidelity](rfcs/0054-nested-through-association-fidelity/README.md) | Nested/through association direct-load fidelity | active | @deanmarano | activerecord |
 | [0055-serialization-fidelity](rfcs/0055-serialization-fidelity/README.md) | Serialization fidelity | active | @deanmarano | activerecord |
 | [0056-adapter-type-column-reflection-fidelity](rfcs/0056-adapter-type-column-reflection-fidelity/README.md) | Adapter type & column reflection fidelity | active | @deanmarano | activerecord |
