@@ -1,7 +1,7 @@
 ---
 title: "arel-attribute-quoted-node-nil-builds-casted"
-status: in-progress
-updated: 2026-07-14
+status: done
+updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
