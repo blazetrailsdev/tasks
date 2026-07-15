@@ -1,6 +1,6 @@
 ---
 title: "drop-pg-quoting-boolean-literal-extras"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4895
 claim: "2026-07-15T19:11:11Z"
 assignee: "drop-pg-quoting-boolean-literal-extras"
 blocked-by: null
