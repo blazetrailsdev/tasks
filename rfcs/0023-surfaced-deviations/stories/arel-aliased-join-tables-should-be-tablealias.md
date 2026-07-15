@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - arel-join-tables-lack-type-casters
 deps-rfc: []
 est-loc: null
 priority: null
