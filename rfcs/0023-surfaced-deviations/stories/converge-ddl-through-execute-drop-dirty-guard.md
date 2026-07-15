@@ -4,7 +4,10 @@ status: ready
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - unify-execute-mutation-into-perform-query
+  - unify-execute-mutation-into-perform-query-postgresql
+  - unify-execute-mutation-into-perform-query-mysql2
 deps-rfc: []
 est-loc: null
 priority: null
