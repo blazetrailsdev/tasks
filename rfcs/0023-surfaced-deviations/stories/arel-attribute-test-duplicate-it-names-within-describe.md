@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: resolve duplicate it() names within #eq, #matches_all, #eq_all"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
