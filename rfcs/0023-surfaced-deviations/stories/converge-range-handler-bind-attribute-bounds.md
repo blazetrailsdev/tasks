@@ -1,12 +1,12 @@
 ---
-title: "converge-range-handler-bind-attribute-bounds"
+title: "RangeHandler wraps both bounds in build_bind_attribute; UnboundableBound is invented"
 status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
