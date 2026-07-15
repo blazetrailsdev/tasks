@@ -1,6 +1,6 @@
 ---
 title: "arel-table-type-cast-fallbacks-are-invented"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4888
 claim: "2026-07-15T03:21:13Z"
 assignee: "arel-table-type-cast-fallbacks-are-invented"
 blocked-by: null
