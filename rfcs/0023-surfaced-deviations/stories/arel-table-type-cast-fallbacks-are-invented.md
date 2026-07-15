@@ -1,6 +1,6 @@
 ---
 title: "arel-table-type-cast-fallbacks-are-invented"
-status: in-progress
+status: done
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
