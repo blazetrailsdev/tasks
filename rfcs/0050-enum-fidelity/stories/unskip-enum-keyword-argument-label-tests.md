@@ -1,6 +1,6 @@
 ---
 title: "Un-skip the two enum keyword-argument label tests (stale seeding skip)"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0050-enum-fidelity"
 cluster: null
