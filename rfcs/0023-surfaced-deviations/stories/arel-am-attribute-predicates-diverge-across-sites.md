@@ -22,6 +22,13 @@ Surfaced by review of PR #4879
 `arel-dot-am-attribute-structural-check-looser-than-rails`, which covers the
 `Dot` site only; this one covers the remaining three.
 
+**Updated after PR #4874** (`Attribute#quotedNode` builds Casted for nil, like
+build_quoted): `quotedNode` now delegates straight to `buildQuoted(value, this)`
+and no longer carries its own `instanceof ModelAttribute` arm. That removes the
+fourth site and the two-wrap-site divergence this story originally listed — one
+of the two concrete divergences below is now fixed on main. Three predicates
+remain.
+
 Rails identifies an `ActiveModel::Attribute` by **class** everywhere —
 `casted.rb:50` (`build_quoted`'s `when` arm), `to_sql.rb:110` (ValuesList),
 `to_sql.rb:632` (Assignment), `to_sql.rb:756` (the visitor). trails has four
@@ -40,11 +47,11 @@ Concrete divergences:
 - `{ valueForDatabase: 1 }` → `Quoted` via `buildQuoted` (no `name`), but
   matches to-sql's helper, so via `visitNodeOrValue` it reaches `visit` and
   raises `UnsupportedVisitError`.
-- `buildQuoted` and `quotedNode` are the two wrap-sites that #4879's comment at
-  `attribute.ts` says must move in lockstep — but they already disagree: an
-  object with `valueForDatabase` + `name` that is not a `ModelAttribute` wraps
-  in `BindParam` via one and `Casted` via the other. Same AST shape question the
-  comment warns about, live today.
+- (FIXED by #4874 — kept for history) `buildQuoted` and `quotedNode` were two
+  wrap-sites with different predicates, so an object with `valueForDatabase` +
+  `name` that was not a `ModelAttribute` wrapped in `BindParam` via one and
+  `Casted` via the other. `quotedNode` now delegates to `buildQuoted`, so there
+  is a single wrap-site and this divergence is gone.
 
 ### The stale justification
 
@@ -58,12 +65,14 @@ depend on `arel` in either direction (no `@blazetrails/arel` import anywhere in
 
 ## Acceptance criteria
 
-- [ ] One predicate for "is an ActiveModel::Attribute" across `buildQuoted`,
-      `quotedNode` and to-sql's `isActiveModelAttribute` — an `instanceof`
-      check against activemodel's `Attribute`, matching Rails' class dispatch.
-- [ ] Drop the stale "doesn't require a runtime import" rationale in `casted.ts`
-      and the "must move with it" caveat in `attribute.ts:143-147`, which exists
-      only because the predicates differ.
+- [ ] One predicate for "is an ActiveModel::Attribute" across `buildQuoted` and
+      to-sql's `isActiveModelAttribute` — an `instanceof` check against
+      activemodel's `Attribute`, matching Rails' class dispatch. (`quotedNode`
+      needs no change: #4874 made it delegate to `buildQuoted`.)
+- [ ] Drop the stale "doesn't require a runtime import" rationale in `casted.ts`.
+      Note `attributes/attribute.ts` no longer imports activemodel at all after
+      #4874, so `casted.ts` importing it is the first re-introduction — confirm
+      no cycle at that time rather than trusting this note.
 - [ ] to-sql's `!(v instanceof Node)` exclusion must be preserved in behaviour:
       Arel's own `Casted`/`Quoted` expose `valueForDatabase` (casted.ts) and
       must keep falling to `quote()` in ValuesList, per rb:110's narrow `when`.
