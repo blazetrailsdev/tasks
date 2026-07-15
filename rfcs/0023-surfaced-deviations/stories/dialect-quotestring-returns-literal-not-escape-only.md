@@ -1,6 +1,6 @@
 ---
 title: "Dialect quoteString returns a full literal instead of Rails' escape-only quote_string"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
