@@ -1,6 +1,6 @@
 ---
 title: "arel-aliased-join-tables-should-be-tablealias"
-status: claimed
+status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-15T18:41:12Z"
 assignee: "arel-aliased-join-tables-should-be-tablealias"
-blocked-by: null
+blocked-by: "Depends on PR #4889 (arel-join-tables-lack-type-casters), still OPEN and unmerged. Every acceptance criterion targets symbols that exist only on that branch: aliasedArelTableFor / aliasedArelTableForReflection (associations/alias-tracker.ts) do not exist on origin/main, and Table#typeCaster is already private there (main table.ts:36), so 'can go back to private' is a no-op. Doing this work now would require branching from #4889 = a stacked PR, which CLAUDE.md forbids. Re-ready this story once #4889 merges."
 closed-reason: null
 ---
 
