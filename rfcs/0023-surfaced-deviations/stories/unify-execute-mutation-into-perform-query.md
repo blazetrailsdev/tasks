@@ -1,13 +1,13 @@
 ---
 title: "unify-execute-mutation-into-perform-query"
 status: ready
-updated: 2026-07-14
+updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
