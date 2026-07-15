@@ -1,6 +1,6 @@
 ---
 title: "arel-dot-unknown-class-leaf-fallback-should-raise"
-status: in-progress
+status: done
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
