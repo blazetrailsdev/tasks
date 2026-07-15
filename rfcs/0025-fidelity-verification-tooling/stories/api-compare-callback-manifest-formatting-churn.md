@@ -1,6 +1,6 @@
 ---
 title: "api:compare rewrites tracked rails-callback-invocations.json with formatting churn"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
