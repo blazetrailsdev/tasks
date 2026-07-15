@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - converge-instrumenter-yield-payload
 deps-rfc: []
 est-loc: null
 priority: null
