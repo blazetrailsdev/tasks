@@ -1,6 +1,6 @@
 ---
 title: "abstract quote/type_cast boolean arms call module-level, not self-dispatch"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
