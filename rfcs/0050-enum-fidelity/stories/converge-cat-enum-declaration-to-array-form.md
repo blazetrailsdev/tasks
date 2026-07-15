@@ -1,6 +1,6 @@
 ---
 title: "Converge canonical Cat's enum declaration to Rails' array form"
-status: in-progress
+status: done
 updated: 2026-07-15
 rfc: "0050-enum-fidelity"
 cluster: null
