@@ -1,6 +1,6 @@
 ---
 title: "arel-join-tables-lack-type-casters"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4889
 claim: "2026-07-15T11:11:11Z"
 assignee: "arel-join-tables-lack-type-casters"
 blocked-by: null
