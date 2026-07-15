@@ -32,11 +32,16 @@ def instrument(name, payload = {})
 end
 ```
 
-The behavioural half of that convergence — the `listening?` short-circuit and
-the inherited `rescue Exception` arm — landed separately (see
-`converge-static-notifications-instrument-delegates`, which also removed the 15
-AR adapter sites that hand-rolled `payload.exception` /
-`payload.exception_object`). The structural half did not: trails' static
+The behavioural half of that convergence — the `listening?` short-circuit, the
+inherited `rescue Exception` arm, and the removal of the 15 AR adapter sites
+that hand-rolled `payload.exception` / `payload.exception_object` — is **in
+flight, NOT landed**: it is PR #4897
+(`converge-static-notifications-instrument-delegates`), open as of 2026-07-15.
+Confirm it actually merged (`gh pr view 4897`) before relying on any of it. Do
+not repeat the failure this very story documents below — stating a sibling PR's
+work as landed fact.
+
+The structural half is untouched either way: trails' static
 `Notifications.instrument` still builds the `Event`, maintains the stack, and
 publishes directly (`packages/activesupport/src/notifications.ts`).
 
@@ -62,6 +67,23 @@ bespoke `_matches`. Converging means migrating `Notifications` onto Fanout as
 its notifier, which changes the `subscribe`/`unsubscribe` return shape used
 across the repo.
 
+### The design tension to solve first
+
+Fanout's `EventObjectGroup` constructs its **own** `Event` in `start()`, whereas
+the static path builds one `Event` up front and threads it through the
+`IsolatedExecutionState` stack to populate `Event#children`. Route the static
+path through Fanout naively and the `children` nesting is dropped — which
+`nested events can be instrumented` (`notifications.test.ts`, a port of
+`notifications_test.rb:464`) asserts, so it will fail. Settle who owns `Event`
+construction before writing code; that decision is the substance of this story,
+not the mechanical `_subscribers` → Fanout swap.
+
+Note also that trails' `Event` does **not** `dup` the payload, where Rails'
+`Event#initialize` does (`instrumenter.rb:107`). The whole payload-identity
+chain — adapters' `payload.row_count` writes and the rescue arm's `exception`
+writes landing on the caller's object — depends on that. Do not "fix" it toward
+Rails here without tracing those writers first.
+
 ## Acceptance criteria
 
 - [ ] `Notifications` owns a `Fanout` notifier; `subscribe` / `unsubscribe` /
@@ -76,11 +98,18 @@ across the repo.
       `listening?` branch plus `instrumenter.instrument(name, payload)`.
 - [ ] `instrumentAsync` delegates the same way; it has no Rails analogue and
       stays a documented trails extension.
-- [ ] Existing notification tests keep passing unchanged, including
-      `nested events can be instrumented` and the AR `sql.active_record`
-      exception-key coverage in `instrumentation.trails.test.ts`.
+- [ ] `Event#children` nesting survives the Fanout routing (see the design
+      tension above) — `nested events can be instrumented` must pass unchanged.
+- [ ] Existing notification tests keep passing unchanged, including the AR
+      `sql.active_record` exception-key coverage in
+      `instrumentation.trails.test.ts`.
 
 ## Notes
+
+Blocked behind PR #4897, which rewrites three of the same files
+(`notifications.ts`, `notifications.test.ts`, `notifications/instrumenter.test.ts`).
+Re-ready only once it merges, and re-read those files on main first — this story
+must not be started from what its own Context claims about them.
 
 May exceed 500 LOC once the Fanout migration touches call sites; split at the
 Fanout boundary (migrate the notifier first, then delegate) if so.
