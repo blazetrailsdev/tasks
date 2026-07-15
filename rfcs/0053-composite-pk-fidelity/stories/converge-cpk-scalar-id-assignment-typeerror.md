@@ -1,7 +1,7 @@
 ---
 title: "Converge composite-PK id= to raise TypeError for scalar assignment"
-status: in-progress
-updated: 2026-07-08
+status: done
+updated: 2026-07-15
 rfc: "0053-composite-pk-fidelity"
 cluster: null
 deps: []
