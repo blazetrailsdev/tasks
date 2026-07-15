@@ -57,6 +57,13 @@ raise `UnsupportedVisitError` on an unknown class instance) is real and must
 stay covered by the `visitHash` / `visitString` fallback instead. Per CLAUDE.md
 the implementation is what moves, not the test name; check the Rails test first.
 
+Sibling story `arel-am-attribute-predicates-diverge-across-sites` covers the
+other three predicates (`buildQuoted`, `quotedNode`, to-sql's
+`isActiveModelAttribute`). This one is scoped to `Dot` because its blocker is
+different — `Dot` overrides `visit`, so it cannot use the dispatch registration
+and the fix is predicate-only. Land them in either order; they touch different
+files.
+
 ## Acceptance criteria
 
 - [ ] `Dot#isActiveModelAttribute` matches Rails' class dispatch — an
