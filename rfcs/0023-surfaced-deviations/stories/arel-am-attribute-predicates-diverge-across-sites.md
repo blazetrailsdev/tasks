@@ -22,6 +22,12 @@ Surfaced by review of PR #4879
 `arel-dot-am-attribute-structural-check-looser-than-rails`, which covers the
 `Dot` site only; this one covers the remaining two.
 
+**Updated after PR #4880** (Dot dispatches ActiveModel::Attribute by class, not
+shape): the sibling story `arel-dot-am-attribute-structural-check-looser-than-rails`
+is now **done** — `Dot` uses `o instanceof ModelAttribute`. Its row below is kept
+only to show the target shape. Two structural predicates remain in scope here:
+`buildQuoted` and to-sql's `isActiveModelAttribute`.
+
 **Updated after PR #4874** (`Attribute#quotedNode` builds Casted for nil, like
 build_quoted): `quotedNode` now delegates straight to `buildQuoted(value, this)`
 and no longer carries its own `instanceof ModelAttribute` arm. That removes the
@@ -40,7 +46,7 @@ picture but is converged by the sibling story, not this one):
 | --------------------------------------------- | ------------------------------------------------- |
 | `nodes/casted.ts` `buildQuoted`               | `"valueForDatabase" in o && "name" in o`          |
 | `visitors/to-sql.ts` `isActiveModelAttribute` | `!(o instanceof Node) && "valueForDatabase" in o` |
-| `visitors/dot.ts` `isActiveModelAttribute`    | `"valueBeforeTypeCast" in o` (filed separately)   |
+| `visitors/dot.ts` `isActiveModelAttribute`    | `o instanceof ModelAttribute` (CONVERGED, #4880)  |
 
 Concrete divergences:
 
