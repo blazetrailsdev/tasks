@@ -1,6 +1,6 @@
 ---
 title: "arel-dot-hash-subclass-dispatch-and-classname"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4883
 claim: "2026-07-15T02:31:10Z"
 assignee: "arel-dot-hash-subclass-dispatch-and-classname"
 blocked-by: null
