@@ -1,6 +1,6 @@
 ---
 title: "converge-instrumenter-event-payload-dup"
-status: claimed
+status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-15T19:21:10Z"
 assignee: "converge-instrumenter-event-payload-dup"
-blocked-by: null
+blocked-by: "Depends on converge-instrumenter-yield-payload (PR #4894, open). That PR introduces the _push helper, its coupling comment, and notifications/instrumenter.trails.test.ts — none exist on main, so every acceptance criterion targets code that is not there yet. Building now would mean stacking on #4894 (forbidden) and conflicting on instrumenter.ts with its owning agent. Unblock: re-ready once #4894 merges."
 closed-reason: null
 ---
 
