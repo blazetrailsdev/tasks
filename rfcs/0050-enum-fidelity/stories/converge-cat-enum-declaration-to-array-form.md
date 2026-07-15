@@ -1,7 +1,7 @@
 ---
 title: "Converge canonical Cat's enum declaration to Rails' array form"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-15
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T11:31:10Z"
+assignee: "converge-cat-enum-declaration-to-array-form"
 blocked-by: null
 closed-reason: null
 ---
