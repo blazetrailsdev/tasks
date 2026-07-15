@@ -1,6 +1,6 @@
 ---
 title: "Dot#isHash misclassifies a record whose prototype has a literal constructor key"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
