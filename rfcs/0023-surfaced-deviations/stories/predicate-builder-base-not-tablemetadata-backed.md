@@ -1,7 +1,7 @@
 ---
 title: "Base.predicateBuilder is Table-backed, not TableMetadata-backed like Rails"
-status: in-progress
-updated: 2026-07-13
+status: done
+updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
