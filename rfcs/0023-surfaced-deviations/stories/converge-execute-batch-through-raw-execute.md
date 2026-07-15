@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: "2026-07-15T11:41:13Z"
 assignee: "converge-execute-batch-through-raw-execute"
