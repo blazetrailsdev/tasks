@@ -1,6 +1,6 @@
 ---
 title: "Converge the three ActiveModel::Attribute predicates in arel onto instanceof"
-status: in-progress
+status: done
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
