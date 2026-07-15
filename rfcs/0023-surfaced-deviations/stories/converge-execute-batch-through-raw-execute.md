@@ -1,7 +1,7 @@
 ---
 title: "Route executeBatch through rawExecute (Rails execute_batch to raw_execute, not in dirties set)"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T11:41:13Z"
+assignee: "converge-execute-batch-through-raw-execute"
 blocked-by: null
 closed-reason: null
 ---
