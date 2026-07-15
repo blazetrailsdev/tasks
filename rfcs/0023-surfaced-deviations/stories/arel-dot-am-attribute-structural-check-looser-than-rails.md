@@ -1,7 +1,7 @@
 ---
 title: "arel-dot-am-attribute-structural-check-looser-than-rails"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T02:01:12Z"
+assignee: "arel-dot-am-attribute-structural-check-looser-than-rails"
 blocked-by: null
 closed-reason: null
 ---
