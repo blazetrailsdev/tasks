@@ -1,6 +1,6 @@
 ---
 title: "arel-in-not-in-scalar-arm-quoted-node"
-status: ready
+status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T03:01:11Z"
+assignee: "arel-in-not-in-scalar-arm-quoted-node"
 blocked-by: null
 closed-reason: null
 ---
