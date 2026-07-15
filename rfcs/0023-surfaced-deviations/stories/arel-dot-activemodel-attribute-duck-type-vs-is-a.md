@@ -1,6 +1,6 @@
 ---
 title: "arel-dot-activemodel-attribute-duck-type-vs-is-a"
-status: ready
+status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T02:51:11Z"
+assignee: "arel-dot-activemodel-attribute-duck-type-vs-is-a"
 blocked-by: null
 closed-reason: null
 ---
