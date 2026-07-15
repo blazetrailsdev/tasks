@@ -1,6 +1,6 @@
 ---
 title: "Instrumenter#instrument yields payload, not Event (match Rails)"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4894
 claim: "2026-07-15T19:01:11Z"
 assignee: "converge-instrumenter-yield-payload"
 blocked-by: null
