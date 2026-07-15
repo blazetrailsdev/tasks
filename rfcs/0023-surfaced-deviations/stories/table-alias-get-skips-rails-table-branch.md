@@ -1,6 +1,6 @@
 ---
 title: "TableAlias#get skips Rails' is_a?(Table) branch and duplicates alias resolution"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
