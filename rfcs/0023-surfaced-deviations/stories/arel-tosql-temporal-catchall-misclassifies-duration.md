@@ -1,6 +1,6 @@
 ---
 title: "to-sql's isTimeLike catch-all misclassifies Duration/PlainYearMonth/PlainMonthDay as Time"
-status: ready
+status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T22:21:11Z"
+assignee: "arel-tosql-temporal-catchall-misclassifies-duration"
 blocked-by: null
 closed-reason: null
 ---
