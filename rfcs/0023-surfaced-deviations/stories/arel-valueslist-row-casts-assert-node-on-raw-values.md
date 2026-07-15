@@ -1,6 +1,6 @@
 ---
 title: "arel-valueslist-row-casts-assert-node-on-raw-values"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
