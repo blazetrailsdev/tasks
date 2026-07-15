@@ -1,6 +1,6 @@
 ---
 title: "sqlite3/mysql typeCast should delegate to abstract (else super) instead of duplicating the chain"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
