@@ -1,6 +1,6 @@
 ---
 title: "binary-type-serialize-returns-data-wrapper"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4891
 claim: "2026-07-15T11:21:12Z"
 assignee: "binary-type-serialize-returns-data-wrapper"
 blocked-by: null
