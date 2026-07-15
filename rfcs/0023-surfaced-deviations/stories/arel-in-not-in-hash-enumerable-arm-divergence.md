@@ -1,6 +1,6 @@
 ---
 title: "Decide and converge in/notIn for a plain object: Ruby Hash expands, Object.new casts whole"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
