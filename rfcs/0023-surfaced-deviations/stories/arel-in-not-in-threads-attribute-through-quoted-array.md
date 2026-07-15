@@ -1,6 +1,6 @@
 ---
 title: "arel-in-not-in-threads-attribute-through-quoted-array"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4881
 claim: "2026-07-15T02:11:14Z"
 assignee: "arel-in-not-in-threads-attribute-through-quoted-array"
 blocked-by: null
