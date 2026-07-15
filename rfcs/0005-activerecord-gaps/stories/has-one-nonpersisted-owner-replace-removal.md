@@ -1,6 +1,6 @@
 ---
 title: "has-one-nonpersisted-owner-replace-removal"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4898
 claim: "2026-07-15T22:41:10Z"
 assignee: "has-one-nonpersisted-owner-replace-removal"
 blocked-by: null
