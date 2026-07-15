@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - unify-execute-mutation-into-perform-query
 deps-rfc: []
 est-loc: 60
 priority: 1
