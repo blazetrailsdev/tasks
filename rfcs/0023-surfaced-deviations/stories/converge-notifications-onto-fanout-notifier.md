@@ -1,6 +1,6 @@
 ---
 title: "converge-notifications-onto-fanout-notifier"
-status: claimed
+status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-15T22:51:13Z"
 assignee: "converge-notifications-onto-fanout-notifier"
-blocked-by: null
+blocked-by: "Blocked on converge-static-notifications-instrument-delegates (PR #4897, open and active): that PR rewrites notifications.ts, notifications.test.ts and instrumenter.test.ts — the same files this story must restructure. This story's context assumed the behavioural half had already landed; it has not (the 15 AR sites still hand-roll payload.exception on main). Re-ready once #4897 merges."
 closed-reason: null
 ---
 
