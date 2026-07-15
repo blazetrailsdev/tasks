@@ -1,6 +1,6 @@
 ---
 title: "Remove dead per-adapter Quoting interfaces from mysql/sqlite3 quoting"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
