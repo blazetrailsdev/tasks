@@ -1,6 +1,6 @@
 ---
 title: "Converge the three ActiveModel::Attribute predicates in arel onto instanceof"
-status: ready
+status: claimed
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-15T02:21:13Z"
+assignee: "arel-am-attribute-predicates-diverge-across-sites"
 blocked-by: null
 closed-reason: null
 ---
