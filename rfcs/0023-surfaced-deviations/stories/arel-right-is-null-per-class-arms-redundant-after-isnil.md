@@ -1,6 +1,6 @@
 ---
 title: "rightIsNull's per-class Casted/Quoted arms are dead after isNil() landed"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
