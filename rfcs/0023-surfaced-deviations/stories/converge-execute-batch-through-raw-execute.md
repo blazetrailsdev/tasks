@@ -1,6 +1,6 @@
 ---
 title: "Route executeBatch through rawExecute (Rails execute_batch to raw_execute, not in dirties set)"
-status: claimed
+status: blocked
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-15T11:41:13Z"
 assignee: "converge-execute-batch-through-raw-execute"
-blocked-by: null
+blocked-by: "Mis-specified: premise that rawExecute is a viable batch route is false. rawExecute (abstract/database-statements.ts:1847) funnels withRawConnection -> performQuery, but performQuery is assigned on ONE prototype only (postgresql-adapter.ts:5244). sqlite3 never imports its own exported performQuery (sqlite3/database-statements.ts:161 is dead alongside its dead executeBatch:222); mysql2 calls mysql2PerformQuery inline in a single read path (mysql2-adapter.ts:1207) and never assigns it. So routing the abstract executeBatch (the LIVE path for both sqlite3 and mysql2) through rawExecute hits the throwing abstract performQuery -> NotImplementedError on 2 of 3 adapters. Second blocker: trails has no log() helper at all -- Rails wraps perform_query in log(...) inside raw_execute (abstract/database_statements.rb:552-559), which both emits sql.active_record and creates the notification_payload perform_query mutates. trails instead instruments inside each adapter's execute/executeMutation body (e.g. sqlite3-adapter.ts:568-605). rawExecute therefore emits NO sql.active_record and passes no notificationPayload, so even the PG-only slice would silently drop batch instrumentation -- failing this story's own acceptance criterion and breaking ddl-profile.ts, which deliberately patches only execute/executeMutation as 'the two leaf primitives' that executeBatch re-dispatches through. readonly/preventWrites and materializeTransactions likewise live in executeMutation bodies, not in rawExecute. Prerequisite: unify-execute-mutation-into-perform-query (RFC 0023, status ready) must wire a real performQuery + the log() instrumentation seam on sqlite3 and mysql2 first; only then is rawExecute a funnel that preserves write-check/instrumentation/bind-casting/batch:true. This mirrors converge-ddl-through-execute-drop-dirty-guard, blocked 2026-07-14 for the same root cause. Re-open after the unify story lands."
 closed-reason: null
 ---
 
