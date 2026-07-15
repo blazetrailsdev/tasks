@@ -1,6 +1,6 @@
 ---
 title: "insert-manager-valueslist-test-duplicated-and-diverges"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
