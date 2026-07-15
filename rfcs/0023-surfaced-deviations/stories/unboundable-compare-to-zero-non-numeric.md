@@ -1,6 +1,6 @@
 ---
 title: "unboundable? maps a non-comparable value to +1 where Ruby spaceship-zero is nil"
-status: ready
+status: draft
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
