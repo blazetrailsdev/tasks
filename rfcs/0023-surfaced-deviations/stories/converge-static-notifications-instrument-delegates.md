@@ -1,6 +1,6 @@
 ---
 title: "converge-static-notifications-instrument-delegates"
-status: claimed
+status: in-progress
 updated: 2026-07-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4897
 claim: "2026-07-15T22:31:11Z"
 assignee: "converge-static-notifications-instrument-delegates"
 blocked-by: null
