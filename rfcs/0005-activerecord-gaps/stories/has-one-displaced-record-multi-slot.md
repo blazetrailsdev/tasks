@@ -1,6 +1,6 @@
 ---
 title: "has-one-displaced-record-multi-slot"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4902
 claim: "2026-07-16T13:01:12Z"
 assignee: "has-one-displaced-record-multi-slot"
 blocked-by: null
