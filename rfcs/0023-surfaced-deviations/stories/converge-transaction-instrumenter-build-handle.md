@@ -1,6 +1,6 @@
 ---
 title: "TransactionInstrumenter uses build_handle for a transaction-spanning event"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4906
 claim: "2026-07-16T15:51:11Z"
 assignee: "converge-transaction-instrumenter-build-handle"
 blocked-by: null
