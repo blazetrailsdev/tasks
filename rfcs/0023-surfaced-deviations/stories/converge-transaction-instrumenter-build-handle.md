@@ -1,6 +1,6 @@
 ---
 title: "TransactionInstrumenter uses build_handle for a transaction-spanning event"
-status: in-progress
+status: done
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
