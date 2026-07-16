@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-build-skips-target-load"
-status: ready
+status: claimed
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T13:21:13Z"
+assignee: "has-one-through-build-skips-target-load"
 blocked-by: null
 closed-reason: null
 ---
