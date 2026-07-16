@@ -1,6 +1,6 @@
 ---
 title: "has-changes-to-save-getter-called-as-method"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4900
 claim: "2026-07-16T01:21:13Z"
 assignee: "has-changes-to-save-getter-called-as-method"
 blocked-by: null
