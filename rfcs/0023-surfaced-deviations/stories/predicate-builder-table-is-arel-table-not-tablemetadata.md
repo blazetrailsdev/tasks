@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder holds an Arel Table plus a side _tableContext, not a TableMetadata"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
