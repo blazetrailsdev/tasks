@@ -1,6 +1,6 @@
 ---
 title: "has-one-loaded-target-create-missing-remove-target"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4904
 claim: "2026-07-16T13:11:13Z"
 assignee: "has-one-loaded-target-create-missing-remove-target"
 blocked-by: null
