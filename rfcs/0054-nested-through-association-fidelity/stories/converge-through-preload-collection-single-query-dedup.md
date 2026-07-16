@@ -1,6 +1,6 @@
 ---
 title: "converge-through-preload-collection-single-query-dedup"
-status: ready
+status: claimed
 updated: 2026-07-16
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T18:21:17Z"
+assignee: "converge-through-preload-collection-single-query-dedup"
 blocked-by: null
 closed-reason: null
 ---
