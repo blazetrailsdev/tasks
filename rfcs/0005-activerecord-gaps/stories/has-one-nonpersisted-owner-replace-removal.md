@@ -1,7 +1,7 @@
 ---
 title: "has-one-nonpersisted-owner-replace-removal"
-status: in-progress
-updated: 2026-07-15
+status: done
+updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
