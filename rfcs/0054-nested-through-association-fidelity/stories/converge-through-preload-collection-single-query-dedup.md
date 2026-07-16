@@ -1,7 +1,7 @@
 ---
 title: "converge-through-preload-collection-single-query-dedup"
-status: draft
-updated: 2026-07-08
+status: ready
+updated: 2026-07-16
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
 deps: []
