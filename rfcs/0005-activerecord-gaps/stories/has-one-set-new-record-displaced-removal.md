@@ -1,7 +1,7 @@
 ---
 title: "has-one-set-new-record-displaced-removal"
-status: ready
-updated: 2026-07-15
+status: claimed
+updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T01:31:11Z"
+assignee: "has-one-set-new-record-displaced-removal"
 blocked-by: null
 closed-reason: null
 ---
