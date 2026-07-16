@@ -1,7 +1,7 @@
 ---
 title: "port-instrumenter-start-finish-record-tests"
-status: ready
-updated: 2026-07-15
+status: draft
+updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
