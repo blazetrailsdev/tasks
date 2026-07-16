@@ -1,6 +1,6 @@
 ---
 title: "converge-vestigial-sqlite3-perform-query"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4907
 claim: "2026-07-16T16:01:15Z"
 assignee: "converge-vestigial-sqlite3-perform-query"
 blocked-by: null
