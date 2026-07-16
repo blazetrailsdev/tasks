@@ -1,6 +1,6 @@
 ---
 title: "Event.children nesting is a non-Rails invention — triage keep vs remove"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
