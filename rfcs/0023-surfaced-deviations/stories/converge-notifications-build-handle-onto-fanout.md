@@ -1,6 +1,6 @@
 ---
 title: "Converge Notifications.buildHandle/instrumenter onto the Fanout notifier"
-status: ready
+status: claimed
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T18:11:12Z"
+assignee: "converge-notifications-build-handle-onto-fanout"
 blocked-by: null
 closed-reason: null
 ---
