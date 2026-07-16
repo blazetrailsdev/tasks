@@ -1,6 +1,6 @@
 ---
 title: "Cover method-name and object around dispatch in invokeAround"
-status: blocked
+status: ready
 updated: 2026-07-16
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 60
 priority: 9
 pr: null
-claim: "2026-07-08T16:31:53Z"
-assignee: "cover-method-name-around-dispatch"
-blocked-by: "stale self-claim (no PR ~7-8d, assignee=slug); releasing back to queue"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
