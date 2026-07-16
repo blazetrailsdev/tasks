@@ -68,4 +68,4 @@
 | [0062-transactional-fixtures-burndown](rfcs/0062-transactional-fixtures-burndown/README.md) | Transactional-fixtures burndown: fixtures({}) everywhere | closed | @deanmarano | activerecord |
 | [0063-async-validation-chain](rfcs/0063-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | active | @deanmarano | activemodel, activerecord, activesupport |
 | [0064-ar-test-infra-layout-fidelity](rfcs/0064-ar-test-infra-layout-fidelity/README.md) | AR test-infra layout fidelity | draft | @your-handle | — |
-| [0065-0065-prism-codegen](rfcs/0065-0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | draft | @your-handle | activerecord |
+| [0065-prism-codegen](rfcs/0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | draft | @your-handle | activerecord |

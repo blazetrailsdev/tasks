@@ -1,5 +1,5 @@
 ---
-rfc: "0065-0065-prism-codegen"
+rfc: "0065-prism-codegen"
 title: "Prism-driven deterministic AR Ruby → trails JS codegen"
 status: draft
 created: 2026-07-16
