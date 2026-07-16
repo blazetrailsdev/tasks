@@ -1,6 +1,6 @@
 ---
 title: "has-one-loaded-target-create-missing-remove-target"
-status: in-progress
+status: done
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
