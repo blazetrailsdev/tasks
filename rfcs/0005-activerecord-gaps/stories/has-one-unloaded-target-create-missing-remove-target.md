@@ -1,6 +1,6 @@
 ---
 title: "has_one create over an unloaded target does not detach the prior row"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 4910
 claim: "2026-07-16T16:31:12Z"
 assignee: "has-one-unloaded-target-create-missing-remove-target"
 blocked-by: null
