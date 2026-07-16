@@ -1,7 +1,7 @@
 ---
 title: "Flip ActiveModel validation chain to async; drop strict-sync validate guard"
-status: claimed
-updated: 2026-07-09
+status: blocked
+updated: 2026-07-16
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["lint-guard-unawaited-isvalid"]
@@ -11,7 +11,7 @@ priority: 0
 pr: null
 claim: "2026-07-09T00:52:35Z"
 assignee: "flip-activemodel-validation-chain-async"
-blocked-by: null
+blocked-by: "stale self-claim (no PR ~7-8d, assignee=slug); releasing back to queue"
 closed-reason: null
 ---
 
