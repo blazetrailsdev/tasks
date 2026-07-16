@@ -17,6 +17,21 @@ closed-reason: null
 
 ## Context
 
+> UPDATE (2026-07-16): **largely converged by #4902** ("displaced-record slot
+> becomes an ordered collection"), which rewrote `setNewRecord` to run
+> `remove_target!`'s in-memory half and push the displaced record onto
+> `_displacedRecords`. Re-probed on main after that merge: the loaded-target
+> create path now detaches the old row **at the owner's next `save()`** (nullify
+> arm — `firm_id` nulled, attached count 1), so the original "leaves the old row
+> attached" premise below is stale. The only RESIDUAL is timing: Rails detaches
+> synchronously inside `create_#{name}`, we detach at owner-save, because sync
+> `replace`/`setNewRecord` cannot `await`. That is the same deferred-timing
+> deviation the whole has_one queueWrite design carries, not a lost row. Rescope
+> this story to the create-time-vs-save-time window (or close it as covered by
+> #4902 if that residual is deemed acceptable); the original full-detachment AC
+> is met. The KNOWN GAP doc note this story referenced was dropped when #4901
+> rebased onto #4902.
+
 Raised in review of PR #4901 (`has-one-unloaded-displacement-create-window`) and
 confirmed by probe. Distinct root cause from #4901, which covered only the
 _deferred-assignment_ displacement paths.
