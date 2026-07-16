@@ -49,4 +49,4 @@ because of this eager-load gap.
       (Rails-faithful), keeping `_dedupByPrimaryKey`.
 - [ ] No regression in the has_one/has_many/nested-through, eager-loading, HABTM,
       and through-association-scope suites (esp. `preloading has many through with
-  custom scope`).
+custom scope`).
