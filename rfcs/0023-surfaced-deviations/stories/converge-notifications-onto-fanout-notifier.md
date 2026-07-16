@@ -1,6 +1,6 @@
 ---
 title: "converge-notifications-onto-fanout-notifier"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4913
 claim: "2026-07-16T19:33:01Z"
 assignee: "converge-notifications-onto-fanout-notifier"
 blocked-by: null
