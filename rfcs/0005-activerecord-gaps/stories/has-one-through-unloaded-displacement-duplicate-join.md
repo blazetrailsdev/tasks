@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-unloaded-displacement-duplicate-join"
-status: claimed
+status: done
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4494
 claim: "2026-07-16T16:11:13Z"
 assignee: "has-one-through-unloaded-displacement-duplicate-join"
 blocked-by: null
