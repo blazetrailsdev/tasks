@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder#resolveColumn is invented — Rails normalizes dotted keys instead"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
