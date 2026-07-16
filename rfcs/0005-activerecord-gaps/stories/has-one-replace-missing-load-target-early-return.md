@@ -1,6 +1,6 @@
 ---
 title: "has-one-replace-missing-load-target-early-return"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
