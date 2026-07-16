@@ -1,7 +1,7 @@
 ---
 title: "has-one-unloaded-displacement-create-window"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T01:41:10Z"
+assignee: "has-one-unloaded-displacement-create-window"
 blocked-by: null
 closed-reason: null
 ---
