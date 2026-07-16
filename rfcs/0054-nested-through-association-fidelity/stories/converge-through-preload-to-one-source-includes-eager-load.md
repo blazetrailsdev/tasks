@@ -1,6 +1,6 @@
 ---
 title: "converge-through-preload-to-one-source-includes-eager-load"
-status: ready
+status: claimed
 updated: 2026-07-16
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T19:51:14Z"
+assignee: "converge-through-preload-to-one-source-includes-eager-load"
 blocked-by: null
 closed-reason: null
 ---
