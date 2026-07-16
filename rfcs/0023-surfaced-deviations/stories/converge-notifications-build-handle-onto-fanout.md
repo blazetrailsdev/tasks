@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
-deps: []
+deps:
+  - converge-notifications-onto-fanout-notifier
 deps-rfc: []
 est-loc: 60
 priority: null
