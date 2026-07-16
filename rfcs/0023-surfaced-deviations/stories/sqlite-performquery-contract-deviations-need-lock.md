@@ -1,6 +1,6 @@
 ---
 title: "Converge sqlite _performQuery contract (DDL affected_rows + RETURNING return) via connection lock"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
