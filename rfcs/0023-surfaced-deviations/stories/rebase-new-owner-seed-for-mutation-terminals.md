@@ -1,7 +1,7 @@
 ---
 title: "Rebase new-owner seed for updateAll/deleteAll/touchAll mutation terminals"
-status: in-progress
-updated: 2026-07-14
+status: done
+updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
