@@ -1,6 +1,6 @@
 ---
 title: "arel-aliased-join-tables-should-be-tablealias"
-status: claimed
+status: in-progress
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4916
 claim: "2026-07-16T19:38:24Z"
 assignee: "arel-aliased-join-tables-should-be-tablealias"
 blocked-by: null
