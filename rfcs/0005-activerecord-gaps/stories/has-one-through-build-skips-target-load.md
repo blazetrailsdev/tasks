@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-build-skips-target-load"
-status: in-progress
+status: done
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
