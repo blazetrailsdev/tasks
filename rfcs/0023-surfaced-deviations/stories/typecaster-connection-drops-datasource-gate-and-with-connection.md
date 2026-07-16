@@ -1,6 +1,6 @@
 ---
 title: "TypeCaster::Connection drops the data_source_exists? gate and the with_connection lease (sync/async)"
-status: ready
+status: draft
 updated: 2026-07-16
 rfc: "0023-surfaced-deviations"
 cluster: null
