@@ -1,6 +1,6 @@
 ---
 title: "has-one-displaced-record-multi-slot"
-status: in-progress
+status: done
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
