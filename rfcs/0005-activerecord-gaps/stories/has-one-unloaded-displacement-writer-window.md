@@ -1,6 +1,6 @@
 ---
 title: "has-one-unloaded-displacement-writer-window"
-status: ready
+status: claimed
 updated: 2026-07-16
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-16T16:21:12Z"
+assignee: "has-one-unloaded-displacement-writer-window"
 blocked-by: null
 closed-reason: null
 ---
