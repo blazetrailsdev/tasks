@@ -1,7 +1,7 @@
 ---
 title: "Ignored columns should never populate the instance attribute set (Rails removes them from @attributes)"
-status: in-progress
-updated: 2026-07-16
+status: done
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
