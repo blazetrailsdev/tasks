@@ -1,13 +1,13 @@
 ---
 title: "type-enum-column-declares-as-label-union"
 status: ready
-updated: 2026-07-14
+updated: 2026-07-17
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
