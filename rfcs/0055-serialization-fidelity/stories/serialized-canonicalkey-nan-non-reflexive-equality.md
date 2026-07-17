@@ -1,6 +1,6 @@
 ---
 title: "Serialized#isChanged: distinct NaN Hash values compare unequal (Ruby NaN non-reflexivity)"
-status: in-progress
+status: done
 updated: 2026-07-17
 rfc: "0055-serialization-fidelity"
 cluster: null
