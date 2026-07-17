@@ -1,6 +1,6 @@
 ---
 title: "adapter-connection-failure-error-classification"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T15:21:11Z"
+assignee: "adapter-connection-failure-error-classification"
 blocked-by: null
 ---
 
