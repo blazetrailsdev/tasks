@@ -1,7 +1,7 @@
 ---
 title: "converge-ddl-through-execute-drop-dirty-guard"
 status: ready
-updated: 2026-07-15
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -10,7 +10,7 @@ deps:
   - unify-execute-mutation-into-perform-query-mysql2
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null
