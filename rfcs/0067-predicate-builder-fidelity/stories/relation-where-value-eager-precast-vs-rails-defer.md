@@ -2,7 +2,7 @@
 title: "Relation#where eager pre-cast diverges from Rails' defer-to-bind casting"
 status: draft
 updated: 2026-07-14
-rfc: "0023-surfaced-deviations"
+rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

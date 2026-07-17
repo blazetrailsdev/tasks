@@ -2,7 +2,7 @@
 title: "Unify PredicateBuilder type-resolution cascades; type positive equality bind via resolveBoundType"
 status: ready
 updated: 2026-07-02
-rfc: "0023-surfaced-deviations"
+rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

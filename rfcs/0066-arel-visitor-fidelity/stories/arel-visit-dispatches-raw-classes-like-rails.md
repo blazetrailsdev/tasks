@@ -2,7 +2,7 @@
 title: "Arel Visitor#visit should class-dispatch raw values like Rails, retiring visitNodeOrValue"
 status: draft
 updated: 2026-07-14
-rfc: "0023-surfaced-deviations"
+rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

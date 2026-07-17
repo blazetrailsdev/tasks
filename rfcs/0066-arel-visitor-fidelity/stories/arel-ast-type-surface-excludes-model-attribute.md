@@ -2,7 +2,7 @@
 title: "Arel AST type surface excludes ActiveModel::Attribute, forcing escape casts at the Rails ports"
 status: draft
 updated: 2026-07-15
-rfc: "0023-surfaced-deviations"
+rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

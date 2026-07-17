@@ -2,7 +2,7 @@
 title: "Converge quoteArrayLiteral's type_cast fallback arms onto Rails' TypeError raise"
 status: draft
 updated: 2026-07-14
-rfc: "0023-surfaced-deviations"
+rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

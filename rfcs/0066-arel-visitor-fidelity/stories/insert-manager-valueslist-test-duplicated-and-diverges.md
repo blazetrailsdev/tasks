@@ -2,7 +2,7 @@
 title: "insert-manager-valueslist-test-duplicated-and-diverges"
 status: draft
 updated: 2026-07-15
-rfc: "0023-surfaced-deviations"
+rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

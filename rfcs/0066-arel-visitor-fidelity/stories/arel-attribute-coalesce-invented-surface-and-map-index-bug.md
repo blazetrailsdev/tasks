@@ -2,7 +2,7 @@
 title: "Attribute#coalesce is an invented surface and carries the map(buildQuoted) index bug"
 status: draft
 updated: 2026-07-15
-rfc: "0023-surfaced-deviations"
+rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
