@@ -1,5 +1,5 @@
 ---
-rfc: "0000-arel-visitor-fidelity"
+rfc: "0066-arel-visitor-fidelity"
 title: "Arel visitor & node-surface fidelity"
 status: draft
 created: 2026-07-17
@@ -14,7 +14,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — Arel visitor & node-surface fidelity
+# RFC 0066 — Arel visitor & node-surface fidelity
 
 ## Summary
 
