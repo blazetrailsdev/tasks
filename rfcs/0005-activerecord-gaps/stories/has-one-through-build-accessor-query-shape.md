@@ -1,6 +1,6 @@
 ---
 title: "Pin query shape of build accessor on an unloaded has_one_through"
-status: claimed
+status: done
 updated: 2026-07-17
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4905
 claim: "2026-07-17T01:51:12Z"
 assignee: "has-one-through-build-accessor-query-shape"
 blocked-by: null
