@@ -1,6 +1,6 @@
 ---
 title: "close-composite-pk-through-eager-bypass-for-scoped-source"
-status: claimed
+status: blocked
 updated: 2026-07-17
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-17T01:31:15Z"
 assignee: "close-composite-pk-through-eager-bypass-for-scoped-source"
-blocked-by: null
+blocked-by: "Built on PR #4917 (converge-through-preload-to-one-source-includes-eager-load), still in-progress/unmerged. Acceptance criteria reference the _throughQueryJoinsSource degraded branch and narrowed _eagerLoadBypassesJoinDependency that #4917 introduces; neither exists in main. Cannot proceed without stacking on an unmerged branch."
 closed-reason: null
 ---
 
