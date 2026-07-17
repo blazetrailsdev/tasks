@@ -1,6 +1,6 @@
 ---
 title: "Strengthen 'ignored attribute cast type preferred' test to Rails' select(*) load + assertion"
-status: ready
+status: draft
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
