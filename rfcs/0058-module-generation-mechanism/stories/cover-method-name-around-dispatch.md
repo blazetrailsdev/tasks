@@ -1,7 +1,7 @@
 ---
 title: "Cover method-name and object around dispatch in invokeAround"
-status: in-progress
-updated: 2026-07-16
+status: done
+updated: 2026-07-17
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
