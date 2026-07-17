@@ -1,5 +1,5 @@
 ---
-rfc: "0000-predicate-builder-fidelity"
+rfc: "0067-predicate-builder-fidelity"
 title: "PredicateBuilder fidelity"
 status: draft
 created: 2026-07-17
@@ -13,7 +13,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-# RFC — PredicateBuilder fidelity
+# RFC 0067 — PredicateBuilder fidelity
 
 ## Summary
 
