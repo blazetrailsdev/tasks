@@ -1,6 +1,6 @@
 ---
 title: "Run uniqueness inline in valid?; delete _asyncValidations registry"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T13:51:14Z"
+assignee: "uniqueness-inline-delete-deferred-registry"
 blocked-by: null
 closed-reason: null
 ---
