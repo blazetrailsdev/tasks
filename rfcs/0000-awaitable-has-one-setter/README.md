@@ -50,7 +50,7 @@ Trails' `HasOneAssociation` carries two writer paths
    (`packages/activerecord/src/associations/builder/has-one.ts` ~L113,
    `defineWriters` → `set` → `association(name).queueWrite(value)`) and from
    mass-assignment (`packages/activerecord/src/attribute-assignment.ts`
-   ~L171-191). It runs the in-memory `replace` and then, for a persisted
+   ~L186-193). It runs the in-memory `replace` and then, for a persisted
    owner, records what must later be undone in the DB: a loaded displaced
    record is pushed onto `_displacedRecords` (~L37); an _unloaded_ slot sets
    `_removeDisplacedFromDb` (~L48) so the pre-existing row can be re-queried
@@ -134,7 +134,7 @@ await owner.setAccount(null);
 No new semantics — the wrapper adds nothing beyond delegation, so fidelity
 review stays anchored on `writer` ↔ `replace`. For **collections**, no new
 verbs are invented: the Rails-named awaitable methods that already exist
-(`replace`, `concat` — which `<<` aliases — `destroy`, `destroyAll`,
+(`replace`, `concat` / `push` — Rails' `<<` — `destroy`, `destroyAll`,
 `delete`) are the sanctioned surface.
 
 ### 2. The native `=` setter: in-memory for new owners, throws for persisted
@@ -154,7 +154,7 @@ verbs are invented: the Rails-named awaitable methods that already exist
   `await owner.association("account").writer(x)`).
   ```
 
-  Mass-assignment (`attribute-assignment.ts` ~L171-191, the `hasOne` arm
+  Mass-assignment (`attribute-assignment.ts` ~L186-193, the `hasOne` arm
   routing to `queueWrite`) gets the same treatment: `assignAttributes` /
   `update` reaching a has_one key on a persisted owner throws the same
   error. (Nested-attributes flows route through their own machinery, not

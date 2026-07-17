@@ -18,7 +18,7 @@ blocked-by: null
 
 The native `=` setter (`packages/activerecord/src/associations/builder/has-one.ts:113`,
 `defineWriters` → `set` → `queueWrite`) and the mass-assignment hasOne arm
-(`packages/activerecord/src/attribute-assignment.ts:171-191`) currently defer
+(`packages/activerecord/src/attribute-assignment.ts:186-193`) currently defer
 all DB work of a persisted-owner assignment to the owner's next `save()` via
 `HasOneAssociation#queueWrite`
 (`packages/activerecord/src/associations/has-one-association.ts:70-107`).
@@ -66,4 +66,4 @@ close this story — the throw is the design.
 
 ## Verification
 
-`pnpm vitest run packages/activerecord/src/associations/has-one-associations.test.ts packages/activerecord/src/attribute-assignment.test.ts`
+`pnpm vitest run packages/activerecord/src/associations/has-one-associations.test.ts packages/activerecord/src/attribute-methods.test.ts`

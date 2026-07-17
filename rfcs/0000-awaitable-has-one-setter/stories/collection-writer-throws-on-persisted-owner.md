@@ -54,4 +54,4 @@ setter is already faithful.
 
 ## Verification
 
-`pnpm vitest run packages/activerecord/src/associations/has-many-associations.test.ts packages/activerecord/src/associations/collection-association.test.ts`
+`pnpm vitest run packages/activerecord/src/associations/has-many-associations.test.ts packages/activerecord/src/associations/collection-proxy.test.ts`
