@@ -1,7 +1,7 @@
 ---
 title: "has-one-unloaded-displacement-create-window"
-status: in-progress
-updated: 2026-07-16
+status: closed
+updated: 2026-07-17
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 4901
-claim: "2026-07-16T01:41:10Z"
-assignee: "has-one-unloaded-displacement-create-window"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by the has_one-awaitable-setter RFC (being drafted). Maintainer decision on the has_one displacement cluster (#4899/#4901/#4908/#4910): the queueWrite deferral machinery these PRs patch is being retired wholesale — the awaitable writer path becomes the sanctioned mutation surface and the sync = setter will error on a persisted owner, so the two-FK-matching-rows race never arises. PR #4901 closed unmerged; its diagnosis is folded into the new RFC. Not abandoned."
 ---
 
 ## Context
