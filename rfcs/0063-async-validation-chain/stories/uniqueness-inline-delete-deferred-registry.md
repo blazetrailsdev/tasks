@@ -1,6 +1,6 @@
 ---
 title: "Run uniqueness inline in valid?; delete _asyncValidations registry"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["flip-activerecord-isvalid-async"]
 deps-rfc: []
 est-loc: 350
 priority: 3
-pr: null
+pr: 4926
 claim: "2026-07-17T13:51:14Z"
 assignee: "uniqueness-inline-delete-deferred-registry"
 blocked-by: null
