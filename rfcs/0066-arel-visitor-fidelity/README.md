@@ -1,7 +1,7 @@
 ---
 rfc: "0066-arel-visitor-fidelity"
 title: "Arel visitor & node-surface fidelity"
-status: draft
+status: active
 created: 2026-07-17
 updated: 2026-07-17
 owner: "@deanmarano"

@@ -69,4 +69,4 @@
 | [0063-async-validation-chain](rfcs/0063-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | active | @deanmarano | activemodel, activerecord, activesupport |
 | [0064-ar-test-infra-layout-fidelity](rfcs/0064-ar-test-infra-layout-fidelity/README.md) | AR test-infra layout fidelity | draft | @your-handle | — |
 | [0065-prism-codegen](rfcs/0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | closed | @your-handle | activerecord |
-| [0066-arel-visitor-fidelity](rfcs/0066-arel-visitor-fidelity/README.md) | Arel visitor & node-surface fidelity | draft | @deanmarano | activerecord |
+| [0066-arel-visitor-fidelity](rfcs/0066-arel-visitor-fidelity/README.md) | Arel visitor & node-surface fidelity | active | @deanmarano | activerecord |
