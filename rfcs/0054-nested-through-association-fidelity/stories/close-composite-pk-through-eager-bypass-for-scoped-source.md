@@ -1,6 +1,6 @@
 ---
 title: "close-composite-pk-through-eager-bypass-for-scoped-source"
-status: in-progress
+status: done
 updated: 2026-07-17
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
