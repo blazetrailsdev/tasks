@@ -1,7 +1,7 @@
 ---
 title: "enum-friendly-alias-intra-enum-conflict"
-status: draft
-updated: 2026-07-08
+status: ready
+updated: 2026-07-17
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
