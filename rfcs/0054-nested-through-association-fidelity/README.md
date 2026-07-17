@@ -1,9 +1,9 @@
 ---
 rfc: "0054-nested-through-association-fidelity"
 title: "Nested/through association direct-load fidelity"
-status: active
+status: closed
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-17
 owner: "@deanmarano"
 packages:
   - "activerecord"
