@@ -1,6 +1,6 @@
 ---
 title: "unskip-content-uniqueness-shared-db-flake"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: 4927
 claim: "2026-07-17T14:11:15Z"
 assignee: "unskip-content-uniqueness-shared-db-flake"
 blocked-by: null
