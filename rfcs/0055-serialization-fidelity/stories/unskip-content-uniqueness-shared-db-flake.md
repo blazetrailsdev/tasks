@@ -1,13 +1,13 @@
 ---
 title: "unskip-content-uniqueness-shared-db-flake"
 status: ready
-updated: 2026-07-08
+updated: 2026-07-17
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
