@@ -1,6 +1,6 @@
 ---
 title: "async-strict-validators-raise"
-status: ready
+status: done
 updated: 2026-07-17
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4926
 claim: null
 assignee: null
 blocked-by: null
