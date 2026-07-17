@@ -1,6 +1,6 @@
 ---
 title: "query-cache-disabled-gate-on-config-not-maxsize"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4932
 claim: "2026-07-17T15:31:13Z"
 assignee: "query-cache-disabled-gate-on-config-not-maxsize"
 blocked-by: null
