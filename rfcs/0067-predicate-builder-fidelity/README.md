@@ -1,7 +1,7 @@
 ---
 rfc: "0067-predicate-builder-fidelity"
 title: "PredicateBuilder fidelity"
-status: draft
+status: active
 created: 2026-07-17
 updated: 2026-07-17
 owner: "@deanmarano"
