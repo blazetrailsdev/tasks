@@ -1,7 +1,7 @@
 ---
 title: "Widen defineEnum's options to match _enum (scopes/instanceMethods/validate/default)"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-17
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
