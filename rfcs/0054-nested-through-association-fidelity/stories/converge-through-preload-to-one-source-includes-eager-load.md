@@ -28,25 +28,47 @@ kind:
 
 - a **to-many** source (collection / nested through) is joined via
   `includes!`/`references!` (eager-load, JoinDependency PK-dedup) — matches Rails.
-- a **to-one** source (belongs*to / has_one, e.g. a HABTM's belongs_to) is
-  joined via a plain `leftOuterJoins` instead, because trails' eager-load can't
-  join that reflection: `includes("<habtm belongs_to>").references("developers")`
-  on the anonymous `HABTM*\*`join model returns`\_eagerLoadingForSql() === true`but`\_executeEagerLoad`falls back to preload (no JOIN), leaving the copied`where("developers.name = ?")`against an unjoined table →`no such column`.
-Reproduced by `EagerAssociationTest > preloading has many through with custom
-  scope` (`developersNamedDavidWithHashConditions`).
+- a **to-one** source (belongs_to / has_one, e.g. a HABTM's belongs_to) is
+  joined via a plain `leftOuterJoins` instead.
+
+### Root cause (verified)
+
+The JoinDependency is NOT the problem — `jd.addAssociationSpec("<habtm
+belongs_to>")` succeeds and `applyJoinDependency(true).toSql()` emits the correct
+`LEFT OUTER JOIN "developers" ON ...`. The failure is in the `.toArray()`
+eager-load path: `Relation#_eagerLoadBypassesJoinDependency`
+(`packages/activerecord/src/relation.ts:3104`) returns true for
+`Array.isArray(basePk)` — i.e. for ANY base model with a **composite primary
+key** — and then `_executeEagerLoad` degrades to plain SQL + separate preload,
+never applying the eager JOIN. A HABTM join model (`developers_projects`) always
+has a composite PK (`["project_id","developer_id"]`), so its source `includes`
+is copied onto an unjoined query and the copied `where("developers.name = ?")`
+raises `no such column`. Reproduced by `EagerAssociationTest > preloading has
+many through with custom scope` (`developersNamedDavidWithHashConditions`).
+
+The composite-PK bypass exists because the eager LIMIT/OFFSET id-materialization
+(`distinct_relation_for_primary_key` / `_materializeLimitedIds`) has no
+composite-PK support (0023 deviation `composite-pk-distinct-relation-
+materialization`). But that limitation only bites a **limited** eager load — a
+non-limited composite-PK eager load JOINs fine (verified: narrowing the bypass to
+`this._ctes.length > 0 || !this._fromClause.isEmpty()` makes the HABTM
+`includes` resolve, breaking only `preloading has_many with cpk`, which is the
+limited/pluck path that genuinely needs the materialization).
 
 Results are correct today (the to-one join adds no rows; `_dedupByPrimaryKey`
 neutralizes any nested-include fan-out), but the two-mode branch survives only
-because of this eager-load gap.
+because of this bypass.
 
 ## Acceptance criteria
 
-- [ ] `includes(<belongs_to on an anonymous HABTM_* join model>).references(<table>)`
-      followed by `.toArray()` applies the eager LEFT OUTER JOIN (does not fall
-      back to preload), so a copied `where("<source_table>.col = ?")` resolves.
+- [ ] Narrow `_eagerLoadBypassesJoinDependency` so a composite base PK only
+      bypasses the eager JoinDependency when the query actually needs the
+      composite-PK id-materialization (a LIMIT/OFFSET over a to-many eager join),
+      not unconditionally — so a non-limited composite-PK eager `includes`
+      applies the LEFT OUTER JOIN. Keep `preloading has_many with cpk` green.
 - [ ] With that fixed, delete the `sourceIsToMany` branch in
       `_buildThroughScope`: join every source kind via `includes!`/`references!`
       (Rails-faithful), keeping `_dedupByPrimaryKey`.
 - [ ] No regression in the has_one/has_many/nested-through, eager-loading, HABTM,
-      and through-association-scope suites (esp. `preloading has many through with
-  custom scope`).
+      composite-PK, and through-association-scope suites (esp. `preloading has
+    many through with custom scope` and `preloading has_many with cpk`).
