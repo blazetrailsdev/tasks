@@ -1,7 +1,7 @@
 ---
 title: "stdlib-idiom-mapping"
-status: draft
-updated: 2026-07-16
+status: closed
+updated: 2026-07-17
 rfc: "0065-prism-codegen"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Spike PR #4912 closed — deterministic codegen not useful enough for the backlog; direction abandoned."
 ---
 
 ## Context
