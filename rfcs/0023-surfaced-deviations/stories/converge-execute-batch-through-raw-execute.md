@@ -1,11 +1,12 @@
 ---
 title: "Route executeBatch through rawExecute (Rails execute_batch to raw_execute, not in dirties set)"
 status: blocked
-updated: 2026-07-15
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
-  - unify-execute-mutation-into-perform-query
+  - unify-execute-mutation-into-perform-query-postgresql
+  - unify-execute-mutation-into-perform-query-mysql2
 deps-rfc: []
 est-loc: 60
 priority: 1
