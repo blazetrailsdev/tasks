@@ -1,7 +1,7 @@
 ---
 title: "belongs_to default hoisted ahead of before_validation queue (sync-chain deviation)"
-status: blocked
-updated: 2026-06-30
+status: ready
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-06-30T16:56:44Z"
-assignee: "belongs-to-default-runs-at-before-validation-queue-position"
-blocked-by: "BLOCKED-ON-ARCHITECTURE: requires an async-capable validation callback path. The sync-only-validations architecture was re-ratified (sibling story async-before-validation-sync-chain / PR #3495 kept validation synchronous and converged at source; validations.ts:142). Unlike RichPerson's unfaithful-async artifact, the belongs_to default block genuinely can be async (() => Developer.first() returns a Promise; Ruby has sync DB I/O, JS does not), so it cannot be converged at source either. Per the story's own AC, do NOT ratify the hoist; no-op until the sync-only decision is revisited."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
