@@ -1,6 +1,6 @@
 ---
 title: "Teach columns_for_distinct/materializeLimitedIds composite keys; drop the LIMIT+collection composite-PK eager bypass"
-status: ready
+status: draft
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -42,5 +42,5 @@ the pluck limit/offset composite case and points at this deviation.
       of raising through `applyJoinDependency()`.
 - [ ] The `hasLimitOrOffset && !limitable` composite carve-out is removed from
       `_eagerLoadBypassesJoinDependency`; `EagerAssociationTest > preloading
-  has_many with cpk` JOINs (green).
+has_many with cpk` JOINs (green).
 - [ ] No regression in eager, CPK-eager, pluck, and through suites.
