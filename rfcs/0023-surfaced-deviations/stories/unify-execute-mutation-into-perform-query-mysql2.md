@@ -1,14 +1,14 @@
 ---
 title: "unify-execute-mutation-into-perform-query-mysql2"
 status: ready
-updated: 2026-07-15
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
   - unify-execute-mutation-into-perform-query-postgresql
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null
