@@ -1,7 +1,7 @@
 ---
 title: "has-one-unloaded-displacement-writer-window"
-status: in-progress
-updated: 2026-07-16
+status: closed
+updated: 2026-07-17
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 4908
-claim: "2026-07-16T16:21:12Z"
-assignee: "has-one-unloaded-displacement-writer-window"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by the has_one-awaitable-setter RFC. Maintainer decision on the displacement cluster (#4899/#4901/#4908/#4910): retire the sync-setter deferral machinery entirely rather than patch its flush points; PR #4908 closed unmerged as the code it adds is the deviation being removed."
 ---
 
 ## Context
