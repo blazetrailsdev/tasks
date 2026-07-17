@@ -1,6 +1,6 @@
 ---
 title: "dirties_query_cache must clear all current-thread pools, not just the local connection"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4921
 claim: "2026-07-17T10:51:12Z"
 assignee: "query-cache-dirties-clears-all-current-thread-pools"
 blocked-by: null
