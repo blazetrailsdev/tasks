@@ -2,7 +2,7 @@
 title: "tasks CLI: serve reads from the origin/main tree — no reset --hard, no lock on reads"
 status: draft
 updated: 2026-07-08
-rfc: "0023-surfaced-deviations"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []

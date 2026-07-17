@@ -2,7 +2,7 @@
 title: "website: cover scripts/*.test.ts in a tsconfig so eslint project-service can lint it"
 status: draft
 updated: 2026-06-23
-rfc: "0023-surfaced-deviations"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
