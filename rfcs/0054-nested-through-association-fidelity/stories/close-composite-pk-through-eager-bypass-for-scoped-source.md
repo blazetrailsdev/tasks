@@ -1,6 +1,6 @@
 ---
 title: "close-composite-pk-through-eager-bypass-for-scoped-source"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T13:55:26Z"
+assignee: "close-composite-pk-through-eager-bypass-for-scoped-source"
 blocked-by: null
 closed-reason: null
 ---
