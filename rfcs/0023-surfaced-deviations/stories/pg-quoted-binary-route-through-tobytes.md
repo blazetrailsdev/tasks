@@ -1,7 +1,7 @@
 ---
 title: "Route PG quotedBinary through the shared toBytes union"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T02:01:14Z"
+assignee: "pg-quoted-binary-route-through-tobytes"
 blocked-by: null
 closed-reason: null
 ---
