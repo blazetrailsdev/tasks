@@ -1,7 +1,7 @@
 ---
 title: "has_one create over an unloaded target does not detach the prior row"
-status: in-progress
-updated: 2026-07-16
+status: closed
+updated: 2026-07-17
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: 4910
-claim: "2026-07-16T16:31:12Z"
-assignee: "has-one-unloaded-target-create-missing-remove-target"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by the has_one-awaitable-setter RFC (maintainer decision on the has_one displacement cluster #4899/#4901/#4908/#4910). PR #4910 closed unmerged: the deferral machinery it patches (queueWrite/_removeDisplacedFromDb/_displacedRecords/removeDisplaced + unordered-LIMIT-1 fidelity path) is being retired wholesale in favor of an awaitable setter that errors on a persisted owner. Not abandoned — folded into the new RFC."
 ---
 
 ## Context
