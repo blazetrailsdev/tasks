@@ -1,6 +1,6 @@
 ---
 title: "Route PG quotedBinary through the shared toBytes union"
-status: in-progress
+status: done
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
