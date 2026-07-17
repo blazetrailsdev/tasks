@@ -1,6 +1,6 @@
 ---
 title: "enum-friendly-alias-intra-enum-conflict"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T14:54:06Z"
+assignee: "enum-friendly-alias-intra-enum-conflict"
 blocked-by: null
 closed-reason: null
 ---
