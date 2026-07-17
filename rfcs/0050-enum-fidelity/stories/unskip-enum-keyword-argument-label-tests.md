@@ -1,6 +1,6 @@
 ---
 title: "Un-skip the two enum keyword-argument label tests (stale seeding skip)"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0050-enum-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T14:41:12Z"
+assignee: "unskip-enum-keyword-argument-label-tests"
 blocked-by: null
 closed-reason: null
 ---
