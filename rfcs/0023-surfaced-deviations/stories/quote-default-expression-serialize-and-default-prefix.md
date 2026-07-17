@@ -1,6 +1,6 @@
 ---
 title: "quote-default-expression-serialize-and-default-prefix"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4934
 claim: "2026-07-17T15:51:13Z"
 assignee: "quote-default-expression-serialize-and-default-prefix"
 blocked-by: null
