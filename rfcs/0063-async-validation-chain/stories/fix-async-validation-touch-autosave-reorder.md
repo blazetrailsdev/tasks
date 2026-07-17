@@ -1,6 +1,6 @@
 ---
 title: "fix-async-validation-touch-autosave-reorder"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4919
 claim: "2026-07-17T01:41:14Z"
 assignee: "fix-async-validation-touch-autosave-reorder"
 blocked-by: null
