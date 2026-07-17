@@ -1,6 +1,6 @@
 ---
 title: "Compile CallbackObject to ObjectCall honouring chain scope"
-status: ready
+status: claimed
 updated: 2026-07-17
 rfc: "0058-module-generation-mechanism"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-17T01:21:11Z"
+assignee: "callback-object-compiles-to-objectcall"
 blocked-by: null
 closed-reason: null
 ---
