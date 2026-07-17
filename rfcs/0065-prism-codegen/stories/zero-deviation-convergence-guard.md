@@ -1,6 +1,6 @@
 ---
 title: "zero-deviation-convergence-guard"
-status: draft
+status: closed
 updated: 2026-07-17
 rfc: "0065-prism-codegen"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Spike PR #4912 closed — deterministic codegen not useful enough for the backlog; direction abandoned."
 ---
 
 ## Context
