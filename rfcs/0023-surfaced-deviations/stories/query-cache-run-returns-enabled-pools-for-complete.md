@@ -1,6 +1,6 @@
 ---
 title: "query-cache-run-returns-enabled-pools-for-complete"
-status: claimed
+status: in-progress
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4933
 claim: "2026-07-17T15:41:11Z"
 assignee: "query-cache-run-returns-enabled-pools-for-complete"
 blocked-by: null
