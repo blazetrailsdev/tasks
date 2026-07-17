@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-17
 rfc: "0054-nested-through-association-fidelity"
 cluster: null
-deps: []
+deps:
+  - converge-through-preload-to-one-source-includes-eager-load
 deps-rfc: []
 est-loc: null
 priority: null
