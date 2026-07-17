@@ -1,7 +1,7 @@
 ---
 title: "arel-aliased-join-tables-should-be-tablealias"
-status: in-progress
-updated: 2026-07-16
+status: done
+updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
