@@ -202,6 +202,19 @@ goes only after the new surface and erroring setter are in:
   handling (`detachDisplacedTarget` ~L457, `needsTargetLoadForBuild`,
   `loadTargetForBuild`) is _kept_ — it is the port of `replace`'s inline
   `remove_target!` on the build/create path and is exactly the Rails shape.
+- The retirement also absorbs the pre-existing draft story
+  `has-one-replace-missing-load-target-early-return`
+  (`rfcs/0005-activerecord-gaps/stories/`): Rails' `return target unless
+load_target || record` (`has_one_association.rb:61`) was never ported
+  precisely because the sync `queueWrite` path could not `await` the load —
+  `_removeDisplacedFromDb` (and the through's `mightNeedDelete`) exist as its
+  stand-ins, as that story itself observes. Once the sync persisted-owner
+  path is gone, the surviving `replace` callers can carry the faithful early
+  return: `writeImmediate` already does the leading `loadTarget`, and the
+  new-owner in-memory path has nothing to load. Porting the early return
+  (including not marking a never-loaded association loaded on
+  `replace(null)`) is folded into `retire-has-one-displacement-machinery`,
+  and the 0005 story is closed as superseded when that story lands.
 
 End state: one persistence path (`writer` ≙ `replace`), one autosave path
 (`autosaveHasOne` ≙ `save_has_one_association`, no drain), matching Rails
@@ -291,8 +304,10 @@ new surface + erroring setter are in):
    persisted owners. Migrate in-repo callers. (deps: 1)
 3. `retire-has-one-displacement-machinery` — remove `queueWrite`,
    `_displacedRecords`, `_removeDisplacedFromDb`, `removeDisplaced`, the
-   `autosaveHasOne` drain, and the #4901/#4908 flush points; grep-gate zero.
-   (deps: 2)
+   `autosaveHasOne` drain, and the #4901/#4908 flush points; port the
+   `replace` early return, absorbing 0005's
+   `has-one-replace-missing-load-target-early-return` (closed as superseded
+   when this lands); grep-gate zero. (deps: 2)
 4. `has-one-through-pending-replace-persisted-immediate` — through
    `queueWrite` override removed; persisted-owner replace goes immediate via
    `persistReplace`; new-owner deferral kept (Rails-faithful). (deps: 3)
@@ -314,3 +329,18 @@ new surface + erroring setter are in):
   re-expressed as: persisted-owner `=` throws (deterministically), and the
   awaitable path removes the displaced row inline — no order-dependent
   assertions remain.
+
+## Open questions
+
+None. The candidate questions were resolved in this draft: the ergonomic
+tradeoff of throwing on legal-in-Rails syntax (Design §2 — accepted,
+loud-and-correct over order-undefined data loss), the belongs_to /
+collection scope calls (Design §5), and the fate of the overlapping 0005
+early-return story (Design §3 — absorbed into
+`retire-has-one-displacement-machinery`).
+
+## Changelog
+
+- 2026-07-17: initial RFC. Supersedes PRs #4899 / #4901 / #4908 / #4910
+  (closed unmerged; their stories closed as superseded) and absorbs
+  0005's `has-one-replace-missing-load-target-early-return`.

@@ -38,6 +38,16 @@ Rails reference: `HasOneAssociation#replace`
 has exactly one path; `save_has_one_association` (autosave) has no
 displacement drain. End state matches file-for-file.
 
+This story also absorbs 0005's draft
+`has-one-replace-missing-load-target-early-return`: Rails' `return target
+unless load_target || record` (`has_one_association.rb:61`) was dropped
+because the sync `queueWrite` could not await the load —
+`_removeDisplacedFromDb` (and the through's `mightNeedDelete`) are its
+stand-ins, as that story observes. With the sync persisted-owner path gone,
+port the early return into the converged `replace`: `writeImmediate` already
+runs the leading `loadTarget`, and `replace(null)` on a never-loaded
+association must no longer mark it loaded via `loadedBang`.
+
 ## Acceptance criteria
 
 - [ ] `git grep -nE "queueWrite|_displacedRecords|_removeDisplacedFromDb|removeDisplaced" packages/activerecord/src`
@@ -49,6 +59,14 @@ displacement drain. End state matches file-for-file.
       #4901/#4908-era trails-only window tests) are re-expressed against the
       new surface or deleted with rationale — no order-dependent two-row
       assertions remain.
+- [ ] Rails' `replace` early return (`has_one_association.rb:61`) ported:
+      `replace(null)` on a never-loaded association returns without marking
+      it loaded, and the `record?.hasChangesToSave` guard stops carrying the
+      un-ported clause (see 0005's
+      `has-one-replace-missing-load-target-early-return`, which this
+      supersedes).
+- [ ] 0005's `has-one-replace-missing-load-target-early-return` closed via
+      `pnpm tasks close` with a superseded-by reason naming this story.
 - [ ] has_one / autosave / nested-attributes suites green.
 
 ## Verification
