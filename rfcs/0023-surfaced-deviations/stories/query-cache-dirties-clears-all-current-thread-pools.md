@@ -1,6 +1,6 @@
 ---
 title: "dirties_query_cache must clear all current-thread pools, not just the local connection"
-status: in-progress
+status: done
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
