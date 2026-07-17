@@ -1,7 +1,7 @@
 ---
 title: "acceptance/confirmation use validator setupBang via validatesWith (drop helper attribute() decls)"
-status: blocked
-updated: 2026-07-06
+status: ready
+updated: 2026-07-17
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: "2026-07-06T17:38:54Z"
-assignee: "acceptance-confirmation-setup-bang-via-validates-with"
-blocked-by: "Gated on converge-construction-unknown-attribute-strict (constructor setter-dispatch), which is still ready/unmerged. Constructor (model.ts:1576-1600) still mass-assigns via writeAttribute directly, so a prototype attr_writer accessor from setupBang is bypassed at construction. Dropping the helper attribute() decls now would break construction of virtual attrs (passwordConfirmation). Unblock once that story merges."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
