@@ -1,6 +1,6 @@
 ---
 title: "Declared attribute() with no default seeds an initialized slot where Rails leaves it uninitialized"
-status: ready
+status: draft
 updated: 2026-07-17
 rfc: "0023-surfaced-deviations"
 cluster: null
