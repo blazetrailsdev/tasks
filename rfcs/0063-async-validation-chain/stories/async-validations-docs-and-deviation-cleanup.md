@@ -1,13 +1,13 @@
 ---
 title: "Remove sync-only deviation prose; verify Rails parity"
 status: ready
-updated: 2026-07-07
+updated: 2026-07-17
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: ["uniqueness-inline-delete-deferred-registry"]
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null
