@@ -1,7 +1,7 @@
 ---
 title: "rails-error-parity: rename ActiveModelRangeError to RangeError (un-exclude errors.ts)"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-18
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-18T18:51:12Z"
+assignee: "rails-error-parity-activemodel-rangeerror-rename"
 blocked-by: null
 closed-reason: null
 ---
