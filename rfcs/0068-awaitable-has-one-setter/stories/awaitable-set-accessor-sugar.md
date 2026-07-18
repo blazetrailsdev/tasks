@@ -1,6 +1,6 @@
 ---
 title: "Generate awaitable set#{Name} accessor for has_one (incl. through)"
-status: claimed
+status: in-progress
 updated: 2026-07-18
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: null
+pr: 4938
 claim: "2026-07-18T18:41:15Z"
 assignee: "awaitable-set-accessor-sugar"
 blocked-by: null
