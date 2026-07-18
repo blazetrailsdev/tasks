@@ -1,7 +1,7 @@
 ---
 title: "type-enum-column-declares-as-label-union"
-status: in-progress
-updated: 2026-07-17
+status: done
+updated: 2026-07-18
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
