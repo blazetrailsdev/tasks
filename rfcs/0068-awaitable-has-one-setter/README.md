@@ -1,5 +1,5 @@
 ---
-rfc: "0000-awaitable-has-one-setter"
+rfc: "0068-awaitable-has-one-setter"
 title: "Awaitable has_one setter: retire the deferred-displacement machinery"
 status: draft
 created: 2026-07-17
@@ -11,7 +11,7 @@ clusters:
   - "rails-deviation"
 ---
 
-# RFC — Awaitable has_one setter: retire the deferred-displacement machinery
+# RFC 0068 — Awaitable has_one setter: retire the deferred-displacement machinery
 
 ## Summary
 

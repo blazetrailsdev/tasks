@@ -2,7 +2,7 @@
 title: "has_one_through: persisted-owner replace goes immediate; keep new-owner deferral"
 status: ready
 updated: 2026-07-17
-rfc: "0000-awaitable-has-one-setter"
+rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["retire-has-one-displacement-machinery"]
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "has_one native = setter: in-memory for new owners, throws for persisted"
 status: ready
 updated: 2026-07-17
-rfc: "0000-awaitable-has-one-setter"
+rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["awaitable-set-accessor-sugar"]
 deps-rfc: []

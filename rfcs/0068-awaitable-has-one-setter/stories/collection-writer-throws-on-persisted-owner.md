@@ -2,7 +2,7 @@
 title: "Collection = / ids= assignment throws on persisted owners; retire persisted-owner _pendingReplace"
 status: ready
 updated: 2026-07-17
-rfc: "0000-awaitable-has-one-setter"
+rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["retire-has-one-displacement-machinery"]
 deps-rfc: []
