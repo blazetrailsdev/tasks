@@ -38,7 +38,7 @@ Infinity)` reads as a magic sentinel where Rails passes `nil`.
 - [ ] `Store#_maxSize` becomes `number | null`, `nil`/null meaning unbounded,
       matching Rails.
 - [ ] Eviction gates on `this._maxSize != null && this._map.size >=
-  this._maxSize` (Rails `query_cache.rb:75`); drop the `<= 0` sentinel.
+this._maxSize` (Rails `query_cache.rb:75`); drop the `<= 0` sentinel.
 - [ ] `get queryCache()` passes `this._queryCacheMaxSize` straight through
       (null → null), removing the `?? Number.POSITIVE_INFINITY` shim.
 - [ ] Existing query-cache.test.ts assertions stay Rails-verbatim (null for
