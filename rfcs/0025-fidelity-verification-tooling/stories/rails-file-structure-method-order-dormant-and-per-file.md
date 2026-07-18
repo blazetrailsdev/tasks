@@ -1,7 +1,7 @@
 ---
 title: "rails-file-structure-method-order-dormant-and-per-file"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-18
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-18T19:21:11Z"
+assignee: "rails-file-structure-method-order-dormant-and-per-file"
 blocked-by: null
 closed-reason: null
 ---
