@@ -1,6 +1,6 @@
 ---
 title: "unify-execute-mutation-into-perform-query-postgresql"
-status: claimed
+status: in-progress
 updated: 2026-07-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: null
+pr: 4939
 claim: "2026-07-18T18:30:36Z"
 assignee: "unify-execute-mutation-into-perform-query-postgresql"
 blocked-by: null
