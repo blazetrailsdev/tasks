@@ -1,7 +1,7 @@
 ---
 title: "Non-finite numeric quoting is PG-only in Rails — stop mirroring it in MySQL and the arel default quoters"
-status: ready
-updated: 2026-07-15
+status: claimed
+updated: 2026-07-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-18T13:51:13Z"
+assignee: "quote-non-finite-numerics-are-pg-only"
 blocked-by: null
 closed-reason: null
 ---
