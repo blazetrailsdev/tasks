@@ -1,6 +1,6 @@
 ---
 title: "Rebase new-owner seed for mutation terminals invoked on the CollectionProxy itself"
-status: claimed
+status: in-progress
 updated: 2026-07-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4943
 claim: "2026-07-18T23:21:14Z"
 assignee: "rebase-new-owner-seed-for-collection-proxy-mutations"
 blocked-by: null
