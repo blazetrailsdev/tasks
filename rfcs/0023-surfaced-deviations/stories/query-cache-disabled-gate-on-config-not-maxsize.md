@@ -1,7 +1,7 @@
 ---
 title: "query-cache-disabled-gate-on-config-not-maxsize"
-status: in-progress
-updated: 2026-07-17
+status: done
+updated: 2026-07-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
