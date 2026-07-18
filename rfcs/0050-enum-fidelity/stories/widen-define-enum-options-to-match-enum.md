@@ -1,14 +1,14 @@
 ---
 title: "Widen defineEnum's options to match _enum (scopes/instanceMethods/validate/default)"
-status: claimed
-updated: 2026-07-17
+status: in-progress
+updated: 2026-07-18
 rfc: "0050-enum-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 25
 priority: 8
-pr: null
+pr: 4937
 claim: "2026-07-17T14:51:14Z"
 assignee: "widen-define-enum-options-to-match-enum"
 blocked-by: null
