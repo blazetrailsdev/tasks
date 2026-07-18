@@ -1,7 +1,7 @@
 ---
 title: "has-one-replace-missing-load-target-early-return"
 status: draft
-updated: 2026-07-16
+updated: 2026-07-17
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -84,3 +84,13 @@ rather than in isolation.
 - [ ] `replace(null)` on a never-loaded association no longer marks it loaded, or
       the deviation is justified from the vendored source.
 - [ ] No regression in the has_one / has_one_through / autosave suites.
+
+## Notes
+
+Superseded-in-flight by the awaitable-has_one-setter RFC
+(`rfcs/0000-awaitable-has-one-setter`, number assigned at merge): its
+`retire-has-one-displacement-machinery` story removes `queueWrite` /
+`_removeDisplacedFromDb` / `mightNeedDelete` and ports the `replace` early
+return as one of its acceptance criteria — exactly the convergence this
+story's context predicted. Do not claim this story independently; it is
+closed as superseded when that story lands.
