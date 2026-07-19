@@ -1,6 +1,6 @@
 ---
 title: "Audit ported Ruby truthiness guards; adopt isRubyTruthy"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
