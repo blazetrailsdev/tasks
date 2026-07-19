@@ -1,7 +1,7 @@
 ---
 title: "unify-execute-mutation-into-perform-query-mysql2"
-status: ready
-updated: 2026-07-17
+status: claimed
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T01:21:12Z"
+assignee: "unify-execute-mutation-into-perform-query-mysql2"
 blocked-by: null
 closed-reason: null
 ---
