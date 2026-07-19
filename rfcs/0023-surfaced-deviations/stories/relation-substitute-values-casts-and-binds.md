@@ -1,6 +1,6 @@
 ---
 title: "relation-substitute-values-casts-and-binds"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
