@@ -1,6 +1,6 @@
 ---
 title: "PG: node-pg cannot reproduce Rails' libpq newline split (pg_terminate → ConnectionFailed)"
-status: claimed
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4935
 claim: "2026-07-19T01:01:11Z"
 assignee: "pg-severed-connection-failed-vs-notestablished-libpq-signal"
 blocked-by: null
