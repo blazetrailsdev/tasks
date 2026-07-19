@@ -1,6 +1,6 @@
 ---
 title: "schema:compare — structural parity check of TEST_SCHEMA vs vendored schema.rb"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 20
-pr: null
+pr: 4966
 claim: "2026-07-19T20:41:09Z"
 assignee: "schema-rb-test-schema-structural-parity"
 blocked-by: null
