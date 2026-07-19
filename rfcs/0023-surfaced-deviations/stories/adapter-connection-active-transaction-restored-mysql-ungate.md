@@ -1,6 +1,6 @@
 ---
 title: "Re-evaluate PG-only gate on 'active transaction is restored after remote disconnection' (MySQL verifyBang+translation now fixed)"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
