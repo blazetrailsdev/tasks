@@ -1,6 +1,6 @@
 ---
 title: "Relation#order leaves string order fragments bare (no qualify/quote), matching Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 4952
 claim: "2026-07-19T02:11:14Z"
 assignee: "relation-order-string-arg-stays-bare"
 blocked-by: null
