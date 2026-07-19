@@ -1,13 +1,13 @@
 ---
 title: "save-runs-validations-inside-transaction"
 status: blocked
-updated: 2026-07-08
+updated: 2026-07-19
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
 deps-rfc: ["0063-async-validation-chain"]
 est-loc: null
-priority: 17
+priority: 5
 pr: null
 claim: null
 assignee: null
