@@ -1,6 +1,6 @@
 ---
 title: "Remove or converge the Rails-less locking-column explicit-update guard"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
