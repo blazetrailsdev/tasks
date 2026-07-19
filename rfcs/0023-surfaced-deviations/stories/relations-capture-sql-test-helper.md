@@ -1,6 +1,6 @@
 ---
 title: "No captureSql test helper: cannot assert toSql() matches executed query"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
