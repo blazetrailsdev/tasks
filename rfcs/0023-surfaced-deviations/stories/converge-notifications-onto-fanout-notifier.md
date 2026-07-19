@@ -1,7 +1,7 @@
 ---
 title: "converge-notifications-onto-fanout-notifier"
-status: in-progress
-updated: 2026-07-16
+status: done
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
