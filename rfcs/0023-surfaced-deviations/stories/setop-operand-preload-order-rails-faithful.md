@@ -1,6 +1,6 @@
 ---
 title: "Order set-operation operand preload specs preload-first, matching Rails"
-status: claimed
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4690
 claim: "2026-07-19T23:51:08Z"
 assignee: "setop-operand-preload-order-rails-faithful"
 blocked-by: null
