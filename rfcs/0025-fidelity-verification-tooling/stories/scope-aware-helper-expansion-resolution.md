@@ -1,6 +1,6 @@
 ---
 title: "test:compare — scope-aware (per-suite/class) helper resolution for assertion counts"
-status: ready
+status: claimed
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T20:51:11Z"
+assignee: "scope-aware-helper-expansion-resolution"
 blocked-by: null
 closed-reason: null
 ---
