@@ -1,6 +1,6 @@
 ---
 title: "Port PG quote_default_expression uuid function-default branch + converge array lookup"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4953
 claim: "2026-07-19T14:01:17Z"
 assignee: "pg-quote-default-expression-uuid-fn-branch"
 blocked-by: null
