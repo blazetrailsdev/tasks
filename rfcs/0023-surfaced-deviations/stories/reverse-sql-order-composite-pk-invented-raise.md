@@ -1,6 +1,6 @@
 ---
 title: "reverseSqlOrder invents an IrreversibleOrderError for composite primary keys"
-status: ready
+status: claimed
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T21:31:09Z"
+assignee: "reverse-sql-order-composite-pk-invented-raise"
 blocked-by: null
 closed-reason: null
 ---
