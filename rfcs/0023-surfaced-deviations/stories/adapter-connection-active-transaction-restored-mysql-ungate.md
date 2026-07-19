@@ -1,6 +1,6 @@
 ---
 title: "Re-evaluate PG-only gate on 'active transaction is restored after remote disconnection' (MySQL verifyBang+translation now fixed)"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4945
 claim: "2026-07-19T00:51:11Z"
 assignee: "adapter-connection-active-transaction-restored-mysql-ungate"
 blocked-by: null
