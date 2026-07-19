@@ -1,6 +1,6 @@
 ---
 title: "Inline AbstractMysqlAdapter#_execMutation into direct execute calls"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
