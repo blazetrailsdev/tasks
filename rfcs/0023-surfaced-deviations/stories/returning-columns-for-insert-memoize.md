@@ -1,6 +1,6 @@
 ---
 title: "Memoize _returningColumnsForInsert per-class (Rails ||=)"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4960
 claim: "2026-07-19T15:21:08Z"
 assignee: "returning-columns-for-insert-memoize"
 blocked-by: null
