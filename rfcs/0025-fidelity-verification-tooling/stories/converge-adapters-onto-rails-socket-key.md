@@ -1,6 +1,6 @@
 ---
 title: "Converge Mysql2Adapter onto Rails' socket key"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
