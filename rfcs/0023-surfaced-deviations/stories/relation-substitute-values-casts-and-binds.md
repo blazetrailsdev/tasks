@@ -1,6 +1,6 @@
 ---
 title: "relation-substitute-values-casts-and-binds"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4954
 claim: "2026-07-19T14:11:10Z"
 assignee: "relation-substitute-values-casts-and-binds"
 blocked-by: null
