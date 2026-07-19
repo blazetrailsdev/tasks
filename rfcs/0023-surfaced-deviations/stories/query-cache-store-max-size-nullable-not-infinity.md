@@ -1,14 +1,14 @@
 ---
 title: "QueryCache Store max size should be nullable (unbounded), not a number sentinel"
-status: claimed
-updated: 2026-07-18
+status: done
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4941
 claim: "2026-07-18T19:01:11Z"
 assignee: "query-cache-store-max-size-nullable-not-infinity"
 blocked-by: null
