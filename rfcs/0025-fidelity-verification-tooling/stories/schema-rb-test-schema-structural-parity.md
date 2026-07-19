@@ -1,6 +1,6 @@
 ---
 title: "schema:compare — structural parity check of TEST_SCHEMA vs vendored schema.rb"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
