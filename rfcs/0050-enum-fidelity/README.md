@@ -1,9 +1,9 @@
 ---
 rfc: "0050-enum-fidelity"
 title: "Enum fidelity"
-status: active
+status: closed
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-19
 owner: "@deanmarano"
 packages:
   - "activerecord"
