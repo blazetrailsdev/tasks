@@ -1,7 +1,7 @@
 ---
 title: "Relation#touchAll accepts time: keyword (Rails touch_all(*names, time:))"
-status: ready
-updated: 2026-07-01
+status: claimed
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T14:21:07Z"
+assignee: "relation-touch-all-time-option"
 blocked-by: null
 ---
 
