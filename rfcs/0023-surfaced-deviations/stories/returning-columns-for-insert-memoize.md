@@ -1,6 +1,6 @@
 ---
 title: "Memoize _returningColumnsForInsert per-class (Rails ||=)"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
