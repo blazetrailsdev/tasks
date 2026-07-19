@@ -1,6 +1,6 @@
 ---
 title: "remove-test-url-sniffing-migrate-ci-onto-sub-settings"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4961
 claim: "2026-07-19T14:51:11Z"
 assignee: "remove-test-url-sniffing-migrate-ci-onto-sub-settings"
 blocked-by: null
