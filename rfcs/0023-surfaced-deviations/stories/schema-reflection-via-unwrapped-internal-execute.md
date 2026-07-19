@@ -1,7 +1,7 @@
 ---
 title: "Route schema reflection through unwrapped internal execute (drop SCHEMA name-check)"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T22:31:12Z"
+assignee: "schema-reflection-via-unwrapped-internal-execute"
 blocked-by: null
 closed-reason: null
 ---
