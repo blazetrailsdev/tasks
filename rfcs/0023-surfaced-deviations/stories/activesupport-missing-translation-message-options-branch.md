@@ -1,6 +1,6 @@
 ---
 title: "Converge ActiveSupport MissingTranslationData#message to i18n gem two-branch format"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4969
 claim: "2026-07-19T21:11:09Z"
 assignee: "activesupport-missing-translation-message-options-branch"
 blocked-by: null
