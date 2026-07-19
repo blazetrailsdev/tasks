@@ -1,6 +1,6 @@
 ---
 title: "Give comment.test.ts dump tests a 60s timeout (PG flake)"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0028-ci-cost-optimization"
 cluster: null
