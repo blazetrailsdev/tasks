@@ -1,13 +1,13 @@
 ---
 title: "Arel Visitor#visit should class-dispatch raw values like Rails, retiring visitNodeOrValue"
 status: draft
-updated: 2026-07-14
+updated: 2026-07-19
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
