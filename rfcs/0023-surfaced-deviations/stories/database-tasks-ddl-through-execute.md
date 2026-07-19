@@ -1,6 +1,6 @@
 ---
 title: "Route database-tasks and test-helper DDL through execute"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
