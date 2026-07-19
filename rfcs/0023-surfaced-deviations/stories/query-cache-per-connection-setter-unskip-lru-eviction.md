@@ -1,6 +1,6 @@
 ---
 title: "Expose per-connection query_cache= setter to un-skip 'query cache lru eviction'"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4947
 claim: "2026-07-19T01:41:10Z"
 assignee: "query-cache-per-connection-setter-unskip-lru-eviction"
 blocked-by: null
