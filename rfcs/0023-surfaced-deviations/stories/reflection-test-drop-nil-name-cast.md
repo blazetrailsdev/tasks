@@ -45,5 +45,13 @@ that had to be deferred; see that story's PR description.
 
 ## Notes
 
-Blocked until #4973 merges. If #4973 landed after #4975, the cast may already
-be gone or never introduced — verify on `main` first and close as no-work if so.
+PR #4973 merged before #4975, so this is **immediately actionable** — no blocker.
+Confirmed present on `main` at
+`packages/activerecord/src/reflection.test.ts:524`:
+
+```ts
+const anonymous = null as unknown as string;
+```
+
+`create` on `main` already accepts `string | null`, so the local and its cast
+can be dropped and `null` passed directly.
