@@ -1,7 +1,7 @@
 ---
 title: "Relation#only should slice values without unscope_values merge-replay"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T02:01:12Z"
+assignee: "relation-only-values-slice-no-unscope-replay"
 blocked-by: null
 ---
 
