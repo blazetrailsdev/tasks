@@ -1,6 +1,6 @@
 ---
 title: "Require a host receiver on quoteTableNameForAssignment"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
