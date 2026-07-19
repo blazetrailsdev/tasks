@@ -1,6 +1,6 @@
 ---
 title: "Unify PredicateBuilder type-resolution cascades; type positive equality bind via resolveBoundType"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
