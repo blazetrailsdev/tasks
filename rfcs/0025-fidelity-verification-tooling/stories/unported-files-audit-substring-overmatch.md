@@ -1,13 +1,13 @@
 ---
 title: "Audit UNPORTED_FILES bare-filename entries that substring-match and hide ported files"
 status: draft
-updated: 2026-07-15
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
