@@ -1,6 +1,6 @@
 ---
 title: "Port settable Notifications.notifier + instrumenter registry (or skip-group the static deviation)"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -42,5 +42,5 @@ version approximates it without a real swap.
       `scripts/api-compare/conventions.ts` for `notifier` / `notifier=` /
       `registry`.
 - [ ] If the settable path is taken, port `test_subscribing_to_instrumentation_
-  while_inside_it` with a real `notifier = Fanout.new` swap.
+while_inside_it` with a real `notifier = Fanout.new` swap.
 - [ ] api:compare delta on `notifications.rb` non-negative.
