@@ -1,6 +1,6 @@
 ---
 title: "One build_arel on the live path: _buildArel vs the unreachable query-methods port"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
