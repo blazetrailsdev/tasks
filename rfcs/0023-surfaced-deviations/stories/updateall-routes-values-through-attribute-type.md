@@ -1,7 +1,7 @@
 ---
 title: "updateall-routes-values-through-attribute-type"
-status: ready
-updated: 2026-06-26
+status: done
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4954
 claim: null
 assignee: null
 blocked-by: null
