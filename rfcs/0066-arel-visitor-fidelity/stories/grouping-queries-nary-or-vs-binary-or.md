@@ -1,13 +1,13 @@
 ---
 title: "grouping_queries emits n-ary Or vs Rails' nested binary Or"
 status: draft
-updated: 2026-07-02
+updated: 2026-07-19
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
