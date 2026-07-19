@@ -1,6 +1,6 @@
 ---
 title: "schema-compare-invented-baseline-burndown"
-status: ready
+status: claimed
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T21:51:10Z"
+assignee: "schema-compare-invented-baseline-burndown"
 blocked-by: null
 closed-reason: null
 ---
