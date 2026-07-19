@@ -1,6 +1,6 @@
 ---
 title: "reverseOrder() on no-PK table should raise IrreversibleOrderError"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 4957
 claim: "2026-07-19T14:41:08Z"
 assignee: "relations-reverse-order-no-pk"
 blocked-by: null
