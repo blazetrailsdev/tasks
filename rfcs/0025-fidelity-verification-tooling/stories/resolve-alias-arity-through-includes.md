@@ -1,6 +1,6 @@
 ---
 title: "api-compare: resolve alias arity through included-module/inherited targets"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 4959
 claim: "2026-07-19T15:11:11Z"
 assignee: "resolve-alias-arity-through-includes"
 blocked-by: null
