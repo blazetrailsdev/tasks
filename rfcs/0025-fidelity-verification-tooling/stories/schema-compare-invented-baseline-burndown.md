@@ -19,11 +19,11 @@ closed-reason: null
 
 `pnpm schema:compare` (PR #4966, RFC 0025) proved TEST_SCHEMA's mirror of
 `vendor/rails/activerecord/test/schema/schema.rb` is faithful where the two
-overlap — all 704 Rails columns across the 233 shared tables are ported with
-zero type divergence — but it also surfaced **100 purely additive inventions**
+overlap — every Rails column across the 242 shared tables is ported with zero
+type divergence — but it also surfaced **91 purely additive inventions**
 recorded in `scripts/schema-compare/invented-baseline.json`:
 
-- 99 tables with no `create_table` anywhere in `vendor/rails/activerecord`
+- 90 tables with no `create_table` anywhere in `vendor/rails/activerecord`
   (verified against schema.rb _and_ the four adapter-specific schema files):
   the `sc_*` / `sc2_*` / `sc3_*` / `sc4_*` families, `refl_*`, `target_as`,
   `targets`, `orphans` / `orphan2s`, `topic2s`, `top_users`, `tenants`,
