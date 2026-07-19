@@ -1,13 +1,13 @@
 ---
 title: "test:compare — scope-aware (per-suite/class) helper resolution for assertion counts"
 status: ready
-updated: 2026-07-02
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
