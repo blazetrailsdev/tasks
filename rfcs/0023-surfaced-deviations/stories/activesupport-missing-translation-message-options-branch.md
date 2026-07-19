@@ -1,6 +1,6 @@
 ---
 title: "Converge ActiveSupport MissingTranslationData#message to i18n gem two-branch format"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
