@@ -1,7 +1,7 @@
 ---
 title: "No captureSql test helper: cannot assert toSql() matches executed query"
-status: ready
-updated: 2026-06-27
+status: claimed
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T14:31:09Z"
+assignee: "relations-capture-sql-test-helper"
 blocked-by: null
 ---
 
