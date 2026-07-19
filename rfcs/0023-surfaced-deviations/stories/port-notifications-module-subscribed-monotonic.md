@@ -1,6 +1,6 @@
 ---
 title: "Port Notifications.subscribed / monotonic_subscribe / publish_event module methods"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
