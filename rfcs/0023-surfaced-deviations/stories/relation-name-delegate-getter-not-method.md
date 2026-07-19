@@ -1,6 +1,6 @@
 ---
 title: "Converge Relation#name delegate from method to Rails property reader"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4950
 claim: "2026-07-19T01:51:10Z"
 assignee: "relation-name-delegate-getter-not-method"
 blocked-by: null
