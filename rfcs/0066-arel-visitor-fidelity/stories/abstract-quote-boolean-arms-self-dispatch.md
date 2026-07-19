@@ -1,13 +1,13 @@
 ---
 title: "abstract quote/type_cast boolean arms call module-level, not self-dispatch"
 status: draft
-updated: 2026-07-15
+updated: 2026-07-19
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
