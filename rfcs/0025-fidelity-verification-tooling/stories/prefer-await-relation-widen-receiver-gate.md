@@ -6,7 +6,7 @@ rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
