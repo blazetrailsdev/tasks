@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented `*` branch from MySQL quoteColumnName"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
