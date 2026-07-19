@@ -1,6 +1,6 @@
 ---
 title: "TEST_SCHEMA omits the canonical parrots.integer / toys.integer columns"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
