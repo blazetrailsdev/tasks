@@ -1,13 +1,13 @@
 ---
 title: "arel-valueslist-row-casts-assert-node-on-raw-values"
 status: draft
-updated: 2026-07-15
+updated: 2026-07-19
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
