@@ -1,6 +1,6 @@
 ---
 title: "Sweep canonical model scopes and ported tests for string-vs-symbol order args"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
