@@ -1,13 +1,13 @@
 ---
 title: "stripthenable-inplace-mutation-type-divergence"
 status: ready
-updated: 2026-06-29
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
