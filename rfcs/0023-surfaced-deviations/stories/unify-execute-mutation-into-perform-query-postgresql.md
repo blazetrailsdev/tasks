@@ -1,7 +1,7 @@
 ---
 title: "unify-execute-mutation-into-perform-query-postgresql"
-status: in-progress
-updated: 2026-07-18
+status: done
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
