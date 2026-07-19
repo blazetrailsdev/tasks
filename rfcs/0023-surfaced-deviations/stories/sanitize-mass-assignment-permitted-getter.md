@@ -1,6 +1,6 @@
 ---
 title: "sanitize-mass-assignment-permitted-getter"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4972
 claim: "2026-07-19T21:41:11Z"
 assignee: "sanitize-mass-assignment-permitted-getter"
 blocked-by: null
