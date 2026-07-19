@@ -1,6 +1,6 @@
 ---
 title: "Port Notifications.subscribed / monotonic_subscribe / publish_event module methods"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4946
 claim: "2026-07-19T01:11:11Z"
 assignee: "port-notifications-module-subscribed-monotonic"
 blocked-by: null
