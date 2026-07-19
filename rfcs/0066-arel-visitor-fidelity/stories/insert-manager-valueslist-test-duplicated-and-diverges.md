@@ -1,13 +1,13 @@
 ---
 title: "insert-manager-valueslist-test-duplicated-and-diverges"
 status: draft
-updated: 2026-07-15
+updated: 2026-07-19
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
