@@ -1,6 +1,6 @@
 ---
 title: "Test harness credential defaults and interpolated key set diverge from config.example.yml"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
