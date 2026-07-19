@@ -1,6 +1,6 @@
 ---
 title: "Unify PredicateBuilder type-resolution cascades; type positive equality bind via resolveBoundType"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
+pr: 4963
 claim: "2026-07-19T20:11:09Z"
 assignee: "unify-predicate-builder-type-resolution-cascades"
 blocked-by: null
