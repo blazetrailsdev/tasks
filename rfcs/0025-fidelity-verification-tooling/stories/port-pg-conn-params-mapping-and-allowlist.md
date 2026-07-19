@@ -1,6 +1,6 @@
 ---
 title: "port-pg-conn-params-mapping-and-allowlist"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4970
 claim: "2026-07-19T21:21:31Z"
 assignee: "port-pg-conn-params-mapping-and-allowlist"
 blocked-by: null
