@@ -1,6 +1,6 @@
 ---
 title: "Hoist isRubyTruthy into activesupport and drop the duplicate implementations"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
