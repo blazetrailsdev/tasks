@@ -1,6 +1,6 @@
 ---
 title: "arunit2 second database is dead code on PG/MySQL: no provisioning, MultipleDbTest sqlite-gated"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
