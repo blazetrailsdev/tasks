@@ -1,6 +1,6 @@
 ---
 title: "Decide whether MacroReflection#name should be honestly typed string | null"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
