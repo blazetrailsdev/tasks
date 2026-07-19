@@ -1,6 +1,6 @@
 ---
 title: "Adapter test suites collide on shared 1_need_quoting table when co-scheduled"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
