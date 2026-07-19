@@ -1,6 +1,6 @@
 ---
 title: "api-compare: honour leading :: as an absolute mixin/superclass reference"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: null
+pr: 4965
 claim: "2026-07-19T20:31:10Z"
 assignee: "extractor-absolute-const-mixin-references"
 blocked-by: null
