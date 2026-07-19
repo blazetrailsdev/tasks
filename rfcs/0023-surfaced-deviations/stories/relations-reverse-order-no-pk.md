@@ -1,6 +1,6 @@
 ---
 title: "reverseOrder() on no-PK table should raise IrreversibleOrderError"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
