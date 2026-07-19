@@ -1,6 +1,6 @@
 ---
 title: "converge mysql2 internalExecQuery onto the shared performQuery primitive"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
