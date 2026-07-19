@@ -1,6 +1,6 @@
 ---
 title: "stripthenable-inplace-mutation-type-divergence"
-status: ready
+status: claimed
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T21:01:11Z"
+assignee: "stripthenable-inplace-mutation-type-divergence"
 blocked-by: null
 ---
 
