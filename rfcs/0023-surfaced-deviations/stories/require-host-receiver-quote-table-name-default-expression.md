@@ -1,6 +1,6 @@
 ---
 title: "Extend host-receiver requirement to quoteTableName / quoteDefaultExpression"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4958
 claim: "2026-07-19T15:01:09Z"
 assignee: "require-host-receiver-quote-table-name-default-expression"
 blocked-by: null
