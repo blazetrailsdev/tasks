@@ -1,7 +1,7 @@
 ---
 title: "Generate awaitable set#{Name} accessor for has_one (incl. through)"
-status: in-progress
-updated: 2026-07-18
+status: done
+updated: 2026-07-19
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
