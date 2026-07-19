@@ -1,6 +1,6 @@
 ---
 title: "schema:compare — compare column options (null/limit/default/precision), not just type"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
