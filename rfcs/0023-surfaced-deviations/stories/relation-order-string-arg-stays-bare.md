@@ -1,6 +1,6 @@
 ---
 title: "Relation#order leaves string order fragments bare (no qualify/quote), matching Rails"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
