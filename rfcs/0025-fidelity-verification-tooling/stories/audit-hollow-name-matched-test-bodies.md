@@ -1,13 +1,13 @@
 ---
 title: "Detect name-matched tests with hollow bodies (pass against broken impl)"
 status: draft
-updated: 2026-07-15
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
