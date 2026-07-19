@@ -1,6 +1,6 @@
 ---
 title: "reflection-create-accepts-nil-name"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4975
 claim: "2026-07-19T22:11:09Z"
 assignee: "reflection-create-accepts-nil-name"
 blocked-by: null
