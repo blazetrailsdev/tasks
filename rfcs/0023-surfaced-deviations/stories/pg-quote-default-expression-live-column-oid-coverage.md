@@ -1,6 +1,6 @@
 ---
 title: "Live-PG coverage that reflected columns carry oid/fmod into quoteDefaultExpression"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
