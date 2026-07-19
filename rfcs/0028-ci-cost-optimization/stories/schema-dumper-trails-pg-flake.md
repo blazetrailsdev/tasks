@@ -1,6 +1,6 @@
 ---
 title: "Fix schema-dumper.trails.test.ts PG flake (schema_migrations dup-key + dump timeout)"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0028-ci-cost-optimization"
 cluster: null
