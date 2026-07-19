@@ -1,13 +1,13 @@
 ---
 title: "Establish body-pins baseline (floor policy + populate body-pins.json)"
 status: draft
-updated: 2026-07-02
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
