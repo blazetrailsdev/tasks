@@ -1,6 +1,6 @@
 ---
 title: "schema:compare invented-baseline burndown (continued: 85 tables remaining)"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
