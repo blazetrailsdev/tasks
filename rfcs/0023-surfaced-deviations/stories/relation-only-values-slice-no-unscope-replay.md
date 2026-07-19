@@ -1,6 +1,6 @@
 ---
 title: "Relation#only should slice values without unscope_values merge-replay"
-status: in-progress
+status: done
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
