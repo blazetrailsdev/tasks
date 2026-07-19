@@ -1,13 +1,13 @@
 ---
 title: "website: cover scripts/*.test.ts in a tsconfig so eslint project-service can lint it"
 status: draft
-updated: 2026-06-23
+updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 15
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
