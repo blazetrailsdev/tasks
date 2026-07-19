@@ -1,7 +1,7 @@
 ---
 title: "quote-default-expression-serialize-and-default-prefix"
-status: in-progress
-updated: 2026-07-17
+status: done
+updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
