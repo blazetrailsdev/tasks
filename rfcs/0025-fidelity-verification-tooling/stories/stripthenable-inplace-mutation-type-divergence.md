@@ -90,3 +90,31 @@ keeping `await` correct.
   remains the guard.
 - No new bespoke schemas; canonical-only test fixtures.
   </content>
+
+## Decision (PR #4968)
+
+**`stripThenable` stops mutating in place.** It returns a then-less `Proxy`
+view of the relation instead of deleting `.then` from the instance.
+
+Rationale: the requirement is contradictory for a single object — the value
+returned from an `async` method must not be thenable (or the runtime unwraps
+it), yet the same relation must stay thenable so `await rel` yields records.
+No amount of retyping closes that gap; only a second object can. A `Proxy`
+was chosen over a shallow clone because its traps forward every get/set to
+the target with `this` bound to the target, so the view is a _window_ on the
+one relation rather than a copy: methods called on the view read and mutate
+the original's state, preserving Rails' "same object, now loaded" semantics
+(`@records` / `loaded?` memoized on the receiver). The view is memoized per
+instance, so repeated `load()` calls neither reallocate nor return differing
+views.
+
+Fallout: `RelationTest > #load` asserted `toBe` (identity). Rails asserts
+`assert_equal relation, relation.load` (`relations_test.rb:2193`) — equality,
+not identity — so it moves to `toEqual`, which is the more faithful assertion.
+It was the only identity assertion across the relation and collection-proxy
+suites.
+
+Follow-up (not in this PR): `prefer-await-relation`'s call-expression-only
+gate was a workaround for this divergence and can likely be widened now that
+the divergence is gone. Registered separately as
+`prefer-await-relation-widen-receiver-gate`.
