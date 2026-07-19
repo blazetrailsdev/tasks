@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4957
+pr: 4632
 claim: "2026-07-19T14:41:08Z"
 assignee: "relations-reverse-order-no-pk"
 blocked-by: null
