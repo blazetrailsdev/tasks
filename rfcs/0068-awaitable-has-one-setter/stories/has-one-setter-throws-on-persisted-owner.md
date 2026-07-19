@@ -1,7 +1,7 @@
 ---
 title: "has_one native = setter: in-memory for new owners, throws for persisted"
-status: ready
-updated: 2026-07-17
+status: claimed
+updated: 2026-07-19
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["awaitable-set-accessor-sugar"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-19T01:31:12Z"
+assignee: "has-one-setter-throws-on-persisted-owner"
 blocked-by: null
 ---
 
