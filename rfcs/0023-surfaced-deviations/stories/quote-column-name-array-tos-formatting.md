@@ -1,6 +1,6 @@
 ---
 title: "quoteColumnName stringifies an Array attribute name unlike Ruby's Array#to_s"
-status: claimed
+status: in-progress
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4974
 claim: "2026-07-19T22:01:10Z"
 assignee: "quote-column-name-array-tos-formatting"
 blocked-by: null
