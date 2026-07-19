@@ -1,6 +1,6 @@
 ---
 title: "StringType/DateTimeType serialize must not re-cast an already-cast value"
-status: ready
+status: draft
 updated: 2026-07-19
 rfc: "0023-surfaced-deviations"
 cluster: null
