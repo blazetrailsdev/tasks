@@ -1,6 +1,6 @@
 ---
 title: "api-compare: honour leading :: on the assert_valid_keys const-expansion path"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
