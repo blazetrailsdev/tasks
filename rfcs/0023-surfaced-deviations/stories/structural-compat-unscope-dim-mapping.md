@@ -1,7 +1,7 @@
 ---
 title: "structurally_incompatible: extend unscope-aware empty-array distinction to all dims"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: rails-deviation
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T17:41:10Z"
+assignee: "structural-compat-unscope-dim-mapping"
 blocked-by: null
 ---
 
