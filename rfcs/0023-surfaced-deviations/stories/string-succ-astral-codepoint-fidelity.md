@@ -1,6 +1,6 @@
 ---
 title: "stringSucc: increment whole code points (astral chars) in the no-alnum branch"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 4989
 claim: "2026-07-20T02:01:11Z"
 assignee: "string-succ-astral-codepoint-fidelity"
 blocked-by: null
