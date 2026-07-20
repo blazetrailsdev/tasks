@@ -48,6 +48,13 @@ Three approaches were tried and rejected — do not re-derive them:
 3. **`_explicitTarget`.** Misses the real path: the has_one writer never sets
    it, so the guard would never fire on an actual reassignment.
 
+**Two writebacks, not one.** A fix must cover both `syncToAssociationInstance`
+in the inner loader (`associations.ts:1838`) **and** the instance wrapper's own
+unconditional `setTarget` (`associations/instance-methods.ts:176`), which
+re-syncs after the inner call returns. Guarding only the inner one leaves the
+clobber reachable through `record.loadHasOne(name)` and the `firm.account`
+accessor that routes to it.
+
 Likely direction: give the holder a **load-generation token** — the loader
 captures it before querying and only writes back if it is unchanged, so "our
 own load's writeback" is distinguishable from "someone else's set" rather than
