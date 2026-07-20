@@ -1,6 +1,6 @@
 ---
 title: "api:compare dirties eslint/rails-callback-invocations.json on every run (emitter output vs prettier formatting)"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
