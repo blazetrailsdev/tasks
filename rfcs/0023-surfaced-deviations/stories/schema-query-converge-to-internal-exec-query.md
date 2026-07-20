@@ -1,6 +1,6 @@
 ---
 title: "Converge schemaQuery onto a real internalExecQuery path, drop the UNWRAPPED_EXECUTE snapshot"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
