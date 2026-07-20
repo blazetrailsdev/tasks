@@ -1,7 +1,7 @@
 ---
 title: "api:compare dirties rails-callback-invocations.json (format-only churn)"
-status: draft
-updated: 2026-07-19
+status: closed
+updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by api-compare-manifest-emitter-prettier-churn"
 ---
 
 ## Context
