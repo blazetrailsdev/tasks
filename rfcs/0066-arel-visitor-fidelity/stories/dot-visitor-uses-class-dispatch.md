@@ -1,6 +1,6 @@
 ---
 title: "Dot visitor should class-dispatch raw values via Visitor#visit"
-status: draft
+status: ready
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
