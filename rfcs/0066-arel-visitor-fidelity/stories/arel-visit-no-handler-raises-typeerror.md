@@ -1,6 +1,6 @@
 ---
 title: "arel-visit-no-handler-raises-typeerror"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
