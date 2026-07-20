@@ -1,6 +1,6 @@
 ---
 title: "Triage the 183 value-accessor-read-surfaced wide-call baseline entries"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
