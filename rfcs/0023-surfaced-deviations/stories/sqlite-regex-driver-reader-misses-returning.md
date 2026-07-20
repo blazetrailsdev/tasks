@@ -1,6 +1,6 @@
 ---
 title: "sqlite-regex-driver-reader-misses-returning"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
