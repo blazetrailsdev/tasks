@@ -1,6 +1,6 @@
 ---
 title: "Dot#isHash misclassifies a record whose prototype has a literal constructor key"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
