@@ -1,6 +1,6 @@
 ---
 title: "arel-duplicates-adapter-datetime-formatters"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T23:26:45Z"
+assignee: "arel-duplicates-adapter-datetime-formatters"
 blocked-by: null
 closed-reason: null
 ---
