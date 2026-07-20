@@ -1,12 +1,12 @@
 ---
-title: "arel-visit-dispatch-respond-to-check"
+title: "Visitor dispatch must check respond_to?, not just table membership"
 status: draft
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 50
 priority: null
 pr: null
 claim: null
