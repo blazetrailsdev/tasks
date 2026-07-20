@@ -1,6 +1,6 @@
 ---
 title: "sqlite-regex-driver-reader-misses-returning"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4979
 claim: "2026-07-20T00:21:11Z"
 assignee: "sqlite-regex-driver-reader-misses-returning"
 blocked-by: null
