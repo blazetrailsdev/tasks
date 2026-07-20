@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: resolve duplicate it() names within #eq, #matches_all, #eq_all"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T22:51:44Z"
+assignee: "arel-attribute-test-duplicate-it-names-within-describe"
 blocked-by: null
 closed-reason: null
 ---
