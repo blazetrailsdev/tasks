@@ -1,13 +1,13 @@
 ---
 title: "runCallbacks returns the block value, not a boolean (Rails run_callbacks parity)"
 status: draft
-updated: 2026-07-17
+updated: 2026-07-20
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null
