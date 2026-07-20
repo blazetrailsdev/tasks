@@ -1,6 +1,6 @@
 ---
 title: "rightIsNull's per-class Casted/Quoted arms are dead after isNil() landed"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 51
-pr: null
+pr: 5016
 claim: "2026-07-20T22:56:44Z"
 assignee: "arel-right-is-null-per-class-arms-redundant-after-isnil"
 blocked-by: null
