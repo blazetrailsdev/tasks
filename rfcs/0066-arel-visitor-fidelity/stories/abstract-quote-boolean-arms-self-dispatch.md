@@ -1,6 +1,6 @@
 ---
 title: "abstract quote/type_cast boolean arms call module-level, not self-dispatch"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 16
-pr: null
+pr: 5000
 claim: "2026-07-20T18:51:52Z"
 assignee: "abstract-quote-boolean-arms-self-dispatch"
 blocked-by: null
