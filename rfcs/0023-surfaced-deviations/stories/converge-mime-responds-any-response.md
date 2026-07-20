@@ -1,6 +1,6 @@
 ---
 title: "converge-mime-responds-any-response"
-status: draft
+status: closed
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fixed in #4997 during the triage itself"
 ---
 
 ## Context
