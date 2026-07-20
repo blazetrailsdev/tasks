@@ -1,6 +1,6 @@
 ---
 title: "Converge schemaQuery onto a real internalExecQuery path, drop the UNWRAPPED_EXECUTE snapshot"
-status: draft
+status: blocked
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocked on pg-cast-result-oid-lookup-reentrancy-guard: routing reflection through internalExecQuery recurses via PG castResult -> getOidType -> loadAdditionalTypes -> schemaQuery (104 failed PG tests on #4977)."
 closed-reason: null
 ---
 
