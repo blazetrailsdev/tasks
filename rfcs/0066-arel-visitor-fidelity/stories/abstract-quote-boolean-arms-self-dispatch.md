@@ -1,6 +1,6 @@
 ---
 title: "abstract quote/type_cast boolean arms call module-level, not self-dispatch"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
