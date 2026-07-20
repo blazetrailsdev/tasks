@@ -1,6 +1,6 @@
 ---
 title: "PR body attribution guard fails on prose describing the patterns"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
