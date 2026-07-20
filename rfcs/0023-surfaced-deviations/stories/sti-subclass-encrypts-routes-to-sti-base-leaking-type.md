@@ -1,6 +1,6 @@
 ---
 title: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
-status: blocked
+status: ready
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-20T01:21:10Z"
-assignee: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
-blocked-by: "Prerequisite PR #4981 (STI subclass copy-on-write for _attributeDefinitions) is still OPEN, not merged. This story's premise is that #4981 removes the reason the encrypts STI-base routing exists. #4981 also touches the same files this story must change (packages/activerecord/src/base.ts, packages/activerecord/src/model-schema.ts, packages/activemodel/src/attribute-registration.ts) plus normalized-attribute.trails.test.ts, which is the file the acceptance criteria says to mirror. Proceeding now would require either stacking on #4981 (forbidden by CLAUDE.md) or duplicating its fix and conflicting with it. Unblock once #4981 merges into main."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
