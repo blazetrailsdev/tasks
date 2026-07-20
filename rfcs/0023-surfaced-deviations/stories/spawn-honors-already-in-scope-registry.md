@@ -1,6 +1,6 @@
 ---
 title: "spawn should honor already_in_scope? (return model.all inside scoping block) instead of always cloning"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4978
 claim: "2026-07-20T00:01:08Z"
 assignee: "spawn-honors-already-in-scope-registry"
 blocked-by: null
