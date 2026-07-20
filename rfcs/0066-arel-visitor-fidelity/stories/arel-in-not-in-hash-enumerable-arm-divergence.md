@@ -1,6 +1,6 @@
 ---
 title: "Decide and converge in/notIn for a plain object: Ruby Hash expands, Object.new casts whole"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 14
-pr: null
+pr: 5004
 claim: "2026-07-20T19:16:43Z"
 assignee: "arel-in-not-in-hash-enumerable-arm-divergence"
 blocked-by: null
