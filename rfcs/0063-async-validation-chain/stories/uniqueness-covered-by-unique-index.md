@@ -1,6 +1,6 @@
 ---
 title: "Converge UniquenessValidator#covered_by_unique_index? using async schema cache"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0063-async-validation-chain"
 cluster: null
