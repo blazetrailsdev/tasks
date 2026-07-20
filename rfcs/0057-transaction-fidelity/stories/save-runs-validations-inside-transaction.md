@@ -1,6 +1,6 @@
 ---
 title: "save-runs-validations-inside-transaction"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0057-transaction-fidelity"
 cluster: null
