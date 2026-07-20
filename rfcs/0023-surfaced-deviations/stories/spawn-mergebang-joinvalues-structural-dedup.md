@@ -1,7 +1,7 @@
 ---
 title: "spawn-methods mergeBang plain-concats _joinValues instead of |= structural dedup"
-status: ready
-updated: 2026-07-04
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T00:11:09Z"
+assignee: "spawn-mergebang-joinvalues-structural-dedup"
 blocked-by: null
 closed-reason: null
 ---
