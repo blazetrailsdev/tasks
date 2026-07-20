@@ -1,6 +1,6 @@
 ---
 title: "api:compare dirties eslint/rails-callback-invocations.json on every run (emitter output vs prettier formatting)"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: null
+pr: 4987
 claim: "2026-07-20T01:57:27Z"
 assignee: "api-compare-manifest-emitter-prettier-churn"
 blocked-by: null
