@@ -1,6 +1,6 @@
 ---
 title: "TableAlias#get skips Rails' is_a?(Table) branch and duplicates alias resolution"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T20:01:49Z"
+assignee: "table-alias-get-skips-rails-table-branch"
 blocked-by: null
 closed-reason: null
 ---
