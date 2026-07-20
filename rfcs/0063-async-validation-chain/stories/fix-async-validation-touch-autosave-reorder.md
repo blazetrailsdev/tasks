@@ -1,7 +1,7 @@
 ---
 title: "fix-async-validation-touch-autosave-reorder"
-status: in-progress
-updated: 2026-07-17
+status: done
+updated: 2026-07-20
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: []
