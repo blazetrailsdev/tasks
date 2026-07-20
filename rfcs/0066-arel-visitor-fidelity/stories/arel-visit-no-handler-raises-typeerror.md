@@ -1,6 +1,6 @@
 ---
 title: "Visitor#visit no-handler terminal should raise TypeError like Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 12
-pr: null
+pr: 5002
 claim: "2026-07-20T19:06:45Z"
 assignee: "arel-visit-no-handler-raises-typeerror"
 blocked-by: null
