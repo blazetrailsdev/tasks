@@ -1,6 +1,6 @@
 ---
 title: "touchAll/updateCounters must raise ArgumentError on empty updates, not return 0"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
