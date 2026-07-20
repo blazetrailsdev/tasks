@@ -1,7 +1,7 @@
 ---
 title: "save-runs-validations-inside-transaction"
-status: blocked
-updated: 2026-07-19
+status: ready
+updated: 2026-07-20
 rfc: "0057-transaction-fidelity"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: 5
 pr: null
 claim: null
 assignee: null
-blocked-by: "flip-activerecord-isvalid-async"
+blocked-by: null
 ---
 
 ## Context
