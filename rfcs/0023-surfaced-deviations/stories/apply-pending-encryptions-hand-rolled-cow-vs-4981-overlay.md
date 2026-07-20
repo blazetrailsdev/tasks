@@ -1,6 +1,6 @@
 ---
 title: "apply-pending-encryptions-hand-rolled-cow-vs-4981-overlay"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
