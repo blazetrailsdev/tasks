@@ -1,6 +1,6 @@
 ---
 title: "sqlite-perform-query-iswrite-gate-drops-returning-rows"
-status: claimed
+status: blocked
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-20T00:31:10Z"
 assignee: "sqlite-perform-query-iswrite-gate-drops-returning-rows"
-blocked-by: null
+blocked-by: "Prerequisite PR #4979 is still OPEN. Its files (packages/activerecord/src/sqlite/statement-reader.ts and statement-reader.test.ts) do not exist on main, but acceptance criterion 3 requires re-enabling an assertion in statement-reader.test.ts, and criterion 1 (RETURNING rows on node-sqlite/expo) depends on #4979's reader fix. Doing this now would mean a stacked PR. Unblock when #4979 merges."
 closed-reason: null
 ---
 
