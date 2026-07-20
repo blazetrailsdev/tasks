@@ -1,7 +1,7 @@
 ---
 title: "api-compare: honour leading :: as an absolute mixin/superclass reference"
-status: in-progress
-updated: 2026-07-19
+status: done
+updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
