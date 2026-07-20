@@ -1,6 +1,6 @@
 ---
 title: "arel-valueslist-row-casts-assert-node-on-raw-values"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
