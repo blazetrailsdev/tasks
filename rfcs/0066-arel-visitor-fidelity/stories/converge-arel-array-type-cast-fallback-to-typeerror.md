@@ -1,6 +1,6 @@
 ---
 title: "Converge quoteArrayLiteral's type_cast fallback arms onto Rails' TypeError raise"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
+pr: 5010
 claim: "2026-07-20T20:21:45Z"
 assignee: "converge-arel-array-type-cast-fallback-to-typeerror"
 blocked-by: null
