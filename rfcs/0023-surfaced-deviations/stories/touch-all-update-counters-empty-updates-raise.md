@@ -1,7 +1,7 @@
 ---
 title: "touchAll/updateCounters must raise ArgumentError on empty updates, not return 0"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T17:51:10Z"
+assignee: "touch-all-update-counters-empty-updates-raise"
 blocked-by: null
 closed-reason: null
 ---
