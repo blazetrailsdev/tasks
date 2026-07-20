@@ -1,6 +1,6 @@
 ---
 title: "Visitor#visit no-handler terminal should raise TypeError like Rails"
-status: draft
+status: ready
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
