@@ -1,7 +1,7 @@
 ---
 title: "Route schema reflection through unwrapped internal execute (drop SCHEMA name-check)"
-status: in-progress
-updated: 2026-07-19
+status: done
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
