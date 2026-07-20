@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4985
+pr: 4987
 claim: "2026-07-20T01:57:33Z"
 assignee: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
 blocked-by: null
