@@ -1,6 +1,6 @@
 ---
 title: "assign_attributes lets setter exceptions propagate raw (no AttributeAssignmentError wrap)"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
