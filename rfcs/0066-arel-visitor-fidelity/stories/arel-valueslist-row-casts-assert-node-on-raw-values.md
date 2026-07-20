@@ -1,6 +1,6 @@
 ---
 title: "arel-valueslist-row-casts-assert-node-on-raw-values"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: 10
-pr: null
+pr: 4999
 claim: "2026-07-20T18:56:45Z"
 assignee: "arel-valueslist-row-casts-assert-node-on-raw-values"
 blocked-by: null
