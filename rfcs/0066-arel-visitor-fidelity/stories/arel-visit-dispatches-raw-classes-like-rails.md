@@ -1,6 +1,6 @@
 ---
 title: "Arel Visitor#visit should class-dispatch raw values like Rails, retiring visitNodeOrValue"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T01:57:56Z"
+assignee: "arel-visit-dispatches-raw-classes-like-rails"
 blocked-by: null
 closed-reason: null
 ---
