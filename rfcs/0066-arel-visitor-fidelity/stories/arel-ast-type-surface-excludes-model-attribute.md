@@ -1,6 +1,6 @@
 ---
 title: "Arel AST type surface excludes ActiveModel::Attribute, forcing escape casts at the Rails ports"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 21
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T21:51:45Z"
+assignee: "arel-ast-type-surface-excludes-model-attribute"
 blocked-by: null
 closed-reason: null
 ---
