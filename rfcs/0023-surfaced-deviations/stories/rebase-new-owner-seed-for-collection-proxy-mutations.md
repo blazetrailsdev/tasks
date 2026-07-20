@@ -1,7 +1,7 @@
 ---
 title: "Rebase new-owner seed for mutation terminals invoked on the CollectionProxy itself"
-status: in-progress
-updated: 2026-07-18
+status: done
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
