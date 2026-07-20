@@ -1,7 +1,7 @@
 ---
 title: "Static hasAttribute should resolve attribute aliases like Rails has_attribute?"
-status: ready
-updated: 2026-07-13
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T00:41:14Z"
+assignee: "static-hasattribute-resolves-aliases"
 blocked-by: null
 closed-reason: null
 ---
