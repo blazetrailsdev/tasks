@@ -1,6 +1,6 @@
 ---
 title: "touch(name, {time:}) — support column name + explicit time in one call"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
