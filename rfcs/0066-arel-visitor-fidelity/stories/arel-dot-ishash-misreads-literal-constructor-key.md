@@ -1,6 +1,6 @@
 ---
 title: "Dot#isHash misclassifies a record whose prototype has a literal constructor key"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 11
-pr: null
+pr: 5001
 claim: "2026-07-20T19:01:44Z"
 assignee: "arel-dot-ishash-misreads-literal-constructor-key"
 blocked-by: null
