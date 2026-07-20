@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 20
+priority: 16
 pr: null
 claim: "2026-07-20T18:51:52Z"
 assignee: "abstract-quote-boolean-arms-self-dispatch"
