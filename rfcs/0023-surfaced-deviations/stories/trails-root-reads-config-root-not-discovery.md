@@ -1,6 +1,6 @@
 ---
 title: "Trails.root() should read application.config.root, not Engine source discovery"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
