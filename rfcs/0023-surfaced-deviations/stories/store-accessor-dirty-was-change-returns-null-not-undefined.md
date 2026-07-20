@@ -1,7 +1,7 @@
 ---
 title: "Store accessor *Was/*Change returns undefined on new record; Rails returns nil"
-status: ready
-updated: 2026-06-26
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T01:01:09Z"
+assignee: "store-accessor-dirty-was-change-returns-null-not-undefined"
 blocked-by: null
 ---
 
