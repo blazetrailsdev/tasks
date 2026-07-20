@@ -1,6 +1,6 @@
 ---
 title: "Converge UniquenessValidator#covered_by_unique_index? using async schema cache"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 130
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T01:51:19Z"
+assignee: "uniqueness-covered-by-unique-index"
 blocked-by: null
 closed-reason: null
 ---
