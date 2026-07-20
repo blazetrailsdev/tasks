@@ -1,6 +1,6 @@
 ---
 title: "Attribution guards fail closed on transient GitHub API 5xx"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T18:21:11Z"
+assignee: "ci-attribution-guard-fails-closed-on-github-api-5xx"
 blocked-by: null
 closed-reason: null
 ---
