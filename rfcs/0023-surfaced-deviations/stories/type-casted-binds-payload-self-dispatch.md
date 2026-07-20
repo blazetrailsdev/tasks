@@ -1,7 +1,7 @@
 ---
 title: "type-casted-binds-payload-self-dispatch"
-status: ready
-updated: 2026-07-14
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T18:46:44Z"
+assignee: "type-casted-binds-payload-self-dispatch"
 blocked-by: null
 closed-reason: null
 ---
