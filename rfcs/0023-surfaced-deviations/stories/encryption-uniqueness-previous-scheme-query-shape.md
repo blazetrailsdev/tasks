@@ -1,12 +1,12 @@
 ---
-title: "encryption-uniqueness-previous-scheme-query-shape"
+title: "Converge encryption uniqueness previous-scheme query shape to Rails"
 status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 100
 priority: null
 pr: null
 claim: null
