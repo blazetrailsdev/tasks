@@ -1,6 +1,6 @@
 ---
 title: "type-casted-binds-payload-self-dispatch"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4998
 claim: "2026-07-20T18:46:44Z"
 assignee: "type-casted-binds-payload-self-dispatch"
 blocked-by: null
