@@ -1,6 +1,6 @@
 ---
 title: "Static hasAttribute should resolve attribute aliases like Rails has_attribute?"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
