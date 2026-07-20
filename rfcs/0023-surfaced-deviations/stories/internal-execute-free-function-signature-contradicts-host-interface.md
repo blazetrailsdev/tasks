@@ -1,6 +1,6 @@
 ---
 title: "Free internalExecute takes positional binds while every host declares (sql, name, opts)"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
