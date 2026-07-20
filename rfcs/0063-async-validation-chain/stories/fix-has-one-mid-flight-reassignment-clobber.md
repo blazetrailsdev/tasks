@@ -26,17 +26,17 @@ skipped repro
 this story is the fix.
 
 The bug: `loadHasOne` awaits DB I/O, then unconditionally writes the result to
-the shared holder via `syncToAssociationInstance` (`associations.ts:1838`). A
+the shared holder via `syncToAssociationInstance` (`packages/activerecord/src/associations.ts:1808`). A
 reader still in flight when the caller reassigns the association overwrites the
 new target with the stale queried row. Rails is immune because `find_target`
-(`vendor/rails/activerecord/lib/active_record/associations/association.rb:194`)
+(`vendor/rails/activerecord/lib/active_record/associations/association.rb:248`)
 is synchronous.
 
 Three approaches were tried and rejected — do not re-derive them:
 
 1. **Owner stale-key snapshot** (what `loadBelongsTo` does). Does not transfer:
    `stale_state` is non-nil only on `BelongsToAssociation`
-   (`associations/belongs_to_association.rb:126`), nil for foreign
+   (`belongs_to_association.rb:164`), nil for foreign
    associations, and the owner's PK does not move on reassignment.
 2. **False→true flip in holder loaded-ness.** Unsound and actively harmful.
    The association machinery marks holders loaded mid-await on its own —
@@ -49,8 +49,8 @@ Three approaches were tried and rejected — do not re-derive them:
    it, so the guard would never fire on an actual reassignment.
 
 **Two writebacks, not one.** A fix must cover both `syncToAssociationInstance`
-in the inner loader (`associations.ts:1838`) **and** the instance wrapper's own
-unconditional `setTarget` (`associations/instance-methods.ts:176`), which
+in the inner loader (`packages/activerecord/src/associations.ts:1808`) **and** the instance wrapper's own
+unconditional `setTarget` (`packages/activerecord/src/associations/instance-methods.ts:176`), which
 re-syncs after the inner call returns. Guarding only the inner one leaves the
 clobber reachable through `record.loadHasOne(name)` and the `firm.account`
 accessor that routes to it.
@@ -59,7 +59,7 @@ Likely direction: give the holder a **load-generation token** — the loader
 captures it before querying and only writes back if it is unchanged, so "our
 own load's writeback" is distinguishable from "someone else's set" rather than
 inferred. Note the same writeback shape exists in `loadHasMany`
-(`associations.ts:2144`); check whether it needs the same treatment.
+(`packages/activerecord/src/associations.ts:2114`); check whether it needs the same treatment.
 
 Reproduce on a real adapter: SQLite hides both the bug and the bad fix.
 
