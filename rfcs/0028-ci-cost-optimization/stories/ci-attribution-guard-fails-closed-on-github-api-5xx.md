@@ -1,6 +1,6 @@
 ---
 title: "Attribution guards fail closed on transient GitHub API 5xx"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
