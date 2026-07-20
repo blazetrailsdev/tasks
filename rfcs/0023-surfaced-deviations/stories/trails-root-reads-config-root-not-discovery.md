@@ -1,6 +1,6 @@
 ---
 title: "Trails.root() should read application.config.root, not Engine source discovery"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4994
 claim: "2026-07-20T18:11:10Z"
 assignee: "trails-root-reads-config-root-not-discovery"
 blocked-by: null
