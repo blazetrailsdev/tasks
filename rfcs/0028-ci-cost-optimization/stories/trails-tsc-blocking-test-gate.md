@@ -1,6 +1,6 @@
 ---
 title: "Run trails-tsc unit tests in a blocking CI job"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 4996
 claim: "2026-07-20T18:31:11Z"
 assignee: "trails-tsc-blocking-test-gate"
 blocked-by: null
