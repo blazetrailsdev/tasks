@@ -1,7 +1,7 @@
 ---
 title: "Decide and converge in/notIn for a plain object: Ruby Hash expands, Object.new casts whole"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
