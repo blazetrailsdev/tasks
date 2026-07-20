@@ -1,6 +1,6 @@
 ---
 title: "Attribute#coalesce is an invented surface and carries the map(buildQuoted) index bug"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
