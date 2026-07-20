@@ -1,6 +1,6 @@
 ---
 title: "Batch prettier invocations in manifest emitters to cut prelint overhead"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
