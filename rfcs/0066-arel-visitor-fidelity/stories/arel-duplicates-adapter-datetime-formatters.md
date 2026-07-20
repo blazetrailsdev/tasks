@@ -1,6 +1,6 @@
 ---
 title: "arel-duplicates-adapter-datetime-formatters"
-status: claimed
+status: blocked
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-20T23:26:45Z"
 assignee: "arel-duplicates-adapter-datetime-formatters"
-blocked-by: null
+blocked-by: "Blocked on PR #5020 (open, unmerged). This story de-duplicates the Temporal quotedDate/quotedTime/formatPlainDateTime/padYear that #5020 ADDS to packages/arel/src/visitors/default-quoter.ts against activerecord's abstract/sql-datetime.ts. On origin/main (bf6a694be) default-quoter.ts has only a toISOString-based quotedDate and no Temporal formatters at all, so there is nothing yet to hoist into activesupport. Un-block and re-claim once #5020 merges."
 closed-reason: null
 ---
 
