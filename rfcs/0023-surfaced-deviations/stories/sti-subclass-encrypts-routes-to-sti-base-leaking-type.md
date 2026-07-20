@@ -1,6 +1,6 @@
 ---
 title: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
