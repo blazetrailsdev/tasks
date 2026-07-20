@@ -1,6 +1,6 @@
 ---
 title: "alias-bridge-remaining-resolve-sites"
-status: claimed
+status: blocked
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-20T01:11:14Z"
 assignee: "alias-bridge-remaining-resolve-sites"
-blocked-by: null
+blocked-by: "Depends on resolveAliasNameIn from PR #4980, which is still open. Cannot start without stacking or duplicating that PR's helper. Unblock when #4980 merges."
 closed-reason: null
 ---
 
