@@ -1,6 +1,6 @@
 ---
 title: "Dot visitor should class-dispatch raw values via Visitor#visit"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T19:11:43Z"
+assignee: "dot-visitor-uses-class-dispatch"
 blocked-by: null
 closed-reason: null
 ---
