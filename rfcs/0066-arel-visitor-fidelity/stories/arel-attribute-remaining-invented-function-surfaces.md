@@ -1,6 +1,6 @@
 ---
 title: "Audit remaining invented Attribute function surfaces (substring/replace/abs/upper/length)"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5018
 claim: "2026-07-20T23:11:43Z"
 assignee: "arel-attribute-remaining-invented-function-surfaces"
 blocked-by: null
