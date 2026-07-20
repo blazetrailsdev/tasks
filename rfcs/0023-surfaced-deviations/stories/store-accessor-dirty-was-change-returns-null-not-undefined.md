@@ -1,6 +1,6 @@
 ---
 title: "Store accessor *Was/*Change returns undefined on new record; Rails returns nil"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
