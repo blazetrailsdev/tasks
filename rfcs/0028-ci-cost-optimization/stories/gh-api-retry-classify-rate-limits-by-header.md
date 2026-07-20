@@ -1,6 +1,6 @@
 ---
 title: "Classify gh api rate limits by response header, not stderr wording"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
