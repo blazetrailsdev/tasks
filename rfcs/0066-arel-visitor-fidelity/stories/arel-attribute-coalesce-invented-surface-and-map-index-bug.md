@@ -1,6 +1,6 @@
 ---
 title: "Attribute#coalesce is an invented surface and carries the map(buildQuoted) index bug"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 18
-pr: null
+pr: 5007
 claim: "2026-07-20T20:06:44Z"
 assignee: "arel-attribute-coalesce-invented-surface-and-map-index-bug"
 blocked-by: null
