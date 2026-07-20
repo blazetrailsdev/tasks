@@ -1,6 +1,6 @@
 ---
 title: "Converge _attributeDefinitions onto Rails' _default_attributes (drops STI overlay machinery)"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
