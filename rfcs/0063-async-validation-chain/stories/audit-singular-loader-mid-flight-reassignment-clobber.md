@@ -1,6 +1,6 @@
 ---
 title: "Audit loadHasOne/singular loaders for the async mid-flight reassignment clobber fixed in belongs_to"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T20:11:48Z"
+assignee: "audit-singular-loader-mid-flight-reassignment-clobber"
 blocked-by: null
 closed-reason: null
 ---
