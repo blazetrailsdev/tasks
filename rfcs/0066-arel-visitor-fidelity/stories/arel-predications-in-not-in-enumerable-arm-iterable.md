@@ -1,6 +1,6 @@
 ---
 title: "predications.ts in/notIn match Enumerable via iterable, not Array.isArray"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
