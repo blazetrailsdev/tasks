@@ -1,6 +1,6 @@
 ---
 title: "stringSucc: increment whole code points (astral chars) in the no-alnum branch"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
