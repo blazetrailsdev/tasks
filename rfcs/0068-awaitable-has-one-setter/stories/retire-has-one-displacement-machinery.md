@@ -1,6 +1,6 @@
 ---
 title: "Retire queueWrite / _displacedRecords / removeDisplaced and the autosave drain"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["has-one-setter-throws-on-persisted-owner"]
 deps-rfc: []
 est-loc: 350
 priority: 12
-pr: null
+pr: 4983
 claim: "2026-07-20T01:31:13Z"
 assignee: "retire-has-one-displacement-machinery"
 blocked-by: null
