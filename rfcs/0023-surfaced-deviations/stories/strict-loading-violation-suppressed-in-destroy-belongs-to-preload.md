@@ -1,6 +1,6 @@
 ---
 title: "Destroy-callback belongs_to preload swallows StrictLoadingViolationError (should raise)"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 4984
 claim: "2026-07-20T01:41:09Z"
 assignee: "strict-loading-violation-suppressed-in-destroy-belongs-to-preload"
 blocked-by: null
