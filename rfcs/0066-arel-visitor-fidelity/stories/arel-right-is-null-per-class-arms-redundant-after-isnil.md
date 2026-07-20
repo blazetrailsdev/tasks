@@ -1,6 +1,6 @@
 ---
 title: "rightIsNull's per-class Casted/Quoted arms are dead after isNil() landed"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
