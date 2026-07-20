@@ -1,6 +1,6 @@
 ---
 title: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4985
 claim: "2026-07-20T01:57:33Z"
 assignee: "sti-subclass-encrypts-routes-to-sti-base-leaking-type"
 blocked-by: null
