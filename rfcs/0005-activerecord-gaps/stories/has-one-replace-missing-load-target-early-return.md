@@ -1,7 +1,7 @@
 ---
 title: "has-one-replace-missing-load-target-early-return"
-status: draft
-updated: 2026-07-17
+status: closed
+updated: 2026-07-20
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by retire-has-one-displacement-machinery (RFC 0068), which ports Rails' `return target unless load_target || record` (has_one_association.rb:61) into the converged awaitable `replace` in #4983."
 ---
 
 ## Context
