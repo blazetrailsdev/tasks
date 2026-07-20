@@ -1,12 +1,12 @@
 ---
-title: "dot-visitor-uses-class-dispatch"
+title: "Dot visitor should class-dispatch raw values via Visitor#visit"
 status: draft
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: 20
 pr: null
 claim: null
