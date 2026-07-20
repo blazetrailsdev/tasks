@@ -1,6 +1,6 @@
 ---
 title: "Enum decorator re-enters loadSchema during replay (needs WeakSet guard; Rails does not)"
-status: ready
+status: draft
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
