@@ -1,7 +1,7 @@
 ---
 title: "STI subclass normalizes/encrypts leaks decoration onto shared _attributeDefinitions"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T00:51:10Z"
+assignee: "sti-subclass-normalizes-shared-attribute-definitions-leak"
 blocked-by: null
 closed-reason: null
 ---
