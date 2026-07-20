@@ -1,7 +1,7 @@
 ---
 title: "Converge sync columnsHash schema-cache reload (remove sibling-borrow workaround)"
-status: blocked
-updated: 2026-06-16
+status: closed
+updated: 2026-07-20
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
@@ -10,9 +10,10 @@ deps-rfc:
 est-loc: 120
 priority: 40
 pr: 3445
-claim: "2026-06-16T11:46:09Z"
-assignee: "columnshash-sync-schema-cache-reload-vs-sibling-borrow"
-blocked-by: "Architecturally blocked: persistent schema cache breaks cold-cache-per-test suite (base/calculations/associations/cache-key, all adapters); trails has no sync DB reflection. See Findings in story. PR #3445 closed. Re-scope behind sync-reflection or as size===0 recovery-store."
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Superseded by RFC 0031 r3-remove-sibling-borrow-and-recovery (#3882): the always-warm schema cache landed and borrowSameTableColumns is gone from packages/ (only a historical comment in model-schema-columnshash-recovery.test.ts remains). Both acceptance criteria are satisfied on main; deps-rfc 0031 is fully done."
 ---
 
 ## Context
