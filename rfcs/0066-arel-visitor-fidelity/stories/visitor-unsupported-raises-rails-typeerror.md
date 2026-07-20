@@ -1,6 +1,6 @@
 ---
 title: "visitor-unsupported-raises-rails-typeerror"
-status: ready
+status: closed
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: superseded by arel-visit-no-handler-raises-typeerror (in-progress, est 40), which covers the same visitor.rb:38 no-handler TypeError convergence plus the to_sql.rb:828 unsupported-terminal split. Filed during #5003 without checking the RFC list first."
 ---
 
 ## Context
