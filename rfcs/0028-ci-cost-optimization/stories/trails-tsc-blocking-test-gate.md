@@ -1,6 +1,6 @@
 ---
 title: "Run trails-tsc unit tests in a blocking CI job"
-status: in-progress
+status: done
 updated: 2026-07-20
 rfc: "0028-ci-cost-optimization"
 cluster: null
