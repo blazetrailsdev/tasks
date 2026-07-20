@@ -1,6 +1,6 @@
 ---
 title: "save-runs-validations-inside-transaction"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0057-transaction-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: ["0063-async-validation-chain"]
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T01:57:46Z"
+assignee: "save-runs-validations-inside-transaction"
 blocked-by: null
 ---
 
