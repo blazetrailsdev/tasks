@@ -1,6 +1,6 @@
 ---
 title: "predications.ts in/notIn match Enumerable via iterable, not Array.isArray"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 15
-pr: null
+pr: 5005
 claim: "2026-07-20T19:21:43Z"
 assignee: "arel-predications-in-not-in-enumerable-arm-iterable"
 blocked-by: null
