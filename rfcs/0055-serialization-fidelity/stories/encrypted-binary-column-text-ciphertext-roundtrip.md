@@ -1,6 +1,6 @@
 ---
 title: "Encrypted binary column can't round-trip text ciphertext (restore logo asserts, un-skip serialized-binary)"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T20:26:45Z"
+assignee: "encrypted-binary-column-text-ciphertext-roundtrip"
 blocked-by: null
 closed-reason: null
 ---
