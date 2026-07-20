@@ -1,6 +1,6 @@
 ---
 title: "ArelConnection has no quotedDate/quotedTime, so type_cast's Temporal arms cannot dispatch"
-status: claimed
+status: in-progress
 updated: 2026-07-20
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5020
 claim: "2026-07-20T23:16:44Z"
 assignee: "arel-connection-lacks-quoted-date-time-self-dispatch"
 blocked-by: null
