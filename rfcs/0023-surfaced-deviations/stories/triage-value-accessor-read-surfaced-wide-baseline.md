@@ -1,7 +1,7 @@
 ---
 title: "Triage the 183 value-accessor-read-surfaced wide-call baseline entries"
-status: ready
-updated: 2026-07-06
+status: claimed
+updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T18:41:45Z"
+assignee: "triage-value-accessor-read-surfaced-wide-baseline"
 blocked-by: null
 closed-reason: null
 ---
