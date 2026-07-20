@@ -1,6 +1,6 @@
 ---
 title: "sqlite-perform-query-iswrite-gate-drops-returning-rows"
-status: ready
+status: claimed
 updated: 2026-07-20
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-20T00:31:10Z"
+assignee: "sqlite-perform-query-iswrite-gate-drops-returning-rows"
 blocked-by: null
 closed-reason: null
 ---
