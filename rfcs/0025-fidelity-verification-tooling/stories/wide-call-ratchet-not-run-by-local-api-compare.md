@@ -1,6 +1,6 @@
 ---
 title: "Wide call ratchet is CI-only; converging a divergence fails it unexpectedly"
-status: ready
+status: draft
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
