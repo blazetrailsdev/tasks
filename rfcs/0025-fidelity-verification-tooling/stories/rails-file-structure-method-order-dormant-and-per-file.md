@@ -1,6 +1,6 @@
 ---
 title: "rails-file-structure-method-order-dormant-and-per-file"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
