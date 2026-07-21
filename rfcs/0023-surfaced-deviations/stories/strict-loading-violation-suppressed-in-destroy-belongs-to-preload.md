@@ -1,7 +1,7 @@
 ---
 title: "Destroy-callback belongs_to preload swallows StrictLoadingViolationError (should raise)"
-status: in-progress
-updated: 2026-07-20
+status: closed
+updated: 2026-07-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,9 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: 4984
-claim: "2026-07-20T01:41:09Z"
-assignee: "strict-loading-violation-suppressed-in-destroy-belongs-to-preload"
+claim: null
+assignee: null
 blocked-by: null
+closed-reason: "Superseded by drop-sync-belongs-to-reader-and-destroy-preload-shim. PR #4984 fixed the swallow by rethrowing StrictLoadingViolationError and was closed unmerged: the fix patches _preloadBelongsToForDestroyCallbacks, a trails-only speculative-preload shim that stringifies callback bodies and regex-scans them for association names. Making that path slightly more correct extends its life; the shim is being deleted with the sync singular reader instead, after which the violation surfaces from loadTarget() at dereference as it does in Rails."
 ---
 
 ## Context
