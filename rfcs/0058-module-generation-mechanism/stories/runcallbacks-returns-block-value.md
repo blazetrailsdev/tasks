@@ -1,7 +1,7 @@
 ---
 title: "runCallbacks returns the block value, not a boolean (Rails run_callbacks parity)"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0058-module-generation-mechanism"
 cluster: null
 deps: []
