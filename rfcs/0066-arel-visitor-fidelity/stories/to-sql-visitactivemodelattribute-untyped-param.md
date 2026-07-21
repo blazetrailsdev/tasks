@@ -1,7 +1,7 @@
 ---
 title: "to-sql's visitActiveModelAttribute takes unknown while dot.ts types it"
-status: ready
-updated: 2026-07-20
+status: claimed
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T20:50:16Z"
+assignee: "to-sql-visitactivemodelattribute-untyped-param"
 blocked-by: null
 closed-reason: null
 ---
