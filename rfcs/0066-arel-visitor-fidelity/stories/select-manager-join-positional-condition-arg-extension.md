@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#join/outerJoin overload the klass arg with an ON predicate, forcing a divergent createJoin override"
-status: ready
+status: draft
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
