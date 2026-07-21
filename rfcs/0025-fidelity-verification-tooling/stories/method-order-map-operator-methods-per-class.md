@@ -1,6 +1,6 @@
 ---
 title: "Method-order manifest: map operator methods (e.g. []→get/getAttribute) per class"
-status: ready
+status: draft
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
