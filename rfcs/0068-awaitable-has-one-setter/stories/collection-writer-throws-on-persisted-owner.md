@@ -1,7 +1,7 @@
 ---
 title: "Collection = / ids= assignment throws on persisted owners; retire persisted-owner _pendingReplace"
-status: ready
-updated: 2026-07-17
+status: claimed
+updated: 2026-07-21
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["retire-has-one-displacement-machinery"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T21:05:19Z"
+assignee: "collection-writer-throws-on-persisted-owner"
 blocked-by: null
 ---
 
