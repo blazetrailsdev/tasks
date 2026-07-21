@@ -1,7 +1,7 @@
 ---
 title: "arel-attribute-include-predications-mixin"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
