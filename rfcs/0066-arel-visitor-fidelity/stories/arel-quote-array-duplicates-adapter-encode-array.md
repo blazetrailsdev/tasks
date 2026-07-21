@@ -1,7 +1,7 @@
 ---
 title: "Arel quoteArrayLiteral duplicates the adapter's encodeArray and drifts from it"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
