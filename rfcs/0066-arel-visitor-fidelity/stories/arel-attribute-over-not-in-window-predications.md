@@ -1,6 +1,6 @@
 ---
 title: "Attribute#over is an invented surface — WindowPredications is only on Function/Filter"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5027
 claim: "2026-07-21T12:30:16Z"
 assignee: "arel-attribute-over-not-in-window-predications"
 blocked-by: null
