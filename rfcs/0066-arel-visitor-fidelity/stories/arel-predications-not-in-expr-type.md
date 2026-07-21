@@ -1,7 +1,7 @@
 ---
 title: "arel-predications-not-in-expr-type"
-status: ready
-updated: 2026-07-20
+status: claimed
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T01:35:16Z"
+assignee: "arel-predications-not-in-expr-type"
 blocked-by: null
 closed-reason: null
 ---
