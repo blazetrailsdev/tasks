@@ -1,6 +1,6 @@
 ---
 title: "*_any/*_all bypass grouping_any/grouping_all"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
