@@ -1,6 +1,6 @@
 ---
 title: "Sweep arel for Rails-named placeholder tests that assert nothing and inflate test:compare"
-status: draft
+status: ready
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
