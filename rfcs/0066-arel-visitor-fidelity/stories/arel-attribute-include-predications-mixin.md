@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 25
 pr: 5019
 claim: "2026-07-20T23:06:44Z"
 assignee: "arel-attribute-include-predications-mixin"
