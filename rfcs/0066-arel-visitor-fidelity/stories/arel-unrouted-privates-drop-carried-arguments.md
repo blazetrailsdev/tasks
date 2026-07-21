@@ -1,6 +1,6 @@
 ---
 title: "Sweep arel for ported Rails privates whose call sites drop carried arguments"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5025
 claim: "2026-07-21T11:25:16Z"
 assignee: "arel-unrouted-privates-drop-carried-arguments"
 blocked-by: null
