@@ -1,6 +1,6 @@
 ---
 title: "arel-nodeorvalue-scalars-rails-unsupported"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
