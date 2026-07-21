@@ -1,6 +1,6 @@
 ---
 title: "test-deps extractor: namespaced fixture declarations never intersect dereferences"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5034
 claim: "2026-07-21T18:25:22Z"
 assignee: "test-deps-namespaced-fixture-name-normalization"
 blocked-by: null
