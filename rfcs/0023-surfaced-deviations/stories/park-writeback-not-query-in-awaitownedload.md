@@ -1,6 +1,6 @@
 ---
 title: "Park the writeback, not the query, in _awaitOwnedLoad"
-status: draft
+status: closed
 updated: 2026-07-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done in #5035. The join-before-query approach it described was itself wrong for re-entrant through-reconcile loads (they must run a fresh query, not piggyback), so #5035 removed the join entirely: every load queries, only the writeback is ownership-gated, and a load that lost ownership awaits the current owner's writeback. That closes both the concurrent-duplicate-read regression and the ordering fragility this story was filed for."
 ---
 
 ## Context
