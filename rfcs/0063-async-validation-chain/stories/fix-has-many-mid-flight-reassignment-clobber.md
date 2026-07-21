@@ -1,6 +1,6 @@
 ---
 title: "fix-has-many-mid-flight-reassignment-clobber"
-status: ready
+status: claimed
 updated: 2026-07-21
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T19:00:16Z"
+assignee: "fix-has-many-mid-flight-reassignment-clobber"
 blocked-by: null
 closed-reason: null
 ---
