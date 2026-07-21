@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5028
+pr: 5029
 claim: "2026-07-21T12:40:15Z"
 assignee: "arel-select-manager-join-string-literal-case"
 blocked-by: null
