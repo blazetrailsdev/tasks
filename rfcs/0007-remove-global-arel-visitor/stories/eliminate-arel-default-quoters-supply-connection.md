@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the arel default quoters — every visitor supplies a connection, as Rails does"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
