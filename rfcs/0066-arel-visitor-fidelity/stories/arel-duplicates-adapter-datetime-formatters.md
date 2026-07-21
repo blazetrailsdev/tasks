@@ -1,7 +1,7 @@
 ---
 title: "arel-duplicates-adapter-datetime-formatters"
-status: blocked
-updated: 2026-07-20
+status: closed
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-20T23:26:45Z"
-assignee: "arel-duplicates-adapter-datetime-formatters"
-blocked-by: "Blocked on PR #5020 (open, unmerged). This story de-duplicates the Temporal quotedDate/quotedTime/formatPlainDateTime/padYear that #5020 ADDS to packages/arel/src/visitors/default-quoter.ts against activerecord's abstract/sql-datetime.ts. On origin/main (bf6a694be) default-quoter.ts has only a toISOString-based quotedDate and no Temporal formatters at all, so there is nothing yet to hoist into activesupport. Un-block and re-claim once #5020 merges."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Superseded by RFC 0007 story eliminate-arel-default-quoters-supply-connection (status: claimed, active). DECISION (satisfies AC bullet 1): the Temporal->SQL formatters are hoisted to NEITHER activesupport nor justified as permanent — the arel copy is being DELETED outright. #5020 merged the Temporal quotedDate/quotedTime/formatPlainDateTime/padYear into packages/arel/src/visitors/default-quoter.ts, so the duplication against connection-adapters/abstract/sql-datetime.ts is now real. But default-quoter.ts (defaultQuoter/mysqlDefaultQuoter/postgresqlDefaultQuoter) + quote-array.ts are a ~359-LOC trails invention with no Rails analogue: Rails' Node#to_sql and TreeManager#to_sql both do engine.with_connection { |c| c.visitor.accept(...) }, so there is no connection-less path to serve. Hoisting the formatters into activesupport would entrench the invented host and raise its removal cost — the same reasoning that closed #5022 unmerged. Blast radius is the debug-only Node#toSql() path, so the duplication carries no adapter-path risk while the deletion story lands. If that story is abandoned rather than completed, re-open this one."
 ---
 
 ## Context
