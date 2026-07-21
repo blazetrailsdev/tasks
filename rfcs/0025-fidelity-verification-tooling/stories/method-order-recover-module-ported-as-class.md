@@ -1,6 +1,6 @@
 ---
 title: "Method-order manifest: enforce order for Ruby modules ported as TS classes"
-status: ready
+status: draft
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
