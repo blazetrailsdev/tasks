@@ -1,6 +1,6 @@
 ---
 title: "Arel visitor quotes Temporal for real where Rails aliases visit_Time/Date to unsupported"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5026
 claim: "2026-07-21T11:30:18Z"
 assignee: "arel-visitor-quotes-temporal-where-rails-raises"
 blocked-by: null
