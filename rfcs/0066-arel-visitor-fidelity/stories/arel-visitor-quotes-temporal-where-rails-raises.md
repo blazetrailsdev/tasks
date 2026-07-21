@@ -1,6 +1,6 @@
 ---
 title: "Arel visitor quotes Temporal for real where Rails aliases visit_Time/Date to unsupported"
-status: in-progress
+status: closed
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: 5026
-claim: "2026-07-21T11:30:18Z"
-assignee: "arel-visitor-quotes-temporal-where-rails-raises"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Investigated and answered, no code change warranted: #5028 established that the unsupported alias list is not the slot-exclusion set, so the Temporal arms of NodeOrValue are justified by the Assignment quoting slot (to_sql.rb:629-641). PR #5026 (comment + test only) closed unmerged as not worth the review cost."
 ---
 
 ## Context
