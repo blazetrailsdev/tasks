@@ -1,7 +1,7 @@
 ---
 title: "NodeOrValue excludes Temporal but admits Date, inverting AR's type stance"
-status: ready
-updated: 2026-07-20
+status: claimed
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T01:20:15Z"
+assignee: "arel-nodeorvalue-excludes-temporal-admits-date"
 blocked-by: null
 closed-reason: null
 ---
