@@ -38,9 +38,24 @@ connection and every quoting decision delegates to it (`to_sql.rb:867-870`).
 1. `@blazetrails/activerecord` depends on `@blazetrails/arel`, so arel-side tests
    cannot import a real adapter without a circular dependency — Rails has no such
    constraint (one gem). `default-quoter.ts` therefore cannot be deleted outright
-   while `packages/arel` has its own suite; it collapses into
-   `test-helpers/connection.ts` as an explicitly test-only stub, off the
-   production surface. Decide and document that shape here.
+   while `packages/arel` has its own suite.
+
+   **Decided shape** (pinned in #5032 review): _move_ `default-quoter.ts` into
+   `packages/arel/src/test-helpers/`, keeping the bodies as-is, and surface it as
+   `testConnection`. Do NOT hand-write a fresh minimal quoter. A rewrite would be
+   a second invention with no Rails analogue, and it would silently break #5008's
+   `array-encode-parity.trails.test.ts`, which pins the PG quoter's output
+   byte-for-byte against `OID::Array#encode` — a hand-rolled replacement would
+   have to re-derive those bytes with nothing anchoring it. The move is
+   behaviour-preserving and testable; the rewrite is not.
+
+   Consequence to state plainly in that PR: `testConnection` is a **permanent**
+   test-only stub, not a transitional one, for as long as `packages/arel` ships
+   its own suite. What RFC 0007 eliminates is the _production_ surface — the
+   constructor defaults and the implicit fallback — not the existence of a test
+   connection. Rails' equivalent is `Table.engine.lease_connection`; ours is a
+   stub only because of the package split.
+
 2. #5008 added `array-encode-parity.trails.test.ts`, which pins arel's
    `postgresqlDefaultQuoter` byte-for-byte against `OID::Array#encode` — it
    deliberately depends on the duplication existing. Deleting `quote-array.ts`
