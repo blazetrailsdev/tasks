@@ -1,6 +1,6 @@
 ---
 title: "Converge the Hash analogue into rubyClassName so Dot's isHash residue can go"
-status: ready
+status: claimed
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 23
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T23:30:16Z"
+assignee: "converge-hash-analogue-into-rubyclassname"
 blocked-by: null
 closed-reason: null
 ---
