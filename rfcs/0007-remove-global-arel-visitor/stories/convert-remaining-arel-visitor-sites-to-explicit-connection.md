@@ -6,7 +6,7 @@ rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 460
 priority: null
 pr: null
 claim: "2026-07-21T18:35:17Z"

@@ -7,7 +7,7 @@ cluster: null
 deps:
   - convert-remaining-arel-visitor-sites-to-explicit-connection
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: "2026-07-21T18:30:22Z"
@@ -50,12 +50,18 @@ The adapter side is already Rails-faithful: `AbstractAdapter#visitor`
 (`connection-adapters/abstract-adapter.ts:1697`) returns a visitor built with the
 connection (`:654-655`), exactly Rails' `abstract_adapter.rb:155`.
 
-**This is the largest phase of RFC 0007, not the smallest** — the story
-`eliminate-arel-default-quoters-supply-connection` mis-sequenced it as phase 1.
-It touches **666** `.toSql()` call sites (279 in arel, 387 in activerecord),
-because with `Table.engine` unset every bare `.toSql()` would raise. Sequence it
-**after** `convert-remaining-arel-visitor-sites-to-explicit-connection`, and
-expect it to need several PRs.
+**Correction to #5032's PR body — read this before sizing the work.** That PR
+claimed this phase "touches 666 `.toSql()` call sites (279 arel + 387
+activerecord)" and is the largest phase of RFC 0007. That is wrong. Rails'
+signature _defaults_ the engine — `to_sql(engine = Table.engine)` — so every
+existing bare `.toSql()` keeps compiling and working unchanged once
+`Table.engine` is assigned. 666 is the blast radius _if the engine were left
+unset_, not an edit count. **No call sites need editing.**
+
+The real work is small and centralised: assign `Table.engine`, rewrite two
+methods, delete the invented registry, repoint the parity runner. Sequence after
+`convert-remaining-arel-visitor-sites-to-explicit-connection` only because that
+story removes the constructor defaults this one would otherwise still reach.
 
 ## Acceptance criteria
 

@@ -8,7 +8,7 @@ deps:
   - convert-remaining-arel-visitor-sites-to-explicit-connection
   - converge-node-tosql-to-table-engine-connection
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -26,7 +26,6 @@ Final phase of RFC 0007, after
 Once every call site names its connection, delete the invention:
 
 - `packages/arel/src/visitors/default-quoter.ts` (332 LOC)
-- `packages/arel/src/quote-array.ts` (141 LOC) + `quote-array.test.ts`
 - the `ArelConnection` constructor defaults on `ToSql` (`visitors/to-sql.ts:170`),
   `MySQL` (`visitors/mysql.ts:14`), and `PostgreSQL` (`visitors/postgresql.ts:21`)
 - the `PostgreSQL` constructor entirely — Rails' `arel/visitors/postgresql.rb`
@@ -58,7 +57,10 @@ connection and every quoting decision delegates to it (`to_sql.rb:867-870`).
    connection. Rails' equivalent is `Table.engine.lease_connection`; ours is a
    stub only because of the package split.
 
-2. #5008 added `array-encode-parity.trails.test.ts`, which pins arel's
+2. `quote-array.ts` is **split out** into
+   `delete-arel-quote-array-adapter-owns-array-encoding` — it was originally
+   bundled here, but the pair exceeded the 500-LOC ceiling. #5008 added
+   `array-encode-parity.trails.test.ts`, which pins arel's
    `postgresqlDefaultQuoter` byte-for-byte against `OID::Array#encode` — it
    deliberately depends on the duplication existing. Deleting `quote-array.ts`
    means that parity test either dies with it or is repointed. Sibling stories
@@ -68,7 +70,7 @@ connection and every quoting decision delegates to it (`to_sql.rb:867-870`).
 
 ## Acceptance criteria
 
-- [ ] `default-quoter.ts` and `quote-array.ts` no longer exist on the production
+- [ ] `default-quoter.ts` no longer exists on the production
       surface; any surviving stub is test-only and documented with its Rails anchor.
 - [ ] No visitor constructor supplies a default connection.
 - [ ] `PostgreSQL` has no constructor.
