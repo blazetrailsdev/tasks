@@ -1,6 +1,6 @@
 ---
 title: "arel-select-manager-join-string-literal-case"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5029
+pr: 5028
 claim: "2026-07-21T12:40:15Z"
 assignee: "arel-select-manager-join-string-literal-case"
 blocked-by: null
