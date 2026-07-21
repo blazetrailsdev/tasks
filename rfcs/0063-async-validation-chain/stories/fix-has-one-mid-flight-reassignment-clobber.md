@@ -55,7 +55,24 @@ re-syncs after the inner call returns. Guarding only the inner one leaves the
 clobber reachable through `record.loadHasOne(name)` and the `firm.account`
 accessor that routes to it.
 
-Likely direction: give the holder a **load-generation token** — the loader
+**Preferred direction — mirror Rails' structure instead of guarding.** Rails
+makes this race unrepresentable rather than detecting it. `async_load_target`
+(`vendor/rails/activerecord/lib/active_record/associations/association.rb:199`)
+assigns the **Promise itself** to `@target` synchronously; the `target` reader
+(`association.rb:53-57`) resolves it lazily with
+`@target = @target.value if @target.is_a?(Promise)`. A mid-flight reassignment
+goes through `target=` (`association.rb:102-105`), which overwrites `@target`
+— Promise included — so the in-flight result becomes unreachable and is
+dropped. Nothing writes back after the await, so there is no conflict to
+detect. The pending result is reachable only _through the slot it would
+overwrite_.
+
+Porting that shape (holder stores the pending promise; the reader resolves it;
+writers overwrite the slot) removes both writeback sites rather than guarding
+them, and is strictly better than the fallback below.
+
+Fallback if that restructuring proves too invasive: give the holder a
+**load-generation token** — the loader
 captures it before querying and only writes back if it is unchanged, so "our
 own load's writeback" is distinguishable from "someone else's set" rather than
 inferred. Note the same writeback shape exists in `loadHasMany`
