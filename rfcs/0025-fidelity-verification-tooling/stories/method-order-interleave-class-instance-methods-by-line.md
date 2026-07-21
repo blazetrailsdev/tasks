@@ -1,6 +1,6 @@
 ---
 title: "method-order-interleave-class-instance-methods-by-line"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
