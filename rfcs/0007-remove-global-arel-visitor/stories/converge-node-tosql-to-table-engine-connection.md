@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
-deps: []
+deps:
+  - convert-remaining-arel-visitor-sites-to-explicit-connection
 deps-rfc: []
 est-loc: null
 priority: null
