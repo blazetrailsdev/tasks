@@ -1,6 +1,6 @@
 ---
 title: "arel debug quoter hardcodes UTC, ignoring default_timezone"
-status: in-progress
+status: closed
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: 5022
-claim: "2026-07-21T01:25:16Z"
-assignee: "arel-debug-quoter-hardcodes-utc-ignoring-default-timezone"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by eliminate-arel-default-quoters-supply-connection (RFC 0007): Rails' Node#to_sql takes a real connection (arel/nodes/node.rb:148-153), so the connection-less quoter this story would fix is an invention slated for deletion, not a host to make faithful. PR #5022 closed unmerged; findings recorded there and on the removal story."
 ---
 
 ## Context
