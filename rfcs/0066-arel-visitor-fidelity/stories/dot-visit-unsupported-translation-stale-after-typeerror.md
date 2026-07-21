@@ -1,6 +1,6 @@
 ---
 title: "Dot#visit UnsupportedVisitError translation is stale after #5002"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 22
-pr: null
+pr: 5043
 claim: "2026-07-21T23:25:16Z"
 assignee: "dot-visit-unsupported-translation-stale-after-typeerror"
 blocked-by: null
