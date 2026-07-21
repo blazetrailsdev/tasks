@@ -1,7 +1,7 @@
 ---
 title: "ArelConnection has no quotedDate/quotedTime, so type_cast's Temporal arms cannot dispatch"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
