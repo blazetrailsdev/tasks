@@ -1,7 +1,7 @@
 ---
 title: "Retire queueWrite / _displacedRecords / removeDisplaced and the autosave drain"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: ["has-one-setter-throws-on-persisted-owner"]
