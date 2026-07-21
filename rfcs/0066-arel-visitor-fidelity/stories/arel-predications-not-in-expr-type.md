@@ -1,6 +1,6 @@
 ---
 title: "arel-predications-not-in-expr-type"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
