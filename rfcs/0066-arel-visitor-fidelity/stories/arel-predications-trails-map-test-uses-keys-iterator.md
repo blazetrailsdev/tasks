@@ -1,7 +1,7 @@
 ---
 title: "predications.trails.test.ts Map test iterates .keys(), not a Map"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
