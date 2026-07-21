@@ -1,6 +1,6 @@
 ---
 title: "serialize-encrypts-decorator-ordering"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0055-serialization-fidelity"
 cluster: null
