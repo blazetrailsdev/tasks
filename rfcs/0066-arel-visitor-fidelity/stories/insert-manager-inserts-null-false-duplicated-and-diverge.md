@@ -1,6 +1,6 @@
 ---
 title: "insert-manager inserts null/false tests duplicated and diverge from Rails"
-status: ready
+status: claimed
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T18:15:17Z"
+assignee: "insert-manager-inserts-null-false-duplicated-and-diverge"
 blocked-by: null
 closed-reason: null
 ---
