@@ -1,6 +1,6 @@
 ---
 title: "Arel toSql connection parameter is still optional; the connection-less fallback survives"
-status: draft
+status: closed
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of converge-node-tosql-to-table-engine-connection (0007, in-progress, PR #5036), which already owns Node#toSql/TreeManager#toSql connection convergence and removal of the connection-less path. Filed from #5037 before checking with the correct RFC slug."
 ---
 
 ## Context
