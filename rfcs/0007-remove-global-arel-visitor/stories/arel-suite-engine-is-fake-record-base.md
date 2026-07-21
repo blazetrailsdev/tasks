@@ -1,6 +1,6 @@
 ---
 title: "arel-suite-engine-is-fake-record-base"
-status: claimed
+status: blocked
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-21T21:10:35Z"
 assignee: "arel-suite-engine-is-fake-record-base"
-blocked-by: null
+blocked-by: "Depends on #5036 (still OPEN), which introduces packages/arel/src/test-setup-engine.ts and the fakeRecordEngine export. Neither exists on origin/main (c79a80b1e), so every acceptance criterion targets a file that is not there yet. No-stacked-PRs rule forbids branching off #5036. Re-ready once #5036 merges."
 closed-reason: null
 ---
 
