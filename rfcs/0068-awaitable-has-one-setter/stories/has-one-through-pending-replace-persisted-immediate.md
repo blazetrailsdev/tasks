@@ -1,6 +1,6 @@
 ---
 title: "has_one_through: persisted-owner replace goes immediate; keep new-owner deferral"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["retire-has-one-displacement-machinery"]
 deps-rfc: []
 est-loc: 200
 priority: 13
-pr: null
+pr: 5041
 claim: "2026-07-21T21:00:15Z"
 assignee: "has-one-through-pending-replace-persisted-immediate"
 blocked-by: null
