@@ -1,0 +1,53 @@
+---
+title: "convert-remaining-arel-visitor-sites-to-explicit-connection"
+status: ready
+updated: 2026-07-21
+rfc: "0007-remove-global-arel-visitor"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Follow-up to #5032, which converted `to-sql.test.ts` (219 sites) to name its
+connection explicitly via `packages/arel/src/test-helpers/connection.ts`.
+
+Rails builds Arel visitors with a real connection —
+`Visitors::ToSql.new Table.engine.lease_connection`
+(`arel/nodes/sql_literal_test.rb:10`, `arel/visitors/sqlite_test.rb:9`). Rails has
+no connection-less visitor path.
+
+Remaining bare construction sites in `packages/arel` (counts at #5032 merge):
+
+- `visitors/postgres.test.ts` — 61
+- `attributes/attribute.test.ts` — 30
+- `visitors/mysql.test.ts` — 26
+- `select-manager.test.ts` — 18
+- `visitors/sqlite.test.ts` — 15
+- `visitors/dot.test.ts` — 12
+- `predications.test.ts` — 10
+- plus ~40 across `nodes/*.test.ts`, `attributes/math.test.ts`,
+  `factory-methods.test.ts`, `table.test.ts`, `predications-range.test.ts`,
+  `attribute-alignment.test.ts`, `dispatch-contamination.test.ts`
+
+Import `testConnection` / `mysqlTestConnection` / `postgresqlTestConnection` from
+`test-helpers/connection.ts` — do NOT reintroduce a bare constructor call.
+
+Split across 2-3 PRs to stay under the LOC ceiling (each converted site is ~2 LOC).
+Files are non-overlapping, so the PRs can be opened from main in parallel.
+
+## Acceptance criteria
+
+- [ ] No `new Visitors.ToSql()` / `new Visitors.MySQL()` / `new Visitors.PostgreSQL()` /
+      `new Visitors.SQLite()` / `new Visitors.Dot()` without an explicit connection
+      anywhere in `packages/arel`.
+- [ ] No test names changed (test:compare delta 0).
+- [ ] api:compare delta non-negative.
