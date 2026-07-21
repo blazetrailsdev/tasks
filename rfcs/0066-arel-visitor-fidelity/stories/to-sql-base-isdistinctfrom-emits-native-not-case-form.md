@@ -1,6 +1,6 @@
 ---
 title: "Base ToSql IsDistinctFrom emits native syntax instead of Rails' CASE form"
-status: draft
+status: ready
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
