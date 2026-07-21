@@ -1,6 +1,6 @@
 ---
 title: "arel debug quoter hardcodes UTC, ignoring default_timezone"
-status: ready
+status: claimed
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T01:25:16Z"
+assignee: "arel-debug-quoter-hardcodes-utc-ignoring-default-timezone"
 blocked-by: null
 closed-reason: null
 ---
