@@ -1,6 +1,6 @@
 ---
 title: "Arel toSql connection parameter is still optional; the connection-less fallback survives"
-status: ready
+status: draft
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
