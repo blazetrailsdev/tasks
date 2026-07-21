@@ -1,6 +1,6 @@
 ---
 title: "fix-has-many-mid-flight-reassignment-clobber"
-status: in-progress
+status: closed
 updated: 2026-07-21
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5038
-claim: "2026-07-21T19:00:16Z"
-assignee: "fix-has-many-mid-flight-reassignment-clobber"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: the _targetPromise redesign in #5035 covers collections too. The counter-based guard broke three tests that mutate collection targets mid-load by design; a promise slot is untouched by those mutations, so loadHasMany is now guarded in #5035 with the reproducer as a passing test."
 ---
 
 ## Context
