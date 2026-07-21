@@ -1,7 +1,7 @@
 ---
 title: "attribute.test.ts: resolve duplicate it() names within #eq, #matches_all, #eq_all"
-status: in-progress
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
