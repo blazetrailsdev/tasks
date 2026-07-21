@@ -1,7 +1,7 @@
 ---
 title: "serialize-encrypts-decorator-ordering"
-status: ready
-updated: 2026-07-20
+status: claimed
+updated: 2026-07-21
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-21T18:20:16Z"
+assignee: "serialize-encrypts-decorator-ordering"
 blocked-by: null
 closed-reason: null
 ---
