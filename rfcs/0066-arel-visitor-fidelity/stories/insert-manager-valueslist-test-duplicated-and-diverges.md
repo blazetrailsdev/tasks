@@ -1,14 +1,14 @@
 ---
 title: "insert-manager-valueslist-test-duplicated-and-diverges"
-status: claimed
-updated: 2026-07-20
+status: done
+updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 30
 priority: 52
-pr: null
+pr: 5017
 claim: "2026-07-20T23:01:44Z"
 assignee: "insert-manager-valueslist-test-duplicated-and-diverges"
 blocked-by: null
