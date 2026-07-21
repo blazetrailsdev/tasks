@@ -1,6 +1,6 @@
 ---
 title: "test-deps extractor: namespaced fixture declarations never intersect dereferences"
-status: in-progress
+status: done
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
