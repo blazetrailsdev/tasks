@@ -74,3 +74,21 @@ before claiming.
       documented with the Rails anchor for why it must differ.
 - [ ] No arel-side re-implementation of adapter quoting remains.
 - [ ] api:compare / test:compare delta non-negative.
+
+## Inherited from #5022 (superseded story: arel-debug-quoter-hardcodes-utc-ignoring-default-timezone)
+
+That story tried to make `quotedDate` in `default-quoter.ts` timezone-aware; the
+PR was closed unmerged once it was clear the host itself is what this story
+deletes. Two findings worth keeping so they aren't re-derived:
+
+1. **arel can read `default_timezone` without depending on activerecord.** arel
+   already depends on activemodel, which exports `configuredTimezone()`
+   (`type/helpers/timezone.ts:31`); activerecord's `setDefaultTimezone`
+   (`type/internal/timezone.ts:25-34`) forwards to it. So any in-tree comment
+   claiming the UTC hardcode is forced by dependency direction is wrong — it was
+   simply unreachable. Moot once each visitor takes a connection and the
+   adapter's own `quoted_date` owns the timezone branch, which is the point.
+2. **Timezone assertions are vacuous on a UTC host** — hardcoded-UTC and
+   correct code are behaviourally identical there, and `process.env.TZ` pinning
+   is forbidden repo-wide. If deletion changes timezone-dependent output, a test
+   on a UTC runner will not catch it.
