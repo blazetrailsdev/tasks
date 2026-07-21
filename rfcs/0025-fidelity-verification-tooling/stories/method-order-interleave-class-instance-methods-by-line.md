@@ -1,6 +1,6 @@
 ---
 title: "method-order-interleave-class-instance-methods-by-line"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5039
 claim: "2026-07-21T19:05:18Z"
 assignee: "method-order-interleave-class-instance-methods-by-line"
 blocked-by: null
