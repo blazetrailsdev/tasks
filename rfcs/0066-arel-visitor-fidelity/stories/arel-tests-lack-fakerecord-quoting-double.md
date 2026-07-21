@@ -1,6 +1,6 @@
 ---
 title: "Arel tests lack a FakeRecord quoting double, so Rails' 't'/'f' assertions are unreachable"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5037
 claim: "2026-07-21T18:55:29Z"
 assignee: "arel-tests-lack-fakerecord-quoting-double"
 blocked-by: null
