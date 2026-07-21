@@ -1,6 +1,6 @@
 ---
 title: "converge-node-tosql-to-table-engine-connection"
-status: claimed
+status: in-progress
 updated: 2026-07-21
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5036
 claim: "2026-07-21T18:30:22Z"
 assignee: "converge-node-tosql-to-table-engine-connection"
 blocked-by: null
