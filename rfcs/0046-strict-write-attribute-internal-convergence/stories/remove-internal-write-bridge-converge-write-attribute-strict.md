@@ -1,6 +1,6 @@
 ---
 title: "Remove the internal-write bridge; converge _write_attribute to raise"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 40
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T23:48:34Z"
+assignee: "remove-internal-write-bridge-converge-write-attribute-strict"
 blocked-by: null
 ---
 
