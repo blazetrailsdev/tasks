@@ -1,7 +1,7 @@
 ---
 title: "predicate-builder threads negation instead of inverting WhereClause (Rails)"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
