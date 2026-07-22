@@ -1,7 +1,7 @@
 ---
 title: "Relation#where eager pre-cast diverges from Rails' defer-to-bind casting"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
