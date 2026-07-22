@@ -1,6 +1,6 @@
 ---
 title: "encrypts + serialize nesting order ignores declaration order for the encrypts-first case"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: 5060
 claim: "2026-07-22T15:26:50Z"
 assignee: "encrypts-serialize-nesting-ignores-declaration-order"
 blocked-by: null
