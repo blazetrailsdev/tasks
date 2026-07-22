@@ -1,6 +1,6 @@
 ---
 title: "gateFromGuardExpr: align positive-adapter+feature mixing with Ruby mixed rule"
-status: ready
+status: draft
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
