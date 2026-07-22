@@ -1,6 +1,6 @@
 ---
 title: "grouping-queries-flat-and-vs-binary-and-reduce"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 56
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T23:35:45Z"
+assignee: "grouping-queries-flat-and-vs-binary-and-reduce"
 blocked-by: null
 closed-reason: null
 ---
