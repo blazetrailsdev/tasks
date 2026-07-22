@@ -1,7 +1,7 @@
 ---
 title: "SelectManager#lock lacks Rails'  arm"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T00:11:53Z"
+assignee: "select-manager-lock-missing-true-arm"
 blocked-by: null
 closed-reason: null
 ---
