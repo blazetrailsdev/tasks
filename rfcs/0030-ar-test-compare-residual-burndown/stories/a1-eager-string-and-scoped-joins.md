@@ -1,7 +1,7 @@
 ---
 title: "A1a — eager_test: string/scoped/same-table/intersection joins"
-status: blocked
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
 deps: []
@@ -11,7 +11,7 @@ priority: 3
 pr: null
 claim: null
 assignee: null
-blocked-by: "Blocked behind RFC 0019 assoc-eager-split-canonical (eager.test.ts is grandfathered; large file, expect multiple conversion PRs). Un-skip only after the file is canonical and off the exclude list."
+blocked-by: null
 ---
 
 ## Context
