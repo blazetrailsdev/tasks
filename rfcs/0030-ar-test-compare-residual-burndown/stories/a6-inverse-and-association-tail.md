@@ -1,17 +1,17 @@
 ---
 title: "A6 — inverse-of + bidirectional + collection tail"
-status: blocked
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
 deps: []
 deps-rfc: []
 est-loc: 140
 priority: 3
-pr: 3411
-claim: "2026-06-15T22:28:48Z"
-assignee: "a6-inverse-and-association-tail"
-blocked-by: "Blocked behind RFC 0019 canonical conversion of its target files (assoc-associations-test, assoc-has-many, inverse-associations-fixture-port, assoc-left-outer-join-canonical, bidirectional-destroy-dependent-cycle-guard). These files are still on require-canonical-schema-exclude.json; un-skipping here before they are canonical-converted would add bespoke-defineSchema debt. Unblock once those merge and the files are off the exclude list."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
