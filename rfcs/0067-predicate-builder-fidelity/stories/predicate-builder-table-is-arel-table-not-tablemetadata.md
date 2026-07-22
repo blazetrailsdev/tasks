@@ -1,7 +1,7 @@
 ---
 title: "PredicateBuilder holds an Arel Table plus a side _tableContext, not a TableMetadata"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
