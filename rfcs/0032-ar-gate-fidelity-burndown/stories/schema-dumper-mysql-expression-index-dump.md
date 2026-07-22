@@ -1,6 +1,6 @@
 ---
 title: "Emit MySQL 8 expression-index schema dump syntax and converge gate"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T21:03:05Z"
+assignee: "schema-dumper-mysql-expression-index-dump"
 blocked-by: null
 ---
 
