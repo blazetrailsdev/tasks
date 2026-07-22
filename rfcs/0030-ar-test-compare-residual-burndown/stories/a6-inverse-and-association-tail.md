@@ -1,6 +1,6 @@
 ---
 title: "A6 — inverse-of + bidirectional + collection tail"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "associations"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T18:26:51Z"
+assignee: "a6-inverse-and-association-tail"
 blocked-by: null
 ---
 
