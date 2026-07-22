@@ -1,6 +1,6 @@
 ---
 title: "Fix extractor Mysql2/Trilogy collapse and prepared_statements over-exclusion"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T20:41:48Z"
+assignee: "gate-extractor-mysql2-trilogy-prepared-artifacts"
 blocked-by: null
 ---
 
