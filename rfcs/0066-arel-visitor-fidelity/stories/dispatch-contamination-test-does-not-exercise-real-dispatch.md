@@ -1,6 +1,6 @@
 ---
 title: "dispatch-contamination test hand-rolls a visitor instead of exercising real dispatch fallback"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 53
-pr: null
+pr: 5095
 claim: "2026-07-22T23:31:51Z"
 assignee: "dispatch-contamination-test-does-not-exercise-real-dispatch"
 blocked-by: null
