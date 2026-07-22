@@ -1,6 +1,6 @@
 ---
 title: "MySQL IsDistinctFrom should delegate to IsNotDistinctFrom per mysql.rb"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
