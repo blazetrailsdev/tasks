@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder holds an Arel Table plus a side _tableContext, not a TableMetadata"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T16:11:49Z"
+assignee: "predicate-builder-table-is-arel-table-not-tablemetadata"
 blocked-by: null
 closed-reason: null
 ---
