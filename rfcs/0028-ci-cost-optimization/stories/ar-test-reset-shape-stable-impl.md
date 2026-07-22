@@ -1,7 +1,7 @@
 ---
 title: "Implement shape-stable reset to cut DROP TABLE churn (dominant path)"
-status: draft
-updated: 2026-06-22
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: ["ar-test-reset-drop-table-churn"]
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Superseded by RFC 0060 (closed/done): truncate-based-global-reset shipped the spike-recommended shape-stable TRUNCATE reset, gate-repairworkerschema-drops-behind-drift and remove-redundant-dropexisting-shields covered the residual paths. The 86k-drop premise no longer holds."
 ---
 
 ## Context
