@@ -1,6 +1,6 @@
 ---
 title: "nested-error-standalone-connection-skips"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T23:13:03Z"
+assignee: "nested-error-standalone-connection-skips"
 blocked-by: null
 closed-reason: null
 ---
