@@ -1,7 +1,7 @@
 ---
 title: "belongs-to-composite-fk-stale-state-rails-convergence"
-status: draft
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
