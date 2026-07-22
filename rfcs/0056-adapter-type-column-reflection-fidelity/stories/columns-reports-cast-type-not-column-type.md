@@ -1,6 +1,6 @@
 ---
 title: "columns() reports the decorated cast-type class name, not the column's own type"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T15:11:47Z"
+assignee: "columns-reports-cast-type-not-column-type"
 blocked-by: null
 closed-reason: null
 ---
