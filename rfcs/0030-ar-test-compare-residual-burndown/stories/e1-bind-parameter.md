@@ -1,6 +1,6 @@
 ---
 title: "E1 — bind_parameter residuals"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
