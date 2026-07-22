@@ -1,6 +1,6 @@
 ---
 title: "calculations-relations-overgate-convergence"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 5074
 claim: "2026-07-22T19:41:47Z"
 assignee: "calculations-relations-overgate-convergence"
 blocked-by: null
