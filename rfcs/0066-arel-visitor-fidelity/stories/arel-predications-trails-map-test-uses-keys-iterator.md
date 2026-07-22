@@ -1,6 +1,6 @@
 ---
 title: "predications.trails.test.ts Map test iterates .keys(), not a Map"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 53
-pr: null
+pr: 5051
 claim: "2026-07-22T01:56:47Z"
 assignee: "arel-predications-trails-map-test-uses-keys-iterator"
 blocked-by: null
