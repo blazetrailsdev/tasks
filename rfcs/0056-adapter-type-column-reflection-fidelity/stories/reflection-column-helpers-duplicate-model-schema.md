@@ -1,6 +1,6 @@
 ---
 title: "reflection-column-helpers-duplicate-model-schema"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 32
-pr: null
+pr: 5093
 claim: "2026-07-22T23:20:36Z"
 assignee: "reflection-column-helpers-duplicate-model-schema"
 blocked-by: null
