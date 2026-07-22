@@ -1,14 +1,14 @@
 ---
 title: "Visitor dispatch must check respond_to?, not just table membership"
-status: claimed
-updated: 2026-07-21
+status: in-progress
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 50
 priority: 24
-pr: null
+pr: 5046
 claim: "2026-07-21T23:56:49Z"
 assignee: "arel-visit-dispatch-respond-to-check"
 blocked-by: null
