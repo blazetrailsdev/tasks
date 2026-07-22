@@ -1,7 +1,7 @@
 ---
 title: "Batch dropAllTables into one multi-table DROP (86k round-trips -> hundreds)"
-status: draft
-updated: 2026-06-23
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Moot per its own caveat: RFC 0060 eliminated the happy-path dropAllTables fan-out (default reset is now truncate-only); batching the residual bespoke-tail drops has negligible CI-minute impact."
 ---
 
 ## Context
