@@ -1,6 +1,6 @@
 ---
 title: "convert-remaining-arel-visitor-sites-to-explicit-connection"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 460
 priority: null
-pr: null
+pr: 5054
 claim: "2026-07-22T14:35:05Z"
 assignee: "convert-remaining-arel-visitor-sites-to-explicit-connection"
 blocked-by: null
