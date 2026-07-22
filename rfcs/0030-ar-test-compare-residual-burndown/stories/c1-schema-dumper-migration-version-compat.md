@@ -1,6 +1,6 @@
 ---
 title: "c1-schema-dumper-migration-version-compat"
-status: in-progress
+status: closed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -10,9 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: 5070
-claim: "2026-07-22T18:41:48Z"
-assignee: "c1-schema-dumper-migration-version-compat"
+claim: null
+assignee: null
 blocked-by: null
+closed-reason: "Won't-do: Migration version compatibility (Migration[6.1]) is not a trails goal — trails has no previous versions, so backwards-compat migration classes are unnecessary. PR #5070 closed unmerged per user decision."
 ---
 
 ## Context
