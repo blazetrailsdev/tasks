@@ -1,6 +1,6 @@
 ---
 title: "arel-suite-engine-is-fake-record-base"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
