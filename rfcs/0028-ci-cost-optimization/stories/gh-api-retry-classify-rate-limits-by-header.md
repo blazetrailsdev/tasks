@@ -1,7 +1,7 @@
 ---
 title: "Classify gh api rate limits by response header, not stderr wording"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Mis-filed: robustness hardening of a sub-minute Preflight helper whose current stderr classifier fails honestly; no CI-minute or time-to-green leverage under 0028's bar."
 ---
 
 ## Context
