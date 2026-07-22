@@ -1,6 +1,6 @@
 ---
 title: "cc-pg-default-pk-bigserial"
-status: claimed
+status: done
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 3966
 claim: "2026-07-22T18:56:47Z"
 assignee: "cc-pg-default-pk-bigserial"
 blocked-by: null
