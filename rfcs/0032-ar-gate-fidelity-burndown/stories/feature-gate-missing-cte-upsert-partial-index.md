@@ -1,6 +1,6 @@
 ---
 title: "feature-gate-missing-cte-upsert-partial-index"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
