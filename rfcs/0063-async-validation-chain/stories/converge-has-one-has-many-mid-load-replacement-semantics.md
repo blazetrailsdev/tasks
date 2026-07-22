@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-has-many-mid-load-replacement-semantics"
-status: claimed
+status: closed
 updated: 2026-07-22
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: "2026-07-22T14:56:48Z"
-assignee: "converge-has-one-has-many-mid-load-replacement-semantics"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by open PR #5035 (story fix-has-one-mid-flight-reassignment-clobber): the _targetGeneration design this story targets never merged — it was replaced inside #5035, which now arms Association#_loaderWritebackSuppressed in the singular doAsyncFindTargets so has_one/belongs_to raise AssociationTargetReplacedDuringLoad exactly like has_many (#5038). Main has no divergence to converge; #5035 delivers the unified semantics."
 ---
 
 ## Context
