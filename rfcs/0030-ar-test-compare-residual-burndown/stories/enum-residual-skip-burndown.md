@@ -1,6 +1,6 @@
 ---
 title: "enum-residual-skip-burndown"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 18
-pr: null
+pr: 5087
 claim: "2026-07-22T22:23:06Z"
 assignee: "enum-residual-skip-burndown"
 blocked-by: null
