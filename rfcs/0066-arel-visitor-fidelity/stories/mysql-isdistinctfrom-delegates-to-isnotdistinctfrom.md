@@ -1,6 +1,6 @@
 ---
 title: "MySQL IsDistinctFrom should delegate to IsNotDistinctFrom per mysql.rb"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 50
-pr: null
+pr: 5061
 claim: "2026-07-22T15:41:50Z"
 assignee: "mysql-isdistinctfrom-delegates-to-isnotdistinctfrom"
 blocked-by: null
