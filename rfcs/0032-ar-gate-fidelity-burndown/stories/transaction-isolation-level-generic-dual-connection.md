@@ -1,6 +1,6 @@
 ---
 title: "Converge transaction-isolation-level tests to generic dual connections"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T21:02:33Z"
+assignee: "transaction-isolation-level-generic-dual-connection"
 blocked-by: null
 ---
 
