@@ -1,6 +1,6 @@
 ---
 title: "Fix MySQL updatable-view insert auto-assigned primary key"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: null
+pr: 5081
 claim: "2026-07-22T21:13:06Z"
 assignee: "view-insert-mysql-no-auto-value-on-zero"
 blocked-by: null
