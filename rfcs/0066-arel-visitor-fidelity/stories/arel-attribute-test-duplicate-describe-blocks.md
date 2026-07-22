@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: consolidate 30 excess duplicate describe blocks against Rails"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
