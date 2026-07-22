@@ -1,7 +1,7 @@
 ---
 title: "Retire buildBindAttribute's relation param and its wide-gate baseline once the builder is TableMetadata-backed"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
