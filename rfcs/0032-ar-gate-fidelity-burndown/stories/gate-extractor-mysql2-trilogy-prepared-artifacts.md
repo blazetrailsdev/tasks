@@ -1,7 +1,7 @@
 ---
 title: "Fix extractor Mysql2/Trilogy collapse and prepared_statements over-exclusion"
-status: draft
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
