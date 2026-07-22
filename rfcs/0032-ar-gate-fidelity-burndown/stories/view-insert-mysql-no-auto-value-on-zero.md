@@ -1,6 +1,6 @@
 ---
 title: "Fix MySQL updatable-view insert auto-assigned primary key"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
