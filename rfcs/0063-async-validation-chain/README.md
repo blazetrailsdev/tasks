@@ -1,9 +1,9 @@
 ---
 rfc: "0063-async-validation-chain"
 title: "Async validation chain (isValid returns Promise)"
-status: active
+status: closed
 created: 2026-07-07
-updated: 2026-07-07
+updated: 2026-07-22
 owner: "@deanmarano"
 packages:
   - "activemodel"
