@@ -1,6 +1,6 @@
 ---
 title: "defaults-binary-string-gate"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 5075
 claim: "2026-07-22T20:11:47Z"
 assignee: "defaults-binary-string-gate"
 blocked-by: null
