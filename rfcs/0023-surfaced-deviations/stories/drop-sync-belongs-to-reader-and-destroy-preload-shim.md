@@ -1,7 +1,7 @@
 ---
 title: "drop-sync-belongs-to-reader-and-destroy-preload-shim"
-status: ready
-updated: 2026-07-21
+status: draft
+updated: 2026-07-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
