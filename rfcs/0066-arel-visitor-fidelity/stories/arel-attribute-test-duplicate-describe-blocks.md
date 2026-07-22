@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: consolidate 30 excess duplicate describe blocks against Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 55
-pr: null
+pr: 5057
 claim: "2026-07-22T14:41:49Z"
 assignee: "arel-attribute-test-duplicate-describe-blocks"
 blocked-by: null
