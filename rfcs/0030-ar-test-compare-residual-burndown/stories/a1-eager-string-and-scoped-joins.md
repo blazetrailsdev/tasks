@@ -1,6 +1,6 @@
 ---
 title: "A1a — eager_test: string/scoped/same-table/intersection joins"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T17:56:47Z"
+assignee: "a1-eager-string-and-scoped-joins"
 blocked-by: null
 ---
 
