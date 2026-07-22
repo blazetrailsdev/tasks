@@ -1,7 +1,7 @@
 ---
 title: "Converge the Hash analogue into rubyClassName so Dot's isHash residue can go"
-status: in-progress
-updated: 2026-07-21
+status: done
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
