@@ -1,6 +1,6 @@
 ---
 title: "Visitor dispatch must check respond_to?, not just table membership"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
