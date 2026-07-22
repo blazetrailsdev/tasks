@@ -1,6 +1,6 @@
 ---
 title: "feature-gate-missing-cte-upsert-partial-index"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 5073
 claim: "2026-07-22T19:56:48Z"
 assignee: "feature-gate-missing-cte-upsert-partial-index"
 blocked-by: null
