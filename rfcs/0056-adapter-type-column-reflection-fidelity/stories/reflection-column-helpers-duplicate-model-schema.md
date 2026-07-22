@@ -1,12 +1,12 @@
 ---
 title: "reflection-column-helpers-duplicate-model-schema"
-status: ready
+status: draft
 updated: 2026-07-22
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
