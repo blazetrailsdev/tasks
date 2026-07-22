@@ -1,6 +1,6 @@
 ---
 title: "a2-join-model-semantics-residual"
-status: claimed
+status: done
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 3617
 claim: "2026-07-22T18:11:53Z"
 assignee: "a2-join-model-semantics-residual"
 blocked-by: null
