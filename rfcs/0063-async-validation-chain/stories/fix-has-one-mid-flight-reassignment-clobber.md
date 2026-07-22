@@ -1,7 +1,7 @@
 ---
 title: "fix-has-one-mid-flight-reassignment-clobber"
-status: in-progress
-updated: 2026-07-21
+status: done
+updated: 2026-07-22
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: []
