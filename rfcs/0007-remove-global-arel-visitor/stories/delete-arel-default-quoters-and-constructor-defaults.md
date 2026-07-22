@@ -1,6 +1,6 @@
 ---
 title: "delete-arel-default-quoters-and-constructor-defaults"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5067
 claim: "2026-07-22T17:41:48Z"
 assignee: "delete-arel-default-quoters-and-constructor-defaults"
 blocked-by: null
