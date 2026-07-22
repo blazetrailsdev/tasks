@@ -1,7 +1,7 @@
 ---
 title: "Fix schema-dumper.trails.test.ts PG flake (schema_migrations dup-key + dump timeout)"
-status: draft
-updated: 2026-07-19
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already fixed on main: dumpWithVersion tests carry a deleteAllVersions() guard against the schema_migrations dup-key and 60s timeouts (#4628, #4761); both acceptance criteria are satisfied in the current file."
 ---
 
 ## Context
