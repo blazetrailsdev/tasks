@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-has-many-mid-load-replacement-semantics"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0063-async-validation-chain"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T14:56:48Z"
+assignee: "converge-has-one-has-many-mid-load-replacement-semantics"
 blocked-by: null
 closed-reason: null
 ---
