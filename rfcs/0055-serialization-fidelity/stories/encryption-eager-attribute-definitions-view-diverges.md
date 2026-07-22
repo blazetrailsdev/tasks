@@ -1,6 +1,6 @@
 ---
 title: "Retire encryption's eager _attributeDefinitions wrap; resolve types via typeForAttribute"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: 5097
 claim: "2026-07-22T23:20:42Z"
 assignee: "encryption-eager-attribute-definitions-view-diverges"
 blocked-by: null
