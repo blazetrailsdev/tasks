@@ -6,6 +6,7 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { firstHeading, loadAll, relPath, REPO_ROOT } from "./lib.mjs";
+import { effectiveStoryStatus } from "./validate-lib.mjs";
 
 const { rfcs, stories } = loadAll();
 
@@ -18,6 +19,11 @@ const prio = (s) => {
   const p = s.frontmatter?.priority;
   return Number.isInteger(p) ? p : PRIORITY_UNSET;
 };
+
+// Parent-RFC status feeds the story-level effective status: a `ready` story
+// under a non-active RFC is downgraded at emit time (see effectiveStoryStatus)
+// so no index.json consumer can present it as claimable.
+const rfcStatusById = new Map(rfcs.map((r) => [r.dir, r.frontmatter?.status ?? null]));
 
 const rfcsSorted = [...rfcs].sort((a, b) => a.dir.localeCompare(b.dir));
 const storiesSorted = [...stories].sort((a, b) => prio(a) - prio(b) || a.id.localeCompare(b.id));
@@ -66,7 +72,9 @@ const indexJson = {
       id: s.id,
       rfc: s.rfc,
       title: fm.title ?? null,
-      status: fm.status ?? null,
+      status: effectiveStoryStatus(rfcStatusById.get(s.rfc) ?? null, fm.status ?? null),
+      // The authored frontmatter status, before the parent-RFC override.
+      raw_status: fm.status ?? null,
       cluster: fm.cluster ?? null,
       priority: Number.isInteger(fm.priority) ? fm.priority : null,
       updated: fm.updated ?? null,

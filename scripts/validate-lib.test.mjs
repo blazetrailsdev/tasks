@@ -7,7 +7,7 @@
 // Standalone runner, no framework: collect failures and throw at the end so an
 // uncaught exception sets a non-zero exit code. No node:* imports, no process.*
 // references — the same purity constraints the validator itself holds to.
-import { validate } from "./validate-lib.mjs";
+import { effectiveStoryStatus, validate } from "./validate-lib.mjs";
 
 const failures = [];
 function test(name, fn) {
@@ -271,6 +271,28 @@ test("a real Date or YYYY-MM-DD string is accepted", () => {
       stories: [story()],
     }).errors,
   );
+});
+
+test("effectiveStoryStatus downgrades ready under every non-active RFC status", () => {
+  for (const rfcStatus of ["draft", "postponed", "superseded", "closed", null]) {
+    assert(
+      effectiveStoryStatus(rfcStatus, "ready") === "draft",
+      `ready under ${rfcStatus} RFC should be draft`,
+    );
+  }
+});
+
+test("effectiveStoryStatus keeps ready under an active RFC", () => {
+  assert(effectiveStoryStatus("active", "ready") === "ready", "active RFC keeps ready");
+});
+
+test("effectiveStoryStatus passes non-ready statuses through as authored", () => {
+  for (const storyStatus of ["draft", "claimed", "in-progress", "done", "blocked", "closed"]) {
+    assert(
+      effectiveStoryStatus("postponed", storyStatus) === storyStatus,
+      `${storyStatus} under postponed RFC should stay ${storyStatus}`,
+    );
+  }
 });
 
 if (failures.length) {

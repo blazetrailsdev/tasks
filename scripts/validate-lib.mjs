@@ -41,6 +41,22 @@ function isYmdDate(value) {
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
 }
 
+// A non-active parent RFC overrides its stories' queue status: a `ready`
+// story under a draft/postponed/superseded/closed (or unknown) RFC must never
+// surface as claimable to ANY consumer — index.json readers, the spawn loop,
+// the backlog dashboard, `pnpm tasks list`. build-index.mjs emits this derived
+// value as the story's `status` (preserving the authored value as
+// `raw_status`), so the downgrade happens once at the authoritative source
+// instead of in every reader. Only `ready` downgrades: in-flight/terminal
+// statuses (claimed, in-progress, done, blocked, closed) record facts, not
+// claimability, and pass through as authored. `draft` is the target because it
+// is the existing pre-work, not-claimable queue state — reactivating the RFC
+// and rebuilding the index restores `ready` with no story-file edits.
+export function effectiveStoryStatus(rfcStatus, storyStatus) {
+  if (storyStatus === "ready" && rfcStatus !== "active") return "draft";
+  return storyStatus;
+}
+
 // Reference + cycle checks over the story dep graph, factored out so the full
 // validator and the CLI's set-deps pre-commit guard share one traversal rather
 // than maintaining drifting copies of the WHITE/GRAY/BLACK DFS.
