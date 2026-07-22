@@ -1,6 +1,6 @@
 ---
 title: "E1 — bind_parameter residuals"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: null
+pr: 5071
 claim: "2026-07-22T19:11:50Z"
 assignee: "e1-bind-parameter"
 blocked-by: null
