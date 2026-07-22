@@ -1,6 +1,6 @@
 ---
 title: "F1 — prevent-writes + hot-compat + misc tail"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T22:13:09Z"
+assignee: "f1-prevent-writes-and-tail"
 blocked-by: null
 ---
 
