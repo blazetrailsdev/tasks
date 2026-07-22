@@ -1,7 +1,7 @@
 ---
 title: "Sweep arel for Rails-named placeholder tests that assert nothing and inflate test:compare"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 54
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T14:26:58Z"
+assignee: "arel-tests-rails-named-placeholder-bodies-inflate-test-compare"
 blocked-by: null
 closed-reason: null
 ---
