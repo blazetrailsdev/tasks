@@ -1,7 +1,7 @@
 ---
 title: "Converge Notifications.buildHandle/instrumenter onto the Fanout notifier"
-status: blocked
-updated: 2026-07-16
+status: ready
+updated: 2026-07-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-07-16T18:11:12Z"
-assignee: "converge-notifications-build-handle-onto-fanout"
-blocked-by: "Gated behind converge-notifications-onto-fanout-notifier landing (itself blocked behind PR #4897). notifications.ts still owns its own _subscribers Set and does not delegate to Fanout, so there is no Fanout#buildHandle/Wrapper#instrumenter to converge onto yet. Re-ready once the static hub delegates to Fanout."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
