@@ -1,7 +1,7 @@
 ---
 title: "encrypts + serialize nesting order ignores declaration order for the encrypts-first case"
-status: draft
-updated: 2026-07-21
+status: ready
+updated: 2026-07-22
 rfc: "0055-serialization-fidelity"
 cluster: null
 deps: []
