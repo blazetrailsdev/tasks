@@ -1,7 +1,7 @@
 ---
 title: "MySQL advisory GET_LOCK slots exhaust at AR_DB_FORKS=4, failing ~34 suites at setup"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No CI-cost impact: CI runs AR_DB_FORKS=8 with a 10-slot pool and is green; the 4-fork/6-slot exhaustion is local-dev only. Real test-infra bug but mis-filed under 0028's billed-minutes/time-to-green bar; re-file under a test-infra RFC if it keeps burning local time."
 ---
 
 ## Context
