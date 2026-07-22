@@ -1,6 +1,6 @@
 ---
 title: "persistence-insert-returning-gate"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: 5076
 claim: "2026-07-22T20:26:47Z"
 assignee: "persistence-insert-returning-gate"
 blocked-by: null
