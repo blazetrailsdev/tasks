@@ -1,7 +1,7 @@
 ---
 title: "Converge check-constraint revert test; verify mysql revert path"
-status: draft
-updated: 2026-07-05
+status: closed
+updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "already resolved: test is itIfSupports(check_constraints) with no mysql skip (invertible-migration.test.ts:653) and no longer in test:compare --gates output as of 2026-07-22"
 ---
 
 ## Context
