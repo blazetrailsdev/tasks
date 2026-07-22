@@ -1,6 +1,6 @@
 ---
 title: "Relation#where eager pre-cast diverges from Rails' defer-to-bind casting"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 64
-pr: null
+pr: 5065
 claim: "2026-07-22T17:11:48Z"
 assignee: "relation-where-value-eager-precast-vs-rails-defer"
 blocked-by: null
