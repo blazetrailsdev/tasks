@@ -1,7 +1,7 @@
 ---
 title: "alias-bridge-remaining-resolve-sites"
-status: blocked
-updated: 2026-07-20
+status: ready
+updated: 2026-07-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-20T01:11:14Z"
-assignee: "alias-bridge-remaining-resolve-sites"
-blocked-by: "Depends on resolveAliasNameIn from PR #4980, which is still open. Cannot start without stacking or duplicating that PR's helper. Unblock when #4980 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
