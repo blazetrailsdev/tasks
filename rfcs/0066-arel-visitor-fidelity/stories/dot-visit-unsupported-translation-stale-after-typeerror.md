@@ -1,7 +1,7 @@
 ---
 title: "Dot#visit UnsupportedVisitError translation is stale after #5002"
-status: in-progress
-updated: 2026-07-21
+status: done
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
