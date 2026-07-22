@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder#resolveColumn is invented — Rails normalizes dotted keys instead"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 62
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T16:41:47Z"
+assignee: "predicate-builder-resolvecolumn-is-invented"
 blocked-by: null
 closed-reason: null
 ---
