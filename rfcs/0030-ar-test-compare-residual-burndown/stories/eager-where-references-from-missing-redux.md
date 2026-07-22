@@ -1,6 +1,6 @@
 ---
 title: "eager-where-references-from-missing-redux"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 12
-pr: null
+pr: 5082
 claim: "2026-07-22T21:33:04Z"
 assignee: "eager-where-references-from-missing-redux"
 blocked-by: null
