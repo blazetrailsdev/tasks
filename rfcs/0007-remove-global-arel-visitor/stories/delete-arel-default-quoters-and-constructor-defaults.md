@@ -1,6 +1,6 @@
 ---
 title: "delete-arel-default-quoters-and-constructor-defaults"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
