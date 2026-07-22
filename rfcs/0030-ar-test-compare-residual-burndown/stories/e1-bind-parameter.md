@@ -1,7 +1,7 @@
 ---
 title: "E1 — bind_parameter residuals"
-status: blocked
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: "2026-06-16T12:35:00Z"
-assignee: "e1-bind-parameter"
-blocked-by: "All 7 tests genuinely blocked on production work (triaged 2026-06-16): the 6 statement-cache tests need connection-pool population + sqlKey (RFC 0016 revisit-statement-cache-find-skips-after-cache-routing); binds-are-logged needs QueryAttribute payload preservation (RFC 0016 preserve-queryattribute-binds-in-notification-payload). Skips re-pointed to these live stories."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
