@@ -1,6 +1,6 @@
 ---
 title: "arel-suite-engine-is-fake-record-base"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5048
 claim: "2026-07-22T00:45:34Z"
 assignee: "arel-suite-engine-is-fake-record-base"
 blocked-by: null
