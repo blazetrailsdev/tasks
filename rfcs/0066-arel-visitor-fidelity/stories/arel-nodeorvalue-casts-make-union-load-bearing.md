@@ -1,6 +1,6 @@
 ---
 title: "Narrow the 20 `as NodeOrValue` operand casts so the union is enforced, not decorative"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
