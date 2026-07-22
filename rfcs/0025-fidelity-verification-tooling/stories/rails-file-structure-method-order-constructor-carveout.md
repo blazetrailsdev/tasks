@@ -1,7 +1,7 @@
 ---
 title: "rails-file-structure-method-order-constructor-carveout"
-status: in-progress
-updated: 2026-07-21
+status: done
+updated: 2026-07-22
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
