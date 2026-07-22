@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder type lookups are invented cascades with identity fallbacks"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 61
-pr: null
+pr: 5063
 claim: "2026-07-22T16:26:49Z"
 assignee: "predicate-builder-type-lookup-cascade-is-invented"
 blocked-by: null
