@@ -1,7 +1,7 @@
 ---
 title: "converge-node-tosql-to-table-engine-connection"
-status: in-progress
-updated: 2026-07-21
+status: done
+updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps:
