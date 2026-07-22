@@ -8,7 +8,7 @@ deps:
   - pg-pinned-client-write-query-serialization
 deps-rfc: []
 est-loc: null
-priority: 3
+priority: 22
 pr: null
 claim: null
 assignee: null
