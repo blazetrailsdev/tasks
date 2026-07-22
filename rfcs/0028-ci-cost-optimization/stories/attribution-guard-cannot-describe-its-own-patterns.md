@@ -1,7 +1,7 @@
 ---
 title: "PR body attribution guard fails on prose describing the patterns"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-07-22
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Mis-filed: guard-usability fix for a 3s PR-only job; zero billed-minute or time-to-green impact, and the triggering scenario (PR prose quoting attribution patterns) is rare. Re-file outside 0028 if wanted."
 ---
 
 ## Context
