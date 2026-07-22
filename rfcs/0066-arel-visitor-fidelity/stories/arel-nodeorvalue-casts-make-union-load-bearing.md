@@ -1,7 +1,7 @@
 ---
 title: "Narrow the 20 `as NodeOrValue` operand casts so the union is enforced, not decorative"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 29
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T01:11:52Z"
+assignee: "arel-nodeorvalue-casts-make-union-load-bearing"
 blocked-by: null
 closed-reason: null
 ---
