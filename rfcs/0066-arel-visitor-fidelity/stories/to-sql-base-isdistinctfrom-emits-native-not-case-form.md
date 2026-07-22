@@ -1,6 +1,6 @@
 ---
 title: "Base ToSql IsDistinctFrom emits native syntax instead of Rails' CASE form"
-status: claimed
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 28
-pr: null
+pr: 5050
 claim: "2026-07-22T00:56:49Z"
 assignee: "to-sql-base-isdistinctfrom-emits-native-not-case-form"
 blocked-by: null
