@@ -4,7 +4,8 @@ status: ready
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
-deps: []
+deps:
+  - predicate-builder-table-is-arel-table-not-tablemetadata
 deps-rfc: []
 est-loc: 40
 priority: 65
