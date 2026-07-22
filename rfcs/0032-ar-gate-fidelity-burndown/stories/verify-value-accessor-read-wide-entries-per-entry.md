@@ -1,6 +1,6 @@
 ---
 title: "Per-entry verify the cluster-vetted value-accessor-read wide-call entries"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 23
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T23:16:31Z"
+assignee: "verify-value-accessor-read-wide-entries-per-entry"
 blocked-by: null
 closed-reason: null
 ---
