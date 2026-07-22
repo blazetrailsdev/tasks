@@ -1,6 +1,6 @@
 ---
 title: "E4 — adapter_test notifications + explain tail"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "adapter"
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 16
-pr: null
+pr: 5086
 claim: "2026-07-22T22:03:08Z"
 assignee: "e4-adapter-explain-notifications"
 blocked-by: null
