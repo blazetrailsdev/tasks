@@ -1,6 +1,6 @@
 ---
 title: "belongs-to-composite-fk-stale-state-rails-convergence"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: null
+pr: 5090
 claim: "2026-07-22T23:16:19Z"
 assignee: "belongs-to-composite-fk-stale-state-rails-convergence"
 blocked-by: null
