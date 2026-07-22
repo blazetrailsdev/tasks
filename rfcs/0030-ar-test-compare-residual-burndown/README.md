@@ -24,6 +24,8 @@ clusters:
 
 Drives `@blazetrails/activerecord` `test:compare` from **94.3%**
 (7806 matched / 7813, **439 matchedSkipped**, snapshot 2026-06-15) to 100%.
+Refreshed snapshot 2026-07-22 (post-#5086): **98.6%** — 7706/7815 implemented,
+**92 matchedSkipped**.
 This is the successor to **RFC 0016** (`0016-ar-test-compare-100`), which closed
 83 of 88 stories and lifted the suite from 88.6% → 94.3% — but its phase spine is
 exhausted and most of its stories read as `done` while ~440 mapped tests are
