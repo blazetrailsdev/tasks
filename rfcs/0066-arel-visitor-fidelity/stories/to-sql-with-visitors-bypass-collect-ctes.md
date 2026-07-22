@@ -1,6 +1,6 @@
 ---
 title: "With/WithRecursive visitors bypass collectCtes and skip to_cte"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
