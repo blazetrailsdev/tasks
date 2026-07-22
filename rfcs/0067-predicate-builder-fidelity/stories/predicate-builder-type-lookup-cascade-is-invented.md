@@ -1,6 +1,6 @@
 ---
 title: "PredicateBuilder type lookups are invented cascades with identity fallbacks"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
