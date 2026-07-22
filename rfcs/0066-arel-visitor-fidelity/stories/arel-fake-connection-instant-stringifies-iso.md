@@ -1,6 +1,6 @@
 ---
 title: "FakeRecord double stringifies Temporal.Instant as ISO, not Ruby Time#to_s shape"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 52
-pr: null
+pr: 5092
 claim: "2026-07-22T23:24:46Z"
 assignee: "arel-fake-connection-instant-stringifies-iso"
 blocked-by: null
