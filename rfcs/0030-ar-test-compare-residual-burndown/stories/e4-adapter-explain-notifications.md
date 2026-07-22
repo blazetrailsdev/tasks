@@ -7,7 +7,7 @@ cluster: "adapter"
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 3
+priority: 16
 pr: null
 claim: null
 assignee: null
