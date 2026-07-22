@@ -1,7 +1,7 @@
 ---
 title: "columns() reports the decorated cast-type class name, not the column's own type"
-status: draft
-updated: 2026-07-21
+status: ready
+updated: 2026-07-22
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
