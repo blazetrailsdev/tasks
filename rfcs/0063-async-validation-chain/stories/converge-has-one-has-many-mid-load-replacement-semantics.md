@@ -1,13 +1,13 @@
 ---
 title: "converge-has-one-has-many-mid-load-replacement-semantics"
 status: ready
-updated: 2026-07-21
+updated: 2026-07-22
 rfc: "0063-async-validation-chain"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
