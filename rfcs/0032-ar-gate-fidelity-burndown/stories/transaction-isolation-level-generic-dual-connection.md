@@ -1,6 +1,6 @@
 ---
 title: "Converge transaction-isolation-level tests to generic dual connections"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
