@@ -1,6 +1,6 @@
 ---
 title: "missing-singletons-connection-handling-numeric-nan"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 14
-pr: null
+pr: 5085
 claim: "2026-07-22T21:53:03Z"
 assignee: "missing-singletons-connection-handling-numeric-nan"
 blocked-by: null
