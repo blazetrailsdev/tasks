@@ -1,6 +1,6 @@
 ---
 title: "With/WithRecursive visitors bypass collectCtes and skip to_cte"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 27
-pr: null
+pr: 5049
 claim: "2026-07-22T00:41:47Z"
 assignee: "to-sql-with-visitors-bypass-collect-ctes"
 blocked-by: null
