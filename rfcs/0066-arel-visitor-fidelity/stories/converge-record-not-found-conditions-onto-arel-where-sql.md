@@ -1,7 +1,7 @@
 ---
 title: "converge-record-not-found-conditions-onto-arel-where-sql"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T14:25:51Z"
+assignee: "converge-record-not-found-conditions-onto-arel-where-sql"
 blocked-by: null
 closed-reason: null
 ---
