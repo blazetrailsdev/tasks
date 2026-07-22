@@ -1,6 +1,6 @@
 ---
 title: "A1a — eager_test: string/scoped/same-table/intersection joins"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: associations
