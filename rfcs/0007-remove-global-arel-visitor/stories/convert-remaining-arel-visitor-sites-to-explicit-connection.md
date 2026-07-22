@@ -1,7 +1,7 @@
 ---
 title: "convert-remaining-arel-visitor-sites-to-explicit-connection"
-status: blocked
-updated: 2026-07-21
+status: ready
+updated: 2026-07-22
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 460
 priority: null
 pr: null
-claim: "2026-07-21T18:35:17Z"
-assignee: "convert-remaining-arel-visitor-sites-to-explicit-connection"
-blocked-by: "Blocked on #5032 (open, unmerged): that PR introduces packages/arel/src/test-helpers/connection.ts, which every site in this story must import. origin/main (613795e5e) has no such file, so this story cannot be done as a standalone PR from main without either duplicating the helper (file overlap with #5032) or stacking on its branch. Unblock when #5032 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
