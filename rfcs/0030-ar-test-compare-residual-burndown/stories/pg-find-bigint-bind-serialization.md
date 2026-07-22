@@ -1,7 +1,7 @@
 ---
 title: "PG bigserial: find(BigInt) bind serialization throws under flip"
-status: draft
-updated: 2026-07-05
+status: closed
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "already resolved: bigserial flip landed (#3966), PG lane green in CI; persistence destroy no longer throws BigInt serialization error; not in test:compare output as of 2026-07-22"
 ---
 
 ## Context
