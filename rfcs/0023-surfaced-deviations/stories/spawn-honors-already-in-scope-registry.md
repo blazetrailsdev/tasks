@@ -1,7 +1,7 @@
 ---
 title: "spawn should honor already_in_scope? (return model.all inside scoping block) instead of always cloning"
 status: done
-updated: 2026-07-20
+updated: 2026-07-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
