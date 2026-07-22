@@ -1,7 +1,7 @@
 ---
 title: "SelectManager#join/outerJoin overload the klass arg with an ON predicate, forcing a divergent createJoin override"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T14:25:44Z"
+assignee: "select-manager-join-positional-condition-arg-extension"
 blocked-by: null
 closed-reason: null
 ---
