@@ -1,6 +1,6 @@
 ---
 title: "F1 — prevent-writes + hot-compat + misc tail"
-status: in-progress
+status: done
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: "core-residuals"
