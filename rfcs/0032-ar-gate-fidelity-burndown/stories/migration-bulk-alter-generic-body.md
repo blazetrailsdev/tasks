@@ -1,6 +1,6 @@
 ---
 title: "Converge bulk_alter migration tests to generic adapter bodies"
-status: claimed
+status: in-progress
 updated: 2026-07-22
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: null
+pr: 5079
 claim: "2026-07-22T21:02:22Z"
 assignee: "migration-bulk-alter-generic-body"
 blocked-by: null
