@@ -1,7 +1,7 @@
 ---
 title: "write-path-bind-all-column-types"
-status: blocked
-updated: 2026-07-05
+status: ready
+updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
@@ -9,10 +9,10 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 3880
-claim: "2026-06-22T13:00:01Z"
-assignee: "write-path-bind-all-column-types"
-blocked-by: "Blocked on pg-pinned-client-write-query-serialization: binding all write-path values exposes a deterministic PG single-pinned-client query-overlap hang (idle-in-transaction). PR #3880 parked as draft until that prerequisite lands."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context
