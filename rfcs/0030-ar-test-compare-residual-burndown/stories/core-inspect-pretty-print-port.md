@@ -1,6 +1,6 @@
 ---
 title: "core-inspect-pretty-print-port"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T21:23:03Z"
+assignee: "core-inspect-pretty-print-port"
 blocked-by: null
 closed-reason: null
 ---
