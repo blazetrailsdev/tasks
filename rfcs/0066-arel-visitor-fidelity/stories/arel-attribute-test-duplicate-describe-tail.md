@@ -1,6 +1,6 @@
 ---
 title: "arel-attribute-test-duplicate-describe-tail"
-status: ready
+status: claimed
 updated: 2026-07-22
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-22T17:26:47Z"
+assignee: "arel-attribute-test-duplicate-describe-tail"
 blocked-by: null
 closed-reason: null
 ---
