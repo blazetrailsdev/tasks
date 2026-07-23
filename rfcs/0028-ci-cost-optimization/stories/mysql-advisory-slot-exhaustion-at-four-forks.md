@@ -1,6 +1,6 @@
 ---
 title: "MySQL advisory GET_LOCK slots exhaust at AR_DB_FORKS=4, failing ~34 suites at setup"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: null
+pr: 5104
 claim: "2026-07-23T00:13:25Z"
 assignee: "mysql-advisory-slot-exhaustion-at-four-forks"
 blocked-by: null
