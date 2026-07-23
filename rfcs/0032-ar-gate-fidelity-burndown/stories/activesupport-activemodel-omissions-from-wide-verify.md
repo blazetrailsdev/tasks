@@ -1,7 +1,7 @@
 ---
 title: "activesupport-activemodel-omissions-from-wide-verify"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T00:53:26Z"
+assignee: "activesupport-activemodel-omissions-from-wide-verify"
 blocked-by: null
 closed-reason: null
 ---
