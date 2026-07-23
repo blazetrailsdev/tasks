@@ -1,7 +1,7 @@
 ---
 title: "Converge resetColumnInformation to sync reload + remove eager-warm refreshBang scaffolding"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: ["columnshash-sync-schema-cache-reload-vs-sibling-borrow"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T00:23:30Z"
+assignee: "converge-reset-column-information-sync-reload-remove-refreshbang"
 blocked-by: null
 closed-reason: null
 ---
