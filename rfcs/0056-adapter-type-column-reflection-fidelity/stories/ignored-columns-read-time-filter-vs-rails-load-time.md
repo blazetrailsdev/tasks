@@ -1,6 +1,6 @@
 ---
 title: "ignoredColumns filtered at read time in columnsHash; Rails filters at load — columns() memo leaks after reassignment"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5140
 claim: "2026-07-23T12:55:36Z"
 assignee: "ignored-columns-read-time-filter-vs-rails-load-time"
 blocked-by: null
