@@ -1,6 +1,6 @@
 ---
 title: "Retire AV-wrapping of current-scheme expansion candidate; converge to Rails raw-plaintext + PredicateBuilder scalar casting"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5142
 claim: "2026-07-23T13:13:38Z"
 assignee: "current-scheme-av-wrap-invention-retire"
 blocked-by: null
