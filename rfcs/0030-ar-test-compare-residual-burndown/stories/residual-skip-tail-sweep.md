@@ -1,6 +1,6 @@
 ---
 title: "residual-skip-tail-sweep"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T12:17:50Z"
+assignee: "residual-skip-tail-sweep"
 blocked-by: null
 closed-reason: null
 ---
