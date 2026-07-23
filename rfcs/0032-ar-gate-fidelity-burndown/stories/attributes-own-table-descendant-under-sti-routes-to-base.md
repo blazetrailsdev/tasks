@@ -1,6 +1,6 @@
 ---
 title: "attributes-own-table-descendant-under-sti-routes-to-base"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5173
 claim: "2026-07-23T20:47:46Z"
 assignee: "attributes-own-table-descendant-under-sti-routes-to-base"
 blocked-by: null
