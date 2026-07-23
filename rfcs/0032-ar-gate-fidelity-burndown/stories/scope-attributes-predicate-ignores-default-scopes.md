@@ -1,6 +1,6 @@
 ---
 title: "scope-attributes-predicate-ignores-default-scopes"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5175
 claim: "2026-07-23T21:02:10Z"
 assignee: "scope-attributes-predicate-ignores-default-scopes"
 blocked-by: null
