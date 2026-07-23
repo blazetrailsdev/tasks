@@ -1,6 +1,6 @@
 ---
 title: "attributeNames table_exists? guard fails open on cold cache; memoization unported"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
