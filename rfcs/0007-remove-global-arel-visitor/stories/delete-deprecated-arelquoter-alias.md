@@ -1,6 +1,6 @@
 ---
 title: "Delete the deprecated ArelQuoter type alias — Rails names only the connection"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 5118
 claim: "2026-07-23T02:25:41Z"
 assignee: "delete-deprecated-arelquoter-alias"
 blocked-by: null
