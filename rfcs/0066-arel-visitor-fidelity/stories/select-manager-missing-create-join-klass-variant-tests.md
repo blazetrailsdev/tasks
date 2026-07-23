@@ -1,6 +1,6 @@
 ---
 title: "Port select_manager_test.rb's three 'create join nodes with a … klass' tests"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
