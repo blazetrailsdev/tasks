@@ -1,6 +1,6 @@
 ---
 title: "Nested-hash recursion re-runs convertDotNotationToHash; Rails' expand_from_hash recurses raw"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5147
 claim: "2026-07-23T14:07:36Z"
 assignee: "nested-hash-recursion-renormalizes-dot-notation"
 blocked-by: null
