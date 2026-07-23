@@ -1,7 +1,7 @@
 ---
 title: "key-provider-ignores-store-key-references"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T13:22:36Z"
+assignee: "key-provider-ignores-store-key-references"
 blocked-by: null
 closed-reason: null
 ---
