@@ -1,6 +1,6 @@
 ---
 title: "select-manager.test.ts: converge fuzzy-matched chains/distinct_on bodies to Rails assertions"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
