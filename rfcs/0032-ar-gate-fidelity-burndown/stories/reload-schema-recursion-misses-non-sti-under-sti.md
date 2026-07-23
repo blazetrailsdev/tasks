@@ -1,6 +1,6 @@
 ---
 title: "reloadSchemaFromCache recursion misses non-STI descendants under STI subclasses"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5168
 claim: "2026-07-23T17:34:38Z"
 assignee: "reload-schema-recursion-misses-non-sti-under-sti"
 blocked-by: null
