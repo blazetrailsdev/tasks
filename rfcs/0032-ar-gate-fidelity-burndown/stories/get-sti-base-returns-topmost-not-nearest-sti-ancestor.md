@@ -1,6 +1,6 @@
 ---
 title: "getStiBase returns topmost not nearest STI ancestor, misclassifying nested STI hierarchies"
-status: ready
+status: draft
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
