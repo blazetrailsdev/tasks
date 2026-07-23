@@ -1,6 +1,6 @@
 ---
 title: "Enrich queryParser-rebuilt MismatchedForeignKey with referenced column type"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5145
 claim: "2026-07-23T13:49:41Z"
 assignee: "mismatched-fk-query-parser-rebuild-enrichment"
 blocked-by: null
