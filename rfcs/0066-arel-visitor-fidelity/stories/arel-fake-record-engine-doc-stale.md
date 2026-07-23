@@ -1,6 +1,6 @@
 ---
 title: "fakeRecordEngine doc block still claims suite uses generic ToSql"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
