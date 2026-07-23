@@ -1,6 +1,6 @@
 ---
 title: "converge-find-from-target-onto-association"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T22:17:10Z"
+assignee: "converge-find-from-target-onto-association"
 blocked-by: null
 closed-reason: null
 ---
