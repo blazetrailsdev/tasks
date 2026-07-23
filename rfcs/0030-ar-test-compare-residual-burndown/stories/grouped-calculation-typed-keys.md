@@ -1,6 +1,6 @@
 ---
 title: "grouped-calculation-typed-keys"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5141
 claim: "2026-07-23T12:46:36Z"
 assignee: "grouped-calculation-typed-keys"
 blocked-by: null
