@@ -1,7 +1,7 @@
 ---
 title: "attribute.test.ts: strengthen toContain OR/AND assertions to Rails' exact SQL"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T01:08:43Z"
+assignee: "arel-attribute-test-weak-tocontain-assertions"
 blocked-by: null
 closed-reason: null
 ---
