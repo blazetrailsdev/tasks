@@ -1,6 +1,6 @@
 ---
 title: "type-current-adapter-name-resolver-never-installed"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T21:37:09Z"
+assignee: "type-current-adapter-name-resolver-never-installed"
 blocked-by: null
 closed-reason: null
 ---
