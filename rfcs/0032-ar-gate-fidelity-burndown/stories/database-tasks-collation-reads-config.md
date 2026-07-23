@@ -1,7 +1,7 @@
 ---
 title: "database-tasks-collation-reads-config"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T01:23:10Z"
+assignee: "database-tasks-collation-reads-config"
 blocked-by: null
 closed-reason: null
 ---
