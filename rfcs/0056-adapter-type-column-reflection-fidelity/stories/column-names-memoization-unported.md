@@ -1,6 +1,6 @@
 ---
 title: "port @column_names memoization with ignoredColumns-safe invalidation"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
