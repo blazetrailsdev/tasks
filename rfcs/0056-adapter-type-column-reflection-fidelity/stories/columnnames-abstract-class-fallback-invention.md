@@ -1,6 +1,6 @@
 ---
 title: "columnNames abstract-class fallback branch is an invention vs Rails column_names"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: null
+pr: 5109
 claim: "2026-07-23T01:13:26Z"
 assignee: "columnnames-abstract-class-fallback-invention"
 blocked-by: null
