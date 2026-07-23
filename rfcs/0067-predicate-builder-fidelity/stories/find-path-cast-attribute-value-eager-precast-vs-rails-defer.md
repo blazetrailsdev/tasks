@@ -1,6 +1,6 @@
 ---
 title: "find-path Base._castAttributeValue eager pre-cast diverges from Rails' defer-to-bind casting"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
