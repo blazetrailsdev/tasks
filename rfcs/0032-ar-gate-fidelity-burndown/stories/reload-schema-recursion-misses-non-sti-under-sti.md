@@ -1,6 +1,6 @@
 ---
 title: "reloadSchemaFromCache recursion misses non-STI descendants under STI subclasses"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
