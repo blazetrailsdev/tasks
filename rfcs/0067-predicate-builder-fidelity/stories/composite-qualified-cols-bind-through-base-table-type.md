@@ -1,6 +1,6 @@
 ---
 title: "buildComposite qualified cols bind through the base table's type (no re-rooting)"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
+pr: 5186
 claim: "2026-07-23T22:12:08Z"
 assignee: "composite-qualified-cols-bind-through-base-table-type"
 blocked-by: null
