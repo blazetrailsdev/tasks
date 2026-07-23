@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: #not_in Union test calls .in(); converge to Rails not_in(union)"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5114
 claim: "2026-07-23T02:02:32Z"
 assignee: "arel-attribute-test-not-in-union-uses-in"
 blocked-by: null
