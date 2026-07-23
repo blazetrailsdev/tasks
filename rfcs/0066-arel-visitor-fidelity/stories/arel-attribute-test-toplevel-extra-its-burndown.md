@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: triage 52 TS-only top-level its (delete dups, move TS-only to trails file)"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
