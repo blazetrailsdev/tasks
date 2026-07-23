@@ -1,6 +1,6 @@
 ---
 title: "errors-set-query-query-parser-overload"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5134
 claim: "2026-07-23T12:19:37Z"
 assignee: "errors-set-query-query-parser-overload"
 blocked-by: null
