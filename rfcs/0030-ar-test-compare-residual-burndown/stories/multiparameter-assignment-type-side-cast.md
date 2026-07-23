@@ -1,6 +1,6 @@
 ---
 title: "multiparameter-assignment-type-side-cast"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5146
 claim: "2026-07-23T13:58:44Z"
 assignee: "multiparameter-assignment-type-side-cast"
 blocked-by: null
