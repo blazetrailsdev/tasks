@@ -1,6 +1,6 @@
 ---
 title: "Deterministic query expansion serializes through bare Encrypted type, skipping outer Serialized coder"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
