@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: triage 4 remaining type-casting in-describe extras"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T02:07:41Z"
+assignee: "arel-attribute-test-typecasting-extras-triage"
 blocked-by: null
 closed-reason: null
 ---
