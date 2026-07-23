@@ -1,6 +1,6 @@
 ---
 title: "Through-association branch pre-normalizes via AssociationQueryValue and And-wraps; Rails recurses bare and splices flat"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T16:57:08Z"
+assignee: "through-branch-prenormalizes-and-wraps-vs-rails-bare-recursion"
 blocked-by: null
 closed-reason: null
 ---
