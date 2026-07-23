@@ -1,6 +1,6 @@
 ---
 title: "FK/check export-name getters hardcode ignore pattern instead of reading SchemaDumper attrs"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
