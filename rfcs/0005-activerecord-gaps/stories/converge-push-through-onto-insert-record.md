@@ -1,6 +1,6 @@
 ---
 title: "converge-push-through-onto-insert-record"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 5187
 claim: "2026-07-23T22:22:12Z"
 assignee: "converge-push-through-onto-insert-record"
 blocked-by: null
