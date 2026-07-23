@@ -1,6 +1,6 @@
 ---
 title: "pg-export-name-ignores-dumper-patterns"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5149
 claim: "2026-07-23T14:25:37Z"
 assignee: "pg-export-name-ignores-dumper-patterns"
 blocked-by: null
