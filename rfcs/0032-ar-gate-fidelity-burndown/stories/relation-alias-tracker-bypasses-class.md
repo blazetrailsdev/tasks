@@ -1,6 +1,6 @@
 ---
 title: "relation-alias-tracker-bypasses-class"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5154
 claim: "2026-07-23T15:10:35Z"
 assignee: "relation-alias-tracker-bypasses-class"
 blocked-by: null
