@@ -1,7 +1,7 @@
 ---
 title: "save-through-record-uses-bang-save"
-status: draft
-updated: 2026-07-16
+status: ready
+updated: 2026-07-23
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
