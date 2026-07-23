@@ -1,7 +1,7 @@
 ---
 title: "DeferredIdsNotIn#invert decays to plain In, dropping deferred excluding ids"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T01:43:09Z"
+assignee: "deferred-ids-notin-invert-drops-marker"
 blocked-by: null
 closed-reason: null
 ---
