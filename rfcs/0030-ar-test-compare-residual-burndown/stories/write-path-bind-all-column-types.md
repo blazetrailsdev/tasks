@@ -1,7 +1,7 @@
 ---
 title: "write-path-bind-all-column-types"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps:
