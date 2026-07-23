@@ -1,6 +1,6 @@
 ---
 title: "extract-ruby-tests: quote-style detection misses single-quoted heredocs / multi-line %q"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
