@@ -1,6 +1,6 @@
 ---
 title: "pg-export-name-ignores-dumper-patterns"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
