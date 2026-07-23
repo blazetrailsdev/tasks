@@ -1,6 +1,6 @@
 ---
 title: "PG changeColumnDefault should route through change_column_default_for_alter"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
