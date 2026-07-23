@@ -1,6 +1,6 @@
 ---
 title: "Align CI AR_DB_FORKS with the clamped host ceiling (8 was never real)"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T22:07:11Z"
+assignee: "align-ci-ar-db-forks-with-clamped-reality"
 blocked-by: null
 closed-reason: null
 ---
