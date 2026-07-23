@@ -1,7 +1,7 @@
 ---
 title: "where-sql-wraps-in-and-and-returns-sqlliteral"
-status: ready
-updated: 2026-07-21
+status: claimed
+updated: 2026-07-23
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T21:32:09Z"
+assignee: "where-sql-wraps-in-and-and-returns-sqlliteral"
 blocked-by: null
 closed-reason: null
 ---
