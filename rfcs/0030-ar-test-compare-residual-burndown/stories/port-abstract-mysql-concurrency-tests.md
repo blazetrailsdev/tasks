@@ -1,6 +1,6 @@
 ---
 title: "port-abstract-mysql-concurrency-tests"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 5121
 claim: "2026-07-23T02:52:36Z"
 assignee: "port-abstract-mysql-concurrency-tests"
 blocked-by: null
