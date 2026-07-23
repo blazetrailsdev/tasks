@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-virtual-column-model-layer-port"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5177
 claim: "2026-07-23T21:12:09Z"
 assignee: "sqlite3-virtual-column-model-layer-port"
 blocked-by: null
