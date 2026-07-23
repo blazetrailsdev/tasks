@@ -1,6 +1,6 @@
 ---
 title: "Polymorphic association branch flat-Ands query groups instead of grouping_queries OR-of-AND"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
