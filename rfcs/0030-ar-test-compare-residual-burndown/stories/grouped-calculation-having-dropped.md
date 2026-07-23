@@ -29,11 +29,11 @@ nothing. The relation's `_havingClause` is silently dropped.
 
 Verified on SQLite against canonical fixtures:
 
-````text
+```text
 Account.group("firm_id").having("sum(credit_limit) > 50").sum("credit_limit")
 // actual:   [[null,50],[1,50],[2,60],[6,105],[9,53]]
 // expected: [[2,60],[6,105],[9,53]]
-```text
+```
 
 `null => 50` and `1 => 50` must be filtered by the HAVING and are not.
 
@@ -69,4 +69,3 @@ masks the same gap.
 - Re-evaluate the `skipIf(adapterType === "postgres")` on "should group by
   summed field having condition from select" — un-skip if the select-folding
   fix makes it pass.
-````
