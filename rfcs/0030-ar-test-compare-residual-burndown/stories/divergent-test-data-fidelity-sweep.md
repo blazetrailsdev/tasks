@@ -1,6 +1,6 @@
 ---
 title: "divergent-test-data-fidelity-sweep"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: 5129
 claim: "2026-07-23T11:34:37Z"
 assignee: "divergent-test-data-fidelity-sweep"
 blocked-by: null
