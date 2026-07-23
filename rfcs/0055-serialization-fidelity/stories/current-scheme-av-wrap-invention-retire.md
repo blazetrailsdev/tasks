@@ -1,6 +1,6 @@
 ---
 title: "Retire AV-wrapping of current-scheme expansion candidate; converge to Rails raw-plaintext + PredicateBuilder scalar casting"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
