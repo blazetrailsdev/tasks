@@ -1,6 +1,6 @@
 ---
 title: "Deterministic query expansion serializes through bare Encrypted type, skipping outer Serialized coder"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T12:18:05Z"
+assignee: "deterministic-query-expansion-full-type-serialize"
 blocked-by: null
 closed-reason: null
 ---
