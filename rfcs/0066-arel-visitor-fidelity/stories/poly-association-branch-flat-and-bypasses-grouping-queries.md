@@ -1,6 +1,6 @@
 ---
 title: "Polymorphic association branch flat-Ands query groups instead of grouping_queries OR-of-AND"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T14:52:35Z"
+assignee: "poly-association-branch-flat-and-bypasses-grouping-queries"
 blocked-by: null
 closed-reason: null
 ---
