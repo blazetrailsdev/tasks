@@ -1,7 +1,7 @@
 ---
 title: "fixtures-compare: normalize Ruby-symbol row-column keys (naked/yml/trees false DIFF)"
-status: draft
-updated: 2026-07-04
+status: ready
+updated: 2026-07-23
 rfc: "0014-fixtures-adoption"
 cluster: null
 deps: []
