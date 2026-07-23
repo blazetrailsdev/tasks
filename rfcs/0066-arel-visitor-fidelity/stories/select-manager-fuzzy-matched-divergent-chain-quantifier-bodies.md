@@ -1,6 +1,6 @@
 ---
 title: "select-manager.test.ts: converge fuzzy-matched chains/distinct_on bodies to Rails assertions"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5176
 claim: "2026-07-23T21:07:11Z"
 assignee: "select-manager-fuzzy-matched-divergent-chain-quantifier-bodies"
 blocked-by: null
