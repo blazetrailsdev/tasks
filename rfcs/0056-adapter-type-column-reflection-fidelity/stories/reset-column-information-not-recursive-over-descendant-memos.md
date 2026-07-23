@@ -1,6 +1,6 @@
 ---
 title: "resetColumnInformation base path leaves descendants' own schema memos stale — Rails reload_schema_from_cache recurses"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T16:58:39Z"
+assignee: "reset-column-information-not-recursive-over-descendant-memos"
 blocked-by: null
 closed-reason: null
 ---
