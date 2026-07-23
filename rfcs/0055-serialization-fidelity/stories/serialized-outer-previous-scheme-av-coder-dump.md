@@ -1,6 +1,6 @@
 ---
 title: "Serialized(Encrypted) previous-scheme AV coder-dumps into garbage IN candidate — verify Rails parity, pin behavior"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T16:09:54Z"
+assignee: "serialized-outer-previous-scheme-av-coder-dump"
 blocked-by: null
 closed-reason: null
 ---
