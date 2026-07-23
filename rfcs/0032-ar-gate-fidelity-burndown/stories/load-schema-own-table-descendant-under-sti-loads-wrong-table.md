@@ -1,6 +1,6 @@
 ---
 title: "load-schema-own-table-descendant-under-sti-loads-wrong-table"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5170
 claim: "2026-07-23T20:35:50Z"
 assignee: "load-schema-own-table-descendant-under-sti-loads-wrong-table"
 blocked-by: null
