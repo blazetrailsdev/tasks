@@ -1,9 +1,9 @@
 ---
 rfc: "0046-strict-write-attribute-internal-convergence"
 title: "Strict _write_attribute convergence (remove the writeFromUser internal-write bridge)"
-status: active
+status: closed
 created: 2026-06-23
-updated: 2026-07-06
+updated: 2026-07-23
 owner: "@deanmarano"
 packages:
   - "activerecord"
