@@ -1,7 +1,7 @@
 ---
 title: "relation-none-predicate-misses-empty-fallback"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T17:16:38Z"
+assignee: "relation-none-predicate-misses-empty-fallback"
 blocked-by: null
 closed-reason: null
 ---
