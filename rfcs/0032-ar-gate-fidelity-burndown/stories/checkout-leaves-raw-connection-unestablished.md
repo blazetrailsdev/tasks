@@ -1,6 +1,6 @@
 ---
 title: "Pool checkout hands out adapters with unestablished raw connections (Rails verifies/connects on checkout)"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T16:31:35Z"
+assignee: "checkout-leaves-raw-connection-unestablished"
 blocked-by: null
 closed-reason: null
 ---
