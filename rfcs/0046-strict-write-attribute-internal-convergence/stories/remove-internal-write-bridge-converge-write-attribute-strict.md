@@ -1,7 +1,7 @@
 ---
 title: "Remove the internal-write bridge; converge _write_attribute to raise"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0046-strict-write-attribute-internal-convergence"
 cluster: null
 deps:
