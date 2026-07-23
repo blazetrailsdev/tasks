@@ -1,6 +1,6 @@
 ---
 title: "MySQL advisory GET_LOCK slots exhaust at AR_DB_FORKS=4, failing ~34 suites at setup"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
