@@ -1,6 +1,6 @@
 ---
 title: "threadsafe-fallback test compiles two ToSql visitors instead of exercising superclass fallback"
-status: ready
+status: draft
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
