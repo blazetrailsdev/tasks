@@ -1,6 +1,6 @@
 ---
 title: "Un-skip 'disconnect and recover on #configure_connection failure' (0023 story closed, skip still present)"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T12:10:35Z"
+assignee: "unskip-configure-connection-failure-recovery"
 blocked-by: null
 closed-reason: null
 ---
