@@ -1,6 +1,6 @@
 ---
 title: "has-many-assertion-value-restoration"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 5125
 claim: "2026-07-23T03:19:36Z"
 assignee: "has-many-assertion-value-restoration"
 blocked-by: null
