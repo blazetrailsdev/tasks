@@ -1,6 +1,6 @@
 ---
 title: "Grouped calculations silently drop the HAVING clause"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 15
-pr: null
+pr: 5184
 claim: "2026-07-23T21:57:09Z"
 assignee: "grouped-calculation-having-dropped"
 blocked-by: null
