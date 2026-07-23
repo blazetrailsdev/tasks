@@ -1,7 +1,7 @@
 ---
 title: "dispatch-contamination test hand-rolls a visitor instead of exercising real dispatch fallback"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
