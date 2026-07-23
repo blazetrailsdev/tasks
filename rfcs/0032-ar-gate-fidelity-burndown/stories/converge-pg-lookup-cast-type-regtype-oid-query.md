@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-lookup-cast-type-regtype-oid-query"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5152
 claim: "2026-07-23T14:43:38Z"
 assignee: "converge-pg-lookup-cast-type-regtype-oid-query"
 blocked-by: null
