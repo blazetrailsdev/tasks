@@ -1,6 +1,6 @@
 ---
 title: "Through-association branch pre-normalizes via AssociationQueryValue and And-wraps; Rails recurses bare and splices flat"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
