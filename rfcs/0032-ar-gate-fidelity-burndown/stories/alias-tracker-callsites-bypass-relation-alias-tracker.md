@@ -1,6 +1,6 @@
 ---
 title: "alias-tracker-callsites-bypass-relation-alias-tracker"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5157
 claim: "2026-07-23T16:13:37Z"
 assignee: "alias-tracker-callsites-bypass-relation-alias-tracker"
 blocked-by: null
