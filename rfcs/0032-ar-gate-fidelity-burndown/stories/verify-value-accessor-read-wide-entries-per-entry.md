@@ -1,7 +1,7 @@
 ---
 title: "Per-entry verify the cluster-vetted value-accessor-read wide-call entries"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
