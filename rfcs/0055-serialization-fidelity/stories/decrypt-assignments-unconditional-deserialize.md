@@ -1,6 +1,6 @@
 ---
 title: "Converge decrypt-attribute assignments to Rails' unconditional type.deserialize"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
