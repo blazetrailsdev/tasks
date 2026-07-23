@@ -1,6 +1,6 @@
 ---
 title: "Relation#any?/many?/one? drop the Enumerable pattern-arg form"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T20:38:46Z"
+assignee: "relation-any-many-one-predicate-missing-pattern-arg"
 blocked-by: null
 closed-reason: null
 ---
