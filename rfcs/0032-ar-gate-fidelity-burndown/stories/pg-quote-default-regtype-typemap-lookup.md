@@ -1,6 +1,6 @@
 ---
 title: "pg-quote-default-regtype-typemap-lookup"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5150
 claim: "2026-07-23T14:34:37Z"
 assignee: "pg-quote-default-regtype-typemap-lookup"
 blocked-by: null
