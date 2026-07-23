@@ -1,6 +1,6 @@
 ---
 title: "where-sql-wraps-in-and-and-returns-sqlliteral"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
