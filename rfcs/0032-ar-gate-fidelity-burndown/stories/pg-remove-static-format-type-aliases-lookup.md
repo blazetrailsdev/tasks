@@ -1,6 +1,6 @@
 ---
 title: "Audit/remove PG static FORMAT_TYPE_ALIASES string-lookup path"
-status: claimed
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5166
 claim: "2026-07-23T17:15:35Z"
 assignee: "pg-remove-static-format-type-aliases-lookup"
 blocked-by: null
