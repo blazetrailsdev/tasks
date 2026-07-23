@@ -1,6 +1,6 @@
 ---
 title: "DeferredIdsNotIn#invert decays to plain In, dropping deferred excluding ids"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
