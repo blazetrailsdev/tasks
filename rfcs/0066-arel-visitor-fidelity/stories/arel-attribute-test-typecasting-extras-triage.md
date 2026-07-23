@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: triage 4 remaining type-casting in-describe extras"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
