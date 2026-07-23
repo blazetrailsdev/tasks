@@ -7,7 +7,7 @@ cluster: null
 deps: ["delete-arel-default-quoters-and-constructor-defaults"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
