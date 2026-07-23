@@ -1,6 +1,6 @@
 ---
 title: "Make wide call-mismatch exclude emission order-stable across packages"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
