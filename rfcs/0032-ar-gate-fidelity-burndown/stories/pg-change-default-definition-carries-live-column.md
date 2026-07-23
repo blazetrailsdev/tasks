@@ -1,6 +1,6 @@
 ---
 title: "PG buildChangeColumnDefaultDefinition should carry the live Column (oid/fmod)"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5160
 claim: "2026-07-23T16:49:37Z"
 assignee: "pg-change-default-definition-carries-live-column"
 blocked-by: null
