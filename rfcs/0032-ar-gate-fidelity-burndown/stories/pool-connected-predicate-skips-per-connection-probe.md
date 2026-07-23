@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool#isConnected checks membership, not per-connection connected state"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5153
 claim: "2026-07-23T15:01:34Z"
 assignee: "pool-connected-predicate-skips-per-connection-probe"
 blocked-by: null
