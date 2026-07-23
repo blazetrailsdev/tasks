@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter-virtual-column-value-fidelity"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 5127
 claim: "2026-07-23T03:46:36Z"
 assignee: "sqlite3-adapter-virtual-column-value-fidelity"
 blocked-by: null
