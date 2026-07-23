@@ -1,7 +1,7 @@
 ---
 title: "Preflight attribution scan has no retry; gh api 503 red-lines every PR"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-23
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
