@@ -1,6 +1,6 @@
 ---
 title: "fetch-nil-presence-divergences-globalid-rack"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5136
 claim: "2026-07-23T12:28:36Z"
 assignee: "fetch-nil-presence-divergences-globalid-rack"
 blocked-by: null
