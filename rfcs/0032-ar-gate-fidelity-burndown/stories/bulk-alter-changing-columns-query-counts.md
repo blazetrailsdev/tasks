@@ -1,7 +1,7 @@
 ---
 title: "Port assert_queries_count to bulk_alter changing-columns tests"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T01:08:56Z"
+assignee: "bulk-alter-changing-columns-query-counts"
 blocked-by: null
 closed-reason: null
 ---
