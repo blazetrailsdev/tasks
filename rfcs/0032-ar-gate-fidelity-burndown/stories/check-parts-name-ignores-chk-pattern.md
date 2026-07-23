@@ -1,6 +1,6 @@
 ---
 title: "checkParts dumps auto-generated chk_rails_* names, ignoring chkIgnorePattern"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5156
 claim: "2026-07-23T16:22:35Z"
 assignee: "check-parts-name-ignores-chk-pattern"
 blocked-by: null
