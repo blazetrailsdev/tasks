@@ -1,6 +1,6 @@
 ---
 title: "FK/check export-name getters hardcode ignore pattern instead of reading SchemaDumper attrs"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5163
 claim: "2026-07-23T17:07:38Z"
 assignee: "fk-chk-export-name-hardcodes-ignore-pattern"
 blocked-by: null
