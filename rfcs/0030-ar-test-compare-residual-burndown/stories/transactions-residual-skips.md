@@ -1,6 +1,6 @@
 ---
 title: "transactions-residual-skips"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
+pr: 5132
 claim: "2026-07-23T12:01:37Z"
 assignee: "transactions-residual-skips"
 blocked-by: null
