@@ -1,6 +1,6 @@
 ---
 title: "Unify the two divergent STI schema-host resolvers in model-schema.ts"
-status: ready
+status: draft
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
