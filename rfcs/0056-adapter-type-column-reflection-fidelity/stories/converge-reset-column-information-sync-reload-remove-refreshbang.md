@@ -1,6 +1,6 @@
 ---
 title: "Converge resetColumnInformation to sync reload + remove eager-warm refreshBang scaffolding"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
