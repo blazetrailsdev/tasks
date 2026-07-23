@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 15
 pr: null
 claim: "2026-07-23T21:57:09Z"
 assignee: "grouped-calculation-having-dropped"
