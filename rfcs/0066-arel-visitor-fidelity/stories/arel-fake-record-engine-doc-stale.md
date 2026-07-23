@@ -1,6 +1,6 @@
 ---
 title: "fakeRecordEngine doc block still claims suite uses generic ToSql"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 5108
 claim: "2026-07-23T01:08:49Z"
 assignee: "arel-fake-record-engine-doc-stale"
 blocked-by: null
