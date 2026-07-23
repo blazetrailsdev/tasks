@@ -1,7 +1,7 @@
 ---
 title: "grouping-queries-flat-and-vs-binary-and-reduce"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
