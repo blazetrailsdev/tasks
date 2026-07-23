@@ -1,6 +1,6 @@
 ---
 title: "attribute.test.ts: triage 52 TS-only top-level its (delete dups, move TS-only to trails file)"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5107
 claim: "2026-07-23T01:03:25Z"
 assignee: "arel-attribute-test-toplevel-extra-its-burndown"
 blocked-by: null
