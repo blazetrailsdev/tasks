@@ -1,6 +1,6 @@
 ---
 title: "Delete arel's quote-array; the PG adapter owns array encoding"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["delete-arel-default-quoters-and-constructor-defaults"]
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: null
+pr: 5189
 claim: "2026-07-23T22:27:11Z"
 assignee: "delete-arel-quote-array-adapter-owns-array-encoding"
 blocked-by: null
