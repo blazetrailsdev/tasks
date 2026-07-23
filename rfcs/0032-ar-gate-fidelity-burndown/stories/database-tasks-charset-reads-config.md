@@ -1,6 +1,6 @@
 ---
 title: "database tasks charset reads config instead of the live database"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
