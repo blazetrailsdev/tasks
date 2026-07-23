@@ -1,6 +1,6 @@
 ---
 title: "port @column_names memoization with ignoredColumns-safe invalidation"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T12:17:57Z"
+assignee: "column-names-memoization-unported"
 blocked-by: null
 closed-reason: null
 ---
