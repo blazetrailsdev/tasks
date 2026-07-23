@@ -1,7 +1,7 @@
 ---
 title: "FakeRecord double stringifies Temporal.Instant as ISO, not Ruby Time#to_s shape"
-status: in-progress
-updated: 2026-07-22
+status: done
+updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
