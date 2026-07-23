@@ -1,7 +1,7 @@
 ---
 title: "Give comment.test.ts dump tests a 60s timeout (PG flake)"
-status: ready
-updated: 2026-07-22
+status: claimed
+updated: 2026-07-23
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 6
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T00:03:27Z"
+assignee: "comment-test-pg-dump-timeout"
 blocked-by: null
 closed-reason: null
 ---
