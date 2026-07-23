@@ -1,6 +1,6 @@
 ---
 title: "pg-excl-unique-export-name-flag-strip"
-status: ready
+status: claimed
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-23T17:25:37Z"
+assignee: "pg-excl-unique-export-name-flag-strip"
 blocked-by: null
 closed-reason: null
 ---
