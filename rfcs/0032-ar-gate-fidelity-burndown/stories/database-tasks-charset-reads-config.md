@@ -1,6 +1,6 @@
 ---
 title: "database tasks charset reads config instead of the live database"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5117
 claim: "2026-07-23T02:16:38Z"
 assignee: "database-tasks-charset-reads-config"
 blocked-by: null
