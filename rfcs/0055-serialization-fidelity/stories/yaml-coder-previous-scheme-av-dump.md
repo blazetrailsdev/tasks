@@ -1,6 +1,6 @@
 ---
 title: "YAML-coder previous-scheme AV dump on Serialized(Encrypted) — verify Rails parity, pin behavior"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
