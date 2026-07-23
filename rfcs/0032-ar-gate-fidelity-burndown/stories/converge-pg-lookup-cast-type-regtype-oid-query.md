@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-lookup-cast-type-regtype-oid-query"
-status: in-progress
+status: closed
 updated: 2026-07-23
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5152
-claim: "2026-07-23T14:43:38Z"
-assignee: "converge-pg-lookup-cast-type-regtype-oid-query"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: the convergence was implemented directly in PR #5150 (the pg-quote-default-regtype-typemap-lookup story's PR) — PG lookupCastType now issues the live regtype OID query and the bulk-alter counts are back to Rails' 3/5."
 ---
 
 # Converge PG lookupCastType on Rails' live regtype OID query
