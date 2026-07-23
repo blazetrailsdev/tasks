@@ -1,6 +1,6 @@
 ---
 title: "Serialized(Encrypted) previous-scheme AV coder-dumps into garbage IN candidate — verify Rails parity, pin behavior"
-status: in-progress
+status: done
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
