@@ -1,6 +1,6 @@
 ---
 title: "YAML-coder previous-scheme AV dump on Serialized(Encrypted) — verify Rails parity, pin behavior"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0055-serialization-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5164
 claim: "2026-07-23T17:04:25Z"
 assignee: "yaml-coder-previous-scheme-av-dump"
 blocked-by: null
