@@ -1,7 +1,7 @@
 ---
 title: "buildComposite qualified cols bind through the base table's type (no re-rooting)"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-23
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
 deps: []
