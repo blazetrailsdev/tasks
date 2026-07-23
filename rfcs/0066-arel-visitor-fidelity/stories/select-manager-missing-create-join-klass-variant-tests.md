@@ -1,6 +1,6 @@
 ---
 title: "Port select_manager_test.rb's three 'create join nodes with a … klass' tests"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 57
-pr: null
+pr: 5102
 claim: "2026-07-23T00:33:29Z"
 assignee: "select-manager-missing-create-join-klass-variant-tests"
 blocked-by: null
