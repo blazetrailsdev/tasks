@@ -1,6 +1,6 @@
 ---
 title: "Make wide call-mismatch exclude emission order-stable across packages"
-status: claimed
+status: in-progress
 updated: 2026-07-23
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5183
 claim: "2026-07-23T21:47:10Z"
 assignee: "wide-calls-exclude-reseed-reorders-untouched-packages"
 blocked-by: null
