@@ -1,6 +1,6 @@
 ---
 title: "Fix hot_compatibilities cached-plan invalidation flake on PG (shared worker DB)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
+pr: 5228
 claim: "2026-07-24T15:34:55Z"
 assignee: "fix-hot-compatibilities-pg-cached-plan-flake"
 blocked-by: null
