@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical reserved-word tables after reserved-word.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 5254
 claim: "2026-07-24T19:02:53Z"
 assignee: "restore-reserved-word-canonical-tables"
 blocked-by: null
