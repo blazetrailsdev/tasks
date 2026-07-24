@@ -1,6 +1,6 @@
 ---
 title: "Remove PG/MySQL test retry:2 once shared-DB flake class is provably gone"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
