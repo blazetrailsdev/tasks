@@ -1,6 +1,6 @@
 ---
 title: "Seed the body-pins whole-surface floor at first release"
-status: claimed
+status: blocked
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-24T19:58:53Z"
 assignee: "body-pins-seed-floor-at-release"
-blocked-by: null
+blocked-by: "Gated on the first release: repo has no release tags and no published releases, and body-pins.json is still empty by the deliberate ORGANIC-UNTIL-RELEASE policy from PR #5209. Seeding the whole-surface floor now would pin ~9k bodies at a pre-release digest, which is exactly what that decision ruled out. Unblock and re-run pnpm api:pins:all at the first release commit."
 closed-reason: null
 ---
 
