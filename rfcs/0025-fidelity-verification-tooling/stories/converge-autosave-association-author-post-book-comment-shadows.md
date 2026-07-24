@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-author-post-book-comment-shadows"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5249
 claim: "2026-07-24T18:06:57Z"
 assignee: "converge-autosave-association-author-post-book-comment-shadows"
 blocked-by: null
