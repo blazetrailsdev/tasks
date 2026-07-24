@@ -1,6 +1,6 @@
 ---
 title: "converge-findertest2-bespoke-post-topic-onto-canonical-models"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
