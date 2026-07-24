@@ -1,6 +1,6 @@
 ---
 title: "save-through-record-uses-bang-save"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 5192
 claim: "2026-07-24T00:07:15Z"
 assignee: "save-through-record-uses-bang-save"
 blocked-by: null
