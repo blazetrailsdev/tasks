@@ -1,6 +1,6 @@
 ---
 title: "test:compare — resolve Ruby mixin includers by definition node, not constant name"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T16:22:53Z"
+assignee: "resolve-mixin-includer-by-definition-node"
 blocked-by: null
 closed-reason: null
 ---
