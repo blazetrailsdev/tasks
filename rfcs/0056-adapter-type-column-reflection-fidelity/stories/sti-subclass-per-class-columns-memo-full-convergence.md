@@ -1,12 +1,12 @@
 ---
-title: "sti-subclass-per-class-columns-memo-full-convergence"
+title: "Every STI subclass should own its columns memo (drop the ownsColumnMemo carve-out)"
 status: draft
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
