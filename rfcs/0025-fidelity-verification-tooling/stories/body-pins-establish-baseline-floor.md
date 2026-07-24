@@ -1,6 +1,6 @@
 ---
 title: "Establish body-pins baseline (floor policy + populate body-pins.json)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 5209
 claim: "2026-07-24T02:38:25Z"
 assignee: "body-pins-establish-baseline-floor"
 blocked-by: null
