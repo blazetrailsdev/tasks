@@ -1,7 +1,7 @@
 ---
 title: "STI subclass with own ignoredColumns bypasses columns/columnsHash memos — Rails keeps per-class @columns_hash"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
 deps: []
