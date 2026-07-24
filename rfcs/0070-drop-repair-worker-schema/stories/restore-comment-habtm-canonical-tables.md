@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical lessons_students/students/posts/topics after their suite"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 5259
 claim: "2026-07-24T19:34:53Z"
 assignee: "restore-comment-habtm-canonical-tables"
 blocked-by: null
