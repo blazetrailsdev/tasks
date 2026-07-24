@@ -1,13 +1,13 @@
 ---
 title: "Audit bespoke registerModel calls that shadow canonical models file-wide"
 status: draft
-updated: 2026-07-19
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
