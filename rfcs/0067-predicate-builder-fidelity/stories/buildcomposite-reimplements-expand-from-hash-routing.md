@@ -1,6 +1,6 @@
 ---
 title: "buildComposite re-implements expand_from_hash routing instead of delegating"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
