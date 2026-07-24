@@ -1,6 +1,6 @@
 ---
 title: "Derive the AR advisory slot pool from the clamped effective fork count"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T01:07:13Z"
+assignee: "derive-ar-slot-pool-from-clamped-fork-count"
 blocked-by: null
 closed-reason: null
 ---
