@@ -1,6 +1,6 @@
 ---
 title: "Delete repairWorkerSchema once CI proves zero firings"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -19,8 +19,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T21:10:54Z"
+assignee: "delete-repair-worker-schema"
 blocked-by: null
 closed-reason: null
 ---
