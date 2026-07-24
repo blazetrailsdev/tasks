@@ -1,7 +1,7 @@
 ---
 title: "tasks repo: retire/foreground the post-commit background auto-push; simplify vestigial landed-race check"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
