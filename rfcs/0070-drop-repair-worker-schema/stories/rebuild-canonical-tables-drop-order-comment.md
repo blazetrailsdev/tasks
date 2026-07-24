@@ -1,6 +1,6 @@
 ---
 title: "rebuild-canonical-tables-drop-order-comment"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
