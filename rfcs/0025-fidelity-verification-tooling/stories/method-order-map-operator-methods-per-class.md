@@ -1,6 +1,6 @@
 ---
 title: "Method-order manifest: map operator methods (e.g. []→get/getAttribute) per class"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 25
-pr: null
+pr: 5226
 claim: "2026-07-24T15:08:24Z"
 assignee: "method-order-map-operator-methods-per-class"
 blocked-by: null
