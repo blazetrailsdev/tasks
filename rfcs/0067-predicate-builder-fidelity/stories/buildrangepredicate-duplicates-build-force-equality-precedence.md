@@ -1,6 +1,6 @@
 ---
 title: "buildRangePredicate is trails-only and duplicates build's force-equality precedence"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
