@@ -1,6 +1,6 @@
 ---
 title: "Handle inbound and cyclic FKs in fkSafeDropOrder"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5277
 claim: "2026-07-24T22:46:52Z"
 assignee: "fk-safe-drop-inbound-and-cyclic-fks"
 blocked-by: null
