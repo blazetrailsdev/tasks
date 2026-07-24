@@ -1,6 +1,6 @@
 ---
 title: "lint-deps reports aliased imports as missing, making the arel to activemodel section false"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
