@@ -1,6 +1,6 @@
 ---
 title: "Remove PG/MySQL test retry:2 once shared-DB flake class is provably gone"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 5
-pr: null
+pr: 5205
 claim: "2026-07-24T01:53:27Z"
 assignee: "remove-pg-mysql-test-retry-after-flake-burndown"
 blocked-by: null
