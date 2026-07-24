@@ -1,6 +1,6 @@
 ---
 title: "Port where_sql 'handles database-specific statements' via the engine argument"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5201
 claim: "2026-07-24T01:17:27Z"
 assignee: "where-sql-database-specific-statements-test"
 blocked-by: null
