@@ -1,6 +1,6 @@
 ---
 title: "Let the canonical schema declare schema.rb foreign keys (drops adapter.test raw-DDL workaround)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 6
-pr: null
+pr: 5268
 claim: "2026-07-24T20:54:53Z"
 assignee: "canonical-schema-express-foreign-keys"
 blocked-by: null
