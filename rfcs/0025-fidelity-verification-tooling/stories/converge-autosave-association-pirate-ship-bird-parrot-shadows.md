@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-pirate-ship-bird-parrot-shadows"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
