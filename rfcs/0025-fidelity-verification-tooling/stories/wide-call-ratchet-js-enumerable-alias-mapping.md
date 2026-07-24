@@ -1,7 +1,7 @@
 ---
 title: "Wide call ratchet lacks JS→Ruby enumerable alias mapping (some never satisfies any?)"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
