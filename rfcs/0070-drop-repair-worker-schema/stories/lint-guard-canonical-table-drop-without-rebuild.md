@@ -1,6 +1,6 @@
 ---
 title: "Lint-guard a canonical table dropped without a rebuild"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
