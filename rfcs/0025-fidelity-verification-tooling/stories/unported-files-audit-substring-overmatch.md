@@ -1,6 +1,6 @@
 ---
 title: "Audit UNPORTED_FILES bare-filename entries that substring-match and hide ported files"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: null
+pr: 5220
 claim: "2026-07-24T12:53:32Z"
 assignee: "unported-files-audit-substring-overmatch"
 blocked-by: null
