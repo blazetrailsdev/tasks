@@ -1,17 +1,17 @@
 ---
 title: "Remove PG/MySQL test retry:2 once shared-DB flake class is provably gone"
-status: blocked
-updated: 2026-06-25
+status: ready
+updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 20
 priority: 5
-pr: 4136
-claim: "2026-06-25T17:27:53Z"
-assignee: "remove-pg-mysql-test-retry-after-flake-burndown"
-blocked-by: "Gate not met: removing retry:2 immediately re-exposed shared-DB shape-drift flakes on BESPOKE tables (defaults schema-dump drift on MariaDB; hot_compatibilities cached-plan 'must not change result type' on PG; PR #4136 CI). repairWorkerSchema only repairs CANONICAL tables, so bespoke tables remain unprotected. The require-table-teardown=0 gate prevents leaks, NOT concurrent shape collisions between files sharing a bespoke table name. Real precondition: RFC 0019 canonical-schema burndown to zero bespoke files (require-canonical-schema-exclude.json still 70). Re-attempt once that hits zero."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Goal
