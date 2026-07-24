@@ -1,6 +1,6 @@
 ---
 title: 'groupedCompositeAssoc hard-codes the aggregate alias as "val" instead of Rails'' column_alias_for'
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T01:17:15Z"
+assignee: "grouped-composite-assoc-aggregate-alias"
 blocked-by: null
 closed-reason: null
 ---
