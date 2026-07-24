@@ -4,7 +4,9 @@ status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
-deps: []
+deps:
+  - fix-hot-compatibilities-pg-cached-plan-flake
+  - fix-transaction-isolation-id-reflection-race
 deps-rfc: []
 est-loc: 20
 priority: 5
