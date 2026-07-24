@@ -1,13 +1,13 @@
 ---
 title: "Route ratchet/exclude JSON generators through writeJsonManifest"
 status: draft
-updated: 2026-07-20
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null
