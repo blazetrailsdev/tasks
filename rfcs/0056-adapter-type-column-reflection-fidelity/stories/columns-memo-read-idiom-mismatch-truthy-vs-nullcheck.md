@@ -1,6 +1,6 @@
 ---
 title: "columns() reads its memo with a truthy check while columnsHash()/getColumnsHash use != null"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 25
-pr: null
+pr: 5222
 claim: "2026-07-24T13:38:24Z"
 assignee: "columns-memo-read-idiom-mismatch-truthy-vs-nullcheck"
 blocked-by: null
