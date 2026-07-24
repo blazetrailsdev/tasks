@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical subscribers table after its suite"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 5256
 claim: "2026-07-24T19:50:53Z"
 assignee: "restore-subscribers-canonical-table"
 blocked-by: null
