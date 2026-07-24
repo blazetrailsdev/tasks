@@ -1,6 +1,6 @@
 ---
 title: "Fix TransactionIsolationTest id-reflection race on PG/MariaDB (shared worker DB)"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
