@@ -1,6 +1,6 @@
 ---
 title: "burn-down-canonical-rebuild-exclude"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5273
 claim: "2026-07-24T22:06:55Z"
 assignee: "burn-down-canonical-rebuild-exclude"
 blocked-by: null
