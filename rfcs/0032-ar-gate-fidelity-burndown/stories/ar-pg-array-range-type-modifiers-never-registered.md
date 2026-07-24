@@ -1,6 +1,6 @@
 ---
 title: "ar-pg-array-range-type-modifiers-never-registered"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5203
 claim: "2026-07-24T01:22:14Z"
 assignee: "ar-pg-array-range-type-modifiers-never-registered"
 blocked-by: null
