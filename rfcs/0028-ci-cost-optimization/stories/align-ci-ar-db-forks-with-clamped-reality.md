@@ -1,7 +1,7 @@
 ---
 title: "Align CI AR_DB_FORKS with the clamped host ceiling (8 was never real)"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
