@@ -1,7 +1,7 @@
 ---
 rfc: "0070-drop-repair-worker-schema"
 title: "Drive repairWorkerSchema firings to zero, then delete it"
-status: draft
+status: active
 created: 2026-07-24
 updated: 2026-07-24
 owner: "@deanmarano"

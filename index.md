@@ -73,4 +73,4 @@
 | [0067-predicate-builder-fidelity](rfcs/0067-predicate-builder-fidelity/README.md) | PredicateBuilder fidelity | closed | @deanmarano | activerecord |
 | [0068-awaitable-has-one-setter](rfcs/0068-awaitable-has-one-setter/README.md) | Awaitable has_one setter: retire the deferred-displacement machinery | draft | @deanmarano | activerecord |
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
-| [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | draft | @deanmarano | activerecord |
+| [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | active | @deanmarano | activerecord |
