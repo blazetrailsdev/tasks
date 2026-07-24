@@ -1,6 +1,6 @@
 ---
 title: "Method-order manifest: enforce order for Ruby modules ported as TS classes"
-status: claimed
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 25
-pr: null
+pr: 5231
 claim: "2026-07-24T16:00:03Z"
 assignee: "method-order-recover-module-ported-as-class"
 blocked-by: null
