@@ -1,6 +1,6 @@
 ---
 title: "Drop the hand-copied canonical topics re-lay in transactions.trails.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5276
 claim: "2026-07-24T22:38:54Z"
 assignee: "drop-topics-relay-in-transactions-trails"
 blocked-by: null
