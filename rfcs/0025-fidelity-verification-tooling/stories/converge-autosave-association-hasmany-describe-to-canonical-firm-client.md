@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-hasmany-describe-to-canonical-firm-client"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5278
 claim: "2026-07-24T22:30:54Z"
 assignee: "converge-autosave-association-hasmany-describe-to-canonical-firm-client"
 blocked-by: null
