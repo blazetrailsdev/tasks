@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: serve reads from the origin/main tree — no reset --hard, no lock on reads"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T21:26:54Z"
+assignee: "tasks-read-path-serves-index-without-reset-hard"
 blocked-by: null
 closed-reason: null
 ---
