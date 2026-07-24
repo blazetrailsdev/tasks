@@ -1,6 +1,6 @@
 ---
 title: "Audit ported Ruby truthiness guards; adopt isRubyTruthy"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: null
+pr: 5215
 claim: "2026-07-24T04:53:23Z"
 assignee: "rails-ruby-truthiness-audit-and-isrubytruthy-adoption"
 blocked-by: null
