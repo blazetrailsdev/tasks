@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-24
 rfc: "0005-activerecord-gaps"
 cluster: null
-deps: []
+deps:
+  - share-collection-association-target-with-proxy
 deps-rfc: []
 est-loc: null
 priority: 20
