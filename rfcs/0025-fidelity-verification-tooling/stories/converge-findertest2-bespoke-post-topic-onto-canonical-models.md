@@ -1,6 +1,6 @@
 ---
 title: "converge-findertest2-bespoke-post-topic-onto-canonical-models"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5274
 claim: "2026-07-24T22:22:53Z"
 assignee: "converge-findertest2-bespoke-post-topic-onto-canonical-models"
 blocked-by: null
