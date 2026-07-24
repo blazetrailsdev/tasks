@@ -1,6 +1,6 @@
 ---
 title: "Guard PG conn-param allowlist against pg driver drift"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: null
+pr: 5225
 claim: "2026-07-24T14:38:30Z"
 assignee: "guard-pg-conn-param-allowlist-against-driver-drift"
 blocked-by: null
