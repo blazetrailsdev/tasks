@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-bespoke-registermodel-canonical-shadows"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5248
 claim: "2026-07-24T17:50:54Z"
 assignee: "converge-autosave-association-bespoke-registermodel-canonical-shadows"
 blocked-by: null
