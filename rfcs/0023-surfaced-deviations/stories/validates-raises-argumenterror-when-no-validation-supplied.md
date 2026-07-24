@@ -45,7 +45,7 @@ mis-typed validation into a no-op, which is exactly how the #5192 test rotted.
 ## Acceptance criteria
 
 - [ ] `validates` raises `ArgumentError("You need to supply at least one
-  validation")` when no recognized validation rules remain, matching
+validation")` when no recognized validation rules remain, matching
       `validates.rb:116`. Cover both the AR override
       (`activerecord/src/validations.ts`) and ActiveModel's
       (`activemodel/src/model.ts`).
