@@ -1,12 +1,12 @@
 ---
-title: "lint-guard-canonical-table-drop-without-rebuild"
+title: "Lint-guard a canonical table dropped without a rebuild"
 status: draft
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 220
 priority: null
 pr: null
 claim: null
