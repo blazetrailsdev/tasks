@@ -1,6 +1,6 @@
 ---
 title: "rebuild-canonical-tables-drop-order-comment"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: null
+pr: 5267
 claim: "2026-07-24T21:02:57Z"
 assignee: "rebuild-canonical-tables-drop-order-comment"
 blocked-by: null
