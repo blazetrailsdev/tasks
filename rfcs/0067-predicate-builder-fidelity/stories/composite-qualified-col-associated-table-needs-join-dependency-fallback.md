@@ -1,6 +1,6 @@
 ---
 title: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 5232
 claim: "2026-07-24T15:50:53Z"
 assignee: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
 blocked-by: null
