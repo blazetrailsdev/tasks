@@ -1,7 +1,7 @@
 ---
 title: "tasks new hides markdownlint body failures behind a git commit stack trace"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
