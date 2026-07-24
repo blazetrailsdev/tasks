@@ -1,6 +1,6 @@
 ---
 title: "test:compare — resolve Ruby mixin includers by definition node, not constant name"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
