@@ -1,6 +1,6 @@
 ---
 title: "Route build-fixture-baseline through writeJsonManifest"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5245
 claim: "2026-07-24T17:42:53Z"
 assignee: "fixture-baseline-emitter-prettier-churn"
 blocked-by: null
