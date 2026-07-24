@@ -1,6 +1,6 @@
 ---
 title: "Guard the duplicated fork-count precedence between vitest.config.ts and ar-db-slots.ts"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T18:54:54Z"
+assignee: "guard-fork-count-precedence-parity"
 blocked-by: null
 closed-reason: null
 ---
