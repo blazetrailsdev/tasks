@@ -1,13 +1,13 @@
 ---
 title: "prefer-await-relation-widen-receiver-gate"
 status: draft
-updated: 2026-07-19
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null
