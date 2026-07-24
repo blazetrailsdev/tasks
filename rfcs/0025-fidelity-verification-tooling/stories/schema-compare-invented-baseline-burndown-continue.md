@@ -1,6 +1,6 @@
 ---
 title: "schema:compare invented-baseline burndown (continued: 85 tables remaining)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 20
-pr: null
+pr: 5219
 claim: "2026-07-24T12:23:23Z"
 assignee: "schema-compare-invented-baseline-burndown-continue"
 blocked-by: null
