@@ -1,6 +1,6 @@
 ---
 title: "Move the fork-count clamp into ar-db-slots via an os-adapter availableParallelism"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: null
+pr: 5243
 claim: "2026-07-24T17:26:53Z"
 assignee: "clamp-fork-count-via-os-adapter"
 blocked-by: null
