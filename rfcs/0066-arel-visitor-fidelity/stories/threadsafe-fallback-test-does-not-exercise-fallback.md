@@ -1,7 +1,7 @@
 ---
 title: "threadsafe-fallback test compiles two ToSql visitors instead of exercising superclass fallback"
-status: ready
-updated: 2026-07-23
+status: claimed
+updated: 2026-07-24
 rfc: "0066-arel-visitor-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T00:42:13Z"
+assignee: "threadsafe-fallback-test-does-not-exercise-fallback"
 blocked-by: null
 closed-reason: null
 ---
