@@ -1,6 +1,6 @@
 ---
 title: "Wide call ratchet: suppress Ruby calls whose faithful JS port emits no call (to_s, each, empty?, first, size)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: null
+pr: 5237
 claim: "2026-07-24T16:38:53Z"
 assignee: "wide-call-ratchet-suppress-ruby-calls-with-no-js-call-form"
 blocked-by: null
