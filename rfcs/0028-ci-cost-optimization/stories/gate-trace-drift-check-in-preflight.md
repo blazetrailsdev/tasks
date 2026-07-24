@@ -1,6 +1,6 @@
 ---
 title: "Run gate-trace.sh drift + carve-out check in preflight"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
