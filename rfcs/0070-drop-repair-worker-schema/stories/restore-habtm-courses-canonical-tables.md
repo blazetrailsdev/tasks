@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical courses/colleges/professors HABTM tables after their suite"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
