@@ -1,6 +1,6 @@
 ---
 title: "Arm hard-zero CI gate on activerecord gate-mismatch count"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: enforcement
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: null
+pr: 5238
 claim: "2026-07-24T16:46:53Z"
 assignee: "gate-mismatch-zero-ci-enforcement"
 blocked-by: null
