@@ -1,6 +1,6 @@
 ---
 title: "scripts/**/*.ts is not type-checked by pnpm typecheck"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
