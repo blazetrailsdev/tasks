@@ -1,6 +1,6 @@
 ---
 title: "ar-pg-oid-type-registrations-not-adapter-scoped"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T01:02:16Z"
+assignee: "ar-pg-oid-type-registrations-not-adapter-scoped"
 blocked-by: null
 closed-reason: null
 ---
