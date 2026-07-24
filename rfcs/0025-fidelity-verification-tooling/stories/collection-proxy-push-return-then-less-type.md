@@ -1,6 +1,6 @@
 ---
 title: "Type CollectionProxy#push/concat stripped return as then-less"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
