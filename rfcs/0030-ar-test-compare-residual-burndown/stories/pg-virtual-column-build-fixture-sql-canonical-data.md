@@ -1,7 +1,7 @@
 ---
 title: "PG virtual-column build fixture sql should use canonical virtualColumnFixtureData"
-status: ready
-updated: 2026-07-23
+status: claimed
+updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T00:02:13Z"
+assignee: "pg-virtual-column-build-fixture-sql-canonical-data"
 blocked-by: null
 closed-reason: null
 ---
