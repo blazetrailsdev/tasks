@@ -1,6 +1,6 @@
 ---
 title: "Converge the autosave-association canonical shadows no pass enumerates"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
