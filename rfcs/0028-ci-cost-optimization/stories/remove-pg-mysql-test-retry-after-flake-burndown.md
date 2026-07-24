@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 20
 priority: 5
-pr: 5205
-claim: "2026-07-24T01:53:27Z"
-assignee: "remove-pg-mysql-test-retry-after-flake-burndown"
+pr: null
+claim: null
+assignee: null
 blocked-by: "Runtime bespoke-table drift confirmed on PR #5205 CI (run 30060420840): hot_compatibilities PG cached-plan 0A000 and TransactionIsolationTest id-reflection race on PG+MariaDB. Blocked on deps fix-hot-compatibilities-pg-cached-plan-flake and fix-transaction-isolation-id-reflection-race."
 ---
 
