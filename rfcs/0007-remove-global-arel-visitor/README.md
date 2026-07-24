@@ -1,9 +1,9 @@
 ---
 rfc: "0007-remove-global-arel-visitor"
 title: "Remove the global Arel visitor — route toSql through connection.toSql"
-status: active
+status: closed
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-24
 owner: "@deanmarano"
 packages:
   - activerecord

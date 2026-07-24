@@ -10,7 +10,7 @@
 | [0004-query-cache-mixin](rfcs/0004-query-cache-mixin/README.md) | Wire the live query-cache mixin, retire the wrapper | closed | @deanmarano | activerecord |
 | [0005-activerecord-gaps](rfcs/0005-activerecord-gaps/README.md) | ActiveRecord parity gaps — associations, connection-pool, relation | active | @deanmarano | activerecord |
 | [0006-collection-store-unification](rfcs/0006-collection-store-unification/README.md) | Collection-store unification | closed | @deanmarano | activerecord |
-| [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | active | @deanmarano | activerecord, arel |
+| [0007-remove-global-arel-visitor](rfcs/0007-remove-global-arel-visitor/README.md) | Remove the global Arel visitor — route toSql through connection.toSql | closed | @deanmarano | activerecord, arel |
 | [0008-test-perf-template-clone](rfcs/0008-test-perf-template-clone/README.md) | AR test perf — canonical schema as a clonable template | closed | @deanmarano | activerecord |
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | closed | @deanmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | closed | @deanmarano | activerecord |
