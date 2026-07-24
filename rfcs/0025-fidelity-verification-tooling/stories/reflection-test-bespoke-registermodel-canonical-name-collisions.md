@@ -1,6 +1,6 @@
 ---
 title: "Audit bespoke registerModel calls that shadow canonical models file-wide"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: null
+pr: 5216
 claim: "2026-07-24T10:23:24Z"
 assignee: "reflection-test-bespoke-registermodel-canonical-name-collisions"
 blocked-by: null
