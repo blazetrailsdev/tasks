@@ -1,6 +1,6 @@
 ---
 title: "Port where_sql 'handles database-specific statements' via the engine argument"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0007-remove-global-arel-visitor"
 cluster: null
