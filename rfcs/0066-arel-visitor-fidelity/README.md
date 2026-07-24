@@ -1,9 +1,9 @@
 ---
 rfc: "0066-arel-visitor-fidelity"
 title: "Arel visitor & node-surface fidelity"
-status: active
+status: closed
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
