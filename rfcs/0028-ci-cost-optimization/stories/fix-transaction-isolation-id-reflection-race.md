@@ -1,6 +1,6 @@
 ---
 title: "Fix TransactionIsolationTest id-reflection race on PG/MariaDB (shared worker DB)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
+pr: 5230
 claim: "2026-07-24T15:42:55Z"
 assignee: "fix-transaction-isolation-id-reflection-race"
 blocked-by: null
