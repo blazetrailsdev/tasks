@@ -1,14 +1,14 @@
 ---
 title: "Type.adapterNameFrom reads live connection instead of connection_db_config"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5179
+pr: 5181
 claim: "2026-07-23T21:27:09Z"
 assignee: "type-adapter-name-from-reads-connection-not-db-config"
 blocked-by: null
