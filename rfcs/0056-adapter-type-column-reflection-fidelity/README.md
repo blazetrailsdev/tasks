@@ -1,9 +1,9 @@
 ---
 rfc: "0056-adapter-type-column-reflection-fidelity"
 title: "Adapter type & column reflection fidelity"
-status: active
+status: closed
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
