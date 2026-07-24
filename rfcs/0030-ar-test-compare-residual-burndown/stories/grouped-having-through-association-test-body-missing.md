@@ -1,6 +1,6 @@
 ---
 title: "Converge 'group by summed field through association and having' — test body has no .having()"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T04:08:23Z"
+assignee: "grouped-having-through-association-test-body-missing"
 blocked-by: null
 closed-reason: null
 ---
