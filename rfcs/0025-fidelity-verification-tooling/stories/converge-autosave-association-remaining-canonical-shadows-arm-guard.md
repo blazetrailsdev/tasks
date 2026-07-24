@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-remaining-canonical-shadows-arm-guard"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T18:22:53Z"
+assignee: "converge-autosave-association-remaining-canonical-shadows-arm-guard"
 blocked-by: null
 closed-reason: null
 ---
