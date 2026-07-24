@@ -1,6 +1,6 @@
 ---
 title: "schema:compare — include the four adapter-specific schema.rb companions"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: null
+pr: 5217
 claim: "2026-07-24T11:08:23Z"
 assignee: "schema-compare-adapter-specific-schemas"
 blocked-by: null
