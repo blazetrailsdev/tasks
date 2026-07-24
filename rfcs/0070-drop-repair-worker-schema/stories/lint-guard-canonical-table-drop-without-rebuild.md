@@ -1,6 +1,6 @@
 ---
 title: "Lint-guard a canonical table dropped without a rebuild"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 220
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T20:46:52Z"
+assignee: "lint-guard-canonical-table-drop-without-rebuild"
 blocked-by: null
 closed-reason: null
 ---
