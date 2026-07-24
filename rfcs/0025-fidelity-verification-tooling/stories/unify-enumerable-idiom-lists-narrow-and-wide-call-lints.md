@@ -1,6 +1,6 @@
 ---
 title: "Unify the enumerable-idiom knowledge shared by lint-calls.ts and JS_ENUMERABLE_ALIASES"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: null
+pr: 5236
 claim: "2026-07-24T16:30:53Z"
 assignee: "unify-enumerable-idiom-lists-narrow-and-wide-call-lints"
 blocked-by: null
