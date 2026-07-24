@@ -1,6 +1,6 @@
 ---
 title: "label-gate-ar-db-matrix"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T22:54:54Z"
+assignee: "label-gate-ar-db-matrix"
 blocked-by: null
 closed-reason: null
 ---
