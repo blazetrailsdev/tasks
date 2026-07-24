@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
-deps: []
+deps:
+  - ar-resolve-type-name-unwired-attribute-path-adapter-blind
 deps-rfc: []
 est-loc: null
 priority: null
