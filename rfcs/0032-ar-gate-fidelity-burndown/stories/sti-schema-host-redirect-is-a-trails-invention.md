@@ -1,14 +1,14 @@
 ---
 title: "sti-schema-host-redirect-is-a-trails-invention"
-status: claimed
-updated: 2026-07-23
+status: in-progress
+updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5199
 claim: "2026-07-23T21:17:11Z"
 assignee: "sti-schema-host-redirect-is-a-trails-invention"
 blocked-by: null
