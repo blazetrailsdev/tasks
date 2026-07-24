@@ -1,6 +1,6 @@
 ---
 title: "tasks new hides markdownlint body failures behind a git commit stack trace"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T21:18:54Z"
+assignee: "tasks-new-surfaces-markdownlint-failure"
 blocked-by: null
 closed-reason: null
 ---
