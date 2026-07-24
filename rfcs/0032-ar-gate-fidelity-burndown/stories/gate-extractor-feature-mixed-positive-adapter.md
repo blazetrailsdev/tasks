@@ -1,6 +1,6 @@
 ---
 title: "gateFromGuardExpr: align positive-adapter+feature mixing with Ruby mixed rule"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: null
+pr: 5224
 claim: "2026-07-24T14:23:23Z"
 assignee: "gate-extractor-feature-mixed-positive-adapter"
 blocked-by: null
