@@ -1,6 +1,6 @@
 ---
 title: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
-status: claimed
+status: blocked
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-24T00:57:11Z"
 assignee: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
-blocked-by: null
+blocked-by: "Blocked on PR #5186 (composite-qualified-cols-bind-through-base-table-type), still OPEN. The buildComposite qualified-col re-rooting this story adds a join-dependency fallback to does not exist in origin/main yet — it is introduced by #5186. Doing the work now would require a stacked PR, which CLAUDE.md forbids. Unblock once #5186 merges."
 closed-reason: null
 ---
 
