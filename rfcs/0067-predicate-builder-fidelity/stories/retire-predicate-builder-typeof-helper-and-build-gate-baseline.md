@@ -1,6 +1,6 @@
 ---
 title: "Retire PredicateBuilder#typeOf helper; inline table.type reads and delete build -> table/type wide-gate baseline entries"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 25
-pr: null
+pr: 5193
 claim: "2026-07-24T00:37:16Z"
 assignee: "retire-predicate-builder-typeof-helper-and-build-gate-baseline"
 blocked-by: null
