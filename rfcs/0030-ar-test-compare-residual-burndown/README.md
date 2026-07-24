@@ -1,9 +1,9 @@
 ---
 rfc: "0030-ar-test-compare-residual-burndown"
 title: "ActiveRecord test:compare 94→100: residual skip burndown"
-status: active
+status: closed
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-07-24
 owner: "@deanmarano"
 packages:
   - activerecord
