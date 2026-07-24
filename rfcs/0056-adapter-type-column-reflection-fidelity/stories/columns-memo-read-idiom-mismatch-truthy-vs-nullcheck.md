@@ -1,6 +1,6 @@
 ---
 title: "columns() reads its memo with a truthy check while columnsHash()/getColumnsHash use != null"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
