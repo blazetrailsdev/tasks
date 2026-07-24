@@ -2,7 +2,7 @@
 title: "Port globalid railtie to a Trailtie and drop its test exclusion"
 status: draft
 updated: 2026-07-24
-rfc: "0000-globalid-trailtie-port"
+rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
 deps-rfc: []

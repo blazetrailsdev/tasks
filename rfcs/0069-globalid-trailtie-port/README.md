@@ -1,5 +1,5 @@
 ---
-rfc: "0000-globalid-trailtie-port"
+rfc: "0069-globalid-trailtie-port"
 title: "Port globalid railtie to a Trailtie"
 status: draft
 created: 2026-07-24
