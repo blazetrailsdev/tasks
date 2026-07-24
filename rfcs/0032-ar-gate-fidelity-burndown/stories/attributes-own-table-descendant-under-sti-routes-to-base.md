@@ -1,7 +1,7 @@
 ---
 title: "attributes-own-table-descendant-under-sti-routes-to-base"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
