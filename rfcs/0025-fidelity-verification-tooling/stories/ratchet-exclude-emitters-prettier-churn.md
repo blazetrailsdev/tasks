@@ -1,6 +1,6 @@
 ---
 title: "Route ratchet/exclude JSON generators through writeJsonManifest"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
