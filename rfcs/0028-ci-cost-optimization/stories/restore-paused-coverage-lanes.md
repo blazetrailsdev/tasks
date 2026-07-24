@@ -1,6 +1,6 @@
 ---
 title: "Restore or remove the four paused reporting-only coverage lanes"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
