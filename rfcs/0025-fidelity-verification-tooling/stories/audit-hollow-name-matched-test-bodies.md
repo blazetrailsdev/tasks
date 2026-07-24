@@ -1,6 +1,6 @@
 ---
 title: "Detect name-matched tests with hollow bodies (pass against broken impl)"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
+pr: 5204
 claim: "2026-07-24T01:38:23Z"
 assignee: "audit-hollow-name-matched-test-bodies"
 blocked-by: null
