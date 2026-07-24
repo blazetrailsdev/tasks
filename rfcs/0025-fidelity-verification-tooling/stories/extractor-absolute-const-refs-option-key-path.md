@@ -1,6 +1,6 @@
 ---
 title: "api-compare: honour leading :: on the assert_valid_keys const-expansion path"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: null
+pr: 5223
 claim: "2026-07-24T13:53:23Z"
 assignee: "extractor-absolute-const-refs-option-key-path"
 blocked-by: null
