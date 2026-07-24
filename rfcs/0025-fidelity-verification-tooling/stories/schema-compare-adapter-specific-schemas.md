@@ -1,6 +1,6 @@
 ---
 title: "schema:compare — include the four adapter-specific schema.rb companions"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
