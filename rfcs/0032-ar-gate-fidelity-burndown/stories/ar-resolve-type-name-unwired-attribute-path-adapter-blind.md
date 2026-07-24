@@ -1,6 +1,6 @@
 ---
 title: "ar-resolve-type-name-unwired-attribute-path-adapter-blind"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5196
 claim: "2026-07-24T00:47:36Z"
 assignee: "ar-resolve-type-name-unwired-attribute-path-adapter-blind"
 blocked-by: null
