@@ -1,6 +1,6 @@
 ---
 title: "ungrouped-count-having-dropped"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: null
+pr: 5208
 claim: "2026-07-24T02:23:24Z"
 assignee: "ungrouped-count-having-dropped"
 blocked-by: null
