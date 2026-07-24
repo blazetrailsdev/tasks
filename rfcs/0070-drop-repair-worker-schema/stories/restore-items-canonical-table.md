@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical items table after its suite"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T19:42:52Z"
+assignee: "restore-items-canonical-table"
 blocked-by: null
 closed-reason: null
 ---
