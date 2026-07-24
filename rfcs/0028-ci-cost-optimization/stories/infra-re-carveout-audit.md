@@ -1,6 +1,6 @@
 ---
 title: "infra-re-carveout-audit"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T20:14:54Z"
+assignee: "infra-re-carveout-audit"
 blocked-by: null
 closed-reason: null
 ---
