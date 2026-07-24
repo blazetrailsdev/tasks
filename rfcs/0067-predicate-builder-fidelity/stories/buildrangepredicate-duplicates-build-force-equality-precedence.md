@@ -1,6 +1,6 @@
 ---
 title: "buildRangePredicate is trails-only and duplicates build's force-equality precedence"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T01:12:10Z"
+assignee: "buildrangepredicate-duplicates-build-force-equality-precedence"
 blocked-by: null
 closed-reason: null
 ---
