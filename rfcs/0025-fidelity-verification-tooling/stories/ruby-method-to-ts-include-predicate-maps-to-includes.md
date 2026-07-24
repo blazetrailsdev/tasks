@@ -1,6 +1,6 @@
 ---
 title: "rubyMethodToTs(include?) should offer includes as a candidate"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: null
+pr: 5242
 claim: "2026-07-24T17:18:53Z"
 assignee: "ruby-method-to-ts-include-predicate-maps-to-includes"
 blocked-by: null
