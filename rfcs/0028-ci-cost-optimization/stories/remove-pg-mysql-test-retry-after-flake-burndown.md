@@ -35,33 +35,54 @@ once it is no longer needed, so red CI means a real regression again.
 
 The retry is **broader** than shape drift. Per its own comment it also absorbs:
 
-- leaked **bespoke** tables (raw `createTable` never dropped). These are
-  eliminated by the canonical-schema burndown itself (RFC 0019) — converting the
-  offending files onto canonical tables so no un-torn-down bespoke table can
-  leak — backstopped statically by the `require-table-teardown` ESLint ratchet.
-  We deliberately do **not** add a runtime reaper to clean leaked tables: that
-  would entrench the divergent (bespoke) path instead of removing it. Fidelity
-  goal is zero bespoke tables, not tolerated-and-swept ones.
+- **bespoke tables that drift under the shared per-worker DB.** These are NOT
+  just leaks — the offenders here (`hot_compatibilities`,
+  `transaction-isolation`'s `Tag`/`tags`) tear down correctly and are
+  `require-table-teardown`-clean, yet still fail intermittently on PG/MariaDB
+  because `repairWorkerSchema` repairs **canonical** tables only, so a bespoke
+  table's shape/plan-cache/reflection state can still race across the workers
+  sharing a DB. **The `require-canonical-schema-exclude.json`/
+  `require-table-teardown` ratchets reaching zero does NOT close this class** —
+  those are static, and this is a runtime hazard. (This was the original
+  mis-specification: PR #4136 removed the retry with those ratchets already at
+  zero and both `hot_compatibilities` and `defaults` promptly drifted, forcing a
+  revert.) The real gate is the two blocker stories below.
 - `describeIfPg` / `describeIfMysql` backend-only intermittents that SQLite
   never exercises.
 
 Removing it before those are addressed would re-expose unrelated intermittents
 and erode trust again.
 
+## Blockers (must land first)
+
+Confirmed on CI run 30060420840 (PR #5205, the first PG/MariaDB runs with the
+shared-DB retry actually removed):
+
+- `fix-hot-compatibilities-pg-cached-plan-flake` — PG `0A000`
+  `plancache.c`/`RevalidateCachedQuery` on `hot_compatibilities` (same failure
+  that reverted #4136).
+- `fix-transaction-isolation-id-reflection-race` —
+  `MissingAttributeError: can't write unknown attribute 'id'` on PG **and**
+  MariaDB in `TransactionIsolationTest > read uncommitted` / `> repeatable read`.
+
+These are wired as `deps`; this story cannot be worked until both are done.
+
 ## Done-when (all required)
 
-1. The bespoke-leak class is gone by construction: no AR `*.test.ts` creates an
-   un-torn-down non-canonical table (canonical conversion complete for the
-   offending files; `require-table-teardown` exclude list burned to zero), so
-   shape drift is the only remaining shared-DB hazard and `repairWorkerSchema`
-   already covers it.
-2. At least ~5 consecutive green PG **and** MySQL CI runs on `main` with the
-   `[schema-repair]` burndown logs showing drift hits trending to zero (or only
-   known/tracked tables) — evidence the masked flakes are actually gone, not
-   just lucky.
+1. Both blocker stories are **done**: `fix-hot-compatibilities-pg-cached-plan-flake`
+   and `fix-transaction-isolation-id-reflection-race`. These are the two
+   _runtime_ bespoke-table hazards `repairWorkerSchema` does not cover; the
+   static ratchets being at zero is necessary but NOT sufficient (see #4136).
+   If a further bespoke-drift failure surfaces on the no-retry run, file it as a
+   new blocker and add it to `deps` rather than restoring the retry.
+2. At least ~5 consecutive green PG **and** MariaDB (the MySQL-family stand-in
+   lane; `mysql-tests` is parked) CI runs on `main` **with `retry: 0` already in
+   effect** — i.e. green because the flakes are gone, not because a retry
+   re-ran. (Green runs that still had `retry: 2` are not evidence.)
 3. Drop the conditional to `retry: 0` (or delete the line), and trim the
-   now-stale comment block at vitest.config.ts:223-238.
-4. Re-run PG/MySQL CI a few times post-removal to confirm green without retries.
+   now-stale comment block above the `retry:` line in `vitest.config.ts`.
+4. Re-run PG/MariaDB CI a few times post-removal to confirm green without
+   retries.
 
 ## Out of scope
 
