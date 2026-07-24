@@ -1,6 +1,6 @@
 ---
 title: "Method-order: expand per-class operator spelling coverage beyond []"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5247
 claim: "2026-07-24T17:58:54Z"
 assignee: "method-order-expand-operator-spelling-coverage"
 blocked-by: null
