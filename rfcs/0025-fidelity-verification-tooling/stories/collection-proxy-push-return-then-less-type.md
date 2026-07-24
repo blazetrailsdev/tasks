@@ -1,6 +1,6 @@
 ---
 title: "Type CollectionProxy#push/concat stripped return as then-less"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 5265
 claim: "2026-07-24T20:38:56Z"
 assignee: "collection-proxy-push-return-then-less-type"
 blocked-by: null
