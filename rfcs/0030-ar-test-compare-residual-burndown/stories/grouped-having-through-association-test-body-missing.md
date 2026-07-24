@@ -1,6 +1,6 @@
 ---
 title: "Converge 'group by summed field through association and having' — test body has no .having()"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
