@@ -1,7 +1,7 @@
 ---
 title: "rubyMethodToTs(include?) should offer includes as a candidate"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
