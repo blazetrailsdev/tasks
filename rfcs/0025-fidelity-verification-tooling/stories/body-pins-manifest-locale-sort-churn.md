@@ -1,7 +1,7 @@
 ---
 title: "body-pins-manifest-locale-sort-churn"
-status: ready
-updated: 2026-07-23
+status: claimed
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T00:52:19Z"
+assignee: "body-pins-manifest-locale-sort-churn"
 blocked-by: null
 closed-reason: null
 ---
