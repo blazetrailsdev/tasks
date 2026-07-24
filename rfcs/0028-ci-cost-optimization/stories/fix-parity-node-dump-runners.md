@@ -1,6 +1,6 @@
 ---
 title: "fix-parity-node-dump-runners"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5264
 claim: "2026-07-24T20:22:53Z"
 assignee: "fix-parity-node-dump-runners"
 blocked-by: null
