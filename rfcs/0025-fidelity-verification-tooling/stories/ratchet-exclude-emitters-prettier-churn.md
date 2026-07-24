@@ -1,6 +1,6 @@
 ---
 title: "Route ratchet/exclude JSON generators through writeJsonManifest"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: null
+pr: 5240
 claim: "2026-07-24T17:02:54Z"
 assignee: "ratchet-exclude-emitters-prettier-churn"
 blocked-by: null
