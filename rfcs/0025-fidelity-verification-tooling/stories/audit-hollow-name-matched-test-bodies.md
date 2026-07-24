@@ -1,6 +1,6 @@
 ---
 title: "Detect name-matched tests with hollow bodies (pass against broken impl)"
-status: in-progress
+status: closed
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: 5204
-claim: "2026-07-24T01:38:23Z"
-assignee: "audit-hollow-name-matched-test-bodies"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Abandoned: detector not worth the cost. The shape-based sweep reached 0 findings across 27828 tests only after tightening rules until the count hit zero, and validation against the one cluster with ground truth (PR #4892) showed it caught 3 of 4 known hollow bodies. Missed case: instrumenter.test.ts 'instrument yields the payload for further modification', which passed instrument an empty block alongside a real subscribe block. The class is semantic (body does not match the Rails original), so only a body-vs-Rails diff finds it reliably; a shape detector buys precision with recall. PR #5204 closed unmerged."
 ---
 
 ## Context
