@@ -1,6 +1,6 @@
 ---
 title: "website: cover scripts/*.test.ts in a tsconfig so eslint project-service can lint it"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 50
-pr: null
+pr: 5272
 claim: "2026-07-24T21:42:53Z"
 assignee: "website-scripts-tests-tsconfig-coverage"
 blocked-by: null
