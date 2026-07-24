@@ -1,6 +1,6 @@
 ---
 title: "Converge bespoke registerModel canonical shadows in autosave/finder/base/habtm sibling tests"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 5246
 claim: "2026-07-24T17:34:54Z"
 assignee: "converge-sibling-test-bespoke-registermodel-canonical-shadows"
 blocked-by: null
