@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-pirate-ship-bird-parrot-shadows"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5250
 claim: "2026-07-24T18:14:54Z"
 assignee: "converge-autosave-association-pirate-ship-bird-parrot-shadows"
 blocked-by: null
