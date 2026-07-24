@@ -1,6 +1,6 @@
 ---
 title: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
