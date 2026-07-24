@@ -1,6 +1,6 @@
 ---
 title: "eye-callbacks-cold-cache-has-one-read-diverges-from-rails"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5251
 claim: "2026-07-24T18:30:54Z"
 assignee: "eye-callbacks-cold-cache-has-one-read-diverges-from-rails"
 blocked-by: null
