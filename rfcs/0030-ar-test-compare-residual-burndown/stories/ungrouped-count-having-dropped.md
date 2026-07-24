@@ -1,7 +1,7 @@
 ---
 title: "ungrouped-count-having-dropped"
-status: ready
-updated: 2026-07-23
+status: draft
+updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
