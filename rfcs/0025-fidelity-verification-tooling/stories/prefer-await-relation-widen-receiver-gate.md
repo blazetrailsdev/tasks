@@ -1,6 +1,6 @@
 ---
 title: "prefer-await-relation-widen-receiver-gate"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
