@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-drop-repair-worker-schema](rfcs/0000-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | draft | @deanmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -74,3 +73,4 @@
 | [0067-predicate-builder-fidelity](rfcs/0067-predicate-builder-fidelity/README.md) | PredicateBuilder fidelity | active | @deanmarano | activerecord |
 | [0068-awaitable-has-one-setter](rfcs/0068-awaitable-has-one-setter/README.md) | Awaitable has_one setter: retire the deferred-displacement machinery | draft | @deanmarano | activerecord |
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
+| [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | draft | @deanmarano | activerecord |

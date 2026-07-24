@@ -1,5 +1,5 @@
 ---
-rfc: "0000-drop-repair-worker-schema"
+rfc: "0070-drop-repair-worker-schema"
 title: "Drive repairWorkerSchema firings to zero, then delete it"
 status: draft
 created: 2026-07-24
