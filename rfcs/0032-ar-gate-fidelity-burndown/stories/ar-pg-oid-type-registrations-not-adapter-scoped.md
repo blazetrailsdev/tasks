@@ -1,6 +1,6 @@
 ---
 title: "ar-pg-oid-type-registrations-not-adapter-scoped"
-status: blocked
+status: ready
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-24T01:02:16Z"
-assignee: "ar-pg-oid-type-registrations-not-adapter-scoped"
-blocked-by: "Follow-up to ar-resolve-type-name-unwired-attribute-path-adapter-blind (PR #5196, open draft). The entire premise — PG OID registrations living in AR's AdapterSpecificRegistry in connection-adapters/postgresql/type-map-init.ts with { override: false }, and AR's resolveTypeName being wired to the model's adapter — does not exist on origin/main yet; main still registers them into ActiveModel's unscoped typeRegistry and AR's resolveTypeName is unwired. Doing this work now would mean either stacking on #5196 (forbidden) or duplicating it. Unblock once #5196 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
