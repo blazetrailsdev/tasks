@@ -1,6 +1,6 @@
 ---
 title: "route-through-collection-writes-onto-association-insert-record"
-status: claimed
+status: blocked
 updated: 2026-07-24
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -12,7 +12,7 @@ priority: 20
 pr: null
 claim: "2026-07-24T10:38:25Z"
 assignee: "route-through-collection-writes-onto-association-insert-record"
-blocked-by: null
+blocked-by: "Reroute requires the OO collection association and its CollectionProxy to share one in-memory target (RFC 0022 canonical store); that structural prerequisite is split out as share-collection-association-target-with-proxy. Reroute becomes a local edit once it lands."
 closed-reason: null
 ---
 
