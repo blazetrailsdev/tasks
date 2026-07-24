@@ -1,6 +1,6 @@
 ---
 title: "Batch prettier invocations in manifest emitters to cut prelint overhead"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 30
-pr: null
+pr: 5239
 claim: "2026-07-24T16:54:55Z"
 assignee: "manifest-emitter-prettier-spawn-batching"
 blocked-by: null
