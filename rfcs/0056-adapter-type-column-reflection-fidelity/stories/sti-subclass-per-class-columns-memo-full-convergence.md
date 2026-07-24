@@ -1,6 +1,6 @@
 ---
 title: "sti-subclass-per-class-columns-memo-full-convergence"
-status: ready
+status: draft
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
