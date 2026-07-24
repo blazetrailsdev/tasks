@@ -70,7 +70,7 @@
 | [0064-ar-test-infra-layout-fidelity](rfcs/0064-ar-test-infra-layout-fidelity/README.md) | AR test-infra layout fidelity | draft | @your-handle | — |
 | [0065-prism-codegen](rfcs/0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | closed | @your-handle | activerecord |
 | [0066-arel-visitor-fidelity](rfcs/0066-arel-visitor-fidelity/README.md) | Arel visitor & node-surface fidelity | closed | @deanmarano | activerecord |
-| [0067-predicate-builder-fidelity](rfcs/0067-predicate-builder-fidelity/README.md) | PredicateBuilder fidelity | active | @deanmarano | activerecord |
+| [0067-predicate-builder-fidelity](rfcs/0067-predicate-builder-fidelity/README.md) | PredicateBuilder fidelity | closed | @deanmarano | activerecord |
 | [0068-awaitable-has-one-setter](rfcs/0068-awaitable-has-one-setter/README.md) | Awaitable has_one setter: retire the deferred-displacement machinery | draft | @deanmarano | activerecord |
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
 | [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | draft | @deanmarano | activerecord |

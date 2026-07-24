@@ -1,9 +1,9 @@
 ---
 rfc: "0067-predicate-builder-fidelity"
 title: "PredicateBuilder fidelity"
-status: active
+status: closed
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
