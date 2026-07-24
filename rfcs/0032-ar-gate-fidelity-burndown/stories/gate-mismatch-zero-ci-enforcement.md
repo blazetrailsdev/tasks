@@ -1,6 +1,6 @@
 ---
 title: "Arm hard-zero CI gate on activerecord gate-mismatch count"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: enforcement
