@@ -1,6 +1,6 @@
 ---
 title: "buildComposite single-col IN path inlines raw untyped values instead of binds"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 10
-pr: null
+pr: 5207
 claim: "2026-07-24T02:08:23Z"
 assignee: "buildcomposite-single-col-in-path-inlines-untyped-values"
 blocked-by: null
