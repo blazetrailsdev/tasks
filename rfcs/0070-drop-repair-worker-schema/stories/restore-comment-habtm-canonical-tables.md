@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical lessons_students/students/posts/topics after their suite"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
