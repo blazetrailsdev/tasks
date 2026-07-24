@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical reserved-word tables after reserved-word.test.ts"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
