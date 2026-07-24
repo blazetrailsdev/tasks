@@ -1,6 +1,6 @@
 ---
 title: "Wide call ratchet is CI-only; converging a divergence fails it unexpectedly"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: null
+pr: 5221
 claim: "2026-07-24T13:08:25Z"
 assignee: "wide-call-ratchet-not-run-by-local-api-compare"
 blocked-by: null
