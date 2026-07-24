@@ -1,7 +1,7 @@
 ---
 title: "groupedCompositeAssoc drops the relation order before LIMIT/OFFSET"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0030-ar-test-compare-residual-burndown"
 cluster: null
 deps: []
