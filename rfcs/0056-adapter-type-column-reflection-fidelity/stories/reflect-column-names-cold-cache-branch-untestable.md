@@ -1,6 +1,6 @@
 ---
 title: "reflectColumnNames' base-only invalidation branch is unreachable from tests (warm cache short-circuit)"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
