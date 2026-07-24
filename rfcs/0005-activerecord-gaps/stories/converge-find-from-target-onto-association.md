@@ -1,7 +1,7 @@
 ---
 title: "converge-find-from-target-onto-association"
-status: in-progress
-updated: 2026-07-23
+status: done
+updated: 2026-07-24
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
