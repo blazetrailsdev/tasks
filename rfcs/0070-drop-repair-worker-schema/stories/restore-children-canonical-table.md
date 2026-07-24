@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical children table after its suite"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 5261
 claim: "2026-07-24T19:18:53Z"
 assignee: "restore-children-canonical-table"
 blocked-by: null
