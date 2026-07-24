@@ -1,6 +1,6 @@
 ---
 title: "Remove PG/MySQL test retry:2 once shared-DB flake class is provably gone"
-status: in-progress
+status: blocked
 updated: 2026-07-24
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -13,7 +13,7 @@ priority: 5
 pr: 5205
 claim: "2026-07-24T01:53:27Z"
 assignee: "remove-pg-mysql-test-retry-after-flake-burndown"
-blocked-by: null
+blocked-by: "Runtime bespoke-table drift confirmed on PR #5205 CI (run 30060420840): hot_compatibilities PG cached-plan 0A000 and TransactionIsolationTest id-reflection race on PG+MariaDB. Blocked on deps fix-hot-compatibilities-pg-cached-plan-flake and fix-transaction-isolation-id-reflection-race."
 ---
 
 ## Goal
