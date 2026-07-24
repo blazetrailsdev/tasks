@@ -1,6 +1,6 @@
 ---
 title: "Every STI subclass should own its columns memo (drop the ownsColumnMemo carve-out)"
-status: draft
+status: closed
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fully subsumed by PR #5199 (removed the STI schema-host redirect): every class now owns its columns memo — the ownsColumnMemo/columnMemo/invalidateStiDescendantColumnMemos carve-out this story targeted is deleted, so there is no base-owns/subclass-inherits boundary left to converge."
 ---
 
 ## Context
