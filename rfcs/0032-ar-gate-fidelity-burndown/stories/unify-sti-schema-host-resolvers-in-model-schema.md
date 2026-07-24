@@ -1,7 +1,7 @@
 ---
 title: "Unify the two divergent STI schema-host resolvers in model-schema.ts"
-status: draft
-updated: 2026-07-23
+status: closed
+updated: 2026-07-24
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by sti-schema-host-redirect-is-a-trails-invention (PR 5199): the redirect was removed wholesale — stiSchemaHost and sharesStiBaseTable no longer exist in model-schema.ts, so there is nothing to unify. The story body itself predicted this evaporation."
 ---
 
 ## Context
