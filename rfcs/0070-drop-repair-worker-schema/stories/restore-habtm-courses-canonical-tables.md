@@ -1,6 +1,6 @@
 ---
 title: "Restore canonical courses/colleges/professors HABTM tables after their suite"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 5255
 claim: "2026-07-24T19:10:53Z"
 assignee: "restore-habtm-courses-canonical-tables"
 blocked-by: null
