@@ -1,6 +1,6 @@
 ---
 title: "reflectColumnNames' base-only invalidation branch is unreachable from tests (warm cache short-circuit)"
-status: ready
+status: claimed
 updated: 2026-07-24
 rfc: "0056-adapter-type-column-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-24T16:15:36Z"
+assignee: "reflect-column-names-cold-cache-branch-untestable"
 blocked-by: null
 closed-reason: null
 ---
