@@ -1,13 +1,13 @@
 ---
 title: "route-through-collection-writes-onto-association-insert-record"
 status: ready
-updated: 2026-07-23
+updated: 2026-07-24
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
