@@ -1,6 +1,6 @@
 ---
 title: "Unify the enumerable-idiom knowledge shared by lint-calls.ts and JS_ENUMERABLE_ALIASES"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
