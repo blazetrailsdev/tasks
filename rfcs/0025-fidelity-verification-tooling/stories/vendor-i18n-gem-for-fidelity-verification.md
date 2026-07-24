@@ -1,7 +1,7 @@
 ---
 title: "Vendor the i18n gem so ActiveSupport/ActiveModel i18n ports can be verified against source"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
