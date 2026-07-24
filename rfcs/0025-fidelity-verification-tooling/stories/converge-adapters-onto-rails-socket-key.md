@@ -1,6 +1,6 @@
 ---
 title: "Converge Mysql2Adapter onto Rails' socket key"
-status: claimed
+status: in-progress
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 20
-pr: null
+pr: 5211
 claim: "2026-07-24T03:23:24Z"
 assignee: "converge-adapters-onto-rails-socket-key"
 blocked-by: null
