@@ -1,6 +1,6 @@
 ---
 title: "resolve-skipped-composite-fk-nullify-regression-guard"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
