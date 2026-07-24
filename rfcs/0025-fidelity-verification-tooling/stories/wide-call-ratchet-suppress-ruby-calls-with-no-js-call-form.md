@@ -1,6 +1,6 @@
 ---
 title: "Wide call ratchet: suppress Ruby calls whose faithful JS port emits no call (to_s, each, empty?, first, size)"
-status: in-progress
+status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
