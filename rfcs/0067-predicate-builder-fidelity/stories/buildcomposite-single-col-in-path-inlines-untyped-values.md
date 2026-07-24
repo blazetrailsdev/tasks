@@ -1,6 +1,6 @@
 ---
 title: "buildComposite single-col IN path inlines raw untyped values instead of binds"
-status: draft
+status: ready
 updated: 2026-07-24
 rfc: "0067-predicate-builder-fidelity"
 cluster: null
