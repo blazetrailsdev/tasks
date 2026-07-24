@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: "2026-07-24T00:57:11Z"
 assignee: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
