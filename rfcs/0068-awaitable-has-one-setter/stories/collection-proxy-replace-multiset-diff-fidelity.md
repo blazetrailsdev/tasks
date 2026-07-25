@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-replace-multiset-diff-fidelity"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T03:02:54Z"
+assignee: "collection-proxy-replace-multiset-diff-fidelity"
 blocked-by: null
 closed-reason: null
 ---
