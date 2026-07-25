@@ -1,6 +1,6 @@
 ---
 title: "Mirror Rails' add_modifier-before-register order in PG type-map-init"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
