@@ -1,7 +1,7 @@
 ---
 title: "Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
 deps: []
