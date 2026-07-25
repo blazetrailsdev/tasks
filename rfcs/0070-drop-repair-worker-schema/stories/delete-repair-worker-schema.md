@@ -1,7 +1,7 @@
 ---
 title: "Delete repairWorkerSchema once CI proves zero firings"
-status: in-progress
-updated: 2026-07-24
+status: done
+updated: 2026-07-25
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
 deps:
