@@ -1,6 +1,6 @@
 ---
 title: "create#{name} does not port replace's leading load_target, so an unloaded displaced row stays attached"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5324
 claim: "2026-07-25T21:42:53Z"
 assignee: "has-one-create-record-unloaded-target-not-removed"
 blocked-by: null
