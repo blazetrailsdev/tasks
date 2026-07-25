@@ -1,6 +1,6 @@
 ---
 title: "Cover the PG/MySQL bulk reverse-FK SQL with an adapter-gated integration test"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5305
 claim: "2026-07-25T14:22:54Z"
 assignee: "integration-coverage-bulk-inbound-fk-sql"
 blocked-by: null
