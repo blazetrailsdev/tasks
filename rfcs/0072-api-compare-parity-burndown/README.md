@@ -1,7 +1,7 @@
 ---
 rfc: "0072-api-compare-parity-burndown"
 title: "api:compare parity & fidelity burndown"
-status: draft
+status: active
 created: 2026-07-25
 updated: 2026-07-25
 owner: "@deanmarano"
