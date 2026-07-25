@@ -1,6 +1,6 @@
 ---
 title: "MySQL tests: burn down self-built Mysql2Adapter(MYSQL_TEST_URL) to the ambient connection"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T14:30:53Z"
+assignee: "mysql-tests-self-built-adapter-burndown"
 blocked-by: null
 closed-reason: null
 ---
