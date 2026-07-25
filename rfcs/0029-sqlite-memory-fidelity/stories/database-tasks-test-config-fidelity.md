@@ -1,6 +1,6 @@
 ---
 title: "database-tasks.test.ts: converge 28 excess :memory: sites to Rails config fidelity"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
