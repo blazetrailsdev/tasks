@@ -1,6 +1,6 @@
 ---
 title: "arity: resolve TS alias bindings to target params; report closest candidate"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T19:10:51Z"
+assignee: "arity-resolve-ts-alias-bindings-to-target-params"
 blocked-by: null
 closed-reason: null
 ---
