@@ -1,7 +1,7 @@
 ---
 title: "Awaitable collection ids assignment: update({...Ids}) arm + unpersisted ids= floating-promise race"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
