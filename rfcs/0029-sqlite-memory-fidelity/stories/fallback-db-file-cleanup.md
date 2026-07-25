@@ -1,6 +1,6 @@
 ---
 title: "Clean up the fallback sqlite DB file on process exit"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T03:18:52Z"
+assignee: "fallback-db-file-cleanup"
 blocked-by: null
 closed-reason: null
 ---
