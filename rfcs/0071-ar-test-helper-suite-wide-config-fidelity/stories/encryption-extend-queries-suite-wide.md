@@ -1,6 +1,6 @@
 ---
 title: "Install deterministic-encryption query support suite-wide (helper.rb:104-107, railtie.rb:351)"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 50
-pr: null
+pr: 5320
 claim: "2026-07-25T20:22:51Z"
 assignee: "encryption-extend-queries-suite-wide"
 blocked-by: null
