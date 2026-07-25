@@ -1,6 +1,6 @@
 ---
 title: "create#{name} does not port replace's leading load_target, so an unloaded displaced row stays attached"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
