@@ -1,6 +1,6 @@
 ---
 title: "delete the stale 'add_modifier unported' comment in type-map-init.ts"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
