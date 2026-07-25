@@ -25,10 +25,10 @@ exercises Rails' `in_memory_db?` conditions — the very thing RFC 0029 is about
 
 Measured while verifying #5284:
 
-````console
+```console
 ARCONN=sqlite3_mem pnpm vitest run packages/activerecord/src/adapter.test.ts
   Tests  47 failed | 26 skipped (73)
-```text
+```
 
 Every non-skipped test in the file fails, including ones untouched by that PR
 (`tables`, `indexes`, `valid column`, ...) — the canonical schema is not laid in
@@ -53,4 +53,3 @@ intended to be a runnable lane at all or is vestigial. Related:
       only made sense for it are re-derived.
 - [ ] Either way, the lane's status is recorded so it does not silently rot —
       if supported, it is exercised somewhere CI can see.
-````
