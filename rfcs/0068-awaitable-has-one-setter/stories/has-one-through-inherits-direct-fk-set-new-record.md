@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-inherits-direct-fk-set-new-record"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5295
 claim: "2026-07-25T03:26:52Z"
 assignee: "has-one-through-inherits-direct-fk-set-new-record"
 blocked-by: null
