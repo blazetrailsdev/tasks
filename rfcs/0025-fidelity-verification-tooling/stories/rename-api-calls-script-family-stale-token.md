@@ -1,6 +1,6 @@
 ---
 title: "api:calls* script family uses a stale :calls token; rename or confirm"
-status: claimed
+status: closed
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: "2026-07-25T01:26:56Z"
-assignee: "rename-api-calls-script-family-stale-token"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't do: user does not want the api:calls → api:ratchet rename; the :calls token stays."
 ---
 
 ## Context
