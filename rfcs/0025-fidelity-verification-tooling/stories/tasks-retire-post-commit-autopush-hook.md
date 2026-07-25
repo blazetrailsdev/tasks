@@ -1,14 +1,14 @@
 ---
 title: "tasks repo: retire/foreground the post-commit background auto-push; simplify vestigial landed-race check"
-status: claimed
-updated: 2026-07-24
+status: in-progress
+updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: null
+pr: 5289
 claim: "2026-07-24T21:34:53Z"
 assignee: "tasks-retire-post-commit-autopush-hook"
 blocked-by: null
