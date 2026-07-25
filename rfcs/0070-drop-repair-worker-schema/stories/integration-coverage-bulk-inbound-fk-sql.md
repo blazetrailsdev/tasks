@@ -1,6 +1,6 @@
 ---
 title: "Cover the PG/MySQL bulk reverse-FK SQL with an adapter-gated integration test"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
