@@ -1,6 +1,6 @@
 ---
 title: "schema-statements-on-adapter.test.ts: use ambient connection, not :memory:"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
