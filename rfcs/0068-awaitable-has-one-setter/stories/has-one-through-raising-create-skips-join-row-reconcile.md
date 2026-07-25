@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-raising-create-skips-join-row-reconcile"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
