@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-create-unloaded-join-row-not-reconciled"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
