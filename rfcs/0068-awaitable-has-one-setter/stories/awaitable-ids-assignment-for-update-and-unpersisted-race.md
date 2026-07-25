@@ -1,6 +1,6 @@
 ---
 title: "Awaitable collection ids assignment: update({...Ids}) arm + unpersisted ids= floating-promise race"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 18
-pr: null
+pr: 5292
 claim: "2026-07-25T03:10:53Z"
 assignee: "awaitable-ids-assignment-for-update-and-unpersisted-race"
 blocked-by: null
