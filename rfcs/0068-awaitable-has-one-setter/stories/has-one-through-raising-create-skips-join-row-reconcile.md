@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
-deps: []
+deps:
+  - has-one-through-create-unloaded-join-row-not-reconciled
 deps-rfc: []
 est-loc: null
 priority: null
