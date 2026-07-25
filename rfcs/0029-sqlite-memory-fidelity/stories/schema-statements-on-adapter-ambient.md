@@ -1,6 +1,6 @@
 ---
 title: "schema-statements-on-adapter.test.ts: use ambient connection, not :memory:"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 6
-pr: null
+pr: 5287
 claim: "2026-07-25T02:30:54Z"
 assignee: "schema-statements-on-adapter-ambient"
 blocked-by: null
