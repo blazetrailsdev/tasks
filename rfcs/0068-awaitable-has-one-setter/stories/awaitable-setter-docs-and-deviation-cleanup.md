@@ -1,6 +1,6 @@
 ---
 title: "Docs + deviation-prose cleanup; final grep gates and parity verification"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 150
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T13:10:53Z"
+assignee: "awaitable-setter-docs-and-deviation-cleanup"
 blocked-by: null
 ---
 
