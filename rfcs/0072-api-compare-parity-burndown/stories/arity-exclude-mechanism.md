@@ -1,6 +1,6 @@
 ---
 title: "arity: reasoned exclude file with stale-entry enforcement"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T19:50:52Z"
+assignee: "arity-exclude-mechanism"
 blocked-by: null
 closed-reason: null
 ---
