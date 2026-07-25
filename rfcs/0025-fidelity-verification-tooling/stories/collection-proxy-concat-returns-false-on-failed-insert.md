@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-concat-returns-false-on-failed-insert"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5279
 claim: "2026-07-25T01:02:57Z"
 assignee: "collection-proxy-concat-returns-false-on-failed-insert"
 blocked-by: null
