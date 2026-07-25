@@ -74,5 +74,5 @@
 | [0068-awaitable-has-one-setter](rfcs/0068-awaitable-has-one-setter/README.md) | Awaitable has_one setter: retire the deferred-displacement machinery | active | @deanmarano | activerecord |
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
 | [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | active | @deanmarano | activerecord |
-| [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | draft | @your-handle | activerecord |
+| [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | active | @your-handle | activerecord |
 | [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | api:compare parity & fidelity burndown | draft | @deanmarano | activerecord, activemodel, globalid, actionpack, actionview |

@@ -1,7 +1,7 @@
 ---
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 title: "AR test-helper suite-wide config fidelity"
-status: draft
+status: active
 created: 2026-07-25
 updated: 2026-07-25
 owner: "@your-handle"
