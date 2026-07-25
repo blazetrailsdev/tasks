@@ -1,7 +1,7 @@
 ---
 title: "tasks CLI: serve reads from the origin/main tree — no reset --hard, no lock on reads"
-status: in-progress
-updated: 2026-07-24
+status: done
+updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
