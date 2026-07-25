@@ -1,6 +1,6 @@
 ---
 title: "adapter.test.ts: MySQL-gated AdapterTest block should lease the ambient connection"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5303
 claim: "2026-07-25T13:34:54Z"
 assignee: "mysql-gated-adapter-test-ambient-connection"
 blocked-by: null
