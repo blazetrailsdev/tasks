@@ -1,6 +1,6 @@
 ---
 title: "Create PG test tables UNLOGGED (helper.rb:14-16)"
-status: claimed
+status: closed
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 100
 priority: 60
 pr: null
-claim: "2026-07-25T20:30:50Z"
-assignee: "pg-create-unlogged-tables-in-suite"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Measured: UNLOGGED is a net LOSS on the trails PG lane, not a win. Ported the flag flip (test-setup-ar.ts + template-global-setup.ts pre-fork) and verified all 322 canonical tables came back relpersistence='u'. Wall-clock, PG lane, isolated postgres:17, order-balanced runs: 5-file batch (persistence/base/migration/dirty/transactions) 52.7-55.1s LOGGED vs 68.1-69.1s UNLOGGED (+25%); single file (dirty.test.ts) 34.7s vs 41.6s (+7s), of which only ~1.9s is inside vitest's setup+test phases — the bulk is globalSetup, i.e. building the canonical template with UNLOGGED tables and CREATE DATABASE ... TEMPLATE cloning it. Rails' win doesn't transfer because trails clones a template DB per slot instead of re-running DDL, and PG 17's CREATE DATABASE plus unlogged init forks cost more than the WAL the flag saves on these small tables. Per the story's own acceptance criteria (no measurable win -> close rather than ship churn), closing with no PR."
 ---
 
 ## Context
