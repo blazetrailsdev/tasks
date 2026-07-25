@@ -1,6 +1,6 @@
 ---
 title: "Set belongsToRequiredValidatesForeignKey=false in the AR suite (helper.rb:43)"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: null
+pr: 5319
 claim: "2026-07-25T20:14:53Z"
 assignee: "belongs-to-required-validates-fk-false"
 blocked-by: null
