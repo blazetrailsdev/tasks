@@ -7,7 +7,7 @@ cluster: adapter-test-fidelity
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 20
+priority: 7
 pr: null
 claim: null
 assignee: null
