@@ -1,6 +1,6 @@
 ---
 title: "misc arity gaps: insert_all, model_schema, relation, schema_dumper, token_for, type, result, encryption"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 25
-pr: null
+pr: 5331
 claim: "2026-07-25T23:26:51Z"
 assignee: "arity-misc-signature-gaps"
 blocked-by: null
