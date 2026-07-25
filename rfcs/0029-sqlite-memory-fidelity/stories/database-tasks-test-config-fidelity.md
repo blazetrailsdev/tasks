@@ -7,7 +7,7 @@ cluster: test-connection-fidelity
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 10
+priority: 7
 pr: null
 claim: null
 assignee: null
