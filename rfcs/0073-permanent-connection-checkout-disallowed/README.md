@@ -1,5 +1,5 @@
 ---
-rfc: "0000-permanent-connection-checkout-disallowed"
+rfc: "0073-permanent-connection-checkout-disallowed"
 title: "Ban permanent Base.connection checkout in the AR suite (helper.rb:27)"
 status: draft
 created: 2026-07-25
