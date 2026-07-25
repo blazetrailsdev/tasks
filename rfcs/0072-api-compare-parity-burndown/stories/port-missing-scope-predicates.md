@@ -1,6 +1,6 @@
 ---
 title: "port null_scope?/already_in_scope?/intersect? + verify Dirty#as_json"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: missing-methods
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T19:34:52Z"
+assignee: "port-missing-scope-predicates"
 blocked-by: null
 closed-reason: null
 ---
