@@ -1,6 +1,6 @@
 ---
 title: "Worker-DB fallback: file-backed default + fix stale :memory: comment"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: worker-db
