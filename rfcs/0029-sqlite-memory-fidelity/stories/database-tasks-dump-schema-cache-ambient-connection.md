@@ -1,6 +1,6 @@
 ---
 title: "database-tasks.test: dump schema cache should lease the ambient connection and clear_cache! in teardown"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5297
 claim: "2026-07-25T13:12:31Z"
 assignee: "database-tasks-dump-schema-cache-ambient-connection"
 blocked-by: null
