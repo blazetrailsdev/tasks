@@ -1,6 +1,6 @@
 ---
 title: "internal_metadata: thread connection through private helpers per Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: null
+pr: 5329
 claim: "2026-07-25T23:18:51Z"
 assignee: "arity-internal-metadata-connection-param"
 blocked-by: null
