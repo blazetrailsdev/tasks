@@ -75,9 +75,12 @@ invisible on SQLite — the ambient `Base` pool answers and the test passes agai
 the _wrong database_ — and surfaces only in PG/MySQL adapter suites.
 
 **2. The flip does not, by itself, prove internal fidelity.** Internal query
-paths are wrapped in `withQueryConnection` (17 call sites), which leases via
-`pool.withConnection`, making `isPermanentLease()` false; inner `.connection`
-reads then return `activeConnection` and never reach the gate. That is
+paths are wrapped in `withQueryConnection` — 5 call sites across 3 files
+(`querying.ts:41,97`, `transactions.ts:102,577`, `relation/calculations.ts:1339`)
+— which leases via `pool.withConnection`, making `isPermanentLease()` false;
+inner `.connection` reads then return `activeConnection` and never reach the
+gate. That wrap covers the query/transaction entry points, not every internal
+read, so the coverage is narrow. That is
 Rails-equivalent _observable_ behavior, not Rails' actual shape — Rails threads
 the yielded connection and never calls `.connection` internally. This RFC locks
 in current behavior and prevents regression. Converging internals onto the

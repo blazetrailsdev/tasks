@@ -42,9 +42,11 @@ pinned by `connection-handling.test.ts:145`. This story only arms it.
   1. `connection-handling.ts:487`'s `_adapter` fast path short-circuits _above_
      the flag check, so 116 `.adapter =` assignments across 32 test files never
      reach the gate — trails' ban is narrower than Rails'.
-  2. Internal query paths are wrapped in `withQueryConnection` (17 call sites),
-     which makes `isPermanentLease()` false, so inner `.connection` reads never
-     reach the gate. The flip prevents regression; it does not prove internal
+  2. Internal query paths are wrapped in `withQueryConnection` — 5 call sites
+     across 3 files (`querying.ts:41,97`, `transactions.ts:102,577`,
+     `relation/calculations.ts:1339`) — which makes `isPermanentLease()` false,
+     so inner `.connection` reads never reach the gate. Narrow: it covers the
+     query/transaction entry points, not every internal read. The flip prevents regression; it does not prove internal
      fidelity. That convergence is RFC 0030
      `thread-yielded-connection-internal-query-path`.
 
