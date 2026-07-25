@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-concat-returns-false-on-failed-insert"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
