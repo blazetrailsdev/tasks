@@ -1,6 +1,6 @@
 ---
 title: "Audit: ban Base.connection in the AR suite (helper.rb:27)"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T20:06:51Z"
+assignee: "audit-permanent-connection-checkout-disallowed"
 blocked-by: null
 closed-reason: null
 ---
