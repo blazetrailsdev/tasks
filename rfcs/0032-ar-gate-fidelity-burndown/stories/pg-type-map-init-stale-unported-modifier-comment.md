@@ -1,6 +1,6 @@
 ---
 title: "delete the stale 'add_modifier unported' comment in type-map-init.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 5280
 claim: "2026-07-25T01:10:52Z"
 assignee: "pg-type-map-init-stale-unported-modifier-comment"
 blocked-by: null
