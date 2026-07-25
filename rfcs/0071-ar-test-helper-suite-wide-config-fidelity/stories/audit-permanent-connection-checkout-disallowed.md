@@ -1,6 +1,6 @@
 ---
 title: "Audit: ban Base.connection in the AR suite (helper.rb:27)"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
