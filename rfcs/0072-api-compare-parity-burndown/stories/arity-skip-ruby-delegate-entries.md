@@ -1,6 +1,6 @@
 ---
 title: "arity: skip Ruby delegate/alias entries recorded as zero-arity"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
