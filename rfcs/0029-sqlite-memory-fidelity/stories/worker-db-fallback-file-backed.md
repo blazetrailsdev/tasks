@@ -1,6 +1,6 @@
 ---
 title: "Worker-DB fallback: file-backed default + fix stale :memory: comment"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: worker-db
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T01:34:53Z"
+assignee: "worker-db-fallback-file-backed"
 blocked-by: null
 ---
 
