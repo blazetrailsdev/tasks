@@ -1,6 +1,6 @@
 ---
 title: "Create PG test tables UNLOGGED (helper.rb:14-16)"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T20:30:50Z"
+assignee: "pg-create-unlogged-tables-in-suite"
 blocked-by: null
 closed-reason: null
 ---
