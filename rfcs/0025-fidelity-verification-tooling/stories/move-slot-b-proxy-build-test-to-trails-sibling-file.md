@@ -1,6 +1,6 @@
 ---
 title: "Move the trails-only Slot B proxy-build test out of the Rails-named autosave describe"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
