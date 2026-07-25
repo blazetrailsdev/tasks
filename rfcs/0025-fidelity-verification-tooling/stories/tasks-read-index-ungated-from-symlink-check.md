@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: serve the origin/main read index regardless of TASKS_DIR resolution"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
