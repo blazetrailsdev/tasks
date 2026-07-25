@@ -1,6 +1,6 @@
 ---
 title: "Spike: align AR test-setup layout with Rails test/cases/helper"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: 5309
 claim: "2026-07-25T15:34:40Z"
 assignee: "spike-align-test-setup-with-cases-helper"
 blocked-by: null
