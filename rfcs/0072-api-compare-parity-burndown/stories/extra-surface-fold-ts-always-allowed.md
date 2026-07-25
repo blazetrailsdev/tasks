@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: give TS_ALWAYS_ALLOWED reasoned, stale-checked entries"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
