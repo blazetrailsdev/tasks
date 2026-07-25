@@ -1,6 +1,6 @@
 ---
 title: "Port the add_foreign_key half of migration/foreign_key_test.rb"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T14:38:54Z"
+assignee: "port-migration-foreign-key-add-cases"
 blocked-by: null
 closed-reason: null
 ---
