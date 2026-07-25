@@ -1,6 +1,6 @@
 ---
 title: "adapter.test.ts: derive connection from ambient test config, not :memory:"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T01:50:53Z"
+assignee: "adapter-test-ambient-connection"
 blocked-by: null
 ---
 
