@@ -1,6 +1,6 @@
 ---
 title: "flip-permanent-connection-checkout-disallowed"
-status: ready
+status: closed
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0073 (permanent-connection-checkout-disallowed), which re-measured against current main: #5323 already fixed core.ts/insert-all.ts and the test-setup-dy boot blocker, so the original slot B is largely obsolete."
 ---
 
 ## Context
