@@ -1,6 +1,6 @@
 ---
 title: "port null_scope?/already_in_scope?/intersect? + verify Dirty#as_json"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: missing-methods
