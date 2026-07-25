@@ -1,7 +1,7 @@
 ---
 title: "connection-handling.test.ts: use ambient/connects_to config, not :memory:"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
 deps: []
