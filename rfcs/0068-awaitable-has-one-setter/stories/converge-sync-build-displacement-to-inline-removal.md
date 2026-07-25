@@ -1,6 +1,6 @@
 ---
 title: "Converge the synchronous build displacement path to Rails' inline remove_target!"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T02:46:53Z"
+assignee: "converge-sync-build-displacement-to-inline-removal"
 blocked-by: null
 closed-reason: null
 ---
