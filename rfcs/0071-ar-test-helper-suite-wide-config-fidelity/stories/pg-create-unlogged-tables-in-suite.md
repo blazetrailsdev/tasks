@@ -1,6 +1,6 @@
 ---
 title: "Create PG test tables UNLOGGED (helper.rb:14-16)"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
