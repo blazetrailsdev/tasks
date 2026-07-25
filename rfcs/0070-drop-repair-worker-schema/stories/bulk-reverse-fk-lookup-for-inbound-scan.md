@@ -1,6 +1,6 @@
 ---
 title: "Measure, and if material batch, the inbound-FK scan in rebuildCanonicalTables"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5300
 claim: "2026-07-25T13:19:47Z"
 assignee: "bulk-reverse-fk-lookup-for-inbound-scan"
 blocked-by: null
