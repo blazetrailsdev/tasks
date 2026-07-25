@@ -1,6 +1,6 @@
 ---
 title: "converge-readonly-attribute-predicate-callers"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T20:38:52Z"
+assignee: "converge-readonly-attribute-predicate-callers"
 blocked-by: null
 closed-reason: null
 ---
