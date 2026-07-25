@@ -1,6 +1,6 @@
 ---
 title: "state-threading free functions: converge to this-typed hosts or exclude with reason"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
