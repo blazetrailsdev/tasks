@@ -1,5 +1,5 @@
 ---
-rfc: "0000-api-compare-parity-burndown"
+rfc: "0072-api-compare-parity-burndown"
 title: "api:compare parity & fidelity burndown"
 status: draft
 created: 2026-07-25
