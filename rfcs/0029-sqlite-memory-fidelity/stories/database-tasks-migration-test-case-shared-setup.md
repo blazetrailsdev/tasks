@@ -1,6 +1,6 @@
 ---
 title: "database-tasks.test: port DatabaseTasksMigrationTestCase shared setup (incl. SQLite3::Backup) and drop the invented :memory: config"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
