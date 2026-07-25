@@ -1,7 +1,7 @@
 ---
 title: "collectionproxy-replace-diff-based"
-status: draft
-updated: 2026-07-23
+status: closed
+updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of collection-proxy-replace-multiset-diff-fidelity, which covers the same defect (CollectionProxy#replace = clear()+push(), collection-proxy.ts:3358, still true on origin/main) plus the HMT multiset difference/intersection requirement this story omits — naive delegation to the writer path as specified here regresses test_replace_association_with_duplicates and the through-transaction test (established in #5042 review). Its extra details (revert #5169's .association().writer workaround in 'replace with new'; RecordNotSaved target-restore) fall out of the multiset story's acceptance criteria."
 ---
 
 ## Context
