@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: run the allowlist gate in CI so stale entries can't rot"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
