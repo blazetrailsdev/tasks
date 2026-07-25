@@ -1,15 +1,24 @@
 #!/usr/bin/env sh
 # Post-commit hook for blazetrailsdev/tasks.
 #
-# Auto-pushes commits on main to origin in the background. Matches the
-# loose-rules / direct-to-main velocity of this repo — every story flip,
-# every new RFC, every triage commit lands on origin immediately so
-# other clones and the trails-side CLI see it without manual push.
+# Auto-pushes commits on main to origin. Matches the loose-rules /
+# direct-to-main velocity of this repo — every hand-made story flip, new RFC
+# or triage commit lands on origin immediately. Other clones and the
+# trails-side CLI read this repo by resetting hard to origin/main, so an
+# unpushed local commit is invisible there (and trips the CLI's "HEAD is N
+# commit(s) ahead of origin/main" guard).
+#
+# The push runs in the FOREGROUND. It used to be a detached `git push … &`,
+# which raced whatever else was touching the checkout and reported failures
+# after the commit command had already returned — the "rfcs auto-push failed:
+# … cannot lock ref" noise. Synchronous costs one network round-trip and is
+# worth it: a failure surfaces attached to the commit that caused it.
 #
 # Skipped automatically when:
 #   - HEAD is not main (topic branches stay local until you push)
 #   - a rebase / cherry-pick / merge is in progress
-#   - the RFCS_NO_AUTOPUSH env var is set (escape hatch)
+#   - the RFCS_NO_AUTOPUSH env var is set (escape hatch; the trails tasks CLI
+#     sets it on every commit because it owns its own push)
 
 set -e
 
@@ -23,8 +32,8 @@ if [ -d "$GIT_DIR/rebase-merge" ] || [ -d "$GIT_DIR/rebase-apply" ] \
   exit 0
 fi
 
-# Background push; suppress noise on success, warn on failure.
-(
-  git push --quiet origin main 2>/tmp/rfcs-push.err || \
-    echo "rfcs auto-push failed: $(cat /tmp/rfcs-push.err)" >&2
-) &
+# Foreground push; quiet on success, warn on failure without failing the
+# commit — the commit already succeeded, so a non-zero exit here would only
+# misreport it. git's own stderr is left visible; it says more than a
+# re-echoed copy did.
+git push --quiet origin main || echo "rfcs auto-push failed; push main by hand" >&2
