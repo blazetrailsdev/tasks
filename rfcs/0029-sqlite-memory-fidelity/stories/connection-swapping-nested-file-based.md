@@ -1,6 +1,6 @@
 ---
 title: "connection-swapping-nested: use file-backed per-database DBs like Rails"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T01:42:54Z"
+assignee: "connection-swapping-nested-file-based"
 blocked-by: null
 ---
 
