@@ -1,6 +1,6 @@
 ---
 title: "Port test_callbacks_on_child_when_parent_autosaves_child onto canonical Eye/Iris"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5281
 claim: "2026-07-25T01:18:52Z"
 assignee: "port-callbacks-on-child-when-parent-autosaves-child"
 blocked-by: null
