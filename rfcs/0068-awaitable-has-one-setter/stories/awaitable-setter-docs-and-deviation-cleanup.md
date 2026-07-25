@@ -5,8 +5,9 @@ updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps:
-  - "has-one-through-pending-replace-persisted-immediate"
-  - "collection-writer-throws-on-persisted-owner"
+  - has-one-through-pending-replace-persisted-immediate
+  - collection-writer-throws-on-persisted-owner
+  - converge-sync-build-displacement-to-inline-removal
 deps-rfc: []
 est-loc: 150
 priority: 19
