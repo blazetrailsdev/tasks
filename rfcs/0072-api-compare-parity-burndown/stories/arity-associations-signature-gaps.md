@@ -1,6 +1,6 @@
 ---
 title: "associations arity gaps: get_chain, update_through_counter?, autosave, nested_error"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
