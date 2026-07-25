@@ -1,6 +1,6 @@
 ---
 title: "Move the trails-only Slot B proxy-build test out of the Rails-named autosave describe"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5302
 claim: "2026-07-25T13:29:39Z"
 assignee: "move-slot-b-proxy-build-test-to-trails-sibling-file"
 blocked-by: null
