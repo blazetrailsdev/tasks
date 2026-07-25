@@ -255,6 +255,19 @@ file-for-file.
   `await owner.items.replace(...)` / the awaitable `idsWriter`; new-owner
   assignment stays in-memory. Sequenced as a late story so the
   singular-association core lands and settles first.
+- **`#{singular}Ids=` throws on BOTH owner arms.** Amended after #5042: the
+  new-owner exemption above holds only for the _record_ writer, whose
+  new-record arm is genuinely in-memory. `ids_writer`
+  (`collection_association.rb:61-83`) resolves the ids to records with a
+  query _before_ it replaces, so its new-record arm is DB I/O too. Returning
+  that promise from the sync setter made a bad id
+  (`raise_record_not_found_exception!`) an unhandled rejection rather than a
+  catchable throw, and let an immediate `save()` read the target before the
+  in-flight replace landed — a floating promise wearing a costume, per the
+  non-goal below. Both arms therefore raise `CollectionIdsAssignmentError`,
+  naming the awaitable surfaces: `await owner.update({ itemIds: [...] })`
+  (`#update` routes collection keys through `idsWriter`) and
+  `await owner.association(name).idsWriter([...])`.
 
 ## Non-goals
 
