@@ -25,7 +25,7 @@ per-group reasons (`scripts/api-compare/conventions.ts:120`). The arity check
 has NO per-entry exclude mechanism — every justified deviation stays in
 `output/arity-mismatches.json` forever, drowning real fidelity gaps (79
 activerecord entries today, of which roughly a third are justified
-state-threading deviations per the RFC 0000-api-compare-parity-burndown
+state-threading deviations per the RFC 0072-api-compare-parity-burndown
 deep dive).
 
 Per the repo's deviation rules (CLAUDE.md, `0023-surfaced-deviations`), every
