@@ -1,6 +1,6 @@
 ---
 title: "Set belongsToRequiredValidatesForeignKey=false in the AR suite (helper.rb:43)"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
