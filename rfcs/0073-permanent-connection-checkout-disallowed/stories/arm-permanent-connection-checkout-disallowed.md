@@ -4,7 +4,10 @@ status: draft
 updated: 2026-07-25
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
-deps: []
+deps:
+  - route-fixture-machinery-off-deprecated-getter
+  - resolve-model-schema-reflection-adapter-fallback
+  - convert-residual-test-connection-call-sites
 deps-rfc: []
 est-loc: 20
 priority: 45
