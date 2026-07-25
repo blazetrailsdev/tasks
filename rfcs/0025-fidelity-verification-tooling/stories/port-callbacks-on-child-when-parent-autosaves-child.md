@@ -1,6 +1,6 @@
 ---
 title: "Port test_callbacks_on_child_when_parent_autosaves_child onto canonical Eye/Iris"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
