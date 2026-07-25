@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: reasoned allowlist file with stale-entry enforcement"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
