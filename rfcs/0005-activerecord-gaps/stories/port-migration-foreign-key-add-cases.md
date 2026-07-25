@@ -1,6 +1,6 @@
 ---
 title: "Port the add_foreign_key half of migration/foreign_key_test.rb"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0005-activerecord-gaps"
 cluster: null
