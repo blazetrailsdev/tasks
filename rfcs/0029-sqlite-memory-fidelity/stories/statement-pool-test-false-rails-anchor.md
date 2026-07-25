@@ -1,6 +1,6 @@
 ---
 title: "statement-pool.test.ts claims a mysql2/statement_pool_test.rb that does not exist in Rails"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
