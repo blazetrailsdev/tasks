@@ -1,6 +1,6 @@
 ---
 title: "MySQL tests: burn down self-built Mysql2Adapter, batch 3 (mysql2 suites + second-connection audit)"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
