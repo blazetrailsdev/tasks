@@ -1,6 +1,6 @@
 ---
 title: "has-one-displaced-record-removed-twice-on-awaited-build"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T02:54:53Z"
+assignee: "has-one-displaced-record-removed-twice-on-awaited-build"
 blocked-by: null
 closed-reason: null
 ---
