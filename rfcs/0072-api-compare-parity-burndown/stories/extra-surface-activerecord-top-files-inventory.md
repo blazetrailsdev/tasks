@@ -1,6 +1,6 @@
 ---
 title: "spike: inventory + classify activerecord extra-surface top-20 files"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T23:50:57Z"
+assignee: "extra-surface-activerecord-top-files-inventory"
 blocked-by: null
 closed-reason: null
 ---
