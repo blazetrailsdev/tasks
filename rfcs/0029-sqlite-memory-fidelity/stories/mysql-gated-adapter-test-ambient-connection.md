@@ -1,6 +1,6 @@
 ---
 title: "adapter.test.ts: MySQL-gated AdapterTest block should lease the ambient connection"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
