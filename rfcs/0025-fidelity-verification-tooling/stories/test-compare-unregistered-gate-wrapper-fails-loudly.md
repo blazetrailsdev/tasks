@@ -1,6 +1,6 @@
 ---
 title: "test:compare: fail loudly on an unregistered describeIf*/itIf* gate wrapper"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
