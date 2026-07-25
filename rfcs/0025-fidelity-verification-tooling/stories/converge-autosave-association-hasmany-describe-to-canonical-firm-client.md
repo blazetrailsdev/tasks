@@ -1,7 +1,7 @@
 ---
 title: "converge-autosave-association-hasmany-describe-to-canonical-firm-client"
-status: in-progress
-updated: 2026-07-24
+status: done
+updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
