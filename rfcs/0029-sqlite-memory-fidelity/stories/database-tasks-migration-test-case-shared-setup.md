@@ -1,6 +1,6 @@
 ---
 title: "database-tasks.test: port DatabaseTasksMigrationTestCase shared setup (incl. SQLite3::Backup) and drop the invented :memory: config"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5299
 claim: "2026-07-25T13:18:53Z"
 assignee: "database-tasks-migration-test-case-shared-setup"
 blocked-by: null
