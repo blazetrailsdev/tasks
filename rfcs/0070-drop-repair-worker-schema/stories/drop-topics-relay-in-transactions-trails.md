@@ -1,7 +1,7 @@
 ---
 title: "Drop the hand-copied canonical topics re-lay in transactions.trails.test.ts"
-status: in-progress
-updated: 2026-07-24
+status: done
+updated: 2026-07-25
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
 deps: []
