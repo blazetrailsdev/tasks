@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @6debb3cd"
-status: ready
+status: closed
 updated: 2026-07-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded"
 ---
 
 ## Context
