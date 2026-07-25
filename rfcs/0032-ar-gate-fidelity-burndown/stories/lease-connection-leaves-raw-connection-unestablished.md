@@ -1,6 +1,6 @@
 ---
 title: "leaseConnection hands out adapters with unestablished raw connections (Rails verifies on checkout)"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T13:26:54Z"
+assignee: "lease-connection-leaves-raw-connection-unestablished"
 blocked-by: null
 closed-reason: null
 ---
