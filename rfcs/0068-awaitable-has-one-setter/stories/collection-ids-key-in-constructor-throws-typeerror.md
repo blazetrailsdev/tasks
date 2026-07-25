@@ -1,6 +1,6 @@
 ---
 title: "collection-ids-key-in-constructor-throws-typeerror"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5296
 claim: "2026-07-25T03:34:52Z"
 assignee: "collection-ids-key-in-constructor-throws-typeerror"
 blocked-by: null
