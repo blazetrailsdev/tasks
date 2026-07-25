@@ -1,6 +1,6 @@
 ---
 title: "adapters/sqlite3/statement-pool.test.ts: use ambient connection like Rails"
-status: ready
+status: closed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Obsolete: statement-pool.test.ts was reduced by RFC 0043 relocation (#4159) to a single it.skip for Rails' fork-based per-pid test, which is unportable; no :memory: sites or connection setup remain to converge."
 ---
 
 ## Context
