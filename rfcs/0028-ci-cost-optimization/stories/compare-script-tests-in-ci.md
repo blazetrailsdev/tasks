@@ -1,7 +1,7 @@
 ---
 title: "compare-script-tests-in-ci"
-status: in-progress
-updated: 2026-07-24
+status: done
+updated: 2026-07-25
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
