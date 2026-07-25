@@ -4,7 +4,14 @@ status: ready
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
-deps: []
+deps:
+  - worker-db-fallback-file-backed
+  - connection-swapping-nested-file-based
+  - adapter-test-ambient-connection
+  - connection-pool-derive-from-ambient
+  - connection-handling-ambient-connection
+  - schema-statements-on-adapter-ambient
+  - database-tasks-test-config-fidelity
 deps-rfc: []
 est-loc: 30
 priority: 8
