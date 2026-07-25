@@ -1,6 +1,6 @@
 ---
 title: "spike: inventory + classify activerecord extra-surface top-20 files"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
