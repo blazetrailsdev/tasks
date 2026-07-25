@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: reasoned allowlist file with stale-entry enforcement"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T19:58:51Z"
+assignee: "extra-surface-reasoned-allowlist"
 blocked-by: null
 closed-reason: null
 ---
