@@ -1,7 +1,7 @@
 ---
 title: "label-gate-ar-db-matrix"
-status: claimed
-updated: 2026-07-24
+status: closed
+updated: 2026-07-25
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-24T22:54:54Z"
-assignee: "label-gate-ar-db-matrix"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Evaluated all three gating options; user declined all of them. Adapter coverage on PRs stays as-is."
 ---
 
 # Evaluate label-gating part of the AR DB matrix on plain PRs
