@@ -1,6 +1,6 @@
 ---
 title: "transactions.test.ts: run against ambient connection like Rails"
-status: ready
+status: closed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Already delivered: transactions.test.ts now rides canonical fixtures (topics/developers/authors/posts) on the ambient connection; zero :memory: sites remain on main."
 ---
 
 ## Context
