@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ar-test-helper-suite-wide-config-fidelity"
+rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 title: "AR test-helper suite-wide config fidelity"
 status: draft
 created: 2026-07-25
