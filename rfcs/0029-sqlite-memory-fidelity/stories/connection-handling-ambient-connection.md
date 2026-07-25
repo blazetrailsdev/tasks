@@ -1,6 +1,6 @@
 ---
 title: "connection-handling.test.ts: use ambient/connects_to config, not :memory:"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 55
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T02:22:53Z"
+assignee: "connection-handling-ambient-connection"
 blocked-by: null
 ---
 
