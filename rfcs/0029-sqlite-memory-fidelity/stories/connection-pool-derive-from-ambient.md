@@ -1,6 +1,6 @@
 ---
 title: "connection-pool.test.ts: derive PoolConfig from ambient db_config like Rails"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: test-connection-fidelity
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 4
-pr: null
+pr: 5285
 claim: "2026-07-25T02:14:53Z"
 assignee: "connection-pool-derive-from-ambient"
 blocked-by: null
