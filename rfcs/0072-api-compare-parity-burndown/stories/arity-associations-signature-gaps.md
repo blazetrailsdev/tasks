@@ -1,6 +1,6 @@
 ---
 title: "associations arity gaps: get_chain, update_through_counter?, autosave, nested_error"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 250
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T23:10:51Z"
+assignee: "arity-associations-signature-gaps"
 blocked-by: null
 closed-reason: null
 ---
