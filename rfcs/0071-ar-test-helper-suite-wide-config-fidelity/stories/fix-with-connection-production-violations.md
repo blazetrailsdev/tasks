@@ -1,6 +1,6 @@
 ---
 title: "fix-with-connection-production-violations"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5323
 claim: "2026-07-25T21:26:51Z"
 assignee: "fix-with-connection-production-violations"
 blocked-by: null
