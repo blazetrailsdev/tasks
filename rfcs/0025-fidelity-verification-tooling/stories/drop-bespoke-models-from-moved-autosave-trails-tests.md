@@ -1,6 +1,6 @@
 ---
 title: "drop-bespoke-models-from-moved-autosave-trails-tests"
-status: ready
+status: draft
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
