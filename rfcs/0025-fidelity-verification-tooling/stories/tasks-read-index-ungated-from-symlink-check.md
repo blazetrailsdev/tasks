@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: serve the origin/main read index regardless of TASKS_DIR resolution"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5310
 claim: "2026-07-25T15:38:44Z"
 assignee: "tasks-read-index-ungated-from-symlink-check"
 blocked-by: null
