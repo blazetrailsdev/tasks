@@ -1,6 +1,6 @@
 ---
 title: "converge-readonly-attribute-predicate-callers"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
