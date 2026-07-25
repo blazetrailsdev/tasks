@@ -1,7 +1,7 @@
 ---
 title: "Preflight attribution scan has no retry; gh api 503 red-lines every PR"
-status: ready
-updated: 2026-07-23
+status: claimed
+updated: 2026-07-25
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T19:42:51Z"
+assignee: "preflight-attribution-scan-gh-api-retry"
 blocked-by: null
 closed-reason: null
 ---
