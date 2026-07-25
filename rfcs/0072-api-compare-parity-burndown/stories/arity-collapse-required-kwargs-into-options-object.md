@@ -1,6 +1,6 @@
 ---
 title: "arity: collapse required-kwargs bundle vs single TS options object"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 10
-pr: null
+pr: 5311
 claim: "2026-07-25T19:08:52Z"
 assignee: "arity-collapse-required-kwargs-into-options-object"
 blocked-by: null
