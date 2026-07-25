@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: abstractcontroller base.ts callbacks + apply* installer pattern"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T23:34:53Z"
+assignee: "extra-surface-abstractcontroller-apply-mixin-pattern"
 blocked-by: null
 closed-reason: null
 ---
