@@ -1,6 +1,6 @@
 ---
 title: "getFs() sync node auto-register fails under pure ESM (no require)"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: null
+pr: 5314
 claim: "2026-07-25T19:26:52Z"
 assignee: "fs-adapter-sync-autoregister-fails-under-esm"
 blocked-by: null
