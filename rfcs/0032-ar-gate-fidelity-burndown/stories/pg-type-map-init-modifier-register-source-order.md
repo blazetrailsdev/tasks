@@ -1,6 +1,6 @@
 ---
 title: "Mirror Rails' add_modifier-before-register order in PG type-map-init"
-status: ready
+status: claimed
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T14:32:28Z"
+assignee: "pg-type-map-init-modifier-register-source-order"
 blocked-by: null
 closed-reason: null
 ---
