@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-raising-create-skips-join-row-reconcile"
-status: blocked
+status: ready
 updated: 2026-07-25
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-25T22:46:53Z"
-assignee: "has-one-through-raising-create-skips-join-row-reconcile"
-blocked-by: "Blocked on PR #5326 (story has-one-through-create-unloaded-join-row-not-reconciled), still OPEN. The HasOneThroughAssociation#_createRecord override this story must reorder does not exist on origin/main — #5326 introduces it (along with persistReplace(save)). Implementing here would duplicate that unmerged diff (a stacked PR). Unblock once #5326 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
