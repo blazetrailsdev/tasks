@@ -1,6 +1,6 @@
 ---
 title: "leaseConnection hands out adapters with unestablished raw connections (Rails verifies on checkout)"
-status: draft
+status: ready
 updated: 2026-07-25
 rfc: "0032-ar-gate-fidelity-burndown"
 cluster: null
