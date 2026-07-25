@@ -1,6 +1,6 @@
 ---
 title: "getFs() sync node auto-register fails under pure ESM (no require)"
-status: in-progress
+status: done
 updated: 2026-07-25
 rfc: "0061-ci-failures"
 cluster: null
