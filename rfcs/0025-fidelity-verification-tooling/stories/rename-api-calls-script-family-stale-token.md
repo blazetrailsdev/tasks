@@ -1,7 +1,7 @@
 ---
 title: "api:calls* script family uses a stale :calls token; rename or confirm"
-status: ready
-updated: 2026-07-24
+status: claimed
+updated: 2026-07-25
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-25T01:26:56Z"
+assignee: "rename-api-calls-script-family-stale-token"
 blocked-by: null
 closed-reason: null
 ---
