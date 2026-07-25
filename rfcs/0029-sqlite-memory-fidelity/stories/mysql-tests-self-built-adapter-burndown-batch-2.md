@@ -1,6 +1,6 @@
 ---
 title: "MySQL tests: burn down self-built Mysql2Adapter, batch 2 (schema/DDL suites)"
-status: claimed
+status: in-progress
 updated: 2026-07-25
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5327
 claim: "2026-07-25T21:50:52Z"
 assignee: "mysql-tests-self-built-adapter-burndown-batch-2"
 blocked-by: null
