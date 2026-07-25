@@ -4,9 +4,9 @@ status: ready
 updated: 2026-07-25
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
-deps: []
+deps: ["route-fixture-machinery-off-base-connection", "fix-with-connection-production-violations"]
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null

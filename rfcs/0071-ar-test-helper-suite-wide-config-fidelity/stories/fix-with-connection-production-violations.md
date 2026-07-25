@@ -6,7 +6,7 @@ rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
