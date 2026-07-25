@@ -12,7 +12,10 @@ packages:
   - "actionpack"
   - "actionview"
 clusters:
-  - "api-compare"
+  - api-compare-tooling
+  - arity-fidelity
+  - missing-methods
+  - extra-surface
 ---
 
 ## Summary
