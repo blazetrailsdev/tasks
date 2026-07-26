@@ -1,6 +1,6 @@
 ---
 title: "actionview-view-paths-module-port"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5350
 claim: "2026-07-26T13:26:54Z"
 assignee: "actionview-view-paths-module-port"
 blocked-by: null
