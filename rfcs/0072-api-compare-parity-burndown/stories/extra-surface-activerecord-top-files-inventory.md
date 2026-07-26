@@ -1,7 +1,7 @@
 ---
 title: "spike: inventory + classify activerecord extra-surface top-20 files"
-status: claimed
-updated: 2026-07-25
+status: closed
+updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
 deps: ["extra-surface-reasoned-allowlist"]
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 50
 priority: 40
 pr: null
-claim: "2026-07-25T23:50:57Z"
-assignee: "extra-surface-activerecord-top-files-inventory"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "spike complete: inventory in story body + audit report extra-surface-20260726T000734Z.md; 10 follow-up stories registered in RFC 0072"
 ---
 
 ## Context
