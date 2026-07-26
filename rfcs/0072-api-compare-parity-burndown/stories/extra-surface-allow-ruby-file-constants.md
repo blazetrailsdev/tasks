@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: feed Ruby fileConstants into the allowed-name set"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
+pr: 5338
 claim: "2026-07-26T02:38:53Z"
 assignee: "extra-surface-allow-ruby-file-constants"
 blocked-by: null
