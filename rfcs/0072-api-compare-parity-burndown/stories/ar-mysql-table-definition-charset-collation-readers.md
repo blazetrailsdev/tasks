@@ -1,6 +1,6 @@
 ---
 title: "ar-mysql-table-definition-charset-collation-readers"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5372
 claim: "2026-07-26T22:54:56Z"
 assignee: "ar-mysql-table-definition-charset-collation-readers"
 blocked-by: null
