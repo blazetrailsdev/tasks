@@ -1,6 +1,6 @@
 ---
 title: "Rename test-helpers/ to support/ to match Rails test/support/"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T16:46:56Z"
+assignee: "move-test-helpers-to-support-dir"
 blocked-by: null
 closed-reason: null
 ---
