@@ -1,6 +1,6 @@
 ---
 title: "api-compare-scope-includer-graph-resolution"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5344
 claim: "2026-07-26T11:42:54Z"
 assignee: "api-compare-scope-includer-graph-resolution"
 blocked-by: null
