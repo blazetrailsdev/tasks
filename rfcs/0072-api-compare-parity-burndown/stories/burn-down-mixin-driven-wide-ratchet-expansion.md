@@ -1,6 +1,6 @@
 ---
 title: "Burn down the +2470 wide-ratchet entries baselined by #5334"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T11:50:53Z"
+assignee: "burn-down-mixin-driven-wide-ratchet-expansion"
 blocked-by: null
 closed-reason: null
 ---
