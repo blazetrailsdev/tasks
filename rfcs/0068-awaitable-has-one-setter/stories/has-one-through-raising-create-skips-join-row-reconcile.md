@@ -1,6 +1,6 @@
 ---
 title: "has-one-through-raising-create-skips-join-row-reconcile"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5348
 claim: "2026-07-26T13:37:59Z"
 assignee: "has-one-through-raising-create-skips-join-row-reconcile"
 blocked-by: null
