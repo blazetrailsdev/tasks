@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-cross-helper-model-reads"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 90
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T22:46:55Z"
+assignee: "converge-relation-cross-helper-model-reads"
 blocked-by: null
 closed-reason: null
 ---
