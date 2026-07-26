@@ -1,6 +1,6 @@
 ---
 title: "route-fixture-machinery-off-deprecated-getter"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 30
-pr: null
+pr: 5349
 claim: "2026-07-26T13:24:31Z"
 assignee: "route-fixture-machinery-off-deprecated-getter"
 blocked-by: null
