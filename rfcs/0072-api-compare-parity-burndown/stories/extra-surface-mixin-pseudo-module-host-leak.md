@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: this-typed mixin pseudo-modules leak the whole host interface"
-status: in-progress
+status: done
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
