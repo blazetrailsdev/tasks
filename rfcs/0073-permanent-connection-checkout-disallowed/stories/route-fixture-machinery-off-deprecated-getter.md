@@ -1,6 +1,6 @@
 ---
 title: "route-fixture-machinery-off-deprecated-getter"
-status: in-progress
+status: done
 updated: 2026-07-26
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
