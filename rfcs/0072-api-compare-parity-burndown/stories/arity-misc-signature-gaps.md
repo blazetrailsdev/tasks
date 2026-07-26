@@ -1,7 +1,7 @@
 ---
 title: "misc arity gaps: insert_all, model_schema, relation, schema_dumper, token_for, type, result, encryption"
-status: in-progress
-updated: 2026-07-25
+status: done
+updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
 deps:
