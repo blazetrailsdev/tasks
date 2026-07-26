@@ -1,6 +1,6 @@
 ---
 title: "Audit and dissolve TS_ALWAYS_ALLOWED in extra-surface.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
+pr: 5370
 claim: "2026-07-26T22:22:54Z"
 assignee: "ts-always-allowed-audit-dissolution"
 blocked-by: null
