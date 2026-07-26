@@ -1,5 +1,5 @@
 ---
-rfc: "0000-drop-rebuild-canonical-tables"
+rfc: "0079-drop-rebuild-canonical-tables"
 title: "Drive rebuildCanonicalTables call sites to zero, then delete it"
 status: draft
 created: 2026-07-26
