@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify the associations.ts functional association engine"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 35
-pr: null
+pr: 5341
 claim: "2026-07-26T03:10:57Z"
 assignee: "extra-surface-associations-engine-classify"
 blocked-by: null
