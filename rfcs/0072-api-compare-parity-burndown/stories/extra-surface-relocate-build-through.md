@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: relocate buildThroughAssociation/createThroughAssociation"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 206
 priority: 40
-pr: null
+pr: 5357
 claim: "2026-07-26T15:10:56Z"
 assignee: "extra-surface-relocate-build-through"
 blocked-by: null
