@@ -1,0 +1,56 @@
+---
+title: "extra-surface: mixin pseudo-module synthetic constructor entry escapes declaredIn filtering"
+status: draft
+updated: 2026-07-26
+rfc: "0072-api-compare-parity-burndown"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 25
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Raised in review of PR #5336 (merged), which stopped `extra-surface.ts` from
+attributing a `<file>:<fn>__mixin` pseudo-module's borrowed host surface to the
+file declaring the mixin function.
+
+`scripts/api-compare/extract-ts-api.ts` harvests each property of the returned
+constructor's instance type and tags it with `declaredIn` when its declaration
+lives in another file; `collectTsFileNames`
+(`scripts/api-compare/extra-surface.ts:412`) then skips those. One member is
+not covered: the synthetic `constructor` entry the extractor appends after the
+property loop. It is built from the mixin FUNCTION's position, so it always
+carries `file: relPath` and never a `declaredIn` — even when the constructor it
+stands for belongs to a class declared in a different file.
+
+Pre-existing behavior, unchanged by #5336 and explicitly left alone there
+rather than opportunistically widening a fix PR. `constructor` is also absent
+from `TS_ALWAYS_ALLOWED` (`scripts/api-compare/extra-surface.ts:87`), so it can
+still land as extra surface on a file that declares no constructor.
+
+Low impact — one name per mixin-declaring file, and only 6 activerecord files
+declare `__mixin` pseudo-modules — but it is the one member the #5336
+mechanism does not sharpen.
+
+## Acceptance criteria
+
+- Decide and implement one of: (a) tag the synthetic `constructor` entry with
+  `declaredIn` derived from the returned class's own declaration site, so the
+  existing `collectTsFileNames` filter covers it; or (b) add `constructor` to
+  `TS_ALWAYS_ALLOWED` as a language-level name with no Rails counterpart, with
+  the reasoning stated at the entry (the set already carries `dup`, `freeze`,
+  `[Symbol.iterator]`, … on exactly that rationale).
+- Prefer (a) if the constructor's declaring class is reachable from the
+  construct signature; it keeps a genuinely in-file constructor counted.
+- Extend the `__mixin` tests in `scripts/api-compare/extra-surface.test.ts` —
+  the fixture there already builds a two-file program and can assert the
+  `constructor` entry directly.
+- Record before/after `pnpm api:extra --package activerecord` totals; expect a
+  change of at most ~6 extras.
