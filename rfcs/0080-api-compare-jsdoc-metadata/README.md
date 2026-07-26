@@ -1,5 +1,5 @@
 ---
-rfc: "0000-api-compare-jsdoc-metadata"
+rfc: "0080-api-compare-jsdoc-metadata"
 title: "api-compare JSDoc metadata: one tag family for calls parity and extra surface"
 status: draft
 created: 2026-07-26
