@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: this-typed mixin pseudo-modules leak the whole host interface"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 15
-pr: null
+pr: 5336
 claim: "2026-07-26T02:22:52Z"
 assignee: "extra-surface-mixin-pseudo-module-host-leak"
 blocked-by: null
