@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: relocate updateCounterCaches to Builder::BelongsTo/CounterCache"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T22:38:57Z"
+assignee: "extra-surface-relocate-update-counter-caches"
 blocked-by: null
 closed-reason: null
 ---
