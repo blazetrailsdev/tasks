@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`ActiveView::ViewPaths` is unported: there is no
+`ActionView::ViewPaths` is unported: there is no
 `packages/actionview/src/view-paths.ts` for
 `vendor/rails/actionview/lib/action_view/view_paths.rb`.
 
