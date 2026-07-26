@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-singular-find-target-shared-seam"
-status: ready
+status: closed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by singular-find-target-becomes-instance-method (same file + same seam). The unique finding from the #5366 review — HasOneAssociation bypasses the singular findTarget entirely via loadHasOne (has-one-association.ts doAsyncFindTarget), where Rails defines find_target once on SingularAssociation for BOTH subclasses (singular_association.rb:47; belongs_to_association.rb:124 specializes only find_target?; has_one_association.rb:6 has no override) — is folded into that story's scope."
 ---
 
 ## Context
