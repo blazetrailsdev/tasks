@@ -1,6 +1,6 @@
 ---
 title: "Scope the delegation-transparency delegate lookup by accessor return type"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
