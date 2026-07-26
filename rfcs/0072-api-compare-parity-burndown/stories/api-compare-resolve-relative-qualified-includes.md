@@ -1,6 +1,6 @@
 ---
 title: "api-compare: resolve partially-qualified include/extend names via namespace prefix walk"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 10
-pr: null
+pr: 5334
 claim: "2026-07-26T02:06:54Z"
 assignee: "api-compare-resolve-relative-qualified-includes"
 blocked-by: null
