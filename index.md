@@ -83,4 +83,4 @@
 | [0077-quoting-binds-fidelity](rfcs/0077-quoting-binds-fidelity/README.md) | Adapter quoting and bind-param fidelity | draft | @your-handle | activerecord, arel |
 | [0078-sti-schema-reflection-fidelity](rfcs/0078-sti-schema-reflection-fidelity/README.md) | STI / schema-reflection attribute-definition fidelity | draft | @your-handle | activerecord, activemodel |
 | [0079-drop-rebuild-canonical-tables](rfcs/0079-drop-rebuild-canonical-tables/README.md) | Drive rebuildCanonicalTables call sites to zero, then delete it | draft | @your-handle | activerecord |
-| [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | draft | @your-handle | activerecord, abstractcontroller, globalid, arel |
+| [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | active | @your-handle | activerecord, abstractcontroller, globalid, arel |
