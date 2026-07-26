@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-query-into-internal-exec-query"
-status: ready
+status: closed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of RFC 0076 schema-query-converge-to-internal-exec-query, which is better specified and correctly BLOCKED on pg-cast-result-oid-lookup-reentrancy-guard: the direct route was attempted in #4977 and reverted (104 failed PG tests from castResult -> getOidType -> loadAdditionalTypes -> schemaQuery recursion). Created 2026-07-26 without checking RFC 0076 first; it would have sent someone down a path already proven to fail."
 ---
 
 ## Context
