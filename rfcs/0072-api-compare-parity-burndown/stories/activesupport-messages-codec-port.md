@@ -1,6 +1,6 @@
 ---
 title: "Port Messages::Codec and route MessageEncryptor/MessageVerifier through SerializerWithFallback"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 5353
 claim: "2026-07-26T14:38:58Z"
 assignee: "activesupport-messages-codec-port"
 blocked-by: null
