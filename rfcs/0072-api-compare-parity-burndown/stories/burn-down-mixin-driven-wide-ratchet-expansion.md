@@ -1,6 +1,6 @@
 ---
 title: "Burn down the +2470 wide-ratchet entries baselined by #5334"
-status: in-progress
+status: done
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
