@@ -1,6 +1,6 @@
 ---
 title: "Detect dead Rails-name duplicate shims that satisfy the matcher with no callers"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
