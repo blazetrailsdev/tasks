@@ -1,6 +1,6 @@
 ---
 title: "Extractor + api:extra support for @noRailsEquivalent"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
+pr: 5358
 claim: "2026-07-26T16:22:55Z"
 assignee: "no-rails-equivalent-tag-extractor-support"
 blocked-by: null
