@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: relocate the through-association target loads"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 170
 priority: 40
-pr: null
+pr: 5364
 claim: "2026-07-26T17:18:56Z"
 assignee: "extra-surface-relocate-load-through"
 blocked-by: null
