@@ -1,6 +1,6 @@
 ---
 title: "Port Messages::Metadata and make Codec's metadata options load-bearing"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
