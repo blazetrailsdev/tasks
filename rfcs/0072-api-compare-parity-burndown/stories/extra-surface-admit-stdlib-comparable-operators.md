@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: include Comparable operators have no def and score as novel"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
