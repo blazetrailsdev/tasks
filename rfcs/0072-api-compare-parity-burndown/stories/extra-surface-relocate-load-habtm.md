@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: relocate loadHabtm into the HABTM/through load path"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 75
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T16:54:56Z"
+assignee: "extra-surface-relocate-load-habtm"
 blocked-by: null
 closed-reason: null
 ---
