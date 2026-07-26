@@ -1,5 +1,5 @@
 ---
-rfc: "0000-quoting-binds-fidelity"
+rfc: "0077-quoting-binds-fidelity"
 title: "Adapter quoting and bind-param fidelity"
 status: draft
 created: 2026-07-26
