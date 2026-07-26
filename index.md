@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-execute-primitive-convergence](rfcs/0000-execute-primitive-convergence/README.md) | execute/raw_execute/perform_query primitive convergence | draft | @your-handle | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -80,3 +79,4 @@
 | [0073-permanent-connection-checkout-disallowed](rfcs/0073-permanent-connection-checkout-disallowed/README.md) | Ban permanent Base.connection checkout in the AR suite (helper.rb:27) | draft | @your-handle | activerecord |
 | [0074-i18n-parity](rfcs/0074-i18n-parity/README.md) | i18n gem parity | draft | @your-handle | i18n, activesupport, activemodel, activerecord |
 | [0075-collection-association-target-fidelity](rfcs/0075-collection-association-target-fidelity/README.md) | Collection association target-store fidelity | draft | @your-handle | activerecord |
+| [0076-execute-primitive-convergence](rfcs/0076-execute-primitive-convergence/README.md) | execute/raw_execute/perform_query primitive convergence | draft | @your-handle | activerecord |

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-execute-primitive-convergence"
+rfc: "0076-execute-primitive-convergence"
 title: "execute/raw_execute/perform_query primitive convergence"
 status: draft
 created: 2026-07-26
