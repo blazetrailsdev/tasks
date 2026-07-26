@@ -1,6 +1,6 @@
 ---
 title: "Fold extra-surface sibling-tag section into the api:build design doc (after PR #5229 merges)"
-status: claimed
+status: blocked
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -11,7 +11,7 @@ priority: 4
 pr: null
 claim: "2026-07-26T22:30:54Z"
 assignee: "fold-extra-surface-section-into-api-build-doc"
-blocked-by: null
+blocked-by: "Blocked on trails PR #5229 (api:build design doc) which is still OPEN; docs/infrastructure/api-build-stub-generation-plan.md does not exist on main yet. Re-ready once #5229 merges."
 closed-reason: null
 ---
 
