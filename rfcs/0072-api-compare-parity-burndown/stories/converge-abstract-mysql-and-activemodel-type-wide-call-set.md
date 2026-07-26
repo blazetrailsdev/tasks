@@ -1,6 +1,6 @@
 ---
 title: "converge-abstract-mysql-and-activemodel-type-wide-call-set"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5374
 claim: "2026-07-26T23:02:56Z"
 assignee: "converge-abstract-mysql-and-activemodel-type-wide-call-set"
 blocked-by: null
