@@ -1,6 +1,6 @@
 ---
 title: "api:compare cached manifests diverge from a forced fresh extraction"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5375
 claim: "2026-07-26T23:42:55Z"
 assignee: "api-compare-cached-vs-fresh-extraction-divergence"
 blocked-by: null
