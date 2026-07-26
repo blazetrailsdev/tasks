@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: honor @internal JSDoc on top-level exported functions"
-status: ready
+status: claimed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-26T02:14:52Z"
+assignee: "extra-surface-honor-internal-jsdoc-on-file-functions"
 blocked-by: null
 closed-reason: null
 ---
