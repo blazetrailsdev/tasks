@@ -1,6 +1,6 @@
 ---
 title: "api-compare extractor: capture define_method loops and define_column_methods (15 allowlist entries)"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
