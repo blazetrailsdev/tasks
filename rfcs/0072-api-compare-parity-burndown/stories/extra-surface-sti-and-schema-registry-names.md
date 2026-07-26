@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify inheritance.ts and model-schema.ts STI/schema registry surface"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: 40
-pr: null
+pr: 5342
 claim: "2026-07-26T03:18:52Z"
 assignee: "extra-surface-sti-and-schema-registry-names"
 blocked-by: null
