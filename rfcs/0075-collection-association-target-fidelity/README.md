@@ -1,5 +1,5 @@
 ---
-rfc: "0000-collection-association-target-fidelity"
+rfc: "0075-collection-association-target-fidelity"
 title: "Collection association target-store fidelity"
 status: draft
 created: 2026-07-26
