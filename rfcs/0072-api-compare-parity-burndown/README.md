@@ -10,7 +10,6 @@ packages:
   - "activemodel"
   - "globalid"
   - "actionpack"
-  - "actionview"
 clusters:
   - api-compare-tooling
   - arity-fidelity
@@ -99,10 +98,25 @@ named extra-surface clusters. Large activerecord extra-surface files
 `relation/finder-methods.ts` 30, …) get an inventory spike that registers
 follow-up stories rather than one unboundable story.
 
+## Scope
+
+This RFC is **activerecord-first**: the target is Rails API parity for the
+data layer (activerecord, activemodel, arel) plus only the surface _necessary
+to support it_ — e.g. activesupport pieces AR actually consumes
+(MessageVerifier/MessageEncryptor/Messages codec for encryption and signed
+ids, callbacks, notifications) and globalid/actionpack glue where AR features
+depend on it. It is NOT a 100%-activesupport parity campaign, and actionview
+parity is not pursued here at all (the three open actionview stories were
+closed out of scope on 2026-07-26; a future actionview RFC can adopt them).
+When an activesupport/actionpack gap surfaces that AR does not need, file it
+elsewhere rather than growing this RFC.
+
 ## Non-goals
 
 - Extra-surface burndown of packages outside activerecord/activemodel/
-  globalid/abstractcontroller/actionview beyond the mechanism work.
+  globalid/abstractcontroller beyond the mechanism work.
+- actionview parity (entirely); activesupport parity beyond what activerecord
+  consumes.
 - The `pins` (body-pin) backlog and inheritance-parity gaps — separate
   campaigns.
 - Changing what counts toward the parity % — arity/extra-surface stay
