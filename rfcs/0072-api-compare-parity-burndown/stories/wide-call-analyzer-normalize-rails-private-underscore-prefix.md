@@ -1,6 +1,6 @@
 ---
 title: "Wide call analyzer: normalize the Rails-private _ prefix on callee names"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
