@@ -34,10 +34,31 @@ edit files at their final paths.
 
 ## Acceptance criteria
 
-- `git mv packages/activerecord/src/test-helpers` →
-  `packages/activerecord/src/support`, keeping `models/`, `fixtures/`, and
-  `test-schema.ts` inside it (they already mirror `test/models/`,
-  `test/fixtures/`, `test/schema/schema.rb`).
+- **This is NOT a whole-directory `git mv`.** `test-helpers/` survives. Create
+  `support/` and move only the files listed below; see the "Every current
+  `test-helpers/` entry has a destination" section of
+  `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` for the full
+  A-D disposition of all 36 files and 4 subdirectories.
+- **Stays in `test-helpers/` (bucket A)** — mirrors the Rails `test/` root, not
+  `test/support/`: `models/`, `fixtures/`, `migrations/`, `assets/`,
+  `test-schema.ts`.
+- **Moves to `support/` (bucket B — renamed later by stories 3-5, moved
+  under its current name now)**: `connection-helper.ts`,
+  `schema-dumping-helper.ts`, `test-connection-env.ts`,
+  `test-database-config.ts`, `arunit2-config.ts`, `supports.ts`,
+  `canonical-schema.ts`, `schema-file-generator.ts`, `second-connection.ts`,
+  `setup-second-pool.ts`, `setup-handler-suite.ts`.
+- **Moves to `support/` keeping its invented name (bucket C)**:
+  `ar-db-slots.ts`, `ar-db-forks-default.ts`, `sqlite-template.ts`,
+  `template-global-setup.ts`, `skip-global-reset.ts`, `ddl-profile.ts`,
+  `canonical-model-index.ts`, `canonical-model-index-encryption-setup.ts`,
+  `quote-regex.ts`, `with-db-warnings-action.ts`, `setup-adapter-suite.ts`,
+  `drop-all-tables.ts`, `seed-association-cache.ts`, `schema-types.ts`.
+- **Left in place for story 7 (bucket D)**: the fixtures machinery
+  (`fixtures.ts`, `fixture-set.ts`, `define-fixtures.ts`,
+  `fixtures-registry.ts`, `use-fixtures.ts`, `with-transactional-fixtures.ts`,
+  `use-transactional-tests.ts`), `in-time-zone.ts`, `protected-params.ts`,
+  `repair-validations.ts`. Do not move these.
 - Update every referencing path: `vitest.config.ts`, the `eslint.config.mjs`
   ignores (`packages/activerecord/src/test-helpers/**` appears at least at
   `:431`, `:460`, `:483`), `eslint/no-explicit-any-src-exclude.json`,
