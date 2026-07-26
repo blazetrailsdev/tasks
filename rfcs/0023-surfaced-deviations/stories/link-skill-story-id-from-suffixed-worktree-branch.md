@@ -1,7 +1,7 @@
 ---
 title: "/link fails to mark story in-progress on suffixed worktree branches"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-07-26
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of link-skill-resolve-suffixed-worktree-branch (same root cause and fix; that story is being rehomed to 0024-tasks-cli-coverage in the 2026-07-26 RFC 0023 triage)"
 ---
 
 ## Context
