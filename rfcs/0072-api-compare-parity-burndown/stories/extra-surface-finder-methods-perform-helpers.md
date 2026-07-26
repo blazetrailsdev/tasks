@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify relation/finder-methods perform* async-split helpers"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: ["extra-surface-honor-internal-jsdoc-on-file-functions"]
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: null
+pr: 5339
 claim: "2026-07-26T03:02:53Z"
 assignee: "extra-surface-finder-methods-perform-helpers"
 blocked-by: null
