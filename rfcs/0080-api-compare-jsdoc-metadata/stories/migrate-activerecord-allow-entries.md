@@ -1,6 +1,6 @@
 ---
 title: "Migrate activerecord allow entries + ambient finder methods to inline tags"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: 5368
 claim: "2026-07-26T22:06:55Z"
 assignee: "migrate-activerecord-allow-entries"
 blocked-by: null
