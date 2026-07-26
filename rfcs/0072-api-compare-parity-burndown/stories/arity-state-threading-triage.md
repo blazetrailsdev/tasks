@@ -1,6 +1,6 @@
 ---
 title: "state-threading free functions: converge to this-typed hosts or exclude with reason"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 30
-pr: null
+pr: 5340
 claim: "2026-07-26T02:54:52Z"
 assignee: "arity-state-threading-triage"
 blocked-by: null
