@@ -1,5 +1,5 @@
 ---
-rfc: "0000-i18n-parity"
+rfc: "0074-i18n-parity"
 title: "i18n gem parity"
 status: draft
 created: 2026-07-26
