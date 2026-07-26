@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: @internal JSDoc is ignored on class members too"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
