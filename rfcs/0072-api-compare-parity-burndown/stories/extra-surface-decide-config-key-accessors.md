@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: database.yml config-key accessors (statementLimit) have no Ruby def"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
