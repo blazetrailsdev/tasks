@@ -1,6 +1,6 @@
 ---
 title: "Enroll i18n in test:compare and port core suites"
-status: draft
+status: ready
 updated: 2026-07-26
 rfc: "0074-i18n-parity"
 cluster: null
