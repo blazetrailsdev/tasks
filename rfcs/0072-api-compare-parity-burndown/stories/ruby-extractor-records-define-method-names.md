@@ -1,7 +1,7 @@
 ---
 title: "ruby-extractor-records-define-method-names"
-status: ready
-updated: 2026-07-25
+status: draft
+updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
