@@ -1,6 +1,6 @@
 ---
 title: "Migrate abstractcontroller extra-surface allow entries to inline tags"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
+pr: 5367
 claim: "2026-07-26T21:58:56Z"
 assignee: "migrate-abstractcontroller-allow-entries"
 blocked-by: null
