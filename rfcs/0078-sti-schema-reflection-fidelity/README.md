@@ -1,5 +1,5 @@
 ---
-rfc: "0000-sti-schema-reflection-fidelity"
+rfc: "0078-sti-schema-reflection-fidelity"
 title: "STI / schema-reflection attribute-definition fidelity"
 status: draft
 created: 2026-07-26
