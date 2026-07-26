@@ -1,0 +1,50 @@
+---
+title: "extract-ts-api: resolve chained re-exports to a fixpoint and to the declaring key"
+status: ready
+updated: 2026-07-26
+rfc: "0072-api-compare-parity-burndown"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 90
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`extract-ts-api.ts`'s re-export post-pass (extract-ts-api.ts:689-719, as
+merged by PR #5337) resolves `export { X } from "./y.js"` in a SINGLE pass
+over `pendingReExports`, in file-walk order. For a transitive barrel — e.g.
+`index.ts` re-exporting `AbstractAdapter` from `./connection-adapters.js`,
+which itself re-exports it from `./connection-adapters/abstract-adapter.js` —
+whether `index.ts` gets an entry depends on whether the intermediate barrel's
+clone happens to exist yet when the outer re-export is processed. If the outer
+one is visited first, `info.classes["connection-adapters.ts:AbstractAdapter"]`
+is still absent and no `index.ts` entry is created at all.
+
+This is pre-existing (PR #5337 only added the `reExportedFrom` stamp, which
+makes chained clones visible), but it means `compare.ts`'s Rails-path matching
+for classes Rails expects at a top-level umbrella path is order-dependent
+rather than deterministic.
+
+Fix shape: iterate the post-pass to a fixpoint (repeat until no new clone is
+created), and resolve `reExportedFrom` transitively to the real DECLARING key
+rather than to the immediate source (which may itself be a clone). Both are
+local to the post-pass loop.
+
+## Acceptance criteria
+
+- The re-export post-pass produces the same set of cloned entries regardless
+  of source-file visit order (fixpoint, with a cycle guard).
+- `reExportedFrom` always names an entry that is NOT itself a clone.
+- Fixture test in `extract-ts-api.test.ts` covering a two-hop barrel chain
+  (declaring file → mid barrel → outer barrel), asserted with the files
+  supplied in both orders.
+- Report any `pnpm api:compare` / `pnpm api:extra` delta the extra clones
+  cause; extra-surface totals should be unchanged (all chained clones carry
+  `reExportedFrom` and are skipped there).
