@@ -38,3 +38,15 @@ Wiring it requires the api-compare manifests (`output/rails-api.json`,
   annotates, it must NOT suppress or reshape `api:extra` output.
 - `--exclude-glob` runs skip stale enforcement (existing behavior); the CI
   invocation must not pass `--exclude-glob`, or the gate is a no-op.
+
+## Fidelity-first policy
+
+Moving toward Rails fidelity is the stated goal of this (and every)
+extra-surface story; the allow-set/allowlist is a **last resort**. Before
+admitting or keeping any name in the allow-set, first make — or file as its own
+story — the fidelity change that would make the entry unnecessary: converge the
+TS surface onto the Rails name and Rails-layout file (relocate + rename),
+delete the invention, or justify an `@internal` at the declaration site. Only
+names that are faithful-but-unmappable (e.g. genuine Ruby file constants or
+nested class names present in the matched Rails file) belong in the allow-set;
+any other allowlisted entry must cite the filed fidelity story next to it.

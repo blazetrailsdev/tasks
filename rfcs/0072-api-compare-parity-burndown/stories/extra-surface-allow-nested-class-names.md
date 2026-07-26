@@ -56,3 +56,15 @@ axis and must not re-open that hole.
 - Record the novel-count delta from `pnpm api:compare && pnpm api:extra
 --package activerecord` (baseline after the constants PR: activerecord 736
   novel / 2090 moved / 2826 total).
+
+## Fidelity-first policy
+
+Moving toward Rails fidelity is the stated goal of this (and every)
+extra-surface story; the allow-set/allowlist is a **last resort**. Before
+admitting or keeping any name in the allow-set, first make — or file as its own
+story — the fidelity change that would make the entry unnecessary: converge the
+TS surface onto the Rails name and Rails-layout file (relocate + rename),
+delete the invention, or justify an `@internal` at the declaration site. Only
+names that are faithful-but-unmappable (e.g. genuine Ruby file constants or
+nested class names present in the matched Rails file) belong in the allow-set;
+any other allowlisted entry must cite the filed fidelity story next to it.
