@@ -1,6 +1,6 @@
 ---
 title: "Measure and resolve resolveModuleName's all-candidates fallback arm"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5354
 claim: "2026-07-26T14:46:57Z"
 assignee: "api-compare-resolve-module-name-ambiguous-fallback"
 blocked-by: null
