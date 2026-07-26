@@ -1,6 +1,6 @@
 ---
 title: "converge-foreign-key-derivation-single-site"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
