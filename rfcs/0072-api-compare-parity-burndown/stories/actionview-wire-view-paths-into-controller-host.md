@@ -1,6 +1,6 @@
 ---
 title: "Wire ActionView::ViewPaths into a controller host"
-status: draft
+status: closed
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope for RFC 0072 after scope tightening (2026-07-26): this RFC targets activerecord parity plus only the surface necessary to support it; actionview parity is not pursued here - re-file under a dedicated actionview RFC if that campaign opens"
 ---
 
 ## Context
