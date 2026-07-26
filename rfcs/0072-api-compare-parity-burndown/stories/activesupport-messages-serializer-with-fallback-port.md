@@ -1,6 +1,6 @@
 ---
 title: "activesupport-messages-serializer-with-fallback-port"
-status: claimed
+status: in-progress
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5351
 claim: "2026-07-26T13:34:54Z"
 assignee: "activesupport-messages-serializer-with-fallback-port"
 blocked-by: null
