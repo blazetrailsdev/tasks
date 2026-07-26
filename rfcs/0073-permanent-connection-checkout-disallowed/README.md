@@ -44,15 +44,16 @@ reliable detector.
 Method: set the flag to `"disallowed"`, replace the `throw` with a `console.warn`
 that prints the first non-internal stack frame so violations accumulate over a
 whole run instead of aborting it, then run all 129 AR test files carrying a
-textual `.connection`. **2077 enforcement hits.**
+textual `.connection`. **2077 enforcement hits.** After story A (#5349) this is **57**.
 
-| Source                                       |         Hits | Disposition                              |
-| -------------------------------------------- | -----------: | ---------------------------------------- |
-| `test-helpers/use-fixtures.ts:610`           | 1983 (95.5%) | Story A                                  |
-| `test-helpers/use-transactional-tests.ts:67` |            2 | Story A                                  |
-| `model-schema.ts:41` (`reflectionAdapter`)   |           11 | Story B — only remaining production site |
-| helper self-tests (6 files, 16 sites)        |           32 | Story C                                  |
-| other test files (34 sites / 24 files)       |           49 | Story C                                  |
+| Source                                     | Hits | Disposition                              |
+| ------------------------------------------ | ---: | ---------------------------------------- |
+| `model-schema.ts:41` (`reflectionAdapter`) |   11 | Story B — only remaining production site |
+| test files (38 sites / 28 files)           |   46 | Story C                                  |
+
+Story A (#5349) removed the fixture machinery as a source: `use-fixtures.ts:610`
+(1983 hits), `use-transactional-tests.ts:67` (2), and the 12 helper self-test
+sites that passed the thunk explicitly (32) are all now 0.
 
 The infrastructure blockers the original audit found have mostly been fixed
 under other stories since: `test-setup-dy.ts:50,65` (a boot-time blocker that
