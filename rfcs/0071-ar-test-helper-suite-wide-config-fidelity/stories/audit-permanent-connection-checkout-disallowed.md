@@ -1,7 +1,7 @@
 ---
 title: "Audit: ban Base.connection in the AR suite (helper.rb:27)"
-status: in-progress
-updated: 2026-07-25
+status: closed
+updated: 2026-07-26
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 150
 priority: 40
 pr: 5318
-claim: "2026-07-25T20:06:51Z"
-assignee: "audit-permanent-connection-checkout-disallowed"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Audit completed; delivered as RFC 0073 (permanent-connection-checkout-disallowed) with four stories rather than a docs/infrastructure report. PR #5318 closed as superseded — the tasks repo is the source of truth for AR work tracking, so a standalone docs file duplicated it."
 ---
 
 ## Context
