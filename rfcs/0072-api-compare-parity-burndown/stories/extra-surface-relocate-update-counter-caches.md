@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`updateCounterCaches` (`associations.ts:3501`, ~147 LOC) applies counter-cache
+`updateCounterCaches` (`associations.ts:3510`, ~147 LOC) applies counter-cache
 deltas on create/destroy. Rails splits this across
 `Builder::BelongsTo.add_counter_cache_callbacks`
 (`vendor/rails/activerecord/lib/active_record/associations/builder/belongs_to.rb:27`)
@@ -35,6 +35,10 @@ Also inside this range is the private helper
 
 `updateCounterCaches` is re-exported from `index.ts:61` and imported by
 `base.ts` — update both.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

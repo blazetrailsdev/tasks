@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`loadHasMany` (`associations.ts:1930`, ~225 LOC) is the has_many target load.
+`loadHasMany` (`associations.ts:1933`, ~225 LOC) is the has_many target load.
 Rails home: `ActiveRecord::Associations::Association#find_target`
 (`vendor/rails/activerecord/lib/active_record/associations/association.rb:248`)
 via `CollectionAssociation` / `HasManyAssociation`.
@@ -27,13 +27,17 @@ Target TS file: `packages/activerecord/src/associations/has-many-association.ts`
 
 Caution: `loadHasMany` currently FUSES relation building with caching, strict
 loading, and inverse_of. That fusion is exactly why the `@internal` trails-only
-helpers `buildHasManyRelation` (`associations.ts:2412`) and
+helpers `buildHasManyRelation` (`associations.ts:2450`) and
 `buildThroughJoinScope` (`:2445`) had to exist at all — in Rails both are just
 `association.scope`. Undoing the fusion as part of this move would let those two
 helpers be deleted outright; if that pushes past 500 LOC, register it separately.
 
 `loadHasMany` is re-exported from `index.ts:56` and imported by
 `associations/collection-proxy.ts` — update both.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

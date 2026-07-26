@@ -19,16 +19,16 @@ closed-reason: null
 
 The three association writers, all with `Mirrors:` JSDoc already:
 
-- `setBelongsTo` (`associations.ts:3686`, ~118 LOC) — "Mirrors:
+- `setBelongsTo` (`associations.ts:3695`, ~118 LOC) — "Mirrors:
   `BelongsToAssociation#writer`". Rails: `SingularAssociation#writer`
   (`singular_association.rb:25`) delegating to `BelongsToAssociation#replace`
   (`belongs_to_association.rb:95`). Target TS file:
   `packages/activerecord/src/associations/belongs-to-association.ts`, as `replace`.
-- `setHasOne` (`associations.ts:3811`, ~48 LOC) — "Mirrors:
+- `setHasOne` (`associations.ts:3820`, ~48 LOC) — "Mirrors:
   `HasOneAssociation#writer`". Rails: `HasOneAssociation#replace`
   (`has_one_association.rb:59`). Target TS file:
   `packages/activerecord/src/associations/has-one-association.ts`, as `replace`.
-- `setHasMany` (`associations.ts:3866`, ~17 LOC) — "Mirrors:
+- `setHasMany` (`associations.ts:3875`, ~17 LOC) — "Mirrors:
   `HasManyAssociation#writer`". Rails: `CollectionAssociation#writer`
   (`collection_association.rb:46`) -> `#replace` (`:242`). Target TS file:
   `packages/activerecord/src/associations/collection-association.ts`, which
@@ -37,6 +37,10 @@ The three association writers, all with `Mirrors:` JSDoc already:
   to `record.association(name).writer(targets)`.
 
 None of the three has an importer outside `associations.ts`.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

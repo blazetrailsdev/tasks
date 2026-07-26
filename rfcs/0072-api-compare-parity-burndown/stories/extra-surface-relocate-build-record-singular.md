@@ -19,18 +19,22 @@ closed-reason: null
 
 Singular `build_record` ports whose JSDoc ALREADY names the Rails method:
 
-- `buildHasOne` (`associations.ts:1855`, ~48 LOC) — JSDoc: "Mirrors:
+- `buildHasOne` (`associations.ts:1858`, ~48 LOC) — JSDoc: "Mirrors:
   `ActiveRecord::Associations::HasOneAssociation#build_record`". Rails' actual
   definition is `Association#build_record`
   (`vendor/rails/activerecord/lib/active_record/associations/association.rb:383`).
   Target TS file: `packages/activerecord/src/associations/has-one-association.ts`
   (or `association.ts` if shared), renamed to `buildRecord`.
-- `buildBelongsTo` (`associations.ts:1909`, ~17 LOC) — JSDoc: "Mirrors:
+- `buildBelongsTo` (`associations.ts:1912`, ~17 LOC) — JSDoc: "Mirrors:
   `ActiveRecord::Associations::BelongsToAssociation#build_record`". Same Rails
   definition site. Target TS file:
   `packages/activerecord/src/associations/belongs-to-association.ts`.
 
 Both are re-exported from `index.ts:54-55` — drop those.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

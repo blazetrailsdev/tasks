@@ -19,13 +19,13 @@ closed-reason: null
 
 Two small lifecycle functions:
 
-- `touchBelongsToParents` (`associations.ts:3884`, ~35 LOC) — Rails home
+- `touchBelongsToParents` (`associations.ts:3893`, ~35 LOC) — Rails home
   `Builder::BelongsTo.touch_record` / `.add_touch_callbacks`
   (`vendor/rails/activerecord/lib/active_record/associations/builder/belongs_to.rb:44`
   and `:79`). Target TS file:
   `packages/activerecord/src/associations/builder/belongs-to.ts`, renamed to
   `touchRecord`. Re-exported from `index.ts:62` — drop that.
-- `fireAssocCallbacks` (`associations.ts:3009`, ~31 LOC) — Rails home
+- `fireAssocCallbacks` (`associations.ts:3018`, ~31 LOC) — Rails home
   `CollectionAssociation#callback`
   (`vendor/rails/activerecord/lib/active_record/associations/collection_association.rb:492`,
   with `callbacks_for` at `:498`). Target TS file:
@@ -34,6 +34,10 @@ Two small lifecycle functions:
   `associations/builder/collection-association.ts`.
 
 Both are small; they fit comfortably in one PR together.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

@@ -19,13 +19,13 @@ closed-reason: null
 
 Through-association build/create:
 
-- `buildThroughAssociation` (`associations.ts:3048`, ~92 LOC) — JSDoc:
+- `buildThroughAssociation` (`associations.ts:3057`, ~92 LOC) — JSDoc:
   "Mirrors: `ActiveRecord::Associations::HasOneThroughAssociation#build`".
   Rails' real definitions are `ThroughAssociation#build_record`
   (`vendor/rails/activerecord/lib/active_record/associations/through_association.rb:116`)
   and `HasManyThroughAssociation#build_record` (`has_many_through_association.rb:90`);
   verify which one this body actually is before naming it.
-- `createThroughAssociation` (`associations.ts:3147`, ~114 LOC) — JSDoc:
+- `createThroughAssociation` (`associations.ts:3156`, ~114 LOC) — JSDoc:
   "Mirrors: `ActiveRecord::Associations::HasOneThroughAssociation#create`".
 
 Target TS files: `packages/activerecord/src/associations/through-association.ts`
@@ -33,6 +33,10 @@ and/or `has-one-through-association.ts` / `has-many-through-association.ts`,
 renamed to the Rails method verified above.
 
 Neither has an importer outside `associations.ts`, so callers are local.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

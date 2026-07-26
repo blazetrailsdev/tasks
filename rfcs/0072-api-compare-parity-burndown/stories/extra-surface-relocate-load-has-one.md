@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`loadHasOne` (`associations.ts:1659`, ~190 LOC) is the has_one target load.
+`loadHasOne` (`associations.ts:1662`, ~190 LOC) is the has_one target load.
 Rails home: `ActiveRecord::Associations::SingularAssociation#find_target`
 (`vendor/rails/activerecord/lib/active_record/associations/singular_association.rb:47`),
 reached through `HasOneAssociation`.
@@ -27,6 +27,10 @@ Target TS file: `packages/activerecord/src/associations/singular-association.ts`
 `findTarget`.
 
 `loadHasOne` is re-exported from `index.ts:53` — drop that.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

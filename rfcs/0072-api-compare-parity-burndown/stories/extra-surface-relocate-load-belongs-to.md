@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`loadBelongsTo` (`associations.ts:1425`, ~210 LOC) is the belongs_to target
+`loadBelongsTo` (`associations.ts:1428`, ~210 LOC) is the belongs_to target
 load. Rails home: `ActiveRecord::Associations::Association#find_target`
 (`vendor/rails/activerecord/lib/active_record/associations/association.rb:248`)
 as specialized by `BelongsToAssociation` (`belongs_to_association.rb`, with the
@@ -33,6 +33,10 @@ Note `loadBelongsTo` is ALSO a generated instance-method name on models
 the exported engine function moves.
 
 `loadBelongsTo` is re-exported from `index.ts:52` — drop that.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

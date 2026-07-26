@@ -19,7 +19,7 @@ closed-reason: null
 
 Counter-cache helpers on `associations.ts`:
 
-- `resolveCounterColumn` (`associations.ts:683`, ~55 LOC) — this looks like a
+- `resolveCounterColumn` (`associations.ts:684`, ~55 LOC) — this looks like a
   **duplicate to delete, not relocate**. Rails' method is
   `AssociationReflection#counter_cache_column`
   (`vendor/rails/activerecord/lib/active_record/reflection.rb:244`), and trails
@@ -27,13 +27,13 @@ Counter-cache helpers on `associations.ts`:
   (`counterCacheColumn()`, memoized per `reflection.ts:176`). Verify the two
   agree, then delete `resolveCounterColumn` and route its callers
   (`associations.ts`, `counter-cache.ts`) through the reflection method.
-- `countHasMany` (`associations.ts:2514`, ~44 LOC) — Rails home
+- `countHasMany` (`associations.ts:2523`, ~44 LOC) — Rails home
   `HasManyAssociation#count_records`
   (`vendor/rails/activerecord/lib/active_record/associations/has_many_association.rb:80`).
   Target TS file: `packages/activerecord/src/associations/has-many-association.ts`,
   renamed to `countRecords`. Callers: `counter-cache.ts`,
   `associations/collection-proxy.ts`.
-- `reflectLockVersionBump` (`associations.ts:3666`, ~7 LOC) — trails-only
+- `reflectLockVersionBump` (`associations.ts:3675`, ~7 LOC) — trails-only
   in-memory `lock_version` sync after a counter-cache UPDATE. Read its long
   coupling note before touching it. Rails does not need this because
   `Locking::Optimistic#update_counters` and the in-memory record are reconciled
@@ -41,6 +41,10 @@ Counter-cache helpers on `associations.ts`:
   investigation confirms no Rails counterpart, tag it `@internal` with that
   reason instead of moving it. Its one external caller is
   `associations/belongs-to-association.ts`.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

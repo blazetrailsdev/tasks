@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`loadHabtm` (`associations.ts:2932`, ~73 LOC) loads a
+`loadHabtm` (`associations.ts:2941`, ~73 LOC) loads a
 has_and_belongs_to_many association. Rails has no HABTM association class —
 `Builder::HasAndBelongsToMany`
 (`vendor/rails/activerecord/lib/active_record/associations/builder/has_and_belongs_to_many.rb`)
@@ -32,6 +32,10 @@ Decide between two homes and state the choice in the PR body:
 which already imports it.
 
 `loadHabtm` is re-exported from `index.ts:60` — drop that.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 

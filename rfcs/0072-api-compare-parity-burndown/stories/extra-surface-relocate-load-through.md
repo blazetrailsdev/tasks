@@ -19,12 +19,12 @@ closed-reason: null
 
 Through-association target loads:
 
-- `loadHasManyThrough` (`associations.ts:2562`, ~119 LOC) — Rails home
+- `loadHasManyThrough` (`associations.ts:2571`, ~119 LOC) — Rails home
   `HasManyThroughAssociation#find_target`
   (`vendor/rails/activerecord/lib/active_record/associations/has_many_through_association.rb:225`).
   Target TS file: `packages/activerecord/src/associations/has-many-through-association.ts`,
   renamed to `findTarget`.
-- `loadHasOneThrough` (`associations.ts:2685`, ~49 LOC) — Rails home
+- `loadHasOneThrough` (`associations.ts:2694`, ~49 LOC) — Rails home
   `HasOneThroughAssociation` (`has_one_through_association.rb`), which inherits
   `find_target` from `SingularAssociation`.
   Target TS file: `packages/activerecord/src/associations/has-one-through-association.ts`.
@@ -32,6 +32,10 @@ Through-association target loads:
 `loadHasManyThrough` is re-exported from `index.ts:57` — drop that.
 `loadHasOneThrough` is exported from `associations.ts` but has no importer
 outside that file, so it can move without touching callers.
+
+Line numbers are as of the merge of the classification PR (#5341). If they
+have drifted, re-derive with
+`grep -n '^export \(async \)\?function <name>' packages/activerecord/src/associations.ts`.
 
 ### Why relocation alone is not enough
 
