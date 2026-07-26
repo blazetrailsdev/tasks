@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: nested-class methods counted on the TS side but skipped on the Ruby side (94 classes)"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
