@@ -1,6 +1,6 @@
 ---
 title: "Migrate globalid extra-surface allow entries to inline tags"
-status: draft
+status: ready
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
