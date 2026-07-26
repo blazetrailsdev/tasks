@@ -1,6 +1,6 @@
 ---
 title: "Flag Mirrors: anchors that name no real Rails method"
-status: ready
+status: draft
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
