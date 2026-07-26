@@ -60,6 +60,39 @@ made every AR file fail at _collection_), `setup-second-pool.ts`,
 `encryption/test-helpers.ts:161`, `core.ts`, `insert-all.ts`. What remains is
 one fixture line, one production fallback, and a bounded test migration.
 
+## Method (reproducing the measurement)
+
+The numbers above are measured, not grepped. To re-run after any story lands:
+
+1. Set `permanentConnectionCheckout = "disallowed"` in `test-setup-ar.ts`.
+2. Replace the `throw` in `connection-handling.ts`'s `connection()` with a
+   `console.warn` printing the first non-internal stack frame. **This step is
+   required** — with the raise armed, every AR file fails at _collection_ and
+   you get one violation, not an inventory.
+3. Run every AR test file carrying a textual `.connection` (129 files) and
+   aggregate the warned frames.
+4. Revert both edits.
+
+A textual grep is not a substitute. `Base\.connection` over the AR suite reports
+114 files / 440 sites, which over-counts the tests by roughly 13× (most sites sit
+behind a fixture pin and never reach the gate) _and_ misses the real defects —
+the two production bugs #5323 fixed spelled it `this.connection` and
+`model.connection`. Only the armed gate enumerates this accurately.
+
+## Enforcement path
+
+`connection-handling.ts`'s `connection()` mirrors `connection_handling.rb:274-295`
+arm-for-arm: `deprecated` warns then leases, `disallowed` raises
+`ActiveRecordError` with Rails' message, `true` falls through, and the
+non-permanent branch returns `activeConnection`. `isPermanentLease()`
+(`connection-adapters/abstract/connection-pool.ts:640`) mirrors
+`permanent_lease?` (`sticky === null`). The raise is already pinned by
+`connection-handling.test.ts:145`, the Rails-named test
+_"#connection raises an error if ActiveRecord.permanent_connection_checkout == :disallowed"_.
+
+The gate only fires on a _permanent_ lease, which is why the fixture pin makes
+most call sites invisible to it — the same as in Rails.
+
 ## Two constraints that shape the design
 
 These are the expensive-to-rediscover facts. Both are already paid for.
