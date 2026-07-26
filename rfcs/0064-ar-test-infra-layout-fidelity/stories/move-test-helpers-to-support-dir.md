@@ -34,6 +34,10 @@ edit files at their final paths.
 
 ## Acceptance criteria
 
+- **Re-scan first.** The A-D table in the audit doc was taken against an older
+  commit; `main` drifts (`rocket-tables.ts` landed after it was written). Before
+  moving anything, list `test-helpers/` against current `main` and assign any
+  file missing from the table to a bucket, noting it in the PR body.
 - **This is NOT a whole-directory `git mv`.** `test-helpers/` survives. Create
   `support/` and move only the files listed below; see the "Every current
   `test-helpers/` entry has a destination" section of
