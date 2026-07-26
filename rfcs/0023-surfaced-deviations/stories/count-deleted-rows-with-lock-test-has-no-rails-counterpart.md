@@ -1,7 +1,7 @@
 ---
 title: "count-deleted-rows-with-lock.test.ts has no Rails counterpart and invents tables"
-status: draft
-updated: 2026-07-25
+status: closed
+updated: 2026-07-26
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "misspecified: adapters/abstract_mysql_adapter/count_deleted_rows_with_lock_test.rb DOES exist in vendor/rails (verified 2026-07-26); the remaining canonical-tables/model-layer convergence for this file is tracked by abstract-mysql-concurrency-tests-model-layer"
 ---
 
 ## Context
