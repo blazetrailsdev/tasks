@@ -1,7 +1,7 @@
 ---
 title: "arity: reasoned exclude file with stale-entry enforcement"
-status: in-progress
-updated: 2026-07-25
+status: done
+updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
 deps: []
