@@ -1,7 +1,7 @@
 ---
 title: "Stop wrapping ordinary assignment errors in AttributeAssignmentError"
-status: draft
-updated: 2026-07-19
+status: closed
+updated: 2026-07-26
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of assign-attributes-propagates-setter-errors-raw - same deviation (drop the AttributeAssignmentError wrap on ordinary assignment); the surviving story carries the fuller acceptance criteria"
 ---
 
 ## Context
