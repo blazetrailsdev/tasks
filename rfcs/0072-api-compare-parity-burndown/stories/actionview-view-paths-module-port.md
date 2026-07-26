@@ -1,6 +1,6 @@
 ---
 title: "actionview-view-paths-module-port"
-status: in-progress
+status: done
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
