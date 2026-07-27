@@ -1,7 +1,7 @@
 ---
 title: "Dedupe order clauses by value equality, not JSON.stringify"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
