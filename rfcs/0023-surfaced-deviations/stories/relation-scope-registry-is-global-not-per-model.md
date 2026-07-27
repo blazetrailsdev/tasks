@@ -1,7 +1,7 @@
 ---
 title: "Relation scoping reads a global ScopeRegistry instead of model.scope_registry"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
