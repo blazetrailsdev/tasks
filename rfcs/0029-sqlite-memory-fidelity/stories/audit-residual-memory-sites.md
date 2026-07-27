@@ -1,7 +1,7 @@
 ---
 title: "Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories"
-status: blocked
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
 deps:
@@ -18,7 +18,7 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "Final sweep: runs after the seven targeted convergence stories (deps) land, so the residual :memory: long-tail it classifies reflects their outcome rather than re-counting sites they are about to remove."
+blocked-by: null
 ---
 
 ## Context
