@@ -1,7 +1,7 @@
 ---
 title: "Spike: align AR test-setup layout with Rails test/cases/helper"
-status: in-progress
-updated: 2026-07-25
+status: done
+updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
