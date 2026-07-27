@@ -3,7 +3,7 @@ rfc: "0005-activerecord-gaps"
 title: "ActiveRecord parity gaps — associations, connection-pool, relation"
 status: active
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -11,6 +11,7 @@ clusters:
   - associations
   - connection-pool
   - relation
+priority: 2
 ---
 
 # RFC 0005 — ActiveRecord parity gaps
