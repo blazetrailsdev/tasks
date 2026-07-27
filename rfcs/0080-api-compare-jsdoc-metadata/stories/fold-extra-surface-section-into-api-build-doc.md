@@ -1,6 +1,6 @@
 ---
 title: "Fold extra-surface sibling-tag section into the api:build design doc (after PR #5229 merges)"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
