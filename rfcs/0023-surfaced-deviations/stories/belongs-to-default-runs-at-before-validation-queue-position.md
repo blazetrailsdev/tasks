@@ -1,7 +1,7 @@
 ---
 title: "belongs_to default hoisted ahead of before_validation queue (sync-chain deviation)"
-status: draft
-updated: 2026-07-17
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
