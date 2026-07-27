@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord class-slot writers onto accessors"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T13:41:08Z"
+assignee: "converge-activerecord-class-slot-writers"
 blocked-by: null
 closed-reason: null
 ---
