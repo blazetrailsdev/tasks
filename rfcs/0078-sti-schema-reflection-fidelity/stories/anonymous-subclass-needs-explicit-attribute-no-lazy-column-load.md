@@ -1,7 +1,7 @@
 ---
 title: "Anonymous tableName-only subclass needs an explicit attribute() — no sync lazy column load"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
