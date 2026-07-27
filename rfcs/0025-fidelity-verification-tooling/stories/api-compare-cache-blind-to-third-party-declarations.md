@@ -1,6 +1,6 @@
 ---
 title: "api:compare cache is blind to third-party declaration changes"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T15:51:28Z"
+assignee: "api-compare-cache-blind-to-third-party-declarations"
 blocked-by: null
 closed-reason: null
 ---
