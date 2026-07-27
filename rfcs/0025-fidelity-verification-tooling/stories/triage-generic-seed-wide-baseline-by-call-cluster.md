@@ -1,7 +1,7 @@
 ---
 title: "Triage the 4871 generic-reason wide call-mismatch baseline entries by call cluster"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
