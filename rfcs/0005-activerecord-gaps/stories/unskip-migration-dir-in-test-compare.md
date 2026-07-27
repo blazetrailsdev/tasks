@@ -1,6 +1,6 @@
 ---
 title: "unskip-migration-dir-in-test-compare"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
