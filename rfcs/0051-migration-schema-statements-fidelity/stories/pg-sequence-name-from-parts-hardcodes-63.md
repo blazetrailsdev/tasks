@@ -1,6 +1,6 @@
 ---
 title: "PG sequenceNameFromParts hardcodes 63 instead of maxIdentifierLength"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
