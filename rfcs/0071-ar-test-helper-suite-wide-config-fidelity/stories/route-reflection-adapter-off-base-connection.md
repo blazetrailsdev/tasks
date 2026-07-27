@@ -1,7 +1,7 @@
 ---
 title: "Route reflectionAdapter off the deprecated connection getter"
-status: ready
-updated: 2026-07-25
+status: claimed
+updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T19:53:52Z"
+assignee: "route-reflection-adapter-off-base-connection"
 blocked-by: null
 closed-reason: null
 ---
