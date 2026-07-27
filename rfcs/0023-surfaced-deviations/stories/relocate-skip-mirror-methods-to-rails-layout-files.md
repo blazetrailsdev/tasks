@@ -1,7 +1,7 @@
 ---
 title: "Relocate SKIP-mirror methods (dup/clone/inspect/toArray) into their Rails-layout files"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
