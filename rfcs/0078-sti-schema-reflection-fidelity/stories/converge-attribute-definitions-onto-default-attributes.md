@@ -1,7 +1,7 @@
 ---
 title: "Converge _attributeDefinitions onto Rails' _default_attributes (drops STI overlay machinery)"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
