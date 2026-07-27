@@ -1,7 +1,7 @@
 ---
 title: "subclass-tablename-columns-clobbered-by-base-load"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
