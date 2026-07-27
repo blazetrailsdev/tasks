@@ -3,7 +3,7 @@ rfc: "0023-surfaced-deviations"
 title: "Surfaced deviations & follow-ups — standing backlog for port-discovered work"
 status: postponed
 created: 2026-06-11
-updated: 2026-07-20
+updated: 2026-07-27
 owner: "@deanmarano"
 packages: []
 clusters:
@@ -12,6 +12,7 @@ clusters:
 related-rfcs:
   - "0005-activerecord-gaps"
   - "0015-ar-framework-gaps"
+priority: 2
 ---
 
 # RFC 0023 — Surfaced deviations & follow-ups
