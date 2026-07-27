@@ -1,7 +1,7 @@
 ---
 title: 'strict:"sync" callback guards throw bare Error, blocking rails-error-parity burndown'
-status: draft
-updated: 2026-07-21
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
