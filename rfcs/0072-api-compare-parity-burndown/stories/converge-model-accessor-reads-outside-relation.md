@@ -1,7 +1,7 @@
 ---
 title: "Converge model-accessor reads outside the relation family (7 wide-ratchet entries)"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
 deps: []
