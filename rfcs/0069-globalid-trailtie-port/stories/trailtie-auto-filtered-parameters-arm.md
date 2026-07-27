@@ -1,7 +1,7 @@
 ---
 title: "Port the railtie AutoFilteredParameters arm into trailtie.ts"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
