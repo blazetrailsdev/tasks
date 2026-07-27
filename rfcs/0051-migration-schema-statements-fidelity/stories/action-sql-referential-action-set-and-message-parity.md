@@ -1,6 +1,6 @@
 ---
 title: "actionSql accepts non-Rails referential actions and diverges on the ArgumentError text"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5418
 claim: "2026-07-27T15:27:35Z"
 assignee: "action-sql-referential-action-set-and-message-parity"
 blocked-by: null
