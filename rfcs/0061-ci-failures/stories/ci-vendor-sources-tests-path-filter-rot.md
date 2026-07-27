@@ -1,6 +1,6 @@
 ---
 title: "Guard vendor sources tests against silent rot under CI path filtering"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T18:35:54Z"
+assignee: "ci-vendor-sources-tests-path-filter-rot"
 blocked-by: null
 closed-reason: null
 ---
