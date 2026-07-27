@@ -1,6 +1,6 @@
 ---
 title: "Delete resolveSecondDatabaseConfig now that the named arunit2 entry owns the config"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
