@@ -1,7 +1,7 @@
 ---
 title: "converge-autosave-association-remaining-canonical-shadows-arm-guard"
-status: blocked
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-24T18:22:53Z"
-assignee: "converge-autosave-association-remaining-canonical-shadows-arm-guard"
-blocked-by: "Blocked on PR #5248 (pass 1, converge-autosave-association-bespoke-registermodel-canonical-shadows, still open) which rewrites the same file; also arming the guard today surfaces 13 canonical-name collisions (Pirate/Company/Author/Firm/User/Person/Customer/Book/Ship/Eye/Parrot/Owner/Comment) across 97 failing tests — far beyond the 500 LOC ceiling for one PR. Needs the intermediate passes registered and merged first."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
