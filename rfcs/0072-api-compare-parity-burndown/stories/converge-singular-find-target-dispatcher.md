@@ -88,9 +88,9 @@ macro-specific WHERE. That path is written once.
 
 What stays macro-conditional, and why it is honest to leave it: the owner-side
 cached-target read (Rails caches on the association instance, trails on the
-owner), has_one `:through` routing, and the no-reflection fallback that
+owner), has*one `:through` routing, and the no-reflection fallback that
 rebuilds a WHERE from raw options. Rails has no counterpart for any of them, so
-there is nothing to converge them _onto_. They are named helpers
+there is nothing to converge them \_onto*. They are named helpers
 (`_belongsToCachedHit`, `_singularKeys`, `_inlineSingularTarget`) so the main
 body keeps Rails' shape.
 
