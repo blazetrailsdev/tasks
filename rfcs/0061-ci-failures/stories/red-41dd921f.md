@@ -1,6 +1,6 @@
 ---
 title: "Query Parity (trails side) failing on main @41dd921f"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
