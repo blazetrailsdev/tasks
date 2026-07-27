@@ -1,7 +1,7 @@
 ---
 title: "truncate_tables should use with_temporary_connection + conn.tables"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
