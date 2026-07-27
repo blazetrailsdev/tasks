@@ -3,7 +3,7 @@ rfc: "0051-migration-schema-statements-fidelity"
 title: "Migration & SchemaStatements fidelity"
 status: active
 created: 2026-07-01
-updated: 2026-07-09
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -12,6 +12,7 @@ clusters:
   - "followup"
 related-rfcs:
   - "0023-surfaced-deviations"
+priority: 2
 ---
 
 # RFC 0051 — Migration & SchemaStatements fidelity
