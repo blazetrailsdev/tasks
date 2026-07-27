@@ -3,13 +3,14 @@ rfc: "0041-activesupport-messagepack-ext"
 title: "ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity)"
 status: draft
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - "activesupport"
 clusters: []
 related-rfcs:
   - "0023-surfaced-deviations"
+priority: 5
 ---
 
 ## Summary
