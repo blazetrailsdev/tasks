@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-class-level-writers-onto-accessors"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5387
 claim: "2026-07-27T01:42:55Z"
 assignee: "converge-ar-class-level-writers-onto-accessors"
 blocked-by: null
