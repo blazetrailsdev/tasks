@@ -1,7 +1,7 @@
 ---
 title: "InternalMetadata private helpers: bare .eq vs BindParam, memoized currentTime, dead _q"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
