@@ -1,7 +1,7 @@
 ---
 title: "Converge reflection memo invalidation onto Zeitwerk discard semantics (drop the trails-invented generation gate)"
-status: draft
-updated: 2026-07-14
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: ["reflection-registry-poison-actual-mechanism"]
