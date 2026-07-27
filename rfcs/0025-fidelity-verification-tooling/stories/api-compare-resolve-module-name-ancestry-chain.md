@@ -1,7 +1,7 @@
 ---
 title: "Add Ruby's ancestry-chain step to resolveModuleName's constant lookup"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
