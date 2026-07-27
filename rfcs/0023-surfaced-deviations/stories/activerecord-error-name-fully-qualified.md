@@ -1,7 +1,7 @@
 ---
 title: "AR error .name should be the fully-qualified Rails class name"
-status: draft
-updated: 2026-07-16
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
