@@ -1,7 +1,7 @@
 ---
 title: "Invert the aggregate funnel so execute_simple/grouped_calculation are the real bodies"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
