@@ -1,6 +1,6 @@
 ---
 title: "ESLint rule tests (eslint/*.test.mjs) collect as 'no tests' under vitest"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 15
-pr: null
+pr: 5424
 claim: "2026-07-27T16:18:24Z"
 assignee: "eslint-rule-tests-do-not-collect-under-vitest"
 blocked-by: null
