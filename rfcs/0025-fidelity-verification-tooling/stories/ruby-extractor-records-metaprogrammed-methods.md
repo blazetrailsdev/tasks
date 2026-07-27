@@ -1,6 +1,6 @@
 ---
 title: "Teach the Ruby extractor to record define_method / alias_method surface"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
