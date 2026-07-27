@@ -1,6 +1,6 @@
 ---
 title: "join-model: move trails-only CPK polymorphic-through test to a .trails.test.ts file"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
