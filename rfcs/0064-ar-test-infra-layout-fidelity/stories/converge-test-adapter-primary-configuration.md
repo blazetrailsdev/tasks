@@ -1,6 +1,6 @@
 ---
 title: "test-adapter.ts rebuilds the sqlite config hash instead of reading CONNECTIONS"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
