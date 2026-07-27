@@ -1,6 +1,6 @@
 ---
 title: "Wrap nil-able column lists with Ruby Array() semantics in the FK visitor"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
