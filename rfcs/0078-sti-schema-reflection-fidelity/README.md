@@ -10,7 +10,7 @@ packages:
   - "activemodel"
 clusters:
   - "schema"
-priority: 6
+priority: 2
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
