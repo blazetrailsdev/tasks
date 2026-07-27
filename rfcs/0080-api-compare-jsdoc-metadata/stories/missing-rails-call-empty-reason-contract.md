@@ -1,6 +1,6 @@
 ---
 title: "Decide the empty-reason contract for hand-authored @missingRailsCall tags"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
