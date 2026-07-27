@@ -1,6 +1,6 @@
 ---
 title: "Adapter test suites collide on shared 1_need_quoting table when co-scheduled"
-status: claimed
+status: done
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 4593
 claim: "2026-07-27T18:29:56Z"
 assignee: "adapter-suites-collide-on-need-quoting-table"
 blocked-by: null
