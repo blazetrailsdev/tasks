@@ -1,6 +1,6 @@
 ---
 title: "Drop the duplicate allowlist report key once the stats pipeline reads tagged"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
