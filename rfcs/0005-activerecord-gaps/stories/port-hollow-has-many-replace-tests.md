@@ -1,6 +1,6 @@
 ---
 title: "Port the five hollow Rails-named has_many replace tests onto canonical models"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T20:05:50Z"
+assignee: "port-hollow-has-many-replace-tests"
 blocked-by: null
 closed-reason: null
 ---
