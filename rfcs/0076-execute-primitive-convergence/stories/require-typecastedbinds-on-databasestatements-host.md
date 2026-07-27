@@ -1,7 +1,7 @@
 ---
 title: "Make typeCastedBinds required on DatabaseStatementsHost and drop the payload fallbacks"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
