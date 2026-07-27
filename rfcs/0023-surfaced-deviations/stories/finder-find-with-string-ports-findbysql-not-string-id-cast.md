@@ -1,7 +1,7 @@
 ---
 title: "finder.test 'find with string' ports findBySql smoke, not Rails' string-id cast assertion"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
