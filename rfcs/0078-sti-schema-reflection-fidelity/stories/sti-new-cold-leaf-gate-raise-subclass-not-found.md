@@ -1,7 +1,7 @@
 ---
 title: "STI new() cold-leaf gate should raise SubclassNotFound (column-aware _has_attribute? parity)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
