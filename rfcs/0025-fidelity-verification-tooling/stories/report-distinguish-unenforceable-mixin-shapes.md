@@ -1,13 +1,13 @@
 ---
 title: "method-order report: separate structurally-unenforceable mixin shapes from recoverable drops"
 status: ready
-updated: 2026-07-24
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 47
 pr: null
 claim: null
 assignee: null
