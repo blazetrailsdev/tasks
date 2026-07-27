@@ -1,6 +1,6 @@
 ---
 title: "Converge configuredTimezone() onto Rails' is_utc? branching"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T14:53:06Z"
+assignee: "converge-configured-timezone-helper-onto-is-utc"
 blocked-by: null
 closed-reason: null
 ---
