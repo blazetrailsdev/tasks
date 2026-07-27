@@ -1,7 +1,7 @@
 ---
 title: "Drop log-subscriber's invented camelCase typeCastedBinds payload alias"
-status: draft
-updated: 2026-07-14
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
