@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 34
 pr: null
 claim: null
 assignee: null
