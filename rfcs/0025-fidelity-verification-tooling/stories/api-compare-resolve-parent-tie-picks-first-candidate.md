@@ -1,6 +1,6 @@
 ---
 title: "Stop resolveParent binding candidates[0] on a zero-score tie"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
