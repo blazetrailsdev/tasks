@@ -1,6 +1,6 @@
 ---
 title: "Port or remove the six bodyless it.skip rotation tests in messages/"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
