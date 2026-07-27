@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: relocate loadHasOne to SingularAssociation#findTarget"
-status: in-progress
-updated: 2026-07-26
+status: done
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
 deps: ["extra-surface-associations-engine-classify"]
