@@ -1,6 +1,6 @@
 ---
 title: "Declare raise_on_missing_callback_actions in its Rails-layout file"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: missing-methods
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: data layer only (arel/activemodel/activerecord); this is actionpack/trailties surface"
 ---
 
 ## Context
