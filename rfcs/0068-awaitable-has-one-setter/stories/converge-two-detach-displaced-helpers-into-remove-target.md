@@ -1,6 +1,6 @@
 ---
 title: "Converge detachDisplacedTarget / detachDisplacedRecord into one remove_target! port"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5455
 claim: "2026-07-27T21:04:16Z"
 assignee: "converge-two-detach-displaced-helpers-into-remove-target"
 blocked-by: null
