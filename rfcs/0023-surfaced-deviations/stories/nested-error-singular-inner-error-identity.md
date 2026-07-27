@@ -1,7 +1,7 @@
 ---
 title: "Singular validates_associated wraps duplicated inner error (Rails wraps the actual instance)"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
