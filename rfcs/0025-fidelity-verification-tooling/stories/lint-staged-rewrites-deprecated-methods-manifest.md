@@ -1,6 +1,6 @@
 ---
 title: "lint-staged-rewrites-deprecated-methods-manifest"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 21
-pr: null
+pr: 5430
 claim: "2026-07-27T17:47:12Z"
 assignee: "lint-staged-rewrites-deprecated-methods-manifest"
 blocked-by: null
