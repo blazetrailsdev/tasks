@@ -1,6 +1,6 @@
 ---
 title: "Teach the Ruby extractor to record define_method / alias_method surface"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T18:23:02Z"
+assignee: "ruby-extractor-records-metaprogrammed-methods"
 blocked-by: null
 closed-reason: null
 ---
