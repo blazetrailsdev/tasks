@@ -1,7 +1,7 @@
 ---
 title: "Port settable Notifications.notifier + instrumenter registry (or skip-group the static deviation)"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
