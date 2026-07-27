@@ -1,7 +1,7 @@
 ---
 title: "Remove the invented _mysqlFkAction indirection in favour of the ported extractForeignKeyAction"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
