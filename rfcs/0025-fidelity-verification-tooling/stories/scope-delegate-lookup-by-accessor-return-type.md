@@ -1,7 +1,7 @@
 ---
 title: "Scope the delegation-transparency delegate lookup by accessor return type"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
