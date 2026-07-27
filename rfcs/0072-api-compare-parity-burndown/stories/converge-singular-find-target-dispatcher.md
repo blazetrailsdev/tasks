@@ -6,7 +6,7 @@ rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -70,3 +70,46 @@ the arms, so the matched `findTarget` body no longer makes the call itself.
   converted to use real reflections; no silent macro guessing.
 - `associations/singular-association.ts` stays at 0 novel extra surface.
 - Association suites pass with no test renames.
+
+## Implementation already exists — verified, unmerged
+
+A complete implementation is preserved on branch
+`wip/converge-singular-find-target` (commit `76a362f5f`). It was written and
+verified while #5363 was in review, but #5363 merged before it was pushed, so
+`main` carries the dispatcher instead. Start from that branch rather than
+re-deriving.
+
+What it does: replaces `findTarget(record, assocName, options, macro)` and its
+two ~200-line arms with a single `findTarget(record, assocName, options)`. The
+two bodies turned out to agree exactly where Rails does — the reflection path
+(statement cache, or `_builtAssociationScope` merged into the target scope and
+taken) was byte-identical in both, because AssociationScope already builds the
+macro-specific WHERE. That path is written once.
+
+What stays macro-conditional, and why it is honest to leave it: the owner-side
+cached-target read (Rails caches on the association instance, trails on the
+owner), has_one `:through` routing, and the no-reflection fallback that
+rebuilds a WHERE from raw options. Rails has no counterpart for any of them, so
+there is nothing to converge them _onto_. They are named helpers
+(`_belongsToCachedHit`, `_singularKeys`, `_inlineSingularTarget`) so the main
+body keeps Rails' shape.
+
+The macro is recovered internally — reflection, then the raw association
+definition, then belongs_to-only option spellings — so no caller passes it and
+no call site changed.
+
+Verified on that branch:
+
+- `associations/singular-association.ts` stays at 0 novel extra surface;
+  `associations.ts` stays at 0.
+- The `scope` entry is **removed** from the wide call-mismatch baseline: the
+  unified body makes the call directly. Wide ratchet OK (4931 baselined).
+- All nine `Rails API/Test Comparison` gates green locally.
+- 2345 tests passing across 26 association / strict-loading / scoping /
+  relation suites; no test renames.
+- Net **-20 lines** (375+/395-); ~200 lines of duplicated loader body removed.
+- `associations.ts` import graph byte-identical (no static edge to an
+  association class module).
+
+The branch is based on `9f85114a0` and will need a rebase onto current `main`,
+which now contains the dispatcher this replaces.
