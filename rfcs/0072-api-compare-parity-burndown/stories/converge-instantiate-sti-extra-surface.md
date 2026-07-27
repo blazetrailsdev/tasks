@@ -1,6 +1,6 @@
 ---
 title: "converge-instantiate-sti-extra-surface"
-status: claimed
+status: done
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5379
 claim: "2026-07-27T14:13:06Z"
 assignee: "converge-instantiate-sti-extra-surface"
 blocked-by: null
