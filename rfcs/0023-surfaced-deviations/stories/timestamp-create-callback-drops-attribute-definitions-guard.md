@@ -1,7 +1,7 @@
 ---
 title: "Timestamp create callback adds a non-Rails _attributeDefinitions guard"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
