@@ -1,13 +1,13 @@
 ---
 title: "extract-ts-api: resolve chained re-exports to a fixpoint and to the declaring key"
 status: ready
-updated: 2026-07-26
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null
