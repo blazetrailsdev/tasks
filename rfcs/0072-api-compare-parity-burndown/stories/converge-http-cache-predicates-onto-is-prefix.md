@@ -1,6 +1,6 @@
 ---
 title: "Converge http/cache.ts has* predicates onto the is* convention"
-status: closed
+status: ready
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Out of scope for AR-focused 0072 burndown: actionpack/actiondispatch is in the web/framework stack, not ActiveRecord's dependency graph (activerecord, activerecord-cli, arel, activemodel, activesupport, globalid, did-you-mean, trails-tsc). Reopen/re-home under a web-stack parity RFC if desired."
+closed-reason: null
 ---
 
 ## Context
