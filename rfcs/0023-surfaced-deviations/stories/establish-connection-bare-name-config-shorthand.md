@@ -1,7 +1,7 @@
 ---
 title: "Support establish_connection bare-name config and port determine_owner_name middle branch"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
