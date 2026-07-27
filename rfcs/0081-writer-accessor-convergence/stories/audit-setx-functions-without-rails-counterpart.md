@@ -1,6 +1,6 @@
 ---
 title: "Audit the 28 setX functions with no Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5392
 claim: "2026-07-27T02:13:09Z"
 assignee: "audit-setx-functions-without-rails-counterpart"
 blocked-by: null
