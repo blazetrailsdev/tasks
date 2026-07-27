@@ -1,6 +1,6 @@
 ---
 title: "Wide-ratchet reseed rewrites unrelated baseline files via non-ASCII re-encoding"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
