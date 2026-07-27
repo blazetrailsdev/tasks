@@ -1,6 +1,6 @@
 ---
 title: "Rewire Contact/ContactSti onto the registered fake adapter"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
