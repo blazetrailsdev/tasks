@@ -1,6 +1,6 @@
 ---
 title: "port-migration-foreign-key-dumper-cases"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5453
 claim: "2026-07-27T20:29:51Z"
 assignee: "port-migration-foreign-key-dumper-cases"
 blocked-by: null
