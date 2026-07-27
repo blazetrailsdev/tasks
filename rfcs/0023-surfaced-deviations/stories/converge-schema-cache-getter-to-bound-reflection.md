@@ -1,7 +1,7 @@
 ---
 title: "schemaCache returns the raw cache, not Rails' bound reflection, forcing a second schemaCacheBound accessor"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
