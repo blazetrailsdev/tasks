@@ -1,6 +1,6 @@
 ---
 title: "ESLint rule tests (eslint/*.test.mjs) collect as 'no tests' under vitest"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
