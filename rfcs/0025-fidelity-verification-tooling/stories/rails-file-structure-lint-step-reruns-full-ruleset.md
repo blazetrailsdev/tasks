@@ -1,6 +1,6 @@
 ---
 title: "rails-file-structure method-order CI step re-runs the whole ruleset"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
