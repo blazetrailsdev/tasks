@@ -1,6 +1,6 @@
 ---
 title: "fix-foreign-key-test-describe-path"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5457
 claim: "2026-07-27T21:16:16Z"
 assignee: "fix-foreign-key-test-describe-path"
 blocked-by: null
