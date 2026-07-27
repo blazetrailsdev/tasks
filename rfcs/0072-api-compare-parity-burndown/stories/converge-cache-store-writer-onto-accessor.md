@@ -1,6 +1,6 @@
 ---
 title: "Converge setCacheStore onto the documented foo= accessor convention"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
