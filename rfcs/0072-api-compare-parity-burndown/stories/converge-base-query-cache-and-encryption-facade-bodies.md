@@ -1,14 +1,14 @@
 ---
 title: "converge-base-query-cache-and-encryption-facade-bodies"
-status: claimed
-updated: 2026-07-26
+status: in-progress
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5377
 claim: "2026-07-26T23:50:56Z"
 assignee: "converge-base-query-cache-and-encryption-facade-bodies"
 blocked-by: null
