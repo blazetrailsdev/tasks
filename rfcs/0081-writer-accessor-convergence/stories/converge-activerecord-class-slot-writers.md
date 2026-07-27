@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord class-slot writers onto accessors"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
