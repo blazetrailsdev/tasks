@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: []
 deps-rfc: []
 est-loc: 280
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
