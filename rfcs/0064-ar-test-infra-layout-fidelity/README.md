@@ -3,10 +3,11 @@ rfc: "0064-ar-test-infra-layout-fidelity"
 title: "AR test-infra layout fidelity"
 status: active
 created: 2026-07-08
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages: ["activerecord"]
 clusters: []
+priority: 2
 ---
 
 ## Problem
