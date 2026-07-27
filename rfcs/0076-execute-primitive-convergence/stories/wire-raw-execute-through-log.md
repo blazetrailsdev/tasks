@@ -1,7 +1,7 @@
 ---
 title: "rawExecute wraps performQuery in log(), making log the single sql.active_record emitter"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
