@@ -1,6 +1,6 @@
 ---
 title: "support/load-schema-helper.ts (support/load_schema_helper.rb)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 300
 priority: 50
-pr: null
+pr: 5400
 claim: "2026-07-27T13:01:06Z"
 assignee: "support-load-schema-helper"
 blocked-by: null
