@@ -1,6 +1,6 @@
 ---
 title: "Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
@@ -16,8 +16,8 @@ deps-rfc: []
 est-loc: 30
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T15:11:39Z"
+assignee: "audit-residual-memory-sites"
 blocked-by: null
 ---
 
