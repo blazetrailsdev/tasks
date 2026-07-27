@@ -56,6 +56,7 @@ const indexJson = {
       id: r.dir,
       title: fm.title ?? null,
       status: fm.status ?? null,
+      priority: Number.isInteger(fm.priority) ? fm.priority : null,
       owner: fm.owner ?? null,
       created: fm.created ?? null,
       updated: fm.updated ?? null,
