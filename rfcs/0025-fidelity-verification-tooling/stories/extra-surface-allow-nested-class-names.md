@@ -1,13 +1,13 @@
 ---
 title: "extra-surface-allow-nested-class-names"
 status: ready
-updated: 2026-07-26
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 36
 pr: null
 claim: null
 assignee: null
