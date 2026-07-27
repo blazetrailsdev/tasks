@@ -1,6 +1,6 @@
 ---
 title: "Displacement removal failure is discarded when the owner is never saved"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
