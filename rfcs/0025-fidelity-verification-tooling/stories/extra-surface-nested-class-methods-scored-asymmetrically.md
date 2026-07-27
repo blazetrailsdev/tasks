@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: nested-class methods counted on the TS side but skipped on the Ruby side (94 classes)"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #5458: the Ruby-side skip and TS-side collection now agree. This story asked to decide which side to change; the decision was 'both sides count nested-class methods', documented at the code site in extra-surface.ts. Its 'parent allow-set must stay uninflated' guard was NOT met and is tracked by the superseding story. The stale Version/gte tags it names are deleted."
 ---
 
 ## Context
