@@ -1,7 +1,7 @@
 ---
 title: "Direct association(name).build() on has_one leaves the displaced row attached"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
