@@ -1,7 +1,7 @@
 ---
 title: "oo-addtotarget-or-in-distinct-value"
-status: draft
-updated: 2026-07-05
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
