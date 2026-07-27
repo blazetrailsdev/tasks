@@ -1,7 +1,7 @@
 ---
 title: "create_or_find_by rescue reads ad-hoc _conn(), not a with_connection lease"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
