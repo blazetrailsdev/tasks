@@ -1,6 +1,6 @@
 ---
 title: "api:build --emit-baselines/--check: derive exclude JSON from @missingRailsCall tags"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
