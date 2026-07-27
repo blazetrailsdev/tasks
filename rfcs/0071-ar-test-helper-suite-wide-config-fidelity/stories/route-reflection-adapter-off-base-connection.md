@@ -1,6 +1,6 @@
 ---
 title: "Route reflectionAdapter off the deprecated connection getter"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
