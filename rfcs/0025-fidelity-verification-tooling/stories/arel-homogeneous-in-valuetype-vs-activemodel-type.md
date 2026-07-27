@@ -1,7 +1,7 @@
 ---
 title: "arel HomogeneousIn#procForBinds references ValueType where Rails references ActiveModel::Type, leaving one lint-deps mismatch"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
