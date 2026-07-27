@@ -1,6 +1,6 @@
 ---
 title: "connect() should establish ARUnit2Model once arunit2 is provisioned"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
