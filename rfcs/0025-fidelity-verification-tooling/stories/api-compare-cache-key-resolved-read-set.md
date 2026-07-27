@@ -1,6 +1,6 @@
 ---
 title: "Key api:compare TS cache on the program's resolved read-set, not whole dependency packages"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
