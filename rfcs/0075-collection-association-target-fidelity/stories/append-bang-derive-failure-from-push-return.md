@@ -1,7 +1,7 @@
 ---
 title: "appendBang should raise from push's return value, not heuristic record inspection"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
