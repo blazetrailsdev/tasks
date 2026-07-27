@@ -1,6 +1,6 @@
 ---
 title: "Fold bespoke security.test.ts message coverage into the Rails-named suites"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
