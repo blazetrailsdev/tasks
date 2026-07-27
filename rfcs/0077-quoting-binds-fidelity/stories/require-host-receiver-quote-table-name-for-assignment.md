@@ -1,7 +1,7 @@
 ---
 title: "Require a host receiver on quoteTableNameForAssignment"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
