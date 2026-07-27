@@ -1,7 +1,7 @@
 ---
 title: "OO replaceOnTarget: model @replaced_or_added_targets dedup, @_was_loaded append gate, and conditional @association_ids reset"
-status: draft
-updated: 2026-07-05
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
