@@ -1,7 +1,7 @@
 ---
 title: "Wide call analyzer: normalize the Rails-private _ prefix on callee names"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
