@@ -3,12 +3,13 @@ rfc: "0034-sveltekit-kanban-example"
 title: "SvelteKit example app (Kanban modeled on tasks/rfcs)"
 status: draft
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-27
 owner: "@sveltekit-kanban-example-rfc"
 packages:
   - "activerecord"
 clusters:
   - "examples"
+priority: 11
 ---
 
 # RFC 0034 — SvelteKit example app (Kanban modeled on tasks/rfcs)
