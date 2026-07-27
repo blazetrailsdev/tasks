@@ -1,7 +1,7 @@
 ---
 title: "activesupport: MessageVerifier purpose gate uses JS truthiness — empty-string purpose treated as absent"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
