@@ -1,6 +1,6 @@
 ---
 title: "removeIndex pre-raises an invented CONCURRENTLY-in-transaction error"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
