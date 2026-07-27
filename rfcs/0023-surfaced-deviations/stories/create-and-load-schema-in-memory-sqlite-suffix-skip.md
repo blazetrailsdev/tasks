@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented :memory: suffix skip from create_and_load_schema"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
