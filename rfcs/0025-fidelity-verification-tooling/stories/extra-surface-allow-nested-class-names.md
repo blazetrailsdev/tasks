@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-allow-nested-class-names"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #5458: nested Ruby class names now join the enclosing file's allow-set (extra-surface.ts collectAllowedNames, nestedInEnclosingClass arm). The 'names only, not methods' constraint this story specified was deliberately NOT taken — the methods are required too, because trails ports a nested class as a sibling TS class in the same file. The residual precision cost is tracked by the superseding story."
 ---
 
 ## Context
