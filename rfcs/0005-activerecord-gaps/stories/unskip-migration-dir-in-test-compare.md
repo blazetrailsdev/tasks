@@ -1,7 +1,7 @@
 ---
 title: "unskip-migration-dir-in-test-compare"
-status: ready
-updated: 2026-07-25
+status: claimed
+updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T20:41:54Z"
+assignee: "unskip-migration-dir-in-test-compare"
 blocked-by: null
 closed-reason: null
 ---
