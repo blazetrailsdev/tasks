@@ -1,6 +1,6 @@
 ---
 title: "Converge FakeActiveRecordAdapter's superclass onto AbstractAdapter"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -21,10 +21,10 @@ Surfaced by the first `api:compare --package activerecord-test-support` run
 (PR #5433, story `wire-test-support-into-api-compare`), which reports
 inheritance 1/2 for the new package:
 
-````text
+```text
 FakeActiveRecordAdapter  fake_adapter.rb -> fake-adapter.ts
   rubySuper: AbstractAdapter   tsSuper: FakeAdapterBase   (super-mismatch)
-```text
+```
 
 Rails' `test/support/fake_adapter.rb` defines
 `FakeActiveRecordAdapter < ActiveRecord::ConnectionAdapters::AbstractAdapter`.
@@ -46,4 +46,3 @@ the same package are tracked separately by
 - `pnpm api:compare --package activerecord-test-support` reports inheritance
   2/2, or the mismatch is recorded as a reasoned exclusion.
 - Every `fake-adapter.ts` consumer still passes.
-````
