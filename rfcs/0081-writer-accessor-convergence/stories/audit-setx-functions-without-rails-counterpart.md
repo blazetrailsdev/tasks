@@ -1,6 +1,6 @@
 ---
 title: "Audit the 28 setX functions with no Rails counterpart"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
