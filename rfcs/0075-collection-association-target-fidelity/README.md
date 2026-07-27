@@ -9,7 +9,7 @@ packages:
   - "activerecord"
 clusters:
   - "associations"
-priority: 8
+priority: 2
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
