@@ -1,6 +1,6 @@
 ---
 title: "Route extensions / enable_extension / disable_extension through internal_exec_query"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
