@@ -1,6 +1,6 @@
 ---
 title: "Lint files auto-merged by a rebase (pre-commit hook never sees them)"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
