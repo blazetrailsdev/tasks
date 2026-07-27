@@ -1,6 +1,6 @@
 ---
 title: "Audit existing @noRailsEquivalent tags for convergeable surface"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T23:52:22Z"
+assignee: "audit-existing-tags-for-convergeable-surface"
 blocked-by: null
 closed-reason: null
 ---
