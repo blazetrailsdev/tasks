@@ -1,6 +1,6 @@
 ---
 title: "GID.build skips the parse path and duplicates model-id normalization"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
