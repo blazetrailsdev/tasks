@@ -1,7 +1,7 @@
 ---
 title: "rack-request-env-header-accessors"
-status: ready
-updated: 2026-07-26
+status: closed
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope for AR-focused 0072 burndown: rack is in the web/framework stack, not ActiveRecord's dependency graph (activerecord, activerecord-cli, arel, activemodel, activesupport, globalid, did-you-mean, trails-tsc). Reopen/re-home under a web-stack parity RFC if desired."
 ---
 
 ## Context
