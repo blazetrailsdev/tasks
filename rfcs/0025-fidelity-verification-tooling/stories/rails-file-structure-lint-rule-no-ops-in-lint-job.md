@@ -1,7 +1,7 @@
 ---
 title: "rails-file-structure-method-order silently no-ops in the Lint job (empty manifest)"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
