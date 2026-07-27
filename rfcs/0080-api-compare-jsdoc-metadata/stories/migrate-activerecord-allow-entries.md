@@ -1,7 +1,7 @@
 ---
 title: "Migrate activerecord allow entries + ambient finder methods to inline tags"
-status: in-progress
-updated: 2026-07-26
+status: done
+updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
 deps: ["no-rails-equivalent-tag-extractor-support"]
