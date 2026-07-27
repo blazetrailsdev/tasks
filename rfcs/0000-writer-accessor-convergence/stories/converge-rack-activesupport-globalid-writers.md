@@ -4,7 +4,8 @@ status: draft
 updated: 2026-07-27
 rfc: "0000-writer-accessor-convergence"
 cluster: extra-surface
-deps: []
+deps:
+  - module-level-config-accessor-shape
 deps-rfc: []
 est-loc: 220
 priority: null
