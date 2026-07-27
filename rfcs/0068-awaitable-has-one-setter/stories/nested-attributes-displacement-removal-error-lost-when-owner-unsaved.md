@@ -1,6 +1,6 @@
 ---
 title: "Displacement removal failure is discarded when the owner is never saved"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5441
 claim: "2026-07-27T19:11:50Z"
 assignee: "nested-attributes-displacement-removal-error-lost-when-owner-unsaved"
 blocked-by: null
