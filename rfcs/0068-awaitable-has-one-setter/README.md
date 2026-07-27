@@ -3,12 +3,13 @@ rfc: "0068-awaitable-has-one-setter"
 title: "Awaitable has_one setter: retire the deferred-displacement machinery"
 status: active
 created: 2026-07-17
-updated: 2026-07-25
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters:
   - "rails-deviation"
+priority: 2
 ---
 
 # RFC 0068 — Awaitable has_one setter: retire the deferred-displacement machinery
