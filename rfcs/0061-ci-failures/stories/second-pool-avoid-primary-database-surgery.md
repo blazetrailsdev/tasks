@@ -1,6 +1,6 @@
 ---
 title: "Stop setupSecondPool from mutating the shared primary database"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5438
 claim: "2026-07-27T18:47:51Z"
 assignee: "second-pool-avoid-primary-database-surgery"
 blocked-by: null
