@@ -1,7 +1,7 @@
 ---
 title: "convert-residual-test-connection-call-sites"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps:
