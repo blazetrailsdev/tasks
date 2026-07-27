@@ -1,6 +1,6 @@
 ---
 title: "Fix 6.25%-per-run tamper collision flake in codec.trails.test.ts"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T01:48:41Z"
+assignee: "codec-tamper-collision-flake"
 blocked-by: null
 closed-reason: null
 ---
