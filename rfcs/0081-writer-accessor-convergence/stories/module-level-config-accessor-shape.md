@@ -1,6 +1,6 @@
 ---
 title: "Decide the module-level config accessor shape and pilot it"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 3
-pr: null
+pr: 5391
 claim: "2026-07-27T02:05:10Z"
 assignee: "module-level-config-accessor-shape"
 blocked-by: null
