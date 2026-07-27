@@ -1,6 +1,6 @@
 ---
 title: "converge-primary-key-id-writer-onto-accessor"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5413
 claim: "2026-07-27T15:01:14Z"
 assignee: "converge-primary-key-id-writer-onto-accessor"
 blocked-by: null
