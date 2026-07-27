@@ -1,7 +1,7 @@
 ---
 title: "Share one in-memory target between the collection association object and its CollectionProxy"
-status: ready
-updated: 2026-07-24
+status: claimed
+updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T20:35:56Z"
+assignee: "share-collection-association-target-with-proxy"
 blocked-by: null
 closed-reason: null
 ---
