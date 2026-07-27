@@ -1,6 +1,6 @@
 ---
 title: "api:compare cache is blind to third-party declaration changes"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
