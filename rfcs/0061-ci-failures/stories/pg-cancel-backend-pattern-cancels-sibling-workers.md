@@ -1,6 +1,6 @@
 ---
 title: "transaction.test.ts pattern-based pg_cancel_backend cancels sibling workers' queries (CI unhandled-rejection flake)"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T18:41:53Z"
+assignee: "pg-cancel-backend-pattern-cancels-sibling-workers"
 blocked-by: null
 closed-reason: null
 ---
