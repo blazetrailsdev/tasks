@@ -1,6 +1,6 @@
 ---
 title: "Converge detachDisplacedTarget / detachDisplacedRecord into one remove_target! port"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
