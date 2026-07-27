@@ -1,6 +1,6 @@
 ---
 title: "connect() should establish ARUnit2Model once arunit2 is provisioned"
-status: blocked
+status: ready
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-07-27T13:25:09Z"
-assignee: "arunit2-provisioning-owns-second-pool"
-blocked-by: "Prerequisite not on main: connect() lives in packages/activerecord/src/support/connection.ts, which is introduced by PR #5397 (support-config-and-connection) — still OPEN. origin/main has only support/test-database-config.ts (buildTestDatabaseConfig) and no ARUnit2Model establish site to move. Doing this work now would mean either stacking on #5397 or re-implementing connect(). Unblock once #5397 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
