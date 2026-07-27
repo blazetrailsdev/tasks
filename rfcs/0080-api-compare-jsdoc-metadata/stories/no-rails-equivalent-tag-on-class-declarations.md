@@ -1,6 +1,6 @@
 ---
 title: "Honor @noRailsEquivalent on class declarations (blocks retiring the allow JSON)"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T21:41:00Z"
+assignee: "no-rails-equivalent-tag-on-class-declarations"
 blocked-by: null
 closed-reason: null
 ---
