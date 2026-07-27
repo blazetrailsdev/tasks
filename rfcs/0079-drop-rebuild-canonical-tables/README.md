@@ -3,7 +3,7 @@ rfc: "0079-drop-rebuild-canonical-tables"
 title: "Drive rebuildCanonicalTables call sites to zero, then delete it"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
@@ -12,6 +12,7 @@ clusters:
 related-rfcs:
   - "0059-drop-defineschema-mirror-create-table"
   - "0070-drop-repair-worker-schema"
+priority: 3
 ---
 
 ## Summary
