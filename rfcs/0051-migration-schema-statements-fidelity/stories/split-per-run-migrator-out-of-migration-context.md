@@ -1,7 +1,7 @@
 ---
 title: "Split a per-run Migrator (direction + target_version state) out of MigrationContext"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
