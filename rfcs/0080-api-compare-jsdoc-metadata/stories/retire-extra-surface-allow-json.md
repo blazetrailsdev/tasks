@@ -1,6 +1,6 @@
 ---
 title: "Retire extra-surface-allow.json — tags are the single source of truth"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
