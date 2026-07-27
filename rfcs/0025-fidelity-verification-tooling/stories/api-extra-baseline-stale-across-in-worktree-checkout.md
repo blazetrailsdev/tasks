@@ -1,6 +1,6 @@
 ---
 title: "api:extra baseline is stale across an in-worktree checkout"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 12
-pr: null
+pr: 5421
 claim: "2026-07-27T15:59:29Z"
 assignee: "api-extra-baseline-stale-across-in-worktree-checkout"
 blocked-by: null
