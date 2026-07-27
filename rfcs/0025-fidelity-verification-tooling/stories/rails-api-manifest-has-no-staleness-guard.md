@@ -1,6 +1,6 @@
 ---
 title: "api:extra does not check rails-api.json for staleness, only ts-api.json"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
