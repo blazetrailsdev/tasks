@@ -1,7 +1,7 @@
 ---
 title: "Derive the #{singular}Ids accessor name in one place"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
