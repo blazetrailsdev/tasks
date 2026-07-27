@@ -1,7 +1,7 @@
 ---
 title: "Teach columns_for_distinct/materializeLimitedIds composite keys; drop the LIMIT+collection composite-PK eager bypass"
-status: draft
-updated: 2026-07-17
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
