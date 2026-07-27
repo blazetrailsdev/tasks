@@ -1,7 +1,7 @@
 ---
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 title: "Ruby→TS idiom conversion classes"
-status: draft
+status: active
 created: 2026-07-27
 updated: 2026-07-27
 owner: "@your-handle"
@@ -11,6 +11,7 @@ packages:
   - "activesupport"
   - "activemodel"
 clusters: []
+priority: 3
 ---
 
 # Ruby to TS idiom conversion classes
