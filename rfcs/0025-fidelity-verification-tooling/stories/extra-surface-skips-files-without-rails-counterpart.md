@@ -1,6 +1,6 @@
 ---
 title: "extra-surface leaves TS files with no Rails counterpart entirely unmeasured"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T17:23:13Z"
+assignee: "extra-surface-skips-files-without-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---
