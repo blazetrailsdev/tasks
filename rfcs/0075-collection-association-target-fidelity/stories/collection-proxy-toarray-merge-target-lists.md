@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#toArray must apply merge_target_lists merge like load() (prefer in-memory, refresh attrs, preserve destroy marks)"
-status: draft
-updated: 2026-06-15
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
