@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: database.yml config-key accessors (statementLimit) have no Ruby def"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
