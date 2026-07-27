@@ -1,7 +1,7 @@
 ---
 title: "Relation#destroy is missing the multiple-ids / composite-PK branch"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
