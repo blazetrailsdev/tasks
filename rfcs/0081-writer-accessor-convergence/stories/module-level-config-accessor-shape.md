@@ -1,6 +1,6 @@
 ---
 title: "Decide the module-level config accessor shape and pilot it"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
