@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: nested-class methods counted on the TS side but skipped on the Ruby side (94 classes)"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
