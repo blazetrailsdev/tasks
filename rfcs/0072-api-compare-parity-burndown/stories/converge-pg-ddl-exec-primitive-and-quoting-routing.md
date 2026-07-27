@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-ddl-exec-primitive-and-quoting-routing"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
