@@ -1,7 +1,7 @@
 ---
 title: "P13 — implement StandaloneConnection class"
-status: blocked
-updated: 2026-05-29
+status: closed
+updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
@@ -11,7 +11,8 @@ priority: 40
 pr: null
 claim: null
 assignee: null
-blocked-by: "Rails source refresh — StandaloneConnection absent from the vendored snapshot"
+blocked-by: null
+closed-reason: "Mis-specified: no StandaloneConnection class exists in Rails (the name is only the test class StandaloneConnectionTest); the tested surface (DatabaseConfig#new_connection, AbstractAdapter#throw_away!/#close/#active?) is already ported (database-config.ts newConnection, abstract-adapter.ts throwAwayBang), and standalone-connection.test.ts was un-stubbed by 0030/nested-error-standalone-connection-skips (3 tests live, async-fallback recorded permanent-skip pending FutureResult/load_async). Vendor-refresh blocker was unsatisfiable."
 ---
 
 ## Context
