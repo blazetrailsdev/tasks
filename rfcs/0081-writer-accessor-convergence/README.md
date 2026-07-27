@@ -78,3 +78,91 @@ shape-3 conversion.
 
 Renaming the 6 faithful `set_*` ports. Touching async behavior — there is none
 to preserve. Any package outside the data layer.
+
+## Decision — shape 2 (module-level config), settled by the pilot
+
+Settled by `module-level-config-accessor-shape` (pilot: `maintainTestSchema`,
+`asyncQueryExecutor`, `queues`).
+
+**The shape.** A single exported object literal named `ActiveRecord`, living in
+`packages/activerecord/src/ar-config.ts`, with a `get`/`set` accessor pair per
+flag over a file-local `let` backing binding:
+
+```ts
+let _maintainTestSchema: boolean | null = null;
+
+export const ActiveRecord = {
+  get maintainTestSchema(): boolean | null {
+    return _maintainTestSchema;
+  },
+  set maintainTestSchema(value: boolean | null) {
+    _maintainTestSchema = value;
+  },
+};
+```
+
+Call sites read and write it exactly as Rails spells it:
+`ActiveRecord.maintainTestSchema = cfg.maintainTestSchema`.
+
+**Why an object literal and not a class with static accessors.** Rails declares
+these with `singleton_class.attr_accessor` on `module ActiveRecord`
+(active_record.rb:283-321). A `class ActiveRecord { static get ... }` would
+match api:compare just as well, but it introduces a class Rails does not have
+and one that can be instantiated or subclassed. The object literal is the closer
+analogue and is the form `include()`-style mixins in this repo already use.
+
+**What happens to the existing `export let` readers.** They are DELETED along
+with their `setX` companion, per flag, at conversion time. They are not kept as
+deprecated readers:
+
+- Rails has no deprecated alias here, so keeping one is a trails-only surface.
+- Keeping the `export let` would fork the storage — the accessor writes the
+  file-local backing binding, and an importer holding the old live binding would
+  read a value that no longer updates. A silently-stale reader is strictly worse
+  than a compile error.
+- The breakage is compile-time and total: every internal caller is a TS import
+  that fails to resolve, so nothing can be missed.
+
+**Import surface for internal callers.** `import { ActiveRecord } from
+"./ar-config.js"` — one import regardless of how many flags a file touches,
+replacing the current one-import-per-`setX` list (see `trailtie.ts`). The object
+is re-exported from the package index as `ActiveRecord`, so external callers get
+`ActiveRecord.maintainTestSchema = true` verbatim from the Rails docs.
+
+**Migration is per-flag, not big-bang.** Flags not yet converted keep their
+`export let` + `setX` pair; the two forms coexist in `ar-config.ts` with no
+adapter layer between them, because each flag's storage is independent.
+
+**Tooling change this required.** `harvestObjectLiteralMethods`
+(`scripts/api-compare/extract-ts-api.ts`) did not read `get`/`set` accessors out
+of an object literal, so the accessors would have extracted as nothing at all
+and the three flags would have flipped from matched to missing. It now harvests
+them the same way class accessors are harvested (reader: 0 params; writer: the
+assigned value). Side effect: five previously-invisible object-literal accessors
+elsewhere (`actionview` 3, `trailties` 2) now show up in `api:extra`. They are
+pre-existing surface the extractor was blind to, not new drift, and `api:extra`
+is report-only (nothing in CI gates on it).
+
+**Note on the acceptance criterion about `api:extra`.** The expected "matching
+drop" does not materialise and cannot: `ar-config.ts` has no Rails counterpart
+file in the api-compare file map, and `extra-surface.ts` only scores TS files
+that have one. The `setX` re-spellings there were never counted as extra
+surface. The measurable win is in `api:compare` instead — the three flags are
+now credited under their Rails names (`maintainTestSchema`) via the direct-match
+path rather than under `setMaintainTestSchema` via the umbrella-config setter
+fallback, and each reader gains a real arity check (arity-compared pairs
+7528 -> 7531, all matching). Remaining shape-2 conversions should be measured
+the same way.
+
+## Follow-up conversions (shape 2)
+
+The pilot converted 3 of 23. The remaining 20 in `ar-config.ts` plus
+`setQueryTransformers` in `query-transformers.ts` are split across three
+stories, batched so each stays under the 500-LOC ceiling:
+
+- `convert-ar-config-accessors-exported-flags` — the 8 flags re-exported from
+  the package index.
+- `convert-ar-config-accessors-internal-flags` — the 12 flags internal to the
+  package.
+- `convert-query-transformers-accessor` — `queryTransformers`, which lives
+  outside `ar-config.ts`.
