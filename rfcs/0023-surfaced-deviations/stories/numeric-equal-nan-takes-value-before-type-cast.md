@@ -1,6 +1,6 @@
 ---
 title: "Numeric#changed? must pass new_value_before_type_cast to equal_nan?"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
