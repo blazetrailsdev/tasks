@@ -1,6 +1,6 @@
 ---
 title: "support/load-schema-helper.ts (support/load_schema_helper.rb)"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
