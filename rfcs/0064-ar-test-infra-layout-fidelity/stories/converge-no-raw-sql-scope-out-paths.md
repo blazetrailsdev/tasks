@@ -1,6 +1,6 @@
 ---
 title: "Converge no-raw-sql scope-out paths onto a single source of truth"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5408
 claim: "2026-07-27T14:21:07Z"
 assignee: "converge-no-raw-sql-scope-out-paths"
 blocked-by: null
