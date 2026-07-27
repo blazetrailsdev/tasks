@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-remove-index-and-new-column-from-field-call-sets"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5409
 claim: "2026-07-27T14:29:08Z"
 assignee: "converge-pg-remove-index-and-new-column-from-field-call-sets"
 blocked-by: null
