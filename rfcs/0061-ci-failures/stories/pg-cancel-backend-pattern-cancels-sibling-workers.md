@@ -1,7 +1,7 @@
 ---
 title: "transaction.test.ts pattern-based pg_cancel_backend cancels sibling workers' queries (CI unhandled-rejection flake)"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
