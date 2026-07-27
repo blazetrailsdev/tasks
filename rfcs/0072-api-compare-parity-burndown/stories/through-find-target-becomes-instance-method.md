@@ -1,7 +1,7 @@
 ---
 title: "through-find-target-becomes-instance-method"
-status: ready
-updated: 2026-07-26
+status: draft
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
