@@ -1,6 +1,6 @@
 ---
 title: "Unexport activerecord writer helpers whose accessor already exists"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T01:57:10Z"
+assignee: "unexport-redundant-writer-helpers-activerecord"
 blocked-by: null
 closed-reason: null
 ---
