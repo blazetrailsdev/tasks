@@ -43,19 +43,19 @@ Remaining entries:
 - Read-side session accessors dropping `query_value` / `query_values`:
   `encoding`, `collation`, `ctype`, `current_database`, `current_schema`,
   `schema_search_path`, `table_comment`, `serial_sequence`, `schema_exists?`,
-  `primary_keys`, `reset_pk_sequence!`, `set_pk_sequence!`. These issue
+  `primary_keys`, `schema_names`, `extension_available?`, `extension_enabled?`,
+  `foreign_tables`, `get_advisory_lock`, `release_advisory_lock`. These issue
   `this.pg.schemaQuery(...)` and index the row map by hand instead of routing
   through the ported `queryValue` / `queryValues`.
-- `reset_pk_sequence!` / `set_pk_sequence!` also drop `quote` and `warn` —
-  Rails quotes the already-quoted sequence name for the `::regclass` cast and
-  logs `"#{table} has primary key #{pk} with no default sequence."` through
-  `@logger.warn`; trails binds the sequence and stays silent.
+  The pk-sequence half of this list (`reset_pk_sequence!` / `set_pk_sequence!`
+  dropping `query_value` / `quote` / `warn`) was **already shipped by #5389**
+  (`converge-pg-sequence-and-schema-qualified-name-helper-call-sets`) — those
+  entries are gone from the baseline. Do not re-derive them.
 
 ## Acceptance criteria
 
 - Route the DDL/session writes through the ported `execute` / `internalExecute`
   primitives and the reads through `queryValue` / `queryValues`.
-- Restore the `@logger.warn` arms in `set_pk_sequence!` / `reset_pk_sequence!`.
 - Every listed entry either drops out of
   `call-mismatches-wide-exclude/activerecord/connection-adapters/postgresql-adapter.json`
   or gets a specific `reason` naming the equivalent path.
