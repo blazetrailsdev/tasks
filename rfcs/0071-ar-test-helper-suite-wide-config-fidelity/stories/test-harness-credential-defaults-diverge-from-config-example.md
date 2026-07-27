@@ -1,6 +1,6 @@
 ---
 title: "Test harness credential defaults and interpolated key set diverge from config.example.yml"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T19:59:51Z"
+assignee: "test-harness-credential-defaults-diverge-from-config-example"
 blocked-by: null
 closed-reason: null
 ---
