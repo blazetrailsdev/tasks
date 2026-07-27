@@ -1,6 +1,6 @@
 ---
 title: "Unexport activerecord writer helpers whose accessor already exists"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
