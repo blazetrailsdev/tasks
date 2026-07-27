@@ -17,29 +17,33 @@ closed-reason: null
 
 ## Context
 
-The third population found while classifying the repo's 95 exported `setX`
-functions: 28 have NO Ruby counterpart under either spelling (`set_x` or `x=`),
-so they are neither faithful ports nor writer re-spellings. They are currently
-unclassified, and some are almost certainly trails-only seams that should be
-justified in place rather than converged.
+While classifying the repo's 95 exported `setX` functions, 28 turned out to have
+NO Ruby counterpart under either spelling (`set_x` or `x=`) — neither faithful
+ports nor writer re-spellings. This story audits the DATA-LAYER subset of them
+(`activerecord` / `activemodel` / `arel`); the rest belong to packages outside
+this RFC's scope and are not covered here.
 
-Examples: `setModelFinder` (`globalid` `locator.ts`),
-`setCurrentAdapterResolver` (`activerecord` `type.ts`), `setDjasScopeBuilder`
-and `setAssociationRelationFactory` (`activerecord` `associations/_scope-slots.ts`),
-`setReloadRoutesHook` (`trailties` `engine/lazy-route-set.ts`),
-`setGlobalPreviousSchemesFn` (`activerecord` `encryption/encrypted-attribute-type.ts`),
-the `time-travel.ts` group, and test-only helpers
-(`test-helpers/ddl-profile.ts`).
+activerecord members include `setCurrentAdapterResolver` (`type.ts`),
+`setDjasScopeBuilder` and `setAssociationRelationFactory`
+(`associations/_scope-slots.ts`), `setGlobalPreviousSchemesFn`
+(`encryption/encrypted-attribute-type.ts`), `setEncryptingOnlyEncryptorFactory`
+(`encryption/context.ts`), `setBaseResolver` (`log-subscriber.ts`),
+`setStoreCoder` (`store.ts`), `setEnumWarn` (`enum.ts`), `setPrimaryKeyAttr`
+(`attribute-methods/primary-key.ts`), `setTokenForSecret` (`token-for.ts`),
+`setPermanentConnectionCheckout` and `setRaiseIntWiderThan64bit`
+(`ar-config.ts`), `setDefaultTimezone` (`type/internal/timezone.ts`), plus
+test-only helpers in `test-helpers/ddl-profile.ts`.
 
 Two are not writers at all — `setDifference` and `setIntersection`
-(`activerecord` `associations/has-many-association.ts`) are set-theory helpers
-that the `setX` grep over-collects.
+(`associations/has-many-association.ts`) are set-theory helpers that the `setX`
+grep over-collects.
 
 ## Acceptance criteria
 
-- Each of the 28 is classified: faithful port under a name the classifier missed
-  (irregular Rails spelling), a writer that belongs in one of this RFC's
-  convergence stories, a genuine trails-only seam, or a false positive.
+- Each data-layer member is classified: faithful port under a name the
+  classifier missed (irregular Rails spelling), a writer that belongs in one of
+  this RFC's convergence stories, a genuine trails-only seam, or a false
+  positive.
 - Findings recorded as an audit report; anything convergeable is registered as a
   story rather than fixed here.
 - Genuine seams get the justification they need AT THE CALL SITE, and are NOT
