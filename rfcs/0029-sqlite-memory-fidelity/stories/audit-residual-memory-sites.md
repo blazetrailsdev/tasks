@@ -1,6 +1,6 @@
 ---
 title: "Audit residual :memory: sites (long tail + partial-audit files), spin convergence stories"
-status: claimed
+status: closed
 updated: 2026-07-27
 rfc: "0029-sqlite-memory-fidelity"
 cluster: adapter-test-fidelity
@@ -16,9 +16,10 @@ deps-rfc: []
 est-loc: 30
 priority: 8
 pr: null
-claim: "2026-07-27T15:11:39Z"
-assignee: "audit-residual-memory-sites"
+claim: null
+assignee: null
 blocked-by: null
+closed-reason: "Spike complete: per-file verdicts for all residual :memory: test sites recorded in the RFC 0029 divergence map; 7 convergence stories spun (connection-handlers-multi-db-file-based, connection-handlers-sharding-db-file-based, sqlite3-adapter-siblings-ambient-connection, sqlite3-connection-adapter-tests-ambient, connection-handler-pool-tests-ambient, long-tail-memory-sites-ambient, retire-legacy-sqlite3-adapter-test). Deliverables are docs in the tasks repo (pushed as 19ffba7ec) plus audits/residual-memory-sites-20260727T151923Z.md; zero trails files changed, so no trails PR."
 ---
 
 ## Context
