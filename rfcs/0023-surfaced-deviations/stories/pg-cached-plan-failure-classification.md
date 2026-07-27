@@ -1,7 +1,7 @@
 ---
 title: "PG: port is_cached_plan_failure? / PreparedStatementCacheExpired retry"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
