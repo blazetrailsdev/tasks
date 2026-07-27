@@ -1,7 +1,7 @@
 ---
 title: "Guard vendor sources tests against silent rot under CI path filtering"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
