@@ -1,6 +1,6 @@
 ---
 title: "Converge setCacheStore onto the documented foo= accessor convention"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5382
 claim: "2026-07-27T01:10:54Z"
 assignee: "converge-cache-store-writer-onto-accessor"
 blocked-by: null
