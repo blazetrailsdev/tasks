@@ -1,6 +1,6 @@
 ---
 title: "AR suites write db/primary.sqlite3 into the working tree; Rails uses the path as config only"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
