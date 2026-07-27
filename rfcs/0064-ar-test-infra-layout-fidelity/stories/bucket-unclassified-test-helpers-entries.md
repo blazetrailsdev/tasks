@@ -1,6 +1,6 @@
 ---
 title: "Bucket the test-helpers/ entries RFC 0064's disposition table misses"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
