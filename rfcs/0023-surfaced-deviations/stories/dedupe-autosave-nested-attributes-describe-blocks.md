@@ -1,7 +1,7 @@
 ---
 title: "Merge the duplicated TestDefaultAutosaveAssociationOnAHasManyAssociationWithAcceptsNestedAttributes describe blocks"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
