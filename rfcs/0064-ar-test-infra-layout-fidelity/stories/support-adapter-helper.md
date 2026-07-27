@@ -1,6 +1,6 @@
 ---
 title: "support/adapter-helper.ts (support/adapter_helper.rb)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 250
 priority: 45
-pr: null
+pr: 5398
 claim: "2026-07-27T12:53:13Z"
 assignee: "support-adapter-helper"
 blocked-by: null
