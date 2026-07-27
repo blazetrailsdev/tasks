@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes build on an unloaded has_one leaves the displaced row attached"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5456
 claim: "2026-07-27T21:10:16Z"
 assignee: "nested-attributes-build-unloaded-has-one-target-not-displaced"
 blocked-by: null
