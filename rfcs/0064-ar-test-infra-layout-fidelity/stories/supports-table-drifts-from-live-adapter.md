@@ -1,6 +1,6 @@
 ---
 title: "supports.ts bakes static capability answers instead of asking the connection"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
