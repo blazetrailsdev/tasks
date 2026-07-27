@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify has-one-through-association.ts's 5 novel extras"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
