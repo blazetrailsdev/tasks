@@ -34,7 +34,7 @@ async_result)`: asserts the value is an `ActiveRecord::Promise` and unwraps
   `connection-adapters/postgresql/schema-statements-class.test.ts` instead of
   having one registered support file.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 Assumes `move-test-helpers-to-support-dir` has landed.
 
 ## Acceptance criteria

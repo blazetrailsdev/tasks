@@ -17,9 +17,7 @@ closed-reason: null
 
 ## Context
 
-The RFC 0064 spike
-(`docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md`, PR #5309)
-dispositions every file in `packages/activerecord/src/test-helpers/` into four
+This RFC's README dispositions every file in `packages/activerecord/src/test-helpers/` into four
 buckets. `move-test-helpers-to-support-dir` handles B and C; bucket A stays.
 This story resolves **bucket D** — files whose destination could not be settled
 from the Rails source without further verification:

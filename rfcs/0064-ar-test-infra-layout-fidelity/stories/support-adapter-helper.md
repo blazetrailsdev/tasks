@@ -28,7 +28,7 @@ gates live in `support/supports.ts` (an invented name with no Rails
 counterpart). `test-adapter.ts` itself has no Rails counterpart by name —
 its content maps to `adapter_helper.rb` plus `connection_helper.rb`.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 Assumes `move-test-helpers-to-support-dir` has landed.
 
 ## Acceptance criteria

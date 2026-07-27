@@ -23,7 +23,7 @@ closed-reason: null
 `:39`, `:40` at `:42`, `:42` at `:47`, `:99-102` at `:55-59`). The name
 `test-setup-ar.ts` is a trails invention; `helper.rb` is the Rails name.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 Depends on `move-test-helpers-to-support-dir` landing first.
 
 ## Acceptance criteria

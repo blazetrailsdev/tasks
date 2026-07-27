@@ -30,7 +30,7 @@ per adapter rather than loading a checked-in `schema.rb`, because
 `test-helpers/test-schema.ts` is the TS mirror of `schema.rb` rather than a
 loadable Ruby file.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 Assumes `move-test-helpers-to-support-dir` has landed.
 
 ## Acceptance criteria

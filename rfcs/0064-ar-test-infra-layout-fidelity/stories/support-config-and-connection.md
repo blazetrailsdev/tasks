@@ -32,7 +32,7 @@ does, from `ARCONN` naming a key of the `connections:` hash"),
 `support/arunit2-config.ts`. The `establishConnection` bootstrap that matches
 `ARTest.connect` currently sits in `test-setup-dy.ts:37-39`.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 Assumes `move-test-helpers-to-support-dir` has landed (paths above use
 `support/`).
 

@@ -28,21 +28,20 @@ Two files in it are already exact kebab renderings of their Rails counterparts:
 `test-helpers/schema-dumping-helper.ts` (← `support/schema_dumping_helper.rb`).
 The file-level mirroring has already started; only the directory name is wrong.
 
-Spike: `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` (PR #5309).
+See this RFC's README for the target layout and the A-D disposition.
 This is step 1 of that plan and must land before the sibling stories, so they
 edit files at their final paths.
 
 ## Acceptance criteria
 
-- **Re-scan first.** The A-D table in the audit doc was taken against an older
+- **Re-scan first.** The A-D table in this RFC's README was taken against an older
   commit; `main` drifts (`rocket-tables.ts` landed after it was written). Before
   moving anything, list `test-helpers/` against current `main` and assign any
   file missing from the table to a bucket, noting it in the PR body.
 - **This is NOT a whole-directory `git mv`.** `test-helpers/` survives. Create
-  `support/` and move only the files listed below; see the "Every current
-  `test-helpers/` entry has a destination" section of
-  `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` for the full
-  A-D disposition of all 36 files and 4 subdirectories.
+  `support/` and move only the files listed below; see the "Disposition of every current
+  `test-helpers/` entry" section of this RFC's README for the full A-D
+  disposition of all 36 files and 4 subdirectories.
 - **Stays in `test-helpers/` (bucket A)** — mirrors the Rails `test/` root, not
   `test/support/`: `models/`, `fixtures/`, `migrations/`, `assets/`,
   `test-schema.ts`.
