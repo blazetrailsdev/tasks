@@ -1,7 +1,7 @@
 ---
 title: "Port the five hollow Rails-named has_many replace tests onto canonical models"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
