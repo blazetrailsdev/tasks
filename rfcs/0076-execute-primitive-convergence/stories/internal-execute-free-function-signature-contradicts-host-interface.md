@@ -1,14 +1,14 @@
 ---
 title: "Free internalExecute takes positional binds while every host declares (sql, name, opts)"
-status: draft
-updated: 2026-07-20
+status: done
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5384
 claim: null
 assignee: null
 blocked-by: null
