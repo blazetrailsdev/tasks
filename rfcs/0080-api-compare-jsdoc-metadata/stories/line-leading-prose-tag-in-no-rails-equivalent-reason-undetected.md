@@ -1,6 +1,6 @@
 ---
 title: "Detect a line-leading prose @tag inside a @noRailsEquivalent reason"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
