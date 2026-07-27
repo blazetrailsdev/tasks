@@ -1,6 +1,6 @@
 ---
 title: "Track: retire legacy Q-suffix predicate names"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
