@@ -1,7 +1,7 @@
 ---
 title: "MySQL row-format helpers: read adapter state via this-typed host + async SHOW VARIABLES memo"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
 deps: []
