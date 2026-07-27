@@ -1,7 +1,7 @@
 ---
 title: "connection-swapping-nested: declare Rails' full shard database sets"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
