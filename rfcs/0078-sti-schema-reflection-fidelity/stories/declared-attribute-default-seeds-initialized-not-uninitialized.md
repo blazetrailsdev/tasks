@@ -1,7 +1,7 @@
 ---
 title: "Declared attribute() with no default seeds an initialized slot where Rails leaves it uninitialized"
-status: draft
-updated: 2026-07-17
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
