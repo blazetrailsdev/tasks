@@ -1,6 +1,6 @@
 ---
 title: "MySQL/PostgreSQL TypeMetadata bypass the Deduplicable registry"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
