@@ -3,12 +3,13 @@ rfc: "0076-execute-primitive-convergence"
 title: "execute/raw_execute/perform_query primitive convergence"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
 clusters:
   - "adapters"
+priority: 2
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
