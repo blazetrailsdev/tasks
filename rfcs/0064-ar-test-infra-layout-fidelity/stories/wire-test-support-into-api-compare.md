@@ -1,6 +1,6 @@
 ---
 title: "wire-test-support-into-api-compare"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
