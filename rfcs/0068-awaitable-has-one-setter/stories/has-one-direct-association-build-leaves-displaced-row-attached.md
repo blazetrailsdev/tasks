@@ -1,6 +1,6 @@
 ---
 title: "Direct association(name).build() on has_one leaves the displaced row attached"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T19:05:51Z"
+assignee: "has-one-direct-association-build-leaves-displaced-row-attached"
 blocked-by: null
 closed-reason: null
 ---
