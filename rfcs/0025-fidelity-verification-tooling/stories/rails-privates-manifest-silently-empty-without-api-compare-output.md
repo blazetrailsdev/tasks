@@ -1,6 +1,6 @@
 ---
 title: "rails-private-jsdoc gate silently no-ops when rails-api.json is absent"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 14
-pr: null
+pr: 5423
 claim: "2026-07-27T16:15:19Z"
 assignee: "rails-privates-manifest-silently-empty-without-api-compare-output"
 blocked-by: null
