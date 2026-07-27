@@ -1,6 +1,6 @@
 ---
 title: "counter-cache: destroy_row derives foreign keys trails-side instead of reading reflection.foreign_key"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
