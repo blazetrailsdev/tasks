@@ -1,6 +1,6 @@
 ---
 title: "connection-handling.test.ts splits Rails' single ConnectionHandlingTest and hijacks Base's pool"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
