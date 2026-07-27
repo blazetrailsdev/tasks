@@ -1,7 +1,7 @@
 ---
 title: "Binary dirty tracking is inverted: equal-bytes assign reports changed, in-place mutation does not"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
