@@ -7,7 +7,6 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 64
 pr: null
 claim: "2026-07-24T19:58:53Z"
 assignee: "body-pins-seed-floor-at-release"
