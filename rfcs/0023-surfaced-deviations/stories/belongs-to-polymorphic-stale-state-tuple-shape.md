@@ -1,7 +1,7 @@
 ---
 title: "belongs_to polymorphic staleState: converge JSON.stringify shim to Rails [fk, type] tuple"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
