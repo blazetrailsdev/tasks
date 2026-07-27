@@ -1,7 +1,7 @@
 ---
 title: "support/config.ts + support/connection.ts (support/config.rb, support/connection.rb)"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: ["move-test-helpers-to-support-dir"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T11:44:12Z"
+assignee: "support-config-and-connection"
 blocked-by: null
 closed-reason: null
 ---
