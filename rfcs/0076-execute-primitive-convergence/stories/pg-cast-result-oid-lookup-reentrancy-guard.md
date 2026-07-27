@@ -1,7 +1,7 @@
 ---
 title: "Guard PG castResult/getOidType reentrancy so reflection cannot recurse"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
