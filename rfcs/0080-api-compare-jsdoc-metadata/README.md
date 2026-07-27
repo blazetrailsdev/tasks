@@ -3,7 +3,7 @@ rfc: "0080-api-compare-jsdoc-metadata"
 title: "api-compare JSDoc metadata: one tag family for calls parity and extra surface"
 status: active
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
@@ -12,6 +12,7 @@ packages:
   - "arel"
 clusters:
   - "api-compare"
+priority: 2
 ---
 
 # api-compare JSDoc metadata — one tag family for calls parity and extra surface
