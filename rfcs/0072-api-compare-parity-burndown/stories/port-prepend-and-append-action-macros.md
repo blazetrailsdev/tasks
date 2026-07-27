@@ -1,6 +1,6 @@
 ---
 title: "Port the missing prepend_*_action / append_*_action macros"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: missing-methods
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of port-prepend-and-append-action-callback-macros (pre-existing draft with the same Rails callbacks.rb:230-252 finding)"
 ---
 
 ## Context
