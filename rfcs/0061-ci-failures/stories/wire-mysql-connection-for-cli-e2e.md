@@ -1,6 +1,6 @@
 ---
 title: "CLI mysql-happy-path E2E never runs: no CI job sets MYSQL_TEST_URL"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
