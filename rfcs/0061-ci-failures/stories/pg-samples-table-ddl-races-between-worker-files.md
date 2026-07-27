@@ -1,6 +1,6 @@
 ---
 title: "PG transaction test files drop each other's samples table on the shared CI database"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5443
 claim: "2026-07-27T19:29:50Z"
 assignee: "pg-samples-table-ddl-races-between-worker-files"
 blocked-by: null
