@@ -1,7 +1,7 @@
 ---
 title: "STI subclass attribute() routes to the STI base, unlike Rails' per-class pending modifications"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
