@@ -1,6 +1,6 @@
 ---
 title: "converge-activemodel-timezone-onto-time-zone-default"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5402
 claim: "2026-07-27T13:33:06Z"
 assignee: "converge-activemodel-timezone-onto-time-zone-default"
 blocked-by: null
