@@ -1,7 +1,7 @@
 ---
 title: "YAMLColumn scalar dumps use '---\\nstr' not Ruby's '--- str'"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
