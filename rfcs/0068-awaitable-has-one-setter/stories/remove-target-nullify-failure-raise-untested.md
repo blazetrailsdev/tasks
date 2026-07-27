@@ -1,6 +1,6 @@
 ---
 title: "remove_target! nullify-failure RecordNotSaved raise has no coverage"
-status: claimed
+status: done
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 4832
 claim: "2026-07-27T19:23:50Z"
 assignee: "remove-target-nullify-failure-raise-untested"
 blocked-by: null
