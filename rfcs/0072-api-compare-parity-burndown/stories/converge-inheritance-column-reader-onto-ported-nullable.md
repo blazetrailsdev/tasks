@@ -1,6 +1,6 @@
 ---
 title: "converge-inheritance-column-reader-onto-ported-nullable"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5378
 claim: "2026-07-27T00:06:54Z"
 assignee: "converge-inheritance-column-reader-onto-ported-nullable"
 blocked-by: null
