@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: add a TASKS_DIR test seam so the read path is testable without a real checkout"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
