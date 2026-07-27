@@ -1,7 +1,7 @@
 ---
 title: "IntegerType#cast_value diverges from to_i rescue nil for strings and objects"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
