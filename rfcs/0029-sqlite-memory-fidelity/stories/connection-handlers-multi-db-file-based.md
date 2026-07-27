@@ -39,7 +39,7 @@ nothing.
 ## Acceptance criteria
 
 - [ ] Only the site corresponding to Rails' line 78 (`connectsTo({ database: {
-  writing, secondary } })`, trails lines 82-83) keeps `":memory:"`.
+writing, secondary } })`, trails lines 82-83) keeps `":memory:"`.
 - [ ] Every other config uses a distinct on-disk sqlite path mirroring Rails'
       `test/db/primary.sqlite3` / `test/db/readonly.sqlite3` naming (trails may
       place them under a temp dir; the fidelity property is file-backed-ness +

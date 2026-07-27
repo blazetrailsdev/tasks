@@ -49,7 +49,7 @@ distinct databases matter. Two glaring cases:
 - [ ] Config-hash tests use distinct on-disk paths mirroring
       `primary.sqlite3` / `primary_shard_one.sqlite3`.
 - [ ] Data-separation tests (`same shards across clusters`, `sharding
-  separation`) use distinct temp files per shard/cluster, mirroring Rails'
+separation`) use distinct temp files per shard/cluster, mirroring Rails'
       `Tempfile` usage.
 - [ ] Restore the `dbConfig.database` assertions Rails makes at `:50-55` and
       `:84-99` alongside the existing `dbConfig.name` ones.
