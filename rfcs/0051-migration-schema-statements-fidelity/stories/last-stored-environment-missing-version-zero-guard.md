@@ -1,7 +1,7 @@
 ---
 title: "Migrator#lastStoredEnvironment misses Rails' current_version==0 nil short-circuit"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
