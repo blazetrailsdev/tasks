@@ -1,6 +1,6 @@
 ---
 title: "api:build rollout step 1: migrate arel wide-baseline reasons into @missingRailsCall JSDoc"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
