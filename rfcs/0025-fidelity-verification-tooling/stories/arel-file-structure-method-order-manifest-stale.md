@@ -1,6 +1,6 @@
 ---
 title: "eslint rails-file-structure-method-order: committed manifest disagrees with CI-regenerated one (4 arel files red locally)"
-status: claimed
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 16
-pr: null
+pr: 5030
 claim: "2026-07-27T16:26:21Z"
 assignee: "arel-file-structure-method-order-manifest-stale"
 blocked-by: null
