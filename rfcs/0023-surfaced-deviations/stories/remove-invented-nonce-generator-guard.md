@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented no-generator guard in generateContentSecurityPolicyNonce"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
