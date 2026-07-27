@@ -1,6 +1,6 @@
 ---
 title: "Guard against static class fields shadowing the abstract_class writer"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
