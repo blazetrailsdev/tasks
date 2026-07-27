@@ -1,7 +1,7 @@
 ---
 title: "Audit and restore assert_queries_count assertions dropped from ported AR tests"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
