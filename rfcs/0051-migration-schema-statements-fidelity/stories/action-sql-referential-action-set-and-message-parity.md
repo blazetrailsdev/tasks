@@ -1,7 +1,7 @@
 ---
 title: "actionSql accepts non-Rails referential actions and diverges on the ArgumentError text"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
