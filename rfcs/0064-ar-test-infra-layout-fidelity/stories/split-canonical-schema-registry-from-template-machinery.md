@@ -1,6 +1,6 @@
 ---
 title: "split-canonical-schema-registry-from-template-machinery"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
