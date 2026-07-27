@@ -1,7 +1,7 @@
 ---
 title: "has_one setOwnerAttributes must resolve the owner PK via reflection.active_record_primary_key"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
