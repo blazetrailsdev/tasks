@@ -1,6 +1,6 @@
 ---
 title: "removeConstraint builds a bare AlterTable instead of create_alter_table"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
