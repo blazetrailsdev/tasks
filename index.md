@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-writer-accessor-convergence](rfcs/0000-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | draft | @your-handle | activerecord, actionpack, actionview, activesupport, rack, globalid |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -85,3 +84,4 @@
 | [0078-sti-schema-reflection-fidelity](rfcs/0078-sti-schema-reflection-fidelity/README.md) | STI / schema-reflection attribute-definition fidelity | draft | @your-handle | activerecord, activemodel |
 | [0079-drop-rebuild-canonical-tables](rfcs/0079-drop-rebuild-canonical-tables/README.md) | Drive rebuildCanonicalTables call sites to zero, then delete it | draft | @your-handle | activerecord |
 | [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | active | @your-handle | activerecord, abstractcontroller, globalid, arel |
+| [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | draft | @your-handle | activerecord, actionpack, actionview, activesupport, rack, globalid |

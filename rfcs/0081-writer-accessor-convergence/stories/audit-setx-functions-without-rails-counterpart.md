@@ -2,7 +2,7 @@
 title: "Audit the 28 setX functions with no Rails counterpart"
 status: draft
 updated: 2026-07-27
-rfc: "0000-writer-accessor-convergence"
+rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
 deps: []
 deps-rfc: []

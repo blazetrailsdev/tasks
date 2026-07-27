@@ -2,7 +2,7 @@
 title: "Unexport remaining writer helpers whose accessor already exists"
 status: draft
 updated: 2026-07-27
-rfc: "0000-writer-accessor-convergence"
+rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
 deps: []
 deps-rfc: []

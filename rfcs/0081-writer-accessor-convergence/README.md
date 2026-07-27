@@ -1,5 +1,5 @@
 ---
-rfc: "0000-writer-accessor-convergence"
+rfc: "0081-writer-accessor-convergence"
 title: "Converge Ruby writer (foo=) re-spellings onto accessors"
 status: draft
 created: 2026-07-27
