@@ -1,13 +1,13 @@
 ---
 title: "ruby-extractor-records-define-method-names"
 status: draft
-updated: 2026-07-26
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null
