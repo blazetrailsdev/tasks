@@ -1,6 +1,6 @@
 ---
 title: "api:extra baseline is stale across an in-worktree checkout"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
