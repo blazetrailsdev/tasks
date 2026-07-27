@@ -1,6 +1,6 @@
 ---
 title: "Narrow resolutionShapeKey from workspace-global to per-package deps"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 25
-pr: null
+pr: 5434
 claim: "2026-07-27T18:17:01Z"
 assignee: "api-compare-resolution-shape-key-is-workspace-global"
 blocked-by: null
