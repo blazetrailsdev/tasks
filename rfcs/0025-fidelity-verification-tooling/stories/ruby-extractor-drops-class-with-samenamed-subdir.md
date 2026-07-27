@@ -1,6 +1,6 @@
 ---
 title: "Ruby extractor drops ActiveRecord::Encryption::Cipher (class whose file has a same-named subdirectory)"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
