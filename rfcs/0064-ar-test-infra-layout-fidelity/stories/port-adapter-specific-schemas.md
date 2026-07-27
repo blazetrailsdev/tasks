@@ -1,6 +1,6 @@
 ---
 title: "port-adapter-specific-schemas"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
