@@ -10,7 +10,7 @@ packages:
 clusters: []
 related-rfcs:
   - "0023-surfaced-deviations"
-priority: 5
+priority: 2
 ---
 
 ## Summary
