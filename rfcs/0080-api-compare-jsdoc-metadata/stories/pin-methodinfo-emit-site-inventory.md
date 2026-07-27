@@ -1,6 +1,6 @@
 ---
 title: "Pin the MethodInfo emit-site inventory with a coverage test"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
