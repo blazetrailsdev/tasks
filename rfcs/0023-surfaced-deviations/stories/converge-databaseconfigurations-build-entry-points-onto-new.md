@@ -1,6 +1,6 @@
 ---
 title: "Converge DatabaseConfigurations build entry points onto Rails' single constructor"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
