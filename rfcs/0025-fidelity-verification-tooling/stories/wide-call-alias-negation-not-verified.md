@@ -1,6 +1,6 @@
 ---
 title: "Wide call ratchet credits negating aliases (none?/exclude?) without checking the negation"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 19
-pr: null
+pr: 5428
 claim: "2026-07-27T17:31:14Z"
 assignee: "wide-call-alias-negation-not-verified"
 blocked-by: null
