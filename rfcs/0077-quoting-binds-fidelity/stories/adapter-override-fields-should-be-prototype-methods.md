@@ -1,7 +1,7 @@
 ---
 title: "Adapter override assignments are class fields, not prototype methods (Rails uses def)"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
