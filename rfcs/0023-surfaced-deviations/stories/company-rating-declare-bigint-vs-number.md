@@ -1,7 +1,7 @@
 ---
 title: "Company#rating declare says bigint but safe-range values cast to number"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
