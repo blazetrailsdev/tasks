@@ -1,6 +1,6 @@
 ---
 title: "rails-private-jsdoc gate silently no-ops when rails-api.json is absent"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
