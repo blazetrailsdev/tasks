@@ -1,7 +1,7 @@
 ---
 title: "Drop the nil-name cast from reflection.test.ts once #4973 lands"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
