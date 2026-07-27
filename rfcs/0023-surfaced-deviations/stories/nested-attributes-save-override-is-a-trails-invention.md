@@ -1,7 +1,7 @@
 ---
 title: "Retire the nested-attributes prototype.save override in favour of the autosave callback path"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
