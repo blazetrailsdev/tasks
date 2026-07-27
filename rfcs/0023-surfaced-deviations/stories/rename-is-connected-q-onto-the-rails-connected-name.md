@@ -1,6 +1,6 @@
 ---
 title: "Make isConnected the real port of connected?, not an alias of isConnectedQ"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
