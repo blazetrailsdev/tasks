@@ -1,6 +1,6 @@
 ---
 title: "arunit2 second database is dead code on PG/MySQL: no provisioning, MultipleDbTest sqlite-gated"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5447
 claim: "2026-07-27T19:47:50Z"
 assignee: "provision-arunit2-second-database-on-pg-mysql"
 blocked-by: null
