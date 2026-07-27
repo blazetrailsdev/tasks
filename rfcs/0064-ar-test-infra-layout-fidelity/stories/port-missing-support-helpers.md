@@ -1,6 +1,6 @@
 ---
 title: "Port ddl_helper.rb, async_helper.rb, fake_adapter.rb"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
