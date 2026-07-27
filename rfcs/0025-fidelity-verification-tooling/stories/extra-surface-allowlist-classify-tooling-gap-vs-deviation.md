@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: allowlist entries need kind (tooling-gap vs deviation) and a story id"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
