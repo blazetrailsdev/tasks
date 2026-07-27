@@ -1,6 +1,6 @@
 ---
 title: "rails-file-structure-method-order silently no-ops in the Lint job (empty manifest)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 13
-pr: null
+pr: 5422
 claim: "2026-07-27T16:10:26Z"
 assignee: "rails-file-structure-lint-rule-no-ops-in-lint-job"
 blocked-by: null
