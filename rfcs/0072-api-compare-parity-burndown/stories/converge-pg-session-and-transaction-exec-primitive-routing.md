@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-session-and-transaction-exec-primitive-routing"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5410
 claim: "2026-07-27T14:37:10Z"
 assignee: "converge-pg-session-and-transaction-exec-primitive-routing"
 blocked-by: null
