@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-connection-strict-strings"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: strict/timeout landed in #5398"
 ---
 
 ## Context
