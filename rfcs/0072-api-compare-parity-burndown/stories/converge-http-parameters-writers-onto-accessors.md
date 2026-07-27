@@ -1,6 +1,6 @@
 ---
 title: "converge-http-parameters-writers-onto-accessors"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5407
 claim: "2026-07-27T14:05:08Z"
 assignee: "converge-http-parameters-writers-onto-accessors"
 blocked-by: null
