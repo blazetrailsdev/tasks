@@ -1,6 +1,6 @@
 ---
 title: "mime-negotiation-format-reader-arity-vs-getter"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
