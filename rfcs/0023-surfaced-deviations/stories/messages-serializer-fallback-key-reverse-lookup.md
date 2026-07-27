@@ -1,7 +1,7 @@
 ---
 title: "Replace SerializerWithFallback key field with Rails' SERIALIZERS.key identity lookup"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
