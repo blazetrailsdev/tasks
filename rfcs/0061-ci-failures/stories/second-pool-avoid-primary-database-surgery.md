@@ -1,6 +1,6 @@
 ---
 title: "Stop setupSecondPool from mutating the shared primary database"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
