@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: include Comparable operators have no def and score as novel"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
