@@ -1,7 +1,7 @@
 ---
 title: "Adapter test suites collide on shared 1_need_quoting table when co-scheduled"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
