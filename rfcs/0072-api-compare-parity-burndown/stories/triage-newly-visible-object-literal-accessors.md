@@ -1,6 +1,6 @@
 ---
 title: "Triage the 5 object-literal accessors the extractor fix made visible"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
