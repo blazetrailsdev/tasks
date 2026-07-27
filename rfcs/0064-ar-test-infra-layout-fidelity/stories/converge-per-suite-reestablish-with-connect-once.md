@@ -1,6 +1,6 @@
 ---
 title: "establishFromTestConfig exists because test-setup-dy tears the pool down"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5415
 claim: "2026-07-27T14:45:07Z"
 assignee: "converge-per-suite-reestablish-with-connect-once"
 blocked-by: null
