@@ -1,6 +1,6 @@
 ---
 title: "Fix extra-surface nested-Ruby-class allow-set gap (94 false extras)"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
