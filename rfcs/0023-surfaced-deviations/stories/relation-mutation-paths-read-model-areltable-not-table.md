@@ -1,7 +1,7 @@
 ---
 title: "Relation mutation paths read model.arel_table where Rails reads the table accessor"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
