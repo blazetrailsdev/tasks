@@ -1,14 +1,14 @@
 ---
 title: "converge-enablesti-onto-inheritance-column-setter"
-status: claimed
-updated: 2026-07-26
+status: in-progress
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5376
 claim: "2026-07-26T23:58:54Z"
 assignee: "converge-enablesti-onto-inheritance-column-setter"
 blocked-by: null
