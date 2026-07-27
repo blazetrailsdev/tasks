@@ -1,6 +1,6 @@
 ---
 title: "converge-base-configurations-onto-the-rails-accessor"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
