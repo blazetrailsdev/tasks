@@ -3,10 +3,11 @@ rfc: "0061-ci-failures"
 title: "CI Failures"
 status: active
 created: 2026-07-04
-updated: 2026-07-25
+updated: 2026-07-27
 owner: "@your-handle"
 packages: []
 clusters: []
+priority: 1
 ---
 
 # RFC 0061 — CI Failures
