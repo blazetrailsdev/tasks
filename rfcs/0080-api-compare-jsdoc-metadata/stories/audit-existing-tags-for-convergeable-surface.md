@@ -4,7 +4,8 @@ status: draft
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
-deps: []
+deps:
+  - extra-surface-nested-ruby-class-allow-set-gap
 deps-rfc: []
 est-loc: 140
 priority: null
