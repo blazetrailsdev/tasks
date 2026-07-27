@@ -1,6 +1,6 @@
 ---
 title: "wire-test-support-into-api-compare"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 5433
 claim: "2026-07-27T18:03:15Z"
 assignee: "wire-test-support-into-api-compare"
 blocked-by: null
