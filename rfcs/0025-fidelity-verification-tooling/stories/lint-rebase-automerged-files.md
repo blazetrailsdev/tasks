@@ -1,6 +1,6 @@
 ---
 title: "Lint files auto-merged by a rebase (pre-commit hook never sees them)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 22
-pr: null
+pr: 5431
 claim: "2026-07-27T17:55:13Z"
 assignee: "lint-rebase-automerged-files"
 blocked-by: null
