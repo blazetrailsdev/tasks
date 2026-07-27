@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: retire the reset --hard read fallback in favor of a stale-index warning"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 24
-pr: null
+pr: 5432
 claim: "2026-07-27T18:04:58Z"
 assignee: "tasks-retire-reset-hard-read-fallback"
 blocked-by: null
