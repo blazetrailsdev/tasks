@@ -1,7 +1,7 @@
 ---
 title: "Relation#offset should accept a string like Rails"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
