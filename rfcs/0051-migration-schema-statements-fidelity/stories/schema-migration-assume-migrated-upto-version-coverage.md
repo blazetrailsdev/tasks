@@ -1,7 +1,7 @@
 ---
 title: "schema-migration-assume-migrated-upto-version-coverage"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
