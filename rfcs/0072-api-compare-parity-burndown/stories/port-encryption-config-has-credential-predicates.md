@@ -1,6 +1,6 @@
 ---
 title: "Port Encryption::Config's three has_*? credential predicates"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
