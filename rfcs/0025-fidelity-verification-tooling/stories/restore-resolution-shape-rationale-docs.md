@@ -1,6 +1,6 @@
 ---
 title: "Restore the resolution-shape rationale docs in shared-cache.ts"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
