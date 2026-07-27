@@ -1,6 +1,6 @@
 ---
 title: "Cover the deferred load-error re-raise on the has_one create path"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5440
 claim: "2026-07-27T18:59:53Z"
 assignee: "has-one-create-deferred-load-error-reraise-untested"
 blocked-by: null
