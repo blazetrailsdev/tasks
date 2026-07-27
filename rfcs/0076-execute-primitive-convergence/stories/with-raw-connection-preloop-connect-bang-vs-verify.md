@@ -1,7 +1,7 @@
 ---
 title: "withRawConnection pre-loop uses connectBang where Rails' connect! is verify!"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
