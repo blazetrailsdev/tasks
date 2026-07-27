@@ -1,6 +1,6 @@
 ---
 title: "HashConfig#primary? should read the global configurations registry, not a _primaryChecker global"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
