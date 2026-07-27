@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: give TS_ALWAYS_ALLOWED reasoned, stale-checked entries"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
