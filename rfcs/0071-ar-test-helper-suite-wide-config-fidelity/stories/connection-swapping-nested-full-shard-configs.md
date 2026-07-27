@@ -1,6 +1,6 @@
 ---
 title: "connection-swapping-nested: declare Rails' full shard database sets"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T19:35:52Z"
+assignee: "connection-swapping-nested-full-shard-configs"
 blocked-by: null
 closed-reason: null
 ---
