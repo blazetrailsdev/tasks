@@ -1,7 +1,7 @@
 ---
 title: "Prune ~200 stale entries from the standalone-associations and no-explicit-any allowlists"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
