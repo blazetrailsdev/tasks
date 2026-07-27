@@ -1,6 +1,6 @@
 ---
 title: "Announce a parked displacement-removal failure through Base.logger"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T20:58:24Z"
+assignee: "nested-attr-displacement-failure-logger-emit"
 blocked-by: null
 closed-reason: null
 ---
