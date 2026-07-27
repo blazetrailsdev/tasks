@@ -3,11 +3,12 @@ rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 title: "AR test-helper suite-wide config fidelity"
 status: active
 created: 2026-07-25
-updated: 2026-07-25
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
 clusters: []
+priority: 2
 ---
 
 ## Problem
