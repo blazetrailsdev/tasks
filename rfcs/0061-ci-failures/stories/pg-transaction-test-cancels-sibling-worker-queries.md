@@ -1,7 +1,7 @@
 ---
 title: "PG transaction.test.ts cancels backends by query pattern, killing sibling workers' queries"
-status: draft
-updated: 2026-07-24
+status: closed
+updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by pg-cancel-backend-pattern-cancels-sibling-workers (PR #5437), which fixed the same pattern-match cancel in the same file"
 ---
 
 ## Context
