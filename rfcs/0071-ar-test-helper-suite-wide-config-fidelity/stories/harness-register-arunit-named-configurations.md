@@ -1,6 +1,6 @@
 ---
 title: "Test harness never populates Base.configurations (no :arunit named-config resolution)"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T19:41:53Z"
+assignee: "harness-register-arunit-named-configurations"
 blocked-by: null
 closed-reason: null
 ---
