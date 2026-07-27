@@ -1,7 +1,7 @@
 ---
 title: "Node#toSql should borrow-and-return via with_connection, not hold a sync lease"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
