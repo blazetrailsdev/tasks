@@ -1,6 +1,6 @@
 ---
 title: "A bare @internal in a @noRailsEquivalent reason silently drops the declaration from extracted surface"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
