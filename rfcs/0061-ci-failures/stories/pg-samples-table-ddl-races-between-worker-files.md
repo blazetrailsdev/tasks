@@ -1,6 +1,6 @@
 ---
 title: "PG transaction test files drop each other's samples table on the shared CI database"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0061-ci-failures"
 cluster: null
