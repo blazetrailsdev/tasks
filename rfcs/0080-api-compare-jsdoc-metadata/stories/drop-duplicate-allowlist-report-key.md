@@ -1,6 +1,6 @@
 ---
 title: "Drop the duplicate allowlist report key once the stats pipeline reads tagged"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5452
 claim: "2026-07-27T20:47:50Z"
 assignee: "drop-duplicate-allowlist-report-key"
 blocked-by: null
