@@ -3,13 +3,14 @@ rfc: "0077-quoting-binds-fidelity"
 title: "Adapter quoting and bind-param fidelity"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
   - "arel"
 clusters:
   - "adapters"
+priority: 4
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
