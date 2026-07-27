@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: retire the reset --hard read fallback in favor of a stale-index warning"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
