@@ -1,7 +1,7 @@
 ---
 title: "QueryAttribute#type_cast is a no-op in Rails; trails casts"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
