@@ -1,7 +1,7 @@
 ---
 title: "Converge sqlite _performQuery contract (DDL affected_rows + RETURNING return) via connection lock"
-status: draft
-updated: 2026-07-16
+status: ready
+updated: 2026-07-27
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
