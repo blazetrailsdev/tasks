@@ -1,7 +1,7 @@
 ---
 title: "count() must compile select values via select_for_count (raise on invalid columns)"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
