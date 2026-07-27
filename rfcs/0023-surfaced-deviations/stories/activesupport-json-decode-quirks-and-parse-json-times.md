@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport::JSON.decode: port parse_json_times date coercion and quirks-mode parity"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
