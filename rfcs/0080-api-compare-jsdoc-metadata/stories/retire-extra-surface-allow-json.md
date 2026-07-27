@@ -1,7 +1,7 @@
 ---
 title: "Retire extra-surface-allow.json — tags are the single source of truth"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
 deps:
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 200
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T12:53:08Z"
+assignee: "retire-extra-surface-allow-json"
 blocked-by: null
 closed-reason: null
 ---
