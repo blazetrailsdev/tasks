@@ -1,6 +1,6 @@
 ---
 title: "Cover the deferred load-error re-raise on the has_one create path"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
