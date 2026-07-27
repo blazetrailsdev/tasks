@@ -1,6 +1,6 @@
 ---
 title: "docker-compose db services lack CI's tmpfs, timing out DDL-heavy local runs"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
