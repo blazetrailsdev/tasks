@@ -1,7 +1,7 @@
 ---
 title: "converge-instantiatesti-into-ported-instantiate"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T00:14:55Z"
+assignee: "converge-instantiatesti-into-ported-instantiate"
 blocked-by: null
 closed-reason: null
 ---
