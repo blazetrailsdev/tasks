@@ -1,6 +1,6 @@
 ---
 title: "path_parameters= drops Rails' check_param_encoding"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
