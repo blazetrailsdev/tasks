@@ -1,6 +1,6 @@
 ---
 title: "Spike: detect the duplicated-guard half of the rebase auto-merge failure mode"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
