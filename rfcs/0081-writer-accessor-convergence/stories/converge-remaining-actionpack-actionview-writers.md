@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining ActionPack/ActionView writers onto accessors"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0081-writer-accessor-convergence"
 cluster: extra-surface
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: data layer only (arel/activemodel/activerecord per compare.ts:2351); these writers are actionpack/actionview/rack/globalid/activesupport"
 ---
 
 ## Context
