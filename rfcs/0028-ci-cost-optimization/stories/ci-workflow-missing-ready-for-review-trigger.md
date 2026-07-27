@@ -1,6 +1,6 @@
 ---
 title: "CI workflow never runs on the draft to ready-for-review transition"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0028-ci-cost-optimization"
 cluster: null
