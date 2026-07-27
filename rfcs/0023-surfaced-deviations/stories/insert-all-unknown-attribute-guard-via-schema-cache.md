@@ -1,7 +1,7 @@
 ---
 title: "Replace invented insert-all unknown-attribute guard with schema-cache columns_hash check"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
