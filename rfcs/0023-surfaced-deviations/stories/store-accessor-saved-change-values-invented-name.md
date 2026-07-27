@@ -1,7 +1,7 @@
 ---
 title: "store accessor savedChangeTo<Key>Values is an invented name with no Rails counterpart"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
