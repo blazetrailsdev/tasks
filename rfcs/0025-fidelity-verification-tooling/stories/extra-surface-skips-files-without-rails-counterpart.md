@@ -1,6 +1,6 @@
 ---
 title: "extra-surface leaves TS files with no Rails counterpart entirely unmeasured"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
