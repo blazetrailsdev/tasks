@@ -8,7 +8,7 @@ owner: "@deanmarano"
 packages:
   - "globalid"
 clusters: []
-priority: 9
+priority: 2
 ---
 
 ## Summary
