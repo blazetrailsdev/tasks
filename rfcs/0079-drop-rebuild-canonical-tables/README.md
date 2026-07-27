@@ -12,7 +12,7 @@ clusters:
 related-rfcs:
   - "0059-drop-defineschema-mirror-create-table"
   - "0070-drop-repair-worker-schema"
-priority: 3
+priority: 2
 ---
 
 ## Summary
