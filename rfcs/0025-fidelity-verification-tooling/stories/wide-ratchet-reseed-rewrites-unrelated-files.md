@@ -1,6 +1,6 @@
 ---
 title: "Wide-ratchet reseed rewrites unrelated baseline files via non-ASCII re-encoding"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 20
-pr: null
+pr: 5429
 claim: "2026-07-27T17:39:14Z"
 assignee: "wide-ratchet-reseed-rewrites-unrelated-files"
 blocked-by: null
