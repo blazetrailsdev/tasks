@@ -1,13 +1,13 @@
 ---
 title: "tasks: pre-commit hook stderr is swallowed on successful mutations"
 status: draft
-updated: 2026-07-24
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 23
 pr: null
 claim: null
 assignee: null
