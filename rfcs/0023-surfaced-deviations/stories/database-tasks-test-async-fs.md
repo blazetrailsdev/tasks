@@ -1,7 +1,7 @@
 ---
 title: "database-tasks.test: convert sync node:fs temp-dir usage to the async fs surface"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
