@@ -1,7 +1,7 @@
 ---
 title: "Delete rebuildCanonicalTables and its FK-scan machinery once callers hit zero"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps:
