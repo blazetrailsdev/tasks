@@ -2,7 +2,7 @@
 title: "Detect dead Rails-name duplicate shims that satisfy the matcher with no callers"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Found in #5343 (`extra-surface-schema-cache-and-pool-sync-api`,
 2026-07-26). Three separate instances, in only two files, of the same

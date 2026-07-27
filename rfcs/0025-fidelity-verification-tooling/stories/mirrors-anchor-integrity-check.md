@@ -2,7 +2,7 @@
 title: "Flag Mirrors: anchors that name no real Rails method"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Found while classifying `model-schema.ts` extra surface (#5342). A `Mirrors:`
 line is trails' parity anchor — it is how a reader (and `pnpm rails:find`, and

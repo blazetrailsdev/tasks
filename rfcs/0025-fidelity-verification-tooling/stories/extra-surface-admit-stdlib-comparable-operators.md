@@ -2,7 +2,7 @@
 title: "extra-surface: include Comparable operators have no def and score as novel"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Found while landing `extra-surface-adapter-cross-file-recurring-names` (PR 5345).
 

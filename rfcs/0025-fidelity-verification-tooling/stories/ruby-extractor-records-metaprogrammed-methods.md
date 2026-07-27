@@ -2,8 +2,8 @@
 title: "Teach the Ruby extractor to record define_method / alias_method surface"
 status: ready
 updated: 2026-07-27
-rfc: "0072-api-compare-parity-burndown"
-cluster: api-compare-tooling
+rfc: "0025-fidelity-verification-tooling"
+cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 300
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 `scripts/api-compare/extract-ruby-api.rb` records only literal `def`s, so every
 method Rails generates with `define_method` is absent from `rails-api.json`.

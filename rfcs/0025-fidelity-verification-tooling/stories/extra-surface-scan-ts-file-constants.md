@@ -2,8 +2,8 @@
 title: "extra-surface: scan TS module-level fileConstants (currently unscored)"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
-cluster: extra-surface
+rfc: "0025-fidelity-verification-tooling"
+cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 70
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Found while implementing `extra-surface-allow-ruby-file-constants` (PR #5338).
 

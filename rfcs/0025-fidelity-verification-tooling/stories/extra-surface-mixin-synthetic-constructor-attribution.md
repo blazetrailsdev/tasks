@@ -2,7 +2,7 @@
 title: "extra-surface: mixin pseudo-module synthetic constructor entry escapes declaredIn filtering"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Raised in review of PR #5336 (merged), which stopped `extra-surface.ts` from
 attributing a `<file>:<fn>__mixin` pseudo-module's borrowed host surface to the

@@ -2,7 +2,7 @@
 title: "Wide-ratchet reseed rewrites unrelated baseline files via non-ASCII re-encoding"
 status: ready
 updated: 2026-07-27
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 Hit during PR #5387 (`converge-ar-class-level-writers-onto-accessors`).
 

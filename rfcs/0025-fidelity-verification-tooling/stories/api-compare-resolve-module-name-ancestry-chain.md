@@ -2,7 +2,7 @@
 title: "Add Ruby's ancestry-chain step to resolveModuleName's constant lookup"
 status: draft
 updated: 2026-07-26
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,10 @@ closed-reason: null
 ---
 
 ## Context
+
+> Re-homed from RFC 0072 (api-compare parity burndown), which was pruned to
+> ActiveRecord-scoped work. This story changes `scripts/api-compare/` tooling,
+> not a package, so it belongs with the fidelity-verification tooling.
 
 `resolveModuleName` (`scripts/api-compare/compare.ts:789`) models Ruby constant
 lookup as: absolute `::` marker, then nearest enclosing namespace, then the
