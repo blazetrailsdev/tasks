@@ -1,6 +1,6 @@
 ---
 title: "Unroll CONST.each define_method loops in the Ruby extractor"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
