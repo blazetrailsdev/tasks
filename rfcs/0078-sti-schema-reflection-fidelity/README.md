@@ -3,13 +3,14 @@ rfc: "0078-sti-schema-reflection-fidelity"
 title: "STI / schema-reflection attribute-definition fidelity"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
   - "activemodel"
 clusters:
   - "schema"
+priority: 6
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
