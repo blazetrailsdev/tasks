@@ -3,12 +3,13 @@ rfc: "0075-collection-association-target-fidelity"
 title: "Collection association target-store fidelity"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "activerecord"
 clusters:
   - "associations"
+priority: 8
 ---
 
 Extracted from RFC 0023 (surfaced-deviations) triage, 2026-07-26.
