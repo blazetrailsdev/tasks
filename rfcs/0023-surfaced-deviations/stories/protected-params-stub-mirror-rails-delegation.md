@@ -1,7 +1,7 @@
 ---
 title: "Mirror Rails' ProtectedParams stub shape (private store + delegation)"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
