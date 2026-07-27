@@ -1,7 +1,7 @@
 ---
 title: "ConnectionPool#isConnected checks membership, not adapters' connected? like Rails"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
