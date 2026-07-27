@@ -3,7 +3,7 @@ rfc: "0072-api-compare-parity-burndown"
 title: "api:compare parity & fidelity burndown"
 status: active
 created: 2026-07-25
-updated: 2026-07-25
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -15,6 +15,7 @@ clusters:
   - arity-fidelity
   - missing-methods
   - extra-surface
+priority: 2
 ---
 
 ## Summary
