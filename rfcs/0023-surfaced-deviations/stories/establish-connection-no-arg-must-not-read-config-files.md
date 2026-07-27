@@ -1,6 +1,6 @@
 ---
 title: "No-arg establishConnection must resolve from the configurations registry, not fall back to disk"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
