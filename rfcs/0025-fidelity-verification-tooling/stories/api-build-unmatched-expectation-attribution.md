@@ -1,6 +1,6 @@
 ---
 title: "api:build: resolve 18 unmatched tag expectations (prototype-patched/mixin-duplicate methods)"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
