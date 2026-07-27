@@ -1,7 +1,7 @@
 ---
 title: "MySQL max_allowed_packet: resolve from the server instead of a hardcoded 16 MiB default"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
 deps: []
