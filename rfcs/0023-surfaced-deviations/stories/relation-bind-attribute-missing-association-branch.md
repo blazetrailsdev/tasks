@@ -1,7 +1,7 @@
 ---
 title: "Relation#bind_attribute is missing the _reflect_on_association branch"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
