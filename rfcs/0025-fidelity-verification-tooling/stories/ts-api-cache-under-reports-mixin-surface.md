@@ -1,6 +1,6 @@
 ---
 title: "api-compare: ts-api cache serves a smaller manifest than a forced extraction"
-status: claimed
+status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: null
+pr: 5380
 claim: "2026-07-27T15:43:45Z"
 assignee: "ts-api-cache-under-reports-mixin-surface"
 blocked-by: null
