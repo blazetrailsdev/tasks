@@ -1,7 +1,7 @@
 ---
 title: "touch(time:) should take Temporal.Instant only, not JS Date"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
