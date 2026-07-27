@@ -1,6 +1,6 @@
 ---
 title: "audit-set-prefixed-writers-for-accessor-convergence"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5385
 claim: "2026-07-27T01:26:55Z"
 assignee: "audit-set-prefixed-writers-for-accessor-convergence"
 blocked-by: null
