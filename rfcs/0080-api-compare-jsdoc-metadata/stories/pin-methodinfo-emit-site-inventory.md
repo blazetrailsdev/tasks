@@ -1,7 +1,7 @@
 ---
 title: "Pin the MethodInfo emit-site inventory with a coverage test"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T21:46:16Z"
+assignee: "pin-methodinfo-emit-site-inventory"
 blocked-by: null
 closed-reason: null
 ---
