@@ -3,7 +3,7 @@ rfc: "0035-tsserver-editor-plugin"
 title: "tsserver / editor plugin for zero-declare AR models"
 status: draft
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-27
 owner: "@dean"
 packages:
   - "activerecord"
@@ -11,6 +11,7 @@ packages:
 clusters: []
 related-rfcs:
   - "0003-activerecord-cli"
+priority: 10
 ---
 
 ## Summary
