@@ -1,6 +1,6 @@
 ---
 title: "Sweep activerecord for unrouted Rails privates dropping carried arguments"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
