@@ -1,6 +1,6 @@
 ---
 title: "Track: bang raise-on-failure semantics"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
