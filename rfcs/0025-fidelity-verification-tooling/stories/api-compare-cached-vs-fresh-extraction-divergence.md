@@ -1,7 +1,7 @@
 ---
 title: "api:compare cached manifests diverge from a forced fresh extraction"
-status: in-progress
-updated: 2026-07-26
+status: done
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
