@@ -1,6 +1,6 @@
 ---
 title: "converge-base-configurations-onto-the-rails-accessor"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5381
 claim: "2026-07-27T00:38:56Z"
 assignee: "converge-base-configurations-onto-the-rails-accessor"
 blocked-by: null
