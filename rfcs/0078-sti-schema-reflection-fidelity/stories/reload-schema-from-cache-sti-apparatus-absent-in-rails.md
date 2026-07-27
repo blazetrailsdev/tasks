@@ -1,7 +1,7 @@
 ---
 title: "reload_schema_from_cache STI redirect/local-cache apparatus has no Rails analogue"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
