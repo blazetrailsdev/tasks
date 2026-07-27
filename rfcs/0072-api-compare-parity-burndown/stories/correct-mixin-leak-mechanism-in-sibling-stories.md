@@ -1,7 +1,7 @@
 ---
 title: "Correct the this-typed mixin premise in RFC 0072 stories derived from the top-files inventory spike"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
