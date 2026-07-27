@@ -1,7 +1,7 @@
 ---
 title: "Invalidate the bound schema reflection on index DDL"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
