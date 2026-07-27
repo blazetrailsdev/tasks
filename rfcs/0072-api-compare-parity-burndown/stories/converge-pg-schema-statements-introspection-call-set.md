@@ -1,7 +1,7 @@
 ---
 title: "converge-pg-schema-statements-introspection-call-set"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T01:02:54Z"
+assignee: "converge-pg-schema-statements-introspection-call-set"
 blocked-by: null
 closed-reason: null
 ---
