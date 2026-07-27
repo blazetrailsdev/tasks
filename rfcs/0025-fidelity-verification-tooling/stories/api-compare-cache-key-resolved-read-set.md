@@ -1,6 +1,6 @@
 ---
 title: "Key api:compare TS cache on the program's resolved read-set, not whole dependency packages"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5380
 claim: "2026-07-27T00:30:54Z"
 assignee: "api-compare-cache-key-resolved-read-set"
 blocked-by: null
