@@ -1,6 +1,6 @@
 ---
 title: "connect() should establish ARUnit2Model once arunit2 is provisioned"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5414
 claim: "2026-07-27T14:57:23Z"
 assignee: "arunit2-provisioning-owns-second-pool"
 blocked-by: null
