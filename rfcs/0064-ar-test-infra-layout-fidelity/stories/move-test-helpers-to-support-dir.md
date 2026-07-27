@@ -1,7 +1,7 @@
 ---
 title: "Rename test-helpers/ to support/ to match Rails test/support/"
-status: in-progress
-updated: 2026-07-26
+status: done
+updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
