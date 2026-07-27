@@ -1,6 +1,6 @@
 ---
 title: "A bare @internal in a @noRailsEquivalent reason silently drops the declaration from extracted surface"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5393
 claim: "2026-07-27T02:21:10Z"
 assignee: "bare-tag-in-no-rails-equivalent-reason-silently-drops-surface"
 blocked-by: null
