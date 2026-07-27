@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-ddl-exec-primitive-and-quoting-routing"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5383
 claim: "2026-07-27T00:55:00Z"
 assignee: "converge-pg-ddl-exec-primitive-and-quoting-routing"
 blocked-by: null
