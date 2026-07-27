@@ -1,6 +1,6 @@
 ---
 title: "Port ddl_helper.rb, async_helper.rb, fake_adapter.rb"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 350
 priority: 55
-pr: null
+pr: 5401
 claim: "2026-07-27T13:09:07Z"
 assignee: "port-missing-support-helpers"
 blocked-by: null
