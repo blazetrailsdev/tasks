@@ -1,7 +1,7 @@
 ---
 title: "RangeHandler wraps both bounds in build_bind_attribute; UnboundableBound is invented"
-status: draft
-updated: 2026-07-15
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
