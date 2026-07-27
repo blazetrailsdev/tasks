@@ -1,7 +1,7 @@
 ---
 title: "groupedAggregate group_key/val aliases are invented; converge onto ColumnAliasTracker names"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
