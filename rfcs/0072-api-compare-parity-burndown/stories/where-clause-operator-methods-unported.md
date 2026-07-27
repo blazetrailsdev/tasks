@@ -1,7 +1,7 @@
 ---
 title: "WhereClause #+ #- #| #== are unported"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
