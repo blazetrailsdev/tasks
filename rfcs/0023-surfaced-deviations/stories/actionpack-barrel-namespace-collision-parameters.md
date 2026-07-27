@@ -1,6 +1,6 @@
 ---
 title: "actionpack flat barrel cannot express Http::Parameters vs ActionController::Parameters"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
