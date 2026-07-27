@@ -1,7 +1,7 @@
 ---
 title: "Unify #update/#update! on public_send-equivalent setter dispatch"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
