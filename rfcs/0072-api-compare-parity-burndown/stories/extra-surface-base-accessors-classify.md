@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: classify the base.ts novel surface, anchored on loadBelongsTo/loadHasOne"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
 deps: []
