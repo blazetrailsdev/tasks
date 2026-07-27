@@ -1,7 +1,7 @@
 ---
 title: "arity: cache_sql's ported block param (execute) is the last unexcluded activerecord pair"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
 deps: []
