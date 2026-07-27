@@ -1,6 +1,6 @@
 ---
 title: "Decide the empty-reason contract for hand-authored @missingRailsCall tags"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5460
 claim: "2026-07-27T21:34:17Z"
 assignee: "missing-rails-call-empty-reason-contract"
 blocked-by: null
