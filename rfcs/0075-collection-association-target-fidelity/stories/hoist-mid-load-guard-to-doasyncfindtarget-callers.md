@@ -1,7 +1,7 @@
 ---
 title: "Hoist the mid-load-replacement guard to doAsyncFindTarget call sites"
-status: draft
-updated: 2026-07-22
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
