@@ -3,7 +3,7 @@ rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
 status: active
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -11,6 +11,7 @@ packages:
 clusters:
   - api-compare
   - lint
+priority: 2
 ---
 
 # RFC 0025 — Fidelity verification tooling
