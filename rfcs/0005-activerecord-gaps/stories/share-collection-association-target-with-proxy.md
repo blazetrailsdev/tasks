@@ -1,6 +1,6 @@
 ---
 title: "Share one in-memory target between the collection association object and its CollectionProxy"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0005-activerecord-gaps"
 cluster: null
