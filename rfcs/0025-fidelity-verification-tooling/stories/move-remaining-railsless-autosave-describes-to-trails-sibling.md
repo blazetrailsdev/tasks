@@ -1,7 +1,7 @@
 ---
 title: "Move the 3 Rails-less autosave describes (13 tests) to the trails sibling file"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
