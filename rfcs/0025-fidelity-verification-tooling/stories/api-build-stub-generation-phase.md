@@ -1,6 +1,6 @@
 ---
 title: "api:build phase 3: opt-in stub generation with @nie throws and stubbed reporting column"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
