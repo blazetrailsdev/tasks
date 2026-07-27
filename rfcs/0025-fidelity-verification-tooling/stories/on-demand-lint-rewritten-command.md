@@ -1,6 +1,6 @@
 ---
 title: "Add an on-demand lint:rewritten command so the rebase fallback is not a hand-assembled pipeline"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
