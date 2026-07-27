@@ -1,6 +1,6 @@
 ---
 title: "Stop the MySQL cross-database probe from dropping the live arunit2 database"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
