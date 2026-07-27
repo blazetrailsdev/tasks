@@ -4,12 +4,13 @@ title: "Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep"
 status: superseded
 superseded-by: "0019-canonical-schema-burndown"
 created: 2026-06-04
-updated: 2026-06-09
+updated: 2026-07-27
 owner: "@deanmarano"
 packages:
   - activerecord
 clusters:
   - fixtures
+priority: 2
 ---
 
 > **Superseded (2026-06-09)** by the canonical-schema ratchet burndown RFC
