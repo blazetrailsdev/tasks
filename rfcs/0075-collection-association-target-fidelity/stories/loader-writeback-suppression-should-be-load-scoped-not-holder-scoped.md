@@ -1,7 +1,7 @@
 ---
 title: "Make _loaderWritebackSuppressed load-scoped, not holder-scoped"
-status: draft
-updated: 2026-07-21
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
