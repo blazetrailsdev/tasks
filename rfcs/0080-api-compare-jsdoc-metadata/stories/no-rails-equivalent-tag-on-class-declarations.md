@@ -1,7 +1,7 @@
 ---
 title: "Honor @noRailsEquivalent on class declarations (blocks retiring the allow JSON)"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
