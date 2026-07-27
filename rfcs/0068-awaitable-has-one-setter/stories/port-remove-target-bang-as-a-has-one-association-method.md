@@ -1,6 +1,6 @@
 ---
 title: "Port remove_target! as a HasOneAssociation method instead of a free function"
-status: ready
+status: draft
 updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
