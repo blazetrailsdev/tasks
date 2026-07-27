@@ -1,6 +1,6 @@
 ---
 title: "Export only the Rails-named RoutesHelpers.with"
-status: ready
+status: closed
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: data layer only (arel/activemodel/activerecord); this is actionpack/trailties surface"
 ---
 
 ## Context
