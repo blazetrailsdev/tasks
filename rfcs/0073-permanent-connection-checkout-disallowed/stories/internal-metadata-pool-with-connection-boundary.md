@@ -1,7 +1,7 @@
 ---
 title: "InternalMetadata takes an adapter, not a pool — public methods never lease a connection"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
