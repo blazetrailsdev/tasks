@@ -1,7 +1,7 @@
 ---
 title: "STI stale-schema invalidation for unregistered subclasses rests on an unenforced read-through-ownSchemaMemo invariant"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
