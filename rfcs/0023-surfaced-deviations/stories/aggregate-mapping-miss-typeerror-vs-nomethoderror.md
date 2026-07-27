@@ -1,7 +1,7 @@
 ---
 title: "aggregate mapping-miss raises TypeError not Rails NoMethodError"
-status: draft
-updated: 2026-07-02
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
