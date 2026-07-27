@@ -1,7 +1,7 @@
 ---
 title: "Writes through the association() wrapper never reach the canonical CollectionProxy target"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
