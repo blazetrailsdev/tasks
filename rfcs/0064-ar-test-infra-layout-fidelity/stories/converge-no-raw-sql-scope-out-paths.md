@@ -1,6 +1,6 @@
 ---
 title: "Converge no-raw-sql scope-out paths onto a single source of truth"
-status: in-progress
+status: done
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
