@@ -1,7 +1,7 @@
 ---
 title: "rack: Deflater stores sync but compress() buffers whole body — no per-chunk flush streaming"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
