@@ -1,7 +1,7 @@
 ---
 title: "Port Relation#exec_queries as a single method instead of spreading it across load paths"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
