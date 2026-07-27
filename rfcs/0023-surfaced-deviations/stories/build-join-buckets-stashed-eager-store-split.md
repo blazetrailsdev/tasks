@@ -1,7 +1,7 @@
 ---
 title: "Decide: re-merge trails' three joins stores, or pin build_join_buckets' missing base_klass guard"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
