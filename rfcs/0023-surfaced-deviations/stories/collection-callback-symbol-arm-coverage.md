@@ -1,7 +1,7 @@
 ---
 title: "Cover the Symbol/method-name arm of define_callback for collection add/remove callbacks"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
