@@ -1,6 +1,6 @@
 ---
 title: "Flip AR test-suite ambient to partial_inserts=true (Rails helper.rb)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: null
+pr: 5417
 claim: "2026-07-27T15:19:41Z"
 assignee: "partial-inserts-flip-ar-test-suite-ambient"
 blocked-by: null
