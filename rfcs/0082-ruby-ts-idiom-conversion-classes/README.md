@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-ts-idiom-conversion-classes"
+rfc: "0082-ruby-ts-idiom-conversion-classes"
 title: "Ruby→TS idiom conversion classes"
 status: draft
 created: 2026-07-27

@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-ruby-ts-idiom-conversion-classes](rfcs/0000-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | draft | @your-handle | activerecord, arel, activesupport, activemodel |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -86,3 +85,4 @@
 | [0079-drop-rebuild-canonical-tables](rfcs/0079-drop-rebuild-canonical-tables/README.md) | Drive rebuildCanonicalTables call sites to zero, then delete it | draft | @your-handle | activerecord |
 | [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | active | @your-handle | activerecord, abstractcontroller, globalid, arel |
 | [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | active | @your-handle | activerecord |
+| [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | draft | @your-handle | activerecord, arel, activesupport, activemodel |
