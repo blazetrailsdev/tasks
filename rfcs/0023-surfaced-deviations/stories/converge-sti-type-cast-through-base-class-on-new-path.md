@@ -1,6 +1,6 @@
 ---
 title: "Cast the STI type value through base_class on the new/attributes path"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
