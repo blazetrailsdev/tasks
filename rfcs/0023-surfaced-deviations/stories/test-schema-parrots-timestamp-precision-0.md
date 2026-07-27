@@ -1,7 +1,7 @@
 ---
 title: "TEST_SCHEMA parrots timestamps omit schema.rb's precision: 0; ratchet OPTION_DEBT_CEILING to 0"
-status: draft
-updated: 2026-07-24
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
