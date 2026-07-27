@@ -1,7 +1,7 @@
 ---
 title: "Enforce the quoting host contract on SchemaQuoter assignment sites"
-status: draft
-updated: 2026-07-19
+status: ready
+updated: 2026-07-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
