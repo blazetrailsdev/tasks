@@ -3,7 +3,7 @@ rfc: "0074-i18n-parity"
 title: "i18n gem parity"
 status: draft
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-07-27
 owner: "@your-handle"
 packages:
   - "i18n"
@@ -11,6 +11,7 @@ packages:
   - "activemodel"
   - "activerecord"
 clusters: []
+priority: 7
 ---
 
 # i18n gem parity
