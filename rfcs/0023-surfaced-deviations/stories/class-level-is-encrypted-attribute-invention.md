@@ -1,7 +1,7 @@
 ---
 title: "Class-level isEncryptedAttribute is a trails invention; converge to encrypted_attributes membership"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
