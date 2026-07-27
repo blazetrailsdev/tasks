@@ -1,6 +1,6 @@
 ---
 title: "Disposition the remaining test-helpers/ files (bucket D)"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 300
 priority: 60
-pr: null
+pr: 5403
 claim: "2026-07-27T13:17:08Z"
 assignee: "disposition-remaining-test-helpers"
 blocked-by: null
