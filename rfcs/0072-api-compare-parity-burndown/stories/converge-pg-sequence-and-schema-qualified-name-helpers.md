@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-sequence-and-schema-qualified-name-helpers"
-status: claimed
+status: in-progress
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5389
 claim: "2026-07-27T01:34:56Z"
 assignee: "converge-pg-sequence-and-schema-qualified-name-helpers"
 blocked-by: null
