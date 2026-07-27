@@ -1,7 +1,7 @@
 ---
 title: "Un-fuse loadHasMany so association.scope replaces the three bypass helpers"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
