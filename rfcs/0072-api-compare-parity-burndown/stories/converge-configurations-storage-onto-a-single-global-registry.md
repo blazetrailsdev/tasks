@@ -1,6 +1,6 @@
 ---
 title: "converge-configurations-storage-onto-a-single-global-registry"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T01:18:55Z"
+assignee: "converge-configurations-storage-onto-a-single-global-registry"
 blocked-by: null
 closed-reason: null
 ---
