@@ -1,6 +1,6 @@
 ---
 title: "Detect a line-leading prose @tag inside a @noRailsEquivalent reason"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T21:28:17Z"
+assignee: "line-leading-prose-tag-in-no-rails-equivalent-reason-undetected"
 blocked-by: null
 closed-reason: null
 ---
