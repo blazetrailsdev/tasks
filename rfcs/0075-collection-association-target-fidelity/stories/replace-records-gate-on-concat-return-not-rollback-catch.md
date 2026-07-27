@@ -1,7 +1,7 @@
 ---
 title: "replace_records must gate on concat's falsy return, not a caught Rollback"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
