@@ -1,7 +1,7 @@
 ---
 title: "Relation#updateCounters should take a single counters arg, not a second options param"
-status: draft
-updated: 2026-07-20
+status: ready
+updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
