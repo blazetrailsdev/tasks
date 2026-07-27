@@ -10,7 +10,7 @@ packages:
 clusters: []
 related-rfcs:
   - "0071-ar-test-helper-suite-wide-config-fidelity"
-priority: 1
+priority: 2
 ---
 
 ## Summary
