@@ -1,7 +1,7 @@
 ---
 title: "remove_target! nullify-failure RecordNotSaved raise has no coverage"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
