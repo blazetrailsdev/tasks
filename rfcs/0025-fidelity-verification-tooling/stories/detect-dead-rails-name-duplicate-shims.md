@@ -1,7 +1,7 @@
 ---
 title: "Detect dead Rails-name duplicate shims that satisfy the matcher with no callers"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
