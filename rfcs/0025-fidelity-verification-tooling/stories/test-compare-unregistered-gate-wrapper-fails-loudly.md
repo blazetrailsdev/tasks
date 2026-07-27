@@ -1,6 +1,6 @@
 ---
 title: "test:compare: fail loudly on an unregistered describeIf*/itIf* gate wrapper"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 17
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T17:21:59Z"
+assignee: "test-compare-unregistered-gate-wrapper-fails-loudly"
 blocked-by: null
 closed-reason: null
 ---
