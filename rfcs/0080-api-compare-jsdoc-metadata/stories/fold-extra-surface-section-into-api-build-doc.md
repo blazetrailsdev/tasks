@@ -1,6 +1,6 @@
 ---
 title: "Fold extra-surface sibling-tag section into the api:build design doc (after PR #5229 merges)"
-status: ready
+status: claimed
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: api-compare
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-27T15:03:44Z"
+assignee: "fold-extra-surface-section-into-api-build-doc"
 blocked-by: null
 closed-reason: null
 ---
