@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#count(column) silently ignored on through loader fallback"
-status: draft
-updated: 2026-07-23
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
