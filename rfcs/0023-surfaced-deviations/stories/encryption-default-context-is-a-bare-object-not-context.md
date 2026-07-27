@@ -1,6 +1,6 @@
 ---
 title: "Encryption default_context defaults to {} instead of Context.new"
-status: draft
+status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
 cluster: null
