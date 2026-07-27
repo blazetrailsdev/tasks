@@ -1,7 +1,7 @@
 ---
 title: "Cache toArray's hydrated records into _target so replace can read the real target"
-status: draft
-updated: 2026-07-25
+status: ready
+updated: 2026-07-27
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
