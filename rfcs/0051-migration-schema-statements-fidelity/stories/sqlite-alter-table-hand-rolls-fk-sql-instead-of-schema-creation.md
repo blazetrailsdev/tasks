@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable concatenates rebuild DDL by hand instead of going through schemaCreation"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
