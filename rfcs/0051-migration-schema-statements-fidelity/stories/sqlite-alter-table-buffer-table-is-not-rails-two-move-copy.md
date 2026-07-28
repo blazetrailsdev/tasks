@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable uses a bespoke _alter_tmp_ buffer instead of Rails' two move_table copies"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T18:13:42Z"
+assignee: "sqlite-alter-table-buffer-table-is-not-rails-two-move-copy"
 blocked-by: null
 closed-reason: null
 ---
