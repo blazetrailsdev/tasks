@@ -1,7 +1,7 @@
 ---
 title: "isPreventingWrites pools inject a zero-arg adapter that ignores the declared db_config"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 35
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T12:52:18Z"
+assignee: "prevent-writes-pools-adapter-ignores-db-config"
 blocked-by: null
 closed-reason: null
 ---
