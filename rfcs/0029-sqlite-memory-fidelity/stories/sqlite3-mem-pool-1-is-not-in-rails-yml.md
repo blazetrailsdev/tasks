@@ -1,6 +1,6 @@
 ---
 title: "sqlite3_mem pins pool: 1, which config.example.yml does not — converge or record the deviation"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5539
 claim: "2026-07-28T22:15:43Z"
 assignee: "sqlite3-mem-pool-1-is-not-in-rails-yml"
 blocked-by: null
