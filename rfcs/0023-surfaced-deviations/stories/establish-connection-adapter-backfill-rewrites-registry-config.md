@@ -53,5 +53,5 @@ mirroring `hash_config.rb:38-41`).
       `#configuration` is written only by `_database=`, matching Rails'
       `attr_reader :configuration_hash` exactly.
 - [ ] The regression test `establishConnection backfills the adapter on an
-  adapter-less HashConfig` (`connection-handling.test.ts`) is updated to
+adapter-less HashConfig` (`connection-handling.test.ts`) is updated to
       the converged behaviour, not deleted.
