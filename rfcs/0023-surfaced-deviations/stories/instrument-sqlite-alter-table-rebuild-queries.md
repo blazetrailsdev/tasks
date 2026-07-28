@@ -1,12 +1,12 @@
 ---
-title: "instrument-sqlite-alter-table-rebuild-queries"
+title: "Route the SQLite alterTable rebuild through instrumented execute"
 status: draft
 updated: 2026-07-28
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
