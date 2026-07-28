@@ -1,6 +1,6 @@
 ---
 title: "port-migration-foreign-key-validate-constraints-cases"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:21:42Z"
+assignee: "port-migration-foreign-key-validate-constraints-cases"
 blocked-by: null
 closed-reason: null
 ---
