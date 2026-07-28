@@ -1,6 +1,6 @@
 ---
 title: "retire-legacy-sqlite3-adapter-test"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5497
 claim: "2026-07-28T13:11:50Z"
 assignee: "retire-legacy-sqlite3-adapter-test"
 blocked-by: null
