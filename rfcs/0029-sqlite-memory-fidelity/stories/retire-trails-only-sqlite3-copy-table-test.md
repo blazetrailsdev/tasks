@@ -1,6 +1,6 @@
 ---
 title: "Fold or retire the trails-only sqlite3-copy-table test file"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T22:05:43Z"
+assignee: "retire-trails-only-sqlite3-copy-table-test"
 blocked-by: null
 closed-reason: null
 ---
