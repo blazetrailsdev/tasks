@@ -1,6 +1,6 @@
 ---
 title: "port-constantize-retire-model-finder"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5471
 claim: "2026-07-28T00:22:17Z"
 assignee: "port-constantize-retire-model-finder"
 blocked-by: null
