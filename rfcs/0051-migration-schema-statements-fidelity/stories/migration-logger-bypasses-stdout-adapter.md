@@ -1,6 +1,6 @@
 ---
 title: "Migration.logger writes to process.stdout directly, bypassing the activesupport stdout shim"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5474
 claim: "2026-07-28T00:52:15Z"
 assignee: "migration-logger-bypasses-stdout-adapter"
 blocked-by: null
