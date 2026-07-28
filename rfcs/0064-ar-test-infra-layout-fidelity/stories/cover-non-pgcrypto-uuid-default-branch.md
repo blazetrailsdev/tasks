@@ -1,6 +1,6 @@
 ---
 title: "uuid_default's non-pgcrypto branch is unreachable on the matrix and untested"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
