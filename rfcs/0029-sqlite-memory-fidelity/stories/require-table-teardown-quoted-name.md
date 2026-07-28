@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown-quoted-name"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5504
 claim: "2026-07-28T13:41:43Z"
 assignee: "require-table-teardown-quoted-name"
 blocked-by: null
