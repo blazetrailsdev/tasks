@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-connection-adapter-tests-ambient"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5500
 claim: "2026-07-28T13:26:40Z"
 assignee: "sqlite3-connection-adapter-tests-ambient"
 blocked-by: null
