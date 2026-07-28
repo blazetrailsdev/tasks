@@ -1,7 +1,7 @@
 ---
 title: "withTemporaryPool loses config identity (and replaces the ambient pool) when the sqlite path is normalized"
-status: ready
-updated: 2026-07-25
+status: claimed
+updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:56:44Z"
+assignee: "temporary-pool-normalized-path-loses-config-identity"
 blocked-by: null
 closed-reason: null
 ---
