@@ -1,6 +1,6 @@
 ---
 title: "Port the PG-only validate cases of ForeignKeyTest"
-status: draft
+status: closed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already ported: all nine validate cases are in migration/foreign-key.test.ts:381-518 behind itIfSupports('validate_constraints'); test:compare lists none of them as missing for foreign_key_test.rb."
 ---
 
 ## Context
