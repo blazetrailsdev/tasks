@@ -1,6 +1,6 @@
 ---
 title: "Treat set#{Name} as the api:compare port of Rails' #{name}= writer"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T01:46:16Z"
+assignee: "awaitable-writer-is-the-port-of-rails-writer"
 blocked-by: null
 closed-reason: null
 ---
