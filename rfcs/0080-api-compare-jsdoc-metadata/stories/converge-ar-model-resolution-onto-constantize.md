@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-model-resolution-onto-constantize"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5503
 claim: "2026-07-28T13:46:37Z"
 assignee: "converge-ar-model-resolution-onto-constantize"
 blocked-by: null
