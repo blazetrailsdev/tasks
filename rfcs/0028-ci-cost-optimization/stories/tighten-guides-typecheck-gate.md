@@ -1,6 +1,6 @@
 ---
 title: "tighten-guides-typecheck-gate"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 5530
 claim: "2026-07-28T20:36:54Z"
 assignee: "tighten-guides-typecheck-gate"
 blocked-by: null
