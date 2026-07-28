@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveRecord::Migration::CompositeForeignKeyTest"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5478
 claim: "2026-07-28T01:22:15Z"
 assignee: "port-migration-composite-foreign-key-cases"
 blocked-by: null
