@@ -1,6 +1,6 @@
 ---
 title: "Retire the invented reverse-FK lookup when the canonical-rebuild shield goes"
-status: claimed
+status: ready
 updated: 2026-07-28
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-07-28T16:03:45Z"
-assignee: "retire-invented-reverse-fk-lookup"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
@@ -40,6 +40,12 @@ as permanent invented surface.
 
 Related: `fkSafeDropPlan` itself is also a trails invention with no Rails
 counterpart; this story is the tracking anchor for the pair.
+
+Note (2026-07-28): claimed during the #5519 session but never started, and
+released back to `ready` unstarted. Re-read the premise against current `main`
+before picking it up — #5522 (`split-canonical-schema-registry-from-template-machinery`)
+and #5503 both landed in canonical-schema machinery afterwards and may have
+changed which callers `rebuildCanonicalTables` still has.
 
 ## Acceptance criteria
 
