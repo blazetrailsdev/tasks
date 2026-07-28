@@ -29,8 +29,17 @@ two classes that are entirely unported, plus their prefix/suffix subclasses:
   `ForeignKeyChangeColumnWithSuffixTest` (:155-163) — subclasses that re-run the
   whole `ForeignKeyChangeColumnTest` body under a table-name prefix/suffix.
 
-These are 7 of the 37 cases `test:compare` still reports missing for the file
+These were 7 of the 37 cases `test:compare` reported missing for the file
 after #5453 (35/72 ported).
+
+**Triage update 2026-07-28:** the file is now 56/72 with 16 missing, and 2 of
+this story's 7 cases have since landed —
+`test_rename_column_of_child_table` and
+`test_rename_reference_column_of_child_table` are ported. The 6 still missing
+are: `foreign keys` (×2, `ForeignKeyInCreateTest` + a prefix/suffix rerun),
+`change column of parent table`, `remove reference column of child table`,
+`remove foreign key by column`, `remove foreign key by column in change table`.
+Re-run `pnpm test:compare --package activerecord --missing` before starting.
 
 `ForeignKeyChangeColumnTest` carries its own `Rocket`/`Astronaut` models and a
 `CreateRocketsMigration`, distinct from the `withRocketTables` helper the rest
