@@ -1,6 +1,6 @@
 ---
 title: "foreign-key-test-gate-mismatch-hard-zero"
-status: closed
+status: done
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -12,7 +12,6 @@ pr: 5476
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "fixed on main by PR 5466 (test(migration): converge the two foreign-key gate mismatches)"
 ---
 
 ## Context
