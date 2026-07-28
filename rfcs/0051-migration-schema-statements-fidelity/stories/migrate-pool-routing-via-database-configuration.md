@@ -1,6 +1,6 @@
 ---
 title: "migrate() routes by database-string comparison instead of the migration connection pool"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5473
 claim: "2026-07-28T00:40:17Z"
 assignee: "migrate-pool-routing-via-database-configuration"
 blocked-by: null
