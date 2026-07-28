@@ -1,6 +1,6 @@
 ---
 title: "api:extra red on main: stale @noRailsEquivalent tag on NullConfig after #5462"
-status: draft
+status: closed
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already fixed on main: commit 638ff0bb0 dropped the stale @noRailsEquivalent block on NullConfig (connection-pool.ts:59-68 now carries only the Mirrors: line)."
 ---
 
 ## Context
