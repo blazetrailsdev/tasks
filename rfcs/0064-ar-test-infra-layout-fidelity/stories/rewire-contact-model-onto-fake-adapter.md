@@ -1,6 +1,6 @@
 ---
 title: "Rewire Contact/ContactSti onto the registered fake adapter"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5520
 claim: "2026-07-28T15:53:15Z"
 assignee: "rewire-contact-model-onto-fake-adapter"
 blocked-by: null
