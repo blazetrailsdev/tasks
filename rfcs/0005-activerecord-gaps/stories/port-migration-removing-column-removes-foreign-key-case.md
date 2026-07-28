@@ -1,6 +1,6 @@
 ---
 title: "Port the orphaned 'removing column removes foreign key' case"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:10:15Z"
+assignee: "port-migration-removing-column-removes-foreign-key-case"
 blocked-by: null
 closed-reason: null
 ---
