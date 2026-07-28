@@ -1,6 +1,6 @@
 ---
 title: "Wide call-mismatch ratchet red on main with 7 new entries"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
