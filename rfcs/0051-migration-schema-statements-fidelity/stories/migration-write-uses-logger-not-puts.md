@@ -1,6 +1,6 @@
 ---
 title: "Migration#write routes through Migration.logger; Rails uses puts"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
