@@ -1,6 +1,6 @@
 ---
 title: "Port the foreign_key_exists cluster and remaining ForeignKeyTest miscellany"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T22:45:44Z"
+assignee: "port-migration-foreign-key-exists-and-misc-cases"
 blocked-by: null
 closed-reason: null
 ---
