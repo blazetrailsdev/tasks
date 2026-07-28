@@ -1,6 +1,6 @@
 ---
 title: "port-postgresql-specific-schema-remainder"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T21:36:00Z"
+assignee: "port-postgresql-specific-schema-remainder"
 blocked-by: null
 closed-reason: null
 ---
