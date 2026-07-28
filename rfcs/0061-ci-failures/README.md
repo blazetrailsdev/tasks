@@ -1,9 +1,9 @@
 ---
 rfc: "0061-ci-failures"
 title: "CI Failures"
-status: active
+status: closed
 created: 2026-07-04
-updated: 2026-07-27
+updated: 2026-07-28
 owner: "@your-handle"
 packages: []
 clusters: []
