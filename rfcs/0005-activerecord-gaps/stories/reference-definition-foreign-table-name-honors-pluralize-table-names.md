@@ -1,6 +1,6 @@
 ---
 title: "reference-definition-foreign-table-name-honors-pluralize-table-names"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
