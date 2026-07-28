@@ -1,6 +1,6 @@
 ---
 title: "test: port columns_test.rb's rename/remove-column index cases"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5548
 claim: "2026-07-28T23:45:44Z"
 assignee: "port-columns-test-rename-and-remove-column-index-cases"
 blocked-by: null
