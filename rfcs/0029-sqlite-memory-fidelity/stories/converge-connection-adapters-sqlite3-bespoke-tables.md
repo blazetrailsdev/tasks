@@ -1,6 +1,6 @@
 ---
 title: "converge-connection-adapters-sqlite3-bespoke-tables"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5505
 claim: "2026-07-28T13:46:57Z"
 assignee: "converge-connection-adapters-sqlite3-bespoke-tables"
 blocked-by: null
