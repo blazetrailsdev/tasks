@@ -1,6 +1,6 @@
 ---
 title: "no-internal-canonical-loaders' module matcher is a hardcoded basename list"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
