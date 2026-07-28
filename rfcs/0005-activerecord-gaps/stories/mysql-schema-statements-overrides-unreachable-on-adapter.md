@@ -1,6 +1,6 @@
 ---
 title: "mysql-schema-statements-overrides-unreachable-on-adapter"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5490
 claim: "2026-07-28T12:16:18Z"
 assignee: "mysql-schema-statements-overrides-unreachable-on-adapter"
 blocked-by: null
