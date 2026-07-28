@@ -1,6 +1,6 @@
 ---
 title: "per-worker schema load bypasses load_schema's adapter-specific arm"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
