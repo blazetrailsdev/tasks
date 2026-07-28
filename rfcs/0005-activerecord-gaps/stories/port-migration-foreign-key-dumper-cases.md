@@ -1,7 +1,7 @@
 ---
 title: "port-migration-foreign-key-dumper-cases"
-status: in-progress
-updated: 2026-07-27
+status: done
+updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
