@@ -1,6 +1,6 @@
 ---
 title: "Port ForeignKeyInCreateTest and ForeignKeyChangeColumnTest cases"
-status: draft
+status: ready
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
