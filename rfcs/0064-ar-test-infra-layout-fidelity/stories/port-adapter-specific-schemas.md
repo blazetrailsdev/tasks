@@ -1,6 +1,6 @@
 ---
 title: "port-adapter-specific-schemas"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5523
 claim: "2026-07-28T15:39:27Z"
 assignee: "port-adapter-specific-schemas"
 blocked-by: null
