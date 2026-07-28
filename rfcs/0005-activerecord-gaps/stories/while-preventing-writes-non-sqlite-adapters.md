@@ -1,6 +1,6 @@
 ---
 title: "Port while_preventing_writes to the PG/MySQL adapters so adapter-prevent-writes rides the ambient connection"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 5544
 claim: "2026-07-28T23:15:44Z"
 assignee: "while-preventing-writes-non-sqlite-adapters"
 blocked-by: null
