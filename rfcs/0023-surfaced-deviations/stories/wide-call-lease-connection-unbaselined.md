@@ -1,6 +1,6 @@
 ---
 title: "Triage six unbaselined lease_connection wide-call mismatches"
-status: draft
+status: closed
 updated: 2026-07-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "premise was wrong: the six mismatches were caused by PR #5520's leaseConnection-named helper (isPortedWithArgs is global), fixed by renaming it; the one genuine gap is re-filed as query-assertions-missing-materialize-transactions"
 ---
 
 ## Context
