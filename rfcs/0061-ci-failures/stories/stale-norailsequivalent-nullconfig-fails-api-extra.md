@@ -1,6 +1,6 @@
 ---
 title: "api:extra red on main: stale @noRailsEquivalent tag on NullConfig after #5462"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
