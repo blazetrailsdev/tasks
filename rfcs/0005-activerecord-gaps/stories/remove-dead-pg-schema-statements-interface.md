@@ -1,6 +1,6 @@
 ---
 title: "remove-dead-pg-schema-statements-interface"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T14:31:43Z"
+assignee: "remove-dead-pg-schema-statements-interface"
 blocked-by: null
 closed-reason: null
 ---
