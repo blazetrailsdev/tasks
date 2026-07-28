@@ -1,6 +1,6 @@
 ---
 title: "Adapter initializeTypeMap copies drop base-map aliases instead of calling super"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5541
 claim: "2026-07-28T22:35:45Z"
 assignee: "adapter-type-maps-inline-base-map-drop-aliases"
 blocked-by: null
