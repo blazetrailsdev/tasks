@@ -1,6 +1,6 @@
 ---
 title: "schema:compare verifies TEST_SCHEMA, not the registry that lays the tables"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
