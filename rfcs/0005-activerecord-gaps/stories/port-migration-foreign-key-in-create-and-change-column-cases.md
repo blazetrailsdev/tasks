@@ -1,6 +1,6 @@
 ---
 title: "Port ForeignKeyInCreateTest and ForeignKeyChangeColumnTest cases"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5543
 claim: "2026-07-28T22:55:44Z"
 assignee: "port-migration-foreign-key-in-create-and-change-column-cases"
 blocked-by: null
