@@ -3,7 +3,7 @@ rfc: "0064-ar-test-infra-layout-fidelity"
 title: "AR test-infra layout fidelity"
 status: active
 created: 2026-07-08
-updated: 2026-07-27
+updated: 2026-07-28
 owner: "@your-handle"
 packages: ["activerecord"]
 clusters: []
@@ -104,10 +104,39 @@ so it may belong in `cases/helper.ts`); `protected-params.ts`;
 `astronauts` **inline**, `foreign_key_test.rb:178-194`, so the faithful home is
 the test file that uses it, not a shared helper).
 
-**Staleness warning.** This table is a snapshot (2026-07-26) and `main` drifts —
-`rocket-tables.ts` landed after the spike branch was cut and had to be added
-late. **Whichever story executes first must re-scan `test-helpers/` against
-current `main`** and bucket anything new rather than trusting this list.
+**E. Not `test-helpers/` entries at all — stay next to their subject.** These
+four were flagged as unbucketed by the #5361 re-scan; the 2026-07-28 re-scan
+confirms each already sits with its subject, and each stays there:
+
+- `src/pooled-test-adapter.test.ts` — its subject is `src/test-adapter.ts`, a
+  top-level module, not a `test-helpers/` one. Rails has no `test_adapter.rb`:
+  the nearest counterparts are `test/support/connection.rb`'s
+  `establish_connection` and the pin/unpin pair at
+  `lib/active_record/test_fixtures.rb:176-210`. Under the repo's
+  test-next-to-source convention (CLAUDE.md), `src/` is already its correct
+  home.
+- `src/naked-fixtures.test.ts` — exercises the bucket-D fixtures machinery
+  (`test-helpers/fixtures.ts`, `src/fixtures.ts`) and mirrors
+  `test/cases/fixtures_test.rb`'s naked/yml cases. Rails puts it in
+  `test/cases/`; trails puts tests next to source, so it stays in `src/`
+  regardless of where bucket D lands its subjects.
+- `src/test-fixtures/fixture-connection.ts` + `.test.ts` — postdates the
+  snapshot. Its Rails counterpart is `lib/active_record/test_fixtures.rb:176-210`
+  (`@fixture_connection_pools`, `pool.lease_connection`, `unpin_connection!`) —
+  **lib**, not test support, which is exactly the bucket-D reasoning — so it
+  rides with the rest of the fixture family in `src/test-fixtures/`, not
+  `support/`.
+
+**Staleness warning.** This table is a snapshot, re-scanned against `main` on
+2026-07-28 (originally 2026-07-26), and `main` drifts — `rocket-tables.ts`
+landed after the spike branch was cut and had to be added late, and
+`fixture-connection.ts` landed mid-#5361. **Whichever story executes next must
+re-scan `test-helpers/` against current `main`** and bucket anything new rather
+than trusting this list. As of the 2026-07-28 re-scan, `test-helpers/` holds
+only bucket A (`assets/`, `fixtures/`, `migrations/`, `models/`,
+`test-schema.ts`) plus the bucket-D leftovers `fixtures.ts` and
+`fixtures-registry.ts`; buckets B and C have shipped to `support/`, and bucket
+D's non-`test-helpers/` members landed in `src/test-fixtures/` via #5403.
 
 ## What does NOT move
 

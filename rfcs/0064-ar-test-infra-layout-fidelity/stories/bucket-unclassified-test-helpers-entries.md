@@ -39,12 +39,14 @@ re-scan turned up entries the table does not cover, and they were left in
 For contrast, `rocket-tables.ts` _is_ covered (bucket D, README:101-104) and was
 correctly left in place — the gap is specifically the four entries above.
 
-Second, smaller item: sibling story bodies in this RFC point at
+Second, smaller item: sibling story bodies in this RFC used to point at
 `docs/infrastructure/ar-test-setup-cases-helper-layout-audit.md` for the "Every
-current `test-helpers/` entry has a destination" A-D disposition. That file has
-never merged to `main` — it exists only in unmerged commit `0b49304a9`, and even
-that revision has no such section. The real disposition table is this RFC's
-README. The dangling pointer cost real time on #5361 and will cost it again.
+current `test-helpers/` entry has a destination" A-D disposition. That file
+never merged to `main` — it existed only in unmerged commit `0b49304a9`, and
+even that revision had no such section. **The disposition table is this RFC's
+README, section "Disposition of every current `test-helpers/` entry"** — the
+audit doc is not being landed. The dangling pointer cost real time on #5361;
+this story's body was the last one carrying it.
 
 ## Acceptance criteria
 
