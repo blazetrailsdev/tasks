@@ -1,7 +1,7 @@
 ---
 title: "statement-pool.test.ts claims a mysql2/statement_pool_test.rb that does not exist in Rails"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:51:43Z"
+assignee: "statement-pool-test-false-rails-anchor"
 blocked-by: null
 closed-reason: null
 ---
