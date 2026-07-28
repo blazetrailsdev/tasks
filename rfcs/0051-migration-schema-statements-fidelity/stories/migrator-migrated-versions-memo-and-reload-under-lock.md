@@ -1,6 +1,6 @@
 ---
 title: "Memoize Migrator#migrated and reload it after taking the advisory lock"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
