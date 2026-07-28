@@ -1,6 +1,6 @@
 ---
 title: "delegate-add-reference-to-reference-definition"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5485
 claim: "2026-07-28T02:28:17Z"
 assignee: "delegate-add-reference-to-reference-definition"
 blocked-by: null
