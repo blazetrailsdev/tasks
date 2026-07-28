@@ -1,6 +1,6 @@
 ---
 title: "delegate-add-reference-to-reference-definition"
-status: in-progress
+status: closed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5485
-claim: "2026-07-28T02:28:17Z"
-assignee: "delegate-add-reference-to-reference-definition"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: main's addReference now delegates to new ReferenceDefinition(refName, options).add(tableName, this) (schema-statements.ts:714), matching schema_statements.rb:1063-1065; the duplicate implementation is gone"
 ---
 
 ## Context
