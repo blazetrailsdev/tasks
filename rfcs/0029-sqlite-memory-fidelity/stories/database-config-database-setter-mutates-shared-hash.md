@@ -1,6 +1,6 @@
 ---
 title: "database-config-database-setter-mutates-shared-hash"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5509
 claim: "2026-07-28T14:30:31Z"
 assignee: "database-config-database-setter-mutates-shared-hash"
 blocked-by: null
