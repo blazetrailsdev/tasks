@@ -1,6 +1,6 @@
 ---
 title: "split-canonical-schema-registry-from-template-machinery"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5522
 claim: "2026-07-28T15:59:12Z"
 assignee: "split-canonical-schema-registry-from-template-machinery"
 blocked-by: null
