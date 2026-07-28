@@ -1,6 +1,6 @@
 ---
 title: "foreign-key-test-gate-mismatch-hard-zero"
-status: in-progress
+status: closed
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: 5476
-claim: "2026-07-28T00:46:15Z"
-assignee: "foreign-key-test-gate-mismatch-hard-zero"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed on main by PR 5466 (test(migration): converge the two foreign-key gate mismatches)"
 ---
 
 ## Context
