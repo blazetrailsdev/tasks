@@ -1,6 +1,6 @@
 ---
 title: "database-tasks-create-drop-emit-banners"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5545
 claim: "2026-07-28T23:25:44Z"
 assignee: "database-tasks-create-drop-emit-banners"
 blocked-by: null
