@@ -1,6 +1,6 @@
 ---
 title: "schema-migration-assume-migrated-upto-version-coverage"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5483
 claim: "2026-07-28T02:16:16Z"
 assignee: "schema-migration-assume-migrated-upto-version-coverage"
 blocked-by: null
