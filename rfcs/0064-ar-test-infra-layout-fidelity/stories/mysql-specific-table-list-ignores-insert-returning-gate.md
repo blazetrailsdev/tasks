@@ -56,6 +56,5 @@ Flagged in review on PR #5534 but merged before the fix landed.
   lanes.
 
 A verified fix (all four points, typecheck-clean, guard test failing before /
-passing after on MySQL 8) exists in the `port-mysql2-specific-schema-remainder-0cfc`
-worktree as uncommitted changes to `load-schema-helper.ts`, `drop-all-tables.ts`
-and `load-schema-helper.trails.test.ts`.
+passing after on MySQL 8) is pushed as commit `402955f61` on branch
+`fix-mysql-specific-table-list-insert-returning-gate` — no PR opened.
