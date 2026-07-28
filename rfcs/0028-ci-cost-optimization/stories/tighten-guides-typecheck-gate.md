@@ -1,13 +1,13 @@
 ---
 title: "tighten-guides-typecheck-gate"
 status: ready
-updated: 2026-07-24
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
