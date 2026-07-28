@@ -1,6 +1,6 @@
 ---
 title: "AMBIENT_RAILTIE_MIXINS.methods has no users left — delete it or justify keeping it"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5470
 claim: "2026-07-28T00:28:15Z"
 assignee: "retire-unused-ambient-railtie-mixins-methods-arm"
 blocked-by: null
