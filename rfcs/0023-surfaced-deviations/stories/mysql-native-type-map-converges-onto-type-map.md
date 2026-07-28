@@ -30,6 +30,21 @@ PR #5520 ported `AbstractAdapter::TYPE_MAP` (abstract_adapter.rb:942),
 form (abstract_mysql_adapter.rb:702-708). The inherited path therefore works
 for MySQL now, and the override is a duplicate.
 
+**Ordering hazard — do the declarations FIRST.** Deleting `_nativeTypeMap` is
+what makes the missing per-class `TYPE_MAP` bite. Today
+`AbstractAdapter.extended_type_map` seeds with `new TypeMap(this.TYPE_MAP)`
+(abstract-adapter.ts, mirroring abstract_adapter.rb:878) and `this.TYPE_MAP`
+always resolves to the single abstract map, because trails declares the
+constant only on `AbstractAdapter`. In Ruby the same line resolves
+`self::TYPE_MAP` to `Mysql2Adapter::TYPE_MAP` (mysql2_adapter.rb:53), which
+carries MySQL's `initialize_type_map` registrations (`tinytext`, `tinyblob`,
+`mediumint`, unsigned variants). That divergence is inert only while
+`_nativeTypeMap` is the real casting path — the moment this story deletes it,
+MySQL starts casting through the abstract map and silently resolves the wrong
+types for every MySQL-specific sql_type. The same applies to `SQLite3Adapter`
+(sqlite3_adapter.rb:505-506), which also lacks both constants and currently
+shares `AbstractAdapter.EXTENDED_TYPE_MAPS`.
+
 Two Rails details the convergence depends on:
 
 - Rails declares `TYPE_MAP` on `Mysql2Adapter` (mysql2_adapter.rb:53) and
