@@ -1,6 +1,6 @@
 ---
 title: "Split a per-run Migrator (direction + target_version state) out of MigrationContext"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 5484
 claim: "2026-07-28T02:22:14Z"
 assignee: "split-per-run-migrator-out-of-migration-context"
 blocked-by: null
