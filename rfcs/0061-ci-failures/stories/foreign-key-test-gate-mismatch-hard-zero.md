@@ -1,6 +1,6 @@
 ---
 title: "foreign-key-test-gate-mismatch-hard-zero"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 5476
 claim: "2026-07-28T00:46:15Z"
 assignee: "foreign-key-test-gate-mismatch-hard-zero"
 blocked-by: null
