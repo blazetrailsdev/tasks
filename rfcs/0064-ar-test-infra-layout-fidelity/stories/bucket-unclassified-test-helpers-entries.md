@@ -1,6 +1,6 @@
 ---
 title: "Bucket the test-helpers/ entries RFC 0064's disposition table misses"
-status: claimed
+status: done
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5403
 claim: "2026-07-28T15:01:19Z"
 assignee: "bucket-unclassified-test-helpers-entries"
 blocked-by: null
