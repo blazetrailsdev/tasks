@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable feeds raw PRAGMA rows to its modify callback instead of Rails' columns(from)"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5528
 claim: "2026-07-28T18:13:48Z"
 assignee: "sqlite-alter-table-modify-callback-takes-pragma-rows-not-columns"
 blocked-by: null
