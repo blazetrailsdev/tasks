@@ -1,7 +1,7 @@
 ---
 title: "connection-handlers-sharding-db-file-based"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T12:40:19Z"
+assignee: "connection-handlers-sharding-db-file-based"
 blocked-by: null
 closed-reason: null
 ---
