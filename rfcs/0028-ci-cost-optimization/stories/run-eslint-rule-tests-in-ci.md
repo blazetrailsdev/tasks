@@ -1,7 +1,7 @@
 ---
 title: "run-eslint-rule-tests-in-ci"
-status: ready
-updated: 2026-07-24
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered on main. eslint/ is now in UNIT_TESTS_PKGS_RE (ci.yml:210) and in the unit-tests job's vitest filters (ci.yml:714), and all eslint/*.test.mjs entries are gone from KNOWN_UNRUN in scripts/ci-suite-coverage.test.ts (only vendor/fetch.test.ts remains). All three acceptance criteria are satisfied."
 ---
 
 # ESLint rule tests (eslint/\*.test.mjs) never run — 22 files of dead signal
