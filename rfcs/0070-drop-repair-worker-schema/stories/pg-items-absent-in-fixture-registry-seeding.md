@@ -1,6 +1,6 @@
 ---
 title: "PG flake: canonical items table absent in fixtureRegistry seeding test"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5519
 claim: "2026-07-28T15:44:22Z"
 assignee: "pg-items-absent-in-fixture-registry-seeding"
 blocked-by: null
