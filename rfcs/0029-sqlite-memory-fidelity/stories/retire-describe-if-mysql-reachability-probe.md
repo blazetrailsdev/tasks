@@ -1,6 +1,6 @@
 ---
 title: "Retire describeIfMysql (server-reachability probe) once the burn-down drains its callers"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
