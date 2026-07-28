@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-model-resolution-onto-constantize"
-status: claimed
+status: blocked
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-28T01:10:16Z"
 assignee: "converge-ar-model-resolution-onto-constantize"
-blocked-by: null
+blocked-by: "Blocked on PR #5471 (port constantize/safeConstantize), still open as of 2026-07-27. Neither ActiveSupport::Inflector.constantize/safeConstantize nor the 18 call-mismatches-wide-exclude entries this story converges exist in origin/main, so there is nothing to route AR model resolution onto and nothing to un-baseline. Re-open as ready once #5471 merges."
 closed-reason: null
 ---
 
