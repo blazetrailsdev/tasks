@@ -1,6 +1,6 @@
 ---
 title: "decide whether get#{Name} is a port candidate for a Ruby reader"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
