@@ -1,6 +1,6 @@
 ---
 title: "Mix MySQL foreignKeys onto AbstractMysqlAdapter instead of a Mysql2Adapter host literal"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
