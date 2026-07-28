@@ -1,6 +1,6 @@
 ---
 title: "Wide call-mismatch ratchet red on main with 7 new entries"
-status: draft
+status: closed
 updated: 2026-07-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No longer reproduces: on main @2a846f1a9, pnpm api:compare --wide-calls + lint-call-mismatches-wide.ts reports 'ratchet: OK (4808 baselined)'. All seven entries are resolved (record_environment baselined in migration.json; the rest converged)."
 ---
 
 ## Context
