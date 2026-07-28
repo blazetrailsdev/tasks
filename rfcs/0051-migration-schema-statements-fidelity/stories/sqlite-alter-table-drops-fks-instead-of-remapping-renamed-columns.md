@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable drops foreign keys on a renamed column instead of remapping them"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T18:13:54Z"
+assignee: "sqlite-alter-table-drops-fks-instead-of-remapping-renamed-columns"
 blocked-by: null
 closed-reason: null
 ---
