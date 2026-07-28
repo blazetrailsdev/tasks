@@ -1,6 +1,6 @@
 ---
 title: "Fold or retire the trails-only sqlite3-copy-table test file"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
