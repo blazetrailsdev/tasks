@@ -1,6 +1,6 @@
 ---
 title: "Migrator loads the migration outside the all-later-migrations-canceled rescue"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
