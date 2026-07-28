@@ -37,9 +37,11 @@ is the tracking anchor so they are not inherited as unexamined blind spots:
    it, which would have left the whole SQLite lane blind — evidence that this
    list rots silently.
 3. A swept name reaching either drop spelling through a call the rule cannot
-   see through, such as `dropTable(String(t))` or any wrapper function. Member,
-   optional-chain, non-null, logical and single-expression-template wrappings
-   ARE unwrapped; a call is not.
+   see through, such as `dropTable(String(t))` or any wrapper function. Both walkers share
+   one `unwrapStep`, so member, optional-chain, non-null, await, logical and
+   single-expression-template wrappings are unwrapped identically; they differ
+   only in that a call is unwrapped to its callee when resolving a row source,
+   never at the drop site.
 4. A catalogue query built by string concatenation or returned from a helper.
    Only a literal, a template, or an identifier holding one is followed to a
    sink.
@@ -48,6 +50,17 @@ is the tracking anchor so they are not inherited as unexamined blind spots:
    object or another argument of the same call, so a bare helper that closes
    over the rows (`async function sweep(rows) { rows.forEach(…) }` called
    elsewhere) is silent.
+6. A row name aliased through a form `unwrapStep` cannot follow. It is
+   single-successor by construction, so it follows exactly one operand per
+   node: a `ConditionalExpression`
+   (`const t = r.tablename ? r.tablename : "x"`) is not followed at all, and a
+   `TemplateLiteral` is followed only with exactly one substitution —
+   `` `public.${r.tablename}` `` resolves, `` `${PRE}${r.tablename}` `` does
+   not. `LogicalExpression` follows the left operand only, so
+   `res.rows ?? []` resolves and `FALLBACK || res.rows` does not.
+   `ConditionalExpression` is a one-line addition; the multi-substitution
+   template needs a fan-out the single-successor walker cannot express, which
+   is why both were documented rather than half-closed.
 
 Each is a place where the guard reports nothing while the drift still happens,
 so a future sweep written in one of these spellings would reproduce the
