@@ -1,6 +1,6 @@
 ---
 title: "Exercise the mysql lane with MYSQL_PREPARED_STATEMENTS in CI"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T21:09:04Z"
+assignee: "mysql-prepared-statements-ci-lane"
 blocked-by: null
 closed-reason: null
 ---
