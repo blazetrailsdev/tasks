@@ -17,46 +17,39 @@ closed-reason: null
 
 ## Context
 
-PR #5525 collapsed the duplicated migration banner logic: `Migrator#_runMigration`
-(`packages/activerecord/src/migration.ts`) now calls `migration.migrate(direction)`
-as Rails does (`vendor/rails/activerecord/lib/active_record/migration.rb:1534`),
-and the announce/benchmark/announce/write sequence lives only in
-`Migration#migrate` (`migration.rb:964-983`).
+PR #5525 collapsed the duplicated migration banner logic and restored Rails'
+delegation. `Migrator#_runMigration`
+(`packages/activerecord/src/migration.ts`) calls `migration.migrate(direction)`
+(`vendor/rails/activerecord/lib/active_record/migration.rb:1534`), the
+announce/benchmark/announce/write sequence lives only in `Migration#migrate`
+(`migration.rb:964-983`), and the proxy factories construct the migration as
+`name.constantize.new(name, version)` does (`migration.rb:1195`) via
+`loadMigrationFrom`. A loaded object that already is a `Migration` is used as
+the delegation target directly, so subclass overrides of
+`migrate`/`announce`/`write` are honoured.
 
-It got there by wrapping whatever `MigrationProxy.migration()` yields in a
-file-local `MigrationProxyDelegate extends Migration` carrying the proxy's
-name/version. That was the behaviour-preserving move, because a trails
-`MigrationProxy` is a plain record whose `migration()` commonly yields a bare
-`{ up, down }` object with no `migrate`/`announce` — the shape most test
-helpers and both `Migrator.discoverMigrations` / `Migrator.fromPath` produce
-(they return `mod.default` unchanged).
+What is left: the trails-only bare `{ up, down }` proxy shape. `MigrationLike`
+still permits an object with no `migrate`/`announce`, and
+`Migrator#_runMigration` still keeps a file-local `MigrationProxyDelegate
+extends Migration` purely to wrap that shape. Rails has no such wrapper —
+`MigrationProxy#load_migration` always yields a real `Migration`.
 
-Rails has no such wrapper. `MigrationProxy#load_migration`
-(`migration.rb:1195-1200`) builds a real migration with
-`name.constantize.new(name, version)` and `delegate :migrate, :announce,
-:write, :disable_ddl_transaction, to: :migration` (`migration.rb:1187`) hands
-straight to it.
-
-The remaining gap: because the wrapper is uniform, a loaded migration that IS
-a real `Migration` never gets to use its own `migrate`/`announce`/`write` — an
-override on a user subclass is silently bypassed. Rails would honour it.
-
-PR #5525 made this fixable by teaching `Migration#name`/`#version` to prefer
-the `@name`/`@version` set in `initialize` (`migration.rb:889`), so a proxy can
-now construct `new Klass(name, version)` and get correct banner identity
-without the wrapper.
+The shape is used by test helpers (`makeMigration` in
+`packages/activerecord/src/migrator.trails.test.ts`, `migration()` in
+`migrator.test.ts`) and is the reason the Migrator-level `strategy:` option
+(itself a trails invention — Rails' execution strategy is per-Migration, via
+`Migration#execution_strategy`, and its Migrator has none) still has a
+execution path to wrap.
 
 ## Acceptance criteria
 
-- [ ] `Migrator.discoverMigrations` / `Migrator.fromPath` construct the loaded
-      migration as `new Klass(name, version)`, mirroring
-      `MigrationProxy#load_migration` (`migration.rb:1195-1200`), so
-      `migration()` yields a real `Migration`.
-- [ ] The bare `{ up, down }` proxy shape is retired from
-      `MigrationLike`/test helpers, or `MigrationProxyDelegate` is narrowed to
-      only that shape rather than wrapping unconditionally.
-- [ ] A migration subclass overriding `announce` (or `write`) has its override
-      honoured when run through the Migrator, as Rails' delegation does.
-- [ ] The banner tests added in PR #5525
-      (`migrator.trails.test.ts`, "Migrator drives migrations through
-      Migration#migrate") still pass unchanged.
+- [ ] The bare `{ up, down }` shape is retired: `MigrationLike` requires a real
+      `Migration`, and the test helpers construct one.
+- [ ] `MigrationProxyDelegate` is deleted — with no bare shape left, the
+      Migrator delegates to the loaded `Migration` unconditionally, as
+      `migration.rb:1187` does.
+- [ ] The Migrator-level `strategy:` option is either converged onto Rails'
+      per-Migration `execution_strategy` or explicitly justified as a
+      documented trails deviation.
+- [ ] The banner tests added in PR #5525 (`migrator.trails.test.ts`, "Migrator
+      drives migrations through Migration#migrate") still pass unchanged.
