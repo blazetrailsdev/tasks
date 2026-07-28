@@ -1,6 +1,6 @@
 ---
 title: "reference-definition-foreign-table-name-honors-pluralize-table-names"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5489
 claim: "2026-07-28T12:22:16Z"
 assignee: "reference-definition-foreign-table-name-honors-pluralize-table-names"
 blocked-by: null
