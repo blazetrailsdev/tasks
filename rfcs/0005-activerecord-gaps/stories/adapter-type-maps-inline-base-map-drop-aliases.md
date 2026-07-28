@@ -1,6 +1,6 @@
 ---
 title: "Adapter initializeTypeMap copies drop base-map aliases instead of calling super"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
