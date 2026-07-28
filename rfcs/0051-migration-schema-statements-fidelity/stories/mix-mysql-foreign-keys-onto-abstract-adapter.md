@@ -1,6 +1,6 @@
 ---
 title: "Mix MySQL foreignKeys onto AbstractMysqlAdapter instead of a Mysql2Adapter host literal"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T18:13:36Z"
+assignee: "mix-mysql-foreign-keys-onto-abstract-adapter"
 blocked-by: null
 closed-reason: null
 ---
