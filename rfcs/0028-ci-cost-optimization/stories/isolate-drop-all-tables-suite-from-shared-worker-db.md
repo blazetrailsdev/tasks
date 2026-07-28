@@ -1,6 +1,6 @@
 ---
 title: "Isolate the dropAllTables self-test suite from the shared worker DB"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: 5531
 claim: "2026-07-28T20:39:08Z"
 assignee: "isolate-drop-all-tables-suite-from-shared-worker-db"
 blocked-by: null
