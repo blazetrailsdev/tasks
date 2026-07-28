@@ -1,6 +1,6 @@
 ---
 title: "for-current-env-ignores-default-env"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5496
 claim: "2026-07-28T12:58:15Z"
 assignee: "for-current-env-ignores-default-env"
 blocked-by: null
