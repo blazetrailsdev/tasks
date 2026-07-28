@@ -49,6 +49,35 @@ the sync setter is faithful only on the branch where Rails does no I/O either
       throw remains a deviation from Rails (which raises nothing there) and
       should be justified at the call site as such.
 
+## Decision (recorded 2026-07-27)
+
+`set#{Name}` stays — it is the idiomatic TS spelling of an awaitable write, and
+it already delegates in exactly one line to the Rails-named method, mirroring
+what Rails' own `define_writers` generates:
+
+```ts
+// has-one.ts:118-122
+return this.association(name).writer(value);
+```
+
+```ruby
+# builder/association.rb:108-110
+def #{name}=(value)
+  association(:#{name}).writer(value)
+end
+```
+
+The rejected alternative was making `await record.association(name).writer(x)`
+the sanctioned surface and deleting `set#{Name}`. It is Rails-verbatim and needs
+no tooling change, but it is markedly more verbose at every call site for no
+behavioural gain — the delegation target is identical either way.
+
+**Prefer scoping the new candidate to association writers** rather than all Ruby
+`name=` setters. The fidelity argument ("Rails' writer blocks on I/O, so the
+faithful JS port must be awaitable") is only true for association writers; a
+plain attribute writer has no I/O and its sync accessor is the correct port.
+A global mapping would let any `foo=` be satisfied by an unrelated `setFoo`.
+
 ## Notes
 
 Scope is the convention mapping + doc + accounting. Do NOT delete the `=`
