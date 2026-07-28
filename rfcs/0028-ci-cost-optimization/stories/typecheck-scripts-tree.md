@@ -1,7 +1,7 @@
 ---
 title: "scripts/**/*.ts is not type-checked by pnpm typecheck"
-status: draft
-updated: 2026-07-24
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise still live on main (root tsconfig.json has files:[] and references only the 15 packages/* projects; no scripts/tsconfig.json exists), but off-charter for RFC 0028: adding scripts/**/*.ts to tsc --build ADDS work to build-and-typecheck, a critical-path job. It is a type-safety gap, not a CI-cost story, and cannot clear this RFC's wall-time go/no-go gate. Closed as part of the close-out; refile under a type-audit/typecheck RFC (cf. 0009-type-audit, 0037-no-explicit-any-enforcement)."
 ---
 
 ## Context
