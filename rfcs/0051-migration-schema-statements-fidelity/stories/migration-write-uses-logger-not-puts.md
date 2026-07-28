@@ -1,6 +1,6 @@
 ---
 title: "Migration#write routes through Migration.logger; Rails uses puts"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5481
 claim: "2026-07-28T01:58:15Z"
 assignee: "migration-write-uses-logger-not-puts"
 blocked-by: null
