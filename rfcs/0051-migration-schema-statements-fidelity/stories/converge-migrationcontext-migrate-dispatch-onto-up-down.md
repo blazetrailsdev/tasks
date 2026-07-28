@@ -1,6 +1,6 @@
 ---
 title: "converge-migrationcontext-migrate-dispatch-onto-up-down"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
