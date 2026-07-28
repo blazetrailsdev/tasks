@@ -1,6 +1,6 @@
 ---
 title: "long-tail-memory-sites-ambient"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5495
 claim: "2026-07-28T12:46:17Z"
 assignee: "long-tail-memory-sites-ambient"
 blocked-by: null
