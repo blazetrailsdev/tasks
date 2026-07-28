@@ -1,6 +1,6 @@
 ---
 title: "Relocate the 6 misplaced migration test cases to their Rails-matching files"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5547
 claim: "2026-07-28T23:05:45Z"
 assignee: "relocate-misplaced-migration-cases"
 blocked-by: null
