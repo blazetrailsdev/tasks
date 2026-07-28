@@ -1,14 +1,14 @@
 ---
 title: "Enforce the @missingRailsCall empty-reason contract in a CI job"
-status: claimed
-updated: 2026-07-27
+status: in-progress
+updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5464
 claim: "2026-07-27T23:57:37Z"
 assignee: "enforce-missing-rails-call-reason-in-ci"
 blocked-by: null
