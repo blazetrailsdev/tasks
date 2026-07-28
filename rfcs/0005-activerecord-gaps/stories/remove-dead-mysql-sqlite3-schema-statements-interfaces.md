@@ -1,6 +1,6 @@
 ---
 title: "Remove the dead MySQL and SQLite3 SchemaStatements interfaces"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
