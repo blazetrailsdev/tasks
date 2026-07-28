@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented _mysqlFkAction indirection in favour of the ported extractForeignKeyAction"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 5477
 claim: "2026-07-28T01:16:16Z"
 assignee: "remove-invented-mysql-fk-action-indirection"
 blocked-by: null
