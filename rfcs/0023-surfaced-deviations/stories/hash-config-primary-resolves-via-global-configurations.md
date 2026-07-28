@@ -52,6 +52,22 @@ configs (`connection-handling.test.ts:486`, `:519`, `:722`,
 purely because the constructor mutates it. Rails has no `current` and no such
 dance.
 
+PR #5512 moved the registry's backing store out of `core.ts` into
+`database-configurations.ts` (`configurationsStore()` / `setConfigurationsStore()`,
+both `@internal`) so `ConnectionHandler` could read it without an import edge to
+`core.ts`. That makes this story strictly smaller: `hash-config.ts`' checker can
+now read the store from the module it already sits next to, with no `core.js`
+import at all.
+
+That PR also made `setConfigurationsStore` assign `_currentConfigurations`, so
+`Base.configurations=` re-registers the primary checker. The pair is still
+asymmetric in the other direction: the `current` setter
+(`database-configurations.ts:156-158`) and the constructor / `fromRaw`
+registrations (`:173`, `:189`) write only `_currentConfigurations`, so any
+`new DatabaseConfigurations(...)` silently repoints `primary?` without changing
+`Base.configurations()`. Collapsing the shim into the store removes both
+directions at once.
+
 ## Acceptance criteria
 
 - `HashConfig#isPrimary` resolves through the global `configurations` registry,
@@ -63,8 +79,8 @@ dance.
   Rails has no counterpart for either.
 - The `(DatabaseConfigurations as any).current` save/restore blocks in the
   suites above are removed along with it.
-- No `base.js` import from `database-configurations*` — read the accessor from
-  `core.js`, as `connection-handling.ts` does.
+- No `base.js` or `core.js` import from `database-configurations*` — read
+  `configurationsStore()` in `database-configurations.ts` directly.
 - Suites pass: database-configurations, connection-handling, shard-keys,
   test-databases, connection-swapping-nested, connection-handlers-\*,
   schema-dumper (schema_dump / seeds read `primary?`).
