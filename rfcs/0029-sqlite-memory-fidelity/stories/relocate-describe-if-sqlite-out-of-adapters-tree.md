@@ -1,6 +1,6 @@
 ---
 title: "Relocate describeIfSqlite so connection-adapters tests stop importing across trees"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5536
 claim: "2026-07-28T21:45:44Z"
 assignee: "relocate-describe-if-sqlite-out-of-adapters-tree"
 blocked-by: null
