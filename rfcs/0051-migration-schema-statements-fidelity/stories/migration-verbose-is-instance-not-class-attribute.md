@@ -1,6 +1,6 @@
 ---
 title: "Migration.verbose should be a class attribute, not per-instance + Migrator.verbose"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T16:11:14Z"
+assignee: "migration-verbose-is-instance-not-class-attribute"
 blocked-by: null
 closed-reason: null
 ---
