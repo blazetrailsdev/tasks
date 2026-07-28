@@ -1,6 +1,6 @@
 ---
 title: "three-levels-config-through-find-db-config"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T14:46:42Z"
+assignee: "three-levels-config-through-find-db-config"
 blocked-by: null
 closed-reason: null
 ---
