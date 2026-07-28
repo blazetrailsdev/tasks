@@ -1,6 +1,6 @@
 ---
 title: "PG sequenceNameFromParts hardcodes 63 instead of maxIdentifierLength"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5475
 claim: "2026-07-28T00:58:15Z"
 assignee: "pg-sequence-name-from-parts-hardcodes-63"
 blocked-by: null
