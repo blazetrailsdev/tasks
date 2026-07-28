@@ -1,6 +1,6 @@
 ---
 title: "Retire describeIfMysql (server-reachability probe) once the burn-down drains its callers"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T21:55:45Z"
+assignee: "retire-describe-if-mysql-reachability-probe"
 blocked-by: null
 closed-reason: null
 ---
