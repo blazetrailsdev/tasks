@@ -43,12 +43,23 @@ These interact: making the two call sites _invoke_ the accessor without first
 supplying the Rails default would flip the `dependent: destroyAsync` validity
 guard from never-firing to always-firing. Both halves have to land together.
 
+**Blocked on ActiveJob.** The default string names
+`ActiveRecord::DestroyAssociationAsyncJob`, defined in
+`activerecord/lib/active_record/destroy_association_async_job.rb` — an
+`ActiveJob::Base` subclass. trails has no `activejob` package, and that file is
+listed in `scripts/api-compare/unported-files.ts:147`. Adding the default today
+would make `destroyAssociationAsyncJob()` raise
+`uninitialized constant ActiveRecord::DestroyAssociationAsyncJob` on every read.
+The accessor cannot be both faithful and functional until the job class exists,
+which is why PR #5503 left the resolution branch correct but unexercised.
+
 ## Acceptance criteria
 
-- `_destroyAssociationAsyncJob` defaults to
-  `"ActiveRecord::DestroyAssociationAsyncJob"` as in `core.rb:24`, and a
-  `DestroyAssociationAsyncJob` constant exists to resolve it (or the default is
-  deliberately omitted with the reason recorded at the declaration).
+- `destroy_association_async_job.rb` is ported (needs ActiveJob) and registered
+  as a constant, and `_destroyAssociationAsyncJob` defaults to
+  `"ActiveRecord::DestroyAssociationAsyncJob"` as in `core.rb:24`. If ActiveJob
+  is still out of reach, the default stays omitted and the reason is recorded at
+  the declaration rather than left implicit.
 - `associations/association.ts:983` and
   `associations/builder/association.ts:271` call the accessor instead of
   reading the function object.
