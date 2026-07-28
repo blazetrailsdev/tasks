@@ -1,6 +1,6 @@
 ---
 title: "Stale @noRailsEquivalent on NullConfig makes pnpm api:extra exit 1"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
