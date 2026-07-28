@@ -1,7 +1,7 @@
 ---
 title: "Run gate-trace.sh drift + carve-out check in preflight"
-status: draft
-updated: 2026-07-24
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise still live (scripts/ci/gate-trace.sh exists on main and no ci.yml step invokes it — grep 'gate-trace' over origin/main:.github/workflows/ci.yml returns nothing), but it is a zero-savings guard: it protects this RFC's delivered gating machinery rather than cutting minutes, so it has nothing to measure against the wall-time gate. Closed as part of the close-out. FLAG: this is the most defensible of the closes — if gate drift is a real worry, refile it under the CI-correctness RFC rather than reopening here."
 ---
 
 ## Context
