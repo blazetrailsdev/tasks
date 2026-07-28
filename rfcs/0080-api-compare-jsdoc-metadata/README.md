@@ -162,6 +162,19 @@ extra):
    tags in the TypeDoc/lint tag config together. (Do NOT touch that doc
    before merge — the branch is owned by another agent.)
 
+## Tag audit
+
+[`tag-audit.md`](tag-audit.md) classifies every `@noRailsEquivalent` tag in the
+repo as permanent (a language- or runtime-level fact no port can remove) or
+convergeable (unfinished porting, a fixable collision, a comparator gap), with
+a `vendor/rails` `file:line` behind each call. 42 of 79 came back convergeable.
+
+It is the fact-finding half of `audit-existing-tags-for-convergeable-surface`;
+the actionable half is the ten stories it registered, listed in the audit's
+per-finding sections. Re-run the audit whenever a batch of tags is added at
+once — `api:extra` fails on a STALE tag, but nothing catches a tag on surface
+that still flags and should not exist.
+
 ## Non-goals
 
 - No change to `@missingRailsCall` / `api:build` design — PR #5229 owns it.
