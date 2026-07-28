@@ -1,6 +1,6 @@
 ---
 title: "Converge _modelsByName with modelRegistry or retire it"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
