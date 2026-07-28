@@ -1,6 +1,6 @@
 ---
 title: "Isolate the dropAllTables self-test suite from the shared worker DB"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
