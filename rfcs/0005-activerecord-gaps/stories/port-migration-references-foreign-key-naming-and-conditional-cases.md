@@ -1,6 +1,6 @@
 ---
 title: "port-migration-references-foreign-key-naming-and-conditional-cases"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5488
 claim: "2026-07-28T02:10:16Z"
 assignee: "port-migration-references-foreign-key-naming-and-conditional-cases"
 blocked-by: null
