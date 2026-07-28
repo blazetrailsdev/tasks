@@ -1,6 +1,6 @@
 ---
-title: "Migration#validateForeignKey delegates through , hiding signature drift"
-status: ready
+title: "Migration#validateForeignKey delegates through an any-cast, hiding signature drift"
+status: draft
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

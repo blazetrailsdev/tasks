@@ -1,6 +1,6 @@
 ---
 title: "Gate extractor drops else-arm negation, colliding same-named if/else tests"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
