@@ -1,6 +1,6 @@
 ---
 title: "resolve-pool-config-validate-bang"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5515
 claim: "2026-07-28T15:27:26Z"
 assignee: "resolve-pool-config-validate-bang"
 blocked-by: null
