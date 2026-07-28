@@ -1,6 +1,6 @@
 ---
 title: "converge-protectedparams-permit-bang-spelling"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5532
 claim: "2026-07-28T20:54:04Z"
 assignee: "converge-protectedparams-permit-bang-spelling"
 blocked-by: null
