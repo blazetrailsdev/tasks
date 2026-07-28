@@ -1,7 +1,7 @@
 ---
 title: "Announce a parked displacement-removal failure through Base.logger"
-status: in-progress
-updated: 2026-07-27
+status: closed
+updated: 2026-07-28
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: 5454
-claim: "2026-07-27T20:58:24Z"
-assignee: "nested-attr-displacement-failure-logger-emit"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't do: premise unsound. ActiveRecord never logs anywhere (zero logger.error in activerecord/lib; no logger reference in nested_attributes.rb or associations/*.rb). Rails' only signal for a failed displacement removal is the inline raise RecordNotSaved (has_one_association.rb:108-113); the sticky rethrow shipped in #5441 is already the faithful deferral. A Base.logger emit is invented surface, and the hardcoded nullify-save message would fabricate a diagnosis for rejections from the :delete/:destroy arms, raising callbacks, or connection errors. PR #5454 closed unmerged."
 ---
 
 ## Context
