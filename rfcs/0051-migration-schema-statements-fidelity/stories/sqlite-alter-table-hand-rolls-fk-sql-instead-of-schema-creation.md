@@ -1,7 +1,7 @@
 ---
 title: "SQLite alterTable concatenates rebuild DDL by hand instead of going through schemaCreation"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T02:34:18Z"
+assignee: "sqlite-alter-table-hand-rolls-fk-sql-instead-of-schema-creation"
 blocked-by: null
 closed-reason: null
 ---
