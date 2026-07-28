@@ -1,6 +1,6 @@
 ---
 title: "ADAPTER_SPECIFIC_TABLES duplicates the loaders and is guarded exactly only on sqlite"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
