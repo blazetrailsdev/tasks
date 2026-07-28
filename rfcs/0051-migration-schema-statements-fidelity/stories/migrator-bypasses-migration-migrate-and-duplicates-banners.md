@@ -1,6 +1,6 @@
 ---
 title: "Migrator#_runMigration should call migration.migrate instead of the strategy directly"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 5525
 claim: "2026-07-28T16:17:19Z"
 assignee: "migrator-bypasses-migration-migrate-and-duplicates-banners"
 blocked-by: null
