@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-skip-duck-typed-interface-members"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5467
 claim: "2026-07-28T00:04:17Z"
 assignee: "extra-surface-skip-duck-typed-interface-members"
 blocked-by: null
