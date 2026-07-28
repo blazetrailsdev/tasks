@@ -1,6 +1,6 @@
 ---
 title: "bind-parameter-assert-quoted-as-through-post"
-status: ready
+status: claimed
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:36:45Z"
+assignee: "bind-parameter-assert-quoted-as-through-post"
 blocked-by: null
 closed-reason: null
 ---
