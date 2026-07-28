@@ -1,6 +1,6 @@
 ---
 title: "converge-test-support-api-compare-gaps"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
