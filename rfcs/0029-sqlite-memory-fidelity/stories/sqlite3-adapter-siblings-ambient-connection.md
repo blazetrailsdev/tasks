@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-adapter-siblings-ambient-connection"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:16:41Z"
+assignee: "sqlite3-adapter-siblings-ambient-connection"
 blocked-by: null
 closed-reason: null
 ---
