@@ -1,6 +1,6 @@
 ---
 title: "port-constantize-retire-model-finder"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
