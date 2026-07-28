@@ -1,6 +1,6 @@
 ---
 title: "cli-db-migrate-should-call-migrate-all"
-status: ready
+status: closed
 updated: 2026-07-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: implemented in #5473 after review"
 ---
 
 ## Context
