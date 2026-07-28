@@ -1,6 +1,6 @@
 ---
 title: "wide ratchet reseed reorders entries that share a rubyName"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
