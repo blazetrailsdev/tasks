@@ -1,7 +1,7 @@
 ---
 title: "CI workflow never runs on the draft to ready-for-review transition"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise still live on main (ci.yml:22 is still types: [opened, synchronize, reopened, labeled]; ready_for_review absent), but this is a CI-reliability bug, not a cost/wall-time story — it adds a trigger rather than cutting minutes, and has no before/after wall-time measurement to clear RFC 0028's go/no-go gate. Closed as part of the close-out; it is a real 1-line fix worth refiling under 0061-ci-failures."
 ---
 
 ## Context
