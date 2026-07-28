@@ -1,6 +1,6 @@
 ---
 title: "Remove the dead MySQL and SQLite3 SchemaStatements interfaces"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5513
 claim: "2026-07-28T15:13:48Z"
 assignee: "remove-dead-mysql-sqlite3-schema-statements-interfaces"
 blocked-by: null
