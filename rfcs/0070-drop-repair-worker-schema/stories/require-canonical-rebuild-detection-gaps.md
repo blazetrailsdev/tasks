@@ -43,6 +43,11 @@ is the tracking anchor so they are not inherited as unexamined blind spots:
 4. A catalogue query built by string concatenation or returned from a helper.
    Only a literal, a template, or an identifier holding one is followed to a
    sink.
+5. The assignment form of a for-of head — `for (t of tables)` with `t` declared
+   elsewhere — whose loop head is a bare `Identifier` rather than a declaration
+   and so matches no binding test. Never detected, in any revision of the rule;
+   surfaced in review once the predicate was rewritten as an explicit binding
+   test rather than an upward walk.
 
 Each is a place where the guard reports nothing while the drift still happens,
 so a future sweep written in one of these spellings would reproduce the
