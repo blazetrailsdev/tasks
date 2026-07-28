@@ -1,6 +1,6 @@
 ---
 title: "Converge the three model constant-table registration paths onto one guarded path"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
