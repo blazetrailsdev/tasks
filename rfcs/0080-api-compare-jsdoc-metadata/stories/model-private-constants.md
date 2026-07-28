@@ -1,6 +1,6 @@
 ---
 title: "model-private-constants"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5514
 claim: "2026-07-28T15:17:24Z"
 assignee: "model-private-constants"
 blocked-by: null
