@@ -1,6 +1,6 @@
 ---
 title: "ARCONN=sqlite3_mem lane fails wholesale — decide supported vs vestigial"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5508
 claim: "2026-07-28T13:31:47Z"
 assignee: "sqlite3-mem-lane-status"
 blocked-by: null
