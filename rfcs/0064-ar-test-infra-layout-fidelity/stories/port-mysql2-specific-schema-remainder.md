@@ -1,6 +1,6 @@
 ---
 title: "port-mysql2-specific-schema-remainder"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5534
 claim: "2026-07-28T21:24:03Z"
 assignee: "port-mysql2-specific-schema-remainder"
 blocked-by: null
