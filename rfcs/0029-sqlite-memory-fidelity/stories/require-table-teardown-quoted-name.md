@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown-quoted-name"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
