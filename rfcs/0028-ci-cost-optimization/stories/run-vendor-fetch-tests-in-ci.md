@@ -1,7 +1,7 @@
 ---
 title: "run-vendor-fetch-tests-in-ci"
-status: ready
-updated: 2026-07-24
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise still live (vendor/fetch.test.ts remains the sole KNOWN_UNRUN entry in scripts/ci-suite-coverage.test.ts:30) but off-charter for RFC 0028: wiring a currently-failing suite into CI ADDS billed minutes and wall time, it does not cut them. No wall-time win exists for it to clear this RFC's go/no-go gate. Closed as part of the RFC close-out; refile under a test-coverage RFC if the signal is wanted. Note: the KNOWN_UNRUN comment still names this story id."
 ---
 
 # vendor/\*.test.ts never run in CI; fetch.test.ts fails locally
