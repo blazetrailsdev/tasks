@@ -1,6 +1,6 @@
 ---
 title: "ADAPTER_SPECIFIC_TABLES.mysql declares a table the loader gates off"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5546
 claim: "2026-07-28T23:35:47Z"
 assignee: "mysql-specific-table-list-ignores-insert-returning-gate"
 blocked-by: null
