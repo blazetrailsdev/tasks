@@ -1,6 +1,6 @@
 ---
 title: "PG flake: canonical items table absent in fixtureRegistry seeding test"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
