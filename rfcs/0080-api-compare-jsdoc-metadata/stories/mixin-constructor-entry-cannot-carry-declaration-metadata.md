@@ -1,6 +1,6 @@
 ---
 title: "Resolve the synthesized __mixin constructor that no declaration-derived field can reach"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5468
 claim: "2026-07-28T00:10:17Z"
 assignee: "mixin-constructor-entry-cannot-carry-declaration-metadata"
 blocked-by: null
