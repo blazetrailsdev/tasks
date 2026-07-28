@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-stale-nullconfig-class-tag"
-status: claimed
+status: closed
 updated: 2026-07-28
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-28T00:16:16Z"
-assignee: "extra-surface-stale-nullconfig-class-tag"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: fixed in PR 5467 (the stale tag became prose on the same declaration)"
 ---
 
 ## Context
