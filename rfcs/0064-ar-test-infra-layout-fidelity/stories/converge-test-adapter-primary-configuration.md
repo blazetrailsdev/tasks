@@ -1,7 +1,7 @@
 ---
 title: "test-adapter.ts rebuilds the sqlite config hash instead of reading CONNECTIONS"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-28
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T15:37:24Z"
+assignee: "converge-test-adapter-primary-configuration"
 blocked-by: null
 closed-reason: null
 ---
