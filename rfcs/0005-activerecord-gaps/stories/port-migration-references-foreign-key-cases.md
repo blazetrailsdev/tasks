@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveRecord::Migration::ReferencesForeignKeyTest"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5480
 claim: "2026-07-28T01:52:16Z"
 assignee: "port-migration-references-foreign-key-cases"
 blocked-by: null
