@@ -1,6 +1,6 @@
 ---
 title: "Converge AbstractMysqlAdapter.extended_type_map onto super + default_timezone"
-status: draft
+status: closed
 updated: 2026-07-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by mysql-native-type-map-converges-onto-type-map, which covers the same default_timezone gap plus the duplicate _nativeTypeMap path"
 ---
 
 ## Context
