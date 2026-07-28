@@ -1,6 +1,6 @@
 ---
 title: "Relocate describeIfPg/describeIfMysql out of the adapter test-helper trees"
-status: claimed
+status: in-progress
 updated: 2026-07-28
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: null
+pr: 5540
 claim: "2026-07-28T22:25:43Z"
 assignee: "relocate-describe-if-pg-and-mysql-out-of-adapters-trees"
 blocked-by: null
