@@ -1,6 +1,6 @@
 ---
 title: "Treat set#{Name} as the api:compare port of Rails' #{name}= writer"
-status: in-progress
+status: done
 updated: 2026-07-28
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
