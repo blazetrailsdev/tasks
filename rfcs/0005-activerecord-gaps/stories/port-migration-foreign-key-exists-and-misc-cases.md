@@ -1,6 +1,6 @@
 ---
 title: "Port the foreign_key_exists cluster and remaining ForeignKeyTest miscellany"
-status: ready
+status: draft
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
