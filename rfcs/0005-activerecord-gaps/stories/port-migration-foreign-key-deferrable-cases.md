@@ -1,6 +1,6 @@
 ---
 title: "Port the PG-only deferrable cases of ForeignKeyTest"
-status: draft
+status: claimed
 updated: 2026-07-28
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 280
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-28T13:04:18Z"
+assignee: "port-migration-foreign-key-deferrable-cases"
 blocked-by: null
 closed-reason: null
 ---
