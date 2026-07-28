@@ -1,7 +1,7 @@
 ---
 title: "Restore or remove the four paused reporting-only coverage lanes"
-status: ready
-updated: 2026-07-24
+status: closed
+updated: 2026-07-28
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed by RFC-0028 close-out decision: the coverage signal is not wanted back. All four lanes are still if: false on main (ci.yml:816, 926, 971, 1045). Re-enabling would re-add billed minutes for a non-blocking, continue-on-error signal — the exact spend this RFC exists to cut — so the pause becomes permanent. This story's own first acceptance criterion sanctions this path (decide explicitly; close with the reason). Residual dead YAML (four if: false jobs) is cosmetic and out of this RFC's charter."
 ---
 
 ## Context
