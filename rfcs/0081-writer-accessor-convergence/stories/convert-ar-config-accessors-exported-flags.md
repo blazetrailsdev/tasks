@@ -1,6 +1,6 @@
 ---
 title: "convert-ar-config-accessors-exported-flags"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5563
 claim: "2026-07-29T02:25:45Z"
 assignee: "convert-ar-config-accessors-exported-flags"
 blocked-by: null
