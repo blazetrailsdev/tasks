@@ -1,7 +1,7 @@
 ---
 title: "test: port columns_test.rb's rename/remove-column index cases"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
