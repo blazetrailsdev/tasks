@@ -1,6 +1,6 @@
 ---
 title: "converge-mysql2-statement-pool-field-name"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5577
 claim: "2026-07-29T17:25:44Z"
 assignee: "converge-mysql2-statement-pool-field-name"
 blocked-by: null
