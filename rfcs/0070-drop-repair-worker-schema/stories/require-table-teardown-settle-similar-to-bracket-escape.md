@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: settle the SIMILAR TO ESCAPE / bracketed-backslash interaction"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
