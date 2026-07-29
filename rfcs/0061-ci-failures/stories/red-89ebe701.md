@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (2) failing on main @89ebe701"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T19:37:07Z"
+assignee: "red-89ebe701"
 blocked-by: null
 closed-reason: null
 ---
