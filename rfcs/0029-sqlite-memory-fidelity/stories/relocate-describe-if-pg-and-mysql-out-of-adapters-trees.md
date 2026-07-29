@@ -1,7 +1,7 @@
 ---
 title: "Relocate describeIfPg/describeIfMysql out of the adapter test-helper trees"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
