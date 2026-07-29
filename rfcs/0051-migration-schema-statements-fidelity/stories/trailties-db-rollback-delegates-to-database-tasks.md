@@ -1,6 +1,6 @@
 ---
 title: "Delegate trailties db rollback/forward/migrate:redo to DatabaseTasks"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T22:42:01Z"
+assignee: "trailties-db-rollback-delegates-to-database-tasks"
 blocked-by: null
 closed-reason: null
 ---
