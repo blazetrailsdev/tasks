@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read a sweep filter held in a variable"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T16:35:45Z"
+assignee: "require-table-teardown-read-hoisted-sweep-filters"
 blocked-by: null
 closed-reason: null
 ---
