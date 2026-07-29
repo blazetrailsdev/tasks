@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate ARE class shorthands inside bracket expressions"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
