@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read a sweep filter held in a variable"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
