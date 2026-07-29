@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: alterTable hand-rolls savepoint/BEGIN instead of Rails' transaction helper"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T23:42:00Z"
+assignee: "sqlite-alter-table-hand-rolls-transaction-instead-of-helper"
 blocked-by: null
 closed-reason: null
 ---
