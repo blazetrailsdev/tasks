@@ -1,6 +1,6 @@
 ---
 title: "Port DatabaseTasks.prepareAll / initializeDatabase instead of inlining them in the trailties CLI"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
