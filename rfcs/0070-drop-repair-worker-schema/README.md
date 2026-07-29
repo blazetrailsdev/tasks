@@ -1,9 +1,9 @@
 ---
 rfc: "0070-drop-repair-worker-schema"
 title: "Drive repairWorkerSchema firings to zero, then delete it"
-status: active
+status: closed
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-07-29
 owner: "@deanmarano"
 packages:
   - "activerecord"
