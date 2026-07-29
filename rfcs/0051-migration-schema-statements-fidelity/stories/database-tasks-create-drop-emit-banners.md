@@ -1,7 +1,7 @@
 ---
 title: "database-tasks-create-drop-emit-banners"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
