@@ -1,7 +1,7 @@
 ---
 title: "sqlite temp DB exit cleanup does not fire under vitest forks"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T17:46:29Z"
+assignee: "sqlite-temp-db-exit-cleanup-unreliable"
 blocked-by: null
 closed-reason: null
 ---
