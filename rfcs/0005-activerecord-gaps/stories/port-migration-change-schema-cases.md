@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining ActiveRecord::Migration::ChangeSchemaTest cases"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: 5558
 claim: "2026-07-29T01:35:45Z"
 assignee: "port-migration-change-schema-cases"
 blocked-by: null
