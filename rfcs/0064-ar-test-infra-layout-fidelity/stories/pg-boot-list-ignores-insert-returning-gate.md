@@ -1,6 +1,6 @@
 ---
 title: "Gate pk_autopopulated_by_a_trigger_records in the postgres boot list"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
