@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate a POSIX character class inside a bracket expression"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5611
 claim: "2026-07-29T22:24:48Z"
 assignee: "require-table-teardown-translate-posix-bracket-classes"
 blocked-by: null
