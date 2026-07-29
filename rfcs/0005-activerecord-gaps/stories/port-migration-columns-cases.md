@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining ActiveRecord::Migration::ColumnsTest cases"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 5560
 claim: "2026-07-29T01:45:44Z"
 assignee: "port-migration-columns-cases"
 blocked-by: null
