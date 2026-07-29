@@ -1,6 +1,6 @@
 ---
 title: "Relocate describeIfMysqlAdapter out of the MySQL adapter test-helper tree"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
