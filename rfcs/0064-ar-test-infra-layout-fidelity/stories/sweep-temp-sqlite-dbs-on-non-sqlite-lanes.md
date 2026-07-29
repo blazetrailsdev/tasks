@@ -1,6 +1,6 @@
 ---
 title: "temp sqlite DB sweep is wired to the sqlite lane only"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 5590
 claim: "2026-07-29T18:52:12Z"
 assignee: "sweep-temp-sqlite-dbs-on-non-sqlite-lanes"
 blocked-by: null
