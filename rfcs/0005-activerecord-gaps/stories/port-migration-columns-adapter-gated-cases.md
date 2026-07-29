@@ -1,6 +1,6 @@
 ---
 title: "port-migration-columns-adapter-gated-cases"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5569
 claim: "2026-07-29T03:35:45Z"
 assignee: "port-migration-columns-adapter-gated-cases"
 blocked-by: null
