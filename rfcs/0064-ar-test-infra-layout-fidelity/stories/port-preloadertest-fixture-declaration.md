@@ -1,6 +1,6 @@
 ---
 title: "port-preloadertest-fixture-declaration"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5618
 claim: "2026-07-29T22:36:01Z"
 assignee: "port-preloadertest-fixture-declaration"
 blocked-by: null
