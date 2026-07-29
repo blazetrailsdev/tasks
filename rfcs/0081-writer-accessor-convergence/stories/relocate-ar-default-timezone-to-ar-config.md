@@ -1,7 +1,7 @@
 ---
 title: "relocate-ar-default-timezone-to-ar-config"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T02:55:49Z"
+assignee: "relocate-ar-default-timezone-to-ar-config"
 blocked-by: null
 closed-reason: null
 ---
