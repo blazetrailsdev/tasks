@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read a sweep's SQL built by concatenation"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5581
 claim: "2026-07-29T17:54:27Z"
 assignee: "require-table-teardown-read-concatenated-sweep-sql"
 blocked-by: null
