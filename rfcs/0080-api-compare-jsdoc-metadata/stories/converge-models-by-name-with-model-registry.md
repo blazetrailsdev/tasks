@@ -1,6 +1,6 @@
 ---
 title: "Converge _modelsByName with modelRegistry or retire it"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5617
 claim: "2026-07-29T22:53:10Z"
 assignee: "converge-models-by-name-with-model-registry"
 blocked-by: null
