@@ -1,7 +1,7 @@
 ---
 title: "sp.test.ts still creates the stored procedures boot now lays"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T00:25:47Z"
+assignee: "repoint-sp-test-at-boot-laid-procedures"
 blocked-by: null
 closed-reason: null
 ---
