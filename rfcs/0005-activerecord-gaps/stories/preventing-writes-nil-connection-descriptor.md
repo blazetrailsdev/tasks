@@ -1,6 +1,6 @@
 ---
 title: "preventing-writes-nil-connection-descriptor"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
