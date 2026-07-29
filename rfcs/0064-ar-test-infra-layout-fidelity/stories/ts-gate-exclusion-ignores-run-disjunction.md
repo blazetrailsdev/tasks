@@ -1,6 +1,6 @@
 ---
 title: "ts-gate-exclusion-ignores-run-disjunction"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5605
 claim: "2026-07-29T21:30:01Z"
 assignee: "ts-gate-exclusion-ignores-run-disjunction"
 blocked-by: null
