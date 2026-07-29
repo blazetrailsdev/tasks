@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read a sweep's SQL returned from a local helper"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T18:35:32Z"
+assignee: "require-table-teardown-read-helper-returned-sweep-sql"
 blocked-by: null
 closed-reason: null
 ---
