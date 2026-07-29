@@ -1,6 +1,6 @@
 ---
 title: "ruby-gate-extractor-drops-conjoined-adapter-set"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
