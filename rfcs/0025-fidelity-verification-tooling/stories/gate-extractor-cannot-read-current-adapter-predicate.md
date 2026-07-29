@@ -1,6 +1,6 @@
 ---
 title: "test:compare gate extractor cannot read currentAdapter(), forcing a trails-only gate idiom"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
