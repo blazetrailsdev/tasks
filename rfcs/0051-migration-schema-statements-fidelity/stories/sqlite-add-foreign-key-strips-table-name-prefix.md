@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: addForeignKey must strip the table_name_prefix before re-adding the FK"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T21:36:01Z"
+assignee: "sqlite-add-foreign-key-strips-table-name-prefix"
 blocked-by: null
 closed-reason: null
 ---
