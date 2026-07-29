@@ -1,6 +1,6 @@
 ---
 title: "view-insert-returning-gate-excludes-mysql"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5601
+pr: 5585
 claim: "2026-07-29T20:31:07Z"
 assignee: "view-insert-returning-gate-excludes-mysql"
 blocked-by: null
