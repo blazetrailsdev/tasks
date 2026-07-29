@@ -1,6 +1,6 @@
 ---
 title: "port-postgresql-specific-schema-measurements-and-include-index"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
