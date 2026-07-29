@@ -1,14 +1,14 @@
 ---
 title: "port-postgresql-specific-schema-identity-and-trigger-tables"
-status: claimed
-updated: 2026-07-28
+status: in-progress
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5549
 claim: "2026-07-28T23:55:45Z"
 assignee: "port-postgresql-specific-schema-identity-and-trigger-tables"
 blocked-by: null
