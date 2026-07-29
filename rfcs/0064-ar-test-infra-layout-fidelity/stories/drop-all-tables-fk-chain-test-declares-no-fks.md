@@ -1,6 +1,6 @@
 ---
 title: "drops 3-table FK chain test declares no foreign keys"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
