@@ -1,6 +1,6 @@
 ---
 title: "Decide whether sqlite-mem-tests should gate merges rather than only report on main"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T22:26:02Z"
+assignee: "sqlite-mem-lane-merge-gating-decision"
 blocked-by: null
 closed-reason: null
 ---
