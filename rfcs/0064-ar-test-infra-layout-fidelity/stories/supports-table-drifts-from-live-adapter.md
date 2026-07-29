@@ -1,7 +1,7 @@
 ---
 title: "supports.ts bakes static capability answers instead of asking the connection"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T18:22:16Z"
+assignee: "supports-table-drifts-from-live-adapter"
 blocked-by: null
 closed-reason: null
 ---
