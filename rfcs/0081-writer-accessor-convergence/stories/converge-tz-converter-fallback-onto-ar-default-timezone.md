@@ -1,6 +1,6 @@
 ---
 title: "Converge TimeZoneConverter is_utc? fallback onto ActiveRecord.default_timezone"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
