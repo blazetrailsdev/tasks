@@ -1,6 +1,6 @@
 ---
 title: "next-bundle's prioritized lead can exceed --max-loc with no warning"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5556
 claim: "2026-07-29T01:05:44Z"
 assignee: "next-bundle-prioritized-lead-busts-max-loc"
 blocked-by: null
