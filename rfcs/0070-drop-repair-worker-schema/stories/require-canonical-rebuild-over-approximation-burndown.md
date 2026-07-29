@@ -1,7 +1,7 @@
 ---
 title: "Burn down require-canonical-rebuild's three documented over-approximations"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T00:45:45Z"
+assignee: "require-canonical-rebuild-over-approximation-burndown"
 blocked-by: null
 closed-reason: null
 ---
