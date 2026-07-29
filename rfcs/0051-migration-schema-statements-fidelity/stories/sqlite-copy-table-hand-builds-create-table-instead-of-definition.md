@@ -1,6 +1,6 @@
 ---
 title: "copy_table hand-builds CREATE TABLE instead of a TableDefinition"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5613
 claim: "2026-07-29T22:30:07Z"
 assignee: "sqlite-copy-table-hand-builds-create-table-instead-of-definition"
 blocked-by: null
