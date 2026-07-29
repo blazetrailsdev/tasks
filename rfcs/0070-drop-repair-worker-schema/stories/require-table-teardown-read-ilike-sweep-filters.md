@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read ILIKE sweep filters, not just LIKE"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5561
 claim: "2026-07-29T02:05:45Z"
 assignee: "require-table-teardown-read-ilike-sweep-filters"
 blocked-by: null
