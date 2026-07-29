@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: unwrap await and fan out branches in createSqlTextGroups"
-status: draft
+status: closed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "abandoned: user dropped the require-table-teardown lint-rule work"
 ---
 
 ## Context
