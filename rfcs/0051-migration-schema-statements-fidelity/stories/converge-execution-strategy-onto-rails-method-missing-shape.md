@@ -1,6 +1,6 @@
 ---
 title: "Converge ExecutionStrategy/DefaultStrategy onto Rails' method_missing delegator shape"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
