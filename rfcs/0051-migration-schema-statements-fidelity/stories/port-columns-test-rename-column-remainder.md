@@ -1,6 +1,6 @@
 ---
 title: "test: port columns_test.rb's remaining rename-column cases"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T19:22:12Z"
+assignee: "port-columns-test-rename-column-remainder"
 blocked-by: null
 closed-reason: null
 ---
