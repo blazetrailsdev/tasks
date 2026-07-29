@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate ARE class shorthands inside bracket expressions"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T18:46:12Z"
+assignee: "require-table-teardown-translate-bracket-shorthands"
 blocked-by: null
 closed-reason: null
 ---
