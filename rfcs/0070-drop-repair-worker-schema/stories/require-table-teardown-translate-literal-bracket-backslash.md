@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate a literal backslash inside a SIMILAR TO bracket expression"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
