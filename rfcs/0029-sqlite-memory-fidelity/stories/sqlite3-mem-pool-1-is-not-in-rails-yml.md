@@ -1,7 +1,7 @@
 ---
 title: "sqlite3_mem pins pool: 1, which config.example.yml does not — converge or record the deviation"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
