@@ -1,6 +1,6 @@
 ---
 title: "converge-isolated-database-onto-canonical-pools"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5599
 claim: "2026-07-29T19:46:34Z"
 assignee: "converge-isolated-database-onto-canonical-pools"
 blocked-by: null
