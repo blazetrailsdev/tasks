@@ -1,6 +1,6 @@
 ---
 title: "preventing_writes? must return false when connection_descriptor is nil"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5612
 claim: "2026-07-29T22:31:58Z"
 assignee: "preventing-writes-nil-connection-descriptor"
 blocked-by: null
