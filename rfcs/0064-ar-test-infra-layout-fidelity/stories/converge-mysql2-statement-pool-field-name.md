@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: 5577
 claim: "2026-07-29T17:25:44Z"
 assignee: "converge-mysql2-statement-pool-field-name"
