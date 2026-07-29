@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5590
+pr: 5598
 claim: "2026-07-29T18:52:12Z"
 assignee: "sweep-temp-sqlite-dbs-on-non-sqlite-lanes"
 blocked-by: null
