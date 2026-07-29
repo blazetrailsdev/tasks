@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks remote-host warning bypasses the activesupport stderr shim"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 5595
 claim: "2026-07-29T19:34:18Z"
 assignee: "database-tasks-remote-warning-bypasses-stderr-shim"
 blocked-by: null
