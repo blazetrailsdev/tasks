@@ -1,6 +1,6 @@
 ---
 title: "withPostgresqlDatetimeType drags a PG connection probe onto every lane"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
