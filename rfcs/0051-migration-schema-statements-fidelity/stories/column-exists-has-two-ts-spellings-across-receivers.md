@@ -1,6 +1,6 @@
 ---
 title: "column_exists? has two different TS spellings depending on receiver"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
