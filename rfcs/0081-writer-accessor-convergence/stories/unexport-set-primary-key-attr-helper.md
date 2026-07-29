@@ -1,6 +1,6 @@
 ---
 title: "unexport-set-primary-key-attr-helper"
-status: claimed
+status: done
 updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5392
 claim: "2026-07-29T03:15:44Z"
 assignee: "unexport-set-primary-key-attr-helper"
 blocked-by: null
