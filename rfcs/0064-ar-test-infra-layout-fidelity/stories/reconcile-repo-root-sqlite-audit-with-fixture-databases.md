@@ -1,6 +1,6 @@
 ---
 title: "Repo-root sqlite audit predates the configured fixture databases"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T21:24:00Z"
+assignee: "reconcile-repo-root-sqlite-audit-with-fixture-databases"
 blocked-by: null
 closed-reason: null
 ---
