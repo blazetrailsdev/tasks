@@ -40,9 +40,18 @@ for (const s of stories) {
   storiesByRfc.get(s.rfc).push(s);
 }
 
+// RFCs that must never auto-close, even with an empty (all-terminal) backlog.
+// The CI-failures RFC is a permanent home for fixer stories: btwhooks files a
+// fresh `ready` story under it every time main goes red, so it has to stay
+// `active` at all times — auto-closing it makes the very next fixer story fail
+// validation ("closed RFC has a non-terminal story") and silently wedges the
+// CI fixer. Matches btwhooks' CI_FAILURES_RFC (default 0061-ci-failures).
+const NEVER_AUTO_CLOSE = new Set(["0061-ci-failures"]);
+
 const closed = [];
 for (const rfc of rfcs) {
   if (rfc.frontmatter?.status !== "active") continue;
+  if (NEVER_AUTO_CLOSE.has(rfc.dir)) continue;
   const own = storiesByRfc.get(rfc.dir) ?? [];
   if (own.length === 0) continue; // no stories → not "done"
   const isTerminal = (st) => st === "done" || st === "closed";
