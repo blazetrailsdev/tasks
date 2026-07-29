@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 45
 pr: 5586
 claim: "2026-07-29T18:16:11Z"
 assignee: "statement-pool-cold-start-under-prepared-default"
