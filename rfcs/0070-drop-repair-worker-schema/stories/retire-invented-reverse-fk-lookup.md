@@ -1,6 +1,6 @@
 ---
 title: "Retire the invented reverse-FK lookup when the canonical-rebuild shield goes"
-status: claimed
+status: closed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-07-29T01:15:44Z"
-assignee: "retire-invented-reverse-fk-lookup"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not retirable: the shield is entrenched, not retiring. The RFC 0070 burndown is complete (burn-down-canonical-rebuild-exclude and all ten restore-* stories are done), yet rebuildCanonicalTables still has 21 live call sites across 20 test files on origin/main (8272ae40b) plus support/setup-second-pool.ts. The remaining callers are not vestigial: they defend tests that legitimately alter a canonical table's shape (migration.test.ts, schema-dumper.test.ts, the mysql2 adapter tests) and documented PG shared-DB flakes (date.test.ts, dirty.test.ts, uniqueness-validation.trails.test.ts). Direction of travel is the opposite of retirement: PR #5519 landed the eslint rule require-canonical-rebuild, which *requires* a rebuild after a catalogue-driven canonical drop, and the two still-open RFC 0070 stories (require-canonical-rebuild-detection-gaps #5554, require-table-teardown-accept-prefix-sweep) both widen that requirement. So bulkInboundFkHost, the scanInbound option, and FkSafeDropPlanHost.foreignKeysReferencing stay, with this as their written justification: they have no Rails counterpart (SchemaStatements#foreign_keys is per-table only, with no reverse form), they are confined to packages/activerecord/src/test-helpers + support and reach no production adapter, and they were accepted on cost grounds (~790ms/PG, ~530ms/MySQL saved per rebuild call on a 322-table canonical DB). Per the story's own acceptance criteria, a standing invention with a recorded justification is an acceptable outcome. Re-open when the caller count reaches zero."
 ---
 
 ## Context
