@@ -1,6 +1,6 @@
 ---
 title: "Gate pk_autopopulated_by_a_trigger_records in the postgres boot list"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T17:45:54Z"
+assignee: "pg-boot-list-ignores-insert-returning-gate"
 blocked-by: null
 closed-reason: null
 ---
