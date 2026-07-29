@@ -1,6 +1,6 @@
 ---
 title: "converge-type-to-sql-base-names-on-native-database-types"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5570
 claim: "2026-07-29T03:45:46Z"
 assignee: "converge-type-to-sql-base-names-on-native-database-types"
 blocked-by: null
