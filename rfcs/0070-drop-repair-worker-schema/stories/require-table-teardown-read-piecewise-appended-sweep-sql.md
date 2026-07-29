@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: decide the piecewise-appended (sql += …) sweep SQL gap"
-status: in-progress
+status: closed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: 5588
-claim: "2026-07-29T18:40:15Z"
-assignee: "require-table-teardown-read-piecewise-appended-sweep-sql"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "abandoned: user dropped the require-table-teardown lint-rule work"
 ---
 
 ## Context
