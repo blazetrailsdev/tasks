@@ -1,6 +1,6 @@
 ---
 title: "Worker-clone arunit2 is still derived by the _arunit2 suffix helper"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
