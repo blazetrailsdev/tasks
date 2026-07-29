@@ -1,7 +1,7 @@
 ---
 title: "Port while_preventing_writes to the PG/MySQL adapters so adapter-prevent-writes rides the ambient connection"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: connection-pool
 deps: []
