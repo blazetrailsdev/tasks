@@ -1,6 +1,6 @@
 ---
 title: "Migration#executionStrategy must honour ActiveRecord.migrationStrategy and memoize per migration"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
