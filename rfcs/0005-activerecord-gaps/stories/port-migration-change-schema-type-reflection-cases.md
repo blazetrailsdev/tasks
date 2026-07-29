@@ -1,6 +1,6 @@
 ---
 title: "port-migration-change-schema-type-reflection-cases"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5568
 claim: "2026-07-29T03:25:46Z"
 assignee: "port-migration-change-schema-type-reflection-cases"
 blocked-by: null
