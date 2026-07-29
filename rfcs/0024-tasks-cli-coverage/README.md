@@ -13,6 +13,7 @@ clusters:
   - guardrails
 related-rfcs:
   - "0001-task-system"
+priority: 1
 ---
 
 # RFC 0024 — tasks CLI full coverage
