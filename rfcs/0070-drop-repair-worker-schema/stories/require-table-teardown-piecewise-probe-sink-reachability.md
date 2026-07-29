@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: scope the piecewise-SQL probe to sink-reachable assemblies"
-status: claimed
+status: blocked
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-29T21:42:03Z"
 assignee: "require-table-teardown-piecewise-probe-sink-reachability"
-blocked-by: null
+blocked-by: "Blocked on PR #5588 (require-table-teardown-read-piecewise-appended-sweep-sql), which is still open: it introduces eslint/piecewise-sql-population.test.mjs, the file this story modifies. That file does not exist on origin/main, so this work cannot be done in a standalone PR from main without stacking. Re-open once #5588 merges."
 closed-reason: null
 ---
 
