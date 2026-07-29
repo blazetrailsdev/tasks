@@ -1,7 +1,7 @@
 ---
 title: "Relocate the 6 misplaced migration test cases to their Rails-matching files"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
