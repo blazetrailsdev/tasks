@@ -1,6 +1,6 @@
 ---
 title: "sp.test.ts still creates the stored procedures boot now lays"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
