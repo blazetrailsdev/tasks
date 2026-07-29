@@ -1,6 +1,6 @@
 ---
 title: "Namespace declaration merge silently discards a merged interface's tag and kind"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5615
 claim: "2026-07-29T22:46:26Z"
 assignee: "interface-namespace-declaration-merge-drops-metadata"
 blocked-by: null
