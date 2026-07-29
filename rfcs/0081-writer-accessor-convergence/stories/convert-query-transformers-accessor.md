@@ -1,6 +1,6 @@
 ---
 title: "convert-query-transformers-accessor"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5565
 claim: "2026-07-29T02:45:44Z"
 assignee: "convert-query-transformers-accessor"
 blocked-by: null
