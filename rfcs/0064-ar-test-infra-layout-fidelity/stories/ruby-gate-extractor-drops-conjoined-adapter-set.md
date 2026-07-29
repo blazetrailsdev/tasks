@@ -42,6 +42,29 @@ faithful TS gate (`skipIf(adapterType !== "postgres")`) therefore reports as
 `wrong-gate`, and matching the extractor instead would run the test on MariaDB,
 where Rails never runs it and where it fails.
 
+PR 5585 prototyped the fix and measured the real cost — do not assume it is a
+one-line change. Relaxing `mixed` to keep the adapter set on a pure conjunction
+(and to drop it only under `||`, or under `unless` where negating a conjunction
+yields a disjunction) takes gate-mismatch from 1 to **11**: the sharper Rails
+gates expose 10 pre-existing TS gates that under-restrict, e.g.
+
+- `tasks/database-tasks.test.ts` (8) — `rails: adapters=[sqlite]
+guards=[in_memory_db]` vs `ts: unconditional` / `guards=[unknown]`
+- `dirty.test.ts` — "partial insert off with changed composite identity primary
+  key attribute": `rails: adapters=[postgresql] features=[identity_columns]` vs
+  `ts: features=[identity_columns]`
+- `migration/columns.test.ts` — "change column null does not change default
+  functions": `rails: adapters=[mysql] features=[default_expression]` vs
+  `ts: features=[default_expression]`
+
+Those 10 TS gates need tightening in the same change (or in companion stories
+landed first), since gate-mismatch is a hard CI gate in
+`Rails API/Test Comparison`. 5585 therefore left the extractor alone and kept the
+narrowing out of `skipIf`: the view test rides a `mariadbStandIn` runtime guard,
+which the TS extractor does not read, so the compared gate still matches Rails'
+extracted `adapters=[mysql,postgresql]`. Undoing that guard is part of this
+story's work.
+
 ## Acceptance criteria
 
 - A positive adapter set survives `mixed` when the condition is a pure
