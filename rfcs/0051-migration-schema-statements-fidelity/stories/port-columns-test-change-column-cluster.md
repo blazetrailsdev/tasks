@@ -1,6 +1,6 @@
 ---
 title: "test: port columns_test.rb's change_column/change_column_default/null cluster"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T19:16:13Z"
+assignee: "port-columns-test-change-column-cluster"
 blocked-by: null
 closed-reason: null
 ---
