@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition hardcodes 'id', ignoring primary_key_prefix_type"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
