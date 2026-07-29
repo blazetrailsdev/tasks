@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: read SIMILAR TO and regex sweep filters"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T16:55:45Z"
+assignee: "require-table-teardown-read-similar-to-and-regex-sweep-filters"
 blocked-by: null
 closed-reason: null
 ---
