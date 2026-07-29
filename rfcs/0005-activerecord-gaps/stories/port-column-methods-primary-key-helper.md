@@ -1,6 +1,6 @@
 ---
 title: "Port ColumnMethods#primary_key to the table definition and change_table proxies"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
