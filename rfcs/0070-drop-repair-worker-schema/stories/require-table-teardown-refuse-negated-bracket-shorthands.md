@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: refuse an ARE shorthand inside a negated bracket expression"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T23:24:02Z"
+assignee: "require-table-teardown-refuse-negated-bracket-shorthands"
 blocked-by: null
 closed-reason: null
 ---
