@@ -1,6 +1,6 @@
 ---
 title: "Accept a prefix sweep as teardown so the hand-maintained DROP list can go"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5555
 claim: "2026-07-29T00:55:44Z"
 assignee: "require-table-teardown-accept-prefix-sweep"
 blocked-by: null
