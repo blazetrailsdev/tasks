@@ -1,6 +1,6 @@
 ---
 title: "Burn down require-canonical-rebuild's three documented over-approximations"
-status: claimed
+status: closed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-07-29T00:45:45Z"
-assignee: "require-canonical-rebuild-over-approximation-burndown"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No work: re-measured repo-wide on main (2026-07-28) — require-canonical-rebuild reports 0 sweepReachesCanonical across packages/activerecord/src/**/*.test.ts, so none of the three documented over-approximations (unscoped array-literal path, unscoped name scan, scalar isSinkDerived) has fired. eslint/require-canonical-rebuild-exclude.json still holds only the two permanent groups (privateAdapter 14 files, nonExecuting 1 file) — no entry was added for an over-report. The only two suppressions in the tree are inline eslint-disable comments for missingRebuild (postgresql/schema.test.ts:970 non-public-schema drop, abstract-mysql-adapter/active-schema.test.ts:192 stub-mode drop), a different path from the tracked over-approximations. Per the acceptance criteria a documented over-approximation that never fires is an acceptable outcome; leaving the tightening unbuilt."
 ---
 
 ## Context
