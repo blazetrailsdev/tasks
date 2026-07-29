@@ -1,6 +1,6 @@
 ---
 title: "preloader-middle-records-from-records-by-owner"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5623
 claim: "2026-07-29T23:36:02Z"
 assignee: "preloader-middle-records-from-records-by-owner"
 blocked-by: null
