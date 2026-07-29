@@ -1,9 +1,9 @@
 ---
 rfc: "0081-writer-accessor-convergence"
 title: "Converge Ruby writer (foo=) re-spellings onto accessors"
-status: active
+status: closed
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-07-29
 owner: "@your-handle"
 packages:
   - "activerecord"
