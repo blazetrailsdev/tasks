@@ -1,6 +1,6 @@
 ---
 title: "Capture stdout/stderr in the DatabaseTasks create/drop describes, as Rails' test cases do"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
