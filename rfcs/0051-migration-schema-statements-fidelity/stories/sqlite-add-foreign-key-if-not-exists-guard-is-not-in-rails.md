@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: addForeignKey's ifNotExists guard has no counterpart in the Rails override"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T22:24:04Z"
+assignee: "sqlite-add-foreign-key-if-not-exists-guard-is-not-in-rails"
 blocked-by: null
 closed-reason: null
 ---
