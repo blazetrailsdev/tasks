@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate SIMILAR TO / POSIX regex syntax in sweep filters"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T17:35:47Z"
+assignee: "require-table-teardown-translate-sweep-filter-regex-syntax"
 blocked-by: null
 closed-reason: null
 ---
