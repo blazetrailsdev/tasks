@@ -1,7 +1,7 @@
 ---
 title: "ADAPTER_SPECIFIC_TABLES.mysql declares a table the loader gates off"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
