@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate PostgreSQL ARE class shorthands in regex sweep filters"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 5582
 claim: "2026-07-29T18:04:13Z"
 assignee: "require-table-teardown-translate-are-class-shorthands"
 blocked-by: null
