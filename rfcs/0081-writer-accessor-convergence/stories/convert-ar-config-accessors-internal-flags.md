@@ -1,7 +1,7 @@
 ---
 title: "convert-ar-config-accessors-internal-flags"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T02:35:44Z"
+assignee: "convert-ar-config-accessors-internal-flags"
 blocked-by: null
 closed-reason: null
 ---
