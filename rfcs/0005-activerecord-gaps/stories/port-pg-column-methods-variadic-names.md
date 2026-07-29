@@ -1,6 +1,6 @@
 ---
 title: "port-pg-column-methods-variadic-names"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
