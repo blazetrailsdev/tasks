@@ -1,6 +1,6 @@
 ---
 title: "Relocate describeIfMysqlAdapter out of the MySQL adapter test-helper tree"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5553
 claim: "2026-07-29T00:35:45Z"
 assignee: "relocate-describe-if-mysql-adapter-out-of-adapters-tree"
 blocked-by: null
