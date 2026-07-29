@@ -1,5 +1,5 @@
 ---
-title: "converge-mysql2-statement-pool-field-name"
+title: "Converge the mysql2 statement-pool field name on Rails' single @statements"
 status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"

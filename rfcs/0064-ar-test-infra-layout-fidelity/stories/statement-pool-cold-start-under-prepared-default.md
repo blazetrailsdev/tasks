@@ -1,5 +1,5 @@
 ---
-title: "statement-pool-cold-start-under-prepared-default"
+title: "Statement pool is not cold when prepared statements are the run-wide default"
 status: done
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
