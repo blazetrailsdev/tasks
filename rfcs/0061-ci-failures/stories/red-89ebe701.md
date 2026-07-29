@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (2) failing on main @89ebe701"
-status: claimed
+status: closed
 updated: 2026-07-29
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: "2026-07-29T19:37:07Z"
-assignee: "red-89ebe701"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "obsolete: main recovered on its own — CI went green at 567a0b31 (19:04) one commit after the @89ebe701 failure; no fix needed"
 ---
 
 ## Context
