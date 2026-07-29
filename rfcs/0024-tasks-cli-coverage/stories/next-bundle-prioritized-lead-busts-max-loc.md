@@ -1,6 +1,6 @@
 ---
 title: "next-bundle's prioritized lead can exceed --max-loc with no warning"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0024-tasks-cli-coverage"
 cluster: null
