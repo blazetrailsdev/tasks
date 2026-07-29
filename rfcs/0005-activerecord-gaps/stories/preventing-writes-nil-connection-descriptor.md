@@ -1,6 +1,6 @@
 ---
 title: "preventing_writes? must return false when connection_descriptor is nil"
-status: draft
+status: ready
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
