@@ -1,6 +1,6 @@
 ---
 title: "port-pg-column-methods-variadic-names"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5575
 claim: "2026-07-29T17:05:47Z"
 assignee: "port-pg-column-methods-variadic-names"
 blocked-by: null
