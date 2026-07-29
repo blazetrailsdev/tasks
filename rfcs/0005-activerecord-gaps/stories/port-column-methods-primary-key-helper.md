@@ -1,6 +1,6 @@
 ---
 title: "Port ColumnMethods#primary_key to the table definition and change_table proxies"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5614
 claim: "2026-07-29T22:38:56Z"
 assignee: "port-column-methods-primary-key-helper"
 blocked-by: null
