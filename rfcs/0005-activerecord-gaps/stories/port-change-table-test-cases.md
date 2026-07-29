@@ -1,6 +1,6 @@
 ---
 title: "Port migration/change_table_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5622
 claim: "2026-07-29T23:30:03Z"
 assignee: "port-change-table-test-cases"
 blocked-by: null
