@@ -1,6 +1,6 @@
 ---
 title: "mariadb-insert-returning-rows-dropped"
-status: claimed
+status: closed
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-29T19:14:23Z"
-assignee: "mariadb-insert-returning-rows-dropped"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: fixed in PR #5585 (RETURNING tail restored in buildInsertSql; single-column readback path added to mysql2 execInsert)"
 ---
 
 ## Context
