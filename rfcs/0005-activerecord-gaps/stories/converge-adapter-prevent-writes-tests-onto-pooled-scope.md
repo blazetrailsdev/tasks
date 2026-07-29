@@ -1,6 +1,6 @@
 ---
 title: "Drive the adapter prevent-writes suites through a pooled while_preventing_writes scope"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T23:18:09Z"
+assignee: "converge-adapter-prevent-writes-tests-onto-pooled-scope"
 blocked-by: null
 closed-reason: null
 ---
