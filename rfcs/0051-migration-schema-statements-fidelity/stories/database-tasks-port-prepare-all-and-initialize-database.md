@@ -1,6 +1,6 @@
 ---
 title: "Port DatabaseTasks.prepareAll / initializeDatabase instead of inlining them in the trailties CLI"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5584
 claim: "2026-07-29T18:28:17Z"
 assignee: "database-tasks-port-prepare-all-and-initialize-database"
 blocked-by: null
