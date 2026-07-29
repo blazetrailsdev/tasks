@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: settle the SIMILAR TO ESCAPE / bracketed-backslash interaction"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5593
 claim: "2026-07-29T19:10:12Z"
 assignee: "require-table-teardown-settle-similar-to-bracket-escape"
 blocked-by: null
