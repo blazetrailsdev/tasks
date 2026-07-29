@@ -1,7 +1,7 @@
 ---
 title: "Retire the invented reverse-FK lookup when the canonical-rebuild shield goes"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T01:15:44Z"
+assignee: "retire-invented-reverse-fk-lookup"
 blocked-by: null
 closed-reason: null
 ---
