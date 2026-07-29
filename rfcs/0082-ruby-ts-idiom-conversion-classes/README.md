@@ -4,7 +4,7 @@ title: "Ruby→TS idiom conversion classes"
 status: postponed
 created: 2026-07-27
 updated: 2026-07-29
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "arel"
