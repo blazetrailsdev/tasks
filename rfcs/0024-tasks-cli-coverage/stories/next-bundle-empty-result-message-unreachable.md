@@ -1,6 +1,6 @@
 ---
 title: "next-bundle's empty-result message is unreachable once any story is prioritized"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0024-tasks-cli-coverage"
 cluster: null
