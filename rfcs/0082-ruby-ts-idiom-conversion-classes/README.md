@@ -1,9 +1,9 @@
 ---
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 title: "Ruby→TS idiom conversion classes"
-status: active
+status: postponed
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-07-29
 owner: "@your-handle"
 packages:
   - "activerecord"
