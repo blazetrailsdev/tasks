@@ -1,7 +1,7 @@
 ---
 title: "Route DateTimeType.castValue through fastStringToTime/newTime"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T03:05:43Z"
+assignee: "route-datetime-cast-through-fast-string-to-time"
 blocked-by: null
 closed-reason: null
 ---
