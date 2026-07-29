@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: translate a literal backslash inside a SIMILAR TO bracket expression"
-status: ready
+status: claimed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T19:40:14Z"
+assignee: "require-table-teardown-translate-literal-bracket-backslash"
 blocked-by: null
 closed-reason: null
 ---
