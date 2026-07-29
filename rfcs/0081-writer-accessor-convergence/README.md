@@ -155,6 +155,21 @@ fallback, and each reader gains a real arity check (arity-compared pairs
 7528 -> 7531, all matching). Remaining shape-2 conversions should be measured
 the same way.
 
+## Host for `queryTransformers` (settled by `convert-query-transformers-accessor`)
+
+`queryTransformers` joined the existing `ActiveRecord` object literal in
+`packages/activerecord/src/ar-config.ts` rather than getting its own object in
+`query-transformers.ts`. Rails spells it `ActiveRecord.query_transformers=` on
+the same `module ActiveRecord` singleton as every other flag already hosted
+there, and there is no import cycle to prevent it: `query-transformers.ts` now
+holds only the `QueryTransformer` interface and imports nothing, so
+`ar-config.ts` takes a type-only import of it and nothing imports back. Call
+sites read `ActiveRecord.queryTransformers` — in-place mutation
+(`.push(...)`, `.length = 0`) still works through the getter, which is how the
+existing tests and `preprocessQuery` use it. api:compare now credits both
+`query_transformers` and `query_transformers=` to the single `queryTransformers`
+accessor pair, replacing the `setQueryTransformers` fallback match.
+
 ## Follow-up conversions (shape 2)
 
 The pilot converted 3 of 23. The remaining 20 in `ar-config.ts` plus
