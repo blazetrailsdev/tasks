@@ -1,6 +1,6 @@
 ---
 title: "converge-type-to-sql-base-names-on-native-database-types"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
