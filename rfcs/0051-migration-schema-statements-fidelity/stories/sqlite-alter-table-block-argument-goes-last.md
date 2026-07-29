@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: put alterTable's block argument last, as Rails' alter_table does"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
