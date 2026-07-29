@@ -10,6 +10,7 @@ packages:
 clusters:
   - "extra-surface"
   - "api-compare"
+priority: 2
 ---
 
 ## Summary

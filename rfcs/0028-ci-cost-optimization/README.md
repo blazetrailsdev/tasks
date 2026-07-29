@@ -14,6 +14,7 @@ clusters:
 related-rfcs:
   - "0012-adapter-test-ci"
   - "0019-canonical-schema-burndown"
+priority: 2
 ---
 
 # RFC 0028 — CI cost optimization

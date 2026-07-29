@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []
+priority: 1
 ---
 
 ## Summary
