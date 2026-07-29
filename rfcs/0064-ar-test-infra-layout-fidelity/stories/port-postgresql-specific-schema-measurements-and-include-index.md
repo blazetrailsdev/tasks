@@ -1,7 +1,7 @@
 ---
 title: "port-postgresql-specific-schema-measurements-and-include-index"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T00:05:44Z"
+assignee: "port-postgresql-specific-schema-measurements-and-include-index"
 blocked-by: null
 closed-reason: null
 ---
