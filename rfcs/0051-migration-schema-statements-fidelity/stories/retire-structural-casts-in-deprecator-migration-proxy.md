@@ -1,6 +1,6 @@
 ---
 title: "Type deprecator.ts MigrationProxy's loaded migration as Migration instead of structural casts"
-status: ready
+status: draft
 updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
