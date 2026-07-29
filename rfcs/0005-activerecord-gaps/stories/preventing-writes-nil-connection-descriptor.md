@@ -1,12 +1,12 @@
 ---
-title: "preventing-writes-nil-connection-descriptor"
+title: "preventing_writes? must return false when connection_descriptor is nil"
 status: draft
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
