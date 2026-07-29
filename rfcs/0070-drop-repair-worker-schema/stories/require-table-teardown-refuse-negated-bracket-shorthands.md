@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown: refuse an ARE shorthand inside a negated bracket expression"
-status: in-progress
+status: closed
 updated: 2026-07-29
 rfc: "0070-drop-repair-worker-schema"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: 5619
-claim: "2026-07-29T23:24:02Z"
-assignee: "require-table-teardown-refuse-negated-bracket-shorthands"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "abandoned: user dropped the require-table-teardown lint-rule work"
 ---
 
 ## Context
