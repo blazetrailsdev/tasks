@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining ActiveRecord::Migration::RenameTableTest cases"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5574
 claim: "2026-07-29T16:45:44Z"
 assignee: "port-migration-rename-table-cases"
 blocked-by: null
