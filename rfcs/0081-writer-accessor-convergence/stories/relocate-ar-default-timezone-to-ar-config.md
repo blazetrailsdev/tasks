@@ -1,6 +1,6 @@
 ---
 title: "relocate-ar-default-timezone-to-ar-config"
-status: in-progress
+status: done
 updated: 2026-07-29
 rfc: "0081-writer-accessor-convergence"
 cluster: null
