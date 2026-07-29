@@ -1,6 +1,6 @@
 ---
 title: "sqlite-timeout-config-coercion"
-status: claimed
+status: in-progress
 updated: 2026-07-29
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5583
 claim: "2026-07-29T18:10:14Z"
 assignee: "sqlite-timeout-config-coercion"
 blocked-by: null
