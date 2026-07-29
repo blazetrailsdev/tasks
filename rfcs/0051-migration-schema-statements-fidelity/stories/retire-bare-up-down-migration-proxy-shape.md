@@ -1,7 +1,7 @@
 ---
 title: "retire-bare-up-down-migration-proxy-shape"
-status: ready
-updated: 2026-07-28
+status: claimed
+updated: 2026-07-29
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-29T19:28:20Z"
+assignee: "retire-bare-up-down-migration-proxy-shape"
 blocked-by: null
 closed-reason: null
 ---
