@@ -1,7 +1,7 @@
 ---
 title: "Guard schema-compare's invented-baseline against the same non-ASCII churn trap"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
