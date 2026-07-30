@@ -1,5 +1,5 @@
 ---
-rfc: "0000-wide-call-ratchet-noise-reduction"
+rfc: "0083-wide-call-ratchet-noise-reduction"
 title: "Wide call-set ratchet — noise reduction"
 status: draft
 created: 2026-07-30
