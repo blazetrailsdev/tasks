@@ -1,6 +1,6 @@
 ---
 title: "converge-http-cache-predicate-bodies-onto-rails-calls"
-status: claimed
+status: blocked
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-30T13:38:26Z"
 assignee: "converge-http-cache-predicate-bodies-onto-rails-calls"
-blocked-by: null
+blocked-by: "Blocked on converge-http-cache-predicates-onto-is-prefix (claimed 2026-07-30, not merged). This story's acceptance criteria require removing wide-call baseline entries 'date? -> has_header?', 'last_modified? -> has_header?' and 'etag? -> etag' from scripts/api-compare/call-mismatches-wide-exclude/actiondispatch/http/cache.json — none of those entries exist yet on origin/main (4dca7c0bb). They only appear once the has* -> is* rename makes the wide call-set comparison match these predicates to their Rails counterparts. cache.ts on main still exports hasLastModified/hasDate/hasEtag. The remaining work (make hasHeader required on ResponseCacheHost, delete hdrSet, route isEtag through the etag reader) edits the exact same function bodies the rename story rewrites, so shipping it now would collide head-on with the sibling agent and violate the no-stacked-PRs rule. Unblock and re-claim once the rename PR merges."
 closed-reason: null
 ---
 
