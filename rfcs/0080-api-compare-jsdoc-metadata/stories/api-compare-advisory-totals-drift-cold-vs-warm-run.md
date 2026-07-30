@@ -1,6 +1,6 @@
 ---
 title: "api:compare advisory option-key totals drift between cold and warm runs"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
