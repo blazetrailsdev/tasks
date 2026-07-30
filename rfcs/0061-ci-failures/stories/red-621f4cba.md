@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests failing on main @621f4cba"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T14:59:41Z"
+assignee: "red-621f4cba"
 blocked-by: null
 closed-reason: null
 ---
