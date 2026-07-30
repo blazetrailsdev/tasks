@@ -1,6 +1,6 @@
 ---
 title: "Synthesized __mixin members report zero params to the arity check"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5654
 claim: "2026-07-30T18:17:18Z"
 assignee: "synthesized-mixin-members-report-zero-params"
 blocked-by: null
