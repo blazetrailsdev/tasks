@@ -1,6 +1,6 @@
 ---
 title: "Interface-level @noRailsEquivalent tags carry claims the classification tally never counts"
-status: claimed
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5653
 claim: "2026-07-30T19:41:20Z"
 assignee: "interface-level-tag-claims-uncounted-in-classification"
 blocked-by: null
