@@ -30,13 +30,14 @@ Still unported from `message_metadata_tests.rb`:
 
 - `":purpose can be a symbol"` (metadata.rb:23-29) — decide whether JS has a
   meaningful analogue; `purpose` is compared through `to_s` either way.
+  (`"expiration works with ActiveSupport.use_standard_json_time_format = false"`
+  landed with the metadata port itself, along with
+  `packages/activesupport/src/json/encoding.ts`.)
+
 - `"message expires with :expires_at"`, `":expires_at overrides :expires_in"`,
   `"messages do not expire by default"`, `"metadata works with NullSerializer"`,
   `"messages with non-string purpose are readable"`,
   `"messages are readable regardless of use_message_serializer_for_metadata"`.
-- `"expiration works with ActiveSupport.use_standard_json_time_format = false"` —
-  blocked: trails has no `use_standard_json_time_format`; see
-  `Metadata#parseExpiry` in `packages/activesupport/src/messages/metadata.ts`.
 - Rails' `DATA` includes a `Time` and its `SERIALIZERS` include
   `ActiveSupport::MessagePack`; both are excluded today (see the follow-up story
   for the MessagePack temporal packer).
