@@ -1,6 +1,6 @@
 ---
 title: "connection-handling.test.ts splits Rails' single ConnectionHandlingTest and hijacks Base's pool"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T18:35:16Z"
+assignee: "converge-connection-handling-test-onto-one-rails-class"
 blocked-by: null
 closed-reason: null
 ---
