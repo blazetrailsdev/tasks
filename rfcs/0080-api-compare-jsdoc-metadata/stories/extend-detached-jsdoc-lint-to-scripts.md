@@ -1,6 +1,6 @@
 ---
 title: "Extend the detached-JSDoc lint to scripts/, where the motivating defect lived"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5674
 claim: "2026-07-30T20:51:20Z"
 assignee: "extend-detached-jsdoc-lint-to-scripts"
 blocked-by: null
