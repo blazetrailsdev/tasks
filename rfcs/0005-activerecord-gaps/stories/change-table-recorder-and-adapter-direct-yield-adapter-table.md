@@ -1,6 +1,6 @@
 ---
 title: "change-table-recorder-and-adapter-direct-yield-adapter-table"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5628
 claim: "2026-07-30T01:57:13Z"
 assignee: "change-table-recorder-and-adapter-direct-yield-adapter-table"
 blocked-by: null
