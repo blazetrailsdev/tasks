@@ -1,7 +1,7 @@
 ---
 title: "Detect @noRailsEquivalent tags that excuse convergeable surface"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
