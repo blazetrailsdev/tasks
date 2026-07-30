@@ -1,6 +1,6 @@
 ---
 title: "Pin the no-floating-rejection property for the unloaded displacement removal"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
