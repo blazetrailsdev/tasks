@@ -1,7 +1,7 @@
 ---
 title: "reflectionAdapter cold-pool fallback still flips the lease permanent"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
