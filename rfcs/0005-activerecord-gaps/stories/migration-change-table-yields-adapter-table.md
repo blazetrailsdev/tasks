@@ -1,6 +1,6 @@
 ---
 title: "migration-change-table-yields-adapter-table"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T01:22:12Z"
+assignee: "migration-change-table-yields-adapter-table"
 blocked-by: null
 closed-reason: null
 ---
