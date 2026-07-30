@@ -1,6 +1,6 @@
 ---
 title: "Stamp the run token into PG/MySQL slot database names and advisory-lock keys"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5638
 claim: "2026-07-30T13:13:01Z"
 assignee: "stamp-run-token-into-pg-mysql-slot-databases"
 blocked-by: null
