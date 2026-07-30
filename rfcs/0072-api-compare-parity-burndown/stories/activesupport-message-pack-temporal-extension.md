@@ -1,6 +1,6 @@
 ---
 title: "activesupport-message-pack-temporal-extension"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
