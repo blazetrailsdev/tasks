@@ -1,6 +1,6 @@
 ---
 title: "change-table-bulk-paths-use-real-command-recorder"
-status: claimed
+status: blocked
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-30T02:57:13Z"
 assignee: "change-table-bulk-paths-use-real-command-recorder"
-blocked-by: null
+blocked-by: "Depends on unmerged PR #5628 (change-table-recorder-and-adapter-direct-yield-adapter-table). Both acceptance criteria need that PR's changes, which are not in origin/main: (a) CommandRecorder's generated ReversibleAndIrreversibleMethods bodies (addColumn/addIndex/removeColumns/renameColumn/addReference/addTimestamps/...), without which updateTableDefinition(tableName, recorder) yields a Table whose methods call nonexistent recorder methods; (b) CommandRecorder#changeTable routing through delegate.updateTableDefinition instead of RecorderTableProxy. Doing this work now would mean a stacked PR off #5628 (banned by CLAUDE.md) or duplicating its diff in the same files. Unblock once #5628 merges."
 closed-reason: null
 ---
 
