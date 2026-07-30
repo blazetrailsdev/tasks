@@ -1,7 +1,7 @@
 ---
 title: "copy_table family reaches past execute/internal_exec_query to driver.exec"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-07-30
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
