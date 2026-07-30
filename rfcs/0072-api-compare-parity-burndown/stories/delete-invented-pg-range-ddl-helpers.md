@@ -32,15 +32,35 @@ invented feature modelled on Rails' enum helpers. Under the repo's
 fidelity-first rule, invented public API is deleted rather than excused, and a
 tag on it moves the excuse from JSON to JSDoc without doing the work.
 
+## Decision (owner, 2026-07-30): KEEP
+
+Ruby has `Range` as a core type and Rails supports PostgreSQL range **column**
+types first-class. trails wants range support to be first-class too, and
+creating a custom range type is part of that — even though JavaScript has no
+native range analogue, which is precisely why the helper has to be explicit here
+where Ruby can lean on the language.
+
+So this is NOT the fidelity-first delete case. The helpers stay; what has to
+change is the justification, which currently says only "Rails has no
+equivalent" — accurate but not a reason.
+
+The story title is now a misnomer; the work is to re-reason, not to delete.
+
 ## Acceptance criteria
 
-- Decide, and record the decision explicitly: delete `createRange` /
-  `dropRange` (fidelity-first default) or keep them with a reason that states
-  a concrete trails requirement Rails does not have.
-- If deleted: remove the accessors, their implementations in
-  `connection-adapters/postgresql/schema-statements-class.ts`, their
-  `@noRailsEquivalent` tags, and move any caller onto a raw
-  `execute("CREATE TYPE … AS RANGE")` the way Rails does.
-- Any test that exercised the helpers is rewritten against the raw execute,
-  without renaming the test.
+- `createRange` / `dropRange` stay. Their `@noRailsEquivalent` reasons are
+  rewritten at the declaration sites
+  (`connection-adapters/postgresql-adapter.ts:4301` and `:4318`, plus the
+  implementations in `connection-adapters/postgresql/schema-statements-class.ts`)
+  to state the requirement above: trails supports PG range types as a
+  first-class feature, and unlike Ruby it has no language-level Range to lean
+  on, so the DDL helper is deliberate trails surface.
+- The reason names Rails' enum quartet (`postgresql_adapter.rb:541` `create_enum`,
+  `:571` `drop_enum`, `rename_enum`, `rename_enum_value`, stubbed on the base at
+  `abstract_adapter.rb:576-580`) as the shape it is modelled on, so the next
+  audit sees a considered decision rather than an unexamined tag.
+- If the RFC 0080 story `detect-no-rails-equivalent-tags-excusing-convergeable-surface`
+  lands a permanence-classification token first, use it — this is a PERMANENT
+  deviation, not deferred work.
+- No behavior change, no test changes, no allowlist entry.
 - `pnpm api:extra --package activerecord` reports no stale tags.

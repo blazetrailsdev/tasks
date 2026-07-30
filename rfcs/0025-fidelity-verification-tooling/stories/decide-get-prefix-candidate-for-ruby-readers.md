@@ -40,17 +40,30 @@ simply be a re-spelling of `full_sanitizer` that a bare `fullSanitizer` accessor
 would render better, in which case leaving it novel is the correct signal and
 the fix belongs in the ports, not the convention.
 
+## Decision (owner, 2026-07-30): NO — a sync reader is a native JS getter
+
+`get#{Name}` is not a legitimate port spelling. The writer case earns `set#{Name}`
+because a Rails writer can block on I/O and a JS property setter cannot return a
+promise; a reader that does no I/O has no such excuse. **A synchronous Ruby
+reader ports to a native JS getter** — `fullSanitizer`, not `getFullSanitizer`.
+
+So `rubyMethodToTs` is left alone, the affected names stay novel (that is the
+correct signal), and the fix belongs in the ports.
+
 ## Acceptance criteria
 
-- [ ] Decide, with the Rails reader bodies as evidence, whether `get#{Name}` is
-      a legitimate port spelling for a Ruby reader or a trails re-spelling that
-      should stay novel. Record the decision and its reasoning in
-      `explainConventions()` either way.
-- [ ] If legitimate: add the candidate after the bare camel name (mirroring the
-      writer ordering), regenerate `docs/ruby-ts-conventions.md`, and confirm
-      `conventions-doc.ts --check` passes.
-- [ ] If not: leave `rubyMethodToTs` alone and file the affected files' bare-name
-      convergence as follow-up work.
-- [ ] Either way, confirm the extra-surface totals move only in the intended
-      direction and no unrelated Rails reader starts matching a `getX` that was
-      never its port.
+- [ ] `rubyMethodToTs` is NOT given a `get#{Name}` candidate. Record the decision
+      and the sync-reader/native-getter rule in `explainConventions()`, and
+      regenerate `docs/ruby-ts-conventions.md` so the rule is documented where
+      the writer rule already is; confirm `conventions-doc.ts --check` passes.
+- [ ] Convert the synchronous readers to native getters (bare camel name), or
+      file that conversion per file if it does not fit the LOC ceiling:
+      `actionview/helpers/sanitize-helper.ts` (`getFullSanitizer`,
+      `getLinkSanitizer`, `getSafeListSanitizer`, `getSanitizerVendor`),
+      `rack/utils.ts` (`getDefaultQueryParser`, `getMultipartFileLimit`,
+      `getMultipartTotalPartLimit`, `getParamDepthLimit`), and the remaining
+      novel name in `activerecord/ar-config.ts`.
+- [ ] Any reader that turns out NOT to be synchronous is called out explicitly
+      rather than converted — the rule is scoped to sync readers.
+- [ ] Confirm the extra-surface totals move only in the intended direction and
+      no unrelated Rails reader starts matching a name that was never its port.

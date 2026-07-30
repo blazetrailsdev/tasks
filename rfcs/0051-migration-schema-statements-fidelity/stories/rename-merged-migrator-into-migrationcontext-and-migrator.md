@@ -49,6 +49,23 @@ files (activerecord, activerecord-cli, trailties, website), `MigrationContext`
 ~179 across 37 files. Well past the 500-LOC PR ceiling, so this needs
 sequencing across several merged-then-branched PRs, not a fan-out.
 
+**Sequenced 2026-07-30 (owner decision).** This story is now step 3 of 3 and
+owns the rename only. The two prerequisite steps are filed separately:
+
+1. `route-migrationcontext-dsl-callers-onto-schema-statements` — point the 76
+   external callers of trails' schema-DSL `MigrationContext` at the adapter's
+   `schemaStatements()`. Mechanical, no behavior change.
+2. `delete-drained-migrationcontext-schema-dsl` — delete the drained 409-line
+   class (`migration.ts:1653-2062`), freeing the `MigrationContext` name.
+3. **This story** — move the long-lived half of trails' merged `Migrator` onto
+   the freed `MigrationContext` name, matching `migration.rb:1211-1402`, leaving
+   the per-run half as `Migrator` per `migration.rb:1404-1560`.
+
+Each branches from `main` after the previous merges. No stacked branches. If
+step 3 still exceeds 500 LOC once steps 1-2 have landed, split it by consumer
+package (activerecord, then activerecord-cli / trailties / website) and register
+the remainder as a new story rather than opening sibling PRs.
+
 Related: `0051-migration-schema-statements-fidelity/collapse-migrationcontext-remaining-dsl-and-introspection`
 and `collapse-migrationcontext-introspection-onto-adapter` (both done) have been
 draining the schema-DSL `MigrationContext` toward the adapter — that is the
@@ -56,8 +73,8 @@ work that eventually frees the name.
 
 ## Acceptance criteria
 
-- The schema-DSL `MigrationContext` is fully drained onto the adapter /
-  `SchemaStatements` (or renamed), freeing the `MigrationContext` name.
+- Steps 1 and 2 have merged (the `MigrationContext` name is free) before this
+  story starts.
 - The long-lived half of trails' `Migrator` moves to `MigrationContext`,
   matching migration.rb:1211-1402; the per-run half keeps the `Migrator` name,
   matching migration.rb:1404-1560.

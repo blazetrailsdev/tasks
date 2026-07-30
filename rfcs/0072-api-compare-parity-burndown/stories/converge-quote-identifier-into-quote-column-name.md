@@ -44,9 +44,15 @@ preserving rename, not a semantic change.
 That last bullet is the one real behaviour difference and the only risk: the
 abstract base currently hands out a working ANSI default where Rails raises. Any
 call site reaching `quoteIdentifier` on a bare `AbstractAdapter` (no concrete
-adapter) will begin throwing after the rename. That is the Rails-correct
-outcome, but each such site must be found and fixed rather than papered over —
-audit test doubles especially.
+adapter) will begin throwing after the rename.
+
+**Decision (owner, 2026-07-30): full converge — adopt the raise, in ONE PR.**
+The abstract base raises `NotImplementedError` as `abstract/quoting.rb:61` does.
+Every bare-adapter call site is found and fixed rather than papered over; audit
+test doubles first, since they are the likeliest holders of a bare
+`AbstractAdapter`. Do not soften this by leaving the ANSI default in place, and
+do not split the rename from the raise — the split was considered and rejected,
+because a rename that preserves the wrong behaviour just relocates the bug.
 
 Explicitly NOT in scope: the standalone `@internal` file function
 `quoteIdentifier` in `connection-adapters/abstract/quoting.ts:75`. It is the
