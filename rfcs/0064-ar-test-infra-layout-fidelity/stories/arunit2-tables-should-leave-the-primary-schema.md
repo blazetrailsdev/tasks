@@ -1,6 +1,6 @@
 ---
 title: "Keep the arunit2-only tables out of the primary canonical schema"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T23:15:18Z"
+assignee: "arunit2-tables-should-leave-the-primary-schema"
 blocked-by: null
 closed-reason: null
 ---
