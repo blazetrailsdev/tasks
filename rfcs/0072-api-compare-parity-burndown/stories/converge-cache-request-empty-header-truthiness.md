@@ -36,6 +36,12 @@ that PR:
   ours, so `fresh?` can return a different answer for a request that sends an
   empty `If-None-Match`.
 
+One more on the `Cache::Response` side, also pre-existing: `cacheControlSegments`
+(cache.ts:251) returns `undefined` for an empty `Cache-Control` header, because
+it tests `cc ?`. Rails' `if cache_control = _cache_control` (`cache.rb:156`) is
+truthy for `""` and yields `"".delete(" ").split(",")` — an empty array. So
+`cacheControlHeaders` sees "no segments" in ours vs "zero segments" in Rails.
+
 `ifNoneMatchEtags` (cache.ts:46) has the same shape (`h ? … : []` vs Rails'
 `if_none_match ? … : []`) but is benign — Ruby's `"".split(",")` is `[]`, which
 is what the JS falsy branch already returns.
