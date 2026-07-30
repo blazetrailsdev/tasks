@@ -1,6 +1,6 @@
 ---
 title: "Classify the 74 unclassified @noRailsEquivalent tag reasons"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
