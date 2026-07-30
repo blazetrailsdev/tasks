@@ -1,6 +1,6 @@
 ---
 title: "Gate extractors ignore supports_X? polarity, inverting a conjoined feature claim"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 5683
 claim: "2026-07-30T21:33:20Z"
 assignee: "gate-extractors-ignore-feature-predicate-polarity"
 blocked-by: null
