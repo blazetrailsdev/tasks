@@ -1,6 +1,6 @@
 ---
 title: "Lint JSDoc tag blocks detached from the declaration they document"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T19:59:19Z"
+assignee: "lint-detached-jsdoc-tag-blocks"
 blocked-by: null
 closed-reason: null
 ---
