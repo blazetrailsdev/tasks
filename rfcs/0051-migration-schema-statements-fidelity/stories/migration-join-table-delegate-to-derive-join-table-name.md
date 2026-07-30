@@ -1,7 +1,7 @@
 ---
 title: "Delegate joinTableName to deriveJoinTableName (blocked on module-init leaf constraint)"
-status: draft
-updated: 2026-07-26
+status: ready
+updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
