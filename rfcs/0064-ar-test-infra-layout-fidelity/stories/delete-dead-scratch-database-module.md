@@ -1,7 +1,7 @@
 ---
 title: "delete-dead-scratch-database-module"
-status: blocked
-updated: 2026-07-29
+status: ready
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-29T20:16:12Z"
-assignee: "delete-dead-scratch-database-module"
-blocked-by: "Blocked on PRs #5598 and #5599 (both still open); deleting support/scratch-database.ts before they merge breaks the typecheck of whichever PR still imports scratchDatabasePath."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
