@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the run-end QueryCanceled unhandled-rejection flake in PG shards"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
