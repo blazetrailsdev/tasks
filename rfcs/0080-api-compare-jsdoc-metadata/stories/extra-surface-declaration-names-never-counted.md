@@ -1,6 +1,6 @@
 ---
 title: "Declaration names are absent from the extra set, so declaration-level tags only match by accident"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5653
 claim: "2026-07-30T18:05:16Z"
 assignee: "extra-surface-declaration-names-never-counted"
 blocked-by: null
