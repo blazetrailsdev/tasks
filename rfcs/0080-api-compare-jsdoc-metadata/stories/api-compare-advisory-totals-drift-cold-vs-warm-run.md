@@ -1,6 +1,6 @@
 ---
 title: "api:compare advisory option-key totals drift between cold and warm runs"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T19:29:17Z"
+assignee: "api-compare-advisory-totals-drift-cold-vs-warm-run"
 blocked-by: null
 closed-reason: null
 ---
