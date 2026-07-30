@@ -1,6 +1,6 @@
 ---
 title: "activerecord-unrouted-privates-remaining-inventory"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5629
 claim: "2026-07-30T12:42:14Z"
 assignee: "activerecord-unrouted-privates-remaining-inventory"
 blocked-by: null
