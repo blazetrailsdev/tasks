@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - activesupport-messages-metadata-port
 deps-rfc: []
 est-loc: null
 priority: null
