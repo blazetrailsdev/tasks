@@ -1,7 +1,7 @@
 ---
 title: "pg-column-methods-on-change-table-proxy"
-status: ready
-updated: 2026-07-29
+status: claimed
+updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T00:00:03Z"
+assignee: "pg-column-methods-on-change-table-proxy"
 blocked-by: null
 closed-reason: null
 ---
