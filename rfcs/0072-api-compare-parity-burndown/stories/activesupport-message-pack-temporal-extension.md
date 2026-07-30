@@ -1,6 +1,6 @@
 ---
 title: "activesupport-message-pack-temporal-extension"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T13:14:24Z"
+assignee: "activesupport-message-pack-temporal-extension"
 blocked-by: null
 closed-reason: null
 ---
