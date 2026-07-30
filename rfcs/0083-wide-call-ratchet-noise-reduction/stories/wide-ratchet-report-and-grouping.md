@@ -1,6 +1,6 @@
 ---
 title: "Group and report the wide call-set population by cause"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
