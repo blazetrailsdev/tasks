@@ -171,9 +171,23 @@ a `vendor/rails` `file:line` behind each call. 42 of 79 came back convergeable.
 
 It is the fact-finding half of `audit-existing-tags-for-convergeable-surface`;
 the actionable half is the ten stories it registered, listed in the audit's
-per-finding sections. Re-run the audit whenever a batch of tags is added at
-once — `api:extra` fails on a STALE tag, but nothing catches a tag on surface
-that still flags and should not exist.
+per-finding sections. `api:extra` fails on a STALE tag, but nothing catches a
+tag on surface that still flags and should not exist.
+
+### Permanence claim and re-audit cadence
+
+A reason opens with `PERMANENT` or `CONVERGEABLE`; anything else is
+**unclassified**, and `api:extra` reports the unclassified count, a per-package
+breakdown, and the names (`tagged.classification` in the JSON report). The
+signal is advisory — the exit code still fails on stale entries and empty
+reasons only, because most of the population predates the convention. A ratchet
+or gate is a follow-up once it is classified.
+
+Re-audit **every two quarters**, or whenever `tagged.total` grows by 10 or more
+since the last audit, whichever comes first. The owner is whoever schedules RFC
+0080 work, and the trigger is checkable from the `api:extra` JSON report alone.
+The full convention lives in trails'
+`docs/infrastructure/api-build-stub-generation-plan.md`.
 
 ## Non-goals
 
