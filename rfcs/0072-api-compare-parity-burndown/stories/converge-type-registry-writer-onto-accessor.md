@@ -1,7 +1,7 @@
 ---
 title: "Converge or formally accept ActiveRecord::Type.registry= (setRegistry)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "already resolved: setRegistry no longer exists — type.ts:96 is now a single Ruby-shaped registry(r?) reader/writer, and the file's other novel export setCurrentAdapterResolver (type.ts:114) is already @internal with a declaration-site justification. Nothing left to converge."
 ---
 
 ## Context
