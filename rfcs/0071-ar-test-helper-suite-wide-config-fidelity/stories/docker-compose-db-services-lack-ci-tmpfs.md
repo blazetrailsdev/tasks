@@ -1,6 +1,6 @@
 ---
 title: "docker-compose db services lack CI's tmpfs, timing out DDL-heavy local runs"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T14:14:18Z"
+assignee: "docker-compose-db-services-lack-ci-tmpfs"
 blocked-by: null
 closed-reason: null
 ---
