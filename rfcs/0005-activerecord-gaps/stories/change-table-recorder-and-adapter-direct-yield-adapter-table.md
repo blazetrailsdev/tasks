@@ -1,6 +1,6 @@
 ---
 title: "change-table-recorder-and-adapter-direct-yield-adapter-table"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
