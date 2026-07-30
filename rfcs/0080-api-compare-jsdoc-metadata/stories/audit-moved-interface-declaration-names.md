@@ -1,6 +1,6 @@
 ---
 title: "Resolve the interface declaration names Rails also uses (the moved population the kind exemption deliberately keeps scored)"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T20:45:21Z"
+assignee: "audit-moved-interface-declaration-names"
 blocked-by: null
 closed-reason: null
 ---
