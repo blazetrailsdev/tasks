@@ -1,6 +1,6 @@
 ---
 title: "Classify the 74 unclassified @noRailsEquivalent tag reasons"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T17:59:17Z"
+assignee: "classify-existing-no-rails-equivalent-tag-reasons"
 blocked-by: null
 closed-reason: null
 ---
