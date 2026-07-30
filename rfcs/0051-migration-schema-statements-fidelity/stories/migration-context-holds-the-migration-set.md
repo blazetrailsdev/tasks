@@ -1,6 +1,6 @@
 ---
 title: "migration-context-holds-the-migration-set"
-status: ready
+status: closed
 updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: duplicate of rename-merged-migrator-into-migrationcontext-and-migrator"
 ---
 
 ## Context
