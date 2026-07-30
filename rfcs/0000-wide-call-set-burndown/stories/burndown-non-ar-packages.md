@@ -1,0 +1,40 @@
+---
+title: "B6: converge the non-AR package residual"
+status: draft
+updated: 2026-07-30
+rfc: "0000-wide-call-set-burndown"
+cluster: api-compare
+deps: []
+deps-rfc: []
+est-loc: 400
+priority: 6
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Residual entries outside activerecord: `actiondispatch/routing/mapper.ts`
+(~81), `actiondispatch/routing/route-set.ts`, `actioncontroller/base.ts` (~66),
+`actioncontroller/metal/strong-parameters.ts` (~41),
+`activesupport/callbacks.ts`, plus small counts in rack, actionview, trailties,
+globalid and abstractcontroller.
+
+Lowest priority in the RFC: these packages are far from method parity overall
+(trailties is at 27%, actionpack packages are mid-port), so wide call-shape
+fidelity is not the binding constraint on their quality. Sequenced last so it
+does not compete with AR work.
+
+## Acceptance criteria
+
+- Re-measure with `--report` before planning.
+- Confirm the target file is actually ported far enough for call-shape fidelity
+  to be meaningful — an entry against a stub or a partial port should be closed
+  as premature, not converged.
+- Split into ~4 PRs by package, non-overlapping files, registered as follow-up
+  stories.
+- Each converged body verified against its vendored Rails counterpart and the
+  corresponding Rails test file.
