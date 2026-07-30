@@ -1,6 +1,6 @@
 ---
 title: "arunit database name diverges from expand_config's activerecord_unittest"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5645
 claim: "2026-07-30T14:50:19Z"
 assignee: "arunit-database-name-diverges-from-expand-config"
 blocked-by: null
