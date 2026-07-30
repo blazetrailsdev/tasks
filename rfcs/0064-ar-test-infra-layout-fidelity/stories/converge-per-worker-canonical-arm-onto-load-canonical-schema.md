@@ -1,6 +1,6 @@
 ---
 title: "per-worker boot lays TEST_SCHEMA, forcing loadSchema's canonical-arm parameter"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
