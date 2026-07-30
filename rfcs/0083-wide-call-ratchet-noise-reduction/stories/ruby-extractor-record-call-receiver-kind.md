@@ -1,6 +1,6 @@
 ---
 title: "Suppress local-var/literal receivers in walk_for_calls"
-status: draft
+status: ready
 updated: 2026-07-30
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
