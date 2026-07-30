@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
-deps: []
+deps:
+  - change-table-recorder-and-adapter-direct-yield-adapter-table
 deps-rfc: []
 est-loc: null
 priority: null
