@@ -1,7 +1,7 @@
 ---
 title: "Delete resolveSecondDatabaseConfig now that the named arunit2 entry owns the config"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "already done: resolveSecondDatabaseConfig / ResolvedSecondDatabase / SecondDatabaseConfig no longer exist anywhere under packages/ or scripts/"
 ---
 
 ## Context
