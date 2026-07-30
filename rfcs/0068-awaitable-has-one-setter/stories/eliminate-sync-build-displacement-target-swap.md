@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the target swap in the unloaded sync-build displacement path"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
