@@ -1,6 +1,6 @@
 ---
 title: "converge-foreign-key-derivation-single-site"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5636
 claim: "2026-07-30T13:26:23Z"
 assignee: "converge-foreign-key-derivation-single-site"
 blocked-by: null
