@@ -1,0 +1,58 @@
+---
+title: "Make @missingRailsCall load-bearing so permanent deviations leave the baseline"
+status: draft
+updated: 2026-07-30
+rfc: "0083-wide-call-ratchet-noise-reduction"
+cluster: api-compare
+deps: ["ruby-extractor-record-call-receiver-kind"]
+deps-rfc: []
+est-loc: 320
+priority: 10
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`api:build` (`scripts/api-compare/build.ts`) already reconciles
+`@missingRailsCall <ruby_call> — <reason>` JSDoc tags against the wide artifact,
+migrating reasons out of the baselines and enforcing the empty-reason contract
+(`lint-missing-rails-call-reasons.ts`, RFC 0080 story
+`missing-rails-call-empty-reason-contract`). But **nothing in `compare.ts` or
+`lint-call-mismatches-wide.ts` reads the tag** — annotating a call does not
+remove its baseline entry, so the tag is documentation only.
+
+That is the blocker on the list ever reaching zero. Some entries are permanent
+and correct: ~30 `synchronize` rows (Ruby guards with `Mutex#synchronize`;
+trails is single-threaded) and the 349 entries already carrying real per-entry
+verification reasons. They will never converge and should not sit in a
+JSON baseline forever.
+
+Direct precedent: RFC 0080's `retire-extra-surface-allow.json — tags are the
+single source of truth`, which did exactly this for the extra-surface allowlist.
+Also matches the standing preference for justifying deviations at the call site
+rather than in a PR body or a JSON blob.
+
+Sequenced LAST in the RFC so tags are only minted against a de-noised
+population.
+
+## Acceptance criteria
+
+- `checkCalls` suppresses a mismatch when the matched TS method carries a
+  `@missingRailsCall <ruby_call>` tag with a non-empty reason.
+- Suppression is keyed to the specific `(tsFile, tsName, ruby_call)` triple — a
+  tag for one call must not silence another.
+- The empty-reason contract is reused, not reimplemented: a bare or
+  whitespace-only tag still fails, per `lint-missing-rails-call-reasons.ts`.
+- A tag that no longer corresponds to a flagged call is reported as stale, the
+  same only-shrink discipline the baseline dir has today
+  (`lint-call-mismatches-wide.ts:270-281`).
+- `api:build` migrates a reasoned baseline entry to a tag and drops it from the
+  split baseline dir in one operation.
+- Beware `project_bare_jsdoc_tag_in_reason_prose_drops_surface`: a line-leading
+  prose `@tag` inside a reason has bitten this tag family before (RFC 0080
+  stories). Cover it with a test.
+- Depends on: ruby-extractor-record-call-receiver-kind.
