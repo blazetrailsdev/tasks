@@ -1,6 +1,6 @@
 ---
 title: "Only-shrink counter for unreviewed default-reason entries"
-status: draft
+status: ready
 updated: 2026-07-30
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
