@@ -1,6 +1,6 @@
 ---
 title: "Delegate trailties db migrate/migrate:up/migrate:down to DatabaseTasks"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
