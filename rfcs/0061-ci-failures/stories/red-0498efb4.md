@@ -1,6 +1,6 @@
 ---
 title: "Virtualized DX Type Tests failing on main @0498efb4"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T21:09:39Z"
+assignee: "red-0498efb4"
 blocked-by: null
 closed-reason: null
 ---
