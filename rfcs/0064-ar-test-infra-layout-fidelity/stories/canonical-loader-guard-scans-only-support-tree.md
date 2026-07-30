@@ -1,6 +1,6 @@
 ---
 title: "canonical-loader guard misses a loader moved out of support/"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T23:27:18Z"
+assignee: "canonical-loader-guard-scans-only-support-tree"
 blocked-by: null
 closed-reason: null
 ---
