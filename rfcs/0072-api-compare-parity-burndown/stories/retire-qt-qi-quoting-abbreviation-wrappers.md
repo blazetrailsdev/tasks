@@ -1,10 +1,11 @@
 ---
 title: "Retire the _qt/_qi quoting abbreviation wrappers hiding quote_table_name/quote_column_name"
 status: ready
-updated: 2026-07-27
+updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - converge-quote-identifier-into-quote-column-name
 deps-rfc: []
 est-loc: 400
 priority: null
