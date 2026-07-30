@@ -87,4 +87,4 @@
 | [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | active | @your-handle | activerecord, abstractcontroller, globalid, arel |
 | [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | closed | @your-handle | activerecord |
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
-| [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | draft | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
+| [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | active | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
