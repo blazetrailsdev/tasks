@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the run-end QueryCanceled unhandled-rejection flake in PG shards"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T17:53:05Z"
+assignee: "pg-query-canceled-unhandled-rejection"
 blocked-by: null
 closed-reason: null
 ---
