@@ -31,7 +31,9 @@ base)` (`vendor/rails/activerecord/lib/active_record/connection_adapters/abstrac
 
 Two trails paths still diverge:
 
-1. **Adapter-direct.** `SchemaStatements#changeTable`
+1. ~~**Adapter-direct.**~~ Landed in #5624 (`PostgreSQL::ColumnMethods` on
+   `PostgreSQL::Table`) — kept here only as the record of what was checked.
+   `SchemaStatements#changeTable`
    (`packages/activerecord/src/connection-adapters/abstract/schema-statements.ts:1019-1063`)
    calls its own `updateTableDefinition` (:1977), which returns the abstract
    `Table`. The PG/MySQL overrides live on the _adapter_ classes
@@ -53,10 +55,6 @@ Two trails paths still diverge:
 
 ## Acceptance criteria
 
-- `updateTableDefinition` has one home per adapter, reachable from
-  `SchemaStatements#changeTable`, so adapter-direct `connection.changeTable`
-  yields the adapter's `Table` subclass. `citext.test.ts` "change table supports
-  json" restored to `t.citext("username")`, TODO dropped.
 - `CommandRecorder#changeTable` yields `delegate.updateTableDefinition(tableName,
 recorder)`; `RecorderTableProxy` and `withAdapterColumnMethods` deleted, with
   `command-recorder.test.ts`'s existing inversion + shorthand coverage
