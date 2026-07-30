@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining test-infra ESLint scope lists onto one source of truth"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
