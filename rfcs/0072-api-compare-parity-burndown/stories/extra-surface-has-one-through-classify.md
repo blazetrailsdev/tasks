@@ -27,6 +27,12 @@ detachDisplacedRecord  detachDisplacedTarget  loadTargetForBuild
 persistReplace         persistThroughRecord
 ```
 
+**Re-verified 2026-07-30:** `detachDisplacedRecord` no longer exists — #5455
+merged the two displaced-removal helpers into `detachDisplacedTarget`. Four
+names remain to classify, not five. The sibling `has-one-association.ts` cluster
+is likewise down to four (`detachDisplacedTarget`, `loadTargetForBuild`,
+`needsTargetLoadForBuild`, `syncWrite`).
+
 Rails' `has_one_through_association.rb` declares only `replace` and
 `create_through_record` (plus what it inherits from `HasOneAssociation` /
 `ThroughAssociation`) — see

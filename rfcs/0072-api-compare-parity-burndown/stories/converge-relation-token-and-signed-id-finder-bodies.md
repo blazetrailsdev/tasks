@@ -6,7 +6,7 @@ rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
