@@ -1,6 +1,6 @@
 ---
 title: "uuid_default's non-pgcrypto branch is unreachable on the matrix and untested"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T20:29:24Z"
+assignee: "cover-non-pgcrypto-uuid-default-branch"
 blocked-by: null
 closed-reason: null
 ---
