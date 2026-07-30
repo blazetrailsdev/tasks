@@ -1,6 +1,6 @@
 ---
 title: "Port Messages::Metadata and make Codec's metadata options load-bearing"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5632
 claim: "2026-07-30T12:45:04Z"
 assignee: "activesupport-messages-metadata-port"
 blocked-by: null
