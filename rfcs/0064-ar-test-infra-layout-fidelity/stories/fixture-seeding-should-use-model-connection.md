@@ -1,7 +1,7 @@
 ---
 title: "Seed fixtures through the model's connection as FixtureSet does"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
