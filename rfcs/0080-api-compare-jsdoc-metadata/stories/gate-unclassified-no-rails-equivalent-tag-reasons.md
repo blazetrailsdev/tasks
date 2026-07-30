@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
-deps: []
+deps:
+  - classify-existing-no-rails-equivalent-tag-reasons
 deps-rfc: []
 est-loc: 90
 priority: null
