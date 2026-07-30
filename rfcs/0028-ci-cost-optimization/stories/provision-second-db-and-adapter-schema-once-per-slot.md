@@ -43,11 +43,19 @@ Rails creates these tables exactly once, in `schema.rb` itself
 `load_schema` at `vendor/rails/activerecord/test/cases/test_case.rb:298-300`.
 Nothing re-lays them per file.
 
-Measured cost, sqlite lane (instrumented `test-setup-dy.ts`, 8 files,
-`TRAILS_TEST_FORKS=2`): `adapterSpecificSchema` 12-20 ms/file and
-`provisionSecondDatabase` 36-109 ms/file — together ~50 ms x ~697 files ~=
-**35 s per lane**, and DROP TABLE is the single most expensive schema op on
-PG/MySQL (RFC 0060: ~95% of schema-DDL wall time).
+Measured cost (instrumented `test-setup-dy.ts`, 8 files per lane,
+`TRAILS_TEST_FORKS=2`), per test file:
+
+| lane            | `loadAdapterSpecificSchema` | `provisionSecondDatabase` | combined, over ~697 files |
+| --------------- | --------------------------- | ------------------------- | ------------------------- |
+| sqlite          | 14-20 ms                    | 36-45 ms                  | ~35 s                     |
+| postgresql      | 131-242 ms                  | 98-186 ms                 | **~4.5 min**              |
+| mysql (MariaDB) | 37-115 ms                   | 68-193 ms                 | ~2.5 min                  |
+
+Corroborated by DDL counts: with the profiler installed _ahead_ of
+`test-setup-dy.ts`, eight PostgreSQL test files containing no DDL of their own
+emitted **1,510 DROP TABLE + 1,523 CREATE TABLE** between them (~190 of each per
+file) in 4.9 s.
 
 This is distinct from RFC 0079's `retire-setup-second-pool-rebuilds`, which
 changes _how_ `setup-second-pool.ts` lays these tables (off

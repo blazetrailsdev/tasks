@@ -42,12 +42,25 @@ trails now has the same mechanism (`src/test-fixtures/with-transactional-fixture
 `fixtures(...)`, 85 more use the transactional helpers directly). The per-file
 truncate is a leftover guard against files that write rows outside a transaction.
 
-Measured cost, sqlite lane (instrumented `test-setup-dy.ts`, 8 files,
-`TRAILS_TEST_FORKS=2`): the `reconstructFromSchema` phase costs **42-70 ms per
-file** in the steady state (365 ms on the first file per slot, which is the
-genuine one-time purge+load). ~55 ms x ~697 files ~= **38 s per lane**, and
-`TRUNCATE` on PG/MySQL is far more expensive than sqlite's `DELETE FROM`
-(RFC 0060 measured PG schema-DDL wall time at ~6x sqlite's).
+Measured cost (instrumented `test-setup-dy.ts`, 8 files per lane,
+`TRAILS_TEST_FORKS=2`), steady state on an exclusive slot:
+
+| lane            | `reconstructFromSchema` per test file | extrapolated over ~697 files |
+| --------------- | ------------------------------------- | ---------------------------- |
+| sqlite          | 42-70 ms                              | ~38 s                        |
+| postgresql      | 273-310 ms                            | ~3.4 min                     |
+| mysql (MariaDB) | 1,071-1,336 ms                        | ~14 min                      |
+
+(The first file on each slot additionally pays the genuine one-time purge+load:
+365 ms sqlite / ~1.3 s PG.) MySQL is the pathological case — truncating ~250
+canonical tables costs over a second every single test file.
+
+Related but separate: `test-setup-worker-db.ts:169,174` only sets the
+`AR_*_EXCLUSIVE_DB` flag for `slot > 1`, so the slot-1 worker skips this path
+entirely and re-runs the _full_ `loadSchema` per file (PG 1,164-1,318 ms, MySQL
+1,948-2,048 ms). That gate flip is its own story,
+`set-exclusive-db-flag-for-every-stamped-slot`; land it first so this story's
+before/after numbers are measured against a uniform path.
 
 Note the escape hatch already exists but is unused by the suite:
 `SKIP_TEST_DATABASE_TRUNCATE` (`database-tasks.ts:1409`).

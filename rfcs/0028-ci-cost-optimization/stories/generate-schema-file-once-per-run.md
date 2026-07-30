@@ -33,11 +33,11 @@ generated `defineSchema` module on disk. The output is a pure function of
 (TEST_SCHEMA, adapter, supportsExpressionIndex) — identical for every file in a
 lane — yet it is recomputed and rewritten ~700 times per lane.
 
-Measured on the sqlite lane (instrumented `test-setup-dy.ts`, 8 files,
-`TRAILS_TEST_FORKS=2`): `generateSchemaFile` costs **20-49 ms per test file**
-(median ~25 ms). Across ~697 AR test files that is roughly **17 s of pure
-duplicate work per lane**, on top of the `supportsExpressionIndex` round trip it
-forces against a live connection first.
+Measured (instrumented `test-setup-dy.ts`, 8 files per lane,
+`TRAILS_TEST_FORKS=2`): `generateSchemaFile` costs **20-49 ms/file on sqlite,
+35-46 ms on PostgreSQL, 22-27 ms on MySQL/MariaDB**. Across ~697 AR test files
+that is roughly **17-32 s of pure duplicate work per lane**, on top of the
+`supportsExpressionIndex` round trip it forces against a live connection first.
 
 `globalSetup` already exists for exactly this class of once-per-run work:
 `packages/activerecord/src/support/template-global-setup.ts` (wired at
