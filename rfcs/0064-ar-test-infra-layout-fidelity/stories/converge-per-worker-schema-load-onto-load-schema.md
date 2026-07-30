@@ -1,6 +1,6 @@
 ---
 title: "per-worker schema load bypasses load_schema's adapter-specific arm"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5670
 claim: "2026-07-30T20:11:19Z"
 assignee: "converge-per-worker-schema-load-onto-load-schema"
 blocked-by: null
