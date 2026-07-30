@@ -1,6 +1,6 @@
 ---
 title: "Arel SelectManager#joinSources is a getter; Rails' join_sources is a method"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
