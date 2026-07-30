@@ -1,6 +1,6 @@
 ---
 title: "Decide whether an interface declaration name is extra surface by kind or only by tag"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T19:35:17Z"
+assignee: "interface-declaration-names-need-a-kind-level-policy"
 blocked-by: null
 closed-reason: null
 ---
