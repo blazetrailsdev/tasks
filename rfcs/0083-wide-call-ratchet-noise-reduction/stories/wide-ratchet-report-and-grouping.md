@@ -1,6 +1,6 @@
 ---
 title: "Group and report the wide call-set population by cause"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: null
+pr: 5650
 claim: "2026-07-30T17:42:41Z"
 assignee: "wide-ratchet-report-and-grouping"
 blocked-by: null
