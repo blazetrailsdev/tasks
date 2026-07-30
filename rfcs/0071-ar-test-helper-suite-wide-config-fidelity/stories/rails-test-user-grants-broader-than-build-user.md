@@ -1,6 +1,6 @@
 ---
 title: "Provisioned rails user grants are broader than db:mysql:build_user's"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T14:56:19Z"
+assignee: "rails-test-user-grants-broader-than-build-user"
 blocked-by: null
 closed-reason: null
 ---
