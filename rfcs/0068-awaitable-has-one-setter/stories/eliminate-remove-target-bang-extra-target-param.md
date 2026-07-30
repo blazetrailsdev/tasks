@@ -1,6 +1,6 @@
 ---
 title: "Eliminate removeTargetBang's extra target parameter"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5651
 claim: "2026-07-30T17:53:16Z"
 assignee: "eliminate-remove-target-bang-extra-target-param"
 blocked-by: null
