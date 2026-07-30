@@ -1,6 +1,6 @@
 ---
 title: "Synthesized __mixin members report zero params to the arity check"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
