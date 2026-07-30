@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - converge-http-cache-predicates-onto-is-prefix
 deps-rfc: []
 est-loc: null
 priority: null
