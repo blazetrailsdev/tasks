@@ -1,6 +1,6 @@
 ---
 title: "Audit remaining associations.ts relocation stories for dead code before relocating"
-status: claimed
+status: closed
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-07-30T13:20:21Z"
-assignee: "audit-relocation-stories-for-dead-code"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "obsolete: all 11 extra-surface-relocate-* stories for associations.ts shipped (PRs #5355-#5373) before this audit ran; no open or unfiled relocation story remains to correct. Spot-check of the survivors (reflectLockVersionBump, habtmTargetFk, buildThroughJoinScope) confirms each has production callers outside associations.ts, so no dead code was relocated."
 ---
 
 ## Context
