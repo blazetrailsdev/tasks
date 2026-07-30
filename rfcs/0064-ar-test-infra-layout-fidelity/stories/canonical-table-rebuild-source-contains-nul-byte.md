@@ -1,6 +1,6 @@
 ---
 title: "canonical-table-rebuild.ts holds a NUL byte, so grep silently skips it"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5688
 claim: "2026-07-30T23:33:17Z"
 assignee: "canonical-table-rebuild-source-contains-nul-byte"
 blocked-by: null
