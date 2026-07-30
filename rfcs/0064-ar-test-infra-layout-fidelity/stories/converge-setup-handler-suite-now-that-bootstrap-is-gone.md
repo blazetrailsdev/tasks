@@ -1,6 +1,6 @@
 ---
 title: "setupHandlerSuite is now only a reset shield; two trails-only fixture helpers overlap"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5671
 claim: "2026-07-30T20:17:17Z"
 assignee: "converge-setup-handler-suite-now-that-bootstrap-is-gone"
 blocked-by: null
