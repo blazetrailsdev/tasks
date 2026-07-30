@@ -1,6 +1,6 @@
 ---
 title: "Claim the PG in-flight query marker when the query reaches the wire, not at _runQuery entry"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T19:11:18Z"
+assignee: "pg-cancel-marker-claimed-while-query-still-queued"
 blocked-by: null
 closed-reason: null
 ---
