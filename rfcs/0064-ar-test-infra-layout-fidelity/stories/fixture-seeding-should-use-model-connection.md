@@ -1,6 +1,6 @@
 ---
 title: "Seed fixtures through the model's connection as FixtureSet does"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T21:27:22Z"
+assignee: "fixture-seeding-should-use-model-connection"
 blocked-by: null
 closed-reason: null
 ---
