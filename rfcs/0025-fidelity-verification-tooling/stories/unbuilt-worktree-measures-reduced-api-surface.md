@@ -1,7 +1,7 @@
 ---
 title: "Unbuilt worktree silently measures a smaller api:extra surface than a built one"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
