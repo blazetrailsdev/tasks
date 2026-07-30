@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition#primaryKeys is a derived reader, not Rails' PrimaryKeyDefinition setter"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
