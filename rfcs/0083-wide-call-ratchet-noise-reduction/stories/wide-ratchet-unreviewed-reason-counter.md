@@ -1,6 +1,6 @@
 ---
 title: "Only-shrink counter for unreviewed default-reason entries"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: ["wide-ratchet-report-and-grouping"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: 5661
 claim: "2026-07-30T19:17:20Z"
 assignee: "wide-ratchet-unreviewed-reason-counter"
 blocked-by: null
