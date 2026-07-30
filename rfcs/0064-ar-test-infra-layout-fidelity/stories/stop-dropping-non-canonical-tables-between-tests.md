@@ -1,6 +1,6 @@
 ---
 title: "Retire the between-test drop arm the boot-laid set exists to serve"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
