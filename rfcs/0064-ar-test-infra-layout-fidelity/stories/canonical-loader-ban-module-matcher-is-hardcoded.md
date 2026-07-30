@@ -1,6 +1,6 @@
 ---
 title: "no-internal-canonical-loaders' module matcher is a hardcoded basename list"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T18:29:18Z"
+assignee: "canonical-loader-ban-module-matcher-is-hardcoded"
 blocked-by: null
 closed-reason: null
 ---
