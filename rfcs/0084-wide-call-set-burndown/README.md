@@ -1,5 +1,5 @@
 ---
-rfc: "0000-wide-call-set-burndown"
+rfc: "0084-wide-call-set-burndown"
 title: "Wide call-set burn-down"
 status: draft
 created: 2026-07-30
