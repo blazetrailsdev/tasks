@@ -1,6 +1,6 @@
 ---
 title: "delete-dead-scratch-database-module"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5627
 claim: "2026-07-30T02:19:04Z"
 assignee: "delete-dead-scratch-database-module"
 blocked-by: null
