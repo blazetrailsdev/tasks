@@ -1,6 +1,6 @@
 ---
 title: "Run the Messages::Metadata shared cases over the MessagePack serializer"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
