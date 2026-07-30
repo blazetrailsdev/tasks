@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes id/updateOnly update on an unloaded has_one defers to the post-save flush"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
