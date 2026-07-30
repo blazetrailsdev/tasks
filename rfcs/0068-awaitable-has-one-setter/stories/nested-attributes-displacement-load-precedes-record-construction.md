@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes displacement SELECT is issued before build_record, not after"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
