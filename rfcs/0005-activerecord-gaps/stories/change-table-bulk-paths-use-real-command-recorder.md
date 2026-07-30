@@ -1,6 +1,6 @@
 ---
 title: "change-table-bulk-paths-use-real-command-recorder"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T13:12:29Z"
+assignee: "change-table-bulk-paths-use-real-command-recorder"
 blocked-by: null
 closed-reason: null
 ---
