@@ -1,6 +1,6 @@
 ---
 title: "Restate the per-agent compose-stack guidance now that the run token handles concurrency"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0028-ci-cost-optimization"
 cluster: null
