@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining test-infra ESLint scope lists onto one source of truth"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 5672
 claim: "2026-07-30T20:23:19Z"
 assignee: "converge-test-infra-lint-scope-lists"
 blocked-by: null
