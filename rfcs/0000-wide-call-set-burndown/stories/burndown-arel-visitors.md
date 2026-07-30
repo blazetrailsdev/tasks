@@ -1,0 +1,47 @@
+---
+title: "B1: converge arel visitor helper calls"
+status: draft
+updated: 2026-07-30
+rfc: "0000-wide-call-set-burndown"
+cluster: api-compare
+deps: []
+deps-rfc: []
+est-loc: 400
+priority: 1
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Rails' arel visitors route shared work through `collect_nodes_for`,
+`maybe_visit` and `infix_value`; several trails visitors inline that work
+instead of calling the ported helper. Confirmed example:
+`visit_Arel_Nodes_DeleteStatement` (Rails) uses `collect_nodes_for` for its
+WHERE clause and `maybe_visit` for its limit, while
+`packages/arel/src/visitors/to-sql.ts:211` `visitArelNodesDeleteStatement`
+inlines both. Same pattern in `visit_Arel_Nodes_UpdateStatement`,
+`visit_Arel_Nodes_InsertStatement`, `visit_Arel_Nodes_SelectStatement`,
+`visit_Arel_Nodes_Window`, and in the dialect visitors
+(`visitors/mysql.ts`, `visitors/postgresql.ts`, `visitors/sqlite.ts`) for
+`infix_value` and `visit`.
+
+~90 rows projected after the sibling RFC's noise reduction. Chosen as the first
+bundle: self-contained, mechanical, no cross-cutting state.
+
+## Acceptance criteria
+
+- Re-measure first with `pnpm api:calls:wide --report` — the ~90 figure is a
+  projection from 2026-07-30 probe runs, not a live count.
+- Split into ~3 PRs, each under the 500-LOC ceiling, each branching from `main`
+  with non-overlapping files. Register the slices as follow-up stories under
+  this RFC rather than opening them all from one agent.
+- Each converged visitor calls the ported helper Rails calls; behavior is
+  verified against `vendor/rails/activerecord/test/cases/arel/` and the trails
+  arel tests, not by the ratchet alone.
+- Baseline entries for converged rows are removed (not re-reasoned).
+- Any row that turns out to be a correct deviation gets a reasoned
+  `@missingRailsCall` tag at the call site, and the PR body says why.
