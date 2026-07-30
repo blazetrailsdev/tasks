@@ -1,6 +1,6 @@
 ---
 title: "Stop the MySQL cross-database probe from dropping the live arunit2 database"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T20:57:23Z"
+assignee: "cross-db-probe-drops-the-live-arunit2-database"
 blocked-by: null
 closed-reason: null
 ---
