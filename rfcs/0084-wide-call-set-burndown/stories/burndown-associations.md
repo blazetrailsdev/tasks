@@ -44,3 +44,9 @@ RFC — audit before planning PRs.
 - Association behavior is verified against the Rails association tests in
   `vendor/rails/activerecord/test/cases/associations/`, not by the ratchet.
 - Depends on: ts-extractor-record-this-property-access (other RFC).
+
+- **Check for an existing owner before claiming any slice.** The 2026-07-30
+  survey found that 42% of open fidelity stories already own a file the wide
+  list flags. If an open story in another RFC owns the file, the wide row
+  belongs there as an acceptance criterion — not in a second campaign against
+  the same file.

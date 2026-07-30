@@ -44,3 +44,8 @@ call site, with a reasoned entry in
 - `scripts/test-deps/adapter-graph-import-tdz.test.ts` passes.
 - The `join_table_name -> derive_join_table_name` wide-exclude entry is removed
   if the delegation lands.
+- The wide call-set ratchet entry for this defect is removed: `migration/join-table.ts`
+  / `join_table_name` / `derive_join_table_name → deriveJoinTableName`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

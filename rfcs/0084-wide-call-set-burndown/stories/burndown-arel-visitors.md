@@ -45,3 +45,9 @@ bundle: self-contained, mechanical, no cross-cutting state.
 - Baseline entries for converged rows are removed (not re-reasoned).
 - Any row that turns out to be a correct deviation gets a reasoned
   `@missingRailsCall` tag at the call site, and the PR body says why.
+
+- **Check for an existing owner before claiming any slice.** The 2026-07-30
+  survey found that 42% of open fidelity stories already own a file the wide
+  list flags. If an open story in another RFC owns the file, the wide row
+  belongs there as an acceptance criterion — not in a second campaign against
+  the same file.

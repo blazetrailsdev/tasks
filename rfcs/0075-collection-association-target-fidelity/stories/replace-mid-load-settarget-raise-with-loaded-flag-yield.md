@@ -79,3 +79,8 @@ Caveats for the implementer:
 - Behavior verified on PG and MySQL, not just SQLite (per the #5009 lesson).
 - The deviation comment at each former arming site is replaced by a cite of
   association.rb's loaded-flag guard as the ported source.
+- The wide call-set ratchet entry for this defect is removed: `associations/association.ts`
+  / `load_target` / `loaded? → isLoaded|loaded`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

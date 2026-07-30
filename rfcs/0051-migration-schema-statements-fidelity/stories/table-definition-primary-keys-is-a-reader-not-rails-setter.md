@@ -52,3 +52,8 @@ because of this.
       the `createTable` block instead of pre-computing the `primaryKey` option.
 - [ ] Remove the `copy_table → primary_keys` wide-gate baseline entry.
 - [ ] Composite-PK schema dumps and rebuilds unchanged on all three adapters.
+- The wide call-set ratchet entry for this defect is removed: `connection-adapters/sqlite3-adapter.ts`
+  / `copy_table` / `primary_keys → primaryKeys`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

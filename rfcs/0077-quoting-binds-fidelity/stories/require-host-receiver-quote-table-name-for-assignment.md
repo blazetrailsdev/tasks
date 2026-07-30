@@ -58,3 +58,8 @@ outside that story's scope:
 - The three callers above bind a host explicitly; `ABSTRACT_QUOTER` keeps its
   current ANSI output (no behavior change to sanitization).
 - Quoting + sanitization suites pass; api:compare / test:compare delta non-negative.
+- The wide call-set ratchet entry for this defect is removed: `connection-adapters/abstract/quoting.ts`
+  / `quote_default_expression` / `quote → quote`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

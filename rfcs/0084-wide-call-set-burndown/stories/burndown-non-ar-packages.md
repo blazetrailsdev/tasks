@@ -38,3 +38,9 @@ does not compete with AR work.
   stories.
 - Each converged body verified against its vendored Rails counterpart and the
   corresponding Rails test file.
+
+- **Check for an existing owner before claiming any slice.** The 2026-07-30
+  survey found that 42% of open fidelity stories already own a file the wide
+  list flags. If an open story in another RFC owns the file, the wide row
+  belongs there as an acceptance criterion — not in a second campaign against
+  the same file.

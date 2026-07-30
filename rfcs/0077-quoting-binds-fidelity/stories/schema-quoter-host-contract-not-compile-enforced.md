@@ -57,3 +57,8 @@ the class of silent SQL divergence #4958 was closing.
   (no behavior change).
 - A negative type test / assertion demonstrating a host missing a required
   member no longer compiles.
+- The wide call-set ratchet entry for this defect is removed: `connection-adapters/abstract/quoting.ts`
+  / `quote_default_expression` / `quote → quote`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

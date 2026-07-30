@@ -48,3 +48,9 @@ baseline entry.
 - Migration runs through `api:build`, not by hand-editing both sides.
 - Split into ~2 PRs (synchronize group; verified-equivalents group).
 - Depends on: missing-rails-call-tag-suppresses-wide-flag (other RFC).
+
+- **Check for an existing owner before claiming any slice.** The 2026-07-30
+  survey found that 42% of open fidelity stories already own a file the wide
+  list flags. If an open story in another RFC owns the file, the wide row
+  belongs there as an acceptance criterion — not in a second campaign against
+  the same file.

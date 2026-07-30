@@ -43,3 +43,8 @@ api:compare.
       Rails' `execute` call set — this may converge wide-ratchet entries, which
       must then be removed from the baseline by hand, not via `--write`).
 - [ ] MySQL/MariaDB DDL suites stay green under the `ARCONN` CI job.
+- The wide call-set ratchet entry for this defect is removed: `connection-adapters/abstract-mysql-adapter.ts`
+  / `change_column_default` / `execute → execute`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)

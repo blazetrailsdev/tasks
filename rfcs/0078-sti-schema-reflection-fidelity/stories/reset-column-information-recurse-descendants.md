@@ -72,3 +72,8 @@ clobbered by a base load). Both likely want fixing together.
       `class Child extends Parent {}` must be reached.
 - [ ] Regression test with an unregistered subclass, canonical tables only.
 - [ ] api:compare and test:compare delta non-negative.
+- The wide call-set ratchet entry for this defect is removed: `model-schema.ts`
+  / `reset_column_information` / `descendants → descendants`. Reseed with
+  `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit
+  the shrunk baseline. (Cross-referenced by the RFC 0084 survey, 2026-07-30 —
+  one of 8 open fidelity stories whose actual defect the wide gate can see.)
