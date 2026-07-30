@@ -1,7 +1,7 @@
 ---
 title: "Converge PostgreSQL indexes() onto Rails' indkey/INCLUDE-rejection shape"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
