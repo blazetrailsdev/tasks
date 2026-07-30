@@ -1,6 +1,6 @@
 ---
 title: "Detect @noRailsEquivalent tags that excuse convergeable surface"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5648
 claim: "2026-07-30T15:02:23Z"
 assignee: "detect-no-rails-equivalent-tags-excusing-convergeable-surface"
 blocked-by: null
