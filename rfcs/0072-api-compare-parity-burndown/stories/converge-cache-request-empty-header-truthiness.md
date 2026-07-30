@@ -1,6 +1,6 @@
 ---
 title: "converge-cache-request-empty-header-truthiness"
-status: ready
+status: closed
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: RFC 0072 is a data-layer api:compare burndown; actionpack work does not belong here. Re-file under an actionpack-scoped RFC if wanted."
 ---
 
 ## Context
