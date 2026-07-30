@@ -1,7 +1,7 @@
 ---
 title: "setupHandlerSuite is now only a reset shield; two trails-only fixture helpers overlap"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
