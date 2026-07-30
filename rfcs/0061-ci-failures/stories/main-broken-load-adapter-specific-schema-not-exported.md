@@ -1,6 +1,6 @@
 ---
 title: "main-broken-load-adapter-specific-schema-not-exported"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T21:09:17Z"
+assignee: "main-broken-load-adapter-specific-schema-not-exported"
 blocked-by: null
 closed-reason: null
 ---
