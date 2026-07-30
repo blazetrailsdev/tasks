@@ -34,6 +34,26 @@ reports for the data layer, toward full Rails API parity and fidelity:
    abstractcontroller) and sets up the allowlist mechanism + triage for the
    large activerecord files.
 
+## Scope: data layer only (2026-07-30)
+
+This RFC is scoped to the **data layer** — activerecord, activemodel, globalid.
+`actionpack` was dropped from `packages` on 2026-07-30.
+
+Its story history does not reflect that: a run of actionpack and actionview
+stories (ActionView::Rendering / ViewPaths ports, the prepend/append action
+callback macros, the CSP and `http/cache.ts` accessor convergences, the
+abstractcontroller extra-surface cluster) merged here because no
+actionpack-scoped RFC existed. Those done/closed stories stay put as history.
+The three still-open actionpack stories were closed as out of scope on the same
+date (`converge-cache-request-empty-header-truthiness`,
+`port-cache-request-strict-freshness-accessor`,
+`port-cache-lookup-store-for-cache-store-writer`); one,
+`converge-http-cache-predicates-onto-is-prefix`, was left alone because PR #5637
+was already open against it.
+
+**Do not file new actionpack / actionview / actiondispatch work here.** It needs
+its own RFC.
+
 ## Arity deep-dive (2026-07-25 snapshot, 79 activerecord mismatches)
 
 **(c) Checker/extractor gaps — ~31 entries, fix the tooling first:**
