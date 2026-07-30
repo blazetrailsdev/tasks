@@ -1,6 +1,6 @@
 ---
 title: "Lint JSDoc tag blocks detached from the declaration they document"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
