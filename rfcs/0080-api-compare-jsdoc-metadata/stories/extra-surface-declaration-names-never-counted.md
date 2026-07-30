@@ -1,6 +1,6 @@
 ---
 title: "Declaration names are absent from the extra set, so declaration-level tags only match by accident"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
