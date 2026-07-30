@@ -1,6 +1,6 @@
 ---
 title: "B5: converge the adapter cluster"
-status: draft
+status: closed
 updated: 2026-07-30
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicates RFC 0076 (execute primitive convergence, 19 open stories), RFC 0051 and RFC 0077, all targeting postgresql-adapter.ts / sqlite3-adapter.ts / abstract-mysql-adapter.ts. 0076 already owns the 152 execute-primitive-family rows. Rows become acceptance criteria there instead (RFC README survey, 2026-07-30)."
 ---
 
 ## Context
