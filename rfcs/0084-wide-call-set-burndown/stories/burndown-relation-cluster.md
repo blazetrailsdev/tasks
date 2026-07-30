@@ -1,6 +1,6 @@
 ---
 title: "B4: converge the AR relation cluster"
-status: draft
+status: closed
 updated: 2026-07-30
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicates work already owned on the same files: 24 open stories in RFC 0023, 5 in RFC 0072, plus 0073 and 0082 all target packages/activerecord/src/relation.ts or relation/. A parallel campaign would produce file-overlap conflicts. Rows become acceptance criteria on the owning stories instead (RFC README survey, 2026-07-30)."
 ---
 
 ## Context
