@@ -1,7 +1,7 @@
 ---
 title: "Stale @noRailsEquivalent on NullConfig makes pnpm api:extra exit 1"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "premise no longer true: the stale @noRailsEquivalent tag on NullConfig (connection-pool.ts) has already been deleted on main; the JSDoc is now a bare Mirrors: line"
 ---
 
 ## Context
