@@ -1,6 +1,6 @@
 ---
 title: "change-table-bulk-paths-use-real-command-recorder"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
