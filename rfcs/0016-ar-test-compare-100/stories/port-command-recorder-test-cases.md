@@ -1,0 +1,61 @@
+---
+title: "Port Rails CommandRecorderTest (4/93 matched; 73 bespoke extras)"
+status: draft
+updated: 2026-07-30
+rfc: "0016-ar-test-compare-100"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 500
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Surfaced while porting three delegation tests in PR #5635. `test:compare`
+reports `migration/command_recorder_test.rb` against
+`packages/activerecord/src/migration/command-recorder.test.ts` as:
+
+````text
+migration/command_recorder_test.rb   command-recorder.test.ts   4 OK  0 skip  0 desc  0 move  89 miss  73 extra  93 tot
+```text
+
+Only **4 of Rails' 93** tests match. The other 73 trails tests in the file are
+counted "extra (TS only)" — they are bespoke trails tests named after the
+`invert*` methods (`describe("invertCreateTable / invertDropTable")`,
+`describe("invertAddIndex / invertRemoveIndex")`, …) under a top-level
+`describe("CommandRecorder")`, whereas Rails' population is
+`Migration > CommandRecorderTest > <test name>`. PR #5635 had to add a
+separate correctly-nested `describe("Migration") > describe("CommandRecorderTest")`
+block for its three ported tests to match at all, which is what exposed this.
+
+Rails' file is `vendor/rails/activerecord/test/cases/migration/command_recorder_test.rb`
+(93 tests). Use `pnpm rails:find <name>` to map each to its `file:line` — e.g.
+`test_unknown_commands_delegate` → `command_recorder_test.rb:35`.
+
+Note the three already ported by #5635, so they are not re-ported:
+`respond_to_delegates`, `send_delegates_to_record`, `unknown_commands_delegate`.
+
+## Acceptance criteria
+
+- Rails' `CommandRecorderTest` cases are ported under the Rails describe path
+  (`Migration` > `CommandRecorderTest`) with names matching Rails verbatim, so
+  `test:compare` counts them OK rather than missing.
+- The existing 73 bespoke `invert*`-named tests are either renamed to their
+  Rails counterparts where one exists, or — where they cover trails-only
+  behavior with no Rails equivalent — moved to
+  `command-recorder.trails.test.ts` per the TS-only-extras convention.
+- No test is renamed away from a Rails name it currently matches (the 4 OK
+  stay OK).
+- `test:compare` delta for this file is strongly positive; `api:compare`
+  non-negative.
+- Green on sqlite3, PostgreSQL and MySQL.
+
+Likely needs splitting across several PRs under the 500 LOC ceiling — file the
+follow-ups as separate stories rather than fanning out.
+````
