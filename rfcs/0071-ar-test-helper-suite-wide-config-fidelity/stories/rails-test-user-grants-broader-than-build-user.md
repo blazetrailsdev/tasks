@@ -1,6 +1,6 @@
 ---
 title: "Provisioned rails user grants are broader than db:mysql:build_user's"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
