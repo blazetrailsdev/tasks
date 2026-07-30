@@ -1,6 +1,6 @@
 ---
 title: "Pin the no-floating-rejection property for the unloaded displacement removal"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 5665
 claim: "2026-07-30T19:47:45Z"
 assignee: "unloaded-displacement-removal-floating-rejection-untested"
 blocked-by: null
