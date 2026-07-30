@@ -1,7 +1,7 @@
 ---
 title: "Map inflector/methods.rb and core_ext/string/inflections.rb so ported inflector methods stop reporting missing"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
