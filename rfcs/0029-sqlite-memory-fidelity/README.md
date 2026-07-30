@@ -1,9 +1,9 @@
 ---
 rfc: "0029-sqlite-memory-fidelity"
 title: "SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern"
-status: active
+status: closed
 created: 2026-06-15
-updated: 2026-07-27
+updated: 2026-07-30
 owner: "@deanmarano"
 packages:
   - activerecord
