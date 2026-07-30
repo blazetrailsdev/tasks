@@ -1,6 +1,6 @@
 ---
 title: "Claim the PG in-flight query marker when the query reaches the wire, not at _runQuery entry"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
