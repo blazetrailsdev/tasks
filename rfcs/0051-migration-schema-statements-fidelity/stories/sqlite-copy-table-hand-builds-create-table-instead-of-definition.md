@@ -1,7 +1,7 @@
 ---
 title: "copy_table hand-builds CREATE TABLE instead of a TableDefinition"
-status: in-progress
-updated: 2026-07-29
+status: done
+updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
