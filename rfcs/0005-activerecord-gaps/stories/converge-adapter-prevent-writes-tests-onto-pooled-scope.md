@@ -1,7 +1,7 @@
 ---
 title: "Drive the adapter prevent-writes suites through a pooled while_preventing_writes scope"
-status: in-progress
-updated: 2026-07-29
+status: done
+updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
 deps: []
