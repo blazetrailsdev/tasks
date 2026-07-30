@@ -1,7 +1,7 @@
 ---
 title: "Adapter internalExecute overrides accept prepare and silently drop it"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
