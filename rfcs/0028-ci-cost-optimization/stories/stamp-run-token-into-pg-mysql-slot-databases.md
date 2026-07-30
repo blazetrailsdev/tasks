@@ -1,6 +1,6 @@
 ---
 title: "Stamp the run token into PG/MySQL slot database names and advisory-lock keys"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0028-ci-cost-optimization"
 cluster: null
