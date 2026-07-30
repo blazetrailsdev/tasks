@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable's second move_table rebuilds from the source reflection, not the buffer"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
