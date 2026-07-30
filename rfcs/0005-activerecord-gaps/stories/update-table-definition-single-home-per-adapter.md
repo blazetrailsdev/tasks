@@ -1,6 +1,6 @@
 ---
 title: "Give updateTableDefinition one Rails-shaped home per adapter"
-status: draft
+status: ready
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
