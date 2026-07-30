@@ -1,6 +1,6 @@
 ---
 title: "Decide whether an interface declaration name is extra surface by kind or only by tag"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
