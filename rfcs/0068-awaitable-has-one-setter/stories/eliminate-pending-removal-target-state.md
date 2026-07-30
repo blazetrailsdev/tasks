@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the pendingRemovalTarget parking state"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5663
 claim: "2026-07-30T19:23:18Z"
 assignee: "eliminate-pending-removal-target-state"
 blocked-by: null
