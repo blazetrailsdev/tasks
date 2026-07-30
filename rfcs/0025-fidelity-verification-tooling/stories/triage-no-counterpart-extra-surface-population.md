@@ -1,7 +1,7 @@
 ---
 title: "Triage the 464 novel extras newly measured on files with no Rails counterpart"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
