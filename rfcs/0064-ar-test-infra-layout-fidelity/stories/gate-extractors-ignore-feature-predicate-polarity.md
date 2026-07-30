@@ -1,6 +1,6 @@
 ---
 title: "Gate extractors ignore supports_X? polarity, inverting a conjoined feature claim"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
