@@ -1,6 +1,6 @@
 ---
 title: "Port remove_target! as a HasOneAssociation method instead of a free function"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5644
 claim: "2026-07-30T14:32:20Z"
 assignee: "port-remove-target-bang-as-a-has-one-association-method"
 blocked-by: null
