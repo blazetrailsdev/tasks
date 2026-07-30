@@ -1,10 +1,11 @@
 ---
 title: "Split trails' merged Migrator into Rails' MigrationContext + Migrator class pair"
 status: draft
-updated: 2026-07-28
+updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - delete-drained-migrationcontext-schema-dsl
 deps-rfc: []
 est-loc: 480
 priority: null
