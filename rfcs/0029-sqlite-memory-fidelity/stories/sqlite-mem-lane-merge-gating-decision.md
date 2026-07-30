@@ -1,7 +1,7 @@
 ---
 title: "Decide whether sqlite-mem-tests should gate merges rather than only report on main"
-status: in-progress
-updated: 2026-07-29
+status: done
+updated: 2026-07-30
 rfc: "0029-sqlite-memory-fidelity"
 cluster: null
 deps: []
