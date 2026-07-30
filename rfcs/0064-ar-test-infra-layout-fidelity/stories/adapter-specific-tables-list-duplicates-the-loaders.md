@@ -1,6 +1,6 @@
 ---
 title: "ADAPTER_SPECIFIC_TABLES duplicates the loaders and is guarded exactly only on sqlite"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T18:23:23Z"
+assignee: "adapter-specific-tables-list-duplicates-the-loaders"
 blocked-by: null
 closed-reason: null
 ---
