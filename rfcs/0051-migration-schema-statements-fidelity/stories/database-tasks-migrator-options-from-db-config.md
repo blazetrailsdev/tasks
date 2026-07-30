@@ -1,6 +1,6 @@
 ---
 title: "Build every DatabaseTasks Migrator from its dbConfig (useMetadataTable, env)"
-status: ready
+status: draft
 updated: 2026-07-30
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
