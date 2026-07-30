@@ -1,7 +1,7 @@
 ---
 title: "port-preloadertest-fixture-declaration"
-status: in-progress
-updated: 2026-07-29
+status: done
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
