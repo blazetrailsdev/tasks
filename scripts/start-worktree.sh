@@ -34,7 +34,7 @@ case "$GIT_COMMON_DIR" in
   *)  MAIN_GIT_DIR="$WORKTREE_ROOT/$GIT_COMMON_DIR" ;;
 esac
 MAIN_REPO="$(cd "$MAIN_GIT_DIR/.." && pwd)"
-WORKTREES_ROOT="$HOME/github/blazetrailsdev/worktrees"
+WORKTREES_ROOT="${WORKTREES_ROOT:-$HOME/github/blazetrailsdev/worktrees}"
 TARGET="$WORKTREES_ROOT/$NAME"
 
 if [[ -e "$TARGET" ]]; then
