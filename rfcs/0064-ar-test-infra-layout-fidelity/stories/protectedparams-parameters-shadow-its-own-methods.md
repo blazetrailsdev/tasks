@@ -1,7 +1,7 @@
 ---
 title: "ProtectedParams stores parameters on the instance, so they shadow its methods"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
