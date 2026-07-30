@@ -1,6 +1,6 @@
 ---
 title: "Column/SqlTypeMetadata/Message/Binary::Data #== have no TS equality member"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 5630
 claim: "2026-07-30T12:50:22Z"
 assignee: "adapter-column-and-message-equality-operators-unported"
 blocked-by: null
