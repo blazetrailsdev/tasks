@@ -1,6 +1,6 @@
 ---
 title: "Gate unclassified @noRailsEquivalent reasons once the population is classified"
-status: claimed
+status: blocked
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-30T18:11:17Z"
 assignee: "gate-unclassified-no-rails-equivalent-tag-reasons"
-blocked-by: null
+blocked-by: "Blocked on classify-existing-no-rails-equivalent-tag-reasons (PR #5652, open): unclassified count is 74, not 0. Gating now would fail api:extra on main for every unrelated PR."
 closed-reason: null
 ---
 
