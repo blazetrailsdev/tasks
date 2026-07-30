@@ -1,10 +1,11 @@
 ---
 title: "Keep the arunit2-only tables out of the primary canonical schema"
 status: draft
-updated: 2026-07-27
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - fixture-seeding-should-use-model-connection
 deps-rfc: []
 est-loc: 200
 priority: null
