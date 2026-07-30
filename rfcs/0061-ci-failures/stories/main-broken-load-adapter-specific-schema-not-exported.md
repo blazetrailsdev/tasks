@@ -1,6 +1,6 @@
 ---
 title: "main-broken-load-adapter-specific-schema-not-exported"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
