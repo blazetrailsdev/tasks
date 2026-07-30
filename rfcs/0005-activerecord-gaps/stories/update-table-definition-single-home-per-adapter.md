@@ -1,6 +1,6 @@
 ---
 title: "Give updateTableDefinition one Rails-shaped home per adapter"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5639
 claim: "2026-07-30T14:02:20Z"
 assignee: "update-table-definition-single-home-per-adapter"
 blocked-by: null
