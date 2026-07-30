@@ -1,7 +1,7 @@
 ---
 title: "Un-gate the cross-pool suites now that arunit2 is provisioned on every lane"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
