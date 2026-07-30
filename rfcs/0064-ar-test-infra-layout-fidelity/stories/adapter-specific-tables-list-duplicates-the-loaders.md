@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5656
+pr: 5659
 claim: "2026-07-30T18:23:23Z"
 assignee: "adapter-specific-tables-list-duplicates-the-loaders"
 blocked-by: null
