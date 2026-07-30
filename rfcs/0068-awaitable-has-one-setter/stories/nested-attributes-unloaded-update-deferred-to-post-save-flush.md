@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes id/updateOnly update on an unloaded has_one defers to the post-save flush"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T14:26:19Z"
+assignee: "nested-attributes-unloaded-update-deferred-to-post-save-flush"
 blocked-by: null
 closed-reason: null
 ---
