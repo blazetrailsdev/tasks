@@ -1,7 +1,7 @@
 ---
 title: "Converge http/cache.ts has* predicates onto the is* convention"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-07-30
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T13:32:33Z"
+assignee: "converge-http-cache-predicates-onto-is-prefix"
 blocked-by: null
 closed-reason: null
 ---
