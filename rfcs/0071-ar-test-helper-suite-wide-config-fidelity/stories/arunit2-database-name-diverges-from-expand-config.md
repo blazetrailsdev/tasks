@@ -1,6 +1,6 @@
 ---
 title: "arunit2 database name diverges from expand_config's activerecord_unittest2"
-status: in-progress
+status: done
 updated: 2026-07-30
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
