@@ -1,6 +1,6 @@
 ---
 title: "drops 3-table FK chain test declares no foreign keys"
-status: claimed
+status: in-progress
 updated: 2026-07-30
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5680
 claim: "2026-07-30T21:21:19Z"
 assignee: "drop-all-tables-fk-chain-test-declares-no-fks"
 blocked-by: null
