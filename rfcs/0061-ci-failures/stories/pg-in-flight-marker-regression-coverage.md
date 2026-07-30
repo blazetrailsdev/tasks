@@ -1,6 +1,6 @@
 ---
 title: "Find a discriminating regression test for the PG in-flight marker ownership guard"
-status: ready
+status: claimed
 updated: 2026-07-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-30T19:53:26Z"
+assignee: "pg-in-flight-marker-regression-coverage"
 blocked-by: null
 closed-reason: null
 ---
