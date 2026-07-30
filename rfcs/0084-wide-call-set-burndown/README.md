@@ -22,83 +22,136 @@ related-rfcs:
 
 ## Summary
 
-Drive the RFC 0047 wide call-set ratchet to zero by converging the entries that
-represent real call-shape divergence between a Rails body and its trails port.
+Drive the RFC 0047 wide call-set ratchet toward zero by converging the entries
+that represent real call-shape divergence between a Rails body and its trails
+port — **and by feeding the divergence nobody has filed yet into the fidelity
+RFCs that own it.**
 
-This RFC covers **only genuine divergence**. The tooling artifacts that
-currently dominate the list are the sibling RFC's job
-(`0083-wide-call-ratchet-noise-reduction`), and this RFC does not start until
-that one has removed them — burning down a list that is mostly noise wastes the
-effort on entries that were never fidelity gaps.
+This RFC is a **discovery feed, not a parallel convergence campaign.** That
+framing is the result of a survey (2026-07-30) of all 92 open stories across the
+five open fidelity RFCs, cross-referenced against the live wide artifact. The
+survey is the reason B4 and B5 were dropped before this RFC was ever scheduled.
 
-## Starting population
+## Survey: what the wide list does and does not overlap
 
-The 2026-07-30 investigation measured the live artifact (5038 rows, 4794
-baseline keys) and classified every row by cause. After the sibling RFC's
-noise-reduction lands, the projected residual is **~1400–1900 rows**, with a
-hard floor of **931 rows** classified `GENUINE (same-file candidate that takes
-args)` — a ported helper that exists in the same TS file, takes arguments, and
-the body simply does not call.
+| Measure                                                                 | Open stories |  Share |
+| ----------------------------------------------------------------------- | -----------: | -----: |
+| Total open across 0051 / 0075 / 0076 / 0077 / 0078                      |           92 |      — |
+| Wide list has a row on the **same file and same method**                |           39 |    42% |
+| Wide list has a row whose **missing call is the story's actual defect** |        **8** | **9%** |
 
-Spot-check confirming the class is real: Rails'
-`visit_Arel_Nodes_DeleteStatement` builds its WHERE clause through
-`collect_nodes_for` and its limit through `maybe_visit`; trails'
-`visitArelNodesDeleteStatement` (`packages/arel/src/visitors/to-sql.ts:211`)
-inlines both. That is a genuine structural divergence and exactly what the gate
-exists to catch.
+The gap between 42% and 9% is the finding. The gate keeps landing on the same
+_methods_ the fidelity RFCs are working on while flagging a _different defect_
+in them:
+
+- `bound-reflection-stale-after-add-index` (0078) — the wide row on
+  `remove_index` is `quote_column_name` / `quote_table_name`, nothing to do with
+  reflection staleness.
+- `dialect-quotestring-returns-literal-not-escape-only` (0077) — the wide row on
+  `quote` is a missing `check_int_in_range`.
+- `sqlite-copy-table-family-bypasses-execute-primitives` (0076) — the wide row on
+  `alter_table` is `strip_table_name_prefix_and_suffix`.
+
+### Why: the gate detects exactly one defect shape
+
+`significantMissingCalls` (`compare.ts:242-286`) answers one question — Rails'
+body calls `M`, does the TS body call `M`? Everything else is invisible:
+
+| Defect shape                                           | Gate        | Example open story                                               |
+| ------------------------------------------------------ | ----------- | ---------------------------------------------------------------- |
+| Missing call to a ported method                        | **visible** | `inline-mysql-exec-mutation-indirection`                         |
+| Invented / extra behavior Rails does not have          | blind       | `mysql-quote-column-name-star-branch-invented`                   |
+| Wrong return value or semantics of a call that IS made | blind       | `replace-records-gate-on-concat-return-not-rollback-catch`       |
+| Wrong values / literals                                | blind       | `SchemaCreation typeToSql uppercases native type names`          |
+| Ordering / state / memoization                         | blind       | `Migrator loads the migration outside the rescue`                |
+| Structural / class-shape                               | blind       | `Split trails' merged Migrator into MigrationContext + Migrator` |
+| Type-level enforcement                                 | blind       | `schema-quoter-host-contract-not-compile-enforced`               |
+
+RFC 0077 is the sharpest case: 13 open stories, essentially none missing-call
+shaped. Burning the wide list to zero would not touch a single one of them.
 
 ## Bundles
 
-Sized from the post-noise-reduction projection. Row counts move as the sibling
-RFC lands, so each bundle story re-measures before splitting into PRs.
+| Bundle | Scope                                                                                          | ~Rows | ~PRs |
+| ------ | ---------------------------------------------------------------------------------------------- | ----: | ---: |
+| B1     | arel visitors — `collect_nodes_for`, `maybe_visit`, `infix_value` inlined instead of called    |   ~90 |    3 |
+| B2     | permanent-deviation annotation — `synchronize` (~30) plus the 349 already-verified equivalents |  ~380 |    2 |
+| B3     | associations residual (after the property-access tooling story)                                |   ~70 |    2 |
+| B6     | non-AR — actiondispatch mapper + route-set, actioncontroller, activesupport callbacks          |  ~110 |    4 |
 
-| Bundle | Scope                                                                                                          | ~Rows | ~PRs |
-| ------ | -------------------------------------------------------------------------------------------------------------- | ----: | ---: |
-| B1     | arel visitors — `collect_nodes_for`, `maybe_visit`, `infix_value` inlined instead of called                    |   ~90 |    3 |
-| B2     | permanent-deviation annotation — `synchronize` (~30) plus the 349 already-verified equivalents                 |  ~380 |    2 |
-| B3     | associations — `association.ts`, `collection-association.ts`, `autosave-association.ts`                        |   ~70 |    2 |
-| B4     | AR relation cluster — `relation.ts`, `relation/query-methods.ts`, `relation/calculations.ts`                   |  ~230 |  6–8 |
-| B5     | adapter cluster — pg / sqlite3 / abstract-mysql / schema-statements / database-statements                      |  ~200 |    6 |
-| B6     | non-AR — actiondispatch mapper + route-set, actioncontroller base + strong-parameters, activesupport callbacks |  ~110 |    4 |
+Order: **B1 → B2 → B3 → B6.**
 
-Recommended order: **B1 → B2 → B3 → B4 → B5 → B6.**
+### Dropped before scheduling: B4 (relation cluster) and B5 (adapter cluster)
 
-- **B1 first**: self-contained, mechanical, no cross-cutting state — the right
-  shape to validate that the post-noise-reduction list is actually actionable.
-- **B2 is annotate-only**, not code convergence. These entries are permanent and
-  correct (Ruby guards with `Mutex#synchronize`; trails is single-threaded).
-  Hard-blocked on the sibling RFC's `missing-rails-call-tag-suppresses-wide-flag`
-  — without it a tag cannot remove a baseline entry.
-- **B3 largely evaporates** under the sibling RFC's property-access story; audit
-  the remainder rather than assuming the projected count.
-- **B4 is the most entangled** and overlaps existing relation-delegation work.
-- **B5 has known blockers**: the adapter write-method divergence from the base
-  class, and RFC 0013's pg raw-connection refinement. Expect some entries to be
-  registered as blocked rather than converged.
+Both duplicated work already owned elsewhere, on the same files — exactly the
+file-overlap conflict the repo's one-agent-per-PR model exists to prevent.
+
+- **B5 (adapter cluster, ~200 rows)** overlaps RFC 0076
+  (`execute/raw_execute/perform_query` primitive convergence, 19 open stories),
+  RFC 0051 and RFC 0077 — all targeting `postgresql-adapter.ts`,
+  `sqlite3-adapter.ts`, `abstract-mysql-adapter.ts`. RFC 0076 is the one
+  genuinely call-shaped fidelity RFC: the wide list carries 152 rows in the
+  execute-primitive family (`execute`, `raw_execute`, `internal_exec_query`,
+  `perform_query`, `log`, `query_value`, `with_connection`), concentrated in
+  exactly those files.
+- **B4 (relation cluster, ~230 rows)** overlaps 24 open stories in RFC 0023,
+  5 in RFC 0072, plus 0073 and 0082 — all touching
+  `packages/activerecord/src/relation.ts` or `relation/`.
+
+Those rows are not abandoned: they become acceptance criteria on the stories
+that already own the code (see below), not a second campaign against the same
+files.
+
+## How this RFC actually operates
+
+1. **Do not treat the wide list as a work list.** Before filing or claiming any
+   convergence work off it, check whether an open story in another RFC already
+   owns the file — 42% of the time one does.
+2. **Feed the leftovers.** After `0083-wide-call-ratchet-noise-reduction` lands,
+   run `pnpm api:calls:wide --report`, subtract rows covered by open stories in
+   other RFCs, and file what remains as new stories under the RFC that owns that
+   area. That is how RFC 0047 was chartered in the first place.
+3. **Hand verified rows to their owners.** Where a wide row IS a story's actual
+   defect, the story gains a free acceptance criterion: "the wide baseline entry
+   for `<file> <method> <call>` is removed." The eight identified by the survey
+   have had this added:
+
+   | Story                                                        | RFC  |
+   | ------------------------------------------------------------ | ---- |
+   | `migration-join-table-delegate-to-derive-join-table-name`    | 0051 |
+   | `table-definition-primary-keys-is-a-reader-not-rails-setter` | 0051 |
+   | `require-host-receiver-quote-table-name-for-assignment`      | 0077 |
+   | `schema-quoter-host-contract-not-compile-enforced`           | 0077 |
+   | `reset-column-information-recurse-descendants`               | 0078 |
+   | `subclass-tablename-columns-clobbered-by-base-load`          | 0078 |
+   | `replace-mid-load-settarget-raise-with-loaded-flag-yield`    | 0075 |
+   | `inline-mysql-exec-mutation-indirection`                     | 0076 |
 
 ## Dependencies
 
 - Blocked in full on `0083-wide-call-ratchet-noise-reduction` reaching at least
   `ruby-extractor-record-call-receiver-kind` and
-  `resolve-wide-candidates-through-include-graph`.
-- B2 additionally blocked on
-  `missing-rails-call-tag-suppresses-wide-flag`.
+  `resolve-wide-candidates-through-include-graph`. Burning down a list that is
+  mostly tooling artifact spends the effort on entries that were never fidelity
+  gaps.
+- B2 additionally blocked on `missing-rails-call-tag-suppresses-wide-flag`.
 
 ## Non-goals
 
-- No tooling changes — those belong to the sibling RFC. If a bundle turns up a
-  new tooling artifact, file it there rather than working around it here.
+- **Not a substitute for the fidelity RFCs.** The survey settles this: 9% of
+  open fidelity work is visible to this gate. Do not repoint fidelity effort
+  here.
+- No tooling changes — those belong to `0083-wide-call-ratchet-noise-reduction`.
+  If a bundle turns up a new tooling artifact, file it there.
 - Not converging entries that are correct deviations. Where the port is right
-  and Rails' call is genuinely not applicable, the outcome is a reasoned
+  and Rails' call genuinely does not apply, the outcome is a reasoned
   `@missingRailsCall` tag, not a code change. Deviations still converge by
   default — the burden is on the entry to justify itself.
 
 ## Why bundle stories, not per-PR stories
 
-The exact residual population is not knowable until the sibling RFC's audit
+The residual population is not knowable until `0083`'s audit
 (`audit-wide-cross-file-mixin-attribution`) and receiver-scoping land; the
 projections here come from instrumented probe runs on the 2026-07-30 tree.
-Registering 25 per-PR stories now would pin work to counts that are going to
-move. Each bundle story therefore begins by re-measuring with `--report` and
-splitting itself into PR-sized slices, registering follow-up stories under this
-RFC.
+Each bundle story begins by re-measuring with `--report`, checking for an
+existing owner, and only then splitting into PR-sized slices.
