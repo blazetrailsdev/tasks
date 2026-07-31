@@ -21,15 +21,21 @@ Step 1 of 3 in the ordered split of `converge-build-join-buckets-single-joins-st
 (RFC 0083), whose audit concluded the single-`joinsValues` re-merge cannot ship as
 one PR under the 500 LOC ceiling.
 
-Rails `merge_joins` / `merge_outer_joins`
-(`vendor/rails/activerecord/lib/active_record/relation/merger.rb:118-152`) builds a
-cross-klass `JoinDependency` on the _other_ relation's model and pushes it straight
-into the receiver's stores: `relation.joins!(join_dependency, *others)` /
-`relation.left_outer_joins!(join_dependency, *others)`. `build_join_buckets` then
-routes those JDs through `select_named_joins` → `select_association_list`
-(`query_methods.rb:1810-1822`), which stashes any `JoinDependency` into
-`buckets[:stashed_join]`, so they are folded into the primary JD's
-`join_constraints` like any other stash.
+Two sibling Rails methods in
+`vendor/rails/activerecord/lib/active_record/relation/merger.rb` build a
+cross-klass `JoinDependency` on the _other_ relation's model and push it straight
+into the receiver's stores:
+
+- `merge_joins` (merger.rb:117-134) — `relation.joins!(join_dependency, *others)`
+  at :132, into `joins_values`.
+- `merge_outer_joins` (merger.rb:136-153) —
+  `relation.left_outer_joins!(join_dependency, *others)` at :151, into
+  `left_outer_joins_values`.
+
+`build_join_buckets` then routes those JDs through `select_named_joins` →
+`select_association_list` (`query_methods.rb:1810-1822`), which stashes any
+`JoinDependency` into `buckets[:stashed_join]`, so they are folded into the
+primary JD's `join_constraints` like any other stash.
 
 trails instead parks them in two side stores, `_namedInnerJoinDeps` and
 `_leftOuterJoinDeps` (`packages/activerecord/src/relation.ts:455` and its
