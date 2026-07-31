@@ -1,6 +1,6 @@
 ---
 title: "Make destroyAssociationAsyncJob's accessor reachable and give it Rails' default"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5711
 claim: "2026-07-31T15:21:08Z"
 assignee: "converge-destroy-association-async-job-accessor"
 blocked-by: null
