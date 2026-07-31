@@ -1,6 +1,6 @@
 ---
 title: "Converge DatabaseTasks dump-filename HashConfig names onto Rails' primary/alternate"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5724
 claim: "2026-07-31T17:18:04Z"
 assignee: "converge-database-tasks-dump-filename-configs-onto-rails-names"
 blocked-by: null
