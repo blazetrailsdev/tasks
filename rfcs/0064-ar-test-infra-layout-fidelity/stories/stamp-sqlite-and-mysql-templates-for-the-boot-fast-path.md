@@ -1,6 +1,6 @@
 ---
 title: "Stamp the sqlite and MySQL templates so their workers take the boot fast path"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
