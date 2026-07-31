@@ -1,6 +1,6 @@
 ---
 title: "arm-cover misroute through loadSchema is invisible to the unit lane"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T00:39:09Z"
+assignee: "arm-cover-misroute-through-loadschema-is-pg-lane-only"
 blocked-by: null
 closed-reason: null
 ---
