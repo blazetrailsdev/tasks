@@ -1,6 +1,6 @@
 ---
 title: "base-prevent-writes declares a bespoke Bird instead of the canonical model"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T19:15:04Z"
+assignee: "base-prevent-writes-declares-bespoke-bird-model"
 blocked-by: null
 closed-reason: null
 ---
