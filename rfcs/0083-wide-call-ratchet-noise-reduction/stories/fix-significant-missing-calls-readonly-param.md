@@ -1,6 +1,6 @@
 ---
 title: "Widen significantMissingCalls' rubyCalls param to readonly string[]"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 5739
 claim: "2026-07-31T19:08:55Z"
 assignee: "fix-significant-missing-calls-readonly-param"
 blocked-by: null
