@@ -1,13 +1,12 @@
 ---
 title: "Record this.<prop> accesses as calls for zero-arg members"
 status: ready
-updated: 2026-07-30
+updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 5
 pr: null
 claim: null
 assignee: null
