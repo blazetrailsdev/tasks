@@ -1,6 +1,6 @@
 ---
 title: "Migration fixtures export a pre-built instance instead of only the class"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
