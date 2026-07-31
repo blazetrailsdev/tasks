@@ -1,6 +1,6 @@
 ---
 title: "Gate unclassified @noRailsEquivalent reasons once the population is classified"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
