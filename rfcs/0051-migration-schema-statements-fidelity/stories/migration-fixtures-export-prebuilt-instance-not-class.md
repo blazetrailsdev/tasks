@@ -1,7 +1,7 @@
 ---
 title: "Migration fixtures export a pre-built instance instead of only the class"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T22:00:41Z"
+assignee: "migration-fixtures-export-prebuilt-instance-not-class"
 blocked-by: null
 closed-reason: null
 ---
