@@ -1,6 +1,6 @@
 ---
 title: "withPostgresqlDatetimeType drags a PG connection probe onto every lane"
-status: claimed
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5568
 claim: "2026-07-31T16:51:07Z"
 assignee: "with-postgresql-datetime-type-helper-drags-pg-probe-onto-all-lanes"
 blocked-by: null
