@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5734
+pr: 5742
 claim: "2026-07-31T18:32:54Z"
 assignee: "converge-build-join-buckets-single-joins-store"
 blocked-by: null
