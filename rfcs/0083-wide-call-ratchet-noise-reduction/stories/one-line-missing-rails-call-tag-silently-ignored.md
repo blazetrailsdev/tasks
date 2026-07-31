@@ -1,6 +1,6 @@
 ---
 title: "One-line @missingRailsCall tag is silently ignored by the parser"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
