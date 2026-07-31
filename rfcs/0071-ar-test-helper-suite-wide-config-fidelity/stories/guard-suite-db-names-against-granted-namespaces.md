@@ -1,13 +1,13 @@
 ---
 title: "Guard suite database names against the rails user's granted namespaces"
 status: draft
-updated: 2026-07-30
+updated: 2026-07-31
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 0
 pr: null
 claim: null
 assignee: null
