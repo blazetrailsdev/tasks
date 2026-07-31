@@ -1,13 +1,13 @@
 ---
 title: "Make the TS call-set a same-file transitive closure (helper extraction)"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 5728
 claim: "2026-07-31T18:02:32Z"
 assignee: "wide-calls-same-file-transitive-call-set"
 blocked-by: null
