@@ -1,14 +1,14 @@
 ---
 title: "main-broken-load-schema-thunk-vs-adapter-signature"
-status: in-progress
-updated: 2026-07-30
+status: done
+updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5684
+pr: 5686
 claim: "2026-07-30T23:21:17Z"
 assignee: "main-broken-load-schema-thunk-vs-adapter-signature"
 blocked-by: null
