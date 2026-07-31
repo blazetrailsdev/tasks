@@ -4,7 +4,10 @@ status: draft
 updated: 2026-07-31
 rfc: "0086-prism-codegen-productionization"
 cluster: null
-deps: []
+deps:
+  - convergence-guard-catalog-exclusions
+  - scorer-getter-and-arrow-resolution
+  - delegate-macro-receiver-resolution
 deps-rfc: []
 est-loc: 400
 priority: null
