@@ -1,6 +1,6 @@
 ---
 title: "Record this.<prop> accesses as calls for zero-arg members"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T18:05:17Z"
+assignee: "ts-extractor-record-this-property-access"
 blocked-by: null
 closed-reason: null
 ---
