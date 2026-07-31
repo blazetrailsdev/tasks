@@ -1,6 +1,6 @@
 ---
 title: "converge-build-join-buckets-single-joins-store"
-status: in-progress
+status: closed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5742
-claim: "2026-07-31T18:32:54Z"
-assignee: "converge-build-join-buckets-single-joins-store"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Audit concluded the single-joinsValues re-merge is a structural rewrite well past the 500 LOC ceiling, so per acceptance criterion 1 it is split rather than shipped partial. Root cause: trails ports neither joins! call that puts a JoinDependency into joins_values - finder_methods.rb:457-461 (eager stash; trails returns leftOuterJoins(eagerSpecs) at relation.ts:4856-4892) and merger.rb:132/:151 (cross-klass merges; trails parks them in _namedInnerJoinDeps/_leftOuterJoinDeps and emitJoinPlan appends them directly at relation/query-methods.ts:3084-3092). Correction to the original framing: _eagerLoadAssociations IS the faithful port of eager_load_values and must not be merged away - the gap is the missing joins!, not the store. Registered as ordered stories converge-merged-join-deps-into-joins-values -> converge-apply-join-dependency-joins-bang -> port-build-join-buckets-eager-stash-pop, each carrying the file:line context. No PR: the doc changes attempted in #5734 and #5742 were closed unmerged at the user's direction."
 ---
 
 ## Context
