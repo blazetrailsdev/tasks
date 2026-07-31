@@ -1,6 +1,6 @@
 ---
 title: "data-source-exists-notimplementederror-fallback"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
