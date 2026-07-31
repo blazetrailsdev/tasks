@@ -1,7 +1,7 @@
 ---
 title: "AR suites write db/primary.sqlite3 into the working tree; Rails uses the path as config only"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T02:54:06Z"
+assignee: "tests-materialize-sqlite-files-in-repo-root"
 blocked-by: null
 closed-reason: null
 ---
