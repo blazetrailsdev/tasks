@@ -6,7 +6,7 @@ rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 30
 priority: null
 pr: 5744
 claim: "2026-07-31T19:33:09Z"
