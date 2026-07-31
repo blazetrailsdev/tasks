@@ -1,6 +1,6 @@
 ---
 title: "Pin the boot fast path's re-stamp by making boot state observable to a test"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5718
 claim: "2026-07-31T16:15:05Z"
 assignee: "pin-boot-fast-path-restamp-with-observable-boot-state"
 blocked-by: null
