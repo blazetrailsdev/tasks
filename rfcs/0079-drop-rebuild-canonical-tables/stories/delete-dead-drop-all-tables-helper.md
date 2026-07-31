@@ -1,7 +1,7 @@
 ---
 title: "Delete dropAllTables — no callers remain outside its own test"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-07-31
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps: []
