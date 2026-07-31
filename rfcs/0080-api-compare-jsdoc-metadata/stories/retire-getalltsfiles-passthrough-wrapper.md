@@ -1,6 +1,6 @@
 ---
 title: "Retire the getAllTsFiles pass-through in extract-ts-api"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
