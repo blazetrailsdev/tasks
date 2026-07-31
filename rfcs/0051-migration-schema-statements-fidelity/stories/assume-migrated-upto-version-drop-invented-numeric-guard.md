@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented numeric-version guard from assumeMigratedUptoVersion"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5768
 claim: "2026-07-31T23:00:40Z"
 assignee: "assume-migrated-upto-version-drop-invented-numeric-guard"
 blocked-by: null
