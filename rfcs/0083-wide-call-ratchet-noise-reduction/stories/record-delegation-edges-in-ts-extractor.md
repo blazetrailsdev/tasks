@@ -1,6 +1,6 @@
 ---
 title: "Record delegation edges (accessor forwarding) in extract-ts-api"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T18:11:58Z"
+assignee: "record-delegation-edges-in-ts-extractor"
 blocked-by: null
 closed-reason: null
 ---
