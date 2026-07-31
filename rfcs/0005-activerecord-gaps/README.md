@@ -1,9 +1,9 @@
 ---
 rfc: "0005-activerecord-gaps"
 title: "ActiveRecord parity gaps — associations, connection-pool, relation"
-status: active
+status: closed
 created: 2026-05-29
-updated: 2026-07-27
+updated: 2026-07-31
 owner: "@deanmarano"
 packages:
   - activerecord
