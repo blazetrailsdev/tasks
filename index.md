@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-pg-cancel-query-rails-convergence](rfcs/0000-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @your-handle | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -89,3 +88,4 @@
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
 | [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | active | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | draft | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
+| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @your-handle | activerecord |
