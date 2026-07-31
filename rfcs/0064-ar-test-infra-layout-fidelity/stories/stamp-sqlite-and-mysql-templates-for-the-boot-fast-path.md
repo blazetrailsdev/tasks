@@ -1,6 +1,6 @@
 ---
 title: "Stamp the sqlite and MySQL templates so their workers take the boot fast path"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5706
 claim: "2026-07-31T02:45:05Z"
 assignee: "stamp-sqlite-and-mysql-templates-for-the-boot-fast-path"
 blocked-by: null
