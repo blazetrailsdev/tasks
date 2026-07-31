@@ -1,6 +1,6 @@
 ---
 title: "measure-global-reset-sweep-before-removal"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5707
 claim: "2026-07-31T02:00:04Z"
 assignee: "measure-global-reset-sweep-before-removal"
 blocked-by: null
