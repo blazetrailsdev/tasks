@@ -4,7 +4,8 @@ status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - base-mixin-wiring-order-independent-module-init
 deps-rfc: []
 est-loc: 40
 priority: null
