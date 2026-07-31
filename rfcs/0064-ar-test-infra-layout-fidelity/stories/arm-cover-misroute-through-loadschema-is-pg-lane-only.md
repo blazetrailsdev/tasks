@@ -1,6 +1,6 @@
 ---
 title: "arm-cover misroute through loadSchema is invisible to the unit lane"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
