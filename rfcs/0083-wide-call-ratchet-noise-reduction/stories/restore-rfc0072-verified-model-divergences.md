@@ -1,6 +1,6 @@
 ---
 title: "restore-rfc0072-verified-model-divergences"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T18:26:54Z"
+assignee: "restore-rfc0072-verified-model-divergences"
 blocked-by: null
 closed-reason: null
 ---
