@@ -1,6 +1,6 @@
 ---
 title: "Make destroyAssociationAsyncJob's accessor reachable and give it Rails' default"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
