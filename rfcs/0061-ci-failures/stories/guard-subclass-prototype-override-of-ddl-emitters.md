@@ -1,6 +1,6 @@
 ---
 title: "Close or record the arm-probe guard's subclass-prototype-override gap"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
