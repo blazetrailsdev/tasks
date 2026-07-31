@@ -1,6 +1,6 @@
 ---
 title: "Widen the arm-probe guard and lint rule past createTable to every DDL emitter a cover can stub"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5702
 claim: "2026-07-31T02:09:04Z"
 assignee: "widen-arm-probe-guard-beyond-createtable"
 blocked-by: null
