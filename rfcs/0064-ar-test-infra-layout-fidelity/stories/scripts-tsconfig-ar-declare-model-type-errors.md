@@ -1,6 +1,6 @@
 ---
 title: "scripts/tsconfig program: 284 AR declare-model / Arel type errors"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["scripts-tsconfig-program-has-384-type-errors"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5741
 claim: "2026-07-31T18:44:56Z"
 assignee: "scripts-tsconfig-ar-declare-model-type-errors"
 blocked-by: null
