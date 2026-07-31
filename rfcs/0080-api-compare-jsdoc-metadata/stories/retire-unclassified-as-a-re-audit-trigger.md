@@ -1,6 +1,6 @@
 ---
 title: "Re-audit cadence still names the now-gated unclassified count as a trigger"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
