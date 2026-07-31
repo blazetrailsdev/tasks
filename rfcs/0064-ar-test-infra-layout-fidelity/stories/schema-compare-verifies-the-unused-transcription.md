@@ -1,6 +1,6 @@
 ---
 title: "schema:compare verifies TEST_SCHEMA, not the registry that lays the tables"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5704
 claim: "2026-07-31T02:27:03Z"
 assignee: "schema-compare-verifies-the-unused-transcription"
 blocked-by: null
