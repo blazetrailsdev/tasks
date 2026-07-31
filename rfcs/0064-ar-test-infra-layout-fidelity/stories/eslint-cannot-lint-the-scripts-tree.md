@@ -1,6 +1,6 @@
 ---
 title: "scripts/ is globally ignored by ESLint so no lint rule reaches it"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5700
 claim: "2026-07-31T01:33:04Z"
 assignee: "eslint-cannot-lint-the-scripts-tree"
 blocked-by: null
