@@ -1,6 +1,6 @@
 ---
 title: "ci aggregate skip arms exit under set -e before printing the diagnostic"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
