@@ -1,6 +1,6 @@
 ---
 title: "Lay the arunit2 + adapter-specific schema once per slot DB, not once per test file"
-status: draft
+status: ready
 updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
