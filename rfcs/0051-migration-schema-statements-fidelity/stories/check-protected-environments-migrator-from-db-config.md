@@ -1,6 +1,6 @@
 ---
 title: "Build checkProtectedEnvironments' migrator from its dbConfig and compare against currentEnvironment"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T23:40:41Z"
+assignee: "check-protected-environments-migrator-from-db-config"
 blocked-by: null
 closed-reason: null
 ---
