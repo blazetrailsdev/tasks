@@ -1,6 +1,6 @@
 ---
 title: "Pin the boot fast path's re-stamp by making boot state observable to a test"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
