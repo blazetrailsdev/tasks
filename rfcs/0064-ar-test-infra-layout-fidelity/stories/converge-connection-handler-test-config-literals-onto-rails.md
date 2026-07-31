@@ -1,6 +1,6 @@
 ---
 title: "ConnectionHandlerTest config-only database literals are trails inventions"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5715
 claim: "2026-07-31T15:48:03Z"
 assignee: "converge-connection-handler-test-config-literals-onto-rails"
 blocked-by: null
