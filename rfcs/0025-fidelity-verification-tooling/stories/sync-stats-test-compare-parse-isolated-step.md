@@ -1,6 +1,6 @@
 ---
 title: "sync-stats: parse test_compare stats from the isolated step log"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
