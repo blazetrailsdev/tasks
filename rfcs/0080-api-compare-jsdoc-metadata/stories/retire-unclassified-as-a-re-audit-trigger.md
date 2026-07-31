@@ -1,6 +1,6 @@
 ---
 title: "Re-audit cadence still names the now-gated unclassified count as a trigger"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T17:09:04Z"
+assignee: "retire-unclassified-as-a-re-audit-trigger"
 blocked-by: null
 closed-reason: null
 ---
