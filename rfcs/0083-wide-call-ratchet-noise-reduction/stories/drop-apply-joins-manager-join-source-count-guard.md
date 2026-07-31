@@ -1,6 +1,6 @@
 ---
 title: "Drop the trails-only manager.joinSourceCount routing guard from _applyJoinsToManager"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T20:45:31Z"
+assignee: "drop-apply-joins-manager-join-source-count-guard"
 blocked-by: null
 closed-reason: null
 ---
