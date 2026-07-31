@@ -1,7 +1,7 @@
 ---
 title: "courses-professors-references-should-carry-indexes"
-status: in-progress
-updated: 2026-07-30
+status: done
+updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
