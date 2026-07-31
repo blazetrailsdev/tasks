@@ -1,7 +1,7 @@
 ---
 title: "Make destroyAssociationAsyncJob's accessor reachable and give it Rails' default"
-status: blocked
-updated: 2026-07-28
+status: ready
+updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-28T14:30:25Z"
-assignee: "converge-destroy-association-async-job-accessor"
-blocked-by: "Blocked on PR #5503 (converge-ar-model-resolution-onto-constantize), still open as of 2026-07-28. The story targets the constantize resolution branch in Core.destroyAssociationAsyncJob that only exists in #5503's diff — main still has the plain get/set accessor. #5503 also rewrites associations/association.ts, one of the two call sites this story must change. Landing this now would either duplicate/conflict with the sibling PR or require stacking. Re-ready after #5503 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
