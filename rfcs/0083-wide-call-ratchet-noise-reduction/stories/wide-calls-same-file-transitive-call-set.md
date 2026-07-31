@@ -1,6 +1,6 @@
 ---
 title: "Make the TS call-set a same-file transitive closure (helper extraction)"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
