@@ -1,13 +1,13 @@
 ---
 title: "Regenerate the wide artifact inside api:calls:wide"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: null
+pr: 5729
 claim: "2026-07-31T18:12:11Z"
 assignee: "wide-ratchet-regenerate-artifact-in-gate"
 blocked-by: null
