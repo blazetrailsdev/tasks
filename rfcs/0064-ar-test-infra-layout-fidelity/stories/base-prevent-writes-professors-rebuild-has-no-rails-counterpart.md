@@ -1,6 +1,6 @@
 ---
 title: "base-prevent-writes' inline professors rebuild has no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
