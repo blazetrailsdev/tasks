@@ -1,6 +1,6 @@
 ---
 title: "Route calculations' eager paths through applyJoinDependency instead of inline JD construction"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 5756
 claim: "2026-07-31T20:55:31Z"
 assignee: "route-calculations-eager-paths-through-apply-join-dependency"
 blocked-by: null
