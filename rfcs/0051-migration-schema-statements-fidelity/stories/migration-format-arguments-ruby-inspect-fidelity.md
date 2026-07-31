@@ -1,6 +1,6 @@
 ---
 title: "Converge Migration#formatArguments on Ruby's format_arguments inspect semantics"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5772
 claim: "2026-07-31T23:50:40Z"
 assignee: "migration-format-arguments-ruby-inspect-fidelity"
 blocked-by: null
