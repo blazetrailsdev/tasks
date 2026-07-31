@@ -1,6 +1,6 @@
 ---
 title: "Guard the ESLint and shell control-byte sets against drift"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
