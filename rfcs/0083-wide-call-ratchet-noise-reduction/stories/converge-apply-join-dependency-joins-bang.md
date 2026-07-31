@@ -1,6 +1,6 @@
 ---
 title: "converge-apply-join-dependency-joins-bang"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T19:53:11Z"
+assignee: "converge-apply-join-dependency-joins-bang"
 blocked-by: null
 closed-reason: null
 ---
