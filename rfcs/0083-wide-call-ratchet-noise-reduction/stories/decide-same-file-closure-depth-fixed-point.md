@@ -21,17 +21,17 @@ Measured while shipping `evaluate-loose-any-method-wide-resolution` (PR #5738)
 by env-overriding `SAME_FILE_CLOSURE_DEPTH` (`compare.ts:353`) and regenerating
 the wide artifact at each value:
 
-| depth    | rows |    Δ |
-| -------- | ---: | ---: |
-| 0        | 3693 |    — |
-| 1        | 3332 | −361 |
-| 2        | 3276 |  −56 |
-| 3 (今日) | 3251 |  −25 |
-| 4        | 3243 |   −8 |
-| 5        | 3236 |   −7 |
-| 6        | 3236 |    0 |
-| 8        | 3230 |   −6 |
-| 12, 40   | 3230 |    0 |
+| depth     | rows |    Δ |
+| --------- | ---: | ---: |
+| 0         | 3693 |    — |
+| 1         | 3332 | −361 |
+| 2         | 3276 |  −56 |
+| 3 (today) | 3251 |  −25 |
+| 4         | 3243 |   −8 |
+| 5         | 3236 |   −7 |
+| 6         | 3236 |    0 |
+| 8         | 3230 |   −6 |
+| 12, 40    | 3230 |    0 |
 
 Depth 8 is the fixed point: nothing above it changes the artifact. The closure
 saturates on the same schedule — mean effective call-set per body 2.35 (depth 0)
