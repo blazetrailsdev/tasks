@@ -1,6 +1,6 @@
 ---
 title: "Set the exclusive-database flag for every stamped slot, not just slot 2 and up"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T15:12:03Z"
+assignee: "set-exclusive-db-flag-for-every-stamped-slot"
 blocked-by: null
 closed-reason: null
 ---
