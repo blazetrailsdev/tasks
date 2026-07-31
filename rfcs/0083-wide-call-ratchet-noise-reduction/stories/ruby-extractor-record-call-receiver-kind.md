@@ -1,13 +1,13 @@
 ---
 title: "Suppress local-var/literal receivers in walk_for_calls"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 5726
 claim: "2026-07-31T17:44:32Z"
 assignee: "ruby-extractor-record-call-receiver-kind"
 blocked-by: null
