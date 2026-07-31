@@ -1,6 +1,6 @@
 ---
 title: "Close or record the arm-probe guard's subclass-prototype-override gap"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T14:54:06Z"
+assignee: "guard-subclass-prototype-override-of-ddl-emitters"
 blocked-by: null
 closed-reason: null
 ---
