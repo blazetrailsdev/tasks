@@ -29,9 +29,10 @@ pnpm tsx scripts/api-compare/audit-cross-file-calls.ts --loose-sample  # one JSO
 ```
 
 Each `--loose-sample` line carries the paired `tsFile` / `tsName`, the missing
-`call`, the file the loose rule resolved it in (`resolvedIn`), the edge kind
-that reached that file (`include` or `delegation`), and the names of the methods
-there that actually make the call (`resolvingMethods`).
+`call`, and **every** resolution the loose rule admits — the file, the edge kind
+that reached it (`include` or `delegation`), and the names of the methods there
+that actually make the call. Reporting all of them, rather than a first match,
+keeps the classification independent of traversal order.
 
 ## Measured, on the 2026-07-31 tree
 
@@ -49,51 +50,56 @@ The delegation edge buys **0 rows under same-name resolution** and **+206 under
 the loose rule** — the story's +285 on the older, larger artifact. The entire
 gain sits behind the relaxation, not behind the new edge.
 
-Of the 264 loose rows whose resolving file is reached through a delegation edge:
+Properties of the 458 loose rows, and of the 206 of them that no include edge
+reaches (the population the delegation edge adds):
 
-| Property                                                       |  Rows |
-| -------------------------------------------------------------- | ----: |
-| resolving method set contains the paired method's own name     | **0** |
-| resolves into the paired file itself (`resolvedIn === tsFile`) |    94 |
-| resolves into a different file                                 |   170 |
-| resolves across adapter families (pg ↔ mysql ↔ sqlite)         |    10 |
-| distinct missing calls covered                                 |   101 |
-| mean number of unrelated methods credited per row              |   3.5 |
+| Property                                                      | All 458 | Delegation-only 206 |
+| ------------------------------------------------------------- | ------: | ------------------: |
+| some resolver carries the paired method's own name            |   **0** |               **0** |
+| resolvable only inside the paired file itself                 |     117 |                  94 |
+| some resolution crosses adapter families (pg / mysql/ sqlite) |      51 |                   0 |
+| distinct missing calls covered                                |     151 |                  89 |
+| mean methods credited per row                                 |     8.2 |                 5.0 |
 
 ## Classification of the sample
 
-A deterministic every-9th-row sample (31 of 264) was read in full. **31 of 31
-are unrelated-method credits**; 0 are same-concern ports. Representative rows:
+A deterministic every-9th-row sample of the delegation-only population (23 of 206) was read in full. **23 of 23 are unrelated-method credits**; none is a
+same-concern port that strict resolution missed. Representative rows:
 
-| Paired method                                       | Missing call | Credited to                                                     |
-| --------------------------------------------------- | ------------ | --------------------------------------------------------------- |
-| `abstract/schema-statements.ts#checkConstraintName` | `first`      | `visitAddColumnDefinition` in `mysql/schema-creation.ts`        |
-| `postgresql-adapter.ts#translateException`          | `match?`     | `checkConstraints` in `postgresql/schema-statements-class.ts`   |
-| `postgresql-adapter.ts#createEnum`                  | `quote`      | `changeTableComment` in `postgresql/schema-statements-class.ts` |
-| `migration.ts#isReverting`                          | `connection` | `commit` in `abstract/transaction.ts`                           |
-| `relation.ts#size`                                  | `loaded?`    | `_associationCache` in `base.ts`                                |
-| `routing/mapper.ts#shallow`                         | `new`        | `newChild` in `routing/scope.ts`                                |
+| Paired method                                       | Missing call  | Credited to                                              |
+| --------------------------------------------------- | ------------- | -------------------------------------------------------- |
+| `abstract/schema-statements.ts#checkConstraintName` | `first`       | `visitAddColumnDefinition` in `mysql/schema-creation.ts` |
+| `abstract-adapter.ts#log`                           | `instrument`  | `start` in `abstract/transaction.ts`                     |
+| `postgresql-adapter.ts#resetBang`                   | `synchronize` | `commitTransaction` in `abstract/transaction.ts`         |
+| `migration.ts#parseMigrationFilename`               | `first`       | `selectOne` in `abstract-adapter.ts`                     |
+| `relation.ts#only`                                  | `slice`       | `respondToMissingFinder` in `base.ts`                    |
+| `routing/route-set.ts#eagerLoadBang`                | `routes`      | `partitionedRoutes` in `journey/router.ts`               |
 
 That the same-name overlap is exactly 0 is structural, not accidental: the loose
 rule only fires on rows the strict rule already failed, so **by construction**
 every row it adds is a call made by some other method. The question the sample
 answers is whether that other method is nevertheless the same concern — a body
 split out of the paired one. It is not: the credits are dominated by generic
-names (`first`, `size`, `map`, `new`, `values`, `connection`, `loaded?` — 101
-distinct calls across 264 rows) landing on whichever of the ~3.5 methods in a
-reachable file happens to use them.
+names (`first`, `size`, `map`, `new`, `connection`, `loaded?` — 89 distinct
+calls across 206 rows) landing on whichever of the ~5 methods in a reachable
+file happens to use them.
 
 Two subsets deserve calling out:
 
-- **10 rows cross adapter families.** `postgresql-adapter.ts` credited with a
-  call `mysql/schema-creation.ts` makes is precisely the per-adapter fidelity
+- **51 of the 458 rows resolve across adapter families**, including
+  `postgresql-adapter.ts#enableExtension` missing `internal_exec_query` credited
+  to `explain` in `mysql/database-statements.ts`, and
+  `postgresql-adapter.ts#getAdvisoryLock` credited to `internalBeginTransaction`
+  in `sqlite3/database-statements.ts`. That is precisely the per-adapter fidelity
   gap the gate exists to catch, and precisely what `cross-file-audit.md`
-  identified as unsound about the `collaborator` bucket. The delegation edge
-  does not fix that failure mode; it widens its reach.
-- **94 rows resolve into the paired file itself.** They are the same-file
-  transitive-closure case owned by `wide-calls-same-file-transitive-call-set`,
-  already shipped for the strict path. They are not evidence for widening the
-  graph rule, and counting them as such inflates the apparent benefit by 36%.
+  identified as unsound about the `collaborator` bucket. These arrive through
+  include edges rather than delegation ones — the loose rule is unsound on the
+  graph the gate already has, before delegation edges are considered at all.
+- **94 of the 206 delegation-only rows (46%) resolve nowhere but the paired file
+  itself.** They are the same-file transitive-closure case owned by
+  `wide-calls-same-file-transitive-call-set`, already shipped for the strict
+  path. They are not evidence for widening the graph rule, and counting them as
+  such inflates the apparent benefit by nearly half.
 
 ## If the relaxation is ever revisited
 
