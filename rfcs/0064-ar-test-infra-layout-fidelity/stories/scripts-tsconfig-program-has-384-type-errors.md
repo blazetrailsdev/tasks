@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - scripts-tree-has-no-typed-lint-coverage
 deps-rfc: []
 est-loc: null
 priority: null
