@@ -1,6 +1,6 @@
 ---
 title: "data-source-exists-notimplementederror-fallback"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5746
 claim: "2026-07-31T20:03:10Z"
 assignee: "data-source-exists-notimplementederror-fallback"
 blocked-by: null
