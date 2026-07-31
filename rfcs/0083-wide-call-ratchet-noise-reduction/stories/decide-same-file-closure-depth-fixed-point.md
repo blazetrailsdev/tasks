@@ -1,6 +1,6 @@
 ---
 title: "Decide whether SAME_FILE_CLOSURE_DEPTH should move from 3 to its measured fixed point (8)"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5750
 claim: "2026-07-31T20:32:53Z"
 assignee: "decide-same-file-closure-depth-fixed-point"
 blocked-by: null
