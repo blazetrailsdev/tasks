@@ -1,6 +1,6 @@
 ---
 title: "Drop the stale skipIf(inMemoryDb()) gates in connection-handling.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5697
 claim: "2026-07-31T01:24:03Z"
 assignee: "drop-stale-in-memory-gates-in-connection-handling-test"
 blocked-by: null
