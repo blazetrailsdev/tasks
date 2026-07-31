@@ -1,6 +1,6 @@
 ---
 title: "converge-apply-joins-to-manager-drop-eager-jd-param"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5748
 claim: "2026-07-31T20:13:10Z"
 assignee: "converge-apply-joins-to-manager-drop-eager-jd-param"
 blocked-by: null
