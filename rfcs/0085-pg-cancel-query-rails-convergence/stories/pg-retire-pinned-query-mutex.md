@@ -1,6 +1,6 @@
 ---
 title: "Retire _serializePinnedQuery/_maintenanceTail in favour of the lock"
-status: draft
+status: ready
 updated: 2026-07-31
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
