@@ -1,7 +1,7 @@
 ---
 title: "Converge ExecutionStrategy/DefaultStrategy onto Rails' method_missing delegator shape"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T19:20:55Z"
+assignee: "converge-execution-strategy-onto-rails-method-missing-shape"
 blocked-by: null
 closed-reason: null
 ---
