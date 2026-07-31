@@ -3,7 +3,7 @@ rfc: "0083-wide-call-ratchet-noise-reduction"
 title: "Wide call-set ratchet — noise reduction"
 status: active
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-07-31
 owner: "@your-handle"
 packages:
   - "activerecord"
@@ -16,6 +16,7 @@ clusters:
 related-rfcs:
   - "0047"
   - "0080"
+priority: 0
 ---
 
 # Wide call-set ratchet — noise reduction
