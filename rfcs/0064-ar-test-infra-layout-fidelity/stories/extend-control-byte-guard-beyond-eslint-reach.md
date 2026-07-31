@@ -1,6 +1,6 @@
 ---
 title: "Extend the raw-control-byte guard to tracked non-JS/TS sources"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5699
 claim: "2026-07-31T01:42:04Z"
 assignee: "extend-control-byte-guard-beyond-eslint-reach"
 blocked-by: null
