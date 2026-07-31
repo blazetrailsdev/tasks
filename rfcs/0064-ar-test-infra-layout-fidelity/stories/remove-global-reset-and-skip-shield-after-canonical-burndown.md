@@ -52,12 +52,15 @@ is retiring.
   story to the survivors rather than partially removing the shield.
 - No test-name or transactional-fixtures semantic changes.
 
-## Measurement (2026-07-30, `measure-global-reset-sweep-before-removal`)
+## Measurement (2026-07-31, `measure-global-reset-sweep-before-removal`)
 
-`resetTestTables` was instrumented to report every table it drops in a
-_between-test_ sweep (boot sweeps excluded — `test-setup-dy.ts` runs one of its
-own between the canonical load and the adapter-specific arm), and the full AR
-suite was run on all three lanes with the report on.
+`resetTestTables` was instrumented to report every table it drops, and the full
+AR suite was run on all three lanes with the report on. Only the global
+between-test reset is measured: `resetTestAdapterState` opts in with
+`{ measure: true }`, so the boot reset in `test-setup-dy.ts` (which drops boot
+bookkeeping — `defaults`, on a worker recycled onto an already-used database)
+and `resetTestTables`' own unit tests (which drop tables they created a line
+earlier) are excluded by construction.
 
 The swept set is the same on every lane:
 
