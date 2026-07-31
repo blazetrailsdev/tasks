@@ -1,6 +1,6 @@
 ---
 title: "Align the cross-file audit script with the shipped per-entity resolution"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T22:20:43Z"
+assignee: "align-cross-file-audit-with-shipped-resolution"
 blocked-by: null
 closed-reason: null
 ---
