@@ -1,6 +1,6 @@
 ---
 title: "Port Migration#method_missing's say_with_time wrapper and proper_table_name rewriting"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
