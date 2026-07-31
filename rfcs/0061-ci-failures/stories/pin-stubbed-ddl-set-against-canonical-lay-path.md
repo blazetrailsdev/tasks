@@ -1,6 +1,6 @@
 ---
 title: "Fail when the canonical lay path touches an adapter member outside STUBBED_DDL_METHODS"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
