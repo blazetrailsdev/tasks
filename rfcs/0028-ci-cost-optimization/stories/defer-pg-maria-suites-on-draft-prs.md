@@ -1,6 +1,6 @@
 ---
 title: "defer-pg-maria-suites-on-draft-prs"
-status: ready
+status: done
 updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5749
 claim: null
 assignee: null
 blocked-by: null
