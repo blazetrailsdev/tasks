@@ -1,6 +1,6 @@
 ---
 title: "Widen the arm-probe guard and lint rule past createTable to every DDL emitter a cover can stub"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
