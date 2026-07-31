@@ -1,6 +1,6 @@
 ---
 title: "remove-global-reset-and-skip-shield-after-canonical-burndown"
-status: blocked
+status: ready
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-31T00:30:08Z"
-assignee: "remove-global-reset-and-skip-shield-after-canonical-burndown"
-blocked-by: "Precondition unmet: 164 distinct non-canonical tables are still created by createTable() across ~90 AR test files (e.g. testings, horses, octopi, rockets, astronauts, postgresql_*, bk1..bk7, foo/foos, delete_me, test_models). resetTestTables still has real work to do, so the global beforeEach reset and skip-global-reset.ts shield cannot be removed. Acceptance criteria explicitly forbid partial removal. Re-open once the RFC 0059 / defineSchema-north-star canonical burndown lands and the non-canonical createTable population is drained (or each such file drops its own tables in teardown the way Rails does)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
