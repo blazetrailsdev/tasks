@@ -1,0 +1,35 @@
+---
+title: "blocks-conditionals-rescue-images"
+status: draft
+updated: 2026-07-31
+rfc: "0086-prism-codegen-productionization"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 250
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Toward 100% node coverage. Control/blocks bucket (~15 sites): LambdaNode →
+arrow function (same shape as blockToArrow in
+scripts/prism-codegen/handlers/expressions.ts); expression-position
+IfNode/UnlessNode with multi-statement branches → IIFE arrow with block
+body (currently requires single-expression branches, control.ts); chained
+`rescue A; rescue B` → single catch with caseEq dispatch (control.ts
+BeginNode declines on rescue.subsequent); MultiWriteNode with a TRAILING
+splat rest → `[a, ...b] = x` (valid JS; only mid-splat is unrepresentable
+and stays declined).
+
+## Acceptance criteria
+
+- Lambda, multi-statement conditional expressions, chained rescues, and
+  trailing-splat destructuring emit; their census markers reach zero.
+- Mid-splat multi-assign still declines (documented).
+- 0 parse errors invariant holds; tests per construct.
