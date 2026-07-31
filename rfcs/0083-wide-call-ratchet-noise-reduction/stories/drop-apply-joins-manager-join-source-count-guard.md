@@ -1,6 +1,6 @@
 ---
 title: "Drop the trails-only manager.joinSourceCount routing guard from _applyJoinsToManager"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
