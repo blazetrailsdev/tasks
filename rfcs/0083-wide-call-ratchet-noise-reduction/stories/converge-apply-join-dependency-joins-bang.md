@@ -4,7 +4,8 @@ status: ready
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
-deps: []
+deps:
+  - converge-merged-join-deps-into-joins-values
 deps-rfc: []
 est-loc: null
 priority: null
