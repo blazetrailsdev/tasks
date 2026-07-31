@@ -1,6 +1,6 @@
 ---
 title: "Stop truncating every canonical table before every test file"
-status: draft
+status: ready
 updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
