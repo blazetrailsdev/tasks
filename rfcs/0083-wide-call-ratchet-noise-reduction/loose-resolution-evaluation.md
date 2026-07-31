@@ -34,6 +34,12 @@ that reached it (`include` or `delegation`), and the names of the methods there
 that actually make the call. Reporting all of them, rather than a first match,
 keeps the classification independent of traversal order.
 
+The summary emits every headline figure below as a field:
+`anyMethodInIncludeGraph`, `anyMethodInDelegationGraph`,
+`sameNameInIncludeGraph`, `sameNameInDelegationGraph`, `anyMethodByEdgeKind`,
+`anyMethodResolvedOnlyInOwnFile`, `anyMethodCrossingAdapterFamilies` and
+`anyMethodWithSameNamedResolver`.
+
 ## Measured, on the 2026-07-31 tree
 
 The tree has moved since the story was written (`wide-calls-same-file-transitive-call-set`
