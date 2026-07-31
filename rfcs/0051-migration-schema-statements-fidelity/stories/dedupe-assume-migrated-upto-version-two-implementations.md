@@ -1,6 +1,6 @@
 ---
 title: "Resolve the two assumeMigratedUptoVersion implementations"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5761
 claim: "2026-07-31T21:50:42Z"
 assignee: "dedupe-assume-migrated-upto-version-two-implementations"
 blocked-by: null
