@@ -1,6 +1,6 @@
 ---
 title: "Extend the raw-control-byte guard to tracked non-JS/TS sources"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
