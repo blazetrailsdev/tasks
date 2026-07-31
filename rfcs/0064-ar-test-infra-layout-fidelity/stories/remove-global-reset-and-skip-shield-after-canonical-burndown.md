@@ -51,3 +51,35 @@ is retiring.
 - Verify the remaining bespoke-table callers first; if any survive, scope this
   story to the survivors rather than partially removing the shield.
 - No test-name or transactional-fixtures semantic changes.
+
+## Measurement (2026-07-30, `measure-global-reset-sweep-before-removal`)
+
+`resetTestTables` was instrumented to report every table it drops in a
+_between-test_ sweep (boot sweeps excluded — `test-setup-dy.ts` runs one of its
+own between the canonical load and the adapter-specific arm), and the full AR
+suite was run on all three lanes with the report on.
+
+The swept set is the same on every lane:
+
+| lane       | swept between tests    |
+| ---------- | ---------------------- |
+| sqlite3    | `ar_internal_metadata` |
+| postgresql | `ar_internal_metadata` |
+| mysql2     | `ar_internal_metadata` |
+
+No bespoke table, no view, no matview, no `schema_migrations` — nothing a test
+created survived to the next test's `beforeEach`. The 164 non-canonical
+`createTable()` calls counted in the old `blocked-by` note are all dropped by
+their own file, so counting them overstated the sweep's remaining work: the
+measurement is what the sweep actually does, and it is nothing but
+`ar_internal_metadata`.
+
+`ar_internal_metadata` is dropped every sweep because it is never boot-laid
+(`BOOKKEEPING_TABLE_NAMES` in `support/drop-all-tables.ts` excludes it from the
+snapshot), not because a test leaked it. That is the one thing removal has to
+account for: migrator tests that expect it absent must create/clear it
+themselves, the way Rails does.
+
+Instrumentation is retained off-by-default behind `AR_SWEEP_REPORT=<dir>`
+(`packages/activerecord/src/support/sweep-report.ts`) so the measurement can be
+repeated after any change.
