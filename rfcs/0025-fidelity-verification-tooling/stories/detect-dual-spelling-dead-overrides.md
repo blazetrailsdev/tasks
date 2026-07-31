@@ -1,6 +1,6 @@
 ---
 title: "Detect when both rubyMethodToTs spellings are defined (dead-override guard)"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
