@@ -1,6 +1,6 @@
 ---
 title: "sync-stats: test_compare_stats feed stale since 2026-06-21 — summary-line regex broken by nested parens"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T17:00:05Z"
+assignee: "sync-stats-test-compare-regex-stale"
 blocked-by: null
 closed-reason: null
 ---
