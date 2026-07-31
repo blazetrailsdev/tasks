@@ -1,7 +1,7 @@
 ---
 title: "remove-global-reset-and-skip-shield-after-canonical-burndown"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T00:30:08Z"
+assignee: "remove-global-reset-and-skip-shield-after-canonical-burndown"
 blocked-by: null
 closed-reason: null
 ---
