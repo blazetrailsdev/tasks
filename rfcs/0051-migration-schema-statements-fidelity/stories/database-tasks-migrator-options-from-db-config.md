@@ -1,7 +1,7 @@
 ---
 title: "Build every DatabaseTasks Migrator from its dbConfig (useMetadataTable, env)"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T21:30:42Z"
+assignee: "database-tasks-migrator-options-from-db-config"
 blocked-by: null
 closed-reason: null
 ---
