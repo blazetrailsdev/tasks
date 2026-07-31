@@ -1,6 +1,6 @@
 ---
 title: "Audit the cross-file / mixin-attribution bucket (1606 rows)"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
