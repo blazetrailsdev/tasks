@@ -1,6 +1,6 @@
 ---
 title: "scripts-tree-has-no-typed-lint-coverage"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5713
 claim: "2026-07-31T02:36:03Z"
 assignee: "scripts-tree-has-no-typed-lint-coverage"
 blocked-by: null
