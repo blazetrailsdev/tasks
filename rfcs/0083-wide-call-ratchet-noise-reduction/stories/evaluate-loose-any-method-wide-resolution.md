@@ -1,6 +1,6 @@
 ---
 title: "Evaluate relaxing wide-gate resolution to any-method-in-the-graph (+285 rows)"
-status: ready
+status: claimed
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T19:02:56Z"
+assignee: "evaluate-loose-any-method-wide-resolution"
 blocked-by: null
 closed-reason: null
 ---
