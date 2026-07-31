@@ -1,6 +1,6 @@
 ---
 title: "Route non-through collection push onto CollectionAssociation#concatRecords"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5767
 claim: "2026-07-31T22:40:40Z"
 assignee: "route-non-through-collection-push-onto-concat-records"
 blocked-by: null
