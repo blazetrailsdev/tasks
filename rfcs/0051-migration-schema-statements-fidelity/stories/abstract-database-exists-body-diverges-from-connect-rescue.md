@@ -1,6 +1,6 @@
 ---
 title: "abstract-database-exists-body-diverges-from-connect-rescue"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5757
 claim: "2026-07-31T21:10:40Z"
 assignee: "abstract-database-exists-body-diverges-from-connect-rescue"
 blocked-by: null
