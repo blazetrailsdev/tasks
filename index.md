@@ -88,4 +88,4 @@
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
 | [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | active | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | draft | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
-| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @your-handle | activerecord |
+| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @your-handle | activerecord |
