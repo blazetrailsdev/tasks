@@ -11,7 +11,7 @@ audit).
 it.** On the 2026-07-31 tree the wide artifact holds 5034 (row, call) pairs.
 Walking the recorded include/extends graph resolves **10** of them. The widest
 graph-based rule that could be written — "the candidate is called by ANY method
-on ANY class reachable through includes/extends" — reaches **247** more. The
+on ANY class reachable through includes/extends" — reaches **280** more. The
 RFC's projected `−1100 to −1600` for
 `resolve-wide-candidates-through-include-graph` is **not achievable by any
 include-graph rule**, because 73% of flagged rows sit in a TS file that declares
@@ -33,6 +33,11 @@ API_COMPARE_FORCE=1 pnpm api:compare --wide-calls # writes output/call-mismatche
 pnpm tsx scripts/api-compare/audit-cross-file-calls.ts
 ```
 
+Resolution is measured at least as generously as the gate itself: a candidate
+counts as made when the other body calls the mapped TS name **or** any
+`jsEnumerableAliases` analogue of the Ruby call (`any?` → `some`), the same
+alias path `significantMissingCalls` uses.
+
 The script reads `scripts/api-compare/output/ts-api.json` and
 `scripts/api-compare/output/call-mismatches-wide.json` only, and prints the JSON
 summary tallied below. Every figure in this report is a field of that output.
@@ -49,8 +54,8 @@ from does not correspond to the TS file it was name-matched against
 Context describes. **294 rows** (`crossFileRows`).
 
 **Reading B — resolvable elsewhere (callee side).** The omitted call IS made by
-a same-named body somewhere else in the package. **254 rows**
-(`resolvableAnywhereByName`) — 10 include-graph, 244 collaborator.
+a same-named body somewhere else in the package. **267 rows**
+(`resolvableAnywhereByName`) — 10 include-graph, 257 collaborator.
 
 The two overlap by 14. Neither is 1606. The 1606 figure was projected on the
 2026-07-30 tree under a receiver-scoping rule that has not landed; receiver
@@ -62,9 +67,9 @@ sensitive to sibling ordering.
 
 | Bucket          | Rows | Meaning                                                                            |
 | --------------- | ---: | ---------------------------------------------------------------------------------- |
-| `divergence`    | 4474 | no definition of that TS name anywhere in the package makes the call               |
+| `divergence`    | 4461 | no definition of that TS name anywhere in the package makes the call               |
 | `unported`      |  306 | the paired body is the only definition and has no call-set at all                  |
-| `collaborator`  |  244 | a same-named body elsewhere makes the call; **no** include/extends edge reaches it |
+| `collaborator`  |  257 | a same-named body elsewhere makes the call; **no** include/extends edge reaches it |
 | `include-graph` |   10 | a same-named body makes the call on a class reachable through recorded edges       |
 
 Restricted to Reading A's 294 attribution-split rows: `divergence` 275,
@@ -73,9 +78,9 @@ Restricted to Reading A's 294 attribution-split rows: `divergence` 275,
 Mapping onto the story's requested (a)/(b)/(c):
 
 - **(a) pure mixin-attribution artifact** — `include-graph` + `collaborator`,
-  **254 rows** (5.0%). Only the 10 `include-graph` rows are reachable by the
+  **267 rows** (5.3%). Only the 10 `include-graph` rows are reachable by the
   mechanism the sibling story proposes.
-- **(b) real divergence** — `divergence`, **4474 rows** (88.9%). This is an
+- **(b) real divergence** — `divergence`, **4461 rows** (88.6%). This is an
   upper bound: it still contains the receiver-idiom noise that
   `ruby-extractor-record-call-receiver-kind` removes (the Ruby extractor credits
   `xs.first` against a ported `first`), which the artifact gives no way to
@@ -88,7 +93,7 @@ Mapping onto the story's requested (a)/(b)/(c):
 
 | File                                                             | Rows |
 | ---------------------------------------------------------------- | ---: |
-| `activerecord/relation.ts`                                       |  426 |
+| `activerecord/relation.ts`                                       |  425 |
 | `activerecord/connection-adapters/postgresql-adapter.ts`         |  169 |
 | `actiondispatch/routing/mapper.ts`                               |  132 |
 | `actioncontroller/base.ts`                                       |  125 |
@@ -108,7 +113,7 @@ files.
 
 ## Why the `collaborator` bucket must NOT be resolved
 
-The 244 `collaborator` rows are what a name-only widening ("the call is made by
+The 257 `collaborator` rows are what a name-only widening ("the call is made by
 some method of this name anywhere in the package") would silence. Reading the
 top resolution edges shows what such a rule actually matches:
 
@@ -127,7 +132,7 @@ per-adapter step would go permanently invisible. This is the same imprecision
 `effectiveTsCalls` already accepts, but there it is confined to bodies
 `isDelegatingWrapper` has proved contain no logic; unconfined it is unsound.
 
-Only **22** of the 254 resolvable rows sit in a body that is delegating-wrapper
+Only **25** of the 267 resolvable rows sit in a body that is delegating-wrapper
 shaped but larger than `DELEGATION_MAX_CALLS` (`resolvableWrapperShaped`), so
 raising that threshold is not the missing lever either.
 
@@ -145,9 +150,9 @@ the name → entity lookup **within the row's own package only**.
 
 - **filename or directory proximity** — `postgresql-adapter.ts` ↔
   `postgresql/schema-statements-class.ts` share a prefix and nothing else;
-- **same-name-anywhere-in-package** — the 244-row `collaborator` bucket, which
+- **same-name-anywhere-in-package** — the 257-row `collaborator` bucket, which
   resolves MySQL against PostgreSQL and `file-store` against `memory-store`;
-- **any method on a reachable class** — name-agnostic reachability adds 247 rows
+- **any method on a reachable class** — name-agnostic reachability adds 280 rows
   whose only relation to the Rails method is that some unrelated body on a mixin
   happens to call the same name;
 - **cross-package** entity lookup;
