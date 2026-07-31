@@ -1,7 +1,7 @@
 ---
 title: "Extend the detached-JSDoc lint to scripts/, where the motivating defect lived"
-status: in-progress
-updated: 2026-07-30
+status: done
+updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
