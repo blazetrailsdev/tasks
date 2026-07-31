@@ -1,6 +1,6 @@
 ---
 title: "Port Migration#method_missing's say_with_time wrapper and proper_table_name rewriting"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5769
 claim: "2026-07-31T23:10:41Z"
 assignee: "migration-method-missing-say-with-time-and-proper-table-name"
 blocked-by: null
