@@ -1,6 +1,6 @@
 ---
 title: "serialize-load-schema-helper-seam-ownership"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
