@@ -1,7 +1,7 @@
 ---
 title: "Generate the canonical schema file once per run, not once per test file"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
