@@ -1,7 +1,7 @@
 ---
 title: "Un-gate the cross-pool suites now that arunit2 is provisioned on every lane"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T16:42:03Z"
+assignee: "ungate-multiple-db-suites-for-pg-mysql"
 blocked-by: null
 closed-reason: null
 ---
