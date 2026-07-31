@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks lifecycle tests use invented sqlite3 configs where Rails uses the abstract adapter"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5716
 claim: "2026-07-31T15:57:05Z"
 assignee: "converge-database-tasks-lifecycle-configs-onto-abstract-adapter"
 blocked-by: null
