@@ -56,3 +56,15 @@ population.
   prose `@tag` inside a reason has bitten this tag family before (RFC 0080
   stories). Cover it with a test.
 - Depends on: ruby-extractor-record-call-receiver-kind.
+
+## Size waiver (PR #5754)
+
+The implementing PR is 790+/132- against the 500-LOC ceiling, requested
+explicitly rather than by oversight. ~105 additions and ~100 deletions are the
+verbatim move of `parseJsdoc` / `TAG` / `DEFAULT_REASON` out of `build.ts` into
+the new shared `missing-rails-call-tags.ts`, and ~430 of the remainder is tests
+across five files. The production change is ~250 LOC and is not separable: the
+extractor field, the `checkCalls` suppression, the stale-tag gate and the
+`api:build` round-trip are one contract — ship any subset and either the tag
+stays inert or `api:build` drops baseline rows nothing honours, i.e. `main`
+carries a half-wired gate between PRs.
