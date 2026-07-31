@@ -1,6 +1,6 @@
 ---
 title: "Drop the stale skipIf(inMemoryDb()) gates in connection-handling.test.ts"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
