@@ -1,7 +1,7 @@
 ---
 title: "Resolve the interface declaration names Rails also uses (the moved population the kind exemption deliberately keeps scored)"
-status: in-progress
-updated: 2026-07-30
+status: done
+updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
