@@ -1,6 +1,6 @@
 ---
 title: "scripts/ is globally ignored by ESLint so no lint rule reaches it"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
