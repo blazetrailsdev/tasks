@@ -1,6 +1,6 @@
 ---
 title: "Evaluate relaxing wide-gate resolution to any-method-in-the-graph (+285 rows)"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
