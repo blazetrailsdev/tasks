@@ -1,6 +1,6 @@
 ---
 title: "serialize-load-schema-helper-seam-ownership"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5696
 claim: "2026-07-31T01:06:04Z"
 assignee: "serialize-load-schema-helper-seam-ownership"
 blocked-by: null
