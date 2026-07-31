@@ -1,6 +1,6 @@
 ---
 title: "Delete the bespoke-tables-inventory script now the ESLint rule covers it"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
