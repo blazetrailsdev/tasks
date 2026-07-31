@@ -1,7 +1,7 @@
 ---
 title: "Resolve wide-call candidates through the recorded include/extends graph"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: ["audit-wide-cross-file-mixin-attribution"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T20:44:45Z"
+assignee: "resolve-wide-candidates-through-include-graph"
 blocked-by: null
 closed-reason: null
 ---
