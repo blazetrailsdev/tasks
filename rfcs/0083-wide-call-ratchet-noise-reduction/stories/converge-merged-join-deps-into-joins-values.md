@@ -1,6 +1,6 @@
 ---
 title: "converge-merged-join-deps-into-joins-values"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5737
 claim: "2026-07-31T18:38:55Z"
 assignee: "converge-merged-join-deps-into-joins-values"
 blocked-by: null
