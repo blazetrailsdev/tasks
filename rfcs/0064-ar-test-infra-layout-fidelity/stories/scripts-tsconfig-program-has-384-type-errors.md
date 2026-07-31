@@ -1,6 +1,6 @@
 ---
 title: "scripts-tsconfig-program-has-384-type-errors"
-status: claimed
+status: blocked
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-07-31T16:33:04Z"
 assignee: "scripts-tsconfig-program-has-384-type-errors"
-blocked-by: null
+blocked-by: "Depends on scripts-tree-has-no-typed-lint-coverage (PR #5713, open/unmerged): scripts/tsconfig.json does not exist on main, so there is no program to typecheck and no way to work this without stacking on #5713. Unblock once #5713 merges."
 closed-reason: null
 ---
 
