@@ -1,7 +1,7 @@
 ---
 title: "activesupport-message-metadata-shared-suite"
-status: blocked
-updated: 2026-07-30
+status: ready
+updated: 2026-07-31
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps:
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-07-30T13:08:21Z"
-assignee: "activesupport-message-metadata-shared-suite"
-blocked-by: "Depends on activesupport-messages-metadata-port (PR #5632, open/unmerged). Every acceptance criterion targets files that PR creates: packages/activesupport/src/messages/metadata.ts and message-metadata-tests.ts (makeCodec/eachScenario/usingMessageSerializerForMetadata helpers), plus MessageEncryptor's purpose/expires option surface. origin/main has no messages/metadata.ts at all and message-verifier-metadata.test.ts still carries only the pre-port bespoke cases. Building from main would mean re-porting Metadata + the Codec mixin + the encryptor options (far over the 500 LOC ceiling, duplicating a sibling's in-flight PR); branching off activesupport-messages-metadata-port-d5d7 would be a stacked PR. Unblock once #5632 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
