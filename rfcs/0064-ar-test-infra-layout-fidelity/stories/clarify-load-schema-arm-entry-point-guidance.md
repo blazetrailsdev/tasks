@@ -1,6 +1,6 @@
 ---
 title: "Make loadAdapterSpecificSchema's arm-cover carve-out unmissable"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 5695
 claim: "2026-07-31T00:57:04Z"
 assignee: "clarify-load-schema-arm-entry-point-guidance"
 blocked-by: null
