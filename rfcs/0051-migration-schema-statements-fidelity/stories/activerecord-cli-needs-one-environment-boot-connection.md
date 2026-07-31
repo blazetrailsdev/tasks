@@ -1,6 +1,6 @@
 ---
 title: "activerecord-cli has no :environment boot step; each db task hand-establishes its pool"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
