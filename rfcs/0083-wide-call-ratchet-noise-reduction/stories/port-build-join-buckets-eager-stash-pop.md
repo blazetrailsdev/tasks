@@ -44,27 +44,38 @@ final `buckets[:stashed_join] << stashed_eager_load` at `query_methods.rb:1876`.
 model) from a merged JD (built on another relation's model, which must stay in the
 stream for `select_named_joins` to stash). Until steps 1 and 2 land, trails
 expresses this structurally — by which side store the JD came from — so the method
-never reads `model` where Rails does. That is the RFC 0072 verified divergence
-recorded in
-`scripts/api-compare/call-mismatches-wide-exclude/activerecord/relation/query-methods.json`
-(`build_join_buckets` / `model`).
+never reads `model` where Rails does.
+
+This was originally recorded as a `build_join_buckets` / `model` wide-gate exclude
+entry, but PR #5728 deleted that entry as obsolete — `effectiveTsCalls` now sees
+the `model` read through the same-file helper `constructJoinDependency`
+(`relation/query-methods.ts:1741`), so the gate is satisfied even though the
+fidelity divergence remains. Do NOT re-add it. The divergence's live wide-gate
+anchor is instead the three `joins!` / `left_outer_joins!` entries re-bucketed as
+verified by PR #5742, in
+`scripts/api-compare/call-mismatches-wide-exclude/activerecord/relation.json`
+(`apply_join_dependency`) and
+`scripts/api-compare/call-mismatches-wide-exclude/activerecord/relation/merger.json`
+(`merge_joins`, `merge_outer_joins`).
 
 ## Scope
 
-Port the pop literally and retire the divergence note.
+Port the pop literally and retire the divergence notes.
 
 ## Acceptance criteria
 
 - `buildJoinBuckets` dups `joinsValues`, tests the last element for
   `instanceof JoinDependency`, and pops it into a local `stashedEagerLoad` only
-  when `baseKlass === model` — matching query_methods.rb:1847-1850.
+  when `baseKlass === model` — matching `query_methods.rb:1847-1850`.
 - `hasStashed` becomes `stashedEagerLoad || stashedLeftJoins` per
-  query*methods.rb:1858, and `stashedEagerLoad` is appended to
-  `buckets.stashed_join` last, per query_methods.rb:1876 (ordering matters: Rails
-  appends it \_after* `stashed_left_joins`).
-- The `build_join_buckets` / `model` entry is DELETED from
-  `scripts/api-compare/call-mismatches-wide-exclude/activerecord/relation/query-methods.json`
-  — the call is now genuinely made, so the wide-gate exclusion is no longer
-  warranted. Confirm with `pnpm api:compare` that the entry is not re-required.
+  `query_methods.rb:1858`, and `stashedEagerLoad` is appended to
+  `buckets.stashed_join` last, per `query_methods.rb:1876`. Ordering matters:
+  Rails appends it **after** `stashed_left_joins`.
+- The three `joins!` / `left_outer_joins!` entries named above are DELETED once
+  steps 1 and 2 have made those calls real — the calls are then genuinely made,
+  so the exclusions are no longer warranted. Confirm with
+  `pnpm api:compare --wide-calls` + `pnpm api:calls:wide` that none is
+  re-required, and ratchet `scripts/api-compare/call-mismatches-wide-unreviewed.json`
+  down if the unreviewed count drops.
 - Ported `joins` / `eagerLoad` / `merge` relation tests pass unchanged (no test
   renames).
