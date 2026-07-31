@@ -1,13 +1,12 @@
 ---
 title: "Regenerate the wide artifact inside api:calls:wide"
 status: ready
-updated: 2026-07-30
+updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 3
 pr: null
 claim: null
 assignee: null
