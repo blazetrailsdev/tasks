@@ -1,6 +1,6 @@
 ---
 title: "port-build-join-buckets-eager-stash-pop"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5765
 claim: "2026-07-31T22:30:42Z"
 assignee: "port-build-join-buckets-eager-stash-pop"
 blocked-by: null
