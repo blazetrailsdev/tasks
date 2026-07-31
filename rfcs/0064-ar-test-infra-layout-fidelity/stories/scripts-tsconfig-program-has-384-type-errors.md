@@ -19,7 +19,9 @@ closed-reason: null
 
 PR for `scripts-tree-has-no-typed-lint-coverage` added `scripts/tsconfig.json`
 (noEmit, root project references) so the ESLint project service can type-check
-`scripts/**`. The program it creates reports **384 pre-existing type errors**,
+`scripts/**`. The program it creates reports **323 pre-existing type errors** (384 when this story was first filed;
+PR #5713 then declared `tinyglobby` and pulled `vendor/*.ts` into the program,
+which cleared 61 of them — the slug's 384 is stale, the file is the count),
 deliberately deferred there: fixing them is far larger than one 500-LOC PR, and
 none of them block lint (`pnpm lint` is green — type errors are not lint
 results). Because the project is `noEmit` and is _not_ referenced from the root
@@ -39,7 +41,7 @@ Reproduce with `npx tsc -p scripts/tsconfig.json`. Breakdown by file:
   root cause as sync-stats.
 - ~35 genuinely small ones spread over `api-compare/extract-ts-api.test.ts`
   (`info.fileFunctions` possibly undefined), `test-deps/build-fixture-baseline.ts`,
-  `test-compare/{normalize-skips,extract-ts-tests,assertion-kinds}.ts`,
+  `test-compare/{extract-ts-tests,assertion-kinds}.ts`,
   `tasks/cli.test.ts`, `schema-compare/compare.test.ts`, and
   `generate-standalone-associations-exclude.ts` (`parser.parseForESLint` arity).
 
