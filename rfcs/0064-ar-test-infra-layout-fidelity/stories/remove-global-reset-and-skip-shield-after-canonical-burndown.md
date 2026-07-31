@@ -1,6 +1,6 @@
 ---
 title: "remove-global-reset-and-skip-shield-after-canonical-burndown"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
