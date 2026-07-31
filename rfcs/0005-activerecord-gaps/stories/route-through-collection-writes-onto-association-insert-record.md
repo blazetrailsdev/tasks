@@ -1,6 +1,6 @@
 ---
 title: "route-through-collection-writes-onto-association-insert-record"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0005-activerecord-gaps"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: 5751
 claim: "2026-07-31T20:16:47Z"
 assignee: "route-through-collection-writes-onto-association-insert-record"
 blocked-by: null
