@@ -1,7 +1,7 @@
 ---
 title: "Make @missingRailsCall load-bearing so permanent deviations leave the baseline"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: ["ruby-extractor-record-call-receiver-kind"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 320
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T20:45:00Z"
+assignee: "missing-rails-call-tag-suppresses-wide-flag"
 blocked-by: null
 closed-reason: null
 ---
