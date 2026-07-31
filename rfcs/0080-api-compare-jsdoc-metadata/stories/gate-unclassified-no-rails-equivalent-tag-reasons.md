@@ -1,6 +1,6 @@
 ---
 title: "Gate unclassified @noRailsEquivalent reasons once the population is classified"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5712
 claim: "2026-07-31T15:30:07Z"
 assignee: "gate-unclassified-no-rails-equivalent-tag-reasons"
 blocked-by: null
