@@ -1,6 +1,6 @@
 ---
 title: "ConnectionHandlerTest config-only database literals are trails inventions"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
