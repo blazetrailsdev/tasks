@@ -1,6 +1,6 @@
 ---
 title: "Decide whether SAME_FILE_CLOSURE_DEPTH should move from 3 to its measured fixed point (8)"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
