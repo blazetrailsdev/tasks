@@ -1,6 +1,6 @@
 ---
 title: "converge-migrationcontext-migrate-dispatch-onto-up-down"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5745
 claim: "2026-07-31T19:43:09Z"
 assignee: "converge-migrationcontext-migrate-dispatch-onto-up-down"
 blocked-by: null
