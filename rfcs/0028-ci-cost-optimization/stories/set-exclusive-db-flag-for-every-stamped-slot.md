@@ -1,6 +1,6 @@
 ---
 title: "Set the exclusive-database flag for every stamped slot, not just slot 2 and up"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
