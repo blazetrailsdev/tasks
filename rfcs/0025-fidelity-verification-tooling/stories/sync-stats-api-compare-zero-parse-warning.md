@@ -1,6 +1,6 @@
 ---
 title: "sync-stats: warn when an api_compare step log parses zero packages"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
