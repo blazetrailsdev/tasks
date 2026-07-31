@@ -190,3 +190,66 @@ soundly, or the already-scheduled receiver-scoping and tag-suppression stories.
   `include` convention puts mixin bodies in file-level functions, not class
   members; a resolution rule that walks only `classes`/`modules` misses them
   entirely (it cost this audit 303 misclassified rows before the fix).
+
+## Update 2026-07-31 — re-measured against the shipped resolution
+
+Every figure above this section was produced by a **file-level,
+ambiguity-blind** walk: the audit script keyed definitions by `file` and
+followed every entity an `includes` / `extends` name resolved to. Implementing
+the recommended rule literally in the gate (PR #5755) showed that reading
+over-resolves in two ways the audit itself had ruled out:
+
+- **A barrel unions the package.** `cache/index.ts` holds a re-exported entry
+  for every store, so crediting a whole reached FILE let
+  `MemoryStore#deleteMatched` discharge a call missing from
+  `FileStore#deleteMatched` — the sibling-implementation cross-credit this
+  audit lists under "must NOT resolve through".
+- **Edge names are ambiguous.** `DatabaseStatements` names a module under
+  `abstract/`, `mysql/`, `postgresql/` and `sqlite3/`; following every
+  candidate credited `sqlite3-adapter.ts#explain` with calls made in
+  `mysql/database-statements.ts`.
+
+The shipped gate therefore resolves **per entity** and **drops an edge name
+more than one entity answers to**, and the measured baseline delta was **−2**,
+not the −28 projected above. `audit-cross-file-calls.ts` now reuses
+`scripts/api-compare/include-graph.ts` — the gate's own walk — so the audit and
+the gate can no longer disagree. Treat the earlier tallies the same way this
+audit treats its own 306 → 1 `unported` fix: a tooling artifact, not a finding.
+
+### Re-measured tallies
+
+Measured on the 2026-07-31 tree with both rules run against the **same**
+artifact, which is now the post-#5754/#5755 wide artifact of **3243** (row,
+call) pairs — smaller than the 5034 above because the gate now discharges what
+it resolves and `@missingRailsCall` suppresses the wide flag.
+
+| Figure                        | File-level walk | Shipped per-entity walk |
+| ----------------------------- | --------------: | ----------------------: |
+| `include-graph`               |              16 |                       0 |
+| `collaborator`                |             191 |                     207 |
+| `divergence`                  |            3035 |                    3035 |
+| `unported`                    |               1 |                       1 |
+| `anyMethodInIncludeGraph`     |             250 |                     159 |
+| `anyMethodInDelegationGraph`  |             462 |                     230 |
+| `sameNameInIncludeGraph`      |              16 |                       0 |
+| `anyMethodCrossingAdapterFam` |              51 |                       0 |
+
+Restricted to Reading A (attribution split, 194 rows on this artifact):
+`divergence` 184, `collaborator` 10, `include-graph` 0.
+
+Two readings of the `include-graph` 0:
+
+- It is **not** evidence that the include graph resolves nothing. The rows it
+  would resolve are exactly the ones the shipped gate already discharged, so
+  they are absent from the artifact the audit reads.
+- The 16 rows the file-level walk still calls `include-graph` are the
+  cross-credits the gate refuses — they move to `collaborator`, which is the
+  bucket this audit says must NOT be resolved. `anyMethodCrossingAdapterFam`
+  falling 51 → 0 is the same fact: no surviving resolution crosses an adapter
+  family.
+
+`anyMethodResolvedOnlyInOwnFile` (122 under the old walk) is gone from the
+output: the shipped walk never returns an entity declared in the row's own
+file, so the figure is 0 by construction and reporting it would be noise.
+
+The reproduction steps are unchanged.
