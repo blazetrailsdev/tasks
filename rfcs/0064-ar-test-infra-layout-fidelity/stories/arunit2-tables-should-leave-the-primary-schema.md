@@ -1,7 +1,7 @@
 ---
 title: "Keep the arunit2-only tables out of the primary canonical schema"
-status: in-progress
-updated: 2026-07-30
+status: done
+updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps:
