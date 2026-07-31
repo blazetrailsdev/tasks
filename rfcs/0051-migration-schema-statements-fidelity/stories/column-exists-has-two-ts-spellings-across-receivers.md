@@ -1,7 +1,7 @@
 ---
 title: "column_exists? has two different TS spellings depending on receiver"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-07-31
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-07-31T18:56:56Z"
+assignee: "column-exists-has-two-ts-spellings-across-receivers"
 blocked-by: null
 closed-reason: null
 ---
