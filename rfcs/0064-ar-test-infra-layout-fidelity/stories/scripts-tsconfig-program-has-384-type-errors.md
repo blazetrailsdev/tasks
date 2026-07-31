@@ -1,6 +1,6 @@
 ---
 title: "scripts-tsconfig-program-has-384-type-errors"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5723
 claim: "2026-07-31T16:56:52Z"
 assignee: "scripts-tsconfig-program-has-384-type-errors"
 blocked-by: null
