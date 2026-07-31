@@ -4,7 +4,8 @@ status: draft
 updated: 2026-07-31
 rfc: "0086-prism-codegen-productionization"
 cluster: null
-deps: []
+deps:
+  - scorer-getter-and-arrow-resolution
 deps-rfc: []
 est-loc: 200
 priority: null
