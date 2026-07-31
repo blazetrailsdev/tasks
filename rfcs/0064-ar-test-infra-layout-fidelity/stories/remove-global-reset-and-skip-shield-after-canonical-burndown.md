@@ -64,11 +64,14 @@ earlier) are excluded by construction.
 
 The swept set is the same on every lane:
 
-| lane       | swept between tests    |
-| ---------- | ---------------------- |
-| sqlite3    | `ar_internal_metadata` |
-| postgresql | `ar_internal_metadata` |
-| mysql2     | `ar_internal_metadata` |
+Lanes are named by `ARCONN`; the report files are keyed by
+`adapter.adapterName`, which is the shorter name.
+
+| lane (`ARCONN`) | report files            | swept between tests    |
+| --------------- | ----------------------- | ---------------------- |
+| `sqlite3`       | `sweep-sqlite-*.json`   | `ar_internal_metadata` |
+| `postgresql`    | `sweep-postgres-*.json` | `ar_internal_metadata` |
+| `mysql2`        | `sweep-mysql-*.json`    | `ar_internal_metadata` |
 
 No bespoke table, no view, no matview, no `schema_migrations` — nothing a test
 created survived to the next test's `beforeEach`. The 164 non-canonical
