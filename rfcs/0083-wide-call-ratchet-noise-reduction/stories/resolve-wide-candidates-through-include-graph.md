@@ -1,6 +1,6 @@
 ---
 title: "Resolve wide-call candidates through the recorded include/extends graph"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
