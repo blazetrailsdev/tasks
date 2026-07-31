@@ -1,6 +1,6 @@
 ---
 title: "converge-merge-joins-helper-onto-joins-bang"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5766
 claim: "2026-07-31T22:50:41Z"
 assignee: "converge-merge-joins-helper-onto-joins-bang"
 blocked-by: null
