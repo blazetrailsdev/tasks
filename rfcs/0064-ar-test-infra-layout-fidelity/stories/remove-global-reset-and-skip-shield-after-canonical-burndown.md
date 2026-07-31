@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - drop-bespoke-tables-per-file-like-rails
 deps-rfc: []
 est-loc: null
 priority: null
