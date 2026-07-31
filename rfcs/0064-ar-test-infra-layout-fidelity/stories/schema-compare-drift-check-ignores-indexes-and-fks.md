@@ -1,6 +1,6 @@
 ---
 title: "compareTranscriptions ignores indexes, foreign keys, and table-level PK metadata"
-status: ready
+status: draft
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
