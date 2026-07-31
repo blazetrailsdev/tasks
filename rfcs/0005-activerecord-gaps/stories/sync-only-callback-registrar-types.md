@@ -1,6 +1,6 @@
 ---
 title: "Type afterInitialize/afterFind registrars to reject async callbacks"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0005-activerecord-gaps"
 cluster: null
