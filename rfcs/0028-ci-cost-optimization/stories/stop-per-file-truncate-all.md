@@ -1,10 +1,11 @@
 ---
 title: "Stop truncating every canonical table before every test file"
 status: draft
-updated: 2026-07-30
+updated: 2026-07-31
 rfc: "0028-ci-cost-optimization"
 cluster: null
-deps: []
+deps:
+  - set-exclusive-db-flag-for-every-stamped-slot
 deps-rfc: []
 est-loc: 200
 priority: null
