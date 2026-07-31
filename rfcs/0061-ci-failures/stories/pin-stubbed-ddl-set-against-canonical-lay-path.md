@@ -1,6 +1,6 @@
 ---
 title: "Fail when the canonical lay path touches an adapter member outside STUBBED_DDL_METHODS"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 5709
 claim: "2026-07-31T15:03:06Z"
 assignee: "pin-stubbed-ddl-set-against-canonical-lay-path"
 blocked-by: null
