@@ -1,6 +1,6 @@
 ---
 title: "converge-build-join-buckets-single-joins-store"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5734
 claim: "2026-07-31T18:32:54Z"
 assignee: "converge-build-join-buckets-single-joins-store"
 blocked-by: null
