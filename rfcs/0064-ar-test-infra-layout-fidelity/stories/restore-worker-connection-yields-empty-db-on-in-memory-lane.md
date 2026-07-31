@@ -1,6 +1,6 @@
 ---
 title: "restoreWorkerConnection yields an empty DB on the in-memory lane"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5692
 claim: "2026-07-31T00:12:08Z"
 assignee: "restore-worker-connection-yields-empty-db-on-in-memory-lane"
 blocked-by: null
