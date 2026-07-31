@@ -1,6 +1,6 @@
 ---
 title: "canonical-loader guard cannot see a loader moved to another package"
-status: in-progress
+status: done
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
