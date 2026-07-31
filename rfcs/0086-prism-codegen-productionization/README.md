@@ -1,5 +1,5 @@
 ---
-rfc: "0000-prism-codegen-productionization"
+rfc: "0086-prism-codegen-productionization"
 title: "Prism codegen productionization: convergence guard + generation fidelity"
 status: draft
 created: 2026-07-31
