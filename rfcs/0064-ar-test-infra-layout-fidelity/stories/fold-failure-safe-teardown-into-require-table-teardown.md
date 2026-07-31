@@ -1,6 +1,6 @@
 ---
 title: "fold-failure-safe-teardown-into-require-table-teardown"
-status: claimed
+status: in-progress
 updated: 2026-07-31
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5701
 claim: "2026-07-31T01:51:02Z"
 assignee: "fold-failure-safe-teardown-into-require-table-teardown"
 blocked-by: null
