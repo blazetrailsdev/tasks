@@ -1,10 +1,11 @@
 ---
 title: "operator-longtail-images"
 status: draft
-updated: 2026-07-31
+updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
-deps: []
+deps:
+  - codegen-golden-output-snapshots
 deps-rfc: []
 est-loc: 250
 priority: null
