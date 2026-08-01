@@ -1,7 +1,7 @@
 ---
 title: "converge-merge-joins-helper-onto-joins-bang"
-status: in-progress
-updated: 2026-07-31
+status: done
+updated: 2026-08-01
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
 deps: []
