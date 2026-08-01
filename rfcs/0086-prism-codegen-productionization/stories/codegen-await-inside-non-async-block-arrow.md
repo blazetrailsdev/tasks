@@ -1,6 +1,6 @@
 ---
 title: "Await emitted inside a non-async block arrow is invalid JS"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T23:01:01Z"
+assignee: "codegen-await-inside-non-async-block-arrow"
 blocked-by: null
 closed-reason: null
 ---
