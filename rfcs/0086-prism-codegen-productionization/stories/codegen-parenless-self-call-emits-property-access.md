@@ -1,6 +1,6 @@
 ---
 title: "Paren-less self-call emits a property access instead of a call"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5831
 claim: "2026-08-01T22:01:02Z"
 assignee: "codegen-parenless-self-call-emits-property-access"
 blocked-by: null
