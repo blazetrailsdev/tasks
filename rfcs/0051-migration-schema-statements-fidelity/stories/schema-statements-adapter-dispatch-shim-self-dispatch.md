@@ -1,6 +1,6 @@
 ---
 title: "Converge or uniformly guard the SchemaStatements adapter-dispatch shim (9 sites still self-dispatch on super)"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5794
 claim: "2026-08-01T03:43:46Z"
 assignee: "schema-statements-adapter-dispatch-shim-self-dispatch"
 blocked-by: null
