@@ -1,6 +1,6 @@
 ---
 title: "Infer async for Rails files with no hand-written port"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5821
 claim: "2026-08-01T19:27:00Z"
 assignee: "codegen-async-unported-file-inference"
 blocked-by: null
