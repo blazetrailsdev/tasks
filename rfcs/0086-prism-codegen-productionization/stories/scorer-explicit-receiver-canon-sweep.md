@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize the remaining explicit-receiver spellings in the scorer's TOKEN_CANON"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
