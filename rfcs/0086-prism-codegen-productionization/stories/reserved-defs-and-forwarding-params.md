@@ -1,6 +1,6 @@
 ---
 title: "reserved-defs-and-forwarding-params"
-status: draft
+status: ready
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
