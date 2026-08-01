@@ -1,6 +1,6 @@
 ---
 title: "Scope self-call await decisions to the generated file's own Rails defs"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T21:31:00Z"
+assignee: "codegen-await-self-call-name-scoping"
 blocked-by: null
 closed-reason: null
 ---
