@@ -1,14 +1,14 @@
 ---
 title: "Guard suite database names against the rails user's granted namespaces"
-status: claimed
-updated: 2026-07-31
+status: in-progress
+updated: 2026-08-01
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
 priority: 0
-pr: null
+pr: 5773
 claim: "2026-07-31T23:56:13Z"
 assignee: "guard-suite-db-names-against-granted-namespaces"
 blocked-by: null
