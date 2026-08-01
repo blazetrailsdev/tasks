@@ -1,6 +1,6 @@
 ---
 title: "converge-data-sources-query-values-first-arm"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T17:57:00Z"
+assignee: "converge-data-sources-query-values-first-arm"
 blocked-by: null
 closed-reason: null
 ---
