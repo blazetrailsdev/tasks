@@ -1,7 +1,7 @@
 ---
 title: "Exercise the mysql lane with MYSQL_PREPARED_STATEMENTS in CI"
-status: in-progress
-updated: 2026-07-28
+status: done
+updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
