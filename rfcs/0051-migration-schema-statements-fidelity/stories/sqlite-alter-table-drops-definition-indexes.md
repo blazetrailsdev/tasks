@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable drops indexes added to the definition in-block"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
