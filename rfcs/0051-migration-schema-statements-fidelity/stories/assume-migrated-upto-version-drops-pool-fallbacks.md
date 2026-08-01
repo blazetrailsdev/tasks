@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented pool/schema_migrations fallbacks in assumeMigratedUptoVersion"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T13:33:46Z"
+assignee: "assume-migrated-upto-version-drops-pool-fallbacks"
 blocked-by: null
 closed-reason: null
 ---
