@@ -1,13 +1,13 @@
 ---
 title: "codegen-async-cross-file-propagation"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 5814
 claim: "2026-08-01T18:51:00Z"
 assignee: "codegen-async-cross-file-propagation"
 blocked-by: null
