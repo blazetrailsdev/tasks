@@ -1,6 +1,6 @@
 ---
 title: "Make Migrator#pending_migrations filter the direction-aware migrations reader"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5803
 claim: "2026-08-01T17:35:41Z"
 assignee: "pending-migrations-should-filter-the-direction-aware-migrations-reader"
 blocked-by: null
