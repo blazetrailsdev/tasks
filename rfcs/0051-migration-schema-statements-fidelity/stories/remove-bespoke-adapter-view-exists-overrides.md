@@ -1,6 +1,6 @@
 ---
 title: "Remove the bespoke adapter viewExists overrides and route through the converged base"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T17:51:01Z"
+assignee: "remove-bespoke-adapter-view-exists-overrides"
 blocked-by: null
 closed-reason: null
 ---
