@@ -1,6 +1,6 @@
 ---
 title: "Delete the SchemaStatements dispatch shim by dissolving the companion/mixin duality"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5812
 claim: "2026-08-01T18:15:01Z"
 assignee: "remove-schema-statements-dispatch-shim-companion-mixin-duality"
 blocked-by: null
