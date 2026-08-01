@@ -1,6 +1,6 @@
 ---
 title: "move-migration-context-methods-off-migrator"
-status: claimed
+status: blocked
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-01T18:09:15Z"
 assignee: "move-migration-context-methods-off-migrator"
-blocked-by: null
+blocked-by: "Depends on pool-migration-context-is-not-rails-migration-context (PR #5805), which is still open/unmerged. That PR creates the real MigrationContext (owning migrationsPaths/internalMetadata/currentVersion/etc.) and renames the schema-DSL squatter to SchemaContext; on origin/main MigrationContext is still the schema-DSL class, so this story's moves cannot be done without stacking on #5805. Unblock once #5805 merges."
 closed-reason: null
 ---
 
