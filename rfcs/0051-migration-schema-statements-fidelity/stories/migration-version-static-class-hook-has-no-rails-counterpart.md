@@ -1,7 +1,7 @@
 ---
 title: "Migration#version's static class hook has no Rails counterpart"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T00:20:40Z"
+assignee: "migration-version-static-class-hook-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---
