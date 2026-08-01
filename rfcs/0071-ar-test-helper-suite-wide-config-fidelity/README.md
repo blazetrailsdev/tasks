@@ -1,9 +1,9 @@
 ---
 rfc: "0071-ar-test-helper-suite-wide-config-fidelity"
 title: "AR test-helper suite-wide config fidelity"
-status: active
+status: closed
 created: 2026-07-25
-updated: 2026-07-27
+updated: 2026-08-01
 owner: "@your-handle"
 packages:
   - "activerecord"
