@@ -1,6 +1,6 @@
 ---
 title: "Scope async provenance tracking to branch flow"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T22:16:00Z"
+assignee: "codegen-await-provenance-branch-sensitivity"
 blocked-by: null
 closed-reason: null
 ---
