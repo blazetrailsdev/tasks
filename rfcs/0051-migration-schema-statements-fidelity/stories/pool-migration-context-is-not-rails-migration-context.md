@@ -61,7 +61,7 @@ production call site of these members in the package.
       to its Rails counterpart (fidelity of names).
 - [ ] The pool constructs it the way Rails does
       (`MigrationContext.new(migrations_paths, schema_migration,
-  internal_metadata)`, `migration.rb:1214`) rather than from an adapter
+internal_metadata)`, `migration.rb:1214`) rather than from an adapter
       proxy.
 - [ ] `assumeMigratedUptoVersion` works end to end against a real pool, with
       coverage that does not stub `pool.migrationContext`.
