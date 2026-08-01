@@ -1,6 +1,6 @@
 ---
 title: "Recover awaits on receivers with local async provenance"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5828
 claim: "2026-08-01T21:16:04Z"
 assignee: "codegen-await-local-receiver-inference"
 blocked-by: null
