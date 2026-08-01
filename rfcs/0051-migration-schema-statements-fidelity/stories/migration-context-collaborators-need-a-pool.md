@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext's optional collaborators and SchemaMigration#connection are the adapter-vs-pool gap"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
