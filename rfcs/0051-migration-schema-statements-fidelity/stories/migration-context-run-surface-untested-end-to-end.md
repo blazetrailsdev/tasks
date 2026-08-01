@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext#migrate/up/down have no end-to-end DDL coverage"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
