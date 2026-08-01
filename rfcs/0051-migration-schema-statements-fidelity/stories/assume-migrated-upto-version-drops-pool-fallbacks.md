@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented pool/schema_migrations fallbacks in assumeMigratedUptoVersion"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
