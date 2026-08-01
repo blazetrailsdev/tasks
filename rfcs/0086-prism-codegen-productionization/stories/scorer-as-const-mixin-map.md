@@ -1,6 +1,6 @@
 ---
 title: "scorer-as-const-mixin-map"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T22:45:58Z"
+assignee: "scorer-as-const-mixin-map"
 blocked-by: null
 closed-reason: null
 ---
