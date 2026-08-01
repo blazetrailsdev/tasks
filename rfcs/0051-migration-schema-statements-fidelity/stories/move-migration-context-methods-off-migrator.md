@@ -40,6 +40,13 @@ helpers). Rails' `Migrator` (`migration.rb:1440+`) owns none of those.
 `MigrationContext#migrations` currently still delegates the file-scan/parse
 half to `Migrator.discoverMigrations`, which is the last coupling.
 
+Also NOT ported at all (they exist only as the `Migrator` copies above, so they
+are missing from `MigrationContext` outright rather than merely duplicated):
+`migrate` / `up` / `down` / `rollback` / `forward` / `run` / `open`
+(`migration.rb:1220-1280`) and `migrations_status` (`:1317-1330`). They belong
+to this story, not to `pool-migration-context-is-not-rails-migration-context`,
+whose ACs stopped at `get_all_versions` + `migrations`.
+
 ## Acceptance criteria
 
 - [ ] The `MigrationContext-style` block is gone from `Migrator`; each member
@@ -52,4 +59,7 @@ half to `Migrator.discoverMigrations`, which is the last coupling.
       no longer calls back into `Migrator`.
 - [ ] Callers (`tasks/database-tasks.ts`, the CLI, `Base`) are updated to build
       a `MigrationContext` where they built a path-scanning `Migrator`.
+- [ ] `MigrationContext` owns `migrate` / `up` / `down` / `rollback` /
+      `forward` / `run` / `open` (`migration.rb:1220-1280`) and
+      `migrations_status` (`:1317-1330`).
 - [ ] Existing migrator/migration tests keep their Rails-verbatim names and pass.
