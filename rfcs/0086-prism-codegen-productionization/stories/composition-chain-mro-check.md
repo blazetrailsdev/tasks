@@ -1,6 +1,6 @@
 ---
 title: "Check port composition points against the MRO"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T21:46:01Z"
+assignee: "composition-chain-mro-check"
 blocked-by: null
 closed-reason: null
 ---
