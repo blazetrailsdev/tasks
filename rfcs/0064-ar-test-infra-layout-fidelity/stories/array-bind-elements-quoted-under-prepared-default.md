@@ -1,13 +1,13 @@
 ---
 title: "Array bind elements render as quoted strings under the prepared default"
 status: ready
-updated: 2026-07-30
+updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 40
+priority: 0
 pr: null
 claim: null
 assignee: null
