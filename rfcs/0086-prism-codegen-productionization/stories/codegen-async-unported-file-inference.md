@@ -1,6 +1,6 @@
 ---
 title: "Infer async for Rails files with no hand-written port"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
