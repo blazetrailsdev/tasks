@@ -1,6 +1,6 @@
 ---
 title: "test:compare assertion-level mismatches get an only-shrink ratchet (count/kind/value)"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
