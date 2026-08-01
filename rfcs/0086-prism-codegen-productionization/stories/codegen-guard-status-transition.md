@@ -1,12 +1,12 @@
 ---
-title: "codegen-guard-status-transition"
+title: "Report baseline status transitions distinctly from new divergences in the codegen convergence guard"
 status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
