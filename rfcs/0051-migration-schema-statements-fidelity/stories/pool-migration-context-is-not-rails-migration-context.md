@@ -49,6 +49,14 @@ re-insert an already-migrated version), so the gap is now visible rather than
 hidden, but the underlying mis-layering is untouched. It is the only
 production call site of these members in the package.
 
+PR #5800 added `schemaMigration` / `getAllVersions` / `migrations` to the class
+the pool hands back, so the call site runs, but `migrations` delegates to
+`Migrator.discoverMigrations(Migrator.migrationsPaths)` — the **global** static
+path list. Rails keeps `migrations_paths` as per-instance constructor state
+(`migration.rb:1214-1218`, `attr_reader :migrations_paths`), so two contexts
+built for two different migration directories collide in trails where they
+would not in Rails. Fixing the constructor (AC 3) is what removes the collision.
+
 ## Acceptance criteria
 
 - [ ] `pool.migrationContext` returns an object that genuinely owns
