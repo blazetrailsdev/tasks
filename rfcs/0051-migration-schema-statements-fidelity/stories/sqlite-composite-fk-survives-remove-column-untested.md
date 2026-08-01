@@ -1,7 +1,7 @@
 ---
 title: "Pin that a composite FK survives removeColumn of one member column"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T18:39:00Z"
+assignee: "sqlite-composite-fk-survives-remove-column-untested"
 blocked-by: null
 closed-reason: null
 ---
