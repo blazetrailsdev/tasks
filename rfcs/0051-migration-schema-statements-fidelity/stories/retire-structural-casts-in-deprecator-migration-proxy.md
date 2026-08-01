@@ -1,6 +1,6 @@
 ---
 title: "Type deprecator.ts MigrationProxy's loaded migration as Migration instead of structural casts"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5788
 claim: "2026-08-01T02:33:47Z"
 assignee: "retire-structural-casts-in-deprecator-migration-proxy"
 blocked-by: null
