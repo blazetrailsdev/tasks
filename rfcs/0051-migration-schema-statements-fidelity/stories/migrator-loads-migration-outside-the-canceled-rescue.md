@@ -1,6 +1,6 @@
 ---
 title: "Migrator loads the migration outside the all-later-migrations-canceled rescue"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5781
 claim: "2026-08-01T01:10:39Z"
 assignee: "migrator-loads-migration-outside-the-canceled-rescue"
 blocked-by: null
