@@ -1,6 +1,6 @@
 ---
 title: "Inline merge-preloads.ts folders into Merger so the wide gate sees the calls"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
