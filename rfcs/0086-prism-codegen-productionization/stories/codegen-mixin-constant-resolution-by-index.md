@@ -1,6 +1,6 @@
 ---
 title: "Resolve include/extend constants against a module index, not a path guess"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5838
 claim: "2026-08-01T23:30:59Z"
 assignee: "codegen-mixin-constant-resolution-by-index"
 blocked-by: null
