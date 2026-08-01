@@ -1,6 +1,6 @@
 ---
 title: "Per-row sign-off for multi-token divergences the call-grain catalog cannot explain"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
