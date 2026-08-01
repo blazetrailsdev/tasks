@@ -1,6 +1,6 @@
 ---
 title: "Drive async body inference off the Prism AST, not a textual def scan"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
