@@ -1,6 +1,6 @@
 ---
 title: "Route Migrator#migrate_without_lock through the ported runnable and delete _migrateUp/_migrateDown"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
