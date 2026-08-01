@@ -1,6 +1,6 @@
 ---
 title: "run-sqlite-mem's label description still says non-gating"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0028-ci-cost-optimization"
 cluster: null
