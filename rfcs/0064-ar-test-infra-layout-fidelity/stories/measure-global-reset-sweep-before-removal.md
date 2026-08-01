@@ -1,7 +1,7 @@
 ---
 title: "measure-global-reset-sweep-before-removal"
-status: in-progress
-updated: 2026-07-31
+status: done
+updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
