@@ -1,6 +1,6 @@
 ---
 title: "Scope self-call await decisions to the generated file's own Rails defs"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
