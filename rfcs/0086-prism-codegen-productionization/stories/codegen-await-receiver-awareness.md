@@ -1,6 +1,6 @@
 ---
 title: "Make await insertion receiver-aware, not name-only"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5822
 claim: "2026-08-01T19:33:02Z"
 assignee: "codegen-await-receiver-awareness"
 blocked-by: null
