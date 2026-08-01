@@ -1,6 +1,6 @@
 ---
 title: "sql.active_record payload loses the caller's binds under the prepared default"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: 5785
 claim: "2026-08-01T01:53:48Z"
 assignee: "binds-missing-from-notification-under-prepared-default"
 blocked-by: null
