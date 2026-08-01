@@ -1,6 +1,6 @@
 ---
 title: "Retire the makeLockAdapter test double in favour of Rails' real-connection advisory-lock tests"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
