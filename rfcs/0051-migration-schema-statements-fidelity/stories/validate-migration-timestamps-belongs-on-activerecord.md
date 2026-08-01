@@ -1,6 +1,6 @@
 ---
 title: "validate_migration_timestamps is an ActiveRecord config, not a Migrator static"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
