@@ -1,6 +1,6 @@
 ---
 title: "removeIndex's ifExists probe should be Rails' single index_exists? call"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -44,7 +44,7 @@ return if options[:if_exists] && !index_exists?(table_name, column_name, **optio
 (`schema_definitions.rb:56`) skips the column comparison when columns are blank
 and matches on `name` alone. PostgreSQL's `remove_index` override
 (`postgresql/schema_statements.rb:557`) delegates to `index_exists?` the same
-single way, so the two paths диverge on which probe runs.
+single way, so the two paths diverge on which probe runs.
 
 The `colSpec = columnName ?? opts.column` fallback is now redundant too:
 `remove-schema-statements-dispatch-shim-companion-mixin-duality` (PR #5812) gave
