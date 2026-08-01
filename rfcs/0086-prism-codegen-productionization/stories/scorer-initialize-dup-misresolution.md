@@ -1,6 +1,6 @@
 ---
 title: "Scorer matches initializeDup to an unrelated symbol"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T22:31:00Z"
+assignee: "scorer-initialize-dup-misresolution"
 blocked-by: null
 closed-reason: null
 ---
