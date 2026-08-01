@@ -1,7 +1,7 @@
 ---
 title: "Remove the bespoke adapter dataSourceExists overrides and route through the converged base"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T02:24:02Z"
+assignee: "remove-bespoke-adapter-data-source-exists-overrides"
 blocked-by: null
 closed-reason: null
 ---
