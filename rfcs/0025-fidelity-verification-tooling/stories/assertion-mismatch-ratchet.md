@@ -1,6 +1,6 @@
 ---
 title: "test:compare assertion-level mismatches get an only-shrink ratchet (count/kind/value)"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: 5790
 claim: "2026-08-01T02:53:46Z"
 assignee: "assertion-mismatch-ratchet"
 blocked-by: null
