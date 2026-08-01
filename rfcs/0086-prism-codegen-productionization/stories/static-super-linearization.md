@@ -1,13 +1,13 @@
 ---
 title: "static-super-linearization"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 5817
 claim: "2026-08-01T19:09:02Z"
 assignee: "static-super-linearization"
 blocked-by: null
