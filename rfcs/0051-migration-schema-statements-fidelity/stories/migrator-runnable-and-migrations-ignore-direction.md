@@ -1,7 +1,7 @@
 ---
 title: "Port Migrator#runnable / #migrations direction-awareness and the start/finish/target helpers"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T01:43:30Z"
+assignee: "migrator-runnable-and-migrations-ignore-direction"
 blocked-by: null
 closed-reason: null
 ---
