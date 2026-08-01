@@ -1,6 +1,6 @@
 ---
 title: "Delete the drained schema-DSL MigrationContext, freeing the Rails name"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["route-migrationcontext-dsl-callers-onto-schema-statements"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5801
 claim: "2026-08-01T17:28:14Z"
 assignee: "delete-drained-migrationcontext-schema-dsl"
 blocked-by: null
