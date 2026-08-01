@@ -1,6 +1,6 @@
 ---
 title: "Make base.ts mixin wiring independent of module entry order"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
