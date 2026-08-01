@@ -1,6 +1,6 @@
 ---
 title: "pool-migration-context-is-not-rails-migration-context"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T17:39:01Z"
+assignee: "pool-migration-context-is-not-rails-migration-context"
 blocked-by: null
 closed-reason: null
 ---
