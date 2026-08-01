@@ -1,6 +1,6 @@
 ---
 title: "Decide the relation *_value/*_values spelling: converge the port or canon the scorer"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
