@@ -1,6 +1,6 @@
 ---
 title: "Recover awaits on receivers with local async provenance"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
