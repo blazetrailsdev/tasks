@@ -1,6 +1,6 @@
 ---
 title: "codegen-async-cross-file-propagation"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
