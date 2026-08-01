@@ -1,9 +1,9 @@
 ---
 rfc: "0086-prism-codegen-productionization"
 title: "Prism codegen productionization: convergence guard + generation fidelity"
-status: draft
+status: active
 created: 2026-07-31
-updated: 2026-07-31
+updated: 2026-08-01
 owner: "@your-handle"
 packages:
   - "activerecord"
