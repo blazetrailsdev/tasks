@@ -1,13 +1,13 @@
 ---
 title: "delegate-macro-receiver-resolution"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 5816
 claim: "2026-08-01T19:03:00Z"
 assignee: "delegate-macro-receiver-resolution"
 blocked-by: null
