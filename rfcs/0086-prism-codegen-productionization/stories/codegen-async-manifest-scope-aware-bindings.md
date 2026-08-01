@@ -1,6 +1,6 @@
 ---
 title: "Scope async-manifest binding inference to module-level declarations"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
