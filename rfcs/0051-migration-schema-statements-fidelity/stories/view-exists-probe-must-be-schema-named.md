@@ -1,6 +1,6 @@
 ---
 title: "view-exists-probe-must-be-schema-named"
-status: ready
+status: closed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: landed in PR 5806 (remove-bespoke-adapter-view-exists-overrides) — the base viewExists probe now goes through schemaQuery (SCHEMA-named) with an assertNoQueries regression test at connection-adapters/abstract/schema-statements-view-exists.trails.test.ts"
 ---
 
 ## Context
