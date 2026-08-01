@@ -8,7 +8,7 @@ deps:
   - codegen-golden-output-snapshots
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null
