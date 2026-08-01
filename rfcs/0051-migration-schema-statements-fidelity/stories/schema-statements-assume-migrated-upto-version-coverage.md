@@ -1,6 +1,6 @@
 ---
 title: "Cover SchemaStatements#assumeMigratedUptoVersion, the production path"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5795
 claim: "2026-08-01T03:53:47Z"
 assignee: "schema-statements-assume-migrated-upto-version-coverage"
 blocked-by: null
