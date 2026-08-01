@@ -1,6 +1,6 @@
 ---
 title: "Scope reachable Rails defs by class/module nesting, not a flat regex"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T23:46:00Z"
+assignee: "codegen-scope-defs-respect-class-nesting"
 blocked-by: null
 closed-reason: null
 ---
