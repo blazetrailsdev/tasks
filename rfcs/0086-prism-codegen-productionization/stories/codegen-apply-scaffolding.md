@@ -1,6 +1,6 @@
 ---
 title: "codegen-apply-scaffolding"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T19:21:05Z"
+assignee: "codegen-apply-scaffolding"
 blocked-by: null
 closed-reason: null
 ---
