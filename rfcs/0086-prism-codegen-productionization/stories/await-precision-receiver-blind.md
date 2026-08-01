@@ -1,6 +1,6 @@
 ---
 title: "await-precision-receiver-blind"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5826
 claim: "2026-08-01T20:00:59Z"
 assignee: "await-precision-receiver-blind"
 blocked-by: null
