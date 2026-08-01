@@ -1,6 +1,6 @@
 ---
 title: "Make base.ts mixin wiring independent of module entry order"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5775
 claim: "2026-08-01T00:00:41Z"
 assignee: "base-mixin-wiring-order-independent-module-init"
 blocked-by: null
