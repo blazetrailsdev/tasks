@@ -1,13 +1,13 @@
 ---
 title: "codegen-golden-output-snapshots"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 5815
 claim: "2026-08-01T18:57:01Z"
 assignee: "codegen-golden-output-snapshots"
 blocked-by: null
