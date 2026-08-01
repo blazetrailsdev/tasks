@@ -1,6 +1,6 @@
 ---
 title: "SchemaCreation typeToSql uppercases native type names Rails keeps lowercase"
-status: claimed
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5570
 claim: "2026-08-01T03:33:46Z"
 assignee: "schema-creation-uppercases-native-type-names"
 blocked-by: null
