@@ -1,6 +1,6 @@
 ---
 title: "static-super-linearization"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T19:09:02Z"
+assignee: "static-super-linearization"
 blocked-by: null
 closed-reason: null
 ---
