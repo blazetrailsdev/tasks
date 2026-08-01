@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' out-of-range middle assertion in bind_params_to_sql"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
