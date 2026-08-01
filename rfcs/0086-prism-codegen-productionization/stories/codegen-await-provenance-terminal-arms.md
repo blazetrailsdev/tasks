@@ -1,6 +1,6 @@
 ---
 title: "Exclude non-falling-through arms from await provenance merge"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T23:16:01Z"
+assignee: "codegen-await-provenance-terminal-arms"
 blocked-by: null
 closed-reason: null
 ---
