@@ -1,7 +1,7 @@
 ---
 title: "pg-port-static-database-exists-from-config"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T02:03:45Z"
+assignee: "pg-port-static-database-exists-from-config"
 blocked-by: null
 closed-reason: null
 ---
