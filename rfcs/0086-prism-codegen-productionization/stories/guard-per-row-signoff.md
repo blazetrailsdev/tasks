@@ -1,6 +1,6 @@
 ---
 title: "Per-row sign-off for multi-token divergences the call-grain catalog cannot explain"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5798
 claim: "2026-08-01T13:23:49Z"
 assignee: "guard-per-row-signoff"
 blocked-by: null
