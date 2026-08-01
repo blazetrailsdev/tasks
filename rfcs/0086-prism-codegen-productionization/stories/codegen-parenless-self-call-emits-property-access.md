@@ -1,6 +1,6 @@
 ---
 title: "Paren-less self-call emits a property access instead of a call"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
