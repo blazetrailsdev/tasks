@@ -1,6 +1,6 @@
 ---
 title: "converge-check-constraint-exists-on-the-supports-guard"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5824
 claim: "2026-08-01T19:39:04Z"
 assignee: "converge-check-constraint-exists-on-the-supports-guard"
 blocked-by: null
