@@ -1,6 +1,6 @@
 ---
 title: "codegen-async-block-arrows"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T21:05:30Z"
+assignee: "codegen-async-block-arrows"
 blocked-by: null
 closed-reason: null
 ---
