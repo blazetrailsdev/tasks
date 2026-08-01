@@ -8,7 +8,6 @@ deps:
   - scorer-getter-and-arrow-resolution
 deps-rfc: []
 est-loc: 200
-priority: 13
 pr: null
 claim: null
 assignee: null
