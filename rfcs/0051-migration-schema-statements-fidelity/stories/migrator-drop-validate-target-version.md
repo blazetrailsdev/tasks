@@ -1,7 +1,7 @@
 ---
 title: "Drop the invented _validateTargetVersion from _migrateUp/_migrateDown"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T01:01:11Z"
+assignee: "migrator-drop-validate-target-version"
 blocked-by: null
 closed-reason: null
 ---
