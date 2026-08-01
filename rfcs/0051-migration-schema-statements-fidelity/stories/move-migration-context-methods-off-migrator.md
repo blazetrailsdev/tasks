@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - pool-migration-context-is-not-rails-migration-context
 deps-rfc: []
 est-loc: null
 priority: null
