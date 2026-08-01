@@ -1,6 +1,6 @@
 ---
 title: "scorer-model-vs-modelclass-token"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5818
 claim: "2026-08-01T19:15:00Z"
 assignee: "scorer-model-vs-modelclass-token"
 blocked-by: null
