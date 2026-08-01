@@ -1,6 +1,6 @@
 ---
 title: "Canonicalize the remaining explicit-receiver spellings in the scorer's TOKEN_CANON"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T19:45:02Z"
+assignee: "scorer-explicit-receiver-canon-sweep"
 blocked-by: null
 closed-reason: null
 ---
