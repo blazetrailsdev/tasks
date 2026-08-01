@@ -1,6 +1,6 @@
 ---
 title: "Converge or uniformly guard the SchemaStatements adapter-dispatch shim (9 sites still self-dispatch on super)"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
