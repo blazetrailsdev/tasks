@@ -1,6 +1,6 @@
 ---
 title: "Route Migrator#migrate_without_lock through the ported runnable and delete _migrateUp/_migrateDown"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T18:21:00Z"
+assignee: "route-migrate-without-lock-through-runnable"
 blocked-by: null
 closed-reason: null
 ---
