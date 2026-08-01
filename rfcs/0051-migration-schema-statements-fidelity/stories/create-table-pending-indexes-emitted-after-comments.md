@@ -1,6 +1,6 @@
 ---
 title: "createTable emits pending indexes after the comment block, Rails emits them before"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5802
 claim: "2026-08-01T17:33:14Z"
 assignee: "create-table-pending-indexes-emitted-after-comments"
 blocked-by: null
