@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' out-of-range middle assertion in bind_params_to_sql"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 5783
 claim: "2026-08-01T01:43:46Z"
 assignee: "restore-bind-params-to-sql-out-of-range-assertion"
 blocked-by: null
