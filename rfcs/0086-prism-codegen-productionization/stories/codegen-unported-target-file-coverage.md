@@ -1,6 +1,6 @@
 ---
 title: "Add an unported Rails file to TARGET_FILES so async inference is exercised end-to-end"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
