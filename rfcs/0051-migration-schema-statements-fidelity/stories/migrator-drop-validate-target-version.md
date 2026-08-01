@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented _validateTargetVersion from _migrateUp/_migrateDown"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
