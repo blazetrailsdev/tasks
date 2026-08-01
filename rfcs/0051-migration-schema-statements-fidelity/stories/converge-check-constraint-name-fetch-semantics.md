@@ -43,6 +43,18 @@ left out of that PR's scope: with `isDefinedFor` fixed there to mirror
 `checkConstraintExists` — derive-then-clobber and never-derive both terminate at
 `false`. It is latent, not live.
 
+### Sibling divergence in the same cluster
+
+`checkConstraintExists` (`schema-statements.ts:1774`) guards with
+`!options.name && !options.expression`, where Rails
+(`schema_statements.rb:1341-1343`) uses
+`!options.key?(:name) && !options.key?(:expression)`. Same truthy-vs-key-presence
+confusion: an explicit `{ name: "" }` raises `ArgumentError` in Rails but passes
+the trails guard. Also latent and also pre-existing — surfaced by review of
+PR #5824, which only changed the bare `Error` on that line to `ArgumentError`
+and left the condition untouched. Fix it alongside `checkConstraintName`, since
+both are the same rule and both are in this file.
+
 ## Blocker to be careful of
 
 The naive fix (`"name" in options ? options.name : derive`) breaks
@@ -59,5 +71,7 @@ working; the two methods disagree on purpose in Rails (`fetch` vs `||=`).
   nullish", mirroring `Hash#fetch`'s block semantics.
 - `checkConstraintOptions` / `addCheckConstraint` still derive a name for a
   nullish `name`, per Rails' `||=`.
-- A regression test pins both behaviors and fails on baseline.
+- `checkConstraintExists`' argument guard uses key presence, so an explicit
+  `{ name: "" }` raises as it does in Rails.
+- Regression tests pin all of the above and fail on baseline.
 - SQLite, MySQL and PostgreSQL lanes green.
