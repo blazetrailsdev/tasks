@@ -1,6 +1,6 @@
 ---
 title: "SQLite alter_table's caller pushes reflected FKs instead of stripping affixes and calling definition.foreign_key"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
