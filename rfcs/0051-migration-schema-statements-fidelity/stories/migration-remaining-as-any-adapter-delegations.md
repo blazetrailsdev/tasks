@@ -1,7 +1,7 @@
 ---
 title: "migration-remaining-as-any-adapter-delegations"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T00:10:40Z"
+assignee: "migration-remaining-as-any-adapter-delegations"
 blocked-by: null
 closed-reason: null
 ---
