@@ -8,7 +8,6 @@ owner: "@your-handle"
 packages:
   - "activerecord"
 clusters: []
-priority: 1
 ---
 
 ## Summary
