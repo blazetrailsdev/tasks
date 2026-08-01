@@ -1,6 +1,6 @@
 ---
 title: "Inline merge-preloads.ts folders into Merger so the wide gate sees the calls"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T00:40:41Z"
+assignee: "converge-merge-preloads-helper-into-merger"
 blocked-by: null
 closed-reason: null
 ---
