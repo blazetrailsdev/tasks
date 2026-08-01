@@ -1,7 +1,7 @@
 ---
 title: "SQLite alterTable's second move_table rebuilds from the source reflection, not the buffer"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T09:13:46Z"
+assignee: "sqlite-alter-table-second-move-does-not-reflect-the-buffer"
 blocked-by: null
 closed-reason: null
 ---
