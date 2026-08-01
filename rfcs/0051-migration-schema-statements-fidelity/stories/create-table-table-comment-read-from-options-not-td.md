@@ -1,6 +1,6 @@
 ---
 title: "createTable reads the table comment from options, Rails reads td.comment"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
