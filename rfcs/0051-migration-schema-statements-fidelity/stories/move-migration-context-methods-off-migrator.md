@@ -1,6 +1,6 @@
 ---
 title: "move-migration-context-methods-off-migrator"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5820
 claim: "2026-08-01T19:11:31Z"
 assignee: "move-migration-context-methods-off-migrator"
 blocked-by: null
