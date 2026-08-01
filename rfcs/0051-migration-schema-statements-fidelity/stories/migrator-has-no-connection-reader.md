@@ -1,6 +1,6 @@
 ---
 title: "Migrator holds _adapter instead of Rails' connection reader"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
