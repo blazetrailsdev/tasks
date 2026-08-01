@@ -1,6 +1,6 @@
 ---
 title: "createTable reads the table comment from options, Rails reads td.comment"
-status: ready
+status: claimed
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-01T18:03:00Z"
+assignee: "create-table-table-comment-read-from-options-not-td"
 blocked-by: null
 closed-reason: null
 ---
