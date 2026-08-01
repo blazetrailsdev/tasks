@@ -1,6 +1,6 @@
 ---
 title: "convergence-guard-catalog-exclusions"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
+pr: 5789
 claim: "2026-08-01T02:43:46Z"
 assignee: "convergence-guard-catalog-exclusions"
 blocked-by: null
