@@ -41,6 +41,6 @@ on that path).
       site with the Rails divergence spelled out.
 - [ ] Existing coverage that depends on the fallback (see
       `DatabaseTasksCheckProtectedEnvironmentsTest > raises an error when
-  called with protected environment` in
+called with protected environment` in
       `packages/activerecord/src/tasks/database-tasks.test.ts:19`) is
       reconciled against the Rails test it mirrors.
