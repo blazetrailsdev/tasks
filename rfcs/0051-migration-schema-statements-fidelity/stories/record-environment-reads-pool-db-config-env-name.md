@@ -1,6 +1,6 @@
 ---
 title: "record_environment should read the pool db_config env name, not a constructor snapshot"
-status: in-progress
+status: done
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
