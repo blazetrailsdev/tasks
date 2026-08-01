@@ -1,6 +1,6 @@
 ---
 title: "Golden images drift as the port tree moves"
-status: ready
+status: draft
 updated: 2026-08-01
 rfc: "0086-prism-codegen-productionization"
 cluster: null
