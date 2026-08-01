@@ -1,6 +1,6 @@
 ---
 title: "SQLite alterTable drops indexes added to the definition in-block"
-status: claimed
+status: in-progress
 updated: 2026-08-01
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5796
 claim: "2026-08-01T09:03:50Z"
 assignee: "sqlite-alter-table-drops-definition-indexes"
 blocked-by: null
