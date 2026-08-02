@@ -1,6 +1,6 @@
 ---
 title: "Call-less @missingRailsCall tag is silently ignored"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T10:56:49Z"
+assignee: "call-less-missing-rails-call-tag-silently-ignored"
 blocked-by: null
 closed-reason: null
 ---
