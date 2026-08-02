@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext is built by subclass override instead of migrationsPaths"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T03:06:50Z"
+assignee: "migration-context-built-by-subclass-override-not-paths"
 blocked-by: null
 closed-reason: null
 ---
