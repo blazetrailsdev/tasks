@@ -1,6 +1,6 @@
 ---
 title: "Delete the bespoke-tables-inventory script now the ESLint rule covers it"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
+pr: 5901
 claim: "2026-08-02T18:07:31Z"
 assignee: "delete-bespoke-tables-inventory-script"
 blocked-by: null
