@@ -1,6 +1,6 @@
 ---
 title: "converge-batch-on-unloaded-relation-empty-scope"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T17:49:30Z"
+assignee: "converge-batch-on-unloaded-relation-empty-scope"
 blocked-by: null
 closed-reason: null
 ---
