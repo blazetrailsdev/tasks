@@ -1,6 +1,6 @@
 ---
 title: "Route excluding's deferred arm through the predicate builder's table"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5926
 claim: "2026-08-02T22:46:52Z"
 assignee: "converge-excluding-deferred-arm-predicate-builder-table"
 blocked-by: null
