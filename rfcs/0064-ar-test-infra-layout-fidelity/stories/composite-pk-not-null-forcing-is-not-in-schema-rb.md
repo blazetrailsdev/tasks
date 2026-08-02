@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 5
 pr: null
 claim: "2026-08-02T18:01:29Z"
 assignee: "composite-pk-not-null-forcing-is-not-in-schema-rb"
