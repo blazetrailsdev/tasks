@@ -1,7 +1,7 @@
 ---
 title: "Converge DumpSchemaCache tests onto cacheDumpFilename"
-status: draft
-updated: 2026-07-31
+status: ready
+updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
