@@ -1,6 +1,6 @@
 ---
 title: "Detect wide ratchet baseline drift on PRs, not after merge"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
