@@ -1,6 +1,6 @@
 ---
 title: "Converge PostgreSQL indexes() onto Rails' indkey/INCLUDE-rejection shape"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 5895
 claim: "2026-08-02T16:59:58Z"
 assignee: "converge-pg-indexes-body-shape"
 blocked-by: null
