@@ -1,7 +1,7 @@
 ---
 title: "dissolve-the-postgresql-schema-statements-companion"
-status: ready
-updated: 2026-08-01
+status: claimed
+updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T00:11:04Z"
+assignee: "dissolve-the-postgresql-schema-statements-companion"
 blocked-by: null
 closed-reason: null
 ---
