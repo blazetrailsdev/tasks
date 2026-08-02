@@ -5,7 +5,7 @@ updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
-  - migration-context-built-by-subclass-override-not-paths
+  - unify-migration-discovery-delete-registered-migrations-seam
 deps-rfc: []
 est-loc: null
 priority: 180
