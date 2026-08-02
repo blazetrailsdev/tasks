@@ -1,9 +1,9 @@
 ---
 rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
-status: active
+status: postponed
 created: 2026-06-12
-updated: 2026-07-27
+updated: 2026-08-02
 owner: "@deanmarano"
 packages:
   - activerecord
