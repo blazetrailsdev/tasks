@@ -1,6 +1,6 @@
 ---
 title: "Drop SchemaCache#columns' null-pool guard once binding is centralized"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 5917
 claim: "2026-08-02T19:55:26Z"
 assignee: "drop-schema-cache-columns-null-pool-guard"
 blocked-by: null
