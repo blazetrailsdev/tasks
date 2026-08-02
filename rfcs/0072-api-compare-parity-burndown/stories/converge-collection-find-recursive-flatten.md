@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-find-recursive-flatten"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5914
 claim: "2026-08-02T19:37:24Z"
 assignee: "converge-collection-find-recursive-flatten"
 blocked-by: null
