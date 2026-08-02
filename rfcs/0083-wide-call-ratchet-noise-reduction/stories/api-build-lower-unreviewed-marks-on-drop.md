@@ -1,6 +1,6 @@
 ---
 title: "api:build: lower the per-file unreviewed marks for rows it drops"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5928
 claim: "2026-08-02T22:58:24Z"
 assignee: "api-build-lower-unreviewed-marks-on-drop"
 blocked-by: null
