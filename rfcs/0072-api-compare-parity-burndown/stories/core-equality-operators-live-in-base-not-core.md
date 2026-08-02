@@ -1,6 +1,6 @@
 ---
 title: "Core#== / #<=> live in base.ts as isEqual, not in core.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5915
 claim: "2026-08-02T19:31:25Z"
 assignee: "core-equality-operators-live-in-base-not-core"
 blocked-by: null
