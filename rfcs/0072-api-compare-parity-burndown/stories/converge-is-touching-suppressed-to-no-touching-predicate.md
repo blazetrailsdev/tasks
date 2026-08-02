@@ -1,6 +1,6 @@
 ---
 title: "converge-is-touching-suppressed-to-no-touching-predicate"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
