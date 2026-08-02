@@ -1,6 +1,6 @@
 ---
 title: "Make justifies() reject the narrow RFC 0044 seed reason too"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T11:26:49Z"
+assignee: "unify-narrow-and-wide-seed-reasons-in-justifies"
 blocked-by: null
 closed-reason: null
 ---
