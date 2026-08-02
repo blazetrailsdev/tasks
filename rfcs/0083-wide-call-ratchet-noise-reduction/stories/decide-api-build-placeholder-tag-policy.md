@@ -1,6 +1,6 @@
 ---
 title: "Decide whether api:build should keep minting inert placeholder @missingRailsCall tags"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T02:36:49Z"
+assignee: "decide-api-build-placeholder-tag-policy"
 blocked-by: null
 closed-reason: null
 ---
