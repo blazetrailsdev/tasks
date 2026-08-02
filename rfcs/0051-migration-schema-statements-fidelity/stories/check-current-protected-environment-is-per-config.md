@@ -1,6 +1,6 @@
 ---
 title: "checkCurrentProtectedEnvironmentBang delegates outward instead of checking one config"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5859
 claim: "2026-08-02T02:56:48Z"
 assignee: "check-current-protected-environment-is-per-config"
 blocked-by: null
