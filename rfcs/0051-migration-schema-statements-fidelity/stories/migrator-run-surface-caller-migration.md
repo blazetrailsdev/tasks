@@ -8,7 +8,7 @@ deps:
   - migration-context-built-by-subclass-override-not-paths
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 180
 pr: null
 claim: "2026-08-02T00:36:05Z"
 assignee: "migrator-run-surface-caller-migration"
