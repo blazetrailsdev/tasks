@@ -1,6 +1,6 @@
 ---
 title: "Open a maintenance PR from the main wide-ratchet reseed instead of only failing"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5882
 claim: "2026-08-02T12:59:09Z"
 assignee: "open-maintenance-pr-for-wide-baseline-drift"
 blocked-by: null
