@@ -1,6 +1,6 @@
 ---
 title: "codegen-stdlib-idiom-mapping"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0086-prism-codegen-productionization"
 cluster: null
