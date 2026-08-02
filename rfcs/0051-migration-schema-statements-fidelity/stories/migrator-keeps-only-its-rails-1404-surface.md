@@ -1,6 +1,6 @@
 ---
 title: "migrator-keeps-only-its-rails-1404-surface"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["move-migration-context-methods-off-migrator"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5845
 claim: "2026-08-02T00:21:03Z"
 assignee: "migrator-keeps-only-its-rails-1404-surface"
 blocked-by: null
