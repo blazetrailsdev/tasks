@@ -1,6 +1,6 @@
 ---
 title: "checkProtectedEnvironmentsBang reads the config env, not DEFAULT_ENV"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
