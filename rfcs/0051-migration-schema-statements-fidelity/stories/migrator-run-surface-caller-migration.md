@@ -60,6 +60,29 @@ rather than `MigrationContext#migrations`.
 `Migrator#migrate` / `#run` still carry the MigrationContext-shaped signatures;
 Rails just writes `Migrator.new(...).migrate` / `.run`.
 
+## Decision: how a caller holding a pre-built migration list reaches a MigrationContext
+
+Settled by `migration-context-built-by-subclass-override-not-paths`.
+`MigrationContext`'s constructor takes a fourth optional argument,
+`registeredMigrations?: MigrationProxy[]`; when present, `#migrations` answers
+that list instead of scanning `migrationsPaths`. It is per-instance
+constructor state, exactly like `migrationsPaths`, so `#migrations` stays a
+single un-overridden reader and no production code subclasses
+`MigrationContext` (`DatabaseTasks._migrationContextFor` no longer does).
+
+So each of the ~24 callers that today writes
+`new Migrator(adapter, migrations, options)` becomes
+
+```ts
+new MigrationContext([], schemaMigration, internalMetadata, migrations);
+```
+
+passing `[]` (or the config's `migrationsPaths`, when it has some) for the
+discovery half. Callers that already discover from disk — trailties'
+`migration-loader` — keep loading as they do and hand the resulting
+`MigrationProxy[]` in the same way; unifying the two discovery paths is not
+part of this story.
+
 ## Acceptance criteria
 
 - [ ] The `MigrationContext-style` banner block is gone from `Migrator`.
