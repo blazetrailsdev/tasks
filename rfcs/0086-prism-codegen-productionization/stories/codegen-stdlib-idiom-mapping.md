@@ -1,7 +1,7 @@
 ---
 title: "codegen-stdlib-idiom-mapping"
-status: ready
-updated: 2026-08-01
+status: claimed
+updated: 2026-08-02
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T00:03:26Z"
+assignee: "codegen-stdlib-idiom-mapping"
 blocked-by: null
 closed-reason: null
 ---
