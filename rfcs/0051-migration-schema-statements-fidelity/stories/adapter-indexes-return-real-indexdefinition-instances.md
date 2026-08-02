@@ -1,6 +1,6 @@
 ---
 title: "Return IndexDefinition instances from adapter indexes() instead of plain rows"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5877
 claim: "2026-08-02T12:16:48Z"
 assignee: "adapter-indexes-return-real-indexdefinition-instances"
 blocked-by: null
