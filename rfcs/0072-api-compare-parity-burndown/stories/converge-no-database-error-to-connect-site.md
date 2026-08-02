@@ -1,6 +1,6 @@
 ---
 title: "converge-no-database-error-to-connect-site"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5883
 claim: "2026-08-02T13:07:13Z"
 assignee: "converge-no-database-error-to-connect-site"
 blocked-by: null
