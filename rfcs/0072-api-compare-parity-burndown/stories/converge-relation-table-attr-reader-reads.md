@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-table-attr-reader-reads"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5903
 claim: "2026-08-02T17:55:28Z"
 assignee: "converge-relation-table-attr-reader-reads"
 blocked-by: null
