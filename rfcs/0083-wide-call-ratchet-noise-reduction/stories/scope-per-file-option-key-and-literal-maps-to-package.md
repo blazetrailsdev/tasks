@@ -1,6 +1,6 @@
 ---
 title: "Scope the per-file option-key and literal maps to the same package"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T11:16:52Z"
+assignee: "scope-per-file-option-key-and-literal-maps-to-package"
 blocked-by: null
 closed-reason: null
 ---
