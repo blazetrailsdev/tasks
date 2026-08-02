@@ -1,7 +1,7 @@
 ---
 title: "Resolve include/extend constants against a module index, not a path guess"
-status: in-progress
-updated: 2026-08-01
+status: done
+updated: 2026-08-02
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
