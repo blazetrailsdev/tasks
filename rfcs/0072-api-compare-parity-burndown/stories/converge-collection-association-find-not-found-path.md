@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-association-find-not-found-path"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5880
 claim: "2026-08-02T12:46:49Z"
 assignee: "converge-collection-association-find-not-found-path"
 blocked-by: null
