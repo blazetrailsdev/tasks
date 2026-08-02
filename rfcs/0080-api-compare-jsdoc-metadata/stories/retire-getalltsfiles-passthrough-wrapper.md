@@ -1,6 +1,6 @@
 ---
 title: "Retire the getAllTsFiles pass-through in extract-ts-api"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T12:26:49Z"
+assignee: "retire-getalltsfiles-passthrough-wrapper"
 blocked-by: null
 closed-reason: null
 ---
