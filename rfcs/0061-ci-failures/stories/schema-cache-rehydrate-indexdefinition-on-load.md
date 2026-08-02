@@ -1,6 +1,6 @@
 ---
 title: "schema-cache-rehydrate-indexdefinition-on-load"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5891
 claim: "2026-08-02T15:59:57Z"
 assignee: "schema-cache-rehydrate-indexdefinition-on-load"
 blocked-by: null
