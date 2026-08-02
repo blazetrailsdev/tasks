@@ -1,6 +1,6 @@
 ---
 title: "Type AbstractAdapter#indexes as IndexDefinition rows instead of unknown[]"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5858
 claim: "2026-08-02T02:46:48Z"
 assignee: "adapter-indexes-return-type-index-definition-shape"
 blocked-by: null
