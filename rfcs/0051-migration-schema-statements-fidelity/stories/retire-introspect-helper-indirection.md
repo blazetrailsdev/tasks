@@ -1,6 +1,6 @@
 ---
 title: "Retire the introspect* passthrough helpers"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T01:46:48Z"
+assignee: "retire-introspect-helper-indirection"
 blocked-by: null
 closed-reason: null
 ---
