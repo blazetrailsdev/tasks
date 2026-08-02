@@ -1,6 +1,6 @@
 ---
 title: "Reach the adapter's indexes() from SchemaStatements without an as-unknown-as cast"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
