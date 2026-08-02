@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify the base.ts novel surface, anchored on loadBelongsTo/loadHasOne"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5919
 claim: "2026-08-02T20:07:27Z"
 assignee: "extra-surface-base-accessors-classify"
 blocked-by: null
