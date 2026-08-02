@@ -1,6 +1,6 @@
 ---
 title: "Detect wide ratchet baseline drift on PRs, not after merge"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5908
 claim: "2026-08-02T19:07:23Z"
 assignee: "detect-wide-baseline-drift-on-prs"
 blocked-by: null
