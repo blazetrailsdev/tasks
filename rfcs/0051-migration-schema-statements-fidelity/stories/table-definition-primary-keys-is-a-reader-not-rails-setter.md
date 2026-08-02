@@ -10,7 +10,7 @@ est-loc: 120
 priority: null
 pr: null
 claim: "2026-08-02T01:20:57Z"
-assignee: "probe"
+assignee: "table-definition-primary-keys-is-a-reader-not-rails-setter"
 blocked-by: null
 closed-reason: null
 ---
