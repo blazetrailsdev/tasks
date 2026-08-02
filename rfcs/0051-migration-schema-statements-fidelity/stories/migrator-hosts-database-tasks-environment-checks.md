@@ -1,6 +1,6 @@
 ---
 title: "Migrator hosts DatabaseTasks' environment checks"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 5861
 claim: "2026-08-02T03:16:48Z"
 assignee: "migrator-hosts-database-tasks-environment-checks"
 blocked-by: null
