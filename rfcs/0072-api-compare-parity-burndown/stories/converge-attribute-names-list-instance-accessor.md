@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-names-list-instance-accessor"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T20:37:26Z"
+assignee: "converge-attribute-names-list-instance-accessor"
 blocked-by: null
 closed-reason: null
 ---
