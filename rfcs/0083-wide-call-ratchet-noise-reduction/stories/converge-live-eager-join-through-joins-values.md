@@ -1,6 +1,6 @@
 ---
 title: "Fold live-path eager loading through joins_values instead of _buildEagerJoinManager"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
