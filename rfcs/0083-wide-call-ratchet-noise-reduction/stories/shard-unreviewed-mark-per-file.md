@@ -1,6 +1,6 @@
 ---
 title: "shard-unreviewed-mark-per-file"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 5922
 claim: "2026-08-02T20:44:08Z"
 assignee: "shard-unreviewed-mark-per-file"
 blocked-by: null
