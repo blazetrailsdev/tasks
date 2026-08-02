@@ -1,7 +1,7 @@
 ---
 title: "Scope reachable Rails defs by class/module nesting, not a flat regex"
-status: in-progress
-updated: 2026-08-01
+status: done
+updated: 2026-08-02
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
