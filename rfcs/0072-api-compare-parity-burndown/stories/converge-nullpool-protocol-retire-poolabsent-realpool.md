@@ -1,6 +1,6 @@
 ---
 title: "converge-nullpool-protocol-retire-poolabsent-realpool"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5885
 claim: "2026-08-02T13:15:09Z"
 assignee: "converge-nullpool-protocol-retire-poolabsent-realpool"
 blocked-by: null
