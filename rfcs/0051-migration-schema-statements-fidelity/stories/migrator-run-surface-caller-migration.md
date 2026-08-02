@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-02T00:36:05Z"
 assignee: "migrator-run-surface-caller-migration"
-blocked-by: "Prerequisite migrator-keeps-only-its-rails-1404-surface is still claimed/unmerged: on origin/main (d41cae364) Migrator still carries the MigrationContext-style banner (migration.ts:2914), isProtectedEnvironment, and the discovery statics fromPath/fromDir/fromPaths/discoverMigrations, and MigrationContext#migrate/up/down/run/move still delegate via this.open() into Migrator. This story's acceptance criteria all assume those deletions have landed, and the caller migration touches the same migration.ts region, so doing it now means either redoing the predecessor's work or stacking a PR (both forbidden). Unblock once that story merges to main."
+blocked-by: "Re-checked 2026-08-02: the original blocker (migrator-keeps-only-its-rails-1404-surface) is DONE and its deletions are on origin/main — no MigrationContext-style banner, no fromPath/fromDir/fromPaths/discoverMigrations statics, no Migrator#isProtectedEnvironment. The live blocker is now the story's own Decision section: how a caller holding a pre-built MigrationProxy[] reaches a MigrationContext is settled by migration-context-built-by-subclass-override-not-paths, still unmerged (PR 5860 open). That PR adds the 4th constructor arg the ~24 caller migrations depend on and touches the same migration.ts region. Unblock when 5860 merges."
 closed-reason: null
 ---
 
