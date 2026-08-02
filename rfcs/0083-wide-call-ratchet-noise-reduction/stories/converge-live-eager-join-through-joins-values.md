@@ -1,6 +1,6 @@
 ---
 title: "Fold live-path eager loading through joins_values instead of _buildEagerJoinManager"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5909
 claim: "2026-08-02T18:49:25Z"
 assignee: "converge-live-eager-join-through-joins-values"
 blocked-by: null
