@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-token-and-signed-id-finder-bodies"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
