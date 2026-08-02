@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext is built by subclass override instead of migrationsPaths"
-status: in-progress
+status: closed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: 5860
-claim: "2026-08-02T03:06:50Z"
-assignee: "migration-context-built-by-subclass-override-not-paths"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PR #5860 closed unmerged: the constructor seam it added formalizes trails' second migration source instead of removing it (Rails' MigrationContext takes three constructor args, migration.rb:1214, and #migrations has one source, 1303-1315). Superseded by unify-migration-discovery-delete-registered-migrations-seam, which converges the two discovery paths and deletes the seam; the decision context is recorded on migrator-run-surface-caller-migration."
 ---
 
 ## Context
