@@ -1,7 +1,7 @@
 ---
 title: "Retire the between-test drop arm the boot-laid set exists to serve"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "premise gone: the between-test drop arm was removed by PR #5719 (merged 2026-07-31T17:46:15Z, 'remove the global between-test reset and its skip shield'). git grep resetTestTables on origin/main shows no call in packages/activerecord/src/cases/helper.ts; the only production caller left is the deliberate boot-time purge in test-setup-dy.ts:60 on the canonical-stamp fast path, which is load-bearing for worker-DB recycling and must not delete. Residual boot-laid-fallback hardening is covered by boot-laid-fallback-silently-drops-adapter-specific-tables; the leaked-row invariant #5719 exposed is covered by guard-non-transactional-row-writing-test-files."
 ---
 
 ## Context
