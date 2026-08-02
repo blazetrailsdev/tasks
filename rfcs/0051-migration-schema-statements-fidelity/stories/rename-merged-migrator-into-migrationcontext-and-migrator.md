@@ -1,7 +1,7 @@
 ---
 title: "Split trails' merged Migrator into Rails' MigrationContext + Migrator class pair"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T00:26:06Z"
+assignee: "rename-merged-migrator-into-migrationcontext-and-migrator"
 blocked-by: null
 closed-reason: null
 ---
