@@ -1,6 +1,6 @@
 ---
 title: "Report dropped SEEDED wide baseline rows, not just reviewed ones"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T11:36:48Z"
+assignee: "report-dropped-seeded-wide-rows"
 blocked-by: null
 closed-reason: null
 ---
