@@ -1,7 +1,7 @@
 ---
 title: "converge-schema-cache-getter-onto-bound-reflection"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T18:37:27Z"
+assignee: "converge-schema-cache-getter-onto-bound-reflection"
 blocked-by: null
 closed-reason: null
 ---
