@@ -1,6 +1,6 @@
 ---
 title: "Drop the SchemaStatements adapter constructor and AbstractAdapter's self-returning adapter getter"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 5854
 claim: "2026-08-02T02:06:48Z"
 assignee: "drop-schema-statements-adapter-constructor-and-self-getter"
 blocked-by: null
