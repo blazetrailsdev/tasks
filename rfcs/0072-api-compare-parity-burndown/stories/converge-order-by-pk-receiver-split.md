@@ -1,6 +1,6 @@
 ---
 title: "Split orderByPk's primary_key read to match Rails' two receivers"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T17:39:26Z"
+assignee: "converge-order-by-pk-receiver-split"
 blocked-by: null
 closed-reason: null
 ---
