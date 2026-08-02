@@ -1,6 +1,6 @@
 ---
 title: "defer-more-jobs-out-of-pre-ready"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T23:11:05Z"
+assignee: "defer-more-jobs-out-of-pre-ready"
 blocked-by: null
 closed-reason: null
 ---
