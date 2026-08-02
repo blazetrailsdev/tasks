@@ -1,6 +1,6 @@
 ---
 title: "Split orderByPk's primary_key read to match Rails' two receivers"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
