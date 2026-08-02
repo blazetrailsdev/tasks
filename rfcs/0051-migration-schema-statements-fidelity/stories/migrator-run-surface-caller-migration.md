@@ -1,6 +1,6 @@
 ---
 title: "migrator-run-surface-caller-migration"
-status: claimed
+status: blocked
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-02T00:36:05Z"
 assignee: "migrator-run-surface-caller-migration"
-blocked-by: null
+blocked-by: "Prerequisite migrator-keeps-only-its-rails-1404-surface is still claimed/unmerged: on origin/main (d41cae364) Migrator still carries the MigrationContext-style banner (migration.ts:2914), isProtectedEnvironment, and the discovery statics fromPath/fromDir/fromPaths/discoverMigrations, and MigrationContext#migrate/up/down/run/move still delegate via this.open() into Migrator. This story's acceptance criteria all assume those deletions have landed, and the caller migration touches the same migration.ts region, so doing it now means either redoing the predecessor's work or stacking a PR (both forbidden). Unblock once that story merges to main."
 closed-reason: null
 ---
 
