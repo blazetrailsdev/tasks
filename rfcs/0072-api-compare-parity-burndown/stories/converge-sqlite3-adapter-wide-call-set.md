@@ -1,6 +1,6 @@
 ---
 title: "converge-sqlite3-adapter-wide-call-set"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5913
 claim: "2026-08-02T19:19:25Z"
 assignee: "converge-sqlite3-adapter-wide-call-set"
 blocked-by: null
