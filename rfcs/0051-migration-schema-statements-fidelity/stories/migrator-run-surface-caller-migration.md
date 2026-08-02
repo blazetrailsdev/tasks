@@ -1,0 +1,76 @@
+---
+title: "migrator-run-surface-caller-migration"
+status: ready
+updated: 2026-08-02
+rfc: "0051-migration-schema-statements-fidelity"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`migrator-keeps-only-its-rails-1404-surface` finished the first half: every
+`MigrationContext` run method in `packages/activerecord/src/migration.ts` now
+has a real body (`migrate` / `up` / `down` / `run` / `migrationsStatus` /
+`move` / `lastStoredEnvironment` / `protectedEnvironment`), so nothing on
+`MigrationContext` delegates back into `Migrator` any more, and the discovery
+statics (`Migrator.fromPath` / `fromDir` / `fromPaths` / `discoverMigrations`)
+plus `Migrator#migrationsPaths`, `Migrator#isProtectedEnvironment` and
+`Migrator#move` are gone.
+
+What is left under the banner
+`// --- MigrationContext-style methods (Rails: MigrationContext) ---` in
+`Migrator` is the set whose _callers_ still hold a `Migrator`:
+`schemaMigration`, `open`, `needsMigration`, `pendingMigrationVersions`,
+`currentEnvironment`, `lastStoredEnvironment`, plus the MigrationContext-shaped
+`migrate(targetVersion, block)` / `up` / `down` / `rollback` / `forward` /
+`run(direction, target)` / `migrationsStatus` / `pendingMigrations`. Rails'
+`Migrator` (`vendor/rails/activerecord/lib/active_record/migration.rb:1404-1620`)
+owns only `current_version` / `current_migration` (alias `current`) / `run` /
+`migrate` — both no-arg, reading `@direction` / `@target_version` —
+`runnable` / `migrations` / `pending_migrations` / `migrated` / `load_migrated`
+and the privates, plus the statics `migrations_paths` + `current_version`.
+
+The blocker is the ~24 non-test call sites that construct
+`new Migrator(adapter, migrations, options)` from an in-memory
+`MigrationProxy[]` and then call the MigrationContext-shaped surface:
+`packages/trailties/src/commands/db.ts` (`createMigrator` /
+`withMigratorForDb` and ~10 command bodies),
+`packages/activerecord/src/tasks/database-tasks.ts:343,619,1148`,
+`packages/activerecord-cli/src/pending-migrations.ts`,
+`packages/activerecord/src/test-databases.ts`,
+`packages/website/src/lib/frontiers/trail-cli.ts`, plus `CheckPending`.
+Rails' `MigrationContext` is path-based (`migrations_paths`, constructor arg),
+so repointing those callers needs a decision about how a caller holding a
+pre-built migration list reaches a `MigrationContext` — trailties has its own
+`discoverMigrations` loader (`packages/trailties/src/migration-loader.ts`)
+rather than `MigrationContext#migrations`.
+
+`MigrationContext#up` / `down` / `run` also spell out
+`isUseAdvisoryLock() ? withAdvisoryLock(...) : ...` inline because
+`Migrator#migrate` / `#run` still carry the MigrationContext-shaped signatures;
+Rails just writes `Migrator.new(...).migrate` / `.run`.
+
+## Acceptance criteria
+
+- [ ] The `MigrationContext-style` banner block is gone from `Migrator`.
+- [ ] `Migrator#migrate` and `Migrator#run` take no arguments and read
+      `@direction` / `@target_version`, as `migration.rb:1444-1458` does.
+- [ ] `MigrationContext#up` / `down` / `run` call `Migrator#migrate` /
+      `Migrator#run` directly instead of spelling out the advisory-lock pair.
+- [ ] Every caller listed above reaches the run surface through a
+      `MigrationContext`, and `Migrator` keeps only what
+      `migration.rb:1404-1620` gives it.
+- [ ] Existing migrator / migration / trailties `db` tests keep their
+      Rails-verbatim names and pass.
+
+Hard rules: no `node:*` imports, no `process.*`, async fs only, no new runtime
+deps, 500 LOC ceiling, single PR from main.
