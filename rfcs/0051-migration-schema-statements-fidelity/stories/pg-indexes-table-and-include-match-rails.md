@@ -1,6 +1,6 @@
 ---
 title: "PG indexes() uses the tableName argument and an empty include array"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5888
 claim: "2026-08-02T15:35:18Z"
 assignee: "pg-indexes-table-and-include-match-rails"
 blocked-by: null
