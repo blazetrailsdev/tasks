@@ -1,6 +1,6 @@
 ---
 title: "Migration#schema accessor has no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
