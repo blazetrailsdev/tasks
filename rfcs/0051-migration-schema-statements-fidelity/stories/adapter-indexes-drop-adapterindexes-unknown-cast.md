@@ -1,6 +1,6 @@
 ---
 title: "Reach the adapter's indexes() from SchemaStatements without an as-unknown-as cast"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T12:06:48Z"
+assignee: "adapter-indexes-drop-adapterindexes-unknown-cast"
 blocked-by: null
 closed-reason: null
 ---
