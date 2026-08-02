@@ -1,7 +1,7 @@
 ---
 title: "removeIndex's ifExists probe should be Rails' single index_exists? call"
-status: draft
-updated: 2026-08-01
+status: ready
+updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
