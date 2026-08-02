@@ -12,7 +12,7 @@ priority: 180
 pr: null
 claim: "2026-08-02T00:36:05Z"
 assignee: "migrator-run-surface-caller-migration"
-blocked-by: "Re-checked 2026-08-02: the original blocker (migrator-keeps-only-its-rails-1404-surface) is DONE and its deletions are on origin/main — no MigrationContext-style banner, no fromPath/fromDir/fromPaths/discoverMigrations statics, no Migrator#isProtectedEnvironment. The live blocker is now the story's own Decision section: how a caller holding a pre-built MigrationProxy[] reaches a MigrationContext is settled by migration-context-built-by-subclass-override-not-paths, still unmerged (PR 5860 open). That PR adds the 4th constructor arg the ~24 caller migrations depend on and touches the same migration.ts region. Unblock when 5860 merges."
+blocked-by: "Re-checked 2026-08-02 (second pass). Original blocker migrator-keeps-only-its-rails-1404-surface is DONE and verified on origin/main: no MigrationContext-style banner, no fromPath/fromDir/fromPaths/discoverMigrations statics, no Migrator#isProtectedEnvironment. The live blocker is now the Decision section: PR 5860 (migration-context-built-by-subclass-override-not-paths) was CLOSED UNMERGED, so the 4th 'registeredMigrations' constructor argument the ~24 caller migrations were going to use does NOT exist on origin/main (git grep registeredMigrations packages/activerecord/src -> no hits). How a caller holding a pre-built MigrationProxy[] reaches a MigrationContext is now settled by unify-migration-discovery-delete-registered-migrations-seam, which unifies the two discovery paths instead. Unblock when that lands; the Decision section in this body is stale and must be re-read against the unify story first."
 closed-reason: null
 ---
 
