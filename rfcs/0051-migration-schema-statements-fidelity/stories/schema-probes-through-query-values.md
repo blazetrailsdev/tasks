@@ -1,6 +1,6 @@
 ---
 title: 'Route abstract SchemaStatements catalog probes through queryValues(sql, "SCHEMA")'
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5846
 claim: "2026-08-02T00:31:03Z"
 assignee: "schema-probes-through-query-values"
 blocked-by: null
