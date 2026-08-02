@@ -1,6 +1,6 @@
 ---
 title: "Configure MAINTENANCE_PR_TOKEN so drift maintenance PRs get CI without a close/reopen"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 5899
 claim: "2026-08-02T15:23:09Z"
 assignee: "configure-maintenance-pr-token-for-wide-baseline-prs"
 blocked-by: null
