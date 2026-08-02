@@ -1,7 +1,7 @@
 ---
 rfc: "0083-wide-call-ratchet-noise-reduction"
 title: "Wide call-set ratchet — noise reduction"
-status: closed
+status: active
 created: 2026-07-30
 updated: 2026-08-02
 owner: "@your-handle"
