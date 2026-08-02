@@ -1,7 +1,7 @@
 ---
 title: "Converge setSignedIdVerifierSecret onto the signed_id_verifier_secret accessor"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T18:55:25Z"
+assignee: "converge-signed-id-verifier-secret-writer"
 blocked-by: null
 closed-reason: null
 ---
