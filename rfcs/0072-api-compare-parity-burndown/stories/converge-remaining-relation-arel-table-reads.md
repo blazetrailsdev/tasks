@@ -1,6 +1,6 @@
 ---
 title: "Check the four remaining relation.ts arelTable reads against their Rails bodies"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T23:25:46Z"
+assignee: "converge-remaining-relation-arel-table-reads"
 blocked-by: null
 closed-reason: null
 ---
