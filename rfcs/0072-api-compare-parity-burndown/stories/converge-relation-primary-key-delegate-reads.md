@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-primary-key-delegate-reads"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5894
 claim: "2026-08-02T16:18:01Z"
 assignee: "converge-relation-primary-key-delegate-reads"
 blocked-by: null
