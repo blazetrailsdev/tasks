@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-indexes-return-type"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5865
 claim: "2026-08-02T03:56:53Z"
 assignee: "converge-adapter-indexes-return-type"
 blocked-by: null
