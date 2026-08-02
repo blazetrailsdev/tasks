@@ -1,6 +1,6 @@
 ---
 title: "Regenerate the narrow artifact inside api:calls"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 3
-pr: null
+pr: 5881
 claim: "2026-08-02T12:52:03Z"
 assignee: "narrow-ratchet-regenerate-artifact-in-gate"
 blocked-by: null
