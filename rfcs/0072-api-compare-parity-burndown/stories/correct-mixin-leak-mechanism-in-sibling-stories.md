@@ -1,7 +1,7 @@
 ---
 title: "Correct the this-typed mixin premise in RFC 0072 stories derived from the top-files inventory spike"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T19:43:28Z"
+assignee: "correct-mixin-leak-mechanism-in-sibling-stories"
 blocked-by: null
 closed-reason: null
 ---
