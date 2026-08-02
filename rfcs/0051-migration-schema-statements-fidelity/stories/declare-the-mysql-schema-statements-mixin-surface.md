@@ -1,6 +1,6 @@
 ---
 title: "declare-the-mysql-schema-statements-mixin-surface"
-status: draft
+status: ready
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
