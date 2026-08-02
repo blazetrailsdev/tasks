@@ -1,6 +1,6 @@
 ---
 title: "converge-model-schema-coder-and-attribute-definition-names"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T20:55:26Z"
+assignee: "converge-model-schema-coder-and-attribute-definition-names"
 blocked-by: null
 closed-reason: null
 ---
