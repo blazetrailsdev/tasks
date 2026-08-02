@@ -1,6 +1,6 @@
 ---
 title: "Route excluding's deferred arm through the predicate builder's table"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
