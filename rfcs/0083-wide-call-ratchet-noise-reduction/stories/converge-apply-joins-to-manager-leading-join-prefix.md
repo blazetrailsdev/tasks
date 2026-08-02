@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
-deps: []
+deps:
+  - converge-apply-joins-to-manager-raw-join-routing
 deps-rfc: []
 est-loc: 120
 priority: 5
