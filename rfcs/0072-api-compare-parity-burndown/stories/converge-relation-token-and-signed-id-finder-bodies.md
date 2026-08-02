@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-token-and-signed-id-finder-bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 5905
 claim: "2026-08-02T18:31:25Z"
 assignee: "converge-relation-token-and-signed-id-finder-bodies"
 blocked-by: null
