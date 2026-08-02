@@ -1,6 +1,6 @@
 ---
 title: "composite-pk-not-null-forcing-is-not-in-schema-rb"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
+pr: 5900
 claim: "2026-08-02T18:01:29Z"
 assignee: "composite-pk-not-null-forcing-is-not-in-schema-rb"
 blocked-by: null
