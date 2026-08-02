@@ -1,7 +1,7 @@
 ---
 title: "Regenerate the narrow artifact inside api:calls"
-status: draft
-updated: 2026-07-31
+status: ready
+updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
 deps: []
