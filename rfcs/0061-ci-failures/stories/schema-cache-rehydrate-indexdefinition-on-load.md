@@ -1,6 +1,6 @@
 ---
 title: "schema-cache-rehydrate-indexdefinition-on-load"
-status: in-progress
+status: closed
 updated: 2026-08-02
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5891
-claim: "2026-08-02T15:59:57Z"
-assignee: "schema-cache-rehydrate-indexdefinition-on-load"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by #5890, which shipped the same rehydration under schema-cache-rehydrates-indexdefinition-instances"
 ---
 
 ## Context
