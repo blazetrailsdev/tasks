@@ -1,7 +1,7 @@
 ---
 title: "delete-invented-pg-range-ddl-helpers"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T19:49:25Z"
+assignee: "delete-invented-pg-range-ddl-helpers"
 blocked-by: null
 closed-reason: null
 ---
