@@ -1,14 +1,14 @@
 ---
 title: "Route tableExists/tables/views through adapter dataSourceSql instead of an inline adapterName switch"
-status: ready
-updated: 2026-07-30
+status: done
+updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5846
 claim: null
 assignee: null
 blocked-by: null
