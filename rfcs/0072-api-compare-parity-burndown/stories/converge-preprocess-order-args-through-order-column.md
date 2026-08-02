@@ -1,6 +1,6 @@
 ---
 title: "Route preprocessOrderArgs symbol and hash arms through orderColumn"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T23:15:52Z"
+assignee: "converge-preprocess-order-args-through-order-column"
 blocked-by: null
 closed-reason: null
 ---
