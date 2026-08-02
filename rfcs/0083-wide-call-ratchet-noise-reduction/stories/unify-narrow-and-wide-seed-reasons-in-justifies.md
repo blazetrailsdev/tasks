@@ -1,6 +1,6 @@
 ---
 title: "Make justifies() reject the narrow RFC 0044 seed reason too"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
