@@ -1,6 +1,6 @@
 ---
 title: "Correct the this-typed mixin premise in RFC 0072 stories derived from the top-files inventory spike"
-status: claimed
+status: closed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: "2026-08-02T19:43:28Z"
-assignee: "correct-mixin-leak-mechanism-in-sibling-stories"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "docs-only: no sibling story depended on the this-typed framing; corrected the spike D4 + host-leak story mechanism and recorded the re-derived 21-key __mixin set in the story body"
 ---
 
 ## Context
