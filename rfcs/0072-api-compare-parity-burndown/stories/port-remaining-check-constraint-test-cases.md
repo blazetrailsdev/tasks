@@ -1,6 +1,6 @@
 ---
 title: "Port the 18 remaining check_constraint_test.rb cases"
-status: ready
+status: draft
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
