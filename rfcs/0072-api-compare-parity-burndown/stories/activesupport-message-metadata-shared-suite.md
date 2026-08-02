@@ -1,7 +1,7 @@
 ---
 title: "activesupport-message-metadata-shared-suite"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T09:16:49Z"
+assignee: "activesupport-message-metadata-shared-suite"
 blocked-by: null
 closed-reason: null
 ---
