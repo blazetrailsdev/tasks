@@ -1,7 +1,7 @@
 ---
 title: "Route extensions / enable_extension / disable_extension through internal_exec_query"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T13:39:10Z"
+assignee: "converge-pg-extension-cluster-onto-internal-exec-query"
 blocked-by: null
 closed-reason: null
 ---
