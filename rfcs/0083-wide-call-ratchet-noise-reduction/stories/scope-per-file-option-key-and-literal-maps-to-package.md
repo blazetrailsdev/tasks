@@ -1,6 +1,6 @@
 ---
 title: "Scope the per-file option-key and literal maps to the same package"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
