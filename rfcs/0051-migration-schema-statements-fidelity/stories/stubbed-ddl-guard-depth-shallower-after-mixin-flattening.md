@@ -1,6 +1,6 @@
 ---
 title: "Re-derive the stubbed-DDL guard depth now that the DDL bodies are adapter methods"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
