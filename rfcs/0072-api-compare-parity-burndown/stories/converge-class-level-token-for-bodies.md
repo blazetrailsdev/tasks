@@ -1,6 +1,6 @@
 ---
 title: "Converge class-level TokenFor bodies onto Rails' all-delegation"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T19:25:25Z"
+assignee: "converge-class-level-token-for-bodies"
 blocked-by: null
 closed-reason: null
 ---
