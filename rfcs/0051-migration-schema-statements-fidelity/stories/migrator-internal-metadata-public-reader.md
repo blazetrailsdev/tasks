@@ -1,6 +1,6 @@
 ---
 title: "Migrator#internalMetadata is a public reader Rails does not have"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5862
 claim: "2026-08-02T03:26:47Z"
 assignee: "migrator-internal-metadata-public-reader"
 blocked-by: null
