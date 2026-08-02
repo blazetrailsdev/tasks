@@ -1,7 +1,7 @@
 ---
 title: "Make the pre-snapshot boot-laid fallback purge-only by construction"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
