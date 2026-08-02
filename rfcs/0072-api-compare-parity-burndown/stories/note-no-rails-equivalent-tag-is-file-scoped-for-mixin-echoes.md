@@ -1,6 +1,6 @@
 ---
 title: "Record that @noRailsEquivalent is file-scoped, so mixin echoes on base.ts survive their home-file story"
-status: ready
+status: draft
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
