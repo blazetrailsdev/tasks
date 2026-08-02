@@ -1,7 +1,7 @@
 ---
 title: "Delegate trailties db migrate/migrate:up/migrate:down to DatabaseTasks"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 130
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T03:46:49Z"
+assignee: "trailties-db-migrate-delegates-to-database-tasks"
 blocked-by: null
 closed-reason: null
 ---
