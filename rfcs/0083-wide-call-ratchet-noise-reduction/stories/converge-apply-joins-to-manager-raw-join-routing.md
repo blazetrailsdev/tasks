@@ -1,6 +1,6 @@
 ---
 title: "converge-apply-joins-to-manager-raw-join-routing"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 0
-pr: null
+pr: 5902
 claim: "2026-08-02T17:49:02Z"
 assignee: "converge-apply-joins-to-manager-raw-join-routing"
 blocked-by: null
