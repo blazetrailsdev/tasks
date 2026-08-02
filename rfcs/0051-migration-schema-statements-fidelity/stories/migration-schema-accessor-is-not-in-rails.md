@@ -1,6 +1,6 @@
 ---
 title: "Migration#schema accessor has no Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5851
 claim: "2026-08-02T01:35:44Z"
 assignee: "migration-schema-accessor-is-not-in-rails"
 blocked-by: null
