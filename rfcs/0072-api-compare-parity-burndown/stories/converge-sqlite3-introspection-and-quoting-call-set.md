@@ -1,7 +1,7 @@
 ---
 title: "Converge the sqlite3 introspection and quoting call sets"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: ["converge-sqlite3-adapter-wide-call-set"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T23:45:48Z"
+assignee: "converge-sqlite3-introspection-and-quoting-call-set"
 blocked-by: null
 closed-reason: null
 ---
