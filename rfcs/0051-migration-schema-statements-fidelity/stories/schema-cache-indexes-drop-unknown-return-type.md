@@ -1,6 +1,6 @@
 ---
 title: "Type SchemaCache#indexes as adapter index rows instead of unknown[]"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 5879
 claim: "2026-08-02T12:36:50Z"
 assignee: "schema-cache-indexes-drop-unknown-return-type"
 blocked-by: null
