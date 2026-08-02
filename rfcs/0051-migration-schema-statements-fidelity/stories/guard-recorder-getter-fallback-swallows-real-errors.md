@@ -1,6 +1,6 @@
 ---
 title: "Narrow the stubbed-DDL recorder's getter fallback so it cannot swallow real errors"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T01:36:52Z"
+assignee: "guard-recorder-getter-fallback-swallows-real-errors"
 blocked-by: null
 closed-reason: null
 ---
