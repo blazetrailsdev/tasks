@@ -1,6 +1,6 @@
 ---
 title: "composite-pk-not-null-forcing-is-not-in-schema-rb"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
