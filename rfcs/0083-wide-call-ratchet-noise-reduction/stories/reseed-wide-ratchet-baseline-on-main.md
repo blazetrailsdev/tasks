@@ -1,6 +1,6 @@
 ---
 title: "Reseed the wide ratchet baseline on main so drift is attributed to the merge that caused it"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
