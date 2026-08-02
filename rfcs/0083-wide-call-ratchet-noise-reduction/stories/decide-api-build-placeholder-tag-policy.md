@@ -1,7 +1,7 @@
 ---
 title: "Decide whether api:build should keep minting inert placeholder @missingRailsCall tags"
-status: draft
-updated: 2026-07-31
+status: ready
+updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
