@@ -1,6 +1,6 @@
 ---
 title: "PG indexes() uses the tableName argument and an empty include array"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
