@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-adapter-per-file-singletons"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5918
 claim: "2026-08-02T20:01:26Z"
 assignee: "extra-surface-adapter-per-file-singletons"
 blocked-by: null
