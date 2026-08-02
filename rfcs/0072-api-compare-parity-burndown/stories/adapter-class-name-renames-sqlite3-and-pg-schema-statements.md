@@ -1,6 +1,6 @@
 ---
 title: "adapter-class-name-renames-sqlite3-and-pg-schema-statements"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5929
 claim: "2026-08-02T22:58:48Z"
 assignee: "adapter-class-name-renames-sqlite3-and-pg-schema-statements"
 blocked-by: null
