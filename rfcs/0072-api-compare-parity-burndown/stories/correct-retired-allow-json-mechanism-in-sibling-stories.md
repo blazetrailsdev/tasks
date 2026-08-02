@@ -1,6 +1,6 @@
 ---
 title: "Sweep the retired extra-surface-allow.json / @internal instruction out of 19 RFC 0072 story bodies"
-status: ready
+status: draft
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
