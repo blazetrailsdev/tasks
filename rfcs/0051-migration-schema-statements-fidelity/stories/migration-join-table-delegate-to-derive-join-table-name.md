@@ -1,6 +1,6 @@
 ---
 title: "Delegate joinTableName to deriveJoinTableName (blocked on module-init leaf constraint)"
-status: blocked
+status: ready
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5763
-claim: "2026-07-31T22:10:39Z"
-assignee: "migration-join-table-delegate-to-derive-join-table-name"
-blocked-by: "Cannot converge until base.ts's eager module-level mixin wiring stops depending on module entry order. Delegating joinTableName to deriveJoinTableName adds the join-table -> model-schema edge, which flips ESM eval order and crashes base.ts:4802 (extend(Base, ConnectionHandling.ClassMethods)) with 'Cannot access ClassMethods before initialization'. Measured 2026-07-31; a single-edge cut (schema-migration -> base) was tried and is insufficient. Blocked on base-mixin-wiring-order-independent-module-init. Ratifying the duplication was rejected — converge only."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
