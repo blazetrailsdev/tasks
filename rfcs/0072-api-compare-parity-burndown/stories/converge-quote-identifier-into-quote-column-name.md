@@ -1,6 +1,6 @@
 ---
 title: "converge-quote-identifier-into-quote-column-name"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5893
 claim: "2026-08-02T16:06:00Z"
 assignee: "converge-quote-identifier-into-quote-column-name"
 blocked-by: null
