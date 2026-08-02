@@ -1,6 +1,6 @@
 ---
 title: "delete-the-schema-statements-accessor"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5841
 claim: "2026-08-02T00:06:04Z"
 assignee: "delete-the-schema-statements-accessor"
 blocked-by: null
