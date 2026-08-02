@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency constructor onto Rails' (model, table, associations, join_type)"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T23:05:46Z"
+assignee: "converge-join-dependency-constructor-arg-order"
 blocked-by: null
 closed-reason: null
 ---
