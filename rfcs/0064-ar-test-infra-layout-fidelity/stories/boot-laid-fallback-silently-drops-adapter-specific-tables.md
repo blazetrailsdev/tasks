@@ -1,6 +1,6 @@
 ---
 title: "Make the pre-snapshot boot-laid fallback purge-only by construction"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T18:13:29Z"
+assignee: "boot-laid-fallback-silently-drops-adapter-specific-tables"
 blocked-by: null
 closed-reason: null
 ---
