@@ -1,6 +1,6 @@
 ---
 title: "Thread the port-ownership index through crossFileHits / codegen:apply"
-status: ready
+status: draft
 updated: 2026-08-02
 rfc: "0086-prism-codegen-productionization"
 cluster: null
