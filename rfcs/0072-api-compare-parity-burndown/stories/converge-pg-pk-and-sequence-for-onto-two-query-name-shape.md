@@ -1,7 +1,7 @@
 ---
 title: "converge pkAndSequenceFor onto Rails' two-query PostgreSQL::Name shape"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T15:53:58Z"
+assignee: "converge-pg-pk-and-sequence-for-onto-two-query-name-shape"
 blocked-by: null
 closed-reason: null
 ---
