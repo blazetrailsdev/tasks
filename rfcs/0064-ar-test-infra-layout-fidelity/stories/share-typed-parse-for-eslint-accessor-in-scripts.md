@@ -8,7 +8,7 @@ deps:
   - refresh-stale-eslint-exclude-baselines
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 11
 pr: null
 claim: null
 assignee: null
