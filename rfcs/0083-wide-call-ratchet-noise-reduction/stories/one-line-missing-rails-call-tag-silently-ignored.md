@@ -1,6 +1,6 @@
 ---
 title: "One-line @missingRailsCall tag is silently ignored by the parser"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T02:26:51Z"
+assignee: "one-line-missing-rails-call-tag-silently-ignored"
 blocked-by: null
 closed-reason: null
 ---
