@@ -1,13 +1,13 @@
 ---
 title: "Scope isPortedWithArgs to the same package instead of package+deps"
 status: ready
-updated: 2026-07-30
+updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: ["ruby-extractor-record-call-receiver-kind"]
 deps-rfc: []
 est-loc: 120
-priority: 9
+priority: 0
 pr: null
 claim: null
 assignee: null
