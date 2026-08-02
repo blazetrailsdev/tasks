@@ -1,6 +1,6 @@
 ---
 title: "Decide the novel adapter and nested class names across the connection-adapters tree"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T22:35:46Z"
+assignee: "extra-surface-adapter-class-names"
 blocked-by: null
 closed-reason: null
 ---
