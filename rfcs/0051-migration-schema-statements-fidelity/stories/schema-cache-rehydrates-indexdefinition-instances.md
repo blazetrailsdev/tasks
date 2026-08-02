@@ -1,6 +1,6 @@
 ---
 title: "Schema cache rehydrates IndexDefinition instances, not plain rows"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5890
 claim: "2026-08-02T15:41:57Z"
 assignee: "schema-cache-rehydrates-indexdefinition-instances"
 blocked-by: null
