@@ -1,6 +1,6 @@
 ---
 title: "Retire the standalone SchemaStatements companion construction sites"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T00:56:47Z"
+assignee: "retire-standalone-schema-statements-construction"
 blocked-by: null
 closed-reason: null
 ---
