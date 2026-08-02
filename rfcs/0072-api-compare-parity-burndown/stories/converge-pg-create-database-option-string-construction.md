@@ -1,7 +1,7 @@
 ---
 title: "Build create_database's option string by iterating merged options as Rails does"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T13:31:09Z"
+assignee: "converge-pg-create-database-option-string-construction"
 blocked-by: null
 closed-reason: null
 ---
