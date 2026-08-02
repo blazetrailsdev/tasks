@@ -1,6 +1,6 @@
 ---
 title: "Reseed the wide ratchet baseline on main so drift is attributed to the merge that caused it"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5874
 claim: "2026-08-02T11:46:48Z"
 assignee: "reseed-wide-ratchet-baseline-on-main"
 blocked-by: null
