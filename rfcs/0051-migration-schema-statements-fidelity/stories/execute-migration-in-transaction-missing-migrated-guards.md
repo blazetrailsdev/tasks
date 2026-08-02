@@ -1,6 +1,6 @@
 ---
 title: "Port the migrated? early-return guards into executeMigrationInTransaction"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5843
 claim: "2026-08-02T00:16:03Z"
 assignee: "execute-migration-in-transaction-missing-migrated-guards"
 blocked-by: null
