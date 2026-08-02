@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-statements-not-implemented-bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5840
 claim: "2026-08-02T00:01:04Z"
 assignee: "converge-schema-statements-not-implemented-bodies"
 blocked-by: null
