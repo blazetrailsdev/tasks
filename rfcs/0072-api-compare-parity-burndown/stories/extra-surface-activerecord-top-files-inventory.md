@@ -62,7 +62,7 @@ least **179 novel and 1015 moved are tooling artifact** — five distinct
 extractor/allow-set defects, each independently reproducible and each fixable
 in well under 100 LOC. The story's own hypotheses were partly right and partly
 wrong: the `inheritance.ts` cross-file leakage IS an extractor artifact, but
-via the `this`-typed mixin convention rather than re-exports; and the mysql
+via the synthesized mixin pseudo-module rather than re-exports; and the mysql
 `ER_*` / `CR_*` constants are NOT allowlist candidates — Rails declares them,
 the allow-set just never reads `fileConstants`.
 
@@ -129,7 +129,7 @@ The two right-hand columns are the same artifact split on the moved side.
 
 Package-wide (all 216 drifted files): 776 novel / 2084 moved; 100 novel are
 `@internal`-tagged, 22 novel are Rails constants, 14 novel + 343 moved are
-mixin host-interface leak, and the re-export defect accounts for 527 of
+mixin host-interface leak (see the D4 correction below), and the re-export defect accounts for 527 of
 `connection-adapters.ts`'s 616. The relative-qualified-include defect removes
 a further 183 moved.
 
@@ -168,7 +168,19 @@ a further 183 moved.
 - **Scale:** 527 of `connection-adapters.ts`'s 616 extras (a 180-line file)
 - **Story:** `extra-surface-skip-reexported-class-entries`
 
-### D4: `this`-typed mixin pseudo-modules leak the entire host interface
+### D4: mixin pseudo-modules leak the entire host interface
+
+> **Correction (2026-08-02, story
+> `correct-mixin-leak-mechanism-in-sibling-stories`):** this section originally
+> stated the mechanism as "`this`-typed" — that the extractor keys off a
+> function's `this` parameter and copies the named host interface. It does
+> not. The pseudo-module is synthesized for any exported function whose RETURN
+> type has construct signatures (`extract-ts-api.ts:691-706`,
+> `getConstructSignatures()`), and the members copied are the returned
+> constructor's instance type. The `inheritance.ts` helpers matched because
+> they return `typeof Base`. Same files, same fix — but a `grep` for `this:`
+> selects the wrong set; the authoritative query is the `<file>:<fn>__mixin`
+> keys in `output/ts-api.json`.
 
 - **Type:** extractor bug — this is the real cause of the leakage the story
   suspected was re-export double-counting

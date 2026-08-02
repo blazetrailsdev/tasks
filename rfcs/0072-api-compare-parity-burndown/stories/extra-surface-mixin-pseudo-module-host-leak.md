@@ -1,5 +1,5 @@
 ---
-title: "extra-surface: this-typed mixin pseudo-modules leak the whole host interface"
+title: "extra-surface: mixin pseudo-modules leak the whole host interface"
 status: done
 updated: 2026-07-26
 rfc: "0072-api-compare-parity-burndown"
@@ -21,12 +21,17 @@ Found by the `extra-surface-activerecord-top-files-inventory` spike
 (2026-07-25). The story's original hypothesis — that `inheritance.ts`'s novel
 list containing `loadBelongsTo`, `restoreAttribute`,
 `savedChangeToAttributeValues` meant re-export double-counting — is confirmed,
-but the mechanism is the **`this`-typed mixin convention**, not re-exports.
+but the mechanism is the **mixin pseudo-module the extractor synthesizes**,
+not re-exports.
 
-`scripts/api-compare/extract-ts-api.ts` synthesizes a pseudo-module per
-`this`-typed exported function, keyed `<file>:<fnName>__mixin`, whose
-`instanceMethods` is the _entire host interface_ the function's `this`
-parameter names. `inheritance.ts` yields seven of them
+`scripts/api-compare/extract-ts-api.ts` synthesizes a pseudo-module for any
+exported function whose RETURN type has construct signatures (the
+`getConstructSignatures()` branch, `extract-ts-api.ts:691-706`), keyed
+`<file>:<fnName>__mixin`, whose `instanceMethods` are the members of the
+returned constructor's instance type. There is no `this`-parameter handling
+anywhere in the extractor: the `inheritance.ts` helpers match because they
+return `typeof Base`, not because they are `this`-typed. Selecting files by
+grepping for `this:` picks the wrong set. `inheritance.ts` yields seven of them
 (`computeType__mixin`, `baseClass__mixin`, `getStiBase__mixin`,
 `findStiClass__mixin`, `stiClassFor__mixin`, `polymorphicClassFor__mixin`,
 `discriminateClassForRecord__mixin`) and **each carries all 136 members of the
@@ -74,8 +79,8 @@ legitimate; the bug is that extra-surface treats it as declared surface.
   substring match on user-controllable names — if no marker field exists, add
   one in `extract-ts-api.ts`.
 - Test in `scripts/api-compare/extra-surface.test.ts` with a fixture file
-  declaring one `this`-typed mixin function over a host interface with a
-  member the file does not declare; assert the member is absent from extras
+  declaring one exported function returning a constructor whose instance type
+  has a member the file does not declare; assert the member is absent from extras
   and the function name is present.
 - `pnpm api:compare && pnpm api:extra --package activerecord`: moved drops by
   ~343 and novel by ~14; `associations.ts` moved 94 → ~0, `inheritance.ts`

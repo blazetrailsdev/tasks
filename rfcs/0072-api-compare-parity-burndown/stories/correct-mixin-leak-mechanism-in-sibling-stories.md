@@ -51,3 +51,65 @@ as `this`-typed will select the wrong files.
   the set of `<file>:<fn>__mixin` keys in `output/ts-api.json`.
 - Docs-only outcome is a valid result if no sibling story turns out to depend
   on the wrong framing — record that finding on this story and close it.
+
+## Findings (2026-08-02)
+
+Docs-only outcome. **No sibling story's file selection depended on the
+`this`-typed framing**, so nothing needed re-scoping; the wrong mechanism was
+corrected where it is stated, and the authoritative mixin-key set is recorded
+below so future readers do not re-derive it.
+
+### The real mechanism
+
+`scripts/api-compare/extract-ts-api.ts:691-706`: a second top-level walk visits
+every exported function declaration, takes the declaration's signature return
+type, and bails unless `returnType.getConstructSignatures()` is non-empty. When
+it is, it keys a pseudo-module `<file>:<fnName>__mixin` and copies the
+properties of `constructSigs[0].getReturnType()` — the returned constructor's
+instance type. No `this`-parameter handling exists anywhere in the extractor.
+
+### Story-by-story check
+
+- `triage-newly-visible-mixin-parity-gaps` (ready, est 120) — **not affected.**
+  Scoped to the 258 Rails-side methods made visible by PR #5334's
+  `resolveModuleName` namespace-prefix walk (Ruby `include`/`extend`
+  resolution). Its file selection is by Rails host + contributing Ruby module
+  and never touches the TS extractor's pseudo-module path. Left unchanged.
+- `burn-down-mixin-driven-wide-ratchet-expansion` (done, PR #5346) — **not
+  affected**, same reason: it buckets the wide-call ratchet regeneration from
+  #5334. Its "mixin" is the Ruby-side one. Left unchanged.
+- `extra-surface-associations-engine-classify`,
+  `extra-surface-sti-and-schema-registry-names` (both `deps:
+extra-surface-mixin-pseudo-module-host-leak`) — **not affected.** They cite
+  the artifact by `__mixin` key and by declaring file, which is
+  mechanism-agnostic and matches the re-derivation below. Left unchanged.
+- `extra-surface-mixin-pseudo-module-host-leak` (done, PR #5336) — **corrected**
+  (title + mechanism paragraph + the fixture wording in its acceptance
+  criteria).
+- `extra-surface-activerecord-top-files-inventory` (the spike, closed) —
+  **corrected**: D4's heading and summary line, plus an inline correction note,
+  since ten registered stories cite this body as their source.
+
+### Re-derived `__mixin` key set
+
+`pnpm build && pnpm api:compare`, then the `<file>:<fn>__mixin` keys under
+`packages.<pkg>.classes` in `scripts/api-compare/output/ts-api.json`
+(2026-08-02, `ba674d3eb`): **21 keys in 4 packages, 12 files.**
+
+| package          | file                                      | mixin functions                                                                                                                                  |
+| ---------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| activerecord     | `inheritance.ts`                          | `baseClass`, `computeType`, `discriminateClassForRecord`, `findStiClass`, `getStiBase`, `polymorphicClassFor`, `stiClassFor`                     |
+| activerecord     | `relation/delegation.ts`                  | `associationRelationClassFor`, `collectionProxyClassFor`, `disableJoinsAssociationRelationClassFor`, `relationClassFor`, `relationDelegateClass` |
+| activerecord     | `adapters/postgresql/schema-ar-models.ts` | `makeSchemaThingModel`, `makeThing5Model`                                                                                                        |
+| activerecord     | `store.ts`                                | `storeAccessorFor`, `storeAccessorForMethod`                                                                                                     |
+| activerecord     | `associations.ts`                         | `resolveAssocClass`                                                                                                                              |
+| activerecord     | `migration/compatibility.ts`              | `findVersion`                                                                                                                                    |
+| activemodel      | `type/helpers/numeric.ts`                 | `applyNumericMixin`                                                                                                                              |
+| activesupport    | `callbacks.ts`                            | `CallbacksMixin`                                                                                                                                 |
+| actioncontroller | `metal/request-forgery-protection.ts`     | `protectionMethodClass`                                                                                                                          |
+
+Post-#5336 this set is much smaller than the spike's (the host-leak members no
+longer count as file surface), and it is broader than the spike's six
+activerecord files — `store.ts`, `adapters/postgresql/schema-ar-models.ts` and
+the non-activerecord entries are new to it. None of these functions is
+`this`-typed.
