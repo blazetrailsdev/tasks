@@ -6,7 +6,7 @@ rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: "2026-08-02T18:19:30Z"
