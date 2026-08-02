@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-association-find-not-found-path"
-status: in-progress
+status: closed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5880
-claim: "2026-08-02T12:46:49Z"
-assignee: "converge-collection-association-find-not-found-path"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Pulled into PR #5875"
 ---
 
 ## Context
