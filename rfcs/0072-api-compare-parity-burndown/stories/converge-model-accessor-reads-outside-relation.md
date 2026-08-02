@@ -1,6 +1,6 @@
 ---
 title: "Converge model-accessor reads outside the relation family (7 wide-ratchet entries)"
-status: claimed
+status: in-progress
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: api-compare-tooling
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5875
 claim: "2026-08-02T11:56:50Z"
 assignee: "converge-model-accessor-reads-outside-relation"
 blocked-by: null
