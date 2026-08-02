@@ -5,7 +5,7 @@ updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
-  - migrator-keeps-only-its-rails-1404-surface
+  - migration-context-built-by-subclass-override-not-paths
 deps-rfc: []
 est-loc: null
 priority: null
