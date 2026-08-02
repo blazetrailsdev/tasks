@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-indexes-return-type"
-status: in-progress
+status: closed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 5865
-claim: "2026-08-02T03:56:53Z"
-assignee: "converge-adapter-indexes-return-type"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate: same defect (AbstractAdapter#indexes declared Promise<unknown[]> vs the mixin's IndexDefinition row shape) as adapter-indexes-return-type-index-definition-shape, claimed 70min earlier and in flight as the broader PR 5858 (+54/-72, 6 files, also drops the Migration#addReference cast) vs this story's PR 5865 (+32/-9, 3 files). Verified on origin/main: one defect, one site (abstract-adapter.ts indexes decl, abstract/schema-statements.ts:1219 impl). Fold the unique AC — delete the drift-ok waiver on AbstractAdapter#indexes and keep scripts/mixin-declaration-drift.test.ts green — into 5858; close 5865."
 ---
 
 ## Context
