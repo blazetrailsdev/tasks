@@ -1,6 +1,6 @@
 ---
 title: "api:build: lower the per-file unreviewed marks for rows it drops"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
