@@ -1,6 +1,6 @@
 ---
 title: "Catch drift between a mixed-in SchemaStatements module and the adapter interface that declares it"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T03:36:48Z"
+assignee: "mixin-declaration-interface-can-drift-from-its-module"
 blocked-by: null
 closed-reason: null
 ---
