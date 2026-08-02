@@ -1,6 +1,6 @@
 ---
 title: "Converge setSignedIdVerifierSecret onto the signed_id_verifier_secret accessor"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
