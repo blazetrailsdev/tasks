@@ -1,6 +1,6 @@
 ---
 title: "converge-quote-identifier-into-quote-column-name"
-status: in-progress
+status: done
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
