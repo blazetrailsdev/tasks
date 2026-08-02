@@ -1,6 +1,6 @@
 ---
 title: "converge-is-touching-suppressed-to-no-touching-predicate"
-status: ready
+status: claimed
 updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T20:49:25Z"
+assignee: "converge-is-touching-suppressed-to-no-touching-predicate"
 blocked-by: null
 closed-reason: null
 ---
