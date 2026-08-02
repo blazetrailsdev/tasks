@@ -1,7 +1,7 @@
 ---
 title: "Add Rails' advisory-lock id ArgumentError guard and settle the pinned-client routing deviation"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-02
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-02T13:23:09Z"
+assignee: "converge-pg-advisory-lock-id-guard-and-exec-routing"
 blocked-by: null
 closed-reason: null
 ---
