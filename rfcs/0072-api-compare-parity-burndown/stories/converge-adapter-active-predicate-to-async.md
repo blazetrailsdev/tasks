@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-active-predicate-to-async"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5967
 claim: "2026-08-03T13:34:01Z"
 assignee: "converge-adapter-active-predicate-to-async"
 blocked-by: null
