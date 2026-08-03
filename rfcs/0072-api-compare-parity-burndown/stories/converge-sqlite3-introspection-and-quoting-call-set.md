@@ -1,6 +1,6 @@
 ---
 title: "Converge the sqlite3 introspection and quoting call sets"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
