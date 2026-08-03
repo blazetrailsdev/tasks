@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition raises an invented ArgumentError for primaryKey: []; Rails stores an empty PrimaryKeyDefinition"
-status: ready
+status: done
 updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6033
 claim: null
 assignee: null
 blocked-by: null
