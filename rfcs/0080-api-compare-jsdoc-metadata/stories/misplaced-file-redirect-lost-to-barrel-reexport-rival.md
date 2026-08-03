@@ -1,6 +1,6 @@
 ---
 title: "Barrel re-export rivals cost a Ruby file its misplaced-file redirect"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
