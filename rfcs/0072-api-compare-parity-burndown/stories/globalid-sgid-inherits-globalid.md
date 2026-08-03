@@ -1,7 +1,7 @@
 ---
 title: "globalid-sgid-inherits-globalid"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T02:25:45Z"
+assignee: "globalid-sgid-inherits-globalid"
 blocked-by: null
 closed-reason: null
 ---
