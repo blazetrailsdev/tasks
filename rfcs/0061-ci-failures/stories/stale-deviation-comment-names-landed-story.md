@@ -1,6 +1,6 @@
 ---
 title: "Flag deviation comments that name an already-landed convergence story"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T16:09:42Z"
+assignee: "stale-deviation-comment-names-landed-story"
 blocked-by: null
 closed-reason: null
 ---
