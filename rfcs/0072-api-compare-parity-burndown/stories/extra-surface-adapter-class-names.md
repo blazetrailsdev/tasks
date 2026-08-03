@@ -1,7 +1,7 @@
 ---
 title: "Decide the novel adapter and nested class names across the connection-adapters tree"
-status: in-progress
-updated: 2026-08-02
+status: done
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
