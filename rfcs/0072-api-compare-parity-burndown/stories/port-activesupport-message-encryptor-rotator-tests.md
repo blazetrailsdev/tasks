@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptor-rotator-tests"
-status: ready
+status: closed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #5961 (story port-activesupport-messages-rotator-surface), which was rescoped after #5960 merged and now ports all three MessageEncryptorRotatorTest cases plus the shared MessageRotatorTests module."
 ---
 
 ## Context
