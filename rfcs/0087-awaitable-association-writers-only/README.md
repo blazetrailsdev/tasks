@@ -1,5 +1,5 @@
 ---
-rfc: "0000-awaitable-association-writers-only"
+rfc: "0087-awaitable-association-writers-only"
 title: "Awaitable association writers only: delete the synchronous property setters"
 status: draft
 created: 2026-08-03
