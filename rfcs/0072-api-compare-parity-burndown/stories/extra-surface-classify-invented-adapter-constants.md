@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: classify the residual invented SCREAMING_CASE constants"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: extra-surface
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T00:05:46Z"
+assignee: "extra-surface-classify-invented-adapter-constants"
 blocked-by: null
 closed-reason: null
 ---
