@@ -1,6 +1,6 @@
 ---
 title: "inflector-ordinal-via-i18n-translate"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T03:05:45Z"
+assignee: "inflector-ordinal-via-i18n-translate"
 blocked-by: null
 closed-reason: null
 ---
