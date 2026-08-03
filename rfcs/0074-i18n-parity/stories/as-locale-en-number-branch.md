@@ -1,6 +1,6 @@
 ---
 title: "Port the number branch of active_support/locale/en.yml"
-status: blocked
+status: ready
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T19:32:42Z"
-assignee: "as-locale-en-number-branch"
-blocked-by: "Already implemented by open PR #6008 (branch i18n-consolidate-activesupport-shim-d9f4, commit 4c721f386 'feat(activesupport): port the number branch of the en locale'), which also adds the prerequisite packages/activesupport/src/locale/en.ts — that file does not exist on origin/main, so there is nothing to build against here and duplicating it would stack on an unmerged PR. Unblock once #6008 merges; verify the number branch is present and close as done against #6008."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
