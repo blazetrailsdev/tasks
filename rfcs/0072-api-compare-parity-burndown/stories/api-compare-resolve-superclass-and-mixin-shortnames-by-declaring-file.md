@@ -1,6 +1,6 @@
 ---
 title: "api:compare: resolve superclass/mixin short-name collisions by declaring file"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
