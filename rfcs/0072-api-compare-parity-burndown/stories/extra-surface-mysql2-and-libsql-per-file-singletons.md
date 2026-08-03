@@ -1,6 +1,6 @@
 ---
 title: "Resolve per-file novel surface on mysql2 and libsql-replica adapters"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5947
 claim: "2026-08-03T01:45:45Z"
 assignee: "extra-surface-mysql2-and-libsql-per-file-singletons"
 blocked-by: null
