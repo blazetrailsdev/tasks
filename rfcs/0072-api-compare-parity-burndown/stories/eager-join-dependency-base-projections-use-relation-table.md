@@ -1,14 +1,14 @@
 ---
 title: "eager-join-dependency-base-projections-use-relation-table"
-status: claimed
-updated: 2026-08-02
+status: in-progress
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5935
 claim: "2026-08-02T23:55:47Z"
 assignee: "eager-join-dependency-base-projections-use-relation-table"
 blocked-by: null
