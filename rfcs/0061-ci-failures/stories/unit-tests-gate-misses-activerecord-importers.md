@@ -1,6 +1,6 @@
 ---
 title: "unit-tests-gate-misses-activerecord-importers"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5989
 claim: "2026-08-03T16:44:44Z"
 assignee: "unit-tests-gate-misses-activerecord-importers"
 blocked-by: null
