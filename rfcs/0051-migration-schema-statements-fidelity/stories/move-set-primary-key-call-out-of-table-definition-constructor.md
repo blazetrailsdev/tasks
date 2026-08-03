@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition's constructor takes id/primaryKey and calls setPrimaryKey; Rails calls it from buildCreateTableDefinition"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T22:50:10Z"
+assignee: "move-set-primary-key-call-out-of-table-definition-constructor"
 blocked-by: null
 closed-reason: null
 ---
