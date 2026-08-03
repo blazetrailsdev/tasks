@@ -1,6 +1,6 @@
 ---
 title: "Render String inspect with Ruby escapes in I18n error messages"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T21:47:08Z"
+assignee: "i18n-inspect-string-ruby-escapes"
 blocked-by: null
 closed-reason: null
 ---
