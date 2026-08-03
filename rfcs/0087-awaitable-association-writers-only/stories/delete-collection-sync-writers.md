@@ -1,6 +1,6 @@
 ---
 title: "delete-collection-sync-writers"
-status: draft
+status: ready
 updated: 2026-08-03
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
