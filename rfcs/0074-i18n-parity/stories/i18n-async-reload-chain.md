@@ -1,6 +1,6 @@
 ---
 title: "Make the whole reload chain async, not just the I18n.reload! seam"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
