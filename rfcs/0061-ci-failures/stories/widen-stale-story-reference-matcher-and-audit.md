@@ -1,6 +1,6 @@
 ---
 title: "Widen the stale-story-reference matcher past sentence scope and audit the backlog"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T17:52:20Z"
+assignee: "widen-stale-story-reference-matcher-and-audit"
 blocked-by: null
 closed-reason: null
 ---
