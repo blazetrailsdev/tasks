@@ -1,7 +1,7 @@
 ---
 title: "Scaffold packages/i18n and port Config + exceptions"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T13:44:01Z"
+assignee: "i18n-package-scaffold-config-exceptions"
 blocked-by: null
 closed-reason: null
 ---
