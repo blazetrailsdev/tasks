@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify has-one-association.ts's 4 novel build/write hooks"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5946
 claim: "2026-08-03T01:15:48Z"
 assignee: "extra-surface-has-one-base-build-hooks-classify"
 blocked-by: null
