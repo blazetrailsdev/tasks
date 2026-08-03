@@ -1,6 +1,6 @@
 ---
 title: "Register Active Support's en locale on I18n.load_path"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6017
 claim: "2026-08-03T20:17:09Z"
 assignee: "as-i18n-register-en-on-load-path"
 blocked-by: null
