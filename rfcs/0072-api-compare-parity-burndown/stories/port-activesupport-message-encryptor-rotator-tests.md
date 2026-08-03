@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptor-rotator-tests"
-status: claimed
+status: blocked
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-03T12:25:59Z"
 assignee: "port-activesupport-message-encryptor-rotator-tests"
-blocked-by: null
+blocked-by: "Blocked on PR #5961 (port-activesupport-messages-rotator-surface-9122): Messages::Rotator / MessageEncryptor#rotate is not on main yet, and stacking PRs is not allowed. Unblock when #5961 merges."
 closed-reason: null
 ---
 
