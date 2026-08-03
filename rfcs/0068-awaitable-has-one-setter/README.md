@@ -270,32 +270,51 @@ file-for-file.
   (`#update` routes collection keys through `idsWriter`) and
   `await owner.association(name).idsWriter([...])`.
 
-### 6. The nested-attributes `#{name}_attributes=` setter keeps its deferred displacement
+### 6. The nested-attributes `#{name}_attributes=` setter refuses a displacing assignment
 
-Design §2 makes the has_one `=` setter throw on a persisted owner because
-`await owner.setAccount(x)` is a drop-in replacement for a single assignment.
-The nested-attributes writer is not the same case: `pirate.ship_attributes =
-{...}` is reached from `assign_attributes` / `update` / `create` with a hash of
-mixed keys, so a throw there is not a local rewrite but a rewrite of every
-mass-assignment site that happens to contain a nested key. The Rails-named
-synchronous setter therefore **keeps** its deferred-displacement contract:
-displacement is started at assignment and drained at `save()` (or immediately by
-the awaitable `await owner.setShipAttributes({...})`, which is the sanctioned
-surface when the removal's failure must surface at the assignment expression).
+**Reversed 2026-08-03** (`retire-nested-attributes-sync-setter-displacement`).
+This section originally ratified a deferred-displacement contract for the
+nested-attributes writer, on the grounds that `pirate.ship_attributes = {...}`
+is reached from `assign_attributes` / `update` / `create` with a hash of mixed
+keys, so a throw is not a local rewrite. That ratification bought exactly one
+thing — a synchronous setter that "works" on a displacing assignment — at the
+price of the one write Rails never makes: `findThenDetachDisplaced` installing
+the displaced record on `this.target` for the duration of `remove_target!` and
+then restoring the replacement, because the synchronous build had already run
+`self.target = record` while the displacing SELECT was in flight. A documented
+deviation is debt, not permission, so it is converged rather than kept.
 
-The consequence is the one remaining write Rails never makes:
-`HasOneAssociation#findThenDetachDisplaced` installs the displaced record on
-`this.target` for the duration of `remove_target!` and then restores the
-replacement, because the synchronous build already ran `self.target = record`
-while the displacing SELECT was in flight. It is an **accepted deviation**,
-documented at the call site, and unobservable — `remove_target!` binds
-`this.target` before its first `await`, so both writes sit in one synchronous
-slice. The restore reads `this.target` _after_ the find resolves, so it writes
-back whatever the association caches at that moment rather than resurrecting a
-target a later assignment superseded.
+The contract now matches Design §2's, scoped to the assignments that actually
+need I/O:
 
-Retiring it for real means retiring the sync setter's displacement contract —
-tracked as `retire-nested-attributes-sync-setter-displacement`.
+- **Non-displacing assignments stay on the synchronous setter.** A fresh
+  association, an `id`-matched update, a reused unsaved build, a
+  `has_one_through` (whose `replace` has no `load_target`/`remove_target!` at
+  all), and every `belongs_to` nested assignment reduce to Rails' in-memory
+  `self.target = record` (has_one_association.rb:84). The blast radius this
+  section feared is confined to the displacing case — four call sites across
+  the Rails-ported nested-attributes suite.
+- **A displacing assignment raises `NestedAttributesDisplacementError`**, naming
+  `await owner.set#{Name}Attributes({...})`. "Displacing" is
+  `HasOneAssociation#displacementNeedsAwait`: an already-loaded record to
+  remove, or an unloaded association whose `find_target?` says Rails would query
+  for one (`return target unless load_target || record` always evaluates its
+  left operand). The raise sits _after_ `build_record`
+  (singular_association.rb:29-31), so a construction error still surfaces
+  first, as in Rails.
+- **The awaitable writer runs Rails' order intact**: `load_target` (:59) ->
+  `remove_target!` (:69) -> `self.target = record` (:84), forward only. No swap,
+  no thunk, and a raising removal leaves the OLD record cached for free.
+
+Retired with it: `findThenDetachDisplaced`,
+`prepareDetachDisplacedForSyncBuild`, `detachDisplacedAtAssignment`, and the
+owner-side `_displacedRemovalFailure` sticky-failure machinery — with no
+deferred write left, there is no failure to make sticky. What survives is
+`_pendingNestedReaderLoads`: Rails reads the existing record with
+`send(association_name)` (nested_attributes.rb:434), a synchronous call whose
+trails analogue is a promise for an unloaded association. That deferral is a
+**read**, so it cannot race an interim insert; it is parked and drained by the
+`save` wrapper (and returned directly by the awaitable writer).
 
 ## Non-goals
 
@@ -382,6 +401,10 @@ early-return story (Design §3 — absorbed into
 
 ## Changelog
 
+- 2026-08-03: Design §6 — **reversed** the decision below: the nested-attributes
+  `#{name}_attributes=` setter now raises `NestedAttributesDisplacementError` on
+  a displacing assignment, and `findThenDetachDisplaced` /
+  `prepareDetachDisplacedForSyncBuild` / the sticky-failure drain are deleted.
 - 2026-08-03: Design §6 — decided the nested-attributes
   `#{name}_attributes=` setter keeps its deferred-displacement contract, so
   `findThenDetachDisplaced`'s target swap is an accepted deviation (documented
