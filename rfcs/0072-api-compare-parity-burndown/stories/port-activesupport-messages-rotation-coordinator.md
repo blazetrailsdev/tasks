@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-messages-rotation-coordinator"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5974
 claim: "2026-08-03T14:20:41Z"
 assignee: "port-activesupport-messages-rotation-coordinator"
 blocked-by: null
