@@ -1,6 +1,6 @@
 ---
 title: "Converge handle_exception's Symbol handler arm"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6007
 claim: "2026-08-03T19:04:42Z"
 assignee: "i18n-exception-handler-symbol-arm"
 blocked-by: null
