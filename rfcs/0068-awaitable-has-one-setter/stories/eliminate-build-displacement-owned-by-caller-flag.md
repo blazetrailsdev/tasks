@@ -1,13 +1,13 @@
 ---
 title: "Eliminate the buildDisplacementOwnedByCaller suppression flag"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: null
+pr: 5991
 claim: "2026-08-03T16:51:42Z"
 assignee: "eliminate-build-displacement-owned-by-caller-flag"
 blocked-by: null
