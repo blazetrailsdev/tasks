@@ -1,6 +1,6 @@
 ---
 title: "Widen the stale-story-reference matcher past sentence scope and audit the backlog"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
