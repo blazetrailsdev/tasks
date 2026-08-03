@@ -1,13 +1,12 @@
 ---
 title: "Consolidate activemodel/activerecord i18n shims"
 status: ready
-updated: 2026-07-26
+updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: ["i18n-consolidate-activesupport-shim"]
 deps-rfc: []
 est-loc: 500
-priority: 7
 pr: null
 claim: null
 assignee: null
