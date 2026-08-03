@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the target swap in the unloaded sync-build displacement path"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T16:58:43Z"
+assignee: "eliminate-sync-build-displacement-target-swap"
 blocked-by: null
 closed-reason: null
 ---
