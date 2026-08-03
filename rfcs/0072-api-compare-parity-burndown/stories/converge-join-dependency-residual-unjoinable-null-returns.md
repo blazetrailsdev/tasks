@@ -1,6 +1,6 @@
 ---
 title: "Prove or fix JoinDependency's residual un-joinable null returns, then drop the trails-only build guard"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T14:27:46Z"
+assignee: "converge-join-dependency-residual-unjoinable-null-returns"
 blocked-by: null
 closed-reason: null
 ---
