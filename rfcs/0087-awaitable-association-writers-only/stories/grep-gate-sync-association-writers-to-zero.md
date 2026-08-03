@@ -8,7 +8,7 @@ deps:
   ["delete-nested-attributes-deferred-displacement", "retire-sync-association-mass-assignment-arms"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 11
 pr: null
 claim: null
 assignee: null
