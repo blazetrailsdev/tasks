@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api: honor @internal JSDoc on class members"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5964
 claim: "2026-08-03T12:44:05Z"
 assignee: "extract-ts-api-honor-internal-jsdoc-on-class-members"
 blocked-by: null
