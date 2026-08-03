@@ -1,6 +1,6 @@
 ---
 title: "converge-encrypted-file-cipher-to-aes-128-gcm"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
