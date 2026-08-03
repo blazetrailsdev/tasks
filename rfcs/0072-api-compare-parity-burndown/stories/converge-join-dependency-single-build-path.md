@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency onto Rails' single build path (required ctor args, drop incremental addAssociation growth)"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
