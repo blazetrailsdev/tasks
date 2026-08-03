@@ -1,6 +1,6 @@
 ---
 title: "Route stale story citations in the frozen docs/activerecord tree somewhere actionable"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
