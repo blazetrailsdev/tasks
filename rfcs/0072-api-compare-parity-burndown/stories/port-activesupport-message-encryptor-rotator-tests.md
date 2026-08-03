@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptor-rotator-tests"
-status: blocked
+status: ready
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,29 +9,36 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T12:25:59Z"
-assignee: "port-activesupport-message-encryptor-rotator-tests"
-blocked-by: "Blocked on PR #5961 (port-activesupport-messages-rotator-surface-9122): Messages::Rotator / MessageEncryptor#rotate is not on main yet, and stacking PRs is not allowed. Unblock when #5961 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
 ## Context
 
-`port-activesupport-message-encryptor-authenticated-encryption` (PR pending)
+`port-activesupport-message-encryptor-authenticated-encryption` (PR #5963)
 ported `MessageEncryptor.useAuthenticatedMessageEncryption`,
 `MessageEncryptor.defaultCipher()`, and AEAD (GCM auth tag) handling in
 `packages/activesupport/src/message-encryptor.ts`. It could **not** port the
-three `MessageEncryptorRotatorTest` cases, because `Messages::Rotator` is still
-unported on `main` — `MessageEncryptor` has no `rotate`. The Rotator port is
-in flight as PR #5961 (`port-activesupport-messages-rotator-surface-9122`) and
-had not merged, and stacking PRs is not allowed.
+three `MessageEncryptorRotatorTest` cases, because `Messages::Rotator` was not
+on `main` at the time and stacking PRs is not allowed.
 
-The three tests still sit as bodyless `it.skip` placeholders in
-`packages/activesupport/src/messages/message-encryptor-rotator.test.ts`:
+**Both blockers are now gone.** PR #5960 landed `Messages::Rotator` /
+`RotationConfiguration` and wired `rotate` into `MessageEncryptor`, and #5963
+landed the authenticated-encryption support the last two tests need.
+
+Note #5960 **deleted**
+`packages/activesupport/src/messages/message-encryptor-rotator.test.ts`
+outright (it held only bodyless `it.skip` stubs) rather than porting it, so
+this story recreates the file from scratch. Port these three, names verbatim:
 
 - `rotate cipher`
 - `rotate verifier secret when using non-authenticated encryption`
 - `rotate verifier digest when using non-authenticated encryption`
+
+`packages/activesupport/src/messages/message-verifier-rotator.test.ts` (also
+from #5960) is the model to follow for the `assertRotate` / `makeCodec` shape.
 
 Rails source:
 `vendor/rails/activesupport/test/messages/message_encryptor_rotator_test.rb`
