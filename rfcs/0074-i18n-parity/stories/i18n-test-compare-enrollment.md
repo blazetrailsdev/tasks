@@ -1,13 +1,13 @@
 ---
 title: "Enroll i18n in test:compare and port core suites"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: ["i18n-api-compare-enrollment"]
 deps-rfc: []
 est-loc: 500
-pr: null
+pr: 6002
 claim: "2026-08-03T18:08:46Z"
 assignee: "i18n-test-compare-enrollment"
 blocked-by: null
