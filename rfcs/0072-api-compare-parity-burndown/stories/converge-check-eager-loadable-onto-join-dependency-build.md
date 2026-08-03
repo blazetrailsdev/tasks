@@ -1,6 +1,6 @@
 ---
 title: "Delete JoinDependency#validateEagerLoadSpec — route _checkEagerLoadable through constructing a JoinDependency, as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["drop-join-dependency-preload-fallback-lane"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 5973
 claim: "2026-08-03T14:24:16Z"
 assignee: "converge-check-eager-loadable-onto-join-dependency-build"
 blocked-by: null
