@@ -1,6 +1,6 @@
 ---
 title: "method-order-rule-blind-to-mixin-objects"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T03:25:46Z"
+assignee: "method-order-rule-blind-to-mixin-objects"
 blocked-by: null
 closed-reason: null
 ---
