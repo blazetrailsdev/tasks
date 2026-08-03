@@ -1,6 +1,6 @@
 ---
 title: "Prove the JoinDependency preload-fallback lane is dead, then delete it (drops the 5th ctor arg, build's boolean return, capture/rollback)"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
