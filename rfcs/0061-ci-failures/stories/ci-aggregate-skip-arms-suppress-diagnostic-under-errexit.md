@@ -1,6 +1,6 @@
 ---
 title: "ci aggregate skip arms exit under set -e before printing the diagnostic"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5985
 claim: "2026-08-03T16:30:48Z"
 assignee: "ci-aggregate-skip-arms-suppress-diagnostic-under-errexit"
 blocked-by: null
