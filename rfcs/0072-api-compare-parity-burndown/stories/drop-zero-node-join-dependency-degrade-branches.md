@@ -1,6 +1,6 @@
 ---
 title: "Prove the three jd.nodes.length === 0 eager-degrade branches dead, then delete them"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5996
 claim: "2026-08-03T17:33:42Z"
 assignee: "drop-zero-node-join-dependency-degrade-branches"
 blocked-by: null
