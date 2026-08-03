@@ -1,7 +1,7 @@
 ---
 title: "TableDefinition#primaryKeys is a derived reader, not Rails' PrimaryKeyDefinition setter"
-status: claimed
-updated: 2026-08-02
+status: blocked
+updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-02T01:20:57Z"
 assignee: "table-definition-primary-keys-is-a-reader-not-rails-setter"
-blocked-by: null
+blocked-by: "Releasing stale claim (empty worktree, no PR, no progress) back to the ready queue"
 closed-reason: null
 ---
 
