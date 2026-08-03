@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: classify has-one-through-association.ts's 5 novel extras"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T00:45:46Z"
+assignee: "extra-surface-has-one-through-classify"
 blocked-by: null
 closed-reason: null
 ---
