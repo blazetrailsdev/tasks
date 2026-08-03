@@ -1,6 +1,6 @@
 ---
 title: "Render Hash inspect Ruby-style in I18n error messages"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6022
 claim: "2026-08-03T21:02:08Z"
 assignee: "i18n-inspect-hash-ruby-rendering"
 blocked-by: null
