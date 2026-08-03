@@ -1,6 +1,6 @@
 ---
 title: "Port Backend::Base#localize and translate_localization_format"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6004
 claim: "2026-08-03T18:36:42Z"
 assignee: "i18n-backend-localize"
 blocked-by: null
