@@ -1,6 +1,6 @@
 ---
 title: "Converge exceptions.trails.test.ts onto i18n/exceptions_test.rb via the facade"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T19:46:42Z"
+assignee: "i18n-exceptions-test-through-facade"
 blocked-by: null
 closed-reason: null
 ---
