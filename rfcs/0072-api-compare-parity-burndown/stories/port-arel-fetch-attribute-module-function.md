@@ -1,6 +1,6 @@
 ---
 title: "Port Arel.fetch_attribute (arel.rb:68) and drop the hand-rolled local copies"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5965
 claim: "2026-08-03T12:53:59Z"
 assignee: "port-arel-fetch-attribute-module-function"
 blocked-by: null
