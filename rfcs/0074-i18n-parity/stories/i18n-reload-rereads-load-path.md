@@ -1,6 +1,6 @@
 ---
 title: "Make I18n.reload! re-read load_path from disk, not the preload cache"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T21:56:08Z"
+assignee: "i18n-reload-rereads-load-path"
 blocked-by: null
 closed-reason: null
 ---
