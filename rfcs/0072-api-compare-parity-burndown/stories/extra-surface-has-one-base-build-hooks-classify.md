@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify has-one-association.ts's 4 novel build/write hooks"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
