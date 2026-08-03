@@ -1,6 +1,6 @@
 ---
 title: "i18n-localization-datetime-procs-test-port"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6025
 claim: "2026-08-03T21:20:10Z"
 assignee: "i18n-localization-datetime-procs-test-port"
 blocked-by: null
