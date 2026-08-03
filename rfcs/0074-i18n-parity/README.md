@@ -11,7 +11,7 @@ packages:
   - "activemodel"
   - "activerecord"
 clusters: []
-priority: 0
+priority: 1
 ---
 
 # i18n gem parity
