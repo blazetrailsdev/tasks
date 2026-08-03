@@ -1,7 +1,7 @@
 ---
 title: "order!/reorder! normalize via preprocess_order_args; delete _applyOrderToManager re-parsing"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #5937 (story converge-order-bang-through-preprocess-order-args). All six acceptance criteria are satisfied on main as of a1cb1f1bc: order!/reorder! normalize through preprocessOrderArgs, _applyOrderToManager's string/tuple re-parsing is deleted and reduced to buildOrder, the dead Relation shims are now the live path, buildOrderNode is gone, string args stay bare (order-string-arg-stays-bare.trails.test.ts green), and reverseOrderBang reverses stored values without re-qualifying."
 ---
 
 ## Context
