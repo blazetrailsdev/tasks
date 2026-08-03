@@ -1,6 +1,6 @@
 ---
 title: "Port I18n.transliterate and the Transliterator mixin"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6015
 claim: "2026-08-03T19:53:43Z"
 assignee: "i18n-facade-transliterate"
 blocked-by: null
