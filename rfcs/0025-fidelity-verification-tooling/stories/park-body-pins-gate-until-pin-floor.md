@@ -1,0 +1,39 @@
+---
+title: "park-body-pins-gate-until-pin-floor"
+status: draft
+updated: 2026-08-03
+rfc: "0025-fidelity-verification-tooling"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+The 2026-08-03 api-signals audit found the body-pins gate
+(`scripts/api-compare/lint-body-pins.ts`, CI step "Body-pins gate" at
+`.github/workflows/ci.yml:1513`) has gated ZERO pins for the life of RFC 0025:
+`body-pins.json` is empty ("ORGANIC until first release" policy,
+`scripts/api-compare/body-pins.ts:39-43`), and every `api:compare` package
+summary prints a dead `pins: 0/N (N unpinned)` line. The gate is a no-op
+carrying a CI step and summary noise.
+
+`output/body-hashes.json` emission must stay — `api:drift` and any future
+re-adoption depend on the digest plumbing.
+
+## Acceptance criteria
+
+- Decide and record the policy: either (a) remove the CI step and the
+  per-package `pins:` summary line until the first-release `--pin-all` floor is
+  actually invoked, or (b) trigger the floor now and seed pins.
+- If (a): `lint-body-pins.ts` and `body-pins.ts` remain runnable on demand;
+  `body-hashes.json` is still written by `api:compare`; CONTRIBUTING.md "Body
+  pins" section updated to match.
+- No change to `api:drift`.
