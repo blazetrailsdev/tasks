@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-defuse-has-many-find-target"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 5939
 claim: "2026-08-03T00:35:50Z"
 assignee: "extra-surface-defuse-has-many-find-target"
 blocked-by: null
