@@ -1,6 +1,6 @@
 ---
 title: "Port i18n/test/i18n/interpolate_test.rb onto interpolate.test.ts"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
