@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition#setPrimaryKey re-runs and clears columns instead of Rails' single guarded call"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T17:12:49Z"
+assignee: "converge-set-primary-key-guard-and-single-invocation"
 blocked-by: null
 closed-reason: null
 ---
