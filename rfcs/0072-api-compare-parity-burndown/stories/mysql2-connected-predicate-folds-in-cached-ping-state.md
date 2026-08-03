@@ -1,6 +1,6 @@
 ---
 title: "mysql2-connected-predicate-folds-in-cached-ping-state"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T13:14:00Z"
+assignee: "mysql2-connected-predicate-folds-in-cached-ping-state"
 blocked-by: null
 closed-reason: null
 ---
