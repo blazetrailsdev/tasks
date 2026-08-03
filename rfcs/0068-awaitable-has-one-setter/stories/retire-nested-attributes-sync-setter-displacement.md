@@ -1,6 +1,6 @@
 ---
 title: "retire-nested-attributes-sync-setter-displacement"
-status: claimed
+status: closed
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T17:05:47Z"
-assignee: "retire-nested-attributes-sync-setter-displacement"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by 0087-awaitable-association-writers-only/delete-nested-attributes-deferred-displacement, which removes the sync setter entirely rather than only its displacement contract"
 ---
 
 ## Context
