@@ -270,6 +270,33 @@ file-for-file.
   (`#update` routes collection keys through `idsWriter`) and
   `await owner.association(name).idsWriter([...])`.
 
+### 6. The nested-attributes `#{name}_attributes=` setter keeps its deferred displacement
+
+Design §2 makes the has_one `=` setter throw on a persisted owner because
+`await owner.setAccount(x)` is a drop-in replacement for a single assignment.
+The nested-attributes writer is not the same case: `pirate.ship_attributes =
+{...}` is reached from `assign_attributes` / `update` / `create` with a hash of
+mixed keys, so a throw there is not a local rewrite but a rewrite of every
+mass-assignment site that happens to contain a nested key. The Rails-named
+synchronous setter therefore **keeps** its deferred-displacement contract:
+displacement is started at assignment and drained at `save()` (or immediately by
+the awaitable `await owner.setShipAttributes({...})`, which is the sanctioned
+surface when the removal's failure must surface at the assignment expression).
+
+The consequence is the one remaining write Rails never makes:
+`HasOneAssociation#findThenDetachDisplaced` installs the displaced record on
+`this.target` for the duration of `remove_target!` and then restores the
+replacement, because the synchronous build already ran `self.target = record`
+while the displacing SELECT was in flight. It is an **accepted deviation**,
+documented at the call site, and unobservable — `remove_target!` binds
+`this.target` before its first `await`, so both writes sit in one synchronous
+slice. The restore reads `this.target` _after_ the find resolves, so it writes
+back whatever the association caches at that moment rather than resurrecting a
+target a later assignment superseded.
+
+Retiring it for real means retiring the sync setter's displacement contract —
+tracked as `retire-nested-attributes-sync-setter-displacement`.
+
 ## Non-goals
 
 - **Making the native setter async-transparent** (Proxy/thenable tricks that
@@ -355,6 +382,10 @@ early-return story (Design §3 — absorbed into
 
 ## Changelog
 
+- 2026-08-03: Design §6 — decided the nested-attributes
+  `#{name}_attributes=` setter keeps its deferred-displacement contract, so
+  `findThenDetachDisplaced`'s target swap is an accepted deviation (documented
+  at the call site); its restore now reads the current target.
 - 2026-07-17: initial RFC. Supersedes PRs #4899 / #4901 / #4908 / #4910
   (closed unmerged; their stories closed as superseded) and absorbs
   0005's `has-one-replace-missing-load-target-early-return`.
