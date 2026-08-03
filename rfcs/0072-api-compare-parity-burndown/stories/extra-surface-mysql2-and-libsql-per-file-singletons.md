@@ -1,6 +1,6 @@
 ---
 title: "Resolve per-file novel surface on mysql2 and libsql-replica adapters"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
