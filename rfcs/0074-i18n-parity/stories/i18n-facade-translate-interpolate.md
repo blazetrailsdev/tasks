@@ -1,6 +1,6 @@
 ---
 title: "Port the I18n facade and interpolation"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,8 +8,8 @@ deps: ["i18n-backend-base-simple"]
 deps-rfc: []
 est-loc: 450
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T18:01:45Z"
+assignee: "i18n-facade-translate-interpolate"
 blocked-by: null
 closed-reason: null
 ---
