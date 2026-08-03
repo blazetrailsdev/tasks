@@ -1,6 +1,6 @@
 ---
 title: "Extract I18n::Base methods from the i18n umbrella file"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
