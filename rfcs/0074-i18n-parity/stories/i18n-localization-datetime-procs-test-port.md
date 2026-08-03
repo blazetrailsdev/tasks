@@ -1,6 +1,6 @@
 ---
 title: "i18n-localization-datetime-procs-test-port"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
