@@ -1,6 +1,6 @@
 ---
 title: "Type Config#backend as Backend::Base instead of a hand-written interface slice"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6020
 claim: "2026-08-03T20:53:09Z"
 assignee: "i18n-config-backend-typed-as-base"
 blocked-by: null
