@@ -1,6 +1,6 @@
 ---
 title: "unit-tests-gate-misses-activerecord-importers"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
