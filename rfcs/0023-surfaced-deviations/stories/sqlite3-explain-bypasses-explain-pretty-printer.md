@@ -1,14 +1,14 @@
 ---
 title: "sqlite3 explain hand-formats rows instead of using ExplainPrettyPrinter"
-status: draft
-updated: 2026-07-31
+status: done
+updated: 2026-08-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5934
 claim: null
 assignee: null
 blocked-by: null
