@@ -1,6 +1,6 @@
 ---
 title: "arunit2-siblings-escape-run-token-ownership"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T16:23:44Z"
+assignee: "arunit2-siblings-escape-run-token-ownership"
 blocked-by: null
 closed-reason: null
 ---
