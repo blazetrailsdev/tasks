@@ -1,6 +1,6 @@
 ---
 title: "Restore ActiveSupport I18nTest localization cases over TimeWithZone"
-status: in-progress
+status: closed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 6010
-claim: "2026-08-03T19:18:42Z"
-assignee: "as-i18n-localization-tests"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #6008 (i18n-consolidate-activesupport-shim), which ships TimeWithZone#mon and five of the nine localization cases over TimeWithZone; residual four date-localization cases refiled as as-i18n-date-localization-tests."
 ---
 
 ## Context
