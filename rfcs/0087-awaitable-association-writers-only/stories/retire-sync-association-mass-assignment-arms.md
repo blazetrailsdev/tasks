@@ -7,7 +7,7 @@ cluster: null
 deps: ["delete-has-one-sync-property-setter", "delete-collection-sync-writers"]
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null
