@@ -1,7 +1,7 @@
 ---
 title: "Drop score-cli's private listJsonFiles copy for the shared baseline-json helper"
-status: draft
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-03
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T00:58:05Z"
+assignee: "dedupe-list-json-files-in-prism-score-cli"
 blocked-by: null
 closed-reason: null
 ---
