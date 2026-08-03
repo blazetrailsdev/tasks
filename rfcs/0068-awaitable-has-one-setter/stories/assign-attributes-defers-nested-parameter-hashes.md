@@ -1,6 +1,6 @@
 ---
 title: "assign-attributes-defers-nested-parameter-hashes"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
