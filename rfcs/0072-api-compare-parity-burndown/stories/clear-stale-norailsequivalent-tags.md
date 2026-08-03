@@ -1,6 +1,6 @@
 ---
 title: "Clear the 12 stale @noRailsEquivalent tags failing api:extra"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5992
 claim: "2026-08-03T17:19:42Z"
 assignee: "clear-stale-norailsequivalent-tags"
 blocked-by: null
