@@ -1,7 +1,7 @@
 ---
 title: "defer-more-jobs-out-of-pre-ready"
-status: in-progress
-updated: 2026-08-02
+status: done
+updated: 2026-08-03
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
