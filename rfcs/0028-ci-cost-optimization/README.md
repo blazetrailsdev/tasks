@@ -3,7 +3,7 @@ rfc: "0028-ci-cost-optimization"
 title: "CI cost optimization — cut billed Actions minutes and time-to-green"
 status: active
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-08-03
 owner: "@deanmarano"
 packages: []
 clusters:
@@ -14,6 +14,7 @@ clusters:
 related-rfcs:
   - "0012-adapter-test-ci"
   - "0019-canonical-schema-burndown"
+priority: 5
 ---
 
 # RFC 0028 — CI cost optimization
