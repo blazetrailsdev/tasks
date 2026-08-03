@@ -1,6 +1,6 @@
 ---
 title: "Scope pnpm lint to changed files instead of the whole tree"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0028-ci-cost-optimization"
 cluster: null
