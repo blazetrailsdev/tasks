@@ -1,7 +1,7 @@
 ---
 title: "Port or remove the six bodyless it.skip rotation tests in messages/"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T11:45:46Z"
+assignee: "port-activesupport-messages-rotation-tests"
 blocked-by: null
 closed-reason: null
 ---
