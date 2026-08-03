@@ -1,6 +1,6 @@
 ---
 title: "api:extra red on main via stale base.ts equals tag; gate not run in CI"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
