@@ -1,6 +1,6 @@
 ---
 title: "Converge Simple's lazy init onto the gem's load-then-initialize order"
-status: claimed
+status: blocked
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-03T18:22:42Z"
 assignee: "i18n-backend-async-read-path"
-blocked-by: null
+blocked-by: "Depends on unmerged PR #5995 (feat(i18n): port Backend::Base translation-file loading, still OPEN). The entire premise — Base#loadTranslations, Simple#initTranslations awaiting the load, and the markInitialized guard this story must remove — exists only on that branch; origin/main's packages/i18n/src/backend/simple.ts has initTranslations as a bare flag flip and no file-loading lane at all. Converging here would require stacking on #5995, which the repo forbids. Unblock once #5995 merges."
 closed-reason: null
 ---
 
