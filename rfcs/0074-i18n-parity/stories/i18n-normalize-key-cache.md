@@ -1,6 +1,6 @@
 ---
 title: "Port the normalize_key double-nested cache"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T21:29:09Z"
+assignee: "i18n-normalize-key-cache"
 blocked-by: null
 closed-reason: null
 ---
