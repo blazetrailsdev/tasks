@@ -1,6 +1,6 @@
 ---
 title: "collapse-adapter-active-onto-the-rails-active-name"
-status: blocked
+status: closed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T13:24:00Z"
-assignee: "collapse-adapter-active-onto-the-rails-active-name"
-blocked-by: "Decision recorded: YES, converge onto async `active`. Implementation blocked on mysql2-connected-predicate-folds-in-cached-ping-state (PR #5966, open) which rewrites the same isConnected/active/_activeState lines in mysql2-adapter.ts; no stacking, no racing. Unblock when #5966 merges."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "superseded by converge-adapter-active-predicate-to-async, which was split out of mysql2-connected-predicate-folds-in-cached-ping-state and covers the same 7 declarations / async flip"
 ---
 
 ## Context
