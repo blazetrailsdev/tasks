@@ -1,7 +1,7 @@
 ---
 title: "Interface property signatures are dropped by extractInterface, so syntax choice decides visibility"
-status: claimed
-updated: 2026-07-29
+status: blocked
+updated: 2026-08-03
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-07-29T22:52:32Z"
 assignee: "interface-property-signatures-uncounted"
-blocked-by: null
+blocked-by: "Releasing stale claim (no PR, no progress) back to the ready queue"
 closed-reason: null
 ---
 
