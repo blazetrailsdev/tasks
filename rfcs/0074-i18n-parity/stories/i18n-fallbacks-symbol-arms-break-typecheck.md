@@ -1,6 +1,6 @@
 ---
 title: "Converge the last JS-symbol Ruby Symbol arms — main does not typecheck"
-status: ready
+status: closed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of converge-symbol-call-sites-after-colon-string-flip, which names the same nine call sites and the same red build on main."
 ---
 
 ## Context
