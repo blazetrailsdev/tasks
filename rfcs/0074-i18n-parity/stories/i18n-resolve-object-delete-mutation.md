@@ -1,6 +1,6 @@
 ---
 title: "Converge resolve's :object handling onto Hash#delete semantics"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 5983
 claim: "2026-08-03T16:16:44Z"
 assignee: "i18n-resolve-object-delete-mutation"
 blocked-by: null
