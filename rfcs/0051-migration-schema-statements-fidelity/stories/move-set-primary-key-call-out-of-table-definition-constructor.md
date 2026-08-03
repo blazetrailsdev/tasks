@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition's constructor takes id/primaryKey and calls setPrimaryKey; Rails calls it from buildCreateTableDefinition"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
