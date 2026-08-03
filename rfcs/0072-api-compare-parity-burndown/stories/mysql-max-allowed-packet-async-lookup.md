@@ -1,6 +1,6 @@
 ---
 title: "MySQL max_allowed_packet: resolve from the server instead of a hardcoded 16 MiB default"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: arity-fidelity
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 5957
 claim: "2026-08-03T03:35:45Z"
 assignee: "mysql-max-allowed-packet-async-lookup"
 blocked-by: null
