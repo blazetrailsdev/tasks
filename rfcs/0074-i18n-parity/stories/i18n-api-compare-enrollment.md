@@ -1,7 +1,7 @@
 ---
 title: "Enroll i18n in api:compare"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: ["i18n-facade-translate-interpolate"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T14:32:32Z"
+assignee: "i18n-api-compare-enrollment"
 blocked-by: null
 closed-reason: null
 ---
