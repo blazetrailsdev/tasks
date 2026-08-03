@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-file-loading-localize"
-status: ready
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5995
 claim: null
 assignee: null
 blocked-by: null
