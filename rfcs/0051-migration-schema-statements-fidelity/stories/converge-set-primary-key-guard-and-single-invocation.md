@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition#setPrimaryKey re-runs and clears columns instead of Rails' single guarded call"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
