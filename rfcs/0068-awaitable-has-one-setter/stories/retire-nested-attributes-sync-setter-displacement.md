@@ -1,6 +1,6 @@
 ---
 title: "retire-nested-attributes-sync-setter-displacement"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T17:05:47Z"
+assignee: "retire-nested-attributes-sync-setter-displacement"
 blocked-by: null
 closed-reason: null
 ---
