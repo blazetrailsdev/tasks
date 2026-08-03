@@ -1,6 +1,6 @@
 ---
 title: "Drop the dead standalone sqlite3 schemaCreation helper"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T01:35:45Z"
+assignee: "drop-dead-standalone-sqlite3-schema-creation-helper"
 blocked-by: null
 closed-reason: null
 ---
