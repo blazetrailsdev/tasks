@@ -43,6 +43,12 @@ Not observable today because the only caller that passes `:object` is
 [[i18n-backend-file-loading-localize]]. It becomes a live divergence the moment
 `localize` exists.
 
+Overlaps [[i18n-resolve-entry-object-option-override]], which files the same
+Rails lines against the older hand-rolled `packages/activesupport/src/i18n.ts`
+shim (that one ignores `options[:object]` entirely; this one honours it but
+copies instead of deleting). Triage may want to merge them, or fold this one
+into [[i18n-consolidate-activesupport-shim]], which retires that shim.
+
 Note `||` vs `??`: Ruby's `||` also falls through on `false`, JS `??` does not.
 Converge that arm at the same time.
 
