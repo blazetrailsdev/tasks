@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-transliterator-tests"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6019
 claim: "2026-08-03T20:46:03Z"
 assignee: "i18n-backend-transliterator-tests"
 blocked-by: null
