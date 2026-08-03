@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL's host-less schema quoter onto a required adapter"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T01:25:47Z"
+assignee: "converge-mysql-schema-quoter-hostless-construction"
 blocked-by: null
 closed-reason: null
 ---
