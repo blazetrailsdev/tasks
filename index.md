@@ -90,4 +90,4 @@
 | [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | draft | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @your-handle | activerecord |
 | [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | active | @your-handle | activerecord |
-| [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | draft | @deanmarano | activerecord |
+| [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | active | @deanmarano | activerecord |

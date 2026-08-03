@@ -1,7 +1,7 @@
 ---
 rfc: "0087-awaitable-association-writers-only"
 title: "Awaitable association writers only: delete the synchronous property setters"
-status: draft
+status: active
 created: 2026-08-03
 updated: 2026-08-03
 owner: "@deanmarano"
