@@ -1,7 +1,7 @@
 ---
 title: "converge-singular-find-target-dispatcher"
-status: in-progress
-updated: 2026-08-02
+status: done
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
