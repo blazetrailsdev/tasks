@@ -1,6 +1,6 @@
 ---
 title: "Cover the full sprintf grammar reachable from %<name>fmt"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
