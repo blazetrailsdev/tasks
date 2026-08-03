@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-file-loading-localize"
-status: claimed
+status: blocked
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-03T16:03:32Z"
 assignee: "i18n-backend-file-loading-localize"
-blocked-by: null
+blocked-by: "Depends on unmerged PR #5980 (branch i18n-backend-base-simple-7a1d), which creates packages/i18n/src/backend/base.ts and simple.ts. Every acceptance criterion (loadTranslations/loadFile/loadYml/loadJson/localize on Backend::Base, Simple#initTranslations calling loadTranslations) lands in files that do not exist on origin/main. No-stacked-PRs rule means this must wait for #5980 to merge; re-open then."
 closed-reason: null
 ---
 
