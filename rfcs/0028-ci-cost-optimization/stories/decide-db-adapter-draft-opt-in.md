@@ -1,6 +1,6 @@
 ---
 title: "Decide whether draft PRs keep the db_adapter_affected PG/MariaDB opt-in"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0028-ci-cost-optimization"
 cluster: null
