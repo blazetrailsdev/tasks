@@ -1,6 +1,6 @@
 ---
 title: "Type Config#backend as Backend::Base instead of a hand-written interface slice"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
