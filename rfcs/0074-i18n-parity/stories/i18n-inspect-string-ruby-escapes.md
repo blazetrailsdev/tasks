@@ -1,6 +1,6 @@
 ---
 title: "Render String inspect with Ruby escapes in I18n error messages"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
