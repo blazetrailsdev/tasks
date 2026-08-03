@@ -1,6 +1,6 @@
 ---
 title: "Pin OPERATOR_SPELLING_BY_FQN entries for the 16 module-level operators"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 5955
 claim: "2026-08-03T03:15:48Z"
 assignee: "module-level-operator-spellings-unpinned"
 blocked-by: null
