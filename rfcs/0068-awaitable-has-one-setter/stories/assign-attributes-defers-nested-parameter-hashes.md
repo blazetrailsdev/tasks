@@ -1,6 +1,6 @@
 ---
 title: "assign-attributes-defers-nested-parameter-hashes"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6003
 claim: "2026-08-03T18:29:43Z"
 assignee: "assign-attributes-defers-nested-parameter-hashes"
 blocked-by: null
