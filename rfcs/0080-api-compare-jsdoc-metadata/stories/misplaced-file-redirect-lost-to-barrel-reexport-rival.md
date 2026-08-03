@@ -1,6 +1,6 @@
 ---
 title: "Barrel re-export rivals cost a Ruby file its misplaced-file redirect"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T16:11:09Z"
+assignee: "misplaced-file-redirect-lost-to-barrel-reexport-rival"
 blocked-by: null
 closed-reason: null
 ---
