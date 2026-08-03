@@ -1,6 +1,6 @@
 ---
 title: "as-i18n-localization-tests-over-shared-i18n"
-status: claimed
+status: blocked
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-03T19:25:42Z"
 assignee: "as-i18n-localization-tests-over-shared-i18n"
-blocked-by: null
+blocked-by: "Blocked on i18n-consolidate-activesupport-shim (claimed, no PR as of 2026-08-03). The nine localization cases must drive localize() from @blazetrails/i18n over a TimeWithZone, but activesupport does not yet depend on @blazetrails/i18n and the en date/time locale data still lives in activesupport's own SimpleBackend (packages/activesupport/src/i18n.ts) rather than in a locale module loaded into the shared backend. Rewriting packages/activesupport/src/i18n.test.ts now would also be a direct file-overlap conflict with that sibling PR, which rewrites the same file. Unblocks automatically once the shim story is done."
 closed-reason: null
 ---
 
