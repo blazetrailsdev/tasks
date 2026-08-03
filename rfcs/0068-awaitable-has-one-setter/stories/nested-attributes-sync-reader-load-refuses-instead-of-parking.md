@@ -1,6 +1,6 @@
 ---
 title: "Retire the nested-attributes sync setter's parked reader load"
-status: ready
+status: closed
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by 0087-awaitable-association-writers-only/delete-nested-attributes-deferred-displacement + migrate-nested-attributes-assignments-to-awaitable-writer, which delete the synchronous #{name}Attributes= setter outright — the parked reader load goes with it. Filed before I saw RFC 0087; the surviving detail worth carrying over is that _pendingDisplacedRemovals is now named _pendingNestedReaderLoads and holds only the hasId/updateOnly reader re-entry (Rails' synchronous send(association_name), nested_attributes.rb:434), the displacement half having been deleted by PR #5997."
 ---
 
 ## Context
