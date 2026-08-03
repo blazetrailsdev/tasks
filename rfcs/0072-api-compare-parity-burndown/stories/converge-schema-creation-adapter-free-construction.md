@@ -1,6 +1,6 @@
 ---
 title: "converge-schema-creation-adapter-free-construction"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5938
 claim: "2026-08-03T00:25:45Z"
 assignee: "converge-schema-creation-adapter-free-construction"
 blocked-by: null
