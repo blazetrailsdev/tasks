@@ -1,6 +1,6 @@
 ---
 title: "Make I18n.reload! re-read load_path from disk, not the preload cache"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
