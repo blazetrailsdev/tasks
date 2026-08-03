@@ -1,6 +1,6 @@
 ---
 title: "api:compare: resolve superclass/mixin short-name collisions by declaring file"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T01:55:46Z"
+assignee: "api-compare-resolve-superclass-and-mixin-shortnames-by-declaring-file"
 blocked-by: null
 closed-reason: null
 ---
