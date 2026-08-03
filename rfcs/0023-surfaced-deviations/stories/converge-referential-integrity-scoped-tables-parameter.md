@@ -24,9 +24,9 @@ still takes a trails-only optional `scopedTables?: string[]` parameter. Rails'
 `vendor/rails/activerecord/lib/active_record/connection_adapters/postgresql/referential_integrity.rb:7`,
 `sqlite3_adapter.rb:255`, `abstract_mysql_adapter.rb:212`.
 
-The earlier story `converge-referential-integrity-zero-arg-shape` (RFC 0060, PR
-5977 era — merged as #4545) closed on its "converge OR document" arm — it documented the parameter
-rather than removing it — so the doc comment now cites a landed story as if the
+The earlier story `converge-referential-integrity-zero-arg-shape`
+(RFC 0060, merged as #4545) closed on its "converge OR document" arm: it
+documented the parameter rather than removing it — so the doc comment now cites a landed story as if the
 convergence were still pending. Per CLAUDE.md a documented deviation is debt,
 not permission, so the convergence still owes.
 
