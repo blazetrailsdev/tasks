@@ -1,13 +1,13 @@
 ---
 title: "Consolidate the activesupport i18n shim"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: 450
-pr: null
+pr: 6008
 claim: "2026-08-03T18:50:43Z"
 assignee: "i18n-consolidate-activesupport-shim"
 blocked-by: null
