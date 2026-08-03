@@ -1,13 +1,12 @@
 ---
 title: "Consolidate the activesupport i18n shim"
 status: ready
-updated: 2026-07-26
+updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: 450
-priority: 6
 pr: null
 claim: null
 assignee: null
