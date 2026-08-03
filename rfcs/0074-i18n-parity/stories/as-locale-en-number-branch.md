@@ -1,6 +1,6 @@
 ---
 title: "Port the number branch of active_support/locale/en.yml"
-status: ready
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6008
 claim: null
 assignee: null
 blocked-by: null
