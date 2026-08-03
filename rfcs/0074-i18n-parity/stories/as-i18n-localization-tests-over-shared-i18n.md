@@ -1,6 +1,6 @@
 ---
 title: "as-i18n-localization-tests-over-shared-i18n"
-status: closed
+status: ready
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Superseded: PR #6008 ports the five TimeWithZone localization cases and TimeWithZone#mon directly; only the four date-localization cases remain, refiled as as-i18n-date-localization-tests."
+closed-reason: null
 ---
 
 ## Context
