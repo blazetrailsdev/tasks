@@ -1,0 +1,60 @@
+---
+title: "File-level @noRailsEquivalent is unavailable to files with no imports"
+status: ready
+updated: 2026-08-03
+rfc: "0072-api-compare-parity-burndown"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 60
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+The file-level `@noRailsEquivalent` form added in PR #5950 is read only when the
+file's FIRST statement is an `ImportDeclaration`
+(`fileLevelNoRailsEquivalentReason`, extract-ts-api.ts):
+
+```ts
+const first = sourceFile.statements[0];
+if (first === undefined || !ts.isImportDeclaration(first)) return undefined;
+return noRailsEquivalentReason(first);
+```
+
+That restriction is deliberate and should not simply be dropped. TypeScript
+binds a file's leading JSDoc block to the first statement, so on an import-less
+file the top block IS the first declaration's own doc block — which
+`noRailsEquivalentReason` already reads as a DECLARATION tag. Treating it as
+file-level as well would silently widen every such tag into a blanket over the
+whole file, which is exactly the failure mode `fileTagVerdict` exists to prevent.
+
+The gap: an import-less file with several novel names has no file-level form at
+all and must repeat a per-declaration reason, which is the repetition RFC 0072
+set out to remove. No such file is known to need it today — the six converted
+adapters and all three candidates in
+`extra-surface-resolve-remaining-whole-file-cases` have imports — so this is a
+completeness item, not a live blocker. It is worth solving only if a real file
+turns up in that position; the story should start by checking whether one has.
+
+## Acceptance criteria
+
+- Establish first whether any TS file with no imports actually carries (or
+  needs) more than one `@noRailsEquivalent`. If none does, close the story with
+  that finding recorded — do NOT add machinery for a hypothetical.
+- If one does: give the file-level form a spelling that cannot be confused with
+  a declaration's own doc block on an import-less file. Options to weigh — a
+  distinct tag name, or requiring the block to be separated from the first
+  statement by a blank line and verifying TypeScript's binding, or an explicit
+  `@fileoverview`-style marker.
+- Whatever the spelling, an import-less file's leading block must still reach
+  `ClassInfo.noRailsEquivalent` as a declaration tag when that is what it is —
+  the existing "leaves the leading block of an import-less file as its
+  declaration's tag" test must keep passing.
+- `pnpm vitest run scripts/api-compare/extract-ts-api.test.ts` and
+  `extra-surface.test.ts` pass.
