@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptors"
-status: claimed
+status: blocked
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-03T13:52:43Z"
 assignee: "port-activesupport-message-encryptors"
-blocked-by: null
+blocked-by: "Blocked on port-activesupport-messages-rotation-coordinator: MessageEncryptors is a Messages::RotationCoordinator subclass and packages/activesupport/src/messages/rotation-coordinator.ts does not exist in main."
 closed-reason: null
 ---
 
