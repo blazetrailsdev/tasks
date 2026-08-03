@@ -1,6 +1,6 @@
 ---
 title: "converge-encrypted-file-cipher-to-aes-128-gcm"
-status: blocked
+status: ready
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T13:03:59Z"
-assignee: "converge-encrypted-file-cipher-to-aes-128-gcm"
-blocked-by: "Needs MessageEncryptor AEAD (GCM auth tag) + MessageEncryptor.keyLen, which land in PR #5963 (open, not merged). aes-128-gcm cannot round-trip on today's main: MessageEncryptor.encrypt/decrypt never set or read a GCM auth tag, so decipher.final() throws. Touching message-encryptor.ts here would duplicate and conflict with #5963, and branching off it would be a stacked PR. Unblock once #5963 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
