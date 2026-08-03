@@ -1,6 +1,6 @@
 ---
 title: "i18n-wide-call-ratchet-red-on-main"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5988
 claim: "2026-08-03T16:37:43Z"
 assignee: "i18n-wide-call-ratchet-red-on-main"
 blocked-by: null
