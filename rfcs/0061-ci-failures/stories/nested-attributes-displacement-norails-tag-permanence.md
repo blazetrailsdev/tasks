@@ -1,6 +1,6 @@
 ---
 title: "api:extra red on main: NestedAttributesDisplacementError tag lacks a permanence claim"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
