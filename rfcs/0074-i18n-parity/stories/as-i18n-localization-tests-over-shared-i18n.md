@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
-deps: []
+deps:
+  - i18n-consolidate-activesupport-shim
 deps-rfc: []
 est-loc: null
 priority: null
