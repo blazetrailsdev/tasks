@@ -1,6 +1,6 @@
 ---
 title: "Consolidate activemodel/activerecord i18n shims"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,8 +8,8 @@ deps: ["i18n-consolidate-activesupport-shim"]
 deps-rfc: []
 est-loc: 500
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T20:58:28Z"
+assignee: "i18n-consolidate-activemodel-activerecord-shims"
 blocked-by: null
 closed-reason: null
 ---
