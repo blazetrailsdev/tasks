@@ -1,6 +1,6 @@
 ---
 title: "Map inflector/methods.rb and core_ext/string/inflections.rb so ported inflector methods stop reporting missing"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 5952
 claim: "2026-08-03T02:35:45Z"
 assignee: "inflector-methods-rb-unmapped-in-file-manifest"
 blocked-by: null
