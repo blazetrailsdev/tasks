@@ -1,6 +1,6 @@
 ---
 title: "extend-stale-story-reference-scan-to-markdown"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
