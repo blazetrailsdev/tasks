@@ -1,6 +1,6 @@
 ---
 title: "i18n-config-writer"
-status: claimed
+status: closed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T18:43:43Z"
-assignee: "i18n-config-writer"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded — ported in #6002 alongside the test:compare enrollment"
 ---
 
 # Port the `I18n.config=` writer and its i18n_test case
