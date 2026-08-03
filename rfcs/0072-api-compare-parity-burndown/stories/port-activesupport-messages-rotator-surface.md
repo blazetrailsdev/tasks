@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-messages-rotator-surface"
-status: ready
+status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T11:55:46Z"
+assignee: "port-activesupport-messages-rotator-surface"
 blocked-by: null
 closed-reason: null
 ---
