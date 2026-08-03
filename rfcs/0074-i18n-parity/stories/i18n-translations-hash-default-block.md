@@ -1,6 +1,6 @@
 ---
 title: "Converge Simple#translations onto Concurrent::Hash default-block reads"
-status: draft
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5988
 claim: null
 assignee: null
 blocked-by: null
