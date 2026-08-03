@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-interface-store-translations"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6011
 claim: "2026-08-03T19:39:43Z"
 assignee: "i18n-backend-interface-store-translations"
 blocked-by: null
