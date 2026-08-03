@@ -1,6 +1,6 @@
 ---
 title: "converge-order-bang-through-preprocess-order-args"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5937
 claim: "2026-08-03T00:15:46Z"
 assignee: "converge-order-bang-through-preprocess-order-args"
 blocked-by: null
