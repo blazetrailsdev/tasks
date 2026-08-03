@@ -1,6 +1,6 @@
 ---
 title: "Port I18n::Backend::Base + Simple + Utils"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["i18n-package-scaffold-config-exceptions"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
+pr: 5980
 claim: "2026-08-03T14:45:47Z"
 assignee: "i18n-backend-base-simple"
 blocked-by: null
