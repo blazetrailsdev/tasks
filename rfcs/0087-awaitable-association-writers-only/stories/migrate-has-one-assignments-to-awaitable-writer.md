@@ -1,6 +1,6 @@
 ---
 title: "migrate-has-one-assignments-to-awaitable-writer"
-status: draft
+status: ready
 updated: 2026-08-03
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
