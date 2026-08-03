@@ -1,6 +1,6 @@
 ---
 title: "Scaffold packages/i18n and port Config + exceptions"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
