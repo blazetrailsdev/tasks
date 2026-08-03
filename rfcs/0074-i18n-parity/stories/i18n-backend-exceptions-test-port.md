@@ -1,6 +1,6 @@
 ---
 title: "Port i18n/test/backend/exceptions_test.rb"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6009
 claim: "2026-08-03T19:11:45Z"
 assignee: "i18n-backend-exceptions-test-port"
 blocked-by: null
