@@ -1,6 +1,6 @@
 ---
 title: "Tag-order violation crashes the TS extractor with a TDZ ReferenceError instead of its diagnostic"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0080-api-compare-jsdoc-metadata"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 5949
 claim: "2026-08-03T02:15:48Z"
 assignee: "tag-order-violation-crashes-extractor-with-tdz-referenceerror"
 blocked-by: null
