@@ -156,11 +156,34 @@ setters are deleted, and so no single PR exceeds the 500-LOC ceiling:
 
 ## Open questions
 
-- Whether the `new Foo({ account: x })` constructor arm should throw or silently
-  build in memory. Rails' `new` does assign the association in memory, so the
-  in-memory arm is arguably faithful — but it reintroduces exactly the
-  persistence-dependent split this RFC removes. Resolved per story
-  `association-key-in-constructor-throws`.
+None. The constructor arm was the candidate question and is resolved: **`new
+Foo({ account: x })` keeps assigning in memory, synchronously, and needs no
+awaitable form.**
+
+A constructor's owner is unpersisted by definition, and every path Rails can
+reach from there is in-memory:
+
+- `save &&= owner.persisted?` (`has_one_association.rb:66`) is false, so
+  `replace` opens no transaction and saves no record.
+- `remove_target!`'s nullify save is gated on `target.persisted? &&
+owner.persisted?` (`:108`).
+- `find_target?` is `!loaded? && (!owner.new_record? || foreign_key_present?) &&
+klass` (`association.rb:320-322`); for has_one / has_many on a new owner both
+  disjuncts are false (`foreign_key_present?` defaults to false and is
+  overridden only by `BelongsToAssociation`, where the FK lives on the owner),
+  so `load_target` issues no query.
+
+Rails' `new` is synchronous _because_ everything it can reach is in-memory, so
+an async `Model.new` would be a deviation rather than a convergence — and it
+would force `await` onto every construction in the codebase to buy nothing.
+`Model.new` / `Model.build` already exist as statics (`base.ts`), and
+`api:compare` maps Ruby `new` / `initialize` to `constructor`
+(`scripts/api-compare/conventions.ts:699`), so no naming work is outstanding
+either.
+
+This arm is also not an instance of the split this RFC removes: `new Foo({...})`
+has one behavior always, with no dependence on the owner's persistence state,
+because the owner cannot be persisted.
 
 ## Changelog
 
