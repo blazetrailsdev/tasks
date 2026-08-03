@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptor-tests"
-status: ready
+status: draft
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
