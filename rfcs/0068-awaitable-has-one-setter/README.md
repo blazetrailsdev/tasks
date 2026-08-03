@@ -1,9 +1,9 @@
 ---
 rfc: "0068-awaitable-has-one-setter"
 title: "Awaitable has_one setter: retire the deferred-displacement machinery"
-status: active
+status: closed
 created: 2026-07-17
-updated: 2026-07-27
+updated: 2026-08-03
 owner: "@deanmarano"
 packages:
   - "activerecord"
