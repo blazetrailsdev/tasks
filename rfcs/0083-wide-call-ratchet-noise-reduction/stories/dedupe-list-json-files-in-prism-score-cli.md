@@ -1,6 +1,6 @@
 ---
 title: "Drop score-cli's private listJsonFiles copy for the shared baseline-json helper"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0083-wide-call-ratchet-noise-reduction"
 cluster: api-compare
