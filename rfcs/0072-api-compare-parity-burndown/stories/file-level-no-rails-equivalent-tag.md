@@ -1,7 +1,7 @@
 ---
 title: "file-level-no-rails-equivalent-tag"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-03T02:05:48Z"
+assignee: "file-level-no-rails-equivalent-tag"
 blocked-by: null
 closed-reason: null
 ---
