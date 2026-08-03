@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - mysql2-connected-predicate-folds-in-cached-ping-state
 deps-rfc: []
 est-loc: null
 priority: null
