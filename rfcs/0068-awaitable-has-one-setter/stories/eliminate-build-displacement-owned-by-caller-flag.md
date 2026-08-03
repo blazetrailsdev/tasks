@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the buildDisplacementOwnedByCaller suppression flag"
-status: in-progress
+status: done
 updated: 2026-08-03
 rfc: "0068-awaitable-has-one-setter"
 cluster: null
