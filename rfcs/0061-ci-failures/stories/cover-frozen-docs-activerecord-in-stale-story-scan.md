@@ -1,6 +1,6 @@
 ---
 title: "Route stale story citations in the frozen docs/activerecord tree somewhere actionable"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6006
 claim: "2026-08-03T18:57:42Z"
 assignee: "cover-frozen-docs-activerecord-in-stale-story-scan"
 blocked-by: null
