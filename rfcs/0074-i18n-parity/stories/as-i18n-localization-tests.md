@@ -1,6 +1,6 @@
 ---
 title: "Restore ActiveSupport I18nTest localization cases over TimeWithZone"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6010
 claim: "2026-08-03T19:18:42Z"
 assignee: "as-i18n-localization-tests"
 blocked-by: null
