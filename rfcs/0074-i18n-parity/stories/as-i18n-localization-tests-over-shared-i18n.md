@@ -1,6 +1,6 @@
 ---
 title: "as-i18n-localization-tests-over-shared-i18n"
-status: blocked
+status: closed
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T19:25:42Z"
-assignee: "as-i18n-localization-tests-over-shared-i18n"
-blocked-by: "Blocked on i18n-consolidate-activesupport-shim (claimed, no PR as of 2026-08-03). The nine localization cases must drive localize() from @blazetrails/i18n over a TimeWithZone, but activesupport does not yet depend on @blazetrails/i18n and the en date/time locale data still lives in activesupport's own SimpleBackend (packages/activesupport/src/i18n.ts) rather than in a locale module loaded into the shared backend. Rewriting packages/activesupport/src/i18n.test.ts now would also be a direct file-overlap conflict with that sibling PR, which rewrites the same file. Unblocks automatically once the shim story is done."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Superseded: PR #6008 ports the five TimeWithZone localization cases and TimeWithZone#mon directly; only the four date-localization cases remain, refiled as as-i18n-date-localization-tests."
 ---
 
 ## Context
