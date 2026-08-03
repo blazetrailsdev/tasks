@@ -1,6 +1,6 @@
 ---
 title: "i18n-interpolation-key-symbol-spelling"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6023
 claim: "2026-08-03T21:11:08Z"
 assignee: "i18n-interpolation-key-symbol-spelling"
 blocked-by: null
