@@ -1,13 +1,13 @@
 ---
 title: "Pin i18n CI gate isolation so i18n-only changes never fan out to dependent suites"
-status: claimed
+status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: null
+pr: 5998
 claim: "2026-08-03T17:54:46Z"
 assignee: "i18n-ci-gate-isolation-guard"
 blocked-by: null
