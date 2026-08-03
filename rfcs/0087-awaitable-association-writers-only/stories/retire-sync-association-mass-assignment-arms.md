@@ -26,18 +26,20 @@ and each entry point takes the shape its own signature allows.
 `update` and `create` are already async, so they can await the association write
 where Rails' `assign_attributes` does it
 (`vendor/rails/activerecord/lib/active_record/attribute_assignment.rb`,
-`_assign_attributes` → `public_send("#{k}=", v)`). `new Foo({ account: x })` has
-no awaitable form to redirect to — RFC 0087's one open question. Rails' `new`
-does assign the association in memory, which argues for keeping an in-memory
-arm; but that reintroduces exactly the persistence-dependent split RFC 0087
-exists to remove, which argues for a throw naming `await foo.setAccount(x)`.
-Resolve it here and record the resolution in the RFC's Open questions section.
+`_assign_attributes` → `public_send("#{k}=", v)`). `new Foo({ account: x })` keeps its
+synchronous in-memory arm — resolved in RFC 0087's Open questions. A
+constructor's owner is unpersisted by definition, so `save &&= owner.persisted?`
+(`has_one_association.rb:66`), `remove_target!`'s `owner.persisted?` gate
+(`:108`) and `find_target?` (`association.rb:320-322`, both disjuncts false for
+has_one / has_many on a new owner) all make the path in-memory in Rails too. The
+arm therefore stays and stays synchronous; there is no persistence-dependent
+split to remove, because the owner cannot be persisted.
 
 ## Acceptance criteria
 
 - [ ] The has_one / collection routing arms in `attribute-assignment.ts` are
       deleted.
 - [ ] `update` / `create` await the association write inline.
-- [ ] The constructor arm's behavior is decided, implemented, and recorded in
-      RFC 0087 Open questions (throw vs in-memory, with the Rails cite).
+- [ ] The constructor arm still assigns associations in memory, synchronously,
+      and a test pins that `new Foo({ account: x })` issues no query.
 - [ ] `pnpm test:compare` delta non-negative.
