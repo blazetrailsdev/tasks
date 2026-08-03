@@ -1,6 +1,6 @@
 ---
 title: "converge-encrypted-file-cipher-to-aes-128-gcm"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 5994
 claim: "2026-08-03T17:26:42Z"
 assignee: "converge-encrypted-file-cipher-to-aes-128-gcm"
 blocked-by: null
