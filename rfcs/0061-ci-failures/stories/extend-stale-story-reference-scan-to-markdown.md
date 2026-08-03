@@ -1,6 +1,6 @@
 ---
 title: "extend-stale-story-reference-scan-to-markdown"
-status: claimed
+status: in-progress
 updated: 2026-08-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6001
 claim: "2026-08-03T18:15:45Z"
 assignee: "extend-stale-story-reference-scan-to-markdown"
 blocked-by: null
