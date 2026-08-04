@@ -1,7 +1,7 @@
 ---
 title: "Pin every fixture connection pool, not just the primary"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-04
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:23:03Z"
+assignee: "credit-mixin-methods-ported-in-their-own-file"
 blocked-by: null
 closed-reason: null
 ---

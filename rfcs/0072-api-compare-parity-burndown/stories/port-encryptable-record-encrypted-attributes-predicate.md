@@ -1,6 +1,6 @@
 ---
 title: "port-encryptable-record-encrypted-attributes-predicate"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:23:03Z"
+assignee: "credit-mixin-methods-ported-in-their-own-file"
 blocked-by: null
 closed-reason: null
 ---

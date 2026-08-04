@@ -1,7 +1,7 @@
 ---
 title: "Triage the 5 object-literal accessors the extractor fix made visible"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:23:03Z"
+assignee: "credit-mixin-methods-ported-in-their-own-file"
 blocked-by: null
 closed-reason: null
 ---
