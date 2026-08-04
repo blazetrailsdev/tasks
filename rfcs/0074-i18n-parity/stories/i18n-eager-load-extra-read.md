@@ -1,6 +1,6 @@
 ---
 title: "I18n.eager_load! carries an extra load_path re-read the gem does not"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
