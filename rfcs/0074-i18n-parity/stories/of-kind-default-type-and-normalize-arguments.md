@@ -1,6 +1,6 @@
 ---
 title: "of-kind-default-type-and-normalize-arguments"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:11:10Z"
+assignee: "of-kind-default-type-and-normalize-arguments"
 blocked-by: null
 closed-reason: null
 ---
