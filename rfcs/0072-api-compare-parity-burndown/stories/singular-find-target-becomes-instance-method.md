@@ -1,6 +1,6 @@
 ---
 title: "Make SingularAssociation#findTarget a real instance method"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6097
 claim: "2026-08-04T22:11:04Z"
 assignee: "port-delegation-record-operators"
 blocked-by: null
