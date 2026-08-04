@@ -1,6 +1,6 @@
 ---
 title: "Drop setupSecondPool's primary entrants rebuild"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
