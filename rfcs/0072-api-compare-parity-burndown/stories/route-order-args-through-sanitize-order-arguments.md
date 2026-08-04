@@ -1,6 +1,6 @@
 ---
 title: "Route order/reorder through sanitizeOrderArguments and checkIfMethodHasArgumentsBang"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 5937
 claim: "2026-08-04T22:47:02Z"
 assignee: "i18n-date-complete-frags-wday-element"
 blocked-by: null
