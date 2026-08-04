@@ -1,6 +1,6 @@
 ---
 title: "i18n-date-parse-frag-and-subx-removal"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T17:30:00Z"
+assignee: "i18n-date-parse-frag-and-subx-removal"
 blocked-by: null
 closed-reason: null
 ---
