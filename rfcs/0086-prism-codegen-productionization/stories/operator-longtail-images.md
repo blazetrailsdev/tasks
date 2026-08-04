@@ -1,7 +1,7 @@
 ---
 title: "operator-longtail-images"
-status: ready
-updated: 2026-08-01
+status: claimed
+updated: 2026-08-04
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:47:02Z"
+assignee: "model-name-human-drops-klass-guard-and-human-fallback"
 blocked-by: null
 closed-reason: null
 ---
