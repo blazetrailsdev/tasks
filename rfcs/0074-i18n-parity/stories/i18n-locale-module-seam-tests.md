@@ -1,6 +1,6 @@
 ---
 title: "Cover the locale-module registry seam with trails-only tests"
-status: ready
+status: draft
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
