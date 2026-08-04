@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-message-encryptors"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6067
 claim: "2026-08-04T15:34:07Z"
 assignee: "port-activesupport-message-encryptors"
 blocked-by: null
