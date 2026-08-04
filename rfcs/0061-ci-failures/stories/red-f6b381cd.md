@@ -1,6 +1,6 @@
 ---
 title: "Website failing on main @f6b381cd"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T18:24:58Z"
+assignee: "red-f6b381cd"
 blocked-by: null
 closed-reason: null
 ---
