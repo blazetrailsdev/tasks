@@ -1,6 +1,6 @@
 ---
 title: "Cover the locale-module registry seam with trails-only tests"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6088
 claim: "2026-08-04T20:08:08Z"
 assignee: "i18n-date-complete-frags-commercial-entry"
 blocked-by: null
