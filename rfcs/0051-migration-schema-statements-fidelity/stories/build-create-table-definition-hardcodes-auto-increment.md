@@ -1,6 +1,6 @@
 ---
 title: "buildCreateTableDefinition hardcodes autoIncrement instead of reading valid_primary_key_options"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T17:44:59Z"
+assignee: "build-create-table-definition-hardcodes-auto-increment"
 blocked-by: null
 closed-reason: null
 ---
