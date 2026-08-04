@@ -1,6 +1,6 @@
 ---
 title: "Port to_sym at the five ported bodies whose Ruby counterpart calls it"
-status: ready
+status: draft
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
