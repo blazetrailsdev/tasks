@@ -1,17 +1,17 @@
 ---
 title: "i18n-ar-fallbacks-wiring"
-status: blocked
-updated: 2026-08-03
+status: done
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6034
 claim: "2026-08-03T22:05:11Z"
 assignee: "i18n-ar-fallbacks-wiring"
-blocked-by: "Blocked on unmerged PR #6026 (i18n-consolidate-activemodel-activerecord-shims). The wiring change is defined as 'on top of #6026': it replaces the bespoke I18nService.setFallbacks/_fallbackChain in packages/activemodel/src/i18n.ts (lines 205-269 on main), which #6026 deletes. On main today the AR case 'activerecord attributes scope falls back to parent locale before it falls back to the :errors namespace' (packages/activerecord/src/validations/i18n-generate-message-validation.test.ts:124) is NOT skipped and passes against the bespoke shim, so there is no it.skip to unskip and no way to do acceptance criterion 2 (no bespoke fallback chain in activemodel/activerecord) without duplicating #6026's deletion. Doing it now requires a stacked PR, which CLAUDE.md forbids. Unblock once #6026 merges."
+blocked-by: null
 closed-reason: null
 ---
 
