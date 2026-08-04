@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-add-column-reimplements-super"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6087
+pr: 6082
 claim: "2026-08-04T20:20:03Z"
 assignee: "i18n-date-parse-answers-a-hash-never-null"
 blocked-by: null
