@@ -1,6 +1,6 @@
 ---
 title: "Give Base#store_translations and #available_locales the gem's raising bodies"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
