@@ -1,6 +1,6 @@
 ---
 title: "Wire test-compare exclusions for the deferred i18n backends"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
