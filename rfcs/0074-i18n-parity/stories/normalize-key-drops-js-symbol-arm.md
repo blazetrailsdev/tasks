@@ -1,6 +1,6 @@
 ---
 title: "Drop the JS Symbol arm from normalize_key so the memo keys on key itself"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
