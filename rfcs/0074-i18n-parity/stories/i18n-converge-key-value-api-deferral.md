@@ -1,6 +1,6 @@
 ---
 title: "i18n-converge-key-value-api-deferral"
-status: claimed
+status: closed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-04T14:04:07Z"
-assignee: "i18n-converge-key-value-api-deferral"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done by PR #6060 — the stale backend/key_value.rb and backend/flatten.rb deferrals are deleted and both suites count again. Residual gaps tracked by i18n-key-value-residual-api-gaps."
 ---
 
 ## Context
