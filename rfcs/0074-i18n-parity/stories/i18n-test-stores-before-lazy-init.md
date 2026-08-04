@@ -1,6 +1,6 @@
 ---
 title: "Sweep tests that storeTranslations before the Simple backend's lazy init"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T13:49:21Z"
+assignee: "i18n-test-stores-before-lazy-init"
 blocked-by: null
 closed-reason: null
 ---
