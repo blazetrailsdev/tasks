@@ -1,6 +1,6 @@
 ---
 title: "parse_iso/parse_sla/parse_dot drop the apostrophe arm and NUMBER"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6100
 claim: "2026-08-04T22:59:07Z"
 assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null
