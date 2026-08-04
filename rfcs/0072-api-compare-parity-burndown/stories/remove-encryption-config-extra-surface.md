@@ -1,6 +1,6 @@
 ---
 title: "Remove encryption/config.ts's five novel names (excludeFromFilterParameters, defaultCompressor, keyProviderClass)"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T20:20:03Z"
+assignee: "i18n-date-parse-answers-a-hash-never-null"
 blocked-by: null
 closed-reason: null
 ---
