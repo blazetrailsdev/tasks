@@ -1,7 +1,7 @@
 ---
 title: "Burn down the 12 STALE @noRailsEquivalent tags reding api:extra for activerecord"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T15:19:08Z"
+assignee: "burn-down-12-stale-norailsequivalent-tags-activerecord"
 blocked-by: null
 closed-reason: null
 ---
