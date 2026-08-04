@@ -1,6 +1,6 @@
 ---
 title: "Stop pre-stripping the Symbol colon in backend/base.ts default and localize arms"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
