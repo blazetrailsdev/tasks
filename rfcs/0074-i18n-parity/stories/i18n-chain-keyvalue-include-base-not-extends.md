@@ -1,6 +1,6 @@
 ---
 title: "Backend::Chain and Backend::KeyValue include Base rather than extending it"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6058
 claim: "2026-08-04T13:42:10Z"
 assignee: "i18n-chain-keyvalue-include-base-not-extends"
 blocked-by: null
