@@ -1,7 +1,7 @@
 ---
 title: "Route a Proc message: through I18n's resolve, not a local call plus Error.interpolate"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []

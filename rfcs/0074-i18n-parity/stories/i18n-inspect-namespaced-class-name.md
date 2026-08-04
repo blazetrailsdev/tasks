@@ -1,7 +1,7 @@
 ---
-title: "i18n-inspect-namespaced-class-name"
-status: draft
-updated: 2026-08-03
+title: "Render #inspect with the Ruby namespaced class name"
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []

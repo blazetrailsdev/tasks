@@ -1,7 +1,7 @@
 ---
 title: "Register Active Model's and Active Record's en locales on I18n.load_path"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -84,5 +84,5 @@ Fallout this deviation is currently forcing, found while wiring
 
 ## Notes
 
-Sequence after `as-i18n-register-en-on-load-path` lands so this follows the
-pattern it establishes rather than inventing a second one.
+`as-i18n-register-en-on-load-path` has landed (PR #6017, merged) — follow the
+pattern it established rather than inventing a second one.

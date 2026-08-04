@@ -1,7 +1,7 @@
 ---
 title: "Route Backend::Base#resolve through the I18n.translate facade"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -45,8 +45,9 @@ else — `enforce_available_locales!` (`i18n.rb:218`), the Array-key branch
 (`i18n.rb:224-230`), and `Disabled` on `locale == false` (`i18n.rb:220`) are all
 skipped by the direct call.
 
-The facade did not exist when `base.ts` was ported; it lands with
-[[i18n-facade-translate-interpolate]].
+The facade did not exist when `base.ts` was ported; it has since landed with
+[[i18n-facade-translate-interpolate]] (PR #6000, merged), so this story is
+unblocked.
 
 ## Acceptance criteria
 

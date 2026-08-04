@@ -1,7 +1,7 @@
 ---
-title: "i18n-mixin-factory-members-invisible-to-api-compare"
-status: draft
-updated: 2026-08-03
+title: "Make Backend::Fallbacks mixin members visible to api:compare"
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []

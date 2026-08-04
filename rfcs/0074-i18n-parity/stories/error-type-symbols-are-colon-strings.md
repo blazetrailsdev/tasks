@@ -1,6 +1,6 @@
 ---
 title: 'Error types are Symbols: spell them ":blank", not identifier-shaped strings'
-status: draft
+status: ready
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null

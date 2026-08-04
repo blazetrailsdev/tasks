@@ -1,7 +1,7 @@
 ---
 title: "ModelName#human takes options in Rails; ours is a getter that drops them"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []

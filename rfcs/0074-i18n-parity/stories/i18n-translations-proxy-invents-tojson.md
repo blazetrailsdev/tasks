@@ -1,7 +1,7 @@
 ---
 title: "Stop the translations auto-vivification proxy inventing a toJSON entry"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
