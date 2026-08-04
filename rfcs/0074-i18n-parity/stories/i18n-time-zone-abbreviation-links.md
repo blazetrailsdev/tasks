@@ -1,6 +1,6 @@
 ---
 title: "Time#zone: resolve tzdata link names before the abbreviation lookup"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T18:04:58Z"
+assignee: "i18n-time-zone-abbreviation-links"
 blocked-by: null
 closed-reason: null
 ---
