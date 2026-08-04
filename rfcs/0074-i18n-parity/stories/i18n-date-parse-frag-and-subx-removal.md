@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
-deps: []
+deps:
+  - i18n-date-parse-remaining-sub-parsers
 deps-rfc: []
 est-loc: null
 priority: null
