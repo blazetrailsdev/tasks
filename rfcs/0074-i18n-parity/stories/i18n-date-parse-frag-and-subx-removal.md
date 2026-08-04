@@ -1,6 +1,6 @@
 ---
 title: "i18n-date-parse-frag-and-subx-removal"
-status: blocked
+status: ready
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-04T17:30:00Z"
-assignee: "i18n-date-parse-frag-and-subx-removal"
-blocked-by: "Depends on unmerged PR #6075 (i18n-date-parse-remaining-sub-parsers-3682). On origin/main packages/i18n/src/date.ts has no parseBc call to insert parse_frag after (date_parse.c:2244-2249 order), and the @missingRailsCall receipt whose parse_frag clause the acceptance criteria says to remove is introduced by #6075 itself. Building now would require a stacked PR. Unblock once #6075 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
