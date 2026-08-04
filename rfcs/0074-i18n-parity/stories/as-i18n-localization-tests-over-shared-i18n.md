@@ -1,7 +1,7 @@
 ---
 title: "as-i18n-localization-tests-over-shared-i18n"
-status: claimed
-updated: 2026-08-03
+status: in-progress
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps:
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6035
 claim: "2026-08-03T20:53:29Z"
 assignee: "as-i18n-localization-tests-over-shared-i18n"
 blocked-by: null
