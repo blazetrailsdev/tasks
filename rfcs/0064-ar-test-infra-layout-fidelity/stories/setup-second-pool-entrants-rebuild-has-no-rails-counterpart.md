@@ -1,6 +1,6 @@
 ---
 title: "Drop setupSecondPool's primary entrants rebuild"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: null
+pr: 6091
 claim: "2026-08-04T20:44:04Z"
 assignee: "i18n-date-parse-have-elem-gates"
 blocked-by: null
