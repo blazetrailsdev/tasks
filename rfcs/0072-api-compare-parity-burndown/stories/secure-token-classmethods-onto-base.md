@@ -1,6 +1,6 @@
 ---
 title: "Install SecureToken::ClassMethods on Base instead of from hasSecureToken"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6100
 claim: "2026-08-04T22:59:07Z"
 assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null
