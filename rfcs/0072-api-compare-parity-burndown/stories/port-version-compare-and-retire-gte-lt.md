@@ -1,6 +1,6 @@
 ---
 title: "port-version-compare-and-retire-gte-lt"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6094
 claim: "2026-08-04T21:35:01Z"
 assignee: "model-name-human-takes-options"
 blocked-by: null
