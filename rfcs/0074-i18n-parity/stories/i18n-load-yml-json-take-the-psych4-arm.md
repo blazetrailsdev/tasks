@@ -1,6 +1,6 @@
 ---
 title: "load_yml/load_json take the legacy probe arm Rails never takes"
-status: ready
+status: draft
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
