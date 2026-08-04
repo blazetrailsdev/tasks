@@ -1,10 +1,11 @@
 ---
 title: "Accept the full Psych input surface in load_yml"
 status: draft
-updated: 2026-08-03
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
-deps: []
+deps:
+  - yaml-is-an-optional-npm-dependency
 deps-rfc: []
 est-loc: 150
 priority: null
