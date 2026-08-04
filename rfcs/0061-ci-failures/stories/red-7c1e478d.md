@@ -1,6 +1,6 @@
 ---
 title: "Leaf Tests failing on main @7c1e478d"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
