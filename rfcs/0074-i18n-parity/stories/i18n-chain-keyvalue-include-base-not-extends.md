@@ -1,6 +1,6 @@
 ---
 title: "Backend::Chain and Backend::KeyValue include Base rather than extending it"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
