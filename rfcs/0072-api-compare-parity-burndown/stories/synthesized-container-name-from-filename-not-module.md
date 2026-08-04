@@ -1,6 +1,6 @@
 ---
 title: "api:extra scores a synthesized container as novel when the Ruby module name differs from its filename"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6103
 claim: "2026-08-04T23:23:03Z"
 assignee: "credit-mixin-methods-ported-in-their-own-file"
 blocked-by: null
