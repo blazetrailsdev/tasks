@@ -1,6 +1,6 @@
 ---
 title: "index_in_create calls visitIndexDefinition directly instead of accept"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T22:59:07Z"
+assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null
 closed-reason: null
 ---

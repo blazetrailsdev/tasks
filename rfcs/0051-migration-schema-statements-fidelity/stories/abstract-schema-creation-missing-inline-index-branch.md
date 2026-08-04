@@ -1,6 +1,6 @@
 ---
 title: "abstract visitTableDefinition omits Rails' supports_indexes_in_create? branch"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T22:59:07Z"
+assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null
 closed-reason: null
 ---
