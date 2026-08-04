@@ -1,6 +1,6 @@
 ---
 title: "Carry rt_complete_frags' commercial entry so Date.parse builds a week date"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
