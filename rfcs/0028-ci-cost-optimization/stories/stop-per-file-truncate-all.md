@@ -1,7 +1,7 @@
 ---
 title: "Stop truncating every canonical table before every test file"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:35:04Z"
+assignee: "i18n-date-complete-frags-weeknum-entries"
 blocked-by: null
 closed-reason: null
 ---

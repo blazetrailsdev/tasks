@@ -1,6 +1,6 @@
 ---
 title: "configure-assigns-credentials-unconditionally"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T23:35:04Z"
+assignee: "i18n-date-complete-frags-weeknum-entries"
 blocked-by: null
 closed-reason: null
 ---
