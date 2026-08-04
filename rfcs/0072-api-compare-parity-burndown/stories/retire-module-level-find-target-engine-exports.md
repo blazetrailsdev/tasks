@@ -48,7 +48,23 @@ a synthesised `scope` in the options:
 
 Retiring the exports means materialising an `Association` for each of those
 paths (an options-carrying holder for the reflection-less arm), which is the
-substance of this story.
+substance of this story. Two callers cannot be served by
+`record.association(name)` at all, and are the ones that set the shape:
+
+- `has-many-through-association.ts:1146` —
+  `findHasManyTarget(record, throughAssoc.name, augmentedOptions)`, where
+  `augmentedOptions` carries a synthesised `scope` closure (the `sourceType`
+  polymorphic filter) that exists in no registered reflection; when that
+  through step is itself a through it recurses back into
+  `has-many-association.ts:584` still carrying them.
+- `has-many-through-association.ts:1175` — `findHasManyTarget(tr, ...)`, whose
+  owner is a through record, not the association's owner.
+
+So the synthetic `Association` must be constructed over an ad-hoc
+`AssociationDefinition` AND must not collide with the owner's real cached
+holder for that name — loadedness, `_loaderWritebackSuppressed` and inverse
+wiring are all keyed on that holder. Budget for a behavioral change to the
+association-cache contract, not a call-site rename.
 
 ## Acceptance criteria
 
