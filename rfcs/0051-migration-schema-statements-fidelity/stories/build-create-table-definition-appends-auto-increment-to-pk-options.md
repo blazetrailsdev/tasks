@@ -1,6 +1,6 @@
 ---
 title: "buildCreateTableDefinition appends autoIncrement to validPrimaryKeyOptions"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 6065
 claim: "2026-08-04T14:49:08Z"
 assignee: "build-create-table-definition-appends-auto-increment-to-pk-options"
 blocked-by: null
