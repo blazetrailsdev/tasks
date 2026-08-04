@@ -1,6 +1,6 @@
 ---
 title: "i18n-key-value-json-and-load-rb-gaps"
-status: ready
+status: closed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by i18n-key-value-residual-api-gaps, filed by PR #6060 for the same KeyValue gaps."
 ---
 
 ## Context
