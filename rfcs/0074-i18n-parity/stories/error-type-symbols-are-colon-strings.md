@@ -1,10 +1,11 @@
 ---
 title: 'Error types are Symbols: spell them ":blank", not identifier-shaped strings'
 status: draft
-updated: 2026-08-03
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
-deps: []
+deps:
+  - proc-message-resolves-through-i18n
 deps-rfc: []
 est-loc: 350
 priority: null
