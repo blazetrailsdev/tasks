@@ -1,6 +1,6 @@
 ---
 title: "Converge Date.parse onto Ruby's spellings"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6056
 claim: "2026-08-04T13:42:17Z"
 assignee: "i18n-date-parse-accepts-only-y-m-d"
 blocked-by: null
