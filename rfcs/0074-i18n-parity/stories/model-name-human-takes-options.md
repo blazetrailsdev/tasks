@@ -1,6 +1,6 @@
 ---
 title: "ModelName#human takes options in Rails; ours is a getter that drops them"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6094
 claim: "2026-08-04T21:35:01Z"
 assignee: "model-name-human-takes-options"
 blocked-by: null
