@@ -102,7 +102,9 @@ streams) — that is a large parser trails has already decided not to own.
 ## Acceptance criteria
 
 - `packages/i18n/package.json` declares the `yaml` dependency at the same
-  version range activesupport pins (`^2.8.3`), and `Backend::Base#loadYml`
+  version range activesupport pins (`^2.8.3`) and in the same **optional**
+  shape `[[yaml-is-an-optional-npm-dependency]]` settles on — do not add a
+  second hard dependency edge on it — and `Backend::Base#loadYml`
   (`packages/i18n/src/backend/base.ts:542`) parses through it.
 - `packages/i18n/src/yaml.ts`'s hand-rolled parser is deleted, not kept as a
   fallback; if the file survives it is a re-export in the shape of
