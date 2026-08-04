@@ -1,6 +1,6 @@
 ---
 title: "Reclaim orphaned isolated PG/MySQL databases when a worker dies before teardown"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 5627
 claim: "2026-08-04T22:59:07Z"
 assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null
