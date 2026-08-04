@@ -1,6 +1,6 @@
 ---
 title: "Load JS/TS locale modules in place of Backend::Base#load_rb"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
