@@ -1,6 +1,6 @@
 ---
 title: "rename-multi-statements-enabled-to-conventions-predicate"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 6101
 claim: "2026-08-04T23:11:10Z"
 assignee: "of-kind-default-type-and-normalize-arguments"
 blocked-by: null
