@@ -1,6 +1,6 @@
 ---
 title: "Website failing on main @f6b381cd"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
