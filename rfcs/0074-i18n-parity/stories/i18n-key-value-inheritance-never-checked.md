@@ -1,6 +1,6 @@
 ---
 title: "KeyValue's superclass is never inheritance-checked (I18n::JSON wins primary)"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6072
 claim: "2026-08-04T17:04:59Z"
 assignee: "i18n-key-value-inheritance-never-checked"
 blocked-by: null
