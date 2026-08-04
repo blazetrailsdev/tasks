@@ -1,7 +1,7 @@
 ---
 title: "converge-symbol-call-sites-after-colon-string-flip"
-status: ready
-updated: 2026-08-03
+status: closed
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by i18n-fallbacks-symbol-arms-break-typecheck (closed), which landed the central fix; all nine call sites now pass colon-prefixed strings and pnpm build is green on main"
 ---
 
 ## Context
