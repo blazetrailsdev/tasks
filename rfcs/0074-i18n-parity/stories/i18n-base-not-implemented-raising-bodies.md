@@ -1,6 +1,6 @@
 ---
 title: "Give Base#store_translations and #available_locales the gem's raising bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6044
 claim: "2026-08-04T02:25:52Z"
 assignee: "i18n-base-not-implemented-raising-bodies"
 blocked-by: null
