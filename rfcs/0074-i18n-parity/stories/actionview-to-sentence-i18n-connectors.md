@@ -1,6 +1,6 @@
 ---
 title: "actionview-to-sentence-i18n-connectors"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6040
 claim: "2026-08-04T01:33:59Z"
 assignee: "actionview-to-sentence-i18n-connectors"
 blocked-by: null
