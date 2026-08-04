@@ -1,6 +1,6 @@
 ---
 title: "Extract rt__valid_date_frags_p from Date.parse's inlined frag check"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6102
 claim: "2026-08-04T21:23:01Z"
 assignee: "i18n-date-parse-extract-valid-date-frags-p"
 blocked-by: null
