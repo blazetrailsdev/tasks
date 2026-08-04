@@ -1,6 +1,6 @@
 ---
 title: "Drop the JS Symbol arm from normalize_key so the memo keys on key itself"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T14:34:07Z"
+assignee: "normalize-key-drops-js-symbol-arm"
 blocked-by: null
 closed-reason: null
 ---
