@@ -1,6 +1,6 @@
 ---
 title: "i18n-hash-inspect-ruby-34-form"
-status: ready
+status: closed
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #6031, which resolved the exceptions.test.ts failure the other way: it aligned the test on the pre-3.4 rocket form our inspectHash emits (PR #6022), matching the literal in vendor/i18n/test/backend/exceptions_test.rb:34. This story's premise — moving to Ruby 3.4 rendering — contradicts that merged decision. Filed before #6031 merged."
 ---
 
 ## Context
