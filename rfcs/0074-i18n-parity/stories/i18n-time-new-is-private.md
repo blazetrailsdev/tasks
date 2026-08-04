@@ -1,6 +1,6 @@
 ---
 title: "Converge Time.new onto Ruby's public local-zone constructor"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6062
 claim: "2026-08-04T13:53:49Z"
 assignee: "i18n-time-new-is-private"
 blocked-by: null
