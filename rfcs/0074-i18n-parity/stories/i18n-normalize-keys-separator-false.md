@@ -1,6 +1,6 @@
 ---
 title: "i18n-normalize-keys-separator-false"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6049
 claim: "2026-08-04T03:55:55Z"
 assignee: "i18n-normalize-keys-separator-false"
 blocked-by: null
