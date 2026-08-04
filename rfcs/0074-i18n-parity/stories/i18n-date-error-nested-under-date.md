@@ -1,6 +1,6 @@
 ---
 title: "Raise Date::Error rather than bare ArgumentError from Date.parse"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
