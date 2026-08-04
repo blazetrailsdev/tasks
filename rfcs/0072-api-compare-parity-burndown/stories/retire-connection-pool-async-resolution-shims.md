@@ -1,6 +1,6 @@
 ---
 title: "retire-connection-pool-async-resolution-shims"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null

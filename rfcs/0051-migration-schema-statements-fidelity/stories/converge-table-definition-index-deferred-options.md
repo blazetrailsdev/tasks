@@ -1,6 +1,6 @@
 ---
 title: "converge-table-definition-index-deferred-options"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
