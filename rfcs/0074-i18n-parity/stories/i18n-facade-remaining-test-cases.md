@@ -1,7 +1,7 @@
 ---
 title: "Port the nine remaining i18n_test.rb cases"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T03:10:54Z"
+assignee: "i18n-facade-remaining-test-cases"
 blocked-by: null
 closed-reason: null
 ---
