@@ -1,6 +1,6 @@
 ---
 title: "i18n-share-one-ruby-date-across-fallbacks-tests"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6057
 claim: "2026-08-04T13:47:42Z"
 assignee: "i18n-share-one-ruby-date-across-fallbacks-tests"
 blocked-by: null
