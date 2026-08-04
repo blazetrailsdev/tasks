@@ -1,6 +1,6 @@
 ---
 title: "Derive the Fallbacks factory's return type from its class, not a hand-listed interface"
-status: ready
+status: draft
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
