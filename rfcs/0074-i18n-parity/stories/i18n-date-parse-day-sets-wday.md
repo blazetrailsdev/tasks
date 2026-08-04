@@ -1,6 +1,6 @@
 ---
 title: "parse_day sets :wday, as parse_day_cb does"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6089
 claim: "2026-08-04T20:32:03Z"
 assignee: "i18n-date-parse-day-sets-wday"
 blocked-by: null
