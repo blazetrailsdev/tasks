@@ -1,6 +1,6 @@
 ---
 title: "Port the seven date__parse sub-parsers Date._parse still omits"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
