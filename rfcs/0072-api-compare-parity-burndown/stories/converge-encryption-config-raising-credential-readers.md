@@ -1,6 +1,6 @@
 ---
 title: "converge-encryption-config-raising-credential-readers"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6082
 claim: "2026-08-04T18:55:06Z"
 assignee: "i18n-time-zone-abbreviation-links"
 blocked-by: null
