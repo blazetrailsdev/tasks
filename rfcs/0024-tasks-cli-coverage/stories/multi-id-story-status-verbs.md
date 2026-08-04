@@ -1,6 +1,6 @@
 ---
 title: "Variadic story-status verbs: claim/in-progress/done/release take many ids atomically"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T17:01:16Z"
+assignee: "multi-id-story-status-verbs"
 blocked-by: null
 closed-reason: null
 ---
