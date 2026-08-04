@@ -1,7 +1,7 @@
 ---
 title: "load_yaml alias is a class field — arity 0 vs (filename)"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T12:38:26Z"
+assignee: "i18n-load-yaml-alias-arity"
 blocked-by: null
 closed-reason: null
 ---
