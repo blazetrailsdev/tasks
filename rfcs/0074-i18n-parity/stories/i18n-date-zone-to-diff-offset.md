@@ -1,6 +1,6 @@
 ---
 title: "i18n-date-zone-to-diff-offset"
-status: claimed
+status: blocked
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-04T16:59:40Z"
 assignee: "i18n-date-zone-to-diff-offset"
-blocked-by: null
+blocked-by: "Blocked on unmerged PR #6070 (i18n-date-parse-time-and-narrow-ddd-widths). Both call sites this story converges are introduced by that PR, not by origin/main (1a6ee75e0): (1) DateParts has no `zone` field on main — #6070 adds it plus parse_time_cb/parse_ddd_cb zone capture; (2) the `@missingRailsCall` receipt naming date_zone_to_diff that acceptance criterion 3 says to remove does not exist on main — #6070 writes it. Acceptance criterion 1 (`Date._parse('20080702[+9:JST]')` answers offset 32400, and the same for '2008-07-02T10:30:00+09:00') is unreachable without #6070's bracketed-zone and parse_time ports. Porting date_zone_to_diff alone on main would be dead extra surface with no call site, which api:extra measures and CLAUDE.md forbids; the alternative is a stacked PR, also forbidden. Unblock and re-run once #6070 merges."
 closed-reason: null
 ---
 
