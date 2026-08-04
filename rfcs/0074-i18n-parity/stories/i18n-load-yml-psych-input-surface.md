@@ -73,12 +73,18 @@ surface. `packages/i18n/src/yaml.ts` is the sole exception, and it costs the two
 novel names `api:extra --package i18n` reports for a file with no Rails
 counterpart (`yaml.ts — 2 novel, 0 moved [no Rails counterpart]`).
 
-Note on wiring: `packages/i18n` already imports `@blazetrails/activesupport`
-(`packages/i18n/src/backend/fallbacks.ts`), and activesupport imports
-`@blazetrails/i18n` (`html-safe-translation.ts:2`, `i18n.ts:20`,
-`locale/en.ts:11`). Declaring `yaml` as a direct dependency of `packages/i18n`
-and importing it there — the shape `configuration-file.ts` already uses —
-avoids deepening that cycle for a leaf utility.
+Note on wiring: **take `yaml` as a direct dependency of `packages/i18n`; do not
+route through `@blazetrails/activesupport/yaml`.** The dependency edge runs
+activesupport → i18n (`packages/activesupport/package.json:89`
+`"@blazetrails/i18n": "workspace:*"`, used at `src/i18n.ts:20`,
+`src/html-safe-translation.ts:2`, `src/locale/en.ts:11`; same edge from
+actionpack, activemodel, activerecord). `packages/i18n` today declares **no
+dependencies at all** and its `src/` contains no `@blazetrails/*` import — it is
+a leaf, mirroring the gem, which Rails depends on rather than the reverse.
+Consuming the activesupport re-export would invert that edge and create the
+cycle. Importing `"yaml"` directly is the shape
+`packages/activesupport/src/configuration-file.ts:2` already uses, and it keeps
+i18n a leaf.
 
 ## Converged shape
 
