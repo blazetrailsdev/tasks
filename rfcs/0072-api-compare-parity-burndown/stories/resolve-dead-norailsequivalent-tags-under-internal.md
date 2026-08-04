@@ -1,6 +1,6 @@
 ---
 title: "Resolve the 12 @noRailsEquivalent tags left dead by @internal on class members"
-status: claimed
+status: closed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-08-04T21:59:03Z"
-assignee: "port-compare-with-range"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already resolved on main: pnpm api:extra reports '102 tag(s), 102 matched' (+97 inherited) with 0 unclassified — no member carries both @internal and @noRailsEquivalent (verified by a JSDoc-block scan over packages/*/src). Nothing left to build."
 ---
 
 ## Context
