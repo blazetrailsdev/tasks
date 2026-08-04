@@ -1,6 +1,6 @@
 ---
 title: "Cover the full sprintf grammar reachable from %<name>fmt"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:11:10Z"
+assignee: "i18n-date-parse-eu-us-gate-misses-have-digit"
 blocked-by: null
 closed-reason: null
 ---
