@@ -1,6 +1,6 @@
 ---
 title: "valid-column-definition-options-duplicated-on-table-definition"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6086
 claim: "2026-08-04T19:56:49Z"
 assignee: "i18n-async-reload-chain"
 blocked-by: null
