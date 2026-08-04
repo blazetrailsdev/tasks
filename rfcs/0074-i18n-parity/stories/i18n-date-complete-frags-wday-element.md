@@ -1,6 +1,6 @@
 ---
 title: "complete_frags drops rt_complete_frags' wday element"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6099
 claim: "2026-08-04T22:47:02Z"
 assignee: "i18n-date-complete-frags-wday-element"
 blocked-by: null
