@@ -1,6 +1,6 @@
 ---
 title: "Make the whole reload chain async, not just the I18n.reload! seam"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6086
 claim: "2026-08-04T19:56:49Z"
 assignee: "i18n-async-reload-chain"
 blocked-by: null
