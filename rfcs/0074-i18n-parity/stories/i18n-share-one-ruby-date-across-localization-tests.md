@@ -1,6 +1,6 @@
 ---
 title: "Converge the i18n localization test's RubyDate double onto a real Date"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
