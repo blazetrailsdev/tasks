@@ -1,6 +1,6 @@
 ---
 title: "preloadTranslationFiles' @noRailsEquivalent block is detached from its declaration"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 6059
 claim: "2026-08-04T13:42:32Z"
 assignee: "i18n-preload-norailsequivalent-tag-detached"
 blocked-by: null
