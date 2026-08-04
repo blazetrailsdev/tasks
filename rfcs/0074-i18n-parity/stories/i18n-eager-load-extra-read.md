@@ -1,6 +1,6 @@
 ---
 title: "I18n.eager_load! carries an extra load_path re-read the gem does not"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T20:56:04Z"
+assignee: "i18n-date-subx-cb-decomposition"
 blocked-by: null
 closed-reason: null
 ---
