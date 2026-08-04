@@ -1,6 +1,6 @@
 ---
 title: "Measure the slot-1 purge-path flip on the PG and MySQL lanes"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0028-ci-cost-optimization"
 cluster: null
