@@ -1,6 +1,6 @@
 ---
 title: "complete_frags drops rt_complete_frags' wday element"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null

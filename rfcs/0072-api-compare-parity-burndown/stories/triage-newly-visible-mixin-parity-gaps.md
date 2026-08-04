@@ -1,6 +1,6 @@
 ---
 title: "Triage the 258 newly-visible mixin parity gaps surfaced by #5334"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null

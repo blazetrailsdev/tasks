@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_commercial_p's day check and the commercial arm's wday fallback"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
