@@ -1,6 +1,6 @@
 ---
 title: "Derive applyTokenRenames' pattern from TOKEN_RENAMES so entries can't be dead code"
-status: ready
+status: draft
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
