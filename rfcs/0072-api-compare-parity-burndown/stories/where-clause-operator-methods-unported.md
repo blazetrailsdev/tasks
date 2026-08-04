@@ -1,6 +1,6 @@
 ---
 title: "WhereClause #+ #- #| #== are unported"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6084
 claim: "2026-08-04T18:21:59Z"
 assignee: "am-ar-i18n-register-en-on-load-path"
 blocked-by: null
