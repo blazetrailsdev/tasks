@@ -1,6 +1,6 @@
 ---
 title: "Port I18n::UnsupportedMethod"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6062
 claim: "2026-08-04T13:54:05Z"
 assignee: "i18n-unsupported-method-exception"
 blocked-by: null
