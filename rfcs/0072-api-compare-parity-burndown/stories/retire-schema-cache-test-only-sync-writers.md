@@ -1,6 +1,6 @@
 ---
 title: "retire-schema-cache-test-only-sync-writers"
-status: claimed
+status: ready
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: "2026-08-04T23:11:10Z"
-assignee: "of-kind-default-type-and-normalize-arguments"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
