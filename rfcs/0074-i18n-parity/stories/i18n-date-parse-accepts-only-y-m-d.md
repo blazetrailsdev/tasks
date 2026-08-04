@@ -1,6 +1,6 @@
 ---
 title: "Converge Date.parse onto Ruby's spellings"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
