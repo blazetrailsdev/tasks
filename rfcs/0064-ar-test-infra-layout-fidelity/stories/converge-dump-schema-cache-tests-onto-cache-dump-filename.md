@@ -1,6 +1,6 @@
 ---
 title: "Converge DumpSchemaCache tests onto cacheDumpFilename"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 6
-pr: null
+pr: 6089
 claim: "2026-08-04T20:32:03Z"
 assignee: "i18n-date-parse-day-sets-wday"
 blocked-by: null
