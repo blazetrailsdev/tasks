@@ -1,7 +1,7 @@
 ---
 title: "Port the normalize_key double-nested cache"
-status: in-progress
-updated: 2026-08-03
+status: done
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
