@@ -1,6 +1,6 @@
 ---
 title: "inScope set omits five ported i18n locale files, redding unported-files.test.ts on main"
-status: draft
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6063
 claim: null
 assignee: null
 blocked-by: null
