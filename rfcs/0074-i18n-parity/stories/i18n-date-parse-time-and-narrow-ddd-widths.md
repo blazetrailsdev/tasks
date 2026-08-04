@@ -1,6 +1,6 @@
 ---
 title: "Port parse_time so Date.parse reads the yday and bare-mday widths"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
