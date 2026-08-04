@@ -1,6 +1,6 @@
 ---
 title: "Time#zone: answer the tzdata abbreviation, not Intl's short name (~90 LOC)"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
