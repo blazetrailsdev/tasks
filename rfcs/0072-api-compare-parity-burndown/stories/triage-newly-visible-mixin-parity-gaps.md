@@ -1,7 +1,7 @@
 ---
 title: "Triage the 258 newly-visible mixin parity gaps surfaced by #5334"
-status: ready
-updated: 2026-07-26
+status: claimed
+updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T22:47:02Z"
+assignee: "i18n-date-complete-frags-wday-element"
 blocked-by: null
 closed-reason: null
 ---

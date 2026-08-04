@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_commercial_p's day check and the commercial arm's wday fallback"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T22:47:02Z"
+assignee: "i18n-date-complete-frags-wday-element"
 blocked-by: null
 closed-reason: null
 ---
