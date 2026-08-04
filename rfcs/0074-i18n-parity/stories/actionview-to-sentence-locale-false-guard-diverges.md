@@ -1,6 +1,6 @@
 ---
 title: "Drop the locale: false guard ActionView's to_sentence does not have"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T01:55:53Z"
+assignee: "actionview-to-sentence-locale-false-guard-diverges"
 blocked-by: null
 closed-reason: null
 ---
