@@ -92,14 +92,43 @@ locale normalization — do not fold it in here.)
   `UnknownFileType`.
 - The registration seam is exercised by a trails-only test proving a bundled app
   can load a locale module with `import()` never called.
-- `scripts/api-compare/conventions.ts` keeps the `load_rb` scoped skip but
-  rewrites its reason: the arm _is_ ported, as `.ts`/`.js`/`.mjs`; only the Ruby
-  `eval` has no counterpart. The stale claim that a JS locale module is
-  unwanted new surface must go, as must the matching prose at
-  `packages/i18n/src/backend/base.ts:17`.
 - The two `simple_test.rb` cases above are ported under their Rails names with
   a `.ts` (or `.js`) fixture standing in for `en.rb`, asserting the same
   `{ en: { fuh: { bah: "bas" } } }` shape.
-- `pnpm api:compare` still shows `backend/simple.rb 27/28` with `load_rb`
-  skipped (denominator unchanged); `pnpm test:compare` shows
-  `backend/simple_test.rb 30/31`.
+
+### Amended 2026-08-04 — superseded in part by #6017
+
+PR #6017 (`feat(i18n): register Active Support's en locale on I18n.load_path`)
+landed the first four criteria above while this story was open, with two design
+choices that supersede what this story originally specified. The amendments:
+
+- **Dispatch is `.js` only, not `.ts`/`.js`/`.mjs`.** `load_rb` has exactly one
+  Ruby counterpart (`vendor/i18n/lib/i18n/backend/base.rb:254-256`), so one
+  ported arm is the faithful mapping; extra arms would be extra surface with no
+  Ruby name behind them. A locale module authored in TypeScript is registered
+  under its _emitted_ `en.js` name, which is what
+  `packages/i18n/src/test-data/locales/en.ts` does.
+- **The seam is `registerLocaleModule` (singular), not `registerLocaleModules`.**
+- **The api-compare criterion is inverted: `load_rb` must MATCH, not stay
+  skipped.** The original bullet — "keep the scoped skip, rewrite its reason" —
+  is the anti-pattern CLAUDE.md's "a documented deviation is debt, not
+  permission" forbids: closing a convergence story by writing a better
+  justification for the deviation. `SCOPED_SKIP_GROUPS` is a burndown ledger.
+  #6017 instead took the converged route, adding an `rb: "js"` entry to
+  `TOKEN_RENAMES` in `scripts/api-compare/conventions.ts` so `load_rb` resolves
+  to the ported `loadJs` as a real match — the same mechanism as the existing
+  `erb` → `tse` rename, and published in the CI-verified generated table in
+  `docs/ruby-ts-conventions.md`. No scoped skip remains, and none should.
+
+  The rename is global in form but singular in effect: `load_rb` is the only
+  name in the entire vendored corpus (Rails, i18n, rack, globalid,
+  did_you_mean) with a standalone `rb` token, against 8 for `erb`.
+
+- **Converged signal:** `pnpm api:compare` shows `backend/simple.rb 28/28` with
+  `load_rb` matched to `loadJs` (i18n 183/184 overall), and `pnpm test:compare`
+  shows `backend/simple_test.rb 30/31`.
+
+The one piece #6017 left undone — and all that PR #6043 carries — is that its
+`rb: "js"` table entry was never reachable: `applyTokenRenames`' regex matched
+only `erb|ERB|Erb`, so the entry was dead code and `load_rb` kept resolving to
+`loadRb`. #6043 widens the alternation to make the documented rename real.
