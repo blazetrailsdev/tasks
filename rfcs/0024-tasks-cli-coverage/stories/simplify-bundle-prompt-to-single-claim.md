@@ -48,7 +48,7 @@ from the backlog. `i18n-backend-key-value` was found stranded exactly this way.
 ## Acceptance criteria
 
 - [ ] `buildBundlePrompt` emits a SINGLE `pnpm tasks claim <id1> <id2> ...
-  --assignee <name>` call instead of one per story, and a single
+--assignee <name>` call instead of one per story, and a single
       `pnpm tasks done <id...> --pr <N>` at the end.
 - [ ] The "release any you already claimed, STOP and exit" compensation
       paragraph is deleted — the CLI is atomic now, so there is nothing to
