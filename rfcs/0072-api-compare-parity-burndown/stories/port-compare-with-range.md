@@ -1,7 +1,7 @@
 ---
 title: "port-compare-with-range"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:59:03Z"
+assignee: "port-compare-with-range"
 blocked-by: null
 closed-reason: null
 ---
