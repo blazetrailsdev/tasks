@@ -1,6 +1,6 @@
 ---
 title: "as-to-sentence-i18n-connectors"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6039
 claim: "2026-08-04T01:11:04Z"
 assignee: "as-to-sentence-i18n-connectors"
 blocked-by: null
