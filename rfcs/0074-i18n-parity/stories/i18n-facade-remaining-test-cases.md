@@ -1,6 +1,6 @@
 ---
 title: "Port the nine remaining i18n_test.rb cases"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
