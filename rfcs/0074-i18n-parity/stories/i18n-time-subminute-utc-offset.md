@@ -1,6 +1,6 @@
 ---
 title: "Time.new: accept MRI's sub-minute utc_offset (~120 LOC)"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6074
 claim: "2026-08-04T17:15:00Z"
 assignee: "i18n-time-subminute-utc-offset"
 blocked-by: null
