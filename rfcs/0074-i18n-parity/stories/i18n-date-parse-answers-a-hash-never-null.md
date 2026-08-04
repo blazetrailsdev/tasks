@@ -1,6 +1,6 @@
 ---
 title: "Date._parse answers a Hash always, as date__parse does"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6087
 claim: "2026-08-04T20:20:03Z"
 assignee: "i18n-date-parse-answers-a-hash-never-null"
 blocked-by: null
