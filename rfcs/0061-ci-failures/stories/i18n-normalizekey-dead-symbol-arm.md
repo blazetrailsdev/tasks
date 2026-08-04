@@ -1,6 +1,6 @@
 ---
 title: "i18n-normalizekey-dead-symbol-arm"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T00:56:41Z"
+assignee: "i18n-normalizekey-dead-symbol-arm"
 blocked-by: null
 closed-reason: null
 ---
