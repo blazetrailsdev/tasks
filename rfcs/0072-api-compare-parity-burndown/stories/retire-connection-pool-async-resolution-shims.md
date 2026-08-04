@@ -1,6 +1,6 @@
 ---
 title: "retire-connection-pool-async-resolution-shims"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6095
 claim: "2026-08-04T21:47:01Z"
 assignee: "converge-table-definition-index-deferred-options"
 blocked-by: null
