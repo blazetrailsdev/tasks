@@ -30,10 +30,13 @@ if (rb_rational_den(offset) == INT2FIX(1))
     offset = rb_rational_num(offset);
 ```
 
-so `Date._parse("2008-07-02 10:30:00 +9.5555")[:offset]` is `(1710599/50)`
-in Ruby and `34211.98` in trails. Only when the Rational reduces to
-denominator 1 (`+9.555` → `34398`) do the two agree, which is why every case
-in `date.trails.test.ts` currently passes.
+so `Date._parse("2008-07-02 10:30:00 +9.5555")[:offset]` is `(171999/5)` in
+Ruby (verified against ruby 3.3.11 / date 3.4.1) and the float `34399.8` in
+trails. The two agree in magnitude here, but the _type_ differs, and a
+fraction whose Rational is not exactly representable in binary floating point
+will differ in value too. Only when the Rational reduces to denominator 1
+(`+9.555` → `34398`) are the two identical, which is why every case in
+`date.trails.test.ts` currently passes.
 
 The deviation is cited at the call site in `dateZoneToDiff`'s JSDoc as a
 TypeScript language limit — trails has no Rational. That citation is a
