@@ -1,6 +1,6 @@
 ---
 title: "Retire the RotationCoordinator trails-only harness once MessageVerifiers/MessageEncryptors include the shared module"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
