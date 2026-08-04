@@ -1,6 +1,6 @@
 ---
 title: "Take yaml as an optional npm dependency, not a hard one"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
