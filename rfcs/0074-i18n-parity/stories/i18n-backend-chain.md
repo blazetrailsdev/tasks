@@ -1,14 +1,14 @@
 ---
 title: "i18n-backend-chain"
-status: claimed
-updated: 2026-08-03
+status: done
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6031
 claim: "2026-08-03T22:14:13Z"
 assignee: "i18n-backend-chain"
 blocked-by: null
