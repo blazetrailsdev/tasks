@@ -1,6 +1,6 @@
 ---
 title: "Escape non-printable Unicode in I18n String inspect as MRI does"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
