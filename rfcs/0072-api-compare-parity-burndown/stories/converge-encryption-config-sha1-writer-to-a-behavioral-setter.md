@@ -1,6 +1,6 @@
 ---
 title: "Config#support_sha1_for_non_deterministic_encryption= is a behavioral writer, not stored state"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:35:01Z"
+assignee: "model-name-human-takes-options"
 blocked-by: null
 closed-reason: null
 ---

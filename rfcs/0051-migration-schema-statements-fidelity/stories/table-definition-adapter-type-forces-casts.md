@@ -1,6 +1,6 @@
 ---
 title: "TableDefinition._adapter type forces unknown-casts for connection readers"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:35:01Z"
+assignee: "model-name-human-takes-options"
 blocked-by: null
 closed-reason: null
 ---
