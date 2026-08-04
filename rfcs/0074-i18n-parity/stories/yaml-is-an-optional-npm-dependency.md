@@ -1,6 +1,6 @@
 ---
 title: "Take yaml as an optional npm dependency, not a hard one"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6077
 claim: "2026-08-04T17:25:02Z"
 assignee: "yaml-is-an-optional-npm-dependency"
 blocked-by: null
