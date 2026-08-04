@@ -1,6 +1,6 @@
 ---
 title: "Literal comparator: Ruby Symbol default vs colon-prefixed TS string"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
