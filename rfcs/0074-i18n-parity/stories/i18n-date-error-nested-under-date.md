@@ -1,6 +1,6 @@
 ---
 title: "Raise Date::Error rather than bare ArgumentError from Date.parse"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6069
 claim: "2026-08-04T16:04:09Z"
 assignee: "i18n-date-error-nested-under-date"
 blocked-by: null
