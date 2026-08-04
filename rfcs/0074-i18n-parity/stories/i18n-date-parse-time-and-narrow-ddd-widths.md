@@ -1,6 +1,6 @@
 ---
 title: "Port parse_time so Date.parse reads the yday and bare-mday widths"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6070
 claim: "2026-08-04T16:19:08Z"
 assignee: "i18n-date-parse-time-and-narrow-ddd-widths"
 blocked-by: null
