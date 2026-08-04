@@ -1,6 +1,6 @@
 ---
 title: "converge-table-definition-index-deferred-options"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:47:01Z"
+assignee: "converge-table-definition-index-deferred-options"
 blocked-by: null
 closed-reason: null
 ---
