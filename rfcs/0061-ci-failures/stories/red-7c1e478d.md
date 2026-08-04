@@ -1,6 +1,6 @@
 ---
 title: "Leaf Tests failing on main @7c1e478d"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T12:08:37Z"
+assignee: "red-7c1e478d"
 blocked-by: null
 closed-reason: null
 ---
