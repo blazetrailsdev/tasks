@@ -1,6 +1,6 @@
 ---
 title: "Load JS/TS locale modules in place of Backend::Base#load_rb"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6043
 claim: "2026-08-04T02:10:53Z"
 assignee: "i18n-backend-load-rb-decision"
 blocked-by: null
