@@ -1,6 +1,6 @@
 ---
 title: "Stop pre-stripping the Symbol colon in backend/base.ts default and localize arms"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T13:42:04Z"
+assignee: "backend-base-symbol-arms-pre-strip-colon"
 blocked-by: null
 closed-reason: null
 ---
