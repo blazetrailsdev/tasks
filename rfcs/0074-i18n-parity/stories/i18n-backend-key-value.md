@@ -1,6 +1,6 @@
 ---
 title: "Port I18n::Backend::KeyValue and the chain tests it gates"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6041
 claim: "2026-08-04T16:49:07Z"
 assignee: "i18n-backend-key-value"
 blocked-by: null
