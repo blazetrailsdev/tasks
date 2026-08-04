@@ -62,6 +62,7 @@ Fallout this deviation is currently forcing, found while wiring
   `resetI18nLoadPath` in
   `packages/activerecord/src/validations/i18n-generate-message-validation.test.ts`
   snapshots the backend only, because there is no load path to clear or replace.
+
 - `resetI18n` carries an invented `backend` parameter so a case can install a
   mixin over `Simple`. With the locales on the load path, the stand-in collapses
   into Rails' own two statements and the parameter goes away.
