@@ -1,6 +1,6 @@
 ---
 title: "date_zone_to_diff answers a float where Ruby answers a Rational"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
