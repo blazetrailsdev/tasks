@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - abstract-schema-creation-missing-inline-index-branch
 deps-rfc: []
 est-loc: 180
 priority: null
