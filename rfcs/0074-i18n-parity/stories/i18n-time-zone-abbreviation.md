@@ -1,6 +1,6 @@
 ---
 title: "Time#zone: answer the tzdata abbreviation, not Intl's short name (~90 LOC)"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6076
 claim: "2026-08-04T17:19:58Z"
 assignee: "i18n-time-zone-abbreviation"
 blocked-by: null
