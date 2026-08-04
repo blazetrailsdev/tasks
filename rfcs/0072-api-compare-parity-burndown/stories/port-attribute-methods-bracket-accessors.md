@@ -1,7 +1,7 @@
 ---
 title: "port-attribute-methods-bracket-accessors"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T15:49:36Z"
+assignee: "port-attribute-methods-bracket-accessors"
 blocked-by: null
 closed-reason: null
 ---
