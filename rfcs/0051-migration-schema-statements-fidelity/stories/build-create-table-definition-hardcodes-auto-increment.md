@@ -20,8 +20,8 @@ closed-reason: null
 `build_create_table_definition`
 (vendor/rails/activerecord/lib/active*record/connection_adapters/abstract/schema_statements.rb:334-335)
 splits the options hash with
-`options.extract!(*valid_table_definition_options, :\_skip_validate_options)`and`options.extract!(_valid_primary_key_options, :\_skip_validate_options)`— the
-key sets come entirely from the adapter's two`valid_\*\_options` readers.
+`options.extract!(*valid*table_definition_options, :\_skip_validate_options)`and`options.extract!(\_valid_primary_key_options, :\_skip_validate_options)`— the
+key sets come entirely from the adapter's two`valid*\*\_options` readers.
 
 trails'
 `buildCreateTableDefinition`
