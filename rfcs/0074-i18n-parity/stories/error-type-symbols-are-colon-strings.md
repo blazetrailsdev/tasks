@@ -1,6 +1,6 @@
 ---
 title: 'Error types are Symbols: spell them ":blank", not identifier-shaped strings'
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T22:35:00Z"
+assignee: "error-type-symbols-are-colon-strings"
 blocked-by: null
 closed-reason: null
 ---
