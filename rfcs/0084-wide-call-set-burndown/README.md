@@ -129,12 +129,42 @@ files.
 
 ## Dependencies
 
-- Blocked in full on `0083-wide-call-ratchet-noise-reduction` reaching at least
-  `ruby-extractor-record-call-receiver-kind` and
-  `resolve-wide-candidates-through-include-graph`. Burning down a list that is
-  mostly tooling artifact spends the effort on entries that were never fidelity
-  gaps.
-- B2 additionally blocked on `missing-rails-call-tag-suppresses-wide-flag`.
+**All landed — this RFC is unblocked (verified 2026-08-04).**
+
+- `ruby-extractor-record-call-receiver-kind` (done, PR #5726) and
+  `resolve-wide-candidates-through-include-graph` (done, PR #5755) landed
+  2026-07-31.
+- `missing-rails-call-tag-suppresses-wide-flag` (done, PR #5754) landed
+  2026-07-31 — B2 is unblocked too.
+
+### Re-measure (2026-08-04, forced full-build compare)
+
+Live artifact matches the baseline exactly: 2,216 rows, 0 new, 0 stale.
+Post-noise-reduction counts vs the 2026-07-30 projections:
+
+| Figure                   | Projected | Measured |
+| ------------------------ | --------: | -------: |
+| B1 arel                  |       ~90 |       41 |
+| B2 `synchronize` rows    |       ~30 |       51 |
+| B2 reviewed-reason rows  |       349 |      190 |
+| B3 association files     |       ~70 |      180 |
+| Execute-primitive family |       152 |       80 |
+| `relation.ts`            | 338 (183) |      143 |
+
+B3's "most will evaporate" claim did not hold: the residual is still
+dominated by `owner` / `reflection` / `klass` getter-shape rows despite
+`ts-extractor-record-this-property-access` landing (PR #4656).
+`significantMissingCalls` now sits at `compare.ts:274` (the RFC's original
+`242-286` cite has drifted). Open fidelity stories across
+0051/0075/0076/0077/0078: 85 as of 2026-08-04 (92 at survey time; 7 done
+since). Of the eight hand-verified stories above,
+`table-definition-primary-keys-is-a-reader-not-rails-setter` (0051) is now
+done; the other seven remain ready with the criterion intact.
+
+B1 has been split into three PR-sized slices (filed 2026-08-04):
+`arel-tosql-statement-visitor-helper-calls`,
+`arel-dialect-visitor-helper-calls`,
+`arel-nodes-manager-residual-classification`.
 
 ## Non-goals
 
