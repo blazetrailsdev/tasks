@@ -1,6 +1,6 @@
 ---
 title: "Declare backend/flatten.rb deferred surface"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6046
 claim: "2026-08-04T02:55:58Z"
 assignee: "i18n-defer-backend-flatten"
 blocked-by: null
