@@ -78,9 +78,13 @@ route through `@blazetrails/activesupport/yaml`.** The dependency edge runs
 activesupport → i18n (`packages/activesupport/package.json:89`
 `"@blazetrails/i18n": "workspace:*"`, used at `src/i18n.ts:20`,
 `src/html-safe-translation.ts:2`, `src/locale/en.ts:11`; same edge from
-actionpack, activemodel, activerecord). `packages/i18n` today declares **no
-dependencies at all** and its `src/` contains no `@blazetrails/*` import — it is
-a leaf, mirroring the gem, which Rails depends on rather than the reverse.
+actionpack, activemodel, activerecord). `packages/i18n` declares **no
+`@blazetrails/*` dependency**, and its `src/` contains no `@blazetrails/*`
+import — it is a leaf, mirroring the gem, which Rails depends on rather than the
+reverse. (It is not dependency-free: `packages/i18n/package.json:25-27` already
+declares `"@js-temporal/polyfill": "^0.5.1"`, so a third-party runtime dep here
+is precedent, not a new concession. The constraint this note is protecting is
+the workspace edge, not the dependency count.)
 Consuming the activesupport re-export would invert that edge and create the
 cycle. Importing `"yaml"` directly is the shape
 `packages/activesupport/src/configuration-file.ts:2` already uses, and it keeps
