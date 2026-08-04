@@ -1,6 +1,6 @@
 ---
 title: "Port the seven date__parse sub-parsers Date._parse still omits"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6075
 claim: "2026-08-04T17:09:59Z"
 assignee: "i18n-date-parse-remaining-sub-parsers"
 blocked-by: null
