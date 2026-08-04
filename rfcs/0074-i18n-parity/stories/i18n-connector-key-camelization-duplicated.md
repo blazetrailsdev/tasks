@@ -1,6 +1,6 @@
 ---
 title: "Converge the duplicated snake_case I18n key maps in to_sentence ports"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6045
 claim: "2026-08-04T02:40:53Z"
 assignee: "i18n-connector-key-camelization-duplicated"
 blocked-by: null
