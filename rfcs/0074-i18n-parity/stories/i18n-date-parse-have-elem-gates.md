@@ -1,6 +1,6 @@
 ---
 title: "Port date__parse's per-sub-parser HAVE_ELEM_P gates"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
