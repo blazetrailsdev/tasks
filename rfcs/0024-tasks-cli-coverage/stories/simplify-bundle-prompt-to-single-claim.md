@@ -1,6 +1,6 @@
 ---
 title: "Simplify buildBundlePrompt to a single claim/done now that the verbs are variadic"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T18:00:52Z"
+assignee: "simplify-bundle-prompt-to-single-claim"
 blocked-by: null
 closed-reason: null
 ---
