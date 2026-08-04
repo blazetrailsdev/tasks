@@ -1,6 +1,6 @@
 ---
 title: "Route Ruby Symbol#to_s through one place instead of three toS copies"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
