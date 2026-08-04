@@ -1,6 +1,6 @@
 ---
 title: "Carry rt_complete_frags' wnum0/wnum1 entries and rt__valid_date_frags_p's weeknum arms"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6104
 claim: "2026-08-04T23:35:04Z"
 assignee: "i18n-date-complete-frags-weeknum-entries"
 blocked-by: null
