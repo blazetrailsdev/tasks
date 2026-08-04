@@ -1,6 +1,6 @@
 ---
 title: "Time.new: accept MRI's sub-minute utc_offset (~120 LOC)"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
