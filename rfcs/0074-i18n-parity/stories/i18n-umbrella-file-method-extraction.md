@@ -1,6 +1,6 @@
 ---
 title: "Extract I18n::Base methods from the i18n umbrella file"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6092
 claim: "2026-08-04T20:56:04Z"
 assignee: "i18n-date-subx-cb-decomposition"
 blocked-by: null
