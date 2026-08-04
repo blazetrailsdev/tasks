@@ -1,6 +1,6 @@
 ---
 title: "Variadic story-status verbs: claim/in-progress/done/release take many ids atomically"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0024-tasks-cli-coverage"
 cluster: null
