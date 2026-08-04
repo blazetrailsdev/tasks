@@ -1,6 +1,6 @@
 ---
 title: "transliterator: invalid UTF-8 raise case"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6062
 claim: "2026-08-04T13:53:57Z"
 assignee: "i18n-transliterator-invalid-utf8-test"
 blocked-by: null
