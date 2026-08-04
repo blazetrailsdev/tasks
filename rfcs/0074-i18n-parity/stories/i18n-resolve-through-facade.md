@@ -1,6 +1,6 @@
 ---
 title: "Route Backend::Base#resolve through the I18n.translate facade"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
