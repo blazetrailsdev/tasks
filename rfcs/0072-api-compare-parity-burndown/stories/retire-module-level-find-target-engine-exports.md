@@ -1,0 +1,63 @@
+---
+title: "retire-module-level-find-target-engine-exports"
+status: ready
+updated: 2026-08-04
+rfc: "0072-api-compare-parity-burndown"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+PR for `through-find-target-becomes-instance-method` /
+`singular-find-target-becomes-instance-method` landed the Rails-shaped
+instance methods:
+
+- `SingularAssociation#findTarget`
+  (`packages/activerecord/src/associations/singular-association.ts`, Rails
+  `singular_association.rb:47`) — belongs_to and has_one now inherit it, and
+  their `doAsyncFindTarget` overrides are gone.
+- `HasManyThroughAssociation#findTarget` +
+  `#targetReflectionHasAssociatedRecord`
+  (`packages/activerecord/src/associations/has-many-through-association.ts`,
+  Rails `has_many_through_association.rb:225` / `:121`).
+
+What did NOT land is the second half of that story's acceptance: the
+module-level `findTarget(record, assocName, options)` engine functions are
+still exported from `singular-association.ts`, `has-many-association.ts`,
+`has-many-through-association.ts` and `has-one-through-association.ts`, and
+the instance methods delegate into them. They stay because ~10 callers hold
+no association instance and pass arbitrary `(name, options)` pairs — some
+for associations with no registered reflection, some (through loaders) with
+a synthesised `scope` in the options:
+
+- `associations.ts` — three through-loader call sites
+- `associations/instance-methods.ts` — `record.loadBelongsTo(name)` sugar
+- `associations/collection-proxy.ts:901`, `:1811`
+- `delegate.ts:41,43`, `test-helpers/models/bulb.ts:39`
+- `has-many-association.ts:584`, `singular-association.ts:463` (dynamic
+  imports into the through engines)
+
+Retiring the exports means materialising an `Association` for each of those
+paths (an options-carrying holder for the reflection-less arm), which is the
+substance of this story.
+
+## Acceptance criteria
+
+- [ ] The module-level `findTarget` exports in the four association files are
+      gone; every caller reaches the target load through an association
+      instance method.
+- [ ] `record.loadBelongsTo(name)` / `loadHasOne(name)` reader sugar keeps
+      working unchanged.
+- [ ] `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+      show no new novel entries in `associations.ts` or the four association
+      files.
+- [ ] Association suites pass with no test renames.
