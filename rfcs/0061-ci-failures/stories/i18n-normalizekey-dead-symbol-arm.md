@@ -1,6 +1,6 @@
 ---
 title: "i18n-normalizekey-dead-symbol-arm"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0061-ci-failures"
 cluster: null
