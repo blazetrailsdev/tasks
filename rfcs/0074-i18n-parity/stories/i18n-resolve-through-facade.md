@@ -1,6 +1,6 @@
 ---
 title: "Route Backend::Base#resolve through the I18n.translate facade"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6093
 claim: "2026-08-04T21:11:10Z"
 assignee: "i18n-date-parse-eu-us-gate-misses-have-digit"
 blocked-by: null
