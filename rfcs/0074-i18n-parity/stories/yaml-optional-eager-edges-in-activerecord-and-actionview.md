@@ -1,6 +1,6 @@
 ---
 title: "yaml-optional-eager-edges-in-activerecord-and-actionview"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6078
 claim: "2026-08-04T17:39:59Z"
 assignee: "yaml-optional-eager-edges-in-activerecord-and-actionview"
 blocked-by: null
