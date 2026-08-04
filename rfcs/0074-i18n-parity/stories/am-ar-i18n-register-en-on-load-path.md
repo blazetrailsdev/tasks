@@ -1,6 +1,6 @@
 ---
 title: "Register Active Model's and Active Record's en locales on I18n.load_path"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
