@@ -1,6 +1,6 @@
 ---
 title: "backend/chain.rb is ported but still deferred whole-file"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6071
 claim: "2026-08-04T16:34:06Z"
 assignee: "i18n-defer-backend-chain-stale"
 blocked-by: null
