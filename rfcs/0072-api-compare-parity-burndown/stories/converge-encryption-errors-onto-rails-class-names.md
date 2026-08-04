@@ -1,6 +1,6 @@
 ---
 title: "Delete encryption's ConfigError/EncryptionError/DecryptionError aliases for Rails' Errors classes"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T21:23:01Z"
+assignee: "i18n-date-parse-extract-valid-date-frags-p"
 blocked-by: null
 closed-reason: null
 ---
