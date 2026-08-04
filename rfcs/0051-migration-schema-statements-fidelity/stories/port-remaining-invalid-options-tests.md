@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining four InvalidOptionsTest arms (add_column, add_reference, change_column, add_index)"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
