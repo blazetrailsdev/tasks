@@ -1,7 +1,7 @@
 ---
 title: "Wire test-compare exclusions for the deferred i18n backends"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T13:48:10Z"
+assignee: "i18n-test-compare-deferred-suite-exclusions"
 blocked-by: null
 closed-reason: null
 ---
