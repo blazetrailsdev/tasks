@@ -1,6 +1,6 @@
 ---
 title: "Config#support_sha1_for_non_deterministic_encryption= is a behavioral writer, not stored state"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null

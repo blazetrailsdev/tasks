@@ -1,6 +1,6 @@
 ---
 title: "port-version-compare-and-retire-gte-lt"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
