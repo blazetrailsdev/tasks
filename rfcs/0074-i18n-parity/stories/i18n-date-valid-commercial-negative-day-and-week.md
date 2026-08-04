@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_commercial_p's negative-day and negative-week normalizations"
-status: claimed
+status: in-progress
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6104
 claim: "2026-08-04T23:35:04Z"
 assignee: "i18n-date-complete-frags-weeknum-entries"
 blocked-by: null
