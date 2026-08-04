@@ -1,6 +1,6 @@
 ---
 title: "load_yaml alias is a class field — arity 0 vs (filename)"
-status: in-progress
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
