@@ -1,6 +1,6 @@
 ---
 title: "i18n-loadjs-norailsequivalent-tag-stale"
-status: claimed
+status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6062
 claim: "2026-08-04T13:53:40Z"
 assignee: "i18n-loadjs-norailsequivalent-tag-stale"
 blocked-by: null
