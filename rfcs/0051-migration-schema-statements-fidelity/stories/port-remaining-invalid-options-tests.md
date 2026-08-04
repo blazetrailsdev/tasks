@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining four InvalidOptionsTest arms (add_column, add_reference, change_column, add_index)"
-status: ready
+status: claimed
 updated: 2026-08-04
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-04T18:05:10Z"
+assignee: "i18n-time-zone-abbreviation-links"
 blocked-by: null
 closed-reason: null
 ---
