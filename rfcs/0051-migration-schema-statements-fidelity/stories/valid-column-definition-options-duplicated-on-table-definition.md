@@ -6,7 +6,7 @@ rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 70
 priority: null
 pr: null
 claim: null
