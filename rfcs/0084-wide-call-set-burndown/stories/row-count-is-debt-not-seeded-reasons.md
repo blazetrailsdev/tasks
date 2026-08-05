@@ -1,6 +1,6 @@
 ---
 title: "row-count-is-debt-not-seeded-reasons"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 6115
 claim: "2026-08-05T02:45:04Z"
 assignee: "row-count-is-debt-not-seeded-reasons"
 blocked-by: null
