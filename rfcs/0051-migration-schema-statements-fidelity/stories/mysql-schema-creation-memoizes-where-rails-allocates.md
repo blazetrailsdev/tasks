@@ -1,6 +1,6 @@
 ---
 title: "MySQL::SchemaStatements#schema_creation allocates per call; trails memoizes it"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6141
 claim: "2026-08-05T20:33:08Z"
 assignee: "mysql-schema-creation-memoizes-where-rails-allocates"
 blocked-by: null
