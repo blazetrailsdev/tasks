@@ -1,7 +1,7 @@
 ---
 title: "File-level @noRailsEquivalent is unavailable to files with no imports"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
