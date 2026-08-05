@@ -38,9 +38,15 @@ the `date` gem, not through ActiveSupport.
       a second polyfill instance would make them fall through to
       `throw new TypeError("can't quote …")`. Verify on all three adapter lanes,
       not just SQLite.
-- [ ] `type-virtualization` codegen emits `@blazetrails/date` — see
-      `type-registry.ts:28` and the `fixtures/*/expected.ts` files, which embed
-      the import specifier as a **string** and will not be caught by `tsc`.
+- [ ] **Grep for the specifier as a string literal, not just as an import.**
+      Some code embeds `"@blazetrails/activesupport/temporal"` inside a string —
+      generated-code templates and their expected-output fixtures do this — and
+      `tsc` cannot see it, so a rename that looks complete will still be wrong.
+      `grep -rn '@blazetrails/activesupport/temporal' --include=*.ts` (no import
+      filter) and fix every hit. At time of writing this includes
+      `type-virtualization/type-registry.ts:28` and its `fixtures/*/expected.ts`;
+      that generator is slated for removal, so check what still exists when you
+      claim this rather than assuming either way.
 - [ ] Mechanical only: no behavior change. Note it in the PR body.
 - [ ] **Likely near the LOC ceiling** — if over, split by subtree
       (connection-adapters / types / everything else) rather than shipping one
