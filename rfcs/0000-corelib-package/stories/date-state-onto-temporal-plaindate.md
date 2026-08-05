@@ -1,0 +1,64 @@
+---
+title: "date-state-onto-temporal-plaindate"
+status: draft
+updated: 2026-08-05
+rfc: "0000-corelib-package"
+cluster: null
+deps: ["corelib-api-compare-enrollment", "corelib-test-compare-enrollment"]
+deps-rfc: []
+est-loc: 450
+priority: 6
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+**Runs last, deliberately** — after `api:compare` and `test:compare` enrollment,
+so the substrate migration is _measured_ rather than taken on faith. This is the
+only story in the RFC that changes behavior.
+
+Replaces the Ruby-internal date representation with `Temporal.PlainDate`.
+`packages/corelib/src/date.ts` currently carries `#jd` and `#sg`
+(`date.ts:2228-2233`) — the Julian day and the calendar-reform start — plus the
+`sg`-threaded calendar math at `date.ts:1715-2205` (`cCivilToJd`, `cJdToCivil`,
+`cFindFdoy`, `cValidCivilP`, ordinal/commercial/weeknum) and the `Date`/`DateTime`
+classes at `date.ts:2206-2554`. That is **840 lines**.
+
+Per the RFC's gap table these are **not observable** through any surface trails
+exposes: reaching the Julian arm needs a pre-1582 date _and_ a non-default
+`start`, and no AR column, `localize` call, or format helper passes `start`.
+Likewise `Rational` offsets (`date.ts:431-471`) — no real zone, DB column, or
+`strftime` directive exposes sub-nanosecond offset precision.
+
+**The 1,714-line parse/format region (`date.ts:1-1714`) is representation-agnostic
+and does not move.** It is 67% of the file and is boundary fidelity that survives
+the substrate change untouched — do not touch it here.
+
+Two seams are mixed and must be re-cut rather than deleted: `rtValidDateFragsP`
+(`date.ts:2101`) and `dNewByFrags` (`date.ts:2162`), where parsing reaches into
+calendar validity.
+
+Sub-minute UTC offsets are **already** handled correctly and must stay that way:
+`time.ts:26-28` keeps the offset as a plain number _"so that MRI's sub-minute
+offsets are representable where a Temporal offset time zone (minute-precision)
+cannot hold them."_
+
+## Acceptance criteria
+
+- [ ] `#jd`/`#sg` removed; `Date` carries a `Temporal.PlainDate`.
+- [ ] The `sg`-threaded calendar math at `date.ts:1715-2205` deleted, with
+      ordinal/commercial/weeknum re-derived from `PlainDate`.
+- [ ] `Date::ITALY`/`ENGLAND`/`JULIAN`/`GREGORIAN` kept as inert constants only if
+      a test names them; otherwise removed.
+- [ ] `rtValidDateFragsP` and `dNewByFrags` re-cut onto `PlainDate` validity.
+- [ ] `date.ts:1-1714` (parse + `strftime`) **unchanged**.
+- [ ] Sub-minute offset handling in `time.ts` unchanged and still tested.
+- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative — this is the
+      first story where those gates actually constrain the work.
+- [ ] `pnpm api:calls:wide` clean; any new mismatch converged, not baselined.
+- [ ] **Likely exceeds 500 LOC — split at claim time** into (a) calendar-math
+      removal and (b) class re-seating. Do not ship one oversized PR.
