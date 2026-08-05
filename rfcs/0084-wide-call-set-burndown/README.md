@@ -166,11 +166,41 @@ B1 has been split into three PR-sized slices (filed 2026-08-04):
 `arel-dialect-visitor-helper-calls`,
 `arel-nodes-manager-residual-classification`.
 
+## The debt metric is the row count
+
+Decided 2026-08-04 (story `row-count-is-debt-not-seeded-reasons`). This RFC's
+burndown is measured in **wide baseline rows**, not in reviewed reasons.
+
+Rows: 6,845 (2026-07-17) → 2,218 (2026-08-03) → 2,195 (2026-08-04). Unreviewed
+reasons over the same window: 2,028 of 2,218 (91%) → 2,005 of 2,195 (91%). Rows
+converge by **deletion** — the port starts making the call and the row goes
+stale — so the reason a reviewer would have demanded is one a later PR removes
+outright. The flat 91% is the measurement: per-row reason review is not
+happening, and cycles spent demanding it produce no convergence.
+
+Consequences, recorded in [CONTRIBUTING.md] and [CLAUDE.md]:
+
+- Progress is reported in rows retired.
+- An author still writes a real reason for a row they add, and
+  `@missingRailsCall` at the call site is still the per-site alternative.
+  Reviewed reasons stay fully supported for rows an author chooses to justify.
+- Seeded reasons **inherited** in rows a PR did not add are not that PR's debt
+  and are not grounds to block it.
+
+No mechanism changes. The only-shrink row ratchet, the per-file unreviewed
+high-water marks (`scripts/api-compare/call-mismatches-wide-unreviewed/`), the
+stale-tag arm, the reseed-drift arm and the sharding are untouched — each has a
+paid-for incident behind it (#4020, #5869), and the unreviewed marks still stop
+the count from growing. What changes is where reviewer attention goes.
+
 ## Non-goals
 
 - **Not a substitute for the fidelity RFCs.** The survey settles this: 9% of
   open fidelity work is visible to this gate. Do not repoint fidelity effort
   here.
+- **No mechanical loosening.** The ratchet, the unreviewed marks, the
+  reseed-drift arm and the sharding stay exactly as they are; this is a
+  reviewer-attention decision, not a gate change.
 - No tooling changes — those belong to `0083-wide-call-ratchet-noise-reduction`.
   If a bundle turns up a new tooling artifact, file it there.
 - Not converging entries that are correct deviations. Where the port is right
