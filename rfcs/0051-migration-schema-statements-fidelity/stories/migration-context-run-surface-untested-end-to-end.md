@@ -1,7 +1,7 @@
 ---
 title: "MigrationContext#migrate/up/down have no end-to-end DDL coverage"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: 160
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T11:59:55Z"
+assignee: "burn-down-non-transactional-row-write-ratchet"
 blocked-by: null
 closed-reason: null
 ---
