@@ -1,14 +1,14 @@
 ---
 title: "retire-schema-cache-test-only-sync-writers"
-status: claimed
-updated: 2026-08-04
+status: in-progress
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6105
 claim: "2026-08-04T23:47:02Z"
 assignee: "model-name-human-drops-klass-guard-and-human-fallback"
 blocked-by: null
