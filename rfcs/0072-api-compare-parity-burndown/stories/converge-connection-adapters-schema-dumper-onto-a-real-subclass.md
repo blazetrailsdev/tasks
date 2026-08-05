@@ -1,6 +1,6 @@
 ---
 title: "Converge ConnectionAdapters::SchemaDumper onto a real subclass and delete its inheritance exclude"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T20:13:09Z"
+assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 blocked-by: null
 closed-reason: null
 ---
