@@ -1,6 +1,6 @@
 ---
 title: "Port pool.server_version; retire getDatabaseVersion's memo guard"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6144
 claim: "2026-08-05T21:13:08Z"
 assignee: "move-date-time-to-date-package"
 blocked-by: null
