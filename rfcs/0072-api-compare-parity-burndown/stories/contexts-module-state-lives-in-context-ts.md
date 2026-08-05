@@ -1,6 +1,6 @@
 ---
 title: "The Contexts module's state and methods live in context.ts, not contexts.ts"
-status: claimed
+status: blocked
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-05T16:13:06Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
-blocked-by: null
+blocked-by: "Blocked on an ESM eval-order cycle with no current trails idiom. Attempted the full move (state + all Contexts methods into encryption/contexts.ts at the Rails names, context.ts reduced to the Context class). It typechecks, but every encryption suite dies at import: 'TypeError: Class extends value undefined is not a constructor or null' at encrypting-only-encryptor.ts:9, via contexts.ts:2. Chain: encryptor.ts (which must now read the context from contexts.ts) -> contexts.ts -> encrypting-only-encryptor.ts -> encryptor.ts, re-entered mid-evaluation, so 'extends Encryptor' hits the TDZ. Rails has the same cycle (encryptor.rb:98,108,132 call ActiveRecord::Encryption.key_provider/.cipher/.message_serializer, which delegate to Contexts#context) and autoload defers the EncryptingOnlyEncryptor constant to the moment protecting_encrypted_data runs (contexts.rb:57-59). ESM has no sync equivalent: protectingEncryptedData is sync so dynamic import() is unavailable, and no import ordering fixes it because encryptor.ts can be the cycle entry. Routing encryptor.ts through Configurable or the encryption.ts facade does not help -- both import contexts.js, so the same edge reappears. Unblocking needs a decision on a lazy-constant idiom for Ruby autoload (out of scope for a 500 LOC story); once that exists the move itself is mechanical."
 closed-reason: null
 ---
 
