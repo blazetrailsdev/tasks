@@ -1,6 +1,6 @@
 ---
 title: "Move changes-job gate prose out of the size-limited inline run: script"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0028-ci-cost-optimization"
 cluster: null
