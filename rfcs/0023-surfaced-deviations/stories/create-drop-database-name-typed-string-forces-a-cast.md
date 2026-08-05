@@ -1,5 +1,5 @@
 ---
-title: "createDatabase/dropDatabase typed  forces an  cast where Rails passes nil through"
+title: "createDatabase/dropDatabase typed string forces an as-string cast where Rails passes nil through"
 status: draft
 updated: 2026-08-05
 rfc: "0023-surfaced-deviations"
