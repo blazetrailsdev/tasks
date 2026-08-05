@@ -1,7 +1,7 @@
 ---
 title: "Route PostgreSQLDatabaseTasks#create through connection.createDatabase"
-status: draft
-updated: 2026-08-02
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
