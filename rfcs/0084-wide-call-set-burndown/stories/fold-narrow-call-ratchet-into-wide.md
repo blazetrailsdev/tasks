@@ -1,6 +1,6 @@
 ---
 title: "fold-narrow-call-ratchet-into-wide"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 6116
 claim: "2026-08-05T03:00:02Z"
 assignee: "fold-narrow-call-ratchet-into-wide"
 blocked-by: null
