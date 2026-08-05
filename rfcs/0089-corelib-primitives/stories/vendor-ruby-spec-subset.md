@@ -1,6 +1,6 @@
 ---
 title: "vendor-ruby-spec-subset"
-status: in-progress
+status: blocked
 updated: 2026-08-05
 rfc: "0089-corelib-primitives"
 cluster: null
@@ -11,7 +11,7 @@ priority: 2
 pr: 6130
 claim: "2026-08-05T15:21:04Z"
 assignee: "datetime-new-start-preserves-the-receiver"
-blocked-by: null
+blocked-by: "Parent RFC 0089-corelib-primitives is status: postponed ('Nothing here is being worked'); its stories are downgraded out of the ready queue by the non-active parent rule (scripts/validate-lib.mjs:44). Built once on PR #6130 and reverted (07bf64a) — reactivate the RFC before rescheduling."
 closed-reason: null
 ---
 
