@@ -1,6 +1,6 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
-status: claimed
+status: ready
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: 170
 pr: null
-claim: "2026-08-05T09:45:03Z"
-assignee: "retire-module-level-find-target-engine-exports"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
