@@ -1,6 +1,6 @@
 ---
 title: "delete-collection-sync-writers"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 8
-pr: null
+pr: 6109
 claim: "2026-08-05T01:11:00Z"
 assignee: "pin-writing-pool-list-in-setup-transactional-fixtures"
 blocked-by: null
