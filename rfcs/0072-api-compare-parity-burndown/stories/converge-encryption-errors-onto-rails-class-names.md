@@ -1,7 +1,7 @@
 ---
 title: "Delete encryption's ConfigError/EncryptionError/DecryptionError aliases for Rails' Errors classes"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
