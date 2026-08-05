@@ -1,7 +1,7 @@
 ---
 title: "Pin every fixture connection pool, not just the primary"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
