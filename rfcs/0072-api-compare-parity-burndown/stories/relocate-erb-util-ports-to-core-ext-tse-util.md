@@ -1,6 +1,6 @@
 ---
 title: "relocate-erb-util-ports-to-core-ext-tse-util"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6120
 claim: "2026-08-05T09:14:57Z"
 assignee: "relocate-erb-util-ports-to-core-ext-tse-util"
 blocked-by: null
