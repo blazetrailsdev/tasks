@@ -1,6 +1,6 @@
 ---
 title: "Writing-pool census baseline is taken in beforeAll, hiding module-scope pool leaks"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
