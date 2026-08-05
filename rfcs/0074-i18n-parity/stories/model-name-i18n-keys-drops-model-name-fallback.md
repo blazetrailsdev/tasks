@@ -1,6 +1,6 @@
 ---
 title: "i18nKeys carries a model_name-less fallback Rails does not have"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6110
 claim: "2026-08-05T01:29:56Z"
 assignee: "model-name-i18n-keys-drops-model-name-fallback"
 blocked-by: null
