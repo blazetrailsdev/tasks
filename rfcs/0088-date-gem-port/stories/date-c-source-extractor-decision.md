@@ -1,6 +1,6 @@
 ---
 title: "date-c-source-extractor-decision"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T17:13:08Z"
+assignee: "date-yday-drops-m-yday-fast-arms"
 blocked-by: null
 closed-reason: null
 ---
