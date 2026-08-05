@@ -1,6 +1,6 @@
 ---
 title: "Hoist the disable_joins branch into HasManyThroughAssociation#findTarget"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6113
 claim: "2026-08-05T02:15:00Z"
 assignee: "converge-mysql-version-string-single-raise-site"
 blocked-by: null
