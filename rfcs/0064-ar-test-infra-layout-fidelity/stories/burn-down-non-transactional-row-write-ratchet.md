@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 44-file non-transactional row-write ratchet (epic)"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
