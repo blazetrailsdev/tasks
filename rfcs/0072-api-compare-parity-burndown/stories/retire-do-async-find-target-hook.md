@@ -1,7 +1,7 @@
 ---
 title: "Delete the trails-only doAsyncFindTarget hook once findTarget is the only seam"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T01:29:56Z"
+assignee: "model-name-i18n-keys-drops-model-name-fallback"
 blocked-by: null
 closed-reason: null
 ---
