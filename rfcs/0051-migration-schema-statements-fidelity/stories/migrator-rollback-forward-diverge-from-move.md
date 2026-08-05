@@ -1,6 +1,6 @@
 ---
 title: "Migrator#rollback/#forward diverge from Rails' move for their live callers"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 130
-pr: null
+pr: 6120
 claim: "2026-08-05T09:14:57Z"
 assignee: "relocate-erb-util-ports-to-core-ext-tse-util"
 blocked-by: null
