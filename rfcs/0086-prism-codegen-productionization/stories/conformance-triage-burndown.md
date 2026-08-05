@@ -1,6 +1,6 @@
 ---
 title: "conformance-triage-burndown"
-status: claimed
+status: ready
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 400
 priority: 14
 pr: null
-claim: "2026-08-05T03:44:59Z"
-assignee: "postgresql-active-issues-the-rails-liveness-query"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
