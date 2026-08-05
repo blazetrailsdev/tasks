@@ -1,6 +1,6 @@
 ---
 title: "datetime-new-start-preserves-the-receiver"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
