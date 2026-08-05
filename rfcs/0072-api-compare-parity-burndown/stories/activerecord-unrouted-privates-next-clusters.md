@@ -1,7 +1,7 @@
 ---
 title: "Work the remaining ~90 unrouted-private inventory entries, one cluster per PR"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
