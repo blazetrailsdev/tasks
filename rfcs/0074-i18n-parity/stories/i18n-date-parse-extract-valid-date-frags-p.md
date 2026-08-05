@@ -1,7 +1,7 @@
 ---
 title: "Extract rt__valid_date_frags_p from Date.parse's inlined frag check"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
