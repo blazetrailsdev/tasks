@@ -1,6 +1,6 @@
 ---
 title: "Row-write ratchet misses model-level writes that reach the shared connection implicitly"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T15:41:05Z"
+assignee: "row-write-ratchet-misses-implicit-model-level-writes"
 blocked-by: null
 closed-reason: null
 ---
