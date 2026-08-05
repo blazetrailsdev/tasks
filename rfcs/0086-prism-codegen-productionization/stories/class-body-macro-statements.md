@@ -1,6 +1,6 @@
 ---
 title: "class-body-macro-statements"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
+pr: 6111
 claim: "2026-08-05T01:44:55Z"
 assignee: "i18n-date-calendar-reform-start-argument"
 blocked-by: null
