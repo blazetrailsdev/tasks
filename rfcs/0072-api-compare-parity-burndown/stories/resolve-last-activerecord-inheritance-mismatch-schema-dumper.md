@@ -1,13 +1,13 @@
 ---
 title: "Resolve the last activerecord api:compare mismatch: ConnectionAdapters::SchemaDumper super-mismatch"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: null
+pr: 6128
 claim: "2026-08-05T14:47:37Z"
 assignee: "resolve-last-activerecord-inheritance-mismatch-schema-dumper"
 blocked-by: null
