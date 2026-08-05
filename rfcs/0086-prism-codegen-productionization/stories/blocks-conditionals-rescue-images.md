@@ -1,6 +1,6 @@
 ---
 title: "blocks-conditionals-rescue-images"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
