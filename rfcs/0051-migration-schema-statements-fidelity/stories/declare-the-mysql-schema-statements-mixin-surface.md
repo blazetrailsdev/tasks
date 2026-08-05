@@ -1,7 +1,7 @@
 ---
 title: "declare-the-mysql-schema-statements-mixin-surface"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T03:14:59Z"
+assignee: "converge-context-set-defaults-remaining-three"
 blocked-by: null
 closed-reason: null
 ---
