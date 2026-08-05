@@ -1,6 +1,6 @@
 ---
 title: "pin-fixture-pools-via-connection-notification"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6106
 claim: "2026-08-05T00:11:03Z"
 assignee: "pin-fixture-pools-via-connection-notification"
 blocked-by: null
