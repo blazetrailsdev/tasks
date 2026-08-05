@@ -1,6 +1,6 @@
 ---
 title: "route-temporal-imports-activemodel-arel"
-status: draft
+status: ready
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
