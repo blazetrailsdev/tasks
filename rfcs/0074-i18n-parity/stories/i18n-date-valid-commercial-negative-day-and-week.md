@@ -1,7 +1,7 @@
 ---
 title: "Carry c_valid_commercial_p's negative-day and negative-week normalizations"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []

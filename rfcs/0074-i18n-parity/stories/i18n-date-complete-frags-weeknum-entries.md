@@ -1,7 +1,7 @@
 ---
 title: "Carry rt_complete_frags' wnum0/wnum1 entries and rt__valid_date_frags_p's weeknum arms"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
