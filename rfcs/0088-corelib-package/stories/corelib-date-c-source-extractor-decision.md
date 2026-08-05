@@ -2,7 +2,7 @@
 title: "corelib-date-c-source-extractor-decision"
 status: ready
 updated: 2026-08-05
-rfc: "0000-corelib-package"
+rfc: "0088-corelib-package"
 cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "vendor-ruby-date-gem"
 status: ready
 updated: 2026-08-05
-rfc: "0000-corelib-package"
+rfc: "0088-corelib-package"
 cluster: null
 deps: []
 deps-rfc: []

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-corelib-package"
+rfc: "0088-corelib-package"
 title: "corelib package: vendored Ruby core library with Temporal substrate"
 status: active
 created: 2026-08-05

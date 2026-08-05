@@ -2,7 +2,7 @@
 title: "move-date-time-to-corelib"
 status: draft
 updated: 2026-08-05
-rfc: "0000-corelib-package"
+rfc: "0088-corelib-package"
 cluster: null
 deps: ["corelib-package-scaffold"]
 deps-rfc: []
