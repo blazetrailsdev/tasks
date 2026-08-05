@@ -1,6 +1,6 @@
 ---
 title: "metadata-data-set-carries-a-time"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6129
 claim: "2026-08-05T15:59:24Z"
 assignee: "vendor-ruby-date-gem"
 blocked-by: null
