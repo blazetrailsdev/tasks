@@ -1,6 +1,6 @@
 ---
 title: "ModelName.addUncountable is invented surface over Inflections#uncountable"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
