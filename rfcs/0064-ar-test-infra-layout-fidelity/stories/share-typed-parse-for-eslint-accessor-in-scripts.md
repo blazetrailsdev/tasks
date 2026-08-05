@@ -1,14 +1,13 @@
 ---
 title: "scripts: one typed parseForESLint accessor instead of two casts"
 status: ready
-updated: 2026-08-02
+updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps:
   - refresh-stale-eslint-exclude-baselines
 deps-rfc: []
 est-loc: 30
-priority: 11
 pr: null
 claim: null
 assignee: null
