@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLDatabaseTasks reads a hand-parsed URL instead of db_config/configuration_hash"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
