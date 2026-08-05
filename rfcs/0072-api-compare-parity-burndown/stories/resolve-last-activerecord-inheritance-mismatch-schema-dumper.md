@@ -7,7 +7,6 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 1
 pr: null
 claim: "2026-08-05T14:47:37Z"
 assignee: "resolve-last-activerecord-inheritance-mismatch-schema-dumper"
