@@ -1,6 +1,6 @@
 ---
 title: "Migrator#rollback/#forward diverge from Rails' move for their live callers"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
