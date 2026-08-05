@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: classify has-one-through-association.ts's residual persistReplace / persistThroughRecord"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
