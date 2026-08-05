@@ -1,6 +1,6 @@
 ---
 title: "Configurable delegates only 3 of Context::PROPERTIES' 6 readers"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T02:30:05Z"
+assignee: "refresh-stale-eslint-exclude-baselines"
 blocked-by: null
 closed-reason: null
 ---
