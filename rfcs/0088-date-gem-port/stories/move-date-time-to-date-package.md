@@ -7,7 +7,6 @@ cluster: null
 deps: ["date-package-scaffold"]
 deps-rfc: []
 est-loc: 350
-priority: 3
 pr: null
 claim: null
 assignee: null
