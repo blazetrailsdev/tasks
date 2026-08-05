@@ -1,6 +1,6 @@
 ---
 title: "Adapter-specific schema memo silently switches off if its snapshot outgrows varchar(255) on MySQL"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0028-ci-cost-optimization"
 cluster: null
