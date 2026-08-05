@@ -20,10 +20,20 @@ closed-reason: null
 Moves the Ruby object-model / module-mixin primitives to `packages/corelib/src/`.
 Non-overlapping files with the other two move stories.
 
-- `packages/activesupport/src/include.ts` (239 lines) — `Module#include` plus the
-  `included`/`extended` hook symbols (`include.ts:31-32`) and the last-included-wins
-  ancestry emulation (`include.ts:36-45`). Header: _"Mirrors: Ruby's Module#include
-  (core language feature)"_ (`include.ts:10`).
+- `packages/activesupport/src/include.ts` (239 lines) — `Module#include` and
+  `Module#extend`, the `included`/`extended` hook symbols (`include.ts:31-32`),
+  the last-included-wins ancestry emulation (`include.ts:36-45`), **and the
+  type-level halves: `Included<>` (`include.ts:94`), `Extended<>`
+  (`include.ts:187`), and the shared `CallableMethods` helper they are both
+  defined in terms of (`include.ts:63`)**. Header: _"Mirrors: Ruby's
+  Module#include (core language feature)"_ (`include.ts:10`).
+
+  The runtime functions and the types are one unit and move together —
+  `Included<typeof QueryMethodBangs>` is how a mixed-in surface is declared
+  (`include.ts:92`), so splitting them would leave the type alias in a package
+  that no longer owns the mechanism it describes. **18 non-test files** across
+  the workspace reference `Included<>` / `Extended<>` today.
+
 - `packages/activesupport/src/prepend.ts` (117 lines) — `Module#prepend`, with
   `super` as an explicit first argument because TS has no runtime `super`
   (`prepend.ts:12-15`).
@@ -46,10 +56,15 @@ Same for `delegation.ts` (`delegation.rb`), `class-attribute.ts`
 ## Acceptance criteria
 
 - [ ] `include.ts`, `prepend.ts` (+ tests) moved to `packages/corelib/src/`.
+- [ ] **`corelib` is the definition site for `include()`, `extend`, `prepend()`,
+      `Included<>`, `Extended<>` and the `included`/`extended` hook symbols** —
+      the runtime and type-level halves stay in one file, as they are today.
 - [ ] `concern.ts` **stays** in activesupport and imports from `@blazetrails/corelib`
       if it needs `include()`.
-- [ ] All existing `include()` / `Included<>` call sites across packages updated;
-      re-exported from `activesupport/src/index.ts` if that keeps the diff small.
+- [ ] All existing `include()` / `Included<>` / `Extended<>` call sites updated —
+      **18 non-test files** reference the type-level pair; re-export from
+      `activesupport/src/index.ts` if that keeps the diff under the LOC ceiling,
+      and say so in the PR body rather than leaving a silent compatibility shim.
 - [ ] The `Symbol.for("@blazetrails/activesupport:included")` keys
       (`include.ts:31-32`) are **renamed to a `corelib` namespace** — or the move
       is explicitly documented as keeping them for compatibility. `Symbol.for` is

@@ -168,7 +168,9 @@ scope sprawl is this RFC's main risk. Not named `ruby`: it is not a Ruby runtime
 
 - **Date/DateTime/Time/Range/`succ`** anchor to **source** (`ruby/date`'s
   `lib/date.rb`) _and_ **tests** (`test/date/`) → `api:compare` + `test:compare`.
-- **`Module#include`/`#prepend`** live in `eval.c`/`class.c` as interpreter
+- **`Module#include`/`#extend`/`#prepend`** — including the type-level halves
+  `Included<>` (`include.ts:94`) and `Extended<>` (`include.ts:187`), which move
+  with the runtime functions as one unit — live in `eval.c`/`class.c` as interpreter
   internals. There is no portable source to mirror — only _behavior_, via
   `ruby/spec`'s `core/module/*`. They enroll in **`test:compare` only**;
   **no `api:compare` enrollment**. An enrollment story that conflated these could
