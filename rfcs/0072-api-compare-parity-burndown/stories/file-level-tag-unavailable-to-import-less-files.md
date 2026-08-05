@@ -59,3 +59,24 @@ turns up in that position; the story should start by checking whether one has.
   declaration's tag" test must keep passing.
 - `pnpm vitest run scripts/api-compare/extract-ts-api.test.ts` and
   `extra-surface.test.ts` pass.
+
+## Finding (2026-08-05) — no machinery added
+
+Swept every TS file carrying `@noRailsEquivalent` for one whose first statement
+is not an import. Exactly one carries more than a single tag:
+`packages/i18n/src/throw-catch.ts` (3 tags: `ThrownException`,
+`throwException`, `catchException`).
+
+It still cannot use a file-level form, for a reason independent of the
+import-less restriction: `fileTagVerdict` refuses a blanket over a file with
+`moved` names, and `extra-surface` scores two of throw-catch.ts's names —
+`value` and `constructor` — as moved (they exist in Rails, elsewhere). A
+file-level tag there is rejected with
+`2 moved name(s): value, constructor`, so no spelling of the tag would help.
+
+A `@fileoverview`-marked spelling was prototyped (it works, and keeps an
+import-less leading block as its declaration's tag when the marker is absent)
+and then reverted: with the sole candidate refused on other grounds, it would be
+machinery for a hypothetical, which this story explicitly forbids. Reopen with
+this finding if a file turns up that is import-less, multi-tagged, AND
+novel-only.
