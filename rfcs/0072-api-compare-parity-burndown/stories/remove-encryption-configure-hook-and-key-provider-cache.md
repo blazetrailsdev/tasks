@@ -1,6 +1,6 @@
 ---
 title: "Configurable.onConfigure and the default-key-provider cache are trails inventions"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null

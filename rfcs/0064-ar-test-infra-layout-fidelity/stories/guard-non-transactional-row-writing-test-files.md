@@ -1,6 +1,6 @@
 ---
 title: "Nothing enforces that row-writing test files ride a transactional wrap"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
