@@ -1,6 +1,6 @@
 ---
 title: "Ported tests call the free findTarget where Rails uses the association reader"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
