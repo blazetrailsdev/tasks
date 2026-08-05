@@ -1,6 +1,6 @@
 ---
 title: "MySQL::SchemaCreation re-implements visit_TableDefinition Rails never overrides"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6106
 claim: "2026-08-05T00:11:03Z"
 assignee: "pin-fixture-pools-via-connection-notification"
 blocked-by: null
