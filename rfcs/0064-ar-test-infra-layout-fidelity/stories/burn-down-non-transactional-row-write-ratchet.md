@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - row-write-lint-misses-it-each-bodies
 deps-rfc: []
 est-loc: 400
 priority: null
