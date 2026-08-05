@@ -1,6 +1,6 @@
 ---
 title: "converge-context-set-defaults-remaining-three"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6117
 claim: "2026-08-05T03:14:59Z"
 assignee: "converge-context-set-defaults-remaining-three"
 blocked-by: null
