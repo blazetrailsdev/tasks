@@ -1,6 +1,6 @@
 ---
 title: "MySQL::SchemaCreation re-implements visit_TableDefinition Rails never overrides"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
