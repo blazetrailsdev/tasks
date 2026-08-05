@@ -1,6 +1,6 @@
 ---
 title: "File-level @noRailsEquivalent is unavailable to files with no imports"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6143
 claim: "2026-08-05T20:53:11Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
