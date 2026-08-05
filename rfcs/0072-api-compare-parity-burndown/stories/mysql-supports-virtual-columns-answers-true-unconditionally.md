@@ -1,6 +1,6 @@
 ---
 title: "MySQL supports_virtual_columns? answers true unconditionally, Rails gates on 5.7.5"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T19:53:07Z"
+assignee: "date-package-scaffold"
 blocked-by: null
 closed-reason: null
 ---
