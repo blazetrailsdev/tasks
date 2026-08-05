@@ -1,6 +1,6 @@
 ---
 title: "conformance-triage-burndown"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 14
-pr: null
+pr: 6120
 claim: "2026-08-05T09:14:57Z"
 assignee: "relocate-erb-util-ports-to-core-ext-tse-util"
 blocked-by: null
