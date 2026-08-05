@@ -1,6 +1,6 @@
 ---
 title: "i18nKeys carries a model_name-less fallback Rails does not have"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
