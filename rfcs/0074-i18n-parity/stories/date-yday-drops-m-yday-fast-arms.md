@@ -1,6 +1,6 @@
 ---
 title: "Date#yday ports only m_yday's third branch, dropping both civil-field fast arms"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
