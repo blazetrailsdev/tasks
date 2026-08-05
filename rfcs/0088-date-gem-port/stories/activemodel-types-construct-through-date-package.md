@@ -7,7 +7,6 @@ cluster: null
 deps: ["route-temporal-imports-activemodel-arel"]
 deps-rfc: []
 est-loc: 250
-priority: 7
 pr: null
 claim: null
 assignee: null
