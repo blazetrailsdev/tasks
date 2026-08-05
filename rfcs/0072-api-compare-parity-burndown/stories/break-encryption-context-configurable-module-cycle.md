@@ -1,6 +1,6 @@
 ---
 title: "Break the Context/Configurable ESM cycle that forces three eval-time shims"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6123
 claim: "2026-08-05T11:44:59Z"
 assignee: "i18n-date-carries-start-and-ns"
 blocked-by: null
