@@ -1,6 +1,6 @@
 ---
 title: "Migrator holds _adapter instead of Rails' connection reader"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 90
-pr: null
+pr: 6121
 claim: "2026-08-05T09:30:01Z"
 assignee: "rename-relation-modelclass-field-to-model"
 blocked-by: null
