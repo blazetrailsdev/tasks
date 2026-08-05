@@ -226,6 +226,49 @@ cluster a real, shrinking, self-terminating gate. No C-parser project is
 required, and per the contract above the test suite is the fidelity measure
 anyway.
 
+### Spike result (`date-c-source-extractor-decision`, settled)
+
+**Answer: (b), with one correction — no `UNPORTED_FILES` entries are needed or
+possible.** Measured by running `scripts/api-compare/extract-ruby-api.rb`
+directly against `vendor/date/lib` (`LIB_PATHS_JSON={"date":".../vendor/date/lib"}`),
+which is exactly what enrollment would feed it:
+
+```text
+date: 2 classes, 0 modules, 12 public methods (1 internal)
+```
+
+That is the whole credited surface, and it is all of `lib/date.rb` (70 lines):
+`Date#infinite?`, plus `Date::Infinity` — a `# :nodoc:` `Numeric` subclass —
+with `initialize`, `d` (protected), `zero?`, `finite?`, `infinite?`, `nan?`,
+`abs`, `-@`, `+@`, `<=>`, `coerce`, `to_f`. Nothing else in the gem is Ruby.
+`ext/date/date_core.c` (10,064 lines) and `ext/date/date_parse.c` (3,086) hold
+everything `packages/i18n/src/date.ts` (2,805 lines, ~42 public members and 101
+module-local functions) actually ports.
+
+So `api:compare` credits **~0%** of the port. Enrolling the source with
+`compareApi: true` would compare `date.rb` against whatever TS file the path
+rules point at and report the entire rest of the port as extra surface.
+
+**No `UNPORTED_FILES` `pattern` entries are required.** That was the fallback's
+assumption, and it is wrong in our favour: `extract-ruby-api.rb` globs
+`**/*.rb` under the package's `libPath` (`extract-ruby-api.rb:2496`), so
+`ext/date/*.c` never enters the compared population in the first place — there
+is nothing to exclude. A `pattern` entry only matches Ruby source paths the
+extractor already emitted.
+
+**Consequences for `date-api-compare-enrollment`:**
+
+- Keep `compareApi: false` for the `date` source. Flipping it buys 12 methods
+  and costs a package-sized extra-surface report.
+- `test:compare` is the gate. `vendor/date/test/date/` is 12 files and
+  **145 `def test_` methods** — a real, shrinking, self-terminating population,
+  which is what the cluster lacks today. Flip `compareTests` in
+  `date-test-compare-enrollment`; that story is unblocked by this finding.
+- The C sources stay a **read-anchor**: vendored, citable by `file:line` from
+  JSDoc, outside every compared population by construction.
+- A C extractor is **not** required and is not filed. Should the API-side gate
+  ever be wanted, it would be its own RFC, not a story here.
+
 ## Temporal polyfill ownership
 
 `packages/date` takes sole ownership of `@js-temporal/polyfill`. Today it is
