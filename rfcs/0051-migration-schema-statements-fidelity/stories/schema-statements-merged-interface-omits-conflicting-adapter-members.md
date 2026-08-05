@@ -1,6 +1,6 @@
 ---
 title: "Converge the member shapes the SchemaStatements merged interface has to Omit"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
