@@ -264,6 +264,60 @@ single owner makes its eventual removal one line in one package.
 - `packages/date` does **not** depend on `packages/corelib`; the two are
   independent leaves.
 
+## Integration: everything flows through `packages/date`
+
+Porting the gem is half the job. The other half is that the rest of trails
+actually _uses_ it — **as Rails does**, where nothing re-exports `Date`/`Time`
+and nothing re-implements them. A file that needs them `require "date"`;
+ActiveSupport's `core_ext` _reopens_ those classes rather than owning them.
+
+In scope: **activesupport, activemodel, arel, activerecord.**
+Out of scope: **actionpack** — its date handling is an HTTP-header wire-format
+concern, tracked separately in RFC 0023
+(`actionpack-http-cache-layer-uses-js-date`).
+
+### 1. `Temporal` is imported from `packages/date`
+
+`packages/date` wraps `@js-temporal/polyfill` and is the single place it is
+declared. Today the substrate is re-exported from
+`packages/activesupport/src/temporal.ts` (8 lines) and **153 files import it from
+there** — activerecord 130 (64 non-test), activemodel 15 (9), arel 8 (3) —
+so the substrate appears to belong to activesupport when it does not.
+
+Converged in three slices so no PR is oversized and none overlap:
+`route-temporal-imports-activemodel-arel`, `route-temporal-imports-activerecord`,
+then `retire-activesupport-temporal-re-export`. `instantFrom(date: Date)`
+(`temporal.ts:5-8`) stays in activesupport — `packages/date` has no opinion about
+JS `Date`.
+
+**The `instanceof` hazard is why single ownership is load-bearing, not cosmetic.**
+Temporal values are identified by `instanceof` throughout (`type/date.ts:34`,
+`type/date-time.ts:226`, `quoting.ts:155-158`), and `instanceof` is
+identity-sensitive across module instances. Two polyfill copies make
+`value instanceof Temporal.PlainDate` return `false` for a valid value, and the
+AR quoting guard then falls through to `throw new TypeError("can't quote …")`.
+Both `package.json`s currently say `^0.5.1` and pnpm dedupes them to one store
+path — this works **by version coincidence, not by design.**
+
+### 2. Date _functions_ flow through it too
+
+Three places currently re-implement what the gem already does. Each is two
+implementations of one Ruby method, neither measured against the other:
+
+| Divergence                                                                                                                                                                | Rails' shape                                                            | Story                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Two `strftime`s** — `date.ts:102` (ported gem) and `time-with-zone.ts:397` (a second hand-rolled token table, `:400-420`)                                               | `TimeWithZone` has no `strftime`; it delegates to the underlying `Time` | `converge-time-with-zone-strftime-onto-date-package` |
+| **Two parsers** — the anchored 1,566-line `_parse` machinery vs. AM's own `fallbackStringToDate` (`type/date.ts:92`) and `fallbackStringToTime` (`type/date-time.ts:278`) | `Type::Date#cast_value` calls `::Date._parse`                           | `activemodel-types-construct-through-date-package`   |
+| **Per-adapter date rendering** — `postgresql-adapter.ts:3475`, `abstract/quoting.ts:155-160`, sqlite3/mysql quoting                                                       | `quoted_date` calls `to_fs(:db)`; PG overrides for BC and calls `super` | `activerecord-quoted-date-through-date-package`      |
+
+The `_parse` divergence is the sharpest: **the most-tested code in the cluster is
+not what ActiveModel uses to parse a date attribute.** Anchoring a parser nothing
+calls would be a hollow win.
+
+None of these change behavior. The quoting story in particular must emit
+**byte-identical SQL** — any change there is a bug in the story, not a feature of
+it.
+
 ## Disposition of RFC 0074's open date stories
 
 Three of the four open stories are exactly the internal-state fidelity this RFC
