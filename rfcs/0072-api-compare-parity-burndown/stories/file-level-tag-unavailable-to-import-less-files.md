@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - extra-surface-resolve-remaining-whole-file-cases
 deps-rfc: []
 est-loc: 60
 priority: 8
