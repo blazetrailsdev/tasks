@@ -1,6 +1,7 @@
 ---
-title: "codegen-nested-class-declarations"
+title: "Key generated defs by constant path, so nested class declarations can emit"
 status: ready
+est_loc: 150
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null

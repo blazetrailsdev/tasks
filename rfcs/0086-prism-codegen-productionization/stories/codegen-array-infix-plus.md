@@ -1,6 +1,7 @@
 ---
-title: "codegen-array-infix-plus"
+title: "Image Ruby `+` over arrays as a concatenation, not a JS `+`"
 status: ready
+est_loc: 120
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
