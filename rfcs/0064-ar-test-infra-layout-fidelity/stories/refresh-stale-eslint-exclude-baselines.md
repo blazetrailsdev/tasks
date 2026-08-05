@@ -1,13 +1,12 @@
 ---
 title: "refresh the two stale ESLint exclude baselines and guard against drift"
 status: ready
-updated: 2026-08-02
+updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 10
 pr: null
 claim: null
 assignee: null
