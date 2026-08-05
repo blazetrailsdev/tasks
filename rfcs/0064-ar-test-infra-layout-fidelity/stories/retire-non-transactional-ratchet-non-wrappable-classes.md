@@ -1,6 +1,6 @@
 ---
 title: "retire-non-transactional-ratchet-non-wrappable-classes"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6125
 claim: "2026-08-05T12:29:59Z"
 assignee: "retire-non-transactional-ratchet-non-wrappable-classes"
 blocked-by: null
