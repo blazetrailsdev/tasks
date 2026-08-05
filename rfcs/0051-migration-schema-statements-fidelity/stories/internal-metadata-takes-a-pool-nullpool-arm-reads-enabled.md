@@ -6,6 +6,7 @@ rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
   - migration-context-collaborators-need-a-pool
+  - abstract-adapter-pool-is-typed-unknown
 deps-rfc: []
 est-loc: 200
 priority: null
