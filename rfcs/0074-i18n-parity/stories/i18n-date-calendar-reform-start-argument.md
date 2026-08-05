@@ -1,6 +1,6 @@
 ---
 title: "Thread ruby/date's calendar-reform start argument through the c_* date family"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
