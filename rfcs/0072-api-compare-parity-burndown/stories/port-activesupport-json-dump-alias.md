@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::JSON.dump, the alias of encode"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6140
 claim: "2026-08-05T20:13:09Z"
 assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 blocked-by: null
