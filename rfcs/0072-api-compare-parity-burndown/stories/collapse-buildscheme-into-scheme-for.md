@@ -1,6 +1,6 @@
 ---
 title: "Retire encryption.ts#buildScheme — Rails has one scheme_for, trails has two"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T16:53:06Z"
+assignee: "date-to-s-does-not-zero-pad-the-year"
 blocked-by: null
 closed-reason: null
 ---
