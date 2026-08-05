@@ -1,6 +1,6 @@
 ---
 title: "Record that @noRailsEquivalent is file-scoped, so mixin echoes on base.ts survive their home-file story"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T20:53:11Z"
+assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
 closed-reason: null
 ---
