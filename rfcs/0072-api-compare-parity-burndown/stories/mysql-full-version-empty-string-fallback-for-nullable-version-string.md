@@ -1,6 +1,6 @@
 ---
 title: 'MySQL full_version falls back to "" because Version#fullVersionString is nullable'
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6138
 claim: "2026-08-05T17:13:08Z"
 assignee: "date-yday-drops-m-yday-fast-arms"
 blocked-by: null
