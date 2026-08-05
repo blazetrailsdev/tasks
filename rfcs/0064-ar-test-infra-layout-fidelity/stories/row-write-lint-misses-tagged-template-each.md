@@ -1,6 +1,6 @@
 ---
 title: "Row-write lint does not see it.each tagged-template tables"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
