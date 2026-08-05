@@ -1,6 +1,6 @@
 ---
 title: "Delete AbstractMysqlAdapter's duplicate schemaCreation getter; Rails puts it in MySQL::SchemaStatements"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
