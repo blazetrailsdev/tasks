@@ -1,7 +1,7 @@
 ---
 title: "Test coverage for the codegen:apply CLI layer"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by the 2026-08-05 prism-codegen coverage audit: the generator is being retired (0084-wide-call-set-burndown/retire-prism-codegen-tooling), so improving its output is work on a deleted directory. Evidence: 0 shipped lines from codegen:apply, 963 tsc errors across all 10 emitted files, 81.8% whole-corpus node coverage that does not translate to usability."
 ---
 
 ## Context
