@@ -1,6 +1,6 @@
 ---
 title: "Migrator#with_advisory_lock adds a capability gate and currentDatabase probe Rails has not"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
