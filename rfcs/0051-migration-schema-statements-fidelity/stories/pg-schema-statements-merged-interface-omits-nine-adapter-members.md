@@ -1,6 +1,6 @@
 ---
 title: "Shrink PostgreSQLSchemaStatements' nine-name Omit list and drop its two narrowing casts"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

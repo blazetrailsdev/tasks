@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#pool is declared unknown, forcing casts at every pool reader and call site"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
