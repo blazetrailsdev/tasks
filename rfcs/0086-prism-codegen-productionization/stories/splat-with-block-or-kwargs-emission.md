@@ -42,6 +42,18 @@ both valid and call-compatible. Deciding the shape is the open work — e.g. a
 trailing options/block object folded into the rest, or a non-positional
 convention — and it has to be decided once, for the whole corpus, not per def.
 
+Declining also took seven rows out of `scripts/prism-codegen/convergence-baseline.json`
+(the guard's only-shrink baseline), because a declined def leaves the compared
+population entirely — they did **not** converge:
+
+- `active_record/persistence.rb::touch::missing`
+- `active_record/relation.rb::{isAny,isNone,isOne,touchAll}::divergent`
+- `active_record/relation/query_methods.rb::extending::missing`
+- `active_record/relation/query_methods.rb::extendingBang::divergent`
+
+Re-enabling emission will red the guard with those defs' real port divergence.
+That is the mechanism working: they come back through review, not silently.
+
 ## Acceptance criteria
 
 - A single decided emission shape for `*splat` combined with (a) an explicit
@@ -55,3 +67,4 @@ convention — and it has to be decided once, for the whole corpus, not per def.
   parameter after a rest parameter") is updated to assert the new shape rather
   than the decline.
 - Def coverage recovers past 434/472; 0 parse errors invariant holds.
+- The seven baseline rows above are re-reviewed on their merits as they resurface.
