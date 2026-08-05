@@ -1,6 +1,6 @@
 ---
 title: "converge-version-state-and-full-version-string"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6107
 claim: "2026-08-05T00:47:03Z"
 assignee: "i18n-date-valid-ordinal-civil-negative-fields"
 blocked-by: null
