@@ -1,7 +1,7 @@
 ---
 title: "Config#add_previous_scheme pushes a Scheme, not the raw options bag"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
