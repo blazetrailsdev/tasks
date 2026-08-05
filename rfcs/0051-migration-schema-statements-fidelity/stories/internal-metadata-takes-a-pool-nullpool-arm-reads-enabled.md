@@ -1,6 +1,6 @@
 ---
 title: "InternalMetadata takes an adapter where Rails takes a pool, so the NullPool arm reads as enabled"
-status: claimed
+status: blocked
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-05T13:14:58Z"
 assignee: "date-initialize-guess-style-fast-path"
-blocked-by: null
+blocked-by: "Blocked on giving the ~30 InternalMetadata construction sites a real pool first. Confirmed on branch date-initialize-guess-style-fast-path-d501 by doing the conversion: AbstractAdapter#pool is declared `pool: unknown` (connection-adapters/abstract-adapter.ts:852) and planted as a NullPool at :808 (abstract_adapter.rb:153), so (a) every one of the ~30 `new InternalMetadata(adapter)` sites needs a `as ConnectionPool` cast or a pool-typing change that is its own story, and (b) once `enabled` is the faithful `@pool.db_config.use_metadata_table?` (internal_metadata.rb:35-36) with no softening, every NullPool-backed site — migrator.trails.test.ts, migration.test.ts, support/canonical-schema-stamp.ts, schema.ts Schema.define, tasks/database-tasks.ts, trailties db.ts — reads NULL_CONFIG (connection-pool.ts:62,155) and silently disables metadata storage suite-wide. The prerequisite is migration-context-collaborators-need-a-pool; this story should be re-scheduled after it."
 closed-reason: null
 ---
 
