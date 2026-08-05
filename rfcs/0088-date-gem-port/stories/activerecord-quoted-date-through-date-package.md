@@ -7,7 +7,6 @@ cluster: null
 deps: ["route-temporal-imports-activerecord"]
 deps-rfc: []
 est-loc: 250
-priority: 8
 pr: null
 claim: null
 assignee: null
