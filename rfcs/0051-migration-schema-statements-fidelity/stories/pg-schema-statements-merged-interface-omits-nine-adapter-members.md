@@ -1,6 +1,6 @@
 ---
 title: "Shrink PostgreSQLSchemaStatements' nine-name Omit list and drop its two narrowing casts"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6128
 claim: "2026-08-05T14:47:37Z"
 assignee: "resolve-last-activerecord-inheritance-mismatch-schema-dumper"
 blocked-by: null
