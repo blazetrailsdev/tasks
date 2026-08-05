@@ -1,6 +1,6 @@
 ---
 title: "Delegate joinTableName to deriveJoinTableName (blocked on module-init leaf constraint)"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 110
-pr: null
+pr: 6119
 claim: "2026-08-05T03:44:59Z"
 assignee: "postgresql-active-issues-the-rails-liveness-query"
 blocked-by: null
