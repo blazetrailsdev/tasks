@@ -75,6 +75,47 @@ edge in the cycle that Ruby genuinely defers. Sibling story
 `contexts-module-state-lives-in-context-ts` moves state in the same cluster and
 may interact.
 
+## Attempted and released (#6135, 2026-08-05)
+
+The mechanical half was built and reverted. Pointing the five files at
+`Configurable.config` / `.cipher` / `.keyProvider` and moving the singleton onto
+`Configurable` (`let _config: Config | undefined` behind
+`static get config()`, where `mattr_reader :config` declares it,
+configurable.rb:9) typechecks and passes `pnpm tsc --build`. A plain-node import
+of the BUILT dist as an ENTRY module then gives:
+
+    encryptor:     FAIL Cannot access 'Encryptor' before initialization
+    scheme:        FAIL Cannot access 'Encryptor' before initialization
+    key-provider:  FAIL Cannot access 'KeyProvider' before initialization
+    contexts / configurable / context / key-generator:  ok
+
+exactly as this story predicts.
+
+**The proposed lever does not open.** Deferring `contexts.ts`'s
+`EncryptingOnlyEncryptor` import is not expressible: ESM hoists every `import`
+and evaluates the whole dependency graph before any module body runs, so a
+binding used only inside `protectingEncryptedData` still forces
+`encrypting-only-encryptor.js` to evaluate — and with the entry at
+`encryptor.js` its `class EncryptingOnlyEncryptor extends Encryptor`
+(encrypting_only_encryptor.rb:6) evaluates with `Encryptor` still in TDZ. The
+only synchronous deferral Ruby's autoload has and ESM lacks is a sync
+`import()`; `import()` is async and `protectingEncryptedData` is sync
+(contexts.rb:57 is called from a block form). Moving the class reference to a
+namespace import, reordering the imports, or relocating
+`protectingEncryptedData` into `context.ts` all leave the same
+`... -> encrypting-only-encryptor -> encryptor` edge in the cycle.
+
+Same shape for the second cycle: `config.ts:12` imports
+`DerivedSecretKeyProvider` for its own SHA1 provider (config.rb), so
+`config -> derived-secret-key-provider -> key-provider` breaks a
+`key-provider.js` entry import on `DerivedSecretKeyProvider extends KeyProvider`.
+
+So the next attempt should NOT start from the `contexts.ts` import. It needs a
+different structural answer for "a module that references a subclass-defining
+constant only inside a method body" — and whatever that answer is, it has to
+serve both cycles. Worth checking whether any other trails package has already
+settled an idiom for this before inventing one.
+
 ## Acceptance criteria
 
 - [ ] The five files above read `Configurable.*`, not `getSharedConfig()` /
