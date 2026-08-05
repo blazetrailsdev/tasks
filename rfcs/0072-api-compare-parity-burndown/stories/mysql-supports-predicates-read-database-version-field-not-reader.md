@@ -1,6 +1,6 @@
 ---
 title: "MySQL supports_* predicates read the _databaseVersion field, not Rails' database_version reader"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
