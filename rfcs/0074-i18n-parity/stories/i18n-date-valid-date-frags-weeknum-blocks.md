@@ -1,6 +1,6 @@
 ---
 title: "rt__valid_date_frags_p's :wnum0/:wnum1 blocks are not carried"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T00:59:03Z"
+assignee: "i18n-date-valid-date-frags-weeknum-blocks"
 blocked-by: null
 closed-reason: null
 ---
