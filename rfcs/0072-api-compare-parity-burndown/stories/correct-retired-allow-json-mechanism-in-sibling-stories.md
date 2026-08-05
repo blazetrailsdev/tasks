@@ -1,6 +1,6 @@
 ---
 title: "Sweep the retired extra-surface-allow.json / @internal instruction out of 19 RFC 0072 story bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6134
 claim: "2026-08-05T16:13:06Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
