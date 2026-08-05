@@ -1,6 +1,6 @@
 ---
 title: "MySQL supports_* predicates read the _databaseVersion field, not Rails' database_version reader"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T12:29:59Z"
+assignee: "retire-non-transactional-ratchet-non-wrappable-classes"
 blocked-by: null
 closed-reason: null
 ---
