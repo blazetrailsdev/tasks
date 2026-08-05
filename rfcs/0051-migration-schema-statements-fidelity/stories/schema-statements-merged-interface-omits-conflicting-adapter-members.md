@@ -1,6 +1,6 @@
 ---
 title: "Converge the member shapes the SchemaStatements merged interface has to Omit"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: null
+pr: 6116
 claim: "2026-08-05T03:00:02Z"
 assignee: "fold-narrow-call-ratchet-into-wide"
 blocked-by: null
