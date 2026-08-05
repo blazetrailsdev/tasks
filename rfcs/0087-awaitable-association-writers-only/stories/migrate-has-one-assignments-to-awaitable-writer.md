@@ -1,7 +1,7 @@
 ---
 title: "migrate-has-one-assignments-to-awaitable-writer"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-05
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T03:29:59Z"
+assignee: "port-respond-to-missing-finder-to-dynamic-matchers"
 blocked-by: null
 closed-reason: null
 ---

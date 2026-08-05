@@ -1,7 +1,7 @@
 ---
 title: "removeIndex's ifExists probe should be Rails' single index_exists? call"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T03:29:59Z"
+assignee: "port-respond-to-missing-finder-to-dynamic-matchers"
 blocked-by: null
 closed-reason: null
 ---
