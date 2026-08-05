@@ -1,6 +1,6 @@
 ---
 title: "Port Rails' Association#find_target body into the base findTarget stub"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T02:45:04Z"
+assignee: "row-count-is-debt-not-seeded-reasons"
 blocked-by: null
 closed-reason: null
 ---
