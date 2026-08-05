@@ -37,8 +37,16 @@ Surfaced by `port-activesupport-message-encryptor-tests`: Rails'
 `@verifier.verify(@encryptor.encrypt_and_sign(@data)).split("--")` to recover
 `text` and `iv`. Against trails that raises `InvalidSignature: invalid base64`,
 because `extractEncoded` hands `<b64text>--<b64iv>` to a strict base64 decode.
-The case is `it.skip`ped in
-`packages/activesupport/src/message-encryptor.test.ts` with a pointer here.
+Two cases are `it.skip`ped in
+`packages/activesupport/src/message-encryptor.test.ts` with a pointer here:
+
+- `messing with either encrypted values causes failure`, as above.
+- `backwards compat for 64 bytes key` (`message_encryptor_test.rb:56-64`), whose
+  fixture message _is_ a Rails-format `Base64(payload)--digest`. trails'
+  `readMessage` splits the raw string expecting `<b64text>--<b64iv>--<digest>`,
+  finds one part after stripping the digest, and raises `missing separator`.
+  Its payload is also Marshal-serialized, so it needs
+  `message-encryptor-marshal-payload-backwards-compatibility` as well.
 
 ## Acceptance criteria
 
@@ -47,5 +55,7 @@ The case is `it.skip`ped in
       `Base64(payload)--digest`.
 - [ ] `messing with either encrypted values causes failure` is un-skipped and
       passes.
+- [ ] `backwards compat for 64 bytes key` gets past `missing separator` (it
+      still needs the Marshal reader to fully pass).
 - [ ] The `aead` (unsigned) path is unaffected — Rails only signs in
       non-AEAD mode.
