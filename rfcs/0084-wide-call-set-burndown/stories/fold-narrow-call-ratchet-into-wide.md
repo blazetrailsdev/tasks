@@ -1,6 +1,6 @@
 ---
 title: "fold-narrow-call-ratchet-into-wide"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: null
