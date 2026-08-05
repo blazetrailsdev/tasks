@@ -7,7 +7,6 @@ cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 200
-priority: 6
 pr: null
 claim: null
 assignee: null
