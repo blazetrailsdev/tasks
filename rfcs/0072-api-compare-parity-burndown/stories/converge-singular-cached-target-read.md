@@ -1,6 +1,6 @@
 ---
 title: "converge-singular-cached-target-read"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6136
 claim: "2026-08-05T16:53:06Z"
 assignee: "date-to-s-does-not-zero-pad-the-year"
 blocked-by: null
