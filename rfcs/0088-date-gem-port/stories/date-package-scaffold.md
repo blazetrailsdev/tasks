@@ -7,7 +7,6 @@ cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []
 est-loc: 200
-priority: 2
 pr: null
 claim: null
 assignee: null
