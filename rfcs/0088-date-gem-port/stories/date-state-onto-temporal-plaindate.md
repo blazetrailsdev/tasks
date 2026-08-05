@@ -1,6 +1,6 @@
 ---
 title: "date-state-onto-temporal-plaindate"
-status: draft
+status: ready
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
