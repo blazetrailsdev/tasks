@@ -1,6 +1,6 @@
 ---
 title: "date-package-scaffold"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
