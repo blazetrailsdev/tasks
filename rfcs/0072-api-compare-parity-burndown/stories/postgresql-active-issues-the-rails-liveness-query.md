@@ -1,6 +1,6 @@
 ---
 title: "postgresql-active-issues-the-rails-liveness-query"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6119
 claim: "2026-08-05T03:44:59Z"
 assignee: "postgresql-active-issues-the-rails-liveness-query"
 blocked-by: null
