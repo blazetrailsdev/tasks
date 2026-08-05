@@ -1,13 +1,13 @@
 ---
 title: "move-date-time-to-date-package"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["date-package-scaffold"]
 deps-rfc: []
 est-loc: 350
-pr: null
+pr: 6144
 claim: "2026-08-05T21:13:08Z"
 assignee: "move-date-time-to-date-package"
 blocked-by: null
