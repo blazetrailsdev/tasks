@@ -1,6 +1,6 @@
 ---
 title: "Migrator#connection returns a constructor-pinned adapter, not DatabaseTasks.migration_connection"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
