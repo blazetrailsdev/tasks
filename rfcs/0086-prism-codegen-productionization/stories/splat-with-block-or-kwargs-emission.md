@@ -1,12 +1,12 @@
 ---
-title: "splat-with-block-or-kwargs-emission"
+title: "Decide the emission shape for a splat combined with a block or keyword arguments"
 status: draft
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 130
 priority: null
 pr: null
 claim: null

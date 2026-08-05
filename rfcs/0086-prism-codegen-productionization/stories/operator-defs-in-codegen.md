@@ -1,12 +1,12 @@
 ---
-title: "operator-defs-in-codegen"
+title: "Operator defs (== and <=>) decline: no TS spelling in the conventions table"
 status: draft
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
