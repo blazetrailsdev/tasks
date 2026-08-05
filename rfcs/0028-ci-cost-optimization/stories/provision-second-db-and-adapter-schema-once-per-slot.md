@@ -1,6 +1,6 @@
 ---
 title: "Lay the arunit2 + adapter-specific schema once per slot DB, not once per test file"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T09:30:01Z"
+assignee: "rename-relation-modelclass-field-to-model"
 blocked-by: null
 closed-reason: null
 ---
