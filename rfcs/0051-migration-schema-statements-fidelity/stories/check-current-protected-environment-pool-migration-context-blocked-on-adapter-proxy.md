@@ -1,6 +1,6 @@
 ---
 title: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
-status: claimed
+status: ready
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-05T16:33:09Z"
-assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

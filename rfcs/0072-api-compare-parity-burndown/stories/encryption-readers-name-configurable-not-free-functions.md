@@ -1,6 +1,6 @@
 ---
 title: "Encryption cluster reads config/cipher/key_provider through free functions, not Configurable"
-status: claimed
+status: ready
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-08-05T16:33:09Z"
-assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
