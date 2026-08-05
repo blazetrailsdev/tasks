@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_ordinal_p's and c_valid_civil_p's negative-field normalizations"
-status: claimed
+status: blocked
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-05T00:47:03Z"
 assignee: "i18n-date-valid-ordinal-civil-negative-fields"
-blocked-by: null
+blocked-by: "Blocked on unmerged PR #6104: this story's converged shape (rtValidOrdinalP / rtValidCivilP with the 'not carried' notes, plus cFindFdoy) only exists on that branch — origin/main still has a single inlined rtValidDateFragsP with no valid_*_p helpers. Re-ready once #6104 merges."
 closed-reason: null
 ---
 
