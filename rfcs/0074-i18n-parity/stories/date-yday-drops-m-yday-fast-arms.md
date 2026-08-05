@@ -1,6 +1,6 @@
 ---
 title: "Date#yday ports only m_yday's third branch, dropping both civil-field fast arms"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6138
 claim: "2026-08-05T17:13:08Z"
 assignee: "date-yday-drops-m-yday-fast-arms"
 blocked-by: null
