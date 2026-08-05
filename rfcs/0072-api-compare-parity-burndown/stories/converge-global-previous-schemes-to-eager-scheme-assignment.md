@@ -1,6 +1,6 @@
 ---
 title: "Assign global previous schemes eagerly at encrypts time, retiring the lazy injection point and restoring Rails' memos"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
