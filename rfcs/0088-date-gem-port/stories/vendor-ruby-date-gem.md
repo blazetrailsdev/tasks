@@ -2,7 +2,7 @@
 title: "vendor-ruby-date-gem"
 status: in-progress
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
 deps: []
 deps-rfc: []
@@ -41,7 +41,7 @@ is the template for the source-name/package-name split.
 
 - [ ] `vendor/sources.ts` gains a `date` source: `https://github.com/ruby/date.git`
       at `ref: "v3.4.1"` — the version the port already cites.
-- [ ] Its one package entry is `{ name: "corelib", libPath: "lib", testPath: "test/date" }`.
+- [ ] Its one package entry is `{ name: "date", libPath: "lib", testPath: "test/date" }`.
 - [ ] `compareApi: false` and `compareTests: false` initially, with a comment
       pointing at the enrollment stories that flip them — the shipped-interim
       pattern RFC 0074 used for i18n.

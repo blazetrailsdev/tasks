@@ -1,10 +1,10 @@
 ---
-title: "move-date-time-to-corelib"
+title: "move-date-time-to-date-package"
 status: draft
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
-deps: ["corelib-package-scaffold"]
+deps: ["date-package-scaffold"]
 deps-rfc: []
 est-loc: 350
 priority: 3
@@ -18,14 +18,14 @@ closed-reason: null
 ## Context
 
 Moves `packages/i18n/src/date.ts` (2,554 lines) and `time.ts` (288) to
-`packages/corelib/src/`. **Mechanical move, no behavior change** — note it in the
+`packages/date/src/`. **Mechanical move, no behavior change** — note it in the
 PR body per the CLAUDE.md single-mechanical-rename exception.
 
 These files are not i18n. `vendor/i18n/lib/i18n/` ships no date implementation,
 and i18n's own `localize` never names the `Date` class:
 `packages/i18n/src/backend/base.ts:358` duck-types its argument on
 `strftime`/`wday`/`mon`/`hour`/`sec` (`base.ts:248-256`), exactly as the gem
-does. So i18n → date is structural, not circular, and `corelib` does not depend
+does. So i18n → date is structural, not circular, and `packages/date` does not depend
 on i18n and cannot come to.
 
 **The blast radius is one import.** The only cross-package consumer of
@@ -39,11 +39,11 @@ exports; both go away.
 ## Acceptance criteria
 
 - [ ] `date.ts`, `time.ts`, `date.trails.test.ts`, `time.trails.test.ts` moved to
-      `packages/corelib/src/`, imports rewritten.
+      `packages/date/src/`, imports rewritten.
 - [ ] `./date` and `./time` subpath exports removed from
       `packages/i18n/package.json`; `packages/i18n` no longer depends on them.
 - [ ] `packages/activesupport/src/i18n.test.ts:5` imports from
-      `@blazetrails/corelib` — the sole consumer update.
+      `@blazetrails/date` — the sole consumer update.
 - [ ] `time.ts`'s import of `ArgumentError`/`strftime` from `./date.js` still
       resolves intra-package.
 - [ ] **Zero behavior change** — no method body edited, no test renamed. Test

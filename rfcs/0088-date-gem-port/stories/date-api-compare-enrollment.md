@@ -1,10 +1,10 @@
 ---
-title: "corelib-api-compare-enrollment"
+title: "date-api-compare-enrollment"
 status: draft
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
-deps: ["move-date-time-to-corelib", "corelib-date-c-source-extractor-decision"]
+deps: ["move-date-time-to-date-package", "date-c-source-extractor-decision"]
 deps-rfc: []
 est-loc: 250
 priority: 5
@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 Flips `compareApi` on for the `date` source so the ported surface is finally
-measured. **Blocked on `corelib-date-c-source-extractor-decision`** — its outcome
+measured. **Blocked on `date-c-source-extractor-decision`** — its outcome
 determines whether this is a straight flip or a flip plus `UNPORTED_FILES`
 entries for the C sources.
 
@@ -31,11 +31,11 @@ source tree that does not exist in the repo.
 
 ## Acceptance criteria
 
-- [ ] `compareApi: true` for the `date` source's `corelib` package entry.
+- [ ] `compareApi: true` for the `date` source's `date` package entry.
 - [ ] `UNPORTED_FILES` entries for whatever the spike determined cannot be
       credited, **each with a real reason** — never a seeded placeholder.
 - [ ] `pnpm api:compare` delta is non-negative.
-- [ ] `pnpm api:extra --package corelib` run and its output triaged: every extra
+- [ ] `pnpm api:extra --package date` run and its output triaged: every extra
       either traced to a Ruby method, folded in, or tagged `@noRailsEquivalent`
       with a reason. **Do not widen an allowlist to absorb the moved code** —
       baselines are only-shrink by construction.

@@ -1,8 +1,8 @@
 ---
-title: "corelib-date-c-source-extractor-decision"
+title: "date-c-source-extractor-decision"
 status: ready
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-**Spike. Gates `corelib-api-compare-enrollment`.** This is the highest-risk
+**Spike. Gates `date-api-compare-enrollment`.** This is the highest-risk
 assumption in the RFC and it is deliberately settled before any code moves.
 
 `scripts/api-compare/extract-ruby-api.rb` parses **Ruby**, not C. But the bulk of

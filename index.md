@@ -4,6 +4,7 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
+| [0000-corelib-primitives](rfcs/0000-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | active | @your-handle | corelib, activesupport, activemodel, activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -91,4 +92,4 @@
 | [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @your-handle | activerecord |
 | [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @your-handle | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | active | @deanmarano | activerecord |
-| [0088-corelib-package](rfcs/0088-corelib-package/README.md) | corelib package: vendored Ruby core library with Temporal substrate | active | @your-handle | corelib, i18n, activesupport, activemodel, activerecord |
+| [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | active | @your-handle | date, i18n, activesupport, activemodel, activerecord |

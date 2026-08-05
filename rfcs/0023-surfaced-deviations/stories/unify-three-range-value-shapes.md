@@ -5,7 +5,7 @@ updated: 2026-08-05
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
-deps-rfc: ["0088-corelib-package"]
+deps-rfc: ["0000-corelib-primitives"]
 est-loc: 200
 priority: null
 pr: null
@@ -36,7 +36,7 @@ authoritative — and none _can_ be today, because the base shape
 compare against (tagged `@noRailsEquivalent PERMANENT`, `range-ext.ts:19-22`).
 
 **Blocked on `move-range-core-and-succ-to-corelib`** (RFC
-`0088-corelib-package`), which moves the base `Range` into `packages/corelib`
+`0000-corelib-primitives`), which moves the base `Range` into `packages/corelib`
 anchored to `ruby/spec`'s `core/range/*`. Once there is one authoritative,
 measurable `Range`, the PG and time-zone shapes can converge onto it. Attempting
 this before that lands would just pick one of three unanchored shapes arbitrarily.

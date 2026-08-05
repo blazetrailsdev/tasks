@@ -1,0 +1,308 @@
+---
+rfc: "0088-date-gem-port"
+title: "Port the ruby/date gem as its own package, returning Temporal by default"
+status: active
+created: 2026-08-05
+updated: 2026-08-05
+owner: "@your-handle"
+packages:
+  - "date"
+  - "i18n"
+  - "activesupport"
+  - "activemodel"
+  - "activerecord"
+clusters: []
+related:
+  - "0074-i18n-parity"
+  - "0000-corelib-primitives"
+priority: 1
+---
+
+# Port the ruby/date gem as its own package, returning Temporal by default
+
+`Date`, `DateTime` and `Time` are **a gem** — `ruby/date`, shipped separately
+from the interpreter with its own gemspec, `lib/`, and `test/`. Port it
+**wholesale as its own package**, `packages/date`, vendored and enrolled exactly
+like the other gem ports trails already carries.
+
+Its sibling RFC `0000-corelib-primitives` takes the genuinely-core surface
+(`Range`, `String#succ`, the module-mixin primitives), which is a different thing
+with a different anchoring contract. **The split is the point** — see
+_Why this is not corelib_ below.
+
+## Why
+
+RFC `0074-i18n-parity` is the i18n gem's parity RFC. **32 of its 131 stories
+(24%, 3,510 of 13,080 est-loc, 24 merged PRs) are not i18n at all** — they are a
+port of `Date`/`DateTime`/`Time`. `packages/i18n/src/date.ts` is **2,554 lines**,
+larger than `packages/i18n/src/backend/base.ts` (705), which is the actual gem
+core.
+
+That cluster has no anchor. `vendor/i18n/lib/i18n/` ships no date implementation,
+and the thing being ported — `date-3.4.1/ext/date/date_parse.c` and
+`ext/date/date_core.c` — is **not vendored anywhere in the repo**. `date.ts`'s
+JSDoc cites the C source by line throughout (e.g. `date.ts:2213` cites
+`date_core.c:186`) against a file no one can open.
+
+Consequences, each verified:
+
+- `api:compare` cannot resolve it. `scripts/api-compare/extra-surface.ts:12`
+  walks _from each Ruby file_ to its expected TS file, so a TS file with no Ruby
+  counterpart lands in the `rubyFile === null` slice (`extra-surface.ts:531`) —
+  counted as extra surface, never compared method-by-method.
+- `test:compare` cannot match it. Both test files
+  (`date.trails.test.ts` 567 lines, `time.trails.test.ts` 123) use the
+  `.trails.test.ts` suffix — TS-only extras, outside the compared population by
+  construction.
+- The call-set ratchet has nothing to ratchet against.
+
+**This is the one campaign in trails where the repo's self-terminating gate
+mechanism does not apply, which is why it has no natural stopping point.**
+
+### The finding that sets the priority
+
+`packages/i18n/src/date.ts` and `time.ts` — 2,842 lines, 32 stories, 24 merged
+PRs — have **exactly one consumer outside their own package, and it is a test
+file**: `packages/activesupport/src/i18n.test.ts:5`. Nothing in production
+imports them. Even i18n's own `localize` does not — `backend/base.ts:358`
+duck-types its argument on `strftime`/`wday`/`mon`/`hour`/`sec`
+(`base.ts:248-256`), exactly as the gem does, so it never names the `Date` class.
+
+So the cluster is unmeasured, unanchored, **and unconsumed**. The migration cost
+is one import today and grows monotonically. **This is the cheapest this decision
+will ever be.**
+
+## Why this is not corelib
+
+An earlier draft folded date into a single `corelib` package alongside `Range`
+and the module primitives. That was wrong, and the reason is worth stating
+because it is what keeps the two RFCs honest:
+
+**`date` is a gem; `Range` and `Module#include` are the interpreter.** That is not
+a taxonomy quibble — it decides what can be measured and how:
+
+|                   | `packages/date` (this RFC)                             | `packages/corelib` (sibling RFC)                        |
+| ----------------- | ------------------------------------------------------ | ------------------------------------------------------- |
+| Upstream          | `ruby/date` gem — own gemspec, `lib/`, `test/`         | `range.c`, `string.c`, `eval.c` — interpreter internals |
+| Vendorable source | **Yes** — `lib/date.rb`, `ext/date/*.c`                | **No** — not distributable as a portable unit           |
+| Vendorable tests  | **Yes** — `test/date/*.rb`                             | Only `ruby/spec` behavioral specs                       |
+| `api:compare`     | **Yes**                                                | **Never**                                               |
+| `test:compare`    | **Yes**                                                | Yes, against `ruby/spec`                                |
+| Precedent         | `did-you-mean`, `globalid`, `nokogiri`, `rack`, `i18n` | none — genuinely new                                    |
+
+Two different anchoring contracts. Folding them into one package would have made
+"which contract applies here?" a rule contributors had to remember; **splitting
+the packages makes it structural.** And it lets this RFC follow the
+already-working vendored-gem precedent unchanged rather than inventing a
+half-anchored hybrid.
+
+## The contract
+
+Three parts, and they are separable.
+
+### 1. Port the gem's tests faithfully
+
+`vendor/date/test/date/*.rb` is the specification. **Fidelity is measured by the
+gem's test suite**, not by mirroring Ruby's internal representation. Test names
+mirror the gem's names exactly — that is the `test:compare` matching key, and per
+CLAUDE.md test names are never reworded to fit an implementation.
+
+### 2. Temporal is the default return type
+
+Where a Ruby method answers a temporal value, **the TS method answers a
+`Temporal` type by default**:
+
+| Ruby returns                        | trails returns by default                         |
+| ----------------------------------- | ------------------------------------------------- |
+| `Date`                              | `Temporal.PlainDate`                              |
+| `DateTime`                          | `Temporal.PlainDateTime` (+ offset where carried) |
+| `Time`                              | `Temporal.ZonedDateTime` / `Temporal.Instant`     |
+| `Date#+`, `#advance`, `#next_day` … | the corresponding `Temporal` type                 |
+
+Callers get Temporal without asking. This is the headline behavioral commitment
+of the RFC.
+
+### 3. The Ruby-shaped object stays available as an option
+
+**A `Date` class still exists** — it is the gem's own API surface, it is what the
+ported tests construct and exercise, and the parse/format machinery needs
+somewhere to live. It is simply **not what the default entry points return**.
+
+So: Temporal by default, the Ruby object on request. **The exact opt-in mechanism
+is deliberately not fixed here** — an options argument, a parallel entry point, or
+a conversion method are all viable, and the choice belongs to the scaffold and
+substrate stories once the ported surface is visible. What this RFC fixes is the
+_default_, and that a caller who needs Ruby-shaped behavior is not left without
+it.
+
+Ruby-shaped returns remain the default only where Temporal has no analogue and
+the value is observable:
+
+- `Date._parse` → a fragment object (Ruby answers a Hash; Temporal has no
+  "partial date fields" analogue, and `{}` for no-match is load-bearing).
+- `strftime` → `string`.
+- UTC offsets → `number` seconds. **Required, not a shortcut:** Temporal offset
+  time zones are minute-precision and MRI has sub-minute offsets;
+  `time.ts:26-28` already keeps the offset as _"a number trails owns, so that
+  MRI's sub-minute offsets are representable where a Temporal offset time zone
+  (minute-precision) cannot hold them."_
+
+**Expect assertion-value mismatches in `test:compare`, and expect them to be
+benign.** A ported test whose Ruby form asserts
+`assert_equal Date.new(2001,2,3), Date.parse("…")` compares a
+`Temporal.PlainDate` on our side. `test:compare` matches on test _names_, so the
+test still counts; the value-shape difference is the intended design, not drift.
+The enrollment story records this explicitly so a later reader does not "fix" it.
+
+### What this drops, and why it is safe
+
+Stop re-implementing Ruby's internal representation — `#jd`/`#sg`
+(`date.ts:2228-2233`), the `sg`-threaded calendar math (`date.ts:1715-2205`),
+`Rational` offsets (`date.ts:431-471`). Keep Ruby fidelity only where it is
+**observable** through the surfaces trails exposes: AR date/datetime/time columns
+and casts, `I18n.localize`, `strftime`, AS date/time format helpers,
+`to_date`/`to_time`.
+
+| Ruby semantics                                                                                 | Temporal position                                               | Observable?                                                                                                                | Verdict                                                |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `Date` carries `(jd, sg)`; Julian before the reform, so 1582-10-10 / 1500-02-29 are real dates | `PlainDate` is proleptic ISO; those dates cannot be constructed | **No** — needs a pre-1582 date _and_ a non-default `start`; no AR column, `localize` call, or format helper passes `start` | **Drop**                                               |
+| `Date::ITALY`/`ENGLAND`/`JULIAN`/`GREGORIAN` + `start` on every constructor                    | no analogue                                                     | **No** — `start` is never passed by any consumer                                                                           | **Drop** (keep constants inert if tests name them)     |
+| `Date` vs `DateTime` vs `Time`                                                                 | `PlainDate` / `PlainDateTime` / `ZonedDateTime` / `Instant`     | **Yes** — `localize` routes to `date.formats` vs `time.formats` on whether the object answers `sec` (`base.ts:369`)        | **Keep**, map per the table above                      |
+| Sub-minute UTC offsets                                                                         | offset zones are minute-precision                               | **Yes** — `%z`/`%Z`                                                                                                        | **Keep as `number`** — already solved, `time.ts:26-28` |
+| `Rational` offsets / exact fractional-day arithmetic                                           | nanosecond integers, no rationals                               | **Barely** — no real zone, DB column, or format directive exposes sub-nanosecond precision                                 | **Drop the exactness guarantee**                       |
+| `Date` arithmetic returning `Rational`                                                         | `Duration` / `PlainDate.add`                                    | **No** — no trails surface does fractional-day date arithmetic                                                             | **Drop**                                               |
+| DST edges                                                                                      | Temporal forces explicit `disambiguation`                       | **Yes** — `TimeWithZone`, AR tz conversion                                                                                 | **Keep**, pin to Ruby's policy once, here              |
+| `Time` fixed offset vs named zone                                                              | offset TZ vs IANA TZ                                            | **Yes** — `%Z`; `time.ts:1-7` gives this as the reason `time.ts` exists                                                    | **Keep**                                               |
+| `Date._parse` fragment hash — partial results, `{}` for no match                               | `PlainDate.from` is strict ISO                                  | **Yes, maximally**                                                                                                         | **Keep in full** — the 1,566-line bulk                 |
+
+### This continues an existing convention
+
+`packages/activesupport/src/temporal.ts` is the single re-export point; **70
+files** import `Temporal` from `@blazetrails/activesupport/temporal`. The
+convention is **enforced**, not merely followed: `quoting.ts:162,219` (and the
+sqlite3/mysql/pg quoting files) _throw_ on a JS `Date` —
+`"quote: JS Date is not accepted — use a Temporal type"`. Declared value types
+are already Temporal: `DateCastResult = Temporal.PlainDate | …`
+(`activemodel/src/type/date.ts:15`), `DateTimeCastResult = Temporal.Instant | …`
+(`type/date-time.ts:18`), `TimeWithZone` on `Temporal.ZonedDateTime`
+(`time-with-zone.ts:108-327`). JS `Date` survives only as a _coercible input_
+(`type/date.ts:41`, `type/date-time.ts:228`).
+
+**`packages/i18n/src/date.ts` is the sole holdout** — a third dialect that
+interoperates with neither Temporal nor JS `Date`, consistent with it having no
+production consumer. This RFC removes the holdout as a _default_; it does not
+introduce the convention.
+
+## Not a burndown
+
+The state-vs-boundary split of the 32 stories is **19 boundary / 11 state /
+2 mixed**, and the line split agrees independently: **1,714 of 2,554 lines (67%)
+is parse + format**, which is representation-agnostic and survives the Temporal
+change untouched. Adopt Temporal for correctness and interop. It retires about a
+third of the cluster.
+
+**Vendoring is the load-bearing move; Temporal is the correctness move.** This
+RFC sequences vendoring _first_ so the substrate migration is measured rather
+than taken on faith.
+
+## Vendoring
+
+```ts
+// vendor/sources.ts
+{ name: "date",
+  origin: { type: "git", url: "https://github.com/ruby/date.git", ref: "v3.4.1" },
+  packages: [{ name: "date", libPath: "lib", testPath: "test/date" }] },
+```
+
+`v3.4.1` matches the version the port already cites.
+
+**Highest-risk assumption, scoped to a spike (`date-c-source-extractor-decision`):**
+`extract-ruby-api.rb` parses Ruby, not C, and the bulk of what is ported lives in
+`ext/date/*.c` while `lib/date.rb` is comparatively thin. The stated fallback —
+enroll `lib/date.rb` + `test/date/` normally and treat the C sources as a
+vendored **read-anchor** with `UNPORTED_FILES` `pattern` entries — **still fixes
+the presenting problem**, because `test:compare` over `test/date/` gives the
+cluster a real, shrinking, self-terminating gate. No C-parser project is
+required, and per the contract above the test suite is the fidelity measure
+anyway.
+
+## Temporal polyfill ownership
+
+`packages/date` takes sole ownership of `@js-temporal/polyfill`. Today it is
+declared **twice** — `packages/i18n/package.json:26` and
+`packages/activesupport/package.json:98` — and only 3 files import it directly
+(`activesupport/src/temporal.ts`, `i18n/src/{date,time}.ts`), the latter two
+bypassing the chokepoint the other 70 call sites use.
+
+This matters beyond tidiness. The codebase identifies Temporal values by
+`instanceof` throughout (`type/date.ts:34`, `type/date-time.ts:226`,
+`quoting.ts:155-158`). `instanceof` is identity-sensitive across module
+instances, so two polyfill copies make `value instanceof Temporal.PlainDate`
+return `false` for a valid value, and the quoting guard then falls through to
+`throw new TypeError("can't quote …")` — silent and painful to diagnose. Both
+specs are `^0.5.1` and pnpm currently dedupes them to one store path, so this
+works **by version coincidence, not by design**.
+
+`activesupport/src/temporal.ts` becomes a re-export from `@blazetrails/date`, so
+**all 70 `@blazetrails/activesupport/temporal` import sites stay untouched** — a
+one-file change, not a 70-file migration. `instantFrom(date: Date)` stays in
+activesupport; it is a JS-`Date` interop helper and `packages/date` has no
+opinion about JS `Date`.
+
+The polyfill is also transitional (Temporal is Stage 3 and shipping natively); a
+single owner makes its eventual removal one line in one package.
+
+## Dependency direction — verified acyclic
+
+- `packages/i18n/package.json` declares only `@js-temporal/polyfill`
+  (+ optional `yaml`). `date.ts` imports nothing from activesupport; `time.ts`
+  imports only `./date.js`. **The date layer needs nothing from AS today — no
+  `Duration`, no `TimeZone`.** `packages/date` is a leaf.
+- **i18n → date is structural, not circular, and the gem guarantees it.**
+  `localize` duck-types on `strftime` and never names a `Date` type, so
+  `packages/date` does not depend on i18n and cannot come to.
+- `packages/date` does **not** depend on `packages/corelib`; the two are
+  independent leaves.
+
+## Disposition of RFC 0074's open date stories
+
+Three of the four open stories are exactly the internal-state fidelity this RFC
+demotes from the default. **Per CLAUDE.md this is supersession, not
+ratification** — each closure cites the gap-table row that removes its referent,
+each is re-derivable from this RFC if the decision is reversed, and none lands in
+a deviation register.
+
+| Story                                                 | Class    | Disposition                                                                                                                                                                                                                                                                                                              |
+| ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `date-initialize-guess-style-fast-path` (in-progress) | state    | **Close as superseded — confirm with the holder first.** It ports `date_initialize`'s guess-style fast path, which decides JD vs ordinal vs civil _under a `sg`_; with `PlainDate` as the default return the branch has no referent. It is in-progress with a live worktree; do not close out from under a running agent |
+| `datetime-new-start-preserves-the-receiver` (ready)   | state    | **Close as superseded** — definitionally about `start` propagation, dropped by rows 1–2                                                                                                                                                                                                                                  |
+| `rt-rewrite-frags-rational-offset-exactness` (draft)  | state    | **Close as superseded** — chases exact `Rational` offsets; unobservable, and `time.ts:26-28` already settled the representable case                                                                                                                                                                                      |
+| `date-strptime-seconds-frag-producers` (draft)        | boundary | **Keep, migrate here** — `strptime` is parsing, required under any substrate, and directly testable against `test/date/test_date_strptime.rb` once vendored. It _gains_ an anchor                                                                                                                                        |
+
+**The 28 done stories stay done.** 19 of them are boundary fidelity carrying over
+unchanged. This RFC re-homes and finally _anchors_ that work; it does not discard
+it.
+
+## Sequencing
+
+Vendor and settle the extractor question, scaffold, move, **enroll — where the
+cluster finally acquires a stopping condition** — then re-seat the default return
+type on Temporal **last, so it is measured by the gates rather than taken on
+faith.**
+
+## Out of scope — filed separately
+
+- `Range`, `String#succ`, and the module-mixin primitives → RFC
+  `0000-corelib-primitives`.
+- The `instanceof Date` residue in actionpack's HTTP cache layer → RFC 0023,
+  `actionpack-http-cache-layer-uses-js-date`. **Not** the AR quoting sites, which
+  are the convention being enforced.
+- RFC 0074's four `i18n-inspect-*` stories → RFC 0023,
+  `i18n-inspect-stories-are-ruby-object-inspect`.
+
+## Constraints
+
+- Each PR ≤ 500 LOC; one story per PR; PRs branch from `main`, no stacking.
+- Ported code lives at the path matching the vendored layout so `api:compare`
+  resolves it.
+- Test names must match the gem's test names for `test:compare`.

@@ -1,8 +1,8 @@
 ---
-title: "corelib-package-scaffold"
+title: "date-package-scaffold"
 status: draft
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []
@@ -17,15 +17,15 @@ closed-reason: null
 
 ## Context
 
-Creates `packages/corelib` as a workspace package so the move stories have a
+Creates `packages/date` as a workspace package so the move stories have a
 destination. No ported code lands here — this story is registration only.
 
 `scripts/api-compare/config.ts:101` `apiComparePackageRoots()` derives extraction
 roots from the package name (with optional `PACKAGE_DIR_OVERRIDES` /
-`PACKAGE_SRC_SUBDIR`), so `corelib` needs a `PACKAGES` entry and nothing bespoke.
+`PACKAGE_SRC_SUBDIR`), so `date` needs a `PACKAGES` entry and nothing bespoke.
 `packages/did-you-mean` is the working template for a non-Rails vendored package.
 
-**`corelib` takes sole ownership of `@js-temporal/polyfill`.** Today it is
+**`packages/date` takes sole ownership of `@js-temporal/polyfill`.** Today it is
 declared twice — `packages/i18n/package.json:26` and
 `packages/activesupport/package.json:98` — and only 3 files import it directly
 (`activesupport/src/temporal.ts`, `i18n/src/date.ts`, `i18n/src/time.ts`), the
@@ -45,17 +45,17 @@ design**.
 
 ## Acceptance criteria
 
-- [ ] `packages/corelib/` with `package.json` (`@blazetrails/corelib`),
+- [ ] `packages/date/` with `package.json` (`@blazetrails/date`),
       `tsconfig.json`, `src/index.ts`, matching `packages/did-you-mean`'s shape.
-- [ ] `@js-temporal/polyfill` declared **only** in `packages/corelib/package.json`;
+- [ ] `@js-temporal/polyfill` declared **only** in `packages/date/package.json`;
       removed from `packages/i18n/package.json:26` and
       `packages/activesupport/package.json:98`.
-- [ ] `corelib` re-exports `Temporal`; `activesupport/src/temporal.ts` becomes a
-      re-export from `@blazetrails/corelib`, so **all 70
+- [ ] `packages/date` re-exports `Temporal`; `activesupport/src/temporal.ts` becomes a
+      re-export from `@blazetrails/date`, so **all 70
       `@blazetrails/activesupport/temporal` import sites stay untouched**.
 - [ ] `instantFrom(date: Date)` **stays** in `activesupport/src/temporal.ts` —
-      it is a JS-Date interop helper and `corelib` has no opinion about JS `Date`.
-- [ ] `corelib` added to `PACKAGES` in `scripts/api-compare/config.ts`.
+      it is a JS-Date interop helper and `packages/date` has no opinion about JS `Date`.
+- [ ] `date` added to `PACKAGES` in `scripts/api-compare/config.ts`.
 - [ ] **Registration checklist — a partial job reds a CI lane `pnpm typecheck`
       cannot see.** A new cross-package subpath needs the vitest alias **and both**
       dx-test tsconfigs; a new `scripts/` test dir needs `vitest.config` +

@@ -45,7 +45,7 @@ a `Time` because Ruby has no separate wire type. The question is whether trails
 should expose `Temporal.Instant` at this seam and convert at the header edge, or
 keep JS `Date` as the deliberate boundary type.
 
-Surfaced by the `0088-corelib-package` audit, which found this is the _only_
+Surfaced by the `0088-date-gem-port` audit, which found this is the _only_
 remaining declared-JS-`Date` public surface once
 `activesupport/src/range-ext.ts` moves. **This story is a decision, not
 automatically a conversion** — "keep it, documented" is an acceptable outcome

@@ -2,9 +2,9 @@
 title: "date-state-onto-temporal-plaindate"
 status: draft
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0088-date-gem-port"
 cluster: null
-deps: ["corelib-api-compare-enrollment", "corelib-test-compare-enrollment"]
+deps: ["date-api-compare-enrollment", "date-test-compare-enrollment"]
 deps-rfc: []
 est-loc: 450
 priority: 6
@@ -21,8 +21,25 @@ closed-reason: null
 so the substrate migration is _measured_ rather than taken on faith. This is the
 only story in the RFC that changes behavior.
 
-Replaces the Ruby-internal date representation with `Temporal.PlainDate`.
-`packages/corelib/src/date.ts` currently carries `#jd` and `#sg`
+**Makes `Temporal` the default return type.** Per the RFC's contract this story
+has two halves that must not be collapsed:
+
+1. **Default returns become Temporal.** Where a method answers a temporal value,
+   it answers `Temporal.PlainDate` / `PlainDateTime` / `ZonedDateTime` /
+   `Instant`. This is the RFC's headline behavioral commitment.
+2. **The Ruby-shaped `Date` class stays available as an option.** It is the gem's
+   own API surface, it is what the ported tests construct and exercise, and the
+   parse/format machinery lives on it. It is simply no longer what the default
+   entry points hand back. **Do not delete the class** — demote it.
+
+The RFC deliberately does not fix the opt-in mechanism (an options argument, a
+parallel entry point, or a conversion method are all viable). **Choosing it is
+part of this story**, now that the ported surface is visible. Whatever is chosen,
+record the reasoning at the call site, not in the PR body.
+
+What is genuinely deleted is the Ruby-_internal_ representation, which is not the
+same thing as the Ruby-shaped object. `packages/date/src/date.ts` currently
+carries `#jd` and `#sg`
 (`date.ts:2228-2233`) — the Julian day and the calendar-reform start — plus the
 `sg`-threaded calendar math at `date.ts:1715-2205` (`cCivilToJd`, `cJdToCivil`,
 `cFindFdoy`, `cValidCivilP`, ordinal/commercial/weeknum) and the `Date`/`DateTime`
@@ -49,7 +66,15 @@ cannot hold them."_
 
 ## Acceptance criteria
 
-- [ ] `#jd`/`#sg` removed; `Date` carries a `Temporal.PlainDate`.
+- [ ] **Default return type is `Temporal`** for every method answering a temporal
+      value — `PlainDate` / `PlainDateTime` / `ZonedDateTime` / `Instant` per the
+      RFC's mapping table.
+- [ ] **The Ruby-shaped `Date`/`DateTime` classes still exist and are still
+      reachable** via a documented opt-in. Demoted, not deleted.
+- [ ] The opt-in mechanism chosen and justified at the call site.
+- [ ] `_parse` still answers a fragment object, `strftime` a `string`, and
+      offsets a `number` — the three places Temporal has no analogue.
+- [ ] `#jd`/`#sg` removed; the class carries a `Temporal.PlainDate`.
 - [ ] The `sg`-threaded calendar math at `date.ts:1715-2205` deleted, with
       ordinal/commercial/weeknum re-derived from `PlainDate`.
 - [ ] `Date::ITALY`/`ENGLAND`/`JULIAN`/`GREGORIAN` kept as inert constants only if

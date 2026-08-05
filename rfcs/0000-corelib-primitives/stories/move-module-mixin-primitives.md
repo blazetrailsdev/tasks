@@ -2,7 +2,7 @@
 title: "move-module-mixin-primitives"
 status: draft
 updated: 2026-08-05
-rfc: "0088-corelib-package"
+rfc: "0000-corelib-primitives"
 cluster: null
 deps: ["corelib-package-scaffold"]
 deps-rfc: []

@@ -32,7 +32,7 @@ because that is where the need surfaced (exception message rendering, e.g.
 `` `Object must be a Date, DateTime or Time object. ${inspect(object)} given.` ``),
 not because they belong to i18n.
 
-This is the same anchoring problem the `0088-corelib-package` audit found for
+This is the same anchoring problem the `0088-date-gem-port` audit found for
 `Date`/`Time`/`Range`/`String#succ`: ported Ruby core with no vendored counterpart,
 so `api:compare` cannot resolve it and no gate can go green.
 
