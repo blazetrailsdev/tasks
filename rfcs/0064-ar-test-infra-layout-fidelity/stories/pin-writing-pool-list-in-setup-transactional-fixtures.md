@@ -4,7 +4,8 @@ status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - pool-disconnect-discard-must-not-clear-pinned-connection
 deps-rfc: []
 est-loc: null
 priority: null
