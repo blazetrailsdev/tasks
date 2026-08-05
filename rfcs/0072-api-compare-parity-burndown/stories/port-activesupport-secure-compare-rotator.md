@@ -1,6 +1,6 @@
 ---
 title: "port-activesupport-secure-compare-rotator"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6145
 claim: "2026-08-05T23:40:20Z"
 assignee: "mysql-full-version-belongs-on-mysql2-adapter"
 blocked-by: null
