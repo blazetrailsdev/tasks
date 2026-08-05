@@ -1,6 +1,6 @@
 ---
 title: "literal-regex-longtail-images"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 8
-pr: null
+pr: 6112
 claim: "2026-08-05T01:59:57Z"
 assignee: "i18n-date-rewrite-frags-and-new-by-frags-fast-path"
 blocked-by: null
