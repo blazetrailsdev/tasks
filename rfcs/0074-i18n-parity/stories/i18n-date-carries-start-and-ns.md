@@ -1,6 +1,6 @@
 ---
 title: "Carry ruby/date's start and ns state on Date, so Date#start and the new_start family can be ported"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6123
 claim: "2026-08-05T11:44:59Z"
 assignee: "i18n-date-carries-start-and-ns"
 blocked-by: null
