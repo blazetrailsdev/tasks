@@ -7,7 +7,7 @@ cluster: api-compare-tooling
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 10
+priority: null
 pr: 5313
 claim: "2026-07-25T19:18:54Z"
 assignee: "arity-skip-ruby-delegate-entries"

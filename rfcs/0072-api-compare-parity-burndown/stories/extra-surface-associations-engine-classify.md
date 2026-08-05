@@ -11,7 +11,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-priority: 35
+priority: null
 pr: 5341
 claim: "2026-07-26T03:10:57Z"
 assignee: "extra-surface-associations-engine-classify"

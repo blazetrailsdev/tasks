@@ -12,7 +12,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 150
-priority: 20
+priority: null
 pr: 5329
 claim: "2026-07-25T23:18:51Z"
 assignee: "arity-internal-metadata-connection-param"

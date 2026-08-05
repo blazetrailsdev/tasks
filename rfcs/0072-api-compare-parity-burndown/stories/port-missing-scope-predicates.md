@@ -7,7 +7,7 @@ cluster: missing-methods
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 10
+priority: null
 pr: 5315
 claim: "2026-07-25T19:34:52Z"
 assignee: "port-missing-scope-predicates"

@@ -12,7 +12,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 300
-priority: 25
+priority: null
 pr: 5331
 claim: "2026-07-25T23:26:51Z"
 assignee: "arity-misc-signature-gaps"

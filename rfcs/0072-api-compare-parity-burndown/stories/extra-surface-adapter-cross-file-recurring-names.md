@@ -11,7 +11,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 220
-priority: 40
+priority: null
 pr: 5345
 claim: "2026-07-26T11:34:53Z"
 assignee: "extra-surface-adapter-cross-file-recurring-names"

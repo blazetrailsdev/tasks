@@ -11,7 +11,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 150
-priority: 35
+priority: null
 pr: 5343
 claim: "2026-07-26T11:26:55Z"
 assignee: "extra-surface-schema-cache-and-pool-sync-api"

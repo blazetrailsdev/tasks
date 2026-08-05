@@ -11,7 +11,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 180
-priority: 40
+priority: null
 pr: 5342
 claim: "2026-07-26T03:18:52Z"
 assignee: "extra-surface-sti-and-schema-registry-names"

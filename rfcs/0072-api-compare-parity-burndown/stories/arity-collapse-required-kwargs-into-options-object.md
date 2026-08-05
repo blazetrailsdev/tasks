@@ -7,7 +7,7 @@ cluster: api-compare-tooling
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: 10
+priority: null
 pr: 5311
 claim: "2026-07-25T19:08:52Z"
 assignee: "arity-collapse-required-kwargs-into-options-object"

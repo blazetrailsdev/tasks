@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 15
+priority: null
 pr: 5337
 claim: "2026-07-26T02:30:53Z"
 assignee: "extra-surface-skip-reexported-class-entries"

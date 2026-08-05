@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 170
-priority: 40
+priority: null
 pr: 5364
 claim: "2026-07-26T17:18:56Z"
 assignee: "extra-surface-relocate-load-through"

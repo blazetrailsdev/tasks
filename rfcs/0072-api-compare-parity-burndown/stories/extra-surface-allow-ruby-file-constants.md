@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 20
+priority: null
 pr: 5338
 claim: "2026-07-26T02:38:53Z"
 assignee: "extra-surface-allow-ruby-file-constants"

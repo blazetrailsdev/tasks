@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 10
+priority: null
 pr: 5335
 claim: "2026-07-26T02:14:52Z"
 assignee: "extra-surface-honor-internal-jsdoc-on-file-functions"

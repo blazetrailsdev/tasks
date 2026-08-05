@@ -7,7 +7,7 @@ cluster: api-compare-tooling
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 12
+priority: null
 pr: 5316
 claim: "2026-07-25T19:50:52Z"
 assignee: "arity-exclude-mechanism"

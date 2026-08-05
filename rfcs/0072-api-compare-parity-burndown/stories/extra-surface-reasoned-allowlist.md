@@ -7,7 +7,7 @@ cluster: api-compare-tooling
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 12
+priority: null
 pr: 5317
 claim: "2026-07-25T19:58:51Z"
 assignee: "extra-surface-reasoned-allowlist"

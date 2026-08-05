@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 150
-priority: 40
+priority: null
 pr: 5373
 claim: "2026-07-26T22:38:57Z"
 assignee: "extra-surface-relocate-update-counter-caches"

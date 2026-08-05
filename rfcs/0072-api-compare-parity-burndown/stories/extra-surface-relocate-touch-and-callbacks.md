@@ -7,7 +7,7 @@ cluster: extra-surface
 deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 65
-priority: 40
+priority: null
 pr: 5365
 claim: "2026-07-26T17:26:56Z"
 assignee: "extra-surface-relocate-touch-and-callbacks"
