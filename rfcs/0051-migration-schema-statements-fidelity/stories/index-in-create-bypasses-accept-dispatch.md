@@ -1,7 +1,7 @@
 ---
 title: "index_in_create calls visitIndexDefinition directly instead of accept"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []

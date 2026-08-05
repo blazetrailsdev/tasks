@@ -1,7 +1,7 @@
 ---
 title: "abstract visitTableDefinition omits Rails' supports_indexes_in_create? branch"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []

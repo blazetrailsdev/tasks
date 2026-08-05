@@ -1,7 +1,7 @@
 ---
 title: "parse_iso/parse_sla/parse_dot drop the apostrophe arm and NUMBER"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
