@@ -4,7 +4,10 @@ status: ready
 updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
-deps: []
+deps:
+  - arel-tosql-statement-visitor-helper-calls
+  - arel-dialect-visitor-helper-calls
+  - arel-nodes-manager-residual-classification
 deps-rfc: []
 est-loc: 400
 priority: 6
