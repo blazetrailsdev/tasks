@@ -1,7 +1,7 @@
 ---
 title: "Reclaim orphaned isolated PG/MySQL databases when a worker dies before teardown"
-status: in-progress
-updated: 2026-08-04
+status: done
+updated: 2026-08-05
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
