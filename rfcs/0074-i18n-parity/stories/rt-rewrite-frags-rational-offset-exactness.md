@@ -1,6 +1,6 @@
 ---
 title: "rt_rewrite_frags takes a Rational offset's value instead of carrying it exactly"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
