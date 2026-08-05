@@ -1,6 +1,6 @@
 ---
 title: "Drop encryption's EncodingError import alias for Errors::Encoding"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6108
 claim: "2026-08-05T00:59:03Z"
 assignee: "i18n-date-valid-date-frags-weeknum-blocks"
 blocked-by: null
