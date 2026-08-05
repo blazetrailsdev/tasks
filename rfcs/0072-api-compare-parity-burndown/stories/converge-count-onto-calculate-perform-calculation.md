@@ -1,7 +1,7 @@
 ---
 title: "converge-count-onto-calculate-perform-calculation"
-status: blocked
-updated: 2026-08-02
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-02T18:25:28Z"
-assignee: "converge-count-onto-calculate-perform-calculation"
-blocked-by: "Blocked on #5897 (converge-calculation-and-batch-dispatch-shim-bodies), which is still OPEN. This story was split out of it and edits the same regions: performCount in packages/activerecord/src/relation/calculations.ts, Relation#calculate in relation.ts, and the same call-mismatches-wide-exclude/activerecord/{relation.json,relation/calculations.json} ratchet files. Starting now would either stack on #5897 or conflict wholesale. Re-ready once #5897 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
