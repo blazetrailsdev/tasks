@@ -1,6 +1,6 @@
 ---
 title: "Drop the per-migration internalMetadata environment write from _runMigration"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 80
-pr: null
+pr: 6122
 claim: "2026-08-05T09:45:03Z"
 assignee: "retire-module-level-find-target-engine-exports"
 blocked-by: null
