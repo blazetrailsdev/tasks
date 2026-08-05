@@ -1,6 +1,6 @@
 ---
 title: "api:extra red on main: stale @noRailsEquivalent on encryption/config.ts getSharedConfig"
-status: ready
+status: draft
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
