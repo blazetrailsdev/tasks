@@ -1,7 +1,7 @@
 ---
 title: "api-compare-orphan-reopened-file-buckets"
-status: blocked
-updated: 2026-08-03
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-08-03T02:55:45Z"
-assignee: "api-compare-orphan-reopened-file-buckets"
-blocked-by: "Depends on inflector-methods-rb-unmapped-in-file-manifest (PR #5952, open/unmerged). That PR introduces RUBY_FILE_TS_OVERRIDES in scripts/api-compare/conventions.ts and splitOverriddenFileBuckets in compare.ts — neither exists on origin/main. This story's entire deliverable is adding ~73 entries to that table, so it cannot be done from main without either duplicating #5952's machinery (guaranteed conflict in the same two files) or stacking on its branch (forbidden). Unblock once #5952 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
