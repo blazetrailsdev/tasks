@@ -1,6 +1,6 @@
 ---
 title: "Date#to_s renders a pre-1000 year unpadded; date_strftime's %Y pads to four digits"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6136
 claim: "2026-08-05T16:53:06Z"
 assignee: "date-to-s-does-not-zero-pad-the-year"
 blocked-by: null
