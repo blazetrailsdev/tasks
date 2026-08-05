@@ -1,6 +1,6 @@
 ---
 title: "blocks-conditionals-rescue-images"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0086-prism-codegen-productionization"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 9
-pr: null
+pr: 6113
 claim: "2026-08-05T02:15:00Z"
 assignee: "converge-mysql-version-string-single-raise-site"
 blocked-by: null
