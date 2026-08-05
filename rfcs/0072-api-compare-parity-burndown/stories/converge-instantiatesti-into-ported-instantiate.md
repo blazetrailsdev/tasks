@@ -57,7 +57,8 @@ resolved class would therefore not terminate, which is precisely why
   resolves, so the guard is correct for `storeFullStiClass` namespaced models.
 - Collapse `instantiateSti` + `directInstantiate` into the single hydration path;
   delete `instantiateSti` and drop it from `index.ts`.
-- Remove the corresponding `extra-surface-allow.json` entry.
+- Leave no `@noRailsEquivalent` tag behind (`scripts/api-compare/extra-surface.ts:44-47`) — the name is deleted,
+  not tagged.
 - Add a regression test that fails on baseline for the namespaced
   `storeFullStiClass` case if the identity guard is what fixes it (see
   inheritance-namespaced.test.ts and the `ClothingItem::Used` fixtures).

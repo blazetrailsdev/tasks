@@ -45,7 +45,7 @@ as an own property — the substitution is behavior-preserving.
 
 `enableSti` has 93 references, overwhelmingly in tests (has-many-associations.test.ts
 18, eager.test.ts 10, test-helpers/models/company.ts 3, ...). It is currently
-carried in `extra-surface-allow.json` rather than converged. Sized as its own
+carried as extra surface rather than converged. Sized as its own
 story because the mechanical migration alone is ~190 LOC.
 
 ## Acceptance criteria
@@ -53,7 +53,8 @@ story because the mechanical migration alone is ~190 LOC.
 - Replace every `enableSti(X)` / `enableSti(X, { column })` call with
   `X.inheritanceColumn = ...`, including test-helper models.
 - Delete `enableSti` and drop it from `index.ts`'s export list.
-- Remove the corresponding `extra-surface-allow.json` entry.
+- Leave no `@noRailsEquivalent` tag behind (`scripts/api-compare/extra-surface.ts:44-47`) — the name is deleted,
+  not tagged.
 - Do NOT rename tests (CLAUDE.md).
 - api:compare and test:compare deltas non-negative; `pnpm api:extra --package
 activerecord` novel count for inheritance.ts stays 0.

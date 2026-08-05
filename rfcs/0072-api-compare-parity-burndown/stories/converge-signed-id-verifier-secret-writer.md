@@ -50,5 +50,6 @@ needs to go, along with its ~6 call sites in `signed-id.test.ts`.
   process-global storage is also converged).
 - Verifier-cache invalidation preserved — the existing `signed-id.test.ts` cases
   that swap secrets between tests must stay green.
-- No new `extra-surface-allow.json` entry and no `@noRailsEquivalent` tag.
+- No `@noRailsEquivalent` tag (`scripts/api-compare/extra-surface.ts:44-47`) — the tag is for
+  irreducible surface only; convergeable surface stays counted (#5342).
 - `activerecord` novel extra-surface count decreases by at least 1.

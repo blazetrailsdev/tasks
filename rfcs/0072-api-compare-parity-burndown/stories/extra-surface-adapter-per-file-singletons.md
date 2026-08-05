@@ -64,8 +64,9 @@ Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json
 
 - One recorded decision per name above: delete (dead), rename toward the Rails
   name, make Rails-private (`_` prefix) or TS `private`/`protected`, or add a
-  `scripts/api-compare/extra-surface-allow.json` entry with a written reason
-  anchored to a vendored Rails `file:line`.
+  `@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`) anchored to a vendored
+  Rails `file:line`. Note only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342).
 - Deviation justifications live at the declaration site, not only in the PR body.
 - Novel counts for the three files go to 0; `pnpm api:extra` reports no STALE
   allowlist entries.

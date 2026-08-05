@@ -77,8 +77,10 @@ is already slated for removal, in which case the answer is (a) remove, not
 - Each remaining name classified as: removed (dead, or scaffolding for a
   deviation being retired), `SKIP_GROUPS` entry in
   `scripts/api-compare/conventions.ts` with a reason (Ruby lifecycle-hook /
-  constant-lookup substitutes), `@internal`, or
-  `extra-surface-allow.json` with a written reason.
+  constant-lookup substitutes), or a `@noRailsEquivalent PERMANENT <reason>` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`). `@internal` does NOT suppress an extra —
+  `extra-surface.ts` never filters on it. Note only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342).
 - Names appearing on both `inheritance.ts`/`model-schema.ts` and `base.ts`
   are resolved once at the declaration, not twice.
 - STI and schema tests for the touched files pass

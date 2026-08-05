@@ -74,9 +74,11 @@ evaporate. Do not carry the `associations.ts` assumption over.
   Rails reference carries a `file:line`. (This is what took #5341 from
   reasoned-but-unverified to verified; two of its citations were wrong on the
   first pass and only the grep caught them.)
-- (b) verdicts applied in this PR (`@internal` tag, or an entry in
-  `scripts/api-compare/extra-surface-allow.json` when the name is public by
-  intent and `@internal` would be a lie).
+- (b) verdicts applied in this PR as a `@noRailsEquivalent PERMANENT <reason>` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`). `@internal` does NOT suppress an extra —
+  `extra-surface.ts` never filters on it — and the tag is the ONLY such
+  source. Note only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342).
 - (c) verdicts registered as follow-up stories carrying name lists and
   `base.ts:<line>` refs. Do NOT open sibling PRs.
 - Record `base.ts` novel before/after in the PR body.

@@ -81,9 +81,12 @@ reduced list (abstract-mysql-adapter should already be down from 30 to ~13).
 ## Acceptance criteria
 
 - One recorded decision per recurring name above, applied consistently across
-  every file that declares it: rename toward the Rails name, mark `@internal`,
-  or add a `scripts/api-compare/extra-surface-allow.json` entry with a written
-  reason. No name resolved two different ways on two adapters.
+  every file that declares it: rename toward the Rails name, make it
+  non-public, or add a `@noRailsEquivalent PERMANENT <reason>` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`) — `@internal` does NOT suppress an extra.
+  Note only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342). No name resolved two different
+  ways on two adapters.
 - Deviation justifications live at the declaration site, not only in the PR
   body — `execute`/`executeMutation` in particular needs the reason stated
   once at the abstract-adapter declaration and referenced from the concrete

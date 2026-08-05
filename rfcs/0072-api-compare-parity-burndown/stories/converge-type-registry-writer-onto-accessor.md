@@ -44,7 +44,8 @@ has no Rails counterpart at all; it may want folding into the same decision.
   exported class module or singleton holding registry state, with module
   functions delegating), removing `setRegistry`; or the deviation is accepted
   with an explicit disposition recorded the way other permanent deviations are.
-- No new `extra-surface-allow.json` entry used as a substitute for deciding.
+- No `@noRailsEquivalent` tag (`scripts/api-compare/extra-surface.ts:44-47`) used as a
+  substitute for deciding; convergeable surface stays counted (#5342).
 - Only three call sites assign the registry today (`type.test.ts`,
   `type.trails.test.ts`), so churn is small — check before sizing.
 - `pnpm api:compare` matched-method count does not regress.

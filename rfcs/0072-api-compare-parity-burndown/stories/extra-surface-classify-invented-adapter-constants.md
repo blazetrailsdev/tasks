@@ -25,8 +25,8 @@ novel 776 -> 741). The spike story
 SCREAMING_CASE novel names that are **not** in Rails at all — real trails
 inventions — and #5338 deliberately left them alone, since feeding the allow-set
 cannot and should not absolve them. They are still novel after the merge and
-need a per-name verdict: relocate, delete, or allowlist-with-reason via
-`scripts/api-compare/extra-surface-allow.json`.
+need a per-name verdict: relocate, delete, or tag with a reason via
+`@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`).
 
 The set (verified still novel at #5338):
 
@@ -56,7 +56,9 @@ Rails declares it (it was not in the vendored
   (`file:line`) or an explicit "not in Rails" finding.
 - Genuine ports are made to score allowed (relocate to the Rails-layout file,
   or fix the declaration shape); genuine inventions are deleted if unused, or
-  added to `extra-surface-allow.json` with a reason.
+  tagged `@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`) —
+  only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342).
 - No name is left silently novel without a recorded decision.
 - Record the activerecord novel delta. Baseline after #5338: 741 novel /
   2085 moved / 2826 total.

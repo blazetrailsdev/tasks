@@ -38,6 +38,7 @@ in that PR; this story is the leftover.
   (`discriminateClassForRecord` + the shared `instantiate`), or is made
   non-public surface (drop the `index.ts` re-export and tag the declaration
   `@internal`) if it is genuinely an internal construction helper.
-- No new `extra-surface-allow.json` entry and no `@noRailsEquivalent` tag.
+- No `@noRailsEquivalent` tag (`scripts/api-compare/extra-surface.ts:44-47`) — the tag is for
+  irreducible surface only; convergeable surface stays counted (#5342).
 - `activerecord` novel extra-surface count decreases by at least 1.
 - `pnpm api:compare` matched-method count does not regress.

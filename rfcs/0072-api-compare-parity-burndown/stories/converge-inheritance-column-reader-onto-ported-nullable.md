@@ -36,7 +36,7 @@ to recover the information the reader threw away. Rails has no such predicate �
 callers test `inheritance_column` for nil directly.
 
 `getInheritanceColumn` has 27 references (11 inside inheritance.ts); it is
-currently carried in `extra-surface-allow.json` rather than converged.
+currently carried as extra surface rather than converged.
 
 ## Acceptance criteria
 
@@ -48,7 +48,8 @@ currently carried in `extra-surface-allow.json` rather than converged.
 - Delete `getInheritanceColumn`, and delete `inheritanceColumnDisabled` if the
   nullable reader makes it redundant (that is the expected outcome — it exists
   only to undo the flattening).
-- Remove the corresponding `extra-surface-allow.json` entries.
+- Leave no `@noRailsEquivalent` tags behind (`scripts/api-compare/extra-surface.ts:44-47`) — the names are
+  deleted, not tagged.
 - api:compare and test:compare deltas non-negative; `pnpm api:extra --package
 activerecord` novel count for inheritance.ts stays 0.
 - STI suites pass: inheritance.test.ts, inheritance-namespaced.test.ts,

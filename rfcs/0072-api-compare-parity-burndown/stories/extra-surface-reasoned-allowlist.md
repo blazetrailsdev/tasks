@@ -31,6 +31,15 @@ stale-entry enforcement in `lint-call-mismatches.ts`. Mirror it.
 
 ## Acceptance criteria
 
+> **Superseded.** This story shipped
+> `scripts/api-compare/extra-surface-allow.json`; RFC 0080 has since retired
+> that file. The `@noRailsEquivalent PERMANENT <reason>` JSDoc tag is now the
+> ONLY source of reasoned extra-surface suppression
+> (`scripts/api-compare/extra-surface.ts:44-47`) — and `@internal` does not
+> suppress an extra at all. Per #5342, only irreducible surface gets a tag;
+> convergeable surface stays counted and gets a story. The criteria below are
+> kept as the record of what was built.
+
 - A reasoned allowlist file (e.g.
   `scripts/api-compare/extra-surface-allow.json`) keyed by
   `package + tsFile + name`, each entry requiring a non-empty `reason`.

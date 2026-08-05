@@ -73,9 +73,8 @@ Sequencing: #5345 touches all four of these files, so this must start from
   `mysql/quoting.ts` and any other adapter surface; all 115 call sites route to
   `quoteColumnName`.
 - The `@internal` file function in `abstract/quoting.ts` is untouched.
-- The four `quoteIdentifier` entries are DELETED from
-  `scripts/api-compare/extra-surface-allow.json` (the allowlist only shrinks —
-  `pnpm api:extra` fails on stale entries, so this is self-enforcing).
+- The four `quoteIdentifier` names carry no `@noRailsEquivalent` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`) — they are converged, not tagged.
 - Any site that relied on the abstract ANSI default is identified and fixed
   deliberately; note each in the PR body.
 - `pnpm typecheck`, `pnpm lint` clean; scoped `vitest run` on the touched

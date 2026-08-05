@@ -62,8 +62,8 @@ PR 5345 merges. Do not stack.
   appearing in `assert_queries_count`-style assertions or the log.
 - The query-cache bypass behaviour is preserved and proven, or the story is
   stopped and reported with evidence if `internalExecQuery` cannot provide it.
-- The `schemaQuery` entry is DELETED from
-  `scripts/api-compare/extra-surface-allow.json`.
+- `schemaQuery` carries no `@noRailsEquivalent` tag (`scripts/api-compare/extra-surface.ts:44-47`) — it is
+  converged, not tagged.
 - `pnpm typecheck`, `pnpm lint` clean; scoped `vitest run` on the touched files
   passes, including `query-cache-ddl-dirties.trails.test.ts` which pins the
   DDL/cache interaction. MySQL/PG suites need a server; if unavailable locally,

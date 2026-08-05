@@ -55,11 +55,12 @@ pool), so this is a behavior-preserving refactor, not a deletion.
   (Rails' raises `ConnectionNotEstablished` too, so the divergence may be
   in _when_ trails calls it, not in NullPool itself).
 - If convergeable: retire `poolAbsent` / `realPool`, move the
-  null-pool handling behind the pool protocol, and drop both
-  `extra-surface-allow.json` entries.
-- If not convergeable, record why at the declarations (replacing the
-  current reasons) and leave the allowlist entries — a negative result is
-  a valid outcome here, as long as the reason is the real one.
+  null-pool handling behind the pool protocol, leaving no
+  `@noRailsEquivalent` tag on either name (`scripts/api-compare/extra-surface.ts:44-47`).
+- If not convergeable, record why at the declarations as a
+  `@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`) — a negative result is
+  a valid outcome here, as long as the reason is the real one and the
+  surface really is irreducible (#5342).
 - `pnpm api:extra --package activerecord` must not regress
   `connection-adapters/abstract/connection-pool.ts` above 0 novel.
 - Existing tests pass; no test renames.

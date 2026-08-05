@@ -65,5 +65,7 @@ the existing `*Action` functions, matching Rails' `alias_method`.
   covering prepend ordering, with names matching Rails verbatim.
 - If `ruby-extractor-records-define-method-names` has landed, the six names
   resolve against `AbstractController::Callbacks::ClassMethods` and need no
-  `extra-surface-allow.json` entries; if it has not, add entries with the same
-  metaprogramming rationale as the existing twelve.
+  extra-surface tags; if it has not, add `@noRailsEquivalent PERMANENT <reason>` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`) with the same metaprogramming rationale as the
+  existing twelve. Note only irreducible surface gets a tag; convergeable surface stays
+  counted and gets a story (#5342).

@@ -27,9 +27,9 @@ Trails models the two as **peer classes**
 (`packages/globalid/src/signed-global-id.ts`,
 `packages/globalid/src/global-id.ts`), so SignedGlobalID re-declares `create`,
 `uri`, `modelClass`, `modelId`, `modelName` and `params`. PR for story
-`extra-surface-globalid-reconcile` allowlisted those six names in
-`scripts/api-compare/extra-surface-allow.json` with that reason; this story
-retires the allowlist entries by making the inheritance real.
+`extra-surface-globalid-reconcile` registered those six names as reasoned
+extra surface with that reason; this story retires those entries by making the
+inheritance real.
 
 Known obstacles found while reconciling:
 
@@ -53,8 +53,8 @@ Known obstacles found while reconciling:
 
 - `SignedGlobalID extends GlobalID`; the six re-declared names are gone or are
   genuine Rails overrides.
-- The six `signed-global-id.ts` entries are removed from
-  `scripts/api-compare/extra-surface-allow.json` (the allowlist only shrinks).
+- The six `signed-global-id.ts` names carry no `@noRailsEquivalent` tag
+  (`scripts/api-compare/extra-surface.ts:44-47`) — they are converged, not tagged.
 - `pnpm api:extra --package globalid` still reports 0 unreconciled entries and
   `pnpm api:compare` globalid parity stays 100%.
 - `packages/globalid/src/*.test.ts` pass; test names unchanged.

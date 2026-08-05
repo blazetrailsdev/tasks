@@ -68,8 +68,9 @@ relying on it.
   - renamed/merged toward the Rails name where a Rails counterpart exists
     (check `raiseNotFoundAll` / `raiseNotFoundSingle` against
     `raise_record_not_found_exception!` first);
-  - `scripts/api-compare/extra-surface-allow.json` entry with a written
-    reason only where neither applies.
+  - `@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`) only where
+    neither applies, and only for irreducible surface; convergeable surface
+    stays counted and gets a story (#5342).
 - No behavior change: `pnpm vitest run packages/activerecord/src/relation/finder-methods.test.ts`
   and any `*.trails.test.ts` sibling pass unchanged.
 - No test renames (test names match Rails verbatim).
