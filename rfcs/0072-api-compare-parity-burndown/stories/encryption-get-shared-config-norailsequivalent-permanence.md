@@ -1,6 +1,6 @@
 ---
 title: "api:extra red — encryption/config.ts getSharedConfig tag states no permanence claim"
-status: done
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6135
+pr: 6139
 claim: "2026-08-05T19:53:07Z"
 assignee: "date-package-scaffold"
 blocked-by: null
