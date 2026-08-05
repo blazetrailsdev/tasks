@@ -43,5 +43,11 @@ so there is a real symbol to match; the resolver just cannot reach it.
       `codegen-nested-class-declarations` reference in its JSDoc with it.
 - [ ] `relation.js.snap` emits `StrictLoadingScope`, `ExplainProxy`,
       `WhereChain` and `ColumnAliasTracker`.
+- [ ] The dangling reference at `relation.js.snap:550`
+      (`scope = this.strictLoadingValue ? StrictLoadingScope : null`, from
+      `relation.rb:1324`) resolves to the emitted declaration. It predates PR
+      #6111 — `git show origin/main:scripts/prism-codegen/__snapshots__/relation.js.snap`
+      has the identical line with no declaration — and closing it is what makes
+      the nested-class emission worth having.
 - [ ] `pnpm codegen:score --guard` stays green without a new baseline row.
 - [ ] 0 parse errors invariant holds.
