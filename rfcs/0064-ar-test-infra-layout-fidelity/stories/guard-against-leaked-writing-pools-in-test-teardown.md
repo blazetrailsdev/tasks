@@ -1,6 +1,6 @@
 ---
 title: "Audit and guard test-tree connection pools leaked into the writing list"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6126
 claim: "2026-08-05T12:15:04Z"
 assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null
