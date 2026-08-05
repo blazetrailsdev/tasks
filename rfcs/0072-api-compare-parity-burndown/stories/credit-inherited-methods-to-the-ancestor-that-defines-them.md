@@ -1,6 +1,6 @@
 ---
 title: "credit inherited methods to the ancestor's own file (last data-layer gap)"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
