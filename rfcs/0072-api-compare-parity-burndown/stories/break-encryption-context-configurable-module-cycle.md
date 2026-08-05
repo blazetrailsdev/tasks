@@ -1,6 +1,6 @@
 ---
 title: "Break the Context/Configurable ESM cycle that forces three eval-time shims"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
