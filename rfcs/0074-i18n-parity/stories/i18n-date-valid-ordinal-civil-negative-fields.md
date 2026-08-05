@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_ordinal_p's and c_valid_civil_p's negative-field normalizations"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null

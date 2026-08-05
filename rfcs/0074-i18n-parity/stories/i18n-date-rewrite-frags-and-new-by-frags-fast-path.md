@@ -1,6 +1,6 @@
 ---
 title: "Carry rt_rewrite_frags and d_new_by_frags' civil fast path"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
