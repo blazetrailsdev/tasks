@@ -1,6 +1,6 @@
 ---
 title: "Converge removeCheckConstraint's lookup options and if_exists probe"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: null
+pr: 6118
 claim: "2026-08-05T03:29:59Z"
 assignee: "port-respond-to-missing-finder-to-dynamic-matchers"
 blocked-by: null
