@@ -1,6 +1,6 @@
 ---
 title: "scripts: one typed parseForESLint accessor instead of two casts"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T11:44:59Z"
+assignee: "i18n-date-carries-start-and-ns"
 blocked-by: null
 closed-reason: null
 ---

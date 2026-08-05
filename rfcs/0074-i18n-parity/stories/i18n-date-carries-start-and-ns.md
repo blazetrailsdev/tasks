@@ -1,6 +1,6 @@
 ---
 title: "Carry ruby/date's start and ns state on Date, so Date#start and the new_start family can be ported"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T11:44:59Z"
+assignee: "i18n-date-carries-start-and-ns"
 blocked-by: null
 closed-reason: null
 ---
@@ -64,9 +64,9 @@ went `Temporal`-first, and converging the state is what removes it.
 - [ ] The `c_*` builders answer `ns` as ruby/date does, and the `c_valid_*_p`
       family carries it out.
 - [ ] `Date` carries `sg`, so `Date.parse("1582-10-10", true,
-  Date::GREGORIAN).start` is `Date::GREGORIAN`, not `Date::ITALY`.
+Date::GREGORIAN).start` is `Date::GREGORIAN`, not `Date::ITALY`.
 - [ ] `Date#start` / `#julian?` / `#gregorian?` / `#new_start` / `#italy` /
       `#england` / `#julian` / `#gregorian` are ported.
 - [ ] `Date.jd(2299160).to_s` and `Date.parse("1500-02-29", true,
-  Date::JULIAN)` agree with ruby 3.3.11.
+Date::JULIAN)` agree with ruby 3.3.11.
 - [ ] The `*ns` deviation note at `cCivilToJd`'s call site is deleted.
