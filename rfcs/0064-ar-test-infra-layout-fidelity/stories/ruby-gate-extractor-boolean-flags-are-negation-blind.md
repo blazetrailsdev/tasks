@@ -1,6 +1,6 @@
 ---
 title: "Ruby gate extractor's has_or/has_and are textual, blind to negation parity"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
