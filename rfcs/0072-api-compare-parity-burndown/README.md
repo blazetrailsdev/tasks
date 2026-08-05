@@ -163,3 +163,39 @@ delete the invention, or justify an `@internal` at the declaration site. Only
 names that are faithful-but-unmappable (e.g. genuine Ruby file constants or
 nested class names present in the matched Rails file) belong in the allow-set;
 any other allowlisted entry must cite the filed fidelity story next to it.
+
+## A `@noRailsEquivalent` tag is file-scoped
+
+The tag allows a name **in the file that declares it**, not the name globally:
+`allowKeyOf` (`scripts/api-compare/extra-surface.ts:403`) keys every tagged
+entry as `package tsFile name`, and the doc above it states the keying is by the
+CONTAINER's file, matching how `collectTsFileNames` gathers the names it
+compares.
+
+That matters for a name re-declared as a mixin echo
+(`declare static X: typeof Module.X` in `packages/activerecord/src/base.ts`).
+For a **rename** the echo takes care of itself — `tsc` stops compiling when
+`Module.X` is renamed, so the `base.ts` edit is forced. For a **tag** it does
+not: tagging the home declaration leaves the `base.ts` echo still reporting as
+novel, and the home-file story closes believing the name is done. A tag
+therefore has to be written in **every** file that declares the name; the home
+file's story is not sufficient on its own.
+
+The six echoes standing on `base.ts` today (from PR #5919), with the home file
+an agent claiming either end must also check:
+
+| base.ts                        | home file                                                              |
+| ------------------------------ | ---------------------------------------------------------------------- |
+| `adapterClassSync` :1565       | `connection-handling.ts`, `database-configurations/database-config.ts` |
+| `validatesUniqueness` :3408    | `validations.ts`, `validations/uniqueness.ts`                          |
+| `withCte` :2868                | `querying.ts`                                                          |
+| `attributeNamesList` :4190     | `attribute-methods.ts`                                                 |
+| `isEqual` :4457                | `core.ts`                                                              |
+| `loadBelongsTo` / `loadHasOne` | `associations/instance-methods.ts`                                     |
+
+`isEqual` and `loadBelongsTo` / `loadHasOne` are the mirror image: they were
+tagged on `base.ts` in #5919, so their **home** files still need the tag.
+
+If the cleaner fix turns out to be teaching `extra-surface.ts` to follow
+`typeof Module.X` echoes back to their home declaration, that is its own tooling
+story — not a widening of any burndown story.
