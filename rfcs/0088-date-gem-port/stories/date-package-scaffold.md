@@ -1,13 +1,13 @@
 ---
 title: "date-package-scaffold"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 6139
 claim: "2026-08-05T19:53:07Z"
 assignee: "date-package-scaffold"
 blocked-by: null
