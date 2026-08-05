@@ -1,6 +1,6 @@
 ---
 title: "datetime-new-start-preserves-the-receiver"
-status: blocked
+status: ready
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-05T12:15:04Z"
-assignee: "datetime-new-start-preserves-the-receiver"
-blocked-by: "Blocked on unmerged PR #6123, which is what lands Date#new_start/italy/england/julian/gregorian and Date's start/jd state in packages/i18n/src/date.ts. main has no newStart to converge; DateTime cannot take a start argument before that PR merges. Re-ready once #6123 is merged."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
