@@ -1,6 +1,6 @@
 ---
 title: "Derive applyTokenRenames' pattern from TOKEN_RENAMES so entries can't be dead code"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6143
 claim: "2026-08-05T20:53:11Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
