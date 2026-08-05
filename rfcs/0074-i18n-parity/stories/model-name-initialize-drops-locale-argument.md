@@ -1,6 +1,6 @@
 ---
 title: "ModelName#initialize drops Rails' locale argument and its locale-aware pluralize"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T01:59:57Z"
+assignee: "i18n-date-rewrite-frags-and-new-by-frags-fast-path"
 blocked-by: null
 closed-reason: null
 ---

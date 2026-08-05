@@ -1,6 +1,6 @@
 ---
 title: "Carry rt_rewrite_frags and d_new_by_frags' civil fast path"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T01:59:57Z"
+assignee: "i18n-date-rewrite-frags-and-new-by-frags-fast-path"
 blocked-by: null
 closed-reason: null
 ---
