@@ -15,7 +15,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# 24 port divergences unmasked by the codegen operator-longtail images
+# 23 port divergences unmasked by the codegen operator-longtail images
 
 ## Context
 
@@ -24,7 +24,9 @@ the operator longtail — `|=` / `&=` via `union` / `intersection`, `<=>` via
 `cmp`, multi-arg index via `idxGet` / `idxSet`. Defs that previously _declined_
 on those operators were tainted and therefore excluded from the scorer's
 denominator; they now generate clean images and get scored, and 24 of them come
-out `divergent`/`missing` against the port.
+out `divergent`/`missing` against the port. One (`findNthWithLimit`) was a
+spelling artifact of the `idxGet` image and is signed off with a reason in
+`convergence-signoff.json`; the other **23** are this burndown.
 
 **None of these are new port divergences** — none of the ported methods changed
 in #6105. They are pre-existing trails-vs-Rails divergences the decline was
