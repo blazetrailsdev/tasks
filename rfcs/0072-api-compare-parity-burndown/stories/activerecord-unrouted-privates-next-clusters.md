@@ -1,6 +1,6 @@
 ---
 title: "Work the remaining ~90 unrouted-private inventory entries, one cluster per PR"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T15:21:04Z"
+assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null
 closed-reason: null
 ---

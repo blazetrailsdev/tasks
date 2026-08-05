@@ -1,6 +1,6 @@
 ---
 title: "vendor-ruby-spec-subset"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0088-corelib-package"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T15:21:04Z"
+assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null
 closed-reason: null
 ---
