@@ -1,6 +1,6 @@
 ---
 title: "Carry c_valid_ordinal_p's and c_valid_civil_p's negative-field normalizations"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6112
 claim: "2026-08-05T01:59:57Z"
 assignee: "i18n-date-rewrite-frags-and-new-by-frags-fast-path"
 blocked-by: null
