@@ -7,7 +7,6 @@ cluster: null
 deps: ["date-api-compare-enrollment", "date-test-compare-enrollment"]
 deps-rfc: []
 est-loc: 450
-priority: 6
 pr: null
 claim: null
 assignee: null
