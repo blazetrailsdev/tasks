@@ -1,6 +1,6 @@
 ---
 title: "EncryptedAttributeType's previous-types generation memo is a trails invention"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T03:00:02Z"
+assignee: "fold-narrow-call-ratchet-into-wide"
 blocked-by: null
 closed-reason: null
 ---
