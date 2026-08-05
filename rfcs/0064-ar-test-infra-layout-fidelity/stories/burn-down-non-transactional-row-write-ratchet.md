@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 44-file non-transactional row-write ratchet (epic)"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6124
 claim: "2026-08-05T11:59:55Z"
 assignee: "burn-down-non-transactional-row-write-ratchet"
 blocked-by: null
