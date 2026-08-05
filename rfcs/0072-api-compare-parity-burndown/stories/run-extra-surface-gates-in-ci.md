@@ -1,7 +1,7 @@
 ---
 title: "Run the extra-surface tag gates in CI — stale/unclassified/file-tag gates are currently local-only"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
