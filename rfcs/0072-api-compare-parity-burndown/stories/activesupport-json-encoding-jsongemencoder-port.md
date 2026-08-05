@@ -1,6 +1,6 @@
 ---
 title: "Port json/encoding.rb's JSONGemEncoder and remaining Encoding accessors"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
