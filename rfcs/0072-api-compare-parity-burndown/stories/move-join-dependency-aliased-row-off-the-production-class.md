@@ -1,6 +1,6 @@
 ---
 title: "Move JoinDependency#aliasedRow off the production class (test-support surface with no Rails counterpart)"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null

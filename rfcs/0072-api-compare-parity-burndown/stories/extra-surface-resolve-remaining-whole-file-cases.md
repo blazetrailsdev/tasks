@@ -1,6 +1,6 @@
 ---
 title: "Resolve the three remaining whole-file no-counterpart cases (libsql, temporal-wire, sql-datetime)"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
