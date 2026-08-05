@@ -1,6 +1,6 @@
 ---
 title: "Hoist the disable_joins branch into HasManyThroughAssociation#findTarget"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
