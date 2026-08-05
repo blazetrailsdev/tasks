@@ -1,13 +1,13 @@
 ---
 title: "retire-template-handler-registry-back-compat-object"
 status: ready
-updated: 2026-08-04
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null
