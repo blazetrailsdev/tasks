@@ -5,7 +5,7 @@ updated: 2026-08-05
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
-deps-rfc: ["0000-corelib-primitives"]
+deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
@@ -35,13 +35,21 @@ authoritative — and none _can_ be today, because the base shape
 (`range-ext.ts`) is unanchored Ruby core with no Rails or gem counterpart to
 compare against (tagged `@noRailsEquivalent PERMANENT`, `range-ext.ts:19-22`).
 
-**Blocked on `move-range-core-and-succ-to-corelib`** (RFC
-`0000-corelib-primitives`), which moves the base `Range` into `packages/corelib`
-anchored to `ruby/spec`'s `core/range/*`. Once there is one authoritative,
-measurable `Range`, the PG and time-zone shapes can converge onto it. Attempting
-this before that lands would just pick one of three unanchored shapes arbitrarily.
+**Sequencing.** RFC `0000-corelib-primitives` would have moved the base `Range`
+into `packages/corelib` anchored to `ruby/spec`'s `core/range/*`, giving one
+authoritative, measurable shape for the other two to converge onto. That RFC is
+**postponed**, so this story is no longer gated on it — but the underlying
+difficulty stands: with `range-ext.ts` still unanchored, unifying now means
+picking one of three unmeasured shapes on judgement rather than against a spec.
 
-Surfaced by the corelib audit; filed so the `file:line` set is not re-derived.
+Two viable readings, and the claiming agent should pick deliberately rather than
+drift into one: (a) converge `oid/range.ts` and `RangeLike` onto `range-ext.ts`'s
+triple now, accepting that the target is unanchored, and treat re-anchoring as
+later work; or (b) leave it and reactivate `0000-corelib-primitives` first. (a)
+is defensible — three divergent shapes is worse than one unanchored shape — but
+it is a call, not a default.
+
+Surfaced by the RFC 0088 audit; filed so the `file:line` set is not re-derived.
 
 ## Acceptance criteria
 

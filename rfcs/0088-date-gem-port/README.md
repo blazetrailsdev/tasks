@@ -14,7 +14,6 @@ packages:
 clusters: []
 related:
   - "0074-i18n-parity"
-  - "0000-corelib-primitives"
 priority: 1
 ---
 
@@ -28,7 +27,8 @@ like the other gem ports trails already carries.
 Its sibling RFC `0000-corelib-primitives` takes the genuinely-core surface
 (`Range`, `String#succ`, the module-mixin primitives), which is a different thing
 with a different anchoring contract. **The split is the point** — see
-_Why this is not corelib_ below.
+_Why this is not corelib_ below. **That RFC is `postponed`**: this one is the
+active effort, and the primitives are scheduled after it rather than abandoned.
 
 ## Why
 
@@ -293,7 +293,8 @@ faith.**
 ## Out of scope — filed separately
 
 - `Range`, `String#succ`, and the module-mixin primitives → RFC
-  `0000-corelib-primitives`.
+  `0000-corelib-primitives`, **postponed** so this port stays focused. Its 565
+  lines remain unanchored in the meantime; that is a deferral, not a ratification.
 - The `instanceof Date` residue in actionpack's HTTP cache layer → RFC 0023,
   `actionpack-http-cache-layer-uses-js-date`. **Not** the AR quoting sites, which
   are the convention being enforced.

@@ -1,7 +1,7 @@
 ---
 rfc: "0000-corelib-primitives"
 title: "corelib: a home for the Ruby interpreter primitives trails emulates"
-status: active
+status: postponed
 created: 2026-08-05
 updated: 2026-08-05
 owner: "@your-handle"
@@ -13,7 +13,7 @@ packages:
 clusters: []
 related:
   - "0088-date-gem-port"
-priority: 2
+priority: null
 ---
 
 # corelib: a home for the Ruby interpreter primitives trails emulates
@@ -26,6 +26,33 @@ package and a behavioral anchor.
 This is the sibling of RFC `0088-date-gem-port`. **The two are deliberately
 separate packages** because they have different anchoring contracts; see
 _The split_ below.
+
+## Status: postponed
+
+**Nothing here is being worked.** RFC 0088 (the `date` gem port) is the active
+effort; this RFC is parked so that effort stays focused, and its stories are
+downgraded out of the ready queue by the non-active parent rule
+(`scripts/validate-lib.mjs:44`).
+
+It is **postponed, not withdrawn**, and the distinction matters. The finding
+stands: **565 lines of Ruby interpreter emulation across four files have no
+anchor and cannot be measured by `api:compare`** —
+
+- `activesupport/src/range-ext.ts` (97) — ports `range.c` `range_include_internal`
+  / `str_upto_each`, tagged `@noRailsEquivalent PERMANENT` (`range-ext.ts:19-22`)
+- `activesupport/src/core-ext/string/succ.ts` (112) — ports `string.c`
+  `rb_str_succ`, tagged `@noRailsEquivalent PERMANENT` (`succ.ts:6-8`)
+- `activesupport/src/include.ts` (239) — `Module#include`/`#extend`,
+  `Included<>`/`Extended<>` (`include.ts:10,94,187`)
+- `activesupport/src/prepend.ts` (117) — `Module#prepend` (`prepend.ts:12-15`)
+
+Parking this RFC does **not** declare that gap acceptable. It says the date port
+is the higher-value target first, and that this work is scheduled after it rather
+than abandoned. The `file:line` inventory below exists precisely so reactivating
+costs a read, not a re-derivation.
+
+**To reactivate:** flip `status` to `active` and set a `priority`. The stories
+return to the ready queue automatically.
 
 ## Why
 
