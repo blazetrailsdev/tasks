@@ -1,6 +1,6 @@
 ---
 title: "The Contexts module's state and methods live in context.ts, not contexts.ts"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T16:13:06Z"
+assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
 closed-reason: null
 ---
