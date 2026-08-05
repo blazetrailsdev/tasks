@@ -89,6 +89,6 @@
 | [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | closed | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | active | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @your-handle | activerecord |
-| [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | active | @your-handle | activerecord |
+| [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @your-handle | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | active | @deanmarano | activerecord |
 | [0088-corelib-package](rfcs/0088-corelib-package/README.md) | corelib package: vendored Ruby core library with Temporal substrate | active | @your-handle | corelib, i18n, activesupport, activemodel, activerecord |
