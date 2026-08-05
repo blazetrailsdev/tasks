@@ -1,7 +1,7 @@
 ---
 title: "MigrationContext's optional collaborators and SchemaMigration#connection are the adapter-vs-pool gap"
-status: ready
-updated: 2026-08-02
+status: claimed
+updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 140
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T09:45:03Z"
+assignee: "retire-module-level-find-target-engine-exports"
 blocked-by: null
 closed-reason: null
 ---
