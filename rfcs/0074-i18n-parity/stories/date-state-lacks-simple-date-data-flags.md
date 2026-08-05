@@ -1,6 +1,6 @@
 ---
 title: "Date carries jd/sg where SimpleDateData carries a flags word, so HAVE_CIVIL-only is inexpressible"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
