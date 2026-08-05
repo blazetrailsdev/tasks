@@ -1,6 +1,6 @@
 ---
 title: "Move changes-job gate prose out of the size-limited inline run: script"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6117
 claim: "2026-08-05T03:14:59Z"
 assignee: "converge-context-set-defaults-remaining-three"
 blocked-by: null
