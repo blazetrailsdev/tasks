@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#getFullVersion queries SELECT VERSION() instead of reading server_info"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
