@@ -1,13 +1,13 @@
 ---
 title: "Ruby gate extractor inverts feature polarity on the unless path"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 70
-pr: null
+pr: 6115
 claim: "2026-08-05T02:45:04Z"
 assignee: "row-count-is-debt-not-seeded-reasons"
 blocked-by: null
