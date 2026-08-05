@@ -1,9 +1,9 @@
 ---
 rfc: "0084-wide-call-set-burndown"
 title: "Wide call-set burn-down"
-status: draft
+status: active
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-05
 owner: "@your-handle"
 packages:
   - "activerecord"
