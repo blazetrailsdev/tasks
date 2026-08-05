@@ -1,6 +1,6 @@
 ---
 title: "Date's constructor drops date_initialize's guess_style / valid_gregorian_p arm"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6127
 claim: "2026-08-05T13:14:58Z"
 assignee: "date-initialize-guess-style-fast-path"
 blocked-by: null
