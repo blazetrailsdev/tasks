@@ -1,7 +1,7 @@
 ---
 title: "B2: migrate permanent deviations to @missingRailsCall tags"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
 deps: []
