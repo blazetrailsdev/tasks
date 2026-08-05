@@ -1,6 +1,6 @@
 ---
 title: "Date's constructor drops date_initialize's guess_style / valid_gregorian_p arm"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
