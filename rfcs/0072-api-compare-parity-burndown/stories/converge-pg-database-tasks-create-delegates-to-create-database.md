@@ -1,6 +1,6 @@
 ---
 title: "Route PostgreSQLDatabaseTasks#create through connection.createDatabase"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6135
 claim: "2026-08-05T16:33:09Z"
 assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 blocked-by: null
