@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLDatabaseTasks reads a hand-parsed URL instead of db_config/configuration_hash"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6141
 claim: "2026-08-05T20:33:08Z"
 assignee: "mysql-schema-creation-memoizes-where-rails-allocates"
 blocked-by: null
