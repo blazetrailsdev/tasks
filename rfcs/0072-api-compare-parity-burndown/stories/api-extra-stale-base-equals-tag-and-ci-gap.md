@@ -1,7 +1,7 @@
 ---
 title: "api:extra red on main via stale base.ts equals tag; gate not run in CI"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on both halves. (1) The stale @noRailsEquivalent tag on base.ts's `equals` no longer exists: `git grep -n noRailsEquivalent origin/main -- packages/activerecord/src/base.ts` returns only three PERMANENT tags (lines 2589, 4577, 4592) and `git grep -n 'equals(' origin/main -- packages/activerecord/src/base.ts` returns nothing — the declaration and its tag are both gone, and a fresh 'pnpm build && pnpm api:compare && pnpm api:extra --package activerecord' on origin/main (0394f52da) reports base.ts at 6 novel with no STALE gate failure. (2) The remaining deliverable — wiring api:extra into the CI rails-comparison job so local and CI gate state cannot diverge — is the entire subject of the sibling story run-extra-surface-gates-in-ci (now ready), which covers gateStale/gateUnclassified/gateFileTagRejections and the manifest/build-cost question in more detail. Nothing unique left here."
 ---
 
 ## Context
