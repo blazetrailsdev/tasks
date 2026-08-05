@@ -1,6 +1,6 @@
 ---
 title: "scripts: one typed parseForESLint accessor instead of two casts"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
