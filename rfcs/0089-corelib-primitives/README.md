@@ -1,5 +1,5 @@
 ---
-rfc: "0000-corelib-primitives"
+rfc: "0089-corelib-primitives"
 title: "corelib: a home for the Ruby interpreter primitives trails emulates"
 status: postponed
 created: 2026-08-05

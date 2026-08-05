@@ -2,7 +2,7 @@
 title: "corelib-spec-test-compare-enrollment"
 status: draft
 updated: 2026-08-05
-rfc: "0000-corelib-primitives"
+rfc: "0089-corelib-primitives"
 cluster: null
 deps:
   ["vendor-ruby-spec-subset", "move-range-core-and-succ-to-corelib", "move-module-mixin-primitives"]

@@ -2,7 +2,7 @@
 title: "vendor-ruby-spec-subset"
 status: in-progress
 updated: 2026-08-05
-rfc: "0000-corelib-primitives"
+rfc: "0089-corelib-primitives"
 cluster: null
 deps: []
 deps-rfc: []
