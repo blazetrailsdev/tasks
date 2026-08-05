@@ -1,6 +1,6 @@
 ---
 title: "Singular find_target still writes back — Rails' body ends at scope.first"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6139
 claim: "2026-08-05T19:53:07Z"
 assignee: "date-package-scaffold"
 blocked-by: null
