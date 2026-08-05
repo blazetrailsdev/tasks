@@ -1,6 +1,6 @@
 ---
 title: "Converge removeCheckConstraint's lookup options and if_exists probe"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
