@@ -1,6 +1,6 @@
 ---
 title: "Assign global previous schemes eagerly at encrypts time, retiring the lazy injection point and restoring Rails' memos"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6126
 claim: "2026-08-05T12:15:04Z"
 assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null
