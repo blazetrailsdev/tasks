@@ -1,6 +1,6 @@
 ---
 title: "datetime-new-start-preserves-the-receiver"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T12:15:04Z"
+assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null
 closed-reason: null
 ---
