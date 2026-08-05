@@ -1,6 +1,6 @@
 ---
 title: "vendor-ruby-date-gem"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0088-corelib-package"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T15:01:05Z"
+assignee: "vendor-ruby-date-gem"
 blocked-by: null
 closed-reason: null
 ---

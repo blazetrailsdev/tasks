@@ -1,6 +1,6 @@
 ---
 title: "Run the Messages::Metadata shared cases over the MessagePack serializer"
-status: ready
+status: claimed
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-05T15:01:05Z"
+assignee: "vendor-ruby-date-gem"
 blocked-by: null
 closed-reason: null
 ---
