@@ -1,6 +1,6 @@
 ---
 title: "Retire the _fullVersionString / _mariadb memo fields; get_full_version and mariadb? derive"
-status: claimed
+status: in-progress
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6115
 claim: "2026-08-05T02:45:04Z"
 assignee: "row-count-is-debt-not-seeded-reasons"
 blocked-by: null
