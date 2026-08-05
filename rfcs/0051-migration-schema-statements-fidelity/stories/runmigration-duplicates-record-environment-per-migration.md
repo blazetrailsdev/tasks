@@ -1,6 +1,6 @@
 ---
 title: "Drop the per-migration internalMetadata environment write from _runMigration"
-status: in-progress
+status: done
 updated: 2026-08-05
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
