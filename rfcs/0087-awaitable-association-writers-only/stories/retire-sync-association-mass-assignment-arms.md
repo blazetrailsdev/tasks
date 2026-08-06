@@ -1,6 +1,6 @@
 ---
 title: "retire-sync-association-mass-assignment-arms"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["delete-has-one-sync-property-setter", "delete-collection-sync-writers"]
 deps-rfc: []
 est-loc: 300
 priority: 10
-pr: null
+pr: 6155
 claim: "2026-08-06T14:23:10Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
