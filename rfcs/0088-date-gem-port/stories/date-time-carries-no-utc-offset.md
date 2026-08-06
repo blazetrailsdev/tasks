@@ -1,6 +1,6 @@
 ---
 title: '::DateTime hardcodes zone "+00:00", so %z always answers +0000'
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T02:13:06Z"
+assignee: "activemodel-types-construct-through-date-package"
 blocked-by: null
 closed-reason: null
 ---

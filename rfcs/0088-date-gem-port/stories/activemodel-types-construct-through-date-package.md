@@ -1,15 +1,15 @@
 ---
 title: "activemodel-types-construct-through-date-package"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["route-temporal-imports-activemodel-arel"]
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T02:13:06Z"
+assignee: "activemodel-types-construct-through-date-package"
 blocked-by: null
 closed-reason: null
 ---
