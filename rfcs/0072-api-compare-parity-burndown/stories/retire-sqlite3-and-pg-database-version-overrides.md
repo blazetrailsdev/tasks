@@ -1,6 +1,6 @@
 ---
 title: "Retire the SQLite3 and PostgreSQL databaseVersion overrides and their private memo fields"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T15:23:07Z"
+assignee: "time-with-zone-nsec-truncates-to-milliseconds"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#nsec/#usec truncate to milliseconds, so %N can never answer nine digits"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T15:23:07Z"
+assignee: "time-with-zone-nsec-truncates-to-milliseconds"
 blocked-by: null
 closed-reason: null
 ---
