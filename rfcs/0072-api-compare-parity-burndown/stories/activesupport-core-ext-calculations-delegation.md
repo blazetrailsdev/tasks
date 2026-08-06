@@ -1,6 +1,6 @@
 ---
 title: "activesupport-core-ext-calculations-delegation"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T16:46:53Z"
+assignee: "activesupport-core-ext-calculations-delegation"
 blocked-by: null
 closed-reason: null
 ---
