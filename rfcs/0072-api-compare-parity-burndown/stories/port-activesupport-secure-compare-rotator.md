@@ -1,7 +1,7 @@
 ---
 title: "port-activesupport-secure-compare-rotator"
-status: in-progress
-updated: 2026-08-05
+status: done
+updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
