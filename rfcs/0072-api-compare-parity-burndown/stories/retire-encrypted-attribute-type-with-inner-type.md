@@ -1,6 +1,6 @@
 ---
 title: "EncryptedAttributeType#withInnerType is untagged novel surface with no Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6156
 claim: "2026-08-06T14:43:07Z"
 assignee: "ruby-time-carries-no-fractional-seconds"
 blocked-by: null
