@@ -1,6 +1,6 @@
 ---
 title: "::Time truncates to whole seconds, so #nsec and %N always answer zero"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
