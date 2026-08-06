@@ -38,9 +38,27 @@ The same invented override still stands on two other adapters, where
   and `postgresql-adapter.test.ts:201,212`, which poke the field directly).
   Rails' `postgresql_adapter.rb` has no `database_version` either.
 
-Note `database-version-sync-getter-forces-hand-warms` (in-progress) covers the
+Note `database-version-sync-getter-forces-hand-warms` (now **blocked**) covers the
 async/sync shape of the base getter; this story is only about the two adapter
 overrides and their private memo fields, which duplicate the pool memo.
+
+**Update (trails #6149) — PG's `_databaseVersion` gained a THIRD write site.**
+`PostgreSQLAdapter#_maybeConfigureConnection`
+(`packages/activerecord/src/connection-adapters/postgresql-adapter.ts:778-780`)
+now fills the field directly off `client`, at the position Rails' `super`
+occupies in `configure_connection` (`postgresql_adapter.rb:956-957`). It is
+issued on the raw client deliberately: `getDatabaseVersion()` acquires its own
+client and would re-enter the acquire machinery still holding `_acquiring`.
+
+So retiring the field means rehoming three writers, not two — `:778-780`,
+`getDatabaseVersion` (`:3250-3265`), and the `databaseVersion` getter
+(`:3297-3302`) — onto the pool memo (`pool_config.rb:39-41`). Rails' PG
+`get_database_version` (`postgresql_adapter.rb:635-639`) is a **pure fetch with
+no memo of its own**, which is the converged shape: the PoolConfig is the only
+cache, and `database_version` is `pool.server_version(self)`
+(`abstract_adapter.rb:854-856`). Whoever takes this should sequence it against
+`make-version-gated-predicates-async`, since the re-entrancy constraint that
+forced the raw-client fill relaxes once the version can be fetched on demand.
 
 ## Converged shape
 

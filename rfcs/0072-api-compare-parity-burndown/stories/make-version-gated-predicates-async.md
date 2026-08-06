@@ -70,7 +70,14 @@ sync.
       Rails' sync predicate (`mysql/schema_statements.rb:146-152`), along with
       `default_row_format` (`:154`); #6149 documents at that call site why it
       could not.
-- [ ] The `verifyBang()` call #6149 added to `prepareSchema` and the memo refill
-      it added to `connection.test.ts`'s `afterEach` are both removed — they are
-      scaffolding for shape 2 and should not outlive it.
+- [ ] Every piece of shape-2 scaffolding #6149 left behind is removed — none of
+      it has a Rails counterpart and all of it exists only because the sync
+      getter cannot self-fetch: - the `verifyBang()` call in `support/canonical-schema.ts` `prepareSchema`; - the memo refill in `adapters/abstract-mysql-adapter/connection.test.ts`'s
+      `afterEach`; - the four `NON_EMITTING` entries that call pulled onto the canonical lay
+      path — `verifyBang`, `active`, `completeAsyncConnect`, `verifiedBang`
+      (`support/stubbed-ddl-methods.test.ts`); - the memo fill in `AbstractAdapter#configureConnection`
+      (`connection-adapters/abstract-adapter.ts`), whose Rails body
+      (`abstract_adapter.rb:1212-1214`) is `check_version` alone. Once
+      `database_version` can be fetched on demand this line is dead weight, and
+      removing it restores the ported body call-for-call.
 - [ ] All three lanes green, MariaDB included.
