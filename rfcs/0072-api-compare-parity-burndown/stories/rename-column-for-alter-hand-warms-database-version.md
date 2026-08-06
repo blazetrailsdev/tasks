@@ -1,6 +1,6 @@
 ---
 title: "rename_column_for_alter hand-warms database_version, a call Rails does not make"
-status: in-progress
+status: blocked
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: 6146
 claim: "2026-08-05T23:53:11Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
-blocked-by: null
+blocked-by: "Blocked on port-pool-server-version-retire-get-database-version-memo-guard (in-progress, assignee move-date-time-to-date-package), exactly as this story's Context predicted. Removing the getDatabaseVersion() warm reds the MariaDB lane: adapters/abstract-mysql-adapter/connection.test.ts:318 'logs name rename column for alter' fails with 'databaseVersion is not available yet' (PR #6146, run 31058825999). renameColumnForAlter is reachable on a connection whose configureConnection has not warmed the memo, and the sync databaseVersion getter cannot issue the round-trip Rails' reader does. The warm can only go once pool.server_version owns the fetch. PR #6146 shipped the independent half of this story: the body now returns this.renameColumnSql(...) per abstract_mysql_adapter.rb:864 instead of restating the fragment inline, retiring one call-mismatch row. The warm now cites this blocker at the call site."
 closed-reason: null
 ---
 
