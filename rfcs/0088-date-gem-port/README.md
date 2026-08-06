@@ -380,6 +380,63 @@ a deviation register.
 unchanged. This RFC re-homes and finally _anchors_ that work; it does not discard
 it.
 
+## Enrollment result (`date-test-compare-enrollment`, settled)
+
+`compareTests` is on for the `date` source; `compareApi` stays off per the spike
+above. The cluster now has the gate it has never had:
+
+```text
+date  —  0/142 tests (0%)  |  0/10 files  |  0 misplaced
+```
+
+**0% is the burndown baseline.** 142 is the credited Ruby population — the gem's
+145 `def test_` methods less the exclusions below — spread over 10 files
+(`test_date.rb` 9, `test_date_arith.rb` 23, `test_date_attr.rb` 3,
+`test_date_compat.rb` 1, `test_date_conv.rb` 12, `test_date_new.rb` 19,
+`test_date_parse.rb` 26, `test_date_strftime.rb` 14, `test_date_strptime.rb` 13,
+`test_switch_hitter.rb` 22). The two existing TS files stay `.trails.test.ts` —
+TS-only extras, outside the compared population — so the number only moves when
+a gem test is actually ported under its own name.
+
+Excluded via `UNPORTED_FILES` (`scripts/api-compare/unported-files.ts`), each
+with a reason at the entry, not by deleting a test:
+
+- `test_date_ractor.rb` — Ractor is Ruby's actor-based parallelism; JS is
+  single-threaded, same grounds as `promise.rb`.
+- `test_date_marshal.rb` — Ruby's Marshal binary object format.
+- `test_switch_hitter.rb`'s `test_marshal14/16/18/192` — per-test entries for the
+  same Marshal wire format; the other 22 tests in the file stay counted.
+
+Enrollment is **four** registrations, all landed together: `vendor/sources.ts`
+(feeds `testPathsManifest()` → `extract-ruby-tests.rb`, plus its `sources.test.ts`
+key-list expectation), `scripts/test-compare/extract-ts-tests.ts`
+(`getPackageTestFiles()`), `scripts/test-compare/test-compare.ts` (`pkgDirs`),
+and `scripts/test-compare/assertion-mismatch-mark.json`. The fourth has no local
+gate that runs by default — `pnpm test:compare` passes without it while CI's
+`Rails API/Test Comparison` job hard-fails on an unmarked package.
+
+### Assertion-value mismatches here are expected and benign
+
+Recorded at the enrollment site (`vendor/sources.ts`, the `date` package entry)
+as well as here, because it is reversible-looking and is not a defect:
+
+RFC 0088 returns `Temporal` types by default where Ruby returns
+`Date`/`DateTime`/`Time`. So a ported test whose Ruby form asserts
+`assert_equal Date.new(2001,2,3), Date.parse("2001-02-03")` compares a
+`Temporal.PlainDate` on our side. **`test:compare` matches on test _names_, so
+the test still counts**; the value-shape difference is this RFC's headline design
+decision, not drift. **Do not "converge" a Temporal return back to a Ruby-shaped
+one to silence a value mismatch** — that silently reverses the decision.
+
+**Known consequence, and the first porting story will hit it.** `date` is seeded
+at `value: 0` in `scripts/test-compare/assertion-mismatch-mark.json` — the honest
+number today, since 0 tests are matched. The ratchet is only-shrink and
+`nextMark` takes `Math.min` (`assertion-ratchet.ts:126`), so the seed can never be
+raised by `--write`. The first ported gem test that asserts a Temporal value
+against a Ruby-shaped literal will therefore red the ratchet at 0, and the fix is
+**not** to reshape the return. Tracked as
+`date-assertion-value-mark-vs-temporal-returns`.
+
 ## Sequencing
 
 Vendor and settle the extractor question, scaffold, move, **enroll — where the
