@@ -1,15 +1,15 @@
 ---
 title: "route-temporal-imports-activerecord"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T01:53:06Z"
+assignee: "route-temporal-imports-activerecord"
 blocked-by: null
 closed-reason: null
 ---
