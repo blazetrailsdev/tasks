@@ -386,15 +386,15 @@ it.
 above. The cluster now has the gate it has never had:
 
 ```text
-date  —  0/142 tests (0%)  |  0/10 files  |  0 misplaced
+date  —  0/138 tests (0%)  |  0/10 files  |  0 misplaced
 ```
 
-**0% is the burndown baseline.** 142 is the credited Ruby population — the gem's
-145 `def test_` methods less the exclusions below — spread over 10 files
+**0% is the burndown baseline.** 138 is the credited Ruby population — the gem's
+145 `def test_` methods less the 7 exclusions below — spread over 10 files
 (`test_date.rb` 9, `test_date_arith.rb` 23, `test_date_attr.rb` 3,
 `test_date_compat.rb` 1, `test_date_conv.rb` 12, `test_date_new.rb` 19,
 `test_date_parse.rb` 26, `test_date_strftime.rb` 14, `test_date_strptime.rb` 13,
-`test_switch_hitter.rb` 22). The two existing TS files stay `.trails.test.ts` —
+`test_switch_hitter.rb` 18). The two existing TS files stay `.trails.test.ts` —
 TS-only extras, outside the compared population — so the number only moves when
 a gem test is actually ported under its own name.
 
@@ -405,7 +405,9 @@ with a reason at the entry, not by deleting a test:
   single-threaded, same grounds as `promise.rb`.
 - `test_date_marshal.rb` — Ruby's Marshal binary object format.
 - `test_switch_hitter.rb`'s `test_marshal14/16/18/192` — per-test entries for the
-  same Marshal wire format; the other 22 tests in the file stay counted.
+  same Marshal wire format; the other 18 tests in the file stay counted. The
+  entries name them `marshal14` … `marshal192`: `extract-ruby-tests.rb` strips
+  the `def test_` prefix, and a `test_`-prefixed entry is a silent no-op.
 
 Enrollment is **four** registrations, all landed together: `vendor/sources.ts`
 (feeds `testPathsManifest()` → `extract-ruby-tests.rb`, plus its `sources.test.ts`
