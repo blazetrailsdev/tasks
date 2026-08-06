@@ -1,6 +1,6 @@
 ---
 title: "rubyFileToTs restates the erb token instead of deriving it from TOKEN_RENAMES"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
