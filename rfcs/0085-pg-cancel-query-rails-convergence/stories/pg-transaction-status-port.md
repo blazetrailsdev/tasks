@@ -1,6 +1,6 @@
 ---
 title: "Port PG transaction_status and gate the cancel on it"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6157
 claim: "2026-08-06T15:03:06Z"
 assignee: "d-new-by-frags-skips-the-second-civil-validation"
 blocked-by: null
