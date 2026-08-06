@@ -1,14 +1,14 @@
 ---
 title: "rename_column_for_alter hand-warms database_version, a call Rails does not make"
-status: claimed
-updated: 2026-08-05
+status: in-progress
+updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6146
 claim: "2026-08-05T23:53:11Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
