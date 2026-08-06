@@ -1,6 +1,6 @@
 ---
 title: "dNewByFrags/dtNewByFrags re-validate where d_simple_new_internal writes directly"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T15:03:06Z"
+assignee: "d-new-by-frags-skips-the-second-civil-validation"
 blocked-by: null
 closed-reason: null
 ---
@@ -62,6 +62,6 @@ no counterpart for. That is a reason it was deferred, **not** a ratification.
 - [ ] No new public surface: `pnpm api:extra --package date` unchanged.
 - [ ] `packages/date/src/date.trails.test.ts` still green, including the
       `Date::Error` arms — an invalid frag set must still raise `"invalid
-  date"` from `dNewByFrags`, not slip through the removed validation.
+date"` from `dNewByFrags`, not slip through the removed validation.
 - [ ] `pnpm api:calls` clean; `pnpm api:compare` / `pnpm test:compare` deltas
       non-negative.

@@ -1,7 +1,7 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: 170
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T15:03:06Z"
+assignee: "d-new-by-frags-skips-the-second-civil-validation"
 blocked-by: null
 closed-reason: null
 ---
