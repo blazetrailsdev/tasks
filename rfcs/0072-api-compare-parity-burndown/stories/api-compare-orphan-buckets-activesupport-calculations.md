@@ -1,6 +1,6 @@
 ---
 title: "api-compare-orphan-buckets-activesupport-calculations"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6160
 claim: "2026-08-06T16:25:50Z"
 assignee: "api-compare-orphan-buckets-activesupport-calculations"
 blocked-by: null
