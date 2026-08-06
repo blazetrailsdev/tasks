@@ -1,13 +1,13 @@
 ---
 title: "date-state-onto-temporal-plaindate"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["date-api-compare-enrollment", "date-test-compare-enrollment"]
 deps-rfc: []
 est-loc: 450
-pr: null
+pr: 6153
 claim: "2026-08-06T14:03:03Z"
 assignee: "date-state-onto-temporal-plaindate"
 blocked-by: null
