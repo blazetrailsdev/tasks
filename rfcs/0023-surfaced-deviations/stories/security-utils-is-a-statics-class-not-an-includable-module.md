@@ -1,5 +1,5 @@
 ---
-title: "SecurityUtils is a statics-only class, so  callers name it instead"
+title: "SecurityUtils is a statics-only class, so include SecurityUtils callers name it instead"
 status: draft
 updated: 2026-08-06
 rfc: "0023-surfaced-deviations"
