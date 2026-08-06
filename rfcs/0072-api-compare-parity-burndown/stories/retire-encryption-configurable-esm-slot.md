@@ -1,6 +1,6 @@
 ---
 title: "Encryption readers reach Configurable through a zero-import slot, not a direct import"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
