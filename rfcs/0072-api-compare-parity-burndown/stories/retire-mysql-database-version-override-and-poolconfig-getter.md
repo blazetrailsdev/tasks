@@ -1,6 +1,6 @@
 ---
 title: "Retire the MySQL databaseVersion override and PoolConfig#serverVersion's getter shape"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
