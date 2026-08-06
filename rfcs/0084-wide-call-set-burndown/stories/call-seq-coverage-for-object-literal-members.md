@@ -51,4 +51,4 @@ invisible, with no row and no signal that the check was skipped:
       differing past a punctuation character, e.g. `joins!` vs `joins_values`,
       and reds the reseed-drift gate).
 - [ ] `pnpm api:calls` green; the reseed-drift check (`lint-call-mismatches.ts
-  --write` leaving both baseline trees byte-identical) green.
+--write` leaving both baseline trees byte-identical) green.
