@@ -1,7 +1,7 @@
 ---
 title: "migrate-nested-attributes-assignments-to-awaitable-writer"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-06
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 450
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T15:43:03Z"
+assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
 closed-reason: null
 ---
