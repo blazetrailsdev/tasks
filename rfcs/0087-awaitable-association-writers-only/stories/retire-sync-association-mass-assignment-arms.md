@@ -1,6 +1,6 @@
 ---
 title: "retire-sync-association-mass-assignment-arms"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
