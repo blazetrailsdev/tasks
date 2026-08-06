@@ -1,7 +1,7 @@
 ---
 title: "fullVersion sits on AbstractMysqlAdapter, not Mysql2Adapter where Rails puts it"
-status: in-progress
-updated: 2026-08-05
+status: done
+updated: 2026-08-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
