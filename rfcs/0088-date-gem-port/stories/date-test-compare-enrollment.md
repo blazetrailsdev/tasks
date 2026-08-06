@@ -1,13 +1,13 @@
 ---
 title: "date-test-compare-enrollment"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: 6148
 claim: "2026-08-06T01:13:05Z"
 assignee: "date-api-compare-enrollment"
 blocked-by: null
