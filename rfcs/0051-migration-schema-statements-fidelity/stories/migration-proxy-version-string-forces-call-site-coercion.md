@@ -1,6 +1,6 @@
 ---
 title: "MigrationProxy#version is a string where Rails to_i's it in MigrationContext#migrations"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
