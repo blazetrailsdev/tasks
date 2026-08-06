@@ -1,6 +1,6 @@
 ---
 title: "user_input_in_time_zone takes one argument in Rails and reads Time.zone, not a zone parameter"
-status: ready
+status: draft
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
