@@ -1,6 +1,6 @@
 ---
 title: '::DateTime hardcodes zone "+00:00", so %z always answers +0000'
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
