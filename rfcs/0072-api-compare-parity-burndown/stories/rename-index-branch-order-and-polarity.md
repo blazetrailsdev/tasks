@@ -1,6 +1,6 @@
 ---
 title: "MySQL rename_index hoists validate_index_length! out of the supports arm and inverts the branch"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T14:43:07Z"
+assignee: "ruby-time-carries-no-fractional-seconds"
 blocked-by: null
 closed-reason: null
 ---
