@@ -1,6 +1,6 @@
 ---
 title: "retire-activesupport-temporal-re-export"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
