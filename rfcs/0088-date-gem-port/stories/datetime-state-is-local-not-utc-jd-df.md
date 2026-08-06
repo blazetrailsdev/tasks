@@ -1,6 +1,6 @@
 ---
 title: "::DateTime keeps its jd/df local, where ComplexDateData keeps them in UTC"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
