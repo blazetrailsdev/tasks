@@ -1,6 +1,6 @@
 ---
 title: "Retire the MySQL databaseVersion override and PoolConfig#serverVersion's getter shape"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6150
 claim: "2026-08-06T01:53:06Z"
 assignee: "route-temporal-imports-activerecord"
 blocked-by: null
