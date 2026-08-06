@@ -1,6 +1,6 @@
 ---
 title: "migrate-nested-attributes-assignments-to-awaitable-writer"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
