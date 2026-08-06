@@ -1,6 +1,6 @@
 ---
 title: "Compare call sequences, not call sets, in the wide ratchet"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0084-wide-call-set-burndown"
 cluster: null
