@@ -1,6 +1,6 @@
 ---
 title: "Compare call sequences, not call sets, in the wide ratchet"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T13:43:09Z"
+assignee: "activerecord-quoted-date-through-date-package"
 blocked-by: null
 closed-reason: null
 ---
