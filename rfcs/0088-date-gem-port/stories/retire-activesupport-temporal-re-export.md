@@ -1,13 +1,13 @@
 ---
 title: "retire-activesupport-temporal-re-export"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["route-temporal-imports-activemodel-arel", "route-temporal-imports-activerecord"]
 deps-rfc: []
 est-loc: 100
-pr: null
+pr: 6154
 claim: "2026-08-06T13:40:06Z"
 assignee: "activemodel-type-time-returns-a-time"
 blocked-by: null
