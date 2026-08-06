@@ -1,13 +1,13 @@
 ---
 title: "converge-time-with-zone-strftime-onto-date-package"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 300
-pr: null
+pr: 6147
 claim: "2026-08-06T00:53:04Z"
 assignee: "converge-time-with-zone-strftime-onto-date-package"
 blocked-by: null
