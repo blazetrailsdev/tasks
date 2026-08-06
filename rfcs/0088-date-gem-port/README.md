@@ -430,14 +430,26 @@ the test still counts**; the value-shape difference is this RFC's headline desig
 decision, not drift. **Do not "converge" a Temporal return back to a Ruby-shaped
 one to silence a value mismatch** — that silently reverses the decision.
 
-**Known consequence, and the first porting story will hit it.** `date` is seeded
-at `value: 0` in `scripts/test-compare/assertion-mismatch-mark.json` — the honest
-number today, since 0 tests are matched. The ratchet is only-shrink and
-`nextMark` takes `Math.min` (`assertion-ratchet.ts:126`), so the seed can never be
-raised by `--write`. The first ported gem test that asserts a Temporal value
-against a Ruby-shaped literal will therefore red the ratchet at 0, and the fix is
-**not** to reshape the return. Tracked as
-`date-assertion-value-mark-vs-temporal-returns`.
+**Known consequence — resolved, and it costs nothing.** `date` is seeded at
+`value: 0` in `scripts/test-compare/assertion-mismatch-mark.json`, and the
+ratchet is only-shrink (`nextMark` takes `Math.min`, `assertion-ratchet.ts:126`),
+so the seed can never be raised by `--write`. The concern was that the first
+ported gem test asserting a Temporal value against a Ruby-shaped expectation
+would red the ratchet at 0.
+
+It does not, and the mechanism is structural rather than an exclusion: the
+comparison is only ever made between two **fully literal** sides
+(`assertion-values.ts`). `assert_equal Date.new(2001, 2, 3), …` and
+`expect(…).toEqual(Temporal.PlainDate.from("2001-02-03"))` are method calls on
+both sides, so `extract-ruby-tests.rb`'s `literal_token` and
+`extract-ts-core.ts`'s `literalToken` each emit `null` and the kind is skipped
+entirely. `date.value` therefore cannot rise for RFC 0088's intended shape, while
+`assertionCount` and `kind` stay real gates — no exclusion list, no widened
+baseline, and no reshaping of a Temporal return. Locked by a regression test in
+`scripts/test-compare/assertion-values.test.ts` plus a note in the
+`assertion-values.ts` header, so a future extractor that starts capturing
+constructor calls has to confront it deliberately. Landed in trails #6149;
+tracked as `date-assertion-value-mark-vs-temporal-returns`.
 
 ## Sequencing
 
