@@ -1,6 +1,6 @@
 ---
 title: "Sync databaseVersion getter cannot self-fetch, forcing hand-warms Rails has at no call site"
-status: claimed
+status: in-progress
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6149
 claim: "2026-08-06T01:33:05Z"
 assignee: "date-assertion-value-mark-vs-temporal-returns"
 blocked-by: null
