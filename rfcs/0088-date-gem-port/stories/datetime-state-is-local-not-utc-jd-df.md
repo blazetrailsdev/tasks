@@ -1,6 +1,6 @@
 ---
 title: "::DateTime keeps its jd/df local, where ComplexDateData keeps them in UTC"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T13:40:06Z"
+assignee: "activemodel-type-time-returns-a-time"
 blocked-by: null
 closed-reason: null
 ---
