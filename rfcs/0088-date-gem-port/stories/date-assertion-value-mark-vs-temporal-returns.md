@@ -1,6 +1,6 @@
 ---
 title: "date-assertion-value-mark-vs-temporal-returns"
-status: ready
+status: claimed
 updated: 2026-08-06
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-06T01:33:05Z"
+assignee: "date-assertion-value-mark-vs-temporal-returns"
 blocked-by: null
 closed-reason: null
 ---
