@@ -1,6 +1,6 @@
 ---
 title: "Retire the trails-only databaseVersion warm-ups from ported bodies"
-status: in-progress
+status: done
 updated: 2026-08-06
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
