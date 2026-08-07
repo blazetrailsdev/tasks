@@ -1,6 +1,6 @@
 ---
 title: "converge-composite-through-collection-proxy-owner-cols"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6201
 claim: "2026-08-07T21:12:47Z"
 assignee: "converge-composite-through-collection-proxy-owner-cols"
 blocked-by: null
