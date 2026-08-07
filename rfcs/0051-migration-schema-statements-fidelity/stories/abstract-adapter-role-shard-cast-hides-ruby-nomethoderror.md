@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#role/#shard read through a cast that returns undefined where Ruby raises NoMethodError"
-status: blocked
+status: ready
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6207
-claim: "2026-08-07T22:32:42Z"
-assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderror"
-blocked-by: "Attempted on PR #6207 and reverted: retyping `pool` to ConnectionPool closes criterion 2 cosmetically while making the runtime lie worse (review-blocked). Criterion 1 — routing the pool-less construction sites through real pools — is the whole story and is larger than the estimate; several sites are pool-less by design (schema-conn never connects; newRawTestAdapter is raw on purpose; second-connection needs pool.checkout ported). Sequence behind create-and-migrate-adapters-carry-a-real-pool. Findings appended to the story body."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
