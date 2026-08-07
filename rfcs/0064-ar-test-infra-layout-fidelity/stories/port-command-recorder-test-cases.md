@@ -1,6 +1,6 @@
 ---
 title: "Port Rails CommandRecorderTest (4/93 matched; 73 bespoke extras)"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
