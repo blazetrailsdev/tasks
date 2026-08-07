@@ -1,6 +1,6 @@
 ---
 title: "Invoke check_all_foreign_keys_valid! after fixture insert when verify_foreign_keys_for_fixtures is on"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
