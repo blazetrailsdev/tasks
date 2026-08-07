@@ -1,6 +1,6 @@
 ---
 title: "Port raw_connection.block: drain the cancelled query before ROLLBACK"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6165
 claim: "2026-08-07T02:08:30Z"
 assignee: "datetime-to-s-drops-the-time-of-day"
 blocked-by: null
