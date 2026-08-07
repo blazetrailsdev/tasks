@@ -1,6 +1,6 @@
 ---
 title: "PG/MySQL changeColumnForAlter still takes Record<string, unknown> and returns unknown[]"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:05:48Z"
+assignee: "activemodel-time-readers-take-rational-sec-fraction-value"
 blocked-by: null
 closed-reason: null
 ---
