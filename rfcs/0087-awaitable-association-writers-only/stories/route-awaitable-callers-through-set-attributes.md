@@ -71,7 +71,7 @@ parked path to the one caller the language forbids:
       constructor, and its JSDoc's "uniform parking" paragraph is narrowed to
       match.
 - [ ] The existing guards in `nested-attributes.trails.test.ts` — `finishes a
-  displacing nested assignment before assigning the next key` and `returns
-  nothing from assignAttributes and drains the displacing write on save` —
+displacing nested assignment before assigning the next key` and `returns
+nothing from assignAttributes and drains the displacing write on save` —
       both still hold.
 - [ ] Green on sqlite, PG and MariaDB.
