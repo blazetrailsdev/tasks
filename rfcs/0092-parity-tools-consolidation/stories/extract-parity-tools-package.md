@@ -5,7 +5,8 @@ updated: 2026-08-07
 rfc: "0092-parity-tools-consolidation"
 cluster: null
 packages: []
-deps: []
+deps:
+  - relocate-parity-pipeline
 deps-rfc: []
 est-loc: 400
 priority: null
