@@ -1,7 +1,7 @@
 ---
 title: "Constructor/create nested-attribute dispatch moves off the prototype-descriptor walk"
-status: ready
-updated: 2026-08-06
+status: claimed
+updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T01:08:29Z"
+assignee: "check-pending-migrations-is-a-no-op-stub"
 blocked-by: null
 closed-reason: null
 ---
