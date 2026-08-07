@@ -1,6 +1,6 @@
 ---
 title: "AcceptsMultiparameterTime's Hash branch overrides cast in Rails, not cast_value"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
