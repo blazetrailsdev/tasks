@@ -1,6 +1,6 @@
 ---
 title: "Three of the gate's seven symbols are still live; reconcile the campaign's end state"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T18:40:40Z"
+assignee: "references-columns-are-bigint-and-indexed-across-canonical-schema"
 blocked-by: null
 closed-reason: null
 ---
