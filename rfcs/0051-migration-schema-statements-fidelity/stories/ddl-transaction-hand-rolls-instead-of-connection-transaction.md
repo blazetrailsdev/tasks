@@ -1,6 +1,6 @@
 ---
 title: "Migrator#ddl_transaction hand-rolls begin/commit instead of calling connection.transaction"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T16:29:49Z"
+assignee: "of-kind-default-type-and-normalize-arguments"
 blocked-by: null
 closed-reason: null
 ---
