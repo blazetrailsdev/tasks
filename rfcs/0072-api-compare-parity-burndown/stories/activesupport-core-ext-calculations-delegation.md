@@ -1,7 +1,7 @@
 ---
 title: "activesupport-core-ext-calculations-delegation"
-status: blocked
-updated: 2026-08-06
+status: ready
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-06T16:46:53Z"
-assignee: "activesupport-core-ext-calculations-delegation"
-blocked-by: "Blocked on PR #6160 (api-compare-orphan-buckets-activesupport-calculations), still OPEN. That PR is what adds the RUBY_FILE_TS_OVERRIDES rows pointing the three calculations.rb reopenings at time-ext.ts and seeds scripts/api-compare/call-mismatches-exclude/activesupport/time-ext.json. Neither the override rows nor the baseline file exist on origin/main today, so there are no rows to retire and converging time-ext.ts now would silently make #6160's freshly-seeded baseline stale (only-shrink gate goes red on their branch or right after merge). Unblock once #6160 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
