@@ -1,6 +1,6 @@
 ---
 title: "Mass assignment stops returning a promise for nested attributes"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
