@@ -1,6 +1,6 @@
 ---
 title: "activerecord-cli --all reads the raw configurations array, bypassing configs_for filtering"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6173
 claim: "2026-08-07T13:54:41Z"
 assignee: "datetime-new-drops-canon24oc"
 blocked-by: null
