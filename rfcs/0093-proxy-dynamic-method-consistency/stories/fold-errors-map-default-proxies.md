@@ -1,6 +1,6 @@
 ---
 title: "Fold duplicate errors.ts Map-default proxies into one helper"
-status: draft
+status: ready
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
