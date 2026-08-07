@@ -1,6 +1,6 @@
 ---
 title: "Abstract rename_index clears the schema cache Rails never touches and drops both to_s arms"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
