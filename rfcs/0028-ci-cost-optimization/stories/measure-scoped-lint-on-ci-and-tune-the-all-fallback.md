@@ -1,6 +1,6 @@
 ---
 title: "Measure the scoped lint job on CI and tune LINT_ALL_RE / prelint hoisting"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
