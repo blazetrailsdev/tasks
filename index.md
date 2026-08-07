@@ -96,4 +96,4 @@
 | [0090-0000-tasks-backlog-integrity](rfcs/0090-0000-tasks-backlog-integrity/README.md) | Tasks backlog integrity — guards for stranded and misfiled stories | draft | @deanmarano | — |
 | [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @your-handle | — |
 | [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | draft | @deanmarano | — |
-| [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | draft | @your-handle | activerecord, activemodel |
+| [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @your-handle | activerecord, activemodel |
