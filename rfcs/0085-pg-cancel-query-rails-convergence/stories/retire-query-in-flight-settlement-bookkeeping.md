@@ -1,6 +1,6 @@
 ---
 title: "Retire _queryInFlightSettled/_queryInFlightOwner: cancel_any_running_query drains the connection, not adapter bookkeeping"
-status: ready
+status: done
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6189
 claim: null
 assignee: null
 blocked-by: null
