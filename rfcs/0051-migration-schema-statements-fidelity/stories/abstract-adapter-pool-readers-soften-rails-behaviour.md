@@ -1,6 +1,6 @@
 ---
 title: "abstract-adapter-pool-readers-soften-rails-behaviour"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
