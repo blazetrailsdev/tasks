@@ -1,6 +1,6 @@
 ---
 title: "Add has traps + fix ownership test in relation/association dispatch proxies"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T19:52:41Z"
+assignee: "relation-proxy-respond-to-missing"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Date#ago/since/beginning_of_day widen through in_time_zone"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T19:52:41Z"
+assignee: "relation-proxy-respond-to-missing"
 blocked-by: null
 closed-reason: null
 ---
