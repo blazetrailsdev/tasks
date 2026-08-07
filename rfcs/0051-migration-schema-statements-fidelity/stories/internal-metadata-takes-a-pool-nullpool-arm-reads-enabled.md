@@ -1,7 +1,7 @@
 ---
 title: "InternalMetadata takes an adapter where Rails takes a pool, so the NullPool arm reads as enabled"
 status: blocked
-updated: 2026-08-05
+updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-08-05T13:14:58Z"
 assignee: "date-initialize-guess-style-fast-path"
-blocked-by: "Blocked on giving the ~30 InternalMetadata construction sites a real pool first. Confirmed on branch date-initialize-guess-style-fast-path-d501 by doing the conversion: AbstractAdapter#pool is declared `pool: unknown` (connection-adapters/abstract-adapter.ts:852) and planted as a NullPool at :808 (abstract_adapter.rb:153), so (a) every one of the ~30 `new InternalMetadata(adapter)` sites needs a `as ConnectionPool` cast or a pool-typing change that is its own story, and (b) once `enabled` is the faithful `@pool.db_config.use_metadata_table?` (internal_metadata.rb:35-36) with no softening, every NullPool-backed site — migrator.trails.test.ts, migration.test.ts, support/canonical-schema-stamp.ts, schema.ts Schema.define, tasks/database-tasks.ts, trailties db.ts — reads NULL_CONFIG (connection-pool.ts:62,155) and silently disables metadata storage suite-wide. The prerequisite is migration-context-collaborators-need-a-pool; this story should be re-scheduled after it."
+blocked-by: "Re-verified 2026-08-07 against origin/main 311bff350; the previous reason was half stale. STALE HALF: AbstractAdapter#pool is no longer 'pool: unknown' — PR #6128 typed it 'pool: ConnectionPool | NullPool = new NullPool()' (connection-adapters/abstract-adapter.ts:866), so the 'every site needs an as-ConnectionPool cast' argument is gone. LIVE HALF, and still the real blocker: the ~42 'new InternalMetadata(adapter)' construction sites across packages/ and scripts/ still pass an ADAPTER, and a NullPool-backed adapter still answers ConnectionPool.NULL_CONFIG (abstract/connection-pool.ts:71,115,168). Making 'enabled' the faithful '@pool.db_config.use_metadata_table?' (internal_metadata.rb:35-36, trails internal-metadata.ts:61/110) with no softening therefore still silently disables metadata storage suite-wide at every NullPool-backed site. Prerequisite is unchanged: migration-context-collaborators-need-a-pool must move the collaborators onto a real pool first."
 closed-reason: null
 ---
 
