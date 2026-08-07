@@ -68,6 +68,6 @@ reason.
 - [ ] Arms with no JS analogue are named in `SKIP_GROUPS` with a reason, not
       stubbed.
 - [ ] `pnpm api:compare --package activesupport` non-negative; `pnpm api:extra
-  --package activesupport` clean.
+--package activesupport` clean.
 - [ ] `packages/activesupport/src/json/encoding.test.ts` stays green; no test
       renamed.

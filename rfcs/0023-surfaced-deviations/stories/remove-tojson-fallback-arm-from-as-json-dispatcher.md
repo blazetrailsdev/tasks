@@ -64,4 +64,4 @@ convergence may be at the call sites rather than in the dispatcher.
 - [ ] `json/encoding.test.ts` and `json/encoding.trails.test.ts` green; no test
       renamed.
 - [ ] `pnpm api:extra --package activesupport` clean; `pnpm api:compare
-  --package activesupport` non-negative.
+--package activesupport` non-negative.
