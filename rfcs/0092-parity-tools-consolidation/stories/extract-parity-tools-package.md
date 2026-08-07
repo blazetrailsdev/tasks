@@ -2,7 +2,7 @@
 title: "Extract shared compare core into @blazetrails/parity-tools workspace package"
 status: draft
 updated: 2026-08-07
-rfc: "0000-parity-tools-consolidation"
+rfc: "0092-parity-tools-consolidation"
 cluster: null
 packages: []
 deps: []

@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-parity-tools-consolidation](rfcs/0000-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity-tools | draft | @deanmarano | — |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -96,3 +95,4 @@
 | [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @your-handle | corelib, activesupport, activemodel, activerecord |
 | [0090-0000-tasks-backlog-integrity](rfcs/0090-0000-tasks-backlog-integrity/README.md) | Tasks backlog integrity — guards for stranded and misfiled stories | draft | @deanmarano | — |
 | [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @your-handle | — |
+| [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity-tools | draft | @deanmarano | — |

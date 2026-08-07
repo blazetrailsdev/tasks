@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-tools-consolidation"
+rfc: "0092-parity-tools-consolidation"
 title: "Compare-tooling consolidation: @blazetrails/parity-tools"
 status: draft
 created: 2026-08-07
