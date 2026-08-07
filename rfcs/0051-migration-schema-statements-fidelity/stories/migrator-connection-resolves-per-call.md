@@ -1,6 +1,6 @@
 ---
 title: "Migrator#connection resolves DatabaseTasks.migration_connection per call and the adapter parameter goes"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["migrator-test-sites-adopt-rails-ctor-signature"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6200
 claim: "2026-08-07T20:40:39Z"
 assignee: "migrator-connection-resolves-per-call"
 blocked-by: null
