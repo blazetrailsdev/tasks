@@ -53,6 +53,17 @@ by `configurable.ts` or `context.ts`. See
 [[configurable-reads-the-context-through-contexts]], which is the other half of
 this graph.
 
+**Unblocked 2026-08-07.** The previous attempt stopped because ESM had no
+sanctioned deferral for Ruby's autoload and picking one was out of a 500 LOC
+story's scope. That decision now exists and is written down: CLAUDE.md,
+"Call-time constant resolution (Ruby autoload → the zero-import slot)", with
+`packages/activerecord/src/encryption/configurable-slot.ts` as a worked
+instance in this exact cluster (its header documents the same
+`EncryptingOnlyEncryptor extends Encryptor` TDZ this move hits). Apply that
+shape to `EncryptingOnlyEncryptor` rather than re-deriving a justification —
+and read the "do not add a third instance without reading that section" note in
+`configurable-slot.ts` first.
+
 ## Acceptance criteria
 
 - [ ] `withEncryptionContext`, `withoutEncryption`, `context`,
