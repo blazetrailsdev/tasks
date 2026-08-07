@@ -87,7 +87,7 @@ work and the acceptance-criteria overreach is what this story records.
 - [ ] If shape 1: `syncWrite`, `syncIdsWrite`, `HasOnePersistedAssignmentError`
       and `CollectionIdsAssignmentError` have zero source hits outside tests,
       including the through-inverse callers; `pnpm api:extra --package
-  activerecord` drops both error classes.
+activerecord` drops both error classes.
 - [ ] If shape 2: each surviving symbol carries its reason at the call site,
       and `grep-gate-sync-association-writers-to-zero`'s symbol list is
       narrowed to match before that gate ships.
