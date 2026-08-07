@@ -1,6 +1,6 @@
 ---
 title: "Migrator#with_advisory_lock adds a capability gate and currentDatabase probe Rails has not"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T16:02:16Z"
+assignee: "i18n-locale-tag-rfc4646"
 blocked-by: null
 closed-reason: null
 ---
