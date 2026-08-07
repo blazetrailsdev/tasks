@@ -1,6 +1,6 @@
 ---
 title: "Converge withOptions onto full OptionMerger semantics"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
+pr: 6201
 claim: "2026-08-07T21:12:47Z"
 assignee: "converge-composite-through-collection-proxy-owner-cols"
 blocked-by: null
