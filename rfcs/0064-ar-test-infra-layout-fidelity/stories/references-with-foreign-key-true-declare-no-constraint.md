@@ -1,6 +1,6 @@
 ---
 title: "t.references foreign_key: true builds no FK constraint in either canonical source"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
