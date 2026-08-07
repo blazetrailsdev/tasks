@@ -1,6 +1,6 @@
 ---
 title: "execute_migration_in_transaction's body lives in an invented _runMigration, and drops Rails' Migrating-to log line"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
