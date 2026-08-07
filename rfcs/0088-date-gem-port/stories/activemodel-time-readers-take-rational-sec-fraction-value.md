@@ -1,6 +1,6 @@
 ---
 title: "Type::Time#cast_value and #microseconds take a Rational :sec_fraction's value instead of carrying it"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6182
 claim: "2026-08-07T17:05:48Z"
 assignee: "activemodel-time-readers-take-rational-sec-fraction-value"
 blocked-by: null
