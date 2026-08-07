@@ -1,6 +1,6 @@
 ---
 title: "record_version_state_after_migrating calls recordVersion where Rails calls create_version"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
