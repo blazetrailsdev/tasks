@@ -1,6 +1,6 @@
 ---
 title: "Migrator#connection resolves DatabaseTasks.migration_connection per call and the adapter parameter goes"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T20:40:39Z"
+assignee: "migrator-connection-resolves-per-call"
 blocked-by: null
 closed-reason: null
 ---
