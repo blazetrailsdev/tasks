@@ -1,6 +1,6 @@
 ---
 title: "Converge the 12 order: rows the extractor traversal alignment surfaced"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6206
 claim: "2026-08-07T21:52:41Z"
 assignee: "converge-count-onto-calculate-perform-calculation"
 blocked-by: null
