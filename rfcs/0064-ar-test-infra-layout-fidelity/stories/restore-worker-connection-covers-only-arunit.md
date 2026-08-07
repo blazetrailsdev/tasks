@@ -1,6 +1,6 @@
 ---
 title: "restoreWorkerConnection() restores only arunit; connect() establishes both worker pools"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null

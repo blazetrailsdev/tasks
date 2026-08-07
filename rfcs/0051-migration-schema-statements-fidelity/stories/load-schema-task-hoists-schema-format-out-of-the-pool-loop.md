@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaBang reads SCHEMA_FORMAT outside the per-pool block Rails reads it inside"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
