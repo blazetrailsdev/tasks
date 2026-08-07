@@ -1,6 +1,6 @@
 ---
 title: "store_link and resolve_link normalize the locale through to_sym"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:44:45Z"
+assignee: "flatten-store-resolve-link-to-sym-parity"
 blocked-by: null
 closed-reason: null
 ---
