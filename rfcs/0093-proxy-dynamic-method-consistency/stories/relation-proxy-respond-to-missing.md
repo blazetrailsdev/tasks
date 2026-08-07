@@ -1,6 +1,6 @@
 ---
 title: "Add has traps + fix ownership test in relation/association dispatch proxies"
-status: draft
+status: ready
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
