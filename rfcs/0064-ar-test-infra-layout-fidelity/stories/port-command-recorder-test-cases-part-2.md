@@ -6,7 +6,7 @@ rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: null
 claim: null
