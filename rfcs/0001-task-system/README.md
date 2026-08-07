@@ -182,6 +182,7 @@ title: "<short prose title>"
 status: ready
 rfc: "0001-task-system"
 cluster: <freetext grouping label>
+packages: []
 deps: []
 est-loc: 180
 pr: null
@@ -208,20 +209,21 @@ Optional. Hazards, Rails source pointers, non-obvious context.
 
 ### Frontmatter schema
 
-| Field           | Type            | Values                                                                       | Required                 |
-| --------------- | --------------- | ---------------------------------------------------------------------------- | ------------------------ |
-| `title`         | string          | prose                                                                        | yes                      |
-| `status`        | enum            | `draft` `ready` `claimed` `in-progress` `done` `blocked` `closed`            | yes                      |
-| `rfc`           | string          | RFC slug, e.g. `"0001-task-system"`                                          | yes                      |
-| `cluster`       | string          | must match one of the parent RFC's declared `clusters`                       | yes                      |
-| `deps`          | string[]        | story IDs this story depends on                                              | yes (empty `[]` if none) |
-| `deps-rfc`      | string[]        | RFC slugs that must reach `status: closed` before this story is ready        | no                       |
-| `est-loc`       | integer \| null | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown | yes (field present)      |
-| `pr`            | integer \| null | GitHub PR number once open                                                   | no                       |
-| `claim`         | string \| null  | ISO timestamp when claimed                                                   | no                       |
-| `assignee`      | string \| null  | worktree name or agent ID                                                    | no                       |
-| `blocked-by`    | string \| null  | freetext reason if status is `blocked`                                       | no                       |
-| `closed-reason` | string \| null  | freetext reason if status is `closed` (superseded/abandoned/won't-do)        | no                       |
+| Field           | Type            | Values                                                                                                                                          | Required                 |
+| --------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `title`         | string          | prose                                                                                                                                           | yes                      |
+| `status`        | enum            | `draft` `ready` `claimed` `in-progress` `done` `blocked` `closed`                                                                               | yes                      |
+| `rfc`           | string          | RFC slug, e.g. `"0001-task-system"`                                                                                                             | yes                      |
+| `cluster`       | string          | must match one of the parent RFC's declared `clusters`                                                                                          | yes                      |
+| `packages`      | string[]        | trails packages this story touches; each must appear in the parent RFC's `packages`. Empty/absent ⇒ displays the parent RFC's list as inherited | no                       |
+| `deps`          | string[]        | story IDs this story depends on                                                                                                                 | yes (empty `[]` if none) |
+| `deps-rfc`      | string[]        | RFC slugs that must reach `status: closed` before this story is ready                                                                           | no                       |
+| `est-loc`       | integer \| null | estimated PR LOC (additions + deletions, excl. lockfiles); `null` if unknown                                                                    | yes (field present)      |
+| `pr`            | integer \| null | GitHub PR number once open                                                                                                                      | no                       |
+| `claim`         | string \| null  | ISO timestamp when claimed                                                                                                                      | no                       |
+| `assignee`      | string \| null  | worktree name or agent ID                                                                                                                       | no                       |
+| `blocked-by`    | string \| null  | freetext reason if status is `blocked`                                                                                                          | no                       |
+| `closed-reason` | string \| null  | freetext reason if status is `closed` (superseded/abandoned/won't-do)                                                                           | no                       |
 
 Status lifecycle:
 

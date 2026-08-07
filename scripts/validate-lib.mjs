@@ -214,6 +214,25 @@ export function validate({ rfcs, stories }) {
         );
       }
     }
+    // packages: optional, and when present must name packages the parent RFC
+    // already declares — same containment rule as `cluster` above. Absent means
+    // "inherit the RFC's list" (that fallback is a display concern, not stored).
+    if (fm.packages !== undefined && fm.packages !== null) {
+      if (!Array.isArray(fm.packages)) err(s.file, `packages must be an array`);
+      else if (fm.packages.some((p) => typeof p !== "string"))
+        err(s.file, `packages must be an array of strings`);
+      else if (parent) {
+        const declared = parent.frontmatter?.packages ?? [];
+        for (const p of fm.packages) {
+          if (!declared.includes(p)) {
+            err(
+              s.file,
+              `package "${p}" not declared in ${s.rfc}/README.md packages: [${declared.join(", ")}]`,
+            );
+          }
+        }
+      }
+    }
     if (fm.deps && !Array.isArray(fm.deps)) err(s.file, `deps must be an array`);
     if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
     if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {

@@ -77,6 +77,9 @@ const indexJson = {
       // The authored frontmatter status, before the parent-RFC override.
       raw_status: fm.status ?? null,
       cluster: fm.cluster ?? null,
+      // Authored packages only — empty means "inherit the parent RFC's list",
+      // which consumers (btwhooks' story/backlog pages) resolve at display time.
+      packages: fm.packages ?? [],
       priority: Number.isInteger(fm.priority) ? fm.priority : null,
       updated: fm.updated ?? null,
       deps: fm.deps ?? [],
@@ -113,7 +116,7 @@ const haystack = [
       id: s.id,
       type: "story",
       title: fm.title ?? "",
-      terms: [s.id, fm.title, fm.cluster, s.rfc, firstHeading(s.body)]
+      terms: [s.id, fm.title, fm.cluster, ...(fm.packages ?? []), s.rfc, firstHeading(s.body)]
         .filter(Boolean)
         .join(" ")
         .toLowerCase(),
