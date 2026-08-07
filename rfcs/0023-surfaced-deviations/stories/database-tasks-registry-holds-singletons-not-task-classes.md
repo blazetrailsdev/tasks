@@ -1,0 +1,107 @@
+---
+title: "@tasks holds handler singletons, so database_adapter_for cannot instantiate or forward *arguments"
+status: draft
+updated: 2026-08-07
+rfc: "0023-surfaced-deviations"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: 200
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Surfaced in #6185. `class_for_adapter` and `database_adapter_for` were ported
+onto their Rails names there, but the registry they read is a trails invention
+and the Rails bodies could only be matched down to their lookup half.
+
+Rails, `vendor/rails/activerecord/lib/active_record/tasks/database_tasks.rb`:
+
+```ruby
+# :73-76
+def register_task(pattern, task)
+  @tasks ||= {}
+  @tasks[pattern] = task
+end
+
+register_task(/mysql/,        "ActiveRecord::Tasks::MySQLDatabaseTasks")   # :78
+register_task(/trilogy/,      "ActiveRecord::Tasks::MySQLDatabaseTasks")   # :79
+register_task(/postgresql/,   "ActiveRecord::Tasks::PostgreSQLDatabaseTasks") # :80
+register_task(/sqlite/,       "ActiveRecord::Tasks::SQLiteDatabaseTasks")  # :81
+
+# :566-572
+def database_adapter_for(db_config, *arguments)
+  klass = class_for_adapter(db_config.adapter)
+  converted = klass.respond_to?(:using_database_configurations?) && klass.using_database_configurations?
+  config = converted ? db_config : db_config.configuration_hash
+  klass.new(config, *arguments)
+end
+
+# :574-580
+def class_for_adapter(adapter)
+  _key, task = @tasks.reverse_each.detect { |pattern, _task| adapter[pattern] }
+  unless task
+    raise DatabaseNotSupported, "Rake tasks not supported by '#{adapter}' adapter"
+  end
+  task.is_a?(String) ? task.constantize : task
+end
+```
+
+Three divergences remain in `packages/activerecord/src/tasks/database-tasks.ts`:
+
+1. **`@tasks` is a Hash of pattern => task CLASS (or its name); ours is an
+   array of pattern => handler SINGLETON.** So `database_adapter_for` cannot
+   do `klass.new(config, *arguments)` — the handler already is the instance —
+   and `using_database_configurations?` / `configuration_hash` (the arm that
+   decides whether the task gets a `DatabaseConfig` or a raw hash) has no
+   analogue at all. Every trails task handler unconditionally receives a
+   `DatabaseConfig`.
+2. **`*arguments` is dropped throughout.** `create`, `drop`, `charset`,
+   `collation`, `structure_dump`, `structure_load` all take `(configuration,
+*arguments)` and forward them to the task constructor. Ours take only the
+   configuration (and `structureDump`/`structureLoad` take an invented
+   `extraFlags` parameter instead of Rails' `filename = arguments.delete_at(0)`
+   positional destructuring).
+3. **`resolveTask` is invented public surface** duplicating
+   `class_for_adapter`'s `reverse_each.detect` half. `pnpm api:extra --package
+activerecord` lists it among the file's novel names. `classForAdapter`
+   currently delegates to it; deleting it means rewriting six call sites in
+   `database-tasks.test.ts` (:220, :228, :232), `support/connection.test.ts`
+   (:112), `mysql-database-tasks.test.ts` (:44),
+   `postgresql-database-tasks.test.ts` (:46), `sqlite-database-tasks.test.ts`
+   (:86) — the "unregistered task" one expects `undefined` where
+   `classForAdapter` raises.
+
+## Converged shape
+
+`registerTask(pattern, task)` stores the task CLASS keyed by pattern;
+`classForAdapter` folds the `reverse_each.detect` inline and `resolveTask` is
+deleted; `databaseAdapterFor(dbConfig, ...arguments_)` reinstates the
+`usingDatabaseConfigurations` / `configurationHash` arm and constructs
+`new klass(config, ...arguments_)`. The `*arguments` thread is then restorable
+through `create`/`drop`/`charset`/`collation`/`structureDump`/`structureLoad`,
+retiring the invented `extraFlags` parameter.
+
+Likely needs splitting — the registry flip touches all four task handler
+modules (`sqlite-`, `postgresql-`, `mysql-database-tasks.ts` each expose a
+`register()` that pushes a singleton) plus their tests. Size accordingly when
+triaged; estimate below is the registry flip alone.
+
+## Acceptance criteria
+
+- `@tasks` holds task classes; `databaseAdapterFor` instantiates and carries
+  the `using_database_configurations?` arm.
+- `resolveTask` is gone and `api:extra --package activerecord` shows one fewer
+  novel name on `tasks/database-tasks.ts`.
+- `*arguments` reaches the task constructor from every Rails entry point that
+  declares it; `extraFlags` is deleted.
+- Handler test names stay verbatim; the `unregistered task` case asserts
+  `DatabaseNotSupported` with Rails' message.
+- `pnpm api:calls` stays green.
