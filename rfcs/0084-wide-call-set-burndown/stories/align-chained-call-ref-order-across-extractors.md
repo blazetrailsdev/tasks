@@ -1,6 +1,6 @@
 ---
 title: "Ruby and TS call-skeleton extractors emit chained-call refs in opposite orders"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
