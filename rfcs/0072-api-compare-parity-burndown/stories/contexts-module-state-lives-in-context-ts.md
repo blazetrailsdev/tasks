@@ -1,6 +1,6 @@
 ---
 title: "The Contexts module's state and methods live in context.ts, not contexts.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6184
 claim: "2026-08-07T17:13:47Z"
 assignee: "fk-test-pair-columns-are-integer-not-bigint"
 blocked-by: null
