@@ -1,6 +1,6 @@
 ---
 title: "Polymorphic t.references emits x_type before x_id; both canonical sources reverse it"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
