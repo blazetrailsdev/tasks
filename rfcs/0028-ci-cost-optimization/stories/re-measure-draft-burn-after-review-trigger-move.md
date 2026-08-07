@@ -1,6 +1,6 @@
 ---
 title: "Re-measure the draft-deferral net saving once the review trigger moves pre-ready"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6188
 claim: "2026-08-07T17:21:52Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
