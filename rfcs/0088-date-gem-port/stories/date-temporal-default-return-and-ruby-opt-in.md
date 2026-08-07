@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
-deps: []
+deps:
+  - strftime-and-localize-accept-temporal-subjects
 deps-rfc: []
 est-loc: null
 priority: null
