@@ -58,8 +58,13 @@ drops its leading adapter parameter to match
 `Migrator.new(direction, migrations, schema_migration, internal_metadata,
 target_version)` (`migration.rb:1478-1485`).
 
-Check `DatabaseTasks.migration_connection` exists in trails first — if it does
-not, that is this story's first half, and it may be worth splitting.
+Checked 2026-08-07 on origin/main (311bff350): `DatabaseTasks.migrationConnection()`
+**does** exist (`packages/activerecord/src/tasks/database-tasks.ts:1281`, with
+a synchronous lease documented at :495, and a free-function wrapper at :1539).
+So the split this paragraph hedged about is not needed — this story is
+self-contained. The reader to retire is `Migrator`'s private getter at
+`packages/activerecord/src/migration.ts:2492`, whose JSDoc (:2488-2491) already
+names the deviation.
 
 ## Acceptance criteria
 
