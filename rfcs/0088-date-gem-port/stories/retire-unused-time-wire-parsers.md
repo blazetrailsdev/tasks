@@ -1,6 +1,6 @@
 ---
 title: "Delete the time wire parsers left with no caller after Type::Time casts the raw string"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
