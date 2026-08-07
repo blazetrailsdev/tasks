@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaIfPendingBang drops any_schema_needs_update? / load_schema!; port migration.rb:730-736"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
