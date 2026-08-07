@@ -1,6 +1,6 @@
 ---
 title: "load_yml/load_json take the legacy probe arm Rails never takes"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T15:54:17Z"
+assignee: "i18n-load-yml-json-take-the-psych4-arm"
 blocked-by: null
 closed-reason: null
 ---
