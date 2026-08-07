@@ -1,6 +1,6 @@
 ---
 title: "wnumx inlines c_jd_to_weeknum's algebra instead of porting the JDN helpers"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
