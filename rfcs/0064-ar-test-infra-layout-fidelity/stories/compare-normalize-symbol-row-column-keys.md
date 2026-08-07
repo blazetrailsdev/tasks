@@ -4,8 +4,7 @@ status: ready
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-packages:
-  - activerecord
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
