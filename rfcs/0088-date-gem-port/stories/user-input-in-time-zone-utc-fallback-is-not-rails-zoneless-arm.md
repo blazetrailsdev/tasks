@@ -1,6 +1,6 @@
 ---
 title: "user_input_in_time_zone substitutes UTC where Ruby answers a zoneless to_time"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
