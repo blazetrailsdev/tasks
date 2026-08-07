@@ -1,7 +1,7 @@
 ---
 title: "of-kind-default-type-and-normalize-arguments"
-status: blocked
-updated: 2026-08-04
+status: ready
+updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-04T23:11:10Z"
-assignee: "of-kind-default-type-and-normalize-arguments"
-blocked-by: "Blocked on open PR #6098 (branch error-type-symbols-are-colon-strings), which rewrites Errors#ofKind/#added bodies in packages/activemodel/src/errors.ts and the assertions in errors.test.ts (+226/-226) and validations.test.ts (+39/-43) that this story must update. The story context itself says #6098 'converged the Symbol-vs-String dispatch in both methods and left these two divergences as out of scope' — that convergence is not on main yet, so the colon idiom this story builds on does not exist there. Re-ready once #6098 merges; the work is small (delete the type===undefined arm, default type to ':invalid', route both methods through normalizeArguments, update errors.test.ts:488-489 and validations.test.ts:2062-2063)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
