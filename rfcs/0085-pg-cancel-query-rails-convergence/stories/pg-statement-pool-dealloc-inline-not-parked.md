@@ -1,6 +1,6 @@
 ---
 title: "Deallocate the evicted statement inline, deleting _pendingDeallocate"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6202
 claim: "2026-08-07T21:04:43Z"
 assignee: "api-compare-orphan-buckets-activesupport-core-ext-tail-2"
 blocked-by: null
