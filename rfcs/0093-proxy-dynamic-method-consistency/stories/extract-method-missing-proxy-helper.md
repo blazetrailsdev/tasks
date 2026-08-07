@@ -1,6 +1,6 @@
 ---
 title: "Extract shared method_missing forwarding proxy helper"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T21:04:43Z"
+assignee: "api-compare-orphan-buckets-activesupport-core-ext-tail-2"
 blocked-by: null
 closed-reason: null
 ---
