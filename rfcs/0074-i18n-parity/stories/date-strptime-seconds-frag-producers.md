@@ -18,7 +18,10 @@ closed-reason: null
 ## Context
 
 PR #6112 ported `rt_rewrite_frags` (date-3.4.1 `ext/date/date_core.c:3839-3872`)
-into `rtRewriteFrags` in `packages/i18n/src/date.ts`. It expands a `:seconds`
+into `rtRewriteFrags` in `packages/date/src/date.ts:1709` (the file moved out
+of `packages/i18n` with PR #6144; still unported on main as of 311bff350 —
+`git grep strptime packages/date/src/date.ts` finds only the JSDoc at :308
+naming it as the missing producer). It expands a `:seconds`
 frag into `:jd` + `:hour`/`:min`/`:sec`/`:sec_fraction`.
 
 **Nothing produces a `:seconds` frag in trails.** `date__parse` never sets one
@@ -31,7 +34,7 @@ frag into `:jd` + `:hour`/`:min`/`:sec`/`:sec_fraction`.
 
 So the rewrite step is currently reachable only from the regression test, which
 drives `dNewByFrags` with the frag directly
-(`packages/i18n/src/date.trails.test.ts`, "expands a seconds frag into a jd and
+(`packages/date/src/date.trails.test.ts`, "expands a seconds frag into a jd and
 a time of day, as rt_rewrite_frags does").
 
 The date gem source is NOT vendored (C stdlib). On this host it reads at

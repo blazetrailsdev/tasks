@@ -17,7 +17,8 @@ closed-reason: null
 
 ## Context
 
-`rtRewriteFrags` (`packages/i18n/src/date.ts`, ported in #6112 from date-3.4.1
+`rtRewriteFrags` (`packages/date/src/date.ts:1709` — the file moved out of `packages/i18n`
+with PR #6144; ported in #6112 from date-3.4.1
 `ext/date/date_core.c:3839-3872`) folds an `:offset` into `:seconds` before
 splitting out the time of day:
 
@@ -39,6 +40,10 @@ fractional-hour zone with more than two decimal places — the case
 `dateZoneToDiff` answers a `Rational` for, see the done story
 `i18n-date-zone-to-diff-rational-offset` — loses exactness in the resulting
 `:sec_fraction`.
+
+Re-verified 2026-08-07 on origin/main (311bff350): the value-taking line
+survives #6153's re-seating of `Date` on `Temporal.PlainDate`, at
+`packages/date/src/date.ts:1716`.
 
 `Rational` already lives in `date.ts` (`rational.c` `nurat_add` is ported as
 `Rational#add`), so the arithmetic exists; only the division-and-modulo chain
