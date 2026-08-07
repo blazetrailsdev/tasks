@@ -1,6 +1,6 @@
 ---
 title: "Measure the scoped lint job on CI and tune LINT_ALL_RE / prelint hoisting"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6195
 claim: "2026-08-07T19:28:44Z"
 assignee: "execute-migration-in-transaction-split-into-invented-run-migration"
 blocked-by: null
