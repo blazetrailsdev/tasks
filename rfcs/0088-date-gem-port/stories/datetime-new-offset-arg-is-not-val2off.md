@@ -1,6 +1,6 @@
 ---
 title: "DateTime.new's offset argument takes seconds, where val2off takes a day fraction"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6172
 claim: "2026-08-07T13:39:44Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
