@@ -1,7 +1,7 @@
 ---
 title: "Hold the connection lock for the query's whole life; delete the owner token"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: ["pg-transaction-status-port"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T13:08:28Z"
+assignee: "adapter-ddl-bodies-clear-schema-cache-rails-never-touches"
 blocked-by: null
 closed-reason: null
 ---
