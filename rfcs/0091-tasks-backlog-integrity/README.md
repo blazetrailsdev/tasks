@@ -1,5 +1,5 @@
 ---
-rfc: "0000-tasks-backlog-integrity"
+rfc: "0091-tasks-backlog-integrity"
 title: "Tasks backlog integrity"
 status: draft
 created: 2026-08-07
@@ -9,7 +9,7 @@ packages: []
 clusters: []
 ---
 
-# RFC — Tasks backlog integrity
+# RFC 0091 — Tasks backlog integrity
 
 ## Summary
 
