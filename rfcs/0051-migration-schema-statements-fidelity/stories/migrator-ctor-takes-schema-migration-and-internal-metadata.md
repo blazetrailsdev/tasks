@@ -1,6 +1,6 @@
 ---
 title: "Migrator's constructor takes schema_migration and internal_metadata, as Rails' does"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
