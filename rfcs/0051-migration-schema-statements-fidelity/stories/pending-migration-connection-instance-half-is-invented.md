@@ -1,6 +1,6 @@
 ---
 title: "PendingMigrationConnection's constructor / withAdapter have no Rails counterpart; delete with CheckPending's pendingConnection arm"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T12:28:33Z"
+assignee: "abstract-ddl-bodies-clear-schema-cache-rails-never-touches"
 blocked-by: null
 closed-reason: null
 ---

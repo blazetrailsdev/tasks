@@ -1,6 +1,6 @@
 ---
 title: "PendingMigrationError#initialize drops the nil pending_migrations: branch (migration.rb:160-162)"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T12:28:33Z"
+assignee: "abstract-ddl-bodies-clear-schema-cache-rails-never-touches"
 blocked-by: null
 closed-reason: null
 ---
