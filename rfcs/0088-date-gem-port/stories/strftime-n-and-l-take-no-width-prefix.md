@@ -1,6 +1,6 @@
 ---
 title: "strftime's %N/%L accept no width prefix, so %12N and %3N fall through verbatim"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
