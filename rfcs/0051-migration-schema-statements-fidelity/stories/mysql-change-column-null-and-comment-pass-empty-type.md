@@ -1,6 +1,6 @@
 ---
 title: 'MySQL change_column_null/change_column_comment pass "" where Rails passes nil, plus an invented undefined→null comment normalization'
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T19:28:44Z"
+assignee: "execute-migration-in-transaction-split-into-invented-run-migration"
 blocked-by: null
 closed-reason: null
 ---
