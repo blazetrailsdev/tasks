@@ -32,12 +32,19 @@ the third is already owned elsewhere.
   `structureDumpFlagsFor`, `structureLoadFlagsFor`, `schemaSha1`,
   `withTemporaryPoolForEach`. Rails:
   `vendor/rails/activerecord/lib/active_record/tasks/database_tasks.rb`.
-- `packages/activerecord/src/migration.ts` —
-  `executeMigrationInTransaction` (migration.ts:2418), `ddlTransaction`
-  (migration.ts:2785), `recordVersionStateAfterMigrating` (migration.ts:2456),
-  `executeBlock` (migration.ts:1595), `compatibleTableDefinition`
-  (migration.ts:1363). Rails:
-  `vendor/rails/activerecord/lib/active_record/migration.rb`.
+  **Split 2026-08-07.** The `migration.ts` cluster this story used to also name
+  is now its own story,
+  [[activerecord-unrouted-privates-migration-cluster]] (ready) — the "one PR per
+  cluster" line below meant this story could never be one PR. **This story is now
+  scoped to `tasks/database-tasks.ts` only.**
+
+Re-verified on origin/main (311bff350): the database-tasks cluster still shows
+the exact pattern "The shape that worked" describes — `schemaSha1` exists as a
+dead exported free function at `database-tasks.ts:1582` while every live caller
+goes through the invented `_schemaSha1` (:1331, called from :989 and :1327).
+`resolveConfiguration` (:1496), `databaseAdapterFor` (:1534) and
+`classForAdapter` (:1543) are likewise free functions at the bottom of the
+file; `withTemporaryPoolForEach` is a static at :1239.
 
 **Already owned — do not re-derive:** the `database-configurations.ts` cluster
 (`buildConfigs` / `envWithConfigs` / `walkConfigs`, and the invented
