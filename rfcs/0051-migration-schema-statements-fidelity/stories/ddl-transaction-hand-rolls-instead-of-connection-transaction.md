@@ -1,7 +1,7 @@
 ---
 title: "Migrator#ddl_transaction hand-rolls begin/commit instead of calling connection.transaction"
-status: draft
-updated: 2026-08-05
+status: ready
+updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
