@@ -1,6 +1,6 @@
 ---
 title: "converge-jsonify-branch-order-onto-rails-as-json"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6205
 claim: "2026-08-07T22:00:40Z"
 assignee: "converge-jsonify-branch-order-onto-rails-as-json"
 blocked-by: null
