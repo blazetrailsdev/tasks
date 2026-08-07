@@ -1,7 +1,7 @@
 ---
 title: "Audit the invented guard/discard/finally in execRollbackDbTransaction"
-status: draft
-updated: 2026-07-31
+status: blocked
+updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Verified 2026-08-07: conflicts with OPEN sibling PR #6171 (refactor(activerecord): the connection lock outlives no query), which is exactly this story's own AC-4 prerequisite — 'Re-check after pg-lock-scope-no-escaping-queries lands: some of this exists only to survive the cancel races that story removes.' #6171 rewrites packages/activerecord/src/connection-adapters/postgresql-adapter.ts and abstract/transaction.ts, the two files holding execRollbackDbTransaction / execRestartDbTransaction and the _client/_inTransaction bookkeeping this story audits, so the audit would be run against a shape that is about to change and would conflict on the same lines. Unblock once #6171 merges, then re-derive which of the three additions is still load-bearing."
 closed-reason: null
 ---
 
