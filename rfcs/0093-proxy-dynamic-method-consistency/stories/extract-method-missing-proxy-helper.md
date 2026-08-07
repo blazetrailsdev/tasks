@@ -1,6 +1,6 @@
 ---
 title: "Extract shared method_missing forwarding proxy helper"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
