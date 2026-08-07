@@ -1,6 +1,6 @@
 ---
 title: "Migrator's constructor takes schema_migration and internal_metadata, as Rails' does"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6184
 claim: "2026-08-07T17:13:47Z"
 assignee: "fk-test-pair-columns-are-integer-not-bigint"
 blocked-by: null
