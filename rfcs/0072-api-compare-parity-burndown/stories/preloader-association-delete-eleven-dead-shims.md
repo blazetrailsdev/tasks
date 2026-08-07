@@ -1,6 +1,6 @@
 ---
 title: "Delete the 11 dead Rails-named shims in preloader/association.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6188
 claim: "2026-08-07T17:21:52Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
