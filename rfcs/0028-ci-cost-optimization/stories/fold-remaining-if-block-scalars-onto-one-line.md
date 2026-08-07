@@ -27,16 +27,28 @@ GitHub Actions' expression grammar treats newlines as whitespace, so the runtime
 effect today is nil — this is latent fragility and byte-inconsistency with the
 file's own convention, not a live bug.
 
-PR #5749 fixed `postgres-tests` and `maria-tests`. Still affected (identified by
-the reviewer on that PR): `virtualized-dx-type-tests`, `leaf-tests` (job-level
-`if:` and its "DX type tests" step), `sqlite-mem-tests`, `trails-tsc-tests`,
-`website`.
+PR #5749 fixed `postgres-tests` and `maria-tests`. Re-measured 2026-08-07 on
+origin/main (311bff350) with the reproducer below — the affected set has GROWN
+since this was filed, so work from this list, not the original one
+(job -> embedded newline count):
+
+- `guides-typecheck`: 1
+- `virtualized-dx-type-tests`: 1
+- `leaf-tests`: 4 (job-level `if:` and its "DX type tests" step)
+- `sqlite-mem-tests`: 1
+- `trails-tsc-tests`: 1
+- `maria-prepared-tests`: 3
+- `website`: 1
+
+`guides-typecheck` and `maria-prepared-tests` are new since the story was
+written.
 
 Reproduce:
 
 ```sh
 python3 -c "import yaml;d=yaml.safe_load(open('.github/workflows/ci.yml'));\
-print({k:v['if'].count(chr(10)) for k,v in d['jobs'].items() if 'if' in v})"
+print({k: v['if'].count(chr(10)) for k, v in d['jobs'].items() \
+  if isinstance(v.get('if'), str) and chr(10) in v['if']})"
 ```
 
 ## Acceptance criteria
