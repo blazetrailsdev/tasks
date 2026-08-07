@@ -1,7 +1,7 @@
 ---
 title: "mixin-drift-suite-not-triggered-by-adapter-only-prs"
-status: draft
-updated: 2026-08-02
+status: ready
+updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
