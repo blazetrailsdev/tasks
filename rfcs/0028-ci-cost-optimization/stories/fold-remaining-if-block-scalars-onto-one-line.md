@@ -1,6 +1,6 @@
 ---
 title: "Fold the remaining if: block scalars so expressions carry no literal newlines"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
