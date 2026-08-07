@@ -1,6 +1,6 @@
 ---
 title: "delete-nested-attributes-deferred-displacement"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T02:28:27Z"
+assignee: "api-compare-orphan-buckets-activesupport-core-ext-tail"
 blocked-by: null
 closed-reason: null
 ---
