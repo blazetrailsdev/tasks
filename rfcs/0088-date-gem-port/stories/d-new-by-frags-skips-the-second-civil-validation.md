@@ -1,7 +1,7 @@
 ---
 title: "dNewByFrags/dtNewByFrags re-validate where d_simple_new_internal writes directly"
-status: in-progress
-updated: 2026-08-06
+status: done
+updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []
