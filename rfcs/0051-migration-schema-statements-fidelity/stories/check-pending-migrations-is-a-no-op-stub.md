@@ -1,6 +1,6 @@
 ---
 title: "Migration.checkPendingMigrations is a no-op stub; port migration.rb:739-746"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
