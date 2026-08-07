@@ -1,6 +1,6 @@
 ---
 title: "_commandSettled misses the savepoint and DEALLOCATE issue sites"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T20:32:46Z"
+assignee: "converge-comment-or-changes-descriptor-spellings"
 blocked-by: null
 closed-reason: null
 ---
