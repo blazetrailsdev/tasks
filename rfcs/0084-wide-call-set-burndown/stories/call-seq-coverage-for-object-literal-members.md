@@ -1,7 +1,7 @@
 ---
 title: "callSeq for object-literal and arrow-function exports, so order parity covers the whole calls population"
-status: ready
-updated: 2026-08-06
+status: claimed
+updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T02:08:30Z"
+assignee: "datetime-to-s-drops-the-time-of-day"
 blocked-by: null
 closed-reason: null
 ---
