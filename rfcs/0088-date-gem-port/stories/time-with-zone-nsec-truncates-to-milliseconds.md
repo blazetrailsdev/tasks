@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone#nsec/#usec truncate to milliseconds, so %N can never answer nine digits"
-status: in-progress
-updated: 2026-08-06
+status: done
+updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []

@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQLDatabaseTasks#truncateAll is a trails invention that hand-builds an adapter instead of delegating"
-status: in-progress
-updated: 2026-08-06
+status: done
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
