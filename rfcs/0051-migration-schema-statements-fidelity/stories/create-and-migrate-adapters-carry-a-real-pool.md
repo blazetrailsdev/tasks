@@ -1,6 +1,6 @@
 ---
 title: "createAndMigrate's adapters carry a real pool, so record_environment reads it as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6197
 claim: "2026-08-07T19:52:41Z"
 assignee: "relation-proxy-respond-to-missing"
 blocked-by: null
