@@ -1,6 +1,6 @@
 ---
 title: "Migrator test construction sites adopt Rails' constructor signature"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["migrator-ctor-takes-schema-migration-and-internal-metadata"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: 6194
 claim: "2026-08-07T19:36:37Z"
 assignee: "migrator-test-sites-adopt-rails-ctor-signature"
 blocked-by: null
