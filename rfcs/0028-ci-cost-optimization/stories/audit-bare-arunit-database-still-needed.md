@@ -1,7 +1,7 @@
 ---
 title: "Audit whether the bare activerecord_unittest database is still needed by stamped runs"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
