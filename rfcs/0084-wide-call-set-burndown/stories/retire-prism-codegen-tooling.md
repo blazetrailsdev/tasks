@@ -1,6 +1,6 @@
 ---
 title: "Retire prism-codegen and its two CI gates"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
