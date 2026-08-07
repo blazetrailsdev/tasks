@@ -43,6 +43,15 @@ implemented.
 Related: `re-measure-draft-burn-after-review-trigger-move` (measurement),
 `create-run-db-adapters-label` (the opt-in label does not exist on the repo yet).
 
+**Left `draft` deliberately by the 2026-08-07 backlog sweep.** Every other 0028
+draft was readied; this one was not, and that is the finding, not an oversight.
+The audit filed it NEEDS-DISCUSSION and the body says so — "this is a judgment
+call, not a mechanical one". Both outcomes below are defensible from the same
+measurements, so an agent claiming it would be making a CI-policy call on the
+user's behalf rather than executing a decision. Promote it to `ready` only
+after the decision in AC-1 has actually been taken by a human; the implementation
+half (AC-2/AC-3) is mechanical once it has.
+
 ## Acceptance criteria
 
 - A decision is recorded (in this story) on whether draft PRs keep the
