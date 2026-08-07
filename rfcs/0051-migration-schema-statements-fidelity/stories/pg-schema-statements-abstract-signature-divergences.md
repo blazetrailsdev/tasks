@@ -1,6 +1,6 @@
 ---
 title: "pg-schema-statements-abstract-signature-divergences"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6164
 claim: "2026-08-07T01:28:29Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
