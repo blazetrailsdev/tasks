@@ -1,6 +1,6 @@
 ---
 title: "Stop constructing adapters that outlive a pool, so NullPool#role/#shard can go"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
