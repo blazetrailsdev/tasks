@@ -1,6 +1,6 @@
 ---
 title: "DateTime.new's offset argument takes seconds, where val2off takes a day fraction"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
