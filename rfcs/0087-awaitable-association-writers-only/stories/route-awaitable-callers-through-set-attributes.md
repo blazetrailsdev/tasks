@@ -1,6 +1,6 @@
 ---
 title: "Route update/create through setAttributes so a displacing nested write runs at assignment, not at save"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6204
 claim: "2026-08-07T21:44:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
