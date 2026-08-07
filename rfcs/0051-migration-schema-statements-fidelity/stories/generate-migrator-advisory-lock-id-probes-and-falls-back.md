@@ -1,6 +1,6 @@
 ---
 title: "generate_migrator_advisory_lock_id carries a currentDatabase probe and an empty-name salt fallback Rails has not"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
