@@ -1,6 +1,6 @@
 ---
 title: "Rational's numerator/denominator are JS numbers where Ruby's are Integers"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6186
 claim: "2026-08-07T17:44:45Z"
 assignee: "flatten-store-resolve-link-to-sym-parity"
 blocked-by: null
