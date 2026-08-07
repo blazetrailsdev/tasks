@@ -1,6 +1,6 @@
 ---
 title: "abstract-adapter-pool-readers-soften-rails-behaviour"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6188
 claim: "2026-08-07T17:21:52Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
