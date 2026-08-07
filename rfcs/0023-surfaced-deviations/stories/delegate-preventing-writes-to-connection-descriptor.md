@@ -1,14 +1,14 @@
 ---
 title: "Delegate isPreventingWrites to ConnectionDescriptor#currentPreventingWrites instead of re-walking the stack"
-status: draft
-updated: 2026-07-30
+status: done
+updated: 2026-08-07
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6188
 claim: null
 assignee: null
 blocked-by: null
