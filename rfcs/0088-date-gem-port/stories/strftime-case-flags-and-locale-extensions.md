@@ -1,12 +1,12 @@
 ---
-title: "strftime drops the ^ # E O flag cases date_strftime.c reads ahead of every directive"
+title: "strftime drops the E and O locale-extension flag cases date_strftime.c reads ahead of every directive"
 status: draft
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 110
+est-loc: 70
 priority: null
 pr: null
 claim: null
@@ -17,54 +17,54 @@ closed-reason: null
 
 ## Context
 
-`strftime` (`packages/date/src/date.ts`) reads flags, padding and width ahead of
-every directive since PR #6178, but four of `date_strftime.c`'s flag cases are
-still unimplemented, so each falls through to `unknown:` verbatim:
+Narrowed by PR #6193 (`strftime-lacks-composite-conversions`), which shipped the
+`^` and `#` half of this story: `strftime` (`packages/date/src/date.ts`) now has
+a `case "^"` setting `upper` and a `case "#"` setting `chcase`, both behind
+`flagFound()` as the C is, the `CHCASE`-to-`UPPER` resolution on
+`%A`/`%a`/`%B`/`%b`/`%h`, the `CHCASE`-to-`LOWER` resolution on `%Z`, the
+asymmetric `%p`/`%P` rule at `date_strftime.c:341-345`, and the shared
+upcase/downcase tail. `%^b` is `"MAR"` and `%^P` is `"AM"`.
 
-- `case '^'` (`vendor/date/ext/date/date_strftime.c:561-564`) sets
-  `BIT_OF(UPPER)`.
-- `case '#'` (`date_strftime.c:566-569`) sets `BIT_OF(CHCASE)`.
-- `case 'E'` (`date_strftime.c:524-529`) and `case 'O'` (`date_strftime.c:530-535`)
-  set the POSIX locale extensions and `goto again` when the NEXT character is in
-  their own whitelist (`"cCxXyY"` for `E`, `"deHkIlmMSuUVwWy"` for `O`),
+Two flag cases remain unimplemented, so each still falls through to `unknown:`
+verbatim:
+
+- `case 'E'` (`vendor/date/ext/date/date_strftime.c:524-529`) — sets
+  `BIT_OF(LOCALE_E)` and `goto again` when the NEXT character is in `"cCxXyY"`,
   otherwise `goto unknown`.
-
-The flags are consumed by the `break` arms and by `STRFTIME`: `%A`/`%a`
-(`date_strftime.c:176-179`), `%B`/`%b`/`%h` (`:196-199`), `%p`/`%P`
-(`:341-345`), `%Z` (`:413-416`), and `STRFTIME`'s own
-`if (flags & BIT_OF(UPPER)) upcase(s, i)` (`:121-122`). The trailing
-`if (i)` block (`:594-604`) then applies `upcase`/`downcase` to the arm's text.
+- `case 'O'` (`date_strftime.c:530-535`) — sets `BIT_OF(LOCALE_O)` and
+  `goto again` when the next character is in `"deHkIlmMSuUVwWy"`, otherwise
+  `goto unknown`.
 
 Measured on ruby 3.3.11 against `DateTime.new(2008, 3, 1, 6, 7, 8.5)`:
 
 ```text
-ruby:   strftime("%^b") # => "MAR"      strftime("%#p") # => "am"
-        strftime("%Oy") # => "08"       strftime("%^a") # => "SAT"
-trails: strftime("%^b") # => "%^b"      strftime("%#p") # => "%#p"
-        strftime("%Oy") # => "%Oy"      strftime("%^a") # => "%^a"
+ruby:   strftime("%Oy") # => "08"     strftime("%Ey") # => "08"
+        strftime("%Oz") # => "%Oz"    strftime("%Ez") # => "%Ez"
+trails: strftime("%Oy") # => "%Oy"    strftime("%Ey") # => "%Ey"
 ```
 
-Surfaced by the ~640-pair live-MRI differential run in PR #6178; the port's own
-JSDoc names these as the recognised-directive scope line, not as correct.
+Note the whitelists are load-bearing in BOTH directions: `%Oz` is unknown
+because `z` is not in `O`'s list, and `date.trails.test.ts` already pins
+`%Ez` => `"%Ez"` — that expectation must keep passing.
+
+`flagFound()` (`date.ts`) currently returns `precision > 0` only; its JSDoc says
+the `LOCALE_E`/`LOCALE_O`/`COLONS` arms of the C's `FLAG_FOUND`
+(`date_strftime.c:90-93`) are unreachable "because neither can set its flag and
+go on to read another". Implementing `E`/`O` makes them reachable, so that
+predicate has to grow the two bits at the same time or `%E3y` silently differs.
 
 ## Converged shape
 
-The scanner grows a `^` and a `#` case setting `upper` / `chcase`, and an `E`
-and an `O` case that `goto again` only when the next character is in that
-extension's whitelist. Each of the four goes through `flagFound()` first, as the
-C does. The `break` arms resolve `CHCASE` to `UPPER` (`%A`/`%a`/`%B`/`%b`/`%h`)
-or to `LOWER` (`%Z`), `%p`/`%P` follow `date_strftime.c:341-345`'s asymmetric
-rule, and the shared tail upcases or downcases the arm's text.
-
-`%E`/`%O` are accepted and then ignored, exactly as the C ignores them ("POSIX
-locale extensions, ignored for now") — `%Oy` is `%y`.
+The scanner grows an `E` and an `O` case that consult their own whitelist and
+`continue` the flag loop only on a hit, falling through to the unknown path
+otherwise, and `flagFound()` grows the `localeE`/`localeO` bits the C's
+`FLAG_FOUND` reads. Both extensions are then accepted and ignored, exactly as
+the C ignores them ("POSIX locale extensions, ignored for now") — `%Oy` is `%y`.
 
 ## Acceptance criteria
 
-- [ ] `%^b`, `%^a`, `%^B`, `%^A`, `%^Z`, `%#p`, `%#P`, `%#b`, `%Oy`, `%Ey` and
-      `%OS` answer MRI's values.
-- [ ] `%^q` and `%Eq` (a flag whose next char is not in the whitelist) still
-      fall through verbatim.
-- [ ] `%3^S` is verbatim — `FLAG_FOUND` applies to these flags too.
-- [ ] Every directive's bare form is byte-identical to today.
-- [ ] Verify each value against a live `ruby -rdate -e`.
+- [ ] `%E`/`%O` followed by a whitelisted directive answer that directive's
+      value; followed by anything else they answer the literal text, as MRI does.
+- [ ] `flagFound()` covers the `LOCALE_E`/`LOCALE_O` bits and its JSDoc no
+      longer claims they are unreachable.
+- [ ] `date.trails.test.ts`'s existing `%Ez` => `"%Ez"` expectation still passes.
