@@ -272,6 +272,19 @@ file-for-file.
 
 ### 6. The nested-attributes `#{name}_attributes=` setter refuses a displacing assignment
 
+**Retired 2026-08-06** (RFC 0087 §1,
+`delete-nested-attributes-deferred-displacement`). The refusal below was the
+last thing keeping a synchronous `#{name}_attributes=` alive; RFC 0087 deletes
+that property setter outright, so `set#{Name}Attributes` is the only
+nested-attributes writer and there is nothing left to refuse. Gone with it:
+`NestedAttributesDisplacementError` and the `_pendingNestedReaderLoads` park /
+`save`-wrapper drain — the reader load is now simply awaited where Rails reads
+it. What the rest of this section describes still holds, at one surface instead
+of two: `displacementNeedsAwait` still gates the I/O arm, so a non-displacing
+assignment stays synchronous (which is what keeps `new Pirate({ shipAttributes:
+{...} })` building its ship inside the constructor), and the displacing arm
+still runs `load_target` -> `remove_target!` -> `self.target = record` forward.
+
 **Reversed 2026-08-03** (`retire-nested-attributes-sync-setter-displacement`).
 This section originally ratified a deferred-displacement contract for the
 nested-attributes writer, on the grounds that `pirate.ship_attributes = {...}`
@@ -401,6 +414,10 @@ early-return story (Design §3 — absorbed into
 
 ## Changelog
 
+- 2026-08-06: Design §6 — **retired**: RFC 0087 §1 deletes the synchronous
+  `#{name}_attributes=` property setter, so its refusal contract
+  (`NestedAttributesDisplacementError`) and the `_pendingNestedReaderLoads`
+  park/drain go with it. The awaitable writer is the only surface.
 - 2026-08-03: Design §6 — **reversed** the decision below: the nested-attributes
   `#{name}_attributes=` setter now raises `NestedAttributesDisplacementError` on
   a displacing assignment, and `findThenDetachDisplaced` /
