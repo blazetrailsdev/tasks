@@ -1,7 +1,7 @@
 ---
 title: "Restate the per-agent compose-stack guidance now that the run token handles concurrency"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on origin/main (311bff350): there is no in-tree guidance left mandating a per-agent compose stack. 'docker compose -p', 'COMPOSE_PROJECT_NAME' and 'per-agent' have zero hits across all *.md; README.md:262-284 is the only local-DB setup prose and it already says the opposite — 'a local server on default ports needs only ARCONN' and 'docker compose up is all a local run needs'. docs/activerecord/ (frozen, and excluded by this story anyway) has no 'docker' hit either. The stale mandate PR #5638 obsoleted survives only in agent-side memory files outside this repo, which this story cannot reach. Nothing to restate."
 ---
 
 ## Context
