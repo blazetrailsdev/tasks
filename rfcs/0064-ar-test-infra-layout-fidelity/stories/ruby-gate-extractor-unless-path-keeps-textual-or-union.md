@@ -1,6 +1,6 @@
 ---
 title: "Ruby gate extractor's unless path still unions or_true, treating unless A || B as a disjunction"
-status: in-progress
+status: closed
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: 6172
-claim: "2026-08-07T13:39:44Z"
-assignee: "date-temporal-default-return-and-ruby-opt-in"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed as not worth doing: the divergence only under-claims (a negated feature lands polarity-blind in :features instead of a no_x guard) — no test is mis-gated and no gate-mismatch row depends on it. Refining our own extractors past the point of observable gain is not port fidelity work; reopen if a real gate-mismatch is ever traced to the unless-path union."
 ---
 
 ## Context
