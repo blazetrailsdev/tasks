@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-deps: []
+deps:
+  - converge-singular-find-target-test-callers-to-the-reader
 deps-rfc: []
 est-loc: 300
 priority: null
