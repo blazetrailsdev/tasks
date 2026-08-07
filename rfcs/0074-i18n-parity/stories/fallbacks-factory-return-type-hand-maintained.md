@@ -1,6 +1,6 @@
 ---
 title: "Derive the Fallbacks factory's return type from its class, not a hand-listed interface"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T15:38:12Z"
+assignee: "datetime-sf-is-a-number-not-a-rational"
 blocked-by: null
 closed-reason: null
 ---

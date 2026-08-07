@@ -1,6 +1,6 @@
 ---
 title: "DateTime#sf carries a JS number where ComplexDateData carries an exact Rational"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T15:38:12Z"
+assignee: "datetime-sf-is-a-number-not-a-rational"
 blocked-by: null
 closed-reason: null
 ---

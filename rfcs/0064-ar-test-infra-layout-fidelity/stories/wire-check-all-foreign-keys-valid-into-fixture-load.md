@@ -1,7 +1,7 @@
 ---
 title: "Invoke check_all_foreign_keys_valid! after fixture insert when verify_foreign_keys_for_fixtures is on"
-status: ready
-updated: 2026-07-04
+status: claimed
+updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T15:38:12Z"
+assignee: "datetime-sf-is-a-number-not-a-rational"
 blocked-by: null
 closed-reason: null
 ---
