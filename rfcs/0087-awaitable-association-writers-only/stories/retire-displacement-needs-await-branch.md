@@ -1,6 +1,6 @@
 ---
 title: "Delete displacementNeedsAwait so the nested writer has one build arm"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6192
 claim: "2026-08-07T18:48:45Z"
 assignee: "strptime-sec-fraction-numerator-is-a-number"
 blocked-by: null
