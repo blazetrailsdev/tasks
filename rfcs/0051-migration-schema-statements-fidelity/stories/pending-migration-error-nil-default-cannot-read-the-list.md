@@ -1,6 +1,6 @@
 ---
 title: "PendingMigrationError#initialize drops the nil pending_migrations: branch (migration.rb:160-162)"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
