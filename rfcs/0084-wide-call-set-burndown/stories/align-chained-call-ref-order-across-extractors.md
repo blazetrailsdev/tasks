@@ -1,6 +1,6 @@
 ---
 title: "Ruby and TS call-skeleton extractors emit chained-call refs in opposite orders"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T19:20:43Z"
+assignee: "strftime-lacks-composite-conversions"
 blocked-by: null
 closed-reason: null
 ---
