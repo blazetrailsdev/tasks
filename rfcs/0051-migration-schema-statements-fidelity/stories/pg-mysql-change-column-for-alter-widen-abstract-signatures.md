@@ -1,6 +1,6 @@
 ---
 title: "PG/MySQL changeColumnForAlter still takes Record<string, unknown> and returns unknown[]"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
