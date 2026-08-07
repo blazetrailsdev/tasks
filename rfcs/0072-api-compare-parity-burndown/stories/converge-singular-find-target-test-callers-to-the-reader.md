@@ -1,6 +1,6 @@
 ---
 title: "Ported tests call the free findTarget where Rails uses the association reader"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6188
 claim: "2026-08-07T17:21:52Z"
 assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
