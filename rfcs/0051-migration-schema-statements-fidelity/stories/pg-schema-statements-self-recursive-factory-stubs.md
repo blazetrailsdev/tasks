@@ -1,6 +1,6 @@
 ---
 title: "PG SchemaStatements carries two self-recursive factory stubs Rails has no counterpart for"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T12:48:31Z"
+assignee: "database-tasks-config-is-a-second-store-beside-base-configurations"
 blocked-by: null
 closed-reason: null
 ---
