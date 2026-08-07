@@ -1,6 +1,6 @@
 ---
 title: "Ten abstract DDL bodies clear the schema cache Rails never touches"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
