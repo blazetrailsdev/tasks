@@ -1,6 +1,6 @@
 ---
 title: "Move the adapter-specific schema snapshot off ar_internal_metadata's 255-char MySQL column"
-status: claimed
+status: ready
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: "2026-08-07T22:00:40Z"
-assignee: "converge-jsonify-branch-order-onto-rails-as-json"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
