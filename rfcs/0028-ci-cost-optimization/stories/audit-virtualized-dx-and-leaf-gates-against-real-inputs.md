@@ -1,6 +1,6 @@
 ---
 title: "Audit virtualized-DX / leaf / trailties gates against their real source closure"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
