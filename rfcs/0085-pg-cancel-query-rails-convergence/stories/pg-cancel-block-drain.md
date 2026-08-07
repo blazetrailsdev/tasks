@@ -1,6 +1,6 @@
 ---
 title: "Port raw_connection.block: drain the cancelled query before ROLLBACK"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
