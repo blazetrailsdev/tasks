@@ -1,6 +1,6 @@
 ---
 title: "Second round of PG/MariaDB adapter-unique flake burndown"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
