@@ -1,6 +1,6 @@
 ---
 title: "Scope pnpm lint to changed files instead of the whole tree"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:29:47Z"
+assignee: "activerecord-unrouted-privates-tasks-and-migration"
 blocked-by: null
 closed-reason: null
 ---
