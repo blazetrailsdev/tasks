@@ -1,6 +1,6 @@
 ---
 title: "callSeq for object-literal and arrow-function exports, so order parity covers the whole calls population"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
