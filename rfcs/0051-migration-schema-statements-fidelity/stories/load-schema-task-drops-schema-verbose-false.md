@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaBang drops db:test:load_schema's Schema.verbose = false"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
