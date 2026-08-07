@@ -1,6 +1,6 @@
 ---
 title: "record_version_state_after_migrating calls recordVersion where Rails calls create_version"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6204
 claim: "2026-08-07T21:44:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
