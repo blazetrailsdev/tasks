@@ -1,6 +1,6 @@
 ---
 title: "Date._strptime / Date.strptime: the %s and %Q that produce the :seconds frag"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6173
 claim: "2026-08-07T13:54:41Z"
 assignee: "datetime-new-drops-canon24oc"
 blocked-by: null
