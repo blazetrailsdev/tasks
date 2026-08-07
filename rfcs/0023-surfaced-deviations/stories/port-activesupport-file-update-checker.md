@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::FileUpdateChecker is unported; port file_update_checker.rb:35-163"
-status: draft
+status: ready
 updated: 2026-08-07
 rfc: "0023-surfaced-deviations"
 cluster: null
