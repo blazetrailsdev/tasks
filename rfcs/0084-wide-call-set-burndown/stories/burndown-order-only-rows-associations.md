@@ -1,6 +1,6 @@
 ---
 title: "Converge the order-only call rows in associations/** to Rails' branch order"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null

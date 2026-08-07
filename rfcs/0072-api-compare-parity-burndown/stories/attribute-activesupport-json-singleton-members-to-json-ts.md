@@ -1,6 +1,6 @@
 ---
 title: "attribute-activesupport-json-singleton-members-to-json-ts"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
