@@ -1,7 +1,7 @@
 ---
 title: "Port PG transaction_status and gate the cancel on it"
-status: in-progress
-updated: 2026-08-06
+status: done
+updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: []
