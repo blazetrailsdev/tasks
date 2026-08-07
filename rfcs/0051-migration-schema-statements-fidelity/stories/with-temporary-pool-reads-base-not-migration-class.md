@@ -1,6 +1,6 @@
 ---
 title: "withTemporaryPool reads Base where Rails reads migration_class, and invents a removeConnection teardown arm"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
