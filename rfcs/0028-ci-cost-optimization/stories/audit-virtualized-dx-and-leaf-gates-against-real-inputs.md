@@ -1,6 +1,6 @@
 ---
 title: "Audit virtualized-DX / leaf / trailties gates against their real source closure"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6181
 claim: "2026-08-07T16:37:44Z"
 assignee: "port-command-recorder-test-cases-part-2"
 blocked-by: null
