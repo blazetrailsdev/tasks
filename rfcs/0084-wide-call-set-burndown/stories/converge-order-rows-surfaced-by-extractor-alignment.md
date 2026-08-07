@@ -1,6 +1,6 @@
 ---
 title: "Converge the 12 order: rows the extractor traversal alignment surfaced"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
