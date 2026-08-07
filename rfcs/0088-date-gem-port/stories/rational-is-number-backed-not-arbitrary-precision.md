@@ -1,6 +1,6 @@
 ---
 title: "Rational's numerator/denominator are JS numbers where Ruby's are Integers"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
