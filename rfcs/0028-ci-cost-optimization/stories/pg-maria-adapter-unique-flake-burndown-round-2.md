@@ -1,6 +1,6 @@
 ---
 title: "Second round of PG/MariaDB adapter-unique flake burndown"
-status: claimed
+status: ready
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-07T20:32:46Z"
-assignee: "converge-comment-or-changes-descriptor-spellings"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
