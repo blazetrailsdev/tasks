@@ -137,6 +137,7 @@ demand. That has a consequence for the cutover — see §Open questions.
 
 ## Changelog
 
+- 2026-08-07: move the two remaining open stories (compare-normalize-symbol-row-column-keys, wire-check-all-foreign-keys-valid-into-fixture-load) to RFC 0064-ar-test-infra-layout-fidelity. Successor RFC 0019-canonical-schema-burndown is itself closed with no open stories, so both were stranded: a superseded parent keeps them out of the ready queue and there was no live successor to inherit them. Both premises were re-verified against origin/main (311bff350) before the move. This RFC now has no open stories.
 - 2026-06-04: initial RFC, migrated from the tracked
   `fixtures-adoption-inventory.md` during the RFC 0011 cutover. The two untracked
   local fixtures drafts are out of scope (local scratch).

@@ -30,7 +30,7 @@ class is semantic, not cosmetic.
 Existing scattered stories (reference, do not re-home): open —
 `audit-model-and-test-order-arg-symbol-vs-string` (0023, draft),
 `collection-callback-symbol-arm-coverage` (0023, draft),
-`compare-normalize-symbol-row-column-keys` (0014, draft). Done precedent —
+`compare-normalize-symbol-row-column-keys` (0064, ready). Done precedent —
 `hwia-symbol-key-normalization`, `habtm-collection-first-null-for-symbol-keys`,
 `nested-attr-reject-if-all-blank-symbol-form`,
 `port-merge-joins-as-symbols-relation-test`,

@@ -2,7 +2,7 @@
 title: "Invoke check_all_foreign_keys_valid! after fixture insert when verify_foreign_keys_for_fixtures is on"
 status: ready
 updated: 2026-07-04
-rfc: "0014-fixtures-adoption"
+rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,8 @@ closed-reason: null
 ---
 
 ## Context
+
+**Re-homed 2026-08-07** from `0014-fixtures-adoption`, which is `superseded` — its successor `0019-canonical-schema-burndown` is itself now `closed` with no open stories, so this story had no reachable parent and the non-active-parent rule (`scripts/validate-lib.mjs:44`) kept it out of the ready queue permanently. Premise re-verified against `origin/main` (311bff350) at the time of the move; the work below is live, not rot.
 
 Rails' `fixtures.rb` `insert` calls `check_all_foreign_keys_valid!(conn)` once
 per pool right after `conn.insert_fixtures_set(...)` (fixtures.rb:686), gated on

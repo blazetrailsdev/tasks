@@ -69,6 +69,7 @@ excluded from the shared run; need `TEST_ADAPTER=postgresql/mysql2` (RFC 0012).
 
 ## Changelog
 
+- 2026-08-07: move the one straggler (port-command-recorder-test-cases, filed 2026-07-30 — six weeks AFTER this RFC was superseded, so it landed here by mistake) to RFC 0064-ar-test-infra-layout-fidelity. Successor RFC 0030 is itself closed with no open stories, so re-homing there was not an option. This RFC now has no open stories.
 - 2026-06-15: move the 5 remaining open stories (persistence-query-constraints-save-reload-tests, sqlite3-copy-table-test-port, strict-loading-new-record-gate-in-loaders, timestamp-index-created-for-both-timestamps, virtual-reconcile-warm-schema-cache) to RFC 0030-ar-test-compare-residual-burndown, which supersedes this RFC's residual-skip campaign. The 83 closed stories stay here as the historical record.
 - 2026-06-10: add Phase 5 core-residuals (F-9a…F-9g) for the ~175 un-owned core skips surfaced after F-8 (#3012) closed; snapshot refreshed to 92.6% (575 skipped).
 - 2026-06-08: decompose p3-adapter-type-families into 12 child stories (8 MySQL + 4 PG residual).

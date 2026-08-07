@@ -2,7 +2,7 @@
 title: "Port Rails CommandRecorderTest (4/93 matched; 73 bespoke extras)"
 status: draft
 updated: 2026-07-30
-rfc: "0016-ar-test-compare-100"
+rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,8 @@ closed-reason: null
 ---
 
 ## Context
+
+**Re-homed 2026-08-07** from `0016-ar-test-compare-100`, which is `superseded` — its successor `0030-ar-test-compare-residual-burndown` is itself now `closed` with no open stories, so this story had no reachable parent and the non-active-parent rule (`scripts/validate-lib.mjs:44`) kept it out of the ready queue permanently. Premise re-verified against `origin/main` (311bff350) at the time of the move; the work below is live, not rot.
 
 Surfaced while porting three delegation tests in PR #5635. `test:compare`
 reports `migration/command_recorder_test.rb` against

@@ -2,7 +2,7 @@
 title: "fixtures-compare: normalize Ruby-symbol row-column keys (naked/yml/trees false DIFF)"
 status: ready
 updated: 2026-07-23
-rfc: "0014-fixtures-adoption"
+rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
@@ -16,6 +16,8 @@ closed-reason: null
 ---
 
 ## Context
+
+**Re-homed 2026-08-07** from `0014-fixtures-adoption`, which is `superseded` — its successor `0019-canonical-schema-burndown` is itself now `closed` with no open stories, so this story had no reachable parent and the non-active-parent rule (`scripts/validate-lib.mjs:44`) kept it out of the ready queue permanently. Premise re-verified against `origin/main` (311bff350) at the time of the move; the work below is live, not rot.
 
 Follow-up surfaced by PR #4517 (hwia-symbol-key-normalization). That PR normalized Ruby-symbol YAML keys (`:foo` → `foo`, mirroring `ActiveSupport::HashWithIndifferentAccess#convert_key` / `Symbol#to_s`) but **only for store/serialize hash values**, inside `stableStringify` (`scripts/fixtures-compare/compare.ts` `normalizeSymbolKey`).
 
