@@ -1,6 +1,6 @@
 ---
 title: "Time#change's zone arms and DST fold selection"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
