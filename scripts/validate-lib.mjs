@@ -11,6 +11,15 @@ import { relPath, RFC_STATUSES, STORY_STATUSES } from "./lib.mjs";
 
 export const MAX_LINES = 2000;
 
+// Upper bound on a story's `est-loc`. This mirrors btwhooks' PR_MAX_LOC — the
+// per-PR ceiling stated to worker agents in their "Hard rules" block — because
+// a story estimated above it cannot ship as the single PR the workflow
+// requires. It is NOT an independent rule this repo gets to set: when
+// PR_MAX_LOC is retuned, this follows, and the two drifting apart is the bug
+// this constant exists to make visible (it sat at 500 for a while after the
+// ceiling moved to 700, rejecting stories the workers could have shipped).
+export const MAX_EST_LOC = 700;
+
 // Numeric-prefix pairs that legitimately share a four-digit prefix and predate
 // the duplicate-prefix guard below. Each entry is the shared prefix; the two
 // dirs were finalized concurrently before finalize-rfc.mjs serialized number
@@ -209,7 +218,8 @@ export function validate({ rfcs, stories }) {
     if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
     if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
       if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
-      else if (fm["est-loc"] > 500) err(s.file, `est-loc ${fm["est-loc"]} exceeds 500 LOC ceiling`);
+      else if (fm["est-loc"] > MAX_EST_LOC)
+        err(s.file, `est-loc ${fm["est-loc"]} exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
     }
     // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
     if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {

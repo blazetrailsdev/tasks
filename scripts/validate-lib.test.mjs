@@ -7,7 +7,7 @@
 // Standalone runner, no framework: collect failures and throw at the end so an
 // uncaught exception sets a non-zero exit code. No node:* imports, no process.*
 // references — the same purity constraints the validator itself holds to.
-import { effectiveStoryStatus, validate } from "./validate-lib.mjs";
+import { MAX_EST_LOC, effectiveStoryStatus, validate } from "./validate-lib.mjs";
 
 const failures = [];
 function test(name, fn) {
@@ -293,6 +293,23 @@ test("effectiveStoryStatus passes non-ready statuses through as authored", () =>
       `${storyStatus} under postponed RFC should stay ${storyStatus}`,
     );
   }
+});
+
+// ── est-loc ceiling ──
+// The bound tracks btwhooks' PR_MAX_LOC. These read it from the constant rather
+// than restating a number, so a retune needs one edit, not two — the failure
+// mode this guards against is exactly the drift that left the validator at 500
+// after the per-PR ceiling moved to 700.
+test("est-loc at the ceiling is legal", () => {
+  expectClean(validate({ rfcs: [rfc()], stories: [story({}, { "est-loc": MAX_EST_LOC })] }).errors);
+});
+
+test("est-loc above the ceiling is rejected, and the error names the bound", () => {
+  const { errors } = validate({
+    rfcs: [rfc()],
+    stories: [story({}, { "est-loc": MAX_EST_LOC + 1 })],
+  });
+  expectError(errors, `exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
 });
 
 if (failures.length) {
