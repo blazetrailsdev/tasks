@@ -69,3 +69,48 @@ Options, cheapest first:
 - [ ] The measured per-file saving from #6121 still holds on all three lanes
       (sqlite ~0 ms for the arm, MariaDB ~2.5 min per run).
 - [ ] Green on sqlite (file lane), `sqlite3_mem`, PG and MariaDB.
+
+## Findings, 2026-08-07 (from the `strptime-sec-fraction-numerator-is-a-number` bundle)
+
+Claimed as part of a five-story bundle and released unbuilt. Two things were
+established that the next agent should not re-derive:
+
+**The digest arm (option 1) is unsound, not merely unproven.** The story's own
+caveat is the whole story. `adapterSpecificHalf()` is "present tables minus
+`TEST_SCHEMA` minus bookkeeping", so a bespoke table a previous test file left
+behind is inside the recomputed set. A digest over that set therefore mismatches
+whenever _any_ leftover exists — which is the common case the memo is for, since
+the fast path runs `purgeToCanonicalTables` precisely because leftovers are
+expected. Worse, the consumer needs the recomputed set to be the _laid_ set,
+because `purgeToCanonicalTables(conn, laid)` treats it as the **protected** list:
+handing it the recomputed set would protect every bespoke leftover from the
+purge. The persisted list is load-bearing for exactly the reason
+`canonical-schema-stamp.ts`'s `ADAPTER_SPECIFIC_TABLES_KEY` comment gives, and
+no digest recovers it. Option 1 should be struck.
+
+**Option 2 (the run-token sidecar) is the arm, and it is bigger than 160 LOC.**
+The blocker is the _key_, not the write. The snapshot has to be keyed by
+database identity, and identity is not uniform across the lanes the acceptance
+criteria require green:
+
+- PG / MySQL slot databases are shared across forked worker processes, so the
+  sidecar must be cross-process and keyed by database name.
+- `sqlite3_mem` runs `:memory:`, where every worker process has its _own_
+  database. A sidecar keyed by database name collides across workers — a
+  correctness hazard the in-database stamp does not have, because a stamp
+  living in the database it describes is self-keying by construction. That lane
+  needs a process-scoped key, so the key function is lane-conditional.
+- `sweepStaleDbFiles` / `sweepRunDbFiles` (`support/sqlite-template.ts`) filter
+  on `TEMP_DB_PREFIX`; a new sidecar prefix needs adding to both or the files
+  leak across runs.
+
+Also note `load-schema-helper.ts:526-532`'s standing warning about this seam:
+`loadSchema` / `loadCanonicalSchema` / `loadAdapterSpecificSchema` /
+`canonical-schema-stamp.ts` / `test-setup-dy.ts` are reshaped **one story at a
+time** — five PRs touched it in one evening and three broke only in the merge.
+This story should be its own PR, not bundled.
+
+Acceptance criterion 3's removals (`MYSQL_MAX_VALUE_LENGTH`,
+`fitsValueColumn`, `snapshotWidthDegraded`, `clearSnapshotWidthDegraded`, and
+`template-stamp.test.ts`'s "snapshot width backstop" describe) are all still
+accurate and all still present on `origin/main`.
