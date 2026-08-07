@@ -1,6 +1,6 @@
 ---
 title: "converge-count-body-onto-calculate"
-status: claimed
+status: blocked
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-07T22:40:42Z"
 assignee: "converge-count-body-onto-calculate"
-blocked-by: null
+blocked-by: "Blocked on unmerged PR #6206 (converge-count-calculate-and-order-rows), the first half of this split. Main's performCount still contains the inline build_count_subquery limit/offset arm and has no buildCountSubquery / performCalculation('count') delegation, so this story's premise ('what is STILL fused') does not describe origin/main. Every remaining arm to lift into calculate() lives in the exact lines #6206 rewrites (packages/activerecord/src/relation/calculations.ts performCount, +108/-94), so doing it now would either stack on #6206 or produce a guaranteed conflict plus duplicate review of the same diff — both forbidden by CLAUDE.md's no-stacking rule. Unblock and re-ready once #6206 merges."
 closed-reason: null
 ---
 
