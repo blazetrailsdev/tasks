@@ -1,7 +1,7 @@
 ---
 title: "Converge the order-only call rows in associations/** to Rails' branch order"
-status: ready
-updated: 2026-08-06
+status: claimed
+updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T02:48:26Z"
+assignee: "attribute-activesupport-json-singleton-members-to-json-ts"
 blocked-by: null
 closed-reason: null
 ---
