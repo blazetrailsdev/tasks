@@ -1,7 +1,7 @@
 ---
 title: "date-temporal-default-return-and-ruby-opt-in"
-status: blocked
-updated: 2026-08-06
+status: ready
+updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-06T14:23:10Z"
-assignee: "date-temporal-default-return-and-ruby-opt-in"
-blocked-by: "Blocked on PR #6153 (split (a): seat Date on Temporal.PlainDate, delete calendar-reform math), still OPEN/draft. This story's entire premise is that (a) has landed; building it on main would rewrite the same Date/DateTime class region #6153 rewrites. Unblock when #6153 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
