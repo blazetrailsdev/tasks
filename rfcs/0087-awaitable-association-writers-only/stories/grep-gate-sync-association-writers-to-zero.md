@@ -4,8 +4,7 @@ status: blocked
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
-deps:
-  ["delete-nested-attributes-deferred-displacement", "retire-sync-association-mass-assignment-arms"]
+deps: ["reconcile-residual-sync-writers-with-the-gate-list"]
 deps-rfc: []
 est-loc: 120
 priority: 11
