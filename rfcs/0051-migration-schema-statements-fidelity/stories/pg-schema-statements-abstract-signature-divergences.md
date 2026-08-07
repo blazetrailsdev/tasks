@@ -1,6 +1,6 @@
 ---
 title: "pg-schema-statements-abstract-signature-divergences"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
