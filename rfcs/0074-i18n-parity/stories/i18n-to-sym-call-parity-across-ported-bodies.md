@@ -1,6 +1,6 @@
 ---
 title: "Port to_sym at the five ported bodies whose Ruby counterpart calls it"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6177
 claim: "2026-08-07T15:38:12Z"
 assignee: "datetime-sf-is-a-number-not-a-rational"
 blocked-by: null
