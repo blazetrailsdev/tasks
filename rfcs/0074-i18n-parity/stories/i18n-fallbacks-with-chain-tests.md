@@ -1,6 +1,6 @@
 ---
 title: "i18n-fallbacks-with-chain-tests"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6175
 claim: "2026-08-07T15:41:27Z"
 assignee: "i18n-fallbacks-with-chain-tests"
 blocked-by: null
