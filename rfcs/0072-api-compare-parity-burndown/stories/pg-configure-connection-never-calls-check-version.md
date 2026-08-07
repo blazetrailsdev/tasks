@@ -1,7 +1,7 @@
 ---
 title: "pg-configure-connection-never-calls-check-version"
-status: draft
-updated: 2026-08-06
+status: ready
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
