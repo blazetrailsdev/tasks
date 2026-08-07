@@ -1,6 +1,6 @@
 ---
 title: 'SQLite3Adapter#getDatabaseVersion queries the driver directly instead of queryValue(..., "SCHEMA")'
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:21:52Z"
+assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
 closed-reason: null
 ---

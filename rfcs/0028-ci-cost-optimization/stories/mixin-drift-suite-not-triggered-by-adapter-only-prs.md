@@ -1,6 +1,6 @@
 ---
 title: "mixin-drift-suite-not-triggered-by-adapter-only-prs"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:21:52Z"
+assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
 blocked-by: null
 closed-reason: null
 ---
