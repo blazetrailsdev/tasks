@@ -1,7 +1,7 @@
 ---
 title: "connectsTo primary-class case displaces Base's pool; census guard is blind to same-name replacement"
-status: draft
-updated: 2026-08-05
+status: ready
+updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
