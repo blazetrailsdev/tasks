@@ -1,6 +1,6 @@
 ---
 title: "Route migration.ts's unrouted Rails privates (executeBlock, compatibleTableDefinition)"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6182
 claim: "2026-08-07T17:05:48Z"
 assignee: "activemodel-time-readers-take-rational-sec-fraction-value"
 blocked-by: null
