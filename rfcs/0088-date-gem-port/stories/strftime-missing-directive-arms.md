@@ -60,3 +60,20 @@ defaults.
 - [ ] Every directive's bare form is byte-identical to today.
 - [ ] An unknown directive still falls through verbatim.
 - [ ] Verify each value against a live `ruby -rdate -e`.
+
+## Duplicate alert, 2026-08-07
+
+`strftime-lacks-composite-conversions` was filed against this same gap from the
+`strptime-sec-fraction-numerator-is-a-number` PR (#6192) **without checking this
+RFC's story list first** — my mistake. It covers the `STRFTIME` recursion arms
+(`%T` first, plus `%R`, `%r`, `%X`, `%c`, `%D`, `%v`) and nothing this table does
+not already enumerate in more detail, with `date_strftime.c` line numbers this
+one already has.
+
+It was then claimed and is shipping as PR #6193, so it was **not** closed —
+yanking an in-flight story out from under the agent holding it would orphan the
+work. Triage should reconcile the two once #6193 lands: expect the `STRFTIME`
+arms to be gone from this story's table by then, leaving the `FMT` arms
+(`%G`, `%g`, `%U`/`%W`, `%V`, `%Q`) — the ones needing `cwyear` / `cweek` /
+`wnum0` / `wnum1` on `StrftimeSubject`, which is where this story's size
+actually lives.
