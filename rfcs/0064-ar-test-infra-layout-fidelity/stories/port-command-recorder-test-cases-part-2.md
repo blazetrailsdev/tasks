@@ -1,6 +1,6 @@
 ---
 title: "port-command-recorder-test-cases-part-2"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
