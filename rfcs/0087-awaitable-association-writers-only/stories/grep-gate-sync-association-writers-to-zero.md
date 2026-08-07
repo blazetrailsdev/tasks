@@ -1,6 +1,6 @@
 ---
 title: "grep-gate-sync-association-writers-to-zero"
-status: claimed
+status: blocked
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -12,7 +12,7 @@ priority: 11
 pr: null
 claim: "2026-08-07T13:39:44Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
-blocked-by: null
+blocked-by: "Blocked on the two remaining RFC 0087 deletion stories: awaitable-mass-assignment-for-nested-attributes and retire-displacement-needs-await-branch. Three of the seven named symbols are still live source on main — syncWrite (collection-association.ts:161, has-one-association.ts:54, base.ts:878-890, collection-proxy.ts:1367, has-many-through-association.ts:266), HasOnePersistedAssignmentError (errors.ts:385) and CollectionIdsAssignmentError (errors.ts:448). A zero-gate added now reds CI on main immediately. The story's declared deps (delete-nested-attributes-deferred-displacement, retire-sync-association-mass-assignment-arms) are done but were an incomplete dep set."
 closed-reason: null
 ---
 
