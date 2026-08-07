@@ -54,3 +54,40 @@ all delete — leaving `record_environment` reading the pool exactly as
       on the naive move.
 - [ ] `Migrator._environment`, `_recordedEnvironment`'s fallback arm and
       `MigratorOptions.environment` are gone.
+
+## Findings, 2026-08-07 (from the `strftime-lacks-composite-conversions` bundle)
+
+Claimed as part of a bundle and released unbuilt after investigation. Two facts
+the next agent should not re-derive:
+
+**The story's premise — "its adapters are handed in bare, so they carry a
+NullPool" — is false for the only caller.** `createAndMigrate`'s sole call site
+(`test-databases.test.ts:295`) passes `Base.connection`, whose `pool` is a real
+`ConnectionPool`, not a `NullPool`. So `Migrator#_recordedEnvironment`'s primary
+branch already fires there; the `environment` option is not what is keeping the
+value off `NullConfig`.
+
+**Reading the pool does NOT answer `"test"` — it answers `"arunit"`.** Probed on
+`origin/main`: `(Base.connection.pool as ConnectionPool).dbConfig.envName ===
+"arunit"` (Rails' own AR-suite env name, mirrored by our test config). So
+acceptance criterion 2 as written ("`ar_internal_metadata.environment` is still
+`"test"` after `createAndMigrate`") is unsatisfiable by the converged shape:
+converging `record_environment` to `migration.rb:1512-1516` necessarily changes
+the stamped value from `"test"` to `"arunit"`. The criterion has to be restated
+as "answers the pool's `env_name`" — and every assertion that reads the stamp
+back has to move with it — or the story has to specify a distinct test
+`dbConfig` whose `envName` really is `"test"` and say where `createAndMigrate`
+gets it from.
+
+Building a pool _inside_ `createAndMigrate` for a bare adapter is also not the
+cheap move it looks like: `new ConnectionPool(poolConfig)` starts a `Reaper`
+(`connection-pool.ts:370-371`), so a pool minted only to carry an `env_name`
+leaks a live timer per call.
+
+The rest of the story is accurate and small: `Migrator._environment`, the
+`_recordedEnvironment` fallback arm and `MigratorOptions.environment` are all
+still on `origin/main`, and the only non-test consumer is
+`test-databases.ts:31`. The three test call sites that pass
+`{ environment: "test" }` are `migrator.trails.test.ts:69,81,221`, and all three
+already assert against `envName(adapter)` (the pool read) rather than the
+literal `"test"` — so they converge for free.
