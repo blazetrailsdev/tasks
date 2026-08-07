@@ -1,7 +1,7 @@
 ---
 title: "Retire prism-codegen and its two CI gates"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 deps: ["call-sequence-parity-in-wide-ratchet"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T12:08:30Z"
+assignee: "load-schema-if-pending-drops-the-whole-repair-arm"
 blocked-by: null
 closed-reason: null
 ---

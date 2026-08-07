@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaIfPendingBang drops any_schema_needs_update? / load_schema!; port migration.rb:730-736"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T12:08:30Z"
+assignee: "load-schema-if-pending-drops-the-whole-repair-arm"
 blocked-by: null
 closed-reason: null
 ---
