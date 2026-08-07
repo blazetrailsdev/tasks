@@ -1,6 +1,6 @@
 ---
 title: "cValidOrdinalP reads Temporal#year back instead of round-tripping through c_jd_to_ordinal"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6208
 claim: "2026-08-07T22:48:41Z"
 assignee: "port-c-civil-to-jd-and-c-jd-to-civil-at-their-rails-names"
 blocked-by: null
