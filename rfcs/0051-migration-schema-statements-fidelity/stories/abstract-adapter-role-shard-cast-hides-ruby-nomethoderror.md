@@ -79,3 +79,44 @@ convergence is at the construction sites, not in the reader.
 - [ ] `AbstractAdapter#role` / `#shard` are the bare `this.pool.role` /
       `this.pool.shard` with no cast (`abstract_adapter.rb:288,294`).
 - [ ] The `NullPool member parity` test still passes; no test names change.
+
+## Findings, 2026-08-07 (attempted on PR #6207, reverted before merge)
+
+**Retyping the field is NOT a way to close this, and it was tried.** #6207
+declared `pool: ConnectionPool` and moved the cast onto the `NullPool` seed at
+`abstract_adapter.rb:153`'s port site, which does make the two readers bare —
+acceptance criterion 2 — while changing nothing at runtime. Review blocked it,
+correctly: `NullPool` still has no `role`/`shard` (`connection-pool.ts:112-130`),
+`pool instanceof NullPool` still guards `close()` (`abstract-adapter.ts:1753`)
+and `columnForAttribute` (`:2646`), so a pool-less adapter's `.role` still
+returns `undefined`. Worse, the declared type then asserts `ConnectionPool` for
+_every_ `this.pool.x` reader, so the next such reader gets no type-level signal
+at all — it makes the failure mode this story exists to close **easier** to
+introduce. The cast also multiplies rather than disappears: the seed, plus four
+`Object.create`-built adapters in `abstract-mysql-adapter.test.ts`, plus a
+downstream `dbConfig.envName as string` in `migration.ts:2597-2604` that has to
+be dropped and would need restoring. Do not re-derive this arm.
+
+**So criterion 1 is the whole story, and it is not ~180 LOC.** The construction
+sites are not incidentally pool-less; several are pool-less _by design_ and a
+real `ConnectionPool` is a behavioural change there, not a wiring change:
+
+- `support/schema-conn.ts:27-30` builds an adapter that is deliberately
+  **never connected** — it exists to render DDL for a dialect the lane isn't
+  running. A `ConnectionPool` starts a `Reaper` and expects to open connections,
+  so this site needs either a pool that never checks out or a different answer.
+- `test-adapter.ts:120,127,139` is `newRawTestAdapter`, whose entire purpose is
+  a _raw_ adapter outside the primary pool (each one caps its driver at a single
+  server connection precisely because the outer pool multiplexes).
+- `support/second-connection.ts:20` documents the deviation in its header: Rails
+  uses `@connection.pool.checkout`; trails opens an independent adapter.
+  Converging this one probably means porting the `pool.checkout` shape, which is
+  its own story.
+- `support/template-global-setup.ts:120,189,313` and the `tasks/*-database-tasks.ts`
+  sites are the CLI/bootstrap subset; the task/CLI half is already owned by
+  `create-and-migrate-adapters-carry-a-real-pool`.
+
+Suggested re-scope: land `create-and-migrate-adapters-carry-a-real-pool` first,
+then take the remaining test-support sites one at a time, and only delete the
+reader cast once the last one is gone. Retyping the field ahead of that is
+ratification wearing a convergence hat.
