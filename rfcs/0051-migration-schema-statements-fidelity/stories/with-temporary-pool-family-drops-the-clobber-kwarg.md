@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.withTemporaryPool family drops Rails' clobber: kwarg (database_tasks.rb:512-527)"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6169
 claim: "2026-08-07T12:28:33Z"
 assignee: "abstract-ddl-bodies-clear-schema-cache-rails-never-touches"
 blocked-by: null
