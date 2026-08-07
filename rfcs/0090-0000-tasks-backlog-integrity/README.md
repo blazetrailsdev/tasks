@@ -1,5 +1,5 @@
 ---
-rfc: "0000-0000-tasks-backlog-integrity"
+rfc: "0090-0000-tasks-backlog-integrity"
 title: "Tasks backlog integrity — guards for stranded and misfiled stories"
 status: draft
 created: 2026-08-07
