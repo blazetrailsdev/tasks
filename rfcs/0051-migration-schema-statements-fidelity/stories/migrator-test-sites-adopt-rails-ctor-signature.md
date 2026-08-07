@@ -1,6 +1,6 @@
 ---
 title: "Migrator test construction sites adopt Rails' constructor signature"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T19:36:37Z"
+assignee: "migrator-test-sites-adopt-rails-ctor-signature"
 blocked-by: null
 closed-reason: null
 ---
