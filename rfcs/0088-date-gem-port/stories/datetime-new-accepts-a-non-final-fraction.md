@@ -1,6 +1,6 @@
 ---
 title: "DateTime.new accepts a fraction in a non-final time argument where num2int_with_frac raises"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6163
 claim: "2026-08-07T01:48:27Z"
 assignee: "datetime-new-accepts-a-non-final-fraction"
 blocked-by: null
