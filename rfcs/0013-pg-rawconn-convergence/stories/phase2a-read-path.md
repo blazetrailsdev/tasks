@@ -1,9 +1,11 @@
 ---
 title: "Phase 2a — PG read path through withRawConnection"
 status: done
-updated: 2026-06-07
+updated: 2026-08-07
 rfc: "0013-pg-rawconn-convergence"
 cluster: pg-rawconn-convergence
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
 est-loc: 200
