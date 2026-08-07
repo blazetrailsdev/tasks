@@ -1,6 +1,6 @@
 ---
 title: "converge-count-onto-calculate-perform-calculation"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
