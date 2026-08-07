@@ -1,7 +1,7 @@
 ---
 title: "abstract-adapter-pool-readers-soften-rails-behaviour"
-status: blocked
-updated: 2026-08-05
+status: ready
+updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-05T16:13:06Z"
-assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
-blocked-by: "Depends on PR #6128 (abstract-adapter-pool-is-typed-unknown), still open. main has 'pool: unknown = null' at abstract-adapter.ts:852 and the readers at :1381/:1456/:1466 still cast; the story's premise (typed pool, casts deleted) does not exist yet. Converging the readers now would stack on #6128 and conflict on the same lines. Unblock once #6128 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
