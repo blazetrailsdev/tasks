@@ -4,6 +4,7 @@ status: draft
 updated: 2026-06-04
 rfc: "0000-your-slug"
 cluster: cluster-name-1
+packages: [] # optional subset of the parent RFC's packages; empty inherits the RFC's list
 deps: []
 deps-rfc: []
 est-loc: null
