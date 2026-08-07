@@ -1,6 +1,6 @@
 ---
 title: "strftime and I18n localize must accept Temporal subjects before default returns flip"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
