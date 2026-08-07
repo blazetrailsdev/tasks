@@ -1,7 +1,7 @@
 ---
 title: "Abstract rename_index clears the schema cache Rails never touches and drops both to_s arms"
-status: ready
-updated: 2026-08-06
+status: claimed
+updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T01:28:29Z"
+assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null
 closed-reason: null
 ---
