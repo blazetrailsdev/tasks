@@ -1,6 +1,6 @@
 ---
 title: "jdOf / jdToPlainDate stand in for c_civil_to_jd / c_jd_to_civil under invented names"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T22:48:41Z"
+assignee: "port-c-civil-to-jd-and-c-jd-to-civil-at-their-rails-names"
 blocked-by: null
 closed-reason: null
 ---
