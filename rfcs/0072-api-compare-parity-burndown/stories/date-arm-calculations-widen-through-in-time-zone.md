@@ -1,6 +1,6 @@
 ---
 title: "Date#ago/since/beginning_of_day widen through in_time_zone"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
