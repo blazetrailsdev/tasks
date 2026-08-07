@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.databaseConfiguration and Base.configurations are rival stores; Rails has one"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
