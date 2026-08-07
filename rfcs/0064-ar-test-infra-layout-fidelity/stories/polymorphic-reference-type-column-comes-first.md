@@ -1,6 +1,6 @@
 ---
 title: "Polymorphic t.references emits x_type before x_id; both canonical sources reverse it"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T20:08:49Z"
+assignee: "polymorphic-reference-type-column-comes-first"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Time#change's zone arms and DST fold selection"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T20:08:49Z"
+assignee: "polymorphic-reference-type-column-comes-first"
 blocked-by: null
 closed-reason: null
 ---
