@@ -1,6 +1,6 @@
 ---
 title: "of-kind-default-type-and-normalize-arguments"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
