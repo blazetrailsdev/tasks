@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy.test.ts pins row order of an unordered association SELECT"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null

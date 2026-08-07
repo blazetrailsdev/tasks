@@ -1,6 +1,6 @@
 ---
 title: "changeColumnDefault's descriptor arm is absorbed by | unknown; param is named options not defaultOrChanges"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
