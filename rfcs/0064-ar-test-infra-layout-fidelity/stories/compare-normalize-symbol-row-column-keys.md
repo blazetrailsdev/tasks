@@ -1,9 +1,11 @@
 ---
 title: "fixtures-compare: normalize Ruby-symbol row-column keys (naked/yml/trees false DIFF)"
 status: ready
-updated: 2026-07-23
+updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
 est-loc: 40
