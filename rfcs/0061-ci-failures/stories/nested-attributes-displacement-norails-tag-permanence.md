@@ -1,7 +1,7 @@
 ---
 title: "api:extra red on main: NestedAttributesDisplacementError tag lacks a permanence claim"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-07
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on origin/main (311bff350): NestedAttributesDisplacementError no longer exists in packages/activerecord/src/associations/errors.ts — the whole nested-attributes property setter it guarded was retired by PR #6167 (ec3f134ef, 'retire the nested-attributes property setter'). errors.ts carries no @noRailsEquivalent tag at all now, so the api:extra permanence-claim red this story was filed for cannot recur."
 ---
 
 ## Context
