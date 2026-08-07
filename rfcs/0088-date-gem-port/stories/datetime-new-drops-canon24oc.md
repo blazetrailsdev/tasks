@@ -1,6 +1,6 @@
 ---
 title: "DateTime.new drops canon24oc, reaching midnight-next-day through the df fold instead"
-status: draft
+status: ready
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
