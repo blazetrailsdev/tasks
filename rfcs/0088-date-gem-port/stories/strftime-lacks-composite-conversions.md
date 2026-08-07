@@ -1,6 +1,6 @@
 ---
 title: "strftime is missing %T and the other composite/week-based conversions"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6193
 claim: "2026-08-07T19:20:43Z"
 assignee: "strftime-lacks-composite-conversions"
 blocked-by: null
