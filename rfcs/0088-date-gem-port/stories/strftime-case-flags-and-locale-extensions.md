@@ -1,6 +1,6 @@
 ---
 title: "strftime drops the ^ # E O flag cases date_strftime.c reads ahead of every directive"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
