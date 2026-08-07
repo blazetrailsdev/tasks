@@ -1,6 +1,6 @@
 ---
 title: "Mass assignment stops returning a promise for nested attributes"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6196
 claim: "2026-08-07T20:00:40Z"
 assignee: "fold-errors-map-default-proxies"
 blocked-by: null
