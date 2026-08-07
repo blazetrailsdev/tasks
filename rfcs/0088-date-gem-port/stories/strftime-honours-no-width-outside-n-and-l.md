@@ -1,6 +1,6 @@
 ---
 title: "strftime honours a width prefix only on %N/%L, where date_strftime.c reads one ahead of every directive"
-status: draft
+status: ready
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
