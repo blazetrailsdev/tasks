@@ -1,6 +1,6 @@
 ---
 title: "Extractors emit an ordered call/control skeleton stream (prerequisite for sequence parity)"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
