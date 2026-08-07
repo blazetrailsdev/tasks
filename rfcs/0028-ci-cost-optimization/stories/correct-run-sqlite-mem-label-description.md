@@ -1,6 +1,6 @@
 ---
 title: "run-sqlite-mem's label description still says non-gating"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 1
 priority: null
-pr: null
+pr: 6192
 claim: "2026-08-07T18:48:45Z"
 assignee: "strptime-sec-fraction-numerator-is-a-number"
 blocked-by: null
