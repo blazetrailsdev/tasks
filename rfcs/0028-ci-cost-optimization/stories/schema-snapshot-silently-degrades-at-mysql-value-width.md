@@ -1,6 +1,6 @@
 ---
 title: "Adapter-specific schema memo silently switches off if its snapshot outgrows varchar(255) on MySQL"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T18:00:51Z"
+assignee: "restore-worker-connection-covers-only-arunit"
 blocked-by: null
 closed-reason: null
 ---
