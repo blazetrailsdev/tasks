@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.databaseConfiguration and Base.configurations are rival stores; Rails has one"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6170
 claim: "2026-08-07T12:48:31Z"
 assignee: "database-tasks-config-is-a-second-store-beside-base-configurations"
 blocked-by: null
