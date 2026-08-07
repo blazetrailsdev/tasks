@@ -1,6 +1,6 @@
 ---
 title: "Fold duplicate errors.ts Map-default proxies into one helper"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
+pr: 6196
 claim: "2026-08-07T20:00:40Z"
 assignee: "fold-errors-map-default-proxies"
 blocked-by: null
