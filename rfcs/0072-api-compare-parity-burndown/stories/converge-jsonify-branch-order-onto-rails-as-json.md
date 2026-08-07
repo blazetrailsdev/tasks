@@ -1,6 +1,6 @@
 ---
 title: "converge-jsonify-branch-order-onto-rails-as-json"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
