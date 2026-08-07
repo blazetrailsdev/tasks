@@ -1,5 +1,5 @@
 ---
-rfc: "0000-proxy-dynamic-method-consistency"
+rfc: "0093-proxy-dynamic-method-consistency"
 title: "Proxy dynamic-method consistency"
 status: draft
 created: 2026-08-07
