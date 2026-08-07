@@ -1,6 +1,6 @@
 ---
 title: "Audit whether the bare activerecord_unittest database is still needed by stamped runs"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T16:37:44Z"
+assignee: "port-command-recorder-test-cases-part-2"
 blocked-by: null
 closed-reason: null
 ---
