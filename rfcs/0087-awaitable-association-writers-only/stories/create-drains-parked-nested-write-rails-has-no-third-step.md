@@ -72,5 +72,5 @@ which is about the same in-flight-write bookkeeping.
 - [ ] If converged, `awaitPendingNestedReaderLoads` returns to module-private in
       `nested-attributes.ts`.
 - [ ] The guard `settles the constructor's nested write before create yields to
-  the block` still expresses Rails' ordering (`core.rb:206-217`), or is
+the block` still expresses Rails' ordering (`core.rb:206-217`), or is
       retired with its reason. No test renames.
