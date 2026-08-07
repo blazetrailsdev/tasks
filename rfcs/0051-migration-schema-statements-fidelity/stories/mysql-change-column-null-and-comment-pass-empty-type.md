@@ -1,6 +1,6 @@
 ---
 title: 'MySQL change_column_null/change_column_comment pass "" where Rails passes nil, plus an invented undefined→null comment normalization'
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
