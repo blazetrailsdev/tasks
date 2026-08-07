@@ -1,6 +1,6 @@
 ---
 title: "strftime is missing fourteen directive arms date_strftime.c has (%c %D %G %g %Q %R %r %T %U %W %V %v %X %+)"
-status: draft
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6193
 claim: null
 assignee: null
 blocked-by: null
