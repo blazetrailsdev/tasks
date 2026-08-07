@@ -1,6 +1,6 @@
 ---
 title: "delete-nested-attributes-deferred-displacement"
-status: claimed
+status: ready
 updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: 9
 pr: null
-claim: "2026-08-07T01:28:29Z"
-assignee: "pg-schema-statements-abstract-signature-divergences"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
