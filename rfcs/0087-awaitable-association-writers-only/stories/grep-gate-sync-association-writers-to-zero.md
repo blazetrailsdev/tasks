@@ -1,7 +1,7 @@
 ---
 title: "grep-gate-sync-association-writers-to-zero"
-status: ready
-updated: 2026-08-03
+status: claimed
+updated: 2026-08-07
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 deps:
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T13:39:44Z"
+assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
 closed-reason: null
 ---

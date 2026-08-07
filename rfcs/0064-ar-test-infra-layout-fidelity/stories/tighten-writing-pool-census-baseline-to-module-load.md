@@ -1,6 +1,6 @@
 ---
 title: "Writing-pool census baseline is taken in beforeAll, hiding module-scope pool leaks"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T13:39:44Z"
+assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
 closed-reason: null
 ---
