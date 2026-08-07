@@ -1,6 +1,6 @@
 ---
 title: "Fold the remaining if: block scalars so expressions carry no literal newlines"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 6185
 claim: "2026-08-07T17:29:47Z"
 assignee: "activerecord-unrouted-privates-tasks-and-migration"
 blocked-by: null
