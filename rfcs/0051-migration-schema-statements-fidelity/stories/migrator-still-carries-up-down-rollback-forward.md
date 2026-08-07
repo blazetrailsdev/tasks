@@ -1,6 +1,6 @@
 ---
 title: "Migrator still carries up/down/rollback/forward, which Rails' Migrator has not"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
