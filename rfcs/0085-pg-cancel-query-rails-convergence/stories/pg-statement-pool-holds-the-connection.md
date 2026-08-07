@@ -1,6 +1,6 @@
 ---
 title: "PG StatementPool holds the connection, not a pinned client (retires _detach/onIssue)"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
