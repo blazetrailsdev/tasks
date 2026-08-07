@@ -1,6 +1,6 @@
 ---
 title: "DateTime.new drops canon24oc, reaching midnight-next-day through the df fold instead"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T13:54:41Z"
+assignee: "datetime-new-drops-canon24oc"
 blocked-by: null
 closed-reason: null
 ---
