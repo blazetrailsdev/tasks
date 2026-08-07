@@ -1,6 +1,6 @@
 ---
 title: "wnumx inlines c_jd_to_weeknum's algebra instead of porting the JDN helpers"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T21:36:46Z"
+assignee: "port-the-jdn-helper-layer-behind-wnumx-and-cwyear"
 blocked-by: null
 closed-reason: null
 ---
