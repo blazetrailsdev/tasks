@@ -1,6 +1,6 @@
 ---
 title: "DateTime#sf carries a JS number where ComplexDateData carries an exact Rational"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
