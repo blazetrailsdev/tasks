@@ -1,7 +1,7 @@
 ---
 title: "Free findTarget has no production caller left — one Rails method should be one TS method"
-status: draft
-updated: 2026-08-05
+status: ready
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
