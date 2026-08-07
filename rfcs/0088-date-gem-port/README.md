@@ -471,7 +471,7 @@ faith.**
 
 ## Constraints
 
-- Each PR ≤ 500 LOC; one story per PR; PRs branch from `main`, no stacking.
+- Each PR under the LOC ceiling; one story per PR; PRs branch from `main`, no stacking.
 - Ported code lives at the path matching the vendored layout so `api:compare`
   resolves it.
 - Test names must match the gem's test names for `test:compare`.

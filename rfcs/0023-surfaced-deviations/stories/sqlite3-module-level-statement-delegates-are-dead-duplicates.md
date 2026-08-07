@@ -48,5 +48,5 @@ anything ever wired it up.
   them without a replacement will regress the api:compare file-structure
   numbers; check `pnpm api:extra` and `pnpm api:calls:wide` both ways.
 - Whichever direction, the logic must exist exactly once afterwards.
-- Scope check before starting: this may exceed the 500-LOC ceiling across both
+- Scope check before starting: this may exceed the LOC ceiling across both
   files. Split by file if so.

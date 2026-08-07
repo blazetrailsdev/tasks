@@ -177,7 +177,7 @@ this RFC (a docs-only follow-up story).
 The plan's ~1400 LOC / 6 PRs assumed building snapshot caching, version
 composition, and packaging from scratch. Reusing `lsp-plugin.ts`'s proven
 override path and the existing `deltas`/`remapLine` removes ~2 PRs' worth.
-Realistic MVP: **~600–800 LOC across 3 PRs** (each ≤500 LOC); full parity
+Realistic MVP: **~600–800 LOC across 3 PRs** (each under the LOC ceiling); full parity
 (diagnostics + perf + cross-editor) adds ~2–3 more PRs post-MVP. Numbers are
 estimates to be confirmed per story.
 

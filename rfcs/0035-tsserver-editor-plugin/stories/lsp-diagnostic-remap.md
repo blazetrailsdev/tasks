@@ -27,4 +27,4 @@ plus code-fix/refactor edit remap (`getCodeFixesAtPosition`,
 - Editor diagnostics land on the user's original lines/columns/message text,
   matching a hand-declared equivalent.
 - Code fixes/refactors produce no edits inside injected `declare` ranges.
-- Tests on an error-in-class-body fixture. ≤500 LOC.
+- Tests on an error-in-class-body fixture. Fits under the LOC ceiling.

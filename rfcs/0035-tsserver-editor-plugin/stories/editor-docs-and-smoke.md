@@ -29,4 +29,4 @@ README (line 69) and `packages/activerecord/README.md`. Supersede Phase 2 of
 - `docs/editor-setup.md` covers tier-1 editors + TS compatibility note.
 - tsserver smoke test green; runs in CI.
 - README "in flight" notes updated; plan doc Phase 2 superseded. Docs-heavy
-  (exempt from LOC ceiling for .md), but keep code ≤500 LOC.
+  (exempt from LOC ceiling for .md), but keep code under the LOC ceiling.

@@ -40,4 +40,4 @@ plus the matching `vendor/rails/activerecord/test/models/`.
   `./test-helpers/canonical-model-index.js` so the guard is armed and green
   (this is the last pass — depends on passes 2 and 3 having landed).
 - Existing tests stay green.
-- 500 LOC ceiling; single PR from `main`, no stacking.
+- LOC ceiling; single PR from `main`, no stacking.

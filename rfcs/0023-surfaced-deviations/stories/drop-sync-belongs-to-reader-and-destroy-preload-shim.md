@@ -85,7 +85,7 @@ The sync singular reader is a public API surface, not only a destroy-callback
 concern — `packages/activerecord/src/strict-loading-sync-reader.test.ts` is an
 entire file about it, and `test-fixtures.ts` declares `loadBelongsTo` on many
 canonical models. Audit the sync-reader dispatch sites and dependent tests
-before deleting; if the removal exceeds the 500-LOC ceiling, ship the
+before deleting; if the removal exceeds the LOC ceiling, ship the
 `_preloadBelongsToForDestroyCallbacks` deletion first and register the reader
 removal separately. Do **not** fan out sibling PRs.
 

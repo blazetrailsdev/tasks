@@ -185,5 +185,5 @@ activesupport/activemodel/activerecord depend on `corelib`.
 
 ## Constraints
 
-- Each PR ≤ 500 LOC; one story per PR; PRs branch from `main`, no stacking.
+- Each PR under the LOC ceiling; one story per PR; PRs branch from `main`, no stacking.
 - `compareApi` stays `false` for `ruby_spec` permanently.

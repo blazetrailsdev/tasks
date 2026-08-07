@@ -34,4 +34,4 @@ change).
 - Registry pass held by the shell; rebuilt on program-identity change, not per
   keystroke.
 - In-process LanguageService test: `quickInfo` on `post.title` (no manual
-  declare) returns `(property) Post.title: string`. ≤500 LOC.
+  declare) returns `(property) Post.title: string`. Fits under the LOC ceiling.

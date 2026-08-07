@@ -38,7 +38,7 @@ bundle: self-contained, mechanical, no cross-cutting state.
 
 - Re-measure first with `pnpm api:calls:wide --report` — the ~90 figure is a
   projection from 2026-07-30 probe runs, not a live count.
-- Split into ~3 PRs, each under the 500-LOC ceiling, each branching from `main`
+- Split into ~3 PRs, each under the LOC ceiling, each branching from `main`
   with non-overlapping files. Register the slices as follow-up stories under
   this RFC rather than opening them all from one agent.
 - Each converged visitor calls the ported helper Rails calls; behavior is

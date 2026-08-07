@@ -50,7 +50,7 @@ MySQL JSON suites, which include the same module in Rails, would share the port.
 - [ ] All 25 cases ported, or the un-portable ones justified individually at the
       call site (Ruby-only semantics) rather than silently dropped.
 - [ ] Rails test names preserved verbatim so `test:compare` matches them.
-- [ ] Split across PRs to respect the 500-LOC ceiling; register the remainder as
+- [ ] Split across PRs to respect the LOC ceiling; register the remainder as
       sibling stories rather than fanning out PRs.
 - [ ] `json_data_type` stays an ad-hoc table created in setup, as Rails does —
       it is not canonical schema.

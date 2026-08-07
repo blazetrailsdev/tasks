@@ -45,7 +45,7 @@ Ruby-faithful `to_s` (most pack via `to_s`):
   Ruby-faithful option translation (`:97`).
 
 So this is value-class porting (IPAddr, Pathname, possibly a Range/URI wrapper)
-plus codec registration. Likely larger than one ≤500 LOC PR — land the ones
+plus codec registration. Likely larger than one PR under the LOC ceiling — land the ones
 whose value class already exists (Range/Regexp/URI) first and split IPAddr +
 Pathname (which need new classes) into a follow-up story rather than fanning
 out PRs.
@@ -60,7 +60,7 @@ out PRs.
       codec needs — and reused, not inlined into the codec.
 - [ ] Round-trip tests per type (incl. an exclusive Range, an IPv6 IPAddr, a
       Regexp with flags); cross-runtime byte-compatible with Ruby.
-- [ ] Scoped to ≤500 LOC; split IPAddr/Pathname into a follow-up story if the
+- [ ] Scoped to one PR under the LOC ceiling; split IPAddr/Pathname into a follow-up story if the
       budget is exceeded (register via `pnpm tasks new`, do not open sibling
       PRs).
 - [ ] api:compare / test:compare delta non-negative.

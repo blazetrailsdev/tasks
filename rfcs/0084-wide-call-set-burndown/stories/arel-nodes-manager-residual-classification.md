@@ -59,5 +59,5 @@ Baseline rows retired: package `arel` — `predications.ts` `grouping_any` /
   evidence. Never a broadened baseline reason.
 - The listed wide baseline rows are deleted by hand (only-shrink; no
   `--write` reseed).
-- Single PR under the 500-LOC ceiling; non-overlapping with the two visitor
+- Single PR under the LOC ceiling; non-overlapping with the two visitor
   slices.

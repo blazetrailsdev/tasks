@@ -71,7 +71,7 @@ and `execute_grouped_calculation` sets in `relation/calculations.json`.
 
 ## Notes
 
-Likely larger than the 500 LOC ceiling in one pass — `performCount` alone is
+Likely larger than the LOC ceiling in one pass — `performCount` alone is
 ~450 lines. If so, split it at the seam the PR discovers (e.g. the
 count-subquery extraction first, the `calculate` inversion second) and register
 the second half as its own story rather than stacking.

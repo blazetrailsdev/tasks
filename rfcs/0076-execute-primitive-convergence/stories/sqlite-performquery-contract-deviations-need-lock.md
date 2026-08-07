@@ -74,5 +74,5 @@ Sequences after the per-adapter unification
 (`unify-execute-mutation-into-perform-query-postgresql`,
 `unify-execute-mutation-into-perform-query-mysql2`) if the lock discipline is
 shared across adapters. Hard rules: no `node:*` imports. No `process.*`. Async fs
-only. No new third-party runtime deps. 500 LOC ceiling. Single PR from main. Test
+only. No new third-party runtime deps. Respect the LOC ceiling. Single PR from main. Test
 names match Rails verbatim.

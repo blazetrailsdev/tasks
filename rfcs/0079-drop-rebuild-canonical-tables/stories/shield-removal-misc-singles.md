@@ -29,7 +29,7 @@ The remaining per-suite shields, one call site each:
   source #1; that suite was the top culprit AND is a victim)
 - `primary-keys.test.ts:549` (cpk_books, cpk_orders, cpk_authors)
 
-Split across PRs if the fixes exceed the 500-LOC ceiling; per-site removals
+Split across PRs if the fixes exceed the LOC ceiling; per-site removals
 are independent. Use the Phase-1 inventory to fix each culprit at the source.
 
 ## Acceptance criteria

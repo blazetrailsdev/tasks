@@ -97,6 +97,6 @@ Two sites are intentional and must NOT be converted:
   adapter-lane files; a change green on SQLite can be silently wrong on PG/MySQL
   (RFC constraint 1).
 
-May exceed the 500 LOC ceiling across 24 files — split by directory
+May exceed the LOC ceiling across 24 files — split by directory
 (`associations/**` is 10 sites) and register the split as sibling stories rather
 than fanning out PRs.

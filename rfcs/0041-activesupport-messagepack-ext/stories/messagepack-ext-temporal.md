@@ -55,6 +55,6 @@ nanosecond `Time`).
 - [ ] Round-trip tests for each type, including a DST/offset case for
       TimeWithZone and a multi-part Duration; cross-runtime compatible with Ruby.
 - [ ] If nanosecond-faithful `Time` (type 7) requires reworking the underlying
-      temporal rep beyond this story's ≤500 LOC budget, land 5/6/10 first and
+      temporal rep beyond this story's one-PR LOC budget, land 5/6/10 first and
       register a follow-up for 7/8; do not fan out PRs.
 - [ ] api:compare / test:compare delta non-negative.

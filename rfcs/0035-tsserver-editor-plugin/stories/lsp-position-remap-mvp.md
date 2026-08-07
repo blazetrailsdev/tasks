@@ -30,4 +30,4 @@ snapshot so go-to-def on an injected `import type` resolves (RFC Open Q2).
   `getQuickInfoAtPosition`, `getCompletionsAtPosition` (+ entry details).
 - Tests on the auto-import fixture: hover/def spans point at the literal
   identifier in the original file; go-to-def on an auto-imported target jumps to
-  its module. ≤500 LOC. Diagnostics/rename/outline are out of scope (deferred).
+  its module. Fits under the LOC ceiling. Diagnostics/rename/outline are out of scope (deferred).

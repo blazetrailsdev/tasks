@@ -27,4 +27,4 @@ keyed on scanned `ts.SourceFile`s.
   change.
 - Perf harness over synthetic repos (N∈{10,100,500}); p95 file-open overhead
   under an agreed budget; no per-keystroke walker invocations.
-- ≤500 LOC; harness may land as a non-blocking CI job initially.
+- Under the LOC ceiling; harness may land as a non-blocking CI job initially.

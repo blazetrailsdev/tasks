@@ -54,7 +54,7 @@ by `configurable.ts` or `context.ts`. See
 this graph.
 
 **Unblocked 2026-08-07.** The previous attempt stopped because ESM had no
-sanctioned deferral for Ruby's autoload and picking one was out of a 500 LOC
+sanctioned deferral for Ruby's autoload and picking one was out of a single
 story's scope. That decision now exists and is written down: CLAUDE.md,
 "Call-time constant resolution (Ruby autoload → the zero-import slot)", with
 `packages/activerecord/src/encryption/configurable-slot.ts` as a worked

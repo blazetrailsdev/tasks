@@ -59,6 +59,6 @@ follow-up story if so).
       packing and the `:127`/`:136` unpack order.
 - [ ] Round-trip tests cover reduced/unreduced rationals, negative denominators,
       zero-imaginary complex, etc.; cross-runtime byte-compatible with Ruby.
-- [ ] Scoped to ≤500 LOC; if the value classes balloon, split them into their
+- [ ] Scoped to one PR under the LOC ceiling; if the value classes balloon, split them into their
       own story and keep this one to the codec.
 - [ ] api:compare / test:compare delta non-negative.

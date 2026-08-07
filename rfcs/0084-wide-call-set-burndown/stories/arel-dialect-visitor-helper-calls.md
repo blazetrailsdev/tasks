@@ -70,4 +70,4 @@ Baseline rows retired: package `arel`, files `visitors/mysql.ts`
   `--write` reseed).
 - Bodies verified against the vendored Rails dialect visitors; arel visitor
   test files stay green.
-- Single PR under the 500-LOC ceiling; does not touch `visitors/to-sql.ts`.
+- Single PR under the LOC ceiling; does not touch `visitors/to-sql.ts`.

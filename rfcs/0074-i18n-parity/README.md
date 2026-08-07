@@ -81,7 +81,7 @@ packages.
 
 ## Constraints
 
-- Each PR ≤ 500 LOC; one story per PR; PRs branch from `main`, no stacking.
+- Each PR under the LOC ceiling; one story per PR; PRs branch from `main`, no stacking.
 - Ported code lives in the file matching the gem's layout so api-compare
   resolves it; `@internal` for private helpers per CONTRIBUTING.md.
 - Test names must match the gem's test names for test-compare matching.

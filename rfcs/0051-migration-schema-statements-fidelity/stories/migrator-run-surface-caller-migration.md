@@ -97,4 +97,4 @@ part of this story.
       Rails-verbatim names and pass.
 
 Hard rules: no `node:*` imports, no `process.*`, async fs only, no new runtime
-deps, 500 LOC ceiling, single PR from main.
+deps, the LOC ceiling, single PR from main.

@@ -135,7 +135,7 @@ awaitable constructor to redirect to.
 ## Rollout
 
 Sequenced so the awaitable surface and the call-site migration land before the
-setters are deleted, and so no single PR exceeds the 500-LOC ceiling:
+setters are deleted, and so no single PR exceeds the LOC ceiling:
 
 1. Migrate ported call sites off `=` for each association family, one family per
    PR (the setters still work, so each migration is independently mergeable).

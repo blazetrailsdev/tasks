@@ -67,5 +67,5 @@ Baseline rows retired (all in
   `--write` reseed).
 - `pnpm vitest run` on the arel visitor test files stays green; bodies
   verified against `vendor/rails/activerecord/lib/arel/visitors/to_sql.rb`.
-- Single PR under the 500-LOC ceiling, this file only (non-overlapping with
+- Single PR under the LOC ceiling, this file only (non-overlapping with
   the dialect-visitor slice).

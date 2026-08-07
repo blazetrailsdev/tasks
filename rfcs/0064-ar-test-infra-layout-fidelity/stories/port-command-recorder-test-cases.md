@@ -58,6 +58,6 @@ Note the three already ported by #5635, so they are not re-ported:
   non-negative.
 - Green on sqlite3, PostgreSQL and MySQL.
 
-Likely needs splitting across several PRs under the 500 LOC ceiling — file the
+Likely needs splitting across several PRs under the LOC ceiling — file the
 follow-ups as separate stories rather than fanning out.
 ````

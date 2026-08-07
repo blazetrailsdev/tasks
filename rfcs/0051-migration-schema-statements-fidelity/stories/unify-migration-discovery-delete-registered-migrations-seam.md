@@ -64,4 +64,4 @@ reach `MigrationContext` at all.
       with the seam.
 
 Hard rules: no `node:*` imports, no `process.*`, async fs only, no new runtime
-deps, 500 LOC ceiling, single PR from main.
+deps, the LOC ceiling, single PR from main.

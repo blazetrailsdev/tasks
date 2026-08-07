@@ -306,7 +306,7 @@ most likely to pass:
 
 Each proceeds through its own go/no-go gate; a no-go closes that PR without
 affecting the others. Each story's `est-loc` is the implementer's PR-size budget
-(additions + deletions), capped at the trails 500-LOC ceiling; all stories are
+(additions + deletions), capped at the trails per-PR LOC ceiling; all stories are
 coverage-neutral.
 
 ## Open questions

@@ -70,6 +70,6 @@ test for `fixtures.rb`, and our `fixtures.test.ts` is only a partial port of it.
 ## Notes
 
 Scope check before starting: `fixtures_test.rb` is large. If porting the whole
-file exceeds the 500-LOC ceiling, ship the portion that fits, keep the exclude
+file exceeds the LOC ceiling, ship the portion that fits, keep the exclude
 entry until the last case lands, and register the remainder as a follow-up
 story rather than fanning out PRs.

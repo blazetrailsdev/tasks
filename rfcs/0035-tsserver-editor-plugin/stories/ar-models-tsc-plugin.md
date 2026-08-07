@@ -31,4 +31,4 @@ and its doc comment names the future `ar-models` plugin. No
 - Maps AR `VirtualizeResult { text, deltas }` to `VirtualizeOutput { ts, deltas }`.
 - Wired into the `trails-tsc` CLI host (`buildCompilerHost` plugins list) so a
   zero-declare model typechecks through the shared host path.
-- Unit tests on a flat `extends Base` fixture; ≤500 LOC.
+- Unit tests on a flat `extends Base` fixture; under the LOC ceiling.
