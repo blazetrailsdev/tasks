@@ -1,6 +1,6 @@
 ---
 title: "DateTime#sec_fraction answers a Rational unconditionally, as ns_to_sec does"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
