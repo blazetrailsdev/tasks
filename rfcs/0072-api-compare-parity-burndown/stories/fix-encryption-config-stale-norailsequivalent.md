@@ -1,7 +1,7 @@
 ---
 title: "api:extra red on main: stale @noRailsEquivalent on encryption/config.ts getSharedConfig"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on origin/main (311bff350): getSharedConfig no longer exists anywhere in packages/activerecord/src, so neither api:extra row (STALE tag, missing permanence claim) can fire. The only @noRailsEquivalent left in packages/activerecord/src/encryption/config.ts is on the compressor duck-type at :19 and already opens with PERMANENT. The gate red this story was filed against is resolved."
 ---
 
 ## Context
