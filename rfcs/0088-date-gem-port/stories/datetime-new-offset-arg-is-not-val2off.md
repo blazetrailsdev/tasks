@@ -1,7 +1,7 @@
 ---
 title: "DateTime.new's offset argument takes seconds, where val2off takes a day fraction"
-status: blocked
-updated: 2026-08-06
+status: ready
+updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-06T14:23:10Z"
-assignee: "date-temporal-default-return-and-ruby-opt-in"
-blocked-by: "Blocked on PR #6153, still OPEN/draft. The exact target lines — the DateTime constructor's 'why the port took seconds' JSDoc paragraph and the constructor signature (start param dropped) — are rewritten inside #6153's diff, as is the dtNewByFrags/Rational region. Direct textual conflict; no stacking. Unblock when #6153 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
