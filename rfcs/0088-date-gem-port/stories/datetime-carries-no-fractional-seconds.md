@@ -1,6 +1,6 @@
 ---
 title: "::DateTime#strftime hands the formatter nsec: 0, so %N and %L always answer zeros"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
