@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy.test.ts pins row order of an unordered association SELECT"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T22:32:42Z"
+assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderror"
 blocked-by: null
 closed-reason: null
 ---
