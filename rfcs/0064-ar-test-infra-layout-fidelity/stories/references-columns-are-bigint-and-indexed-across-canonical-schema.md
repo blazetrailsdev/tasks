@@ -1,6 +1,6 @@
 ---
 title: "Every t.references transcribes as a bigint column with its default index"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
