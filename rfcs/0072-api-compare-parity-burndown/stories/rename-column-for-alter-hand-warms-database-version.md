@@ -1,7 +1,7 @@
 ---
 title: "rename_column_for_alter hand-warms database_version, a call Rails does not make"
-status: blocked
-updated: 2026-08-06
+status: closed
+updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 deps: []
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: 6146
-claim: "2026-08-05T23:53:11Z"
-assignee: "pg-schema-statements-abstract-signature-divergences"
-blocked-by: "Still blocked AFTER its prerequisite merged. port-pool-server-version-retire-get-database-version-memo-guard landed in #6144, which re-spelled all three MySQL hand-warms as 'await this.pool.serverVersion(this)' but did NOT remove them — and could not. pool.serverVersion (abstract/connection-pool.ts:126-134) memoizes only the RESOLVED value and returns connection.getDatabaseVersion()'s Promise for MySQL, so the sync databaseVersion getter still cannot issue the round-trip Rails' reader does (abstract_adapter.rb:854-856). main itself still warms in renameColumnForAlter, renameIndex and checkConstraints, which is the proof. Removing the warm reds the MariaDB lane: connection.test.ts:318 'logs name rename column for alter' fails with 'databaseVersion is not available yet' (PR #6146, run 31058825999). The real blocker is the sync/async gap, not the pool memo: this cannot converge until databaseVersion can fetch synchronously or every caller becomes async. PR #6146 shipped the independent half — the body returns this.renameColumnSql(...) per abstract_mysql_adapter.rb:864, retiring one call-mismatch row."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Already done on origin/main (311bff350). AC1: AbstractMysqlAdapter#renameColumnForAlter (abstract-mysql-adapter.ts:1781-1788) has no version warm and goes straight into supportsRenameColumn() -> renameColumnSql, matching abstract_mysql_adapter.rb:863-878 — shipped by PR #6146. AC2: the sibling hand-warms went with PR #6149 (fill the version memo at connection establishment); renameIndex (:711) and checkConstraints (:1011) read the sync predicates directly, and the one surviving await — isRowFormatDynamicByDefault, mysql/schema-statements.ts:171-180 — carries its remaining reason at the call site pointing at 0072/make-version-gated-predicates-async, which is what AC2 asks for. Nothing left to ship."
 ---
 
 ## Context
