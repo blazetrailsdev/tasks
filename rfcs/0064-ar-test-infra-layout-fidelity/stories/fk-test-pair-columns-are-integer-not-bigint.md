@@ -1,6 +1,6 @@
 ---
 title: "fk-test-pair-columns-are-integer-not-bigint"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6184
 claim: "2026-08-07T17:13:47Z"
 assignee: "fk-test-pair-columns-are-integer-not-bigint"
 blocked-by: null
