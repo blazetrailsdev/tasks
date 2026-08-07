@@ -1,6 +1,6 @@
 ---
 title: "date__strptime's %Q and %s :seconds frags are JS numbers where MRI's are exact"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
