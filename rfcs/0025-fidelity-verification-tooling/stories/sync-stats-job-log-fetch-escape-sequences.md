@@ -1,6 +1,6 @@
 ---
 title: "sync-stats: job-log fetch broken by gh 2.97's escape-sequence guard — compare feed stale since 2026-08-03"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:38:08Z"
+assignee: "sync-stats-job-log-fetch-escape-sequences"
 blocked-by: null
 closed-reason: null
 ---
