@@ -1,6 +1,6 @@
 ---
 title: "Ruby block iteration tokens as ref:each where the TS port tokens loop, in the skeleton stream"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
