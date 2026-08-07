@@ -1,6 +1,6 @@
 ---
 title: "Type::Time#cast_value and #microseconds take a Rational :sec_fraction's value instead of carrying it"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
