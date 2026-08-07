@@ -1,6 +1,6 @@
 ---
 title: "fixtures-compare: normalize Ruby-symbol row-column keys (naked/yml/trees false DIFF)"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:53:00Z"
+assignee: "user-input-in-time-zone-utc-fallback-is-not-rails-zoneless-arm"
 blocked-by: null
 closed-reason: null
 ---

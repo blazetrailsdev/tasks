@@ -1,6 +1,6 @@
 ---
 title: "user_input_in_time_zone substitutes UTC where Ruby answers a zoneless to_time"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:53:00Z"
+assignee: "user-input-in-time-zone-utc-fallback-is-not-rails-zoneless-arm"
 blocked-by: null
 closed-reason: null
 ---

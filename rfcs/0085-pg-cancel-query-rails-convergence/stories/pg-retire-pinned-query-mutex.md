@@ -1,7 +1,7 @@
 ---
 title: "Retire _serializePinnedQuery/_maintenanceTail in favour of the lock"
-status: ready
-updated: 2026-07-31
+status: claimed
+updated: 2026-08-07
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: ["pg-lock-scope-no-escaping-queries"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T17:53:00Z"
+assignee: "user-input-in-time-zone-utc-fallback-is-not-rails-zoneless-arm"
 blocked-by: null
 closed-reason: null
 ---
