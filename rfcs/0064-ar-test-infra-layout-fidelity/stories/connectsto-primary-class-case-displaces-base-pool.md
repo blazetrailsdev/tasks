@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
-deps: []
+deps:
+  - tighten-writing-pool-census-baseline-to-module-load
 deps-rfc: []
 est-loc: 90
 priority: null
