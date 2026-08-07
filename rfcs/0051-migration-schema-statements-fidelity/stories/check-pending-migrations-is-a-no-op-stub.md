@@ -1,6 +1,6 @@
 ---
 title: "Migration.checkPendingMigrations is a no-op stub; port migration.rb:739-746"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6162
 claim: "2026-08-07T01:08:29Z"
 assignee: "check-pending-migrations-is-a-no-op-stub"
 blocked-by: null
