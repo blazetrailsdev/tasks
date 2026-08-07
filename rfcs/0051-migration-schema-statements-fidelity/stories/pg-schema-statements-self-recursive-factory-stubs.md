@@ -1,6 +1,6 @@
 ---
 title: "PG SchemaStatements carries two self-recursive factory stubs Rails has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
