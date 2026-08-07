@@ -1,6 +1,6 @@
 ---
 title: "extra-surface scores an overridden Ruby file's TS target against an empty allowed set"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
