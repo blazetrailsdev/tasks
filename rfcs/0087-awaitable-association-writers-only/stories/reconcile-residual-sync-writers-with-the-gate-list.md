@@ -77,6 +77,30 @@ Decide which of the two the campaign actually means, and make the gate match:
 Do not close this by re-marking the two done stories; their PRs shipped real
 work and the acceptance-criteria overreach is what this story records.
 
+## Decision (2026-08-07)
+
+**Shape 2 — narrow the gate.** Mass assignment stays synchronous: Rails'
+`assign_attributes` returns nil and does its work inline
+(`vendor/rails/activemodel/lib/active_model/attribute_assignment.rb:32-35`),
+and the campaign's own remaining story
+`awaitable-mass-assignment-for-nested-attributes` converges trails onto exactly
+that shape (`assignAttributes` returns `void`; no mass-assignment entry point
+answers a promise). A permanently synchronous `assignAttributes` gives
+`syncWrite` / `syncIdsWrite` a permanent caller, so shape 1 is not reachable
+without reversing that story — and reversing it would move _away_ from Rails,
+which is not a trade this campaign is entitled to make.
+
+So the four symbols stay, justified at the call site (they already were —
+`collection-association.ts` `syncWrite` / `syncIdsWrite` JSDoc,
+`has-one-association.ts` `syncWrite` JSDoc, and both error classes in
+`associations/errors.ts`; this story adds the explicit "survives RFC 0087
+deliberately, because mass assignment cannot await" line to each). RFC 0068's
+"why 'loud' beats 'deferred'" is the precedent for keeping the throw rather
+than deferring the write.
+
+RFC 0087 README §1/§2/§Verification and the gate story's symbol list are
+updated to the four symbols that are genuinely at zero.
+
 ## Acceptance criteria
 
 - [ ] A decision between the two shapes above is recorded in this story, with

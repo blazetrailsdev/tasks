@@ -90,23 +90,34 @@ depends on unstated state.
 ### 1. What is deleted
 
 - The generated `#{name}=` property setter for `has_one` / `belongs_to`-style
-  singular associations, and `HasOneAssociation#syncWrite` with it.
-- The generated `#{name}=` and `#{name}Ids=` property setters for collections,
-  and the collection-side sync-write arms.
+  singular associations.
+- The generated `#{name}=` and `#{name}Ids=` property setters for collections.
 - The generated `#{name}Attributes=` property setter from
   `generateAssociationWriter` (`packages/activerecord/src/nested-attributes.ts`),
   together with the deferred-displacement machinery it is the sole reason for:
   `prepareDetachDisplacedForSyncBuild`, `findThenDetachDisplaced`,
   `_pendingDisplacedRemovals`, `_displacedRemovalFailure` and their drain.
-- `HasOnePersistedAssignmentError` and `CollectionIdsAssignmentError`, which
-  exist only to describe the arm being removed.
-- The has_one / collection arms of `attribute-assignment.ts` that route
-  mass-assignment into the sync writers.
+  `HasOneAssociation#syncWrite`, `CollectionAssociation#syncWrite` /
+  `syncIdsWrite`, `HasOnePersistedAssignmentError` and
+  `CollectionIdsAssignmentError` were listed here and are **not** deleted — see
+  §2. (Resolved by `reconcile-residual-sync-writers-with-the-gate-list`.)
 
 ### 2. What stays
 
 - `belongs_to`'s setter, which is in-memory in Rails and in trails — no
   deviation to remove (RFC 0068 Design §5).
+- The has_one / collection arms of `attribute-assignment.ts` and the four
+  symbols they reach — `syncWrite`, `syncIdsWrite`,
+  `HasOnePersistedAssignmentError`, `CollectionIdsAssignmentError`. Rails'
+  `assign_attributes` returns nil and assigns inline
+  (`activemodel/lib/active_model/attribute_assignment.rb:32-35`), and
+  `awaitable-mass-assignment-for-nested-attributes` converges trails onto
+  exactly that (`assignAttributes` returns `void`). A permanently synchronous
+  mass assignment gives these a permanent caller, so they are the campaign's
+  deliberate residue, justified at the call site — the same "loud beats
+  deferred" tradeoff RFC 0068 settled. The through-inverse wiring in
+  `collection-proxy.ts` / `has-many-through-association.ts` rides the same
+  route.
 - Every plain attribute setter. This RFC is scoped to association writers.
 - The association **readers**, unchanged.
 - `set#{Name}`, `set#{Name}Attributes`, `association(name).writer` /
@@ -151,8 +162,9 @@ setters are deleted, and so no single PR exceeds the LOC ceiling:
 - `pnpm api:extra --package activerecord` drops the invented error classes.
 - `pnpm api:calls` / `pnpm api:calls:wide` clean; baseline rows whose methods
   are deleted must be removed by hand, not reseeded.
-- A grep gate to zero on `syncWrite`, `HasOnePersistedAssignmentError`,
-  `CollectionIdsAssignmentError`, `_pendingDisplacedRemovals`.
+- A grep gate to zero on `_pendingDisplacedRemovals`, `_displacedRemovalFailure`,
+  `prepareDetachDisplacedForSyncBuild` and `findThenDetachDisplaced`. NOT on
+  `syncWrite` / `syncIdsWrite` / the two error classes: §2 keeps those.
 
 ## Open questions
 

@@ -20,10 +20,17 @@ closed-reason: null
 RFC 0087's Verification section: once the campaign lands, no synchronous
 association-writer machinery may reappear. Add the grep gate that keeps it at
 zero, in the same shape as the repo's other zero-gates
-(`scripts/ci/`), covering `syncWrite`, `HasOnePersistedAssignmentError`,
-`CollectionIdsAssignmentError`, `_pendingDisplacedRemovals`,
+(`scripts/ci/`), covering `_pendingDisplacedRemovals`,
 `_displacedRemovalFailure`, `prepareDetachDisplacedForSyncBuild` and
 `findThenDetachDisplaced`.
+
+**Narrowed from seven symbols to four** by
+`reconcile-residual-sync-writers-with-the-gate-list`: `syncWrite`,
+`syncIdsWrite`, `HasOnePersistedAssignmentError` and
+`CollectionIdsAssignmentError` are the campaign's deliberate residue, kept
+alive by a permanently synchronous `assignAttributes` (RFC 0087 README §2).
+Gating them to zero would red main forever. The four above are genuinely at
+zero on `origin/main` and are what this gate holds down.
 
 Last story in the campaign — it is meaningless until the deletions land, and it
 is what stops a future PR from re-adding a property setter "just for
