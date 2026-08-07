@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
-deps: []
+deps:
+  - datetime-new-offset-arg-is-not-val2off
 deps-rfc: []
 est-loc: 250
 priority: null
