@@ -1,6 +1,6 @@
 ---
 title: "::DateTime#to_s answers Date's date-only string, dropping the time and offset"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
