@@ -1,6 +1,6 @@
 ---
 title: "Migrator#connection returns a constructor-pinned adapter, not DatabaseTasks.migration_connection"
-status: ready
+status: closed
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by migrator-ctor-takes-schema-migration-and-internal-metadata, migrator-test-sites-adopt-rails-ctor-signature and migrator-connection-resolves-per-call: re-measured at ~1500 LOC during PR #6176 (~110 new Migrator(...) sites across four packages), an order of magnitude over its 140 estimate and over the PR ceiling."
 ---
 
 ## Context
