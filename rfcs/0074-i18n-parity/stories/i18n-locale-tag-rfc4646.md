@@ -1,7 +1,7 @@
 ---
 title: "i18n-locale-tag-rfc4646"
-status: blocked
-updated: 2026-08-03
+status: ready
+updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-03T22:23:09Z"
-assignee: "i18n-locale-tag-rfc4646"
-blocked-by: "Blocked on unmerged PR #6029 (story i18n-backend-fallbacks). rfc4646.rb's port requires packages/i18n/src/locale/tag/parents.ts (Ruby 'include Parents', vendor/i18n/lib/i18n/locale/tag/rfc4646.rb:32) and the locale/tag/ tree, none of which exist on origin/main — they are all introduced by #6029. The scripts/api-compare/unported-files.ts entry this story must delete is the broad 'locale/' pattern (unported-files.ts:1215-1222), which #6029 also rewrites, so any edit here conflicts with it. Per CLAUDE.md no-stacked-PRs, this cannot ship from main until #6029 merges. Unblock and re-run once #6029 is in main."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
