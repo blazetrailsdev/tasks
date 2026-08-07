@@ -1,6 +1,6 @@
 ---
 title: "Converge withOptions onto full OptionMerger semantics"
-status: in-progress
+status: done
 updated: 2026-08-07
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
