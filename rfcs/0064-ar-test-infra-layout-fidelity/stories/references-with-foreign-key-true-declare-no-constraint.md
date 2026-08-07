@@ -1,6 +1,6 @@
 ---
 title: "t.references foreign_key: true builds no FK constraint in either canonical source"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6198
 claim: "2026-08-07T20:08:49Z"
 assignee: "polymorphic-reference-type-column-comes-first"
 blocked-by: null
