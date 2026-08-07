@@ -1,6 +1,6 @@
 ---
 title: "changeColumnDefault's descriptor arm is absorbed by | unknown; param is named options not defaultOrChanges"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: null
+pr: 6207
 claim: "2026-08-07T22:32:42Z"
 assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderror"
 blocked-by: null
