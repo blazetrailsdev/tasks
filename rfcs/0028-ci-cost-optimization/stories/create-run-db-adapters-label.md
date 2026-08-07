@@ -1,6 +1,6 @@
 ---
 title: "Create the run-db-adapters label the draft deferral documents"
-status: ready
+status: claimed
 updated: 2026-08-07
 rfc: "0028-ci-cost-optimization"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 5
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-07T18:48:45Z"
+assignee: "strptime-sec-fraction-numerator-is-a-number"
 blocked-by: null
 closed-reason: null
 ---
