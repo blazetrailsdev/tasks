@@ -1,6 +1,6 @@
 ---
 title: "The Date arm is unreachable from outside activesupport — give it a subpath export"
-status: ready
+status: draft
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
