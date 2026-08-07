@@ -1,6 +1,6 @@
 ---
 title: "Ruby gate extractor's unless path still unions or_true, treating unless A || B as a disjunction"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6172
 claim: "2026-08-07T13:39:44Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
