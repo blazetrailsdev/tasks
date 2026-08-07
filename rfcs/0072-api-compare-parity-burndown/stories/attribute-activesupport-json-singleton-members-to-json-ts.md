@@ -1,6 +1,6 @@
 ---
 title: "attribute-activesupport-json-singleton-members-to-json-ts"
-status: claimed
+status: in-progress
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6166
 claim: "2026-08-07T02:48:26Z"
 assignee: "attribute-activesupport-json-singleton-members-to-json-ts"
 blocked-by: null
