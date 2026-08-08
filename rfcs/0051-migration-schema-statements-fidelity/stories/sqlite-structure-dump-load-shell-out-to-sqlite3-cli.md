@@ -1,6 +1,6 @@
 ---
 title: "SQLiteDatabaseTasks structure_dump/structure_load shell out to the sqlite3 CLI as Rails does"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
