@@ -1,6 +1,6 @@
 ---
 title: "mysql-new-column-from-field-folds-on-update-into-default-generated"
-status: ready
+status: draft
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
