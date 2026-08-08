@@ -1,6 +1,6 @@
 ---
 title: "Date/DateTime seat on proleptic Gregorian where Date.new defaults to Date::ITALY, so wday and %s disagree with MRI at and before the reform"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
