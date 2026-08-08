@@ -1,14 +1,14 @@
 ---
 title: "CommandRecorder's method_missing stand-in raises NoMethodError instead of returning undefined"
-status: draft
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6252
 claim: null
 assignee: null
 blocked-by: null
