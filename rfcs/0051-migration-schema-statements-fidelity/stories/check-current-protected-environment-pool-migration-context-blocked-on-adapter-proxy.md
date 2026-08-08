@@ -4,7 +4,9 @@ status: blocked
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - migration-collaborators-hold-a-pool-and-reach-connections-through-it
+  - migration-context-collaborators-need-a-pool
 deps-rfc: []
 est-loc: null
 priority: null
