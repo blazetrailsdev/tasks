@@ -1,7 +1,7 @@
 ---
 title: "strftime drops the E and O locale-extension flag cases date_strftime.c reads ahead of every directive"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
 packages:
