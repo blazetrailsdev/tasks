@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#role/#shard read through a cast that returns undefined where Ruby raises NoMethodError"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T15:27:57Z"
+assignee: "deprecators-bucket-clusters-onto-deprecation-ts"
 blocked-by: null
 closed-reason: null
 ---
