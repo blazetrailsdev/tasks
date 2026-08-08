@@ -1,6 +1,6 @@
 ---
 title: "Every SchemaMigration/InternalMetadata call site passes a pool; delete the seam (step 2 of 2)"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
