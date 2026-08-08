@@ -1,6 +1,6 @@
 ---
 title: "date-temporal-default-return-and-ruby-opt-in"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T21:45:04Z"
+assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
 closed-reason: null
 ---
