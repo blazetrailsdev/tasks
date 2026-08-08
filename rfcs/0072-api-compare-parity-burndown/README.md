@@ -16,7 +16,6 @@ clusters:
   - arity-fidelity
   - missing-methods
   - extra-surface
-priority: 2
 ---
 
 ## Summary
