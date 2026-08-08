@@ -60,7 +60,7 @@ Rails has no connection to ask at that point either.
 ## Acceptance criteria
 
 - [ ] `SQLite3Adapter#getDatabaseVersion` is `Version.new(query_value(...,
-  "SCHEMA"))`, matching `sqlite3_adapter.rb:476-478`.
+"SCHEMA"))`, matching `sqlite3_adapter.rb:476-478`.
 - [ ] The `blazetrails/sqlite-driver-await` disable and the manual Promise-arm
       branching are gone from that method.
 - [ ] The `get_database_version` / `query_value` baseline row is deleted, not
