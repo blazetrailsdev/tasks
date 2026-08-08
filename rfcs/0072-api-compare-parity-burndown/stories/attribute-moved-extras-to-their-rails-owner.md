@@ -1,6 +1,6 @@
 ---
 title: "Attribute each moved extra to the Rails file/method it credits against"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6234
 claim: "2026-08-08T14:04:11Z"
 assignee: "attribute-moved-extras-to-their-rails-owner"
 blocked-by: null
