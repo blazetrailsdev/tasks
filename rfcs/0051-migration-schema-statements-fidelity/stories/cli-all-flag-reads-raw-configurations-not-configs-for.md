@@ -1,7 +1,7 @@
 ---
 title: "activerecord-cli --all reads the raw configurations array, bypassing configs_for filtering"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
