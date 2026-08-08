@@ -1,7 +1,7 @@
 ---
 title: "pg-adapter-test-aftereach-connect-hook-timeout"
-status: ready
-updated: 2026-08-07
+status: claimed
+updated: 2026-08-08
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T18:16:03Z"
+assignee: "pg-adapter-test-aftereach-connect-hook-timeout"
 blocked-by: null
 closed-reason: null
 ---
