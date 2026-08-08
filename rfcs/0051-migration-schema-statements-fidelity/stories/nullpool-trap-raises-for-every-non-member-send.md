@@ -1,6 +1,6 @@
 ---
 title: "NullPool's get trap raises for every non-member send; delete NULL_POOL_UNDEFINED_METHODS"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
