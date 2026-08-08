@@ -1,7 +1,7 @@
 ---
 title: "gate-virtualized-dx-on-i18n"
-status: ready
-updated: 2026-08-07
+status: closed
+updated: 2026-08-08
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't-do on RFC closure: 0028-ci-cost-optimization is being closed at 71/77 and no other RFC owns CI job gating. The audit finding stands (virtualized-dx-tests' tsconfig pulls i18n, so the job should be gated on i18n paths); refile against a CI-cost successor RFC if job-gating cost becomes a problem again. Analysis is preserved in this story body and in scripts/ci-suite-coverage.test.ts."
 ---
 
 ## Context
