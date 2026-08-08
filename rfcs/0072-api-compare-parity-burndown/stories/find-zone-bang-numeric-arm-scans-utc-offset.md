@@ -1,6 +1,6 @@
 ---
 title: "find_zone! numeric arm must scan utc_offset via TimeZone[], not stringify"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6232
 claim: "2026-08-08T12:52:01Z"
 assignee: "retire-sqlite-tasks-with-operation-adapter"
 blocked-by: null
