@@ -1,7 +1,7 @@
 ---
 title: "Date._strptime / Date.strptime: the %s and %Q that produce the :seconds frag"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0074-i18n-parity"
 cluster: null
 packages:
