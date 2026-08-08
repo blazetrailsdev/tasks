@@ -124,3 +124,40 @@ story already scopes the Rails-manifest join as a prerequisite for receiver
 regexes — this is the evidence for why that join is not optional polish. A
 category whose predicate is call-name-only should carry an explicit note that
 its name has no Relation homonym.
+
+## Audit addendum 2 (auditor, 2026-08-08) — the mutex category is ~22 rows, not 32
+
+The acceptance criteria above name the mutex/monitor class as the strongest
+first category, on the audit's claim that "all 32 Ruby call sites were read,
+every one a Mutex/Monitor, zero exceptions". The Ruby half of that is still
+true. **The TS half was never checked, and it splits the class three ways.** The
+seeded reason — "trails is single-threaded and has no mutex, so the port has no
+analogue call" — conflates _single-threaded_ with _non-interleaving_, which
+stops being true the moment a body `await`s.
+
+- **Tier 1 — 18 sync bodies** (`attribute-methods.ts` ×2,
+  `model-schema.ts#loadSchema`, `relation/delegation.ts#generateMethod`,
+  `queue.ts` ×4, `reaper.ts`, `connection-pool.ts`
+  checkin/checkout/disconnect/reap/remove/stat, …). No yield point, so
+  run-to-completion supplies what the mutex supplies. Reason holds. Note 4 of
+  these converge instead: `queue.ts:358` already defines a faithful pass-through
+  `synchronize(_queue, block) { return block(); }` ("Mirrors:
+  …ConnectionPool::Queue#synchronize", `queue.rb:80-82`) and nothing calls it.
+- **Tier 2 — ~4 async wrappers over a synchronous core**: `flush`,
+  `discardBang`, `clearReloadableConnections` (`connection-pool.ts:1145, 1019,
+1079`), `discard_pool!` — all shaped `await Promise.all(this._syncCore())`,
+  where the state mutation is atomic and the awaits are driver-close drains
+  after it. Reason holds, **but not for the stated warrant**; the row should say
+  "the mutation is a synchronous core, the awaits are post-hoc drains", which is
+  falsifiable and names the invariant a later refactor must not break.
+- **Tier 3 — ~10 that await inside the critical section.** Reason is **false**;
+  these are unported concurrency guarantees. See the sibling story
+  `0084-wide-call-set-burndown/port-async-critical-sections-for-mutex-guarded-lifecycle`.
+
+Consequence for this story: the seeded predicate must be call-name **plus** a
+tier discriminator, or it will stamp "no analogue" onto ~10 rows that are real
+gaps — the precise failure mode `--dry-run` and the non-default-reason guard
+exist to prevent, arriving instead through a category definition nobody
+re-derived. Either scope the first category to the Tier 1 mixed-in members
+explicitly (by `tsFile` + `rubyName`, ~14 rows, since Tier 1's queue rows
+converge), or land the tier split first and key the predicate on it.
