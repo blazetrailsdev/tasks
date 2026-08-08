@@ -1,6 +1,6 @@
 ---
 title: "pg-configure-connection-never-calls-check-version"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6224
 claim: "2026-08-08T10:15:57Z"
 assignee: "pg-configure-connection-never-calls-check-version"
 blocked-by: null
