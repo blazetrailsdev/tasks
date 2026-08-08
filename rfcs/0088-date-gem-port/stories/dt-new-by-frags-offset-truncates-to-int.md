@@ -1,6 +1,6 @@
 ---
 title: "dt_new_by_frags' offset is an int via NUM2INT; trails keeps a float Rational quotient"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
