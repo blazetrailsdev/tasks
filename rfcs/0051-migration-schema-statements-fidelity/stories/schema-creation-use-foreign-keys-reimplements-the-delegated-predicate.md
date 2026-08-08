@@ -1,6 +1,6 @@
 ---
 title: "SchemaCreation#useForeignKeys reimplements a delegated predicate instead of asking the connection"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
