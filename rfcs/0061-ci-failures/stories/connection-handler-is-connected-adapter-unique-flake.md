@@ -1,6 +1,6 @@
 ---
 title: "connection-handler-is-connected-adapter-unique-flake"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6255
 claim: "2026-08-08T18:04:01Z"
 assignee: "connection-handler-is-connected-adapter-unique-flake"
 blocked-by: null
