@@ -1,6 +1,6 @@
 ---
 title: "Relocate the SQL parity pipeline under scripts/parity/pipeline/"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6255
 claim: "2026-08-08T18:04:01Z"
 assignee: "connection-handler-is-connected-adapter-unique-flake"
 blocked-by: null
