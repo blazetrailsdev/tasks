@@ -1,6 +1,6 @@
 ---
 title: "MigrationArConfig's slot members are spuriously optional, forcing non-null assertions Rails has no counterpart for"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T14:51:58Z"
+assignee: "migration-ar-config-slot-members-are-spuriously-optional"
 blocked-by: null
 closed-reason: null
 ---
