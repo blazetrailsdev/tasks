@@ -1,6 +1,6 @@
 ---
 title: "Date carries no start argument: Date::JULIAN/GREGORIAN, #start, #julian? and #new_start are all absent"
-status: claimed
+status: blocked
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-08T20:45:03Z"
 assignee: "date-start-argument-and-reform-surface-absent"
-blocked-by: null
+blocked-by: "Blocked on date-state-julian-only-spellings-unbuildable, which is itself still blocked and unbuilt: Date is still seated on Temporal.PlainDate (packages/date/src/date.ts plainDateFromJd, :3137-3151). This story's own Ordering section states the start argument is not meaningfully supportable until the state moves to the Julian day — under Date::JULIAN a caller can name 1500-02-29 and the PlainDate seat raises Date::Error. Unblock once the jd-substrate story lands."
 closed-reason: null
 ---
 
