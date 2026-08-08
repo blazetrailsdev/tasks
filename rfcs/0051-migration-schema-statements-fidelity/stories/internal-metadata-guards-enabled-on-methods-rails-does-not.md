@@ -1,6 +1,6 @@
 ---
 title: "InternalMetadata guards deleteAllEntries/count/tableExists on enabled? where Rails does not"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
