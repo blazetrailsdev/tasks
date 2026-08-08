@@ -1,7 +1,7 @@
 ---
 title: "jdOf / jdToPlainDate stand in for c_civil_to_jd / c_jd_to_civil under invented names"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
 packages:
