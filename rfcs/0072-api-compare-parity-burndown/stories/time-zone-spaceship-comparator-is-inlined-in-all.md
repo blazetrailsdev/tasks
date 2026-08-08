@@ -1,6 +1,6 @@
 ---
 title: "Port TimeZone#<=> instead of inlining its comparator in all()"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6236
 claim: "2026-08-08T14:15:58Z"
 assignee: "retire-module-level-find-target-engine-exports"
 blocked-by: null
