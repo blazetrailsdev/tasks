@@ -1,6 +1,6 @@
 ---
 title: "Extract the shared compare core into @blazetrails/parity as the package heart"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T18:04:21Z"
+assignee: "extract-parity-tools-package"
 blocked-by: null
 closed-reason: null
 ---
