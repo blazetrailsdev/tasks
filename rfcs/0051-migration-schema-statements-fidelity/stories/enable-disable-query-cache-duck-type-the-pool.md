@@ -1,6 +1,6 @@
 ---
 title: "enable/disableQueryCache duck-type the pool; Rails sends them bare"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T19:57:19Z"
+assignee: "date-state-julian-only-spellings-unbuildable"
 blocked-by: null
 closed-reason: null
 ---
