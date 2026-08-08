@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata hold a pool and reach connections through it (step 1 of 2)"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
