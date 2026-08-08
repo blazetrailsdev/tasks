@@ -1,7 +1,7 @@
 ---
 title: "Derive the Fallbacks factory's return type from its class, not a hand-listed interface"
-status: blocked
-updated: 2026-08-07
+status: closed
+updated: 2026-08-08
 rfc: "0074-i18n-parity"
 cluster: null
 packages:
@@ -11,10 +11,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-08-07T15:38:12Z"
-assignee: "datetime-sf-is-a-number-not-a-rational"
-blocked-by: "TypeScript declaration emit cannot name an anonymous mixin class. Deriving the factory's return type from the class it returns — whether by dropping the annotation entirely (inferred `typeof Fallbacks`) or by a `ReturnType<typeof fallbacksClass>`-derived alias — makes tsc emit the anonymous class type into fallbacks.d.ts, which fails with one TS4094 per protected member inherited from Base (deepInterpolate, default, eagerLoaded, eagerLoadedFlag, interpolate, loadFile, loadJs, loadJson, loadYaml, loadYml, lookup, onFallback, pluralizationKey, pluralize, resolve, resolveEntry, subtrees, translateLocalizationFormat) plus TS4058 for Localizable. Both shapes verified on this branch against `pnpm typecheck`. Naming the type is the only emit-legal option and that is exactly the hand-listed interface the story asks to remove; onFallback being protected also rules out declaring it on an interface. Unblocks if the mixin ever stops inheriting protected members, or under a TS release that can name mixin class types in .d.ts."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Won't-do: blocked by a TypeScript declaration-emit limitation, not by trails code. Deriving the Fallbacks factory's return type from the class it returns — either by dropping the annotation (inferred `typeof Fallbacks`) or via a `ReturnType<typeof fallbacksClass>` alias — makes tsc emit the anonymous mixin class type into fallbacks.d.ts, which fails with one TS4094 per protected member inherited from Base (18 of them) plus TS4058 for Localizable. Both shapes were verified against `pnpm typecheck`. Naming the type is the only emit-legal option, and that is exactly the hand-listed interface this story asks to remove; onFallback being protected also rules out declaring it on an interface. Revisit if the mixin stops inheriting protected members, or under a TS release that can name mixin class types in .d.ts."
 ---
 
 ## Context
