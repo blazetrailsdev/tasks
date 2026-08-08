@@ -1,6 +1,6 @@
 ---
 title: "connection-handler-is-connected-adapter-unique-flake"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0061-ci-failures"
 cluster: null
