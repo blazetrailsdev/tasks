@@ -1,6 +1,6 @@
 ---
 title: "converge-create-all-config-read-and-connection-not-defined-rescue"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T09:03:57Z"
+assignee: "converge-create-all-config-read-and-connection-not-defined-rescue"
 blocked-by: null
 closed-reason: null
 ---
