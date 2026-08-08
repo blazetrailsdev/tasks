@@ -1,6 +1,6 @@
 ---
 title: "A Ruby home bucket spans several TS files; the override can only name one"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6238
 claim: "2026-08-08T15:03:58Z"
 assignee: "pg-ddl-quoting-suite-builds-its-own-adapter-instead-of-leasing"
 blocked-by: null
