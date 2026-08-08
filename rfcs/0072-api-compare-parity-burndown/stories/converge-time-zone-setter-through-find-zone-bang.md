@@ -1,6 +1,6 @@
 ---
 title: "converge-time-zone-setter-through-find-zone-bang"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6218
 claim: "2026-08-08T02:51:56Z"
 assignee: "converge-time-zone-setter-through-find-zone-bang"
 blocked-by: null
