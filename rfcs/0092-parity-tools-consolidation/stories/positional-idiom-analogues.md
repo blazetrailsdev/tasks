@@ -1,6 +1,6 @@
 ---
 title: "Decide whether the call gate can credit positional/property idioms (first/last/any?/size)"
-status: draft
+status: ready
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
