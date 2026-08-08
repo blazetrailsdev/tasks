@@ -1,6 +1,6 @@
 ---
 title: "Guides Code Type Check failing on main @bf3b98b0"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T12:49:28Z"
+assignee: "red-bf3b98b0"
 blocked-by: null
 closed-reason: null
 ---
