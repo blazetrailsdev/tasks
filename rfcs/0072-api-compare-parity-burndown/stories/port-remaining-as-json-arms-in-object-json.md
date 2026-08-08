@@ -4,7 +4,8 @@ status: claimed
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-packages: []
+packages:
+  - activesupport
 deps: []
 deps-rfc: []
 est-loc: 220

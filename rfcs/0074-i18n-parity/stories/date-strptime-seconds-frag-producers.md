@@ -4,6 +4,8 @@ status: in-progress
 updated: 2026-08-07
 rfc: "0074-i18n-parity"
 cluster: null
+packages:
+  - date
 deps: []
 deps-rfc: []
 est-loc: 250
