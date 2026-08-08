@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#role/#shard read through a cast that returns undefined where Ruby raises NoMethodError"
-status: blocked
+status: ready
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: "2026-08-08T00:01:22Z"
-assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderr"
-blocked-by: "Criterion 1 (no pool-less adapter is read through role/shard/inspect) is the whole story and cannot land in one PR: the remaining sites are pool-less by design. Retyping the field was tried and rejected on PR #6207. Split into schema-conn-adapters-carry-a-real-pool, raw-test-and-second-connection-adapters-carry-a-real-pool, template-global-setup-adapters-carry-a-real-pool; delete the abstract-adapter.ts:1406-1416 cast once the last lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
