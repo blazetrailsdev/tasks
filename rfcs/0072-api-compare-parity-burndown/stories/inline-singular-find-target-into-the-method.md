@@ -1,6 +1,6 @@
 ---
 title: "Free findTarget has no production caller left — one Rails method should be one TS method"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6235
 claim: "2026-08-08T14:02:06Z"
 assignee: "sqlite-in-memory-predicate-disagrees-with-adapter"
 blocked-by: null
