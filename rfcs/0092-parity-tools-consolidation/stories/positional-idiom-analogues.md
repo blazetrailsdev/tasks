@@ -90,3 +90,39 @@ story's open question from blocking that convergence.
   slack.
 - No row converges whose TS body dropped a query trigger — spot-check at least
   five converged Relation-receiver candidates by hand and record them.
+
+## Audit addendum (auditor, 2026-08-08)
+
+Three numbers the original audit could not supply, added after re-reading
+`compare.ts:177-188` (the "DELIBERATELY NOT suppressed" comment this story is
+built on — it is real, and it names `size`, `empty?`, `first`, `last`
+explicitly, plus `delete` / `merge` / `fetch` in its last sentence).
+
+**The contamination this story exists to prevent is small, but non-zero.**
+Scanning the Ruby call-site line of all 95 rows for the five names, with a
+relation-ish receiver token (`relation`, `scope`, `records`, `all`, `klass.`,
+`model.`, `target_scope`, `association`, `current_scope`) as the proxy:
+
+| call       | rows | relation-ish receiver |
+| ---------- | ---: | --------------------: |
+| `first`    |   36 |                     2 |
+| `any?`     |   28 |                     4 |
+| `include?` |   12 |                     0 |
+| `last`     |   10 |                     1 |
+| `size`     |    9 |                     0 |
+| **total**  |   95 |                 **7** |
+
+So ~93% of the population is an Array/Hash receiver. That does **not** license
+suppressing the names globally — the 7 are exactly the rows whose loss the
+comment warns about, and a token proxy is crude in both directions — but it does
+mean "receiver typing is unavailable, therefore close the story" leaves ~88
+convergeable rows on the table. If the determination lands on "cannot
+distinguish", consider a third outcome the acceptance criteria do not currently
+offer: a **per-row** receiver check done once (by the `--set-reason` predicate
+machinery from the sibling story, which already needs a Rails-manifest join to
+reach the call-site line) rather than a global set membership. That keeps the
+guardrail intact — nothing is suppressed for every receiver — while still
+retiring the 88.
+
+`empty?` contributes **zero** activerecord unreviewed rows, so it can be dropped
+from this story's scope regardless of the outcome.

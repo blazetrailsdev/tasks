@@ -85,3 +85,42 @@ the RFC that owns the `api:calls` burndown, not here.
   serialization round-trip (including an em-dash in a reason text).
 - The file's stated hard rules are preserved: no `node:*` imports, no
   `process.*` outside the CLI entry guard, async fs only.
+
+## Audit addendum (auditor, 2026-08-08) — a correction to the audit's own category list
+
+**Do not seed this table with the audit's Hash-idiom category as written.** The
+audit proposed `merge` / `except` / `delete` / `merge!` (34 rows) as
+"bulk-justifiable immediately". Re-reading `compare.ts:184-188` — "Same reason
+`delete` (Map#delete), `merge`, `fetch` — all real JS call forms — stay in" —
+and then every one of those Ruby call sites by hand shows the audit classified
+them **by call name without checking the receiver**, which is the exact trap the
+sibling `positional-idiom-analogues` story is about:
+
+- **`except` (11 rows): 7 are `Relation#except`**, not `Hash#except` —
+  `except(:includes, :eager_load, :preload)` (`relation.rb#apply_join_dependency`),
+  `except(:group)` (`calculations.rb#execute_grouped_calculation`),
+  `except(:order)` (`finder_methods.rb#construct_relation_for_exists`),
+  `except(:limit, :offset)` (`#find_some_ordered`),
+  `except(:optimizer_hints)` (`query_methods.rb#build_subquery`), plus
+  `@values.except(...)` and `scope_for_create.except(...)`. These are real
+  spawn_methods calls; a class reason would bless dropping a query modifier.
+- **`merge!` (4 rows): 3 are `Relation#merge!`** — `base.rb#all`'s
+  `relation.merge!(scope)`, and `association.rb`'s `scope` / `target_scope`.
+  Same problem.
+- **`merge` (14 rows): all 14 are genuinely `Hash#merge`.** This sub-slice holds.
+- **`delete` (5 rows): 4 are Hash/Array/String `delete`**, 1 is
+  `@statements.delete` on the StatementPool (`postgresql/database_statements.rb#perform_query`).
+  Holds, with the pool row checked individually.
+
+Net: the Hash-idiom category is ~34 defensible rows, not 58, and only after the
+Relation-receiver rows are split out. **The mutex category named in the
+acceptance criteria is unaffected** — it was verified exhaustively (32/32 Ruby
+call sites read, every one a `Mutex`/`Monitor`/`MonitorMixin`), and remains the
+right first category to define.
+
+The general lesson for the predicate table: **a call-name-only predicate is
+unsafe for any name that also exists on `Relation` / an association proxy.** The
+story already scopes the Rails-manifest join as a prerequisite for receiver
+regexes — this is the evidence for why that join is not optional polish. A
+category whose predicate is call-name-only should carry an explicit note that
+its name has no Relation homonym.

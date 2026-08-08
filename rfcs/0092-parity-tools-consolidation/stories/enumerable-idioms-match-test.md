@@ -65,3 +65,24 @@ its own.
 - `pnpm api:calls` green with zero mark slack after the reseed.
 - The PR body records the row count converged, split by package, so the
   cross-package leverage is measured rather than assumed.
+
+## Audit addendum (auditor, 2026-08-08)
+
+Confirming the scope is right, and one thing to expect when measuring.
+
+`match?` has **no `Relation` homonym**, which is what separates it from the
+`first`/`last`/`any?`/`size` half deferred to `positional-idiom-analogues` and
+from the `except`/`merge!` rows corrected in `set-reason-bulk-mode`'s addendum.
+`Regexp#match?` is the only `match?` in the population, so a global alias cannot
+silence a dropped query trigger here. That is why this one can land alone.
+
+**Expect fewer than 28 rows to converge.** Of the 28 activerecord rows, 18 TS
+bodies contain `.test(`; the other 10 are a mix of extraction noise in the
+audit's tooling and bodies that genuinely dropped the branch (e.g. the
+`postgresql-adapter.ts#translate_exception` and
+`join-dependency.ts#instantiate` rows, where the audit's body extractor grabbed
+an adjacent type literal and the real body was never checked). Rows that do
+**not** converge are the interesting output of this PR, not a shortfall: each
+one is a `match?` Rails makes that the port does not, sitting in the baseline.
+Listing them in the PR body — rather than only the converged count — hands the
+next reader a pre-filtered candidate set of ~10 possible real gaps.
