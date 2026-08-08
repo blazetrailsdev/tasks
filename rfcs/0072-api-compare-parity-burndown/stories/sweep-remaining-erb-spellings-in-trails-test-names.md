@@ -1,6 +1,6 @@
 ---
 title: "sweep-remaining-erb-spellings-in-trails-test-names"
-status: ready
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6245
 claim: null
 assignee: null
 blocked-by: null
