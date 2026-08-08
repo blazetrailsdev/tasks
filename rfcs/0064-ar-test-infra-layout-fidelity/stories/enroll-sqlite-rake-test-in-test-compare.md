@@ -1,6 +1,6 @@
 ---
 title: "sqlite_rake_test.rb is unenrolled, so the ported rake tests score as TS-only extras"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6248
 claim: "2026-08-08T17:15:57Z"
 assignee: "enroll-sqlite-rake-test-in-test-compare"
 blocked-by: null
