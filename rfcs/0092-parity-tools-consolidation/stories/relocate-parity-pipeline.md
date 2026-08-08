@@ -1,6 +1,6 @@
 ---
 title: "Relocate the SQL parity pipeline under scripts/parity/pipeline/"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
