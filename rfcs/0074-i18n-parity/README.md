@@ -3,13 +3,14 @@ rfc: "0074-i18n-parity"
 title: "i18n gem parity"
 status: active
 created: 2026-07-26
-updated: 2026-08-03
+updated: 2026-08-08
 owner: "@your-handle"
 packages:
-  - "i18n"
-  - "activesupport"
-  - "activemodel"
-  - "activerecord"
+  - i18n
+  - activesupport
+  - activemodel
+  - activerecord
+  - date
 clusters: []
 priority: 1
 ---
