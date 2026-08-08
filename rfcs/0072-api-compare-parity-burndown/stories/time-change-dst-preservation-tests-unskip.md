@@ -1,6 +1,6 @@
 ---
 title: "Unskip the five Time#change DST-preservation tests"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6256
 claim: "2026-08-08T18:16:03Z"
 assignee: "pg-adapter-test-aftereach-connect-hook-timeout"
 blocked-by: null
