@@ -1,6 +1,6 @@
 ---
 title: "Date carries no start argument: Date::JULIAN/GREGORIAN, #start, #julian? and #new_start are all absent"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T20:45:03Z"
+assignee: "date-start-argument-and-reform-surface-absent"
 blocked-by: null
 closed-reason: null
 ---
