@@ -1,9 +1,9 @@
 ---
 rfc: "0092-parity-tools-consolidation"
 title: "Compare-tooling consolidation: @blazetrails/parity"
-status: draft
+status: active
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-08-08
 owner: "@deanmarano"
 packages: []
 clusters: []

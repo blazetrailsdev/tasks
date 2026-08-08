@@ -95,5 +95,5 @@
 | [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @your-handle | corelib, activesupport, activemodel, activerecord |
 | [0090-0000-tasks-backlog-integrity](rfcs/0090-0000-tasks-backlog-integrity/README.md) | Tasks backlog integrity — guards for stranded and misfiled stories | draft | @deanmarano | — |
 | [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @your-handle | — |
-| [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | draft | @deanmarano | — |
+| [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | active | @deanmarano | — |
 | [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @your-handle | activerecord, activemodel |
