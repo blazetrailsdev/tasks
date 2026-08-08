@@ -1,6 +1,6 @@
 ---
 title: "find_zone! numeric arm must scan utc_offset via TimeZone[], not stringify"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
