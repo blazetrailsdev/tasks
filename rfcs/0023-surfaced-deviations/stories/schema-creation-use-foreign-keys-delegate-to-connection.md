@@ -1,14 +1,14 @@
 ---
 title: "SchemaCreation#useForeignKeys should delegate to the connection predicate, not recompute it"
-status: draft
-updated: 2026-07-28
+status: done
+updated: 2026-08-08
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6258
 claim: null
 assignee: null
 blocked-by: null
