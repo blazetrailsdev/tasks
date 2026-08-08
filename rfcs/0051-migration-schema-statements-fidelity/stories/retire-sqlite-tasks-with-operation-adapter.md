@@ -1,6 +1,6 @@
 ---
 title: "Retire SQLiteDatabaseTasks#withOperationAdapter for Rails' bare connection"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6232
 claim: "2026-08-08T12:52:01Z"
 assignee: "retire-sqlite-tasks-with-operation-adapter"
 blocked-by: null
