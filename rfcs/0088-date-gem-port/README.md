@@ -4,7 +4,7 @@ title: "Port the ruby/date gem as its own package, returning Temporal by default
 status: active
 created: 2026-08-05
 updated: 2026-08-05
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "date"
   - "i18n"

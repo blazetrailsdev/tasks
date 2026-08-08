@@ -4,7 +4,7 @@ title: "Ban permanent Base.connection checkout in the AR suite (helper.rb:27)"
 status: draft
 created: 2026-07-25
 updated: 2026-07-27
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

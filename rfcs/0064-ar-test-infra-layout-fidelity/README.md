@@ -4,7 +4,7 @@ title: "AR test-infra layout fidelity"
 status: active
 created: 2026-07-08
 updated: 2026-07-28
-owner: "@your-handle"
+owner: "@deanmarano"
 packages: ["activerecord"]
 clusters: []
 priority: 2

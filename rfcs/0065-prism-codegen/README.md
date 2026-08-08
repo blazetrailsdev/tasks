@@ -4,7 +4,7 @@ title: "Prism-driven deterministic AR Ruby → trails JS codegen"
 status: closed
 created: 2026-07-16
 updated: 2026-07-17
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters:

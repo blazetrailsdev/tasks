@@ -4,7 +4,7 @@ title: "i18n gem parity"
 status: closed
 created: 2026-07-26
 updated: 2026-08-08
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - i18n
   - activesupport

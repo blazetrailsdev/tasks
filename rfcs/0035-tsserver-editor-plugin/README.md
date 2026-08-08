@@ -4,7 +4,7 @@ title: "tsserver / editor plugin for zero-declare AR models"
 status: draft
 created: 2026-06-17
 updated: 2026-07-27
-owner: "@dean"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "trails-tsc"

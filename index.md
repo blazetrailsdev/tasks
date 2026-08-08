@@ -38,8 +38,8 @@
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | closed | @deanmarano | activerecord |
 | [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | closed | @deanmarano | activerecord |
 | [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | closed | @deanmarano | activerecord |
-| [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @sveltekit-kanban-example-rfc | activerecord |
-| [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @dean | activerecord, trails-tsc |
+| [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @deanmarano | activerecord |
+| [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @deanmarano | activerecord, trails-tsc |
 | [0037-no-explicit-any-enforcement](rfcs/0037-no-explicit-any-enforcement/README.md) | no-explicit-any enforcement & burndown (activerecord) | closed | @deanmarano | activerecord |
 | [0038-turso-libsql-adapter](rfcs/0038-turso-libsql-adapter/README.md) | Turso / libSQL SQLite driver (beyond-parity extension) | closed | @deanmarano | activerecord |
 | [0039-callback-halt-semantics-convergence](rfcs/0039-callback-halt-semantics-convergence/README.md) | Callback-chain halt semantics convergence (throw :abort, drop return false) | closed | @deanmarano | activesupport, activerecord |
@@ -64,36 +64,36 @@
 | [0058-module-generation-mechanism](rfcs/0058-module-generation-mechanism/README.md) | Module/mixin generation mechanism convergence | closed | @deanmarano | activerecord |
 | [0059-drop-defineschema-mirror-create-table](rfcs/0059-drop-defineschema-mirror-create-table/README.md) | Drop defineSchema; mirror Rails create_table for test schema | closed | @deanmarano | activerecord |
 | [0060-reduce-test-drop-churn](rfcs/0060-reduce-test-drop-churn/README.md) | Reduce AR test DROP-TABLE churn on the boot-laid canonical schema | closed | @deanmarano | activerecord |
-| [0061-ci-failures](rfcs/0061-ci-failures/README.md) | CI Failures | active | @your-handle | — |
+| [0061-ci-failures](rfcs/0061-ci-failures/README.md) | CI Failures | active | @deanmarano | — |
 | [0062-transactional-fixtures-burndown](rfcs/0062-transactional-fixtures-burndown/README.md) | Transactional-fixtures burndown: fixtures({}) everywhere | closed | @deanmarano | activerecord |
 | [0063-async-validation-chain](rfcs/0063-async-validation-chain/README.md) | Async validation chain (isValid returns Promise) | closed | @deanmarano | activemodel, activerecord, activesupport |
-| [0064-ar-test-infra-layout-fidelity](rfcs/0064-ar-test-infra-layout-fidelity/README.md) | AR test-infra layout fidelity | active | @your-handle | activerecord |
-| [0065-prism-codegen](rfcs/0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | closed | @your-handle | activerecord |
+| [0064-ar-test-infra-layout-fidelity](rfcs/0064-ar-test-infra-layout-fidelity/README.md) | AR test-infra layout fidelity | active | @deanmarano | activerecord |
+| [0065-prism-codegen](rfcs/0065-prism-codegen/README.md) | Prism-driven deterministic AR Ruby → trails JS codegen | closed | @deanmarano | activerecord |
 | [0066-arel-visitor-fidelity](rfcs/0066-arel-visitor-fidelity/README.md) | Arel visitor & node-surface fidelity | closed | @deanmarano | activerecord |
 | [0067-predicate-builder-fidelity](rfcs/0067-predicate-builder-fidelity/README.md) | PredicateBuilder fidelity | closed | @deanmarano | activerecord |
 | [0068-awaitable-has-one-setter](rfcs/0068-awaitable-has-one-setter/README.md) | Awaitable has_one setter: retire the deferred-displacement machinery | closed | @deanmarano | activerecord |
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
 | [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | closed | @deanmarano | activerecord |
-| [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | closed | @your-handle | activerecord |
+| [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | closed | @deanmarano | activerecord |
 | [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | api:compare parity & fidelity burndown | active | @deanmarano | activerecord, activemodel, globalid, activesupport, actionview |
-| [0073-permanent-connection-checkout-disallowed](rfcs/0073-permanent-connection-checkout-disallowed/README.md) | Ban permanent Base.connection checkout in the AR suite (helper.rb:27) | draft | @your-handle | activerecord |
-| [0074-i18n-parity](rfcs/0074-i18n-parity/README.md) | i18n gem parity | closed | @your-handle | i18n, activesupport, activemodel, activerecord, date |
-| [0075-collection-association-target-fidelity](rfcs/0075-collection-association-target-fidelity/README.md) | Collection association target-store fidelity | draft | @your-handle | activerecord |
-| [0076-execute-primitive-convergence](rfcs/0076-execute-primitive-convergence/README.md) | execute/raw_execute/perform_query primitive convergence | draft | @your-handle | activerecord |
-| [0077-quoting-binds-fidelity](rfcs/0077-quoting-binds-fidelity/README.md) | Adapter quoting and bind-param fidelity | draft | @your-handle | activerecord, arel |
-| [0078-sti-schema-reflection-fidelity](rfcs/0078-sti-schema-reflection-fidelity/README.md) | STI / schema-reflection attribute-definition fidelity | draft | @your-handle | activerecord, activemodel |
-| [0079-drop-rebuild-canonical-tables](rfcs/0079-drop-rebuild-canonical-tables/README.md) | Drive rebuildCanonicalTables call sites to zero, then delete it | draft | @your-handle | activerecord |
-| [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | closed | @your-handle | activerecord, abstractcontroller, globalid, arel |
-| [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | closed | @your-handle | activerecord |
+| [0073-permanent-connection-checkout-disallowed](rfcs/0073-permanent-connection-checkout-disallowed/README.md) | Ban permanent Base.connection checkout in the AR suite (helper.rb:27) | draft | @deanmarano | activerecord |
+| [0074-i18n-parity](rfcs/0074-i18n-parity/README.md) | i18n gem parity | closed | @deanmarano | i18n, activesupport, activemodel, activerecord, date |
+| [0075-collection-association-target-fidelity](rfcs/0075-collection-association-target-fidelity/README.md) | Collection association target-store fidelity | draft | @deanmarano | activerecord |
+| [0076-execute-primitive-convergence](rfcs/0076-execute-primitive-convergence/README.md) | execute/raw_execute/perform_query primitive convergence | draft | @deanmarano | activerecord |
+| [0077-quoting-binds-fidelity](rfcs/0077-quoting-binds-fidelity/README.md) | Adapter quoting and bind-param fidelity | draft | @deanmarano | activerecord, arel |
+| [0078-sti-schema-reflection-fidelity](rfcs/0078-sti-schema-reflection-fidelity/README.md) | STI / schema-reflection attribute-definition fidelity | draft | @deanmarano | activerecord, activemodel |
+| [0079-drop-rebuild-canonical-tables](rfcs/0079-drop-rebuild-canonical-tables/README.md) | Drive rebuildCanonicalTables call sites to zero, then delete it | draft | @deanmarano | activerecord |
+| [0080-api-compare-jsdoc-metadata](rfcs/0080-api-compare-jsdoc-metadata/README.md) | api-compare JSDoc metadata: one tag family for calls parity and extra surface | closed | @deanmarano | activerecord, abstractcontroller, globalid, arel |
+| [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | closed | @deanmarano | activerecord |
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
-| [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | closed | @your-handle | activerecord, arel, actiondispatch, actioncontroller, activesupport |
-| [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | active | @your-handle | activerecord, arel, activesupport |
-| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @your-handle | activerecord |
-| [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @your-handle | activerecord |
+| [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | closed | @deanmarano | activerecord, arel, actiondispatch, actioncontroller, activesupport |
+| [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | active | @deanmarano | activerecord, arel, activesupport |
+| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @deanmarano | activerecord |
+| [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @deanmarano | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | active | @deanmarano | activerecord |
-| [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | active | @your-handle | date, i18n, activesupport, activemodel, activerecord |
-| [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @your-handle | corelib, activesupport, activemodel, activerecord |
+| [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | active | @deanmarano | date, i18n, activesupport, activemodel, activerecord |
+| [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @deanmarano | corelib, activesupport, activemodel, activerecord |
 | [0090-0000-tasks-backlog-integrity](rfcs/0090-0000-tasks-backlog-integrity/README.md) | Tasks backlog integrity — guards for stranded and misfiled stories | draft | @deanmarano | — |
-| [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @your-handle | — |
+| [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @deanmarano | — |
 | [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | active | @deanmarano | — |
-| [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @your-handle | activerecord, activemodel |
+| [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @deanmarano | activerecord, activemodel |

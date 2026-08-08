@@ -4,7 +4,7 @@ title: "Adapter quoting and bind-param fidelity"
 status: draft
 created: 2026-07-26
 updated: 2026-07-27
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "arel"

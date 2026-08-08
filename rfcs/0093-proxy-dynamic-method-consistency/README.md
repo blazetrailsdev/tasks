@@ -4,7 +4,7 @@ title: "Proxy dynamic-method consistency"
 status: active
 created: 2026-08-07
 updated: 2026-08-07
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "activemodel"

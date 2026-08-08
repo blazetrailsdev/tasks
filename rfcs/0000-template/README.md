@@ -4,7 +4,7 @@ title: "Short prose title"
 status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-owner: "@your-handle"
+owner: "@deanmarano"
 packages: []
 clusters:
   - cluster-name-1

@@ -4,7 +4,7 @@ title: "Wide call-set ratchet — noise reduction"
 status: closed
 created: 2026-07-30
 updated: 2026-08-03
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "arel"

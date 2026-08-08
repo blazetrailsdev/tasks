@@ -4,7 +4,7 @@ title: "Prism codegen productionization: convergence guard + generation fidelity
 status: closed
 created: 2026-07-31
 updated: 2026-08-05
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

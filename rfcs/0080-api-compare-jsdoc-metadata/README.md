@@ -4,7 +4,7 @@ title: "api-compare JSDoc metadata: one tag family for calls parity and extra su
 status: closed
 created: 2026-07-26
 updated: 2026-08-03
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
   - "abstractcontroller"

@@ -4,7 +4,7 @@ title: "AR test-helper suite-wide config fidelity"
 status: closed
 created: 2026-07-25
 updated: 2026-08-01
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

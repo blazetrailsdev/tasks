@@ -4,7 +4,7 @@ title: "Converge Ruby writer (foo=) re-spellings onto accessors"
 status: closed
 created: 2026-07-27
 updated: 2026-07-29
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters:

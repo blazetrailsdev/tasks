@@ -4,7 +4,7 @@ title: "Converge PG query cancellation and serialization on Rails"
 status: active
 created: 2026-07-31
 updated: 2026-07-31
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters: []

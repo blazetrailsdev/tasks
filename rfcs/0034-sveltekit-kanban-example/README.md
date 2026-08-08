@@ -4,7 +4,7 @@ title: "SvelteKit example app (Kanban modeled on tasks/rfcs)"
 status: draft
 created: 2026-06-17
 updated: 2026-07-27
-owner: "@sveltekit-kanban-example-rfc"
+owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters:

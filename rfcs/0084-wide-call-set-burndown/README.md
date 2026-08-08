@@ -4,7 +4,7 @@ title: "Wide call-set burn-down"
 status: active
 created: 2026-07-30
 updated: 2026-08-08
-owner: "@your-handle"
+owner: "@deanmarano"
 packages:
   - activerecord
   - arel
