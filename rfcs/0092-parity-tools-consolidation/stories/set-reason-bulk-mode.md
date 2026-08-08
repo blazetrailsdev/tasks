@@ -1,6 +1,6 @@
 ---
 title: "Add a --set-reason bulk mode to lint-call-mismatches.ts"
-status: draft
+status: ready
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
