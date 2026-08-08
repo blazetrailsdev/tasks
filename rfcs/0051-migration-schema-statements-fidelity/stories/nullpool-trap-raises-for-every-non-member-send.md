@@ -1,6 +1,6 @@
 ---
 title: "NullPool's get trap raises for every non-member send; delete NULL_POOL_UNDEFINED_METHODS"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T17:51:58Z"
+assignee: "dt-new-by-frags-offset-truncates-to-int"
 blocked-by: null
 closed-reason: null
 ---

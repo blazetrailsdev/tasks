@@ -1,6 +1,6 @@
 ---
 title: "dt_new_by_frags' offset is an int via NUM2INT; trails keeps a float Rational quotient"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T17:51:58Z"
+assignee: "dt-new-by-frags-offset-truncates-to-int"
 blocked-by: null
 closed-reason: null
 ---
