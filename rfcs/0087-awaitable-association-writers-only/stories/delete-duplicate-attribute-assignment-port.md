@@ -1,6 +1,6 @@
 ---
 title: "delete-duplicate-attribute-assignment-port"
-status: ready
+status: draft
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
