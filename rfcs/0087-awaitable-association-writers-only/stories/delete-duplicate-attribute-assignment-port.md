@@ -1,5 +1,5 @@
 ---
-title: "delete-duplicate-attribute-assignment-port"
+title: "Delete the duplicate _assign_attributes port that takes api:compare's credit for attribute_assignment.rb"
 status: draft
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 180
 priority: null
 pr: null
 claim: null
