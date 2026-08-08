@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata count coerce with Number(...) where Rails answers select_values(...).first"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6262
 claim: "2026-08-08T20:45:03Z"
 assignee: "date-start-argument-and-reform-surface-absent"
 blocked-by: null
