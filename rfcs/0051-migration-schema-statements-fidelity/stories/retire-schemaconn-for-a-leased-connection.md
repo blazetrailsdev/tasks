@@ -1,6 +1,6 @@
 ---
 title: "schemaConn is a trails-only stand-in for Rails' lease_connection in DDL-rendering tests"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6217
 claim: "2026-08-08T02:06:08Z"
 assignee: "retire-schemaconn-for-a-leased-connection"
 blocked-by: null
