@@ -63,7 +63,7 @@ then reads.
       failure) after `reconnectBang` reports success.
 - [ ] Any divergence found is converged against `mysql2_adapter.rb` /
       `abstract_adapter.rb#reconnect!`, not worked around in the test — `is
-  connected` keeps its Rails name and its assertion.
+connected` keeps its Rails name and its assertion.
 - [ ] If the MariaDB lane proves to have failed for the same environmental
       reason as PG's (a backend terminated by a sibling worker's slot-DB
       churn) with no MySQL-side divergence, close with that evidence and a
