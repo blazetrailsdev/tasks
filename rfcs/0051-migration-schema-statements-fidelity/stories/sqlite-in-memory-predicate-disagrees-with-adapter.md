@@ -1,6 +1,6 @@
 ---
 title: "One in-memory database predicate: tasks' URI parse vs SQLite3Adapter's substring check"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T14:02:06Z"
+assignee: "sqlite-in-memory-predicate-disagrees-with-adapter"
 blocked-by: null
 closed-reason: null
 ---
