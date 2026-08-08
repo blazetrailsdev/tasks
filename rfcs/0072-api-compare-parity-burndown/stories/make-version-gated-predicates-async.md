@@ -1,7 +1,7 @@
 ---
 title: "make-version-gated-predicates-async"
-status: ready
-updated: 2026-08-07
+status: claimed
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T09:39:59Z"
+assignee: "make-version-gated-predicates-async"
 blocked-by: null
 closed-reason: null
 ---
