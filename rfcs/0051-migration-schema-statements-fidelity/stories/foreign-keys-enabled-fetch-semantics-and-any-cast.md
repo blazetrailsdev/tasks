@@ -1,6 +1,6 @@
 ---
 title: "foreign_keys_enabled? uses ?? semantics where Rails uses Hash#fetch, behind an as-any cast"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
