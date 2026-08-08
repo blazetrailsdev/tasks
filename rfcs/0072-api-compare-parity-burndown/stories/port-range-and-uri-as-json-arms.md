@@ -1,6 +1,6 @@
 ---
 title: "Port Range#as_json and URI::Generic#as_json, the two remaining arms with a JS analogue"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6214
 claim: "2026-08-08T01:26:09Z"
 assignee: "connection-pool-disconnect-returns-before-the-driver-drains"
 blocked-by: null
