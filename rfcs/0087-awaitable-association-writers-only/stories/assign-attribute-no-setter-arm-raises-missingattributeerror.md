@@ -1,6 +1,6 @@
 ---
 title: "The no-setter arm raises MissingAttributeError where Rails calls attribute_writer_missing"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T01:34:07Z"
+assignee: "migration-connection-readers-name-lease-connection"
 blocked-by: null
 closed-reason: null
 ---
