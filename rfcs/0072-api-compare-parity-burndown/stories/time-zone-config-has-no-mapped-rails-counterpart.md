@@ -1,6 +1,6 @@
 ---
 title: "time-zone-config.ts is unmapped: it is the port of core_ext/time/zones.rb"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
