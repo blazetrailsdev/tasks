@@ -1,6 +1,6 @@
 ---
 title: "structureLoad buffers the dump into a string where Rails redirects it into stdin"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T17:27:58Z"
+assignee: "collaborator-queries-use-select-values-insert-delete"
 blocked-by: null
 closed-reason: null
 ---
