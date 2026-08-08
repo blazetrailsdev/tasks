@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.migrationConnection returns null where Rails' lease_connection raises"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6214
 claim: "2026-08-08T01:26:09Z"
 assignee: "connection-pool-disconnect-returns-before-the-driver-drains"
 blocked-by: null
