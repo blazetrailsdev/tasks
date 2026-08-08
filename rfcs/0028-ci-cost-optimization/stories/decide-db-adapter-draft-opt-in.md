@@ -1,7 +1,7 @@
 ---
 title: "Decide whether draft PRs keep the db_adapter_affected PG/MariaDB opt-in"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-08
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't-do on RFC closure: 0028-ci-cost-optimization is being closed at 71/77 and no other RFC owns CI cost policy. The open question — whether draft PRs keep the db_adapter_affected PG/MariaDB opt-in (ci.yml:1080-1087 postgres-tests, ci.yml:1331-1341 maria-tests, both deferring to ready_for_review) — is unanswered, not answered in the negative. Status quo stands; the pre-ready CI audit from #5931 has the full analysis. Refile if draft-PR adapter coverage causes a miss."
 ---
 
 ## Context
