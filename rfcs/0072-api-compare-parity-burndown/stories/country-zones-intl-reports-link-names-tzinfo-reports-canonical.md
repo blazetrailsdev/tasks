@@ -34,6 +34,12 @@ TZInfo::Country.get("VA").zone_identifiers  # => ["Europe/Rome"]
 new Intl.Locale("und-VA").getTimeZones()    # => ["Europe/Vatican"]
 ```
 
+`aq` shows the same mechanism four times over — TZInfo reports the canonical
+targets `Pacific/Auckland`, `Pacific/Port_Moresby`, `Asia/Riyadh` and
+`Asia/Singapore` where `Intl` reports the links `Antarctica/McMurdo`,
+`Antarctica/DumontDUrville`, `Antarctica/Syowa` and `Antarctica/Vostok`, so
+the two lists differ in length (11 vs 10) as well as in membership.
+
 So `TimeZone.countryZones("va")` answers a zone named `Europe/Vatican` where
 Rails answers `Europe/Rome` — and `Europe/Rome` is a `MAPPING` value
 (`Rome`), so Rails takes the mapped-name branch and answers the Rails-named
