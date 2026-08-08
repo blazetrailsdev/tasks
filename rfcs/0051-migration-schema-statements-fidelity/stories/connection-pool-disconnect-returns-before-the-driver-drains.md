@@ -68,4 +68,4 @@ is rather than leaving the comment as the answer.
       need is justified at the call site by that cite.
 - [ ] `translate no connection exception to not established` and
       `PostgreSQLAdapter#active > returns false once the backend behind a live
-  client is terminated` stay green on the PG lane. No test renamed.
+client is terminated` stay green on the PG lane. No test renamed.
