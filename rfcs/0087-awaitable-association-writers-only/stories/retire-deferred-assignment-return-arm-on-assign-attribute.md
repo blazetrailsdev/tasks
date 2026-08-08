@@ -1,6 +1,6 @@
 ---
 title: "_assignAttribute returns the send deferred; Rails' _assign_attribute always sends"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
