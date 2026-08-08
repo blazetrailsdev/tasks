@@ -1,6 +1,6 @@
 ---
 title: "port-final-check-constraint-test-cases"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6227
 claim: "2026-08-08T10:27:54Z"
 assignee: "port-final-check-constraint-test-cases"
 blocked-by: null
