@@ -1,6 +1,6 @@
 ---
 title: "SchemaCreation#useForeignKeys reimplements a delegated predicate instead of asking the connection"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6258
 claim: "2026-08-08T18:44:42Z"
 assignee: "mysql-half-of-connection-handler-is-connected-flake"
 blocked-by: null
