@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata tableExists probe with SELECT 1 and swallow every error instead of data_source_exists?"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
