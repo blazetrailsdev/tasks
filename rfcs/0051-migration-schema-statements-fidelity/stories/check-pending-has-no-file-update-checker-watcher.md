@@ -1,11 +1,12 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
 status: blocked
-updated: 2026-08-07
+updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
-deps-rfc: []
+deps-rfc:
+  - 0023-surfaced-deviations
 est-loc: 180
 priority: 170
 pr: null
