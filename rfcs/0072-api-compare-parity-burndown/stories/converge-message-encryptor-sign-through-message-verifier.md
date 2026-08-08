@@ -1,6 +1,6 @@
 ---
 title: "converge-message-encryptor-sign-through-message-verifier"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
