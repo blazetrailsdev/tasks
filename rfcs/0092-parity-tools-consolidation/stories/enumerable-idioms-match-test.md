@@ -1,6 +1,6 @@
 ---
 title: "Add match? → test to the comparator's enumerable-idioms alias table"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
