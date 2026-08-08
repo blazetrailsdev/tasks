@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel spells Ruby to_json as toJson, beside the correctly-named toJSON mixin"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6212
 claim: "2026-08-08T00:30:11Z"
 assignee: "schema-conn-adapters-carry-a-real-pool"
 blocked-by: null
