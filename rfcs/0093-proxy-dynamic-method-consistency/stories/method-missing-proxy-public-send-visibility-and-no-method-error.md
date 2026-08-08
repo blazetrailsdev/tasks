@@ -1,7 +1,7 @@
 ---
 title: "methodMissingProxy matches respond_to?/public_send visibility and the else-super NoMethodError arm"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-08-08
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 packages: []
