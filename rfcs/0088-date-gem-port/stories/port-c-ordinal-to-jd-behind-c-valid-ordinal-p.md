@@ -1,7 +1,7 @@
 ---
 title: "cValidOrdinalP reads Temporal#year back instead of round-tripping through c_jd_to_ordinal"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
 packages:
