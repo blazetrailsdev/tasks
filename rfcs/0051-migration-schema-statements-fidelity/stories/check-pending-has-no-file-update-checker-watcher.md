@@ -5,8 +5,7 @@ updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
-deps-rfc:
-  - 0023-surfaced-deviations
+deps-rfc: []
 est-loc: 180
 priority: 170
 pr: null
