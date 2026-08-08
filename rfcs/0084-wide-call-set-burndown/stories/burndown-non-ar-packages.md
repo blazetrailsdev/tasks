@@ -1,7 +1,7 @@
 ---
 title: "B6: converge the non-AR package residual"
-status: ready
-updated: 2026-08-05
+status: closed
+updated: 2026-08-08
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope: RFC 0084 rescoped to activerecord and its dependencies (activerecord, arel, activesupport); actiondispatch and actioncontroller dropped from the RFC's packages list. The non-AR call-set burndown is still real work — refile under an RFC that owns actionpack if it is wanted."
 ---
 
 ## Context
