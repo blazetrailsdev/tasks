@@ -1,13 +1,13 @@
 ---
-title: "mysql-new-column-from-field-folds-on-update-into-default-generated"
+title: "newColumnFromField folds ON UPDATE into the DEFAULT_GENERATED branch Rails does not"
 status: draft
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
