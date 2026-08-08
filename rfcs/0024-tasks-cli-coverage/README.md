@@ -1,7 +1,7 @@
 ---
 rfc: "0024-tasks-cli-coverage"
 title: "tasks CLI full coverage — no hand-editing the tasks repo"
-status: active
+status: closed
 created: 2026-06-11
 updated: 2026-08-08
 owner: "@deanmarano"
