@@ -1,6 +1,6 @@
 ---
 title: "assertCleanWorktree runs outside the lock, so a concurrent mutation's staged file fails the next caller"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0024-tasks-cli-coverage"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6254
 claim: "2026-08-08T18:11:46Z"
 assignee: "clean-worktree-guard-races-concurrent-lock-holder"
 blocked-by: null
