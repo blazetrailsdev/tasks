@@ -1,6 +1,6 @@
 ---
 title: "NullPool's trap carves out ADAPTER_PROXY_PROBE_KEYS string names; Ruby raises for them"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6261
 claim: "2026-08-08T20:04:41Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
