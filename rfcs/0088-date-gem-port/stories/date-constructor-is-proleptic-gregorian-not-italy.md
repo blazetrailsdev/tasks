@@ -1,6 +1,6 @@
 ---
 title: "Date/DateTime seat on proleptic Gregorian where Date.new defaults to Date::ITALY, so wday and %s disagree with MRI at and before the reform"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6250
 claim: "2026-08-08T17:40:02Z"
 assignee: "date-constructor-is-proleptic-gregorian-not-italy"
 blocked-by: null
