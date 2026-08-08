@@ -1,7 +1,7 @@
 ---
 title: "Create the run-db-adapters label the draft deferral documents"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
