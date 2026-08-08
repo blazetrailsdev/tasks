@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata hold a pool and reach connections through it (step 1 of 2)"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: 130
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T15:16:01Z"
+assignee: "generate-migrator-advisory-lock-id-probes-and-falls-back"
 blocked-by: null
 closed-reason: null
 ---
