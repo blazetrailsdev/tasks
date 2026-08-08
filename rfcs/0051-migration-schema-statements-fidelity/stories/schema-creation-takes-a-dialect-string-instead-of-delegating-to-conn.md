@@ -1,6 +1,6 @@
 ---
 title: "SchemaCreation takes an invented dialect string and reimplements eight delegated supports_* predicates"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6247
 claim: "2026-08-08T14:51:58Z"
 assignee: "migration-ar-config-slot-members-are-spuriously-optional"
 blocked-by: null
