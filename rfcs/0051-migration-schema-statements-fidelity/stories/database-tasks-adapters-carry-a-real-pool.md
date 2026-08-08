@@ -1,6 +1,6 @@
 ---
 title: "database-tasks-adapters-carry-a-real-pool"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6213
 claim: "2026-08-08T01:02:07Z"
 assignee: "database-tasks-adapters-carry-a-real-pool"
 blocked-by: null
