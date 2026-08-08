@@ -1,6 +1,6 @@
 ---
 title: "Parked assignAttributes promises never drain on models without acceptsNestedAttributesFor"
-status: ready
+status: draft
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
