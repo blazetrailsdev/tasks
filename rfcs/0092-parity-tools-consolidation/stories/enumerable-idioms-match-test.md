@@ -1,6 +1,6 @@
 ---
 title: "Add match? → test to the comparator's enumerable-idioms alias table"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6256
 claim: "2026-08-08T18:16:03Z"
 assignee: "pg-adapter-test-aftereach-connect-hook-timeout"
 blocked-by: null
