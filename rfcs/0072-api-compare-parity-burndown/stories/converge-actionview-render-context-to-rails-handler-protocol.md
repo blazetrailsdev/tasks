@@ -1,6 +1,6 @@
 ---
 title: "Converge ActionView RenderContext to the Rails handler protocol"
-status: ready
+status: closed
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope: RFC 0072 rescoped to activerecord and its dependencies; actionview dropped from the RFC's packages list. The convergence itself is still valid work — refile under an actionview-owning RFC if it is wanted."
 ---
 
 ## Context
