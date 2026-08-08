@@ -1,6 +1,6 @@
 ---
 title: "create/create! add a parked-write drain Rails' new+save has no step for"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
