@@ -1,6 +1,6 @@
 ---
 title: "time-change-offset-nsec-utc-arms-and-usec-range-guard"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6246
 claim: "2026-08-08T16:39:55Z"
 assignee: "time-change-offset-nsec-utc-arms-and-usec-range-guard"
 blocked-by: null
