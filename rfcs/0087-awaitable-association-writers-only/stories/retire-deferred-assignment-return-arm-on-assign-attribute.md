@@ -1,6 +1,6 @@
 ---
 title: "_assignAttribute returns the send deferred; Rails' _assign_attribute always sends"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6220
 claim: "2026-08-08T02:27:56Z"
 assignee: "migration-class-is-async-where-rails-is-a-bare-constant"
 blocked-by: null
