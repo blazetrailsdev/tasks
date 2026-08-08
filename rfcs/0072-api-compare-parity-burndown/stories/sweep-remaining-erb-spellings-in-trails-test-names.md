@@ -1,6 +1,6 @@
 ---
 title: "sweep-remaining-erb-spellings-in-trails-test-names"
-status: closed
+status: ready
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -11,11 +11,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6245
+pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Out of scope: RFC 0072 rescoped to activerecord and its dependencies; actionview dropped from the RFC's packages list. Closed for scope, not for quality — PR #6245 (78/-36, trailties/activesupport/actionview TSE spelling sweep) was OPEN at close time and is unaffected; if it merges the work still lands. Refile under an owning RFC if the remaining sweep is wanted."
+closed-reason: null
 ---
 
 ## Context
