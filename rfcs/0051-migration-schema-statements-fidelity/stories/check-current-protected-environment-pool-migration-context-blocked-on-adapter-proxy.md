@@ -1,6 +1,6 @@
 ---
 title: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
-status: blocked
+status: ready
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-05T20:13:09Z"
-assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
-blocked-by: "Blocked on migration-context-collaborators-need-a-pool. Rails' InternalMetadata/SchemaMigration hold a *pool* and do their own `@pool.with_connection` (internal_metadata.rb:18-20, 40-44); trails threads an adapter, and ConnectionPool#migrationContext bridges that with the withConnection-dispatching adapter proxy (connection-pool.ts:447) that async-ifies the synchronous toSql the queries need. Neither half of criterion 1 is reachable without moving those collaborators onto a pool, which is 101 `new SchemaMigration(adapter)`/`new InternalMetadata(adapter)` construction sites across packages/ and scripts/ — far past this bundle's 500 LOC ceiling, and already scoped as its own ready story."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
