@@ -1,6 +1,6 @@
 ---
 title: "Introduce parity:* package.json namespace for the compare tools"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T20:17:12Z"
+assignee: "parity-script-namespace"
 blocked-by: null
 closed-reason: null
 ---
