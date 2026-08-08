@@ -1,7 +1,7 @@
 ---
 title: "create/create! add a parked-write drain Rails' new+save has no step for"
-status: ready
-updated: 2026-08-07
+status: claimed
+updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T00:30:11Z"
+assignee: "schema-conn-adapters-carry-a-real-pool"
 blocked-by: null
 closed-reason: null
 ---
