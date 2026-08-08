@@ -2,7 +2,7 @@
 title: "Move the adapter-specific schema snapshot off ar_internal_metadata's 255-char MySQL column"
 status: ready
 updated: 2026-08-08
-rfc: "0028-ci-cost-optimization"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
 deps: []
@@ -15,6 +15,8 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+> Rehomed from `0028-ci-cost-optimization` when that RFC was closed; scope unchanged.
+
 
 ## Context
 

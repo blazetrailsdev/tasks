@@ -2,7 +2,7 @@
 title: "pg-adapter-test-aftereach-connect-hook-timeout"
 status: ready
 updated: 2026-08-07
-rfc: "0028-ci-cost-optimization"
+rfc: "0061-ci-failures"
 cluster: null
 packages: []
 deps: []
@@ -15,6 +15,8 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+> Rehomed from `0028-ci-cost-optimization` when that RFC was closed; scope unchanged.
+
 
 ## Context
 
