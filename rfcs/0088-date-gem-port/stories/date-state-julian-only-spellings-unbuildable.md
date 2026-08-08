@@ -1,6 +1,6 @@
 ---
 title: "date-state-julian-only-spellings-unbuildable"
-status: claimed
+status: blocked
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-08T19:57:19Z"
 assignee: "date-state-julian-only-spellings-unbuildable"
-blocked-by: null
+blocked-by: "Blocked on open PR #6250 (date-constructor-is-proleptic-gregorian-not-italy), which is the prerequisite this story's Context assumes is merged: it rewrites the same cCivilToJd/cJdToCivil family in packages/date/src/date.ts and the same civilOrError(1500, 2, 29) expectation in date.trails.test.ts. Building the jd-substrate change now would conflict with it wholesale. Unblock when #6250 merges."
 closed-reason: null
 ---
 
