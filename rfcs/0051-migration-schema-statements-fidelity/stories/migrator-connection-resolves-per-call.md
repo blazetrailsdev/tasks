@@ -1,7 +1,7 @@
 ---
 title: "Migrator#connection resolves DatabaseTasks.migration_connection per call and the adapter parameter goes"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: ["migrator-test-sites-adopt-rails-ctor-signature"]
