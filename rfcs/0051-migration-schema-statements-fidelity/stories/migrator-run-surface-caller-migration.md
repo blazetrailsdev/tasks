@@ -1,7 +1,7 @@
 ---
 title: "migrator-run-surface-caller-migration"
 status: blocked
-updated: 2026-08-02
+updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
@@ -62,26 +62,32 @@ Rails just writes `Migrator.new(...).migrate` / `.run`.
 
 ## Decision: how a caller holding a pre-built migration list reaches a MigrationContext
 
-Settled by `migration-context-built-by-subclass-override-not-paths`.
-`MigrationContext`'s constructor takes a fourth optional argument,
-`registeredMigrations?: MigrationProxy[]`; when present, `#migrations` answers
-that list instead of scanning `migrationsPaths`. It is per-instance
-constructor state, exactly like `migrationsPaths`, so `#migrations` stays a
-single un-overridden reader and no production code subclasses
-`MigrationContext` (`DatabaseTasks._migrationContextFor` no longer does).
+**Superseded, 2026-08-08.** The previous text here specified a fourth optional
+`registeredMigrations?: MigrationProxy[]` constructor argument on
+`MigrationContext`, settled by
+`migration-context-built-by-subclass-override-not-paths`. **That is dead:** PR
+5860 was closed unmerged, and the argument does not exist — verified on
+`origin/main`, `git grep registeredMigrations packages/activerecord/src`
+returns no hits. Do not implement against it.
 
-So each of the ~24 callers that today writes
-`new Migrator(adapter, migrations, options)` becomes
+The question is now settled instead by
+`unify-migration-discovery-delete-registered-migrations-seam` (this story's
+declared dep, currently `ready`), which **unifies the two discovery paths**
+rather than adding a seam for pre-built lists: trailties' `migration-loader`
+and `MigrationContext#migrations` stop being two ways to reach the same thing.
+Read that story's body first and take the shape it lands as given; the callers
+listed above then reach the run surface through a `MigrationContext` built the
+unified way, with no `registeredMigrations` argument anywhere.
 
-```ts
-new MigrationContext([], schemaMigration, internalMetadata, migrations);
-```
+## Related, and worth landing first
 
-passing `[]` (or the config's `migrationsPaths`, when it has some) for the
-discovery half. Callers that already discover from disk — trailties'
-`migration-loader` — keep loading as they do and hand the resulting
-`MigrationProxy[]` in the same way; unifying the two discovery paths is not
-part of this story.
+`migrator-still-carries-up-down-rollback-forward` (now `ready`) removes
+`Migrator#up` / `#down` / `#rollback` / `#forward` specifically. Verified on
+`origin/main`: only **two** non-test callers reach those —
+`test-databases.ts:33` (`migrator.up()`) and
+`trail-cli.ts:232` (`migrator.rollback(step)`) — so it is landable
+independently and shrinks this story's remaining surface. Prefer taking it
+first.
 
 ## Acceptance criteria
 
@@ -91,8 +97,10 @@ part of this story.
 - [ ] `MigrationContext#up` / `down` / `run` call `Migrator#migrate` /
       `Migrator#run` directly instead of spelling out the advisory-lock pair.
 - [ ] Every caller listed above reaches the run surface through a
-      `MigrationContext`, and `Migrator` keeps only what
-      `migration.rb:1404-1620` gives it.
+      `MigrationContext`, built the way
+      `unify-migration-discovery-delete-registered-migrations-seam` landed —
+      with no `registeredMigrations` constructor argument.
+- [ ] `Migrator` keeps only what `migration.rb:1404-1620` gives it.
 - [ ] Existing migrator / migration / trailties `db` tests keep their
       Rails-verbatim names and pass.
 
