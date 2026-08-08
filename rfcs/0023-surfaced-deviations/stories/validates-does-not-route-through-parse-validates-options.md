@@ -70,10 +70,10 @@ helper needed is now available — the helper is fixed and unit-covered in
       `_parseValidatesOptions`, as `validates.rb:113` does, instead of the
       per-key `=== true ? {} : value` inline normalization.
 - [ ] `validates :karma, length: <Range>` and `validates :gender, inclusion:
-  <Array>` reach their validators as `{ in: ... }`.
+<Array>` reach their validators as `{ in: ... }`.
 - [ ] The ported `validates with range` test is converged to
       `validates_test.rb:114-121` (`length: 6..20`, asserting the
       "is too short (minimum is 6 characters)" error), and `validates with
-  array` to `validates_test.rb:104-112`. Test names unchanged.
+array` to `validates_test.rb:104-112`. Test names unchanged.
 - [ ] `pnpm api:calls` clean — the `validates` call-set gains
       `_parse_validates_options`.
