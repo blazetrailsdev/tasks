@@ -5,8 +5,6 @@ updated: 2026-08-08
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
 packages:
-  - actiondispatch
-  - actioncontroller
   - activesupport
 deps: []
 deps-rfc: []
