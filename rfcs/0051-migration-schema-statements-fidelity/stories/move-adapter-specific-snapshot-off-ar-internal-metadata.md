@@ -15,8 +15,8 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
-> Rehomed from `0028-ci-cost-optimization` when that RFC was closed; scope unchanged.
 
+> Rehomed from `0028-ci-cost-optimization` when that RFC was closed; scope unchanged.
 
 ## Context
 
