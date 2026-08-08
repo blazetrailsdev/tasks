@@ -1,6 +1,6 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
-status: blocked
+status: ready
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 180
 priority: 170
 pr: null
-claim: "2026-08-06T15:03:06Z"
-assignee: "d-new-by-frags-skips-the-second-civil-validation"
-blocked-by: "Re-verified 2026-08-07 against origin/main 311bff350; the previous reason was half stale. STALE HALF: Migration.checkPendingMigrations is no longer a no-op stub — it is implemented at migration.ts:1542-1548 (awaits pendingMigrations(), throws PendingMigrationError), landed with #6168, and loadSchemaIfPendingBang calls it at :1579. LIVE HALF, and now the sole blocker: ActiveSupport::FileUpdateChecker (activesupport/lib/active_support/file_update_checker.rb:35-163) still has no trails port — packages/activesupport/src holds only the all-skipped evented-file-update-checker.test.ts and no file-update-checker.ts — so Rails' default file_watcher (migration.rb:649) and build_watcher (migration.rb:675-682) have nothing to instantiate. Its sync-over-File.mtime API vs this repo's async-fs-only rule is a design decision of its own. Tracked as 0023/port-activesupport-file-update-checker, readied 2026-08-07; unblock when that lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
