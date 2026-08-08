@@ -1,7 +1,7 @@
 ---
 title: "Delete the 11 dead Rails-named shims in preloader/association.ts"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages:

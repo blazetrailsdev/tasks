@@ -1,7 +1,7 @@
 ---
 title: "Re-measure the draft-deferral net saving once the review trigger moves pre-ready"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
