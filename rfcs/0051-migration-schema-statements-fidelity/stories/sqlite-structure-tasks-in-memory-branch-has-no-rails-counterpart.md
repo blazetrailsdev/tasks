@@ -1,6 +1,6 @@
 ---
 title: "structureDump/structureLoad branch to a trails-only in-memory path Rails does not have"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T17:15:57Z"
+assignee: "enroll-sqlite-rake-test-in-test-compare"
 blocked-by: null
 closed-reason: null
 ---

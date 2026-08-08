@@ -1,6 +1,6 @@
 ---
 title: "presence reads missing on blank.ts: it is only re-exported, never declared"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T17:15:57Z"
+assignee: "enroll-sqlite-rake-test-in-test-compare"
 blocked-by: null
 closed-reason: null
 ---
