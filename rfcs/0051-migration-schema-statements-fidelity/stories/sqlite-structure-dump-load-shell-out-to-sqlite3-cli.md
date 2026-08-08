@@ -1,6 +1,6 @@
 ---
 title: "SQLiteDatabaseTasks structure_dump/structure_load shell out to the sqlite3 CLI as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6231
 claim: "2026-08-08T12:39:58Z"
 assignee: "checkout-raw-test-adapter-pools-are-never-disconnected"
 blocked-by: null
