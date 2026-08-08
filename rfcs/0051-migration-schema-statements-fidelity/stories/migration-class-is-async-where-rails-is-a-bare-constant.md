@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.migrationClass is async, so its own sync readers route around it to _baseClass!"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T02:27:56Z"
+assignee: "migration-class-is-async-where-rails-is-a-bare-constant"
 blocked-by: null
 closed-reason: null
 ---
