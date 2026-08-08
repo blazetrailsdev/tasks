@@ -1,6 +1,6 @@
 ---
 title: "retire-template-handler-registry-back-compat-object"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6243
 claim: "2026-08-08T16:03:54Z"
 assignee: "retire-template-handler-registry-back-compat-object"
 blocked-by: null
