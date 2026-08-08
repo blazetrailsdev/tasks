@@ -1,6 +1,6 @@
 ---
 title: "rename-column-for-alter-fallback-arm-is-a-rewrite"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6228
 claim: "2026-08-08T10:39:59Z"
 assignee: "rename-column-for-alter-fallback-arm-is-a-rewrite"
 blocked-by: null
