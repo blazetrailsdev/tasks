@@ -3,12 +3,14 @@ rfc: "0072-api-compare-parity-burndown"
 title: "api:compare parity & fidelity burndown"
 status: active
 created: 2026-07-25
-updated: 2026-07-30
+updated: 2026-08-08
 owner: "@deanmarano"
 packages:
   - activerecord
   - activemodel
   - globalid
+  - activesupport
+  - actionview
 clusters:
   - api-compare-tooling
   - arity-fidelity
