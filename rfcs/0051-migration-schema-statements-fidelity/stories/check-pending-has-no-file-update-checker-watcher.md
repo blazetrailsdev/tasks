@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
-deps: []
+deps:
+  - port-activesupport-file-update-checker
 deps-rfc: []
 est-loc: 180
 priority: 170
