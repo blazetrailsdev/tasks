@@ -4,6 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0084-wide-call-set-burndown"
 cluster: null
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
 est-loc: null

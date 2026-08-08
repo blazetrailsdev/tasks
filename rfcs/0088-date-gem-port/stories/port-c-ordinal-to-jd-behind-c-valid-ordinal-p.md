@@ -4,7 +4,8 @@ status: in-progress
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
-packages: []
+packages:
+  - date
 deps: []
 deps-rfc: []
 est-loc: 120

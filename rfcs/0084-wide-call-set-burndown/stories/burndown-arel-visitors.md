@@ -4,6 +4,8 @@ status: ready
 updated: 2026-08-05
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
+packages:
+  - arel
 deps:
   - arel-tosql-statement-visitor-helper-calls
   - arel-dialect-visitor-helper-calls

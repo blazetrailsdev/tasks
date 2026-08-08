@@ -4,6 +4,8 @@ status: draft
 updated: 2026-08-07
 rfc: "0088-date-gem-port"
 cluster: null
+packages:
+  - date
 deps: []
 deps-rfc: []
 est-loc: 70

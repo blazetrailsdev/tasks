@@ -4,7 +4,8 @@ status: ready
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
-packages: []
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
 est-loc: null
