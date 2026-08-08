@@ -1,6 +1,6 @@
 ---
 title: "_assignAttribute takes an awaitable flag Rails has no parameter for"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
