@@ -1,6 +1,6 @@
 ---
 title: "strftime and I18n localize must accept Temporal subjects before default returns flip"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0088-date-gem-port"
 cluster: null
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6251
 claim: "2026-08-08T17:51:58Z"
 assignee: "dt-new-by-frags-offset-truncates-to-int"
 blocked-by: null
