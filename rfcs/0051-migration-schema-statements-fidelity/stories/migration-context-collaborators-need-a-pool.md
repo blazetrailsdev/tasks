@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext's optional collaborators and SchemaMigration#connection are the adapter-vs-pool gap"
-status: blocked
+status: ready
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: 140
 pr: null
-claim: "2026-08-07T01:08:29Z"
-assignee: "check-pending-migrations-is-a-no-op-stub"
-blocked-by: "Blocked on the adapter-vs-pool convergence, not on this story's own shape. Rails' MigrationContext ctor defaults its collaborators eagerly from a pool (`SchemaMigration.new(connection_pool)`, migration.rb:1214-1218). trails' SchemaMigration/InternalMetadata take an ADAPTER, across ~50 `new SchemaMigration(` call sites, so 'default from the pool' has no landing site until those hold a pool. The one adapter a pool can hand over synchronously is ConnectionPool#_getAdapterProxy (connection-pool.ts:459), and that proxy answers a Promise for every member — surfaced concretely while porting pending_migrations_test.rb: `pool.migrationContext.open()` then `migrate()` dies in Migrator#withAdvisoryLock (migration.ts:2199-2211) because the proxy's `supportsAdvisoryLocks?()` returns a truthy Promise and its `currentDatabase` resolves to undefined on SQLite. Second, acceptance bullets 2 and 4 are in tension: Rails' eager default cannot be reached without an established connection, so removing the optional args + throwing getters breaks 'connectionless file discovery still works without a pool' (28 `new MigrationContext([paths])` sites). Note the story's Context is stale on one point: `Migrator.discoverMigrations` / `Migrator.fromPath` no longer exist. Unblock once SchemaMigration/InternalMetadata hold a pool (project_pool_adapter_proxy_makes_sync_methods_async)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
