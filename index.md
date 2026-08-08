@@ -32,7 +32,7 @@
 | [0025-fidelity-verification-tooling](rfcs/0025-fidelity-verification-tooling/README.md) | Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules | postponed | @deanmarano | activerecord, arel |
 | [0026-adapter-layout-fidelity](rfcs/0026-adapter-layout-fidelity/README.md) | Adapter layout fidelity — adapter classes hold only what their Rails counterpart holds | closed | @deanmarano | activerecord |
 | [0027-join-dependency-fidelity](rfcs/0027-join-dependency-fidelity/README.md) | JoinDependency fidelity — converge internal state model to Rails' build-once walk/construct shape | closed | @deanmarano | activerecord |
-| [0028-ci-cost-optimization](rfcs/0028-ci-cost-optimization/README.md) | CI cost optimization — cut billed Actions minutes and time-to-green | active | @deanmarano | — |
+| [0028-ci-cost-optimization](rfcs/0028-ci-cost-optimization/README.md) | CI cost optimization — cut billed Actions minutes and time-to-green | closed | @deanmarano | — |
 | [0029-sqlite-memory-fidelity](rfcs/0029-sqlite-memory-fidelity/README.md) | SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern | closed | @deanmarano | activerecord |
 | [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | closed | @deanmarano | activerecord |
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | closed | @deanmarano | activerecord |
