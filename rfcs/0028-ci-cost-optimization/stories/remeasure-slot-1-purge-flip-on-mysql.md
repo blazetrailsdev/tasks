@@ -1,7 +1,7 @@
 ---
 title: "remeasure-slot-1-purge-flip-on-mysql"
-status: ready
-updated: 2026-08-04
+status: closed
+updated: 2026-08-08
 rfc: "0028-ci-cost-optimization"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't-do on RFC closure: 0028-ci-cost-optimization is being closed at 71/77 and no other RFC owns CI timing measurement. The re-measurement of the #5710 slot-1 purge flip (ownsSlotDatabase(), config.ts:174 / test-setup-worker-db.ts:172-178) on PG and MySQL was never run; the prior local A/B stands as the only evidence. Refile against a CI-cost successor RFC if worker-DB setup time regresses."
 ---
 
 # Re-measure (and consider reverting) the slot-1 purge flip on the MySQL lane
