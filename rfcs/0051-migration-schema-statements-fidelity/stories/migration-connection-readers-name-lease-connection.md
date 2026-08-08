@@ -1,6 +1,6 @@
 ---
 title: "Migration#connection/#connectionPool fall back to leaseConnection, not DatabaseTasks.migration_connection"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6216
 claim: "2026-08-08T01:34:07Z"
 assignee: "migration-connection-readers-name-lease-connection"
 blocked-by: null
