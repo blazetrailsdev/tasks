@@ -1,7 +1,7 @@
 ---
 title: "Port ToJsonWithActiveSupportEncoder#to_json and retire the hand-rolled toJSON delegates"
-status: in-progress
-updated: 2026-08-07
+status: done
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
