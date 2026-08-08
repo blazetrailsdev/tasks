@@ -1,6 +1,6 @@
 ---
 title: "newRawTestAdapter assigns a pool post-hoc; Rails adapters come from pool.checkout"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6215
 claim: "2026-08-08T01:42:08Z"
 assignee: "raw-test-adapters-should-come-from-pool-checkout"
 blocked-by: null
