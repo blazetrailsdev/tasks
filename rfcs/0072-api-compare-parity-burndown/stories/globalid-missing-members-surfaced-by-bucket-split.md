@@ -1,6 +1,6 @@
 ---
 title: "globalid-missing-members-surfaced-by-bucket-split"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6221
 claim: "2026-08-08T03:27:57Z"
 assignee: "globalid-missing-members-surfaced-by-bucket-split"
 blocked-by: null
