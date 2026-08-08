@@ -67,5 +67,5 @@ run and only reds on the PG lane).
 - [ ] `SchemaCreation#useForeignKeys` delegates to the connection; no
       structural cast, no `?? true`, no inline `_config.foreignKeys` read.
 - [ ] The connection's `useForeignKeys` is `supportsForeignKeys() &&
-  foreignKeysEnabled()`, matching `abstract_adapter.rb`.
+foreignKeysEnabled()`, matching `abstract_adapter.rb`.
 - [ ] Green on sqlite (file lane), `sqlite3_mem`, PG and MariaDB.
