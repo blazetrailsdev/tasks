@@ -1,6 +1,6 @@
 ---
 title: "Unskip the five Time#change DST-preservation tests"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
