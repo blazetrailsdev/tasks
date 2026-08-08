@@ -69,4 +69,4 @@ then the `any?` loop with String / Symbol / Regexp arms — and update
 - [ ] `_matchesDisallowed` mirrors `deprecation_disallowed?`'s branch order,
       including the `Symbol` rule arm (`disallowed.rb:26-36`).
 - [ ] `deprecators.test.ts`'s `#disallowed_warnings= applies to each
-  deprecator` sets the scalar, as `deprecators_test.rb:66-69` does.
+deprecator` sets the scalar, as `deprecators_test.rb:66-69` does.
