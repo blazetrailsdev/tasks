@@ -1,6 +1,6 @@
 ---
 title: "SQLiteDatabaseTasks#create guards the raw database but connects through the root-joined resolveDbPath"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
