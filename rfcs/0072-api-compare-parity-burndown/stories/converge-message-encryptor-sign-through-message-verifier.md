@@ -1,7 +1,7 @@
 ---
 title: "converge-message-encryptor-sign-through-message-verifier"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T02:39:55Z"
+assignee: "converge-message-encryptor-sign-through-message-verifier"
 blocked-by: null
 closed-reason: null
 ---

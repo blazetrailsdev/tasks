@@ -1,6 +1,6 @@
 ---
 title: "trails' Range is a data interface, so every Range method is a free function and every is_a?(::Range) is re-derived"
-status: ready
+status: claimed
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T02:39:55Z"
+assignee: "converge-message-encryptor-sign-through-message-verifier"
 blocked-by: null
 closed-reason: null
 ---
