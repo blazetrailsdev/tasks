@@ -1,7 +1,7 @@
 ---
 title: "retire-module-level-find-target-engine-exports"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T14:15:58Z"
+assignee: "retire-module-level-find-target-engine-exports"
 blocked-by: null
 closed-reason: null
 ---
