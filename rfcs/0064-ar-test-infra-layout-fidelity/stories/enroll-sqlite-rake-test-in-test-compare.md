@@ -1,6 +1,6 @@
 ---
 title: "sqlite_rake_test.rb is unenrolled, so the ported rake tests score as TS-only extras"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null

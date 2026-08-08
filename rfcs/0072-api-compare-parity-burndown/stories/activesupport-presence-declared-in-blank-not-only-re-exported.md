@@ -1,6 +1,6 @@
 ---
 title: "presence reads missing on blank.ts: it is only re-exported, never declared"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
