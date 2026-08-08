@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/object/instance_variables.rb so Object#as_json stops spreading inline"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6209
 claim: "2026-08-08T00:01:22Z"
 assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderr"
 blocked-by: null
