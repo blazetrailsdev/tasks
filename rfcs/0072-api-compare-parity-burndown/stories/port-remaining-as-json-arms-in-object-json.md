@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining core_ext/object/json.rb as_json arms (Enumerable, Range, Symbol, Module, Pathname, …)"
-status: ready
-updated: 2026-08-07
+status: claimed
+updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-08T00:01:22Z"
+assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderr"
 blocked-by: null
 closed-reason: null
 ---
