@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.migrationConnection returns null where Rails' lease_connection raises"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
