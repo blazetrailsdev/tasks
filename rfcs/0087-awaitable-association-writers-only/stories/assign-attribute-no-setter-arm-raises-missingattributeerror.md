@@ -1,6 +1,6 @@
 ---
 title: "The no-setter arm raises MissingAttributeError where Rails calls attribute_writer_missing"
-status: in-progress
+status: done
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
