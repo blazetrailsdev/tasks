@@ -1,6 +1,6 @@
 ---
 title: "deprecators-bucket-clusters-onto-deprecation-ts"
-status: claimed
+status: in-progress
 updated: 2026-08-08
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6240
 claim: "2026-08-08T15:27:57Z"
 assignee: "deprecators-bucket-clusters-onto-deprecation-ts"
 blocked-by: null
