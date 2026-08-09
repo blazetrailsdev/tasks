@@ -1,7 +1,7 @@
 ---
 title: "Support establish_connection bare-name config and port determine_owner_name middle branch"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the determine_owner_name middle branch is ported — connection-adapters/abstract/connection-handler.ts:84-87 resolves a bare config name via symbolConnectionName() into a ConnectionDescriptor."
 ---
 
 ## Context
