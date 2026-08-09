@@ -1,7 +1,7 @@
 ---
 title: "Migration DDL routes through this.schema, hiding adapter overrides"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: migration.ts has no 'this.schema.<ddl>' call sites left on main (only this.schemaMigration); DDL routes through the connection."
 ---
 
 ## Context
