@@ -2,7 +2,7 @@
 title: "Migrator#currentVersion auto-creates schema_migrations"
 status: draft
 updated: 2026-08-02
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

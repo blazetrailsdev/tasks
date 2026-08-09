@@ -2,7 +2,7 @@
 title: "SchemaMigration takes an adapter where Rails takes a pool"
 status: draft
 updated: 2026-07-29
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

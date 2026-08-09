@@ -2,7 +2,7 @@
 title: "MigrationRunner is a Rails-less duplicate of Migrator + SchemaMigration"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
