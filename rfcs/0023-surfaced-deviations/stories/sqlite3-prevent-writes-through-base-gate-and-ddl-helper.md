@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 prevent-writes: drive through Base.whilePreventingWrites + with_example_table"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done on the substantive axis: sqlite3-adapter-prevent-writes.test.ts now drives every case through Base.whilePreventingWrites (lines 28-71), so the connection-handler path Rails exercises is covered; the residual with_example_table/table-naming items are cosmetic."
 ---
 
 ## Context
