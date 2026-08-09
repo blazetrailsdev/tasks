@@ -1,7 +1,7 @@
 ---
 title: "Per-instance / singleton_class validator support (uniqueness singleton test)"
-status: ready
-updated: 2026-06-26
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Not convergent: Ruby singleton_class / per-object metaclass has no TypeScript analogue, so uniqueness_validation_test.rb:109-117 cannot be ported 1:1 by construction. The story's own notes call it low-priority and single-test; everything else that port surfaced was converged in PR #4196."
 ---
 
 ## Context
