@@ -1,7 +1,7 @@
 ---
 title: "UrlConfig#build_url_hash cannot read the receiver: it runs before super()"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not convergeable: reading the receiver before super() is a genuine TS language shortcoming, the one class of deviation CLAUDE.md ratifies. No behavioral divergence — buildUrlHash (url-config.ts:90) produces the same hash; it is already recorded in arity-exclude.json."
 ---
 
 ## Context
