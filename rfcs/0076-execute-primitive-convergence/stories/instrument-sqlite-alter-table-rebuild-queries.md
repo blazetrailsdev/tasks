@@ -1,6 +1,6 @@
 ---
 title: "Route the SQLite alterTable rebuild through instrumented execute"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:29:15Z"
+assignee: "fold-bind-for-pg-into-type-cast"
 blocked-by: null
 closed-reason: null
 ---

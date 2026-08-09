@@ -1,6 +1,6 @@
 ---
 title: "Fold PG's _bindForPg into type_cast so type_casted_binds is the only bind normalizer"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:29:15Z"
+assignee: "fold-bind-for-pg-into-type-cast"
 blocked-by: null
 closed-reason: null
 ---
