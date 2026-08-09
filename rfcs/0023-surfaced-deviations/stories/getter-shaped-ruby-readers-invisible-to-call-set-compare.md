@@ -1,7 +1,7 @@
 ---
 title: "Getter-shaped Ruby readers are invisible to the api-compare call-set"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: the ported bodies are already faithful (isEtag inlines the getter body byte-for-byte, cache.rb:129); only scripts/api-compare's call-set extractor cannot see a property access as a call. This is a measurement-policy decision about the parity tooling, not a port divergence."
 ---
 
 ## Context
