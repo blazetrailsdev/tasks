@@ -1,7 +1,7 @@
 ---
 title: "Converge the sync-chain thenable-block throw between activesupport and the activemodel wrapper"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Internal consistency between two trails-only guards; Ruby has no thenable so callbacks.rb offers no target to converge onto. Not a Rails-fidelity divergence."
 ---
 
 ## Context
