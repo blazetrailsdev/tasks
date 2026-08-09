@@ -1,6 +1,6 @@
 ---
 title: "Audit the invented guard/discard/finally in execRollbackDbTransaction"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
