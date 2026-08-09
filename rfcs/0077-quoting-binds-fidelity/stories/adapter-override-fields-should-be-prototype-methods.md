@@ -35,7 +35,7 @@ land on the _instance_, not the prototype:
 
 Re-verified against `origin/main` 2026-08-09. The fourth site named when this
 story was written — `override quoteIdentifier = mysqlQuoteIdentifier;` — is gone:
-#5893 removed the `quoteIdentifier` adapter method entirely. Three sites remain.
+PR #5893 removed the `quoteIdentifier` adapter method entirely. Three sites remain.
 
 Two consequences:
 
