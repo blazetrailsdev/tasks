@@ -105,3 +105,37 @@ triaged; estimate below is the registry flip alone.
 - Handler test names stay verbatim; the `unregistered task` case asserts
   `DatabaseNotSupported` with Rails' message.
 - `pnpm api:calls` stays green.
+
+## Update 2026-08-09 (PR #6270)
+
+Two new receipts landed on this deviation. `DatabaseTasks.charset` and
+`#collation` are bare sends in Ruby
+(`activerecord/lib/active_record/tasks/database_tasks.rb:332-335, 342-345`) —
+a task class defining neither answers `NoMethodError`, which is exactly what
+`SqliteDBCollationTest#test_db_retrieves_collation`
+(`test/cases/adapters/sqlite3/sqlite_rake_test.rb:159-163`) asserts, since
+`SQLiteDatabaseTasks` has no `collation`.
+
+Because the registry holds a plain object whose members are all optional,
+`packages/activerecord/src/tasks/database-tasks.ts` now has to raise that
+`NoMethodError` by hand at both sites:
+
+```ts
+if (!handler.collation) {
+  throw new NoMethodError(
+    `undefined method 'collation' for an instance of ${handler.constructor.name}`,
+  );
+}
+return handler.collation(config);
+```
+
+The message is also wrong in a way only this deviation causes: a handler
+registered as an object literal has `constructor.name === "Object"`, so it
+reads `for an instance of Object` where Rails reads
+`for an instance of ActiveRecord::Tasks::SQLiteDatabaseTasks`.
+
+Flipping the registry to task **classes** retires both guards and both
+messages: `databaseAdapterFor(...).collation` becomes a real missing method on
+a real class, so the language raises with the class's own name and the two
+`if (!handler.x)` blocks and the `NoMethodError` import are deleted. Add that
+to the acceptance criteria when this is triaged.
