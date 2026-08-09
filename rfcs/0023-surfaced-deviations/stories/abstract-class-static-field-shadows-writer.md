@@ -1,7 +1,7 @@
 ---
 title: "Guard against static class fields shadowing the abstract_class writer"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: the ask is a trails-only lint guard plus reconciling activerecord-cli/generate-manifest static analysis; Rails has no analogue. other-dog.ts is already clean and cat.ts:16's _abstractClass write is a one-line drive-by, not a story."
 ---
 
 ## Context
