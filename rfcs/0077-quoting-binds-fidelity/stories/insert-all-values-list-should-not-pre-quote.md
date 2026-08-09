@@ -1,6 +1,6 @@
 ---
 title: "InsertAll values_list hands values to the visitor instead of pre-quoting them (deletes Base.quoteSqlValue)"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

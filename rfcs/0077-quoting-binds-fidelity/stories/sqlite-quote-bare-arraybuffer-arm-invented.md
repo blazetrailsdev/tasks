@@ -1,6 +1,6 @@
 ---
 title: "SQLite quote's bare-ArrayBuffer arm has no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
