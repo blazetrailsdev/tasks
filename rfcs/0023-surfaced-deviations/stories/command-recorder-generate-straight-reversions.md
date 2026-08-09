@@ -1,7 +1,7 @@
 ---
 title: "command-recorder-generate-straight-reversions"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: behavior-identical restructuring of hand-written invert* methods into a class_eval-style generated table (command_recorder.rb:154-183). The real gap it surfaced — the three missing StraightReversions entries — was already closed by port-command-recorder-test-cases-part-2."
 ---
 
 ## Context
