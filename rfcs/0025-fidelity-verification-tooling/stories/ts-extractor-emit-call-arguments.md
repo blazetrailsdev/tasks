@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api.ts emits per-call-site argument descriptors"
-status: draft
+status: ready
 updated: 2026-08-09
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
