@@ -1,7 +1,7 @@
 ---
 title: "Share one strftime between Date and TimeWithZone"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Internal DRY refactor, not a Rails-behavior divergence (both strftimes produce correct output); and RFC 0088 (date-gem-port, active) is porting Date/DateTime wholesale, which subsumes the duplicated token tables."
 ---
 
 # Share one strftime between Date and TimeWithZone
