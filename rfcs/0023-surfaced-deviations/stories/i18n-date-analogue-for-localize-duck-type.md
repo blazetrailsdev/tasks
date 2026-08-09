@@ -1,7 +1,7 @@
 ---
 title: "Replace the RubyDate test stand-ins with a real date-only analogue"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: both RubyDate stand-ins are gone — activesupport/src/i18n.test.ts:5 and i18n/src/backend/localization.test.ts:14 now import the real Date from @blazetrails/date."
 ---
 
 ## Context
