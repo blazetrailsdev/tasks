@@ -1,7 +1,7 @@
 ---
 title: "subclass-tablename-columns-clobbered-by-base-load"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Repro no longer reproduces on origin/main: ran the story's exact Parent(topics)/Child(movies) sequence — Parent._returningColumnsForInsert=['id'], Child=['movieid'], Child.columns() carries movieid. Fixed by the per-class ownSchemaMemo/schemaStaleAgainstAncestors memo reads (model-schema.ts:74-104,281). The descendant-invalidation half is covered by reloadSchemaFromCache's subclasses recursion (:920)."
 ---
 
 ## Context
