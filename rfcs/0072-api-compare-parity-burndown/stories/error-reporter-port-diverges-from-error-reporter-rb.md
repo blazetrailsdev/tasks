@@ -1,6 +1,6 @@
 ---
 title: "ErrorReporter is ported method-by-method against error_reporter.rb"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
