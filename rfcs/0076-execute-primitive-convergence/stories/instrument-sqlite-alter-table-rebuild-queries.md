@@ -1,7 +1,7 @@
 ---
 title: "Route the SQLite alterTable rebuild through instrumented execute"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
