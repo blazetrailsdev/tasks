@@ -1,5 +1,5 @@
 ---
-rfc: "0000-call-argument-parity"
+rfc: "0095-call-argument-parity"
 title: "Call-argument parity (api:calls:args)"
 status: draft
 created: 2026-08-09
@@ -16,7 +16,7 @@ related-rfcs:
   - "0084"
 ---
 
-# RFC — Call-argument parity (`api:calls:args`)
+# RFC 0095 — Call-argument parity (`api:calls:args`)
 
 ## Summary
 
