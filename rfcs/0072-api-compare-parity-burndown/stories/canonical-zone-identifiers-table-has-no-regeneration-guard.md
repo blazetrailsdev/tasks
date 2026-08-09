@@ -1,6 +1,6 @@
 ---
 title: "CANONICAL_ZONE_IDENTIFIERS has no generator or drift guard, so a tzdata bump rots it silently"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
