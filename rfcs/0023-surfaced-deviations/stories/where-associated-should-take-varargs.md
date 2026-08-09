@@ -1,7 +1,7 @@
 ---
 title: "whereAssociated takes an array; Rails' where.associated takes splat args"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: relation/query-methods.ts:47 declares whereAssociated(...associationNames: string[]) and :85 splats through, matching query_methods.rb:88's associated(*associations); the trailing skipJoinFor param is gone too."
 ---
 
 ## Context
