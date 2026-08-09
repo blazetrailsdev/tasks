@@ -1,7 +1,7 @@
 ---
 title: "MessageEncryptor derives cipher key/iv length and AEAD-ness from the cipher name"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: the story states the name-regex metadata is correct for the aes-*-{cbc,gcm} family Rails and trails use; the rest is hardening for cipher names outside the ported surface, with no Rails counterpart to converge onto (Ruby just asks OpenSSL)."
 ---
 
 ## Context
