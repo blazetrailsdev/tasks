@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 7 call-mismatch entries on InternalMetadata/SchemaMigration once they hold a pool"
-status: claimed
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: ["migration-collaborator-call-sites-pass-a-pool"]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: 6265
 claim: "2026-08-09T01:30:48Z"
 assignee: "port-sqlite-rake-create-drop-charset-collation-tests"
 blocked-by: null
