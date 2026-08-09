@@ -1,7 +1,7 @@
 ---
 title: "Remove or converge the Rails-less locking-column explicit-update guard"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: git grep for assertLockingColumnNotExplicitly and 'cannot be updated explicitly' over packages/activerecord/src returns nothing; the invented guard and its call site in assignUpdateAttributes are gone."
 ---
 
 ## Context
