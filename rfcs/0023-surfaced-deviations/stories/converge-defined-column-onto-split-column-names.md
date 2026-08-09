@@ -1,7 +1,7 @@
 ---
 title: "Converge definedColumn/definedMysqlColumn onto splitColumnNames"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: this is an internal helper dedupe (definedColumn / definedMysqlColumn / splitColumnNames). Rails' single define_column_methods generator is a metaprogramming shape TS cannot mirror either way, so collapsing three TS copies into one changes no observable behavior. The one real gap (t.time missing from the abstract ColumnMethods interface) is a one-line typing fix, not a story."
 ---
 
 ## Context
