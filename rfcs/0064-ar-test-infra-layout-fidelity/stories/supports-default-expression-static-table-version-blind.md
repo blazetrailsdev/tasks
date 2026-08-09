@@ -1,7 +1,7 @@
 ---
 title: "supports.ts default_expression is version-blind; Rails gates on MySQL >= 8.0.13 / MariaDB >= 10.2.1"
-status: draft
-updated: 2026-07-29
+status: claimed
+updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:47:17Z"
+assignee: "supports-default-expression-static-table-version-blind"
 blocked-by: null
 closed-reason: null
 ---
