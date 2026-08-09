@@ -1,7 +1,7 @@
 ---
 title: "isNoDatabaseError predicate has no Rails counterpart (Rails raises NoDatabaseError inline at connect)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: git grep for isNoDatabaseError and the hardcoded 3D000 fallback over packages/activerecord/src and scripts/api-compare/extra-surface-allow.json returns nothing on main; the predicate and its 3 allowlist entries are gone."
 ---
 
 ## Context
