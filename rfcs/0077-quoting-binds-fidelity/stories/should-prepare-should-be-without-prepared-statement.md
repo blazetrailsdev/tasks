@@ -1,6 +1,6 @@
 ---
 title: "_shouldPrepare should be Rails' without_prepared_statement? on the abstract adapter"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
