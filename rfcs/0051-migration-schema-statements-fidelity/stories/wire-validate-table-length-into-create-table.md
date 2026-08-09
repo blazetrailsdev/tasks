@@ -2,7 +2,7 @@
 title: "Wire validate_table_length! into create_table"
 status: draft
 updated: 2026-07-29
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
