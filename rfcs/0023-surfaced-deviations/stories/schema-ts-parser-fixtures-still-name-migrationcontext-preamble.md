@@ -1,7 +1,7 @@
 ---
 title: "schema-ts-parser fixtures still spell the old MigrationContext defineSchema preamble"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: the fixtures spell trails' own defineSchema preamble (a trails invention slated for removal), not any Rails shape; nothing fails today since they are parser input strings."
 ---
 
 ## Context
