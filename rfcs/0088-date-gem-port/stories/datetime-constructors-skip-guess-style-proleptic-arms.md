@@ -1,6 +1,6 @@
 ---
 title: "Date/DateTime constructors never take guess_style's proleptic arms, and carry no nth"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
