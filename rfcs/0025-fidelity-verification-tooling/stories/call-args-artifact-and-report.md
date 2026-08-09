@@ -1,6 +1,6 @@
 ---
 title: "compare.ts writes the advisory call-argument mismatch artifact"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:36:17Z"
+assignee: "call-args-artifact-and-report"
 blocked-by: null
 closed-reason: null
 ---
