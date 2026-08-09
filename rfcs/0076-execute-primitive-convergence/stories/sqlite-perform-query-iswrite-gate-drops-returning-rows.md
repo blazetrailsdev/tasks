@@ -1,7 +1,7 @@
 ---
 title: "sqlite-perform-query-iswrite-gate-drops-returning-rows"
-status: ready
-updated: 2026-07-22
+status: closed
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Merged into sqlite-performquery-contract-deviations-need-lock: the !isWrite conjunct (sqlite3/database-statements.ts:212) is a strict subset of that story's deviation 2, and both halves share one root cause (no connection lock) and one fix; splitting them would double-claim the same PR."
 ---
 
 ## Context
