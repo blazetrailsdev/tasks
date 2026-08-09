@@ -1,6 +1,6 @@
 ---
 title: "stale-story-reference-in-bind-parameter-test"
-status: ready
+status: done
 updated: 2026-08-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6303
 claim: null
 assignee: null
 blocked-by: null
