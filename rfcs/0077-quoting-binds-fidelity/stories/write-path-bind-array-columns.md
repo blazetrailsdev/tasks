@@ -1,6 +1,6 @@
 ---
 title: "Write path: bind array columns instead of inline quoting"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6293
 claim: "2026-08-09T19:09:16Z"
 assignee: "mysql-quote-override-has-no-rails-counterpart"
 blocked-by: null
