@@ -2,7 +2,7 @@
 title: "visit_CheckConstraintDefinition interpolates the constraint name bare, not quoted"
 status: draft
 updated: 2026-08-06
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
