@@ -1,6 +1,6 @@
 ---
 title: "date-state-julian-only-spellings-unbuildable"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
