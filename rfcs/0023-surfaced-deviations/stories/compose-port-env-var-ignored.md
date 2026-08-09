@@ -1,7 +1,7 @@
 ---
 title: "docker compose ignores MYSQL_PORT/PG_PORT, blocking isolated local DB projects"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: docker-compose port interpolation is local dev infrastructure with no Rails counterpart. RFC 0023 is for port-discovered divergences from Rails behavior."
 ---
 
 ## Context
