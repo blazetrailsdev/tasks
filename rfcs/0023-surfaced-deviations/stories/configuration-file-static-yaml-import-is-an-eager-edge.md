@@ -1,7 +1,7 @@
 ---
 title: "configuration_file.rb requires yaml lazily; configuration-file.ts imports it statically"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Optional-dependency resolution mechanics (ESM eager link vs Ruby's conditional require); with yaml installed behaviour is identical to configuration_file.rb. Packaging robustness, not Rails fidelity."
 ---
 
 ## Context
