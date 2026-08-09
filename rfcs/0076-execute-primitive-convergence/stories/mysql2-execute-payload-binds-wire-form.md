@@ -1,6 +1,6 @@
 ---
 title: "mysql2 execute/executeMutation payloads still log driver-form binds"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
