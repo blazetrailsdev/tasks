@@ -1,7 +1,7 @@
 ---
 title: "converge-encryption-simple-encryptor-onto-encryptor-like"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the narrow local Encryptor interface is gone — encryption.ts:43 is now a type alias to EncryptorOptionLike, i.e. the real Encryption::Encryptor contract, not a second surface."
 ---
 
 ## Context
