@@ -1,6 +1,6 @@
 ---
 title: "Fixture harness wrappers restore adapter methods as own properties, silently shadowing prototype spies"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6280
 claim: "2026-08-09T14:59:36Z"
 assignee: "fixture-harness-wrappers-restore-own-property-shadowing-prototype"
 blocked-by: null
