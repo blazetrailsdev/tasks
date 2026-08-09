@@ -1,7 +1,7 @@
 ---
 title: "ConnectionPool#isConnected checks membership, not adapters' connected? like Rails"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: connection-pool.ts:646-648 isConnected() is now this._connections.some((conn) => conn.isConnected()), mirroring connection_pool.rb:427-429 rather than bare membership."
 ---
 
 ## Context
