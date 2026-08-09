@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_compat.rb (1 test)"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6307
 claim: "2026-08-09T23:24:13Z"
 assignee: "port-test-date-compat"
 blocked-by: null
