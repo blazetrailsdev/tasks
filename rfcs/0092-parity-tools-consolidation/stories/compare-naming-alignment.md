@@ -1,6 +1,6 @@
 ---
 title: "Align compare entry-point and lint naming across the four compare dirs"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
