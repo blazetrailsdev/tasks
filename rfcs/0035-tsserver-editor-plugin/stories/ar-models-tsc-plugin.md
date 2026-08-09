@@ -1,7 +1,7 @@
 ---
 title: "Register ar-models TscPlugin wrapping the virtualizer"
-status: draft
-updated: 2026-06-17
+status: closed
+updated: 2026-08-09
 rfc: "0035-tsserver-editor-plugin"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Already shipped: createArModelsPlugin(): TscPlugin (name 'ar-models', extensions .ts/.tsx/.mts/.cts) lives at packages/activerecord-cli/src/tsc-wrapper/ar-models-plugin.ts:41, wraps virtualize() with a shouldVirtualize pre-filter (:46-66), maps {text,deltas}→{ts,deltas} (:79), and is wired into the CLI host at tsc-wrapper/ar-program.ts:31,57. It landed in activerecord-cli rather than activerecord (keeps the node-free boundary), which is the only divergence from the story."
 ---
 
 ## Context
