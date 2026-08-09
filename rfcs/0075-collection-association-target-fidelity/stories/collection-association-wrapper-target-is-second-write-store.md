@@ -1,7 +1,7 @@
 ---
 title: "Writes through the association() wrapper never reach the canonical CollectionProxy target"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: CollectionAssociation now has ONE store — target/loaded/_replacedOrAddedTargets are getter+setter views onto the proxy's _sharedTarget/_sharedLoaded via _sharedStore() (collection-association.ts:81-128; cp _sharedTarget at collection-proxy.ts:267-291), so a write through owner.association(name) and one through owner.<name> hit the same array."
 ---
 
 ## Context
