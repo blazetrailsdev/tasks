@@ -1,7 +1,7 @@
 ---
 title: "currentEnv puts TRAILS_ENV ahead of the Rails.env analogue"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent by design: the TRAILS_ENV-first ordering in DatabaseConfigurations.currentEnv() is a deliberate user-directed deviation shipped in #5496, documented at the call site and pinned by a test. The story itself says it was filed for tracking, 'not because a change is known to be wanted'."
 ---
 
 ## Context
