@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter#indexes is declared unknown[] instead of IndexDefinition[]"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: unknown[] vs IndexDefinition[] is a TS declaration-type narrowing; runtime behaviour already matches Rails SchemaStatements#indexes."
 ---
 
 ## Context
