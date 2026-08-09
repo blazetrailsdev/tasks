@@ -1,7 +1,7 @@
 ---
 title: "reload_schema_from_cache STI redirect/local-cache apparatus has no Rails analogue"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: reloadSchemaFromCache on origin/main (model-schema.ts:906-923) is Rails' shape — nil own ivars then recurse subclasses.each; the STI redirect arm, clearStiSubclassLocalCaches, getStiBase and sharesStiBaseTable are all absent from model-schema.ts. The residual _schemaRevision epoch is owned by sti-schema-stale-invariant-unenforced and converge-attribute-definitions-onto-default-attributes."
 ---
 
 ## Context
