@@ -1,6 +1,6 @@
 ---
 title: "PG: converge configure_connection hook dispatch (argless hook, reset-path dispatch)"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6295
 claim: "2026-08-09T19:39:19Z"
 assignee: "order-column-fallback-quotes-column-not-table-name"
 blocked-by: null
