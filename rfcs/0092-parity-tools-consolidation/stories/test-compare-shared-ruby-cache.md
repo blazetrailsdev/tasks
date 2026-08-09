@@ -1,6 +1,6 @@
 ---
 title: "Serve rails-tests.json from the cross-worktree shared cache"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
