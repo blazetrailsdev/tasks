@@ -5,7 +5,8 @@ updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
 packages: ["date"]
-deps: []
+deps:
+  - port-date-infinity-from-lib-date-rb
 deps-rfc: []
 est-loc: 300
 priority: null
