@@ -1,6 +1,6 @@
 ---
 title: "Date carries no start argument: Date::JULIAN/GREGORIAN, #start, #julian? and #new_start are all absent"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
