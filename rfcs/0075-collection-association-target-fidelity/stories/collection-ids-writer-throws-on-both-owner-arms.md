@@ -1,7 +1,7 @@
 ---
 title: "Converge or enshrine the collection ids= throw on both owner arms"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0087 (active), which made awaitable writers the only association-mutation surface; the DoD's second arm is satisfied — the permanence reasoning for the ids= throw is now recorded at the call site (collection-association.ts:184-197: ids_writer resolves ids with a query even on a new owner, so the constructor arm cannot converge), and defineWriters no longer generates a sync ids setter at all (builder/collection-association.ts:167)."
 ---
 
 ## Context
