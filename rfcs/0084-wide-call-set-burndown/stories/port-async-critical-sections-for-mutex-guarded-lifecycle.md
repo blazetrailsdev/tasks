@@ -1,6 +1,6 @@
 ---
 title: "Restore mutex critical sections that trails drops across an await (adapter/pool lifecycle)"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
