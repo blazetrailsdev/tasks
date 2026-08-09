@@ -1,7 +1,7 @@
 ---
 title: "Widen Date.parse beyond the y-m-d regex"
-status: draft
-updated: 2026-08-04
+status: ready
+updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
 deps: []
