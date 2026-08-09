@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#toArray must apply merge_target_lists merge like load() (prefer in-memory, refresh attrs, preserve destroy marks)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Converged: CollectionProxy#toArray (collection-proxy.ts:933-960) now routes the normal path through load() and the two bypass arms through _mergeTargetLists(results) — both read paths apply the merge_target_lists merge."
 ---
 
 ## Context
