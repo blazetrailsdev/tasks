@@ -1,7 +1,7 @@
 ---
 title: "SQLite disable_referential_integrity reads pragmas via execute, not query_value"
-status: draft
-updated: 2026-07-29
+status: ready
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
