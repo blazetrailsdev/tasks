@@ -1,5 +1,5 @@
 ---
-title: "Port test_switch_hitter.rb comparison/period/marshal (12 tests)"
+title: "Port test_switch_hitter.rb comparison/period/encoding (8 tests)"
 status: ready
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
@@ -39,23 +39,34 @@ Target: `packages/date/src/test-switch-hitter.test.ts` (the convention name `tes
 `scripts/test-compare/compare.ts:1264` maps the `date` package to
 `packages/date/src/`).
 
-Tests in scope (12):
+Tests in scope (8):
 
 - `test_cmp`
 - `test_eqeqeq`
 - `test_period`
 - `test_period2`
 - `test_different_alignments`
-- `test_marshal14`
-- `test_marshal16`
-- `test_marshal18`
-- `test_marshal192`
 - `test_enc`
 - `test_dup`
 - `test_base`
 
+### Correction (2026-08-09 audit)
+
+This story originally listed `test_marshal14`, `test_marshal16`, `test_marshal18`
+and `test_marshal192` in scope. **They are already excluded** and must not be
+ported: RFC 0088's enrollment landed per-test `UNPORTED_FILES` entries for them
+(`scripts/parity/unported-files.ts:1331`, named `marshal14` … `marshal192` with
+the `def test_` prefix stripped) on the grounds that they assert Ruby's Marshal
+binary wire format, which trails has no runtime for — the same grounds as
+`test_date_marshal.rb`. They are **not** part of the credited 138-test population,
+so porting them cannot move `test:compare` and would only add unrunnable tests.
+
+Scope is therefore the remaining 8 tests. Do not remove or narrow the existing
+exclusion entries.
+
 ## Acceptance criteria
 
+- [ ] The four `marshal*` tests stay excluded and unwritten; their `UNPORTED_FILES` entries are untouched.
 - [ ] Every listed test is ported into `packages/date/src/test-switch-hitter.test.ts` under its Ruby
       name, translated by `docs/ruby-ts-conventions.md`. **Do not rename or
       reword a test name** — `test:compare` matches on them.

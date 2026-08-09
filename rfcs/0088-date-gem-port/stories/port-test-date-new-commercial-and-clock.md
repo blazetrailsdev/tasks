@@ -1,5 +1,5 @@
 ---
-title: "Port test_date_new.rb commercial/weeknum/today/now (8 tests)"
+title: "Port test_date_new.rb commercial/weeknum/today/now (7 tests)"
 status: ready
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
@@ -37,7 +37,7 @@ Target: `packages/date/src/test-date-new.test.ts` (the convention name `test:com
 `scripts/test-compare/compare.ts:1264` maps the `date` package to
 `packages/date/src/`).
 
-Tests in scope (8):
+Tests in scope (7):
 
 - `test_commercial`
 - `test_commercial__neg`
@@ -46,7 +46,16 @@ Tests in scope (8):
 - `test_nth_kday`
 - `test_today`
 - `test_now`
-- `test_memsize`
+
+### Correction (2026-08-09 audit)
+
+This story originally listed `test_memsize` in scope. It calls
+`ObjectSpace.memsize_of` to assert the C struct's allocated size
+(`vendor/date/test/date/test_date_new.rb:324-332`) and has no JS analogue, so it
+can never be credited. Removing it from scope leaves it uncounted-but-counted:
+it is still inside the 138-test population and permanently caps the package.
+The sibling story `exclude-test-memsize-from-the-date-test-population` adds the
+`UNPORTED_FILES` per-test entry that takes it out. Do not port it here.
 
 ## Acceptance criteria
 
