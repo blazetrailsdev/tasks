@@ -1,7 +1,7 @@
 ---
 title: "Converge NestedAttributesDisplacementError onto Rails' RecordNotFound (api:extra red on main)"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: NestedAttributesDisplacementError no longer exists in packages/activerecord/src/associations/errors.ts on main (621d49cce); grep finds no reference anywhere in the package."
 ---
 
 ## Context
