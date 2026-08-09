@@ -1,7 +1,7 @@
 ---
 title: "port-final-check-constraint-test-cases"
-status: in-progress
-updated: 2026-08-08
+status: done
+updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages:
