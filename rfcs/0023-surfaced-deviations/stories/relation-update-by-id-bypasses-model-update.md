@@ -1,7 +1,7 @@
 ---
 title: "Relation#update/#update! by-id form bypasses model.update"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: relation.ts:5815 and :5832 route the by-id form through this.model.update / this.model.updateBang, matching relation.rb:620-636."
 ---
 
 ## Context
