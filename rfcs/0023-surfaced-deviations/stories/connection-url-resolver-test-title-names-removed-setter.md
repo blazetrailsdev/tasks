@@ -1,7 +1,7 @@
 ---
 title: "connection-url-resolver test title still names the removed setProtocolAdapters"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: retitling a trails-only test (connection-url-resolver.test.ts:102) that test:compare does not match; the story itself notes there is no Rails test of that name."
 ---
 
 ## Context
