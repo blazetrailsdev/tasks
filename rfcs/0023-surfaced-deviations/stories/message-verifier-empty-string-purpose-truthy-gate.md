@@ -1,7 +1,7 @@
 ---
 title: "activesupport: MessageVerifier purpose gate uses JS truthiness — empty-string purpose treated as absent"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done at the cited site: message-verifier.ts no longer handles purpose at all (149 lines, no occurrence); the gate moved to messages/metadata.ts, whose verify arm compares toS(hash.pur) !== toS(purpose) so an empty-string purpose no longer verifies against another purpose."
 ---
 
 ## Context
