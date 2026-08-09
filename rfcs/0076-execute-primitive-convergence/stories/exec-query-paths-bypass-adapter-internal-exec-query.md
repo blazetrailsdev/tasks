@@ -1,6 +1,6 @@
 ---
 title: "execQuery/execInsert/select bypass the adapter's internalExecQuery override"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
