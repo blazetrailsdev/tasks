@@ -1,6 +1,6 @@
 ---
 title: "The adapter proxy's trap still carves out ADAPTER_PROXY_PROBE_KEYS string names; Ruby dispatches or raises for them"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6267
 claim: "2026-08-09T00:45:54Z"
 assignee: "date-state-julian-only-spellings-unbuildable"
 blocked-by: null
