@@ -1,7 +1,7 @@
 ---
 title: "Converge Notifications.buildHandle/instrumenter onto the Fanout notifier"
-status: ready
-updated: 2026-07-22
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps:
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: notifications.ts:66-67 owns a real Fanout + bound Instrumenter and buildHandle (:270-271) delegates to it; no inline handle or private _subscribers set remains."
 ---
 
 ## Context
