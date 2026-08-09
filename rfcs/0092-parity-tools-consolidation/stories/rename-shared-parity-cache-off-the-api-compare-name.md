@@ -1,6 +1,6 @@
 ---
 title: "Rename the shared cross-worktree cache off api-compare's name and move shared-cache.ts out of its tree"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
