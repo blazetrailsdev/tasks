@@ -1,6 +1,6 @@
 ---
 title: "Serve rails-tests.json from the cross-worktree shared cache"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6276
 claim: "2026-08-09T02:45:47Z"
 assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null
