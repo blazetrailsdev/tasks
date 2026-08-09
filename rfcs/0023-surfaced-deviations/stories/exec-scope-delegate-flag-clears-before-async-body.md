@@ -1,7 +1,7 @@
 ---
 title: "_execScope clears _delegateToModel before an async scope body settles"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Speculative: story itself says scope bodies are sync relation builders and the path may be unreachable; no demonstrated divergence from relation.rb:552-558."
 ---
 
 ## Context
