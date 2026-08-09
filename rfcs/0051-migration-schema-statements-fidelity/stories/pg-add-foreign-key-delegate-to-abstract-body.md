@@ -2,7 +2,7 @@
 title: "pg-add-foreign-key-delegate-to-abstract-body"
 status: draft
 updated: 2026-08-03
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
