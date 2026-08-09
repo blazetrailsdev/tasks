@@ -1,7 +1,7 @@
 ---
 title: "resetColumnInformation must invalidate descendants like Rails' subclasses recursion"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Recursion landed: resetColumnInformation calls reloadSchemaFromCache (model-schema.ts:886), which recurses subclasses (:920-922), and the unregistered-subclass hole is now covered registry-independently by the schemaStaleAgainstAncestors prototype-chain pull (:74-104). The cited wide-ratchet row reset_column_information/descendants is already gone from call-mismatches-exclude/activerecord/model-schema.json. Residual (the unenforced ownSchemaMemo invariant) is sti-schema-stale-invariant-unenforced."
 ---
 
 ## Context
