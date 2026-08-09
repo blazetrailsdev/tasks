@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: _parseForeignKeyNames has no Rails counterpart in foreign_keys"
-status: draft
+status: closed
 updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of sqlite-foreign-key-name-synthesis-diverges-from-pragma (0023, draft, filed 2026-07-28), which covers the same _parseForeignKeyNames deviation plus the #5453 test collapse and the export_name_on_schema_dump? second-order gap. The PR #6295 update is folded into that story instead."
 ---
 
 ## Context
