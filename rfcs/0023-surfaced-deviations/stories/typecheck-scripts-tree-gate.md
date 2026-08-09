@@ -1,7 +1,7 @@
 ---
 title: "Type-check the scripts/ tree in CI (refile of typecheck-scripts-tree)"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: adding a CI typecheck job over scripts/ is build tooling, not a divergence from Rails behavior. RFC 0023 is for port-discovered fidelity gaps."
 ---
 
 ## Context
