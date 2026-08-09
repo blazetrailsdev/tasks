@@ -1,6 +1,6 @@
 ---
 title: "provision-version-matched-pg-client-in-pg-lane"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: PR #6296 provisions postgresql-client-17 from PGDG in the PG lane and enrolls PostgreSQLStructureDumpTest#structure_dump directly, so there is no residual work."
 ---
 
 ## Context
