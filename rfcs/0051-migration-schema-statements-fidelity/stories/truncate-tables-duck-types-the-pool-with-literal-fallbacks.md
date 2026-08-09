@@ -1,6 +1,6 @@
 ---
 title: "truncateTables duck-types pool.schemaMigration/internalMetadata and falls back to literals"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6263
+pr: 6264
 claim: "2026-08-08T21:45:04Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null

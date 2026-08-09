@@ -1,6 +1,6 @@
 ---
 title: "NullInternalMetadata carries five invented no-op members; Rails' is an empty class"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6263
+pr: 6264
 claim: "2026-08-08T21:45:04Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
