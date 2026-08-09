@@ -500,3 +500,34 @@ faith.**
 - Ported code lives at the path matching the vendored layout so `api:compare`
   resolves it.
 - Test names must match the gem's test names for `test:compare`.
+
+## Measuring this RFC (added 2026-08-09)
+
+**The gate is `pnpm test:compare --package date`.** `api:compare` cannot measure
+this package — `vendor/sources.ts:208` sets `compareApi: false` because the gem
+is implemented in C and the Ruby extractor finds only 12 public methods in
+`lib/date.rb` against ~2,800 lines of port. `test/date/` is the only fidelity
+measure the date port has.
+
+At the time this section was written that gate read **0/138 tests (0%), 0/10
+files**, after 56 merged stories and ~4,900 LOC in `packages/date/src`. The
+backlog had been growing because work was driven entirely by the _unbounded_
+axis — reading 14,561 lines of `date_core.c` / `date_parse.c` /
+`date_strftime.c` / `date_strptime.c` by hand and filing each divergence — while
+the _bounded_ axis was untouched. Story creation tracked completion almost 1:1
+every day from 2026-08-05 onward (5/8, 11/11, 18/19, 6/11, 5/5).
+
+Two lanes, deliberately unequal:
+
+- **Test lane (scheduled).** 16 `port-test-*` stories, one per Ruby test file
+  with the four largest files pre-split at natural boundaries. These are the
+  `ready` work and they are what moves `0/138`.
+- **C-divergence lane (captured, not scheduled).** Findings from reading the C
+  source still get filed against this RFC so the knowledge is not lost, but they
+  are filed as **`draft`** and do not go `ready` while the test lane runs.
+  Revisit once the 138 are green.
+
+Paired stories that share one TS file (`port-test-date-parse-heuristic` ->
+`port-test-date-parse-formats`, and the arith / new / strftime / strptime /
+switch-hitter pairs) carry an explicit `deps` edge: both halves write the same
+file, so they must not run in parallel.
