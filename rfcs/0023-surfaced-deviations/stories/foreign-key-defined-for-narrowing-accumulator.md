@@ -1,7 +1,7 @@
 ---
 title: "Decide defined_for?'s order-dependent option-narrowing accumulator"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ruby block-scoping fallout, unreachable without 3+ FKs with divergent option sets, and replicating it would make matching adapter-introspection-order dependent; declined in review on #5450."
 ---
 
 ## Context
