@@ -1,7 +1,7 @@
 ---
 title: "STI subclass attribute() routes to the STI base, unlike Rails' per-class pending modifications"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: no 'isStiSubclass(this) ? getStiBase(this)' routing remains in packages/activerecord/src on origin/main, and sti-attribute-routing.test.ts now asserts the OPPOSITE of the story's pinned behaviour (:18-21 Circle._attributeDefinitions.has('radius') true, Shape false, Circle owns its own map)."
 ---
 
 ## Context
