@@ -1,7 +1,7 @@
 ---
 title: "converge-arel-unboundable-sign-duck-typing"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: to-sql.ts:2144-2151 unboundableSign is now pure duck-typing (typeof v.isUnboundable !== 'function' -> 0); the raw-Infinity short-circuit is gone."
 ---
 
 ## Context
