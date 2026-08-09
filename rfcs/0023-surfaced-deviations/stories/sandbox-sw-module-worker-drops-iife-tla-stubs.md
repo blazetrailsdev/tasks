@@ -1,7 +1,7 @@
 ---
 title: "Build the sandbox service worker as an ES module worker to drop the IIFE top-level-await stubs"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: website service-worker bundling format (IIFE vs ES module) and its stub aliases are build tooling, not a divergence from any Rails behavior."
 ---
 
 ## Context
