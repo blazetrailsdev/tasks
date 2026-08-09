@@ -1,6 +1,6 @@
 ---
 title: "copy_table family reaches past execute/internal_exec_query to driver.exec"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6301
 claim: "2026-08-09T20:49:23Z"
 assignee: "retire-quoting-dispatch-helpers-onto-self-send"
 blocked-by: null
