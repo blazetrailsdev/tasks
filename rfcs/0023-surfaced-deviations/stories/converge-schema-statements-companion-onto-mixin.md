@@ -1,7 +1,7 @@
 ---
 title: "schemaStatements() accessor stands in for Rails include SchemaStatements"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not convergent and premise stale: the story's driving artifact is gone (no extra-surface-allow.json anywhere under scripts/), and its own acceptance criteria permit 'keep the companion' — a story whose deliverable is 'a recorded decision' is not a convergence story per CLAUDE.md. Re-file with a concrete converged shape if the companion is ever to be folded onto the class."
 ---
 
 ## Context
