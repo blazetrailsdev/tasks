@@ -1,7 +1,7 @@
 ---
 title: "Error#message keeps a String message literal instead of promoting it to an i18n key"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: IDENTIFIER_RE is gone from packages/activemodel/src/error.ts and from the whole packages/ tree, so String messages no longer get promoted to i18n keys."
 ---
 
 ## Context
