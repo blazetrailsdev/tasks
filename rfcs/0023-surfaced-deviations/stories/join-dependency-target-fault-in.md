@@ -1,7 +1,7 @@
 ---
 title: "Fault in the join planner's target model instead of relying on checkValidityBang ordering"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: join-dependency.ts:308 resolves the target via reflection.klass; the bare modelRegistry.get reads and the null returns cited at :344/:371 no longer exist."
 ---
 
 ## Context
