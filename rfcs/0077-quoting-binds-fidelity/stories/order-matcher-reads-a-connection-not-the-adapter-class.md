@@ -1,6 +1,6 @@
 ---
 title: "orderMatcherFor reads a live connection and falls back to the abstract matcher; Rails reads adapter_class"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6297
 claim: "2026-08-09T20:29:15Z"
 assignee: "date-carries-no-nth-so-huge-years-lose-exactness"
 blocked-by: null
