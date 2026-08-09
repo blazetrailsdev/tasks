@@ -1,7 +1,7 @@
 ---
 title: "Live-PG coverage that reflected columns carry oid/fmod into quoteDefaultExpression"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No live divergence named: quote_default_expression was already converged in #4953; this is a request for extra PG-lane test coverage of an assumption, not a deviation from Rails."
 ---
 
 ## Context
