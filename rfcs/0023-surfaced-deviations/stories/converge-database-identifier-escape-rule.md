@@ -1,7 +1,7 @@
 ---
 title: "Converge the three copies of the database identifier escape rule onto one per adapter"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: a DRY dedupe of three identifier-escape copies; no behavioral divergence from Rails is named and the escape rule itself already matches postgresql/quoting.rb."
 ---
 
 ## Context
