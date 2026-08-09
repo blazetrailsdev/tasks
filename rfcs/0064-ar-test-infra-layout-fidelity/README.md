@@ -1,9 +1,9 @@
 ---
 rfc: "0064-ar-test-infra-layout-fidelity"
 title: "AR test-infra layout fidelity"
-status: active
+status: closed
 created: 2026-07-08
-updated: 2026-07-28
+updated: 2026-08-09
 owner: "@deanmarano"
 packages: ["activerecord"]
 clusters: []
