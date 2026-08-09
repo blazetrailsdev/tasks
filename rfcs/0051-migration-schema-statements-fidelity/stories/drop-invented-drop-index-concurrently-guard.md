@@ -1,7 +1,7 @@
 ---
 title: "removeIndex pre-raises an invented CONCURRENTLY-in-transaction error"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T16:19:35Z"
+assignee: "converge-create-table-force-arm-to-rails-unconditional-drop-table"
 blocked-by: null
 closed-reason: null
 ---
