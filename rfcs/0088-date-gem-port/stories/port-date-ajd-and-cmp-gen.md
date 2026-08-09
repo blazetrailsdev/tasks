@@ -1,6 +1,6 @@
 ---
 title: "port-date-ajd-and-cmp-gen"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: Date#ajd, m_real_jd, cmp_gen and equal_gen's rb_num_coerce_cmp tail all landed in PR #6307 on review feedback, so nothing is left to schedule."
 ---
 
 ## Context
