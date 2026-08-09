@@ -1,6 +1,6 @@
 ---
 title: "grep-gate-sync-association-writers-to-zero"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
