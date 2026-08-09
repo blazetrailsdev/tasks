@@ -2,7 +2,7 @@
 title: "SQLite configure_connection runs pragmas before check_version on the sync-driver path"
 status: draft
 updated: 2026-08-08
-rfc: "0023-surfaced-deviations"
+rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
 deps: []
