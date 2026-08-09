@@ -1,7 +1,7 @@
 ---
 title: "database-tasks.test: convert sync node:fs temp-dir usage to the async fs surface"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: a repo style cleanup (node:fs sync -> async surface, 31 *Sync sites) in a test file. Rails' database_tasks tests use plain File/Dir; nothing about the port's behavior changes."
 ---
 
 ## Context
