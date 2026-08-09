@@ -1,7 +1,7 @@
 ---
 title: "TableMetadata#type returns any, forcing local BoundType duck-type shims"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: purely a TypeScript declaration change (any -> the Type interface) plus deleting a local structural shim; runtime behavior already matches table_metadata.rb:17-19."
 ---
 
 ## Context
