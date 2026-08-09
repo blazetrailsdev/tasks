@@ -1,7 +1,7 @@
 ---
 title: "resolve-model-schema-reflection-adapter-fallback"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged by PR #5446: model-schema.ts:39-45 reflectionAdapter no longer reads klass.connection (threaded ?? _adapter ?? pool.activeConnection ?? leaseConnectionSync); the residual sync lease is owned by reflection-adapter-cold-pool-sync-lease-flips-permanent."
 ---
 
 ## Context
