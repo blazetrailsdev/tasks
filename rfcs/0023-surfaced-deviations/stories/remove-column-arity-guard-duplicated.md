@@ -1,7 +1,7 @@
 ---
 title: "remove_column's arity ArgumentError is hand-mirrored in two adapters"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: the arity ArgumentError has no Rails line at all — it exists only because TS does not enforce arity where Ruby does. Deduping two hand-written mirrors of a TS-only guard is refactoring, not convergence; both sites already raise Rails' message and test_remove_column_no_second_parameter_raises_exception passes."
 ---
 
 ## Context
