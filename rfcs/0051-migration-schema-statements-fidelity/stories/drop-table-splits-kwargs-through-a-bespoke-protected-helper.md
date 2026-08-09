@@ -1,6 +1,6 @@
 ---
 title: "dropTable's kwargs split lives in a protected helper Rails has no counterpart for, and mysql2 duplicates it inline"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6300
 claim: "2026-08-09T20:59:21Z"
 assignee: "adapter-class-sync-swallows-the-pool-error-rails-raises"
 blocked-by: null
