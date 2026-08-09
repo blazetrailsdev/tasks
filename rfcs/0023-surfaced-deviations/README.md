@@ -3,7 +3,7 @@ rfc: "0023-surfaced-deviations"
 title: "Surfaced deviations & follow-ups — standing backlog for port-discovered work"
 status: postponed
 created: 2026-06-11
-updated: 2026-07-27
+updated: 2026-08-09
 owner: "@deanmarano"
 packages: []
 clusters:
@@ -61,6 +61,48 @@ posture: they are **surfaced, not yet accepted**. A human (or a triage pass) pro
 intentionally a **holding area**, not a committed work plan — it has no rollout
 ordering of its own.
 
+### Intake rule — a story must name what it converges toward
+
+A story filed here **must state the Rails `file:line` its acceptance criteria move
+trails toward, and the trails `file:line` that diverges from it.** Both sides,
+concretely. If you cannot write those two references, you do not yet have a story —
+you have an observation, and it belongs in the PR body or a code comment, not the
+backlog.
+
+Concretely, a story is in-scope for this RFC only if:
+
+1. **It names a behavioural divergence from Rails.** Emitted SQL, raised error class
+   or message, call order, return value, query count, callback firing — something a
+   test could pin. A TS-declaration narrowing that Rails-literal call sites have to
+   cast around is _not_ in scope here (that is declaration-shape work; file it against
+   the RFC that owns the surface).
+2. **Its acceptance criteria are convergence, not a decision.** "Decide whether X is
+   acceptable", "audit and record", "establish whether" — these are not stories. They
+   accreted here for months and were closed unimplemented in the 2026-08-09 sweep, at
+   the cost of re-deriving their evidence. If the deviation is real, the acceptance
+   criterion is "trails does what `<rails file:line>` does". If it is a genuine TS
+   language wall, the resolution is a justification at the call site in the same PR
+   that discovers it — not a story.
+3. **It is reachable.** A divergence no code path and no Rails test can reach is a
+   comment at the call site, not backlog.
+
+Two named non-goals, both of which produced closes rather than convergence:
+
+- **Infrastructure and tooling** — docker-compose services, lint memory, CI ergonomics,
+  the tasks CLI itself. Real work, wrong RFC; this bucket is for port fidelity.
+- **Ruby interpreter semantics with no TS analogue** — `NoMethodError`, constructor
+  arity enforcement, open-class dispatch, byte-`String`. These belong to
+  `0000-corelib-primitives` (postponed) and are closed on sight here.
+
+### Sweep cadence
+
+The bucket is swept periodically against `origin/main`, closing stories that are
+already done, unreachable, or not convergence work. **The sweep verifies every story
+against today's `main` rather than trusting its prose** — story bodies go stale within
+weeks, and a premise like "~123 call sites" routinely turns out to be two. A story
+that survives a sweep with a live, cited divergence should be re-homed onto the
+topical RFC that owns the surface; 0023 is the waiting room, not the ward.
+
 ### Clusters
 
 - `rails-deviation` — a divergence from the Rails source worth tracking.
@@ -101,3 +143,7 @@ authored ad-hoc and none are pre-enumerated; see the live index
 - 2026-06-11: initial RFC — standing fallback bucket for port-surfaced deviations and
   follow-ups. The btwhooks messages.json change that routes findings here via
   `pnpm tasks new` is a separate, not-yet-landed change (see §Open questions).
+- 2026-08-09: added the intake rule (a story must cite both the Rails and trails
+  `file:line`; decision-only, infrastructure, and corelib-semantics items are out of
+  scope) and the sweep cadence, after the 8-shard triage sweep closed 24 of 70 stories
+  in one shard alone — most of them decision-only or non-fidelity work.
