@@ -55,15 +55,21 @@ in them:
 `significantMissingCalls` (`compare.ts:242-286`) answers one question — Rails'
 body calls `M`, does the TS body call `M`? Everything else is invisible:
 
-| Defect shape                                           | Gate        | Example open story                                               |
-| ------------------------------------------------------ | ----------- | ---------------------------------------------------------------- |
-| Missing call to a ported method                        | **visible** | `inline-mysql-exec-mutation-indirection`                         |
-| Invented / extra behavior Rails does not have          | blind       | `mysql-quote-column-name-star-branch-invented`                   |
-| Wrong return value or semantics of a call that IS made | blind       | `replace-records-gate-on-concat-return-not-rollback-catch`       |
-| Wrong values / literals                                | blind       | `SchemaCreation typeToSql uppercases native type names`          |
-| Ordering / state / memoization                         | blind       | `Migrator loads the migration outside the rescue`                |
-| Structural / class-shape                               | blind       | `Split trails' merged Migrator into MigrationContext + Migrator` |
-| Type-level enforcement                                 | blind       | `schema-quoter-host-contract-not-compile-enforced`               |
+| Defect shape                                           | Gate        | Example open story                                         |
+| ------------------------------------------------------ | ----------- | ---------------------------------------------------------- |
+| Missing call to a ported method                        | **visible** | `inline-mysql-exec-mutation-indirection`                   |
+| Invented / extra behavior Rails does not have          | blind       | `mysql-quote-column-name-star-branch-invented`             |
+| Wrong return value or semantics of a call that IS made | blind       | `replace-records-gate-on-concat-return-not-rollback-catch` |
+| Wrong values / literals                                | blind       | `SchemaCreation typeToSql uppercases native type names`    |
+
+The "wrong values / literals" row is now addressed by a separate dimension:
+RFC 0025 `## Call-argument fidelity` (spike, 2026-08-08) measured 77% genuine
+divergence over 102 hand-classified rows and recommends a narrowed
+`api:calls:args` gate over **its own** baseline tree — deliberately not folded
+into `call-mismatches-exclude`, whose row count is this RFC's debt metric.
+| Ordering / state / memoization | blind | `Migrator loads the migration outside the rescue` |
+| Structural / class-shape | blind | `Split trails' merged Migrator into MigrationContext + Migrator` |
+| Type-level enforcement | blind | `schema-quoter-host-contract-not-compile-enforced` |
 
 RFC 0077 is the sharpest case: 13 open stories, essentially none missing-call
 shaped. Burning the wide list to zero would not touch a single one of them.
