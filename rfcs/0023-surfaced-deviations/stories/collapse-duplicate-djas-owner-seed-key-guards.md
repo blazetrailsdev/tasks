@@ -1,7 +1,7 @@
 ---
 title: "Collapse the two divergent DJAS owner-seed null-FK guards onto chain.last.joinForeignKey"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done in substance: both guards now read the chain reflection's joinForeignKey (associations.ts:1214, has-many-association.ts:701-708) — the drift the story names is gone; what remains is a de-duplication refactor Rails has no counterpart for."
 ---
 
 ## Context
