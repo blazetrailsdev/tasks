@@ -104,7 +104,7 @@ names. The answer was yes (77% genuine divergence over 102 hand-classified
 rows), and it is large enough to be its own campaign — seven stories, ~1,050
 LOC.
 
-It now lives in **RFC `call-argument-parity`**, which carries the full spike
+It now lives in **RFC 0095**, which carries the full spike
 write-up: extractor feasibility, normalization rules, measured populations, and
 the ratchet shape. It was moved out of this RFC because this one is
 `postponed`, and `ready()` (`cli.ts:425`) excludes stories under any non-active
@@ -150,7 +150,7 @@ The dimension is adjacent to this RFC's `constants-defaults-parity` and
 
 - 2026-06-12: initial RFC
 - 2026-08-09: call-argument fidelity spike + its seven stories moved out to
-  RFC `call-argument-parity`; a pointer remains
+  RFC 0095; a pointer remains
 - 2026-08-08: call-argument fidelity spike — verdict, measurements and six
   implementation stories added as `## Call-argument fidelity`
 - 2026-06-12: descope to five stories — body-shape-fingerprinting,

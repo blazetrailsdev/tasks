@@ -63,7 +63,7 @@ body calls `M`, does the TS body call `M`? Everything else is invisible:
 | Wrong values / literals                                | blind       | `SchemaCreation typeToSql uppercases native type names`    |
 
 The "wrong values / literals" row is now addressed by a separate dimension:
-RFC `call-argument-parity` (spiked 2026-08-08) measured 77% genuine divergence
+RFC 0095 (spiked 2026-08-08) measured 77% genuine divergence
 over 102 hand-classified rows and charters a narrowed `api:calls:args` gate
 over **its own** baseline tree — deliberately not folded into
 `call-mismatches-exclude`, whose row count is this RFC's debt metric. Its

@@ -2,7 +2,7 @@
 title: "extract-ruby-api.rb emits per-call-site argument descriptors"
 status: claimed
 updated: 2026-08-09
-rfc: "0000-call-argument-parity"
+rfc: "0095-call-argument-parity"
 cluster: api-compare
 packages: []
 deps: []
