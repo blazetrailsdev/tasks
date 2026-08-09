@@ -1,6 +1,6 @@
 ---
 title: "InsertAll values_list hands values to the visitor instead of pre-quoting them (deletes Base.quoteSqlValue)"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6294
 claim: "2026-08-09T19:29:15Z"
 assignee: "fold-bind-for-pg-into-type-cast"
 blocked-by: null
