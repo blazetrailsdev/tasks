@@ -1,7 +1,7 @@
 ---
 title: "TableDefinition constructor still treats primaryKey: false as id: false, disagreeing with createTable"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the pkFalse computation is gone from abstract/schema-definitions.ts and the 'treats primaryKey: false same as id: false' assertion no longer exists in schema-definitions.test.ts."
 ---
 
 ## Context
