@@ -1,7 +1,7 @@
 ---
 rfc: "0095-call-argument-parity"
 title: "Call-argument parity (api:calls:args)"
-status: draft
+status: active
 created: 2026-08-09
 updated: 2026-08-09
 owner: "@deanmarano"
