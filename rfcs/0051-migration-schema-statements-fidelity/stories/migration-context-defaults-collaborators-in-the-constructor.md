@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext defaults its collaborators in the constructor, not on first read"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:45:47Z"
+assignee: "date-to-date-seat-raises-on-julian-only-spellings"
 blocked-by: null
 closed-reason: null
 ---

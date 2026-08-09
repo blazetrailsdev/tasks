@@ -1,6 +1,6 @@
 ---
 title: "Date#to_date's Temporal seat raises on a Julian-only spelling the state now holds"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:45:47Z"
+assignee: "date-to-date-seat-raises-on-julian-only-spellings"
 blocked-by: null
 closed-reason: null
 ---

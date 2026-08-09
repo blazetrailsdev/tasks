@@ -1,6 +1,6 @@
 ---
 title: "The DateTime seat's instant is off by up to 59s for a sub-minute offset date_zone_to_diff keeps in seconds"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:45:47Z"
+assignee: "date-to-date-seat-raises-on-julian-only-spellings"
 blocked-by: null
 closed-reason: null
 ---
