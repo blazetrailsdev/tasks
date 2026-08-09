@@ -2,7 +2,7 @@
 title: "Timestamp create callback adds a non-Rails _attributeDefinitions guard"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

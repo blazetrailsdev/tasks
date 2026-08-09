@@ -2,7 +2,7 @@
 title: "Route inverse collection wiring through replace_on_target(inversing:)"
 status: draft
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

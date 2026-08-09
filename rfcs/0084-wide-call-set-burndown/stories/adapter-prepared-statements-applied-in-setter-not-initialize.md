@@ -2,7 +2,7 @@
 title: "AbstractAdapter applies disable_prepared_statements in the setter, not initialize"
 status: draft
 updated: 2026-07-29
-rfc: "0023-surfaced-deviations"
+rfc: "0084-wide-call-set-burndown"
 cluster: null
 deps: []
 deps-rfc: []

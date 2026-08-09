@@ -2,7 +2,7 @@
 title: "pid-scoped pg_cancel_backend deviation is justified only in the PR body, not at the call site"
 status: draft
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: []
 deps-rfc: []

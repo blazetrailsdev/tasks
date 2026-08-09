@@ -2,7 +2,7 @@
 title: "execQuery/execInsert/select bypass the adapter's internalExecQuery override"
 status: draft
 updated: 2026-08-02
-rfc: "0023-surfaced-deviations"
+rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
 deps-rfc: []

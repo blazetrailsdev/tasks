@@ -2,7 +2,7 @@
 title: "ReferenceDefinition#_columns should be named columns like Rails"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0084-wide-call-set-burndown"
 cluster: null
 deps: []
 deps-rfc: []
