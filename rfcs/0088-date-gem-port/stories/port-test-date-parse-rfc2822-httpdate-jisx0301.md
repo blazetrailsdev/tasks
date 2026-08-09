@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_parse.rb's _rfc2822/_httpdate/_jisx0301 fragment parsers"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate — covered by port-test-date-parse-formats."
 ---
 
 ## Context
