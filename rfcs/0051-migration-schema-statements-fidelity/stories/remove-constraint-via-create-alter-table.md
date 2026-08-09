@@ -1,6 +1,6 @@
 ---
 title: "removeConstraint builds a bare AlterTable instead of create_alter_table"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

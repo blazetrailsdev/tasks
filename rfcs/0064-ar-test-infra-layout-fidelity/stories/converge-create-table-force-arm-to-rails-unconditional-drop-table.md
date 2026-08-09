@@ -1,6 +1,6 @@
 ---
 title: "converge-create-table-force-arm-to-rails-unconditional-drop-table"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null

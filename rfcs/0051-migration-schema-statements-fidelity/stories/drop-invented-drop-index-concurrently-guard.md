@@ -1,6 +1,6 @@
 ---
 title: "removeIndex pre-raises an invented CONCURRENTLY-in-transaction error"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
