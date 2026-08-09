@@ -1,6 +1,6 @@
 ---
 title: "createTable pre-flights tableExists instead of emitting IF NOT EXISTS"
-status: claimed
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6284
 claim: "2026-08-09T20:49:23Z"
 assignee: "retire-quoting-dispatch-helpers-onto-self-send"
 blocked-by: null
