@@ -1,6 +1,6 @@
 ---
 title: "TimeZone.clear has no port and zones_map is inlined into all()"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
