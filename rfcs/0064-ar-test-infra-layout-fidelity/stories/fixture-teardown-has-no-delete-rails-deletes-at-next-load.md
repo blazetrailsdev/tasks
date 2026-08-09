@@ -1,6 +1,6 @@
 ---
 title: "Fixture teardown has no delete loop; the rows go at the next insert_fixtures_set"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
