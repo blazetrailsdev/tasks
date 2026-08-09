@@ -1,6 +1,6 @@
 ---
 title: "pnpm test:stubs generates 200 files by default; --dry-run should be the default"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
