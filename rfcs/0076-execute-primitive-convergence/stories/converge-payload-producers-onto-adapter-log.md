@@ -1,6 +1,6 @@
 ---
 title: "Converge inline sql.active_record payload literals onto AbstractAdapter#log"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
