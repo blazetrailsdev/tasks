@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata count project NamedFunction(COUNT) with an invented alias, not Arel::Nodes::Count"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6265
 claim: "2026-08-09T00:15:03Z"
 assignee: "date-parse-union-return-is-ts-static-side-variance"
 blocked-by: null
