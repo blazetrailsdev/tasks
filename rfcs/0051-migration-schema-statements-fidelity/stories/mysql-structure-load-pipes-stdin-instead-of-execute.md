@@ -40,7 +40,7 @@ file).
 ## Acceptance criteria
 
 - [ ] `structureLoad` passes `--execute "SET FOREIGN_KEY_CHECKS = 0; SOURCE
-  <filename>; SET FOREIGN_KEY_CHECKS = 1"` followed by `--database <db>`,
+<filename>; SET FOREIGN_KEY_CHECKS = 1"` followed by `--database <db>`,
       line for line with `mysql_database_tasks.rb:58-65`, and stops reading the
       dump file itself.
 - [ ] The three `MySQLStructureLoadTest` tests become real tests at their Rails
