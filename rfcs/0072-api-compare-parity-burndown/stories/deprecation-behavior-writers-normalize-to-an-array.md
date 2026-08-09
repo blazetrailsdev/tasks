@@ -1,6 +1,6 @@
 ---
 title: "Deprecation#behavior=/disallowed_behavior= normalize to an Array of callables on write"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
