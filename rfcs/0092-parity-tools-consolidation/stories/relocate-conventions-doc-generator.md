@@ -1,6 +1,6 @@
 ---
 title: "Move conventions-doc.ts next to its source in @blazetrails/parity"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
