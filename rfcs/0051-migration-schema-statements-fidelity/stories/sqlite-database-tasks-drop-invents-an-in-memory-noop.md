@@ -1,6 +1,6 @@
 ---
 title: "SQLiteDatabaseTasks#drop invents an in-memory no-op where Rails raises NoDatabaseError"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
