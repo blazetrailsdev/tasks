@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_attr.rb and test_date_compat.rb — 4 tests, closes two unported files"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate — the 2026-08-09 19:12 sweep already filed port-test-date-attr and port-test-date-compat for the same two files. Filed from a stale local tasks checkout."
 ---
 
 ## Context
