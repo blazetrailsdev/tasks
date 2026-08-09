@@ -1,7 +1,7 @@
 ---
 title: "bigint-roundtrip.test.ts is trails-only: rename to .trails.test.ts"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence item: a cosmetic file rename. test:compare matches on describe/test names, and this file's describe title ('SQLite3 bigint round-trip') is not a Rails class name either way, so the rename changes no fidelity measurement and no behaviour."
 ---
 
 ## Context
