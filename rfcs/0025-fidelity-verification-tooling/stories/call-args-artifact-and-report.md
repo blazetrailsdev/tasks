@@ -1,6 +1,6 @@
 ---
 title: "compare.ts writes the advisory call-argument mismatch artifact"
-status: draft
+status: ready
 updated: 2026-08-09
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
