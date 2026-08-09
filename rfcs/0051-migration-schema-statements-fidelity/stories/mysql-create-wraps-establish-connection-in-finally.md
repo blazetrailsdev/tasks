@@ -1,6 +1,6 @@
 ---
 title: "MySQLDatabaseTasks#create wraps the trailing establish_connection in a finally"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T15:39:33Z"
+assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null
 closed-reason: null
 ---
