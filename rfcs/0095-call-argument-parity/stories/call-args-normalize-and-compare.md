@@ -1,6 +1,6 @@
 ---
 title: "call-args.ts normalizes and compares Ruby/TS call arguments"
-status: draft
+status: ready
 updated: 2026-08-09
 rfc: "0095-call-argument-parity"
 cluster: api-compare
