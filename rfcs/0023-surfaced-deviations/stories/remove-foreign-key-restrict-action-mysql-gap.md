@@ -1,7 +1,7 @@
 ---
 title: "Resolve the MySQL skip on test_remove_foreign_key_with_restrict_action"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: 'remove foreign key with restrict action' (migration/foreign-key.test.ts:475) runs ungated — the it.skipIf(adapterType === 'mysql') the story is about no longer exists."
 ---
 
 ## Context
