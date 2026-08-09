@@ -1,6 +1,6 @@
 ---
 title: "converge-fixture-teardown-delete-onto-a-live-connection"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
