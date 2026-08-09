@@ -1,7 +1,7 @@
 ---
 title: "Dedupe the two synchronous listJsonFiles copies in scripts/parity diff modules"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: deduping two listJsonFiles copies under scripts/parity is internal tooling hygiene with no Rails counterpart; if it is worth doing it belongs to RFC 0092 (compare-tooling consolidation), not to a fidelity backlog."
 ---
 
 ## Context
