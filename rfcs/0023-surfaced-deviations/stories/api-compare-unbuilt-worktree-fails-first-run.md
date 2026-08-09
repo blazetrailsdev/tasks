@@ -1,7 +1,7 @@
 ---
 title: "Fresh worktrees fail their first api:compare now that unbuilt packages are a hard error"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: worktree-setup DX for a parity tool guard, no trails/Rails behavior difference. RFC 0023 is for port-discovered deviations only."
 ---
 
 ## Context
