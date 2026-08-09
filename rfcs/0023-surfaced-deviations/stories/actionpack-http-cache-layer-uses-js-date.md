@@ -1,7 +1,7 @@
 ---
 title: "actionpack-http-cache-layer-uses-js-date"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: framed as a decision, and its own text accepts 'keep JS Date as the documented HTTP wire boundary' as an outcome. Rails' if_modified_since returns a Time only because Ruby has no wire type; no behavioral divergence to converge."
 ---
 
 ## Context
