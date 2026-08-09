@@ -1,7 +1,7 @@
 ---
 title: "aggregate mapping-miss raises TypeError not Rails NoMethodError"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails has no NoMethodError and inventing Ruby's interpreter error hierarchy is corelib territory (0000-corelib-primitives, postponed); trigger condition and semantics already match predicate-builder.ts extractAggregateAttr."
 ---
 
 ## Context
