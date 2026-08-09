@@ -1,7 +1,7 @@
 ---
 title: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 status: ready
-updated: 2026-08-08
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
@@ -9,7 +9,6 @@ deps:
   - migration-context-collaborators-need-a-pool
 deps-rfc: []
 est-loc: null
-priority: 145
 pr: null
 claim: null
 assignee: null
