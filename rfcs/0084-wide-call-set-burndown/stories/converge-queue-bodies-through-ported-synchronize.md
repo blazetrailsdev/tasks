@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool::Queue bodies inline what Rails wraps in the already-ported synchronize"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
