@@ -122,6 +122,31 @@ Where a Ruby method answers a temporal value, **the TS method answers a
 Callers get Temporal without asking. This is the headline behavioral commitment
 of the RFC.
 
+#### What the `Temporal` seat cannot hold
+
+Two values the gem-shaped object carries have no `Temporal` spelling. Both are
+limits of the seat, not of the port: the gem-shaped object (`dNewByFrags` /
+`dtNewByFrags`, and the `Date` / `DateTime` classes themselves) answers them
+exactly, and the default return is _not_ narrowed for either case.
+
+- **A pre-reform `::Date` with a Julian-only spelling raises.**
+  `Temporal.PlainDate` is proleptic Gregorian, so every Julian leap day a
+  Gregorian century rule removes — 1500-02-29, 1400-02-29, 1300-02-29 and so on
+  back before the 1582 reform — has no value to convert to and `Date#to_date`
+  (`date_core.c:8977-8981`, which is `self` in MRI and never raises) throws
+  `Date::Error, "invalid date"`. Every static over the seat inherits this:
+  `Date.civil`, `Date.jd`, `Date.ordinal`, `Date.commercial`, `Date.parse`,
+  `Date.strptime`.
+- **A sub-minute offset on a `::DateTime` truncates to the minute, moving the
+  instant by up to 59 seconds.** `date_zone_to_diff` (`date_parse.c:523-528`)
+  answers seconds — `Date._parse("2008-03-01T06:00:00-00:44:30")[:offset]` is
+  `-2670` — while a `Temporal` offset time zone is minute-precision. The zone is
+  spelled with `of2str` (`date_core.c:1973-1980`), whose `"%c%02d:%02d"` drops
+  the same seconds, so the seat agrees with `DateTime#zone` (`"-00:44"`); the
+  cost is that `ZonedDateTime#epochNanoseconds` names 06:44:00 UTC where MRI
+  names 06:44:30. `DateTime#offset` / `#zone` on the gem-shaped object still
+  hold the exact value, as `::Time`'s `number` offset does for the same reason.
+
 ### 3. The Ruby-shaped object stays available as an option
 
 **A `Date` class still exists** — it is the gem's own API surface, it is what the
