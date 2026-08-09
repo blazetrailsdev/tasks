@@ -1,7 +1,7 @@
 ---
 title: "SQLiteDatabaseTasks#drop invents an in-memory no-op where Rails raises NoDatabaseError"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:00:45Z"
+assignee: "fixture-teardown-has-no-delete-rails-deletes-at-next-load"
 blocked-by: null
 closed-reason: null
 ---
