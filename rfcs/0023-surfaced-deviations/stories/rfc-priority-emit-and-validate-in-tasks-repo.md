@@ -1,7 +1,7 @@
 ---
 title: "Emit and validate RFC priority in the tasks index builder"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: tasks-repo index-builder/validator work (build-index.mjs, validate-lib.mjs), unrelated to the port's fidelity to Rails."
 ---
 
 ## Context
