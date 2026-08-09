@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext defaults its collaborators in the constructor, not on first read"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

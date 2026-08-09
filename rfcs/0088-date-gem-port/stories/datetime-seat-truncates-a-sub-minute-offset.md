@@ -1,6 +1,6 @@
 ---
 title: "The DateTime seat's instant is off by up to 59s for a sub-minute offset date_zone_to_diff keeps in seconds"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null

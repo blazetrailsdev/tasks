@@ -1,6 +1,6 @@
 ---
 title: "Date#to_date's Temporal seat raises on a Julian-only spelling the state now holds"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
