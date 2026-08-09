@@ -1,6 +1,6 @@
 ---
 title: "Enroll postgresql_rake_test.rb and mysql2_rake_test.rb in test:compare"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
