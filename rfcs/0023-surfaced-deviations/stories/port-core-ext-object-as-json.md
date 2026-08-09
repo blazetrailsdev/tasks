@@ -1,7 +1,7 @@
 ---
 title: "Port core_ext/object/json.rb's as_json into core-ext/object/json.ts"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: packages/activesupport/src/core-ext/object/json.ts exists on main and holds the as_json dispatch (asJson interface + per-class static asJson, json.ts:10-69)."
 ---
 
 ## Context
