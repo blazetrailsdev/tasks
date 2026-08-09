@@ -2,7 +2,7 @@
 title: "Route the SQLite alterTable rebuild through instrumented execute"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
 deps-rfc: []
