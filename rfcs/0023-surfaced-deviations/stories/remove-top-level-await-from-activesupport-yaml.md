@@ -1,7 +1,7 @@
 ---
 title: "Remove the top-level await from activesupport/yaml so CJS and IIFE consumers can load it"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: yaml.ts has no Rails counterpart (Psych is stdlib); the story is about CJS/IIFE bundle compatibility for the optional npm dep."
 ---
 
 ## Context
