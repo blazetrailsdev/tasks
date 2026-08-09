@@ -1,7 +1,7 @@
 ---
 title: "schemaConn seeds MySQL's protected _databaseVersion to warm version gates"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails test-support plumbing (support/schema-conn.ts seeding a version for unconnected DDL unit tests); no Rails behaviour is diverging."
 ---
 
 ## Context
