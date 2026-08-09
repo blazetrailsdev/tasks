@@ -1,6 +1,6 @@
 ---
 title: "converge-check-constraint-name-fetch-semantics"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
