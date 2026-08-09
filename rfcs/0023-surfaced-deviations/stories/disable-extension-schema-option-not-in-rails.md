@@ -1,7 +1,7 @@
 ---
 title: "Drop the trails-only schema: option from disableExtension"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: disableExtension is Rails' (name, { force?: 'cascade' }) at postgresql-adapter.ts:3649, with no schema option in ExtensionStatements (abstract/schema-statements.ts:249) or Migration#disableExtension (migration.ts:896)."
 ---
 
 ## Context
