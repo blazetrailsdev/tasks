@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/date/calculations.rb onto the Date class, not free functions"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
