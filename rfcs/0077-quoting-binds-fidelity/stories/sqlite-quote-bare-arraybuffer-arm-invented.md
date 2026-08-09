@@ -1,6 +1,6 @@
 ---
 title: "SQLite quote's bare-ArrayBuffer arm has no Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6294
 claim: "2026-08-09T19:29:15Z"
 assignee: "fold-bind-for-pg-into-type-cast"
 blocked-by: null
