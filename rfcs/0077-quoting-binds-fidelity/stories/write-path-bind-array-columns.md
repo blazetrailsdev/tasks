@@ -1,6 +1,6 @@
 ---
 title: "Write path: bind array columns instead of inline quoting"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
