@@ -1,6 +1,6 @@
 ---
 title: "retire-legacy-compare-script-aliases"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6305
 claim: "2026-08-09T23:04:31Z"
 assignee: "retire-legacy-compare-script-aliases"
 blocked-by: null
