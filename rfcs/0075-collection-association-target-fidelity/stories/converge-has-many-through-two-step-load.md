@@ -2,7 +2,7 @@
 title: "Converge has_many :through off the two-step load onto the scope chain"
 status: draft
 updated: 2026-08-08
-rfc: "0023-surfaced-deviations"
+rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
 deps: []
