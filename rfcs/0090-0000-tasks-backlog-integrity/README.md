@@ -1,12 +1,13 @@
 ---
 rfc: "0090-0000-tasks-backlog-integrity"
 title: "Tasks backlog integrity — guards for stranded and misfiled stories"
-status: draft
+status: superseded
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-08-09
 owner: "@deanmarano"
 packages: []
 clusters: []
+superseded-by: "0091-tasks-backlog-integrity"
 ---
 
 ## Summary
