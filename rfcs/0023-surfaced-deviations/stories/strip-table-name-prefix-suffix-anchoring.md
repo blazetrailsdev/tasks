@@ -1,7 +1,7 @@
 ---
 title: "Match Rails' unanchored strip_table_name_prefix_and_suffix regex"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: stripTableNamePrefixAndSuffix is Rails' unanchored `/#{prefix}(.+)#{suffix}/` with the $1-vs-original fallback (abstract/schema-statements.ts:2241-2248); the `^...$` anchors are gone, and the schema-definitions columnFor site the story named no longer exists."
 ---
 
 ## Context
