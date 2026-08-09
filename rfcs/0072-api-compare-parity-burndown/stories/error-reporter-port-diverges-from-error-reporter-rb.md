@@ -1,6 +1,6 @@
 ---
 title: "ErrorReporter is ported method-by-method against error_reporter.rb"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6302
 claim: "2026-08-09T21:39:14Z"
 assignee: "parse-year-fragment-loses-exactness-past-max-safe-integer"
 blocked-by: null
