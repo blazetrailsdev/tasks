@@ -1,7 +1,7 @@
 ---
 title: "converge-fixture-teardown-delete-onto-a-live-connection"
-status: blocked
-updated: 2026-08-07
+status: ready
+updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-07T21:44:45Z"
-assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
-blocked-by: "Blocked on unmerged PR #6198 (polymorphic-reference-type-column-comes-first-69aa). Both remaining acceptance criteria target code that does not exist on origin/main: test-fixtures.ts's afterEach has no disableReferentialIntegrity wrap and no canonicalForeignKeyDependents() conditional (grep finds canonicalForeignKeyDependents only in support/canonical-table-rebuild.ts). The conditional wrap this story converges is introduced by #6198, so the work can only be done on top of it, and touching the same afterEach now would conflict. Re-open once #6198 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
