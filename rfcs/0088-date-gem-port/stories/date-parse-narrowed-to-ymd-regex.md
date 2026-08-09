@@ -1,6 +1,6 @@
 ---
 title: "Widen Date.parse beyond the y-m-d regex"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T16:14:05Z"
+assignee: "date-parse-narrowed-to-ymd-regex"
 blocked-by: null
 closed-reason: null
 ---
