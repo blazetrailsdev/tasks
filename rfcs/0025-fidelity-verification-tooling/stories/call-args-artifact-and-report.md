@@ -1,6 +1,6 @@
 ---
 title: "compare.ts writes the advisory call-argument mismatch artifact"
-status: claimed
+status: blocked
 updated: 2026-08-09
 rfc: "0025-fidelity-verification-tooling"
 cluster: api-compare
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-09T19:36:17Z"
 assignee: "call-args-artifact-and-report"
-blocked-by: null
+blocked-by: "Blocked on unbuilt dependency chain: scripts/api-compare/call-args.ts does not exist in origin/main and there is no open PR for it. Dep call-args-normalize-and-compare is still status=draft, and its own deps ruby-extractor-emit-call-arguments / ts-extractor-emit-call-arguments are status=ready but unstarted (no per-call-site argument descriptors are emitted by either extractor today). This story has nothing to wire in: no comparator, and no rubyArgs/tsArgs data on the name-matched pairs that checkCalls/checkLiterals/checkOptionKeys receive. Unblocks once those three land."
 closed-reason: null
 ---
 
