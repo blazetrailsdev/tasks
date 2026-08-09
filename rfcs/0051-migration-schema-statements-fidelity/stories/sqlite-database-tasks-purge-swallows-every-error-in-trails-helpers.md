@@ -1,6 +1,6 @@
 ---
 title: "SQLiteDatabaseTasks#purge swallows every error in two trails-only helpers instead of rescuing NoDatabaseError"
-status: done
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 6264
+pr: 6263
 claim: "2026-08-08T21:45:04Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null
