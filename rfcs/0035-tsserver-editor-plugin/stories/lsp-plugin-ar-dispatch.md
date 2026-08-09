@@ -1,10 +1,10 @@
 ---
 title: "Dispatch AR models through the ts-plugin LSP shell"
 status: draft
-updated: 2026-06-17
+updated: 2026-08-09
 rfc: "0035-tsserver-editor-plugin"
 cluster: null
-deps: ["ar-models-tsc-plugin"]
+deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
