@@ -1,7 +1,7 @@
 ---
 title: "alias-bridge-remaining-resolve-sites"
-status: ready
-updated: 2026-07-22
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: extends resolveAliasNameIn, an explicitly trails-only camelCase-key bridge Rails has no counterpart for, to 11 more sites in activemodel/src/model.ts. Spreading a workaround for trails' camelCase alias-key storage moves away from Rails, not toward it; the convergent fix is storing alias keys under Rails' naming."
 ---
 
 ## Context
