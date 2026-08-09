@@ -1,7 +1,7 @@
 ---
 title: "BinaryType#deserialize yields Uint8Array where Ruby yields a byte String"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Uint8Array is the sanctioned TS analogue for Ruby's BINARY String, same class of call as Temporal-over-Date; Ruby has no byte-array type to converge onto. Decision recorded, no work."
 ---
 
 ## Context
