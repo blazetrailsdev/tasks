@@ -1,7 +1,7 @@
 ---
 title: "Unify #update/#update! on public_send-equivalent setter dispatch"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: subsumed by consolidate-three-assign-attributes-implementations, which explicitly routes #update through the single _assign_attributes / _assign_attribute setter dispatch. Survivor is that story."
 ---
 
 ## Context
