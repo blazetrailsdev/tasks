@@ -1,6 +1,6 @@
 ---
 title: "configuration_hash_without_database deletes the key instead of merging database: nil"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

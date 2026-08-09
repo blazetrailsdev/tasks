@@ -1,6 +1,6 @@
 ---
 title: "MySQLDatabaseTasks#create wraps the trailing establish_connection in a finally"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
