@@ -1,7 +1,7 @@
 ---
 title: "Hoist isRubyTruthy into activesupport and drop the duplicate implementations"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: isRubyTruthy is a trails invention with no Rails counterpart (it now lives at packages/activerecord/src/ruby-truthy.ts and is used across abstract-mysql-adapter). Relocating an invented helper between packages does not move the port toward Rails."
 ---
 
 ## Context
