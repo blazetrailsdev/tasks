@@ -2,7 +2,7 @@
 title: "Adapter-less schema quoters force non-Rails guards in quote_default_expression"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
