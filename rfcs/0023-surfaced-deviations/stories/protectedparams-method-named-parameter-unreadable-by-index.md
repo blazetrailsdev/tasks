@@ -1,7 +1,7 @@
 ---
 title: "protectedparams-method-named-parameter-unreadable-by-index"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closing as accepted deviation, per the story's own third acceptance criterion. The residual is in a test-support stub (packages/activerecord/src/support/stubs/strong-parameters.ts), nothing fails today (no canonical column collides with a method name), and closing it needs a wrapper shape Rails does not have — the docblock note is its permanent home."
 ---
 
 ## Context
