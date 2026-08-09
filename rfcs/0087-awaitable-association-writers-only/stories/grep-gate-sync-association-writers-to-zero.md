@@ -1,6 +1,6 @@
 ---
 title: "grep-gate-sync-association-writers-to-zero"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -8,7 +8,7 @@ deps: ["reconcile-residual-sync-writers-with-the-gate-list"]
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: null
+pr: 6276
 claim: "2026-08-09T02:45:47Z"
 assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null
