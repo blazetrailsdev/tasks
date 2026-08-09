@@ -1,7 +1,7 @@
 ---
 title: "NullInternalMetadata carries five invented no-op members; Rails' is an empty class"
-status: in-progress
-updated: 2026-08-08
+status: done
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
