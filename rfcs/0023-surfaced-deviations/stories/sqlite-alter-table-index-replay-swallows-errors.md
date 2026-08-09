@@ -1,7 +1,7 @@
 ---
 title: "alterTable index replay swallows errors and bypasses translation"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: sqlite3-adapter.ts no longer swallows 'no such column'/'already exists' in the alterTable index replay (grep for both strings returns nothing in packages/activerecord/src/connection-adapters/sqlite3-adapter.ts on main)."
 ---
 
 ## Context
