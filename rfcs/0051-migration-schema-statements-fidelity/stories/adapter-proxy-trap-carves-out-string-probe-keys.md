@@ -1,7 +1,7 @@
 ---
 title: "The adapter proxy's trap still carves out ADAPTER_PROXY_PROBE_KEYS string names; Ruby dispatches or raises for them"
-status: draft
-updated: 2026-08-08
+status: ready
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
