@@ -1,7 +1,7 @@
 ---
 title: "Regenerate rails-deprecated-methods.json to drop the stale benchmark.ts entry"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: lint-manifest hygiene (a stale eslint/rails-deprecated-methods.json entry for a deleted file). Tooling bookkeeping, not a port divergence."
 ---
 
 ## Context
