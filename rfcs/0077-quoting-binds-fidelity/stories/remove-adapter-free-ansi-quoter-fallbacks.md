@@ -1,6 +1,6 @@
 ---
 title: "Remove the adapter-free ANSI quoter fallbacks (Rails raises instead)"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
