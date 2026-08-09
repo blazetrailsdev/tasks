@@ -1,7 +1,7 @@
 ---
 title: "Ignore tmp/ so scratch artifacts cannot be swept in by git add -A"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: repo hygiene (.gitignore entry), no port convergence."
 ---
 
 ## Context
