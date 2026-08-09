@@ -1,7 +1,7 @@
 ---
 title: "assign_attributes lets setter exceptions propagate raw (no AttributeAssignmentError wrap)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the AttributeAssignmentError wrap is gone from persistence.ts _assignAttribute/_assignAttributes (see JSDoc at persistence.ts:975-988 — setter exceptions propagate raw, only multiparameter wraps)."
 ---
 
 ## Context
