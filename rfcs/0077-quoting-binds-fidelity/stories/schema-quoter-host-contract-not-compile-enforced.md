@@ -1,7 +1,7 @@
 ---
 title: "Enforce the quoting host contract on SchemaQuoter assignment sites"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: both named assignment sites are deleted on origin/main — ABSTRACT_SCHEMA_QUOTER no longer exists in connection-adapters/abstract/quoting.ts (only a stale doc-comment mention at :78) and mysql/schema-quoter.ts is gone entirely; SchemaQuoter is now a Pick<> off the adapter surface (abstract/assert-schema-adapter.ts:9) with a runtime assert, so there is no bivariant object-literal boundary left to enforce."
 ---
 
 ## Context
