@@ -1,6 +1,6 @@
 ---
 title: "Converge sqlite _performQuery contract (DDL affected_rows + RETURNING return) via connection lock"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6299
 claim: "2026-08-09T20:39:15Z"
 assignee: "datetime-proleptic-arm-computes-its-jd-eagerly"
 blocked-by: null
