@@ -1,7 +1,7 @@
 ---
 title: "Relation mutation paths read model.arel_table where Rails reads the table accessor"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: relation.ts updateAll (:3736), deleteAll (:3812), updateCounters (:5918) and _substituteValues (:6852) all read this.table; no _modelClass.arelTable reads remain."
 ---
 
 ## Context
