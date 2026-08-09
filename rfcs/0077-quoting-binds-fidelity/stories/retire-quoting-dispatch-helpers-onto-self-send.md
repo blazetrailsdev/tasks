@@ -1,6 +1,6 @@
 ---
 title: "Retire the seven quoting dispatch* helpers onto Rails' plain self-send"
-status: draft
+status: ready
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
