@@ -1,7 +1,7 @@
 ---
 title: "Converge resolveAliasedColumn onto resolveAliasNameIn"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: an internal dedup of two trails helpers (reflection.ts:162 vs activemodel resolveAliasNameIn). Neither is a Rails method; collapsing them does not move any ported body toward Rails."
 ---
 
 ## Context
