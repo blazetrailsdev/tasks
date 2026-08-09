@@ -1,14 +1,14 @@
 ---
 title: "structureDump appends the configured search_path and drops regex ignore_tables patterns"
-status: draft
-updated: 2026-08-05
+status: done
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: null
+pr: 6296
 claim: null
 assignee: null
 blocked-by: null
