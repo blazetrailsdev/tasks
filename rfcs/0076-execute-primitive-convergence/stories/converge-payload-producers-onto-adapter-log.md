@@ -1,7 +1,7 @@
 ---
 title: "Converge inline sql.active_record payload literals onto AbstractAdapter#log"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:09:16Z"
+assignee: "mysql-quote-override-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

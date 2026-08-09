@@ -1,6 +1,6 @@
 ---
 title: "Close-out: verify the quoting surface against Rails and set RFC 0077's done condition"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:09:16Z"
+assignee: "mysql-quote-override-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

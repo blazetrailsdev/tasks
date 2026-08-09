@@ -1,7 +1,7 @@
 ---
 title: "toSqlAndBinds: keep Attribute objects in binds until type_casted_binds"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:09:16Z"
+assignee: "mysql-quote-override-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---
