@@ -1,6 +1,6 @@
 ---
 title: "PG: converge configure_connection hook dispatch (argless hook, reset-path dispatch)"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
