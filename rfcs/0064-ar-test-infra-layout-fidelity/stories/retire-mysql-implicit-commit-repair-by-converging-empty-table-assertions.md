@@ -1,6 +1,6 @@
 ---
 title: "Retire the MySQL implicit-commit fixture repair by converging the trails-only 'unseeded table is empty' assertions"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
