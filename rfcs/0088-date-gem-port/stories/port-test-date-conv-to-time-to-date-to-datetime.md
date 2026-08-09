@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_conv.rb — the to_time/to_date/to_datetime conversion matrix"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of port-test-date-conv (same 12 tests of test_date_conv.rb)."
 ---
 
 ## Context
