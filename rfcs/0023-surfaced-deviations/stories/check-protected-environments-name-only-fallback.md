@@ -1,7 +1,7 @@
 ---
 title: "Remove the name-only ProtectedEnvironmentError fallback when no configs exist"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: database-tasks.ts:662-672 checkProtectedEnvironmentsBang now only loops configsFor(envName) calling checkCurrentProtectedEnvironmentBang; the name-only ProtectedEnvironmentError fallback is gone, so zero configs performs zero checks as in database_tasks.rb:625-650."
 ---
 
 ## Context
