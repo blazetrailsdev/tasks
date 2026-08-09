@@ -1,14 +1,13 @@
 ---
 title: "Burn down the 7 call-mismatch entries on InternalMetadata/SchemaMigration once they hold a pool"
 status: ready
-updated: 2026-08-08
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
 deps: ["migration-collaborator-call-sites-pass-a-pool"]
 deps-rfc: []
 est-loc: 200
-priority: 133
 pr: null
 claim: null
 assignee: null
