@@ -1,7 +1,7 @@
 ---
 title: "wire-asynchronous-query-inside-transaction-error-with-load-async"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not actionable as filed: its own text establishes the guard would be dead code until FutureResult/async_enabled?/load_async are ported (a separate body of work), leaving only a stale comment citation. Unverifiable as a standalone convergence."
 ---
 
 ## Context
