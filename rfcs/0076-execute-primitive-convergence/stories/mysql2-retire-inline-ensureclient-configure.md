@@ -1,7 +1,7 @@
 ---
 title: "mysql2: retire inline _ensureClient configure in favor of single attempt_configure_connection dispatch"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:29:15Z"
+assignee: "date-carries-no-nth-so-huge-years-lose-exactness"
 blocked-by: null
 closed-reason: null
 ---

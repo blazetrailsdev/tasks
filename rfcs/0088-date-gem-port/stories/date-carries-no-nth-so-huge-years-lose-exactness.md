@@ -1,6 +1,6 @@
 ---
 title: "Date/DateTime carry no nth, so years past MAX_SAFE_INTEGER lose exactness"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:29:15Z"
+assignee: "date-carries-no-nth-so-huge-years-lose-exactness"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "valid_civil_p skips decode_year's truncation, so a fractional year raises where MRI answers"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:29:15Z"
+assignee: "date-carries-no-nth-so-huge-years-lose-exactness"
 blocked-by: null
 closed-reason: null
 ---
