@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata cast away the NullPool arm to reach withConnection and schemaCache"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:30:48Z"
+assignee: "port-sqlite-rake-create-drop-charset-collation-tests"
 blocked-by: null
 closed-reason: null
 ---

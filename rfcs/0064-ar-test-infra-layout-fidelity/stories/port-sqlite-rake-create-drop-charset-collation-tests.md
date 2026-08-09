@@ -1,7 +1,7 @@
 ---
 title: "Port the 13 stubbed SqliteDBCreate/Drop/Charset/Collation tests in sqlite-rake.test.ts"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:30:48Z"
+assignee: "port-sqlite-rake-create-drop-charset-collation-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "InternalMetadata takes an adapter where Rails takes a pool, so the NullPool arm reads as enabled"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:30:48Z"
+assignee: "port-sqlite-rake-create-drop-charset-collation-tests"
 blocked-by: null
 closed-reason: null
 ---
