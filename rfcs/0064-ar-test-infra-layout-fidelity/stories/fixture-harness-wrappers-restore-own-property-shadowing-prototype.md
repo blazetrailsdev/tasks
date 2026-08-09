@@ -1,6 +1,6 @@
 ---
 title: "Fixture harness wrappers restore adapter methods as own properties, silently shadowing prototype spies"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
