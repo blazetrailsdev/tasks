@@ -2,7 +2,7 @@
 title: "mysql2 execute/executeMutation payloads still log driver-form binds"
 status: draft
 updated: 2026-08-01
-rfc: "0023-surfaced-deviations"
+rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
 deps-rfc: []
