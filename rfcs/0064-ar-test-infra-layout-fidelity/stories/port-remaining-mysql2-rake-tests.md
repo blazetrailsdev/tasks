@@ -1,6 +1,6 @@
 ---
 title: "Port the 24 skipped mysql2_rake_test.rb tests"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6278
 claim: "2026-08-09T13:15:56Z"
 assignee: "port-remaining-mysql2-rake-tests"
 blocked-by: null
