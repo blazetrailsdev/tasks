@@ -1,6 +1,6 @@
 ---
 title: "Date/DateTime carry no nth, so years past MAX_SAFE_INTEGER lose exactness"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null

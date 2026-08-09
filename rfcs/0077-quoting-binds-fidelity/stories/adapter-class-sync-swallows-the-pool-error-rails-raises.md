@@ -1,6 +1,6 @@
 ---
 title: "adapter-class-sync-swallows-the-pool-error-rails-raises"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
