@@ -1,6 +1,6 @@
 ---
 title: "parse-year-fragment-loses-exactness-past-max-safe-integer"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T21:39:14Z"
+assignee: "parse-year-fragment-loses-exactness-past-max-safe-integer"
 blocked-by: null
 closed-reason: null
 ---
