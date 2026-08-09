@@ -1,7 +1,7 @@
 ---
 title: "Base.where() has no zero-arg WhereChain overload, forcing ar-37 off its Ruby twin"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: base.ts:2419 declares the zero-arg WhereChain overload (static where<T>(this: T): WhereChain<Relation<InstanceType<T>>>), and scripts/parity/fixtures/ar-37 no longer exists."
 ---
 
 ## Context
