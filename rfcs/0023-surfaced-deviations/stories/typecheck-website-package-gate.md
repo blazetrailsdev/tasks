@@ -1,7 +1,7 @@
 ---
 title: "Type-check the packages/website tree in CI"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: CI/typecheck coverage for packages/website, which has no Rails counterpart."
 ---
 
 ## Context
