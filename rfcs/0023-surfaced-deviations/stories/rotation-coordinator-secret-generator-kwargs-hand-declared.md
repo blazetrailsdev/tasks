@@ -1,7 +1,7 @@
 ---
 title: "RotationCoordinator secret-generator kwargs are hand-declared, not reflected"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not convergent: normalize_options (rotation_coordinator.rb:65-73) reflects on Ruby keyword parameters, which TypeScript cannot do. The remaining ask — make a missing 'parameters' declaration loud — is API ergonomics for a trails-only workaround, not movement toward Rails."
 ---
 
 ## Context
