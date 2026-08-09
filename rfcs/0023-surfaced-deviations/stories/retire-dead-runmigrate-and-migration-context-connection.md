@@ -1,7 +1,7 @@
 ---
 title: "Retire trailties' uncalled runMigrate and MigrationContext's now-unread connection getter"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Half is dead-private-CLI-helper cleanup (trailties/src/commands/db.ts:390) with no Rails counterpart either way; the MigrationContext#connection half is explicitly owned by 0051-migration-schema-statements-fidelity/migrator-connection-resolves-per-call, which the story itself defers to."
 ---
 
 ## Context
