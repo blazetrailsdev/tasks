@@ -1,6 +1,6 @@
 ---
 title: "execQuery/execInsert/select bypass the adapter's internalExecQuery override"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:19:19Z"
+assignee: "reset-column-information-leaves-sync-readers-cold"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Converge the vestigial PostgreSQL performQuery port onto the live primitive"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:19:19Z"
+assignee: "reset-column-information-leaves-sync-readers-cold"
 blocked-by: null
 closed-reason: null
 ---
