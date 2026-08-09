@@ -1,7 +1,7 @@
 ---
 title: "Dumper emits FK column:/primaryKey: unconditionally; Rails gates both"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: schema-dumper.ts:1065-1073 now gates column: on fk.column !== inferredColumn and primaryKey: on an isCustomPrimaryKey check, matching schema_dumper.rb:324-330."
 ---
 
 ## Context
