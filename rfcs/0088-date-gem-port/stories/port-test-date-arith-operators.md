@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_arith.rb operators + prev_* (12 tests)"
-status: claimed
+status: ready
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: "2026-08-09T23:26:04Z"
-assignee: "exclude-test-memsize-from-the-date-test-population"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
