@@ -1,7 +1,7 @@
 ---
 title: "apply-pending-encryptions-hand-rolled-cow-vs-4981-overlay"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the hand-rolled _attributeDefinitions copy-on-write fork is gone from applyPendingEncryptions (packages/activerecord/src/encryption.ts:102-133 now only re-runs validateColumnSize and installs the frozen-encryption validator; the docblock at :97-98 records that the eager re-wrap was retired)."
 ---
 
 ## Context
