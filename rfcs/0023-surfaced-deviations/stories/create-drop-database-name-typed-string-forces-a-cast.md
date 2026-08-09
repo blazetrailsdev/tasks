@@ -1,7 +1,7 @@
 ---
 title: "createDatabase/dropDatabase typed string forces an as-string cast where Rails passes nil through"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: it only removes two TypeScript 'as string' casts; the story states runtime behavior already matches postgresql_database_tasks.rb:22,27 exactly."
 ---
 
 ## Context
