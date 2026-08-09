@@ -2,7 +2,7 @@
 title: "call-args.ts normalizes and compares Ruby/TS call arguments"
 status: draft
 updated: 2026-08-09
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-argument-parity"
 cluster: api-compare
 packages: []
 deps: ["ruby-extractor-emit-call-arguments", "ts-extractor-emit-call-arguments"]

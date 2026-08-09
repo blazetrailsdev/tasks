@@ -63,10 +63,12 @@ body calls `M`, does the TS body call `M`? Everything else is invisible:
 | Wrong values / literals                                | blind       | `SchemaCreation typeToSql uppercases native type names`    |
 
 The "wrong values / literals" row is now addressed by a separate dimension:
-RFC 0025 `## Call-argument fidelity` (spike, 2026-08-08) measured 77% genuine
-divergence over 102 hand-classified rows and recommends a narrowed
-`api:calls:args` gate over **its own** baseline tree — deliberately not folded
-into `call-mismatches-exclude`, whose row count is this RFC's debt metric.
+RFC `call-argument-parity` (spiked 2026-08-08) measured 77% genuine divergence
+over 102 hand-classified rows and charters a narrowed `api:calls:args` gate
+over **its own** baseline tree — deliberately not folded into
+`call-mismatches-exclude`, whose row count is this RFC's debt metric. Its
+headline finding is filed here as
+`converge-arel-visitor-helper-collector-parameter-position`.
 | Ordering / state / memoization | blind | `Migrator loads the migration outside the rescue` |
 | Structural / class-shape | blind | `Split trails' merged Migrator into MigrationContext + Migrator` |
 | Type-level enforcement | blind | `schema-quoter-host-contract-not-compile-enforced` |

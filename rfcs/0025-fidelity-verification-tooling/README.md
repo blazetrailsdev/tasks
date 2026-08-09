@@ -3,7 +3,7 @@ rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
 status: postponed
 created: 2026-06-12
-updated: 2026-08-08
+updated: 2026-08-09
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -96,215 +96,23 @@ baselines follow `eslint/require-canonical-schema-exclude.json`.
   `deprecator`-wrapped Rails methods; rule requires `@deprecated` JSDoc on
   the TS counterpart (autofixable, like rails-private-jsdoc).
 
-## Call-argument fidelity (`api:calls:args`) — spike findings, 2026-08-08
+## Call-argument fidelity — moved out
 
-Investigation only; no gate was built. The question: `api:calls`
-(`scripts/api-compare/lint-call-mismatches.ts`) compares the **set of call
-names** a Rails body makes against its port's, and RFC 0084's own defect-shape
-table lists "wrong values / literals" as **blind**. A port can call `where`
-where Rails calls `where`, pass a completely different argument list, and the
-gate stays green. Can a fourth dimension — call **arguments** — be extracted and
-compared at acceptable signal-to-noise?
+A 2026-08-08 spike asked whether a call-**argument** dimension could join
+`api:compare`: compare the arguments each body passes, not just the set of call
+names. The answer was yes (77% genuine divergence over 102 hand-classified
+rows), and it is large enough to be its own campaign — seven stories, ~1,050
+LOC.
 
-**Verdict: yes, ship a narrowed version.** Measured signal is 77% genuine
-divergence over 102 hand-classified rows, nowhere near the >90%-noise NO
-threshold. The dimension also finds a defect class nothing else in the
-toolchain can see (below).
+It now lives in **RFC `call-argument-parity`**, which carries the full spike
+write-up: extractor feasibility, normalization rules, measured populations, and
+the ratchet shape. It was moved out of this RFC because this one is
+`postponed`, and `ready()` (`cli.ts:425`) excludes stories under any non-active
+RFC — parking the campaign here made all seven unreachable.
 
-### 1. Extractor feasibility
-
-**Ruby — yes.** `walk_for_calls` (`extract-ruby-api.rb:2291`) already visits
-every `:fcall` / `:vcall` / `:call` / `:command` / `:command_call` / `:super`
-node and discards everything but the name. The argument node is a sibling
-already in hand at each of those sites: `node[2]` for `:command` and
-`:method_add_arg`, `node[4]` for `:command_call`, `node[1]` for `:super`. A
-Ripper-only prototype emitted argument lists for all of them.
-
-Extractable, with fidelity:
-
-| Argument form                              | Extractable                         | Descriptor                                                                               |
-| ------------------------------------------ | ----------------------------------- | ---------------------------------------------------------------------------------------- |
-| Bare identifier / ivar (`o`, `@collector`) | yes                                 | `id:<name>`                                                                              |
-| Numeric / string / boolean / nil literal   | yes                                 | `num:` / `str:` / `bool:` / `nil`                                                        |
-| Symbol (`:dump`)                           | yes                                 | `sym:<name>`                                                                             |
-| Constant (`Nodes::Grouping`)               | yes                                 | `const:<short>`                                                                          |
-| Nested call (`o.relation`, `foo(x)`)       | yes, name only                      | `call:<name>`                                                                            |
-| Keyword args / trailing hash               | yes, keys + value descriptors       | `kwargs{k=<desc>,…}`                                                                     |
-| `new` expression                           | yes                                 | `call:constructor` (`new Foo()` already credits `constructor`, `extract-ts-api.ts:2698`) |
-| Array / hash literal contents              | **no** (opaque)                     | `array` / `hash` — must skip                                                             |
-| String interpolation                       | **no**                              | `str-interp` — must skip                                                                 |
-| Splat / double-splat / block-pass          | **no** (arity is unknown)           | flag and skip the site                                                                   |
-| Block (`do…end`, `&blk`)                   | **no**                              | flag; compare the non-block args only                                                    |
-| Binary / unary / ternary expressions       | **no** (shape is language-specific) | skip                                                                                     |
-
-Two hard Ripper limits, both structural:
-
-- **Ripper cannot distinguish a local-variable read from a zero-arg self-send.**
-  `type_cast_for_database(name, value)` — `name` may be a local or a reader.
-  The descriptors `id:x` and `call:x` must therefore collapse into one bucket
-  (`ref:x`) on both sides. This is the same information loss `inert_receiver?`
-  (`extract-ruby-api.rb:2280-2288`) already works around for the weak-call set.
-- **Local aliasing is invisible.** `attr, values = o.left, o.right` then
-  `visit(attr, collector)` reads as `ref:attr` where the port's
-  `visit(node.left, collector)` reads as `ref:left`. Confirmed equivalents that
-  cost real rows; see the noise bucket.
-
-**TypeScript — yes, and easier.** `collectCalls` (`extract-ts-api.ts:2698`)
-already walks `CallExpression` / `NewExpression` / `PropertyAccessExpression`
-and calls `call.arguments.forEach(visit)`; the arguments are on the node.
-Object literals give kwargs keys directly, `SpreadElement` gives the splat
-flag, arrow/function expressions give the block flag.
-
-One TS-side subtlety: `collectCalls` credits a bare property **read**
-(`this.joinsValues`) as a call, deliberately, because Ruby has no field access.
-Those are not call sites and carry no argument list. The args dimension must
-key off syntactic call sites only, and treat a name that exists in the call set
-purely via a property read as "no comparable TS site" rather than as a
-zero-argument call.
-
-### 2. Normalization rules
-
-Normalizes (same pipeline as `options-keys.ts:24` `normalizeRubyKey` and
-`literals.ts:105` `compareDefaults`, i.e. `snakeToCamel`):
-
-- Identifiers: `id:join_name` → `ref:joinName`.
-- Nested call names: `call:value_for_database` → `ref:valueForDatabase`;
-  Ruby `new` → `constructor`.
-- Symbols: `sym:inverse_of` → `ref:inverseOf`, and the colon-kept spelling
-  `":inverse_of"` (CLAUDE.md "Symbols vs strings") must compare equal to the
-  bare one — a port that keeps the colon is correct, not divergent.
-- Identifier-shaped **strings**: `"value_before_type_cast"` → `valueBeforeTypeCast`.
-  Only strings matching `/^[a-z][A-Za-z0-9_]*$/` normalize; an SQL fragment
-  (`" GROUP BY "`) must compare byte-for-byte or the dimension loses its
-  sharpest finding.
-- `id:` and `call:` collapse to one `ref:` bucket (Ripper limit, above).
-
-Compares structurally: argument **count**, **order**, and each descriptor.
-Literal values compare by value, reusing `literals.ts` `normalizeLiteral`
-(numeric underscores, `nil`↔`null`/`undefined`, escape canonicalization).
-
-Ignored — no cross-language agreement is possible:
-
-- Sites carrying a splat, double-splat or block-pass on either side.
-- Any argument list containing an opaque descriptor (`?`, `array`, `hash`,
-  `str-interp`, `binop:`, `unary`, `ternary`) — including one nested inside a
-  `kwargs{}` descriptor. **Leaking nested `?` was 8 of 17 noise rows in the
-  first activerecord sample**; recursing the check removed 94 of 604 rows
-  outright.
-- `super` (the module-mixin port structurally drops it) and every
-  `NO_JS_CALL_FORM` name (`compare.ts:195`) plus the Enumerable/Object idiom
-  denylist, exactly as the call-set gate excludes them.
-- A leading `this`-mixin receiver argument the port adds
-  (`deleteThroughRecords(this, records)` for Rails
-  `delete_through_records(records)`, `reflectOnAggregation(Klass, name)`) —
-  that is the settled `this`-typed-function idiom, not a divergence.
-
-### 3. Signal-to-noise — measured
-
-Prototype: a Ripper walker plus a `typescript` AST walker emitting ordered call
-sites with argument descriptors, paired through the existing name-matched pairs
-in `output/call-skeletons.json`.
-
-| Package      | Matched pairs resolved | Comparable arg-bearing Ruby sites |     Match | **Flag** |
-| ------------ | ---------------------: | --------------------------------: | --------: | -------: |
-| arel         |                    301 |                               302 | 232 (77%) |   **70** |
-| activerecord |                  2,279 |                             1,294 | 784 (61%) |  **510** |
-
-Hand classification — arel is the **full** population (n=70), activerecord a
-seeded random sample (n=40, of which 8 were eliminated by the nested-`?` fix,
-leaving n=32). Combined n=102, well above the n≥30 bar.
-
-| Bucket                              | arel (n=70) | activerecord (n=32) | Combined (n=102) |
-| ----------------------------------- | ----------: | ------------------: | ---------------: |
-| (a) genuine divergence worth fixing |    57 (81%) |            22 (69%) |     **79 (77%)** |
-| (b) confirmed equivalent            |      6 (9%) |              1 (3%) |           7 (7%) |
-| (c) tooling noise                   |     7 (10%) |             9 (28%) |         16 (16%) |
-
-The genuine bucket splits into three sub-classes:
-
-- **a1 — argument order / dropped defaults (33% of arel rows).** The headline
-  finding, and the reason to build this. trails moved `collector` to the **last**
-  parameter across the entire arel visitor-helper family: Rails
-  `inject_join(list, collector, join_str)` (`to_sql.rb:897`) is
-  `injectJoin(nodes, connector, collector)` (`to-sql.ts:654`); likewise
-  `collect_nodes_for` (`:179`), `infix_value` (`:957`),
-  `infix_value_with_paren` (`:963`), `grouping_parentheses` (`:981`). 23 call
-  sites. `arity.ts` cannot see it (the counts match), `api:compare` cannot see
-  it (the names match), and `api:calls` cannot see it (the calls are made).
-  This is a direct CLAUDE.md violation ("Same parameter _order_ and defaults")
-  that has been invisible to every gate in the repo.
-- **a2 — local/parameter identifier renamed away from Rails (33% arel / 31% AR).**
-  `o`→`node`, `x`→`n`, `v`→`h`, `join_name`→`tbl`, `values`→`row`,
-  `exprs`→`filtered`, `scope_for_association`→`sfa`. Also a CLAUDE.md
-  violation ("A local or parameter keeps the Rails identifier"), but a
-  _different_ dimension that merely surfaces here. High volume, low individual
-  severity.
-- **a3 — invented helper or conversion at the call site (16% arel / 13% AR).**
-  Rails `visit o.escape, collector` (`to_sql.rb:485-495`) became
-  `this.appendEscape(node.escape, collector)` (`to-sql.ts:1044`) — an extracted
-  helper Rails does not have. `quoteTableName(rubyToS(name))` inserts a
-  conversion Rails' `quote_table_name(name)` does not do. `UnaryOperation`
-  declares `readonly operand` (`unary-operation.ts:19`) shadowing Rails'
-  `Unary#expr` (`unary.rb:6`), and the visitor reads `node.operand` where Rails
-  reads `o.expr`. Kwarg flattened to positional: Rails
-  `assert_valid_value(object, action: :dump)` → `(object, "dump")`.
-
-Residual noise (16%), after the nested-`?` fix and the mixin-receiver rule:
-Ruby local aliasing (above), block-variable identity through a restructured
-loop, dynamic `send`, and hoisted temporaries (`add_to_target(build_record(…))`
-vs a TS local). All are false-positive-shaped and belong in the baseline with a
-reason, not in a normalization rule.
-
-### 4. Recommendation, shape and cost
-
-**Ship it, narrowed.** Two row classes in one artifact:
-
-- `shape` rows — argument count, order, literal values, kwarg keys (a1 + a3).
-  **Gate these.** ~45% of flagged rows; this is the dimension nothing else
-  measures.
-- `naming` rows — argument lists that differ only in a `ref:` identifier
-  spelling (a2). **Report-only at first.** They are real, but they are the
-  local/parameter-identifier dimension, they are ~33% of the population, and
-  gating them on day one buys a ~500-row baseline for a burndown that wants its
-  own RFC.
-
-Ratchet shape — **a separate baseline tree and a separate script**, not a fold
-into the existing one:
-
-- `scripts/api-compare/call-mismatches-args-exclude/`, sharded per file like the
-  existing tree, keyed `package + tsFile + rubyName + call + rubyArgs`. It
-  cannot fold into `call-mismatches-exclude`: that key has no argument
-  component, and RFC 0084 measures its **row count** as the debt metric —
-  mixing a second dimension in corrupts that measurement outright.
-- A `pnpm api:calls:args` script (alias `parity:api:calls:args`) plus its own CI
-  step, mirroring `lint-call-mismatches.ts`: only-shrink, regenerate the
-  artifact in the gate, stale-row arm, partial-scope rejection.
-- Advisory-first, per this RFC's own rollout rule: land the artifact and a
-  `--report` mode with no gate, seed the baseline in a follow-up PR on `main`,
-  then flip to gating.
-
-Cost — six stories, each inside the PR LOC ceiling:
-
-| Story                                | Scope                                                                       |      ~LOC |
-| ------------------------------------ | --------------------------------------------------------------------------- | --------: |
-| `ruby-extractor-emit-call-arguments` | `walk_for_calls` emits `callArgs`; extractor-schema + shared-cache key bump |      ~200 |
-| `ts-extractor-emit-call-arguments`   | `collectCalls` emits `callArgs`; property-reads excluded                    |      ~170 |
-| `call-args-normalize-and-compare`    | new `call-args.ts` + tests (all rules in §2)                                |      ~230 |
-| `call-args-artifact-and-report`      | `compare.ts` wiring, `output/call-arg-mismatches.json`, `--report`          |      ~150 |
-| `call-args-ratchet-and-ci-step`      | `lint-call-args.ts` clone + scripts + CI step + docs                        |      ~300 |
-| `call-args-baseline-seed`            | generated baseline tree, `main`-only                                        | generated |
-
-Total ~1,050 LOC of hand-written code. Cache invalidation differs per side and
-is easy to get backwards: `extractor-schema.ts` governs the **TS** extractor
-cache only (`EXTRACTOR_SOURCES`, `extractor-schema.ts:91`), so `callArgs` is
-registered in `EXTRACTOR_OUTPUT_FIELDS` by the **TS** story alone; the Ruby
-manifest keys on the content hash of `extract-ruby-api.rb` itself
-(`orchestrate.ts:88-99`) and self-invalidates. One registration, one story — the
-two extractor stories share no edit and stay parallel-safe.
-
-**Do not** reuse `arity.ts`: that dimension checks `def` signatures
-(declaration-site parameter counts), not call sites, and its
-`arity-exclude.json` is keyed by method, not by call.
+The dimension is adjacent to this RFC's `constants-defaults-parity` and
+`options-kwargs-key-parity` stories and reuses their machinery
+(`literals.ts`, `options-keys.ts`), but does not depend on them.
 
 ## Alternatives considered
 
@@ -341,6 +149,8 @@ two extractor stories share no edit and stay parallel-safe.
 ## Changelog
 
 - 2026-06-12: initial RFC
+- 2026-08-09: call-argument fidelity spike + its seven stories moved out to
+  RFC `call-argument-parity`; a pointer remains
 - 2026-08-08: call-argument fidelity spike — verdict, measurements and six
   implementation stories added as `## Call-argument fidelity`
 - 2026-06-12: descope to five stories — body-shape-fingerprinting,

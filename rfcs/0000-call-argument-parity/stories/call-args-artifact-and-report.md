@@ -2,7 +2,7 @@
 title: "compare.ts writes the advisory call-argument mismatch artifact"
 status: blocked
 updated: 2026-08-09
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-argument-parity"
 cluster: api-compare
 packages: []
 deps: ["call-args-normalize-and-compare"]
