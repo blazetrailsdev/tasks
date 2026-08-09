@@ -1,7 +1,7 @@
 ---
 title: "Drop the host-less SchemaCreation path and its native-type fallback table"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: no name-only SchemaCreation construction remains in src — abstract/schema-statements.ts:330 threads the adapter (new SchemaCreation(this)), and the sqlite3 new SchemaCreation('sqlite') site is gone; NATIVE_DATABASE_TYPES_BY_ADAPTER survives only as a test seam, which this story explicitly allows."
 ---
 
 ## Context
