@@ -1,6 +1,6 @@
 ---
 title: "Retire the seven quoting dispatch* helpers onto Rails' plain self-send"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:49:23Z"
+assignee: "retire-quoting-dispatch-helpers-onto-self-send"
 blocked-by: null
 closed-reason: null
 ---
