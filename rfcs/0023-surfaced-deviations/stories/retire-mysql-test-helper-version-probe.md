@@ -1,7 +1,7 @@
 ---
 title: "Retire the MySQL test-helper module-load VERSION() probe in favour of adapter predicates"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: a trails test-helper module-load probe. It touches no ported code path and moves no ported behavior toward Rails."
 ---
 
 ## Context
