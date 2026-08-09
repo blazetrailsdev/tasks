@@ -1,7 +1,7 @@
 ---
 title: "Table proxy forwarders narrow Rails' *args/**options shapes"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Story states it explicitly: every one is a type-level narrowing, not a runtime bug — values do reach @base. No divergence from schema_definitions.rb behaviour."
 ---
 
 ## Context
