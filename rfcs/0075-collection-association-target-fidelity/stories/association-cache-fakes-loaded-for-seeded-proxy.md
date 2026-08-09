@@ -1,7 +1,7 @@
 ---
 title: "association() wrapper reports loaded? for a seeded-but-unloaded collection proxy"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: the wrapper's loaded flag is no longer synthesized — CollectionAssociation.loaded forwards to the proxy's _sharedLoaded (collection-association.ts:110-117) and syncAssociationInstance's collection arm only calls loadedBang() when proxy.loaded === true (instance-methods.ts:57-59), never off _associationCache's target.length>0 arm."
 ---
 
 ## Context
