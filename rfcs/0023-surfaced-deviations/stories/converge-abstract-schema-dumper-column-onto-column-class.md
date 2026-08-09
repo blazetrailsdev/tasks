@@ -1,7 +1,7 @@
 ---
 title: "converge-abstract-schema-dumper-column-onto-column-class"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Type-level only: schema-dumper.ts:27's local Column interface describes the same fields the ported Column class carries; dumped output already matches Rails. No behavioural divergence."
 ---
 
 ## Context
