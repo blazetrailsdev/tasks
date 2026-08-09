@@ -1,6 +1,6 @@
 ---
 title: "Deprecation's :log behavior selects Rails.logger before the stderr fallback"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6282
 claim: "2026-08-09T15:40:10Z"
 assignee: "mysql-schema-creation-quoted-columns-reimplements-the-delegated-decoration"
 blocked-by: null
