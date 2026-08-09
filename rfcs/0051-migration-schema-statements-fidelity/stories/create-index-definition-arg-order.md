@@ -2,7 +2,7 @@
 title: "CreateIndexDefinition transposes algorithm/ifNotExists vs the Rails struct"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

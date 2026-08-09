@@ -2,7 +2,7 @@
 title: "supports.ts default_expression is version-blind; Rails gates on MySQL >= 8.0.13 / MariaDB >= 10.2.1"
 status: draft
 updated: 2026-07-29
-rfc: "0023-surfaced-deviations"
+rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
