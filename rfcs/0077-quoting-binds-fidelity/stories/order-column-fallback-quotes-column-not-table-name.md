@@ -1,6 +1,6 @@
 ---
 title: "order_column fallback quotes via quote_column_name, Rails uses quote_table_name"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 6295
 claim: "2026-08-09T19:39:19Z"
 assignee: "order-column-fallback-quotes-column-not-table-name"
 blocked-by: null
