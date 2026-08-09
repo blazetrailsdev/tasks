@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLDatabaseTasks#purge drops Rails' clear_active_connections!(:all)"
-status: draft
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T13:15:56Z"
+assignee: "port-remaining-mysql2-rake-tests"
 blocked-by: null
 closed-reason: null
 ---

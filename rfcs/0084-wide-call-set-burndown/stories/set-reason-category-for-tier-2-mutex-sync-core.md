@@ -1,6 +1,6 @@
 ---
 title: "Add the Tier 2 mutex reason category (synchronous core, post-hoc drains) and apply it"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T13:15:56Z"
+assignee: "port-remaining-mysql2-rake-tests"
 blocked-by: null
 closed-reason: null
 ---
