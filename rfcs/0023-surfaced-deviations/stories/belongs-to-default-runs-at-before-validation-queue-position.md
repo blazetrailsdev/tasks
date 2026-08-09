@@ -36,13 +36,21 @@ at its queue position. trails hoists the awaited default ahead of the entire
 before/after `belongsTo` cannot observe Rails' relative ordering with the
 default (it always sees the post-default state on the save path).
 
-Root cause: the default block may be async (`() => Developer.first()`) and
-trails' validation callback chain is strictly synchronous — `runAllCallbacks(...,
-"validation", ..., { strict: "sync" })` throws on any Promise (the ratified
-sync-only-validations architecture; see `validations.ts#isValid`). An awaited
-default cannot run at its queue position inside the sync chain, so it is hoisted.
-Same governing constraint as the documented ORDERING DEVIATION in
-`persistence.ts` and the sibling story `async-before-validation-sync-chain`.
+Original root cause: the default block may be async (`() => Developer.first()`)
+and trails' validation callback chain was strictly synchronous, so an awaited
+default could not run at its queue position and was hoisted instead.
+
+**That premise is stale as of RFC 0063 (validations made async).** On
+`origin/main` today `isValid()` returns `Promise<boolean>`
+(`packages/activemodel/src/validations.ts:123`) and `runValidationsBang` awaits
+`this._runValidateCallbacks()` (`validations.ts:306-309`) — the validation
+callback chain accepts a Promise, so there is no longer a language-level
+obstacle to running the default at its registered `before_validation` position.
+The hoist itself is still live (`Base#_runBelongsToDefaults`,
+`packages/activerecord/src/base.ts:3848`, invoked from
+`packages/activerecord/src/persistence.ts:748-750` with the
+`_belongsToDefaultsApplied` sentinel at `:750,:758`), which is why this story
+stays open — but it is now ordinary convergence work, not architecture-blocked.
 
 ## Acceptance criteria
 
@@ -52,7 +60,8 @@ Same governing constraint as the documented ORDERING DEVIATION in
   before the default; one registered after runs after.
 - Remove the hoisted `_runBelongsToDefaults` pre-pass and the
   `_belongsToDefaultsApplied` sentinel once the default runs in-queue.
-- BLOCKED-ON-ARCHITECTURE: requires the strictly-synchronous validation chain to
-  be revisited (an async-capable validation callback path). Schedule together
-  with `async-before-validation-sync-chain` and the sync-only reconsideration;
-  this is a no-op until that decision changes. Do not ratify the hoist.
+- Do not ratify the hoist. (The former BLOCKED-ON-ARCHITECTURE caveat — "requires
+  the strictly-synchronous validation chain to be revisited" — no longer applies:
+  RFC 0063 made the validation chain async. Check the state of
+  `async-before-validation-sync-chain` before starting, but this story does not
+  depend on it.)
