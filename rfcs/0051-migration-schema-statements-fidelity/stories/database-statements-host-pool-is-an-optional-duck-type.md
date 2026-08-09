@@ -1,6 +1,6 @@
 ---
 title: "DatabaseStatementsHost.pool is an optional two-member duck type, not ConnectionPool|NullPool"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6268
 claim: "2026-08-09T01:00:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
