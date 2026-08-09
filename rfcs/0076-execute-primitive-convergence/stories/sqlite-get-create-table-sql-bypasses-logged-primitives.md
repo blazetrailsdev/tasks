@@ -1,6 +1,6 @@
 ---
 title: "Route sqlite3 _getCreateTableSql callers through the logged query primitives"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T19:39:19Z"
+assignee: "order-column-fallback-quotes-column-not-table-name"
 blocked-by: null
 closed-reason: null
 ---
