@@ -1,7 +1,7 @@
 ---
 title: "Remove dead per-adapter Quoting interfaces from mysql/sqlite3 quoting"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T16:29:33Z"
+assignee: "converge-execute-batch-through-raw-execute"
 blocked-by: null
 closed-reason: null
 ---
