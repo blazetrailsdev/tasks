@@ -1,7 +1,7 @@
 ---
 title: "assert_respond_to for the nested-attributes writer is ported as a not-toThrow assignment"
-status: draft
-updated: 2026-08-06
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: nested-attributes.test.ts:404-407, 640-643, 873-880 are now typeof(...)==='function' respond-to checks, not .not.toThrow()."
 ---
 
 ## Context
