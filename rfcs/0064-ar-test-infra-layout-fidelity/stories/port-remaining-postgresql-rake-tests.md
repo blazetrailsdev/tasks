@@ -1,6 +1,6 @@
 ---
 title: "Port the 33 skipped postgresql_rake_test.rb tests"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6296
 claim: "2026-08-09T19:47:23Z"
 assignee: "port-remaining-postgresql-rake-tests"
 blocked-by: null
