@@ -1,6 +1,6 @@
 ---
 title: "Port test-compare/run.sh to a single-process orchestrate.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6266
 claim: "2026-08-09T00:22:09Z"
 assignee: "test-compare-orchestrator"
 blocked-by: null
