@@ -1,6 +1,6 @@
 ---
 title: "PG renders int8 as a String, forcing a Number() coercion Rails does not have"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata count project NamedFunction(COUNT) with an invented alias, not Arel::Nodes::Count"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
