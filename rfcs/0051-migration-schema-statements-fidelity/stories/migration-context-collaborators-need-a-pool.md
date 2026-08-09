@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext's optional collaborators and SchemaMigration#connection are the adapter-vs-pool gap"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps:
 deps-rfc: []
 est-loc: 120
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:00:45Z"
+assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
 closed-reason: null
 ---

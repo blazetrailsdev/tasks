@@ -1,7 +1,7 @@
 ---
 title: "methodMissingProxy visibility reads the Ruby private-method manifest, not the underscore heuristic"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:00:45Z"
+assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
 closed-reason: null
 ---
