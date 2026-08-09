@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_strptime.rb's Date._strptime fragment tables, including the fail table"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate — covered by port-test-date-strptime-frags."
 ---
 
 ## Context
