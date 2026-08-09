@@ -1,6 +1,6 @@
 ---
 title: "converge-check-constraint-name-fetch-semantics"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:30:47Z"
+assignee: "converge-check-constraint-name-fetch-semantics"
 blocked-by: null
 closed-reason: null
 ---

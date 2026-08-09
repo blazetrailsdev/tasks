@@ -1,7 +1,7 @@
 ---
 title: "SQLiteDatabaseTasks#establish_connection drops Rails' trailing connection.connect!"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:30:47Z"
+assignee: "converge-check-constraint-name-fetch-semantics"
 blocked-by: null
 closed-reason: null
 ---

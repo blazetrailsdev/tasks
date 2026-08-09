@@ -1,7 +1,7 @@
 ---
 title: "Add a --set-reason bulk mode to lint-call-mismatches.ts"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:30:47Z"
+assignee: "converge-check-constraint-name-fetch-semantics"
 blocked-by: null
 closed-reason: null
 ---
