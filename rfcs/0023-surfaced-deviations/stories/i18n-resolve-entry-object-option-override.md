@@ -1,7 +1,7 @@
 ---
 title: "i18n resolveEntry ignores the options[:object] proc-subject override"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: packages/i18n/src/backend/base.ts:537-546 resolves the proc subject as options.object ?? object and deletes the key, mirroring base.rb:150-172."
 ---
 
 ## Context
