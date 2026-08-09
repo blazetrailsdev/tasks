@@ -1,7 +1,7 @@
 ---
 title: "Delete dropAllTables — no callers remain outside its own test"
-status: ready
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise invalidated: dropAllTables is no longer dead — test-setup-dy.ts:44,87 imports and calls it as the boot full-load arm for non-owned databases (the else branch of the canonical-schema-stamp fast path). Deleting it would break worker boot; the story's grep evidence predates that wiring."
 ---
 
 ## Context
