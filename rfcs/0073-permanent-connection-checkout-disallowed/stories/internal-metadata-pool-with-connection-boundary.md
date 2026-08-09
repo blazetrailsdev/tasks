@@ -1,7 +1,7 @@
 ---
 title: "InternalMetadata takes an adapter, not a pool — public methods never lease a connection"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: internal-metadata.ts:74 constructor takes a ConnectionPool|NullPool, public methods go through _withConnection (pool.withConnection), tableExists reads pool.schemaCache.dataSourceExists (:227-233), and every construction site now passes a pool (connection-pool.ts:582, migration.test.ts:205, ...)."
 ---
 
 ## Context
