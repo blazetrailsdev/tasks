@@ -1,7 +1,7 @@
 ---
 title: "claim: clear stale blocked-by once all deps are done"
-status: draft
-updated: 2026-07-24
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: a tasks-CLI status-transition ergonomics bug, nothing to do with the Rails port."
 ---
 
 ## Context
