@@ -1,6 +1,6 @@
 ---
 title: "Add the Tier 2 mutex reason category (synchronous core, post-hoc drains) and apply it"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
