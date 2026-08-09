@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_new.rb's civil/commercial/weeknum/nth_kday constructors and today/now"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate — covered by port-test-date-new-jd-ordinal-civil + port-test-date-new-commercial-and-clock."
 ---
 
 ## Context
