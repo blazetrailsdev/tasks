@@ -1,7 +1,7 @@
 ---
 title: "oo-addtotarget-or-in-distinct-value"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: CollectionAssociation#addToTarget now computes shouldReplace = replace || associationScope().distinctValue (collection-association.ts:805-807) and threads it into both replaceOnTarget and replaceOnTargetAsync, mirroring collection_association.rb:281-283."
 ---
 
 ## Context
