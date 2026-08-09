@@ -2,7 +2,7 @@
 title: "order_column fallback quotes via quote_column_name, Rails uses quote_table_name"
 status: draft
 updated: 2026-08-03
-rfc: "0023-surfaced-deviations"
+rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
