@@ -2,7 +2,7 @@
 title: "Cast the STI type value through base_class on the new/attributes path"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
