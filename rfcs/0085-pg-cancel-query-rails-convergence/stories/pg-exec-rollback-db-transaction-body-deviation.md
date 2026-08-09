@@ -1,6 +1,6 @@
 ---
 title: "Audit the invented guard/discard/finally in execRollbackDbTransaction"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6274
 claim: "2026-08-09T02:15:49Z"
 assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 blocked-by: null
