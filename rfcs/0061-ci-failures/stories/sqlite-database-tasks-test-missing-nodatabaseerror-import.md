@@ -1,6 +1,6 @@
 ---
 title: "sqlite-database-tasks-test-missing-nodatabaseerror-import"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0061-ci-failures"
 cluster: null
