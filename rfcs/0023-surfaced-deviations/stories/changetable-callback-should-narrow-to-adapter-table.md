@@ -1,7 +1,7 @@
 ---
 title: "changeTable's callback type does not narrow to the adapter's Table, forcing casts at every call site"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: TypeScript variance ergonomics (removing 'as PgTable' / 't: any' casts at call sites). No behavioral divergence from change_table; Ruby has no type to converge."
 ---
 
 ## Context
