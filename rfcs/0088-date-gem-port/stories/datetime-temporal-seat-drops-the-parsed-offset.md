@@ -1,6 +1,6 @@
 ---
 title: "DateTime's Temporal seat drops the parsed offset, half of RFC 0088's mapping"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
