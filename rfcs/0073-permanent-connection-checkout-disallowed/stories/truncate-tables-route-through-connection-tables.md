@@ -46,7 +46,10 @@ Half converged since this was written. `database-tasks.ts:1530-1539`
 
 ```ts
 const handler = this.databaseAdapterFor(config);
-if (handler.truncateAll) { await handler.truncateAll(config); return; }
+if (handler.truncateAll) {
+  await handler.truncateAll(config);
+  return;
+}
 ```
 
 So the remaining work is only that `handler.truncateAll` short-circuit (Rails
