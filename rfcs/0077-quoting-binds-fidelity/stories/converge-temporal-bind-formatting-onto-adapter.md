@@ -1,6 +1,6 @@
 ---
 title: "Converge temporalToBindString bind paths onto adapter quoted_date/quoted_time"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

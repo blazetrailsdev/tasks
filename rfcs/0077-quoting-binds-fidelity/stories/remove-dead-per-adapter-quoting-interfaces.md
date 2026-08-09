@@ -1,6 +1,6 @@
 ---
 title: "Remove dead per-adapter Quoting interfaces from mysql/sqlite3 quoting"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
