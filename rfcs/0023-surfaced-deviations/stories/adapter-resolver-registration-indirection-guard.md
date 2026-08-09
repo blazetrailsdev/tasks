@@ -1,7 +1,7 @@
 ---
 title: "Adapter-resolver registration indirection throws a non-Rails Error"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Unreachable from any Rails caller by the story's own verification, and the resolver-slot indirection is the sanctioned zero-import-slot workaround for an ESM cycle (CLAUDE.md 'Call-time constant resolution') — a genuine TS shortcoming, not convergible."
 ---
 
 ## Context
