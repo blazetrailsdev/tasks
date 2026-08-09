@@ -1,7 +1,7 @@
 ---
 title: "Dedupe order clauses by value equality, not JSON.stringify"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: dedupeOrderClauses now keys on a structural orderClauseKey per node type (query-methods.ts:602-629); the JSON.stringify dedup the story describes is gone."
 ---
 
 ## Context
