@@ -1,7 +1,7 @@
 ---
 title: "CommandRecorder#changeTable must resolve updateTableDefinition on every adapter"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: SchemaStatements#updateTableDefinition (connection-adapters/abstract/schema-statements.ts:1792) is mixed into AbstractAdapter and declared at abstract-adapter.ts:489, so CommandRecorder#changeTable resolves it on every adapter."
 ---
 
 ## Context
