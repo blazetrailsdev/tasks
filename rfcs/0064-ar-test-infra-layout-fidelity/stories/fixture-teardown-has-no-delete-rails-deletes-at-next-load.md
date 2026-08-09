@@ -1,6 +1,6 @@
 ---
 title: "Fixture teardown has no delete loop; the rows go at the next insert_fixtures_set"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6273
 claim: "2026-08-09T02:00:45Z"
 assignee: "fixture-teardown-has-no-delete-rails-deletes-at-next-load"
 blocked-by: null
