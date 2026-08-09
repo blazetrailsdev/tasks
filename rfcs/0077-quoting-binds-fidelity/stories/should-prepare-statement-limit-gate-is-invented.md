@@ -2,7 +2,7 @@
 title: "_shouldPrepare gates on statement_limit > 0; Rails gates only on prepared_statements"
 status: draft
 updated: 2026-08-04
-rfc: "0023-surfaced-deviations"
+rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
