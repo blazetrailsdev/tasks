@@ -1,6 +1,6 @@
 ---
 title: "CreateIndexDefinition transposes algorithm/ifNotExists vs the Rails struct"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: 6287
 claim: "2026-08-09T16:19:35Z"
 assignee: "converge-create-table-force-arm-to-rails-unconditional-drop-table"
 blocked-by: null
