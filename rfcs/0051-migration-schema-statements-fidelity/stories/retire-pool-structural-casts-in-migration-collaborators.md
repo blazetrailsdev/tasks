@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration/InternalMetadata cast away the NullPool arm to reach withConnection and schemaCache"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
