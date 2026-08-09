@@ -1,7 +1,7 @@
 ---
 title: "transaction-connection-optional-members-hide-adapter-drift"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: TransactionConnection is a TS interface with no Rails counterpart (Ruby ducks the adapter). Tightening its optional members is typing hygiene for test doubles; the defensive ?.() sites are a consequence, not a behavioral divergence from transaction.rb."
 ---
 
 ## Context
