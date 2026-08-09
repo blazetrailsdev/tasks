@@ -1,7 +1,7 @@
 ---
 title: "Resolve suffixed worktree branch names to story ids in the link flow"
-status: draft
-updated: 2026-07-20
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done and not a Rails-fidelity item: the /link skill already strips the worktree suffix before the lookup (~/.claude/skills/link/SKILL.md, `git branch --show-current | sed -E 's/-[0-9a-f]{4}$//'`) and resolves ids from the PR body's Closes-story lines first."
 ---
 
 ## Context
