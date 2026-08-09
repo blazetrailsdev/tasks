@@ -1,7 +1,7 @@
 ---
 title: "Relation scoping reads a global ScopeRegistry instead of model.scope_registry"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: Relation#scoping and #_execScope both read `this.model.scopeRegistry()` on today's main (packages/activerecord/src/relation.ts:6380, :6793), matching relation.rb:542/:554; the wide-exclude row is gone with the directory."
 ---
 
 ## Context
