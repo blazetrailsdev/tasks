@@ -1,6 +1,6 @@
 ---
 title: "Rails' MySQL adapter has no quote override; trails invents one"
-status: blocked
+status: ready
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-08-09T18:49:36Z"
-assignee: "datetime-constructor-fraction-bound-ignores-offset-and-start"
-blocked-by: "Blocked on its declared dependency dialect-quotestring-returns-literal-not-escape-only, which is in-progress on PR #6288. MySQL's quoteString (mysql/quoting.ts:86) still returns a FULL literal ('...') rather than Rails' escape-only quote_string (mysql/quoting.rb), so deleting the MySQL quote override today routes strings through abstract quote's `'${quoteString(v)}'` (abstract/quoting.ts:119) and double-quotes every string literal. The story's other half is already satisfied on main: the non-finite-Float arm is gone and the finding is recorded at mysql/quoting.ts:178-192 — Rails' MySQL sends Float::INFINITY through abstract quote's `when Numeric then value.to_s` (abstract/quoting.rb:82) with no guard. Unblock once #6288 lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
