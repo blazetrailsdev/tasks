@@ -1,6 +1,6 @@
 ---
 title: "DateTime's Temporal seat drops the parsed offset, half of RFC 0088's mapping"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T00:45:54Z"
+assignee: "date-state-julian-only-spellings-unbuildable"
 blocked-by: null
 closed-reason: null
 ---
