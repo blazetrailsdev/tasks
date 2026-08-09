@@ -2,7 +2,7 @@
 title: "TableDefinition#enum substitutes the enum name for the column type, bypassing enum_type validation"
 status: draft
 updated: 2026-07-30
-rfc: "0023-surfaced-deviations"
+rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
