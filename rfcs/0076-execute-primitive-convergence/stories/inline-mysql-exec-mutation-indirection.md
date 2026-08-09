@@ -1,6 +1,6 @@
 ---
 title: "Inline AbstractMysqlAdapter#_execMutation into direct execute calls"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
