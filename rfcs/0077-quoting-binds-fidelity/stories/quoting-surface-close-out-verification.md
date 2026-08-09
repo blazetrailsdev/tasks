@@ -1,6 +1,6 @@
 ---
 title: "Close-out: verify the quoting surface against Rails and set RFC 0077's done condition"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
