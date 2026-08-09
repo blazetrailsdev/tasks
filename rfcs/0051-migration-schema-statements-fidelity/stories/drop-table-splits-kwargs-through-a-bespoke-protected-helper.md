@@ -1,6 +1,6 @@
 ---
 title: "dropTable's kwargs split lives in a protected helper Rails has no counterpart for, and mysql2 duplicates it inline"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
