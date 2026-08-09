@@ -1,6 +1,6 @@
 ---
 title: "Deprecation#initialize takes positional (deprecationHorizon, gemName) with Rails' defaults"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
