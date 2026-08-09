@@ -1,6 +1,6 @@
 ---
 title: "converge mysql2 internalExecQuery onto the shared performQuery primitive"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
