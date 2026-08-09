@@ -1,7 +1,7 @@
 ---
 title: "Relative sqlite URL with query parameters skips root expansion"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: normalizeSqlitePaths (activerecord-cli/src/environment.ts) is a trails invention with no Rails counterpart; this is a gap in trails-only path expansion."
 ---
 
 ## Context
