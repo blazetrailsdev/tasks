@@ -1,6 +1,6 @@
 ---
 title: "Port the 33 skipped postgresql_rake_test.rb tests"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
