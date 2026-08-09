@@ -1,7 +1,7 @@
 ---
 title: "WhereClause#predicates_with_wrapped_sql_literals is public in trails, private in Rails"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a behavioral divergence from Rails: predicatesWithWrappedSqlLiterals (where-clause.ts:215) produces identical SQL; only TS visibility differs, and the deviation is already justified inline. Member visibility is not a Rails-fidelity axis api:compare scores."
 ---
 
 ## Context
