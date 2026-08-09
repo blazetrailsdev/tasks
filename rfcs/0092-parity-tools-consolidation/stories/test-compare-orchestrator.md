@@ -1,6 +1,6 @@
 ---
 title: "Port test-compare/run.sh to a single-process orchestrate.ts"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
