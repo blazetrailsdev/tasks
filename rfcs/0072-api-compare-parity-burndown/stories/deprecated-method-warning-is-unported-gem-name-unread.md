@@ -1,6 +1,6 @@
 ---
 title: "deprecated_method_warning is unported, so gemName/deprecationHorizon are never read"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
