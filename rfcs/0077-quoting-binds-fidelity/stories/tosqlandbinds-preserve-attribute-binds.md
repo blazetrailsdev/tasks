@@ -1,6 +1,6 @@
 ---
 title: "toSqlAndBinds: keep Attribute objects in binds until type_casted_binds"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
