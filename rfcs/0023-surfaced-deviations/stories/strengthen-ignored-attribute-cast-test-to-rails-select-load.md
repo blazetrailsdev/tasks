@@ -1,7 +1,7 @@
 ---
 title: "Strengthen 'ignored attribute cast type preferred' test to Rails' select(*) load + assertion"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: base.test.ts:1611-1619 now does AttributedDeveloper.where({id}).select('*').first() and asserts loaded.name === 'Developer: name', matching Rails."
 ---
 
 ## Context
