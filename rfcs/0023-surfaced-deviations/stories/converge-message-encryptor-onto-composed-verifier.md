@@ -1,7 +1,7 @@
 ---
 title: "converge-message-encryptor-onto-composed-verifier"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: message-encryptor.ts:90 composes MessageVerifier with NullSerializer and frames via joinParts/extractParts (:181,:195); the hand-rolled HMAC and '--' string surgery are gone."
 ---
 
 ## Context
