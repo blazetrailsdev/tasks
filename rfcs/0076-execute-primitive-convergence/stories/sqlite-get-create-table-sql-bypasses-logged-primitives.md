@@ -2,7 +2,7 @@
 title: "Route sqlite3 _getCreateTableSql callers through the logged query primitives"
 status: draft
 updated: 2026-08-03
-rfc: "0023-surfaced-deviations"
+rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
 deps-rfc: []
