@@ -1,7 +1,7 @@
 ---
 title: "Deviation: nested-attributes sync setter cannot raise RecordNotSaved at assignment"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Deviation record only — its own acceptance is 'no behaviour change'; both closure options were measured shut (RFC 0068) and the deviation is documented at detachDisplacedAtAssignment."
 ---
 
 ## Context
