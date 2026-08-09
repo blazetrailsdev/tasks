@@ -1,7 +1,7 @@
 ---
 title: "copyTableIndexes drops index order and mishandles expression indexes"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done on main: sqlite3-adapter.ts:2563-2591 gates the column rewrite on Array.isArray(idx.columns) and threads idx.orders into the emitted CREATE INDEX, matching sqlite3_adapter.rb:661,673."
 ---
 
 ## Context
