@@ -1,14 +1,13 @@
 ---
 title: "InternalMetadata takes an adapter where Rails takes a pool, so the NullPool arm reads as enabled"
 status: ready
-updated: 2026-08-08
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
   - migration-collaborator-call-sites-pass-a-pool
 deps-rfc: []
 est-loc: 200
-priority: 132
 pr: null
 claim: null
 assignee: null
