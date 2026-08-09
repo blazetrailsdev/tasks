@@ -1,7 +1,7 @@
 ---
 title: "Inline the _qi / _qt quoting shorthand into quoteColumnName / quoteTableName"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: no _qi/_qt forwarders or call sites remain on origin/main (git grep '_qi(|_qt(' over packages/ returns nothing; abstract-adapter.ts and abstract/schema-statements.ts spell quoteColumnName/quoteTableName inline)."
 ---
 
 ## Context
