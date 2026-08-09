@@ -1,7 +1,7 @@
 ---
 title: "Invalidate the bound schema reflection on index DDL"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Split cache is gone: adapter.schemaCache IS the BoundSchemaReflection on origin/main (abstract-adapter.ts:1547-1550), schemaCacheBound no longer exists anywhere in packages/, and addIndex/removeIndex clear that single object (abstract/schema-statements.ts:424,493). validations/uniqueness.ts tableIndexes now reads adapter.schemaCache with no raw-cache workaround (:358-361)."
 ---
 
 ## Context
