@@ -1,7 +1,7 @@
 ---
 title: "Merge the duplicated TestDefaultAutosaveAssociationOnAHasManyAssociationWithAcceptsNestedAttributes describe blocks"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: autosave-association.test.ts now has exactly one TestDefaultAutosaveAssociationOnAHasManyAssociationWithAcceptsNestedAttributes describe (grep -c = 1 on main)."
 ---
 
 ## Context
