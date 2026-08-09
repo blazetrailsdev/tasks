@@ -1,7 +1,7 @@
 ---
 title: "extractNamespace ignores @internal and hardcodes public visibility"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: an api-compare extractor bug (scripts/api-compare/extract-ts-api.ts:2329). Measurement tooling, not port convergence; belongs with the parity-tools RFCs if anywhere."
 ---
 
 # extractNamespace ignores @internal and hardcodes public visibility
