@@ -1,6 +1,6 @@
 ---
 title: "date-state-julian-only-spellings-unbuildable"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6267
 claim: "2026-08-09T00:45:54Z"
 assignee: "date-state-julian-only-spellings-unbuildable"
 blocked-by: null
