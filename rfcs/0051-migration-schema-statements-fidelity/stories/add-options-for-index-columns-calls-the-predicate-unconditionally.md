@@ -1,6 +1,6 @@
 ---
 title: "addOptionsForIndexColumns duck-type-probes supports_index_sort_order? instead of calling it"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
