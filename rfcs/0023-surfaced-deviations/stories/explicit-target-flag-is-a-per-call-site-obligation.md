@@ -1,7 +1,7 @@
 ---
 title: "_explicitTarget must be raised by hand at every singular seeding site"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: _explicitTarget (association.ts:76) has no Rails counterpart, and the ask is to make raising it robust by centralizing it — hardening a trails invention rather than removing it. Convergence here means deleting the flag so setInverseInstance is just inversed_from, not funnelling more sites into it."
 ---
 
 ## Context
