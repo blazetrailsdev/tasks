@@ -1,14 +1,13 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
 status: ready
-updated: 2026-08-08
+updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps:
   - port-activesupport-file-update-checker
 deps-rfc: []
 est-loc: 180
-priority: 170
 pr: null
 claim: null
 assignee: null
