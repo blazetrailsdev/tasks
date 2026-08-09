@@ -1,7 +1,7 @@
 ---
 title: "ProtectedParams#dup gives the copy an independent parameter store"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence worth carrying: a test-support stub whose dup-aliasing is unobservable to the ported suite (no vendored Rails test dups a ProtectedParams), and the sharing is precluded by the per-instance Proxy design."
 ---
 
 ## Context
