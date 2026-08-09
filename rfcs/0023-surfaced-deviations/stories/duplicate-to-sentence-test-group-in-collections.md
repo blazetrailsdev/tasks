@@ -1,7 +1,7 @@
 ---
 title: "duplicate-to-sentence-test-group-in-collections"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: test-file dedup hygiene. The Rails-mapped port in core-ext/array/conversions.test.ts is already correct (fixed by #6039); the leftover weaker group in collections.test.ts:596 changes no ported behavior."
 ---
 
 ## Context
