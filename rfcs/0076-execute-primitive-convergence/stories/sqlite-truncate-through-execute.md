@@ -1,7 +1,7 @@
 ---
 title: "Drop the SQLite truncate override — its read-only-execute rationale is false"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:39:15Z"
+assignee: "datetime-proleptic-arm-computes-its-jd-eagerly"
 blocked-by: null
 closed-reason: null
 ---

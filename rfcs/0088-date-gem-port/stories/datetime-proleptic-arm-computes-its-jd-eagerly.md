@@ -1,6 +1,6 @@
 ---
 title: "DateTime's proleptic arm computes the Julian day eagerly where the C defers to get_c_jd"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T20:39:15Z"
+assignee: "datetime-proleptic-arm-computes-its-jd-eagerly"
 blocked-by: null
 closed-reason: null
 ---
