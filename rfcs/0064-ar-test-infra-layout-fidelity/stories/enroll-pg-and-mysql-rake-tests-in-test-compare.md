@@ -1,7 +1,7 @@
 ---
 title: "Enroll postgresql_rake_test.rb and mysql2_rake_test.rb in test:compare"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:24:25Z"
+assignee: "enroll-pg-and-mysql-rake-tests-in-test-compare"
 blocked-by: null
 closed-reason: null
 ---

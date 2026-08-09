@@ -1,7 +1,7 @@
 ---
 title: "TimeZone.clear has no port and zones_map is inlined into all()"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T01:24:25Z"
+assignee: "enroll-pg-and-mysql-rake-tests-in-test-compare"
 blocked-by: null
 closed-reason: null
 ---
