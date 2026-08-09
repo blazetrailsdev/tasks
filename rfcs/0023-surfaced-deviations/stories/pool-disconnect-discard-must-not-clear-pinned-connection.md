@@ -1,7 +1,7 @@
 ---
 title: "disconnect!/discard! must not clear the pinned connection"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: connection-pool.ts _disconnect (:1044-1066) and _discardBang (:1107-1130) both carry explicit 'No pin clearing here' blocks citing connection_pool.rb:454-465/484-492 and no longer null _fixturePin or clear _pinnedConnections; the only clear sites are the unpin paths (:791,:836) and remove (:1473)."
 ---
 
 ## Context
