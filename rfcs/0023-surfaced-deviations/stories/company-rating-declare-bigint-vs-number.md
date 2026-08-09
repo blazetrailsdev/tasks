@@ -1,7 +1,7 @@
 ---
 title: "Company#rating declare says bigint but safe-range values cast to number"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: a TypeScript declared-type annotation on a test model plus test 'as any' casts. Ruby has no static types, so there is nothing to converge onto."
 ---
 
 ## Context
