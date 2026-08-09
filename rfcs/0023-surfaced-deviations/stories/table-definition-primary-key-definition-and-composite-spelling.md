@@ -1,7 +1,7 @@
 ---
 title: "Converge the three set_primary_key deviations: PrimaryKeyDefinition, PK-strip loop, composite id:false spelling"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: PrimaryKeyDefinition is ported and visited (abstract/schema-creation.ts:23,162), primaryKeys() is Rails' reader/writer (schema-definitions.ts:1063-1066), setPrimaryKey keeps the bare `if (!id || this.as) return` guard with no PK-strip loop (:1039), and canonical-schema.ts:296-302 stops passing `id: false` alongside a composite primaryKey."
 ---
 
 ## Context
