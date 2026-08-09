@@ -1,7 +1,7 @@
 ---
 title: "Retire the renameColumn wiring test whose title asserts a cache clear that no longer exists"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: deletes a trails-only wiring describe that test:compare does not match; the underlying body was already converged in #6171."
 ---
 
 ## Context
