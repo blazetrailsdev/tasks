@@ -1,6 +1,6 @@
 ---
 title: "Decide whether the call gate can credit positional/property idioms (first/last/any?/size)"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["enumerable-idioms-match-test"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6269
 claim: "2026-08-09T01:24:25Z"
 assignee: "enroll-pg-and-mysql-rake-tests-in-test-compare"
 blocked-by: null
