@@ -1,6 +1,6 @@
 ---
 title: "methodMissingProxy visibility reads the Ruby private-method manifest, not the underscore heuristic"
-status: claimed
+status: blocked
 updated: 2026-08-09
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-09T01:00:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
-blocked-by: null
+blocked-by: "eslint/rails-private-methods.json is not committed (git ls-files eslint/ lists only the rule + config) and per eslint/rails-private-jsdoc.config.mjs:4-10 exists only in the rails-comparison CI job, which is the only job with Ruby. eslint/rails-private-jsdoc.mjs:26-31 reads it with sync fs and degrades to {files:{}} when absent. A runtime package cannot do either: node:* imports and process.* are banned in packages/, fs must be async, and an eager JSON import would fail the build in every job without Ruby. Unblock once rails-private-method-set-must-be-a-committed-runtime-artifact (0093) makes the private set a committed, freshness-gated artifact a runtime package can import."
 closed-reason: null
 ---
 
