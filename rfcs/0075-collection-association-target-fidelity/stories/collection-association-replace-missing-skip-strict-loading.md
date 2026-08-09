@@ -2,7 +2,7 @@
 title: "Wrap CollectionAssociation#replace's load_target in skip_strict_loading"
 status: draft
 updated: 2026-07-31
-rfc: "0023-surfaced-deviations"
+rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
