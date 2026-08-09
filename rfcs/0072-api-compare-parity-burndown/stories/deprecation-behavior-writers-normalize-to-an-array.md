@@ -1,7 +1,7 @@
 ---
 title: "Deprecation#behavior=/disallowed_behavior= normalize to an Array of callables on write"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T13:39:33Z"
+assignee: "check-constraint-name-raises-argumenterror-not-keyerror"
 blocked-by: null
 closed-reason: null
 ---

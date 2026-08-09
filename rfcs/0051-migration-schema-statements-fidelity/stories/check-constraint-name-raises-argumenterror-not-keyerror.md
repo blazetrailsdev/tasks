@@ -1,6 +1,6 @@
 ---
 title: "checkConstraintName raises ArgumentError where Rails' bare Hash#fetch raises KeyError"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T13:39:33Z"
+assignee: "check-constraint-name-raises-argumenterror-not-keyerror"
 blocked-by: null
 closed-reason: null
 ---
