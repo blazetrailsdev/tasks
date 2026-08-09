@@ -79,6 +79,6 @@ lands; it is filed now so the deviation is tracked rather than settled.
       `test_default` / `test_default_strings` /
       `test_change_column_default_with_array`, `persistence.test.ts`
       `becomes default sti subclass` / `reset column information resets
-  children`) still assert non-vacuously — each must fail on a deliberately
+children`) still assert non-vacuously — each must fail on a deliberately
       broken reflection.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
