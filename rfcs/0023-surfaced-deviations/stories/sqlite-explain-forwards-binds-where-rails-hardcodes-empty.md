@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 explain forwards binds where Rails hardcodes []"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not convergent — structurally forced by the driver: Rails can pass [] because the ruby sqlite3 gem binds missing parameters as NULL; better-sqlite3 and node:sqlite raise RangeError instead (verified in #5934). The divergence is confined to the instrumentation payload (EXPLAIN QUERY PLAN does not evaluate binds) and is already justified in the explain JSDoc at sqlite3-adapter.ts:940."
 ---
 
 ## Context
