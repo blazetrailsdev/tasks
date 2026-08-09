@@ -1,7 +1,7 @@
 ---
 title: "i18n-inspect-stories-are-ruby-object-inspect"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: an RFC-bookkeeping meta story (decide where four OTHER stories should live). No code divergence of its own; the corelib/inspect anchoring decision belongs to whichever RFC owns corelib enrollment."
 ---
 
 ## Context
