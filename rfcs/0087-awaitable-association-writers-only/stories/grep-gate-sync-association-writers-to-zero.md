@@ -1,6 +1,6 @@
 ---
 title: "grep-gate-sync-association-writers-to-zero"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:45:47Z"
+assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null
 closed-reason: null
 ---

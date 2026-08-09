@@ -1,7 +1,7 @@
 ---
 title: "countryZones diverges from Rails on link-backed zone identifiers (Europe/Vatican vs Europe/Rome)"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T02:45:47Z"
+assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null
 closed-reason: null
 ---
