@@ -1,6 +1,6 @@
 ---
 title: "test-compare publishes shared-cache entries but never prunes, so rails-tests manifests accumulate"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
