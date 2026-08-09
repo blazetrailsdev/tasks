@@ -1,6 +1,6 @@
 ---
 title: "sqlite3/mysql typeCast should delegate to abstract (else super) instead of duplicating the chain"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6291
 claim: "2026-08-09T18:59:16Z"
 assignee: "adapter-typecast-delegate-to-abstract-super"
 blocked-by: null
