@@ -1,7 +1,7 @@
 ---
 title: "unboundable? maps a non-comparable value to +1 where Ruby spaceship-zero is nil"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closing per the story's own reachability section: compareToZero (query-attribute.ts:167) is unreachable for a non-numeric through IntegerType, so the +1 vs Ruby spaceship-nil divergence is dead code today."
 ---
 
 ## Context
