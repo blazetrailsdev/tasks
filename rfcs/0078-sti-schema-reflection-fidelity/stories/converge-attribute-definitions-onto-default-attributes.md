@@ -24,32 +24,39 @@ from it — see `vendor/rails/activemodel/lib/active_model/attribute_registratio
 and `vendor/rails/activerecord/lib/active_record/model_schema.rb`.
 
 Because trails carries a second, eagerly-maintained definitions map alongside the
-Rails-shaped pending chain, STI needed bespoke machinery added in PR #4981
-(`packages/activerecord/src/model-schema.ts`):
+Rails-shaped pending chain, it still needs bespoke machinery in
+`packages/activerecord/src/model-schema.ts`:
 
-- `rebuildStiSubclassOverlay` — rebuilds a subclass's map as an overlay over the
-  base's, re-applying precedence rules Rails never needs.
-- `_schemaRevision` / `_stiOverlaySyncedAt` — a hand-rolled invalidation counter,
-  because `resetColumnInformation` mutates the base map IN PLACE (so map identity
-  is stable) and reflection can change a column's type/default with an identical
-  key set (so key coverage is also blind). Rails instead invalidates the class and
-  its descendants directly (`model_schema.rb:523`, `:553`).
-- `syncStiSubclassAttributeDefinitions` called from BOTH `loadSchema` early-return
-  paths, because `_schemaLoaded` and `_schemaLoadPromise` both live on the STI base.
-- `replayOwnPendingDecorators` — a second decorator-replay path parallel to
-  `PendingDecorator#applyTo`, which already drifted once (it bypassed the
-  replay-depth context; fixed in the same PR).
+- `_schemaRevision` (`:78-82`, `:279-283`, `:913`, `:1202`) — a hand-rolled global
+  epoch counter, because `resetColumnInformation` mutates the map IN PLACE (so map
+  identity is stable) and reflection can change a column's type/default with an
+  identical key set (so key coverage is also blind). Rails instead invalidates the
+  class and its descendants directly (`model_schema.rb:523`, `:553`). It is now the
+  input to `schemaStaleAgainstAncestors` / `ownSchemaMemo` (`:74-104`) — see
+  [[sti-schema-stale-invariant-unenforced]].
+- `replayOwnPendingDecorators` (called from `model-schema.ts:1193`) — a second
+  decorator-replay path parallel to `PendingDecorator#applyTo`, guarded by its own
+  `replayingDecorators` WeakSet (`:1049`).
+- `scrubSchemaSourcedDefinitions` (`:894`) — hand-partitions the map by
+  `source === "schema"` on every reload, work Rails' per-class replay does for free.
 
-Every one of these exists only to keep the invented map coherent. Three of the four
-were the subject of review findings on #4981, which is a strong signal the map is
-carrying complexity Rails does not have.
+Both exist only to keep the invented map coherent.
+
+Re-verified against `origin/main` 2026-08-09. The three STI-overlay artefacts
+this story originally named — `rebuildStiSubclassOverlay`,
+`syncStiSubclassAttributeDefinitions` and `_stiOverlaySyncedAt` — are all gone from
+`packages/` (see the closed [[reload-schema-from-cache-sti-apparatus-absent-in-rails]]
+and [[sti-subclass-attribute-routes-to-sti-base]]). `_attributeDefinitions` itself is
+still a live invention with readers across `attribute-methods.ts`,
+`join-dependency.ts`, `inheritance.ts` and `model-schema.ts`, so the headline
+convergence remains — but it is now a smaller job than the 400 LOC estimate implies.
 
 ## Acceptance criteria
 
 - [ ] Readers of `_attributeDefinitions` resolve through `_default_attributes` /
       `attribute_types` (the Rails-shaped, per-class, replay-driven surface) instead.
-- [ ] `rebuildStiSubclassOverlay`, `syncStiSubclassAttributeDefinitions`,
-      `_schemaRevision`, and `_stiOverlaySyncedAt` are deleted.
+- [ ] `_schemaRevision` (and with it `schemaStaleAgainstAncestors` /
+      `ownSchemaMemo`) and `scrubSchemaSourcedDefinitions` are deleted.
 - [ ] `replayOwnPendingDecorators` is deleted, leaving `PendingDecorator#applyTo`
       as the single replay path.
 - [ ] The STI guards added in `normalized-attribute.trails.test.ts` still pass

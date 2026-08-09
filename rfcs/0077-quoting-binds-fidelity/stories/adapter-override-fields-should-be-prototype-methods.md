@@ -25,14 +25,17 @@ Rails declares adapter quoting/DDL overrides with `def`, i.e. as **methods on th
 class**. trails assigns several as class **fields** (`override x = fn;`), which
 land on the _instance_, not the prototype:
 
-- `connection-adapters/abstract-mysql-adapter.ts:387-389` —
-  `override quoteIdentifier = mysqlQuoteIdentifier;`,
+- `connection-adapters/abstract-mysql-adapter.ts:342-343` —
   `override quoteTableName = mysqlQuoteTableName;`,
   `override quoteColumnName = mysqlQuoteColumnName;`.
   Rails: `mysql/quoting.rb` `def quote_table_name` / `def quote_column_name`.
-- `connection-adapters/postgresql-adapter.ts:4264` —
+- `connection-adapters/postgresql-adapter.ts:3883` —
   `override disableReferentialIntegrity = disableReferentialIntegrity;`.
   Rails: `postgresql/referential_integrity.rb` `def disable_referential_integrity`.
+
+Re-verified against `origin/main` 2026-08-09. The fourth site named when this
+story was written — `override quoteIdentifier = mysqlQuoteIdentifier;` — is gone:
+#5893 removed the `quoteIdentifier` adapter method entirely. Three sites remain.
 
 Two consequences:
 
@@ -46,7 +49,8 @@ Two consequences:
 2. **It already cost a debugging cycle.** In #5000 the MySQL boolean pair had
    this exact shape; the test host needed an `Object.assign(Object.create(...))`
    workaround until the pair was converted to methods. The converted pair
-   (`abstract-mysql-adapter.ts:390-401`) is the reference for this change; the
+   (`abstract-mysql-adapter.ts` (the already-converged `quote` /
+   `quoteTableNameForAssignment` / `quoteString` methods at :301, :372, :1200)) is the reference for this change; the
    sibling adapter, `sqlite3-adapter.ts:1058-1071`, already uses methods
    throughout.
 
@@ -55,10 +59,11 @@ fields (Rails class attributes) and are **not** in scope.
 
 ## Acceptance criteria
 
-- [ ] The four listed `override x = fn;` assignments become prototype methods
+- [ ] The three listed `override x = fn;` assignments become prototype methods
       (`override quoteTableName(name: string): string { return mysqlQuoteTableName(name); }`),
       matching Rails' `def` and the already-converged pair at
-      `abstract-mysql-adapter.ts:390-401`.
+      `abstract-mysql-adapter.ts` (the already-converged `quote` /
+      `quoteTableNameForAssignment` / `quoteString` methods at :301, :372, :1200).
 - [ ] Any test host built as `Object.assign(Object.create(Proto), {...})` purely
       to compensate collapses back to a bare `Object.create(Proto)`.
 - [ ] A regression guard asserts a prototype-derived host resolves these through

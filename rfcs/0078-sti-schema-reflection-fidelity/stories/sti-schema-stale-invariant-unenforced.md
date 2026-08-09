@@ -26,28 +26,33 @@ through `DescendantsTracker`, which is populated automatically by Ruby's
 (`vendor/rails/activerecord/lib/active_record/model_schema.rb:553-568`, and
 `descendants` via `ActiveSupport::DescendantsTracker`). JS has no `inherited`
 hook, so trails registers subclasses only when `registerSubclass` is explicitly
-called (`packages/activerecord/src/inheritance.ts:359`), which happens lazily —
+called (`packages/activerecord/src/inheritance.ts`, `registerSubclass`), which happens lazily —
 triggered by `attribute()` / `decorate_attributes()` / `_defaultAttributes()` /
 association declarations, not by `class X extends Y {}` alone.
 
 To cover STI subclasses that never registered, PR #5199 added a PULL-based
 fallback: `schemaStaleAgainstAncestors`
-(`packages/activerecord/src/model-schema.ts:60`) walks the prototype chain on
+(`packages/activerecord/src/model-schema.ts:74`) walks the prototype chain on
 every schema-memo read and returns the memo as `undefined` when an ancestor's
 `_schemaRevision` (a global epoch) is newer. `reloadSchemaFromCache`'s recursive
-push (`:868`) still only reaches registered subclasses; the pull fallback is
+push (`:920-922`) still only reaches registered subclasses; the pull fallback is
 what covers the rest.
 
 **The gap:** correctness now depends on an UNENFORCED invariant — every read of
 `_schemaLoaded` / `_columnsHash` / `_columns` / `_attributesBuilder` /
 `_virtualAttributesReconciled` must route through `ownSchemaMemo`
-(`model-schema.ts:80`) or `isSchemaLoaded`. The PR review verified this holds
+(`model-schema.ts:99`) or `isSchemaLoaded`. The PR review verified this holds
 today by grepping `packages/activerecord/src/*.ts`, but nothing prevents a
 future raw `this._columnsHash` read on a subclass from silently serving a stale
 inherited value after an ancestor reset. The
 `model-schema-sync-load.test.ts` "resetting the STI base propagates to
 subclasses" test having to add an explicit `registerSubclass(Circle)` call is
 the visible symptom of the push side only reaching registered subclasses.
+
+Re-verified against `origin/main` 2026-08-09: all of the above still holds, and
+this story now also owns the `_schemaRevision` epoch residual left behind by the
+closed [[reload-schema-from-cache-sti-apparatus-absent-in-rails]] and
+[[reset-column-information-recurse-descendants]].
 
 ## Acceptance criteria
 

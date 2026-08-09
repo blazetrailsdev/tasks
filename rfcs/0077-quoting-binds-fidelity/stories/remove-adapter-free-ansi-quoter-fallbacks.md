@@ -24,15 +24,20 @@ without an adapter is impossible.
 
 trails keeps a standalone SQL-92 quoter to fill that gap: the `@internal`
 `quoteIdentifier` function at
-`packages/activerecord/src/connection-adapters/abstract/quoting.ts:76`, bound
-into two adapter-free hosts —
+`packages/activerecord/src/connection-adapters/abstract/quoting.ts:84`, bound
+into the one surviving adapter-free host —
 
-- `ABSTRACT_SCHEMA_QUOTER` (`abstract/quoting.ts:351`), used when a schema
-  visitor or definition is built without a live adapter, and
-- `ABSTRACT_QUOTER` in `sanitization.ts:34`, the no-connection fallback used
-  by `quoterFor` when a model class has no resolvable adapter.
+- `ABSTRACT_QUOTER` in `sanitization.ts:35`, the no-connection fallback
+  returned by `quoterFor` at `sanitization.ts:217` when a model class has no
+  resolvable adapter. It routes `quoteColumnName` and
+  `quoteTableNameForAssignment` through `abstractQuoteIdentifier`.
 
-Both emit ANSI double-quoted SQL that no adapter asked for. On MySQL that is
+Re-verified against `origin/main` 2026-08-09: `ABSTRACT_SCHEMA_QUOTER` is
+already gone — `abstract/quoting.ts:78` retains only a stale doc comment naming
+it — so this story is now scoped to sanitization's `ABSTRACT_QUOTER` and the
+standalone `quoteIdentifier` function that only it consumes.
+
+It emits ANSI double-quoted SQL that no adapter asked for. On MySQL that is
 simply wrong (backticks), so any DDL or sanitized fragment that reaches these
 crutches is silently mis-quoted rather than failing loudly the way Rails
 would.
@@ -49,10 +54,10 @@ two together.
 
 ## Acceptance criteria
 
-- Every construction path that currently reaches `ABSTRACT_SCHEMA_QUOTER` or
-  sanitization's `ABSTRACT_QUOTER` is audited and given a real adapter, or is
+- Every construction path that currently reaches sanitization's
+  `ABSTRACT_QUOTER` is audited and given a real adapter, or is
   shown to be unreachable and deleted.
-- The standalone `quoteIdentifier` and both adapter-free quoter constants are
+- The standalone `quoteIdentifier` and the `ABSTRACT_QUOTER` constant are
   removed once their last consumer is gone.
 - Callers that genuinely have no connection surface a clear error rather than
   emitting ANSI SQL, matching Rails' `NotImplementedError` posture.
