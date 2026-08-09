@@ -1,7 +1,7 @@
 ---
 title: "The trails rename family (Trailtie, Trails) reports as novel declaration extras"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Parity-report noise about the deliberate Trailtie/Trails rename family; advisory only (untagged extras do not gate), no behavioural divergence."
 ---
 
 ## Context
