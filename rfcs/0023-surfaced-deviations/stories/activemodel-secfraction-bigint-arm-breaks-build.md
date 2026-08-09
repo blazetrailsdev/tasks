@@ -1,7 +1,7 @@
 ---
 title: "activemodel-secfraction-bigint-arm-breaks-build"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fixed on main: activemodel/src/type/date-time.ts:73 handles the bigint arm explicitly and time.ts:170 typechecks; build green at 621d49cce."
 ---
 
 ## Context
