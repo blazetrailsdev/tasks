@@ -1,7 +1,7 @@
 ---
 title: "actionpack flat barrel cannot express Http::Parameters vs ActionController::Parameters"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence item: ActionDispatch::Http::Parameters IS reachable at the barrel that mirrors its Ruby namespace (packages/actionpack/src/action-dispatch/http/index.ts), and nothing shadows ActionController::Parameters. The remaining issue is the flat outer barrel, a trails packaging artifact with no Rails counterpart to converge onto — a module-layout design question, not a divergence in ported behaviour."
 ---
 
 ## Context
