@@ -1,7 +1,7 @@
 ---
 title: "Align fastStringToTime's accepted grammar with Ruby's Time.new(string)"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No behavioral divergence: the story records that fast and fallback paths converge on the same instant — only which internal path runs differs. Aligning TS/Temporal grammar to Ruby's Time.new(string) is routing tidiness, not port convergence."
 ---
 
 ## Context
