@@ -1,5 +1,5 @@
 ---
-rfc: "0000-sqlite3-adapter-construction-fidelity"
+rfc: "0094-sqlite3-adapter-construction-fidelity"
 title: "SQLite3 adapter construction fidelity"
 status: draft
 created: 2026-08-09
