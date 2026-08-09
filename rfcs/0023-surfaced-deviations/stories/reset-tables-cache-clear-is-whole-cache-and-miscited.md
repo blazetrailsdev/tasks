@@ -1,7 +1,7 @@
 ---
 title: "resetTables clears the whole schema cache where Rails' drop_table clears per table, and cites the wrong schema_statements.rb line"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: resetTables lives in src/support/drop-all-tables.ts, trails-only test infrastructure with no Rails counterpart (and outside both compare populations). Tuning its cache-clear granularity and fixing a JSDoc line cite converges nothing in the port."
 ---
 
 ## Context
