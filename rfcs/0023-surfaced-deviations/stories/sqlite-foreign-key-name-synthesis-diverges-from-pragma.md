@@ -40,6 +40,25 @@ call site re-guards with `if (exportName && fk.name)`; any other caller would
 see the divergence. `CheckConstraintDefinition#export_name_on_schema_dump?`
 (`schema_definitions.rb:185-187`) has the same shape and should be checked too.
 
+### Update from PR #6295 (2026-08-09)
+
+The raw-driver bypass this helper used is gone: `_parseForeignKeyNames` now
+consumes `tableStructureSql(tableName, [])` through the logged
+`query_value(sql, "SCHEMA")` primitive. The explicit empty column list is Rails'
+own second parameter (`sqlite3_adapter.rb:757`) — the `Regexp.union([])` it
+produces is `(?!)`, so the split fires only before CONSTRAINT and never at the
+inner comma of a composite `FOREIGN KEY ("a", "b")`, which the column-union
+split does cut. `_getCreateTableSql` / `_createTableSql` no longer exist.
+
+So what remains to converge is only the helper itself, not how it reads.
+
+Note it is load-bearing: `CompositeForeignKeyTest > schema dumping` asserts the
+dumped `addForeignKey` omits `name:` when it equals the synthesized
+`fk_<table>_<cols>` default, and the name lookup is what makes that hold.
+Removing the helper without addressing that assertion regresses composite FK
+schema dumping — verified during #6295, where routing the names through the
+column-union split broke exactly that test.
+
 ## Acceptance criteria
 
 - [ ] Decide and record whether the synthesized/DDL-recovered SQLite FK name is
