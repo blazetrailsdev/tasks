@@ -1,6 +1,6 @@
 ---
 title: "Port Date::Infinity and Date#infinite? — lib/date.rb is the gem's only Ruby surface and none of it is ported"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6308
 claim: "2026-08-09T23:26:04Z"
 assignee: "exclude-test-memsize-from-the-date-test-population"
 blocked-by: null
