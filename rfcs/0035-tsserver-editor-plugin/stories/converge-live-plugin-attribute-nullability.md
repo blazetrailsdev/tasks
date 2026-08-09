@@ -38,6 +38,15 @@ default flips ~18 pinned assertions in
 `packages/activerecord/src/type-virtualization/virtualize.test.ts` and
 changes live IDE behavior for every attribute() declare.
 
+Re-verified on `origin/main` 2026-08-09 — still open and unchanged:
+`synthesize.ts:140` still reads `opts.attributesNullable ?? false`, and
+`materialize-model-declares.ts:831` still passes `attributesNullable: true`.
+The shipped `ar-models` plugin
+(`packages/activerecord-cli/src/tsc-wrapper/ar-models-plugin.ts:75-79`) does
+NOT pass the flag, so the live CLI/editor path takes the non-null default —
+i.e. the divergence now reaches the real tsc-wrapper, not just a hypothetical
+plugin.
+
 Relevant code:
 
 - `synthesize.ts` `renderAttribute(call, nullable)` + `SynthesizeOptions.attributesNullable`
