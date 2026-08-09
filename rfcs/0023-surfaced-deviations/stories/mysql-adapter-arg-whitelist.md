@@ -1,7 +1,7 @@
 ---
 title: "buildAdapterArg forwards unknown config keys to the mysql2 driver"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity divergence: buildAdapterArg is trails-only driver plumbing; the story is about silencing mysql2 'invalid configuration option' warnings, not matching Rails behavior."
 ---
 
 ## Context
