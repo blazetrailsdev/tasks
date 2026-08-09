@@ -1,6 +1,6 @@
 ---
 title: "Date._parse's year fragment loses exactness past MAX_SAFE_INTEGER, where Ruby's String#to_i is exact"
-status: ready
+status: draft
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
