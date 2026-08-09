@@ -1,7 +1,7 @@
 ---
 title: "touch(time:) should take Temporal.Instant only, not JS Date"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: narrows an accepted INPUT type (TouchOptions.time also accepts a JS Date and converts at the boundary). Ruby's touch(time:) takes a Time; accepting an extra coercible input is not a behavioral divergence."
 ---
 
 ## Context
