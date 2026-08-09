@@ -1,6 +1,6 @@
 ---
 title: "Rename the shared cross-worktree cache off api-compare's name and move shared-cache.ts out of its tree"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T15:42:26Z"
+assignee: "converge-ddl-schema-cache-recording-into-the-ported-ddl-bodies"
 blocked-by: null
 closed-reason: null
 ---
