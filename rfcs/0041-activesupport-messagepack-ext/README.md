@@ -25,8 +25,11 @@ trails' MessagePack encoding is byte-interchange-compatible with Ruby. This is a
 
 Rails registers a fixed set of ext types in
 `vendor/rails/activesupport/lib/active_support/message_pack/extensions.rb`. trails'
-registry currently covers only `0` (Symbol), `1` (Integer), `9` (TimeZone), `12`
-(Set), `17` (HashWithIndifferentAccess), `127` (Object). The rest fall through the
+registry covers `0` (Symbol), `1` (Integer), `5`/`6`/`7`/`8`
+(DateTime/Date/Time/TimeWithZone — landed since this RFC was written), `9`
+(TimeZone), `12` (Set), `17` (HashWithIndifferentAccess), `127` (Object). Still
+missing: `2` (BigDecimal), `3`/`4` (Rational/Complex), `10` (Duration), and
+`11`/`13`-`16` (Range/URI/IPAddr/Pathname/Regexp). The rest fall through the
 generic `Object` (127) path or fail, so trails-encoded MessagePack does not
 round-trip with Ruby for decimals, rationals/complex, temporal types, and the
 value classes. The building blocks already exist in trails (`BigDecimal` value
@@ -42,8 +45,8 @@ story is independently mergeable; `api/test:compare` delta stays non-negative.
 
 - `messagepack-ext-bigdecimal` — ext type 2 (`_dump`/`_load` precision string).
 - `messagepack-ext-rational-complex` — Rational/Complex ext types.
-- `messagepack-ext-temporal` — types 5/6/7/8/10 (DateTime/Date/Time/
-  TimeWithZone/Duration), nanosecond-faithful.
+- `messagepack-ext-temporal` — only type 10 (Duration) remains; 5/6/7/8
+  have landed.
 - `messagepack-ext-value-classes` — remaining value-class ext registrations.
 
 (Authored under 0023; moved here verbatim — bodies carry `extensions.rb` line

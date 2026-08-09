@@ -66,7 +66,7 @@ one fixture line, one production fallback, and a bounded test migration.
 
 The numbers above are measured, not grepped. To re-run after any story lands:
 
-1. Set `permanentConnectionCheckout = "disallowed"` in `test-setup-ar.ts`.
+1. Set `permanentConnectionCheckout = "disallowed"` in `packages/activerecord/src/cases/helper.ts`.
 2. Replace the `throw` in `connection-handling.ts`'s `connection()` with a
    `console.warn` printing the first non-internal stack frame. **This step is
    required** — with the raise armed, every AR file fails at _collection_ and

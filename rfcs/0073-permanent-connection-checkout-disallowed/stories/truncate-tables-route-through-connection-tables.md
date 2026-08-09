@@ -37,6 +37,24 @@ with a reason in
 `scripts/api-compare/call-mismatches-wide-exclude/activerecord/tasks/database-tasks.json`.
 Related and already baselined: `truncate_tables -> with_temporary_connection`.
 
+## Re-verified 2026-08-09 (origin/main 486d9055f)
+
+Half converged since this was written. `database-tasks.ts:1530-1539`
+`truncateTables` now ends in the Rails shape —
+`withTemporaryConnection(config, async (conn) => conn.truncateTables(...(await conn.tables())))`
+— but keeps a handler fast path **above** it:
+
+```ts
+const handler = this.databaseAdapterFor(config);
+if (handler.truncateAll) { await handler.truncateAll(config); return; }
+```
+
+So the remaining work is only that `handler.truncateAll` short-circuit (Rails
+has no such branch), not the whole method. Also, the baseline path named below
+moved: `call-mismatches-wide-exclude/` no longer exists (RFC 0084 folded it into
+the single `scripts/api-compare/call-mismatches-exclude/` tree) — look for a
+residual row there instead.
+
 ## Acceptance criteria
 
 - `truncateTables` routes through a temporary connection and calls the

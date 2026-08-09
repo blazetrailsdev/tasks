@@ -43,6 +43,20 @@ work is mapping each Rails component encoding onto the trails temporal reps with
 crux; a lossy `Date`-based seconds encoding would not round-trip Ruby's
 nanosecond `Time`).
 
+## Re-verified 2026-08-09 (origin/main 486d9055f) — mostly shipped
+
+`packages/activesupport/src/message-pack/extensions.ts` now registers **5
+(DateTime → `Temporal.PlainDateTime`), 6 (Date → `Temporal.PlainDate`), 7 (Time
+→ `Temporal.Instant`) and 8 (`ActiveSupport::TimeWithZone`)** with the Rails
+component encodings (`writeDatetime`/`readDatetime`, `writeDate`/`readDate`,
+`writeTime`/`readTime`, `writeTimeWithZone`/`readTimeWithZone`), alongside the
+pre-existing 9.
+
+**Only ext type 10 (`ActiveSupport::Duration`, `extensions.rb:69`, `PARTS.zip`)
+is still unregistered.** Scope this story to type 10 plus a nanosecond
+round-trip audit of the four already-landed types; est-loc 300 is now far too
+high (~80).
+
 ## Acceptance criteria
 
 - [ ] Register ext types **5, 6, 7, 8, 10** in `message-pack/extensions.ts`,

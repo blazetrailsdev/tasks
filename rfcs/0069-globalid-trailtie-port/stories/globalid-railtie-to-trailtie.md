@@ -19,7 +19,7 @@ closed-reason: null
 
 globalid wires itself via a `wire.ts` side-effect + explicit setters instead of
 a `Trailtie`, so `vendor/globalid/test/cases/railtie_test.rb` has no TS port and
-is excluded whole-file in `scripts/api-compare/unported-files.ts` (the globalid
+is excluded whole-file in `scripts/parity/unported-files.ts` (the globalid
 `/railtie_test.rb`, `package: "globalid"` entry). Surfaced by PR #5220
 (`unported-files-audit-substring-overmatch`), which corrected that entry's stale
 "Trails has no Railtie analogue" reason — activesupport DOES ship
@@ -52,7 +52,7 @@ Reference implementations:
       Port only the cases that map; register anything genuinely boot-only as
       per-test `tests:` exclusions with justification.
 - [ ] Remove the globalid `/railtie_test.rb` whole-file entry from
-      `scripts/api-compare/unported-files.ts` (or narrow to per-test) so the
+      `scripts/parity/unported-files.ts` (or narrow to per-test) so the
       file re-enters test:compare accounting. Confirm the railtie→trailtie path
       alias (added in PR #5220) maps it to `trailtie.test.ts`.
 - [ ] Report the globalid test:compare delta.

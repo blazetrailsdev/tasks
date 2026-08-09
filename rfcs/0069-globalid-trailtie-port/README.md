@@ -24,7 +24,7 @@ side-effect import plus explicit `setApp` / verifier setters
 
 Because of that gap, globalid's `railtie_test.rb`
 (`vendor/globalid/test/cases/railtie_test.rb`) has no TS counterpart and is
-carried as a whole-file exclusion in `scripts/api-compare/unported-files.ts`.
+carried as a whole-file exclusion in `scripts/parity/unported-files.ts`.
 The audit story `unported-files-audit-substring-overmatch` (PR #5220) corrected
 that entry's stale reason and flagged this port as the proper fix.
 

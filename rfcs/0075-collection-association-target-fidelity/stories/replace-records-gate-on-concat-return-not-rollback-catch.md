@@ -29,9 +29,13 @@ unless concat(difference(new_target, target))
 end
 ```
 
-trails' `replaceRecords` (`packages/activerecord/src/associations/collection-association.ts:1237-1261`)
-instead wraps `assoc.concat(...)` in a `try/catch` and only raises `RecordNotSaved`
-when it catches a thrown `Rollback`.
+trails' `replaceRecords` (`packages/activerecord/src/associations/collection-association.ts:1356-1381`
+on `origin/main` 2026-08-09 — still open) instead wraps `assoc.concat(...)` in a
+`try/catch` and only raises `RecordNotSaved` when it catches a thrown `Rollback`.
+Note the runtime `CollectionProxy#_replaceRecords` (`collection-proxy.ts:3236-3245`)
+has ALREADY converged onto the falsy-return gate (`if (toAdd.length > 0 && (await
+this.push(...toAdd)) === false)`); this story is the OO twin catching up, and that
+body is the shape to copy.
 
 That catch arm is effectively dead on the normal path. `CollectionAssociation#concat`
 wraps the persisted-owner case in `transaction(...)`, and `Base.transaction`

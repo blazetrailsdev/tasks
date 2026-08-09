@@ -85,6 +85,24 @@ Two sites are intentional and must NOT be converted:
   _about_ connection wiring; several of its sites are likely deliberate. Read
   each against its Rails counterpart before changing it.
 
+## Re-verified 2026-08-09 (origin/main 486d9055f)
+
+The inventory below is the 2026-07-25 measurement and has drifted; re-measure
+with the gate instrumentation before working it. Known drift:
+
+- The four `test-helpers/**` self-test files named above
+  (`use-transactional-tests.test.ts`, `with-transactional-fixtures.test.ts`,
+  `naked-fixtures.test.ts`, `handler-resolved-adapter.test.ts`) **no longer
+  exist** — that whole `test-helpers/*.test.ts` set was retired. Those 4 sites
+  are out of scope.
+- `base-prevent-writes.test.ts` still exists but no longer carries a textual
+  `.connection` read.
+- Every other listed file still exists and still carries `.connection` reads
+  (`primary-keys.test.ts` 37, `locking.test.ts` 13,
+  `eager-singularization.test.ts` 12), so the bulk of the work is real.
+- The suite-wide flag is set in `packages/activerecord/src/cases/helper.ts`;
+  `test-setup-ar.ts` does not exist.
+
 ## Acceptance criteria
 
 - The residual sites are converted to `withConnection` / `leaseConnection` (or

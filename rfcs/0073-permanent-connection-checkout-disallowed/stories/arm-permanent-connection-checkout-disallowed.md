@@ -33,7 +33,8 @@ pinned by `connection-handling.test.ts:145`. This story only arms it.
 
 ## Acceptance criteria
 
-- `test-setup-ar.ts` sets `permanentConnectionCheckout = "disallowed"` beside the
+- `packages/activerecord/src/cases/helper.ts` (the AR suite-wide setup;
+  `test-setup-ar.ts` no longer exists) sets `permanentConnectionCheckout = "disallowed"` beside the
   other suite-wide config, mirroring `helper.rb:27`.
 - Full AR suite green on **sqlite, PG and MySQL** lanes.
 - Any site kept as a deliberate exception is listed in the PR body with its
