@@ -1,7 +1,7 @@
 ---
 title: "docker-compose.yml has no mariadb service, so CI's MariaDB lane is not locally reproducible"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Local dev infrastructure (docker-compose service), not a divergence from Rails behaviour."
 ---
 
 ## Context
