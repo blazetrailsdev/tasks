@@ -1,7 +1,7 @@
 ---
 title: "join-model: move trails-only CPK polymorphic-through test to a .trails.test.ts file"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Test-file placement cleanup; no divergence from Rails behaviour and the test itself is trails-only by construction."
 ---
 
 ## Context
