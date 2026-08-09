@@ -1,7 +1,7 @@
 ---
 title: "warnings.test.ts carries a MariaDB-only beforeEach and stubs above Rails' seam"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "MariaDB-lane test-infra divergence; the clear_warnings beforeEach is already justified at the call site (#5719) and the _warningCount spy is behaviourally equivalent. No Rails behaviour diverges."
 ---
 
 ## Context
