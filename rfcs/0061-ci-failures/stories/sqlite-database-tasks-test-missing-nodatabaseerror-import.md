@@ -1,6 +1,6 @@
 ---
 title: "sqlite-database-tasks-test-missing-nodatabaseerror-import"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6271
 claim: "2026-08-09T12:39:18Z"
 assignee: "red-1fd85251"
 blocked-by: null
