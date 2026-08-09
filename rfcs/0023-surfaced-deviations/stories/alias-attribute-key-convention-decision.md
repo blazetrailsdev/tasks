@@ -1,7 +1,7 @@
 ---
 title: "Decide alias-attribute key convention: retire the camelCase lookup bridge"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: it is a decision/refactor about trails' camelCase alias-key convention whose own acceptance criteria allow keeping the status quo bridge; no behavioral divergence from Rails is named."
 ---
 
 ## Context
