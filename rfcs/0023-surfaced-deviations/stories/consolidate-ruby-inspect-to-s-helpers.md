@@ -1,7 +1,7 @@
 ---
 title: "Consolidate the two partial Ruby inspect/to_s ports into activesupport"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: extracting a shared Ruby inspect/to_s helper into activesupport is an abstraction Rails does not have (Ruby gets it from Object#inspect). Any actual escaping bug in journey/formatter.ts should be fixed in place at that call site."
 ---
 
 ## Context
