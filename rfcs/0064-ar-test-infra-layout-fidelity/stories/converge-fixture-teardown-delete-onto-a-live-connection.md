@@ -1,6 +1,6 @@
 ---
 title: "converge-fixture-teardown-delete-onto-a-live-connection"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6268
 claim: "2026-08-09T01:00:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null
