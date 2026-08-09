@@ -1,7 +1,7 @@
 ---
 title: "Correct the find_target first wide-ratchet reason citation"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already moot: RFC 0084 folded the wide ratchet into api:calls and call-mismatches-wide-exclude/activerecord/ no longer exists, so the singular-association.json reason string the story rewords is gone; doc-only either way."
 ---
 
 ## Context
