@@ -1,6 +1,6 @@
 ---
 title: "Align compare entry-point and lint naming across the four compare dirs"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["extract-parity-tools-package"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6274
 claim: "2026-08-09T02:15:49Z"
 assignee: "check-current-protected-environment-pool-migration-context-blocked-on-adapter-proxy"
 blocked-by: null
