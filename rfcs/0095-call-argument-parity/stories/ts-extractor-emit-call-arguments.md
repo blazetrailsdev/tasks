@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api.ts emits per-call-site argument descriptors"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0095-call-argument-parity"
 cluster: api-compare
