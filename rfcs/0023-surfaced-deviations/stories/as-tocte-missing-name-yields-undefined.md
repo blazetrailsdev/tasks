@@ -1,7 +1,7 @@
 ---
 title: "As#toCte yields undefined for a nameless left where Rails raises NoMethodError"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closing as not convergeable and marginal: Rails' failure here is Ruby's NoMethodError, for which trails has no analogue, so the story asks to invent an error Rails does not have. The well-formed path (binary.ts:161) already matches Cte.new(left.name, right)."
 ---
 
 ## Context
