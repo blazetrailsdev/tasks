@@ -17,11 +17,13 @@ closed-reason: null
 
 ## Context
 
-- `packages/activerecord/src/adapters/mysql2/mysql2-adapter.test.ts:193`
+Re-verified on `origin/main` 2026-08-09 — all three still present:
+
+- `packages/activerecord/src/adapters/mysql2/mysql2-adapter.test.ts:192`
   (people, cars, old_cars, subscribers, engines)
-- `packages/activerecord/src/adapters/mysql2/mysql2-adapter.trails.test.ts:259`
+- `packages/activerecord/src/adapters/mysql2/mysql2-adapter.trails.test.ts:260`
   (subscribers)
-- `packages/activerecord/src/adapters/abstract-mysql-adapter/schema.test.ts:20`
+- `packages/activerecord/src/adapters/abstract-mysql-adapter/schema.test.ts:19`
   (parameterized `names` - the whole beforeEach is a rebuild loop)
 
 `subscribers` was RFC 0070 drift source #7. The abstract-mysql schema.test

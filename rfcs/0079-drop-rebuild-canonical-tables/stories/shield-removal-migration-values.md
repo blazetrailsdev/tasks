@@ -17,7 +17,8 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/src/migration.test.ts:1496` and `:1521` rebuild
+`packages/activerecord/src/migration.test.ts:1652` and `:1677` (re-verified on
+`origin/main` 2026-08-09; both still present) rebuild
 `values` mid-file. migration.test is itself the biggest canonical reshaper (it
 appears in RFC 0070's require-canonical-rebuild exclude backlog) - these two
 sites likely shield the file against ITS OWN earlier describe blocks. The fix

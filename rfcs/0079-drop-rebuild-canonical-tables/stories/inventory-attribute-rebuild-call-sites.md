@@ -17,8 +17,9 @@ closed-reason: null
 
 ## Context
 
-Mirror of RFC 0070's Phase-1 measurement. Each of the ~29 per-suite
-`rebuildCanonicalTables` call sites exists because some sibling file reshapes or
+Mirror of RFC 0070's Phase-1 measurement. Each of the 24 per-suite
+`rebuildCanonicalTables` call sites (recount against `origin/main`, 2026-08-09;
+plus 2 in `support/setup-second-pool.ts`) exists because some sibling file reshapes or
 drops those canonical tables on the shared per-worker DB. Before the burndown
 stories touch anything, produce the culprit map: for each call site (see the
 RFC README baseline list), identify which sibling file leaves the named tables

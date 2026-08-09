@@ -19,10 +19,12 @@ closed-reason: null
 
 Shield call sites over `topics` (and companions):
 
+Re-verified on `origin/main` 2026-08-09 — all four still present:
+
 - `packages/activerecord/src/bind-parameter.test.ts:90` (topics, ...)
-- `packages/activerecord/src/date.test.ts:30` (topics)
-- `packages/activerecord/src/primary-keys.test.ts:33` (topics, ...)
-- `packages/activerecord/src/validations/uniqueness-validation.trails.test.ts:98`
+- `packages/activerecord/src/date.test.ts:29` (topics)
+- `packages/activerecord/src/primary-keys.test.ts:32` (topics, ...)
+- `packages/activerecord/src/validations/uniqueness-validation.trails.test.ts:99`
   (topics; then adds `topics_direct_index` - that suite itself mutates the
   canonical `topics` shape and must restore or isolate it)
 

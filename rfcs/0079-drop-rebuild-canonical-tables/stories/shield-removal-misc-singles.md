@@ -17,17 +17,25 @@ closed-reason: null
 
 ## Context
 
-The remaining per-suite shields, one call site each:
+The remaining per-suite shields, one call site each. Re-verified against
+`origin/main` 2026-08-09:
 
-- `base-prevent-writes.test.ts:89` (professors, on the ARUnit2 pool)
-- `delegated-type.test.ts:56` (comments, ...)
-- `associations/required.test.ts:25` (children - RFC 0070 drift source #3)
-- `view.test.ts:48` (authors, books)
-- `enum.trails.test.ts:425` (numeric_data)
-- `unsafe-raw-sql.test.ts:29` (posts, comments)
-- `reserved-word.test.ts:107` (CANONICAL_RESERVED_TABLES - RFC 0070 drift
+- `delegated-type.test.ts:55` (comments, ...)
+- `associations/required.test.ts:21` (children - RFC 0070 drift source #3)
+- `view.test.ts:47` (authors, books)
+- `enum.trails.test.ts:424` (numeric_data)
+- `unsafe-raw-sql.test.ts:28` (posts, comments)
+- `reserved-word.test.ts:105` (CANONICAL_RESERVED_TABLES - RFC 0070 drift
   source #1; that suite was the top culprit AND is a victim)
-- `primary-keys.test.ts:549` (cpk_books, cpk_orders, cpk_authors)
+- `primary-keys.test.ts:552` (cpk_books, cpk_orders, cpk_authors)
+- `migration/exclusion-constraint.test.ts:34` (invoices) — NEW since the
+  baseline
+- `migration/rename-table.test.ts:44` (references) — NEW since the baseline
+- `migration/unique-constraint.test.ts:26` (sections) — NEW since the baseline
+
+**Gone:** `base-prevent-writes.test.ts` (professors) no longer calls the helper;
+drop it from the list. The three `migration/*` sites arrived after this story
+was written and are folded in here.
 
 Split across PRs if the fixes exceed the LOC ceiling; per-site removals
 are independent. Use the Phase-1 inventory to fix each culprit at the source.

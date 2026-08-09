@@ -17,7 +17,8 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/src/schema-dumper.test.ts:1078` rebuilds `booleans` (+
+`packages/activerecord/src/schema-dumper.test.ts:994` (re-verified on
+`origin/main` 2026-08-09) rebuilds `booleans` (+
 companions). schema-dumper.test was the largest dropper in RFC 0070's exclude
 backlog (7 drops) and has a PG dump-timeout flake history; verify from the
 Phase-1 inventory whether the shield guards against its own earlier drops or a

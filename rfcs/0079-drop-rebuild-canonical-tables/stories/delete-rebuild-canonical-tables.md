@@ -30,15 +30,20 @@ closed-reason: null
 Capstone, mirror of RFC 0070's delete-repair-worker-schema. Once every shield
 and helper call site is gone and the ratchet manifest is empty, delete:
 
-- `rebuildCanonicalTables` (`test-helpers/canonical-schema.ts:2360`) and the
-  machinery that exists only for it: `foreignKeyDependents`
-  (`canonical-schema.ts:2334`), the `scanInbound: true` arm of
-  `fkSafeDropPlan`, and `bulkInboundFkHost` (verify no other caller first -
-  see `canonical-schema-bulk-inbound-fk.test.ts`).
-- Its self-coverage: the rebuild describe blocks in
-  `test-helpers/canonical-schema.test.ts` (:68-118),
-  `test-helpers/canonical-schema-bulk-inbound-fk.test.ts`, and the rebuild
-  tail of `test-helpers/drop-all-tables.test.ts:52`.
+Paths re-verified against `origin/main` 2026-08-09 — the helper and its
+machinery moved to `packages/activerecord/src/support/canonical-table-rebuild.ts`:
+
+- `rebuildCanonicalTables` (`support/canonical-table-rebuild.ts:299-310`) and the
+  machinery that exists only for it: `foreignKeyDependents`, the `scanInbound`
+  arm of `fkSafeDropPlan` (`:109-128`), and `bulkInboundFkHost` (`:192`) —
+  verify no other caller first, see
+  `support/canonical-table-rebuild-bulk-inbound-fk.test.ts`.
+- Its self-coverage: `support/canonical-table-rebuild.test.ts` (the
+  `describe("rebuildCanonicalTables")` block at `:31`) and
+  `support/canonical-table-rebuild-bulk-inbound-fk.test.ts`.
+  `support/drop-all-tables.test.ts` is NOT in scope any more — it no longer
+  calls the helper, and `dropAllTables` has a live caller
+  (`test-setup-dy.ts:87`).
 - Rework `eslint/require-canonical-rebuild.mjs`: it currently REQUIRES calling
   the helper after a canonical drop; with the helper gone it becomes a plain
   ban on dropping/reshaping canonical tables outside the canonical loader's

@@ -19,9 +19,11 @@ closed-reason: null
 
 Shield call sites over the `people`/`cars` family:
 
-- `packages/activerecord/src/locking.test.ts:71` and `:678` (people, ...)
-- `packages/activerecord/src/custom-locking.test.ts:17` (people)
-- `packages/activerecord/src/dirty.test.ts:119` (people, ...)
+Re-verified on `origin/main` 2026-08-09 — all four still present:
+
+- `packages/activerecord/src/locking.test.ts:70` and `:677` (people, ...)
+- `packages/activerecord/src/custom-locking.test.ts:16` (people)
+- `packages/activerecord/src/dirty.test.ts:118` (people, ...)
 
 Note dirty.test has a known mysql:8 shield history (RFC 0028
 dirty-mysql8-shield) - re-verify the culprit from the Phase-1 inventory before
