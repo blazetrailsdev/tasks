@@ -1,7 +1,7 @@
 ---
 title: "Wire unported AR module-config flags (timestampedMigrations, migrationStrategy, fixtures FK verify, YAML coder) into framework behavior"
-status: ready
-updated: 2026-06-25
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Unactionable umbrella that asks to be split rather than converged; its timestampedMigrations item already landed in #5564 (migration.ts nextMigrationNumber / isValidateTimestamp). File per-flag stories with evidence if the remaining flags are still unwired."
 ---
 
 ## Context
