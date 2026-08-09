@@ -1,7 +1,7 @@
 ---
 title: "Memoize GlobalID#modelClass / SignedGlobalID#modelClass per Ruby's @model_class ||="
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not Rails-convergent: a per-instance memo (@model_class ||=) whose only effect is skipping a constantize lookup; the story itself scopes the cost to 'a Map lookup plus two prototype walks'. No observable behavioral divergence."
 ---
 
 ## Context
