@@ -50,4 +50,10 @@ expression.
    the checklist — with tests in `extract-ts-api.test.ts`.
 4. `extractor-skew.ts` (or its test) pins that the two extractors agree on the
    descriptor vocabulary, so the streams cannot drift apart silently.
-5. Additive: the existing `calls` stream is unchanged.
+5. `callArgs` is registered in `EXTRACTOR_OUTPUT_FIELDS`
+   (`extractor-schema.ts:46-58`) so the schema token changes and cache entries
+   predating the field are evicted. This is the **only** story that touches
+   `extractor-schema.ts` — the Ruby extractor's cache keys on its own source
+   content instead (`orchestrate.ts:88-99`) and needs no registration, so the
+   two extractor stories stay parallel-safe with no shared edit.
+6. Additive: the existing `calls` stream is unchanged.

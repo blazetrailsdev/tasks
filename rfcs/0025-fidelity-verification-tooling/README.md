@@ -294,9 +294,13 @@ Cost — six stories, each inside the PR LOC ceiling:
 | `call-args-ratchet-and-ci-step`      | `lint-call-args.ts` clone + scripts + CI step + docs                        |      ~300 |
 | `call-args-baseline-seed`            | generated baseline tree, `main`-only                                        | generated |
 
-Total ~1,050 LOC of hand-written code. The extractor-schema version bump is
-mandatory in both extractor stories — `shared-cache.ts` keys on it, and a stale
-cache would serve argument-less records to the new comparator.
+Total ~1,050 LOC of hand-written code. Cache invalidation differs per side and
+is easy to get backwards: `extractor-schema.ts` governs the **TS** extractor
+cache only (`EXTRACTOR_SOURCES`, `extractor-schema.ts:91`), so `callArgs` is
+registered in `EXTRACTOR_OUTPUT_FIELDS` by the **TS** story alone; the Ruby
+manifest keys on the content hash of `extract-ruby-api.rb` itself
+(`orchestrate.ts:88-99`) and self-invalidates. One registration, one story — the
+two extractor stories share no edit and stay parallel-safe.
 
 **Do not** reuse `arity.ts`: that dimension checks `def` signatures
 (declaration-site parameter counts), not call sites, and its

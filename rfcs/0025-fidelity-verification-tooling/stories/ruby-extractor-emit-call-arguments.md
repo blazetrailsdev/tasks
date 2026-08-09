@@ -55,7 +55,13 @@ _comparator_, not here), and local aliasing is invisible.
    and `Foo.new`.
 3. No call site is double-recorded; a test pins `foo(bar(1))` to exactly two
    sites.
-4. `extractor-schema.ts` version is bumped and `shared-cache.ts` keys on it —
-   a stale cache must not serve argument-less records to the new field.
+4. **No `extractor-schema.ts` change.** That file governs the **TS** extractor
+   cache only (`EXTRACTOR_SOURCES` is `["extract-ts-api.ts",
+"extract-ts-api-worker.mjs"]`, `extractor-schema.ts:91`). The Ruby manifest's
+   shared-cache key is the content hash of `extract-ruby-api.rb` itself
+   (`RAILS_INPUTS` / `railsCacheKey`, `orchestrate.ts:88-99`), so editing the
+   extractor self-invalidates and a stale cache cannot serve argument-less
+   records. Registering `callArgs` belongs in the TS story; do not duplicate it
+   here.
 5. `pnpm api:compare` output and the existing `calls` / `weakCalls` streams are
    byte-identical to before (additive change only).
