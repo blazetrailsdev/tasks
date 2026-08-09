@@ -1,6 +1,6 @@
 ---
 title: "Port test_date.rb — constants, sub, eql?, hash, freeze, infinity comparison, deconstruct_keys"
-status: ready
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of port-test-date (same 9 tests of test_date.rb). Its Date::Infinity dependency is preserved as the standalone story port-date-infinity-from-lib-date-rb."
 ---
 
 ## Context
