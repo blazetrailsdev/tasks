@@ -1,7 +1,7 @@
 ---
 title: "Decide whether --json rows expose effective priority"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence story: it is a tasks-repo CLI JSON-shape decision (scripts/tasks/cli.ts), unrelated to the trails port's fidelity to Rails."
 ---
 
 ## Context
