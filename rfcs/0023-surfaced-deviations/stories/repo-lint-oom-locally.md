@@ -1,7 +1,7 @@
 ---
 title: "pnpm lint OOMs locally at node's default heap"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Local tooling papercut (eslint heap), no Rails-fidelity content."
 ---
 
 ## Context
