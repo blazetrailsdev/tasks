@@ -1,7 +1,7 @@
 ---
 title: "AR _assignAttribute bypasses attribute_writer_missing and the respond_to? re-raise arm"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: persistence.ts:1004 _assignAttribute now calls self.attributeWriterMissing(key, value) on the no-setter arm (attribute_assignment.rb:71-74)."
 ---
 
 ## Context
