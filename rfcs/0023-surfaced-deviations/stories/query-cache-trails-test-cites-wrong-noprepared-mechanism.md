@@ -1,7 +1,7 @@
 ---
 title: "Correct the Rails citation for MySQL's bindless cached payload in query-cache.trails.test.ts"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a behavioral divergence: the story's own analysis says the assertion and behavior are correct and cacheableQuery already mirrors Rails; only a JSDoc citation in a trails-only test is imprecise."
 ---
 
 ## Context
