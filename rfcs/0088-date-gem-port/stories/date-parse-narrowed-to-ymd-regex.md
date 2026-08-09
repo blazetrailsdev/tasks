@@ -1,6 +1,6 @@
 ---
 title: "Widen Date.parse beyond the y-m-d regex"
-status: claimed
+status: closed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,10 +9,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-08-09T16:14:05Z"
-assignee: "date-parse-narrowed-to-ymd-regex"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done on main: the narrow y-m-d regex parse in packages/activesupport/src/date.ts no longer exists — RFC 0088 moved ::Date to packages/date, and Date.parse (packages/date/src/date.ts:4008) now runs a full port of date_parse.c date__parse via Date._parse (date.ts:3948), covering every sub-parser (iso/eu/us/ddd/dot/sla/bc/vms/mdy). Acceptance criteria verified by packages/date/src/date.trails.test.ts:45-70: all conversions.rb doc spellings accepted (2012-12-13, Jul 2 2008, 2nd July 2008, 01/01/2012, 2008-7-2) and 12/13/2012 still raises ArgumentError 'invalid date'. 112/112 tests pass locally."
 ---
 
 # Widen Date.parse beyond the y-m-d regex
