@@ -5,8 +5,7 @@ updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
 packages: ["date"]
-deps:
-  - exclude-test-memsize-from-the-date-test-population
+deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
