@@ -1,7 +1,7 @@
 ---
 title: "Decide whether MacroReflection#name should be honestly typed string | null"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-fidelity convergence: the story itself states Rails is untyped here and there is no Rails behavior to converge to — it is a pure TS soundness preference about one documented cast at reflection.ts:593."
 ---
 
 ## Context
