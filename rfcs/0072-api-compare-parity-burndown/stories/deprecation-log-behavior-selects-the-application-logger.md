@@ -1,6 +1,6 @@
 ---
 title: "Deprecation's :log behavior selects Rails.logger before the stderr fallback"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
