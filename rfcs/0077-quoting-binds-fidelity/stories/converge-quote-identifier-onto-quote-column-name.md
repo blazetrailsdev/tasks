@@ -2,7 +2,7 @@
 title: "converge-quote-identifier-onto-quote-column-name"
 status: draft
 updated: 2026-07-30
-rfc: "0023-surfaced-deviations"
+rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
