@@ -1,7 +1,7 @@
 ---
 title: "Port or retire the sqlite retries busy_handler"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Cannot converge and is not worth tracking: no bound JS sqlite driver exposes sqlite3_busy_handler (only a busy timeout at open), and Rails deprecates :retries for removal in 8.1; the call-site comment already records the deviation."
 ---
 
 ## Context
