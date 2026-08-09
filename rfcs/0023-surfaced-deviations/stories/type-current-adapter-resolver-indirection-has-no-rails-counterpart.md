@@ -1,7 +1,7 @@
 ---
 title: "setCurrentAdapterResolver indirection stands in for Rails' direct ActiveRecord::Base reference"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not convergeable: type.ts cannot name Base without closing an import cycle (base.ts:40 imports type.ts) — the genuine TS shortcoming CLAUDE.md's zero-import-slot idiom sanctions; setCurrentAdapterResolver (type.ts:114) is that idiom."
 ---
 
 ## Context
