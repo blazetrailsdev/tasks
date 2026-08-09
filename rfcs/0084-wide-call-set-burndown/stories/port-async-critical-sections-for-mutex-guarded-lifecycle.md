@@ -1,7 +1,7 @@
 ---
 title: "Restore mutex critical sections that trails drops across an await (adapter/pool lifecycle)"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 280
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T12:53:07Z"
+assignee: "mysql-ddl-implicit-commit-escapes-the-fixture-transaction-pin"
 blocked-by: null
 closed-reason: null
 ---
