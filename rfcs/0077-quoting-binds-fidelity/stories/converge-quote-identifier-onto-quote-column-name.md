@@ -1,7 +1,7 @@
 ---
 title: "converge-quote-identifier-onto-quote-column-name"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of remove-adapter-free-ansi-quoter-fallbacks (0077), which is the up-to-date survivor. Premise was stale: PR #5893 removed the quoteIdentifier adapter methods; a word-boundary grep on main finds 2 references, not ~123 (abstract/quoting.ts:84 and its one consumer sanitization.ts:10) — the earlier count was inflated by substring matches on Rails' real unquoteIdentifier."
 ---
 
 ## Context
