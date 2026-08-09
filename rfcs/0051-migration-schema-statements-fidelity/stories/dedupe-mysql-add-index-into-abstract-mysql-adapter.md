@@ -1,6 +1,6 @@
 ---
 title: "MySQL addIndex is defined twice; Rails defines it only on AbstractMysqlAdapter"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
