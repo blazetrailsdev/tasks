@@ -1,7 +1,7 @@
 ---
 title: "Move default en locale data out of i18n.ts into a locale/en module"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: the default en locale data lives in packages/activesupport/src/locale/en.ts and i18n.ts imports it (i18n.ts:34, enPath at :36)."
 ---
 
 ## Context
