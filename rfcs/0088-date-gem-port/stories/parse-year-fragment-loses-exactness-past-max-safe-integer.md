@@ -1,5 +1,5 @@
 ---
-title: "parse-year-fragment-loses-exactness-past-max-safe-integer"
+title: "Date._parse's year fragment loses exactness past MAX_SAFE_INTEGER, where Ruby's String#to_i is exact"
 status: ready
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 140
 priority: null
 pr: null
 claim: null
