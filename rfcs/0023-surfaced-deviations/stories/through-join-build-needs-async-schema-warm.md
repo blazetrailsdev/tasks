@@ -1,7 +1,7 @@
 ---
 title: "Through join-row build needs an async schema warm before construction"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a Rails-convergence item: the inline ensureSchemaLoaded (has-many-through-association.ts:688) is forced by trails' async schema reflection, which has no Rails counterpart to converge onto; the story asks for an architecture decision (one chokepoint warm vs per-site waits) rather than a fix that moves a ported body closer to Rails. The deviation is already justified at the call site."
 ---
 
 # Through join-row build needs an async schema warm before construction
