@@ -2,7 +2,7 @@
 title: "SQLite3Adapter builds its statement pool in a field initializer, before the config is read"
 status: draft
 updated: 2026-08-04
-rfc: "0023-surfaced-deviations"
+rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
