@@ -1,6 +1,6 @@
 ---
 title: "removeConstraint builds a bare AlterTable instead of create_alter_table"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: 6287
 claim: "2026-08-09T16:19:35Z"
 assignee: "converge-create-table-force-arm-to-rails-unconditional-drop-table"
 blocked-by: null
