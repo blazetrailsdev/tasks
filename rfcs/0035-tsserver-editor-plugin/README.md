@@ -72,10 +72,17 @@ The plan assumed the plugin would be **new greenfield code** at
    about AR models. So the integration point the plan describes is _already
    built and proven in tsserver_ — for a different file type.
 
-3. **The AR virtualizer is not wired into `trails-tsc` at all** — neither the
-   CLI host nor the LSP plugin registers an `ar-models` `TscPlugin`. There is
-   no `packages/activerecord/bin/trails-tsc.js`. The AR `virtualize()` is
-   reachable only from its own tests.
+3. ~~**The AR virtualizer is not wired into `trails-tsc` at all**~~ — **half
+   resolved since this RFC was written.** Re-verified 2026-08-09: the CLI side
+   HAS shipped. `createArModelsPlugin(): TscPlugin` lives at
+   `packages/activerecord-cli/src/tsc-wrapper/ar-models-plugin.ts:41` and is
+   registered by `tsc-wrapper/ar-program.ts:31,57`. Note the package: it landed
+   in **`activerecord-cli`**, not `activerecord`, which keeps the node-free
+   boundary below intact and supersedes the `packages/activerecord/src/ar-tsc-plugin.ts`
+   location in the diagram. The **LSP** side is untouched:
+   `packages/trails-tsc/src/lsp-plugin.ts` still dispatches on `.tse` alone
+   (`:102`, `:109`, `:121`) and knows nothing about AR models — which is the
+   entire remaining scope of this RFC.
 
 **Consequence for the architecture:** the plan's "new tsserver-plugin
 directory under activerecord" is the wrong shape. The right shape is to wrap
