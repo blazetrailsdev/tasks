@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api.ts emits per-call-site argument descriptors"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0095-call-argument-parity"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 170
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T22:56:32Z"
+assignee: "ts-extractor-emit-call-arguments"
 blocked-by: null
 closed-reason: null
 ---
