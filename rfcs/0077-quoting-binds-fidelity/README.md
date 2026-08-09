@@ -1,9 +1,9 @@
 ---
 rfc: "0077-quoting-binds-fidelity"
 title: "Adapter quoting and bind-param fidelity"
-status: draft
+status: active
 created: 2026-07-26
-updated: 2026-07-27
+updated: 2026-08-09
 owner: "@deanmarano"
 packages:
   - "activerecord"
