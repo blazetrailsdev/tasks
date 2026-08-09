@@ -1,6 +1,6 @@
 ---
 title: "Inline binds when preparedStatements is off (Rails non-prepared to_sql_and_binds branch)"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

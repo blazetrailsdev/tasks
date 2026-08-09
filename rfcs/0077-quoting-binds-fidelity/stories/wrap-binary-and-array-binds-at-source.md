@@ -1,6 +1,6 @@
 ---
 title: "Wrap binary/array binds in Data at the source so type_cast needs no bare-JS arms"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
