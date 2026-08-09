@@ -1,6 +1,6 @@
 ---
 title: "Deprecation's :report behavior reports through a ported ActiveSupport.errorReporter"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T15:40:10Z"
+assignee: "mysql-schema-creation-quoted-columns-reimplements-the-delegated-decoration"
 blocked-by: null
 closed-reason: null
 ---
