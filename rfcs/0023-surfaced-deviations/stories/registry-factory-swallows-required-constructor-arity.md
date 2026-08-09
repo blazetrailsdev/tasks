@@ -1,7 +1,7 @@
 ---
 title: "type registry factory silently builds classes with required constructor positionals (OID::Vector)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ruby's ArgumentError on missing constructor positionals is interpreter-level arity enforcement TS has no analogue for; the registry factory shape itself matches type.rb. Corelib territory (postponed)."
 ---
 
 ## Context
