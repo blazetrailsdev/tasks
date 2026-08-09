@@ -1,7 +1,7 @@
 ---
 title: "Retire isReplica's invented pool.dbConfig.replica and role=reading branches"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: abstract-adapter.ts:1510-1512 isReplica() is now the two-line Rails read (this._config.replica ?? false, abstract_adapter.rb:199-201); the pool.dbConfig.replica and role==='reading' branches are gone."
 ---
 
 ## Context
