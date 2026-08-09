@@ -1,7 +1,7 @@
 ---
 title: "date-temporal-default-return-and-ruby-opt-in"
-status: ready
-updated: 2026-08-08
+status: done
+updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6264
 claim: null
 assignee: null
 blocked-by: null
