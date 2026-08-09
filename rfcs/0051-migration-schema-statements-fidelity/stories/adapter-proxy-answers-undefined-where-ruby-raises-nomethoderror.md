@@ -1,6 +1,6 @@
 ---
 title: "The adapter proxy answers undefined for a name no adapter defines; Ruby raises NoMethodError"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6273
 claim: "2026-08-09T02:00:45Z"
 assignee: "fixture-teardown-has-no-delete-rails-deletes-at-next-load"
 blocked-by: null
