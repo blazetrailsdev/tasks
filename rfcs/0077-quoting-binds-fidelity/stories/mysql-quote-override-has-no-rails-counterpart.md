@@ -1,6 +1,6 @@
 ---
 title: "Delete the MySQL quote override — Rails' mysql/quoting.rb has none"
-status: claimed
+status: closed
 updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-09T19:09:16Z"
-assignee: "mysql-quote-override-has-no-rails-counterpart"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of mysql-quote-override-absent-in-rails, which predates it and carries the fuller Rails anchoring (the non-finite-Float arm history as well as the String/Symbol arms). Filed mid-flight on PR #6288 before spotting the existing row; keep the older story."
 ---
 
 ## Context
