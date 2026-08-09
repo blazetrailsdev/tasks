@@ -1,6 +1,6 @@
 ---
 title: "Retire the per-test DDL adapter monkey-patching by clearing the schema cache where Rails does"
-status: in-progress
+status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
 cluster: null
