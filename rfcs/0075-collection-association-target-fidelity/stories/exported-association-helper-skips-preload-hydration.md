@@ -1,7 +1,7 @@
 ---
 title: "Exported association() skips preload hydration for uncached proxies"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: the exported association() now hydrates a freshly-constructed proxy — associations.ts:1816-1825 calls _adoptSharedTarget from the instance and then _hydrateFromPreload(_preloadedHolderTarget(...)) on the non-cached path, matching the existing-proxy branch at :1760-1766."
 ---
 
 ## Context
