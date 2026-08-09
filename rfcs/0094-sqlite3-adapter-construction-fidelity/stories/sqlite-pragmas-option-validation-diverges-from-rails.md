@@ -2,7 +2,7 @@
 title: "sqlite3: pragmas option gating, warning text and value coercion diverge from Rails"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
