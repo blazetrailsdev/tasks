@@ -1,7 +1,7 @@
 ---
 title: "unify-three-range-value-shapes"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Internal refactor onto an admittedly unanchored target (range-ext.ts is @noRailsEquivalent PERMANENT); does not converge behaviour toward Rails. Revisit only if 0000-corelib-primitives is reactivated."
 ---
 
 ## Context
