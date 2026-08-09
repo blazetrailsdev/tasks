@@ -1,7 +1,7 @@
 ---
 title: "Converge adapter-prevent-writes onto the canonical subscribers shape"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already done: adapter-prevent-writes.test.ts:15 now uses fixtures([]) against the canonical schema; the inline CREATE TABLE subscribers is gone."
 ---
 
 ## Context
