@@ -1,6 +1,6 @@
 ---
 title: "DateTime's constructor fraction bounds ignore the offset and start positions argc counts"
-status: ready
+status: claimed
 updated: 2026-08-09
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T18:49:36Z"
+assignee: "datetime-constructor-fraction-bound-ignores-offset-and-start"
 blocked-by: null
 closed-reason: null
 ---

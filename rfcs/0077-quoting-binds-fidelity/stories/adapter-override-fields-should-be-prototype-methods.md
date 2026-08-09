@@ -1,7 +1,7 @@
 ---
 title: "Adapter override assignments are class fields, not prototype methods (Rails uses def)"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-09
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-09T18:49:36Z"
+assignee: "datetime-constructor-fraction-bound-ignores-offset-and-start"
 blocked-by: null
 closed-reason: null
 ---
