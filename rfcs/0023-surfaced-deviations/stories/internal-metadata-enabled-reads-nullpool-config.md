@@ -1,6 +1,6 @@
 ---
 title: "internal-metadata-enabled-reads-nullpool-config"
-status: draft
+status: done
 updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6270
 claim: null
 assignee: null
 blocked-by: null
