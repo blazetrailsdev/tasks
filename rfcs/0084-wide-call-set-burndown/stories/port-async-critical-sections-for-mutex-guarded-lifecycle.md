@@ -1,6 +1,6 @@
 ---
 title: "Restore mutex critical sections that trails drops across an await (adapter/pool lifecycle)"
-status: claimed
+status: in-progress
 updated: 2026-08-09
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: 6277
 claim: "2026-08-09T12:53:07Z"
 assignee: "mysql-ddl-implicit-commit-escapes-the-fixture-transaction-pin"
 blocked-by: null
