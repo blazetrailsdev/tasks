@@ -1,6 +1,6 @@
 ---
 title: "Shard the test-compare output artifacts"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0097-parity-output-sharding"
 cluster: api-compare
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "not wanted"
 ---
 
 ## Context
