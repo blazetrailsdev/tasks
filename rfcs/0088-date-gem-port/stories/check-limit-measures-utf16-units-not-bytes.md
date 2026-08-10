@@ -1,6 +1,6 @@
 ---
 title: "check-limit-measures-utf16-units-not-bytes"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
