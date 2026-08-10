@@ -1,6 +1,6 @@
 ---
 title: "check-limit-measures-utf16-units-not-bytes"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6341
 claim: "2026-08-10T15:09:04Z"
 assignee: "check-limit-measures-utf16-units-not-bytes"
 blocked-by: null
