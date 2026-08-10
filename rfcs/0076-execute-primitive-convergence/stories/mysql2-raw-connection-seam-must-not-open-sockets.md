@@ -1,6 +1,6 @@
 ---
 title: "mysql2: the withRawConnection acquisition seam opens sockets Rails never opens in the loop"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
