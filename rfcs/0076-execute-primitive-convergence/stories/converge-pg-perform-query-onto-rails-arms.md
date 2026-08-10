@@ -39,12 +39,23 @@ trails-invented `_runQuery` helper (`postgresql-adapter.ts`, the
 prepared-statement + invalid-cached-plan retry path) and `_flushWarnings`, which
 Rails has no counterpart for — `perform_query` IS that code in Rails.
 
+`handle_warnings` is worse than a "different path": `postgresql/database-statements.ts`
+carries a **stub** port of it — `handleWarnings(result)`, wrong parameter (Rails'
+takes `sql`, `postgresql/database_statements.rb:216`), a `TODO`, and no
+`db_warnings_action` dispatch — assigned to the prototype beside the live
+`_flushWarnings(sql)` on the adapter, which is the real port of that method
+under a trails name. Converging it means deleting the stub and giving
+`_flushWarnings` the Rails name and call site.
+
 ## Acceptance criteria
 
 - [ ] `performQuery` inlines Rails' three arms (`prepare` → `prepare_statement` + `exec_prepared` with the `PG::FeatureNotSupported` rescue; empty binds →
       `async_exec`; otherwise `exec_params`) rather than delegating to
       `_runQuery`.
-- [ ] `handle_warnings` is called from `performQuery` under its Rails name.
+- [ ] `handle_warnings` is called from `performQuery` under its Rails name: the
+      stub in `postgresql/database-statements.ts` is deleted and
+      `_flushWarnings(sql)` takes its name, keeping the api:compare match on the
+      `postgresql/database_statements.rb` file.
 - [ ] `_runQuery` is removed, or reduced to whatever genuinely has no Rails
       counterpart, with its remaining callers converged.
 - [ ] The four baseline rows above are deleted from
