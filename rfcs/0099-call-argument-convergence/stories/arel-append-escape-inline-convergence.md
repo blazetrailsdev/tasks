@@ -5,7 +5,8 @@ updated: 2026-08-10
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
-deps: []
+deps:
+  - arel-collector-argument-order-convergence
 deps-rfc: []
 est-loc: null
 priority: null
