@@ -1,6 +1,6 @@
 ---
 title: "Dot visitor visit_edge sites pass labels and edges Rails does not"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6317
 claim: "2026-08-10T01:46:38Z"
 assignee: "port-test-date-arith-fractional-arms"
 blocked-by: null
