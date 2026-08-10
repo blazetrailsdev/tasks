@@ -88,7 +88,7 @@
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
 | [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | closed | @deanmarano | activerecord, arel, actiondispatch, actioncontroller, activesupport |
 | [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | active | @deanmarano | activerecord, arel, activesupport |
-| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | active | @deanmarano | activerecord |
+| [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @deanmarano | activerecord |
 | [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @deanmarano | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | active | @deanmarano | activerecord |
 | [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | active | @deanmarano | date, i18n, activesupport, activemodel, activerecord |
