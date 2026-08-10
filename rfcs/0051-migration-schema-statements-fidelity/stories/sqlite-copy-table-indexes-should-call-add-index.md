@@ -1,6 +1,6 @@
 ---
 title: "copy_table_indexes hand-builds CREATE INDEX instead of calling add_index"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6315
 claim: "2026-08-10T01:16:46Z"
 assignee: "date-infinity-has-none-of-numerics-inherited-comparable-surface"
 blocked-by: null
