@@ -26,11 +26,11 @@ surface, not on "no open stories left" — the inventory was assembled per-file
 from PR-surfaced findings, and at least one story's premise had already gone
 stale on main without anyone noticing. All five must hold together:
 
-1. `pnpm api:compare --package activerecord`, read scoped to
+1. `pnpm parity:api --package activerecord`, read scoped to
    `abstract/quoting.rb`, `mysql/quoting.rb`, `postgresql/quoting.rb` and
    `sqlite3/quoting.rb`: every Ruby method in those files is matched, or has a
    `SKIP_GROUPS` entry carrying a reason.
-2. `pnpm api:extra --package activerecord` reports no un-tagged extra name in
+2. `pnpm parity:api:extra --package activerecord` reports no un-tagged extra name in
    those four files. A surviving `@noRailsEquivalent` needs a reviewed reason.
 3. Every `call-mismatches-exclude` row under those four files is enumerated and
    is either deleted (converged) or carries a reason naming the Rails

@@ -1,5 +1,5 @@
 ---
-title: "api:build: lower the per-file unreviewed marks for rows it drops"
+title: "parity:api:build: lower the per-file unreviewed marks for rows it drops"
 status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`api:build` migrates wide-baseline rows into `@missingRailsCall` JSDoc tags and
+`parity:api:build` migrates wide-baseline rows into `@missingRailsCall` JSDoc tags and
 drops them from the split baseline —
 `scripts/api-compare/build.ts:457-459` filters `wideBaseline` down to
 `remaining` and calls `writeSplitBaseline(remaining, WIDE_BASELINE_DIR)` — but
@@ -28,8 +28,8 @@ Every dropped row that still carried the seeded `DEFAULT_REASON` therefore
 leaves its source's shard stale-HIGH. The wide gate's slack arm
 (`unreviewed-ratchet.ts#slackByPath`, consumed at
 `lint-call-mismatches-wide.ts:470`) then reds on the next run, and the only fix
-is a full `pnpm api:calls:wide:reseed` — a compare regeneration the author of an
-`api:build` run did not otherwise need.
+is a full `pnpm parity:api:calls:reseed` — a compare regeneration the author of an
+`parity:api:build` run did not otherwise need.
 
 This predates the shard (PR #5922); the global mark had the same gap. Sharding
 makes it cheap to fix precisely: `build.ts` already knows exactly which
@@ -39,7 +39,7 @@ is preserved for free — `nextMarks` takes the min.
 
 ## Acceptance criteria
 
-- After `api:build --package <pkg>` drops seeded rows, `pnpm api:calls:wide`
+- After `parity:api:build --package <pkg>` drops seeded rows, `pnpm parity:api:calls`
   passes with no slack arm firing and no separate reseed.
 - The marks are lowered ONLY for sources `build.ts` actually rewrote; every
   other shard is byte-identical (a `--package`-scoped run must not rewrite the

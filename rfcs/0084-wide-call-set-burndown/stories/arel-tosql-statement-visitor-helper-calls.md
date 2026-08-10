@@ -20,7 +20,7 @@ closed-reason: null
 
 ## Context
 
-B1 slice, from the 2026-08-04 re-measure (`API_COMPARE_FORCE=1 pnpm api:compare
+B1 slice, from the 2026-08-04 re-measure (`API_COMPARE_FORCE=1 pnpm parity:api
 --wide-calls` on a full build; arel carries 41 live wide rows, matching the
 baseline exactly). This slice is the 14 rows confined to
 `packages/arel/src/visitors/to-sql.ts` — one file, one PR, mechanical.

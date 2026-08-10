@@ -74,4 +74,4 @@ to the single rb:241 call.
       `SerializeCastValue.serialize(type, type.cast(value))`.
 - [ ] `insert_all` / `upsert_all` green on all three adapters, including a
       column present in the table but not declared as an attribute.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

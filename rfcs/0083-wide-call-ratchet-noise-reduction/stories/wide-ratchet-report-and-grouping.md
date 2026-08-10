@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:calls:wide` prints only flat `+ added` / `- stale` lists
+`pnpm parity:api:calls` prints only flat `+ added` / `- stale` lists
 (`scripts/api-compare/lint-call-mismatches-wide.ts:255-281`). With 4794
 baselined entries across 505 files there is no way to see where the population
 lives or why, so no one can pick a coherent chunk of work off it.

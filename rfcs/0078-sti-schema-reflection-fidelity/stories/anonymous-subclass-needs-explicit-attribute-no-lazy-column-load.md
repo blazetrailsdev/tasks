@@ -42,4 +42,4 @@ otherwise removed every workaround from that describe block.
 - `AdapterForeignKeyTest`'s `KlassHasFk` drops the
   `this.attribute("fk_id", "integer")` line and its explanatory comment, and
   still passes.
-- No test renamed; `test:compare` delta >= 0.
+- No test renamed; `parity:test` delta >= 0.

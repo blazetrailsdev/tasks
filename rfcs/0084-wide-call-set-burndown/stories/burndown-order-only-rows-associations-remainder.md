@@ -72,4 +72,4 @@ fix the extractor (or record it) rather than the port.
 - [ ] Each converged row is DELETED from its shard by hand via
       `serializeBaseline` (only-shrink; no `--write`/reseed).
 - [ ] No row is closed by rewording its reason; no new `order:` row added.
-- [ ] `pnpm api:calls` green and the AR suites pass on all three adapter lanes.
+- [ ] `pnpm parity:api:calls` green and the AR suites pass on all three adapter lanes.

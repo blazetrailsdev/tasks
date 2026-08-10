@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:detached` (`scripts/api-compare/lint-detached-jsdoc-tags.ts`, PR 5668) checks only `packages/<pkg>/src` — the population `api:reasons` uses,
+`pnpm parity:api:detached` (`scripts/api-compare/lint-detached-jsdoc-tags.ts`, PR 5668) checks only `packages/<pkg>/src` — the population `parity:api:reasons` uses,
 chosen because that is where `@internal` / `@noRailsEquivalent` carry
 api-compare meaning. But the defect that motivated the lint happened in
 `scripts/api-compare/extract-ts-api.ts` (PR 5654: a helper inserted between
@@ -33,7 +33,7 @@ on.
 
 ## Acceptance criteria
 
-- `api:detached` also checks every `.ts` under `scripts/`.
+- `parity:api:detached` also checks every `.ts` under `scripts/`.
 - Report how many detachments the extended population finds; fix any real ones.
 - Same CI step, no new job.
 - Tests cover the extended file listing.

@@ -27,7 +27,7 @@ name is a **class declaration**, and `noRailsEquivalentReason`
 (`scripts/api-compare/extract-ts-api.ts:1273`) is only called from member,
 statement and property emit sites — there is no class-declaration call
 site. The tag was written on the class and silently had no effect
-(`api:extra` still reported 1 novel) until the entry was restored to the
+(`parity:api:extra` still reported 1 novel) until the entry was restored to the
 JSON.
 
 This blocks [[retire-extra-surface-allow-json]]: the JSON cannot be
@@ -47,7 +47,7 @@ exports it as a sibling and re-attaches it as `NullPool.NullConfig`.
 - Verify against the live case: tag `NullConfig` in
   `connection-adapters/abstract/connection-pool.ts`, drop its
   `extra-surface-allow.json` entry, and confirm
-  `pnpm api:extra --package activerecord` still reports that file at
+  `pnpm parity:api:extra --package activerecord` still reports that file at
   0 novel with the tag counted and not stale.
 - Audit the remaining `extra-surface-allow.json` entries for other
   declaration kinds with no inline form, so

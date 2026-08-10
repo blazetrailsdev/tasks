@@ -49,7 +49,7 @@ other story that wants the Rails raw path.
       `rawExecute` call in an adapter test, not only through `internalExecute`).
       PostgreSQL moved to `converge-pg-perform-query-onto-rails-arms` — see the
       2026-08-10 update below.
-- [ ] api:compare / test:compare delta non-negative; all three lanes green.
+- [ ] parity:api / parity:test delta non-negative; all three lanes green.
 
 ## Update 2026-08-09 (PR #6313)
 

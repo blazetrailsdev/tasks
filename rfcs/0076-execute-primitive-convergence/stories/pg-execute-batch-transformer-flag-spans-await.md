@@ -69,4 +69,4 @@ concurrency defect in the meantime.
       transformers, not because a flag suppressed them.
 - [ ] A regression test in the PG lane mirroring the sqlite3 one: a query issued
       concurrently with an in-flight `executeBatch` keeps its QueryLogs comment.
-- [ ] `pnpm api:calls` non-negative; no new baseline row.
+- [ ] `pnpm parity:api:calls` non-negative; no new baseline row.

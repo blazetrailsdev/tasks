@@ -49,6 +49,6 @@ lint's file population.
 - `extract-ts-api.test.ts`'s two `getAllTsFiles` assertions move onto
   `walkTsFilesSync` (or are dropped if `ts-file-walk.test.ts` already covers the
   same ground — it covers both populations and `excludeDirs` pruning).
-- `api:extra` / `api:compare` report identical counts before and after; this is
+- `parity:api:extra` / `parity:api` report identical counts before and after; this is
   a pure rename-through, no behaviour change.
 - No new third-party deps.

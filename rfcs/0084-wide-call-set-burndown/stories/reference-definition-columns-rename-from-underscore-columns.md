@@ -62,8 +62,8 @@ Per `feedback_fidelity_of_names_is_the_primary_goal`, the Rails name wins.
       `call-mismatches-wide-exclude/activerecord/connection-adapters/abstract/schema-definitions.json`
       and `lint-call-mismatches-wide.ts` reports OK (the ratchet only shrinks,
       so a converged entry left in the baseline is itself a CI failure).
-- [ ] `api:compare --package activerecord` and
-      `test:compare --package activerecord` deltas are non-negative;
-      `test:compare --gates --check` exits 0.
+- [ ] `parity:api --package activerecord` and
+      `parity:test --package activerecord` deltas are non-negative;
+      `parity:test --gates --check` exits 0.
 - [ ] `schema-definitions.trails.test.ts` (`ReferenceDefinition#add`) and
       `connection-adapters/abstract/` stay green.

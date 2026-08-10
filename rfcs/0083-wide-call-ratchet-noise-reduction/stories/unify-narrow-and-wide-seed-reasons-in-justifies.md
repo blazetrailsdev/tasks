@@ -26,7 +26,7 @@ per-cluster burndown review."), which is module-private and not exported.
 
 So a `@missingRailsCall` tag carrying the RFC 0044 seed WOULD satisfy
 `justifies()` and suppress its wide flag, blessing a row nobody reviewed. The
-same asymmetry runs through `api:build` (#5857): after that PR the generator
+same asymmetry runs through `parity:api:build` (#5857): after that PR the generator
 skips minting a tag for a wide-seeded row, but would happily mint one for a
 narrow-seeded row and migrate it out of the baseline.
 
@@ -43,9 +43,9 @@ gate and needs its own before/after count.
 - Both seed strings are known to one predicate: export the narrow
   `DEFAULT_REASON` (or move both into `missing-rails-call-tags.ts`) and have
   `justifies()` reject each.
-- `api:build` mints no tag for a narrow-seeded row either, matching the wide
+- `parity:api:build` mints no tag for a narrow-seeded row either, matching the wide
   policy shipped in #5857.
-- Record the before/after `api:calls:wide` count in the PR body; the gate must
+- Record the before/after `parity:api:calls` count in the PR body; the gate must
   not silently move.
 - Unit coverage in `missing-rails-call-tags.test.ts` for a tag carrying the
   narrow seed, alongside the existing wide-seed case.

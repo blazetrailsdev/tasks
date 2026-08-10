@@ -65,7 +65,7 @@ adapters still need the shared helper — confirm each of those has its own
 Rails counterpart and is wired the same way.
 
 Do NOT resolve this by deleting the port: `write_query?` is a real Rails
-method in a Rails-matched file and `api:compare` credits it.
+method in a Rails-matched file and `parity:api` credits it.
 
 ## Acceptance criteria
 
@@ -76,4 +76,4 @@ method in a Rails-matched file and `api:compare` credits it.
 - [ ] A test pins the `:pragma` arm — `PRAGMA foreign_keys` is a read,
       `PRAGMA foreign_keys = OFF` is a write — through the public
       `whilePreventingWrites` guard.
-- [ ] `pnpm api:calls` and `pnpm api:extra --package activerecord` stay green.
+- [ ] `pnpm parity:api:calls` and `pnpm parity:api:extra --package activerecord` stay green.

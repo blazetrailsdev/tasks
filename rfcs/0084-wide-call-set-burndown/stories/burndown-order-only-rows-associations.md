@@ -58,4 +58,4 @@ the whole ledger; file siblings for the other clusters.
 - [ ] Any re-sorting of a shard uses `compareKeys` (code-unit), not
       `localeCompare` — the latter mis-collates keys differing past punctuation
       (`joins!` vs `joins_values`) and reds the reseed-drift gate.
-- [ ] `pnpm api:calls` green and the AR suites pass on all three adapter lanes.
+- [ ] `pnpm parity:api:calls` green and the AR suites pass on all three adapter lanes.

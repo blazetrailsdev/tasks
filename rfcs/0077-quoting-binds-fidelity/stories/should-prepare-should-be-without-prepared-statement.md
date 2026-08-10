@@ -55,5 +55,5 @@ converging the name should also collapse the two duplicate definitions.
 - [ ] `_shouldPrepare` is gone from both adapters; `withoutPreparedStatement`
       exists once on `AbstractAdapter`.
 - [ ] Call sites read the inverted form, matching `abstract_adapter.rb:1177`.
-- [ ] `pnpm api:extra --package activerecord` loses the two novel rows.
-- [ ] api:compare / test:compare delta non-negative; all three lanes green.
+- [ ] `pnpm parity:api:extra --package activerecord` loses the two novel rows.
+- [ ] parity:api / parity:test delta non-negative; all three lanes green.

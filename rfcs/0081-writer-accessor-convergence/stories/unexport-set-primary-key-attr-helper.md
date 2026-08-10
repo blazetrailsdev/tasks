@@ -45,4 +45,4 @@ Second call site to keep working: `primary-key.ts:254`.
   from any barrel/index re-export, per the shape-1 rule.
 - `Base.primaryKey =` and the `primary-key.ts:254` caller keep working;
   primary-key and composite-PK tests pass with names unchanged.
-- `pnpm api:extra` reports one fewer activerecord extra and no stale entries.
+- `pnpm parity:api:extra` reports one fewer activerecord extra and no stale entries.

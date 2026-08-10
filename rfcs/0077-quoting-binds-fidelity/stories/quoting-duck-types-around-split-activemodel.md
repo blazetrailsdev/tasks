@@ -65,4 +65,4 @@ already there.
       the `isBinaryData` helper is deleted.
 - [ ] PG binary round-trip (bytes 128-255) and the bind paths stay green on all
       three adapters.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

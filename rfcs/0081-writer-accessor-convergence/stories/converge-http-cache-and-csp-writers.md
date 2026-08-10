@@ -46,5 +46,5 @@ predicates, which are NOT in scope here.
 - Call sites switch to assignment (`response.etag = value`), matching how Rails
   writes it.
 - Tests keep their Rails-verbatim names and pass unchanged.
-- `pnpm api:compare` matches the `foo=` writers; `pnpm api:extra` shows 7 fewer
+- `pnpm parity:api` matches the `foo=` writers; `pnpm parity:api:extra` shows 7 fewer
   extras for actionpack and no stale entries.

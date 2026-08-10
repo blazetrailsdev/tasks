@@ -88,7 +88,7 @@ into crashes in the middle of an unrelated PR.
       ANSI fallback.
 - [ ] A test pins that an adapter-shaped receiver whose override is absent
       **raises** rather than returning the abstract answer.
-- [ ] `pnpm api:extra --package activerecord` shows the eight names gone and no
-      new surface; `pnpm api:calls` green.
+- [ ] `pnpm parity:api:extra --package activerecord` shows the eight names gone and no
+      new surface; `pnpm parity:api:calls` green.
 - [ ] Quoting/sanitization/schema-creation suites green on sqlite3, postgresql,
       mysql2.

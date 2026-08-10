@@ -29,7 +29,7 @@ Found while landing `ts-extractor-emit-call-arguments` (#6304). `callArgs`
 avoids it — `walkForCallArgs` starts at the body node — and the fix there is a
 one-line precedent (`visit(node)` in place of `ts.forEachChild(node, visit)`),
 deliberately NOT applied to the sibling streams in that PR because it moves the
-`api:calls` population and belongs in its own measured change.
+`parity:api:calls` population and belongs in its own measured change.
 
 The Ruby side has no such gap: `walk_for_calls` (`extract-ruby-api.rb`) is
 handed the whole body node and dispatches on it directly, so Ruby credits the
@@ -43,7 +43,7 @@ arel's visitor tables.
 
 1. `collectCalls` and `extractSkeleton` credit an expression-bodied arrow's
    outermost call, matching `walkForCallArgs`.
-2. The `api:calls` artifact is regenerated and the row movement reported in the
+2. The `parity:api:calls` artifact is regenerated and the row movement reported in the
    PR body — a newly-credited call can CLOSE a mismatch row (delete it, the
    baseline is only-shrink) or surface a new one.
 3. A test pins `const f = (x) => where(x)` crediting `where` in `calls`,

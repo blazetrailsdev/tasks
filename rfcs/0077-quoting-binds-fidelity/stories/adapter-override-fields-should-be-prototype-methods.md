@@ -68,7 +68,7 @@ fields (Rails class attributes) and are **not** in scope.
       to compensate collapses back to a bare `Object.create(Proto)`.
 - [ ] A regression guard asserts a prototype-derived host resolves these through
       the adapter override rather than the abstract fallback.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

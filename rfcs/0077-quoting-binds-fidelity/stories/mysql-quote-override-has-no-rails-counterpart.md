@@ -54,6 +54,6 @@ the adapter's inherited `quote` instead.
       `quote` override.
 - [ ] MySQL literals render identically (strings backslash-escaped, dates
       microsecond-capped via `quotedDate`, booleans `TRUE`/`FALSE`).
-- [ ] `pnpm api:extra --package activerecord` loses the two rows; api:compare /
-      test:compare delta non-negative.
+- [ ] `pnpm parity:api:extra --package activerecord` loses the two rows; parity:api /
+      parity:test delta non-negative.
 - [ ] MySQL/MariaDB CI green.

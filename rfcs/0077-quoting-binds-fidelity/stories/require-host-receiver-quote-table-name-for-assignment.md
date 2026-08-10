@@ -57,7 +57,7 @@ outside that story's scope:
   via `quoteTableName.call(this, ...)`, so a receiver-less call is a compile error.
 - The three callers above bind a host explicitly; `ABSTRACT_QUOTER` keeps its
   current ANSI output (no behavior change to sanitization).
-- Quoting + sanitization suites pass; api:compare / test:compare delta non-negative.
+- Quoting + sanitization suites pass; parity:api / parity:test delta non-negative.
 - The wide call-set ratchet entry for this defect is removed: `connection-adapters/abstract/quoting.ts`
   / `quote_default_expression` / `quote → quote`. Reseed with
   `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit

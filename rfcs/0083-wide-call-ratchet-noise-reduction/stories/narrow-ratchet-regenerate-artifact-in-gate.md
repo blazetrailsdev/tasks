@@ -1,5 +1,5 @@
 ---
-title: "Regenerate the narrow artifact inside api:calls"
+title: "Regenerate the narrow artifact inside parity:api:calls"
 status: done
 updated: 2026-08-02
 rfc: "0083-wide-call-ratchet-noise-reduction"
@@ -20,7 +20,7 @@ closed-reason: null
 PR #5729 made the WIDE gate regenerate its artifact before gating
 (`scripts/api-compare/lint-call-mismatches-wide.ts`, `shouldRegenerate` /
 `regenerateArtifact`): a plain run and a bare `--write` shell out to
-`pnpm api:compare --wide-calls` first, with `--no-regen`,
+`pnpm parity:api --wide-calls` first, with `--no-regen`,
 `API_COMPARE_SKIP_WIDE_REGEN=1`, `CI`, and (for `--write`)
 `API_COMPARE_FORCE` as opt-outs.
 
@@ -32,7 +32,7 @@ reports `STALE baseline entr(ies)` for a change the branch never made.
 
 ## Acceptance criteria
 
-- `pnpm api:calls` (narrow gate) regenerates `output/call-mismatches.json`
+- `pnpm parity:api:calls` (narrow gate) regenerates `output/call-mismatches.json`
   before gating, reusing the wide gate's opt-out contract rather than
   inventing a second one — ideally by lifting `shouldRegenerate` /
   `regenerateArtifact` into a shared module both gates import.

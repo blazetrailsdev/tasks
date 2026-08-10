@@ -69,4 +69,4 @@ producer divergence).
 - [ ] Adding a new arm to the abstract `typeCast` requires exactly one edit —
       demonstrate with the rb:96 binary arm by removing the two inlined copies.
 - [ ] Binary, temporal, boolean and integer binds round-trip unchanged on all
-      three adapters; api:compare / test:compare delta non-negative.
+      three adapters; parity:api / parity:test delta non-negative.

@@ -35,8 +35,8 @@ export interface LocatorModel {
 The two spellings `find(id): T` and `find: (id) => T` are interchangeable in
 TypeScript, so whether a member enters the compared surface depends on the
 author's syntax choice rather than on the API. A property-signature port of a
-Rails method is invisible to `api:compare` (never counted missing) and to
-`api:extra` (never counted extra).
+Rails method is invisible to `parity:api` (never counted missing) and to
+`parity:api:extra` (never counted extra).
 
 Note the neighbouring `extends`-resolution path in the same function does NOT
 have this blind spot — it takes every symbol whose type has call signatures,
@@ -52,5 +52,5 @@ Pre-existing, not introduced by PR 5467.
 - Decide what to do with non-callable property signatures (`name: string`) —
   Rails `attr_reader`s port as getters and DO count elsewhere, so excluding
   them here may be its own divergence; state the rule in the script.
-- Re-measure `api:extra` and `api:compare` totals; the new members may surface
+- Re-measure `parity:api:extra` and `parity:api` totals; the new members may surface
   drift that was previously invisible.

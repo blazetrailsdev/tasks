@@ -23,7 +23,7 @@ priority: 0
 
 ## Summary
 
-The RFC 0047 wide call-set ratchet (`pnpm api:calls:wide`) currently baselines
+The RFC 0047 wide call-set ratchet (`pnpm parity:api:calls`) currently baselines
 **4794 entries across 505 files and 13 packages**, of which **4445 (92.7%) still
 carry the verbatim `Baseline (RFC 0047)` seed reason** — never reviewed by a
 human. The list is too large and too noisy to burn down, and it fails PRs for
@@ -44,7 +44,7 @@ entry means something.
 | Core predicate  | `significantMissingCalls` (`compare.ts:242-286`)                                                                                 |
 | Gate            | `scripts/api-compare/lint-call-mismatches-wide.ts`                                                                               |
 | Baseline        | split dir `scripts/api-compare/call-mismatches-wide-exclude/<package>/<tsFile .ts→.json>` (`lint-call-mismatches-wide.ts:72-91`) |
-| Enforcement     | CI only — `.github/workflows/ci.yml:1435-1444`. No eslint rule; `pnpm api:compare` alone does NOT run it.                        |
+| Enforcement     | CI only — `.github/workflows/ci.yml:1435-1444`. No eslint rule; `pnpm parity:api` alone does NOT run it.                         |
 
 Three mechanics drive the noise:
 
@@ -67,7 +67,7 @@ Two further mechanics worth recording:
 - The baseline key is `package + tsFile + rubyName + call` — **no `tsName`** —
   so the artifact's 5038 rows collapse to 4794 unique keys. `findDuplicateKeys`
   already guards genuine duplicates; there is no de-duping work left.
-- `@missingRailsCall` JSDoc tags (`build.ts`, `api:build`) mirror baseline
+- `@missingRailsCall` JSDoc tags (`build.ts`, `parity:api:build`) mirror baseline
   reasons into source, but **nothing in `compare.ts` or the lint reads them**.
   Annotating a call today does not remove its baseline entry.
 

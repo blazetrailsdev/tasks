@@ -1,5 +1,5 @@
 ---
-title: "Fold extra-surface sibling-tag section into the api:build design doc (after PR #5229 merges)"
+title: "Fold extra-surface sibling-tag section into the parity:api:build design doc (after PR #5229 merges)"
 status: done
 updated: 2026-07-27
 rfc: "0080-api-compare-jsdoc-metadata"
@@ -15,7 +15,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Fold extra-surface sibling-tag section into the api:build design doc
+# Fold extra-surface sibling-tag section into the parity:api:build design doc
 
 ## Context
 
@@ -40,5 +40,5 @@ enabled — one config change covering the family.
   sibling tag with the `@internal` distinction and novel-only scope rule.
 - TypeDoc (and lint tag-name, if applicable) configuration lists both tags;
   neither renders on the docs site.
-- No changes to `@missingRailsCall` semantics or the api:build design.
+- No changes to `@missingRailsCall` semantics or the parity:api:build design.
 - Docs-mostly diff; well under the LOC ceiling.

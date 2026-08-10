@@ -64,6 +64,6 @@ No new abstraction, and the pass-through's signature does not change.
 - [ ] The `synchronize` rows in
       `call-mismatches-exclude/activerecord/connection-adapters/abstract/connection-pool/queue.json`
       are DELETED (only-shrink), not reworded; delete the shard file if it empties.
-- [ ] `pnpm api:calls` green with the marks reseeded (`pnpm api:calls:reseed` or
+- [ ] `pnpm parity:api:calls` green with the marks reseeded (`pnpm parity:api:calls:reseed` or
       the reviewable hand-edit).
 - [ ] SQLite, MySQL and PostgreSQL lanes green.

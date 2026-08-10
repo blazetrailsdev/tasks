@@ -50,7 +50,7 @@ schemaCacheIgnoredTables 5.
 - The 8 reader/`setX` names removed from `index.ts` (`ActiveRecord` is already
   exported there).
 - All internal call sites read/assign through `ActiveRecord.x`.
-- `pnpm api:compare` credits each flag under its Rails name (check
+- `pnpm parity:api` credits each flag under its Rails name (check
   `output/api-comparison.json` for `"tsName": "protocolAdapters"` etc., not
   `setProtocolAdapters`); overall matched count does not drop.
 - Under the 500-LOC ceiling; split further if it is not.

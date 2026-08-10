@@ -45,5 +45,5 @@ config-object story instead, not here.
   export is deleted or made module-private and dropped from barrels.
 - Any member that turns out to be a module-level `export let` is moved to the
   shape-2 story rather than forced into an accessor here — note which in the PR.
-- `pnpm api:compare` matches the writers converted; `pnpm api:extra` shows the
+- `pnpm parity:api` matches the writers converted; `pnpm parity:api:extra` shows the
   matching drop in extras with no stale entries.

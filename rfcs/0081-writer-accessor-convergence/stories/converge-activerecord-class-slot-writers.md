@@ -40,5 +40,5 @@ a field assignment. Check the composite-primary-key arm before converting.
   module-private.
 - `setId` keeps its current write path and composite-PK behavior; existing
   primary-key tests pass with names unchanged.
-- `pnpm api:compare` matches the five `foo=` writers; `pnpm api:extra` shows 5
+- `pnpm parity:api` matches the five `foo=` writers; `pnpm parity:api:extra` shows 5
   fewer extras for activerecord and no stale entries.

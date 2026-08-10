@@ -52,4 +52,4 @@ other.
   `activerecord/src/type/internal/timezone.ts`.
 - `configuredTimezone()` keeps working for the non-UTC arm.
 - Existing activemodel and activerecord timezone/time-type tests pass with
-  names unchanged; `pnpm api:extra` shows one fewer activemodel extra.
+  names unchanged; `pnpm parity:api:extra` shows one fewer activemodel extra.

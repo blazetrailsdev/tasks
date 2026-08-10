@@ -32,7 +32,7 @@ re-attachment), and is reported STALE otherwise. Two consequences already
 observed:
 
 - `NullConfig` (`connection-adapters/abstract/connection-pool.ts`) failed
-  `api:extra` on main as a stale tag; PR 5467 demoted its reason to prose
+  `parity:api:extra` on main as a stale tag; PR 5467 demoted its reason to prose
   because there was nothing for the tag to match.
 - A tagged `interface` cannot have its own name matched at all, which is why
   PR 5467 has to flag the interface's own-name entry `inherited` to keep the
@@ -48,8 +48,8 @@ the stale check taught not to expect a match for it. Today it is neither.
 - Decide and encode whether a class / interface / namespace declaration name is
   extra surface.
 - If declaration names start counting, re-measure: the totals in
-  `api:extra` will move, and the `inherited` exemption on interface own-name
+  `parity:api:extra` will move, and the `inherited` exemption on interface own-name
   entries in `collectTaggedEntries` should be revisited.
 - `NullConfig`'s reasoning (currently prose at connection-pool.ts) returns to a
   real tag if the answer is that it does count.
-- `pnpm api:extra` exits 0 with no stale tags either way.
+- `pnpm parity:api:extra` exits 0 with no stale tags either way.

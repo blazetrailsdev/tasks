@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 PR #5648 (RFC 0080) landed the permanence-claim signal as **advisory**:
-`api:extra` reports `tagged.classification.unclassified` but never fails on
+`parity:api:extra` reports `tagged.classification.unclassified` but never fails on
 it. That was deliberate — 76 tags existed at merge and 74 predate the
 convention, so a gate would have blocked every unrelated PR.
 
@@ -33,7 +33,7 @@ then and hostile during.
 
 ## Acceptance criteria
 
-- `api:extra` fails when a `@noRailsEquivalent` reason states no permanence
+- `parity:api:extra` fails when a `@noRailsEquivalent` reason states no permanence
   claim, alongside the existing stale-tag and empty-reason failures.
 - Decide and document whether it is a hard gate (unclassified = 0 forever) or
   a ratchet on the count; prefer the hard gate if the population is at 0, since

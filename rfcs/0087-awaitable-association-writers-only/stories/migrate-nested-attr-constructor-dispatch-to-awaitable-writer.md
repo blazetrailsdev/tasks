@@ -74,4 +74,4 @@ nothing else calls it, delete it with the setter.
       where the setter arm of `generateAssociationWriter` is removed.
 - [ ] `findPrototypeSetter` is deleted, or its remaining caller is cited at the
       call site.
-- [ ] `pnpm api:extra --package activerecord` delta non-negative.
+- [ ] `pnpm parity:api:extra --package activerecord` delta non-negative.

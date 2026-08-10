@@ -68,4 +68,4 @@ shape still holds — the category must not be seeded from this story's prose.
 - [ ] Category defined with its rows named outright and the evidence in `note`.
 - [ ] `--dry-run` matches exactly those rows; the run rewrites them and reseeds
       the marks.
-- [ ] `pnpm api:calls` green with zero slack afterwards.
+- [ ] `pnpm parity:api:calls` green with zero slack afterwards.

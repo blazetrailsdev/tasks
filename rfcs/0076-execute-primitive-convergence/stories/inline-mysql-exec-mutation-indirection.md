@@ -32,14 +32,14 @@ PR #4962 retargeted the helper from `executeMutation` to `execute`, which makes
 the indirection redundant: `execute` is declared on the `AbstractAdapter`
 interface that every concrete adapter satisfies, so the defensive `typeof` guard
 can no longer fire and the wrapper only obscures the Rails call shape from
-api:compare.
+parity:api.
 
 ## Acceptance criteria
 
 - [ ] Replace the `_execMutation(sql)` call sites with `this.execute(sql)`,
       matching Rails' direct `execute` calls.
 - [ ] Delete `_execMutation` and its runtime `typeof` guard.
-- [ ] Confirm api:compare still maps these methods (the calls should now match
+- [ ] Confirm parity:api still maps these methods (the calls should now match
       Rails' `execute` call set — this may converge wide-ratchet entries, which
       must then be removed from the baseline by hand, not via `--write`).
 - [ ] MySQL/MariaDB DDL suites stay green under the `ARCONN` CI job.
@@ -47,5 +47,5 @@ api:compare.
   `scripts/api-compare/call-mismatches-wide-exclude`:
   `connection-adapters/abstract-mysql-adapter.ts` / `change_column_default` /
   `execute → execute`. Delete the single row — do NOT reseed (RFC 0084 folded
-  the wide gate into `pnpm api:calls`; `scripts/api-compare/lint-call-mismatches-wide.ts`
+  the wide gate into `pnpm parity:api:calls`; `scripts/api-compare/lint-call-mismatches-wide.ts`
   no longer exists, and the baseline is only-shrink).

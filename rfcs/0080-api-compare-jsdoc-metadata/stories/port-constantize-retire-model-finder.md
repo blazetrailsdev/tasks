@@ -21,7 +21,7 @@ closed-reason: null
 in for Ruby's `model_name.constantize`. The faithful fix is to port
 `constantize` itself rather than justify the stand-ins, because the two
 methods are currently _missing_ Rails surface — this closes both sides of the
-api:compare ledger at once (adds 2 real Rails methods, deletes 2 invented
+parity:api ledger at once (adds 2 real Rails methods, deletes 2 invented
 names).
 
 Rails source:
@@ -40,7 +40,7 @@ Current trails state:
 
 - `packages/activesupport/src/inflector.ts` ports 15 inflector methods but
   neither `constantize` nor `safeConstantize`; `deconstantize` is at
-  `inflector.ts:160`. api:compare lists `constantize` / `safe_constantize` as
+  `inflector.ts:160`. parity:api lists `constantize` / `safe_constantize` as
   missingMethods for `inflector/inflections.rb` and
   `core_ext/object/blank.rb`.
 - `packages/globalid/src/locator.ts` — `setModelFinder` (registry write) and
@@ -71,7 +71,7 @@ the stand-ins. Sequential, non-overlapping files, each from `main`.
   `packages/activesupport/src/inflector.ts`, matching the Rails semantics
   above, with Rails' constantize test cases ported under their verbatim
   names.
-- `constantize` / `safe_constantize` no longer appear in api:compare's
+- `constantize` / `safe_constantize` no longer appear in parity:api's
   missingMethods for activesupport.
 - `packages/globalid/src/locator.ts` and `global-id.ts` resolve model classes
   through `constantize`, spelled the way `global_id.rb:58` does.
@@ -79,4 +79,4 @@ the stand-ins. Sequential, non-overlapping files, each from `main`.
   `setModelFinder` `@noRailsEquivalent` tag; globalid's extra-surface Allowed
   total drops accordingly.
 - Any residual registration seam carries its own `@noRailsEquivalent` tag.
-- `pnpm api:compare && pnpm api:extra` clean, no stale tags.
+- `pnpm parity:api && pnpm parity:api:extra` clean, no stale tags.

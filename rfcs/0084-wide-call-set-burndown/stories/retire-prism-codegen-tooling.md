@@ -52,10 +52,10 @@ at 0–10% — and the near-zero cohort is one syntactic rule
 move the output toward usability, because the gap is stdlib semantics, imports
 and types, not AST coverage.
 
-**The guard it does provide is a worse-scoped duplicate of `api:calls:wide`.**
+**The guard it does provide is a worse-scoped duplicate of `parity:api:calls`.**
 `codegen:score --guard` (`ci.yml:1429`) scores 10 Ruby files / 433 defs, of
 which **362 of 391 divergent+missing rows are unreviewed baselined residue**
-(`convergence-baseline.json`; 15 catalogued, 14 signed off). `api:calls:wide`
+(`convergence-baseline.json`; 15 catalogued, 14 signed off). `parity:api:calls`
 covers 1,462 distinct methods across 12 packages with every row carrying a
 reviewed reason. The codegen guard is also uniquely fragile: its generated side
 is a function of 7 handler files plus `port-symbols.ts` and `async-source.ts`,
@@ -75,11 +75,11 @@ output nobody consumes.
 **Dependency:** this story must land _after_ RFC 0084's
 `call-sequence-parity-in-wide-ratchet`, which ports the ordered call-sequence
 comparison — the codegen guard's one genuine unique signal — into
-`api:calls:wide`. Deleting before that lands drops a real fidelity check.
+`parity:api:calls`. Deleting before that lands drops a real fidelity check.
 
 ## Acceptance criteria
 
-- The ordered call-sequence comparison is live in `api:calls:wide` (RFC 0084
+- The ordered call-sequence comparison is live in `parity:api:calls` (RFC 0084
   story) before this story's deletion commit; verify, do not assume.
 - `scripts/prism-codegen/` is deleted, including `convergence-baseline.json`
   (362 rows), `convergence-signoff.json` (14 rows), `guard.ts`, `signoff.ts`,
@@ -96,7 +96,7 @@ comparison — the codegen guard's one genuine unique signal — into
   rest. Do not leave the directory alive solely to host them.
 - `docs/infrastructure/prism-codegen-spike.md` records the outcome and the
   measured evidence, so the spike reads as concluded rather than abandoned.
-- `pnpm typecheck`, `pnpm api:compare` and `pnpm test:compare` deltas are
+- `pnpm typecheck`, `pnpm parity:api` and `pnpm parity:test` deltas are
   non-negative; `@ruby/prism` is dropped from dependencies if nothing else
   consumes it.
 

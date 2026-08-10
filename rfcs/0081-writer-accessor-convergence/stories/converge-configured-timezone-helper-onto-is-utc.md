@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activemodel/src/type/helpers/timezone.ts` exports
 `configuredTimezone(utc = isUtc())`, a trails-only helper with no Rails
-counterpart — `pnpm api:extra` reports it as the file's only novel export.
+counterpart — `pnpm parity:api:extra` reports it as the file's only novel export.
 Rails has no zone-name resolver: `TimeValue#new_time` and
 `#fast_string_to_time`
 (`vendor/rails/activemodel/lib/active_model/type/helpers/time_value.rb:51-60`,
@@ -38,5 +38,5 @@ three call sites, added in #5402).
   the call site as an unavoidable Temporal-shaped deviation.
 - `packages/activerecord/src/attribute-methods/time-zone-conversion.ts` stops
   importing `configuredTimezone` across the package boundary.
-- `pnpm api:extra` shows one fewer activemodel novel export, or the remaining
+- `pnpm parity:api:extra` shows one fewer activemodel novel export, or the remaining
   one carries an inline justification.

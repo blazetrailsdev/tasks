@@ -52,4 +52,4 @@ and the `index.ts` re-export.
 - `getRaiseOnAssignToAttrReadonly` / `setRaiseOnAssignToAttrReadonly` deleted
   from `readonly-attributes.ts` and from the `index.ts` export list.
 - Any remaining caller reads/writes `ActiveRecord.raiseOnAssignToAttrReadonly`.
-- `pnpm api:compare` matched count does not drop; `api:extra` does not grow.
+- `pnpm parity:api` matched count does not drop; `parity:api:extra` does not grow.

@@ -57,4 +57,4 @@ to exactly 2101.
   that name the old path.
 - Tests cover the sharded shape in `unreviewed-ratchet.test.ts` and
   `lint-call-mismatches-wide.test.ts`.
-- `pnpm api:calls:wide` is green with no drift against a clean reseed.
+- `pnpm parity:api:calls` is green with no drift against a clean reseed.

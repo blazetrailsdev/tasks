@@ -1,5 +1,5 @@
 ---
-title: "api:compare advisory option-key totals drift between cold and warm runs"
+title: "parity:api advisory option-key totals drift between cold and warm runs"
 status: done
 updated: 2026-07-30
 rfc: "0080-api-compare-jsdoc-metadata"
@@ -20,7 +20,7 @@ closed-reason: null
 Surfaced while re-baselining the arity summary for PR #5654
 (`synthesized-mixin-members-report-zero-params`).
 
-Two consecutive `API_COMPARE_FORCE=1 pnpm api:compare` runs over the SAME
+Two consecutive `API_COMPARE_FORCE=1 pnpm parity:api` runs over the SAME
 working tree printed different advisory option-key totals:
 
 ```text
@@ -50,7 +50,7 @@ times to say.
 
 ## Acceptance criteria
 
-- Reproduce the cold-vs-warm split deterministically (run `api:compare` twice
+- Reproduce the cold-vs-warm split deterministically (run `parity:api` twice
   from a genuinely cold cache on an unchanged tree) and identify which pair
   appears/disappears, and which cache layer drops it.
 - Fix the underlying cache-warmth dependence so a summary count is a function

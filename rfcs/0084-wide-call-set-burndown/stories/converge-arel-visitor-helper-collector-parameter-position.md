@@ -39,7 +39,7 @@ Plus the SQLite override: `sqlite.rb:39` vs `sqlite.ts:89`.
 This is a direct CLAUDE.md violation — "A local or parameter keeps the Rails
 identifier… Same for parameter _order_ and defaults" — and it has been invisible
 to every gate in the repo. `arity.ts` cannot see it (the parameter counts match
-exactly), `api:compare` cannot see it (the names match), and `api:calls` cannot
+exactly), `parity:api` cannot see it (the names match), and `parity:api:calls` cannot
 see it (the calls are all made). Only an argument-level comparison surfaces it;
 the spike counted 23 flagged call sites from this one cause, a third of arel's
 entire flagged population.
@@ -83,7 +83,7 @@ it into whichever of them is claimed first. Do not run all three in parallel.
 4. `pnpm vitest run packages/arel` is green, and the generated SQL is
    byte-identical before and after (this is a pure signature reorder — if any
    query text moves, a call site was rewritten wrong).
-5. `pnpm api:calls` shows no new rows and `pnpm api:extra --package arel` is
+5. `pnpm parity:api:calls` shows no new rows and `pnpm parity:api:extra --package arel` is
    unchanged.
 6. Out of scope, and **not** to be swept in: the other two arel findings in the
    RFC 0025 spike write-up (`appendEscape` is an extracted helper Rails does not

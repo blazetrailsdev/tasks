@@ -42,7 +42,7 @@ reports nothing there.
 
 But the codegen path obtains that signal over a population of **10 Ruby files**
 (`files.ts:TARGET_FILES`) out of ActiveRecord's 305, because
-`score-cli.ts` only scores _fully-handled generated_ defs. `api:calls:wide`
+`score-cli.ts` only scores _fully-handled generated_ defs. `parity:api:calls`
 already covers **1,462 distinct (package, file, method) rows across 12
 packages** (`scripts/api-compare/call-mismatches-wide-exclude/`, 2,183 exclude
 entries). Moving the comparison from set to sequence in `calls:wide` gets the
@@ -69,7 +69,7 @@ one so the ordering signal is never dropped on the floor.
   difference is a delegating wrapper resolving in place of the implementation
   (`score.ts:resolvePortFn` cross-file fallback), which produced spurious
   `divergent` rows for `relation.rb::computeCacheKey` / `computeCacheVersion`.
-- `pnpm api:calls:wide` gates green on `main` with the new rows baselined, and
+- `pnpm parity:api:calls` gates green on `main` with the new rows baselined, and
   a deliberately reordered body in a test fixture turns it red.
 - Tests live at the top level of `scripts/api-compare/` (the vitest glob is
   non-recursive).

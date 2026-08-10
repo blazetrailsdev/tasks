@@ -79,5 +79,5 @@ type-layer fix or a deliberate raise rather than a silent `'NULL'`.
       deleted.
 - [ ] `insert_all` / `upsert_all` suites green on all three adapters, including
       the datetime, binary and array-column cases.
-- [ ] `pnpm api:extra --package activerecord` loses the `quoteSqlValue` row;
-      api:compare / test:compare delta non-negative.
+- [ ] `pnpm parity:api:extra --package activerecord` loses the `quoteSqlValue` row;
+      parity:api / parity:test delta non-negative.

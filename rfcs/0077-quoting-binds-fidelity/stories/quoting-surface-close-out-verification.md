@@ -40,11 +40,11 @@ one.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare --package activerecord` is run scoped to the quoting
+- [ ] `pnpm parity:api --package activerecord` is run scoped to the quoting
       files (`abstract/quoting.rb`, `mysql/quoting.rb`, `postgresql/quoting.rb`,
       `sqlite3` quoting) and every Ruby method is matched or has a `SKIP_GROUPS`
       entry with a reason.
-- [ ] `pnpm api:extra` reports no un-tagged extra name in those files; any
+- [ ] `pnpm parity:api:extra` reports no un-tagged extra name in those files; any
       surviving `@noRailsEquivalent` carries a reason a reviewer signed off on.
 - [ ] The quoting rows in `call-mismatches-exclude` are enumerated: each is
       either deleted (converged) or carries a one-line reason naming the Rails

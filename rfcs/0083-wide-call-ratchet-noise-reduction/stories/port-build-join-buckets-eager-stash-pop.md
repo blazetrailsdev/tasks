@@ -74,7 +74,7 @@ Port the pop literally and retire the divergence notes.
 - The three `joins!` / `left_outer_joins!` entries named above are DELETED once
   steps 1 and 2 have made those calls real — the calls are then genuinely made,
   so the exclusions are no longer warranted. Confirm with
-  `pnpm api:compare --wide-calls` + `pnpm api:calls:wide` that none is
+  `pnpm parity:api --wide-calls` + `pnpm parity:api:calls` that none is
   re-required, and ratchet `scripts/api-compare/call-mismatches-wide-unreviewed.json`
   down if the unreviewed count drops.
 - Ported `joins` / `eagerLoad` / `merge` relation tests pass unchanged (no test

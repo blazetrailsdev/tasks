@@ -74,4 +74,4 @@ should land after it to avoid file conflicts.
 - [ ] Behavior unchanged: literals still render identically, including the
       backslash/`E''` cases PG's current branch handles. Adapter tests for PG,
       MySQL, and SQLite all green.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

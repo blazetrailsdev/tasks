@@ -31,7 +31,7 @@ distinct `*Q` symbols across `base.ts`, `inheritance.ts`,
 `pool-config.ts`, `abstract/connection-descriptor.ts`,
 `support/adapter-helper.ts`. Rails side: e.g. `connected?` in
 `vendor/rails/activerecord/lib/active_record/connection_handling.rb`. `*Q`
-names are never api:compare candidates, so each one is invisible extra surface
+names are never parity:api candidates, so each one is invisible extra surface
 and leaves the Rails name unmatched.
 
 Existing scattered stories (reference, do not re-home):

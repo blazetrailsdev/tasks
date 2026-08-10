@@ -37,4 +37,4 @@ being embedded in the SQL string (prepared-statement reuse).
       not inline literals, on PG (the only adapter with array columns).
 - [ ] `PostgresqlArrayTest` and datetime/binary-element array round-trips stay
       green.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

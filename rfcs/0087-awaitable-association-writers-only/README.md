@@ -57,7 +57,7 @@ Association writers are generated dynamically on **both** sides — Rails throug
 (`vendor/rails/activerecord/lib/active_record/associations/builder/association.rb`),
 trails through `defineWriters` / `Object.defineProperty`
 (`packages/activerecord/src/associations/builder/has-one.ts:88`). Neither
-extractor sees `account=` or `account` as a static member, so `api:compare`
+extractor sees `account=` or `account` as a static member, so `parity:api`
 scores nothing for the property setter and loses nothing when it goes. The
 Rails-named surface that IS scored is the awaitable method: `rubyMethodToTs`
 already offers `set#{Name}` as a candidate for any Ruby `name=`
@@ -137,9 +137,9 @@ awaitable constructor to redirect to.
 ## Non-goals
 
 - **Plain attribute setters.** Static, synchronous in Rails, matched by
-  `api:compare` on the bare camel name.
+  `parity:api` on the bare camel name.
 - **`belongs_to`.** No deviation.
-- **Changing `api:compare` conventions.** `set#{Name}` is already an accepted
+- **Changing `parity:api` conventions.** `set#{Name}` is already an accepted
   rendering of `name=`; no rule change is needed for this RFC.
 - **Reviving the sync setter behind a config flag.** Two spellings with
   different semantics is the defect, not the fix.
@@ -158,10 +158,10 @@ setters are deleted, and so no single PR exceeds the LOC ceiling:
 
 ## Verification
 
-- `pnpm api:compare` / `pnpm test:compare` deltas non-negative (expected: no
+- `pnpm parity:api` / `pnpm parity:test` deltas non-negative (expected: no
   movement — the deleted members are not in either population).
-- `pnpm api:extra --package activerecord` drops the invented error classes.
-- `pnpm api:calls` / `pnpm api:calls:wide` clean; baseline rows whose methods
+- `pnpm parity:api:extra --package activerecord` drops the invented error classes.
+- `pnpm parity:api:calls` / `pnpm parity:api:calls` clean; baseline rows whose methods
   are deleted must be removed by hand, not reseeded.
 - A grep gate to zero on `_pendingDisplacedRemovals`, `_displacedRemovalFailure`,
   `prepareDetachDisplacedForSyncBuild` and `findThenDetachDisplaced`. NOT on
@@ -190,7 +190,7 @@ Rails' `new` is synchronous _because_ everything it can reach is in-memory, so
 an async `Model.new` would be a deviation rather than a convergence — and it
 would force `await` onto every construction in the codebase to buy nothing.
 `Model.new` / `Model.build` already exist as statics (`base.ts`), and
-`api:compare` maps Ruby `new` / `initialize` to `constructor`
+`parity:api` maps Ruby `new` / `initialize` to `constructor`
 (`scripts/api-compare/conventions.ts:699`), so no naming work is outstanding
 either.
 

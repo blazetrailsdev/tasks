@@ -42,5 +42,5 @@ call sites to move than in the has_one case.
 - [ ] The generated `#{name}=` and `#{name}Ids=` property setters are gone,
       along with their `syncWrite` arms and `CollectionIdsAssignmentError`.
 - [ ] Remaining call sites use `replace` / `idsWriter` / `concat`.
-- [ ] `pnpm api:extra --package activerecord` drops `CollectionIdsAssignmentError`.
-- [ ] `pnpm test:compare` delta non-negative; test names unchanged.
+- [ ] `pnpm parity:api:extra --package activerecord` drops `CollectionIdsAssignmentError`.
+- [ ] `pnpm parity:test` delta non-negative; test names unchanged.

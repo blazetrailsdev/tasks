@@ -50,5 +50,5 @@ invisible, with no row and no signal that the check was skipped:
       `compareKeys` (code-unit, NOT `localeCompare`: that mis-collates keys
       differing past a punctuation character, e.g. `joins!` vs `joins_values`,
       and reds the reseed-drift gate).
-- [ ] `pnpm api:calls` green; the reseed-drift check (`lint-call-mismatches.ts
+- [ ] `pnpm parity:api:calls` green; the reseed-drift check (`lint-call-mismatches.ts
 --write` leaving both baseline trees byte-identical) green.

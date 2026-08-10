@@ -42,7 +42,7 @@ remainder as a sibling story rather than fanning out PRs.
 
 - [ ] Every `#{name}Attributes=` assignment in `packages/activerecord/src/**`
       becomes `await owner.set#{Name}Attributes({...})`.
-- [ ] Test names unchanged; `pnpm test:compare` delta non-negative.
+- [ ] Test names unchanged; `pnpm parity:test` delta non-negative.
 - [ ] Tests that specifically covered the _deferred_ timing (drain at `save()`)
       are converted to the assignment-time contract or deleted with a note, not
       left asserting a contract that no longer has a caller.

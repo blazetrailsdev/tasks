@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 PR #5674 extracted `listTsFiles(dir)` out of `listSourceFiles` so the two JSDoc
-lints (`api:reasons`, `api:detached`) share one declaration of the `.ts` scope
+lints (`parity:api:reasons`, `parity:api:detached`) share one declaration of the `.ts` scope
 rules. Review of that PR flagged that a third walker still overlaps in purpose.
 Auditing the tree, there are in fact **four** independent `.ts` tree-walkers in
 `scripts/api-compare/`:
@@ -64,7 +64,7 @@ those call sites.
   duplicates; they use one shared implementation.
 - The committed-vs-compared population distinction stays legible (either two
   named wrappers, or an explicit policy argument — not a boolean soup).
-- `api:reasons`, `api:detached`, `api:extra`, `api:compare` and `lint:deps` all
+- `parity:api:reasons`, `parity:api:detached`, `parity:api:extra`, `parity:api` and `parity:api:deps` all
   report identical counts before and after (behaviour-preserving refactor).
 - Tests cover the shared walker's include/exclude policy for both populations.
 - No new third-party deps; async-fs hard rule preserved in the lint scripts.

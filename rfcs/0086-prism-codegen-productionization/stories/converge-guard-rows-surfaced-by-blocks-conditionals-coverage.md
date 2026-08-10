@@ -62,7 +62,7 @@ The rows, with the guard's `--verbose` skeletons as of #6113:
 - [ ] Every row that converges is deleted from
       `convergence-baseline.json` by hand (the baseline is only-shrink; do not
       `--write`/reseed).
-- [ ] `pnpm codegen:score --guard` green; `pnpm api:calls` / `api:calls:wide`
+- [ ] `pnpm codegen:score --guard` green; `pnpm parity:api:calls` / `parity:api:calls`
       non-negative.
 - [ ] Any row that genuinely cannot converge is blocked with the specific
       blocker, not re-justified in place.

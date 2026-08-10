@@ -1,5 +1,5 @@
 ---
-title: "Regenerate the wide artifact inside api:calls:wide"
+title: "Regenerate the wide artifact inside parity:api:calls"
 status: done
 updated: 2026-07-31
 rfc: "0083-wide-call-ratchet-noise-reduction"
@@ -23,12 +23,12 @@ entry for that method stops flagging and the gate fails with
 `STALE baseline entr(ies)` (`:270-281`) — a failure that has nothing to do with
 the PR that hits it, and whose fix is always "re-extract, then `--write`".
 
-`pnpm api:calls:wide:reseed` already chains the regeneration; the plain gate
+`pnpm parity:api:calls:reseed` already chains the regeneration; the plain gate
 does not.
 
 ## Acceptance criteria
 
-- `pnpm api:calls:wide` regenerates the wide artifact (equivalent to
+- `pnpm parity:api:calls` regenerates the wide artifact (equivalent to
   `compare.ts --wide-calls`) before gating, unless an env var or flag opts out
   for CI, which already runs the two steps separately
   (`.github/workflows/ci.yml:1435-1444`).

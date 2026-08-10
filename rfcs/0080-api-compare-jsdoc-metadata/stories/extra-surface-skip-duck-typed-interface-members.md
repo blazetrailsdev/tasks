@@ -42,4 +42,4 @@ members as extra surface in the first place.
 - Delete the per-member `find` / `where` tags in `globalid/locator.ts`.
 - Sweep for other duck-type interfaces that the rule newly covers and remove
   their tags too.
-- `pnpm api:extra` reports no stale tags.
+- `pnpm parity:api:extra` reports no stale tags.

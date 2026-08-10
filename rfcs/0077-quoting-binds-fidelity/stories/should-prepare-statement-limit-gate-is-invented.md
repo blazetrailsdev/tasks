@@ -57,4 +57,4 @@ left the gate untouched.
 ## Acceptance criteria
 
 - Neither adapter reads `_statementLimit` in its prepare gate.
-- `pnpm api:calls` / `api:calls:wide` stay green with no new baseline row.
+- `pnpm parity:api:calls` / `parity:api:calls` stay green with no new baseline row.

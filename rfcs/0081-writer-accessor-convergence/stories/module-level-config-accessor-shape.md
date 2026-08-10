@@ -44,7 +44,7 @@ surface looks like for internal callers).
 - Pilot: 2-3 representative bindings converted end to end (suggest
   `maintainTestSchema`, `asyncQueryExecutor`, `queues`) with call sites updated
   to assignment.
-- `pnpm api:compare` matches those Ruby `foo=` writers; `pnpm api:extra` shows
+- `pnpm parity:api` matches those Ruby `foo=` writers; `pnpm parity:api:extra` shows
   the matching drop with no stale entries.
 - The remaining bindings are registered as follow-up stories sized under the
   500-LOC ceiling — do NOT convert all 21 in this PR.

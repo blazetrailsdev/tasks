@@ -74,5 +74,5 @@ unless the reordering is genuinely forced by a TypeScript shortcoming.
 - [ ] Every row listed above is either converged (deleted from its shard) or
       carries a specific, reviewed reason naming the language shortcoming that
       forces the order — not the seeded surfacing reason.
-- [ ] `pnpm api:calls` green; the baseline row count strictly decreases.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api:calls` green; the baseline row count strictly decreases.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

@@ -64,7 +64,7 @@ body calls `M`, does the TS body call `M`? Everything else is invisible:
 
 The "wrong values / literals" row is now addressed by a separate dimension:
 RFC 0095 (spiked 2026-08-08) measured 77% genuine divergence
-over 102 hand-classified rows and charters a narrowed `api:calls:args` gate
+over 102 hand-classified rows and charters a narrowed `parity:api:calls:args` gate
 over **its own** baseline tree — deliberately not folded into
 `call-mismatches-exclude`, whose row count is this RFC's debt metric. Its
 headline finding is filed here as
@@ -114,7 +114,7 @@ files.
    convergence work off it, check whether an open story in another RFC already
    owns the file — 42% of the time one does.
 2. **Feed the leftovers.** After `0083-wide-call-ratchet-noise-reduction` lands,
-   run `pnpm api:calls:wide --report`, subtract rows covered by open stories in
+   run `pnpm parity:api:calls --report`, subtract rows covered by open stories in
    other RFCs, and file what remains as new stories under the RFC that owns that
    area. That is how RFC 0047 was chartered in the first place.
 3. **Hand verified rows to their owners.** Where a wide row IS a story's actual

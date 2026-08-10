@@ -26,9 +26,9 @@ trailing `*/` is part of the line.
 
 Since PR #5754 made the tag load-bearing, the consequence is a SILENT no-op in
 three places at once: the call is not suppressed by `checkCalls`, the tag is
-not reported stale, and `api:reasons` does not apply the empty-reason contract
+not reported stale, and `parity:api:reasons` does not apply the empty-reason contract
 to it (so `/** @missingRailsCall first */` with no reason at all passes the
-lint). `api:build` only ever emits the multi-line block form, so this is
+lint). `parity:api:build` only ever emits the multi-line block form, so this is
 purely a hand-authored-tag hazard — and it fails in the quiet direction.
 
 Found while writing extractor tests for #5754: the first draft of the
@@ -38,10 +38,10 @@ bare-tag test used the one-line form and did NOT throw.
 
 - A one-line `/** @missingRailsCall <call> — <reason> */` parses as a tag:
   suppresses in `checkCalls`, participates in stale-tag reporting, and is
-  gated by `api:reasons`.
+  gated by `parity:api:reasons`.
 - A one-line tag with no reason FAILS the empty-reason contract, exactly as
   the block form does.
-- `renderJsdoc`/`renderEntry` round-trip is unchanged — `api:build` keeps
+- `renderJsdoc`/`renderEntry` round-trip is unchanged — `parity:api:build` keeps
   emitting the block form, and a second run over a hand-written one-line tag
   produces either zero edits or a clean normalization to block form (pick one
   and test it; do not leave it ambiguous).

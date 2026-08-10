@@ -26,7 +26,7 @@ family with a shared grammar:
 - **`@missingRailsCall <ruby_call> — <reason>`** — a Rails call this method's
   body is known to omit. Designed and prototyped in trails PR
   [#5229](https://github.com/blazetrailsdev/trails/pull/5229)
-  (`docs/infrastructure/api-build-stub-generation-plan.md`, `api:build`).
+  (`docs/infrastructure/api-build-stub-generation-plan.md`, `parity:api:build`).
   That PR is in flight and owned by another agent; this RFC is the umbrella
   tracking home for that work — it does not redesign it.
 - **`@noRailsEquivalent <reason>`** — NEW, designed here: marks a TS
@@ -46,8 +46,8 @@ registered as excluded block tags so neither renders on the docs site).
 ## Why fold these together
 
 Both efforts answer the same question — "this method diverges from Rails; is
-that known, and why?" — for two different gates (`api:calls`/`api:calls:wide`
-missing-call ratchets vs the `api:extra` extra-surface report). Today the
+that known, and why?" — for two different gates (`parity:api:calls`/`parity:api:calls`
+missing-call ratchets vs the `parity:api:extra` extra-surface report). Today the
 answer lives in three JSON baselines plus in-file constant sets, none of them
 visible at the method an agent is editing. Two rival tag designs would mean
 two grammars, two parsers, and two migration campaigns; one family means an
@@ -81,7 +81,7 @@ These are **different claims** and the design keeps them distinct:
   method should never be counted.
 - **`@noRailsEquivalent`** (new): "this IS public API surface, deliberately,
   and Rails has no counterpart." The method **stays counted and visible** in
-  `api:extra` — it is reported in the `Allowed` column, not hidden — with an
+  `parity:api:extra` — it is reported in the `Allowed` column, not hidden — with an
   inline reason explaining the justified deviation. Use it for deliberate
   public trails surface (e.g. `registerModel` in
   `activerecord/src/associations.ts` — public by design, "`@internal` would
@@ -171,13 +171,13 @@ a `vendor/rails` `file:line` behind each call. 42 of 79 came back convergeable.
 
 It is the fact-finding half of `audit-existing-tags-for-convergeable-surface`;
 the actionable half is the ten stories it registered, listed in the audit's
-per-finding sections. `api:extra` fails on a STALE tag, but nothing catches a
+per-finding sections. `parity:api:extra` fails on a STALE tag, but nothing catches a
 tag on surface that still flags and should not exist.
 
 ### Permanence claim and re-audit cadence
 
 A reason opens with `PERMANENT` or `CONVERGEABLE`; anything else is
-**unclassified**, and `api:extra` reports the unclassified count, a per-package
+**unclassified**, and `parity:api:extra` reports the unclassified count, a per-package
 breakdown, and the names (`tagged.classification` in the JSON report). The
 signal is advisory — the exit code still fails on stale entries and empty
 reasons only, because most of the population predates the convention. A ratchet
@@ -185,14 +185,14 @@ or gate is a follow-up once it is classified.
 
 Re-audit **every two quarters**, or whenever `tagged.total` grows by 10 or more
 since the last audit, whichever comes first. The owner is whoever schedules RFC
-0080 work, and the trigger is checkable from the `api:extra` JSON report alone.
+0080 work, and the trigger is checkable from the `parity:api:extra` JSON report alone.
 The full convention lives in trails'
 `docs/infrastructure/api-build-stub-generation-plan.md`.
 
 ## Non-goals
 
-- No change to `@missingRailsCall` / `api:build` design — PR #5229 owns it.
+- No change to `@missingRailsCall` / `parity:api:build` design — PR #5229 owns it.
 - No change to the `@internal` convention.
-- No new gate: `api:extra` keeps its current exit-code behavior (invalid
+- No new gate: `parity:api:extra` keeps its current exit-code behavior (invalid
   justifications and stale entries fail; the report itself stays advisory)
   and its JSON report shape (stats-DB consumer).

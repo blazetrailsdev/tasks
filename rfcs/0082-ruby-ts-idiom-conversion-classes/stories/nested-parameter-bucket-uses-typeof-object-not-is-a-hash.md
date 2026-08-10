@@ -51,4 +51,4 @@ takes the `_assignAttribute` scalar arm (:17).
       `Temporal`/`Date`-valued column key with a scalar key, asserting the
       temporal key is assigned in the scalar pass.
 - [ ] One predicate shared by both call sites rather than two spellings.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

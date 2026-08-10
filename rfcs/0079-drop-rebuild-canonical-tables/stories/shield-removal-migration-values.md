@@ -29,4 +29,4 @@ on scratch tables), then drop both shields.
 
 - The listed `rebuildCanonicalTables` call site(s) are deleted, and the suites stay green when co-scheduled with the full AR suite on sqlite + PG + MySQL/MariaDB (the shield must be unnecessary, not just removed).
 - The contaminating sibling is fixed at the source: it restores the canonical shape itself, runs against `fixtures({ ... })` / transactional rollback, or its reshaping moves off the shared canonical tables. Name the culprit and fix in the PR body.
-- No test renames; test:compare delta non-negative.
+- No test renames; parity:test delta non-negative.

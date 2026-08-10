@@ -71,7 +71,7 @@ clobbered by a base load). Both likely want fixing together.
       invalidation is made registry-independent — a plain
       `class Child extends Parent {}` must be reached.
 - [ ] Regression test with an unregistered subclass, canonical tables only.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.
 - The wide call-set ratchet entry for this defect is removed: `model-schema.ts`
   / `reset_column_information` / `descendants → descendants`. Reseed with
   `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit

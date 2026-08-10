@@ -32,7 +32,7 @@ line 1512 — below the call path that reaches it during extraction, so the read
 lands in the temporal dead zone. The tag-order rule itself is deliberate and
 documented (`extract-ts-api.ts:1537`: a deliberate `@internal` must precede
 `@noRailsEquivalent`); the bug is only that violating it aborts the whole
-`pnpm api:compare` run with a stack trace naming an unrelated-looking
+`pnpm parity:api` run with a stack trace naming an unrelated-looking
 identifier, instead of reporting the offending declaration.
 
 Hit while writing tags in PR 5675 (story

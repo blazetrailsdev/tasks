@@ -71,7 +71,7 @@ Any fix needs to address that registration gap too.
 - [ ] `resetColumnInformation` on a base invalidates descendants' schema
       caches, or the registration gap that prevents it is closed//documented.
 - [ ] Regression test using canonical tables only (`topics` / `movies`).
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.
 - The wide call-set ratchet entry for this defect is removed: `model-schema.ts`
   / `reset_column_information` / `table_name → tableName`. Reseed with
   `pnpm tsx scripts/api-compare/lint-call-mismatches-wide.ts --write` and commit

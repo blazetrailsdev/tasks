@@ -44,7 +44,7 @@ baseline entry.
   tagging, confirm the entry is genuinely permanent. That audit found all 15
   candidate entries were convergeable and deleted them rather than tagging;
   expect the same scrutiny here.
-- Migration runs through `api:build`, not by hand-editing both sides.
+- Migration runs through `parity:api:build`, not by hand-editing both sides.
 - Split into ~2 PRs (synchronize group; verified-equivalents group).
 - Depends on: missing-rails-call-tag-suppresses-wide-flag (other RFC).
 

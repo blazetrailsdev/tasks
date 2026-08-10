@@ -52,7 +52,7 @@ case close this and record the measurement as the justification for 3.
 
 - Decide adopt/reject for depth 8 with the 16 dropped keys as evidence.
 - If adopting: bump `SAME_FILE_CLOSURE_DEPTH`, reseed
-  (`pnpm api:calls:wide:reseed`), and record the delta; `droppedReviewed` must
+  (`pnpm parity:api:calls:reseed`), and record the delta; `droppedReviewed` must
   print any hand-reviewed row that vanishes.
 - If rejecting: update the `SAME_FILE_CLOSURE_DEPTH` docstring to cite the
   measured fixed point rather than the current qualitative rationale.

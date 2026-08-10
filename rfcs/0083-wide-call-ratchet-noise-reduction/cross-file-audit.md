@@ -29,7 +29,7 @@ recorded `includes` is exactly `["DatabaseAdapter"]`.
 
 ```sh
 pnpm build                                        # extractor needs fresh dist/*.d.ts
-API_COMPARE_FORCE=1 pnpm api:compare --wide-calls # writes output/call-mismatches-wide.json
+API_COMPARE_FORCE=1 pnpm parity:api --wide-calls # writes output/call-mismatches-wide.json
 pnpm tsx scripts/api-compare/audit-cross-file-calls.ts
 ```
 

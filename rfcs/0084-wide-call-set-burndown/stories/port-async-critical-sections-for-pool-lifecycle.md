@@ -62,6 +62,6 @@ plus ~4 async wrappers over a synchronous core).
 - [ ] A regression test per distinct hazard that asserts the interleaving (not
       just the end state) and fails on the baseline.
 - [ ] Converged rows deleted by hand from `call-mismatches-exclude/` (never a
-      `--write` reseed of the tree; `pnpm api:calls:reseed` for the mark shards
-      only), and `pnpm api:calls` ends green with zero mark slack.
+      `--write` reseed of the tree; `pnpm parity:api:calls:reseed` for the mark shards
+      only), and `pnpm parity:api:calls` ends green with zero mark slack.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.

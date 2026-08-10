@@ -66,4 +66,4 @@ upstream value in the common paths.
       (`internalExecute prepares when prepare is true`, `internalExecute does
 not prepare when prepare is false`) and the statement-pool suite stay
       green.
-- [ ] `pnpm api:calls` / `pnpm api:extra --package activerecord` clean.
+- [ ] `pnpm parity:api:calls` / `pnpm parity:api:extra --package activerecord` clean.

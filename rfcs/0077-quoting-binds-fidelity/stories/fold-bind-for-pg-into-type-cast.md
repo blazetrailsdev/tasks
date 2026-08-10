@@ -73,4 +73,4 @@ call site's JSDoc:
 - [ ] No double normalization: a bind passes through exactly one arm set.
 - [ ] PG suite green, specifically the binary round-trip (bytes 128-255), the
       date/time BC and precision cases, and the pinned-client write path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

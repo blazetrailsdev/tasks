@@ -1,5 +1,5 @@
 ---
-title: "Extractor + api:extra support for @noRailsEquivalent"
+title: "Extractor + parity:api:extra support for @noRailsEquivalent"
 status: done
 updated: 2026-07-26
 rfc: "0080-api-compare-jsdoc-metadata"
@@ -15,7 +15,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Extractor + api:extra support for the `@noRailsEquivalent` tag
+# Extractor + parity:api:extra support for the `@noRailsEquivalent` tag
 
 ## Context
 

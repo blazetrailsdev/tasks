@@ -41,7 +41,7 @@ mechanism survives even if this field goes.
 - Decide: delete the `methods` arm (field, type member, and consumer loop) or
   keep it with the justification recorded at the declaration. Deleting is the
   default given no users and a live sibling mechanism.
-- If deleted, `pnpm api:compare && pnpm api:extra` stays green with unchanged
+- If deleted, `pnpm parity:api && pnpm parity:api:extra` stays green with unchanged
   per-package totals, and the `AMBIENT_RAILTIE_MIXINS` doc comment loses the
   paragraphs describing `methods`.
 - No change to the `includes` arm, which is load-bearing.

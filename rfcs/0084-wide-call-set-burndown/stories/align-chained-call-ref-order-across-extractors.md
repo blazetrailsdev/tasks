@@ -46,7 +46,7 @@ The port is a faithful transcription of the Ruby and the row still fires
 Pick one traversal order and make both extractors emit it — evaluation order
 (receiver before the call it receives) is the natural one for both ASTs and is
 what a reader comparing the two bodies expects. Then re-run
-`API_COMPARE_FORCE=1 pnpm api:compare --calls` and hand-delete every `order:`
+`API_COMPARE_FORCE=1 pnpm parity:api --calls` and hand-delete every `order:`
 row that goes stale (only-shrink, via `serializeBaseline`; no `--write`).
 
 ## Acceptance criteria
@@ -56,4 +56,4 @@ row that goes stale (only-shrink, via `serializeBaseline`; no `--write`).
       pins the order for a chained call on each side.
 - [ ] Every `order:` row that goes stale as a result is deleted by hand from its
       `call-mismatches-exclude/` shard.
-- [ ] `pnpm api:calls` green; `pnpm api:compare` deltas non-negative.
+- [ ] `pnpm parity:api:calls` green; `pnpm parity:api` deltas non-negative.

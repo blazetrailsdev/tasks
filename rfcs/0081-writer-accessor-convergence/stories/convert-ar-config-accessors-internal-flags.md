@@ -52,6 +52,6 @@ verifyForeignKeysForFixtures 3.
   `setX` declarations deleted. After this story `ar-config.ts` has no
   `export let` left.
 - All internal call sites read/assign through `ActiveRecord.x`.
-- `pnpm api:compare` credits each flag under its Rails name; overall matched
+- `pnpm parity:api` credits each flag under its Rails name; overall matched
   count does not drop.
 - Under the 500-LOC ceiling; split further if it is not.

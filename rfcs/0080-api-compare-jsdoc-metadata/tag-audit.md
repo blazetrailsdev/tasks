@@ -23,7 +23,7 @@ comparator gap is convergeable: the tag comes off and the work gets a story.
 ## Inventory
 
 79 tags at audit time, in 30 files across 8 packages, measured by
-`pnpm api:extra` (`tagged.total`). One was already stale.
+`pnpm parity:api:extra` (`tagged.total`). One was already stale.
 
 | Disposition                                        | Tags |
 | -------------------------------------------------- | ---- |
@@ -53,7 +53,7 @@ the sections for those three record what landed.
 
 ### How to reproduce the inventory
 
-`pnpm api:extra` reports the totals but not the per-tag list (matched tags are
+`pnpm parity:api:extra` reports the totals but not the per-tag list (matched tags are
 subtracted from `extras` before the JSON is emitted). To re-derive the list,
 pair each `@noRailsEquivalent` occurrence under `packages/*/src` with the next
 declaration below its JSDoc block. Two shapes to watch: the tag reads on class
@@ -299,7 +299,7 @@ there would mask real drift.
 
 ## Stale — resolved on main (1)
 
-`NullConfig` (abstract/connection-pool.ts). Flagged stale by `pnpm api:extra`
+`NullConfig` (abstract/connection-pool.ts). Flagged stale by `pnpm parity:api:extra`
 during this audit and deleted here; **PR #5467 deleted the same tag on main
 first**, so the rebased branch carries main's version and this PR no longer
 touches it.
@@ -342,14 +342,14 @@ CI failure around. So the audit is the deliverable, each convergence deletes
 its own tags as it lands, and the table above is the ledger that says which
 story owns which tag.
 
-The single stale tag was the one exception — it had to go because `pnpm api:extra`
+The single stale tag was the one exception — it had to go because `pnpm parity:api:extra`
 was failing on it — and PR #5467 deleted it on main first, so the audit PR ended
 up carrying only the two `schemaStatements` reason tightenings and the removal
 of the tag-history prose #5467 left behind on `NullConfig`.
 
 ## How to keep this honest
 
-`pnpm api:extra` fails on a stale tag — a tag on a name that no longer flags —
+`pnpm parity:api:extra` fails on a stale tag — a tag on a name that no longer flags —
 which is what caught `NullConfig`. It cannot catch the inverse: a tag on
 surface that still flags but should not exist. That is what this audit is for,
 and it needs re-running whenever a batch of tags is added at once. The test to

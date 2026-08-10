@@ -43,5 +43,5 @@ Depends on all three migration stories being done.
 - Report JSON schema unchanged (allowlist summary either removed or kept
   tag-fed — pick whichever the stats pipeline tolerates; document choice in
   the PR).
-- `extra-surface.test.ts` updated; `pnpm api:compare && pnpm api:extra`
+- `extra-surface.test.ts` updated; `pnpm parity:api && pnpm parity:api:extra`
   green.

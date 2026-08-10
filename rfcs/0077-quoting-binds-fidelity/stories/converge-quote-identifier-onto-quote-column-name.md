@@ -34,5 +34,5 @@ Rails-allowed; `quoteIdentifier` is the only one left, tagged
 - Call sites are rewritten to `quoteColumnName`, the name Rails uses.
 - `quoteIdentifier` is removed from the `Quoting` interface and from every
   adapter that implements it, along with the `@noRailsEquivalent` tag.
-- `pnpm api:extra` exits 0 (no stale tag) and
+- `pnpm parity:api:extra` exits 0 (no stale tag) and
   `connection-adapters/abstract/quoting.ts` reports no extra from this name.

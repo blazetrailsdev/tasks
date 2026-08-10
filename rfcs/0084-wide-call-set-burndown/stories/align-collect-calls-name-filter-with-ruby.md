@@ -26,7 +26,7 @@ lowercase letter — so the `callArgs` stream cannot manufacture TS-only sites.
 `collectCalls`, feeding `calls` / `callSeq`, does NOT apply it: it records
 `this._privateHelper()` and `Klass(...)` as call names. Ruby never emits those,
 so every such name is an unpairable TS-only entry in the call set. Left
-unaligned in #6304 because changing it moves the `api:calls` population, which
+unaligned in #6304 because changing it moves the `parity:api:calls` population, which
 needs its own measured PR.
 
 Reference: `extract-ruby-api.rb#call_site_name` (the `!name.start_with?("_") &&
@@ -43,7 +43,7 @@ impossible.
 
 1. `collectCalls` applies the same name filter as `callSiteName`, citing the
    Ruby guard.
-2. The `api:calls` artifact is regenerated and the row movement reported; stale
+2. The `parity:api:calls` artifact is regenerated and the row movement reported; stale
    baseline rows for now-dropped names are deleted by hand (only-shrink — no
    `--write` reseed).
 3. Tests pin that `this._helper()` and `Klass()` are not credited, while

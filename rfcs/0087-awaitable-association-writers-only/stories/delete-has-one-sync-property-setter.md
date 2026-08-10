@@ -40,6 +40,6 @@ already accepts as a rendering of Rails' `#{name}=`
       JS no-op-free failure (the property simply does not exist as a setter).
 - [ ] `syncWrite` and `HasOnePersistedAssignmentError` are deleted, with their
       tests removed or converted to cover `set#{Name}`.
-- [ ] `pnpm api:extra --package activerecord` drops `HasOnePersistedAssignmentError`.
-- [ ] `pnpm api:calls` / `pnpm api:calls:wide` clean; any baseline row naming a
+- [ ] `pnpm parity:api:extra --package activerecord` drops `HasOnePersistedAssignmentError`.
+- [ ] `pnpm parity:api:calls` / `pnpm parity:api:calls` clean; any baseline row naming a
       deleted method is removed by hand, not reseeded.

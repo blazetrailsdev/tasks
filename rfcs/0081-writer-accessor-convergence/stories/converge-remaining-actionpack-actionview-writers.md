@@ -38,5 +38,5 @@ follow the same host-class placement.
 - Each becomes a `get x()` / `set x(v)` pair on the host class; the exported
   `setX` helper is deleted or made module-private and dropped from barrels.
 - Call sites use assignment; tests keep Rails-verbatim names and pass.
-- `pnpm api:compare` matches the six `foo=` writers; `pnpm api:extra` shows 6
+- `pnpm parity:api` matches the six `foo=` writers; `pnpm parity:api:extra` shows 6
   fewer extras and no stale entries.

@@ -48,6 +48,6 @@ Depends on the extractor-support story.
 - The two activerecord entries are deleted from `extra-surface-allow.json`;
   `AMBIENT_RAILTIE_MIXINS["ActiveRecord::Base"].methods` is removed
   (`includes` untouched).
-- `pnpm api:compare && pnpm api:extra` passes with identical totals for
+- `pnpm parity:api && pnpm parity:api:extra` passes with identical totals for
   activerecord (no stale entries, no new extras).
 - Diff within the 500-LOC ceiling.

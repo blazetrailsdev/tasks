@@ -56,5 +56,5 @@ instance of.
 - [ ] A test covers the `report` arm on mysql2, mirroring the PG case
       `reports when behaviour report`
       (`packages/activerecord/src/adapters/postgresql/postgresql-adapter.test.ts`).
-- [ ] `pnpm api:calls` and `pnpm api:extra --package activerecord` stay clean;
+- [ ] `pnpm parity:api:calls` and `pnpm parity:api:extra --package activerecord` stay clean;
       no new baseline rows.

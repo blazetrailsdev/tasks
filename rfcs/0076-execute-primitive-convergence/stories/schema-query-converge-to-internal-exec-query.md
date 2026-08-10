@@ -28,7 +28,7 @@ since PR #4977 reads a `UNWRAPPED_EXECUTE` prototype slot populated by
 (`connection-adapters/abstract/query-cache.ts`). That reproduces the _behaviour_
 (reflection never dirties) but not the structure: it is a stringly-keyed
 prototype snapshot standing in for a named method, `schemaQuery` has no Rails
-counterpart so `api:compare` cannot map it, and the snapshot must be taken in
+counterpart so `parity:api` cannot map it, and the snapshot must be taken in
 the right order or it silently falls back to the wrapped `execute`.
 
 The direct convergence — route reflection through `internalExecQuery` as Rails
@@ -42,7 +42,7 @@ tests). So this is **blocked on**
 - [ ] `pg-cast-result-oid-lookup-reentrancy-guard` landed first — confirm PG no
       longer recurses when a schema query goes through `internalExecQuery`.
 - [ ] Reflection sites call an `internalExecQuery`-based path, matching Rails'
-      `internal_exec_query(sql, "SCHEMA")`, and `api:compare` maps them.
+      `internal_exec_query(sql, "SCHEMA")`, and `parity:api` maps them.
 - [ ] `captureUnwrappedExecute` / `UNWRAPPED_EXECUTE` deleted once nothing reads
       the slot.
 - [ ] Row/value semantics unchanged: `Result#toArray()` re-keys raw driver

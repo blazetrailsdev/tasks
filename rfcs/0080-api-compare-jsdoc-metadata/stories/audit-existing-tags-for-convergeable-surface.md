@@ -28,7 +28,7 @@ extras with a story behind each.
 The sibling migrations `migrate-activerecord-allow-entries` and
 `migrate-globalid-allow-entries` are both done, and PR #5399
 (`retire-extra-surface-allow-json`) migrated the last 21 JSON entries, so
-`api:extra` now reports 80 matched tags repo-wide. Those tags were migrated on
+`parity:api:extra` now reports 80 matched tags repo-wide. Those tags were migrated on
 the original charter — move the entry, preserve the reason — without the
 convergeable-vs-permanent test that PR #5367 applied. Some of them describe
 surface that should be converged and untagged instead.
@@ -124,7 +124,7 @@ this tag when it lands.
   counts again; permanent ones keep the tag with the reason tightened to state
   WHY it is permanent, not merely what it is.
 - Findings recorded as an audit report so the classification is reviewable.
-- `pnpm api:extra` reports no stale tags afterwards.
+- `pnpm parity:api:extra` reports no stale tags afterwards.
 
 Note: dispositioning all of these in one PR would blow the 500-LOC ceiling.
 The audit itself is the deliverable; each convergence lands as its own

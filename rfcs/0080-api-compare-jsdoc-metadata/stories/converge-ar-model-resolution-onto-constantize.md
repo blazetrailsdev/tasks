@@ -56,7 +56,7 @@ that are genuinely separate from the model constant table.
 - The corresponding entries are REMOVED from
   `scripts/api-compare/call-mismatches-wide-exclude/activerecord/*.json` —
   they are converged, not permanently baselined.
-- `pnpm api:compare && pnpm api:extra` clean; AR suite green.
+- `pnpm parity:api && pnpm parity:api:extra` clean; AR suite green.
 - Namespaced/STI candidate ordering (`resolveComputedType`'s enclosing-module
   candidate list) is preserved — `constantize` is a flat lookup, so the
   candidate loop stays and only the per-candidate resolution changes.

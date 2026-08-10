@@ -44,7 +44,7 @@ Depends on the extractor-support story (tag must be honored first).
   reason preserved (verbatim or lightly tightened, meaning intact).
 - The 14 abstractcontroller entries are deleted from
   `extra-surface-allow.json`.
-- `pnpm api:compare && pnpm api:extra` passes with identical
+- `pnpm parity:api && pnpm parity:api:extra` passes with identical
   novel/moved/allowed totals for the package (extras become tag-allowed
   instead of JSON-allowed; no stale entries, no new extras).
 - Diff within the 500-LOC ceiling.

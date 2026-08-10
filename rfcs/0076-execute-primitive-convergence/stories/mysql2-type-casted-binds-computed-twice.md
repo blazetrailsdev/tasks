@@ -69,4 +69,4 @@ normalization moves into the MySQL `type_cast` override
 - [ ] `mysqlBinds` is gone, or is the `type_cast` implementation rather than a
       parallel conversion.
 - [ ] Payload `type_casted_binds` is byte-identical to what mysql2 received.
-- [ ] MySQL/MariaDB CI green; test:compare / api:compare delta non-negative.
+- [ ] MySQL/MariaDB CI green; parity:test / parity:api delta non-negative.

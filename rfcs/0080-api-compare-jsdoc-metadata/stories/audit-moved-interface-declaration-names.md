@@ -31,7 +31,7 @@ declared in a trails file whose Rails counterpart does not declare it.
 
 Get the current list with:
 
-    pnpm api:extra --json | # extras whose name is an interface-only declaration
+    pnpm parity:api:extra --json | # extras whose name is an interface-only declaration
 
 or by re-reading `collectInterfaceOnlyNames` in
 `scripts/api-compare/extra-surface.ts` and intersecting with the reported
@@ -51,6 +51,6 @@ Each name resolves one of three ways:
 
 - Every `moved` interface declaration name is resolved into one of the three
   buckets above, with the fix or the tag landed.
-- `pnpm api:extra` exits 0 with no stale tags.
+- `pnpm parity:api:extra` exits 0 with no stale tags.
 - If the list is larger than one 500-LOC PR, land the first slice and register
   the rest as follow-up stories rather than fanning out PRs.

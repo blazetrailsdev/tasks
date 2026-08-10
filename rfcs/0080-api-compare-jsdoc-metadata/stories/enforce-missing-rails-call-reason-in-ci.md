@@ -27,12 +27,12 @@ enforcement path rather than the parser:
 
 - `@noRailsEquivalent` is validated by `noRailsEquivalentReason`
   (`scripts/api-compare/extract-ts-api.ts:1390`), which runs on every
-  `api:extra` / `api:compare` invocation — so CI fails on a bare tag.
+  `parity:api:extra` / `parity:api` invocation — so CI fails on a bare tag.
 - `@missingRailsCall` is validated only inside `parseJsdoc`, whose sole caller
-  is `reconcileFileText` in `api:build` (`build.ts`). `api:build` is an opt-in
+  is `reconcileFileText` in `parity:api:build` (`build.ts`). `parity:api:build` is an opt-in
   developer command with no CI job, so a hand-authored bare (or
   whitespace-only) tag can be committed and sit undetected until someone
-  happens to run `pnpm api:build --package <pkg>` over that file.
+  happens to run `pnpm parity:api:build --package <pkg>` over that file.
 
 Zero bare tags exist in the tree today (`grep -rn "@missingRailsCall"
 packages/*/src --include=*.ts | grep -vc "—"` → 0), so this is drift
@@ -41,7 +41,7 @@ prevention, not a live break.
 ## Acceptance criteria
 
 - A bare or whitespace-only `@missingRailsCall` anywhere under `packages/*/src`
-  fails a job that actually runs in CI, without requiring a full `api:build`
+  fails a job that actually runs in CI, without requiring a full `parity:api:build`
   reconcile (which needs the `--wide-calls` artifact and rewrites files).
 - Reuses `parseJsdoc`'s existing check and its
   `<tag> needs a reason: <file>:<line> — ...` message shape; no second parser

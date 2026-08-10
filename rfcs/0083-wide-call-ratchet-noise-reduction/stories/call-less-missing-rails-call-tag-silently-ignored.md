@@ -21,7 +21,7 @@ closed-reason: null
 name: `/^\s*\*?\s*@missingRailsCall\s+(\S+)(?:\s+—\s?(.*))?$/`. A tag written
 with NO call at all — `/** @missingRailsCall */`, or a block line whose only
 content is the bare tag — matches nothing, so it is treated as prose: no
-suppression, no stale-tag report, and no empty-reason error from `api:reasons`.
+suppression, no stale-tag report, and no empty-reason error from `parity:api:reasons`.
 
 This is the same quiet-direction hazard #5856 fixed for the one-line form, one
 level up: there the tag had a call and was silently dropped; here the tag has no
@@ -30,7 +30,7 @@ forms (#5856 deliberately left it alone — it was out of that story's scope), s
 it is not a regression, but it is the last way to write a `@missingRailsCall`
 that the load-bearing parser ignores without complaint.
 
-`api:build` never emits a call-less tag, so this is purely a hand-authored-tag
+`parity:api:build` never emits a call-less tag, so this is purely a hand-authored-tag
 hazard.
 
 ## Acceptance criteria
@@ -40,6 +40,6 @@ hazard.
   and one-line comment forms.
 - The error message distinguishes "needs a call" from the existing
   "needs a reason".
-- `api:reasons` over the committed tree still passes (no existing tag in the
+- `parity:api:reasons` over the committed tree still passes (no existing tag in the
   tree is call-less).
 - Tests in `missing-rails-call-tags.test.ts` alongside the boundary cases.

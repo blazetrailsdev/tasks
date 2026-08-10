@@ -44,7 +44,7 @@ section of `docs/infrastructure/api-build-stub-generation-plan.md` (the
 
 - Decide and document whether a hand-authored bare `@missingRailsCall` should
   error, distinguishing it from the generator-authored placeholder path (the
-  literal `unported (api:build stub)` / wide `DEFAULT_REASON` strings are
+  literal `unported (parity:api:build stub)` / wide `DEFAULT_REASON` strings are
   already distinguishable).
 - If it should error: reject it in `parseJsdoc`/reconcile with a `file:line`
   message matching `noRailsEquivalentReason`'s shape, and keep the

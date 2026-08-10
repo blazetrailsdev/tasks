@@ -40,5 +40,5 @@ Note both barrels re-export these today
 - Each helper is module-private (or `@internal` where a mixin install site needs
   it) and removed from the barrel re-exports.
 - The existing `static set` accessors keep working; tests pass unchanged.
-- `pnpm api:extra` reports 6 fewer extras across the three packages, with no new
+- `pnpm parity:api:extra` reports 6 fewer extras across the three packages, with no new
   stale entries.

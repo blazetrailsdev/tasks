@@ -25,7 +25,7 @@ Found by the `audit-setx-functions-without-rails-counterpart` audit.
 including its `ArgumentError` message. But
 `vendor/rails/activerecord/lib/active_record/type/internal/timezone.rb` carries
 readers only (`is_utc?`, `default_timezone`) — no writer. The port therefore
-lives outside its Rails-layout file, which is why `api:compare` never matched
+lives outside its Rails-layout file, which is why `parity:api` never matched
 it to a Ruby counterpart under either spelling.
 
 The rest of the `active_record.rb` module attributes live in
@@ -45,5 +45,5 @@ new home.
 - `type/internal/timezone.ts` keeps only the Rails-shaped readers (`isUtc`,
   `Timezone#defaultTimezone`), reading the value from its new home.
 - Existing callers updated; timezone tests pass with names unchanged.
-- `pnpm api:compare` matches `ActiveRecord.default_timezone=`; `pnpm api:extra`
+- `pnpm parity:api` matches `ActiveRecord.default_timezone=`; `pnpm parity:api:extra`
   shows no new or stale entries.

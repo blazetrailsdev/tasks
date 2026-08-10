@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`api:build` (`scripts/api-compare/build.ts`) already reconciles
+`parity:api:build` (`scripts/api-compare/build.ts`) already reconciles
 `@missingRailsCall <ruby_call> — <reason>` JSDoc tags against the wide artifact,
 migrating reasons out of the baselines and enforcing the empty-reason contract
 (`lint-missing-rails-call-reasons.ts`, RFC 0080 story
@@ -50,7 +50,7 @@ population.
 - A tag that no longer corresponds to a flagged call is reported as stale, the
   same only-shrink discipline the baseline dir has today
   (`lint-call-mismatches-wide.ts:270-281`).
-- `api:build` migrates a reasoned baseline entry to a tag and drops it from the
+- `parity:api:build` migrates a reasoned baseline entry to a tag and drops it from the
   split baseline dir in one operation.
 - Beware `project_bare_jsdoc_tag_in_reason_prose_drops_surface`: a line-leading
   prose `@tag` inside a reason has bitten this tag family before (RFC 0080
@@ -65,6 +65,6 @@ verbatim move of `parseJsdoc` / `TAG` / `DEFAULT_REASON` out of `build.ts` into
 the new shared `missing-rails-call-tags.ts`, and ~430 of the remainder is tests
 across five files. The production change is ~250 LOC and is not separable: the
 extractor field, the `checkCalls` suppression, the stale-tag gate and the
-`api:build` round-trip are one contract — ship any subset and either the tag
-stays inert or `api:build` drops baseline rows nothing honours, i.e. `main`
+`parity:api:build` round-trip are one contract — ship any subset and either the tag
+stays inert or `parity:api:build` drops baseline rows nothing honours, i.e. `main`
 carries a half-wired gate between PRs.

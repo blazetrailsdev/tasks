@@ -21,7 +21,7 @@ closed-reason: null
 Surfaced by the RFC 0095 call-argument comparator (PR #6309) measuring arel:
 two `visit_edge` call sites in the Dot visitor pass argument lists Rails does
 not. Both are wrong LITERALS or invented calls in a ported body, which
-`api:compare` (names), `arity.ts` (declaration parameter counts) and `api:calls`
+`parity:api` (names), `arity.ts` (declaration parameter counts) and `parity:api:calls`
 (the call set) are all blind to — every call made is `visit_edge`, so only the
 argument comparison sees it.
 
@@ -82,4 +82,4 @@ as label drift: `orders`→`groups`, `limit`→`havings`, `offset`→`orders`,
    shape — the test encodes the divergence, so it is evidence to re-derive, not
    a constraint to preserve. If a test name mirrors a Rails test, the name does
    not change.
-4. `pnpm api:calls` shows no new rows.
+4. `pnpm parity:api:calls` shows no new rows.

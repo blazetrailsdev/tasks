@@ -20,7 +20,7 @@ closed-reason: null
 PR #5648 (RFC 0080) landed `classifyReason` in
 `scripts/api-compare/extra-surface.ts`: a `@noRailsEquivalent` reason opening
 with `PERMANENT` or `CONVERGEABLE` states its permanence claim, and
-`api:extra` reports the rest as `unclassified` (`tagged.classification` in the
+`parity:api:extra` reports the rest as `unclassified` (`tagged.classification` in the
 JSON report, plus a per-package breakdown and the names in the human report).
 
 The signal is advisory by design — on the tree at merge it reads **2
@@ -45,5 +45,5 @@ files).
   none exists, register it (`pnpm tasks new`) and cite it.
 - Each `PERMANENT` claim is stated against a `vendor/rails` `file:line`, per
   the audit's verification standard — not against the tag's own prose.
-- `pnpm api:extra` reports `tagged.classification.unclassified` as 0.
+- `pnpm parity:api:extra` reports `tagged.classification.unclassified` as 0.
 - No change to the exit-code contract; this story only edits reason prose.

@@ -78,7 +78,7 @@ critical section.
 - [ ] Parallel `Promise.all` inserts INSIDE a transaction still return
       distinct, correct ids — the reentrancy case above.
 - [ ] `HasManyThroughAssociationsTest` "should respect table alias" stays green.
-- [ ] `pnpm api:extra --package activerecord` shows one fewer `@internal`
+- [ ] `pnpm parity:api:extra --package activerecord` shows one fewer `@internal`
       no-counterpart helper.
 
 ## Update 2026-08-10 (PR #6327)

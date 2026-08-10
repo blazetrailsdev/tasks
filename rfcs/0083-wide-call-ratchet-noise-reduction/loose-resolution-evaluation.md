@@ -23,7 +23,7 @@ No gate change, no baseline change, expected row delta 0.
 
 ```sh
 pnpm build                                        # extractor needs fresh dist/*.d.ts
-API_COMPARE_FORCE=1 pnpm api:compare --wide-calls # writes output/call-mismatches-wide.json
+API_COMPARE_FORCE=1 pnpm parity:api --wide-calls # writes output/call-mismatches-wide.json
 pnpm tsx scripts/api-compare/audit-cross-file-calls.ts                 # summary
 pnpm tsx scripts/api-compare/audit-cross-file-calls.ts --loose-sample  # one JSON row per resolution
 ```

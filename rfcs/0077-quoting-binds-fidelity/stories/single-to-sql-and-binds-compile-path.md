@@ -70,5 +70,5 @@ and `compileInlined` are deleted.
       is inline at the rb:36 position.
 - [ ] The `preparedStatements === false` guard becomes Rails' `if prepared_statements`.
 - [ ] `unprepared-statements-inline-binds.trails.test.ts` (both cases) and
-      `bind-parameter.test.ts` pass on all three lanes; `api:extra` loses the two
+      `bind-parameter.test.ts` pass on all three lanes; `parity:api:extra` loses the two
       helper rows.

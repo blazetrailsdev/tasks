@@ -20,7 +20,7 @@ closed-reason: null
 Closing finding of the `@noRailsEquivalent` tag audit (PR #5465, RFC 0080 —
 see `rfcs/0080-api-compare-jsdoc-metadata/tag-audit.md`).
 
-`api:extra` enforces exactly one direction: a **stale** tag — one on a name
+`parity:api:extra` enforces exactly one direction: a **stale** tag — one on a name
 that no longer flags as extra surface — fails the run. That is what caught
 `NullConfig`. Nothing catches the inverse: a tag on surface that still flags
 and **should not exist at all**.
@@ -28,7 +28,7 @@ and **should not exist at all**.
 That inverse is the failure mode the audit was created to find, and it was
 common. Of 79 tags, 42 (53%) described convergeable surface — unfinished
 porting, a fixable collision, a comparator gap — not a language- or
-runtime-level fact. Every one passed `api:extra` cleanly the whole time,
+runtime-level fact. Every one passed `parity:api:extra` cleanly the whole time,
 because each reason was factually accurate about its mechanism and merely drew
 "therefore permanent" from it.
 
@@ -45,7 +45,7 @@ silently.
     fine.
   - Report tag counts per package with a ratchet, so a batch addition has to
     be acknowledged rather than merging quietly.
-- Whichever lands, `api:extra` must keep its current exit-code contract:
+- Whichever lands, `parity:api:extra` must keep its current exit-code contract:
   invalid justifications and stale entries fail; the report itself stays
   advisory, and the JSON report shape stays stable for the stats-DB consumer.
 - Do NOT convert this into a hard gate that fails on unclassified tags in one

@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced by the `api:calls` triage audit of 2026-08-08 and its follow-up review.
+Surfaced by the `parity:api:calls` triage audit of 2026-08-08 and its follow-up review.
 
 The 32 activerecord baseline rows for the Ruby call `synchronize` were about to
 be bulk-cleared with the cluster-vetted reason already in the tree:
@@ -116,7 +116,7 @@ settled.
   reader. Assert the interleaving, not just the end state.
 - Rows converged out of `call-mismatches-exclude/` are dropped by hand (one row
   per converged call, never a `--write` reseed of the whole tree), and
-  `pnpm api:calls` ends green with zero mark slack — the marks are currently
+  `pnpm parity:api:calls` ends green with zero mark slack — the marks are currently
   flush at 1,904, so a reseed is required for the mark shards even when the
   baseline edit is by hand.
 - No row from the 22 excluded above is touched by this PR.

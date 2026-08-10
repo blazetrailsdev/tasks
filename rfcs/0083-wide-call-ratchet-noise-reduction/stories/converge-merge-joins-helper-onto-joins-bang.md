@@ -39,7 +39,7 @@ straight onto `target._joinsValues` / `target._leftOuterJoinsValues` with their
 own `joinsUnionEq` dedup instead of going through `joinsBang` /
 `leftOuterJoinsBang` (`relation/query-methods.ts:962-984`).
 
-Deleting the two entries was tried and reverted: `pnpm api:calls:wide` reports
+Deleting the two entries was tried and reverted: `pnpm parity:api:calls` reports
 both as NEW mismatches, because the wide gate does not follow `merger.ts` into
 `merge-joins.ts`. Their reasons were rewritten to record this real state instead
 of the stale RFC 0047 baseline text.
@@ -50,8 +50,8 @@ of the stale RFC 0047 baseline text.
   their appends through `joinsBang` / `leftOuterJoinsBang` (Rails' `joins!`),
   dropping the duplicate structural-union loop, OR the helper split is collapsed
   back into `merger.ts` so the gate sees the call.
-- The two `merger.json` entries are deleted and `pnpm api:compare --wide-calls`
-  - `pnpm api:calls:wide` do not re-require them; ratchet
+- The two `merger.json` entries are deleted and `pnpm parity:api --wide-calls`
+  - `pnpm parity:api:calls` do not re-require them; ratchet
     `call-mismatches-wide-unreviewed.json` down if the unreviewed count drops.
 - `relation/merging.test.ts` and the `joins` / `eagerLoad` relation tests pass
   unchanged (no test renames).

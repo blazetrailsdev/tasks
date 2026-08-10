@@ -62,4 +62,4 @@ story rather than a silent deletion.
 - [ ] Depends on `abstract-quote-binary-data-self-dispatch` and
       `dialect-quotestring-returns-literal-not-escape-only`; land after both to
       avoid conflicts in mysql/quoting.ts.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

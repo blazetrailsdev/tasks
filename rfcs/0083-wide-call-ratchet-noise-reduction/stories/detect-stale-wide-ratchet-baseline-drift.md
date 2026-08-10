@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 While measuring PR #5855's delta, a clean reseed on an unmodified `main`
-(`pnpm api:calls:wide:reseed` with no source changes) moved
+(`pnpm parity:api:calls:reseed` with no source changes) moved
 `call-mismatches-wide-unreviewed.json` from `"max": 2837` to `"max": 2787` and
 reordered rows in `call-mismatches-wide-exclude/activerecord/relation/query-methods.json`
 — i.e. the committed baseline was already 50 rows stale relative to what merged

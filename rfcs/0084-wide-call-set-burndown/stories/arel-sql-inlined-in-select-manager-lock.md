@@ -51,6 +51,6 @@ first and masks a TDZ.
 - [ ] `SelectManager#lock` calls `sql(...)` at both sites Rails calls
       `Arel.sql`, with no inlined `new SqlLiteral(...)`.
 - [ ] `Arel.sql` remains exported from `@blazetrails/arel`'s index at the same
-      name; no public surface added (`pnpm api:extra --package arel`).
+      name; no public surface added (`pnpm parity:api:extra --package arel`).
 - [ ] The `lock` JSDoc's cycle paragraph is deleted, not reworded.
 - [ ] Built-dist import check confirms no cycle, both entry directions.

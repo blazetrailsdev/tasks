@@ -60,11 +60,11 @@ for the full classification of the 21 tags #5399 migrated.
   class must still not be reported as its own missing TS file — so the fix
   changes the ALLOW-SET construction, not the file-matching.
 - The `@noRailsEquivalent` tags on `AbstractAdapter.Version` and
-  `NullPool.NullConfig` are DELETED; `pnpm api:extra` reports no stale tags.
+  `NullPool.NullConfig` are DELETED; `pnpm parity:api:extra` reports no stale tags.
 - Per-package `totalExtras` drops by the number of genuinely-nested faithful
   ports; the delta is stated in the PR body with a before/after count, since
   these outputs feed the stats DB.
 - `extra-surface.test.ts` gains a case pinning the nested-class allow-set
   behavior (Ruby `Outer::Inner` in `outer.rb` + TS `Outer` with a nested
   `Inner` member in `outer.ts` -> not extra).
-- `pnpm api:compare && pnpm api:extra` green.
+- `pnpm parity:api && pnpm parity:api:extra` green.

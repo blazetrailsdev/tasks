@@ -29,7 +29,7 @@ members (the rule PR #5467 chose for
 never in `written`, so its permanence claim is never counted.
 
 Observable today on `globalid/locator.ts`'s `LocatorModel`: the tag carries a
-PERMANENT claim, but `pnpm api:extra` reports `39 PERMANENT, 39 CONVERGEABLE`
+PERMANENT claim, but `pnpm parity:api:extra` reports `39 PERMANENT, 39 CONVERGEABLE`
 against 79 tag comments on disk (40 / 39 by grep). Both numbers are correct for
 their population, which is exactly the problem — a verifier reconciling a hand
 grep against the report finds a one-tag gap with no signal explaining it.

@@ -62,4 +62,4 @@ stories are about removing the same fallback posture.
       getting the abstract matcher.
 - [ ] `sanitize.test.ts` and `sanitization-quoter.test.ts` pass on all three
       adapters.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

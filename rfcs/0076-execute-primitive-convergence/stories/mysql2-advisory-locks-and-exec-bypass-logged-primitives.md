@@ -45,7 +45,7 @@ half is untouched and is what this story converges.
 Rails argument shape (`lockName`, `timeout = 0`, quoted-interpolated, compared
 `=== 1`). `exec` either collapses into `execute` or, if a caller genuinely needs
 the raw handle, is justified at the call site — it is unmeasured surface today
-(`pnpm api:extra` lists `exec` as one of mysql2-adapter.ts's two novel names,
+(`pnpm parity:api:extra` lists `exec` as one of mysql2-adapter.ts's two novel names,
 and sqlite3/postgresql carry the same invented `exec`).
 
 ## Acceptance criteria
@@ -53,6 +53,6 @@ and sqlite3/postgresql carry the same invented `exec`).
 - [ ] Advisory locks issue their SQL through `queryValue`, with Rails' parameter
       list and quoting (`abstract_mysql_adapter.rb:181-187`).
 - [ ] `exec` is removed, or reduced to a documented call-site deviation; the
-      `api:extra` novel count for mysql2-adapter.ts drops accordingly.
+      `parity:api:extra` novel count for mysql2-adapter.ts drops accordingly.
 - [ ] The advisory-lock queries appear in the notification stream (an
       `assertQueries`-style guard proves it).

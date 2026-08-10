@@ -19,13 +19,13 @@ closed-reason: null
 
 PR #5712 turned `tagged.classification.unclassified` into a hard gate: a
 `@noRailsEquivalent` reason opening with neither PERMANENT nor CONVERGEABLE
-now fails `api:extra`.
+now fails `parity:api:extra`.
 
 That makes the metric permanently 0 on `main` — which silently retires it as a
 re-audit trigger. `docs/infrastructure/api-build-stub-generation-plan.md`
 ("Re-audit cadence") still names it as one:
 
-> the trigger is checkable from the `api:extra` JSON report alone —
+> the trigger is checkable from the `parity:api:extra` JSON report alone —
 > `tagged.total`, which the stats DB already ingests, plus
 > `tagged.classification.unclassified`.
 

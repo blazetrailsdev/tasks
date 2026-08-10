@@ -62,4 +62,4 @@ and its baseline row goes with it.
       the `sanitize_sql_for_order` `order:constructor,disallowRawSqlBang` row is
       removed from the call-mismatches baseline.
 - [ ] Every other `adapterClassSync` caller is audited for the null contract.
-- [ ] api:compare / test:compare delta non-negative; all three adapters green.
+- [ ] parity:api / parity:test delta non-negative; all three adapters green.

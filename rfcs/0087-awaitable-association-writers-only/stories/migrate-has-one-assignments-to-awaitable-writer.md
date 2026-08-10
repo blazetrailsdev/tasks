@@ -40,5 +40,5 @@ each site becomes `await owner.setShip(ship)`.
       test-helpers and models included) becomes `await owner.set#{Name}(x)` or
       `await owner.association(name).writer(x)`.
 - [ ] Test names are unchanged — only assignment expressions inside bodies move.
-- [ ] `pnpm test:compare` delta non-negative.
+- [ ] `pnpm parity:test` delta non-negative.
 - [ ] No new call-mismatch rows; the setter itself is NOT yet deleted.

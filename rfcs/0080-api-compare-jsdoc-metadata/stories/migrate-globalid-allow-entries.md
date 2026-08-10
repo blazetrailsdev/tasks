@@ -40,6 +40,6 @@ story.
 - Each still-flagging method carries `@noRailsEquivalent` with its
   allow.json reason preserved.
 - The 11 globalid entries are deleted from `extra-surface-allow.json`.
-- `pnpm api:compare && pnpm api:extra` passes with identical totals for
+- `pnpm parity:api && pnpm parity:api:extra` passes with identical totals for
   globalid (no stale entries, no new extras).
 - Diff within the 500-LOC ceiling.

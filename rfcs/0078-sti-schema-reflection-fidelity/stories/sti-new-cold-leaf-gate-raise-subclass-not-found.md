@@ -71,5 +71,5 @@ Related (all merged): `inheritance-column-default-type-and-has-attribute-gate`
 - [ ] Non-STI models that merely reflect a `type` column keep degrading to
       build-as-is (no raise) — the documented graceful deviation for the row and
       `new` paths is preserved.
-- [ ] Existing STI-at-new and STI-at-instantiate tests stay green; api:compare
-      and test:compare deltas non-negative.
+- [ ] Existing STI-at-new and STI-at-instantiate tests stay green; parity:api
+      and parity:test deltas non-negative.

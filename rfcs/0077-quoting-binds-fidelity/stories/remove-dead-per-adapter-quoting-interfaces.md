@@ -64,7 +64,7 @@ expected here.
       (`mysql/quoting.rb:72-78`) and all four for SQLite
       (`sqlite3/quoting.rb:83-97`). This story is about the dead TS-only type
       only.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

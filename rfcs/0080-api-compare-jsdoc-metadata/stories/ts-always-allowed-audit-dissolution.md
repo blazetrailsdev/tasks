@@ -53,6 +53,6 @@ Depends on the extractor-support story.
 - `TS_ALWAYS_ALLOWED` is deleted from `extra-surface.ts`.
 - SKIP-mirror names are allowed via file-scoped candidate mapping, not a
   global set; JS-protocol declarations carry `@noRailsEquivalent`.
-- `pnpm api:compare && pnpm api:extra` green with no new untagged extras
+- `pnpm parity:api && pnpm parity:api:extra` green with no new untagged extras
   and no stale tags; per-package totals explained in the PR if they shift.
 - Audit table (name → bucket → action) recorded in the PR description.

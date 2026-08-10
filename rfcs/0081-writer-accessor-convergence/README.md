@@ -108,7 +108,7 @@ Call sites read and write it exactly as Rails spells it:
 **Why an object literal and not a class with static accessors.** Rails declares
 these with `singleton_class.attr_accessor` on `module ActiveRecord`
 (active_record.rb:283-321). A `class ActiveRecord { static get ... }` would
-match api:compare just as well, but it introduces a class Rails does not have
+match parity:api just as well, but it introduces a class Rails does not have
 and one that can be instantiated or subclassed. The object literal is the closer
 analogue and is the form `include()`-style mixins in this repo already use.
 
@@ -140,15 +140,15 @@ of an object literal, so the accessors would have extracted as nothing at all
 and the three flags would have flipped from matched to missing. It now harvests
 them the same way class accessors are harvested (reader: 0 params; writer: the
 assigned value). Side effect: five previously-invisible object-literal accessors
-elsewhere (`actionview` 3, `trailties` 2) now show up in `api:extra`. They are
-pre-existing surface the extractor was blind to, not new drift, and `api:extra`
+elsewhere (`actionview` 3, `trailties` 2) now show up in `parity:api:extra`. They are
+pre-existing surface the extractor was blind to, not new drift, and `parity:api:extra`
 is report-only (nothing in CI gates on it).
 
-**Note on the acceptance criterion about `api:extra`.** The expected "matching
+**Note on the acceptance criterion about `parity:api:extra`.** The expected "matching
 drop" does not materialise and cannot: `ar-config.ts` has no Rails counterpart
 file in the api-compare file map, and `extra-surface.ts` only scores TS files
 that have one. The `setX` re-spellings there were never counted as extra
-surface. The measurable win is in `api:compare` instead — the three flags are
+surface. The measurable win is in `parity:api` instead — the three flags are
 now credited under their Rails names (`maintainTestSchema`) via the direct-match
 path rather than under `setMaintainTestSchema` via the umbrella-config setter
 fallback, and each reader gains a real arity check (arity-compared pairs
@@ -166,7 +166,7 @@ holds only the `QueryTransformer` interface and imports nothing, so
 `ar-config.ts` takes a type-only import of it and nothing imports back. Call
 sites read `ActiveRecord.queryTransformers` — in-place mutation
 (`.push(...)`, `.length = 0`) still works through the getter, which is how the
-existing tests and `preprocessQuery` use it. api:compare now credits both
+existing tests and `preprocessQuery` use it. parity:api now credits both
 `query_transformers` and `query_transformers=` to the single `queryTransformers`
 accessor pair, replacing the `setQueryTransformers` fallback match.
 

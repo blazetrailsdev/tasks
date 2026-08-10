@@ -61,7 +61,7 @@ Only once this lands can `call-sequence-parity-in-wide-ratchet` implement the
       constructs, verified on a hand-checked method pair.
 - [ ] The stream survives into `compare.ts` uncollapsed and is written to the
       artifact.
-- [ ] The existing `calls` set and `api:calls` gate output are byte-identical
+- [ ] The existing `calls` set and `parity:api:calls` gate output are byte-identical
       before and after (this story adds signal, changes no verdict).
 - [ ] Tests at the top level of `scripts/api-compare/` (the vitest glob is
       non-recursive).

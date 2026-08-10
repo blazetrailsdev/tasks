@@ -34,7 +34,7 @@ the failure.
 ## Acceptance criteria
 
 - A scheduled or post-merge job on `main` runs the wide reseed
-  (`pnpm api:calls:wide:reseed`) and surfaces any resulting diff — either by
+  (`pnpm parity:api:calls:reseed`) and surfaces any resulting diff — either by
   opening a maintenance PR or by failing loudly with the row list.
 - Drift is attributed to the merge that caused it, not to the next unrelated
   branch that happens to run the gate.

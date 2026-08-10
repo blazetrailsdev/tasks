@@ -47,4 +47,4 @@ ORIGINAL form, so the block must see `":salt"`, not the stripped name.
 
 - No `symbol` in `rotation-coordinator.ts`'s public types.
 - `message-verifiers.trails.test.ts`'s symbol-salt case passes with `":salt"`.
-- `pnpm api:compare` stays 11/11 for `messages/rotation_coordinator.rb`.
+- `pnpm parity:api` stays 11/11 for `messages/rotation_coordinator.rb`.

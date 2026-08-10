@@ -1,5 +1,5 @@
 ---
-title: "Delete the duplicate _assign_attributes port that takes api:compare's credit for attribute_assignment.rb"
+title: "Delete the duplicate _assign_attributes port that takes parity:api's credit for attribute_assignment.rb"
 status: draft
 updated: 2026-08-08
 rfc: "0087-awaitable-association-writers-only"
@@ -34,9 +34,9 @@ pair. trails has **two** independent ports of them:
    `executeCallstackForMultiparameterAttributes`,
    `extractCallstackForMultiparameterAttributes`, `typeCastAttributeValue`,
    `findParameterPosition`). Its own header says it exists "for Rails-layout
-   parity (`api:compare`)".
+   parity (`parity:api`)".
 
-The duplicate is what `api:compare` credits for
+The duplicate is what `parity:api` credits for
 `activerecord/attribute_assignment.rb`, because it sits at the matching file
 path — so the file that actually implements the Ruby (persistence.ts) is scored
 against `persistence.rb` while the Ruby it ports is credited to a copy no
@@ -58,7 +58,7 @@ module's exports.
       (`attribute-assignment.ts`), reached by `Base#assignAttributes`.
 - [ ] The duplicate is deleted, not left as a parity shim — no exported
       `InstanceMethods` whose members no caller reaches.
-- [ ] `pnpm api:compare` credit for `activerecord/attribute_assignment.rb`
+- [ ] `pnpm parity:api` credit for `activerecord/attribute_assignment.rb`
       lands on the surviving implementation; delta non-negative.
 - [ ] persistence, nested-attributes, multiparameter-attributes and
       attribute-assignment suites green.

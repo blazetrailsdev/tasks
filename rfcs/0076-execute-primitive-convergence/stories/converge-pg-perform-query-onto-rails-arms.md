@@ -62,7 +62,7 @@ notification_payload:, batch:`) and assigned to the prototype, so
       `_runQuery`.
 - [ ] `handle_warnings` is called from `performQuery` under its Rails name: the
       stub in `postgresql/database-statements.ts` is deleted and
-      `_flushWarnings(sql)` takes its name, keeping the api:compare match on the
+      `_flushWarnings(sql)` takes its name, keeping the parity:api match on the
       `postgresql/database_statements.rb` file.
 - [ ] `_runQuery` is removed, or reduced to whatever genuinely has no Rails
       counterpart, with its remaining callers converged.
@@ -71,4 +71,4 @@ notification_payload:, batch:`) and assigned to the prototype, so
 - [ ] `packages/activerecord/src/database-statements-raw-execute.trails.test.ts`
       drops its `currentAdapter("SQLite3Adapter", "Mysql2Adapter")` gate so the
       PG lane exercises `rawExecute` too.
-- [ ] All three lanes green; api:compare / test:compare deltas non-negative.
+- [ ] All three lanes green; parity:api / parity:test deltas non-negative.

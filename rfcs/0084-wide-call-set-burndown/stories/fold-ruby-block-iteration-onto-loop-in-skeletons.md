@@ -58,6 +58,6 @@ it changes only `output/call-skeletons.json`, which nothing gates on yet.
 - [ ] The fold reuses the existing enumerable populations in `compare.ts`; no new
       hand-maintained name list.
 - [ ] The extractors keep emitting raw names; the fold lives at the comparison.
-- [ ] `calls`, the `api:calls` verdict and `call-mismatches.json` are unchanged.
+- [ ] `calls`, the `parity:api:calls` verdict and `call-mismatches.json` are unchanged.
 - [ ] Tests at the top level of `scripts/api-compare/` (the vitest glob is
       non-recursive).

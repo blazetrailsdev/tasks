@@ -39,5 +39,5 @@ and keep the accessor local.
 - Call sites updated to assignment.
 - A one-paragraph note in the RFC README recording which host was chosen and
   why.
-- `pnpm api:compare` credits `queryTransformers` under its Rails name; overall
+- `pnpm parity:api` credits `queryTransformers` under its Rails name; overall
   matched count does not drop.

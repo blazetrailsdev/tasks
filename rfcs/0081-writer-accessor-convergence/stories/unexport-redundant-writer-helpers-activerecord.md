@@ -39,5 +39,5 @@ activerecord members (6):
   it, marked `@internal`) and removed from any barrel/index re-export.
 - The existing `static set` accessor keeps working; existing tests pass
   unchanged; no call site switches to a different spelling.
-- `pnpm api:extra` reports 6 fewer extras for activerecord with no new stale
-  entries, and `pnpm api:compare` still matches the `foo=` writers.
+- `pnpm parity:api:extra` reports 6 fewer extras for activerecord with no new stale
+  entries, and `pnpm parity:api` still matches the `foo=` writers.

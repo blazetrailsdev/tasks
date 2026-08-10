@@ -21,7 +21,7 @@ closed-reason: null
 invention test file — it asserts trails' STI attribute-routing mechanics, and
 `pnpm rails:find` returns no mapping for its test names (verified while updating
 it in #4985). Repo convention is that TS-only extras live in `*.trails.test.ts`
-so `test:compare` does not try to match them against Rails tests and so the
+so `parity:test` does not try to match them against Rails tests and so the
 provenance is obvious to the next reader.
 
 It currently sits under a plain `*.test.ts` name, which makes its names look like
@@ -34,6 +34,6 @@ corrected. A `.trails.` name would have made that determination immediate.
 
 - [ ] Confirm no test name in the file maps to a Rails test (`pnpm rails:find`).
 - [ ] Rename to `sti-attribute-routing.trails.test.ts`.
-- [ ] Confirm `test:compare` totals are unchanged by the rename.
+- [ ] Confirm `parity:test` totals are unchanged by the rename.
 - [ ] Sweep for sibling trails-only test files under plain `*.test.ts` names and
       list them (do not rename them in the same PR — file separately if numerous).

@@ -50,4 +50,4 @@ in PR #6327, where `rawExecute` gained Rails' `log`.
 - [ ] The `set_query` attachment lives where Rails puts it — the `log` rescue on
       the `raw_execute` path — so the behavior the test above pins survives
       without the test being reworded.
-- [ ] All three lanes green; api:compare / test:compare deltas non-negative.
+- [ ] All three lanes green; parity:api / parity:test deltas non-negative.

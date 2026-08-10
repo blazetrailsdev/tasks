@@ -40,4 +40,4 @@ cached-read key, so convergence must rework cache keying (e.g. key on
       duck-typed in `_driverBind`/`mysqlBinds`/`typeCastedBinds`).
 - [ ] Query-cache keys derive from `valueForDatabase`, not the Attribute object.
 - [ ] SQLite whole-valued float binds as SQLITE_FLOAT on the write path.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

@@ -41,5 +41,5 @@ Rails has ONE `perform_query` per adapter
       exactly one PG `perform_query`.
 - [ ] Reconcile the call-shape gap (the port's rowMode:"array" + internal bind
       rewriting vs. `_runQuery`'s object-row path) rather than leaving both.
-- [ ] Keep api:compare coverage pointing at the live primitive.
+- [ ] Keep parity:api coverage pointing at the live primitive.
 - [ ] PG adapter tests green (`ARCONN=postgresql`).

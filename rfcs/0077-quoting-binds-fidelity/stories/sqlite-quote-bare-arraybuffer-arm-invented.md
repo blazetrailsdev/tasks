@@ -72,4 +72,4 @@ object does. Update the one trails test accordingly.
 - [ ] Byte views still reach SQLite's `quotedBinary` through the abstract
       `isView` branch (unchanged behaviour).
 - [ ] The bare-`ArrayBuffer` boundary has an explicit, cited disposition.
-- [ ] api:compare / test:compare delta non-negative; SQLite suite green.
+- [ ] parity:api / parity:test delta non-negative; SQLite suite green.

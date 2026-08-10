@@ -39,7 +39,7 @@ hide that drift.
 ## Acceptance criteria
 
 - Decide and encode the policy for `interface` declaration names.
-- If exempt by kind, `api:extra` totals re-measure and the decision is written
+- If exempt by kind, `parity:api:extra` totals re-measure and the decision is written
   down where the tag grammar is documented
   (`docs/infrastructure/api-build-stub-generation-plan.md`).
-- `pnpm api:extra` exits 0 with no stale tags either way.
+- `pnpm parity:api:extra` exits 0 with no stale tags either way.
