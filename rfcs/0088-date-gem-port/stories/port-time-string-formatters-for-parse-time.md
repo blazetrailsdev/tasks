@@ -1,6 +1,6 @@
 ---
 title: "Port Time#to_s/asctime/iso8601/rfc2822/httpdate/xmlschema and test_parse__time"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
