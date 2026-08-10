@@ -14,6 +14,7 @@ related-rfcs:
   - "0095-call-argument-parity"
   - "0096-naming-identifier-burndown"
   - "0084-call-set-parity-burndown"
+priority: 2
 ---
 
 ## Summary
