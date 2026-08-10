@@ -50,7 +50,7 @@ Note `test_to_time__from_datetime`'s last two blocks are guarded on
       one Rails method is one TS method.
 - [ ] **`Date` gains the `ComplexDateData` arm.** `d_lite_plus`'s `T_RATIONAL`
       arm ends in `d_complex_new_internal(rb_obj_class(self), nth, jd, df, sf,
-    ...)` (`date_core.c:6249-6259`), and `rb_obj_class(self)` is `Date` — so
+...)` (`date_core.c:6249-6259`), and `rb_obj_class(self)` is `Date` — so
       `Date.new(2004, 9, 19) + 1.to_r/2` is a `Date` CARRYING a day fraction,
       which is exactly what `test_to_date__from_date` and
       `test_to_datetime__from_date` assert on. trails' `Date` is simple-only by
