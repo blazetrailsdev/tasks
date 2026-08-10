@@ -1,7 +1,7 @@
 ---
 title: "test_memsize asserts ObjectSpace.memsize_of and permanently caps the date population"
-status: in-progress
-updated: 2026-08-09
+status: done
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: ["date"]
