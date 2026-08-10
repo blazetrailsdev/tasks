@@ -18,12 +18,16 @@ closed-reason: null
 
 ## Context
 
-`PostgreSQLAdapter#performQuery`
-(`packages/activerecord/src/connection-adapters/postgresql-adapter.ts`) was
-renamed from the private `_performQuery` onto Rails' argument list in the
-`wire-perform-query-on-sqlite3-mysql2-prototypes` PR. That rename made its body
-comparable for the first time, and the call gate immediately surfaced four calls
-Rails' `perform_query`
+`PostgreSQLAdapter` still carries a private `_performQuery(client, sql, binds,
+payload)` on a trails argument list
+(`packages/activerecord/src/connection-adapters/postgresql-adapter.ts`), so
+`rawExecute` reaches the abstract `NotImplementedError` stub on PG while
+sqlite3 and mysql2 answer it (PR #6327).
+
+Renaming it onto Rails' argument list is a two-line change, and #6327 did
+exactly that — then reverted it. The rename makes the body comparable for the
+first time, and the call gate immediately surfaces four calls Rails'
+`perform_query`
 (`vendor/rails/activerecord/lib/active_record/connection_adapters/postgresql/database_statements.rb:135-168`)
 makes that the TS body does not:
 
@@ -32,12 +36,12 @@ makes that the TS body does not:
 - `synchronize` (`:151`)
 - `handle_warnings` (`:166`)
 
-They are baselined in
-`scripts/api-compare/call-mismatches-exclude/activerecord/connection-adapters/postgresql-adapter.json`
-with a "satisfied by a different path" reason: all four live inside the
-trails-invented `_runQuery` helper (`postgresql-adapter.ts`, the
-prepared-statement + invalid-cached-plan retry path) and `_flushWarnings`, which
-Rails has no counterpart for — `perform_query` IS that code in Rails.
+All four live inside the trails-invented `_runQuery` helper
+(`postgresql-adapter.ts`, the prepared-statement + invalid-cached-plan retry
+path) and `_flushWarnings` — code that Rails has no counterpart for, because in
+Rails `perform_query` IS that code. Baselining them was rejected in review as
+ratified non-parity, correctly: the rename must land together with the body
+convergence, not ahead of it. So this story owns both.
 
 `handle_warnings` is worse than a "different path": `postgresql/database-statements.ts`
 carries a **stub** port of it — `handleWarnings(result)`, wrong parameter (Rails'
@@ -49,6 +53,10 @@ under a trails name. Converging it means deleting the stub and giving
 
 ## Acceptance criteria
 
+- [ ] `_performQuery` is renamed to `performQuery` on Rails' argument list
+      (`raw_connection, sql, binds, type_casted_binds, prepare:,
+    notification_payload:, batch:`) and assigned to the prototype, so
+      `rawExecute` works on PG as it now does on sqlite3 and mysql2.
 - [ ] `performQuery` inlines Rails' three arms (`prepare` → `prepare_statement` + `exec_prepared` with the `PG::FeatureNotSupported` rescue; empty binds →
       `async_exec`; otherwise `exec_params`) rather than delegating to
       `_runQuery`.
@@ -58,7 +66,9 @@ under a trails name. Converging it means deleting the stub and giving
       `postgresql/database_statements.rb` file.
 - [ ] `_runQuery` is removed, or reduced to whatever genuinely has no Rails
       counterpart, with its remaining callers converged.
-- [ ] The four baseline rows above are deleted from
-      `call-mismatches-exclude/.../postgresql-adapter.json` (the baseline is
-      only-shrink).
+- [ ] No baseline rows are added for the four calls above — the convergence is
+      what makes them pass.
+- [ ] `packages/activerecord/src/database-statements-raw-execute.trails.test.ts`
+      drops its `currentAdapter("SQLite3Adapter", "Mysql2Adapter")` gate so the
+      PG lane exercises `rawExecute` too.
 - [ ] All three lanes green; api:compare / test:compare deltas non-negative.
