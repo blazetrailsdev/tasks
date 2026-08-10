@@ -1,6 +1,6 @@
 ---
 title: "Port rb_warning so $VERBOSE-only gem warnings can be asserted, not approximated"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
