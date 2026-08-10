@@ -95,7 +95,7 @@
 | [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @deanmarano | corelib, activesupport, activemodel, activerecord |
 | [0090-0000-tasks-backlog-integrity](rfcs/0090-0000-tasks-backlog-integrity/README.md) | Tasks backlog integrity — guards for stranded and misfiled stories | superseded | @deanmarano | — |
 | [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @deanmarano | — |
-| [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | active | @deanmarano | — |
+| [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | closed | @deanmarano | — |
 | [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @deanmarano | activerecord, activemodel |
 | [0094-sqlite3-adapter-construction-fidelity](rfcs/0094-sqlite3-adapter-construction-fidelity/README.md) | SQLite3 adapter construction fidelity | draft | @deanmarano | activerecord |
 | [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (parity:api:calls:args) | closed | @deanmarano | activerecord, arel |
