@@ -1,7 +1,7 @@
 ---
 title: "DateTime's proleptic arm computes the Julian day eagerly where the C defers to get_c_jd"
-status: in-progress
-updated: 2026-08-09
+status: done
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
