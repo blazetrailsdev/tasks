@@ -1,6 +1,6 @@
 ---
 title: "sqlite disconnectBang returns with the handle still open when the statement lock is held"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
