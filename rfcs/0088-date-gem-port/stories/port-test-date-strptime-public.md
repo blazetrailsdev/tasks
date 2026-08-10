@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_strptime.rb public strptime (8 tests)"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-test-date-strptime-frags"]
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6332
 claim: "2026-08-10T12:26:37Z"
 assignee: "date-side-builders-drop-num2int-with-frac-and-add-frac"
 blocked-by: null
