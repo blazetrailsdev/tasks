@@ -1,9 +1,9 @@
 ---
 rfc: "0051-migration-schema-statements-fidelity"
 title: "Migration & SchemaStatements fidelity"
-status: active
+status: draft
 created: 2026-07-01
-updated: 2026-07-27
+updated: 2026-08-10
 owner: "@deanmarano"
 packages:
   - "activerecord"
