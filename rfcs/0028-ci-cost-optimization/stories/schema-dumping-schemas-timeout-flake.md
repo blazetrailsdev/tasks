@@ -37,7 +37,7 @@ flake-elimination-as-ci-cost.
 - [ ] Fix by raising the per-test timeout for this specific dump-heavy case
       (Rails has no equivalent 5s budget — verify against the Rails
       schema-dump test) and/or reducing the dump work; do NOT rename the test
-      (test:compare matching).
+      (parity:test matching).
 
 ## Notes
 

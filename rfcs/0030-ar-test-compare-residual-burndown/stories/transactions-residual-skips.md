@@ -25,7 +25,7 @@ autosave association), :470 (throw from transaction commits), :587/:592
 timeout outside inner transaction), :1553 (prepared statement materializes
 transaction). Rails:
 `vendor/rails/activerecord/test/cases/transactions_test.rb`. Identify which 4
-test:compare counts (run `--incomplete` and cross-reference), read each Rails
+parity:test counts (run `--incomplete` and cross-reference), read each Rails
 test, un-skip the portable ones, reclassify the rest.
 
 ## Acceptance criteria

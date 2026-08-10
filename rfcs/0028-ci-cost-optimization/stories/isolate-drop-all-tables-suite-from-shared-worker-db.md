@@ -55,4 +55,4 @@ without the shield, 322 with it.
   used).
 - The `resetTestTables` block in the same file keeps riding the shared DB — it
   truncates rather than drops and is unaffected.
-- All 3 AR lanes green; no `test:compare` regression.
+- All 3 AR lanes green; no `parity:test` regression.

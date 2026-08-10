@@ -20,7 +20,7 @@ closed-reason: null
 Surfaced in #5505 (story `converge-connection-adapters-sqlite3-bespoke-tables`).
 
 `packages/activerecord/src/connection-adapters/sqlite3-copy-table.test.ts` is a
-trails-only file — it has no Rails counterpart, so `test:compare` can never
+trails-only file — it has no Rails counterpart, so `parity:test` can never
 match it. #5505 deleted the eight tests that were redundant with the faithful
 ports (`adapters/sqlite3/copy-table.test.ts`,
 `adapters/sqlite3/collation.test.ts`) and moved the rest onto canonical tables,
@@ -38,4 +38,4 @@ fold its assertions into the existing ports or be retired.
 - [ ] Each remaining test is either folded into the Rails port that owns the
       code path, or kept with a recorded reason why no Rails test reaches it.
 - [ ] If nothing survives, the file is deleted.
-- [ ] `pnpm test:compare` counts do not regress.
+- [ ] `pnpm parity:test` counts do not regress.

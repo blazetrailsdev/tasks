@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030 test:compare residual burndown, split out of `a4-habtm-join-aliasing`.
+Part of RFC 0030 parity:test residual burndown, split out of `a4-habtm-join-aliasing`.
 Three HABTM CollectionProxy feature tests in
 `packages/activerecord/src/associations/has-and-belongs-to-many-associations.test.ts`:
 

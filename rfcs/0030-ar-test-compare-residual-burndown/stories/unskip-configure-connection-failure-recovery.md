@@ -38,4 +38,4 @@ PR #5086 (RFC 0030 E4) cleared the rest.
       delete the deviation comment.
 - [ ] If not landed: converge the propagation (Rails re-raises
       ConnectionFailed) and then un-skip.
-- [ ] `test:compare` shows adapter_test.rb with 0 matchedSkipped.
+- [ ] `parity:test` shows adapter_test.rb with 0 matchedSkipped.

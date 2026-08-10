@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (2026-07-22) reports 9 missing tests in `core.test.ts` — Rails'
+`parity:test` (2026-07-22) reports 9 missing tests in `core.test.ts` — Rails'
 inspect/pretty-print family from
 vendor/rails/activerecord/test/cases/core_test.rb:
 
@@ -35,6 +35,6 @@ the RFC Deferred table rather than inventing behavior.
 
 ## Acceptance criteria
 
-- [ ] Each listed test ported (name verbatim) and matched in `test:compare`, or
+- [ ] Each listed test ported (name verbatim) and matched in `parity:test`, or
       reclassified permanent-skip with a recorded reason.
 - [ ] `core.test.ts` missing count drops to 0; no new gate-mismatches.

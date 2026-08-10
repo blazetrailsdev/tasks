@@ -48,5 +48,5 @@ mechanism for true self-associations).
       emit-time the same way (or documents why it must stay).
 - [ ] `aliasFixed` and the construction-time scope/STI rebind are removed.
 - [ ] All join/merge/eager/through/self-join tests stay green; the two
-      `relation_test` merge-aliasing tests stay green; `test:compare` and
-      `api:compare` non-negative.
+      `relation_test` merge-aliasing tests stay green; `parity:test` and
+      `parity:api` non-negative.

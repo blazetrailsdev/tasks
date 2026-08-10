@@ -20,7 +20,7 @@ closed-reason: null
 Surfaced in #5027 (story `arel-attribute-over-not-in-window-predications`),
 which failed CI on the `rails-comparison` job after passing every local check.
 
-`pnpm api:compare` runs the narrow call ratchet only. The wide call ratchet is
+`pnpm parity:api` runs the narrow call ratchet only. The wide call ratchet is
 a separate CI step (`.github/workflows/ci.yml:1258-1263`):
 
 ```sh
@@ -28,10 +28,10 @@ pnpm exec tsx scripts/api-compare/compare.ts --wide-calls
 pnpm exec tsx scripts/api-compare/lint-call-mismatches-wide.ts
 ```
 
-The tooling already exists as `pnpm api:calls:wide` (`package.json:29`) — this
+The tooling already exists as `pnpm parity:api:calls` (`package.json:29`) — this
 is a discoverability gap, not a missing script. Nothing in `CLAUDE.md` or the
 fidelity-verification guidance mentions running it before pushing, so an agent
-that verifies "api:compare and test:compare deltas non-negative" (the standard
+that verifies "parity:api and parity:test deltas non-negative" (the standard
 story gate wording) still misses it.
 
 The failure mode is counter-intuitive and therefore likely to recur: the wide
@@ -54,7 +54,7 @@ reseeds everything — see `wide-calls-exclude-reseed-reorders-untouched-package
 ## Acceptance criteria
 
 - [ ] `CLAUDE.md` (or the fidelity-verification doc it points to) tells agents
-      to run `pnpm api:calls:wide` alongside `api:compare` / `test:compare`
+      to run `pnpm parity:api:calls` alongside `parity:api` / `parity:test`
       before pushing, and states that it needs `compare.ts --wide-calls` to
       have regenerated the artifact first.
 - [ ] The only-shrink behaviour is stated explicitly: converging a divergence
@@ -62,6 +62,6 @@ reseeds everything — see `wide-calls-exclude-reseed-reorders-untouched-package
       that entry, not to `--write` reseed.
 - [ ] Cross-reference the reseed-churn hazard already tracked in
       `wide-calls-exclude-reseed-reorders-untouched-packages`.
-- [ ] Consider whether `pnpm api:compare` should run the wide lint itself (or a
+- [ ] Consider whether `pnpm parity:api` should run the wide lint itself (or a
       combined `api:gates` script should exist) rather than relying on docs;
       record the decision either way.

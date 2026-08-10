@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). PG schema-statements run DDL via exec() bypassing the migration framework; legacy Migration[5.0] flavor + fixtures dependence.
+Part of RFC 0030-ar-test-compare-residual-burndown (parity:test residual burndown). PG schema-statements run DDL via exec() bypassing the migration framework; legacy Migration[5.0] flavor + fixtures dependence.
 
-**9** `it.skip` tests to un-skip across 6 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **10** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
+**9** `it.skip` tests to un-skip across 6 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `parity:test` reports **10** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -103,6 +103,6 @@ Also (RFC 0019): `foreign-table.test.ts` converted to canonical `TEST_SCHEMA.pro
 ## Acceptance criteria
 
 - [x] Every listed test resolved: un-skip blocked by a genuine gap → reclassified to the Deferred table with a recorded reason + a filed convergence story (RFC-sanctioned alternative to un-skip).
-- [x] `test:compare` residual for these files reclassified to the RFC Deferred table with recorded reasons (no test forced green by deviating from Rails).
+- [x] `parity:test` residual for these files reclassified to the RFC Deferred table with recorded reasons (no test forced green by deviating from Rails).
 - [x] No new gate-mismatches introduced (comment-only on the skip side; `foreign-table.test.ts` canonical conversion is behavior-preserving).
 - [x] RFC snapshot count unchanged — no test was un-skipped (all reclassified, not flipped to `it`), so `matchedSkipped` is unaffected by this PR.

@@ -66,7 +66,7 @@ Trails has `Base.leaseConnection` (`base.ts:1244`) and `Base.establishConnection
 - [ ] `Base.removeConnection` returns the removed pool's `db_config` (the
       `DatabaseConfig` object), mirroring Rails `remove_connection`. Keep the
       existing teardown behavior; only add the return value. Update its
-      api:compare mapping / tests as needed.
+      parity:api mapping / tests as needed.
 - [ ] Add a `runWithoutConnection` test helper mirroring Rails'
       `ConnectionHelper#run_without_connection` (save db_config via
       `removeConnection`, yield the configuration hash, restore via
@@ -78,9 +78,9 @@ Trails has `Base.leaseConnection` (`base.ts:1244`) and `Base.establishConnection
       Bootstrap `Base`'s handler for the block (`setupHandlerSuite` /
       `establishFromTestConfig`) if needed.
 - [ ] Test name unchanged; gate stays feature-only `advisory_locks`
-      (`itIfSupports`). Verify on pg + mysql; `test:compare --gates` reports no
+      (`itIfSupports`). Verify on pg + mysql; `parity:test --gates` reports no
       regression.
-- [ ] api:compare + test:compare delta non-negative.
+- [ ] parity:api + parity:test delta non-negative.
 
 Hard rules: NO node:_/process._ in tests; async fs only; no new third-party
 runtime deps; 500 LOC ceiling; single PR from main; test names verbatim.

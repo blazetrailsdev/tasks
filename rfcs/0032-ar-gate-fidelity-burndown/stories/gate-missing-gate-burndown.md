@@ -16,13 +16,13 @@ blocked-by: null
 
 ## Context
 
-RFC `ar-gate-fidelity-burndown`, cluster `missing-gate`. `test:compare
+RFC `ar-gate-fidelity-burndown`, cluster `missing-gate`. `parity:test
 --package activerecord --gates` (2026-06-16) reports **173 `missing-gate`**
 mismatches across 21 files: Rails gates these tests to specific
 adapters/features, but our TS port runs them unconditionally, so the comparison
 adapter matrix is wrong and a real adapter difference may be masked.
 
-Per-file counts (refresh via `pnpm test:compare --cached --package activerecord
+Per-file counts (refresh via `pnpm parity:test --cached --package activerecord
 --gates --json`, then read each file's `gateMismatches[]` where
 `kind == "missing-gate"`):
 
@@ -51,9 +51,9 @@ Per-file counts (refresh via `pnpm test:compare --cached --package activerecord
       to Rails' condition, mark it pending (`it.skip` + `BLOCKED:`/`ROOT-CAUSE:`
       comment), and register a follow-up convergence story (best-fit active RFC,
       else `0023-surfaced-deviations`). Note the new story IDs here.
-- [ ] `test:compare --package activerecord --gates` reports **0 `missing-gate`**
+- [ ] `parity:test --package activerecord --gates` reports **0 `missing-gate`**
       for the files this story closes.
-- [ ] Test names unchanged (test:compare matching depends on them).
+- [ ] Test names unchanged (parity:test matching depends on them).
 - [ ] If the diff exceeds the 500-LOC ceiling, ship the portion that fits and
       register the remaining files as a follow-up story in this RFC.
 

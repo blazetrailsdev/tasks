@@ -57,4 +57,4 @@ trails/Rails refs:
       (`_buildEagerSharedJoinTracker`, the eager `seedConstructionTables` seed,
       and the skip filters in both eager methods) are removed or collapsed.
 - [ ] Existing eager / cascaded-eager / limited-ids / merge / through-aliasing
-      suites stay green; `test:compare` and `api:compare` non-negative.
+      suites stay green; `parity:test` and `parity:api` non-negative.

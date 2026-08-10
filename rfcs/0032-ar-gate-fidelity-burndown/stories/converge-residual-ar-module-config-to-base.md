@@ -46,7 +46,7 @@ already used for `protocol_adapters`, `disable_prepared_statements`, etc.).
 
 - Each remaining ActiveRecord module-config flag listed above is ported as a
   Base static or an `ar-config.ts` exported binding + `setX` setter (matching the
-  existing ar-config pattern), so `pnpm api:compare --package activerecord
+  existing ar-config pattern), so `pnpm parity:api --package activerecord
 --missing` no longer lists it under `base.rb`.
 - Flags with no current trails behavior get a faithful default mirroring Rails'
   (`active_record.rb`), wired where the framework consults them.

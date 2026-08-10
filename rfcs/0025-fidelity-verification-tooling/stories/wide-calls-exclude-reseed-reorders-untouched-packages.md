@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:calls:wide --write` (`scripts/api-compare/lint-call-mismatches-wide.ts`)
+`pnpm parity:api:calls --write` (`scripts/api-compare/lint-call-mismatches-wide.ts`)
 reseeds the whole `scripts/api-compare/call-mismatches-wide-exclude/` tree, not
 just the entries that changed. In PR #5023, a reseed driven purely by arel
 changes also rewrote four unrelated files:

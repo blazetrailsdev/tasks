@@ -23,7 +23,7 @@ written entirely against **bespoke synthetic models** — it defines inline
 with invented prefixes (`jm_`, `cphm_`, `sphm_`, …) instead of the canonical
 Rails-faithful models and fixtures. This is the antipattern RFC 0019 /
 canonical-schema burndown targets: table, column, and model names do not match
-Rails, so `test:compare`/`api:compare` fidelity is undermined and the 35
+Rails, so `parity:test`/`parity:api` fidelity is undermined and the 35
 `it.skip` HMT tests cannot be ported faithfully.
 
 This story converts the file to ride **only** the canonical infrastructure:
@@ -84,6 +84,6 @@ it cannot be done incrementally alongside the synthetic tests.
 - [ ] The 35 listed HMT tests are un-skipped and pass (canonical SQLite, plus
       PG/MySQL where the ruby gate applies), or are reclassified to a recorded
       permanent-skip with an upstream-fix story.
-- [ ] No new gate-mismatches; `test:compare`/`api:compare` delta non-negative.
+- [ ] No new gate-mismatches; `parity:test`/`parity:api` delta non-negative.
 - [ ] Refresh the RFC snapshot count after merge.
       </content>

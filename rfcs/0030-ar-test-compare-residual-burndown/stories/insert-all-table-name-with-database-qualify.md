@@ -30,4 +30,4 @@ open tracking story.
       provide a harness path that lets a MySQL test assert a
       `database.table`-qualified INSERT.
 - [x] Drop `ctx.skip()`; test runs on MySQL.
-- [x] `test:compare` delta non-negative; test name unchanged.
+- [x] `parity:test` delta non-negative; test name unchanged.

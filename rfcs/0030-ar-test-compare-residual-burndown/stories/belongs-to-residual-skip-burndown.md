@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package activerecord --incomplete` counts 13 skipped matched
+`parity:test --package activerecord --incomplete` counts 13 skipped matched
 tests in `associations/belongs-to-associations.test.ts` — the largest residual
 skip cluster (Rails: `vendor/rails/activerecord/test/cases/associations/belongs_to_associations_test.rb`).
 Current `it.skip`s at: :287 (where on polymorphic association with cpk), :309

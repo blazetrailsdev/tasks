@@ -35,7 +35,7 @@ encoding errors` is defined TWICE in the same class — a PG variant (raises
   (gate active → sqlite+mysql, keep pg variant pending). Plus the CTE
   prevent-writes test (`supports_common_table_expressions?`).
 
-Refresh exact gates via `pnpm test:compare --package activerecord --gates --json`.
+Refresh exact gates via `pnpm parity:test --package activerecord --gates --json`.
 
 ## Acceptance criteria
 
@@ -44,6 +44,6 @@ Refresh exact gates via `pnpm test:compare --package activerecord --gates --json
       (apply the matching adapter/feature gate; keep impl-blocked PG variants
       `it.skip` with `BLOCKED:`/`ROOT-CAUSE:` and register convergence stories
       if needed).
-- [ ] `test:compare --gates` reports 0 `missing-gate` for both
+- [ ] `parity:test --gates` reports 0 `missing-gate` for both
       `persistence.test.ts` and `adapter-prevent-writes.test.ts`.
 - [ ] Test names unchanged. No stubs. 500-LOC ceiling.

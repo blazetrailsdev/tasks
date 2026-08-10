@@ -52,11 +52,11 @@ Remaining `wrong-gate` tests (file :: test :: rails-gate vs ts-gate):
 - [ ] For each test above, rewrite the body to be adapter-generic (use the
       current test connection, not a hardcoded adapter URL) and/or fix the
       surfaced impl gap, then gate it so `adapterFeatureKey(ts)` exactly equals
-      `railsGate` reported by `test:compare --package activerecord --gates`.
+      `railsGate` reported by `parity:test --package activerecord --gates`.
 - [ ] Where an impl gap genuinely blocks an adapter (mysql expression-index
       dump; mysql view insert; mysql check-constraint revert), keep Rails' gate,
       mark the test pending with a BLOCKED note, and register a sub-story.
-- [ ] `test:compare --package activerecord --gates` reports **0 wrong-gate** for
+- [ ] `parity:test --package activerecord --gates` reports **0 wrong-gate** for
       activerecord.
 - [ ] Test names unchanged.
 

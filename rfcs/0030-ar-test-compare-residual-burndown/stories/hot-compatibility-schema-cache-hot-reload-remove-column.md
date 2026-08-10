@@ -38,4 +38,4 @@ the live table.
 - [x] Drop both `it.skip()`; tests run on all adapters (Rails does not gate them).
 - [x] `remove_column` leaves the warmed column cache stale (count unchanged).
 - [x] INSERT/UPDATE succeed using cached columns, omitting the dropped column.
-- [x] `test:compare` delta non-negative; test names unchanged.
+- [x] `parity:test` delta non-negative; test names unchanged.

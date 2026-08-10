@@ -47,4 +47,4 @@ writing).
 - [ ] `describeIfMysql` removed from `ADAPTER_SUITE_WRAPPERS`
       (`scripts/test-compare/extract-ts-core.ts:287-293`) and `gateFromWrapper`
       (`scripts/test-compare/gates.ts:75-91`).
-- [ ] CI green on all three adapters; `pnpm test:compare` gate-mismatch stays 0.
+- [ ] CI green on all three adapters; `pnpm parity:test` gate-mismatch stays 0.

@@ -31,4 +31,4 @@ already emitted as the Ruby literal `::Float::INFINITY` via the OID type's
 - [ ] PG float infinity/NaN column defaults dump as `::Float::INFINITY` /
       `-::Float::INFINITY` / `::Float::NAN` matching Rails.
 - [ ] Drop `ctx.skip()`; test runs on PG.
-- [ ] `test:compare` delta non-negative; test name unchanged.
+- [ ] `parity:test` delta non-negative; test name unchanged.

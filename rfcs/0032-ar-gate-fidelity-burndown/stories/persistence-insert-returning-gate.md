@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --gates` (2026-07-22): persistence.test.ts:2147 "model with no
+`parity:test --gates` (2026-07-22): persistence.test.ts:2147 "model with no
 auto populated fields still returns primary key after insert" is
 [missing-gate]: rails `adapters=[mysql,postgresql] features=[insert_returning]`
 (class-level in vendor/rails/activerecord/test/cases/persistence_test.rb), ts
@@ -32,5 +32,5 @@ Replace the unrecognized guard with the canonical
 ## Acceptance criteria
 
 - [ ] The test's extracted ts gate equals the rails gate; no [missing-gate]
-      row for it in `test:compare --gates`.
+      row for it in `parity:test --gates`.
 - [ ] Test name/body unchanged apart from the gate wrapper.

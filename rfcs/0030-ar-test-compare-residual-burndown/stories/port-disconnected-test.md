@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package activerecord --incomplete` marks
+`parity:test --package activerecord --incomplete` marks
 `disconnected_test.rb` ✗ — no TS counterpart exists
 (`packages/activerecord/src/disconnected.test.ts` is absent). Rails source:
 `vendor/rails/activerecord/test/cases/disconnected_test.rb:18` — a single test,
@@ -33,4 +33,4 @@ directly portable against the adapter's `disconnect!` / lazy-reconnect path
   "reconnects to execute statements when disconnected" matching Rails' name,
   asserting raw-connection identity changes across `disconnect!` + re-execute.
 - Rails' `in_memory_db?` gate mirrored (skip under sqlite3 :memory:).
-- `test:compare --package activerecord` no longer lists the file as ✗.
+- `parity:test --package activerecord` no longer lists the file as ✗.

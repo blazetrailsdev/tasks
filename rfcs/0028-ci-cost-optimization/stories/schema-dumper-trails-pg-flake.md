@@ -38,4 +38,4 @@ Seen green on re-run for PR #4543.
       (clean the version row, or use a per-test unique version).
 - [ ] The dump-heavy cases carry an explicit timeout above the 5s default.
 - [ ] Both fixed in one pass — they co-occur in the same file.
-- [ ] Do NOT rename tests (test:compare matching).
+- [ ] Do NOT rename tests (parity:test matching).

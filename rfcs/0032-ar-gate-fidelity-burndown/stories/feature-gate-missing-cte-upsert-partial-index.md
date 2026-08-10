@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --gates` (2026-07-22) — 6 missing-/wrong-gate rows where Rails
+`parity:test --gates` (2026-07-22) — 6 missing-/wrong-gate rows where Rails
 gates on a supports\_\* feature and trails is unconditional or adapter-gated:
 
 - relation/merging.test.ts:499, :509, :524 — the three CTE merging tests;
@@ -35,5 +35,5 @@ adapter coverage; add any missing key mirroring Rails supports\_\* methods.
 ## Acceptance criteria
 
 - [ ] All 6 tests feature-gated so `adapterFeatureKey(ts)` equals railsGate;
-      `test:compare --gates` shows no mismatch for them.
+      `parity:test --gates` shows no mismatch for them.
 - [ ] Test names/bodies unchanged apart from gating.

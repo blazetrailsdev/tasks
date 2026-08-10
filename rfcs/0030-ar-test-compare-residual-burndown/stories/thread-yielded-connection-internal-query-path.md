@@ -47,4 +47,4 @@ Internal `.connection` reads to converge (PR #3564 baseline):
 - [ ] `Model.leaseConnection()` invoked inside `Model.transaction` / a read
       path makes the lease permanent (matches Rails).
 - [ ] ConnectionHandlingTest "common APIs don't permanently hold a connection…"
-      still passes; no test:compare / api:compare regression.
+      still passes; no parity:test / parity:api regression.

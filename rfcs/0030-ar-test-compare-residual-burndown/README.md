@@ -1,6 +1,6 @@
 ---
 rfc: "0030-ar-test-compare-residual-burndown"
-title: "ActiveRecord test:compare 94→100: residual skip burndown"
+title: "ActiveRecord parity:test 94→100: residual skip burndown"
 status: closed
 created: 2026-06-15
 updated: 2026-07-24
@@ -18,11 +18,11 @@ clusters:
 
 <!-- Unnumbered until merge: keep `rfc:` as 0030-ar-test-compare-residual-burndown. -->
 
-# RFC — ActiveRecord test:compare 94→100: residual skip burndown
+# RFC — ActiveRecord parity:test 94→100: residual skip burndown
 
 ## Summary
 
-Drives `@blazetrails/activerecord` `test:compare` from **94.3%**
+Drives `@blazetrails/activerecord` `parity:test` from **94.3%**
 (7806 matched / 7813, **439 matchedSkipped**, snapshot 2026-06-15) to 100%.
 Refreshed snapshot 2026-07-22 (post-#5086): **98.6%** — 7706/7815 implemented,
 **92 matchedSkipped**.
@@ -32,13 +32,13 @@ exhausted and most of its stories read as `done` while ~440 mapped tests are
 still skipped. The residual skips concentrate in clusters whose 0016 stories were
 marked done but only partially scoped (associations W7, insert_all F1,
 transactions F4, nested-attributes F6). This RFC re-inventories every counted
-skip from live `test:compare` output and owns it with a concrete story.
+skip from live `parity:test` output and owns it with a concrete story.
 
-Refresh before each story: `pnpm test:compare --cached --json --package activerecord`.
+Refresh before each story: `pnpm parity:test --cached --json --package activerecord`.
 
 ## Motivation
 
-`test:compare --package activerecord` (2026-06-15):
+`parity:test --package activerecord` (2026-06-15):
 
 ```text
 rubyFiles 320 · totalRubyTests 7813 · totalMatched 7806
@@ -85,7 +85,7 @@ story's `cluster` is informative; the A–F letters above give the finer groupin
 
 One story per file or tight feature group, each owning a named subset of the
 inventory. Every story embeds its exact list of skipped test names (drawn from
-`test:compare` + the TS `it.skip` blocks) so the work is fully enumerated up
+`parity:test` + the TS `it.skip` blocks) so the work is fully enumerated up
 front. A story is done when its files report **0 matchedSkipped** (or any residual
 is reclassified to the Deferred table with a recorded reason).
 
@@ -192,4 +192,4 @@ association front (a1–a6) is already blocked/redirected accordingly.
 - 2026-06-16: gate this RFC behind RFC 0019 (reopened) for grandfathered files. Added the "Gating: blocked behind RFC 0019" section and the strict `defineSchema`-canonical-only rule; tightened the per-story test-writing direction to require the file's 0019 canonical conversion (and its removal from `require-canonical-schema-exclude.json`) before un-skipping. Blocked the not-yet-live association stories (a6, a2-residual, a1-string-and-scoped-joins) behind their 0019 conversion; the live a1–a5 agents are redirected to fold the conversion in.
 - 2026-06-15: adopt the 5 still-open stories from RFC 0016 (persistence-query-constraints-save-reload-tests, sqlite3-copy-table-test-port, strict-loading-new-record-gate-in-loaders, timestamp-index-created-for-both-timestamps, virtual-reconcile-warm-schema-cache); 0016's residual-skip campaign is now superseded by this RFC.
 - 2026-06-15: initial RFC; inventory of 439 counted skips migrated from live
-  `test:compare` output, successor to 0016-ar-test-compare-100 (94.3%).
+  `parity:test` output, successor to 0016-ar-test-compare-100 (94.3%).

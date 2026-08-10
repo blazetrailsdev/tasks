@@ -48,7 +48,7 @@ Measured 2026-06-12 (code lines, comments/blanks excluded):
 
 Oversized adapter classes are where layout drift accumulates: new methods get
 added "where the neighbors are" instead of where Rails puts them, and
-`api:compare` cannot flag the drift because the method names all exist.
+`parity:api` cannot flag the drift because the method names all exist.
 
 ## Design
 
@@ -69,7 +69,7 @@ slice that fits and registers the remainder with `pnpm tasks new`.
 
 ## Alternatives considered
 
-- **Leave implementations inline; rely on `api:compare` name coverage.**
+- **Leave implementations inline; rely on `parity:api` name coverage.**
   Rejected — name coverage already passes while the layout drifts; the drift
   compounds as new methods follow the inline neighbors.
 - **House these stories under RFC 0010 (adapter-cleanup).** Rejected — 0010's

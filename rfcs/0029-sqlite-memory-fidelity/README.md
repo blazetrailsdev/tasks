@@ -124,7 +124,7 @@ it touches the same plumbing, so it is flagged.
 ### Classification method
 
 For each trails `:memory:` site: (a) find the Rails counterpart test via the
-file-structure manifest / `test:compare` naming, (b) check whether that Rails
+file-structure manifest / `parity:test` naming, (b) check whether that Rails
 file uses `:memory:`/`sqlite3_mem` in the corresponding location, (c) classify:
 
 - **fidelity-correct** — Rails uses `:memory:` there too → leave untouched.

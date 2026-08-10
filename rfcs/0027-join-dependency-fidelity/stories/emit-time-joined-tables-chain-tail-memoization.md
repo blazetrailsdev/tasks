@@ -44,4 +44,4 @@ for this memoization.
       chain-tail reflection; assert the shared tail emits a single alias matching
       Rails' output (no spurious extra `_join` alias).
 - [ ] Existing cascaded-eager / nested-through / join-dependency suites stay
-      green; test:compare and api:compare non-negative.
+      green; parity:test and parity:api non-negative.

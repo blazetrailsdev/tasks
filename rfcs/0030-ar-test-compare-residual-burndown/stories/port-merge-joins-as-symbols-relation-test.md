@@ -49,7 +49,7 @@ real implementation and may surface aliasing/dedup gaps.
       INNER-JOIN counts of 2/3, no LEFT JOIN, child-join aliasing).
 - [x] `0 misplaced`; implementation gap surfaced (cross-model merge child-join
       aliasing) registered as its own deviation story
-      `converge-cross-model-merge-join-aliasing` (RFC 0030). NOTE: `test:compare`
+      `converge-cross-model-merge-join-aliasing` (RFC 0030). NOTE: `parity:test`
       delta is −2, not non-negative — the prior placeholder stubs counted as OK
       and the 2 aliasing tests are now skipped pending convergence. Accepted by
       explicit user decision (fidelity-over-gate); the 2 tests un-skip when the

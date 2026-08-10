@@ -45,6 +45,6 @@ bulk_alter coverage in migration tests.
 - [ ] Gate each so `adapterFeatureKey(ts)` equals `railsGate`:
       `*|bulk_alter` for the first two, `*|bulk_alter,text_column_with_default`
       for the third.
-- [ ] `test:compare --package activerecord --gates` reports no wrong-gate for
+- [ ] `parity:test --package activerecord --gates` reports no wrong-gate for
       these three tests; verify on pg + mysql lanes.
 - [ ] Test names unchanged.

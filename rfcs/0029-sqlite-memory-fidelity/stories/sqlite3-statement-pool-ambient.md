@@ -31,7 +31,7 @@ is left alone — this is the statement-pool test specifically, which does not.)
 - [ ] Test names unchanged; pool max-size / eviction / reuse behavior matches
       the Rails test.
 - [ ] Runs under the SQLite ARCONN lane (adapter-dir tests); CI green;
-      `test:compare` delta non-negative.
+      `parity:test` delta non-negative.
 
 ## Notes
 

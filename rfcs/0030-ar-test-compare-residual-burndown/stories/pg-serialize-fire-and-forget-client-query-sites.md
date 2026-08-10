@@ -53,7 +53,7 @@ pinned client" mutex is the sibling story
 - [ ] The node-pg `client.query() … already executing a query` deprecation no
       longer fires from these specific sites (verify under the existing PG lane;
       full write-path verification is the gate story's job).
-- [ ] No regression on SQLite/MySQL; `test:compare` / `api:compare` delta
+- [ ] No regression on SQLite/MySQL; `parity:test` / `parity:api` delta
       non-negative; test names unchanged.
 
 Hard rules: camelCase only; NO node:_/process._; async fs only; 500 LOC ceiling;

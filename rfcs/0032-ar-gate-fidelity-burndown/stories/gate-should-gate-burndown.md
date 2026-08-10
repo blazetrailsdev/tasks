@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-RFC `ar-gate-fidelity-burndown`, cluster `should-gate`. `test:compare --package
+RFC `ar-gate-fidelity-burndown`, cluster `should-gate`. `parity:test --package
 activerecord --gates` (2026-06-16) reports **23 `should-gate`** mismatches across
 7 files: Rails runs the test under a gate, but we `it.skip` it (a TODO/pending
 skip) instead of **gating** it. The fix is to replace the bare skip with Rails'
@@ -39,7 +39,7 @@ Per-file counts (kind == `should-gate`):
 - [ ] If, once gated to Rails' condition, the test still cannot pass due to an
       impl gap, keep it pending with a `BLOCKED:`/`ROOT-CAUSE:` comment and
       register a follow-up convergence story; note IDs here.
-- [ ] `test:compare --package activerecord --gates` reports **0 `should-gate`**
+- [ ] `parity:test --package activerecord --gates` reports **0 `should-gate`**
       for the files this story closes.
 - [ ] Test names unchanged.
 

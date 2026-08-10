@@ -45,4 +45,4 @@ connection through schema reflection (or reads it via `connection_pool` /
       `connection()` (the `threadedConnectionFor(this)` early return) can be
       removed, with `ConnectionHandlingTest` "common APIs don't permanently
       hold a connection…" still passing.
-- [ ] No api:compare / test:compare regression.
+- [ ] No parity:api / parity:test regression.

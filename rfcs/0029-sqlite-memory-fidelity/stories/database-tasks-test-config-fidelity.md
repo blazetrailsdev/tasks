@@ -52,7 +52,7 @@ created or dropped). These are divergences.
   pnpm tasks new 0029-sqlite-memory-fidelity database-tasks-test-config-fidelity-2
   ```
 
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

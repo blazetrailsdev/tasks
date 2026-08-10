@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). dump_table_schema / schemaCreation does not preserve expression defaults (the defaults_test skips I-1 left).
+Part of RFC 0030-ar-test-compare-residual-burndown (parity:test residual burndown). dump_table_schema / schemaCreation does not preserve expression defaults (the defaults_test skips I-1 left).
 
-**11** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **13** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
+**11** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `parity:test` reports **13** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -83,6 +83,6 @@ priority, not green checkmarks:
 ## Acceptance criteria
 
 - [x] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies). 9 of 11 pass on the MariaDB CI lane; the 2 `uuid()`/`concat()` dumps run on MySQL 8 and are `skipIf(isMariaDb)` (MariaDB reflection gap, tracked).
-- [x] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` — the 2 residuals are reclassified to an adapter-gated skip with a recorded reason (story [[c2-defaults-mariadb-expression-reflection]]).
+- [x] `pnpm parity:test --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` — the 2 residuals are reclassified to an adapter-gated skip with a recorded reason (story [[c2-defaults-mariadb-expression-reflection]]).
 - [x] No new gate-mismatches introduced for these files.
 - [ ] Refresh the RFC snapshot count after merge.

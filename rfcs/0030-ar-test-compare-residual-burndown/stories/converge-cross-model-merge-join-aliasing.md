@@ -60,5 +60,5 @@ describe), referencing this story. The three sibling symbol-merge tests pass.
       get the Rails `*_<parent>` alias (`authors_categorizations`).
 - [x] Un-skip the two tests in `relation.test.ts`; both pass with INNER JOIN
       count 3 and the aliased child join.
-- [x] No regression in existing join/merge tests; `test:compare` non-negative,
+- [x] No regression in existing join/merge tests; `parity:test` non-negative,
       0 misplaced.

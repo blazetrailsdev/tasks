@@ -45,7 +45,7 @@ genuinely MySQL-tree helpers — decide per symbol whether the importer should r
 or whether the helper belongs in `support/` too.
 
 `scripts/test-compare/gates.ts` recognizes these wrappers by name, not import path, so
-relocation does not move the test:compare gate delta (verified in #5536 and #5540).
+relocation does not move the parity:test gate delta (verified in #5536 and #5540).
 
 ## Acceptance criteria
 
@@ -56,4 +56,4 @@ relocation does not move the test:compare gate delta (verified in #5536 and #554
 - [ ] `support/supports.ts` no longer dynamic-imports from an adapter test-helper tree.
 - [ ] One definition per predicate — no duplicated gate.
 - [ ] The MySQL `test-helper.ts` docstring matches what it still holds.
-- [ ] Test names unchanged; api:compare and test:compare deltas non-negative.
+- [ ] Test names unchanged; parity:api and parity:test deltas non-negative.

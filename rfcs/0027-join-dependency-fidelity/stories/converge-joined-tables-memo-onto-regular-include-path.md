@@ -57,5 +57,5 @@ through `jdtComments` and asserts the through link aliases to
       still projects its columns and hydrates its association while emitting no
       duplicate JOIN.
 - [ ] The pinned `_join`-divergence assertion is converged to Rails' reuse
-      output; test:compare and api:compare non-negative; existing through /
+      output; parity:test and parity:api non-negative; existing through /
       nested-through / cascaded-eager suites stay green.

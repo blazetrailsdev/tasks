@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package activerecord --assertions` reports 16 assertion-VALUE
+`parity:test --package activerecord --assertions` reports 16 assertion-VALUE
 mismatches in `associations/has-many-associations.test.ts` vs
 `vendor/rails/activerecord/test/cases/associations/has_many_associations_test.rb`.
 These are not matcher-mapping noise — the TS tests assert different values or
@@ -48,5 +48,5 @@ expected values (and any missing assertions in the same tests).
 
 - Each listed test asserts the same values as Rails (per canonical fixtures);
   where trails fixtures legitimately differ, converge the fixtures instead.
-- `test:compare --assertions` shows 0 value-mismatches for
+- `parity:test --assertions` shows 0 value-mismatches for
   has_many_associations_test.rb.

@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --incomplete` marks both abstract_mysql_adapter concurrency files
+`parity:test --incomplete` marks both abstract_mysql_adapter concurrency files
 ✗ — neither has a TS counterpart under
 `packages/activerecord/src/adapters/abstract-mysql-adapter/`:
 
@@ -41,4 +41,4 @@ than leaving a ✗.
 - Both TS files exist (Rails test names preserved), MySQL-gated, exercising the
   real race/deadlock via two connections — or carry an explicit permanent-skip
   classification with call-site justification.
-- Neither file appears as ✗ in `test:compare --package activerecord`.
+- Neither file appears as ✗ in `parity:test --package activerecord`.

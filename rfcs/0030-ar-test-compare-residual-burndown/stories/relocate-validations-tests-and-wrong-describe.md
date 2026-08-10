@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (fresh run 2026-07-22, activerecord 98.1%) reports **21 misplaced
+`parity:test` (fresh run 2026-07-22, activerecord 98.1%) reports **21 misplaced
 tests + 6 wrong-describe** — the largest single mechanical parity gap:
 
 - All 21 tests of Rails `validations_test.rb` live in

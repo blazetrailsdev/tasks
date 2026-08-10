@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). Migrator/MigrationContext gaps, column-definition parity, expression-index reversal (CommandRecorder inversion).
+Part of RFC 0030-ar-test-compare-residual-burndown (parity:test residual burndown). Migrator/MigrationContext gaps, column-definition parity, expression-index reversal (CommandRecorder inversion).
 
-**7** `it.skip` tests to un-skip across 4 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **7** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
+**7** `it.skip` tests to un-skip across 4 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `parity:test` reports **7** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -81,6 +81,6 @@ priority, not green checkmarks:
 ## Acceptance criteria
 
 - [x] 6 of 7 un-skipped and passing (column-definition ×3, invertible SQLite ×1, invertible PG ×1, migration-instance-has-connection ×1). The 7th, `name collision across dbs`, stays skipped — genuine MigrationContext filesystem-loader gap, BLOCKED-tagged in-place and tracked as story `migration-context-filesystem-loader`.
-- [x] `test:compare` shows the column-definition/invertible files with 0 skips; `migration_test.rb` retains 1 skip = the deferred filesystem-loader test (reclassified with a recorded reason + filed story).
+- [x] `parity:test` shows the column-definition/invertible files with 0 skips; `migration_test.rb` retains 1 skip = the deferred filesystem-loader test (reclassified with a recorded reason + filed story).
 - [x] No new gate-mismatches introduced for these files.
 - [x] RFC snapshot count refreshed via the post-merge `pnpm tasks` index rebuild.

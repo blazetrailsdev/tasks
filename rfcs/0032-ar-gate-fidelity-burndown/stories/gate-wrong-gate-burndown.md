@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-RFC `ar-gate-fidelity-burndown`, cluster `wrong-gate`. `test:compare --package
+RFC `ar-gate-fidelity-burndown`, cluster `wrong-gate`. `parity:test --package
 activerecord --gates` (2026-06-16) reports **49 `wrong-gate`** mismatches across
 19 files: both Rails and our TS port gate the test, but to **different**
 adapter/feature sets (`adapterFeatureKey(rails) != adapterFeatureKey(ts)`).
@@ -43,7 +43,7 @@ Per-file counts (kind == `wrong-gate`):
       predicate **exactly matches `railsGate`** (source kind may differ).
 - [ ] Where converging surfaces an impl gap, keep Rails' gate, mark pending, and
       register a follow-up story; note IDs here.
-- [ ] `test:compare --package activerecord --gates` reports **0 `wrong-gate`**
+- [ ] `parity:test --package activerecord --gates` reports **0 `wrong-gate`**
       for the files this story closes.
 - [ ] Test names unchanged.
 

@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Tail of the 56 counted skips from `test:compare --package activerecord
+Tail of the 56 counted skips from `parity:test --package activerecord
 --incomplete`, after the belongs-to (13), dirty (7), and transactions (4)
 clusters and the already-open unskip-configure-connection-failure-recovery
 (adapter.test.ts, 1): ~31 skips spread 1–3 per file across ~21 files:

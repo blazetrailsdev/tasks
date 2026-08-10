@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). primary-key residuals (untagged — triage; likely CPK / custom-pk dump).
+Part of RFC 0030-ar-test-compare-residual-burndown (parity:test residual burndown). primary-key residuals (untagged — triage; likely CPK / custom-pk dump).
 
-**9** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **9** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
+**9** `it.skip` tests to un-skip across 1 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `parity:test` reports **9** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -79,6 +79,6 @@ priority, not green checkmarks:
 ## Acceptance criteria
 
 - [x] 3 of 9 un-skipped and passing on sqlite/PG/MySQL (primary key returns nil, collectly dump composite primary key, schema typed primary key column); the other 6 are genuine impl gaps reclassified as deferred/permanent-skip with BLOCKED tags (see below).
-- [x] `test:compare` shows `primary_keys_test.rb` matchedSkipped 9→6; the 6 residuals reclassified to the RFC Deferred table with recorded reasons (`cc-schema-dumper-pk-rendering`, `cc-id-setter-missing-attribute`).
-- [x] No new gate-mismatches: api:compare unchanged (99.9%, 275/275); MySQL-gated test mirrors Rails `current_adapter?`.
+- [x] `parity:test` shows `primary_keys_test.rb` matchedSkipped 9→6; the 6 residuals reclassified to the RFC Deferred table with recorded reasons (`cc-schema-dumper-pk-rendering`, `cc-id-setter-missing-attribute`).
+- [x] No new gate-mismatches: parity:api unchanged (99.9%, 275/275); MySQL-gated test mirrors Rails `current_adapter?`.
 - [x] RFC snapshot: primary_keys matchedSkipped now 6 (was 9); Deferred table updated.

@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-`test:compare --package activerecord` reports **41 skipped tests** in
+`parity:test --package activerecord` reports **41 skipped tests** in
 `associations/has-one-associations.test.ts` (mirrors Rails
 `associations/has_one_associations_test.rb`) — the single largest skip cluster
 blocking AR's climb from 97% to 100%, and ~17% of the entire 234-test gap. No
@@ -42,6 +42,6 @@ NEVER-rename-test-names rule):
   `packages/activerecord/src/associations/has-one-associations.test.ts`,
   converging the implementation where they fail (do NOT rename/reword tests).
 - Each un-skipped test passes against the canonical schema on sqlite/pg/mysql.
-- `test:compare --package activerecord` shows the has_one skip count drop toward 0.
+- `parity:test --package activerecord` shows the has_one skip count drop toward 0.
 - Split into multiple PRs if the un-skip set exceeds the 500 LOC ceiling;
   register follow-on stories rather than fanning out PRs yourself.

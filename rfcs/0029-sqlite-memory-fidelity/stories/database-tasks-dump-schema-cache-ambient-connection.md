@@ -48,4 +48,4 @@ Two sub-gaps, both in this one test:
       the ambient-connection plumbing is still absent, the story documents that
       at the call site and converges only the `clear_cache!` teardown.
 - [ ] Teardown mirrors Rails' `ensure ActiveRecord::Base.clear_cache!`.
-- [ ] Test name unchanged; `test:compare` delta non-negative.
+- [ ] Test name unchanged; `parity:test` delta non-negative.

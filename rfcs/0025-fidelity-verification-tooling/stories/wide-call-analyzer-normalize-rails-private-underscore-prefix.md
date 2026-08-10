@@ -24,7 +24,7 @@ Found in #5343 (`extra-surface-schema-cache-and-pool-sync-api`,
 2026-07-26). The wide call analyzer matches a Rails callee name against the
 TS callee name, but does not normalize the repo's Rails-private `_` prefix.
 A Rails private method ported as `_foo` therefore **matches as a method**
-(api:compare counts it) but **never matches as a call** — every body that
+(parity:api counts it) but **never matches as a call** — every body that
 calls it is reported as omitting the call Rails makes.
 
 Proven concretely on `ConnectionPool#connection_lease`
@@ -59,9 +59,9 @@ contributing the same false entries.
   member with a `_` prefix. That number is the size of the win.
 - Normalize the `_` prefix in the wide call analyzer's callee comparison,
   the same way `collectTsFileNames` already does for surface.
-- Re-run `pnpm api:compare --wide-calls` and remove every entry that goes
+- Re-run `pnpm parity:api --wide-calls` and remove every entry that goes
   stale (the baseline only shrinks).
 - Guard against the inverse: a TS `_foo` must not match a Rails call named
   `_foo` that is genuinely distinct from `foo`. Add a test for both
   directions.
-- No change to `api:compare` method match counts.
+- No change to `parity:api` method match counts.

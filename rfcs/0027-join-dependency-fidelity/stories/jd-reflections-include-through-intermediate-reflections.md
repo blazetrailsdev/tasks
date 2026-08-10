@@ -45,4 +45,4 @@ JoinDependency accessor and any other consumer expecting the full Rails set
       (`_eagerReflectionsAreLimitable`, `_joinsReflectionsAreLimitable`) keep
       their current results (intermediates are non-collection or already
       represented).
-- [ ] test:compare / api:compare delta >= 0.
+- [ ] parity:test / parity:api delta >= 0.

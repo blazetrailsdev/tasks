@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --incomplete` marks `prepared_statement_status_test.rb` ✗ — no TS
+`parity:test --incomplete` marks `prepared_statement_status_test.rb` ✗ — no TS
 file exists. Rails source:
 `vendor/rails/activerecord/test/cases/prepared_statement_status_test.rb:9` —
 one test, "prepared statement status is thread and instance specific": two
@@ -38,4 +38,4 @@ permanent-skip classification instead of a silent ✗.
   Rails test name, asserting per-connection `unprepared_statement` isolation
   across two pools (async interleave in place of Ruby threads), OR the file is
   explicitly classified permanent-skip with justification at the call site.
-- `test:compare --package activerecord` no longer shows the file as ✗.
+- `parity:test --package activerecord` no longer shows the file as ✗.

@@ -50,7 +50,7 @@ not exercised — the test is structurally weaker than Rails'.
       no temp files leak and no cross-test collision occurs.
 - [ ] Test names unchanged; assertions mirror the Rails test's swap/replica
       expectations (read `connection_swapping_nested_test.rb` first).
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

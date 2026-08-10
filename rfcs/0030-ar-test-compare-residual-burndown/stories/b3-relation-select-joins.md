@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030-ar-test-compare-residual-burndown (test:compare residual burndown). joins(:a, :a_with_extend) per-join table aliasing + relation parity tail.
+Part of RFC 0030-ar-test-compare-residual-burndown (parity:test residual burndown). joins(:a, :a_with_extend) per-join table aliasing + relation parity tail.
 
-**17** `it.skip` tests to un-skip across 3 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `test:compare` reports **16** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
+**17** `it.skip` tests to un-skip across 3 file(s) (deduped; permanent-skips — Marshal/YAML/thread/fork/Rational — excluded). For reference, `parity:test` reports **16** `matchedSkipped` for these files (snapshot 2026-06-15); any delta is permanent/​gated skips not on the un-skip list.
 
 ### Root causes (from `BLOCKED:`/`ROOT-CAUSE:` skip tags)
 
@@ -89,6 +89,6 @@ priority, not green checkmarks:
 ## Acceptance criteria
 
 - [x] Every test listed above is un-skipped (`it.skip` → `it`) and passes against the canonical SQLite adapter (and PG/MySQL where the ruby gate applies).
-- [x] `pnpm test:compare --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
+- [x] `pnpm parity:test --package activerecord` shows these files with no `it.skip`-based `matchedSkipped` (any residual reclassified to a permanent-skip with a recorded reason per the RFC Deferred table).
 - [x] No new gate-mismatches introduced for these files.
 - [x] Refresh the RFC snapshot count after merge.

@@ -37,5 +37,5 @@ budget — the 5s ceiling is a vitest artifact, not Rails behavior.
 
 - [ ] The three `comment.test.ts` dump tests carry an explicit timeout (60s,
       matching #4250) instead of the 5s default.
-- [ ] Do NOT rename the tests (test:compare matching).
+- [ ] Do NOT rename the tests (parity:test matching).
 - [ ] Comment explains the timeout is a harness artifact, not Rails behavior.

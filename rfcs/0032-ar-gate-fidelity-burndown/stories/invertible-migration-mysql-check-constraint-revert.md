@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "already resolved: test is itIfSupports(check_constraints) with no mysql skip (invertible-migration.test.ts:653) and no longer in test:compare --gates output as of 2026-07-22"
+closed-reason: "already resolved: test is itIfSupports(check_constraints) with no mysql skip (invertible-migration.test.ts:653) and no longer in parity:test --gates output as of 2026-07-22"
 ---
 
 ## Context
@@ -36,5 +36,5 @@ Rails: vendor/rails/activerecord/test/cases/invertible_migration_test.rb.
 - [ ] Gate the test `itIfSupports("check_constraints")` (feature-only) so the
       extracted gate is `*|check_constraints`; skip mysql at runtime via ctx.skip
       (not a static adapter gate) if still blocked.
-- [ ] `test:compare --gates` reports no wrong-gate for this test. Test name
+- [ ] `parity:test --gates` reports no wrong-gate for this test. Test name
       unchanged.

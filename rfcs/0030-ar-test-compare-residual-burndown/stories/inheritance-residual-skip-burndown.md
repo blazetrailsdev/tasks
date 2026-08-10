@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (2026-07-22) reports 12 matchedSkipped in `inheritance.test.ts` —
+`parity:test` (2026-07-22) reports 12 matchedSkipped in `inheritance.test.ts` —
 `it.skip` stubs at packages/activerecord/src/inheritance.test.ts:100,105,110,
 192,225,232,238,310,371,508,523,543:
 

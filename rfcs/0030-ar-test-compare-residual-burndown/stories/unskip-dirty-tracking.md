@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-`test:compare --package activerecord` reports **10 skipped tests** in
+`parity:test --package activerecord` reports **10 skipped tests** in
 `dirty.test.ts` (mirrors Rails `dirty_test.rb`), part of the 234-test gap from
 97% to 100%. No existing 0030 story targets this file.
 
@@ -37,4 +37,4 @@ Representative skipped cases (read the Rails test first; do not rename):
 - Un-skip the dirty-tracking tests in `packages/activerecord/src/dirty.test.ts`,
   converging the implementation where they fail (do NOT rename/reword tests).
 - Each un-skipped test passes on sqlite/pg/mysql; the mysql:8 shield stays intact.
-- `test:compare --package activerecord` shows the dirty skip count drop toward 0.
+- `parity:test --package activerecord` shows the dirty skip count drop toward 0.

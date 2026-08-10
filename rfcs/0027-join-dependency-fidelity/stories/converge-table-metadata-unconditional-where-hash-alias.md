@@ -68,5 +68,5 @@ indirection to remove).
       produce correct SQL.
 - [x] The where-hash join-alias regression guard in
       `relation/build-arel-helpers.test.ts` plus the `delete-all` / `relation/select`
-      hash-alias tests still pass on SQLite/PG/MySQL, and api:compare / test:compare
+      hash-alias tests still pass on SQLite/PG/MySQL, and parity:api / parity:test
       deltas stay non-negative.

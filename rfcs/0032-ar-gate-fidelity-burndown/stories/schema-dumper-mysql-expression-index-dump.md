@@ -36,5 +36,5 @@ expression-index coverage in schema_dumper tests.
 - [ ] Add `mysql` to `expression_index` in supports.ts.
 - [ ] Gate "schema dump expression indices escaping" so the extracted gate
       matches rails (`mysql|expression_index` / feature gate as appropriate);
-      `test:compare --gates` reports no wrong-gate for it.
+      `parity:test --gates` reports no wrong-gate for it.
 - [ ] Verify on the mysql lane. Test name unchanged.

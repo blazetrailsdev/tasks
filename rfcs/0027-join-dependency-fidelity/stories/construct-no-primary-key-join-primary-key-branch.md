@@ -66,5 +66,5 @@ is unblocked and edits the existing trio directly.
 - [ ] An eager-load test over a no-primary-key joined model (read the Rails
       `join_model`/HABTM eager cases for the exact scenario, mirror names
       verbatim) reconstructs correctly without spurious dedupe.
-- [ ] CI green on all three adapters; api:compare / test:compare delta
+- [ ] CI green on all three adapters; parity:api / parity:test delta
       non-negative.

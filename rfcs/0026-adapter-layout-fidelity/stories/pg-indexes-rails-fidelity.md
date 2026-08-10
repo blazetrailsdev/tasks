@@ -54,4 +54,4 @@ Rails source: `activerecord/lib/active_record/connection_adapters/postgresql/sch
       indisvalid select).
 - [x] `renameIndex` validates new-index-name length per Rails.
 - [x] `addIndex` quotes a bare-column-name `:where` value.
-- [x] api:compare / test:compare delta non-negative; tests cover each behavior.
+- [x] parity:api / parity:test delta non-negative; tests cover each behavior.

@@ -40,6 +40,6 @@ is positive-mixed — unsound under Ruby's rule).
 - [ ] `gateFromGuardExpr` treats positive-adapter+feature compounds the same
       way Ruby's `mixed` rule does (drop positive, keep exclusion), or a
       call-site-documented justification for keeping both, backed by a
-      `test:compare --gates` delta showing no new mismatch rows.
+      `parity:test --gates` delta showing no new mismatch rows.
 - [ ] Unit tests in extract-ts-gates.test.ts cover both polarities for the
       feature-mixed case.

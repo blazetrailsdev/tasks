@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (2026-07-22) reports 2 missing tests in
+`parity:test` (2026-07-22) reports 2 missing tests in
 `transaction-instrumentation.test.ts`:
 
 - transaction instrumentation on failed rollback
@@ -31,7 +31,7 @@ trails file: `packages/activerecord/src/transaction-instrumentation.test.ts`
 
 ## Acceptance criteria
 
-- [ ] Both tests ported (names verbatim) and matched in `test:compare`, or
+- [ ] Both tests ported (names verbatim) and matched in `parity:test`, or
       it.skip with a BLOCKED/ROOT-CAUSE tag + follow-up story if the
       instrumentation payload path has a real gap.
 - [ ] transaction-instrumentation.test.ts missing count drops to 0.

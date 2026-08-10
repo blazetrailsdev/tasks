@@ -69,12 +69,12 @@ array-likeness and Relation delegation, not row order. Sort before comparing
 models: that would diverge from `test/models/author.rb` and silently change
 every other test that reads the association.
 
-Test names must not change (`test:compare` matches on them).
+Test names must not change (`parity:test` matches on them).
 
 ## Acceptance criteria
 
 - [ ] No assertion in `collection-proxy.test.ts` depends on the row order of an
       unordered association SELECT.
 - [ ] `Author`/`Post` canonical models are unchanged — no invented `order` scope.
-- [ ] Test names unchanged; `pnpm test:compare` delta non-negative.
+- [ ] Test names unchanged; `pnpm parity:test` delta non-negative.
 - [ ] Green on sqlite, `sqlite3_mem`, PG and MariaDB.

@@ -42,4 +42,4 @@ the ratchet's precision, not a live defect.
       `JS_ENUMERABLE_ALIASES` and require the negated form for them.
 - [ ] If not feasible, say so in the module docstring so the limitation is
       recorded once rather than re-litigated per entry.
-- [ ] No new wide-ratchet entries; `pnpm api:calls:wide` green.
+- [ ] No new wide-ratchet entries; `pnpm parity:api:calls` green.

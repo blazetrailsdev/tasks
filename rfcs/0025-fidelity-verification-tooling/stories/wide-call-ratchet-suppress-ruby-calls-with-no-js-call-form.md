@@ -50,4 +50,4 @@ same way `super` did before it was excluded from
   suppressed.
 - Wide baseline reseeded; the removal set is verified to contain only
   entries whose `call` is on the new list (key-set diff, 0 added).
-- Narrow ratchet (`pnpm api:calls`) unchanged.
+- Narrow ratchet (`pnpm parity:api:calls`) unchanged.

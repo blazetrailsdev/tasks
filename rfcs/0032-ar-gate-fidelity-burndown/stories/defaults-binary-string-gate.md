@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --gates` (2026-07-22): defaults.test.ts:216 "default binary
+`parity:test --gates` (2026-07-22): defaults.test.ts:216 "default binary
 string" is [wrong-gate]: rails `adapters=[postgresql,sqlite] guards=[mariadb]`
 (vendor/rails/activerecord/test/cases/defaults_test.rb — runs on PG/SQLite and
 on MySQL only when mariadb), ts `skipIf(adapterType !== "mysql")` which

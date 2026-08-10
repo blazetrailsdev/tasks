@@ -34,4 +34,4 @@ mid-transaction (and across nested savepoints). Rails source lines 59-84 and
 - [ ] trails detects PG prepared-statement-cache-expired mid-transaction and
       retries/cleans up as Rails does, across plain and nested transactions.
 - [ ] Drop `ctx.skip()`; both tests run on PG with prepared statements.
-- [ ] `test:compare` delta non-negative; test names unchanged.
+- [ ] `parity:test` delta non-negative; test names unchanged.

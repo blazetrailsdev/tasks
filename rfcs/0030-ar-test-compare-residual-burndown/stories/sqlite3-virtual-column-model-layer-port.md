@@ -47,4 +47,4 @@ Three Rails tests remain null-overridden in the trails file
   create_table like Rails (columns_hash, take) instead of raw DDL/SELECTs.
 - The three null-overridden tests are ported (or each re-justified with a
   concrete blocker at the call site).
-- test:compare kind-mismatches for virtual_column_test.rb drop to 0.
+- parity:test kind-mismatches for virtual_column_test.rb drop to 0.

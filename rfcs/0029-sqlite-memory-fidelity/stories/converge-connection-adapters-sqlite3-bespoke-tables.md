@@ -61,4 +61,4 @@ subject but not in granularity.
 - [ ] No bespoke table names remain in either file, or the deviation is
       justified at the call site per
       `feedback_justify_deviations_at_call_site_not_pr_body`.
-- [ ] Test names unchanged (`test:compare` matches on them).
+- [ ] Test names unchanged (`parity:test` matches on them).

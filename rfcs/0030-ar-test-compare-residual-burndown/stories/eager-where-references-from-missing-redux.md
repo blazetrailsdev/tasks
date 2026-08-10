@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 Story `a1-eager-where-references-and-from` (RFC 0030) is marked done, but the
-fresh `test:compare` run (2026-07-22) still reports 4 missing tests in
+fresh `parity:test` run (2026-07-22) still reports 4 missing tests in
 `associations/eager.test.ts`:
 
 - type cast in where references association name
@@ -33,7 +33,7 @@ absent). Port faithfully with canonical models/fixtures; do not rename.
 
 ## Acceptance criteria
 
-- [ ] The 4 tests ported (names verbatim) and matched in `test:compare` (or
+- [ ] The 4 tests ported (names verbatim) and matched in `parity:test` (or
       it.skip with BLOCKED/ROOT-CAUSE tags if a real impl gap remains, filed as
       its own story).
 - [ ] eager.test.ts missing count drops to 0; no new gate-mismatches.

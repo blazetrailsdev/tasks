@@ -50,4 +50,4 @@ Rails: `vendor/rails/activerecord/lib/active_record/reflection.rb:853`
       silently exempted from the primary-key-inclusion guard.
 - [ ] Add/port the corresponding Rails test if one exists; otherwise verify via
       a composite-PK owner with a mismatched query_constraints list.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

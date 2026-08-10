@@ -82,5 +82,5 @@ as scoped follow-up stories under this RFC (filed `draft` for triage):
 - `c1-schema-dumper-timestamptz-version-compat` — gaps 5, 6.
 
 - [x] `schema dump aliased types` un-skipped and passing on all adapters (PG-verified in CI).
-- [x] No new gate-mismatches for `schema-dumper.test.ts` (test:compare: 0 for this file).
+- [x] No new gate-mismatches for `schema-dumper.test.ts` (parity:test: 0 for this file).
 - [x] Remaining gaps re-skipped with pointer comments and tracked as the follow-up stories above.

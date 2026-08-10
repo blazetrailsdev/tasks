@@ -42,7 +42,7 @@ The Ruby extractor renders the PG variant gate as `adapters=[postgresql]`.
 Our TS file `packages/activerecord/src/adapter-prevent-writes.test.ts`
 carries the non-PG variant as an unconditional `it(...)` (correct) and the
 PG variant as `it.skip(...)` (a TODO, no gate) — so
-`pnpm test:compare --package activerecord --gates` reports a **should-gate**
+`pnpm parity:test --package activerecord --gates` reports a **should-gate**
 mismatch: Rails gates it to PostgreSQL, we skip it as unimplemented.
 
 The whole file currently uses `BetterSQLite3Adapter(":memory:")` in its
@@ -63,7 +63,7 @@ errors")` in `adapter-prevent-writes.test.ts` with a real
       body constructs a `PostgreSQLAdapter(PG_TEST_URL)`, runs
       `SELECT '\xC8'` under `withPreventedWrites`, and asserts it throws
       `StatementInvalid`. Do NOT rename the test.
-- [ ] `pnpm test:compare --package activerecord --gates` no longer reports
+- [ ] `pnpm parity:test --package activerecord --gates` no longer reports
       the `[should-gate] "doesnt error when a select query has encoding
 errors"` mismatch (gate becomes `adapters=[postgresql]`, matching
       Rails).

@@ -54,6 +54,6 @@ primary key after insert` extracts `features:["insert_returning"]` +
       adapter exclusion of sqlite.
 - [x] Re-gate the TS test in `persistence.test.ts` to
       `itIfSupports.skipIf(adapterType === "sqlite")` and confirm
-      `test:compare --gates` classifies it `null` (0 wrong-gate).
+      `parity:test --gates` classifies it `null` (0 wrong-gate).
 - [x] Audit other compound-`if` Rails tests for newly-surfaced adapter gates;
       reconcile or register follow-ups.

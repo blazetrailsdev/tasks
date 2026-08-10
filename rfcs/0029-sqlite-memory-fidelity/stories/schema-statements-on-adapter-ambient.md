@@ -57,7 +57,7 @@ So this is a **decide-per-case** story, not a blanket convert.
       mixin-wiring smoke test with no Rails counterpart (so a future audit does
       not re-flag it).
 - [ ] Test names unchanged; converted cases match the cited Rails behavior.
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

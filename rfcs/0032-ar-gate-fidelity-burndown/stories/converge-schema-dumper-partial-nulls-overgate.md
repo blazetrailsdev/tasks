@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-PR #3715 (story `gate-missing-insert-all`) taught the test:compare gate
+PR #3715 (story `gate-missing-insert-all`) taught the parity:test gate
 extractor (`scripts/test-compare/gates.ts` `gateFromGuardExpr`) to recognize
 `adapterSupports("feature")` calls inside `skipIf`/`runIf` guard expressions and
 emit them as features (polarity-blind, mirroring the Ruby extractor's
@@ -54,6 +54,6 @@ The TS port instead skips the whole test on MySQL, which is an over-gate
       (mirror the Rails `if/else`), so the MySQL lane asserts the plain index.
 - [ ] Verify the MySQL schema dumper actually emits the plain index (no `where:`
       / `nulls_not_distinct:`) on MySQL; fix the dumper if it diverges.
-- [ ] `test:compare --package activerecord --gates` reports 0 `over-gated` for
+- [ ] `parity:test --package activerecord --gates` reports 0 `over-gated` for
       these two tests in `schema-dumper.test.ts`.
 - [ ] Test names unchanged. No stubs.

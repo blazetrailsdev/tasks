@@ -1,6 +1,6 @@
 ---
 rfc: "0032-ar-gate-fidelity-burndown"
-title: "ActiveRecord test:compare gate-mismatch burndown to zero"
+title: "ActiveRecord parity:test gate-mismatch burndown to zero"
 status: closed
 created: 2026-06-16
 updated: 2026-07-25
@@ -15,16 +15,16 @@ clusters:
   - "enforcement"
 ---
 
-# RFC 0032 — ActiveRecord test:compare gate-mismatch burndown to zero
+# RFC 0032 — ActiveRecord parity:test gate-mismatch burndown to zero
 
 ## Summary
 
-Drive `@blazetrails/activerecord` `test:compare` **gate-mismatches from 269 to
+Drive `@blazetrails/activerecord` `parity:test` **gate-mismatches from 269 to
 zero**, then add a hard CI gate that keeps it at zero. A gate-mismatch is a
 matched test whose adapter/feature **gate** (the condition under which Rails
 runs it — e.g. PostgreSQL-only, `supports_insert_returning?`) diverges from the
 gate on our TypeScript port. Unlike a skip, a gate-mismatch does **not** lower
-`test:compare`'s `percent` — the test runs, just under the wrong condition — so
+`parity:test`'s `percent` — the test runs, just under the wrong condition — so
 RFC 0030 (the skip-burndown to 100%) deliberately excludes them. This RFC owns
 that excluded axis: making every AR test run under **exactly Rails' gate**, so a
 test Rails restricts to PostgreSQL is not silently exercised (or silently
@@ -32,7 +32,7 @@ skipped) on SQLite/MySQL in our suite.
 
 ## Motivation
 
-`pnpm test:compare --package activerecord --gates` (snapshot 2026-06-16):
+`pnpm parity:test --package activerecord --gates` (snapshot 2026-06-16):
 
 ```text
 Overall: 7455/7809 tests (95.5%) (263 skipped, 9 wrong describe, 269 gate-mismatch)
@@ -59,7 +59,7 @@ Why this is real test debt, not cosmetics:
 - **`over-gated` (24).** We skip a test Rails runs on every adapter — lost
   coverage we believe we have.
 - **`wrong-gate` (49)** and **`should-gate` (23)** are narrower but same class:
-  our gate annotation does not match Rails', so `test:compare`'s adapter matrix
+  our gate annotation does not match Rails', so `parity:test`'s adapter matrix
   is lying about what we actually verify.
 
 There is a `classifyGateMismatch` engine and `gate-mismatch.test.ts`, but **no
@@ -69,7 +69,7 @@ growing as new tests land. The other parity rules (`require-canonical-schema`,
 does not.
 
 Refresh before each story:
-`pnpm test:compare --cached --package activerecord --gates --json`
+`pnpm parity:test --cached --package activerecord --gates --json`
 (writes `scripts/test-compare/output/convention-comparison.json`; the per-file
 `gateMismatches[]` array carries `{kind, railsGate, rubyPath, description}`).
 
@@ -96,7 +96,7 @@ non-negotiable while not blocking the burndown on unrelated impl work.
 ### Enforcement (hard zero, no exclude-list)
 
 After the burndown stories land, flip `gate-mismatch.test.ts` (or a new
-`test:compare`-driven CI check) to **fail when the activerecord gate-mismatch
+`parity:test`-driven CI check) to **fail when the activerecord gate-mismatch
 count is non-zero**. No seeded exclude-list / baseline ratchet: the burndown
 stories must reach zero first, then the gate is armed at zero. Until the gate is
 armed, the count is advisory and could regress — accepted risk per the chosen
@@ -139,7 +139,7 @@ into pre-planned sibling PRs here.
    unless a more specific active RFC fits (e.g. an `insert_all` impl gap →
    wherever the insert_all cluster lives). Each burndown story decides per-case.
 2. **CI gate mechanism.** Extend `gate-mismatch.test.ts` to assert a zero count
-   from the comparison JSON, vs. a dedicated `test:compare --gates --check`
+   from the comparison JSON, vs. a dedicated `parity:test --gates --check`
    exit-code path. Decide in the enforcement story; both are acceptable.
 
 ## Changelog

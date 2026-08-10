@@ -39,6 +39,6 @@ adapter_test advisory-locks coverage).
       Mysql2Adapter), exercising the `advisoryLocks` option on both pg + mysql.
 - [ ] Gate `itIfSupports("advisory_locks")` so the extracted gate is
       `*|advisory_locks`.
-- [ ] `test:compare --package activerecord --gates` reports no wrong-gate for
+- [ ] `parity:test --package activerecord --gates` reports no wrong-gate for
       this test; verify on pg + mysql.
 - [ ] Test name unchanged.

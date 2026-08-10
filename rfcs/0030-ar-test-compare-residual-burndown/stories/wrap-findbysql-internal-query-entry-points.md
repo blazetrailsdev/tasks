@@ -37,4 +37,4 @@ SQL outside a wrap (e.g. raw `find_by_sql`-style paths) and converge them.
       getter.
 - [ ] Under `permanent_connection_checkout = :deprecated | :disallowed` these
       APIs release the pool connection (no permanent lease), matching Rails.
-- [ ] No api:compare / test:compare regression.
+- [ ] No parity:api / parity:test regression.

@@ -31,4 +31,4 @@ test was never implemented.
       using a canonical model with a serialize-typed attribute (no bespoke
       schema; mirror Rails' model).
 - [ ] Drop `ctx.skip()`; test runs where `supports_insert_returning?`.
-- [ ] `test:compare` delta non-negative; test name unchanged.
+- [ ] `parity:test` delta non-negative; test name unchanged.

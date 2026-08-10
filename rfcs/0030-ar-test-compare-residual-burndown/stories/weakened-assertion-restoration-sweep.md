@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --assertions` surfaces a coherent cluster of weakened assertions:
+`parity:test --assertions` surfaces a coherent cluster of weakened assertions:
 tests where Rails asserts a concrete value/message but trails asserts a boolean
 or a typeof. One sweep story (small LOC — each fix is restoring 1–3 assertion
 values); split only if it balloons. Entries (Rails value → trails value):

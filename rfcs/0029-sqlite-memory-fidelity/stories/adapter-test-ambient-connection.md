@@ -43,7 +43,7 @@ their meaning (there is nothing to derive _from_).
       prepared_statements toggled" are mirrored against the derived config.
 - [ ] Test names unchanged; behavior matches the Rails test.
 - [ ] CI green on all three adapters (this test runs under every ARCONN);
-      `test:compare` delta non-negative.
+      `parity:test` delta non-negative.
 
 ## Notes
 

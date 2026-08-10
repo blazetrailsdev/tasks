@@ -43,5 +43,5 @@ comparison. Do NOT change the test bodies — they are correct.
       not produce an empty adapter set for these tests.
 - [ ] Resolve the `!prepared_statements` over-exclusion for "update prepared
       statement" (extractor handling or allowlist).
-- [ ] `test:compare --package activerecord --gates` reports no wrong-gate for
+- [ ] `parity:test --package activerecord --gates` reports no wrong-gate for
       these three tests, with test bodies unchanged.

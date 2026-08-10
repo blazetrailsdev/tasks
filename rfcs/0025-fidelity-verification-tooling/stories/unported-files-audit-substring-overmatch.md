@@ -25,7 +25,7 @@ here.
 `UNPORTED_FILES` entries keyed by a bare filename (`testFile: "foo_test.rb"`, no
 leading `/`) are matched by **plain substring** in `isTestFileUnported`
 (`scripts/api-compare/unported-files.ts:967-978`), and `test-compare.ts:477` does
-`continue` on a match — the whole file disappears from test:compare accounting.
+`continue` on a match — the whole file disappears from parity:test accounting.
 The leading-`/` anchor exists precisely to prevent this, but is optional and
 easy to omit.
 
@@ -46,7 +46,7 @@ activemodel   952/956   -> 954/958    (54 -> 55 files)
 ```
 
 The tell for this class of bug: port and un-skip a real Rails test and the
-test:compare line does not move **at all** — meaning the file is excluded, not
+parity:test line does not move **at all** — meaning the file is excluded, not
 that the port failed.
 
 ## Acceptance criteria
@@ -62,7 +62,7 @@ that the port failed.
       Prefer per-test `tests: [...]` exclusion where only some cases are Ruby-only
       (`isTestFileUnported` returns false when `e.tests` is set, keeping the file
       counted).
-- [ ] Report the test:compare delta per package. Newly-visible unported tests
+- [ ] Report the parity:test delta per package. Newly-visible unported tests
       showing as skipped/unmatched is an acceptable accounting correction — state
       which appear and why.
 - [ ] Consider making the anchor mandatory (or warning on a bare filename that

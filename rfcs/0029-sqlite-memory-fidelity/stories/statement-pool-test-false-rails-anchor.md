@@ -33,7 +33,7 @@ vendored:
 - `vendor/rails/activerecord/test/cases/adapters/sqlite3/statement_pool_test.rb`
 
 There is no mysql2 counterpart, so the header is a false anchor: it points
-`pnpm rails:find` / `test:compare` at a path that cannot resolve, and it implies
+`pnpm rails:find` / `parity:test` at a path that cannot resolve, and it implies
 the suite's test names are Rails-verbatim (and therefore frozen) when in fact
 every `it(...)` in the file is trails-invented prose
 (`"statementLimit config resizes the active pool"`,
@@ -56,7 +56,7 @@ Two candidate resolutions, to be decided as part of this story:
    `vendor/rails/activerecord/lib/active_record/connection_adapters/mysql2/…`),
    if a real counterpart is found.
 
-Option 1 looks right, but confirm against `test:compare` output before/after —
+Option 1 looks right, but confirm against `parity:test` output before/after —
 the file currently contributes to the ported-test tally under a Rails path that
 does not exist, so the numbers may move.
 
@@ -64,7 +64,7 @@ does not exist, so the numbers may move.
 
 - [ ] `statement-pool.test.ts` no longer claims a Rails counterpart that is
       absent from `vendor/rails/`.
-- [ ] Whichever option is taken, `pnpm test:compare` is run before and after and
+- [ ] Whichever option is taken, `pnpm parity:test` is run before and after and
       any change in the reported counts is explained in the PR body.
 - [ ] Test _names_ are unchanged (only the file name and/or header comment move).
 - [ ] The same check is applied to the sibling MySQL adapter suites: any other

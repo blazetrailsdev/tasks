@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --gates` (2026-07-22, 22 activerecord gate mismatches) — 5 in
+`parity:test --gates` (2026-07-22, 22 activerecord gate mismatches) — 5 in
 `calculations.test.ts` / `relations.test.ts` with no story:
 
 - [over-gated] "finding with sanitized order" —
@@ -38,7 +38,7 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] The 5 tests' extracted gates equal railsGate; `test:compare --gates`
+- [ ] The 5 tests' extracted gates equal railsGate; `parity:test --gates`
       reports no mismatch for them. Test names unchanged (delete the invented
       "(mysql)" twin).
 - [ ] Un-gated tests pass on all lanes the Rails gate implies.

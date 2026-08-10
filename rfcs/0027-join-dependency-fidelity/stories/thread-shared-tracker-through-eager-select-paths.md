@@ -47,5 +47,5 @@ It is NOT a regression from PR #3912 (the old code emitted construction-aliased
 - [ ] An eager `includes(:x).references(:x)` combined with an explicit `.joins`
       onto the same table aliases the colliding join (add a test mirroring the
       Rails case).
-- [ ] Existing eager / limited-ids / merge tests stay green; `test:compare` and
-      `api:compare` non-negative.
+- [ ] Existing eager / limited-ids / merge tests stay green; `parity:test` and
+      `parity:api` non-negative.

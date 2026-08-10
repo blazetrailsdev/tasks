@@ -53,4 +53,4 @@ ensuring `valueForDatabase` yields a driver-castable value for every type.
       PG OID types.
 - [ ] No regression on PG custom-OID columns (hstore/enum/composite) or
       binary/json round-trips across SQLite/MySQL/PostgreSQL.
-- [ ] `test:compare` / `api:compare` delta non-negative; test names unchanged.
+- [ ] `parity:test` / `parity:api` delta non-negative; test names unchanged.

@@ -32,7 +32,7 @@ database.
       tables — see memory `feedback_canonical_schema_no_invented_tables`; mirror
       the Rails models the test uses).
 - [ ] Test names unchanged; behavior matches the Rails test.
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

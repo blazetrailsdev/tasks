@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:calls:wide --write` rewrites entries unrelated to the change being
+`pnpm parity:api:calls --write` rewrites entries unrelated to the change being
 reseeded. Reproduced on a clean tree at merge of #5479: with no local edits,
 `--write` reorders two entries inside
 `scripts/api-compare/call-mismatches-wide-exclude/activerecord-test-support/load-schema-helper.json`,

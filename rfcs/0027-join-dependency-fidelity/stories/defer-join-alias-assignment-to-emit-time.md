@@ -43,4 +43,4 @@ the re-alias pass.
       (or reduced to the tracker construction).
 - [ ] All existing join/merge/where-chain/eager tests still pass; the two
       `relation_test` merge-aliasing tests stay green.
-- [ ] `test:compare` non-negative, `api:compare` non-negative.
+- [ ] `parity:test` non-negative, `parity:api` non-negative.

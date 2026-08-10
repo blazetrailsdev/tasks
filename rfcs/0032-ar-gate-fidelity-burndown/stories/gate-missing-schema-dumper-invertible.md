@@ -28,12 +28,12 @@ files: `schema-dumper.test.ts` (7) and `invertible-migration.test.ts` (5).
   `current_adapter?(:PostgreSQLAdapter,:SQLite3Adapter)` (revert add index with
   name), `supports_unique_constraints?` (revert add unique constraint).
 
-Refresh exact gates via `pnpm test:compare --package activerecord --gates --json`.
+Refresh exact gates via `pnpm parity:test --package activerecord --gates --json`.
 
 ## Acceptance criteria
 
 - [ ] Apply exact Rails gates to all 12 tests across both files (feature
       predicates via `itIfSupports`; adapter sets via `it.skipIf`).
-- [ ] `test:compare --gates` reports 0 `missing-gate` for both
+- [ ] `parity:test --gates` reports 0 `missing-gate` for both
       `schema-dumper.test.ts` and `invertible-migration.test.ts`.
 - [ ] Test names unchanged. No stubs. 500-LOC ceiling.

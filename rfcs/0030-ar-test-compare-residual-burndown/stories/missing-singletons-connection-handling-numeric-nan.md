@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (2026-07-22) reports two remaining single missing tests:
+`parity:test` (2026-07-22) reports two remaining single missing tests:
 
 - `connection-handling.test.ts` — "common APIs don't permanently hold a
   connection when permanent checkout is deprecated or disallowed"
@@ -33,6 +33,6 @@ trails files: `packages/activerecord/src/connection-handling.test.ts`,
 
 ## Acceptance criteria
 
-- [ ] Both tests ported (names verbatim) and matched in `test:compare`, or
+- [ ] Both tests ported (names verbatim) and matched in `parity:test`, or
       it.skip with recorded BLOCKED reason + follow-up story.
 - [ ] Missing count for both files drops to 0.

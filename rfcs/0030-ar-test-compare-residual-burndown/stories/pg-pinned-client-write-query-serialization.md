@@ -73,7 +73,7 @@ hstore + composite pass).
 - [ ] With `write-path-bind-all-column-types`'s binding change applied, the
       full PostgreSQL `pnpm vitest run packages/activerecord/` suite completes
       (no advisory-slot exhaustion, no 20-min timeout) at `AR_DB_FORKS=8`.
-- [ ] No regression on SQLite/MySQL; `test:compare` / `api:compare` delta
+- [ ] No regression on SQLite/MySQL; `parity:test` / `parity:api` delta
       non-negative; test names unchanged.
 
 ## Notes

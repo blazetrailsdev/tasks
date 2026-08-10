@@ -28,13 +28,13 @@ RFC `0032-ar-gate-fidelity-burndown`, cluster `missing-gate`. Follow-up from
 additional `it.skipIf(adapterType !== "postgres")` composed with the feature
 gate.
 
-Refresh exact gates via `pnpm test:compare --package activerecord --gates --json`.
+Refresh exact gates via `pnpm parity:test --package activerecord --gates --json`.
 
 ## Acceptance criteria
 
 - [ ] Apply exact Rails gates to all 18 tests
       (`itIfSupports("datetime_with_precision", …)`, composing
       `.skipIf(adapterType !== "postgres")` for timestamptz variants).
-- [ ] `test:compare --gates` reports 0 `missing-gate` for
+- [ ] `parity:test --gates` reports 0 `missing-gate` for
       `date-time-precision.test.ts`.
 - [ ] Test names unchanged. No stubs. 500-LOC ceiling.

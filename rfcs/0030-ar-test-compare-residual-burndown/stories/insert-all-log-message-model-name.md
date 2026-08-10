@@ -36,5 +36,5 @@ these were never implemented.
       equivalent to Rails' `capture_log_output` / `assert_match`.
 - [ ] The 4 tests assert the logged message includes the model name and run on
       their gated adapters (drop `ctx.skip()`).
-- [ ] `test:compare --package activerecord` delta non-negative; test names
+- [ ] `parity:test --package activerecord` delta non-negative; test names
       unchanged.

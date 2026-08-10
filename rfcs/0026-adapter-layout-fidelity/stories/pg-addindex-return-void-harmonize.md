@@ -42,5 +42,5 @@ bare column name where"), which assert on the exact `CREATE INDEX ...` string.
 
 - [ ] PG `addIndex` returns `Promise<void>`; `@ts-expect-error TS2416` removed.
 - [ ] No caller/test depends on a returned SQL string from `addIndex`.
-- [ ] api:compare arity/return parity for `add_index` improves or holds;
-      test:compare delta non-negative.
+- [ ] parity:api arity/return parity for `add_index` improves or holds;
+      parity:test delta non-negative.

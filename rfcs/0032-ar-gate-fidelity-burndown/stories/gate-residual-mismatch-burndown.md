@@ -19,7 +19,7 @@ blocked-by: null
 RFC `0032-ar-gate-fidelity-burndown`, cluster `wrong-gate` / `should-gate`
 residual. The four burndown clusters (`missing-gate`, `wrong-gate`,
 `over-gated`, `should-gate`) are marked done, but a fresh
-`pnpm test:compare --package activerecord --gates` against `origin/main`
+`pnpm parity:test --package activerecord --gates` against `origin/main`
 (verified 2026-06-20, at e16dbed49) still reports **17** activerecord
 gate-mismatches. These block the `gate-mismatch-zero-ci-enforcement` story,
 which cannot arm the hard-zero CI gate until the count reads zero (arming
@@ -60,13 +60,13 @@ names (`read uncommitted` / `read committed` / `repeatable read` /
 adapter set; converge together.
 
 Locate each with:
-`pnpm test:compare --package activerecord --gates` (the GATE MISMATCHES
+`pnpm parity:test --package activerecord --gates` (the GATE MISMATCHES
 section prints `rails:` and `ts:` gates per test alongside the convention TS
 file).
 
 ## Acceptance criteria
 
-- [ ] `pnpm test:compare --package activerecord --gates` reports **0**
+- [ ] `pnpm parity:test --package activerecord --gates` reports **0**
       gate-mismatches for activerecord (the `convention-comparison.json`
       `totalGateMismatch` for the activerecord package is 0).
 - [ ] Each of the 17 tests above has its TS adapter/feature gate converged to

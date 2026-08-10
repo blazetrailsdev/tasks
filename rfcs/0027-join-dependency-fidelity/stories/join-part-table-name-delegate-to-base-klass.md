@@ -49,7 +49,7 @@ separate `tableAlias` and `effectiveSqlName` fields on `JoinPart`.
   field is moved to an appropriately-named field (e.g. reuse `effectiveSqlName`
   / `tableAlias`) and all ~20 `join-dependency.ts` read/write sites repointed.
 - No regression in join-dependency / through-aliasing / self-join tests;
-  api:compare for `join_part.rb` stays 100%.
+  parity:api for `join_part.rb` stays 100%.
 
 ## Notes
 

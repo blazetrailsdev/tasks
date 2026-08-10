@@ -44,4 +44,4 @@ fixture data can drift.
 - The PG `build fixture sql` test drives `virtualColumnFixtureData` instead of
   an inline object literal.
 - Test name unchanged; `adapters/postgresql/virtual_column_test.rb` stays at 0
-  test:compare mismatches.
+  parity:test mismatches.

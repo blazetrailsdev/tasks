@@ -31,7 +31,7 @@ rollback-to-disk, and WAL behavior are exactly what `:memory:` papers over.
 - [ ] Tables used exist in `TEST_SCHEMA`; mirror the Rails models/fixtures the
       corresponding cases use (no invented tables).
 - [ ] Test names unchanged; behavior matches the Rails test.
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

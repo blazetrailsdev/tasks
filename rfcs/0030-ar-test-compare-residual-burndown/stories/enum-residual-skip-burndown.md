@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` (2026-07-22) reports 12 matchedSkipped in `enum.test.ts` — all
+`parity:test` (2026-07-22) reports 12 matchedSkipped in `enum.test.ts` — all
 body-less `it.skip(..., () => {})` stubs (packages/activerecord/src/enum.test.ts
 lines 596-597, 901-905, 1002-1004, 1024, 1064):
 

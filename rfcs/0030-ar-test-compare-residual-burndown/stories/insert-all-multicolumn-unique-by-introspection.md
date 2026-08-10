@@ -30,4 +30,4 @@ never implemented.
 - [x] `find_unique_index_for` (or equivalent) resolves a multi-column
       `unique_by` against the schema cache / index introspection.
 - [x] Drop `ctx.skip()`; test runs on adapters supporting both features.
-- [x] `test:compare` delta non-negative; test name unchanged.
+- [x] `parity:test` delta non-negative; test name unchanged.

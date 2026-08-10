@@ -68,5 +68,5 @@ returned SQL aren't churned here.
 - [ ] Bare-column-name `:where` quoting lives in PG `addIndexOptions`, matching
       Rails `schema_statements.rb:937-942`; expression `:where` values pass
       through verbatim (no unescaped value reaches `columnExists`).
-- [ ] api:compare / test:compare delta non-negative; existing PG add-index
+- [ ] parity:api / parity:test delta non-negative; existing PG add-index
       tests (incl. #3340's where-quoting cases) still pass.

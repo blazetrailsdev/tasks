@@ -53,4 +53,4 @@ converging all three onto one shared helper would settle it.
       site.
 - [ ] The invented `development: { database: ":memory:" }` configuration is
       removed or replaced with the ambient config shape.
-- [ ] Test names unchanged; `test:compare` delta non-negative.
+- [ ] Test names unchanged; `parity:test` delta non-negative.

@@ -37,7 +37,7 @@ config = ActiveRecord::Base.connection_pool.db_config
       idle-timeout / option cases, mirroring `connection_pool_test.rb:20-29`,
       `:265-269`, `:293-296` — not a literal `:memory:` config.
 - [ ] Test names unchanged; pool/checkout/idle-timeout behavior matches Rails.
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.
 
 ## Notes
 

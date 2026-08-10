@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-The 2026-08-03 api-signals audit found `pnpm api:extra`
+The 2026-08-03 api-signals audit found `pnpm parity:api:extra`
 (`scripts/api-compare/extra-surface.ts`) is not referenced anywhere in
 `.github/workflows/ci.yml` (grep count 0), despite hard-exiting non-zero on
 stale `@noRailsEquivalent` tags and unclassified permanence claims — and it

@@ -29,4 +29,4 @@ path must round-trip binds through a prepared statement (matching Rails'
 - [ ] INSERT/UPDATE write path binds string literals as prepared-statement
       parameters (no inlining), so a `\x00`-containing value round-trips.
 - [ ] Drop `ctx.skip()`; test runs on MySQL and SQLite.
-- [ ] `test:compare` delta non-negative; test name unchanged.
+- [ ] `parity:test` delta non-negative; test name unchanged.

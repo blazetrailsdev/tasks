@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-RFC `ar-gate-fidelity-burndown`, cluster `over-gated`. `test:compare --package
+RFC `ar-gate-fidelity-burndown`, cluster `over-gated`. `parity:test --package
 activerecord --gates` (2026-06-16) reports **24 `over-gated`** mismatches across
 8 files: Rails runs the test on **every** adapter, but our TS port gates (skips)
 it — coverage we believe we have but don't.
@@ -38,7 +38,7 @@ Per-file counts (kind == `over-gated`):
 - [ ] Where removing the gate surfaces a real per-adapter failure, keep it
       pending with a `BLOCKED:` comment and register a follow-up convergence
       story instead of leaving a false gate; note IDs here.
-- [ ] `test:compare --package activerecord --gates` reports **0 `over-gated`**
+- [ ] `parity:test --package activerecord --gates` reports **0 `over-gated`**
       for the files this story closes.
 - [ ] Test names unchanged.
 

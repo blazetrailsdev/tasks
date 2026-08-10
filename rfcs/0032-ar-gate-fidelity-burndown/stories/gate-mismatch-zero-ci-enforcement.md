@@ -32,13 +32,13 @@ already zero.
 ## Acceptance criteria
 
 - [ ] CI fails when the `activerecord` gate-mismatch count from
-      `test:compare --package activerecord --gates --json` is non-zero.
+      `parity:test --package activerecord --gates --json` is non-zero.
 - [ ] No seeded exclude-list or baseline ratchet (hard zero).
 - [ ] Mechanism decided in this story: either extend
       `scripts/test-compare/gate-mismatch.test.ts` to assert a zero count from
-      `convention-comparison.json`, or add a `test:compare --gates --check`
+      `convention-comparison.json`, or add a `parity:test --gates --check`
       exit-code path wired into CI. Document the choice.
-- [ ] Gate is wired into the same CI lane that runs `test:compare` today.
+- [ ] Gate is wired into the same CI lane that runs `parity:test` today.
 
 ## Notes
 

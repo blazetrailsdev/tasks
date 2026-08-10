@@ -36,7 +36,7 @@ redundancy guard test.
   `lint-calls.ts` and `compare.ts` consume (either the noise list is
   derived from `JS_ENUMERABLE_ALIASES.keys()`, or both are derived from
   one shared table — whichever preserves current behaviour).
-- Neither the narrow (`pnpm api:calls`, 19 baselined) nor the wide
-  (`pnpm api:calls:wide`, 6317 baselined) ratchet changes count.
+- Neither the narrow (`pnpm parity:api:calls`, 19 baselined) nor the wide
+  (`pnpm parity:api:calls`, 6317 baselined) ratchet changes count.
 - The existing redundancy guard test ("lists no alias that
   rubyMethodToTs already produces") still passes.

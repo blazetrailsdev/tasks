@@ -47,6 +47,6 @@ Rails: vendor/rails/activerecord/test/cases/transaction_isolation_test.rb.
 - [ ] Resolve the SQLite isolation divergence (impl support, or BLOCKED ctx.skip
       with a registered impl sub-story) so the gate is feature-only
       `transaction_isolation` with no adapter restriction.
-- [ ] `test:compare --package activerecord --gates` reports no wrong-gate for
+- [ ] `parity:test --package activerecord --gates` reports no wrong-gate for
       these four tests.
 - [ ] Test names unchanged.

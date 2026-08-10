@@ -77,4 +77,4 @@ trails/Rails refs:
       dedup via the JD `walk` fold rather than matched-seed trackers.
 - [ ] Existing eager / count / aggregate / limited-ids / merge suites stay green,
       including the un-skipped `inner-join-association.test.ts` eager+join cases;
-      `test:compare` and `api:compare` non-negative.
+      `parity:test` and `parity:api` non-negative.

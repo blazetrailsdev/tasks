@@ -27,12 +27,12 @@ integer/text/binary limit (`current_adapter?(:Mysql2,:Trilogy,
 :PostgreSQLAdapter)` → mysql+pg), invalid text size (mysql), add/remove index
 (pg).
 
-Refresh exact gates via `pnpm test:compare --package activerecord --gates --json`.
+Refresh exact gates via `pnpm parity:test --package activerecord --gates --json`.
 
 ## Acceptance criteria
 
 - [ ] Apply the exact Rails gate to each of the 20 tests (feature predicates via
       `itIfSupports`/`describeIfSupports`; adapter sets via
       `describe.skipIf`/`it.skipIf(adapterType …)`).
-- [ ] `test:compare --gates` reports 0 `missing-gate` for `migration.test.ts`.
+- [ ] `parity:test --gates` reports 0 `missing-gate` for `migration.test.ts`.
 - [ ] Test names unchanged. No stubs. 500-LOC ceiling.

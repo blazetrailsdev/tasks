@@ -24,7 +24,7 @@ PR #5536 (story `relocate-describe-if-sqlite-out-of-adapters-tree`) moved `descr
 
 Both adapter test-helper files carry the same "helpers for this tree only" framing the sqlite one did, so the contract is false for them too. `packages/activerecord/src/support/supports.ts` already documents all three as a set.
 
-`scripts/test-compare/gates.ts` recognizes these wrappers by name, not import path, so relocation does not move the test:compare gate delta (verified for `describeIfSqlite` in #5536).
+`scripts/test-compare/gates.ts` recognizes these wrappers by name, not import path, so relocation does not move the parity:test gate delta (verified for `describeIfSqlite` in #5536).
 
 ## Acceptance criteria
 
@@ -32,4 +32,4 @@ Both adapter test-helper files carry the same "helpers for this tree only" frami
 - [ ] Every importer repointed; no test file imports a gate from another adapter tree.
 - [ ] Each adapter `test-helper.ts` docstring matches what it still holds.
 - [ ] One definition per predicate — no duplicated gate.
-- [ ] Test names unchanged; api:compare and test:compare deltas non-negative.
+- [ ] Test names unchanged; parity:api and parity:test deltas non-negative.

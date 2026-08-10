@@ -63,4 +63,4 @@ trails/Rails refs:
       `_applyJoinsToManager(manager, eagerJd)` (build it via `collectEagerSpecs`),
       mirroring `singleAggregate`/`groupedAggregate`.
 - [ ] Add/port the corresponding Rails composite-key eager count/aggregate test
-      cases; `test:compare` / `api:compare` non-negative.
+      cases; `parity:test` / `parity:api` non-negative.

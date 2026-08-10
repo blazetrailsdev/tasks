@@ -54,5 +54,5 @@ the existing parent-key accessor on that path.
       children, and the multi-parent case) proving dedupe is exact; read the
       corresponding Rails `eager`/`join_dependency` test and mirror names
       verbatim.
-- [ ] CI green on all three adapters; api:compare / test:compare delta
+- [ ] CI green on all three adapters; parity:api / parity:test delta
       non-negative.

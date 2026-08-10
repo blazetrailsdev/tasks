@@ -33,4 +33,4 @@ backed by `postgresql_specific_schema.rb` / `sqlite_specific_schema.rb`
       `default: () => "..."` lambdas.
 - [ ] Drop the `it.skip` in both adapter-gated describes; tests assert the dumped
       expression default.
-- [ ] `test:compare` delta non-negative; test names unchanged.
+- [ ] `parity:test` delta non-negative; test names unchanged.

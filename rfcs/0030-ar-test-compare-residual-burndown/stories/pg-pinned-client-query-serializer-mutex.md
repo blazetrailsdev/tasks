@@ -68,7 +68,7 @@ directly on `client.query()` — see RFC 0013 notes; do not re-enter acquire).
       paths.
 - [ ] PG suite green at `AR_DB_FORKS=8` on the existing (non-binding) write
       path; no advisory-slot exhaustion introduced.
-- [ ] No regression on SQLite/MySQL; `test:compare` / `api:compare` delta
+- [ ] No regression on SQLite/MySQL; `parity:test` / `parity:api` delta
       non-negative; test names unchanged.
 
 Note: full write-path-binding verification (rebasing #3880's binding change on

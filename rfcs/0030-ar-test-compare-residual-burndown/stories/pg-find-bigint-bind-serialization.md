@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "already resolved: bigserial flip landed (#3966), PG lane green in CI; persistence destroy no longer throws BigInt serialization error; not in test:compare output as of 2026-07-22"
+closed-reason: "already resolved: bigserial flip landed (#3966), PG lane green in CI; persistence destroy no longer throws BigInt serialization error; not in parity:test output as of 2026-07-22"
 ---
 
 ## Context

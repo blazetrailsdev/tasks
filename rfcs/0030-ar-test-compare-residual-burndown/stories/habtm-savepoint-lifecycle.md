@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-Part of RFC 0030 test:compare residual burndown, split out of `a4-habtm-join-aliasing`
+Part of RFC 0030 parity:test residual burndown, split out of `a4-habtm-join-aliasing`
 (the aliasing fix shipped separately). These two HABTM tests in
 `packages/activerecord/src/associations/has-and-belongs-to-many-associations.test.ts`
 pass on SQLite but are skipped because of a savepoint lifecycle leak on PG/MySQL:
