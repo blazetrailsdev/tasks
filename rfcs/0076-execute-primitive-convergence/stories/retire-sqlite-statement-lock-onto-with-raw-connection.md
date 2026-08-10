@@ -5,7 +5,8 @@ updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
-deps: []
+deps:
+  - wire-raw-execute-through-log
 deps-rfc: []
 est-loc: 80
 priority: null
