@@ -18,8 +18,8 @@ closed-reason: null
 
 ## Context
 
-PR 6338 disproved a premise that is written into RFC 0088 story text, into PR
-PR #6321's review record, and possibly into ported bodies. Verified on
+PR 6338 disproved a premise that is written into RFC 0088 story text, into
+PR 6321's review record, and possibly into ported bodies. Verified on
 `ruby 3.3.11` (`ruby` is on PATH in this environment):
 
 ```ruby
