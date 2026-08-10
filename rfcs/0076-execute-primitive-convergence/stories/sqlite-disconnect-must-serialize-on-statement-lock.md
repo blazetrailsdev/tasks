@@ -1,6 +1,6 @@
 ---
 title: "sqlite disconnect can close the handle mid-statement; Rails' @lock covers both"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6337
 claim: "2026-08-10T14:13:28Z"
 assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null
