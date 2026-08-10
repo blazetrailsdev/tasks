@@ -1,6 +1,6 @@
 ---
 title: "Sweep legacy compare-script spellings out of the tasks repo's story bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6347
 claim: "2026-08-10T19:18:57Z"
 assignee: "ar-closure-rollup-in-parity-summaries"
 blocked-by: null
