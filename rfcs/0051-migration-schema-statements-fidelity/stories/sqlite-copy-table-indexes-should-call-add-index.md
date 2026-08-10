@@ -1,6 +1,6 @@
 ---
 title: "copy_table_indexes hand-builds CREATE INDEX instead of calling add_index"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
