@@ -18,9 +18,14 @@ closed-reason: null
 
 ## Context
 
-Seed the `scripts/api-compare/call-mismatches-args-exclude/` baseline for the
-call-argument gate (`call-args-ratchet-and-ci-step`), on `main`, as its own PR —
-the same shape as every prior baseline seed in this repo.
+Seed the call-argument rows of the `scripts/api-compare/call-mismatches-exclude/`
+baseline for the call-argument gate (`call-args-ratchet-and-ci-step`), on `main`,
+as its own PR — the same shape as every prior baseline seed in this repo.
+
+Rows go into the **existing** per-file shards next to the call-set rows for the
+same source file, carrying `kind: "args"` (decision reversed 2026-08-10; see
+`call-args-rows-share-existing-shards`). There is no
+`call-mismatches-args-exclude/` tree.
 
 The spike (RFC 0025 `## Call-argument fidelity`) measured 70 flagged rows on
 `arel` and 510 on `activerecord`; ~45% of those are `shape`-class and therefore
@@ -45,10 +50,13 @@ the RFCs that own those files once the baseline exists:
 
 ## Acceptance criteria
 
-1. `call-mismatches-args-exclude/` is seeded from a forced full-scope run
-   (`API_COMPARE_FORCE=1`), sharded per file like the calls baseline.
-2. Only `shape`-class rows are seeded; `naming` rows are not.
-3. The row count is recorded in the RFC 0025 changelog as the burndown floor.
-4. `pnpm api:calls:args` is green on `main` immediately after the seed.
-5. The three convergence targets above are filed as stories against the RFCs
+1. Rows are seeded from a forced full-scope run (`API_COMPARE_FORCE=1`) into
+   the existing `call-mismatches-exclude/<package>/<path>.json` shards, each
+   carrying `kind: "args"`, written via `serializeBaseline`.
+2. The call-set gate's row count is unchanged by the seed — seeding the
+   argument dimension must not move RFC 0084's debt metric.
+3. Only `shape`-class rows are seeded; `naming` rows are not.
+4. The argument-row count is recorded in the RFC 0025 changelog as the burndown floor.
+5. `pnpm parity:api:calls:args` is green on `main` immediately after the seed.
+6. The three convergence targets above are filed as stories against the RFCs
    owning `packages/arel/` — not fixed in this PR.

@@ -25,11 +25,15 @@ Depends on `call-args-artifact-and-report`.
 artifact inside the gate (a stale artifact reports movement that never
 happened), stale-row arm, partial-scope rejection, per-file sharding.
 
-**The baseline must be its own tree**, `scripts/api-compare/call-mismatches-args-exclude/`,
-keyed `package + tsFile + rubyName + call + rubyArgs`. It cannot fold into
-`call-mismatches-exclude`: that key has no argument component, and RFC 0084
-measures its **row count** as the debt metric — mixing a second dimension into
-it corrupts that measurement.
+**The baseline shares the existing shards** (decision reversed 2026-08-10 —
+see `call-args-rows-share-existing-shards`). Call-argument rows live in
+`scripts/api-compare/call-mismatches-exclude/<package>/<path>.json` next to the
+call-set rows for the same source file, keyed
+`package + tsFile + rubyName + call + rubyArgs` and discriminated by
+`kind: "args"`; call-set rows have `kind` absent or `"calls"`. Both new fields
+are optional so every existing shard file parses unchanged and no reseed is
+needed. RFC 0084's **row count** debt metric is preserved by filtering on
+`kind`, not by a separate tree. Do NOT create `call-mismatches-args-exclude/`.
 
 Per the RFC §4 narrowing, **gate `shape` rows only**; `naming` rows (argument
 lists differing only in a `ref:` identifier spelling — ~33% of the population,
@@ -41,8 +45,10 @@ Seeding the baseline is a separate `main`-only PR
 
 ## Acceptance criteria
 
-1. `scripts/api-compare/lint-call-args.ts` gates `shape` rows against
-   `call-mismatches-args-exclude/`, only-shrink, with the stale-row arm.
+1. `scripts/api-compare/lint-call-args.ts` gates `shape` rows against the
+   `kind: "args"` rows of `call-mismatches-exclude/`, only-shrink, with the
+   stale-row arm. The call-set gate filters to `kind` absent/`"calls"` and its
+   row count is unchanged — assert the exact pre-change number in a test.
 2. `pnpm api:calls:args` / `parity:api:calls:args` scripts exist and the gate
    runs in the `Rails API/Test Comparison` CI job.
 3. The gate regenerates the artifact itself before reading it.

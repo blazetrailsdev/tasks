@@ -187,12 +187,21 @@ Two row classes in one artifact; gate one:
   **Report-only.** ~33% of the population; gating it on day one buys a ~500-row
   baseline that would swamp the rows carrying the unique findings.
 
-Ratchet shape: **its own baseline tree and its own script.**
-`scripts/api-compare/call-mismatches-args-exclude/`, sharded per file, keyed
-`package + tsFile + rubyName + call + rubyArgs`. It must **not** fold into
-`call-mismatches-exclude`: that key has no argument component, and RFC 0084
-measures its row count as the debt metric — mixing a second dimension in
-corrupts that measurement.
+Ratchet shape: **its own script, over the existing baseline shards.**
+Call-argument rows live in `scripts/api-compare/call-mismatches-exclude/<package>/<path>.json`
+alongside the call-set rows for the same source file, keyed
+`package + tsFile + rubyName + call + rubyArgs` and discriminated by an optional
+`kind: "args"` (absent or `"calls"` = an RFC 0047/0084 call-set row). Each gate
+filters the shard to its own `kind`.
+
+A second parallel tree was the original decision and was **reversed**
+(2026-08-10): sharding both dimensions the same way means every burndown PR that
+touches one file's arguments and its call set edits two JSON files in two
+directories for the same source file, and every rebase eats two conflict
+surfaces. RFC 0084's row-count debt metric is preserved by the `kind`
+discriminator, not by physical separation — the call-set count is exactly the
+rows with `kind` absent or `"calls"`, independent of the argument dimension.
+See `call-args-rows-share-existing-shards`.
 
 Advisory first, matching every prior tool in this repo: land the artifact and
 `--report` with no gate, seed the baseline in a `main`-only PR, then flip to
