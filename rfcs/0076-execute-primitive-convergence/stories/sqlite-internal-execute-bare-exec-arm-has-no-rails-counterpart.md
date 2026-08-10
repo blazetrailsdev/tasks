@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: retire internalExecute's bare driver.exec arm onto Rails' batch seam"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6313
 claim: "2026-08-10T00:10:55Z"
 assignee: "port-test-date-arith-operators"
 blocked-by: null
