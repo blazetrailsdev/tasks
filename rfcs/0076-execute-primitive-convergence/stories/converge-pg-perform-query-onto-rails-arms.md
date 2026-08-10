@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-perform-query-onto-rails-arms"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6330
 claim: "2026-08-10T10:26:31Z"
 assignee: "converge-pg-perform-query-onto-rails-arms"
 blocked-by: null
