@@ -1,6 +1,6 @@
 ---
 title: 'exec_insert_all invents a "SQL" default for a required Rails parameter'
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: 6337
 claim: "2026-08-10T14:13:28Z"
 assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null
