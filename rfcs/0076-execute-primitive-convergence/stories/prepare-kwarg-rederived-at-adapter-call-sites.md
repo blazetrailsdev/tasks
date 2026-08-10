@@ -1,6 +1,6 @@
 ---
 title: "prepare: is re-derived at each performQuery call site instead of threaded from the Rails caller"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -64,6 +64,6 @@ upstream value in the common paths.
 - [ ] An explicit `prepare: true` is honored rather than re-gated.
 - [ ] `adapters/postgresql/postgresql-adapter-perform-query.trails.test.ts`
       (`internalExecute prepares when prepare is true`, `internalExecute does
-  not prepare when prepare is false`) and the statement-pool suite stay
+not prepare when prepare is false`) and the statement-pool suite stay
       green.
 - [ ] `pnpm api:calls` / `pnpm api:extra --package activerecord` clean.
