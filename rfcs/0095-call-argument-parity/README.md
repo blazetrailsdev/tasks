@@ -217,6 +217,77 @@ the content hash of `extract-ruby-api.rb` itself (`orchestrate.ts:88-99`) and
 self-invalidates. One registration, one story — the two extractor stories share
 no edit and stay parallel-safe.
 
+## Naming-dimension disposition (decided 2026-08-10)
+
+`call-args-naming-dimension-disposition` asked whether the report-only `naming`
+class gets a burndown of its own. **Verdict: yes — a burndown campaign under its
+own RFC (0096), staged per package, and the class stays report-only until that
+campaign has drained it.** Gating it now would seed ~880 rows against a 736-row
+`shape` baseline and bury the class carrying the findings nothing else can see.
+
+Measured at scale (full 15-package `API_COMPARE_FORCE=1 pnpm api:compare
+--calls`, 2026-08-10; the ~500 figure in the spike was extrapolated from arel
+plus a 32-row activerecord sample):
+
+| Class    |    Rows |
+| -------- | ------: |
+| `naming` | **883** |
+| `shape`  |     736 |
+
+`naming` is 55% of the 1,619-row population, over 5,618 compared call sites. By
+package: activerecord 408, arel 109, actiondispatch 85, activesupport 84,
+activemodel 49, rack 42, actionview 31, actioncontroller 29, then a tail of ≤12
+(globalid, i18n, trailties, abstractcontroller, did-you-mean).
+
+Cause distribution, over the 988 argument positions that differ:
+
+| Cause                                                                | Positions | Share |
+| -------------------------------------------------------------------- | --------: | ----: |
+| Rails word → unrelated word (`other`→`pattern`, `values`→`row`)      |       557 |   56% |
+| Rails word → decorated word (`name`→`attrName`, `ast`→`otherAst`)    |       153 |   15% |
+| Rails word → abbreviation (`join_name`→`tbl`, `distribution`→`dist`) |       140 |   14% |
+| Rails word → single letter (`column`→`c`, `operation`→`op`)          |        91 |    9% |
+| Rails single letter → word (`o`→`node`, `v`→`value`)                 |        36 |    4% |
+| single letter → single letter (`v`→`h`, `x`→`n`)                     |        11 |    1% |
+
+The spike's taxonomy holds, but its emphasis was inverted: the single-letter
+arms it led with are 5% combined, while 85% is a Rails word rewritten to a
+different word. Every one is the same CLAUDE.md violation ("a local or parameter
+keeps the Rails identifier, camelCased"), and all of it is mechanical.
+
+**(a)-genuine rate at scale: 30/32 = 94%** (seeded random sample, n=32, each
+pair read against its vendored Ruby). The spike's 100% over ~35 rows does not
+quite hold; both exceptions are tooling-shaped rather than confirmed
+equivalents — a chained Ruby call recorded by its last name
+(`Regexp.escape(suffix.to_s)` → `ref:toS`) and a nested call recorded as a
+`ref:`. They belong in a baseline with a reason, not in a normalization rule.
+
+Two sampled rows turned out to be **stronger than a rename**, which is the
+argument for keeping the class reported rather than dismissing it:
+
+- `cache/file-store.ts#deleteEntry` passes `dirname(filePath)` where Rails
+  passes `File.dirname(key)` (`file_store.rb:135`) — `key` there already IS the
+  path, so the port converts twice.
+- `schema-dumper.ts#removePrefixAndSuffix` calls a local `escape` helper Rails
+  does not have (`schema_dumper.rb:371`, `Regexp.escape`) — an a3 row wearing
+  a2 clothing.
+
+**One reclassification shipped with the ratchet PR rather than waiting for the
+campaign.** A list holding the same identifiers in a **different order** was
+falling through to `naming`, so the RFC's flagship finding — the arel collector
+family, `inject_join(list, collector, join_str)` ported as
+`injectJoin(nodes, connector, collector)` (`to_sql.rb:897`) — would have been
+ungated by the very gate written to catch it. `call-args.ts#classify` now calls
+a permutation `shape` (`isPermutation`), which is what its own doc comment
+always promised. One row moved (arel `collect_nodes_for`); the rest of the class
+is genuinely spelling, not order.
+
+Campaign stories are filed under **RFC 0096**, one per package cluster with
+non-overlapping file sets — a repo-wide identifier rename in a single PR
+conflicts with every sibling agent. `naming` flips to gated only when the
+campaign's last story lands; until then `pnpm api:calls:args:report` is where it
+lives.
+
 ## Non-goals
 
 - **Not a reuse of `arity.ts`.** That dimension checks `def` signatures
@@ -227,6 +298,12 @@ no edit and stay parallel-safe.
 - **Not the local-identifier campaign.** The `naming` class is measured and
   reported here; whether it becomes a burndown is decided by its own story.
 - **No gate on day one.**
+
+## Changelog
+
+- 2026-08-10: naming-dimension disposition decided (burndown campaign under RFC
+  0096, report-only until it drains); measured 883 naming / 736 shape at scale;
+  a reordering of the same identifiers reclassified from `naming` to `shape`.
 
 ## Provenance
 

@@ -104,6 +104,10 @@ names. The answer was yes (77% genuine divergence over 102 hand-classified
 rows), and it is large enough to be its own campaign — seven stories, ~1,050
 LOC.
 
+Its naming-dimension disposition was decided on 2026-08-10 (burndown campaign
+under RFC 0096, report-only until it drains) and is recorded in RFC 0095's
+`## Naming-dimension disposition` section, not here.
+
 It now lives in **RFC 0095**, which carries the full spike
 write-up: extractor feasibility, normalization rules, measured populations, and
 the ratchet shape. It was moved out of this RFC because this one is

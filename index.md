@@ -99,4 +99,4 @@
 | [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @deanmarano | activerecord, activemodel |
 | [0094-sqlite3-adapter-construction-fidelity](rfcs/0094-sqlite3-adapter-construction-fidelity/README.md) | SQLite3 adapter construction fidelity | draft | @deanmarano | activerecord |
 | [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (api:calls:args) | active | @deanmarano | activerecord, arel |
-| [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument  class) | draft | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
+| [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | draft | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
