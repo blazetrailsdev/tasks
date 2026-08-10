@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-remaining"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: port-test-date now records the 5 landed tests and stays open for the remaining 4"
 ---
 
 ## Context
