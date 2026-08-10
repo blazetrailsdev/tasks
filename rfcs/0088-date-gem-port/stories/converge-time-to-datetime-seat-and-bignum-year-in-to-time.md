@@ -1,6 +1,6 @@
 ---
 title: "Time#toDatetime uses the public constructor, not d_complex_new_internal's seat, and to_time narrows a Bignum year"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
