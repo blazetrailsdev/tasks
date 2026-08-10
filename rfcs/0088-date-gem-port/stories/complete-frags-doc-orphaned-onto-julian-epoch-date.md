@@ -1,6 +1,6 @@
 ---
 title: "Reattach the rt_complete_frags JSDoc to completeFrags"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: 6337
 claim: "2026-08-10T14:13:28Z"
 assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null
