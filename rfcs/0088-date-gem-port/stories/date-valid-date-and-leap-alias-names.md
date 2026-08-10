@@ -1,6 +1,6 @@
 ---
 title: "Date.valid_date? and Date.leap? — the second names Init_date_core registers — are unported"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6331
 claim: "2026-08-10T12:06:36Z"
 assignee: "converge-time-to-date-onto-d-simple-new-internal"
 blocked-by: null
