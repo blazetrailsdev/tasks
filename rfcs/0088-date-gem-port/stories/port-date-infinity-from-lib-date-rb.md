@@ -1,7 +1,7 @@
 ---
 title: "Port Date::Infinity and Date#infinite? — lib/date.rb is the gem's only Ruby surface and none of it is ported"
-status: in-progress
-updated: 2026-08-09
+status: done
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: ["date"]
