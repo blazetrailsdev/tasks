@@ -48,3 +48,19 @@ other story that wants the Rails raw path.
 - [ ] `rawExecute` succeeds on all three adapters (prove it with a direct
       `rawExecute` call in an adapter test, not only through `internalExecute`).
 - [ ] api:compare / test:compare delta non-negative; all three lanes green.
+
+## Update 2026-08-09 (PR #6313)
+
+sqlite3 now carries a **`rawExecute` override** of its own
+(`packages/activerecord/src/connection-adapters/sqlite3-adapter.ts`), added so
+`execute_batch` could reach the batch arm the way Rails does. It is `log` around
+`perform_query`'s three arms — batch / prepared / unprepared — but it **inlines
+those arms** rather than dispatching to `performQuery`, precisely because
+`_performQuery` still keeps the driver-shaped `(sql, driverBinds, payload)`
+signature this story is about.
+
+So when this story lands, that override must **collapse onto `performQuery`**,
+not be left beside it as a parallel implementation of the same three arms.
+`internalExecute` is already `preprocessQuery` → `rawExecute`, matching
+`abstract/database_statements.rb:589-591` and `:552`, so the split above it is
+in place and only the leaf dispatch is left.

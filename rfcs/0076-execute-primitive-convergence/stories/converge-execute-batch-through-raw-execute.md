@@ -57,3 +57,23 @@ trails already exports the unwired `rawExecute` (abstract/database-statements.ts
       so the tree has one live path per adapter.
 - [ ] Add a test that a batch (fixture load / `truncate_tables`) inside an enabled
       `cache` block leaves the cache intact, on all adapters.
+
+## Update 2026-08-09 (PR #6313) — sqlite3's share is done; blocker partly stale
+
+sqlite3's `executeBatch` now routes through a sqlite3-local `rawExecute` that
+DOES call `log()` and DOES carry `batch:`
+(`combineMultiStatements` then `rawExecute(sql, name, [], false, false, false,
+true, true)`), matching `sqlite3/database_statements.rb:126-129`. Its two
+call-mismatch baseline rows (`combine_multi_statements`, `raw_execute`) are
+deleted, and the `_inQueryTransformers` suppression flag is gone from that path
+— batch statements stay uncommented because `raw_execute` never reaches
+`preprocess_query`, which is how Rails gets it.
+
+Remaining scope is therefore **PG + mysql2 + the abstract mixin**, and the
+`blocked-by` is stale in two ways worth re-checking before claiming: the "drops
+`sql.active_record`" half is answered for sqlite3 (its `rawExecute` logs), and
+only the PG/mysql2 `performQuery` prototype wiring
+(`wire-perform-query-on-sqlite3-mysql2-prototypes`) is still genuinely in the
+way. The still-set flag on PG and the abstract is filed separately as
+`pg-execute-batch-transformer-flag-spans-await` — it is a live concurrency
+defect, not just a routing cleanup.
