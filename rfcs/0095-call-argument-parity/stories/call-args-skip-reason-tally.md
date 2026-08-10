@@ -1,6 +1,6 @@
 ---
 title: "compareCallArgs reports WHY a site was skipped, so a silent population loss is countable"
-status: blocked
+status: ready
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: "2026-08-10T02:06:33Z"
-assignee: "converge-time-to-datetime-seat-and-bignum-year-in-to-time"
-blocked-by: "Acceptance criteria 2 and 3 require output/call-arg-mismatches.json, which does not exist: compareCallArgs has no consumer in scripts/api-compare/compare.ts today (grep for compareCallArgs finds only call-args.ts:292 and its test). Its own sizing note says to pick this up only after call-args-artifact-and-report, and that story is itself status=blocked (its blocked-by is now stale — call-args.ts landed in #6309/#6316 — so it is re-runnable, but it has not shipped). Unblocks once the artifact exists and there is somewhere to put the skipped{} tally."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
