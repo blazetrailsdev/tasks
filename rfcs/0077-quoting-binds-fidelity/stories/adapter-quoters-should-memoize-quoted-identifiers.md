@@ -1,6 +1,6 @@
 ---
 title: "Adapter class-side quoters should memoize through QUOTED_COLUMN_NAMES / QUOTED_TABLE_NAMES"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6337
 claim: "2026-08-10T14:13:28Z"
 assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null
