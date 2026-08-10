@@ -53,7 +53,7 @@ Read the Rails source for each site — do not invent classes or pick a near-mis
       `errors.ts` with the manifest-correct parent, and the manifest regenerated.
 - [ ] `pnpm lint` passes with the shrunken baseline (rule stays `error`); the
       baseline is strictly smaller and never grew.
-- [ ] Touched packages' affected test files stay green; api:compare /
-      test:compare delta non-negative.
+- [ ] Touched packages' affected test files stay green; parity:api /
+      parity:test delta non-negative.
 - [ ] PR diff under the 500 LOC ceiling; remaining files registered as a further
       continuation story.

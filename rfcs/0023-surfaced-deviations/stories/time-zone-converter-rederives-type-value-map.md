@@ -73,5 +73,5 @@ that is itself a divergence in `RangeType.cast` before preserving it.
       the container arms are `this._subtype.map(value, block)`.
 - [ ] `Type::Array#map` is ported if absent, so array columns still round-trip.
 - [ ] tsrange/tstzrange and `datetime[]` time-zone tests still pass on PG.
-- [ ] `pnpm api:extra --package activerecord` novel count drops; `pnpm api:calls`
+- [ ] `pnpm parity:api:extra --package activerecord` novel count drops; `pnpm parity:api:calls`
       clean (the converter's call set gains `map`).

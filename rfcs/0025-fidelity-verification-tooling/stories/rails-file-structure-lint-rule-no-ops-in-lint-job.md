@@ -29,7 +29,7 @@ different manifests:
   `rails-api.json` present, so the script logs
   `rails-api.json missing; wrote empty manifest` and the rule effectively
   no-ops. Observed in run 29776733078, job 88467956424.
-- **Rails API/Test Comparison job** — runs `pnpm api:compare` first, so it has
+- **Rails API/Test Comparison job** — runs `pnpm parity:api` first, so it has
   a real manifest and the rule genuinely fires, then runs
   `pnpm exec eslint packages/arel/src`.
 
@@ -56,7 +56,7 @@ error (since fixed on main by #5011) — i.e. the next compare run to get past
 that step is the one that surfaces them.
 
 Related known trap: `project_api_compare_arms_method_order_autofix` (running
-`pnpm api:compare` locally rewrites `eslint/` manifests, requiring
+`pnpm parity:api` locally rewrites `eslint/` manifests, requiring
 `git checkout -- eslint/`), and
 `project_api_compare_does_not_run_wide_ratchet_lint`.
 
@@ -71,7 +71,7 @@ Related known trap: `project_api_compare_arms_method_order_autofix` (running
       when the manifest is empty, or the manifest is always real.
 - [ ] The 4 pre-existing `packages/arel` violations above are resolved or
       explicitly waived, so the compare job is green on the rule.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

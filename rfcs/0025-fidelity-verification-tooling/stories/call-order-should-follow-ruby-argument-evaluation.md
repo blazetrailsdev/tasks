@@ -63,5 +63,5 @@ Related: `ts-extractor-emit-call-arguments` /
       order for the equivalent interpolated string.
 - [ ] The four `abstract-mysql-adapter.ts` rows listed above are deleted from
       `scripts/api-compare/call-mismatches-exclude/` by hand (only-shrink; no
-      `--write` reseed) and `pnpm api:calls` stays green.
+      `--write` reseed) and `pnpm parity:api:calls` stays green.
 - [ ] No new ORDER-only rows appear elsewhere from the change.

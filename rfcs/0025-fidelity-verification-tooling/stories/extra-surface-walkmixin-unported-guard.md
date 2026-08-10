@@ -45,5 +45,5 @@ via a `::`-qualified cross-package include.
   package — not the host package — is the right context; decide and document).
 - A unit test in `extra-surface.test.ts` asserts an unported mixin's methods do
   NOT enter the allowed set (so they remain flagged as extra surface).
-- `pnpm api:compare` gate + api-compare test suites still pass; no change to
+- `pnpm parity:api` gate + api-compare test suites still pass; no change to
   current per-package novel totals (the guard is inert on today's registry).

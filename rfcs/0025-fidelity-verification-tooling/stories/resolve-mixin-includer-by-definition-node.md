@@ -1,5 +1,5 @@
 ---
-title: "test:compare — resolve Ruby mixin includers by definition node, not constant name"
+title: "parity:test — resolve Ruby mixin includers by definition node, not constant name"
 status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-PR #4967 added scope-aware helper resolution to both test:compare extractors.
+PR #4967 added scope-aware helper resolution to both parity:test extractors.
 Two review rounds each found a bug in the SAME mechanism — the Ruby side's
 mixin lookup, which matches a module to its including class by NAME:
 
@@ -43,7 +43,7 @@ NODE (the sexp collected in `collect_helper_defs` / `collect_module_includers`)
 rather than its rendered name — i.e. resolve the constant path to a definition
 the way Ruby constant lookup does, instead of comparing strings.
 
-This path is invisible to `test:compare` totals: every #4967 fix left the
+This path is invisible to `parity:test` totals: every #4967 fix left the
 corpus output byte-identical (`14473/21663`, `2018 assertion-count-mismatch`),
 because the affected tests have no TS counterpart being compared. Bugs here
 surface only under targeted review, which is why two rounds were needed.
@@ -61,4 +61,4 @@ surface only under targeted review, which is why two rounds were needed.
   "finds the includer of a nested module included by qualified constant".
 - Add extractor unit tests for each newly handled spelling, each demonstrated
   to fail before the change.
-- `pnpm test:compare` totals unchanged (report-only; no CI gate).
+- `pnpm parity:test` totals unchanged (report-only; no CI gate).

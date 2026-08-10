@@ -55,7 +55,7 @@ A check that every module-scope function in an adapter's mixin file
 reachable from the adapter class — either exported and assigned, or referenced
 by a file-mate. The trails mixin idiom (`this`-typed functions assigned to the
 class, see CLAUDE.md "Module mixins") makes "declared but never assigned" a
-mechanical, detectable state, and `api:compare`'s manifest already knows which
+mechanical, detectable state, and `parity:api`'s manifest already knows which
 TS names mirror which Ruby methods, so the population is available.
 
 An eslint rule alongside the existing `blazetrailsdev/rails-*` rules, or a

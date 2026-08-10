@@ -25,7 +25,7 @@ does fire locally.
 
 **1. Dormant in CI.** The rule reads
 `eslint/rails-file-structure-method-order.json`, which is gitignored
-(`.gitignore:27`) and written only by `pnpm api:compare`. The loader returns
+(`.gitignore:27`) and written only by `pnpm parity:api`. The loader returns
 an empty manifest when the file is absent
 (`eslint/rails-file-structure-method-order.mjs:36-39`):
 
@@ -37,9 +37,9 @@ if (!fs.existsSync(MANIFEST_PATH)) {
 ```
 
 CI's lint job (`.github/workflows/ci.yml:375-385`) is checkout →
-`pnpm install` → `pnpm lint`; it never runs `api:compare`, so the manifest
+`pnpm install` → `pnpm lint`; it never runs `parity:api`, so the manifest
 does not exist and the rule silently no-ops for every file. It fires only for
-developers who happen to have run `api:compare` locally — and then runs as a
+developers who happen to have run `parity:api` locally — and then runs as a
 pre-commit auto-fix, silently reordering members of files unrelated to the
 change being committed. This is how #4877 picked up an unintended reorder of
 `Arel::Nodes::Quoted`.

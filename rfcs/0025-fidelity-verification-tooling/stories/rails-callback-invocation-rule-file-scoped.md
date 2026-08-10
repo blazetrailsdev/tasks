@@ -50,7 +50,7 @@ attribute each callback requirement to the specific TS file that should fire it.
 - Any exclude entries that become stale under file-qualification are pruned; the
   rule's own unit test (`eslint/rails-callback-invocations.test.mjs`) covers the
   file-scoped lookup.
-- Regenerate the manifest via the `api:compare` / `rails-privates:manifest` path.
+- Regenerate the manifest via the `parity:api` / `rails-privates:manifest` path.
 
 ## Notes
 

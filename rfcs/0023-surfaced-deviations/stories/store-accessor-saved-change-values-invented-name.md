@@ -35,7 +35,7 @@ The `Values` suffix exists nowhere in Rails. The existing comment at
 `store.ts:428-430` justifies it as parallel to Model's
 `savedChangeToAttributeValues`, so the invention is at least consistent
 within trails — but it is still a public-surface name with no Rails
-counterpart, and `api:compare` cannot map it.
+counterpart, and `parity:api` cannot map it.
 
 Note the same `?`-collision problem is already solved elsewhere in the
 codebase for generated dirty methods; the fix should follow whatever
@@ -48,6 +48,6 @@ confirming which surface is canonical before changing a public method name.
       `foo` method pairs on generated store accessors
 - [ ] `savedChangeTo<Key>Values` either converges to that convention or is
       recorded as a deliberate, documented deviation with the reason
-- [ ] `api:compare` mapping updated (or a SKIP_GROUPS entry added with the
+- [ ] `parity:api` mapping updated (or a SKIP_GROUPS entry added with the
       reason) so the pair is not silently unmapped
 - [ ] `store.test.ts` coverage follows the resulting names

@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 `scripts/api-compare/unported-files.ts:504-509` excludes `binary_test.rb` from
-test:compare with the reason:
+parity:test with the reason:
 
 > "Tests Marshal/YAML binary encoding of AR records. Ruby binary serialization
 > formats have no Node.js equivalent."
@@ -38,11 +38,11 @@ for all three):
 The entry's `testFile: "binary_test.rb"` has no leading `/`, so
 `isTestFileUnported` (unported-files.ts:967-978) does a **plain substring match**
 and excludes **all three** files across activerecord, activemodel and arel from
-test:compare accounting entirely (`test-compare.ts:477` — `continue`).
+parity:test accounting entirely (`test-compare.ts:477` — `continue`).
 
 This is measurable: #4891 ported and un-skipped Rails' `test_mixed_encoding` into
 `packages/activerecord/src/binary.test.ts` (it passes on SQLite, PG and MySQL),
-and the activerecord test:compare line did not move at all —
+and the activerecord parity:test line did not move at all —
 `7640/7812, 125 skipped` before and after. We already port
 `packages/activemodel/src/type/binary.test.ts` (2 tests) and get no credit for
 those either.
@@ -63,7 +63,7 @@ justify.
       `test_unicode_input_casting` asserts Ruby String encodings. Prefer
       per-test `tests:` exclusion over whole-file where only some cases are
       Ruby-only.
-- [ ] Report the resulting test:compare delta for activerecord, activemodel and
+- [ ] Report the resulting parity:test delta for activerecord, activemodel and
       arel. A negative delta is acceptable here **only** if it is purely the
       accounting correction (previously-hidden Rails tests becoming visible) —
       state which tests newly appear and why they are unported.

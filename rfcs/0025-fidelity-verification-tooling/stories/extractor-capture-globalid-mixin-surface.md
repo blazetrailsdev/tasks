@@ -18,7 +18,7 @@ blocked-by: null
 
 Follow-up to `extractor-capture-metaprogrammed-ruby-surface` (RFC 0025). That
 PR (#3913) resolved the class_attribute/alias/delegate false-novels, but
-`pnpm api:extra --package activerecord --novel-only` still shows GlobalID
+`pnpm parity:api:extra --package activerecord --novel-only` still shows GlobalID
 mixin methods as novel in `base.ts`: `findGlobalId`, `findSignedGlobalId`,
 `findSignedGlobalIdBang` (and instance `to_gid`/`to_sgid` variants).
 
@@ -36,7 +36,7 @@ enter base.ts's allowed set, and their faithful TS ports look novel.
   cross-package `include`s against the other packages' extracted manifests, so
   `GlobalID::Identification` instance methods land in the allowed set of
   AR `Base`.
-- `pnpm api:extra --package activerecord --novel-only` no longer reports
+- `pnpm parity:api:extra --package activerecord --novel-only` no longer reports
   `findGlobalId`/`findSignedGlobalId`/`findSignedGlobalIdBang` (and the
   `to_gid`/`to_sgid` family) as novel.
-- `pnpm api:compare` gate + the api-compare test suites still pass.
+- `pnpm parity:api` gate + the api-compare test suites still pass.

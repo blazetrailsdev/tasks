@@ -30,7 +30,7 @@ is a real naming/semantic divergence that the old `RAILS_RELATION_VALUE_METHODS`
 allow-set in `extra-surface.ts` masked by over-listing both `*Value` and
 `*Values` forms for every value method. With the allow-set deleted, the static
 extractor correctly flags `whereValues` as novel (Rails has `where_clause`, not
-`where_values`), nudging `pnpm api:extra --package activerecord --novel-only`
+`where_values`), nudging `pnpm parity:api:extra --package activerecord --novel-only`
 from 724 → 725.
 
 This story is the convergence half: bring the trails accessor in line with the
@@ -44,6 +44,6 @@ Rails-generated name/shape (`where_clause`) instead of ratifying the bespoke
   `whereValues`; consumers/tests updated. Read Rails
   `relation/query_methods.rb:162-183` (the `where_clause` reader) for the exact
   shape before deciding return type.
-- `pnpm api:extra --package activerecord --novel-only` drops `whereValues` from
+- `pnpm parity:api:extra --package activerecord --novel-only` drops `whereValues` from
   the novel set (back to 724 or lower).
 - AR test suites still pass.

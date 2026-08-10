@@ -17,7 +17,7 @@ closed-reason: "premise was wrong: the six mismatches were caused by PR #5520's 
 
 ## Context
 
-A full `pnpm build` followed by `pnpm api:compare --wide-calls` reports six wide
+A full `pnpm build` followed by `pnpm parity:api --wide-calls` reports six wide
 call mismatches that no baseline file covers — `lease_connection` appears zero
 times under `scripts/api-compare/call-mismatches-wide-exclude/`, and
 `activerecord-test-support/adapter-helper.json` does not exist at all:
@@ -46,6 +46,6 @@ known TS-extractor cache under-reporting (see
   where Rails' behaviour depends on it (start with `assert_queries_count` /
   `assert_queries_match` materializing transactions), or baseline it with a
   per-entry reason if a different path already satisfies it.
-- `pnpm api:calls:wide` is green from a clean full build.
+- `pnpm parity:api:calls` is green from a clean full build.
 - The stale-vs-fresh build discrepancy is understood well enough to say
-  whether the gate needs a build-freshness guard like `api:extra` has.
+  whether the gate needs a build-freshness guard like `parity:api:extra` has.

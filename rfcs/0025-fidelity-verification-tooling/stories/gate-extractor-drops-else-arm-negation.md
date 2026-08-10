@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-The test:compare Ruby gate extractor has no representation for a _negated_
+The parity:test Ruby gate extractor has no representation for a _negated_
 feature gate, so the `else` arm of `if supports_X?` extracts as though it were
 the `if` arm. Two cooperating causes in
 `scripts/test-compare/extract-ruby-tests.rb`:
@@ -40,7 +40,7 @@ pairs TS tests by name and cannot tell the arms apart.
 
 This has already cost two PRs. #5486 (deferrable cases) ported the `else` arm
 alone, and the matcher paired that single TS test with the `validate_constraints`
-Rails entry — `test:compare --gates --check` reported
+Rails entry — `parity:test --gates --check` reported
 `[wrong-gate] "add invalid foreign key"` and exited 1, forcing a backout. #5501
 resolved it only by porting **both** arms together AND hoisting the skip
 condition into a module const (`migration/foreign-key.test.ts:39-44`) so the
@@ -74,5 +74,5 @@ correctly in the first place.
       `foreign-key.test.ts:39-44` can be inlined back to
       `it.skipIf(adapterSupports("validate_constraints"))` without tripping
       `[wrong-gate]` — do this, and drop the workaround comment, to prove the fix.
-- [ ] `pnpm test:compare --gates --check` stays at exit 0; no regression in the
+- [ ] `pnpm parity:test --gates --check` stays at exit 0; no regression in the
       overall gate-mismatch count.

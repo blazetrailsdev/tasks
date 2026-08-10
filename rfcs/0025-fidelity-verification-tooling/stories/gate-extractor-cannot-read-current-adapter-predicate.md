@@ -1,5 +1,5 @@
 ---
-title: "test:compare gate extractor cannot read currentAdapter(), forcing a trails-only gate idiom"
+title: "parity:test gate extractor cannot read currentAdapter(), forcing a trails-only gate idiom"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-The test:compare gate extractor recognizes only the `adapterType` idiom in a
+The parity:test gate extractor recognizes only the `adapterType` idiom in a
 `skipIf` expression:
 
 ```ts
@@ -58,4 +58,4 @@ match, so the extractor needs to union the literals.
 - [ ] The four gates in
       `packages/activerecord/src/migration/change-schema.test.ts` can be
       rewritten back to `currentAdapter(...)` with 0 gate-mismatch.
-- [ ] test:compare gate-mismatch stays at 0 repo-wide.
+- [ ] parity:test gate-mismatch stays at 0 repo-wide.

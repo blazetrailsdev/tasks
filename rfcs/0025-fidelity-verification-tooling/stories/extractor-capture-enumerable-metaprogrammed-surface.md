@@ -44,6 +44,6 @@ resolution + per-element suffix derivation).
   methods, resolving the driving symbol-array constants (incl. cross-file
   `relation.rb` → `query_methods.rb`).
 - `RAILS_RELATION_VALUE_METHODS` and `RAILS_DSL_GENERATED` are deleted from
-  `extra-surface.ts`; `pnpm api:extra --package activerecord --novel-only`
+  `extra-surface.ts`; `pnpm parity:api:extra --package activerecord --novel-only`
   shows no regression (those names stay non-novel via the manifest).
-- `pnpm api:compare` gate + the api-compare test suites still pass.
+- `pnpm parity:api` gate + the api-compare test suites still pass.

@@ -36,7 +36,7 @@ partial-scope determinism guard.
 - A committed baseline seeds the current 83 arity mismatches (keyed like the
   call baselines: package + tsFile + rubyName), each row carrying a seeded
   default reason.
-- `pnpm api:arity` (or a sibling lint) fails CI on any NEW arity mismatch
+- `pnpm parity:api:arity` (or a sibling lint) fails CI on any NEW arity mismatch
   absent from the baseline and on any STALE baseline row (only-shrink).
 - The existing `arity-exclude.json` semantics (reasoned, hand-written, no
   `--write`) are preserved or explicitly folded into the new baseline with the

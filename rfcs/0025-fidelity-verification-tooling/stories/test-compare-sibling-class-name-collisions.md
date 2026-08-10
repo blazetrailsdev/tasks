@@ -1,5 +1,5 @@
 ---
-title: "test:compare collapses same-named tests in sibling Ruby classes"
+title: "parity:test collapses same-named tests in sibling Ruby classes"
 status: ready
 updated: 2026-07-28
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare` maps one Ruby test file to one TS file, so two sibling test
+`parity:test` maps one Ruby test file to one TS file, so two sibling test
 classes in the same `.rb` land in a single row and their test names are merged
 into one namespace. When both classes define a test with the same name, the two
 collapse into one entry and the ported count under-reports.
@@ -43,7 +43,7 @@ unverifiable for any file with sibling classes.
 - [ ] Inventory which Rails test files define more than one test class, and how
       many name collisions exist across those siblings (report only — this may
       be the only affected file).
-- [ ] `test:compare` keys tests by (class, name) rather than name alone, so
+- [ ] `parity:test` keys tests by (class, name) rather than name alone, so
       same-named tests in sibling classes are counted separately.
 - [ ] `migration/foreign_key_test.rb` reports 29 OK / 43 missing after the fix
       (the currently-collapsed `test_foreign_key_exists` counted once per class).

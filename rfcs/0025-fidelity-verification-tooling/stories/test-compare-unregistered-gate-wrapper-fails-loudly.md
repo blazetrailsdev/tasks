@@ -1,5 +1,5 @@
 ---
-title: "test:compare: fail loudly on an unregistered describeIf*/itIf* gate wrapper"
+title: "parity:test: fail loudly on an unregistered describeIf*/itIf* gate wrapper"
 status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -40,4 +40,4 @@ The author has to guess.
 - [ ] The check names the offending file and identifier.
 - [ ] Unit coverage in `scripts/test-compare/extract-ts-gates.test.ts`
       alongside the existing `gateFromWrapper` cases.
-- [ ] `pnpm test:compare` output unchanged on a clean tree (gate-mismatch 0).
+- [ ] `pnpm parity:test` output unchanged on a clean tree (gate-mismatch 0).

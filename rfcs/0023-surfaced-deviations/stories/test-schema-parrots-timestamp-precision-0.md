@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`schema:compare` (PR #5218) now compares column options and reports 4 live
+`parity:schema` (PR #5218) now compares column options and reports 4 live
 `OPTION` divergences, held under `OPTION_DEBT_CEILING = 4` in
 `scripts/schema-compare/compare.ts`:
 

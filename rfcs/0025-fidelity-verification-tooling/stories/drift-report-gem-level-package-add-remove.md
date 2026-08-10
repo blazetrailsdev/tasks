@@ -1,5 +1,5 @@
 ---
-title: "api:drift — surface gem-level package add/remove from upstream Gemfile"
+title: "parity:api:drift — surface gem-level package add/remove from upstream Gemfile"
 status: done
 updated: 2026-06-25
 rfc: "0025-fidelity-verification-tooling"
@@ -26,7 +26,7 @@ Today the user must eyeball the upstream Gemfile diff by hand.
 
 ## Acceptance criteria
 
-- `api:drift` surfaces gem-level add/remove for the target ref, derived from the
+- `parity:api:drift` surfaces gem-level add/remove for the target ref, derived from the
   upstream Gemfile/gemspec (or the rails monorepo subgem list) between base and
   target refs, into `version-drift.json` (e.g. an `addedPackages`/
   `removedPackages` section).

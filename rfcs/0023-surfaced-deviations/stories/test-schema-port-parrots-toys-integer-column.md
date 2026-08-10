@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm schema:compare` (PR #4966) reports two UNPORTED-COLUMN findings — the
+`pnpm parity:schema` (PR #4966) reports two UNPORTED-COLUMN findings — the
 only column-level divergences across the 242 shared tables:
 
 - `parrots.integer`
@@ -40,7 +40,7 @@ it mirrors schema.rb exactly, and the gate now measures that.
 
 - TEST_SCHEMA declares the `integer` column on `parrots` and `toys`, matching
   the Rails type and options.
-- `pnpm schema:compare` reports zero UNPORTED-COLUMN findings.
+- `pnpm parity:schema` reports zero UNPORTED-COLUMN findings.
 - Confirm no existing test asserts an exact column list for either table before
   changing them; if one does, update it to the canonical shape rather than
   skipping the port.

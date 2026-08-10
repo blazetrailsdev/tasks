@@ -1,5 +1,5 @@
 ---
-title: "api:compare source-hash pinning — detect upstream Rails body drift on matched methods"
+title: "parity:api source-hash pinning — detect upstream Rails body drift on matched methods"
 status: done
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-api:compare validates method NAMES (plus advisory arity/options-keys/literals/
+parity:api validates method NAMES (plus advisory arity/options-keys/literals/
 call-set), but no artifact records which Rails source a matched TS method was
 ported against. Consequences: (a) when `vendor/rails` is bumped, methods whose
 Ruby bodies changed upstream rot silently — nothing produces a "these N
@@ -70,7 +70,7 @@ Design notes:
 - [ ] A lint script (CI job, same pattern as `lint-call-mismatches.ts`) fails
       on drift (pin ≠ current vendored digest) and on unresolvable/stale pins,
       with a per-pair report naming the Rails file:method that changed.
-- [ ] api:compare summary line reports pinned/unpinned counts per package
+- [ ] parity:api summary line reports pinned/unpinned counts per package
       (advisory; parity % unchanged).
 - [ ] Unit tests cover: digest normalization (indentation/comment churn does
       not change the digest), drift detection on a body edit, stale-pin

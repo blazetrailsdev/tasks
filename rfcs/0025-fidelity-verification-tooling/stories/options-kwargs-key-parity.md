@@ -1,5 +1,5 @@
 ---
-title: "api:compare: per-method Ruby option-key vs TS options-interface diff"
+title: "parity:api: per-method Ruby option-key vs TS options-interface diff"
 status: done
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-api:compare matches method **names** and (via `scripts/api-compare/arity.ts`)
+parity:api matches method **names** and (via `scripts/api-compare/arity.ts`)
 **positional arity**, but never option-hash keys — so a TS options interface
 missing a key Rails accepts is invisible. This story adds an advisory
 options-key sub-report, cloning the arity-checker shape end to end:
@@ -55,7 +55,7 @@ Implementation plan (all paths relative to trails repo root):
    header shape as `arity-mismatches.json` (`generatedAt`, `compared`,
    `mismatched`, `mismatches: [{package, rubyFile, tsFile, rubyName, tsName,
 missingInTs, extraInTs}]`).
-4. **Surface** — add one line to the api:compare summary (where the arity
+4. **Surface** — add one line to the parity:api summary (where the arity
    line prints) reporting `compared`/`mismatched`, advisory only (exit code
    unchanged).
 
@@ -66,7 +66,7 @@ comment field.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare --package activerecord` additionally writes
+- [ ] `pnpm parity:api --package activerecord` additionally writes
       `scripts/api-compare/output/options-key-mismatches.json` and prints a
       one-line summary; exit code/CI behavior unchanged.
 - [ ] Unit tests: `options-keys.test.ts` covers symbol normalization
@@ -83,7 +83,7 @@ comment field.
 
 ## Notes
 
-Run prerequisite: `pnpm lint:deps` shows how the Ruby extractor is invoked
+Run prerequisite: `pnpm parity:api:deps` shows how the Ruby extractor is invoked
 (`LIB_PATHS_JSON=… ruby scripts/api-compare/extract-ruby-api.rb`); the normal
-`pnpm api:compare` path is `bash scripts/api-compare/run.sh`. Do not rename
+`pnpm parity:api` path is `bash scripts/api-compare/run.sh`. Do not rename
 existing JSON fields — `prelint` and the eslint manifests consume them.

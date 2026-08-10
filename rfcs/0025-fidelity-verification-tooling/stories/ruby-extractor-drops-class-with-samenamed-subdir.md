@@ -30,9 +30,9 @@ the only entity extracted from that file tree is the nested
 
 Consequence: `packages/activerecord/src/encryption/cipher.ts` reports its four
 faithful ports (`encrypt`, `decrypt`, `keyLength`, `ivLength`) as extra surface
-in `api:extra` — classed `moved`, since the same names exist on
+in `parity:api:extra` — classed `moved`, since the same names exist on
 `aes256_gcm.rb`. They are not moved and not extra; Rails defines them in the
-very file the TS file mirrors. api:compare presumably also cannot credit them.
+very file the TS file mirrors. parity:api presumably also cannot credit them.
 
 The suspicion is that a class whose file has a same-named _subdirectory_
 (`encryption/cipher.rb` + `encryption/cipher/`) is dropped or shadowed by the
@@ -47,6 +47,6 @@ reproducing against the extractor, not by assuming the cause.
 - Sweep for the same shape elsewhere: every `foo.rb` that has a sibling `foo/`
   directory, checking whether the `foo.rb` entity survived extraction. Report
   the count; fix all of them, not just cipher.
-- After the fix, `encryption/cipher.ts` reports 0 extras in `api:extra` and its
-  methods are credited by `api:compare`. Check the delta on every package —
+- After the fix, `encryption/cipher.ts` reports 0 extras in `parity:api:extra` and its
+  methods are credited by `parity:api`. Check the delta on every package —
   the fix should only ever move surface from extra/missing to matched.

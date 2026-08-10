@@ -51,7 +51,7 @@ the sweep needs to fold continuation lines before judging.
 Note the false-anchor class is broader than the no-identifier case — a
 `Mirrors:` naming a _plausible but nonexistent_ Rails method
 (`ModelSchema::ClassMethods#has_attribute?`) is the more dangerous shape and is
-invisible to a text-only heuristic. The `rails-api.json` manifest api:compare
+invisible to a text-only heuristic. The `rails-api.json` manifest parity:api
 already builds can resolve those: a `Mirrors:` citing
 `Module::Path#method_name` is checkable against the manifest.
 

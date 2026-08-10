@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Every `pnpm api:compare` run prints:
+Every `pnpm parity:api` run prints:
 
 ```text
 [build-rails-file-structure-manifest] last-segment collision in
@@ -32,7 +32,7 @@ rather than picking a winner. The result is a SILENT lint no-op: the
 `rails-file-structure-method-order` rule enforces nothing for that file, and
 the message is one warning line in a long run, so it stays invisible.
 
-Noticed while running `api:compare` for PR #5458. The count is currently one
+Noticed while running `parity:api` for PR #5458. The count is currently one
 file, which is what makes it cheap to fix now; the failure mode (drop, don't
 fail) means any future collision is equally silent.
 

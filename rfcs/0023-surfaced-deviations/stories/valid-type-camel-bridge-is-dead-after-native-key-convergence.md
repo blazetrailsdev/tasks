@@ -48,4 +48,4 @@ for a camelCase spelling Rails rejects.
       a valid type on PostgreSQL, while `bit_varying` is.
 - [ ] `adapter.test.ts`'s "valid column" sweep (every native key is valid)
       still passes on all three lanes.
-- [ ] No test:compare or api:compare regression.
+- [ ] No parity:test or parity:api regression.

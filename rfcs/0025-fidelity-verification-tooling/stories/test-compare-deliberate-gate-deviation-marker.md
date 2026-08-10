@@ -56,4 +56,4 @@ rather than the real reason.
 ## Definition of done
 
 Marker implemented in `scripts/test-compare/gates.ts` with unit coverage, the
-one existing call site migrated, `pnpm test:compare -- --gates --check` green.
+one existing call site migrated, `pnpm parity:test -- --gates --check` green.

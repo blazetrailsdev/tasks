@@ -1,5 +1,5 @@
 ---
-title: "api:compare buckets a reopened Ruby module's methods under one file"
+title: "parity:api buckets a reopened Ruby module's methods under one file"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
@@ -62,5 +62,5 @@ from the entity's own, to size the blast radius before changing the grouping.
 - The four bucketing-only names are removed from the `config.rb`
   `SCOPED_SKIP_GROUPS` entry and its reason is trimmed to the remaining trio;
   `docs/ruby-ts-conventions.md` regenerated.
-- No package's method total regresses — check the full `api:compare` summary
+- No package's method total regresses — check the full `parity:api` summary
   before/after, since re-bucketing moves methods between files repo-wide.

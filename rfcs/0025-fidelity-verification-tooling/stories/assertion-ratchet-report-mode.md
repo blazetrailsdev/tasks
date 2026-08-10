@@ -22,7 +22,7 @@ package, currently 1,987 assertion-count / 4,069 kind / 54 value mismatches for
 activerecord. The gate says the debt cannot grow, but it offers no way to scope
 a burndown: `convention-comparison.json` carries the per-test
 `assertionMismatches` / `kindMismatches` / `valueMismatches` arrays and
-`pnpm test:compare --assertions` prints them flat, with no grouping.
+`pnpm parity:test --assertions` prints them flat, with no grouping.
 
 The wide call-mismatch ratchet solved exactly this with
 `lint-call-mismatches-wide.ts --report` (see its header and `reportMain`),
@@ -38,4 +38,4 @@ the same reason.
   by counter, top-N by count.
 - Reads the existing `convention-comparison.json` per-file arrays — no second
   extractor, same rule the gate follows.
-- A `pnpm test:assertions:ratchet:report` script and a CONTRIBUTING.md pointer.
+- A `pnpm parity:test:assertions:report` script and a CONTRIBUTING.md pointer.

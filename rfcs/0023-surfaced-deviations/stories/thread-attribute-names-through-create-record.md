@@ -45,5 +45,5 @@ from Rails (which keeps it in `locking/optimistic.rb`). The `optimistic.ts`
       carries the locking-column union, so it was removed from the generic
       `attributesForCreate`. (`_touchRow`/`_updateRow` deferred to story
       wire-locking-touch-update-row-into-persistence-path — out of create-path scope.)
-- [x] `locking.test.ts` + `persistence.test.ts` stay green; no api:compare /
-      test:compare regression.
+- [x] `locking.test.ts` + `persistence.test.ts` stay green; no parity:api /
+      parity:test regression.

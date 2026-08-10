@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced by PR #6134 (`activesupport-json-encoding-jsongemencoder-port`).
 
-`pnpm api:extra --package activesupport` reports one novel name on
+`pnpm parity:api:extra --package activesupport` reports one novel name on
 `packages/activesupport/src/json/encoding.ts`: `escapeHtmlEntities`, a field on
 the `EncodeOptions` interface.
 
@@ -47,7 +47,7 @@ It was left counted rather than tagged, deliberately — a `@noRailsEquivalent`
 would assert the name is not Rails', which is false, and per #5342 a tag is for
 irreducible surface only.
 
-api:compare already extracts option keys for its own advisory comparison
+parity:api already extracts option keys for its own advisory comparison
 (`Option keys (advisory): N pairs compared` in the summary, written to
 `output/options-key-mismatches.json`), so the Ruby-side data may already exist
 and only need feeding into the extra-surface allowed set.
@@ -70,7 +70,7 @@ count with no tag added.
 - [ ] Scoped to the file whose Ruby counterpart reads the key — a key read in
       `json/encoding.rb` must not silence the same name in an unrelated file,
       mirroring how `isScopedSkip` / `scopedSkipMirrorName` are file-scoped.
-- [ ] `pnpm api:extra --package activesupport` reports 0 novel for
+- [ ] `pnpm parity:api:extra --package activesupport` reports 0 novel for
       `json/encoding.ts`, with no `@noRailsEquivalent` tag added anywhere.
 - [ ] Covered by a test in `scripts/api-compare/` (the existing
       `extra-surface.test.ts` is the natural home).

@@ -46,4 +46,4 @@ a non-zero initial value as the first positional argument.
 - A bare `sum()` issues the same query Rails issues instead of short-circuiting.
 - Any test that relied on the zero-query short-circuit is checked against the
   corresponding Rails test rather than kept as-is.
-- `pnpm api:compare` and `pnpm test:compare` deltas are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas are non-negative.

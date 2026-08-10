@@ -44,9 +44,9 @@ anything ever wired it up.
   mixin convention), or delete it and record why the Rails-layout slot is
   intentionally empty.
 - Do NOT simply delete to make the file smaller — the exports exist so
-  `api:compare` finds the method in the file matching Rails' layout. Removing
-  them without a replacement will regress the api:compare file-structure
-  numbers; check `pnpm api:extra` and `pnpm api:calls:wide` both ways.
+  `parity:api` finds the method in the file matching Rails' layout. Removing
+  them without a replacement will regress the parity:api file-structure
+  numbers; check `pnpm parity:api:extra` and `pnpm parity:api:calls` both ways.
 - Whichever direction, the logic must exist exactly once afterwards.
 - Scope check before starting: this may exceed the LOC ceiling across both
   files. Split by file if so.

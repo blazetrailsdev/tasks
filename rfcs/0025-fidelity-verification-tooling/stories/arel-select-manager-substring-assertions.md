@@ -47,8 +47,8 @@ reuse it rather than adding a second one.
 - Audit `select-manager.test.ts` for cases whose Rails twin asserts full SQL via
   `must_be_like` but whose port asserts a substring / `toBeInstanceOf`, and
   restore each body to the Rails one.
-- Test names are NOT changed (they are how `test:compare` matches).
+- Test names are NOT changed (they are how `parity:test` matches).
 - Each restored assertion is verified to actually constrain: confirm it fails if
   the produced SQL is perturbed, rather than only that it passes today.
-- `pnpm vitest run packages/arel` green; `pnpm test:compare` shows no regression
+- `pnpm vitest run packages/arel` green; `pnpm parity:test` shows no regression
   in the arel bucket.

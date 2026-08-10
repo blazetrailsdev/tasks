@@ -17,7 +17,7 @@ blocked-by: null
 ## Context
 
 Follow-up to `extractor-capture-metaprogrammed-ruby-surface` (RFC 0025).
-`pnpm api:extra --package activerecord --novel-only` still flags `readingRole`
+`pnpm parity:api:extra --package activerecord --novel-only` still flags `readingRole`
 and `writingRole` as novel in `base.ts`.
 
 In vendored Rails these are NOT `class_attribute` (the original story's Context
@@ -44,4 +44,4 @@ Two gaps make them novel:
 - The api-compare consumer maps the top-level `ActiveRecord` module config
   surface to `Base` statics (or otherwise admits it to base.ts's allowed set)
   so `readingRole`/`writingRole` and siblings are no longer novel.
-- `pnpm api:compare` gate + the api-compare test suites still pass.
+- `pnpm parity:api` gate + the api-compare test suites still pass.

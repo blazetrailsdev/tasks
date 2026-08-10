@@ -56,7 +56,7 @@ Two additional latent issues in the same function worth fixing while here:
 
 ## Acceptance criteria
 
-- `parseTestCompareFromLogs` matches the current `test:compare` summary
+- `parseTestCompareFromLogs` matches the current `parity:test` summary
   format, including nested parens in the details group (e.g. balance-aware
   parsing or anchoring on the pipe-separated column layout instead of the
   parenthetical) and

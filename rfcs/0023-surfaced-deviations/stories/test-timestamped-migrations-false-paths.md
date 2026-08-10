@@ -48,4 +48,4 @@ branch and the conjunct are both silent no-ops without it.
   ported under their Rails names, covering both `nextMigrationNumber`'s
   sequential branch and `isValidateTimestamp`'s conjunct.
 - Each new test fails when the corresponding guard is reverted.
-- `pnpm test:compare` matched count does not drop.
+- `pnpm parity:test` matched count does not drop.

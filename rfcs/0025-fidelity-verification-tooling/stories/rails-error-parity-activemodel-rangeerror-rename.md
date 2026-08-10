@@ -31,5 +31,5 @@ imported under that name across ~15 activerecord files + tests.
       dodge the global collision (e.g. `import { RangeError as ... }`).
 - [ ] Remove `packages/activemodel/src/errors.ts` from the exclude baseline.
 - [ ] `pnpm lint` passes, rule stays `error`, baseline strictly smaller.
-- [ ] api:compare/test:compare delta non-negative; standalone PR (cross-package
+- [ ] parity:api/parity:test delta non-negative; standalone PR (cross-package
       rename), under 500 LOC.

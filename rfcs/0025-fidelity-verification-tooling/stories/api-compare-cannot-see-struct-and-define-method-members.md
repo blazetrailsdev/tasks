@@ -1,5 +1,5 @@
 ---
-title: "api:compare reports a faithful port of a Struct or define_method member as novel surface"
+title: "parity:api reports a faithful port of a Struct or define_method member as novel surface"
 status: draft
 updated: 2026-08-07
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`api:extra` reports a member as novel when the Ruby extractor found no
+`parity:api:extra` reports a member as novel when the Ruby extractor found no
 counterpart, but the extractor only sees members written as `def`. A member
 installed by `Struct.new` or by `define_method` is invisible to it, so a
 faithful port of one is reported as invented surface.
@@ -31,7 +31,7 @@ class Rfc4646 < Struct.new(*RFC4646_SUBTAGS)   # rfc4646.rb:16
   end
 ```
 
-`pnpm api:extra --package i18n` reports five of the seven readers as novel —
+`pnpm parity:api:extra --package i18n` reports five of the seven readers as novel —
 `extension`, `grandfathered`, `privateuse`, `region`, `variant` — plus
 `constructor` for `Struct`'s `new`. All six have a real Ruby counterpart; the
 extractor has no way to name it. The port carries the trace in `#subtag`'s
@@ -58,7 +58,7 @@ today.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra --package i18n` reports 0 novel for
+- [ ] `pnpm parity:api:extra --package i18n` reports 0 novel for
       `locale/tag/rfc4646.ts`.
 - [ ] `scripts/api-compare` unit tests cover both shapes, including a
       `define_method` whose name source is NOT a literal constant (still novel).

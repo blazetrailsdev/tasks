@@ -37,4 +37,4 @@ home.
 - [ ] Convert all bare throws in `i18n.ts` and `lint.ts` to manifest-correct
       ported classes; remove both from the exclude baseline.
 - [ ] `pnpm lint` passes, rule stays `error`, baseline strictly smaller.
-- [ ] Touched tests green; api:compare/test:compare delta non-negative; <500 LOC.
+- [ ] Touched tests green; parity:api/parity:test delta non-negative; <500 LOC.

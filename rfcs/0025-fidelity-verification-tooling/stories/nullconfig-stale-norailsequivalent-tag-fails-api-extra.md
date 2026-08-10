@@ -1,5 +1,5 @@
 ---
-title: "Stale @noRailsEquivalent on NullConfig makes pnpm api:extra exit 1"
+title: "Stale @noRailsEquivalent on NullConfig makes pnpm parity:api:extra exit 1"
 status: closed
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: "premise no longer true: the stale @noRailsEquivalent tag on Null
 
 ## Context
 
-`pnpm api:extra` exits 1 on `main`:
+`pnpm parity:api:extra` exits 1 on `main`:
 
 ```text
 extra-surface: 1 STALE @noRailsEquivalent tag(s) on methods that no longer flag
@@ -35,15 +35,15 @@ to suppress. #5462 ("honor @noRailsEquivalent on class declarations") is what
 made the tag visible to the staleness check in the first place.
 
 Reproduced on a clean rebuild with `rm -rf scripts/api-compare/output/ts-api-cache
-&& pnpm api:compare && pnpm api:extra`.
+&& pnpm parity:api && pnpm parity:api:extra`.
 
-NOT a CI gate — `.github/workflows/ci.yml` invokes no `api:extra`, and main is
+NOT a CI gate — `.github/workflows/ci.yml` invokes no `parity:api:extra`, and main is
 green with the tag present — so this only breaks the local fidelity-tooling
 workflow. Filed so the tool stops exiting 1 for everyone who runs it.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra` exits 0 on a clean rebuild of `main`.
+- [ ] `pnpm parity:api:extra` exits 0 on a clean rebuild of `main`.
 - [ ] The stale `@noRailsEquivalent` tag on `NullConfig` is deleted (or, if it
       is still load-bearing, the staleness check is corrected and the reason
       recorded).

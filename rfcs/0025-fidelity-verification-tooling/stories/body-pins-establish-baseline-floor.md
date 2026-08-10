@@ -48,6 +48,6 @@ Decision to make + work to do:
 ## Acceptance criteria
 
 - [ ] Floor policy decided and recorded (all-pin floor vs organic-only vs hybrid).
-- [ ] body-pins.json populated per the chosen policy; `pnpm api:pins` green in CI.
+- [ ] body-pins.json populated per the chosen policy; `pnpm parity:api:pins` green in CI.
 - [ ] Convergence workflow references the `--pin <file>` step so new/re-verified
       ports get pinned going forward.

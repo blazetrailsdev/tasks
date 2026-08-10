@@ -47,6 +47,6 @@ Two possible resolutions, to be chosen during triage:
 ## Acceptance criteria
 
 - [ ] Pick (1) or (2) with the false-positive measurement re-run against
-      current `main` (`API_COMPARE_FORCE=1 pnpm api:compare --wide-calls`).
-- [ ] If (1): `pnpm api:calls:wide` green with no new baseline entries.
+      current `main` (`API_COMPARE_FORCE=1 pnpm parity:api --wide-calls`).
+- [ ] If (1): `pnpm parity:api:calls` green with no new baseline entries.
 - [ ] If (2): the limitation is stated once, in the `NEGATED_ALIASES` docstring.

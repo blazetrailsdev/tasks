@@ -28,7 +28,7 @@ Found while measuring PR #5335 (2026-07-25). The ts-api cache
 different manifest** from a forced extraction of the _same_ tree — this is
 a correctness bug, not just a staleness/perf nuance.
 
-Measured on unmodified `origin/main`, `pnpm api:extra --package
+Measured on unmodified `origin/main`, `pnpm parity:api:extra --package
 activerecord`:
 
 - cached run: 217 files, 776 novel, 2084 moved, 2860 total

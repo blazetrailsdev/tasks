@@ -54,7 +54,7 @@ measurement.
 - Test in `scripts/api-compare/extra-surface.test.ts`: module-scope TS constant
   matching a Ruby file constant (allowed), matching a constant in another Ruby
   file (moved), and TS-only (novel).
-- Record the novel-count delta from `pnpm api:compare && pnpm api:extra
+- Record the novel-count delta from `pnpm parity:api && pnpm parity:api:extra
 --package activerecord`. Baseline after #5338: activerecord 741 novel /
   2085 moved / 2826 total. Expect novel to _rise_ — this uncovers surface that
   was previously unscored.

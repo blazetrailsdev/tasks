@@ -64,4 +64,4 @@ writers.
 - `findPrototypeSetter` is deleted from `persistence.ts`.
 - Existing store-accessor tests (including the dirty-tracking ones) stay green;
   `record.color = "red"` still works.
-- `pnpm api:extra --package activerecord` delta non-negative.
+- `pnpm parity:api:extra --package activerecord` delta non-negative.

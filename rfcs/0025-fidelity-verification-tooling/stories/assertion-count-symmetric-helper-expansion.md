@@ -1,5 +1,5 @@
 ---
-title: "test:compare — symmetric non-assert helper expansion for assertion counts"
+title: "parity:test — symmetric non-assert helper expansion for assertion counts"
 status: done
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"

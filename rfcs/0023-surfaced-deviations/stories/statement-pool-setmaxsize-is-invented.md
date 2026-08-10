@@ -36,7 +36,7 @@ the only eviction is the `while @statement_limit <= cache.size` loop inside
 trails' `StatementPool` adds `setMaxSize(maxSize)`
 (`connection-adapters/statement-pool.ts:31`), which validates the argument,
 mutates `_maxSize`, and runs its own eviction loop with a `dealloc` sweep. It
-is public, novel surface — `pnpm api:extra --package activerecord` reports
+is public, novel surface — `pnpm parity:api:extra --package activerecord` reports
 `connection-adapters/statement-pool.ts — 3 novel`, and this is one of them. A
 `maxSize` getter reads it back.
 
@@ -57,5 +57,5 @@ constructor-based sibling proving that path.
 
 - [ ] `setMaxSize` is gone; the limit is set only at construction.
 - [ ] Tests that resized a live pool construct one at the target limit.
-- [ ] `pnpm api:extra --package activerecord` loses the row(s).
-- [ ] api:compare / test:compare delta non-negative; all three lanes green.
+- [ ] `pnpm parity:api:extra --package activerecord` loses the row(s).
+- [ ] parity:api / parity:test delta non-negative; all three lanes green.

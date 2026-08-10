@@ -46,7 +46,7 @@ dodge it:
 
 PR #6316 hit it a third time: a four-entry `DESCRIPTOR_ESCAPES` lookup table
 declared immediately above its only reader, `escapeDescriptorText` (~line 2853),
-threw on the first `pnpm api:compare --calls`. It was worked around by dropping
+threw on the first `pnpm parity:api --calls`. It was worked around by dropping
 the table and computing the escape arithmetically
 (`` `%${c.charCodeAt(0).toString(16).toUpperCase()}` ``) — which is a worse
 expression of the intent than the table was, chosen only to avoid a module-level
@@ -81,8 +81,8 @@ not change that contract.
 ## Acceptance criteria
 
 1. The `!isMainThread` dispatch block runs at the end of module evaluation, not
-   the start; `pnpm api:compare --calls` and `API_COMPARE_FORCE=1
-pnpm api:compare --calls` both produce byte-identical output to before.
+   the start; `pnpm parity:api --calls` and `API_COMPARE_FORCE=1
+pnpm parity:api --calls` both produce byte-identical output to before.
 2. `fileHasMissingRailsCallTag` and `TAGS_ALLOWED_AFTER_NO_RAILS_EQUIVALENT`
    move back beside their readers, and the two TDZ comments
    (`extract-ts-api.ts:163`, `:1584`) are deleted rather than reworded — they

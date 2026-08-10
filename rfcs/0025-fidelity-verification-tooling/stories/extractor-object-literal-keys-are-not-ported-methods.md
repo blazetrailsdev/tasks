@@ -1,5 +1,5 @@
 ---
-title: "api:calls treats object-literal keys as ported methods, so a DEFAULT_BEHAVIORS :raise key reds 67 files"
+title: "parity:api:calls treats object-literal keys as ported methods, so a DEFAULT_BEHAVIORS :raise key reds 67 files"
 status: draft
 updated: 2026-08-09
 rfc: "0025-fidelity-verification-tooling"
@@ -54,4 +54,4 @@ extractor agrees, `DEFAULT_BEHAVIORS` reverts to an object literal and its
       baseline.
 - [ ] `DEFAULT_BEHAVIORS` (`packages/activesupport/src/deprecation.ts`) is an
       object literal again and its `Map` paragraph is removed.
-- [ ] `pnpm api:calls` green with no baseline additions.
+- [ ] `pnpm parity:api:calls` green with no baseline additions.

@@ -1,5 +1,5 @@
 ---
-title: "Prune the api:compare shared cross-worktree cache (stale keys + superseded CACHE_VERSION dirs)"
+title: "Prune the parity:api shared cross-worktree cache (stale keys + superseded CACHE_VERSION dirs)"
 status: done
 updated: 2026-06-14
 rfc: "0025-fidelity-verification-tooling"

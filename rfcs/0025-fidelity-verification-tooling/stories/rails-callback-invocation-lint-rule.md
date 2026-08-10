@@ -47,7 +47,7 @@ equivalent is `runCallbacks("<event>")`.
   mapping Rails method name → required callback events, derived from the
   `run_callbacks` entries in `MethodInfo.calls`. Generated in the same place
   the other rails-\*.json baselines are produced (orchestrate/compare path),
-  so `pnpm api:compare` refreshes it.
+  so `pnpm parity:api` refreshes it.
 - A custom ESLint rule (`eslint/rails-callback-invocations.mjs`) that, for a
   ported TS method whose name matches a Rails method with required callback
   events, flags the method if its body does not call `runCallbacks("<event>")`

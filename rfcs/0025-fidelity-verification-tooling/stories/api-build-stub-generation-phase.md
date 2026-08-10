@@ -1,5 +1,5 @@
 ---
-title: "api:build phase 3: opt-in stub generation with @nie throws and stubbed reporting column"
+title: "parity:api:build phase 3: opt-in stub generation with @nie throws and stubbed reporting column"
 status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -20,6 +20,6 @@ Phase 3 of `docs/infrastructure/api-build-stub-generation-plan.md` (PR #5229): o
 
 ## Acceptance criteria
 
-- `pnpm api:build --package <p> --file <f> --stubs` (opt-in, no build-everything default) generates ordered stubs with full `@missingRailsCall` blocks.
+- `pnpm parity:api:build --package <p> --file <f> --stubs` (opt-in, no build-everything default) generates ordered stubs with full `@missingRailsCall` blocks.
 - Stub pairs reported in a "stubbed" column, excluded from matched %, excluded from `body-pins --pin-all`.
-- New stubs do not fail `api:calls:wide` (baseline rows emitted in the same change).
+- New stubs do not fail `parity:api:calls` (baseline rows emitted in the same change).

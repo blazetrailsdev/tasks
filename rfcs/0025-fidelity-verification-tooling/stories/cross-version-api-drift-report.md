@@ -32,7 +32,7 @@ so the drift can be intersected against _our ported surface_.
 
 ## Acceptance criteria
 
-- An on-demand `api:drift`-style entrypoint (flag/env, e.g. `--ref <tag>`) that
+- An on-demand `parity:api:drift`-style entrypoint (flag/env, e.g. `--ref <tag>`) that
   fetches the target ref reproducibly (own lock entry; keep `v8.0.2` as the
   single canonical active pin — no permanent second source) and produces
   `output/rails-api@<ref>.json`, then a structured `output/version-drift.json`.

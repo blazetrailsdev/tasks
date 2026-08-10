@@ -1,5 +1,5 @@
 ---
-title: "api:compare: literal parameter-default + constant parity report"
+title: "parity:api: literal parameter-default + constant parity report"
 status: done
 updated: 2026-06-13
 rfc: "0025-fidelity-verification-tooling"
@@ -47,7 +47,7 @@ Implementation plan:
    Write `output/literal-mismatches.json` (`generatedAt`, `compared`,
    `mismatched`, `mismatches: [{package, rubyFile, tsFile, name, rubyValue,
 tsValue, kind: "default" | "constant"}]`) and print one advisory summary
-   line in the api:compare output.
+   line in the parity:api output.
 
 Known noise to handle explicitly (skip-with-reason in the comparer, with a
 `skipped` count in the JSON): Ruby `1000` vs TS `1_000` (parse numerically),
@@ -56,7 +56,7 @@ Ruby `nil`.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare --package activerecord` writes
+- [ ] `pnpm parity:api --package activerecord` writes
       `scripts/api-compare/output/literal-mismatches.json` + one summary
       line; advisory only.
 - [ ] `literals.test.ts` covers: numeric equality across underscore formats,

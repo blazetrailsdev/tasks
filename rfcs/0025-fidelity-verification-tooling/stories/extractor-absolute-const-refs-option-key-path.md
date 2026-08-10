@@ -50,7 +50,7 @@ the `end_with?` suffix match, rather than just stripping the `::`.
 - Unit coverage in `extract-ruby-api.test.ts` pins `assert_valid_keys
 ::Foo::KEYS` binding to the top-level `Foo` when a nested `Foo` also exists —
   mirroring the mixin test added in #4965.
-- `api:compare` option-key totals unchanged (regression check, not a target):
+- `parity:api` option-key totals unchanged (regression check, not a target):
   the change is inert on vendored Rails.
 
 Note: `:top_const_path_ref` is NOT a Ripper event — `Ripper::PARSER_EVENTS`

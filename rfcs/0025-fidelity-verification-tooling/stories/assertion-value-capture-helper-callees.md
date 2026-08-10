@@ -1,5 +1,5 @@
 ---
-title: "test:compare — capture expected values for helper-callee & receiver-form assertions"
+title: "parity:test — capture expected values for helper-callee & receiver-form assertions"
 status: done
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"
@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 Follow-on from `assertion-expected-value-comparison` (PR #4398), which added
-literal expected-VALUE comparison to `test:compare` but only captures the value
+literal expected-VALUE comparison to `parity:test` but only captures the value
 for `expect(...).matcher(arg)` chains (TS) and self-call `assert_*(...)` forms
 (Ruby). Two shapes push a `null` value and are therefore never value-compared:
 

@@ -48,6 +48,6 @@ local to the post-pass loop.
 - Fixture test in `extract-ts-api.test.ts` covering a two-hop barrel chain
   (declaring file → mid barrel → outer barrel), asserted with the files
   supplied in both orders.
-- Report any `pnpm api:compare` / `pnpm api:extra` delta the extra clones
+- Report any `pnpm parity:api` / `pnpm parity:api:extra` delta the extra clones
   cause; extra-surface totals should be unchanged (all chained clones carry
   `reExportedFrom` and are skipped there).

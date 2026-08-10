@@ -55,7 +55,7 @@ Error(...)` in them replaced by the correct ported error class (read the
       and the manifest is regenerated.
 - [ ] `pnpm lint` passes with the shrunken baseline (rule stays `error`); the
       baseline is strictly smaller and never grew.
-- [ ] Touched packages' affected test files stay green; api:compare /
-      test:compare delta non-negative.
+- [ ] Touched packages' affected test files stay green; parity:api /
+      parity:test delta non-negative.
 - [ ] PR diff under the 500 LOC ceiling; remaining files (if any) registered as
       a follow-up continuation story.

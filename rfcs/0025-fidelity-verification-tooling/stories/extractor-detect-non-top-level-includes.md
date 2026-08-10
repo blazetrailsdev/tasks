@@ -35,7 +35,7 @@ entries went stale (had to be hand-removed from
 
 This is a latent tooling gap: any host that applies its Rails `include`s from a
 helper/apply function (a legitimate pattern for breaking init cycles) loses
-mixin-method attribution in api:compare.
+mixin-method attribution in parity:api.
 
 ## Acceptance criteria
 

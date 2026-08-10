@@ -24,7 +24,7 @@ when a new per-method field is added — most recently `"calls"` (the RFC 0044
 call-set dimension) — previously-cached entries are served verbatim WITHOUT the
 new field. The extractor only re-runs for packages whose source changed.
 
-Observed during PR #4020: a fresh local `pnpm api:compare` analyzed only the
+Observed during PR #4020: a fresh local `pnpm parity:api` analyzed only the
 activerecord call-pairs (`Calls (advisory): 2591 matched pairs`) because every
 non-AR package (activesupport, rack, trailties, actionpack, …) served a stale
 cached manifest lacking `"calls"`. CI — which builds a fresh cache — analyzed

@@ -52,5 +52,5 @@ fixing exactly.
       instead of instance-then-class append.
 - [ ] `attribute.ts`'s `class << self` factory methods (`fromDatabase`, …) are
       expected BEFORE the instance methods, matching attribute.rb:7-24.
-- [ ] Regression-safe for all api:compare consumers of rails-api.json (the
+- [ ] Regression-safe for all parity:api consumers of rails-api.json (the
       `line` field is additive; existing consumers ignore it).

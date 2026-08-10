@@ -47,7 +47,7 @@ their names must be checked against Rails verbatim.
   counterpart there, in the corresponding `*.trails.test.ts` sibling.
 - Test names unchanged (no renames) — any mismatch is fixed in the
   implementation, not the name.
-- `pnpm test:compare` shows the affected describes attributed to
+- `pnpm parity:test` shows the affected describes attributed to
   `nested_attributes_test.rb`, with `extra` on `autosave_association_test.rb`
   reduced by the moved count and no new `missing` / `misplaced`.
 - Touched test files pass.

@@ -24,9 +24,9 @@ closed-reason: null
 at `vendor/rails/activesupport/lib/active_support/time_with_zone.rb:440-448`.
 
 Every one of those readers therefore has no Ruby counterpart in the manifest:
-`pnpm api:extra --package activesupport` lists `min`, `sec`, `wday`, `yday`,
+`pnpm parity:api:extra --package activesupport` lists `min`, `sec`, `wday`, `yday`,
 `msec`, `mon`, `mday` among `time-with-zone.ts`'s 17 novel names even though
-each is a real `TimeWithZone` method, and `api:compare` scores the file short by
+each is a real `TimeWithZone` method, and `parity:api` scores the file short by
 the same members.
 
 ## Acceptance criteria
@@ -35,5 +35,5 @@ the same members.
   `.each … class_eval` codegen path, the way it already does for a constant
   receiver.
 - `TimeWithZone`'s delegated readers stop showing up in
-  `pnpm api:extra --package activesupport`, and the activesupport `api:compare`
+  `pnpm parity:api:extra --package activesupport`, and the activesupport `parity:api`
   method count moves up accordingly.

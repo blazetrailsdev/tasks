@@ -44,4 +44,4 @@ Rails: `Locking::Optimistic#_touch_row` unions the locking column into
 - [ ] Any inline locking logic in the generic touch/update path is removed in
       favor of the optimistic.ts mirrors, matching Rails' layering.
 - [ ] `locking.test.ts` + `persistence.test.ts` + `touch-later.test.ts` stay
-      green; no api:compare / test:compare regression.
+      green; no parity:api / parity:test regression.

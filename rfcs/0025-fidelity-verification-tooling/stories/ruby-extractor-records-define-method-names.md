@@ -57,7 +57,7 @@ Consequences:
   `callbacks.ts` + mixin install site in `base.ts`) — 12 of the 15 entries in
   `extra-surface-allow.json` exist solely because of this gap.
 - The Rails denominator is understated wherever a package leans on
-  `define_method`, so `api:compare` percentages read higher than reality.
+  `define_method`, so `parity:api` percentages read higher than reality.
 - `prepend_before_action` / `append_before_action` are unported and invisible
   to the "missing" side of the report, so nothing flags them as work.
 

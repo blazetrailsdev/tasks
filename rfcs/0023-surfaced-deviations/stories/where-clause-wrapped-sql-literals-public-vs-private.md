@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Not a behavioral divergence from Rails: predicatesWithWrappedSqlLiterals (where-clause.ts:215) produces identical SQL; only TS visibility differs, and the deviation is already justified inline. Member visibility is not a Rails-fidelity axis api:compare scores."
+closed-reason: "Not a behavioral divergence from Rails: predicatesWithWrappedSqlLiterals (where-clause.ts:215) produces identical SQL; only TS visibility differs, and the deviation is already justified inline. Member visibility is not a Rails-fidelity axis parity:api scores."
 ---
 
 ## Context

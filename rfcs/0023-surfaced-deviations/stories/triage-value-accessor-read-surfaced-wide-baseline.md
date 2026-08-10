@@ -38,5 +38,5 @@ any_response? -> fetch`).
   remove it (converged / genuinely satisfied via a different path — with a
   specific reason), or file/fix the real omission it exposes.
 - Replace the shared bulk reason with per-entry (or per-cluster) specific reasons.
-- `pnpm api:calls:wide` stays green throughout; baseline only shrinks.
+- `pnpm parity:api:calls` stays green throughout; baseline only shrinks.
 - Identify entries by diffing the exclude JSON at PR #4656's merge commit.

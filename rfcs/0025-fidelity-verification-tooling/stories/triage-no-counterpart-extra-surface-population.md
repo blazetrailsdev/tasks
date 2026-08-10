@@ -19,7 +19,7 @@ closed-reason: null
 
 PR #5427 (`extra-surface-skips-files-without-rails-counterpart`) closed a
 measurement hole: TS files with no Rails counterpart were skipped entirely by
-`api:extra`, so their whole public surface was invisible. They are now scored
+`parity:api:extra`, so their whole public surface was invisible. They are now scored
 with an empty allowed set and broken out in the `NoCntrp` column.
 
 That newly surfaced **186 files / 1119 extras / 464 novel** which nobody has
@@ -49,7 +49,7 @@ stories. Do not attempt the convergence here.
 
 ## Acceptance criteria
 
-- Walk the `rubyFile === null` files in `pnpm api:extra --json`, ordered by
+- Walk the `rubyFile === null` files in `pnpm parity:api:extra --json`, ordered by
   novel count, and classify each into: (a) permanently unportable — tag with
   `@noRailsEquivalent <reason>` at the declaration, citing what Ruby/Rails
   provides instead; (b) unconverged trails surface — leave untagged so it keeps

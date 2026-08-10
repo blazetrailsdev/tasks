@@ -67,5 +67,5 @@ move with it where the emitted names were wrong.
   singularization.
 - Generator tests under `packages/trailties/src/generators/` stay green, with any
   changed expectation shown to be the Rails-correct name.
-- `pnpm api:extra --package trailties` drops the corresponding novel names; no
+- `pnpm parity:api:extra --package trailties` drops the corresponding novel names; no
   allowlist rows added.

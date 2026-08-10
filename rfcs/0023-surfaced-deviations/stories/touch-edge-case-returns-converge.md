@@ -38,4 +38,4 @@ transactional-callback machinery (PR #3500):
 - [x] `touch` with no timestamp columns and no names returns `true`, matching Rails.
 - [x] Find/port the corresponding Rails persistence_test.rb assertions; un-skip if a
       matching skipped test exists, otherwise add one with a Rails-verbatim name.
-- [x] No new api:compare / test:compare gate-mismatches.
+- [x] No new parity:api / parity:test gate-mismatches.

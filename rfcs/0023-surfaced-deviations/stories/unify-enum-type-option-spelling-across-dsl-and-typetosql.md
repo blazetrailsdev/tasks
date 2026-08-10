@@ -46,4 +46,4 @@ deep inside `SchemaCreation` with `enum_type is required for enums`.
   internal kwargs — state the choice at the call site.
 - No DSL entry point silently drops the option; a missing value still raises
   `ArgumentError("enum_type is required for enums")`.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

@@ -1,5 +1,5 @@
 ---
-title: "test:compare assertion-level mismatches get an only-shrink ratchet (count/kind/value)"
+title: "parity:test assertion-level mismatches get an only-shrink ratchet (count/kind/value)"
 status: done
 updated: 2026-08-01
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced by the 2026-07-31 progress audit. `pnpm test:compare` already
+Surfaced by the 2026-07-31 progress audit. `pnpm parity:test` already
 measures assertion-level fidelity inside name-matched tests and reports it in
 the summary and in `scripts/test-compare/output/convention-comparison.json`
 (per-package `totalAssertionMismatch` / `totalKindMismatch` /
@@ -47,7 +47,7 @@ Prior art to mirror:
 
 - A committed high-water mark file (per package, three counters:
   assertion-count / kind / value mismatches) seeded at today's values.
-- A CI-run lint (e.g. `pnpm test:assertions:ratchet`) that fails when any
+- A CI-run lint (e.g. `pnpm parity:test:assertions`) that fails when any
   counter exceeds its mark and auto-acknowledges shrinkage the way the
   existing ratchets do (lowering the mark is part of the passing run or a
   documented one-liner — no silent regression, no manual bookkeeping to
@@ -56,7 +56,7 @@ Prior art to mirror:
   the guarantee is "assertion-level debt never grows", not per-entry review.
 - Counts stay derived from the existing test-compare artifact — no second
   extractor; the lint reads `convention-comparison.json` (regenerating it
-  first or failing on staleness, mirroring how `api:calls:wide` handles its
+  first or failing on staleness, mirroring how `parity:api:calls` handles its
   artifact).
 - CONTRIBUTING.md "Measuring progress" documents the new ratchet alongside
   the wide-call one, including the stale-artifact trap.

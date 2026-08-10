@@ -55,7 +55,7 @@ _constructor identifier_, so a ported class literally named `TypeError` (or
       the manifest regenerated.
 - [ ] `pnpm lint` passes with the shrunken baseline (rule stays `error`); the
       baseline is strictly smaller and never grew.
-- [ ] Touched packages' affected test files stay green; api:compare /
-      test:compare delta non-negative.
+- [ ] Touched packages' affected test files stay green; parity:api /
+      parity:test delta non-negative.
 - [ ] PR diff under the 500 LOC ceiling; remaining files registered as a
       further continuation story.

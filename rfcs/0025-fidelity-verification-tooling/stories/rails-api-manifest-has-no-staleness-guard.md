@@ -1,5 +1,5 @@
 ---
-title: "api:extra does not check rails-api.json for staleness, only ts-api.json"
+title: "parity:api:extra does not check rails-api.json for staleness, only ts-api.json"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
@@ -24,7 +24,7 @@ Found while adding the manifest-staleness guard in #5421.
 the TypeScript sources. The Ruby-side manifest `output/rails-api.json` has no
 equivalent check.
 
-`api:extra` computes extra surface by diffing the TS manifest against the Ruby
+`parity:api:extra` computes extra surface by diffing the TS manifest against the Ruby
 one, so a stale `rails-api.json` moves the totals just as a stale `ts-api.json`
 does — it changes the "allowed" name set every TS name is checked against. It
 goes stale on a different trigger: `vendor/sources.lock.json` re-pinning, or
@@ -43,7 +43,7 @@ behaviour.
 
 ## Acceptance criteria
 
-- `api:extra` fails loudly when `output/rails-api.json` is older than the
+- `parity:api:extra` fails loudly when `output/rails-api.json` is older than the
   vendored Ruby sources or the lockfile that pins them, the way it already does
   for `output/ts-api.json` versus `packages/*/src`.
 - Pick an oracle that does not false-positive the way the first TS-side attempt

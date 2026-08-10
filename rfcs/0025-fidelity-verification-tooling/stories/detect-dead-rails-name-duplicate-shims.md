@@ -24,7 +24,7 @@ Found in #5343 (`extra-surface-schema-cache-and-pool-sync-api`,
 2026-07-26). Three separate instances, in only two files, of the same
 defect: a **module-level function carrying a Rails method's name, called by
 nothing**, while the live code did the same work by another route. Each one
-satisfied `api:compare`'s name match, so the parity number was green while
+satisfied `parity:api`'s name match, so the parity number was green while
 no ported body actually made the call.
 
 | Rails method                                                 | dead shim                                               | what the live code did                                         |

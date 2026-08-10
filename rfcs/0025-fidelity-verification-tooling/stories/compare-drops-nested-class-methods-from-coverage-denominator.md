@@ -1,5 +1,5 @@
 ---
-title: "api:compare excludes same-file-nested Rails classes from allRuby entirely"
+title: "parity:api excludes same-file-nested Rails classes from allRuby entirely"
 status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -24,7 +24,7 @@ never enter the coverage denominator.
 
 Confirmed during review of PR #5458 (which changed only extra-surface.ts's use
 of the same rule). The consequence is that every method on a nested Rails class
-is invisible to `api:compare`: unported ones do not count as missing, so the
+is invisible to `parity:api`: unported ones do not count as missing, so the
 "Data layer 98.8% / Overall 66.8%" headline silently excludes them.
 
 The blast radius is the same population PR #5458 measured: 94 nested Ruby

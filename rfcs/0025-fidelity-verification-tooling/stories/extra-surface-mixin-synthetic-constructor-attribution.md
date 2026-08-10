@@ -55,7 +55,7 @@ mechanism does not sharpen.
 - Extend the `__mixin` tests in `scripts/api-compare/extra-surface.test.ts` —
   the fixture there already builds a two-file program and can assert the
   `constructor` entry directly.
-- Record before/after `pnpm api:extra --package activerecord` totals; expect a
+- Record before/after `pnpm parity:api:extra --package activerecord` totals; expect a
   change of at most ~6 extras.
 
 ## Fidelity-first policy

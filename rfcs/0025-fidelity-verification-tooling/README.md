@@ -19,14 +19,14 @@ priority: 2
 ## Summary
 
 The port's existing verification toolchain covers API **surface**
-(`api:compare`, 4951/4952 at 100%), naming/structure (generated ESLint
-baselines), behavior (`test:compare`, 92.4%), and output (`parity:schema` /
+(`parity:api`, 4951/4952 at 100%), naming/structure (generated ESLint
+baselines), behavior (`parity:test`, 92.4%), and output (`parity:schema` /
 `parity:query`). What it does NOT measure: **option-hash keys** (the biggest
 remaining Ruby-API dimension), **error-class identity**, **literal
 constants/defaults**, **deprecation status**, and the arel-only SQL rule that
 exists only as CONTRIBUTING prose. This RFC adds five bounded tools, each
 following an existing, proven pattern in the trails repo (generated-manifest
-ESLint rule, api:compare sub-report) so every story is mechanical to
+ESLint rule, parity:api sub-report) so every story is mechanical to
 implement and ratchets via a baseline that only shrinks.
 
 Source analysis: `trails/docs/activerecord/port-fidelity-analysis-2026-06-11.md`.
@@ -36,7 +36,7 @@ Source analysis: `trails/docs/activerecord/port-fidelity-analysis-2026-06-11.md`
 Concrete divergences the current toolchain cannot see:
 
 - A `hasMany` options type missing a key Rails accepts (`inverse_of`-class
-  gaps) passes api:compare (name + arity match) and stays invisible until a
+  gaps) passes parity:api (name + arity match) and stays invisible until a
   ported test happens to exercise it.
 - Users `rescue ActiveRecord::RecordNotFound`; nothing verifies our
   `errors.ts` hierarchy matches Rails' error classes or that Rails-mirroring
@@ -79,7 +79,7 @@ the summary.
 ### Cluster `lint` — generated-manifest ESLint rules
 
 The pattern: `eslint/rails-private-jsdoc.mjs` + its generated
-`eslint/rails-private-methods.json` manifest (written by api:compare), with a
+`eslint/rails-private-methods.json` manifest (written by parity:api), with a
 colocated `*.test.mjs`, registered in `eslint.config.mjs` under the
 `blazetrails` plugin (see L106–130) and scoped per file-glob. Ratchet
 baselines follow `eslint/require-canonical-schema-exclude.json`.
@@ -99,7 +99,7 @@ baselines follow `eslint/require-canonical-schema-exclude.json`.
 ## Call-argument fidelity — moved out
 
 A 2026-08-08 spike asked whether a call-**argument** dimension could join
-`api:compare`: compare the arguments each body passes, not just the set of call
+`parity:api`: compare the arguments each body passes, not just the set of call
 names. The answer was yes (77% genuine divergence over 102 hand-classified
 rows), and it is large enough to be its own campaign — seven stories, ~1,050
 LOC.

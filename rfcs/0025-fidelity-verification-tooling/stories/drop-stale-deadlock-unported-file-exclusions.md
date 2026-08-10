@@ -21,4 +21,4 @@ PR #5121 removed the MySQL concurrency exclusions from `scripts/api-compare/unpo
 ## Acceptance criteria
 
 - Every unported-files.ts exclusion whose tests are actually ported is removed; genuinely unported ones stay with accurate reasons.
-- test:compare and api:compare deltas non-negative.
+- parity:test and parity:api deltas non-negative.

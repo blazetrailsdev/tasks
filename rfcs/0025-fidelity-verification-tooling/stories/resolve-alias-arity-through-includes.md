@@ -38,5 +38,5 @@ by the module FQN resolution already used elsewhere (e.g.
 - Unit coverage in `extract-ruby-api.test.ts` pins a mixin-target alias
   (alias in the host class, `def` target in an included module) resolving to
   the target's params.
-- No regression to same-bucket resolution or to overall api:compare arity.
+- No regression to same-bucket resolution or to overall parity:api arity.
 - Out-of-package targets (another gem's source) remain best-effort empty.

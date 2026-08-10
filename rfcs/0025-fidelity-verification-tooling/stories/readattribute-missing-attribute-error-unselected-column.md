@@ -65,4 +65,4 @@ to mirror Rails `computer[:developer]` (bracket = read_attribute) exactly.
 - [ ] Update `attribute-methods.test.ts` "read_attribute raises
       ActiveModel::MissingAttributeError when the attribute isn't selected" to read
       via `readAttribute(...)` (mirroring Rails `[]`) instead of the generated getter.
-- [ ] No regression in api:compare / test:compare.
+- [ ] No regression in parity:api / parity:test.

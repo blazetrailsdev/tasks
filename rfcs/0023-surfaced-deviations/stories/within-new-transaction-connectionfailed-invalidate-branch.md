@@ -56,4 +56,4 @@ invalidation propagation (`invalidate!` cascades to `@children`) does not fire.
 - [ ] A test asserts that a `ConnectionFailed` raised from `commitTransaction`
       leaves the transaction in the `invalidated` state (and cascades to child
       savepoint transactions) rather than `rolledback`.
-- [ ] No new gate-mismatches; test:compare/api:compare delta non-negative.
+- [ ] No new gate-mismatches; parity:test/parity:api delta non-negative.

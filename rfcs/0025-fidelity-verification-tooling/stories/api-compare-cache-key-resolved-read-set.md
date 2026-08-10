@@ -1,5 +1,5 @@
 ---
-title: "Key api:compare TS cache on the program's resolved read-set, not whole dependency packages"
+title: "Key parity:api TS cache on the program's resolved read-set, not whole dependency packages"
 status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-PR #5375 fixed cached-vs-fresh `api:compare` divergence by folding each
+PR #5375 fixed cached-vs-fresh `parity:api` divergence by folding each
 package's TRANSITIVE workspace dependency fingerprints into both TS extraction
 cache keys (`scripts/api-compare/extract-ts-api.ts`, the `withDeps` /
 `dirMtimeFingerprint` helpers, plus `dependencyInputFiles` /

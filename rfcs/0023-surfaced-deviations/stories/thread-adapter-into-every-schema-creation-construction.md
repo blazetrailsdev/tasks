@@ -56,4 +56,4 @@ themselves.
       adapter's `nativeDatabaseTypes()` is still their only consumer.
 - [ ] Unit tests that construct a host-less visitor are migrated to a real (or
       fully stubbed) adapter rather than deleted.
-- [ ] No test:compare or api:compare regression.
+- [ ] No parity:test or parity:api regression.

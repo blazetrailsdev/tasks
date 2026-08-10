@@ -34,7 +34,7 @@ instrumentation` and `subscribe to events can handle nested hashes in the paylao
   empty `() => {}` block and modified nothing.
 
 All six passed before and after the fix until their bodies were rewritten; the
-7 rewritten assertions then failed against the pre-change source. `test:compare`
+7 rewritten assertions then failed against the pre-change source. `parity:test`
 matches our tests to Rails **by name**, so a hollow body is invisible to it: the
 name reports coverage the body does not provide. This is a false-negative class
 in the parity signal, not a one-off.
@@ -52,7 +52,7 @@ rewrites. No tooling detects the pattern.
       passes an empty/no-op callback where the Rails original passes a block
       that mutates or raises. Report a count and the worst offenders.
 - [ ] Decide the durable mechanism and land it: a lint rule (RFC 0025 already
-      ships three) and/or a `test:compare` signal that flags a name-matched test
+      ships three) and/or a `parity:test` signal that flags a name-matched test
       whose body cannot fail — e.g. empty arrow callbacks passed to an API whose
       Rails counterpart yields, or a test with zero `expect` calls.
 - [ ] Where cheap, prove the sweep by fixing the highest-value hollow bodies

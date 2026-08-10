@@ -56,7 +56,7 @@ axis and must not re-open that hole.
   matched file (allowed), nested class in another file (moved), TS-only class
   name (novel), plus a guard that the nested class's _methods_ still count as
   extra surface.
-- Record the novel-count delta from `pnpm api:compare && pnpm api:extra
+- Record the novel-count delta from `pnpm parity:api && pnpm parity:api:extra
 --package activerecord` (baseline after the constants PR: activerecord 736
   novel / 2090 moved / 2826 total).
 

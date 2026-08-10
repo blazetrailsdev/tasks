@@ -75,5 +75,5 @@ helper needed is now available — the helper is fixed and unit-covered in
       `validates_test.rb:114-121` (`length: 6..20`, asserting the
       "is too short (minimum is 6 characters)" error), and `validates with
 array` to `validates_test.rb:104-112`. Test names unchanged.
-- [ ] `pnpm api:calls` clean — the `validates` call-set gains
+- [ ] `pnpm parity:api:calls` clean — the `validates` call-set gains
       `_parse_validates_options`.

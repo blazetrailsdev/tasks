@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm schema:compare` (PR #4966, RFC 0025) proved TEST_SCHEMA's mirror of
+`pnpm parity:schema` (PR #4966, RFC 0025) proved TEST_SCHEMA's mirror of
 `vendor/rails/activerecord/test/schema/schema.rb` is faithful where the two
 overlap — every Rails column across the 242 shared tables is ported with zero
 type divergence — but it also surfaced **91 purely additive inventions**
@@ -43,7 +43,7 @@ The comparator gate is a ratchet: the baseline may shrink but never grow
 - Each invented table is either removed (tests converged onto the canonical
   table it duplicates) or, if genuinely required, added to schema.rb upstream.
 - `scripts/schema-compare/invented-baseline.json` shrinks accordingly;
-  reseed with `pnpm schema:compare:reseed`.
+  reseed with `pnpm parity:schema:reseed`.
 - No test is renamed to dodge a collision (CLAUDE.md: never rename tests).
 - Split across several PRs by family (`sc_*`, `refl_*`, ...) — the 500-LOC
   ceiling applies per PR; register follow-ups rather than fanning out.

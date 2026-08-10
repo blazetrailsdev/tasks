@@ -51,7 +51,7 @@ equivalent and was deliberately left out of #5422's scope.
       existing `eslint/rails-private-jsdoc.test.mjs`.
 - [ ] Enforcement in the Rails API/Test Comparison job is unchanged
       (ci.yml:1394 still runs the builder without `--allow-missing`).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

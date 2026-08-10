@@ -69,4 +69,4 @@ a matching module.
   disposition for a dead arm) and close — do not add unexercised machinery.
 - If non-zero, add the ancestry step between the lexical walk and the top-level
   fall-through, keeping the single-FQN return contract intact.
-- Report before/after `pnpm api:compare` totals either way.
+- Report before/after `pnpm parity:api` totals either way.

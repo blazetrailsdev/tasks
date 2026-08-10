@@ -38,7 +38,7 @@ than a defect.
 
 ## Acceptance criteria
 
-- Measure first: how often does an api:compare run in practice follow a file
+- Measure first: how often does an parity:api run in practice follow a file
   add/delete/rename? If it is rare, close this as not worth the graph.
 - If it is worth doing, compute the shape key per package over its transitive
   workspace dependency directories only, restoring the graph walk.

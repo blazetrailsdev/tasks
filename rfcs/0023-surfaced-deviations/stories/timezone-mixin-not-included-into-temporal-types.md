@@ -26,7 +26,7 @@ resolve as members of `Type::Date`, `Type::DateTime` and `Type::Time`.
 trails ports it as a standalone `isUtc()` function plus a `Timezone` class in
 `packages/activerecord/src/type/internal/timezone.ts`, and the type classes
 (`type/date.ts`, `type/date-time.ts`, `type/time.ts`) import `isUtc` rather than
-mixing the module in. `pnpm api:compare` therefore reports `default_timezone`
+mixing the module in. `pnpm parity:api` therefore reports `default_timezone`
 (and `is_utc?` for date/time) as missing per file:
 
 - activerecord: `type/date.rb`, `type/date_time.rb`, `type/time.rb`
@@ -43,9 +43,9 @@ mechanism this should use.
 - The temporal types mix the timezone module in (via `include()` / `Included<>`)
   instead of importing a standalone `isUtc`, so `isUtc` and `defaultTimezone`
   resolve as members of each type class.
-- `pnpm api:compare` no longer lists `default_timezone` / `is_utc?` as missing
+- `pnpm parity:api` no longer lists `default_timezone` / `is_utc?` as missing
   for `type/date.rb`, `type/date_time.rb`, `type/time.rb` in activerecord, and
   the activemodel counterparts are converged or explicitly scoped out.
 - The trails-only `Timezone` class / `TimezoneOptions` shape is removed or
   justified at the call site if it must stay.
-- No new `api:extra` entries; existing timezone tests pass with names unchanged.
+- No new `parity:api:extra` entries; existing timezone tests pass with names unchanged.

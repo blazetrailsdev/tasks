@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-`scripts/api-compare/extra-surface.ts` (`pnpm api:extra`, added in PR #3595)
+`scripts/api-compare/extra-surface.ts` (`pnpm parity:api:extra`, added in PR #3595)
 surfaces TS public methods with no Rails counterpart. Its `novel` tier is
 diluted by Ruby methods the **static** extractor (`extract-ruby-api.rb`)
 cannot see because they're metaprogrammed or aliased, so their real TS ports
@@ -46,11 +46,11 @@ tail is **open-ended** and can only be fixed at the extractor:
   `mattr_accessor`-generated reader/writer/predicate methods (with the
   `?`→predicate form), the bare `alias` keyword, and at minimum the
   static-resolvable `delegate … to:` targets.
-- Re-running `pnpm api:extra --package activerecord --novel-only` shows the
+- Re-running `pnpm parity:api:extra --package activerecord --novel-only` shows the
   `class_attribute`/alias/delegate false-novels gone from `base.ts`,
   `inheritance.ts`, `relation.ts` (spot-check: `partialInserts`,
   `defaultShard`, `leftJoins`, `whereNot` no longer novel).
-- **Re-verify the `pnpm api:compare` gate** — adding Ruby methods mutates the
+- **Re-verify the `pnpm parity:api` gate** — adding Ruby methods mutates the
   shared `rails-api.json`; confirm coverage %/arity and the compare.ts test
   suite still pass (this is why it was NOT bundled into the audit-tool PR).
 - Drop the now-redundant in-tool allow-sets in `extra-surface.ts`

@@ -1,5 +1,5 @@
 ---
-title: "test:compare normalization collides test__x__2 with test_x__2"
+title: "parity:test normalization collides test__x__2 with test_x__2"
 status: draft
 updated: 2026-08-10
 rfc: "0025-fidelity-verification-tooling"
@@ -48,4 +48,4 @@ their credit.
 
 - [ ] `test__parse__2` and `test_parse__2` produce distinct normalized paths.
 - [ ] A unit test in `scripts/test-compare/` covers the colliding pair.
-- [ ] `pnpm test:compare` totals do not regress for any package.
+- [ ] `pnpm parity:test` totals do not regress for any package.

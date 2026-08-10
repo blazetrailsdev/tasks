@@ -1,5 +1,5 @@
 ---
-title: "schema:compare invented-baseline burndown (continued: 85 tables remaining)"
+title: "parity:schema invented-baseline burndown (continued: 85 tables remaining)"
 status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
@@ -33,7 +33,7 @@ pattern RFC 0059 exists to eliminate — converge onto the canonical table, do
 not rename.
 
 The comparator is a ratchet: the baseline may shrink but never grow
-(`--write` refuses to add entries). Reseed with `pnpm schema:compare:reseed`.
+(`--write` refuses to add entries). Reseed with `pnpm parity:schema:reseed`.
 
 **Method that worked in #4973**, worth reusing: read the Rails test first
 (`pnpm rails:find <name>`), switch to the canonical models, add
@@ -50,6 +50,6 @@ Beware the registry-shadowing trap — see
   successor rather than fanning out sibling PRs.
 - Each invented table is removed (tests converged onto the canonical table it
   duplicates) or, if genuinely required, added to schema.rb upstream.
-- `invented-baseline.json` shrinks; reseeded via `pnpm schema:compare:reseed`.
+- `invented-baseline.json` shrinks; reseeded via `pnpm parity:schema:reseed`.
 - No test renamed to dodge a collision (CLAUDE.md).
-- `pnpm schema:compare` reports `new-inventions=0`.
+- `pnpm parity:schema` reports `new-inventions=0`.

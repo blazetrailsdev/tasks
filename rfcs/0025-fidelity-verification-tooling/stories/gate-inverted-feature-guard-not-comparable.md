@@ -49,7 +49,7 @@ become comparable first.
   symmetrically and `adapterFeatureKey` includes), or keep the guard vocabulary
   and add a dedicated mismatch kind for it — one coherent rule applied to BOTH
   extractors.
-- `pnpm test:compare --gates` gate-mismatch count does not rise; diff the
+- `pnpm parity:test --gates` gate-mismatch count does not rise; diff the
   `--gates` output before and after. Any newly-surfaced real divergence is either
   fixed in the same PR or registered as its own story.
 - Unit coverage in `extract-ruby-gates.test.ts` and `extract-ts-gates.test.ts` for

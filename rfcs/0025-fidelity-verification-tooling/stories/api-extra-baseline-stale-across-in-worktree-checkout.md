@@ -1,5 +1,5 @@
 ---
-title: "api:extra baseline is stale across an in-worktree checkout"
+title: "parity:api:extra baseline is stale across an in-worktree checkout"
 status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -17,11 +17,11 @@ closed-reason: null
 
 ## Context
 
-Found while measuring the `api:extra` gate for PR #5392 (a comment-only diff, so
+Found while measuring the `parity:api:extra` gate for PR #5392 (a comment-only diff, so
 every package total should have been identical to baseline).
 
 Measuring baseline the documented way — `git checkout --detach origin/main` in the
-same worktree, run `pnpm api:compare` then `pnpm api:extra`, then check the branch
+same worktree, run `pnpm parity:api` then `pnpm parity:api:extra`, then check the branch
 back out — produced different extra-surface totals for packages the diff never
 touched:
 
@@ -34,8 +34,8 @@ touched:
 The diff touched only `activerecord` and `activemodel`, and changed no executable
 line, so `trailties` and `actionview` cannot legitimately move.
 
-This is NOT per-run randomness. Two back-to-back `pnpm api:compare` +
-`pnpm api:extra` runs at the same commit (`f6686d477`), with no checkout in
+This is NOT per-run randomness. Two back-to-back `pnpm parity:api` +
+`pnpm parity:api:extra` runs at the same commit (`f6686d477`), with no checkout in
 between, are byte-identical:
 
 ```text
@@ -47,7 +47,7 @@ The drift appears only when the working tree changes commit between runs, which
 points at the shared TS extraction cache serving entries keyed on state that does
 not fully capture the checked-out file contents.
 
-Why it matters: "api:compare / test:compare delta is non-negative" is the merge
+Why it matters: "parity:api / parity:test delta is non-negative" is the merge
 gate on every PR, and the standard way to produce the baseline is exactly this
 in-worktree checkout. A stale baseline silently produces phantom deltas on
 untouched packages, which either masks a real regression or forces an agent to
@@ -59,7 +59,7 @@ this is a recurrence rather than a duplicate.
 
 ## Acceptance criteria
 
-- Reproduce: at one commit capture `api:extra` totals, `git checkout --detach
+- Reproduce: at one commit capture `parity:api:extra` totals, `git checkout --detach
 origin/main`, re-run, check back out, re-run; assert the first and third runs
   agree for every package.
 - Root-cause which part of the cache key fails to change across an in-worktree

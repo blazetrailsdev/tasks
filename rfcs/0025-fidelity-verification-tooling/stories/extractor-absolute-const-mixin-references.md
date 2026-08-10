@@ -51,4 +51,4 @@ on those strings (e.g. `flattenIncludedMethodInfos` in `compare.ts`).
 - Unit coverage in `extract-ruby-api.test.ts` pins `include ::Foo` binding
   to top-level `Foo` when a nested `Foo` also exists (the case removed as
   dead code in #4959).
-- `api:compare` arity totals unchanged (regression check, not a target).
+- `parity:api` arity totals unchanged (regression check, not a target).

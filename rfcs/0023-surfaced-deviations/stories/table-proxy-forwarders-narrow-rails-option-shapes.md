@@ -53,6 +53,6 @@ need casts, which is exactly what hides real mismatches.
   `packages/activerecord/src/migration/change-table.test.ts` is removed.
 - Any other cast in a mirrored test that exists only because of these
   narrowings is removed too.
-- `api:compare` / `test:compare` deltas non-negative. Watch the wide call-set
+- `parity:api` / `parity:test` deltas non-negative. Watch the wide call-set
   ratchet: widening a forwarder can converge baselined entries, which must then
   be hand-removed (never `--write` reseeded).

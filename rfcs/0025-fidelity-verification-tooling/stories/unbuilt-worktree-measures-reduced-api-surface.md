@@ -1,5 +1,5 @@
 ---
-title: "Unbuilt worktree silently measures a smaller api:extra surface than a built one"
+title: "Unbuilt worktree silently measures a smaller parity:api:extra surface than a built one"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
@@ -51,7 +51,7 @@ behaviour.
 ## Acceptance criteria
 
 - Decide and implement one of: (a) `start-worktree.sh` runs `pnpm build` so
-  every worktree measures the built surface, or (b) `api:compare` refuses to
+  every worktree measures the built surface, or (b) `parity:api` refuses to
   emit totals when NO package is built, pointing at `pnpm build`.
 - Whichever is chosen, an unbuilt worktree must not silently produce totals that
   differ from a built one.

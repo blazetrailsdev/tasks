@@ -21,7 +21,7 @@ CLAUDE.md's fidelity contract requires "same error class, same message string,
 same raise site", but the 2026-08-03 api-signals audit found zero tooling for
 message strings: `scripts/api-compare/literals.ts` compares only
 default/constant values (587 compared, 1 differing), and error CLASS names
-surface only as declarations via `api:compare`. Raise-site message strings are
+surface only as declarations via `parity:api`. Raise-site message strings are
 unmeasured.
 
 Proposed shape: extract `raise Klass, "literal"` sites in
@@ -36,7 +36,7 @@ cut.
 
 ## Acceptance criteria
 
-- A new advisory dimension in `api:compare` output lists matched pairs whose
+- A new advisory dimension in `parity:api` output lists matched pairs whose
   Ruby body raises with a message literal the TS body does not throw
   (class mismatch or message-fragment mismatch).
 - A seeded only-shrink baseline plus lint gates new mismatches in CI, same

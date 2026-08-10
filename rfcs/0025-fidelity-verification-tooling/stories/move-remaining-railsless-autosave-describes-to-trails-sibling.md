@@ -44,7 +44,7 @@ trails sibling file is for.
 - Test names unchanged.
 - Any `eslint/*-exclude.json` entry made stale by the move is removed; new
   entries only where the moved code genuinely needs them.
-- `pnpm test:compare` shows `extra` on `autosave_association_test.rb` dropping by
+- `pnpm parity:test` shows `extra` on `autosave_association_test.rb` dropping by
   13 with matched/missing/misplaced unchanged.
 - Both `autosave-association.test.ts` and `autosave-association.trails.test.ts`
   pass.

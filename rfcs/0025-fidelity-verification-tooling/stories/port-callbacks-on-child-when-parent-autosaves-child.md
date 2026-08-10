@@ -53,4 +53,4 @@ site lists are keyed on shadowed canonical names.
   `Iris` models and asserts the six Rails counters verbatim.
 - `CbParent` / `CbChild` and their bespoke `authors` / `books` declarations are
   deleted.
-- Test name is unchanged (test:compare mapping).
+- Test name is unchanged (parity:test mapping).

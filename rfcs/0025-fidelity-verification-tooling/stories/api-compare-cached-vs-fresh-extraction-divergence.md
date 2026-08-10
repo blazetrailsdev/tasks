@@ -1,5 +1,5 @@
 ---
-title: "api:compare cached manifests diverge from a forced fresh extraction"
+title: "parity:api cached manifests diverge from a forced fresh extraction"
 status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -19,7 +19,7 @@ closed-reason: null
 
 While verifying PR #5345's successor (#5370, `TS_ALWAYS_ALLOWED` dissolution) the
 same working tree produced two different `extra-surface` reports depending on
-whether `pnpm api:compare` reused its shared cache or ran under
+whether `pnpm parity:api` reused its shared cache or ran under
 `API_COMPARE_FORCE=1`. With no source change between runs, a forced fresh
 extraction added four "moved" extras that the cached manifests did not have:
 
@@ -45,7 +45,7 @@ untrustworthy unless the baseline is re-extracted with `API_COMPARE_FORCE=1`
 
 - Root-cause which cache layer drops or stales the cross-package module
   contributions for those four names.
-- A cached `pnpm api:compare` run and an `API_COMPARE_FORCE=1` run produce
+- A cached `pnpm parity:api` run and an `API_COMPARE_FORCE=1` run produce
   byte-identical `output/{rails-api.json,ts-api.json}` for an unchanged tree
   (or the cache key is widened until they do).
 - Regression test in `scripts/api-compare/shared-cache.test.ts` pinning the

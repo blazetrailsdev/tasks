@@ -54,7 +54,7 @@ today and must be added by hand if ever ported.
 - The curated `RAILS_AR_MODULE_CONFIG` allowlist in `extra-surface.ts` is
   removed (or reduced to genuinely un-scannable surface), eliminating the
   hand-maintenance burden.
-- `pnpm api:extra --package activerecord --novel-only` still does not list
+- `pnpm parity:api:extra --package activerecord --novel-only` still does not list
   `writingRole`/`readingRole`/etc.
 
 ## Reference files

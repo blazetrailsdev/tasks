@@ -1,5 +1,5 @@
 ---
-title: "api:compare cache is blind to third-party declaration changes"
+title: "parity:api cache is blind to third-party declaration changes"
 status: done
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`api:compare`'s TS extraction cache is now keyed on each package's own
+`parity:api`'s TS extraction cache is now keyed on each package's own
 fingerprint, the resolved read-set of the extraction that produced the entry,
 and `resolutionShapeKey` (PR #5380, `scripts/api-compare/shared-cache.ts`).
 

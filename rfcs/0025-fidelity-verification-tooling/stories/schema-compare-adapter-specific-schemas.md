@@ -1,5 +1,5 @@
 ---
-title: "schema:compare — include the four adapter-specific schema.rb companions"
+title: "parity:schema — include the four adapter-specific schema.rb companions"
 status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm schema:compare` (PR #4966) reads only
+`pnpm parity:schema` (PR #4966) reads only
 `vendor/rails/activerecord/test/schema/schema.rb`. Rails declares further
 canonical tables in four adapter-specific companions in the same directory:
 

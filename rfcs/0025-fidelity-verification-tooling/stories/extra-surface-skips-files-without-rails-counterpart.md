@@ -26,11 +26,11 @@ nor moved nor allowlisted, just invisible.
 
 `packages/activerecord/src/ar-config.ts` is the worked example: it has 20+
 exported `setX` functions that are re-spellings of a Ruby `foo=` (exactly the
-population RFC 0081 exists to eliminate) and `api:extra` reports ZERO extras for
+population RFC 0081 exists to eliminate) and `parity:api:extra` reports ZERO extras for
 it, because `active_record.rb` redirects onto `base.ts` in the file map rather
-than onto `ar-config.ts`. The RFC 0081 acceptance criterion "api:extra shows the
+than onto `ar-config.ts`. The RFC 0081 acceptance criterion "parity:api:extra shows the
 matching drop" was written assuming those extras were counted; they never were.
-See the "Note on the acceptance criterion about api:extra" section of
+See the "Note on the acceptance criterion about parity:api:extra" section of
 `rfcs/0081-writer-accessor-convergence/README.md`.
 
 This is a measurement hole, not a scoring preference: the whole point of

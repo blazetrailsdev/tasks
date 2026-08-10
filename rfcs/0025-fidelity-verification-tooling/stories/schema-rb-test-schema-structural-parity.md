@@ -1,5 +1,5 @@
 ---
-title: "schema:compare — structural parity check of TEST_SCHEMA vs vendored schema.rb"
+title: "parity:schema — structural parity check of TEST_SCHEMA vs vendored schema.rb"
 status: done
 updated: 2026-07-19
 rfc: "0025-fidelity-verification-tooling"
@@ -34,7 +34,7 @@ report-only.
 
 ## Acceptance criteria
 
-- `pnpm schema:compare` (name aligned with existing `*:compare` scripts) diffs
+- `pnpm parity:schema` (name aligned with existing `*:compare` scripts) diffs
   TEST_SCHEMA against vendored schema.rb at table + column granularity.
 - Invented tables/columns (in TEST_SCHEMA, not in schema.rb) fail the check;
   a small documented allowlist covers deliberate exceptions if any exist.

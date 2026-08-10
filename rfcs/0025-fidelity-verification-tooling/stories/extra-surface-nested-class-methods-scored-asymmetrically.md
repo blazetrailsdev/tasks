@@ -60,6 +60,6 @@ allow-set must stay uninflated. Do not just add names to the allow-set.
   parent file's allow-set is still not inflated by the nested class's methods
   (the guard the sibling story calls for).
 - Tests in `scripts/api-compare/extra-surface.test.ts` cover both directions.
-- Record the novel-count delta from `pnpm api:compare && pnpm api:extra
+- Record the novel-count delta from `pnpm parity:api && pnpm parity:api:extra
 --package activerecord`, and delete any allowlist entry the fix makes stale
   (`Version`, `gte` on `connection-adapters/abstract-adapter.ts`).

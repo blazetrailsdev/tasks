@@ -28,7 +28,7 @@ It is a regression test for the proxy-build-without-load gap — building throug
 still surface the built record to the autosave loop. Valuable, but the repo
 convention is that TS-only extras live in a sibling `*.trails.test.ts` file,
 not inside a describe whose name is matched against a Rails test class by
-`test:compare`. Sitting inside a Rails-named describe, it inflates that
+`parity:test`. Sitting inside a Rails-named describe, it inflates that
 describe's apparent test count against Rails' `TestDefaultAutosaveAssociation
 OnAHasManyAssociation`, which has no such test
 (`vendor/rails/activerecord/test/cases/autosave_association_test.rb:816-1099`).

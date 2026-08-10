@@ -45,4 +45,4 @@ Rails keeps it.
 - [ ] `Base.readAttribute` / `Base.writeAttribute` are the attribute-methods.ts
       ports; no caller reaches ActiveModel's directly for an AR record.
 - [ ] `accessed_fields`, alias-attribute and `[]` tests stay green.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

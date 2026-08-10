@@ -44,9 +44,9 @@ Rails exactly.
   the interpolation is driven by a literal array `.each` it can unroll, plus
   `alias_method` with literal names, emitting one entry per generated name.
 - `abstractcontroller` gains the twelve `*_action` macro names in
-  `rails-api.json`, and `api:compare` matches them against the existing
+  `rails-api.json`, and `parity:api` matches them against the existing
   `callbacks.ts` / `base.ts` declarations.
 - The twelve now-redundant `@noRailsEquivalent` tags are deleted from
-  `callbacks.ts` and `base.ts`; `api:extra` reports no stale tags.
+  `callbacks.ts` and `base.ts`; `parity:api:extra` reports no stale tags.
 - Guard against over-matching: a `define_method` whose name cannot be resolved
   to literals is skipped, not guessed. Cover both arms with extractor tests.

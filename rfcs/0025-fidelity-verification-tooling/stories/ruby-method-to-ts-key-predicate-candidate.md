@@ -43,4 +43,4 @@ which also aliases `member?` → `key?` at :157), plus `ActionController::Parame
       nothing the conventions already produce).
 - [ ] If no, record the reasoning as a comment at the map so the question isn't
       re-derived a third time.
-- [ ] api:compare delta non-negative; `pnpm api:calls:wide` green.
+- [ ] parity:api delta non-negative; `pnpm parity:api:calls` green.

@@ -1,5 +1,5 @@
 ---
-title: "schema:compare — compare column options (null/limit/default/precision), not just type"
+title: "parity:schema — compare column options (null/limit/default/precision), not just type"
 status: done
 updated: 2026-07-24
 rfc: "0025-fidelity-verification-tooling"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm schema:compare` (PR #4966) compares TEST_SCHEMA columns against
+`pnpm parity:schema` (PR #4966) compares TEST_SCHEMA columns against
 `vendor/rails/activerecord/test/schema/schema.rb` by **type only** —
 `typesAgree()` in `scripts/schema-compare/compare.ts` maps the Rails type to a
 `ColumnSpec` type and stops there. The parser already captures `null`, `limit`,

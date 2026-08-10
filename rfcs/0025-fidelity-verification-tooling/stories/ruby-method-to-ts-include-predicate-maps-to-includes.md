@@ -43,4 +43,4 @@ PR #4953 left exactly such an entry in
       the PG quoting wide-call exclude.
 - [ ] Sweep other wide-call excludes whose reason is an `include?` name
       mismatch and drop those too.
-- [ ] `pnpm api:calls:wide` green; api:compare delta non-negative.
+- [ ] `pnpm parity:api:calls` green; parity:api delta non-negative.

@@ -63,7 +63,7 @@ needs a judgment call or a larger refactor:
       trails-invented-guard mapping is agreed; do the `RangeError` rename in its
       own PR).
 - [ ] `pnpm lint` passes with a strictly-smaller baseline (rule stays `error`).
-- [ ] Touched test files stay green; api:compare/test:compare delta
+- [ ] Touched test files stay green; parity:api/parity:test delta
       non-negative.
 - [ ] PR under 500 LOC; any further remainder registered as a continuation
       story.

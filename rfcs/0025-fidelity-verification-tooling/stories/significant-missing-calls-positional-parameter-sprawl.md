@@ -54,6 +54,6 @@ Not urgent and not a fidelity issue: the function is pure and well covered by
       named at the call site).
 - [ ] Update the `main()` call site in `compare.ts` and every
       `significantMissingCalls` call in `compare.test.ts`.
-- [ ] No behavior change: `pnpm api:calls:wide` and the narrow
+- [ ] No behavior change: `pnpm parity:api:calls` and the narrow
       `lint-call-mismatches.ts` gate both stay green with unchanged baseline
       counts, and `scripts/api-compare/` tests pass.

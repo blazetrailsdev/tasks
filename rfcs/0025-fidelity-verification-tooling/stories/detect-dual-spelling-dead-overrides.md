@@ -19,7 +19,7 @@ closed-reason: null
 
 A Rails predicate that maps to two accepted TS spellings can be defined under
 BOTH spellings at once, and nothing catches it. `rubyMethodToTs("foo_exists?")`
-returns `["isFooExists", "fooExists"]`, so api:compare happily matches either
+returns `["isFooExists", "fooExists"]`, so parity:api happily matches either
 candidate. If the base class defines `isFooExists` and a subclass defines
 `fooExists`, they are different symbols: TypeScript reports no override error,
 and every base-typed caller silently runs the base implementation while the
@@ -62,7 +62,7 @@ to two unrelated classes that merely happen to use different spellings.
   pairs may be advisory, since only the former is a dead override.
 - Running it against `main` reports zero errors, or its current hits are
   triaged: either converged or recorded with per-entry reasons.
-- Wired into whichever gate is appropriate (`api:compare` or a lint), with a
+- Wired into whichever gate is appropriate (`parity:api` or a lint), with a
   note in the story if it is deliberately left advisory.
 - `isTemplateExists` (`packages/actionview/src/view-paths.ts`) is the last known
   `is`-prefixed `*_exists?` predicate and is tracked separately by

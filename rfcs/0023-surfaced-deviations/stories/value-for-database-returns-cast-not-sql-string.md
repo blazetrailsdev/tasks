@@ -43,7 +43,7 @@ SQL form.
       create — letting PR #3699's bespoke `rebindFromDatabaseValue` workaround in
       `callbacks.ts` `_createRecord` be removed.
 - [x] No regression in cache-key, dirty (incl. TZ-aware), persistence, or
-      timestamp suites; api:compare / test:compare delta non-negative.
+      timestamp suites; parity:api / parity:test delta non-negative.
 
 ## Notes
 

@@ -38,4 +38,4 @@ Surfaced in review of PR #5509.
       matching Rails' `to_boolean!` call sites), or the dead export is removed.
 - [ ] No in-place mutation of a hash that has been handed to a
       `DatabaseConfig` constructor.
-- [ ] `pnpm api:compare` extra-surface totals do not regress.
+- [ ] `pnpm parity:api` extra-surface totals do not regress.

@@ -40,4 +40,4 @@ noise unless the rename is either recorded as a mapping or tagged.
   consults (cf. `rubyFileToTs` / `conventions.ts`), or a PERMANENT
   `@noRailsEquivalent` tag on each declaration.
 - The 14 entries stop reading as unexplained novel surface.
-- `pnpm api:extra` exits 0 with no stale tags.
+- `pnpm parity:api:extra` exits 0 with no stale tags.

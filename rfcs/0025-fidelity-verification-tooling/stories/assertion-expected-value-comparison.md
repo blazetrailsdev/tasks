@@ -1,5 +1,5 @@
 ---
-title: "test:compare — compare literal assertion expected-values (phase 3)"
+title: "parity:test — compare literal assertion expected-values (phase 3)"
 status: done
 updated: 2026-07-02
 rfc: "0025-fidelity-verification-tooling"

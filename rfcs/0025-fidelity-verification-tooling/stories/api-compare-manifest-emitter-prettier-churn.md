@@ -1,5 +1,5 @@
 ---
-title: "api:compare dirties eslint/rails-callback-invocations.json on every run (emitter output vs prettier formatting)"
+title: "parity:api dirties eslint/rails-callback-invocations.json on every run (emitter output vs prettier formatting)"
 status: done
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
@@ -17,12 +17,12 @@ closed-reason: null
 
 ## Context
 
-Every `pnpm api:compare` run dirties the tracked file
+Every `pnpm parity:api` run dirties the tracked file
 `eslint/rails-callback-invocations.json`, on a clean checkout of `main`, with
 no source changes. Reproduced during PR #4878:
 
 ```bash
-git checkout origin/main && API_COMPARE_FORCE=1 pnpm api:compare
+git checkout origin/main && API_COMPARE_FORCE=1 pnpm parity:api
 git status --porcelain
  M eslint/rails-callback-invocations.json   # 34 insertions(+), 11 deletions(-)
 ```
@@ -53,8 +53,8 @@ So the emitter's output and the committed formatting can never agree — the
 manifest is dirty the instant the generator runs, forever. The content is
 identical; the diff is 100% formatting.
 
-This is a live trap, not cosmetics. `api:compare` is the tool agents are told
-to run to verify the api:compare gate, so every agent that runs it gets a
+This is a live trap, not cosmetics. `parity:api` is the tool agents are told
+to run to verify the parity:api gate, so every agent that runs it gets a
 dirtied tracked file. Two failure modes, both observed on #4878:
 
 1. The churn gets swept into a feature PR by `git add -A` and ships as
@@ -69,7 +69,7 @@ can't reappear when a payload shape changes.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare` on a clean `main` leaves `git status` clean — no
+- [ ] `pnpm parity:api` on a clean `main` leaves `git status` clean — no
       tracked file is modified by running the generator.
 - [ ] `eslint/rails-callback-invocations.json` round-trips: emitting it, then
       running `prettier --check` on it, passes without a rewrite.

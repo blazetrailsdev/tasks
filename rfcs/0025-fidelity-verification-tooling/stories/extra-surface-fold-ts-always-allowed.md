@@ -42,7 +42,7 @@ optional file-less/global form or to enumerate the pairs.
 - `TS_ALWAYS_ALLOWED` entries carry a per-entry `reason` and are subject to the
   same stale detection as the reasoned allowlist (or a documented decision, at
   the call site, for why a given entry must stay global and uncheckable).
-- `pnpm api:extra` novel/moved counts are unchanged by the migration — verify
+- `pnpm parity:api:extra` novel/moved counts are unchanged by the migration — verify
   against a before/after `--json` run.
 - Tests cover the migrated path in `extra-surface.test.ts`.
 

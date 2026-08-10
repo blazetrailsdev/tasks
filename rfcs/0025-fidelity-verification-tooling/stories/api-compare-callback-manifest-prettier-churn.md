@@ -1,5 +1,5 @@
 ---
-title: "api:compare dirties rails-callback-invocations.json (format-only churn)"
+title: "parity:api dirties rails-callback-invocations.json (format-only churn)"
 status: closed
 updated: 2026-07-20
 rfc: "0025-fidelity-verification-tooling"
@@ -17,8 +17,8 @@ closed-reason: "superseded by api-compare-manifest-emitter-prettier-churn"
 
 ## Context
 
-Surfaced while measuring api:compare deltas for PR #4867. Every
-`pnpm api:compare` run leaves the tree dirty:
+Surfaced while measuring parity:api deltas for PR #4867. Every
+`pnpm parity:api` run leaves the tree dirty:
 
 ```text
  eslint/rails-callback-invocations.json | 45 +++++++++++++++++++++++++---------
@@ -49,13 +49,13 @@ prettier-ignored. So the same fix was applied to one of three, and
 `rails-callback-invocations.json` still churns. (`rails-private-methods.json`
 does not churn in practice; its layout happens to match Prettier's.)
 
-Cost: every agent running api:compare gets a spurious dirty file, must remember
+Cost: every agent running parity:api gets a spurious dirty file, must remember
 `git checkout -- eslint/`, and risks committing the reformat as diff noise or a
 conflict against a sibling agent.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare` leaves the tree clean (`git status --short` empty).
+- [ ] `pnpm parity:api` leaves the tree clean (`git status --short` empty).
 - [ ] Fix matches the established precedent — add
       `eslint/rails-callback-invocations.json` to `.prettierignore` alongside
       `eslint/rails-deprecated-methods.json` under the existing comment — or,

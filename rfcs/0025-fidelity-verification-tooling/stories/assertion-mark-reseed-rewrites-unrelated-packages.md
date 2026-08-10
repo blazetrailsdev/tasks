@@ -17,10 +17,10 @@ closed-reason: null
 
 ## Context
 
-Hit while enrolling `date` in `test:compare` (#6148).
+Hit while enrolling `date` in `parity:test` (#6148).
 
 Seeding one new package into `scripts/test-compare/assertion-mismatch-mark.json`
-requires `pnpm test:assertions:ratchet:reseed`, which rewrites **every** package's
+requires `pnpm parity:test:assertions:reseed`, which rewrites **every** package's
 counters, not just the one being added. On #6148 the reseed also silently
 ratcheted `activerecord` down from `{1987, 4069, 54}` to `{1977, 4060, 51}` —
 movement earned by a sibling agent's convergence that this PR had nothing to do
@@ -41,7 +41,7 @@ Relevant code:
 - `scripts/test-compare/assertion-ratchet.ts:126` — `nextMark` walks every
   package in the artifact and takes `Math.min` per counter.
 - `scripts/test-compare/lint-assertion-mismatches.ts` — the `--write` entry point
-  (`pnpm test:assertions:ratchet:reseed`).
+  (`pnpm parity:test:assertions:reseed`).
 - `scripts/api-compare/lint-call-mismatches.ts` — the wide ratchet, for the
   already-solved shape to mirror.
 
@@ -56,5 +56,5 @@ Relevant code:
 - [ ] A test covers the regression directly: reseed scoped to package A against
       an artifact where package B has also shrunk, and assert B's row is
       unchanged.
-- [ ] The `test:assertions:ratchet:reseed` script entry and any contributor doc
+- [ ] The `parity:test:assertions:reseed` script entry and any contributor doc
       that names it point at the scoped form as the default advice.

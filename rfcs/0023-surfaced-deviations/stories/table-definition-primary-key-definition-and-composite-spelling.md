@@ -69,4 +69,4 @@ it as intended.
   override or documented as an intended trails extra.
 - Tests assert the composite PK reaches the emitted DDL, and each fails on the
   pre-fix implementation.
-- No regression in `pnpm api:calls:wide` (baseline only shrinks).
+- No regression in `pnpm parity:api:calls` (baseline only shrinks).

@@ -43,16 +43,16 @@ function memberVisibility(member: ts.ClassElement): "public" | "private" | "prot
 `internal` is then `visibility !== "public"` (extract-ts-api.ts:1401). No
 leading JSDoc is ever read for class members.
 
-Reproduction before #5333 landed (`pnpm api:compare`, then inspect
+Reproduction before #5333 landed (`pnpm parity:api`, then inspect
 `scripts/api-compare/output/ts-api.json`): both
 `packages/globalid/src/signed-global-id.ts`'s `[Symbol.toPrimitive]` and
 `packages/globalid/src/uri/gid.ts`'s `GID` constructor carried a
 `/** @internal */` JSDoc, yet both were recorded `visibility: "public"` with no
-`internal` flag, and both were reported by `pnpm api:extra --package globalid`.
+`internal` flag, and both were reported by `pnpm parity:api:extra --package globalid`.
 Only rewriting them to TS `private`/`protected` removed them.
 
 Impact: the same false-positive class #5335 is fixing for file functions also
-inflates the class-member side of `api:extra`, and authors who reach for the
+inflates the class-member side of `parity:api:extra`, and authors who reach for the
 documented `@internal` escape hatch on a method get no effect.
 
 ## Acceptance criteria
@@ -65,7 +65,7 @@ documented `@internal` escape hatch on a method get no effect.
   constructors must be covered — those were the two concrete misses.
 - `scripts/api-compare/extract-ts-api.test.ts` gains a case pinning the chosen
   behavior for a class member carrying `@internal`.
-- Re-run `pnpm api:extra` and reconcile any allowlist entries in
+- Re-run `pnpm parity:api:extra` and reconcile any allowlist entries in
   `scripts/api-compare/extra-surface-allow.json` that the change makes stale
   (the `globalid uri/gid.ts constructor` entry is a candidate).
 

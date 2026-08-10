@@ -49,6 +49,6 @@ wrappers so `classifyGateMismatch` compares like-with-like.
 - [x] Tests defined in a `Concern`/module mixed into a class that sits under
       such an `if` inherit the enclosing gate (consistent with the class's own
       `def test_*`).
-- [x] `test:compare --package activerecord --gates` no longer reports the
+- [x] `parity:test --package activerecord --gates` no longer reports the
       reset_pk_sequence / invalidate-transaction / view false positives, and no
       new false `missing-gate` is introduced.

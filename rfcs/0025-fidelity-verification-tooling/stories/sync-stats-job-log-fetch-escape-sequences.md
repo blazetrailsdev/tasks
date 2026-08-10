@@ -59,14 +59,14 @@ is dead:
 - Every parity number anyone reads is frozen at 2026-08-03. Concretely, from
   PR #6161's CI log versus what the DB still serves:
 
-  | package          | DB (Aug 3) | CI (Aug 7)                 |
-  | ---------------- | ---------- | -------------------------- |
-  | activerecord     | 99.0%      | **100%** (6148/6148)       |
-  | activemodel      | 96.2%      | **100%** (716/716)         |
-  | actionview       | 9.8%       | 33.9%                      |
-  | actioncontroller | 78.5%      | 87.9%                      |
-  | i18n             | _absent_   | **100%** (239/239)         |
-  | date             | _absent_   | 0/138 tests (test:compare) |
+  | package          | DB (Aug 3) | CI (Aug 7)                |
+  | ---------------- | ---------- | ------------------------- |
+  | activerecord     | 99.0%      | **100%** (6148/6148)      |
+  | activemodel      | 96.2%      | **100%** (716/716)        |
+  | actionview       | 9.8%       | 33.9%                     |
+  | actioncontroller | 78.5%      | 87.9%                     |
+  | i18n             | _absent_   | **100%** (239/239)        |
+  | date             | _absent_   | 0/138 tests (parity:test) |
 
 - `i18n` (enrolled by #5978 / #6002) and `date` (enrolled by #6148) have never
   appeared in the DB at all, because both landed after the cutoff. This story is
@@ -98,7 +98,7 @@ which parses nothing still exits `0`.
 - **Do not touch `vendor/sources.ts`.** `i18n` is correctly enrolled, and
   `date`'s `compareApi: false` is RFC 0088's measured decision (the gem's
   surface is C; the Ruby extractor sees 12 methods against 2,805 lines of port).
-  `date` is measured by `test:compare` only, and 0/138 is its true standing.
+  `date` is measured by `parity:test` only, and 0/138 is its true standing.
 
 ## Notes
 
