@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 + mysql2 expose performQuery on the prototype with Rails' signature"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
