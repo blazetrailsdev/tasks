@@ -5,7 +5,8 @@ updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - call-args-artifact-and-report
 deps-rfc: []
 est-loc: 90
 priority: null
