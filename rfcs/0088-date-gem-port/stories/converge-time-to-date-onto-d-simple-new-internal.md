@@ -1,6 +1,6 @@
 ---
 title: "Time#to_date goes through the public Date constructor, not d_simple_new_internal's seat"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6331
 claim: "2026-08-10T12:06:36Z"
 assignee: "converge-time-to-date-onto-d-simple-new-internal"
 blocked-by: null
