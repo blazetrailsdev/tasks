@@ -1,6 +1,6 @@
 ---
 title: "Collapse the SQLite visit_CreateIndexDefinition fork back onto the abstract body"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
