@@ -1,6 +1,6 @@
 ---
 title: "mysql2 handle_warnings takes a trailing conn parameter Rails has no counterpart for"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T13:53:22Z"
+assignee: "port-test-date"
 blocked-by: null
 closed-reason: null
 ---
