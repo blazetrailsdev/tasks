@@ -1,6 +1,6 @@
 ---
 title: "rawExecute wraps performQuery in log(), making log the single sql.active_record emitter"
-status: in-progress
+status: ready
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -8,16 +8,16 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6311
-claim: "2026-08-10T00:56:06Z"
-assignee: "port-test-date"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
 
-> **PR #6311 is stamped on this story but does NOT complete it** — it owns the
-> work already landed, and the adapter routing remain. Do not mark this story
-> done when #6311 merges; see the Progress section at the bottom.
+> **PR #6311 (merged 2026-08-10) landed only the abstract `rawExecute`/`log`
+> primitive.** Adapter routing, the `internalExecQuery` log wrap and the
+> ddl-profile update all remain — see the Progress section at the bottom.
 
 ## Context
 

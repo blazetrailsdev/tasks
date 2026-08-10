@@ -1,6 +1,6 @@
 ---
 title: "Port test_date.rb (9 tests) onto the date package"
-status: in-progress
+status: ready
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,16 +9,16 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6311
-claim: "2026-08-10T00:56:06Z"
-assignee: "port-test-date"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
 
-> **PR #6311 is stamped on this story but does NOT complete it** — it owns the
-> work already landed, and 4 of its 9 tests remain. Do not mark this story
-> done when #6311 merges; see the Progress section at the bottom.
+> **PR #6311 (merged 2026-08-10) landed only 5 of this story's 9 tests.** The
+> four that remain are listed in the Progress section at the bottom, each with
+> the gem surface it is still blocked on.
 
 ## Context
 
