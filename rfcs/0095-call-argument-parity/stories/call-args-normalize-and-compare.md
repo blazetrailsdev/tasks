@@ -1,7 +1,7 @@
 ---
 title: "call-args.ts normalizes and compares Ruby/TS call arguments"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: api-compare
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 230
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T00:02:19Z"
+assignee: "call-args-normalize-and-compare"
 blocked-by: null
 closed-reason: null
 ---
