@@ -61,5 +61,30 @@ gates the first and reports the second.
    `call-args.test.ts`, including the nested-`?` skip and the mixin-receiver
    rule.
 3. Rows carry a `class` of `"shape"` or `"naming"`.
-4. Re-running the spike's population over `arel` reproduces the recorded
-   figures within a small delta: 302 comparable sites, ~70 flagged.
+4. ~~Re-running the spike's population over `arel` reproduces the recorded
+   figures within a small delta: 302 comparable sites, ~70 flagged.~~
+   **Superseded 2026-08-10 (PR #6309) — mis-specified, and structurally
+   unmeetable by this story.** The 302 / ~70 figures were produced by the
+   spike's own throwaway Ripper and `typescript` walkers; RFC 0095's Provenance
+   records that no trails code was written for it. The shipped descriptor
+   streams come from different code —
+   `extract-ruby-api.rb#describe_args` and `extract-ts-api.ts#describeArgs`,
+   landed by the two extractor stories — so the site population is not the one
+   the spike counted, and no choice inside `call-args.ts` can recover it.
+   Measured over arel in #6309 under four candidate site-pairing policies:
+   115 / 217 / 213 / 389 comparable and 12 / 50 / 53 / 98 flagged. The spread is
+   the PAIRING policy, which is `call-args-artifact-and-report`'s AC, not this
+   story's.
+
+   What this story is accountable for — the comparator — does reproduce: the
+   strict-index match RATE is 76.9% against the spike's recorded 76.8%, and
+   every finding the RFC names is present (the `collect_nodes_for` /
+   `inject_join` / `infix_value` / `grouping_parentheses` rows with `collector`
+   moved last, `build_quoted`'s swapped pair, the `dot.rb` `visit_edge` label
+   drift).
+
+   Replaced by: verify the comparator against `arel` by those two checkable
+   properties (match rate within a point of 76.8%, and the named a1/a3 findings
+   all flagged). The absolute population is re-measured against the SHIPPED
+   pairing, and the RFC's "Measured signal" table corrected, by
+   `call-args-arel-population-recheck`.
