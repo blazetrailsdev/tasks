@@ -62,4 +62,4 @@ is a behaviour change to a prior decision and belongs in its own PR.
 - [ ] Reconcile the two affected tests in `dot.test.ts` (the inherited-key
       pin and the plain-object "don't crash" extra) with the new split;
       do not reword Rails-matched test names.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

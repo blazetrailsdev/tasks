@@ -44,7 +44,7 @@ forgets its override silently gets ANSI quoting instead of failing fast, which
 on MySQL produces wrong SQL), and the unconditional dot-split changes behavior
 for column names that legitimately contain dots (Rails quotes
 `"foo.bar"` as one identifier via `quote_column_name`, we'd emit
-`"foo"."bar"`). It also skews the file-level api:compare mapping (extra
+`"foo"."bar"`). It also skews the file-level parity:api mapping (extra
 exported helper).
 
 Work: make the abstract layer mirror Rails — `quoteColumnName` throws
@@ -71,5 +71,5 @@ where Rails documents the `table.column` trick).
 - [ ] Existing quoting tests pass unmodified on SQLite/PG/MySQL locally (no
       test renames); any newly-exposed adapter gap gets its own story rather
       than a workaround here.
-- [ ] `pnpm api:compare --package activerecord` stays at 100% with no new
+- [ ] `pnpm parity:api --package activerecord` stays at 100% with no new
       extra methods on the abstract quoting file.

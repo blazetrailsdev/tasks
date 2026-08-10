@@ -58,4 +58,4 @@ e.g. `has-one-through-associations.test.ts`, `preloader-bigint-number-key-match.
 - [ ] The `_preloadedAssociations` field and its backing-store facet are
       removed; remaining tests that seed/assert the private map are converted to
       the public holder/proxy.
-- [ ] api:compare + test:compare deltas non-negative.
+- [ ] parity:api + parity:test deltas non-negative.

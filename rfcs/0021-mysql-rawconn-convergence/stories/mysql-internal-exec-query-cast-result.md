@@ -39,4 +39,4 @@ MySQL/MariaDB suite. Worked around by routing through `selectValue`/`execute`
 - [ ] Read the corresponding Rails test(s) first and mirror names verbatim; add
       coverage for `query_value`/`update`/`execute` on the mysql2 adapter
 - [ ] CI green on all three adapters (MySQL path is the one exercised)
-- [ ] api:compare / test:compare delta non-negative
+- [ ] parity:api / parity:test delta non-negative

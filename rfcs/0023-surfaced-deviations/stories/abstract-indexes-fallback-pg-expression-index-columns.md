@@ -39,4 +39,4 @@ represent expression indexes at all.
       the concrete adapter / Rails.
 - [ ] An introspection test asserts expression-index columns on the fallback
       path for postgres.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

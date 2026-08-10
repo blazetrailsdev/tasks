@@ -61,4 +61,4 @@ BigDecimal/precision handling in the adapter is unreachable from this path.
 - [ ] Numeric SQL output is unchanged for the shipped adapters (SQLite/PG/MySQL)
       — verify the SQLite 1 vs 1n bind-shape trap noted in
       `type_casted_binds` work does not regress.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

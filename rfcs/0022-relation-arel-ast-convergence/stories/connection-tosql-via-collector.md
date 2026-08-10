@@ -48,7 +48,7 @@ traversal via the connection. trails already has `AbstractAdapter#collector()`
   (`abstract-adapter.ts:1179`) is `async`; `connection.toSql`/`Relation#toSql`/
   `WhereClause#toSql` are sync), add a sync variant or thread the collector
   directly. Scope confirmed by the audit story.
-- No behavior change in existing snapshot output; api:compare and test:compare
+- No behavior change in existing snapshot output; parity:api and parity:test
   deltas non-negative.
 
 Depends on: audit-bind-inlining-rails-fidelity.

@@ -50,4 +50,4 @@ pluck paths after [[calculations-from-arel-manager]]).
       locally on SQLite + PG.
 - [ ] Retryability/bind metadata flows from the child nodes (no
       `_lastSelectBinds` side-channel for this path).
-- [ ] No test renames; `test:compare` delta ≥ 0; ≤500 LOC.
+- [ ] No test renames; `parity:test` delta ≥ 0; ≤500 LOC.

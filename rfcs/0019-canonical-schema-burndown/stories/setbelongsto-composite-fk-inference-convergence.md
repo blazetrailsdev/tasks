@@ -47,4 +47,4 @@ exercises it.
 - [ ] Add Rails-faithful coverage on canonical CPK/Sharded models (e.g.
       `CpkBook`/`CpkOrder` or `Sharded::Comment`/`Sharded::BlogPost`) for the
       composite `belongs_to` assign + nullify paths.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

@@ -48,4 +48,4 @@ first, then collapse `_collectionProxies`/`_associationInstances`).
       Rails' `@association_cache` (or re-sliced into per-seam stories that
       collectively achieve this).
 - [ ] No behavior change; all suites pass; no test renames.
-- [ ] `api:compare` delta non-negative on `associations.rb`.
+- [ ] `parity:api` delta non-negative on `associations.rb`.

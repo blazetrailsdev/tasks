@@ -63,4 +63,4 @@ delegate-to-the-adapter direction this story applies to the Arel layer.
       the Rails anchor for why it must stay.
 - [ ] Arel visitor call sites that construct a visitor without a connection are
       converged to supply one (or a documented minimal quoting host).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -71,4 +71,4 @@ time (`assert-valid-keys-argumenterror-type`,
 - No test renames. Ported tests asserting `ArgumentError` keep passing; run at
   minimum `relation/update-all.test.ts`, `relation/where.test.ts`,
   `relations.test.ts`, `core.test.ts`, and `spawn-methods`-adjacent suites.
-- `pnpm api:compare` and `pnpm test:compare` deltas non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas non-negative.

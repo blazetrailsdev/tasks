@@ -18,7 +18,7 @@ blocked-by: null
 
 PR #3817 (persistence-test-canonical-wave6) deleted 36 zero-assertion stub
 tests (`expect(true).toBe(true)`) from `packages/activerecord/src/persistence.test.ts`
-per the no-stubs rule, dropping persistence test:compare from 160 -> 124
+per the no-stubs rule, dropping persistence parity:test from 160 -> 124
 (-36 matched names). The stubs carried real Rails test names from
 `vendor/rails/activerecord/test/cases/persistence_test.rb` but asserted nothing,
 so the named Rails behaviors are now genuinely UNCOVERED (not merely renamed).
@@ -48,7 +48,7 @@ matched names honestly:
 
 - [ ] For each cluster, add genuine canonical tests (canonical models + fixtures,
       Rails names verbatim) that actually exercise the behavior, restoring the
-      test:compare matched names lost in PR #3817. Implement any missing
+      parity:test matched names lost in PR #3817. Implement any missing
       persistence.ts support required (or register a separate impl story if a
       feature is genuinely absent).
 - [ ] No `expect(true).toBe(true)` stubs reintroduced.

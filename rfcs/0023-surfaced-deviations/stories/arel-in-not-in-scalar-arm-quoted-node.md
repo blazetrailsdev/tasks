@@ -61,5 +61,5 @@ not blind-reseed):
 - [ ] Coverage that a scalar type-casts through the column (`Casted`, not
       bare `Quoted`).
 - [ ] The two `quoted_node` wide-ratchet entries above deleted by hand;
-      `pnpm api:calls:wide` green.
-- [ ] api:compare / test:compare delta non-negative.
+      `pnpm parity:api:calls` green.
+- [ ] parity:api / parity:test delta non-negative.

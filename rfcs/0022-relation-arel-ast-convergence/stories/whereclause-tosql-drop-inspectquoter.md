@@ -46,7 +46,7 @@ produced only via `Relation#to_sql` → `conn.to_sql(arel)`.
   connection-less `new Visitors.ToSql()` either way.
 - The single production caller, `Relation#inspect` (`relation.ts:1201`),
   produces identical `.where("…")` output.
-- No behavior change in existing snapshot output; api:compare and test:compare
+- No behavior change in existing snapshot output; parity:api and parity:test
   deltas non-negative. NEVER rename a test to make it pass.
 
 Depends on: audit-bind-inlining-rails-fidelity.

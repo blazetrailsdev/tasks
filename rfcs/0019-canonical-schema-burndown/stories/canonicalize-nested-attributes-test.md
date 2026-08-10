@@ -42,7 +42,7 @@ bespoke table groups were added in that PR for the same reason: `cid_pirates`/
   Rails `nested_attributes_test.rb`'s fixtures/models exactly.
 - Drop the bespoke `cid_*` / `cr_*` tables and the file's other ad-hoc tables;
   `circular references…` should ride canonical `Ship`/`ShipPart`/`Treasure`.
-- Test names must remain verbatim (test:compare matching). No regressions in
-  `pnpm test:compare --package activerecord` for `nested_attributes_test.rb`.
+- Test names must remain verbatim (parity:test matching). No regressions in
+  `pnpm parity:test --package activerecord` for `nested_attributes_test.rb`.
 - This is a large file; split into multiple PRs by describe-block if it exceeds
   the 500-LOC ceiling, each from main with non-overlapping describe blocks.

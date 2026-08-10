@@ -64,7 +64,7 @@ What is genuinely missing is the **surface**: trails' `ToSql` has no
 that bypasses `buildQuoted` / `quotedNode` — has no dispatch target. Today
 nothing does that, because both wrap-sites are the only entry points.
 
-This is an api:compare surface + shape-fidelity question, not a behavior bug.
+This is an parity:api surface + shape-fidelity question, not a behavior bug.
 
 ## Acceptance criteria
 
@@ -84,4 +84,4 @@ This is an api:compare surface + shape-fidelity question, not a behavior bug.
       converge one in isolation.
 - [ ] `unboundable?` / `nil?` delegation behavior preserved either way —
       #4876's `to-sql.test.ts` unboundable tests must stay green.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

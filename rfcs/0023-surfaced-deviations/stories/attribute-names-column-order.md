@@ -42,4 +42,4 @@ attribute method order" had to weaken Rails' exact-order `assert_equal` to a
       column keeps the column's position.
 - [ ] The test above is restored to the exact-order assertion
       (`expect(attributeNames).toEqual([...columnNames, "non_existent_decimal"])`).
-- [ ] No regression in api:compare / test:compare.
+- [ ] No regression in parity:api / parity:test.

@@ -48,7 +48,7 @@ still bespoke). The warming exposes them because it converges
 ## Acceptance criteria
 
 - [ ] Open the corresponding Rails test FIRST; port models/tables/assertions
-      word-for-word (test names unchanged — `test:compare` matches on names).
+      word-for-word (test names unchanged — `parity:test` matches on names).
 - [ ] Replace bespoke partial-declaration models with canonical models +
       `useHandlerFixtures` on tables that genuinely have the needed columns
       (updated_at/updated_on, STI `type`). Never fake a column the canonical

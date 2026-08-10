@@ -43,4 +43,4 @@ reachable, just lower-fidelity than the concrete adapter.
       (expression) columns and DESC orders — or factor `sqliteIndexes` so both
       paths share it.
 - [x] No production behavior change for the concrete SQLite3 adapter path.
-- [x] api:compare / test:compare delta non-negative.
+- [x] parity:api / parity:test delta non-negative.

@@ -38,4 +38,4 @@ counterpart asserting this requirement.
       Rails: derive the polymorphic owner key without demanding an explicit
       single-column `primaryKey:`, or document/match Rails' actual constraint.
 - [ ] Add Rails-faithful coverage on canonical models for the polymorphic-through + composite-owner scenario.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

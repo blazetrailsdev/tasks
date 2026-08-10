@@ -104,4 +104,4 @@ In production every caster is a full `TypeCaster::Map` / `TypeCaster::Connection
 - [ ] Reachability of `typeForAttribute` via `Attribute#typeCaster` →
       `HomogeneousIn#castedValues` is checked against the ported tests (see
       above); no test name changes.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

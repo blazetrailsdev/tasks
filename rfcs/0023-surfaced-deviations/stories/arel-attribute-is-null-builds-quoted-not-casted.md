@@ -70,4 +70,4 @@ implement them as `this.eq(null)` / `this.notEq(null)` so they inherit the
       justifies it; if deleted, all in-repo callers migrate to `eq(null)`.
 - [ ] `IS NULL` / `IS NOT NULL` SQL is unchanged for every existing caller.
 - [ ] If no `Quoted` uses remain in `attribute.ts`, the import goes too.
-- [ ] api:compare / test:compare delta non-negative; wide ratchet green.
+- [ ] parity:api / parity:test delta non-negative; wide ratchet green.

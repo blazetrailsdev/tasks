@@ -44,5 +44,5 @@ Rails source: `relation/query_methods.rb:868-876` (`joins`/`joins!` →
   `joins_values=` writer round-trips faithfully — no named-before-raw reorder.
 - Convert the join builders to read the unified `joins_values` accessor, then
   remove the 10 `joins_values` entries from `call-mismatches-wide-exclude.json`.
-- relation.rb / relation/query_methods.rb stay at 100% api:compare; no
-  test:compare regression.
+- relation.rb / relation/query_methods.rb stay at 100% parity:api; no
+  parity:test regression.

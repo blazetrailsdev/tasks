@@ -59,4 +59,4 @@ about") — Rails DOES raise here, just a `TypeError` rather than Arel's
       still routes to the superclass visitor (cf. `instanceof ModelAttribute`
       in dot.ts, which already covers the Attribute arm of this).
 - [ ] Audit callers/tests that relied on the leaf fallback.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

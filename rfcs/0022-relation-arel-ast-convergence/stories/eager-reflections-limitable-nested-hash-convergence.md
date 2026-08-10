@@ -50,4 +50,4 @@ share one reflection-resolution path.
 - [ ] A limit/offset relation with a singular nested-hash eager spec is NOT
       deferred (`_isDeferredDistinctPkSubquery() === false`); one with a
       collection anywhere in the eager tree still defers.
-- [ ] test:compare / api:compare delta >= 0.
+- [ ] parity:test / parity:api delta >= 0.

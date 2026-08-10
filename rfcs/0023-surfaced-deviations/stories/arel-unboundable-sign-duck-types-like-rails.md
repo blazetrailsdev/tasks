@@ -89,4 +89,4 @@ consequences and its own test reconciliation.
       `QueryAttribute#unboundable?`, a different predicate.
 - [ ] The eight `unboundable short-circuits` tests reconciled against Rails;
       no test renamed.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

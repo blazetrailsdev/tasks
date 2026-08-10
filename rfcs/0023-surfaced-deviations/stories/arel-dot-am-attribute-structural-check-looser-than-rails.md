@@ -77,4 +77,4 @@ files.
       `visitActiveModelAttribute`; it routes to `visitHash` / `visitString` and
       still does not raise `UnsupportedVisitError`.
 - [ ] Drop the "Known deviation" note in `dot.ts` that points at this story.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

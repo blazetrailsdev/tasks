@@ -73,8 +73,8 @@ deleted from `time-ext.json` by hand (the baseline is only-shrink — never
 - `core_ext/date_time/calculations.rb` methods live on trails' `DateTime` at
   the Rails names, in a Rails-shaped file, with Rails control flow and
   decomposition; aliases ported as aliases.
-- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm api:compare`
+- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm parity:api`
   activesupport ported-method count strictly up.
-- `pnpm api:calls`, `pnpm api:extra` green; no new `@noRailsEquivalent`.
+- `pnpm parity:api:calls`, `pnpm parity:api:extra` green; no new `@noRailsEquivalent`.
 - Rails' own test names, verbatim, from
   `vendor/rails/activesupport/test/core_ext/date_time_ext_test.rb`.

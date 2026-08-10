@@ -78,4 +78,4 @@ that restructure. If that story lands first, close this one as done against it.
 - [ ] `Instant` / `ZonedDateTime` / `PlainTime` still reach `visit_Time` and
       `PlainDate` still reaches `visit_Date`, preserving current behaviour for
       every type with a real analogue.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

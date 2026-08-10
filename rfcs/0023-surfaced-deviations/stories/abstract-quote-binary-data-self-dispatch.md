@@ -57,4 +57,4 @@ duplicate dispatch behind.
 - [ ] Binary quoting self-dispatches through the host uniformly — the same value
       class does not take two dispatch paths depending on ArrayBuffer view type.
 - [ ] Adapter `quotedBinary` overrides are honored on every binary path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

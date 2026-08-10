@@ -47,7 +47,7 @@ verified green during the has-many PR before being reverted to fit the ceiling.
 - Convert `TestHasOneAutosaveAssociationWhichItselfHasAutosaveAssociations` to
   the canonical Pirate → Ship → ShipPart → Treasure chain, removing the bespoke
   Pirate/Ship/Part makeModels and the GGC*/GGD*/GGA\* inline classes.
-- Test names verbatim. No regressions in test:compare.
+- Test names verbatim. No regressions in parity:test.
 - Populate collection children via `ship.parts.create` / `part.trinkets.create`
   (collection-proxy store), not `association().setTarget`, so the
   `partsAttributes` / `trinketsAttributes` nested writers match the loaded

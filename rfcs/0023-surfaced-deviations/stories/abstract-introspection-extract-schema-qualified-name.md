@@ -43,4 +43,4 @@ fallback used by stub/non-overriding adapters.
       (matching Rails `quoted_scope`).
 - [ ] A test demonstrates the abstract fallback resolves a `schema.table`
       argument correctly.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

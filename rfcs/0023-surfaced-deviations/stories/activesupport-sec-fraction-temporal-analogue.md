@@ -39,4 +39,4 @@ so the ported signature is doubly out of step with the rest of the package.
   and preserves sub-second precision beyond milliseconds.
 - `Extensions.writeDatetime` calls it, and the `write_datetime`/`sec_fraction`
   entry is deleted from the wide-call exclude baseline (the ratchet only shrinks).
-- `pnpm api:compare --package activesupport` non-negative.
+- `pnpm parity:api --package activesupport` non-negative.

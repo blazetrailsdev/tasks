@@ -54,4 +54,4 @@ surface async (large semantic change). The ported sweep
       DB rows (proxy path hydrates the collection cache like partition does).
 - [ ] Port the remaining `test_delegates_<method>_to_Array` sweep entries from
       delegation_test.rb that this unblocks; test names match Rails verbatim.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.

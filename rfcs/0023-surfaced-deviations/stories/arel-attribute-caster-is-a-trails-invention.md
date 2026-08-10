@@ -86,4 +86,4 @@ thing from the invented `caster` field — do not conflate the two.
 - [ ] `homogeneous-in.ts`'s `type_caster` use is confirmed unaffected.
 - [ ] The `@internal` DEVIATION note added by #4874 in `casted.ts` is removed
       along with the arm it documents.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -51,4 +51,4 @@ So the abstract arm is both dead and wrong for the schema-qualified case.
       `schema-statements-on-adapter.test.ts` that only exist to cover the
       abstract arm; if converged, add a schema-qualified expectation there.
 - [ ] No production behavior change for the concrete SQLite3 adapter path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

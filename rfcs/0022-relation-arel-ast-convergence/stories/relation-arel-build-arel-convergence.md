@@ -61,5 +61,5 @@ land after the set-op AST work to avoid re-opening the same regions of
       `query_methods.rb` line ranges in the PR).
 - [ ] Either `_toSql` compiles the `toArel` manager (preferred), or the
       continuation story for that flip is registered.
-- [ ] No test renames; `test:compare` and `api:compare` deltas ≥ 0; ≤500 LOC
+- [ ] No test renames; `parity:test` and `parity:api` deltas ≥ 0; ≤500 LOC
       per PR.

@@ -45,4 +45,4 @@ heredoc. See the comment at that test for the marker.
       `persistence.test.ts` to use the verbatim Rails SQL (drop the in-test parens
       and the convergence-marker comment).
 - [ ] `pnpm vitest run packages/activerecord/src/persistence.test.ts` passes;
-      lint + typecheck clean; test:compare delta non-negative.
+      lint + typecheck clean; parity:test delta non-negative.

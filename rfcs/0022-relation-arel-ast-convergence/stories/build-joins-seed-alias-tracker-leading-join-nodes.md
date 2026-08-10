@@ -40,4 +40,4 @@ the unification, not introduced by PR #4072.
 
 - [ ] The shared tracker in `emitJoinPlan` is seeded with the leading-join + join-node tables, matching Rails' `alias_tracker(leading_joins + join_nodes, aliases)`.
 - [ ] Add coverage for an association join onto a table already named by a raw/leading join node (it must alias to the `alias_candidate`).
-- [ ] api:compare and test:compare deltas non-negative.
+- [ ] parity:api and parity:test deltas non-negative.

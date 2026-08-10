@@ -38,5 +38,5 @@ Rails stores `Arel::Nodes::SqlLiteral` / ordering nodes directly in
   returns the stored reference like `select_values` / `group_values`.
 - Update the `order_values` JSDoc to drop the documented-exception note once it
   no longer applies.
-- relation.rb / relation/query_methods.rb stay at 100% api:compare; no
-  test:compare regression.
+- relation.rb / relation/query_methods.rb stay at 100% parity:api; no
+  parity:test regression.

@@ -50,4 +50,4 @@ story `join-scope-polymorphic-type-uses-polymorphic-name`).
       uses `polymorphicName(ctor)` instead of `ctor.name`.
 - [ ] A regression test with an STI subclass owner reading/loading a
       polymorphic `as:` has_one/has_many resolves via `base_class.name`.
-- [ ] No api:compare / test:compare regression.
+- [ ] No parity:api / parity:test regression.

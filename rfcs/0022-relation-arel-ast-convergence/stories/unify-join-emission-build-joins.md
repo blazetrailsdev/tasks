@@ -53,8 +53,8 @@ parameter threaded into `buildArel`/`buildJoins`.
 
 - [ ] Single shared join-emission implementation; `_applyJoinsToManager` and
       `buildJoins` both delegate to it (no second hand-maintained copy).
-- [ ] `build_join_buckets` stays matched in `api:compare` (do not drop it).
+- [ ] `build_join_buckets` stays matched in `parity:api` (do not drop it).
 - [ ] Add a from-subquery dedup test: `from(Model.joins(:x).left_outer_joins(:x))`
       emits a single INNER JOIN (the regression class PR #3890 fixed has no
       direct coverage today).
-- [ ] api:compare and test:compare deltas non-negative.
+- [ ] parity:api and parity:test deltas non-negative.

@@ -44,4 +44,4 @@ alias set.
       `scope.arel(...)` call so materialized join sources are alias-aware.
 - [ ] Optionally converge the constraints extraction to read
       `arel.constraints.first` instead of `scope._whereClause.ast`.
-- [ ] api:compare / test:compare delta stays non-negative.
+- [ ] parity:api / parity:test delta stays non-negative.

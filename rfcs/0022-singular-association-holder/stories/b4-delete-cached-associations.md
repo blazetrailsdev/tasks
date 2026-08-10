@@ -50,7 +50,7 @@ that RFC 0006 S4 deferred when it chose Option A.
       changelog/comment references.
 - [ ] Full association + serialization + validation + autosave + nested-attributes
       suites pass.
-- [ ] `api:compare` delta non-negative.
+- [ ] `parity:api` delta non-negative.
 
 ## Notes
 

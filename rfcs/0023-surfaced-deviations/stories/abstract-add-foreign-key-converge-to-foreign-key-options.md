@@ -42,4 +42,4 @@ collapse to Rails' literal `assert_valid_deferrable(deferrable); super`.
 - [ ] MySQL2 FK default-name tests match Rails (`fk_rails_<hex>`).
 - [ ] Resolve the self-delegation guard so PG/SQLite overrides that call `super`
       do not recurse; PG `addForeignKey` reduces to `assertValidDeferrable; super`.
-- [ ] api:compare and test:compare delta non-negative; no test-name changes.
+- [ ] parity:api and parity:test delta non-negative; no test-name changes.

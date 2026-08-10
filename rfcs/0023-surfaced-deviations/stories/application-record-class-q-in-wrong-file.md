@@ -32,7 +32,7 @@ the file placement diverges, and api-compare scores per file, so `core.ts`
 reads as omitting a call it never had.
 
 This is the pattern CLAUDE.md calls out: a method must stay in the file that
-matches Rails' layout or api:compare cannot credit it there. The entry is
+matches Rails' layout or parity:api cannot credit it there. The entry is
 baselined in
 `scripts/api-compare/call-mismatches-wide-exclude/activerecord/core.json`
 with that reason.
@@ -44,4 +44,4 @@ with that reason.
   in `inheritance.ts`.
 - If moved: the `core.ts` / `application_record_class?` entry is removed from
   `call-mismatches-wide-exclude/activerecord/core.json`.
-- `pnpm api:compare` matched count does not drop.
+- `pnpm parity:api` matched count does not drop.

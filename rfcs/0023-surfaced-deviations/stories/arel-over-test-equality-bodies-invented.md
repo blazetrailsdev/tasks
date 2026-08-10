@@ -61,4 +61,4 @@ local to `over.test.ts` (it is a `Binary`-level capability question).
       defect being removed).
 - [ ] Audit sibling arel `describe("equality")` blocks for the same
       cannot-fail `expect(a).not.toBe(b)` pattern and note the count.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

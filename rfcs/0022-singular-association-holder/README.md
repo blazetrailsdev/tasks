@@ -166,7 +166,7 @@ renames**. `_preloadedAssociations` is left as the one remaining preload seam
    `@association_cache`-style map: **b5**
 
 Each story branches from `main`, is independently shippable, and keeps
-`api:compare` non-negative. No stacked PRs.
+`parity:api` non-negative. No stacked PRs.
 
 ## Open questions
 

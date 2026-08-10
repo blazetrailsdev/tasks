@@ -44,7 +44,7 @@ Affected, failing once the cache is warmed (verified on PR #3560):
 
 - [ ] Open the corresponding Rails test FIRST for each file
       (`vendor/rails/activerecord/test/cases/...`) and port bodies/assertions
-      word-for-word; test names unchanged (`test:compare` matches on names).
+      word-for-word; test names unchanged (`parity:test` matches on names).
 - [ ] Replace the partial-declaration bespoke models with canonical models +
       `useHandlerFixtures` on the real tables, so each model carries the table's
       full column set (incl. `created_at`/`updated_at`).

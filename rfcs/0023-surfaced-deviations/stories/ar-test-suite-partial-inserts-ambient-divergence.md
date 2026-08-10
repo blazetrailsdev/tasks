@@ -51,4 +51,4 @@ documented as intentional.
       `partial_inserts = true` (matching Rails helper.rb) with per-test opt-outs
       where a test genuinely exercises the 7.0 path, or codify the per-test
       `partialInserts = true` override as the sanctioned pattern with a lint/doc.
-- [ ] `test:compare` / `api:compare` delta non-negative after the change.
+- [ ] `parity:test` / `parity:api` delta non-negative after the change.

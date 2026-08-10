@@ -39,4 +39,4 @@ The duck-typing was chosen to avoid a circular import on `Base`
       on an AR-specific brand rather than bare `id`).
 - [ ] Regression test mirroring a Rails test name verbatim if one exists; otherwise
       document why none is added.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -62,4 +62,4 @@ has no TS home at all. `ActiveSupport::Delegation` itself is
 - `delegate` calls a ported `Delegation.generate` rather than generating inline.
 - The `location:` argument is threaded from the call site in `delegate`,
   `mattrReader` and `mattrWriter`.
-- The three `module-ext.json` baseline rows are deleted, `pnpm api:calls` green.
+- The three `module-ext.json` baseline rows are deleted, `pnpm parity:api:calls` green.

@@ -66,7 +66,7 @@ fixtures, not a re-CREATE). Item 4 is NOT in the canonical `TEST_SCHEMA`.
 - [ ] `pnpm vitest run packages/activerecord/src/persistence.test.ts` passes on
       sqlite AND postgres (the item-4 block is PG-gated).
 - [ ] No new duplicate test names; `node scripts/typecheck.mjs` clean;
-      test:compare delta non-negative.
+      parity:test delta non-negative.
 
 Hard rules: NO `node:*` imports, NO `process.*` refs, async fs only, no new
 runtime deps. 500 LOC ceiling. NO stacked PRs — single PR from main.

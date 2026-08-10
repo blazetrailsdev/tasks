@@ -41,4 +41,4 @@ derivation cannot demodulize away a namespace and over-includes the `cpk_` prefi
 memory differ` onto canonical `CpkOrder`/`CpkBook` + fixtures (remove
       `cpk_orders`/`cpk_order_items` scratch tables from the first describe's
       defineSchema) and move it to the canonical describe.
-- [ ] No regression in counter-cache.test.ts; test:compare delta non-negative.
+- [ ] No regression in counter-cache.test.ts; parity:test delta non-negative.

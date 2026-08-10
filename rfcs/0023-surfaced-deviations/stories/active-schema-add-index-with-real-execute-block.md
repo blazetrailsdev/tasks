@@ -46,4 +46,4 @@ Surfaced during review of PR #3646 (capturesql-stub-execute-mysql-active-schema)
       `addIndex("people", "first_name", { ifNotExists: true })` raises nothing.
 - [ ] Real execution path: do NOT pass `{ stub: adapter }` for this block;
       use the canonical `people` table and tear down the created index.
-- [ ] Test name "add index" unchanged; no test:compare regression.
+- [ ] Test name "add index" unchanged; no parity:test regression.

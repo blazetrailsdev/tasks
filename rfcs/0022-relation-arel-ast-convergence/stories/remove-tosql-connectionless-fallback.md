@@ -43,7 +43,7 @@ hand-rolled quoter for the shared `defaultQuoter`. It remains a trails-ism.
   papering over it at the `toSql` call site. If a genuinely connectionless
   `toSql` is still reachable, document the exact reproduction and converge the
   connection resolution, not the renderer.
-- No behavior change in existing snapshot output; api:compare and test:compare
+- No behavior change in existing snapshot output; parity:api and parity:test
   deltas non-negative.
 
 Depends on: relation-tosql-unprepared-statement.

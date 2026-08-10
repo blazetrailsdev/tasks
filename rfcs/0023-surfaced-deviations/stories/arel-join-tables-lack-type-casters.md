@@ -88,4 +88,4 @@ precisely because its arel_table always has a caster.
       `arel/src/visitors/to-sql.test.ts` ("is not preparable"),
       `activerecord/src/relation/predicate-builder.test.ts` (bare
       `new Table("posts")` in buildFromHash / buildNegatedFromHash).
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

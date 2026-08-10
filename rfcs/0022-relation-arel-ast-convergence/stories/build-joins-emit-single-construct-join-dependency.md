@@ -52,4 +52,4 @@ covered cases but the structure diverges and could drift.
 
 - [ ] `emitJoinPlan` mirrors Rails' single guarded `construct_join_dependency(named_joins, join_type)` shape (collapse the three branches), with the empty-named-JD case using `constructJoinDependency([], InnerJoin)`.
 - [ ] Existing join suites (inner/left-outer join association, where, where-chain, merging, has-many-through, arel-ast-convergence, build-joins-from-subquery-dedup) stay green.
-- [ ] api:compare and test:compare deltas non-negative.
+- [ ] parity:api and parity:test deltas non-negative.

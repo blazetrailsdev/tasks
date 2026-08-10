@@ -24,5 +24,5 @@ Rails: `NestedAttributesTest` (nested_attributes_test.rb lines 1–240). Rails u
 
 - Convert `NestedAttributesTest` (lines 202–564) to use canonical Human/Interest (or Pirate/Bird where the test pattern fits hasMany with non-integer composite ids).
 - Remove all associated `n_pirate_*`, `n_tag_*`, `n_article_*`, `n_comment_*`, `n_post_*` bespoke table entries from TEST_SCHEMA that were used only by this block.
-- Test names verbatim. No regressions in test:compare.
+- Test names verbatim. No regressions in parity:test.
 - 500 LOC ceiling, PR from main.

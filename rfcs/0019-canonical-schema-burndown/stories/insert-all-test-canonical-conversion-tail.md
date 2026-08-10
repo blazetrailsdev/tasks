@@ -41,7 +41,7 @@ ships, categories, developers })` plus `makeBook` / `makeShip` /
 - [ ] All describes in insert-all.test.ts use the canonical TEST_SCHEMA +
       official models (test-helpers/models/) via useHandlerFixtures /
       setupHandlerSuite; no bespoke/inline defineSchema tables remain.
-- [ ] Test names unchanged (test:compare parity preserved).
+- [ ] Test names unchanged (parity:test parity preserved).
 - [ ] Remove `packages/activerecord/src/insert-all.test.ts` from
       `eslint/require-canonical-schema-exclude.json` (flips the
       `blazetrails/require-canonical-schema` lint ON for the file).

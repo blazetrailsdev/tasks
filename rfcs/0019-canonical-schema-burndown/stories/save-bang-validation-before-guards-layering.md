@@ -46,4 +46,4 @@ Rails' two-phase `save!`.
       valid-record case.
 - [ ] No regressions: `pnpm vitest run packages/activerecord/src/persistence.test.ts`,
       `callbacks.test.ts`, `validations.test.ts` pass; `pnpm lint` +
-      `node scripts/typecheck.mjs` clean; test:compare/api:compare delta non-negative.
+      `node scripts/typecheck.mjs` clean; parity:test/parity:api delta non-negative.

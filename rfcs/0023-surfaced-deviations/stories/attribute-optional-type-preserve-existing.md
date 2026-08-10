@@ -46,4 +46,4 @@ set-type path instead of the preserve-type path:
 - [ ] The three tests above are rewritten to the no-type form
       (`this.attribute("overloaded_float", { default: "123" })` analogue) and
       still pass, removing the explicit-type deviation notes.
-- [ ] No regression in api:compare data-layer parity or test:compare.
+- [ ] No regression in parity:api data-layer parity or parity:test.

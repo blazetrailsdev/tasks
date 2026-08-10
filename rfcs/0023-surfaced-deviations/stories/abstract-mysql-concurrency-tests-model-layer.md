@@ -22,4 +22,4 @@ PR #5121 ported `adapters/abstract_mysql_adapter/count_deleted_rows_with_lock_te
 ## Acceptance criteria
 
 - Both files (and the PG sibling, same shape) rewritten through the model layer once `Model.transaction({requiresNew})` + `lock!` support two concurrent connection leases in tests, using canonical `Bulb`/`Author` models for the count test and an inline `samples` model (faithful — Rails creates it inline).
-- test:compare stays ✓ for all files; tests still provoke the real deadlock/race.
+- parity:test stays ✓ for all files; tests still provoke the real deadlock/race.

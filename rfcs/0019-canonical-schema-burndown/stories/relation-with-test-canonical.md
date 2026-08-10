@@ -46,7 +46,7 @@ assertions to pass).
       unchanged; unsupported features kept `it.skip` + BLOCKED note.
 - [ ] `pnpm vitest run packages/activerecord/src/relation/with.test.ts` passes;
       0 `require-canonical-schema` errors; file removed from the exclude JSON.
-- [ ] `test:compare` delta >= 0 (`with_test.rb` currently 14/16 — must not drop).
+- [ ] `parity:test` delta >= 0 (`with_test.rb` currently 14/16 — must not drop).
 
 ## Notes
 

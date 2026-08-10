@@ -28,7 +28,7 @@ any canonical test using it that dereferences Rails fixtures must stay in
 `eslint/expected-fixtures-exclude.json`. This blocks burning those exclude
 entries (RFC 0019). Exposed by PR #3588 (`integration.test.ts`), which converted
 to canonical `useHandlerFixtures([...])` + canonical models, passes
-test:compare 33/33, but could not be dropped from the exclude list.
+parity:test 33/33, but could not be dropped from the exclude list.
 
 ## Acceptance criteria
 

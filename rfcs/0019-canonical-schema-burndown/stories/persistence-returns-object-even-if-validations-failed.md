@@ -23,7 +23,7 @@ normalizes to the real Rails test
 `test_returns_object_even_if_validations_failed`
 (`vendor/rails/activerecord/test/cases/persistence_test.rb:197-199`), but the
 deleted test asserted different behavior (`Post.create({})` + `errors`), so it
-was removed as a deviation — costing one matched name in test:compare.
+was removed as a deviation — costing one matched name in parity:test.
 
 The real Rails test asserts that the class-level updater returns every record in
 scope even when a validation fails:
@@ -42,4 +42,4 @@ end
       (all records returned even though the update would fail validations).
 - [ ] `pnpm vitest run packages/activerecord/src/persistence.test.ts` passes;
       `pnpm lint` and `node scripts/typecheck.mjs` clean.
-- [ ] Restores the test:compare matched name lost in PR #3817.
+- [ ] Restores the parity:test matched name lost in PR #3817.

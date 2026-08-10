@@ -45,7 +45,7 @@ Rails ports are carved into their own sequential stories:
       `annotate.test.ts`).
 - [x] `select-star-join-collision.test.ts` resolved (eslint-disable; 3/3 pass).
 - [x] Both removed from the exclude JSON; 0 `require-canonical-schema` errors;
-      `test:compare` delta = 0 (annotate_test.rb still 2/2).
+      `parity:test` delta = 0 (annotate_test.rb still 2/2).
 
 ## Notes
 

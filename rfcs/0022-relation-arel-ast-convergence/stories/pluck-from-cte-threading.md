@@ -64,7 +64,7 @@ from the same source.
       renames; all currently-passing cases stay green.
 - [ ] `pnpm vitest run packages/activerecord/src/relation/with.test.ts` and the
       `from` test file pass on SQLite (+ PG/MySQL where adapter-gated).
-      `test:compare` delta ≥ 0.
+      `parity:test` delta ≥ 0.
 
 ## Notes
 

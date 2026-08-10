@@ -42,7 +42,7 @@ ordering case. `with_associations` needs
 - [ ] `pnpm vitest run packages/activerecord/src/relation/field-ordered-values.test.ts`
       passes; 0 `require-canonical-schema` errors; file removed from the exclude
       JSON.
-- [ ] `test:compare` delta >= 0 (`field_ordered_values_test.rb` currently 10/10).
+- [ ] `parity:test` delta >= 0 (`field_ordered_values_test.rb` currently 10/10).
 
 ## Notes
 

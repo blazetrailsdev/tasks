@@ -54,7 +54,7 @@ nodes to the outer manager the same way.
 - `_compileArelNode` (`relation.ts:4613`) is removed, or reduced to the
   genuinely standalone cases (if any) the audit identifies; converge call sites
   toward the `_compileArelNodeWithBinds` (`relation.ts:4631`) threading shape.
-- No behavior change in executed SQL semantics; api:compare and test:compare
+- No behavior change in executed SQL semantics; parity:api and parity:test
   deltas non-negative. If scope exceeds 300 LOC, split by call-site cluster via
   new stories — do NOT fan out PRs.
 

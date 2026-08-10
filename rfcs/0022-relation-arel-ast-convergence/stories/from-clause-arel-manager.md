@@ -82,7 +82,7 @@ The arel manager already supports this: `SelectManager#from`.
 - [ ] `from("table alias")`, `from(subquery, name)`, and `from` + WHERE binds all
       compile correctly on SQLite / PG / MySQL (quoting via the visitor).
 - [ ] `from()` is honored by `toArray` and `count`. Existing `from` tests pass; no
-      test renames; `test:compare` for `from_test.rb` delta ≥ 0.
+      test renames; `parity:test` for `from_test.rb` delta ≥ 0.
 
 ## Notes
 

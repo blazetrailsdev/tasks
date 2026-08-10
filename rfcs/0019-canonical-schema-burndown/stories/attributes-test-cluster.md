@@ -41,7 +41,7 @@ the bespoke model is a fidelity gap — `attributes_test.rb` drives
       `createTestAdapter`.
 - [ ] Open `attributes_test.rb` FIRST; port each body to match it word-for-word
       — same assertions, same order, same control structure. Test names stay
-      byte-identical (`test:compare` matches on names).
+      byte-identical (`parity:test` matches on names).
 - [ ] No `defineSchema` left in the file. If a needed column has no canonical
       home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
       has it (parity-check first); otherwise keep a single scoped, file-unique

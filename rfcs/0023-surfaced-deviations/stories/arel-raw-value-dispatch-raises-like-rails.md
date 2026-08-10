@@ -99,4 +99,4 @@ converge-never-ratify rule, it is registered here to be converged, not accepted.
       invented condition with the caller requiring it.
 - [ ] Existing callers migrated to the `Casted`/`quotedNode` path where they
       relied on the tolerance.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

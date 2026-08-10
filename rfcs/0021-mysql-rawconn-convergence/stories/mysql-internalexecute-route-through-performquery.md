@@ -51,5 +51,5 @@ which this convergence subsumes), and matches Rails' single source of truth.
 - [ ] No regression to transaction/DDL callers of `internalExecute`
       (BEGIN/COMMIT/SAVEPOINT, `materializeTransactions` handling) or to the
       `sql.active_record` instrumentation payload.
-- [ ] CI green on MySQL 8 + MariaDB; api:compare / test:compare delta
+- [ ] CI green on MySQL 8 + MariaDB; parity:api / parity:test delta
       non-negative.

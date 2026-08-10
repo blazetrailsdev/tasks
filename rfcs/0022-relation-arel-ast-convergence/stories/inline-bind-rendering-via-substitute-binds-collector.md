@@ -40,4 +40,4 @@ string literal in the SQL could be mis-substituted).
 - `ToSql#compile` and the three AR call sites use that path; no `.replace` over
   rendered SQL remains.
 - No behavior change in existing `to-sql` / `where-clause` / `relation` /
-  `explain` snapshot output; api:compare and test:compare deltas non-negative.
+  `explain` snapshot output; parity:api and parity:test deltas non-negative.

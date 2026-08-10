@@ -37,5 +37,5 @@ invisible to the static type, and `IntrospectedIndex`
       so `where?`/`orders?` are statically visible, OR document why the cast is
       the faithful choice, converging `PgIndexDefinition` so the PG override
       stays assignable to a widened base type.
-- [x] No production behavior change; api:compare / test:compare delta
+- [x] No production behavior change; parity:api / parity:test delta
       non-negative.

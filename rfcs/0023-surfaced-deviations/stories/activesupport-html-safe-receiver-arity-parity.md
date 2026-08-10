@@ -79,5 +79,5 @@ Do not close this by broadening an existing baseline reason.
       mismatch, and the fix is the same shape the sibling core_ext predicates use.
 - [ ] Rails' per-class arms (`Object` -> false, `Numeric` -> true) are both
       preserved.
-- [ ] `pnpm api:compare --arity` activesupport count drops by 2; delta
+- [ ] `pnpm parity:api --arity` activesupport count drops by 2; delta
       non-negative.

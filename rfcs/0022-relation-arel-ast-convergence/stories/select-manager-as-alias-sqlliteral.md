@@ -43,4 +43,4 @@ then drop the `node.relation instanceof Nodes.Grouping` branch from
 - [x] `visitArelNodesTableAlias` renders bare-vs-quoted purely from `node.name`
       (no `instanceof Nodes.Grouping` relation-shape check).
 - [x] Existing subquery-alias SQL (bare for `as()`, quoted for `Table#alias`)
-      is unchanged; `test:compare` delta >= 0.
+      is unchanged; `parity:test` delta >= 0.

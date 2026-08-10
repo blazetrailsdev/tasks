@@ -64,6 +64,6 @@ BindParam `?`) and the post-hoc `Composite`+`substituteBoundValues` block in
   collector (done first by connection-tosql-via-collector). If that migration
   exceeds the 300 LOC ceiling, register the remaining call-site clusters as
   separate stories — do NOT fan out PRs.
-- api:compare and test:compare deltas non-negative; test names unchanged.
+- parity:api and parity:test deltas non-negative; test names unchanged.
 
 Depends on: audit-bind-inlining-rails-fidelity, connection-tosql-via-collector.

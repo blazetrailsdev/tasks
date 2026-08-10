@@ -41,4 +41,4 @@ Surfaced as a pre-existing deviation during PR #3611
       and calls `loadTarget()` (returning a Promise, consistent with the
       lazy-load path introduced in PR #3611) when the target is stale.
 - [x] Existing strict-loading tests pass.
-- [x] `test:compare` delta is non-negative.
+- [x] `parity:test` delta is non-negative.

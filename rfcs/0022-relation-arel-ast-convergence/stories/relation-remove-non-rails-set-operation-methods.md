@@ -61,14 +61,14 @@ execution cases) and the set-op cases in `relation/arel-ast-convergence.test.ts`
 
 - [ ] Audit `Relation`'s public surface for methods with no `ActiveRecord::Relation`
       counterpart (start from the four above; verify each remaining public method against
-      the Rails source / `api:compare`). Produce the list before deleting.
+      the Rails source / `parity:api`). Produce the list before deleting.
 - [ ] Remove `union`, `unionAll`, `intersect`, and `exceptRelation` from `Relation`, plus
       the `_setOperation` machinery that exists solely to support them
       (`_setOperation` field, `_buildSetOperationNode`,
       `_buildSetOperationOperandManager`, `_toSqlSetOperation`, and the set-op branches in
       `toArray` / `toSql` / `_cteBodyArelNode` / `_buildFromNode` /
       `_eagerLoadBypassesJoinDependency` / `query-methods.ts`), and the corresponding
-      non-Rails tests. `api:compare` / `test:compare` delta must stay non-negative (these
+      non-Rails tests. `parity:api` / `parity:test` delta must stay non-negative (these
       are non-Rails methods + non-Rails tests, so removal loses no parity coverage).
 - [ ] Confirm no callers remain (grep the monorepo — expected already clean per the audit
       above; re-verify and remove any that appear).

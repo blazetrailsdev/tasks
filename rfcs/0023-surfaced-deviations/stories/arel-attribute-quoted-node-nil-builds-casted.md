@@ -83,4 +83,4 @@ type-cast consequences on the AR write/predicate path.
       difference (a type whose `serialize(nil)` is non-nil).
 - [ ] Check the `ModelAttribute → BindParam` arm above it against Rails'
       `ActiveModel::Attribute` pass-through in `build_quoted`'s case list.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

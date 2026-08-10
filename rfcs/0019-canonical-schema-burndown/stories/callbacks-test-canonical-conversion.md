@@ -45,6 +45,6 @@ canonical table carrying the before/after add+remove callbacks (mirror the
       tables, no `defineSchema` of non-canonical shapes).
 - [ ] Drop the `callbacks.test.ts` entry from
       `eslint/require-canonical-schema-exclude.json`.
-- [ ] Test names preserved verbatim (test:compare matches by name).
+- [ ] Test names preserved verbatim (parity:test matches by name).
 - [ ] If the conversion exceeds 500 LOC, split into sub-stories by describe block
       rather than fanning out PRs from one agent.

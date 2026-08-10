@@ -45,7 +45,7 @@ counter-cache, validations, autosave, and the final field deletion are b2–b4.
       sequence so the suite stays green between stories.
 - [ ] All association / autosave / nested-attributes / inverse / eager suites
       pass; no test renames.
-- [ ] `api:compare` delta non-negative on `belongs_to_association.rb` /
+- [ ] `parity:api` delta non-negative on `belongs_to_association.rb` /
       `has_one_association.rb` / `singular_association.rb`.
 
 ## Notes

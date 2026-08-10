@@ -39,4 +39,4 @@ i18n gem message that activemodel now matches.
 - [ ] The `raise: false` string-return path (`i18n.ts:302`) stays consistent
       with the chosen message shape.
 - [ ] Tests in `packages/activesupport/src/i18n.test.ts` assert both branches
-      verbatim; api:compare/test:compare delta non-negative.
+      verbatim; parity:api/parity:test delta non-negative.

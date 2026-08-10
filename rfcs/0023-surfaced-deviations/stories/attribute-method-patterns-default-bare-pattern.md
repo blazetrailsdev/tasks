@@ -40,5 +40,5 @@ has no `method_missing` and defines attribute readers as real accessor propertie
   reflects Rails' `[AttributeMethodPattern.new]` default; or (b) document a ratified deviation
   with a Rails-source rationale if convergence proves infeasible (per repo policy, prefer
   converge).
-- Existing attribute-methods/dirty/attributes tests stay green; no api:compare/test:compare
+- Existing attribute-methods/dirty/attributes tests stay green; no parity:api/parity:test
   regression.

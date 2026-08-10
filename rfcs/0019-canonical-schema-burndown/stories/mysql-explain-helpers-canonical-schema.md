@@ -34,7 +34,7 @@ counterpart** — Rails' `MySQLExplainTest` has only the 3 fixture-backed method
 
 PR #3483 deliberately relocated these probes to a sibling block (outside the
 `MySQLExplainTest` describe) so transactional fixtures don't wrap their DDL and
-so test:compare doesn't read them as class members. It did **not** convert the
+so parity:test doesn't read them as class members. It did **not** convert the
 schema — out of scope for the wrong-describe fix.
 
 ## Acceptance criteria
@@ -45,4 +45,4 @@ schema — out of scope for the wrong-describe fix.
 - The backtick-quoting and preload-capture assertions are preserved (they are
   the discriminating checks vs the `toSql()` fallback path).
 - `blazetrails/require-canonical-schema` passes for the file with no exclude
-  entry needed; `pnpm test:compare` activerecord delta stays non-negative.
+  entry needed; `pnpm parity:test` activerecord delta stays non-negative.

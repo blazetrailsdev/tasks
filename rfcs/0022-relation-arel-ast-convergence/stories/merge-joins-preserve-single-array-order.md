@@ -47,4 +47,4 @@ store now makes a faithful single-pass merge straightforward: iterate
 - Preserve existing dedup: raw joins union structurally, named specs dedup by
   `structuralUnionEq`; cross-klass named still build a JoinDependency stash.
 - Add a merging test asserting interleaved named/raw join order survives `.merge`.
-- No test:compare regression; `relation/merger.rb` stays 100% api:compare.
+- No parity:test regression; `relation/merger.rb` stays 100% parity:api.

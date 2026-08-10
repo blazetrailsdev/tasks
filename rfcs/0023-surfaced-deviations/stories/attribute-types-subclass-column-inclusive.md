@@ -43,4 +43,4 @@ Rails-faithful `attributeTypes`-based assertion needs the underlying fix.
       `packages/activerecord/src/attributes.test.ts` is restored to assert
       `Object.keys(Klass.attributeTypes()).length === columnCount + 1` (and `+ 2`
       after adding `wibble`).
-- [ ] No regression in api:compare / test:compare.
+- [ ] No regression in parity:api / parity:test.

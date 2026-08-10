@@ -52,6 +52,6 @@ is a cross-package tooling change, not a joins change.
   blindly `--write` a reasonless baseline.
 - Reseed `call-mismatches-wide-exclude.json` so all now-converged entries are
   removed, INCLUDING the 10 `joins_values` entries.
-- `pnpm api:calls:wide` passes; `pnpm api:compare` unaffected on parity %.
+- `pnpm parity:api:calls` passes; `pnpm parity:api` unaffected on parity %.
 - `scripts/api-compare/extract-ts-api.test.ts` covers the read-crediting rule
   (and that a call's callee is not double-recorded).

@@ -129,4 +129,4 @@ matches (verified on #4876).
       `between(Float::INFINITY..3)` → `lteq(3)`, `between(Float::INFINITY..)` →
       `in([])` (via `infinity?`, predications.rb:42), out-of-range bound collapse
       (#4433) → `in([])`.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

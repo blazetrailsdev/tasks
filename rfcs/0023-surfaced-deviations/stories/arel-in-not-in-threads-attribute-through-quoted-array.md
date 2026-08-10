@@ -84,4 +84,4 @@ shrinks — delete converged entries by hand, do not blind-reseed.
 - [ ] Coverage that `attr.in([null])` type-casts through the column, and that
       `IN` / `NOT IN` SQL is unchanged for plain scalars.
 - [ ] Re-check the `relation.ts:1169` pre-cast workaround.
-- [ ] api:compare / test:compare delta non-negative; wide ratchet green.
+- [ ] parity:api / parity:test delta non-negative; wide ratchet green.

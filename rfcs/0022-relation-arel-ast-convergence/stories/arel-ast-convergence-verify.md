@@ -1,5 +1,5 @@
 ---
-title: "Verify arel-AST convergence: test:compare / api:compare deltas ≥ 0"
+title: "Verify arel-AST convergence: parity:test / parity:api deltas ≥ 0"
 status: done
 updated: 2026-06-13
 rfc: "0022-relation-arel-ast-convergence"
@@ -23,11 +23,11 @@ no string-assembly remnants were left behind.
 
 ## Scope
 
-- Run `test:compare` for the touched Rails counterparts — `relation/with_test.rb`,
+- Run `parity:test` for the touched Rails counterparts — `relation/with_test.rb`,
   the relation union/intersect/except cases, `relation/from_test.rb` — and confirm
   the matched-test delta is **≥ 0** vs the pre-RFC baseline (no test renames, so
   name-matching is stable).
-- Run `api:compare` and confirm the activerecord relation API surface delta is
+- Run `parity:api` and confirm the activerecord relation API surface delta is
   **≥ 0** (no methods dropped; `build_from`/`build_with_expression_from_value`
   coverage improved).
 - Grep the relation read path for residual string assembly that this RFC set out
@@ -41,9 +41,9 @@ no string-assembly remnants were left behind.
 
 ## Acceptance criteria
 
-- [ ] `test:compare` delta ≥ 0 for `with_test.rb`, the set-op relation cases, and
+- [ ] `parity:test` delta ≥ 0 for `with_test.rb`, the set-op relation cases, and
       `from_test.rb`.
-- [ ] `api:compare` delta ≥ 0 for the relation surface.
+- [ ] `parity:api` delta ≥ 0 for the relation surface.
 - [ ] The three string-assembly sites are removed (or each remaining use is
       documented with a reason).
 - [ ] Cross-adapter spot-check passes (SQLite no-paren / Grouping-strip; PG `$N`

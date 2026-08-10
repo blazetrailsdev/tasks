@@ -35,4 +35,4 @@ as separate stories as each batch is scoped.
       official models + fixtures, matching Rails test names verbatim, across as
       many waves as needed (each PR <=500 LOC).
 - [ ] Remove the describe's bespoke `defineSchema` block.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

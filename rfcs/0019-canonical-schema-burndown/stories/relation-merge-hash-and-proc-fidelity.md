@@ -39,7 +39,7 @@ The two gaps (confirm against current `merge()` before fixing):
 - [ ] Fix `Relation#merge` hash-dispatch and proc-arg handling to match Rails
       semantics; cite the Rails source method in the PR body.
 - [ ] `pnpm vitest run packages/activerecord/src/relation/merging.test.ts` and
-      the broader relation tests pass; `api:compare` for `merge` still matches.
+      the broader relation tests pass; `parity:api` for `merge` still matches.
 
 ## Definition of done
 

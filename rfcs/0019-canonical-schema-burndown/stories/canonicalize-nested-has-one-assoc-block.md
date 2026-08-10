@@ -25,5 +25,5 @@ PR #3604 canonicalized cid*\*/cr*\* tables; the makeModels() blocks remain.
 - Convert `TestNestedAttributesOnAHasOneAssociation` (lines 566–875) to use canonical `Pirate`/`Ship` imported from test-helpers/models, calling `acceptsNestedAttributesFor` per test to configure the option under test.
 - Drop bespoke `PolyOwner`/`PolyTarget` inline classes; use canonical `Owner` (polymorphic target) or the canonical poly models if they exist, or keep inline only for the single polymorphic-build-error test (which is inherently non-canonical).
 - No bespoke class declarations with canonical table names in this describe block.
-- Test names verbatim. No regressions in test:compare for nested_attributes_test.rb.
+- Test names verbatim. No regressions in parity:test for nested_attributes_test.rb.
 - 500 LOC ceiling (PR from main, non-overlapping with sibling PRs).

@@ -49,4 +49,4 @@ during convergence.
 - [ ] Remove the `Array.isArray(holderTarget) ? holderTarget[0] : holderTarget`
       unwrap workaround in `associations.test.ts` (`preload with available
 records with through association`) and assert the holder target directly.
-- [ ] api:compare + test:compare deltas non-negative.
+- [ ] parity:api + parity:test deltas non-negative.

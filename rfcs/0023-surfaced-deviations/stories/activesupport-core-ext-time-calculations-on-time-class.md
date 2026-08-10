@@ -41,7 +41,7 @@ free functions taking a JS `Date` and returning `Temporal.Instant`, with a
 `@boundary-file` header. It is not a reopening of any class, so the class
 methods (`days_in_month`, `days_in_year`, `current`, `rfc3339`, `===`) and the
 operator pairs have nowhere to land, and the instance methods lose their
-receiver. `pnpm api:extra` scores it 5 novel / 53 moved.
+receiver. `pnpm parity:api:extra` scores it 5 novel / 53 moved.
 
 trails' `Time` analogue is `packages/date/src/time.ts` (`export class Time`,
 :175), which today carries only `utc` (:183) and `strftime` (:264).
@@ -77,9 +77,9 @@ deleted by hand (the baseline is only-shrink — never `--write`/reseed).
 
 - `core_ext/time/calculations.rb` methods live on trails' `Time` at the Rails
   names, in a Rails-shaped file, with Rails control flow and decomposition.
-- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm api:compare`
+- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm parity:api`
   activesupport ported-method count strictly up.
 - Any `time-ext.json` call-mismatch rows the port retires are deleted by hand.
-- `pnpm api:calls`, `pnpm api:extra` green; no new `@noRailsEquivalent`.
+- `pnpm parity:api:calls`, `pnpm parity:api:extra` green; no new `@noRailsEquivalent`.
 - Rails' own test names, verbatim, from
   `vendor/rails/activesupport/test/core_ext/time_ext_test.rb`.

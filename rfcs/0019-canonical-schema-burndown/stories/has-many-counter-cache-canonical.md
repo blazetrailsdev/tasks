@@ -43,4 +43,4 @@ Skipped tests (all in `has-many-associations.test.ts`):
 
 - All counter-cache tests that can run against canonical schema (Topic/Reply, Car/Engine, Category/Categorization, Post/Tagging) are un-skipped and green on all three adapters.
 - Tests that require bespoke models not in canonical schema (overlapping counter cache columns) remain skipped with a `// BLOCKED:` comment explaining why.
-- `pnpm test:compare` delta for `has_many_associations_test.rb` is non-negative after this change.
+- `pnpm parity:test` delta for `has_many_associations_test.rb` is non-negative after this change.

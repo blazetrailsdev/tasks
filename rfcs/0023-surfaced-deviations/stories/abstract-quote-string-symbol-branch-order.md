@@ -39,7 +39,7 @@ the branch types do not overlap, so a `string` matches the same arm either way â
 unlike, say, the Numeric/BigDecimal pair whose order does matter. Ruby's `case`
 and the TS if-chain agree on every input.
 
-Value in converging: `api:compare`'s file-structure/ordering checks and any
+Value in converging: `parity:api`'s file-structure/ordering checks and any
 future reader diffing the two bodies line-by-line both key off order, and the
 same divergence is likely mirrored in the dialect `quote` overrides
 (`postgresql/quoting.ts`, `mysql/quoting.ts`, `sqlite3/quoting.ts`), each of
@@ -57,4 +57,4 @@ observation; filed here so it is tracked rather than re-derived.
       they legitimately front-load (documented with the Rails anchor for why).
 - [ ] Guard against the one real ordering hazard: BigDecimal must stay ahead of
       Numeric (rb:82-83), and binary ahead of Time/Date (rb:83-85).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

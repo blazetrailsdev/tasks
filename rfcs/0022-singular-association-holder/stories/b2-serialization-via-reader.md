@@ -37,7 +37,7 @@ which Rails could not run. This overload blocks deleting `_cachedAssociations`
       undeclared associations are re-pointed at declared associations + the holder /
       proxy. No test renames; behavior asserted by each test preserved.
 - [ ] `serialization.test.ts` + `json-serialization.test.ts` pass.
-- [ ] `api:compare` delta non-negative on activemodel `serialization.rb` /
+- [ ] `parity:api` delta non-negative on activemodel `serialization.rb` /
       `serializers/json.rb`.
 
 ## Notes

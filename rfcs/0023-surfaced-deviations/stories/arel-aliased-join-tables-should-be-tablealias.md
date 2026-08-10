@@ -64,4 +64,4 @@ effective-name reads.
       `alias_tracker.rb:64`; the hand-carried `typeCaster`/`klass` copy is gone.
 - [ ] `Table#typeCaster` can go back to `private` (only #4889's copy needs it).
 - [ ] The 3 tests above stay green. No test name changes.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

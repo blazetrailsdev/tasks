@@ -58,6 +58,6 @@ through `buildArel`.
 - [ ] `with_recursive` (Relation with a string JOIN) still produces correct
       rows — the resolved Arel must include the relation's joins.
 - [ ] `with.test.ts` stays green with no weakened assertions or renames;
-      `test:compare` for `with_test.rb` delta ≥ 0.
+      `parity:test` for `with_test.rb` delta ≥ 0.
 - [ ] Bind values from a Relation CTE body are collected through the visitor
       (not inlined at `toSql()` time).

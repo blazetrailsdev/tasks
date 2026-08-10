@@ -32,4 +32,4 @@ Option B: Identify another canonical join table pattern (e.g. categories_posts w
 Option C: Keep bespoke tables and accept that TA/TB cannot be canonical (document why).
 
 - If converted: ta*\*/tb*\* removed from defineSchema and `associations.test.ts` can be removed from `eslint/require-canonical-schema-exclude.json` (after wave 3 is also done).
-- `test:compare` delta non-negative
+- `parity:test` delta non-negative

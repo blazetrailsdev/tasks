@@ -40,4 +40,4 @@ build_join_buckets, build_join_dependencies, and merge_outer_joins from
   than the private `_leftOuterJoinsValues` field, matching Rails' value-method
   read (verify no behavioral change — the accessor exposes the same store).
 - Remove the now-converged `left_outer_joins_values` baseline entries.
-- `pnpm api:calls:wide` green; relation/join tests pass.
+- `pnpm parity:api:calls` green; relation/join tests pass.

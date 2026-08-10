@@ -46,7 +46,7 @@ Rails source: `vendor/rails/activerecord/test/cases/relation/select_test.rb`
 - [ ] `pnpm vitest run packages/activerecord/src/relation/select.test.ts`
       passes; 0 `require-canonical-schema` errors; file removed from the exclude
       JSON.
-- [ ] `test:compare` delta >= 0 (`select_test.rb` must not drop below 18/26).
+- [ ] `parity:test` delta >= 0 (`select_test.rb` must not drop below 18/26).
 
 ## Notes
 

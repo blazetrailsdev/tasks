@@ -28,5 +28,5 @@ The autosave blocks use `Pirate.hasMany("ships")` (not canonical `Pirate.hasOne(
 
 - Convert autosave describe blocks to use canonical Ship (with `hasMany("parts", { className: "ShipPart" })`) matching how Rails structures the tests.
 - Remove `ae1_articles`, `ae1_tags`, and remaining prefixed article/tag tables from TEST_SCHEMA.
-- Test names verbatim. No regressions in test:compare.
+- Test names verbatim. No regressions in parity:test.
 - 500 LOC ceiling per PR; split by describe block from main with non-overlapping scope.

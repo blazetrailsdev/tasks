@@ -44,5 +44,5 @@ Rails and had to baseline these two in the wide call gate
   `deduplicate` override so the mixin's registry path applies, as in Rails.
 - The two wide-gate baseline entries for `deduplicate` -> `registry` are DELETED,
   not re-reasoned.
-- `pnpm api:calls:wide` OK; adapter column/type-reflection tests green on
+- `pnpm parity:api:calls` OK; adapter column/type-reflection tests green on
   mysql2 and postgresql.

@@ -48,4 +48,4 @@ table cannot be expressed in `TEST_SCHEMA`; leave that test's raw DDL as-is.
       the canonical schema (a 0019 gap); do not reintroduce bespoke defineSchema.
 - [ ] Remove `packages/activerecord/src/insert-all.test.ts` from
       `eslint/require-canonical-schema-exclude.json` in the FINAL slice only.
-- [ ] All test names unchanged (test:compare matching).
+- [ ] All test names unchanged (parity:test matching).

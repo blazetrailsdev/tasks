@@ -40,4 +40,4 @@ one path (e.g. a new join category or a dedup fix) can silently drift `merge` fr
 - No behavior change: same-klass ordered union, cross-klass JoinDependency stash,
   raw structural (`eql`/`===`) dedup all preserved.
 - Existing merging.test.ts interleaved-order + cross-klass tests stay green for
-  both `merge` and `mergeBang`; no test:compare regression.
+  both `merge` and `mergeBang`; no parity:test regression.

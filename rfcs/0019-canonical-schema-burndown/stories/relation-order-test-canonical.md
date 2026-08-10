@@ -42,7 +42,7 @@ includes+order-by-included-table isn't supported, keep those `it.skip` + BLOCKED
 - [ ] TS-invented `hash syntax` describe dropped.
 - [ ] `pnpm vitest run packages/activerecord/src/relation/order.test.ts` passes;
       0 `require-canonical-schema` errors; file removed from the exclude JSON.
-- [ ] `test:compare` delta >= 0 (`order_test.rb` currently 4/4 — must stay 4/4).
+- [ ] `parity:test` delta >= 0 (`order_test.rb` currently 4/4 — must stay 4/4).
 
 ## Notes
 

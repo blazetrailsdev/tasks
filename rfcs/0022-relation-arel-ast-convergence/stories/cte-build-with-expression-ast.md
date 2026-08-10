@@ -80,7 +80,7 @@ SQLite visitor's `Grouping`-stripping `infixValueWithParen`
 - [ ] `pnpm vitest run packages/activerecord/src/relation/with.test.ts` passes
       (no weakened assertions); arg-validation raise messages unchanged.
 - [ ] SQLite emits no parens around UNION ALL operands (existing `Grouping`
-      strip); PG/MySQL unchanged. `test:compare` for `with_test.rb` delta ≥ 0.
+      strip); PG/MySQL unchanged. `parity:test` for `with_test.rb` delta ≥ 0.
 
 ## Notes
 

@@ -27,5 +27,5 @@ These are good candidates for a single consolidation PR using canonical Pirate/B
 - Convert all small single-test describe blocks (lines 1864–2680) to canonical models.
 - Remove all prefixed bespoke table entries they use from TEST_SCHEMA.
 - MolBird/MolPirate module-level classes (lines 168–197) should also be replaced with canonical Pirate/Bird if possible, or kept if the merge-target tests remain.
-- Test names verbatim. No regressions in test:compare.
+- Test names verbatim. No regressions in parity:test.
 - 500 LOC ceiling, PR from main.

@@ -42,5 +42,5 @@ a last segment with an `ActionController::X`.
   the actionpack barrels.
 - `ActionDispatch::Http::Parameters` becomes reachable under that rule without
   an invented alias and without shadowing `ActionController::Parameters`.
-- No new extra-surface allowlist entries; `pnpm api:compare` extra-surface
+- No new extra-surface allowlist entries; `pnpm parity:api` extra-surface
   novel count for the touched files does not regress.

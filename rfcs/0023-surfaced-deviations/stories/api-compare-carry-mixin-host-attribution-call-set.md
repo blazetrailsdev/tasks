@@ -39,5 +39,5 @@ noise: the same method already has a real, converged candidate in query-methods.
 - The four `relation.ts` join-builder wide-call entries (and their
   `left_outer_joins_values` siblings) drop from the baseline once the real
   query-methods.ts candidate is the one compared.
-- `pnpm api:calls:wide` and `pnpm api:calls` stay green; no regressions in the
+- `pnpm parity:api:calls` and `pnpm parity:api:calls` stay green; no regressions in the
   extractor unit tests.

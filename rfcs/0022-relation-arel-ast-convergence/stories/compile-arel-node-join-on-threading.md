@@ -46,5 +46,5 @@ the visitor level, fully matching Rails).
   AST (rebinding the target `Table`) rather than string-splitting rendered SQL.
 - `_compileArelNode` is removed once its only remaining caller is the
   genuinely-standalone `_distinctSelectForLimitedIds` bind-free column ref.
-- No behavior change in executed SQL semantics; api:compare and test:compare
+- No behavior change in executed SQL semantics; parity:api and parity:test
   deltas non-negative.

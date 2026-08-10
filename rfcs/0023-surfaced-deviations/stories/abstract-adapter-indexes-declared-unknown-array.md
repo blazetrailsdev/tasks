@@ -38,5 +38,5 @@ timestamps") carries one such cast today, and every future caller of
   element type rather than `unknown[]`, matching what the implementations
   already return.
 - The `as { columns: string[] }[]` cast in `timestamp.test.ts` is removed.
-- No dialect adapter override trips TS2425; `pnpm api:compare` deltas
+- No dialect adapter override trips TS2425; `pnpm parity:api` deltas
   non-negative.

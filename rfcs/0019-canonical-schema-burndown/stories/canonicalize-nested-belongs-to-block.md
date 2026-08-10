@@ -22,5 +22,5 @@ blocked-by: null
 
 - Convert `TestNestedAttributesOnABelongsToAssociation` (lines 876–1115) to use canonical `Ship`/`Pirate`, calling `acceptsNestedAttributesFor` per test.
 - No bespoke class declarations with canonical table names.
-- Test names verbatim. No regressions in test:compare.
+- Test names verbatim. No regressions in parity:test.
 - 500 LOC ceiling, PR from main.

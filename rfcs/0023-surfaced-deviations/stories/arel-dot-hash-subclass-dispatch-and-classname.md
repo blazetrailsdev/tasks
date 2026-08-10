@@ -50,4 +50,4 @@ symbol keys.
       unknown-object arm.
 - [ ] Assess `classNameOf` emitting `"Object"` vs Rails' `"Hash"` — converge
       or record why the JS ctor name is the faithful read.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

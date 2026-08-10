@@ -72,7 +72,7 @@ fires moves from `.where()` to `.toArray()`/`.load()`:
       (MySQL parity is the key assertion — no `LIMIT`-in-subquery).
 - [x] `.where()` stays synchronous/chainable; no public API returns a new Promise.
 - [x] Empty id set → `none!` semantics (empty result, no error).
-- [x] `test:compare` / `api:compare` delta ≥ 0.
+- [x] `parity:test` / `parity:api` delta ≥ 0.
 
 ## Notes
 

@@ -52,7 +52,7 @@ shared cache is warmed to the real DB columns. Convergence is the durable fix.
       `registerModel`; it reuses the official models in
       `test-helpers/models/`.
 - [ ] Open `timestamp_test.rb` FIRST; port each body word-for-word. **Test names
-      UNCHANGED** (`test:compare` matches on names).
+      UNCHANGED** (`parity:test` matches on names).
 - [ ] Replace the 18 bespoke classes with canonical models whose tables
       genuinely have the needed timestamp columns. **Never** declare
       `created_at`/`updated_at` as `{ virtual: true }` to dodge a missing column

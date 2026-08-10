@@ -43,4 +43,4 @@ birds get a non-existent `sub_pirate_id` FK → never persisted).
   overridden in subclasses" test passes with a bare
   `class SubPirate extends CanonicalPirate {}` (no `_associations` filter,
   no explicit `foreignKey`), and that workaround is removed.
-- No regressions in test:compare / api:compare.
+- No regressions in parity:test / parity:api.

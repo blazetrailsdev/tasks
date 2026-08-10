@@ -92,4 +92,4 @@ Re-confirm there is no cycle at that time rather than trusting this note.
 - [ ] Check each behaviour change against Rails before keeping it: e.g. a
       duck-typed object in a values row currently binds and would then route to
       `quote()` — which is what rb:111-112 does (not in rb:109's `when` list).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

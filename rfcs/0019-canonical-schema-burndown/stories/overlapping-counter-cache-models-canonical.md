@@ -48,4 +48,4 @@ schema.rb:402-403), but the three models are NOT yet ported under
   and make it green on all three adapters, asserting the two `comments_count` columns
   are incremented independently (Rails has_many_associations_test.rb:1405-1419).
 - Remove the `// BLOCKED:` comment.
-- `pnpm test:compare` delta for `has_many_associations_test.rb` is non-negative.
+- `pnpm parity:test` delta for `has_many_associations_test.rb` is non-negative.

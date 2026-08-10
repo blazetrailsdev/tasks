@@ -55,7 +55,7 @@ rather than diverging one site from the other two.
 - [ ] A subquery with limitable eager reflections but a collection in
       `joins`/`leftOuterJoins` defers (materializes) and emits `pk IN (ids)` on
       all three adapters — no LIMIT-in-IN.
-- [ ] `test:compare` / `api:compare` delta ≥ 0.
+- [ ] `parity:test` / `parity:api` delta ≥ 0.
 
 ## Rails source
 

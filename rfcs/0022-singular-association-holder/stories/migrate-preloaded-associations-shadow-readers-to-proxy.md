@@ -79,4 +79,4 @@ write/field removal as a follow-up story.
       `_preloadedAssociations`-asserting tests in `associations.test.ts` are
       updated to assert via the public proxy (`record.assoc` / `association(name)`)
       rather than the private map, or kept green if the field is retained.
-- [ ] api:compare + test:compare deltas non-negative.
+- [ ] parity:api + parity:test deltas non-negative.

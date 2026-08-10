@@ -54,5 +54,5 @@ slot in.
   raw `defineSchema` where the test exercises real rows.
 - Test names unchanged; all tests in the file still pass
   (`pnpm vitest run packages/activerecord/src/relation.trails.test.ts`).
-- `eslint` clean on the file with no new exclude-list entries; `test:compare`
+- `eslint` clean on the file with no new exclude-list entries; `parity:test`
   parity metrics for `relation_test.rb` unchanged.

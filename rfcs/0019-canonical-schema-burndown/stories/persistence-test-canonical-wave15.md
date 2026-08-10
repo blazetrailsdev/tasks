@@ -90,7 +90,7 @@ after insert` (`test_model_with_no_auto_populated_fields_still_returns_primary_k
       canonical models + fixtures, names verbatim; pure deviations deleted.
 - [ ] No new duplicate test names.
 - [ ] `pnpm vitest run packages/activerecord/src/persistence.test.ts` passes;
-      `pnpm lint` and `node scripts/typecheck.mjs` clean; test:compare delta
+      `pnpm lint` and `node scripts/typecheck.mjs` clean; parity:test delta
       non-negative.
 - [ ] Register a further wave story if more than one PR of work remains; remove
       `persistence.test.ts` from `eslint/require-canonical-schema-exclude.json`

@@ -48,4 +48,4 @@ which are the lower-fidelity portable path.
       where applicable) from `SHOW INDEX` / information_schema.
 - [ ] Un-gate the `schema-introspection.test.ts` where/orders assertion (or add
       per-adapter assertions) so it runs on all three adapters.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

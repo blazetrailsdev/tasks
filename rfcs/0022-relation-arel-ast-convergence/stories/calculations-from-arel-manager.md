@@ -44,7 +44,7 @@ manual `fromBinds` concatenation at every call site; `compileManagerWithBinds`
 
 Rails counterpart: `active_record/relation/calculations.rb` builds aggregates
 on the relation's arel (which already carries `build_from`) — there is no
-Rails analog of `applyFromClause`; deleting it is itself an api:compare
+Rails analog of `applyFromClause`; deleting it is itself an parity:api
 hygiene win.
 
 ## Acceptance criteria
@@ -60,5 +60,5 @@ hygiene win.
       in PR #3105).
 - [ ] Bind order is visitor-collected, not hand-prepended; PG `$N` numbering
       verified by running the touched tests against live PG locally.
-- [ ] No test renames; `test:compare --cached --package activerecord` delta
+- [ ] No test renames; `parity:test --cached --package activerecord` delta
       ≥ 0; ≤500 LOC.

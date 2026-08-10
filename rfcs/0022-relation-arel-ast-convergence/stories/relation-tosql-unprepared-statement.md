@@ -55,7 +55,7 @@ values are inlined during AST traversal.
   paren handling comes from the visitor, as in Rails).
 - Depends on connection-tosql-via-collector landing first (so `connection.toSql`
   already inlines through `collector()` rather than `compileInlined`).
-- No behavior change in existing snapshot output; api:compare and test:compare
+- No behavior change in existing snapshot output; parity:api and parity:test
   deltas non-negative.
 
 Depends on: audit-bind-inlining-rails-fidelity, connection-tosql-via-collector.

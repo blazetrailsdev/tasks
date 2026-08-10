@@ -39,4 +39,4 @@ with composite-key books). There is no Rails counterpart asserting this error.
       Rails behavior rather than raising `ConfigurationError`.
 - [ ] Add Rails-faithful coverage on canonical CPK models for a composite-PK
       through target.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

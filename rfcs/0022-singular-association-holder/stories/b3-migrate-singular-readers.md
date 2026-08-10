@@ -35,7 +35,7 @@ None are has_many-specific after RFC 0006.
       `_cachedAssociations`; reload resets the holder / proxy instead.
 - [ ] Counter-cache, validation, autosave, and persistence/reload suites pass;
       no test renames.
-- [ ] `api:compare` delta non-negative on `counter_cache.rb`,
+- [ ] `parity:api` delta non-negative on `counter_cache.rb`,
       `autosave_association.rb`, `validations/associated.rb`, `persistence.rb`.
 
 ## Notes

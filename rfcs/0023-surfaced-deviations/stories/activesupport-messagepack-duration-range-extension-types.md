@@ -45,4 +45,4 @@ Duration and Range are the two with a clean path and no new dependency.
 - Rails' `roundtrips ActiveSupport::Duration` and `roundtrips Range` test names,
   verbatim, from `shared_serializer_tests.rb`; the new ids added to
   `enshrines type IDs` and removed from the descoped comment.
-- `pnpm api:compare --package activesupport` non-negative.
+- `pnpm parity:api --package activesupport` non-negative.

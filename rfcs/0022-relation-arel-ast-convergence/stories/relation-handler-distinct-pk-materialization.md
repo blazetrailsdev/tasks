@@ -101,6 +101,6 @@ Model.includes(:assoc).where(...))` converts the include to an OUTER join
 - [x] `distinctRelationForPrimaryKey` builds table-qualified compiled pk columns
       and reads via `selectRows`; covered by direct unit tests on SQLite (+ PG
       `columnsForDistinct` order-column path).
-- [x] No test renames; currently-green tests stay green. `test:compare` /
-      `api:compare` delta ≥ 0.
+- [x] No test renames; currently-green tests stay green. `parity:test` /
+      `parity:api` delta ≥ 0.
 - [x] ≤300 LOC. Single PR from main, draft.

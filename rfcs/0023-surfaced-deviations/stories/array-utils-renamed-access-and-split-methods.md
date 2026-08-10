@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activesupport` reports 4 novel names in
+`pnpm parity:api:extra --package activesupport` reports 4 novel names in
 `packages/activesupport/src/array-utils.ts`: `arrayFrom`, `arrayTo`,
 `splitArray`, and the `ArrayUtils` namespace. The first three are renames of
 real Rails methods rather than genuinely invented surface:
@@ -28,7 +28,7 @@ real Rails methods rather than genuinely invented surface:
 
 The `array`-prefix / `Array`-suffix spellings were presumably chosen to avoid
 collisions with the JS builtins and the `to`/`from` keywords, but they mean
-`api:compare` cannot match them and every call site reads unlike Rails.
+`parity:api` cannot match them and every call site reads unlike Rails.
 
 ## Acceptance criteria
 
@@ -36,6 +36,6 @@ collisions with the JS builtins and the `to`/`from` keywords, but they mean
   exported from `array-utils.ts`, or the deviation is justified at the call
   site as a genuine TypeScript language shortcoming with a Rails cite.
 - Call sites and re-exports (`packages/activesupport/src/index.ts:242`) updated.
-- `pnpm api:extra --package activesupport` novel count for `array-utils.ts`
+- `pnpm parity:api:extra --package activesupport` novel count for `array-utils.ts`
   drops accordingly; `ArrayUtils` either resolves to a Rails counterpart or
   carries `@noRailsEquivalent`.

@@ -33,7 +33,7 @@ deletion, hence sequenced last and marked optional.
       reachable through one memoization slot mirroring `@association_cache`, or a
       decision recorded that they remain split with rationale.
 - [ ] No behavior change; all suites pass; no test renames.
-- [ ] `api:compare` delta non-negative on `associations.rb`
+- [ ] `parity:api` delta non-negative on `associations.rb`
       (`association_instance_get` / `association_instance_set` / `association`).
 
 ## Notes
