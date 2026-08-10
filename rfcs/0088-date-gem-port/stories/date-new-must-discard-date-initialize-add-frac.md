@@ -1,6 +1,6 @@
 ---
 title: "date-new-must-discard-date-initialize-add-frac"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6333
 claim: "2026-08-10T13:05:58Z"
 assignee: "date-new-must-discard-date-initialize-add-frac"
 blocked-by: null
