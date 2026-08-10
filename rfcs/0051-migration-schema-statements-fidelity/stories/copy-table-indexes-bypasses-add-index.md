@@ -1,14 +1,14 @@
 ---
 title: "copyTableIndexes hand-builds CREATE INDEX instead of delegating to addIndex"
-status: draft
-updated: 2026-07-28
+status: done
+updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6315
 claim: null
 assignee: null
 blocked-by: null
