@@ -1,6 +1,6 @@
 ---
 title: "trails' Rational never canonicalizes a denominator of 1 to an Integer, so ported FIXNUM_P fast paths silently miss"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

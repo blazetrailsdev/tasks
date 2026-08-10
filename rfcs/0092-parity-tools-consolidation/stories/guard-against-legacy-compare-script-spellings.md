@@ -1,6 +1,6 @@
 ---
 title: "CI gate rejects reintroduced legacy compare-script spellings"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
