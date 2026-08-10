@@ -1,6 +1,6 @@
 ---
 title: "date-union-datedata-on-date"
-status: ready
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6312
 claim: null
 assignee: null
 blocked-by: null
