@@ -1,6 +1,6 @@
 ---
 title: "converge-internal-exec-query-off-logsql"
-status: ready
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6327
 claim: null
 assignee: null
 blocked-by: null
