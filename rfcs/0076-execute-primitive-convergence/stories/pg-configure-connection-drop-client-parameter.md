@@ -1,7 +1,7 @@
 ---
 title: "PG: make configureConnection argless, dropping the acquire-ordering client parameter"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T02:46:35Z"
+assignee: "port-test-date-conv-date-plus-arms"
 blocked-by: null
 closed-reason: null
 ---
