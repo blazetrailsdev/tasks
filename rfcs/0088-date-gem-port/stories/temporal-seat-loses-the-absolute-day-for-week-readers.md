@@ -1,6 +1,6 @@
 ---
 title: "temporal-seat-loses-the-absolute-day-for-week-readers"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T14:33:26Z"
+assignee: "date-seat-drops-nth-and-spells-the-residue-year"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "add_index cannot express a schema-qualified index name, so copy_table_indexes keeps one hand-built arm"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T14:33:26Z"
+assignee: "date-seat-drops-nth-and-spells-the-residue-year"
 blocked-by: null
 closed-reason: null
 ---
