@@ -39,8 +39,10 @@ mechanism that implements it (`relPathFor`, `loadSplitBaseline`,
    implementation rather than six copies.
 2. **Migrates the remaining shardable registers** — `arity-exclude.json`,
    `inheritance-exclude.json`, `body-pins.json` — onto that helper.
-3. **Shards the generated `output/` artifacts** of `api-compare`,
-   `test-compare`, and `schema-compare` on the same convention.
+3. **Shards the generated `output/` artifacts** of `api-compare` and
+   `test-compare` on the same convention. (`schema-compare` has no `output/`
+   tree — its only persisted state is the committed `invented-baseline.json`,
+   dispositioned below.)
 
 It also **names, explicitly, the registers that are not keyed by a source file**
 and records the decision not to shard them. Forcing a mirrored tree onto data
@@ -155,8 +157,8 @@ to one within a single shard.
 
 The helper lives in **`scripts/parity/`**, the established shared home for
 cross-tool parity code (`conventions.ts`, `shared-cache.ts`,
-`write-json-manifest.ts`, `types.ts`), and is imported by api-compare,
-test-compare, and schema-compare alike. It is added to the
+`write-json-manifest.ts`, `types.ts`), and is imported by api-compare and
+test-compare alike. It is added to the
 `@blazetrails/parity` subpath surface those tools already import from
 (`lint-call-mismatches.ts` imports `@blazetrails/parity/conventions` and
 `@blazetrails/parity/types` today).
@@ -232,8 +234,8 @@ Per tree, the migration must check and update **all** of:
 
 - **`.gitignore`** — for generated trees. `scripts/api-compare/output/` and
   `scripts/test-compare/output/` are already ignored as directories
-  (`.gitignore:4-6`), so sharding _inside_ them needs no change; verify rather
-  than assume for `schema-compare`.
+  (`.gitignore:4-6`), so sharding _inside_ them needs no change — verify rather
+  than assume, and state the result in the PR body.
 - **CI workflow steps** that name the path. Grep `.github/workflows/ci.yml` for
   the file name. The call-gate drift step
   (`ci.yml:1452-1469`) is the model: it must `git add --intent-to-add` the tree
