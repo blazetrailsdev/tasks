@@ -98,7 +98,7 @@
 | [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | active | @deanmarano | — |
 | [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @deanmarano | activerecord, activemodel |
 | [0094-sqlite3-adapter-construction-fidelity](rfcs/0094-sqlite3-adapter-construction-fidelity/README.md) | SQLite3 adapter construction fidelity | draft | @deanmarano | activerecord |
-| [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (api:calls:args) | active | @deanmarano | activerecord, arel |
+| [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (api:calls:args) | closed | @deanmarano | activerecord, arel |
 | [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | active | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
 | [0097-parity-output-sharding](rfcs/0097-parity-output-sharding/README.md) | Per-source-file sharding for parity registers and artifacts | active | @deanmarano | — |
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | draft | @your-handle | activesupport |
