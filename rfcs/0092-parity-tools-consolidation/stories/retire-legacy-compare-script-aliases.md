@@ -1,7 +1,7 @@
 ---
 title: "retire-legacy-compare-script-aliases"
-status: in-progress
-updated: 2026-08-09
+status: done
+updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
 packages: []
