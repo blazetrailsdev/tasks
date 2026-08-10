@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-new-civil-reform"
-status: blocked
+status: ready
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Blocked on open PR #6313, which ports Date#- (d_lite_minus, date_core.c:6343-6360) in packages/date/src/date.ts; duplicating it in a sibling PR is forbidden. Also needs a public Julian-day-to-Date-instance seat: Date.jd answers a Temporal.PlainDate (RFC 0088, vendor/sources.ts:212-221) and toDate()'s JSDoc names a Temporal constructor overload the class does not declare."
+blocked-by: null
 closed-reason: null
 ---
 
