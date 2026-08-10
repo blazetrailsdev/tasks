@@ -1,6 +1,6 @@
 ---
 title: "exec-query-wrappers-must-not-log"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
