@@ -1,6 +1,6 @@
 ---
 title: "Split unported-files.ts into a per-package directory"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0097-parity-output-sharding"
 cluster: null
