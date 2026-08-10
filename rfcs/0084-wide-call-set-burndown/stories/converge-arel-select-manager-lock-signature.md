@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#lock renames its parameter, changes its default, and flattens Rails' case"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T03:06:34Z"
+assignee: "port-test-date-new-civil-reform"
 blocked-by: null
 closed-reason: null
 ---
