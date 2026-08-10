@@ -74,7 +74,7 @@ Note the blast radius is small: every concrete adapter overrides `execDelete` /
 ## Acceptance criteria
 
 - [ ] `execDelete` and `execUpdate` are `affectedRows(internalExecute(sql, name,
-  binds))`, matching `database_statements.rb:165,172`.
+binds))`, matching `database_statements.rb:165,172`.
 - [ ] The `binds.length > 0` guard is gone — Rails has no such branch, and
       `internal_execute` carries binds.
 - [ ] `affectedRows` resolves to something real on the host the mixin defaults
