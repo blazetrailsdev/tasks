@@ -40,4 +40,4 @@ to get Rails' actual `schema_cache` semantics.
 - Give the raw memoized cache an internal name if it is still needed, or drop
   it if the bound handle covers every read.
 - Delete `schemaCacheBound` and its `@noRailsEquivalent` tag.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

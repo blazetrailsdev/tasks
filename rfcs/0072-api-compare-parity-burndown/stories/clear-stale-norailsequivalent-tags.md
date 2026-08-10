@@ -1,5 +1,5 @@
 ---
-title: "Clear the 12 stale @noRailsEquivalent tags failing api:extra"
+title: "Clear the 12 stale @noRailsEquivalent tags failing parity:api:extra"
 status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
@@ -17,12 +17,12 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra` currently fails with 12 STALE `@noRailsEquivalent` tags —
+`pnpm parity:api:extra` currently fails with 12 STALE `@noRailsEquivalent` tags —
 methods that no longer flag as extra surface, so the tag is dead metadata the
 gate rejects. Observed while working PR #5975 (the gate was already red on
 `main`; none of these are in the files that PR touched).
 
-The 12, as reported by `api:extra`:
+The 12, as reported by `parity:api:extra`:
 
 - `connection-adapters/schema-cache.ts` — `recordTouchedTables`,
   `takeTouchedTables`, `setPrimaryKeys`, `setDataSourceExists`, `loadAllBang`,
@@ -54,4 +54,4 @@ and
   Rails-layout file.
 - Delete or repair each tag accordingly — do NOT blanket-delete to green the
   gate, and do not allowlist.
-- `pnpm api:extra` exits 0.
+- `pnpm parity:api:extra` exits 0.

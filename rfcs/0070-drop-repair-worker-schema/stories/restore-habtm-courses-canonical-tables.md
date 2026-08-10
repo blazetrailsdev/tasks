@@ -32,4 +32,4 @@ candidates to confirm: `associations/has-and-belongs-to-many-associations.test.t
   and make it restore the canonical shape of all four tables after it runs (or
   use transactional fixtures / scratch tables).
 - Re-measured CI shows zero repair firings for this table set.
-- Rails-faithful teardown; no test renamed; `test:compare` delta >= 0.
+- Rails-faithful teardown; no test renamed; `parity:test` delta >= 0.

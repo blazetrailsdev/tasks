@@ -74,9 +74,9 @@ purely about surfacing attribution the tool already computes and throws away.
 - [ ] A `moved-names` file-tag rejection names the crediting Rails
       `file` + `Class#method` for each listed name.
 - [ ] Re-deriving the five libsql.ts owners requires no throwaway script:
-      they fall out of a normal `pnpm api:extra --package activerecord` run
+      they fall out of a normal `pnpm parity:api:extra --package activerecord` run
       (temporarily removing the `MOVED-BY-SHORT-NAME` clause reproduces the
       rejection).
 - [ ] `moved` totals do not move — this is attribution only, not rescoring.
 - [ ] `pnpm vitest run scripts/api-compare/extra-surface.test.ts` and
-      `pnpm api:extra --package activerecord` pass.
+      `pnpm parity:api:extra --package activerecord` pass.

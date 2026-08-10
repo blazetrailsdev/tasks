@@ -19,7 +19,7 @@ closed-reason: null
 
 Found by the `extra-surface-activerecord-top-files-inventory` spike
 (2026-07-25). **This is the single biggest false-positive source on the
-`novel` side of `pnpm api:extra`: 100 of activerecord's 776 novel names
+`novel` side of `pnpm parity:api:extra`: 100 of activerecord's 776 novel names
 (13%) are exported functions that already carry an `@internal` JSDoc tag.**
 
 `scripts/api-compare/extra-surface.ts:399-418` (`collectTsFileNames`) drops
@@ -30,7 +30,7 @@ into `tsPkg.fileFunctions`, `scripts/api-compare/extract-ts-api.ts` never
 reads the leading JSDoc, so `internal` is `undefined`.
 
 Reproduction (with `scripts/api-compare/output/ts-api.json` built by
-`pnpm api:compare`):
+`pnpm parity:api`):
 
 ```text
 packages/activerecord/src/connection-adapters/abstract/quoting.ts:524-530
@@ -40,7 +40,7 @@ packages/activerecord/src/connection-adapters/abstract/quoting.ts:524-530
 
 yet `ts-api.json` records
 `packages.activerecord.fileFunctions["connection-adapters/abstract/quoting.ts"]`
-→ `{ name: "dispatchQuote", internal: undefined }`, and `pnpm api:extra
+→ `{ name: "dispatchQuote", internal: undefined }`, and `pnpm parity:api:extra
 --package activerecord` reports `dispatchQuote` as novel drift.
 
 All ten `dispatch*` novel names on `connection-adapters/abstract/quoting.ts`
@@ -72,9 +72,9 @@ consumer of `fileFunctions[*].internal` while fixing.
 - A unit test in `scripts/api-compare/extract-ts-api.test.ts` covers an
   `@internal`-tagged top-level `export function` and an untagged sibling in
   the same fixture file.
-- `pnpm api:compare && pnpm api:extra --package activerecord` reports
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord` reports
   activerecord novel count dropping from 776 to roughly 676; record the
   exact new number in the PR body.
-- No change to `api:compare` parity percentages (`@internal` already had no
+- No change to `parity:api` parity percentages (`@internal` already had no
   effect on the Rails-side comparison for these names) — state the
   before/after overall figure in the PR body to prove it.

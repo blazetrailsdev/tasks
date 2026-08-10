@@ -38,7 +38,7 @@ Consumers today: `abstract-controller/index.ts:89` re-exports it, and
 
 - `withRoutesHelpers` is no longer exported; only the Rails-named `with` is.
 - `index.ts` and the test import via `{ with as withRoutesHelpers }`.
-- The `withRoutesHelpers` `@noRailsEquivalent` tag is deleted; `api:extra`
+- The `withRoutesHelpers` `@noRailsEquivalent` tag is deleted; `parity:api:extra`
   reports one fewer extra for `abstractcontroller` and no stale tags.
 - If the extractor still counts the unexported declaration as surface, fix that
   instead of re-adding the tag.

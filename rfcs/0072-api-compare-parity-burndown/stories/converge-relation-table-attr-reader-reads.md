@@ -59,7 +59,7 @@ missing call.
   table (constructor `table:` with `arelTable.alias(...)`) and assert the
   emitted SQL qualifies against the ALIAS, not the base table, on at least one
   affected path (e.g. `arel_column` / order / find_some select).
-- Reseed with `pnpm api:calls:wide:reseed`; `pnpm api:calls:wide` stays green
+- Reseed with `pnpm parity:api:calls:reseed`; `pnpm parity:api:calls` stays green
   and the baseline does not grow.
 - 500 LOC ceiling; split by file if needed (query-methods / finder-methods /
   relation.ts are natural seams).

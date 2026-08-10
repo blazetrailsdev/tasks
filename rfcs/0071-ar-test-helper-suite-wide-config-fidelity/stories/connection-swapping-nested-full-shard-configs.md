@@ -41,4 +41,4 @@ Missing relative to Rails:
 - [ ] New databases follow the file-backed topology already established in the
       file (each replica shares its primary's file; `sqliteDb(name)` helper).
 - [ ] Test names unchanged; assertion bodies mirror the Rails tests.
-- [ ] CI green on all three adapters; `test:compare` delta non-negative.
+- [ ] CI green on all three adapters; `parity:test` delta non-negative.

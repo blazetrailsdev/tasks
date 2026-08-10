@@ -68,7 +68,7 @@ the introspection/quoting half (17 entries) moved to
   `except`, `slice` — `foreign_key_exists?`, `pluralize` and
   `strip_table_name_prefix_and_suffix` have already cleared).
 - Introspection and quoting are OUT of scope — see the successor story.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/sqlite3/`.
 

@@ -52,7 +52,7 @@ siblings; `AbstractMysqlAdapter` ← the three `MySQL::*` siblings;
 `Internal::Timezone`.
 
 Measured impact (patched `compare.ts` locally with a prefix walk, re-ran
-`pnpm api:extra --package activerecord`, then reverted): activerecord moved
+`pnpm parity:api:extra --package activerecord`, then reverted): activerecord moved
 extras **2084 → 1901 (−183)**. Per file:
 `connection-adapters/postgresql-adapter.ts` 149 → 36,
 `connection-adapters/sqlite3-adapter.ts` 71 → 38,
@@ -77,7 +77,7 @@ if (incName.includes("::")) {
 
 `resolveModuleName` is shared with `compare.ts`'s own
 `flattenIncludedMethodInfos`, so fixing it will also expand the Rails-side
-expected surface for those hosts — `api:compare` totals may move. That is the
+expected surface for those hosts — `parity:api` totals may move. That is the
 correct direction (previously-invisible Rails methods becoming visible), but
 verify and report the delta rather than papering over it.
 
@@ -91,7 +91,7 @@ verify and report the delta rather than papering over it.
   qualified name resolving via prefix walk; fully-qualified name that already
   matches; `::`-absolute name; and a qualified name with no match anywhere
   (verbatim fallback).
-- `pnpm api:compare` re-run: report the overall methods/files/arity delta in
+- `pnpm parity:api` re-run: report the overall methods/files/arity delta in
   the PR body. If ported-method counts move, explain each direction.
-- `pnpm api:extra --package activerecord` moved count drops to ~1901; record
+- `pnpm parity:api:extra --package activerecord` moved count drops to ~1901; record
   the exact number.

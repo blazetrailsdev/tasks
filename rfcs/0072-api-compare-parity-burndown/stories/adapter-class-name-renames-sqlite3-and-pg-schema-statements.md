@@ -38,7 +38,7 @@ could not ship inside that PR:
    (postgresql/schema_statements.rb) and the unprefixed convention the rest of
    `connection-adapters/postgresql/` already follows (`TableDefinition`,
    `Table`, `AlterTable`). **This rename was attempted and reverted**: it costs
-   one matched method (`quote_schema_name`, api:compare data layer
+   one matched method (`quote_schema_name`, parity:api data layer
    7724 → 7723). Root cause: `include(PostgreSQLAdapter, X)` is recorded by
    `extract-ts-api.ts:1084` as the bare short name `X` on `extends`, and
    `resolveParent` (`scripts/api-compare/compare.ts:1549`) resolves a duplicated
@@ -61,8 +61,8 @@ could not ship inside that PR:
   duplicated short name by the importing file's actual import (the symbol's
   declaration file is available at extraction time), OR an equivalent fix is
   agreed; then `PostgreSQLSchemaStatements` is renamed to `SchemaStatements`
-  with api:compare data-layer totals unchanged (7724 or better).
-- `pnpm api:extra --package activerecord` reports 0 novel names for
+  with parity:api data-layer totals unchanged (7724 or better).
+- `pnpm parity:api:extra --package activerecord` reports 0 novel names for
   `connection-adapters/sqlite3-adapter.ts` except names owned by other stories
   (`exec`, `executeMutation`) and 0 for
   `connection-adapters/postgresql/schema-statements-class.ts` except

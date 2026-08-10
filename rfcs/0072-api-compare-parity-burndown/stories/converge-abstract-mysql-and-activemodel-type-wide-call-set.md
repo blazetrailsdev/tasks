@@ -53,7 +53,7 @@ Anchors:
 - Converge `Decimal#changed?` onto Rails' `equal_nan?` /
   `number_to_non_number?` predicates.
 - Converge the abstract-mysql bodies or record a specific per-entry `reason`.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after
   `vendor/rails/activemodel/test/cases/type/{time_test,date_time_test,decimal_test}.rb`
   and the Rails mysql adapter cases.

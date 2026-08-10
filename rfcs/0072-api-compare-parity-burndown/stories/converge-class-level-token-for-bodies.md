@@ -48,6 +48,6 @@ token)`. Trails reimplements the lookup (its own `requirePrimaryKey` +
 - `generateTokenFor` / `generatesTokenFor` go through the `tokenDefinitions`
   reader (and its `fetch`) rather than the private registry helpers.
 - Entries drop out of `call-mismatches-wide-exclude/activerecord/token-for.json`;
-  `pnpm api:calls:wide` passes with a strictly smaller baseline.
+  `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - `token-for.test.ts` (port of `token_for_test.rb`) stays green with names
   unchanged.

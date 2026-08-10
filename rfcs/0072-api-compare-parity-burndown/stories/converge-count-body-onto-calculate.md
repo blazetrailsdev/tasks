@@ -64,5 +64,5 @@ and the plain `COUNT(*)` / DISTINCT-pk arms):
       `execute_grouped_calculation` sets in
       `.../activerecord/relation/calculations.json` shrink; survivors carry a
       real per-entry reason.
-- [ ] `pnpm api:calls` green (only-shrink), `pnpm api:compare` /
-      `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api:calls` green (only-shrink), `pnpm parity:api` /
+      `pnpm parity:test` deltas non-negative.

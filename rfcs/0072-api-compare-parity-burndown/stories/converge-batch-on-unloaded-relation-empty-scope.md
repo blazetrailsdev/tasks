@@ -43,6 +43,6 @@ yields raw rows while Rails' yields relations.
   and drives the range-mode decision there rather than in `inBatches`.
 - The `use_ranges` handling (`(empty_scope && use_ranges != false) || use_ranges`)
   moves with it.
-- `pnpm api:calls:wide:reseed` clears the `batch_on_unloaded_relation` entries in
+- `pnpm parity:api:calls:reseed` clears the `batch_on_unloaded_relation` entries in
   `relation/batches.json`, or the survivors carry a real per-entry reason.
 - `packages/activerecord/src/batches.test.ts` stays green; no test renames.

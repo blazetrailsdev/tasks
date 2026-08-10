@@ -54,5 +54,5 @@ in the same pass.
 
 - [ ] No `EncryptionContext` interface remains under `encryption/`.
 - [ ] No `as unknown as` cast in `context.ts`.
-- [ ] `pnpm api:extra --package activerecord` for `encryption/context.ts` drops
+- [ ] `pnpm parity:api:extra --package activerecord` for `encryption/context.ts` drops
       by the removed names; encryption suites green on all three lanes.

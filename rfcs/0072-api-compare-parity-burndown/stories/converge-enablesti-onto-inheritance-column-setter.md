@@ -56,7 +56,7 @@ story because the mechanical migration alone is ~190 LOC.
 - Leave no `@noRailsEquivalent` tag behind (`scripts/api-compare/extra-surface.ts:44-47`) — the name is deleted,
   not tagged.
 - Do NOT rename tests (CLAUDE.md).
-- api:compare and test:compare deltas non-negative; `pnpm api:extra --package
+- parity:api and parity:test deltas non-negative; `pnpm parity:api:extra --package
 activerecord` novel count for inheritance.ts stays 0.
 - STI suites pass, plus the association suites that call `enableSti` most
   (associations/has-many-associations.test.ts, associations/eager.test.ts).

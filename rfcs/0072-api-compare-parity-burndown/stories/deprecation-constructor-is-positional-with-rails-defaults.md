@@ -49,7 +49,7 @@ Three divergences:
 
 1. **Shape.** Rails' positionals became a kwargs-style options object. Rails
    has no kwargs here, so there is no kwarg idiom to appeal to — this is an
-   invented signature, and it is why `api:compare` reports the constructor's
+   invented signature, and it is why `parity:api` reports the constructor's
    arity against a 2-positional Ruby method.
 2. **Defaults dropped.** `deprecationHorizon` and `gemName` are left
    `undefined` where Rails defaults them to `"8.1"` and `"Rails"`. Every
@@ -57,7 +57,7 @@ Three divergences:
    gap today, but a bare `new Deprecation()` diverges from Rails.
 3. **Name.** `horizon` is not the Ruby name — `attr_accessor
 :deprecation_horizon` (`deprecation.rb:65`) camelizes to
-   `deprecationHorizon`. `pnpm api:extra --package activesupport` currently
+   `deprecationHorizon`. `pnpm parity:api:extra --package activesupport` currently
    reports `horizon` as novel surface on `deprecation.ts` for exactly this
    reason.
 
@@ -83,7 +83,7 @@ form. The `_silenceCounter` / `_allowContexts` initializers already mirror
 - [ ] The constructor takes `(deprecationHorizon = "8.1", gemName = "Rails")`
       positionally (`deprecation.rb:71`).
 - [ ] `horizon` is renamed `deprecationHorizon` (`deprecation.rb:65`) and
-      leaves `api:extra`'s novel list for `deprecation.ts`.
+      leaves `parity:api:extra`'s novel list for `deprecation.ts`.
 - [ ] The invented `silenced` constructor option is gone.
 - [ ] All construction sites updated; `deprecation.rb`'s arity mismatch clears
-      in `pnpm api:compare --arity`.
+      in `pnpm parity:api --arity`.

@@ -1,5 +1,5 @@
 ---
-title: "Burn down the 12 STALE @noRailsEquivalent tags reding api:extra for activerecord"
+title: "Burn down the 12 STALE @noRailsEquivalent tags reding parity:api:extra for activerecord"
 status: done
 updated: 2026-08-04
 rfc: "0072-api-compare-parity-burndown"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activerecord` exits 1 on a clean, fully-built tree with
+`pnpm parity:api:extra --package activerecord` exits 1 on a clean, fully-built tree with
 12 STALE `@noRailsEquivalent` tags — tags on methods that no longer flag as extra
 surface. Surfaced while gating PR #5990, which touches none of the named files,
 so this is pre-existing and blocks the gate for every agent who runs it:
@@ -50,7 +50,7 @@ includes) before deciding.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra --package activerecord` exits 0 on a fully-built tree.
+- [ ] `pnpm parity:api:extra --package activerecord` exits 0 on a fully-built tree.
 - [ ] Each of the 12 tags is either deleted (Rails counterpart exists now) or
       its name is converged away; no tag is left stale and none is re-worded to
       silence the check.

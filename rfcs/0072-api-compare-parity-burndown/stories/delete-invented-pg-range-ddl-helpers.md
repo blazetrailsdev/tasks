@@ -63,4 +63,4 @@ The story title is now a misnomer; the work is to re-reason, not to delete.
   lands a permanence-classification token first, use it — this is a PERMANENT
   deviation, not deferred work.
 - No behavior change, no test changes, no allowlist entry.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

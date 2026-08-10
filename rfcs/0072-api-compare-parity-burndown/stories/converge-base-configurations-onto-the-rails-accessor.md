@@ -45,7 +45,7 @@ with a bucket-(b) reason.
   `configurationsEmpty` helper in `query-cache.ts` collapses into
   `this.configurations().empty` (or the converged spelling).
 - The four `cache`/`uncached` → `configurations` entries drop out of the wide
-  call-mismatch baseline; `pnpm api:calls:wide` passes with a strictly smaller
+  call-mismatch baseline; `pnpm parity:api:calls` passes with a strictly smaller
   baseline.
 - Tests named verbatim after the Rails cases that cover
   `Base.configurations` (`vendor/rails/activerecord/test/cases/`).

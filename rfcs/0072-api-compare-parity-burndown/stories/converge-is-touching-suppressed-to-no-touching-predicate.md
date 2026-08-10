@@ -50,4 +50,4 @@ name needs checking against what is already there before landing.
 - Reconcile with the existing `no-touching.ts:51` `isNoTouching()` export so
   the file does not end up with two spellings of one Ruby method.
 - `base.ts` drops one novel extra; record before/after in the PR body.
-- Re-run `pnpm api:calls:wide`.
+- Re-run `pnpm parity:api:calls`.

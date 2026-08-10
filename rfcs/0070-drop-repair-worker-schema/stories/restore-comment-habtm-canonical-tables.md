@@ -28,4 +28,4 @@ grepping DDL/`defineSchema` on `lessons_students`/`students`.
 - Identify the culprit and make it restore the canonical shape of all four
   tables after it runs (or use transactional fixtures / scratch tables).
 - Re-measured CI shows zero repair firings for this table set.
-- Rails-faithful; no test renamed; `test:compare` delta >= 0.
+- Rails-faithful; no test renamed; `parity:test` delta >= 0.

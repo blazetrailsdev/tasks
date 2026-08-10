@@ -18,7 +18,7 @@ closed-reason: "spike complete: inventory in story body + audit report extra-sur
 ## Context
 
 Spike/audit (done-when-closed). The activerecord extra-surface counts are far
-too large for direct stories: 793 novel / 2315 moved (`pnpm api:extra`,
+too large for direct stories: 793 novel / 2315 moved (`pnpm parity:api:extra`,
 2026-07-25). Top offenders:
 
 - `connection-adapters.ts` — 48 novel, 568 moved (legacy monolith; most
@@ -57,7 +57,7 @@ classified name list and file:line context so implementers don't re-derive.
 
 The headline finding is that **the activerecord extra-surface numbers are
 substantially wrong, not substantially large.** Of the 776 novel / 2084 moved
-extras `pnpm api:extra --package activerecord` reported on 2026-07-25, at
+extras `pnpm parity:api:extra --package activerecord` reported on 2026-07-25, at
 least **179 novel and 1015 moved are tooling artifact** — five distinct
 extractor/allow-set defects, each independently reproducible and each fixable
 in well under 100 LOC. The story's own hypotheses were partly right and partly
@@ -73,7 +73,7 @@ registry, the schema-cache/pool sync API, and recurring adapter names). Ten
 follow-up stories are registered in RFC 0072, all with per-name lists and
 `file:line` refs.
 
-Numbers throughout are from `pnpm api:compare` + `pnpm api:extra --package
+Numbers throughout are from `pnpm parity:api` + `pnpm parity:api:extra --package
 activerecord --top 25 --json` run at commit `d34479c3c` on 2026-07-25.
 
 ### Coverage
@@ -94,7 +94,7 @@ activerecord --top 25 --json` run at commit `d34479c3c` on 2026-07-25.
   `associations.ts`, `inheritance.ts`, `base.ts`,
   `connection-adapters/postgresql-adapter.ts`.
 - Experiment: `compare.ts:683` patched locally with a namespace-prefix walk,
-  `pnpm api:extra` re-run, patch reverted (`git checkout`). Worktree is clean.
+  `pnpm parity:api:extra` re-run, patch reverted (`git checkout`). Worktree is clean.
 
 ### Top-20 inventory with per-name classification
 
@@ -147,7 +147,7 @@ a further 183 moved.
 
 ### D2: partially-qualified `include`/`extend` names never resolve
 
-- **Type:** shared api-compare bug (affects `api:compare` too)
+- **Type:** shared api-compare bug (affects `parity:api` too)
 - **Where:** `scripts/api-compare/compare.ts:683` —
   `if (incName.includes("::")) return [incName];`
 - **Evidence:** `postgresql_adapter.rb:183` `include PostgreSQL::Quoting`
@@ -285,7 +285,7 @@ dependency-ordered so the tooling fixes land before the classification work.
 | `extra-surface-sti-and-schema-registry-names`          | 180     | 40   | D1, D4 |
 
 Recommended order: ship the five tooling stories first (they are independent
-of each other and of the classification work), re-run `pnpm api:compare && pnpm
-api:extra --package activerecord --json`, then start the classification
+of each other and of the classification work), re-run `pnpm parity:api && pnpm
+parity:api:extra --package activerecord --json`, then start the classification
 stories from the refreshed lists. Doing it the other way round means every
 classification story re-derives a name list that is ~30% artifact.

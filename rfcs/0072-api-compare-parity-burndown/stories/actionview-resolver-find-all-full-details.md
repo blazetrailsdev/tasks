@@ -37,7 +37,7 @@ Rails' real implementation is wider:
 The narrowness is downstream of a pre-existing decision: trails' resolver
 primitive is `find(name, prefix, format, extensions)` (`resolver.ts`), which
 has no locale/handler/variant parameters, and `UnboundTemplate`/locals binding
-is not ported (`unbound_template.rb` is 0/11 in api:compare). So this is a real
+is not ported (`unbound_template.rb` is 0/11 in parity:api). So this is a real
 gap on the production render path — `lookup-context.ts:451`,
 `renderer/template-renderer.ts` and `renderer/streaming-template-renderer.ts`
 all reach `findAll`.

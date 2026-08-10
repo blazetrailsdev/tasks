@@ -33,5 +33,5 @@ includer graph bound `include ColumnMethods` broadly to
 
 - MySQL `TableDefinition` exposes `charset` and `collation` readers matching
   the Rails `attr_reader`.
-- `pnpm api:compare --package activerecord` shows
+- `pnpm parity:api --package activerecord` shows
   `connection_adapters/mysql/schema_definitions.rb` regain the two methods.

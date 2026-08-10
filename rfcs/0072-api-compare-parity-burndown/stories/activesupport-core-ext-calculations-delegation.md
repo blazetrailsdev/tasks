@@ -61,7 +61,7 @@ does not.
   `scripts/api-compare/call-mismatches-exclude/activesupport/time-ext.json` that
   the convergence retires is DELETED from the baseline by hand (the baseline is
   only-shrink; do not `--write`/reseed).
-- `pnpm api:calls` green with a strictly smaller `time-ext.json`.
+- `pnpm parity:api:calls` green with a strictly smaller `time-ext.json`.
 - `packages/activesupport/src/core-ext/{time,date,date-time}-ext.test.ts` and
   `packages/activesupport/src/time-ext.test.ts` stay green.
 - No test renames.

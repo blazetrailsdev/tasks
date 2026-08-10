@@ -92,7 +92,7 @@ extra-surface-mixin-pseudo-module-host-leak`) — **not affected.** They cite
 
 ### Re-derived `__mixin` key set
 
-`pnpm build && pnpm api:compare`, then the `<file>:<fn>__mixin` keys under
+`pnpm build && pnpm parity:api`, then the `<file>:<fn>__mixin` keys under
 `packages.<pkg>.classes` in `scripts/api-compare/output/ts-api.json`
 (2026-08-02, `ba674d3eb`): **21 keys in 4 packages, 12 files.**
 

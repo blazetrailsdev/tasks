@@ -1,5 +1,5 @@
 ---
-title: "api:compare: resolve superclass/mixin short-name collisions by declaring file"
+title: "parity:api: resolve superclass/mixin short-name collisions by declaring file"
 status: done
 updated: 2026-08-03
 rfc: "0072-api-compare-parity-burndown"
@@ -46,4 +46,4 @@ colliding) Rails names:
   declaring file or are documented (with a test) as unable to collide.
 - Unit tests in `scripts/api-compare/` reproduce a duplicated short name for
   each converted site and assert the correct candidate wins.
-- api:compare data-layer total non-negative (>= the total at claim time).
+- parity:api data-layer total non-negative (>= the total at claim time).

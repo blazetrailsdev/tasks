@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`api:compare --wide-calls` now flags four Rails call sites whose TS port reads
+`parity:api --wide-calls` now flags four Rails call sites whose TS port reads
 the readonly-attribute set directly instead of delegating to the ported
 predicate, mirroring Rails' `readonly_attribute?(name)`:
 

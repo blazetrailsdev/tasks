@@ -38,5 +38,5 @@ and the `_view_paths` pair goes through `ActionView::PathRegistry`
 - `packages/actionview/src/view-paths.ts` exists and carries
   `ActionView::ViewPaths`' surface, following the mixin convention in
   CLAUDE.md (this-typed functions / `include()`).
-- `pnpm api:compare --package actionview` improves on `view_paths.rb`
+- `pnpm parity:api --package actionview` improves on `view_paths.rb`
   (baseline after #5344: 2/17).

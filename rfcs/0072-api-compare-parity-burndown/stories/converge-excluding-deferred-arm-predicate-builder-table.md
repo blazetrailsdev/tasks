@@ -43,4 +43,4 @@ a `Relation#table` attr_reader read.
 - Regression test that fails on baseline, exercising `excluding` with an
   unloaded relation argument on a relation whose predicate builder table
   differs from `model.arelTable`.
-- `pnpm api:calls:wide` stays green; baseline does not grow.
+- `pnpm parity:api:calls` stays green; baseline does not grow.

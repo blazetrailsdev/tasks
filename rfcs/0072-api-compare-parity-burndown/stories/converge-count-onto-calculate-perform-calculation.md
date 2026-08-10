@@ -63,11 +63,11 @@ and `execute_grouped_calculation` sets in `relation/calculations.json`.
 - The composite-PK eager-count and `subquery_for_count` behaviour is preserved —
   `packages/activerecord/src/calculations.test.ts` and `relations.test.ts` stay
   green with no test renames.
-- `pnpm api:calls:wide:reseed` clears the `calculate` `primary_key` entry in
+- `pnpm parity:api:calls:reseed` clears the `calculate` `primary_key` entry in
   `relation.json` and shrinks the `execute_simple_calculation` /
   `execute_grouped_calculation` sets in `relation/calculations.json`; survivors
   carry a real per-entry reason.
-- `pnpm api:compare` and `pnpm test:compare` deltas are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas are non-negative.
 
 ## Notes
 

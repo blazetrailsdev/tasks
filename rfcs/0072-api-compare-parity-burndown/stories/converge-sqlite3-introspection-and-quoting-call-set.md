@@ -61,7 +61,7 @@ racing it.
 - The quoting/casting bodies make the calls Rails makes, or each surviving
   baseline entry carries a specific per-entry reason naming the equivalent path
   (not the generic RFC 0047 seed text).
-- `pnpm api:calls:wide` passes with a strictly smaller baseline; state the
+- `pnpm parity:api:calls` passes with a strictly smaller baseline; state the
   before/after entry count for this file in the PR body.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/sqlite3/`.

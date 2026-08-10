@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-PR #5351 ported `messages/serializer_with_fallback.rb` (8/8 in `api:compare`)
+PR #5351 ported `messages/serializer_with_fallback.rb` (8/8 in `parity:api`)
 but nothing consumes it: `messages/codec.rb` — the class that turns a
 `serializer:` symbol into a serializer via
 `SerializerWithFallback[@serializer]`
@@ -44,4 +44,4 @@ open-coded in both classes.
   replacing the bespoke `JSONSerializer` default with Rails' `:marshal`
   default (or justify keeping `:json` at the call site).
 - Existing message-encryptor / message-verifier tests keep passing, and
-  `pnpm api:compare --package activesupport` shows a non-negative delta.
+  `pnpm parity:api --package activesupport` shows a non-negative delta.

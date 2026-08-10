@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra` (`scripts/api-compare/extra-surface.ts`) reports TS methods
+`pnpm parity:api:extra` (`scripts/api-compare/extra-surface.ts`) reports TS methods
 with no Rails counterpart, but its only suppression tools are the global
 `TS_ALWAYS_ALLOWED` name set (`extra-surface.ts:85`) and the ad-hoc
 `--exclude-glob` flag (`extra-surface.ts:307`). There is no per-file,
@@ -50,5 +50,5 @@ stale-entry enforcement in `lint-call-mismatches.ts`. Mirror it.
 - `extra-surface.test.ts` covers allow + stale paths.
 - Ships empty or with only the entries needed to keep current output stable —
   populating it is the reconciliation stories' job.
-- Do NOT gate `api:extra` outputs away from the report — they feed the user's
+- Do NOT gate `parity:api:extra` outputs away from the report — they feed the user's
   stats pipeline; the allowlist annotates, the raw JSONs keep flowing.

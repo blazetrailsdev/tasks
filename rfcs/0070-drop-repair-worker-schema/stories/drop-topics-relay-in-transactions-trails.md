@@ -49,4 +49,4 @@ confirm no sibling still lays a bespoke `topics` before deleting.
 - No sibling file left laying a bespoke `topics` shape into the shared worker DB;
   if one exists, it is the thing to fix instead.
 - `TransactionTest` passes on sqlite and postgres.
-- No test renamed; `test:compare` delta >= 0.
+- No test renamed; `parity:test` delta >= 0.

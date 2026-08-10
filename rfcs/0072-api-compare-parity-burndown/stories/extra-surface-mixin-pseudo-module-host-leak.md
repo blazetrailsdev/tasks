@@ -48,7 +48,7 @@ grep -n "isEqual\|toSlug\|attributeNamesList\|loadBelongsTo" \
 buckets modules by `ClassInfo.file`, so the whole host interface lands on
 whichever file declares the mixin function.
 
-Scale (measured against `pnpm api:extra --package activerecord --json`,
+Scale (measured against `pnpm parity:api:extra --package activerecord --json`,
 cross-referenced with `ts-api.json`): only 6 activerecord files declare
 `__mixin` pseudo-modules, but they account for **343 of the package's 2084
 moved extras (16%) and 14 of 776 novel**, entirely fabricated:
@@ -64,7 +64,7 @@ Novel leakage is the same five names on three files: `attributeNamesList`,
 `isEqual`, `toSlug`, `loadBelongsTo`, `loadHasOne`.
 
 A host-interface member is by definition declared elsewhere; it is never this
-file's surface. The `__mixin` pseudo-module exists so the api:compare
+file's surface. The `__mixin` pseudo-module exists so the parity:api
 Rails-layout check can see which host a mixin attaches to — that use is
 legitimate; the bug is that extra-surface treats it as declared surface.
 
@@ -82,7 +82,7 @@ legitimate; the bug is that extra-surface treats it as declared surface.
   declaring one exported function returning a constructor whose instance type
   has a member the file does not declare; assert the member is absent from extras
   and the function name is present.
-- `pnpm api:compare && pnpm api:extra --package activerecord`: moved drops by
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord`: moved drops by
   ~343 and novel by ~14; `associations.ts` moved 94 → ~0, `inheritance.ts`
   98 → ~4, `relation/delegation.ts` 97 → ~4, `migration/compatibility.ts`
   63 → ~1. Record exact numbers.

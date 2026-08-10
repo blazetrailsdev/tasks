@@ -56,5 +56,5 @@ rewritten toward a record that was never persisted.
       propagates out of `HasOneThroughAssociation#_createRecord`.
 - [ ] Regression test in `has-one-through-associations.test.ts` using canonical
       models/fixtures only; must fail on baseline.
-- [ ] has_one / has_one_through suites stay green; `test:compare` delta
+- [ ] has_one / has_one_through suites stay green; `parity:test` delta
       non-negative.

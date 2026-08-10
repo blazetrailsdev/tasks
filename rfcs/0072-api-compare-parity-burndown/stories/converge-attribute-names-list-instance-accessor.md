@@ -23,7 +23,7 @@ rename-to-converge.
 `packages/activerecord/src/base.ts:4176` declares an instance getter
 `attributeNamesList`, delegating to `attributeNamesList` in
 `packages/activerecord/src/attribute-methods.ts` (which is itself flagged as
-1 novel extra in `pnpm api:extra --package activerecord --novel-only`).
+1 novel extra in `pnpm parity:api:extra --package activerecord --novel-only`).
 
 Rails names this `attribute_names`, an instance method at
 `vendor/rails/activerecord/lib/active_record/attribute_methods.rb:334`. The
@@ -48,4 +48,4 @@ Callers of the instance form:
   static of the same name).
 - `base.ts` and `attribute-methods.ts` each drop one novel extra; record
   before/after in the PR body.
-- NO test renames. Re-run `pnpm api:calls:wide`.
+- NO test renames. Re-run `pnpm parity:api:calls`.

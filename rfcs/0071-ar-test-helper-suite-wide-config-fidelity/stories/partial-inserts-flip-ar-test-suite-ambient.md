@@ -39,7 +39,7 @@ ambient to `true` is blocked on these systemic gaps:
 Once those land, flip the harness to the Rails-test ambient (`partial_inserts =
 true` — i.e. drop the partial_inserts effect of `loadDefaults("7.0")` for the
 test suite), remove the now-redundant `restoreRailsTestPartialInserts` opt-ins,
-and confirm test:compare / api:compare delta is non-negative.
+and confirm parity:test / parity:api delta is non-negative.
 
 ## Acceptance criteria
 
@@ -48,4 +48,4 @@ and confirm test:compare / api:compare delta is non-negative.
 - [ ] AR test suite runs with `partial_inserts = true` (Rails-test ambient).
 - [ ] `restoreRailsTestPartialInserts` opt-ins removed; helper retired or
       repurposed.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

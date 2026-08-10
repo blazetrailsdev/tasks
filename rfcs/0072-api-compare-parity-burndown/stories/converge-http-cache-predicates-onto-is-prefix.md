@@ -23,7 +23,7 @@ for Rails' `Cache::Response#last_modified?`, `#date?` and `#etag?`
 (`vendor/rails/actionpack/lib/action_dispatch/http/cache.rb:75`, `:89`,
 `:127`). `scripts/api-compare/conventions.ts` maps a Ruby `foo?` onto an
 `is`-prefixed TS name, so all three land as novel extra surface: `pnpm
-api:extra` reports `http/cache.ts — 3 novel` and they are the three.
+parity:api:extra` reports `http/cache.ts — 3 novel` and they are the three.
 
 This also has a second-order cost. In `significantMissingCalls`
 (`scripts/api-compare/compare.ts:262-266`) a Ruby call is checked against

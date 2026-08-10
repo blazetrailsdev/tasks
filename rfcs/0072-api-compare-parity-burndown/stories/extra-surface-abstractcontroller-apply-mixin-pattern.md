@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra` for abstractcontroller shows a recurring pattern: `applyX`
+`pnpm parity:api:extra` for abstractcontroller shows a recurring pattern: `applyX`
 mixin-installer functions with no Rails counterpart, plus a callback-macro
 cluster on `base.ts`:
 
@@ -52,5 +52,5 @@ Paths: `packages/actionpack/src/abstract-controller/…`.
 - Every `apply*` installer is either replaced by the standard
   `include()`/`Included<>` mechanism or allowlisted with the `included do`
   rationale via extra-surface-reasoned-allowlist.
-- `pnpm api:extra --package abstractcontroller` reports 0 unreconciled novel
+- `pnpm parity:api:extra --package abstractcontroller` reports 0 unreconciled novel
   entries; touched test files pass.

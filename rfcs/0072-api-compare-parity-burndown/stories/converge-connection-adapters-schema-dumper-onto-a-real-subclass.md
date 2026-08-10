@@ -61,6 +61,6 @@ needs from `column_spec` it gets by dynamic dispatch on the instance, as in Ruby
       real `extends`, no cyclic import, no mixin host.
 - [ ] The bare-base construction path still works (RFC 0056) — or is itself
       converged onto `createSchemaDumper`.
-- [ ] The `inheritance-exclude.json` entry is **deleted**; `pnpm api:inheritance`
+- [ ] The `inheritance-exclude.json` entry is **deleted**; `pnpm parity:api:inheritance`
       stays green (the gate fails on the now-stale row if it is left behind).
 - [ ] activerecord inheritance reports 210/210 with no exclusions.

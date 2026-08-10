@@ -57,7 +57,7 @@ others are real behaviour gaps (the INCLUDE-column rejection in `indexes`).
 - Route introspection through the ported exec primitives (`query`,
   `queryValue`, `queryValues`, `internalExecQuery`) rather than adapter-local
   helpers, where the Rails body uses them.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline; no entry is
+- `pnpm parity:api:calls` passes with a strictly smaller baseline; no entry is
   merely reworded.
 - Tests: PG-adapter schema-statements tests named verbatim after the Rails
   tests in `vendor/rails/activerecord/test/cases/adapters/postgresql/`.

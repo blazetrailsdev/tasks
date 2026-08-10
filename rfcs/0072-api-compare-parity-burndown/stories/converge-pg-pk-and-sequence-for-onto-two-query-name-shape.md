@@ -47,5 +47,5 @@ The return-type change ripples into `setPkSequenceBang`,
   `connection-adapters/postgresql/utils.ts`.
 - Callers read `.schema` / `.identifier` off the `Name`.
 - The three `pk_and_sequence_for` wide-baseline entries are removed.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Existing PG schema tests keep passing under PostgreSQL.

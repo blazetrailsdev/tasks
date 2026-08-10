@@ -58,7 +58,7 @@ for free and this story should be closed as superseded rather than worked.
   the Rails `file:line`.
 - No blanket restructuring: helpers that exist for a real reason (shared by
   several callers, or isolating async) stay, with the exclusion reasoned.
-- Reseed with `pnpm api:calls:wide:reseed`; `pnpm api:calls:wide` stays green
+- Reseed with `pnpm parity:api:calls:reseed`; `pnpm parity:api:calls` stays green
   and the baseline does not grow.
 - 500 LOC ceiling; split by file if needed.
 

@@ -63,6 +63,6 @@ that call `inTimeZone()` and then delegate to the `Time` arm, and repoint
 - [ ] The five `in_time_zone` rows are DELETED from
       `call-mismatches-exclude/activesupport/time-ext.json` by hand (only-shrink;
       no `--write` reseed).
-- [ ] `pnpm api:calls` green; `pnpm api:compare` / `pnpm test:compare` deltas
+- [ ] `pnpm parity:api:calls` green; `pnpm parity:api` / `pnpm parity:test` deltas
       non-negative.
 - [ ] No test renames.

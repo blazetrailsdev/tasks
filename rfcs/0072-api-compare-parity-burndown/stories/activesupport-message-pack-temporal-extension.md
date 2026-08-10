@@ -42,4 +42,4 @@ trails `Time` analogue, so the packer should be Temporal-based.
   (`vendor/rails/activesupport/lib/active_support/message_pack/extensions.rb`).
 - `:message_pack` can carry a `Metadata` expiry: adding
   `SERIALIZERS.message_pack` back to the metadata test serializer matrix passes.
-- `pnpm api:compare --package activesupport` non-negative.
+- `pnpm parity:api --package activesupport` non-negative.

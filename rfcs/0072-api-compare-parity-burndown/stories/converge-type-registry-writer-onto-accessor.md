@@ -26,7 +26,7 @@ of Rails' `ActiveRecord::Type.registry` accessor
 (`vendor/rails/activerecord/lib/active_record/type.rb`, `class << self;
 attr_accessor :registry`). `scripts/api-compare/conventions.ts` maps `registry=`
 onto the same camelCase name as its reader, so `setRegistry` is TS surface Rails
-does not have and shows as `1 novel` in `api:extra` for `type.ts`.
+does not have and shows as `1 novel` in `parity:api:extra` for `type.ts`.
 
 It was excluded from the converging PR for a concrete reason, recorded in the
 JSDoc above the function: Rails hangs the accessor off the
@@ -48,4 +48,4 @@ has no Rails counterpart at all; it may want folding into the same decision.
   substitute for deciding; convergeable surface stays counted (#5342).
 - Only three call sites assign the registry today (`type.test.ts`,
   `type.trails.test.ts`), so churn is small — check before sizing.
-- `pnpm api:compare` matched-method count does not regress.
+- `pnpm parity:api` matched-method count does not regress.

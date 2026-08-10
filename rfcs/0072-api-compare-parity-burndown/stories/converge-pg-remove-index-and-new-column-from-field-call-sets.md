@@ -67,6 +67,6 @@ These entries still flag in
 - Rewrite the `reason` on the remaining bucket-(b) entries
   (`fetch` / `first` / `hexdigest` / `map` / `sum`) to state the Ruby-idiom
   reason instead of the generic RFC 0047 seed text.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/postgresql/`.

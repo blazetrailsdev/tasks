@@ -58,6 +58,6 @@ and `.../postgresql/utils.rb` (`Utils.extract_schema_qualified_name`).
   they do not.
 - Baseline entries drop out of
   `call-mismatches-wide-exclude/activerecord/connection-adapters/postgresql-adapter.json`;
-  `pnpm api:calls:wide` passes with a strictly smaller baseline.
+  `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/postgresql/`.

@@ -20,7 +20,7 @@ closed-reason: null
 Found by the `extra-surface-activerecord-top-files-inventory` spike
 (2026-07-25). `packages/activerecord/src/relation/finder-methods.ts` is the
 **highest-purity drift file in activerecord: 30 novel extras and 0 moved**
-(`pnpm api:extra --package activerecord`). Every one of the 30 is a trails
+(`pnpm parity:api:extra --package activerecord`). Every one of the 30 is a trails
 naming invention, not a Rails port with a wrong home — nothing named
 `perform_first` or `raise_not_found_all` exists anywhere in
 `vendor/rails/activerecord/`.
@@ -74,6 +74,6 @@ relying on it.
 - No behavior change: `pnpm vitest run packages/activerecord/src/relation/finder-methods.test.ts`
   and any `*.trails.test.ts` sibling pass unchanged.
 - No test renames (test names match Rails verbatim).
-- `pnpm api:extra --package activerecord` reports
+- `pnpm parity:api:extra --package activerecord` reports
   `relation/finder-methods.ts` at 0 unexplained novel extras; record the
   before/after in the PR body.

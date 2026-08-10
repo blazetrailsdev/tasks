@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra` for globalid (which is otherwise at 100% method parity):
+`pnpm parity:api:extra` for globalid (which is otherwise at 100% method parity):
 7 novel + 13 moved across 4 files —
 
 - `uri/gid.ts` — novel `buildGid`, `normalizeModelId`, `parseGid`; moved
@@ -46,5 +46,5 @@ mind — read `tasks/rfcs/0069-globalid-trailtie-port` context first).
 - Every globalid novel/moved entry reconciled: removed, relocated to its
   Rails-layout file, or allowlisted with a written reason. "Still listed" is
   not done.
-- `pnpm api:extra --package globalid` reports 0 unreconciled entries.
-- `pnpm api:compare` globalid parity stays 100%; touched test files pass.
+- `pnpm parity:api:extra --package globalid` reports 0 unreconciled entries.
+- `pnpm parity:api` globalid parity stays 100%; touched test files pass.

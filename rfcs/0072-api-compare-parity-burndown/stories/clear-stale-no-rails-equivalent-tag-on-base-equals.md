@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced while closing `extra-surface-adapter-class-names` (PR #5927).
 
-`pnpm api:extra --package activerecord` exits NON-ZERO on `origin/main` with:
+`pnpm parity:api:extra --package activerecord` exits NON-ZERO on `origin/main` with:
 
 ```text
 extra-surface: 1 STALE @noRailsEquivalent tag(s) on methods that no longer
@@ -28,8 +28,8 @@ flag as extra surface ... Delete the tag next to the code:
 ```
 
 This is pre-existing, NOT introduced by #5927 — verified by stashing that PR's
-changes and re-running the full pipeline (`pnpm build && pnpm api:compare &&
-pnpm api:extra`) on a clean `origin/main` checkout, which reports the same one
+changes and re-running the full pipeline (`pnpm build && pnpm parity:api &&
+pnpm parity:api:extra`) on a clean `origin/main` checkout, which reports the same one
 entry. It means every extra-surface story currently inherits a red run it did
 not cause, and has to re-derive that fact before it can trust its own totals.
 
@@ -49,6 +49,6 @@ spelling may now be matching where it previously did not.
 - If the method now has a genuine Rails counterpart, DELETE the tag (the tool's
   instruction). If instead the tag's reason prose was truncated by a bare `@tag`
   word, fix the prose so the reason parses. Do not silence the check.
-- `pnpm api:extra --package activerecord` exits ZERO with 0 STALE entries on
+- `pnpm parity:api:extra --package activerecord` exits ZERO with 0 STALE entries on
   `main`.
-- `pnpm api:compare` and `pnpm test:compare` totals are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` totals are non-negative.

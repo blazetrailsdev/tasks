@@ -44,4 +44,4 @@ argumentless. The same shape recurs in every adapter subclass constructor.
   instance instead and why the Rails signature is not portable.
 - Adapter subclass constructors (`sqlite3`, `postgresql`, `mysql2`, the fake)
   agree with whichever shape is chosen — no mix of forwarding and zero-arg.
-- `pnpm api:compare` arity for `AbstractAdapter#initialize` does not regress.
+- `pnpm parity:api` arity for `AbstractAdapter#initialize` does not regress.

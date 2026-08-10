@@ -30,7 +30,7 @@ PR for `port-encryption-config-has-credential-predicates` added the three
 `has*` predicates to `packages/activerecord/src/encryption/config.ts`, but the
 bare readers there are still plain public fields (`primaryKey`,
 `deterministicKey`, `keyDerivationSalt`) that return `undefined` instead of
-raising. `api:compare` counts them as matched either way, so the divergence is
+raising. `parity:api` counts them as matched either way, so the divergence is
 invisible to the gates.
 
 The raise currently lives in the trails-only `Config#get(key)` +

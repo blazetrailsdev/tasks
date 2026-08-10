@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced while shipping `extra-surface-has-one-through-classify`.
 `packages/activerecord/src/associations/has-one-association.ts` reports 4 novel
-extras under `pnpm api:compare && pnpm api:extra --package activerecord
+extras under `pnpm parity:api && pnpm parity:api:extra --package activerecord
 --novel-only`:
 
 ```text
@@ -64,7 +64,7 @@ rather than tagging convergeable surface as allowed.
   reach it Rails' way), or (c) misplaced port to relocate + rename onto its
   Rails name.
 - Convergeable names are actioned, not tagged `@noRailsEquivalent CONVERGEABLE`.
-- `pnpm api:extra --package activerecord --novel-only` shows
+- `pnpm parity:api:extra --package activerecord --novel-only` shows
   `associations/has-one-association.ts` dropping by the number of names
   actioned, and `associations/has-one-through-association.ts` dropping its
   matching overrides; record before/after in the PR body.

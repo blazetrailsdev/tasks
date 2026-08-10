@@ -32,7 +32,7 @@ Rails itself gets `to_json` on these classes from
 (`vendor/rails/activesupport/lib/active_support/core_ext/object/json.rb:35-43`,
 included at `json.rb:47-49`) — which PR #6208 ported and `include()`d into
 `Model`, so `Model` now carries **both** a correctly-named `toJSON` from the
-mixin and the invented-spelling `toJson` beside it. `api:extra` scores `toJson`
+mixin and the invented-spelling `toJson` beside it. `parity:api:extra` scores `toJson`
 as novel surface in both files.
 
 The serializers arm also takes a `root` option Rails threads through
@@ -52,6 +52,6 @@ names stay verbatim.
 
 - [ ] No `toJson` spelling remains in `packages/activemodel`; `to_json` is
       served by `toJSON` at the Rails name.
-- [ ] `pnpm api:extra --package activemodel` loses both novel `toJson` rows.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative; no test
+- [ ] `pnpm parity:api:extra --package activemodel` loses both novel `toJson` rows.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative; no test
       renamed.

@@ -22,7 +22,7 @@ classified `associations.ts` from 26 novel extras down to 19. That work
 explicitly scoped OUT an adjacent finding, which this story picks up.
 
 `packages/activerecord/src/base.ts` is rank #5 in
-`pnpm api:extra --package activerecord --novel-only` with **19 novel, 0 moved**:
+`pnpm parity:api:extra --package activerecord --novel-only` with **19 novel, 0 moved**:
 
 ```text
 adapterClassSync         attributeNamesList       attributeSetCoder
@@ -82,7 +82,7 @@ evaporate. Do not carry the `associations.ts` assumption over.
 - (c) verdicts registered as follow-up stories carrying name lists and
   `base.ts:<line>` refs. Do NOT open sibling PRs.
 - Record `base.ts` novel before/after in the PR body.
-- Re-run `pnpm api:calls:wide` — `@internal` changes what `extract-ts-api`
+- Re-run `pnpm parity:api:calls` — `@internal` changes what `extract-ts-api`
   emits and that ratchet has gone stale on exactly this before.
 - No test renames. No `node:*` imports. No `process.*` references. Async fs
   only. camelCase only.

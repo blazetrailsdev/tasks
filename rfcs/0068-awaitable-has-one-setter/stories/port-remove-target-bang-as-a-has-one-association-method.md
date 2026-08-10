@@ -37,7 +37,7 @@ Two divergences from the Rails shape:
 
 - It is a free function taking the association as its first argument, so it
   reaches into the class through `(assoc as any).nullifyOwnerAttributes(...)` /
-  `(assoc as any).setOwnerAttributes(...)` casts, and `api:compare` cannot match
+  `(assoc as any).setOwnerAttributes(...)` casts, and `parity:api` cannot match
   it to Rails' method (it counts as missing surface on `HasOneAssociation`).
 - It carries an extra `target` parameter Rails does not have. PR #5455 converged
   the two displaced-removal helpers into one `detachDisplacedTarget(displaced)`,
@@ -50,7 +50,7 @@ Two divergences from the Rails shape:
 ## Acceptance criteria
 
 - [ ] `remove_target!` is ported as a method on `HasOneAssociation` named
-      `removeTargetBang`, matched by `pnpm api:compare` against
+      `removeTargetBang`, matched by `pnpm parity:api` against
       `has_one_association.rb:95` (activerecord missing count drops).
 - [ ] The `any` casts to `nullifyOwnerAttributes` / `setOwnerAttributes` go away
       (they become `this.` calls).

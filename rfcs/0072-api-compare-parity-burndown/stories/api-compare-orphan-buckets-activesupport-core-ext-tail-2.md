@@ -71,5 +71,5 @@ reasons via `serializeBaseline` — never `--write` — or converge them.
   entry with a reason; the orphan query returns nothing for activesupport
   except files covered by one of the two.
 - Per-package ported-method deltas reported in the PR body.
-- `pnpm api:calls` green with no `--write` reseed of unrelated packages.
+- `pnpm parity:api:calls` green with no `--write` reseed of unrelated packages.
 - Split under the LOC ceiling; register a further slice if needed.

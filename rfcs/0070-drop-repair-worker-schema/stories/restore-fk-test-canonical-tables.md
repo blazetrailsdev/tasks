@@ -29,4 +29,4 @@ was `associations/has-one-associations.test.ts`. Culprit: `adapter.test.ts`
   runs (or uses transactional fixtures / scratch tables). Aligns with RFC 0059
   (drop `defineSchema`).
 - Re-measured CI shows zero repair firings for these tables.
-- Rails-faithful; no test renamed; `test:compare` delta >= 0.
+- Rails-faithful; no test renamed; `parity:test` delta >= 0.

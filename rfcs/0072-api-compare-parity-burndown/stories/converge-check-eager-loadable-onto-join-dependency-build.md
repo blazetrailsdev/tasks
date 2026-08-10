@@ -19,7 +19,7 @@ closed-reason: null
 
 `JoinDependency#validateEagerLoadSpec`
 (`packages/activerecord/src/associations/join-dependency.ts`) is a trails
-invention with no Rails counterpart. `pnpm api:extra` counts it among the six
+invention with no Rails counterpart. `pnpm parity:api:extra` counts it among the six
 novel names in that file (`aliasedRow`, `columnsForNode`,
 `instantiateFromRows`, `nodes`, `selectArel`, `validateEagerLoadSpec`), and no
 story owns it — it appears in the tasks repo only as context in
@@ -57,7 +57,7 @@ without changing behavior.
 
 - `validateEagerLoadSpec` is deleted; `Relation#_checkEagerLoadable` routes
   through constructing a `JoinDependency` instead.
-- `pnpm api:extra` reports 5 novel names in `associations/join-dependency.ts`,
+- `pnpm parity:api:extra` reports 5 novel names in `associations/join-dependency.ts`,
   down from 6.
 - Misspelled-name and polymorphic eager loads raise the same errors with the
   same messages on the calculation and exists paths. `join-model.test.ts`

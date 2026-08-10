@@ -18,7 +18,7 @@ closed-reason: "out of scope for RFC 0072 after scope tightening (2026-07-26): t
 ## Context
 
 `ActionView::Rendering` (`vendor/rails/actionview/lib/action_view/rendering.rb`)
-is 2/28 in api:compare. It was 4/28 until PR #5350, which deleted the
+is 2/28 in parity:api. It was 4/28 until PR #5350, which deleted the
 `ViewPaths`/`ViewPathsClass` placeholder interfaces in
 `packages/actionview/src/rendering.ts` — `ActionView::Rendering` includes
 `ActionView::ViewPaths` (rendering.rb:10), so two of the names it was credited
@@ -42,4 +42,4 @@ module has something real to lean on.
   rather than stub interfaces.
 - The remaining `@internal stub` interfaces in that file are gone, per
   CLAUDE.md's no-placeholder rule — anything not implemented is left out.
-- api:compare `rendering.rb` improves on 2/28.
+- parity:api `rendering.rb` improves on 2/28.

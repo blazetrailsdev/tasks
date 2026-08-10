@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-api:compare buckets a Ruby class/module's whole method set under the ONE file
+parity:api buckets a Ruby class/module's whole method set under the ONE file
 the extractor stamped on the entity — the file that defined its FIRST method
 (`maybe_update_module_file`, `scripts/api-compare/extract-ruby-api.rb:670`).
 Ruby reopens classes across many files, so every method a LATER file adds is

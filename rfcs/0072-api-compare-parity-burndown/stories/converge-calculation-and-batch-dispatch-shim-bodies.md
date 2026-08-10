@@ -63,6 +63,6 @@ Baselined entries live in
   or the divergence is justified at the call site with the Rails `file:line`.
 - The `ensure_valid_options_for_batching!` unique-index check moves from
   `relation.ts` `inBatches` into `relation/batches.ts`, matching Rails' layout.
-- `pnpm api:calls:wide:reseed` shrinks the wide baseline for this cluster; the
+- `pnpm parity:api:calls:reseed` shrinks the wide baseline for this cluster; the
   entries that remain carry a real per-entry reason, not the seeded default.
-- `pnpm api:compare` and `pnpm test:compare` deltas are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas are non-negative.

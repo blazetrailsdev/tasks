@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced while closing `extra-surface-adapter-per-file-singletons` (PR #5918).
 With that story's members resolved, the _only_ novel surface left on most
-adapter files is the exported CLASS name itself. `pnpm api:extra --package
+adapter files is the exported CLASS name itself. `pnpm parity:api:extra --package
 activerecord --json` reports one novel name per file for:
 
 - `connection-adapters/better-sqlite3-adapter.ts` — `BetterSQLite3Adapter`
@@ -51,7 +51,7 @@ on its own evidence:
    `AbstractSQLite3Adapter` needs the same check against `SQLite3Adapter` and
    the trails inheritance layout before it is tagged.
 
-Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json`.
+Reproduce with `pnpm parity:api && pnpm parity:api:extra --package activerecord --json`.
 
 ## Acceptance criteria
 
@@ -62,7 +62,7 @@ Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json
   and states PERMANENT or CONVERGEABLE; justifications live at the declaration
   site.
 - Novel counts for the listed files drop to 0 except for names owned by other
-  stories; `pnpm api:extra` reports no STALE entries.
-- A rename must not regress `pnpm api:compare` or `pnpm test:compare` totals —
+  stories; `pnpm parity:api:extra` reports no STALE entries.
+- A rename must not regress `pnpm parity:api` or `pnpm parity:test` totals —
   record both deltas in the PR body.
 - Scoped `pnpm vitest run` on the touched adapter/driver test files passes.

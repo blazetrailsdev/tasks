@@ -55,5 +55,5 @@ decomposition and both names are measured.
 - [ ] The ten aliases exist and delegate; no reimplementation.
 - [ ] `plus_with_duration` / `minus_with_duration` / `compare_with_coercion` and
       their `_without_` counterparts are ported with Rails' branch order.
-- [ ] `api:compare` `core_ext/date/calculations.rb` matched count rises from 15;
-      `pnpm api:calls` green.
+- [ ] `parity:api` `core_ext/date/calculations.rb` matched count rises from 15;
+      `pnpm parity:api:calls` green.

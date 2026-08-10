@@ -66,6 +66,6 @@ targets the `internal_exec_query` layer directly at these three call sites, not
   ported `internalExecQuery` primitive and reuse the ported `castValues`.
 - The six listed entries drop out of the wide baseline, or get a specific
   `reason` naming the equivalent path (not the generic RFC 0047 seed text).
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/postgresql/extension_migration_test.rb`.

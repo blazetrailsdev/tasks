@@ -18,7 +18,7 @@ closed-reason: "Out of scope: RFC 0072 rescoped to activerecord and its dependen
 
 ## Context
 
-After #6243 removed `TemplateHandlerRegistry`, `pnpm api:extra --package actionview`
+After #6243 removed `TemplateHandlerRegistry`, `pnpm parity:api:extra --package actionview`
 still scores 3 novel names in `packages/actionview/src/template/handlers.ts`:
 `TemplateHandlers`, and the `RenderContext` fields `templatePath` and `yield`.
 
@@ -38,7 +38,7 @@ Rails has no counterpart.
 
 - `RenderContext`'s trails-only fields are removed or replaced by the Rails
   shape (handler receives the template, reads `identifier` itself).
-- `pnpm api:extra --package actionview` drops the corresponding novel names with
+- `pnpm parity:api:extra --package actionview` drops the corresponding novel names with
   no allowlist rows added.
 - If a field genuinely cannot converge, it carries a `@noRailsEquivalent` tag
   with a reviewed reason at the declaration.

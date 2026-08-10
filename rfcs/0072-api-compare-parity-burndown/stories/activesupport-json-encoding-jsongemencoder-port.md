@@ -24,7 +24,7 @@ member — `Encoding.useStandardJsonTimeFormat` — because
 flag defined at `json/encoding.rb:117,132` and delegated from `ActiveSupport` at
 `json/encoding.rb:8-12`).
 
-The file's existence changed what api:compare can see: `json/encoding.rb` reads
+The file's existence changed what parity:api can see: `json/encoding.rb` reads
 0/13 methods, and `JSONGemEncoder` now scores as an inheritance `class missing`
 where previously the whole file was skipped as "file missing" (compare.ts
 decrements `inheritance.checked` in that case). Same unported code either way —
@@ -42,5 +42,5 @@ delegates to `JSON.stringify` instead.
   under the Rails layout: the remaining `Encoding` accessors and `JSONGemEncoder`.
 - `ActiveSupportJSON.encode` routes through the ported encoder rather than
   duplicating the traversal, or the duplication is justified at the call site.
-- api:compare activesupport `json/encoding.rb` rises and the `JSONGemEncoder`
+- parity:api activesupport `json/encoding.rb` rises and the `JSONGemEncoder`
   inheritance mismatch clears.

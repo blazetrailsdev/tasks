@@ -45,5 +45,5 @@ Consequences carried by `packages/activesupport/src/messages/codec.ts` today:
 - Replace `MessageVerifier`'s bespoke envelope with
   `serializeWithMetadata` / `deserializeWithMetadata`, and give
   `MessageEncryptor` the same options surface.
-- `pnpm api:compare --package activesupport` non-negative;
+- `pnpm parity:api --package activesupport` non-negative;
   `messages/codec.rb` and both message classes rise.

@@ -1,5 +1,5 @@
 ---
-title: "api:extra red — encryption/config.ts getSharedConfig tag states no permanence claim"
+title: "parity:api:extra red — encryption/config.ts getSharedConfig tag states no permanence claim"
 status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra` exits non-zero on main:
+`pnpm parity:api:extra` exits non-zero on main:
 
 ````text
 extra-surface: 1 @noRailsEquivalent tag(s) state no permanence claim.
@@ -27,7 +27,7 @@ extra-surface: 1 @noRailsEquivalent tag(s) state no permanence claim.
 The tag landed in #6127 (`packages/activerecord/src/encryption/config.ts:179`) and
 its reason is written out in full but does not open with `PERMANENT` or
 `CONVERGEABLE`, which is what the gate requires. Surfaced while running
-`pnpm api:extra` on PR #6131; the file was untouched by that PR so it was left
+`pnpm parity:api:extra` on PR #6131; the file was untouched by that PR so it was left
 alone.
 
 The reason given is an ESM load-order fact: Ruby resolves
@@ -49,7 +49,7 @@ callers should name `Configurable.config`, the reader Rails declares, with
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra` exits zero.
+- [ ] `pnpm parity:api:extra` exits zero.
 - [ ] Either `getSharedConfig` is gone and its callers read `Configurable.config`,
       or its `@noRailsEquivalent` reason opens with `PERMANENT` and names the
       concrete cycle edge that forces it.

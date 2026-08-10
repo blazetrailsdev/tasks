@@ -30,15 +30,15 @@ PR #5938 re-typed it as `function schemaCreation(this: SchemaQuoter)` so it
 keeps Rails' zero-arg shape after the adapter became required, but that only
 made a dead duplicate faithful rather than removing it.
 
-Check before deleting: `api:compare` may be matching `schema_creation` through
+Check before deleting: `parity:api` may be matching `schema_creation` through
 this standalone function rather than through the adapter getter, in which case
 removing it must not lose the match (the getter should pick it up — verify with
-`pnpm api:compare` on the activerecord slice before and after).
+`pnpm parity:api` on the activerecord slice before and after).
 
 ## Acceptance criteria
 
 - The standalone `schemaCreation` export is deleted, or a production caller is
   established for it.
 - Its test is deleted or retargeted at the adapter getter.
-- `api:compare` still matches `schema_creation`; activerecord method coverage
+- `parity:api` still matches `schema_creation`; activerecord method coverage
   and novel counts do not regress.

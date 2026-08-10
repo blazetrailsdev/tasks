@@ -45,7 +45,7 @@ Two structural differences behind that:
   normalized options through every recursion level (`this.normalizedOptions`),
   because it has no `as_json` layer to apply them in.
 - The `as_json` layer Rails dispatches through, `core_ext/object/json.rb`, is
-  unported — `pnpm api:compare --package activesupport` reads
+  unported — `pnpm parity:api --package activesupport` reads
   `core_ext/object/json.rb -> core-ext/object/json.ts` at 0/6. `Object#as_json`
   (`:62-64`), `Hash#as_json`, `Array#as_json`, and the Time/Date arms
   (`:200-228`) all live inline in `jsonify`/`temporalAsJson` instead.
@@ -71,7 +71,7 @@ deviation is cited in the `jsonify` JSDoc and points at this story.
       too; check that the `asJson` raises the current body relies on (e.g.
       `Type#asJson`, `value.rb:145`) still fire — that is why the guard was
       dropped, and a real `as_json` layer is what makes restoring it safe.
-- [ ] `pnpm api:compare --package activesupport` shows `core_ext/object/json.rb`
+- [ ] `pnpm parity:api --package activesupport` shows `core_ext/object/json.rb`
       above 0/6 and `json/encoding.rb` still at 13/13.
 - [ ] `packages/activesupport/src/json/encoding.test.ts`,
       `json/encoding.trails.test.ts`, and the AR `type/json`, `coders/json`,

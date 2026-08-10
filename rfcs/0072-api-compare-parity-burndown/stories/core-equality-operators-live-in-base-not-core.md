@@ -37,7 +37,7 @@ Two consequences:
    so both stay unmapped and their Rails source positions are unenforced. They
    were deliberately left out of `OPERATOR_SPELLING_BY_FQN` in #5247 for exactly
    this reason — an entry pointing at `base.ts` would be dead.
-2. It violates the api:compare invariant that a method stays in the file
+2. It violates the parity:api invariant that a method stays in the file
    matching Rails' layout (CLAUDE.md "Module mixins"; see also the
    `api_compare_method_must_stay_in_rails_layout_file` convention).
 

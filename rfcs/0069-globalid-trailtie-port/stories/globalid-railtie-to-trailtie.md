@@ -53,9 +53,9 @@ Reference implementations:
       per-test `tests:` exclusions with justification.
 - [ ] Remove the globalid `/railtie_test.rb` whole-file entry from
       `scripts/parity/unported-files.ts` (or narrow to per-test) so the
-      file re-enters test:compare accounting. Confirm the railtie→trailtie path
+      file re-enters parity:test accounting. Confirm the railtie→trailtie path
       alias (added in PR #5220) maps it to `trailtie.test.ts`.
-- [ ] Report the globalid test:compare delta.
+- [ ] Report the globalid parity:test delta.
 
 ## Non-goals
 

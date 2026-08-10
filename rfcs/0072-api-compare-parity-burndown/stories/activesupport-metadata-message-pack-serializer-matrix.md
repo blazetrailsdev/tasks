@@ -39,4 +39,4 @@ picks that up second should fold this in rather than duplicating.
   marshal and json, and the `DATA` set covers a temporal value, matching Rails.
 - The expiry-carrying cases pass under the MessagePack serializer, exercising
   the `TIMESTAMP_SERIALIZERS` raw-`Instant` path rather than the ISO 8601 string.
-- `pnpm test:compare --package activesupport` non-negative.
+- `pnpm parity:test --package activesupport` non-negative.

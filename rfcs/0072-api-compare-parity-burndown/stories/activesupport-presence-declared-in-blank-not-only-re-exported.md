@@ -66,4 +66,4 @@ is ported, it is the file layout that diverges.
       missing member.
 - [ ] `presence` keeps its Rails name and single implementation (no duplicate
       body).
-- [ ] `pnpm api:compare` delta non-negative.
+- [ ] `pnpm parity:api` delta non-negative.

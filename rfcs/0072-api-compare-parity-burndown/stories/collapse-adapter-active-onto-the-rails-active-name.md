@@ -94,7 +94,7 @@ individually, not sed-swept.
 - Depends on `mysql2-connected-predicate-folds-in-cached-ping-state` landing
   first — that story fixes what `isConnected()`/`active` each mean, which
   determines what the merged `active` should return.
-- `pnpm api:extra --package activerecord` shows the `activeAsync` novel entry
+- `pnpm parity:api:extra --package activerecord` shows the `activeAsync` novel entry
   gone and no new STALE tags.
 - MySQL, PG and SQLite lanes green (MySQL needs a running server; CI covers it).
 

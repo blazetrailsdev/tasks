@@ -61,4 +61,4 @@ it for PostgreSQL to consult `primaryKey(tableName)` / the existing
       trailing trails-only element, and sets no `primaryKey`.
 - [ ] PG schema dumps are unchanged (dumper suite + schema-dumper PG lane),
       including composite-PK tables and PK column ordering.
-- [ ] `pnpm api:compare` non-negative; no new call-mismatch rows.
+- [ ] `pnpm parity:api` non-negative; no new call-mismatch rows.

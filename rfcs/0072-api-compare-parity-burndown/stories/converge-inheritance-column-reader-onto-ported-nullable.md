@@ -50,7 +50,7 @@ currently carried as extra surface rather than converged.
   only to undo the flattening).
 - Leave no `@noRailsEquivalent` tags behind (`scripts/api-compare/extra-surface.ts:44-47`) — the names are
   deleted, not tagged.
-- api:compare and test:compare deltas non-negative; `pnpm api:extra --package
+- parity:api and parity:test deltas non-negative; `pnpm parity:api:extra --package
 activerecord` novel count for inheritance.ts stays 0.
 - STI suites pass: inheritance.test.ts, inheritance-namespaced.test.ts,
   sti-attribute-routing.test.ts, modules.test.ts, plus any test that sets

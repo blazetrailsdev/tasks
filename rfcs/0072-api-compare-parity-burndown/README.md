@@ -1,6 +1,6 @@
 ---
 rfc: "0072-api-compare-parity-burndown"
-title: "api:compare parity & fidelity burndown"
+title: "parity:api parity & fidelity burndown"
 status: active
 created: 2026-07-25
 updated: 2026-08-08
@@ -20,7 +20,7 @@ clusters:
 
 ## Summary
 
-Burn down the three drift buckets `api:compare` (`scripts/api-compare/`) still
+Burn down the three drift buckets `parity:api` (`scripts/api-compare/`) still
 reports for the data layer, toward full Rails API parity and fidelity:
 
 1. **Missing methods** — 4 in activerecord (`null_scope?`, `already_in_scope?`,
@@ -30,7 +30,7 @@ reports for the data layer, toward full Rails API parity and fidelity:
    pairs (`output/arity-mismatches.json`). A deep dive (below) shows roughly
    half are checker/extractor gaps, the rest split between genuine signature
    gaps and state-threading port deviations.
-3. **Extra TS surface** — `pnpm api:extra` novel/moved methods with no Rails
+3. **Extra TS surface** — `pnpm parity:api:extra` novel/moved methods with no Rails
    counterpart. This RFC reconciles the small named clusters (globalid,
    abstractcontroller) and sets up the allowlist mechanism + triage for the
    large activerecord files.

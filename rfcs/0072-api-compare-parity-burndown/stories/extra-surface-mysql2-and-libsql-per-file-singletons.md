@@ -22,7 +22,7 @@ That story took the three adapter files named in its scope
 (`abstract-mysql-adapter.ts`, `postgresql-adapter.ts`, `sqlite3-adapter.ts`) and
 its sibling `extra-surface-adapter-cross-file-recurring-names` took the
 cross-file recurring names. Nobody owns the per-file singletons on the two
-remaining concrete adapter files, which `pnpm api:extra --package activerecord
+remaining concrete adapter files, which `pnpm parity:api:extra --package activerecord
 --json` still reports as novel:
 
 - `connection-adapters/mysql2-adapter.ts` — `activeAsync`, `databaseTimezone`,
@@ -40,7 +40,7 @@ splitting lives in `AbstractMysqlAdapter#extract_schema_qualified_name`,
 abstract_mysql_adapter.rb). libsql has no Rails counterpart at all, so
 `syncReplica` is a driver-only concept.
 
-Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json`.
+Reproduce with `pnpm parity:api && pnpm parity:api:extra --package activerecord --json`.
 
 ## Acceptance criteria
 
@@ -52,7 +52,7 @@ Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json
 - Justifications live at the declaration site, not only in the PR body.
 - Novel counts for `mysql2-adapter.ts` and `libsql-replica-adapter.ts` drop to
   the residue owned by other stories (`exec` / `executeMutation` / the class
-  name); `pnpm api:extra` reports no STALE entries.
+  name); `pnpm parity:api:extra` reports no STALE entries.
 - Scoped `pnpm vitest run` on the touched adapter test files passes. The MySQL
   lane needs a running server; if unavailable locally, say so and let CI verify.
 - Record per-file novel before/after in the PR body.

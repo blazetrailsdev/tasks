@@ -57,7 +57,7 @@ counterpart, and some correspond to a Rails body that really does say
   its Rails counterpart; those whose Rails body calls the bare delegate are
   routed through `this.primaryKey` / `this.tableName` / `this.unscoped()`.
   The rest are left alone and noted in the PR body.
-- Reseed with `pnpm api:calls:wide:reseed`; `pnpm api:calls:wide` stays green
+- Reseed with `pnpm parity:api:calls:reseed`; `pnpm parity:api:calls` stays green
   and the baseline does not grow.
 - Behavior-preserving: no test changes expected beyond stub shapes.
 - 500 LOC ceiling; split by file if needed.

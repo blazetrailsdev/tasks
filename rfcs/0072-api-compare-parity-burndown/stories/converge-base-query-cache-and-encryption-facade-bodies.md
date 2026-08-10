@@ -51,7 +51,7 @@ and `.../encryption/encryptable_record.rb`.
   must not be connected by `Model.cache { }`) that fails on the current
   implementation.
 - Entries drop out of `call-mismatches-wide-exclude/activerecord/base.json`;
-  `pnpm api:calls:wide` passes with a strictly smaller baseline.
+  `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after
   `vendor/rails/activerecord/test/cases/query_cache_test.rb` and
   `.../encryption/encryptable_record_test.rb`.

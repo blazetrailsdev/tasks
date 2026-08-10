@@ -27,4 +27,4 @@ drifted; victim was `adapters/postgresql/uuid.test.ts`. Culprit:
 - Culprit restores the canonical `CamelCase` shape after it runs (or uses
   transactional fixtures / a scratch table). Aligns with RFC 0059.
 - Re-measured CI shows zero repair firings for `CamelCase`.
-- Rails-faithful; no test renamed; `test:compare` delta >= 0.
+- Rails-faithful; no test renamed; `parity:test` delta >= 0.

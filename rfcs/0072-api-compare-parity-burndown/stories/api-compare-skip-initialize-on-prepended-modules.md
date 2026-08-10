@@ -17,8 +17,8 @@ closed-reason: null
 
 ## Context
 
-`api:compare` scores `messages/rotator.rb -> messages/rotator.ts` at 6/7, and
-`api:extra` counts one novel name in that file. Both are the same thing:
+`parity:api` scores `messages/rotator.rb -> messages/rotator.ts` at 6/7, and
+`parity:api:extra` counts one novel name in that file. Both are the same thing:
 Ruby's `Messages::Rotator#initialize` (`rotator.rb:5`).
 
 The extractor maps a Ruby `initialize` to a TS `constructor`. `Rotator` is a
@@ -43,6 +43,6 @@ Filed from PR #5960 (`port-activesupport-messages-rotation-tests`).
   recorded, so it counts neither as a miss nor as novel extra surface.
 - The rule is keyed to the mixin-module case; a real class's `initialize` must
   still be expected to map to a `constructor`.
-- `messages/rotator.rb` scores 7/7 and `api:extra` reports 0 novel for
+- `messages/rotator.rb` scores 7/7 and `parity:api:extra` reports 0 novel for
   `messages/rotator.ts`.
 - Covered by a test in `scripts/api-compare/`.

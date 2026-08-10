@@ -57,8 +57,8 @@ split.
 Confirm the api-compare accounting after: these names are presumably being
 credited to `base.ts` today, so removing them should move the `TokenDefinition`
 members' match onto `token-for.ts` where the Ruby counterparts live, rather
-than losing matches. Check with `pnpm api:compare` and
-`pnpm api:extra --package activerecord` before and after.
+than losing matches. Check with `pnpm parity:api` and
+`pnpm parity:api:extra --package activerecord` before and after.
 
 ## Acceptance criteria
 
@@ -66,8 +66,8 @@ than losing matches. Check with `pnpm api:compare` and
       `generateToken`, `resolveToken`; `generateTokenFor` (token_for.rb:119)
       remains the only `TokenFor` instance method on `Base`.
 - [ ] `token-for.ts`'s `TokenDefinition` is unchanged.
-- [ ] `pnpm api:compare` delta is non-negative and
-      `pnpm api:extra --package activerecord` does not regress `token-for.ts`
+- [ ] `pnpm parity:api` delta is non-negative and
+      `pnpm parity:api:extra --package activerecord` does not regress `token-for.ts`
       or `base.ts`.
 - [ ] `token-for.test.ts` and `token-for.trails.test.ts` stay green, no test
       name changes.

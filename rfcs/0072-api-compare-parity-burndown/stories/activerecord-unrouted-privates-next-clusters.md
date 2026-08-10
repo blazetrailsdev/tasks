@@ -58,7 +58,7 @@ Natural next clusters, each roughly one PR:
   the built node/SQL — not merely that the call returns the right class.
 - Each new test verified to FAIL on the pre-fix implementation.
 - Wide-baseline entries that converge are removed; the baseline only shrinks.
-  Re-run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-  `pnpm api:calls:wide` (a stale artifact reports a false OK).
+  Re-run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+  `pnpm parity:api:calls` (a stale artifact reports a false OK).
 - Entries confirmed non-actionable get a `reason` on their wide-baseline entry
   so the next sweep does not re-derive them.

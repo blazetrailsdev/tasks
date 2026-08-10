@@ -34,7 +34,7 @@ have drifted, re-derive with
 
 ### Why relocation alone is not enough
 
-`api:compare` matches a TS name to a Rails method by **name + Rails-layout
+`parity:api` matches a TS name to a Rails method by **name + Rails-layout
 file**. Moving a body to `associations/*-association.ts` under its current
 trails name only moves the extra; it does not clear it. Each name below must be
 **renamed to the Rails method name AND placed in the Rails-layout file**.
@@ -54,7 +54,7 @@ Parent classification: story `extra-surface-associations-engine-classify`
 
 - The named function(s) are gone from `packages/activerecord/src/associations.ts`
   and exist under their Rails method name in the Rails-layout TS file named above.
-- `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`
   shows the `associations.ts` novel count drop by exactly the number of names in
   this story. Record before/after in the PR body.
 - If a name is re-exported from `packages/activerecord/src/index.ts`, drop that

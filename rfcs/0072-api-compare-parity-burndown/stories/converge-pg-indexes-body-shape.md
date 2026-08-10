@@ -61,4 +61,4 @@ has to decide whether to keep it.
   the call site (not only in the PR body).
 - PG index tests named verbatim after Rails' (`test/cases/adapters/postgresql/`),
   covering an INCLUDE (covering) index and an expression index.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.

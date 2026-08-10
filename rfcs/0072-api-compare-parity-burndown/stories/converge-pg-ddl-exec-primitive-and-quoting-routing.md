@@ -64,7 +64,7 @@ anchored in
 - Every entry either drops out of
   `call-mismatches-wide-exclude/activerecord/connection-adapters/postgresql-adapter.json`
   or gets a specific `reason` naming the equivalent path.
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/postgresql/`.
 

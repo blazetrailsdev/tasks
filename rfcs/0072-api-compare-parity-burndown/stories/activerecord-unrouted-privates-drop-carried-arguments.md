@@ -57,7 +57,7 @@ This is that story. The arel sweep is done; the AR surface is unexamined.
   node class. That weak assertion is what let the arel cases sit undetected.
 - Each new test verified to FAIL on the pre-fix implementation.
 - Wide-baseline entries that converge are removed; baseline only shrinks.
-  Re-run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-  `pnpm api:calls:wide` (a stale artifact reports a false OK).
+  Re-run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+  `pnpm parity:api:calls` (a stale artifact reports a false OK).
 - Split across PRs if it exceeds the LOC ceiling; register the remainder as
   new stories rather than fanning out PRs.

@@ -34,7 +34,7 @@ deletion, not relocation — the story shipped as a pure deletion.
 Second data point from the same PR: `fireAssocCallbacks` in `associations.ts` was
 likewise dead and was deleted outright by a sibling story mid-flight. During a
 rebase it was silently _reintroduced_ by taking one side of a three-way conflict
-wholesale, and was caught only because the `api:extra` novel count failed to drop.
+wholesale, and was caught only because the `parity:api:extra` novel count failed to drop.
 
 Remaining relocation stories at time of filing: `extra-surface-relocate-load-has-one`,
 `extra-surface-relocate-load-through`, `extra-surface-relocate-update-counter-caches`
@@ -51,5 +51,5 @@ cycles and manufactures rebase conflicts for siblings touching the same file.
   claiming agent is not sent to relocate dead code.
 - Note the rebase hazard in the affected story bodies: when `associations.ts`
   conflicts, resolve to `main`'s side minus the name being removed, and re-measure
-  the `api:extra` baseline against the new `main` (absolute counts drift down as
+  the `parity:api:extra` baseline against the new `main` (absolute counts drift down as
   siblings land).

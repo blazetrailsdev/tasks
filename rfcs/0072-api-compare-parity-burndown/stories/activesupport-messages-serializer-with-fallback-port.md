@@ -36,4 +36,4 @@ Newly-visible: `SerializerWithFallback#load` (:17),
 - Port `messages/serializer_with_fallback.rb` (or record an
   `UNPORTED_FILES` entry with a reason if the Marshal/MessagePack formats have
   no JS analogue — decide explicitly rather than leaving it silently at 0/8).
-- `pnpm api:compare --package activesupport` reflects the decision.
+- `pnpm parity:api --package activesupport` reflects the decision.

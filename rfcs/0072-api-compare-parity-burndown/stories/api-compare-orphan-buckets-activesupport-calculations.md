@@ -44,5 +44,5 @@ in `scripts/api-compare/output/rails-api.json`).
   reason).
 - Per-package ported-method deltas are reported in the PR body and called out as
   measurement fixes, not new porting work.
-- `pnpm api:calls:wide` stays green; any newly matched pair that surfaces a wide
+- `pnpm parity:api:calls` stays green; any newly matched pair that surfaces a wide
   call mismatch gets a real reason, never the seeded default.

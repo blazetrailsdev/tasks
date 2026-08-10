@@ -63,7 +63,7 @@ before preserving it.
 - The `create_database merge!` and `create_database symbolize_keys` entries
   drop out of the wide baseline, or get a specific reason naming the equivalent
   path (not the generic RFC 0047 seed text).
-- `pnpm api:calls:wide` passes with a strictly smaller baseline.
+- `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after the Rails tests in
   `vendor/rails/activerecord/test/cases/adapters/postgresql/active_schema_test.rb`
   (`test_create_database_with_encoding` and neighbours).

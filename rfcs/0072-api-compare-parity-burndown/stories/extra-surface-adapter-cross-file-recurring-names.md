@@ -26,7 +26,7 @@ Found by the `extra-surface-activerecord-top-files-inventory` spike
 recurs across **five** adapter files, which means each is one decision that
 resolves five reports — not five separate problems.
 
-Files and their novel counts (`pnpm api:extra --package activerecord`):
+Files and their novel counts (`pnpm parity:api:extra --package activerecord`):
 `connection-adapters/abstract-adapter.ts` 15,
 `connection-adapters/abstract-mysql-adapter.ts` 30,
 `connection-adapters/postgresql-adapter.ts` 19,
@@ -75,7 +75,7 @@ see that tooling story).
 Sequencing: the SCREAMING*CASE constants on these same files
 (`ER*\_`, `CR\_\_`, `NATIVE_DATABASE_TYPES`, `MAX`, `MIN`, `TYPE`) are covered by
 the Ruby-constants tooling story and the `@internal`ones by the
-fileFunctions story — land both first and re-run`pnpm api:extra --package activerecord --json` so this story works from the
+fileFunctions story — land both first and re-run`pnpm parity:api:extra --package activerecord --json` so this story works from the
 reduced list (abstract-mysql-adapter should already be down from 30 to ~13).
 
 ## Acceptance criteria

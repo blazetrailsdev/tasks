@@ -57,7 +57,7 @@ against its Rails body — a blanket sed would be wrong.
   checked against its Rails counterpart body; those whose Rails body reads the
   `model` (or `klass`) accessor are routed through `this.model` / `this.klass`,
   the rest are left alone and noted in the PR body.
-- Reseed with `pnpm api:calls:wide:reseed`; `pnpm api:calls:wide` stays green
+- Reseed with `pnpm parity:api:calls:reseed`; `pnpm parity:api:calls` stays green
   and the baseline does not grow. Revert unrelated reseed churn (the reseed
   rewrites `attribute-methods.json` for unicode-escaping reasons only).
 - Behavior-preserving: no test changes expected.

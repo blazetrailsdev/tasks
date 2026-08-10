@@ -20,7 +20,7 @@ closed-reason: null
 Surfaced while shipping `extra-surface-relocate-load-through` (PR #5364).
 `packages/activerecord/src/associations/has-one-through-association.ts` still
 reports **5 novel extras** under
-`pnpm api:compare && pnpm api:extra --package activerecord --novel-only`:
+`pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`:
 
 ```text
 detachDisplacedRecord  detachDisplacedTarget  loadTargetForBuild
@@ -57,7 +57,7 @@ scope both together if they turn out to share a root.
 - Category (a) and (c) names are actioned in this story; category (b) names
   carry a declaration-site justification, not a bare allowlist entry (see the
   RFC 0072 fidelity-first policy).
-- `pnpm api:extra --package activerecord --novel-only` shows
+- `pnpm parity:api:extra --package activerecord --novel-only` shows
   `associations/has-one-through-association.ts` dropping by the number of names
   actioned; record before/after in the PR body.
 - has_one_through association tests pass with no test renames.

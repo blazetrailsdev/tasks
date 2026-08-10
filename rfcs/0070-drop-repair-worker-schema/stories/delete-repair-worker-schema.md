@@ -49,6 +49,6 @@ Targets:
   on sqlite, postgres, and maria.
 - Delete `schema-repair.ts`, `schema-repair.test.ts`, and the `test-setup-dy.ts`
   call site; no other test regresses (all 3 AR lanes green; shared-DB flake set
-  green; `test:compare` delta >= 0).
+  green; `parity:test` delta >= 0).
 - Remove any now-dead `AR_DISABLE_SCHEMA_REPAIR` / `AR_QUIET_SCHEMA_REPAIR`
   references. Note the RFC 0028 masking-removal follow-up in the PR body.

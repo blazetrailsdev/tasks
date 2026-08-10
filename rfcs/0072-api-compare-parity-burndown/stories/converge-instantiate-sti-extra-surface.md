@@ -41,4 +41,4 @@ in that PR; this story is the leftover.
 - No `@noRailsEquivalent` tag (`scripts/api-compare/extra-surface.ts:44-47`) — the tag is for
   irreducible surface only; convergeable surface stays counted (#5342).
 - `activerecord` novel extra-surface count decreases by at least 1.
-- `pnpm api:compare` matched-method count does not regress.
+- `pnpm parity:api` matched-method count does not regress.

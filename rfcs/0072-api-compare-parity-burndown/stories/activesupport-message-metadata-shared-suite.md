@@ -53,4 +53,4 @@ Still unported from `message_metadata_tests.rb`:
   from both `message-verifier-metadata.test.ts` and
   `message-encryptor-metadata.test.ts`, with Rails' test names verbatim.
 - Any case that cannot run states why at the call site (not the PR body).
-- `pnpm test:compare --package activesupport` non-negative.
+- `pnpm parity:test --package activesupport` non-negative.

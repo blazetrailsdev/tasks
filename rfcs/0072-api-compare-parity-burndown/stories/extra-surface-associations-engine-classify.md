@@ -57,7 +57,7 @@ The 33 names, grouped by the Rails home they most plausibly belong to:
 Note `attributeNamesList`, `isEqual` and `toSlug` in that last group are
 mixin-host-interface artifact (declared at `attribute-methods.ts:126` and
 `base.ts:4486`) and drop out for free once the `__mixin` story lands — start
-by re-running `pnpm api:extra` after that fix so this story works from a
+by re-running `pnpm parity:api:extra` after that fix so this story works from a
 30-name list, not 33.
 
 Four (`applyAssociationScope`, `habtmTargetFk`, `lookupModelWithAutoload`,
@@ -84,7 +84,7 @@ all.
   relocation cluster, each carrying its name list and `associations.ts:<line>`
   refs. Do NOT open sibling PRs yourself.
 - Any relocation actually performed in this PR keeps the method in its
-  Rails-layout file (`api:compare` requirement) and stays under the 500 LOC
+  Rails-layout file (`parity:api` requirement) and stays under the 500 LOC
   ceiling; ship the portion that fits and register the rest.
 - `pnpm vitest run` over the touched association test files passes; no test
   renames.

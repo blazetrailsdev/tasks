@@ -52,6 +52,6 @@ surface stays counted.
 - Fold `hasAttributeDefinition` into the Rails-named `hasAttribute` predicate
   (attribute_methods.rb:256) or justify the split at the call site.
 - `packages/activerecord/src/base.ts` drops both names from
-  `pnpm api:extra --package activerecord --novel-only`; record before/after in
+  `pnpm parity:api:extra --package activerecord --novel-only`; record before/after in
   the PR body.
-- Re-run `pnpm api:calls:wide`.
+- Re-run `pnpm parity:api:calls`.

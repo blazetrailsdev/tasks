@@ -29,7 +29,7 @@ file the PR already converged.
 (`vendor/rails/activerecord/lib/active_record/signed_id.rb:13`).
 `scripts/api-compare/conventions.ts` maps `signed_id_verifier_secret=` onto the
 same camelCase name as its reader, so the `set`-prefixed export is TS surface
-Rails does not have; `api:extra` reports it as the remaining `1 novel` for
+Rails does not have; `parity:api:extra` reports it as the remaining `1 novel` for
 `signed-id.ts` after #5387 removed `setSignedIdVerifier`.
 
 Harder than its converged sibling: trails holds the secret in a module-level

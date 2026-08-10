@@ -69,7 +69,7 @@ private is genuinely missing.
   routes through it; dead shims standing in for those names are deleted.
 - For any argument-dropping case fixed, a test asserting the argument reaches
   the built node/SQL, verified to FAIL on the pre-fix implementation.
-- Run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-  `pnpm api:calls:wide`; converged wide-baseline rows are deleted by hand (the
+- Run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+  `pnpm parity:api:calls`; converged wide-baseline rows are deleted by hand (the
   baseline only shrinks — never `--write`). Expect newly-matched bodies to
   surface pre-existing divergence as new rows; give each a reviewed reason.

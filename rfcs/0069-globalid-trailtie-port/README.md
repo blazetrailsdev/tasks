@@ -35,7 +35,7 @@ Port `global_id/railtie.rb`'s `initializer 'global_id'` block
 of activesupport's `BaseRailtie`, mirroring activemodel/trailties, and port
 `railtie_test.rb` the way activemodel did — driving `Trailtie.runInitializers()`
 and config directly rather than a full `Rails::Application` boot. On success,
-drop the globalid `railtie_test.rb` exclusion so the file re-enters test:compare
+drop the globalid `railtie_test.rb` exclusion so the file re-enters parity:test
 accounting.
 
 ## Non-goals

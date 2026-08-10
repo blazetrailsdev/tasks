@@ -18,8 +18,8 @@ closed-reason: null
 ## Context
 
 `vendor/rails/activesupport/lib/active_support/json.rb` is two `require`s, so
-api:compare maps no Rails file onto `packages/activesupport/src/json.ts` —
-`pnpm api:extra --package activesupport` reports it as
+parity:api maps no Rails file onto `packages/activesupport/src/json.ts` —
+`pnpm parity:api:extra --package activesupport` reports it as
 `json.ts — 1 novel, 3 moved [no Rails counterpart]`.
 
 The consequence: the `module ActiveSupport::JSON` half of
@@ -40,4 +40,4 @@ Ruby puts both modules in `json/encoding.rb`; trails splits them across
       mapped to `json.ts` and the members attributed through it), so `encode` /
       `decode` / `dump` are scored.
 - [ ] `json.ts` stops reporting `[no Rails counterpart]`.
-- [ ] `pnpm api:compare` deltas are non-negative.
+- [ ] `pnpm parity:api` deltas are non-negative.

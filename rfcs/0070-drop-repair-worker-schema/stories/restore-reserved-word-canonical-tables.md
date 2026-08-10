@@ -40,4 +40,4 @@ same worker that reads one of these canonical tables then trips
   local reproduction) shows **zero** repair firings attributable to this table
   set across all three backends.
 - Rails-faithful: mirror `vendor/rails/activerecord/test/cases/reserved_word_test.rb`
-  teardown; no test renamed. `test:compare` delta >= 0.
+  teardown; no test renamed. `parity:test` delta >= 0.

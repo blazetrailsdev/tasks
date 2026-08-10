@@ -55,7 +55,7 @@ rename, and the de-fusion did not fit under the LOC ceiling alongside it.
 - `buildHasManyRelation` and `buildThroughJoinScope` are DELETED from
   `packages/activerecord/src/associations.ts`, with every caller routed
   through the `scope` seam. No re-export under the old names.
-- `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`
   shows the `associations.ts` novel count drop by 2 (or by however many of the
   two names the extras report actually lists). Record before/after in the PR
   body.

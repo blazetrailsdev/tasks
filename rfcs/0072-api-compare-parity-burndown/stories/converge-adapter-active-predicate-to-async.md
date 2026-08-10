@@ -59,7 +59,7 @@ synchronously today.
   (add/keep a lint or type guard so `if (adapter.active)` can't regress).
 - `Mysql2Adapter#isConnected()` keeps the Rails `connected?` semantics landed by
   the parent story (handle presence only, no `_activeState` term).
-- `pnpm api:extra --package activerecord` shows `activeAsync` gone with no new
+- `pnpm parity:api:extra --package activerecord` shows `activeAsync` gone with no new
   novel surface.
 - If the flip exceeds the 500 LOC ceiling, ship the abstract + one adapter first
   and register the rest as further stories — do NOT fan out PRs.

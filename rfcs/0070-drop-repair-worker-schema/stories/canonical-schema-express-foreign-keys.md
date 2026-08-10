@@ -39,4 +39,4 @@ workaround is the only reason the cycle exists.
 - `fk_test_has_fk` declares its schema.rb foreign key canonically.
 - `AdapterForeignKeyTest` drops its raw-DDL add/drop-constraint workaround
   and its sqlite drop/recreate + `rebuildCanonicalTables` teardown.
-- No test renamed; `test:compare` delta >= 0.
+- No test renamed; `parity:test` delta >= 0.

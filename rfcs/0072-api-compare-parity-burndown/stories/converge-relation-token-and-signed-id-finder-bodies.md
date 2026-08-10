@@ -48,7 +48,7 @@ Relation → model-class hop that the trails port appears to shortcut.
 - Add a regression test for the unknown-purpose raise that fails on the current
   implementation.
 - Entries drop out of `call-mismatches-wide-exclude/activerecord/relation.json`;
-  `pnpm api:calls:wide` passes with a strictly smaller baseline.
+  `pnpm parity:api:calls` passes with a strictly smaller baseline.
 - Tests named verbatim after
   `vendor/rails/activerecord/test/cases/tokens/token_for_test.rb` and
   `.../signed_id_test.rb`.

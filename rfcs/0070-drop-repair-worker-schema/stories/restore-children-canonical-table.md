@@ -30,4 +30,4 @@ via DDL: `persistence.test.ts`, `associations/required.test.ts`,
 - Identify the culprit and make it restore the canonical `children` shape after
   it runs (or use transactional fixtures / a scratch table).
 - Re-measured CI shows zero repair firings for `children`.
-- Rails-faithful; no test renamed; `test:compare` delta >= 0.
+- Rails-faithful; no test renamed; `parity:test` delta >= 0.

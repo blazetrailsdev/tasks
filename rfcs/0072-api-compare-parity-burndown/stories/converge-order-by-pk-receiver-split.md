@@ -41,5 +41,5 @@ value-identical at runtime, the win is call-graph fidelity.
   `model.primary_key` (`finder_methods.rb:655`).
 - If the two Rails bodies cannot share one trails helper, split the helper to
   match Rails' layout rather than picking one receiver for both.
-- `pnpm api:calls:wide` stays green and the baseline does not grow.
+- `pnpm parity:api:calls` stays green and the baseline does not grow.
 - Behavior-preserving; existing finder/order tests keep their Rails names.

@@ -48,6 +48,6 @@ part of the classify PR.
   the flattened form).
 - NO test renames; call sites change, test titles do not.
 - `base.ts` drops one novel extra; record before/after in the PR body.
-- Re-run `pnpm api:calls:wide`. Watch the 500 LOC ceiling — if the call-site
+- Re-run `pnpm parity:api:calls`. Watch the 500 LOC ceiling — if the call-site
   migration cannot fit, land the overload plus a deprecation and register the
   migration as a follow-up story.

@@ -81,4 +81,4 @@ Rails-ported suite; expect a similar order here.
 - [ ] Whether `displacementNeedsAwait` and the `awaitable` parameter can go too
       is answered in the PR (they can if no I/O-bearing assignment survives on
       the sync path).
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

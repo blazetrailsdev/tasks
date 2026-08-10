@@ -38,7 +38,7 @@ back to the verbatim string). It deliberately did NOT change the unqualified
 half, because that is not a free correctness win:
 
 Measured on that branch — routing unqualified names through `resolveModuleName`
-too moved `pnpm api:compare` overall matched methods **11678 → 11657 (−21)**,
+too moved `pnpm parity:api` overall matched methods **11678 → 11657 (−21)**,
 with the denominator unchanged at 17484 (data layer 7717 → 7714/7810, arity
 7426/7530 → 7416/7520). So 21 methods currently get their "implemented in an
 includer's TS file" credit through a same-short-name module that Ruby's scoped
@@ -68,4 +68,4 @@ Either reading could be right and the evidence does not decide it:
 - Whichever way it lands, the two consumers of `moduleFqnByShort` must no longer
   disagree silently — the divergence is either removed or documented at both
   sites.
-- Report the final `pnpm api:compare` totals.
+- Report the final `pnpm parity:api` totals.

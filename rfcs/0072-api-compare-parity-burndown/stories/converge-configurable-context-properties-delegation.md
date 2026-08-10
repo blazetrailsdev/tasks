@@ -55,4 +55,4 @@ conversion or is itself a deviation to fold in.
 
 - [ ] All six `Context::PROPERTIES` members have a reader on `Configurable`.
 - [ ] The readers derive from `Context.PROPERTIES`, not a hand-maintained list.
-- [ ] `pnpm api:compare` / `pnpm api:extra --package activerecord` do not regress.
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra --package activerecord` do not regress.

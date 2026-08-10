@@ -49,6 +49,6 @@ not _unported_.
       explicit registration that keeps it at 0/10 and visible as a gap.
 - [ ] The barrel exclusion and the `error_reporter_assertions.rb` entry stay
       unchanged.
-- [ ] `pnpm api:calls` green; `pnpm api:compare` delta non-negative.
+- [ ] `pnpm parity:api:calls` green; `pnpm parity:api` delta non-negative.
 - [ ] Unit test alongside the existing `selectMisplacedFile` cases in
       `scripts/api-compare/compare.test.ts`.

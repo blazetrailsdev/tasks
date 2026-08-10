@@ -22,7 +22,7 @@ Surfaced while shipping `extra-surface-has-one-base-build-hooks-classify`
 extras to 2 by narrowing the two inherited hooks it overrides
 (`loadTargetForBuild`, `detachDisplacedTarget`) to `protected` on the base.
 
-`pnpm build && pnpm api:compare && pnpm api:extra --package activerecord
+`pnpm build && pnpm parity:api && pnpm parity:api:extra --package activerecord
 --novel-only` now reports on
 `packages/activerecord/src/associations/has-one-through-association.ts`:
 
@@ -56,7 +56,7 @@ whether the Rails name is already taken by the real port.
   `protected`/`#` (call sites converged), or (c) misplaced port to
   relocate + rename onto its Rails name.
 - Convergeable names are actioned, not tagged `@noRailsEquivalent CONVERGEABLE`.
-- `pnpm api:extra --package activerecord --novel-only` shows
+- `pnpm parity:api:extra --package activerecord --novel-only` shows
   `associations/has-one-through-association.ts` dropping by the number of
   names actioned; record before/after in the PR body.
 - has_one_through association tests pass with no test renames.

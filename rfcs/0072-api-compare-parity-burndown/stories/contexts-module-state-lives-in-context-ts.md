@@ -30,7 +30,7 @@ In trails that state and all but one of those methods live in
 module-scope `contextStack` and `_defaultContext` — and `encryption/contexts.ts`
 is a thin `Contexts` class delegating to them.
 
-`pnpm api:extra --package activerecord` reports four of them as novel surface on
+`pnpm parity:api:extra --package activerecord` reports four of them as novel surface on
 `context.ts` (`getCurrentCustomContext`, `getDefaultContext`,
 `getEncryptionContext`, `resetDefaultContext`): they have no counterpart in
 `context.rb`, because their counterpart is in `contexts.rb`.
@@ -71,7 +71,7 @@ and read the "do not add a third instance without reading that section" note in
       implemented in `encryption/contexts.ts`, not delegated to `context.ts`.
 - [ ] `contextStack` / `_defaultContext` move with them.
 - [ ] `encryption/context.ts` exports only what `context.rb` defines.
-- [ ] `pnpm api:extra --package activerecord` loses the four novel
+- [ ] `pnpm parity:api:extra --package activerecord` loses the four novel
       `encryption/context.ts` names; none of them is replaced by a
       `@noRailsEquivalent` tag.
 - [ ] Encryption suites green on all three lanes.

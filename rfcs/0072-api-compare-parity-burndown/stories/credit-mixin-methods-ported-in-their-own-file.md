@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` re-expects every mixed-in method in each _host_ file on top
+`pnpm parity:api` re-expects every mixed-in method in each _host_ file on top
 of the file that defines it. `PostgreSQL::Quoting#escape_bytea` is expected in
 `connection_adapters/postgresql/quoting.rb` — where trails ports it, as
 `connection-adapters/postgresql/quoting.ts`, and where it matches — and again

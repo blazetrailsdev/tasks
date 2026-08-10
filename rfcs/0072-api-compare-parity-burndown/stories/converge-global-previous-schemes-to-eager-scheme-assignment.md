@@ -61,7 +61,7 @@ Assign the global previous schemes eagerly in `encryptAttribute`/`schemeFor`
 `scheme.previousSchemes` already carries them. Then:
 
 - delete `setGlobalPreviousSchemesFn` and `_globalPreviousSchemesFn` (extra
-  surface, `pnpm api:extra`);
+  surface, `pnpm parity:api:extra`);
 - delete `_effectivePreviousSchemes()` and route `previousSchemesIncludingCleanText`
   / `previousTypesWithoutCleanText` through the `previousSchemes` delegate, as
   `encrypted_attribute_type.rb:66-71` does;

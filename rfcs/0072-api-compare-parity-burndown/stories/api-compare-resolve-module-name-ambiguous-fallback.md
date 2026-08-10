@@ -42,4 +42,4 @@ measured against false positives.
 - Decide with evidence between (a) narrowing to the ancestry/top-level reading
   and accepting the delta as newly visible gaps (the #5344 disposition), or
   (b) keeping it and documenting the measured justification at the call site.
-- Report before/after `pnpm api:compare` totals either way.
+- Report before/after `pnpm parity:api` totals either way.

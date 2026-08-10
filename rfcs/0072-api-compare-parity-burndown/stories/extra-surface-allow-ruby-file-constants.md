@@ -86,6 +86,6 @@ so it may be a class-vs-constant naming mismatch rather than either bucket.
   different Ruby file (moved), TS-only constant (novel).
 - Widen the Ruby extractor's constant capture, or file a separate story with
   the 9 confirmed misses listed above if it is out of scope here.
-- `pnpm api:compare && pnpm api:extra --package activerecord`: novel drops by
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord`: novel drops by
   at least 22; `connection-adapters/abstract-mysql-adapter.ts` drops from 30
   novel to ~13. Record exact numbers.

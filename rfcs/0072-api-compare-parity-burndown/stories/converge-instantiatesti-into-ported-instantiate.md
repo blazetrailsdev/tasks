@@ -66,4 +66,4 @@ resolved class would therefore not terminate, which is precisely why
   inheritance-namespaced.test.ts, sti-attribute-routing.test.ts,
   model-schema-load.test.ts, persistence.test.ts and the eager/association
   suites before and after.
-- api:compare and test:compare deltas non-negative.
+- parity:api and parity:test deltas non-negative.

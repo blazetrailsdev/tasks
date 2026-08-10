@@ -61,6 +61,6 @@ pool), so this is a behavior-preserving refactor, not a deletion.
   `@noRailsEquivalent PERMANENT <reason>` tag (`scripts/api-compare/extra-surface.ts:44-47`) — a negative result is
   a valid outcome here, as long as the reason is the real one and the
   surface really is irreducible (#5342).
-- `pnpm api:extra --package activerecord` must not regress
+- `pnpm parity:api:extra --package activerecord` must not regress
   `connection-adapters/abstract/connection-pool.ts` above 0 novel.
 - Existing tests pass; no test renames.

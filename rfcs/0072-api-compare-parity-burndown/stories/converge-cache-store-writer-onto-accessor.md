@@ -42,5 +42,5 @@ rather than fanning out.
   `setCacheStore` export and its `@noRailsEquivalent` tag are both deleted.
 - Callers (`cacheConfigured`, `cache`, the actioncontroller caching wiring) and
   existing `caching.test.ts` cases pass unchanged.
-- `api:compare` matches `cache_store=`; `api:extra` shows no new extras and no
+- `parity:api` matches `cache_store=`; `parity:api:extra` shows no new extras and no
   stale tags for the package.

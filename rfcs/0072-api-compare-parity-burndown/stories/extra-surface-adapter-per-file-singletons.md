@@ -58,7 +58,7 @@ Notes carried over from the first pass:
   exported functions, not class members (see `collectTsFileNames` in
   `scripts/api-compare/extra-surface.ts`).
 
-Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json`.
+Reproduce with `pnpm parity:api && pnpm parity:api:extra --package activerecord --json`.
 
 ## Acceptance criteria
 
@@ -68,7 +68,7 @@ Reproduce with `pnpm api:compare && pnpm api:extra --package activerecord --json
   Rails `file:line`. Note only irreducible surface gets a tag; convergeable surface stays
   counted and gets a story (#5342).
 - Deviation justifications live at the declaration site, not only in the PR body.
-- Novel counts for the three files go to 0; `pnpm api:extra` reports no STALE
+- Novel counts for the three files go to 0; `pnpm parity:api:extra` reports no STALE
   allowlist entries.
 - Adapter test files for each touched adapter pass (scoped `pnpm vitest run`
   only — not the full suite). MySQL/PG suites need a running server; if

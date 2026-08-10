@@ -63,8 +63,8 @@ Rails source: `vendor/rails/activerecord/lib/active_record/migration.rb`
 - [ ] The three already-routed privates are checked body-for-body against
       `migration.rb`; any call the Ruby body makes and the TS body does not is
       converged, not baselined.
-- [ ] Run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-      `pnpm api:calls:wide`; converged wide-baseline rows are deleted by hand
+- [ ] Run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+      `pnpm parity:api:calls`; converged wide-baseline rows are deleted by hand
       (only-shrink — never `--write`).
 - [ ] Single PR from `main`, under the LOC ceiling, no overlap with the
       `tasks/database-tasks.ts` cluster.
