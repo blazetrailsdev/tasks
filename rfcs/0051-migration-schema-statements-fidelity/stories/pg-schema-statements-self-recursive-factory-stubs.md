@@ -66,5 +66,5 @@ callers the stubs' comment was written for.
 - [ ] `createTableDefinition` / `createAlterTable` no longer declared in
       `postgresql/schema-statements-class.ts`.
 - [ ] The PG-typed factories reach the bodies through the merged interface.
-- [ ] `pnpm typecheck` green, `api:extra --package activerecord` delta
+- [ ] `pnpm typecheck` green, `parity:api:extra --package activerecord` delta
       non-negative, PG lane green.

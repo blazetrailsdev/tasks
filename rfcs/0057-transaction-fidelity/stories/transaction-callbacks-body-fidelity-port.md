@@ -20,7 +20,7 @@ blocked-by: null
 canonical schema in PR #4179 (story `transaction-callbacks-test-canonical`,
 RFC 0019). That work kept three describe blocks whose bodies were already
 _simplified_ on main and do NOT port the Rails mechanics word-for-word. The test
-NAMES match Rails (test:compare green) but the bodies exercise weaker behavior.
+NAMES match Rails (parity:test green) but the bodies exercise weaker behavior.
 
 Rails: `vendor/rails/activerecord/test/cases/transaction_callbacks_test.rb`.
 
@@ -59,4 +59,4 @@ Deviations to converge:
 - [ ] Condition test uses `after_commit(on:[create,update], if: run_callback?)`
       and asserts the `[:run_callback?, :create_or_update]` ordering.
 - [ ] `pnpm vitest run packages/activerecord/src/transaction-callbacks.test.ts`
-      passes on sqlite AND postgres; test:compare delta non-negative.
+      passes on sqlite AND postgres; parity:test delta non-negative.

@@ -54,4 +54,4 @@ the object-class matching to accept plain `{}` / `[]` the way Rails' builtin
       (`Topic.serialize(:content, type: Array/Hash)` then
       `Topic.where(content: settings).take`).
 - [ ] No regression to `predicate-builder.test.ts` or PG `array.test.ts` /
-      `range.test.ts` force-equality behavior; `test:compare` non-negative.
+      `range.test.ts` force-equality behavior; `parity:test` non-negative.

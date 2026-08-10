@@ -73,7 +73,7 @@ has and retire the other. Then delete the
 - [ ] `recordVersionStateAfterMigrating`'s else arm calls the Rails-named writer
       (`migration.rb:1571`).
 - [ ] `recordVersion` is gone, or justified at its definition if it is a real
-      distinct Rails method; `pnpm api:extra --package activerecord` does not gain
+      distinct Rails method; `pnpm parity:api:extra --package activerecord` does not gain
       surface.
 - [ ] The `record_version_state_after_migrating | create_version` baseline row is
       deleted by hand.

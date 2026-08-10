@@ -34,7 +34,7 @@ computed from the live database rather than from `creation_options`
 (`mysql_database_tasks.rb:79-85`, which is `{ charset:, collation: }` off the
 configuration hash).
 
-Surfaced while enrolling `mysql2_rake_test.rb` in `test:compare` (PR for
+Surfaced while enrolling `mysql2_rake_test.rb` in `parity:test` (PR for
 `enroll-pg-and-mysql-rake-tests-in-test-compare`). All three `MySQLPurgeTest`
 tests assert on `recreate_database` and are therefore parked as `it.skip` in
 `packages/activerecord/src/adapters/mysql2/mysql2-rake.test.ts`:
@@ -57,6 +57,6 @@ has to be re-established against Rails' shape (Rails re-creates from
       (`abstract_mysql_adapter.rb#recreate_database`).
 - [ ] The three `MySQLPurgeTest` `it.skip` stubs in
       `packages/activerecord/src/adapters/mysql2/mysql2-rake.test.ts` become
-      real tests at their Rails names; `pnpm test:compare` gate-mismatch stays 0.
+      real tests at their Rails names; `pnpm parity:test` gate-mismatch stays 0.
 - [ ] Green on the MariaDB lane — in particular the case-sensitivity tests the
       current charset-preservation comment names.

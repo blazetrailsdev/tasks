@@ -42,4 +42,4 @@ dropped the call there. The two remaining call sites in `_migrateUp` /
 - Any test asserting the `Invalid target version:` message is rewritten
   against the Rails error, or deleted if it covers a case Rails does not
   distinguish. Test names still match Rails verbatim.
-- `pnpm api:compare` shows no new extra-surface entry for `migration.rb`.
+- `pnpm parity:api` shows no new extra-surface entry for `migration.rb`.

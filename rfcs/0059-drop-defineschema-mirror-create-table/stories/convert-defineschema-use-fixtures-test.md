@@ -52,5 +52,5 @@ Relevant code:
   worker DB) so they ride the canonical schema, or `create_table` any genuinely
   bespoke tables with a teardown drop.
 - All tests in the file pass on SQLite (and don't regress PG/MySQL).
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.
 - Single PR from main, <=500 LOC, not stacked.

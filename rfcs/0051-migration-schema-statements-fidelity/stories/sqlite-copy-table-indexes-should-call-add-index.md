@@ -77,7 +77,7 @@ Rails behaviour, not a regression.
       `@missingRailsCall` scoped to just that arm.
 - [ ] The `@missingRailsCall add_index` tag on `copyTableIndexes` is removed or
       narrowed; no `call-mismatches-exclude` row is added for it.
-- [ ] `pnpm api:calls` green; `adapters/sqlite3/copy-table.trails.test.ts`,
+- [ ] `pnpm parity:api:calls` green; `adapters/sqlite3/copy-table.trails.test.ts`,
       `migration/foreign-key.test.ts` and the sqlite3 lane green, including the
       partial-index `WHERE`, expression-index and column-order cases those
       tests already pin.

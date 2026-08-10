@@ -64,7 +64,7 @@ is passed to `Migrator.new`).
   `target == current → up` arm.
 - The `filter` callback is applied by selecting the migration list handed to
   the per-run Migrator (Rails' `migrations.select(&block)`), not by adding a
-  parameter to `up` / `down` — `api:compare` must report no new arity
+  parameter to `up` / `down` — `parity:api` must report no new arity
   mismatch for `migration.rb`.
 - A regression test covers the `target == current` case (unapplied lower
   version runs); it must fail on the pre-change baseline.

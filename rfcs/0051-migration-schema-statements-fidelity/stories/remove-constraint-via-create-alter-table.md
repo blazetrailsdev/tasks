@@ -44,5 +44,5 @@ only needs the name, and PG's `visitAlterTable` guards its extra arms with
 
 - `removeConstraint` builds via `createAlterTable(tableName)`, matching Rails.
 - The `AlterTable` import in that file drops out if it becomes unused.
-- `pnpm api:calls:wide` does not regress; the `remove_constraint` /
+- `pnpm parity:api:calls` does not regress; the `remove_constraint` /
   `create_alter_table` pair should drop out of the baseline if flagged.

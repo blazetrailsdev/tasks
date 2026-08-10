@@ -59,7 +59,7 @@ tableExists()/indexExists()` delegate to the adapter's async
       `SchemaStatements` introspection; the `_tables`/`_columns`/`_columnMeta`/
       `_indexes` maps and their mutation code are removed.
 - [ ] `SchemaDumper.dump(ctx)` callers converge to the async dump path.
-- [ ] No regression in api:compare / test:compare (non-negative delta).
+- [ ] No regression in parity:api / parity:test (non-negative delta).
 - [ ] loadSchema generated-schema path still builds the canonical worker DB
       identically.
 - [ ] Single PR from main; 500 LOC ceiling; test names match Rails verbatim.

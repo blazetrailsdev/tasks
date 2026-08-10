@@ -46,4 +46,4 @@ story but for `quotedColumnsForIndex` on the abstract layer.
 - [ ] PG opclass decoration currently unique to the schema-creation copy is
       preserved (fold into `SchemaStatements#addOptionsForIndexColumns` / the PG
       override as Rails does via `add_index_opclass`).
-- [ ] api:compare non-negative; no test:compare regression; no test-name changes.
+- [ ] parity:api non-negative; no parity:test regression; no test-name changes.

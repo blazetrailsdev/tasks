@@ -50,4 +50,4 @@ generated methods should live on an interposed prototype carrier (as
 - [ ] Un-skip `enum.test.ts` "enum methods are overwritable" (Book's
       `published!` override per book.rb) — test name unchanged.
 - [ ] Existing enum generation/conflict-detection tests stay green;
-      `api:compare` for enum.rb non-regressing.
+      `parity:api` for enum.rb non-regressing.

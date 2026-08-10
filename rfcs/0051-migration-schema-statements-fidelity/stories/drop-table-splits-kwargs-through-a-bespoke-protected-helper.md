@@ -66,7 +66,7 @@ duplicating it.
 ## Acceptance criteria
 
 - [ ] `_splitTableNamesAndOptions` is gone from the schema-statements class
-      surface (confirm with `pnpm api:extra --package activerecord`).
+      surface (confirm with `pnpm parity:api:extra --package activerecord`).
 - [ ] All four `dropTable` bodies use one spelling of the kwargs split.
 - [ ] `dropTable`'s behaviour is unchanged for the `ifExists` / `force` /
       `temporary` options on every adapter.

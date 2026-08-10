@@ -49,5 +49,5 @@ only; nested wrappers still call `renameKey` directly in `model.ts`, so the
   decimal attributes keep their adapter-agnostic `type=`.
 - Route `_hashToXml`'s nested-hash and array-of-objects branches through `toTag`
   so `renameKey` has a single call site.
-- No serialization/`test:compare`/`api:compare` regression; existing
+- No serialization/`parity:test`/`parity:api` regression; existing
   `serialization.test.ts` and `delegation.test.ts` XML assertions stay green.

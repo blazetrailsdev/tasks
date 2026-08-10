@@ -60,4 +60,4 @@ to Rails behavior:
 - [ ] Each deviation above is either converged to Rails behavior (with the
       deferred assertion restored in postgresql-adapter.test.ts) or explicitly
       ratified with rationale.
-- [ ] No test-name changes; `test:compare` delta non-negative.
+- [ ] No test-name changes; `parity:test` delta non-negative.

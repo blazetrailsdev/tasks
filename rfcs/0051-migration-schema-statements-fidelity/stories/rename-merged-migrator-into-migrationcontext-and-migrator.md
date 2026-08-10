@@ -79,6 +79,6 @@ work that eventually frees the name.
 - The long-lived half of trails' `Migrator` moves to `MigrationContext`,
   matching migration.rb:1211-1402; the per-run half keeps the `Migrator` name,
   matching migration.rb:1404-1560.
-- `api:extra` shows no novel extra surface and the class names are the Rails
+- `parity:api:extra` shows no novel extra surface and the class names are the Rails
   ones; sequenced as ordered, individually-merged PRs from `main`, each under
   the 500-LOC ceiling — no stacked branches.

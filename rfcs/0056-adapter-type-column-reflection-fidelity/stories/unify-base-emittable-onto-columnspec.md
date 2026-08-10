@@ -53,7 +53,7 @@ disappears once the base `emitTable` inline path is eliminated.
   mock-source paths — verify via `schema-dumper.test.ts`,
   `schema-dumper.trails.test.ts`, dialect dumper suites, `schema-file-generator`,
   and `migration.test.ts`.
-- api:compare stays green: Rails `schema_default`/`schema_expression` remain
+- parity:api stays green: Rails `schema_default`/`schema_expression` remain
   mapped in `connection-adapters/abstract/schema-dumper.ts`.
 
 ## Notes

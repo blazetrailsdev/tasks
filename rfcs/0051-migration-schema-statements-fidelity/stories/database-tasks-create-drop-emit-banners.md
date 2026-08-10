@@ -49,4 +49,4 @@ with a reason pointing here — converging the banners is what retires them.
       twice.
 - [ ] The two `verbose?` entries for `create` / `drop` are deleted from
       `call-mismatches-wide-exclude/activerecord/tasks/database-tasks.json`
-      and `pnpm api:calls:wide` stays green.
+      and `pnpm parity:api:calls` stays green.

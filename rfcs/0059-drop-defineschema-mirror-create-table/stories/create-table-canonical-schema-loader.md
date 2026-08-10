@@ -41,4 +41,4 @@ parallel for now so phases 2–3 can proceed incrementally.
   wired into `template-global-setup.ts` boot for all three adapters.
 - Schema-dump parity: `schema-dumper` tests unchanged on sqlite + PG + MySQL
   (the loaded schema is byte-for-byte what `defineSchema(TEST_SCHEMA)` produced).
-- `defineSchema` still functions (removed later); no test renames; `test:compare` >= 0.
+- `defineSchema` still functions (removed later); no test renames; `parity:test` >= 0.

@@ -21,8 +21,8 @@ blocked-by: null
 `_attributeMethodsGenerated = false` when already falsy. It was previously
 believed dead and slated for deletion (story
 `remove-dead-initialize-generated-modules-noop`, PR #3381 — closed). That
-deletion was WRONG: it is the api:compare-matched port of a real Rails method
-and removing it regressed api:compare for the file from **69/69 (100%) → 68/69
+deletion was WRONG: it is the parity:api-matched port of a real Rails method
+and removing it regressed parity:api for the file from **69/69 (100%) → 68/69
 (99%)**.
 
 Rails defines `initialize_generated_modules` in TWO files, chained via `super`:
@@ -43,7 +43,7 @@ Rails defines `initialize_generated_modules` in TWO files, chained via `super`:
   end
   ```
 
-api:compare maps by file, so the wired `core.ts` version (mapped to `core.rb`)
+parity:api maps by file, so the wired `core.ts` version (mapped to `core.rb`)
 cannot cover `attribute_methods.rb`'s method — the `attribute-methods.ts`
 counterpart must exist.
 
@@ -65,8 +65,8 @@ Converge the `attribute-methods.ts` `initializeGeneratedModules` to Rails'
 
 ## Acceptance criteria
 
-- [ ] api:compare for `attribute_methods.rb → attribute-methods.ts` stays at
+- [ ] parity:api for `attribute_methods.rb → attribute-methods.ts` stays at
       69/69 (no regression) and the method is no longer a no-op.
 - [ ] No stubs: the method does real, Rails-faithful work.
-- [ ] `attribute-methods.test.ts` green; api:compare / test:compare delta
+- [ ] `attribute-methods.test.ts` green; parity:api / parity:test delta
       non-negative.

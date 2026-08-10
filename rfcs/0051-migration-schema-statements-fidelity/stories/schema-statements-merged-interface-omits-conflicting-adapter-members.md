@@ -62,4 +62,4 @@ signatures against Rails and the `Omit` list should shrink to nothing.
 - The enum/`currentDatabase` members are declared as methods (not properties) on
   whichever class owns them, matching Rails.
 - The `Omit<...>` in the merged interface is empty or gone.
-- api:compare / test:compare delta non-negative; all lanes green.
+- parity:api / parity:test delta non-negative; all lanes green.

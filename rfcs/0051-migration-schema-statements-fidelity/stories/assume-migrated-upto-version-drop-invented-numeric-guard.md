@@ -45,4 +45,4 @@ the same invented validation.
       analogue of `String#to_i`: leading-integer parse, `0` on no match).
 - [ ] Cover the non-numeric-input path with a test matching Rails behaviour
       (target version becomes 0, no raise).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

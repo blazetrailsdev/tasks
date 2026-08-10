@@ -46,7 +46,7 @@ reaching back into `this.adapter`.
 - `PostgreSQL::SchemaStatements` is mixed into `PostgreSQLAdapter` the way
   `MySQL::SchemaStatements` is mixed into `AbstractMysqlAdapter`, with the method
   bodies staying in `postgresql/schema-statements-class.ts` (the Rails layout file
-  api:compare matches against).
+  parity:api matches against).
 - The per-method delegators on `PostgreSQLAdapter` and the private
   `pgSchemaStatements()` accessor are deleted; overrides reach the base bodies via
   plain `super`.

@@ -53,4 +53,4 @@ backing field, as Rails does. Same for whichever sibling arms carry the memo.
       read allocates, matching `mysql/schema_statements.rb:138-140`.
 - [ ] The abstract/PG/SQLite arms are checked and converged in the same pass if
       they carry the same memo.
-- [ ] MySQL/MariaDB, PG and SQLite suites green; api:compare delta non-negative.
+- [ ] MySQL/MariaDB, PG and SQLite suites green; parity:api delta non-negative.

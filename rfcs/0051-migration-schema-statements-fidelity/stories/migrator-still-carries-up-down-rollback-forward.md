@@ -55,5 +55,5 @@ and `packages/trailties/src/commands/db.ts` were the ones
 
 - [ ] `Migrator#up`, `#down`, `#rollback` and `#forward` are gone.
 - [ ] No caller regresses; each lands on the `MigrationContext` method.
-- [ ] `pnpm api:extra --package activerecord` drops the four names.
+- [ ] `pnpm parity:api:extra --package activerecord` drops the four names.
 - [ ] The `body` closures added in PR #6178 are gone with them.

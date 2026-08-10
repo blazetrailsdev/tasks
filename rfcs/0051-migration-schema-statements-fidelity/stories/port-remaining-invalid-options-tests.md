@@ -21,7 +21,7 @@ closed-reason: null
 (vendor/rails/activerecord/test/cases/migration/invalid_options_test.rb) has
 five tests. PR #6066 ported only `test_create_table_with_invalid_options`
 (invalid_options_test.rb:113-123) into
-packages/activerecord/src/migration/invalid-options.test.ts; `test:compare`
+packages/activerecord/src/migration/invalid-options.test.ts; `parity:test`
 reports the file as 1 OK / 4 Miss.
 
 The unported arms each assert that an unknown key raises `ArgumentError` with
@@ -49,6 +49,6 @@ Whether trails' `addColumn`/`addIndex` validate at all is unverified — the
 
 ## Acceptance criteria
 
-- [ ] `test:compare` shows 5/5 OK for `migration/invalid_options_test.rb`.
+- [ ] `parity:test` shows 5/5 OK for `migration/invalid_options_test.rb`.
 - [ ] Any validation gap the ports surface is closed in the adapter, not in the
       test.

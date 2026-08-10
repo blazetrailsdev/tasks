@@ -57,5 +57,5 @@ positional is `type`.
 - No `new MigrationContext(...)` callers remain outside `migration.ts` (other
   than `migration.trails.test.ts`, deferred to the deletion story).
 - Purely mechanical; no test renames, no new surface, no behavior change.
-- `pnpm api:compare` / `test:compare` deltas non-negative; touched suites green
+- `pnpm parity:api` / `parity:test` deltas non-negative; touched suites green
   on all three lanes.

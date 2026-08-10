@@ -66,4 +66,4 @@ Sibling precedent: `schema-statements-merged-interface-omits-conflicting-adapter
       are gone.
 - [ ] `PgSchemaAdapter` is deleted, or reduced to names `PostgreSQLAdapter` does
       not already declare.
-- [ ] PG suite green; api:compare / api:extra delta non-negative.
+- [ ] PG suite green; parity:api / parity:api:extra delta non-negative.

@@ -56,4 +56,4 @@ latter is itself non-converged and would regress the name and drop prefix/suffix
       (create_table FK column + AlterTable#addForeignKey).
 - [ ] Once converged, the abstract `addForeignKey` can route through
       `at.addForeignKey(toTable, options)` instead of building the FK def inline.
-- [ ] api:compare and test:compare delta non-negative; no test-name changes.
+- [ ] parity:api and parity:test delta non-negative; no test-name changes.

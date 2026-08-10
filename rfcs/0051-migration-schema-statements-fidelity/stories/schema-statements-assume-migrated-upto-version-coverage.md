@@ -51,4 +51,4 @@ Rails' `pool.schema_migration.table_name` while writing the tests.
       (`schema_statements.rb:1881-1884`) and the reversal.
 - [ ] Each test fails against a deliberately broken variant, not just against
       current behavior.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

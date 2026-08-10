@@ -73,4 +73,4 @@ tracked separately by
       `sqlite_database_tasks.rb:39-41`; no hardcoded string remains.
 - [ ] `test_charset_returns_utf8` in `tasks/sqlite-database-tasks.test.ts` still
       passes (or is superseded by the Rails-named port).
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

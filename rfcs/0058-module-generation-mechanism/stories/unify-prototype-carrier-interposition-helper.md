@@ -41,4 +41,4 @@ mechanism duplicated three ways.
       delegation carrier through it.
 - [ ] Carrier stacking order (last-interposed nearest) is preserved; existing
       store/enum/delegation tests stay green.
-- [ ] No behavior change; pure consolidation. api:compare non-regressing.
+- [ ] No behavior change; pure consolidation. parity:api non-regressing.

@@ -83,5 +83,5 @@ the empty shapes Rails passes.
       builds (`migration.rb:1061-1072`).
 - [ ] Both instances are created once and shared, as in Ruby — not rebuilt per
       source.
-- [ ] `pnpm api:calls` clean; the `copy` / `new` rows converge by deletion
+- [ ] `pnpm parity:api:calls` clean; the `copy` / `new` rows converge by deletion
       rather than by a new baseline row.

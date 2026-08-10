@@ -36,4 +36,4 @@ shared body for all adapters, so the missing guard is exercised broadly.
       Rails' `return unless use_foreign_keys?`.
 - [ ] Verify `isUseForeignKeys()` default matches Rails `use_foreign_keys?`
       (true for adapters that support FKs) so no adapter regresses.
-- [ ] api:compare and test:compare delta non-negative; no test-name changes.
+- [ ] parity:api and parity:test delta non-negative; no test-name changes.

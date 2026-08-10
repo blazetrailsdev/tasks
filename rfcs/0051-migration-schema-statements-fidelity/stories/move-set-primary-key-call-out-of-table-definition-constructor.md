@@ -51,5 +51,5 @@ id, primaryKey, pkOptions)` once, after construction, mirroring
 - [ ] `TableDefinition`'s constructor signature matches
       `schema_definitions.rb:370-393` and calls nothing.
 - [ ] `set_primary_key` is invoked from `buildCreateTableDefinition` only.
-- [ ] `pnpm api:extra --package activerecord` shows no new novel surface on
+- [ ] `pnpm parity:api:extra --package activerecord` shows no new novel surface on
       `connection-adapters/abstract/schema-definitions.ts`.

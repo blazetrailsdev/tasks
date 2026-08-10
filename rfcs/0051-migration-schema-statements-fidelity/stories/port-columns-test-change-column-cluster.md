@@ -53,5 +53,5 @@ one PR at the 500 LOC ceiling — split at the `change_column_default` boundary
 - [ ] The cases above ported with Rails-verbatim test names and their
       adapter/feature gates (`supports_default_expression?`, PostgreSQL-only
       concatenation-operator case) preserved.
-- [ ] Green on all three adapters; `test:compare` missing count drops by the
+- [ ] Green on all three adapters; `parity:test` missing count drops by the
       number shipped.

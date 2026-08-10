@@ -48,7 +48,7 @@ has no per-context prefix — it reads
 - Any `tableNamePrefix` / `tableNameSuffix` consumer is routed to
   `Migration.tableNameOptions()` (Rails' source of truth) rather than losing the
   value silently.
-- `pnpm api:extra --package activerecord` shows the novel count for
+- `pnpm parity:api:extra --package activerecord` shows the novel count for
   `migration.ts` drop; record before/after in the PR body.
 - No test renames. Migration, migrator and schema suites green on all three
   lanes.

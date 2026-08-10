@@ -54,4 +54,4 @@ guard.
       `optimistic.rb:127-128`.
 - [ ] Existing locking suite (`packages/activerecord/src/locking.test.ts`)
       stays green on sqlite and postgres.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

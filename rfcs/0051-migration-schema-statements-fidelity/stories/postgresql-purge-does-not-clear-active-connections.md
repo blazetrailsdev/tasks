@@ -43,7 +43,7 @@ Without the clear, a connection leased before the purge survives across the
 `DROP DATABASE` / `CREATE DATABASE` pair and points at a database that no longer
 exists — which is precisely what Rails' first line prevents.
 
-Surfaced while enrolling `postgresql_rake_test.rb` in `test:compare` (PR #6269).
+Surfaced while enrolling `postgresql_rake_test.rb` in `parity:test` (PR #6269).
 `PostgreSQLPurgeTest#test_clears_active_connections`
 (`activerecord/test/cases/adapters/postgresql/postgresql_rake_test.rb:208-216`)
 asserts exactly this call and is therefore parked as `it.skip` in
@@ -74,6 +74,6 @@ such reader yet, that gap is part of this story.
       `packages/activerecord/src/adapters/postgresql/postgresql-rake.test.ts`
       becomes a real test at its Rails name; the skip comment naming the
       divergence is removed.
-- [ ] `pnpm test:compare` gate-mismatch stays 0; `pnpm api:calls` does not gain
+- [ ] `pnpm parity:test` gate-mismatch stays 0; `pnpm parity:api:calls` does not gain
       a baseline row for the newly-made call.
 - [ ] Green on the PG lane.

@@ -48,4 +48,4 @@ masking the underlying deviation.
   type names consistently regardless of JS runtime representation.
 - The collection-serializer tests can assert the full `<id type="integer">…`
   tag without an adapter-agnostic regex workaround.
-- No api:compare / test:compare regression.
+- No parity:api / parity:test regression.

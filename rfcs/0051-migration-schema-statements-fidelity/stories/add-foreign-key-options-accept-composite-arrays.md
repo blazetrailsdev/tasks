@@ -42,4 +42,4 @@ schema-definitions.test.ts had to cast `["tenant_id","id"] as unknown as string`
 - [ ] Verify no downstream caller/consumer of `AddForeignKeyOptions` breaks
       under the widened type (migration.ts addForeignKey, schema-dumper,
       command-recorder, sqlite3/pg overrides).
-- [ ] api:compare / test:compare delta non-negative; no test-name changes.
+- [ ] parity:api / parity:test delta non-negative; no test-name changes.

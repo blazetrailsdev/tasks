@@ -49,4 +49,4 @@ adapter's real config hash.
 - [ ] Add a test: an adapter constructed with `foreignKeys: false` no-ops
       `addForeignKey`/`removeForeignKey` even though `supportsForeignKeys()` is true.
 - [ ] Verify the default (no key set) still returns true (Rails `fetch(..., true)`).
-- [ ] api:compare / test:compare delta non-negative; no test-name changes.
+- [ ] parity:api / parity:test delta non-negative; no test-name changes.

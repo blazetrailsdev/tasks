@@ -43,4 +43,4 @@ now-typed `options.type` read); it was surfaced in review there.
   behavior is required.
 - Add/port a Rails test exercising `t.virtual` without `type:` on each adapter
   to lock in the chosen behavior.
-- api:compare and test:compare delta non-negative.
+- parity:api and parity:test delta non-negative.

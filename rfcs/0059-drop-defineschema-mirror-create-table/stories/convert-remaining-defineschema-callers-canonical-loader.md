@@ -45,4 +45,4 @@ loader (`loadCanonicalSchema` / `rebuildCanonicalTables` in
 
 - None of the four files call `defineSchema`.
 - Second-pool tables keep the Rails schema.rb shapes; MultipleDbTest still passes.
-- `test:compare` delta >= 0; no test renames. NO node:_/process._; async fs only.
+- `parity:test` delta >= 0; no test renames. NO node:_/process._; async fs only.

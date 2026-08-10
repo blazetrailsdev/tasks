@@ -49,5 +49,5 @@ done rather than re-fixing.
       convergence (do not duplicate the fix); if that lands first, this reduces
       to a verification + close.
 - [ ] Regression test for the duplicate-column case on the internalExecute path;
-      CI green on MySQL 8 + MariaDB; api:compare / test:compare delta
+      CI green on MySQL 8 + MariaDB; parity:api / parity:test delta
       non-negative.

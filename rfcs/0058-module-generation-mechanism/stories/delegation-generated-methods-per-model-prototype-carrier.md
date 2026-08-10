@@ -72,5 +72,5 @@ Consequences that made deferral the right call:
 - [ ] Benchmark the relation construction hot path: the `setPrototypeOf`
       approach must not regress relation/proxy build throughput, or use an
       alternative carrier mechanism that avoids per-instance prototype mutation.
-- [ ] No observable behavior change; `api:compare` / `test:compare` deltas
+- [ ] No observable behavior change; `parity:api` / `parity:test` deltas
       non-negative.

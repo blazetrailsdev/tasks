@@ -67,6 +67,6 @@ Full list:
   tables to `connection.createTable(...)` + teardown, mirroring the Rails test.
 - `git grep -c defineSchema packages/activerecord/src -- '**/*.test.ts'` for
   these files -> 0.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.
 - One PR per area / <=500 LOC; file follow-ups per the epic rule, do not stack.
   (Comment/import-only mentions in other files are NOT in scope — only live calls.)

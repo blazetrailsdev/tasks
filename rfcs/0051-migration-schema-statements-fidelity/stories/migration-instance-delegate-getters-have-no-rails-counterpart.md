@@ -43,7 +43,7 @@ class-side merge just removed.
 ## Converged shape
 
 Delete both instance getters and route their call sites through `connection`,
-as `migration.rb:1006-1012` does. Check `api:extra --package activerecord`
+as `migration.rb:1006-1012` does. Check `parity:api:extra --package activerecord`
 before and after — both names should leave the extra-surface count.
 
 ## Acceptance criteria
@@ -52,5 +52,5 @@ before and after — both names should leave the extra-surface count.
       `nearestDelegate` exist only on the class, typed `Migration | null`,
       matching `migration.rb:684-689`.
 - [ ] Call sites read `this.connection` directly.
-- [ ] `pnpm api:extra --package activerecord` does not regress; `pnpm api:calls`
+- [ ] `pnpm parity:api:extra --package activerecord` does not regress; `pnpm parity:api:calls`
       clean.

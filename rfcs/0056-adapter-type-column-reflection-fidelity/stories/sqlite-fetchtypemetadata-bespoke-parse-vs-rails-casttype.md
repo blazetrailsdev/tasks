@@ -40,4 +40,4 @@ would stamp `limit: 8` on every integer column and over-emit `limit:` in dumps.
       `sql_type`.
 - [ ] The SQLite integer default-8 limit no longer leaks into reflected column
       `limit` (dumps stay bare for unlimited integers; `c_int_1..8` keep 1..8).
-- [ ] test:compare non-negative.
+- [ ] parity:test non-negative.

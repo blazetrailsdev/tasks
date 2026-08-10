@@ -47,5 +47,5 @@ Read the corresponding Rails test for each suite first (fidelity above all).
   instead of a sidecar-leased adapter, exactly as its Rails counterpart does.
 - Drop any now-unnecessary in-test `createTable`/`dropTable` workaround that
   existed only because the sidecar's `:memory:` fallback had no schema.
-- No test renames; `test:compare` delta >= 0; all lanes unaffected.
+- No test renames; `parity:test` delta >= 0; all lanes unaffected.
 - 500 LOC ceiling; single PR from main; no stacked PRs.

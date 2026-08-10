@@ -44,6 +44,6 @@ re-establish the primary pool.
 ## Acceptance criteria
 
 - All 7 convenience callers drop `createSidecarTestAdapter` and ride
-  `Base.connection` via the handler suite. No test renames. `test:compare`
+  `Base.connection` via the handler suite. No test renames. `parity:test`
   delta >= 0. sqlite `:memory:`, template-clone, and PG/MySQL lanes unaffected.
 - Read the corresponding Rails test for each suite first (fidelity above all).

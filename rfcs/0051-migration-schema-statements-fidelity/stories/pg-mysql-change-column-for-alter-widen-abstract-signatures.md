@@ -66,5 +66,5 @@ widening). Converge both, or converge PG and file MySQL separately.
       (the options type now flows).
 - [ ] `AbstractMysqlAdapter.changeColumnForAlter` converged the same way, or a
       sibling story filed for it.
-- [ ] `pnpm typecheck` green, `api:extra --package activerecord` delta
+- [ ] `pnpm typecheck` green, `parity:api:extra --package activerecord` delta
       non-negative, PG and MySQL lanes green.

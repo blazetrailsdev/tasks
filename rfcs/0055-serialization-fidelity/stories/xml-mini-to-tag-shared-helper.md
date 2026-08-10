@@ -42,6 +42,6 @@ The `ToTagTest` placeholders in `packages/activesupport/src/xml-mini.test.ts`
 - Route `Model#_hashToXml` per-attribute emission through it so the inline
   type/nil/rename logic is deduplicated.
 - Un-skip the `ToTagTest` cases in `xml-mini.test.ts` (test names verbatim).
-- No api:compare / test:compare regression.
+- No parity:api / parity:test regression.
 
 Hard rules: camelCase only; NO node:_/process._; async fs only; 500 LOC ceiling.

@@ -83,7 +83,7 @@ sti-owner-through-foreign-key}.test.ts`,
   and rides the canonical `developers` table (revisit/remove its
   `AR_NO_AUTO_SCHEMA` stub). Audit all former sidecar callers for the same
   now-unnecessary bespoke `create_table` workaround and remove it.
-- No test renames; `test:compare` delta >= 0; sqlite `:memory:` single-worker,
+- No test renames; `parity:test` delta >= 0; sqlite `:memory:` single-worker,
   template-clone CI lane, and PG/MySQL URL-DB lanes all unaffected.
 - Read the corresponding Rails test for each converted suite first (fidelity
   above all else). This spans ~29 caller files and will exceed 500 LOC — do NOT

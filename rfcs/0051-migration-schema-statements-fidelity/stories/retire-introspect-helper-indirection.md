@@ -38,4 +38,4 @@ null-to-empty-array normalization, which belongs at its call sites.
 - `IntrospectedIndex` either moves to where it is still needed or is replaced
   by the adapter's own index descriptor type.
 - `schema-introspection.trails.test.ts` is retired with the module.
-- `api:compare` / `test:compare` delta non-negative.
+- `parity:api` / `parity:test` delta non-negative.

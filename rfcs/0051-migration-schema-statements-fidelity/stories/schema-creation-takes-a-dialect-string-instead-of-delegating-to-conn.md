@@ -94,4 +94,4 @@ every construction site twice.
 - [ ] MariaDB/MySQL version gates reach the visitor (a pre-10.8.1 MariaDB
       connection reports `supports_index_sort_order?` false).
 - [ ] Green on sqlite (file lane), `sqlite3_mem`, PG and MariaDB.
-- [ ] `pnpm api:calls` / `pnpm api:extra` non-positive deltas.
+- [ ] `pnpm parity:api:calls` / `pnpm parity:api:extra` non-positive deltas.

@@ -1,5 +1,5 @@
 ---
-title: "MySQL indexes is public in Rails but tagged @internal, so api:compare never sees it"
+title: "MySQL indexes is public in Rails but tagged @internal, so parity:api never sees it"
 status: done
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
@@ -42,7 +42,7 @@ sits above the `private` keyword at `:143` (contrast `add_index_length` at
 whose `@internal` tags in the same file are correct).
 
 `@internal` drops a member from the compared surface, so a public Rails method
-that trails does implement is currently invisible to `api:compare` — it takes
+that trails does implement is currently invisible to `parity:api` — it takes
 no credit for it and cannot flag drift in it. The neighbouring public members in
 the same class (`schemaCreation`, `updateTableDefinition`, `createTable`,
 `removeColumn`, `dropTable`, `indexes`) carry a plain `Mirrors:` line and no
@@ -56,7 +56,7 @@ Drop the `@internal` tag from `indexes`' JSDoc, keeping the prose and the
 
 Confirm the method is credited afterwards rather than newly-flagged: a body
 compared for the first time can surface pre-existing call-set rows
-(`pnpm api:calls`), which are baselined with a real reason, never reverted.
+(`pnpm parity:api:calls`), which are baselined with a real reason, never reverted.
 
 ## Acceptance criteria
 
@@ -64,5 +64,5 @@ compared for the first time can surface pre-existing call-set rows
       `mysql/schema_statements.rb:8`'s public visibility.
 - [ ] `addIndexLength` / `addOptionsForIndexColumns` keep theirs
       (`schema_statements.rb:229,236`, below `private` at `:143`).
-- [ ] `pnpm api:compare` delta non-negative; `pnpm api:calls` clean (any newly
+- [ ] `pnpm parity:api` delta non-negative; `pnpm parity:api:calls` clean (any newly
       surfaced row carries a reviewed one-line reason).

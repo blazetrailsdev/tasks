@@ -59,4 +59,4 @@ extensions, …` and had not converged — the `Omit` list would end up far larg
       (`query`, `quoteLiteral`, `_schemaSearchPathMemo`).
 - [ ] `columns`' `as HashLookupTypeMap` is removed, or the TS2610 blocker is
       recorded as PERMANENT with the accessor cited.
-- [ ] PG suite green; api:compare / api:extra delta non-negative.
+- [ ] PG suite green; parity:api / parity:api:extra delta non-negative.

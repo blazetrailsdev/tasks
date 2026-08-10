@@ -32,4 +32,4 @@ statements are adapter instance methods via `include SchemaStatements`
 - `assertSchemaAdapter` is not reintroduced at those call sites unless a
   concrete adapter shape genuinely requires narrowing (record the reason at
   the call site if so).
-- `api:compare` / `test:compare` delta non-negative.
+- `parity:api` / `parity:test` delta non-negative.

@@ -27,7 +27,7 @@ The sweep that removed the others (#5736, then #5752 for `database_exists?` and
 
 The hazard the sweep exists to remove is documented: an `is`-prefixed base
 predicate plus a bare-named subclass method are different symbols, so the
-subclass never overrides, TS reports nothing, and api:compare accepts both
+subclass never overrides, TS reports nothing, and parity:api accepts both
 spellings. That is exactly the dead override #5752 found in
 `PostgreSQLSchemaStatements#indexNameExists`.
 
@@ -37,4 +37,4 @@ spellings. That is exactly the dead override #5752 found in
 - Before renaming, check for a bare `templateExists` elsewhere in actionview — if
   one exists, it is currently a dead override and its behaviour must be diffed
   against the base before it goes live.
-- api:compare surface unchanged or improved.
+- parity:api surface unchanged or improved.

@@ -73,4 +73,4 @@ claiming a type the field may not hold.
       is distinguishable from a connected one without a runtime check.
 - [ ] `Migration.copy` still seats the null objects verbatim as
       `migration.rb:1065-1066` does.
-- [ ] `pnpm api:extra --package activerecord` clean; no new baseline rows.
+- [ ] `pnpm parity:api:extra --package activerecord` clean; no new baseline rows.

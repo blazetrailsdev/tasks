@@ -53,4 +53,4 @@ retire at least the `data_sources` and `include?` entries.
 - The now-converged `data_source_exists?` wide-exclude entries are removed.
 - Verify with the full six-step rails-comparison sequence (including
   `compare.ts --wide-calls` + `lint-call-mismatches-wide.ts`), not just
-  `pnpm api:compare`.
+  `pnpm parity:api`.

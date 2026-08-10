@@ -56,5 +56,5 @@ Rails counterpart: `vendor/rails/activerecord/test/cases/migration_test.rb`
   `things`, `join_table`, the `bk*` set, …) are dropped in its own
   `finally`/`afterEach` rather than relying on the global reset that
   `setupFixtures()` disables.
-- No test renames; `test:compare` delta >= 0; all lanes unaffected.
+- No test renames; `parity:test` delta >= 0; all lanes unaffected.
 - 500 LOC ceiling; single PR from main; no stacked PRs.

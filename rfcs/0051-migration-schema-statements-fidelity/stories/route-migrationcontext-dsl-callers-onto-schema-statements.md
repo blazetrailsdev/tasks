@@ -54,7 +54,7 @@ Scope: 76 references outside `migration.ts`, across
   `migration.ts` itself is not restructured in this story.
 - If the 500-LOC ceiling is hit, split by consumer file and register the
   remainder as a follow-up — do NOT open sibling PRs yourself.
-- `pnpm api:compare` / `test:compare` deltas non-negative; migration, migrator
+- `pnpm parity:api` / `parity:test` deltas non-negative; migration, migrator
   and schema suites green on all three lanes.
 
 ## Sequencing

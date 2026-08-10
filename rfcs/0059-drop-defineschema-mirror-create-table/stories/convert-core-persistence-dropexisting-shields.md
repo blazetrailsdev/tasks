@@ -50,6 +50,6 @@ comment (it names why the table is clobbered) and the corresponding Rails test.
   `connection.createTable(...)`-based canonical rebuild (drop + recreate), NOT a
   bare deletion — the anti-contamination shield must be preserved.
 - `git grep -c "defineSchema(" <these files>` -> 0.
-- No test renames; `test:compare` delta >= 0. Tests pass on all 3 adapters.
+- No test renames; `parity:test` delta >= 0. Tests pass on all 3 adapters.
 - <=500 LOC per PR; split across PRs from main (non-overlapping files) if needed,
   do NOT stack.

@@ -52,4 +52,4 @@ skips the BC/fixed-6 PG formatting. Edge case; fold in if cheap.
       duplicating; PG behavior unchanged.
 - [ ] Unit coverage for `.5 → .500000`, usec==0 omission, and the µs cap on
       sqlite/mysql, mirroring the PG tests added in PR #3956.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

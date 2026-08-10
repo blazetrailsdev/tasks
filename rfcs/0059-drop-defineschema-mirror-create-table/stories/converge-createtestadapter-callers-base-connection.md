@@ -40,6 +40,6 @@ isBlank conversion.
 
 - The `createTestAdapter` convenience callers ride `Base.connection`. Bespoke
   `create_table` workarounds that only existed because the sidecar handle
-  lacked the boot-laid schema are removed. No test renames; `test:compare`
+  lacked the boot-laid schema are removed. No test renames; `parity:test`
   delta >= 0.
 - Read the corresponding Rails test for each converted suite first.

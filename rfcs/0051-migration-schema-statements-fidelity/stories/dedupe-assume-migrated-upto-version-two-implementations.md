@@ -43,10 +43,10 @@ first — `schema-migration.ts:146-151`).
 - [ ] Decide whether `SchemaMigration#assumeMigratedUptoVersion` should be
       deleted outright, or kept and justified as extra surface.
 - [ ] If deleted: confirm no callers (currently none in `packages/*/src`),
-      remove the method and its trails test file, and confirm the api:compare
+      remove the method and its trails test file, and confirm the parity:api
       extra-surface count drops.
 - [ ] If kept: record why at the call site, and note that the
       validate-before-write divergence is deliberate.
 - [ ] Do not allowlist it as extra surface without converging — see the
       standing rule that the allowlist is not for deferred work.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

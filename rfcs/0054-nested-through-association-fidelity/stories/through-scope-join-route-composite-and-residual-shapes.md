@@ -68,6 +68,6 @@ fallback. Removing guard (1) is a small, self-contained follow-up.
 - The composite-PK construction tests are converted to assert Rails behavior
   (the JOIN scope / correct results) rather than the `ConfigurationError`
   throw — after reading the corresponding Rails tests. No test renames.
-- api:compare and test:compare deltas stay non-negative.
+- parity:api and parity:test deltas stay non-negative.
 - No stubs; no `node:` imports; no `process` references; async fs only; no new
   runtime deps.

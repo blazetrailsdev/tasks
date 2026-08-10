@@ -52,4 +52,4 @@ adapter-stable there.
 - A regression test exercises a nested `include` with a bigint id materialized
   as a string/BigInt (mirroring PG/MariaDB) asserting the full
   `<id type="integer">…</id>` tag.
-- No api:compare / test:compare regression.
+- No parity:api / parity:test regression.

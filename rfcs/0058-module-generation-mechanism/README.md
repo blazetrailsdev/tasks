@@ -63,7 +63,7 @@ last-included-wins. These are mechanism-level, cross-cutting, and had no home.
 ## Verification
 
 Generated-module installation matches Ruby ancestry; callback runner drives the
-compiled sequence; `api:compare` mechanism-related mismatches clear.
+compiled sequence; `parity:api` mechanism-related mismatches clear.
 
 ## Open questions
 

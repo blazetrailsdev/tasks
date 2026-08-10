@@ -44,4 +44,4 @@ Setup/teardown and the `TestModel` host already exist in
 - [ ] `test_remove_columns_single_statement` and
       `test_add_timestamps_single_statement` keep a real query-shape assertion
       (via `assertQueriesMatch`), not a bare behavioural check.
-- [ ] Green on all three adapters; `test:compare` missing count drops by 5.
+- [ ] Green on all three adapters; `parity:test` missing count drops by 5.

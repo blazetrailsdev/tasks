@@ -50,4 +50,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

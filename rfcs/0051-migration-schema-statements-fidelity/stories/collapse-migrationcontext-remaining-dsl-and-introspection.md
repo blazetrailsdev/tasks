@@ -50,6 +50,6 @@ EXISTS] ... [CASCADE]` via `executeMutation`. `SchemaStatements#dropTable`
 - [ ] Bespoke introspection replaced by / backed by the adapter's real schema
       introspection where feasible; remaining divergence documented with a
       tracked reason.
-- [ ] No regression in api:compare / test:compare (non-negative delta).
+- [ ] No regression in parity:api / parity:test (non-negative delta).
 - [ ] loadSchema generated-schema path still builds the canonical worker DB
       identically.

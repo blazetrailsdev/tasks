@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 PR #4777 unified the base `SchemaDumper.emitTable` onto the single
-`columnSpec`/`prepareColumnOptions` dispatch, which (per api:compare) must live
+`columnSpec`/`prepareColumnOptions` dispatch, which (per parity:api) must live
 on the `ConnectionAdapters::SchemaDumper` subclass
 (`packages/activerecord/src/connection-adapters/abstract/schema-dumper.ts`). The
 base (`packages/activerecord/src/schema-dumper.ts`) therefore redirects
@@ -42,7 +42,7 @@ adapter layer would throw. A Codex reviewer flagged this across several rounds.
   non-adapter source (in-memory MigrationContext / plain SchemaSource) works
   **synchronously without depending on some other module having loaded the
   adapter layer** — no timing-dependent throw, no sync→Promise change.
-- api:compare stays green: `column_spec`/`schema_default`/`schema_expression`
+- parity:api stays green: `column_spec`/`schema_default`/`schema_expression`
   remain mapped in `connection-adapters/abstract/schema-dumper.ts`; base
   `schema_dumper.rb` methods remain mapped in `schema-dumper.ts`.
 - Evaluate the two viable approaches and pick one: (a) flatten the
@@ -50,5 +50,5 @@ adapter layer would throw. A Codex reviewer flagged this across several rounds.
   pattern (CLAUDE.md "Module mixins") so the single emitter lives on one class
   with no cyclic `extends`; or (b) split the base class into its own module so
   `schema-dumper.ts` can statically import the subclass and register it
-  synchronously, updating the api:compare file mapping accordingly.
+  synchronously, updating the parity:api file mapping accordingly.
 - No dump-output change across PG/MySQL/SQLite and the in-memory/mock paths.

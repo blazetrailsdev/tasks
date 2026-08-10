@@ -32,6 +32,6 @@ Get the current list with:
 
 - All canonical `defineSchema(TEST_SCHEMA)` / name-array calls removed; the files
   rely on the boot-laid schema.
-- No test renames; `test:compare` delta >= 0. If a file turns out to need a
+- No test renames; `parity:test` delta >= 0. If a file turns out to need a
   bespoke table, it belongs in a phase-3 conversion story, not here.
 - Split into multiple PRs if >500 LOC; file follow-ups per the epic rule, do not stack.

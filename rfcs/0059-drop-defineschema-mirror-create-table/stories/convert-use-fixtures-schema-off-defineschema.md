@@ -56,4 +56,4 @@ story `remove-usefixtures-public-surface`. Prefer `fixtures` in any example.
   now redundant under template-clone and delete it (letting the boot-time
   template be the sole schema source).
 - The fixtures engine no longer calls `defineSchema`.
-- `test:compare` delta >= 0; no test renames. NO node:_/process._; async fs only.
+- `parity:test` delta >= 0; no test renames. NO node:_/process._; async fs only.

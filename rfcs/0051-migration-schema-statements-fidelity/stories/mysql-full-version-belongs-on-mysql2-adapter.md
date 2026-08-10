@@ -50,5 +50,5 @@ null>`). The same override shape is available to `fullVersion`.
 
 - [ ] `fullVersion` lives on `Mysql2Adapter` per mysql2_adapter.rb:164-166.
 - [ ] Any residual abstract declaration is minimal and cited at the call site.
-- [ ] `pnpm api:compare` / `pnpm api:extra` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra` deltas non-negative.
 - [ ] MySQL/MariaDB lanes green.

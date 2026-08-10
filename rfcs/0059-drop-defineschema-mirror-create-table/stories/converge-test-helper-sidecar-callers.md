@@ -43,7 +43,7 @@ in-test-pool pattern and Rails' `TestFixtures` module for the pin lifecycle.
 - The helper modules resolve their adapter from `Base.connection` /
   `Base.connection_pool` (the primary, schema-loaded pool), not the sidecar.
 - Self-tests updated to match; no test renames.
-- `test:compare` delta >= 0; all lanes unaffected.
+- `parity:test` delta >= 0; all lanes unaffected.
 - 500 LOC ceiling; single PR from main; no stacked PRs.
 - This batch unblocks the final `retire-sidecar-pool-rework-pool-mechanics`
   helper deletion (it removes the last `_pool` leases).

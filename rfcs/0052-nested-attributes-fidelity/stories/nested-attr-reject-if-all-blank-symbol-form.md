@@ -41,4 +41,4 @@ trails does not currently model symbolically.
   `nested_attributes.rb:302` (skip `_destroy`, `isBlank` on every other value).
 - Convert the inline `rejectAllBlank` in the canonical `Pirate` model to the
   symbolic form once supported.
-- No test:compare or api:compare regression.
+- No parity:test or parity:api regression.

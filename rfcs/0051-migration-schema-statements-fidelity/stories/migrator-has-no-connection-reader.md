@@ -48,7 +48,7 @@ whichever method keeps the Rails name has to be the one that reads `connection`.
 - `Migrator` exposes a `connection` reader mirroring Rails', and the advisory
   lock / transaction / lock-id methods read through it instead of touching
   `_adapter` directly.
-- The wrapper/private split does not hide the reader from api:compare — the
+- The wrapper/private split does not hide the reader from parity:api — the
   method carrying the Rails name is the one making the `connection` call.
 - The affected entries are removed from the wide call-mismatch baseline
   (only-shrink); any that remain keep a real reason, not the seeded default.

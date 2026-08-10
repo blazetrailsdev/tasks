@@ -73,5 +73,5 @@ only caller), or the two ship together.
 - `pending-migration-connection.ts` contains only `withTemporaryPool`,
   `isPrimaryClass`, and `currentPreventingWrites` — no instance members.
 - `CheckPending` no longer accepts a `pendingConnection` option.
-- `pnpm api:extra --package activerecord` delta is negative (this removes
+- `pnpm parity:api:extra --package activerecord` delta is negative (this removes
   invented surface, it does not add any).

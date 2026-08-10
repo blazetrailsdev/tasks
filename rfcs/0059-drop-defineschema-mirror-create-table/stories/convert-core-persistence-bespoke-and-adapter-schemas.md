@@ -50,6 +50,6 @@ Files:
   `connection.createTable(...)` (bespoke schema mirrored from Rails; or canonical
   rebuild on the fresh/wrapper adapter) + teardown drop where a table is created.
 - `git grep -c "defineSchema(" <these files>` -> 0.
-- No test renames; `test:compare` delta >= 0. Tests pass on all 3 adapters
+- No test renames; `parity:test` delta >= 0. Tests pass on all 3 adapters
   (persistence PG block runs only on postgres).
 - <=500 LOC per PR; non-overlapping files if split; do NOT stack.

@@ -68,7 +68,7 @@ missing `pool.migration_context`, and every future port of a
 - [ ] The schema-DSL responsibilities currently sitting on `MigrationContext`
       move to whichever host matches Rails' layout (the connection's
       `SchemaStatements` / `Migration`), so the name means what it means in
-      Rails. `api:compare` must not gain surface from the move.
+      Rails. `parity:api` must not gain surface from the move.
 - [ ] `ConnectionPool#migrationContext`
       (`connection-adapters/abstract/connection-pool.ts:534`) returns the
       migration-set context, mirroring `connection_pool.rb:294-296`.

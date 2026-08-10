@@ -74,5 +74,5 @@ settles what the NullPool arm answers.
       (`internal_metadata.rb:13-14`).
 - [ ] Call sites that relied on the no-op methods branch on the class instead,
       as Rails' do.
-- [ ] `pnpm api:extra --package activerecord` reports no novel names on
+- [ ] `pnpm parity:api:extra --package activerecord` reports no novel names on
       `internal-metadata.ts` for this class.

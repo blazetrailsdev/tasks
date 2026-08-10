@@ -52,4 +52,4 @@ Our `ForeignKeyLookupOptions`/`foreignKeyFor`/`isDefinedFor` already model
 - [ ] Add a test: `add_foreign_key ..., if_not_exists: true` with a composite
       `column: [...]` that already exists is a no-op (does not raise / does not
       duplicate). Mirror the Rails test name if one exists.
-- [ ] api:compare / test:compare delta non-negative; no test-name changes.
+- [ ] parity:api / parity:test delta non-negative; no test-name changes.

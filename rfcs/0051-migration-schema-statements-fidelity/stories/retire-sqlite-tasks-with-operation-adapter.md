@@ -64,6 +64,6 @@ left inside a general-purpose helper.
 - [ ] `withOperationAdapter` is gone; the three call sites use `connection()`.
 - [ ] Any caller that reached a task method without an established connection is
       fixed at the caller, not worked around in the task class.
-- [ ] `pnpm api:extra --package activerecord` shows no new novel surface here.
+- [ ] `pnpm parity:api:extra --package activerecord` shows no new novel surface here.
 - [ ] Green on sqlite (file lane), `sqlite3_mem`, PG and MariaDB, plus
       `packages/trailties/src/commands/db.test.ts`.

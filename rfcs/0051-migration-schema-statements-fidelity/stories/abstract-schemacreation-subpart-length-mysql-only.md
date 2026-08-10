@@ -49,5 +49,5 @@ reconcile both to Rails (MySQL-only length decoration).
       `schema-file-generator` once the base is correct (or confirm they become
       no-ops).
 - [ ] Reconcile the MigrationContext-vs-SchemaStatements length inconsistency.
-- [ ] api:compare / test:compare non-negative; PG/SQLite index-with-length DDL
+- [ ] parity:api / parity:test non-negative; PG/SQLite index-with-length DDL
       is valid (length silently dropped, as in Rails).

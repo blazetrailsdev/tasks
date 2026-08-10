@@ -61,4 +61,4 @@ suspicious: `enum` is PG-only in Rails.
   `TableDefinition`, where Rails puts it.
 - Schema-dump round-trip still works: the PG dumper emits `enum_type:`
   (`postgresql/schema-dumper.ts:31,38`) and that output must keep loading.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

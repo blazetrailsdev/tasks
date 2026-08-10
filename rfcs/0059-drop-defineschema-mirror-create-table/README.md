@@ -187,7 +187,7 @@ eslint/` and delete each, keeping still-relevant rules like
   still references `defineSchema` or `TEST_SCHEMA`.
 - Schema-dump parity (`schema-dumper` tests, all 3 adapters) unchanged across the
   loader swap.
-- `test:compare` delta ≥ 0 across the whole migration.
+- `parity:test` delta ≥ 0 across the whole migration.
 
 ## Open questions
 

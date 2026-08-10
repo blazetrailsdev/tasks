@@ -47,4 +47,4 @@ and deleting the IN-subquery fallback + its backstop composite guards.
   equivalent) rather than a bespoke IN-subquery `ConfigurationError`.
 - The single-column IN-subquery fallback in `_buildThroughScope` and its
   composite backstop `ConfigurationError`s are deleted once no shape reaches it.
-- api:compare and test:compare deltas stay non-negative; no test renames.
+- parity:api and parity:test deltas stay non-negative; no test renames.

@@ -31,7 +31,7 @@ structural-shape pattern #5596 retired on the Migrator path. Rails has one
 `MigrationProxy` that delegates to a real `Migration` (`migration.rb:1187`).
 
 Whether the two classes should converge into one is part of the question: the
-deprecator copy exists because the api:compare extractor buckets
+deprecator copy exists because the parity:api extractor buckets
 `MigrationProxy` under `deprecator.rb`.
 
 ## Acceptance criteria
@@ -40,4 +40,4 @@ deprecator copy exists because the api:compare extractor buckets
       `Migration` — no `as { ... }` structural casts on the delegation sites.
 - [ ] The duplication between the two `MigrationProxy` classes is resolved or
       the reason they must stay separate is recorded at the call site.
-- [ ] api:compare's `MigrationProxy` bucketing is unchanged by the fix.
+- [ ] parity:api's `MigrationProxy` bucketing is unchanged by the fix.

@@ -39,7 +39,7 @@ call has to be spelled `t.isColumnExists(...)`.
 Check the surrounding convention before picking a direction — `Table` also
 carries `isIndexExists`, `isCheckConstraintExists` etc., so the `is` prefix may
 be a deliberate local rule for `?` predicates; if so, `SchemaStatements` is the
-side that diverges. Either way the two should agree, and api:compare's
+side that diverges. Either way the two should agree, and parity:api's
 `rails_name` mapping should point at whichever survives
 ([[project_rails_name_is_real_path_not_divergent_alias]]).
 
@@ -48,5 +48,5 @@ side that diverges. Either way the two should agree, and api:compare's
 - [ ] `column_exists?` resolves to a single TS spelling across
       `SchemaStatements` and `Table` (and the sibling `*_exists?` predicates are
       consistent with it).
-- [ ] Call sites updated; api:compare surface unchanged or improved.
+- [ ] Call sites updated; parity:api surface unchanged or improved.
 - [ ] Green on all three lanes.

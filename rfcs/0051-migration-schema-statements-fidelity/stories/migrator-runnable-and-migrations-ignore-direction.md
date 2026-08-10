@@ -73,7 +73,7 @@ selection logic.
 - `runnable` ports migration.rb:1466-1472 including the `runnable.pop if target`
   arm and the `ran?` polarity flip between up and down.
 - Private `start` / `finish` / `target` helpers land under their Rails names in
-  `migration.ts`, with `api:compare` showing no new arity mismatch and no novel
+  `migration.ts`, with `parity:api` showing no new arity mismatch and no novel
   extra surface.
 - Tests cover a down run with a target (last migration skipped) and without one
   (all the way down). Rails' `migrator_test.rb` cases with matching names are

@@ -74,4 +74,4 @@ Surfaced by Codex review on PR #4043 (rounds 4-6).
   in the same change.
 - The `attribute named toJSON does not shadow Model#toJSON` behavior is
   preserved or its expectation is explicitly re-derived from Rails and updated.
-- No regression in activemodel / AR serialization suites; api:compare stays 100%.
+- No regression in activemodel / AR serialization suites; parity:api stays 100%.

@@ -47,7 +47,7 @@ only remaining effect is to make the bodies read unlike Rails.
 - The unit tests that construct these classes directly are re-pointed at an
   adapter prototype, the way #5844 did for
   `postgresql/schema-statements-class.test.ts`.
-- SQLite / PG / MySQL suites stay green; api:compare delta non-negative.
+- SQLite / PG / MySQL suites stay green; parity:api delta non-negative.
 
 Note: ~160 call sites across three files will not fit one 500-LOC PR. Expect to
 split by file (abstract / postgresql / mysql) with non-overlapping files, each

@@ -78,7 +78,7 @@ structural root cause of the "two code paths drift apart" class of bug.
       builds the canonical worker DB identically; expression-index names remain
       stable (the PR #3521 invariant), now structurally rather than by a
       duplicated name derivation.
-- [ ] No regression in api:compare / test:compare (non-negative delta).
+- [ ] No regression in parity:api / parity:test (non-negative delta).
 
 ## Notes
 

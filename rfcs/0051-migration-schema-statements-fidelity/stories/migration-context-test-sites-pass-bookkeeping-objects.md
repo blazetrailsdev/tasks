@@ -49,5 +49,5 @@ hands in.
 
 - [ ] No bare `new MigrationContext([...])` remains in `migrator.test.ts`.
 - [ ] Each converted site matches its `migrator_test.rb` counterpart's argument list.
-- [ ] Test names unchanged; `pnpm test:compare` delta non-negative.
+- [ ] Test names unchanged; `pnpm parity:test` delta non-negative.
 - [ ] Migrator suite green on all three lanes.

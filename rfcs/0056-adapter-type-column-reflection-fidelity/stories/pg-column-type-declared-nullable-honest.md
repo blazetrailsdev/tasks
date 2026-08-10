@@ -46,4 +46,4 @@ Current callers are all safe today (verified in review): `postgresql/schema-dump
       reintroduce a `?? ""` mask.
 - [ ] No behavior change to schema dumps (the coalesced ColumnInfo is still
       never-nil at runtime); reflection `col.type` stays nil for unmapped.
-- [ ] test:compare non-negative.
+- [ ] parity:test non-negative.

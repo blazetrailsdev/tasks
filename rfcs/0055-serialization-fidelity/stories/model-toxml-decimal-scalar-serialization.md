@@ -53,4 +53,4 @@ recursing as a plain object.
 - `_hashToXml` treats a `Decimal` value as a leaf (renders its string form),
   not as a plain object to recurse into.
 - Regression test asserting the full `<price type="decimal">…</price>` tag.
-- No api:compare / test:compare regression.
+- No parity:api / parity:test regression.

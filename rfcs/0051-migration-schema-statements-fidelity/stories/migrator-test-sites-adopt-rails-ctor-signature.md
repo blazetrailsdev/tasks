@@ -44,5 +44,5 @@ counterpart does not build.
 - [ ] No `new Migrator(...)` in the repo passes an adapter as the first argument.
 - [ ] Ported test bodies match their `migrator_test.rb` /
       `multi_db_migrator_test.rb` counterparts' construction.
-- [ ] Test names unchanged; `pnpm test:compare` delta non-negative.
+- [ ] Test names unchanged; `pnpm parity:test` delta non-negative.
 - [ ] Migrator, migration and multi-db suites green on all three lanes.

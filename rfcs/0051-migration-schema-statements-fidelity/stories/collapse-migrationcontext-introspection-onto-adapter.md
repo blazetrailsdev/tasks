@@ -50,7 +50,7 @@ implements these, backed by adapter catalog queries). The mysql2 adapter has
       `_columnMeta`/`_indexes` maps.
 - [ ] Any remaining divergence (e.g. post-CTAS column derivation) is documented
       with a tracked reason rather than silently retained.
-- [ ] No regression in api:compare / test:compare (non-negative delta).
+- [ ] No regression in parity:api / parity:test (non-negative delta).
 - [ ] loadSchema generated-schema path still builds the canonical worker DB
       identically.
 - [ ] Single PR from main; 500 LOC ceiling; test names match Rails verbatim.

@@ -51,5 +51,5 @@ chain). Construction sites to reroute:
 - [ ] `uncacheableMethods` gate stays load-bearing across all four carriers
       (a generated `target` must never shadow `CollectionProxy#target`);
       `DelegationCachingTest` still holds.
-- [ ] No observable behavior change; `api:compare` / `test:compare` deltas
+- [ ] No observable behavior change; `parity:api` / `parity:test` deltas
       non-negative. Bench: no relation/proxy construction regression.

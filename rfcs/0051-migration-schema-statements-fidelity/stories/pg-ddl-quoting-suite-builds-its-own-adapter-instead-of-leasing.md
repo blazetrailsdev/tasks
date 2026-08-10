@@ -78,6 +78,6 @@ Do NOT widen `describeIfPg`; the probe has real users
 - [ ] No test renamed.
 - [ ] Every surviving `describeIfPg` block is one whose body genuinely needs the
       cross-lane probe.
-- [ ] `pnpm test:compare` delta non-negative (the gate change is visible to the
+- [ ] `pnpm parity:test` delta non-negative (the gate change is visible to the
       extractor — both wrappers are registered).
 - [ ] Green on sqlite (file lane), `sqlite3_mem`, PG and MariaDB.

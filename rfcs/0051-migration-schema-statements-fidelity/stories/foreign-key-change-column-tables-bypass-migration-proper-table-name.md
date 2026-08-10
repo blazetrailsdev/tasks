@@ -49,5 +49,5 @@ same file already do, and pass the bare `rockets` / `astronauts` names.
 - [ ] The migration is passed the _undecorated_ table names, with the
       prefix/suffix applied by `properTableName` / `tableNameOptions`, so the
       `WithPrefix` / `WithSuffix` variants cover that path.
-- [ ] Green on all three adapters; `test:compare` delta non-negative and
+- [ ] Green on all three adapters; `parity:test` delta non-negative and
       `--gates --check` stays at exit 0.

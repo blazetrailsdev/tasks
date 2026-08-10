@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 `vendor/rails/activerecord/test/cases/migration/columns_test.rb` has no trails
-counterpart (`migration/columns.test.ts` exists but `test:compare` reports 33
+counterpart (`migration/columns.test.ts` exists but `parity:test` reports 33
 missing of 36). The rename/remove-column index cases are the ones that pin the
 behaviour PR #5529 converged:
 
@@ -32,7 +32,7 @@ Because the file is unported, PR #5529's regressions for
 `renameColumn`-renames-the-index and `removeColumn`-keeps-the-surviving-columns
 had to go in the trails-only `connection-adapters/sqlite3-copy-table.test.ts`
 instead of the Rails-matched file. Porting the cluster lets those move to their
-canonical home and closes the `test:compare` gap.
+canonical home and closes the `parity:test` gap.
 
 Rails drives these through the `TestModel` / `test_models` table that
 columns_test.rb sets up in `setup`; check
@@ -49,4 +49,4 @@ equivalent before adding anything.
       (`renameColumn renames the index whose name embeds the column`,
       `removeColumn keeps a multi-column index on the surviving columns`) are
       removed once the ported cases cover them.
-- [ ] Green on all three adapters; `test:compare` shows the ported cases matched.
+- [ ] Green on all three adapters; `parity:test` shows the ported cases matched.

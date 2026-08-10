@@ -76,5 +76,5 @@ first. It is currently exported from `activerecord/src/index.ts`.
 - [ ] `NullSchemaMigration` declares no members (`schema_migration.rb:9-10`).
 - [ ] Call sites that relied on the no-op methods branch on the class instead,
       as Rails' do.
-- [ ] `pnpm api:extra --package activerecord` reports no novel names on
+- [ ] `pnpm parity:api:extra --package activerecord` reports no novel names on
       `schema-migration.ts` for this class.

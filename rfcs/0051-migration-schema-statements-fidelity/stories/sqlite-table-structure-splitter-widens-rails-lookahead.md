@@ -65,4 +65,4 @@ Do not close this by re-justifying `\s*`.
       cited at the call site.
 - [ ] `adapters/sqlite3/collation.test.ts` and the `columns()` enrichment stay
       green.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -44,4 +44,4 @@ Note: `test-helpers/define-schema.test.ts` (which tests `defineSchema` itself) i
 - `git grep -c "defineSchema(" <these files>` -> 0.
 - One PR per file (<=500 LOC each); file follow-up stories if the area needs
   multiple PRs — do NOT stack.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.

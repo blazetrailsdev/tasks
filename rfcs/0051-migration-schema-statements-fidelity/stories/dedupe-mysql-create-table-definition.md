@@ -43,5 +43,5 @@ companion-class deviation; this one is the narrow MySQL duplicate.
   CLAUDE.md module-mixin convention.
 - The `adapter` / `adapterName` strip either lives with it or is shown to be
   unnecessary once the abstract caller threads the adapter itself.
-- api:compare activerecord matched-method count does not decrease; novel count
+- parity:api activerecord matched-method count does not decrease; novel count
   does not increase.

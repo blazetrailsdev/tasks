@@ -101,4 +101,4 @@ which this story likely depends on.
 - [ ] The four ported tests in
       `packages/activerecord/src/adapters/sqlite3/sqlite-rake.test.ts` pass the
       `"/rails/root"` third argument as `sqlite_rake_test.rb:182,197,223,257` do.
-- [ ] `pnpm api:compare` arity/parameter deltas non-negative.
+- [ ] `pnpm parity:api` arity/parameter deltas non-negative.

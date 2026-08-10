@@ -31,7 +31,7 @@ no longer get pulled into the host's `allowed` set:
   (and the same method at lines 73, 112) — mirrors Rails
   `DidYouMean::Correctable#detailed_message`.
 
-These are consistent with the api:compare side (which already excludes them),
+These are consistent with the parity:api side (which already excludes them),
 but they represent a classification mismatch: we ported these methods yet their
 source files are still flagged unported. Triage each: either drop the file from
 `UNPORTED_FILES` (we did port the relevant surface), or — if the method is a
@@ -46,6 +46,6 @@ Source: `scripts/api-compare/extra-surface.ts` `collectAllowedNames`,
 - Each of the 4 surfaced extras is triaged to a definite resolution
   (reclassify the source file as ported, or allowlist the method as an
   intentional mirror).
-- `pnpm api:compare` extra-surface report no longer reports these as
+- `pnpm parity:api` extra-surface report no longer reports these as
   unexplained moved extras.
 - No change to novel totals.

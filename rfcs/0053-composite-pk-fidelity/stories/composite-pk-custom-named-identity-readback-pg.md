@@ -59,4 +59,4 @@ caller-supplied members untouched. Rails handles this via `sql_for_insert` /
 - [ ] Coordinate with `create-readback-custom-named-pk-postgres` (single-column
       case) so the two share one `klass.primaryKey`-keyed RETURNING path rather
       than diverging; land whichever first and fold the other in.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

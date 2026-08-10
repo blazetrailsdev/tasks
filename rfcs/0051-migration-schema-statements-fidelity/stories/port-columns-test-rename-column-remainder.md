@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activerecord/src/migration/columns.test.ts` now holds
 `test_rename_column` (columns_test.rb:43-51), the rename/remove-column index
-cluster (:96-155, PR #5548) and `test_change_column` (:181-204). `test:compare`
+cluster (:96-155, PR #5548) and `test_change_column` (:181-204). `parity:test`
 still reports 28 of 36 missing.
 
 This story covers the rename half of the remainder:
@@ -41,4 +41,4 @@ Setup/teardown and the `TestModel` host already exist in the file (ported from
 - [ ] The seven cases above ported with Rails-verbatim test names, including the
       adapter branch on `test_rename_nonexistent_column` and the mysql-only gate
       on the auto-increment case.
-- [ ] Green on all three adapters; `test:compare` missing count drops by 7.
+- [ ] Green on all three adapters; `parity:test` missing count drops by 7.

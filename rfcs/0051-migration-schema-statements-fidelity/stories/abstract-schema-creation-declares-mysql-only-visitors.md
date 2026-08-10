@@ -36,7 +36,7 @@ false everywhere but MySQL. Ruby resolves the name at call time; TS's
 `instanceof` chain and static typing need the member to exist on the receiver
 type.
 
-They are counted as extra surface today (`pnpm api:extra --package activerecord`
+They are counted as extra surface today (`pnpm parity:api:extra --package activerecord`
 lists both under `connection-adapters/abstract/schema-creation.ts`).
 
 ## Converged shape
@@ -57,4 +57,4 @@ shape removes them, `pnpm tasks block` with the specific TS limitation.
   `index_in_create` → `accept` → `visit_IndexDefinition`) still renders the same
   SQL; `packages/activerecord/src/connection-adapters/{abstract,mysql}/schema-creation.test.ts`
   stay green.
-- `pnpm api:extra --package activerecord` drops both names from the abstract file.
+- `pnpm parity:api:extra --package activerecord` drops both names from the abstract file.

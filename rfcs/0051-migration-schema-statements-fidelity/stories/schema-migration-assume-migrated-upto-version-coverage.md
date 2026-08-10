@@ -57,4 +57,4 @@ converge to Rails' raw-SQL shape, or stay and simply be tested.
 - [ ] Decide and record: converge to Rails' raw `insert_versions_sql`
       (`schema_statements.rb:1364-1383`) or keep the Arel construction with
       the Rails anchor documented.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

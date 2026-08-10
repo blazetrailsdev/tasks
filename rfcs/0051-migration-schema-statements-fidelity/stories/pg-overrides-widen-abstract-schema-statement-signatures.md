@@ -62,5 +62,5 @@ body stops handling untyped bags.
 - [ ] The remaining widened overrides from PR #6164's 34-name list are converged
       or, where the divergence is genuine narrowing, left alone with no register
       entry needed.
-- [ ] `pnpm typecheck`, `api:compare` / `api:extra` deltas non-negative, PG lane
+- [ ] `pnpm typecheck`, `parity:api` / `parity:api:extra` deltas non-negative, PG lane
       green.

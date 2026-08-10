@@ -53,5 +53,5 @@ the test and force a rename (both forbidden):
   a rename once the phase-4 removal path is decided. Coordinate with the phase-4
   `defineSchema` removal story rather than gutting the assertions here.
 - End state: `git grep -c "defineSchema(" <both files>` -> 0.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.
 - One PR per file if needed; <=500 LOC each; not stacked; from main.

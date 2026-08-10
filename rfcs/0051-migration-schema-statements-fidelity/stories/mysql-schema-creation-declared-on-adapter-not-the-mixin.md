@@ -52,4 +52,4 @@ members are drift-checked.
       `_mysqlSchemaCreation` field; `MysqlSchemaStatements` is the only definition.
 - [ ] `export interface AbstractMysqlAdapter` declares `schemaCreation`, and the
       MySQL `PAIRS` entry drift-checks all six members.
-- [ ] MySQL/MariaDB suites green; api:compare / api:extra delta non-negative.
+- [ ] MySQL/MariaDB suites green; parity:api / parity:api:extra delta non-negative.

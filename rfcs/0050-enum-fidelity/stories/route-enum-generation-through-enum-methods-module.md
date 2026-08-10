@@ -26,9 +26,9 @@ variants). Rails instead routes this through
 `define_enum_methods` at `enum.rb:302-322`).
 
 As a result we now carry **two** generators: the live inlined loop in `_enum`,
-and the dormant-but-`api:compare`-matched `EnumMethods.defineEnumMethods` /
+and the dormant-but-`parity:api`-matched `EnumMethods.defineEnumMethods` /
 `_enumMethodsModule` (`enum.ts` ~210-265, ~500-520). The dormant one mirrors
-Rails' structure (and keeps `enum.rb` at 19/19 in `api:compare`) but is never
+Rails' structure (and keeps `enum.rb` at 19/19 in `parity:api`) but is never
 called by the production path.
 
 ## Acceptance criteria
@@ -42,5 +42,5 @@ scopes, instanceMethods)` for both the value method name and the friendly
   generator, not a dead parallel one.
 - Special-char original-form (`"isAmerican Bobtail"`, `"American BobtailBang"`)
   handling stays correct.
-- `api:compare` stays 19/19 for `enum.rb`; `enum.test.ts` (204) +
+- `parity:api` stays 19/19 for `enum.rb`; `enum.test.ts` (204) +
   `virtualized-patterns.test-d.ts` stay green; test names unchanged.

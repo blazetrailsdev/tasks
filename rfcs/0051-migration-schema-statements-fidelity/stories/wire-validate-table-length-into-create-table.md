@@ -57,6 +57,6 @@ validate\_\*\_length family, different override).
 - [ ] A test covers the over-long-name `ArgumentError`, with the Rails message
       `Table name '<name>' is too long; the limit is <N> characters`.
 - [ ] Green on sqlite3, PostgreSQL, and MySQL.
-- [ ] `api:compare` / `test:compare` delta non-negative; if the wide call
+- [ ] `parity:api` / `parity:test` delta non-negative; if the wide call
       ratchet reports STALE entries for `create_table` → `validate_table_length!`,
       remove exactly those by hand (never `--write`).

@@ -44,4 +44,4 @@ interface type `options` as `Record<string, unknown>`, forcing an
 - The cast in `Migration#indexes` is removed.
 - The `as Record<string, unknown>` cast in `Migration#addReference` is removed
   (widen or align the adapter option type instead).
-- `pnpm typecheck` clean; `api:compare` / `test:compare` delta non-negative.
+- `pnpm typecheck` clean; `parity:api` / `parity:test` delta non-negative.

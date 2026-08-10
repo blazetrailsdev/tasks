@@ -64,4 +64,4 @@ column '<name>'` when `validType?(column.type)` is false, matching
       dumper as nil so `validType?` can reject it).
 - [ ] Test: an unmapped/composite-type column produces the "Could not dump table"
       comment, not a fabricated `t.column name, sqlType` line.
-- [ ] test:compare non-negative.
+- [ ] parity:test non-negative.

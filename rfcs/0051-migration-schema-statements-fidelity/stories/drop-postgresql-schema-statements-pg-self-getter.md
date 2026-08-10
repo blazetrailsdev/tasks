@@ -47,4 +47,4 @@ The fix is to give `PostgreSQLSchemaStatements` its own merged interface
 - `private get pg()` is gone from `postgresql/schema-statements-class.ts`.
 - `this.pg.x(...)` reads `this.x(...)` at every site.
 - No new self-returning narrowing getter replaces it.
-- PG suite green; api:compare / test:compare delta non-negative.
+- PG suite green; parity:api / parity:test delta non-negative.

@@ -54,4 +54,4 @@ the include site in `perModelCarrier`.
       scopes the child model and applies the child's STI type-condition
       (`DelegationCachingTest` + STI delegation coverage hold).
 - [ ] No observable behavior change; the only delta is fewer miss-path passes
-      for STI subclasses. `api:compare` / `test:compare` deltas non-negative.
+      for STI subclasses. `parity:api` / `parity:test` deltas non-negative.

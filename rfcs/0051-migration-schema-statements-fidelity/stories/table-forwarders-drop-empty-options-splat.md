@@ -72,4 +72,4 @@ is language-level), i.e. repeat the guard rather than introducing a helper
 - A `command-recorder.test.ts` case (or the existing `invert change table`
   group) covers at least the `remove` / `index` / `timestamps` paths recording
   Rails' arity.
-- `api:calls` non-negative; green on sqlite3, PostgreSQL and MySQL.
+- `parity:api:calls` non-negative; green on sqlite3, PostgreSQL and MySQL.

@@ -45,5 +45,5 @@ Read each suite's Rails counterpart first.
   adapter.
 - Remove any in-test `createTable` workaround that only existed for the
   schemaless sidecar fallback.
-- No test renames; `test:compare` delta >= 0; all lanes unaffected.
+- No test renames; `parity:test` delta >= 0; all lanes unaffected.
 - 500 LOC ceiling; single PR from main; no stacked PRs.

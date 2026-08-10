@@ -48,6 +48,6 @@ The clashing signature makes `PostgreSQLAdapter` unassignable to
 - [ ] `AbstractAdapter#isDatabaseExists` is renamed to `databaseExists`, so
       no `*_exists?` predicate keeps the `is` prefix.
 - [ ] Call sites (`tasks/postgresql-database-tasks.ts`,
-      `packages/trailties/src/database.ts`) updated; api:compare surface
+      `packages/trailties/src/database.ts`) updated; parity:api surface
       unchanged or improved.
 - [ ] Green on all three lanes.

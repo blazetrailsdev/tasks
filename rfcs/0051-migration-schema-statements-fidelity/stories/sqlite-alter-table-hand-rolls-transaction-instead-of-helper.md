@@ -29,7 +29,7 @@ savepoint name from the bare table name, and calls `createSavepoint` /
 `try`/`catch` rollback. Rails' `transaction` helper already picks savepoint vs
 BEGIN for a nested call, so the branch is re-implementing machinery that exists.
 
-`api:compare` records this as the one call mismatch for the method:
+`parity:api` records this as the one call mismatch for the method:
 `alter_table -> alterTable, missing: ["transaction -> transaction"]`
 (`scripts/api-compare/output/call-mismatches.json`).
 
@@ -43,7 +43,7 @@ Noticed while reordering `alterTable`'s parameters in PR #5607.
 - [ ] The bespoke savepoint-name derivation and the `try`/`catch` rollback
       branch are deleted.
 - [ ] The `alter_table -> alterTable` entry disappears from
-      `output/call-mismatches.json`; api:compare / test:compare deltas
+      `output/call-mismatches.json`; parity:api / parity:test deltas
       non-negative.
 - [ ] SQLite adapter suites, `migration/foreign-key.test.ts` and
       `adapters/sqlite3/copy-table.trails.test.ts` stay green, including the

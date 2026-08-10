@@ -23,13 +23,13 @@ Rails `PostgreSQL::SchemaCreation` (postgresql/schema_creation.rb:8,143-145)
 trails (postgresql/schema-creation.ts:302) inlines the non-string branch
 (`o.map(quoteIdentifier).join(", ")`) directly inside `quotedIncludeColumns`
 instead of delegating to a `quotedIncludeColumnsForIndex` on the adapter. This
-is the single remaining `api:compare` miss for PG schema_creation
+is the single remaining `parity:api` miss for PG schema_creation
 (`visit_AddForeignKey` is now matched after PR #3939 — 14/15).
 
 The inline implementation should match the adapter's
 `quoted_include_columns_for_index` (PostgreSQL::SchemaStatements) so that any
 adapter-specific quoting/expression handling is the single source of truth, and
-the method name surfaces in api:compare.
+the method name surfaces in parity:api.
 
 ## Acceptance criteria
 
@@ -37,5 +37,5 @@ the method name surfaces in api:compare.
       `PostgreSQL::SchemaStatements#quoted_include_columns_for_index`).
 - [ ] `quotedIncludeColumns` delegates to it (Rails parity), keeping the
       `String === o` short-circuit.
-- [ ] api:compare PG schema_creation reaches 15/15; no test:compare regression.
+- [ ] parity:api PG schema_creation reaches 15/15; no parity:test regression.
 - [ ] No test-name changes.

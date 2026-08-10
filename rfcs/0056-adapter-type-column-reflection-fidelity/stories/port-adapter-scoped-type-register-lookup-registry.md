@@ -55,5 +55,5 @@ Rails source:
 - Remove the `connection-adapters/mysql2-adapter.ts` `initialize_type_map` /
   `lookup` entry from `call-mismatches-wide-exclude.json` once the real
   `lookup` call is present.
-- No regression in api:compare / test:compare across mysql/mariadb CI; the
+- No regression in parity:api / parity:test across mysql/mariadb CI; the
   `type_for_attribute(varchar_col).limit === 255` behavior is preserved.

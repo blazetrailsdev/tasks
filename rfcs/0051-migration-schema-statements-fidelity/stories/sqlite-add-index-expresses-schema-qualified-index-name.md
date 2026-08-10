@@ -36,7 +36,7 @@ quotes the table name (`visitIndexDefinition`), so it cannot currently express
 a qualified index name against a bare table, and that one branch assembles the
 `CREATE [UNIQUE] INDEX … ON … (…) [WHERE …]` string locally and hands it to
 `execute`. It is recorded there as a branch-local `MISSING RAILS CALL` comment;
-the method-level `@missingRailsCall` tag had to go, because `api:calls` fails a
+the method-level `@missingRailsCall` tag had to go, because `parity:api:calls` fails a
 tag as STALE once the method makes the call at all (verified on #6315).
 
 ## Converged shape
@@ -62,4 +62,4 @@ call covers both arms:
 - [ ] `adapters/sqlite3/copy-table.trails.test.ts` stays green, including the
       partial-index `WHERE`, expression-index and column-order cases, and an
       ATTACHed-schema case pins the qualified emission.
-- [ ] `pnpm api:calls` green.
+- [ ] `pnpm parity:api:calls` green.

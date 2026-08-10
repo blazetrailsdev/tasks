@@ -54,5 +54,5 @@ loudly the way Rails does.
       `NotImplementedError` throw.
 - [ ] If callers do depend on it, document why at the call site per the
       deviation convention rather than leaving it silent.
-- [ ] Green on all three lanes; `api:compare` / `test:compare` delta
+- [ ] Green on all three lanes; `parity:api` / `parity:test` delta
       non-negative.

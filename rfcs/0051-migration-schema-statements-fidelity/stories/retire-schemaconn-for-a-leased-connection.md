@@ -36,8 +36,8 @@ connection") and it was left standing.
 
 Two facts bound the work:
 
-- It lives in `src/support/**`, which is outside **both** the `api:compare` and
-  `test:compare` populations, so nothing measures it. That is why an invented
+- It lives in `src/support/**`, which is outside **both** the `parity:api` and
+  `parity:test` populations, so nothing measures it. That is why an invented
   helper has survived here — see the standing note on that seam.
 - ~90 call sites across 14 test files consume it
   (`connection-adapters/abstract/schema-{creation,definitions}*.test.ts`,
@@ -71,4 +71,4 @@ assumed.
       `@noRailsEquivalent` with the Rails test it substitutes for.
 - [ ] No test renamed; the DDL-rendering tests stay green on sqlite (file
       lane), `sqlite3_mem`, PG and MariaDB.
-- [ ] `pnpm test:compare` delta non-negative.
+- [ ] `pnpm parity:test` delta non-negative.

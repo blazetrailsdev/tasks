@@ -43,5 +43,5 @@ substitutes an informative, round-trippable SQL name to avoid the opaque
       `"value"` first.
 - [ ] Once the default type is nil-faithful, drop the `!== "value"` base-name
       fallback in `fetchTypeMetadata` and carry `castType.type()` directly.
-- [ ] test:compare non-negative; no regression in SQLite column reflection /
+- [ ] parity:test non-negative; no regression in SQLite column reflection /
       schema round-trip.

@@ -45,7 +45,7 @@ so reflection shows ascending regardless), but a genuine fidelity divergence.
       sort order only when `supports_index_sort_order?` is true, routing through
       the shared version-gated path like Rails' `super`, while keeping MySQL
       sub-part length handling.
-- [ ] api:compare / test:compare non-negative; no PG/SQLite regression.
+- [ ] parity:api / parity:test non-negative; no PG/SQLite regression.
 
 ## Notes
 

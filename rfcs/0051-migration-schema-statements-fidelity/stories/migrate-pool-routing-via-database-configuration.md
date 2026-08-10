@@ -51,4 +51,4 @@ Related: PR #5299 fixed the pool-identity half of this
 - [ ] `databaseTasksMigrationTestCase()` in `database-tasks.test.ts` no longer
       needs to synthesize a `DatabaseConfigurations` to make `migrate()` reach
       the connected pool.
-- [ ] Test names unchanged; `test:compare` delta non-negative.
+- [ ] Test names unchanged; `parity:test` delta non-negative.

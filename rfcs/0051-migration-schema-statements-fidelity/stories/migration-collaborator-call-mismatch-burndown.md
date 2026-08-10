@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:calls activerecord` carries **7 baselined call-mismatch entries**
+`pnpm parity:api:calls activerecord` carries **7 baselined call-mismatch entries**
 across the two migration collaborators — 6 in
 `call-mismatches-exclude/activerecord/internal-metadata.json` and 1 in
 `.../schema-migration.json`. They are not independent: they are three root
@@ -144,7 +144,7 @@ divergence.
       `internal_metadata.rb:130-140` does.
 - [ ] All 7 entries are removed from
       `call-mismatches-exclude/activerecord/internal-metadata.json` and
-      `.../schema-migration.json`; `pnpm api:calls activerecord` is only-shrink.
+      `.../schema-migration.json`; `pnpm parity:api:calls activerecord` is only-shrink.
 - [ ] Full suite green with no test renames.
 
 ## Out of scope
