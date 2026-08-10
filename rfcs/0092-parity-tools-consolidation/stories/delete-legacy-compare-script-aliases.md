@@ -5,7 +5,8 @@ updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
 packages: []
-deps: []
+deps:
+  - sweep-legacy-script-spellings-in-the-tasks-repo
 deps-rfc: []
 est-loc: null
 priority: null
