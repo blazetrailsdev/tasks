@@ -69,8 +69,8 @@ storage location has to keep those readers working (or move them).
       adapters; the existing PG cases in
       `adapters/postgresql/postgresql-adapter.test.ts`
       (`ignores warnings when behaviour ignore`, `logs warnings when behaviour
-  log`, `raises warnings when behaviour raise`, `reports when behaviour
-  report`, `warnings behaviour can be customized with a proc`) stay green.
+log`, `raises warnings when behaviour raise`, `reports when behaviour
+report`, `warnings behaviour can be customized with a proc`) stay green.
 - [ ] `support/with-db-warnings-action.ts` still scopes the action for tests.
 - [ ] `pnpm api:calls` / `pnpm api:extra --package activerecord` clean; no new
       baseline rows.
