@@ -1,6 +1,6 @@
 ---
 title: "day-fraction-reader-answers-a-number-on-the-whole-day-arm"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Invalid — the premise is wrong. Verified on ruby 3.3.11: (Date.new(2001,1,1) + Rational(2,1)).day_fraction is the INTEGER 0, not (0/1). rb_rational_new folds a denominator of one, and day_fraction is built through it, so trails answering the number 0 there matches MRI. Filed off a bad reading of Rational() (which does NOT fold: Rational(9,3) is (3/1), class Rational). Nothing to converge."
 ---
 
 ## Context
