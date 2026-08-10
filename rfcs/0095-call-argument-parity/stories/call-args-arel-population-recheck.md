@@ -1,6 +1,6 @@
 ---
 title: "call-args-arel-population-recheck"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
