@@ -1,7 +1,7 @@
 ---
 title: "Port test_date_strftime.rb standard directives (8 tests)"
-status: claimed
-updated: 2026-08-09
+status: in-progress
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6311
 claim: "2026-08-09T23:52:55Z"
 assignee: "port-test-date"
 blocked-by: null
