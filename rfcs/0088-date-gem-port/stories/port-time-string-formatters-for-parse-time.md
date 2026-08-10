@@ -1,6 +1,6 @@
 ---
 title: "Port Time#to_s/asctime/iso8601/rfc2822/httpdate/xmlschema and test_parse__time"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6336
 claim: "2026-08-10T13:53:22Z"
 assignee: "port-test-date"
 blocked-by: null
