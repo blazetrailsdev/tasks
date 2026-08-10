@@ -1,6 +1,6 @@
 ---
 title: "Split unported-files.ts into a per-package directory"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0097-parity-output-sharding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6340
 claim: "2026-08-10T15:03:46Z"
 assignee: "unported-files-split-per-package"
 blocked-by: null
