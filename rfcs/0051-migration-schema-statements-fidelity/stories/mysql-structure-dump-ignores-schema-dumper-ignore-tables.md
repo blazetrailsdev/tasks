@@ -1,6 +1,6 @@
 ---
 title: "mysql-structure-dump-ignores-schema-dumper-ignore-tables"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6326
 claim: "2026-08-10T10:06:33Z"
 assignee: "mysql-structure-dump-ignores-schema-dumper-ignore-tables"
 blocked-by: null
