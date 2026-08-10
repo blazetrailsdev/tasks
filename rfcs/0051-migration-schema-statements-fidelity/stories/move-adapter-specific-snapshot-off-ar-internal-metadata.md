@@ -1,6 +1,6 @@
 ---
 title: "Move the adapter-specific schema snapshot off ar_internal_metadata's 255-char MySQL column"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
