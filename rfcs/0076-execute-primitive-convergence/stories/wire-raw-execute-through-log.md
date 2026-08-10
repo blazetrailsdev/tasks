@@ -18,6 +18,14 @@ closed-reason: null
 > **PR #6311 (merged 2026-08-10) landed only the abstract `rawExecute`/`log`
 > primitive.** Adapter routing, the `internalExecQuery` log wrap and the
 > ddl-profile update all remain — see the Progress section at the bottom.
+>
+> **Update: PR #6327 took the `internalExecQuery` log wrap.** Review there
+> required it, so `internalExecQuery` (and `rawExecQuery`) are now bare
+> `cast_result(...)` calls. The `set_query` concern that justified keeping the
+> wrap is unfounded: `AbstractAdapter#log`'s rescue already does
+> `ex.setQuery(sql, binds)` (abstract_adapter.rb:1145), which
+> `internal_execute` → `raw_execute` reaches. What remains here is adapter
+> routing and the ddl-profile update.
 
 ## Context
 
