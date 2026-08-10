@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_strftime.rb standard directives (8 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
