@@ -3,7 +3,7 @@ rfc: "0084-wide-call-set-burndown"
 title: "Wide call-set burn-down"
 status: active
 created: 2026-07-30
-updated: 2026-08-08
+updated: 2026-08-10
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -14,6 +14,7 @@ clusters:
 related-rfcs:
   - "0047"
   - "0083"
+priority: 2
 ---
 
 # Wide call-set burn-down
