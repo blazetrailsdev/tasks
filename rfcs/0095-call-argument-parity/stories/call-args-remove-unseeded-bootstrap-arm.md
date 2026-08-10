@@ -1,6 +1,6 @@
 ---
 title: "Remove the UNSEEDED bootstrap arm once the args baseline is seeded"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
