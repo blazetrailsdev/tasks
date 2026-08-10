@@ -1,6 +1,6 @@
 ---
 title: "adapter-quoters-belong-in-classmethods"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
