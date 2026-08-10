@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_strptime.rb low-level _strptime frags (5 tests)"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6320
 claim: "2026-08-10T02:06:33Z"
 assignee: "converge-time-to-datetime-seat-and-bignum-year-in-to-time"
 blocked-by: null
