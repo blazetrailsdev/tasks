@@ -1,9 +1,9 @@
 ---
 rfc: "0087-awaitable-association-writers-only"
 title: "Awaitable association writers only: delete the synchronous property setters"
-status: active
+status: draft
 created: 2026-08-03
-updated: 2026-08-08
+updated: 2026-08-10
 owner: "@deanmarano"
 packages:
   - "activerecord"
