@@ -1,6 +1,6 @@
 ---
 title: "route-adapters-through-raw-execute"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: wire-raw-execute-through-log now records what landed and stays open for the adapter routing"
 ---
 
 ## Context
