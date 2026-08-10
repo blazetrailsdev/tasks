@@ -1,6 +1,6 @@
 ---
 title: "::Time cannot hold a leap second, so to_datetime's s == 60 fold is unreachable"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
