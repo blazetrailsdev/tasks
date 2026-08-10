@@ -23,7 +23,7 @@ Actionpack declares `UrlOptions` twice, with divergent key casing:
   `tldLength`), the port of `ActionDispatch::Http::URL`
   (`actionpack/lib/action_dispatch/http/url.rb`).
 - `action-dispatch/url-for.ts:7` — snake_case keys (`script_name`,
-  `only_path`, `tld_length`) plus its own `urlFor`. `api:extra` scores this
+  `only_path`, `tld_length`) plus its own `urlFor`. `parity:api:extra` scores this
   file with `rubyFile === null`: no Rails file maps onto it, and its header
   claims to mirror `ActionDispatch::Http::URL` / `ActionController::UrlFor`,
   both of which have their own TS files.
@@ -44,4 +44,4 @@ problem the tags do not address.
 - `url-for.ts` either folds into its Rails-layout counterpart or is deleted,
   with call sites moved; the now-redundant `@noRailsEquivalent` tag goes with
   it.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

@@ -46,7 +46,7 @@ Also unported in that file: `Method` / `FindBy` / `FindByBang`
 (`dynamic_matchers.rb:26, :93, :105`) and `method_missing` (`:15`).
 `dynamic_matchers.rb` is registered in `scripts/api-compare/unported-files.ts`
 (its reason now notes the partial `respond_to_missing?` port), so none of this
-is scored by `api:compare` today.
+is scored by `parity:api` today.
 
 ## Acceptance criteria
 

@@ -19,7 +19,7 @@ blocked-by: null
 Rails `vendor/rails/activerecord/test/cases/callbacks_test.rb` defines
 `test_update`, exercising the create-vs-update callback firing path. The
 trails convention file `packages/activerecord/src/callbacks.test.ts` has **no
-local `it("update")`** — `test:compare` keeps `missing=0` only because the name
+local `it("update")`** — `parity:test` keeps `missing=0` only because the name
 matches a _shared_ test in another TS file via the cross-file (step-3) match in
 `scripts/test-compare/test-compare.ts`. So the dedicated update-callback
 behavior has no test living in its convention file.

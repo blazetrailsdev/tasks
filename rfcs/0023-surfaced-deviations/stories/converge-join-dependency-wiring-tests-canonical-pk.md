@@ -45,5 +45,5 @@ rows, and currently ride `setupFixtures()` (bare handler, no warming).
   asserting `owners.id`.
 - Read the corresponding canonical schema.rb table shape for each table the
   tests touch (owners/assets, posts/comments, etc.) first.
-- No test renames; `test:compare` delta >= 0. All suites pass under `fixtures({})`.
+- No test renames; `parity:test` delta >= 0. All suites pass under `fixtures({})`.
 - Once done, `setupFixtures()` should no longer be needed in these files.

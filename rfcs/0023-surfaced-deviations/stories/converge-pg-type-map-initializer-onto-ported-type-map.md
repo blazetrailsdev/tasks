@@ -39,4 +39,4 @@ Found by the RFC 0080 audit of `moved` interface declaration names
   (`type/hash-lookup-type-map.ts`).
 - `type-map-initializer.ts` types its store on the ported class and the local
   `TypeMap` interface plus its `@noRailsEquivalent` tag are deleted.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

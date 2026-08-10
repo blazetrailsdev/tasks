@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Not Rails-convergent: retitling a trails-only test (connection-url-resolver.test.ts:102) that test:compare does not match; the story itself notes there is no Rails test of that name."
+closed-reason: "Not Rails-convergent: retitling a trails-only test (connection-url-resolver.test.ts:102) that parity:test does not match; the story itself notes there is no Rails test of that name."
 ---
 
 ## Context
@@ -26,7 +26,7 @@ is still titled:
 `resolves through a mapping replaced via setProtocolAdapters`.
 
 The function it names no longer exists. The title was deliberately left alone in PR
-5563 because test names are never reworded in this repo (`test:compare` matches
+5563 because test names are never reworded in this repo (`parity:test` matches
 our test names to Rails test names), so the stale name needs a decision rather
 than a drive-by rename.
 
@@ -37,9 +37,9 @@ trails-only title.
 
 ## Acceptance criteria
 
-- Confirm via `pnpm test:compare` that the test is unmatched (trails-only) and
+- Confirm via `pnpm parity:test` that the test is unmatched (trails-only) and
   therefore that retitling costs no match.
 - Retitle it to name the surviving API (or delete it if the Rails-matched
   coverage elsewhere already pins the behaviour), and record which of the two
   applied.
-- No change to any test name that `test:compare` currently matches.
+- No change to any test name that `parity:test` currently matches.

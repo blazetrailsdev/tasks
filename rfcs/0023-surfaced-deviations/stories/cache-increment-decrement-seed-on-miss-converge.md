@@ -63,4 +63,4 @@ unset key" / "decrement unset key" tests are currently `it.skip` in
   "decrement unset key" tests in `stores/mem-cache-store.test.ts` where they
   apply to MemoryStore/FileStore.
 - NullStore stays null (it has no backing store — `null_store.rb`).
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

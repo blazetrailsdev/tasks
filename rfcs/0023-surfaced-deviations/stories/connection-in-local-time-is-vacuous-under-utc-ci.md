@@ -75,7 +75,7 @@ non-vacuous under UTC as well — pin an explicit non-UTC zone for the duration
 (the file already has `withTimezoneConfig`) rather than reading
 `Temporal.Now.timeZoneId()`, so CI exercises the branch it is meant to cover.
 
-Do NOT change the test name (`test:compare` matches on it).
+Do NOT change the test name (`parity:test` matches on it).
 
 ## Acceptance criteria
 
@@ -84,4 +84,4 @@ Do NOT change the test name (`test:compare` matches on it).
 - [ ] `connection in local time` asserts a real offset under `TZ=UTC`, so the
       branch is covered in CI rather than degenerating to an identity.
 - [ ] Test passes on SQLite, PG and MySQL on both a UTC and a non-UTC host.
-- [ ] `pnpm test:compare` delta non-negative; test name unchanged.
+- [ ] `pnpm parity:test` delta non-negative; test name unchanged.

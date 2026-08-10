@@ -1,5 +1,5 @@
 ---
-title: "Converge NestedAttributesDisplacementError onto Rails' RecordNotFound (api:extra red on main)"
+title: "Converge NestedAttributesDisplacementError onto Rails' RecordNotFound (parity:api:extra red on main)"
 status: closed
 updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
@@ -17,7 +17,7 @@ closed-reason: "Already done: NestedAttributesDisplacementError no longer exists
 
 ## Context
 
-`pnpm api:extra --package activerecord` fails on `main` (observed while gating
+`pnpm parity:api:extra --package activerecord` fails on `main` (observed while gating
 PR #6024, which did not touch the file):
 
 ```text
@@ -41,7 +41,7 @@ Rails declares no such error class: the nested-attributes displacement path in
   `NestedAttributesDisplacementError` — or, if a genuine TypeScript shortcoming
   blocks that, restate the `@noRailsEquivalent` reason with an explicit
   PERMANENT claim and the Rails cite.
-- `pnpm api:extra --package activerecord` exits clean.
+- `pnpm parity:api:extra --package activerecord` exits clean.
 
 ## Definition of done
 
@@ -49,4 +49,4 @@ Gate green on `main`; no new baseline rows.
 
 ## Verification
 
-`pnpm api:extra --package activerecord`
+`pnpm parity:api:extra --package activerecord`

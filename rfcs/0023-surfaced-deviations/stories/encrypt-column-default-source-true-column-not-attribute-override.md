@@ -51,4 +51,4 @@ was the pragmatic, footgun-free choice.
       differs from the DB column default threads the COLUMN default (matches
       Rails).
 - [ ] contexts.test.ts + encryptable-record.test.ts co-scheduled stay green.
-- [ ] No api:compare / call-mismatch regressions.
+- [ ] No parity:api / call-mismatch regressions.

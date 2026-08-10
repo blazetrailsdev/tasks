@@ -53,4 +53,4 @@ rather than growing a fourth bespoke split.
 - [ ] Ordering holds when multiparameter keys are also present (nested before
       multiparameter, :21-22).
 - [ ] Regression test that fails on baseline.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

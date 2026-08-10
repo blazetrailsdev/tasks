@@ -38,4 +38,4 @@ the divergent post-destroy / post-reload cache state before changing.
       the divergence with rationale.
 - [x] reload: either adopt wholesale-replace-from-fresh, or record the
       divergence with rationale.
-- [x] No test renames; `api:compare`/`test:compare` delta non-negative.
+- [x] No test renames; `parity:api`/`parity:test` delta non-negative.

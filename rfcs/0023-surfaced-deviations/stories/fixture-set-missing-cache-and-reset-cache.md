@@ -44,5 +44,5 @@ design.
 - If yes: port `cached_fixtures` / `cache_fixtures` / `reset_cache` with Rails'
   connection-pool keying, wire `createFixtures` to fill it, and call
   `resetCache` from `loadSchema` where Rails calls it.
-- If no: record the deviation where `api:compare` can see it rather than only in
+- If no: record the deviation where `parity:api` can see it rather than only in
   `load-schema-helper.ts`'s prose.

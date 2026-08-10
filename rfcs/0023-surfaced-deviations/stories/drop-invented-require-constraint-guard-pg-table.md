@@ -60,7 +60,7 @@ story red-92de18fb).
 - No test asserts on the invented
   "is not supported by the current schema backend" message; if one does, it is
   removed rather than renamed.
-- `pnpm api:compare` and `pnpm test:compare` deltas are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas are non-negative.
 
 ## Verification
 

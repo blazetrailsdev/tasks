@@ -41,7 +41,7 @@ convention.
 - [ ] Identify the Rails test this ports, or establish there is none (cite the
       search performed).
 - [ ] If it ports something: rename the file/suite to match the Rails test name
-      so `test:compare` pairs them, and ride the canonical `bulbs` / `authors`
+      so `parity:test` pairs them, and ride the canonical `bulbs` / `authors`
       tables via `fixtures({ ... })` instead of the raw `CREATE TABLE`s.
 - [ ] If it is a trails invention: move it to `*.trails.test.ts` and still
       convert it to the canonical tables.

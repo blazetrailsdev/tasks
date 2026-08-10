@@ -22,4 +22,4 @@ blocked-by: null
 
 - [ ] `buildWhereClause` constructs `BoundSqlLiteral` via `buildBoundSqlLiteral` (positional `?`) and `buildNamedBoundSqlLiteral` (named `:name`) for string fragments with binds, matching Rails `build_where_clause`
 - [ ] The bespoke named-bind substitution loop and the `sanitizeSqlArray` call in the string branch of `buildWhereClause` are removed in favor of the BoundSqlLiteral builders (or retained only where Rails genuinely differs, with a cited reason)
-- [ ] Existing where / bind-parameter / sanitization tests continue to pass; api:compare and test:compare deltas non-negative
+- [ ] Existing where / bind-parameter / sanitization tests continue to pass; parity:api and parity:test deltas non-negative

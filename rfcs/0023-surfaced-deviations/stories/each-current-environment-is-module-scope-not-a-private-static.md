@@ -61,5 +61,5 @@ the same loop upstream — and drop the `index.ts:307` export.
 - `eachCurrentEnvironment` is a private static on `DatabaseTasks`.
 - The `index.ts` re-export is deleted and `trailties/src/commands/db.ts` reaches
   the same behaviour through whatever public entry point Rails' rake task uses.
-- `pnpm api:extra --package activerecord` does not gain a novel name.
-- `pnpm api:calls` stays green.
+- `pnpm parity:api:extra --package activerecord` does not gain a novel name.
+- `pnpm parity:api:calls` stays green.

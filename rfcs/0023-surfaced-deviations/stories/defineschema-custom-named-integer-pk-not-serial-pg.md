@@ -39,4 +39,4 @@ would let these tests drop their per-file recreation workarounds.
       single integer PK on PG (and the equivalent on MySQL).
 - [x] `movies`/`keyboards`/`mixed_case_monkeys` test workarounds can be removed
       (or are no longer needed) and the affected tests still pass on all adapters.
-- [x] `test:compare` delta non-negative.
+- [x] `parity:test` delta non-negative.

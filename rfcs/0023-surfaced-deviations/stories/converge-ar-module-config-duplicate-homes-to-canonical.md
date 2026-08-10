@@ -49,4 +49,4 @@ mirroring that copy — eliminating the parallel state without behavior change
   or via a trailtie copy-into-module step), not a parallel object property /
   module-local / Base static.
 - Existing tests updated to drive behavior through the `setX` setter.
-- No behavior change (defaults already identical); test:compare delta >= 0.
+- No behavior change (defaults already identical); parity:test delta >= 0.

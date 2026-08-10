@@ -51,4 +51,4 @@ real lane adapter makes harder to drive deterministically in a unit test.
   test, document why per test and close as ratified-with-reason (do NOT leave
   the divergence untracked).
 - No pin/callback assertion hardcodes `"sqlite"` on a non-sqlite lane.
-- Test names stay verbatim; `test:compare` delta non-negative.
+- Test names stay verbatim; `parity:test` delta non-negative.

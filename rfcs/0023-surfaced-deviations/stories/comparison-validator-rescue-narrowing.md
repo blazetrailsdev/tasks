@@ -44,4 +44,4 @@ than Rails and would mask an unexpected error type if one were introduced.
 - [ ] Comparison-validation tests stay green; add coverage asserting a
       non-`ArgumentError` thrown from a compare option propagates rather than
       being swallowed (matching Rails).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

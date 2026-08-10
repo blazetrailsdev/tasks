@@ -38,4 +38,4 @@ bare `t.decimal "decimal_number"`. A round-trip fidelity divergence.
       (matching Rails' `native_database_types`-driven default), so they dump
       bare on SQLite.
 - [ ] `numeric_data.decimal_number` / `numeric_number` dump with no precision.
-- [ ] test:compare non-negative; no regression in existing decimal dump cases.
+- [ ] parity:test non-negative; no regression in existing decimal dump cases.

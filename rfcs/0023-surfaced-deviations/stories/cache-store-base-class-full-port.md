@@ -17,7 +17,7 @@ blocked-by: null
 ## Context
 
 PR #3679 ported only the `logger` class attribute from `Cache::Store` (`cache.rb:188-189`).
-The full `Cache::Store` class (`cache.rb`) has 58 methods tracked by api:compare (`cache.rb → cache.ts 0/58`).
+The full `Cache::Store` class (`cache.rb`) has 58 methods tracked by parity:api (`cache.rb → cache.ts 0/58`).
 
 Key methods remaining:
 
@@ -33,5 +33,5 @@ The TS file for this is `packages/activesupport/src/cache.ts` (mapped from `cach
 ## Acceptance criteria
 
 - `cache.ts` exists and exports `Store` class (or re-exports from `cache/store.ts` with the class grown to cover remaining methods).
-- api:compare coverage for `cache.rb → cache.ts` is > 0%.
+- parity:api coverage for `cache.rb → cache.ts` is > 0%.
 - All ported methods have corresponding tests matching Rails test names.

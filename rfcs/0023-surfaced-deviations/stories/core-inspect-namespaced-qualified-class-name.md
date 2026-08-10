@@ -60,4 +60,4 @@ Note this is NOT covered by the done stories `core-inspect-attributes-for-inspec
 - Cover with a test on the canonical namespaced models (`AdminUser` /
   `ClothingItemUsed`); if a like-named Rails test exists use its name verbatim,
   otherwise place it in a `*.trails.test.ts` sibling.
-- api:compare / test:compare deltas non-negative.
+- parity:api / parity:test deltas non-negative.

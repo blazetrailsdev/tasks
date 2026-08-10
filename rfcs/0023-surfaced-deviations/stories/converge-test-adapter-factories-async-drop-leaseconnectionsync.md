@@ -44,5 +44,5 @@ cover that path.
 - `leaseConnectionSync` is removed if no non-getter consumers remain, or its
   remaining consumers are narrowed to only the genuinely-sync `.connection`
   getter path with a doc comment saying so.
-- No test:compare / api:compare regression; test names verbatim.
+- No parity:test / parity:api regression; test names verbatim.
 - 500 LOC ceiling (split if needed; caller-migration is mechanical await work).

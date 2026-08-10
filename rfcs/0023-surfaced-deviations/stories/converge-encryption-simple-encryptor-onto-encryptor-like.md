@@ -37,4 +37,4 @@ Found by the RFC 0080 audit of `moved` interface declaration names
   and tests passing the narrow shape are updated.
 - The local `Encryptor` interface, `defaultEncryptor` and `LegacyEncryptorShim`
   are deleted along with the `@noRailsEquivalent` tag.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

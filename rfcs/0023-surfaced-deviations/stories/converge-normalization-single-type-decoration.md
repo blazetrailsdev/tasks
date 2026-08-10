@@ -39,7 +39,7 @@ applied" test). Converging cleanly needs the attribute-decoration pipeline to
 apply a normalizer exactly once per attribute across seed + pending replay.
 
 The pre-existing AR mirror `NormalizedValueType` class and `normalize` helper in
-`packages/activerecord/src/normalization.ts` are currently dead (api:compare
+`packages/activerecord/src/normalization.ts` are currently dead (parity:api
 surface only); a successful convergence should make them (or the activemodel
 `normalizedValueType`) the single live implementation.
 

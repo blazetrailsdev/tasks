@@ -17,7 +17,7 @@ blocked-by: null
 ## Context
 
 PR #3621 ported `Cache::Entry` compression (`entry.rb:25,33-35,76-98`) but the
-class is still missing the remaining Rails `Entry` methods. api:compare for
+class is still missing the remaining Rails `Entry` methods. parity:api for
 `cache/entry.rb` is at 10/16 (63%); the 6 unported methods are:
 
 - `bytesize` (`entry.rb:60-69`) — size of the cached value; non-String branch
@@ -44,5 +44,5 @@ equivalent; see the JSON-for-Marshal deviation story. `local?`, `pack`,
 - [ ] `local?`→`isLocal`, `pack`, and static `unpack` ported, matching Rails.
 - [ ] `bytesize`, `dupValueBang`, `marshalLoad` ported (or the Marshal-dependent
       parts tracked/blocked on the serialization-fidelity story).
-- [ ] api:compare `cache/entry.rb` delta is positive (toward 16/16).
+- [ ] parity:api `cache/entry.rb` delta is positive (toward 16/16).
 - [ ] No new third-party deps; no direct `node:zlib`.

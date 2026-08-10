@@ -42,4 +42,4 @@ See `activerecord/lib/active_record/connection_adapters/postgresql/schema_statem
       is consistent with `tableExists` for non-public-schema tables.
 - [ ] A test demonstrates `columnExists` returns true for a column on a
       table in a non-public schema that is on the search_path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

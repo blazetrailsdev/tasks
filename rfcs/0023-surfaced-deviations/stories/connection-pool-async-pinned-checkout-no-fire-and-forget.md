@@ -81,7 +81,7 @@ sacrificing remote-disconnect detection.
   shape; if the sync API must stay, scope the async path to only the pinned
   branch's callers.
 - No `node:*` imports, no `process.*`, async fs only, no new runtime deps.
-- Test names verbatim; `test:compare` delta non-negative. All three lanes
+- Test names verbatim; `parity:test` delta non-negative. All three lanes
   (sqlite/postgres/mysql) green, no unhandled rejections in
   `connection-pool.trails.test.ts`.
 - 500 LOC ceiling; single PR from main; no stacked PRs.

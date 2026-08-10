@@ -44,4 +44,4 @@ observable side effects (e.g. instrumentation/notifications).
   `insert` is not re-entered.
 - Existing `create` alias tests (delegation args/return, cache-dirtying) still
   pass; add a test asserting a single clear per `create`.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

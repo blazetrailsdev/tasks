@@ -55,5 +55,5 @@ a symbol; #4952 converted the ones that failed (`finder.test.ts`,
       string wherever Rails uses a string.
 - [ ] Same sweep for ported test files: the order arg type matches the Rails
       test verbatim.
-- [ ] No test name is changed (test:compare matching).
+- [ ] No test name is changed (parity:test matching).
 - [ ] Full AR suite green on sqlite + PG + MySQL/MariaDB.

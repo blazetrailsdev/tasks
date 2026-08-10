@@ -49,4 +49,4 @@ only PG should have).
       canonical schema is migrated or confirmed absent.
 - [ ] PG `jsonb` keeps its variadic `*names` shape and its `AbstractAdapter`
       assignability without the abstract member propping it up.
-- [ ] Green on all three lanes; api:compare extra surface drops by one.
+- [ ] Green on all three lanes; parity:api extra surface drops by one.

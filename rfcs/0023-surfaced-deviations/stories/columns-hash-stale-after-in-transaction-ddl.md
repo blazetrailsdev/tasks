@@ -63,4 +63,4 @@ column.type` and drops the `TODO` (the stale
   `InstrumentationAlreadyStartedError` reason must not survive either way).
 - The restored assertion is verified against a real PostgreSQL lane, not
   sqlite3 — the test is PG-only.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

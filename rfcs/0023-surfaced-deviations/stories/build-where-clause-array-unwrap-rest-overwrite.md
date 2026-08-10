@@ -54,4 +54,4 @@ directly with an array first arg PLUS extra positional args.
       `where(["id = ?", 1], 2)` binds only `1` and drops the stray `2`.
 - [ ] Add a test exercising an array first arg + extra positional `rest`
       asserting the trailing arg is dropped, matching Rails.
-- [ ] api:compare / test:compare deltas non-negative.
+- [ ] parity:api / parity:test deltas non-negative.

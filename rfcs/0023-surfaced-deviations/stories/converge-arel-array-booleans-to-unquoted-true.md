@@ -57,7 +57,7 @@ reach the right literal while the `quoted_*` pair is hard-coded.
       `type_cast` (`abstract/quoting.rb:94-107`).
 - [ ] Scalar and array paths agree for booleans, as PR #4867 established for dates.
 - [ ] Unit coverage pinning the emitted boolean array literal against the Rails form.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

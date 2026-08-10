@@ -45,4 +45,4 @@ Rails: `vendor/rails/activerecord/lib/active_record/reflection.rb:844,855,872`
 - [ ] Update any test/catch sites that depend on the `ConfigurationError` type
       (e.g. the wave-5 `query constraints over three ...` test asserts on the
       message via regex, so it should be unaffected — confirm).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

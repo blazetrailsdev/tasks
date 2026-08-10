@@ -54,4 +54,4 @@ carry all four.
   `activerecord/src/persistence.ts`, and the AM/AR tests) goes through the
   Rails-named method, and `forbidden-attributes-protection.test.ts` calls
   `sanitizeForMassAssignment` like Rails does.
-- `api:compare` and `test:compare` deltas are non-negative.
+- `parity:api` and `parity:test` deltas are non-negative.

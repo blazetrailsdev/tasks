@@ -42,5 +42,5 @@ commit callbacks) and does not cover `@previously_new_record`.
 - [ ] `destroy` sets `_previouslyNewRecord = false` before `freeze`, matching
       `persistence.rb:457`.
 - [ ] A test mirroring the Rails behavior (created-then-destroyed record reports
-      `previouslyNewRecord == false`); no test renames; `api`/`test:compare`
+      `previouslyNewRecord == false`); no test renames; `api`/`parity:test`
       delta non-negative.

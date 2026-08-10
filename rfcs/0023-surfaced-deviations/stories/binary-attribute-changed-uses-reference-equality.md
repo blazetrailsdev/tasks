@@ -72,4 +72,4 @@ wrapper), which deliberately left it alone as out of scope.
       latter, enumerate which other types change behavior and cover them.
 - [ ] No spurious UPDATE: saving a record after an equal-bytes assignment issues no
       write for that column.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

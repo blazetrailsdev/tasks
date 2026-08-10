@@ -41,4 +41,4 @@ registered responses hash or the negotiated format.
 - Remove the two `metal/mime-responds.ts | any_response?` entries
   (`fetch`, `format`) from
   `scripts/api-compare/call-mismatches-wide-exclude/actioncontroller/metal/mime-responds.json`.
-- `pnpm api:calls:wide` green.
+- `pnpm parity:api:calls` green.

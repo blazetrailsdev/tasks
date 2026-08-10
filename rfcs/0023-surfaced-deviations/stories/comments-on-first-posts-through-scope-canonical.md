@@ -53,4 +53,4 @@ default scope). The canonical `Author#commentsOnFirstPosts` already exists
 - [x] Remove the bespoke `Tsu*` / `Tsi*` model definitions for these two tests.
 - [x] Verify behavior against the corresponding Rails tests; test names match
       Rails verbatim.
-- [x] Confirm `test:compare` delta for the file is non-negative.
+- [x] Confirm `parity:test` delta for the file is non-negative.

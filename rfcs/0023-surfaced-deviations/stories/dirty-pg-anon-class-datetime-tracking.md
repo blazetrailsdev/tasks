@@ -36,5 +36,5 @@ guard pending this convergence.
 - [ ] Root-cause the PG-only `undefined` read-back of a datetime attribute on an
       anonymous reflected class after `create`.
 - [ ] Remove the `pgDirtyTrackingBlocked` guard so both tests run on PostgreSQL.
-- [ ] `test:compare --package activerecord --gates` stays at 0 over-gated for
+- [ ] `parity:test --package activerecord --gates` stays at 0 over-gated for
       dirty.test.ts.

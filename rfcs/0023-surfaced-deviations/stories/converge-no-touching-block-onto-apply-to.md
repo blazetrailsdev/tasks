@@ -36,5 +36,5 @@ predicate), which removed the sibling dead `touchLater` from the same file.
 - `noTouching(modelClass, fn)` delegates to `applyTo`, matching
   no_touching.rb:23 (one call, no inlined depth bookkeeping).
 - Exactly one push/pop implementation remains in `no-touching.ts`.
-- `timestamp.test.ts` / `touch-later.test.ts` still pass; api:compare for
+- `timestamp.test.ts` / `touch-later.test.ts` still pass; parity:api for
   `no_touching.rb` stays at 6/6 matched.

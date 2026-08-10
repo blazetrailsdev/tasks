@@ -69,4 +69,4 @@ Note that Rails' `Column#deduplicated` also interns the string attributes
       freezing breaks existing callers.
 - [ ] A test asserts two identically-constructed columns are the same instance,
       failing on baseline.
-- [ ] `api:compare` / `api:extra` deltas stay non-negative.
+- [ ] `parity:api` / `parity:api:extra` deltas stay non-negative.

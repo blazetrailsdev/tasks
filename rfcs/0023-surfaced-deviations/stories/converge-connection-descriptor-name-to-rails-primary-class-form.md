@@ -66,7 +66,7 @@ compensation tracked by
 
 Separately, Rails' home for this class is `connection_handler.rb`, not a file of
 its own; trails' `abstract/connection-descriptor.ts` is a layout deviation that
-`api:compare` resolves by short name. Fold it into
+`parity:api` resolves by short name. Fold it into
 `abstract/connection-handler.ts` if that is cheap while here, but the name
 semantics above are the substance.
 

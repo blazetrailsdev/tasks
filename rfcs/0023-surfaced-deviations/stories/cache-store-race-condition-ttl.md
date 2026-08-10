@@ -43,4 +43,4 @@ end
 - Port `race_condition_ttl` branch to `handleExpiredEntry` in `cache/store.ts`
 - When `options.raceConditionTtl > 0` and entry expired within the TTL window, bump its `expiresAt` and write it back with the bumped TTL
 - Add a test that verifies stale reads are served within the window and regenerated after
-- api:compare delta non-negative; LOC ceiling ≤ 500
+- parity:api delta non-negative; LOC ceiling ≤ 500

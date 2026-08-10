@@ -35,4 +35,4 @@ Current `store.ts` `mergedOptions` is a plain spread (cache/store.ts) — none o
 - Raise `ArgumentError` when both `expires_in` and `expires_at` are supplied
 - Respect `Store.raiseOnInvalidCacheExpirationTime` for negative `expires_in`
 - Cover each branch in `cache-store-base.test.ts`
-- api:compare delta non-negative; LOC ceiling ≤ 500
+- parity:api delta non-negative; LOC ceiling ≤ 500

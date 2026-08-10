@@ -39,4 +39,4 @@ extracting it to a shared module and reusing it here.
 - Coerce once, thread through seed write / return value / hit-path addition
   (matches Rails file_store.rb:222-240).
 - Tests assert the raise on NaN/Infinity and that finite floats truncate.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

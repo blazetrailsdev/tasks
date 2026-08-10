@@ -36,6 +36,6 @@ return is an intentional documented divergence (driver close is async).
 
 - disconnect, disconnectBang, discardBang become async; async twins deleted;
   discardBangDraining kept internal.
-- All callers await; test names verbatim; test:compare non-negative; api:compare
+- All callers await; test names verbatim; parity:test non-negative; parity:api
   no regress. Single PR from main, no stacked PRs. No node imports, no process,
   async fs only, no new runtime deps.

@@ -37,4 +37,4 @@ This work is blocked on `ActiveSupport::Notifications` being ported (no story ex
 - Add an `instrument` protected method to `Store` that mirrors the Rails helper shape
 - Wrap `fetch`, `read`, `write`, `delete`, `exist`, `readMulti`, `fetchMulti` with appropriate notification payloads
 - Cover in tests: verify notification fires and payload includes `:key`
-- api:compare delta non-negative; LOC ceiling ≤ 500
+- parity:api delta non-negative; LOC ceiling ≤ 500

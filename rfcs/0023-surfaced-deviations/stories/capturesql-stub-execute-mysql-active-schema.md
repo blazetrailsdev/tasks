@@ -50,4 +50,4 @@ Surfaced while burning down require-table-teardown
       with their named drops.
 - [ ] The `dropTable("temp", { ifExists: true })` teardown crutch is removed
       once `temp` is no longer really created.
-- [ ] No regression in api:compare / test:compare; mysql:8 DDL load reduced.
+- [ ] No regression in parity:api / parity:test; mysql:8 DDL load reduced.

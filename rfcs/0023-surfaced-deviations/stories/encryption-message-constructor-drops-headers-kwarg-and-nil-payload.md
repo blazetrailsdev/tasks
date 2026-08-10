@@ -40,7 +40,7 @@ trails' constructor (`packages/activerecord/src/encryption/message.ts:14`) is
    `message_pack_message_serializer_test.rb:20`, `:64`). The ported tests have to
    construct and then call `addHeader`/`addHeaders` instead — and those two
    methods are trails inventions with no Rails counterpart (they are the
-   `encryption/message.ts — 1 novel` entry in `api:extra`). Rails' only writer is
+   `encryption/message.ts — 1 novel` entry in `parity:api:extra`). Rails' only writer is
    `headers[key] = value` through `Properties#[]=`.
 
 2. **A nil payload becomes `""`.** `this.payload = payload ?? ""` where Rails
@@ -64,4 +64,4 @@ is mostly signature work plus updating call sites.
       justified at the call site.
 - [ ] Ported tests that build messages with headers use the kwarg, matching the
       Rails test bodies they are named after.
-- [ ] `api:compare` / `api:extra` / `test:compare` deltas stay non-negative.
+- [ ] `parity:api` / `parity:api:extra` / `parity:test` deltas stay non-negative.

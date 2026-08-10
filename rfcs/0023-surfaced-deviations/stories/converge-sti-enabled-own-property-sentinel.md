@@ -61,4 +61,4 @@ branch.
 - STI suites pass unchanged: `inheritance.test.ts`,
   `inheritance-namespaced.test.ts`, `sti-attribute-routing.test.ts`, plus
   `associations/eager.test.ts` and `associations/has-many-associations.test.ts`.
-- No test renamed; api:compare and test:compare deltas non-negative.
+- No test renamed; parity:api and parity:test deltas non-negative.

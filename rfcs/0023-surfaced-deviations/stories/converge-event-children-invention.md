@@ -52,4 +52,4 @@ Removing `children` lets `Handle` drop that parameter and the instance
       tests (they have no Rails counterpart to match).
 - [ ] If keeping: document it as a deliberate deviation (e.g. an `@internal`
       note) so it isn't re-flagged.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

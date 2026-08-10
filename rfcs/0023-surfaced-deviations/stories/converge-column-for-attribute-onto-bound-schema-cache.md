@@ -44,5 +44,5 @@ hand-rolled branch above is re-implementing what the bound handle does).
 - The hand-built `FakePool` branch and the `as any` cast go away.
 - No new `internalSchemaCache` readers; the count of raw-cache call sites in
   `abstract-adapter.ts` drops to zero.
-- `pnpm api:calls` and `pnpm api:calls:wide` stay green (this is one of the
+- `pnpm parity:api:calls` and `pnpm parity:api:calls` stay green (this is one of the
   call sites the wide ratchet scores).

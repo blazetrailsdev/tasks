@@ -62,4 +62,4 @@ there rather than ratified.
 - [ ] `associations/required.test.ts` success branches converge to the Rails
       bodies (`record.parent = Parent.new; assert record.save`) with test
       names unchanged.
-- [ ] No regression in `api:compare` / `test:compare` deltas.
+- [ ] No regression in `parity:api` / `parity:test` deltas.

@@ -80,6 +80,6 @@ after #6185, so only the two `*_current` readers move.
 - `charsetCurrent`/`collationCurrent` take `(envName, dbName)` with Rails'
   defaults and resolve one config through the `env_name:`/`name:` pair.
 - The `configs[0]` fallback and the empty-list `null` arm are deleted.
-- `pnpm api:calls` stays green; any newly-matched body gets a reviewed reason.
+- `pnpm parity:api:calls` stays green; any newly-matched body gets a reviewed reason.
 - Rails' `DatabaseTasksCharsetTest` / `DatabaseTasksCollationTest` names are
   preserved verbatim in `database-tasks.test.ts`.

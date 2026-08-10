@@ -53,5 +53,5 @@ kept `applyDuration` untouched.
   `since` and the rest through `advance`, as `duration.rb:404-414` does.
 - A cover showing `1.second + 1.day` and `1.day + 1.second` differ over a DST
   boundary, and that both match Rails.
-- `pnpm api:calls` non-negative; the `duration.ts` call-mismatch rows for
+- `pnpm parity:api:calls` non-negative; the `duration.ts` call-mismatch rows for
   `sum` converge or stay put, never grow.

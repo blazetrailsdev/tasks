@@ -55,9 +55,9 @@ Two candidate shapes:
    `this.schemaStatements()`, matching Rails' "every adapter has it via
    include" — but this adds surface to `abstract-adapter.ts`, whose Rails
    counterpart (`abstract_adapter.rb`) does not define the method, so check
-   `api:extra` before committing to it.
+   `parity:api:extra` before committing to it.
 
-Prefer (1) unless api:compare evidence favors (2).
+Prefer (1) unless parity:api evidence favors (2).
 
 ## Acceptance criteria
 
@@ -71,4 +71,4 @@ Prefer (1) unless api:compare evidence favors (2).
   forwarder is deleted; if shape (2), no duplicate definition survives on the
   adapter subclasses.
 - `command-recorder.test.ts` fakes updated in step; test names unchanged.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

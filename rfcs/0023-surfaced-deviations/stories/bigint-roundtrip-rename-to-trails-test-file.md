@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Not a Rails-convergence item: a cosmetic file rename. test:compare matches on describe/test names, and this file's describe title ('SQLite3 bigint round-trip') is not a Rails class name either way, so the rename changes no fidelity measurement and no behaviour."
+closed-reason: "Not a Rails-convergence item: a cosmetic file rename. parity:test matches on describe/test names, and this file's describe title ('SQLite3 bigint round-trip') is not a Rails class name either way, so the rename changes no fidelity measurement and no behaviour."
 ---
 
 ## Context
@@ -39,11 +39,11 @@ Per the repo convention, TS-only extras belong in a `*.trails.test.ts` file, the
 way `virtual-column.trails.test.ts` and `statement-pool.trails.test.ts` in the
 same directory already do. Sitting under a bare `.test.ts` name makes it look
 like an unmatched Rails port to anyone reading the directory or the
-`test:compare` output.
+`parity:test` output.
 
 ## Acceptance criteria
 
 - [ ] Rename to `bigint-roundtrip.trails.test.ts` (`git mv`, no content change).
-- [ ] Confirm `test:compare` no longer counts the file as an unmatched port, and
+- [ ] Confirm `parity:test` no longer counts the file as an unmatched port, and
       that no manifest/exclude list referenced the old path.
 - [ ] Test names unchanged.

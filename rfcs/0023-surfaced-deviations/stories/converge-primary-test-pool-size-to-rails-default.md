@@ -50,4 +50,4 @@ connections share the file, so pool > 1 is safe there; only pure `:memory:`
   removed (the duplicate inherits the primary's size directly, like Rails).
 - Pure `:memory:` behavior is preserved (gate the size to the file-backed lane
   if a bare `:memory:` primary genuinely needs size 1).
-- No test renames; all lanes green; `test:compare` delta >= 0.
+- No test renames; all lanes green; `parity:test` delta >= 0.

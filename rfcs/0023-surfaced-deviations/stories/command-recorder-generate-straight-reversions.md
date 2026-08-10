@@ -44,4 +44,4 @@ by hand. A generated table would have had them from the start.
   `invertRemoveIndex`, `invertAddForeignKey`, …) keep their hand-written bodies,
   as in Rails.
 - `migration/command-recorder.test.ts` and `.trails.test.ts` stay green;
-  `api:compare` / `api:extra` non-negative.
+  `parity:api` / `parity:api:extra` non-negative.

@@ -51,5 +51,5 @@ it.
   module-local `_raiseOnAssignToAttrReadonly` removed.
 - `active_record.set_configs` (trailtie.ts) forwards
   `cfg.raiseOnAssignToAttrReadonly` into the module setter.
-- No behavior change (default false already matches); api:compare and
-  test:compare delta >= 0.
+- No behavior change (default false already matches); parity:api and
+  parity:test delta >= 0.

@@ -17,7 +17,7 @@ blocked-by: null
 ## Context
 
 `cache-serialization-marshal-vs-json` (PR #3648) implemented the fidelity
-`dump`/`load` core but only the minimal surface. `api:compare` shows
+`dump`/`load` core but only the minimal surface. `parity:api` shows
 `cache/coder.ts` at 2/9 and `cache/serializer_with_fallback.ts` at 0/7.
 
 Rails' `Cache::Coder` (vendor/rails/activesupport/lib/active_support/cache/coder.rb)
@@ -33,7 +33,7 @@ fallback on unrecognized payloads) is still a stub —
 - [x] Port the remaining `Cache::Coder` surface (dump_compressed, LazyEntry,
       signature/version framing) atop the fidelity serializer, or document the
       portions that are deliberately N/A for the trails (non-Ruby-wire) format.
-      Done in PR #3661 (cache/coder.ts api:compare 2/9 → 9/9).
+      Done in PR #3661 (cache/coder.ts parity:api 2/9 → 9/9).
 - [x] Implement `SerializerWithFallback` and un-skip its tests, or convert the
       skips to real coverage matching the Rails test names. Split out to stay
       under the 500-LOC ceiling and tracked by the follow-up story

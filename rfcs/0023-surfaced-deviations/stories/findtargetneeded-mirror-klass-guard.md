@@ -37,4 +37,4 @@ there because that PR only touched the `loadTarget` guard, not `findTargetNeeded
 - [ ] `findTargetNeeded` returns false when the association `klass` is absent
       (nil/undefined), matching Rails `find_target?`'s `&& klass` factor.
 - [ ] Polymorphic belongs_to with an unresolvable type does not attempt a query.
-- [ ] Existing association suites stay green; test:compare delta non-negative.
+- [ ] Existing association suites stay green; parity:test delta non-negative.

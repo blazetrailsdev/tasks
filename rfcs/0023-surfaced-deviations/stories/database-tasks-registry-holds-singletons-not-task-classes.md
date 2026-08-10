@@ -70,7 +70,7 @@ Three divergences remain in `packages/activerecord/src/tasks/database-tasks.ts`:
    `extraFlags` parameter instead of Rails' `filename = arguments.delete_at(0)`
    positional destructuring).
 3. **`resolveTask` is invented public surface** duplicating
-   `class_for_adapter`'s `reverse_each.detect` half. `pnpm api:extra --package
+   `class_for_adapter`'s `reverse_each.detect` half. `pnpm parity:api:extra --package
 activerecord` lists it among the file's novel names. `classForAdapter`
    currently delegates to it; deleting it means rewriting six call sites in
    `database-tasks.test.ts` (:220, :228, :232), `support/connection.test.ts`
@@ -98,13 +98,13 @@ triaged; estimate below is the registry flip alone.
 
 - `@tasks` holds task classes; `databaseAdapterFor` instantiates and carries
   the `using_database_configurations?` arm.
-- `resolveTask` is gone and `api:extra --package activerecord` shows one fewer
+- `resolveTask` is gone and `parity:api:extra --package activerecord` shows one fewer
   novel name on `tasks/database-tasks.ts`.
 - `*arguments` reaches the task constructor from every Rails entry point that
   declares it; `extraFlags` is deleted.
 - Handler test names stay verbatim; the `unregistered task` case asserts
   `DatabaseNotSupported` with Rails' message.
-- `pnpm api:calls` stays green.
+- `pnpm parity:api:calls` stays green.
 
 ## Update 2026-08-09 (PR #6270)
 

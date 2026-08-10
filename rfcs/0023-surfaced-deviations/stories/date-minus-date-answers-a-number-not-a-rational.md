@@ -60,4 +60,4 @@ representation before choosing the construction.
 - `minusWithDuration`'s non-Duration arm threads the same type through.
 - Callers updated; the `date-ext.trails.test.ts` cover asserts the Rational,
   not a bare number.
-- `pnpm api:compare` / `pnpm api:calls` deltas non-negative.
+- `pnpm parity:api` / `pnpm parity:api:calls` deltas non-negative.

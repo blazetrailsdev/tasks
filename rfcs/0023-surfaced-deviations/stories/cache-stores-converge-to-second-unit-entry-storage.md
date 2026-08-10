@@ -39,5 +39,5 @@ instrumented public methods (memory_store.rb, file_store.rb, cache.rb:1002-1030)
   (cache.rb), matching Rails, so `MemoryStore` no longer needs its own `fetch`.
 - Existing store behaviors (LRU/prune for MemoryStore, file layout for FileStore)
   preserved; bespoke `stores/*.test.ts` converted from ms to second units.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.
 - Likely exceeds 500 LOC; split into MemoryStore and FileStore sub-stories if so.

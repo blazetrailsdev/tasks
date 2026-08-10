@@ -76,5 +76,5 @@ reflection half and the schema-cache / introspection fallbacks it lists.
 - [ ] Dumps unchanged on all three adapters, including composite-PK tables, PK
       column ordering, and the MySQL promoted-unique case (`string_key_objects`
       dumps `id: false`) — the case the MySQL override was added for.
-- [ ] `pnpm api:extra --package activerecord` shows no new surface; the hook
+- [ ] `pnpm parity:api:extra --package activerecord` shows no new surface; the hook
       count goes down.

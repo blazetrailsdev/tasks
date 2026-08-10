@@ -45,6 +45,6 @@ Two deviations remain:
 - `_statementPoolForTest()` is deleted; its callers read the field directly,
   the way `bind-parameter.test.ts`'s `statementCacheKeys` already does.
 - No adapter branching is reintroduced in any test helper.
-- `api:compare` / `test:compare` deltas stay non-negative; sqlite3,
+- `parity:api` / `parity:test` deltas stay non-negative; sqlite3,
   postgresql, and the `ARCONN=mysql2 MYSQL_PREPARED_STATEMENTS=1` lanes stay
   green.

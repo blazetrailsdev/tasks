@@ -46,4 +46,4 @@ validation, whereas Rails fails with "must exist".
 - [ ] `create({ parentId: <valid id> })` and `record.parent = Parent.new`
       success branches still pass (no regression in `associations/required.test.ts`
       or `belongs-to-associations.test.ts`).
-- [ ] No regression in `api:compare` / `test:compare` deltas.
+- [ ] No regression in `parity:api` / `parity:test` deltas.

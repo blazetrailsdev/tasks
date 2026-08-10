@@ -64,4 +64,4 @@ nested arrays, `postgresql/quoting.rb:221-226`) → `type_cast` →
       keeps ISO for raw `Date` (and keep scalar + array consistent either way).
 - [ ] Unit coverage for both: a `Date`/date-like element in an arel PG array
       literal emits the db date form matching the scalar path.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

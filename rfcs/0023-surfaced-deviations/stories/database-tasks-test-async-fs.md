@@ -41,5 +41,5 @@ an env-adapter of its own is a triage question for this story.
       package's adapter surface, or the story records why they must stay in a
       test file.
 - [ ] Decide and document whether the `process.env` sites are in scope.
-- [ ] Test names unchanged; all 77 tests still pass; `test:compare` delta
+- [ ] Test names unchanged; all 77 tests still pass; `parity:test` delta
       non-negative.

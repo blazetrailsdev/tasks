@@ -59,4 +59,4 @@ about the extra fallback term and the `as any` probes, not the extension.
 
 - `cacheDumpFilename` has no `as any` cast and no fourth fallback term.
 - The five `DatabaseTasksDumpSchemaCacheTest` tests still pass unchanged, and
-  `test:compare` for `tasks/database_tasks_test.rb` stays at 77/77.
+  `parity:test` for `tasks/database_tasks_test.rb` stays at 77/77.

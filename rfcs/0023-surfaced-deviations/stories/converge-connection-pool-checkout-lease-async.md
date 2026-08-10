@@ -77,7 +77,7 @@ Rails-named methods to async is the mechanism that closes that gap for good.
 - No fire-and-forget reintroduced; no unhandled rejections in
   `connection-pool.trails.test.ts`.
 - No node: imports, no process., async fs only, no new runtime deps.
-- Test names verbatim; test:compare delta non-negative; api:compare does not
+- Test names verbatim; parity:test delta non-negative; parity:api does not
   regress (removing the non-Rails `checkoutAsync` twin should improve parity).
 - 500 LOC ceiling; single PR from main; no stacked PRs. If it exceeds the
   ceiling, split the caller-migration into a follow-up and land the pool-method

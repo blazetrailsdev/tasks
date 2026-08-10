@@ -41,4 +41,4 @@ PK, so this is latent — but the next one added would silently regress.
 - [ ] `isIntegerSpec` (or a sibling) accepts `big_integer` with the correct
       per-adapter id type (`bigserial` on PG, `bigint` on MySQL).
 - [ ] Unit tests cover the `big_integer` serial-PK path in both generators.
-- [ ] `test:compare` delta non-negative.
+- [ ] `parity:test` delta non-negative.

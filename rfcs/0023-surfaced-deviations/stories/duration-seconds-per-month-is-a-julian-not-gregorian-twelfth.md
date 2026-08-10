@@ -43,7 +43,7 @@ Observable: `1.month.to_i` is 2629746 in Rails and 2629800 in trails, and every
 `modulo`, and the `Duration` comparisons built on them. `13.months % 1.year`
 (`duration_test.rb` `test_plus`) is the kind of assertion that turns on it.
 
-The api:compare literal comparator cannot catch this: it skips non-literal
+The parity:api literal comparator cannot catch this: it skips non-literal
 initialisers, and both trails constants are computed expressions
 (`output/literal-mismatches.json` reports 1 mismatch and it is an unrelated
 i18n one).
@@ -72,4 +72,4 @@ const SECONDS_PER_YEAR = 31556952; // length of a gregorian year (365.2425 days)
   `Duration.years(1).inSeconds() === 31556952`.
 - Existing `duration.test.ts` / `core-ext/duration.test.ts` expectations that
   encoded the old value are corrected against Ruby, not loosened.
-- `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

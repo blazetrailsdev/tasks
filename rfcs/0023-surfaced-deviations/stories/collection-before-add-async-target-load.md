@@ -48,4 +48,4 @@ the callback itself_ would not see it loaded in trails.
 - If converging, update `nested-attributes-with-callbacks.test.ts`'s
   `birdsWithAddLoad` proc to `await`/load faithfully rather than `void`, and
   remove the deviation note from §11 of the deviations guide.
-- No regression in test:compare for `nested_attributes_with_callbacks_test.rb`.
+- No regression in parity:test for `nested_attributes_with_callbacks_test.rb`.

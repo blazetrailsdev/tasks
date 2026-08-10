@@ -103,4 +103,4 @@ removal separately. Do **not** fan out sibling PRs.
   `load_target` rescues `RecordNotFound` only.
 - No regression to the CPK destroy tests the original error swallow protected
   (`primary-keys`, `persistence`, `belongs-to-inverse-seed-composite-pk`).
-- `api:compare` and `test:compare` deltas non-negative.
+- `parity:api` and `parity:test` deltas non-negative.

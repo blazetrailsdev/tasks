@@ -44,4 +44,4 @@ entangled with `fold-join-clauses-into-joins-values`, which covers the adjacent
   requires them.
 - `relation/merging.test.ts`, `relations.test.ts`, and `associations/eager.test.ts`
   pass unchanged (no test renames).
-- `pnpm api:calls:wide` does not regress; ratchet down if the unreviewed count drops.
+- `pnpm parity:api:calls` does not regress; ratchet down if the unreviewed count drops.

@@ -45,5 +45,5 @@ omissions from Rails `delete_all` (`relation.rb:1023-1024`):
       matching `relation.rb:1024`.
 - [ ] Tests mirror any corresponding Rails `delete_all` cases verbatim
       (`test_delete_all_with_includes`, `test_delete_all_with_left_joins`, etc.).
-- [ ] CI green on all three adapters; api:compare / test:compare delta
+- [ ] CI green on all three adapters; parity:api / parity:test delta
       non-negative.

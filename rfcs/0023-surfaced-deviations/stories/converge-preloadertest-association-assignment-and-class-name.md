@@ -63,6 +63,6 @@ model imports under esbuild. Prefer whatever trails' stable model-name reader is
   hand-written `category_id`.
 - `origin_type` is derived from a rename-stable model-name reader rather than
   `constructor.name`, in both places the test sets it.
-- `PreloaderTest` stays green on every lane; test:compare
+- `PreloaderTest` stays green on every lane; parity:test
   assertion-count/kind counts for `associations_test.rb` do not regress
   (post-#5618 baseline: 37 count, 89 kind).

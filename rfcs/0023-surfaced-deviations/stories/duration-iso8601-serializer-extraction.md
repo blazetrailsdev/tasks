@@ -36,5 +36,5 @@ wide-call population; the `iso8601` -> `serialize` pair is now baselined in
   `packages/activesupport/src/duration/iso8601-serializer.ts`.
 - Reduce `Duration#iso8601` to constructing it and calling `serialize`.
 - Drop both `iso8601` entries from the duration wide-call exclude file.
-- Existing duration tests keep passing; `api:compare --package activesupport`
+- Existing duration tests keep passing; `parity:api --package activesupport`
   non-negative.

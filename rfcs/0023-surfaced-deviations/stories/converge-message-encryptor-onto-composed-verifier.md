@@ -60,6 +60,6 @@ are the same code path.
   with `NullSerializer`, as Rails does, rather than a private HMAC pair.
 - Part framing goes through `join_parts` / `extract_parts` analogues.
 - Key length is derived from the cipher rather than a regex over its name.
-- `api:compare` for `message_encryptor.rb` improves from 11/24.
+- `parity:api` for `message_encryptor.rb` improves from 11/24.
 - Existing `packages/activesupport/src/messages/` and
   `message-encryptor*.test.ts` suites stay green.

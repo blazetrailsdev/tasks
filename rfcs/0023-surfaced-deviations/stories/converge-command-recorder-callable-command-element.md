@@ -70,4 +70,4 @@ command, not just `changeTable` — which is why #5635 scoped it out.
 - `migration/command-recorder.test.ts`, `migration/change-table.test.ts` and
   `invertible-migration.test.ts` stay green on sqlite3, PostgreSQL and MySQL
   (MySQL is the only adapter where `supportsBulkAlter?` is true).
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

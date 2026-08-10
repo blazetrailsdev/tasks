@@ -56,4 +56,4 @@ parameters) rather than a property with a function type.
   `adapters/abstract-mysql-adapter/unsigned-type.test.ts` are removed.
 - No loosening of the abstract contract for callers that legitimately hold only an
   abstract `Table`.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

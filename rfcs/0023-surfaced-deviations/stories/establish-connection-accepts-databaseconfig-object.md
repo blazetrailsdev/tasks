@@ -56,4 +56,4 @@ why `buildAdapterArg` needed the URL-forwarding fix in this PR
       already stores a `UrlConfig` and the `buildAdapterArg` URL-forwarding branch
       is still required. Full discrete-field convergence deferred to RFC 0042
       story `establish-with-config-stores-urlconfig-discrete-fields`.
-- [x] api:compare + test:compare delta non-negative.
+- [x] parity:api + parity:test delta non-negative.

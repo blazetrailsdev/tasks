@@ -55,5 +55,5 @@ them. Other inverse-wiring entry points that go through the base
 - [ ] Remove the duplicated FK-match logic inlined in
       `AssociationRelation._instantiateBlock` once the base path is faithful,
       OR document why the AR-level wiring must stay separate.
-- [ ] Test names match Rails verbatim; api:compare / test:compare delta
+- [ ] Test names match Rails verbatim; parity:api / parity:test delta
       non-negative on sqlite/PG/mysql.

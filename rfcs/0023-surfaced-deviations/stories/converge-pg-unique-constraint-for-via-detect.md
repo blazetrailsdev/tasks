@@ -34,4 +34,4 @@ moved verbatim in PR #3911; out of scope there.
       via a `definedFor`-equivalent predicate, mirroring Rails.
 - [ ] `UniqueConstraintDefinition` gains a `definedFor`-equivalent if absent.
 - [ ] Column-based lookups (no name) resolve the same constraint Rails would.
-- [ ] api:compare / test:compare delta non-negative on all three adapters.
+- [ ] parity:api / parity:test delta non-negative on all three adapters.

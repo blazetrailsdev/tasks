@@ -72,5 +72,5 @@ storage location has to keep those readers working (or move them).
 log`, `raises warnings when behaviour raise`, `reports when behaviour
 report`, `warnings behaviour can be customized with a proc`) stay green.
 - [ ] `support/with-db-warnings-action.ts` still scopes the action for tests.
-- [ ] `pnpm api:calls` / `pnpm api:extra --package activerecord` clean; no new
+- [ ] `pnpm parity:api:calls` / `pnpm parity:api:extra --package activerecord` clean; no new
       baseline rows.

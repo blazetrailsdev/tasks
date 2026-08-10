@@ -31,7 +31,7 @@ the same fix had to be applied twice. Both now return canonical
 `valid nested attributes create children`) are near-duplicates of the first
 block's `errors details should be set` / `valid adding with nested attributes`.
 
-A split describe also defeats `test:compare`, which matches our describe names
+A split describe also defeats `parity:test`, which matches our describe names
 to Rails test classes — two blocks for one Rails class inflates the apparent
 mapping.
 

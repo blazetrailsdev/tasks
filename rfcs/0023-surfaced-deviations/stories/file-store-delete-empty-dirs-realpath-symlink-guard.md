@@ -42,4 +42,4 @@ async.
   with all registered adapters implementing it.
 - A test covering a symlinked cacheDir / intermediate dir confirms the guard
   stops at the real cacheDir.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

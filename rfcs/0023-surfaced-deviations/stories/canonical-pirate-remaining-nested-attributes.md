@@ -40,4 +40,4 @@ on `birds`/`parrots`/`ship`, which several has-one/habtm tests consume).
   `updateOnly` for `updateOnlyShip`).
 - Resolve any has-one-associations / habtm / dirty test fallout from the
   newly-`autosave` reflections (fix impl/tests; do not re-bespoke the model).
-- No test:compare or api:compare regression.
+- No parity:test or parity:api regression.

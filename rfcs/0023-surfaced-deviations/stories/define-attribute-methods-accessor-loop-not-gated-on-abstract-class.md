@@ -58,4 +58,4 @@ which added the cascade + `id_value` alias; this is the remaining
       accessors installed on its prototype; a concrete subclass still does.
 - [ ] Read the Rails `attribute_methods`/`abstract_class` test covering this and
       mirror its name verbatim; add a regression test.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

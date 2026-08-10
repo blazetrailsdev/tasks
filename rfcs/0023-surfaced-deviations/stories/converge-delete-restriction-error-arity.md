@@ -71,4 +71,4 @@ reading `.record` off this error first).
 - [ ] The `order:reflection,constructor` row on
       `has-one-association.ts::handle_dependency` is re-checked and deleted from
       its shard if it converges (only-shrink, hand-edit via `serializeBaseline`).
-- [ ] `pnpm api:calls` green; AR association suites pass on all three lanes.
+- [ ] `pnpm parity:api:calls` green; AR association suites pass on all three lanes.

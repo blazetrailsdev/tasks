@@ -37,4 +37,4 @@ Found by the RFC 0080 audit of `moved` interface declaration names
 - The dumper helpers type against the ported `ConnectionAdapters::Column`
   class, with schema reflection handing them `Column` instances as Rails does.
 - The local `Column` interface plus its `@noRailsEquivalent` tag are deleted.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

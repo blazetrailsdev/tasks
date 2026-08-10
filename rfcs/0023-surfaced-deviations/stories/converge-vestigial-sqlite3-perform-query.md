@@ -37,7 +37,7 @@ primitive, but had to implement it as `_performQuery` inside `sqlite3-adapter.ts
 because it needs `_cachedStatement` (the statement pool) and
 `_maybeEnableReadBigInts`. That leaves two implementations of the same Rails
 method: a live private one on the adapter and a dead public one in the
-Rails-layout file. api:compare's coverage points at the dead one.
+Rails-layout file. parity:api's coverage points at the dead one.
 
 Same shape as the note in
 `project_raw_execute_only_works_on_pg_no_log_helper`: `rawExecute` is likewise
@@ -57,9 +57,9 @@ vestigial, with `performQuery` wired on PG alone. Worth sequencing with
 - [ ] Keep the `stmt.reader` branch and the separate affected-rows read,
       including the `INSERT ... RETURNING` case, which reports `reader === true`
       and so takes the rows branch — PR 4893's covering test must stay green.
-- [ ] Verify with `pnpm api:compare` that sqlite3 `perform_query` coverage
-      points at live code. Run the ratchet lints too (`api:calls`,
-      `api:calls:wide`, `api:pins`) — `api:compare` alone does not run them.
+- [ ] Verify with `pnpm parity:api` that sqlite3 `perform_query` coverage
+      points at live code. Run the ratchet lints too (`parity:api:calls`,
+      `parity:api:calls`, `parity:api:pins`) — `parity:api` alone does not run them.
 
 ## Notes
 

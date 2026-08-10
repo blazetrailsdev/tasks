@@ -42,4 +42,4 @@ handler suite sees the real database).
 - [x] insert-all.test.ts "insert all when table name contains database" reads
       `connectionDbConfig().database` (matching Rails) instead of
       `currentDatabase()`.
-- [x] Test name unchanged; test:compare delta non-negative.
+- [x] Test name unchanged; parity:test delta non-negative.

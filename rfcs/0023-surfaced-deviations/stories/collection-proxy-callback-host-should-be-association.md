@@ -43,7 +43,7 @@ association.
 - `callback` and `callbacksFor` become instance methods on
   `CollectionAssociation`, matching Rails' private instance methods.
 - The `CallbackHost` interface and the `_callbackHost` getter are deleted.
-- `pnpm api:compare` shows no new extras; `associations/collection-association.ts`
+- `pnpm parity:api` shows no new extras; `associations/collection-association.ts`
   novel count does not rise above 4.
 - `associations/callbacks.test.ts`, `associations/callbacks.trails.test.ts`,
   `associations/collection-proxy.test.ts` and the HABTM/nested-attributes

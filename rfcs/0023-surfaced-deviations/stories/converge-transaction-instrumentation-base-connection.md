@@ -50,6 +50,6 @@ deterministic and adapter-agnostic.
   private `:memory:` adapter and no `freshIsolatedAdapter` helper.
 - No stray `ROLLBACK TO SAVEPOINT` leakage across tests on any lane
   (sqlite/postgres/mariadb).
-- Test names unchanged; `test:compare` delta >= 0.
+- Test names unchanged; `parity:test` delta >= 0.
 - If the TM state-isolation fix is non-trivial, split it into its own story and
   land it first.

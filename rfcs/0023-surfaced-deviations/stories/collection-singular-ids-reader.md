@@ -46,4 +46,4 @@ inline (eager.test.ts, `preloading has many through with distinct`).
       `preloading has many through with distinct`
       (`mary.uniqueCategorizedPostIds.length === 1`) and remove the
       substitute/follow-up comment.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

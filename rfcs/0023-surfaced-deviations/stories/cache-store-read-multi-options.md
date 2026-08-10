@@ -31,4 +31,4 @@ Related: `fetch_multi` in Rails also calls `extract_options!` on the names array
 - Update `readMulti` to accept an optional trailing options object (last element of rest args if it is a plain object, not a string)
 - Pass the extracted options through `mergedOptions` and into `readMultiEntries`
 - Cover in `cache-store-base.test.ts` with a test passing `namespace` option
-- api:compare delta non-negative; LOC ceiling ≤ 500
+- parity:api delta non-negative; LOC ceiling ≤ 500

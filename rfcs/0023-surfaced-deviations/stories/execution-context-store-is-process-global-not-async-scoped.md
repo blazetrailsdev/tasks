@@ -68,4 +68,4 @@ top-level behaviour for callers outside a request.
       tasks (`error_reporter.rb:224`).
 - [ ] The "consider integrating with AsyncLocalStorage" note at the head of
       `execution-context.ts` is removed, not reworded.
-- [ ] `error-reporter.test.ts` stays at 32/32 on `test:compare`.
+- [ ] `error-reporter.test.ts` stays at 32/32 on `parity:test`.

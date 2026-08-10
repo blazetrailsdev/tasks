@@ -37,5 +37,5 @@ defines `Object#as_json`, available on every object.
 - `token-for.ts`'s local `asJson` encode/decode round-trip is deleted in
   favour of the shared one; the `token-for` tests stay green with names
   unchanged.
-- api:compare credits `as_json` where Rails declares it; no new extra-surface
+- parity:api credits `as_json` where Rails declares it; no new extra-surface
   allowlist entries.

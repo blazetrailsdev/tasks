@@ -71,4 +71,4 @@ surfaced while auditing attribute-method generation.
 - [ ] Read the corresponding Rails test(s) in `attribute_methods_test.rb` first
       (e.g. the `id_value` coverage) and mirror names verbatim; add a regression
       test for the alias and the cascade.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

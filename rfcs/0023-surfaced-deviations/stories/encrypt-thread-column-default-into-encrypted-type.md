@@ -55,4 +55,4 @@ test (worked around by declaring the attribute without a default).
       encrypted model with a column default round-trips: the default is applied
       and does not fail deserialization).
 - [ ] Regression test for an encrypted attribute with a column default.
-- [ ] All encryption tests green; no api:compare / call-mismatch regressions.
+- [ ] All encryption tests green; no parity:api / call-mismatch regressions.

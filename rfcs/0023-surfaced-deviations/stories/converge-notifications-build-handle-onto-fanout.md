@@ -51,7 +51,7 @@ object should be dropped in favor of delegating to `Fanout#buildHandle` /
 - [ ] The inline `ArgumentError` state-guard duplication in `notifications.ts`
       is removed (single source in the Fanout `Handle`).
 - [ ] `transaction-instrumentation.test.ts` and `notifications*.test.ts` keep
-      passing; api:compare / test:compare delta non-negative.
+      passing; parity:api / parity:test delta non-negative.
 
 Note: gated behind [[converge-notifications-onto-fanout-notifier]] landing — do
 not start until the static hub actually delegates to Fanout.

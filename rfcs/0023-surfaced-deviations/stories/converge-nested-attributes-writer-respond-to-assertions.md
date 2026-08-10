@@ -41,7 +41,7 @@ That is a different assertion. `assert_respond_to` asks whether the writer
 _exists_; the port runs it and asserts it is side-effect-free on an empty hash,
 which passes for reasons Rails is not testing and would keep passing if the
 writer were silently replaced by an inert property. It also shows up in
-`test:compare` as an assertion-kind mismatch on three otherwise-matched tests.
+`parity:test` as an assertion-kind mismatch on three otherwise-matched tests.
 
 The port was left as-is deliberately in PR #6159 rather than converged there:
 while the synchronous `#{name}_attributes=` setter still ships, it is the member
@@ -71,5 +71,5 @@ leaving the `.not.toThrow()` shape, and let the deletion story retarget it.
 - [ ] All three sites assert the writer responds, not that an assignment does
       not throw.
 - [ ] Test names unchanged.
-- [ ] `pnpm test:compare` delta non-negative; the three tests no longer report
-      an assertion-kind mismatch (`pnpm test:compare --assertions`).
+- [ ] `pnpm parity:test` delta non-negative; the three tests no longer report
+      an assertion-kind mismatch (`pnpm parity:test --assertions`).

@@ -44,4 +44,4 @@ covers behavior trails structurally cannot today.
       consistent with the existing curated Array delegation semantics.
 - [ ] Driven by / restores a ported Rails test that exercises `detect` on a
       relation; test name matches Rails verbatim.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.

@@ -48,4 +48,4 @@ separately.
 - The `@nie disposition=TODO` marker and the stale
   `relation-handler-distinct-pk-materialization` citation at relation.ts:4724
   are removed.
-- `pnpm test:compare` delta non-negative.
+- `pnpm parity:test` delta non-negative.

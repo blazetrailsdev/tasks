@@ -82,4 +82,4 @@ scope-body sweep, not a docs pass.
 - The row `active_record/relation.rb::_execScope::divergent` is **removed** from
   `scripts/prism-codegen/convergence-baseline.json` (only-shrink), not rewritten
   with a better reason.
-- AR suite green on all three lanes; `api:extra` shows no new novel surface.
+- AR suite green on all three lanes; `parity:api:extra` shows no new novel surface.

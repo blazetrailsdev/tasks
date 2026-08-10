@@ -32,4 +32,4 @@ neither the string-id find nor the canonical Topic model/fixtures.
       `(await Topic.find(1)).title === (await Topic.find("1")).title` using
       the canonical `test-helpers/models/topic.ts` + `fixtures(["topics"])`
       (no bespoke inline model).
-- [ ] Test name unchanged (test:compare match).
+- [ ] Test name unchanged (parity:test match).

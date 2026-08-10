@@ -41,4 +41,4 @@ but a genuine gap: no JS `Array` analogue and no AR query-method collision.
       consistent with the existing curated Array delegation semantics.
 - [ ] Driven by / restores a ported Rails test that exercises `partition` on a
       relation; test name matches Rails verbatim.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.

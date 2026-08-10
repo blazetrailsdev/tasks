@@ -48,4 +48,4 @@ should be scheduled with or after it.
   not a silently-invented join.
 - The choice is justified at the call site with the Rails `file:line`.
 - `aggregateTarget`'s doc comment matches what the code actually does.
-- `pnpm api:compare` and `pnpm test:compare` deltas are non-negative.
+- `pnpm parity:api` and `pnpm parity:test` deltas are non-negative.

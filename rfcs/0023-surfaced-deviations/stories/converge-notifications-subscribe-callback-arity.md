@@ -46,4 +46,4 @@ assertion (`vendor/rails/activesupport/test/notifications_test.rb` —
       an `Event`; keep them working (1-arg callers are unaffected).
 - [ ] The timed `subscribe` test asserts the Rails shape (start/finish are
       `Temporal.Instant`/wall-clock), mirroring `test_timed_subscribe`.
-- [ ] api:compare and test:compare deltas non-negative.
+- [ ] parity:api and parity:test deltas non-negative.

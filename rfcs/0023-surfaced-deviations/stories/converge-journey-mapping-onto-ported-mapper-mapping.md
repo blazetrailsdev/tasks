@@ -36,4 +36,4 @@ Found by the RFC 0080 audit of `moved` interface declaration names
   `action-dispatch/routing/mapper.ts` in Rails layout.
 - `journey/routes.ts` types `addRoute` on the ported class and the local
   `Mapping` interface plus its `@noRailsEquivalent` tag are deleted.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

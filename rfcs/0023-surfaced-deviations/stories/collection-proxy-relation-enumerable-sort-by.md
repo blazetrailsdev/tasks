@@ -36,8 +36,8 @@ AR query method, making it the highest-value Enumerable addition.
 
 This is the established RFC 0023 pattern: a ported Rails test reaches an
 Enumerable method trails lacks; converge that specific method rather than the
-whole module (Enumerable is Ruby core, so it is invisible to api:compare —
-test:compare is the driving signal).
+whole module (Enumerable is Ruby core, so it is invisible to parity:api —
+parity:test is the driving signal).
 
 ## Acceptance criteria
 
@@ -49,4 +49,4 @@ test:compare is the driving signal).
 - [ ] Does not shadow any AR query method.
 - [ ] Driven by / restores a ported Rails test that exercises `sort_by` on a
       relation; test name matches Rails verbatim.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.

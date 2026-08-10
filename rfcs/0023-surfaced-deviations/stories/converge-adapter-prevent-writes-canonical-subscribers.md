@@ -53,4 +53,4 @@ Rails' `adapter_prevent_writes_test.rb` runs against the real fixture
   note `nick` is NOT NULL with a unique index and there is no autoincrement
   `id`, so repeated `INSERT ... VALUES ('test')` across tests must not collide
   (the per-test `:memory:` adapter already gives a fresh database each time).
-- No test renamed; `test:compare` delta >= 0.
+- No test renamed; `parity:test` delta >= 0.

@@ -71,4 +71,4 @@ quoting from the resulting content, mirroring Rails' two stages.
       to the Rails form, not worked around.
 - [ ] Coordinate with / land after #4869 and #4867 — all three touch
       `quote-array.ts`.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

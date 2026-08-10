@@ -42,4 +42,4 @@ trails.
   semantics and the trails async-load constraint that blocks it.
 - If converging, update `nested-attributes-with-callbacks.test.ts`'s
   `birdsWithAddLoad` proc to `await`/load faithfully rather than `void`.
-- No regression in test:compare for `nested_attributes_with_callbacks_test.rb`.
+- No regression in parity:test for `nested_attributes_with_callbacks_test.rb`.

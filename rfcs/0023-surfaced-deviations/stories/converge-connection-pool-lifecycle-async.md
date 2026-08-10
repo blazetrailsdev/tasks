@@ -59,5 +59,5 @@ async.
   dep-serialized stories rather than stacked PRs, since all touch
   connection-pool.ts. This story may be re-filed as 2 sub-stories at claim time.
 - No node: imports, no process., async fs only, no new runtime deps.
-- Test names verbatim; test:compare delta non-negative; api:compare does not
+- Test names verbatim; parity:test delta non-negative; parity:api does not
   regress. Single PR(s) from main; no stacked PRs.

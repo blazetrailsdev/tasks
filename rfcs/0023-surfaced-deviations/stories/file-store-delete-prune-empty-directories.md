@@ -56,4 +56,4 @@ behavior. This is a pre-existing deviation, surfaced during PR #3850
 - Add a test asserting that deleting the sole entry under a nested key (e.g.
   `a/b`) removes the empty `a/` directory while `cacheDir` survives.
 - Async-fs-only conventions; no `node:*` imports, no `process.*` refs.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

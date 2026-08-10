@@ -32,4 +32,4 @@ method verbatim) and was deliberately left out of scope there.
       `schemaCreation.accept`, matching Rails' control flow.
 - [ ] Emitted SQL is byte-identical to today for all paths (columns, usingIndex,
       nullsNotDistinct, deferrable); no test edits beyond what convergence requires.
-- [ ] api:compare / test:compare delta non-negative on all three adapters.
+- [ ] parity:api / parity:test delta non-negative on all three adapters.

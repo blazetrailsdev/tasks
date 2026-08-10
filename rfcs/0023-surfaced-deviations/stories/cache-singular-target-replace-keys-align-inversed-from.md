@@ -49,5 +49,5 @@ change.
   the FK==PK substitutes `isCachedTargetStale` and the `targetMatchesOwnerForeignKey`
   use in `update_counters` are removed (or reduced to the genuinely-different
   null-handling cases) without regressing tests.
-- No api:compare / test:compare regression; counter-cache, inverse-of, and
+- No parity:api / parity:test regression; counter-cache, inverse-of, and
   locking suites stay green.

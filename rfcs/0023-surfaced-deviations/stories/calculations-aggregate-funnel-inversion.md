@@ -50,6 +50,6 @@ the helper is invisible to the parity tooling.
   inversion must stay.
 - If converged, the two wide-ratchet `model` exclusions in
   `scripts/api-compare/call-mismatches-wide-exclude/activerecord/relation/calculations.json`
-  are deleted and `pnpm api:calls:wide` stays green with a baseline that does
+  are deleted and `pnpm parity:api:calls` stays green with a baseline that does
   not grow.
 - Existing calculations tests stay green; no test renames.

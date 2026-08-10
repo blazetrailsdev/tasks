@@ -51,4 +51,4 @@ record; readEntry/writeEntry rebuild a second-unit `Entry`).
   `cache.test.ts` converted from ms to second units.
 - Hard rules: NO `node:*` imports, NO `process.*` refs, async-fs-only conventions,
   no new runtime deps.
-- api:compare / test:compare delta non-negative. 500-LOC ceiling, single PR.
+- parity:api / parity:test delta non-negative. 500-LOC ceiling, single PR.

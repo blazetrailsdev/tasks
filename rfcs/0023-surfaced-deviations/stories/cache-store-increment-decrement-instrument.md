@@ -45,4 +45,4 @@ concrete store(s) that implement those operations, not the base class.
 - Tests named `test_increment_instrumentation` / `test_decrement_instrumentation`
   (matching Rails verbatim) verify the event fires and the payload includes
   `:key`.
-- api:compare delta non-negative; LOC ceiling ≤ 500.
+- parity:api delta non-negative; LOC ceiling ≤ 500.

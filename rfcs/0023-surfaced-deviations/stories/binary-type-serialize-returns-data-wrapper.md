@@ -78,4 +78,4 @@ representation itself.
       `project_encryption_binary_column_text_message_roundtrip_gap`).
 - [ ] `isChangedInPlace` / `deserialize` still compare bytes, not wrapper
       identity.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

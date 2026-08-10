@@ -66,4 +66,4 @@ for a real `build_handle` — this story should expose it.
       transaction, not the publish call.
 - [ ] `transaction-instrumentation.test.ts` keeps passing (outcome, duration,
       commit/rollback/savepoint span).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

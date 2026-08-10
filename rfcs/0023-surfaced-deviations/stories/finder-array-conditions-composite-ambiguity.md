@@ -73,4 +73,4 @@ String is `sanitize_sql(array)`, never the composite tuple form.
       test_condition_local_time_interpolation_with_default_timezone_utc) onto
       canonical Company/Firm + Topic and drop their synthetic stubs in
       packages/activerecord/src/finder.test.ts.
-- [ ] api:compare / test:compare deltas non-negative.
+- [ ] parity:api / parity:test deltas non-negative.

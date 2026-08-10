@@ -1,5 +1,5 @@
 ---
-title: "Author RFC: bespoke TS-only test-bloat burndown (one-file-per-deletion-PR, LOC-exempt, test:compare-invariant)"
+title: "Author RFC: bespoke TS-only test-bloat burndown (one-file-per-deletion-PR, LOC-exempt, parity:test-invariant)"
 status: done
 updated: 2026-06-21
 rfc: "0023-surfaced-deviations"
@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-`test:compare` now reports a per-file **Extra** column (TS-only tests that match
+`parity:test` now reports a per-file **Extra** column (TS-only tests that match
 no Rails test) plus `--sort-extra` / `--min-extra=N` triage flags and per-file
 `extra` / per-package `totalExtra` in `convention-comparison.json` (shipped in
 trails PR #3825, `scripts/test-compare/test-compare.ts`). This surfaced that
@@ -24,7 +24,7 @@ trails PR #3825, `scripts/test-compare/test-compare.ts`). This surfaced that
 with no Rails counterpart, a fidelity smell (files ballooned with bespoke /
 non-Rails tests).
 
-Top offenders (live `pnpm test:compare --cached --package activerecord --sort-extra`,
+Top offenders (live `pnpm parity:test --cached --package activerecord --sort-extra`,
 snapshot 2026-06-21):
 
 - `relations.test.ts` — 414 extra (vs 279 Rails)
@@ -47,7 +47,7 @@ The RFC README (authored via `pnpm tasks new-rfc`) must specify:
 
 1. **Scope & motivation.** Burn the per-file `extra` count toward zero,
    prioritized by the `--sort-extra` ranking. Baseline: activerecord 3403 extra
-   (cite the snapshot; refresh with `pnpm test:compare --cached --package
+   (cite the snapshot; refresh with `pnpm parity:test --cached --package
 activerecord --sort-extra` before each story). Each bespoke test is either
    (a) a genuine Rails test in the wrong place → move (not in scope here; that's
    "misplaced"), or (b) a TS-only test with no Rails equivalent → delete, unless
@@ -67,11 +67,11 @@ activerecord --sort-extra` before each story). Each bespoke test is either
    deletions with any additions is not") and the `git diff --shortstat` guard
    adjustment, so the ceiling change lands with the RFC rather than ad hoc.
 
-4. **`test:compare` must not change.** Deleting extra (unmatched) tests MUST
+4. **`parity:test` must not change.** Deleting extra (unmatched) tests MUST
    leave the package's `matched`, `matchedSkipped`, `missing`, `wrongDescribe`,
    and `misplaced` counts identical — only `extra` / `totalExtra` drops. The RFC
    must mandate, as the per-PR acceptance gate, a before/after diff of
-   `pnpm test:compare --cached --json --package activerecord` showing every count
+   `pnpm parity:test --cached --json --package activerecord` showing every count
    unchanged except `extra`/`totalExtra` (and the overall match % unchanged). Any
    movement in matched/skipped/missing means a real Rails test was deleted — the
    PR must be rejected. This is the hard invariant of the whole campaign.

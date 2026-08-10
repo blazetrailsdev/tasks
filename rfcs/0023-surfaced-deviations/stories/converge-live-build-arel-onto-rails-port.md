@@ -43,8 +43,8 @@ remaining `build_arel` surface (joins/select/from/lock/CTE/annotations).
 
 - [ ] One `build_arel` implementation on the live path — either `_buildArel` is
       replaced by the `query-methods.ts` port, or the port is deleted and
-      `_buildArel` is renamed/mapped as the real `build_arel` for `api:compare`.
+      `_buildArel` is renamed/mapped as the real `build_arel` for `parity:api`.
 - [ ] No dead private delegating shim left on `Relation` for `buildArel`.
-- [ ] `api:compare` still maps `build_arel` to a real, reachable port (see
+- [ ] `parity:api` still maps `build_arel` to a real, reachable port (see
       the Rails-layout-file rule in CLAUDE.md).
 - [ ] Full AR suite green; no change to emitted SQL.

@@ -27,4 +27,4 @@ The `extractOptions` helper added in PR #3686 (same file) can be reused: pop the
 - `fetchMulti` extracts an optional trailing options object (the element before the block, if it is a plain object) and threads it through `mergedOptions` into both `readMultiEntries` and `writeMulti`.
 - Existing `force` / `skipNil` behavior continues to honor per-call options.
 - Cover in `cache-store-base.test.ts` with a test passing `namespace` (and verifying `force`/`expiresIn` via the trailing hash).
-- api:compare delta non-negative; LOC ceiling <= 500.
+- parity:api delta non-negative; LOC ceiling <= 500.

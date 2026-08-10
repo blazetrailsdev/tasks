@@ -54,5 +54,5 @@ the merge.
       `merge_target_lists`.
 - [ ] A test asserts `collection.toArray()[0]` preserves marked-for-destruction
       and in-memory attribute changes (mirrors Rails `to_a`).
-- [ ] No regression in existing association tests; `test:compare` delta
+- [ ] No regression in existing association tests; `parity:test` delta
       non-negative.

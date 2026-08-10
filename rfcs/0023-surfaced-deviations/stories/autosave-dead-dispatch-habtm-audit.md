@@ -41,5 +41,5 @@ PR #4068 updated both `autosaveHasMany` and `autosaveHabtm` for consistency, but
   `autosaveHabtm` path if Rails fidelity requires distinct HABTM handling
   (`hasAndBelongsToMany` reflections routing through a hasMany-typed def is the
   current shortcut).
-- No behavior change for live save paths; no test:compare/api:compare
+- No behavior change for live save paths; no parity:test/parity:api
   regression.

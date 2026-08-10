@@ -81,4 +81,4 @@ Both pieces this needs already exist on the class: `revert()` and `replay()`
   command that replays the inverted inner commands.
 - `test_invert_transaction_with_irreversible_inside_is_irreversible` stays green
   and is no longer vacuous.
-- `api:compare` / `api:calls` non-negative.
+- `parity:api` / `parity:api:calls` non-negative.

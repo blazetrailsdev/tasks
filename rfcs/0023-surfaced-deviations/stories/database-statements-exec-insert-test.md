@@ -52,9 +52,9 @@ over verbatim.
 ## Acceptance criteria
 
 - [ ] `database-statements.test.ts` gains `it("exec insert", ...)` matching the
-      Rails test name as `test:compare` derives it from `test_exec_insert`.
+      Rails test name as `parity:test` derives it from `test_exec_insert`.
 - [ ] It calls `execInsert` on the ambient connection and asserts the
       `lastInsertedId` of the returned result is not null, mirroring
       `database_statements_test.rb:10-13`.
 - [ ] The test runs on all three lanes (the file has no adapter gate today).
-- [ ] No existing test renamed. `test:compare` delta > 0 for this file.
+- [ ] No existing test renamed. `parity:test` delta > 0 for this file.

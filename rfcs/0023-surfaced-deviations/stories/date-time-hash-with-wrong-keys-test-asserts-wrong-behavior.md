@@ -30,7 +30,7 @@ The name comes from Rails' `test_hash_with_wrong_keys`
 asserts that `type.cast(a: 1)` raises `ArgumentError` with the message
 `"Provided hash {a: 1} doesn't contain necessary keys: [1, 2, 3]"`. The trails
 body asserts something unrelated (an unparsable string casting to nil), so
-`test:compare` matches the pair by name while the behavior Rails covers goes
+`parity:test` matches the pair by name while the behavior Rails covers goes
 untested here.
 
 The behavior itself IS implemented and IS tested — under the invented name

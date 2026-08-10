@@ -51,6 +51,6 @@ occur, not a behavioral divergence.
   `finderNeedsTypeCondition?` gate so no Rails-less error text exists.
 - No new error class or message that Rails does not raise.
 - `typeCondition` stays in `inheritance.ts` at its Rails-layout position.
-- api:compare and test:compare deltas non-negative.
+- parity:api and parity:test deltas non-negative.
 - STI suites pass: inheritance.test.ts, inheritance-namespaced.test.ts,
   sti-attribute-routing.test.ts.

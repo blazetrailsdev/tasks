@@ -52,4 +52,4 @@ when types are reset` (it counts introspection queries).
 - [ ] No QueryCacheTest regression; no SchemaDumperTest timeout.
 - [ ] Direct `adapter.columns()` (bypassing schema cache) returns the correct
       (promoted-unique-excluding) flag.
-- [ ] api:compare / test:compare non-negative.
+- [ ] parity:api / parity:test non-negative.

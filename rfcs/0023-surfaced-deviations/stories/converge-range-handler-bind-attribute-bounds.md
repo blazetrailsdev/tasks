@@ -78,4 +78,4 @@ they must be checked as part of this work:
       predications.rb:42).
 - [ ] The `typeCast` no-op divergence above is resolved or explicitly shown not to
       affect the bound path, with the Rails anchor.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

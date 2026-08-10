@@ -61,4 +61,4 @@ inlines `extract`/`execute` rather than calling
 - [ ] `assign_multiparameter_attributes` is called, not inlined.
 - [ ] Existing suites (nested-attributes, multiparameter-attributes, dirty,
       forbidden-attributes-protection, base, persistence) stay green.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

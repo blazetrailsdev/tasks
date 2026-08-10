@@ -58,4 +58,4 @@ config home) and was deliberately left out of scope there.
   keeps the value out of the UPDATE.
 - Update `base.test.ts:2074` to mirror the Rails `base_test.rb` expectation
   (do not rename the test); read the Rails test first.
-- api:compare and test:compare delta >= 0.
+- parity:api and parity:test delta >= 0.

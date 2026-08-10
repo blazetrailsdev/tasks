@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced in review of PR #4869 (`converge-arel-array-booleans-to-unquoted-true`),
 which converged the Arel array boolean cast arm onto `unquoted_true`. Out of
-scope there — different package, and it moves the api:compare surface.
+scope there — different package, and it moves the parity:api surface.
 
 `packages/activerecord/src/connection-adapters/postgresql/quoting.ts` declares
 four boolean-literal methods on its `Quoting` interface (`:51-54`) and exports
@@ -63,7 +63,7 @@ which is why deleting them is expected to be behaviour-neutral.
 
 Two distinct problems, worth separating:
 
-1. **Extra methods vs Rails** — they inflate the api:compare surface with names
+1. **Extra methods vs Rails** — they inflate the parity:api surface with names
    Rails does not define on this class.
 2. **`unquoted_true`/`unquoted_false` re-implement the abstract body** (`return
 true`) instead of delegating like their `quoted_*` neighbours do
@@ -81,7 +81,7 @@ true`) instead of delegating like their `quoted_*` neighbours do
 - [ ] Check whether `sqlite3/quoting.ts` and the MySQL quoting module have the
       same shape; Rails DOES define the pair for both, so those are legitimate
       and must NOT be deleted — this is PG-only.
-- [ ] api:compare / test:compare delta non-negative (deleting extra methods
+- [ ] parity:api / parity:test delta non-negative (deleting extra methods
       should improve the PG quoting file's ratio).
 
 ## Notes

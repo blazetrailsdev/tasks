@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Already moot: RFC 0084 folded the wide ratchet into api:calls and call-mismatches-wide-exclude/activerecord/ no longer exists, so the singular-association.json reason string the story rewords is gone; doc-only either way."
+closed-reason: "Already moot: RFC 0084 folded the wide ratchet into parity:api:calls and call-mismatches-wide-exclude/activerecord/ no longer exists, so the singular-association.json reason string the story rewords is gone; doc-only either way."
 ---
 
 ## Context
