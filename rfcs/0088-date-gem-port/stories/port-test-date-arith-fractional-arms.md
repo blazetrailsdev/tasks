@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-arith-fractional-arms"
-status: claimed
+status: closed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-10T01:46:38Z"
-assignee: "port-test-date-arith-fractional-arms"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: every item is now ported. #6312 landed d_lite_plus's T_FLOAT arm (date_core.c:6060-6135) and Date#dNewInternal (:3055-3071), which gives a Date the ComplexDateData slot this story was filed to decide on; PR #6313 ported DateTime#new_offset (d_lite_new_offset :5920-5934) with offset_to_sec's default arm (:2398-2405) and test_new_offset with it. test_date_arith.rb is 11/23 credited, the whole of lines 10-152."
 ---
 
 ## Context
