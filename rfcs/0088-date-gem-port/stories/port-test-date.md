@@ -1,6 +1,6 @@
 ---
 title: "Port test_date.rb (9 tests) onto the date package"
-status: in-progress
+status: ready
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6311
-claim: "2026-08-09T23:52:55Z"
-assignee: "port-test-date"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
