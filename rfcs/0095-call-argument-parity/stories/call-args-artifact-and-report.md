@@ -1,6 +1,6 @@
 ---
 title: "compare.ts writes the advisory call-argument mismatch artifact"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T02:31:49Z"
+assignee: "call-args-artifact-and-report"
 blocked-by: null
 closed-reason: null
 ---
