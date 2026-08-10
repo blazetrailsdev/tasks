@@ -80,3 +80,25 @@ critical section.
 - [ ] `HasManyThroughAssociationsTest` "should respect table alias" stays green.
 - [ ] `pnpm api:extra --package activerecord` shows one fewer `@internal`
       no-counterpart helper.
+
+## Update 2026-08-10 (PR #6327)
+
+Two facts for whoever retires this helper.
+
+1. `acquireStatementLock` no longer returns a bare `Promise<() => void>`: an
+   uncontended acquisition answers **synchronously** (union return type, and
+   `_statementLock` drains back to `null`), because `await` on a settled tail
+   still costs a turn and that turn was enough for a pool `disconnect` to close
+   the handle between the acquisition and the statement. Whatever replaces the
+   helper has to keep that property — `withRawConnection` →
+   `_transactionManager.synchronize` must not add a gratuitous yield on the
+   transaction-control path.
+2. The window is narrowed, not closed:
+   `sqlite-disconnect-must-serialize-on-statement-lock` covers the close path
+   not taking the lock at all, which is what Rails' `@lock` gets for free.
+   Retiring the helper onto `withRawConnection` should subsume that story —
+   check it before starting, and close it here if it does.
+
+`performQuery` now also serves `raw_execute` (batch / prepared / unprepared
+arms), so the lock covers transaction-control SQL and `execute_batch` too, not
+just `execute` / `executeMutation`.
