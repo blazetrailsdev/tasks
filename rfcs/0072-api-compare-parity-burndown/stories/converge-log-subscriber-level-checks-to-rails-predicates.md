@@ -1,6 +1,6 @@
 ---
 title: "LogSubscriber.LEVEL_CHECKS routes through an invented isLevelEnabled fallback chain instead of the logger's own predicate"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
