@@ -177,6 +177,31 @@ normalization rule.
 **The activerecord 69% rests on a 32-row sample, not the full 510.** The
 baseline-seed story re-measures at scale.
 
+#### Shipped population (2026-08-10, `call-args-arel-population-recheck`)
+
+The table above is the SPIKE's, measured with its own throwaway Ripper and
+`typescript` walkers. The shipped streams come from
+`extract-ruby-api.rb#describe_args` and `extract-ts-api.ts#describeArgs`, paired
+by `call-args.ts#pairCallSites` over the name-matched pairs `checkCalls`
+receives, so the site population differs. Measured on a clean `main` with
+`API_COMPARE_FORCE=1 pnpm parity:api --calls`:
+
+| Package | Compared | Flagged |   shape | naming |
+| ------- | -------: | ------: | ------: | -----: |
+| arel    |      759 |     140 |      31 |    109 |
+| **all** |    5,619 |   1,618 | **735** |    883 |
+
+arel is ~2.5x the spike's comparable sites and ~2x its flagged rows; the
+comparator is unchanged (the strict-index match RATE reproduced the spike's
+76.8% in PR #6309, and every named finding is present), so the delta is the
+extractor/pairing difference, not a normalization change. Later stories size
+against THESE numbers. The baseline seeded 689 gated rows (735 flagged shape
+rows, deduplicated by baseline key).
+
+Uncomparable sites, by reason (`skipped` in `output/call-arg-mismatches.json`,
+`call-args-skip-reason-tally`): `excludedCallName` 179, `uncomparableFlag` 485,
+`opaqueRubyArg` 445, `opaqueTsArg` 299, `unparseableLiteral` 0.
+
 ## Rollout
 
 Two row classes in one artifact; gate one:

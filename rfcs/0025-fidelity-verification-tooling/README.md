@@ -152,6 +152,10 @@ The dimension is adjacent to this RFC's `constants-defaults-parity` and
 
 ## Changelog
 
+- 2026-08-10: call-argument baseline seeded on `main` — **689 `shape` rows**
+  across the existing `call-mismatches-exclude/` shards (`kind: "args"`). That
+  is the burndown floor for the dimension; the call-set row count (2115) is
+  unchanged by the seed. `naming` rows (883) stay report-only under RFC 0096.
 - 2026-06-12: initial RFC
 - 2026-08-09: call-argument fidelity spike + its seven stories moved out to
   RFC 0095; a pointer remains
