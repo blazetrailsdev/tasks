@@ -1,6 +1,6 @@
 ---
 title: "MySQL indexes is public in Rails but tagged @internal, so api:compare never sees it"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
