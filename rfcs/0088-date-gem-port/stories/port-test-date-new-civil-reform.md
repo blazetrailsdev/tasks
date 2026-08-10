@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-new-civil-reform"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

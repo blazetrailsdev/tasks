@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#lock renames its parameter, changes its default, and flattens Rails' case"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0084-wide-call-set-burndown"
 cluster: null
