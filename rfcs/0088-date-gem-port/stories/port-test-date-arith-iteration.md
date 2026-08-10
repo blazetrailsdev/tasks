@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_arith.rb next_* + step/upto/downto (11 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
