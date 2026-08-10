@@ -1,6 +1,6 @@
 ---
 title: "sqlite disconnectBang returns with the handle still open when the statement lock is held"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T15:09:04Z"
+assignee: "check-limit-measures-utf16-units-not-bytes"
 blocked-by: null
 closed-reason: null
 ---
@@ -59,4 +59,4 @@ is probably that every caller awaits `whenClosed()`).
       justified at the call site with a Rails cite.
 - [ ] sqlite3 lane green, including
       `sqlite3-adapter-perform-query.trails.test.ts >
-  "does not close the handle out from under a statement holding the lock"`.
+"does not close the handle out from under a statement holding the lock"`.
