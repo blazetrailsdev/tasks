@@ -55,7 +55,7 @@ under a trails name. Converging it means deleting the stub and giving
 
 - [ ] `_performQuery` is renamed to `performQuery` on Rails' argument list
       (`raw_connection, sql, binds, type_casted_binds, prepare:,
-    notification_payload:, batch:`) and assigned to the prototype, so
+notification_payload:, batch:`) and assigned to the prototype, so
       `rawExecute` works on PG as it now does on sqlite3 and mysql2.
 - [ ] `performQuery` inlines Rails' three arms (`prepare` → `prepare_statement` + `exec_prepared` with the `PG::FeatureNotSupported` rescue; empty binds →
       `async_exec`; otherwise `exec_params`) rather than delegating to
