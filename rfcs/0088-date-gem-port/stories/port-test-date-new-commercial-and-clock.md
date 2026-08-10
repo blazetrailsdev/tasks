@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_new.rb commercial/weeknum/today/now (7 tests)"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-test-date-new-jd-ordinal-civil"]
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6331
 claim: "2026-08-10T12:06:36Z"
 assignee: "converge-time-to-date-onto-d-simple-new-internal"
 blocked-by: null
