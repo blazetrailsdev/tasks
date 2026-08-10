@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_new.rb jd/ordinal/civil constructors (11 tests)"
-status: claimed
+status: ready
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-08-10T00:25:52Z"
-assignee: "port-test-date-attr"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
