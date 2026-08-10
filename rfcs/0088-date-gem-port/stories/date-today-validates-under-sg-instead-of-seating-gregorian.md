@@ -1,6 +1,6 @@
 ---
 title: "date-today-validates-under-sg-instead-of-seating-gregorian"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 6333
+pr: 6331
 claim: "2026-08-10T13:05:58Z"
 assignee: "date-new-must-discard-date-initialize-add-frac"
 blocked-by: null
