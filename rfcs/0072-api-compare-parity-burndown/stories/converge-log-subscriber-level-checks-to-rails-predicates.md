@@ -1,6 +1,6 @@
 ---
 title: "LogSubscriber.LEVEL_CHECKS routes through an invented isLevelEnabled fallback chain instead of the logger's own predicate"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6321
 claim: "2026-08-10T02:26:38Z"
 assignee: "port-test-date-arith-iteration"
 blocked-by: null
