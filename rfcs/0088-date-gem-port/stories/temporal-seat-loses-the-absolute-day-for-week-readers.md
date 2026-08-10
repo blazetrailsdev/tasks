@@ -1,6 +1,6 @@
 ---
 title: "temporal-seat-loses-the-absolute-day-for-week-readers"
-status: claimed
+status: blocked
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-10T14:33:26Z"
 assignee: "date-seat-drops-nth-and-spells-the-residue-year"
-blocked-by: null
+blocked-by: "No Temporal.PlainDate can satisfy both acceptance criteria at once, so the story needs an RFC 0088 decision before any code. Proof: (a) Temporal has no julian calendar (@js-temporal/polyfill rejects calendar:'julian'; CLDR has gregory/iso8601 only), so every PlainDate reads as one absolute day A(p). (b) dayOfWeek(p) = A(p) mod 7 and MRI's cwday is (jd+1) mod 7 under EVERY sg, so criterion 1 (commercial triple of Date.commercial(-4712,1,1) under ITALY, i.e. the Julian side) forces A(p) = jd. (c) criterion 2 wants Date.ordinal(1900,-2,JULIAN)'s yday = 365; with A(p) = jd the PlainDate is the Gregorian 1901-01-12, whose dayOfYear is 12, and the only PlainDate with dayOfYear 365 there is the Julian SPELLING 1900-12-30, whose A(p) is 13 days off jd and whose dayOfWeek is 7 where MRI's is 6 (verified against the polyfill). So (b) and (c) demand A(p) = jd and A(p) != jd. The 'cheapest' option in the story's Converged shape (render into the calendar the sg names) is exactly (b) and fails (c); the remaining option is the gem-shaped return for these spellings, which is the RFC's undecided Ruby opt-in and which the story itself forbids doing wholesale. Recommended resolution for the owner: make Date#toDate raise Date::Error 'invalid date' for any day the receiver's sg puts on the Julian side — the existing date-to-date-seat-raises-on-julian-only-spellings precedent generalized — so the seat never answers a wrong weekday/yday, and restate the criteria as 'raises' rather than 'answers'. That is a one-line change plus test churn once ratified. Bundled with date-seat-drops-nth-and-spells-the-residue-year (the other four stories shipped)."
 closed-reason: null
 ---
 
