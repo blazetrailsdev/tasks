@@ -42,7 +42,7 @@ the RFCs that own those files once the baseline exists:
   `injectJoin(nodes, connector, collector)` (`to-sql.ts:654`), plus
   `collect_nodes_for` (`:179`), `infix_value` (`:957`),
   `infix_value_with_paren` (`:963`), `grouping_parentheses` (`:981`).
-  23 call sites, invisible to `arity.ts`, `api:compare` and `api:calls`.
+  23 call sites, invisible to `arity.ts`, `parity:api` and `parity:api:calls`.
 - `to-sql.ts` `appendEscape` (`:1044`) is an extracted helper Rails does not
   have (`to_sql.rb:485-495`).
 - `UnaryOperation.operand` (`unary-operation.ts:19`) shadows Rails'

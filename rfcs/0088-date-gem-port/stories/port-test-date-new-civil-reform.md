@@ -51,5 +51,5 @@ only route.
 - [ ] If the overload lands, `it("civil reform")` in
       `packages/date/src/test-date-new.test.ts` moves its receiver back to
       `Date.jd(...)` fed through it, which is Ruby's own call.
-- [ ] `pnpm test:compare --package date` still credits `civil reform`; the
+- [ ] `pnpm parity:test --package date` still credits `civil reform`; the
       `test_date_new.rb` row stays at 12 OK / 0 Skip / 0 Desc.

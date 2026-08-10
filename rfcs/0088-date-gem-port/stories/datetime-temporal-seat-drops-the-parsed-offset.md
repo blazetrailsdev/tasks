@@ -62,4 +62,4 @@ change — this is only about what the statics answer.
       call site against `date_parse.c:523-528`.
 - [ ] `packages/date/src/date.trails.test.ts` covers a zoned and an unzoned
       parse through the default return, not only through the gem-shaped opt-in.
-- [ ] `pnpm api:extra --package date` clean; no new baseline rows.
+- [ ] `pnpm parity:api:extra --package date` clean; no new baseline rows.

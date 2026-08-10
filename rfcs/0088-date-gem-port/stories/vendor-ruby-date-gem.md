@@ -24,7 +24,7 @@ The RFC 0074 date cluster — `packages/i18n/src/date.ts` (2,554 lines),
 C source by line throughout (e.g. `date.ts:2213` cites `date_core.c:186`) against
 a file no one can open.
 
-Without a vendored source `api:compare` cannot resolve the cluster —
+Without a vendored source `parity:api` cannot resolve the cluster —
 `scripts/api-compare/extra-surface.ts:12` walks _from each Ruby file_ to its
 expected TS file, so a TS file with no counterpart lands in the
 `rubyFile === null` slice (`extra-surface.ts:531`), counted but never compared.

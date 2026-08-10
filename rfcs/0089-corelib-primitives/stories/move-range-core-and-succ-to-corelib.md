@@ -34,7 +34,7 @@ ports `string.c` `rb_str_succ` and whose header already says it outright
 is 1:1 with `vendor/rails/activesupport/lib/active_support/core_ext/range/`
 (`compare-range.ts` 138, `conversions.ts` 89, `overlap.ts` 68, `each.ts` 63 =
 358 lines, all anchored and measurable where they are). Moving them would charge
-Rails' surface to a non-Rails package and destroy working `api:compare` coverage.
+Rails' surface to a non-Rails package and destroy working `parity:api` coverage.
 
 **This fixes a dependency inversion.** `core-ext/range/compare-range.ts:9,78-82,123-127`
 — a properly anchored Rails core-ext file — currently reaches _upward_ into the

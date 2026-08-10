@@ -22,7 +22,7 @@ assumption in the RFC and it is deliberately settled before any code moves.
 `scripts/api-compare/extract-ruby-api.rb` parses **Ruby**, not C. But the bulk of
 what `packages/i18n/src/date.ts` ports lives in `ext/date/date_parse.c` and
 `ext/date/date_core.c`; `lib/date.rb` in the gem is comparatively thin. So it is
-not yet known whether `api:compare` can credit the ported surface at all once
+not yet known whether `parity:api` can credit the ported surface at all once
 `vendor/date/` exists.
 
 The RFC's stated fallback: enroll `lib/date.rb` + `test/date/` in the normal
@@ -31,13 +31,13 @@ citable, excluded from the compared population via `UNPORTED_FILES` `pattern`
 entries with reasons (`scripts/api-compare/unported-files.ts:1-50` documents the
 `pattern` / `testFile` / `package` fields).
 
-**That fallback still fixes the presenting problem.** `test:compare` over
+**That fallback still fixes the presenting problem.** `parity:test` over
 `test/date/` gives the cluster a real, shrinking, self-terminating gate — which
 is exactly what it lacks today — without a C-parser project.
 
 ## Acceptance criteria
 
-- [ ] Run `pnpm api:compare` with the `date` source enrolled and record what
+- [ ] Run `pnpm parity:api` with the `date` source enrolled and record what
       `lib/date.rb` alone credits.
 - [ ] Decide and **write up in the RFC README** one of: (a) `lib/date.rb` credits
       enough surface to enroll normally; (b) C sources need `UNPORTED_FILES`

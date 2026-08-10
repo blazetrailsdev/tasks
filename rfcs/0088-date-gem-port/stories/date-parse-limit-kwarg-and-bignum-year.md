@@ -47,4 +47,4 @@ overflow, as `Date#year` already is.
 - [ ] `limit:` is honoured with MRI's message and raise site.
 - [ ] `test__parse_too_long_year` lands in
       `packages/date/src/test-date-parse.test.ts` as `parse too long year`.
-- [ ] `pnpm test:compare --package date` credits it; no package regresses.
+- [ ] `pnpm parity:test --package date` credits it; no package regresses.

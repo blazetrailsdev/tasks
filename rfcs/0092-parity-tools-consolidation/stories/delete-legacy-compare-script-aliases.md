@@ -25,7 +25,7 @@ to the legacy compare-script names — docs, JSDoc, comments, `.github/**`,
 `scripts/api-compare/gate-regen.ts` (+ its test), and the generated
 `docs/ruby-ts-conventions.md`. Nothing in the repo spells an old name any more
 except three intentional historical mentions (the two "these are deprecated"
-notes in `CLAUDE.md` and `scripts/parity/README.md`, and `api:calls:wide` in
+notes in `CLAUDE.md` and `scripts/parity/README.md`, and the wide call gate in
 `docs/infrastructure/prism-codegen-spike.md`, a script RFC 0084 deleted).
 
 The 24 delegating alias entries themselves were deliberately KEPT in the root
@@ -35,12 +35,16 @@ still invoke them, and breaking those before usage has actually died out trades
 a tidy `package.json` for a wave of "command not found" reds. Killing usage
 first was the explicit call.
 
-Aliases: `api:compare`, `api:drift`, `api:extra`, `api:build`, `api:reasons`,
-`api:detached`, `api:calls`, `api:calls:report`, `api:calls:unreviewed`,
-`api:calls:reseed`, `api:arity`, `api:inheritance`, `api:pins`, `api:pins:all`,
-`api:moves`, `api:conventions`, `lint:deps`, `test:compare`,
-`test:assertions:ratchet`, `test:assertions:ratchet:reseed`, `test:stubs`,
-`fixtures:compare`, `schema:compare`, `schema:compare:reseed`.
+The aliases are not enumerated here: this repo's story bodies were swept free of
+the legacy spellings by `sweep-legacy-script-spellings-in-the-tasks-repo`, and
+re-listing them would put them straight back. The authoritative list is the
+alias block itself in the root `package.json`, and the stems the gate matches
+are `LEGACY_SCRIPT_NAMES` in `scripts/parity/legacy-script-names.ts`.
+
+**Prerequisite:** `sweep-legacy-script-spellings-in-the-tasks-repo` must land
+first (it is already in this story's `deps`). Until it does, thousands of story
+bodies name commands that stop working the moment the alias block is deleted,
+and an agent copy-pasting one reads the failure as a broken environment.
 
 ## Acceptance criteria
 

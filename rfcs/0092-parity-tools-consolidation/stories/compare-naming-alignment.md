@@ -42,4 +42,4 @@ and lint tooling (serializeBaseline and sharded-mark traps).
 - All four compare dirs use `compare.ts` as the main entry; CI green.
 - Lint entry points follow `lint-<subject>.ts`.
 - Baseline layout README exists; no baseline file moved.
-- `pnpm test:compare` output delta exactly zero.
+- `pnpm parity:test` output delta exactly zero.

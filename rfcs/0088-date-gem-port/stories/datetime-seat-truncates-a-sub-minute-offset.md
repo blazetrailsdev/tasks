@@ -72,4 +72,4 @@ can" already exists in the package.
       `toDatetime` call site.
 - [ ] A test pins what `DateTime.parse("2008-03-01T06:00:00-00:44:30")`'s
       default return names as an instant, against live `ruby -rdate`.
-- [ ] `pnpm api:extra --package date` clean; no new baseline rows.
+- [ ] `pnpm parity:api:extra --package date` clean; no new baseline rows.

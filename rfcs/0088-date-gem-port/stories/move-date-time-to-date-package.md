@@ -46,5 +46,5 @@ exports; both go away.
 - [ ] `time.ts`'s import of `ArgumentError`/`strftime` from `./date.js` still
       resolves intra-package.
 - [ ] **Zero behavior change** — no method body edited, no test renamed. Test
-      names are the `test:compare` matching key.
+      names are the `parity:test` matching key.
 - [ ] `pnpm typecheck` green; the moved tests pass.

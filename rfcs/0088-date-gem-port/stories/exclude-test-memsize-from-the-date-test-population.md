@@ -30,7 +30,7 @@ def test_memsize
 end
 ```
 
-It is in `test:compare`'s credited population for `date` (part of
+It is in `parity:test`'s credited population for `date` (part of
 `test_date_new.rb`'s 19 tests, inside the package's 138 total, measured
 2026-08-09 at `0/138`), so it can never be credited and permanently caps the
 package below 100%.
@@ -53,7 +53,7 @@ strips the `def test_` prefix, so the entry must be named `memsize`, **not**
       `ObjectSpace`/no-JS-analogue reason stated at the entry (matching the style of
       the existing `ractor` / `marshal*` entries).
 - [ ] The entry is named `memsize`, not `test_memsize`, and a run of
-      `pnpm test:compare` shows the `date` population drop from 138 to 137 —
+      `pnpm parity:test` shows the `date` population drop from 138 to 137 —
       proving the entry is not a no-op.
 - [ ] `scripts/parity/unported-overmatch.test.ts` (or its current equivalent)
       stays green.

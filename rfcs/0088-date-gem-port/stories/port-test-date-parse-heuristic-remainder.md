@@ -49,7 +49,7 @@ blocked on a reader this package has not ported:
       `tr("_", " ")`), as its own PR if the budget requires.
 - [ ] The four blocked tests land once their readers are ported — port each
       reader against the C `file:line` above, in the Rails/gem file layout.
-- [ ] `pnpm test:compare --package date` credits every added test; the date
+- [ ] `pnpm parity:test --package date` credits every added test; the date
       package's totals only move up.
 - [ ] Temporal-vs-`Date`/`DateTime` assertion-value mismatches stay benign
       (`vendor/sources.ts:212-221`) — do not converge a Temporal return back.

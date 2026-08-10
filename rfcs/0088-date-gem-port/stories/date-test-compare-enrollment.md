@@ -38,7 +38,7 @@ The RFC returns `Temporal` types by default where Ruby returns `Date`/`DateTime`
 `assert_equal Date.new(2001,2,3), Date.parse("2001-02-03")` compares a
 `Temporal.PlainDate` on our side.
 
-`test:compare` matches on test **names**, so the test still counts. The
+`parity:test` matches on test **names**, so the test still counts. The
 value-shape difference is the intended design, not drift. **Record this
 explicitly in the RFC README and at the enrollment site** so a later reader does
 not "converge" it back to a Ruby-shaped return — that would silently reverse the
@@ -50,7 +50,7 @@ RFC's headline decision.
 - [ ] **Enrollment is 4 registrations, not 1** — a partial job reds CI with a
       fully green local compare (the assertion-mismatch mark). Enumerate and
       verify each before pushing.
-- [ ] `pnpm test:compare` delta non-negative; the new baseline recorded.
+- [ ] `pnpm parity:test` delta non-negative; the new baseline recorded.
 - [ ] Test names match the gem's names exactly — per CLAUDE.md, never reword a
       test name to fit the implementation. If a name and a behavior disagree, the
       implementation is what changes.

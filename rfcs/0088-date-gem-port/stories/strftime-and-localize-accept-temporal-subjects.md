@@ -57,7 +57,7 @@ readers — so whatever lands here is trails-only surface and must carry a
 `@noRailsEquivalent` tag with a PERMANENT/CONVERGEABLE claim, or (preferred) be
 folded into `strftime` itself rather than added as a new exported helper.
 Prefer widening `StrftimeSubject`'s accepted input over introducing a wrapper
-class: `pnpm api:extra --package date` measures anything new.
+class: `pnpm parity:api:extra --package date` measures anything new.
 
 Note `strftime` must keep answering a `string`, `_parse` a fragment object, and
 offsets a `number` — RFC 0088's three carve-outs where Temporal has no
@@ -72,6 +72,6 @@ analogue.
 - [ ] `%s` (`epochSeconds`) and `%Z` / `%z` are correct for a zoned value and
       for a date-only value (midnight, UTC — the gem's own `::Date` behavior).
 - [ ] No new exported surface in `@blazetrails/date` without a
-      `@noRailsEquivalent` claim; `pnpm api:extra --package date` clean.
+      `@noRailsEquivalent` claim; `pnpm parity:api:extra --package date` clean.
 - [ ] Unblocks `date-temporal-default-return-and-ruby-opt-in`, which stays the
       story that flips the default returns.

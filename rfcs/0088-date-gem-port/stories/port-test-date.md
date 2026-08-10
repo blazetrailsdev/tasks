@@ -27,7 +27,7 @@ states it plainly: `test/date/` "is the gate for this cluster — 12 files, 145
 `def test_` methods — and it is the only fidelity measure the date port has."
 `compareApi: false` (`vendor/sources.ts:208`), because the gem is implemented in
 C and the Ruby extractor finds only 12 public methods in `lib/date.rb`, so
-`api:compare` cannot produce a denominator for this package at all.
+`parity:api` cannot produce a denominator for this package at all.
 
 As of 2026-08-09 that gate reads **0/138 tests (0%), 0/10 files** — after 56
 merged stories and ~4,900 LOC in `packages/date/src`. The only test files in the
@@ -37,7 +37,7 @@ Not one of Ruby's comparable test files has been started.
 This story ports **The whole file (9 tests, 190 lines). Covers `Date::Infinity` range behaviour, the `Date::ITALY`/`ENGLAND`/`JULIAN`/`GREGORIAN` constants, `#-`, `#eql?`, `#hash`, `#freeze` and `#deconstruct_keys`.**
 
 Ruby source: `vendor/date/test/date/test_date.rb`
-Target: `packages/date/src/test-date.test.ts` (the convention name `test:compare` expects;
+Target: `packages/date/src/test-date.test.ts` (the convention name `parity:test` expects;
 `scripts/test-compare/compare.ts:1264` maps the `date` package to
 `packages/date/src/`).
 
@@ -57,8 +57,8 @@ Tests in scope (9):
 
 - [ ] Every listed test is ported into `packages/date/src/test-date.test.ts` under its Ruby
       name, translated by `docs/ruby-ts-conventions.md`. **Do not rename or
-      reword a test name** — `test:compare` matches on them.
-- [ ] `pnpm test:compare --package date` credits these tests; the date package's
+      reword a test name** — `parity:test` matches on them.
+- [ ] `pnpm parity:test --package date` credits these tests; the date package's
       file and test totals both move up and no other package regresses.
 - [ ] Assertion-_value_ mismatches against these tests are **expected and
       benign** — RFC 0088 returns `Temporal` by default where Ruby returns
@@ -80,7 +80,7 @@ as a sibling story — do not grow the PR and do not open the sibling PR yoursel
 
 ## Progress — PR #6311 landed 5 of the 9 (2026-08-10)
 
-Ported and credited by `test:compare` (`test_date.rb` 0/9 → 5/9):
+Ported and credited by `parity:test` (`test_date.rb` 0/9 → 5/9):
 `test__const`, `test_eql_p`, `test_freeze`, `test_submillisecond_comparison`,
 `test_deconstruct_keys`. That PR also implemented what they needed —
 `Date::MONTHNAMES` / `ABBR_MONTHNAMES` / `DAYNAMES` / `ABBR_DAYNAMES`

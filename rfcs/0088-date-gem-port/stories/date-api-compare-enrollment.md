@@ -33,8 +33,8 @@ source tree that does not exist in the repo.
 - [ ] `compareApi: true` for the `date` source's `date` package entry.
 - [ ] `UNPORTED_FILES` entries for whatever the spike determined cannot be
       credited, **each with a real reason** — never a seeded placeholder.
-- [ ] `pnpm api:compare` delta is non-negative.
-- [ ] `pnpm api:extra --package date` run and its output triaged: every extra
+- [ ] `pnpm parity:api` delta is non-negative.
+- [ ] `pnpm parity:api:extra --package date` run and its output triaged: every extra
       either traced to a Ruby method, folded in, or tagged `@noRailsEquivalent`
       with a reason. **Do not widen an allowlist to absorb the moved code** —
       baselines are only-shrink by construction.

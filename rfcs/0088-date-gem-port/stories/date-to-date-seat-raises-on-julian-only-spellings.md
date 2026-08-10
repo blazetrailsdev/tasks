@@ -69,4 +69,4 @@ at `plainDateFromJd` and on `Date#toDate` but the mapping table still says
       documented behaviour, cited against `date_core.c:8977-8981`.
 - [ ] RFC 0088's mapping table says what a pre-reform `::Date` answers.
 - [ ] `date.trails.test.ts` covers the statics, not only `Date#toDate`.
-- [ ] `pnpm api:extra --package date` clean; no new baseline rows.
+- [ ] `pnpm parity:api:extra --package date` clean; no new baseline rows.

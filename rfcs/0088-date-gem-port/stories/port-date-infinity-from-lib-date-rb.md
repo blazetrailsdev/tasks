@@ -36,7 +36,7 @@ It is load-bearing for the test gate: `test_date.rb:9` (`test_range_infinite_flo
 and `:166` (`test_infinity_comparison`) both need it, and they cannot be ported
 without it.
 
-It is also the one piece of `date` that `api:compare` could ever credit. The
+It is also the one piece of `date` that `parity:api` could ever credit. The
 package is enrolled with `compareApi: false` (`vendor/sources.ts:208`) on the
 spike's finding that 12 methods are not worth a package-sized extra-surface
 report — **this story does not change that flag**; it ports the class because the

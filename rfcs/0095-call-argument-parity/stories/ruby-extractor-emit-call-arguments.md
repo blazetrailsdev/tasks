@@ -63,5 +63,5 @@ _comparator_, not here), and local aliasing is invisible.
    extractor self-invalidates and a stale cache cannot serve argument-less
    records. Registering `callArgs` belongs in the TS story; do not duplicate it
    here.
-5. `pnpm api:compare` output and the existing `calls` / `weakCalls` streams are
+5. `pnpm parity:api` output and the existing `calls` / `weakCalls` streams are
    byte-identical to before (additive change only).

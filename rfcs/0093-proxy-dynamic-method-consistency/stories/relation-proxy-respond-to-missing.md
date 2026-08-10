@@ -47,4 +47,4 @@ value-undefined dispatch, mirroring `command-recorder.ts:25`'s
 - Tests: `in`-operator probes for a named scope, a class method, and a
   delegated array method on both a Relation and a CollectionProxy; regression
   test for the own-undefined-field case.
-- `pnpm api:calls` / `api:compare` deltas non-negative.
+- `pnpm parity:api:calls` / `parity:api` deltas non-negative.

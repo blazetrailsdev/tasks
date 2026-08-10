@@ -28,11 +28,11 @@ It did NOT wire up the eviction half. `pruneSharedCache` runs only in
 never calls it. Both tools share one directory
 (`<repo>/.git/api-compare-cache/v<N>/`), so the `rails-tests` entries a
 test-compare run writes are pruned only as a side effect of somebody running
-`pnpm api:compare` in some worktree.
+`pnpm parity:api` in some worktree.
 
 Content keys are append-only by construction — every `vendor/sources.lock.json`
 bump mints a new key and orphans the old entry forever — so in a checkout that
-runs `test:compare` but not `api:compare`, `rails-tests` entries accumulate
+runs `parity:test` but not `parity:api`, `rails-tests` entries accumulate
 without bound. Each is a multi-MB manifest.
 
 ## Converged shape
@@ -49,7 +49,7 @@ invalidation, so it is only worth doing if it rides along with one.
 
 ## Acceptance criteria
 
-- [ ] A `test:compare` run prunes stale shared-cache entries, api-compare-style.
+- [ ] A `parity:test` run prunes stale shared-cache entries, api-compare-style.
 - [ ] Pruning is best-effort: a failure cannot change the comparison result or
       the exit code.
 - [ ] `TEST_COMPARE_FORCE=1` skips the prune, mirroring `API_COMPARE_FORCE`.

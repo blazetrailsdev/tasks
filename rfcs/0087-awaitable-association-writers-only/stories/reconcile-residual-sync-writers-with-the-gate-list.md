@@ -110,7 +110,7 @@ updated to the four symbols that are genuinely at zero.
       decision, so the RFC and the gate story agree.
 - [ ] If shape 1: `syncWrite`, `syncIdsWrite`, `HasOnePersistedAssignmentError`
       and `CollectionIdsAssignmentError` have zero source hits outside tests,
-      including the through-inverse callers; `pnpm api:extra --package
+      including the through-inverse callers; `pnpm parity:api:extra --package
 activerecord` drops both error classes.
 - [ ] If shape 2: each surviving symbol carries its reason at the call site,
       and `grep-gate-sync-association-writers-to-zero`'s symbol list is

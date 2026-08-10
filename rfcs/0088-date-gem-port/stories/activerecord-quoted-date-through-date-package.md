@@ -52,6 +52,6 @@ formatting lives_. Any SQL change is a bug in the story, not a feature of it.
 - [ ] The `instanceof` rejection guards at `quoting.ts:162,219` are **unchanged** —
       they are the JS-`Date` convention working correctly and are not this
       story's target.
-- [ ] `pnpm api:calls:wide` clean — this touches ported method bodies, so the
+- [ ] `pnpm parity:api:calls` clean — this touches ported method bodies, so the
       call-set ratchet applies. Converge any new mismatch; do not baseline it.
 - [ ] AR suites pass on sqlite3, pg and mysql.

@@ -27,7 +27,7 @@ with `_` (the trails convention). That under-approximates Ruby. A member that is
 — every `private` section in a ported adapter, for instance — is still forwarded
 by `get` and still answered `true` by `has`, where `respond_to?` answers `false`.
 
-The manifest that knows the real answer already exists: `pnpm api:compare` writes
+The manifest that knows the real answer already exists: `pnpm parity:api` writes
 `eslint/rails-private-methods.json` ("604 files (5004 names)"), the Ruby-side
 private set keyed by file. PR #6252 shipped the heuristic rather than wiring the
 manifest, because the manifest is generated for lint and is not currently loaded
@@ -48,5 +48,5 @@ import into activesupport is a new load-order edge).
 - [ ] A delegate member that is `private` in the Rails source but has no `_`
       prefix in the port is neither forwarded by `get` nor answered by `has`.
 - [ ] The underscore rule still covers delegates with no Rails counterpart.
-- [ ] `command-recorder` ported + trails suites stay green; `pnpm api:extra`
+- [ ] `command-recorder` ported + trails suites stay green; `pnpm parity:api:extra`
       shows no new surface.

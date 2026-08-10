@@ -40,4 +40,4 @@ ignore the defaults, and a forwarded method runs with the proxy as `this`.
 - Nested `withOptions` composes (inner defaults win), matching Rails.
 - Ported tests from `activesupport/test/option_merger_test.rb` where the AM
   surface allows; existing `withOptions` tests stay green.
-- `pnpm api:compare` / `api:calls` deltas non-negative.
+- `pnpm parity:api` / `parity:api:calls` deltas non-negative.

@@ -61,4 +61,4 @@ be written up once rather than left as two duplicated JSDoc blocks.
 - [ ] `DateTime.parse` / `DateTime.strptime` still answer
       `Temporal.PlainDateTime`.
 - [ ] `date.trails.test.ts`'s `ymd` helper drops the widened parameter.
-- [ ] `pnpm typecheck` green; `pnpm api:extra --package date` clean.
+- [ ] `pnpm typecheck` green; `pnpm parity:api:extra --package date` clean.

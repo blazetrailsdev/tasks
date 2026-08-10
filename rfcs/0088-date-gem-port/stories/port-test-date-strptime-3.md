@@ -48,9 +48,9 @@ including the `if (y[1] === -1)` yday arm.
 
 - [ ] `test__strptime__3` is ported into
       `packages/date/src/test-date-strptime.test.ts` under its Ruby name
-      (`it(" strptime  3")` — do NOT rename or reword it, `test:compare`
+      (`it(" strptime  3")` — do NOT rename or reword it, `parity:test`
       matches on names).
-- [ ] `pnpm test:compare --package date` credits it; the date test total moves
+- [ ] `pnpm parity:test --package date` credits it; the date test total moves
       up by one and no other package regresses.
 - [ ] Real failures are fixed in `packages/date/src`, not by adjusting the
       test. Assertion-VALUE mismatches are expected and benign per

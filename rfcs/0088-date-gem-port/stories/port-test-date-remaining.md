@@ -53,11 +53,11 @@ story, and would have blown the PR LOC ceiling:
 
 - [ ] The six tests above are ported into
       `packages/date/src/test-date.test.ts` alongside the three already there,
-      under the descriptions `test:compare` matches (Ruby name minus `test_`,
+      under the descriptions `parity:test` matches (Ruby name minus `test_`,
       `_` → space).
 - [ ] The gem surface each needs is implemented in `packages/date/src/date.ts`
       against the cited C, not stubbed or worked around in the test.
-- [ ] `pnpm test:compare --package date` moves `test_date.rb` from 3/9 to 9/9
+- [ ] `pnpm parity:test --package date` moves `test_date.rb` from 3/9 to 9/9
       and no other package regresses.
 - [ ] If the whole set does not fit one PR, ship a coherent subset (e.g. the
       `<=>`/`eql?`/`hash` cluster) and file the rest — do not open sibling PRs.

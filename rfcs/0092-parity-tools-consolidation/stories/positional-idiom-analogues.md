@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-The `api:calls` triage audit of 2026-08-08 rates this the single
+The `parity:api:calls` triage audit of 2026-08-08 rates this the single
 highest-leverage change available to all 1,904 unreviewed rows: 173
 activerecord rows (its largest idiom class) are Enumerable/positional idioms
 whose faithful port is a JS _property or index_, not a call — `xs.any?` →
@@ -85,8 +85,8 @@ story's open question from blocking that convergence.
 - If it cannot: no table change; the story closes with the finding recorded in
   `enumerable-idioms.ts` / `compare.ts` so the next reader does not re-derive
   it, and the affected rows are explicitly handed to the reason-text route.
-- Any baseline shrinkage is committed through `pnpm api:calls:reseed`, never a
-  hand edit of the exclude JSON, and `pnpm api:calls` ends green with zero mark
+- Any baseline shrinkage is committed through `pnpm parity:api:calls:reseed`, never a
+  hand edit of the exclude JSON, and `pnpm parity:api:calls` ends green with zero mark
   slack.
 - No row converges whose TS body dropped a query trigger — spot-check at least
   five converged Relation-receiver candidates by hand and record them.

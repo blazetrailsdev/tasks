@@ -18,7 +18,7 @@ closed-reason: "Duplicate — covered by port-test-date-arith-iteration."
 
 ## Context
 
-`date` is enrolled in `test:compare` (`vendor/sources.ts:183-220`,
+`date` is enrolled in `parity:test` (`vendor/sources.ts:183-220`,
 `compareTests: true`) and stands at **0/138 tests (0%) | 0/10 files** — RFC
 0088's stated burndown baseline, unmoved since enrollment. The two TS test files
 that exist (`packages/date/src/date.trails.test.ts`, 1,772 lines;
@@ -33,7 +33,7 @@ The C read-anchor is `vendor/date/ext/date/date_core.c` and `date_parse.c`.
 Per RFC 0088 the gem's test suite **is** the fidelity measure, and
 assertion-value mismatches against it are **expected and benign**: the port
 answers `Temporal` types where Ruby answers `Date`/`DateTime`/`Time`.
-`test:compare` matches on test _names_, so a test still counts. Do **not**
+`parity:test` matches on test _names_, so a test still counts. Do **not**
 reshape a Temporal return to silence a value mismatch — that reverses the RFC's
 headline decision.
 
@@ -71,6 +71,6 @@ short: `vendor/date/ext/date/date_core.c`'s `d_lite_step` and friends).
 - [ ] The seven tests land under their gem names.
 - [ ] The blockless forms answer an iterable at the gem's names, not a materialised array named something else.
 - [ ] If `step`/`upto`/`downto` are missing from `packages/date/src/date.ts`, they are added here at their gem names; if that pushes the PR over the LOC ceiling, the implementation is filed as its own story and this one blocks on it.
-- [ ] Test names mirror the gem's `def test_*` names exactly (CLAUDE.md: test names are never reworded); `pnpm test:compare` credits them and the `date` package total rises by the count above.
+- [ ] Test names mirror the gem's `def test_*` names exactly (CLAUDE.md: test names are never reworded); `pnpm parity:test` credits them and the `date` package total rises by the count above.
 - [ ] No coverage is deleted from `date.trails.test.ts`; where a ported gem test subsumes a trails-only `it`, the trails-only one is removed in the same PR and the removal is noted in the PR body.
 - [ ] Assertion-value mismatches arising from Temporal returns are left alone, not "fixed".

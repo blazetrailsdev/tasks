@@ -27,16 +27,16 @@ Nothing stops the old spellings coming back, and they demonstrably do. Over the
 three days #6305 was open, sibling PRs merged into `main` added SEVEN fresh
 references that the rebase sweeps had to catch by hand:
 
-- `scripts/api-compare/call-args.ts:1` (`api:compare`, `api:calls`)
-- `scripts/api-compare/report-call-args.ts:78` (`pnpm api:compare --calls`)
-- `scripts/api-compare/compare.ts:847` (`api:calls`)
-- `packages/date/src/test-switch-hitter.test.ts:5,6` (`api:compare`,
-  `test:compare`)
+- `scripts/api-compare/call-args.ts:1` (the compare entry point, the call gate)
+- `scripts/api-compare/report-call-args.ts:78` (the compare entry point)
+- `scripts/api-compare/compare.ts:847` (the call gate)
+- `packages/date/src/test-switch-hitter.test.ts:5,6` (the api- and test-compare
+  entry points)
 - `packages/date/src/test-date-attr.test.ts:5,7` (same pair)
 - `packages/activerecord/src/connection-adapters/sqlite3-adapter.ts:2585`
-  (`api:calls`)
+  (the call gate)
 - `packages/activerecord/src/connection-adapters/postgresql-adapter.ts:1605`
-  (`api:compare`)
+  (the compare entry point)
 
 Each was invisible until the next `git rebase origin/main` + manual grep. Once
 `delete-legacy-compare-script-aliases` lands, a reintroduced spelling stops being
@@ -54,13 +54,13 @@ a stale doc and becomes a broken command in a comment someone will copy-paste.
   which is what the #6305 review caught.
 - Allowlist exactly the three intentional mentions and nothing more: the
   deprecation notes in `CLAUDE.md` and `scripts/parity/README.md:5`, and the
-  historical `api:calls:wide` mentions in
+  historical wide-call-gate mentions in
   `docs/infrastructure/prism-codegen-spike.md` (a script RFC 0084 deleted, with
   no `parity:*` counterpart).
-- Tokens covered: `api:compare`, `api:drift`, `api:extra`, `api:build`,
-  `api:reasons`, `api:detached`, `api:calls*`, `api:arity`, `api:inheritance`,
-  `api:pins*`, `api:moves`, `api:conventions`, `lint:deps`, `test:compare`,
-  `test:assertions:ratchet*`, `test:stubs`, `fixtures:compare`,
-  `schema:compare*`. Must not match the `parity:`-prefixed forms, the
+- Tokens covered: every legacy `api:*`, `lint:*`, `test:*`, `fixtures:*` and
+  `schema:*` compare spelling, listed once as `LEGACY_SCRIPT_NAMES` in
+  `scripts/parity/legacy-script-names.ts` (which assembles each token from its
+  halves so the file is not itself a match). Must not match the
+  `parity:`-prefixed forms, the
   `scripts/api-compare/` / `scripts/test-compare/` directory names, or the alias
   keys in the root `package.json` while the shim still exists.

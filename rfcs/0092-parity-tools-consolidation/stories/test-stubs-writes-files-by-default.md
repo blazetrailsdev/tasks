@@ -1,5 +1,5 @@
 ---
-title: "pnpm test:stubs generates 200 files by default; --dry-run should be the default"
+title: "pnpm parity:test:stubs generates 200 files by default; --dry-run should be the default"
 status: claimed
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm test:stubs` (`parity:test:stubs` →
+`pnpm parity:test:stubs` (`parity:test:stubs` →
 `scripts/test-compare/generate-stubs.ts`) **writes files by default**, and its
 `--dry-run` flag is the opt-in. Every other gate in the `parity:*` namespace is
 read-only unless explicitly asked to write (`--write` on the ratchets,
@@ -56,20 +56,20 @@ authored.
 
 Invert the default so the tool matches the rest of the namespace:
 
-- `pnpm test:stubs` reports what it _would_ generate (the current `--dry-run`
+- `pnpm parity:test:stubs` reports what it _would_ generate (the current `--dry-run`
   output) and writes nothing.
 - Writing moves behind an explicit flag (`--write`, matching the ratchets'
   spelling rather than adding a third convention).
 - The summary line states the file count plainly on both paths, so a write run
   is legible in scrollback.
 
-Check whether any CI job or script invokes `test:stubs` expecting the write
-behavior before flipping; `grep -rn "test:stubs\|parity:test:stubs" .github/
+Check whether any CI job or script invokes `parity:test:stubs` expecting the write
+behavior before flipping; `grep -rn "parity:test:stubs\|parity:test:stubs" .github/
 scripts/ package.json`.
 
 ## Acceptance criteria
 
-- [ ] `pnpm test:stubs` with no flags creates no files and exits 0.
+- [ ] `pnpm parity:test:stubs` with no flags creates no files and exits 0.
 - [ ] Generation happens only under an explicit write flag.
 - [ ] Any in-repo caller relying on the old default is updated in the same
       change.

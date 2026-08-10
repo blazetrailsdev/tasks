@@ -131,8 +131,8 @@ sites twice.
 - `configure_connection` runs `check_version` before the pragmas on every driver
   path, and a too-old SQLite surfaces as a thrown error, not an unhandled
   rejection.
-- `pnpm api:extra --package activerecord` shows no SQLite construction-path extra
-  surface; `pnpm api:calls` green.
+- `pnpm parity:api:extra --package activerecord` shows no SQLite construction-path extra
+  surface; `pnpm parity:api:calls` green.
 - Green on all three lanes (the sqlite3 lane is where this is observable; pg and
   mysql2 must be unaffected).
 

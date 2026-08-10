@@ -82,4 +82,4 @@ adds the visibility and NoMethodError halves.
 - [ ] All three adopters keep their current behavior for public members;
       `normalized-value.ts` keeps binding delegated methods to the underlying
       type (its un-normalized `cast` dispatch).
-- [ ] `pnpm api:extra` shows no new surface; `pnpm api:calls` non-negative.
+- [ ] `pnpm parity:api:extra` shows no new surface; `pnpm parity:api:calls` non-negative.

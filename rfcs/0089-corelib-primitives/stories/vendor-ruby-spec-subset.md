@@ -38,7 +38,7 @@ _behavior_ `ruby/spec` covers precisely:
 
 **This is a different anchoring contract from the `date` gem's** and the RFC is
 explicit that the two must not be conflated: this source enrolls in
-`test:compare` **only**, never `api:compare`.
+`parity:test` **only**, never `parity:api`.
 
 ## Acceptance criteria
 

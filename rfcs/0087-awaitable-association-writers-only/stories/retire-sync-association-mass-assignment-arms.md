@@ -42,4 +42,4 @@ split to remove, because the owner cannot be persisted.
 - [ ] `update` / `create` await the association write inline.
 - [ ] The constructor arm still assigns associations in memory, synchronously,
       and a test pins that `new Foo({ account: x })` issues no query.
-- [ ] `pnpm test:compare` delta non-negative.
+- [ ] `pnpm parity:test` delta non-negative.

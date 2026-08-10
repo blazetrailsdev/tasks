@@ -47,7 +47,7 @@ Sites judged correct and out of scope: `stripThenable`, `thenableHash`,
 (Ruby `hash.default` doesn't make `key?` true), and `_getAdapterProxy` (a
 ledgered consequence of the pool/adapter async split, tracked elsewhere).
 
-api:compare exposure was checked and is a negative result: no compared surface
+parity:api exposure was checked and is a negative result: no compared surface
 is trap-fabricated today.
 
 ## Scope

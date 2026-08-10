@@ -54,5 +54,5 @@ siblings under the _current_ parent, so a rename leaves the entire
       invalidation.
 - [ ] The superseded `api-compare-cache` tree is removed on first run rather
       than orphaned.
-- [ ] `pnpm api:compare` and `pnpm test:compare` both still hit the cache
+- [ ] `pnpm parity:api` and `pnpm parity:test` both still hit the cache
       cross-worktree after the move.

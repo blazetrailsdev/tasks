@@ -52,5 +52,5 @@ than falls through) — covered by the separate OptionMerger story.
   existing normalization tests prove it).
 - Every adopter has a `has` trap (`respond_to_missing?`);
   `normalized-value.ts` gains one it lacks today.
-- `pnpm api:extra` for both packages: only the tagged helper appears;
-  `pnpm api:calls` non-negative.
+- `pnpm parity:api:extra` for both packages: only the tagged helper appears;
+  `pnpm parity:api:calls` non-negative.

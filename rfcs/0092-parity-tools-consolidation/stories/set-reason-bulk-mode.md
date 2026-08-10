@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-The `api:calls` triage audit of 2026-08-08 names this the one piece of tooling
+The `parity:api:calls` triage audit of 2026-08-08 names this the one piece of tooling
 that would pay for itself. Its bulk-clearance plan applies a small number of
 cluster-vetted reason texts to large row sets — 32 mutex/monitor rows, 16 Ruby
 core-constructor rows, 20 reflection rows, 34 Hash-idiom rows, 15
@@ -55,7 +55,7 @@ Build a `--set-reason <category>` mode on
 - **Reseed, mandatorily.** The unreviewed marks are flush with zero slack
   (1,904 = 1,904). Every reason set lowers a shard's unreviewed count, which
   `unreviewed-ratchet.ts:slackByPath` gates as a STALE high-water mark. The
-  gate already exists and already tells the user to run `pnpm api:calls:reseed`
+  gate already exists and already tells the user to run `pnpm parity:api:calls:reseed`
   — so no new guard is needed, but `--set-reason` must reseed the marks itself
   (or refuse to exit 0 without it), because a mode that leaves the gate red by
   construction is not usable.
@@ -65,7 +65,7 @@ Build a `--set-reason <category>` mode on
 
 Scope note: this story builds the _mechanism_ only. Applying the audit's
 bulk reason texts to the activerecord backlog is triage labour and belongs to
-the RFC that owns the `api:calls` burndown, not here.
+the RFC that owns the `parity:api:calls` burndown, not here.
 
 ## Acceptance criteria
 
@@ -79,7 +79,7 @@ the RFC that owns the `api:calls` burndown, not here.
 - `--dry-run` reports matched rows per shard and writes nothing.
 - Rows carrying a non-default reason are skipped unless `--force`; the run
   reports how many it skipped.
-- The mode reseeds the sharded marks, and `pnpm api:calls` is green with zero
+- The mode reseeds the sharded marks, and `pnpm parity:api:calls` is green with zero
   slack immediately after a `--set-reason` run — verified, not assumed.
 - Unit tests cover predicate matching, the non-default-reason guard, and the
   serialization round-trip (including an em-dash in a reason text).

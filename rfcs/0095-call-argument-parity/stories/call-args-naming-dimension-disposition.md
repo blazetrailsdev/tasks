@@ -49,7 +49,7 @@ burndown campaign of its own, and does it eventually gate?
 
 ## Acceptance criteria
 
-1. Run `pnpm api:calls:args --report` (once `call-args-artifact-and-report`
+1. Run `pnpm parity:api:calls:args --report` (once `call-args-artifact-and-report`
    lands) over every compared package and record the true `naming` row count —
    the ~500 figure is extrapolated from arel's full population plus a 32-row
    activerecord sample, not measured at scale.

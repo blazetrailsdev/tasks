@@ -30,16 +30,16 @@ bespoke.
 story is RFC 0023's `unify-three-range-value-shapes`, not this package's
 scaffold.
 
-**`corelib` never enrolls in `api:compare`.** There is no vendorable source for
+**`corelib` never enrolls in `parity:api`.** There is no vendorable source for
 `range.c`/`string.c`/`eval.c`. Its only anchor is `ruby/spec` behavior, via
-`test:compare`. Do not add it to any `api:compare` population.
+`parity:test`. Do not add it to any `parity:api` population.
 
 ## Acceptance criteria
 
 - [ ] `packages/corelib/` with `package.json` (`@blazetrails/corelib`),
       `tsconfig.json`, `src/index.ts`, matching `packages/did-you-mean`'s shape.
 - [ ] **No `@js-temporal/polyfill` dependency.**
-- [ ] `corelib` **not** added to `api:compare`'s `PACKAGES`; a comment at the
+- [ ] `corelib` **not** added to `parity:api`'s `PACKAGES`; a comment at the
       registration site records that this is permanent, not pending.
 - [ ] **Registration checklist — a partial job reds a CI lane `pnpm typecheck`
       cannot see.** A new cross-package subpath needs the vitest alias **and

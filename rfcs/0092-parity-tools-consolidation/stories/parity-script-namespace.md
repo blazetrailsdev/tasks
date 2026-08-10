@@ -19,24 +19,23 @@ closed-reason: null
 ## Context
 
 The root `package.json` mixes namespaces: `test:*` covers both vitest runners
-(`test:watch`, `test:db`, `test:types`) and compare tooling (`test:compare`,
-`test:assertions:ratchet`, `test:stubs`); api-compare has its own `api:*`
+(`test:watch`, `test:db`, `test:types`) and the compare tooling under the same
+prefix; api-compare has its own `api:*`
 namespace; fixtures-compare and schema-compare have no scripts at all (CI
 invokes `scripts/fixtures-compare/compare.ts` and
 `scripts/schema-compare/compare.ts` by path).
 
 Introduce a `parity:*` namespace for the compare tools (consistent with
-`@blazetrails/parity` being the tooling core): `parity:api` =
-`api:compare`, `parity:test` = `test:compare`, new `parity:fixtures` /
+`@blazetrails/parity` being the tooling core): `parity:api` and `parity:test`
+replacing the two legacy compare entry points, new `parity:fixtures` /
 `parity:schema` wrapping the path-invoked entry points; sub-commands keep
 shape (`parity:api:calls`, `parity:test:assertions`, ...). `parity:schema`
 is _repurposed_: the pipeline-relocation story already moved the old meaning
 to `parity:pipeline:schema` — this story depends on that landing first.
 
-Keep every existing `api:*` / `test:compare` / `test:assertions:*` name as a
-delegating alias — CLAUDE.md, CONTRIBUTING, docs, btwhooks task prompts, and
-agent memory all reference `pnpm api:compare`, `pnpm api:calls`,
-`pnpm api:extra`, `pnpm test:compare`. Alias removal plus the reference sweep
+Keep every existing legacy name as a delegating alias — CLAUDE.md,
+CONTRIBUTING, docs, btwhooks task prompts, and agent memory all reference the
+old spellings. Alias removal plus the reference sweep
 is a separate follow-up story once nothing depends on the old names.
 
 ## Acceptance criteria

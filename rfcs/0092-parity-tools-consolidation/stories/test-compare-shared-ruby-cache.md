@@ -26,7 +26,7 @@ so a sibling worktree that already extracted the same vendored Rails serves
 
 `scripts/test-compare/orchestrate.ts` (added by #6266) has no equivalent: it
 always spawns `ruby extract-ruby-tests.rb`, which is the dominant cost of a
-full `pnpm test:compare` (~25s of the measured 30.8s warm run). With many
+full `pnpm parity:test` (~25s of the measured 30.8s warm run). With many
 agents each holding a worktree, every one of them re-pays it.
 
 ## Acceptance criteria

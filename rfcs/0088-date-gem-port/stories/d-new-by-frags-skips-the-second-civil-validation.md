@@ -59,9 +59,9 @@ no counterpart for. That is a reason it was deferred, **not** a ratification.
 - [ ] Whatever seam carries the unvalidated write is the smallest one that
       works and is justified at the call site as a TypeScript language
       shortcoming, or — better — is avoided entirely.
-- [ ] No new public surface: `pnpm api:extra --package date` unchanged.
+- [ ] No new public surface: `pnpm parity:api:extra --package date` unchanged.
 - [ ] `packages/date/src/date.trails.test.ts` still green, including the
       `Date::Error` arms — an invalid frag set must still raise `"invalid
 date"` from `dNewByFrags`, not slip through the removed validation.
-- [ ] `pnpm api:calls` clean; `pnpm api:compare` / `pnpm test:compare` deltas
+- [ ] `pnpm parity:api:calls` clean; `pnpm parity:api` / `pnpm parity:test` deltas
       non-negative.

@@ -42,8 +42,8 @@ The compare scripts grew in four directions with no shared home:
    schema-compare but `test-compare.ts` in test-compare; lint entry points are
    `lint-*` in api-compare but split `lint-*` / `*-ratchet` in test-compare.
 4. **package.json namespace.** The `test:*` prefix mixes vitest runners
-   (`test:watch`, `test:db`) with compare tooling (`test:compare`,
-   `test:assertions:ratchet`), while api-compare has its own `api:*`
+   (`test:watch`, `test:db`) with compare tooling (`parity:test`,
+   `parity:test:assertions`), while api-compare has its own `api:*`
    namespace and fixtures-/schema-compare have no scripts at all (CI invokes
    them by file path). Meanwhile `parity:*` (`parity:schema`, `parity:query`,
    `parity:validate`) is currently taken by the SQL pipeline runner.
@@ -75,7 +75,7 @@ compare core as its heart. Five stories, each a standalone PR from `main`:
    do not move.
 5. **`parity:*` script namespace for the compare tools** — `parity:api` /
    `parity:test` / `parity:fixtures` / `parity:schema` (+ sub-commands
-   `parity:api:calls` etc.), with the existing `api:*` / `test:compare` names
+   `parity:api:calls` etc.), with the existing `api:*` / `parity:test` names
    kept as delegating aliases; alias removal and doc sweep is follow-up work
    once nothing references the old names. Note `parity:schema` is
    _repurposed_ — story 1 moved the pipeline's meaning to
@@ -95,7 +95,7 @@ is settled.
 - **Moving baseline/exclude files:** referenced by path from CI and lint
   tooling; churn there risks the serializeBaseline and sharded-mark traps for
   no organizational gain.
-- **Deleting the old `api:*` / `test:compare` script names:** CLAUDE.md,
+- **Deleting the old `api:*` / `parity:test` script names:** CLAUDE.md,
   CONTRIBUTING, docs, hooks, and agent prompts reference them; removal is a
   follow-up story after a reference sweep.
 
@@ -115,6 +115,6 @@ is settled.
 
 Stories 1 → 2 are ordered (2 restructures the package 1 clears out); 3–5
 follow 2 and are otherwise independent, each rebased on merged `main` — no
-stacked branches. Verification per PR: `pnpm api:compare` /
-`pnpm test:compare` deltas exactly zero, `pnpm api:calls` / `pnpm api:extra`
+stacked branches. Verification per PR: `pnpm parity:api` /
+`pnpm parity:test` deltas exactly zero, `pnpm parity:api:calls` / `pnpm parity:api:extra`
 green, pipeline CI jobs (schema/query parity) green after the path moves.

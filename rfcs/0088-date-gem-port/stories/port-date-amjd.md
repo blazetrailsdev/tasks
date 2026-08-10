@@ -55,4 +55,4 @@ demonstrates the one-method-two-arms shape.
       (the C's own doc example, `date_core.c:5224-5228`).
 - [ ] Covered in `packages/date/src/date.trails.test.ts` until
       `test_switch_hitter.rb` / `test_date.rb` claim it.
-- [ ] `pnpm test:compare --package date` does not regress.
+- [ ] `pnpm parity:test --package date` does not regress.

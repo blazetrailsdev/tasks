@@ -38,10 +38,10 @@ same 3-line delegate api-compare's is.
 
 ## Acceptance criteria
 
-- `pnpm test:compare` runs the full pipeline in a single tsx process; output
+- `pnpm parity:test` runs the full pipeline in a single tsx process; output
   deltas exactly zero vs before.
 - `--cached` / `TEST_COMPARE_FORCE` semantics: cached run skips extraction
   when both manifests exist, falls back to full run otherwise.
-- `pnpm test:stubs` (which chains `test:compare -- --missing --json`) still
+- `pnpm parity:test:stubs` (which chains `parity:test -- --missing --json`) still
   works.
 - Wall-clock improvement measured and noted in the PR body.

@@ -24,7 +24,7 @@ closed-reason: null
 - `scripts/api-compare/conventions-doc.ts` imports nothing from api-compare
   any more — its single import is `explainConventions` from
   `@blazetrails/parity/conventions`.
-- `package.json:49` (`api:conventions`) and the CI check step
+- `package.json:49` (`parity:api:conventions`) and the CI check step
   (`.github/workflows/ci.yml:1448`,
   `pnpm exec tsx scripts/api-compare/conventions-doc.ts --check`) both name the
   api-compare path.
@@ -42,9 +42,9 @@ Not a Rails deviation — infra-only, no Ruby counterpart.
 
 - `git mv scripts/api-compare/conventions-doc.ts scripts/parity/`; import
   becomes a sibling-relative `./conventions.js`.
-- `package.json` `api:conventions` and the ci.yml `--check` step point at the
+- `package.json` `parity:api:conventions` and the ci.yml `--check` step point at the
   new path.
-- `pnpm api:conventions` regenerates `docs/ruby-ts-conventions.md` with the
+- `pnpm parity:api:conventions` regenerates `docs/ruby-ts-conventions.md` with the
   updated header, and `--check` is clean.
 - Grep the repo for `scripts/api-compare/conventions-doc.ts` and repoint any
   prose references (CONTRIBUTING.md:246 at time of writing).

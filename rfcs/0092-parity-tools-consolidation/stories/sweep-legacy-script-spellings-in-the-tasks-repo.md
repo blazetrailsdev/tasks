@@ -28,8 +28,8 @@ worktree — so `tasks` is in `SKIPPED_DIRS`
 That exclusion is right for the gate (another repo's history is not a reference
 trails can fix) but it leaves the harm the gate exists to prevent. Story bodies
 are read by agents and copy-pasted verbatim: once
-`delete-legacy-compare-script-aliases` lands, every `pnpm api:compare` /
-`pnpm test:compare` in a story body becomes a broken command an agent will run,
+`delete-legacy-compare-script-aliases` lands, every legacy compare-script
+spelling in a story body becomes a broken command an agent will run,
 and the failure will look like a broken environment rather than stale prose.
 
 Concentrations seen in the CI output: `tasks/index.md` (7 references),

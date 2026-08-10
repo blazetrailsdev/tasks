@@ -25,8 +25,8 @@ a ported call site passes an argument whose local/parameter identifier was
 renamed away from Rails'. List them with
 
 ```bash
-API_COMPARE_FORCE=1 pnpm api:compare --calls
-pnpm api:calls:args:report
+API_COMPARE_FORCE=1 pnpm parity:api --calls
+pnpm parity:api:calls:args:report
 ```
 
 and filter the artifact to `class === "naming"` for this story's files.
@@ -37,8 +37,8 @@ and filter the artifact to `class === "naming"` for this story's files.
    the Rails identifier, camelCased per `docs/ruby-ts-conventions.md`. Rename to
    the RAILS name, not to a better one — if Rails calls it `o`, it is `o`.
 2. No public surface changes and no behavior changes: these are body-local
-   identifiers. `pnpm api:extra` and `pnpm api:compare` are unchanged.
-3. The package's `naming` row count in `pnpm api:calls:args:report` drops by the
+   identifiers. `pnpm parity:api:extra` and `pnpm parity:api` are unchanged.
+3. The package's `naming` row count in `pnpm parity:api:calls:args:report` drops by the
    rows converged; report before/after in the PR body.
 4. A row that turns out to be an argument-ORDER defect or an invented
    helper/conversion at the call site is NOT renamed away — file it against the

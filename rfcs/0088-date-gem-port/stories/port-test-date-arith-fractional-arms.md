@@ -48,7 +48,7 @@ Adjacent and cheap while in the file: `cmp_gen`'s `rb_num_coerce_cmp` tail
 ## Acceptance criteria
 
 - [ ] `test_new_offset` is ported into `packages/date/src/test-date-arith.test.ts`
-      under its Ruby name, and `pnpm test:compare --package date` credits it.
+      under its Ruby name, and `pnpm parity:test --package date` credits it.
 - [ ] `Date#plus` accepts a `Float`-shaped `number`; the `RangeError` for it is
       deleted.
 - [ ] `Date#dComplexNewInternal` answers a value instead of raising, or the

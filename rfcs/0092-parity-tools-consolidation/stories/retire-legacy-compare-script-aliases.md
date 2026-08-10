@@ -20,18 +20,18 @@ closed-reason: null
 
 PR for `parity-script-namespace` introduced the `parity:*` script namespace in
 the root `package.json` (`parity:api`, `parity:test`, `parity:fixtures`,
-`parity:schema` + sub-commands) and left every old name — `api:compare`,
-`api:drift`, `api:extra`, `api:build`, `api:reasons`, `api:detached`,
-`api:calls*`, `api:arity`, `api:inheritance`, `api:pins*`, `api:moves`,
-`api:conventions`, `lint:deps`, `test:compare`, `test:assertions:ratchet*`,
-`test:stubs`, `fixtures:compare`, `schema:compare*` — as a one-line delegating
-alias (`"api:compare": "pnpm parity:api"`).
+`parity:schema` + sub-commands) and left every old name — the legacy `api:*`,
+`lint:*`, `test:*`, `fixtures:*` and `schema:*` compare spellings, enumerated
+as `LEGACY_SCRIPT_NAMES` in `scripts/parity/legacy-script-names.ts` — as a
+one-line delegating alias onto its `parity:*` counterpart. (The spellings are
+not written out here: this repo's bodies were swept free of them by
+`sweep-legacy-script-spellings-in-the-tasks-repo`.)
 
 The aliases exist because `CLAUDE.md`, `CONTRIBUTING.md`, `docs/**`,
 `.github/copilot-instructions.md`, dozens of JSDoc/comment strings under
 `scripts/api-compare/**` and `scripts/test-compare/**`, btwhooks task prompts,
 and agent memory all name the old scripts. `scripts/api-compare/gate-regen.ts`
-spawns `pnpm api:compare` at runtime (`gate-regen.ts:49`), and
+spawns the compare entry point at runtime (`gate-regen.ts:49`), and
 `gate-regen.test.ts:39,44` assert on that string.
 
 ## Acceptance criteria

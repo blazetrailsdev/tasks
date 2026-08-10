@@ -25,7 +25,7 @@ related-rfcs:
 Burn down the `naming` class of the RFC 0095 call-argument dimension: **883
 call sites where a ported body passes an argument whose local/parameter
 identifier was renamed away from Rails'**. Nothing else in the repo measures
-this — `api:compare` matches method names, `api:calls` matches call names, and
+this — `parity:api` matches method names, `parity:api:calls` matches call names, and
 `arity.ts` counts declaration-site parameters.
 
 Every row is the same CLAUDE.md violation:
@@ -36,7 +36,7 @@ Every row is the same CLAUDE.md violation:
 
 ## Motivation
 
-Measured on a full 15-package `API_COMPARE_FORCE=1 pnpm api:compare --calls`
+Measured on a full 15-package `API_COMPARE_FORCE=1 pnpm parity:api --calls`
 (2026-08-10): 883 `naming` rows, 55% of the 1,619-row call-argument population,
 over 5,618 compared call sites. The (a)-genuine rate is **94%** (n=32 seeded
 random sample, each pair read against its vendored Ruby); the residue is two
@@ -69,7 +69,7 @@ does not have (`schema_dumper.rb:371`).
 
 Each story renames locals and parameters in **one package's files** to the Rails
 identifiers, camelCased per `docs/ruby-ts-conventions.md`, and verifies with
-`pnpm api:calls:args:report` that its package's `naming` count drops by the
+`pnpm parity:api:calls:args:report` that its package's `naming` count drops by the
 rows it converged. No behavior changes and no public surface changes: these are
 body-local identifiers.
 
@@ -114,7 +114,7 @@ Per-package stories, largest first, each independently claimable:
 ## Non-goals
 
 - **Not the `shape` class.** That is gated already (RFC 0095).
-- **Not a rename of methods, classes or fields.** `api:compare` owns those.
+- **Not a rename of methods, classes or fields.** `parity:api` owns those.
 - **Not a normalization rule for the ~6% tooling residue.** Those rows carry a
   baseline reason at the gate flip.
 

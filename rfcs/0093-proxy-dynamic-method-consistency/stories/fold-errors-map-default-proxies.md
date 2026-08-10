@@ -31,5 +31,5 @@ real receiver). The two traps are duplicates that can only drift apart.
   used by both getters; no behavior change. The helper carries
   `@noRailsEquivalent` (it is the JS spelling of `hash.default`).
 - Correctly no `has` trap: Ruby `hash.default` does not make `key?` true.
-- Existing errors tests stay green; `pnpm api:extra --package activemodel`
+- Existing errors tests stay green; `pnpm parity:api:extra --package activemodel`
   clean.

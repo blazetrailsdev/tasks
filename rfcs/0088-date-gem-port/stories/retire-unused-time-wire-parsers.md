@@ -54,4 +54,4 @@ rather than deleting it along with `parsePostgresTime`.
       `mysql/temporal-type-cast.test.ts` go with them — the behaviour they
       covered is now `Type::Time#cast_value`'s, already tested there.
 - [ ] `normalizeTime24` kept or removed according to its remaining callers.
-- [ ] `pnpm api:extra --package activerecord` clean; PG and MySQL lanes green.
+- [ ] `pnpm parity:api:extra --package activerecord` clean; PG and MySQL lanes green.

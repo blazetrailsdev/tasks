@@ -69,9 +69,9 @@ Consumers that hold the Ruby-shaped object today and would move to the opt-in:
       is unchanged.
 - [ ] Sub-minute offset handling in `packages/date/src/time.ts:26-28` unchanged
       and still tested.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative;
-      `pnpm api:calls` clean; any new mismatch converged, not baselined.
-- [ ] `pnpm api:extra --package date` — no new untagged extra surface.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative;
+      `pnpm parity:api:calls` clean; any new mismatch converged, not baselined.
+- [ ] `pnpm parity:api:extra --package date` — no new untagged extra surface.
 
 ## Findings, 2026-08-08 (from the `date-temporal-default-return-and-ruby-opt-in` bundle)
 

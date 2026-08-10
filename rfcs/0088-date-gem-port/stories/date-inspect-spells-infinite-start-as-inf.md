@@ -61,5 +61,5 @@ import path). A brand or an explicit per-class literal would be sturdier.
       `#<Date: 2001-02-03 ((2451944j,0s,0n),+0s,2299161j)>`.
 - [ ] A cover in `packages/date/src/date.trails.test.ts` pins both non-finite
       spellings.
-- [ ] `pnpm vitest run packages/date/src` green; `pnpm test:compare --package
+- [ ] `pnpm vitest run packages/date/src` green; `pnpm parity:test --package
 date` does not regress.

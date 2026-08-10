@@ -63,7 +63,7 @@ Note `test_to_time__from_datetime`'s last two blocks are guarded on
 - [ ] `Date#dayFraction` ported against `d_lite_day_fraction` over `m_df`.
 - [ ] The 5 tests above land in `packages/date/src/test-date-conv.test.ts`
       under their Ruby names (underscores become spaces — that is what
-      `test:compare` matches on, see the 7 already there), taking the file to
+      `parity:test` matches on, see the 7 already there), taking the file to
       12/12 and `2/10` files to `3/10`.
 - [ ] Assertion-_value_ mismatches against these tests are expected and benign
       (`vendor/sources.ts:212-221`): RFC 0088 returns `Temporal` where Ruby

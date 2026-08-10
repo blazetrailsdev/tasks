@@ -1,5 +1,5 @@
 ---
-title: "api:calls:args ratchet over its own only-shrink baseline"
+title: "parity:api:calls:args ratchet over its own only-shrink baseline"
 status: done
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
@@ -49,7 +49,7 @@ Seeding the baseline is a separate `main`-only PR
    `kind: "args"` rows of `call-mismatches-exclude/`, only-shrink, with the
    stale-row arm. The call-set gate filters to `kind` absent/`"calls"` and its
    row count is unchanged — assert the exact pre-change number in a test.
-2. `pnpm api:calls:args` / `parity:api:calls:args` scripts exist and the gate
+2. `pnpm parity:api:calls:args` / `parity:api:calls:args` scripts exist and the gate
    runs in the `Rails API/Test Comparison` CI job.
 3. The gate regenerates the artifact itself before reading it.
 4. A partial-scope artifact (fewer packages than CI) is rejected, matching

@@ -1,6 +1,6 @@
 ---
 rfc: "0095-call-argument-parity"
-title: "Call-argument parity (api:calls:args)"
+title: "Call-argument parity (parity:api:calls:args)"
 status: closed
 created: 2026-08-09
 updated: 2026-08-10
@@ -16,13 +16,13 @@ related-rfcs:
   - "0084"
 ---
 
-# RFC 0095 — Call-argument parity (`api:calls:args`)
+# RFC 0095 — Call-argument parity (`parity:api:calls:args`)
 
 ## Summary
 
-Add a fourth api:compare fidelity dimension: for every name-matched (Ruby, TS)
+Add a fourth parity:api fidelity dimension: for every name-matched (Ruby, TS)
 method pair, compare the **arguments** each body passes to the calls it makes,
-after camelizing identifiers and symbol keys. Today `api:calls` compares the
+after camelizing identifiers and symbol keys. Today `parity:api:calls` compares the
 **set of call names** only — a port can call `where` where Rails calls `where`,
 pass a completely different argument list, and every gate in the repo stays
 green.
@@ -38,12 +38,12 @@ in arel that no existing gate could see.
 RFC 0084's defect-shape table lists what the call-set gate can and cannot
 detect. Three of its "blind" rows are argument-shaped:
 
-| Defect shape                                           | `api:calls` |
-| ------------------------------------------------------ | ----------- |
-| Missing call to a ported method                        | visible     |
-| **Wrong values / literals**                            | **blind**   |
-| **Invented / extra behavior Rails does not have**      | **blind**   |
-| Wrong return value or semantics of a call that IS made | blind       |
+| Defect shape                                           | `parity:api:calls` |
+| ------------------------------------------------------ | ------------------ |
+| Missing call to a ported method                        | visible            |
+| **Wrong values / literals**                            | **blind**          |
+| **Invented / extra behavior Rails does not have**      | **blind**          |
+| Wrong return value or semantics of a call that IS made | blind              |
 
 The concrete proof, and the finding that chartered this RFC: trails moved the
 `collector` parameter to the **last** position across the entire arel visitor-
@@ -56,8 +56,8 @@ population, and a direct CLAUDE.md violation ("Same parameter _order_ and
 defaults").
 
 Nothing caught it. `arity.ts` compares declaration-site parameter **counts**,
-which match exactly. `api:compare` compares **names**, which match.
-`api:calls` compares the **call set**, and every call is made. Only an
+which match exactly. `parity:api` compares **names**, which match.
+`parity:api:calls` compares the **call set**, and every call is made. Only an
 argument-level comparison surfaces it. That convergence is already filed
 (`0084/converge-arel-visitor-helper-collector-parameter-position`) and does not
 wait on this RFC.
@@ -259,7 +259,7 @@ own RFC (0096), staged per package, and the class stays report-only until that
 campaign has drained it.** Gating it now would seed ~880 rows against a 736-row
 `shape` baseline and bury the class carrying the findings nothing else can see.
 
-Measured at scale (full 15-package `API_COMPARE_FORCE=1 pnpm api:compare
+Measured at scale (full 15-package `API_COMPARE_FORCE=1 pnpm parity:api
 --calls`, 2026-08-10; the ~500 figure in the spike was extrapolated from arel
 plus a 32-row activerecord sample):
 
@@ -319,7 +319,7 @@ is genuinely spelling, not order.
 Campaign stories are filed under **RFC 0096**, one per package cluster with
 non-overlapping file sets — a repo-wide identifier rename in a single PR
 conflicts with every sibling agent. `naming` flips to gated only when the
-campaign's last story lands; until then `pnpm api:calls:args:report` is where it
+campaign's last story lands; until then `pnpm parity:api:calls:args:report` is where it
 lives.
 
 ## Non-goals

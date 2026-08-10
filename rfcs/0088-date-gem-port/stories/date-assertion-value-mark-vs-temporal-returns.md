@@ -26,13 +26,13 @@ The problem is structural, not a seeding mistake. RFC 0088's headline decision i
 that trails returns `Temporal` types where Ruby returns `Date`/`DateTime`/`Time`,
 so a faithfully-ported gem test whose Ruby form asserts
 `assert_equal Date.new(2001,2,3), Date.parse("2001-02-03")` produces an
-**assertion-value mismatch by design**. `test:compare` matches on test names so
+**assertion-value mismatch by design**. `parity:test` matches on test names so
 the test still counts, but the value counter goes up.
 
 The ratchet is only-shrink and `nextMark` takes `Math.min` per counter
 (`scripts/test-compare/assertion-ratchet.ts:126`), so `--write` can only lower
 `date.value`, never raise it. The first ported gem test therefore reds
-`pnpm test:assertions:ratchet` (CI's `Rails API/Test Comparison` job) at a mark
+`pnpm parity:test:assertions` (CI's `Rails API/Test Comparison` job) at a mark
 of 0, and there is no sanctioned way to move it.
 
 Per CLAUDE.md the fix is **never** to reshape a Temporal return into a Ruby-shaped
@@ -46,7 +46,7 @@ one to silence the counter — that reverses the RFC's headline decision.
       the intended shape; (b) a scoped, reasoned exclusion in the same shape as
       `UNPORTED_FILES`; (c) an explicit one-time raise of `date.value` with the
       reason recorded — least preferred, since it is a widened baseline.
-- [ ] Whatever lands, `pnpm test:assertions:ratchet` stays a real gate for
+- [ ] Whatever lands, `pnpm parity:test:assertions` stays a real gate for
       `date` on the other two counters (`assertionCount`, `kind`) — those are
       genuine debt and must not be blanket-exempted.
 - [ ] Do not raise any other package's counters.

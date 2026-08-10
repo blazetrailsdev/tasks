@@ -16,7 +16,7 @@ closed-reason: null
 
 ## Context
 
-**Runs last, deliberately** — after `api:compare` and `test:compare` enrollment,
+**Runs last, deliberately** — after `parity:api` and `parity:test` enrollment,
 so the substrate migration is _measured_ rather than taken on faith. This is the
 only story in the RFC that changes behavior.
 
@@ -81,8 +81,8 @@ cannot hold them."_
 - [ ] `rtValidDateFragsP` and `dNewByFrags` re-cut onto `PlainDate` validity.
 - [ ] `date.ts:1-1714` (parse + `strftime`) **unchanged**.
 - [ ] Sub-minute offset handling in `time.ts` unchanged and still tested.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative — this is the
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative — this is the
       first story where those gates actually constrain the work.
-- [ ] `pnpm api:calls:wide` clean; any new mismatch converged, not baselined.
+- [ ] `pnpm parity:api:calls` clean; any new mismatch converged, not baselined.
 - [ ] **Likely exceeds 500 LOC — split at claim time** into (a) calendar-math
       removal and (b) class re-seating. Do not ship one oversized PR.

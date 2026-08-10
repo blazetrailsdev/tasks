@@ -32,7 +32,7 @@ that say so outright.
 
 Enrolling the `ruby/spec` subset gives them a real, shrinking measure.
 
-**`ruby/spec` enrolls in `test:compare` only — never `api:compare`, and that is
+**`ruby/spec` enrolls in `parity:test` only — never `parity:api`, and that is
 permanent.** `Module#include`/`#prepend` live in `eval.c`/`class.c` as
 interpreter internals; `Range#include?` and `String#succ` in `range.c`/`string.c`.
 There is no portable source to mirror method-by-method, only behavior.
@@ -54,7 +54,7 @@ story in a _different_ RFC (`date-test-compare-enrollment`, RFC
 - [ ] **Enrollment is 4 registrations, not 1** — a partial job reds CI with a
       fully green local compare (the assertion-mismatch mark). Enumerate and
       verify each before pushing.
-- [ ] `pnpm test:compare` delta non-negative; the new baseline recorded.
+- [ ] `pnpm parity:test` delta non-negative; the new baseline recorded.
 - [ ] Deferred specs excluded via the documented mechanism with real reasons —
       not by deleting tests.
 - [ ] The `@noRailsEquivalent PERMANENT` tags on `range-ext.ts` and `succ.ts` are

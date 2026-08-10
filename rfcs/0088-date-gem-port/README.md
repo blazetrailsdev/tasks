@@ -46,11 +46,11 @@ JSDoc cites the C source by line throughout (e.g. `date.ts:2213` cites
 
 Consequences, each verified:
 
-- `api:compare` cannot resolve it. `scripts/api-compare/extra-surface.ts:12`
+- `parity:api` cannot resolve it. `scripts/api-compare/extra-surface.ts:12`
   walks _from each Ruby file_ to its expected TS file, so a TS file with no Ruby
   counterpart lands in the `rubyFile === null` slice (`extra-surface.ts:531`) —
   counted as extra surface, never compared method-by-method.
-- `test:compare` cannot match it. Both test files
+- `parity:test` cannot match it. Both test files
   (`date.trails.test.ts` 567 lines, `time.trails.test.ts` 123) use the
   `.trails.test.ts` suffix — TS-only extras, outside the compared population by
   construction.
@@ -86,8 +86,8 @@ a taxonomy quibble — it decides what can be measured and how:
 | Upstream          | `ruby/date` gem — own gemspec, `lib/`, `test/`         | `range.c`, `string.c`, `eval.c` — interpreter internals |
 | Vendorable source | **Yes** — `lib/date.rb`, `ext/date/*.c`                | **No** — not distributable as a portable unit           |
 | Vendorable tests  | **Yes** — `test/date/*.rb`                             | Only `ruby/spec` behavioral specs                       |
-| `api:compare`     | **Yes**                                                | **Never**                                               |
-| `test:compare`    | **Yes**                                                | Yes, against `ruby/spec`                                |
+| `parity:api`      | **Yes**                                                | **Never**                                               |
+| `parity:test`     | **Yes**                                                | Yes, against `ruby/spec`                                |
 | Precedent         | `did-you-mean`, `globalid`, `nokogiri`, `rack`, `i18n` | none — genuinely new                                    |
 
 Two different anchoring contracts. Folding them into one package would have made
@@ -104,7 +104,7 @@ Three parts, and they are separable.
 
 `vendor/date/test/date/*.rb` is the specification. **Fidelity is measured by the
 gem's test suite**, not by mirroring Ruby's internal representation. Test names
-mirror the gem's names exactly — that is the `test:compare` matching key, and per
+mirror the gem's names exactly — that is the `parity:test` matching key, and per
 CLAUDE.md test names are never reworded to fit an implementation.
 
 ### 2. Temporal is the default return type
@@ -172,10 +172,10 @@ the value is observable:
   MRI's sub-minute offsets are representable where a Temporal offset time zone
   (minute-precision) cannot hold them."_
 
-**Expect assertion-value mismatches in `test:compare`, and expect them to be
+**Expect assertion-value mismatches in `parity:test`, and expect them to be
 benign.** A ported test whose Ruby form asserts
 `assert_equal Date.new(2001,2,3), Date.parse("…")` compares a
-`Temporal.PlainDate` on our side. `test:compare` matches on test _names_, so the
+`Temporal.PlainDate` on our side. `parity:test` matches on test _names_, so the
 test still counts; the value-shape difference is the intended design, not drift.
 The enrollment story records this explicitly so a later reader does not "fix" it.
 
@@ -246,7 +246,7 @@ than taken on faith.
 `ext/date/*.c` while `lib/date.rb` is comparatively thin. The stated fallback —
 enroll `lib/date.rb` + `test/date/` normally and treat the C sources as a
 vendored **read-anchor** with `UNPORTED_FILES` `pattern` entries — **still fixes
-the presenting problem**, because `test:compare` over `test/date/` gives the
+the presenting problem**, because `parity:test` over `test/date/` gives the
 cluster a real, shrinking, self-terminating gate. No C-parser project is
 required, and per the contract above the test suite is the fidelity measure
 anyway.
@@ -270,7 +270,7 @@ with `initialize`, `d` (protected), `zero?`, `finite?`, `infinite?`, `nan?`,
 everything `packages/i18n/src/date.ts` (2,805 lines, ~42 public members and 101
 module-local functions) actually ports.
 
-So `api:compare` credits **~0%** of the port. Enrolling the source with
+So `parity:api` credits **~0%** of the port. Enrolling the source with
 `compareApi: true` would compare `date.rb` against whatever TS file the path
 rules point at and report the entire rest of the port as extra surface.
 
@@ -285,7 +285,7 @@ extractor already emitted.
 
 - Keep `compareApi: false` for the `date` source. Flipping it buys 12 methods
   and costs a package-sized extra-surface report.
-- `test:compare` is the gate. `vendor/date/test/date/` is 12 files and
+- `parity:test` is the gate. `vendor/date/test/date/` is 12 files and
   **145 `def test_` methods** — a real, shrinking, self-terminating population,
   which is what the cluster lacks today. Flip `compareTests` in
   `date-test-compare-enrollment`; that story is unblocked by this finding.
@@ -439,7 +439,7 @@ Enrollment is **four** registrations, all landed together: `vendor/sources.ts`
 key-list expectation), `scripts/test-compare/extract-ts-tests.ts`
 (`getPackageTestFiles()`), `scripts/test-compare/test-compare.ts` (`pkgDirs`),
 and `scripts/test-compare/assertion-mismatch-mark.json`. The fourth has no local
-gate that runs by default — `pnpm test:compare` passes without it while CI's
+gate that runs by default — `pnpm parity:test` passes without it while CI's
 `Rails API/Test Comparison` job hard-fails on an unmarked package.
 
 ### Assertion-value mismatches here are expected and benign
@@ -450,7 +450,7 @@ as well as here, because it is reversible-looking and is not a defect:
 RFC 0088 returns `Temporal` types by default where Ruby returns
 `Date`/`DateTime`/`Time`. So a ported test whose Ruby form asserts
 `assert_equal Date.new(2001,2,3), Date.parse("2001-02-03")` compares a
-`Temporal.PlainDate` on our side. **`test:compare` matches on test _names_, so
+`Temporal.PlainDate` on our side. **`parity:test` matches on test _names_, so
 the test still counts**; the value-shape difference is this RFC's headline design
 decision, not drift. **Do not "converge" a Temporal return back to a Ruby-shaped
 one to silence a value mismatch** — that silently reverses the decision.
@@ -497,13 +497,13 @@ faith.**
 ## Constraints
 
 - Each PR under the LOC ceiling; one story per PR; PRs branch from `main`, no stacking.
-- Ported code lives at the path matching the vendored layout so `api:compare`
+- Ported code lives at the path matching the vendored layout so `parity:api`
   resolves it.
-- Test names must match the gem's test names for `test:compare`.
+- Test names must match the gem's test names for `parity:test`.
 
 ## Measuring this RFC (added 2026-08-09)
 
-**The gate is `pnpm test:compare --package date`.** `api:compare` cannot measure
+**The gate is `pnpm parity:test --package date`.** `parity:api` cannot measure
 this package — `vendor/sources.ts:208` sets `compareApi: false` because the gem
 is implemented in C and the Ruby extractor finds only 12 public methods in
 `lib/date.rb` against ~2,800 lines of port. `test/date/` is the only fidelity

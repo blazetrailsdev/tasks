@@ -57,7 +57,7 @@ seam rather than on the assertions themselves:
 - [ ] `test_jd`, `test_ordinal`, `test_commercial`, `test_fractional` and
       `test_strftime` are ported into
       `packages/date/src/test-switch-hitter.test.ts` under their Ruby names,
-      and `pnpm test:compare --package date` credits them.
+      and `pnpm parity:test --package date` credits them.
 - [ ] `test_canon24oc`'s three remaining arms are restored.
 - [ ] No `Temporal` return is converged back to a Ruby-shaped one to silence an
       assertion-value mismatch (`vendor/sources.ts:212-221`) — the gate is how

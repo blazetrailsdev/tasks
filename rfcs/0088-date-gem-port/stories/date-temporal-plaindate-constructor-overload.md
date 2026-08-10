@@ -39,7 +39,7 @@ existing `d_simple_new_internal` seat (`date_core.c:3036-3050`) that
 `dNewByFrags` and `date_s_jd` (`:3377-3387`) both already end at — the seat
 exists, only the entry point is missing. The overload is the documented inverse
 of `to_date` / `to_datetime` (`date_core.c:8992-9027`), so it is not invented
-surface, but confirm against `pnpm api:extra --package date`.
+surface, but confirm against `pnpm parity:api:extra --package date`.
 
 With it landed, `it("civil reform")` in `packages/date/src/test-date-new.test.ts`
 (PR #6315) moves its receiver from `dNewByFrags({ jd: Date.ENGLAND }, ...)` back
@@ -54,5 +54,5 @@ to `Date.jd(...)` fed through the overload, which is Ruby's own call
       paragraph #6323 rewrote to name `dNewByFrags` as the _sole_ seat is
       updated, since it would no longer be true.
 - [ ] `it("civil reform")` uses `Date.jd(...)`; the test name is unchanged.
-- [ ] `pnpm test:compare --package date` still credits `civil reform`; the
+- [ ] `pnpm parity:test --package date` still credits `civil reform`; the
       `test_date_new.rb` row stays at 12 OK / 0 Skip / 0 Desc.

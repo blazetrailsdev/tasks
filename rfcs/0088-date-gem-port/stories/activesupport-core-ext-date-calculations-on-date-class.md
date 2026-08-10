@@ -73,9 +73,9 @@ deleted from `time-ext.json` by hand (the baseline is only-shrink — never
 - `core_ext/date/calculations.rb` methods live on trails' `Date` at the Rails
   names, in a Rails-shaped file, with Rails control flow and decomposition.
 - Both `beginning_of_week` arms (thread-scoped + class default) ported.
-- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm api:compare`
+- `RUBY_FILE_TS_OVERRIDES` entry for this file removed; `pnpm parity:api`
   activesupport ported-method count strictly up.
-- `pnpm api:calls`, `pnpm api:extra` green; no new `@noRailsEquivalent`.
+- `pnpm parity:api:calls`, `pnpm parity:api:extra` green; no new `@noRailsEquivalent`.
 - Rails' own test names, verbatim, from
   `vendor/rails/activesupport/test/core_ext/date_ext_test.rb`.
 
@@ -83,7 +83,7 @@ deleted from `time-ext.json` by hand (the baseline is only-shrink — never
 
 Shipped: the file moved to the Rails path
 `packages/activesupport/src/core-ext/date/calculations.ts` and all 31 methods
-of `core_ext/date/calculations.rb` are ported — `api:compare` for the file went
+of `core_ext/date/calculations.rb` are ported — `parity:api` for the file went
 15/31 → 31/31 and activesupport overall 1055 → 1071.
 
 **Two acceptance criteria above were superseded and are recorded here as not

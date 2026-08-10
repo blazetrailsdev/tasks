@@ -59,8 +59,8 @@ Registration gotchas (each has bitten before):
 
 - test-compare, schema-compare, and rails-find no longer import from
   `../api-compare/`; all shared modules resolve via `@blazetrails/parity`.
-- `pnpm api:compare` and `pnpm test:compare` deltas exactly zero.
-- `pnpm api:calls`, `pnpm api:extra` green with no baseline movement.
+- `pnpm parity:api` and `pnpm parity:test` deltas exactly zero.
+- `pnpm parity:api:calls`, `pnpm parity:api:extra` green with no baseline movement.
 - Moved unit tests run in CI (vitest project + workflow filter + Unit Tests
   regex all verified).
-- `docs/ruby-ts-conventions.md` still regenerates (`pnpm api:conventions`).
+- `docs/ruby-ts-conventions.md` still regenerates (`pnpm parity:api:conventions`).

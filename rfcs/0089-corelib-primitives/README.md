@@ -20,7 +20,7 @@ priority: null
 
 Trails emulates a handful of Ruby **interpreter** primitives — `Range`,
 `String#succ`, `Module#include`/`#extend`/`#prepend` — in files that have no
-Rails counterpart and therefore cannot be measured by `api:compare`. Give them a
+Rails counterpart and therefore cannot be measured by `parity:api`. Give them a
 package and a behavioral anchor.
 
 This is the sibling of RFC `0088-date-gem-port`. **The two are deliberately
@@ -36,7 +36,7 @@ downgraded out of the ready queue by the non-active parent rule
 
 It is **postponed, not withdrawn**, and the distinction matters. The finding
 stands: **565 lines of Ruby interpreter emulation across four files have no
-anchor and cannot be measured by `api:compare`** —
+anchor and cannot be measured by `parity:api`** —
 
 - `activesupport/src/range-ext.ts` (97) — ports `range.c` `range_include_internal`
   / `str_upto_each`, tagged `@noRailsEquivalent PERMANENT` (`range-ext.ts:19-22`)
@@ -98,8 +98,8 @@ decides what can be measured and how:
 | Upstream          | `ruby/date` gem — own gemspec, `lib/`, `test/` | `range.c`, `string.c`, `eval.c`   |
 | Vendorable source | **Yes**                                        | **No** — not a distributable unit |
 | Vendorable tests  | **Yes** — `test/date/*.rb`                     | Only `ruby/spec`                  |
-| `api:compare`     | **Yes**                                        | **Never**                         |
-| `test:compare`    | **Yes**                                        | Yes, against `ruby/spec`          |
+| `parity:api`      | **Yes**                                        | **Never**                         |
+| `parity:test`     | **Yes**                                        | Yes, against `ruby/spec`          |
 | Precedent         | `did-you-mean`, `globalid`, `rack`, `i18n`     | none — genuinely new              |
 
 An earlier draft folded both into one package. Folding them would have made
@@ -107,7 +107,7 @@ An earlier draft folded both into one package. Folding them would have made
 packages make it structural.** It also lets RFC 0088 follow the working
 vendored-gem precedent unchanged instead of inventing a half-anchored hybrid.
 
-**`corelib` never enrolls in `api:compare`.** `Module#include` lives in
+**`corelib` never enrolls in `parity:api`.** `Module#include` lives in
 `eval.c`/`class.c` as an interpreter internal; there is no portable source to
 mirror method-by-method, only behavior. `compareApi: false` here is permanent,
 not a flag a later story flips — and that is the single most important thing to
@@ -124,7 +124,7 @@ The runtime functions and their types move as one unit.
 
 **Out — anything with a `.rb` counterpart stays where it is measurable.** Moving
 it would charge Rails' surface to a non-Rails package and _destroy_ working
-`api:compare` coverage, the exact inverse of the problem being solved. Verified
+`parity:api` coverage, the exact inverse of the problem being solved. Verified
 counterparts exist for: `concern.ts` (`concern.rb`), `delegation.ts`
 (`delegation.rb`), `class-attribute.ts` (`class_attribute.rb`),
 `descendants-tracker.ts` (`descendants_tracker.rb`),
@@ -162,7 +162,7 @@ Ruby does.
 ## Vendoring
 
 `ruby/spec` at a **pinned dated SHA**, scoped to `core/module`, `core/range`,
-`core/string` — not the whole spec suite. `test:compare` only.
+`core/string` — not the whole spec suite. `parity:test` only.
 
 ## Dependency direction
 

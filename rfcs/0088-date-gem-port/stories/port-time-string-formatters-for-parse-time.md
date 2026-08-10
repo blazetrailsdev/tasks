@@ -41,5 +41,5 @@ against its Ruby source, then port `test_parse__time` into
 ## Acceptance criteria
 
 - [ ] The six formatters exist on `Time` under their Ruby names.
-- [ ] `test_parse__time` lands and `pnpm test:compare --package date` credits
+- [ ] `test_parse__time` lands and `pnpm parity:test --package date` credits
       it; no other package regresses.
