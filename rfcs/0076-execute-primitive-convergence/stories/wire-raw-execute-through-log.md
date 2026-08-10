@@ -77,3 +77,52 @@ currently assigned on PG's prototype only (`postgresql-adapter.ts:5244`), so
       (`ddl-profile.ts:19,252-260`) breaks once `rawExecute`/`log` is the leaf.
 - [ ] Tests: a query emits exactly one `sql.active_record` with the correct
       `row_count`, sourced from the payload the block mutated.
+
+## Progress — PR #6311 landed the abstract primitive (2026-08-10)
+
+Done:
+
+- `rawExecute` (`abstract/database-statements.ts`) now wraps its
+  `withRawConnection`/`performQuery` call in `this.log(...)` and threads
+  `notificationPayload` into `performQuery`, matching
+  `database_statements.rb:552-559`. Its `name` / `isAsync` parameters are live.
+- `rawExecQuery` dropped its own `log` wrap — Rails' `raw_exec_query` is
+  `cast_result(raw_execute(...))` (`:541-543`), so keeping both would emit
+  `sql.active_record` twice.
+- The `raw_execute` → `log` call-mismatch baseline row is converged and deleted.
+- Covered by `database-statements.test.ts`: one query, exactly one
+  `sql.active_record`, `row_count` read off the payload `performQuery` mutated.
+
+Also re-established, since the story's Context predates it: the adapters have
+**already** stopped hand-rolling `Notifications.instrumentAsync` payloads. A
+sibling PR moved `sqlite3-adapter.ts`, `postgresql-adapter.ts` and
+`mysql2-adapter.ts` onto `this.log(...)` with the payload threaded into a
+private `_performQuery`, so `log` IS the single payload producer today. The
+criterion that reads "adapters stop hand-rolling payloads" is satisfied; what
+is left is the _layering_, below.
+
+**This story stays open for the adapter routing:**
+
+- No adapter exposes `performQuery` at the Rails name — each keeps a private
+  `_performQuery` under its own `log` (`sqlite3-adapter.ts:461`,
+  `postgresql-adapter.ts:1724`, `mysql2-adapter.ts:970,1013`) — so the shared
+  `rawExecute` still raises `NotImplementedError`
+  (`database_statements.rb:561`) and nothing reaches it. Rails' path is
+  `internal_execute -> raw_execute -> log -> with_raw_connection ->
+perform_query`; converging it means renaming `_performQuery` →
+  `performQuery` on three adapters, deleting three `log` call sites, and
+  re-deriving where `preprocessQuery` and `materializeTransactions` run on each.
+- `internalExecQuery` still wraps in `log` where Rails does not
+  (`database_statements.rb:546-548`). The abstract body is reached only by a
+  host that overrides `internalExecute` but NOT `internalExecQuery`, and for
+  such a host `log`'s rescue is the only thing attaching `set_query` to a
+  translated `StatementInvalid` (asserted by an existing unit test) — so the
+  wrap comes out only once the adapters route through `rawExecute`.
+- `support/ddl-profile.ts` (`:16`, `:252-260`) is still ACCURATE as written:
+  `execute`/`executeMutation` remain the leaf primitives on every live path
+  precisely because `rawExecute` has no callers. Editing it before the adapters
+  move would make the profiler describe a layering that does not exist and
+  silently stop profiling DDL. It moves in the same PR as the adapters.
+- The savepoint / `BEGIN` `name: "TRANSACTION"` notification decision only
+  becomes observable once the adapters route through `rawExecute`, so it
+  travels with them too.
