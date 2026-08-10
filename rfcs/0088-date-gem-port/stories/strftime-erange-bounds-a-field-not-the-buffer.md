@@ -1,6 +1,6 @@
 ---
 title: "strftime-erange-bounds-a-field-not-the-buffer"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6335
 claim: "2026-08-10T13:33:27Z"
 assignee: "date-parse-limit-kwarg-and-bignum-year"
 blocked-by: null
