@@ -1,6 +1,6 @@
 ---
 title: "The four valid_*_p wrappers are unported, so Date.ordinal/commercial/weeknum/nth_kday hardcode nth = 0"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6335
 claim: "2026-08-10T13:33:27Z"
 assignee: "date-parse-limit-kwarg-and-bignum-year"
 blocked-by: null
