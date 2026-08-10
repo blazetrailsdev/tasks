@@ -1,6 +1,6 @@
 ---
 title: "call-args-rows-share-existing-shards"
-status: ready
+status: done
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6334
 claim: null
 assignee: null
 blocked-by: null

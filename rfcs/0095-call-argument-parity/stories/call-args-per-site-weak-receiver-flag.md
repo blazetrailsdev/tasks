@@ -1,6 +1,6 @@
 ---
 title: "Mark weak receivers per call SITE, not per call name, in the call-argument population"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: api-compare
