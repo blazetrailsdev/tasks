@@ -59,4 +59,4 @@ type to be lost on `_defaultAttributes` replay (ciphertext leaked to reads).
 - [ ] Pending-decoration / schema-reflection replay still works for
       static-init `Base.encrypts` models AND direct `encryptAttribute` callers
       still get immediate registration.
-- [ ] All encryption tests green; no api:compare / call-mismatch regressions.
+- [ ] All encryption tests green; no parity:api / call-mismatch regressions.

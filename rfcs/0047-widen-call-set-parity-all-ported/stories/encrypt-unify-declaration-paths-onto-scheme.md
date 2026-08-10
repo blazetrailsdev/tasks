@@ -45,4 +45,4 @@ scheme path, but the two paths still coexist and `encryption.ts`'s
       `EncryptableRecord.preserveOriginalEncrypted`).
 - [ ] Existing Rails-named encryption tests (encryptable-record.test.ts,
       encryptable-record-api.test.ts, encrypted-fixtures.test.ts) stay green.
-- [ ] No api:compare / call-mismatch regressions.
+- [ ] No parity:api / call-mismatch regressions.

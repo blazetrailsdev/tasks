@@ -33,12 +33,12 @@ fixtures (Topic/Company/Customer/etc.), per the RFC 0048 Convergence contract.
 
 - [ ] `finder.test.ts` mirrors `finder_test.rb` word-for-word as closely as TS
       allows: same test names, same fixtures, same assertions. Test names map
-      `test:compare`; never reword.
+      `parity:test`; never reword.
 - [ ] Canonical schema/models/fixtures only — no bespoke tables, invented
       columns, or `_tableName` hacks painting a canonical name onto a bespoke
       suite.
 - [ ] Surfaced impl gaps → fix the impl or file under `0023-surfaced-deviations`
-      and `it.skip` tracked-pending-convergence. A temporary `test:compare`
+      and `it.skip` tracked-pending-convergence. A temporary `parity:test`
       regression is acceptable; record the un-skip.
 - [ ] Confirm against the Rails source, not prior trails behavior. Split across
       sub-cluster PRs under the 500-LOC ceiling if needed.

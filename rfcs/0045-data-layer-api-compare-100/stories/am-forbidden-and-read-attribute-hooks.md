@@ -42,6 +42,6 @@ listed if there's no override seam.
   `SKIP_GROUPS` entry with reason.
 - Where ported, a test matching the Rails test name (e.g. forbidden-attributes
   protection raising on un-permitted params).
-- `pnpm api:compare --package activemodel` shows
+- `pnpm parity:api --package activemodel` shows
   forbidden-attributes-protection.ts, api.ts, model.ts, attribute-assignment.ts,
   validations.ts, serialization.ts, serializers/json.ts at 100%.

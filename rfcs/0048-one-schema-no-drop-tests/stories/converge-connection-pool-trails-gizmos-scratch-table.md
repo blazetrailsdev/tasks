@@ -40,7 +40,7 @@ name or should converge too.
   `.trails` files to avoid shared-DB collisions.
 - The `gadgets` schema-cache fixture name is verified against Rails and converged
   if invented.
-- Test names stay verbatim; `test:compare` does not regress.
+- Test names stay verbatim; `parity:test` does not regress.
 
 ## Notes
 

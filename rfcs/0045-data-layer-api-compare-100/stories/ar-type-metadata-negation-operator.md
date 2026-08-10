@@ -38,6 +38,6 @@ differently. Single coherent concept across five files.
   named dedup method if trails has a dedup pool, OR a single `SKIP_GROUPS` entry
   naming `-@` with the reason ("Ruby `-@` deduplication operator; TS has no
   unary-minus method and trails value objects are not interned").
-- `pnpm api:compare --package activerecord` shows deduplicable.ts, column.ts,
+- `pnpm parity:api --package activerecord` shows deduplicable.ts, column.ts,
   sql-type-metadata.ts, mysql/type-metadata.ts, postgresql/type-metadata.ts at
   100%.

@@ -42,4 +42,4 @@ table (test-schema.ts) already backs Firm/Client STI.
   `joins`/`group`/`select COUNT` aggregate resolves the correct STI type.
 - Test name stays verbatim: "joins with namespaced model should use correct type".
 - Green on sqlite, postgres, mysql.
-- `pnpm test:compare` delta non-negative.
+- `pnpm parity:test` delta non-negative.

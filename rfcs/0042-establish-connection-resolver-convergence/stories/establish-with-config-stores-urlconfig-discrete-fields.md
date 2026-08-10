@@ -32,4 +32,4 @@ why `configurationHash` carries `url` + no `database`, which is why
 - [x] Confirm whether the `buildAdapterArg` URL-forwarding branch
       (`adapter-args.ts:143`) is still needed or can be simplified/removed;
       document the outcome.
-- [x] api:compare + test:compare delta non-negative.
+- [x] parity:api + parity:test delta non-negative.

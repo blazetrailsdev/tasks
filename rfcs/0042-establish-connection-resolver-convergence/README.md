@@ -75,6 +75,6 @@ The convergence is broken into three stories:
 
 ## Acceptance (per story)
 
-- api:compare + test:compare delta non-negative.
+- parity:api + parity:test delta non-negative.
 - No bespoke schemas; canonical fixtures only.
 - Each story ships as one PR from main, ≤500 LOC.

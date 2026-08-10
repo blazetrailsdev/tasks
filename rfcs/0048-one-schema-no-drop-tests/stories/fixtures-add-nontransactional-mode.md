@@ -44,7 +44,7 @@ type is `WithTransactionalFixturesOptions & UseFixturesOpts`.
       signature.
 - [ ] Converge `view.test.ts` (both view classes) and `signed-id.test.ts` off
       the direct-adapter `useFixtures` path onto `fixtures()` in the new mode.
-- [ ] No test names change; `test:compare` non-negative.
+- [ ] No test names change; `parity:test` non-negative.
 - [ ] Does NOT delete the direct-adapter overload (still needed by the multi-DB
       / own-adapter callers — see sibling story). Leave
       `fixtures-delete-direct-adapter-overload` to remove it once all callers

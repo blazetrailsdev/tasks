@@ -41,8 +41,8 @@ itself already a trails-specific extension beyond Rails (Rails' `sqlite3`
 adapter only uses the `sqlite3` Ruby gem). This RFC is therefore an explicit
 **beyond-parity extension**, in the same spirit as the existing
 `node-sqlite`/`expo-sqlite` drivers. Crucially it **reuses
-`AbstractSQLite3Adapter` unchanged**, so it does not perturb `api:compare` /
-`test:compare` for the canonical `sqlite3` adapter, and adds no Rails-mismatch
+`AbstractSQLite3Adapter` unchanged**, so it does not perturb `parity:api` /
+`parity:test` for the canonical `sqlite3` adapter, and adds no Rails-mismatch
 debt to the parity gate.
 
 ## Design

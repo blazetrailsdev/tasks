@@ -18,7 +18,7 @@ blocked-by: null
 
 The RFC 0044 call-mismatches ratchet (`scripts/api-compare/lint-call-mismatches.ts`,
 baseline `scripts/api-compare/call-mismatches-exclude.json`) is
-**environment-non-deterministic**: a local `pnpm api:compare` run and the CI
+**environment-non-deterministic**: a local `pnpm parity:api` run and the CI
 "Rails API/Test Comparison" job compute DIFFERENT call-mismatch sets for the same
 commit. Surfaced 2026-06-23 while fixing a red main (PR #4020):
 
@@ -48,7 +48,7 @@ Likely causes to investigate:
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:compare` + `lint-call-mismatches.ts` produce the SAME
+- [ ] `pnpm parity:api` + `lint-call-mismatches.ts` produce the SAME
       call-mismatch set locally as the CI "Rails API/Test Comparison" job for a
       given commit (pin/refresh the vendored Rails so local matches CI; clear or
       key the ts-api cache; make extraction order deterministic).

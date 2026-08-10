@@ -17,15 +17,15 @@ blocked-by: null
 ## Context
 
 `packages/activerecord/src/adapters/sqlite3/statement-pool.test.ts` carries **6 extra (TS-only) tests** -- `it`/`test`
-declarations matching no Rails test (`test:compare` snapshot 2026-06-23,
+declarations matching no Rails test (`parity:test` snapshot 2026-06-23,
 matched=0, rubyTestCount=0). Per RFC 0043 these are
 bloat to retire. Rails counterpart:
 `vendor/rails/activerecord/test/cases/adapters/sqlite3/statement_pool_test.rb`.
 
-This file's paired Rails test (`adapters/sqlite3/statement_pool_test.rb`) maps **zero** tests in `test:compare` (its `it`s are all TS-only). Such connection/adapter infra tests are prime **RELOCATE** candidates (trails-specific invariants -> `*.trails.test.ts`) rather than DELETE -- triage each against the Rails file before removing.
+This file's paired Rails test (`adapters/sqlite3/statement_pool_test.rb`) maps **zero** tests in `parity:test` (its `it`s are all TS-only). Such connection/adapter infra tests are prime **RELOCATE** candidates (trails-specific invariants -> `*.trails.test.ts`) rather than DELETE -- triage each against the Rails file before removing.
 
 Re-derive the exact current `extra` count from a fresh
-`pnpm test:compare --package activerecord --json` run before starting (the
+`pnpm parity:test --package activerecord --json` run before starting (the
 snapshot above may have drifted).
 
 ## Acceptance criteria
@@ -40,7 +40,7 @@ snapshot above may have drifted).
   `*.trails.test.ts`). Exempt from the 500-LOC ceiling (pure-deletion carve-out).
 - `extra`/`totalExtra` for this file drops; `matched`, `matchedSkipped`,
   `missing`, `wrongDescribe`, `misplaced` stay **bit-for-bit unchanged** (verify
-  with `pnpm test:compare --package activerecord`).
+  with `pnpm parity:test --package activerecord`).
 - No test renamed or reworded; the remaining file passes
   (`pnpm vitest run packages/activerecord/src/adapters/sqlite3/statement-pool.test.ts`).
 

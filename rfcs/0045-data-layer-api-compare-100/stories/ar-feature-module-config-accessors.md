@@ -46,4 +46,4 @@ private fields or computes it.
   trails caller"). Verify against each Rails module before skipping.
 - `inverse_updates_counter_cache?` (reflection) resolved (ported or skip with
   reason).
-- `pnpm api:compare --package activerecord` shows all listed files at 100%.
+- `pnpm parity:api --package activerecord` shows all listed files at 100%.

@@ -46,7 +46,7 @@ per file, never a half-renamed hybrid).
 - [ ] Confirm each retained case against the Rails source; where a faithful port
       surfaces an impl gap, fix the impl or file a deviation under
       `0023-surfaced-deviations` (tracked-pending-convergence). A temporary
-      `test:compare` regression is acceptable.
+      `parity:test` regression is acceptable.
 - [ ] 500-LOC ceiling; single PR from main.
 
 ## RFC 0048 working notes (added 2026-07-01)
@@ -67,4 +67,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

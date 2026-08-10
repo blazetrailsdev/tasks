@@ -47,7 +47,7 @@ exactly what 0019 retires. Hence the gate.
       broadly available.
 - [ ] A converged canonical file reads `setupFixtures(); fixtures({ authors,
 posts, comments });` — no schema, no registerModel, no "handler".
-- [ ] test:compare does not regress; no test names change.
+- [ ] parity:test does not regress; no test names change.
 
 ## Notes
 

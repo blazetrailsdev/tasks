@@ -33,7 +33,7 @@ new same-named describe instead of merging into one shared-fixture suite.
 Verified 2026-07-06 against the current file:
 
 - **No duplicate `it()` names** across the blocks — merging will not collide and
-  will not disturb `test:compare` name matching.
+  will not disturb `parity:test` name matching.
 - The file no longer uses `setupHandlerSuite()`/`useHandlerFixtures()`; the
   current idiom is the endgame `fixtures([...])` surface (`test-helpers/fixtures.js`).
   Transactional fixtures roll back per-test, so a shared fixture declaration does
@@ -88,13 +88,13 @@ as met (both waves closed).
 - [ ] The **two sharded blocks** and `EagerLoadingTooManyIdsTest` stay as their
       own describes with their existing per-block `fixtures(...)` / `beforeAll`
       model-registration / non-transactional setup intact.
-- [ ] Test names and bodies UNCHANGED (`test:compare` matches on names); only the
+- [ ] Test names and bodies UNCHANGED (`parity:test` matches on names); only the
       surrounding describe/fixtures scaffolding of the folded blocks is removed.
 - [ ] No remaining per-slice `beforeAll` that only re-declares fixtures; any
       genuinely test-specific setup stays local to the relevant tests.
 - [ ] `pnpm vitest run packages/activerecord/src/associations/eager.test.ts`
       passes on sqlite (and PG if any block is PG-gated); `pnpm lint` clean;
-      `node scripts/typecheck.mjs` clean; test:compare delta non-negative.
+      `node scripts/typecheck.mjs` clean; parity:test delta non-negative.
 - [ ] Net line reduction (deletion of repeated `describe`/`fixtures` scaffolding)
       with zero test-count change.
 

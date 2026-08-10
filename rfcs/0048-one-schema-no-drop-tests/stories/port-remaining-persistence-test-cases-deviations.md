@@ -70,7 +70,7 @@ This story completes AC #2 (0 missing) for persistence_test.rb.
 ## Acceptance criteria
 
 - [ ] All 5 cases above have faithful ports in `persistence.test.ts` (test names
-      verbatim; verify with test:compare — 0 missing for persistence_test.rb).
+      verbatim; verify with parity:test — 0 missing for persistence_test.rb).
 - [ ] Impl gaps (1–3) fixed to match Rails, or filed as tracked-pending-convergence
       under 0023-surfaced-deviations with the failing test skipped ONLY if the
       deviation story is registered.

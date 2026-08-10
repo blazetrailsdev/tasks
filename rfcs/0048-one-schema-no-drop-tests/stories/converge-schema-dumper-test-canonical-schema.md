@@ -45,7 +45,7 @@ motion; folding in a schema rewrite would have blown it far past).
 - [ ] Where a Rails case genuinely needs a non-schema.rb table, mirror Rails
       (its migration/fixture), not an invented shape.
 - [ ] No `_tableName` hack; no bespoke columns.
-- [ ] test:compare stays at 67/67 matched (non-negative); fix impl or file a
+- [ ] parity:test stays at 67/67 matched (non-negative); fix impl or file a
       deviation under 0023-surfaced-deviations for any surfaced gap.
 - [ ] 500-LOC ceiling; single PR from main.
 

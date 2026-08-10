@@ -45,6 +45,6 @@ subclass as part of the migration under test — verify before touching.)
       shape stubs, no ad-hoc `extends Base` shims).
 - [ ] Test names remain verbatim-matched to `migration_test.rb`.
 - [ ] Any surfaced impl gap is fixed, or filed under `0023-surfaced-deviations`.
-- [ ] test:compare delta non-negative; api:compare unaffected by test-only edits.
+- [ ] parity:test delta non-negative; parity:api unaffected by test-only edits.
 - [ ] All-or-nothing per cluster; stay under the 500-LOC PR ceiling (split
       across PRs by sub-cluster if needed, each from main, non-overlapping).

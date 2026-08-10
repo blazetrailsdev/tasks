@@ -58,7 +58,7 @@ The relocated `.trails` DDL tests touched by #4367 and their scratch tables:
     never a freshly-invented one like `gizmos`/`reminders`).
 - No `.trails` DDL test creates a table name that is neither in canonical
   `TEST_SCHEMA` nor used by an actual Rails test.
-- `test:compare` does not regress.
+- `parity:test` does not regress.
 
 ## Notes
 

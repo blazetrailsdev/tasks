@@ -36,4 +36,4 @@ divergences — `any_response?` itself, `Collector#any` arg dispatch, and
 - Each verified entry gets a reason citing the Rails `file:line` it was
   checked against, replacing the cluster-level wording.
 - Real omissions found get their own stories (or fixes, if under the ceiling).
-- `pnpm api:calls:wide` green; baseline only shrinks.
+- `pnpm parity:api:calls` green; baseline only shrinks.

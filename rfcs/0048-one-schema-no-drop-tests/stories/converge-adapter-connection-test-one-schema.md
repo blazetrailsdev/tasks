@@ -50,10 +50,10 @@ Remaining divergent clusters in `adapter.test.ts`:
 - [ ] Delete the bespoke `describe("AbstractAdapter reconnect/verify lifecycle")`
       block and any invented-name `it`s; port the real Rails cases that cover
       that behavior, or move genuinely-trails-only unit coverage to a
-      non-`*.test.ts`-named home that `test:compare` does not map to Rails.
+      non-`*.test.ts`-named home that `parity:test` does not map to Rails.
 - [ ] Remove now-unused bespoke fake-adapter classes once their invented tests
       are gone.
 - [ ] Surfaced impl gaps → fix impl or file under `0023-surfaced-deviations`;
-      do not bend the test. Temporary `test:compare` regression acceptable —
+      do not bend the test. Temporary `parity:test` regression acceptable —
       record the un-skip.
 - [ ] 500-LOC ceiling; single PR from main; all-or-nothing per cluster.

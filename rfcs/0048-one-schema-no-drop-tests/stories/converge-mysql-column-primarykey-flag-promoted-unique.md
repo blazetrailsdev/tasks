@@ -56,5 +56,5 @@ types are reset` (counts introspection queries; resetColumnInformation clears th
       `_primaryKeys` cache) or restructuring so columns() need not carry the flag on MySQL.
 - [ ] `getCachedPrimaryKeys` column-flag fallback + `introspectPrimaryKey` fallback return the
       correct (promoted-unique-excluding) answer for MySQL.
-- [ ] No new per-table query on the dump path; QueryCacheTest green; api:compare / test:compare
+- [ ] No new per-table query on the dump path; QueryCacheTest green; parity:api / parity:test
       non-negative.

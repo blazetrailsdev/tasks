@@ -53,7 +53,7 @@ resolution or import-alias following.
   indirect invocation of a ported method is credited to that method's call set.
 - Extractor follows same-module import aliases (`import { a as b }` → calls to `b`
   count as `a`) when matching ported call names.
-- Re-run `pnpm api:calls:reseed` + `pnpm api:calls:wide:reseed`: the now-detectable
+- Re-run `pnpm parity:api:calls:reseed` + `pnpm parity:api:calls:reseed`: the now-detectable
   confirmed-equivalents (at minimum `with_lock → lock!` and
   `touch_deferred_attributes → touch`, plus any autosave/dirty-tracking rows that
   share these shapes) drop out of both baselines.
@@ -69,5 +69,5 @@ resolution or import-alias following.
 - NO `node:*` imports, NO `process.*` in the library surface, async fs only (matches
   the existing api-compare lint surface).
 - 500 LOC ceiling. Single PR from main, no stacks.
-- Reseed ONLY via the force-rebuild path (`pnpm api:calls:reseed` /
+- Reseed ONLY via the force-rebuild path (`pnpm parity:api:calls:reseed` /
   `:wide:reseed`) — never hand-`--write` from a possibly-stale env.

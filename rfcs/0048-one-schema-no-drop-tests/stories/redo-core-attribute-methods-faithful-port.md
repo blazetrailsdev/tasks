@@ -30,11 +30,11 @@ Fidelity-only: no `AR_ONE_SCHEMA` framing (that moved to RFC
 
 - [ ] Each file mirrors its named Rails source **word-for-word as closely as TS
       allows**: same `describe`/`it` names, setup/fixtures, assertions. Never
-      invent or reword test names (`test:compare` maps on them).
+      invent or reword test names (`parity:test` maps on them).
 - [ ] Canonical `TEST_SCHEMA` + official models + real fixtures only; no bespoke
       tables/columns, no `_tableName` hacks.
 - [ ] Impl gaps → fix the impl to match Rails or file a deviation under
-      `0023-surfaced-deviations`; do not bend the test. Temporary `test:compare`
+      `0023-surfaced-deviations`; do not bend the test. Temporary `parity:test`
       regression acceptable (record un-skip).
 - [ ] Revisit the `core.ts` + `call-mismatches-wide-exclude.json` edits #4316
       made — keep only what a faithful port justifies.

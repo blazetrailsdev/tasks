@@ -48,7 +48,7 @@ test/models/."
       matching Rails.
 - [ ] Demonstrated by deleting association-target-only `registerModel` lines from
       ≥1 canonical file; LOC delta noted.
-- [ ] test:compare does not regress; no test names change.
+- [ ] parity:test does not regress; no test names change.
 
 ## Notes
 

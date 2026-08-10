@@ -43,4 +43,4 @@ table). Fix by renaming the scratch tables to non-canonical names.
   `TEST_SCHEMA`; scratch tables use non-canonical names (prefer the Rails source's
   own, e.g. `horses`/`testings`).
 - Each test creates AND drops its own scratch tables; touches no canonical table.
-- Test names/assertions unchanged; `test:compare` does not regress.
+- Test names/assertions unchanged; `parity:test` does not regress.

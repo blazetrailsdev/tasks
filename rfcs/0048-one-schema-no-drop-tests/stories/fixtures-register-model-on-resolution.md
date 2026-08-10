@@ -46,7 +46,7 @@ declared fixture set should make its model resolvable, exactly as `fixtures
       path: `registerModel(Computer)` :291, parrot :441-442, vegetable :599-601.
 - [ ] Demonstrated on ≥1 canonical file (e.g. collection-proxy.test.ts:22-29) by
       deleting its now-redundant `registerModel` lines; LOC delta noted in the PR.
-- [ ] test:compare does not regress; no test names change.
+- [ ] parity:test does not regress; no test names change.
 
 ## Notes
 

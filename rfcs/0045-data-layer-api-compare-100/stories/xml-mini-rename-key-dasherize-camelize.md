@@ -56,4 +56,4 @@ match Rails verbatim.
 - Resolve the camelCase→snake_case key-mapping so output tag names match Rails
   (`conversions_test.rb:171-189` for the array cases; the corresponding
   `xml_serialization` model cases for the single-record path).
-- No api:compare / test:compare regression.
+- No parity:api / parity:test regression.

@@ -51,6 +51,6 @@ the direct-adapter overload it wraps is at
       `*.connection`) and `transaction-instrumentation.test.ts` (own
       `sharedAdapter`) off the direct-adapter `useFixtures` path onto
       `fixtures()`.
-- [ ] No test names change; `test:compare` non-negative.
+- [ ] No test names change; `parity:test` non-negative.
 - [ ] Does NOT delete the direct-adapter overload — leave that to
       `fixtures-delete-direct-adapter-overload`.

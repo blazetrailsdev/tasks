@@ -49,5 +49,5 @@ model_schema.rb-native config:
   `pluralize_table_names`; no runtime toggle"). Read each against Rails — a
   hardcoded toggle that Rails lets you set is a real divergence: if convergence
   is non-trivial, file a follow-up story rather than skip-ratifying.
-- `pnpm api:compare --package activerecord` shows base.ts, core.ts,
+- `pnpm parity:api --package activerecord` shows base.ts, core.ts,
   model-schema.ts at 100%, and **overall activerecord at 100%**.

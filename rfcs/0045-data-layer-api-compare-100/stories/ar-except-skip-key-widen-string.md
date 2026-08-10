@@ -31,4 +31,4 @@ recognized stored value keys have an effect.
   `Relation#except` and the `Querying#except` delegator.
 - Unrecognized keys remain a runtime no-op (already the case).
 - `Post.except("bogus")` typechecks without a cast; add/keep a test asserting the
-  no-op behavior. api:compare querying.ts stays 100%.
+  no-op behavior. parity:api querying.ts stays 100%.

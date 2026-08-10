@@ -51,7 +51,7 @@ at reflection.ts:1817).
 - [ ] The eager barrel-load cost is not paid by fixtures tests that don't use
       autoload (or is measured acceptable): the PG `schema-dumping-helper.test.ts`
       5s dump does not regress.
-- [ ] No test names change; test:compare does not regress.
+- [ ] No test names change; parity:test does not regress.
 
 ## Notes
 

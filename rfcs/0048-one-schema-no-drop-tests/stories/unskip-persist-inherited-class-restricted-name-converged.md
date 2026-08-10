@@ -31,7 +31,7 @@ now persist/dirty-track the restricted `name` attribute, so
 table name` in packages/activerecord/src/persistence.test.ts and remove the
       restricted-name tracking note from the surrounding block comment.
 - [ ] Confirm it passes on all three adapters (sqlite/postgres/mysql) via
-      test:compare (Skip count for persistence_test.rb drops from 2 to 1).
+      parity:test (Skip count for persistence_test.rb drops from 2 to 1).
 - [ ] Leave `update attribute in before validation respects callback chain`
       skipped — its async-before-validation deviation still fails when un-skipped
       (re-verified post-merge).

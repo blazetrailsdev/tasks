@@ -72,7 +72,7 @@ QueryConstraintsTest class:
 ## Acceptance criteria
 
 - [ ] Every Rails `def test_*` in persistence_test.rb has a faithful port in
-      `persistence.test.ts` (verify with test:compare mapping — 0 missing).
+      `persistence.test.ts` (verify with parity:test mapping — 0 missing).
 - [ ] Canonical schema/models/fixtures only; add to `TEST_SCHEMA` /
       canonical models if schema.rb has it (e.g. `aircraft`, `developers_projects`,
       `Default`, `PkAutopopulatedByATriggerRecord`, `DeveloperCalledDavid`,

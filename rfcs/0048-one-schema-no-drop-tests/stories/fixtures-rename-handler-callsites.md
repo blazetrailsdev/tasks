@@ -34,7 +34,7 @@ correct path), so this is a mechanical rename, but it is large.
 
 - [ ] All `useHandlerFixtures` / `setupHandlerSuite` call sites migrated.
 - [ ] Old exports removed (gate: direct-adapter story also done).
-- [ ] `test:compare` does not regress; no test names change.
+- [ ] `parity:test` does not regress; no test names change.
 
 ## Notes
 

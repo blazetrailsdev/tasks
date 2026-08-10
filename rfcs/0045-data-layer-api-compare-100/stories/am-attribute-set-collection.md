@@ -38,5 +38,5 @@ already, so these are thin, real method ports.
   `has_key?`/`key?` on Errors (alias of the existing `include?`).
 - Tests matching the Rails test names (attribute_set_test.rb /
   errors_test.rb) for at least `fetch`, `except`, and the errors key lookups.
-- `pnpm api:compare --package activemodel` shows attribute-set.ts,
+- `pnpm parity:api --package activemodel` shows attribute-set.ts,
   attribute-set/builder.ts, errors.ts at 100%.

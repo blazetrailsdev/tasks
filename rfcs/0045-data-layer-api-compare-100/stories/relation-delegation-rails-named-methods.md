@@ -46,5 +46,5 @@ expose them under their Rails names so `relation.each`, `relation.connection`,
   helpers, or record a per-name justification of a true TS impossibility —
   do NOT leave them as a blanket scoped skip.
 - Remove the corresponding entries from `SCOPED_SKIP_GROUPS` as each name lands;
-  relation.rb / relation/delegation.rb stay at 100% api:compare; no
-  test:compare regression.
+  relation.rb / relation/delegation.rb stay at 100% parity:api; no
+  parity:test regression.

@@ -49,5 +49,5 @@ pipeline equivalent (no Ruby `BigDecimal`/`Symbol`/`Set`).
 - Ruby-only primitives with no trails equivalent get a `SKIP_GROUPS` entry in
   `scripts/api-compare/conventions.ts` naming them and the reason (e.g. "Ruby
   BigDecimal/Symbol/Set have no trails Arel value-pipeline equivalent").
-- `pnpm api:compare --package arel` shows `visitors/dot.ts` and
+- `pnpm parity:api --package arel` shows `visitors/dot.ts` and
   `visitors/to-sql.ts` at 100%.

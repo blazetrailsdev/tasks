@@ -23,7 +23,7 @@ after commit after transaction commits")` inside the bespoke `Account` /
 `describe("TransactionTest")` block (transactions.test.ts ~line 1822). Its
 name matches `test_call_after_commit_after_transaction_commits` in
 `vendor/rails/activerecord/test/cases/transaction_callbacks_test.rb:113`, not
-`transactions_test.rb` — so `test:compare` counts it as `extra` for the
+`transactions_test.rb` — so `parity:test` counts it as `extra` for the
 transactions convention file. It was deliberately left in place during the
 burndown per RFC 0043's MOVE triage (exists in Rails elsewhere → out of scope
 for delete/relocate).

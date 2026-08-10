@@ -50,4 +50,4 @@ Observed CI failure (MariaDB, PR #4366): dump produced
       column added" passes on sqlite, postgres, and mysql/mariadb while riding
       canonical `string_key_objects`.
 - [ ] Check blast radius: `locking.test.ts` and any other sibling riding
-      `string_key_objects` still pass; test:compare non-negative.
+      `string_key_objects` still pass; parity:test non-negative.

@@ -16,9 +16,9 @@ blocked-by: null
 
 ## Context
 
-`api:compare`'s advisory arity dimension flags **13 activemodel** signature
+`parity:api`'s advisory arity dimension flags **13 activemodel** signature
 mismatches (`output/arity-mismatches.json`, regenerate with
-`pnpm api:compare --package activemodel --arity`). These files are already at
+`pnpm parity:api --package activemodel --arity`). These files are already at
 100% method-name match; only the signatures diverge:
 
 - `attribute_methods.ts`: `missing_attribute(attr_name, stack)` vs TS
@@ -46,6 +46,6 @@ arity comparator can't model and should be excluded with a reason rather than
   signature (with a test if behavior changes); static-host/`cls`-prefix
   artifacts get an arity-exclusion entry with reason (mirror the existing
   api-compare exclude convention).
-- `pnpm api:compare --package activemodel --arity` reports 0 unexplained
+- `pnpm parity:api --package activemodel --arity` reports 0 unexplained
   activemodel arity mismatches.
 - No method-name regressions (activemodel stays at its post-port match count).

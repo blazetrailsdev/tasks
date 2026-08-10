@@ -50,7 +50,7 @@ around line 3047) register `StringType` singletons that never call
   `sqlType`.
 - No regression in `attributes.test.ts` immutable_strings_by_default retains
   limit information (`typeForAttribute("inferred_string").limit === 255`) or in
-  api:compare / test:compare delta.
+  parity:api / parity:test delta.
 
 Hard rules: no `node:*` / `process.*`; async fs only; no new runtime deps;
 500 LOC ceiling; single PR from main; test names match Rails verbatim.

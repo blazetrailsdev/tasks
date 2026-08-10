@@ -26,7 +26,7 @@ whose TS counterpart is
 `packages/activerecord/src/associations/inverse-associations.test.ts`.
 
 Three match Rails inverse_associations_test.rb descriptions verbatim
-(`test:compare` confirmed): "has one and belongs to should find inverse
+(`parity:test` confirmed): "has one and belongs to should find inverse
 automatically", "has many and belongs to should find inverse automatically",
 "has one and belongs to with non default foreign key should not find inverse
 automatically". The other five test the same automatic-inverse machinery

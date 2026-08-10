@@ -15,7 +15,7 @@ clusters:
 
 ## Summary
 
-The new advisory **call-set parity** dimension in `api:compare` (PR #4002)
+The new advisory **call-set parity** dimension in `parity:api` (PR #4002)
 flags name-matched method pairs whose ported TS body omits a fidelity-critical
 call Rails makes to another ported method. On `activerecord` it flags **23**
 pairs. This RFC drives that list to **zero unexplained entries**: each pair is
@@ -37,7 +37,7 @@ a `_create_record` that forgets `changes_applied` (leaving dirty state
 uncleared after insert).
 
 The 23 flagged pairs (from `output/call-mismatches.json`, regenerate with
-`pnpm api:compare --package activerecord`):
+`pnpm parity:api --package activerecord`):
 
 | TS file                                       | Ruby method                     | Missing call(s)                              |
 | --------------------------------------------- | ------------------------------- | -------------------------------------------- |
@@ -79,7 +79,7 @@ For each flagged pair, read the Rails method body (vendored under
 1. **Real omission** → fix the TS body so it makes the call (or the
    behaviorally-required equivalent), converging to Rails. Cover with a test
    that asserts the now-correct behavior, matching the Rails test name when one
-   exists (`test:compare` fidelity).
+   exists (`parity:test` fidelity).
 2. **Confirmed behavioral equivalent** → add an entry to the ratcheting
    baseline (`eslint/`-style exclude JSON, see Rollout story 1) with a one-line
    justification of _why_ the call is satisfied by a different path. This is NOT

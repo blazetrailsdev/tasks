@@ -49,4 +49,4 @@ test exercises acronym labels, so it's currently latent.
   generated predicate/scope name matches what conflict detection records
   (add to `enum.test.ts` or a `*.trails.test.ts` sibling if no Rails test
   covers it — Rails uses snake_case so the acronym surface is trails-specific).
-- `api:compare` stays green for `enum.rb`; existing `enum.test.ts` unchanged.
+- `parity:api` stays green for `enum.rb`; existing `enum.test.ts` unchanged.

@@ -61,4 +61,4 @@ follow-up story if so).
       zero-imaginary complex, etc.; cross-runtime byte-compatible with Ruby.
 - [ ] Scoped to one PR under the LOC ceiling; if the value classes balloon, split them into their
       own story and keep this one to the codec.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

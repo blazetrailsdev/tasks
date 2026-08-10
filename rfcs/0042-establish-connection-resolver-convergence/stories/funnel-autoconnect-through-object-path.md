@@ -36,4 +36,4 @@ then the same `resolve_config_for_connection` funnel
 - [ ] After this story, `establishWithDbConfig` is the core of
       `establishConnection` for all three input kinds; the in-memory
       `configurations` handling (`connection-handling.ts:805-820`) is preserved.
-- [ ] api:compare + test:compare delta non-negative.
+- [ ] parity:api + parity:test delta non-negative.

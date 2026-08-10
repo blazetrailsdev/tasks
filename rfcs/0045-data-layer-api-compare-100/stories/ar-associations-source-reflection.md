@@ -41,6 +41,6 @@ to avoid overlap.)
   skip-listed with reason.
 - No overlap with RFC 0040 files; if a name requires the 0040 convergence
   first, note the dependency.
-- `pnpm api:compare --package activerecord` shows through-association.ts,
+- `pnpm parity:api --package activerecord` shows through-association.ts,
   has-many-through-association.ts, has-one-through-association.ts,
   association.ts, join-dependency/join-part.ts at 100%.

@@ -75,4 +75,4 @@ dropping the inferred fallback entirely — was out of that story's scope.
       the converged behavior (the through write should not occur — or the
       validity error should fire before any commit — under a polymorphic source
       with no `source_type`).
-- [ ] No api:compare / test:compare regression.
+- [ ] No parity:api / parity:test regression.

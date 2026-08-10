@@ -36,5 +36,5 @@ needed, each chunk all-or-nothing.
 - [ ] Canonical schema only; add to `TEST_SCHEMA` if schema.rb has something it lacks.
 - [ ] Surfaced impl gaps → fix impl or file under `0023-surfaced-deviations`
       (tracked-pending-convergence); do not bend the test. Temporary
-      `test:compare` regression acceptable — record the un-skip.
+      `parity:test` regression acceptable — record the un-skip.
 - [ ] 500-LOC ceiling; single PR from main; all-or-nothing per file.

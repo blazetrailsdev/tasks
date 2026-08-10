@@ -54,4 +54,4 @@ only supports `columns` / `unique` / `where` / `name` — it cannot express
       `companies` via `dumpTableSchema`, matching Rails' expected index lines.
 - [ ] Watch for suite-wide fallout: adding indexes changes the `companies`
       schema signature; verify sibling files that ride `companies` still pass.
-- [ ] test:compare non-negative.
+- [ ] parity:test non-negative.

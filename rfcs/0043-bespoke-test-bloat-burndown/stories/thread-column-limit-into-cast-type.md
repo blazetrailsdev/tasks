@@ -43,4 +43,4 @@ what Rails covers (type-level limit preservation through immutable conversion).
   `packages/activerecord/src/attributes.test.ts` to assert
   `typeForAttribute("inferred_string").limit === 255` (the Rails assertion),
   dropping the `columnsHash()` workaround.
-- No regressions in api:compare / test:compare delta.
+- No regressions in parity:api / parity:test delta.

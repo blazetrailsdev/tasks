@@ -40,5 +40,5 @@ this story tracks converging the realization rather than ratifying the skip.
   `_orderClauses`.
 - Port `reverseOrderValue` as a getter over that stored flag.
 - Remove `reverse_order_value` / `reverse_order_value=` from SCOPED_SKIP_GROUPS;
-  relation.rb and relation/query_methods.rb stay at 100% api:compare.
-- No test:compare regression (order-reversal SQL stays identical).
+  relation.rb and relation/query_methods.rb stay at 100% parity:api.
+- No parity:test regression (order-reversal SQL stays identical).

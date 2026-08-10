@@ -61,5 +61,5 @@ across dbs` :546). These are fabricated shapes of canonical tables — canonical
       `:testings` scratch table, not canonical `users`.
 - [ ] No `createTable`/`dropTable` in `migration.test.ts` targets a name in the
       canonical `TEST_SCHEMA`; the `afterAll` teardown drops no canonical names.
-- [ ] Test names unchanged; `test:compare` does not regress. Under the 500-LOC
+- [ ] Test names unchanged; `parity:test` does not regress. Under the 500-LOC
       ceiling; single PR from `main`.

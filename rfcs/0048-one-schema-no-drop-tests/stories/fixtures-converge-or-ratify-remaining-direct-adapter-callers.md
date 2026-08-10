@@ -53,4 +53,4 @@ as a documented escape hatch for now — see use-fixtures.ts:307-318).
       callers, delete it (coordinate with `fixtures-rename-handler-callsites` and
       `fixtures-drop-schema-arg-default-off`). If a permanent escape hatch is
       kept, the export stays but is `@internal` and documented as such.
-- [ ] No test names change; test:compare non-negative.
+- [ ] No test names change; parity:test non-negative.

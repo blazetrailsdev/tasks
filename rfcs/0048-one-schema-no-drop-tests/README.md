@@ -53,7 +53,7 @@ contract below.
    with **no** 1:1 Rails counterpart is a bespoke suite — delete it and port the
    real Rails test cases that cover the behavior.
 2. **Mirror names + assertions word-for-word** as closely as TypeScript allows.
-   Test names are how `test:compare` maps trails tests to Rails; never invent,
+   Test names are how `parity:test` maps trails tests to Rails; never invent,
    rename, or reword them. The Rails test body's setup, fixtures, and assertions
    are the spec — reproduce them, do not paraphrase.
 3. **Ride canonical schema only.** Canonical `TEST_SCHEMA` + official
@@ -65,7 +65,7 @@ contract below.
    gap, fix the implementation to match Rails, or file a deviation story under
    `0023-surfaced-deviations` and mark the case tracked-pending-convergence.
    Never bend the test to make it pass — fidelity over the gate (a temporary
-   `test:compare` regression is acceptable and expected; record the un-skip
+   `parity:test` regression is acceptable and expected; record the un-skip
    follow-up).
 5. **All-or-nothing per file.** A file converts to its faithful Rails form in one
    PR (split across PRs by file/sub-cluster under the 500-LOC ceiling), never a

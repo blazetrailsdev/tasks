@@ -41,7 +41,7 @@ the class itself. Cross-runtime byte fidelity is the crux throughout.
 
 No hard ordering; ship smallest-first. The temporal story self-sequences (land
 5/6/10 first, follow-up 7/8 if the nanosecond `Time` rep exceeds one PR). Each
-story is independently mergeable; `api/test:compare` delta stays non-negative.
+story is independently mergeable; `api/parity:test` delta stays non-negative.
 
 - `messagepack-ext-bigdecimal` — ext type 2 (`_dump`/`_load` precision string).
 - `messagepack-ext-rational-complex` — Rational/Complex ext types.

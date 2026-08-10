@@ -46,8 +46,8 @@ readers to return the stored reference (not a copy) to match Rails'
 ## Acceptance criteria
 
 - Unify (or document split-routing for) join storage so `joinsValues=` writes
-  faithfully; relation.rb / relation/query_methods.rb stay at 100% api:compare.
+  faithfully; relation.rb / relation/query_methods.rb stay at 100% parity:api.
 - Converge single-value defaults to Rails' nil-vs-false (tri-state fields).
 - Converge `selectValues`/`orderValues`/`groupValues` readers to stored-ref
   semantics (or document a uniform defensive-copy rationale for ALL accessors).
-- No test:compare regression.
+- No parity:test regression.

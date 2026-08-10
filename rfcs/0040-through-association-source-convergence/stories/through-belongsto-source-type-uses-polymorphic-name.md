@@ -46,4 +46,4 @@ Rails refs: `activerecord/lib/active_record/inheritance.rb:212`
       `polymorphicName(target.constructor)` instead of `.name`.
 - [x] Regression test: a has_one/has_many `:through` with a polymorphic
       belongs_to source whose target is an STI subclass stores `base_class.name`.
-- [x] No api:compare / test:compare regression.
+- [x] No parity:api / parity:test regression.

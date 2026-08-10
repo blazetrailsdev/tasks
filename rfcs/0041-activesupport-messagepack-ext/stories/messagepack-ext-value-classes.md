@@ -63,4 +63,4 @@ out PRs.
 - [ ] Scoped to one PR under the LOC ceiling; split IPAddr/Pathname into a follow-up story if the
       budget is exceeded (register via `pnpm tasks new`, do not open sibling
       PRs).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

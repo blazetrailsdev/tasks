@@ -45,5 +45,5 @@ accessor has no caller.
   the existing trails state, or `SKIP_GROUPS` entries with reason.
 - A test asserting the accessor reflects declared aliases/patterns where ported
   (match Rails test name).
-- `pnpm api:compare --package activemodel` shows attribute-methods.ts,
+- `pnpm parity:api --package activemodel` shows attribute-methods.ts,
   attributes.ts, dirty.ts at 100%.

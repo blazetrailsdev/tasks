@@ -28,7 +28,7 @@ Both are pure Ruby aliases to an attribute (`expr` / `name`) that is already
 ported. The TS host either needs the alias accessor or a skip entry.
 
 The 3 arel arity mismatches are in `output/arity-mismatches.json` (regenerate
-with `pnpm api:compare --package arel --arity`); converge each TS signature to
+with `pnpm parity:api --package arel --arity`); converge each TS signature to
 the Rails signature.
 
 ## Acceptance criteria
@@ -37,6 +37,6 @@ the Rails signature.
   `nodes/table-alias.ts` exposes `table_alias` (aliasing `name`), OR a
   `SKIP_GROUPS` entry with reason if trails deliberately omits the alias.
 - The 3 arel arity mismatches converge (TS signature matches Rails) or are
-  documented; `pnpm api:compare --package arel --arity` reports 0 arel arity
+  documented; `pnpm parity:api --package arel --arity` reports 0 arel arity
   mismatches.
-- `pnpm api:compare --package arel` reports 100% (0 missing) overall.
+- `pnpm parity:api --package arel` reports 100% (0 missing) overall.

@@ -52,7 +52,7 @@ This concern compounds as `fixtures-rename-handler-callsites` converts
 - [ ] Rule test cases cover: destructured-but-unused accessor → warns;
       Rails-faithful zero-named-fixture test in an accessor-destructuring scope →
       passes.
-- [ ] No test names change; test:compare non-negative.
+- [ ] No test names change; parity:test non-negative.
 
 ## RFC 0048 working notes (added 2026-07-01)
 
@@ -72,4 +72,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

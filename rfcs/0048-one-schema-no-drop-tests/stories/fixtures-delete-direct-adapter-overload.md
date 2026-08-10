@@ -44,4 +44,4 @@ Coordinate with `fixtures-rename-handler-callsites` and
       `use-fixtures.ts`.
 - [ ] If any legitimate internal caller survives, keep the export but mark it
       `@internal` and document why (do not leave it publicly reachable).
-- [ ] No test names change; `test:compare` non-negative.
+- [ ] No test names change; `parity:test` non-negative.

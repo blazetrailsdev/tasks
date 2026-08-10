@@ -40,7 +40,7 @@ surfaced gap, all-or-nothing per file.
       sub-cluster across PRs under 500 LOC each; each file/cluster all-or-nothing).
 - [ ] `migration.trails.test.ts` audited: every case either has no Rails
       counterpart (kept, justified) or is converged/removed.
-- [ ] test:compare delta non-negative; api:compare unaffected by test-only edits.
+- [ ] parity:test delta non-negative; parity:api unaffected by test-only edits.
 
 ## RFC 0048 working notes (added 2026-07-01)
 
@@ -60,4 +60,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

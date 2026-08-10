@@ -71,4 +71,4 @@ high (~80).
 - [ ] If nanosecond-faithful `Time` (type 7) requires reworking the underlying
       temporal rep beyond this story's one-PR LOC budget, land 5/6/10 first and
       register a follow-up for 7/8; do not fan out PRs.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

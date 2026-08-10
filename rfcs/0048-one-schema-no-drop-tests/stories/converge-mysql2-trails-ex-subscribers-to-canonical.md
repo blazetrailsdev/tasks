@@ -45,7 +45,7 @@ to `subscribers` requires ensuring that table+shape is present in the suite's DB
 - The live-MySQL suite has the canonical `subscribers` table available (bootstrap
   canonical schema if not already loaded), so the converged test runs green on
   the CI mysql:8 lane.
-- Test name stays verbatim. `test:compare` does not regress.
+- Test name stays verbatim. `parity:test` does not regress.
 
 ## Notes
 

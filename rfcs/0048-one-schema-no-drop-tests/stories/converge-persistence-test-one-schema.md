@@ -35,7 +35,7 @@ coverage matching" (the bespoke marker) — replace with the canonical
 ## Acceptance criteria
 
 - [ ] Every `it(...)` maps 1:1 to a `def test_*` in persistence_test.rb by name
-      (test:compare mapping); no trails-invented test names remain.
+      (parity:test mapping); no trails-invented test names remain.
 - [ ] Every Rails `def test_*` in persistence_test.rb has a faithful port.
 - [ ] Canonical schema/models/fixtures only; no bespoke tables, no `_tableName`
       hack, no invented columns. Add to `TEST_SCHEMA` if schema.rb has it.
@@ -60,4 +60,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

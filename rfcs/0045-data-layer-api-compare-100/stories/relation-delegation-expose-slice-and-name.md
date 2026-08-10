@@ -35,7 +35,7 @@ which remain per-name scoped skips in `scripts/api-compare/conventions.ts`
   `{ name }`), which broke `relations.test.ts`.
 
 Both are reachable at runtime through the delegation Proxy; only the real-method
-surface (and thus the relation.rb api:compare credit) is missing.
+surface (and thus the relation.rb parity:api credit) is missing.
 
 ## Acceptance criteria
 
@@ -44,5 +44,5 @@ surface (and thus the relation.rb api:compare credit) is missing.
   accumulator inference (e.g. a narrower/overload-compatible `slice` signature
   and a typing strategy for `name` that doesn't widen the structural surface).
 - Remove the `["slice", "name"]` entry from `SCOPED_SKIP_GROUPS`; relation.rb
-  stays at 100% api:compare; no test:compare regression.
+  stays at 100% parity:api; no parity:test regression.
 - Test names match Rails verbatim.

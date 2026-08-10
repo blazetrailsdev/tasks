@@ -54,7 +54,7 @@ is dropped through this path.
 - [ ] Flip `dumpsIndexSortOrder()` in `schema-dumper.test.ts` to the real
       `supports_index_sort_order?` predicate (version-gated) and drop the
       `adapterType !== "mysql"` workaround, matching Rails.
-- [ ] No regression on PG/SQLite; test:compare non-negative.
+- [ ] No regression on PG/SQLite; parity:test non-negative.
 
 ## Notes
 

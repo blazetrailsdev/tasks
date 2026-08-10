@@ -40,4 +40,4 @@ than at config-build time.
       resolved object already names its adapter.
 - [ ] The connect-time backfill in `establishWithDbConfig` becomes unnecessary
       and is removed (or reduced to a defensive no-op assertion).
-- [ ] api:compare + test:compare delta non-negative.
+- [ ] parity:api + parity:test delta non-negative.

@@ -44,6 +44,6 @@ the ignore-pattern accessors are `class_attribute` config.
   ported with a test where the DDL output is observable.
 - `quoted_include_columns_for_index`, `postgresql_version`, and the
   `*_ignore_pattern` accessors ported or skip-listed with reason.
-- `pnpm api:compare --package activerecord` shows schema-creation.ts,
+- `pnpm parity:api --package activerecord` shows schema-creation.ts,
   schema-dumper.ts, postgresql/schema-creation.ts, postgresql-adapter.ts at
   100%.

@@ -40,6 +40,6 @@ properties. Source under
   ported; `properties.ts` `each`/`key?` ported.
 - A test for `with_context` and at least one EncryptedAttributeType reader
   matching the Rails test name.
-- `pnpm api:compare --package activerecord` shows encryption.ts,
+- `pnpm parity:api --package activerecord` shows encryption.ts,
   encryption/encrypted-attribute-type.ts, encryption/configurable.ts,
   encryption/properties.ts at 100%.

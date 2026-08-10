@@ -46,4 +46,4 @@ per-adapter `limit` expectations for `integer_limits.c_int_1..8`
 - [ ] Converge the three deferred cases onto canonical `numeric_data` /
       `integer_limits` via `standard_dump`, restoring Rails' faithful
       ignore-regex forms and per-adapter `integer_limits` branches.
-- [ ] test:compare non-negative.
+- [ ] parity:test non-negative.

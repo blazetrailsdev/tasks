@@ -26,7 +26,7 @@ declarations in Rails-mirrored `*.test.ts` files that match no Rails test. They
 are a fidelity smell: files ballooned with bespoke / non-Rails assertions that
 make the suite slower and obscure true Rails parity. This RFC defines the
 campaign to burn the per-file `extra` count toward zero, one `*.test.ts` file per
-deletion PR, while leaving the `test:compare` parity metrics (`matched`,
+deletion PR, while leaving the `parity:test` parity metrics (`matched`,
 `matchedSkipped`, `missing`, `wrongDescribe`, `misplaced`) **bit-for-bit
 unchanged** — only `extra` / `totalExtra` may drop.
 
@@ -38,12 +38,12 @@ tests Rails has; this RFC owns the unmatched tests Rails does not.
 
 ## Motivation
 
-`test:compare` now reports a per-file **Extra** column (TS-only tests matching no
+`parity:test` now reports a per-file **Extra** column (TS-only tests matching no
 Rails test) plus `--sort-extra` / `--min-extra=N` triage flags, and emits
 per-file `extra` / per-package `totalExtra` in `convention-comparison.json`
 (shipped in trails PR #3825, `scripts/test-compare/test-compare.ts`).
 
-That surfaced the problem. Snapshot — `pnpm test:compare --cached --package
+That surfaced the problem. Snapshot — `pnpm parity:test --cached --package
 activerecord --sort-extra`, **2026-06-21**: `@blazetrails/activerecord` carries
 **3403 extra (TS only)** tests. Top offenders:
 
@@ -65,7 +65,7 @@ Why this is debt, not coverage:
 - **Fidelity.** Our north star is Rails parity. A test with no Rails counterpart
   asserts behavior Rails never specified — it pins trails to an _invented_
   contract that may itself be a deviation, and it inflates the suite the
-  `test:compare` gate is meant to keep honest.
+  `parity:test` gate is meant to keep honest.
 - **Cost.** The AR suite forks 6 workers per invocation; 3403 redundant tests are
   pure CI tax (the very `mysql:8` DDL cost RFC 0028 is fighting).
 - **Noise.** Bespoke tests are where shared-table flakes and bespoke-schema
@@ -83,7 +83,7 @@ For every `it`/`test` counted as `extra` in a file, classify it:
 1. **Genuine Rails test in the wrong place → MOVE.** It exists in Rails but under
    a different file/describe. This is _misplaced_, not extra-to-delete, and is
    **out of scope** for this RFC's deletion stories — handle it under the
-   existing misplaced/wrong-describe workflow. (If `test:compare` already counts
+   existing misplaced/wrong-describe workflow. (If `parity:test` already counts
    it as `misplaced`/`wrongDescribe` it is not in the `extra` bucket anyway.)
 
 2. **TS-only, no Rails equivalent, no trails-specific invariant → DELETE.** The
@@ -96,7 +96,7 @@ For every `it`/`test` counted as `extra` in a file, classify it:
    in project memory). These must **not** be lost. Move them _out_ of the
    Rails-mirrored `*.test.ts` into a clearly-marked non-mirrored file so they stop
    counting as `extra`. Convention: a sibling file named `*.trails.test.ts`
-   (e.g. `relations.trails.test.ts`), which `test:compare` does not pair against
+   (e.g. `relations.trails.test.ts`), which `parity:test` does not pair against
    any `*_test.rb` and therefore excludes from the `extra` tally. The relocated
    test keeps its assertion verbatim; only its home file changes.
 
@@ -163,7 +163,7 @@ deletion PR trips the 500 LOC ceiling it is meant to be exempt from. The deletio
 stories carry it as a `deps`/`blocked-by` edge so the scheduler cannot release a
 deletion PR ahead of it. See Open question 3.
 
-### The hard invariant: `test:compare` must not move
+### The hard invariant: `parity:test` must not move
 
 Deleting _extra_ (unmatched) tests must leave the package's `matched`,
 `matchedSkipped`, `missing`, `wrongDescribe`, and `misplaced` counts **identical**
@@ -176,9 +176,9 @@ reject the PR.
 
 ```sh
 # before (on origin/main)
-pnpm test:compare --cached --json --package activerecord > /tmp/before.json
+pnpm parity:test --cached --json --package activerecord > /tmp/before.json
 # after (on the PR branch)
-pnpm test:compare --cached --json --package activerecord > /tmp/after.json
+pnpm parity:test --cached --json --package activerecord > /tmp/after.json
 # every count must be identical except extra / totalExtra
 ```
 
@@ -191,14 +191,14 @@ a story is not done until its PR demonstrates it.
 
 The 3403 figure is a 2026-06-21 snapshot. Counts drift as 0030 un-skips land and
 as deletion PRs merge, so each story **must** re-run
-`pnpm test:compare --cached --package activerecord --sort-extra` (and `--json`
+`pnpm parity:test --cached --package activerecord --sort-extra` (and `--json`
 for the gate) at start and cite the fresh per-file `extra` it targets.
 
 ## Alternatives considered
 
 - **Bulk multi-file deletion PRs.** Faster on paper, but collides with the
   one-agent-per-PR model, produces sibling-agent file conflicts on shared test
-  files, and makes the `test:compare` invariant harder to attribute per file.
+  files, and makes the `parity:test` invariant harder to attribute per file.
   Rejected for the same reasons the repo already forbids fan-out.
 - **Keep bespoke tests, just tag them.** Tagging without relocating leaves them in
   the `extra` tally and in the fork cost; only relocation out of the mirrored file
@@ -235,7 +235,7 @@ Phase N+1 is scheduled only after Phase N's snapshot is re-taken, so each phase
 works against fresh counts. Story IDs are filled in as the deletion stories are
 created from this merged RFC. Each story body must cite its fresh `--sort-extra`
 per-file `extra`, carry the LOC carve-out note, and embed the before/after
-`test:compare --json` invariant as its acceptance gate.
+`parity:test --json` invariant as its acceptance gate.
 
 ## Open questions
 
@@ -251,7 +251,7 @@ per-file `extra`, carry the LOC carve-out note, and embed the before/after
    First Phase 1 story must read the `extra`-counting code, confirm the suffix is
    excluded, and pin the convention there.
 2. **Do relocated `*.trails.test.ts` tests need their own gate?** They run in CI
-   like any test but are invisible to `test:compare`. Recommendation: yes — they
+   like any test but are invisible to `parity:test`. Recommendation: yes — they
    stay subject to normal `vitest` CI; no special gate needed.
 3. **Where does the cross-repo carve-out land?** The CLAUDE.md exemption and the
    `git diff --shortstat` guard live in **trails**, but this RFC merges in

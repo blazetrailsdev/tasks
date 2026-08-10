@@ -29,12 +29,12 @@ for (not trails impl gaps — those are tracked separately under
 - `inspect instance with lambda date formatter` — `Time::DATE_FORMATS` registry.
 
 They currently sit as documented skips (keeps the Rails test names visible to
-test:compare). Owner question raised during review: keep them as documented
+parity:test). Owner question raised during review: keep them as documented
 skips, or delete them as bespoke-test bloat per this RFC.
 
 ## Acceptance criteria
 
 - Decide keep-as-skip vs delete for the 11 Ruby-only CoreTest cases in
   `packages/activerecord/src/core.test.ts`.
-- If deleting, remove them and note the test:compare impact; if keeping, no code
+- If deleting, remove them and note the parity:test impact; if keeping, no code
   change (close as ratified with rationale).

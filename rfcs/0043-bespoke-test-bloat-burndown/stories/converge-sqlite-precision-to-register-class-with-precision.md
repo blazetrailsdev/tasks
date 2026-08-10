@@ -63,7 +63,7 @@ lookup-time mechanism as limit, and `lookup_cast_type_from_column` is just
   now flows through the factory like limit does.
 - No regression in `date-time-precision.test.ts`, `schema-dumper*.test.ts`
   (datetime precision dump), sqlite introspection/copy-table, or
-  api:compare / test:compare delta. Note copy_table (`sqlite3-adapter.ts`
+  parity:api / parity:test delta. Note copy_table (`sqlite3-adapter.ts`
   ~2682) reads the raw `sqlType`; carrying `datetime(6)` there is a fidelity
   improvement, verify the copy-table suite stays green.
 

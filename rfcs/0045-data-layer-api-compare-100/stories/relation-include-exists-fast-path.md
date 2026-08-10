@@ -51,6 +51,6 @@ on large unloaded relations.
   - unloaded relations without offset/limit/having call `exists?(id)` with a
     composite-PK-aware id (mirroring `record.class.composite_primary_key?`).
 - `member` stays a thin alias of `include` (Rails `alias :member? :include?`).
-- relation/finder_methods.rb stays at 100% api:compare; no test:compare
+- relation/finder_methods.rb stays at 100% parity:api; no parity:test
   regression (add/port the Rails `test_include?` / `test_member?` coverage if
   not already present).

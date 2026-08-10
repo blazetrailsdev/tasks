@@ -37,5 +37,5 @@ these are thin forwarding/parse methods.
   OID::Range.
 - A test for the Array subtype forwarding (e.g. a timestamp-array casting in the
   app time zone) matching the Rails test name.
-- `pnpm api:compare --package activerecord` shows postgresql/oid/array.ts and
+- `pnpm parity:api --package activerecord` shows postgresql/oid/array.ts and
   postgresql/oid/range.ts at 100%.

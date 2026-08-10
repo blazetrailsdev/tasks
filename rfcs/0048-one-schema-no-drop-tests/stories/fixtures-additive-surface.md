@@ -42,7 +42,7 @@ delegating aliases today; nothing about the runtime path changes.
       and untouched (no call-site migration in this story).
 - [ ] Convert ONE already-canonical file (e.g. `associations/collection-proxy.test.ts`)
       to `fixtures()` / `setupFixtures()` as a working proof; note the line delta.
-- [ ] `test:compare` unchanged (no test-name changes).
+- [ ] `parity:test` unchanged (no test-name changes).
 
 ## Notes
 

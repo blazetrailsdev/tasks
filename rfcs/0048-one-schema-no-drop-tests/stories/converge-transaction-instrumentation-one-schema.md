@@ -51,7 +51,7 @@ children`, and the three `TM path: ...` tests.
 - [ ] Delete the four trails-invented tests listed in Context.
 - [ ] Where a faithful port surfaces a trails impl gap, fix the impl or file a
       deviation under `0023-surfaced-deviations` and mark the case
-      tracked-pending-convergence. A temporary `test:compare` regression is
+      tracked-pending-convergence. A temporary `parity:test` regression is
       acceptable.
 - [ ] Single PR from main under the 500-LOC ceiling. Test names match Rails
       verbatim.
@@ -74,4 +74,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

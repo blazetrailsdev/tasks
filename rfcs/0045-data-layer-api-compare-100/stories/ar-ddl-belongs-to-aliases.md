@@ -45,6 +45,6 @@ introspection), and `migration.ts#current` are small real methods.
   `SKIP_GROUPS` entry with reason if trails standardizes on `reference` only.
 - `validated?`, `column_definitions`, `migration.ts#current` ported or
   skip-listed with reason.
-- `pnpm api:compare --package activerecord` shows command-recorder.ts,
+- `pnpm parity:api --package activerecord` shows command-recorder.ts,
   schema-definitions.ts, schema-statements.ts, abstract-adapter.ts,
   sqlite3-adapter.ts, migration.ts at 100%.

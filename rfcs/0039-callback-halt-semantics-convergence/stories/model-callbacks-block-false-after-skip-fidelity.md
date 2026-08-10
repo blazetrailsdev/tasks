@@ -45,7 +45,7 @@ Because of this gap, the trails port of that test was implemented with a
 `beforeValidation` halt rather than the Rails block-return mechanism; in PR #3700
 its body was converted to `throwAbort()` — so the test named "...if the block
 returns false" no longer exercises a `false` block return at all. The Rails name
-is kept (test:compare match) but the assertion is now satisfied via the sentinel,
+is kept (parity:test match) but the assertion is now satisfied via the sentinel,
 not the mechanism the name describes.
 
 Open question to resolve during this story: determine the EXACT Rails mechanism
@@ -72,5 +72,5 @@ Key files:
       false, no throwAbort) reproduces Rails' skip, OR document the deviation as
       tracked-pending-convergence with a clear rationale.
 - [x] Rewrite the trails test to faithfully mirror Rails `ModelCallbacks`
-      (block-return mechanism), without renaming it; test:compare match preserved.
+      (block-return mechanism), without renaming it; parity:test match preserved.
 - [x] No regression in the abort-sentinel halting behavior from PR #3700.

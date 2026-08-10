@@ -48,7 +48,7 @@ in `relation.ts`).
   `flatten!` / `compact_blank!` normalization semantics, including the custom
   message for `select` ("Call `select' with at least one field.").
 - Tests asserting `ArgumentError` (the trails equivalent) on the no-arg form,
-  named to match the corresponding Rails tests (`test:compare` fidelity) — read
+  named to match the corresponding Rails tests (`parity:test` fidelity) — read
   the Rails tests first.
 - The wide call-mismatches artifact no longer flags
   `check_if_method_has_arguments!` for these pairs.

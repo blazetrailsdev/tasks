@@ -36,7 +36,7 @@ real fixtures; no bespoke tables, no invented columns, no `_tableName` hack.
 - [ ] Canonical schema only; add to `TEST_SCHEMA` if schema.rb has something it lacks.
 - [ ] Surfaced impl gaps → fix impl or file under `0023-surfaced-deviations`
       (tracked-pending-convergence); do not bend the test. Temporary
-      `test:compare` regression acceptable — record the un-skip.
+      `parity:test` regression acceptable — record the un-skip.
 - [ ] 500-LOC ceiling; single PR from main; all-or-nothing per file.
 
 ## RFC 0048 working notes (added 2026-07-01)
@@ -57,4 +57,4 @@ Two conventions apply when (re)writing tests under this RFC:
   faithful word-for-word mirror of its Rails source. Any test case with **no
   Rails counterpart** (a trails-specific extension) belongs in a sibling
   `<name>.trails.test.ts` file — keep it out of the Rails-mirrored `.test.ts` so
-  `test:compare` maps cleanly.
+  `parity:test` maps cleanly.

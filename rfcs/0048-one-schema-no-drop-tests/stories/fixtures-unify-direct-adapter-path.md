@@ -42,7 +42,7 @@ retires. (Final default-off lives in `fixtures-drop-schema-arg-default-off`.)
 - [ ] The direct-adapter `useFixtures` path / overload is DELETED — the single
       fixture path is the handler-resolved one. (Retain a documented bespoke-table
       escape hatch only if a non-canonical table genuinely needs it.)
-- [ ] `test:compare` does not regress; no test names change.
+- [ ] `parity:test` does not regress; no test names change.
 
 ## Notes
 

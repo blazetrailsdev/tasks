@@ -55,4 +55,4 @@ review on #4779.
   asserts it raises (add to `enum.test.ts` if a Rails enum_test.rb case covers
   it, else a `*.trails.test.ts` sibling — the camelCase alias surface is
   trails-specific).
-- Existing enum tests stay green; `api:compare` stays green for `enum.rb`.
+- Existing enum tests stay green; `parity:api` stays green for `enum.rb`.

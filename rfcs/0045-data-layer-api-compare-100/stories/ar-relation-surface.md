@@ -55,7 +55,7 @@ transaction, sanitize_sql_like, name, klass` (`delegation.rb:106`
   reach by another name, port it.
 - `member?`, `any?`, `build_count_subquery`, `perform_calculation` ported or
   skip-listed with reason.
-- `pnpm api:compare --package activerecord` shows relation.ts,
+- `pnpm parity:api --package activerecord` shows relation.ts,
   relation/query-methods.ts, relation/delegation.ts, relation/finder-methods.ts,
   relation/where-clause.ts, relation/calculations.ts at 100%.
 - PR stays under 500 LOC; if genuine ports push it over, register the overflow

@@ -17,13 +17,13 @@ blocked-by: null
 ## Context
 
 `packages/activerecord/src/validations/uniqueness-validation.test.ts` carries **57 extra (TS-only) tests** -- `it`/`test`
-declarations matching no Rails test (`test:compare` snapshot 2026-06-23,
+declarations matching no Rails test (`parity:test` snapshot 2026-06-23,
 matched=55, rubyTestCount=55). Per RFC 0043 these are
 bloat to retire. Rails counterpart:
 `vendor/rails/activerecord/test/cases/validations/uniqueness_validation_test.rb`.
 
 Re-derive the exact current `extra` count from a fresh
-`pnpm test:compare --package activerecord --json` run before starting (the
+`pnpm parity:test --package activerecord --json` run before starting (the
 snapshot above may have drifted).
 
 ## Acceptance criteria
@@ -38,7 +38,7 @@ snapshot above may have drifted).
   `*.trails.test.ts`). Exempt from the 500-LOC ceiling (pure-deletion carve-out).
 - `extra`/`totalExtra` for this file drops; `matched`, `matchedSkipped`,
   `missing`, `wrongDescribe`, `misplaced` stay **bit-for-bit unchanged** (verify
-  with `pnpm test:compare --package activerecord`).
+  with `pnpm parity:test --package activerecord`).
 - No test renamed or reworded; the remaining file passes
   (`pnpm vitest run packages/activerecord/src/validations/uniqueness-validation.test.ts`).
 

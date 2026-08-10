@@ -77,7 +77,7 @@ Trails already has every primitive needed to converge:
 - Tests that are legitimately SQLite-specific by nature (if any survive audit)
   are the only ones allowed a `skipIf`, and each must carry a one-line reason
   tying it to a Rails `sqlite3_adapter`-only equivalent.
-- Test names stay verbatim. `api:compare` and `test:compare` deltas are
+- Test names stay verbatim. `parity:api` and `parity:test` deltas are
   non-negative.
 
 ## Notes

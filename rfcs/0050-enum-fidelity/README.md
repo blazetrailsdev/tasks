@@ -64,7 +64,7 @@ Converge the enum path end-to-end:
 ## Verification
 
 The `it.skip`-ped enum cases in `enum.test.ts` un-skip and pass on all three
-adapter lanes; `api:compare` enum-method parity holds.
+adapter lanes; `parity:api` enum-method parity holds.
 
 ## Open questions
 

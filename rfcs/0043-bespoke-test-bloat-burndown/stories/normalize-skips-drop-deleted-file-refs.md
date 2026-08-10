@@ -28,4 +28,4 @@ PR #4166 within its one-file-per-PR scope.
 - Remove the `|| p === "disconnected.test.ts"` clause at
   `scripts/test-compare/normalize-skips.ts:812`, keeping the
   `invalid-connection.test.ts` handling intact.
-- No change to test:compare/api:compare parity metrics.
+- No change to parity:test/parity:api parity metrics.

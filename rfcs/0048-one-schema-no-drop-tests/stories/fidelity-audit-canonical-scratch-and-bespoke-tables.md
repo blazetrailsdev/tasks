@@ -65,7 +65,7 @@ Bespoke tables not backed by canonical `TEST_SCHEMA`:
 - No inline/bespoke table declarations for tables Rails backs in `schema.rb` — add
   the missing table to canonical `TEST_SCHEMA` and ride it (e.g. `chat_messages`).
 - Each converted file remains a faithful Rails port (names + assertions unchanged);
-  `test:compare` does not regress.
+  `parity:test` does not regress.
 - Split across PRs by file/sub-cluster under the 500-LOC ceiling; one file or
   sub-cluster per PR; do not stack.
 

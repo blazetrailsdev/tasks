@@ -35,7 +35,7 @@ classes are canonical, not bespoke).
       association-target-only (no bespoke same-named class), opt them into the
       autoload index, and delete those registrations.
 - [ ] Each converted file's tests stay green on all lane adapters; no test
-      names change; test:compare does not regress.
+      names change; parity:test does not regress.
 - [ ] Bespoke/same-named-class files are left alone (documented per file).
 
 ## Notes

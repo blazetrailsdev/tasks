@@ -31,4 +31,4 @@ Rails source: `activerecord/test/cases/associations/has_many_associations_test.r
 - Determine whether each test can be ported using a different canonical model pair (that has the required FK/through setup in canonical schema) or must remain permanently skipped.
 - If porteable: un-skip and make green on all three adapters.
 - If not: convert `it.skip` to `it.skip(/* BLOCKED: ... */)` with a permanent justification comment and file no further story.
-- `pnpm test:compare` delta is non-negative.
+- `pnpm parity:test` delta is non-negative.

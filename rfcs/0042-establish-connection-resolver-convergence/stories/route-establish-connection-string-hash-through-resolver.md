@@ -39,4 +39,4 @@ target: resolve → object → handler verbatim.
       (`establishWithDbConfig`/the shared helper).
 - [ ] Bespoke `resolveConfig` (`connection-handling.ts:861`) is deleted.
 - [ ] `validateConfigDefaultTimezone` tz handling and `buildAdapterArg` preserved.
-- [ ] api:compare + test:compare delta non-negative.
+- [ ] parity:api + parity:test delta non-negative.

@@ -44,4 +44,4 @@ schema-qualified index-name handling is fixed.
       Rails' PG `quoted_scope` split of schema vs table).
 - [ ] Un-skip `IndexForTableWithSchemaMigrationTest > add and remove index` in
       `packages/activerecord/src/migration.test.ts`; it passes on the PG lane.
-- [ ] Test name unchanged; test:compare does not regress.
+- [ ] Test name unchanged; parity:test does not regress.

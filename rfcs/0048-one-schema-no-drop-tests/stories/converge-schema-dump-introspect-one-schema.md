@@ -31,7 +31,7 @@ fidelity-only.
 
 - [ ] For each file below, the trails test mirrors its named Rails source
       **word-for-word as closely as TS allows**: same `describe`/`it` names,
-      same setup/fixtures, same assertions. Test names are how `test:compare`
+      same setup/fixtures, same assertions. Test names are how `parity:test`
       maps to Rails — never invent or reword them.
 - [ ] Ride canonical `TEST_SCHEMA` + official `test-helpers/models/*` + real
       fixtures only. No bespoke tables, no invented columns, and **no
@@ -41,7 +41,7 @@ fidelity-only.
 - [ ] Where a faithful port surfaces a trails impl gap, fix the impl to match
       Rails or file a deviation under `0023-surfaced-deviations` and mark the
       case tracked-pending-convergence. Do not bend the test to pass; a
-      temporary `test:compare` regression is acceptable (record the un-skip).
+      temporary `parity:test` regression is acceptable (record the un-skip).
 - [ ] Confirm against the Rails source, not prior trails behavior. Split across
       PRs by file under the 500-LOC ceiling; each file converts all-or-nothing.
 

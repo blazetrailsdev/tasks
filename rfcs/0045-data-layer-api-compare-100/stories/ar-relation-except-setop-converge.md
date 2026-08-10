@@ -38,5 +38,5 @@ story #4050). `Querying#except` (Base.except) was already made skip-keys-only.
   no Relation branch).
 - Update the 4 existing SQL-EXCEPT call sites/tests to the new name (test names
   unchanged).
-- `api:compare --package activerecord` stays at querying.ts 100% / no relation.ts
+- `parity:api --package activerecord` stays at querying.ts 100% / no relation.ts
   regression; SQL EXCEPT behavior preserved under the new name.

@@ -1,6 +1,6 @@
 ---
 rfc: "0045-data-layer-api-compare-100"
-title: "Data layer api:compare to 100% method parity"
+title: "Data layer parity:api to 100% method parity"
 status: closed
 created: 2026-06-23
 updated: 2026-07-05
@@ -21,7 +21,7 @@ clusters:
 ## Summary
 
 The data layer — `arel`, `activerecord`, `activemodel` — sits at **94.8%**
-`api:compare` method parity (6041/6429 matched, **388 missing**). This RFC frames
+`parity:api` method parity (6041/6429 matched, **388 missing**). This RFC frames
 the campaign to drive all three packages to **100%** and registers per-cluster
 stories that, shipped, close the gap. Every gap is triaged into one of three
 buckets — **(a) genuine port**, **(b) convention/skip entry**, **(c) arity/
@@ -31,7 +31,7 @@ No stubs.
 
 ## Motivation
 
-Per-package state from `pnpm api:compare` (run 2026-06-23):
+Per-package state from `pnpm parity:api` (run 2026-06-23):
 
 | Package        | Matched / Total | %         | Missing |
 | -------------- | --------------- | --------- | ------- |
@@ -125,7 +125,7 @@ otherwise collide.
 - **Call-set / options-key / literal advisory burndown.** Those dimensions have
   their own RFCs (e.g. 0044 call-set parity). This RFC is the method-name
   (match/miss) dimension plus the arity sub-fix.
-- **Widening the comparator.** No changes to what `api:compare` counts; we burn
+- **Widening the comparator.** No changes to what `parity:api` counts; we burn
   down the current output.
 - **`super`-call and private-method fidelity.** Out of the name-match scope.
 
@@ -157,7 +157,7 @@ Leaf clusters first (no deps), aggregators last.
 
 ## Verification
 
-`pnpm api:compare --package arel`, `--package activemodel`, and `--package
+`pnpm parity:api --package arel`, `--package activemodel`, and `--package
 activerecord` each report **100%** (0 missing). Per story, the named files reach
 100% in `output/api-comparison.json`. Arity advisory reaches 0 for arel and
 activemodel. Every skip added carries a reason and shows in the generated

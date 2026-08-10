@@ -57,4 +57,4 @@ match Ruby's exactly for cross-runtime compatibility.
       `message-pack.test.ts`) cover representative magnitudes/precisions
       (integers-as-decimal, fractional, negative, very large precision); mirror
       any corresponding Rails test names verbatim.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

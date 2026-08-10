@@ -42,7 +42,7 @@ without touching the committed allowlist.
 
 Wide run (`API_COMPARE_WIDE_CALLS` widening of the `significant` set, all
 ported names admitted except `super`), regenerated via
-`pnpm api:compare --package <pkg>`:
+`pnpm parity:api --package <pkg>`:
 
 | Package      | Matched pairs checked | Pairs flagged (wide) | Missing-call rows (wide) |
 | ------------ | --------------------- | -------------------- | ------------------------ |

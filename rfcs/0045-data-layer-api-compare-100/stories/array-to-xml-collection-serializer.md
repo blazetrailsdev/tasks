@@ -37,5 +37,5 @@ rubyFiles: `relation.rb` + `relation/delegation.rb`).
   per-record element name, `type="array"`, builder options like `root:`,
   `skip_types:`, `:only`/`:except`).
 - Remove the `to_xml` entry from `SCOPED_SKIP_GROUPS`; relation.rb /
-  relation/delegation.rb stay at 100% api:compare; no test:compare regression.
+  relation/delegation.rb stay at 100% parity:api; no parity:test regression.
 - Test names match Rails verbatim.

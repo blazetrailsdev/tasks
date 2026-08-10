@@ -33,7 +33,7 @@ and CI fails on any unexplained flag.
   equivalent) keyed by `tsFile + rubyName + call`, each entry carrying a
   one-line `reason` documenting why the call is satisfied by a different path.
   Seed it empty (or only with entries the burndown stories add).
-- A check (test or `pnpm api:compare` exit code / dedicated script) that fails
+- A check (test or `pnpm parity:api` exit code / dedicated script) that fails
   when `call-mismatches.json` contains an entry not in the exclude baseline.
 - The baseline is validated to only-shrink the way other excludes are (no
   stale entries pointing at calls that no longer flag).
