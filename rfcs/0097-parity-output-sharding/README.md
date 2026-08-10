@@ -1,7 +1,7 @@
 ---
 rfc: "0097-parity-output-sharding"
 title: "Per-source-file sharding for parity registers and artifacts"
-status: draft
+status: active
 created: 2026-08-10
 updated: 2026-08-10
 owner: "@deanmarano"
