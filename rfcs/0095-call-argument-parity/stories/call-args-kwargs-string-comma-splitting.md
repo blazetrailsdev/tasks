@@ -1,6 +1,6 @@
 ---
 title: "A kwarg string value containing a comma silently skips the whole call site"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T01:29:37Z"
+assignee: "call-args-arel-population-recheck"
 blocked-by: null
 closed-reason: null
 ---
