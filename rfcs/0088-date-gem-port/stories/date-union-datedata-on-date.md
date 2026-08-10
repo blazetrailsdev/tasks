@@ -58,4 +58,4 @@ placeholder this story removes.
 - [ ] `Date.new(2001, 1, 1).plus(new Rational(1, 2)).dayFraction` is
       `Rational(1, 2)` and the value is a `Date`, not a `DateTime`.
 - [ ] `pnpm test:compare --package date` does not regress; `pnpm vitest run
-  packages/date/src` is green.
+packages/date/src` is green.
