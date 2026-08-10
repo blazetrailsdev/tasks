@@ -1,6 +1,6 @@
 ---
 title: "Port Date#eql? and Date#hash, the unported neighbours of the comparison cluster"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T00:56:48Z"
+assignee: "converge-date-infinity-nan-and-coerce-arms-to-lib-date-rb"
 blocked-by: null
 closed-reason: null
 ---
