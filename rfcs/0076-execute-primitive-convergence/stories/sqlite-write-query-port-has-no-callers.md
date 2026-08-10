@@ -1,6 +1,6 @@
 ---
 title: "SQLite's ported write_query? is unwired; checkIfWriteQuery uses the sql-classification helper instead"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
