@@ -44,5 +44,5 @@ indices Rails uses — converge to the canonical fixture while branching.)
       asserting the option-less index line on unsupported backends.
 - [ ] Drive the assertion off the canonical `companies` indices Rails dumps
       (drop the bespoke `users` index setup) where feasible.
-- [ ] `test:compare --package activerecord --gates` stays at 0 over-gated for
+- [ ] `parity:test --package activerecord --gates` stays at 0 over-gated for
       schema-dumper.test.ts.

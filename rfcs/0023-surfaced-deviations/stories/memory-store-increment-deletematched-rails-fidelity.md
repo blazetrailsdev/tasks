@@ -52,5 +52,5 @@ ratified).
 - `deleteMatched` applies a Rails-equivalent `keyMatcher` (namespace prefixing)
   via `mergedOptions` before matching.
 - `cleanup` threads `mergedOptions(options)` for signature fidelity.
-- api:compare / test:compare delta non-negative. 500-LOC ceiling, single PR.
+- parity:api / parity:test delta non-negative. 500-LOC ceiling, single PR.
 - Hard rules: NO `node:*` imports, NO `process.*` refs, no new runtime deps.

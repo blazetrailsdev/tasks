@@ -60,7 +60,7 @@ Consequences of the deviation (all currently benign, documented in PR #3998):
       (no `Reflect.get` shadow ahead of it) — verify the clobber-prevention
       semantics that `DelegationCachingTest` guards still hold.
 - [ ] No observable behavior change for existing delegation/scoping/collection-
-      proxy tests; `api:compare` / `test:compare` deltas non-negative.
+      proxy tests; `parity:api` / `parity:test` deltas non-negative.
 - [ ] If the refactor is deemed not worth the architectural churn, record the
       decision (tracked-pending-convergence) with the rationale rather than
       silently closing.

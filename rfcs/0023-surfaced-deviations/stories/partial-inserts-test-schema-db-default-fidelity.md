@@ -65,5 +65,5 @@ marked with this story id. This story's completion removes that opt-out.
       unnecessary (all counter-cache tests pass under `partial_inserts = true`),
       so #3745 should drop the opt-out hunk when it rebases.
 - [x] No regression elsewhere. All 104 counter-cache tests pass under both
-      ambients; no test names changed (test:compare delta 0); test-only change
-      (api:compare delta 0).
+      ambients; no test names changed (parity:test delta 0); test-only change
+      (parity:api delta 0).

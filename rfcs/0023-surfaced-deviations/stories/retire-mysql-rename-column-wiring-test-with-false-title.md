@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Not a Rails-fidelity divergence: deletes a trails-only wiring describe that test:compare does not match; the underlying body was already converged in #6171."
+closed-reason: "Not a Rails-fidelity divergence: deletes a trails-only wiring describe that parity:test does not match; the underlying body was already converged in #6171."
 ---
 
 ## Context
@@ -50,7 +50,7 @@ misleading title in the tree.
 
 Delete the `AbstractMysqlAdapter#renameColumn wiring` describe. It is a
 trails-only wiring test with no Rails counterpart — it is not matched by
-`test:compare`, so deleting it loses no parity credit — and it exists to pin a
+`parity:test`, so deleting it loses no parity credit — and it exists to pin a
 call that no longer exists. The two behaviours it still covers (wrapping
 `renameColumnForAlter`'s fragment in `ALTER TABLE`, then calling
 `renameColumnIndexes`) are the whole of a two-line Rails body already exercised
@@ -68,5 +68,5 @@ unconditional.
 - [ ] No test in the tree asserts the absence of a call while its title claims
       the call happens.
 - [ ] No test name is reworded in place.
-- [ ] `pnpm test:compare` delta is non-negative.
+- [ ] `pnpm parity:test` delta is non-negative.
 - [ ] MySQL lane green.

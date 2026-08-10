@@ -89,5 +89,5 @@ gate; split each downstream fault into its own story if independent.
 - [ ] `use-fixtures.test.ts:743` conformance stays green; canonical rows hydrate as
       their STI subclass (assert e.g. a `Firm` companies row is `instanceof Firm`).
 - [ ] `Company.find(id)` and `Company.new(type:)` agree on the resolved class.
-- [ ] `api:compare`/`test:compare` deltas non-negative; named-Rails test
+- [ ] `parity:api`/`parity:test` deltas non-negative; named-Rails test
       counterparts kept verbatim.

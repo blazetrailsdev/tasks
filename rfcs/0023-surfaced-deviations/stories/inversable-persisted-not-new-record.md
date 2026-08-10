@@ -46,4 +46,4 @@ existing `isNewRecord()` short-circuit to limit blast radius; the
       destroyed record on either side short-circuits to inversable, matching
       Rails `inversable?`.
 - [ ] Verify no inverse-of / destroy-path test regresses (inverse-associations,
-      destroy-\* suites); api:compare / test:compare delta non-negative.
+      destroy-\* suites); parity:api / parity:test delta non-negative.

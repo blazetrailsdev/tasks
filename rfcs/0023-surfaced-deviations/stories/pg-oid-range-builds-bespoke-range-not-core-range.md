@@ -66,5 +66,5 @@ a rename here changes a public name.
       `isForceEquality` is `instanceof` against it.
 - [ ] PG range column tests (`tsrange`, `int4range`, `daterange`, …) pass
       unchanged.
-- [ ] `pnpm api:extra --package activerecord` novel count drops.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api:extra --package activerecord` novel count drops.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

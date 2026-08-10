@@ -54,4 +54,4 @@ the TDZ, so a green suite proves nothing here.
       story says explicitly why it must stay.
 - [ ] TDZ verified by plain-node import of `packages/globalid/dist/global-id.js`
       and `dist/signed-global-id.js` as entry modules, both orders.
-- [ ] globalid suite green; `api:compare --package globalid` stays 80/80.
+- [ ] globalid suite green; `parity:api --package globalid` stays 80/80.

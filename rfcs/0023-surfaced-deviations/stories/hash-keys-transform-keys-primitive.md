@@ -59,4 +59,4 @@ the two bodies diverge from Rails independently.
 
 - `stringifyKeys` and `symbolizeKeys` call `transformKeys`; neither carries its
   own key loop.
-- `hash-utils.json`'s two rows are deleted and `pnpm api:calls` is green.
+- `hash-utils.json`'s two rows are deleted and `pnpm parity:api:calls` is green.

@@ -75,6 +75,6 @@ does not pin the divergence — check the sqlite sibling before changing wording
 - [ ] The message opens with Rails' three lines verbatim
       (`postgresql_database_tasks.rb:116-121`).
 - [ ] The `run_cmd` / `run_cmd_error` row is deleted from the call-mismatch
-      baseline and `pnpm api:calls` is green.
-- [ ] `pnpm api:extra --package activerecord` does not gain a row.
+      baseline and `pnpm parity:api:calls` is green.
+- [ ] `pnpm parity:api:extra --package activerecord` does not gain a row.
 - [ ] Green on the PG lane.

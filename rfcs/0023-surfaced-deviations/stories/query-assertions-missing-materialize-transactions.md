@@ -43,4 +43,4 @@ needs its own verdict.
   justified at the call site if trails' async lease makes it impossible).
 - The other four `lease_connection` sites are triaged: implemented, or given a
   wide-exclude entry with a per-entry reason naming the sync-lease deviation.
-- `pnpm api:calls:wide` stays green.
+- `pnpm parity:api:calls` stays green.

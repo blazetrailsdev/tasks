@@ -37,4 +37,4 @@ go through `read_attribute_for_validation` (`send(attribute)`), which maps to
       importers across all packages.
 - [ ] Delete `validations/association-helpers.ts` (and its `.test.ts` if any), or
       wire the helper into a real caller with a covering test if a use is found.
-- [ ] Full validation + autosave suites pass; `api:compare` delta non-negative.
+- [ ] Full validation + autosave suites pass; `parity:api` delta non-negative.

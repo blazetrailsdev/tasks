@@ -57,4 +57,4 @@ consumers. Sequence them, or expect to touch the same lines twice.
       what survives is justified at the call site against Rails.
 - [ ] The `t.virtual` declared-type behaviour `_baseColumnType` encodes is
       preserved (it is exercised by the generated-column tests).
-- [ ] api:compare delta non-negative; green on all three lanes.
+- [ ] parity:api delta non-negative; green on all three lanes.

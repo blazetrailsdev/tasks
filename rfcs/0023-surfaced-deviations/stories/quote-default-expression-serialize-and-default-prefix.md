@@ -74,4 +74,4 @@ method non-substitutable for Rails' and keeps the wide ratchet suppressed.
       indirection / Rails' `value.call` has no TS token counterpart).
 - [ ] Schema dumps and `add_column_options!` output unchanged on all three
       adapters (this is a refactor of where the prefix lives, not of emitted SQL).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

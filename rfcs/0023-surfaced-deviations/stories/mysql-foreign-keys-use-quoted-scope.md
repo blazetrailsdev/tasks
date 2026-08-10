@@ -65,4 +65,4 @@ quotedScope.call(this, tableName)` and interpolates `scope.schema` /
       `quoted_scope`); the unqualified case is unchanged.
 - [ ] Existing `mysql/schema-statements.test.ts` foreignKeys cases and the
       `mysql2-adapter.test.ts` foreignKeys cases stay green on MySQL 8 + MariaDB.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

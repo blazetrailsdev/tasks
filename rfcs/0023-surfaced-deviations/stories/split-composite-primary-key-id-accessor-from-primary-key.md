@@ -50,4 +50,4 @@ The reader `readId` has the mirror-image problem: Rails' `#id` is
   with the Rails behaviour it stands in for, or removed if `_write_attribute`
   already covers it.
 - `primary-keys.test.ts`, `primary-keys.trails.test.ts` stay green;
-  api:compare and test:compare deltas non-negative.
+  parity:api and parity:test deltas non-negative.

@@ -97,7 +97,7 @@ implemented by returning a thenable — NOT by branching on call style.
       through the readers.
 - [ ] Existing sync `asJson` / `serializableHash` callers and their types
       audited for the thenable return; `serialization.rb` / `serializers/json.rb`
-      api:compare delta stays non-negative.
+      parity:api delta stays non-negative.
 
 ## Relationship to PR #3138 (b2)
 

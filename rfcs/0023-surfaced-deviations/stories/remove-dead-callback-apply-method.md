@@ -27,7 +27,7 @@ In PR #3700 its before-branch was converted from `... !== false` to a try/catch
 on the abort sentinel for consistency, but since nothing calls it, it is pure
 maintenance weight. Rails has no direct analogue invoked this way (the dispatch
 happens through `CallbackSequence`/`Filters`), so removing it does not reduce
-api:compare fidelity.
+parity:api fidelity.
 
 Key file:
 
@@ -38,4 +38,4 @@ Key file:
 
 - [ ] Confirm zero callers (in-tree + generated) of `Callback.apply`.
 - [ ] Remove `Callback.apply` and any helpers it solely used.
-- [ ] api:compare / test:compare delta non-negative; typecheck + lint clean.
+- [ ] parity:api / parity:test delta non-negative; typecheck + lint clean.

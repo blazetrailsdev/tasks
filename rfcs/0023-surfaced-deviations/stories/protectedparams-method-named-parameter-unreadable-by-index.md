@@ -49,4 +49,4 @@ living only in the file's docblock.
   pin both halves.
 - If not closable, the docblock note is the deviation's permanent home and this
   story closes as accepted-deviation.
-- `pnpm api:compare --package activerecord-test-support` stays at 32/32.
+- `pnpm parity:api --package activerecord-test-support` stays at 32/32.

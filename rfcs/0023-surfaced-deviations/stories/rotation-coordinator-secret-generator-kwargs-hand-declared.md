@@ -55,4 +55,4 @@ call-mismatch for `filter_map` is baselined at
 - If the current shape is kept, the reason is recorded once at the call site and
   the wide-exclude entry points at it.
 - `pnpm typecheck`, `pnpm lint`, and the messages tests stay green;
-  `api:compare` for `messages/rotation_coordinator.rb` stays 11/11.
+  `parity:api` for `messages/rotation_coordinator.rb` stays 11/11.

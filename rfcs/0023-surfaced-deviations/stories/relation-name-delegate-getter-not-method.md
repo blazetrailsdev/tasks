@@ -49,6 +49,6 @@ identical.
   backing member, or a declaration-merge trick that keeps `name` off the
   structural surface used for `{ name }` matching while still resolving at the
   call site.
-- api:compare relation.rb stays at 100%; no arity regression on `name`.
+- parity:api relation.rb stays at 100%; no arity regression on `name`.
 - If no viable getter strategy exists under TS structural typing, close as
   track-pending-convergence with the evidence (never wontfix).

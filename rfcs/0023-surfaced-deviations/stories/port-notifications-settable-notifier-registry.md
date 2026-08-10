@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-api:compare reports `notifications.rb` at 8/11 methods — the three unmatched are
+parity:api reports `notifications.rb` at 8/11 methods — the three unmatched are
 `notifier`, `notifier=`, and `registry`
 (`vendor/rails/activesupport/lib/active_support/notifications.rb:198-266`).
 trails models `ActiveSupport::Notifications` as a static class with a private
@@ -43,4 +43,4 @@ version approximates it without a real swap.
       `registry`.
 - [ ] If the settable path is taken, port `test_subscribing_to_instrumentation_
 while_inside_it` with a real `notifier = Fanout.new` swap.
-- [ ] api:compare delta on `notifications.rb` non-negative.
+- [ ] parity:api delta on `notifications.rb` non-negative.

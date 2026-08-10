@@ -53,4 +53,4 @@ required arguments that TypeScript will happily accept as `undefined`).
       all three lanes (the SQLite override path is the one that regressed during
       #5571's development).
 - [ ] Decide and record whether sibling methods get the same guard, or why not.
-- [ ] No new extra API surface in `api:compare`.
+- [ ] No new extra API surface in `parity:api`.

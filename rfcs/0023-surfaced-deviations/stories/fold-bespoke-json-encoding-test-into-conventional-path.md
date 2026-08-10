@@ -45,4 +45,4 @@ conventional path.
 - `json-encoding.test.ts` is gone; no duplicate `describe("TestJSONEncoding")`.
 - Every Rails test name previously covered only by the flat file is present in
   `json/encoding.test.ts` (real or `it.skip`, verbatim Rails name).
-- `pnpm test:compare` delta for `encoding_test.rb` is non-negative.
+- `pnpm parity:test` delta for `encoding_test.rb` is non-negative.

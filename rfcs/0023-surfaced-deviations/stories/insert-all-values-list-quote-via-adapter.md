@@ -54,5 +54,5 @@ would delete the helper, its `@internal` export, the registration function, the
   relocated to whichever ported method now covers the behaviour; the Temporal,
   bigint, NaN-Date and circular-object cases it covers stay covered.
 - `pnpm vitest run packages/activerecord/src/insert-all.test.ts` and the
-  postgres/mysql insert_all lanes pass; `api:compare` / `test:compare` delta
+  postgres/mysql insert_all lanes pass; `parity:api` / `parity:test` delta
   non-negative.

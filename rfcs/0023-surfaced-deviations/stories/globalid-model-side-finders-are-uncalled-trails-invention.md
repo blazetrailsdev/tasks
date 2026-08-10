@@ -24,7 +24,7 @@ railtie injects only the instance-side `GlobalID::Identification` (`to_gid`
 family) onto `ActiveRecord::Base`. There is no `find_global_id` `def` anywhere in
 `vendor/rails` or the vendored globalid gem.
 
-Until #5368 they were hidden from `api:extra` by the `methods` arm of
+Until #5368 they were hidden from `parity:api:extra` by the `methods` arm of
 `AMBIENT_RAILTIE_MIXINS["ActiveRecord::Base"]`
 (`scripts/api-compare/extra-surface.ts`); that PR moved the justification onto
 the declarations as `@noRailsEquivalent` (RFC 0080), which made the deviation
@@ -50,7 +50,7 @@ stale.
 - Decide and record: delete the three finders, or keep them with a caller/test
   that justifies the surface. Deleting is the default given zero consumers.
 - If deleted: the three `@noRailsEquivalent` tags in `base.ts` go with them, and
-  `pnpm api:compare && pnpm api:extra` stays green with activerecord `Allowed`
+  `pnpm parity:api && pnpm parity:api:extra` stays green with activerecord `Allowed`
   dropping by 3 and no new extras.
 - `packages/globalid/src/wire.ts`'s GID-4 comment is corrected to describe what
   the code actually does (or the registration path is built, if that is the

@@ -57,13 +57,13 @@ Delete the free `aliasedTypes` function. Drop the `NotImplementedError` import
 from the file if it becomes unused (check: other `@nie` stubs may still use it).
 
 This is pure removal — no behavior change, since the function is never called.
-Expect no `api:compare` movement (the class override is what is scored) and one
+Expect no `parity:api` movement (the class override is what is scored) and one
 fewer `@nie` row.
 
 ## Acceptance criteria
 
 - [ ] The module-level `aliasedTypes` stub is gone from
       `connection-adapters/postgresql/schema-definitions.ts`.
-- [ ] `pnpm api:compare` delta non-negative; `pnpm api:extra --package activerecord`
+- [ ] `pnpm parity:api` delta non-negative; `pnpm parity:api:extra --package activerecord`
       does not grow.
 - [ ] No unused-import lint error left behind.

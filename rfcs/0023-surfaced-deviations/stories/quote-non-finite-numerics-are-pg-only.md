@@ -99,4 +99,4 @@ this story stands on its own. Sequence behind it if it lands first.
       MySQL adapter actually emits.
 - [ ] PG behavior unchanged: `quote(Float::INFINITY)` still `'Infinity'`;
       `postgresql/numbers.test.ts` stays green.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

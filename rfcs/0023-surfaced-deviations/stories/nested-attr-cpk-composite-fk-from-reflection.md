@@ -41,4 +41,4 @@ model's composite FK, not `${ctor.name}_id`.
   falling back to `${underscore(ctor.name)}_id`.
 - A bare CPK subclass (`class Sub extends CpkParent {}`) persists nested
   children with the declaring model's composite FK.
-- No regressions in test:compare / api:compare.
+- No regressions in parity:test / parity:api.

@@ -69,4 +69,4 @@ output is the compatibility constraint on any signature change.
 - [ ] `abstract/schema-dumper.ts`'s `t.enum(...)` emission still round-trips;
       PG schema-dumper suite green.
 - [ ] `enumType` reviewed: either justified as a needed extra or removed.
-- [ ] Green on all three lanes; api:compare delta non-negative.
+- [ ] Green on all three lanes; parity:api delta non-negative.

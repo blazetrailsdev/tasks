@@ -62,4 +62,4 @@ GID components.
 - Existing `uri-gid.test.ts` / `global-id.test.ts` cases pass unchanged
   (composite ids, 20-segment cap, empty-segment handling, CGI escaping) —
   they already cover both paths.
-- No new extra surface; `pnpm api:compare && pnpm api:extra` stay clean.
+- No new extra surface; `pnpm parity:api && pnpm parity:api:extra` stay clean.

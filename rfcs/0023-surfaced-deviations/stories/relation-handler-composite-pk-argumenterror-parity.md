@@ -44,7 +44,7 @@ composite-PK path untouched.
       generic `Error`.
 - [ ] Message string matches Rails' `model.primary_key` interpolation exactly.
 - [ ] Mirror the corresponding Rails behavior with a test (no test renames).
-- [ ] `test:compare` / `api:compare` delta >= 0.
+- [ ] `parity:test` / `parity:api` delta >= 0.
 
 ## Rails source
 

@@ -50,5 +50,5 @@ ordinal/take finders through the builder, it did not introduce the gap.
   where SQL via the relation's arel (`arel.where_sql(model)` equivalent).
 - Tests asserting the exact `"Couldn't find ${name} with [...]"` message, named
   to match the corresponding Rails finder tests (read them first).
-- api:compare and test:compare delta non-negative.
+- parity:api and parity:test delta non-negative.
 - Converge, do not ratify (this is a deviation, not a wontfix).

@@ -43,4 +43,4 @@ the already-merged MemoryStore sibling to the same Rails-faithful shape.
 - A test asserting fractional-amount behavior (e.g. `increment("k", 1.9)` on a
   miss returns `1` and stores `1`) where it adds parity value; otherwise no test
   regression.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

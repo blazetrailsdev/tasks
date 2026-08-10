@@ -32,5 +32,5 @@ over-gate, now an incomparable runtime guard pending this convergence.
 - [ ] Implement the SQLite table-rebuild path for `changeColumn` (column-type
       change) matching Rails' SQLite3Adapter.
 - [ ] Remove the `sqliteChangeColumnBlocked` guard so the test runs on SQLite.
-- [ ] `test:compare --package activerecord --gates` stays at 0 over-gated for
+- [ ] `parity:test --package activerecord --gates` stays at 0 over-gated for
       query-cache.test.ts.

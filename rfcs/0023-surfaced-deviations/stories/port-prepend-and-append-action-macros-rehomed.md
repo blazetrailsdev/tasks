@@ -26,7 +26,7 @@ dependency graph. Reopen/re-home under a web-stack parity RFC if desired."_
 
 **New evidence justifying the re-home:** PR #5435 taught the Ruby extractor to
 record `define_method` / `alias_method` surface, so these six are no longer
-invisible to tooling. `pnpm api:compare --package abstractcontroller` now scores
+invisible to tooling. `pnpm parity:api --package abstractcontroller` now scores
 `callbacks.rb` at **15/23**, and the eight misses name them directly:
 
 ```text
@@ -71,6 +71,6 @@ macros are `beforeAction`, `afterAction`, `aroundAction`, `skipBeforeAction`,
   options, and `appendBeforeAction` / `appendAfterAction` /
   `appendAroundAction` as aliases of the base macros.
 - All six are installed at the same `base.ts` site as the existing six.
-- `pnpm api:compare --package abstractcontroller` shows `callbacks.rb` with
+- `pnpm parity:api --package abstractcontroller` shows `callbacks.rb` with
   those six no longer missing.
 - Tests mirror the Rails ones; test names match Rails verbatim.

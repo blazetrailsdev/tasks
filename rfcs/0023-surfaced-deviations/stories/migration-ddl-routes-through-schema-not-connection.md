@@ -44,4 +44,4 @@ overrides (`sqlite3-adapter.ts:1740-1810`) in exactly this shape.
 - [ ] A regression test per newly-reachable path that fails on baseline
       (the sqlite lane is the one that exposed this).
 - [ ] No gate-mismatch or misplaced regression in
-      `pnpm test:compare --package activerecord`.
+      `pnpm parity:test --package activerecord`.

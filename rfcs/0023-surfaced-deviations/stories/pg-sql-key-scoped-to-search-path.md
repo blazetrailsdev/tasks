@@ -56,4 +56,4 @@ should match Rails rather than rely on the once-per-connection assumption.
       track the active path (no stale prepared statement after a path change).
 - [ ] Test: preparing the same SQL under two different search paths yields two
       pool entries (and resolves the correct table each time).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

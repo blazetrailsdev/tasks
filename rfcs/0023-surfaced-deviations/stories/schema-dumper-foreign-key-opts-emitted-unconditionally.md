@@ -55,4 +55,4 @@ recomputing it in the dumper.
 - [ ] `primaryKey:` is emitted only for a custom primary key.
 - [ ] A scalar-FK dump test covers the omission; the composite case in
       `migration/foreign-key.test.ts` ("schema dumping") still passes unchanged.
-- [ ] `schema-dumper.test.ts` and `schema:compare` stay green on all 3 adapters.
+- [ ] `schema-dumper.test.ts` and `parity:schema` stay green on all 3 adapters.

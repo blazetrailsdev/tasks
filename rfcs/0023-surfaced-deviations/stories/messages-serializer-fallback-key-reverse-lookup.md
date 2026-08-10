@@ -36,6 +36,6 @@ distinguish `:json` from `:json_allow_marshal`.
   (Rails' `SERIALIZERS.key(self)`), so the serializer objects carry only the
   members Rails' modules define.
 - `messages/serializer_with_fallback.rb` stays at 8/8 in
-  `pnpm api:compare --package activesupport`.
+  `pnpm parity:api --package activesupport`.
 - The ported "notifies when serializer falls back to loading an alternate
   format" test still asserts `serializer: "marshal"` and continues to pass.

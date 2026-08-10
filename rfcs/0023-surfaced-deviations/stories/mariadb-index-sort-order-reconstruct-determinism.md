@@ -79,5 +79,5 @@ just locally.
   path (`SchemaStatements#addIndex` already primes it).
 - Re-enable (un-skip) both `SchemaDumperTest` cases in
   `packages/activerecord/src/schema-dumper.test.ts`; they pass on
-  sqlite/postgres/mariadb without renaming (test:compare matching).
+  sqlite/postgres/mariadb without renaming (parity:test matching).
 - No regression to sqlite/postgres index dumps.

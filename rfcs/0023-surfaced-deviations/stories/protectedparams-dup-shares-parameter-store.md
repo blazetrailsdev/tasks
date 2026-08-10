@@ -45,5 +45,5 @@ behavioral deviation, documented only in the stub's header docstring.
   removed once the behavior converges.
 - The existing test pinning independent parameters is inverted to pin sharing;
   the permitted-carry-over tests keep passing.
-- `pnpm api:compare --package activerecord-test-support` does not regress
+- `pnpm parity:api --package activerecord-test-support` does not regress
   (32/32).

@@ -39,4 +39,4 @@ the underlying FK is wrong.
       semantics.
 - [ ] Confirm no canonical test depends on the `category_id` FK; update any that
       do to match Rails.
-- [ ] `test:compare` non-negative.
+- [ ] `parity:test` non-negative.

@@ -52,7 +52,7 @@ in PR #3643 had to work around this:
 - Restore the two PR #3643 tests to their Rails-faithful forms (numeric keys
   `123726353`/`2`; order-dependent first/last name assertions) once the impl
   converges. Test names unchanged.
-- No regressions in test:compare.
+- No regressions in parity:test.
 
 ## Pointers
 

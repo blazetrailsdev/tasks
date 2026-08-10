@@ -78,8 +78,8 @@ Make `has_one` consistent with `has_many` and floating-promise-free:
       awaitable `await writer(account2)` (the Rails-faithful immediate path);
       add a code comment noting the sync setter itself defers (JS cannot
       persist synchronously without a floating promise).
-- [ ] No regression in the broader association suite; `api:compare` /
-      `test:compare` deltas non-negative.
+- [ ] No regression in the broader association suite; `parity:api` /
+      `parity:test` deltas non-negative.
 
 ## Hard rules
 

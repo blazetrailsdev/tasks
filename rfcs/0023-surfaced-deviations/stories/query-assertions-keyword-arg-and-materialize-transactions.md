@@ -59,5 +59,5 @@ true })`) or equivalent — so Rails-shaped call sites work and the default is
   `assertQueriesMatch`, `assertNoQueriesMatch`.
 - `materializeTransactions` is invoked before counting, mirroring
   `query_assertions.rb:19`.
-- Existing call sites updated; `pnpm api:compare --arity` shows no new arity
+- Existing call sites updated; `pnpm parity:api --arity` shows no new arity
   mismatch for these four.

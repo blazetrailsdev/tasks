@@ -51,4 +51,4 @@ scoped, so its default-scope attributes are not applied on build/create.
       method-form `default_scope` and mirror its name verbatim; add a regression
       test that `new`/`create` seeds the default-scope attributes for the
       method-form override.
-- [x] api:compare / test:compare delta non-negative.
+- [x] parity:api / parity:test delta non-negative.

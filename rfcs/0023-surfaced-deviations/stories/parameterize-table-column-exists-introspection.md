@@ -54,4 +54,4 @@ Rails which scopes to the active schema.
       confirm the #3340 where-quoting tests still pass.
 - [x] (If in scope) PG branches scope to the active search_path rather than
       hardcoded `'public'`, matching Rails.
-- [x] api:compare / test:compare delta non-negative.
+- [x] parity:api / parity:test delta non-negative.

@@ -45,7 +45,7 @@ tested then, not left as an orphan export.
 packages/activerecord/src` returns no hits after removal; it is not
       re-exported from `index.ts`.
 - [ ] `pnpm vitest run packages/activerecord/src/calculations.test.ts` stays
-      green; api:compare / test:compare delta non-negative.
+      green; parity:api / parity:test delta non-negative.
 - [ ] If on inspection the DISTINCT limit/offset count path is actually missing
       (not just routed elsewhere), register a separate story to wire it
       faithfully rather than keeping the orphan export.

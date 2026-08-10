@@ -37,7 +37,7 @@ unescapes doubled quotes inside quoted identifiers, and drops `$user` entries.
 
 Two problems:
 
-1. **It is invented surface.** It is the one `novel` entry `pnpm api:extra
+1. **It is invented surface.** It is the one `novel` entry `pnpm parity:api:extra
 --package activerecord` reports for this file, and it carries no
    `@noRailsEquivalent` tag — only a prose doc comment.
 2. **It changes behaviour, not just spelling.** Rails passes `'$user'` through to
@@ -56,13 +56,13 @@ subject stops existing). If the quote/`$user` handling turns out to be load-bear
 for a real trails lane, that is a separate finding to raise on its own evidence —
 do not preserve it here by default.
 
-Removing the export also removes the file's only `api:extra` novel row.
+Removing the export also removes the file's only `parity:api:extra` novel row.
 
 ## Acceptance criteria
 
 - [ ] `normalizeSchemaSearchPath` is gone; `structure_dump` splits inline per
       `postgresql_database_tasks.rb:62-64`.
-- [ ] `pnpm api:extra --package activerecord` shows 0 novel for
+- [ ] `pnpm parity:api:extra --package activerecord` shows 0 novel for
       `tasks/postgresql-database-tasks.ts`.
 - [ ] `adapters/postgresql/postgresql-rake.test.ts` "structure dump with schema
       search path" / "…dump schemas string" stay green (they pin the `foo,bar`

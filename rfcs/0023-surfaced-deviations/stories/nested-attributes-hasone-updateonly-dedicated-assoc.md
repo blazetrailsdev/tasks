@@ -45,4 +45,4 @@ declared-option path Rails uses.
   `updateOnlyShipAttributes` against the canonical `updateOnlyShip`
   association (add `acceptsNestedAttributesFor(Pirate, "updateOnlyShip",
 { updateOnly: true })` where needed) rather than reconfiguring `ship`.
-- Test names stay verbatim. No test:compare regression.
+- Test names stay verbatim. No parity:test regression.

@@ -28,4 +28,4 @@ This gap is pre-existing (the old per-builder code never had these branches) and
 - [ ] `normalizeBoundValue` handles the array shape: map elements through `idForDatabase`, empty array → `null`, matching `build_bound_sql_literal`
 - [ ] `normalizeBoundValue` handles the single-record shape: `value.idForDatabase()` when the value responds to it
 - [ ] Direct unit tests cover both shapes through `buildBoundSqlLiteral` / `buildNamedBoundSqlLiteral`
-- [ ] api:compare and test:compare deltas non-negative
+- [ ] parity:api and parity:test deltas non-negative

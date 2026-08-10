@@ -78,4 +78,4 @@ At minimum add: `BigDecimal`, `Temporal.PlainDateTime`,
 - Existing `to_fs` assertions in
   `packages/activesupport/src/core-ext/range-ext.test.ts` still pass unchanged
   (they mirror `range_ext_test.rb:9-35`); do NOT rename any test.
-- No new `api:extra` surface — the dispatch stays a private helper.
+- No new `parity:api:extra` surface — the dispatch stays a private helper.

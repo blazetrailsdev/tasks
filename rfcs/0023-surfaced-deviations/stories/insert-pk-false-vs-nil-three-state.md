@@ -57,4 +57,4 @@ outcome is identical either way. That hides the gap rather than closing it.
       It must fail on baseline.
 - [ ] Sweep existing `insert(` call sites that pass `null` for `pk` and
       correct any that meant `false`.
-- [ ] `api:compare` and `test:compare` deltas >= 0.
+- [ ] `parity:api` and `parity:test` deltas >= 0.

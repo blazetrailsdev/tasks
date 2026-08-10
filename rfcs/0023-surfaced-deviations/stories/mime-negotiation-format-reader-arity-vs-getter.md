@@ -55,5 +55,5 @@ the dropped argument as an intentional deviation, or keep `format` a method on
   getter in both.
 - If the argument is dropped, the deviation is justified at the call site per
   CLAUDE.md, not only in a PR body.
-- `pnpm api:compare` arity for `format` is either clean or has a reasoned
+- `pnpm parity:api` arity for `format` is either clean or has a reasoned
   `arity-exclude.json` entry.

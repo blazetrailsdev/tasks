@@ -42,5 +42,5 @@ explicitly or are retired with RFC 0056's bare-base path.
 
 - [ ] `protected static create` is gone from `packages/activerecord/src/schema-dumper.ts`.
 - [ ] `dump` / `dumpTableSchema` construct via the adapter layer only.
-- [ ] `pnpm api:extra --package activerecord` shows no novel name added, and the
+- [ ] `pnpm parity:api:extra --package activerecord` shows no novel name added, and the
       dumper suites stay green.

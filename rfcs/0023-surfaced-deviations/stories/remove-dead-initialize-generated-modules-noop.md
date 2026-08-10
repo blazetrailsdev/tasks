@@ -14,7 +14,7 @@ assignee: "remove-dead-initialize-generated-modules-noop"
 blocked-by: null
 ---
 
-> **CLOSED 2026-06-25 — obsolete.** The premise (delete the no-op) was rejected: `converge-attribute-methods-initialize-generated-modules` establishes that `initializeGeneratedModules` is the api:compare-matched port of a real Rails method and must be kept/converged, not deleted (the original deletion PR #3381 was closed). Superseded by that story.
+> **CLOSED 2026-06-25 — obsolete.** The premise (delete the no-op) was rejected: `converge-attribute-methods-initialize-generated-modules` establishes that `initializeGeneratedModules` is the parity:api-matched port of a real Rails method and must be kept/converged, not deleted (the original deletion PR #3381 was closed). Superseded by that story.
 
 ## Context
 
@@ -60,4 +60,4 @@ carry and should be deleted rather than left as a misleading stub.
       untouched and still wired.
 - [ ] Attribute-methods test file(s) stay green
       (`pnpm vitest run packages/activerecord/src/attribute-methods.test.ts`);
-      api:compare / test:compare delta non-negative.
+      parity:api / parity:test delta non-negative.

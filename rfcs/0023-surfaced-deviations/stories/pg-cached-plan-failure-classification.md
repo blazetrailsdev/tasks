@@ -38,4 +38,4 @@ the exec_cache rescue path (postgresql_adapter.rb around the adapter's
       (`is_cached_plan_failure?`) and raises PreparedStatementCacheExpired
       inside transactions.
 - [ ] Outside a transaction, the statement is deallocated and retried once.
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

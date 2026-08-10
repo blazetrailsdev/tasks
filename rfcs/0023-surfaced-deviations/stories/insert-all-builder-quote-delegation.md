@@ -55,7 +55,7 @@ never contain `"`, so it is currently behaviorally inert.
       "double-quote then mysqlQuote() at exec time" path is still needed or can
       be dropped once quoting is adapter-delegated. Document the decision.
 - [ ] insert_all/upsert_all tests stay green on SQLite, PG, and MySQL;
-      api:compare and test:compare deltas non-negative.
+      parity:api and parity:test deltas non-negative.
 
 ## Notes
 

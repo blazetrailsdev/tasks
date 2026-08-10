@@ -74,6 +74,6 @@ whatever separation is chosen should apply to both adapters.
   `connection-adapters/mysql/database-statements.ts` is the only body; the
   adapter delegates, as `write_query?` / `returning_column_values` already do.
 - Both `build_explain_clause` entries drop out of the wide exclude file;
-  `pnpm api:calls:wide` baseline strictly shrinks.
+  `pnpm parity:api:calls` baseline strictly shrinks.
 - `Relation#explain` output is unchanged on MySQL and MariaDB (the
   `analyze_without_explain?` rewrite still applies).

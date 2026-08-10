@@ -39,5 +39,5 @@ required calling `this.isConnected()` so the wide call gate could credit
 - Every in-tree caller, including tests, uses the Rails name.
 - `packages/activerecord/src/connection-handling.test.ts`'s
   "#isConnected delegates to isConnectedQ" trails test goes away with the alias.
-- `pnpm api:compare` coverage for `connection_handling.rb` does not regress and
+- `pnpm parity:api` coverage for `connection_handling.rb` does not regress and
   the wide call baseline does not grow.

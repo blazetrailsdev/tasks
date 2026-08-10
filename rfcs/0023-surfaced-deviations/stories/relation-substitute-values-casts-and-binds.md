@@ -64,4 +64,4 @@ of the wrong type is inline-quoted rather than cast-and-bound.
       `Nodes.Grouping` as Rails does.
 - [ ] A value of the wrong type for its column (e.g. a string for a datetime) is
       cast by the column type rather than inline-quoted raw.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

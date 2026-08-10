@@ -33,5 +33,5 @@ over-gate, now an incomparable runtime guard pending this convergence.
 - [ ] Provide a pooled-pin transactional-fixtures helper that survives
       concurrent writes on PG within an outer transaction.
 - [ ] Remove the `pgConcurrentFixturesBlocked` guard so the test runs on PG.
-- [ ] `test:compare --package activerecord --gates` stays at 0 over-gated for
+- [ ] `parity:test --package activerecord --gates` stays at 0 over-gated for
       relation-scoping.test.ts.

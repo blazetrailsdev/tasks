@@ -48,4 +48,4 @@ supersedes it. Decide with that story, not independently.
       change to `db:migrate`.
 - [ ] `MigrationContext#connection` either reads
       `DatabaseTasks.migrationConnection` (migration.rb:1360-1362) or is gone.
-- [ ] `pnpm api:extra --package activerecord` does not grow.
+- [ ] `pnpm parity:api:extra --package activerecord` does not grow.

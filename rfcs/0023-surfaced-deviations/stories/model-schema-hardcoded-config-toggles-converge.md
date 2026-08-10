@@ -46,5 +46,5 @@ rather than skip-ratified:
   implement the immutable-string type or document the gap as an accepted
   deviation with the Rails behavior it omits.
 - Remove the corresponding entry from `SKIP_GROUPS` in
-  `scripts/api-compare/conventions.ts` and keep `api:compare` at 100%.
+  `scripts/api-compare/conventions.ts` and keep `parity:api` at 100%.
 - Tests match Rails verbatim.

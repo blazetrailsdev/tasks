@@ -54,5 +54,5 @@ reflection's validity check, not in a counting helper.
 - `resetCounters` still works on strict-loading models (its original reason for
   the bypass) and misconfigured-through associations still fail loudly rather
   than counting 0.
-- `pnpm api:extra --package activerecord --novel-only` does not regress.
+- `pnpm parity:api:extra --package activerecord --novel-only` does not regress.
 - No test renames.

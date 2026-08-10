@@ -37,7 +37,7 @@ is exactly 32 names and `enum_type` is an **option**, never a column helper. The
 
 PR #5624 verified the 32 generated names against Rails programmatically; `enumType`
 is the one member of the trails `ColumnMethods` interface with no counterpart. It
-is not currently surfaced as extra API by `api:extra` (the PG ColumnMethods bucket
+is not currently surfaced as extra API by `parity:api:extra` (the PG ColumnMethods bucket
 is satisfied by the other names), so it is invisible to the ratchet.
 
 ## Acceptance criteria
@@ -47,5 +47,5 @@ is satisfied by the other names), so it is invisible to the ratchet.
   — the Rails-shaped surface.
 - If any caller genuinely needs the string-column-with-explicit-sql-type behaviour
   it provides, that need is named explicitly rather than kept as a Rails-shaped alias.
-- `api:compare` / `test:compare` deltas non-negative; no new entries in the
+- `parity:api` / `parity:test` deltas non-negative; no new entries in the
   extra-surface allowlist.

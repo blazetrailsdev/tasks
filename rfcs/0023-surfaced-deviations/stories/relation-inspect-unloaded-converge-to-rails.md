@@ -60,7 +60,7 @@ chain-fragment rendering it feeds — disappear entirely.
   chain-fragment rendering in `relation.ts` are removed.
 - `ruby-inspect.test.ts` reflects the chosen behavior; test names that map to
   Rails inspect tests stay verbatim.
-- api:compare / test:compare deltas non-negative.
+- parity:api / parity:test deltas non-negative.
 
 ## Notes
 

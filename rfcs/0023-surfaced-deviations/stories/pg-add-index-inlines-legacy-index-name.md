@@ -51,4 +51,4 @@ same long table+columns: `addIndex` emits the raw over-long string, while
       table+columns combination long enough to trigger the hash fallback
       (regression test asserting add-then-remove round-trips by default name).
 - [ ] Existing PG add-index tests (incl. the bare-column `where` cases) stay
-      green; api:compare / test:compare delta non-negative.
+      green; parity:api / parity:test delta non-negative.

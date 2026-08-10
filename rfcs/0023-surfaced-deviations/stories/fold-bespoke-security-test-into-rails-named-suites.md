@@ -29,7 +29,7 @@ behaviour that Rails already covers in
 - `security.test.ts:93-97` `valid_message returns false on tampered data`
   duplicates `message_verifier_test.rb:29-37` (`test_valid_message`).
 
-Because the file's test names have no Rails counterpart, `test:compare` counts
+Because the file's test names have no Rails counterpart, `parity:test` counts
 them as "extra (TS only)" rather than as coverage. The duplicated assertions
 belong in the Rails-named suites where they can be matched.
 
@@ -45,6 +45,6 @@ flake.
   names, or into a `*.trails.test.ts` file if genuinely TS-only.
 - Assertions that merely duplicate existing Rails-named tests are dropped rather
   than copied.
-- `test:compare` "extra (TS only)" count for activesupport does not increase.
+- `parity:test` "extra (TS only)" count for activesupport does not increase.
 - `pnpm vitest run packages/activesupport/src/`, `pnpm typecheck`, `pnpm lint`
   pass.

@@ -52,4 +52,4 @@ review.
       belongs_to).
 - [ ] Add/port the corresponding Rails test (test name verbatim) exercising
       create on an unpersisted has_one owner.
-- [ ] No api:compare / test:compare regression.
+- [ ] No parity:api / parity:test regression.

@@ -37,4 +37,4 @@ but deviates from Rails' call graph and loses single-statement atomicity.
 - [ ] Wire `pgBuildTruncateStatements` onto the PG adapter so `truncateTables`
       emits Rails' combined `TRUNCATE TABLE a, b, c` form.
 - [ ] `truncate tables` / `truncate tables with query cache` still pass on PG.
-- [ ] `api:compare` / `test:compare` deltas non-negative.
+- [ ] `parity:api` / `parity:test` deltas non-negative.

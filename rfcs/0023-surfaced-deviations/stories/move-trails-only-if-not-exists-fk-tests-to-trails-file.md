@@ -28,7 +28,7 @@ invented SQLite override guard was deleted (SQLite's override,
 `sqlite3/schema_statements.rb:56-63`, has no such guard).
 
 Because the file is a Rails-mapped `*.test.ts`, these cases count as
-extra TS-only tests in `test:compare`. Per the convention, TS-only extras
+extra TS-only tests in `parity:test`. Per the convention, TS-only extras
 belong in a sibling `*.trails.test.ts`.
 
 ## Acceptance criteria
@@ -37,5 +37,5 @@ belong in a sibling `*.trails.test.ts`.
       `*.trails.test.ts` sibling, keeping the existing per-adapter gating
       (`adapterType !== "sqlite"` for the abstract-guard cases, SQLite-only
       for the fall-through case).
-- [ ] `test:compare` extra-test count does not increase; the moved cases
+- [ ] `parity:test` extra-test count does not increase; the moved cases
       still run and pass on all three adapters.

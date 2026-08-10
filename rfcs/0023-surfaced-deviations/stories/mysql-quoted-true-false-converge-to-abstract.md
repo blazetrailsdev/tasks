@@ -62,4 +62,4 @@ the quoted literal) so both paths are self-consistent and match Rails output.
       reintroduce the override to paper over it.
 - [ ] Read the Rails `quoting`/`adapter` test covering boolean quoting and
       mirror its name verbatim; verify emitted SQL on MySQL 8 + MariaDB.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

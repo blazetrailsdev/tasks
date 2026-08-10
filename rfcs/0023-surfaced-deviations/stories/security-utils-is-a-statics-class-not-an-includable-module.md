@@ -48,5 +48,5 @@ so the call sites read as the Ruby does. The `security-utils` subpath export
 - [ ] `SecureCompareRotator` calls `secureCompare` the way Rails' included
       module does, not through a class name.
 - [ ] Any other caller Rails reaches through `include` is converted with it.
-- [ ] `pnpm api:compare` / `pnpm api:extra` deltas non-negative;
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra` deltas non-negative;
       `secure-compare-rotator.test.ts` and `message-verifier` suites green.

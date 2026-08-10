@@ -45,4 +45,4 @@ raise gap and the return/hit-path inconsistency in one change.
   write, the return value, and the hit-path addition (no raw-amount leakage).
 - Add tests asserting (a) the raise on a fractional/non-integer amount and
   (b) the return value equals the coerced integer on both seed and hit paths.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

@@ -53,6 +53,6 @@ establish the pattern.
   `toArray`/`toH`/`toHash` collection protocol) and relocate those declarations
   into the TS file matching Rails' `.rb`, per
   `project_api_compare_method_must_stay_in_rails_layout_file`.
-- `pnpm api:extra` moved-count for the touched packages drops by the cluster
+- `pnpm parity:api:extra` moved-count for the touched packages drops by the cluster
   size; no new novel extras and no new `@noRailsEquivalent` tags.
 - Remaining clusters registered as follow-up stories rather than absorbed.

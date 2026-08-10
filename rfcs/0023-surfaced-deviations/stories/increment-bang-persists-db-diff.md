@@ -55,4 +55,4 @@ then `reload()` yields DB = +1 over baseline; Rails yields +2.
 - [ ] Restore the chained `increment(...).increment!(...)` assertion lines in the
       four persistence.test.ts increment/decrement tests so they mirror
       persistence_test.rb:291-330 in full.
-- [ ] api:compare / test:compare delta non-negative; lint + typecheck clean.
+- [ ] parity:api / parity:test delta non-negative; lint + typecheck clean.

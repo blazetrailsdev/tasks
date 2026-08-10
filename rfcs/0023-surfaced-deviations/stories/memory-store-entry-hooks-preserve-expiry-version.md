@@ -38,4 +38,4 @@ shippable.
   the `Entry` constructor), so `isExpired()`/`isMismatched()` work.
 - Add a test exercising `fetchMulti` (inherited) against an expired entry on the
   production `MemoryStore`, asserting Rails-faithful miss + regenerate.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

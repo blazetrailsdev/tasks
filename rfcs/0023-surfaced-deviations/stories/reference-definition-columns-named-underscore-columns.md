@@ -43,4 +43,4 @@ reason string instead of the generic RFC 0047 seed text.
 - [ ] If renamed, the `add` -> `columns` entry is dropped from
       `scripts/api-compare/call-mismatches-wide-exclude/activerecord/connection-adapters/abstract/schema-definitions.json`
       and `pnpm exec tsx scripts/api-compare/lint-call-mismatches-wide.ts` stays green.
-- [ ] `pnpm api:compare --package activerecord` shows no new extra surface.
+- [ ] `pnpm parity:api --package activerecord` shows no new extra surface.

@@ -77,4 +77,4 @@ down). It only loses its use as the probe's connection string.
 - [ ] `expression_index` in `support/supports.ts` keeps working (it currently
       sources `supportsExpressionIndex`; it cannot be a static adapterType
       table since the mysql lane may be MySQL 8 or the MariaDB CI stand-in).
-- [ ] CI green on all three adapters; `pnpm test:compare` gate-mismatch stays 0.
+- [ ] CI green on all three adapters; `pnpm parity:test` gate-mismatch stays 0.

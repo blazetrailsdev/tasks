@@ -58,7 +58,7 @@ at `:83` is a separate mis-port and is not the same test.
       semantics `record` relies on.
 - [ ] Rewrite the six tests to drive the ported methods against a TestNotifier,
       as `instrumenter_test.rb:10-27` does, rather than the static API.
-- [ ] **Expect a test:compare dip.** These six currently match by name; if any
+- [ ] **Expect a parity:test dip.** These six currently match by name; if any
       are deleted rather than ported, matched drops by up to 6 (14448 →
       14442 at time of writing). That is a correction of false positives, not a
       regression — call it out in the PR so the non-negative-delta gate is

@@ -45,4 +45,4 @@ having_clause.empty?`) is also unported.
 
 - [ ] groupedAggregate projects group fields with `ColumnAliasTracker`-derived
       aliases (Rails names), not `group_key`; result-row reads updated.
-- [ ] Multi-lane green; no test:compare regression.
+- [ ] Multi-lane green; no parity:test regression.

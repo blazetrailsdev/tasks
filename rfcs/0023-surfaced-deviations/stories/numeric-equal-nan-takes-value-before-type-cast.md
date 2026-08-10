@@ -65,5 +65,5 @@ behaviour, so converging means rewriting them against
 - Decimal's `"NaN"` sentinel handling (added in #5374) keeps working: the
   sentinel stands in for BigDecimal NaN and mixed representations still count
   as changed.
-- `pnpm api:calls:wide` baseline does not grow; test:compare delta is
+- `pnpm parity:api:calls` baseline does not grow; parity:test delta is
   non-negative.

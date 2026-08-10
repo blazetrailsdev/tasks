@@ -42,4 +42,4 @@ receiver is always present — same rationale as the merged PR.
   (ABSTRACT_SCHEMA_QUOTER, mysql/schema-quoter, sanitization ABSTRACT_QUOTER) to
   bind a host explicitly.
 - No behavior change for adapter-routed calls; quoting / schema-creation /
-  sanitization tests pass. api:compare / test:compare delta non-negative.
+  sanitization tests pass. parity:api / parity:test delta non-negative.

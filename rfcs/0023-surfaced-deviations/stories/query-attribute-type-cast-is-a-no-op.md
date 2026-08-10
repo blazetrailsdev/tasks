@@ -64,4 +64,4 @@ done with them, not before them.
       `serializable?` yields (integer.rb:75), not the now-raw `value`.
 - [ ] `Attribute#isSerializable` still answers correctly once the value it passes
       is raw (see the companion story on `IntegerType#castValue`).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

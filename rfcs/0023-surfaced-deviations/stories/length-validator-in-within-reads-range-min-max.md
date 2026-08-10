@@ -76,4 +76,4 @@ a non-Range value reaches the same "no minimum/maximum" path Rails leaves it on
 - [ ] Existing `length-validation.test.ts` cases still pass; any that depend on
       the tuple arm are converged to Rails' `6..20` spelling (test names
       unchanged).
-- [ ] `pnpm api:calls` clean — the initializer's call set gains `max`.
+- [ ] `pnpm parity:api:calls` clean — the initializer's call set gains `max`.

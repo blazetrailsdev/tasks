@@ -52,5 +52,5 @@ change-column describes to their own file) before the models can land.
       re-resolve the model table names rather than relying on literals.
 - [ ] The canonical models used by the rest of `foreign-key.test.ts` are not
       shadowed.
-- [ ] Green on all three adapters; `test:compare` delta non-negative and
+- [ ] Green on all three adapters; `parity:test` delta non-negative and
       `--gates --check` stays at exit 0.

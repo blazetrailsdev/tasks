@@ -49,4 +49,4 @@ the ActiveModel method rather than on the attribute. See
 - [ ] `_accessedFields` no longer exists; reads through generated getters and
       `_readAttribute` are counted, matching Rails.
 - [ ] `accessed_fields` tests stay green.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

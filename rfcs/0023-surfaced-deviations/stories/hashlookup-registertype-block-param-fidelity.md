@@ -45,4 +45,4 @@ See memory: TypeMap/HashLookupTypeMap are standalone siblings in vendored Rails.
       `value` accepts only a `Type`; factories route through a separate block param.
 - [ ] All callers (`type-map-init.ts` seeders, `aliasType`, tests) updated to the
       block form; no behavior change.
-- [ ] PG type-map tests stay green; tsc clean; api:compare/test:compare non-negative.
+- [ ] PG type-map tests stay green; tsc clean; parity:api/parity:test non-negative.

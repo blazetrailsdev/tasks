@@ -38,7 +38,7 @@ silently reintroduce the regression.
       exports from query-methods.ts (confirm no callers/tests first), OR
       converge — **converged** (PR #3890): `buildArel` is live via the
       `from(relation)` subquery path, and removing `buildJoinBuckets` would drop
-      the matched Rails `build_join_buckets` from api:compare, so removal was
+      the matched Rails `build_join_buckets` from parity:api, so removal was
       rejected in favor of convergence.
 - [x] converge them to the same stashed-left-join dedup as
       `_applyJoinsToManager` (fold left-outer JD into the inner JD's

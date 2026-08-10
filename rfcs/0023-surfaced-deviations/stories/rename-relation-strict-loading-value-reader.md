@@ -60,5 +60,5 @@ shrinks — remove the one row by hand, do not `--write`).
 - `cascadeStrictLoading` reads it, and the
   `cascade_strict_loading -> strict_loading_value` row is deleted from
   `call-mismatches-wide-exclude/activerecord/associations/preloader/association.json`.
-- `pnpm api:extra --package activerecord` does not gain a row.
+- `pnpm parity:api:extra --package activerecord` does not gain a row.
 - `pnpm typecheck`, `pnpm lint`, and the preloader / strict-loading suites pass.

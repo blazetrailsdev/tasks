@@ -63,6 +63,6 @@ introduced by either.
       `options.slice(:null, :first, :after)` (`schema_definitions.rb:259`).
 - [ ] Regression coverage that fails on baseline: a polymorphic reference with
       `after:` positions both the `_type` and `_id` columns.
-- [ ] `api:compare --package activerecord` and
-      `test:compare --package activerecord` deltas are non-negative;
-      `test:compare --gates --check` exits 0.
+- [ ] `parity:api --package activerecord` and
+      `parity:test --package activerecord` deltas are non-negative;
+      `parity:test --gates --check` exits 0.

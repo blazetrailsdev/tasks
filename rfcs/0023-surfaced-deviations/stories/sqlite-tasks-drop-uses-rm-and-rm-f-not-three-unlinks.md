@@ -85,5 +85,5 @@ comment above them.
 - [ ] `sqlite_rake_test.rb`'s `test_removes_file_with_absolute_path` /
       `test_removes_file_with_relative_path` assert the Rails call shape and
       the deviation comment in `sqlite-rake.test.ts` is deleted.
-- [ ] `pnpm test:compare` keeps `sqlite_rake_test.rb` at 17/17 with
+- [ ] `pnpm parity:test` keeps `sqlite_rake_test.rb` at 17/17 with
       gate-mismatch 0, and the assertion ratchet stays green.

@@ -34,7 +34,7 @@ not because they belong to i18n.
 
 This is the same anchoring problem the `0088-date-gem-port` audit found for
 `Date`/`Time`/`Range`/`String#succ`: ported Ruby core with no vendored counterpart,
-so `api:compare` cannot resolve it and no gate can go green.
+so `parity:api` cannot resolve it and no gate can go green.
 
 **Flagged deliberately rather than moved.** The corelib RFC scoped itself to
 Date/DateTime/Time, Range core, and the module-mixin primitives, and explicitly

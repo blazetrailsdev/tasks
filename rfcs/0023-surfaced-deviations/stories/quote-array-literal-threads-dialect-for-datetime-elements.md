@@ -44,4 +44,4 @@ inlined rather than bound), explicitly scoped out of PR #4753.
 - [ ] The two `base.ts` array sites pass the PG dialect through.
 - [ ] Unit coverage: a datetime element in a PG array literal emits the same
       `quoted_date` form as the scalar PG path (incl. BC + `.ffffff`).
-- [ ] test:compare / api:compare delta non-negative.
+- [ ] parity:test / parity:api delta non-negative.

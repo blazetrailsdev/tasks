@@ -37,7 +37,7 @@ Rails' unconditional call.
       connection type that also defines `insert()`.
 - [ ] Empty-attribute create (all-default-columns INSERT) still resolves on
       sqlite/postgres/mysql.
-- [ ] api:compare and test:compare delta non-negative; lint + typecheck clean.
+- [ ] parity:api and parity:test delta non-negative; lint + typecheck clean.
 
 ## Implementation note (already prototyped locally, not merged)
 

@@ -46,4 +46,4 @@ stale in-memory target.
       the stale `doFindTarget()` cache, matching Rails `find_target`.
 - [ ] `asyncLoadTarget` and autosave callers go through the corrected guard.
 - [ ] Existing inverse-associations / strict-loading / autosave suites stay green;
-      test:compare delta non-negative.
+      parity:test delta non-negative.

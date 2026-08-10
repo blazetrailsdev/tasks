@@ -65,4 +65,4 @@ async, so it cannot `await scope.where(...)` inline the way Rails does.
 - [ ] Add/mirror the Rails nested_attributes test that exercises the
       unloaded-collection destroy path (find the corresponding
       `nested_attributes_test.rb` case; do not invent one).
-- [ ] No regression; `test:compare` delta non-negative.
+- [ ] No regression; `parity:test` delta non-negative.

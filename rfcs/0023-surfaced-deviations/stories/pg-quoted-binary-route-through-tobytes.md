@@ -58,4 +58,4 @@ rather than asserting a uniformity that does not hold.
       bytes MySQL/SQLite do, rather than raising.
 - [ ] The exception paragraph in `toBytes`' doc
       (`abstract/quoting.ts`) is removed once PG routes through it.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -45,8 +45,8 @@ and the PR was scoped to the type-map `super` convergence.
       — if some caller genuinely needs an instance hook — record why at the call
       site and reconcile the `null`/`undefined` return conventions so the two
       cannot drift.
-- [ ] `api:compare` for `connection_adapters/abstract_mysql_adapter.rb` and
-      `api:extra` must not regress.
+- [ ] `parity:api` for `connection_adapters/abstract_mysql_adapter.rb` and
+      `parity:api:extra` must not regress.
 - [ ] `connection-adapters/type-lookup.test.ts` and
       `connection-adapters/mysql-type-lookup.test.ts` stay green on the mysql2
       lane.

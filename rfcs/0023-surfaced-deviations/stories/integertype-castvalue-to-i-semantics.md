@@ -69,4 +69,4 @@ would go through `Number("abc")` → NaN paths and can flip a normal range to
 - [ ] The existing documented divergence comment at integer.ts:31-35 is removed
       once it no longer describes the code.
 - [ ] BigInt precision path (`narrowBigInt`) unchanged; 2^63 range tests still pass.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

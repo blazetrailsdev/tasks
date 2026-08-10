@@ -43,4 +43,4 @@ and the call site had to be de-namespaced to compile.
   read `Utils.unquoteIdentifier(...)` as Rails' do.
 - All call sites updated; no bare re-export left behind purely for convenience
   unless a cross-package importer needs it, in which case justify at the site.
-- `pnpm api:compare` delta non-negative.
+- `pnpm parity:api` delta non-negative.

@@ -29,4 +29,4 @@ Introduced in PR #3838. Low risk today: the only relation-accepting caller (the 
 - A caller invoking the preloader's emptiness check on an empty Relation gets the same answer as Rails (`true`), materializing the relation as Rails does.
 - Query count for the existing relation test stays at 2.
 - Resolve the TS sync/async mismatch without regressing the array path or the root-branch guard (branch.ts:48).
-- test:compare delta non-negative.
+- parity:test delta non-negative.

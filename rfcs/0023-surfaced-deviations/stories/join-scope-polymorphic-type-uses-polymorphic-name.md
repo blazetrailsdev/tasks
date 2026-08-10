@@ -55,4 +55,4 @@ of `type = "Foo"`). The sibling read/preload path (`association-scope.ts:237`,
       an STI subclass emits `type = <base_class polymorphic_name>`; read the
       corresponding Rails `reflection`/`associations` test and mirror its name
       verbatim.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

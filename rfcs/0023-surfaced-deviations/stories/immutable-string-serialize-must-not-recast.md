@@ -59,4 +59,4 @@ before stack-tracing the source.
 - [ ] `DateTimeType.serialize` no longer re-casts an already-cast value.
 - [ ] A cast-count test using a real type can observe exactly one cast for an
       already-cast value.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

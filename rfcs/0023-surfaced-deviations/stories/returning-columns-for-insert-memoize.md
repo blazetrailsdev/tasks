@@ -37,7 +37,7 @@ auto-populated filter loop runs on every INSERT instead of once per class.
 - [ ] `resetColumnInformation` clears the cache on both the STI-subclass branch
       (the delete-key loop) and the base branch — verify a toggled schema
       (e.g. `emulate_booleans` / `reset_column_information`) recomputes it.
-- [ ] api:compare and test:compare delta non-negative; lint + typecheck clean.
+- [ ] parity:api and parity:test delta non-negative; lint + typecheck clean.
 
 ## Implementation note (already prototyped locally, not merged)
 

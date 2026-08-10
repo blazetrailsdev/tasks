@@ -45,4 +45,4 @@ the broader `Relation::VALUE_METHODS` keys (`distinct`, `strictLoading`,
 - Add a merge-replay regression test (mirroring the `except` test in
   `relations.test.ts`) proving `other.merge(rel.only(...))` does not erase
   `other`'s parts.
-- No api:compare regression; `spawn_methods.rb` stays 100%.
+- No parity:api regression; `spawn_methods.rb` stays 100%.

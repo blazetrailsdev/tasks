@@ -48,4 +48,4 @@ and the index PRAGMA calls in the same adapter.
       name the same way.
 - [ ] A test demonstrates introspection does not break on an identifier
       containing a double quote.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

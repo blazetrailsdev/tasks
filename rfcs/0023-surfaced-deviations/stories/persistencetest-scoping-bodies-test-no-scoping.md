@@ -65,5 +65,5 @@ Test names stay exactly as they are.
 - [ ] The two scoping tests actually exercise `Model.where("1=0").scoping { ... }`.
 - [ ] Fixture sets are declared rather than the tests creating their own
       subjects; no bare absolute-count assertion returns.
-- [ ] `pnpm test:compare` delta non-negative (assertion counts/kinds improve).
+- [ ] `pnpm parity:test` delta non-negative (assertion counts/kinds improve).
 - [ ] All AR lanes green.

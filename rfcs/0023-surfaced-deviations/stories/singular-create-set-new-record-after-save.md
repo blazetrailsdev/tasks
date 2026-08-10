@@ -54,4 +54,4 @@ block timing added in #3721 is already Rails-faithful (yields before save).
 - [x] has_one / belongs_to create + createBang still persist the FK / inverse
       correctly (inverse-associations + has-one-associations + belongs-to suites
       stay green).
-- [x] No api:compare / test:compare regression.
+- [x] No parity:api / parity:test regression.

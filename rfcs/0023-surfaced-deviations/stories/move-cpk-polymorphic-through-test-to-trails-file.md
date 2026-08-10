@@ -38,5 +38,5 @@ ordinary create path.
   `packages/activerecord/src/associations/join-model.trails.test.ts`, with the
   existing `insertAll` comment carried over.
 - `join-model.test.ts` contains only Rails-named cases.
-- Both files pass; `pnpm test:compare` shows no regression for
+- Both files pass; `pnpm parity:test` shows no regression for
   `join_model_test.rb`.

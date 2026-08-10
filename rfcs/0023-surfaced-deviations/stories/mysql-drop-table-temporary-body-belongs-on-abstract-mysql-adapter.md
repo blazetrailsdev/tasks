@@ -56,4 +56,4 @@ MySQL `dropTable` layout move and can land independently.
       with no path that can dispatch to itself.
 - [ ] Existing `dropTable`/temporary-table coverage still passes on mysql2, and
       sqlite3/postgresql are unaffected.
-- [ ] `pnpm test:compare --package activerecord --gates --check` exits 0.
+- [ ] `pnpm parity:test --package activerecord --gates --check` exits 0.

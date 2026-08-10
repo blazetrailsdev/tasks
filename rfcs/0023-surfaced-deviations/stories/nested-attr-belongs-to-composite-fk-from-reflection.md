@@ -52,5 +52,5 @@ nested-attributes create branch.
   writing all columns in one UPDATE (not a single coerced `created.id`).
 - A nested belongsTo to a CPK target persists the owner with the correct
   composite FK columns.
-- Single-column belongsTo path unchanged; no regressions in test:compare /
-  api:compare.
+- Single-column belongsTo path unchanged; no regressions in parity:test /
+  parity:api.

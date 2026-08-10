@@ -38,4 +38,4 @@ accessor should route to the same loader the direct `loadHasOne` uses.
 - [x] `(post).tagging` instance accessor for a polymorphic `as:` has_one
       returns the associated record (matching `loadHasOne`).
 - [x] Regression test reading `.tagging` on a canonical `Post`.
-- [x] No api:compare / test:compare regression.
+- [x] No parity:api / parity:test regression.

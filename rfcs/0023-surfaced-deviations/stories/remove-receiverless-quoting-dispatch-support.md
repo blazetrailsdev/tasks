@@ -45,4 +45,4 @@ Relevant files:
 - Update the bare standalone unit-test call sites to invoke through a host
   receiver (adapter prototype or a minimal host), preserving assertions.
 - No behavior change for adapter-routed calls; existing quoting/precision tests
-  pass. api:compare / test:compare delta non-negative.
+  pass. parity:api / parity:test delta non-negative.

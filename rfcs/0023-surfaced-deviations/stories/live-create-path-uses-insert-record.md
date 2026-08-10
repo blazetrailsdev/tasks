@@ -31,7 +31,7 @@ method on `Persistence::ClassMethods`). trails instead uses a non-Rails
 `_performInsert` instance method, leaving the faithful `_insertRecord` /
 `_returningColumnsForInsert` class methods present-but-unused. `_insertRecord`
 is deliberately retained (it mirrors a real Rails class method and counts in
-api:compare's data-layer surface — removing it would be a negative delta), but
+parity:api's data-layer surface — removing it would be a negative delta), but
 the live path bypassing it is the actual Rails-fidelity gap.
 
 ## Acceptance criteria
@@ -43,5 +43,5 @@ the live path bypassing it is the actual Rails-fidelity gap.
       class methods reconciled/removed accordingly.
 - [ ] Single-column RETURNING gating preserved (no multi-column mis-map on
       sqlite/postgres/mysql); composite-PK and id-less inserts resolve.
-- [ ] api:compare and test:compare delta non-negative.
+- [ ] parity:api and parity:test delta non-negative.
 - [ ] `pnpm lint` + typecheck clean.

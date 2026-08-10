@@ -49,4 +49,4 @@ converges onto comparing GID objects, mirroring `global_id_test.rb:163-168`.
 - [ ] Delegated readers (`app`, `modelName`, `modelId`, `params`,
       `deconstructKeys`) go through the public `uri`.
 - [ ] All string call sites above updated; globalid suite green.
-- [ ] `pnpm api:compare --package globalid` stays 80/80.
+- [ ] `pnpm parity:api --package globalid` stays 80/80.

@@ -26,7 +26,7 @@ Rails puts the JSON serialization of temporals in core_ext monkey patches:
 PR #5971 implemented that behaviour as a private `temporalAsJson` helper inside
 `packages/activesupport/src/json.ts`, because our Time analogues are the
 `Temporal` classes and TS has no monkey patching. The file
-`core-ext/object/json.ts` does not exist at all — `pnpm api:compare --package
+`core-ext/object/json.ts` does not exist at all — `pnpm parity:api --package
 activesupport` reports `core_ext/object/json.rb -> core-ext/object/json.ts
 0/6 0%`, so none of the six `as_json` definitions in that Rails file count as
 ported, and the logic that does exist lives at the wrong path for the
@@ -47,6 +47,6 @@ currently open-codes in `asJsonValue`.
 
 - `packages/activesupport/src/core-ext/object/json.ts` exists and holds the
   `as_json` dispatch; `json.ts` delegates to it with no behaviour change.
-- `api:compare` for `core_ext/object/json.rb` moves off 0/6.
+- `parity:api` for `core_ext/object/json.rb` moves off 0/6.
 - Existing `json/encoding.test.ts` and `json/encoding.trails.test.ts` pass
   unchanged.

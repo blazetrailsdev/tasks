@@ -58,5 +58,5 @@ and is larger than that PR's scope.
       "keeps type-specific SQL types when defining multiple columns" still passes
       (adjusted to assert emitted DDL rather than the stamped field if needed).
 - [ ] Schema-dumper and migration PG suites green on all three lanes.
-- [ ] api:compare delta non-negative; the 31 helpers ideally collapse to the
+- [ ] parity:api delta non-negative; the 31 helpers ideally collapse to the
       generated `defineColumnMethods` path.

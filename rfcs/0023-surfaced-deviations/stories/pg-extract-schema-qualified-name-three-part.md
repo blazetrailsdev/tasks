@@ -35,4 +35,4 @@ schema.
       `schema, table` for 3+ dotted inputs (matching Rails `scan` destructuring),
       instead of collapsing to `Name(null, parts[0])`.
 - [ ] A test covers the 3+ dotted-part case against the Rails behavior.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

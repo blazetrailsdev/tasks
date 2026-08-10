@@ -26,7 +26,7 @@ adapter file (`connection_adapters/abstract/schema_dumper.rb`) contains only
 `create` and the private column-spec helpers.
 
 The split was a consequence of the mixin-host arrangement PR #6140 removed: the
-bodies had to sit in the adapter file to keep the api:compare file mapping while
+bodies had to sit in the adapter file to keep the parity:api file mapping while
 the base owned the single class. With a real subclass in place, that constraint
 is gone — the decomposition is now pure invented surface in the wrong file.
 
@@ -44,5 +44,5 @@ column-spec helpers, as the Ruby file does.
       `table`, decomposed as Rails decomposes it.
 - [ ] `connection-adapters/abstract/schema-dumper.ts` mirrors the members of
       `connection_adapters/abstract/schema_dumper.rb` and nothing else.
-- [ ] `pnpm api:extra --package activerecord` drops the two names; dumper suites
+- [ ] `pnpm parity:api:extra --package activerecord` drops the two names; dumper suites
       green on all three lanes.

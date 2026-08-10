@@ -43,7 +43,7 @@ deviation worth converging.
   `mysql2_adapter.rb:38-49`.
 - Preserve the `extractLimit` limit-threading added in PR #4668
   (`typeForAttribute(varchar_col).limit === 255`).
-- No regression in api:compare / test:compare delta across mysql/mariadb CI.
+- No regression in parity:api / parity:test delta across mysql/mariadb CI.
 
 Hard rules: no `node:*` / `process.*`; async fs only; no new runtime deps;
 500 LOC ceiling; single PR from main; test names match Rails verbatim.

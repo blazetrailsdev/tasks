@@ -43,6 +43,6 @@ at its default.
   `cpk_orders.books_count`), matching Rails.
 - Works for both single-column and composite (CPK) belongs_to.
 - Single-column / non-counter-cache belongsTo nested creates unchanged; no
-  regressions in test:compare / api:compare.
+  regressions in parity:test / parity:api.
 - Add a regression test asserting the counter column is bumped after the nested
   create.

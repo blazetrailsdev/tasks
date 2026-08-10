@@ -49,7 +49,7 @@ means updating those assertions to the Rails-qualified strings.
   distinction intact.
 - Update the pinned inspect assertions in relations.test.ts /
   calculations.test.ts to the qualified strings; test names unchanged.
-- api:compare / test:compare deltas non-negative.
+- parity:api / parity:test deltas non-negative.
 
 ## Notes
 

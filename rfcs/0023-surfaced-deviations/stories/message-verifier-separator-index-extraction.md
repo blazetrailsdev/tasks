@@ -33,11 +33,11 @@ trails re-joins and can mis-split. `digest_matches_data?` also guards
 `digestMatches` does not mirror.
 
 This surfaced while porting `Messages::Metadata` (PR #5632): `message_verifier.rb`
-sits at 11/15 in api:compare, and these are among the four missing methods.
+sits at 11/15 in parity:api, and these are among the four missing methods.
 
 ## Acceptance criteria
 
 - Port `separator_index_for`, `separator_at?`, `digest_length_in_hex`, and
   `digest_matches_data?` and drive `extractEncoded` from them.
 - A test covers a message whose encoded body contains the separator.
-- api:compare `message_verifier.rb` rises; test:compare non-negative.
+- parity:api `message_verifier.rb` rises; parity:test non-negative.

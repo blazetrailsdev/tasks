@@ -65,4 +65,4 @@ value.respond_to?(:id)` — in TS, "looks like an AR record / responds to
 - [ ] Add a regression test: `where({ <scalar_col>: <record> })` builds
       `<scalar_col> = <record.id>`. Read the corresponding Rails
       `predicate_builder`/`relation/where` test and mirror its name verbatim.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

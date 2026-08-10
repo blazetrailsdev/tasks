@@ -36,4 +36,4 @@ sync; this is a latent consistency hazard, not a known live bug. A dedicated
   `getCachedColumnsHash`) gates on a check of the same map it reads — either
   switch the guard to `isColumnsHashCached`, or guarantee `_columns` and
   `_columnsHash` are always populated/cleared together (with a test).
-- No regression in api:compare / test:compare.
+- No regression in parity:api / parity:test.

@@ -63,5 +63,5 @@ convergence may be at the call sites rather than in the dispatcher.
       range, or its call site stopped producing that type.
 - [ ] `json/encoding.test.ts` and `json/encoding.trails.test.ts` green; no test
       renamed.
-- [ ] `pnpm api:extra --package activesupport` clean; `pnpm api:compare
+- [ ] `pnpm parity:api:extra --package activesupport` clean; `pnpm parity:api
 --package activesupport` non-negative.

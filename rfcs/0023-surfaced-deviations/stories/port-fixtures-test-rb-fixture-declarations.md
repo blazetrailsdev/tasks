@@ -62,8 +62,8 @@ test for `fixtures.rb`, and our `fixtures.test.ts` is only a partial port of it.
   schema (`test-helpers/test-schema.ts` + `test-helpers/fixtures/`), mirroring
   `vendor/rails/activerecord/test/schema/schema.rb` and
   `test/fixtures/`. Do not invent tables.
-- `pnpm test:compare` delta for `fixtures_test.rb` is non-negative;
-  `pnpm schema:compare` / `pnpm fixtures:compare` output unchanged unless
+- `pnpm parity:test` delta for `fixtures_test.rb` is non-negative;
+  `pnpm parity:schema` / `pnpm parity:fixtures` output unchanged unless
   canonical additions are part of the work, in which case the delta is
   positive.
 

@@ -33,7 +33,7 @@ asserts 4 / 3 / 4). Without them the tests passed under either value of
 
 This is very likely not an isolated port slip: a Rails test whose only assertion
 is `assert_queries_count` becomes a no-op test when the count assertion is
-dropped, and `test:compare` still counts it as ported because the test NAME
+dropped, and `parity:test` still counts it as ported because the test NAME
 matches. That is a fidelity hole the existing tooling cannot see.
 
 ## Acceptance criteria

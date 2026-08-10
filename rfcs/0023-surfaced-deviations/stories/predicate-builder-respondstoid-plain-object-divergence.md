@@ -45,4 +45,4 @@ convergence.
       per-element record detection.
 - [x] Add a regression test mirroring a Rails test name verbatim if one exists for
       the plain-object-not-a-record case; otherwise document why none is added.
-- [x] api:compare / test:compare delta non-negative.
+- [x] parity:api / parity:test delta non-negative.

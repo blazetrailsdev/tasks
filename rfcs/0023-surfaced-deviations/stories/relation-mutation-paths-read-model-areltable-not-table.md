@@ -48,4 +48,4 @@ have looked like convergence while moving _away_ from Rails. The correct fix is
 - A test constructs a relation with an explicit non-default table and asserts
   the mutation targets it (check `vendor/rails/activerecord/test/cases/` for an
   existing case first; only add a `*.trails.test.ts` extra if Rails has none).
-- Confirm no wide-baseline entry regresses (`pnpm api:calls:wide`).
+- Confirm no wide-baseline entry regresses (`pnpm parity:api:calls`).

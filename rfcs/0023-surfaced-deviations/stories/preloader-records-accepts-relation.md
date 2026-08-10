@@ -26,4 +26,4 @@ The wave-1 canonical conversion (PR #3603) works around this by using `Post.wher
 
 - `Preloader` accepts `Relation` as `records` (materializes it before loading associations)
 - `test_preload_makes_correct_number_of_queries_on_relation` passes a `Relation` directly to `Preloader` as in Rails
-- `test:compare` delta non-negative
+- `parity:test` delta non-negative

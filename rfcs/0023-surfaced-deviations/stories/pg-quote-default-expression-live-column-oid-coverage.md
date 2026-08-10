@@ -48,4 +48,4 @@ check that would have caught it mechanically.
       production rather than only in unit fixtures.
 - [ ] Keep DDL cost low — ride canonical tables; do not add a bespoke table
       (see CLAUDE.md canonical-tables rule).
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

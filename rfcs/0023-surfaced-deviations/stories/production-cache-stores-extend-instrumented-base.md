@@ -43,7 +43,7 @@ because no production store extends `Store`.
   for the base/fixture in #3703).
 - The `CacheInstrumentationBehavior` tests run against a real production store,
   not only `TestStore`.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.
 
 This is a larger architectural convergence (the bespoke production stores
 predate the base-class port) and is intentionally out of scope for the

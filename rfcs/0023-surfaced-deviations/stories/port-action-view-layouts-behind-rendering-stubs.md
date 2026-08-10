@@ -35,4 +35,4 @@ novel names and so are exempt by kind; they should go the same way.
   `layout` class method).
 - `rendering.ts` consumes the ported module and the stub interfaces plus the
   `@noRailsEquivalent` tag are deleted.
-- `pnpm api:extra` exits 0 (no stale tag).
+- `pnpm parity:api:extra` exits 0 (no stale tag).

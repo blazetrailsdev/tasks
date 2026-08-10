@@ -44,4 +44,4 @@ coercion).
   citation). No bespoke deviation left unexplained.
 - No regression for unbounded bounds (nil → ""), `box`-style subtypes, or
   existing oid/range + predicate-builder range tests; verify against live PG.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

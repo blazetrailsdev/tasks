@@ -68,4 +68,4 @@ and `quote_default_expression`/`lookup_cast_type_from_column` in
 - [ ] Drop the now-satisfied `quote_default_expression`/`include?` (and, if the
       array-branch converges, `/lookup_cast_type_from_column`) entries from the
       PG wide-call exclude.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

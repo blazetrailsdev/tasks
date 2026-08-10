@@ -44,4 +44,4 @@ Whether this is worth closing depends on whether trails wants a
   zero-offset write stays the documented deviation.
 - If it gets one, `writeDatetime`/`readDatetime` round-trip a non-zero offset and
   `writeTime`/`readTime` preserve the `utc_offset` label.
-- `pnpm api:compare --package activesupport` non-negative.
+- `pnpm parity:api --package activesupport` non-negative.

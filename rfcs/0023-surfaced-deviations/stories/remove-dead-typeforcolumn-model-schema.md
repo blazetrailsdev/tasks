@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Not a Rails-convergence item: deleting an unreferenced module-private helper (model-schema.ts:1591) changes no behaviour and no measured surface (it is not exported, so api:extra never scores it). Pure cleanup, not port fidelity."
+closed-reason: "Not a Rails-convergence item: deleting an unreferenced module-private helper (model-schema.ts:1591) changes no behaviour and no measured surface (it is not exported, so parity:api:extra never scores it). Pure cleanup, not port fidelity."
 ---
 
 ## Context

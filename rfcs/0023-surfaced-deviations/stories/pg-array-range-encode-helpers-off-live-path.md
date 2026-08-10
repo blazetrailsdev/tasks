@@ -22,7 +22,7 @@ PostgreSQL's `quote` / `typeCast` serialize `ArrayData` / `Range` via
 module-level parity ports `encodeArray` / `encodeRange` / `typeCastArray` /
 `typeCastRangeValue` / `formatArray` in
 `connection-adapters/postgresql/quoting.ts` mirror Rails' private quoting
-methods (kept for api:compare) but have NO live callers, and `formatArray`
+methods (kept for parity:api) but have NO live callers, and `formatArray`
 hardcodes a `,` delimiter, so it diverges from the live encoder for non-comma
 element types. Surfaced during PR #3550 (Codex review) — they were `this`-threaded
 to match Rails' self-dispatch but remain off the live path.
@@ -37,7 +37,7 @@ recursively call `type_cast` per element/bound
   through `encodeArray`/`encodeRange` (with the encoder's delimiter, not a
   hardcoded `,`) so there is one serialization path matching Rails, or
   (b) remove the unused parity stubs if the OID encoder is the intended single
-  source and api:compare can tolerate their absence.
+  source and parity:api can tolerate their absence.
 - No regression for `box[]` / non-comma array delimiters or array string-encoding
   coercion; existing oid/array + oid/range + pg quoting tests pass.
-- api:compare delta non-negative (account for any removed/added method ports).
+- parity:api delta non-negative (account for any removed/added method ports).

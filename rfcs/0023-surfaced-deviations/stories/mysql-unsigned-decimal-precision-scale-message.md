@@ -65,5 +65,5 @@ Pre-existing — surfaced auditing the MySQL schema-creation relocation
       suffix), with precision/scale still honored.
 - [ ] Read the Rails test(s) covering decimal-without-precision (e.g.
       `schema_definitions`/migration tests) first; mirror names verbatim.
-- [ ] CI green on all three adapters; api:compare / test:compare delta
+- [ ] CI green on all three adapters; parity:api / parity:test delta
       non-negative.

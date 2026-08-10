@@ -61,4 +61,4 @@ Readers of the accessor today: `transactions.ts:580`, `adapter.test.ts:117`,
       inlining `openTransactions > 0`.
 - [ ] The four existing readers keep their intended behavior (verify
       `with-transactional-fixtures.test.ts` and `transactions.trails.test.ts`).
-- [ ] `pnpm api:calls` / `pnpm api:extra --package activerecord` clean.
+- [ ] `pnpm parity:api:calls` / `pnpm parity:api:extra --package activerecord` clean.

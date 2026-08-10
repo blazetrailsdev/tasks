@@ -74,7 +74,7 @@ outcome.
 - [ ] `remove_sql_header_comments` streams instead of reading the whole file.
 - [ ] The `mkdtempSync` capability check and its invented error message are gone.
 - [ ] Both `open` rows are deleted from the call-mismatch baseline and
-      `pnpm api:calls` is green.
+      `pnpm parity:api:calls` is green.
 - [ ] `adapters/postgresql/postgresql-rake.test.ts` "structure dump header
       comments removed" (`postgresql_rake_test.rb:338-345`) stays green.
 - [ ] Green on the PG lane.
