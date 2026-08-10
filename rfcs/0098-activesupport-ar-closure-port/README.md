@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activesupport-ar-closure-port"
+rfc: "0098-activesupport-ar-closure-port"
 title: "activesupport AR-closure porting"
 status: draft
 created: 2026-08-10
