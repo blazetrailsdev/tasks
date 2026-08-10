@@ -45,8 +45,21 @@ Note `test_to_time__from_datetime`'s last two blocks are guarded on
 
 ## Acceptance criteria
 
-- [ ] `Date#plus` ported against `d_lite_plus` (`date_core.c:4967`), taking the
-      Integer and Rational operands the tests use.
+- [ ] `Date#plus` ported against `d_lite_plus` (`date_core.c:5952-6270`) — all
+      four operand arms (`T_FIXNUM`, `T_BIGNUM`, `T_FLOAT`, `T_RATIONAL`), since
+      one Rails method is one TS method.
+- [ ] **`Date` gains the `ComplexDateData` arm.** `d_lite_plus`'s `T_RATIONAL`
+      arm ends in `d_complex_new_internal(rb_obj_class(self), nth, jd, df, sf,
+    ...)` (`date_core.c:6249-6259`), and `rb_obj_class(self)` is `Date` — so
+      `Date.new(2004, 9, 19) + 1.to_r/2` is a `Date` CARRYING a day fraction,
+      which is exactly what `test_to_date__from_date` and
+      `test_to_datetime__from_date` assert on. trails' `Date` is simple-only by
+      construction: `simpleDatP` is `!(dat instanceof DateTime)` and
+      `Date#mDf()` / `Date#mSf()` answer `0` / `Rational(0, 1)`
+      unconditionally. Shipping `plus` without this silently drops the
+      fraction — a wrong-value regression, not a gap. This is the real blocker;
+      the other three tests need only `DateTime#+`, which the existing complex
+      storage can already represent.
 - [ ] `Date#dayFraction` ported against `d_lite_day_fraction` over `m_df`.
 - [ ] The 5 tests above land in `packages/date/src/test-date-conv.test.ts`
       under their Ruby names (underscores become spaces — that is what
