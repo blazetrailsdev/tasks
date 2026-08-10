@@ -1,5 +1,5 @@
 ---
-rfc: "0000-naming-identifier-burndown"
+rfc: "0096-naming-identifier-burndown"
 title: "Local/parameter identifier burndown (call-argument  class)"
 status: draft
 created: 2026-08-10
