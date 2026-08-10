@@ -2,7 +2,7 @@
 title: "handle_warnings' _handleWarnings hook and _warningCount seam have no Rails counterpart"
 status: ready
 updated: 2026-08-10
-rfc: "0076-execute-primitive-convergence"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
