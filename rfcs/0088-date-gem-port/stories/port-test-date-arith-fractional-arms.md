@@ -18,44 +18,41 @@ closed-reason: null
 
 ## Context
 
-Split out of `port-test-date-arith-operators`, which shipped the integer half of
-`test_date_arith.rb` (PR: see `Closes-story` trailer) — 7 of the file's 23 tests
-— and stopped at the LOC ceiling. What it ported:
+Split out of `port-test-date-arith-operators` (PR #6313), which ported
+`test_date_arith.rb` lines 10-152 except `test_new_offset`, and with it
+`d_lite_plus`'s `T_FIXNUM` / `T_BIGNUM` / `T_RATIONAL` arms, `minus_dd`, the
+`prev_*` family, `m_of`, `d_lite_mday` and the
+`dSimpleNewInternal`/`dComplexNewInternal` return seam. Three things it left:
 
-- `packages/date/src/date.ts`: `Date#mJd`/`mDf`/`mSf`/`mOf` (the C's `m_*`
-  readers, overridden on `DateTime`), `canonicalizeJd`, `expectNumeric`,
-  `Date#plus` (the `T_FIXNUM`/`T_BIGNUM` arms of `d_lite_plus`,
-  `date_core.c:5953-6052`), `DateTime#plus` (the `d_complex_new_internal`
-  return, `:5989-6003`), `Date#minus` + `minusDd` (`:6272-6360`),
-  `Date#prevDay`, `Date#rshift`/`lshift` (`:6441-6512`), `Date#prevMonth`,
-  `Date#prevYear`, `Date#compare` + `cmpDd` (`:6707-6846`), `Date#mday`.
-- `packages/date/src/test-date-arith.test.ts`: `plus ex`, `minus ex`, `compare`,
-  `prev`, `prev month`, `prev month 2`, `prev year`.
+1. **`DateTime#new_offset`** — `d_lite_new_offset` over `val2off` /
+   `offset_to_sec` (`vendor/date/ext/date/date_core.c:2369-2452`,
+   `:5071-5077`), including the `TypeError` arm a `Numeric` whose `to_r`
+   answers itself lands in. `test_new_offset`
+   (`vendor/date/test/date/test_date_arith.rb:10`) is the test, and it is the
+   only test of that file's first half still missing.
+2. **`d_lite_plus`'s `T_FLOAT` arm** (`date_core.c:6060-6135`), which rounds
+   the fraction to nanoseconds where the ported `T_RATIONAL` arm keeps it
+   exact. `Date#plus` raises `RangeError("Date#+ of a Float is not ported
+yet")` for a non-integer `number` today; that raise is what this deletes.
+   Note `DateTime`'s constructor already inlines the arm's rounding via
+   `add_frac` (`date_core.c:3313-3317`), so the two must agree.
+3. **A `Date` carrying `ComplexDateData`.** `Date#dComplexNewInternal` raises:
+   MRI answers a `Date` with a day-fraction for `Date.new(2000,1,1) +
+Rational(1,2)`, and this port keeps `df`/`sf`/`of` on `DateTime` alone. The
+   `T_RATIONAL` arm reaches it only for a `Date` receiver.
 
-What is left, and why it did not fit:
-
-1. **`d_lite_plus`'s `T_FLOAT` arm** (`vendor/date/ext/date/date_core.c:6060-6135`)
-   and **`T_RATIONAL` arm** (`:6174-6229`). Both split the fraction into
-   `jd`/`df`/`sf` and return a `ComplexDateData`. `Date#plus` currently raises
-   `RangeError("Date#+ of a fractional argument is not ported yet")` for a
-   non-integer argument rather than rounding to a whole day — that raise is
-   what this story deletes. Note `DateTime`'s constructor already inlines the
-   `T_FLOAT` arm's rounding via `add_frac` (`date_core.c:3313-3317`), so the
-   two must end up agreeing.
-2. **`dt_lite_new_offset`** (`date_core.c` `d_lite_new_offset`) — `DateTime#new_offset`,
-   with its `val2off` / `offset_to_sec` (`:2369-2452`) `TypeError` arm.
-3. **`cmp_gen`'s numeric arm** (`:6697-6705`), which reads `m_ajd` — unported;
-   `Date#compare` is typed `(other: Date)` until it exists.
+Adjacent and cheap while in the file: `cmp_gen`'s `rb_num_coerce_cmp` tail
+(`date_core.c:6694-6705`) is ported, but `Date#compare`'s numeric arm relies on
+`m_ajd`, which landed with #6307 — check whether anything is still missing there.
 
 ## Acceptance criteria
 
-- [ ] The remaining 4 tests of `test_date_arith.rb`'s first half are ported into
-      `packages/date/src/test-date-arith.test.ts` under their Ruby names:
-      `test_new_offset`, `test__plus`, `test__minus`, `test_prev_day`.
-- [ ] `Date#plus` no longer raises for a `Float` or `Rational` argument; the
-      `RangeError` and its comment are deleted.
-- [ ] `pnpm test:compare --package date` credits them (the file reads 7/23
-      today) and no other package regresses.
-- [ ] Assertion-value mismatches against Temporal returns are expected and
-      benign (`vendor/sources.ts:212-221`) — do not converge a Temporal return
-      back to a Ruby-shaped one.
+- [ ] `test_new_offset` is ported into `packages/date/src/test-date-arith.test.ts`
+      under its Ruby name, and `pnpm test:compare --package date` credits it.
+- [ ] `Date#plus` accepts a `Float`-shaped `number`; the `RangeError` for it is
+      deleted.
+- [ ] `Date#dComplexNewInternal` answers a value instead of raising, or the
+      story records why the `Date`/`DateTime` field split makes that the wrong
+      call and converges the raise into something a caller can act on.
+- [ ] No Temporal return is converged back to a Ruby-shaped one to silence an
+      assertion-value mismatch (`vendor/sources.ts:212-221`).
