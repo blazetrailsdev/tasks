@@ -1,7 +1,7 @@
 ---
 title: "Port test_date_strftime.rb GNU coreutils extensions (6 tests)"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T14:13:28Z"
+assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null
 closed-reason: null
 ---
