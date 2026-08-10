@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_conv.rb to_time/to_date/to_datetime matrix (12 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
