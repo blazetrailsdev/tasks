@@ -1,6 +1,6 @@
 ---
 title: "call-args-arel-population-recheck"
-status: blocked
+status: ready
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-10T01:29:37Z"
-assignee: "call-args-arel-population-recheck"
-blocked-by: "Depends on call-args-artifact-and-report, which is status=blocked and unstarted: output/call-arg-mismatches.json does not exist, so AC1 (record compared/mismatched and the shape/naming split UNDER THE SHIPPED PAIRING) has nothing to read. Measuring with a throwaway harness cannot substitute: the ±3x spread the story documents is in the per-SITE pairing policy WITHIN a name-matched method pair, and that policy is still unchosen — the artifact story's AC only fixes the METHOD pairing (reuse checkCalls' pair). Any number produced before the artifact picks a site policy would be a fifth policy, not the shipped one. Unblocks the moment call-args-artifact-and-report merges. Note from the bundled sibling PR: the kwargs comma-splitting loss (call-args-kwargs-string-comma-splitting) measured ZERO lost sites on arel, so it does not move the arel recheck number."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
