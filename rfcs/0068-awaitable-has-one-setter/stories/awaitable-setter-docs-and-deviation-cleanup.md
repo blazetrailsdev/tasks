@@ -43,7 +43,7 @@ machinery is gone:
 - [ ] Final grep gates re-run and green:
       `queueWrite|_displacedRecords|_removeDisplacedFromDb|removeDisplaced`
       → 0 in `packages/activerecord/src`.
-- [ ] `test:compare` delta non-negative for `has_one_associations_test`,
+- [ ] `parity:test` delta non-negative for `has_one_associations_test`,
       `has_one_through_associations_test`, and the autosave suite.
 - [ ] RFC status flipped per lifecycle once all stories are done.
 

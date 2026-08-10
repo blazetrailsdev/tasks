@@ -69,4 +69,4 @@ Note the sibling real port, actionpack's `Parameters`
 - A regression test pins that (it must fail on the current implementation).
 - `params[key]` access and `toH()` keep working for every existing call site;
   the four AR test files above still pass unchanged.
-- `pnpm api:compare --package activerecord-test-support` stays at 32/32.
+- `pnpm parity:api --package activerecord-test-support` stays at 32/32.

@@ -31,4 +31,4 @@ override) and gets its row from the `topics` fixture set.
 - Replace the raw `INSERT INTO topics` in `beforeAll` with a canonical
   `fixtures(["topics"])` seed (mirror Rails' fixture-backed row), then flip the
   suite to transactional `fixtures({})`.
-- No test renames; test:compare delta >= 0; PG/MySQL lanes green.
+- No test renames; parity:test delta >= 0; PG/MySQL lanes green.

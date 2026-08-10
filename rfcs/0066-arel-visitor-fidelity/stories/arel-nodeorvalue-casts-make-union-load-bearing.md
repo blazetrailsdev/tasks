@@ -72,4 +72,4 @@ Related but already handled — do NOT redo: `ValuesList` rows are
 - [ ] Verify by re-running the #5028 experiment: deleting an arm from
       `NodeOrValue` must now fail `pnpm typecheck` at a real call site. That is
       the point of the story — the union becomes an enforced invariant.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

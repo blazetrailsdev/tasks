@@ -49,7 +49,7 @@ PR #6036 which only converges the Symbol-value spelling.
 ## Definition of done
 
 - `pnpm vitest run packages/i18n` green.
-- `pnpm api:calls` / `pnpm api:calls:wide` non-negative.
+- `pnpm parity:api:calls` / `pnpm parity:api:calls` non-negative.
 
 ## Verification
 

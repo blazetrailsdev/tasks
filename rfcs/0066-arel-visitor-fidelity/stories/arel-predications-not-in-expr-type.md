@@ -45,4 +45,4 @@ only cast in that file.
       `packages/arel/src/attributes/attribute.test.ts` (`#not_in_any` /
       `#not_in_all`, "should create a Grouping node") are deleted, with the
       Rails call shape `notInAny([1, 2])` kept verbatim.
-- [ ] No test is renamed. api:compare and test:compare deltas non-negative.
+- [ ] No test is renamed. parity:api and parity:test deltas non-negative.

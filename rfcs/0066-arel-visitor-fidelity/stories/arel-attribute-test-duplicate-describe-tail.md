@@ -56,6 +56,6 @@ it. Reproduce counts with the python snippet in the parent story
       Rails' `attribute_test.rb` (only `#eq_all` twice).
 - [ ] `relationName` describe moved to `attribute.trails.test.ts`.
 - [ ] No test renamed or reworded.
-- [ ] `test:compare --package arel` matched count for
+- [ ] `parity:test --package arel` matched count for
       `attributes/attribute_test.rb` stays at 128; extras fall (70 at time of
       writing, after #5057).

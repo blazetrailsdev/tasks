@@ -44,5 +44,5 @@ first to match the intended granularity.
 - Re-run `DDL_PROFILE=1`: PG `REFERENTIAL_INTEGRITY` ms reduced ≥ 60% vs the
   273,656 ms baseline. FK-integrity correctness preserved (fixtures with
   circular FKs still load; PG lane green).
-- Independent of the truncate-reset stories — can ship in parallel. `test:compare`
+- Independent of the truncate-reset stories — can ship in parallel. `parity:test`
   delta ≥ 0.

@@ -54,6 +54,6 @@ The behavioral risk is the same one PR 5019 found in `when` /
 - [ ] The corresponding `<predicate>_any → grouping_any` /
       `_all → grouping_all` entries are removed from
       `call-mismatches-wide-exclude/arel/attributes/attribute.json`; baseline
-      only shrinks. Re-run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls`
-      before `pnpm api:calls:wide` — a stale artifact reports a false OK.
-- [ ] api:compare / test:compare delta non-negative.
+      only shrinks. Re-run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls`
+      before `pnpm parity:api:calls` — a stale artifact reports a false OK.
+- [ ] parity:api / parity:test delta non-negative.

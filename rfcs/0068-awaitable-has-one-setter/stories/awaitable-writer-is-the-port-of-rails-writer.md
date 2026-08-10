@@ -1,5 +1,5 @@
 ---
-title: "Treat set#{Name} as the api:compare port of Rails' #{name}= writer"
+title: "Treat set#{Name} as the parity:api port of Rails' #{name}= writer"
 status: done
 updated: 2026-07-28
 rfc: "0068-awaitable-has-one-setter"
@@ -19,7 +19,7 @@ closed-reason: null
 
 RFC 0068 added the awaitable `set#{Name}(x)` writer beside the Rails-named `=`
 property setter (`packages/activerecord/src/associations/builder/has-one.ts:102-142`).
-Today `api:compare` treats them asymmetrically: `rubyMethodToTs`
+Today `parity:api` treats them asymmetrically: `rubyMethodToTs`
 (`scripts/api-compare/conventions.ts:638-641`) maps Ruby `name=` to the single
 candidate `[snakeToCamel(base)]`, so `account=` is considered ported by a bare
 `account` accessor, and `setAccount` counts as _extra TS-only surface_.
@@ -40,7 +40,7 @@ the sync setter is faithful only on the branch where Rails does no I/O either
       regenerates and `conventions-doc.ts --check` passes.
 - [ ] `setAccount`/`set#{Name}` no longer appear as extra TS-only surface, and
       `account=` is reported ported.
-- [ ] Confirm the api:extra totals move in the expected direction and no
+- [ ] Confirm the parity:api:extra totals move in the expected direction and no
       unrelated Rails writer silently starts matching a `setX` that was never
       intended as its port.
 - [ ] Decide + record the role of the sync `=` setter under this framing: it

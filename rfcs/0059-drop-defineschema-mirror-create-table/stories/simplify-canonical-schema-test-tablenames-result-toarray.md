@@ -35,4 +35,4 @@ never-taken `Array.isArray` branch.
 - `tableNames` reads names via `Result#pluck("name")` (or `toArray()`), with no
   `Array.isArray` branch and no manual `columns.indexOf`.
 - The three `ensureCanonicalTables` tests that use it still pass unchanged.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.

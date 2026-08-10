@@ -388,7 +388,7 @@ new surface + erroring setter are in):
    erroring-setter call to has_many/habtm `=` and `#{singular}Ids=`; retire
    the persisted-owner half of collection `_pendingReplace`. (deps: 3)
 6. `awaitable-setter-docs-and-deviation-cleanup` — update comments/prose
-   that describe the deferral, verify test:compare non-negative, final grep
+   that describe the deferral, verify parity:test non-negative, final grep
    gates. (deps: 4, 5)
 
 ## Verification
@@ -396,7 +396,7 @@ new surface + erroring setter are in):
 - `git grep -nE "queueWrite|_displacedRecords|_removeDisplacedFromDb|removeDisplaced" packages/activerecord/src`
   → 0 hits (excluding docs/error-message mentions).
 - `has_one` / `has_one_through` / autosave / nested-attributes suites green
-  on all three adapters; `test:compare` delta non-negative for
+  on all three adapters; `parity:test` delta non-negative for
   `has_one_associations_test` and `has_one_through_associations_test`.
 - The #4899/#4901/#4908/#4910 regression scenarios (two-row races) are
   re-expressed as: persisted-owner `=` throws (deterministically), and the

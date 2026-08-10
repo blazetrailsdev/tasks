@@ -46,7 +46,7 @@ This matters beyond tidiness — it is an active defect generator. Each of the
 three review rounds on #5014 was the same root cause: work landed in one block
 while an equivalent block already existed elsewhere in the ~1700-line file,
 producing 3rd and 4th copies of `#not_in_any`/`#not_in_all` and two
-byte-identical `#eq_all` blocks. It also inflates `test:compare` "extra"
+byte-identical `#eq_all` blocks. It also inflates `parity:test` "extra"
 counts (627 extras for arel at time of writing).
 
 Reproduce:
@@ -72,10 +72,10 @@ PY
       source, keep the assertion that is strictly stronger (exact `to_sql` over
       `toContain`), fold in anything unique to a dropped block, and delete
       blocks whose bodies never call the method the `describe` names.
-- [ ] No test is renamed or reworded (`test:compare` matches on names).
+- [ ] No test is renamed or reworded (`parity:test` matches on names).
 - [ ] The `relationName` describe (1 trails / 0 Rails) is a TS-only extra —
       move it to `attribute.trails.test.ts` rather than deleting it.
-- [ ] `test:compare` matched count for arel does not drop; extras fall.
+- [ ] `parity:test` matched count for arel does not drop; extras fall.
 - [ ] Likely exceeds the 500 LOC ceiling as one PR — split by describe group
       (e.g. `#not_between` + `#not_in` + `#lteq` first, then the 1-excess
       tail) and register each split as its own story from `main`.

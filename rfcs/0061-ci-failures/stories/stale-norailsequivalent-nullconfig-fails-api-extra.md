@@ -1,5 +1,5 @@
 ---
-title: "api:extra red on main: stale @noRailsEquivalent tag on NullConfig after #5462"
+title: "parity:api:extra red on main: stale @noRailsEquivalent tag on NullConfig after #5462"
 status: closed
 updated: 2026-07-28
 rfc: "0061-ci-failures"
@@ -17,7 +17,7 @@ closed-reason: "Already fixed on main: commit 638ff0bb0 dropped the stale @noRai
 
 ## Context
 
-`pnpm api:extra` fails on `main`:
+`pnpm parity:api:extra` fails on `main`:
 
 ```text
 extra-surface: 1 STALE @noRailsEquivalent tag(s) on methods that no longer
@@ -40,7 +40,7 @@ in `git show origin/main:.../connection-pool.ts`.
 
 ## Acceptance criteria
 
-- `pnpm api:extra` exits 0.
+- `pnpm parity:api:extra` exits 0.
 - Fixed by deleting the now-redundant tag next to the code (what the lint's own
   message prescribes), not by adding an allowlist entry.
 - The `NullConfig` class, its `NullPool.NullConfig` static re-attachment, and

@@ -35,6 +35,6 @@ Compare to the shipped pattern in RFC 0059's dropExisting-shield conversions.
 - `git grep -c dropExisting -- 'packages/activerecord/src/**/*.test.ts'` = 0
   (or, if a shield genuinely guards a bespoke divergent shape, it is documented
   as out-of-scope pending RFC 0019 burndown rather than removed).
-- Read the corresponding Rails test first; `test:compare` delta ≥ 0; file green
+- Read the corresponding Rails test first; `parity:test` delta ≥ 0; file green
   on all 3 adapters (this file is in the shared-DB flake set — verify no
   collision regression).

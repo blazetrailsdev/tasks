@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-PR #6269 enrolled `adapters/mysql2/mysql2_rake_test.rb` in `test:compare` by
+PR #6269 enrolled `adapters/mysql2/mysql2_rake_test.rb` in `parity:test` by
 deleting its whole-file `UNPORTED_FILES` entry — nothing in it drives Rake;
 every test calls `ActiveRecord::Tasks::DatabaseTasks` directly. It ported 2 of
 26 tests (`MysqlDBCharsetTest`, `MysqlDBCollationTest`) and left **24 as
@@ -50,7 +50,7 @@ Groups, all independently portable:
 - [ ] The `it.skip` count in
       `packages/activerecord/src/adapters/mysql2/mysql2-rake.test.ts` drops
       materially, at Rails names under the existing Rails class describes.
-- [ ] No test renamed; no bespoke tables; `pnpm test:compare` gate-mismatch
+- [ ] No test renamed; no bespoke tables; `pnpm parity:test` gate-mismatch
       stays 0 and the assertion-mismatch ratchet stays green.
 - [ ] Any test left skipped keeps a reason naming the specific Ruby mechanism.
 - [ ] Green on the MariaDB lane (this file is `describeIfMysqlAdapter`-gated, so

@@ -45,7 +45,7 @@ Port each divergent arm to its Rails counterpart in `arel/visitors/` and
 `arel/nodes/`, dispatching on Arel node type (not JS runtime class), removing
 invented surfaces, and pushing adapter encoding back to the adapter's quoting
 layer. Each story cites the Rails `file:line` it converges onto and keeps
-`api:compare` green for the corresponding arel file.
+`parity:api` green for the corresponding arel file.
 
 ## Non-goals
 
@@ -74,7 +74,7 @@ layer. Each story cites the Rails `file:line` it converges onto and keeps
 
 ## Verification
 
-Every migrated story converges to its Rails `file:line` with `api:compare` green
+Every migrated story converges to its Rails `file:line` with `parity:api` green
 for the arel file, and the arel-visitor entry count in this RFC reaches zero open
 stories.
 

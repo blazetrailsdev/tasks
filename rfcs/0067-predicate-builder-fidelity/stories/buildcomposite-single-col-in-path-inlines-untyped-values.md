@@ -52,4 +52,4 @@ builds the `IN` list from `predicate_builder.build_bind_attribute` values.
 - [ ] The existing "single-column composite uses IN(...) (not OR-chain)
       for compactness" test is updated for the bind form WITHOUT being
       renamed.
-- [ ] No test renames; api:compare / test:compare delta non-negative.
+- [ ] No test renames; parity:api / parity:test delta non-negative.

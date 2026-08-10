@@ -21,7 +21,7 @@ Surfaced by review of PR #4873 (arel-raw-value-dispatch-raises-like-rails).
 
 `packages/arel/src/insert-manager.test.ts` has `can create a ValuesList node`
 **twice, verbatim** — at `:8` and `:168` — same body, same assertions. Since
-`test:compare` matches our tests to Rails' by name, the duplicate cannot
+`parity:test` matches our tests to Rails' by name, the duplicate cannot
 improve the mapping and one copy is pure noise.
 
 Both copies also diverge from the Rails test they are named after. Rails'
@@ -45,7 +45,7 @@ Rails name. PR #4873 fixed the rows themselves (they wrapped values in
 Rails') but deliberately left the duplication and the assertion shape alone as
 out of scope.
 
-Note `insert_manager_test.rb` currently shows 1 Miss in `test:compare`, so
+Note `insert_manager_test.rb` currently shows 1 Miss in `parity:test`, so
 there may be a related unported test in the same file worth picking up here.
 
 ## Acceptance criteria
@@ -58,4 +58,4 @@ there may be a related unported test in the same file worth picking up here.
 - [ ] Test name unchanged (`can create a ValuesList node`).
 - [ ] Check the 1 Miss reported for `insert_manager_test.rb` and port it if it
       belongs to this cluster.
-- [ ] test:compare delta for `insert_manager_test.rb` non-negative.
+- [ ] parity:test delta for `insert_manager_test.rb` non-negative.

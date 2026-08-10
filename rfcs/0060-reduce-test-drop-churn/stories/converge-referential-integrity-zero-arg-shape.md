@@ -61,4 +61,4 @@ parameter diverges.
 - If convergence is infeasible, record the structural reason in the RFC and keep
   the parameter, but remove it from the deviation ledger only with that
   justification.
-- PG lane green; `test:compare` delta >= 0.
+- PG lane green; `parity:test` delta >= 0.

@@ -47,4 +47,4 @@ file); explicitly out of scope there, which was a pure literal substitution.
   fix (the test is the regression cover).
 - Test name unchanged. Configurations registry restored in a `finally` so the
   suite leaves `git status` clean and no sibling test sees the stub config.
-- `test:compare` for `connection_handler_test.rb` stays at 22/22.
+- `parity:test` for `connection_handler_test.rb` stays at 22/22.

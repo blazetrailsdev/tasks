@@ -38,4 +38,4 @@ this just makes it official.
   renaming Rails-matched test names.
 - `git grep -l "useHandlerFixtures" packages/activerecord/src/**/*.test.ts`
   -> only `test-helpers/` (if any); not exported from any public/test-helper index.
-- `test:compare` delta >= 0; no test renames.
+- `parity:test` delta >= 0; no test renames.

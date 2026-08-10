@@ -48,6 +48,6 @@ in the same pass where a Rails counterpart exists.
   verbatim values where the trails test maps to a Rails test.
 - Tests with no Rails counterpart keep a name that cannot be connected through
   (or ride `ambientPoolConfiguration()` if they lease).
-- Test names unchanged; `test:compare` for `connection_handler_test.rb` stays
+- Test names unchanged; `parity:test` for `connection_handler_test.rb` stays
   at 22/22.
 - Suite run leaves `git status` clean.

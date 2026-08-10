@@ -50,6 +50,6 @@ from the Rails source without further verification:
 - `in-time-zone.ts`: fold into `cases/helper.ts` only if it really is
   `helper.rb`'s `InTimeZone`; a separate file is acceptable if folding it in
   would misrepresent the boundary — justify either way at the call site.
-- Do NOT rename any test. `pnpm schema:compare` / `pnpm fixtures:compare` output
+- Do NOT rename any test. `pnpm parity:schema` / `pnpm parity:fixtures` output
   must be unchanged.
 - Depends on `move-test-helpers-to-support-dir`.

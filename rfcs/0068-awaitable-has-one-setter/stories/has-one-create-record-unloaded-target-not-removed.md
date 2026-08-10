@@ -50,7 +50,7 @@ about a **loaded** target reached via `SingularAssociation#build` /
 - [ ] Regression test: `firm.createAccount(...)` on a firm whose existing
       `account` row was never loaded nullifies (or destroys, per `:dependent`)
       the old row. Must fail on baseline.
-- [ ] The `has_one` / `has_one_through` suites stay green and `test:compare`
+- [ ] The `has_one` / `has_one_through` suites stay green and `parity:test`
       delta is non-negative.
 - [ ] Remove the "until that load is ported" caveat from the `_createRecord`
       comment once it is ported.

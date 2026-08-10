@@ -73,7 +73,7 @@ story's work.
 - `view_test.rb`'s `test_insert_record_populates_primary_key` extracts as
   `adapters=[postgresql] features=[insert_returning,views]`, clearing the
   `wrong-gate` entry PR 5585 leaves behind.
-- `pnpm test:compare` gate-mismatch count does not rise for any other test:
+- `pnpm parity:test` gate-mismatch count does not rise for any other test:
   diff the `--gates` output before and after.
 - Unit coverage in `scripts/test-compare/gate-mismatch.test.ts` for the pure-`&&`
   adapter+feature case.

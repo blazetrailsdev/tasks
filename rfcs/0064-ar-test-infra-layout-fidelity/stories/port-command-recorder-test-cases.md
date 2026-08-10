@@ -19,7 +19,7 @@ closed-reason: null
 
 **Re-homed 2026-08-07** from `0016-ar-test-compare-100`, which is `superseded` — its successor `0030-ar-test-compare-residual-burndown` is itself now `closed` with no open stories, so this story had no reachable parent and the non-active-parent rule (`scripts/validate-lib.mjs:44`) kept it out of the ready queue permanently. Premise re-verified against `origin/main` (311bff350) at the time of the move; the work below is live, not rot.
 
-Surfaced while porting three delegation tests in PR #5635. `test:compare`
+Surfaced while porting three delegation tests in PR #5635. `parity:test`
 reports `migration/command_recorder_test.rb` against
 `packages/activerecord/src/migration/command-recorder.test.ts` as:
 
@@ -47,14 +47,14 @@ Note the three already ported by #5635, so they are not re-ported:
 
 - Rails' `CommandRecorderTest` cases are ported under the Rails describe path
   (`Migration` > `CommandRecorderTest`) with names matching Rails verbatim, so
-  `test:compare` counts them OK rather than missing.
+  `parity:test` counts them OK rather than missing.
 - The existing 73 bespoke `invert*`-named tests are either renamed to their
   Rails counterparts where one exists, or — where they cover trails-only
   behavior with no Rails equivalent — moved to
   `command-recorder.trails.test.ts` per the TS-only-extras convention.
 - No test is renamed away from a Rails name it currently matches (the 4 OK
   stay OK).
-- `test:compare` delta for this file is strongly positive; `api:compare`
+- `parity:test` delta for this file is strongly positive; `parity:api`
   non-negative.
 - Green on sqlite3, PostgreSQL and MySQL.
 

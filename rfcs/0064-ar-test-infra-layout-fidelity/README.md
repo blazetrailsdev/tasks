@@ -71,7 +71,7 @@ part mirrors the **`test/` root** (`assets/`, `fixtures/`, `migrations/`,
 survives.
 
 **A. Mirrors the Rails `test/` root — stays put** (already faithful;
-`schema:compare` / `fixtures:compare` key off these paths):
+`parity:schema` / `parity:fixtures` key off these paths):
 `models/`, `fixtures/`, `migrations/`, `assets/`, `test-schema.ts`
 (<- `test/schema/schema.rb`).
 
@@ -145,7 +145,7 @@ D's non-`test-helpers/` members landed in `src/test-fixtures/` via #5403.
   process against one database. No Rails name to adopt.
 - **Bucket A.** Already faithful to `test/models/`, `test/fixtures/`,
   `test/migrations/`, `test/assets/`, `test/schema/schema.rb`, and already the
-  keys `schema:compare` / `fixtures:compare` read.
+  keys `parity:schema` / `parity:fixtures` read.
 - **Test files themselves.** Rails puts tests in `test/cases/*_test.rb`; trails
   puts `*.test.ts` next to source by repo convention (CLAUDE.md). Settled,
   separate divergence — hence `cases/` holds only `helper.ts`.
@@ -159,7 +159,7 @@ D's non-`test-helpers/` members landed in `src/test-fixtures/` via #5403.
   `eslint/rails-error-parity-exclude.json` hold per-file paths.
 - `scripts/*-compare/` constants point at `test-helpers/models`,
   `test-helpers/fixtures`, `test-helpers/test-schema.ts` — these feed the stats
-  DB, so `schema:compare` / `fixtures:compare` output must be byte-identical
+  DB, so `parity:schema` / `parity:fixtures` output must be byte-identical
   across the rename.
 - Ordering: ship one story at a time from `main`, no stacking.
 

@@ -49,4 +49,4 @@ metadata (`predicate_builder.rb:20-22`).
       `predicate_builder.rb:20-22`).
 - [ ] Callers constructing `new PredicateBuilder(arelTable)` are updated
       (`table-metadata.ts` `predicateBuilder`, `core.ts`, tests).
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

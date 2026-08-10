@@ -78,7 +78,7 @@ copy with a test.
       (rejected AR-wide) while missing Temporal, whichever way the above goes.
 - [ ] No behaviour change on the real adapter path — this is the
       connection-less debug quoter only.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

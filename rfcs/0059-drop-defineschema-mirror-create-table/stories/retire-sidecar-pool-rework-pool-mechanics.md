@@ -45,5 +45,5 @@ DEPENDS ON both convenience-caller stories landing first (they remove the last
   removed from `test-adapter.ts`. `resetTestAdapterState` retargets the primary
   handler pool.
 - Pool-mechanics callers build their pool in-test from the primary `db_config`
-  - a `PoolConfig` (no bespoke second DB). No test renames; `test:compare`
+  - a `PoolConfig` (no bespoke second DB). No test renames; `parity:test`
     delta >= 0; all lanes unaffected.

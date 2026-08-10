@@ -54,6 +54,6 @@ client/server version coupling.
       `postgresql-rake.test.ts` at its Rails name, asserting
       `PostgreSQL database dump complete` with the Rails assertion kind
       (`assert File.read(...).include?(...)` → `toContain`).
-- [ ] `pnpm test:compare` gate-mismatch stays 0 and the assertion ratchet stays
+- [ ] `pnpm parity:test` gate-mismatch stays 0 and the assertion ratchet stays
       green.
 - [ ] Green on the PG lane.

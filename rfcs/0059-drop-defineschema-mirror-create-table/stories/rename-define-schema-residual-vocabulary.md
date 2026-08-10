@@ -49,4 +49,4 @@ single mechanical rename" — out of scope for a terminal-deletion PR):
 - Stale `defineSchema` prose comments in `packages/activerecord/src` refreshed to
   the current surface; schema-dumper generated-API sites untouched; no test
   names changed.
-- `test:compare` delta >= 0.
+- `parity:test` delta >= 0.

@@ -33,4 +33,4 @@ story's top-level-its scope.
 - The `#not_in` "can be constructed with a Union" test calls `notIn(union)`
   and asserts NOT IN rendering/node shape per Rails attribute_test.rb:958.
 - If the implementation mishandles NotIn-over-Union, converge it to Rails.
-- test:compare matched for attributes/attribute_test.rb stays 128.
+- parity:test matched for attributes/attribute_test.rb stays 128.

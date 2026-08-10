@@ -36,5 +36,5 @@ directly; these three just had no duplicate block carrying the exact copy.
 
 - The three its assert the exact Rails SQL via `toSql()`/`must_be_like`
   equivalent.
-- No test renamed. test:compare matched count for attributes/attribute_test.rb
+- No test renamed. parity:test matched count for attributes/attribute_test.rb
   stays at 128.

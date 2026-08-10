@@ -45,4 +45,4 @@ memoized correction landing per-class, not per-instance.
       `Visitor` subclass fallback (ancestor-registered handler, sub-node
       accept, memoized correction), not two unrelated ToSql compiles.
 - [ ] Justify the non-portable thread/barrier machinery at the call site.
-- [ ] Test name unchanged; test:compare delta non-negative.
+- [ ] Test name unchanged; parity:test delta non-negative.

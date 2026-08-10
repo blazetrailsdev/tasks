@@ -62,4 +62,4 @@ surface `over` before removing it from `Attribute`.
       bare `Attribute`.
 - [ ] The "Mirrors: `OVER` support on Arel expressions" JSDoc is replaced
       with a real `file:line` citation or deleted with the method.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

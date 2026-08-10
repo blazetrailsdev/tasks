@@ -73,7 +73,7 @@ rejection at run end.
   belonging to another worker's connection on the shared database), scope the
   cancel so it can only ever hit a pid this test owns, and document the
   invariant at the call site.
-- Test names are unchanged (they are `test:compare` keys); the fix is in test
+- Test names are unchanged (they are `parity:test` keys); the fix is in test
   setup/teardown or the adapter, not in renaming or deleting tests.
 - Verified by running the affected PG test files repeatedly (≥20 iterations)
   with no unhandled rejection, plus a green full PG shard in CI.

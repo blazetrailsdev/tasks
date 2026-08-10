@@ -66,4 +66,4 @@ both facts in one call.
       `Object.create(Object.create(null))`, `new Config()`.
 - [ ] A class instance whose class defines an enumerable `constructor`-named
       member is still not a Hash.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

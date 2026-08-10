@@ -64,7 +64,7 @@ Rails test lands in the `skip if !supports_x?` shape.
   than an inverted `no_` guard. Update the two pins in
   `extract-ruby-gates.test.ts` deliberately rather than leaving contradictory
   expectations.
-- `pnpm test:compare --gates` gate-mismatch count does not rise. Diff the
+- `pnpm parity:test --gates` gate-mismatch count does not rise. Diff the
   `--gates` output AND the per-gate JSON (`output/rails-tests.json`,
   `output/ts-tests.json`) before and after — the summary count can stay flat
   while individual gates move, which is how #5683's two real changes surfaced.

@@ -33,7 +33,7 @@ across the tree that become stale once the flip lands:
   `docs/activerecord/` is frozen — if a stale mention lives there, record
   it in the PR body instead of editing).
 - Verification: port/spot-check the Rails `validations_test.rb` cases that
-  exercise `valid?` running DB-backed validators, confirm `test:compare`
+  exercise `valid?` running DB-backed validators, confirm `parity:test`
   is non-negative for validations + uniqueness suites, and confirm
   grep-gate zero for `_asyncValidations`.
 
@@ -41,6 +41,6 @@ across the tree that become stale once the flip lands:
 
 - No remaining prose in the tree claims validations are sync-only or
   documents the deferred-uniqueness deviation as current behavior.
-- `test:compare` validations/uniqueness delta reported in the PR body.
+- `parity:test` validations/uniqueness delta reported in the PR body.
 - Docs-only/comment-only portions exempt from LOC ceiling; any test
   additions counted.

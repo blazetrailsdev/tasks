@@ -58,5 +58,5 @@ method call untouched (out of that story's scope).
 - `cache dump filename with path from the argument has precedence` passes the
   explicit `{ schemaCachePath }` second argument and asserts it beats a
   `schemaCachePath` set on the config itself.
-- Test names unchanged; `test:compare` for `tasks/database_tasks_test.rb` stays
+- Test names unchanged; `parity:test` for `tasks/database_tasks_test.rb` stays
   at 77/77; a run of the file leaves `git status` clean.

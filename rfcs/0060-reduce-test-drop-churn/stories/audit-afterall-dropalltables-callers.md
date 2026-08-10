@@ -36,4 +36,4 @@ canonical state that the truncation reset now handles.
   truncation reset. Those self-testing the drop machinery (`drop-all-tables.test`,
   `define-schema.test`) stay and are documented as intentionally retained.
 - Net `DROP_TABLE` contribution from these files' teardown removed where not
-  self-testing; no test renames; `test:compare` delta ≥ 0; all 3 lanes green.
+  self-testing; no test renames; `parity:test` delta ≥ 0; all 3 lanes green.

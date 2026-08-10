@@ -22,7 +22,7 @@ Follow-up to `port-command-recorder-test-cases`, which ported the first half of
 (through `test_invert_rename_index`, line 353) into the
 `Migration > CommandRecorderTest` describe of
 `packages/activerecord/src/migration/command-recorder.test.ts` and deleted the
-bespoke `invert*`-named duplicates it superseded. `test:compare` for that file
+bespoke `invert*`-named duplicates it superseded. `parity:test` for that file
 moved from `4 OK / 89 miss / 73 extra` to `42 OK / 51 miss / 47 extra`.
 
 What is left:
@@ -65,6 +65,6 @@ ported cases assert that shape.
 - The remaining bespoke tests are renamed or moved to
   `command-recorder.trails.test.ts`; no test that currently matches a Rails
   name is renamed away from it.
-- `test:compare` for `migration/command_recorder_test.rb` reaches 93 OK /
-  0 extra; `api:compare` non-negative.
+- `parity:test` for `migration/command_recorder_test.rb` reaches 93 OK /
+  0 extra; `parity:api` non-negative.
 - Green on sqlite3, PostgreSQL and MySQL.

@@ -59,6 +59,6 @@ Also converge the trails-only `animals` third-tier naming onto Rails'
 - Every DatabaseTasks lifecycle describe listed above uses Rails' verbatim
   `adapter: "abstract"` config and Rails' database names.
 - `registerTask` keys and assertions move with them; test names unchanged.
-- `test:compare` for `tasks/database_tasks_test.rb` stays at 77/77.
+- `parity:test` for `tasks/database_tasks_test.rb` stays at 77/77.
 - A run of `packages/activerecord/src/tasks/database-tasks.test.ts` leaves
   `git status` clean (no stray `*.db`).

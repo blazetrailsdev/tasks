@@ -59,7 +59,7 @@ collateral damage — it only checks how many rows came back.
   never cancel another worker's or another suite's query.
 - The test still asserts the cancel actually landed (no silent no-op that
   degrades into a timeout) and still asserts `QueryCanceled` is raised.
-- No new bespoke tables; test name unchanged (test:compare matches on it).
+- No new bespoke tables; test name unchanged (parity:test matches on it).
 - Confirm on a shared-DB run (PG CI, not a local isolated stack) that the
   run-end unhandled `QueryCanceled` no longer appears.
 

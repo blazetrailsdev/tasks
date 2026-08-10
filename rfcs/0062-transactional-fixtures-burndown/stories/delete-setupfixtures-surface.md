@@ -40,4 +40,4 @@ Keep `withTransactionalFixtures` / `setupHandlerSuite` internals if
 - No `setupFixtures` / `useHandlerTransactionalFixtures` symbol outside
   `test-helpers/` internals; grep gate at zero.
 - RFC 0062 exclude + ratchet removed.
-- `test:compare` delta >= 0; no test renames.
+- `parity:test` delta >= 0; no test renames.

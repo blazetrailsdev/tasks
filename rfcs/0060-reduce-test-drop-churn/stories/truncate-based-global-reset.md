@@ -49,6 +49,6 @@ already exists on the adapters (`truncateTables` /
   scope — RFC 0059 §3 / RFC 0019).
 - Re-run the PR #4499 `DDL_PROFILE=1` protocol: `DROP_TABLE` ops reduced ≥ 90%
   on each adapter vs baseline (sqlite 90,094 / PG 96,799 / MariaDB 95,190).
-- Full AR suite green on all 3 lanes; `test:compare` delta ≥ 0; no cross-file
+- Full AR suite green on all 3 lanes; `parity:test` delta ≥ 0; no cross-file
   leakage regressions (shared-DB shape-drift / posts / items / accounts flake
   set stays green).

@@ -36,4 +36,4 @@ PR 4551 worked around this for its own new tests with a shape-tolerant
   object-row shape) so mapped `type`/`name`/`sql` are real values.
 - The `loadCanonicalSchema` byte-for-byte parity test then meaningfully asserts
   content, not just equal placeholder rows; keep the `> 300`-line sanity floor.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.

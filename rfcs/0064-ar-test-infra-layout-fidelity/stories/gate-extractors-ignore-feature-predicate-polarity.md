@@ -49,7 +49,7 @@ mis-gate points the wrong way, which is worse than dropping the adapter set.
   track feature polarity (emitting Rails' own `no_<feature>` guard vocabulary,
   which `gate_from_run_condition` already produces on the `unless` path) or drop
   the adapter set when a negated feature is present.
-- `pnpm test:compare --gates` gate-mismatch count does not rise; diff the
+- `pnpm parity:test --gates` gate-mismatch count does not rise; diff the
   `--gates` output before and after.
 - Unit coverage for `if current_adapter?(:X) && !supports_y?` in
   `scripts/test-compare/extract-ruby-gates.test.ts` and the TS twin in

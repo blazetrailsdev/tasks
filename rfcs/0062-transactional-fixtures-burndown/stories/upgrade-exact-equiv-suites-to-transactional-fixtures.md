@@ -59,5 +59,5 @@ table-metadata, timestamp, transaction-isolation, transactions.trails, types.
   in-test DDL / deliberate DB errors on PG.
 - Files that must stay non-transactional keep `{ useTransactionalTests: false }`
   with a one-line rationale comment (like eager's).
-- No test renames; `test:compare` delta >= 0; PG/MySQL lanes stay green.
+- No test renames; `parity:test` delta >= 0; PG/MySQL lanes stay green.
 - Split per LOC ceiling if needed (register sibling stories, do not fan out PRs).

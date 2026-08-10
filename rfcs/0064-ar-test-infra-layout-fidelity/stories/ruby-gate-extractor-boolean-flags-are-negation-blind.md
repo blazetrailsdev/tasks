@@ -65,6 +65,6 @@ reads polarity at run-condition level and is the side to converge toward.
 - [ ] `has_or` / `has_and` replaced by parity-aware run-space flags.
 - [ ] All existing pins in `extract-ruby-gates.test.ts` pass unchanged.
 - [ ] New pins cover both negated-boolean shapes.
-- [ ] `pnpm test:compare --gates` gate-mismatch count does not rise, verified by
+- [ ] `pnpm parity:test --gates` gate-mismatch count does not rise, verified by
       diffing `output/rails-tests.json` per-gate before/after, not the summary
       count alone (the summary can stay flat while gates move).

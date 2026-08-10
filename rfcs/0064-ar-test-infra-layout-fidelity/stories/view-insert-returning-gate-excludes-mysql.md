@@ -75,7 +75,7 @@ this is specifically the auto-populated-column detection, not a RETURNING gap.
   family, matching `current_adapter?(:PostgreSQLAdapter, :SQLite3Adapter) &&
 supports_insert_returning?` at `view_test.rb:197`.
 - The misleading comment claiming Rails runs the test on mysql is corrected.
-- The `insert_returning,views` feature list is preserved so the test:compare
+- The `insert_returning,views` feature list is preserved so the parity:test
   gate extractor still reconciles `view_test.rb`.
 - The test is NOT renamed.
 - Green on the MariaDB lane, with PostgreSQL and SQLite unchanged.

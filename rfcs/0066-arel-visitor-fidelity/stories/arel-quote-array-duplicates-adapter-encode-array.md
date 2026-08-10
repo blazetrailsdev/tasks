@@ -58,7 +58,7 @@ encoding_ specifically can be shared with, or delegated to, the adapter's
       output to `quote(ArrayData)` for booleans, dates, nested arrays, NULL,
       and the quote-by-content cases in `quote-array.test.ts`.
 - [ ] No behaviour change on either path — this is de-duplication, not a fix.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

@@ -134,7 +134,7 @@ still drops. The strategy:
 - **Retiring `defineSchema` / the one-schema apparatus.** That is RFC 0059's
   deliverable; this RFC only removes redundant _drops_, not the schema-declaration
   surface.
-- **Test renames or assertion rewrites.** `test:compare` delta must stay ≥ 0.
+- **Test renames or assertion rewrites.** `parity:test` delta must stay ≥ 0.
 
 ## Measurable acceptance (vs the #4499 baseline)
 
@@ -148,7 +148,7 @@ Re-run the identical `DDL_PROFILE=1` protocol (PR #4499) after the reduction:
   schema-DDL ms today).
 - **PG `REFERENTIAL_INTEGRITY` ms reduced ≥ 60%** (273,656 ms baseline) by
   scoping the toggle to loaded tables / relying on transactional rollback.
-- **Correctness held:** full AR suite green on all three lanes; `test:compare`
+- **Correctness held:** full AR suite green on all three lanes; `parity:test`
   delta ≥ 0; no cross-file state leakage (the flake set in `MEMORY.md` —
   shared-DB shape-drift, posts/items/accounts collisions — must not regress).
 

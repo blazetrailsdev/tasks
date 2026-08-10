@@ -62,4 +62,4 @@ Delete the retired invention:
   `packages/activerecord/src` (dumper generated-name excepted).
 - `git grep -i "one.schema\|AR_ONE_SCHEMA" packages/ eslint/ scripts/` -> 0
   (stale comment stragglers from #4540 swept).
-- `test:compare` delta >= 0; no test renames.
+- `parity:test` delta >= 0; no test renames.

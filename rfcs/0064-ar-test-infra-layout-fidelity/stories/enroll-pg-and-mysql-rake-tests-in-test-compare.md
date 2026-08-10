@@ -1,5 +1,5 @@
 ---
-title: "Enroll postgresql_rake_test.rb and mysql2_rake_test.rb in test:compare"
+title: "Enroll postgresql_rake_test.rb and mysql2_rake_test.rb in parity:test"
 status: done
 updated: 2026-08-09
 rfc: "0064-ar-test-infra-layout-fidelity"
@@ -50,10 +50,10 @@ as "extra (TS only)" exactly as the SQLite ones did.
 - [ ] The `postgresql_rake_test.rb` and `mysql2_rake_test.rb` whole-file entries
       are gone from `UNPORTED_FILES`, or narrowed to what is genuinely not
       portable, with an accurate reason.
-- [ ] Both files appear as matched rows in `pnpm test:compare`, with the
+- [ ] Both files appear as matched rows in `pnpm parity:test`, with the
       already-ported tests credited at their Rails names under their Rails
       `describe` (test class) names.
-- [ ] `pnpm test:compare` gate-mismatch stays 0 and the assertion-mismatch
+- [ ] `pnpm parity:test` gate-mismatch stays 0 and the assertion-mismatch
       ratchet stays green (match Rails' assertion kinds — `assert File.exist?`
       is `toBeTruthy()`, not `toBe(true)`).
 - [ ] No test renamed to achieve the match; trails-only extras move to a

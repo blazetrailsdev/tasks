@@ -42,4 +42,4 @@ with a different type on the base table types through the WRONG type.
 - [ ] A regression test: composite where with a qualified col whose type
       differs from (or is absent on) the base table binds through the joined
       table's type.
-- [ ] No test renames; api:compare / test:compare delta non-negative.
+- [ ] No test renames; parity:api / parity:test delta non-negative.

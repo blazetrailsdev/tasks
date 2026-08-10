@@ -49,5 +49,5 @@ which files are pure `await` insertion.
   save/restore survives rejection.
 - `save`/`saveBang` await the validation chain; existing
   save-time uniqueness behavior unchanged (registry still drained).
-- All touched AR test files pass; no test renamed; `test:compare` delta
+- All touched AR test files pass; no test renamed; `parity:test` delta
   non-negative for validations suites.

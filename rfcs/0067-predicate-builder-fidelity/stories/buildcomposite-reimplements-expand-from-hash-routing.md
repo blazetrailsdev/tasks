@@ -57,4 +57,4 @@ in this file that had to be applied to `buildComposite` separately.
 - [ ] Existing `composite-where.test.ts` behavior is preserved, including
       the arity/shape ArgumentError messages and the null-component
       filtering, or each intentional change is called out.
-- [ ] No test renames; api:compare / test:compare delta non-negative.
+- [ ] No test renames; parity:api / parity:test delta non-negative.

@@ -61,4 +61,4 @@ will inherit whichever decision lands; see
       `predications.ts`.
 - [ ] Coverage pins the chosen behaviour so it cannot regress silently.
 - [ ] The `isEnumerable` doc comment reflects the outcome.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -57,5 +57,5 @@ converted to fixture accessors in the same change.
 - `multi database polymorphic preload with same table name` uses
   `dogs(:sophie)` / `other_dogs(:lassie)` / `comments(:greetings)` /
   `comments(:more_greetings)` per `associations_test.rb:1239-1249`.
-- test:compare assertion-count/kind mismatch counts for `associations_test.rb`
+- parity:test assertion-count/kind mismatch counts for `associations_test.rb`
   do not regress.

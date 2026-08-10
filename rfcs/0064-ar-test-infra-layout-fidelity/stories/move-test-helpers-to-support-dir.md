@@ -69,7 +69,7 @@ edit files at their final paths.
   constants that point at `test-helpers/models`, `test-helpers/fixtures`,
   `test-helpers/test-schema.ts` (`scripts/fixtures-compare/compare.ts:23,932`,
   `scripts/schema-compare/compare.ts:16`, `scripts/fixtures-inventory/inventory.ts:18`).
-- `pnpm schema:compare` and `pnpm fixtures:compare` must produce identical
+- `pnpm parity:schema` and `pnpm parity:fixtures` must produce identical
   output before and after — they key off these paths and feed Dean's stats DB.
 - Import-path churn only: no behavior change, no file contents edited beyond
   import specifiers. This is the single mechanical rename CLAUDE.md exempts from

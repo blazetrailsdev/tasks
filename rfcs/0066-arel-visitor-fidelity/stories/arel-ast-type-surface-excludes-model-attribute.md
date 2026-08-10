@@ -65,4 +65,4 @@ covers raw JS scalars reaching `visit` via class dispatch. This one is about
       Assignment port and the `reg` line) and `visitors/to-sql.test.ts` are gone.
 - [ ] Coordinate with `arel-build-quoted-passes-model-attribute-unwrapped` — this
       unblocks it; do NOT converge the wrap here.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

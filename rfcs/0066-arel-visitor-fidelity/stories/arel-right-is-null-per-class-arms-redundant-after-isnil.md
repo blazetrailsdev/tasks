@@ -68,4 +68,4 @@ open on this same file at the time; both are now merged, so the coast is clear.
       Existing coverage lives in `packages/arel/src/nodes/casted.test.ts`
       ("Arel::Nodes::Casted#nil?") and the Rails-mapped "should handle nil"
       tests in `attributes/attribute.test.ts`.
-- [ ] api:compare / test:compare delta non-negative; wide ratchet green.
+- [ ] parity:api / parity:test delta non-negative; wide ratchet green.

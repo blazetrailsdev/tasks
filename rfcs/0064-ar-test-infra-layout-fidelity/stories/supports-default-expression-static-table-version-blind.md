@@ -52,7 +52,7 @@ alone:
 - `defaults.test.ts:309` — second `itIfSupports("default_expression", ...)`
 
 Note the constraint that forced the belt-and-braces gate in #5569: the
-`test:compare` TS gate extractor only recognizes `adapterSupports("<feature>")`
+`parity:test` TS gate extractor only recognizes `adapterSupports("<feature>")`
 as a feature term (`scripts/test-compare/gates.ts:184`). Dropping that token in
 favor of the live predicate alone collapses the extracted gate to
 `guards: ["unknown"]` and produces a wrong-gate mismatch against Ruby's
@@ -66,7 +66,7 @@ feature token.
       sub-8.0.13 MySQL lane skips exactly as Rails does.
 - [ ] The two `defaults.test.ts` call sites are covered by the corrected
       answer (no separate hand-ANDed guard needed at each site).
-- [ ] `test:compare` gate extraction is unchanged: 0 gate-mismatch for
+- [ ] `parity:test` gate extraction is unchanged: 0 gate-mismatch for
       `defaults_test.rb` and `migration/columns_test.rb`.
 - [ ] Audit whether sibling version-sensitive entries in the same table
       (e.g. `optimizer_hints`, `expression_index`, which already have live

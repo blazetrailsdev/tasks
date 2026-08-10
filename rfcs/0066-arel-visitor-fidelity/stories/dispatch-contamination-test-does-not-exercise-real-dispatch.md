@@ -48,4 +48,4 @@ parent's shared one).
 - [ ] Asserts ToSql output for the same node is unchanged before/after the
       custom visitor accepts it (Rails' contamination assertion).
 - [ ] Test name unchanged (matches Rails verbatim).
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

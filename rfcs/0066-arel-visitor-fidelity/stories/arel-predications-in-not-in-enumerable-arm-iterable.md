@@ -55,4 +55,4 @@ array), but it reads against the source.
       being cast whole; a string and a plain object still reach `quoted_node`.
 - [ ] Arm order matches Rails: SelectManager → Enumerable → else.
 - [ ] Consider sharing the guard with `attribute.ts` rather than duplicating.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

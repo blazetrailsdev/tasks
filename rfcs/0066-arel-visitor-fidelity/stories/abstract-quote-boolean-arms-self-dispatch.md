@@ -62,7 +62,7 @@ Two consequences:
       behaviour-preserving.
 - [ ] `postgresql/quoting.test.ts:34`'s comment disclaiming the dispatch gap is
       removed once the assertions actually pin dispatch.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

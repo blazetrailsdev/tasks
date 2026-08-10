@@ -54,7 +54,7 @@ belongs elsewhere — #4886's `#not_in` case was the latter, and deleting it
 blind would have dropped the only `compile()` coverage for that path. So each
 pair needs checking against the Rails block before removal, not a bulk delete.
 
-Test names must NOT be renamed (test:compare matches on them), so the fix is to
+Test names must NOT be renamed (parity:test matches on them), so the fix is to
 delete the redundant slot or re-nest it under the correct describe, folding in
 any assertion the surviving slot lacks.
 
@@ -68,4 +68,4 @@ any assertion the surviving slot lacks.
 - [ ] Any assertion unique to a deleted slot is folded into the survivor first,
       so no coverage is lost.
 - [ ] The reproduce script above reports no duplicates for these blocks.
-- [ ] test:compare matched count does not drop (extras may fall).
+- [ ] parity:test matched count does not drop (extras may fall).

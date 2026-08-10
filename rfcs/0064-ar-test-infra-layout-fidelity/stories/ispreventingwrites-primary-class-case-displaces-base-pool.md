@@ -35,4 +35,4 @@ in-memory lane (see
   ambient worker pool — e.g. on an isolated `ConnectionHandler` instance rather
   than `Base.connectionHandler`.
 - The `afterEach` in that describe no longer calls `restoreWorkerConnection()`.
-- Test names unchanged; `test:compare` delta for the file is non-negative.
+- Test names unchanged; `parity:test` delta for the file is non-negative.

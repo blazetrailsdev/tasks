@@ -40,4 +40,4 @@ RFC 0070's repair worker exists to paper over.
   helper itself so callers cannot forget it (e.g. a scoped
   `withSecondPool(fn)` that always restores).
 - The three current callers drop their hand-written `afterAll`.
-- No test renamed; sqlite gating unchanged; `test:compare` delta >= 0.
+- No test renamed; sqlite gating unchanged; `parity:test` delta >= 0.

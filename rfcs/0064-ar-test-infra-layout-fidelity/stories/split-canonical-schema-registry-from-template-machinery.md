@@ -43,7 +43,7 @@ one 2400-line file holding two unrelated concerns.
   `emitTableIndexes` (the schema.rb transcription) split out of
   `canonical-schema.ts` from the FK/drop/rebuild machinery, and to which
   filenames per RFC 0064's target layout.
-- If splitting: `pnpm schema:compare` output must be byte-identical
+- If splitting: `pnpm parity:schema` output must be byte-identical
   (`scripts/schema-compare/` reads the registry), and
   `eslint/no-internal-canonical-loaders.mjs` module matching (which keys off the
   `canonical-schema` basename) must be updated to cover the new module.

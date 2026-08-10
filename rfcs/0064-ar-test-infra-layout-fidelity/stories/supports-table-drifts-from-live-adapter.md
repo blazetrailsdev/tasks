@@ -49,4 +49,4 @@ ported Rails test would have thrown unknown-feature instead of gating.
   generalize.
 - If it can go live: delegate to the leased connection as `adapter_helper.rb:66-83`
   does, keeping `describeIfSupports` / `itIfSupports` call sites unchanged.
-- Either way, no test is renamed and the test:compare gate keys stay identical.
+- Either way, no test is renamed and the parity:test gate keys stay identical.

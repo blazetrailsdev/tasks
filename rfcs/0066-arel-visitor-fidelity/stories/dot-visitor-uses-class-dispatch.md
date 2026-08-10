@@ -43,4 +43,4 @@ nodes rather than raising, so the mapping is not identical to `to_sql.rb`.
 - [ ] `dot.ts`'s `visit_*` handler set matches `dot.rb`'s (it renders rather
       than raising — do not copy `to_sql.rb`'s `unsupported` aliases).
 - [ ] `packages/arel/src/visitors/dot.test.ts` stays green (48 tests).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

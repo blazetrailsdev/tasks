@@ -1,5 +1,5 @@
 ---
-title: "api:extra red on main: NestedAttributesDisplacementError tag lacks a permanence claim"
+title: "parity:api:extra red on main: NestedAttributesDisplacementError tag lacks a permanence claim"
 status: closed
 updated: 2026-08-07
 rfc: "0061-ci-failures"
@@ -12,12 +12,12 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Premise gone on origin/main (311bff350): NestedAttributesDisplacementError no longer exists in packages/activerecord/src/associations/errors.ts — the whole nested-attributes property setter it guarded was retired by PR #6167 (ec3f134ef, 'retire the nested-attributes property setter'). errors.ts carries no @noRailsEquivalent tag at all now, so the api:extra permanence-claim red this story was filed for cannot recur."
+closed-reason: "Premise gone on origin/main (311bff350): NestedAttributesDisplacementError no longer exists in packages/activerecord/src/associations/errors.ts — the whole nested-attributes property setter it guarded was retired by PR #6167 (ec3f134ef, 'retire the nested-attributes property setter'). errors.ts carries no @noRailsEquivalent tag at all now, so the parity:api:extra permanence-claim red this story was filed for cannot recur."
 ---
 
 ## Context
 
-`pnpm api:extra` exits 1 on `origin/main` (verified at 022262385):
+`pnpm parity:api:extra` exits 1 on `origin/main` (verified at 022262385):
 
 ```text
 extra-surface: 1 @noRailsEquivalent tag(s) state no permanence claim. Open each
@@ -56,5 +56,5 @@ must name that story instead.
 
 ## Acceptance criteria
 
-- `pnpm api:extra` exits 0 on main.
+- `pnpm parity:api:extra` exits 0 on main.
 - The chosen token reflects the real status, cross-checked against RFC 0087.

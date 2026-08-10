@@ -54,5 +54,5 @@ PR 5005's scope — hence a separate story.
       shadowing the mixin.
 - [ ] The `Attribute`-specific tests in `attribute.test.ts` /
       `attribute.trails.test.ts` still pass unchanged.
-- [ ] api:compare / test:compare delta non-negative; check the wide call
+- [ ] parity:api / parity:test delta non-negative; check the wide call
       ratchet for entries that go stale when these bodies are deleted.

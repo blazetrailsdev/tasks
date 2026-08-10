@@ -50,4 +50,4 @@ arbitrary objects now reach `visit`'s terminal rather than `to-sql`'s
       and `to-sql.test.ts` ("unsupported input should raise UnsupportedVisitError").
 - [ ] Confirm no ActiveRecord caller catches `UnsupportedVisitError` to control
       flow on the no-handler path before changing the class.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

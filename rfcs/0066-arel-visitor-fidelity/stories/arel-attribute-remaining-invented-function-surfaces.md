@@ -34,4 +34,4 @@ retire it, the same resolution applied to `coalesce` in #5007.
 - [ ] Each named method audited against vendored Arel; kept only if a Rails
       counterpart exists, in its Rails-layout file.
 - [ ] Retired methods have no surviving callers under `packages/`.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

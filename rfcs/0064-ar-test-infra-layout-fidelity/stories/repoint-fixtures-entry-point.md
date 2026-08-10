@@ -46,7 +46,7 @@ story lands.
 - No other change rides along: this is a single mechanical rename, so note that
   in the PR body per CLAUDE.md's rename exception to the LOC ceiling.
 - `pnpm typecheck`, `pnpm lint`, and `pnpm format:check` pass.
-- `pnpm schema:compare` / `pnpm fixtures:compare` output unchanged — both key
+- `pnpm parity:schema` / `pnpm parity:fixtures` output unchanged — both key
   off `test-helpers/fixtures/` and `test-helpers/test-schema.ts`, neither of
   which this story touches.
 - Check `eslint/no-internal-canonical-loaders.mjs` + its test: they reference

@@ -62,4 +62,4 @@ raises `NoMethodError` there too), but it confirms both branches are reachable.
       `_attributeAliases` lookup in `table-alias.ts` goes away.
 - [ ] Self-join alias coverage (`where("clients.new_name": …)`, the case the
       current comment cites) stays green.
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

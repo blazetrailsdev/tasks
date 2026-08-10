@@ -52,5 +52,5 @@ reconcile after `create` is what is missing.
       `packages/activerecord/src/associations/has-one-through-associations.test.ts`
       alongside "building works with has one through belongs to with unloaded
       existing join row"; must fail on baseline.
-- [ ] has_one / has_one_through suites stay green; `test:compare` delta
+- [ ] has_one / has_one_through suites stay green; `parity:test` delta
       non-negative.

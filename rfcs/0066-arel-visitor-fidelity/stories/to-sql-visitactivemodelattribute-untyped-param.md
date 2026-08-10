@@ -39,4 +39,4 @@ Rails: `to_sql.rb:756` `visit_ActiveModel_Attribute(o, collector)` →
 - [ ] Any now-redundant internal narrowing/casts in the body are removed.
 - [ ] `to-sql.test.ts:1918`'s `as unknown as { visitActiveModelAttribute(...) }`
       test cast is re-checked and dropped if the signature change makes it moot.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

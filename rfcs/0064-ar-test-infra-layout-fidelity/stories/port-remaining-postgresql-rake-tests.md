@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-PR #6269 enrolled `adapters/postgresql/postgresql_rake_test.rb` in `test:compare`
+PR #6269 enrolled `adapters/postgresql/postgresql_rake_test.rb` in `parity:test`
 by deleting its whole-file `UNPORTED_FILES` entry — the "Rake and PTY shell-out
 have no Node.js equivalent" reason was wrong; every test calls
 `ActiveRecord::Tasks::DatabaseTasks` directly. It ported 4 of 37 tests
@@ -55,7 +55,7 @@ The skipped tests group by blocker, and the groups are independently portable:
 - [ ] The `it.skip` count in
       `packages/activerecord/src/adapters/postgresql/postgresql-rake.test.ts`
       drops materially, at Rails names under the existing Rails class describes.
-- [ ] No test renamed; no bespoke tables; `pnpm test:compare` gate-mismatch
+- [ ] No test renamed; no bespoke tables; `pnpm parity:test` gate-mismatch
       stays 0 and the assertion-mismatch ratchet stays green (match Rails'
       assertion KINDS — `assert File.exist?` is `toBeTruthy()`, not `toBe(true)`).
 - [ ] Any test left skipped keeps a reason naming the specific Ruby mechanism,

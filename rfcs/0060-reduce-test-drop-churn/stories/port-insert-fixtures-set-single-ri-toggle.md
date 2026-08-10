@@ -39,7 +39,7 @@ granularity: a single RI toggle wrapping one batched multi-table
 insert+delete per fixture load.
 
 Fidelity-positive: `insert_fixtures_set` is real Rails API surface
-(api:compare), not a trails invention.
+(parity:api), not a trails invention.
 
 ## Acceptance criteria
 

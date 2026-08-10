@@ -47,4 +47,4 @@ arel-connection-lacks-quoted-date-time-self-dispatch (done).
       arms added in #5021.
 - [ ] If some path does: document it at the call site as a justified
       deviation and close.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

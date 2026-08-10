@@ -69,4 +69,4 @@ Delete the trails invention and everything built around it:
 - `one-schema-exclude.json` deleted; and EVERY eslint rule made irrelevant by
   this work removed (`require-canonical-schema` + its exclude; `use-fixtures-schema`
   removed/reworked; audit sweep clean). This is the final step of the RFC.
-- `test:compare` delta >= 0; no test renames.
+- `parity:test` delta >= 0; no test renames.

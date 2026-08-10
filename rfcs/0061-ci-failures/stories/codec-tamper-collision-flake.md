@@ -55,7 +55,7 @@ palindromic byte string.
 
 - A `munge`-equivalent helper mirroring Rails' `munge` replaces
   `message.slice(0, -1) + "0"` in both tests.
-- Test names are unchanged (`.trails.test.ts` names are `test:compare` keys).
+- Test names are unchanged (`.trails.test.ts` names are `parity:test` keys).
 - 20,000-iteration measurement shows 0 no-throws with the fix (throwaway
   measurement deleted before commit).
 - `pnpm vitest run packages/activesupport/src/messages/`, `pnpm typecheck`,

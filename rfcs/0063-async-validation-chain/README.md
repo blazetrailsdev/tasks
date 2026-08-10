@@ -99,4 +99,4 @@ Strictly ordered — each story branches from main after the previous merges:
   before any save is attempted (Rails `valid?` parity).
 - `_asyncValidations` / `_runAsyncValidations` no longer exist.
 - Validation + uniqueness test files pass on all three adapter lanes;
-  `test:compare` delta for validations/uniqueness suites is non-negative.
+  `parity:test` delta for validations/uniqueness suites is non-negative.

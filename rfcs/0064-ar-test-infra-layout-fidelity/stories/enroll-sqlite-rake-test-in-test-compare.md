@@ -27,7 +27,7 @@ into `packages/activerecord/src/tasks/sqlite-database-tasks.test.ts`:
 - `test_structure_dump_execution_fails` (`:211`)
 - `test_structure_load` (`:252`)
 
-None of them count. `pnpm test:compare` reports no row for
+None of them count. `pnpm parity:test` reports no row for
 `sqlite_rake_test.rb` at all — grepping its output for `sqlite_rake` or
 `sqlite-database-tasks` returns nothing — so the Ruby file reads as entirely
 unported and the four ported tests score as "extra (TS only)". The same is true
@@ -43,7 +43,7 @@ The gap is manifest enrollment, not naming: the trails file is
 between them.
 
 Enrolling a file is four registrations, not one — see the standing note that a
-partial enrollment reds CI (the assertion-mismatch mark) while `test:compare`
+partial enrollment reds CI (the assertion-mismatch mark) while `parity:test`
 runs green locally. Budget for all four.
 
 The PG and MySQL task files are very likely in the same position
@@ -53,10 +53,10 @@ the same pass if so, since it is the same mapping rule.
 
 ## Acceptance criteria
 
-- [ ] `sqlite_rake_test.rb` appears as a matched row in `pnpm test:compare`
+- [ ] `sqlite_rake_test.rb` appears as a matched row in `pnpm parity:test`
       with the ported tests credited.
 - [ ] All four registrations are done, so CI's `Rails API/Test Comparison` job
-      agrees with a local `test:compare` run.
-- [ ] `pnpm test:compare` delta is positive and `pnpm api:compare` is
+      agrees with a local `parity:test` run.
+- [ ] `pnpm parity:test` delta is positive and `pnpm parity:api` is
       non-negative.
 - [ ] No test renamed to achieve the match.

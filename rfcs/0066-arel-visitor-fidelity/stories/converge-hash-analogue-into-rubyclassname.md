@@ -53,7 +53,7 @@ derived record is classified inconsistently depending on which visitor sees it.
       no test renamed (see the five shapes pinned at `dot.test.ts:472-520`).
 - [ ] Behavior is checked on a non-Dot visitor too — a derived record reaching
       `ToSql` must classify the same way.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

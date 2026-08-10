@@ -83,5 +83,5 @@ into `Casted` nodes, which route through `quote()` (`to_sql.rb:87-90`).
 - [ ] Callers in `to-sql.ts`, `mysql.ts` and `postgresql.ts` migrated to `visit`.
 - [ ] Depends on `arel-raw-value-dispatch-raises-like-rails` (PR #4873) landing
       first — same branches.
-- [ ] api:compare / test:compare delta non-negative. Expect api:compare to stop
+- [ ] parity:api / parity:test delta non-negative. Expect parity:api to stop
       reporting `visitNodeOrValue` as a TS-only extra.

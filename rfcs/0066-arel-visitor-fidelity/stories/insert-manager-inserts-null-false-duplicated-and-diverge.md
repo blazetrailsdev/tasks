@@ -29,7 +29,7 @@ across fragmented `describe("insert")` blocks:
 
 Rails declares each exactly once
 (`vendor/rails/activerecord/test/cases/arel/insert_manager_test.rb:79` and
-`:89`). Since `test:compare` matches our tests to Rails' by name, the duplicate
+`:89`). Since `parity:test` matches our tests to Rails' by name, the duplicate
 cannot improve the mapping.
 
 Both also diverge from the Rails tests they are named after:
@@ -58,5 +58,5 @@ distinct ones under the `into`, `columns`, and `values` describe blocks
 - [ ] Test names unchanged.
 - [ ] Fragmented duplicate `describe("insert")` blocks consolidated if it falls
       out naturally; not required.
-- [ ] test:compare delta for `insert_manager_test.rb` non-negative (currently
+- [ ] parity:test delta for `insert_manager_test.rb` non-negative (currently
       19/19, 0 Miss, 9 TS-extra).

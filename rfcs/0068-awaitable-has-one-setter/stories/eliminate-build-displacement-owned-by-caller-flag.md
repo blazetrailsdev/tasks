@@ -51,5 +51,5 @@ state. Once that lands, the flag and both of its guard clauses
 - [ ] `has-one-through-associations.test.ts`,
       `has-one-through-build.trails.test.ts` and
       `has-one-sync-build-displacement.trails.test.ts` pass unchanged.
-- [ ] `pnpm api:extra` for `associations/has-one-association.ts` drops by one
+- [ ] `pnpm parity:api:extra` for `associations/has-one-association.ts` drops by one
       novel name.

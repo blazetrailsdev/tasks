@@ -16,7 +16,7 @@ closed-reason: null
 
 ## Context
 
-PR #5704 made `schema:compare` verify the canonical registry (the transcription
+PR #5704 made `parity:schema` verify the canonical registry (the transcription
 that actually lays the tables) and added `compareTranscriptions` in
 `scripts/schema-compare/compare.ts`, which fails the gate when `TEST_SCHEMA` and
 `buildCanonicalRegistry` disagree. Its scope is deliberately limited to column
@@ -58,5 +58,5 @@ index divergence found by hand.
 - Any divergence the new check finds is fixed in the transcriptions, not
   allow-listed — `TRANSCRIPTION_DIVERGENCE_ALLOW_LIST` is for documented
   exceptions (today: the four arunit2 tables), not for deferred work.
-- `pnpm schema:compare` stays green; existing report lines stay stable or the
+- `pnpm parity:schema` stays green; existing report lines stay stable or the
   change is noted (output is a stats key per RFC 0064).

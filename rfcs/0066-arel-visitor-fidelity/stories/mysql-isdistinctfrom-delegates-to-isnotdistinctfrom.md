@@ -43,6 +43,6 @@ flags.
 - `mysql.ts` `visitArelNodesIsDistinctFrom` appends `"NOT "` and delegates to
   `visitArelNodesIsNotDistinctFrom`, matching mysql.rb:49-51.
 - Remove the converged mysql.json wide-baseline entry; re-run
-  `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` then
-  `pnpm api:calls:wide`.
+  `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` then
+  `pnpm parity:api:calls`.
 - Existing mysql.test.ts SQL assertions unchanged (output is identical).

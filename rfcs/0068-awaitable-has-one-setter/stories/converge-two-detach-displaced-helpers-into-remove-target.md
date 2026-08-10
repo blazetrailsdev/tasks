@@ -23,7 +23,7 @@ Rails has ONE removal entry point for a displaced has_one: the private
 called from `replace` (:69).
 
 trails has three public, invented members doing that job, all counted as extra
-surface by `pnpm api:extra` (`associations/has-one-association.ts` — 5 novel):
+surface by `pnpm parity:api:extra` (`associations/has-one-association.ts` — 5 novel):
 
 - `detachDisplacedTarget(displaced, replacement)` — parks `this.target` on the
   displaced record for the duration of the removal, to reproduce Rails' "target
@@ -44,7 +44,7 @@ caller (or from whether the caller can await).
 
 - [ ] One removal method (Rails' `remove_target!`) where there are currently
       two, or a call-site comment justifying why the split is irreducible in JS.
-- [ ] `pnpm api:extra` activerecord novel count DROPS (currently 579); no new
+- [ ] `pnpm parity:api:extra` activerecord novel count DROPS (currently 579); no new
       allowlist entries.
 - [ ] Existing coverage keeps passing unchanged: the target-on-failure
       invariant (`remove-target-nullify-failure-raise-untested`), the

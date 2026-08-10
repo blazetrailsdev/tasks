@@ -58,5 +58,5 @@ widening is half-applied against a bigint `id`.
 
 - [ ] Every `t.references` column is `big_integer` in both canonical sources.
 - [ ] Every `t.references` without `index: false` carries an index in both.
-- [ ] `pnpm schema:compare` clean; SQLite, PostgreSQL and MySQL/MariaDB lanes
+- [ ] `pnpm parity:schema` clean; SQLite, PostgreSQL and MySQL/MariaDB lanes
       green.

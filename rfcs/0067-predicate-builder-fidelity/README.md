@@ -40,7 +40,7 @@ from `WhereClause#invert`.
 Port each divergent step to its Rails counterpart, routing column/type resolution
 through the Rails cascade (`predicate_builder.rb` → `type_for_attribute`), modeling
 the builder table as Arel::Table, and threading negation through the WhereClause
-invert path. Each story cites the Rails `file:line` and keeps `api:compare` green
+invert path. Each story cites the Rails `file:line` and keeps `parity:api` green
 for predicate_builder.
 
 ## Non-goals
@@ -64,7 +64,7 @@ for predicate_builder.
 
 ## Verification
 
-Every migrated story converges to its Rails `file:line` with `api:compare` green
+Every migrated story converges to its Rails `file:line` with `parity:api` green
 for predicate_builder, and this RFC's open-story count reaches zero.
 
 ## Open questions

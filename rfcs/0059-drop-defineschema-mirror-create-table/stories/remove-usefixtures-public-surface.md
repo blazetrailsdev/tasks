@@ -62,4 +62,4 @@ but it is also called DIRECTLY by 6 test files:
   use.
 - Coordinate ordering with `convert-use-fixtures-schema-off-defineschema` (both
   touch use-fixtures.ts) — ship whichever lands first, rebase the other.
-- `test:compare` delta >= 0; no test renames. NO node:_/process._; async fs only.
+- `parity:test` delta >= 0; no test renames. NO node:_/process._; async fs only.

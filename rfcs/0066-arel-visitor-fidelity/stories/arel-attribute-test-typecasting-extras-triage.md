@@ -19,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-After #5107, `test:compare --package arel` reports
+After #5107, `parity:test --package arel` reports
 `attributes/attribute_test.rb → attribute.test.ts` at 128/128 matched with
 **4 extras** remaining, all inside the `type casting` describe
 (`packages/arel/src/attributes/attribute.test.ts:~842-920`): "does not type
@@ -36,4 +36,4 @@ Rails-shaped coverage elsewhere get deleted; genuinely TS-only ones move to
 
 - The 4 in-describe extras triaged (deleted or moved to
   attribute.trails.test.ts); extras for the file drop to 0.
-- test:compare matched stays 128; no test renamed or reworded.
+- parity:test matched stays 128; no test renamed or reworded.

@@ -51,4 +51,4 @@ limit rather than triggering another CI round.
 - [ ] Both casts removed; the values flow as `unknown` end to end.
 - [ ] No new cast introduced at the call sites to compensate.
 - [ ] `pnpm -w typecheck` clean; arel + activerecord suites green.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

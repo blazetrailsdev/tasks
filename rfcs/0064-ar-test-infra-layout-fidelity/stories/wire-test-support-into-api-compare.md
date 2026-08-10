@@ -27,8 +27,8 @@ But every consumer is Ruby-file-driven — `scripts/api-compare/compare.ts:1485`
 and `scripts/api-compare/extra-surface.ts:12` iterate Ruby files and resolve
 the TS side via `rubyFileToTs` (`scripts/api-compare/conventions.ts:68`) — and
 the Ruby manifest covers only `libPath` (`vendor/sources.ts:276`,
-`libPathsManifest`). Verified by running `pnpm api:compare --package
-activerecord` and `pnpm api:extra --package activerecord --json`: zero
+`libPathsManifest`). Verified by running `pnpm parity:api --package
+activerecord` and `pnpm parity:api:extra --package activerecord --json`: zero
 support-dir files appear in any report. The helper ports
 (`src/support/ddl-helper.ts`, `schema-dumping-helper.ts`,
 `connection-helper.ts`, `adapter-helper.ts`, `fake-adapter.ts`,
@@ -42,7 +42,7 @@ doc `api-compare-test-infra-recommendation.md` (worktree
 `test/support/` only; `cases/helper.rb` (imperative config, cannot be taken
 via a dir-scoped libPath without dragging in all of `test/cases/`),
 `test/config.rb`, the YAML config files, and `test-helpers/` data mirrors
-stay out of api:compare and remain tracked by 0064/0071 stories.
+stay out of parity:api and remain tracked by 0064/0071 stories.
 
 Wiring plan (all machinery exists; one contained extractor change):
 
@@ -73,12 +73,12 @@ Wiring plan (all machinery exists; one contained extractor change):
 
 ## Acceptance criteria
 
-- `pnpm api:compare --package activerecord-test-support` runs and reports
+- `pnpm parity:api --package activerecord-test-support` runs and reports
   the ten `test/support/*.rb` files paired against
   `packages/activerecord/src/support/*.ts`, with `tools.rb` excluded with a
   reason and the fixture data dirs contributing nothing.
 - The activerecord package manifest no longer contains `support/` files
-  (de-overlap), and `pnpm api:compare --package activerecord` totals are
+  (de-overlap), and `pnpm parity:api --package activerecord` totals are
   otherwise unchanged.
 - Extractor de-overlap is covered by a unit test in
   `scripts/api-compare/extract-ts-api.test.ts`.

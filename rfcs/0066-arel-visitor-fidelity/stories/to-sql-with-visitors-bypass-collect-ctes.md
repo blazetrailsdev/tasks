@@ -59,4 +59,4 @@ has the `toCte()` branch written, it is simply never reached. Any child whose
   same-node test would pass regardless.
 - Remove any wide-baseline entries that converge (`visit_Arel_Nodes_With ->
 collect_ctes`, `visit_Arel_Nodes_WithRecursive -> collect_ctes`). Re-run
-  `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before `pnpm api:calls:wide`.
+  `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before `pnpm parity:api:calls`.

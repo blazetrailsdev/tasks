@@ -58,7 +58,7 @@ reaches zero.
 - All 28 caller files converted off `setupFixtures` /
   `useHandlerTransactionalFixtures`; the grep gate returns only `test-helpers/`
   internals.
-- No test renames; `test:compare` delta >= 0.
+- No test renames; `parity:test` delta >= 0.
 - PG/MySQL adapter suites stay green (non-transactional DDL preserved).
 - Likely exceeds 500 LOC across 28 files — split into per-bucket sibling
   stories from `main` (canonical bucket vs PG-DDL bucket) rather than one PR.

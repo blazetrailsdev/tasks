@@ -48,7 +48,7 @@ await define("parrots_pirates", { id: false }, (t) => {
 });
 ```
 
-`schema:compare` does not catch it: the drift check compares the two
+`parity:schema` does not catch it: the drift check compares the two
 transcriptions' `foreignKeys` against _each other_, and both declare none.
 
 ## Converged shape
@@ -67,5 +67,5 @@ Verify on the MariaDB lane, which is strictest about FK targets.
 
 - [ ] All six `foreign_key: true` references declare their FK in both canonical
       sources, targeting the pluralized table with the Rails column.
-- [ ] `pnpm schema:compare` clean; SQLite, PostgreSQL and MySQL/MariaDB lanes
+- [ ] `pnpm parity:schema` clean; SQLite, PostgreSQL and MySQL/MariaDB lanes
       green.

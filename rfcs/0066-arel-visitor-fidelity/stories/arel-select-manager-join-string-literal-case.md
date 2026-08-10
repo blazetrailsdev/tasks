@@ -57,5 +57,5 @@ string or `SqlLiteral` is still lossy.
   since TS has no String subtyping.
 - Each new test fails on the pre-fix `select-manager.ts`.
 - Remove any wide-baseline entries that converge (`join -> create_join`).
-  Re-run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-  `pnpm api:calls:wide`.
+  Re-run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+  `pnpm parity:api:calls`.

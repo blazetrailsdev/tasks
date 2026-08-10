@@ -34,7 +34,7 @@ shape differs from Rails' nested binary chain.
 
 This is cosmetic for SQL output but can matter for anything that walks or
 pattern-matches the Arel AST (visitors, `to_sql` structural assertions,
-api:compare node-shape checks). Not aggregate-specific — the aggregate
+parity:api node-shape checks). Not aggregate-specific — the aggregate
 branch reuses the shared `groupingQueries` helper.
 
 Relevant Rails:

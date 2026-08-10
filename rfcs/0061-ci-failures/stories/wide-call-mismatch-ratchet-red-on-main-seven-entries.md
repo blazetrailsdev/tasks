@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "No longer reproduces: on main @2a846f1a9, pnpm api:compare --wide-calls + lint-call-mismatches-wide.ts reports 'ratchet: OK (4808 baselined)'. All seven entries are resolved (record_environment baselined in migration.json; the rest converged)."
+closed-reason: "No longer reproduces: on main @2a846f1a9, pnpm parity:api --wide-calls + lint-call-mismatches-wide.ts reports 'ratchet: OK (4808 baselined)'. All seven entries are resolved (record_environment baselined in migration.json; the rest converged)."
 ---
 
 ## Context
@@ -21,7 +21,7 @@ The wide call-mismatch ratchet is failing on `origin/main` independently of any
 one PR. Reproduced locally at `bce9297fa` with a clean tree:
 
 ```text
-pnpm api:compare --wide-calls
+pnpm parity:api --wide-calls
 pnpm exec tsx scripts/api-compare/lint-call-mismatches-wide.ts
 → wide call-mismatches ratchet: 7 NEW wide mismatch(es) not in the baseline.
 

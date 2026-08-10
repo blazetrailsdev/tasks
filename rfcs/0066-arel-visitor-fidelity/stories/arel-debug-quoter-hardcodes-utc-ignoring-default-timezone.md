@@ -51,7 +51,7 @@ itself worth challenging rather than baking in.
       `abstract/quoting.rb:184-192`, or the UTC hardcode is recorded at the
       call site as permanent with the dependency-direction justification.
 - [ ] No behaviour change on the real adapter path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

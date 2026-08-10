@@ -24,7 +24,7 @@ closed-reason: null
 - `should create join nodes with a right outer join klass` (rb:525)
 
 Each is `relation.create_join "foo", "bar", Arel::Nodes::<Klass>` +
-`assert_kind_of` + `left == "foo"` / `right == "bar"`. test:compare shows
+`assert_kind_of` + `left == "foo"` / `right == "bar"`. parity:test shows
 select-manager.test.ts at 111/113 with 2 Miss (PR #5056's audit; the
 matcher collapses the three Rails names to 2 missing entries).
 
@@ -40,4 +40,4 @@ into `select-manager.test.ts` next to `should create join nodes`
 - Three new tests in `packages/arel/src/select-manager.test.ts` named
   verbatim after `select_manager_test.rb:509,517,525`, asserting
   instanceOf + `left`/`right` like Rails.
-- test:compare select-manager.test.ts reaches 113/113.
+- parity:test select-manager.test.ts reaches 113/113.

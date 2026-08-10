@@ -61,4 +61,4 @@ join-dependency context, so the fallback has to be plumbed from the
 - [ ] The other fallback-less `associatedTable` call sites in
       `predicate-builder.ts` are audited in the same pass and either fixed
       or justified at the call site.
-- [ ] No test renames; api:compare / test:compare delta non-negative.
+- [ ] No test renames; parity:api / parity:test delta non-negative.

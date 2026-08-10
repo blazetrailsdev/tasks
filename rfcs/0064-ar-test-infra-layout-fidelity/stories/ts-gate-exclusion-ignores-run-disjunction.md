@@ -57,7 +57,7 @@ either one alone opens a `wrong-gate`.
   lockstep — either drop the exclusion (and let the affected tests carry a
   feature-only gate) or teach `scan_run_condition` to see `send(:supports_X?)`
   so the Ruby side records the feature and `mixed` handles it.
-- `pnpm test:compare --gates` gate-mismatch count does not rise; diff the
+- `pnpm parity:test --gates` gate-mismatch count does not rise; diff the
   `--gates` output before and after.
 - Unit coverage in `scripts/test-compare/extract-ts-gates.test.ts` for the
   exclusion-under-disjunction case, replacing the pin PR 5602 left at

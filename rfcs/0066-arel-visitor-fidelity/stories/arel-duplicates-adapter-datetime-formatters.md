@@ -49,7 +49,7 @@ names, in the datetime-formatting dimension rather than the array-encoding one.
 - [ ] The PG `BC`-suffixing variants (`formatInstantForSqlPostgres` et al.)
       are considered — they are adapter-specific and may stay put.
 - [ ] No behaviour change on the real adapter path.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Notes
 

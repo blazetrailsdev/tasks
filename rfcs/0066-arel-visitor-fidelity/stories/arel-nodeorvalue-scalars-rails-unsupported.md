@@ -42,4 +42,4 @@ depends on them. A call-site note in binary.ts points here.
       does; callers wrap in `Casted`/`BindParam`.
 - [ ] For any that survive: justify at the call site with a Rails citation.
 - [ ] Split `number` if needed — `visit_Integer` renders, `visit_Float` raises.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

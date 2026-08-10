@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced by the first `api:compare --package activerecord-test-support` run
+Surfaced by the first `parity:api --package activerecord-test-support` run
 (PR #5433, story `wire-test-support-into-api-compare`), which reports
 inheritance 1/2 for the new package:
 
@@ -43,6 +43,6 @@ the same package are tracked separately by
   with the reason it must sit in between — read
   `vendor/rails/activerecord/test/support/fake_adapter.rb` first and state what
   trails' AbstractAdapter requires that Rails' does not.
-- `pnpm api:compare --package activerecord-test-support` reports inheritance
+- `pnpm parity:api --package activerecord-test-support` reports inheritance
   2/2, or the mismatch is recorded as a reasoned exclusion.
 - Every `fake-adapter.ts` consumer still passes.

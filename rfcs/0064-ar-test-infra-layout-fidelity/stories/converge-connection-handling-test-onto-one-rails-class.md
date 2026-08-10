@@ -47,5 +47,5 @@ but the underlying split and the pool hijacking remain a trails invention.
 - Establish whether the trails-only describes need to swap `Base`'s pool at
   all, or can drive a model/pool of their own; where they must, keep the
   restore and justify it at the call site.
-- No test names change (`test:compare` matches on them).
-- Delta on `test:compare` for this file is non-negative.
+- No test names change (`parity:test` matches on them).
+- Delta on `parity:test` for this file is non-negative.

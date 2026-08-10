@@ -41,4 +41,4 @@ exists only because the base visitor diverges.
       deleted; `dot.test.ts` stays green with no test-name changes.
 - [ ] `to-sql.test.ts` and the other visitor suites updated to the Rails
       message where they assert the old one.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

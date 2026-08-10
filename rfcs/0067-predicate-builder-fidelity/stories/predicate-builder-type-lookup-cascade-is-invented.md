@@ -71,4 +71,4 @@ first, then collapse these to `table.type(name)`.
 - [ ] `TableMetadata#typeForAttribute` (`table-metadata.ts:35-37`) — a trails
       addition; Rails' TableMetadata exposes only `type` — is removed or
       justified.
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

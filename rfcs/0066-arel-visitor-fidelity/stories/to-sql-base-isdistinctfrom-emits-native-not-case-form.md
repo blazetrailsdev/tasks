@@ -64,4 +64,4 @@ baseline flags.
 - Tests assert the emitted SQL per visitor, not just the node class — the
   failure mode this class of bug hides behind.
 - Remove any wide-baseline entries that converge. Re-run
-  `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before `pnpm api:calls:wide`.
+  `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before `pnpm parity:api:calls`.

@@ -29,7 +29,7 @@ transaction (`vendor/rails/activerecord/lib/active_record/associations/has_one_a
 where `self.target` IS the displaced record. Our deferred displacement paths
 run after the replacement is already cached, hence the parked record.
 
-`detachDisplacedTarget` is still novel surface (`pnpm api:extra` lists it for
+`detachDisplacedTarget` is still novel surface (`pnpm parity:api:extra` lists it for
 `associations/has-one-association.ts`). Converging it means the deferred
 callers — the `build#{name}`/`create#{name}` accessors and the
 nested-attributes writer — displace through the same awaited path

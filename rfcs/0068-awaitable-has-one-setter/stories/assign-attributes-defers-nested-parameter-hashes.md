@@ -54,4 +54,4 @@ Out of scope for #5997, which only touched the `#update` dispatch.
 - [ ] A regression test that fails on baseline — e.g. a `reject_if` (or a nested
       build) that reads an owner attribute assigned by the same
       `assignAttributes` call, with the nested key placed first in the literal.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

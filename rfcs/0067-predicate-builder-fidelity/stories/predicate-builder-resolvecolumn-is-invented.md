@@ -45,4 +45,4 @@ one to avoid churn.
       `expand_from_hash` does.
 - [ ] Dotted keys are normalized by `convertDotNotationToHash` only
       (`predicate_builder.rb:165-180`), not re-split at resolution time.
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

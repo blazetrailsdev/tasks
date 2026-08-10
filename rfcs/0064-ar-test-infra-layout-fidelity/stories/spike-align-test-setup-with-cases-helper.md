@@ -41,7 +41,7 @@ convention?
   responsibility to its current trails file/location.
 - Weigh the trade-offs explicitly: vitest `setupFiles` auto-run vs Rails `require`;
   the `test-setup-*` sibling naming consistency; the partial-mirror over-claim risk;
-  whether `test:compare` / `api:compare` gain anything (they map test cases/source, not
+  whether `parity:test` / `parity:api` gain anything (they map test cases/source, not
   setup infra); cost of updating `vitest.config.ts` path references.
 - Produce a short recommendation (audit-report): either
   (a) a concrete consolidation/rename plan under a `cases/` tree, broken into follow-up

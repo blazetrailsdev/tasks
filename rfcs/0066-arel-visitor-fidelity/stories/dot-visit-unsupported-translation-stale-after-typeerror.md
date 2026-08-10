@@ -68,4 +68,4 @@ the branch removed only `describeClass` remains, which is the one matching
       node type".
 - [ ] `dot.test.ts` still covers a handler-less class reaching Dot and getting
       `TypeError, "Cannot visit X"`.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -45,7 +45,7 @@ straight through, which is what the gem does.
 
 ## Definition of done
 
-- `pnpm api:calls` / `pnpm api:calls:wide` non-negative.
+- `pnpm parity:api:calls` / `pnpm parity:api:calls` non-negative.
 - `grep -rn "Symbol.keyFor" packages/i18n/src` is empty.
 
 ## Verification

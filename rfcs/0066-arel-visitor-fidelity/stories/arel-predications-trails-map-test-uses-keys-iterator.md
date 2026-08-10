@@ -37,7 +37,7 @@ reader (or a coverage audit) can reasonably read its name as pinning the Hash
 analogue when it does not.
 
 This is a trails-only test file, so renaming is permitted — the CLAUDE.md rule
-against renaming tests protects Rails-mirrored names used by `test:compare`,
+against renaming tests protects Rails-mirrored names used by `parity:test`,
 and this file has no Rails counterpart (in Ruby a Set, a Hash and a lazy
 enumerator are all simply `Enumerable`).
 
@@ -47,4 +47,4 @@ enumerator are all simply `Enumerable`).
       off a Map), or folded into the generator test.
 - [ ] The Hash-analogue pair-expansion coverage added by #5004 remains the test
       that carries the "Map" name.
-- [ ] test:compare delta non-negative (trails-only file; no Rails pairing).
+- [ ] parity:test delta non-negative (trails-only file; no Rails pairing).

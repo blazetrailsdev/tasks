@@ -37,7 +37,7 @@ fixed in the wiring PR. Missing TS counterparts, per Ruby file:
 - `stubs/strong_parameters.rb` (2/9) — `keys`, `key?`, `has_key?`, `empty?`,
   `permit!`, `to_unsafe_h`, `each_pair`
 
-Reproduce with `pnpm api:compare --package activerecord-test-support`; the
+Reproduce with `pnpm parity:api --package activerecord-test-support`; the
 per-method list is in `scripts/api-compare/output/api-comparison.json`.
 
 ## Acceptance criteria
@@ -46,7 +46,7 @@ per-method list is in `scripts/api-compare/output/api-comparison.json`.
   `packages/activerecord/src/support/*.ts` file, or the Ruby method is excluded
   with a reason (`SKIP_GROUPS` / `unported-files.ts`) explaining why trails'
   suite has no counterpart.
-- `pnpm api:compare --package activerecord-test-support` percentage improves and
+- `pnpm parity:api --package activerecord-test-support` percentage improves and
   the remaining gap is entirely accounted for by documented exclusions.
 - Split across multiple stories if one PR would exceed the 500 LOC ceiling —
   `config.rb` and `stubs/strong_parameters.rb` are the two largest clusters and

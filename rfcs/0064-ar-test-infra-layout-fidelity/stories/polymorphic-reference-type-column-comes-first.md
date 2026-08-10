@@ -45,7 +45,7 @@ t.index(["record_type", "record_id"], { name: "index_attachments_on_record" });
 
 Found while sweeping `t.references` widths and indexes in PR #6191; column
 order was out of that PR's scope (reordering is invisible to
-`schema:compare`, which compares columns as a map, but it _is_ visible in a
+`parity:schema`, which compares columns as a map, but it _is_ visible in a
 `schema_dumper` round-trip and in `SELECT *` ordinal positions).
 
 Every polymorphic `t.references` in `schema.rb` is affected — `attachments`
@@ -68,5 +68,5 @@ emission order.
 
 - [ ] `x_type` precedes `x_id` for every polymorphic `t.references` in both
       canonical sources.
-- [ ] `pnpm schema:compare` clean; the schema-dumper suite green on all three
+- [ ] `pnpm parity:schema` clean; the schema-dumper suite green on all three
       lanes.

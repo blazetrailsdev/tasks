@@ -37,7 +37,7 @@ Callers could pass `escape` and it would vanish with no error. Those four are
 fixed in #5023, along with `eqAll` not pre-folding `quotedArray`
 (predications.rb:34).
 
-The general shape: a Rails private is ported for api:compare surface fidelity,
+The general shape: a Rails private is ported for parity:api surface fidelity,
 but nothing internal routes through it, so the _parameters it exists to carry_
 are never exercised and can be dropped without any test or lint noticing. The
 wide call-mismatch baseline flags the missing call edge, but a baselined entry
@@ -58,8 +58,8 @@ reads as known-and-accepted rather than as a live bug — which is how these sat
   argument reaches the built node — not merely that the call returns the right
   node class, which is what let the `matches` case pass for so long.
 - Remove any wide-baseline entries that converge; baseline only shrinks.
-  Re-run `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` before
-  `pnpm api:calls:wide` (a stale artifact reports a false OK).
+  Re-run `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` before
+  `pnpm parity:api:calls` (a stale artifact reports a false OK).
 - If the inventory turns up nothing beyond what #5023 already fixed, close with
   that finding recorded — a clean result is a useful outcome here.
 

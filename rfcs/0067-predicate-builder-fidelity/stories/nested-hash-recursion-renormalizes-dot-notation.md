@@ -31,7 +31,7 @@ associated builder's public `buildFromHash`/`buildNegatedFromHash`, which run
 `where(posts: { "comments.body": v })` — Rails treats `"comments.body"` as a
 literal column name on the posts table (`arel_table["comments.body"]`); trails
 re-splits it into a second association hop. Also structural: Rails'
-`expand_from_hash` is a distinct protected method (api:compare target); trails
+`expand_from_hash` is a distinct protected method (parity:api target); trails
 collapses it into `buildFromHashInternal` plus a vestigial `expandFromHash` stub
 that ignores `negated`.
 
@@ -42,4 +42,4 @@ that ignores `negated`.
       `buildFromHash` entry, matching predicate_builder.rb:23-26/99-101.
 - [ ] The vestigial `expandFromHash` stub either becomes the real recursion
       target or is deleted.
-- [ ] No test name changes; test:compare / api:compare delta non-negative.
+- [ ] No test name changes; parity:test / parity:api delta non-negative.

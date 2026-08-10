@@ -38,5 +38,5 @@ filename/dump tests (and the real-file drop-all fixture around
   `alternate`, with expected paths updated to match.
 - Any config in these tests that never connects uses `adapter: "abstract"`
   rather than `sqlite3` + a `.db` filename.
-- Test names unchanged; `test:compare` for `tasks/database_tasks_test.rb`
+- Test names unchanged; `parity:test` for `tasks/database_tasks_test.rb`
   stays at 77/77; a run of the file leaves `git status` clean.

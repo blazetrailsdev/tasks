@@ -69,4 +69,4 @@ divergent behaviour and will need updating.
 - [ ] `packages/arel/src/visitors/visitor.test.ts` "distinguishes a
       mis-registered method from an unknown node type" is updated to the Rails
       behaviour (or replaced by tests naming the Rails semantics).
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

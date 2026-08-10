@@ -32,7 +32,7 @@ end
 The trails port
 (`packages/activerecord/src/support/stubs/strong-parameters.ts`) has never
 implemented it. Nothing in the AR suite calls `dup` on the stub, so no test
-fails today, and `pnpm api:compare --package activerecord-test-support` reads
+fails today, and `pnpm parity:api --package activerecord-test-support` reads
 32/32 without it — this is a silent gap, not a ratchet regression.
 
 Noted during review of PR #5690, which moved the parameters off the instance
@@ -49,4 +49,4 @@ parameters, not a structural clone of the wrapper.
   instance over a shallow copy of the parameters, with `permitted` carried over.
 - A test pins that `dup` of a permitted params object is still permitted, and
   that mutating the copy's parameters does not affect the original.
-- `pnpm api:compare --package activerecord-test-support` does not regress.
+- `pnpm parity:api --package activerecord-test-support` does not regress.

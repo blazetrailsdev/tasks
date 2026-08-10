@@ -47,7 +47,7 @@ Then diff the per-gate JSON across the whole vendored suite before/after, as #61
 did — `output/rails-tests.json`, per test, NOT the summary count, which can stay
 flat while gates move. #6126's baseline for that diff was 22,903 tests / 1,916
 gated / 0 moved. Any test that moves here is a real gate change and needs its own
-justification in the PR body; `pnpm test:compare --gates` gate-mismatch count must
+justification in the PR body; `pnpm parity:test --gates` gate-mismatch count must
 not rise.
 
 ## Acceptance criteria

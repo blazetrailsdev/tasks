@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-After #5066, `test:compare --package arel` reports
+After #5066, `parity:test --package arel` reports
 `attributes/attribute_test.rb → attribute.test.ts` at 128/128 matched with
 **52 extras (TS only)**. Describe-count parity with Rails is now exact, so the
 remaining extras are top-level `it()`s in
@@ -36,5 +36,5 @@ assertions should be deleted; genuinely TS-only behaviors move to
 
 - Top-level stray its in attribute.test.ts triaged: duplicate ones deleted,
   TS-only ones moved to attribute.trails.test.ts.
-- test:compare matched stays 128; extras drop substantially from 52.
+- parity:test matched stays 128; extras drop substantially from 52.
 - No test renamed or reworded.

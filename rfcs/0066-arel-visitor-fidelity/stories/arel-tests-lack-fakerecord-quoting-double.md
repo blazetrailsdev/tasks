@@ -56,4 +56,4 @@ the connection-supplying surface rather than the quoter being deleted.
       deleted.
 - [ ] Audit remaining arel tests for assertions weakened by the same gap;
       converge those reachable via the double.
-- [ ] test:compare delta for arel test files non-negative.
+- [ ] parity:test delta for arel test files non-negative.

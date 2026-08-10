@@ -40,7 +40,7 @@ deviation reconciling adapters, not a transcription of schema.rb, and it is
 undocumented as such.
 
 Surfaced in review of PR #5704, which added `canonicalRegistrySchema` — a
-declarative replay of the registry that `schema:compare` diffs against
+declarative replay of the registry that `parity:schema` diffs against
 schema.rb. That replay deliberately reports the _declared_ shape (nullable,
 matching schema.rb) and guards the coincidence with
 `assertCompositePkDeclaresNoNull`, so nothing silently mis-reports today; but
@@ -57,5 +57,5 @@ untouched and belongs in its own change.
   (`canonical-schema.ts:104`), not only in this story.
 - Any test that depended on the NOT NULL (SQLite composite-PK insert of a NULL
   key) is checked against the Rails test of the same name first.
-- `pnpm schema:compare` stays green, including the registry-vs-schema.rb pass
+- `pnpm parity:schema` stays green, including the registry-vs-schema.rb pass
   and `assertCompositePkDeclaresNoNull`.

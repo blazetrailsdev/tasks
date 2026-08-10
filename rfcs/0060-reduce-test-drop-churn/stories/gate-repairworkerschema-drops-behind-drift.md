@@ -37,4 +37,4 @@ speculatively and contribute to the measured DROP churn.
   table (its original safety purpose) — verified by its
   `schema-repair.test.ts`. No behavior change for real drift; only the redundant
   routine drops removed.
-- `test:compare` delta ≥ 0; all 3 lanes green; shared-DB flake set stays green.
+- `parity:test` delta ≥ 0; all 3 lanes green; shared-DB flake set stays green.

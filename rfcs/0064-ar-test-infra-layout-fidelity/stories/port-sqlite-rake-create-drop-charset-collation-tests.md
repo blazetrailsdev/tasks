@@ -20,7 +20,7 @@ closed-reason: null
 
 `packages/activerecord/src/adapters/sqlite3/sqlite-rake.test.ts` now maps onto
 `vendor/rails/activerecord/test/cases/adapters/sqlite3/sqlite_rake_test.rb` in
-`test:compare` (4 matched / 13 skipped). The 13 skipped are pre-existing
+`parity:test` (4 matched / 13 skipped). The 13 skipped are pre-existing
 `it.skip` stubs covering four Ruby test classes:
 
 - `SqliteDBCreateTest` (`sqlite_rake_test.rb:8-70`) — 6 tests
@@ -28,7 +28,7 @@ closed-reason: null
 - `SqliteDBCharsetTest` (`:131-148`) — 1 test
 - `SqliteDBCollationTest` (`:150-164`) — 1 test
 
-They were stubbed while the whole file was excluded from `test:compare` as
+They were stubbed while the whole file was excluded from `parity:test` as
 "Rake … via shell exec", which was wrong — nothing in the file drives Rake, all
 of it calls `ActiveRecord::Tasks::DatabaseTasks` directly. The exclusion is gone;
 the stubs are what is left.
@@ -64,7 +64,7 @@ and delete what it supersedes.
 
 - [ ] No `it.skip` stubs remain in `sqlite-rake.test.ts`; every test in the file
       runs.
-- [ ] `sqlite_rake_test.rb` reports 17/17 matched in `pnpm test:compare`, with
+- [ ] `sqlite_rake_test.rb` reports 17/17 matched in `pnpm parity:test`, with
       gate-mismatch still 0.
 - [ ] The assertion-mismatch ratchet stays green: match Rails' assertion kinds
       (`assert File.exist?` is `toBeTruthy()`, not `toBe(true)`) and counts.

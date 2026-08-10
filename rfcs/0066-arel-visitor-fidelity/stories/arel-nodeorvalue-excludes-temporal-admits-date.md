@@ -44,4 +44,4 @@ nodes:
       `visitors/to-sql.test.ts` are gone.
 - [ ] Decide, with a Rails citation, whether `Date` should remain in
       `NodeOrValue` at all given JS Date is rejected AR-wide.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

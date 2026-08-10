@@ -41,5 +41,5 @@ bodies assert the wrong thing:
   the Rails assertions (chaining the actual method; DistinctOn equality + nil
   clearing).
 - The four Rails `chains` tests exist with faithful bodies.
-- test:compare select-manager.test.ts delta non-negative (stays 113/113 or
+- parity:test select-manager.test.ts delta non-negative (stays 113/113 or
   grows).

@@ -42,4 +42,4 @@ genuinely cannot enter `build`.
       force-equality check exists once.
 - [ ] Callers updated; `predicate-builder.test.ts` + `.trails.test.ts` and
       `connection-adapters/postgresql/oid/range.test.ts` pass unchanged.
-- [ ] `pnpm api:calls:wide` still passes with no new baseline entries.
+- [ ] `pnpm parity:api:calls` still passes with no new baseline entries.

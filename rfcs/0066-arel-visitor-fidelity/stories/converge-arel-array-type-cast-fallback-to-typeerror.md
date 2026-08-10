@@ -61,7 +61,7 @@ live bug — no in-repo caller reaches arms 2 or 3.
 - [ ] `quote-array.test.ts`'s "handles bigint values inside objects" and
       "handles objects with toISOString" pin the current fallback behaviour and
       must be replaced, not worked around.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Dependencies / notes
 

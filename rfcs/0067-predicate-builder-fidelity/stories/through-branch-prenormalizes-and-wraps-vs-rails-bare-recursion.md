@@ -37,4 +37,4 @@ trails' `buildFromHashAssociation` through path (`packages/activerecord/src/rela
 
 - [ ] Through branch is the bare Rails recursion: `assocPb.expandFromHash({ [primaryKey]: value })`, no AssociationQueryValue pre-normalization, predicates spliced flat (no And wrapper).
 - [ ] Composite primary key routes like Rails (array-key branch / buildComposite equivalent) instead of throwing.
-- [ ] test:compare / api:compare delta non-negative; no test renames.
+- [ ] parity:test / parity:api delta non-negative; no test renames.

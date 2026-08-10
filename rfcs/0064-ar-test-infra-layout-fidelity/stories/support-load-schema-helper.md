@@ -42,7 +42,7 @@ Assumes `move-test-helpers-to-support-dir` has landed.
   `canonical-schema.ts` has no Rails counterpart (Rails is single-process) and
   should keep its own file and name rather than being crammed into a
   Rails-named one. Say so in the PR body.
-- `pnpm schema:compare` output must be unchanged.
+- `pnpm parity:schema` output must be unchanged.
 - 500 LOC ceiling: `canonical-schema.ts` is 2457 lines, so do NOT attempt to
   move it wholesale. Extract the `load_schema`-shaped entry point only, and
   register any remaining split as a follow-up story.

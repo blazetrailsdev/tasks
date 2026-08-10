@@ -43,7 +43,7 @@ quoting at all** — callers pass already-built expressions. Trails invented an
 Attribute-level surface that both prepends `this` and quotes its arguments.
 Decide whether to port `FactoryMethods#coalesce` to its Rails home and retire
 the Attribute method, or keep the Attribute surface as a documented deviation.
-Check `api:compare` for whether the Attribute method is currently claiming a
+Check `parity:api` for whether the Attribute method is currently claiming a
 Rails mapping it should not (`project_api_compare_method_must_stay_in_rails_layout_file`).
 
 **2. It carries the `map(buildQuoted)` index-as-attribute bug** that #4881 fixed
@@ -65,5 +65,5 @@ all, so resolve (1) first; the bare-function-reference bug should go either way.
 - [ ] Quoting behavior of the args matches whatever Rails does for the
       corresponding surface — do not thread `this` reflexively.
 - [ ] Coverage for the resulting COALESCE SQL.
-- [ ] api:compare / test:compare delta non-negative; wide ratchet green
+- [ ] parity:api / parity:test delta non-negative; wide ratchet green
       (remove converged entries by hand, never reseed).
