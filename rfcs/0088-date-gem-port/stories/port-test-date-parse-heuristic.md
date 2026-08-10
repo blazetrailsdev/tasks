@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_parse.rb heuristic _parse/parse family (12 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

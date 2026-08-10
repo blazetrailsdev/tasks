@@ -1,6 +1,6 @@
 ---
 title: "PG: make configureConnection argless, dropping the acquire-ordering client parameter"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
