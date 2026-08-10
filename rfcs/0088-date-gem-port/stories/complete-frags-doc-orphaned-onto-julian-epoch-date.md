@@ -1,6 +1,6 @@
 ---
 title: "Reattach the rt_complete_frags JSDoc to completeFrags"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

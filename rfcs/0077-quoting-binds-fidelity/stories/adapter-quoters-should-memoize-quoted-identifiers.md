@@ -1,6 +1,6 @@
 ---
 title: "Adapter class-side quoters should memoize through QUOTED_COLUMN_NAMES / QUOTED_TABLE_NAMES"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

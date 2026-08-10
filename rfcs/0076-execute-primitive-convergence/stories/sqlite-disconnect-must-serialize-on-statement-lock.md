@@ -1,6 +1,6 @@
 ---
 title: "sqlite disconnect can close the handle mid-statement; Rails' @lock covers both"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
