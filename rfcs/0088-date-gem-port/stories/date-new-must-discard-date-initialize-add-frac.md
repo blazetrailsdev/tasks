@@ -1,6 +1,6 @@
 ---
 title: "date-new-must-discard-date-initialize-add-frac"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
