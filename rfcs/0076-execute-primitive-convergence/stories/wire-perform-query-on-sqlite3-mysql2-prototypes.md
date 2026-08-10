@@ -45,8 +45,10 @@ other story that wants the Rails raw path.
       argument list and order, as PostgreSQL already does.
 - [ ] The existing private call sites route through it; no `_performQuery`
       remains as a separate signature.
-- [ ] `rawExecute` succeeds on all three adapters (prove it with a direct
+- [ ] `rawExecute` succeeds on sqlite3 and mysql2 (prove it with a direct
       `rawExecute` call in an adapter test, not only through `internalExecute`).
+      PostgreSQL moved to `converge-pg-perform-query-onto-rails-arms` — see the
+      2026-08-10 update below.
 - [ ] api:compare / test:compare delta non-negative; all three lanes green.
 
 ## Update 2026-08-09 (PR #6313)
@@ -64,3 +66,27 @@ not be left beside it as a parallel implementation of the same three arms.
 `internalExecute` is already `preprocessQuery` → `rawExecute`, matching
 `abstract/database_statements.rb:589-591` and `:552`, so the split above it is
 in place and only the leaf dispatch is left.
+
+## Update 2026-08-10 (PR #6327)
+
+**The premise of the first acceptance criterion was wrong.** "as PostgreSQL
+already does" — PG does not, and did not. `postgresql-adapter.ts` carries a
+`private _performQuery(client, sql, binds, payload)` and no prototype
+`performQuery`; the line the Context cites (`:5028`) is not an assignment. So
+`rawExecute` reached the abstract `NotImplementedError` stub on **all three**
+adapters, not two, and "all three lanes green" in the third criterion was
+written believing PG needed nothing.
+
+PR #6327 first renamed PG's method onto Rails' argument list, which is a
+two-line change — and that alone made the body comparable to Rails for the first
+time, surfacing four calls (`prepare_statement`, `is_cached_plan_failure?`, the
+synchronized `@statements` delete, `handle_warnings`) that trails routes through
+the invented `_runQuery` / `_flushWarnings` helpers. Baselining them was
+rejected in review as ratified non-parity, correctly. The rename was therefore
+reverted: PG's name and its body must converge together, which is a design task
+(`_runQuery` also carries a `rowMode` option Rails has no analogue for, so
+folding it into a Rails-signature `perform_query` is not mechanical), and that
+is `converge-pg-perform-query-onto-rails-arms`.
+
+What shipped: sqlite3 and mysql2 wired, `rawExecute` proven directly on both,
+`postgresql-adapter.ts` untouched.
