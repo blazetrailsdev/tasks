@@ -1,6 +1,6 @@
 ---
 title: "uncached-sql-payload-name-nil-passthrough"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6325
 claim: "2026-08-10T09:26:33Z"
 assignee: "uncached-sql-payload-name-nil-passthrough"
 blocked-by: null
