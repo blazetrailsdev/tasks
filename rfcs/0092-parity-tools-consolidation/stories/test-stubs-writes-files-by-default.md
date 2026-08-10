@@ -1,6 +1,6 @@
 ---
 title: "pnpm parity:test:stubs generates 200 files by default; --dry-run should be the default"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6347
 claim: "2026-08-10T19:18:57Z"
 assignee: "ar-closure-rollup-in-parity-summaries"
 blocked-by: null
