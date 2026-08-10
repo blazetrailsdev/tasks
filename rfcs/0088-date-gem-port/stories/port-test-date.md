@@ -73,3 +73,26 @@ Tests in scope (9):
 Sizing is a scoping estimate from the Ruby line ranges, not a measurement. If the
 port exceeds the PR LOC ceiling, ship the part that fits and file the remainder
 as a sibling story — do not grow the PR and do not open the sibling PR yourself.
+
+## Progress — PR #6311 landed 5 of the 9 (2026-08-10)
+
+Ported and credited by `test:compare` (`test_date.rb` 0/9 → 5/9):
+`test__const`, `test_eql_p`, `test_freeze`, `test_submillisecond_comparison`,
+`test_deconstruct_keys`. That PR also implemented what they needed —
+`Date::MONTHNAMES` / `ABBR_MONTHNAMES` / `DAYNAMES` / `ABBR_DAYNAMES`
+(`date_core.c:9420-9443`, `:9598-9614`) and `Date#deconstruct_keys` /
+`DateTime#deconstruct_keys` with its `TypeError` guard
+(`date_core.c:7416-7464`, `:7500-7504`) — and rode on the `cmp_gen` / `cmp_dd` /
+`equal_gen` / `Date::Infinity` cluster a sibling story landed on main first.
+
+**This story stays open for the remaining four**, each blocked on gem surface
+that is still absent:
+
+| test                        | Ruby               | missing surface                                                                                                                                                                                                                                                 |
+| --------------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `test_range_infinite_float` | `test_date.rb:9`   | `Date.today`, `#+`, `#-`, and `Range#cover?` over a `Float::INFINITY` endpoint                                                                                                                                                                                  |
+| `test_sub`                  | `test_date.rb:47`  | subclass propagation through `#+`/`#-`/`#>>`/`#<<`/`#succ`, plus `Marshal.dump`/`load` (`d_lite_marshal_dump`)                                                                                                                                                  |
+| `test_hash`                 | `test_date.rb:127` | `d_lite_hash`, and a decision on how the `eql?`/`hash` pair is expressed at all — JS `Map` is identity-keyed                                                                                                                                                    |
+| `test_infinity_comparison`  | `test_date.rb:166` | the four `Float::INFINITY <=> Date::Infinity.new` assertions need MRI's `flo_cmp` `infinite?` duck-typing protocol (`numeric.c`), which is not vendored; the four `Date::Infinity` receiver assertions already work against the landed `DateInfinity#compareTo` |
+
+`#+` / `#succ` belong to `port-test-date-arith-operators` — sequence after it.
