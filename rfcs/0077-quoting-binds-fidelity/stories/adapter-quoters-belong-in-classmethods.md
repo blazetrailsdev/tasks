@@ -1,7 +1,7 @@
 ---
 title: "adapter-quoters-belong-in-classmethods"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T09:06:33Z"
+assignee: "adapter-quoters-belong-in-classmethods"
 blocked-by: null
 closed-reason: null
 ---
