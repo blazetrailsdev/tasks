@@ -5,7 +5,8 @@ updated: 2026-08-10
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - date-and-time-calculations-predicates-and-day-arithmetic
 deps-rfc: []
 est-loc: 280
 priority: null
