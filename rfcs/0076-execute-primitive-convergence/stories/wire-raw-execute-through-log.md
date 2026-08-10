@@ -15,6 +15,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+> **PR #6311 is stamped on this story but does NOT complete it** — it owns the
+> work already landed, and the adapter routing remain. Do not mark this story
+> done when #6311 merges; see the Progress section at the bottom.
+
 ## Context
 
 Rails' `raw_execute` wraps `perform_query` in `log(...)`, and that is the ONLY

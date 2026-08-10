@@ -16,6 +16,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+> **PR #6311 is stamped on this story but does NOT complete it** — it owns the
+> work already landed, and 4 of its 9 tests remain. Do not mark this story
+> done when #6311 merges; see the Progress section at the bottom.
+
 ## Context
 
 RFC 0088's own measure of done is the gem's test suite. `vendor/sources.ts:210`
