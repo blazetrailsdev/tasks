@@ -1,6 +1,6 @@
 ---
 title: "uncached-sql-payload-name-nil-passthrough"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
