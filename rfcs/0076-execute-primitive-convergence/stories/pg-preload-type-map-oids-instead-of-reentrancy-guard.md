@@ -1,7 +1,7 @@
 ---
 title: "PG: preload initialize_type_map's OIDs and delete the getOidType reentrancy guard"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T00:10:55Z"
+assignee: "port-test-date-arith-operators"
 blocked-by: null
 closed-reason: null
 ---
