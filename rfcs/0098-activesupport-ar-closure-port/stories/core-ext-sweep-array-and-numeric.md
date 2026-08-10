@@ -1,0 +1,35 @@
+---
+title: "core-ext-sweep-array-and-numeric"
+status: draft
+updated: 2026-08-10
+rfc: "0098-activesupport-ar-closure-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: 240
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Slot D: small core_ext files AR calls directly — array + numeric.
+
+- `core_ext/array/access.rb` — NO TS FILE, 14 members: `from`, `to`, `including`, `excluding`, `without`, `second`…`fifth`, `forty_two`, `second_to_last`, `third_to_last`. AR lib uses `from`/`to` (15 grep hits) and `second_to_last` (4).
+- `core_ext/array/extract_options.rb` — NO TS FILE, 7 members (`extract_options!`, `extractable_options?`): 20 AR call sites.
+- `core_ext/numeric/bytes.rb` — NO TS FILE, 16 members (`bytes`…`exabytes` + singular aliases); AR uses `megabytes`.
+- `core_ext/numeric/time.rb` — 7 remaining of 13 (`fortnights`, `in_milliseconds`, …).
+- `core_ext/numeric/conversions.rb` — NO TS FILE, 2 members.
+- `core_ext/integer/time.rb` — 2 remaining; `core_ext/array/conversions.rb` 3, `core_ext/array/extract.rb` 1, `core_ext/array/grouping.rb` 1.
+
+Rails sources under `vendor/rails/activesupport/lib/active_support/`. ~55 members, audit slot ~240 LOC.
+
+## Acceptance criteria
+
+- Listed files at 0 missing; `parity:api` delta non-negative.
+- Number-returning kwarg/predicate semantics match Ruby (no boolean-ification of value-returning predicates).
