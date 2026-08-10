@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_parse.rb heuristic _parse/parse family (12 tests)"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 420
 priority: null
-pr: null
+pr: 6322
 claim: "2026-08-10T02:46:35Z"
 assignee: "port-test-date-conv-date-plus-arms"
 blocked-by: null
