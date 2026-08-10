@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-new-civil-reform"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6323
 claim: "2026-08-10T03:06:34Z"
 assignee: "port-test-date-new-civil-reform"
 blocked-by: null
