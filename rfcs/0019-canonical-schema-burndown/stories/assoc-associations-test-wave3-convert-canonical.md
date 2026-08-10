@@ -49,7 +49,7 @@ from `associations_test.rb`.
       convergence shipped in #3478.
 - [x] FINAL wave only: remove `associations.test.ts` from
       `eslint/require-canonical-schema-exclude.json` once the whole file
-      lint-passes with no `eslint-disable`; `test:compare` delta non-negative;
+      lint-passes with no `eslint-disable`; `parity:test` delta non-negative;
       `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
-      (N/A this wave — deferred to the final wave; this wave's `test:compare`
+      (N/A this wave — deferred to the final wave; this wave's `parity:test`
       delta is non-negative and the file passes.)

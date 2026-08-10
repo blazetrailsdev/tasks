@@ -65,5 +65,5 @@ Rails' alias-derivation order so this doesn't bake in another deviation.
 - [ ] `where({ <association_name>: {...} })` resolves against the join alias
       when that association is joined (covered by an existing Rails test —
       port/un-skip it rather than writing a bespoke one).
-- [ ] No test renames; `pnpm test:compare --cached --package activerecord`
+- [ ] No test renames; `pnpm parity:test --cached --package activerecord`
       shows the skip-count drop. ≤500 LOC; run only touched test files.

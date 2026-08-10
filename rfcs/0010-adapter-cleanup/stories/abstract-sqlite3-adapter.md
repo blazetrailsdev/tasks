@@ -42,4 +42,4 @@ vitest project (setup-free), excluded from `activerecord`. Keep them there.
 - [ ] `BetterSqlite3Adapter` / `NodeSqliteAdapter` / `ExpoSqliteAdapter` are thin subclasses
 - [ ] Registered by `adapter:` name; `sqlite3` defaults to BetterSqlite3
 - [ ] `registerSqliteDriver()` / `getSqlite()` / `AR_SQLITE_DRIVER` removed
-- [ ] All SQLite tests pass; `api:compare` delta non-negative
+- [ ] All SQLite tests pass; `parity:api` delta non-negative

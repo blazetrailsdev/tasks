@@ -47,4 +47,4 @@ FIRST `AssociationsTest` describe of
 - [ ] Convert the `should construct new finder sql after create` body onto
       canonical Person/Reader/Post + fixtures, move it into the canonical
       describe, and remove scratch tables `b_posts`/`b_comments`.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

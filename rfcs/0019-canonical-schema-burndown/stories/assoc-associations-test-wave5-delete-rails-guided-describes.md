@@ -46,10 +46,10 @@ the Rails matches.
 ## Acceptance criteria
 
 - [ ] Delete each remaining `*(Rails-guided)*` / `Rails-guided:` duplicate
-      describe after confirming via `test:compare` the dedicated port already
+      describe after confirming via `parity:test` the dedicated port already
       provides the Rails matches.
 - [ ] Fix any registry/schema leak each deletion exposes; surviving describes
       self-sufficient. Drop now-unused imports.
-- [ ] `test:compare` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
+- [ ] `parity:test` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
 - [ ] Do NOT remove the file from `eslint/require-canonical-schema-exclude.json`.
 - [ ] Split into ≤500 LOC sibling PRs off main (NOT stacked) if needed.

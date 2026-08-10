@@ -54,6 +54,6 @@ import from them) — those must stay exported.
       deleting; if any declaration describes behaviour that is NOT implemented,
       register that gap as its own story rather than preserving the
       declaration.
-- [ ] `pnpm typecheck` clean; `pnpm api:compare` shows no new extra/missing
+- [ ] `pnpm typecheck` clean; `pnpm parity:api` shows no new extra/missing
       surface.
 - [ ] Green on all three adapters.

@@ -54,4 +54,4 @@ and the `non-id target PK` test body.
 ## Notes
 
 This is the last item gating `association-scope.test.ts` off the canonical-schema
-exclude list. Test name must stay verbatim (`test:compare` matching).
+exclude list. Test name must stay verbatim (`parity:test` matching).

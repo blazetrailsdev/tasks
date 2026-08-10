@@ -56,4 +56,4 @@ Also deferred: `loading cpk association when persisted and in memory differ`
 - [ ] FINAL wave only: drop `associations.test.ts` from
       `eslint/require-canonical-schema-exclude.json` once ALL describes in the
       file (incl. AssociationProxyTest/PreloaderTest defineSchemas) are canonical;
-      test:compare delta non-negative.
+      parity:test delta non-negative.

@@ -35,5 +35,5 @@ RecordNotSaved) and `becomes()`-based dependent replacement handling in
 
 - [ ] Failed has_one replacement/creation restores prior target and raises the
       Rails error where expected.
-- [ ] Listed tests un-skipped with verbatim Rails names; test:compare delta
+- [ ] Listed tests un-skipped with verbatim Rails names; parity:test delta
       non-negative.

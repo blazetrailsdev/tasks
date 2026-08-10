@@ -44,5 +44,5 @@ Rails source:
 - [ ] Tests that hit impl gaps are `it.skip` with a comment referencing the gap story
 - [ ] File removed from `eslint/require-canonical-schema-exclude.json`
 - [ ] `pnpm vitest run packages/activerecord/src/associations/has-many-associations.test.ts` passes
-- [ ] Test names UNCHANGED (test:compare matching)
+- [ ] Test names UNCHANGED (parity:test matching)
 - [ ] PR opened as draft with `Closes-story:` trailer

@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activerecord/src/migration/change-schema.test.ts` was created by
 PR #5547 to give the relocated `change column null` case its Rails-matching
-home. It holds only that one; `test:compare` reports **34 missing** for
+home. It holds only that one; `parity:test` reports **34 missing** for
 `vendor/rails/activerecord/test/cases/migration/change_schema_test.rb`.
 
 The file already carries a `SilentMigration` (Rails' `suppress_messages`),
@@ -40,7 +40,7 @@ Remaining cases start at `change_schema_test.rb:22` and include the
 - [ ] The remaining `change_schema_test.rb` cases are ported under
       `Migration > ChangeSchemaTest` (and `> ChangeSchemaWithDependentObjectsTest`)
       with names matching Rails verbatim.
-- [ ] `test:compare` missing count for `migration/change_schema_test.rb` drops
+- [ ] `parity:test` missing count for `migration/change_schema_test.rb` drops
       accordingly; 0 gate-mismatch, 0 misplaced.
 - [ ] Green on all three lanes.
 - [ ] Split across PRs under the 500-LOC ceiling if needed; register the

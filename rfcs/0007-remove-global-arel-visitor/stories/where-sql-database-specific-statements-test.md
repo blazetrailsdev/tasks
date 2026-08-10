@@ -47,4 +47,4 @@ rather than mutating a global).
 - [ ] Selects the PostgreSQL visitor via the `engine` argument, not by
       mutating a global visitor.
 - [ ] Asserts `ILIKE` for `matches`, matching the Rails expectation.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

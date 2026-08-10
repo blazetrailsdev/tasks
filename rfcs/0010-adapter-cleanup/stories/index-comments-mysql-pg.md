@@ -37,4 +37,4 @@ first, then introspection, then dump.
 - [ ] PG `indexes()` populates `comment` from `pg_description`
 - [ ] Schema-dump emits `comment:` in `add_index` stanza when present
 - [ ] The two `it.skip("add index with comment later")` tests un-skipped and green
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

@@ -66,4 +66,4 @@ seeders), `postgresql/schema-statements-class.ts:63` (`readonly typeMap`).
 - [ ] PG type-map tests stay green
       (`postgresql-adapter.type-map.test.ts`, `postgresql/type-map-init.test.ts`),
       plus the base `type/type-map.test.ts` / `hash-lookup-type-map.test.ts`.
-- [ ] `pnpm tsc --build` clean; api:compare + test:compare deltas non-negative.
+- [ ] `pnpm tsc --build` clean; parity:api + parity:test deltas non-negative.

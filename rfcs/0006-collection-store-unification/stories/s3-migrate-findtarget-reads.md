@@ -28,7 +28,7 @@ production read path touches `_cachedAssociations` anymore.
 - After this story the only remaining references to `_cachedAssociations` are
   the deprecated shim (S1) and the six test pokes.
 - No public API change; no test renames.
-- `api:compare` delta non-negative.
+- `parity:api` delta non-negative.
 
 ## Notes
 

@@ -60,4 +60,4 @@ exists with the `Migration > ReferencesForeignKeyTest` describe path and a
       migration.
 - [ ] All five test names match Rails verbatim, under
       `Migration > ReferencesForeignKeyTest`.
-- [ ] `pnpm test:compare --package activerecord --gates --check` exits 0.
+- [ ] `pnpm parity:test --package activerecord --gates --check` exits 0.

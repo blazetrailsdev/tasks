@@ -76,6 +76,6 @@ adapter lane if needed.
 - [ ] The four cases above are ported under `Migration > ChangeSchemaTest` in
       `packages/activerecord/src/migration/change-schema.test.ts` with names
       matching Rails verbatim, and their assertions are not weakened.
-- [ ] `test:compare` for `migration/change_schema_test.rb` reaches 35/35 with
+- [ ] `parity:test` for `migration/change_schema_test.rb` reaches 35/35 with
       0 gate-mismatch and 0 misplaced.
 - [ ] Green on all three lanes.

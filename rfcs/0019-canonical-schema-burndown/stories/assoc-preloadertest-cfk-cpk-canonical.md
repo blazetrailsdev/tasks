@@ -46,5 +46,5 @@ are the only remaining consumers. This wave completes the acceptance criterion
 - [ ] Remove the bespoke `defineSchema` block and the file's exclude entry in
       `eslint/require-canonical-schema-exclude.json` (only after ALL bespoke
       defines in the file are gone — coordinate with the other child waves).
-- [ ] Test names match Rails verbatim. test:compare delta non-negative.
+- [ ] Test names match Rails verbatim. parity:test delta non-negative.
 - [ ] PR <=500 LOC. No node:_/process._; async fs only.

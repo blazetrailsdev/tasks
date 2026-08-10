@@ -81,7 +81,7 @@ Rails refs: `bind_parameter_test.rb` (`test_statement_cache*`, and the
   `assert_not_includes` cases (`in clause`) must pass for the right reason (the
   IN-clause query is genuinely not prepared/cached), not vacuously because the
   pool is always empty.
-- Test names unchanged (test:compare matching). No stubs. No forcing green.
+- Test names unchanged (parity:test matching). No stubs. No forcing green.
 - If `to_sql` honoring placeholder mode proves too broad a blast radius for one
   PR, split the `to_sql`/visitor change from the pool-population wiring into
   sibling stories from `main` (non-overlapping files) — do not stack.

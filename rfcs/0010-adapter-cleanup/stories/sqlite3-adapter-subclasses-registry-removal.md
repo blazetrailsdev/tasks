@@ -22,7 +22,7 @@ shared dialect/quoting/schema logic) and a thin `BetterSQLite3Adapter` subclass
 bound to the better-sqlite3 client lib via the `defaultSqliteDriver()` hook. The
 `sqlite3` adapter name now resolves to `BetterSQLite3Adapter`. (Note the
 capital-SQL casing — matches the existing `SQLiteDateTimeType` / `SQLite3Integer`
-and lets `api:compare` map Rails `SQLite3Adapter` via its `Abstract<X>`
+and lets `parity:api` map Rails `SQLite3Adapter` via its `Abstract<X>`
 convention.)
 
 That first PR deliberately kept the legacy driver registry
@@ -63,4 +63,4 @@ NodeSQLite/ExpoSQLite + registry-removal work rather than fanning out PRs.
 - [ ] `registerSqliteDriver()` / `getSqlite()` / `AR_SQLITE_DRIVER` removed
 - [ ] `SQLite3Adapter` alias removed entirely (no compat shim); all call sites
       migrated to `BetterSQLite3Adapter` / `AbstractSQLite3Adapter`
-- [ ] All SQLite tests pass; `api:compare` delta non-negative
+- [ ] All SQLite tests pass; `parity:api` delta non-negative

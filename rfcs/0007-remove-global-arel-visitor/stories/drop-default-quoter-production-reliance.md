@@ -81,7 +81,7 @@ default so the only remaining consumers are arel's own tests.
       `setToSqlVisitor` remain (RFC 0007 "What stays") for arel's own
       dialect-agnostic tests; arel's ~41 connection-less `.toSql()` test files
       still pass unchanged.
-- [x] `api:compare` and `test:compare` deltas are non-negative.
+- [x] `parity:api` and `parity:test` deltas are non-negative.
 - [x] No stubs; no new global mutable connection state (do NOT implement
       `Table.engine` — that reintroduces the global RFC 0007 is removing).
 

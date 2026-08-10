@@ -52,7 +52,7 @@ Remaining non-quoting helpers still in the `quoting.ts` modules:
   audit grouped these under "PG type encode/decode" for relocation to
   `postgresql/oid/bytea.ts`, but Rails defines `escape_bytea`/`unescape_bytea`
   in `PostgreSQL::Quoting` (`postgresql/quoting.rb`). Moving them out of
-  `quoting.ts` drops the api:compare match (verified −2 matched methods on
+  `quoting.ts` drops the parity:api match (verified −2 matched methods on
   PR #3132) and diverges from Rails. They stay in `postgresql/quoting.ts`.
 
 Pure moves + import updates, no behavior change. If date/time alone exceeds the
@@ -70,4 +70,4 @@ Out of scope: any dispatch conversion. Not RFC 0019.
 - [ ] `columnNameMatcher`/`columnNameWithOrderMatcher` and genuine quoting
       helpers left in place
 - [ ] No behavior change; touched tests pass on all three adapters
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

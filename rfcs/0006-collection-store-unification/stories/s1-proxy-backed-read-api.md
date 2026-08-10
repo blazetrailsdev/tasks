@@ -29,7 +29,7 @@ additive so later stories can migrate callers one at a time.
 - `_cachedAssociations` reads route through the proxy accessor; the existing
   six test files that poke it directly still pass untouched.
 - No public API change; no test renames.
-- `api:compare` delta non-negative on
+- `parity:api` delta non-negative on
   `collection_association.rb` / `collection_proxy.rb`.
 
 ## Notes

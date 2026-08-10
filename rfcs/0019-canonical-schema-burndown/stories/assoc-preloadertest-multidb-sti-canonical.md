@@ -39,5 +39,5 @@ and the canonical `dogs` shape.
 
 - [ ] Convert the multi-database polymorphic and STI available-records tests
       onto canonical models.
-- [ ] Test names match Rails verbatim. test:compare delta non-negative.
+- [ ] Test names match Rails verbatim. parity:test delta non-negative.
 - [ ] PR <=500 LOC. No node:_/process._; async fs only.

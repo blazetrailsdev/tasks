@@ -31,5 +31,5 @@ joins/where over the has_one.
 
 - [ ] SpecialAuthor/SpecialBook enum has_one + joins(:book).where(books: {...})
       works.
-- [ ] Both tests un-skipped with verbatim Rails names; test:compare delta
+- [ ] Both tests un-skipped with verbatim Rails names; parity:test delta
       non-negative.

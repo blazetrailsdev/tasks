@@ -77,8 +77,8 @@ RFC's Phase-3 note said to defer rather than force.
       `_connection !== null` (no `finished?`/dead-socket check). Fold the
       `finished?` analogue in here or split to its own story.
 - [ ] `pnpm tsc --build` clean; PG adapter dirs (connection, transaction,
-      transaction-nested, statement-pool, money) green under ARCONN=postgresql + live PG; Phase-2/3 retry/reconnect mirrors stay green; api:compare and
-      test:compare deltas non-negative.
+      transaction-nested, statement-pool, money) green under ARCONN=postgresql + live PG; Phase-2/3 retry/reconnect mirrors stay green; parity:api and
+      parity:test deltas non-negative.
 
 ## Notes
 

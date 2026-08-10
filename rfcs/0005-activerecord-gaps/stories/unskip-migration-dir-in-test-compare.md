@@ -27,11 +27,11 @@ cases. The Rails-side _infrastructure_ file is
 `test/cases/migration_test.rb`'s helpers plus `test/support/`, not this dir.
 
 Consequence: every test ported out of that directory is invisible to
-`test:compare` — it lands in the "extra (TS only)" bucket instead of counting
+`parity:test` — it lands in the "extra (TS only)" bucket instead of counting
 as a matched pair, and the missing cases never show as missing. This was found
 while shipping `port-migration-foreign-key-add-cases` (PR that adds
 `packages/activerecord/src/migration/foreign-key.test.ts`): the story's
-acceptance criterion "test:compare delta for foreign_key_test.rb is strictly
+acceptance criterion "parity:test delta for foreign_key_test.rb is strictly
 positive" was unsatisfiable because the file is not in the manifest at all.
 
 Expect a large one-time drop in the reported overall percentage when the
@@ -43,7 +43,7 @@ pattern is removed — those tests were always missing, just unmeasured. The
 - [ ] The `/\/migration\//` entry is removed from `SKIP_PATTERNS` (or narrowed
       to whatever genuinely-infrastructure file motivated it, with the reason
       spelled out in the comment).
-- [ ] `pnpm test:compare --package activerecord` lists
+- [ ] `pnpm parity:test --package activerecord` lists
       `migration/foreign_key_test.rb` and its siblings, and matches the already
       ported cases in `packages/activerecord/src/migration/` (foreign-key.test.ts,
       join-table.test.ts, command-recorder.test.ts) rather than reporting them

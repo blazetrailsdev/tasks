@@ -1,6 +1,6 @@
 ---
 rfc: "0012-adapter-test-ci"
-title: "Adapter test-CI: wire the live-DB lane + the test:compare gate machinery"
+title: "Adapter test-CI: wire the live-DB lane + the parity:test gate machinery"
 status: closed
 created: 2026-06-04
 updated: 2026-06-23
@@ -15,7 +15,7 @@ clusters:
 <!-- Unnumbered until merge: keep `rfc:` as 0012-adapter-test-ci and the H1
      below number-free. `scripts/finalize-rfc.mjs` assigns the number at merge. -->
 
-# RFC 0012 — Adapter test-CI: wire the live-DB lane + the test:compare gate machinery
+# RFC 0012 — Adapter test-CI: wire the live-DB lane + the parity:test gate machinery
 
 ## Summary
 
@@ -23,7 +23,7 @@ Two adapter-CI initiatives, both nearly complete, consolidated from
 `adapter-test-ci-coverage-plan.md` and `ci-gates-plan.md`. The live-DB adapter
 dirs (`adapters/postgresql/**`, the MySQL adapter dirs) now pass **0 failures**
 after a long bucket-fix campaign; the **only remaining step is wiring the lane
-into CI** (~40 LOC). Separately, the `test:compare` **gate machinery**
+into CI** (~40 LOC). Separately, the `parity:test` **gate machinery**
 (`describeIf*` / `itIfSupports` + Rails-gate extraction) shipped and is advisory;
 the residual work is a per-file gate-mismatch cleanup. This RFC tracks those two
 remainders; everything else is recorded as shipped in §Done.
@@ -104,7 +104,7 @@ The gate machinery shipped (#2856/#2880/#2884): `describeIfPg/Mysql/Sqlite`
 (`test-helpers/supports.ts:32`), Ruby + TS gate extraction
 (`scripts/test-compare/extract-ruby-tests.rb`, `extract-ts-core.ts`), and the
 mismatch classifier (`scripts/test-compare/gates.ts`) surfaced by
-`pnpm test:compare --gates` (`package.json:30` → `scripts/test-compare/run.sh`).
+`pnpm parity:test --gates` (`package.json:30` → `scripts/test-compare/run.sh`).
 It is **advisory — never fails CI**.
 
 **Do as Rails does:** every mismatch is reconciled by making our gate equal the

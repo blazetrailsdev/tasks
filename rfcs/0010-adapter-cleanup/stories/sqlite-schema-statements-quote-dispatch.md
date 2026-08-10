@@ -39,4 +39,4 @@ fallback, `base.ts#quoteSqlValue`, arel `quoteArrayLiteral`. Not RFC 0019.
 - [ ] `extractValueFromDefault` import is left intact
 - [ ] No behavior change: emitted SQL is byte-identical for the SQLite adapter
 - [ ] Touched SQLite schema tests pass (run only the touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

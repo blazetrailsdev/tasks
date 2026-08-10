@@ -55,7 +55,7 @@ documents:
 - **`CONTRIBUTING.md:13`** — _"Read the Rails source first to understand the
   expected behavior."_
 
-The point of `api:compare` and `test:compare` is to make divergences visible.
+The point of `parity:api` and `parity:test` is to make divergences visible.
 The `ToSql` collector threading is a deliberate structural divergence. The port
 chose instance-state threading for convenience at the time, but it diverges from
 Rails' design in a way that (a) adds complexity Rails doesn't have (`_extractBinds`,
@@ -196,8 +196,8 @@ riskier as the codebase evolves.
 
 ### What this RFC is NOT
 
-This RFC is **not** motivated by `api:compare` arity metrics. Approximately 123
-advisory arity mismatches appear in `api:compare` output (every `visit_X(o, collector)`
+This RFC is **not** motivated by `parity:api` arity metrics. Approximately 123
+advisory arity mismatches appear in `parity:api` output (every `visit_X(o, collector)`
 vs `(node)` pair), and this work would clear them as a side-effect. However,
 PR #3045 classified these as known-divergence noise in the arity heuristic. We
 are not refactoring a hot, well-tested path to satisfy an advisory metric. The
@@ -352,7 +352,7 @@ exact structural alignment with Rails.
 ## Rollout
 
 Each phase is a separate PR from `main`, non-overlapping files, ≤500 LOC.
-CI runs `test:compare` and the arel suites on every push. Locally run only
+CI runs `parity:test` and the arel suites on every push. Locally run only
 the touched arel test files.
 
 1. **Phase 1 — `Visitor` base type strengthening:**
@@ -373,7 +373,7 @@ the touched arel test files.
    → Story: [`p3-subclass-threading`](stories/p3-subclass-threading.md)
 
 4. **Phase 4 — Verification:**
-   confirm `test:compare` green, arel test suites green; note `api:compare`
+   confirm `parity:test` green, arel test suites green; note `parity:api`
    arity delta (123 advisory mismatches cleared as side-effect). No behavior
    change expected.
    → Story: [`p4-verification`](stories/p4-verification.md)

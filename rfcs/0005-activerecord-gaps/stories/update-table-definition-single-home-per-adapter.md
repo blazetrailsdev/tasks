@@ -59,4 +59,4 @@ companion.
 - `migration.trails.test.ts` "changeTable yields the adapter's
   updateTableDefinition result" still passes; add companion-level coverage that
   `connection.changeTable` yields the adapter subclass.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

@@ -68,4 +68,4 @@ RFC 0019.
       helpers left in place
 - [ ] No behavior change; touched tests pass on all three adapters (run only the
       touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

@@ -21,7 +21,7 @@ The PostgreSQL-only `deferrable` block of
 `ActiveRecord::Migration::ForeignKeyTest`
 (`vendor/rails/activerecord/test/cases/migration/foreign_key_test.rb:525-619`,
 guarded by `if supports_deferrable_constraints?`) is unported — 10 of the 37
-cases `test:compare` still reports missing after #5453:
+cases `parity:test` still reports missing after #5453:
 
 `test_add_invalid_foreign_key`, `test_deferrable_foreign_key`,
 `test_not_deferrable_foreign_key`, `test_deferrable_initially_deferred_foreign_key`,
@@ -52,5 +52,5 @@ Setup is the shared `withRocketTables`; no new schema needed.
 - [ ] `--gates --check` stays at exit 0.
 - [ ] Any overlap with [[converge-pg-dumper-deferrable-truthiness]] is resolved
       in one direction, not asserted both ways.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

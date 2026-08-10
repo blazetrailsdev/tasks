@@ -68,5 +68,5 @@ PG adapter.
       follow-up note if stderr capture is out of scope).
 - [ ] The 2 `skipIf(pgServerVersion < 100000)` entries verified passing on PG 10+.
 - [ ] No regression in the existing 14 passing enum tests.
-- [ ] String-enum DSL changes (if exposed publicly) keep `api:compare` green.
+- [ ] String-enum DSL changes (if exposed publicly) keep `parity:api` green.
 - [ ] CI-gated once RFC 0012 `wire-adapter-dir-lane` merges.

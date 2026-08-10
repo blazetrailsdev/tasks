@@ -28,7 +28,7 @@ prerequisite for `reconcile-existing-rfcs`. See RFC 0011 §Phase 1.
 - [ ] Signals combined: (a) `pr:` frontmatter → confirm merged via
       `gh pr view`; (b) keyword/anchor match against the trails merged-PR log
       (`gh pr list --state merged` + `git -C ../trails log`); (c)
-      `test:compare` / `api:compare` delta where the story names a gap; (d)
+      `parity:test` / `parity:api` delta where the story names a gap; (d)
       seed obvious AR cases from the memory index.
 - [ ] `--json` output in addition to the human table.
 - [ ] Read-only: the script never edits story frontmatter — it only reports.

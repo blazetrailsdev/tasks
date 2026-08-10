@@ -23,7 +23,7 @@ class of `ReferencesForeignKeyTest`. PR for
 `port-migration-references-foreign-key-cases` ported 9 of the 23 cases in the
 file (the `ReferencesForeignKeyTest` class' create/change/remove cases) into
 `packages/activerecord/src/migration/references-foreign-key.test.ts`;
-`test:compare` now reports `9 OK / 14 missing` for the file.
+`parity:test` now reports `9 OK / 14 missing` for the file.
 
 This story covers the 9 `ReferencesForeignKeyInCreateTest` cases:
 
@@ -53,6 +53,6 @@ the `withTestingTables` helper already in that file.
       path `Migration > ReferencesForeignKeyInCreateTest`.
 - [ ] Test names match Rails verbatim.
 - [ ] Deferrable cases gated on `supports_deferrable_constraints`.
-- [ ] `pnpm test:compare --package activerecord` shows
+- [ ] `pnpm parity:test --package activerecord` shows
       `migration/references_foreign_key_test.rb` missing drop from 14 to 5;
       `--gates --check` exits 0.

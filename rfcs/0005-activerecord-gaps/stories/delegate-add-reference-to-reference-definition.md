@@ -64,9 +64,9 @@ fidelity fix.
 - [ ] `conditionalOptions` (`ifExists` / `ifNotExists`) reach index and
       foreign-key options on the `addReference` path, since it now shares
       `ReferenceDefinition`'s option builders.
-- [ ] `api:compare --package activerecord` and
-      `test:compare --package activerecord` deltas are non-negative;
-      `test:compare --gates --check` exits 0.
+- [ ] `parity:api --package activerecord` and
+      `parity:test --package activerecord` deltas are non-negative;
+      `parity:test --gates --check` exits 0.
 - [ ] Existing suites stay green: `migration/references-foreign-key.test.ts`,
       `migration/references-statements.test.ts`,
       `migration/references-index.test.ts`, `migration/change-table.test.ts`,

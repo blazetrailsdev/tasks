@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 `vendor/rails/activerecord/test/cases/migration/references_foreign_key_test.rb`
-is fully unported: `test:compare --package activerecord` reports
+is fully unported: `parity:test --package activerecord` reports
 `migration/references_foreign_key_test.rb -> migration/references-foreign-key.test.ts
 0 OK / 23 missing (marked X)`. Surfaced while working on
 `fix-foreign-key-test-describe-path` (PR #5457), which fixed the describe path
@@ -41,6 +41,6 @@ fanning out.
       exists with the two-level describe path `Migration > ReferencesForeignKeyTest`.
 - [ ] Test names match Rails verbatim.
 - [ ] Canonical schema/models only — no bespoke tables.
-- [ ] `pnpm test:compare --package activerecord` shows the
+- [ ] `pnpm parity:test --package activerecord` shows the
       `migration/references_foreign_key_test.rb` missing count drop by the
       number ported; `--gates --check` exits 0.

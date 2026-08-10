@@ -76,7 +76,7 @@ DependentFirm (company.ts). Missing: AuthorWithErrorDestroyingAssociation.
 
 ### Impl-gap dependencies (skip-then-unskip)
 
-Some converged tests fail on real impl gaps; owner approved test:compare
+Some converged tests fail on real impl gaps; owner approved parity:test
 regression via `it.skip` + tracked unskip stories:
 
 - `collection-proxy-destroy-transaction` (+ `unskip-has-many-collection-destroy-transaction`)
@@ -95,7 +95,7 @@ regression via `it.skip` + tracked unskip stories:
       `pnpm lint` clean, no `eslint-disable`.
 - [ ] `pnpm vitest run packages/activerecord/src/associations/has-many-associations.test.ts`
       passes on sqlite (skips allowed per above).
-- [ ] Test names unchanged (test:compare matching).
+- [ ] Test names unchanged (parity:test matching).
 
 ## Definition of done
 

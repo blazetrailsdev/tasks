@@ -42,5 +42,5 @@ delegated_type models and their tables.
 - [ ] Port `some already loaded associations` onto canonical delegated_type
       models (Invoice/LineItem/ShippingLine/DiscountApplication/Discount),
       mirroring the Rails nested-preload + query-count + no-query assertions.
-- [ ] Test name matches Rails verbatim. test:compare delta non-negative.
+- [ ] Test name matches Rails verbatim. parity:test delta non-negative.
 - [ ] PR <=500 LOC. No node:_/process._; async fs only.

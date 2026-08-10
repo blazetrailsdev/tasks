@@ -52,4 +52,4 @@ convergence, not test-schema canonicalization.
       instance per the CLAUDE.md `this`-typed mixin pattern
 - [ ] No behavior change: emitted SQL is byte-identical for the MySQL adapter
 - [ ] Touched MySQL schema tests pass (run only the touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

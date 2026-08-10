@@ -56,4 +56,4 @@ collapse is this story.
       deleted or reduced to the test-helper bindings that remain necessary.
 - [ ] `testConnection` in `test-helpers/connection.ts` is re-evaluated per the
       "collapse into this file" note.
-- [ ] arel test suite passes; test:compare delta for arel non-negative.
+- [ ] arel test suite passes; parity:test delta for arel non-negative.

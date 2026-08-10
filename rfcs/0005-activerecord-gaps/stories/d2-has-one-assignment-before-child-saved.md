@@ -49,5 +49,5 @@ but the bare `=` setter can't reach it without awaiting.
       non-awaitable JS setter (e.g. an awaitable assignment helper, or accept the
       documented deviation with a trails-named test), and land it.
 - [ ] `assignment before child saved` un-skipped with the verbatim Rails name (or
-      converted to a documented trails deviation test per the decision), test:compare
+      converted to a documented trails deviation test per the decision), parity:test
       delta non-negative.

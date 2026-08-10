@@ -44,4 +44,4 @@ composite-key GROUP BY for sum/avg/min/max is caught.
       value is correct.
 - [ ] If any aggregate path is found broken (not just uncovered), fix
       `groupedCompositeAssoc` / `buildAggNode` rather than the test name.
-- [ ] CI green on all three adapters; test:compare delta non-negative.
+- [ ] CI green on all three adapters; parity:test delta non-negative.

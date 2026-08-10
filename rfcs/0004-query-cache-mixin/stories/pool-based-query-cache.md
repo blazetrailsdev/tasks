@@ -32,7 +32,7 @@ See RFC 0004 §Design (Phase 2).
 - [ ] `cache` / `uncached` relocated onto `QueryCache` as pool-based statics
       (operate on `connection_pool`)
 - [ ] `run` / `complete` are pool-based (iterate pools, matching Rails)
-- [ ] `query_cache.rb` api:compare stays at 5/5
+- [ ] `query_cache.rb` parity:api stays at 5/5
 - [ ] Wrapper no longer required by these methods
 
 ## Notes

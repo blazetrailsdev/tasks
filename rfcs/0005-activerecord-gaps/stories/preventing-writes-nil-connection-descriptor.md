@@ -59,4 +59,4 @@ divergence but does not fix it.
 - [ ] Audit callers that currently rely on the blanket behaviour — the
       `connectedToStack` walk is also what `base-prevent-writes.test.ts`
       exercises through pooled models, which must keep passing.
-- [ ] `api:compare` and `test:compare` deltas >= 0.
+- [ ] `parity:api` and `parity:test` deltas >= 0.

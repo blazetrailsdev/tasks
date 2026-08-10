@@ -34,7 +34,7 @@ trails already has converged behavior for most of this — RFC 0051 shipped
 on a real connection. PR #5287 pinned the `ifExists`-probe-matches-on-to_table
 behavior that way (`removeForeignKey ifExists probe matches on to_table only,
 not name (Rails)`); the Rails-named cases still count as missing in
-`test:compare`.
+`parity:test`.
 
 Depends on `port-migration-foreign-key-add-cases` landing first, since that
 story creates `packages/activerecord/src/migration/foreign-key.test.ts` and
@@ -54,5 +54,5 @@ Do not open both PRs in parallel — they touch the same file.
 - [ ] Decide explicitly whether the `SchemaDumpingHelper` dumper cases fit here
       or need their own story; if they exceed the 500-LOC ceiling, register them
       separately rather than widening this PR.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

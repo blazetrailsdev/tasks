@@ -39,4 +39,4 @@ Known users: `packages/arel/src/visitors/to-sql.test.ts:2290`
   switched to `ArelConnection`).
 - Do NOT rename tests — the describe at to-sql.test.ts:2267 keeps its name;
   only type annotations change.
-- api:compare / test:compare delta non-negative.
+- parity:api / parity:test delta non-negative.

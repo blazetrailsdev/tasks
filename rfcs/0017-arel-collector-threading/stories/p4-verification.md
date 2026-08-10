@@ -34,7 +34,7 @@ See RFC §Rollout Phase 4.
       or `sqlite.ts`
 - [ ] No `visit(node): SQLString` override remains in `to-sql.ts` (the base
       `Visitor.visit` dispatches correctly)
-- [ ] `api:compare` arity delta noted in PR description: ~123 previously
+- [ ] `parity:api` arity delta noted in PR description: ~123 previously
       advisory arity mismatches (`visit_X(o, collector)` vs `(node)`) now resolved
       as a side-effect of threading
 
@@ -44,5 +44,5 @@ This story should be small — if CI is green after Phase 3, this phase is just
 a confirmation PR adding the verification note. If CI surfaces failures, diagnose
 in this story rather than reopening Phase 2 or 3.
 
-The `api:compare` arity resolution is a **side-effect**, not the goal. The PR
+The `parity:api` arity resolution is a **side-effect**, not the goal. The PR
 description should say so explicitly so reviewers understand the motivation.

@@ -27,7 +27,7 @@ the underlying `books` table auto-assign. PostgreSQL's sequence-backed PK assign
 correctly, so the global skip needlessly drops the PG (and Trilogy) coverage Rails
 expects. Flagged by Copilot on #2934 (review cycles exhausted there).
 
-Do **not** rename the test (`insert record`) — test:compare matches on the name.
+Do **not** rename the test (`insert record`) — parity:test matches on the name.
 
 ## Acceptance criteria
 

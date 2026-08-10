@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activerecord/src/migration/columns.test.ts` was created by PR #5547 to
 give the two relocated cases (`rename column`, `change column`) their
-Rails-matching home. It holds only those two; `test:compare` reports **33
+Rails-matching home. It holds only those two; `parity:test` reports **33
 missing** for `vendor/rails/activerecord/test/cases/migration/columns_test.rb`.
 
 The file already carries the scaffolding the rest needs: a `TestModel` on
@@ -38,7 +38,7 @@ Rails sets `self.use_transactional_tests = false` on `ColumnsTest`
 
 - [ ] The remaining `columns_test.rb` cases are ported under
       `Migration > ColumnsTest` with names matching Rails verbatim.
-- [ ] `test:compare` missing count for `migration/columns_test.rb` drops
+- [ ] `parity:test` missing count for `migration/columns_test.rb` drops
       accordingly; 0 gate-mismatch, 0 misplaced.
 - [ ] Green on all three lanes (the cases are unconditional in Rails, so they
       must not be adapter-gated).

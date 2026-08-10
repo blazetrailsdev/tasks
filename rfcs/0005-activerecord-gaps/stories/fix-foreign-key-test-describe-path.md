@@ -20,7 +20,7 @@ closed-reason: null
 Unskipping `vendor/rails/activerecord/test/cases/migration/` in
 `scripts/test-compare/extract-ruby-tests.rb` (story
 `unskip-migration-dir-in-test-compare`) made the directory's ported suites
-visible to `test:compare`. All 11 `ForeignKeyTest` cases in
+visible to `parity:test`. All 11 `ForeignKeyTest` cases in
 `packages/activerecord/src/migration/foreign-key.test.ts` match, but land in
 the "wrong describe" bucket: Ruby's ancestor path is
 `Migration > ForeignKeyTest` (the extractor drops the outer `ActiveRecord`
@@ -40,6 +40,6 @@ reindents the whole ~220-line file and would have blown the 500 LOC ceiling.
 - [ ] `foreign-key.test.ts` nests `describeIfSupports("foreign_keys", "Migration", ...)`
       around an inner `describe("ForeignKeyTest", ...)`, so the TS path is
       `Migration > ForeignKeyTest`.
-- [ ] `pnpm test:compare --package activerecord` reports 0 wrong-describe for
+- [ ] `pnpm parity:test --package activerecord` reports 0 wrong-describe for
       `migration/foreign_key_test.rb` (activerecord total drops from 11 to 0).
 - [ ] Test names are unchanged; `pnpm vitest run packages/activerecord/src/migration/foreign-key.test.ts` still passes.

@@ -37,13 +37,13 @@ single case in `schema-definitions.trails.test.ts`).
 Consequence today: the change_table half of the proxy is only covered
 incidentally, by whichever migration tests happen to call a shorthand. #5614's
 own coverage had to live in the trails-only companion file for lack of the
-mirrored file, so `test:compare` pairs none of it.
+mirrored file, so `parity:test` pairs none of it.
 
 ## Acceptance criteria
 
 - `packages/activerecord/src/migration/change-table.test.ts` mirrors
   `change_table_test.rb`, test names matching Rails exactly (they are how
-  `test:compare` pairs them — do not reword).
+  `parity:test` pairs them — do not reword).
 - The recording-connection helper mirrors Rails' `with_change_table` /
   `expect` rather than each test hand-rolling a double.
 - The `primary_key` case (`change_table_test.rb:118-123`) uses the Rails-literal
@@ -52,5 +52,5 @@ mirrored file, so `test:compare` pairs none of it.
   either sequence after it or gate that one case.
 - Once the mirrored file exists, fold #5614's one-off change_table assertion in
   `schema-definitions.trails.test.ts` into it and delete the duplicate.
-- `test:compare` delta for the file is positive; no bespoke tables (canonical
+- `parity:test` delta for the file is positive; no bespoke tables (canonical
   schema only).

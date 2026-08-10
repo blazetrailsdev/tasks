@@ -67,7 +67,7 @@ postgresql-adapter.ts).
       calling `disconnectBang`), `isConnected()` returns `false` — mirroring the
       Rails `connected?` test. Test name matches Rails verbatim.
 - [ ] `pnpm tsc --build` clean; PG connection adapter dir green under live PG;
-      api:compare / test:compare deltas non-negative.
+      parity:api / parity:test deltas non-negative.
 
 ## Notes
 

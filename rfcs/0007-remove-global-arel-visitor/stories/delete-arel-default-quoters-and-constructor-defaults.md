@@ -75,4 +75,4 @@ connection and every quoting decision delegates to it (`to_sql.rb:867-870`).
 - [ ] No visitor constructor supplies a default connection.
 - [ ] `PostgreSQL` has no constructor.
 - [ ] `array-encode-parity.trails.test.ts` is repointed or removed with a stated rationale.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

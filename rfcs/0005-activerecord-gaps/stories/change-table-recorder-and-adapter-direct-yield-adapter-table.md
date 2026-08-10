@@ -60,4 +60,4 @@ recorder)`; `RecorderTableProxy` and `withAdapterColumnMethods` deleted, with
   `command-recorder.test.ts`'s existing inversion + shorthand coverage
   (`t.serial`/`t.bigserial`, MySQL unsigned/blob, `remove`, `removeIndex`) still
   green and its `withAdapterColumnMethods` describe re-pointed or removed.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

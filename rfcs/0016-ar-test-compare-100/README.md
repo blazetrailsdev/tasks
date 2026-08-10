@@ -1,6 +1,6 @@
 ---
 rfc: "0016-ar-test-compare-100"
-title: "ActiveRecord test:compare 100%: phase-ordered un-skip campaign"
+title: "ActiveRecord parity:test 100%: phase-ordered un-skip campaign"
 status: superseded
 created: 2026-06-07
 updated: 2026-06-22
@@ -19,7 +19,7 @@ superseded-by: "0030-ar-test-compare-residual-burndown"
 
 <!-- Unnumbered until merge: keep `rfc:` as 0016-ar-test-compare-100. -->
 
-# RFC 0016 — ActiveRecord test:compare 100%: phase-ordered un-skip campaign
+# RFC 0016 — ActiveRecord parity:test 100%: phase-ordered un-skip campaign
 
 ## Summary
 
@@ -29,7 +29,7 @@ snapshot 2026-06-02) to 100%. Consolidates `workplan.md`,
 `activerecord-index.md`. Those four docs are deleted by `decommission-docs`
 once this RFC's stories are merged.
 
-Refresh before each story: `pnpm test:compare --cached --json --package activerecord`.
+Refresh before each story: `pnpm parity:test --cached --json --package activerecord`.
 
 ## Phase spine
 
@@ -48,7 +48,7 @@ Phase 5  core-residuals: un-owned core skips surfaced after F-8 (#3012) closed �
          F-9d autosave (11) · F-9e locking (11) · F-9f counter-cache (5) · F-9g tail (~50)
 ```
 
-**Snapshot 2026-06-10:** `test:compare --package activerecord` = **92.6%**
+**Snapshot 2026-06-10:** `parity:test --package activerecord` = **92.6%**
 (7241/7816, **575 skipped**). All 575 bucket into the phases above; Phase 5 captures
 the ~175 core skips that F-8 (`f8-small-core-leftovers`, done #3012, scoped ~29) never
 covered. `defaults_test.rb` (13, schema-dump defaults) stays under I-1.

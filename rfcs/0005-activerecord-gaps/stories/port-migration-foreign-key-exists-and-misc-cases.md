@@ -45,5 +45,5 @@ raised error (:775-802).
 - [ ] `skip if current_adapter?(:SQLite3Adapter)` and the per-adapter error
       branches are honored rather than dropped; `--gates --check` stays at 0.
 - [ ] No bespoke tables; `withRocketTables` or the canonical schema only.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

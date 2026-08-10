@@ -34,4 +34,4 @@ This affects all association types (not HABTM-specific). Surfaced while migratin
       dependencies when the association name differs from the table name
 - [ ] Mirrors Rails `PredicateBuilder#build_from_hash` join-dep resolver block
 - [ ] No regression on existing `where` behaviour
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

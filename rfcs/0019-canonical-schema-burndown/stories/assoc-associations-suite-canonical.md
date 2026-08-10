@@ -54,7 +54,7 @@ canonical models is the durable fix for that flake.
       converged file calls `defineSchema` **zero** times, declares no inline
       `class X extends Base`, and constructs no `createTestAdapter`.
 - [ ] Open the matching Rails test FIRST; port each body word-for-word. **Test
-      names UNCHANGED** (`test:compare` matches on names).
+      names UNCHANGED** (`parity:test` matches on names).
 - [ ] Replace inline partial-declaration models with the canonical models Rails
       uses (`Author`/`Post`/`Comment`/`Tag`/`Tagging`/`Cpk::*`/STI families).
       Never fake a column the canonical table lacks; add to

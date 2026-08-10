@@ -27,7 +27,7 @@ Rails has no `encode_range` in `postgresql/quoting.rb` — range
 serialization lives in the OID type
 (`activerecord/lib/active_record/connection_adapters/postgresql/oid/range.rb`,
 `#serialize` / `Range#to_postgres` style formatting). Keeping it in quoting.ts
-pollutes the file-level api:compare mapping and invites callers to treat it as
+pollutes the file-level parity:api mapping and invites callers to treat it as
 a quoting concern.
 
 Work: move `encodeRange` next to the PG range OID type
@@ -42,25 +42,25 @@ has no Rails public counterpart).
       the range OID type and callers import from there.
 - [ ] No behavior change: `adapters/postgresql/range.test.ts` passes locally
       (PG via `pnpm db:up`); no test renames.
-- [ ] `pnpm api:compare --package activerecord` stays at 100% (no new
+- [ ] `pnpm parity:api --package activerecord` stays at 100% (no new
       misplaced/extra methods on the quoting file).
 
 ## Resolution (closed without code change — invalid premise)
 
 Closed **done, no PR**. The story's premise is false against the project's
 parity target. The vendored Rails (`vendor/sources.lock.json` → **rails
-v8.0.2**, the api:compare source of truth) defines `encode_range`,
+v8.0.2**, the parity:api source of truth) defines `encode_range`,
 `type_cast_range_value`, and `infinity?` as **private methods of
 `ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting`** in
 `connection_adapters/postgresql/quoting.rb` (lines 210/228/232). They are
-counted by `api:compare` — the existing TS `encodeRange` / `typeCastRangeValue`
+counted by `parity:api` — the existing TS `encodeRange` / `typeCastRangeValue`
 / `isInfinity` in `postgresql/quoting.ts` are their matched counterparts, and
 the file sits at 100%.
 
 This makes acceptance criteria #1 and #3 mutually exclusive: relocating
 `encodeRange` out of `quoting.ts` drops the file from **100% → 87%** (3 missing
 methods: `encode_range`, `type_cast_range_value`, `infinity?`), directly
-violating #3 ("api:compare stays at 100%"). Verified empirically — performing
+violating #3 ("parity:api stays at 100%"). Verified empirically — performing
 the move produced exactly that regression; reverted.
 
 `encodeRange` is therefore _not_ residue: it correctly mirrors a real Rails

@@ -72,7 +72,7 @@ diverge.
 - [ ] Does NOT reintroduce the single-pinned-client write-query hang: this is
       gated behind `pg-pinned-client-write-query-serialization`; land only once
       the write-path query-overlap serialization fix is in.
-- [ ] `test:compare` non-negative; PG range/array/bit/xml suites stay green;
+- [ ] `parity:test` non-negative; PG range/array/bit/xml suites stay green;
       no idle-in-transaction / advisory-slot timeout under the PG lane.
 
 Notes: this is the generalization of the narrow gate shipped in #4062. Keep the

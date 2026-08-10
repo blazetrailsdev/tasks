@@ -49,5 +49,5 @@ Files are non-overlapping, so the PRs can be opened from main in parallel.
 - [ ] No `new Visitors.ToSql()` / `new Visitors.MySQL()` / `new Visitors.PostgreSQL()` /
       `new Visitors.SQLite()` / `new Visitors.Dot()` without an explicit connection
       anywhere in `packages/arel`.
-- [ ] No test names changed (test:compare delta 0).
-- [ ] api:compare delta non-negative.
+- [ ] No test names changed (parity:test delta 0).
+- [ ] parity:api delta non-negative.

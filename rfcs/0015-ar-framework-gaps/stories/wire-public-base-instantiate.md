@@ -35,4 +35,4 @@ because the public `Base.instantiate` class method is NOT wired onto `Base`.
       persistence.ts (mirror how other class methods are wired in base.ts).
 - [ ] Re-converge `create columns not equal attributes` (persistence.test.ts) to
       call the public `Topic.instantiate` instead of `Topic._instantiate`.
-- [ ] api:compare reflects `instantiate` as present (it is a real Rails public API).
+- [ ] parity:api reflects `instantiate` as present (it is a real Rails public API).

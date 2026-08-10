@@ -33,7 +33,7 @@ attempted the `else` arm alone and had to back it out: the Ruby gate extractor
 drops the negation, so the `else` case extracts as `features=[foreign_keys]`
 while the `if` case extracts as `features=[foreign_keys,validate_constraints]`,
 and with only one TS test present the matcher pairs it with the
-`validate_constraints` entry — `test:compare --gates --check` reports
+`validate_constraints` entry — `parity:test --gates --check` reports
 `[wrong-gate] "add invalid foreign key"` and exits 1.
 
 Porting **both** arms together is what resolves it: add a
@@ -42,7 +42,7 @@ Porting **both** arms together is what resolves it: add a
 `supports_validate_constraints?` is PostgreSQL-only), express the `if` arm as
 `itIfSupports("validate_constraints", "add invalid foreign key", …)` and the
 `else` arm as a plain `it` with `.skipIf(adapterType === "postgres")` if the
-matcher then pairs them correctly — verify with `pnpm test:compare --gates`.
+matcher then pairs them correctly — verify with `pnpm parity:test --gates`.
 
 Target file: `packages/activerecord/src/migration/foreign-key.test.ts`
 (setup is the shared `withRocketTables`; no new schema needed). Note trails'
@@ -54,7 +54,7 @@ Target file: `packages/activerecord/src/migration/foreign-key.test.ts`
 - [ ] The `supports_validate_constraints?` block of `foreign_key_test.rb` is
       ported in full, both arms of `test_add_invalid_foreign_key` included,
       names verbatim.
-- [ ] `pnpm test:compare --gates --check` stays at exit 0 — in particular no
+- [ ] `pnpm parity:test --gates --check` stays at exit 0 — in particular no
       `[wrong-gate]` entry for `add invalid foreign key`.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

@@ -73,4 +73,4 @@ Two divergences remain, both on `bulk: true`:
   `command-recorder.test.ts`'s "bulk invert change table" stay green on
   sqlite3, PostgreSQL and MySQL (MySQL is the only adapter where
   `supportsBulkAlter?` is true, so it is the one that exercises the DDL).
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

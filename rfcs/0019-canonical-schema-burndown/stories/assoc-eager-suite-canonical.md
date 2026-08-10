@@ -60,7 +60,7 @@ true })`).
 - [ ] Delete the file-local `const TEST_SCHEMA` and every bespoke `eager_*` /
       `alar_*` / `dp_*` / `eabt_*` scratch table; ride canonical models.
 - [ ] Open `eager_test.rb` FIRST; port each body word-for-word. **Test names
-      UNCHANGED** (`test:compare` matches on names).
+      UNCHANGED** (`parity:test` matches on names).
 - [ ] No `defineSchema` left in the file. If a needed column has no canonical
       home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`
       has it (parity-check first); otherwise keep a single scoped, file-unique

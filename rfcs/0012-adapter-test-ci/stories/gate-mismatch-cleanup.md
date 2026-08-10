@@ -1,5 +1,5 @@
 ---
-title: "Reconcile test:compare wrong/over/missing-gate mismatches to Rails"
+title: "Reconcile parity:test wrong/over/missing-gate mismatches to Rails"
 status: done
 updated: 2026-06-06
 rfc: "0012-adapter-test-ci"
@@ -61,7 +61,7 @@ the pinned vendored Rails (`vendor/sources.ts`; `pnpm vendor:fetch`):
       with an inline note that we are deliberately more portable (passes on the
       adapter Rails excludes). No silent un-gated mismatches remain.
 - [ ] **should-gate: untouched** (count may stay non-zero — that's expected).
-- [ ] Per file, `pnpm test:compare --package activerecord --gates`
+- [ ] Per file, `pnpm parity:test --package activerecord --gates`
       (`package.json:30`) shows **no wrong-gate / over-gated lines and every
       missing-gate annotated** — should-gate lines excluded from the bar.
 - [ ] `SUPPORTS` additions land with a one-line vendored-Rails citation per key.
@@ -86,5 +86,5 @@ confirm the targeted lines are gone.
 Coordinate with the test-compare-100 attack plan (separate RFC): it owns
 should-gate (feature builds) and the skipped-count drive; this story owns gate
 _shape_. To avoid double-work, claim files by cluster and note claimed clusters
-in the PR description. Each wrong-gate fix also nudges `test:compare` parity, so
+in the PR description. Each wrong-gate fix also nudges `parity:test` parity, so
 expect small parity bumps as a side effect.

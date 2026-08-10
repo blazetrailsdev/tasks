@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package activerecord` reports `17 OK / 6 missing` for
+`parity:test --package activerecord` reports `17 OK / 6 missing` for
 `migration/references_foreign_key_test.rb` after PR #5482 merged. Five of the six
 missing cases are owned by
 `port-migration-references-foreign-key-naming-and-conditional-cases`
@@ -58,7 +58,7 @@ on SQLite, where `removeColumn` goes through the alter-table rebuild path).
       name matching Rails verbatim.
 - [ ] The case asserts the foreign-key count drops by exactly 1 across the
       `removeColumn` call, mirroring Rails' `assert_difference ... -1`.
-- [ ] `test:compare --package activerecord` shows
+- [ ] `parity:test --package activerecord` shows
       `migration/references_foreign_key_test.rb` missing drop from 6 to 5;
       `--gates --check` exits 0.
 - [ ] Passes on all three lanes (sqlite / pg / mysql), or the reason it cannot

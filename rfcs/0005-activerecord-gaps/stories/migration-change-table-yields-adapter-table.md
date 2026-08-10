@@ -62,4 +62,4 @@ is specifically the Migration/Schema path.
   `enum.test.ts` "schema load" to `t.enum("best_color", { enum_type: "color", ... })`
   and `hstore.test.ts` "hstore migration" to a typed `PgTable#hstore` call,
   dropping the deviation comments both now carry.
-- `api:compare` / `test:compare` deltas non-negative.
+- `parity:api` / `parity:test` deltas non-negative.

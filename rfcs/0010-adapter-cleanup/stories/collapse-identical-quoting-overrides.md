@@ -46,4 +46,4 @@ stories. Not RFC 0019.
       dialect-specific copy is left intact (justify each removal with a diff)
 - [ ] Removed overrides correctly inherit from `AbstractAdapter`
 - [ ] No behavior change on any adapter; full quoting test parity
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

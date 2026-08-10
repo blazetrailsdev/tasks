@@ -93,7 +93,7 @@ Before importing anything new, make the current (AR-focused) RFCs trustworthy.
    - `pr:` frontmatter already set → confirm the PR is merged.
    - Match story id / title / source anchors against the **trails merged-PR
      log** (`gh pr list --state merged` + `git log` keyword/anchor search).
-   - `test:compare` / `api:compare` current deltas vs the story's acceptance
+   - `parity:test` / `parity:api` current deltas vs the story's acceptance
      criteria (a closed gap ⇒ likely done).
    - Seed the obvious AR cases from the persistent memory index, which already
      records shipped PRs per feature.

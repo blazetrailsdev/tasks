@@ -70,8 +70,8 @@ of scope there. Note that the fix now has wider blast radius than before #5485:
       `Base.pluralizeTableNames = false`, a `references` with `foreignKey: true`
       targets the singular table. Restore the flag in teardown — it is global
       state on `Base`.
-- [ ] `api:compare --package activerecord` and
-      `test:compare --package activerecord` deltas are non-negative;
-      `test:compare --gates --check` exits 0.
+- [ ] `parity:api --package activerecord` and
+      `parity:test --package activerecord` deltas are non-negative;
+      `parity:test --gates --check` exits 0.
 - [ ] Existing suites stay green: `migration/`,
       `connection-adapters/abstract/`, `invertible-migration`.

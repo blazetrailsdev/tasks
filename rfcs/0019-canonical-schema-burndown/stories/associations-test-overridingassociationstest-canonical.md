@@ -30,4 +30,4 @@ The `OverridingAssociationsTest` describe in
 - [ ] Convert the `OverridingAssociationsTest` describe onto canonical
       `TEST_SCHEMA` + official models + fixtures, matching Rails test names verbatim.
 - [ ] Remove the describe's bespoke `defineSchema` block.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

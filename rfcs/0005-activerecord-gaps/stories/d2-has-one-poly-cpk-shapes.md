@@ -32,5 +32,5 @@ malformed-cpk-association ArgumentError checks.
 
 - [ ] Polymorphic has_one custom-column + nullify, cpk nullify, and malformed
       cpk association-class validation implemented.
-- [ ] Listed tests un-skipped with verbatim Rails names; test:compare delta
+- [ ] Listed tests un-skipped with verbatim Rails names; parity:test delta
       non-negative.

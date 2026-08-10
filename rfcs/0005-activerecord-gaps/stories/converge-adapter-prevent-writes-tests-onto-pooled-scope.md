@@ -53,7 +53,7 @@ stubs depend on them.
   prevention through `Base.whilePreventingWrites`, matching their Rails
   counterparts; the `preventWrites`/`allowWrites` fake-pool helpers are deleted.
 - Do NOT rename or reword any test — the names match Rails and are how
-  `test:compare` pairs them.
+  `parity:test` pairs them.
 - With the stubs gone, move `isPreventingWrites`'s nil-descriptor return into
   Rails' position (immediately after the `replica?` branch) and assess whether
   the `pool?.preventWrites` / `pool?.dbConfig?.preventWrites` /

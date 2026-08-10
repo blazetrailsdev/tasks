@@ -40,4 +40,4 @@ Trails file: `packages/activerecord/src/persistence.ts` — `changesApplied()` c
 
 - [ ] `update_column` / `update_columns` only clears dirty tracking for the written attributes; pre-existing dirty attributes on other columns remain dirty after the call.
 - [ ] Re-enable (un-delete) "update column with one changed and one updated" and "update columns with one changed and one updated" tests in `persistence.test.ts`.
-- [ ] `test:compare` delta non-negative.
+- [ ] `parity:test` delta non-negative.

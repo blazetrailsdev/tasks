@@ -70,6 +70,6 @@ contract.
 - [ ] If any declaration in the interface turns out to describe behaviour the
       class does NOT implement, register that gap separately rather than
       preserving the declaration.
-- [ ] `pnpm typecheck` clean; `pnpm api:compare` shows no new extra/missing
+- [ ] `pnpm typecheck` clean; `pnpm parity:api` shows no new extra/missing
       surface.
 - [ ] Green on all three adapters.

@@ -26,7 +26,7 @@ and makes 100% reachable. Also move `resolver.test.ts` "url missing scheme"
 - [ ] YAML/Marshal/thread/fork offenders converted to `PERMANENT-SKIP` form and
       added to `unported-files.ts` (~19 total).
 - [ ] `resolver.test.ts` "url missing scheme" added as documented divergence.
-- [ ] `pnpm test:compare --package activerecord` denominator decreases by ~20.
+- [ ] `pnpm parity:test --package activerecord` denominator decreases by ~20.
 
 ## Notes
 

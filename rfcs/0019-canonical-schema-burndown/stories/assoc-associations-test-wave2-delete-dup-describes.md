@@ -20,7 +20,7 @@ Follow-up wave of `assoc-associations-test` (RFC 0019). First wave (PR #3465)
 deleted the `BelongsToAssociations` describe from
 `packages/activerecord/src/associations.test.ts` because it duplicated the
 dedicated `associations/belongs-to-associations.test.ts` port with
-trails-invented test names (no Rails counterpart, no `test:compare` coverage).
+trails-invented test names (no Rails counterpart, no `parity:test` coverage).
 
 The same grab-bag file holds more describes that DUPLICATE dedicated
 `associations/*.test.ts` ports and use non-Rails names:
@@ -38,13 +38,13 @@ delete duplicate describes rather than convert.
 ## Acceptance criteria
 
 - [ ] For each describe in `associations.test.ts` that duplicates a dedicated
-      `associations/*.test.ts` port, confirm via `test:compare` that the
+      `associations/*.test.ts` port, confirm via `parity:test` that the
       dedicated file already provides the Rails matches, then DELETE the
       duplicate describe. Keep non-overlapping ≤500 LOC per PR; split across
       sibling PRs off main (NOT stacked).
 - [ ] After each deletion, fix any cross-describe registry/schema leak the
       deletion exposes (e.g. `registerModel` a describe relied on leaking from a
       neighbor) — make each surviving describe self-sufficient.
-- [ ] `test:compare` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
+- [ ] `parity:test` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
 - [ ] Do NOT remove the file from `eslint/require-canonical-schema-exclude.json`
       (that happens only in the final canonical-conversion wave).

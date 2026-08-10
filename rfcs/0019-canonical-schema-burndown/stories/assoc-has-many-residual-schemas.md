@@ -52,7 +52,7 @@ The file still contains ~14 `defineSchema(...)` calls. Rails source:
       `pnpm lint` clean with no `eslint-disable`.
 - [ ] `pnpm vitest run packages/activerecord/src/associations/has-many-associations.test.ts`
       passes on sqlite.
-- [ ] Test names unchanged (test:compare matching).
+- [ ] Test names unchanged (parity:test matching).
 
 ## Definition of done
 

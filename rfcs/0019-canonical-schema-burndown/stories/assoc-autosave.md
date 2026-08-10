@@ -39,7 +39,7 @@ shared `posts`/`comments`/`authors` shapes are converged before this starts.
       file calls `defineSchema` **zero** times and constructs no
       `createTestAdapter`.
 - [ ] Open `autosave_association_test.rb` FIRST; port each body word-for-word — same assertions,
-      order, control structure. Test names unchanged (`test:compare` matches on
+      order, control structure. Test names unchanged (`parity:test` matches on
       names).
 - [ ] No `defineSchema` left in the file. If a needed column has no canonical
       home, add it to `test-helpers/test-schema.ts` ONLY when Rails `schema.rb`

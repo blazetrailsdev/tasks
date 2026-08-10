@@ -26,7 +26,7 @@ the proof that the unification actually closed the gap those tests document.
 - The previously-skipped inverse-dedup tests run and pass; no test renames.
 - No production code change beyond what is needed to make the tests pass (if
   any is needed, it belongs in S2–S4, not here).
-- `api:compare` delta non-negative.
+- `parity:api` delta non-negative.
 
 ## Notes
 

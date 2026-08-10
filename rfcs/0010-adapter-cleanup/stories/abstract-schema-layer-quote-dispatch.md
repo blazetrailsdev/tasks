@@ -63,4 +63,4 @@ Out of scope: the per-adapter Q1–Q3 sites, the `sanitizeSqlArray` `ABSTRACT_QU
       is byte-identical on PG/MySQL/SQLite
 - [ ] Touched schema/migration tests pass on all three adapters (run only the
       touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

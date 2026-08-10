@@ -25,5 +25,5 @@ Rails source: `vendor/rails/activerecord/test/cases/associations_test.rb` Preloa
 - All remaining PreloaderTest tests converted to canonical models (Author, Post, Comment, Book, Category, CategoryPost, Tag, Tagging, etc.)
 - Bespoke table entries for `GQS*`, `GQL*`, `GMM*`, `GAS*`, `GQN*`, `GPQN*`, etc. removed from `defineSchema` block
 - `associations.test.ts` removed from `eslint/require-canonical-schema-exclude.json`
-- `test:compare` delta non-negative
+- `parity:test` delta non-negative
 - 500 LOC ceiling: split into additional waves if needed

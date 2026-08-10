@@ -48,4 +48,4 @@ The bespoke `force reload` body lives in the FIRST `AssociationsTest` describe o
 - [ ] Convert the `force reload` body onto canonical Firm/Client + fixtures,
       move it into the canonical describe, and remove scratch tables
       `c_posts`/`c_comments` as their last consumer is converted.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

@@ -60,4 +60,4 @@ with a pointer to this story, and that entry should be **removed** as part of th
       it at its two call sites, as Rails does.
 - [ ] The `raise_record_not_found_exception!` / `where_sql` entry is dropped from
       the wide call-mismatches exclude file.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

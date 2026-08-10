@@ -16,7 +16,7 @@ blocked-by: null
 
 ## Context
 
-Surfaced by the 2026-06-10 `test:compare --package activerecord` snapshot (92.6%,
+Surfaced by the 2026-06-10 `parity:test --package activerecord` snapshot (92.6%,
 575 skipped). `adapter.test.ts` carries **42 hard `it.skip` entries** — the single
 largest un-owned core cluster. F-8 (#3012, done) did not cover these, and the
 earlier phase stories that closed the _equivalent_ tests in their own files (F-4
@@ -63,7 +63,7 @@ selects`, `current database`, `advisory locks enabled?`. MySQL/PG only via
 - [ ] Drive `adapter.test.ts` to 0 matched-skips EXCLUDING the f7b-owned ~10
       (track those under f7b), shipping the four themed sub-PRs above; any
       genuinely-permanent residue reclassified in `unported-files.ts` with a reason.
-- [ ] `test:compare --cached --package activerecord` confirms the drop per batch.
+- [ ] `parity:test --cached --package activerecord` confirms the drop per batch.
 - [ ] Touched test files only (per CLAUDE.md — no full-suite run).
 
 ## Notes

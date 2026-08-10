@@ -30,4 +30,4 @@ The `AssociationProxyTest` describe in
 
 - [ ] Convert the `AssociationProxyTest` describe onto canonical `TEST_SCHEMA` + official models (`Author`/`Post`/`Comment`/`Developer`/`Category` etc.) + fixtures, matching Rails test names verbatim.
 - [ ] Remove the describe's bespoke `defineSchema` block.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

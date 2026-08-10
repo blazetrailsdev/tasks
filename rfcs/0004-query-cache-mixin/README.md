@@ -21,7 +21,7 @@ cache from `selectAll`; the `QueryCacheAdapter` wrapper is the only impl that
 actually caches, and it is never instantiated outside tests. This RFC ports
 Rails' `select_all` cache override into the mixin (making caching real), moves
 `cache`/`uncached` onto the pool-based `QueryCache` class to preserve
-api:compare, then migrates the tests and deletes the wrapper.
+parity:api, then migrates the tests and deletes the wrapper.
 
 ## Motivation
 
@@ -92,7 +92,7 @@ lookups (`adapter.constructor.columnNameMatcher?.()`). See
 
 ## Open questions
 
-1. **api:compare during Phase 1→2 window.** Phase 1 adds the mixin override
+1. **parity:api during Phase 1→2 window.** Phase 1 adds the mixin override
    while `cache`/`uncached` still live on the wrapper; confirm `query_cache.rb`
    stays ≥ its current 5/5 throughout, not just at the end.
 

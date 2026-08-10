@@ -45,5 +45,5 @@ Also remaining (separate waves): the `Associations`, `Associations: dependent`,
       their last consumer is converted.
 - [ ] Split into non-overlapping ≤500 LOC sibling PRs off main (NOT stacked).
 - [ ] FINAL wave only: drop `associations.test.ts` from
-      `eslint/require-canonical-schema-exclude.json`; `test:compare` delta non-negative;
+      `eslint/require-canonical-schema-exclude.json`; `parity:test` delta non-negative;
       `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.

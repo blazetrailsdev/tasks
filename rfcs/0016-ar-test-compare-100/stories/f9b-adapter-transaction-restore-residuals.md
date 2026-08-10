@@ -39,4 +39,4 @@ Test names match Rails verbatim.
 - [ ] Restore/remote-disconnection tests pass against a file-backed (non-in-memory)
       SQLite adapter, or are reclassified in `unported-files.ts` if reopen wiring
       is genuinely out of reach.
-- [ ] `test:compare --cached --package activerecord` delta non-negative.
+- [ ] `parity:test --cached --package activerecord` delta non-negative.

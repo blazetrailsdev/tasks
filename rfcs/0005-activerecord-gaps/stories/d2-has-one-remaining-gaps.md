@@ -52,4 +52,4 @@ Each skipped test carries an inline note referencing this story.
 
 - [ ] Feature clusters above are implemented (or split into their own stories)
       and the corresponding has_one tests un-skipped with verbatim Rails names.
-- [ ] `test:compare` delta non-negative for has_one_associations_test.rb.
+- [ ] `parity:test` delta non-negative for has_one_associations_test.rb.

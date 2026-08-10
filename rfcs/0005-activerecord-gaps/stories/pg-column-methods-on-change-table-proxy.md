@@ -41,4 +41,4 @@ variadic `(...names, options)` overload pair #5622 introduced on the abstract
   `PostgreSQL::Table` with the variadic `*names` form.
 - Coverage lands in the mirrored Rails test file for whatever pins each type;
   do not invent a trails-only companion suite for types Rails does not pin.
-- `api:compare` / `test:compare` deltas non-negative; no bespoke tables.
+- `parity:api` / `parity:test` deltas non-negative; no bespoke tables.

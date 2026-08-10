@@ -71,7 +71,7 @@ registered as deviations if no Rails counterpart exists). Remaining test names:
 - [ ] Split into non-overlapping <=500 LOC sibling PRs off main (NOT stacked) if
       it does not fit in one; register further waves rather than fanning out.
 - [ ] FINAL wave only: drop `associations.test.ts` from
-      `eslint/require-canonical-schema-exclude.json`; `test:compare` delta
+      `eslint/require-canonical-schema-exclude.json`; `parity:test` delta
       non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
 
 Hard rules: NO node:_/process._ ; async fs only ; no new runtime deps ; 500 LOC

@@ -37,7 +37,7 @@ shape, and the bar is fidelity, not just "the lint passes."
 ## Strict rule + relationship to RFC 0030
 
 This RFC **gates [RFC 0030](../0030-ar-test-compare-residual-burndown/)** (the
-`test:compare` 94→100 un-skip campaign). The two RFCs overlap on the same files,
+`parity:test` 94→100 un-skip campaign). The two RFCs overlap on the same files,
 and doing 0030's un-skips on a still-grandfathered file piles new tests onto
 bespoke `defineSchema` — more cleanup later. So:
 
@@ -81,7 +81,7 @@ are now different:
 2. **The unit of value changed.** 0014 measured _mechanical convertibility_. This
    RFC's value is **Rails fidelity** — every file we touch becomes a faithful port
    of its Rails counterpart, which is the project's north star (CLAUDE.md /
-   CONTRIBUTING.md: `test:compare` matches on test names; we want bodies to match
+   CONTRIBUTING.md: `parity:test` matches on test names; we want bodies to match
    too). That value accrues even on "bespoke" files.
 3. **The collision hazard is now a forcing function.** The bespoke inline schemas
    are the _direct cause_ of the shared-worker-DB flakes documented in the
@@ -143,7 +143,7 @@ A faithful conversion of one file is:
    same assertion calls in the same order, same variable names where the language
    allows, same control structure, same comments. Open the Rails `*_test.rb`
    first; the goal is a reader can diff the two side-by-side. **Never rename a
-   test** (CLAUDE.md) — `test:compare` matches on names.
+   test** (CLAUDE.md) — `parity:test` matches on names.
 
 A conversion that swaps the schema but leaves the body diverging from Rails is
 **not done**. Fidelity is the deliverable.
@@ -222,7 +222,7 @@ canonical model. Verify by co-running the previously-flaky siblings under
 - `pnpm vitest run <touched files>` (+ the colliding sibling under `maxForks=1`
   when a shared table is involved). **Never** the whole AR suite locally.
 - `pnpm lint` on the touched files shows zero `require-canonical-schema` errors.
-- `test:compare` for the file's Rails counterpart still matches by name (we never
+- `parity:test` for the file's Rails counterpart still matches by name (we never
   rename tests) and ideally now matches more bodies.
 - The file is removed from `require-canonical-schema-exclude.json`.
 
@@ -303,7 +303,7 @@ PRs and register continuation stories via `pnpm tasks new` as they progress.
 
 ## Changelog
 
-- 2026-06-16: status → active (reopened). This RFC gates RFC 0030's `test:compare` un-skip campaign — un-skipping on still-grandfathered files adds bespoke-`defineSchema` debt, so the canonical conversion must come first. Added the strict-rule + RFC-0030-relationship + multi-PR breakdown section; prioritized the association conversion stories (assoc-eager/join-model/has-one/habtm/cascaded = priority 1; associations/has-many/inverse/left-outer/bidirectional = priority 2) and flipped them ready, since 5 agents are live in those files.
+- 2026-06-16: status → active (reopened). This RFC gates RFC 0030's `parity:test` un-skip campaign — un-skipping on still-grandfathered files adds bespoke-`defineSchema` debt, so the canonical conversion must come first. Added the strict-rule + RFC-0030-relationship + multi-PR breakdown section; prioritized the association conversion stories (assoc-eager/join-model/has-one/habtm/cascaded = priority 1; associations/has-many/inverse/left-outer/bidirectional = priority 2) and flipped them ready, since 5 agents are live in those files.
 - 2026-06-15: status → closed; shelved for now. The ~104 open stories stay as the historical record and can be reopened by flipping status back to active.
 - 2026-06-09: initial RFC; supersedes 0014-fixtures-adoption.
 - 2026-06-09: review (PR #14) — added `deps: shared-table-convergence` to

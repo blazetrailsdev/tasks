@@ -43,4 +43,4 @@ Blocked-by (all must land first):
 - [ ] Drop `packages/activerecord/src/associations.test.ts` from
       `require-canonical-schema-exclude.json`; `blazetrails/require-canonical-schema`
       passes on the whole file.
-- [ ] test:compare delta non-negative.
+- [ ] parity:test delta non-negative.

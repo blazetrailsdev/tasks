@@ -37,7 +37,7 @@ matching Rails `nested_attributes_test.rb` exactly.
       `Interest` from `test-helpers/models/` instead of per-test local classes.
 - [ ] The `n_human4s`/`n_interest4s` table definitions are removed from
       `TEST_SCHEMA` (or `TEST_SCHEMA` itself is removed if unused).
-- [ ] `test:compare` for `nested_attributes_test.rb` is non-negative vs current.
+- [ ] `parity:test` for `nested_attributes_test.rb` is non-negative vs current.
 - [ ] All 119 currently-passing tests still pass.
 
 ## Notes

@@ -72,4 +72,4 @@ story removes the constructor defaults this one would otherwise still reach.
       `arel/nodes/node.rb:148-153`.
 - [ ] `setToSqlVisitor` and the `_registry.ToSql` slot are removed; the parity
       runner selects its dialect by establishing a SQLite connection instead.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

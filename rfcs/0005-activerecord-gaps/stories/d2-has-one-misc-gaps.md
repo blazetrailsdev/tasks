@@ -36,4 +36,4 @@ author: null })` must nullify the belongs_to FK (belongs_to update nullify
 ## Acceptance criteria
 
 - [ ] Each single implemented (or re-split) and its test un-skipped with the
-      verbatim Rails name; test:compare delta non-negative.
+      verbatim Rails name; parity:test delta non-negative.

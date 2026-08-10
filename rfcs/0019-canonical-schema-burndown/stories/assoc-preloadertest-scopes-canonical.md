@@ -44,5 +44,5 @@ models rather than inline.
 ## Acceptance criteria
 
 - [ ] Convert the seven scoped/grouping tests above onto canonical models.
-- [ ] Test names match Rails verbatim. test:compare delta non-negative.
+- [ ] Test names match Rails verbatim. parity:test delta non-negative.
 - [ ] PR <=500 LOC. No node:_/process._; async fs only.

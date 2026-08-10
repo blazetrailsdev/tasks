@@ -28,4 +28,4 @@ Residue from F-9a (#3150). MySQL/PG-only introspection probes, gated via
 ## Acceptance criteria
 
 - [ ] Probes pass under MySQL/PG gating; SQLite stays skipped via respond_to? equivalent.
-- [ ] `test:compare --cached --package activerecord` delta non-negative.
+- [ ] `parity:test --cached --package activerecord` delta non-negative.

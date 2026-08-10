@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-Unskipping `vendor/rails/activerecord/test/cases/migration/` in `test:compare`
+Unskipping `vendor/rails/activerecord/test/cases/migration/` in `parity:test`
 (PR #5451) made that directory's Rails files visible for the first time. Six
 already-ported cases now report as **misplaced** — they live in a TS file whose
 Rails counterpart is a different file:
@@ -31,7 +31,7 @@ adapters/postgresql/change-schema.test.ts                 ->  migration/change-s
 adapters/postgresql/rename-table.test.ts                  ->  migration/rename-table.test.ts        (1)
 ```
 
-Reproduce with `pnpm test:compare --package activerecord` (the "MISPLACED"
+Reproduce with `pnpm parity:test --package activerecord` (the "MISPLACED"
 section); the destination file for each is named in the arrow target.
 
 Each case belongs in `packages/activerecord/src/migration/<file>.test.ts`
@@ -46,7 +46,7 @@ stories, so this may be cheapest to do after or alongside those.
 - [ ] Each of the six cases is moved to the TS file matching its Rails file,
       under the Rails ancestor describe path (`Migration > <ClassName>`), with
       the test name unchanged.
-- [ ] `pnpm test:compare --package activerecord` reports 0 misplaced for
+- [ ] `pnpm parity:test --package activerecord` reports 0 misplaced for
       activerecord (currently 6).
 - [ ] The moved tests still pass on the postgres lane; no gate-mismatch
       regression (`--gates --check` stays green).

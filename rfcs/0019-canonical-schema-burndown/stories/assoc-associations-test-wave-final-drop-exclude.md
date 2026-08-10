@@ -67,5 +67,5 @@ broader describe conversions + exclude-drop were split into follow-up stories.
 - [~] Drop `associations.test.ts` from the exclude list — DEFERRED to
   [[associations-test-drop-exclude-final]] (blocked on the three describe
   conversions above + [[cpk-counter-cache-column-demodulize-convergence]]).
-- [x] test:compare delta non-negative. — associations.test.ts 128/128, no source
-      changes (api:compare unaffected).
+- [x] parity:test delta non-negative. — associations.test.ts 128/128, no source
+      changes (parity:api unaffected).

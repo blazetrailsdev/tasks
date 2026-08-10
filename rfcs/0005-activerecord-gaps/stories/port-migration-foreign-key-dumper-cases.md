@@ -45,5 +45,5 @@ bespoke schema.
       bespoke tables, no new `:memory:` adapter.
 - [ ] `unless current_adapter?(:SQLite3Adapter)` / adapter guards are honored
       rather than dropped.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

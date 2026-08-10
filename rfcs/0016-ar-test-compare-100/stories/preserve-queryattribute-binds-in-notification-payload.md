@@ -64,6 +64,6 @@ Rails refs: `bind_parameter_test.rb:137-145`; `ActiveRecord::Relation::QueryAttr
 attributes` tests (which read the rendered/cast form).
 - Un-skip `binds are logged` in `bind-parameter.test.ts` and make it pass against
   canonical SQLite (gated on `prepared_statements` per the Rails class wrapper).
-- Test name unchanged (test:compare matching). No stubs. No forcing green — if the
+- Test name unchanged (parity:test matching). No stubs. No forcing green — if the
   upstream type-cast can't be deferred without broad fallout, keep it skipped and
   re-point with a sharpened rationale rather than contorting the assertion.

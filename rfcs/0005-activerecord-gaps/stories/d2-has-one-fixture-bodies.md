@@ -53,4 +53,4 @@ follow-up stories rather than fanning out.
       renames); any that are blocked on a genuinely missing feature keep the
       skip but gain an inline tracked-pending-convergence note naming the
       story that covers the feature.
-- [ ] `test:compare` delta non-negative for has_one_associations_test.rb.
+- [ ] `parity:test` delta non-negative for has_one_associations_test.rb.

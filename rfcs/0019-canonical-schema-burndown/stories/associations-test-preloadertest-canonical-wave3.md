@@ -45,6 +45,6 @@ Rails source: `vendor/rails/activerecord/test/cases/associations_test.rb` Preloa
 
 - 7 remaining tests converted to canonical tables
 - All 7 bespoke table groups removed from defineSchema (gmm*\*, ggt*\_, gat\__, pt*\*, pp*_, sl\_\_, pwtiss\_\*)
-- `test:compare` delta non-negative
+- `parity:test` delta non-negative
 - 500 LOC ceiling: split into additional waves if needed
 - Once complete + TA/TB wave done: remove `associations.test.ts` from `eslint/require-canonical-schema-exclude.json`

@@ -45,7 +45,7 @@ Base` partial-declaration model pairs** — `AsAuthor`/`AsPost`,
       declares no inline `class X extends Base`, and constructs no
       `createTestAdapter`.
 - [ ] Open `association_scope_test.rb` FIRST; port each body word-for-word.
-      **Test names UNCHANGED** (`test:compare` matches on names).
+      **Test names UNCHANGED** (`parity:test` matches on names).
 - [ ] Replace the bespoke author/post/owner/target pairs with the canonical
       models Rails uses (including the STI, polymorphic, CPK, and UUID families).
       Never fake a column the canonical table lacks; add to

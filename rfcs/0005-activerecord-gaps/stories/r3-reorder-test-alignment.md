@@ -31,7 +31,7 @@ The Rails counterparts are in
 
 Named-aligned stubs already exist at `relations.test.ts:4914` ("finding with
 reorder") and `relations.test.ts:4925` ("reorder deduplication") from the same
-sweep, so `test:compare` already matches those Rails tests. The three old tests
+sweep, so `parity:test` already matches those Rails tests. The three old tests
 remain unresolved.
 
 Remaining work: for each of the three old tests, either (a) add a `// Rails:

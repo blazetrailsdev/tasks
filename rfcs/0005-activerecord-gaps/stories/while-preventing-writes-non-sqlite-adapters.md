@@ -66,4 +66,4 @@ connection gets the canonical table for free instead of via
 - [ ] The PG-gated `doesnt error when a select query has encoding errors`
       variant keeps its existing `adapterType` gate; the two Rails variants
       stay distinct.
-- [ ] No test renamed. `test:compare` delta >= 0.
+- [ ] No test renamed. `parity:test` delta >= 0.

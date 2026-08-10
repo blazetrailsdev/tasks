@@ -34,4 +34,4 @@ gated on whether the collection scope is distinct.
 - [ ] `proxy.size()` for a non-distinct HABTM collection returns the raw join-row count
 - [ ] Distinct collections retain their existing dedup behaviour
 - [ ] `distinct after the fact` test passes faithfully (no stubs)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

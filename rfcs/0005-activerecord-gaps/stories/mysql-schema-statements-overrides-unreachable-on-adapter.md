@@ -87,4 +87,4 @@ itself.
       passes on sqlite/postgresql/mysql2.
 - [ ] Audit the other `MysqlSchemaStatements` overrides (`addIndex`,
       `schemaCreation`) for behaviour changes once they become reachable.
-- [ ] `pnpm test:compare --package activerecord --gates --check` exits 0.
+- [ ] `pnpm parity:test --package activerecord --gates --check` exits 0.

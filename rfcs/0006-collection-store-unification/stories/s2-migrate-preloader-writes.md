@@ -30,7 +30,7 @@ place.
   `proxy._replacedOrAddedTargets` from the cache — the C2 (#2591) seam is
   removed or reduced to a no-op.
 - All currently-passing inverse-association tests still pass; no test renames.
-- `api:compare` delta non-negative.
+- `parity:api` delta non-negative.
 
 ## Notes
 

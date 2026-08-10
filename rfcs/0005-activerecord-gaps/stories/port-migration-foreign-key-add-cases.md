@@ -23,7 +23,7 @@ only `associations/foreign-association.ts`,
 `adapters/postgresql/foreign-table.test.ts`, and two association-side tests.
 `ActiveRecord::Migration::ForeignKeyTest` (`foreign_key_test.rb:168` onward) is
 entirely unported, so its ~40 `test_add_foreign_key_*` /
-`test_remove_foreign_key_*` cases count as missing in `test:compare`.
+`test_remove_foreign_key_*` cases count as missing in `parity:test`.
 
 PR #5287 (RFC 0029) converted the `addForeignKey` + `ifNotExists` cases in
 `connection-adapters/abstract/schema-statements-on-adapter.test.ts` to the
@@ -58,5 +58,5 @@ setup rather than re-deriving it.
       `unless current_adapter?(:SQLite3Adapter)` FK-name guards.
 - [ ] `withRocketTables` is shared, not duplicated — the existing
       `schema-statements-on-adapter.test.ts` cases keep working off it.
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

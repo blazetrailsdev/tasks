@@ -53,7 +53,7 @@ is the only store; inverse wiring and preloading both write to it directly.
 - One source of truth for has_many loaded targets.
 - Delete the hand-glued sync between `_cachedAssociations` and the proxy.
 - Unblock the skipped inverse-dedup tests without adding new seams.
-- Keep `api:compare` delta non-negative on the relevant Rails files.
+- Keep `parity:api` delta non-negative on the relevant Rails files.
 
 ## Non-goals
 
@@ -106,7 +106,7 @@ Story sketch (see `stories/` for the live breakdown):
 ## Constraints
 
 - Test names match Rails verbatim — no test renames (trails `CLAUDE.md`).
-- `api:compare` delta must be non-negative on the relevant Rails files.
+- `parity:api` delta must be non-negative on the relevant Rails files.
 - Six test files poke `_cachedAssociations` directly today. They must either be
   updated, or `_cachedAssociations` must survive as an internal proxy-backed
   method/accessor with the same shape and name so the pokes keep working. See
@@ -118,7 +118,7 @@ Story sketch (see `stories/` for the live breakdown):
   cache instead of `_cachedAssociations`? (Proposal option B.)
 - Should the proxy read API be `record.association(name).cached?`-style or a
   plain getter? Pick whichever maps most cleanly to the Rails surface that
-  `api:compare` checks.
+  `parity:api` checks.
 - Does removing `_cachedAssociations` force rewrites of the six test files that
   poke it directly? CLAUDE.md forbids test renames; if removal would force
   rewrites, expose `record._associationCache(name)` as an internal shim with the

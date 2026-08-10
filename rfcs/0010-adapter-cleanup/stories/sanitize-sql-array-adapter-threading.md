@@ -61,4 +61,4 @@ arel `quoteArrayLiteral`. Not RFC 0019.
 - [ ] Sanitized SQL uses the live dialect's quoting on PG/MySQL/SQLite
 - [ ] Affected sanitization/query-method tests pass on all three adapters (run
       only the touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

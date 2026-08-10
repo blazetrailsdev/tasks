@@ -34,5 +34,5 @@ bulb.rb) ported with their `touch:` associations.
 - [ ] touch: option honored on has_one; parent `updated_at` bumped on child
       create/update/touch/destroy per Rails.
 - [ ] Club/Membership + SpecialCar/SpecialBulb models available in test-helpers.
-- [ ] Listed touch tests un-skipped with verbatim Rails names; test:compare
+- [ ] Listed touch tests un-skipped with verbatim Rails names; parity:test
       delta non-negative.

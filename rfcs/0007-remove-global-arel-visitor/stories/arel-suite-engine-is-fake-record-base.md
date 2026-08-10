@@ -58,4 +58,4 @@ quoter RFC 0007 is deleting.
       with the FakeRecord rendering — matching the Rails counterpart's expected
       SQL verbatim, not weakened to fit.
 - [ ] No arel test depends on `defaultQuoter` via the suite engine.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

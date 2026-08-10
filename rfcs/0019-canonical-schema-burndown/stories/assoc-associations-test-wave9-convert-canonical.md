@@ -103,7 +103,7 @@ cpk-counter-cache-column-demodulize-convergence):
 - [ ] FINAL wave: drop `associations.test.ts` from
       `eslint/require-canonical-schema-exclude.json` once ALL describes in the
       file (incl. AssociationProxyTest/PreloaderTest defineSchemas) are
-      canonical; test:compare delta non-negative.
+      canonical; parity:test delta non-negative.
 
 Hard rules: NO `node:*` imports. NO `process.*` references. Async fs only.
 No new third-party runtime deps. 500 LOC ceiling. NO STACKED PRs. Single PR from main.

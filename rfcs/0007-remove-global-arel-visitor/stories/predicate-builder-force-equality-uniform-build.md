@@ -91,7 +91,7 @@ once `build` emits it. No new adapter work needed for the array case.
       `operator ||= force_equality? && :eq` precedence.
 - [ ] Range force-equality (already converged in #4062) stays green; all
       `adapters/postgresql/range.test.ts` and `array.test.ts` behavioral tests
-      pass; `test:compare` non-negative.
+      pass; `parity:test` non-negative.
 - [ ] Reuses the same type object for the check and the bind (no second
       `this.table.typeForAttribute` lookup); no bind-everything regression.
 

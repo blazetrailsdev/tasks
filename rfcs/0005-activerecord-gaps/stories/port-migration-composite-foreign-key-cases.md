@@ -20,7 +20,7 @@ closed-reason: null
 `vendor/rails/activerecord/test/cases/migration/foreign_key_test.rb:824`
 defines `ActiveRecord::Migration::CompositeForeignKeyTest`, which is entirely
 unported. It is a sibling class of `ForeignKeyTest` in the same Ruby file, so
-`test:compare` folds it into the same row: after
+`parity:test` folds it into the same row: after
 `fix-foreign-key-test-describe-path` (PR #5457) that row reads
 `migration/foreign_key_test.rb -> migration/foreign-key.test.ts  22 OK / 50 missing`.
 The 50 missing split across the `SchemaDumpingHelper` dumper cases (already
@@ -42,6 +42,6 @@ behavior.
       test names verbatim, into a sibling
       `describe("CompositeForeignKeyTest", ...)` in `foreign-key.test.ts`.
 - [ ] Use canonical schema/models only — no bespoke tables.
-- [ ] `pnpm test:compare --package activerecord` shows the
+- [ ] `pnpm parity:test --package activerecord` shows the
       `migration/foreign_key_test.rb` missing count drop by the number ported.
 - [ ] `--gates --check` still exits 0 (no new gate mismatches).

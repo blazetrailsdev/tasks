@@ -108,7 +108,7 @@ into this story so they land together with the reset-barrier rework.
       transaction-nested, statement-pool, money) green under ARCONN=postgresql +
       live PG — in particular `PostgresqlConnectionTest > reset` and
       `> reset with transaction`; Phase-2/3 retry/reconnect mirrors stay green;
-      api:compare and test:compare deltas non-negative.
+      parity:api and parity:test deltas non-negative.
 
 ## Notes
 

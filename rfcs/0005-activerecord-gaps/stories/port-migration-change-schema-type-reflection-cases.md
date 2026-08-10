@@ -26,7 +26,7 @@ out because each one fails on a **production** divergence, not on a porting
 gap, and fixing them does not fit under the 500-LOC ceiling of that PR (it
 landed at 495).
 
-`test:compare` for `migration/change_schema_test.rb` now reads
+`parity:test` for `migration/change_schema_test.rb` now reads
 `27 OK / 0 wrong-describe / 0 gate-mismatch / 0 misplaced / 7 missing`.
 
 The seven missing cases and the divergence each is blocked on:
@@ -83,7 +83,7 @@ The seven missing cases and the divergence each is blocked on:
       names matching Rails verbatim.
 - [ ] The underlying production divergences are fixed rather than the
       assertions being weakened to match trails.
-- [ ] `test:compare` for `migration/change_schema_test.rb` reaches 35/35
+- [ ] `parity:test` for `migration/change_schema_test.rb` reaches 35/35
       with 0 gate-mismatch and 0 misplaced.
 - [ ] Green on all three lanes.
 - [ ] Split across PRs under the 500-LOC ceiling if needed — the SQLite

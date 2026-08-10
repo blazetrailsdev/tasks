@@ -35,7 +35,7 @@ names:
 
 The dedicated ports (associations/has-and-belongs-to-many-associations.test.ts,
 associations/inverse-associations.test.ts, polymorphic, association-scopes)
-already provide the Rails matches; wave 5 confirmed test:compare delta is zero
+already provide the Rails matches; wave 5 confirmed parity:test delta is zero
 when deleting the sibling Rails-guided describes.
 
 - trails: `packages/activerecord/src/associations.test.ts`
@@ -44,9 +44,9 @@ when deleting the sibling Rails-guided describes.
 ## Acceptance criteria
 
 - [ ] Delete each remaining `*(Rails-guided)*` duplicate describe after
-      confirming via `test:compare` the dedicated port already provides the
+      confirming via `parity:test` the dedicated port already provides the
       Rails matches.
 - [ ] Fix any registry/schema leak each deletion exposes; surviving describes
       self-sufficient. Drop now-unused imports.
-- [ ] `test:compare` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
+- [ ] `parity:test` delta non-negative; `pnpm vitest run packages/activerecord/src/associations.test.ts` passes.
 - [ ] Do NOT remove the file from `eslint/require-canonical-schema-exclude.json`.

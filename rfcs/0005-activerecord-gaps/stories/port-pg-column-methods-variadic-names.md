@@ -74,4 +74,4 @@ Note `enum` is in Rails' PG list but trails' `enum` takes a required
       block: multi-name definition, shared options, and the missing-name raise.
       Verify they fail on baseline.
 - [ ] `ColumnMethods` interface in the PG file updated to match.
-- [ ] Green on all three lanes; api:compare shows no new extra surface.
+- [ ] Green on all three lanes; parity:api shows no new extra surface.

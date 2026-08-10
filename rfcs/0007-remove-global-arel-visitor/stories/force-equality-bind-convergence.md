@@ -61,6 +61,6 @@ NOTE: this intersects the documented PG bind-everything fragility
 - [ ] `_buildRangeEqualityOrNull` drops the `encodeLiteral` inline path; the
       now-dead `RangeType#encodeLiteral` is removed.
 - [ ] All `packages/activerecord/src/adapters/postgresql/range.test.ts`
-      behavioral tests stay green; `test:compare` non-negative.
+      behavioral tests stay green; `parity:test` non-negative.
 - [ ] Does NOT reintroduce bind-everything (avoid the pinned-client hang) — cast
       only object-valued binds.

@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Already ported: all nine validate cases are in migration/foreign-key.test.ts:381-518 behind itIfSupports('validate_constraints'); test:compare lists none of them as missing for foreign_key_test.rb."
+closed-reason: "Already ported: all nine validate cases are in migration/foreign-key.test.ts:381-518 behind itIfSupports('validate_constraints'); parity:test lists none of them as missing for foreign_key_test.rb."
 ---
 
 ## Context
@@ -21,7 +21,7 @@ The PostgreSQL-only `validate` block of
 `ActiveRecord::Migration::ForeignKeyTest`
 (`vendor/rails/activerecord/test/cases/migration/foreign_key_test.rb:453-523`,
 guarded by `if supports_validate_constraints?`) is unported — 9 of the 37 cases
-`test:compare` still reports missing after #5453:
+`parity:test` still reports missing after #5453:
 
 `test_add_invalid_foreign_key`, `test_validate_foreign_key_infers_column`,
 `test_validate_foreign_key_by_column`, `test_validate_foreign_key_by_symbol_column`,
@@ -47,5 +47,5 @@ Setup is the shared `withRocketTables`; no new schema needed.
       Rails' `if supports_validate_constraints?` does.
 - [ ] `--gates --check` stays at exit 0 (the gate must read as a feature gate,
       not an adapter list).
-- [ ] `test:compare` delta for `foreign_key_test.rb` is strictly positive.
+- [ ] `parity:test` delta for `foreign_key_test.rb` is strictly positive.
 - [ ] Green on all three adapters.

@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activerecord/src/migration/rename-table.test.ts` was created by
 PR #5547 to give the relocated `rename table` case its Rails-matching home.
-It holds only that one; `test:compare` reports **5 missing** for
+It holds only that one; `parity:test` reports **5 missing** for
 `vendor/rails/activerecord/test/cases/migration/rename_table_test.rb`.
 
 The file already carries the setup/teardown from `rename_table_test.rb:12-22`
@@ -38,7 +38,7 @@ constraint tests use.
 
 - [ ] The remaining `rename_table_test.rb` cases are ported under
       `Migration > RenameTableTest` with names matching Rails verbatim.
-- [ ] `test:compare` missing count for `migration/rename_table_test.rb` drops
+- [ ] `parity:test` missing count for `migration/rename_table_test.rb` drops
       to 0; 0 gate-mismatch, 0 misplaced.
 - [ ] Green on all three lanes; the shared-DB `references` rename leaves the
       canonical schema intact for files that run next.

@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 PR #5560 took `packages/activerecord/src/migration/columns.test.ts` from 2 to
-25 ported cases. `test:compare` still reports **11 missing** for
+25 ported cases. `parity:test` still reports **11 missing** for
 `vendor/rails/activerecord/test/cases/migration/columns_test.rb`. This story
 covers the adapter-gated remainder, which PR #5560 deliberately left out
 because every case it ported is unconditional in Rails.
@@ -58,6 +58,6 @@ assertions.
 
 - [ ] The four adapter-gated cases above are ported under
       `Migration > ColumnsTest` with names matching Rails verbatim.
-- [ ] Gates match Rails exactly — 0 gate-mismatch, 0 misplaced in `test:compare`.
-- [ ] `test:compare` missing for `migration/columns_test.rb` drops by 4.
+- [ ] Gates match Rails exactly — 0 gate-mismatch, 0 misplaced in `parity:test`.
+- [ ] `parity:test` missing for `migration/columns_test.rb` drops by 4.
 - [ ] Green on all three lanes.

@@ -32,4 +32,4 @@ with posts/authors/author_addresses fixtures.
 ## Acceptance criteria
 
 - [ ] Query-cache + truncate tests pass on SQLite; pk-reset pass under PG gating.
-- [ ] `test:compare --cached --package activerecord` delta non-negative.
+- [ ] `parity:test --cached --package activerecord` delta non-negative.

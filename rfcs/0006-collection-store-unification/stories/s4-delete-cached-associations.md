@@ -40,7 +40,7 @@ poke `_cachedAssociations`.
   `record._associationCache(name)` shim with the same shape, or are updated —
   with no test renames.
 - All association tests pass.
-- `api:compare` delta non-negative.
+- `parity:api` delta non-negative.
 
 ## Notes
 

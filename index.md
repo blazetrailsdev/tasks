@@ -15,11 +15,11 @@
 | [0009-type-audit](rfcs/0009-type-audit/README.md) | ActiveRecord type-audit remainder (W1b + follow-ups + W4) | closed | @deanmarano | activerecord |
 | [0010-adapter-cleanup](rfcs/0010-adapter-cleanup/README.md) | Adapter → Connection collapse — remaining cleanup | closed | @deanmarano | activerecord |
 | [0011-activerecord-docs-cutover](rfcs/0011-activerecord-docs-cutover/README.md) | ActiveRecord docs cutover — retire docs/activerecord, tasks as sole source of truth | closed | @deanmarano | activerecord |
-| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the test:compare gate machinery | closed | @deanmarano | activerecord |
+| [0012-adapter-test-ci](rfcs/0012-adapter-test-ci/README.md) | Adapter test-CI: wire the live-DB lane + the parity:test gate machinery | closed | @deanmarano | activerecord |
 | [0013-pg-rawconn-convergence](rfcs/0013-pg-rawconn-convergence/README.md) | PG raw-connection acquisition through the abstract withRawConnection loop | closed | @deanmarano | activerecord |
 | [0014-fixtures-adoption](rfcs/0014-fixtures-adoption/README.md) | Fixtures adoption — opportunistic Tier-1 conversion; defer the sweep | superseded | @deanmarano | activerecord |
 | [0015-ar-framework-gaps](rfcs/0015-ar-framework-gaps/README.md) | ActiveRecord framework gaps — dirty-tracking + readonly (test-port surfaced) | closed | @deanmarano | activerecord |
-| [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord test:compare 100%: phase-ordered un-skip campaign | superseded | @deanmarano | activerecord |
+| [0016-ar-test-compare-100](rfcs/0016-ar-test-compare-100/README.md) | ActiveRecord parity:test 100%: phase-ordered un-skip campaign | superseded | @deanmarano | activerecord |
 | [0017-arel-collector-threading](rfcs/0017-arel-collector-threading/README.md) | Thread the Arel query visitor collector — eliminate ToSql instance state | closed | @deanmarano | arel, activerecord |
 | [0018-ddl-visitor-convergence](rfcs/0018-ddl-visitor-convergence/README.md) | Converge all CREATE TABLE DDL onto the SchemaCreation visitor — eliminate hand-rolled TableDefinition#toSql | closed | @deanmarano | activerecord |
 | [0019-canonical-schema-burndown](rfcs/0019-canonical-schema-burndown/README.md) | Canonical-schema ratchet burndown — convert the AR test suite to TEST_SCHEMA + Rails fixtures, word-for-word | closed | @deanmarano | activerecord |
@@ -34,9 +34,9 @@
 | [0027-join-dependency-fidelity](rfcs/0027-join-dependency-fidelity/README.md) | JoinDependency fidelity — converge internal state model to Rails' build-once walk/construct shape | closed | @deanmarano | activerecord |
 | [0028-ci-cost-optimization](rfcs/0028-ci-cost-optimization/README.md) | CI cost optimization — cut billed Actions minutes and time-to-green | closed | @deanmarano | — |
 | [0029-sqlite-memory-fidelity](rfcs/0029-sqlite-memory-fidelity/README.md) | SQLite :memory: test fidelity — match Rails' file-backed default and ambient-connection pattern | closed | @deanmarano | activerecord |
-| [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord test:compare 94→100: residual skip burndown | closed | @deanmarano | activerecord |
+| [0030-ar-test-compare-residual-burndown](rfcs/0030-ar-test-compare-residual-burndown/README.md) | ActiveRecord parity:test 94→100: residual skip burndown | closed | @deanmarano | activerecord |
 | [0031-schema-cache-always-warm-convergence](rfcs/0031-schema-cache-always-warm-convergence/README.md) | Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow) | closed | @deanmarano | activerecord |
-| [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord test:compare gate-mismatch burndown to zero | closed | @deanmarano | activerecord |
+| [0032-ar-gate-fidelity-burndown](rfcs/0032-ar-gate-fidelity-burndown/README.md) | ActiveRecord parity:test gate-mismatch burndown to zero | closed | @deanmarano | activerecord |
 | [0033-standalone-associations-burndown](rfcs/0033-standalone-associations-burndown/README.md) | Standalone-association call burndown | closed | @deanmarano | activerecord |
 | [0034-sveltekit-kanban-example](rfcs/0034-sveltekit-kanban-example/README.md) | SvelteKit example app (Kanban modeled on tasks/rfcs) | draft | @deanmarano | activerecord |
 | [0035-tsserver-editor-plugin](rfcs/0035-tsserver-editor-plugin/README.md) | tsserver / editor plugin for zero-declare AR models | draft | @deanmarano | activerecord, trails-tsc |
@@ -48,7 +48,7 @@
 | [0042-establish-connection-resolver-convergence](rfcs/0042-establish-connection-resolver-convergence/README.md) | Converge Base.establishConnection onto resolveConfigForConnection (single DatabaseConfig funnel) | closed | @deanmarano | activerecord |
 | [0043-bespoke-test-bloat-burndown](rfcs/0043-bespoke-test-bloat-burndown/README.md) | ActiveRecord bespoke TS-only test-bloat burndown | closed | @deanmarano | activerecord |
 | [0044-call-set-parity-fidelity-burndown](rfcs/0044-call-set-parity-fidelity-burndown/README.md) | ActiveRecord call-set parity fidelity burndown to zero | closed | @deanmarano | activerecord |
-| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer api:compare to 100% method parity | closed | @deanmarano | arel, activerecord, activemodel |
+| [0045-data-layer-api-compare-100](rfcs/0045-data-layer-api-compare-100/README.md) | Data layer parity:api to 100% method parity | closed | @deanmarano | arel, activerecord, activemodel |
 | [0046-strict-write-attribute-internal-convergence](rfcs/0046-strict-write-attribute-internal-convergence/README.md) | Strict _write_attribute convergence (remove the writeFromUser internal-write bridge) | closed | @deanmarano | activerecord |
 | [0047-widen-call-set-parity-all-ported](rfcs/0047-widen-call-set-parity-all-ported/README.md) | Widen call-set parity: converge all ported-method internal calls to Rails | closed | @deanmarano | activerecord, arel, activemodel |
 | [0048-one-schema-no-drop-tests](rfcs/0048-one-schema-no-drop-tests/README.md) | Rails-faithful AR test convergence | closed | @deanmarano | activerecord |
@@ -75,7 +75,7 @@
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
 | [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | closed | @deanmarano | activerecord |
 | [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | closed | @deanmarano | activerecord |
-| [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | api:compare parity & fidelity burndown | active | @deanmarano | activerecord, activemodel, globalid, activesupport, actionview |
+| [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | parity:api parity & fidelity burndown | active | @deanmarano | activerecord, activemodel, globalid, activesupport, actionview |
 | [0073-permanent-connection-checkout-disallowed](rfcs/0073-permanent-connection-checkout-disallowed/README.md) | Ban permanent Base.connection checkout in the AR suite (helper.rb:27) | draft | @deanmarano | activerecord |
 | [0074-i18n-parity](rfcs/0074-i18n-parity/README.md) | i18n gem parity | closed | @deanmarano | i18n, activesupport, activemodel, activerecord, date |
 | [0075-collection-association-target-fidelity](rfcs/0075-collection-association-target-fidelity/README.md) | Collection association target-store fidelity | draft | @deanmarano | activerecord |
@@ -98,7 +98,7 @@
 | [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | active | @deanmarano | — |
 | [0093-proxy-dynamic-method-consistency](rfcs/0093-proxy-dynamic-method-consistency/README.md) | Proxy dynamic-method consistency | active | @deanmarano | activerecord, activemodel |
 | [0094-sqlite3-adapter-construction-fidelity](rfcs/0094-sqlite3-adapter-construction-fidelity/README.md) | SQLite3 adapter construction fidelity | draft | @deanmarano | activerecord |
-| [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (api:calls:args) | closed | @deanmarano | activerecord, arel |
+| [0095-call-argument-parity](rfcs/0095-call-argument-parity/README.md) | Call-argument parity (parity:api:calls:args) | closed | @deanmarano | activerecord, arel |
 | [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | active | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
 | [0097-parity-output-sharding](rfcs/0097-parity-output-sharding/README.md) | Per-source-file sharding for parity registers and artifacts | active | @deanmarano | — |
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | draft | @your-handle | activesupport |

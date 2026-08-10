@@ -34,4 +34,4 @@ CI-gated via the ARCONN-keyed adapter lanes (RFC 0012 lane is wired). Skipped
 ## Acceptance criteria
 
 - [ ] Listed tests pass under MySQL/PG gating; SQLite remains correctly skipped.
-- [ ] `test:compare --cached --package activerecord` delta non-negative.
+- [ ] `parity:test --cached --package activerecord` delta non-negative.

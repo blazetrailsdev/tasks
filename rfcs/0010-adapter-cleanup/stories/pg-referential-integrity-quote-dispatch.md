@@ -54,4 +54,4 @@ Not RFC 0019: this is adapter convergence, not test-schema canonicalization.
       mixin pattern
 - [ ] No behavior change: emitted SQL is byte-identical for the PG adapter
 - [ ] PG referential-integrity tests pass (run only the touched files locally)
-- [ ] `api:compare` delta non-negative
+- [ ] `parity:api` delta non-negative

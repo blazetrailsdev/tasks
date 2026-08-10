@@ -53,4 +53,4 @@ The activerecord side already has the Rails-shaped owner:
 - [ ] No arel-side array encoding remains; `OID::Array#encode` is the only path.
 - [ ] `array-encode-parity.trails.test.ts` is repointed or removed with a rationale.
 - [ ] The two superseded sibling stories are closed with `--reason`.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.

@@ -18,7 +18,7 @@ blocked-by: null
 
 PR #3585 converted `has-one-associations.test.ts` to canonical models/fixtures
 (story `assoc-has-one-shared-tables`). The old bespoke file _faked_ behavior
-against bespoke tables, so it reported 71 `matched` tests in `test:compare`; the
+against bespoke tables, so it reported 71 `matched` tests in `parity:test`; the
 honest canonical port reports 51 `matched` / 41 `skipped` (−20 `matched`),
 because ~20 previously-faked-passing tests surface real has_one impl gaps and
 are now faithful `it.skip`s. This story tracks un-skipping them as each blocking
@@ -63,7 +63,7 @@ on create`, `... on update`, `... on destroy`.
 
 - [ ] As each blocking gap above closes, un-skip the corresponding test(s) and
       port the body faithfully from Rails (drop the `it.skip` + BLOCKED note).
-- [ ] `test:compare` `matched` for `has-one-associations.test.ts` returns to ≥71
+- [ ] `parity:test` `matched` for `has-one-associations.test.ts` returns to ≥71
       (recovering the −20 from the canonical conversion).
 - [ ] No bespoke tables / `defineSchema` reintroduced; stay on canonical
       models + `companies`/`accounts` fixtures.

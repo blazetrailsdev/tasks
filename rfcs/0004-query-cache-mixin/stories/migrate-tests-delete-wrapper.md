@@ -38,7 +38,7 @@ See RFC 0004 §Design (Phase 3).
 
 ## Notes
 
-Use the **live** `pnpm test:compare` for the baseline (54 OK / 13 skipped at
+Use the **live** `pnpm parity:test` for the baseline (54 OK / 13 skipped at
 writing) — NOT the stale `activerecord-test-compare-100.md` snapshot
 (2026-05-18). Subsumes the closed column-matcher dedup PR #2639; do not reopen it
 standalone (no wrapper → no `.inner` chain → resolvers collapse to one-liners).

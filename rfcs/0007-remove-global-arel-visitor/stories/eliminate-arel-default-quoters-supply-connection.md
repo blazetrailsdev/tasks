@@ -73,7 +73,7 @@ before claiming.
 - [ ] `Node#toSql()`'s debug path either supplies an explicit quoter or is
       documented with the Rails anchor for why it must differ.
 - [ ] No arel-side re-implementation of adapter quoting remains.
-- [ ] api:compare / test:compare delta non-negative.
+- [ ] parity:api / parity:test delta non-negative.
 
 ## Inherited from #5022 (superseded story: arel-debug-quoter-hardcodes-utc-ignoring-default-timezone)
 
