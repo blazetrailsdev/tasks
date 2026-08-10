@@ -1,6 +1,6 @@
 ---
 title: "Port test_switch_hitter.rb comparison/period/encoding (8 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
