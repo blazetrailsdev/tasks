@@ -1,7 +1,7 @@
 ---
 title: "Port test_date_parse.rb iso8601/rfc3339/xmlschema/rfc2822/httpdate/jisx0301 (14 tests)"
-status: ready
-updated: 2026-08-09
+status: claimed
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T13:05:58Z"
+assignee: "date-new-must-discard-date-initialize-add-frac"
 blocked-by: null
 closed-reason: null
 ---
