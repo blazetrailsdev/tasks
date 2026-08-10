@@ -1,6 +1,6 @@
 ---
 title: "::Time's non-sec range checks raise Temporal's RangeError, not MRI's ArgumentError"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
