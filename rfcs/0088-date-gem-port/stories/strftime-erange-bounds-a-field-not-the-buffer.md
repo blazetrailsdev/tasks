@@ -1,6 +1,6 @@
 ---
 title: "strftime-erange-bounds-a-field-not-the-buffer"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

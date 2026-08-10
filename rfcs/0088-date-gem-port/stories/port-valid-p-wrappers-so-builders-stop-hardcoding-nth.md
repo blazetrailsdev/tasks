@@ -1,6 +1,6 @@
 ---
 title: "The four valid_*_p wrappers are unported, so Date.ordinal/commercial/weeknum/nth_kday hardcode nth = 0"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

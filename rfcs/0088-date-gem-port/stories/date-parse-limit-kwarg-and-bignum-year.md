@@ -1,6 +1,6 @@
 ---
 title: "Date._parse honours the limit: kwarg; :year can be a bigint"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
