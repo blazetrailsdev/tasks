@@ -18,6 +18,7 @@ clusters:
   - "api-compare"
 related-rfcs:
   - "0095-call-argument-parity"
+priority: 2
 ---
 
 ## Summary
