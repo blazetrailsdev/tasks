@@ -1,6 +1,6 @@
 ---
 title: "Dot visitor visit_edge sites pass labels and edges Rails does not"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0084-wide-call-set-burndown"
 cluster: null
