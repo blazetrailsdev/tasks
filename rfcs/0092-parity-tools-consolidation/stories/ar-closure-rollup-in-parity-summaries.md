@@ -1,6 +1,6 @@
 ---
 title: "Derive the AR/AM require closure and report an 'AR closure' parity rollup"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
