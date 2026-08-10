@@ -1,6 +1,6 @@
 ---
 title: "Time#to_date goes through the public Date constructor, not d_simple_new_internal's seat"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_new.rb commercial/weeknum/today/now (7 tests)"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

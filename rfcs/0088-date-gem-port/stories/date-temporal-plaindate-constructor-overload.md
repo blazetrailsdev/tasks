@@ -1,6 +1,6 @@
 ---
 title: "Declare the Temporal.PlainDate constructor overload Date#toDate names as its inverse"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null

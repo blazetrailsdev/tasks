@@ -1,6 +1,6 @@
 ---
 title: "Date.valid_date? and Date.leap? — the second names Init_date_core registers — are unported"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
