@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-0000-call-argument-convergence](rfcs/0000-0000-call-argument-convergence/README.md) | Call-argument convergence burndown | draft | @deanmarano | activerecord, arel |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -103,3 +102,4 @@
 | [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | active | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
 | [0097-parity-output-sharding](rfcs/0097-parity-output-sharding/README.md) | Per-source-file sharding for parity registers and artifacts | active | @deanmarano | — |
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | draft | @your-handle | activesupport |
+| [0099-0000-call-argument-convergence](rfcs/0099-0000-call-argument-convergence/README.md) | Call-argument convergence burndown | draft | @deanmarano | activerecord, arel |
