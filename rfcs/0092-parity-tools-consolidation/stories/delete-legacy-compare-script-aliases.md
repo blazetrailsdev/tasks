@@ -1,6 +1,6 @@
 ---
 title: "delete-legacy-compare-script-aliases"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0092-parity-tools-consolidation"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "saving for much later"
 ---
 
 ## Context
