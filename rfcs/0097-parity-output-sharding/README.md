@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-output-sharding"
+rfc: "0097-parity-output-sharding"
 title: "Per-source-file sharding for parity registers and artifacts"
 status: draft
 created: 2026-08-10
