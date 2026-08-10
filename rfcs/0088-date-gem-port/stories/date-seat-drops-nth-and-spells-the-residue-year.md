@@ -1,6 +1,6 @@
 ---
 title: "date-seat-drops-nth-and-spells-the-residue-year"
-status: claimed
+status: ready
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-10T14:33:26Z"
-assignee: "date-seat-drops-nth-and-spells-the-residue-year"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
