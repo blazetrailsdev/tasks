@@ -1,6 +1,6 @@
 ---
 title: "Date#inspect spells a non-finite start Inf/-Inf, as mk_inspect's %.0f does"
-status: ready
+status: draft
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -62,4 +62,4 @@ import path). A brand or an explicit per-class literal would be sturdier.
 - [ ] A cover in `packages/date/src/date.trails.test.ts` pins both non-finite
       spellings.
 - [ ] `pnpm vitest run packages/date/src` green; `pnpm test:compare --package
-  date` does not regress.
+date` does not regress.
