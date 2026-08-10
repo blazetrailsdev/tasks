@@ -1,7 +1,7 @@
 ---
 rfc: "0096-naming-identifier-burndown"
 title: "Local/parameter identifier burndown (call-argument `naming` class)"
-status: draft
+status: active
 created: 2026-08-10
 updated: 2026-08-10
 owner: "@your-handle"
