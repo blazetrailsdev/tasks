@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-strptime-3"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: test__strptime__3 ships in PR #6320 after all. It was deferred only for the 700-LOC ceiling; review of #6320 held that the stamped story port-test-date-strptime-frags lists all five tests and a partial port does not meet its 'Every listed test is ported' criterion, so the test was restored and the PR runs ~40 LOC over the ceiling with that noted in its body."
 ---
 
 ## Context
