@@ -1,6 +1,6 @@
 ---
 title: "LogSubscriber.logger falls back to Trails.logger via the slot"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 6314
 claim: "2026-08-10T00:56:48Z"
 assignee: "converge-date-infinity-nan-and-coerce-arms-to-lib-date-rb"
 blocked-by: null
