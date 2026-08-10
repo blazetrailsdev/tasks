@@ -83,3 +83,16 @@ Tests in scope (14):
 Sizing is a scoping estimate from the Ruby line ranges, not a measurement. If the
 port exceeds the PR LOC ceiling, ship the part that fits and file the remainder
 as a sibling story — do not grow the PR and do not open the sibling PR yourself.
+
+## Progress (2026-08-10, PR #6333)
+
+PR #6333 shipped 4 of the 14 tests — `test__rfc2822`, `test__httpdate`,
+`test_rfc2822`, `test_httpdate` — together with the parsers they needed, which
+turned out not to exist: `date__rfc2822` / `date__rfc822`
+(`date_parse.c:2797-2855`) and `date__httpdate` (`:2861-3010`), plus the
+`Date`/`DateTime` statics at `date_core.c:4825-4945` and `:8584-8646`.
+
+The other 10 tests and the four parsers behind them (`date__iso8601`,
+`date__rfc3339`, `date__xmlschema`, `date__jisx0301`) and `check_limit`'s
+`limit:` kwarg are scoped in [[port-test-date-parse-formats-iso8601-family]].
+This story closes when that one lands.
