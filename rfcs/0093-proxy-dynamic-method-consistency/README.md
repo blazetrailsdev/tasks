@@ -1,9 +1,9 @@
 ---
 rfc: "0093-proxy-dynamic-method-consistency"
 title: "Proxy dynamic-method consistency"
-status: active
+status: draft
 created: 2026-08-07
-updated: 2026-08-08
+updated: 2026-08-10
 owner: "@deanmarano"
 packages:
   - "activerecord"
