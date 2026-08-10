@@ -69,5 +69,5 @@ Also fold in the stale prose at
       `toBeString()` again.
 - [ ] `packages/activesupport/src/json/encoding.ts:65` no longer names the
       retired `toJson` spelling.
-- [ ] `pnpm api:compare` / `pnpm test:compare` deltas non-negative; no test
+- [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative; no test
       renamed.

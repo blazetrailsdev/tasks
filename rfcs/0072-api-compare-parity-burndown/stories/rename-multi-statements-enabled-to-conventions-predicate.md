@@ -23,11 +23,11 @@ is ported in
 `packages/activerecord/src/connection-adapters/mysql2/database-statements.ts:182`
 as `multiStatementsEnabled`. `docs/ruby-ts-conventions.md` translates a Ruby
 `?` predicate with an `is` prefix, so the matched name is
-`isMultiStatementsEnabled` and `api:compare` reports the method unported. It is
+`isMultiStatementsEnabled` and `parity:api` reports the method unported. It is
 the only name divergence left by the triage in
 `docs/infrastructure/mixin-attribution-triage.md` (2026-08-04).
 
 ## Acceptance criteria
 
 - The function and every call site use the conventions name.
-- `pnpm api:compare` credits the method.
+- `pnpm parity:api` credits the method.

@@ -40,7 +40,7 @@ What is left is the trails-side test names that still spell it `ERB`, which
   name citing `Handlers::ERB.call`.
 
 These collide with two rules that need an owner's call: CLAUDE.md says test
-names are never renamed because `test:compare` matches on them, and the
+names are never renamed because `parity:test` matches on them, and the
 convention says trails writes TSE. `normalizeErb` is what makes both true at
 once today, so the decision is whether the normalizer is the settled answer (in
 which case document it and close this) or whether the trails-side names should
@@ -52,6 +52,6 @@ read TSE and the normalizer stays only as a matcher for the Ruby side.
       and record the rule where a porter will read it (CLAUDE.md's test-name
       rule and/or `docs/ruby-ts-conventions.md`).
 - [ ] If they are to be renamed, rename the names listed above and confirm
-      `pnpm test:compare` credits them (delta non-negative).
+      `pnpm parity:test` credits them (delta non-negative).
 - [ ] No `erb`-spelled trails file name, directory, or identifier remains;
       `ERB` survives only where the text is citing the Ruby side.

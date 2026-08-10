@@ -62,7 +62,7 @@ divergence it originally described is this story.
       field and `up`/`down` methods, and `reversible` constructs it rather than
       an object literal.
 - [ ] Whatever holds the deferred callbacks is a JS private field (or otherwise
-      not public surface) — `pnpm api:extra --package activerecord` delta
+      not public surface) — `pnpm parity:api:extra --package activerecord` delta
       non-negative, no new `@noRailsEquivalent` public member.
 - [ ] `invertible-migration.test.ts` stays green on all three adapter lanes.
 - [ ] If the async deferral genuinely cannot be expressed without adding a

@@ -47,4 +47,4 @@ after the `SecureToken` members — and delete the subpath-only comment at
   without importing the subpath.
 - No static `node:crypto` import reaches `index.ts`; the browser/bundler lane
   stays green.
-- `pnpm api:extra --package activerecord` does not regress `generates-token-for.ts`.
+- `pnpm parity:api:extra --package activerecord` does not regress `generates-token-for.ts`.

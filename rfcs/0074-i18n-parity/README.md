@@ -20,7 +20,7 @@ priority: 1
 Drive the Ruby **i18n** gem (vendored at `vendor/i18n`, `ruby-i18n/i18n`
 v1.14.8 — PR #5347) to Rails parity/fidelity, replacing today's scattered
 trails shims with a real `packages/i18n` that mirrors the gem's layout and is
-enrolled in `api:compare` / `test:compare`.
+enrolled in `parity:api` / `parity:test`.
 
 ## Why
 

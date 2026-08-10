@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports `activesupport core_ext/erb/util.rb` as
+`pnpm parity:api` reports `activesupport core_ext/erb/util.rb` as
 0/7 — the whole file is unported at its Rails location. Its expected TS path is
 `core-ext/tse/util.ts` (via `PATH_SEGMENT_ALIASES`' `erb -> tse`), and that file
 does not exist. Five of the seven methods ARE implemented, just elsewhere:
@@ -46,6 +46,6 @@ and it is a port, not a triage, so it was split out here.
 - actionview's `helpers/output-safety-helper.ts` no longer declares `h` /
   `htmlEscapeOnce` / `jsonEscape` of its own; call sites import them from
   `@blazetrails/activesupport`.
-- `pnpm api:compare` shows `core_ext/erb/util.rb` moving off 0/7, and
-  `pnpm api:extra --package actionview` drops the corresponding moved extras.
+- `pnpm parity:api` shows `core_ext/erb/util.rb` moving off 0/7, and
+  `pnpm parity:api:extra --package actionview` drops the corresponding moved extras.
 - No exclusion-file rows added.

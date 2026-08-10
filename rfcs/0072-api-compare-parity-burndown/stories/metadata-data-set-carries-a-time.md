@@ -45,4 +45,4 @@ arm would carry the time fine. Two arms still would not:
 - [ ] The JSON-family arms compare the way Rails' `assert_equal` does — the
       coercion is stated where it is relied on, not worked around by dropping
       the value.
-- [ ] `pnpm test:compare --package activesupport` non-negative.
+- [ ] `pnpm parity:test --package activesupport` non-negative.

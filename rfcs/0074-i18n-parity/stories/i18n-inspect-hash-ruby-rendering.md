@@ -41,5 +41,5 @@ Note `inspectSymbol` (`exceptions.ts:28`) already renders a Symbol as
   "String interpolation can use custom missing interpolation handler" asserts
   the gem's literal expected string rather than routing through `inspect`.
 - Error-message expectations across `exceptions.test.ts` /
-  `backend/exceptions.test.ts` updated to the Ruby rendering; `test:compare
+  `backend/exceptions.test.ts` updated to the Ruby rendering; `parity:test
 --package i18n` non-negative.

@@ -1,5 +1,5 @@
 ---
-title: "Make Backend::Fallbacks mixin members visible to api:compare"
+title: "Make Backend::Fallbacks mixin members visible to parity:api"
 status: done
 updated: 2026-08-04
 rfc: "0074-i18n-parity"
@@ -15,7 +15,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Make `Backend::Fallbacks`' mixin members visible to `api:compare`
+# Make `Backend::Fallbacks`' mixin members visible to `parity:api`
 
 ## Context
 
@@ -27,7 +27,7 @@ closed-reason: null
   `include()` / `Included<>` from `@blazetrails/activesupport` copies members
   onto a prototype with no `super` to call.
 - The extractor does not see members declared on the class expression inside
-  that factory. `pnpm api:compare --package i18n --missing` reports
+  that factory. `pnpm parity:api --package i18n --missing` reports
   `backend/fallbacks.rb 4/5` with `- on_fallback → onFallback` missing;
   `translate`, `resolveEntry` and `exists` only score because they resolve by
   bare short name against `backend/base.ts`. `on_fallback` has no `Base`

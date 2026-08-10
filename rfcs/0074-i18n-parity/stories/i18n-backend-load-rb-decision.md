@@ -45,9 +45,9 @@ Rails source ported: `vendor/i18n/lib/i18n/backend/base.rb:236-262`
 
 Both signals are currently short:
 
-- `pnpm api:compare` — `backend/simple.rb 27/28`, `MISS load_rb → loadRb`
+- `pnpm parity:api` — `backend/simple.rb 27/28`, `MISS load_rb → loadRb`
   (the member resolves through `include Base`).
-- `pnpm test:compare` — `backend/simple_test.rb 28/31`, missing the two
+- `pnpm parity:test` — `backend/simple_test.rb 28/31`, missing the two
   `.rb` cases above.
 
 The constraint that shapes the design: `loadFile`
@@ -124,8 +124,8 @@ choices that supersede what this story originally specified. The amendments:
   name in the entire vendored corpus (Rails, i18n, rack, globalid,
   did_you_mean) with a standalone `rb` token, against 8 for `erb`.
 
-- **Converged signal:** `pnpm api:compare` shows `backend/simple.rb 28/28` with
-  `load_rb` matched to `loadJs` (i18n 183/184 overall), and `pnpm test:compare`
+- **Converged signal:** `pnpm parity:api` shows `backend/simple.rb 28/28` with
+  `load_rb` matched to `loadJs` (i18n 183/184 overall), and `pnpm parity:test`
   shows `backend/simple_test.rb 30/31`.
 
 The one piece #6017 left undone — and all that PR #6043 carries — is that its

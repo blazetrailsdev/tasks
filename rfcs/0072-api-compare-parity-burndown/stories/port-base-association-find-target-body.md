@@ -83,6 +83,6 @@ went stale when the delegate was deleted; the rest remain real.
 - [ ] Base `Association#findTarget` has the branches of association.rb:248-270 in the
       same order, with the Rails locals (`scope`, `sc`, `async`).
 - [ ] No subclass duplicates the strict-loading / statement-cache logic the base owns.
-- [ ] `pnpm api:calls:wide` passes with a strictly smaller `find_target` baseline.
+- [ ] `pnpm parity:api:calls` passes with a strictly smaller `find_target` baseline.
 - [ ] has_one, has_one :through, belongs_to, has_many, has_many :through and
       collection-proxy suites pass; no test renames.

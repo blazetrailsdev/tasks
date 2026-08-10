@@ -27,7 +27,7 @@ their Rails-layout files and renamed them to `findTarget`:
 - `packages/activerecord/src/associations/has-one-through-association.ts`
   (Rails `find_target` inherited from `SingularAssociation`)
 
-That clears the `api:compare` extra, but a fidelity gap remains: in Rails
+That clears the `parity:api` extra, but a fidelity gap remains: in Rails
 `find_target` is a **private instance method** on the association object,
 reading `owner` / `reflection` / `scope` off `this`. In trails it is still a
 module-level function with the engine signature
@@ -46,6 +46,6 @@ out of the relocation PR.
   and reflection off `this` rather than taking them as parameters.
 - The `associations.ts` dispatch arms obtain the association instance and call
   the method; the module-level function exports are gone.
-- `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`
   shows no new novel entries in either file.
 - Through-association tests pass with no test renames.

@@ -28,7 +28,7 @@ CHANGE the novel totals rather than being net-zero:
 - `packages/activerecord/src/connection-adapters/abstract/temporal-wire.ts` — 10 novel
 - `packages/activerecord/src/connection-adapters/abstract/sql-datetime.ts` — 12 novel
 
-Counts from `pnpm api:extra --package activerecord` at the time of #5950.
+Counts from `pnpm parity:api:extra --package activerecord` at the time of #5950.
 
 This is explicitly NOT "go tag these 33 names". The tag is a claim that has to
 be true, and the allowlist is not a place to park deferred work. For each file
@@ -53,7 +53,7 @@ the conclusion.
 - No name is tagged `CONVERGEABLE` as a way of deferring — if it is
   convergeable, either converge it here or register the convergence as its own
   story and leave the name counted.
-- `pnpm api:extra --package activerecord` novel total moves by exactly the
+- `pnpm parity:api:extra --package activerecord` novel total moves by exactly the
   number of names resolved by answer 1; the report is re-run and the new totals
   are stated in the PR body.
 - `pnpm vitest run scripts/api-compare/extra-surface.test.ts` passes.

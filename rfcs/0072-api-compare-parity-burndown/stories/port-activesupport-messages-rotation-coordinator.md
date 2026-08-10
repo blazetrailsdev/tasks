@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`ActiveSupport::Messages::RotationCoordinator` is unported. `api:compare`
+`ActiveSupport::Messages::RotationCoordinator` is unported. `parity:api`
 reports `messages/rotation_coordinator.rb` at 0/11 methods with no
 `packages/activesupport/src/messages/rotation-coordinator.ts`.
 
@@ -46,5 +46,5 @@ stories can include it.
 - `rotation_coordinator_tests.rb`'s shared cases ported as a shared TS module
   the consumer test files can include, following the
   `messages/message-rotator-tests.ts` precedent.
-- `api:compare` for `messages/rotation_coordinator.rb` improves from 0/11.
+- `parity:api` for `messages/rotation_coordinator.rb` improves from 0/11.
 - `pnpm typecheck` and `pnpm lint` pass.

@@ -39,5 +39,5 @@ one of these maps is trails-only surface introduced by the camelCase convention.
   `@blazetrails/activesupport`, applied at the lookup boundary), and document it
   where the other I18n-consuming ports will find it.
 - Converge all three sites onto it; no per-file key map survives.
-- No new public surface (`pnpm api:extra` non-negative for `activesupport` and
+- No new public surface (`pnpm parity:api:extra` non-negative for `activesupport` and
   `actionview`).

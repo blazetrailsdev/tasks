@@ -20,7 +20,7 @@ closed-reason: null
 `JoinDependency#aliasedRow`
 (`packages/activerecord/src/associations/join-dependency.ts`) is public
 test-support code living on a production class. Rails has no counterpart;
-`pnpm api:extra` counts it among the six novel names in that file
+`pnpm parity:api:extra` counts it among the six novel names in that file
 (`aliasedRow`, `columnsForNode`, `instantiateFromRows`, `nodes`, `selectArel`,
 `validateEagerLoadSpec`).
 
@@ -50,7 +50,7 @@ bearing for production paths; this story is scoped to `aliasedRow` only.
 - If it moves, place it somewhere both compare populations already exclude;
   check `scripts/api-compare/conventions.ts` and the
   `src/support/**` precedent before choosing the location.
-- `pnpm api:extra` reports one fewer novel name in
+- `pnpm parity:api:extra` reports one fewer novel name in
   `associations/join-dependency.ts` (or the name is accounted for by a tag).
 - The hydration tests keep asserting against live aliases — no test regresses
   to hardcoded `t{n}_r{n}` strings or column offsets.

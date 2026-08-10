@@ -33,7 +33,7 @@ inline — `Hash.asJson({ ...value }, options)` — with a JSDoc noting the stan
 `core-ext/object/instance-variables.test.ts` exists but has no
 `core-ext/object/instance-variables.ts` next to it, so the whole Ruby file
 (`instance_values`, `instance_variable_names`) is missing, not just this one
-method. `pnpm api:compare --package activesupport` reads
+method. `pnpm parity:api --package activesupport` reads
 `core_ext/object/instance_variables.rb` at 0.
 
 ## Converged shape
@@ -57,8 +57,8 @@ equivalence belongs in the new file's JSDoc, not repeated at each call site.
       `instance_variables.rb:14-18` and `:24-26`.
 - [ ] `core-ext/object/json.ts`'s `Object.asJson` calls it instead of spreading,
       and its stand-in JSDoc note is deleted.
-- [ ] `pnpm api:compare --package activesupport` shows
+- [ ] `pnpm parity:api --package activesupport` shows
       `core_ext/object/instance_variables.rb` above 0 and is non-negative
-      overall; `pnpm api:extra --package activesupport` clean.
+      overall; `pnpm parity:api:extra --package activesupport` clean.
 - [ ] `core-ext/object/instance-variables.test.ts` and
       `json/encoding.test.ts` green; no test renamed.

@@ -55,6 +55,6 @@ Known obstacles found while reconciling:
   genuine Rails overrides.
 - The six `signed-global-id.ts` names carry no `@noRailsEquivalent` tag
   (`scripts/api-compare/extra-surface.ts:44-47`) — they are converged, not tagged.
-- `pnpm api:extra --package globalid` still reports 0 unreconciled entries and
-  `pnpm api:compare` globalid parity stays 100%.
+- `pnpm parity:api:extra --package globalid` still reports 0 unreconciled entries and
+  `pnpm parity:api` globalid parity stays 100%.
 - `packages/globalid/src/*.test.ts` pass; test names unchanged.

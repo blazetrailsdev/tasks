@@ -69,14 +69,14 @@ dispatch:
 
 Guard rails:
 
-- No new public TS surface — `pnpm api:extra --package i18n` must not gain novel
+- No new public TS surface — `pnpm parity:api:extra --package i18n` must not gain novel
   names. This is tests only.
 - Reset registry state between tests so a registered `bundled/*` entry cannot
   leak into a sibling test (the file's existing `beforeEach` resets config and
   the backend; check whether the module registry needs the same and add it if
   not — a leaking registry is the shape behind
   [[project_preloadertest_taggings_registry_leak]]).
-- `pnpm test:compare` must not move: these are trails-only tests in a
+- `pnpm parity:test` must not move: these are trails-only tests in a
   trails-only file and must not be picked up as Rails-matched.
 
 ## Out of scope

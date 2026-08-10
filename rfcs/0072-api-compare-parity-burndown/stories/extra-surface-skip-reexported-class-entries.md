@@ -21,7 +21,7 @@ Found by the `extra-surface-activerecord-top-files-inventory` spike
 (2026-07-25). `packages/activerecord/src/connection-adapters.ts` is a
 180-line module that is mostly a re-export barrel (lines 148-160:
 `export { AbstractAdapter } from "./connection-adapters/abstract-adapter.js";`
-and 12 siblings). `pnpm api:extra --package activerecord` charges it with
+and 12 siblings). `pnpm parity:api:extra --package activerecord` charges it with
 **616 extra names (48 novel + 568 moved) — by far the largest single-file
 figure in the package, and 527 of those 616 are pure artifact.**
 
@@ -67,7 +67,7 @@ top-N ranking that RFC 0072 uses to schedule work.
 - Fixture-backed test in `scripts/api-compare/extract-ts-api.test.ts` (or
   `extra-surface.test.ts`) covering a declaring file plus a barrel that
   re-exports it, asserting the class is attributed once.
-- `pnpm api:compare && pnpm api:extra --package activerecord`:
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord`:
   `connection-adapters.ts` drops from 616 extras to roughly 89 (48→11 novel,
   568→78 moved); record exact numbers and the new package totals in the PR
   body.

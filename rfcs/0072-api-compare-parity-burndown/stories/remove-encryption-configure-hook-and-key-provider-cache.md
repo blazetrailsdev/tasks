@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activerecord/src/encryption/configurable.ts:99` defines
 `Configurable.onConfigure(hook)`, a hook registry Rails does not have —
-`pnpm api:extra --package activerecord` reports it as novel surface on that
+`pnpm parity:api:extra --package activerecord` reports it as novel surface on that
 file. Its only consumer is `default-key-provider-cache.ts`, itself a trails
 invention: a module-level single-entry memo of the default
 `DerivedSecretKeyProvider`, cleared by the hook whenever `configure` runs.
@@ -51,7 +51,7 @@ exists only because of the invented cache.
 
 ## Acceptance criteria
 
-- [ ] `onConfigure` no longer appears in `pnpm api:extra --package activerecord`
+- [ ] `onConfigure` no longer appears in `pnpm parity:api:extra --package activerecord`
       for `encryption/configurable.ts`.
 - [ ] No module in `encryption/` registers a configure hook.
 - [ ] Encryption suites green on all three lanes, and the encryption import

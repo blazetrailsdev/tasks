@@ -40,5 +40,5 @@ closed-reason: null
   `vendor/i18n/test/backend/fallbacks_test.rb:303-348`.
 - The "Not ported" note in that file's header is narrowed to the two
   `Thread.new` cases (JS has no analogue).
-- `pnpm test:compare` gap on `backend/fallbacks_test.rb ->
+- `pnpm parity:test` gap on `backend/fallbacks_test.rb ->
 backend/fallbacks.test.ts` drops to the two thread cases.

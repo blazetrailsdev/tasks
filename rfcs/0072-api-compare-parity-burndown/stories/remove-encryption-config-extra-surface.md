@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activerecord` reports five novel names in
+`pnpm parity:api:extra --package activerecord` reports five novel names in
 `packages/activerecord/src/encryption/config.ts` — public surface with no
 counterpart in `vendor/rails/activerecord/lib/active_record/encryption/config.rb`:
 
@@ -53,8 +53,8 @@ they are the file's whole remaining extra-surface count.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra --package activerecord` reports 0 novel names for
+- [ ] `pnpm parity:api:extra --package activerecord` reports 0 novel names for
       `encryption/config.ts` (or each survivor carries a reviewed
       `@noRailsEquivalent <reason>`).
-- [ ] `pnpm api:compare` keeps `encryption/config.rb` at 100%.
+- [ ] `pnpm parity:api` keeps `encryption/config.rb` at 100%.
 - [ ] Encryption suites green on all three lanes.

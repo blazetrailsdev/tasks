@@ -54,14 +54,14 @@ seeder), which is a fidelity gain beyond the surface-count win.
   `setDataSourceExists`, leaving no `@noRailsEquivalent` tag on either
   (`scripts/api-compare/extra-surface.ts:44-47`).
   Do NOT rename or reword any test name in the process — the ported names
-  match Rails and are how `test:compare` matches them.
+  match Rails and are how `parity:test` matches them.
 - If some test genuinely cannot (e.g. it must assert on a cold cache with
   no connection), keep the writer it needs, and record that specific test
   as the reason at the declaration.
 - `reconcilePrimaryKeyFlags` must keep its order-independence guarantee:
   whichever of the columns/primary-key warms lands second reconciles the
   flags. If `setPrimaryKeys` goes, confirm `add()` still provides that.
-- `pnpm api:extra --package activerecord` must not regress
+- `pnpm parity:api:extra --package activerecord` must not regress
   `connection-adapters/schema-cache.ts` above 0 novel.
 - `pnpm vitest run packages/activerecord/src/connection-adapters/schema-cache.test.ts`
   passes.

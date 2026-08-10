@@ -70,5 +70,5 @@ class method resetting all four slots — including `countryZonesMemo`, whose
       zones map and the country-zones memo.
 - [ ] `zonesMap` is extracted at the Rails name with the `@zones_map` memo, and
       `all()` reads through it.
-- [ ] `pnpm api:compare` / `pnpm api:extra` deltas are non-negative;
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra` deltas are non-negative;
       `values/time-zone.ts`'s extras do not grow.

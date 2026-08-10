@@ -72,7 +72,7 @@ first or together.
 - [ ] `singular-association.ts` exports no free `findTarget`; the body lives in
       `SingularAssociation#findTarget`.
 - [ ] No caller passes an owner/name/options triple for a singular load.
-- [ ] `pnpm api:extra --package activerecord` does not grow;
+- [ ] `pnpm parity:api:extra --package activerecord` does not grow;
       `singular-association.ts` stays at 0 novel extra surface.
 - [ ] Association / preloader / disable-joins suites pass on SQLite, PostgreSQL
       and MySQL with no test renames.

@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 `packages/activesupport/src/message-encryptor.test.ts` covers none of
-`message_encryptor_test.rb`: `test:compare` reports 0/15 — 2 bodyless
+`message_encryptor_test.rb`: `parity:test` reports 0/15 — 2 bodyless
 `it.skip` placeholders and 13 cases with no placeholder at all.
 
 Rails source: `vendor/rails/activesupport/test/message_encryptor_test.rb`.
@@ -46,5 +46,5 @@ equivalent before inventing one — the same question is open in
 - The 2 placeholders replaced with real tests and the 13 unported cases added,
   names matching Rails verbatim, minus any AEAD-gated subset explicitly
   deferred to #5963 in the PR body.
-- `test:compare` for `message_encryptor_test.rb` improves from 0/15.
+- `parity:test` for `message_encryptor_test.rb` improves from 0/15.
 - `pnpm typecheck` and `pnpm lint` pass.

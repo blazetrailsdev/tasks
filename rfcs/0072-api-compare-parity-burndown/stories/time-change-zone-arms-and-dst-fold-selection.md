@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 PR #6190 renamed `time-ext.ts`'s `changeDate` to its Rails name, `change`.
-Matching the Rails name made `api:compare` compare the body against
+Matching the Rails name made `parity:api` compare the body against
 `Time#change` for the first time, which surfaced two calls the TS body does not
 make — a pre-existing divergence that was invisible while the function carried
 an invented name, now baselined as the `change -> local` and
@@ -67,4 +67,4 @@ package.
 - [ ] The `change -> local` and `change -> integer?` rows are DELETED from
       `call-mismatches-exclude/activesupport/time-ext.json` by hand
       (only-shrink; no `--write` reseed).
-- [ ] `pnpm api:calls` green.
+- [ ] `pnpm parity:api:calls` green.

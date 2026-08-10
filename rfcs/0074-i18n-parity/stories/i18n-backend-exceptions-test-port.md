@@ -19,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package i18n` reports `backend/exceptions_test.rb` at 0/4 after
+`parity:test --package i18n` reports `backend/exceptions_test.rb` at 0/4 after
 the test-compare enrollment (#6002). The four cases assert the _message_ a
 `MissingTranslation` / `MissingTranslationData` carries when raised from a real
 lookup, i.e. that the scope and key are threaded into the message:
@@ -43,4 +43,4 @@ case measured as missing.
 - `packages/i18n/src/backend/exceptions.test.ts` carries the cases under their
   verbatim Rails names.
 - Nothing added to `scripts/api-compare/unported-files.ts`; unportable cases
-  stay visible as missing in `test:compare`.
+  stay visible as missing in `parity:test`.

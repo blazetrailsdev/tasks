@@ -20,7 +20,7 @@ closed-reason: null
 PR #6060 deleted the stale `backend/key_value.rb` and `backend/flatten.rb`
 deferrals from `scripts/api-compare/unported-files.ts` (both are ported:
 `packages/i18n/src/backend/key-value.ts`, `.../flatten.ts`). That took i18n
-`api:compare` from `130/136 methods (95.6%) | files: 13/13 | inheritance: 6/6`
+`parity:api` from `130/136 methods (95.6%) | files: 13/13 | inheritance: 6/6`
 to `177/186 methods (95.2%) | files: 15/15 | inheritance: 6/7` — measuring 47
 more methods and 2 more files, and surfacing the gaps below, which were
 previously hidden by the whole-file deferral.
@@ -53,5 +53,5 @@ that set byte-identical.
   library shim is not a gap — not silenced by an inert register row.
 - The 3 newly-visible i18n missing methods are ported or carry a reviewed
   justification at the call site.
-- i18n `api:compare` matched-method and matched-file counts do not regress
+- i18n `parity:api` matched-method and matched-file counts do not regress
   from `177/186` and `15/15`.

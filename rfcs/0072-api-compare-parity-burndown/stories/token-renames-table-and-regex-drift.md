@@ -46,7 +46,7 @@ kept resolving to `loadRb` and reporting MISS against the ported `loadJs`, while
 published a Token renames table asserting `rb → js` was in effect.
 
 Nothing caught it. The generated doc reads from the table, so the doc was
-_correct about intent and wrong about behavior_, and the api:compare totals were
+_correct about intent and wrong about behavior_, and the parity:api totals were
 the only witness. #6043 fixed the one instance by widening the alternation, but
 left the drift class open: the next entry added to `TOKEN_RENAMES` without a
 matching regex edit fails exactly the same way, and the generated doc will again
@@ -69,12 +69,12 @@ advertise it as live.
   `snakeToCamel("load_" + key)` yields the camelized mapping). This is the guard
   that would have caught the `rb` drift; it must fail if an entry is added to the
   table and the substitution does not honor it.
-- `pnpm api:compare` totals are unchanged for every package by this refactor —
+- `pnpm parity:api` totals are unchanged for every package by this refactor —
   it is behavior-preserving today. Diff the full per-package totals table before
   and after with a fresh `pnpm build` on both sides; `rb` is currently the only
   standalone-`rb` name in the vendored corpus and `erb` covers 8 names, so any
   movement means the ordering or boundary handling regressed.
-- `pnpm api:conventions` regenerates `docs/ruby-ts-conventions.md` with no diff.
+- `pnpm parity:api:conventions` regenerates `docs/ruby-ts-conventions.md` with no diff.
 
 ## Out of scope
 

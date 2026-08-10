@@ -55,4 +55,4 @@ expressible.
 - [ ] Existing callers (`beginningOfDay`, `endOfDay`, `endOfHour`,
       `endOfMinute`, `advance`) stay green — they pass
       `usec: 999999999 / 1000`, which is below the range guard.
-- [ ] `pnpm api:calls` green.
+- [ ] `pnpm parity:api:calls` green.

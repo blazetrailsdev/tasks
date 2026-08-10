@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "out of scope: RFC 0072 is a data-layer api:compare burndown; actionpack work does not belong here. Re-file under an actionpack-scoped RFC if wanted."
+closed-reason: "out of scope: RFC 0072 is a data-layer parity:api burndown; actionpack work does not belong here. Re-file under an actionpack-scoped RFC if wanted."
 ---
 
 ## Context
@@ -32,7 +32,7 @@ export const CacheConfig = { strictFreshness: false };
 (`packages/actionpack/src/action-dispatch/http/cache.ts:27`), read by
 `fresh()` as `CacheConfig.strictFreshness`. `CacheConfig` has no Rails
 counterpart, and the accessor pair is unported: after PR #5404 converged the
-`Cache::Response` writers, `api:compare --package actiondispatch` scores
+`Cache::Response` writers, `parity:api --package actiondispatch` scores
 `http/cache.rb` at 26/28 (93%) with `strict_freshness` and
 `strict_freshness=` the ONLY two remaining misses.
 
@@ -48,5 +48,5 @@ read by `useAcceptHeader()`.
   `mattr_accessor :ignore_accept_header`.
 - `CacheConfig` is DELETED, not left as a parallel spelling; its callers
   (`fresh()` plus any test setup) read the new accessor.
-- `http/cache.rb` reaches 28/28 in `api:compare --package actiondispatch`.
+- `http/cache.rb` reaches 28/28 in `parity:api --package actiondispatch`.
 - No new extra-surface allowlist entries or `@noRailsEquivalent` tags.

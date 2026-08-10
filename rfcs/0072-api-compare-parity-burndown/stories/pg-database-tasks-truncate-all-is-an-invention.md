@@ -62,5 +62,5 @@ the file uses them.
       branch remains in the file.
 - [ ] Table discovery goes through the connection's data-sources reader, not an
       inline `pg_tables` query.
-- [ ] `pnpm api:extra --package activerecord` drops the corresponding novel names.
+- [ ] `pnpm parity:api:extra --package activerecord` drops the corresponding novel names.
 - [ ] PG lane green.

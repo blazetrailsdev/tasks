@@ -41,4 +41,4 @@ ported `compare()` match, after which `gte` / `lt` either derive from it as
   `operator-order-spelling.ts`, next to the existing `ActiveModel::Name` entry.
 - Move every `gte` / `lt` caller onto `compare`, then delete both members and
   the `@noRailsEquivalent` tag.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

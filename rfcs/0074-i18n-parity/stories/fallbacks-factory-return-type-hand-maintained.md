@@ -28,7 +28,7 @@ defines, with no declaration to keep in step.
 
 The interface lists ONE member (`extractNonSymbolDefaultBang`), so the factory's
 return type silently hides everything else the class declares. That is what made
-`on_fallback` (`fallbacks.rb:113`) invisible to `api:compare` until PR #6093
+`on_fallback` (`fallbacks.rb:113`) invisible to `parity:api` until PR #6093
 taught `extract-ts-api.ts` to read the returned class declaration directly
 (`factoryClassMembers`). The extractor no longer depends on the interface — but
 every _caller_ still does, so a member added to the class is still absent from
@@ -49,5 +49,5 @@ TS type says too, with nothing to maintain by hand.
 - A caller of `Fallbacks(Simple)` sees `translate`, `exists`, `resolveEntry` and
   `extractNonSymbolDefaultBang` on the instance type, and `onFallback` stays
   `protected` (`fallbacks.rb:111-116`).
-- `pnpm api:compare --package i18n` stays at 217/217; `pnpm api:extra` gains no
+- `pnpm parity:api --package i18n` stays at 217/217; `pnpm parity:api:extra` gains no
   novel name.

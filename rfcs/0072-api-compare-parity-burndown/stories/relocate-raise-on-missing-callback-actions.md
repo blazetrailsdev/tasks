@@ -17,7 +17,7 @@ closed-reason: "out of scope: data layer only (arel/activemodel/activerecord); t
 
 ## Context
 
-`api:compare` reports 2 missing methods for `abstractcontroller` `callbacks.rb`
+`parity:api` reports 2 missing methods for `abstractcontroller` `callbacks.rb`
 (`output/api-comparison.json`, package at 87/102):
 
 - `raise_on_missing_callback_actions`
@@ -30,7 +30,7 @@ declares the slot in `packages/actionpack/src/abstract-controller/base.ts`
 (`static raiseOnMissingCallbackActions: boolean = false`). That single
 misplacement costs twice: the name reads as MISSING on `callbacks.ts` and as
 MOVED extra surface on `base.ts` (one of base.ts's four moved entries in
-`pnpm api:extra`).
+`pnpm parity:api:extra`).
 
 ## Acceptance criteria
 
@@ -39,5 +39,5 @@ MOVED extra surface on `base.ts` (one of base.ts's four moved entries in
   module-mixin pattern.
 - `ActionFilter#isMatch` and every existing reader of the flag keep working;
   existing tests pass unchanged.
-- `api:compare` shows `callbacks.rb` at 11/11 for this pair, and `api:extra`
+- `parity:api` shows `callbacks.rb` at 11/11 for this pair, and `parity:api:extra`
   no longer lists `raiseOnMissingCallbackActions` as moved surface on `base.ts`.

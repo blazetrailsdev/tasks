@@ -55,7 +55,7 @@ because the URL was never resolved into the hash in the first place.
 `PostgreSQLDatabaseTasks` names `this.dbConfig.database` and
 `this.configurationHash[...]` directly. `parseDbUrl`, `UrlParts`,
 `urlParts` and `requireDatabaseName` are all deleted, `publicSchemaConfig`
-collapses to the single `merge`, and `pnpm api:extra` loses four novel names in
+collapses to the single `merge`, and `pnpm parity:api:extra` loses four novel names in
 that file.
 
 Check whether trails' `UrlConfig` already does the merge before assuming the

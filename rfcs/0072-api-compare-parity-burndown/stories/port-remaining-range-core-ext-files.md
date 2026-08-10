@@ -20,7 +20,7 @@ closed-reason: null
 `packages/activesupport/src/range-ext.ts` is a trails-invented flat module: it
 carries `makeRange`, `rangeIncludesValue`, `rangeIncludesStringValue`,
 `rangeToFs`, `rangeStep`, `rangeEach`, `stringSucc`, `overlap`/`overlaps` in one
-file with no Rails counterpart (`pnpm api:extra --package activesupport` reports
+file with no Rails counterpart (`pnpm parity:api:extra --package activesupport` reports
 it as `7 novel, 2 moved [no Rails counterpart]`).
 
 Rails splits the same surface across `core_ext/range/`:
@@ -51,8 +51,8 @@ the string core-ext, not with the range files.
 
 - Each of conversions.rb / each.rb / overlap.rb has a matching TS file under
   `packages/activesupport/src/core-ext/range/`.
-- `pnpm api:compare` gains those files; `pnpm api:extra --package activesupport`
+- `pnpm parity:api` gains those files; `pnpm parity:api:extra --package activesupport`
   shows `range-ext.ts` novel count reduced.
-- Tests stay in `core-ext/range-ext.test.ts` (the file `test:compare` maps to
+- Tests stay in `core-ext/range-ext.test.ts` (the file `parity:test` maps to
   `range_ext_test.rb`) — do NOT split the test file; #6096 measured that a split
   drops ~25 matched tests because compare_range.rb has no Ruby test file.

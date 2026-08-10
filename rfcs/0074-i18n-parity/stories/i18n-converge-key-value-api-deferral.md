@@ -26,13 +26,13 @@ Base`) and `packages/i18n/src/backend/flatten.ts`. Rails source:
 
 Because the manifest still calls them deferred, PR #6060 (story
 `i18n-test-compare-deferred-suite-exclusions`) had to exclude
-`backend/key_value_test.rb` and `api/key_value_test.rb` from `test:compare`
+`backend/key_value_test.rb` and `api/key_value_test.rb` from `parity:test`
 alongside every other deferred backend — dropping 14 already-green matched
 cases. That is the uniform reading of the manifest, but it is debt, not the
 end state.
 
 Measured cost of converging (deleting the `backend/key_value.rb` entry, with
-`API_COMPARE_FORCE=1 pnpm api:compare`):
+`API_COMPARE_FORCE=1 pnpm parity:api`):
 
 - before: `i18n — 130/136 methods (95.6%) | files: 13/13 | inheritance: 6/6`
 - after: `i18n — 161/170 methods (94.7%) | files: 14/14 | inheritance: 6/7`
@@ -55,6 +55,6 @@ added, and that pre-existing failure resolved or left as-is deliberately.
 - The `testFile:` exclusions for `backend/key_value_test.rb` and
   `api/key_value_test.rb` added by #6060 are removed in the same change, so the
   suites count again.
-- `pnpm api:compare` / `pnpm test:compare` i18n matched counts do not regress.
+- `pnpm parity:api` / `pnpm parity:test` i18n matched counts do not regress.
 - The remaining `KeyValue` missing methods and the inheritance mismatch are
   either closed or filed as their own story.

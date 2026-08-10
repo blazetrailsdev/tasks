@@ -17,9 +17,9 @@ closed-reason: null
 
 ## Context
 
-`pnpm test:compare` reports i18n at **216/440 tests (49.1%), 10/38 files** — but
+`pnpm parity:test` reports i18n at **216/440 tests (49.1%), 10/38 files** — but
 most of the 28 ✗ files are suites for backends this RFC declares deferrable and
-already excludes from `api:compare`:
+already excludes from `parity:api`:
 
 ```text
 backend/cascade_test.rb 2/8 · backend/pluralization_test.rb 1/13
@@ -48,6 +48,6 @@ counts every case. The result is an i18n test percentage that can never reach
   `backend/chain_test.rb` (story `i18n-backend-chain`, claimed) and
   `locale/tag/*` (story `i18n-locale-tag-rfc4646`, blocked) stay counted since
   those are being ported.
-- After the change, `pnpm test:compare`'s i18n section lists only suites with a
+- After the change, `pnpm parity:test`'s i18n section lists only suites with a
   ported implementation, and the remaining ✗ rows are genuine gaps.
 - No trails test is renamed to force a match.

@@ -40,7 +40,7 @@ Missing from `packages/actionpack/src/abstract-controller/callbacks.ts`:
 Found while closing `extra-surface-abstractcontroller-apply-mixin-pattern`
 (PR #5332), which moved the six ported macros into `callbacks.ts`.
 
-These are invisible to the "missing" side of `api:compare` because
+These are invisible to the "missing" side of `parity:api` because
 `extract-ruby-api.rb` records no `define_method`-defined names at all — see
 [[ruby-extractor-records-define-method-names]]. So nothing flags this gap
 today and nothing will until that story lands. Filing separately so the port

@@ -40,6 +40,6 @@ sprinkled across `abstract-adapter.ts` class bodies is silently inert today.
   visibility-modifier rule.
 - A unit test in `extract-ts-api.test.ts` covers a public class method tagged
   `@internal`.
-- `pnpm api:extra` totals move only by the newly-recognized members; record
+- `pnpm parity:api:extra` totals move only by the newly-recognized members; record
   the delta in the PR body (build state moves totals, so measure on a fresh
   `pnpm build`).

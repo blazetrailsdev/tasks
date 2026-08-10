@@ -24,7 +24,7 @@ three removal cases from
 (`test_remove_check_constraint`,
 `test_removing_check_constraint_with_if_exists_option`,
 `test_remove_non_existing_check_constraint`), taking the file from 4/25 to 7/25
-matched in `pnpm test:compare`. **18 Rails tests in that file remain unported.**
+matched in `pnpm parity:test`. **18 Rails tests in that file remain unported.**
 
 The scaffolding is already in place and should be reused rather than rebuilt:
 the suite nests `describe("Migration")` >
@@ -53,7 +53,7 @@ Notes for whoever picks this up:
 
 - Port the remaining unported cases from `check_constraint_test.rb`, names
   matching Rails verbatim (prose form), into the existing file.
-- `pnpm test:compare --package activerecord` shows a strictly higher matched
+- `pnpm parity:test --package activerecord` shows a strictly higher matched
   count for `migration/check_constraint_test.rb`; 0 gate mismatches.
 - No new assertion-count / assertion-kind ratchet debt.
 - Split into more than one story if the port exceeds the 500-LOC ceiling.

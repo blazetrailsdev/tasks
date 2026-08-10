@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports exactly one literal mismatch repo-wide, and it is the
+`pnpm parity:api` reports exactly one literal mismatch repo-wide, and it is the
 colon spelling this RFC just adopted:
 
 ```json
@@ -49,4 +49,4 @@ default will add another false row.
   still reports a mismatch when TS spells it bare `"x"`.
 - A unit test covers both directions (`:default` vs `":default"` matches;
   `:default` vs `"default"` mismatches).
-- `pnpm api:compare` reports 0 literal mismatches for i18n.
+- `pnpm parity:api` reports 0 literal mismatches for i18n.

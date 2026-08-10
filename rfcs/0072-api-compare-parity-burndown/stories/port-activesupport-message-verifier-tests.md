@@ -18,9 +18,9 @@ closed-reason: null
 ## Context
 
 `packages/activesupport/src/message-verifier.test.ts` is 11 bodyless `it.skip`
-placeholders — `test:compare` reports `message_verifier_test.rb` at 0/11 with
+placeholders — `parity:test` reports `message_verifier_test.rb` at 0/11 with
 11 skipped, even though `MessageVerifier` itself is fully ported
-(`packages/activesupport/src/message-verifier.ts`, `api:compare`
+(`packages/activesupport/src/message-verifier.ts`, `parity:api`
 `message_verifier.rb` 11/15).
 
 Rails tests to port —

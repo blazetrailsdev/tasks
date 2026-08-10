@@ -71,7 +71,7 @@ premise above does not describe this repo:
 So AR's strategy for "Rails calls Psych here" is: **don't port a parser, call
 `yaml`** — which is also the only shape that can accept the full Psych input
 surface. `packages/i18n/src/yaml.ts` is the sole exception, and it costs the two
-novel names `api:extra --package i18n` reports for a file with no Rails
+novel names `parity:api:extra --package i18n` reports for a file with no Rails
 counterpart (`yaml.ts — 2 novel, 0 moved [no Rails counterpart]`).
 
 Note on wiring: **take `yaml` as a direct dependency of `packages/i18n`; do not
@@ -108,7 +108,7 @@ streams) — that is a large parser trails has already decided not to own.
   (`packages/i18n/src/backend/base.ts:542`) parses through it.
 - `packages/i18n/src/yaml.ts`'s hand-rolled parser is deleted, not kept as a
   fallback; if the file survives it is a re-export in the shape of
-  `packages/activesupport/src/yaml.ts:1`, and `pnpm api:extra --package i18n`
+  `packages/activesupport/src/yaml.ts:1`, and `pnpm parity:api:extra --package i18n`
   loses the two `yaml.ts` novel names.
 - A locale file using anchors/aliases, a block scalar, or `- key: value` loads
   through `loadYml` instead of raising.

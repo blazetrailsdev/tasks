@@ -58,6 +58,6 @@ exactly this, `abstract_adapter.rb:1212`), after which every
       `abstract_adapter.rb:1212` fills it, without re-entering the connect path.
 - [ ] All warm-up calls listed above are deleted; the ported bodies match their
       Rails counterparts call-for-call.
-- [ ] `pnpm api:calls` rows for those methods shrink, not grow.
+- [ ] `pnpm parity:api:calls` rows for those methods shrink, not grow.
 - [ ] All adapter lanes green (the MariaDB lane is the one that catches a
       re-entrant version read; see #6144).

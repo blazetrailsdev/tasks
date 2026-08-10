@@ -53,4 +53,4 @@ should be audited for whether the cluster it latched onto is the barrel.
       rather than being left as missing.
 - [ ] Unit test in `scripts/api-compare/compare.test.ts` alongside the existing
       `selectMisplacedFile` cases.
-- [ ] `pnpm api:calls` green; `pnpm api:compare` delta non-negative.
+- [ ] `pnpm parity:api:calls` green; `pnpm parity:api` delta non-negative.

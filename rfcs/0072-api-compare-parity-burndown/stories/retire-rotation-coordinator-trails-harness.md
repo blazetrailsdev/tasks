@@ -44,5 +44,5 @@ cases against a stand-in class that has no Rails counterpart.
 building` (covers `Symbol#to_s` at rotation_coordinator.rb:82,84) and
   `requires a secret generator` (rotation_coordinator.rb:11); move those to a
   consumer's `.trails.test.ts` rather than dropping them.
-- `test:compare` delta is non-negative and `api:compare` stays 11/11 for
+- `parity:test` delta is non-negative and `parity:api` stays 11/11 for
   `messages/rotation_coordinator.rb`.

@@ -40,5 +40,5 @@ closed-reason: null
   `NotImplementedError`, matching `base.rb:24-26` and `:97-99` and the shape
   `lookup` already has.
 - `Simple`, `Chain` and `Fallbacks` keep their overrides; nothing else changes.
-- `pnpm typecheck`, `pnpm vitest run packages/i18n` and `pnpm api:extra
+- `pnpm typecheck`, `pnpm vitest run packages/i18n` and `pnpm parity:api:extra
 --package i18n` are unchanged.

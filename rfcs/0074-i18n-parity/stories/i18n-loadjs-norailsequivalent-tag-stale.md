@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package i18n` reports (on `origin/main`, independent of any
+`pnpm parity:api:extra --package i18n` reports (on `origin/main`, independent of any
 current work):
 
 ```text
@@ -36,5 +36,5 @@ Rails anchor: `i18n` gem `lib/i18n/backend/base.rb:254-257` (`load_rb` —
 
 ## Acceptance criteria
 
-- `pnpm api:extra --package i18n` reports no STALE `@noRailsEquivalent` tags.
+- `pnpm parity:api:extra --package i18n` reports no STALE `@noRailsEquivalent` tags.
 - i18n's novel count does not increase.

@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activesupport` reports
+`pnpm parity:api:extra --package activesupport` reports
 `time-zone-config.ts — 6 novel, 6 moved [no Rails counterpart]`: the file map
 points no `.rb` at it, so its whole surface is scored against an empty allowed
 set. It is in fact the port of
@@ -42,8 +42,8 @@ visible extras.
 
 ## Acceptance criteria
 
-- [ ] `time-zone-config.ts` maps onto `core_ext/time/zones.rb`; api:extra no
+- [ ] `time-zone-config.ts` maps onto `core_ext/time/zones.rb`; parity:api:extra no
       longer marks it `[no Rails counterpart]`.
 - [ ] The extras it still reports are genuine, and the moved names are
       re-scored against the real allowed set.
-- [ ] `pnpm api:compare` / `pnpm api:extra` deltas are non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra` deltas are non-negative.

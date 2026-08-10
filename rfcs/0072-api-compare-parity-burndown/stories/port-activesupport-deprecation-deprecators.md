@@ -42,5 +42,5 @@ plus `silence`, method for method against `deprecators.rb:1-60`. Then delete the
 
 ## Acceptance criteria
 
-- [ ] `deprecation/deprecators.rb` matches at 10/10 in `pnpm api:compare`.
+- [ ] `deprecation/deprecators.rb` matches at 10/10 in `pnpm parity:api`.
 - [ ] The `NAME_COLLISION_CLUSTERS` row is deleted.

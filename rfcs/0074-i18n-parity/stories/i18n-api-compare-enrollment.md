@@ -1,5 +1,5 @@
 ---
-title: "Enroll i18n in api:compare"
+title: "Enroll i18n in parity:api"
 status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
@@ -15,7 +15,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Enroll i18n in api:compare (flip compareApi)
+# Enroll i18n in parity:api (flip compareApi)
 
 ## Context
 
@@ -37,7 +37,7 @@ wave 6 (#1589). Depends on the facade story.
 - `compareApi: true` (i.e. flag removed) for i18n in `vendor/sources.ts`;
   `vendor/sources.test.ts` exclusion assertions updated to enrollment
   assertions.
-- `pnpm api:compare` runs clean with an i18n section; every unported file is
+- `pnpm parity:api` runs clean with an i18n section; every unported file is
   either ported or excluded with a reason — no silent gaps.
 - Method/file parity number for the ported core (config, exceptions, backend
   base+simple, facade, interpolate, utils) reported and recorded in the PR.

@@ -62,5 +62,5 @@ converged shape is in the file already.
 - Cases in `packages/i18n/src/date.trails.test.ts` covering the apostrophe
   year (`"'01-02-03"`, `"'01.02.03"`, `"'01/02/03"`) and the `NUMBER` boundary,
   each failing on the current patterns.
-- No regression in `date.trails.test.ts`; `pnpm api:calls` / `api:calls:wide`
+- No regression in `date.trails.test.ts`; `pnpm parity:api:calls` / `parity:api:calls`
   stay green.

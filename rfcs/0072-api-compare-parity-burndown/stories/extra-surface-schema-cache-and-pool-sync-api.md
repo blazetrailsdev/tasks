@@ -81,7 +81,7 @@ single-caller wrappers should be removed instead.
   caller is and why it cannot await.
 - Sequence after the `@internal`-on-fileFunctions and re-export
   double-counting tooling fixes so the list is not inflated; re-run
-  `pnpm api:extra --package activerecord --json` first and work from the
+  `pnpm parity:api:extra --package activerecord --json` first and work from the
   refreshed list.
 - `pnpm vitest run packages/activerecord/src/connection-adapters/schema-cache.test.ts`
   and the connection-pool test files pass; no test renames.

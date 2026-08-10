@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm test:compare --missing` reports
+`pnpm parity:test --missing` reports
 `backend/transliterator_test.rb -> backend/transliterator.test.ts 12/13`, one
 case short:
 
@@ -43,5 +43,5 @@ test-compare mechanism with that reason.
   transliterator raises for the JS analogue of invalid UTF-8, or it is excluded
   through the existing mechanism with a one-line reason naming the UTF-16 fact.
 - No rename of the existing trails transliterator tests.
-- `pnpm test:compare` shows `backend/transliterator_test.rb` with no remaining
+- `pnpm parity:test` shows `backend/transliterator_test.rb` with no remaining
   un-excluded gap.

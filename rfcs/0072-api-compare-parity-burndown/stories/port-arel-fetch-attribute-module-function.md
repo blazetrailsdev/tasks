@@ -33,7 +33,7 @@ end
 file-local `fetchAttribute` (renamed from `fetchAttributeNode` in PR #5340 so
 the wide call-set check matches) plus a near-duplicate `extractAttribute`.
 
-The rename made the api:compare wide call check pass, but the underlying arel
+The rename made the parity:api wide call check pass, but the underlying arel
 surface is still missing, and the duplicate local helpers are a smell — Rails
 has exactly one `Arel.fetch_attribute` plus `WhereClause#extract_attribute`.
 
@@ -44,4 +44,4 @@ has exactly one `Arel.fetch_attribute` plus `WhereClause#extract_attribute`.
 - `where-clause.ts`'s file-local `fetchAttribute` is deleted in favour of the
   arel export; `extractAttribute` is kept only if it still corresponds to
   Rails' distinct `extract_attribute` private method.
-- api:compare extra-surface and wide-call gates stay green.
+- parity:api extra-surface and wide-call gates stay green.

@@ -1,5 +1,5 @@
 ---
-title: "api:extra scores a synthesized container as novel when the Ruby module name differs from its filename"
+title: "parity:api:extra scores a synthesized container as novel when the Ruby module name differs from its filename"
 status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
@@ -26,7 +26,7 @@ that container is `CompareRange`, but the Ruby module is
 — the file is `compare_range.rb` while the module inside it is
 `CompareWithRange`.
 
-Result: `pnpm api:extra --package activesupport` scores `compare-range.ts` as
+Result: `pnpm parity:api:extra --package activesupport` scores `compare-range.ts` as
 `1 novel` for a name nobody wrote, purely because Rails' filename and module
 name differ. The methods themselves match (`isInclude` via `rubyMethodToTs`,
 `caseEquals` via the `"===" -> ["caseEquals"]` entry #6096 added to

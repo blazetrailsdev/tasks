@@ -26,7 +26,7 @@ Two deviations left standing by #6144, both in the pool/adapter version surface.
    Rails has no MySQL override — `abstract_adapter.rb:854-856` answers whatever
    `get_database_version` returned, and `abstract_mysql_adapter.rb:86-90` makes
    that a `Version`. The override is pure TS scaffolding: a member Rails does
-   not have, that `api:extra` counts.
+   not have, that `parity:api:extra` counts.
 
 2. `PoolConfig#serverVersion`
    (`packages/activerecord/src/connection-adapters/pool-config.ts`) is a getter
@@ -54,6 +54,6 @@ Two deviations left standing by #6144, both in the pool/adapter version surface.
       read a `Version` without a cast at the call sites.
 - [ ] `PoolConfig#serverVersion` is a method, and its writer keeps the Rails
       name.
-- [ ] `pnpm api:extra --package activerecord` loses both names; no new
+- [ ] `pnpm parity:api:extra --package activerecord` loses both names; no new
       `@noRailsEquivalent` tag is added in their place.
 - [ ] All adapter lanes green.

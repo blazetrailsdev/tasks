@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Already resolved on main: pnpm api:extra reports '102 tag(s), 102 matched' (+97 inherited) with 0 unclassified — no member carries both @internal and @noRailsEquivalent (verified by a JSDoc-block scan over packages/*/src). Nothing left to build."
+closed-reason: "Already resolved on main: pnpm parity:api:extra reports '102 tag(s), 102 matched' (+97 inherited) with 0 unclassified — no member carries both @internal and @noRailsEquivalent (verified by a JSDoc-block scan over packages/*/src). Nothing left to build."
 ---
 
 ## Context
@@ -22,7 +22,7 @@ PR #5964 made `extract-ts-api.ts` honor `@internal` JSDoc on class members
 member from the compared surface before its `@noRailsEquivalent` tag can
 match, so any member carrying BOTH tags now leaves a dead tag behind.
 
-`pnpm api:extra` reports the drop directly: the tag line moved from
+`pnpm parity:api:extra` reports the drop directly: the tag line moved from
 `99 tag(s), 99 matched` to `99 tag(s), 87 matched` on that merge. Twelve
 written `@noRailsEquivalent` tags are now inert — they justify surface that is
 no longer scored.
@@ -42,7 +42,7 @@ declarations whose JSDoc carries both tags.
 - Every member carrying both `@internal` and `@noRailsEquivalent` is resolved
   to exactly one of the two markers, with the choice justified at the call
   site.
-- `pnpm api:extra` reports `N tag(s), N matched` again (no unmatched written
+- `pnpm parity:api:extra` reports `N tag(s), N matched` again (no unmatched written
   tags).
 - Record the extra-surface total delta in the PR body, measured on a fresh
   `pnpm build`.

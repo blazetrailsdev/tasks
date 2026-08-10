@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports i18n `arity: 74/76`, and both mismatches are the same
+`pnpm parity:api` reports i18n `arity: 74/76`, and both mismatches are the same
 member:
 
 ```json
@@ -56,5 +56,5 @@ for). The JSDoc line number is also stale (`base.rb:251` → `:272`).
 
 - `loadYaml` is a real method delegating to `this.loadYml(filename)` with the
   Rails parameter name, so a subclass override of `loadYml` is honoured.
-- `pnpm api:compare` reports i18n `arity: 76/76`.
+- `pnpm parity:api` reports i18n `arity: 76/76`.
 - The JSDoc cites `base.rb:272`.

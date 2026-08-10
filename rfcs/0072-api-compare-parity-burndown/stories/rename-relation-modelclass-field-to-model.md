@@ -63,7 +63,7 @@ story is in flight.
 - External readers of the private field in `test-helpers/models/**` are
   rewritten to the public `model` getter instead of the renamed private field,
   matching how Rails scope bodies reference `klass` / `model`.
-- No behavior change: `pnpm typecheck` clean and the AR suite green; `api:compare`
-  and `test:compare` deltas non-negative.
+- No behavior change: `pnpm typecheck` clean and the AR suite green; `parity:api`
+  and `parity:test` deltas non-negative.
 - PR body notes that this is the single-mechanical-rename exception to the
   no-fan-out rule.

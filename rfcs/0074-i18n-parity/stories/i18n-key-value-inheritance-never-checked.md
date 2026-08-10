@@ -60,6 +60,6 @@ Then skip `RUBY_ONLY_CLASSES` entries in `primaryClassPerFile` selection too, so
 ## Acceptance criteria
 
 - `I18n::Backend::KeyValue` is inheritance-checked and matches.
-- i18n `api:compare` matched-method count does not regress from `177/184`, and
+- i18n `parity:api` matched-method count does not regress from `177/184`, and
   `SubtreeProxy`'s methods stay measured.
 - i18n inheritance stays at 100%.

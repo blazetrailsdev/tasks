@@ -30,7 +30,7 @@ Rails generates twelve `*_action` macros in
 (`beforeAction`, `afterAction`, `aroundAction`, `skipBeforeAction`,
 `skipAfterAction`, `skipAroundAction`). The six `prepend_`/`append_` macros are
 genuinely missing public surface, not a tooling artifact — they do not show in
-`api:compare` today only because the Ruby extractor records literal `def`s and
+`parity:api` today only because the Ruby extractor records literal `def`s and
 skips `define_method` (see the extractor story in this RFC).
 
 `prepend_*_action` passes `options.merge(prepend: true)` to `set_callback`;

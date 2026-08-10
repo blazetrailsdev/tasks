@@ -40,4 +40,4 @@ closed-reason: null
   `i18n/test/locale/tag/rfc4646_test.rb` ported alongside (test names
   verbatim).
 - Its `scripts/api-compare/unported-files.ts` entry is deleted, and
-  `pnpm api:compare` counts the file for `packages/i18n`.
+  `pnpm parity:api` counts the file for `packages/i18n`.

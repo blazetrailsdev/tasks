@@ -78,6 +78,6 @@ change and must not ride along with a surface-naming PR.
   scope it as its own follow-up story with the 7 declarations + 72 call sites
   enumerated; if no, replace `activeAsync`'s PERMANENT tag reason with the
   recorded decision.
-- `pnpm api:extra --package activerecord` reports no new novel surface or STALE
+- `pnpm parity:api:extra --package activerecord` reports no new novel surface or STALE
   tags.
 - MySQL lane green (needs a running server; CI covers it).

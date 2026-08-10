@@ -59,4 +59,4 @@ this should be a small wrap plus the ratchet-entry deletion.
       verbatim name — do NOT invent one).
 - [ ] The `replace` / `skip_strict_loading` entry is deleted from the wide
       call-mismatch exclude list, and the wide ratchet lint passes (note: it is
-      a separate CI step, NOT part of `pnpm api:compare`).
+      a separate CI step, NOT part of `pnpm parity:api`).

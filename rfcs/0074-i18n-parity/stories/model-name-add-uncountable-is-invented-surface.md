@@ -48,4 +48,4 @@ directly, which is the Rails spelling.
 - [ ] `ModelName.addUncountable` is gone, not merely locale-parameterized.
 - [ ] naming_test.rb-derived tests keep their names verbatim and register
       uncountables through the inflector store.
-- [ ] `pnpm api:extra --package activemodel` loses the corresponding novel name.
+- [ ] `pnpm parity:api:extra --package activemodel` loses the corresponding novel name.

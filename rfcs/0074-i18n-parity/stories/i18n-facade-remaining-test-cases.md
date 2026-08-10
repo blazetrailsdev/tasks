@@ -17,9 +17,9 @@ closed-reason: null
 
 ## Context
 
-`pnpm test:compare --missing` reports `i18n_test.rb -> i18n.test.ts 73/82`, nine
+`pnpm parity:test --missing` reports `i18n_test.rb -> i18n.test.ts 73/82`, nine
 cases short. The facade itself is ported (`packages/i18n/src/i18n.ts`,
-`api:compare` i18n.rb 100%), so these are test gaps, not surface gaps:
+`parity:api` i18n.rb 100%), so these are test gaps, not surface gaps:
 
 ```text
   - exposes its VERSION constant
@@ -53,4 +53,4 @@ reason rather than a port.
 - `exposes its VERSION constant`, `sets the current locale to Thread.current`
   and `I18n.locale is preserved in Fiber context` are excluded through the
   existing test-compare mechanism, each with a one-line reason.
-- `pnpm test:compare` shows `i18n_test.rb` with no remaining un-excluded gap.
+- `pnpm parity:test` shows `i18n_test.rb` with no remaining un-excluded gap.

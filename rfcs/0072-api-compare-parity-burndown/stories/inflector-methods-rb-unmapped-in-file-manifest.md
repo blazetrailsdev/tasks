@@ -18,7 +18,7 @@ closed-reason: null
 ## Context
 
 `inflector/methods.rb` and `core_ext/string/inflections.rb` have **no entry**
-in api:compare's Rails file-structure manifest. Their methods are folded into
+in parity:api's Rails file-structure manifest. Their methods are folded into
 the `inflector/inflections.rb` and `core_ext/object/blank.rb` buckets, whose
 `tsFile` is `null` — so every method they define is reported in
 `missingMethods` permanently, no matter what

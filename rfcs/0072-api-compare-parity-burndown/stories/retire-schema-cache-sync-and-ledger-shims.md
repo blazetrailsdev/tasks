@@ -51,4 +51,4 @@ and `setDataSourceExists`; this one covers the remaining nine.
   blocker instead of claiming no Rails equivalent exists.
 - `pnpm vitest run packages/activerecord/src/connection-adapters/schema-cache.test.ts`
   passes; no test name is renamed.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

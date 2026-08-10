@@ -35,6 +35,6 @@ class. `packages/i18n/src/backend/chain.ts:60` and
   file (class body wins, as Ruby's `include` does), with any `super` call
   becoming `Base.prototype.<m>.call(this)`.
 - `KeyValue` also includes `Flatten` (`key_value.rb:73`); keep that arm.
-- `pnpm api:compare` i18n inheritance does not regress (currently 6/6 — these
+- `pnpm parity:api` i18n inheritance does not regress (currently 6/6 — these
   two are not scored today, so the win is the seam, not the number).
 - `backend/chain.test.ts` and `backend/key-value.test.ts` stay green.

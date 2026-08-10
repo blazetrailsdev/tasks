@@ -57,4 +57,4 @@ so the blocker is the subpath split, not the algorithm.
   file-local `ClassMethods` interface.
 - The override cover in `packages/activerecord/src/secure-token.trails.test.ts`
   still passes (a model-level override wins over the inherited static).
-- `pnpm api:extra --package activerecord` does not regress `secure-token.ts`.
+- `pnpm parity:api:extra --package activerecord` does not regress `secure-token.ts`.

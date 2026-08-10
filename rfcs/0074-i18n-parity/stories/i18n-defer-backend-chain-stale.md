@@ -45,7 +45,7 @@ into one class extending `Base`.
 ## Acceptance criteria
 
 - `backend/chain.rb` no longer appears in `unported-files.ts`.
-- i18n `api:compare` matched-method and matched-file counts do not regress from
+- i18n `parity:api` matched-method and matched-file counts do not regress from
   `177/184` and `15/15`; the file count goes to 16.
 - Every gap the newly-measured file reports is ported or carries a reviewed
   justification at the call site.

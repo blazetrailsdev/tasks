@@ -35,4 +35,4 @@ constant lookup, making the four a visible gap.
   `setHeader` / `body` matching `Rack::Request::Env` and `::Helpers` semantics.
 - Existing `has`/`get`/`set` callers migrate; do not keep a Rails-less alias
   unless Rack itself has one.
-- `pnpm api:compare --package rack` shows `request.rb` back at 88/88.
+- `pnpm parity:api --package rack` shows `request.rb` back at 88/88.

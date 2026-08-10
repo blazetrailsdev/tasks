@@ -34,7 +34,7 @@ records.
 
 Note the deliberate repo-wide `railtie` -> `trailtie` rename: the ported name is
 `trailtieRoutesUrlHelpers`, and the Rails-name mapping for it should be
-confirmed against `scripts/api-compare/conventions.ts` so `api:compare` pairs
+confirmed against `scripts/api-compare/conventions.ts` so `parity:api` pairs
 them rather than reporting both sides as drift.
 
 ## Acceptance criteria
@@ -45,5 +45,5 @@ them rather than reporting both sides as drift.
 - `routes-helpers.ts` keeps only the structural probe it needs; the
   `@noRailsEquivalent` tag on the interface member is deleted once the method
   has a genuine Rails counterpart in the manifest.
-- `api:compare` pairs the ported name with `railtie_routes_url_helpers`;
-  `api:extra` shows no new extras and no stale tags.
+- `parity:api` pairs the ported name with `railtie_routes_url_helpers`;
+  `parity:api:extra` shows no new extras and no stale tags.

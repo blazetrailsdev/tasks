@@ -45,4 +45,4 @@ missing after the `i18n-backend-exceptions-test-port` story (#6009).
 - `i18n/test/backend/exceptions_test.rb:32` is ported into
   `packages/i18n/src/backend/exceptions.test.ts` under its verbatim Rails name
   and passes; `i18n/test/i18n/exceptions_test.rb:59` still passes.
-- `pnpm test:compare --package i18n` does not regress.
+- `pnpm parity:test --package i18n` does not regress.

@@ -24,7 +24,7 @@ instead of being dropped. Because `resolveModuleName` also feeds
 `flattenIncludedMethodInfos`, that expanded the Rails-side **expected** surface,
 not just the extra-surface accounting.
 
-`pnpm api:compare` before → after #5334:
+`pnpm parity:api` before → after #5334:
 
 |            | before              | after               |
 | ---------- | ------------------- | ------------------- |

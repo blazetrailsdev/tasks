@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activesupport` now scores
+`pnpm parity:api:extra --package activesupport` now scores
 `packages/activesupport/src/time-zone-config.ts` against
 `vendor/rails/activesupport/lib/active_support/core_ext/time/zones.rb`
 (PR for `time-zone-config-has-no-mapped-rails-counterpart` made the reopening
@@ -56,9 +56,9 @@ surface or tag them `@noRailsEquivalent` with a reason.
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra --package activesupport` reports fewer novel extras on
+- [ ] `pnpm parity:api:extra --package activesupport` reports fewer novel extras on
       `time-zone-config.ts` than the 5 above; anything left carries a
       `@noRailsEquivalent <reason>` with a permanence claim.
 - [ ] Every renamed reader keeps its call sites working across activesupport,
       activerecord and actionpack.
-- [ ] `pnpm api:compare` / `pnpm api:extra` deltas are non-negative.
+- [ ] `pnpm parity:api` / `pnpm parity:api:extra` deltas are non-negative.

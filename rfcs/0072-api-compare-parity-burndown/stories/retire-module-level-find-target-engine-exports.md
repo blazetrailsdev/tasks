@@ -75,7 +75,7 @@ association-cache contract, not a call-site rename.
       instance method.
 - [ ] `record.loadBelongsTo(name)` / `loadHasOne(name)` reader sugar keeps
       working unchanged.
-- [ ] `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+- [ ] `pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`
       show no new novel entries in `associations.ts` or the four association
       files.
 - [ ] Association suites pass with no test renames.

@@ -20,7 +20,7 @@ closed-reason: null
 PR #6101 ported `core_ext/range/conversions.rb`, `each.rb`, and `overlap.rb`
 into `packages/activesupport/src/core-ext/range/*.ts`. Each file carries the
 Rails method names (`toFs`, `toFormattedS`, `each`, `step`), which is what
-`api:compare` matches on — but three of them cannot be re-exported from the
+`parity:api` matches on — but three of them cannot be re-exported from the
 flat `packages/activesupport/src/index.ts` barrel under those names:
 
 - `toFs` collides with `time-ext.ts`'s `Date#to_fs`
@@ -69,6 +69,6 @@ rename should be contained.
 - `toFs` / `toFormattedS` / `each` / `step` are reachable under their Rails
   names, not under `range*` aliases.
 - No name collision with `time-ext.ts`'s `toFs` or the enumerable `each`/`step`.
-- `pnpm api:compare` / `pnpm api:extra --package activesupport` do not regress.
+- `pnpm parity:api` / `pnpm parity:api:extra --package activesupport` do not regress.
 - `packages/activesupport/src/core-ext/range-ext.test.ts` still passes and is
-  NOT renamed (`test:compare` maps it to `range_ext_test.rb`).
+  NOT renamed (`parity:test` maps it to `range_ext_test.rb`).

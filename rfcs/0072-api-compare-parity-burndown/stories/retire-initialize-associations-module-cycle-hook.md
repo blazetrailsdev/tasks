@@ -47,4 +47,4 @@ the hook is only needed by consumers who deep-import
   cannot be broken rather than describing ESM generally.
 - Watch the known wiring traps: a join-table or association-class import from
   a leaf module breaks base initialization.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

@@ -108,7 +108,7 @@ with the gate instrumentation before working it. Known drift:
 - The residual sites are converted to `withConnection` / `leaseConnection` (or
   `withPooledOrDirectConnection` where a model-facing path is involved), less
   the intentional ones above.
-- Test names are NOT changed — they are how `test:compare` matches to Rails.
+- Test names are NOT changed — they are how `parity:test` matches to Rails.
 - Re-measure with the gate instrumentation; remaining hits are only the
   documented intentional ones.
 - **Run PG and MySQL lanes in CI.** The audit's first pass never executed 29

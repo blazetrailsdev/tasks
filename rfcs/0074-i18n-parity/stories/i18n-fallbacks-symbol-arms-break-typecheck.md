@@ -51,7 +51,7 @@ The comment at `fallbacks.ts:184-186` names this story's predecessor as the
 convergence owner, so the deviation is known and unconverged. CLAUDE.md: a Ruby
 Symbol value is a colon-prefixed JS string (`":name"`), never `Symbol.for`.
 
-Blocks measurement as well as CI: `pnpm api:compare` refuses to run against an
+Blocks measurement as well as CI: `pnpm parity:api` refuses to run against an
 `OutOfDateBuildInfoWithErrors` build for activemodel / activerecord / i18n.
 
 ## Acceptance criteria

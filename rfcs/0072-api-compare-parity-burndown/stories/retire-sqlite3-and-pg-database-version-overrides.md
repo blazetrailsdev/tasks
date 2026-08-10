@@ -26,7 +26,7 @@ declaration-merged `export interface AbstractMysqlAdapter { get databaseVersion(
 in `packages/activerecord/src/connection-adapters/abstract-mysql-adapter.ts`.
 
 The same invented override still stands on two other adapters, where
-`api:extra --package activerecord` counts `databaseVersion` as novel surface:
+`parity:api:extra --package activerecord` counts `databaseVersion` as novel surface:
 
 - `packages/activerecord/src/connection-adapters/sqlite3-adapter.ts:1452-1457` —
   a private `_databaseVersion` field plus an override returning
@@ -75,6 +75,6 @@ tests that reach into `_databaseVersion` to warm/clear the pool memo instead
       are gone, along with their `_databaseVersion` fields.
 - [ ] Version gates in both adapters still read their own version type with no
       cast at the call sites.
-- [ ] `pnpm api:extra --package activerecord` loses both names; no new
+- [ ] `pnpm parity:api:extra --package activerecord` loses both names; no new
       `@noRailsEquivalent` tag in their place.
 - [ ] sqlite3 and pg lanes green.

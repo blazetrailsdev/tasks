@@ -26,4 +26,4 @@ The method-ORDER manifest buckets delegation.rb into that file's `functions` con
 - [ ] Decide, against relation/delegation.rb:101, whether each of `[]`, `&`, `|`, `+`, `-` gets a real delegated member in delegation.ts (set intersection/union/difference on records for `&`/`|`/`-`) or is a documented no-analogue drop.
 - [ ] For any that gain a member, add the verified entry to `OPERATOR_SPELLING_BY_FQN` with the `file:line` comment the table uses.
 - [ ] Record the no-analogue decisions at the call site, not just in the PR body.
-- [ ] `pnpm api:compare` stays green.
+- [ ] `pnpm parity:api` stays green.

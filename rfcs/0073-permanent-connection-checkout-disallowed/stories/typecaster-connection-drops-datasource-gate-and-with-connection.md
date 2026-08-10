@@ -59,4 +59,4 @@ equivalents). File the prerequisite before starting.
 - [ ] The `lookup_cast_type_from_column` call is scoped to a leased connection,
       matching `connection.rb:21`.
 - [ ] The two in-place deviation comments are removed.
-- [ ] No test name changes. api:compare / test:compare delta non-negative.
+- [ ] No test name changes. parity:api / parity:test delta non-negative.

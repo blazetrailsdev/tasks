@@ -43,7 +43,7 @@ Remaining, at `association.ts` (line numbers as of 07bf64a):
 | 598  | `ownerKeyType`            | `owner_key_type`                           |
 | 608  | `buildScope`              | `build_scope`                              |
 
-A dead shim is worse than a missing method: `api:compare` counts it as the
+A dead shim is worse than a missing method: `parity:api` counts it as the
 ported private, so the invented `_`-prefixed method the code actually runs
 never gets compared, and its divergences stay invisible.
 
@@ -60,7 +60,7 @@ what PR #6130 did for `preloadScope` / `reflectionScope` /
 - All 11 shims deleted; every Rails private they stood in for is the live
   method's name, with every internal caller routed through it.
 - No behavior change; the preloader and eager-loading suites stay green.
-- `API_COMPARE_FORCE=1 pnpm api:compare --wide-calls` then `pnpm api:calls:wide`:
+- `API_COMPARE_FORCE=1 pnpm parity:api --wide-calls` then `pnpm parity:api:calls`:
   newly-matched bodies will surface pre-existing divergence as new wide rows —
   converge what can be converged, and give a reviewed one-line reason to what
   cannot. Net row count must go down.

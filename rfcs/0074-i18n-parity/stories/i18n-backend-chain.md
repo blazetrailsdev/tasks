@@ -26,7 +26,7 @@ closed-reason: null
   `I18nBackendFallbacksWithChainTest` group — six cases that mix
   `I18n::Backend::Fallbacks` into `I18n::Backend::Chain` and assert `translate`
   and `exists?` fall through both the chain and the locale chain. They are the
-  8-test gap `pnpm test:compare` reports on
+  8-test gap `pnpm parity:test` reports on
   `backend/fallbacks_test.rb -> backend/fallbacks.test.ts` (the other two are
   the `Thread.new` cases, which JS has no analogue for — see the header note in
   `packages/i18n/src/backend/fallbacks.test.ts`).

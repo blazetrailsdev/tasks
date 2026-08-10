@@ -44,4 +44,4 @@ reification helpers.
   implementation exactly where Rails' adapter-specific `ColumnMethods` module
   extends the abstract one.
 - No external package imports the member as public API after the change.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

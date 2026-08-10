@@ -47,5 +47,5 @@ The trails accessor is an invented public surface that a port can remove.
 - If a caller outside the pool construction genuinely needs the value, keep it
   as a `_`-prefixed or `@internal` member and record the caller at the
   declaration — do not keep a public accessor.
-- `pnpm api:extra --package activerecord` reports no stale tags and does not
+- `pnpm parity:api:extra --package activerecord` reports no stale tags and does not
   regress the three adapter files above their current novel counts.

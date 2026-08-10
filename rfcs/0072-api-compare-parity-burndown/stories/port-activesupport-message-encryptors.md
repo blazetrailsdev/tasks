@@ -21,7 +21,7 @@ closed-reason: null
 `ActiveSupport::MessageEncryptors` is unported: there is no
 `packages/activesupport/src/message-encryptors.ts`, and
 `packages/activesupport/src/message-encryptors.test.ts` holds 4 bodyless
-`it.skip` placeholders (`test:compare`: `message_encryptors_test.rb` 0/4, 4
+`it.skip` placeholders (`parity:test`: `message_encryptors_test.rb` 0/4, 4
 skipped):
 
 - `can override secret generator`

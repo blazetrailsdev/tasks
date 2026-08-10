@@ -40,4 +40,4 @@ passes through literally.
 
 - `inspect` renders control characters and `#{` as Ruby's `String#inspect` does.
 - Existing `exceptions.test.ts` / `interpolate.test.ts` expectations unchanged.
-- `test:compare --package i18n` non-negative.
+- `parity:test --package i18n` non-negative.

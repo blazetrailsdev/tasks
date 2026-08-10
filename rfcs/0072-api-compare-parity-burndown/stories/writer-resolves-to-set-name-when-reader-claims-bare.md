@@ -29,7 +29,7 @@ Live instance from PR #6197: `Date.beginning_of_week=`
 `find_beginning_of_week!` (`:32-35`). trails ports the pair as
 `beginningOfWeek()` / `setBeginningOfWeek()` in
 `packages/activesupport/src/date-ext.ts`, with the call in the writer where
-Rails puts it — yet `api:calls` reported
+Rails puts it — yet `parity:api:calls` reported
 `beginning_of_week=  find_beginning_of_week!` as a new mismatch against
 `beginningOfWeek`. It carries a `@missingRailsCall` receipt at
 `date-ext.ts:48-55` purely to absorb the artifact.
@@ -52,5 +52,5 @@ Do NOT fix this by dropping the `set*` candidate or by broadening the
       where no `setFoo` exists (`table_name=` etc.).
 - [ ] The `@missingRailsCall find_beginning_of_week!` tag at `date-ext.ts:48-55`
       is DELETED as part of this story.
-- [ ] `pnpm api:calls` / `api:compare` deltas non-negative; add the pairing case
+- [ ] `pnpm parity:api:calls` / `parity:api` deltas non-negative; add the pairing case
       to `scripts/api-compare/conventions.test.ts`.

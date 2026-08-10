@@ -59,6 +59,6 @@ counterpart each one is being credited against and act on it.
       change that soundly requires, reviewed on its own terms), or the names
       that genuinely are misplaced ports move to their Rails-layout home.
 - [ ] No name is tagged `CONVERGEABLE` as a way of deferring.
-- [ ] `pnpm api:extra --package activerecord` and
+- [ ] `pnpm parity:api:extra --package activerecord` and
       `pnpm vitest run scripts/api-compare/extra-surface.test.ts` pass; the
       novel-total movement is stated in the PR body.

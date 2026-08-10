@@ -51,6 +51,6 @@ widening an allowlist for this.
 
 - Each of the five bodies above calls the shared normalizer where its Ruby
   counterpart calls `to_sym`; `simple.ts:91`'s inline conditional is replaced.
-- `pnpm api:calls:wide` gains no rows and no `to_sym` row is baselined.
+- `pnpm parity:api:calls` gains no rows and no `to_sym` row is baselined.
 - A test covers a `":en"`-spelled Symbol reaching each site and keying the same
   entry as the plain string, per `[[i18n-store-translations-locale-to-sym]]`.

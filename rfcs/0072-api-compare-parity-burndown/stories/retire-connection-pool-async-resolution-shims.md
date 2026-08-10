@@ -47,4 +47,4 @@ pool async/sync surface convergence, not to a permanent-exception tag.
 - `queryCacheDisabled` in particular: decide whether the "disabled" config
   alias is itself a trails invention that should be normalized at config-read
   time, which would remove the predicate entirely.
-- `pnpm api:extra --package activerecord` reports no stale tags.
+- `pnpm parity:api:extra --package activerecord` reports no stale tags.

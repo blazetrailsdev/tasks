@@ -19,7 +19,7 @@ closed-reason: "Superseded by i18n-key-value-residual-api-gaps, filed by PR #606
 
 `i18n-converge-key-value-api-deferral` deleted the `backend/key_value.rb` and
 `backend/flatten.rb` deferrals from `scripts/api-compare/unported-files.ts`, so
-`api:compare` now measures `packages/i18n/src/backend/key-value.ts`. That
+`parity:api` now measures `packages/i18n/src/backend/key-value.ts`. That
 surfaced three residual gaps it had been hiding
 (`scripts/api-compare/output/api-comparison.json`, package `i18n`):
 
@@ -31,7 +31,7 @@ surfaced three residual gaps it had been hiding
   JS-language `JSON`, whose `stringify` / `parse` are that `encode` / `decode`.
   Either port a `JSON` class with `encode` / `decode` delegating to the global
   `JSON` (the faithful shape — Rails devs read `I18n::JSON.encode`), or record
-  the deviation where api:compare reads it (`SKIP_GROUPS` in
+  the deviation where parity:api reads it (`SKIP_GROUPS` in
   `scripts/api-compare/conventions.ts`) with that reason.
 - missing `load_rb` on `I18n::Backend::KeyValue`
   (`vendor/i18n/lib/i18n/backend/base.rb:254`, reached through
@@ -49,5 +49,5 @@ surfaced three residual gaps it had been hiding
 - `load_rb` → `loadJs` is registered as a name translation or skip in
   `scripts/api-compare/conventions.ts` (regenerating
   `docs/ruby-ts-conventions.md`), or converged.
-- `pnpm api:compare` i18n matched counts do not regress; the i18n missing count
+- `pnpm parity:api` i18n matched counts do not regress; the i18n missing count
   drops by 3 and inheritance returns to 7/7.

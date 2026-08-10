@@ -71,7 +71,7 @@ is already slated for removal, in which case the answer is (a) remove, not
 ## Acceptance criteria
 
 - Sequence after the `__mixin` host-leak and `@internal`-on-fileFunctions
-  tooling fixes; re-run `pnpm api:extra --package activerecord --json` and
+  tooling fixes; re-run `pnpm parity:api:extra --package activerecord --json` and
   work from the refreshed lists (expect `inheritance.ts` ~14 novel,
   `model-schema.ts` ~10).
 - Each remaining name classified as: removed (dead, or scaffolding for a

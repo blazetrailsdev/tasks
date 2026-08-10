@@ -68,7 +68,7 @@ reason.
       tail.
 - [ ] Arms with no JS analogue are named in `SKIP_GROUPS` with a reason, not
       stubbed.
-- [ ] `pnpm api:compare --package activesupport` non-negative; `pnpm api:extra
+- [ ] `pnpm parity:api --package activesupport` non-negative; `pnpm parity:api:extra
 --package activesupport` clean.
 - [ ] `packages/activesupport/src/json/encoding.test.ts` stays green; no test
       renamed.

@@ -1,5 +1,5 @@
 ---
-title: "api:extra red on main: stale @noRailsEquivalent on encryption/config.ts getSharedConfig"
+title: "parity:api:extra red on main: stale @noRailsEquivalent on encryption/config.ts getSharedConfig"
 status: closed
 updated: 2026-08-07
 rfc: "0072-api-compare-parity-burndown"
@@ -12,12 +12,12 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Premise gone on origin/main (311bff350): getSharedConfig no longer exists anywhere in packages/activerecord/src, so neither api:extra row (STALE tag, missing permanence claim) can fire. The only @noRailsEquivalent left in packages/activerecord/src/encryption/config.ts is on the compressor duck-type at :19 and already opens with PERMANENT. The gate red this story was filed against is resolved."
+closed-reason: "Premise gone on origin/main (311bff350): getSharedConfig no longer exists anywhere in packages/activerecord/src, so neither parity:api:extra row (STALE tag, missing permanence claim) can fire. The only @noRailsEquivalent left in packages/activerecord/src/encryption/config.ts is on the compressor duck-type at :19 and already opens with PERMANENT. The gate red this story was filed against is resolved."
 ---
 
 ## Context
 
-`pnpm api:extra --package activerecord` fails on `main` (observed at 07bf64a,
+`pnpm parity:api:extra --package activerecord` fails on `main` (observed at 07bf64a,
 unrelated to the PR that observed it) with two rows against the same member:
 
 ```text
@@ -36,7 +36,7 @@ Rails-layout file. The second row says the reason does not open with PERMANENT
 or CONVERGEABLE.
 
 Because it is a **hard gate failure on main**, every PR touching activerecord
-sees a red `api:extra` it did not cause, which trains people to ignore the gate.
+sees a red `parity:api:extra` it did not cause, which trains people to ignore the gate.
 
 ## Converged shape
 
@@ -52,7 +52,7 @@ Rails counterpart to check first:
 
 ## Acceptance criteria
 
-- `pnpm api:extra --package activerecord` exits 0.
+- `pnpm parity:api:extra --package activerecord` exits 0.
 - If the tag was deleted, no `@noRailsEquivalent` remains on `getSharedConfig`.
 - If the surface was genuinely extra and is kept, its reason opens with
   PERMANENT (a language/runtime fact) or CONVERGEABLE (naming the story) —

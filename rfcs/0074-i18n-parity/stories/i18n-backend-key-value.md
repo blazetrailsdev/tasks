@@ -24,7 +24,7 @@ closed-reason: null
   `Fallbacks` and `Transliterator`.
 - Its absence is measurable: `vendor/i18n/test/backend/chain_test.rb:139-175`
   is `I18nBackendChainWithKeyValueTest`, four cases the gem guards with
-  `if I18n::TestCase.key_value?`, and they are the only gap `pnpm test:compare`
+  `if I18n::TestCase.key_value?`, and they are the only gap `pnpm parity:test`
   reports on `backend/chain_test.rb -> backend/chain.test.ts` (17/21).
 - The two `subtrees` arms those cases exercise (`setup_backend!(true)` and
   `(false)`) are what `Base#subtrees` in `packages/i18n/src/backend/base.ts`

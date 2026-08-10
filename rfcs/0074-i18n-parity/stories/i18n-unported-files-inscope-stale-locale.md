@@ -39,7 +39,7 @@ All five are ported and none is deferred:
 | `vendor/i18n/lib/i18n/locale/tag/parents.rb` | `packages/i18n/src/locale/tag/parents.ts` |
 | `vendor/i18n/lib/i18n/locale/tag/simple.rb`  | `packages/i18n/src/locale/tag/simple.ts`  |
 
-`locale/fallbacks_test.rb` is 29/29 green in `pnpm test:compare`, so this is a
+`locale/fallbacks_test.rb` is 29/29 green in `pnpm parity:test`, so this is a
 stale `inScope` list, not a porting gap. `locale/tag/rfc4646.rb` is correctly
 excluded already and stays excluded (story `i18n-locale-tag-rfc4646`, blocked).
 
@@ -59,4 +59,4 @@ review and left this set untouched.
 - If that loop then fails on `backend/flatten.rb` or any other `inScope` entry
   that still carries a `UNPORTED_FILES` row, converge that row (delete it) —
   do not drop the file from `inScope` to silence the assertion.
-- No i18n `api:compare` or `test:compare` matched count regresses.
+- No i18n `parity:api` or `parity:test` matched count regresses.

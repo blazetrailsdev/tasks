@@ -19,7 +19,7 @@ closed-reason: null
 
 Surfaced by PR #5435, which taught the Ruby extractor to record `define_method`
 surface. Three `ActiveRecord::Encryption::Config` predicates were previously
-invisible to `api:compare` and are now standing misses:
+invisible to `parity:api` and are now standing misses:
 
 ```text
 encryption/config.rb → encryption/config.ts   33  3  36  92%
@@ -52,7 +52,7 @@ missing in trails — check whether the bare readers
 (`keyDerivationSalt` / `primaryKey` / `deterministicKey`) in
 `packages/activerecord/src/encryption/config.ts` currently implement the raising
 behaviour or silently return nullish, since the extractor cannot see the
-raise-vs-presence split and `api:compare` counts the bare readers as matched
+raise-vs-presence split and `parity:api` counts the bare readers as matched
 either way.
 
 ## Acceptance criteria
@@ -62,6 +62,6 @@ either way.
   (Rails `.presence`: blank string and nil both fall through as absent).
 - The bare readers are verified against Rails' `or raise
 Errors::Configuration` behaviour and converged if they diverge.
-- `pnpm api:compare --package activerecord` shows `encryption/config.rb` with
+- `pnpm parity:api --package activerecord` shows `encryption/config.rb` with
   no missing methods.
 - Test names match Rails verbatim.

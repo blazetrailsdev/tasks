@@ -1,5 +1,5 @@
 ---
-title: "Enroll i18n in test:compare and port core suites"
+title: "Enroll i18n in parity:test and port core suites"
 status: done
 updated: 2026-08-03
 rfc: "0074-i18n-parity"
@@ -14,7 +14,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Enroll i18n in test:compare (flip compareTests) and port the core suites
+# Enroll i18n in parity:test (flip compareTests) and port the core suites
 
 ## Context
 
@@ -36,7 +36,7 @@ story.
 
 - `compareTests: true` (flag removed) in `vendor/sources.ts`;
   `vendor/sources.test.ts` updated.
-- `pnpm test:compare` runs clean with an i18n section; ported core suites
+- `pnpm parity:test` runs clean with an i18n section; ported core suites
   match by name; deferred suites excluded with reasons via the existing
   mechanism.
 - No test renames of existing trails tests to force matches.

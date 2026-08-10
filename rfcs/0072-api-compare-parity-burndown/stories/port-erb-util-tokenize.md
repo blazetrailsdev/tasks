@@ -66,5 +66,5 @@ characters start, multibyte characters end). Porting `tokenize` unskips them.
 - The `ERBUtilTest` stubs are unskipped with Rails' assertions verbatim — test
   names unchanged.
 - Consider relocating the stub file to the `erb -> tse` alias path so
-  `test:compare` matches it the way `util.ts` now matches `util.rb`.
-- `pnpm api:compare` shows `core_ext/erb/util.rb` at 7/7.
+  `parity:test` matches it the way `util.ts` now matches `util.rb`.
+- `pnpm parity:api` shows `core_ext/erb/util.rb` at 7/7.

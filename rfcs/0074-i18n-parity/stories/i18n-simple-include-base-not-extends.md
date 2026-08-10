@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports i18n `inheritance: 5/6 (83.3%)`, with one mismatch:
+`pnpm parity:api` reports i18n `inheritance: 5/6 (83.3%)`, with one mismatch:
 
 ```json
 {
@@ -55,7 +55,7 @@ settled idiom for `include` is `include()` / `Included<>` from
   and `Base` and call `super`), or — if a genuine TS shortcoming blocks it —
   the deviation is recorded at the call site per CLAUDE.md with the specific
   language limitation, not in the PR body.
-- Whichever path: `pnpm api:compare` i18n inheritance is 6/6 or the exclusion
+- Whichever path: `pnpm parity:api` i18n inheritance is 6/6 or the exclusion
   is registered with a reviewed reason.
 - `backend/simple.test.ts` and `backend/fallbacks.test.ts` still pass —
   `Fallbacks(Simple)` must keep working.

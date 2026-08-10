@@ -28,7 +28,7 @@ these `register_template_handler`, `registered_template_handler`,
 `template_handler_extensions`
 (`vendor/rails/actionview/lib/action_view/template/handlers.rb:33-56`).
 
-It is trails-only surface: `pnpm api:extra --package actionview` scores
+It is trails-only surface: `pnpm parity:api:extra --package actionview` scores
 `TemplateHandlerRegistry`, `has` and `templatePath` as novel in that file. The
 `defaultExt` / `setDefault` half was already deleted (no callers) by the PR for
 `credit-mixin-methods-ported-in-their-own-file`; the rest has real callers and
@@ -41,5 +41,5 @@ Callers: `lookup-context.ts:20,44,553,576,721,725`, `template-details.ts:9,110`,
 
 - `TemplateHandlerRegistry` is gone; its callers use `TemplateHandlers` at the
   Rails method names.
-- `pnpm api:extra --package actionview` drops the corresponding novel names with
+- `pnpm parity:api:extra --package actionview` drops the corresponding novel names with
   no allowlist rows added.

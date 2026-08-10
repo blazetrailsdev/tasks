@@ -47,6 +47,6 @@ than be deleted.
   mixin convention in CLAUDE.md.
 - `finder-respond-to.test.ts` call sites updated; NO test renames.
 - `packages/activerecord/src/base.ts` novel count in
-  `pnpm api:extra --package activerecord --novel-only` drops by at least one;
+  `pnpm parity:api:extra --package activerecord --novel-only` drops by at least one;
   record before/after in the PR body.
-- Re-run `pnpm api:calls:wide`.
+- Re-run `pnpm parity:api:calls`.

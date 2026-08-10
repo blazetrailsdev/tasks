@@ -26,4 +26,4 @@ Because there is no TS member, the two operators cannot be pinned in `OPERATOR_S
 - [ ] Port `[]` / `[]=` to `packages/activerecord/src/attribute-methods.ts` with a spelling consistent with the rest of the table (`get` / `set` is the established pairing for `[]` / `[]=`), preserving the `missing_attribute` raise on read.
 - [ ] Wire them onto the record surface the way the surrounding module methods are wired.
 - [ ] Add the verified entries to `OPERATOR_SPELLING_BY_FQN` with the `file:line` comment the table uses.
-- [ ] `pnpm api:compare` stays green.
+- [ ] `pnpm parity:api` stays green.

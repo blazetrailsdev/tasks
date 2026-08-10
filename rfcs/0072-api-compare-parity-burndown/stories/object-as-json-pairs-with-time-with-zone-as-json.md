@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`api:compare` pairs Ruby `Object#as_json`
+`parity:api` pairs Ruby `Object#as_json`
 (`vendor/rails/activesupport/lib/active_support/core_ext/object/json.rb:58-66`)
 with `TimeWithZone#asJson` (`packages/activesupport/src/time-with-zone.ts`),
 reported under `tsFile: index.ts` — the re-export site — rather than with the
@@ -45,4 +45,4 @@ The same resolution also means every `asJson` arm in `core-ext/object/json.ts`
 - [ ] The `index.ts` / `as_json` / `instance_values` row is deleted from
       `scripts/api-compare/call-mismatches-exclude/activesupport/index.json`
       (only-shrink: delete the row by hand, do not reseed).
-- [ ] `pnpm api:calls` green; `pnpm api:compare` non-negative.
+- [ ] `pnpm parity:api:calls` green; `pnpm parity:api` non-negative.

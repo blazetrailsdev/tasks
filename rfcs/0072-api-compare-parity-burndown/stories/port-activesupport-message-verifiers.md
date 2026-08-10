@@ -20,7 +20,7 @@ closed-reason: null
 `ActiveSupport::MessageVerifiers` is unported: there is no
 `packages/activesupport/src/message-verifiers.ts`, and
 `packages/activesupport/src/message-verifiers.test.ts` holds 3 bodyless
-`it.skip` placeholders (`test:compare`: `message_verifiers_test.rb` 0/3, 3
+`it.skip` placeholders (`parity:test`: `message_verifiers_test.rb` 0/3, 3
 skipped):
 
 - `can override secret generator`

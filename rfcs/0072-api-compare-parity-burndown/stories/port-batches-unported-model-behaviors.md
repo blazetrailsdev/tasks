@@ -75,9 +75,9 @@ test names verbatim rather than inventing new ones.
   `batch_on_unloaded_relation`.
 - Cover each with the corresponding Rails test from `batches_test.rb`, names
   matching Rails verbatim; each must FAIL on baseline.
-- Reseed with `pnpm api:calls:wide:reseed`; the three `model` entries (plus
+- Reseed with `pnpm parity:api:calls:reseed`; the three `model` entries (plus
   the `logger` / `unscoped` / `primary_key` entries in the same bodies) should
-  drop out. `pnpm api:calls:wide` stays green and the baseline does not grow.
+  drop out. `pnpm parity:api:calls` stays green and the baseline does not grow.
 - 500 LOC ceiling — the three items are independent; if the port plus tests
   exceeds it, ship one and register the rest as follow-up stories rather than
   fanning out PRs.

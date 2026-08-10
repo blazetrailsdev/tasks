@@ -45,7 +45,7 @@ the exact bug #5296 fixed. Nothing fails loudly in between.
       `defineReaders`, `defineWriters`, and `_isCollectionIdsWriter`.
 - [ ] No import cycle is introduced (`base.ts` does not currently import
       `associations/builder/collection-association.ts`); if a shared home is
-      needed, place it where `api:compare` still maps the builder methods to
+      needed, place it where `parity:api` still maps the builder methods to
       their Rails-layout file.
 - [ ] Existing constructor-form ids= coverage in
       `associations/collection-persisted-setter-throws.trails.test.ts` still

@@ -21,7 +21,7 @@ closed-reason: null
 
 PR for `port-remaining-check-constraint-test-cases` took
 `packages/activerecord/src/migration/check-constraint.test.ts` from 7/25 to
-20/25 matched in `pnpm test:compare`. Five Rails cases in
+20/25 matched in `pnpm parity:test`. Five Rails cases in
 `vendor/rails/activerecord/test/cases/migration/check_constraint_test.rb`
 remain unported, each because it needs setup the ported file does not yet have:
 
@@ -48,7 +48,7 @@ The scaffolding to reuse is already in the file: `describe("Migration")` >
 ## Acceptance criteria
 
 - [ ] The five cases above ported, names in prose form matching Rails verbatim.
-- [ ] `pnpm test:compare --package activerecord` shows
+- [ ] `pnpm parity:test --package activerecord` shows
       `migration/check_constraint_test.rb` at 25/25; 0 gate mismatches.
 - [ ] `constraint_test` created/dropped under the same `current_adapter?` gating
       Rails uses, and both arms of every `current_adapter?` branch ported.

@@ -67,7 +67,7 @@ carries ~80.
 - Staleness is reported for the file-level form too: once a Rails counterpart
   file appears, or a name in the file starts scoring `moved`, the tag lands in
   the STALE list rather than continuing to absorb the file.
-- `pnpm api:extra --package activerecord` novel totals are unchanged by the
+- `pnpm parity:api:extra --package activerecord` novel totals are unchanged by the
   mechanism itself (converting the six driver files from six declaration tags
   to one file tag each is net-zero on Novel and on Allowed).
 - Scoped `pnpm vitest run scripts/api-compare/extra-surface.test.ts` passes,

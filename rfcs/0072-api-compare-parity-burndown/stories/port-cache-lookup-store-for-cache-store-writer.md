@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "out of scope: RFC 0072 is a data-layer api:compare burndown; actionpack work does not belong here. Re-file under an actionpack-scoped RFC if wanted."
+closed-reason: "out of scope: RFC 0072 is a data-layer parity:api burndown; actionpack work does not belong here. Re-file under an actionpack-scoped RFC if wanted."
 ---
 
 ## Context

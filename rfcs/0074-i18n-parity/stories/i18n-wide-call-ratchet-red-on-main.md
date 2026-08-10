@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:calls:wide` is red on `main` (and therefore on every i18n branch):
+`pnpm parity:api:calls` is red on `main` (and therefore on every i18n branch):
 
 ```text
   + i18n  backend/simple.ts  store_translations  new  (i18n/backend/simple.json)
@@ -25,7 +25,7 @@ closed-reason: null
   + i18n  interpolate/ruby.ts interpolate_hash  call (i18n/interpolate/ruby.json)
 ```
 
-The i18n port (#5980, #5972 era) enrolled the package in `api:compare` but no
+The i18n port (#5980, #5972 era) enrolled the package in `parity:api` but no
 `scripts/api-compare/call-mismatches-wide-exclude/i18n/` baseline directory
 exists, so the wide ratchet counts these three as NEW. Reproduced locally on a
 clean `origin/main` build (stash-and-rerun on PR #5983 gives the identical three
@@ -43,4 +43,4 @@ Rails sources:
   `ruby.rb`) — not baselined, unless a row is genuinely satisfied by a different
   path, in which case it gets a one-line reviewed `reason` in
   `scripts/api-compare/call-mismatches-wide-exclude/i18n/<file>.json`.
-- `pnpm api:calls:wide` is green on the branch.
+- `pnpm parity:api:calls` is green on the branch.

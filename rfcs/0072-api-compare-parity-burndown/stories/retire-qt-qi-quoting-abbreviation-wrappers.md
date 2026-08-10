@@ -33,7 +33,7 @@ They are a trails invention with no Rails counterpart, and they are used
 throughout the adapter schema-statement bodies. Two costs:
 
 1. **They hide `quote_table_name` / `quote_column_name` from the wide call
-   gate.** Every body that quotes via `_qt`/`_qi` reads to `api:calls:wide` as
+   gate.** Every body that quotes via `_qt`/`_qi` reads to `parity:api:calls` as
    omitting the call Rails makes, so those entries sit in the baseline as false
    positives. PR #5389 had to inline `quoteTableName`/`quoteColumnName` at four
    call sites purely to clear them, and the same inlining is pending in every
@@ -57,7 +57,7 @@ which is how it has been leaking so far.
   `quoteIdentifier` — coordinate with
   `converge-quote-identifier-into-quote-column-name`).
 - Baseline entries for `quote_table_name` / `quote_column_name` that were only
-  hidden by the wrappers drop out; `pnpm api:calls:wide` passes with a strictly
+  hidden by the wrappers drop out; `pnpm parity:api:calls` passes with a strictly
   smaller baseline.
 - Likely exceeds the 500-LOC ceiling across all adapters — split by adapter,
   each PR from `main` with non-overlapping files, and register the splits as

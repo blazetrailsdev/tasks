@@ -58,5 +58,5 @@ method to its own file rather than the aggregator's.
 - [ ] The `activesupport:core_ext/object/acts_like.rb` override added by #6235
       is removed once the general path covers it.
 - [ ] The barrel exclusion from #6235 stays unchanged.
-- [ ] Unit test in `scripts/api-compare/compare.test.ts`; `pnpm api:calls`
-      green; `pnpm api:compare` delta non-negative.
+- [ ] Unit test in `scripts/api-compare/compare.test.ts`; `pnpm parity:api:calls`
+      green; `pnpm parity:api` delta non-negative.

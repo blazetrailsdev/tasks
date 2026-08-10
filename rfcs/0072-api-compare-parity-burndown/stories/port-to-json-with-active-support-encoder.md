@@ -38,7 +38,7 @@ It is included into `[Enumerable, Object, Array, FalseClass, Float, Hash,
 Integer, NilClass, String, TrueClass]` (`json.rb:47-49`).
 
 PR #6205 ported the `as_json` half of this file but not this module. It is one
-of the six members `pnpm api:compare` attributes to
+of the six members `pnpm parity:api` attributes to
 `core_ext/object/json.rb` (the file reads 1/6 after #6205), and it is why
 several trails classes hand-roll a `toJSON()` that just calls `this.asJson()`
 — `activemodel/src/naming.ts:414-417`, `model.ts:2278-2286`,
@@ -66,8 +66,8 @@ wrong branch.
 - [ ] The hand-rolled `toJSON` delegates in `activemodel/src/naming.ts`,
       `activemodel/src/model.ts` and
       `actionpack/.../gtg/transition-table.ts` are replaced by it.
-- [ ] `pnpm api:compare --package activesupport` shows
+- [ ] `pnpm parity:api --package activesupport` shows
       `core_ext/object/json.rb` above 1/6 and is non-negative overall;
-      `pnpm api:extra` clean for every package touched.
+      `pnpm parity:api:extra` clean for every package touched.
 - [ ] `json/encoding.test.ts`, activemodel serialization/serializers suites and
       the journey transition-table suite stay green; no test renamed.

@@ -43,5 +43,5 @@ Enumerate with a pass over `scripts/api-compare/output/rails-api.json`
       `OPERATOR_SPELLING_BY_FQN` with the `file:line` comment the table uses.
 - [ ] Any module operator with no TS counterpart at all is filed as its own
       port story rather than pinned.
-- [ ] `pnpm api:compare` stays green (no dead-entry failure) and
+- [ ] `pnpm parity:api` stays green (no dead-entry failure) and
       `rails-file-structure-method-order` reports clean.

@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-PR #5978 enrolled i18n in `api:compare`. The comparison now reports the
+PR #5978 enrolled i18n in `parity:api`. The comparison now reports the
 facade file as:
 
 ```text
@@ -69,7 +69,7 @@ against surface it never saw. This is the same class of silent gap the
   behavior — the existing `<Module>::Base` attribution and the
   junk-drawer-bucket avoidance it was built for stay intact (a
   package-scoped opt-in is acceptable if a general rule regresses Rails).
-- `api:compare` reports `../i18n.rb` against a denominator of 22
+- `parity:api` reports `../i18n.rb` against a denominator of 22
   (19 defs + 3 aliases), not 3.
 - No other package's totals move; confirm against a pre-change run.
 - Extractor unit coverage for the new path in

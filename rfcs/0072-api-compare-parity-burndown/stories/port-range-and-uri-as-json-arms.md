@@ -59,5 +59,5 @@ and `validations.ts:420` already note the absence of), or an exported
       `encode(makeRange(1, 2, true))` emits `"1...2"`
       (`encoding_test_cases.rb:86-88`).
 - [ ] The `Range` body calls the existing `Range#to_s`, not a second copy.
-- [ ] `pnpm api:compare --package activesupport` non-negative;
-      `pnpm api:extra --package activesupport` clean; `pnpm api:calls` green.
+- [ ] `pnpm parity:api --package activesupport` non-negative;
+      `pnpm parity:api:extra --package activesupport` clean; `pnpm parity:api:calls` green.

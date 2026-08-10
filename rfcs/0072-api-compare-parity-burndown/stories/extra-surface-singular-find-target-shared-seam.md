@@ -58,7 +58,7 @@ Related: [[extra-surface-defuse-has-many-find-target]].
   gate, matching `belongs_to_association.rb:124`.
 - Any remaining owner/name/options function is `@internal` and justified at the
   declaration site, not exposed as Rails surface.
-- `pnpm api:compare && pnpm api:extra --package activerecord --novel-only`
+- `pnpm parity:api && pnpm parity:api:extra --package activerecord --novel-only`
   shows the `associations.ts` novel count drop by the number of names removed.
   Record before/after in the PR body.
 - has_one, has_one :through, belongs_to, and inverse association suites pass;

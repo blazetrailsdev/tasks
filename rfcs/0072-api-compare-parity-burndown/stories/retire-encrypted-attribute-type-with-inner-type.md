@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:extra --package activerecord` reports
+`pnpm parity:api:extra --package activerecord` reports
 `encryption/encrypted-attribute-type.ts — 1 novel`, and the novel name is
 `withInnerType` (`packages/activerecord/src/encryption/encrypted-attribute-type.ts:64-71`).
 It carries no `@noRailsEquivalent` tag, so it is untracked extra surface.
@@ -53,6 +53,6 @@ examined in the same pass (it may be the actual thing to retire).
 
 ## Acceptance criteria
 
-- [ ] `pnpm api:extra --package activerecord` reports 0 novel for
+- [ ] `pnpm parity:api:extra --package activerecord` reports 0 novel for
       `encryption/encrypted-attribute-type.ts`, without an allowlist row.
 - [ ] Encryption suites green on all three lanes.

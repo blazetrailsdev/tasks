@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports `exceptions.rb 16/19` for i18n; the three unmatched
+`pnpm parity:api` reports `exceptions.rb 16/19` for i18n; the three unmatched
 members are the whole of `I18n::UnsupportedMethod`:
 
 ```text
@@ -52,4 +52,4 @@ it; it is core `exceptions.rb` surface either way, not deferred surface.
   `backendKlass`, `msg` readers and the gem's exact message string
   (`"#{backendKlass} does not support the ##{method} method. #{msg}"`).
 - Constructor parameter order matches the gem: `(method, backendKlass, msg)`.
-- `pnpm api:compare` reports `exceptions.rb 19/19` for i18n.
+- `pnpm parity:api` reports `exceptions.rb 19/19` for i18n.

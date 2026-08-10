@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`backend/simple_test.rb` sits at **30/31** in `pnpm test:compare` — the single
+`backend/simple_test.rb` sits at **30/31** in `pnpm parity:test` — the single
 remaining gap is `simple store_translations: converts the given locale to a
 Symbol` (`vendor/i18n/test/backend/simple_test.rb:138-141`). PR #6043 and its
 parent story (`i18n-backend-load-rb-decision`) both explicitly scoped this out
@@ -71,9 +71,9 @@ converts the given locale to a Symbol`, asserting the same shape as
 - Verify the test **fails on baseline** before the `to_sym` port lands (if it
   passes either way, say so in the PR — the port is still correct, but the test
   is not a regression guard and should not be described as one).
-- `pnpm test:compare` shows `backend/simple_test.rb` **31/31**.
-- `pnpm api:compare` i18n stays at or above 183/184; `pnpm api:calls` and
-  `pnpm api:calls:wide` gain no new rows.
+- `pnpm parity:test` shows `backend/simple_test.rb` **31/31**.
+- `pnpm parity:api` i18n stays at or above 183/184; `pnpm parity:api:calls` and
+  `pnpm parity:api:calls` gain no new rows.
 
 ## Out of scope
 

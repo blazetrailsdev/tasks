@@ -19,7 +19,7 @@ closed-reason: null
 
 `packages/activesupport/src/secure-compare-rotator.test.ts` holds five bodyless
 `it.skip` placeholders and no implementation file exists —
-`api:compare` reports `secure_compare_rotator.rb -> secure-compare-rotator.ts`
+`parity:api` reports `secure_compare_rotator.rb -> secure-compare-rotator.ts`
 at 0/3 methods (`initialize`, `rotate`, `secure_compare!`).
 
 CLAUDE.md forbids empty stubs. The equivalent placeholders in

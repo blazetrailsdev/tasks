@@ -47,7 +47,7 @@ activerecord methods + 1 activemodel:
 
 For each: read the Rails source + tests first (`pnpm rails:find <name>`),
 confirm genuinely unported, port into the Rails-layout file with method-order
-compliance (the method-order manifest regenerates via `pnpm api:compare`).
+compliance (the method-order manifest regenerates via `pnpm parity:api`).
 
 ## Acceptance criteria
 
@@ -56,5 +56,5 @@ compliance (the method-order manifest regenerates via `pnpm api:compare`).
   calculate/pluck routing) ported or extended.
 - `Dirty#as_json` either ported or excluded with the verified inherent-behavior
   reason.
-- `pnpm api:compare` reports `missing: 0` for activerecord and activemodel;
+- `pnpm parity:api` reports `missing: 0` for activerecord and activemodel;
   method-order lint stays green; no test renames.

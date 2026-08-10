@@ -1,5 +1,5 @@
 ---
-title: "Resolve the last activerecord api:compare mismatch: ConnectionAdapters::SchemaDumper super-mismatch"
+title: "Resolve the last activerecord parity:api mismatch: ConnectionAdapters::SchemaDumper super-mismatch"
 status: done
 updated: 2026-08-05
 rfc: "0072-api-compare-parity-burndown"
@@ -16,8 +16,8 @@ closed-reason: null
 
 ## Context
 
-This is the **last remaining `api:compare` mismatch in activerecord**. A fresh
-`pnpm build && pnpm api:compare` on `main` (0394f52da, 2026-08-05) reports:
+This is the **last remaining `parity:api` mismatch in activerecord**. A fresh
+`pnpm build && pnpm parity:api` on `main` (0394f52da, 2026-08-05) reports:
 
 ```text
 activerecord — 6148/6148 methods (100%) | files: 277/277
@@ -59,7 +59,7 @@ resolves the name to the base class, whose `ancestorChain` is empty — hence
 `tsSuper: null`.
 
 So this is a **known, reasoned deviation, not unreviewed drift**. What is
-missing is that nothing in `api:compare` records it: the checker has
+missing is that nothing in `parity:api` records it: the checker has
 `RUBY_ONLY_CLASSES` (compare.ts:889-890) for classes excluded from the
 inheritance denominator, but no per-entry reasoned exclusion for a super
 mismatch that is intentional. The result is a permanent 209/210 that reads as
@@ -86,13 +86,13 @@ outstanding work and cannot be turned into a ratchet at 100%.
 - If arm 2 is taken, the mechanism must be a reasoned list (reason string
   required per entry), not a bare allowlist, and covered by a test in
   `scripts/api-compare/`.
-- `pnpm api:compare` reports activerecord `inheritance: 210/210 (100%)`, taking
+- `pnpm parity:api` reports activerecord `inheritance: 210/210 (100%)`, taking
   activerecord to 100% on every scored axis (methods, files, inheritance,
   arity). State the before/after totals table in the PR body.
 - No other package's inheritance total moves.
 
 ## Out of scope
 
-Extra surface. `pnpm api:extra --package activerecord --novel-only` still
+Extra surface. `pnpm parity:api:extra --package activerecord --novel-only` still
 reports a large novel population; that axis is advisory per this RFC's
 non-goals and is burned down by the per-file extra-surface stories.

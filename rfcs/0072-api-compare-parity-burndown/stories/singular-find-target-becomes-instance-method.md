@@ -25,7 +25,7 @@ renamed it to `findTarget`:
   (Rails `ActiveRecord::Associations::SingularAssociation#find_target`,
   `vendor/rails/activerecord/lib/active_record/associations/singular_association.rb:47`)
 
-That cleared the `api:compare` extra (`associations.ts` 14 → 13 novel), but the
+That cleared the `parity:api` extra (`associations.ts` 14 → 13 novel), but the
 same fidelity gap called out by the sibling story
 `through-find-target-becomes-instance-method` remains, in a different file: in
 Rails `find_target` is a **private instance method** on the association object,
@@ -60,7 +60,7 @@ sequence this after it so both land on one pattern.
 - `findTarget` in `associations/singular-association.ts` is a method on
   `SingularAssociation` (or `BelongsToAssociation`, matching Rails' host),
   reading `owner` / `reflection` / `scope` off `this`.
-- `api:compare` still matches `singular_association.rb` 10/10 and
+- `parity:api` still matches `singular_association.rb` 10/10 and
   `associations.ts` novel extras do not increase.
 - The `record.loadBelongsTo(name)` reader sugar keeps working unchanged.
 - Association suites pass; no test renames.

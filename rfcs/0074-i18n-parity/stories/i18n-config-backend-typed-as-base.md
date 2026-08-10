@@ -34,7 +34,7 @@ not typecheck — `storeTranslations` was PR #6011, and the same will happen for
 `Chain` / `Fallbacks` decorators as they land.
 
 Coupled to this: `registerDefaultBackend` in the same file is the one novel
-public name `pnpm api:extra --package i18n` reports for `config.ts`. It exists
+public name `pnpm parity:api:extra --package i18n` reports for `config.ts`. It exists
 only because the interface has no concrete default — the gem just writes
 `Backend::Simple.new` inline in `config.rb:27`.
 
@@ -59,5 +59,5 @@ only because the interface has no concrete default — the gem just writes
   reads and writes `Base`.
 - `registerDefaultBackend` removed, or the remaining need for it stated with
   the TypeScript language shortcoming that forces it.
-- `pnpm api:extra --package i18n` novel count for `config.ts` drops from 1 to 0.
+- `pnpm parity:api:extra --package i18n` novel count for `config.ts` drops from 1 to 0.
 - `pnpm vitest run packages/i18n/src` green.

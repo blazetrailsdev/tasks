@@ -40,7 +40,7 @@ first, keys escaped) for `rubyFileToTs`. Extend the reachability test added in P
       restating `erb`.
 - [ ] A test asserts every `TOKEN_RENAMES` key is reachable via the file-path
       path, not only via `snakeToCamel`.
-- [ ] `pnpm api:compare` per-package totals unchanged (behavior-preserving);
+- [ ] `pnpm parity:api` per-package totals unchanged (behavior-preserving);
       diff the full table with a fresh `pnpm build` on both sides.
-- [ ] `pnpm api:conventions` regenerates `docs/ruby-ts-conventions.md` with no
+- [ ] `pnpm parity:api:conventions` regenerates `docs/ruby-ts-conventions.md` with no
       diff.

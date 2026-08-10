@@ -21,7 +21,7 @@ closed-reason: null
 
 Three tests in `packages/i18n/src/exceptions.trails.test.ts` carry verbatim
 Rails test names while asserting a different path than the Rails cases they are
-named after, so `test:compare --package i18n` reports them as **misplaced**
+named after, so `parity:test --package i18n` reports them as **misplaced**
 (the only misplaced rows in the package after #6002):
 
 - `InvalidPluralizationData stores entry, count and key`
@@ -55,7 +55,7 @@ stores locale, key and options`, …) — all of them route through the same
 - The `force_*` helpers port into `packages/i18n/src/exceptions.test.ts` under
   their Rails names, and the Rails-named cases live there driven through the
   facade.
-- `test:compare --package i18n` reports 0 misplaced and
+- `parity:test --package i18n` reports 0 misplaced and
   `i18n/exceptions_test.rb` matched well above its current 2/12.
 - `exceptions.trails.test.ts` retains only assertions with no Rails
   counterpart; no Rails-derived test is renamed.

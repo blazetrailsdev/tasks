@@ -19,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`test:compare --package i18n` reports `i18n/interpolate_test.rb` at 0/14 after
+`parity:test --package i18n` reports `i18n/interpolate_test.rb` at 0/14 after
 the test-compare enrollment (#6002). The implementation is already ported —
 `packages/i18n/src/interpolate/ruby.ts` mirrors
 `vendor/i18n/lib/i18n/interpolate/ruby.rb` — but its only coverage is the
@@ -40,7 +40,7 @@ facade already exports, and covers named placeholders
 ## Acceptance criteria
 
 - `packages/i18n/src/interpolate.test.ts` carries the gem's cases under their
-  verbatim Rails names; `test:compare --package i18n` shows
+  verbatim Rails names; `parity:test --package i18n` shows
   `i18n/interpolate_test.rb` matched.
 - Any case that cannot port is left measured as missing, not excluded — the
   enrollment PR established that `unported-files.ts` is not a deferral list.

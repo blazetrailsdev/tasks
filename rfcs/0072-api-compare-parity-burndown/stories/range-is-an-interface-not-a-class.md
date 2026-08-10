@@ -82,5 +82,5 @@ staged migration; the endgame is `new Range(1, 2)`.
       range; the dispatcher's Range arm is an `instanceof`.
 - [ ] `validations/clusivity.ts:177` and `validations.ts:420` lose the comments
       noting the class's absence.
-- [ ] `pnpm api:extra --package activesupport` novel count strictly drops;
-      `pnpm api:compare` / `pnpm test:compare` deltas non-negative.
+- [ ] `pnpm parity:api:extra --package activesupport` novel count strictly drops;
+      `pnpm parity:api` / `pnpm parity:test` deltas non-negative.

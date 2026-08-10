@@ -66,6 +66,6 @@ string-keyed maps hold (CLAUDE.md, `[[i18n-symbol-values-are-colon-strings]]`).
       `toSym`, and `resolveLink` applies `key.to_s`.
 - [ ] A test stores a link under `":en"` and resolves it under `"en"` (and the
       reverse), reaching the same entry.
-- [ ] `pnpm api:calls` gains no row and no `to_sym` row is baselined — these
+- [ ] `pnpm parity:api:calls` gains no row and no `to_sym` row is baselined — these
       two should RESOLVE rows, so delete the stale baseline entries by hand
       rather than reseeding.

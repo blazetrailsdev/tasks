@@ -26,9 +26,9 @@ stamps it, so `date/calculations.rb` never appears in `rubyFiles` and the TS
 file it maps to falls into the `uncoveredTsFiles(...)` arm with
 `rubyFile: null` — scored against an EMPTY allowed set.
 
-Concretely, after PR #6197: `api:extra --package activesupport` reports
+Concretely, after PR #6197: `parity:api:extra --package activesupport` reports
 `date-ext.ts — 1 novel, 16 moved [no Rails counterpart]`, even though
-`api:compare` in the same run reports
+`parity:api` in the same run reports
 `core_ext/date/calculations.rb -> date-ext.ts  15 matched`. Every one of those
 17 names traces to a Ruby method in that file. `RUBY_FILE_TS_OVERRIDES` already
 carries the mapping; the reverse walk just never consults it for a file with no
@@ -51,7 +51,7 @@ file HAS a Rails counterpart.
 
 ## Acceptance criteria
 
-- [ ] `api:extra --package activesupport` no longer tags `date-ext.ts`
+- [ ] `parity:api:extra --package activesupport` no longer tags `date-ext.ts`
       `[no Rails counterpart]`, and its names score against the allowed set
       derived from `core_ext/date/calculations.rb`.
 - [ ] No other package's Novel/Moved totals regress; the stale-tag gate stays

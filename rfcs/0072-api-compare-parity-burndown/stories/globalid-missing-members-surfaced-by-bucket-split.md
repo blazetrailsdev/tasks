@@ -40,5 +40,5 @@ missing/diverged members — globalid went 63/63 to 76/80:
 
 - All four are ported at the Rails names, in Rails' source order, or a specific
   TypeScript language shortcoming is documented at the call site.
-- `pnpm api:compare --package globalid` reports 80/80.
+- `pnpm parity:api --package globalid` reports 80/80.
 - `toJSON` is kept only as the JS hook, delegating to the ported `asJson`.

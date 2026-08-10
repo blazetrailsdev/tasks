@@ -17,7 +17,7 @@ closed-reason: null
 
 ## Context
 
-`pnpm api:compare` reports i18n at `files: 13/14` — the one unmatched Ruby file
+`pnpm parity:api` reports i18n at `files: 13/14` — the one unmatched Ruby file
 is `backend/flatten.rb`, all 8 of its members unported:
 
 ```text
@@ -43,6 +43,6 @@ as a real 8-method gap instead of a declared exclusion.
   `package: "i18n"`, with a reason naming the three deferred consumers
   (`key_value.rb`, `cache_file.rb`, `memoize.rb`) — same shape as the sibling
   entries at lines 1141-1177.
-- `pnpm api:compare` reports i18n `files: 13/13` and the method denominator
+- `pnpm parity:api` reports i18n `files: 13/13` and the method denominator
   drops by 8 (130/135), with no other package's numbers moving.
 - No `flatten.ts` stub is added (CLAUDE.md: no placeholder files).
