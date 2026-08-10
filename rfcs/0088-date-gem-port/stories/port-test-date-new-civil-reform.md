@@ -18,40 +18,33 @@ closed-reason: null
 
 ## Context
 
-`vendor/date/test/date/test_date_new.rb:194-214` (`test_civil__reform`) is the
-one test in the 7-214 range PR #6315 (`port-test-date-new-jd-ordinal-civil`)
-could not port. It sits in `packages/date/src/test-date-new.test.ts` today as an
-`it.skip` carrying this reason.
+`test_civil__reform` (`vendor/date/test/date/test_date_new.rb:194-214`) **is
+ported and credited** as of PR #6315 — `it("civil reform")` in
+`packages/date/src/test-date-new.test.ts`, asserting both reform jumps
+(1752-09-14 → 1752-09-02 and 1582-10-15 → 1582-10-04).
 
-Its first half — `Date.jd(Date::ENGLAND, Date::ENGLAND)` and
-`DateTime.jd(Date::ENGLAND, 0,0,0,0, Date::ENGLAND)` answering `[1752, 9, 14]`,
-and the `Date::ITALY` pair answering `[1582, 10, 15]` — already passes today.
-The calendar arithmetic is right too: `new Date(1752, 9, 14, Date.ENGLAND).plus(-1)`
-answers 1752-09-02, the reform day the test wants.
+What remains is one spelling. Ruby's `d -= 1` is written there as `plus(-1)`,
+which is not an approximation: `d_lite_minus`'s Fixnum arm IS
+`d_lite_plus(self, LONG2NUM(-FIX2LONG(other)))`
+(`vendor/date/ext/date/date_core.c:6350-6352`). `Date#-` itself
+(`d_lite_minus`, `:6343-6360`) is ported by PR #6313, which was still open when
+PR #6315 shipped, so duplicating it there would have collided in the same file.
 
-Two surface gaps block the second half, `d -= 1` / `dt -= 1`:
-
-1. **No receiver.** `Date.jd` / `DateTime.jd` answer a `Temporal.PlainDate` /
-   `PlainDateTime` (RFC 0088's headline decision, `vendor/sources.ts:212-221`),
-   which has no `-`. `Temporal`'s own `subtract({ days: 1 })` walks the
-   proleptic ISO calendar and lands on 1752-09-13, not 1752-09-02. Converging
-   the builder back to a Ruby-shaped return is explicitly out of bounds.
-2. **`Date#-` is unported.** `d_lite_minus`
-   (`vendor/date/ext/date/date_core.c:6344`) has no counterpart in
-   `packages/date/src/date.ts`; only `Date#+` (`plus`, `d_lite_plus`,
-   `date_core.c:5953`) exists.
-
-Substituting `Date.jd(Date::ENGLAND - 1, Date::ENGLAND)` for the `-= 1` would
-make the test pass while testing something the Ruby does not, so it was left
-skipped rather than adjusted.
+The receiver is `dNewByFrags({ jd: Date.ENGLAND }, Date.ENGLAND)` rather than
+Ruby's `Date.jd(...)`, because `Date.jd` answers the `Temporal` seat (RFC 0088,
+`vendor/sources.ts:212-221`). `d_new_by_frags` (`date_core.c:4283`) and
+`date_s_jd` (`:3377-3387`) both end at `d_simple_new_internal` (`:3036`), and
+the test asserts the two agree. `toDate()`'s JSDoc names this as the sanctioned
+route — but it also names a `Temporal` constructor overload on `Date` that the
+class does not actually declare, which is worth reconciling.
 
 ## Acceptance criteria
 
-- [ ] `Date#-` / `DateTime#-` ported as `minus` from `d_lite_minus`
-      (`date_core.c:6344`), mirroring the arm split `plus` already has.
-- [ ] A decision recorded for how the test reaches a `Date` receiver from
-      `Date.jd` without reversing RFC 0088's `Temporal` return.
-- [ ] The `it.skip("civil reform")` in `packages/date/src/test-date-new.test.ts`
-      becomes a real `it`, under its Ruby name, against that `minus`.
-- [ ] `pnpm test:compare --package date` credits it: the `test_date_new.rb` row
-      gains one OK and loses one Skip, with 0 Desc.
+- [ ] After #6313 merges, `plus(-1)` in `it("civil reform")` becomes `minus(1)`,
+      matching Ruby's `d -= 1`; the explanatory comment shrinks to the receiver
+      note.
+- [ ] Either declare the `Temporal.PlainDate` constructor overload `toDate()`'s
+      JSDoc promises, or correct that JSDoc to name `dNewByFrags` /
+      `dtNewByFrags` as the only inverse seat.
+- [ ] `pnpm test:compare --package date` still credits `civil reform`; the
+      `test_date_new.rb` row stays at 11 OK / 0 Skip / 0 Desc.
