@@ -1,6 +1,6 @@
 ---
 title: "mysql-structure-dump-ignores-schema-dumper-ignore-tables"
-status: in-progress
+status: done
 updated: 2026-08-10
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
