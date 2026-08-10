@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 + mysql2 expose performQuery on the prototype with Rails' signature"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6327
 claim: "2026-08-10T09:46:32Z"
 assignee: "wire-perform-query-on-sqlite3-mysql2-prototypes"
 blocked-by: null
