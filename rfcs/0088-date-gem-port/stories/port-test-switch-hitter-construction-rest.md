@@ -1,6 +1,6 @@
 ---
 title: "port-test-switch-hitter-construction-rest"
-status: ready
+status: closed
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by PR #6317, which ported all ten scoped TestSH tests rather than the five it first shipped: test_jd/test_ordinal/test_commercial read back through the Temporal seat's own readers, test_fractional needed Date.jd/.ordinal/.commercial/.civil to run their argument through num2num_with_frac/num2int_with_frac and add_frac (date_core.c:3374, :3441, :3524, :3625), and test_strftime needed Errno::ERANGE off date_strftime_alloc's 1024*flen bound (date_core.c:7081-7097, date_strftime.c:579) plus Date.today (date_s_today, :3789-3826). test_switch_hitter.rb is 10/18 credited, the whole of lines 7-299."
 ---
 
 ## Context
