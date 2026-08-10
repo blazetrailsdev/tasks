@@ -1,6 +1,6 @@
 ---
 title: "Port test_date_new.rb jd/ordinal/civil constructors (11 tests)"
-status: claimed
+status: in-progress
 updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6315
 claim: "2026-08-10T01:16:46Z"
 assignee: "date-infinity-has-none-of-numerics-inherited-comparable-surface"
 blocked-by: null
