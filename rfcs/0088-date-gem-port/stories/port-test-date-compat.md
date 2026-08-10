@@ -1,7 +1,7 @@
 ---
 title: "Port test_date_compat.rb (1 test)"
-status: in-progress
-updated: 2026-08-09
+status: done
+updated: 2026-08-10
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
