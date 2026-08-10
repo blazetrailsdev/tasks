@@ -1,6 +1,6 @@
 ---
 title: "Rails API/Test Comparison failing on main @f0854d4b"
-status: claimed
+status: closed
 updated: 2026-08-10
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: "2026-08-10T00:38:05Z"
-assignee: "red-f0854d4b"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Rails API/Test Comparison red was the call-mismatches unreviewed STALE mark (activerecord/connection-adapters/sqlite3-adapter.json mark 33, only 30 unreviewed); already fixed on main by #6310 which tightened max to 30. No code change needed."
 ---
 
 ## Context
