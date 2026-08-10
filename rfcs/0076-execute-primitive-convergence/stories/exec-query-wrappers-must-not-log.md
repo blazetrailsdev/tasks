@@ -16,6 +16,16 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Overlap with `wire-raw-execute-through-log`
+
+Filed before #6311 landed. That PR owns the sibling story
+`wire-raw-execute-through-log` and did the `rawExecute` → `log` half plus
+`rawExecQuery`; #6325 does the `internalExecQuery` half and closes THIS story.
+`wire-raw-execute-through-log` stays open for the piece neither PR did: routing
+the concrete adapters' own query paths through `rawExecute` instead of each
+calling `log` directly. Do not re-do the wrapper work from this story's Context
+below — read it as the record of why, then check `git log` first.
+
 ## Context
 
 Surfaced in review of PR #6325 (story
