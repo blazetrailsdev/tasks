@@ -1,6 +1,6 @@
 ---
 title: "call-args-arel-population-recheck"
-status: ready
+status: claimed
 updated: 2026-08-10
 rfc: "0095-call-argument-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-10T15:43:28Z"
+assignee: "call-args-arel-population-recheck"
 blocked-by: null
 closed-reason: null
 ---
