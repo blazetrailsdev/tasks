@@ -3,7 +3,7 @@ rfc: "0088-date-gem-port"
 title: "Port the ruby/date gem as its own package, returning Temporal by default"
 status: active
 created: 2026-08-05
-updated: 2026-08-05
+updated: 2026-08-10
 owner: "@deanmarano"
 packages:
   - "date"
@@ -14,7 +14,7 @@ packages:
 clusters: []
 related:
   - "0074-i18n-parity"
-priority: 1
+priority: 3
 ---
 
 # Port the ruby/date gem as its own package, returning Temporal by default
