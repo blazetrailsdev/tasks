@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-activerecord-rest-3"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
