@@ -1,7 +1,7 @@
 ---
 title: "Port test_date_parse.rb iso8601/rfc3339/xmlschema/rfc2822/httpdate/jisx0301 (14 tests)"
-status: in-progress
-updated: 2026-08-10
+status: done
+updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
