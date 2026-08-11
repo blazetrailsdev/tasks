@@ -1,6 +1,6 @@
 ---
 title: "Classify the 410 activerecord call-argument shape rows into convergence clusters"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6348
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
 blocked-by: null
