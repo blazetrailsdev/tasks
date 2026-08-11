@@ -1,6 +1,6 @@
 ---
 title: "Converge the autosave save-body locals to the Rails identifiers"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6385
 claim: "2026-08-11T23:26:01Z"
 assignee: "converge-autosave-belongs-to-and-insert-helpers"
 blocked-by: null
