@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-callback-symbol-name-arm"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
