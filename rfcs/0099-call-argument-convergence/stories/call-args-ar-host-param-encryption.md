@@ -1,6 +1,6 @@
 ---
 title: "Converge the explicit-host argument in ported encryption module functions (13 rows)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 156
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T21:46:04Z"
+assignee: "converge-association-build-record-build-association"
 blocked-by: null
 closed-reason: null
 ---

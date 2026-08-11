@@ -1,6 +1,6 @@
 ---
 title: "upsert_all and the bulk-write wrappers name their first parameter attributes"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T21:46:04Z"
+assignee: "converge-association-build-record-build-association"
 blocked-by: null
 closed-reason: null
 ---
