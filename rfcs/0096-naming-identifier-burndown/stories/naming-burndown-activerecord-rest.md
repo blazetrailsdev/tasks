@@ -1,6 +1,6 @@
 ---
 title: "Rename locals/params to Rails' across the rest of activerecord"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare

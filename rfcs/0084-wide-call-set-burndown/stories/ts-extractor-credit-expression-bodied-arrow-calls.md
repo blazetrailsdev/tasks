@@ -1,6 +1,6 @@
 ---
 title: "collectCalls/extractSkeleton skip an expression-bodied arrow's outermost call"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
