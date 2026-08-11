@@ -1,6 +1,6 @@
 ---
 title: "burndown-order-only-rows-associations-remainder"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6379
 claim: "2026-08-11T21:26:07Z"
 assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null
