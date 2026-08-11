@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-activerecord-rest-3"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6366
 claim: "2026-08-11T15:43:39Z"
 assignee: "naming-burndown-activerecord-rest-3"
 blocked-by: null
