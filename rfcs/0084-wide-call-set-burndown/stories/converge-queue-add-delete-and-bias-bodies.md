@@ -1,6 +1,6 @@
 ---
 title: "converge-queue-add-delete-and-bias-bodies"
-status: claimed
+status: ready
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-11T19:33:34Z"
-assignee: "audit-constructor-idiom-cluster-reasons"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
