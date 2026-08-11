@@ -1,6 +1,6 @@
 ---
 title: "Comparator: pair same-named call occurrences by argument similarity, not source order (15 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6351
 claim: "2026-08-11T11:44:00Z"
 assignee: "call-args-tool-pair-same-named-calls-by-similarity"
 blocked-by: null
