@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 47 naming call-argument rows in PostgreSQL adapter and OID types"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 188
 priority: 10
-pr: null
+pr: 6386
 claim: "2026-08-11T23:31:32Z"
 assignee: "naming-burndown-2-pg-adapter"
 blocked-by: null
