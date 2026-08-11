@@ -1,6 +1,6 @@
 ---
 title: "strftime-erange-does-not-model-the-alloc-doubling-loop"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
