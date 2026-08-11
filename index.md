@@ -101,4 +101,4 @@
 | [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | active | @your-handle | activerecord, arel, activesupport, activemodel, actiondispatch, actionview, actioncontroller, rack |
 | [0097-parity-output-sharding](rfcs/0097-parity-output-sharding/README.md) | Per-source-file sharding for parity registers and artifacts | draft | @deanmarano | — |
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | draft | @your-handle | activesupport |
-| [0099-call-argument-convergence](rfcs/0099-call-argument-convergence/README.md) | Call-argument convergence burndown | active | @deanmarano | activerecord, arel |
+| [0099-call-argument-convergence](rfcs/0099-call-argument-convergence/README.md) | Call-argument convergence burndown | active | @deanmarano | activerecord, arel, activemodel, activesupport, i18n, globalid |

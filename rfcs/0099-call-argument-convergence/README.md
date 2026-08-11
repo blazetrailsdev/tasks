@@ -3,11 +3,15 @@ rfc: "0099-call-argument-convergence"
 title: "Call-argument convergence burndown"
 status: active
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 owner: "@deanmarano"
 packages:
-  - "activerecord"
-  - "arel"
+  - activerecord
+  - arel
+  - activemodel
+  - activesupport
+  - i18n
+  - globalid
 clusters:
   - "api-compare"
 related-rfcs:
