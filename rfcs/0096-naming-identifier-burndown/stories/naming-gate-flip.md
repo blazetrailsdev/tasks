@@ -24,7 +24,7 @@ deps:
   - naming-burndown-2-ar-mysql-sqlite-adapters
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 30
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
