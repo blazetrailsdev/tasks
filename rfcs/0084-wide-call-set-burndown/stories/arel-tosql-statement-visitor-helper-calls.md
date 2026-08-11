@@ -1,7 +1,7 @@
 ---
 title: "arel-tosql-statement-visitor-helper-calls"
-status: ready
-updated: 2026-08-05
+status: claimed
+updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages:
@@ -10,8 +10,8 @@ deps: []
 deps-rfc: []
 est-loc: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T14:26:06Z"
+assignee: "arel-tosql-statement-visitor-helper-calls"
 blocked-by: null
 closed-reason: null
 ---

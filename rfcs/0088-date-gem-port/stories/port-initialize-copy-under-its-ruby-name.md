@@ -1,7 +1,7 @@
 ---
 title: "Port d_lite_initialize_copy under its Ruby name; stop routing Date#dup through newStart"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T14:26:06Z"
+assignee: "arel-tosql-statement-visitor-helper-calls"
 blocked-by: null
 closed-reason: null
 ---

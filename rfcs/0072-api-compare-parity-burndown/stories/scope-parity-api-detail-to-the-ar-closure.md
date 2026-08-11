@@ -1,7 +1,7 @@
 ---
 title: "Scope the parity:api per-file detail table to the AR closure artifact"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-11
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T14:26:06Z"
+assignee: "arel-tosql-statement-visitor-helper-calls"
 blocked-by: null
 closed-reason: null
 ---

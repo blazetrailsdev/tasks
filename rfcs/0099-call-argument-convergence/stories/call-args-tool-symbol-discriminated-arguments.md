@@ -1,6 +1,6 @@
 ---
 title: "Comparator: enforce the Symbol-vs-String discriminator on call arguments, not just parameter defaults"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T14:26:06Z"
+assignee: "arel-tosql-statement-visitor-helper-calls"
 blocked-by: null
 closed-reason: null
 ---
