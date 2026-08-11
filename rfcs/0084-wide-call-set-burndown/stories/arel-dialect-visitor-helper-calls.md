@@ -1,6 +1,6 @@
 ---
 title: "arel-dialect-visitor-helper-calls"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: null
-pr: null
+pr: 6357
 claim: "2026-08-11T13:46:07Z"
 assignee: "arel-dialect-visitor-helper-calls"
 blocked-by: null
