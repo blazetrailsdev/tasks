@@ -1,6 +1,6 @@
 ---
 title: "translate_exception drops the cause: kwarg and chains the driver error at the raise site"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
