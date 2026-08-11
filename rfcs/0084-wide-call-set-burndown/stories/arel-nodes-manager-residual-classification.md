@@ -1,6 +1,6 @@
 ---
 title: "arel-nodes-manager-residual-classification"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
