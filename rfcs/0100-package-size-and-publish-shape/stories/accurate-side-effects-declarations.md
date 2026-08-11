@@ -2,7 +2,7 @@
 title: "Declare accurate sideEffects arrays"
 status: draft
 updated: 2026-08-11
-rfc: "0000-package-size-and-publish-shape"
+rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages:
   [

@@ -2,7 +2,7 @@
 title: "Add files field to date, did-you-mean, globalid, i18n"
 status: draft
 updated: 2026-08-11
-rfc: "0000-package-size-and-publish-shape"
+rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["date", "i18n", "globalid", "did-you-mean", "activerecord"]
 deps: []

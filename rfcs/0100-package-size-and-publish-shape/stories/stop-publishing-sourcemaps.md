@@ -2,7 +2,7 @@
 title: "Stop publishing sourcemaps (or only .js.map)"
 status: draft
 updated: 2026-08-11
-rfc: "0000-package-size-and-publish-shape"
+rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["activerecord"]
 deps: []

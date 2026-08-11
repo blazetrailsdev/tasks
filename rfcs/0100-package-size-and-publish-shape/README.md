@@ -1,5 +1,5 @@
 ---
-rfc: "0000-package-size-and-publish-shape"
+rfc: "0100-package-size-and-publish-shape"
 title: "Package size and publish shape"
 status: draft
 created: 2026-08-11
