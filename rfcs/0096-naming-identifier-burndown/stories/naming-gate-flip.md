@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T01:14:36Z"
+assignee: "arel-collector-argument-order-convergence"
 blocked-by: null
 closed-reason: null
 ---
