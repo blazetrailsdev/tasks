@@ -15,6 +15,16 @@ blocked-by: null
 closed-reason: null
 ---
 
+> **Superseded — this fix was not the whole story.** The same run-end
+> `QueryCanceled` unhandled rejection recurred on 2026-08-11 (PR #6357, run
+> 31501468481). Root cause, found by
+> `pg-query-canceled-unhandled-rejection-recurrence`: `_cancelAnyRunningQuery`
+> fired the libpq CancelRequest on a detached socket and returned without
+> waiting, so the cancel landed on whatever query was on the wire milliseconds
+> later (measured 25/25 against PG 17). Rails' `cancel` + `block`
+> (postgresql/database_statements.rb:130-131) both block; the port had dropped
+> `block` entirely. See that story for the fix.
+
 ## Context
 
 "Active Record PostgreSQL Tests" shards fail intermittently with **every test
