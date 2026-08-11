@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' collector parameter position across the arel visitor helpers"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6355
 claim: "2026-08-11T13:16:06Z"
 assignee: "naming-burndown-activesupport"
 blocked-by: null
