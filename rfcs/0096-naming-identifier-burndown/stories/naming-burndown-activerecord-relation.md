@@ -1,6 +1,6 @@
 ---
 title: "Rename locals/params to Rails' in activerecord relation"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6352
 claim: "2026-08-11T12:24:26Z"
 assignee: "naming-burndown-activerecord-relation"
 blocked-by: null
