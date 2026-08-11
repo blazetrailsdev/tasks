@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-current-scope-as-method"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
