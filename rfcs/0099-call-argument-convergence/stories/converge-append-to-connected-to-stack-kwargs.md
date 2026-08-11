@@ -1,6 +1,6 @@
 ---
 title: "connected_to_many passes Rails' kwargs to append_to_connected_to_stack"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
