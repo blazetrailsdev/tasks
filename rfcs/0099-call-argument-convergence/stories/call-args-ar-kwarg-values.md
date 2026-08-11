@@ -1,6 +1,6 @@
 ---
 title: "Converge the 20 activerecord sites whose kwarg VALUES diverge from Rails"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
