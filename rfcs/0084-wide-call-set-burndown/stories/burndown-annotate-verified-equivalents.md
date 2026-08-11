@@ -1,6 +1,6 @@
 ---
 title: "burndown-annotate-verified-equivalents"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6372
 claim: "2026-08-11T18:05:53Z"
 assignee: "burndown-annotate-verified-equivalents"
 blocked-by: null
