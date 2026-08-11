@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-association-instance-get"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T22:26:02Z"
+assignee: "converge-autosave-association-instance-get"
 blocked-by: null
 closed-reason: null
 ---
