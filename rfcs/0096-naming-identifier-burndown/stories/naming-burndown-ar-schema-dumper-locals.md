@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining schema-dumper local/parameter names (10 naming rows)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
