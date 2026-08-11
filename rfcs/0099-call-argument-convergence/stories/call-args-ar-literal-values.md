@@ -1,6 +1,6 @@
 ---
 title: "Converge the 12 activerecord call sites passing a different literal than Rails"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
