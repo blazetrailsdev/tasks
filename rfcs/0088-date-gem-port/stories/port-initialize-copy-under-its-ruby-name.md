@@ -1,6 +1,6 @@
 ---
 title: "Port d_lite_initialize_copy under its Ruby name; stop routing Date#dup through newStart"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T18:05:53Z"
+assignee: "burndown-annotate-verified-equivalents"
 blocked-by: null
 closed-reason: null
 ---
