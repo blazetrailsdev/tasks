@@ -1,6 +1,6 @@
 ---
 title: "Rename locals/params to Rails' in the small packages"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
