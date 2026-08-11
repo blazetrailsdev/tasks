@@ -1,6 +1,6 @@
 ---
 title: "in_order_of still wraps adapter_class.column_name_with_order_matcher in a try/catch fallback"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
