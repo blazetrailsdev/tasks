@@ -1,6 +1,6 @@
 ---
 title: "Cover parity:api --closure with tests — the row filter and its totals line ship unverified"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
