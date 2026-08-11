@@ -1,7 +1,7 @@
 ---
 title: "Rename locals/params to Rails' in rack"
-status: ready
-updated: 2026-08-10
+status: closed
+updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "focusing on activerecord"
 ---
 
 ## Context
