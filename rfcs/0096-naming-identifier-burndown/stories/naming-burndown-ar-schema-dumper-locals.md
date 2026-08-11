@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining schema-dumper local/parameter names (10 naming rows)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T17:56:00Z"
+assignee: "converge-relation-where-clause-writer"
 blocked-by: null
 closed-reason: null
 ---
