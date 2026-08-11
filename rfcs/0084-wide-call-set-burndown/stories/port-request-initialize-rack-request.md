@@ -1,6 +1,6 @@
 ---
 title: "port-request-initialize-rack-request"
-status: ready
+status: closed
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: targets actionpack; project focus is activerecord and its dependencies (activemodel, activesupport, arel, adapters)"
 ---
 
 ## Context
