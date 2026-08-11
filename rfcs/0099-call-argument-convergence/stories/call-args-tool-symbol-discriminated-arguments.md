@@ -1,6 +1,6 @@
 ---
 title: "Comparator: enforce the Symbol-vs-String discriminator on call arguments, not just parameter defaults"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6368
 claim: "2026-08-11T16:13:43Z"
 assignee: "naming-burndown-ar-field-and-body-restructures"
 blocked-by: null
