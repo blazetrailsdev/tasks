@@ -1,6 +1,6 @@
 ---
 title: "Comparator: compare the Ruby receiver against TS argument 1 for unmonkey-patchable built-ins (29 rows)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T11:44:18Z"
+assignee: "call-args-tool-builtin-receiver-as-first-arg"
 blocked-by: null
 closed-reason: null
 ---
