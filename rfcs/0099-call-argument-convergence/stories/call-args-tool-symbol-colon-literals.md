@@ -1,6 +1,6 @@
 ---
 title: "Comparator: normalize the colon-prefixed Symbol spelling in call-argument literals (2 rows)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T11:44:28Z"
+assignee: "call-args-tool-symbol-colon-literals"
 blocked-by: null
 closed-reason: null
 ---
