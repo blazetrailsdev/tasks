@@ -13,7 +13,7 @@ clusters:
 related-rfcs:
   - "0095-call-argument-parity"
   - "0096-naming-identifier-burndown"
-  - "0084-call-set-parity-burndown"
+  - "0084-wide-call-set-burndown"
 priority: 2
 ---
 
@@ -42,12 +42,21 @@ mechanism, one convergence story per cluster.
 
 ## Scope
 
-- Convergence of `kind: "args"` baseline rows across all packages.
+- Convergence of `kind: "args"` baseline rows in `activerecord` and the
+  packages it depends on: `activerecord` (372 rows), `activesupport` (45),
+  `arel` (31), `activemodel` (29), `i18n` (10), `globalid` (3) — 490 rows.
 - The classification pass that turns the raw row block into schedulable
   mechanism clusters.
 
-Out of scope: the extractor, normalizer, artifact, report and ratchet
-(RFC 0095), and the `naming` dimension (RFC 0096).
+Out of scope:
+
+- The extractor, normalizer, artifact, report and ratchet (RFC 0095), and the
+  `naming` dimension (RFC 0096).
+- `kind: "args"` rows outside the activerecord dependency graph:
+  `actiondispatch` (77), `actioncontroller` (43), `trailties` (30), `rack` (26),
+  `actionview` (16), `abstractcontroller` (5) — 197 rows. Same mechanism, but a
+  different stack; they get their own RFC rather than riding along here. Do not
+  file stories for them against this RFC.
 
 ## Working rules
 
