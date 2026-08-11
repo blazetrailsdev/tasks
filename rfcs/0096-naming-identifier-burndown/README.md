@@ -3,17 +3,13 @@ rfc: "0096-naming-identifier-burndown"
 title: "Local/parameter identifier burndown (call-argument `naming` class)"
 status: active
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 owner: "@your-handle"
 packages:
-  - "activerecord"
-  - "arel"
-  - "activesupport"
-  - "activemodel"
-  - "actiondispatch"
-  - "actionview"
-  - "actioncontroller"
-  - "rack"
+  - activerecord
+  - arel
+  - activesupport
+  - activemodel
 clusters:
   - "api-compare"
 related-rfcs:
