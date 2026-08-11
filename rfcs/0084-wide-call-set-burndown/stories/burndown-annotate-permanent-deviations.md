@@ -1,6 +1,6 @@
 ---
 title: "B2: migrate permanent deviations to @missingRailsCall tags"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
