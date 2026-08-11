@@ -1,6 +1,6 @@
 ---
 title: "Inline the three remaining trails-only autosave helpers at Rails' call sites"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T23:26:01Z"
+assignee: "converge-autosave-belongs-to-and-insert-helpers"
 blocked-by: null
 closed-reason: null
 ---
