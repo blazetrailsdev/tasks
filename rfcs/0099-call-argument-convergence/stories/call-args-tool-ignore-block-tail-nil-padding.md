@@ -1,6 +1,6 @@
 ---
 title: "Comparator: ignore the nil padding TS needs to reach a block-as-trailing-parameter (11 rows)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
