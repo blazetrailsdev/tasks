@@ -1,5 +1,5 @@
 ---
-title: "assume_migrated_upto_version reads , not a second  local"
+title: "assume_migrated_upto_version reads version, not a second verNum local"
 status: ready
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
