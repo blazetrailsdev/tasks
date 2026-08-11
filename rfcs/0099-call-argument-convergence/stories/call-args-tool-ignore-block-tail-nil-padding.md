@@ -1,6 +1,6 @@
 ---
 title: "Comparator: ignore the nil padding TS needs to reach a block-as-trailing-parameter (11 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6351
 claim: "2026-08-11T11:44:09Z"
 assignee: "call-args-tool-ignore-block-tail-nil-padding"
 blocked-by: null
