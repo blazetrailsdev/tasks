@@ -1,7 +1,7 @@
 ---
 title: "SelectManager#lock inlines Arel.sql's body to dodge an index.ts import cycle"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T13:46:07Z"
+assignee: "arel-dialect-visitor-helper-calls"
 blocked-by: null
 closed-reason: null
 ---
