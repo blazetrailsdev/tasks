@@ -1,6 +1,6 @@
 ---
 title: "establish_connection's ownerName defaults to Base so database_tasks drops the kwarg"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
