@@ -1,6 +1,6 @@
 ---
 title: "establish_connection's ownerName defaults to Base so database_tasks drops the kwarg"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T20:06:07Z"
+assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
 closed-reason: null
 ---
