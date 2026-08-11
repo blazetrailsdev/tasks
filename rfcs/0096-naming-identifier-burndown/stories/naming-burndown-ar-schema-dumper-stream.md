@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-ar-schema-dumper-stream"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null

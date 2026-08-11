@@ -1,6 +1,6 @@
 ---
 title: "Converge the explicit-host argument in ported connection-adapters module functions (13 rows)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
