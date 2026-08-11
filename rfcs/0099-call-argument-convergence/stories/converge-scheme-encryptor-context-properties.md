@@ -1,6 +1,6 @@
 ---
 title: "Scheme#initialize builds an Encryptor only on Rails' two guarded branches"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T16:13:43Z"
+assignee: "naming-burndown-ar-field-and-body-restructures"
 blocked-by: null
 closed-reason: null
 ---
