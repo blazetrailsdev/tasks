@@ -1,6 +1,6 @@
 ---
 title: "Comparator: resolve Ruby __callee__ to the enclosing method name (32 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6349
 claim: "2026-08-11T01:54:24Z"
 assignee: "call-args-tool-resolve-ruby-callee"
 blocked-by: null
