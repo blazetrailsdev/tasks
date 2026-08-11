@@ -1,6 +1,6 @@
 ---
 title: "Converge the 46 activerecord call sites that drop an argument Rails passes"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 552
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T18:22:40Z"
+assignee: "call-args-ar-dropped-argument"
 blocked-by: null
 closed-reason: null
 ---
