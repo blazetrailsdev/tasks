@@ -1,6 +1,6 @@
 ---
 title: "Converge the 17 activerecord sites whose kwarg KEY SET differs from Rails"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 204
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T17:44:26Z"
+assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
 closed-reason: null
 ---
