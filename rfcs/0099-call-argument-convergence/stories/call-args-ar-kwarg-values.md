@@ -1,6 +1,6 @@
 ---
 title: "Converge the 20 activerecord sites whose kwarg VALUES diverge from Rails"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6361
 claim: "2026-08-11T14:16:14Z"
 assignee: "arel-nodes-manager-residual-classification"
 blocked-by: null
