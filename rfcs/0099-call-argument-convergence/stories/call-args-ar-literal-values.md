@@ -1,6 +1,6 @@
 ---
 title: "Converge the 12 activerecord call sites passing a different literal than Rails"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T13:26:07Z"
+assignee: "naming-burndown-activerecord-rest-2"
 blocked-by: null
 closed-reason: null
 ---
