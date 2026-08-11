@@ -1,6 +1,6 @@
 ---
 title: "Rename locals/params to Rails' in arel"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6350
 claim: "2026-08-11T11:41:05Z"
 assignee: "naming-burndown-activemodel"
 blocked-by: null
