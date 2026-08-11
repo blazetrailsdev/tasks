@@ -77,6 +77,23 @@ headline finding is filed here as
 RFC 0077 is the sharpest case: 13 open stories, essentially none missing-call
 shaped. Burning the wide list to zero would not touch a single one of them.
 
+## Scope: activerecord and its dependencies only (2026-08-11)
+
+This RFC is scoped to the **data layer** — activerecord, activemodel,
+activesupport, arel, and the adapter/connection code activerecord depends on —
+which is exactly what `packages` declares. The wide artifact spans all 15
+packages, so it is easy to file a row from actionpack here by accident: four
+such stories (`port-exception-wrapper-build-backtrace`,
+`port-request-get-post-param-builder`, `port-request-initialize-rack-request`,
+`port-system-testing-driver-browser`) were closed as out of scope on 2026-08-11.
+
+**When you triage a wide row, check the package first.** A row under
+`packages/actionpack/**`, `packages/actiondispatch/**`, `packages/actionview/**`,
+`packages/actioncontroller/**`, `packages/rack/**`, `packages/trailties/**`,
+actionmailer, activejob, actioncable or activestorage does not get a story here
+— those rows stay in the baseline until a non-data-layer RFC exists. Filing one
+anyway just spends a review cycle on a close.
+
 ## Bundles
 
 | Bundle | Scope                                                                                          | ~Rows | ~PRs |
@@ -201,6 +218,8 @@ paid-for incident behind it (#4020, #5869), and the unreviewed marks still stop
 the count from growing. What changes is where reviewer attention goes.
 
 ## Non-goals
+
+- **Not non-data-layer packages.** See Scope.
 
 - **Not a substitute for the fidelity RFCs.** The survey settles this: 9% of
   open fidelity work is visible to this gate. Do not repoint fidelity effort

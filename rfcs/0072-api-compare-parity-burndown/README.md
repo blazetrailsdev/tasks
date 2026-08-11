@@ -38,8 +38,10 @@ reports for the data layer, toward full Rails API parity and fidelity:
 
 ## Scope: data layer only (2026-07-30)
 
-This RFC is scoped to the **data layer** — activerecord, activemodel, globalid.
-`actionpack` was dropped from `packages` on 2026-07-30.
+This RFC is scoped to the **data layer** — activerecord, activemodel,
+activesupport, arel, globalid and the adapter/connection code activerecord
+depends on. `actionpack` was dropped from `packages` on 2026-07-30; `actionview` was dropped
+on 2026-08-11 (it was still declared, contradicting this very section).
 
 Its story history does not reflect that: a run of actionpack and actionview
 stories (ActionView::Rendering / ViewPaths ports, the prepend/append action
@@ -53,8 +55,10 @@ date (`converge-cache-request-empty-header-truthiness`,
 `converge-http-cache-predicates-onto-is-prefix`, was left alone because PR #5637
 was already open against it.
 
-**Do not file new actionpack / actionview / actiondispatch work here.** It needs
-its own RFC.
+**Do not file new actionpack / actiondispatch / actionview / actioncontroller /
+rack / actionmailer / activejob / actioncable / activestorage / railties work
+here.** It needs its own RFC. A 2026-08-11 audit of every draft/ready story in
+this RFC found none left, so the section is now accurate — keep it that way.
 
 ## Arity deep-dive (2026-07-25 snapshot, 79 activerecord mismatches)
 

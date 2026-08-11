@@ -88,6 +88,24 @@ Rules for every story:
   `lint-call-args.ts` only when the last story here lands — that flip is the
   campaign's closing story.
 
+## Scope: activerecord and its dependencies only (2026-08-11)
+
+This RFC is scoped to the **data layer** — activerecord, activemodel,
+activesupport, arel, and the adapter/connection code activerecord depends on.
+`actiondispatch`, `actionview`, `actioncontroller` and `rack` were dropped from
+`packages` on 2026-08-11, and the wave-1/wave-2 stories for them
+(`naming-burndown-2-actiondispatch-routing-middleware`,
+`naming-burndown-2-actiondispatch-http`, `naming-burndown-2-actionview`,
+`naming-burndown-2-actioncontroller`, `naming-burndown-2-rack`) were closed as
+out of scope. Done/closed stories from before that date stay put as history.
+
+**Do not file new actionpack / actiondispatch / actionview / actioncontroller /
+rack / actionmailer / activejob / actioncable / activestorage / railties work
+here.** The `naming` rows in those packages are real, but they need their own
+RFC. Rows 5, 8 and 9 in the Rollout list below are therefore **out of scope and
+will not be worked** — they are left in place so the row arithmetic in
+Motivation still reconciles.
+
 ## Rollout
 
 Per-package stories, largest first, each independently claimable:
@@ -101,11 +119,11 @@ Per-package stories, largest first, each independently claimable:
    split further at claim time if a bundle exceeds the LOC ceiling.
 4. `naming-burndown-arel` — 109 rows (visitors/to-sql.ts 28, select-manager 14,
    attributes/attribute 10, tail).
-5. `naming-burndown-actiondispatch` — 85 rows.
+5. ~~`naming-burndown-actiondispatch` — 85 rows.~~ (out of scope, see Scope)
 6. `naming-burndown-activesupport` — 84 rows (cache.ts alone is 35).
 7. `naming-burndown-activemodel` — 49 rows.
-8. `naming-burndown-rack` — 42 rows.
-9. `naming-burndown-actionview-actioncontroller` — 60 rows.
+8. ~~`naming-burndown-rack` — 42 rows.~~ (out of scope, see Scope)
+9. ~~`naming-burndown-actionview-actioncontroller` — 60 rows.~~ (out of scope, see Scope)
 10. `naming-burndown-tail` — globalid, i18n, trailties, abstractcontroller,
     did-you-mean (46 rows combined).
 11. `naming-gate-flip` — gate `naming` alongside `shape` in
@@ -116,6 +134,7 @@ Per-package stories, largest first, each independently claimable:
 
 - **Not the `shape` class.** That is gated already (RFC 0095).
 - **Not a rename of methods, classes or fields.** `parity:api` owns those.
+- **Not non-data-layer packages.** See Scope: actionpack and friends are out.
 - **Not a normalization rule for the ~6% tooling residue.** Those rows carry a
   baseline reason at the gate flip.
 
