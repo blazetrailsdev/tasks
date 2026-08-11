@@ -1,6 +1,6 @@
 ---
 title: "pg-reset-body-under-one-lock"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0061-ci-failures"
 cluster: null
