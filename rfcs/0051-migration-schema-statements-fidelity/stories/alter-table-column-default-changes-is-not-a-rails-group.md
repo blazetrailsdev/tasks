@@ -62,4 +62,4 @@ port of `schema_creation.rb:24-32`.
 - [ ] Every existing caller of the removed pusher reaches the same emitted
       SQL through the `ChangeColumnDefaultDefinition` path.
 - [ ] `pnpm parity:api:calls` / `:args` stay green; `pnpm parity:api:extra
-  --package activerecord` does not grow.
+--package activerecord` does not grow.
