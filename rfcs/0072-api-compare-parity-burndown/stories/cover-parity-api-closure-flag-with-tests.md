@@ -1,6 +1,6 @@
 ---
 title: "Cover parity:api --closure with tests — the row filter and its totals line ship unverified"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6368
 claim: "2026-08-11T16:13:43Z"
 assignee: "naming-burndown-ar-field-and-body-restructures"
 blocked-by: null
