@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-where-clause-writer"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6371
 claim: "2026-08-11T17:56:00Z"
 assignee: "converge-relation-where-clause-writer"
 blocked-by: null
