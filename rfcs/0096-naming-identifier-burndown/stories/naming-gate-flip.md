@@ -1,6 +1,6 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
-status: claimed
+status: blocked
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: null
+blocked-by: "Precondition unmet: the naming class is not drained — parity:api:calls:args:report on main today reports 886 naming rows vs 717 shape. The story's own Context conditions the flip on the per-package burndown having reduced naming to the ~6% tooling residue; gating now would mean seeding ~886 baseline rows, which is exactly the allowlist-widening the RFC forbids. Re-open once the naming burndown stories have drained the class to residue size."
 closed-reason: null
 ---
 
