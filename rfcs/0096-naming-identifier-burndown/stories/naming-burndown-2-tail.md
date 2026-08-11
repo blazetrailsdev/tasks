@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 25 naming call-argument rows in the small packages — globalid, i18n, trailties, abstractcontroller, did-you-mean"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
