@@ -1,6 +1,6 @@
 ---
 title: "Burn down the residual 35 activesupport naming call-argument rows"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6360
 claim: "2026-08-11T14:06:07Z"
 assignee: "naming-burndown-activesupport-2"
 blocked-by: null
