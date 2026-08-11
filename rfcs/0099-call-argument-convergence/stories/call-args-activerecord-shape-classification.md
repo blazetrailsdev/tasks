@@ -1,6 +1,6 @@
 ---
 title: "Classify the 410 activerecord call-argument shape rows into convergence clusters"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
