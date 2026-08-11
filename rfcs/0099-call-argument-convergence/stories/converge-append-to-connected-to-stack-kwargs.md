@@ -1,6 +1,6 @@
 ---
 title: "connected_to_many passes Rails' kwargs to append_to_connected_to_stack"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6370
 claim: "2026-08-11T17:44:26Z"
 assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
