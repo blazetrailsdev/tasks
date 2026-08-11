@@ -1,6 +1,6 @@
 ---
 title: "disallow_raw_sql! permit: passes adapter_class.column_name_with_order_matcher inline"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
