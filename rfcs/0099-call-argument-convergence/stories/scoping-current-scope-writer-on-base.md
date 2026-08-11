@@ -1,6 +1,6 @@
 ---
 title: "Base.setCurrentScope / setGlobalCurrentScope writers (scoping.rb:29-39)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
