@@ -1,6 +1,6 @@
 ---
 title: "collect_ctes hoists a node local behind a typeof guard where Rails visits child.to_cte"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
