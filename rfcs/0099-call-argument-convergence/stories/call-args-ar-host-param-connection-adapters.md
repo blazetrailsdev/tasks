@@ -1,6 +1,6 @@
 ---
 title: "Converge the explicit-host argument in ported connection-adapters module functions (36 rows)"
-status: claimed
+status: ready
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 432
 priority: null
 pr: null
-claim: "2026-08-11T13:46:07Z"
-assignee: "arel-dialect-visitor-helper-calls"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
