@@ -1,6 +1,6 @@
 ---
 title: "Raise Ruby's FrozenError, with rb_check_frozen's message, from initializeCopy's frozen guard"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T21:26:07Z"
+assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null
 closed-reason: null
 ---

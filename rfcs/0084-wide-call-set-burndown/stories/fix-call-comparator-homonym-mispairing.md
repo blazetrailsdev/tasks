@@ -1,6 +1,6 @@
 ---
 title: "Disambiguate same-name members in the call comparator (query_cache homonym)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T21:26:07Z"
+assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null
 closed-reason: null
 ---
