@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-ar-field-and-body-restructures"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6368
 claim: "2026-08-11T16:13:43Z"
 assignee: "naming-burndown-ar-field-and-body-restructures"
 blocked-by: null
