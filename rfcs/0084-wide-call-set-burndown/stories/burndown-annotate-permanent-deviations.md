@@ -1,13 +1,13 @@
 ---
 title: "B2: migrate permanent deviations to @missingRailsCall tags"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 350
-pr: null
+pr: 6364
 claim: "2026-08-11T15:53:36Z"
 assignee: "burndown-annotate-permanent-deviations"
 blocked-by: null
