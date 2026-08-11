@@ -1,6 +1,6 @@
 ---
 title: "collectCalls/extractSkeleton skip an expression-bodied arrow's outermost call"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6354
 claim: "2026-08-11T12:54:17Z"
 assignee: "naming-burndown-activerecord-rest"
 blocked-by: null
