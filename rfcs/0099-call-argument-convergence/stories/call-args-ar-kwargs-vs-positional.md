@@ -1,6 +1,6 @@
 ---
 title: "Converge the 29 activerecord sites that flatten a Rails kwarg to a positional (or vice versa)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 348
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T14:06:07Z"
+assignee: "naming-burndown-activesupport-2"
 blocked-by: null
 closed-reason: null
 ---
