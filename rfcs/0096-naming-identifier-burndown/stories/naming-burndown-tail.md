@@ -1,6 +1,6 @@
 ---
 title: "Rename locals/params to Rails' in the small packages"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: null
+pr: 6353
 claim: "2026-08-11T11:54:17Z"
 assignee: "naming-burndown-activerecord-adapters"
 blocked-by: null
