@@ -1,6 +1,6 @@
 ---
 title: "assume_migrated_upto_version reads version, not a second verNum local"
-status: done
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6353
+pr: 6366
 claim: "2026-08-11T15:43:39Z"
 assignee: "naming-burndown-activerecord-rest-3"
 blocked-by: null
