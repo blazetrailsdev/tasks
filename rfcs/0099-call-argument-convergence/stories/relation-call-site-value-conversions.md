@@ -1,6 +1,6 @@
 ---
 title: "Converge three relation.ts call sites that pass converted values"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
