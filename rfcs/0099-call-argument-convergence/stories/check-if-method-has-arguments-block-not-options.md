@@ -1,6 +1,6 @@
 ---
 title: "Converge checkIfMethodHasArgumentsBang to Rails' block instead of an invented options hash"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6358
 claim: "2026-08-11T13:36:12Z"
 assignee: "naming-burndown-arel-to-sql"
 blocked-by: null
