@@ -1,6 +1,6 @@
 ---
 title: "Base.setCurrentScope / setGlobalCurrentScope writers (scoping.rb:29-39)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T22:06:06Z"
+assignee: "converge-association-initialize-attributes-inline"
 blocked-by: null
 closed-reason: null
 ---
