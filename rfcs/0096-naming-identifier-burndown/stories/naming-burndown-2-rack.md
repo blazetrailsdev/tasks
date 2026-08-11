@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 39 naming call-argument rows in rack"
-status: ready
+status: closed
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "out of scope: targets rack; project focus is activerecord and its dependencies (activemodel, activesupport, arel, adapters)"
 ---
 
 ## Context
