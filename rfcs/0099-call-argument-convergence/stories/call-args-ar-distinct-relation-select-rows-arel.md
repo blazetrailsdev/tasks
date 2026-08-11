@@ -1,6 +1,6 @@
 ---
 title: "distinct_relation_for_primary_key passes limited.arel to select_rows, not a flattened SQL string"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6363
 claim: "2026-08-11T15:26:09Z"
 assignee: "pg-query-canceled-unhandled-rejection-recurrence"
 blocked-by: null
