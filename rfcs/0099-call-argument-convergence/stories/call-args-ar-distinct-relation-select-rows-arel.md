@@ -1,6 +1,6 @@
 ---
 title: "distinct_relation_for_primary_key passes limited.arel to select_rows, not a flattened SQL string"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
