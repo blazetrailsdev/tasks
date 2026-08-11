@@ -1,6 +1,6 @@
 ---
 title: "in_order_of still wraps adapter_class.column_name_with_order_matcher in a try/catch fallback"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6371
 claim: "2026-08-11T17:56:00Z"
 assignee: "converge-relation-where-clause-writer"
 blocked-by: null
