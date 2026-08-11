@@ -41,14 +41,26 @@ trails invention.
 
 ## Acceptance criteria
 
-- `resetBang` no longer fires a CancelRequest; the ROLLBACK runs under the same
-  lock Rails takes (`transactionManager.synchronize`), so it waits behind an
-  in-flight query instead of killing it.
+- `resetBang` no longer fires a CancelRequest, so it cannot kill a query
+  another async chain owns. node-pg queues the ROLLBACK behind the in-flight
+  query on the same client, which is the ordering Rails gets from `@lock`.
 - Regression test in `adapters/postgresql/postgresql-adapter.trails.test.ts`
   next to `rollback does not cancel a query issued by another chain`, verified
   to fail on baseline.
-- The now-converged `reset!` / `synchronize` call-mismatch baseline row is
-  deleted by hand and the per-file unreviewed mark tightened.
+
+AMENDED 2026-08-11, with evidence, during review of PR #6365. This story
+originally also required the reset body to run under
+`transactionManager.synchronize` (Rails' single `@lock.synchronize`, and the
+`reset!` / `synchronize` call-mismatch baseline row it would converge). That was
+implemented and it DEADLOCKS: `withRawConnection`'s in-lock
+`awaitRawConnectionReady()`, `_acquireFreshClient` and `verifyBang` all await
+`_inFlightReset` while already holding the lock, so a lock-taking reset queues
+behind a query waiting for the reset. A pre-lock drain (TOCTOU) and a
+"do I hold the lock" guard were both tried and both still deadlocked, measured
+against the regression test `a query holding the lock does not wait on a reset
+queued behind it`. The lock scope, and the baseline row it converges, moved to
+`pg-reset-body-under-one-lock`, which carries that evidence — this story ships
+the cancel removal only, and leaves the lock scope exactly as main has it.
 
 ## Definition of done
 
