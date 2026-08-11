@@ -1,7 +1,7 @@
 ---
 title: "Rename locals/params to Rails' in activemodel"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T11:41:05Z"
+assignee: "naming-burndown-activemodel"
 blocked-by: null
 closed-reason: null
 ---
