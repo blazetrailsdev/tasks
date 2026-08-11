@@ -1,6 +1,6 @@
 ---
 title: "Comparator: record the Ruby receiver on CallSite so the built-in table compares it instead of stripping it"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
