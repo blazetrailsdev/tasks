@@ -1,6 +1,6 @@
 ---
 title: "pg-query-canceled-unhandled-rejection-recurrence"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T15:26:09Z"
+assignee: "pg-query-canceled-unhandled-rejection-recurrence"
 blocked-by: null
 closed-reason: null
 ---
