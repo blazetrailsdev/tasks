@@ -1,6 +1,6 @@
 ---
 title: "pg-reset-body-under-one-lock"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6376
 claim: "2026-08-11T20:48:10Z"
 assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
