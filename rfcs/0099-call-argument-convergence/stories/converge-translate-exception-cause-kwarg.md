@@ -1,6 +1,6 @@
 ---
 title: "translate_exception drops the cause: kwarg and chains the driver error at the raise site"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6375
 claim: "2026-08-11T20:06:07Z"
 assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
