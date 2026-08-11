@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-ar-schema-dumper-stream"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T16:36:38Z"
+assignee: "naming-burndown-ar-schema-dumper-stream"
 blocked-by: null
 closed-reason: null
 ---

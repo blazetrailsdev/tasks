@@ -1,6 +1,6 @@
 ---
 title: "Converge the explicit-host argument in ported connection-adapters module functions (36 rows)"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 432
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T16:36:38Z"
+assignee: "naming-burndown-ar-schema-dumper-stream"
 blocked-by: null
 closed-reason: null
 ---
