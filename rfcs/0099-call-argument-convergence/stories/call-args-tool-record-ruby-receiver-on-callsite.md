@@ -1,6 +1,6 @@
 ---
 title: "Comparator: record the Ruby receiver on CallSite so the built-in table compares it instead of stripping it"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6356
 claim: "2026-08-11T13:26:07Z"
 assignee: "naming-burndown-activerecord-rest-2"
 blocked-by: null
