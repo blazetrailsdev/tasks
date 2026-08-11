@@ -1,6 +1,6 @@
 ---
 title: "arel-unary-operation-expr-rename"
-status: done
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6371
+pr: 6377
 claim: "2026-08-11T20:50:30Z"
 assignee: "arel-append-escape-inline-convergence"
 blocked-by: null
