@@ -1,6 +1,6 @@
 ---
 title: "PG and MySQL translate_exception drop the cause: kwarg onto the merged raise-site mechanism"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6379
 claim: "2026-08-11T21:26:07Z"
 assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null
