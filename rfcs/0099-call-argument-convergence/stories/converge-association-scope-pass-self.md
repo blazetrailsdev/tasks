@@ -1,6 +1,6 @@
 ---
 title: "Pass the association itself to AssociationScope.scope, not a reflection literal"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T16:03:42Z"
+assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null
 closed-reason: null
 ---
