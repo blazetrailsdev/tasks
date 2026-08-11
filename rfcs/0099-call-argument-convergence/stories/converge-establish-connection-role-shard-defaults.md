@@ -1,6 +1,6 @@
 ---
 title: "establish_connection's role/shard default off Base like owner_name now does"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
