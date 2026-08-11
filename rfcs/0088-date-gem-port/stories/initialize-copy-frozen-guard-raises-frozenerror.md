@@ -1,6 +1,6 @@
 ---
 title: "Raise Ruby's FrozenError, with rb_check_frozen's message, from initializeCopy's frozen guard"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
