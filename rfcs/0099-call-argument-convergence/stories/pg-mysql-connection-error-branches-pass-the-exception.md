@@ -1,6 +1,6 @@
 ---
 title: "PG and MySQL connection-error branches pass a message where Rails passes the driver exception"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
