@@ -1,6 +1,6 @@
 ---
 title: "collectCalls records _private()/Klass() names the Ruby extractor drops"
-status: claimed
+status: blocked
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-11T11:54:17Z"
 assignee: "naming-burndown-activerecord-adapters"
-blocked-by: null
+blocked-by: "The filter does not only delete call-set entries: `calls` is also the edge set reachedSameFileMethods/SAME_FILE_CLOSURE_DEPTH walks (compare.ts:538-585), so dropping `_`-prefixed names severs every this._helper() closure edge. Measured with the filter applied: 92 NEW call-mismatch rows (44 STALE), and the NEW rows are closure false positives, not divergences — e.g. activemodel callbacks.ts _define_after_model_callback/new, actioncontroller metal/strong-parameters.ts convert_value_to_parameters/new, activerecord type/type-map.ts perform_fetch/call. Landing AC1 as written means baselining ~92 rows wholesale. Needs a companion design that keeps the closure sound: apply the filter in compare.ts after the same-file closure is computed, or emit closure edges separately from the compared call set."
 closed-reason: null
 ---
 
