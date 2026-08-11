@@ -1,6 +1,6 @@
 ---
 title: "converge-association-instance-get-to-rails-one-liner"
-status: claimed
+status: done
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 4074
 claim: "2026-08-11T23:06:01Z"
 assignee: "converge-association-instance-get-to-rails-one-liner"
 blocked-by: null
