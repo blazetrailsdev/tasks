@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 50 naming call-argument rows in the model core — attributes, enum, validations, scoping, timestamps"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 12
-pr: null
+pr: 6386
 claim: "2026-08-11T23:31:32Z"
 assignee: "naming-burndown-2-pg-adapter"
 blocked-by: null
