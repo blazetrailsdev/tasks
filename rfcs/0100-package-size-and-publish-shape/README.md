@@ -166,6 +166,6 @@ arrangement for native drivers (already correct).
 ## Provenance
 
 Chartered from a measurement pass on branch `ar-package-size-20338f`
-(2026-08-11), commit `38f55f798`. Full report with per-file tables:
-the `activerecord-package-size-report.md` fact-find attached to that
-investigation.
+(2026-08-11), commit `38f55f798`. Full report with per-file tables, the complete esbuild top-20, and the
+per-package closure breakdown: [`measurements.md`](./measurements.md) in this
+directory.
