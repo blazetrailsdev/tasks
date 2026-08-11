@@ -1,6 +1,6 @@
 ---
 title: "B3: converge the associations residual"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: null
+pr: 6352
 claim: "2026-08-11T12:24:26Z"
 assignee: "naming-burndown-activerecord-relation"
 blocked-by: null
