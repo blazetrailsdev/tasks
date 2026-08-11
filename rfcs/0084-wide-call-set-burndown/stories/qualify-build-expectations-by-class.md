@@ -1,6 +1,6 @@
 ---
 title: "Key parity:api:build expectations by class, not bare identifier"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: null

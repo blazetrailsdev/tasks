@@ -1,6 +1,6 @@
 ---
 title: "Port d_lite_initialize_copy under its Ruby name; stop routing Date#dup through newStart"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
