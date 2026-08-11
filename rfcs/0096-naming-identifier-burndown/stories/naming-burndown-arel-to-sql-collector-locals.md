@@ -1,6 +1,6 @@
 ---
 title: "to_sql: name the collector locals c, as Rails' compile and SelectStatement fold do"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6370
 claim: "2026-08-11T17:44:26Z"
 assignee: "pg-reset-body-under-one-lock"
 blocked-by: null
