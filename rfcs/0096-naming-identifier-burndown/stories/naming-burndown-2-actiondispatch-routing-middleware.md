@@ -4,7 +4,7 @@ status: closed
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
-packages: ["actiondispatch"]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
