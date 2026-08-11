@@ -28,7 +28,7 @@ priority: null
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Precondition unmet: the naming class is not drained — parity:api:calls:args:report on main today reports 886 naming rows vs 717 shape. The story's own Context conditions the flip on the per-package burndown having reduced naming to the ~6% tooling residue; gating now would mean seeding ~886 baseline rows, which is exactly the allowlist-widening the RFC forbids. Re-open once the naming burndown stories have drained the class to residue size."
+blocked-by: "Precondition still unmet, re-measured 2026-08-11 on origin/main ff1fa59d4 (fresh pnpm build + API_COMPARE_FORCE=1 pnpm parity:api --calls): 532 naming rows remain (of 962 call-arg rows), down from 886 but far above the ~6% tooling residue this flip requires. Deps now name the 16 wave-2 burndown stories that cover all 532 rows; unblock once they land and the report shows only the tooling-shaped residue."
 closed-reason: null
 ---
 
