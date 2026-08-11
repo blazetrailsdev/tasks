@@ -1,6 +1,6 @@
 ---
 title: "B1: converge arel visitor helper calls"
-status: ready
+status: claimed
 updated: 2026-08-11
 rfc: "0084-wide-call-set-burndown"
 cluster: api-compare
@@ -13,8 +13,8 @@ deps:
 deps-rfc: []
 est-loc: 400
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-11T21:06:02Z"
+assignee: "burndown-arel-visitors"
 blocked-by: null
 closed-reason: null
 ---
