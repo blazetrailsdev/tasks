@@ -1,6 +1,6 @@
 ---
 title: "to_sql visitors: pass the node attributes Rails passes, not invented locals"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6371
 claim: "2026-08-11T17:56:00Z"
 assignee: "converge-relation-where-clause-writer"
 blocked-by: null
