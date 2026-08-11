@@ -1,6 +1,6 @@
 ---
 title: "Comparator: compare the Ruby receiver against TS argument 1 for unmonkey-patchable built-ins (29 rows)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
