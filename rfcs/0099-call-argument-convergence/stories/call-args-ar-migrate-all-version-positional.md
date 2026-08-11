@@ -1,6 +1,6 @@
 ---
 title: "Converge migrate_all: pass the version positionally, not as a targetVersion option"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
