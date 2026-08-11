@@ -1,6 +1,6 @@
 ---
 title: "strftime-erange-does-not-model-the-alloc-doubling-loop"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6371
 claim: "2026-08-11T17:56:00Z"
 assignee: "converge-relation-where-clause-writer"
 blocked-by: null
