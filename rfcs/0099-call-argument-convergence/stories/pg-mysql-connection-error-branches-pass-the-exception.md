@@ -1,6 +1,6 @@
 ---
 title: "PG and MySQL connection-error branches pass a message where Rails passes the driver exception"
-status: claimed
+status: in-progress
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6384
 claim: "2026-08-11T23:06:01Z"
 assignee: "converge-association-instance-get-to-rails-one-liner"
 blocked-by: null
