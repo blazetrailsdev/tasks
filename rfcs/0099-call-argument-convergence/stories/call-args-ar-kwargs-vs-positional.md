@@ -1,6 +1,6 @@
 ---
 title: "Converge the 29 activerecord sites that flatten a Rails kwarg to a positional (or vice versa)"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null

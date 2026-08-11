@@ -1,6 +1,6 @@
 ---
 title: "Burn down the residual 35 activesupport naming call-argument rows"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0096-naming-identifier-burndown"
 cluster: null
