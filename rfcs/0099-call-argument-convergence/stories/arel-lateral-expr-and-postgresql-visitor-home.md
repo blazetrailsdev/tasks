@@ -1,6 +1,6 @@
 ---
 title: "Lateral reads Unary#expr and lives on the PostgreSQL visitor"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
