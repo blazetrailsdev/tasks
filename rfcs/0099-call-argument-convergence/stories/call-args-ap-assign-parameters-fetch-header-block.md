@@ -1,6 +1,6 @@
 ---
 title: "Converge assign_parameters: thread the fetch_header block parameter into set_header"
-status: in-progress
+status: done
 updated: 2026-08-11
 rfc: "0099-call-argument-convergence"
 cluster: null
