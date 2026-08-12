@@ -1,6 +1,6 @@
 ---
 title: "converge-file-store-normalize-key-sharded-layout"
-status: blocked
+status: ready
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-12T20:56:47Z"
-assignee: "converge-file-store-normalize-key-sharded-layout"
-blocked-by: "Prerequisite story converge-store-serialized-entry-hooks-and-file-store-paths is unmerged (open PR #6437). main's file-store.ts still has cacheDir/keyToPath, not cachePath/normalizeKey/filePathKey/searchDir, and the four call-mismatch rows this story must delete (normalize_key/hexdigest, file_path_key/delete, file_path_key/last, file_path_key/split args) exist only on that branch. Converging the sharded layout here would require stacking on #6437, which CLAUDE.md forbids. Unblock once #6437 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
