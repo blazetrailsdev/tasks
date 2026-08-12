@@ -1,6 +1,6 @@
 ---
 title: "Converge the four persistence.ts rows the ClassMethods/instance pairing recompute surfaced"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T17:36:52Z"
+assignee: "converge-collection-proxy-rich-reflection-re-resolve"
 blocked-by: null
 closed-reason: null
 ---
