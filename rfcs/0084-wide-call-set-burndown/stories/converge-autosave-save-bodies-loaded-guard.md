@@ -1,6 +1,6 @@
 ---
 title: "Add Rails' association.loaded? guard and load_target read to the has_one and belongs_to save bodies"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
