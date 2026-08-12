@@ -1,6 +1,6 @@
 ---
 title: "Delegate CollectionProxy's removal path to the association instead of re-spelling remove_records"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6435
 claim: "2026-08-12T20:16:53Z"
 assignee: "converge-memory-store-dupcoder-and-pruning-guard"
 blocked-by: null
