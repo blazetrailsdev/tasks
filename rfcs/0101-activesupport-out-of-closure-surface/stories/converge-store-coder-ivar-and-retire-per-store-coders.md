@@ -1,6 +1,6 @@
 ---
 title: "Build @coder in Store#initialize and retire the per-store coder stand-ins"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6439
+pr: 6437
 claim: "2026-08-12T21:56:49Z"
 assignee: "converge-store-coder-ivar-and-retire-per-store-coders"
 blocked-by: null
