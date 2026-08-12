@@ -1,6 +1,6 @@
 ---
 title: "converge XmlMini._parse_file onto a StringIO shim instead of a Blob"
-status: ready
+status: draft
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
