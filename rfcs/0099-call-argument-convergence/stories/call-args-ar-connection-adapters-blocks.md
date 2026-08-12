@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-connection-adapters-blocks"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
