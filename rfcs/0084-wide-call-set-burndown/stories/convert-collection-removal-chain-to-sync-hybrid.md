@@ -1,6 +1,6 @@
 ---
 title: "convert-collection-removal-chain-to-sync-hybrid"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6442
 claim: "2026-08-12T22:56:48Z"
 assignee: "convert-collection-removal-chain-to-sync-hybrid"
 blocked-by: null
