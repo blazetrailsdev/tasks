@@ -1,6 +1,6 @@
 ---
 title: "Hoist catch(:abort) out of the shared callback dispatcher back to Rails' call sites"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T19:16:52Z"
+assignee: "converge-collection-callback-abort-catch-to-call-sites"
 blocked-by: null
 closed-reason: null
 ---
