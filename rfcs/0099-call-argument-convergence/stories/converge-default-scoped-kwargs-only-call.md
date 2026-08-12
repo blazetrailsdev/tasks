@@ -1,6 +1,6 @@
 ---
 title: "Call default_scoped with kwargs only, without the undefined positional placeholder"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6432
 claim: "2026-08-12T19:16:52Z"
 assignee: "converge-collection-callback-abort-catch-to-call-sites"
 blocked-by: null
