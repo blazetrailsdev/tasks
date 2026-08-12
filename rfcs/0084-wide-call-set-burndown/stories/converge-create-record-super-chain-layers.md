@@ -1,6 +1,6 @@
 ---
 title: "Converge the _create_record/_update_record super chain onto Rails' module layering"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 320
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T13:26:03Z"
+assignee: "call-args-ar-extra-argument-rest-3"
 blocked-by: null
 closed-reason: null
 ---
