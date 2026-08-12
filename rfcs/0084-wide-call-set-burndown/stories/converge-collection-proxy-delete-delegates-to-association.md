@@ -1,6 +1,6 @@
 ---
 title: "Delegate CollectionProxy's removal path to the association instead of re-spelling remove_records"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
