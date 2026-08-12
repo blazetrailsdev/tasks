@@ -1,6 +1,6 @@
 ---
 title: "Converge CounterCache's class-level touch kwarg into the counters hash"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T12:26:11Z"
+assignee: "call-args-ar-extra-argument-rest-2"
 blocked-by: null
 closed-reason: null
 ---

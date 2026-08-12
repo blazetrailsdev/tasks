@@ -1,6 +1,6 @@
 ---
 title: "Move the belongs_to autosave halt into the defined save method and use throwAbort"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T12:26:11Z"
+assignee: "call-args-ar-extra-argument-rest-2"
 blocked-by: null
 closed-reason: null
 ---
