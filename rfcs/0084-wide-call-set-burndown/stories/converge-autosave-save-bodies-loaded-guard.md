@@ -1,6 +1,6 @@
 ---
 title: "Add Rails' association.loaded? guard and load_target read to the has_one and belongs_to save bodies"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T00:46:03Z"
+assignee: "naming-comparator-to-s-and-reserved-word-residue"
 blocked-by: null
 closed-reason: null
 ---
