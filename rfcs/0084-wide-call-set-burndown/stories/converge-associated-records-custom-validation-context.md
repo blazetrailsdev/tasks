@@ -1,6 +1,6 @@
 ---
 title: "Add the custom_validation_context? arm to associatedRecordsToValidateOrSave and drop the caller workaround"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T01:06:01Z"
+assignee: "converge-associated-records-custom-validation-context"
 blocked-by: null
 closed-reason: null
 ---
