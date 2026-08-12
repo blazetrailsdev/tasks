@@ -1,6 +1,6 @@
 ---
 title: "was-loaded-duplicate-append-regression"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6405
 claim: "2026-08-12T13:01:41Z"
 assignee: "plumb-save-block-through-create-record"
 blocked-by: null
