@@ -1,6 +1,6 @@
 ---
 title: "extractor-argument-nesting-call-order"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6404
 claim: "2026-08-12T09:46:00Z"
 assignee: "extractor-argument-nesting-call-order"
 blocked-by: null
