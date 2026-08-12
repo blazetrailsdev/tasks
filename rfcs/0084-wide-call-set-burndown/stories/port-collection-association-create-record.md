@@ -1,6 +1,6 @@
 ---
 title: "Port CollectionAssociation#_create_record and route CollectionProxy#create through it"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6410
 claim: "2026-08-12T12:46:03Z"
 assignee: "activesupport-closure-skip-groups-triage"
 blocked-by: null
