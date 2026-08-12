@@ -1,6 +1,6 @@
 ---
 title: "converge-preloader-reflection-scope-arity-and-lazy-memo"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6399
 claim: "2026-08-12T03:06:02Z"
 assignee: "converge-preloader-reflection-scope-arity-and-lazy-memo"
 blocked-by: null
