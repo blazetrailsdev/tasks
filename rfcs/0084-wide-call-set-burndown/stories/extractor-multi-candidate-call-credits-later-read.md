@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting a multi-candidate Ruby call against a later TS read in order rows"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6431
 claim: "2026-08-12T18:56:50Z"
 assignee: "extractor-multi-candidate-call-credits-later-read"
 blocked-by: null
