@@ -2,7 +2,7 @@
 title: "converge-count-body-onto-calculate"
 status: ready
 updated: 2026-08-09
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages:
   - activerecord

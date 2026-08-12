@@ -2,7 +2,7 @@
 title: "countryZones answers a shorter list than Rails for AQ/AU/RU/TF/VN (CLDR vs zone1970.tab membership)"
 status: draft
 updated: 2026-08-09
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
 deps: []

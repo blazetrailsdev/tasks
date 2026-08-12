@@ -2,7 +2,7 @@
 title: 'SQLite3Adapter#getDatabaseVersion queries the driver directly instead of queryValue(..., "SCHEMA")'
 status: blocked
 updated: 2026-08-07
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages:
   - activerecord

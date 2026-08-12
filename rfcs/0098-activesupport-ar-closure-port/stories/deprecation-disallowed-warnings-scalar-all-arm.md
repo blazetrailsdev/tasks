@@ -2,7 +2,7 @@
 title: "deprecation-disallowed-warnings-scalar-all-arm"
 status: ready
 updated: 2026-08-08
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "deprecation-raise-behavior-raises-deprecationexception"
 status: ready
 updated: 2026-08-09
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
 deps: []

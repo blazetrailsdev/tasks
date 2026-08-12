@@ -2,7 +2,7 @@
 title: "AbstractAdapter's constructor is zero-arg where Rails' initialize takes config"
 status: draft
 updated: 2026-07-30
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []

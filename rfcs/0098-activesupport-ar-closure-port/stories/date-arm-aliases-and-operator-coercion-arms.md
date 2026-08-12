@@ -2,7 +2,7 @@
 title: "Port date-ext.ts's remaining aliases and the Date operator coercion arms"
 status: draft
 updated: 2026-08-07
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages:
   - activesupport
