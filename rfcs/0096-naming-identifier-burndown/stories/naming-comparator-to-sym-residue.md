@@ -1,6 +1,6 @@
 ---
 title: "Teach the call-arg comparator Ruby to_sym, including inside kwargs values"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6397
 claim: "2026-08-12T02:46:02Z"
 assignee: "naming-comparator-to-sym-residue"
 blocked-by: null
