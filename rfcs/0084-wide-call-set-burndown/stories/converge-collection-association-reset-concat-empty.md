@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-association-reset-concat-empty"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6401
 claim: "2026-08-12T03:46:01Z"
 assignee: "converge-collection-association-reset-concat-empty"
 blocked-by: null
