@@ -1,6 +1,6 @@
 ---
 title: "Export DupCoder#dump_value / #load_value so parity scores them"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T23:56:50Z"
+assignee: "export-dupcoder-dump-value-and-load-value"
 blocked-by: null
 closed-reason: null
 ---
