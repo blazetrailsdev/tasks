@@ -1,6 +1,6 @@
 ---
 title: "Port FileStore's lock_file, atomic write and inspect"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T23:16:49Z"
+assignee: "port-file-store-lock-file-atomic-write-and-inspect"
 blocked-by: null
 closed-reason: null
 ---
