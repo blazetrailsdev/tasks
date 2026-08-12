@@ -18,6 +18,20 @@ closed-reason: null
 
 ## Context
 
+UPDATED 2026-08-12: the CREATE half landed in PR #6418 — `_performInsert` is
+gone from `base.ts` and its body is inlined in `persistence.ts#_createRecord`,
+which retired the `attributes_for_create`, `type_for_attribute` and
+`deserialize` rows. What remains is the UPDATE half (`_performUpdate`), plus the
+three `_create_record` rows the create fold did NOT retire — each now carries
+its own reviewed reason in `persistence.json` rather than pointing here:
+`attributes_with_values` (the port binds `valuesForDatabase()`, not the cast
+values `attributes_with_values` yields), `with_connection` (the port uses the
+already-threaded connection so the INSERT does not flip the lease permanent) and
+`id` (Rails returns `id`; the trails chain returns a boolean). Converging those
+three is a behaviour change, not a move, and is out of this story's scope.
+
+Original context follows.
+
 Follow-up to `move-persistence-create-update-record-to-persistence-ts` (PR
 pending), which moved the Persistence layer of the create/update super chain out
 of `callbacks.ts` and into `persistence.ts` as the instance-side `_createRecord`
