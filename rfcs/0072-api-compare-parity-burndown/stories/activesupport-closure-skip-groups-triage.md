@@ -1,6 +1,6 @@
 ---
 title: "SKIP_GROUPS triage for non-portable AS members inside the AR/AM closure"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
