@@ -1,6 +1,6 @@
 ---
 title: "Scope-skip dependencies/interlock.rb's 10 Zeitwerk members"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 6418
 claim: "2026-08-12T15:36:57Z"
 assignee: "call-args-ar-connection-adapters-blocks"
 blocked-by: null
