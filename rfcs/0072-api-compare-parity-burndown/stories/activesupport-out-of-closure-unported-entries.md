@@ -1,6 +1,6 @@
 ---
 title: "Exclude out-of-AR/AM-closure activesupport files via UNPORTED_FILES"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6411
 claim: "2026-08-12T13:06:04Z"
 assignee: "activesupport-out-of-closure-unported-entries"
 blocked-by: null
