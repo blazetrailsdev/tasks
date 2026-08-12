@@ -1,6 +1,6 @@
 ---
 title: "Relocate singleAggregate's body into execute_simple_calculation"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6443
 claim: "2026-08-12T23:16:49Z"
 assignee: "port-file-store-lock-file-atomic-write-and-inspect"
 blocked-by: null
