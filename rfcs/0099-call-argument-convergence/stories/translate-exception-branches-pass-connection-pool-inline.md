@@ -1,7 +1,7 @@
 ---
 title: "PG and MySQL translate_exception branches pass connection_pool inline as Rails does"
-status: claimed
-updated: 2026-08-11
+status: in-progress
+updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6388
 claim: "2026-08-11T23:46:06Z"
 assignee: "converge-collection-proxy-build-record"
 blocked-by: null
