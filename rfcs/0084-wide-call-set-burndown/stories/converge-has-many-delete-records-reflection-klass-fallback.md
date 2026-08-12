@@ -1,6 +1,6 @@
 ---
 title: "Drop the ?? this.klass fallback in HasManyAssociation#delete_records"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6428
 claim: "2026-08-12T17:36:52Z"
 assignee: "converge-collection-proxy-rich-reflection-re-resolve"
 blocked-by: null
