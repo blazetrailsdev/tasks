@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 29 naming call-argument rows in activesupport cache and inflector"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
