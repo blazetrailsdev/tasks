@@ -1,6 +1,6 @@
 ---
 title: "Scope or port the 31 zero-port buckets un-hidden by the phantom-credit fix"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
