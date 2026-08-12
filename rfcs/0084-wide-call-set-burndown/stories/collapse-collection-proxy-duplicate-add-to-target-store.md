@@ -1,6 +1,6 @@
 ---
 title: "Collapse CollectionProxy's duplicate replace_on_target/add_to_target store onto CollectionAssociation"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:56:49Z"
+assignee: "converge-pool-config-primary-class-name-substitution"
 blocked-by: null
 closed-reason: null
 ---
