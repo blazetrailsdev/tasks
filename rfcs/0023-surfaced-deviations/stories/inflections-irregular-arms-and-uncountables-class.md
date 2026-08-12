@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -19,43 +19,39 @@ closed-reason: null
 ## Context
 
 Surfaced while burning down RFC 0096 wave-2 naming rows in
-`packages/activesupport/src/inflector/inflections.ts`.
+`packages/activesupport/src/inflector/inflections.ts` (PR #6433).
 
-Two a3 findings, both in the same cluster:
+**`Inflections#irregular` drops four of Rails' `singular` calls.**
+`vendor/rails/activesupport/lib/active_support/inflector/inflections.rb`,
+`def irregular(singular, plural)`:
 
-1. **`Inflections#irregular` drops four of Rails' `singular` calls.**
-   `vendor/rails/activesupport/lib/active_support/inflector/inflections.rb:...`
-   `irregular` — the `s0.upcase == p0.upcase` branch emits **two** `plural`
-   and **two** `singular` rules (`/(#{s0})#{srest}$/i` and
-   `/(#{p0})#{prest}$/i`); the `else` branch emits **four** `plural` and
-   **four** `singular` rules. trails
-   (`packages/activesupport/src/inflector/inflections.ts:57-77`) emits only
-   **one** `singular` rule in the first branch and **two** in the second, so
-   the `s0`-keyed singular rules are missing entirely. A word registered via
-   `irregular` whose singular form differs in first-letter case from the
-   plural will not singularize back.
+- the `s0.upcase == p0.upcase` branch emits **two** `plural` rules
+  (`/(#{s0})#{srest}$/i`, `/(#{p0})#{prest}$/i`) and **two** `singular` rules
+  (the same two patterns, replacing with `'\1' + srest`);
+- the `else` branch emits **four** `plural` and **four** `singular` rules
+  (upcase/downcase of `s0` and of `p0`).
 
-2. **`Inflections::Uncountables` is not ported.** Rails' `@uncountables` is
-   an `Uncountables < Array` whose `delete`/`<<`/`add` downcase their
-   argument (inflections.rb, `class Uncountables`). trails uses a plain
-   `Set<string>` and inlines `.toLowerCase()` at each call site
-   (`inflections.ts:41,44,50,53,58,59,83`), which is what makes seven
-   RFC 0096 `naming` rows (`delete` / `add` receiving `ref:toLowerCase`
-   where Rails passes `ref:rule` / `ref:replacement` / `ref:singular` /
-   `ref:plural` / `ref:words`) unfixable by renaming.
+trails (`packages/activesupport/src/inflector/inflections.ts:57-77`) emits only
+**one** `singular` rule in the first branch (`inflections.ts:69`) and **two** in
+the second (`inflections.ts:75-76`). The `s0`-keyed singular rules are missing
+in both, so an irregular pair whose singular and plural differ in first-letter
+case does not singularize back.
 
-Porting `Uncountables` retires all seven rows and removes the inlined
-downcasing; fixing `irregular` is an independent behavioural fix in the
-same file.
+Converged shape: emit exactly the rule set `inflections.rb#irregular` emits, in
+Rails' order, in both branches.
+
+Scope note: the seven RFC 0096 `naming` rows in this file (`delete` / `add`
+receiving `ref:toLowerCase` where Rails passes `ref:rule`, `ref:replacement`,
+`ref:singular`, `ref:plural`, `ref:words`) come from inlining `Uncountables`'
+case-folding `delete`/`add` at each call site. That is
+[[port-inflections-uncountables-collection]]'s job, not this one — this story
+is the `irregular` rule set only.
 
 ## Acceptance criteria
 
-- [ ] `Inflections#irregular` emits the same set of `plural`/`singular` rules
-      as `inflections.rb`, in the same order, in both branches.
-- [ ] `ActiveSupport::Inflector::Inflections::Uncountables` is ported with its
-      Rails name and case-folding `add`/`delete`/`<<`, and `inflections.ts`
-      call sites pass the raw identifier (no inline `.toLowerCase()`).
-- [ ] `pnpm parity:api:calls:args:report` shows the seven
-      `inflector/inflections.ts` `naming` rows gone, with no new `shape` rows.
+- [ ] `Inflections#irregular` emits the same `plural`/`singular` rules as
+      `inflections.rb#irregular`, in the same order, in both branches.
 - [ ] A regression test covers an `irregular` pair whose singular and plural
-      differ in first-letter case; it fails on baseline.
+      differ in first-letter case (round-trips `pluralize` → `singularize`);
+      it fails on baseline.
+- [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green.
