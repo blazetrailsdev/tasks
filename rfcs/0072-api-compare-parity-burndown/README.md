@@ -19,6 +19,47 @@ clusters:
 priority: 2
 ---
 
+## Outcome (closed 2026-08-12)
+
+All three buckets are burned down for the data layer. Measured on main
+`707c3975b` with a full `pnpm parity:api`:
+
+| Bucket           | Baseline (2026-07-25)                                                                       | At close                                                                                                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Missing methods  | 4 activerecord + 1 activemodel                                                              | activerecord 6146/6147, activemodel 715/715, arel 952/952 — **data layer 7813/7814 methods (100%), 412/412 files**                                                    |
+| Arity mismatches | 79 activerecord of 183                                                                      | **0 in activerecord, activemodel and arel** (90 remain repo-wide, all outside the data layer)                                                                         |
+| Extra TS surface | large activerecord clusters (connection-adapters 48 novel, associations 39, inheritance 33) | **0 novel in activerecord**; every remaining row is a `moved` classification. The reasoned allowlist, the `@noRailsEquivalent` tag family and the CI gate all shipped |
+
+Final counts: 351 stories, 323 done / 28 closed, 0 open.
+
+activesupport (55.2%) is the one declared package still below 100%, and this RFC
+scoped that out by design; the AR-closure slice (93.6%) belongs to RFC 0098.
+
+### Where the 24 open stories went
+
+None of them was one of the three buckets — this RFC had become the default
+landing zone for anything `parity:api` surfaced, which is how it reached 375
+stories. They were rehomed rather than closed:
+
+- **0098-activesupport-ar-closure-port** (promoted to `active`) — the date-ext
+  trio, the deprecation trio, the time-zone trio, and
+  `port-numeric-ext-size-tests-for-bytes` (in progress on PR #6431).
+- **0101-activesupport-out-of-closure-surface** (new) — the three cache-store
+  stories and the two XmlMini stories, which this RFC's own audit had triaged
+  out of the AR closure.
+- **0102-adapter-version-reader-fidelity** (new) — the `database_version`
+  residue: the blocked sync-getter story, the PG optimizer-hints memo, and the
+  MySQL `newColumnFromField` `ON UPDATE` fold.
+- **0103-parity-api-scoring-correctness** (new) — the two compare-tooling
+  scoring bugs (overridden Ruby files scored against an empty allowed set; a
+  Ruby writer resolving to `set<Name>`).
+- **0076-execute-primitive-convergence** — `sqlite-get-database-version-bypasses-query-value`.
+- **0094-sqlite3-adapter-construction-fidelity** — `abstract-adapter-constructor-drops-rails-config-arg`.
+- **0075-collection-association-target-fidelity** — `port-base-association-find-target-body`.
+- **0084-wide-call-set-burndown** — `converge-count-body-onto-calculate`.
+
+Do not file new work here. Pick the RFC above that matches the bucket.
+
 ## Summary
 
 Burn down the three drift buckets `parity:api` (`scripts/api-compare/`) still
