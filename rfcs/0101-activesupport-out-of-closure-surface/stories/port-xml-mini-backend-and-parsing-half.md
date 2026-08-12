@@ -1,6 +1,6 @@
 ---
 title: "port-xml-mini-backend-and-parsing-half"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
