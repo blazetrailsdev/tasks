@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
