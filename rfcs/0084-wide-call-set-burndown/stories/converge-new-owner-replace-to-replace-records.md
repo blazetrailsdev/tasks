@@ -72,7 +72,7 @@ hand (only-shrink; never `--write`).
 ## Acceptance criteria
 
 - [ ] `replace`'s new-owner arm is Rails' `replace_records(other_array,
-  original_target)` call, with no inlined before/after_remove loop.
+original_target)` call, with no inlined before/after_remove loop.
 - [ ] The duplicated `catch(:abort)` in that arm is gone — the abort is caught
       once, in `removeRecords`.
 - [ ] The `replace` → `replace_records` and `replace` → `skip_strict_loading`
