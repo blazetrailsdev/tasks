@@ -1,6 +1,6 @@
 ---
 title: "Port NumericExtSizeTest to cover the bytes.rb port and its singular aliases"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T18:56:50Z"
+assignee: "extractor-multi-candidate-call-credits-later-read"
 blocked-by: null
 closed-reason: null
 ---
