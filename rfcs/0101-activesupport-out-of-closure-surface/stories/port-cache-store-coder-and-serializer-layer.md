@@ -1,6 +1,6 @@
 ---
 title: "port-cache-store-coder-and-serializer-layer"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T22:16:47Z"
+assignee: "port-cache-store-coder-and-serializer-layer"
 blocked-by: null
 closed-reason: null
 ---
