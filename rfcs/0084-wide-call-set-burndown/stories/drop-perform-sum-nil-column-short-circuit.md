@@ -1,6 +1,6 @@
 ---
 title: "Drop performSum's nil-column short-circuit; resolve sum's identity/block arm"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6444
 claim: "2026-08-12T23:36:53Z"
 assignee: "test-compare-scans-rails-behavior-mixin-files"
 blocked-by: null
