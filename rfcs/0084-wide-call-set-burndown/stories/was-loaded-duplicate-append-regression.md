@@ -84,6 +84,11 @@ Two traps cost a cycle when confirming this, so do not repeat them:
   `void author.posts.load()` never completes before `finishReplaceOnTarget`
   runs, and the test passes for the wrong reason.
 
+Re-verified after #6407 (`HasManyAssociation#insertRecord` converged to
+`set_owner_attributes` + `super`) and after #6405 rebased onto it: the repro
+still fails with 2 target entries, so #6407's shorter call path does not
+change the analysis below.
+
 ## Why BOTH PRs are required
 
 `finishReplaceOnTarget` (`collection-association.ts`) has no `@_was_loaded` arm
