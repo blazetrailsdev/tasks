@@ -1,14 +1,14 @@
 ---
 title: "Converge performCount's inline distinct_relation_for_primary_key into applyJoinDependency"
-status: draft
-updated: 2026-07-31
+status: done
+updated: 2026-08-12
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6434
 claim: null
 assignee: null
 blocked-by: null
