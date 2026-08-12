@@ -57,7 +57,7 @@ The naming row itself is converged (PR #6421 renamed arel's copy from
 - [ ] `packages/activemodel/src/type.ts` is reachable from the package's public
       surface under a shape that reads as Rails' `ActiveModel::Type` module —
       check `docs/ruby-ts-conventions.md` and `pnpm parity:api --package
-  activemodel` for whether `type.rb`'s module functions (`registry`,
+activemodel` for whether `type.rb`'s module functions (`registry`,
       `register`, `lookup`, `default_value`) are currently counted as missing.
 - [ ] `packages/arel/src/nodes/homogeneous-in.ts` imports `defaultValue` instead
       of redefining it; the local `_defaultValue` memo is deleted.
