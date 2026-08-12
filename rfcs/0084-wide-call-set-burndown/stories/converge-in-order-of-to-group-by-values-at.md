@@ -1,6 +1,6 @@
 ---
 title: "Converge Enumerable#in_order_of to Rails' group_by/values_at + sort_by shape"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6413
 claim: "2026-08-12T13:46:05Z"
 assignee: "call-args-ar-host-param-connection-adapters-rest"
 blocked-by: null
