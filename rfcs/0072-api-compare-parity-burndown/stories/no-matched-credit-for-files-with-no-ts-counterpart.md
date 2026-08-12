@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting matched members to Ruby files that have no TS counterpart at all"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
