@@ -1,6 +1,6 @@
 ---
 title: "Hoist catch(:abort) out of the shared callback dispatcher back to Rails' call sites"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
