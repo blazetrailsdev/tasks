@@ -1,6 +1,6 @@
 ---
 title: "port-pool-config-monitor-critical-section"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6416
 claim: "2026-08-12T14:56:52Z"
 assignee: "port-pool-config-monitor-critical-section"
 blocked-by: null
