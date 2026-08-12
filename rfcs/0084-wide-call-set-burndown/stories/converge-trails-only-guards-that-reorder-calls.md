@@ -1,6 +1,6 @@
 ---
 title: "Converge the trails-only guards in validateEach and tableExists that reorder Rails' calls"
-status: ready
+status: draft
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
