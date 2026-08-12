@@ -1,6 +1,6 @@
 ---
 title: "Converge TokenDefinition#message_verifier lazy-init and #payload_for block receiver"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6415
 claim: "2026-08-12T14:36:51Z"
 assignee: "converge-remaining-marked-for-destruction-slot-reads"
 blocked-by: null
