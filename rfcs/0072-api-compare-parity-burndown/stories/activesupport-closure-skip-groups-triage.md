@@ -1,6 +1,6 @@
 ---
 title: "SKIP_GROUPS triage for non-portable AS members inside the AR/AM closure"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6410
 claim: "2026-08-12T12:46:03Z"
 assignee: "activesupport-closure-skip-groups-triage"
 blocked-by: null
