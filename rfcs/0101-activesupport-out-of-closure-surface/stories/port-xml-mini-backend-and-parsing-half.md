@@ -1,6 +1,6 @@
 ---
 title: "port-xml-mini-backend-and-parsing-half"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6441
 claim: "2026-08-12T22:36:49Z"
 assignee: "port-xml-mini-backend-and-parsing-half"
 blocked-by: null
