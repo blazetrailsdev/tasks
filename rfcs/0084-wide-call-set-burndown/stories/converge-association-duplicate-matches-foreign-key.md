@@ -1,6 +1,6 @@
 ---
 title: "converge-association-duplicate-matches-foreign-key"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6402
 claim: "2026-08-12T09:06:01Z"
 assignee: "converge-association-duplicate-matches-foreign-key"
 blocked-by: null
