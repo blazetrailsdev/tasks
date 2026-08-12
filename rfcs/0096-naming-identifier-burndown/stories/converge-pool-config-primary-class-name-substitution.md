@@ -1,6 +1,6 @@
 ---
 title: "converge-pool-config-primary-class-name-substitution"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
