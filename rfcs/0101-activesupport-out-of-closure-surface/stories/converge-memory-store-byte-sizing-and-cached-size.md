@@ -1,6 +1,6 @@
 ---
 title: "converge-memory-store-byte-sizing-and-cached-size"
-status: ready
+status: done
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6437
 claim: null
 assignee: null
 blocked-by: null
