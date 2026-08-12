@@ -1,6 +1,6 @@
 ---
 title: "converge association_valid? marked_for_destruction? dispatch and branch order"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6411
 claim: "2026-08-12T13:06:04Z"
 assignee: "activesupport-out-of-closure-unported-entries"
 blocked-by: null
