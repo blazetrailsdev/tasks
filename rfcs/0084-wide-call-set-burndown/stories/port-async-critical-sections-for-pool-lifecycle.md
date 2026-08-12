@@ -1,6 +1,6 @@
 ---
 title: "port-async-critical-sections-for-pool-lifecycle"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6408
 claim: "2026-08-12T11:06:01Z"
 assignee: "port-async-critical-sections-for-pool-lifecycle"
 blocked-by: null
