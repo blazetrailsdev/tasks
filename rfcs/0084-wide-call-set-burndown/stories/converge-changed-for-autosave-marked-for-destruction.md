@@ -1,6 +1,6 @@
 ---
 title: "converge-changed-for-autosave-marked-for-destruction"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6403
 claim: "2026-08-12T09:25:59Z"
 assignee: "converge-changed-for-autosave-marked-for-destruction"
 blocked-by: null
