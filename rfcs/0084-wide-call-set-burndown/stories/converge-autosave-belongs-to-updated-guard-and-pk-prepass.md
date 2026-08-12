@@ -1,6 +1,6 @@
 ---
 title: "Gate the belongs_to FK block on association.updated? alone and drop the composite-PK pre-pass"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
