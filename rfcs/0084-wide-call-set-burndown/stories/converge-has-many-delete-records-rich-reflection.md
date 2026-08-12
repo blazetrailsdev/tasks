@@ -1,6 +1,6 @@
 ---
 title: "converge-has-many-delete-records-rich-reflection"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6425
 claim: "2026-08-12T16:36:52Z"
 assignee: "pg-cancel-block-half-has-no-regression"
 blocked-by: null
