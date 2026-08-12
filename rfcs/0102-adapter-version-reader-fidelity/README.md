@@ -1,13 +1,14 @@
 ---
 rfc: "0102-adapter-version-reader-fidelity"
 title: "Adapter version and column-reflection reader fidelity"
-status: draft
+status: active
 created: 2026-08-12
 updated: 2026-08-12
 owner: "@your-handle"
 packages:
   - "activerecord"
 clusters: []
+priority: 2
 ---
 
 # Adapter version and column-reflection reader fidelity
