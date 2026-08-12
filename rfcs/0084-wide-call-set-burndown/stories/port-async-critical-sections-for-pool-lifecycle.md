@@ -1,6 +1,6 @@
 ---
 title: "port-async-critical-sections-for-pool-lifecycle"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
