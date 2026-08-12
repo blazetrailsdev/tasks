@@ -1,6 +1,6 @@
 ---
 title: "Spell group_values.any? with an activesupport any() in calculations"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
