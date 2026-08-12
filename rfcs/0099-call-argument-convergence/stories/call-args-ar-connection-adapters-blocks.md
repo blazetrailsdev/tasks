@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-connection-adapters-blocks"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6418
 claim: "2026-08-12T15:36:57Z"
 assignee: "call-args-ar-connection-adapters-blocks"
 blocked-by: null
