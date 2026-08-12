@@ -1,6 +1,6 @@
 ---
 title: "converge-generated-attribute-methods-module"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6389
 claim: "2026-08-12T00:06:01Z"
 assignee: "converge-generated-attribute-methods-module"
 blocked-by: null
