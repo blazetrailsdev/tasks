@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 47 naming call-argument rows in associations, reflection, autosave and nested attributes"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
