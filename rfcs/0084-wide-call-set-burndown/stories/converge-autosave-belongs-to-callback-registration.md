@@ -1,6 +1,6 @@
 ---
 title: "Move the belongs_to autosave halt into the defined save method and use throwAbort"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
