@@ -1,6 +1,6 @@
 ---
 title: "Converge the four persistence.ts rows the ClassMethods/instance pairing recompute surfaced"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
