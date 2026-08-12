@@ -1,5 +1,5 @@
 ---
-title: "converge-join-part-extract-record-alias-columns"
+title: "JoinPart#extract_record takes an alias string where Rails takes column/alias pairs"
 status: draft
 updated: 2026-08-12
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
