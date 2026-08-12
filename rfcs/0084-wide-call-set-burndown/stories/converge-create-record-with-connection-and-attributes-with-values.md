@@ -1,6 +1,6 @@
 ---
 title: "Converge _create_record's with_connection, attributes_with_values and id"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T17:56:51Z"
+assignee: "converge-create-record-with-connection-and-attributes-with-values"
 blocked-by: null
 closed-reason: null
 ---
