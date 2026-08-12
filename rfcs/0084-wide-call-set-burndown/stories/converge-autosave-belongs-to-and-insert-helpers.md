@@ -1,7 +1,7 @@
 ---
 title: "Inline the three remaining trails-only autosave helpers at Rails' call sites"
-status: in-progress
-updated: 2026-08-11
+status: done
+updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []

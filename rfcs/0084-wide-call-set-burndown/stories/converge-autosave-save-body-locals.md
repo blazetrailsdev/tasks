@@ -1,7 +1,7 @@
 ---
 title: "Converge the autosave save-body locals to the Rails identifiers"
-status: in-progress
-updated: 2026-08-11
+status: done
+updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []

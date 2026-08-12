@@ -1,7 +1,7 @@
 ---
 title: "Guard nested_records_changed_for_autosave? with @_already_called, not a module WeakSet"
-status: in-progress
-updated: 2026-08-11
+status: done
+updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
