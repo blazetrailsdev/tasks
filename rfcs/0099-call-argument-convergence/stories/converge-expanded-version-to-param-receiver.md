@@ -1,6 +1,6 @@
 ---
 title: "Converge Store#expanded_version's to_param receiver (bucket b)"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:16:54Z"
+assignee: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Delegate TransactionManager#synchronize to the ported MonitorMixin"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:16:54Z"
+assignee: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
 blocked-by: null
 closed-reason: null
 ---
