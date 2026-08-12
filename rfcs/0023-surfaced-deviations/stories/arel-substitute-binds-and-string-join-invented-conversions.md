@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -56,13 +56,15 @@ trails (`packages/arel/src/factory-methods.ts:74-77`) inserts
 `node`. Row: `RB [ref:to, nil, const:StringJoin]` vs
 `TS [ref:node, nil, const:StringJoin]`.
 
-Note: a matching row in `packages/arel/src/visitors/to-sql.ts`
+Note: the two matching rows in `packages/arel/src/visitors/to-sql.ts`
 (`quoteTableName`/`quoteColumnName` wrapping `name` in `toS(...)`, vs Rails
-passing `name` straight through) was attempted and reverted — `toS` is
-load-bearing for array-valued names
-(`packages/arel/src/visitors/to-sql.trails.test.ts:80` expects
-`["a", "b"]`-style rendering). That one needs its own decision about whether the
-Ruby-inspect rendering belongs in `quote*Name` at all.
+passing `name` straight through at `to_sql.rb:872-880`) are NOT part of this
+story — they are already owned by
+`0023-surfaced-deviations/arel-visitor-to-s-belongs-in-adapter-quoting`, which
+has the right fix: move the `to_s` down into each adapter's quoting module,
+where Rails has it. Dropping the wrap in the visitor alone reds
+`packages/arel/src/visitors/to-sql.trails.test.ts:80` (confirmed on PR #6421),
+because `toS` also reproduces Ruby's inspect-style `Array#to_s`.
 
 ## Acceptance criteria
 
