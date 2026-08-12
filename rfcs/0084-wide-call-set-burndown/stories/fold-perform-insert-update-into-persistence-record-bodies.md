@@ -1,6 +1,6 @@
 ---
 title: "fold-perform-insert-update-into-persistence-record-bodies"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T18:36:50Z"
+assignee: "fold-perform-insert-update-into-persistence-record-bodies"
 blocked-by: null
 closed-reason: null
 ---
