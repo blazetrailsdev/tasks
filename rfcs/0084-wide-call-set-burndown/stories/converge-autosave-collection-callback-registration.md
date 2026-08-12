@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented autosave:false gate from the collection autosave callback registrations"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6409
 claim: "2026-08-12T12:26:11Z"
 assignee: "call-args-ar-extra-argument-rest-2"
 blocked-by: null
