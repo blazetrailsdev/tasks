@@ -1,6 +1,6 @@
 ---
 title: "cancel_any_running_query's `block` half has no regression that reds without it"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0061-ci-failures"
 cluster: null

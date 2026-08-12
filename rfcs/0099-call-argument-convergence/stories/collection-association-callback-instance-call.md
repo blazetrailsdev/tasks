@@ -1,6 +1,6 @@
 ---
 title: "Make CollectionAssociation#callback/callbacks_for instance calls, not receiver-as-first-arg free functions"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
