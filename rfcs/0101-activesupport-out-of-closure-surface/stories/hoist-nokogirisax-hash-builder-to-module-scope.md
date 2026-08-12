@@ -2,7 +2,7 @@
 title: "hoist-nokogirisax-hash-builder-to-module-scope"
 status: ready
 updated: 2026-08-12
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
 deps: []

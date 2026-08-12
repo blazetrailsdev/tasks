@@ -2,7 +2,7 @@
 title: "Sync databaseVersion getter cannot self-fetch, forcing hand-warms Rails has at no call site"
 status: blocked
 updated: 2026-08-06
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0102-adapter-version-reader-fidelity"
 cluster: null
 packages:
   - activerecord

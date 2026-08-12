@@ -2,7 +2,7 @@
 title: "A Ruby writer resolves to set<Name> when its reader already claims the bare name"
 status: draft
 updated: 2026-08-07
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0103-parity-api-scoring-correctness"
 cluster: null
 packages: []
 deps: []

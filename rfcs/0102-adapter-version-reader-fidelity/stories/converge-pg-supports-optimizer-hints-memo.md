@@ -2,7 +2,7 @@
 title: "converge-pg-supports-optimizer-hints-memo"
 status: ready
 updated: 2026-08-08
-rfc: "0072-api-compare-parity-burndown"
+rfc: "0102-adapter-version-reader-fidelity"
 cluster: null
 packages: []
 deps: []
