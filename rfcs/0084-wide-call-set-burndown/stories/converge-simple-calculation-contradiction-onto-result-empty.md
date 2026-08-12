@@ -1,6 +1,6 @@
 ---
 title: "Fold execute_simple_calculation's contradiction arm through Result.empty"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
