@@ -1,6 +1,6 @@
 ---
 title: "converge-habtm-join-record-builder-to-build-through-record"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T12:46:03Z"
+assignee: "activesupport-closure-skip-groups-triage"
 blocked-by: null
 closed-reason: null
 ---
