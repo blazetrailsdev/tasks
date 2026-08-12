@@ -1,6 +1,6 @@
 ---
 title: "Converge Store#expanded_version's to_param receiver (bucket b)"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
