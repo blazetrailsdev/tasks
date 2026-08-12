@@ -1,6 +1,6 @@
 ---
 title: "Stop recording a local-bound closure's calls at its definition site in order rows"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T19:56:51Z"
+assignee: "converge-pg-supports-optimizer-hints-memo"
 blocked-by: null
 closed-reason: null
 ---

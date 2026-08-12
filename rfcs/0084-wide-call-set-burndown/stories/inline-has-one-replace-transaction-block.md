@@ -1,6 +1,6 @@
 ---
 title: "Inline has_one replace's transaction block so the RecordNotSaved raise lives where Rails writes it"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T19:56:51Z"
+assignee: "converge-pg-supports-optimizer-hints-memo"
 blocked-by: null
 closed-reason: null
 ---
