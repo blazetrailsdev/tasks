@@ -1,6 +1,6 @@
 ---
 title: "MemoryStore#initialize guards the DupCoder install on :coder AND :serializer"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T23:36:53Z"
+assignee: "test-compare-scans-rails-behavior-mixin-files"
 blocked-by: null
 closed-reason: null
 ---
