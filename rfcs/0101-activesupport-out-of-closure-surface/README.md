@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activesupport-out-of-closure-surface"
+rfc: "0101-activesupport-out-of-closure-surface"
 title: "activesupport out-of-closure surface: cache stores and XmlMini"
 status: draft
 created: 2026-08-12
