@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting matched members to Ruby files that have no TS counterpart at all"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6414
 claim: "2026-08-12T14:06:02Z"
 assignee: "converge-collection-proxy-create-delegates-to-association"
 blocked-by: null
