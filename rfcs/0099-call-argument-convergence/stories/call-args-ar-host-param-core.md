@@ -1,6 +1,6 @@
 ---
 title: "Converge the explicit-host argument in ported core module functions (60 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: 6427
 claim: "2026-08-12T17:16:56Z"
 assignee: "call-args-ar-host-param-core"
 blocked-by: null
