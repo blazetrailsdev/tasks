@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-api-scoring-correctness"
+rfc: "0103-parity-api-scoring-correctness"
 title: "parity:api scoring correctness residue"
 status: draft
 created: 2026-08-12
