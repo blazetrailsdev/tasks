@@ -1,5 +1,5 @@
 ---
-title: "Stop crediting a thrown  as a constructor call ahead of the real one"
+title: "Stop crediting a thrown new X() as a constructor call ahead of the real one"
 status: ready
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
