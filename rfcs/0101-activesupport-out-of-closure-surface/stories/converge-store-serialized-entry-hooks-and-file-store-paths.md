@@ -1,6 +1,6 @@
 ---
 title: "converge-store-serialized-entry-hooks-and-file-store-paths"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T20:36:47Z"
+assignee: "converge-store-serialized-entry-hooks-and-file-store-paths"
 blocked-by: null
 closed-reason: null
 ---
