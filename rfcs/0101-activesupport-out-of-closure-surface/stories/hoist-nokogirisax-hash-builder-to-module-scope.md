@@ -1,6 +1,6 @@
 ---
 title: "hoist-nokogirisax-hash-builder-to-module-scope"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6438
 claim: "2026-08-12T21:36:51Z"
 assignee: "hoist-nokogirisax-hash-builder-to-module-scope"
 blocked-by: null
