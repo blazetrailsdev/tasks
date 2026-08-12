@@ -1,6 +1,6 @@
 ---
 title: "Triage the missing members on partially-ported out-of-closure activesupport files"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6415
 claim: "2026-08-12T14:36:51Z"
 assignee: "converge-remaining-marked-for-destruction-slot-reads"
 blocked-by: null
