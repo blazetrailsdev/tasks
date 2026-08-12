@@ -1,6 +1,6 @@
 ---
 title: "Drop CollectionProxy's duplicate persisted-owner guard now that _createRecord raises it"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T15:56:54Z"
+assignee: "converge-mark-for-destruction-slot-writes"
 blocked-by: null
 closed-reason: null
 ---
