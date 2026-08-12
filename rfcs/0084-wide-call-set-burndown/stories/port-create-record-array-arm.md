@@ -1,6 +1,6 @@
 ---
 title: "Port the Array arm of CollectionAssociation#_create_record and HasManyAssociation#_create_record"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6424
 claim: "2026-08-12T16:16:54Z"
 assignee: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
 blocked-by: null
