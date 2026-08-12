@@ -1,7 +1,7 @@
 ---
 title: "Burn down the remaining 50 naming call-argument rows in the model core — attributes, enum, validations, scoping, timestamps"
-status: in-progress
-updated: 2026-08-11
+status: done
+updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]
