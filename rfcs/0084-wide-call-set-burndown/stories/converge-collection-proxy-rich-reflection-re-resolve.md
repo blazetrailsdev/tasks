@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-proxy-rich-reflection-re-resolve"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
