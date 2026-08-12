@@ -1,6 +1,6 @@
 ---
 title: "Scope or port the 31 zero-port buckets un-hidden by the phantom-credit fix"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6423
 claim: "2026-08-12T15:56:54Z"
 assignee: "converge-mark-for-destruction-slot-writes"
 blocked-by: null
