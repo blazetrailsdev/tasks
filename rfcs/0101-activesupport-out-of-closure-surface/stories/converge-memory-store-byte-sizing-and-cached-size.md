@@ -1,6 +1,6 @@
 ---
 title: "converge-memory-store-byte-sizing-and-cached-size"
-status: blocked
+status: ready
 updated: 2026-08-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-12T21:16:48Z"
-assignee: "converge-memory-store-byte-sizing-and-cached-size"
-blocked-by: "Already fully implemented by open PR #6437 (its parent story converge-store-serialized-entry-hooks-and-file-store-paths shipped the byte-sizing too): memory-store.ts there has PER_ENTRY_OVERHEAD=240, cachedSize, maxSize/:size + 32MB default, maxPruneTime, cacheSize accounting in writeEntry/deleteEntry/clear, the byte-target prune with the pruning guard + instrumentation, and evictLRU/sizeLimit deleted. Nothing left to build without duplicating an unmerged sibling branch (no stacked PRs). Unblock and close as done once #6437 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
