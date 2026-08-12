@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-association-load-target-and-ids-writer"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T02:26:00Z"
+assignee: "converge-collection-association-load-target-and-ids-writer"
 blocked-by: null
 closed-reason: null
 ---
