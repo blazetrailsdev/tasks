@@ -1,6 +1,6 @@
 ---
 title: "Route replace's new-owner arm through replace_records instead of an inlined remove/concat"
-status: claimed
+status: blocked
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-12T20:16:53Z"
 assignee: "converge-memory-store-dupcoder-and-pruning-guard"
-blocked-by: null
+blocked-by: "CollectionAssociation#replace is synchronous in trails and must stay synchronous: it is reached from the constructor's mass-assignment dispatch (base.ts:845-863 `_dispatchAssociationAttrs` -> `syncWrite` -> `replace`, collection-association.ts:202-216), whose callers read `owner.posts` on the next line. Rails' new-owner arm, `replace_records(other_array, original_target)` (collection_association.rb:249, :414-424), is `delete(difference(...))` + `concat(difference(...))`, and in trails every link of that chain is `async` — `delete` -> `deleteOrDestroy` -> `removeRecords` -> `deleteRecords`, and `concat` -> `concatRecords` -> `insertRecord` (collection-association.ts:645-660, 1073-1180). Even though a new owner does no I/O there (existingRecords is empty and `insert_record` is skipped by `unless owner.new_record?`), an await on a non-promise still defers a microtask, so the target mutation would land after the sync caller's next read (see the async-defers-scalar-writes class). The same applies to `skip_strict_loading { load_target }`, which is async too. Converging needs `removeRecords`/`concatRecords`/`delete`/`concat` (plus the HasManyThrough and HABTM overrides) restated as non-async hybrids returning `Promise<T> | T` — the settled trails shape, but a distinct, sizeable prerequisite that must land before this story's four-line body is possible; that is filed as convert-collection-removal-chain-to-sync-hybrid. Delete-side sibling converge-collection-proxy-delete-delegates-to-association landed alongside this bundle in the same PR."
 closed-reason: null
 ---
 
