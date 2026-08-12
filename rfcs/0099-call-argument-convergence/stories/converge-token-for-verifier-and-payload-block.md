@@ -1,6 +1,6 @@
 ---
 title: "Converge TokenDefinition#message_verifier lazy-init and #payload_for block receiver"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null

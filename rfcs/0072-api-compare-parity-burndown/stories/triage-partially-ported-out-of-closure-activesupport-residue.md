@@ -1,6 +1,6 @@
 ---
 title: "Triage the missing members on partially-ported out-of-closure activesupport files"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
