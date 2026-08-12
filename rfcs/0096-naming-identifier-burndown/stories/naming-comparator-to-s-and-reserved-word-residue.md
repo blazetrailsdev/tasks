@@ -1,6 +1,6 @@
 ---
 title: "Teach the call-arg comparator Ruby to_s and JS reserved-word locals"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6391
 claim: "2026-08-12T00:46:03Z"
 assignee: "naming-comparator-to-s-and-reserved-word-residue"
 blocked-by: null
