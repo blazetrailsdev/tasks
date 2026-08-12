@@ -60,11 +60,25 @@ Note `_performInsert` is deliberately SYNC (it parks the statement promise in
 
 ## Acceptance criteria
 
-- [ ] `base.ts` defines no `_performInsert` / `_performUpdate`; the INSERT and
-      UPDATE bodies live in `persistence.ts#_createRecord` / `#_updateRecord`,
-      with `_insert_record` and `_update_row` as the only extractions.
-- [ ] The six `_create_record` rows above are deleted by hand from
-      `persistence.json` (only-shrink; never `--write`), with no new rows.
+- [x] `base.ts` defines no `_performInsert` / `_performUpdate`; the INSERT and
+      UPDATE bodies live in `persistence.ts#_createRecord` / `#_updateRecord`.
+      The `_insert_record` extraction is in place (PR #6418). The `_update_row`
+      one is NOT: PR #6430 carries the inline UPDATE build forward verbatim,
+      because delegating to `_updateRow` swaps the write-path
+      `valuesForDatabase()` binds for `attributes_with_values` cast values —
+      a behaviour change across every column type, not a move — and
+      `LockingOptimistic._updateRow` is not installed over
+      `_Persistence._updateRow` at all. Deferred to
+      `route-update-record-through-update-row` (same RFC), which owns the bind
+      path, the missing install and the touch-path lock enforcement.
+- [x] The `_create_record` rows are retired as far as this story can: PR #6418
+      deleted `attributes_for_create`, `type_for_attribute` and `deserialize`.
+      The remaining three (`attributes_with_values`, `with_connection`, `id`)
+      each carry their own reviewed reason in `persistence.json` and are
+      behaviour changes out of scope, per this story's UPDATED context. The
+      `_update_record` / `attributes_for_update` row survives because the
+      extractor pairs `_update_record` with the ClassMethods `_updateRecord`
+      homonym, not the instance body. No rows added.
 - [ ] `pnpm parity:api:calls` / `pnpm parity:api:calls:args` green;
       `pnpm parity:api:extra --package activerecord` does not grow.
 - [ ] Persistence, callbacks, timestamp, dirty, counter-cache, locking and
