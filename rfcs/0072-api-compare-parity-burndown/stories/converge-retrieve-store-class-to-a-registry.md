@@ -1,6 +1,6 @@
 ---
 title: "Converge Cache.retrieve_store_class from a fixed switch to a store registry"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
