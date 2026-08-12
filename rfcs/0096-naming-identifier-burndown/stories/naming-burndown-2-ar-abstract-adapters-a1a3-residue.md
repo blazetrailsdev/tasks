@@ -1,6 +1,6 @@
 ---
 title: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6424
 claim: "2026-08-12T16:16:54Z"
 assignee: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
 blocked-by: null
