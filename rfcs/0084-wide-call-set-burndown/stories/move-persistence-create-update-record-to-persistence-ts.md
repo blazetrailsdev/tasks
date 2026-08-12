@@ -70,8 +70,29 @@ and file separately if they turn out to be removable.
    yield stays after the INSERT and `@new_record = false`, before the
    after_create callbacks (`persistence.rb:936-940`), with
    `persistence-save-block.trails.test.ts` green.
-3. `pnpm parity:api:calls` / `pnpm parity:api:calls:args` green; no new
-   baseline rows, and any row that converges is deleted by hand.
+3. `pnpm parity:api:calls` / `pnpm parity:api:calls:args` green; any row that
+   converges is deleted by hand. AMENDED 2026-08-12 (PR #6418 review): the
+   original "no new baseline rows" is not reachable by this story, because the
+   move is what first makes the extractor pair a TS body with
+   `persistence.rb:900-942` at all, and pairing a body for the first time
+   MEASURES divergence that was already there rather than creating it — the
+   `codegen handler coverage surfaces guard rows` pattern. Two populations
+   surface, both pre-existing:
+   - the five `_create_record` rows (`attributes_for_create`,
+     `attributes_with_values`, `with_connection`, `type_for_attribute`,
+     `deserialize`, `id`) are the `_performInsert` split this story's
+     "Converged shape" names, retired by
+     `fold-perform-insert-update-into-persistence-record-bodies`;
+   - the five rows on `_raise_record_not_destroyed`, `_delete_record`,
+     `apply_scoping?` and `build_default_constraint` are divergences in bodies
+     this story does not touch, surfaced because adding the instance-side
+     homonyms recomputed the file's ClassMethods/instance pairing. The fold
+     does not reach them, so no ordering of the two stories avoids them.
+
+   Each added row must carry a specific reason naming the body and the story
+   that retires it — never the seeded placeholder — and rows must be hand-added
+   via `serializeBaseline`, never `--write`.
+
 4. `pnpm parity:api:extra --package activerecord` does not grow.
 5. Persistence, callbacks, timestamp, dirty, counter-cache, locking and
    autosave suites stay green.
