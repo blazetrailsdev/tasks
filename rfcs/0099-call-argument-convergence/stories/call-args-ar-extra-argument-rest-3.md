@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-extra-argument-rest-3"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6412
 claim: "2026-08-12T13:26:03Z"
 assignee: "call-args-ar-extra-argument-rest-3"
 blocked-by: null
