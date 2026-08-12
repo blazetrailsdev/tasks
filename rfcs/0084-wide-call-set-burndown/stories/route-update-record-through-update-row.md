@@ -64,6 +64,15 @@ temporal, array, serialized, decimal), so it needs its own test pass. That
 difference is exactly the standing `_update_row` / `attributes_with_values` row
 in `scripts/api-compare/call-mismatches-exclude/activerecord/persistence.json`.
 
+## Overlap
+
+`0023-surfaced-deviations/wire-locking-touch-update-row-into-persistence-path`
+(ready, est 120) already owns installing `LockingOptimistic._touchRow` /
+`._updateRow` into `InstanceMethods` and the touch path. Claim both together or
+sequence this one after it — the install is a prerequisite for routing the save
+path through `_updateRow`, and doing them in separate PRs leaves the save path
+delegating to an unwrapped `_updateRow` with no lock enforcement in between.
+
 ## Acceptance criteria
 
 - [ ] `instanceUpdateRecord` calls `_updateRow(attributeNames)` instead of
