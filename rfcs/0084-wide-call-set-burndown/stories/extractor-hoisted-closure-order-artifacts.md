@@ -1,6 +1,6 @@
 ---
 title: "Stop recording a local-bound closure's calls at its definition site in order rows"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null

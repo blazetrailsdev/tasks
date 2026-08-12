@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-supports-optimizer-hints-memo"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0102-adapter-version-reader-fidelity"
 cluster: null
