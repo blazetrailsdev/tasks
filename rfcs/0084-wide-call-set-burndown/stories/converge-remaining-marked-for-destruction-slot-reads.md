@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining marked_for_destruction? slot reads to the ported method"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T14:36:51Z"
+assignee: "converge-remaining-marked-for-destruction-slot-reads"
 blocked-by: null
 closed-reason: null
 ---
