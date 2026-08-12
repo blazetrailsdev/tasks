@@ -1,14 +1,14 @@
 ---
 title: "preload-hmt-with-conditions-remaining-sti-gap"
-status: draft
-updated: 2026-08-03
+status: done
+updated: 2026-08-12
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6399
 claim: null
 assignee: null
 blocked-by: null
