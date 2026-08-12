@@ -1,6 +1,6 @@
 ---
 title: "Converge CollectionProxy#create/create! to delegations and drop the hand-rolled through arm"
-status: claimed
+status: blocked
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-12T14:06:02Z"
 assignee: "converge-collection-proxy-create-delegates-to-association"
-blocked-by: null
+blocked-by: "Both sequenced deps are unmet: port-collection-association-create-record is in-flight in open PR #6410 (CollectionAssociation#_createRecord does not exist on main), and route-through-create-via-create-record is itself blocked on it. This story is the proxy-side half and touches the same two files (collection-association.ts / collection-proxy.ts), so opening it now would duplicate #6410's body and conflict. Unblock once #6410 and the through-routing story have merged."
 closed-reason: null
 ---
 
