@@ -1,6 +1,6 @@
 ---
 title: "converge-reshaped-association-order-rows-remainder"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6395
 claim: "2026-08-12T02:05:59Z"
 assignee: "converge-reshaped-association-order-rows-remainder"
 blocked-by: null
