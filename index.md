@@ -103,6 +103,6 @@
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | active | @your-handle | activesupport |
 | [0099-call-argument-convergence](rfcs/0099-call-argument-convergence/README.md) | Call-argument convergence burndown (activerecord + deps) | active | @deanmarano | activerecord, arel, activemodel, activesupport, i18n, globalid |
 | [0100-package-size-and-publish-shape](rfcs/0100-package-size-and-publish-shape/README.md) | Package size and publish shape | draft | @deanmarano | activerecord, activemodel, activesupport, arel, date, i18n, globalid, did-you-mean |
-| [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | draft | @your-handle | activesupport |
+| [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | active | @your-handle | activesupport |
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | draft | @your-handle | activerecord |
 | [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | draft | @your-handle | — |
