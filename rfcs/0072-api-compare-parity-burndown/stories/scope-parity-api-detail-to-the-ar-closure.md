@@ -1,7 +1,7 @@
 ---
 title: "Scope the parity:api per-file detail table to the AR closure artifact"
-status: in-progress
-updated: 2026-08-11
+status: done
+updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
 packages: []
