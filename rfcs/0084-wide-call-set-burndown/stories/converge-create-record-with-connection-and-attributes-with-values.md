@@ -1,6 +1,6 @@
 ---
 title: "Converge _create_record's with_connection, attributes_with_values and id"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
