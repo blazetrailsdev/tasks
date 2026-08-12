@@ -1,6 +1,6 @@
 ---
 title: "Converge the _create_record/_update_record super chain onto Rails' module layering"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
