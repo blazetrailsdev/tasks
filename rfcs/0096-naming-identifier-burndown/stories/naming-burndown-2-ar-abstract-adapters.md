@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 45 naming call-argument rows in the abstract connection adapter, schema/database statements, pool and cache"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
