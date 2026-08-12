@@ -1,6 +1,6 @@
 ---
 title: "parity:test counts Rails' test/**/behaviors/ mixin cases in the denominator"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0103-parity-api-scoring-correctness"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6444
 claim: "2026-08-12T23:36:53Z"
 assignee: "test-compare-scans-rails-behavior-mixin-files"
 blocked-by: null
