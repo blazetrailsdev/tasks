@@ -1,6 +1,6 @@
 ---
 title: "converge-pool-config-primary-class-name-substitution"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6426
 claim: "2026-08-12T16:56:49Z"
 assignee: "converge-pool-config-primary-class-name-substitution"
 blocked-by: null
