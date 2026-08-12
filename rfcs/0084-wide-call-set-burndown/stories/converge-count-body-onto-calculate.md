@@ -1,6 +1,6 @@
 ---
 title: "converge-count-body-onto-calculate"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6434
 claim: "2026-08-12T19:36:51Z"
 assignee: "converge-count-body-onto-calculate"
 blocked-by: null
