@@ -75,7 +75,7 @@
 | [0069-globalid-trailtie-port](rfcs/0069-globalid-trailtie-port/README.md) | Port globalid railtie to a Trailtie | draft | @deanmarano | globalid |
 | [0070-drop-repair-worker-schema](rfcs/0070-drop-repair-worker-schema/README.md) | Drive repairWorkerSchema firings to zero, then delete it | closed | @deanmarano | activerecord |
 | [0071-ar-test-helper-suite-wide-config-fidelity](rfcs/0071-ar-test-helper-suite-wide-config-fidelity/README.md) | AR test-helper suite-wide config fidelity | closed | @deanmarano | activerecord |
-| [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | parity:api parity & fidelity burndown | active | @deanmarano | activerecord, activemodel, activesupport, arel, globalid |
+| [0072-api-compare-parity-burndown](rfcs/0072-api-compare-parity-burndown/README.md) | parity:api parity & fidelity burndown | closed | @deanmarano | activerecord, activemodel, activesupport, arel, globalid |
 | [0073-permanent-connection-checkout-disallowed](rfcs/0073-permanent-connection-checkout-disallowed/README.md) | Ban permanent Base.connection checkout in the AR suite (helper.rb:27) | draft | @deanmarano | activerecord |
 | [0074-i18n-parity](rfcs/0074-i18n-parity/README.md) | i18n gem parity | closed | @deanmarano | i18n, activesupport, activemodel, activerecord, date |
 | [0075-collection-association-target-fidelity](rfcs/0075-collection-association-target-fidelity/README.md) | Collection association target-store fidelity | draft | @deanmarano | activerecord |

@@ -1,9 +1,9 @@
 ---
 rfc: "0072-api-compare-parity-burndown"
 title: "parity:api parity & fidelity burndown"
-status: active
+status: closed
 created: 2026-07-25
-updated: 2026-08-11
+updated: 2026-08-12
 owner: "@deanmarano"
 packages:
   - activerecord
