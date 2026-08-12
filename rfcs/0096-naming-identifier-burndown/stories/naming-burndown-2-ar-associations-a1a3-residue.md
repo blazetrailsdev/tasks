@@ -1,6 +1,6 @@
 ---
 title: "Converge the a3 call-argument residue in associations (through-counter, multiset, join-constraints, counter-in-memory)"
-status: ready
+status: draft
 updated: 2026-08-12
 rfc: "0096-naming-identifier-burndown"
 cluster: null
