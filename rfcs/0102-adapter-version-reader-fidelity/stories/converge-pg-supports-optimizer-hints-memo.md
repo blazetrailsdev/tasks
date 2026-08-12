@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-supports-optimizer-hints-memo"
-status: claimed
+status: done
 updated: 2026-08-12
 rfc: "0102-adapter-version-reader-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6241
 claim: "2026-08-12T19:56:51Z"
 assignee: "converge-pg-supports-optimizer-hints-memo"
 blocked-by: null
