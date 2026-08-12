@@ -1,6 +1,6 @@
 ---
 title: "Port the four in-closure activesupport buckets left unscoped by the phantom-credit triage"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6428
 claim: "2026-08-12T17:36:52Z"
 assignee: "converge-collection-proxy-rich-reflection-re-resolve"
 blocked-by: null
