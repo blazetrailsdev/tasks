@@ -1,6 +1,6 @@
 ---
 title: "Make CollectionAssociation#callback/callbacks_for instance calls, not receiver-as-first-arg free functions"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:36:52Z"
+assignee: "pg-cancel-block-half-has-no-regression"
 blocked-by: null
 closed-reason: null
 ---

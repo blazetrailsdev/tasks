@@ -1,6 +1,6 @@
 ---
 title: "cancel_any_running_query's `block` half has no regression that reds without it"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:36:52Z"
+assignee: "pg-cancel-block-half-has-no-regression"
 blocked-by: null
 closed-reason: null
 ---

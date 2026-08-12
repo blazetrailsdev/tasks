@@ -1,6 +1,6 @@
 ---
 title: "Run PoolConfig#pool and #serverVersion under the ported monitor"
-status: ready
+status: claimed
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T16:36:52Z"
+assignee: "pg-cancel-block-half-has-no-regression"
 blocked-by: null
 closed-reason: null
 ---
