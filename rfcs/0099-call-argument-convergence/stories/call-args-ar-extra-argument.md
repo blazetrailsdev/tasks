@@ -1,7 +1,7 @@
 ---
 title: "Converge the 47 activerecord call sites that pass an extra argument Rails does not"
-status: ready
-updated: 2026-08-11
+status: claimed
+updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 564
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-12T02:35:05Z"
+assignee: "call-args-ar-extra-argument"
 blocked-by: null
 closed-reason: null
 ---
