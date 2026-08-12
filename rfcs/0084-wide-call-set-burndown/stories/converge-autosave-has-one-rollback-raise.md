@@ -1,6 +1,6 @@
 ---
 title: "converge-autosave-has-one-rollback-raise"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6393
 claim: "2026-08-12T01:25:59Z"
 assignee: "converge-autosave-has-one-rollback-raise"
 blocked-by: null
