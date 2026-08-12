@@ -1,5 +1,5 @@
 ---
-rfc: "0000-adapter-version-reader-fidelity"
+rfc: "0102-adapter-version-reader-fidelity"
 title: "Adapter version and column-reflection reader fidelity"
 status: draft
 created: 2026-08-12
