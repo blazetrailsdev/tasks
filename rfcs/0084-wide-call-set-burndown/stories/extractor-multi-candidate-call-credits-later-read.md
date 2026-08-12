@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting a multi-candidate Ruby call against a later TS read in order rows"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
