@@ -1,6 +1,6 @@
 ---
 title: "Drop the perform* empty-scope guards now that calculate owns @none"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6438
 claim: "2026-08-12T21:36:51Z"
 assignee: "hoist-nokogirisax-hash-builder-to-module-scope"
 blocked-by: null
