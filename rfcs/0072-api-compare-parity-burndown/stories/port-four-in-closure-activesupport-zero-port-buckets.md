@@ -1,6 +1,6 @@
 ---
 title: "Port the four in-closure activesupport buckets left unscoped by the phantom-credit triage"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0072-api-compare-parity-burndown"
 cluster: null
