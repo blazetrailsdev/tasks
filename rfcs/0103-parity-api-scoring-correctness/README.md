@@ -1,12 +1,13 @@
 ---
 rfc: "0103-parity-api-scoring-correctness"
 title: "parity:api scoring correctness residue"
-status: draft
+status: active
 created: 2026-08-12
 updated: 2026-08-12
 owner: "@your-handle"
 packages: []
 clusters: []
+priority: 2
 ---
 
 # parity:api scoring correctness residue
