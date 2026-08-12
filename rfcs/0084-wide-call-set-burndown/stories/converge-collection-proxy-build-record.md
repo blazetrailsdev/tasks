@@ -1,7 +1,7 @@
 ---
 title: "converge CollectionProxy#_build construction onto Association#build_record"
-status: claimed
-updated: 2026-08-11
+status: in-progress
+updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6388
 claim: "2026-08-11T23:46:06Z"
 assignee: "converge-collection-proxy-build-record"
 blocked-by: null
