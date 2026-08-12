@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-host-param-connection-adapters-rest"
-status: claimed
+status: in-progress
 updated: 2026-08-12
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6413
 claim: "2026-08-12T13:46:05Z"
 assignee: "call-args-ar-host-param-connection-adapters-rest"
 blocked-by: null
