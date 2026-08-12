@@ -1,6 +1,6 @@
 ---
 title: "Converge Enumerable#in_order_of to Rails' group_by/values_at + sort_by shape"
-status: in-progress
+status: done
 updated: 2026-08-12
 rfc: "0084-wide-call-set-burndown"
 cluster: null
