@@ -1,6 +1,6 @@
 ---
 title: "pg-statement-pool-and-adapter-residue"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T17:25:38Z"
+assignee: "pg-statement-pool-and-adapter-residue"
 blocked-by: null
 closed-reason: null
 ---
