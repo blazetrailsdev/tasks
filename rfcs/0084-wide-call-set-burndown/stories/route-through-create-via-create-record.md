@@ -1,7 +1,7 @@
 ---
 title: "Route CollectionProxy through-create through _createRecord instead of insertRecord"
-status: blocked
-updated: 2026-08-12
+status: ready
+updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-08-12T13:06:04Z"
-assignee: "activesupport-out-of-closure-unported-entries"
-blocked-by: "Depends on port-collection-association-create-record: CollectionAssociation#_create_record (collection_association.rb:354-372) is not ported yet, and that story is claimed and in flight by another agent on the same files (collection-association.ts / collection-proxy.ts). Routing _pushThrough's skipCallbacks arm through _createRecord requires that body to exist first; porting it here would duplicate and conflict with the sibling PR."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
