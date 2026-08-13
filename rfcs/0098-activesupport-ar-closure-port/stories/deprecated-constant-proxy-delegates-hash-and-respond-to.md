@@ -1,6 +1,6 @@
 ---
 title: "DeprecatedConstantProxy delegates hash and respond_to? to target"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T15:19:07Z"
+assignee: "merge-clauses-where-clause-structure"
 blocked-by: null
 closed-reason: null
 ---
