@@ -1,6 +1,6 @@
 ---
 title: "Compile the calculation arms from relation.arel instead of hand-built managers"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T00:36:51Z"
+assignee: "implement-fs-adapter-flock-for-file-store-lock-file"
 blocked-by: null
 closed-reason: null
 ---
