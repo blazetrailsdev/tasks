@@ -1,6 +1,6 @@
 ---
 title: "travel_to stubs real clock methods instead of a module-state holder; wire after_teardown"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
