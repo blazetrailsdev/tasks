@@ -1,5 +1,5 @@
 ---
-rfc: "0000-twitter-app-full-stack-integration"
+rfc: "0104-twitter-app-full-stack-integration"
 title: "First full-stack trails application: route to rendered HTML"
 status: draft
 created: 2026-08-13

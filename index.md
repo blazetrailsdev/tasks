@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-twitter-app-full-stack-integration](rfcs/0000-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -107,3 +106,4 @@
 | [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | active | @your-handle | activesupport |
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | closed | @your-handle | activerecord |
 | [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | active | @your-handle | — |
+| [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler |
