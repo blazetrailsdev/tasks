@@ -1,6 +1,6 @@
 ---
 title: "async_sum's identity default is nil, not sum's 0"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 6460
 claim: "2026-08-13T13:36:35Z"
 assignee: "converge-async-sum-nil-identity-default"
 blocked-by: null
