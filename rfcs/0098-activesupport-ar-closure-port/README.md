@@ -3,7 +3,7 @@ rfc: "0098-activesupport-ar-closure-port"
 title: "activesupport AR-closure porting"
 status: active
 created: 2026-08-10
-updated: 2026-08-12
+updated: 2026-08-13
 owner: "@your-handle"
 packages:
   - "activesupport"
@@ -11,6 +11,7 @@ clusters: []
 related-rfcs:
   - "0072-api-compare-parity-burndown"
   - "0092-parity-tools-consolidation"
+priority: 2
 ---
 
 # activesupport AR-closure porting
