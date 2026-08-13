@@ -16,6 +16,28 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Status (2026-08-13)
+
+PR #6469 shipped the portion that fit under the PR LOC ceiling and does **not**
+close this story:
+
+- `cache_store_coder_behavior.rb` — new
+  `packages/activesupport/src/cache/behaviors/cache-store-coder-behavior.ts`,
+  all 7 cases, called from both store tests.
+- `CacheDeleteMatchedBehavior` / `CacheIncrementDecrementBehavior` — relocated
+  out of `memory-store.test.ts` / `file-store.test.ts` into
+  `cache-delete-matched-behavior.ts` / `cache-increment-decrement-behavior.ts`.
+
+The remaining three modules are split into their own stories, each carrying the
+Rails `file:line` include sites:
+
+- [[wire-cache-store-version-behavior-into-helpers]] (12 cases, both stores)
+- [[wire-cache-store-format-version-behavior-into-helpers]] (8 cases;
+  `file_store_test.rb:37` only — memory_store_test.rb does NOT include it)
+- [[wire-cache-logging-behavior-into-helpers]] (8 cases, both stores)
+
+This story is done once those three land; nothing else is outstanding on it.
+
 ## Context
 
 `memory_store_test.rb:16-24` and `file_store_test.rb:32-41` each include ten
