@@ -1,6 +1,6 @@
 ---
 title: "Port Hash#transform_keys and delegate the four key casts to it"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6473
 claim: "2026-08-13T16:05:43Z"
 assignee: "route-update-record-through-update-row"
 blocked-by: null
