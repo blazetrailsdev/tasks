@@ -47,5 +47,5 @@ Ruby-less overloaded-getter/setter form, and update the callers
 
 - [ ] No `get*`-prefixed accessor remains in `packages/rack/src/utils.ts`.
 - [ ] `pnpm parity:api --package rack` delta non-negative; `parity:api:extra
-  --package rack` shows no new novel names (it should shrink).
+--package rack` shows no new novel names (it should shrink).
 - [ ] `pnpm parity:api:calls` stays clean.

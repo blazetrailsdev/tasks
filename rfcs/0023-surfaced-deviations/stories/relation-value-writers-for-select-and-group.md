@@ -48,5 +48,5 @@ through them.
       and the `as unknown as string[]` casts are gone.
 - [ ] `calculations.test.ts`, `calculations.trails.test.ts` and
       `relations.test.ts` stay green (including `group with subquery in from
-  does not use original table name`, which depends on the resolved nodes
+does not use original table name`, which depends on the resolved nodes
       being stored).
