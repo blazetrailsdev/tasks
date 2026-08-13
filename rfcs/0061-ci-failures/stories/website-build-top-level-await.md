@@ -28,11 +28,11 @@ Failing step: **Build SvelteKit** —
 (`vite build --config vite.sw.config.ts`), e.g. run 31726034643 / job
 94534581328 on `main`:
 
-````text
+```text
 error during build:
 Module format "iife" does not support top-level await. Use the "es" or "system" output formats rather.
 file: packages/activesupport/src/yaml.ts
-```text
+```
 
 The service-worker bundle (`vite.sw.config.ts`) emits `iife`, which cannot
 carry a top-level `await`. `packages/activesupport/src/yaml.ts` acquired one
@@ -52,4 +52,3 @@ and is reachable from the SW entry's import graph. The docs build
   `website_affected` / `website_label` condition in the `ci` aggregate's
   `website)` case (replacing the unconditional `continue`).
 - `pnpm vitest run scripts/ci-suite-coverage.test.ts` stays green.
-````
