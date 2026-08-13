@@ -1,6 +1,6 @@
 ---
 title: "MySQLDatabaseTasks reads configuration_hash only, dropping the trails URL re-parse"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6481
 claim: "2026-08-13T17:35:42Z"
 assignee: "mysql-tasks-drop-url-reparse-fallbacks"
 blocked-by: null
