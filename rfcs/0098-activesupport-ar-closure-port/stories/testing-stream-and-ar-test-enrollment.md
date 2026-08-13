@@ -1,6 +1,6 @@
 ---
 title: "testing-stream-and-ar-test-enrollment"
-status: ready
+status: closed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: its scope stays with the still-open parent testing-helpers-for-ar-test-parity after PR #6454 shipped only part of that slot."
 ---
 
 ## Context
