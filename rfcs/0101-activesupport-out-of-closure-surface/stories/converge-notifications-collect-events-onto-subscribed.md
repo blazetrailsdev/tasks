@@ -1,6 +1,6 @@
 ---
 title: "port Notifications.subscribed and delete the invented collectEvents"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6468
 claim: "2026-08-13T15:19:07Z"
 assignee: "merge-clauses-where-clause-structure"
 blocked-by: null
