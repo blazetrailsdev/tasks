@@ -1,6 +1,6 @@
 ---
 title: "converge-mysql2-type-registration-adapter-key"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
