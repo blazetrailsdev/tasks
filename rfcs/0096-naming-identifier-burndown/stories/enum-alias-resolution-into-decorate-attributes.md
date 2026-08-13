@@ -1,6 +1,6 @@
 ---
 title: "enum-alias-resolution-into-decorate-attributes"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
