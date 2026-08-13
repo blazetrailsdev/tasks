@@ -1,6 +1,6 @@
 ---
 title: "Move ported cache-behavior cases out of store test files into their Rails-named helpers"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6453
 claim: "2026-08-13T02:36:50Z"
 assignee: "converge-nokogiri-parse-onto-the-stringio-shim"
 blocked-by: null
