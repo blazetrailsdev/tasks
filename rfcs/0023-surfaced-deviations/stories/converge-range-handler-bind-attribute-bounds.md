@@ -1,7 +1,7 @@
 ---
 title: "RangeHandler wraps both bounds in build_bind_attribute; UnboundableBound is invented"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T04:33:35Z"
+assignee: "call-args-ar-predicate-builder-set-handler"
 blocked-by: null
 closed-reason: null
 ---
