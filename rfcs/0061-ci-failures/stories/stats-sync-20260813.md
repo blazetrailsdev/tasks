@@ -1,6 +1,6 @@
 ---
 title: "trails stats sync cron failing: Error: Command failed: gh pr list --repo blazetrailsdev/trails --state all --limit 1000…"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0061-ci-failures"
 cluster: null
