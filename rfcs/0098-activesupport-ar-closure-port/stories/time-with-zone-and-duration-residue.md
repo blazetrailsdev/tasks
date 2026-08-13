@@ -1,6 +1,6 @@
 ---
 title: "time-with-zone-and-duration-residue"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6465
 claim: "2026-08-13T15:20:29Z"
 assignee: "stats-sync-20260813"
 blocked-by: null
