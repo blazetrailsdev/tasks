@@ -1,6 +1,6 @@
 ---
 title: "Port ColumnAliasTracker#alias_for and drop the invented group_key aliases"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
