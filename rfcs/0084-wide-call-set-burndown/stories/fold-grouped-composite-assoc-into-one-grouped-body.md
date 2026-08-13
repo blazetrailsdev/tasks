@@ -1,6 +1,6 @@
 ---
 title: "Fold groupedCompositeAssoc back into the single execute_grouped_calculation body"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
