@@ -1,6 +1,6 @@
 ---
 title: "countryZones answers a shorter list than Rails for AQ/AU/RU/TF/VN (CLDR vs zone1970.tab membership)"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
