@@ -1,6 +1,6 @@
 ---
 title: "converge-mysql2-type-registration-adapter-key"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6496
 claim: "2026-08-13T22:27:07Z"
 assignee: "converge-mysql2-type-registration-adapter-key"
 blocked-by: null
