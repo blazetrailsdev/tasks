@@ -1,6 +1,6 @@
 ---
 title: "logging-internals-broadcast-logger-and-silencer"
-status: ready
+status: closed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: the parent story deprecation-and-logging-internals stays open for exactly this work (PR #6456 landed only its deprecation half and no longer closes it), so this split would double-schedule it."
 ---
 
 ## Context
