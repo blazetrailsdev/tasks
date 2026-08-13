@@ -1,6 +1,6 @@
 ---
 title: "AbstractMysqlAdapter#columns pre-fetches SHOW CREATE TABLE behind an invented branch-prediction heuristic"
-status: draft
+status: done
 updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6483
 claim: null
 assignee: null
 blocked-by: null
