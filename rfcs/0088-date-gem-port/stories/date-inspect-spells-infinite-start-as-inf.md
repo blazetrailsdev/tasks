@@ -1,6 +1,6 @@
 ---
 title: "Date#inspect spells a non-finite start Inf/-Inf, as mk_inspect's %.0f does"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6464
 claim: "2026-08-13T14:06:37Z"
 assignee: "extra-surface-scores-overridden-ruby-files"
 blocked-by: null
