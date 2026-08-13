@@ -1,6 +1,6 @@
 ---
 title: "Spell check_if_method_has_arguments!'s __callee__ as a colon string"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6494
 claim: "2026-08-13T21:27:10Z"
 assignee: "drop-assert-valid-keys-set-for-rails-include"
 blocked-by: null
