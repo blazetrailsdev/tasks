@@ -1,6 +1,6 @@
 ---
 title: "ReferenceDefinition#_columns should be named columns like Rails"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6463
 claim: "2026-08-13T13:56:34Z"
 assignee: "build-with-value-from-hash-arg-order"
 blocked-by: null
