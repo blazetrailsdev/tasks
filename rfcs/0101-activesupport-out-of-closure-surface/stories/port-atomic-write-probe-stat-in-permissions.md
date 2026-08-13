@@ -1,6 +1,6 @@
 ---
 title: "Port File.probe_stat_in and atomic_write's permission copy"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
