@@ -33,3 +33,16 @@ Rails sources under `vendor/rails/activesupport/lib/active_support/`. ~55 member
 
 - Listed files at 0 missing; `parity:api` delta non-negative.
 - Number-returning kwarg/predicate semantics match Ruby (no boolean-ification of value-returning predicates).
+
+## Sweep note (2026-08-12)
+
+Inventory drift since the 2026-08-10 audit — two "NO TS FILE" entries have
+landed and should be re-measured rather than created:
+
+- `packages/activesupport/src/core-ext/array/access.ts` EXISTS.
+- `packages/activesupport/src/core-ext/numeric/bytes.ts` EXISTS.
+
+Still absent, as the audit says: `core-ext/array/extract-options.ts` (note the
+`extract-options.test.ts` beside it with no source) and
+`core-ext/numeric/conversions.ts`. Re-run `pnpm parity:api --package
+activesupport` for current missing counts before scoping the slot.

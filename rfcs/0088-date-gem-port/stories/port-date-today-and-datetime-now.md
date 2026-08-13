@@ -47,3 +47,17 @@ first — `test_next` is the acceptance test for that decision.
 - [ ] `it("next")` in `packages/date/src/test-date-arith.test.ts` carries the
       `Date.today` / `DateTime.now` arms and the placeholder comment is gone.
 - [ ] No `node:*` import and no `process.*` for the clock or the zone.
+
+## Sweep note (2026-08-12)
+
+**Premise partly stale.** `Date.today` (`date.ts:6132`) and `DateTime.now`
+(`date.ts:8279`) DID land, in PR #6317 — but both answer a
+`Temporal.PlainDate` / `Temporal.PlainDateTime`, which is exactly the shape the
+Context flags as unable to satisfy `test_next`. The placeholder comment in
+`packages/date/src/test-date-arith.test.ts:8-13` still names this story.
+
+So the live work is narrower than "port them": verify the two existing bodies
+against `date_core.c:3789-3826` / `:8134-8228` (notably the `s == 60` clamp and
+the out-of-range-offset zeroing, which may not have come across), decide the
+return shape, and carry the `test_next` arms. The acceptance criteria below
+stand as written.

@@ -67,3 +67,15 @@ Per `feedback_fidelity_of_names_is_the_primary_goal`, the Rails name wins.
       `parity:test --gates --check` exits 0.
 - [ ] `schema-definitions.trails.test.ts` (`ReferenceDefinition#add`) and
       `connection-adapters/abstract/` stay green.
+
+## Sweep note (2026-08-12)
+
+Premise re-verified on `main` @ 059bfe688 — `_columns()` is still the name, now
+at `schema-definitions.ts:913`, called from `add` (:819), `addTo` (:835) and
+`columnNames` (:903).
+
+**Stale citation corrected:** the `call-mismatches-wide-exclude/` tree no longer
+exists (RFC 0084 folded it into `call-mismatches-exclude/`), and neither
+`columns` row survives there. The second acceptance criterion is therefore moot
+— this is now a pure fidelity rename, which per
+`feedback_fidelity_of_names_is_the_primary_goal` still stands on its own.

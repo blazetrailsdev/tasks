@@ -63,3 +63,17 @@ scope for an accessor rename:
   reason that survives triage, and make the call-site comment state the
   behavioural difference explicitly.
 - Adapter tests still pass on sqlite3, postgresql and mysql2.
+
+## Sweep note (2026-08-12)
+
+Premise re-verified on `main` @ 059bfe688 — still live. Citations refreshed:
+the setter application is now `abstract-adapter.ts:1197-1207`, and
+`initialize`'s assignment is `abstract-adapter.ts:1418`.
+
+**Stale citation corrected:** the `call-mismatches-wide-exclude/` tree no longer
+exists — RFC 0084 folded the wide ratchet into the single
+`scripts/api-compare/call-mismatches-exclude/` baseline, and no
+`disable_prepared_statements` row survives there today. So the baseline half of
+the acceptance criteria is moot; what remains is the code-fidelity decision
+(read the flag inline in `initialize` as Rails does, or justify the setter at
+the call site).

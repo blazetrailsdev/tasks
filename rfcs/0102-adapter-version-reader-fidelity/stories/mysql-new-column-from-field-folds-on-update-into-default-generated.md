@@ -79,3 +79,16 @@ behavioural surface.
       `/on update CURRENT_TIMESTAMP/i` test (Rails' guard) is all that remains.
 - [ ] MySQL and MariaDB lanes green, including schema-dump round-trips of
       columns with expression defaults and `on update CURRENT_TIMESTAMP`.
+
+## Sweep note (2026-08-12)
+
+Premise re-verified on `main` @ 059bfe688. Line numbers refreshed:
+`newColumnFromField` is at
+`packages/activerecord/src/connection-adapters/mysql/schema-statements.ts:360`,
+the `onUpdateMatch` capture at `:377`, the datetime arm at `:379-381` and the
+`DEFAULT_GENERATED` `startsWith` arm with the fold at `:382-390`.
+
+Note the in-code comment at `:383-386` justifies the fold as feeding
+`renameColumnForAlter`'s rebuild — PR #6228 is cited in the Context as having
+removed the only consumer of `Column#onUpdate`, so check whether that
+justification is still true before deciding.

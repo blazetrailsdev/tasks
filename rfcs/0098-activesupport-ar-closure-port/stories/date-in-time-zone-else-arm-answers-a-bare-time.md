@@ -65,3 +65,12 @@ components). The divergence is in the returned type, which a caller reading
       Rails devs read as a bare `Time`, or the equivalence is recorded once
       rather than per-call-site.
 - [ ] The deviation note at `date-ext.ts:102-106` is deleted, not reworded.
+
+## Sweep note (2026-08-12)
+
+**Path corrected:** the body is now
+`packages/activesupport/src/core-ext/date/calculations.ts:109-115` (moved from
+`date-ext.ts` by PR #6286). The divergence is unchanged — `inTimeZone` is typed
+`: TimeWithZone` and the `else` arm is still
+`timeWithZone(date, TimeZone.find(Temporal.Now.timeZoneId())!)` where Rails
+answers `time || to_time`.

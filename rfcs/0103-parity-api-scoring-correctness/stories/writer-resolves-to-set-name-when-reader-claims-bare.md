@@ -54,3 +54,17 @@ Do NOT fix this by dropping the `set*` candidate or by broadening the
       is DELETED as part of this story.
 - [ ] `pnpm parity:api:calls` / `parity:api` deltas non-negative; add the pairing case
       to `scripts/api-compare/conventions.test.ts`.
+
+## Sweep note (2026-08-12)
+
+**Citations corrected — the divergence itself is still live.**
+
+- The candidate walk moved: there is no `nameCandidates` and no
+  `scripts/api-compare/conventions.ts`. The writer arm is
+  `scripts/parity/conventions.ts:1210-1220` (`if (name.endsWith("="))`), whose
+  own comment states the ordering this story disputes: "`setX` is offered
+  _after_ the bare camel name". The generated doc text is at `:1329-1338`.
+- `packages/activesupport/src/date-ext.ts` was moved to
+  `packages/activesupport/src/core-ext/date/calculations.ts` (PR #6286). The
+  `@missingRailsCall find_beginning_of_week!` receipt this story deletes is at
+  `core-ext/date/calculations.ts:52`.

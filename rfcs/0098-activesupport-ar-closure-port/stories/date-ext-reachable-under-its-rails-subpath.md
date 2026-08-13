@@ -56,3 +56,12 @@ does not catch a missing one.
 - [ ] `index.ts`'s flat exports still resolve `ago`/`since`/… to the `Time` arm;
       no name shadows another.
 - [ ] The subpath is registered everywhere a cross-package subpath must be.
+
+## Sweep note (2026-08-12)
+
+**Path corrected:** `packages/activesupport/src/date-ext.ts` was moved to
+`packages/activesupport/src/core-ext/date/calculations.ts` by PR #6286. The gap
+is unchanged — the package `exports` map carries only `./core-ext/range/conversions`
+and `./core-ext/range/each`, so the `Date` arm is still unreachable from outside
+the package. The obvious subpath is now `./core-ext/date/calculations`, which
+mirrors the Rails require path directly.
