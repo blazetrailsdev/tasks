@@ -42,12 +42,12 @@ server (`packages/trailties/src/server/application.ts#setupViews`) and
 controller's template lookup necessarily goes through the narrow protocol.
 
 The visible cost is in `ActionController::Base#templateExists` /
-`#anyTemplates`, which must sweep prefixes and formats by hand instead of
-calling `isExists` / `isAny`, and cannot pass `variants: request.variant` at
-all — Rails does
-(`vendor/rails/actionpack/lib/action_controller/metal/implicit_render.rb:37`).
-That gap is the one remaining `kind: "args"` row in
-`scripts/api-compare/call-mismatches-exclude/actioncontroller/metal/implicit-render.json`.
+`#anyTemplates`, which sweep prefixes and formats by hand instead of calling
+`isExists` / `isAny`. Variant support was ported into the narrow protocol
+(`TemplateResolver.find` takes `variants`, `FileSystemResolver` prefers
+`name.format+variant.ext`), so no parity suppression remains — but the work is
+now duplicated: the same capability exists once per protocol, and the rest of
+the details cascade (locale, handlers) is still only on the `_viewPaths` half.
 
 ## Acceptance criteria
 
@@ -60,4 +60,4 @@ That gap is the one remaining `kind: "args"` row in
   as `isExists` / `isAny`.
 - `Base#templateExists` delegates to `isExists` and passes
   `variants: request.variant`; `Base#anyTemplates` delegates to `isAny`.
-- The `variants:` row in the implicit-render call-arg baseline is deleted.
+- Variant lookup is implemented once, not once per protocol.
