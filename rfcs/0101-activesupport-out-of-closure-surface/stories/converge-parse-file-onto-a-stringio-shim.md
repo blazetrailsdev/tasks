@@ -1,6 +1,6 @@
 ---
 title: "converge XmlMini._parse_file onto a StringIO shim instead of a Blob"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6451
 claim: "2026-08-13T01:56:51Z"
 assignee: "database-version-sync-getter-forces-hand-warms"
 blocked-by: null
