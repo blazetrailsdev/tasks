@@ -1,6 +1,6 @@
 ---
 title: "Port XmlMini's PARSING typecast table"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
