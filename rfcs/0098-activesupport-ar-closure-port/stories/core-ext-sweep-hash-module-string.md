@@ -1,7 +1,7 @@
 ---
 title: "core-ext-sweep-hash-module-string"
-status: draft
-updated: 2026-08-10
+status: ready
+updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
