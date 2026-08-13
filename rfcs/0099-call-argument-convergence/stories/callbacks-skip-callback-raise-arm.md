@@ -1,6 +1,6 @@
 ---
 title: "callbacks-skip-callback-raise-arm"
-status: claimed
+status: blocked
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-13T20:05:38Z"
 assignee: "callbacks-skip-callback-raise-arm"
-blocked-by: null
+blocked-by: 'Blocked on open PR #6491 (feat(activesupport): make setCallback/skipCallback take a variadic filter list), which rewrites the entire Callbacks.skipCallback body this story must extend. This story IS the deliberately-deferred :raise arm of that PR: its acceptance criteria reference the variadic filter list, the merge_conditional_options arm (callbacks.rb:799-801) and the no-filter ''remove all of this kind'' arm, none of which exist on origin/main yet. Implementing the raise arm from main would mean re-authoring the same ~20 lines of packages/activesupport/src/callbacks.ts (Callbacks.skipCallback, the skipCallback re-export, ClassMethods/CallbacksMixin signatures) that #6491 already rewrites — a guaranteed conflict and a de-facto stacked PR, both barred by CLAUDE.md. Unblock once #6491 merges; the remaining work is then small: default options.raise = true unless the key is present (callbacks.rb:788), raise ArgumentError "#{type.to_s.capitalize} #{name} callback #{filter.inspect} has not been defined" when no chain entry matches (callbacks.rb:795), and converge the silent-no-op callers (skipCallbackOnProto in packages/activemodel/src/callbacks.ts:424, Model.skipCallback in packages/activemodel/src/model.ts:1341, the actionpack/activerecord skip paths), with Rails coverage at callbacks_test.rb:1201-1202.'
 closed-reason: null
 ---
 
