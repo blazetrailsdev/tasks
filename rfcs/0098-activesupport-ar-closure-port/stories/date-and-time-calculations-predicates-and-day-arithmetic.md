@@ -1,6 +1,6 @@
 ---
 title: "date-and-time-calculations-predicates-and-day-arithmetic"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6452
 claim: "2026-08-13T02:16:50Z"
 assignee: "writer-resolves-to-set-name-when-reader-claims-bare"
 blocked-by: null
