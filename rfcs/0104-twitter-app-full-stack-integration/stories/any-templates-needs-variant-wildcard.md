@@ -1,6 +1,6 @@
 ---
 title: "anyTemplates has no variant wildcard, so a variant-only template reads as no template"
-status: draft
+status: closed
 updated: 2026-08-13
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged in PR 6470: anyTemplates delegates to LookupContext#isAny, and the :any variants sentinel from detailArgsForAny globs variant files in FileSystemResolver."
 ---
 
 ## Context
