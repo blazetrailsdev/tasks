@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter applies disable_prepared_statements in the setter, not initialize"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6455
 claim: "2026-08-13T03:16:53Z"
 assignee: "naming-burndown-2-ar-associations-a1a3-residue"
 blocked-by: null
