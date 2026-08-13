@@ -1,6 +1,6 @@
 ---
 title: "Port XmlMini's PARSING typecast table"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6465
 claim: "2026-08-13T14:16:33Z"
 assignee: "stats-sync-20260813"
 blocked-by: null
