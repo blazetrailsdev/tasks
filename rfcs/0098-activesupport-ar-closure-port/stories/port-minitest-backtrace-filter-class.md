@@ -1,6 +1,6 @@
 ---
 title: "Port Minitest::BacktraceFilter as a class with a settable Minitest.backtrace_filter"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null

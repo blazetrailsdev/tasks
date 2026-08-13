@@ -1,6 +1,6 @@
 ---
 title: "Grouped calculation's key-record lookup is one where call for both PK arities"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null

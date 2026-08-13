@@ -1,6 +1,6 @@
 ---
 title: "Date#inspect names its class without reading constructor.name"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null

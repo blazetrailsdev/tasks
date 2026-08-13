@@ -1,6 +1,6 @@
 ---
 title: "XmlMini resolves only 3 of Rails' 6 backend files by name"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
