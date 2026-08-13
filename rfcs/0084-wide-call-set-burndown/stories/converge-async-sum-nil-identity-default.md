@@ -1,6 +1,6 @@
 ---
 title: "async_sum's identity default is nil, not sum's 0"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
