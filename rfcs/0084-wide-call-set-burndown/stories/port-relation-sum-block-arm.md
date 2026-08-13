@@ -1,7 +1,7 @@
 ---
 title: "port-relation-sum-block-arm"
-status: ready
-updated: 2026-08-12
+status: claimed
+updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T15:55:42Z"
+assignee: "port-relation-sum-block-arm"
 blocked-by: null
 closed-reason: null
 ---
