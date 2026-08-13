@@ -11,6 +11,7 @@ packages:
   - trailties
   - tse-compiler
   - activerecord
+  - activerecord-cli
 clusters: []
 ---
 
