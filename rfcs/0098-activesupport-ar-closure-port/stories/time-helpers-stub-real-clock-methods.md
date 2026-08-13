@@ -1,6 +1,6 @@
 ---
 title: "travel_to stubs real clock methods instead of a module-state holder; wire after_teardown"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T13:56:34Z"
+assignee: "build-with-value-from-hash-arg-order"
 blocked-by: null
 closed-reason: null
 ---
