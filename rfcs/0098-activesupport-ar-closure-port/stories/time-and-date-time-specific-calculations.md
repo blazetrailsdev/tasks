@@ -1,6 +1,6 @@
 ---
 title: "time-and-date-time-specific-calculations"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
