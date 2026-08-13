@@ -1,6 +1,6 @@
 ---
 title: "Date#inspect spells a non-finite start Inf/-Inf, as mk_inspect's %.0f does"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
