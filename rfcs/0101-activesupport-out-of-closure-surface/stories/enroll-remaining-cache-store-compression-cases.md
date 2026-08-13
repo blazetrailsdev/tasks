@@ -1,7 +1,7 @@
 ---
 title: "Enroll the remaining CacheStoreCompressionBehavior cases (format version, coder, serializer, compressor)"
-status: claimed
-updated: 2026-08-12
+status: blocked
+updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-12T23:36:53Z"
 assignee: "test-compare-scans-rails-behavior-mixin-files"
-blocked-by: null
+blocked-by: "13/14 enrolled in PR #6444; 'compression ignores incompressible data' (cache_store_compression_behavior.rb:71-74) needs converge-fidelity-coder-binary-string-payload — trails' JSON fidelity coder escapes the 128 raw bytes into a 275-byte payload that deflates to 191, so the case's premise does not hold"
 closed-reason: null
 ---
 
