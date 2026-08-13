@@ -3,12 +3,12 @@ rfc: "0101-activesupport-out-of-closure-surface"
 title: "activesupport out-of-closure surface: cache stores and XmlMini"
 status: active
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-13
 owner: "@your-handle"
 packages:
   - "activesupport"
 clusters: []
-priority: 2
+priority: 3
 ---
 
 # activesupport out-of-closure surface: cache stores and XmlMini
