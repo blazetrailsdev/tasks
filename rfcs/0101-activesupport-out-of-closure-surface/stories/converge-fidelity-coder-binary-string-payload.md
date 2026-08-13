@@ -1,6 +1,6 @@
 ---
 title: "converge-fidelity-coder-binary-string-payload"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6446
 claim: "2026-08-13T00:16:48Z"
 assignee: "converge-fidelity-coder-binary-string-payload"
 blocked-by: null
