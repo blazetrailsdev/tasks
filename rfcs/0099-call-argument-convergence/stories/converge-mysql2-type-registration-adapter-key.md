@@ -1,7 +1,7 @@
 ---
 title: "converge-mysql2-type-registration-adapter-key"
-status: ready
-updated: 2026-08-11
+status: claimed
+updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T22:27:07Z"
+assignee: "converge-mysql2-type-registration-adapter-key"
 blocked-by: null
 closed-reason: null
 ---
