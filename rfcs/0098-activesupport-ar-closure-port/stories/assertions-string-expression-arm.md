@@ -1,6 +1,6 @@
 ---
 title: "assert_difference/assert_changes String-expression arm and Rails-shaped source quoting"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T13:36:35Z"
+assignee: "converge-async-sum-nil-identity-default"
 blocked-by: null
 closed-reason: null
 ---
