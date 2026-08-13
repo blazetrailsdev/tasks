@@ -1,6 +1,6 @@
 ---
 title: "arel-symbol-modelling-colon-string-campaign"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
