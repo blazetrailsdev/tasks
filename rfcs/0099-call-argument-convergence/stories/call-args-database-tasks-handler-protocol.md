@@ -1,7 +1,7 @@
 ---
 title: "call-args-database-tasks-handler-protocol"
-status: ready
-updated: 2026-08-12
+status: claimed
+updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T18:55:39Z"
+assignee: "call-args-database-tasks-handler-protocol"
 blocked-by: null
 closed-reason: null
 ---
