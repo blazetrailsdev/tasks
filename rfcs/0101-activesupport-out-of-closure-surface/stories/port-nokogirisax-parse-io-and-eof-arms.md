@@ -1,7 +1,7 @@
 ---
 title: "Port NokogiriSAX parse's readable-IO and eof? arms"
-status: claimed
-updated: 2026-08-12
+status: in-progress
+updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6445
 claim: "2026-08-12T23:56:50Z"
 assignee: "export-dupcoder-dump-value-and-load-value"
 blocked-by: null
