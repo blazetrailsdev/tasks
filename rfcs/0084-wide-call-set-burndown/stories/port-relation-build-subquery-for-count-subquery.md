@@ -1,6 +1,6 @@
 ---
 title: "port-relation-build-subquery-for-count-subquery"
-status: ready
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6448
 claim: null
 assignee: null
 blocked-by: null
