@@ -1,6 +1,6 @@
 ---
 title: "Route CollectionProxy through-create through _createRecord instead of insertRecord"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
