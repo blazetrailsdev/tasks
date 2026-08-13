@@ -1,6 +1,6 @@
 ---
 title: "Port Date#amjd, the last of the ajd/amjd/mjd/ld family"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
