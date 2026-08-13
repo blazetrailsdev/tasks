@@ -1,6 +1,6 @@
 ---
 title: "Converge CollectionProxy#create/create! to delegations and drop the hand-rolled through arm"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
