@@ -1,6 +1,6 @@
 ---
 title: "wire-violates-strict-loading-call-site"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6472
 claim: "2026-08-13T16:15:37Z"
 assignee: "wire-violates-strict-loading-call-site"
 blocked-by: null
