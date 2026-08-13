@@ -1,6 +1,6 @@
 ---
 title: "converge both nokogiri backends' parse off Blob onto the StringIO shim"
-status: claimed
+status: blocked
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-13T02:36:50Z"
 assignee: "converge-nokogiri-parse-onto-the-stringio-shim"
-blocked-by: null
+blocked-by: "Depends on the StringIO shim from converge-parse-file-onto-a-stringio-shim, which is unmerged in PR #6451; building on it would require a stacked PR. Re-ready once #6451 lands."
 closed-reason: null
 ---
 
