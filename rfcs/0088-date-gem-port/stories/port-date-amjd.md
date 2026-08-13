@@ -1,6 +1,6 @@
 ---
 title: "Port Date#amjd, the last of the ajd/amjd/mjd/ld family"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6471
 claim: "2026-08-13T15:55:42Z"
 assignee: "port-relation-sum-block-arm"
 blocked-by: null
