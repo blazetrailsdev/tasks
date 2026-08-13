@@ -1,6 +1,6 @@
 ---
 title: "newColumnFromField folds ON UPDATE into the DEFAULT_GENERATED branch Rails does not"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0102-adapter-version-reader-fidelity"
 cluster: null

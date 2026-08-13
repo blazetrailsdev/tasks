@@ -1,6 +1,6 @@
 ---
 title: "Sync databaseVersion getter cannot self-fetch, forcing hand-warms Rails has at no call site"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0102-adapter-version-reader-fidelity"
 cluster: null
