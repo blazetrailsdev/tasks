@@ -1,6 +1,6 @@
 ---
 title: "testing-helpers-for-ar-test-parity"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6454
 claim: "2026-08-13T02:56:51Z"
 assignee: "converge-number-converter-format-options"
 blocked-by: null
