@@ -1,6 +1,6 @@
 ---
 title: "port-xml-mini-rexml-backend-and-default"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6449
 claim: "2026-08-13T01:16:48Z"
 assignee: "port-xml-mini-rexml-backend-and-default"
 blocked-by: null
