@@ -1,6 +1,6 @@
 ---
 title: "delete-bespoke-cache-store-base-test-file"
-status: ready
+status: closed
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: PR #6453 deleted the bespoke file in its review round — the instrumentation cases became cache/behaviors/cache-instrumentation-behavior.ts (10/10), the namespace describe was a duplicate of the already-matched cache/cache-store-namespace.test.ts, and the TS-only event cases moved to cache/store-instrumentation.trails.test.ts."
 ---
 
 ## Context
