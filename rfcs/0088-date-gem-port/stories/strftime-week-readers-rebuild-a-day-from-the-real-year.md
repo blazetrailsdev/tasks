@@ -1,6 +1,6 @@
 ---
 title: "strftime's week readers rebuild a day from the real year, so %G/%V/%U are garbage past a Fixnum"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
