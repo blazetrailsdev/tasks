@@ -16,6 +16,27 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Partially fixed in #6465
+
+PR #6465 landed both constants as the Rails integers in
+`packages/activesupport/src/duration.ts` and added the `PARTS_IN_SECONDS` table:
+
+```ts
+const SECONDS_PER_MONTH = 2629746; // 1/12 of a gregorian year (duration.rb:117)
+const SECONDS_PER_YEAR = 31556952; // length of a gregorian year (duration.rb:118)
+```
+
+Still outstanding from the acceptance criteria below:
+
+- `SECONDS_PER_WEEK` is still `7 * SECONDS_PER_DAY` rather than the Rails
+  literal `604800` (`duration.rb:116`) — readability only, same value.
+- **No cover was added** asserting `Duration.months(1).inSeconds() === 2629746`
+  and `Duration.years(1).inSeconds() === 31556952`. Without it the old values
+  can regress silently, which is the whole point of this story.
+
+Existing expectations did not need correcting — the suites were green on the new
+values.
+
 ## Context
 
 Found while porting `core_ext/date/calculations.rb` in PR #6286.

@@ -35,6 +35,23 @@ active_support/duration.rb):
   Duration. Consequently `modulo` (Rails `%` goes through `build`,
   duration.rb:311-319) also returns a seconds-only Duration.
 
+## Update from #6465
+
+Two notes from the PR that ported `Duration#_parts`:
+
+- The **sparse-parts half of this story is now done**: `_parts()` returns the
+  zero-rejected set via `_partKeys`/`_transformValues`, matching
+  `@parts.reject! { |k, v| v.zero? }` (`duration.rb:228`). That PR also retired
+  `_givenParts`, a trails-invented private that was Rails' `_parts` under
+  another name. The `@value` field and `Duration.build` decomposition remain.
+- The missing `@value` seat **cost a call-mismatch baseline row**:
+  `scripts/api-compare/call-mismatches-exclude/activesupport/duration.json`
+  now suppresses `parse -> calculate_total_seconds`, because Rails' `parse` is
+  `new(calculate_total_seconds(parts), parts)` (`duration.rb:212-215`) and
+  trails' `(parts, variable)` constructor gives that call no argument to fill.
+  **Delete that row as part of this story** once `value` exists — it is the
+  concrete debt this convergence retires.
+
 ## Acceptance criteria
 
 - Duration carries `value` and zero-rejected sparse parts matching Rails'
