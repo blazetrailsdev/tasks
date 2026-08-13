@@ -1,6 +1,6 @@
 ---
 title: "A Ruby writer resolves to set<Name> when its reader already claims the bare name"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0103-parity-api-scoring-correctness"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6452
 claim: "2026-08-13T02:16:50Z"
 assignee: "writer-resolves-to-set-name-when-reader-claims-bare"
 blocked-by: null
