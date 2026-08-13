@@ -1,6 +1,6 @@
 ---
 title: "A Ruby writer resolves to set<Name> when its reader already claims the bare name"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0103-parity-api-scoring-correctness"
 cluster: null
