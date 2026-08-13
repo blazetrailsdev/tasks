@@ -1,7 +1,7 @@
 ---
 title: "callbacks-set-callback-variadic-filter-list"
-status: ready
-updated: 2026-08-11
+status: claimed
+updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T19:35:39Z"
+assignee: "callbacks-set-callback-variadic-filter-list"
 blocked-by: null
 closed-reason: null
 ---
