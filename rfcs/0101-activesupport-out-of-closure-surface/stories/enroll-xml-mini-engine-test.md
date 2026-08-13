@@ -1,6 +1,6 @@
 ---
 title: "Enroll XMLMiniEngineTest against the REXML backend"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6471
 claim: "2026-08-13T15:55:42Z"
 assignee: "port-relation-sum-block-arm"
 blocked-by: null
