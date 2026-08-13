@@ -1,6 +1,6 @@
 ---
 title: "merge-clauses-where-clause-structure"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6468
 claim: "2026-08-13T15:19:07Z"
 assignee: "merge-clauses-where-clause-structure"
 blocked-by: null
