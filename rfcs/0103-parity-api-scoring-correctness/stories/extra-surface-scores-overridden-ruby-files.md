@@ -1,6 +1,6 @@
 ---
 title: "extra-surface scores an overridden Ruby file's TS target against an empty allowed set"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0103-parity-api-scoring-correctness"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6464
 claim: "2026-08-13T14:06:37Z"
 assignee: "extra-surface-scores-overridden-ruby-files"
 blocked-by: null
