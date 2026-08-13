@@ -1,6 +1,6 @@
 ---
 title: "Fix the Website build's top-level-await failure and re-enable the CI job"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T18:20:30Z"
+assignee: "website-build-top-level-await"
 blocked-by: null
 closed-reason: null
 ---
