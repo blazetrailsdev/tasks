@@ -1,6 +1,6 @@
 ---
 title: "this-type Default.unscoped and restore its missing block/scoping arm"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6477
 claim: "2026-08-13T16:45:43Z"
 assignee: "fold-grouped-composite-assoc-into-one-grouped-body"
 blocked-by: null
