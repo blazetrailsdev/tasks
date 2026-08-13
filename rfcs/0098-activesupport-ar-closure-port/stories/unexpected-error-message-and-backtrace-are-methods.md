@@ -1,6 +1,6 @@
 ---
 title: "UnexpectedError#message/#backtrace read the wrapped error at call time and filter the trace"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6477
 claim: "2026-08-13T16:45:43Z"
 assignee: "fold-grouped-composite-assoc-into-one-grouped-body"
 blocked-by: null
