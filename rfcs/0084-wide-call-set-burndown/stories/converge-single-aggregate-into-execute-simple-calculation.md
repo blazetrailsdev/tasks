@@ -1,7 +1,7 @@
 ---
 title: "Relocate singleAggregate's body into execute_simple_calculation"
-status: in-progress
-updated: 2026-08-12
+status: done
+updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
