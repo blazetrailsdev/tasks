@@ -1,6 +1,6 @@
 ---
 title: "Port ColumnAliasTracker#alias_for and drop the invented group_key aliases"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6460
 claim: "2026-08-13T13:36:35Z"
 assignee: "converge-async-sum-nil-identity-default"
 blocked-by: null
