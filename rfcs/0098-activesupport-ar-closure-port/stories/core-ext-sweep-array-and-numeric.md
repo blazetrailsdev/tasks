@@ -1,6 +1,6 @@
 ---
 title: "core-ext-sweep-array-and-numeric"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 240
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T02:56:51Z"
+assignee: "converge-number-converter-format-options"
 blocked-by: null
 closed-reason: null
 ---
