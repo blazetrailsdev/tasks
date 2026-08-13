@@ -1,6 +1,6 @@
 ---
 title: "time-with-zone-and-duration-residue"
-status: closed
+status: ready
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: 'Partially delivered in #6465 (27 of the 48 members parity:api reported; 3 new files; activesupport 1294 -> 1321 matched). The story''s own estimate (~45 members / ~250 LOC) understated it, and the 21 remaining members each have a structural blocker rather than being volume: superseded by 0098/time-with-zone-residue-structural-blockers (TZInfo Period cluster, the to_formatted_s/readable_inspect/default_inspect collision in the shared time-ext.ts, ENV["TZ"] in time/compatibility.rb, and the cross-package acts_like_time? marker) and 0098/converge-time-zone-reader-names (zone/zone_default, a 63-call-site rename). No Closes-story trailer was put on #6465 for this id.'
+closed-reason: null
 ---
 
 ## Context
