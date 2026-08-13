@@ -1,6 +1,6 @@
 ---
 title: "Fold setCallback/skipCallback's kind parameter into Rails' variadic filter list"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6493
 claim: "2026-08-13T20:57:11Z"
 assignee: "converge-hash-to-message-construction-order"
 blocked-by: null
