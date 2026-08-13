@@ -1,7 +1,7 @@
 ---
 title: "deprecated_method_warning is unported, so gemName/deprecationHorizon are never read"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
