@@ -1,6 +1,6 @@
 ---
 title: "Compile the calculation arms from relation.arel instead of hand-built managers"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
