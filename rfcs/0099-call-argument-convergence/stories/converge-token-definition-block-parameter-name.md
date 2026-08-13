@@ -1,6 +1,6 @@
 ---
 title: "name TokenDefinition's block parameter block, not generator"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T16:45:43Z"
+assignee: "fold-grouped-composite-assoc-into-one-grouped-body"
 blocked-by: null
 closed-reason: null
 ---
