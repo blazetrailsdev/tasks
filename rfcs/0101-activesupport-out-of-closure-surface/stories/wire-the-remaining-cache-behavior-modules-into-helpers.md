@@ -1,6 +1,6 @@
 ---
 title: "give the remaining six cache behavior modules Rails-named helpers"
-status: in-progress
+status: closed
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: 6469
-claim: "2026-08-13T15:35:52Z"
-assignee: "module-mixin-receiver-this-typed"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Split three ways after #6469 shipped the coder module plus the delete_matched/increment_decrement relocations under the PR LOC ceiling. The residue is owned by wire-cache-store-version-behavior-into-helpers, wire-cache-store-format-version-behavior-into-helpers and wire-cache-logging-behavior-into-helpers; nothing is outstanding here. Reopen with status-set if the split is unwanted."
 ---
 
 ## Status (2026-08-13)
