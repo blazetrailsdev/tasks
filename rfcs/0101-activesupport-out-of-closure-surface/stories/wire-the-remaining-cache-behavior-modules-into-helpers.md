@@ -1,6 +1,6 @@
 ---
 title: "give the remaining six cache behavior modules Rails-named helpers"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T15:35:52Z"
+assignee: "module-mixin-receiver-this-typed"
 blocked-by: null
 closed-reason: null
 ---
