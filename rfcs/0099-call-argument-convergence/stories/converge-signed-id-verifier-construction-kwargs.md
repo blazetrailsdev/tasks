@@ -1,6 +1,6 @@
 ---
 title: "pass Rails' digest/serializer/url_safe kwargs when building the signed-id verifier"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
