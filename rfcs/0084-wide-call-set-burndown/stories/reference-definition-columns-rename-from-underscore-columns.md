@@ -1,6 +1,6 @@
 ---
 title: "ReferenceDefinition#_columns should be named columns like Rails"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
