@@ -1,7 +1,7 @@
 ---
 title: "wire-violates-strict-loading-call-site"
-status: ready
-updated: 2026-08-11
+status: claimed
+updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T16:15:37Z"
+assignee: "wire-violates-strict-loading-call-site"
 blocked-by: null
 closed-reason: null
 ---
