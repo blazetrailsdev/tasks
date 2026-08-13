@@ -1,7 +1,7 @@
 ---
 title: "Date#in_time_zone's else arm answers to_time, not a system-zone TimeWithZone"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages:
