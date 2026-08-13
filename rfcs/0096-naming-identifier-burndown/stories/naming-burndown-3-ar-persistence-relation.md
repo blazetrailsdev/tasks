@@ -1,14 +1,14 @@
 ---
-title: "naming-burndown-3-ar-persistence-relation"
+title: "Burn down the 26 naming call-argument rows in persistence, relation and query-methods"
 status: ready
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
-cluster: null
-packages: []
+cluster: api-compare
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 104
+priority: 21
 pr: null
 claim: null
 assignee: null

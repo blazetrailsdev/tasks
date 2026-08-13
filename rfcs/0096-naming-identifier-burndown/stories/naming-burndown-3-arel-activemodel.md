@@ -1,14 +1,14 @@
 ---
-title: "naming-burndown-3-arel-activemodel"
+title: "Burn down the remaining 28 naming call-argument rows in arel and activemodel"
 status: ready
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
-cluster: null
-packages: []
+cluster: api-compare
+packages: ["arel", "activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 112
+priority: 24
 pr: null
 claim: null
 assignee: null

@@ -10,6 +10,10 @@ packages:
   - arel
   - activesupport
   - activemodel
+  - i18n
+  - trailties
+  - globalid
+  - did-you-mean
 clusters:
   - "api-compare"
 related-rfcs:
