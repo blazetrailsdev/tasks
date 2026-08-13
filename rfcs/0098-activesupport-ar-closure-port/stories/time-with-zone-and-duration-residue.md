@@ -16,6 +16,34 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Status — partially delivered in #6465
+
+27 of the 48 members `pnpm parity:api --package activesupport` reported missing
+landed in PR #6465, together with 3 new files
+(`core-ext/date-and-time/compatibility.ts`, `core-ext/date-and-time/zones.ts`,
+and the `duration.rb` / `time_with_zone.rb` residue). activesupport went
+1294 -> 1317 matched, AR closure 687 -> 714.
+
+This story stays **in-progress and stamped to #6465 without a `Closes-story`
+trailer**: the trailer would mark it done on merge, and its own acceptance
+criteria are not met. The estimate (~45 members / ~250 LOC) understated the real
+shape — 48 members over 11 files, 3 of which did not exist.
+
+The 21 remaining members each have a structural blocker rather than being
+volume, and are carried by two follow-ups with the Rails `file:line` analysis
+already done:
+
+- [[time-with-zone-residue-structural-blockers]] — the TZInfo `Period` cluster,
+  the `to_formatted_s` / `readable_inspect` / `default_inspect` three-way
+  collision in the shared `time-ext.ts`, `ENV["TZ"]` in
+  `core_ext/time/compatibility.rb`, and the acts_like markers (section D records
+  the measurement showing why the #6465 attempt was inert).
+- [[converge-time-zone-reader-names]] — `zone` / `zone_default`, a mechanical
+  rename across 63 call sites in 4 packages.
+
+Close this story once those two are scheduled, or mark it done if the maintainer
+judges the delivered slice sufficient.
+
 ## Context
 
 Slot F: time-zone / duration residue (~45 members, audit slot ~250 LOC).
