@@ -1,6 +1,6 @@
 ---
 title: "Port Testing::TaggedLogging so tagged_logger is the module's, with the test-case identity prefix"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
