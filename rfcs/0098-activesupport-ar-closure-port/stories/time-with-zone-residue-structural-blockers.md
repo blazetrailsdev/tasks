@@ -95,19 +95,43 @@ call-site justification — confirm it is acceptable before writing it.
 `DateAndTime::Compatibility#preserve_timezone` — already ported by #6465 at
 `packages/activesupport/src/core-ext/date-and-time/compatibility.ts`.
 
-### D. `acts_like_time?` — `core_ext/time/acts_like.rb` (1)
+### D. acts_like markers — `core_ext/{time,date,date_time}/acts_like.rb` (5)
 
-Blocked on the same cross-package question as C: Ruby reopens `::Time`, and
-trails' `Time` is owned by `@blazetrails/date`.
-`packages/activesupport/src/core-ext/object/acts-like.ts:38-44` finds a marker
-by looking for the translated method name on the value, so until a marker exists
-on the Temporal/`Date` receivers the lookup returns false for every value.
+`Time#acts_like_time?` (`core_ext/time/acts_like.rb:7`), `Date#acts_like_date?`
+(`core_ext/date/acts_like.rb`), and `DateTime#acts_like_date?` /
+`#acts_like_time?` (`core_ext/date_time/acts_like.rb:6`, `:13`).
 
-This is why PR #6465 carries a `call-mismatches-exclude` row for
-`core-ext/date-and-time/zones.ts in_time_zone → acts_like?`
-(`scripts/api-compare/call-mismatches-exclude/activesupport/core-ext/date-and-time/zones.json`).
-**Delete that row as part of this story** once the marker lands — it exists
-solely because this member is unported.
+**PR #6465 attempted `date_time/acts_like.rb` and reverted it — read this before
+retrying.** The attempt put the two markers in
+`packages/activesupport/src/core-ext/date-time/acts-like.ts` as members of a
+`DateTime` class at the Rails path. `parity:api` credited it 4/4, but it was
+inert, and instance-vs-static was not the reason. Measured against the built
+dist:
+
+```js
+DateTime.parse("2013-11-12T02:11:00Z").constructor.name; // => "PlainDateTime"
+Object.actsLike(v, "date"); // => false
+Object.actsLike(v, "time"); // => false
+```
+
+`packages/activesupport/src/core-ext/object/acts-like.ts:38-44` discovers a
+duck-type by looking for the marker METHOD on the value itself, and
+`@blazetrails/date`'s `DateTime.parse` (`packages/date/src/date.ts:8318`)
+returns `Temporal.PlainDateTime | Temporal.ZonedDateTime` — never an instance of
+any class activesupport can reopen. So no class-shaped port at the Rails path
+can work; the marker has to reach the value's actual prototype.
+
+That is the decision this story owes: either activesupport installs markers onto
+the Temporal polyfill prototypes at import time (the literal analogue of Ruby's
+core_ext reopening, but a global side effect on a third-party package's
+prototypes, and `PlainDateTime` is not only ever a "DateTime"), or the markers
+move into `@blazetrails/date` itself and give up the Rails file path
+`parity:api` matches on. Do not re-land a class at the Rails path that only
+satisfies the name matcher.
+
+The only working precedent in the repo is
+`packages/activesupport/src/time-with-zone.ts` `actsLikeTime()` — an instance
+method on the class whose values actually flow.
 
 ### Not in scope here
 
