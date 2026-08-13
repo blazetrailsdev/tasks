@@ -1,7 +1,7 @@
 ---
 title: "route-update-record-through-update-row"
-status: ready
-updated: 2026-08-12
+status: claimed
+updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T16:05:43Z"
+assignee: "route-update-record-through-update-row"
 blocked-by: null
 closed-reason: null
 ---
