@@ -16,6 +16,22 @@ blocked-by: null
 closed-reason: null
 ---
 
+> **CORRECTION (2026-08-13, via
+> `audit-the-disproven-rational-canonicalization-premise`): the premise below is
+> wrong, and the title with it.** Ruby's Rational _arithmetic_ does NOT fold a
+> denominator of one to an Integer. Verified on ruby 3.3.11:
+> `(Rational(1,2) * 12)` is `(6/1)`, class `Rational`; `Rational(9,3)` is
+> `(3/1)`; `Rational(1,2) + Rational(1,2)` is `(1/1)`. Only `rb_rational_new`,
+> the C constructor, folds — and `wholenum_p` (`date_core.c:3183-3206`) is a
+> PREDICATE the C sends explicitly at `d_lite_plus`'s `T_RATIONAL` arm
+> (`:6179-6182`), not evidence of an automatic fold. The consequence runs the
+> other way round: a `FIXNUM_P` test over a value that can arrive as a Rational
+> is **false** for every reducible Rational, and the Rational arm is the one MRI
+> takes — which is what #6338 fixed in `d_lite_rshift` (`:6441-6478`). trails'
+> `Rational` staying a `Rational` is therefore correct, and the "Converged
+> shape" below must NOT be implemented; the shipped fix was the branch it
+> deprecates.
+
 ## Context
 
 Surfaced in #6321 (`Date#>>`), review rounds 2-3.

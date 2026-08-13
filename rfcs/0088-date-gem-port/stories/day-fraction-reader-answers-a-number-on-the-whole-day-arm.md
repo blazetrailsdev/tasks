@@ -39,6 +39,15 @@ Rational reader stays a Rational in MRI even at denominator 1 — it is the
 arithmetic RESULT that folds to an Integer, not the constructed value a reader
 answers.
 
+> **CORRECTION (2026-08-13, via
+> `audit-the-disproven-rational-canonicalization-premise`): that last paragraph
+> has it exactly backwards**, which is the reading the `closed-reason` above
+> already overturns. Arithmetic does NOT fold — on ruby 3.3.11
+> `(Rational(1,2) * 12)` is `(6/1)`, class `Rational`, and `Rational(9,3)` is
+> `(3/1)`. `rb_rational_new`, the CONSTRUCTOR a reader like `day_fraction`
+> answers through, is the one that folds, which is why
+> `(Date.new(2001,1,1) + Rational(2,1)).day_fraction` is the Integer `0`.
+
 ## Acceptance criteria
 
 - [ ] `Date#dayFraction` answers a `Rational` on every arm, `(0/1)` included.
