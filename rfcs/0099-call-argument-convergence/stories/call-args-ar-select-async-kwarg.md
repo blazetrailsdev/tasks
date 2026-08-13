@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-select-async-kwarg"
-status: claimed
+status: blocked
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-13T18:25:39Z"
 assignee: "call-args-ar-select-async-kwarg"
-blocked-by: null
+blocked-by: "Blocked on a project-level unported decision, not on effort. All four rows require Rails' thread-backed async query stack: select(..., async:) at vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:671-699 needs async_enabled? (abstract_adapter.rb:562 -> pool.async_executor), FutureResult#schedule!/execute! (future_result.rb:82-88) against ActiveRecord::Base.asynchronous_queries_session, and Result.empty(async: true) -> EMPTY_ASYNC = FutureResult.wrap(EMPTY) (result.rb:247). Those three files are permanently excluded in scripts/parity/unported-files/unscoped.ts (promise.rb:16-20, future_result.rb:21-29, asynchronous_queries_tracker.rb:30-35) with the reviewed reason that Ruby's Mutex/thread-pool/Concurrent primitives have no single-threaded-JS equivalent and collapse into the native Promise every trails adapter method already returns. So acceptance criteria 1 and 3 (port FutureResult + load_async infra; wire AsynchronousQueryInsideTransactionError) contradict that decision, and criteria 2/4 cannot be met honestly without them - plumbing an inert async kwarg would fake a feature we do not have, which is exactly what the note at packages/activerecord/src/connection-adapters/abstract/database-statements.ts:2099-2112 records. Needs a maintainer call: either reverse the unported-files entries (a large, separate campaign) or retire these four rows as a permanent language-shortcoming deviation."
 closed-reason: null
 ---
 
