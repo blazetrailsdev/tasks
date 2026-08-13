@@ -1,6 +1,6 @@
 ---
 title: "call-args-schema-definitions-add-to-foreign-key"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6488
 claim: "2026-08-13T19:05:38Z"
 assignee: "call-args-schema-definitions-add-to-foreign-key"
 blocked-by: null
