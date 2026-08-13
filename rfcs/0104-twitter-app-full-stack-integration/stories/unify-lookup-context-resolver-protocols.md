@@ -1,6 +1,6 @@
 ---
 title: "LookupContext has two incompatible resolver protocols; the Rails-shape lookup API is unreachable"
-status: closed
+status: ready
 updated: 2026-08-13
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Partly converged in PR 6470: addResolver now also appends to _viewPaths, so the Rails-shaped find/findAll/isExists/isAny see it. See the successor story for collapsing the two protocols."
+closed-reason: null
 ---
 
 ## Context
