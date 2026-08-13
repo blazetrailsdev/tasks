@@ -105,5 +105,5 @@
 | [0100-package-size-and-publish-shape](rfcs/0100-package-size-and-publish-shape/README.md) | Package size and publish shape | draft | @deanmarano | activerecord, activemodel, activesupport, arel, date, i18n, globalid, did-you-mean |
 | [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | active | @your-handle | activesupport |
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | closed | @your-handle | activerecord |
-| [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | active | @your-handle | — |
+| [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | closed | @your-handle | — |
 | [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler, activerecord, activerecord-cli |

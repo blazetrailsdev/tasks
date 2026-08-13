@@ -1,9 +1,9 @@
 ---
 rfc: "0103-parity-api-scoring-correctness"
 title: "parity:api scoring correctness residue"
-status: active
+status: closed
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-13
 owner: "@your-handle"
 packages: []
 clusters: []
