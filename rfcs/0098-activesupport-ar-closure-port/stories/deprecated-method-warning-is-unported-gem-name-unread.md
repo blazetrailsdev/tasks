@@ -1,6 +1,6 @@
 ---
 title: "deprecated_method_warning is unported, so gemName/deprecationHorizon are never read"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6452
 claim: "2026-08-13T02:16:50Z"
 assignee: "writer-resolves-to-set-name-when-reader-claims-bare"
 blocked-by: null
