@@ -1,6 +1,6 @@
 ---
 title: "Date#inspect names its class without reading constructor.name"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6495
 claim: "2026-08-13T21:57:10Z"
 assignee: "converge-fixtures-encrypted-attributes-present"
 blocked-by: null
