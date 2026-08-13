@@ -1,6 +1,6 @@
 ---
 title: "Export DupCoder#dump_value / #load_value so parity scores them"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

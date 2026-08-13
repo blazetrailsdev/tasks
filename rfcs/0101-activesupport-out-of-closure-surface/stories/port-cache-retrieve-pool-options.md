@@ -1,6 +1,6 @@
 ---
 title: "Port Cache.retrieve_pool_options and DEFAULT_POOL_OPTIONS"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
