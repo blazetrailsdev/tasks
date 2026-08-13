@@ -1,6 +1,6 @@
 ---
 title: "arel-symbol-modelling-colon-string-campaign"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6478
 claim: "2026-08-13T17:05:42Z"
 assignee: "arel-symbol-modelling-colon-string-campaign"
 blocked-by: null
