@@ -1,6 +1,6 @@
 ---
 title: "Port Testing::TaggedLogging so tagged_logger is the module's, with the test-case identity prefix"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6477
 claim: "2026-08-13T16:45:43Z"
 assignee: "fold-grouped-composite-assoc-into-one-grouped-body"
 blocked-by: null
