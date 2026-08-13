@@ -1,6 +1,6 @@
 ---
 title: "DeprecatedConstantProxy delegates hash and respond_to? to target"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
