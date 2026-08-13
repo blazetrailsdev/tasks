@@ -1,6 +1,6 @@
 ---
 title: "XmlMini resolves only 3 of Rails' 6 backend files by name"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6495
 claim: "2026-08-13T21:57:10Z"
 assignee: "converge-fixtures-encrypted-attributes-present"
 blocked-by: null
