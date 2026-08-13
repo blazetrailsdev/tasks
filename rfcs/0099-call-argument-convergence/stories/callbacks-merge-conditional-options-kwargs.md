@@ -1,6 +1,6 @@
 ---
 title: "merge_conditional_options takes Rails' if_option:/unless_option: kwargs and Array()s internally"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6494
 claim: "2026-08-13T21:27:10Z"
 assignee: "drop-assert-valid-keys-set-for-rails-include"
 blocked-by: null
