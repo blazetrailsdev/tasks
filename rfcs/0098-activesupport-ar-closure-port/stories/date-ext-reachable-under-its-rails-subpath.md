@@ -1,6 +1,6 @@
 ---
 title: "The Date arm is unreachable from outside activesupport — give it a subpath export"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T03:16:53Z"
+assignee: "naming-burndown-2-ar-associations-a1a3-residue"
 blocked-by: null
 closed-reason: null
 ---
