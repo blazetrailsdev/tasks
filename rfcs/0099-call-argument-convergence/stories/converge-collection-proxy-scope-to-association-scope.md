@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-proxy-scope-to-association-scope"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6492
 claim: "2026-08-13T19:45:40Z"
 assignee: "converge-collection-proxy-scope-to-association-scope"
 blocked-by: null
