@@ -1,6 +1,6 @@
 ---
 title: "Converge CollectionProxy#create/create! to delegations and drop the hand-rolled through arm"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: 6461
 claim: "2026-08-13T13:46:29Z"
 assignee: "converge-collection-proxy-create-delegates-to-association"
 blocked-by: null
