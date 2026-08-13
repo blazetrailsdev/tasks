@@ -1,7 +1,7 @@
 ---
 title: "port-test-date-parse-heuristic-remainder"
-status: blocked
-updated: 2026-08-10
+status: ready
+updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-10T03:46:43Z"
-assignee: "port-test-date-parse-heuristic-remainder"
-blocked-by: "Depends on unmerged PR #6322 (date-conv-plus-arms-parse-pg-configure), which creates packages/date/src/test-date-parse.test.ts and the heuristic parse family. That file does not exist on origin/main, so test__parse's table has nowhere to land without conflicting with #6322. Unblock once #6322 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
