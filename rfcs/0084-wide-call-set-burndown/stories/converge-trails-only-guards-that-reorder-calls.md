@@ -1,6 +1,6 @@
 ---
 title: "Converge the trails-only guards in validateEach and tableExists that reorder Rails' calls"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T03:56:51Z"
+assignee: "call-args-ar-select-async-kwarg"
 blocked-by: null
 closed-reason: null
 ---
