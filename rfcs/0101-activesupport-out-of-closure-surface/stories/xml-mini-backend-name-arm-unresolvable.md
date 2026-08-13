@@ -1,6 +1,6 @@
 ---
 title: "XmlMini.backend= by name is unresolvable under vitest"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6481
 claim: "2026-08-13T17:35:42Z"
 assignee: "mysql-tasks-drop-url-reparse-fallbacks"
 blocked-by: null
