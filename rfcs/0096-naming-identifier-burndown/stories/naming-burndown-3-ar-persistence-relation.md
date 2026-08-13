@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 26 naming call-argument rows in persistence, relation and query-methods"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 104
 priority: 21
-pr: null
+pr: 6459
 claim: "2026-08-13T13:24:21Z"
 assignee: "naming-burndown-3-ar-adapters"
 blocked-by: null
