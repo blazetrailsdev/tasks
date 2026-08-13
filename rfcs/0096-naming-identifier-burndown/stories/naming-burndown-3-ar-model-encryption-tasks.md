@@ -137,3 +137,50 @@ The counts above are a snapshot; re-measure before claiming.
       PR body with the follow-up story or RFC it belongs to.
 - [ ] `pnpm lint` passes and the touched packages' tests pass on all three
       adapters; no public API change.
+
+## Progress — PR #6459 (partial; story NOT closed)
+
+PR #6459 converged **9 of this slot's 47 rows** (47 -> 38), well short of the >=30
+in the acceptance criteria. Converged: `store.ts` 3 -> 0 (`store_accessor`'s
+full local set; `dump` passes `as_regular_hash(obj)` inline),
+`connection-handling.ts` 3 -> 2 (`config` -> `config_or_env`),
+`encryption/encryptable-record.ts` 2 -> 1, `database-configurations.ts` 2 -> 1
+(`url`), `normalization.ts` 1 -> 0, `query-logs.ts` 1 -> 0,
+`validations/uniqueness.ts` 1 -> 0.
+
+`uniqueness.ts` was also a behavior convergence: rebinding `value` from
+`map_enum_attribute` (`uniqueness.rb:22`) puts the _mapped_ value into
+`error_options` as Rails does (`:47-48`), which the `mapped` local was hiding.
+
+**The >=30 target is not reachable by renaming.** The story estimated ~11
+residue rows; inspection of all 38 survivors found ~33 unconvergeable:
+
+- Module-mixin receiver passing (~11 rows) — the `autosave-association.ts` block
+  of 5, `encryption/extended-deterministic-queries.ts` x3, `scoping/named.ts`,
+  `signed-id.ts`, `token-for.ts`. Now tracked by
+  `module-mixin-receiver-this-typed`, which is the highest-yield remaining move.
+- `enum.ts` x3 **cannot close**: the recorded first argument is Rails' `name`,
+  but trails' `_enum` already has a `name` parameter _and_ an alias-resolved
+  `attrName` local that Rails has no counterpart for (Rails resolves aliases
+  inside `decorate_attributes`). Converging needs the alias resolution moved,
+  not a rename.
+- `.size` -> `.length`: `collection-association.ts` x2.
+- Nested-call / `ref:constructor` recordings: `model-schema.ts#columns`,
+  `encryptable-record.ts#encrypt_attributes`, `internal-metadata.ts`,
+  `belongs-to-polymorphic-association.ts`, `nested-attributes.ts`,
+  `encrypted-attribute-type.ts`, `enum.ts#serialize` (Ruby `mapping.fetch`),
+  `message-pack-message-serializer.ts` (`Buffer.from`),
+  `middleware/.../session.ts` (`Time.now` vs `Temporal.Now.instant`),
+  `database-configurations.ts#build_db_config_from_raw_config`
+  (`config.symbolize_keys`).
+- a3, needing structural work: `tasks/mysql-database-tasks.ts` x2
+  (`requireDatabaseName()` guard vs the `database` reader),
+  `tasks/sqlite-database-tasks.ts` (passes `config.configuration`),
+  `migration.ts` (`loaded` is the async-resolved migration behind the proxy),
+  `model-schema.ts#yaml_encoder` (passes the global `typeRegistry`, Rails passes
+  the model's `attribute_types`), `encryption/cipher/aes256-gcm.ts`,
+  `has-one-association.ts#replace` (`displaced` caches `this.target` because the
+  live reader mutates mid-method).
+- `attribute-methods.ts#generate_alias_attribute_methods` is the
+  activemodel-mirrored row left to `naming-burndown-3-arel-activemodel` to keep
+  the file sets disjoint.

@@ -107,3 +107,38 @@ The counts above are a snapshot; re-measure before claiming.
 - [ ] No baseline row is added, widened or reseeded by this PR.
 - [ ] `pnpm lint` passes and the activerecord persistence/relation tests pass on
       all three adapters; no public API change.
+
+## Progress — PR #6459 (partial; story NOT closed)
+
+PR #6459 converged **9 of this slot's 26 rows** (26 -> 17), short of the >=18 in
+the acceptance criteria. Converged: `persistence.ts` 8 -> 2 (`attrs` ->
+`attributes`, `key` -> `k`, `col` -> `column_name`, `table` -> `arel_table`,
+`_find_record` inlining `_in_memory_query_constraints_hash`),
+`relation/query-methods.ts` 6 -> 5 (`build_where_clause` rebinds `opts`),
+`insert-all.ts` 2 -> 1 (`unique_indexes` reads `model.table_name`),
+`relation/predicate-builder.ts` 2 -> 1 (`grouping_queries` names the reduced
+array `queries`).
+
+**The >=18 target is not reachable by renaming.** The story estimated ~6
+residue rows; inspection of all 17 survivors found ~15 unconvergeable:
+
+- `.size` -> `.length` (4: `finder-methods.ts` x2 recorded twice each).
+- Nested-call-vs-local recordings: `relation.ts#touch_all`,
+  `persistence.ts#becomes` (`instance_variable_get`),
+  `persistence.ts#_find_record` (now `ref:call`, the module-mixin `.call(this)`),
+  `query-methods.ts#flattened_args` (`to_a`), `#build_join_buckets`
+  (`Arel.sql` is imported as `arelSql` to dodge a collision),
+  `#build_cast_value` (`Type.default_value` vs `new ValueType()`),
+  `batches.ts` x2 (Ruby `Array(start)` conversion).
+- Module-mixin receiver passing: `relation.ts#find_by_token_for`,
+  `insert-all.ts#to_sql` — now tracked by
+  `module-mixin-receiver-this-typed`.
+- a3/a1 filed separately: `build-with-value-from-hash-arg-order`,
+  `merge-clauses-where-clause-structure`.
+- `query-methods.ts#arel_column_with_table` — `colStr` cannot become
+  `column_name` because the later `typeof columnName === "symbol"` branch needs
+  the pre-narrowed value. That branch is itself suspect: per CLAUDE.md a Ruby
+  Symbol is a JS string in trails, so the `symbol` arm may be a deeper
+  divergence worth its own story.
+- `statement-cache.ts#create` — trails has a `cacheableQuery`-absent fallback
+  branch Rails does not, and the row is recorded against it.

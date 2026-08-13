@@ -128,3 +128,42 @@ wave-3 stories land against disjoint file sets but the totals move.
       finding with the follow-up story it was filed against.
 - [ ] `pnpm lint` passes and the activerecord adapter tests pass on all three
       adapters; no public API change.
+
+## Progress — PR #6459 (partial; story NOT closed)
+
+PR #6459 converged **7 of this slot's 26 rows** (26 -> 19), short of the >=18 in
+the acceptance criteria. Converged: `postgresql-adapter.ts` 10 -> 7
+(`remove_index` rebinds `options`; `exec_insert` rebinds `pk`),
+`postgresql/oid/type-map-initializer.ts` 2 -> 0 (`register` / `alias_type`
+rebind `oid`), `mysql/schema-statements.ts` 2 -> 1 (`indexes` names the quoted
+map `columns`).
+
+**The >=18 target is not reachable by renaming.** The story estimated ~5
+tooling-residue rows; direct inspection of all 19 survivors found ~17 that no
+rename can close:
+
+- Reserved word: `extract_default_function`'s second parameter is Ruby
+  `default`, which is not a legal JS identifier.
+- No JS equivalent: `unprepared_statement`'s `object_id`;
+  `register_class_with_precision` / `_with_limit`'s `Array#last` (TS `.at(-1)`);
+  `oid/point.rb`'s `Float(x)` conversions.
+- Repo-wide convention renames the recorder cannot see through:
+  `@callbacks` -> `_callbacks` (`abstract/transaction.ts`), `primary_class?` ->
+  `primaryClassQ` (`pool-config.ts`).
+- Nested-call-vs-local recordings: `oid/range.ts` `exclude_end?` (2),
+  `oid/array.ts` (2), `postgresql-adapter#explain`'s `pp`.
+- a3, needing structural work rather than a rename: `new_column_from_field`
+  (threads a lazy `createTableInfoFn` where Rails threads `table_name`),
+  `build_statement_pool` (invented `client` parameter), `rename_table`
+  (`renamedName` is a schema-qualified name trails must rebuild; Rails' `new_name`
+  is already the parameter), `postgresql/database-statements#cast_result`.
+
+Remaining reachable work in this slot is `postgresql-adapter#explain` — Rails'
+`ExplainPrettyPrinter#pp` takes an `ActiveRecord::Result` and reads
+`.columns`/`.rows` (`postgresql/explain_pretty_printer.rb:20-22`); trails' `pp`
+takes a row array, so the call site passes `result.toArray()`. Converging means
+changing `explain-pretty-printer.ts`'s signature, which is outside this story's
+file list.
+
+Suggest re-scoping the acceptance threshold to the ~2 reachable rows, or folding
+the remainder into the gate-flip baseline.
