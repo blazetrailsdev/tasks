@@ -1,6 +1,6 @@
 ---
 title: "pg-statement-pool-and-adapter-residue"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
