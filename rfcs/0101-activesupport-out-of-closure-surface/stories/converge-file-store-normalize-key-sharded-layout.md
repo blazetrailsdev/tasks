@@ -1,7 +1,7 @@
 ---
 title: "converge-file-store-normalize-key-sharded-layout"
-status: done
-updated: 2026-08-12
+status: claimed
+updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: 6437
-claim: null
-assignee: null
+claim: "2026-08-13T13:25:19Z"
+assignee: "converge-file-store-normalize-key-sharded-layout"
 blocked-by: null
 closed-reason: null
 ---
