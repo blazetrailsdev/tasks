@@ -1,6 +1,6 @@
 ---
 title: "core-ext-sweep-hash-module-string"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6455
 claim: "2026-08-13T03:16:53Z"
 assignee: "naming-burndown-2-ar-associations-a1a3-residue"
 blocked-by: null
