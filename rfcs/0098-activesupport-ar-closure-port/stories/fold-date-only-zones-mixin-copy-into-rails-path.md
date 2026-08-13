@@ -1,6 +1,6 @@
 ---
 title: "Fold date/calculations.ts's duplicate in_time_zone/time_with_zone into the DateAndTime::Zones mixin"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 6481
 claim: "2026-08-13T17:35:42Z"
 assignee: "mysql-tasks-drop-url-reparse-fallbacks"
 blocked-by: null
