@@ -1,6 +1,6 @@
 ---
 title: "CANONICAL_ZONE_IDENTIFIERS has no generator or drift guard, so a tzdata bump rots it silently"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 6453
 claim: "2026-08-13T02:36:50Z"
 assignee: "converge-nokogiri-parse-onto-the-stringio-shim"
 blocked-by: null
