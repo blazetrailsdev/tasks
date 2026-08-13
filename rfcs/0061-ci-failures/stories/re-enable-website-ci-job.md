@@ -1,6 +1,6 @@
 ---
 title: "Re-enable the Website CI job now its build is fixed"
-status: ready
+status: draft
 updated: 2026-08-13
 rfc: "0061-ci-failures"
 cluster: null
