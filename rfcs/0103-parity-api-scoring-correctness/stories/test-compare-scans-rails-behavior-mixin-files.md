@@ -1,7 +1,7 @@
 ---
 title: "parity:test counts Rails' test/**/behaviors/ mixin cases in the denominator"
-status: in-progress
-updated: 2026-08-12
+status: done
+updated: 2026-08-13
 rfc: "0103-parity-api-scoring-correctness"
 cluster: null
 packages: []
