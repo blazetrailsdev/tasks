@@ -1,6 +1,6 @@
 ---
 title: "arel-column-with-table-symbol-arm"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6475
 claim: "2026-08-13T16:35:50Z"
 assignee: "arel-column-with-table-symbol-arm"
 blocked-by: null
