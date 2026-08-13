@@ -1,7 +1,7 @@
 ---
 title: "Port FileStore's lock_file, atomic write and inspect"
-status: in-progress
-updated: 2026-08-12
+status: done
+updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
