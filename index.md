@@ -106,4 +106,4 @@
 | [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | active | @your-handle | activesupport |
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | closed | @your-handle | activerecord |
 | [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | active | @your-handle | — |
-| [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler |
+| [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler, activerecord |

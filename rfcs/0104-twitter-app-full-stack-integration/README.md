@@ -6,10 +6,11 @@ created: 2026-08-13
 updated: 2026-08-13
 owner: "@deanmarano"
 packages:
-  - "actionpack"
-  - "actionview"
-  - "trailties"
-  - "tse-compiler"
+  - actionpack
+  - actionview
+  - trailties
+  - tse-compiler
+  - activerecord
 clusters: []
 ---
 
