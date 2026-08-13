@@ -1,6 +1,6 @@
 ---
 title: "Port Minitest::BacktraceFilter as a class with a settable Minitest.backtrace_filter"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6495
 claim: "2026-08-13T21:57:10Z"
 assignee: "converge-fixtures-encrypted-attributes-present"
 blocked-by: null
