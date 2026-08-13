@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-predicate-builder-set-handler"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6456
 claim: "2026-08-13T03:36:51Z"
 assignee: "call-args-ar-predicate-builder-set-handler"
 blocked-by: null
