@@ -1,6 +1,6 @@
 ---
 title: "call-args-as-notifications-callable-object"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6486
 claim: "2026-08-13T18:45:40Z"
 assignee: "call-args-as-notifications-callable-object"
 blocked-by: null
