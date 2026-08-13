@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting a thrown new X() as a constructor call ahead of the real one"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T14:06:37Z"
+assignee: "extra-surface-scores-overridden-ruby-files"
 blocked-by: null
 closed-reason: null
 ---
