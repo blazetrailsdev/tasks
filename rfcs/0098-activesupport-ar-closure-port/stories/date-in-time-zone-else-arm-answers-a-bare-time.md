@@ -1,6 +1,6 @@
 ---
 title: "Date#in_time_zone's else arm answers to_time, not a system-zone TimeWithZone"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6457
 claim: "2026-08-13T03:56:51Z"
 assignee: "call-args-ar-select-async-kwarg"
 blocked-by: null
