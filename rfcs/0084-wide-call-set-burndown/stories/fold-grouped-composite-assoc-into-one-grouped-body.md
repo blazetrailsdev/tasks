@@ -1,6 +1,6 @@
 ---
 title: "Fold groupedCompositeAssoc back into the single execute_grouped_calculation body"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6477
 claim: "2026-08-13T16:45:43Z"
 assignee: "fold-grouped-composite-assoc-into-one-grouped-body"
 blocked-by: null
