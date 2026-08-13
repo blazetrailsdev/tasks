@@ -1,7 +1,7 @@
 ---
 title: "SchemaDumper.dump takes the migration pool and a stream, and dump_schema takes format"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6489
 claim: null
 assignee: null
 blocked-by: null
