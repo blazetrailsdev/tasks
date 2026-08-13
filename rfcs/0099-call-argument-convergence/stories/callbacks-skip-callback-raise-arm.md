@@ -1,6 +1,6 @@
 ---
 title: "callbacks-skip-callback-raise-arm"
-status: ready
+status: done
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6491
 claim: null
 assignee: null
 blocked-by: null
