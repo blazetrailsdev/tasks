@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 47 naming call-argument rows in the model core, associations, encryption and database tasks"
-status: in-progress
+status: ready
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 190
 priority: 22
-pr: 6459
-claim: "2026-08-13T13:24:21Z"
-assignee: "naming-burndown-3-ar-adapters"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
