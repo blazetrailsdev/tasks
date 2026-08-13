@@ -1,6 +1,6 @@
 ---
 title: "Converge the mysql adapter interpolation hoists that reorder quoteTableName"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6457
 claim: "2026-08-13T03:56:51Z"
 assignee: "call-args-ar-select-async-kwarg"
 blocked-by: null
