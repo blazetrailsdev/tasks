@@ -1,6 +1,6 @@
 ---
 title: "CANONICAL_ZONE_IDENTIFIERS has no generator or drift guard, so a tzdata bump rots it silently"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
