@@ -1,6 +1,6 @@
 ---
 title: "enum-alias-resolution-into-decorate-attributes"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T17:15:38Z"
+assignee: "enum-alias-resolution-into-decorate-attributes"
 blocked-by: null
 closed-reason: null
 ---
