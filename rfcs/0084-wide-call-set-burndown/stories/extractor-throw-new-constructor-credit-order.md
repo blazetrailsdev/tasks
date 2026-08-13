@@ -1,6 +1,6 @@
 ---
 title: "Stop crediting a thrown new X() as a constructor call ahead of the real one"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
