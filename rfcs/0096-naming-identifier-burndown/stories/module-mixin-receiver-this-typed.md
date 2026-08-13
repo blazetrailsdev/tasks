@@ -1,6 +1,6 @@
 ---
 title: "module-mixin-receiver-this-typed"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6469
 claim: "2026-08-13T15:35:52Z"
 assignee: "module-mixin-receiver-this-typed"
 blocked-by: null
