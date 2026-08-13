@@ -1,6 +1,6 @@
 ---
 title: "ar-tasks-yaml-encoder-migration-proxy-args"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6474
 claim: "2026-08-13T16:25:38Z"
 assignee: "ar-tasks-yaml-encoder-migration-proxy-args"
 blocked-by: null
