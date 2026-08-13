@@ -1,6 +1,6 @@
 ---
 title: "MySQLDatabaseTasks reads configuration_hash only, dropping the trails URL re-parse"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
