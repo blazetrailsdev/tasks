@@ -1,6 +1,6 @@
 ---
 title: "Construct the Message after parsing properties in hash_to_message"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6493
 claim: "2026-08-13T20:57:11Z"
 assignee: "converge-hash-to-message-construction-order"
 blocked-by: null
