@@ -1,6 +1,6 @@
 ---
 title: "assert_nothing_raised wraps in UnexpectedError and _assert_nothing_raised_or_warn warns"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
