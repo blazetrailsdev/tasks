@@ -1,6 +1,6 @@
 ---
 title: "Hash#slice! joins extract! in core-ext/hash/slice.ts at its Rails path"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T23:57:08Z"
+assignee: "converge-strict-loading-violation-signature"
 blocked-by: null
 closed-reason: null
 ---

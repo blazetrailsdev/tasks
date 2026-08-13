@@ -1,6 +1,6 @@
 ---
 title: "BacktraceFilter drops minitest's MT_DEBUG arm and nothing assigns Minitest.backtraceFilter"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T23:57:08Z"
+assignee: "converge-strict-loading-violation-signature"
 blocked-by: null
 closed-reason: null
 ---
