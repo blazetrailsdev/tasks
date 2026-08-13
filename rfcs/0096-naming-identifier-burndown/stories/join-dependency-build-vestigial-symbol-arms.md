@@ -1,6 +1,6 @@
 ---
 title: "Drop the vestigial JS-Symbol arms in JoinDependency#build and inspectArelValue"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6493
 claim: "2026-08-13T20:57:11Z"
 assignee: "converge-hash-to-message-construction-order"
 blocked-by: null
