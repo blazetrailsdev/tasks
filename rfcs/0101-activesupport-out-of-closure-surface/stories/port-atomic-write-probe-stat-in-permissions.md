@@ -1,6 +1,6 @@
 ---
 title: "Port File.probe_stat_in and atomic_write's permission copy"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T00:56:49Z"
+assignee: "port-atomic-write-probe-stat-in-permissions"
 blocked-by: null
 closed-reason: null
 ---
