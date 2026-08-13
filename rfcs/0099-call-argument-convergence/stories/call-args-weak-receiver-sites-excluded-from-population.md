@@ -48,6 +48,23 @@ still outside the population. Same shape at
       has an unconsumed same-named site).
 - [ ] `add_to` → `foreign_key` compares its real site (`schema_definitions.rb:242`
       vs `schema-definitions.ts:842`) and matches.
-- [ ] Call-arg compared population grows; any new shape rows are converged, not
-      baselined.
+- [ ] Call-arg compared population grows; any new shape row that is a PAIRING
+      artifact of the widening is fixed in the tooling, not baselined.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green.
+
+### Scope amendment (PR #6493)
+
+Widening the population surfaced six PRE-EXISTING argument divergences in
+bodies this story does not touch, across five packages
+(`relation.rb:621`/`:629`, `testing/time_helpers.rb:177-178`,
+`multipart/parser.rb:259`, `source_annotation_extractor.rb`). Converging them
+means rewriting those bodies — `Relation#update`'s `id = :all` signature among
+them — which is neither this story's subject nor within one PR's LOC budget.
+
+They are therefore baselined with a specific per-row reason: two are TS language
+shortcomings stated at the row (`IO#read`'s `outbuf` has no JS spelling; JS has
+no method table to stub a built-in constructor's static through), and the
+remaining four are tracked for convergence by
+`0099/converge-weak-receiver-surfaced-call-arg-rows`. The one row that WAS an
+artifact of the widening — Ruby's proc `#call` pairing against TS's
+`Function.prototype.call` — was fixed in the tooling instead.
