@@ -1,6 +1,6 @@
 ---
 title: "call-args-ar-select-async-kwarg"
-status: claimed
+status: ready
 updated: 2026-08-13
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-13T03:56:51Z"
-assignee: "call-args-ar-select-async-kwarg"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
