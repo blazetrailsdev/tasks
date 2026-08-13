@@ -1,6 +1,6 @@
 ---
 title: "Port deprecation/proxy_wrappers.rb and testing/deprecation.rb"
-status: claimed
+status: in-progress
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6461
 claim: "2026-08-13T13:46:29Z"
 assignee: "converge-collection-proxy-create-delegates-to-association"
 blocked-by: null
