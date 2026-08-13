@@ -1,6 +1,6 @@
 ---
 title: "Audit RFC 0088 for the disproven Rational-canonicalization premise"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0088-date-gem-port"
 cluster: null
