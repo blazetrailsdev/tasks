@@ -1,6 +1,6 @@
 ---
 title: "Fold date/calculations.ts's duplicate in_time_zone/time_with_zone into the DateAndTime::Zones mixin"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
