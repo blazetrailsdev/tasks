@@ -1,6 +1,6 @@
 ---
 title: "trails raises on a non-boolean prepared_statements config where Rails passes it through"
-status: ready
+status: claimed
 updated: 2026-08-13
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-13T15:45:44Z"
+assignee: "naming-burndown-3-ar-structural-residue"
 blocked-by: null
 closed-reason: null
 ---
