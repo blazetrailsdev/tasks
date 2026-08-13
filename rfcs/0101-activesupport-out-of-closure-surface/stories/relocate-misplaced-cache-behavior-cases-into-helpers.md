@@ -1,6 +1,6 @@
 ---
 title: "Move ported cache-behavior cases out of store test files into their Rails-named helpers"
-status: in-progress
+status: done
 updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
