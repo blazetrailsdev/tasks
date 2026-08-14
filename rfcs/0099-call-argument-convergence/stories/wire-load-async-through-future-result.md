@@ -1,6 +1,6 @@
 ---
 title: "wire-load-async-through-future-result"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T14:07:02Z"
 assignee: "wire-load-async-through-future-result"
-blocked-by: null
+blocked-by: "Depends on PR #6515 (feat(activerecord): port FutureResult and the load_async query path), still OPEN/unmerged. packages/activerecord/src/future-result.ts and AsynchronousQueriesTracker exist only on that branch, not on main. All four acceptance criteria (FutureResult.wrap in makeCachedSelectAll, non-async cachedSelectAll returning a pending FutureResult, Relation#loadAsync via selectAll({async:true}), end-to-end asyncQueryExecutor test) require that type. Building now would mean stacking on #6515 (forbidden by CLAUDE.md) or re-porting FutureResult into a conflicting sibling PR. Unblock and re-schedule once #6515 merges."
 closed-reason: null
 ---
 
