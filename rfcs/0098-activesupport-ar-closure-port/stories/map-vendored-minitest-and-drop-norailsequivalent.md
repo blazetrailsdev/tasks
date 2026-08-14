@@ -1,6 +1,6 @@
 ---
 title: "Map the vendored minitest gem so the port can drop @noRailsEquivalent PERMANENT"
-status: in-progress
+status: blocked
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: 6535
 claim: "2026-08-14T18:15:07Z"
 assignee: "executor-seam-end-to-end-request-coverage"
-blocked-by: null
+blocked-by: "Maintainer decision (2026-08-14): minitest stays unported. Do not enroll the vendored gem in parity:api and do not drop the @noRailsEquivalent PERMANENT tags on its ports. Reopen only if the decision changes; the mechanics were proven workable in PR #6535 and reverted there."
 closed-reason: null
 ---
 
