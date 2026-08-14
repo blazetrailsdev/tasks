@@ -1,6 +1,6 @@
 ---
 title: "Converge BroadcastLogger's level accessors and severity predicates to Rails"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
