@@ -1,6 +1,6 @@
 ---
 title: "Rack::Logger should pass started_request_message as a block, not an eager string"
-status: ready
+status: draft
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
