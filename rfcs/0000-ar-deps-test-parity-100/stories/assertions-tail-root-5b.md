@@ -1,5 +1,5 @@
 ---
-title: "assertion parity tail: adapters files, batch 4"
+title: "assertion parity tail: root files, batch 5b"
 status: draft
 updated: 2026-08-13
 rfc: "0000-ar-deps-test-parity-100"
@@ -29,13 +29,28 @@ they cannot grow. This story burns down one Rails source cluster.
 
 Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --assertions`):
 
-| Rails test file (under `vendor/rails/activerecord/test/cases/`)     | count | kind | value |
-| ------------------------------------------------------------------- | ----: | ---: | ----: |
-| `adapters/postgresql/interval_test.rb`                              |     0 |    1 |     0 |
-| `adapters/mysql2/mysql2_rake_test.rb`                               |     0 |    1 |     0 |
-| `connection_adapters/connection_handlers_multi_pool_config_test.rb` |     0 |    1 |     0 |
+| Rails test file (under `vendor/rails/activerecord/test/cases/`) | count | kind | value |
+| --------------------------------------------------------------- | ----: | ---: | ----: |
+| `suppressor_test.rb`                                            |     0 |    5 |     0 |
+| `habtm_destroy_order_test.rb`                                   |     1 |    4 |     0 |
+| `explain_subscriber_test.rb`                                    |     0 |    5 |     0 |
+| `relation/and_test.rb`                                          |     2 |    2 |     0 |
+| `time_precision_test.rb`                                        |     2 |    2 |     0 |
+| `shard_keys_test.rb`                                            |     0 |    4 |     0 |
+| `encryption/envelope_encryption_key_provider_test.rb`           |     0 |    4 |     0 |
+| `type/time_test.rb`                                             |     2 |    2 |     0 |
+| `numeric_data_test.rb`                                          |     0 |    4 |     0 |
+| `hot_compatibility_test.rb`                                     |     2 |    2 |     0 |
+| `shard_selector_test.rb`                                        |     0 |    4 |     0 |
+| `secure_token_test.rb`                                          |     1 |    3 |     0 |
+| `relation/structural_compatibility_test.rb`                     |     0 |    4 |     0 |
+| `relation/merging_test.rb`                                      |     1 |    3 |     0 |
+| `signed_id_test.rb`                                             |     1 |    2 |     0 |
+| `clone_test.rb`                                                 |     0 |    3 |     0 |
+| `instrumentation_test.rb`                                       |     0 |    3 |     0 |
+| `secure_password_test.rb`                                       |     2 |    1 |     0 |
 
-**3 divergences** (0 assertion-count, 3 assertion-kind, 0
+**71 divergences** (14 assertion-count, 57 assertion-kind, 0
 assertion-value). Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path

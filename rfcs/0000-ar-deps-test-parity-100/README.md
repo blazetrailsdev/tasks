@@ -226,7 +226,7 @@ and the coverage:
   files. The top 45 files carry 4,164 of them (69%); by Rails source area:
   `cases/*` root 3,290, `associations/` 1,056, `adapters/` 855, `encryption/`
   149, `migration/` 129, `relation/` 127, `connection_adapters/` 107,
-  `scoping/` 102, `validations/` 101, `tasks/` 79. This RFC files 33 burn-down
+  `scoping/` 102, `validations/` 101, `tasks/` 79. This RFC files 37 burn-down
   stories clustered by Rails source area (below), each a named file list with a
   divergence budget.
 - **Coverage.** `ASSERTION_REPORT_PACKAGES` is `{activerecord}`. Widening it to
@@ -257,7 +257,7 @@ in files with its siblings, sized to the repo's normal PR ceiling.
    (with a skip-stub triage first — many of the 291 stubs are thread/fork/GVL
    cases that must become reasoned case-level exclusions, not ports), the
    out-of-closure reconciliation into 0101, i18n's 16, activemodel's 3.
-3. **Assertion burndown** (wave 3). 33 stories over the AR assertion
+3. **Assertion burndown** (wave 3). 37 stories over the AR assertion
    distribution, clustered by Rails source area.
 4. **Enforcement** (wave 4). Hard-zero flip.
 
@@ -355,7 +355,7 @@ tooling.
 - `reconcile-out-of-closure-activesupport-test-remainder` — Reconcile the out-of-closure activesupport test remainder against RFC 0101 (180 LOC)
 - `triage-activesupport-in-closure-skip-stubs` — Triage activesupport's 291 skip stubs into port-or-exclude dispositions (280 LOC)
 
-**Wave 3 — assertion burndown (activerecord)** (33 stories, ~10168 est-LOC)
+**Wave 3 — assertion burndown (activerecord)** (37 stories, ~10762 est-LOC)
 
 - `assertions-associations-and-eager` — associations_test and eager-loading assertion parity (396 LOC)
 - `assertions-attribute-methods-test` — attribute_methods assertion parity (289 LOC)
@@ -379,15 +379,19 @@ tooling.
 - `assertions-sqlite3-adapter` — sqlite3 adapter assertion parity (200 LOC)
 - `assertions-tail-adapters-1` — assertion parity tail: adapters files, batch 1 (304 LOC)
 - `assertions-tail-adapters-2` — assertion parity tail: adapters files, batch 2 (296 LOC)
-- `assertions-tail-adapters-3` — assertion parity tail: adapters files, batch 3 (304 LOC)
-- `assertions-tail-adapters-4` — assertion parity tail: adapters files, batch 4 (200 LOC)
+- `assertions-tail-adapters-3a` — assertion parity tail: adapters files, batch 3a (200 LOC)
+- `assertions-tail-adapters-3b` — assertion parity tail: adapters files, batch 3b (200 LOC)
+- `assertions-tail-adapters-3c` — assertion parity tail: adapters files, batch 3c (200 LOC)
 - `assertions-tail-associations-1` — assertion parity tail: associations files, batch 1 (200 LOC)
 - `assertions-tail-root-1` — assertion parity tail: root files, batch 1 (289 LOC)
 - `assertions-tail-root-2` — assertion parity tail: root files, batch 2 (292 LOC)
 - `assertions-tail-root-3` — assertion parity tail: root files, batch 3 (289 LOC)
 - `assertions-tail-root-4` — assertion parity tail: root files, batch 4 (302 LOC)
-- `assertions-tail-root-5` — assertion parity tail: root files, batch 5 (302 LOC)
-- `assertions-tail-root-6` — assertion parity tail: root files, batch 6 (200 LOC)
+- `assertions-tail-root-5a` — assertion parity tail: root files, batch 5a (200 LOC)
+- `assertions-tail-root-5b` — assertion parity tail: root files, batch 5b (200 LOC)
+- `assertions-tail-root-5c` — assertion parity tail: root files, batch 5c (200 LOC)
+- `assertions-tail-root-6a` — assertion parity tail: root files, batch 6a (200 LOC)
+- `assertions-tail-root-6b` — assertion parity tail: root files, batch 6b (200 LOC)
 - `assertions-transactions-locking-and-pool` — transactions, locking and connection-pool assertion parity (404 LOC)
 - `assertions-validations-and-encryption` — validations and encryption assertion parity (268 LOC)
 
@@ -395,7 +399,7 @@ tooling.
 
 - `flip-assertion-mismatch-gate-to-hard-zero` — Flip the assertion-mismatch gate from ratchet to hard zero (200 LOC)
 
-**61 stories, ~19168 est-LOC total.**
+**65 stories, ~19762 est-LOC total.**
 
 ## Done means
 

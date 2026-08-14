@@ -1,5 +1,5 @@
 ---
-title: "assertion parity tail: adapters files, batch 3"
+title: "assertion parity tail: adapters files, batch 3c"
 status: draft
 updated: 2026-08-13
 rfc: "0000-ar-deps-test-parity-100"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 304
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -31,42 +31,6 @@ Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --asse
 
 | Rails test file (under `vendor/rails/activerecord/test/cases/`)        | count | kind | value |
 | ---------------------------------------------------------------------- | ----: | ---: | ----: |
-| `adapters/postgresql/foreign_table_test.rb`                            |     2 |    5 |     0 |
-| `adapters/postgresql/network_test.rb`                                  |     0 |    7 |     0 |
-| `adapters/abstract_mysql_adapter/mysql_explain_test.rb`                |     3 |    4 |     0 |
-| `adapters/abstract_mysql_adapter/schema_test.rb`                       |     2 |    5 |     0 |
-| `adapters/postgresql/quoting_test.rb`                                  |     3 |    4 |     0 |
-| `adapters/postgresql/extension_migration_test.rb`                      |     2 |    5 |     0 |
-| `adapters/postgresql/infinity_test.rb`                                 |     3 |    4 |     0 |
-| `adapters/postgresql/referential_integrity_test.rb`                    |     3 |    3 |     0 |
-| `adapters/postgresql/deferred_constraints_test.rb`                     |     3 |    3 |     0 |
-| `adapters/abstract_mysql_adapter/nested_deadlock_test.rb`              |     3 |    3 |     0 |
-| `adapters/postgresql/json_test.rb`                                     |     3 |    3 |     0 |
-| `adapters/postgresql/serial_test.rb`                                   |     0 |    6 |     0 |
-| `adapters/postgresql/postgresql_adapter_prevent_writes_test.rb`        |     0 |    6 |     0 |
-| `adapters/sqlite3/transaction_test.rb`                                 |     0 |    5 |     0 |
-| `adapters/postgresql/composite_test.rb`                                |     2 |    3 |     0 |
-| `adapters/sqlite3/sqlite_rake_test.rb`                                 |     3 |    1 |     0 |
-| `adapters/postgresql/citext_test.rb`                                   |     1 |    3 |     0 |
-| `adapters/postgresql/active_schema_test.rb`                            |     2 |    2 |     0 |
-| `connection_adapters/registration_test.rb`                             |     0 |    4 |     0 |
-| `adapters/postgresql/full_text_test.rb`                                |     2 |    2 |     0 |
-| `adapters/postgresql/transaction_test.rb`                              |     2 |    2 |     0 |
-| `adapters/sqlite3/virtual_table_test.rb`                               |     2 |    2 |     0 |
-| `adapters/postgresql/bit_string_test.rb`                               |     2 |    2 |     0 |
-| `adapters/postgresql/virtual_column_test.rb`                           |     0 |    4 |     0 |
-| `adapters/abstract_mysql_adapter/sp_test.rb`                           |     1 |    3 |     0 |
-| `adapters/postgresql/utils_test.rb`                                    |     1 |    2 |     0 |
-| `adapters/postgresql/numbers_test.rb`                                  |     0 |    3 |     0 |
-| `connection_adapters/adapter_leasing_test.rb`                          |     0 |    3 |     0 |
-| `connection_adapters/connection_swapping_nested_test.rb`               |     0 |    3 |     0 |
-| `adapters/postgresql/ltree_test.rb`                                    |     1 |    2 |     0 |
-| `adapters/postgresql/transaction_nested_test.rb`                       |     2 |    1 |     0 |
-| `adapters/mysql2/check_constraint_quoting_test.rb`                     |     1 |    1 |     0 |
-| `adapters/postgresql/statement_pool_test.rb`                           |     0 |    2 |     0 |
-| `adapters/abstract_mysql_adapter/optimizer_hints_test.rb`              |     0 |    1 |     1 |
-| `adapters/abstract_mysql_adapter/set_test.rb`                          |     0 |    2 |     0 |
-| `adapters/postgresql/case_insensitive_test.rb`                         |     1 |    1 |     0 |
 | `connection_adapters/statement_pool_test.rb`                           |     1 |    1 |     0 |
 | `adapters/abstract_mysql_adapter/transaction_test.rb`                  |     0 |    2 |     0 |
 | `adapters/abstract_mysql_adapter/auto_increment_test.rb`               |     0 |    2 |     0 |
@@ -84,8 +48,11 @@ Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --asse
 | `adapters/postgresql/prepared_statements_disabled_test.rb`             |     0 |    1 |     0 |
 | `connection_adapters/merge_and_resolve_default_url_config_test.rb`     |     0 |    1 |     0 |
 | `adapters/postgresql/domain_test.rb`                                   |     0 |    1 |     0 |
+| `adapters/postgresql/interval_test.rb`                                 |     0 |    1 |     0 |
+| `adapters/mysql2/mysql2_rake_test.rb`                                  |     0 |    1 |     0 |
+| `connection_adapters/connection_handlers_multi_pool_config_test.rb`    |     0 |    1 |     0 |
 
-**190 divergences** (54 assertion-count, 135 assertion-kind, 1
+**30 divergences** (4 assertion-count, 26 assertion-kind, 0
 assertion-value). Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path

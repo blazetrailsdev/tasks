@@ -1,5 +1,5 @@
 ---
-title: "assertion parity tail: root files, batch 5"
+title: "assertion parity tail: root files, batch 5a"
 status: draft
 updated: 2026-08-13
 rfc: "0000-ar-deps-test-parity-100"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 302
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -49,30 +49,8 @@ Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --asse
 | `encryption/uniqueness_validations_test.rb`                     |     0 |    5 |     0 |
 | `migration/check_constraint_test.rb`                            |     0 |    5 |     0 |
 | `comment_test.rb`                                               |     2 |    3 |     0 |
-| `suppressor_test.rb`                                            |     0 |    5 |     0 |
-| `habtm_destroy_order_test.rb`                                   |     1 |    4 |     0 |
-| `explain_subscriber_test.rb`                                    |     0 |    5 |     0 |
-| `relation/and_test.rb`                                          |     2 |    2 |     0 |
-| `time_precision_test.rb`                                        |     2 |    2 |     0 |
-| `shard_keys_test.rb`                                            |     0 |    4 |     0 |
-| `encryption/envelope_encryption_key_provider_test.rb`           |     0 |    4 |     0 |
-| `type/time_test.rb`                                             |     2 |    2 |     0 |
-| `numeric_data_test.rb`                                          |     0 |    4 |     0 |
-| `hot_compatibility_test.rb`                                     |     2 |    2 |     0 |
-| `shard_selector_test.rb`                                        |     0 |    4 |     0 |
-| `secure_token_test.rb`                                          |     1 |    3 |     0 |
-| `relation/structural_compatibility_test.rb`                     |     0 |    4 |     0 |
-| `relation/merging_test.rb`                                      |     1 |    3 |     0 |
-| `signed_id_test.rb`                                             |     1 |    2 |     0 |
-| `clone_test.rb`                                                 |     0 |    3 |     0 |
-| `instrumentation_test.rb`                                       |     0 |    3 |     0 |
-| `secure_password_test.rb`                                       |     2 |    1 |     0 |
-| `statement_invalid_test.rb`                                     |     1 |    2 |     0 |
-| `modules_test.rb`                                               |     0 |    3 |     0 |
-| `result_test.rb`                                                |     1 |    2 |     0 |
-| `type_test.rb`                                                  |     0 |    3 |     0 |
 
-**189 divergences** (41 assertion-count, 147 assertion-kind, 1
+**106 divergences** (25 assertion-count, 80 assertion-kind, 1
 assertion-value). Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path

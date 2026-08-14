@@ -1,5 +1,5 @@
 ---
-title: "assertion parity tail: root files, batch 6"
+title: "assertion parity tail: root files, batch 6a"
 status: draft
 updated: 2026-08-13
 rfc: "0000-ar-deps-test-parity-100"
@@ -49,25 +49,8 @@ Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --asse
 | `collection_cache_key_test.rb`                                  |     0 |    2 |     0 |
 | `adapter_prevent_writes_test.rb`                                |     0 |    2 |     0 |
 | `multi_db_migrator_test.rb`                                     |     0 |    1 |     1 |
-| `log_subscriber_test.rb`                                        |     1 |    1 |     0 |
-| `relation/predicate_builder_test.rb`                            |     1 |    1 |     0 |
-| `relation/with_test.rb`                                         |     0 |    1 |     0 |
-| `statement_cache_test.rb`                                       |     0 |    1 |     0 |
-| `relation/field_ordered_values_test.rb`                         |     0 |    1 |     0 |
-| `type/string_test.rb`                                           |     0 |    1 |     0 |
-| `table_metadata_test.rb`                                        |     0 |    1 |     0 |
-| `mixin_test.rb`                                                 |     0 |    1 |     0 |
-| `active_record_test.rb`                                         |     0 |    1 |     0 |
-| `filter_attributes_test.rb`                                     |     0 |    0 |     1 |
-| `binary_test.rb`                                                |     0 |    1 |     0 |
-| `forbidden_attributes_protection_test.rb`                       |     0 |    1 |     0 |
-| `encryption/null_encryptor_test.rb`                             |     0 |    1 |     0 |
-| `database_configurations/url_config_test.rb`                    |     0 |    1 |     0 |
-| `type_caster/connection_test.rb`                                |     0 |    1 |     0 |
-| `serialization_test.rb`                                         |     0 |    1 |     0 |
-| `query_logs_test.rb`                                            |     0 |    1 |     0 |
 
-**60 divergences** (14 assertion-count, 44 assertion-kind, 2
+**41 divergences** (12 assertion-count, 28 assertion-kind, 1
 assertion-value). Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path
