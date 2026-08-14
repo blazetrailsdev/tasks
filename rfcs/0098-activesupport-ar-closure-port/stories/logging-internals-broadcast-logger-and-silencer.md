@@ -1,7 +1,7 @@
 ---
 title: "logging-internals-broadcast-logger-and-silencer"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T15:07:01Z"
+assignee: "logging-internals-broadcast-logger-and-silencer"
 blocked-by: null
 closed-reason: null
 ---
