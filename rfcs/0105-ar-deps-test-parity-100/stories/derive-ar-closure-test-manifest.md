@@ -1,6 +1,6 @@
 ---
 title: "Derive the AR-closure activesupport test manifest and guard it"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement
