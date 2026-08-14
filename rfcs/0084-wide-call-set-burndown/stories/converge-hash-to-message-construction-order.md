@@ -1,7 +1,7 @@
 ---
 title: "Construct the Message after parsing properties in hash_to_message"
-status: in-progress
-updated: 2026-08-13
+status: done
+updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
