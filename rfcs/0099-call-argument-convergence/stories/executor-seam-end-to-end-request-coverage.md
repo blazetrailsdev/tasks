@@ -1,6 +1,6 @@
 ---
 title: "executor-seam-end-to-end-request-coverage"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T18:40:06Z"
 assignee: "executor-seam-end-to-end-request-coverage"
-blocked-by: null
+blocked-by: "Blocked on #6532 (open): the story's premise is `app.executor` (Rails::Application#executor, application.rb:122-124) and the ActionDispatch::Executor/Reloader middleware lines, which do not exist on main — #6532 adds them. Building the end-to-end cover here would stack on that branch. Unblock when #6532 merges."
 closed-reason: null
 ---
 
