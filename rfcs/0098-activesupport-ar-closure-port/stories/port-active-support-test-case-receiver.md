@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::TestCase so the testing modules have Rails' include receiver"
-status: claimed
+status: ready
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-08-14T00:57:10Z"
-assignee: "models-scope-positional-sweep"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
