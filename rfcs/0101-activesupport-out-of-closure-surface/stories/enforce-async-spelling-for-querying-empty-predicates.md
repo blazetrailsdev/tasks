@@ -1,6 +1,6 @@
 ---
 title: "Enforce that a querying empty? is spelled async, so blank?'s probe needs no post-call guard"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T12:27:03Z"
+assignee: "converge-time-zone-reader-names"
 blocked-by: null
 closed-reason: null
 ---
