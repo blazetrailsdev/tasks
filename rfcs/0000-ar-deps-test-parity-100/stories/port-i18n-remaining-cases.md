@@ -23,12 +23,14 @@ i18n sits at 291/307 (94.8%), 16 remaining, all genuinely missing (0 skipped).
 RFC 0074 `i18n-parity` is **closed**, so nothing owns them.
 
 Measured 2026-08-13 with `pnpm parity:test -- --cached`, against
-`vendor/rails/i18n/test/`:
+`vendor/i18n/test/` (the i18n gem is vendored at its own root, not under `vendor/rails/`):
 
-- `i18n/load_path_test.rb` — 6 missing (our `packages/i18n/src/load-path.test.ts`
-  has none of them; the compare maps `test/i18n/<x>_test.rb` →
-  `packages/i18n/src/<x>` by dropping the leading segment,
-  `scripts/test-compare/compare.ts` path mapping)
+- `i18n/load_path_test.rb` — 6 missing, and the TS file does not exist at all
+  (the compare marks it `✗`). It belongs at `packages/i18n/src/load-path.test.ts`:
+  the compare maps `test/i18n/<x>_test.rb` → `packages/i18n/src/<x>` by dropping
+  the leading segment (path mapping in `scripts/test-compare/compare.ts`), and
+  the surface under test is the load path on
+  `packages/i18n/src/config.ts:163`.
 - `api/override_test.rb` — 2, `api/chain_test.rb` — 1,
   `api/fallbacks_test.rb` — 1, `api/key_value_test.rb` — 1 (the `api/*` files are
   thin drivers that mix in `I18n::Tests::…` modules)
@@ -38,7 +40,7 @@ Measured 2026-08-13 with `pnpm parity:test -- --cached`, against
 The `api/*` drivers are the interesting shape: in Ruby each is a class that
 `include`s several shared `I18n::Tests::*` modules and the test names come from
 the modules. Check how the already-passing `api/simple_test.rb` (1/1) is wired
-in `packages/i18n/src/api/simple.test.ts` and follow it rather than inventing a
+in `packages/i18n/src/api/simple.test.ts` (the only file in that directory today) and follow it rather than inventing a
 second arrangement.
 
 ## Acceptance criteria

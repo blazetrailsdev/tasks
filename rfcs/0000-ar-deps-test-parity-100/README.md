@@ -226,7 +226,7 @@ and the coverage:
   files. The top 45 files carry 4,164 of them (69%); by Rails source area:
   `cases/*` root 3,290, `associations/` 1,056, `adapters/` 855, `encryption/`
   149, `migration/` 129, `relation/` 127, `connection_adapters/` 107,
-  `scoping/` 102, `validations/` 101, `tasks/` 79. This RFC files 26 burn-down
+  `scoping/` 102, `validations/` 101, `tasks/` 79. This RFC files 33 burn-down
   stories clustered by Rails source area (below), each a named file list with a
   divergence budget.
 - **Coverage.** `ASSERTION_REPORT_PACKAGES` is `{activerecord}`. Widening it to
@@ -260,6 +260,65 @@ in files with its siblings, sized to the repo's normal PR ceiling.
 3. **Assertion burndown** (wave 3). 33 stories over the AR assertion
    distribution, clustered by Rails source area.
 4. **Enforcement** (wave 4). Hard-zero flip.
+
+### Alternatives considered
+
+- **Exclude the out-of-closure activesupport test files** (the shape the prompt
+  named as a live option). Rejected on the arithmetic above: it deletes 871
+  already-matched tests to remove 201 unmatched ones, and it would retire RFC
+  0101 stories that exist and are scheduled. It is also precisely the pattern
+  `docs/infrastructure/parity-convergence-forecast.md` Part 1 flags — a
+  denominator cut that reads as progress.
+- **Scope the whole gate to the closure** (report only the closure percent and
+  drop the package percent). Rejected: the headline number would silently change
+  meaning, and every historical `stats.db` row would become incomparable to the
+  new one. The sub-metric adds a number instead of redefining one.
+- **Name-matching only, assertions as a follow-up RFC.** Rejected: AR's
+  assertion divergences (6,092) outnumber its name gap (181) by 34×, and a 100%
+  that ships beside 4,066 unexamined assertion-kind mismatches is the number
+  nobody believes. It is in this RFC's definition of done.
+- **Port `Migration[x.y]` rather than exclude it.** Rejected by maintainer
+  decision already on the record (PR #5070, closed unmerged); re-litigating it
+  is out of scope.
+
+### Sequencing and parallelism
+
+Wave 1 lands first and is small (7 stories, ~1,190 est-LOC); everything else
+depends on it only through the manifest and the widened measurement. Waves 2 and
+3 then run **in parallel** — they touch disjoint files (wave 2 adds missing
+tests in `migration/*`, `fixtures*`, `core-ext/*`, `i18n`, `activemodel/type`;
+wave 3 edits assertions inside already-matched AR tests elsewhere) — except for
+`assertions-migration-cluster`, which must land after the `port-migration-*`
+stories or it will be re-measuring a file that is still growing. Wave 4 is
+gated on every assertion story via `deps`, so it cannot surface in
+`pnpm tasks ready` early.
+
+### What would invalidate this plan
+
+- **Vendored Rails bumps.** Every count here is against the currently vendored
+  tree; `pnpm vendor:fetch` moving forward changes denominators. The wave-1
+  guard is what turns that from a silent drift into a failing check.
+- **The widened assertion measurement coming in far above the low-thousands
+  estimate.** `size-and-file-assertion-work-for-widened-packages` exists to
+  re-scope rather than absorb it, and that re-scope may add stories to this RFC.
+- **Allocation, not throughput.** The forecast measured ~0.75 in-scope tests
+  converged per merged PR against ~300 merged PRs/week repo-wide; this RFC does
+  not change agent allocation, and no sequencing fixes that.
+
+### Reproduction
+
+```bash
+pnpm parity:test                                    # per-package name parity
+pnpm parity:test -- --package activerecord --assertions          # per-file mismatch tables
+pnpm parity:test -- --package activerecord --assertions --missing  # per-test rails N vs trails M
+pnpm parity:test -- --package activesupport --json   # writes convention-comparison.json
+```
+
+The closure derivation: transitively collect `require "active_support/…"` from
+`vendor/rails/activerecord/lib/**/*.rb` + `vendor/rails/activemodel/lib/**/*.rb`,
+resolving each against `vendor/rails/activesupport/lib/`; 62 seeds, 144 files.
+Story `derive-ar-closure-test-manifest` turns exactly that walk into checked-in
+tooling.
 
 ## Stories
 
