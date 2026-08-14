@@ -1,6 +1,6 @@
 ---
 title: "number-helper-bigdecimal-precision-spine"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6546
 claim: "2026-08-14T21:45:07Z"
 assignee: "number-helper-bigdecimal-precision-spine"
 blocked-by: null
