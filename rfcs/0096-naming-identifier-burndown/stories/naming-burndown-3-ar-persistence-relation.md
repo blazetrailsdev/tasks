@@ -141,3 +141,18 @@ residue rows; inspection of all 17 survivors found ~15 unconvergeable:
   divergence worth its own story.
 - `statement-cache.ts#create` — trails has a `cacheableQuery`-absent fallback
   branch Rails does not, and the row is recorded against it.
+
+## Threshold correction (`naming-residue-taxonomy-recalibration`, 2026-08-13)
+
+The `>=18` above was written against the pre-recalibration assumption that
+~6% of the class is unconvergeable tooling residue. The committed classifier
+(`scripts/api-compare/naming-taxonomy.ts`, reported by `pnpm
+parity:api:calls:args:report`) measures this slot at **17 convergeable rows
+and 2 permanent** ones, so the reachable target is **17**, not
+`>=18`. Read the acceptance criterion as that number.
+
+Permanent here means the classifier's `js-reserved-word`, `no-js-equivalent` and
+`conventions-rename` classes — each carries ONE shared reviewed reason at the
+gate flip, not a per-row sentence. `module-mixin-receiver` and `burndown` rows
+are NOT permanent and must never be baselined, whatever this slot leaves
+standing. See RFC 0096 `## Residue taxonomy`.

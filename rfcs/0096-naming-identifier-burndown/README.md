@@ -135,8 +135,48 @@ Per-package stories, largest first, each independently claimable:
 - **Not the `shape` class.** That is gated already (RFC 0095).
 - **Not a rename of methods, classes or fields.** `parity:api` owns those.
 - **Not non-data-layer packages.** See Scope: actionpack and friends are out.
-- **Not a normalization rule for the ~6% tooling residue.** Those rows carry a
-  baseline reason at the gate flip.
+- **Not a normalization rule for the permanent residue.** Those rows carry a
+  baseline reason at the gate flip — one SHARED reason per class, not one per
+  row (see `## Residue taxonomy`).
+
+## Residue taxonomy (recalibrated 2026-08-13)
+
+`naming-residue-taxonomy-recalibration` re-measured the whole surviving
+population with a committed classifier — `scripts/api-compare/naming-taxonomy.ts`,
+reported by `pnpm parity:api:calls:args:report` under "Naming residue by class"
+— because the flip was sized off a 32-row sample (~6% "tooling shape") and
+PR #6459 then reported ~73% unconvergeable for activerecord. Neither number
+described what a gate flip would actually have to baseline.
+
+Five classes, split by whether a rename can close the row at all:
+
+| Class                   | Permanent? | What it is                                                       |
+| ----------------------- | ---------- | ---------------------------------------------------------------- |
+| `js-reserved-word`      | yes        | The Ruby identifier is not a legal JS one (`default`, `class`).  |
+| `no-js-equivalent`      | yes        | Ruby construct spelled as the JS builtin (`inject`/`reduce`).    |
+| `conventions-rename`    | yes        | Exactly what docs/ruby-ts-conventions.md produces (`@x` → `_x`). |
+| `module-mixin-receiver` | no         | Receiver passed as a leading param where Ruby writes `self`.     |
+| `burndown`              | no         | A local or parameter simply not carrying its Rails name.         |
+
+Repo-wide that is **21 of 329 rows (6.4%) permanent** — the disposition's
+magnitude, but not its composition: essentially none of the permanent residue is
+the tooling shape the disposition named. The full per-class and per-package
+counts live in RFC 0095's `## Naming-dimension disposition` →
+`### Recalibration`.
+
+Two rules follow, and they bind on every wave-3 story and on the flip:
+
+1. **A permanent class earns ONE reviewed reason**, held in `NAMING_CLASSES`.
+   Baselining is per class, not per row.
+2. **A convergeable class is never baselined.** `burndown` (90% of the
+   population) and `module-mixin-receiver` (which converges by rewiring to the
+   `this`-typed mixin idiom, not by renaming) stay burndown work — seeding them
+   under a placeholder reason is exactly the "converge, never ratify" violation
+   CLAUDE.md forbids.
+
+Wave-3 acceptance thresholds were written against the pre-recalibration numbers
+and are unreachable as stated; each is restated in its own story against the
+measured convergeable count for its slot.
 
 ## Provenance
 

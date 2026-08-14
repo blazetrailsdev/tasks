@@ -316,6 +316,53 @@ a permutation `shape` (`isPermutation`), which is what its own doc comment
 always promised. One row moved (arel `collect_nodes_for`); the rest of the class
 is genuinely spelling, not order.
 
+### Recalibration (measured 2026-08-13, `naming-residue-taxonomy-recalibration`)
+
+The disposition above sized the permanent residue at **~6% tooling shape** — a
+chained Ruby call recorded by its last name, a nested call recorded as a `ref:`
+— from a 32-row sample, and `naming-gate-flip` planned to baseline that residue
+wholesale. PR #6459 then read the 78 surviving activerecord rows and reported
+**~57 of 78 (73%) cannot close by any rename**, which would have been an order
+of magnitude more.
+
+Re-measuring the whole population with a committed classifier
+(`scripts/api-compare/naming-taxonomy.ts`, surfaced by `pnpm
+parity:api:calls:args:report`) resolves the contradiction: **both numbers are
+answering different questions, and the 73% figure folded convergeable classes
+into "unconvergeable".** Repo-wide, over 329 surviving `naming` rows:
+
+| Class                   | Rows | Closeable by a rename? |
+| ----------------------- | ---: | ---------------------- |
+| `burndown`              |  297 | yes — free fidelity    |
+| `no-js-equivalent`      |   14 | **no**                 |
+| `module-mixin-receiver` |   11 | yes, by rewiring       |
+| `js-reserved-word`      |    6 | **no**                 |
+| `conventions-rename`    |    1 | **no**                 |
+
+Permanent residue is **21 of 329 (6.4%)** — the disposition's magnitude was
+right — but its **composition was not**: essentially none of it is the tooling
+shape the flip names. It is Ruby identifiers JS will not accept
+(`postgresql_adapter.rb:781`'s `default`), Ruby constructs spelled as the JS
+builtin that does the same work (`inject`/`reduce`, `size`/`length`,
+`last`/`at`), and names the conventions table itself produces (`@callbacks` →
+`_callbacks`, `primary_class?` → `primaryClassQ`), which the recorder compares
+raw and cannot see through.
+
+That drives two corrections:
+
+- **The permanent classes get ONE shared, reviewed reason each**, carried in
+  `NAMING_CLASSES` — not one bespoke sentence per row, which is what made the
+  flip's step 2 look expensive.
+- **The convergeable classes are never baselined.** `burndown` (90% of the
+  population) and `module-mixin-receiver` (which converges by rewiring to the
+  `this`-typed mixin idiom, not by renaming) stay burndown work; seeding them
+  under a placeholder reason would enshrine convergeable divergence, which
+  CLAUDE.md forbids.
+
+By package, permanent / total: activerecord 9/67, arel 5/13, actioncontroller
+2/31, activesupport 2/33, rack 2/38, i18n 1/6, actiondispatch 0/85, actionview
+0/31, activemodel 0/20, tail 0/5.
+
 Campaign stories are filed under **RFC 0096**, one per package cluster with
 non-overlapping file sets — a repo-wide identifier rename in a single PR
 conflicts with every sibling agent. `naming` flips to gated only when the

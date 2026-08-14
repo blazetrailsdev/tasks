@@ -183,3 +183,18 @@ residue rows; inspection of all 38 survivors found ~33 unconvergeable:
 - `attribute-methods.ts#generate_alias_attribute_methods` is the
   activemodel-mirrored row left to `naming-burndown-3-arel-activemodel` to keep
   the file sets disjoint.
+
+## Threshold correction (`naming-residue-taxonomy-recalibration`, 2026-08-13)
+
+The `>=30` above was written against the pre-recalibration assumption that
+~6% of the class is unconvergeable tooling residue. The committed classifier
+(`scripts/api-compare/naming-taxonomy.ts`, reported by `pnpm
+parity:api:calls:args:report`) measures this slot at **24 convergeable rows
+and 3 permanent** ones, so the reachable target is **24**, not
+`>=30`. Read the acceptance criterion as that number.
+
+Permanent here means the classifier's `js-reserved-word`, `no-js-equivalent` and
+`conventions-rename` classes — each carries ONE shared reviewed reason at the
+gate flip, not a per-row sentence. `module-mixin-receiver` and `burndown` rows
+are NOT permanent and must never be baselined, whatever this slot leaves
+standing. See RFC 0096 `## Residue taxonomy`.
