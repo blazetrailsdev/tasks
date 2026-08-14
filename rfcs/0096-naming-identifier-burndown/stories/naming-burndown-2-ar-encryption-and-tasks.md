@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 26 naming call-argument rows in encryption, database tasks and query logs"
 status: done
-updated: 2026-08-12
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 104
-priority: 21
 pr: 6433
 claim: "2026-08-12T19:19:34Z"
 assignee: "naming-burndown-2-activesupport"
