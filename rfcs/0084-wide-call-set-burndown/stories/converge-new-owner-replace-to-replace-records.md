@@ -1,6 +1,6 @@
 ---
 title: "Route replace's new-owner arm through replace_records instead of an inlined remove/concat"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
