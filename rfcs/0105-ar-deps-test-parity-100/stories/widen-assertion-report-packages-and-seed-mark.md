@@ -1,6 +1,6 @@
 ---
 title: "Measure assertion parity for the whole in-scope closure, not just activerecord"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement
@@ -14,7 +14,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 6507
 claim: "2026-08-14T02:57:06Z"
 assignee: "widen-assertion-report-packages-and-seed-mark"
 blocked-by: null
