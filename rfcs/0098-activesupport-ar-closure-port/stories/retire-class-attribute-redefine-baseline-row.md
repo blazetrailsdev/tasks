@@ -1,6 +1,6 @@
 ---
 title: "Retire the stale class-attribute redefine call-mismatch row"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T14:47:03Z"
+assignee: "deprecation-raise-behavior-raises-deprecationexception"
 blocked-by: null
 closed-reason: null
 ---
