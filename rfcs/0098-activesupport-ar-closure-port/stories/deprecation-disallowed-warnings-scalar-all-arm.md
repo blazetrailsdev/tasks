@@ -1,7 +1,7 @@
 ---
 title: "deprecation-disallowed-warnings-scalar-all-arm"
-status: ready
-updated: 2026-08-08
+status: claimed
+updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T14:27:02Z"
+assignee: "deprecation-disallowed-warnings-scalar-all-arm"
 blocked-by: null
 closed-reason: null
 ---
