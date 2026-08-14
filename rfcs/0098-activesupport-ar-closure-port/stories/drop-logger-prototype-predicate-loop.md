@@ -1,6 +1,6 @@
 ---
 title: "Delete the Logger.prototype predicate loop that shadows the quoted-literal getters"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T20:15:09Z"
+assignee: "sqlite3-internal-exec-query-delegates-to-raw-execute"
 blocked-by: null
 closed-reason: null
 ---
