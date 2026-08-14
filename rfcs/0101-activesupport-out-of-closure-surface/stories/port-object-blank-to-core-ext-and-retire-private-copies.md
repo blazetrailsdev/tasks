@@ -1,6 +1,6 @@
 ---
 title: "blank?/present? live in string-utils with three private copies in actionpack"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "BacktraceFilter drops minitest's MT_DEBUG arm and nothing assigns Minitest.backtraceFilter"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
