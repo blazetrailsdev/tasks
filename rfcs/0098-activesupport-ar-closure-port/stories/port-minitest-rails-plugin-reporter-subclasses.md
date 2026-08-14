@@ -1,6 +1,6 @@
 ---
 title: "port-minitest-rails-plugin-reporter-subclasses"
-status: ready
+status: closed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't want minitest"
 ---
 
 # Port `Minitest::SuppressedSummaryReporter` and `Minitest::ProfileReporter`
