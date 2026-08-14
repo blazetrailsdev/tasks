@@ -1,6 +1,6 @@
 ---
 title: "Enroll the after_teardown and tests-without-assertions Rails test cases"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6524
 claim: "2026-08-14T14:47:03Z"
 assignee: "deprecation-raise-behavior-raises-deprecationexception"
 blocked-by: null
