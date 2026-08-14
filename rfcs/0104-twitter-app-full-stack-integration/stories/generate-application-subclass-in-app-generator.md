@@ -1,6 +1,6 @@
 ---
 title: "generate-application-subclass-in-app-generator"
-status: draft
+status: closed
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of generate-app-subclassing-application, which predates it and covers the same app-generator template gap. Filed before I checked the RFC listing; the src/-prefixed-layout-vs-EngineConfiguration-paths half of my body is worth folding into that story."
 ---
 
 ## Context
