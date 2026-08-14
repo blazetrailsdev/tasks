@@ -1,6 +1,6 @@
 ---
 title: "widen-trailties-libpath-to-cover-lib-minitest"
-status: ready
+status: closed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No mini test"
 ---
 
 # Widen the trailties libPath so `railties/lib/minitest/` is measured
