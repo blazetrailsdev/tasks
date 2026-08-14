@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 45 naming call-argument rows in the abstract connection adapter, schema/database statements, pool and cache"
 status: done
-updated: 2026-08-12
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: 15
 pr: 6419
 claim: "2026-08-12T15:43:44Z"
 assignee: "naming-burndown-2-ar-abstract-adapters"
