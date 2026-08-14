@@ -1,6 +1,6 @@
 ---
 title: "Decide whether PoolConfig#pool needs the ported monitor at all"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6552
 claim: "2026-08-14T23:45:08Z"
 assignee: "record-ratified-proc-call-reason"
 blocked-by: null
