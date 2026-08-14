@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 performQuery returns an ActiveRecord::Result, restoring the identity castResult"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
