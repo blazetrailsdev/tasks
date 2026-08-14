@@ -1,6 +1,6 @@
 ---
 title: "core-ext-sweep-hash-module-string-residue"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
