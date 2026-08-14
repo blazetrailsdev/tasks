@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 31 naming call-argument rows in ActionView helpers, lookup context and renderers"
 status: closed
-updated: 2026-08-11
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 124
-priority: 18
 pr: null
 claim: null
 assignee: null
