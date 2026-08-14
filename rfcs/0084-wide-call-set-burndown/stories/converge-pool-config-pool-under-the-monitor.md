@@ -1,6 +1,6 @@
 ---
 title: "Decide whether PoolConfig#pool needs the ported monitor at all"
-status: blocked
+status: ready
 updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs a parity-owner decision before any code moves, because both available outcomes are unusual: converging as originally written regresses three methods that are SYNC IN RAILS (`Model.quotedTableName`, `Relation#aliasTracker`, `adapterClassSync`), and the alternative ratifies an omitted `synchronize` — which CLAUDE.md's deviation-register section forbids doing on an agent's own judgement. Do NOT claim and converge this story in either direction without that sign-off. See `## The decision` in the body for what is being asked and the two options."
+blocked-by: null
 closed-reason: null
 ---
 
