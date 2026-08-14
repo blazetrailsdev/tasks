@@ -1,6 +1,6 @@
 ---
 title: "blank?'s fallthrough arm is the Hash arm, applied to every object"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
