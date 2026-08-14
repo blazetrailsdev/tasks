@@ -1,6 +1,6 @@
 ---
 title: "Splice Finisher into Application#initializers"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
