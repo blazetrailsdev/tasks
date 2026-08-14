@@ -1,6 +1,6 @@
 ---
 title: "Boot trails apps through Trailties.Application, delete the bespoke server Application"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
