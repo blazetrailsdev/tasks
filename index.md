@@ -107,4 +107,4 @@
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | closed | @your-handle | activerecord |
 | [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | closed | @your-handle | — |
 | [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler, activerecord, activerecord-cli |
-| [0105-ar-deps-test-parity-100](rfcs/0105-ar-deps-test-parity-100/README.md) | ActiveRecord + dependencies to 100% on the test-compare gate | draft | @deanmarano | activerecord, activesupport, activemodel, date, i18n |
+| [0105-ar-deps-test-parity-100](rfcs/0105-ar-deps-test-parity-100/README.md) | ActiveRecord + dependencies to 100% on the test-compare gate | active | @deanmarano | activerecord, activesupport, activemodel, date, i18n |
