@@ -48,7 +48,7 @@ baseline row in
 
 - [ ] `attribute` wraps its definitions in `CodeGenerator.batch(...)` and
       defines each reader/writer through `defineCachedMethod(name,
-  { namespace: "current_attributes" }, ...)`, mirroring
+{ namespace: "current_attributes" }, ...)`, mirroring
       current_attributes.rb:118-135.
 - [ ] The `attribute` → `batch` row is deleted from
       `call-mismatches-exclude/activesupport/current-attributes.json` (and the
