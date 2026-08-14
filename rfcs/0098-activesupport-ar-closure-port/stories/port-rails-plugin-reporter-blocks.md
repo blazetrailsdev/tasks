@@ -1,6 +1,6 @@
 ---
 title: "Port plugin_rails_init's three reporter blocks (rails_plugin.rb:122-135)"
-status: blocked
+status: closed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: "2026-08-14T03:57:08Z"
-assignee: "drop-builder-association-scope-option-shim"
-blocked-by: "Maintainer decision (2026-08-14): minitest stays unported. This story's blocker, port-minitest-reporter-surface, was reverted by PR #6537 — rails_plugin.rb:122-135 operates on Minitest.reporter (a CompositeReporter) and names SummaryReporter/ProgressReporter, none of which exist in trails any more and none of which will be re-added. Needs a fresh plan before it is schedulable."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Won't-do: maintainer decision 2026-08-14 — minitest stays unported. rails_plugin.rb:122-135 operates on Minitest.reporter/SummaryReporter/ProgressReporter, all removed by PR #6537 and not returning. Needs a fresh plan (vitest owns the run) if ever revisited."
 ---
 
 # Port `plugin_rails_init`'s three reporter blocks
