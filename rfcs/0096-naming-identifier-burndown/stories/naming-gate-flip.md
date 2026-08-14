@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-08-11
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -24,7 +24,6 @@ deps:
   - naming-burndown-2-ar-mysql-sqlite-adapters
 deps-rfc: []
 est-loc: 80
-priority: 30
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
