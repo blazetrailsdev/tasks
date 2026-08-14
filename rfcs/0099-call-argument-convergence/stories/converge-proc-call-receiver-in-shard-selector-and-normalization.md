@@ -1,7 +1,7 @@
 ---
 title: "Converge Ruby Proc#call at the shard resolver and the normalizer"
-status: blocked
-updated: 2026-08-12
+status: closed
+updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-08-12T19:16:52Z"
-assignee: "converge-collection-callback-abort-catch-to-call-sites"
-blocked-by: "Evaluated the Proc-wrapper direction and it costs more than it converges. Rails' Proc comes free from the language: `config.active_record.shard_resolver = ->(request){}` and `normalizes(with: ->(v){})` store the user's own lambda, and `attr_reader :resolver` / `:normalizer` hand it straight back (shard_selector.rb:34,37; normalization.rb:90,121-126). The JS analogue of that lambda is a plain function, which trails already stores unchanged. Spelling `resolver.call(request)` requires a wrapper object, and JS's own `Function.prototype.call` cannot be it (it rebinds `this`). Introducing an activesupport Proc class therefore forces either (a) users to construct `new Proc(fn)` at every proc-valued option — invented public surface Rails does not have, on the user-facing API — or (b) a wrap inside `initialize`, which Rails does not do, making the `resolver`/`normalizer` reader return something other than what was passed and breaking `normalizer == other.normalizer` identity (normalization.rb:146,152). Either arm trades two converged call spellings for a new divergence in the constructor and the readers, plus new extra surface. Needs a maintainer decision on a Ruby-Proc idiom before the four rows can retire."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Won't-do (maintainer decision 2026-08-14): a JS function IS the Ruby Proc. Rails' shard_resolver/normalizes lambdas (shard_selector.rb:34,37; normalization.rb:90,121-126) are stored and handed back unchanged, which trails already does; '.call' is a language-level spelling difference with no behavioral gap, and Function.prototype.call cannot serve as it (it rebinds this). A Proc wrapper would force new Proc(fn) on the user-facing API or break normalizer identity (normalization.rb:146,152). Baseline the 4 call-argument rows under one shared reason instead."
 ---
 
 ## Context
