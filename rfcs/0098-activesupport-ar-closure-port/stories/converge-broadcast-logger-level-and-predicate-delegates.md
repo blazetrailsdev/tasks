@@ -1,6 +1,6 @@
 ---
 title: "Converge BroadcastLogger's level accessors and severity predicates to Rails"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6531
 claim: "2026-08-14T17:15:04Z"
 assignee: "call-args-tool-dispatched-identifier-in-argument-position"
 blocked-by: null
