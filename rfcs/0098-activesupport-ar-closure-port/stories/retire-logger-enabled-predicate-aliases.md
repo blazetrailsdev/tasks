@@ -1,6 +1,6 @@
 ---
 title: "Retire Logger's *Enabled predicate aliases in favour of the quoted-literal ports"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
