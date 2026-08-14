@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel alias-attribute method generation passes the host class where Rails passes a CodeGenerator"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-08-14
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6527
 claim: null
 assignee: null
 blocked-by: null
