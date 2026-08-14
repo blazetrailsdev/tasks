@@ -1,7 +1,7 @@
 ---
 title: "Re-derive the naming residue taxonomy: it is ~73% unconvergeable in AR, not the ~6% the gate flip assumes"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
