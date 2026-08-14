@@ -1,6 +1,6 @@
 ---
 title: "Correct the migration/compatibility source row: false SKIP_PATTERNS comment and stale pre-1.0 reason"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
