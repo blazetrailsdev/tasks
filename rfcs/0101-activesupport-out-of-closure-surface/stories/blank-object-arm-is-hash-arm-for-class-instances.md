@@ -1,6 +1,6 @@
 ---
 title: "blank?'s fallthrough arm is the Hash arm, applied to every object"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6512
 claim: "2026-08-14T11:46:26Z"
 assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null
