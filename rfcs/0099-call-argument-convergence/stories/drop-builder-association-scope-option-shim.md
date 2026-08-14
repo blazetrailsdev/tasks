@@ -1,6 +1,6 @@
 ---
 title: "Drop the Builder::Association options-bag scope shim so :scope is invalid as Rails has it"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T03:57:08Z"
 assignee: "drop-builder-association-scope-option-shim"
-blocked-by: null
+blocked-by: 'Blocked on test-files-scope-positional-sweep (status: ready, unclaimed). Dropping "scope" from Builder::Association.VALID_OPTIONS makes assertValidKeys raise ArgumentError "Unknown key: :scope" for the 71 options-bag scope: association declarations still live in AR test files (grep -rn ''scope: ('' packages/activerecord/src --include=*.ts | grep -v test-helpers/models -> 71 across 24 test files: has-many-associations.test.ts, has-many-through-associations.test.ts, eager.test.ts, join-model.test.ts, the four preloader/through-association-*-join-scope.test.ts, etc). PR #6502 swept only test-helpers/models. Sequence: land test-files-scope-positional-sweep first, then this story drops VALID_OPTIONS["scope"] (association.rb:20-22), the createReflection lift (association.ts:125-128) and the habtmOptions.scope write-back (has-and-belongs-to-many.ts:336-339) together.'
 closed-reason: null
 ---
 
