@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Executor::TestHelper#run"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T17:22:10Z"
 assignee: "converge-isolated-execution-state-delete-returns-value"
-blocked-by: null
+blocked-by: "ActiveSupport::Executor::TestHelper#run is `Rails.application.executor.perform { super }` (executor/test_helper.rb:4-6). Ruby resolves `Rails` at call time; ESM cannot — the file lives in activesupport, and activesupport cannot import trailties (inverted package dependency), so `Rails.application.executor` (railties application.rb:122, now ported in packages/trailties/src/application.ts) is unreachable from packages/activesupport/src/executor/test-helper.ts. Substituting bare ActiveSupport::Executor would ratify a deviation rather than converge. Needs a decision on the composition point (test_help.rb-side include in trailties) first."
 closed-reason: null
 ---
 
