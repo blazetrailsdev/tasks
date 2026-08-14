@@ -1,6 +1,6 @@
 ---
 title: "trails new should generate an app that subclasses Trailties.Application"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6534
 claim: "2026-08-14T18:17:40Z"
 assignee: "generate-app-subclassing-application"
 blocked-by: null
