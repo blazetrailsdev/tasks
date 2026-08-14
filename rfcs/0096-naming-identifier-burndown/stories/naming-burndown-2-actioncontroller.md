@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 28 naming call-argument rows in ActionController metal and base"
 status: closed
-updated: 2026-08-11
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 112
-priority: 20
 pr: null
 claim: null
 assignee: null
