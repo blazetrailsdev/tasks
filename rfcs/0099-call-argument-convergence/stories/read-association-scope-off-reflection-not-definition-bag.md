@@ -1,6 +1,6 @@
 ---
 title: "read-association-scope-off-reflection-not-definition-bag"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6512
 claim: "2026-08-14T12:07:07Z"
 assignee: "read-association-scope-off-reflection-not-definition-bag"
 blocked-by: null
