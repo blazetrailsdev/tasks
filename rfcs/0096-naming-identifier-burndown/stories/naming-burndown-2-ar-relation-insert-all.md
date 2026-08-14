@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 21 naming call-argument rows in relation, query-methods and insert-all"
 status: done
-updated: 2026-08-12
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 84
-priority: 23
 pr: 6433
 claim: "2026-08-12T19:19:34Z"
 assignee: "naming-burndown-2-activesupport"
