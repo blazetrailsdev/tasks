@@ -1,6 +1,6 @@
 ---
 title: "IsolatedExecutionState.delete returns the deleted value, not a boolean"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6532
 claim: "2026-08-14T17:22:10Z"
 assignee: "converge-isolated-execution-state-delete-returns-value"
 blocked-by: null
