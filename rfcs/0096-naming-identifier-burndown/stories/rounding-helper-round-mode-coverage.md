@@ -1,6 +1,6 @@
 ---
 title: "rounding-helper-round-mode-coverage"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
