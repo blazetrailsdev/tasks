@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 50 naming call-argument rows in ActionDispatch routing/, middleware/ and testing/"
 status: closed
-updated: 2026-08-11
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 11
 pr: null
 claim: null
 assignee: null
