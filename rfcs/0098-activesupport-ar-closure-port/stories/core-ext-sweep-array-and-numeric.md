@@ -1,7 +1,7 @@
 ---
 title: "core-ext-sweep-array-and-numeric"
-status: in-progress
-updated: 2026-08-13
+status: done
+updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
