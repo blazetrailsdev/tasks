@@ -1,7 +1,7 @@
 ---
 title: "attribute-set-coder-rename-to-yaml-encoder"
-status: blocked
-updated: 2026-08-13
+status: ready
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-13T16:55:39Z"
-assignee: "attribute-set-coder-rename-to-yaml-encoder"
-blocked-by: "Blocked on open PR #6474 (branch ar-tasks-yaml-encoder-migration-proxy-args), which reshapes packages/activemodel/src/attribute-set/coder.ts to the YAMLEncoder(default_types) contract. The rename must land on top of that shape; doing it now from main would conflict on the same file and effectively stack. Unblock once #6474 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
