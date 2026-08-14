@@ -1,6 +1,6 @@
 ---
 title: "Exclude migration/compatibility_test.rb as won't-do (Migration[x.y] is not a trails goal)"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: null
+pr: 6505
 claim: "2026-08-14T02:27:09Z"
 assignee: "derive-ar-closure-test-manifest"
 blocked-by: null
