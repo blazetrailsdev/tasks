@@ -1,14 +1,13 @@
 ---
 title: "Burn down the remaining 47 naming call-argument rows in associations, reflection, autosave and nested attributes"
 status: done
-updated: 2026-08-12
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 188
-priority: 13
 pr: 6420
 claim: "2026-08-12T15:43:28Z"
 assignee: "naming-burndown-2-ar-associations"
