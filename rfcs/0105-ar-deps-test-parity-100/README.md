@@ -6,11 +6,14 @@ created: 2026-08-13
 updated: 2026-08-14
 owner: "@deanmarano"
 packages:
-  - "activerecord"
-  - "activesupport"
-  - "activemodel"
-  - "date"
-  - "i18n"
+  - activerecord
+  - activesupport
+  - activemodel
+  - date
+  - i18n
+  - arel
+  - globalid
+  - did-you-mean
 clusters:
   - boundary-and-measurement
   - name-gap
