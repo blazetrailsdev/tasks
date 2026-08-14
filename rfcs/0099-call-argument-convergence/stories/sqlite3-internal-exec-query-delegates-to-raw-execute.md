@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 internalExecQuery delegates to rawExecute + castResult, resolving the bigint-narrowing asymmetry"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T21:15:06Z"
+assignee: "sqlite3-internal-exec-query-delegates-to-raw-execute"
 blocked-by: null
 closed-reason: null
 ---
