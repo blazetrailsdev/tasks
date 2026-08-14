@@ -1,6 +1,6 @@
 ---
 title: "weak-receiver-rows-residual-mixin-call-pairing"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T09:57:07Z"
+assignee: "weak-receiver-rows-residual-mixin-call-pairing"
 blocked-by: null
 closed-reason: null
 ---
