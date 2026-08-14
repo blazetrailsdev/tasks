@@ -1,6 +1,6 @@
 ---
 title: "lazy-attribute-hash-keys-order-and-filter"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
