@@ -1,6 +1,6 @@
 ---
 title: "Splice Finisher into Application#initializers"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6504
 claim: "2026-08-14T01:35:18Z"
 assignee: "splice-finisher-initializers"
 blocked-by: null
