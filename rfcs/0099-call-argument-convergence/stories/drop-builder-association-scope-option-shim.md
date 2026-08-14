@@ -1,6 +1,6 @@
 ---
 title: "Drop the Builder::Association options-bag scope shim so :scope is invalid as Rails has it"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
