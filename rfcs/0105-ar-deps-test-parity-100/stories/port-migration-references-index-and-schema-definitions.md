@@ -1,6 +1,6 @@
 ---
 title: "Port migration/references_index_test.rb and schema_definitions_test.rb (19 missing)"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

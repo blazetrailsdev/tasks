@@ -1,6 +1,6 @@
 ---
 title: "Port i18n's 16 remaining tests (RFC 0074 is closed; they are unowned)"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

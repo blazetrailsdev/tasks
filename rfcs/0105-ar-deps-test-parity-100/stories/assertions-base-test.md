@@ -1,6 +1,6 @@
 ---
 title: "base_test assertion parity"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity

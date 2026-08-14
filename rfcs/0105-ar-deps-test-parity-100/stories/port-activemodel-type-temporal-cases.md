@@ -1,6 +1,6 @@
 ---
 title: "Port activemodel's three remaining type/date, type/time and type/date_time cases"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

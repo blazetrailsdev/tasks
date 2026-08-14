@@ -1,6 +1,6 @@
 ---
 title: "Measure assertion parity for the whole in-scope closure, not just activerecord"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement

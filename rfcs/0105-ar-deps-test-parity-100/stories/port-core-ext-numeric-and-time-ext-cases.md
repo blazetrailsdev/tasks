@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/numeric_ext_test.rb and time_ext_test.rb (36)"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

@@ -1,6 +1,6 @@
 ---
 title: "Size the newly measured assertion debt and file its burndown stories"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement

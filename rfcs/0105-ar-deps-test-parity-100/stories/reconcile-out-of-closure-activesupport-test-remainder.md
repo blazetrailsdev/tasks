@@ -1,6 +1,6 @@
 ---
 title: "Reconcile the out-of-closure activesupport test remainder against RFC 0101"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

@@ -1,6 +1,6 @@
 ---
 title: "Write down what 100% test compare means, and what may and may not be excluded"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement

@@ -1,6 +1,6 @@
 ---
 title: "Port fixture_set/file_test.rb and test_fixtures_test.rb (19 tests)"
-status: draft
+status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
