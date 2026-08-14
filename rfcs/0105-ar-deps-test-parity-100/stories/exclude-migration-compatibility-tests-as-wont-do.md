@@ -1,6 +1,6 @@
 ---
 title: "Exclude migration/compatibility_test.rb as won't-do (Migration[x.y] is not a trails goal)"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement
