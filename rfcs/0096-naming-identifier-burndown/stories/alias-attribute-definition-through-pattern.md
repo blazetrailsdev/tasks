@@ -50,7 +50,7 @@ Surfaced by review of PR #6538.
 
 - [ ] `aliasAttributeMethodDefinition` calls
       `defineAttributeMethodPattern(pattern, oldName, { owner, as: newName,
-  override: true })` per attribute_methods.rb:226-236 / AR's :94, rather
+override: true })` per attribute_methods.rb:226-236 / AR's :94, rather
       than defining accessors itself.
 - [ ] The `override: true` branch of `defineAttributeMethodPattern` is
       exercised by a test.
