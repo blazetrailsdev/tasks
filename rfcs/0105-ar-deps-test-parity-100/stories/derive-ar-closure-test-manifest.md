@@ -1,7 +1,7 @@
 ---
 title: "Derive the AR-closure activesupport test manifest and guard it"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: boundary-and-measurement
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 320
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T02:27:09Z"
+assignee: "derive-ar-closure-test-manifest"
 blocked-by: null
 closed-reason: null
 ---
