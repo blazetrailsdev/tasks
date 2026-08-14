@@ -1,7 +1,7 @@
 ---
 title: "Splice Finisher into Application#initializers"
-status: draft
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T01:35:18Z"
+assignee: "splice-finisher-initializers"
 blocked-by: null
 closed-reason: null
 ---
