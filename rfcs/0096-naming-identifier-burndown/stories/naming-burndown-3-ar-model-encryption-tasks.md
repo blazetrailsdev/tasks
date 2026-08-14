@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 47 naming call-argument rows in the model core, associations, encryption and database tasks"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
