@@ -1,6 +1,6 @@
 ---
 title: "attribute-set-coder-rename-to-yaml-encoder"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6511
 claim: "2026-08-14T10:27:06Z"
 assignee: "attribute-set-coder-rename-to-yaml-encoder"
 blocked-by: null
