@@ -6,22 +6,14 @@ rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
 deps:
-  - naming-burndown-relation-bulk-write-attributes
-  - naming-burndown-2-pg-adapter
-  - naming-burndown-2-actiondispatch-routing-middleware
-  - naming-burndown-2-ar-model-core
-  - naming-burndown-2-ar-associations
-  - naming-burndown-2-arel-activemodel
-  - naming-burndown-2-ar-abstract-adapters
-  - naming-burndown-2-rack
-  - naming-burndown-2-actiondispatch-http
-  - naming-burndown-2-actionview
-  - naming-burndown-2-activesupport
-  - naming-burndown-2-actioncontroller
-  - naming-burndown-2-ar-encryption-and-tasks
-  - naming-burndown-2-tail
-  - naming-burndown-2-ar-relation-insert-all
-  - naming-burndown-2-ar-mysql-sqlite-adapters
+  - naming-residue-taxonomy-recalibration
+  - naming-burndown-3-ar-adapters
+  - naming-burndown-3-ar-persistence-relation
+  - naming-burndown-3-ar-model-encryption-tasks
+  - naming-burndown-3-activesupport
+  - naming-burndown-3-arel-activemodel
+  - naming-burndown-3-tail
+  - naming-burndown-3-ar-structural-residue
 deps-rfc: []
 est-loc: 80
 pr: null
