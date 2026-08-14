@@ -1,6 +1,6 @@
 ---
 title: "port-minitest-reporter-surface"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
