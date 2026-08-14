@@ -1,6 +1,6 @@
 ---
 title: "lazy-attribute-hash-keys-order-and-filter"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T18:57:42Z"
+assignee: "activemodel-define-attribute-method-code-generator"
 blocked-by: null
 closed-reason: null
 ---
