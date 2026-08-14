@@ -1,6 +1,6 @@
 ---
 title: "Object#blank? must answer for a method-shaped empty?"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6506
 claim: "2026-08-14T01:57:12Z"
 assignee: "converged-row-stale-mark-forces-whole-tree-reseed"
 blocked-by: null
