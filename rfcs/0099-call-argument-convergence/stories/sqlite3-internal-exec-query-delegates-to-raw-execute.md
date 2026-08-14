@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-internal-exec-query-delegates-to-raw-execute"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T20:15:09Z"
 assignee: "sqlite3-internal-exec-query-delegates-to-raw-execute"
-blocked-by: null
+blocked-by: "Prerequisite PR #6539 (sqlite3-perform-query-returns-result) is still OPEN, not merged. On origin/main performQuery still returns the {rows, affectedRows, insertRowid} bag and castResult (sqlite3/database-statements.ts:332-344) rebuilds via Result.fromRowHashes, which drops the column set of a zero-row row-returning statement. Converging internalExecQuery onto castResult(rawExecute(...)) today would regress zero-row SELECT columns. Unblock once #6539 merges; converging on top of that open branch would be a stacked PR."
 closed-reason: null
 ---
 
