@@ -1,6 +1,6 @@
 ---
 title: "detailArgsForAny bypasses DetailsKey.detailsCacheKey because the :any variants sentinel has no DetailsMap representation"
-status: draft
+status: closed
 updated: 2026-08-14
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Register move, which CLAUDE.md forbids: this recorded a baseline row's content as a story so the row could be deleted, netting zero convergence while reporting green. The baseline row is restored. Superseded by converge-detail-args-for-any-variants-branch, which changes lookup-context.ts."
 ---
 
 ## Context
