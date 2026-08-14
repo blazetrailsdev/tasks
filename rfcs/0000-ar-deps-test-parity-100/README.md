@@ -281,6 +281,78 @@ in files with its siblings, sized to the repo's normal PR ceiling.
   decision already on the record (PR #5070, closed unmerged); re-litigating it
   is out of scope.
 
+### Priority
+
+The RFC's own `priority: 2` is the default every story inherits; 57 of the 65
+carry `priority: null` and take it. Eight are overridden, and only where leaving
+them at the default would schedule the work wrong:
+
+**Higher (`priority: 1`)** — these three unblock or resize everything else, and
+two of them are among the cheapest stories in the RFC:
+
+- `derive-ar-closure-test-manifest` — six wave-2 stories depend on it, and the
+  boundary has to exist before anyone ports against it.
+- `exclude-migration-compatibility-tests-as-wont-do` — ~90 LOC that settles 57
+  tests, a third of ActiveRecord's whole remaining gap. Landing it first means
+  every later migration story measures against a stable denominator.
+- `widen-assertion-report-packages-and-seed-mark` — the RFC's largest unknown is
+  how much assertion debt the non-AR packages carry. Until this runs, the plan's
+  true size is a guess.
+
+**Lower (`priority: 3`)** — lowest yield per PR, so they should be picked last:
+
+- `assertions-tail-root-5c` (12 divergences), `assertions-tail-root-6b` (19),
+  `assertions-tail-adapters-3c` (30), `assertions-tail-root-6a` (41) — 102
+  divergences across 59 files between them, versus 336 in
+  `assertions-has-many-associations` alone.
+- `flip-assertion-mismatch-gate-to-hard-zero` — terminal by construction; its
+  `deps` already block it, and the priority makes that intent visible in
+  `pnpm tasks ready` output rather than only in the graph.
+
+Everything else — all the porting stories and the 33 remaining assertion
+clusters — sits at the RFC default and is picked in whatever order agents are
+free, which is correct: they are independent and non-overlapping by design.
+
+### Story sizing: gate units, not LOC, for the porting waves
+
+CLAUDE.md's PR ceiling counts additions + deletions with tests included. For
+waves 1 and 4 that is the right meter and it stays in force — those stories edit
+`scripts/` tooling, which is app code and reviews like app code.
+
+For waves 2 and 3 it measures the wrong thing, and this RFC does not pretend
+otherwise: **those stories were sized by gate units, with the LOC ceiling
+waived.**
+
+- **Wave 3** is sized by **assertion divergences (≤190 per story) and files
+  (≤18 per story)**. The divergence is the unit of review work — one hunk,
+  checked against one Rails assertion — and it is what the gate itself counts.
+- **Wave 2** is sized by **missing Rails tests per story**, the unit
+  `pnpm parity:test` counts.
+- The `est-loc` on every wave-2 and wave-3 story is **derived from those budgets,
+  not the constraint**. Treat it as a scheduling hint; a story that lands at 700
+  LOC of mechanical assertion edits inside its divergence budget is correctly
+  sized, not oversized.
+
+The ≤18-file cap is the reviewability half of the rule and is not waived: a
+diff spread over 50 files is hard to review however small each hunk is. That cap
+is why `assertions-tail-adapters-3` and `-root-5/6` were repacked.
+
+**Why not one PR per Rails test file** (the obvious alternative): the divergence
+distribution is long-tailed at both ends. 61 of the 286 files carry 1–2
+divergences each — 1.5% of the work, but 61 PRs, each paying a full three-lane
+CI run and a review round — while the five heaviest files carry 201–400
+divergences each (21% of the work) and would each still need splitting. Median
+file is 7 divergences. Per-file is simultaneously too granular for half the
+corpus and too coarse for its head, and it multiplies CI cost roughly 4.6× (65
+stories → ~300 PRs) in a repo with no spare runners. The one real benefit of
+per-file PRs — no sibling conflicts, cleanly attributable parity movement — is
+already bought by giving every story a disjoint file list.
+
+This is a per-RFC sizing decision, not a proposal to change how the ceiling works
+repo-wide. Test lines are not free to review _here_ in particular: a name-matched
+test that asserts the wrong thing is precisely the defect this RFC exists to
+burn down, so an assertion hunk is where a reviewer must actually look.
+
 ### Sequencing and parallelism
 
 Wave 1 lands first and is small (7 stories, ~1,190 est-LOC); everything else
