@@ -1,6 +1,6 @@
 ---
 title: "converge-date-time-current-since-to-datetime"
-status: blocked
+status: ready
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T13:47:03Z"
-assignee: "converge-date-time-current-since-to-datetime"
-blocked-by: "Blocked on unmerged PR #6518 (core-ext-sweep-hash-module-string-residue), which is what introduces `toDatetime` (String#to_datetime) into activesupport's call-parity population AND adds all three baseline rows this story is asked to delete. On origin/main (2ed11c25d) none of the three rows exist: scripts/api-compare/call-mismatches-exclude/activesupport/core-ext/date/calculations.json is absent entirely and time-ext.json has no to_datetime rows. Acceptance criterion 2 (delete the rows, tighten the marks) is unsatisfiable until #6518 lands, and touching those two shards now guarantees a rebase conflict on exactly the baseline JSON that must never be resolved by taking a side.\n\nTwo of the three sites also need re-specifying before the story is actionable; the story's Rails citations are wrong:\n\n- `since`: the story cites date_time/calculations.rb:85-88, but that range is `DateTime#advance`. `DateTime#since` is date_time/calculations.rb:116-118 and is `self + Rational(seconds, 86400)` — no `to_datetime` at all. The only `to_datetime` under the name `since` is Time#since's `rescue TypeError` arm (time/calculations.rb:225-234), which exists solely to deprecate passing a non-numeric and is documented to raise TypeError in Rails 8.1. trails' `since(date, seconds: number)` cannot reach it, and time-ext.json already carries the sibling row for that same arm's `warn` call with that reason. So this is the existing unrepresentable-arm class, not a convergence.\n\n- `current`: `DateTime.current` (date_time/calculations.rb:10-12) does end in `.to_datetime`, but `Time.current` (time/calculations.rb:39-41) does not, and trails has ONE `current()` in time-ext.ts serving both Ruby methods. One function cannot return both a Time and a DateTime, so this is the same homonym class as the already-baselined `sec_fraction`/`subsec` pair in this shard. Converging it means splitting `current` into separate Time and DateTime receivers — a different, larger story than the one written.\n\n- `compare_with_coercion` (date/calculations.rb:152-158) IS genuinely convergeable: core-ext/date/calculations.ts:245 inlines `date.toZonedDateTime(\"UTC\").toInstant()` under a local named `toDatetime`, which is exactly Date#to_datetime. But the port that exists is `Date#toDatetime` on the @blazetrails/date `Date` class (packages/date/src/date.ts:7463), whose receiver is that class, not the `Temporal.PlainDate` this file is keyed on; there is no PlainDate-receiver `to_datetime` to call, and adding one here is new public surface in a Rails-matched file that date/calculations.rb does not define. Needs a decision on where a PlainDate `to_datetime` lives before it can be written.\n\nUnblock: after #6518 merges, re-scope to the compare_with_coercion arm plus a decision on the PlainDate to_datetime home, and re-file the current/since arms as homonym/unrepresentable rows rather than convergences."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
