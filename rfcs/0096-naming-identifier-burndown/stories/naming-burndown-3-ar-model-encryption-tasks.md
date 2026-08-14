@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 47 naming call-argument rows in the model core, associations, encryption and database tasks"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 190
-pr: null
+pr: 6540
 claim: "2026-08-14T19:45:16Z"
 assignee: "naming-burndown-3-ar-model-encryption-tasks"
 blocked-by: null
