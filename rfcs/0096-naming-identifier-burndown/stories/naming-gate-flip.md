@@ -19,7 +19,7 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Precondition still unmet, re-measured 2026-08-11 on origin/main ff1fa59d4 (fresh pnpm build + API_COMPARE_FORCE=1 pnpm parity:api --calls): 532 naming rows remain (of 962 call-arg rows), down from 886 but far above the ~6% tooling residue this flip requires. Deps now name the 16 wave-2 burndown stories that cover all 532 rows; unblock once they land and the report shows only the tooling-shaped residue."
+blocked-by: "Precondition still unmet, and now known to be mis-sized. All 16 wave-2 deps landed, but PR #6459 (merged 2026-08-13) measured the surviving activerecord naming rows and found ~57 of 78 (73%) cannot close by any rename — an order of magnitude above the ~6% tooling residue this flip assumes, and mostly not the tooling shape it plans to baseline. Deps now name the open wave-3 stories plus naming-residue-taxonomy-recalibration, which must re-derive the residue taxonomy and restate this precondition in measured terms before the gate can flip."
 closed-reason: null
 ---
 
