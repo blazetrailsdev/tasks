@@ -1,6 +1,6 @@
 ---
 title: "IsolatedExecutionState.delete returns the deleted value, not a boolean"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
