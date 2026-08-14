@@ -1,6 +1,6 @@
 ---
 title: "Async-query session/tracker call sites still use core.ts free functions, not Base"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T18:52:12Z"
+assignee: "converge-async-query-session-callers-onto-base"
 blocked-by: null
 closed-reason: null
 ---
