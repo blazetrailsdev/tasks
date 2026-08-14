@@ -1,6 +1,6 @@
 ---
 title: "Call-set extraction for one method changes when unrelated methods in the same file are edited"
-status: draft
+status: claimed
 updated: 2026-08-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T20:20:11Z"
+assignee: "extractor-missing-set-perturbed-by-unrelated-edits"
 blocked-by: null
 closed-reason: null
 ---
