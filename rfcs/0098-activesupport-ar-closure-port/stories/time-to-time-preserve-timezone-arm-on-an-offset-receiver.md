@@ -1,6 +1,6 @@
 ---
 title: "Time#to_time / DateTime#to_time need a receiver that carries an offset"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T22:49:42Z"
+assignee: "retire-time-zone-config-test-only-zone-seams"
 blocked-by: null
 closed-reason: null
 ---
