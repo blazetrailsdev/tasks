@@ -1,6 +1,6 @@
 ---
 title: "converge both nokogiri backends' parse off Blob onto the StringIO shim"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6551
 claim: "2026-08-14T23:15:08Z"
 assignee: "executor-seam-end-to-end-request-coverage"
 blocked-by: null
