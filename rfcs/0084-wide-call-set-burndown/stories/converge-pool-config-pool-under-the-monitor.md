@@ -124,10 +124,22 @@ different reason: it would let a sync `#pool` reader walk into the critical
 section while `#disconnectBang`/`#discardPoolBang` hold the lock across a real
 suspension point. Ruby blocks there; we would not.
 
-## The decision
+## The decision — RULED: Option B (parity owner, 2026-08-14)
 
-A parity owner picks one. Both are unusual enough that an agent should not pick
-unilaterally.
+**Option B is ratified. `get pool()` stays synchronous and unlocked.** The
+escalated judgement — whether a JS language _guarantee_ that makes the Ruby
+construct vacuous counts as a ratifiable language shortcoming — is answered
+yes, for this critical section specifically: it is a pure constructor with no
+suspension point, and a constructor can never be `async`, so the mutual
+exclusion Ruby's monitor buys is provided by the execution model rather than
+omitted. This is a ratification, not a deferral, and it does not generalise —
+it licenses nothing about `#serverVersion` or `#disconnectBang`, both of which
+contain real `await`s and keep their `synchronize`.
+
+The story is now ordinary code work: implement the Option B arm below. Do not
+re-open the A/B question.
+
+The two options as they were escalated, kept for the record:
 
 **Option A — converge as originally specified.** Add the `synchronize` block,
 absorb the await through all ~105 sync call sites, and accept that
@@ -145,25 +157,34 @@ for the zero-import slot modules in CLAUDE.md.
 Option B is what CLAUDE.md's deviation-register section is pointed about:
 "a deviation-convergence story always converges," and only "a genuine TypeScript
 language shortcoming is ratifiable." Whether a language _guarantee_ that makes
-the Ruby construct vacuous falls in that category is precisely the judgement
-being escalated, and it is a maintainer's call, not an agent's.
+the Ruby construct vacuous falls in that category was the judgement escalated,
+and it has now been answered in Option B's favour above.
 
 ## Acceptance criteria
 
-- [ ] A parity owner records the decision (A or B) in this story before any code
-      changes.
-- [ ] **If A:** `#pool` mirrors `pool_config.rb:70-72` including the
-      `synchronize` block, every sync caller of `poolConfig.pool` is converged
-      onto the awaited shape, and the "left unlocked deliberately" JSDoc is
-      deleted, not reworded. A follow-up story is filed for each
-      Rails-synchronous method that became async (`quotedTableName`,
-      `aliasTracker`, `adapterClassSync`) so the new divergences are tracked
-      rather than absorbed silently.
-- [ ] **If B:** the JSDoc on `get pool()` is rewritten to cite
-      `pool_config.rb:70-72`, the no-`await`-in-a-constructor guarantee, and the
-      sign-off; and a regression test pins that the critical section stays
-      suspension-free, so a later edit introducing an `await` between the read
-      and the write fails rather than silently reintroducing the race.
+Option A is closed out by the ruling; only the B arm remains.
+
+- [x] A parity owner records the decision in this story before any code changes
+      — Option B, 2026-08-14, recorded in `## The decision` above.
+- [ ] The JSDoc on `get pool()` (`packages/activerecord/src/connection-adapters/pool-config.ts:181-190`)
+      is **rewritten**, not merely kept: it cites `pool_config.rb:70-72` as the
+      Rails counterpart, states the no-`await`-in-a-constructor guarantee as the
+      reason the `synchronize` is vacuous here, and records the 2026-08-14
+      sign-off with this story's id so the finding is traceable to a decision
+      rather than to an agent's judgement.
+- [ ] The JSDoc explicitly scopes the ratification to this method, contrasting
+      with `#serverVersion` (:160) and `#disconnectBang` (:214), which keep the
+      monitor because they contain real suspension points — so a later reader
+      does not generalise the exemption across the class.
+- [ ] A regression test pins that the critical section stays suspension-free: a
+      later edit introducing an `await` between the `@pool` read and the `@pool =`
+      write must fail the suite rather than silently reintroduce the race.
+      Assert on the shape of the getter (e.g. that it is not an async function
+      and its source between read and write contains no `await`), not on timing
+      — a timing test cannot observe a race that the execution model prevents.
+- [ ] The call-set baseline row for `pool_config.rb`'s `synchronize` carries the
+      reviewed reason pointing at this ruling, replacing any seeded placeholder.
+      Row count does not grow; no allowlist is widened.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
 
 ## Notes
