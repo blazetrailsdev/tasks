@@ -1,6 +1,6 @@
 ---
 title: "Call-set extraction for one method changes when unrelated methods in the same file are edited"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
