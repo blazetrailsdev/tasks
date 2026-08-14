@@ -1,6 +1,6 @@
 ---
 title: "blank?'s Time arm covers only JS Date, not Temporal"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
