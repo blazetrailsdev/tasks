@@ -1,7 +1,7 @@
 ---
 title: "merge_conditional_options takes Rails' if_option:/unless_option: kwargs and Array()s internally"
-status: in-progress
-updated: 2026-08-13
+status: done
+updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
