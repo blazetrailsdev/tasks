@@ -6,7 +6,14 @@ rfc: "0000-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages:
   - "activerecord"
-deps: []
+deps:
+  - "port-migration-column-attributes-and-positioning"
+  - "port-migration-constraints-and-residue"
+  - "port-migration-create-join-table-test"
+  - "port-migration-foreign-key-residue-and-mysql2-rake-skips"
+  - "port-migration-index-test"
+  - "port-migration-references-index-and-schema-definitions"
+  - "port-migration-references-statements-test"
 deps-rfc: []
 est-loc: 348
 priority: null
@@ -44,6 +51,11 @@ assertion-value). Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path
 the same report prints beside the Ruby file.
+
+Ordering: this cluster depends on every `port-migration-*` story, because those
+stories are still _adding_ tests to the same Rails files. Burning down an
+assertion table measured against a file that is still growing either wastes the
+work or leaves the table stale — so the dep edges are real, not advisory.
 
 The fix direction is Rails-ward: our test asserts what the Rails test asserts,
 with the same assertion kinds in the same order (`assert_equal` → `toEqual`,

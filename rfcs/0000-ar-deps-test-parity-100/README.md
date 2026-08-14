@@ -288,10 +288,21 @@ depends on it only through the manifest and the widened measurement. Waves 2 and
 3 then run **in parallel** — they touch disjoint files (wave 2 adds missing
 tests in `migration/*`, `fixtures*`, `core-ext/*`, `i18n`, `activemodel/type`;
 wave 3 edits assertions inside already-matched AR tests elsewhere) — except for
-`assertions-migration-cluster`, which must land after the `port-migration-*`
-stories or it will be re-measuring a file that is still growing. Wave 4 is
+`assertions-migration-cluster`, which carries `deps` on all seven
+`port-migration-*` stories — burning down an assertion table measured against a
+file those stories are still adding tests to would be wasted work. Wave 4 is
 gated on every assertion story via `deps`, so it cannot surface in
-`pnpm tasks ready` early.
+`pnpm tasks ready` early; because the widened-package burndown stories do not
+exist yet, `size-and-file-assertion-work-for-widened-packages` carries an
+acceptance criterion to append each story it files to the flip story's `deps`
+before it closes.
+
+Cross-RFC ordering uses `deps` with the other RFC's story id, not `deps-rfc`:
+story ids resolve globally in the dep graph (`scripts/validate-lib.mjs:86-110`)
+and 29 such edges already exist in this repo, whereas `deps-rfc` blocks until the
+named RFC is `closed` — which never happens for standing catch-alls like
+`0023-surfaced-deviations`. That is how `measure-fixtures-enrollment-gap` is
+gated on RFC 0023's `reenroll-fixtures-tests-stale-unported-exclusion`.
 
 ### What would invalidate this plan
 

@@ -6,7 +6,8 @@ rfc: "0000-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
   - "activerecord"
-deps: []
+deps:
+  - "reenroll-fixtures-tests-stale-unported-exclusion"
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -37,6 +38,13 @@ test-compare matches on normalized names — a large share may credit on first
 enrollment. Sizing the porting work before measuring would be guesswork, so this
 story measures and files, and the two porting stories that follow it are
 re-scoped from its output.
+
+The RFC 0023 story is a cross-RFC `deps` edge, not `deps-rfc`: `deps-rfc` blocks
+until the named RFC reaches `status: closed`, and `0023-surfaced-deviations` is a
+standing catch-all that never closes, so it would park this story forever. Story
+ids resolve globally in the dep graph (`scripts/validate-lib.mjs:86-110` builds
+`storyIds` across every RFC), and cross-RFC `deps` edges are established practice
+in this repo, so the edge is both legal and enforced by `pnpm tasks ready`.
 
 ## Acceptance criteria
 

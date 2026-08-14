@@ -74,6 +74,13 @@ the three assertion axes, once every in-scope package reads 0/0/0 — it is the
 last story in the RFC and is gated on all the `assertions-*` stories plus the
 widened packages' burndown.
 
+Its `deps` list is **maintained, not fixed**: the widened-package burndown
+stories do not exist yet — `size-and-file-assertion-work-for-widened-packages`
+files them once the measurement is in — so that story carries an acceptance
+criterion to append each one it files to this story's `deps` (`pnpm tasks
+set-deps`) before it closes. Do not close the sizing story with this list
+unchanged, and do not claim this one on the strength of the current list alone.
+
 ## Acceptance criteria
 
 - `pnpm parity:test -- --check` fails when any package in the in-scope closure
@@ -86,5 +93,9 @@ widened packages' burndown.
 - The enforced package set is explicit and named in code the way
   `GATE_ENFORCED_PACKAGES` is, with the out-of-scope packages (actionview,
   trailties, actioncontroller, actiondispatch) still report-only.
+- Before claiming: this story's `deps` include every widened-package assertion
+  story that `size-and-file-assertion-work-for-widened-packages` filed, and all
+  of them are `done`. A short `deps` list here means the sizing story's own
+  acceptance criterion was skipped, not that the work is finished.
 - CI is green on the flip, which is only true if every burndown story has
   landed — do not claim this story before then.
