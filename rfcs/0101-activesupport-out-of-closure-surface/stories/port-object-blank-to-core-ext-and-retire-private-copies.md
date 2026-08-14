@@ -1,7 +1,7 @@
 ---
 title: "blank?/present? live in string-utils with three private copies in actionpack"
-status: claimed
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6499
 claim: "2026-08-13T23:57:08Z"
 assignee: "converge-strict-loading-violation-signature"
 blocked-by: null
