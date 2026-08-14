@@ -16,7 +16,7 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Read the association scope off the reflection, not the `_associations` bag
+# Read the association scope off the reflection, not the options hash
 
 ## Context
 
@@ -25,32 +25,34 @@ the `createReflection` lift, so a scope now reaches `Reflection.create` only as
 the second positional, exactly as `associations/builder/association.rb:20-22,43`
 has it.
 
-What it did NOT converge is trails' `AssociationDefinition` bag. `createReflection`
-still writes the positional scope back onto the `_associations` entry
-(`packages/activerecord/src/associations/builder/association.ts:142-143`:
-`if (scope) assocOptions.scope = scope;`), and the HABTM builder does the same
-(`associations/builder/has-and-belongs-to-many.ts:336-339`), because the loaders
-downstream read it from there rather than from the reflection:
+What was left was the options hash: `createReflection` wrote the positional
+scope back onto the `_associations` entry's `options`
+(`associations/builder/association.ts`), the HABTM builder did the same, and
+the loaders read `options.scope` — `collection-proxy.ts`, `relation.ts`,
+`singular-association.ts`, `has-many-association.ts`,
+`has-many-through-association.ts`, `association.ts`, `counter-cache.ts`.
+Rails' options hash never carries the scope; `assert_valid_keys` would reject
+it (`association.rb:21,70`).
 
-- `associations/has-many-association.ts:779,821`
-- `associations/has-many-through-association.ts:1198,1231,1239,1246,1262`
-- `associations/singular-association.ts:391`
-- `associations/collection-proxy.ts:2954,2995`
+## Converged shape (landed in #6512)
 
-Rails keeps the scope on the reflection — `Reflection.create(macro, name, scope,
-options, model)` (`association.rb:49`), `HasAndBelongsToManyReflection.new(name,
-scope, options, ...)` (`associations.rb:1871`) — and every read is
-`reflection.scope` (`association_scope.rb:169-172`). The options hash never
-carries it.
+The scope lives on the reflection object beside the options hash, which is
+where Rails keeps it: `MacroReflection#initialize(name, scope, options,
+active_record)` assigns `@scope` and `@options` separately (`reflection.rb:388-392`)
+and exposes both as readers (`reflection.rb:376,382`). trails'
+`AssociationDefinition` IS that object — it is what `Association#reflection`
+holds (`association.rb:32`, `associations/association.ts:33`) and its fields are
+already documented against `MacroReflection#macro`,
+`AssociationReflection#foreign_key`, `AbstractReflection#klass` — so it gained a
+`scope` field mirroring `attr_reader :scope`, and `options` was cleared of it.
 
-`_associations` / `AssociationDefinition` is itself a trails invention with no
-Rails counterpart, so this is one step of retiring it.
+`scope` is off `AssociationOptions` entirely, so the compiler now rejects the
+bag spelling everywhere.
 
 ## Acceptance criteria
 
-- [ ] `createReflection` no longer copies the positional scope onto the
-      `_associations` entry, and neither does the HABTM builder.
-- [ ] Every `options.scope` read listed above resolves the scope from the
-      reflection instead.
-- [ ] `scope` is off `AssociationOptions`.
-- [ ] `pnpm parity:api:calls` / `:args` green; association suites green.
+- [x] Neither `createReflection` nor the HABTM builder puts the scope in an
+      options hash.
+- [x] No loader reads `options.scope`; each reads the reflection's `scope`.
+- [x] `scope` is off `AssociationOptions`.
+- [x] `pnpm parity:api:calls` / `:args` green; association suites green.
