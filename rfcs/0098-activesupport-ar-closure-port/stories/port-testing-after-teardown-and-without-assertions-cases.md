@@ -1,6 +1,6 @@
 ---
 title: "Enroll the after_teardown and tests-without-assertions Rails test cases"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
