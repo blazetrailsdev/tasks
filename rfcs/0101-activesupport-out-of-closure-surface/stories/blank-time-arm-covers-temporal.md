@@ -1,6 +1,6 @@
 ---
 title: "blank?'s Time arm covers only JS Date, not Temporal"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T03:57:08Z"
+assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null
 closed-reason: null
 ---

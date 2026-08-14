@@ -1,6 +1,6 @@
 ---
 title: "Drop the Builder::Association options-bag scope shim so :scope is invalid as Rails has it"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T03:57:08Z"
+assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null
 closed-reason: null
 ---

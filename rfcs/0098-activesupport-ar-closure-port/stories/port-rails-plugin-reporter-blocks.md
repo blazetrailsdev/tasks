@@ -1,6 +1,6 @@
 ---
 title: "Port plugin_rails_init's three reporter blocks (rails_plugin.rb:122-135)"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T03:57:08Z"
+assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null
 closed-reason: null
 ---
