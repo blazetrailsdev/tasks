@@ -1,6 +1,6 @@
 ---
 title: "Sweep the remaining AR test-file association scopes onto Rails' positional"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T09:27:06Z"
+assignee: "test-files-scope-positional-sweep"
 blocked-by: null
 closed-reason: null
 ---
