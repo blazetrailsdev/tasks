@@ -1,6 +1,6 @@
 ---
 title: "split-date-time-current-onto-its-own-receiver"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T21:41:01Z"
+assignee: "converge-activesupport-module-deprecator-and-gem-version"
 blocked-by: null
 closed-reason: null
 ---
