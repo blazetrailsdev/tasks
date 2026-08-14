@@ -1,6 +1,6 @@
 ---
 title: "Enroll number_helper_test.rb's test_number_to_human, including the round_mode: :down assertion"
-status: ready
+status: draft
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
