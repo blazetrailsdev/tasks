@@ -1,6 +1,6 @@
 ---
 title: "port-rails-test-unit-reporter"
-status: ready
+status: blocked
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Maintainer decision (2026-08-14): trails does not port the minitest gem, and PR #6537 removed its reporter stack. Rails::TestUnitReporter (railties/lib/rails/test_unit/reporter.rb) is a Minitest::ProgressReporter subclass, so it has no base class to extend any more. Needs a fresh plan (vitest owns the run) before it is schedulable — do not re-add the gem's reporter surface to satisfy it."
 closed-reason: null
 ---
 
