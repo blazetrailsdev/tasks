@@ -1,6 +1,6 @@
 ---
 title: "wire-load-async-through-future-result"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6530
 claim: "2026-08-14T16:17:48Z"
 assignee: "wire-load-async-through-future-result"
 blocked-by: null
