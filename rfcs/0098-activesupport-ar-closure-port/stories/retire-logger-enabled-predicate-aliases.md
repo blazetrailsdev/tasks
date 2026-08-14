@@ -1,6 +1,6 @@
 ---
 title: "Retire Logger's *Enabled predicate aliases in favour of the quoted-literal ports"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6535
 claim: "2026-08-14T18:15:07Z"
 assignee: "executor-seam-end-to-end-request-coverage"
 blocked-by: null
