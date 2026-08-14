@@ -1,6 +1,6 @@
 ---
 title: "Converge select_all's Result.empty(async:) call-arg row (needs FutureResult)"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T03:27:07Z"
+assignee: "call-args-ar-select-all-empty-async-row"
 blocked-by: null
 closed-reason: null
 ---
