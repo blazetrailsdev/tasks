@@ -1,6 +1,6 @@
 ---
 title: "number-helper-bigdecimal-precision-spine"
-status: claimed
+status: ready
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T18:57:42Z"
-assignee: "activemodel-define-attribute-method-code-generator"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

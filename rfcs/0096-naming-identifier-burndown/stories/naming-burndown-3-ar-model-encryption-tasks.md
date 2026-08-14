@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 47 naming call-argument rows in the model core, associations, encryption and database tasks"
-status: claimed
+status: ready
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: 190
 pr: null
-claim: "2026-08-14T18:57:42Z"
-assignee: "activemodel-define-attribute-method-code-generator"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
