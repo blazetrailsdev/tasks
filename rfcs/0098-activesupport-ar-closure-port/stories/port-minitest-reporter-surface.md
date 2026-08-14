@@ -1,6 +1,6 @@
 ---
 title: "port-minitest-reporter-surface"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T15:27:02Z"
+assignee: "port-minitest-reporter-surface"
 blocked-by: null
 closed-reason: null
 ---
