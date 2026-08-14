@@ -1,6 +1,6 @@
 ---
 title: "activemodel-code-generator-port"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6527
 claim: "2026-08-14T15:47:02Z"
 assignee: "activemodel-code-generator-port"
 blocked-by: null
