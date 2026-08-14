@@ -1,6 +1,6 @@
 ---
 title: "executor-seam-end-to-end-request-coverage"
-status: claimed
+status: ready
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T18:15:07Z"
-assignee: "executor-seam-end-to-end-request-coverage"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
