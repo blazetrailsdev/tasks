@@ -1,6 +1,6 @@
 ---
 title: "Port ErrorReporterAssertions and ConstantStubbing into the TestCase receiver"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 240
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T11:46:26Z"
+assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null
 closed-reason: null
 ---
