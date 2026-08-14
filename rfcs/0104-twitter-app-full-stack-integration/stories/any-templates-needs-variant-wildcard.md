@@ -1,11 +1,12 @@
 ---
 title: "anyTemplates has no variant wildcard, so a variant-only template reads as no template"
 status: closed
-updated: 2026-08-13
+updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionpack", "actionview"]
-deps: []
+deps:
+  - unify-lookup-context-resolver-protocols
 deps-rfc: []
 est-loc: 80
 priority: null
