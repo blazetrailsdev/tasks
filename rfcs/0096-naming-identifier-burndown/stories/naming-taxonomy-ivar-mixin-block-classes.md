@@ -1,6 +1,6 @@
 ---
 title: "Classify the ivar-underscore, mixin .call(this) and block-idiom naming rows as permanent"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6543
 claim: "2026-08-14T20:45:06Z"
 assignee: "alias-attribute-definition-through-pattern"
 blocked-by: null
