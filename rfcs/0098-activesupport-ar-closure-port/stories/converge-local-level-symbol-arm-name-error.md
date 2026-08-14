@@ -1,6 +1,6 @@
 ---
 title: "Port local_level='s Symbol arm so an unknown level raises NameError"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T18:15:07Z"
+assignee: "executor-seam-end-to-end-request-coverage"
 blocked-by: null
 closed-reason: null
 ---
