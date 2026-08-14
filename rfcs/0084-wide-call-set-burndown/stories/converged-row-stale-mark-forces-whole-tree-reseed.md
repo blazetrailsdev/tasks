@@ -1,7 +1,7 @@
 ---
 title: "Converging a call-set row forces the whole-tree reseed CLAUDE.md forbids; give the stale mark a narrow remedy"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
