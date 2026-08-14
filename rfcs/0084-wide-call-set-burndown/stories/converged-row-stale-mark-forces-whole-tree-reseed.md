@@ -1,6 +1,6 @@
 ---
 title: "Converging a call-set row forces the whole-tree reseed CLAUDE.md forbids; give the stale mark a narrow remedy"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: 6506
 claim: "2026-08-14T01:57:12Z"
 assignee: "converged-row-stale-mark-forces-whole-tree-reseed"
 blocked-by: null
