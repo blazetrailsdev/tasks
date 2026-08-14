@@ -1,6 +1,6 @@
 ---
 title: "Render local_level='s ArgumentError value with inspect, as Rails does"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
