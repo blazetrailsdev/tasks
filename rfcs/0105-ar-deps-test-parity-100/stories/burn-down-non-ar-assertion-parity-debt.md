@@ -1,6 +1,6 @@
 ---
 title: "Triage and split the 5,036 newly surfaced non-AR assertion divergences"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T12:07:07Z"
+assignee: "read-association-scope-off-reflection-not-definition-bag"
 blocked-by: null
 closed-reason: null
 ---
