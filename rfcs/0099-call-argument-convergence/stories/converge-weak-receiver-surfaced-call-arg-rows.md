@@ -1,6 +1,6 @@
 ---
 title: "converge-weak-receiver-surfaced-call-arg-rows"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6500
 claim: "2026-08-14T00:27:08Z"
 assignee: "converge-weak-receiver-surfaced-call-arg-rows"
 blocked-by: null
