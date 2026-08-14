@@ -1,6 +1,6 @@
 ---
 title: "Enforce that a querying empty? is spelled async, so blank?'s probe needs no post-call guard"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
