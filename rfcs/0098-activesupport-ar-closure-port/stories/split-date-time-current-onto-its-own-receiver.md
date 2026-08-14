@@ -1,6 +1,6 @@
 ---
 title: "split-date-time-current-onto-its-own-receiver"
-status: claimed
+status: ready
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T22:45:05Z"
-assignee: "split-date-time-current-onto-its-own-receiver"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
