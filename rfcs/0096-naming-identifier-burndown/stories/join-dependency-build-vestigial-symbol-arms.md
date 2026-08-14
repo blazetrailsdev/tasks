@@ -1,7 +1,7 @@
 ---
 title: "Drop the vestigial JS-Symbol arms in JoinDependency#build and inspectArelValue"
-status: in-progress
-updated: 2026-08-13
+status: done
+updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
