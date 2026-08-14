@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 26 naming call-argument rows in activesupport (inflections, cache entry, callbacks, number helpers)"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -8,7 +8,7 @@ packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 104
-pr: null
+pr: 6513
 claim: "2026-08-14T11:47:18Z"
 assignee: "naming-burndown-3-activesupport"
 blocked-by: null
