@@ -1,6 +1,6 @@
 ---
 title: "install-executor-hooks-for-async-queries-tracker"
-status: blocked
+status: ready
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T13:07:03Z"
-assignee: "install-executor-hooks-for-async-queries-tracker"
-blocked-by: "Prerequisite PR #6515 (call-args-ar-select-all-empty-async-row) is still OPEN, not merged. origin/main has no packages/activerecord/src/asynchronous-queries-tracker.ts, no AsynchronousQueriesTracker class, and no future-result.trails.test.ts; core.ts:654 asynchronousQueriesTracker() is still the stub returning {currentSession: null, finalize(){}}. Every acceptance criterion targets code that only exists on #6515's branch, so building this now would require stacking on an unmerged PR (forbidden). Unblock once #6515 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
