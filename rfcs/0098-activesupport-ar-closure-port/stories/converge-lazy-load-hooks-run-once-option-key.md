@@ -1,5 +1,5 @@
 ---
-title: "Rename LazyLoadHooks'  option key to Rails' "
+title: "Rename LazyLoadHooks' `once` option key to Rails' `run_once`"
 status: ready
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
