@@ -1,6 +1,6 @@
 ---
 title: "port-executor-wrapping-around-a-unit-of-work"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T17:22:10Z"
+assignee: "converge-isolated-execution-state-delete-returns-value"
 blocked-by: null
 closed-reason: null
 ---
