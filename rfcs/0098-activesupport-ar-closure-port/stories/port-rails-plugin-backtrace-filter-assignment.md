@@ -1,6 +1,6 @@
 ---
 title: "port-rails-plugin-backtrace-filter-assignment"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6499
 claim: "2026-08-14T00:45:17Z"
 assignee: "converge-strict-loading-violation-signature"
 blocked-by: null
