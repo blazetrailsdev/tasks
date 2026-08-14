@@ -1,6 +1,6 @@
 ---
 title: "Burn down the last 10 naming call-argument rows in i18n, trailties, did-you-mean and globalid"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -8,7 +8,7 @@ packages: ["i18n", "trailties", "globalid"]
 deps: []
 deps-rfc: []
 est-loc: 40
-pr: null
+pr: 6513
 claim: "2026-08-14T11:47:18Z"
 assignee: "naming-burndown-3-activesupport"
 blocked-by: null
