@@ -1,6 +1,6 @@
 ---
 title: "Record the ratified Proc-call reason on the two `call` baseline rows"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T23:45:08Z"
+assignee: "record-ratified-proc-call-reason"
 blocked-by: null
 closed-reason: null
 ---
