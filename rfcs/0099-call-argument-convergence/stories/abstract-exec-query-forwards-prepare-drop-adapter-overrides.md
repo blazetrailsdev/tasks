@@ -1,6 +1,6 @@
 ---
 title: "Abstract execQuery forwards prepare, retiring the three adapter exec_query overrides Rails lacks"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
