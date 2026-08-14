@@ -1,6 +1,6 @@
 ---
 title: "call-args: resolve X.call(this, ...) in argument position to the dispatched identifier"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
