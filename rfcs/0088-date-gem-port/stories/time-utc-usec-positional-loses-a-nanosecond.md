@@ -1,6 +1,6 @@
 ---
 title: "Time.utc/mktime's usec positional loses a nanosecond to float arithmetic"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6551
 claim: "2026-08-14T23:15:08Z"
 assignee: "executor-seam-end-to-end-request-coverage"
 blocked-by: null
