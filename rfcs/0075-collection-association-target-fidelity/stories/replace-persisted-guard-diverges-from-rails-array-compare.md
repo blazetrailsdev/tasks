@@ -69,7 +69,7 @@ lands with (or after) the `skip_strict_loading` story.
 ## Acceptance criteria
 
 - [ ] The `!wasLoaded` disjunct is gone; the guard is Rails' `other_array !=
-  original_target` alone.
+original_target` alone.
 - [ ] A test pins the Ruby `==` semantics: reassigning an equal-by-id but
       distinct-by-identity set issues no DB work.
 - [ ] `pnpm parity:api:calls` / `:args` green, no new baseline row.
