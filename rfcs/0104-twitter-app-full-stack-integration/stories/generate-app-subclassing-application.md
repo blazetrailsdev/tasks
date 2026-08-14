@@ -1,6 +1,6 @@
 ---
 title: "trails new should generate an app that subclasses Trailties.Application"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
