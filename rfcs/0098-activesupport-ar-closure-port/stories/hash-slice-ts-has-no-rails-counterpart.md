@@ -1,6 +1,6 @@
 ---
 title: "core-ext/hash/slice.ts reports [no Rails counterpart]"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6506
 claim: "2026-08-14T01:57:12Z"
 assignee: "converged-row-stale-mark-forces-whole-tree-reseed"
 blocked-by: null
