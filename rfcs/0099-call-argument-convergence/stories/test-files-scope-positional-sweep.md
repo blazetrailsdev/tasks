@@ -1,6 +1,6 @@
 ---
 title: "Sweep the remaining AR test-file association scopes onto Rails' positional"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
