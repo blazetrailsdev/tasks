@@ -1,6 +1,6 @@
 ---
 title: "date-cast-value-rails-branch-structure"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6528
 claim: "2026-08-14T16:07:02Z"
 assignee: "date-cast-value-rails-branch-structure"
 blocked-by: null
