@@ -1,6 +1,6 @@
 ---
 title: "Port plugin_rails_init's three reporter blocks (rails_plugin.rb:122-135)"
-status: claimed
+status: blocked
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-14T03:57:08Z"
 assignee: "drop-builder-association-scope-option-shim"
-blocked-by: null
+blocked-by: "Blocked on port-minitest-reporter-surface (filed 2026-08-14, RFC 0098). rails_plugin.rb:122-135 operates on Minitest.reporter (a CompositeReporter) and names SummaryReporter, ProgressReporter, SuppressedSummaryReporter (rails_plugin.rb:21-26), ProfileReporter (rails_plugin.rb:28-65) and Rails::TestUnitReporter (railties/lib/rails/test_unit/reporter.rb, 121 lines). None exist in trails: grep -rn 'SummaryReporter|ProgressReporter|CompositeReporter|TestUnitReporter|Minitest.reporter' packages/ --include=*.ts matches only the @missingRailsCall prose at packages/trailties/src/minitest/rails-plugin.ts:47-49. Porting the minitest gem's reporter base classes plus the three subclasses is far past this story's 220 LOC and has a strict order, so it is split into port-minitest-reporter-surface; this story then ports the three blocks, deletes the @missingRailsCall, and adds rails_plugin_test.rb:46-71's four tests."
 closed-reason: null
 ---
 
