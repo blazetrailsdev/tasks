@@ -1,6 +1,6 @@
 ---
 title: "Re-derive the naming residue taxonomy: it is ~73% unconvergeable in AR, not the ~6% the gate flip assumes"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T01:57:12Z"
+assignee: "converged-row-stale-mark-forces-whole-tree-reseed"
 blocked-by: null
 closed-reason: null
 ---
