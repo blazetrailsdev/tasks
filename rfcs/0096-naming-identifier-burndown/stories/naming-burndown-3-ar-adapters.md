@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 26 naming call-argument rows in the activerecord connection adapters (pg, mysql, abstract, pg OID types)"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare

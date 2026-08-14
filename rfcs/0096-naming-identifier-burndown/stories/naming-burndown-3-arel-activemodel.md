@@ -1,6 +1,6 @@
 ---
 title: "Burn down the remaining 28 naming call-argument rows in arel and activemodel"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
