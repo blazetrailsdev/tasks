@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Executor::TestHelper#run"
-status: blocked
+status: closed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-08-14T17:22:10Z"
-assignee: "converge-isolated-execution-state-delete-returns-value"
-blocked-by: "ActiveSupport::Executor::TestHelper#run is `Rails.application.executor.perform { super }` (executor/test_helper.rb:4-6). Ruby resolves `Rails` at call time; ESM cannot — the file lives in activesupport, and activesupport cannot import trailties (inverted package dependency), so `Rails.application.executor` (railties application.rb:122, now ported in packages/trailties/src/application.ts) is unreachable from packages/activesupport/src/executor/test-helper.ts. Substituting bare ActiveSupport::Executor would ratify a deviation rather than converge. Needs a decision on the composition point (test_help.rb-side include in trailties) first."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Won't-do (maintainer decision 2026-08-14): vitest owns the run and the helper has no caller in trails. ActiveSupport::Executor::TestHelper#run is Rails.application.executor.perform { super } (executor/test_helper.rb:4-6); Ruby resolves Rails at call time, ESM cannot, and activesupport cannot import trailties. Not routing it through a zero-import slot — the helper is not worth the seam. File afresh if a trails-side test runner ever needs the executor wrap."
 ---
 
 ## Context
