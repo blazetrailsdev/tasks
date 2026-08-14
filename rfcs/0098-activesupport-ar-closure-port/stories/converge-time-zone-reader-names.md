@@ -1,6 +1,6 @@
 ---
 title: "converge-time-zone-reader-names"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6514
 claim: "2026-08-14T12:27:03Z"
 assignee: "converge-time-zone-reader-names"
 blocked-by: null
