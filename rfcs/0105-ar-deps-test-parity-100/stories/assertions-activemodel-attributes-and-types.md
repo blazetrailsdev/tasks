@@ -1,6 +1,6 @@
 ---
 title: "activemodel attributes, dirty and type assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6519
 claim: "2026-08-14T12:52:33Z"
 assignee: "anchor-did-you-mean-formatter-source-pattern"
 blocked-by: null
