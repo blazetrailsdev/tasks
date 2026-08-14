@@ -1,6 +1,6 @@
 ---
 title: "Abstract execQuery forwards prepare, retiring the three adapter exec_query overrides Rails lacks"
-status: ready
+status: claimed
 updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-14T22:42:14Z"
+assignee: "abstract-exec-query-forwards-prepare-drop-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---
