@@ -1,6 +1,6 @@
 ---
 title: "Map the vendored minitest gem so the port can drop @noRailsEquivalent PERMANENT"
-status: blocked
+status: closed
 updated: 2026-08-14
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: 6535
-claim: "2026-08-14T18:15:07Z"
-assignee: "executor-seam-end-to-end-request-coverage"
-blocked-by: "Maintainer decision (2026-08-14): minitest stays unported. Do not enroll the vendored gem in parity:api and do not drop the @noRailsEquivalent PERMANENT tags on its ports. Reopen only if the decision changes; the mechanics were proven workable in PR #6535 and reverted there."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Won't-do: maintainer decision 2026-08-14 — trails does not port the minitest gem. The vendored gem stays out of parity:api and the @noRailsEquivalent PERMANENT tags stay. Mechanics were proven in PR #6535 and reverted there. File a fresh story if the decision changes."
 ---
 
 # Map the vendored minitest gem so the port can drop @noRailsEquivalent PERMANENT
