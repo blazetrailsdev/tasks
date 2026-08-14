@@ -1,6 +1,6 @@
 ---
 title: "anchor-did-you-mean-formatter-source-pattern"
-status: in-progress
+status: done
 updated: 2026-08-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
