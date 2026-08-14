@@ -1,7 +1,7 @@
 ---
 title: "converge-strict-loading-violation-signature"
-status: claimed
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-14
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6499
 claim: "2026-08-13T23:57:08Z"
 assignee: "converge-strict-loading-violation-signature"
 blocked-by: null
