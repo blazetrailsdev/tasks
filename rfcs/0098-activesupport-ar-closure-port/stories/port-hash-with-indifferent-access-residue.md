@@ -1,6 +1,6 @@
 ---
 title: "Port HashWithIndifferentAccess's 28 missing in-closure members"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6568
 claim: "2026-08-15T15:45:07Z"
 assignee: "insert-all-touch-timestamps-trailing-comma"
 blocked-by: null
