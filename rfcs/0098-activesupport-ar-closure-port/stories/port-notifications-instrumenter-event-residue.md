@@ -1,5 +1,5 @@
 ---
-title: "port-notifications-instrumenter-event-residue"
+title: "Converge Notifications::Event to Rails' constructor and time representation, then port the Instrumenter/Event residue"
 status: ready
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null

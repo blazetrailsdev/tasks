@@ -1,5 +1,5 @@
 ---
-title: "port-time-date-formats-registry"
+title: "Port the Time::DATE_FORMATS / Date::DATE_FORMATS registry and route TimeWithZone#to_fs through it"
 status: draft
 updated: 2026-08-15
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
