@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency#build onto Rails' recursive JoinAssociation tree"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6578
 claim: "2026-08-15T21:15:04Z"
 assignee: "converge-relation-has-limit-or-offset-call-sites"
 blocked-by: null
