@@ -1,6 +1,6 @@
 ---
 title: "wave-3c-postgresql-adapter"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6581
 claim: "2026-08-15T22:45:03Z"
 assignee: "wave-3c-postgresql-adapter"
 blocked-by: null
