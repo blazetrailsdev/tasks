@@ -1,6 +1,6 @@
 ---
 title: "Wave 1: relation.ts — 117 rows, the densest file in the population"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: api-compare
