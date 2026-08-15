@@ -1,7 +1,7 @@
 ---
 rfc: "0106-wide-call-set-direct-burndown"
 title: "Wide call-set direct burndown (activerecord, arel, activesupport)"
-status: draft
+status: active
 created: 2026-08-15
 updated: 2026-08-15
 owner: "@deanmarano"
