@@ -1,6 +1,6 @@
 ---
 title: "Drop the klass parameter from addConstraints / nextChainScope"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
