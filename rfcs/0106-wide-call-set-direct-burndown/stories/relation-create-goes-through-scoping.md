@@ -1,6 +1,6 @@
 ---
 title: "Relation#create/#create! should route through scoping and current_scope_restoring_block"
-status: ready
+status: draft
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
