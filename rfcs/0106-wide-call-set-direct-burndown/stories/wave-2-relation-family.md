@@ -1,6 +1,6 @@
 ---
 title: "Wave 2: the relation family — query-methods, calculations, finder-methods (94 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: ["wave-1-relation-ts"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
+pr: 6584
 claim: "2026-08-15T23:15:04Z"
 assignee: "wave-2-relation-family"
 blocked-by: null
