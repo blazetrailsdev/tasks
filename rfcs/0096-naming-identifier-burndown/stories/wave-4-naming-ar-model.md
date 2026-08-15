@@ -1,6 +1,6 @@
 ---
 title: "Burn down the naming call-argument rows in activerecord model, encryption, tasks and middleware"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T12:03:42Z"
+assignee: "wave-3-adapters"
 blocked-by: null
 closed-reason: null
 ---
