@@ -1,6 +1,6 @@
 ---
 title: "Retire time-ext.ts's JS-Date to_time arm once its callers move to a Rails receiver"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
