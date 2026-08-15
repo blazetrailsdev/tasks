@@ -1,6 +1,6 @@
 ---
 title: "Disposition the 8 in-closure activesupport files that have no TS counterpart at all"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
