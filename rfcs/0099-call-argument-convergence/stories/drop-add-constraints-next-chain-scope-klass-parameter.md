@@ -1,5 +1,5 @@
 ---
-title: "drop-add-constraints-next-chain-scope-klass-parameter"
+title: "Drop the klass parameter from addConstraints / nextChainScope"
 status: ready
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

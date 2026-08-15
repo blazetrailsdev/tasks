@@ -1,5 +1,5 @@
 ---
-title: "wave-1b-relation-own-file-rows-remainder"
+title: "Wave 1b remainder: the 39 relation.rb-own call-set rows still baselined"
 status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: 6563
 claim: "2026-08-15T13:15:05Z"
