@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-virtual-tables-return-pairs"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6569
 claim: "2026-08-15T16:15:07Z"
 assignee: "sqlite3-virtual-tables-return-pairs"
 blocked-by: null
