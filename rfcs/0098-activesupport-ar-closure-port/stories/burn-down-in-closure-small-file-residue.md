@@ -1,6 +1,6 @@
 ---
 title: "Burn down the in-closure long tail: 33 members across 13 partially-ported files"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6556
 claim: "2026-08-15T00:45:07Z"
 assignee: "adapter-non-boolean-prepared-statements-config-raises"
 blocked-by: null
