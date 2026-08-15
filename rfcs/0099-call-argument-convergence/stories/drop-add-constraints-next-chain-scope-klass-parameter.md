@@ -1,6 +1,6 @@
 ---
 title: "Drop the klass parameter from addConstraints / nextChainScope"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6567
 claim: "2026-08-15T15:15:04Z"
 assignee: "wave-3a-sqlite3-adapter"
 blocked-by: null
