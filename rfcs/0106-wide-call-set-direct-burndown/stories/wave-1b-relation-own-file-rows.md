@@ -1,6 +1,6 @@
 ---
 title: "Wave 1b: relation.ts — the 43 rows Rails defines in relation.rb itself"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
