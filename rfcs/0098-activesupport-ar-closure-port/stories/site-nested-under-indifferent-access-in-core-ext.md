@@ -1,6 +1,6 @@
 ---
 title: "Hash#nested_under_indifferent_access belongs in core-ext/hash/indifferent-access.ts"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
