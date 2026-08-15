@@ -1,7 +1,7 @@
 ---
 title: "Retire time-zone-config's resetZone / isZoneExplicit test seams"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
