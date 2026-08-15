@@ -1,6 +1,6 @@
 ---
 title: "port-lazy-attribute-set"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T23:28:17Z"
+assignee: "extract-call-template-build"
 blocked-by: null
 closed-reason: null
 ---
