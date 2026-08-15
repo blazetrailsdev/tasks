@@ -1,6 +1,6 @@
 ---
 title: "Call recorder attributes mismatches to bodiless interface declarations"
-status: claimed
+status: blocked
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-15T14:14:32Z"
 assignee: "call-recorder-matches-bodiless-interface-declarations"
-blocked-by: null
+blocked-by: "Premise does not hold: a sweep of all 1196 rows in output/call-mismatches.json against output/ts-api.json finds ZERO rows whose matched TS member is bodiless-only — the extractor already records no `calls` key for MethodSignature/PropertySignature members (extract-ts-api.ts:2318-2337), and compare.ts:2734 returns early when a pair has no candidate call-set, so the proposed 'skip bodiless members' change is a no-op. The 6 exec_insert/exec_delete/exec_update rows on connection-adapters/abstract-adapter.ts are NOT attributed to the bodiless DatabaseStatements signatures at abstract-adapter.ts:604-613. They come from the `DatabaseStatements` defaults object in connection-adapters/abstract/database-statements.ts:1733/1745/1754 (`return this.executeMutation(sql, binds, name)`), which `include(AbstractAdapter, DatabaseStatements)` maps onto abstract-adapter.ts — a real body that really omits sql_for_insert/internal_exec_query/internal_execute/affected_rows. The faithful ports DO exist in the same file (execInsert :603, execDelete :678, execUpdate :695) and already call them. The actual convergence is therefore to point the defaults object at those ported functions (as it already does for `resetTransaction` and `insert: insertStatement`), which is a BEHAVIORAL reshape — execInsert's default would return a Result via internalExecQuery instead of a row count via executeMutation, across every adapter — i.e. RFC 0076 execute-primitive work, not a recorder change. Refile against RFC 0076 with that shape."
 closed-reason: null
 ---
 
