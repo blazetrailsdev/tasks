@@ -1,6 +1,6 @@
 ---
 title: "Converge the 36 constructor-argument rows (-> new), the largest surviving args cluster"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6557
 claim: "2026-08-15T00:39:10Z"
 assignee: "converge-ar-and-model-non-constructor-argument-rows"
 blocked-by: null
