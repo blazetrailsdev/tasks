@@ -1,6 +1,6 @@
 ---
 title: "Port Time.local to @blazetrails/date so civil_from_format drops its TimeZone#local stand-in"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
