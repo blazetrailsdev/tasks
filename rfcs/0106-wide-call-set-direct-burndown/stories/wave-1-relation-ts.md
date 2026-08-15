@@ -1,6 +1,6 @@
 ---
 title: "Wave 1: relation.ts — 117 rows, the densest file in the population"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T01:15:12Z"
+assignee: "wave-1-relation-ts"
 blocked-by: null
 closed-reason: null
 ---
