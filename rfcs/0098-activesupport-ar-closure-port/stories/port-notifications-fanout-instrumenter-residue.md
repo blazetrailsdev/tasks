@@ -1,6 +1,6 @@
 ---
 title: "Port the Notifications residue: Fanout, Instrumenter and the module readers"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
