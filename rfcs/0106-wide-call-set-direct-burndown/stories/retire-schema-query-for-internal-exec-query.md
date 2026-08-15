@@ -1,6 +1,6 @@
 ---
 title: 'Retire schemaQuery in favour of internalExecQuery(sql, "SCHEMA")'
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6574
 claim: "2026-08-15T18:45:04Z"
 assignee: "find-each-no-block-enumerator-size-arm"
 blocked-by: null
