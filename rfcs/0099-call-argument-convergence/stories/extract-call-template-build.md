@@ -1,6 +1,6 @@
 ---
 title: "extract-call-template-build"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6585
 claim: "2026-08-15T23:28:17Z"
 assignee: "extract-call-template-build"
 blocked-by: null
