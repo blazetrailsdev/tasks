@@ -1,6 +1,6 @@
 ---
 title: "Wave 3: the adapters — 125 rows across five files"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: api-compare
