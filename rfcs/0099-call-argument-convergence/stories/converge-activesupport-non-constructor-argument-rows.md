@@ -1,6 +1,6 @@
 ---
 title: "Converge activesupport's 31 non-constructor call-argument rows"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
