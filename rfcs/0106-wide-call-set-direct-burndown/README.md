@@ -1,5 +1,5 @@
 ---
-rfc: "0000-wide-call-set-direct-burndown"
+rfc: "0106-wide-call-set-direct-burndown"
 title: "Wide call-set direct burndown (activerecord, arel, activesupport)"
 status: draft
 created: 2026-08-15

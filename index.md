@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-wide-call-set-direct-burndown](rfcs/0000-wide-call-set-direct-burndown/README.md) | Wide call-set direct burndown (activerecord, arel, activesupport) | draft | @deanmarano | activerecord, arel, activesupport |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -109,3 +108,4 @@
 | [0103-parity-api-scoring-correctness](rfcs/0103-parity-api-scoring-correctness/README.md) | parity:api scoring correctness residue | closed | @your-handle | — |
 | [0104-twitter-app-full-stack-integration](rfcs/0104-twitter-app-full-stack-integration/README.md) | First full-stack trails application: route to rendered HTML | draft | @deanmarano | actionpack, actionview, trailties, tse-compiler, activerecord, activerecord-cli |
 | [0105-ar-deps-test-parity-100](rfcs/0105-ar-deps-test-parity-100/README.md) | ActiveRecord + dependencies to 100% on the test-compare gate | active | @deanmarano | activerecord, activesupport, activemodel, date, i18n, arel, globalid, did-you-mean |
+| [0106-wide-call-set-direct-burndown](rfcs/0106-wide-call-set-direct-burndown/README.md) | Wide call-set direct burndown (activerecord, arel, activesupport) | draft | @deanmarano | activerecord, arel, activesupport |
