@@ -1,6 +1,6 @@
 ---
 title: "Retire HashWithIndifferentAccess's 9 invented enumerable members"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null

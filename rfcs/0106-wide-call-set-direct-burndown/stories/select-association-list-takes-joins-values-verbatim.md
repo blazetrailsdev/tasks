@@ -1,6 +1,6 @@
 ---
 title: "select_association_list callers should pass joins_values, not a pre-filtered subset"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
