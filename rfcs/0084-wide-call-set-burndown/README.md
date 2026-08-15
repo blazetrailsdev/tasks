@@ -38,12 +38,18 @@ across 217 files, but the top 25 files carry 569 of them (50%) and `relation.ts`
 alone carries 117 — which makes a scheduled wave plan viable in a way the
 original survey did not anticipate.
 
-This RFC stays `active` only until its last claimed story,
-`adapter-non-boolean-prepared-statements-config-raises`, lands; it is left in
-place so that in-flight work is not orphaned. Everything else moved:
+**Closed 2026-08-15**, on schedule and with nothing orphaned. It was held
+`active` past the supersession only so its one remaining claimed story,
+`adapter-non-boolean-prepared-statements-config-raises`, could finish where its
+agent had claimed it; that landed in PR #6556 and the auto-close pass retired
+the RFC the same day. Everything else moved first:
 `burn-down-surfaced-empty-call-rows` and `align-collect-calls-name-filter-with-ruby`
 were re-filed verbatim under 0106 (with fresh slugs — story ids are globally
 unique) and closed here as superseded.
+
+Draining the open stories before closing was deliberate: a superseded RFC's
+open stories are silently unclaimable and nothing reports them, which is the
+drift RFC 0091 tracks. Follow the same order if another RFC is superseded.
 
 What carries forward unchanged: the row count is the debt metric (the
 2026-08-04 decision in `## The debt metric is the row count` below), the
