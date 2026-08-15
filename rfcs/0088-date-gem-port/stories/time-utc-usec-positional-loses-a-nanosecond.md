@@ -1,7 +1,7 @@
 ---
 title: "Time.utc/mktime's usec positional loses a nanosecond to float arithmetic"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
