@@ -1,6 +1,6 @@
 ---
 title: "wave-1b-relation-own-file-rows-remainder"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6563
 claim: "2026-08-15T13:15:05Z"
 assignee: "wave-1b-relation-own-file-rows-remainder"
 blocked-by: null
