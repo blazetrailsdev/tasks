@@ -1,6 +1,6 @@
 ---
 title: "wave-3b-abstract-mysql-adapter"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T20:15:04Z"
+assignee: "wave-3b-abstract-mysql-adapter"
 blocked-by: null
 closed-reason: null
 ---
