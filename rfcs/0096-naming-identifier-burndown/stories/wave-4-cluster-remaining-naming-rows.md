@@ -1,6 +1,6 @@
 ---
 title: "Wave 4: cluster the 108 in-scope naming rows so the gate flip has a defined finish line"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: null
