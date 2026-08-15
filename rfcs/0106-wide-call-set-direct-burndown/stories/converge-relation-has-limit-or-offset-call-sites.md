@@ -1,6 +1,6 @@
 ---
 title: "relation.ts re-spells has_limit_or_offset? inline at 7 sites instead of calling the getter"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
