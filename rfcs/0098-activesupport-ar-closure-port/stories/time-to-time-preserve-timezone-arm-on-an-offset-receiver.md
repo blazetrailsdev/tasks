@@ -1,7 +1,7 @@
 ---
 title: "Time#to_time / DateTime#to_time need a receiver that carries an offset"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
