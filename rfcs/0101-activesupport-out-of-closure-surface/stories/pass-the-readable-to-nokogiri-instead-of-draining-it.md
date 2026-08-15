@@ -1,6 +1,6 @@
 ---
 title: "pass the readable to nokogiri's parser instead of draining it (~80 LOC)"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
