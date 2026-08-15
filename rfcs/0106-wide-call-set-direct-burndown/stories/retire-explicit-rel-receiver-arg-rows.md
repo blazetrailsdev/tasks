@@ -1,6 +1,6 @@
 ---
 title: "module-function ports carry a leading rel the receiverless Ruby call has no slot for"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6570
 claim: "2026-08-15T17:15:05Z"
 assignee: "converge-with-query-connection-onto-with-connection"
 blocked-by: null
