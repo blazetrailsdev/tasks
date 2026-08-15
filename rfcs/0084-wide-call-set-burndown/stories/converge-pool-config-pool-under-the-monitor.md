@@ -1,7 +1,7 @@
 ---
 title: "Decide whether PoolConfig#pool needs the ported monitor at all"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0084-wide-call-set-burndown"
 cluster: null
 packages: []
