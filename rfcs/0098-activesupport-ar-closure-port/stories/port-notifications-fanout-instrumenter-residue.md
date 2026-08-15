@@ -1,6 +1,6 @@
 ---
 title: "Port the Notifications residue: Fanout, Instrumenter and the module readers"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6555
 claim: "2026-08-15T00:15:05Z"
 assignee: "converge-activesupport-non-constructor-argument-rows"
 blocked-by: null
