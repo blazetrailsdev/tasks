@@ -1,6 +1,6 @@
 ---
 title: "Wave 1d: relation.ts — the 17 rows Rails defines in relation/query_methods.rb"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
