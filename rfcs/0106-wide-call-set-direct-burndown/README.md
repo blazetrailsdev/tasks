@@ -15,6 +15,7 @@ related-rfcs:
   - "0084-wide-call-set-burndown"
   - "0099-call-argument-convergence"
   - "0096-naming-identifier-burndown"
+priority: 1
 ---
 
 ## Summary
