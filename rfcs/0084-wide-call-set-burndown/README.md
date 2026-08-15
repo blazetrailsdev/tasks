@@ -1,7 +1,7 @@
 ---
 rfc: "0084-wide-call-set-burndown"
 title: "Wide call-set burn-down"
-status: closed
+status: superseded
 created: 2026-07-30
 updated: 2026-08-15
 owner: "@deanmarano"
@@ -15,6 +15,7 @@ related-rfcs:
   - "0047"
   - "0083"
 priority: 2
+superseded-by: "0106-wide-call-set-direct-burndown"
 ---
 
 # Wide call-set burn-down

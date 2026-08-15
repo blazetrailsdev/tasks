@@ -87,7 +87,7 @@
 | [0081-writer-accessor-convergence](rfcs/0081-writer-accessor-convergence/README.md) | Converge Ruby writer (foo=) re-spellings onto accessors | closed | @deanmarano | activerecord |
 | [0082-ruby-ts-idiom-conversion-classes](rfcs/0082-ruby-ts-idiom-conversion-classes/README.md) | Ruby→TS idiom conversion classes | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
 | [0083-wide-call-ratchet-noise-reduction](rfcs/0083-wide-call-ratchet-noise-reduction/README.md) | Wide call-set ratchet — noise reduction | closed | @deanmarano | activerecord, arel, actiondispatch, actioncontroller, activesupport |
-| [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | closed | @deanmarano | activerecord, arel, activesupport |
+| [0084-wide-call-set-burndown](rfcs/0084-wide-call-set-burndown/README.md) | Wide call-set burn-down | superseded | @deanmarano | activerecord, arel, activesupport |
 | [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @deanmarano | activerecord |
 | [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @deanmarano | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | draft | @deanmarano | activerecord |
