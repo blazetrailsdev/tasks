@@ -64,7 +64,7 @@ widening this one.
 - [ ] `pluck` and the calculation entry points lose the same pair.
 - [ ] Deferred distinct-PK predicates still resolve to a literal id list before
       any arel compiles (the `where with eager-loading limited collection
-  relation subquery materializes distinct primary keys at load time` test
+relation subquery materializes distinct primary keys at load time` test
       in `relation.trails.test.ts` stays green).
 - [ ] A first query against a never-reflected model still reflects, and still
       does not permanently lease under
