@@ -1,6 +1,6 @@
 ---
 title: "pass the readable to nokogiri's parser instead of draining it (~80 LOC)"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6559
 claim: "2026-08-15T01:45:06Z"
 assignee: "burn-down-result-empty-async-call-rows"
 blocked-by: null
