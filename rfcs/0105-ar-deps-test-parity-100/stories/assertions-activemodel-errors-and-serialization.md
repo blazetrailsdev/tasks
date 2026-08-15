@@ -1,6 +1,6 @@
 ---
 title: "activemodel errors and serialization assertion parity"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity

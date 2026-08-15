@@ -1,6 +1,6 @@
 ---
 title: "naming-shared-vs-isolated-namespace"
-status: ready
+status: done
 updated: 2026-08-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6572
 claim: null
 assignee: null
 blocked-by: null
