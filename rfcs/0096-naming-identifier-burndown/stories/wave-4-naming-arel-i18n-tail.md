@@ -1,6 +1,6 @@
 ---
 title: "Burn down the naming call-argument rows in arel, i18n, globalid and did-you-mean"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T23:15:04Z"
+assignee: "wave-2-relation-family"
 blocked-by: null
 closed-reason: null
 ---
