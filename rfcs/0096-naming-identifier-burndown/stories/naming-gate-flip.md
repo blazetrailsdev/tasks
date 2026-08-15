@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-08-14
+updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -14,6 +14,14 @@ deps:
   - naming-burndown-3-arel-activemodel
   - naming-burndown-3-tail
   - naming-burndown-3-ar-structural-residue
+  - wave-4-cluster-remaining-naming-rows
+  - wave-4-naming-ar-adapters
+  - wave-4-naming-ar-relation
+  - wave-4-naming-ar-model
+  - wave-4-naming-activesupport
+  - wave-4-naming-activemodel
+  - wave-4-naming-arel-i18n-tail
+  - wave-4-naming-mixin-receiver-rewire
 deps-rfc: []
 est-loc: 80
 pr: null
