@@ -1,6 +1,6 @@
 ---
 title: "Wave 1b remainder: the 39 relation.rb-own call-set rows still baselined"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
