@@ -1,6 +1,6 @@
 ---
 title: "Relation redeclares arel_columns/arel_columns_from_hash instead of mixing them in"
-status: ready
+status: draft
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
