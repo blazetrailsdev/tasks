@@ -1,6 +1,6 @@
 ---
 title: "Converge the last 22 non-constructor argument rows in activerecord, activemodel, i18n and globalid"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6557
 claim: "2026-08-15T00:39:10Z"
 assignee: "converge-ar-and-model-non-constructor-argument-rows"
 blocked-by: null
