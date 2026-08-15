@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version should call quote_column_name, type_for_attribute, to_fs and first"
-status: ready
+status: draft
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
