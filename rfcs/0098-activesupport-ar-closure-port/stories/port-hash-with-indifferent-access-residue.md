@@ -1,6 +1,6 @@
 ---
 title: "Port HashWithIndifferentAccess's 28 missing in-closure members"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
