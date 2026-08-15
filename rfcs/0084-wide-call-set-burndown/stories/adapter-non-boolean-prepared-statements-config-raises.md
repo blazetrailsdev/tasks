@@ -1,6 +1,6 @@
 ---
 title: "trails raises on a non-boolean prepared_statements config where Rails passes it through"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 1
-pr: null
+pr: 6556
 claim: "2026-08-15T00:45:07Z"
 assignee: "adapter-non-boolean-prepared-statements-config-raises"
 blocked-by: null
