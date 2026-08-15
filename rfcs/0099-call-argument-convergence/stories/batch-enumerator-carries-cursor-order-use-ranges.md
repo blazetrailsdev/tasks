@@ -1,6 +1,6 @@
 ---
 title: "BatchEnumerator should take Rails' seven kwargs, including cursor:/order:/use_ranges:"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T12:15:05Z"
+assignee: "batch-enumerator-carries-cursor-order-use-ranges"
 blocked-by: null
 closed-reason: null
 ---
