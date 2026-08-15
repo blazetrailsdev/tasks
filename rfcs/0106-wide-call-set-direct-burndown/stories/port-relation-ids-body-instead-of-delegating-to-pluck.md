@@ -1,6 +1,6 @@
 ---
 title: "Port Relation#ids' three Rails arms instead of delegating to pluck"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
