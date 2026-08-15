@@ -1,6 +1,6 @@
 ---
 title: "Wave 4: cluster the 108 in-scope naming rows so the gate flip has a defined finish line"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6554
 claim: "2026-08-15T00:40:23Z"
 assignee: "wave-4-cluster-remaining-naming-rows"
 blocked-by: null
