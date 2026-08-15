@@ -1,6 +1,6 @@
 ---
 title: "Port Relation#ids' three Rails arms instead of delegating to pluck"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6565
 claim: "2026-08-15T14:14:32Z"
 assignee: "call-recorder-matches-bodiless-interface-declarations"
 blocked-by: null
