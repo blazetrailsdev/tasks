@@ -1,6 +1,6 @@
 ---
 title: "DateTime#offset_in_seconds should read a day-fraction offset, not offsetNanoseconds"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T00:45:07Z"
+assignee: "adapter-non-boolean-prepared-statements-config-raises"
 blocked-by: null
 closed-reason: null
 ---
