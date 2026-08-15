@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess#initialize must route every arm through update"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
