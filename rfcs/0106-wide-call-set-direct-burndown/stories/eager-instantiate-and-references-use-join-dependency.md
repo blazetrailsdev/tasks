@@ -1,6 +1,6 @@
 ---
 title: "instantiate_records and references_eager_loaded_tables? should use the join dependency / build_joins"
-status: ready
+status: draft
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
