@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency#build onto Rails' recursive JoinAssociation tree"
-status: claimed
+status: ready
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: "2026-08-15T15:15:04Z"
-assignee: "wave-3a-sqlite3-adapter"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
