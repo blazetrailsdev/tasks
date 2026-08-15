@@ -1,6 +1,6 @@
 ---
 title: "index-name-exists-returns-index"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T12:45:04Z"
+assignee: "index-name-exists-returns-index"
 blocked-by: null
 closed-reason: null
 ---

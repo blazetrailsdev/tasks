@@ -1,6 +1,6 @@
 ---
 title: "Drop lastChainScope's extra klass parameter by resolving the polymorphic target reflection-side"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T12:45:04Z"
+assignee: "index-name-exists-returns-index"
 blocked-by: null
 closed-reason: null
 ---
