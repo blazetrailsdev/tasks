@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency#build onto Rails' recursive JoinAssociation tree"
-status: claimed
+status: ready
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: "2026-08-15T16:15:07Z"
-assignee: "sqlite3-virtual-tables-return-pairs"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
