@@ -1,6 +1,6 @@
 ---
 title: "apply_join_dependency's limitability guard is still extracted into two trails-only privates"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T19:15:06Z"
+assignee: "apply-join-dependency-limitability-guard-extracted-twice"
 blocked-by: null
 closed-reason: null
 ---

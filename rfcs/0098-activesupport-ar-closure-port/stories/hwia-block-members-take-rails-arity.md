@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess's block members take (key, value), not Rails' shapes"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T19:15:06Z"
+assignee: "apply-join-dependency-limitability-guard-extracted-twice"
 blocked-by: null
 closed-reason: null
 ---
