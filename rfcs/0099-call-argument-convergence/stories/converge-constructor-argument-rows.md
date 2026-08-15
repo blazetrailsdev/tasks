@@ -1,6 +1,6 @@
 ---
 title: "Converge the 36 constructor-argument rows (-> new), the largest surviving args cluster"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
