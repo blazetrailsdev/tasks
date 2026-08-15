@@ -1,6 +1,6 @@
 ---
 title: "transliterate has no locale arm, so parameterize cannot forward locale:"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T13:45:02Z"
+assignee: "wave-1c-relation-calculations-rows"
 blocked-by: null
 closed-reason: null
 ---
