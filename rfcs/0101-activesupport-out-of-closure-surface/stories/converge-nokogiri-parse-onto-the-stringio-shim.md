@@ -1,7 +1,7 @@
 ---
 title: "converge both nokogiri backends' parse off Blob onto the StringIO shim"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
