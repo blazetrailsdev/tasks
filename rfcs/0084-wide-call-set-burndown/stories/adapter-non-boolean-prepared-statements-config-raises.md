@@ -1,6 +1,6 @@
 ---
 title: "trails raises on a non-boolean prepared_statements config where Rails passes it through"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0084-wide-call-set-burndown"
 cluster: null
