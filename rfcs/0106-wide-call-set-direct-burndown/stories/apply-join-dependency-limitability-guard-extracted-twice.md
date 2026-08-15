@@ -1,6 +1,6 @@
 ---
 title: "apply_join_dependency's limitability guard is still extracted into two trails-only privates"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
