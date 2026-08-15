@@ -1,7 +1,7 @@
 ---
 title: "executor-seam-end-to-end-request-coverage"
-status: in-progress
-updated: 2026-08-14
+status: done
+updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
