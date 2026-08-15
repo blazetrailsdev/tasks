@@ -1,6 +1,6 @@
 ---
 title: "structure_load should pass the script via --execute ... SOURCE, not stdin"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6563
 claim: "2026-08-15T13:15:05Z"
 assignee: "wave-1b-relation-own-file-rows-remainder"
 blocked-by: null
