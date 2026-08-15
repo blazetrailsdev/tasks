@@ -1,6 +1,6 @@
 ---
 title: "Retire HashWithIndifferentAccess's 9 invented enumerable members"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T19:45:02Z"
+assignee: "select-association-list-takes-joins-values-verbatim"
 blocked-by: null
 closed-reason: null
 ---

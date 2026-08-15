@@ -1,6 +1,6 @@
 ---
 title: "select_association_list callers should pass joins_values, not a pre-filtered subset"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T19:45:02Z"
+assignee: "select-association-list-takes-joins-values-verbatim"
 blocked-by: null
 closed-reason: null
 ---
