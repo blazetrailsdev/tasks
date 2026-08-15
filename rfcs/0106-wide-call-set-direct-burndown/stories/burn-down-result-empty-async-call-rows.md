@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 41 empty/empty? call-set rows surfaced by Result.empty(async:)"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
+pr: 6559
 claim: "2026-08-15T01:45:06Z"
 assignee: "burn-down-result-empty-async-call-rows"
 blocked-by: null
