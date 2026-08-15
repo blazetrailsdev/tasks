@@ -1,6 +1,6 @@
 ---
 title: "activemodel i18n / translation / naming assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6572
 claim: "2026-08-15T18:00:01Z"
 assignee: "assertions-activemodel-attributes-and-types-remainder"
 blocked-by: null
