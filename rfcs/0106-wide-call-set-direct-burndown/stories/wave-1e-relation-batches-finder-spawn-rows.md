@@ -1,6 +1,6 @@
 ---
 title: "Wave 1e: relation.ts — the 20 batches/finder/delegation/spawn rows"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6566
 claim: "2026-08-15T14:45:06Z"
 assignee: "wave-1e-relation-batches-finder-spawn-rows"
 blocked-by: null
