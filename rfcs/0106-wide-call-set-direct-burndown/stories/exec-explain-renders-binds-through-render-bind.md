@@ -1,6 +1,6 @@
 ---
 title: "exec_explain should render binds through render_bind"
-status: ready
+status: draft
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
