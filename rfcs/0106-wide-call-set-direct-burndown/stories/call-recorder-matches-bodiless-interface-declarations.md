@@ -1,6 +1,6 @@
 ---
 title: "Call recorder attributes mismatches to bodiless interface declarations"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T14:14:32Z"
+assignee: "call-recorder-matches-bodiless-interface-declarations"
 blocked-by: null
 closed-reason: null
 ---
