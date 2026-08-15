@@ -1,6 +1,6 @@
 ---
 title: "BatchEnumerator should take Rails' seven kwargs, including cursor:/order:/use_ranges:"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
