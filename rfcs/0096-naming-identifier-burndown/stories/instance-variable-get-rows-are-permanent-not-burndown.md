@@ -1,6 +1,6 @@
 ---
 title: "instance_variable_get naming rows belong in the permanent taxonomy, not burndown"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T14:45:06Z"
+assignee: "wave-1e-relation-batches-finder-spawn-rows"
 blocked-by: null
 closed-reason: null
 ---
