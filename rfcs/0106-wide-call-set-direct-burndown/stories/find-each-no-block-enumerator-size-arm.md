@@ -1,6 +1,6 @@
 ---
 title: "find_each/find_in_batches drop the no-block enumerator arm and its size lambda"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
