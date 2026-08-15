@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess's block members take (key, value), not Rails' shapes"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
