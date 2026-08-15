@@ -1,6 +1,6 @@
 ---
 title: "find_each/find_in_batches drop the no-block enumerator arm and its size lambda"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T18:45:04Z"
+assignee: "find-each-no-block-enumerator-size-arm"
 blocked-by: null
 closed-reason: null
 ---
