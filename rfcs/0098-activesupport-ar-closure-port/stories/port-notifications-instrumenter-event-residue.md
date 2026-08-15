@@ -1,6 +1,6 @@
 ---
 title: "Converge Notifications::Event to Rails' constructor and time representation, then port the Instrumenter/Event residue"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6561
 claim: "2026-08-15T12:15:05Z"
 assignee: "batch-enumerator-carries-cursor-order-use-ranges"
 blocked-by: null
