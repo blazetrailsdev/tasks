@@ -1,7 +1,7 @@
 ---
 title: "Port FutureResult::EventBuffer so async queries carry lock_wait"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
