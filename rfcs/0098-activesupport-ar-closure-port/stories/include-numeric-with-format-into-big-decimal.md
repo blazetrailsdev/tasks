@@ -1,6 +1,6 @@
 ---
 title: "Give NumericWithFormat#toFs the BigDecimal receiver Rails includes it into"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6569
 claim: "2026-08-15T16:15:07Z"
 assignee: "sqlite3-virtual-tables-return-pairs"
 blocked-by: null
