@@ -1,6 +1,6 @@
 ---
 title: "insert-all-touch-timestamps-trailing-comma"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6568
 claim: "2026-08-15T15:45:07Z"
 assignee: "insert-all-touch-timestamps-trailing-comma"
 blocked-by: null
