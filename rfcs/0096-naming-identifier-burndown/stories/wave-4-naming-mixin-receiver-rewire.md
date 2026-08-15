@@ -1,6 +1,6 @@
 ---
 title: "Rewire the module-mixin-receiver naming rows to the this-typed mixin idiom"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6583
 claim: "2026-08-15T23:29:05Z"
 assignee: "wave-4-naming-mixin-receiver-rewire"
 blocked-by: null
