@@ -1,6 +1,6 @@
 ---
 title: "except/only go through relation_with values.except/slice instead of a per-key reset"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6571
 claim: "2026-08-15T17:45:08Z"
 assignee: "except-only-go-through-relation-with-values"
 blocked-by: null
