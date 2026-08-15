@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 41 empty/empty? call-set rows surfaced by Result.empty(async:)"
-status: ready
+status: closed
 updated: 2026-08-15
 rfc: "0084-wide-call-set-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: RFC 0084 is retired in favour of RFC 0106 (wide call-set direct burndown). Re-filed verbatim as 0106/burn-down-result-empty-async-call-rows — story ids are globally unique, so the move needed a fresh slug. Work it there."
 ---
 
 ## Context
