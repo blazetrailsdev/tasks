@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Name.new should take (klass, namespace) and demodulize internally"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6568
 claim: "2026-08-15T15:45:07Z"
 assignee: "insert-all-touch-timestamps-trailing-comma"
 blocked-by: null
