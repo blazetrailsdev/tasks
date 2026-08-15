@@ -1,6 +1,6 @@
 ---
 title: "build_insert_sql omits the supports_insert_raw_alias_syntax? arm, emitting SQL deprecated since MySQL 8.0.20"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
