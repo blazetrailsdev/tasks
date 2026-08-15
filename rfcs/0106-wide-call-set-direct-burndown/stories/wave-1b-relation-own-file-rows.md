@@ -1,6 +1,6 @@
 ---
 title: "Wave 1b: relation.ts — the 43 rows Rails defines in relation.rb itself"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6562
 claim: "2026-08-15T12:45:04Z"
 assignee: "index-name-exists-returns-index"
 blocked-by: null
