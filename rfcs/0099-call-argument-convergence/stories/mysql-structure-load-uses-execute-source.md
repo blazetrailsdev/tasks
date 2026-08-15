@@ -1,6 +1,6 @@
 ---
 title: "structure_load should pass the script via --execute ... SOURCE, not stdin"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
