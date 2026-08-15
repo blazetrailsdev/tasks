@@ -1,6 +1,6 @@
 ---
 title: "Disposition the 8 in-closure activesupport files that have no TS counterpart at all"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6559
 claim: "2026-08-15T01:45:06Z"
 assignee: "burn-down-result-empty-async-call-rows"
 blocked-by: null
