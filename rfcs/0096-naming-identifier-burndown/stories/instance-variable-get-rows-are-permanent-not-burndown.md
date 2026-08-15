@@ -1,6 +1,6 @@
 ---
 title: "instance_variable_get naming rows belong in the permanent taxonomy, not burndown"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0096-naming-identifier-burndown"
 cluster: null
