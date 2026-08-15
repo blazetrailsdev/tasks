@@ -1,6 +1,6 @@
 ---
 title: "Object#inspect has no port, so xml-mini and array-utils each grew a private toS"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T17:45:08Z"
+assignee: "except-only-go-through-relation-with-values"
 blocked-by: null
 closed-reason: null
 ---

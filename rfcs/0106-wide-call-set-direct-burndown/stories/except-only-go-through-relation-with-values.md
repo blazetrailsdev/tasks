@@ -1,6 +1,6 @@
 ---
 title: "except/only go through relation_with values.except/slice instead of a per-key reset"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T17:45:08Z"
+assignee: "except-only-go-through-relation-with-values"
 blocked-by: null
 closed-reason: null
 ---
@@ -74,5 +74,5 @@ re-justifying the ledger rows.
 - [ ] `_resetExceptValue` is gone (no trails-only per-key reset switch).
 - [ ] The three `relation.json` rows above are deleted by hand via
       `serializeBaseline`, then `pnpm parity:api:calls:tighten
-  activerecord/relation.json`. No reseed.
+activerecord/relation.json`. No reseed.
 - [ ] `pnpm parity:api:calls` / `:args` green; SQLite, PG, MySQL/MariaDB green.
