@@ -1,6 +1,6 @@
 ---
 title: "DateTime#offset_in_seconds should read a day-fraction offset, not offsetNanoseconds"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
