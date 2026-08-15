@@ -1,6 +1,6 @@
 ---
 title: "hash-utils keeps a private _isBlankValue beside the ported Object#blank?"
-status: in-progress
+status: done
 updated: 2026-08-15
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
