@@ -77,6 +77,6 @@ extraction exists, and any convergence has to keep the single
 - [ ] `_exceptEagerValues` and `_joinsReflectionsAreLimitable` are gone.
 - [ ] The two `relation.json` rows above are deleted by hand via
       `serializeBaseline`, then `pnpm parity:api:calls:tighten
-  activerecord/relation.json`. No reseed.
+activerecord/relation.json`. No reseed.
 - [ ] `pnpm parity:api:extra --package activerecord` does not grow; SQLite, PG,
       MySQL/MariaDB green.
