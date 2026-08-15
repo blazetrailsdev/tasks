@@ -1,6 +1,6 @@
 ---
 title: "InverseOfAssociationNotFoundError should take the reflection, as Rails does"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T13:15:05Z"
+assignee: "wave-1b-relation-own-file-rows-remainder"
 blocked-by: null
 closed-reason: null
 ---

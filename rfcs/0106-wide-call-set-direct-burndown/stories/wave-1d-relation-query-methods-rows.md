@@ -1,6 +1,6 @@
 ---
 title: "Wave 1d: relation.ts — the 17 rows Rails defines in relation/query_methods.rb"
-status: ready
+status: claimed
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-15T13:15:05Z"
+assignee: "wave-1b-relation-own-file-rows-remainder"
 blocked-by: null
 closed-reason: null
 ---
