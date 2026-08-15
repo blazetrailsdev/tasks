@@ -1,6 +1,6 @@
 ---
 title: "apply_join_dependency inlines except(...).joins! and select_association_list"
-status: claimed
+status: in-progress
 updated: 2026-08-15
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6573
 claim: "2026-08-15T18:15:06Z"
 assignee: "apply-join-dependency-inlines-except-and-select-association-list"
 blocked-by: null
