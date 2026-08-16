@@ -1,6 +1,6 @@
 ---
 title: "burn-down-in-closure-options-json-and-filters"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6608
 claim: "2026-08-16T19:33:30Z"
 assignee: "burn-down-in-closure-options-json-and-filters"
 blocked-by: null
