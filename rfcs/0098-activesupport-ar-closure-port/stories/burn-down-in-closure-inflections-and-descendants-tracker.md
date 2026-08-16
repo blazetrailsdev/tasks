@@ -1,7 +1,7 @@
 ---
 title: "burn-down-in-closure-inflections-and-descendants-tracker"
-status: ready
-updated: 2026-08-15
+status: claimed
+updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T18:32:19Z"
+assignee: "burn-down-in-closure-inflections-and-descendants-tracker"
 blocked-by: null
 closed-reason: null
 ---
