@@ -1,7 +1,7 @@
 ---
 title: "activemodel-instance-validates-with"
-status: ready
-updated: 2026-08-15
+status: claimed
+updated: 2026-08-16
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T22:56:16Z"
+assignee: "activemodel-instance-validates-with"
 blocked-by: null
 closed-reason: null
 ---
