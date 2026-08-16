@@ -1,6 +1,6 @@
 ---
 title: "port-date-today-and-datetime-now"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0088-date-gem-port"
 cluster: null
