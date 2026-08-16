@@ -1,6 +1,6 @@
 ---
 title: "converge-query-method-stores-with-values-and-references"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T19:13:32Z"
+assignee: "converge-query-method-stores-with-values-and-references"
 blocked-by: null
 closed-reason: null
 ---
