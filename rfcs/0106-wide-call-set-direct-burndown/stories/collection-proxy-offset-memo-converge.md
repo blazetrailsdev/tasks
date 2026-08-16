@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-offset-memo-converge"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6588
 claim: "2026-08-16T01:29:00Z"
 assignee: "collection-proxy-offset-memo-converge"
 blocked-by: null
