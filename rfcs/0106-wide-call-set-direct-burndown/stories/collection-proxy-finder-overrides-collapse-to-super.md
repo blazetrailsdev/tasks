@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy first/take/last collapse to Rails' bare load_target-then-super"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
