@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy first/take/last collapse to Rails' bare load_target-then-super"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T02:15:03Z"
+assignee: "collection-proxy-finder-overrides-collapse-to-super"
 blocked-by: null
 closed-reason: null
 ---
