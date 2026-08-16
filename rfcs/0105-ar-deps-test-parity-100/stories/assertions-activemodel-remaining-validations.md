@@ -1,6 +1,6 @@
 ---
 title: "activemodel remaining validator assertion parity"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
