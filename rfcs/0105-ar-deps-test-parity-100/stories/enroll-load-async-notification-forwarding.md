@@ -1,6 +1,6 @@
 ---
 title: "Enroll load_async_test.rb's test_notification_forwarding now that lock_wait reaches the payload"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6589
 claim: "2026-08-16T01:15:07Z"
 assignee: "finder-methods-residue-find-with-ids-find-one-raise"
 blocked-by: null
