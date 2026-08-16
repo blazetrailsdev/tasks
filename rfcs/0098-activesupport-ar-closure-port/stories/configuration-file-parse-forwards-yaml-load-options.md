@@ -1,13 +1,13 @@
 ---
-title: "configuration-file-parse-forwards-yaml-load-options"
-status: ready
+title: "ConfigurationFile#parse forwards **options to the YAML load"
+status: draft
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
