@@ -1,6 +1,6 @@
 ---
 title: "transaction_isolation_levels lookup should raise like Hash#fetch"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6589
 claim: "2026-08-16T01:15:07Z"
 assignee: "finder-methods-residue-find-with-ids-find-one-raise"
 blocked-by: null
