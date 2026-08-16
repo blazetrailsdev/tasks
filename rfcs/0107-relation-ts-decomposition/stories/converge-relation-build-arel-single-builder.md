@@ -1,6 +1,6 @@
 ---
 title: "One Arel builder: retire _buildSelectManager for the build_arel port"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T12:18:38Z"
+assignee: "converge-relation-build-arel-single-builder"
 blocked-by: null
 closed-reason: null
 ---
