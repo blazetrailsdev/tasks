@@ -53,5 +53,5 @@ too.
 - [ ] The QueryMethods value readers on `CollectionProxy` resolve through
       `scope()` (collection_proxy.rb:1128-1137).
 - [ ] `CollectionProxy — mutation terminals invoked on the proxy itself on
-  stale new-owner seed` and `HasManyAssociationsTest > update all respects
-  association scope` stay green on SQLite, PostgreSQL and MySQL/MariaDB.
+stale new-owner seed` and `HasManyAssociationsTest > update all respects
+association scope` stay green on SQLite, PostgreSQL and MySQL/MariaDB.
