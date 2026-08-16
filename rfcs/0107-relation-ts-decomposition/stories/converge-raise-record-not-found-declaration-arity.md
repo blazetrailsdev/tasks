@@ -1,6 +1,6 @@
 ---
 title: "raiseRecordNotFoundExceptionBang's Relation declaration has the wrong arity and parameter names"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6612
 claim: "2026-08-16T20:33:34Z"
 assignee: "collection-proxy-delegate-query-method-value-readers-to-scope"
 blocked-by: null
