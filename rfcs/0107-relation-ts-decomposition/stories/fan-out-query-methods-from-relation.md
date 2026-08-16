@@ -1,6 +1,6 @@
 ---
 title: "Move the query_methods.rb members out of relation.ts into query-methods.ts"
-status: draft
+status: ready
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
