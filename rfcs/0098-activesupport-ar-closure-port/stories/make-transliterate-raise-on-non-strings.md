@@ -1,6 +1,6 @@
 ---
 title: "make-transliterate-raise-on-non-strings"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6621
 claim: "2026-08-16T23:40:00Z"
 assignee: "make-transliterate-raise-on-non-strings"
 blocked-by: null
