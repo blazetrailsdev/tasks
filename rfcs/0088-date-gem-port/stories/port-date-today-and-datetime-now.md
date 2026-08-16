@@ -1,6 +1,6 @@
 ---
 title: "port-date-today-and-datetime-now"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6615
 claim: "2026-08-16T22:56:53Z"
 assignee: "port-date-today-and-datetime-now"
 blocked-by: null
