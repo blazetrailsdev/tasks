@@ -1,6 +1,6 @@
 ---
 title: "performFirst/performLast drop the trails-only _isEmptyRelation guard"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T14:15:03Z"
+assignee: "retire-is-empty-relation-guard-from-finder-entry-points"
 blocked-by: null
 closed-reason: null
 ---
