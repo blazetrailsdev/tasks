@@ -7,7 +7,7 @@ cluster: null
 packages: ["activerecord"]
 deps: ["retire-relation-parallel-join-resolver"]
 deps-rfc: []
-est-loc: 500
+est-loc: 575
 priority: null
 pr: null
 claim: null
@@ -73,3 +73,21 @@ Depends on the `build_arel` and `JoinDependency` convergence stories.
   `relation/*.test.ts` suites and the CPK eager tests pass unchanged.
 - `pnpm parity:api:calls` / `:args` clean; `parity:api` / `parity:test` deltas
   non-negative.
+
+## Re-measured 2026-08-16
+
+Estimate corrected 500 -> 575. The cluster still in `relation.ts` measures
+**572 lines**: `_executeEagerLoad` (95, `relation.ts:2748`),
+`_eagerLoadBypassesJoinDependency` (49, `:2861`), `_buildEagerIdSubquery` (47,
+`:3685`), `_distinctSelectForLimitedIds` (44, `:3761`),
+`_applyEagerJoinDependency` (44, `:3605`),
+`_materializeDeferredDistinctPkPredicates` (42, `:3498`),
+`_eagerJoinDependencyIsLimitable` (36, `:3649`), `_materializeLimitedIds` (29,
+`:3732`), `_buildEagerOperandManager` (29, `:3805`),
+`_materializeDistinctPkIds` (27, `:3471`), plus the promotion helpers. Line
+numbers are against `main` at `27a6d46bb`; the earlier citations in this body
+predate the fan-outs.
+
+`_promotedIncludes` (`relation.ts:2577`, 14 lines) is tracked separately by
+`converge-relation-select-and-join-residue` — absorb it here if it is already
+in your diff, and say so in the PR so that story can drop the bullet.

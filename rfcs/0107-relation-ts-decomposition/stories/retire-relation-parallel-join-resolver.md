@@ -7,7 +7,7 @@ cluster: null
 packages: ["activerecord"]
 deps: ["converge-relation-build-arel-single-builder"]
 deps-rfc: []
-est-loc: 700
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -82,3 +82,21 @@ delete the parallel resolver" half.
   three adapters.
 - `pnpm parity:api:calls` / `:args` clean; `parity:api` / `parity:test` deltas
   non-negative.
+
+## Re-measured 2026-08-16
+
+Estimate corrected 700 -> 500. The cluster still in `relation.ts` measures **500
+lines / 8 members**: `_resolveThroughJoin` (153, `relation.ts:1825`),
+`_resolveAssociationJoin` (105, `:1720`), `_isNamedJoinValue` (52, `:532`),
+`_resolveHabtmJoin` (48, `:1978`), `_deriveForeignKey` (43, `:1665`),
+`_resolveHasManyJoin` (41, `:839`), `_resolveHasManySubquery` (35, `:804`),
+`_appendAssociationScope` (34, `:1631`). Line numbers are against `main` at
+`27a6d46bb`; the earlier citations in this body predate the fan-outs.
+
+The three external readers are unchanged and still in scope:
+`associations/association-scope.ts`, `relation/merger.ts`,
+`relation/calculations.ts`.
+
+If there is room under the ceiling, the ~41 lines in
+`converge-relation-select-and-join-residue` (`_isKnownColumn`,
+`joinDependencyFallback`) are adjacent and may ride along.
