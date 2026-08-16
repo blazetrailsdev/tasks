@@ -1,6 +1,6 @@
 ---
 title: "exec_main_query returns rows, not records — restore instantiate_records' eager arm"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
