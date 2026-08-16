@@ -58,6 +58,6 @@ methods reaching a `Relation` receiver.
       (`base.rb:294` is a separate, already-correct mixin) — no duplicate
       implementation; both sides read one definition.
 - [ ] `pnpm parity:api` delta non-negative; `pnpm parity:api:extra --package
-  activerecord` shows no new novel names.
+activerecord` shows no new novel names.
 - [ ] `pnpm parity:api:calls` / `pnpm parity:api:calls:args` green with no
       baseline rows added.
