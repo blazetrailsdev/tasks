@@ -1,6 +1,6 @@
 ---
 title: "Inline _execUpdateAll/_execDeleteAll back into updateAll/deleteAll (relation.rb:606,:1023)"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
