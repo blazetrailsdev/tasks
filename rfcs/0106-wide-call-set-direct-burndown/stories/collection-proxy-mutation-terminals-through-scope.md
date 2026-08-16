@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy mutation terminals route through scope, retiring the new-owner seed rebase (collection_proxy.rb:949-950)"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
