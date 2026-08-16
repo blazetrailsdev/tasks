@@ -1,6 +1,6 @@
 ---
 title: "Converge relation.ts's include() order to relation.rb:68"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6597
 claim: "2026-08-16T13:45:03Z"
 assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null
