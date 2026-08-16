@@ -1,6 +1,6 @@
 ---
 title: "DisableJoinsAssociationScope plucks chain ids eagerly; drop CollectionProxy's disableJoins arms"
-status: ready
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6613
 claim: null
 assignee: null
 blocked-by: null
