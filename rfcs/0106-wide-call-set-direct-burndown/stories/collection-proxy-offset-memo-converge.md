@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-offset-memo-converge"
-status: blocked
+status: ready
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-16T00:15:03Z"
-assignee: "collection-proxy-offset-memo-converge"
-blocked-by: "Depends on unmerged PR #6586 (branch finder-methods-take-offsets-memoization-7f0b), which adds Relation#_take/_offsets and their clearing in Relation#reset. Those slots do not exist on origin/main (grep for _offsets in packages/activerecord/src returns nothing), so CollectionProxy cannot memoize through them without either stacking on #6586 or duplicating its relation.ts/finder-methods.ts changes. Unblock once #6586 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
