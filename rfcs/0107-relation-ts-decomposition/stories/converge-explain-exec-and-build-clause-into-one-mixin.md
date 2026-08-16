@@ -1,6 +1,6 @@
 ---
 title: "Move exec_explain/build_explain_clause into the Explain mixin so Base and Relation read one definition"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6598
 claim: "2026-08-16T14:45:06Z"
 assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
