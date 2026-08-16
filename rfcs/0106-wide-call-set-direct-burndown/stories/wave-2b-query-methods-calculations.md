@@ -1,7 +1,7 @@
 ---
 title: "wave-2b-query-methods-calculations"
-status: ready
-updated: 2026-08-15
+status: claimed
+updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T00:45:03Z"
+assignee: "wave-2b-query-methods-calculations"
 blocked-by: null
 closed-reason: null
 ---
