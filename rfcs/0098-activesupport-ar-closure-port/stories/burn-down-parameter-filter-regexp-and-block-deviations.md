@@ -1,6 +1,6 @@
 ---
 title: "Burn down ParameterFilter's Regexp-flag, class.new and block-return deviations"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6614
 claim: "2026-08-16T22:33:32Z"
 assignee: "collection-proxy-retire-own-seeded-relation-state"
 blocked-by: null
