@@ -1,7 +1,7 @@
 ---
 title: "finder-methods-take-offsets-memoization"
-status: claimed
-updated: 2026-08-15
+status: in-progress
+updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6586
 claim: "2026-08-15T23:45:05Z"
 assignee: "finder-methods-take-offsets-memoization"
 blocked-by: null
