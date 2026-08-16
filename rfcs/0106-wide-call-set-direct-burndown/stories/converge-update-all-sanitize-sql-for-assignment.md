@@ -1,6 +1,6 @@
 ---
 title: "update_all's string/array arms route through sanitize_sql_for_assignment + Arel.sql (relation.rb:604)"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T17:45:07Z"
+assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null
 closed-reason: null
 ---
