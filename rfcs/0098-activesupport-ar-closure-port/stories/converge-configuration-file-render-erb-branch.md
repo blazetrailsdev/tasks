@@ -1,6 +1,6 @@
 ---
 title: "Converge ConfigurationFile#render and parse's ERB branch"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T21:13:33Z"
+assignee: "djar-eager-chain-ids-drop-disable-joins-arms"
 blocked-by: null
 closed-reason: null
 ---

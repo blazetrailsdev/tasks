@@ -1,6 +1,6 @@
 ---
 title: "exec_main_query returns rows, not records — restore instantiate_records' eager arm"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T21:13:33Z"
+assignee: "djar-eager-chain-ids-drop-disable-joins-arms"
 blocked-by: null
 closed-reason: null
 ---
