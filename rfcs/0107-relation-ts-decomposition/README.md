@@ -1,7 +1,7 @@
 ---
 rfc: "0107-relation-ts-decomposition"
 title: "relation.ts decomposition and invented-machinery burndown"
-status: draft
+status: active
 created: 2026-08-16
 updated: 2026-08-16
 owner: "@deanmarano"
