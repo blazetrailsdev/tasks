@@ -1,6 +1,6 @@
 ---
 title: "burn-down-in-closure-options-json-and-filters"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
