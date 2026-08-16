@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy calculation overrides collapse to Rails' conditional calculate/pluck (collection_proxy.rb:724-730)"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
