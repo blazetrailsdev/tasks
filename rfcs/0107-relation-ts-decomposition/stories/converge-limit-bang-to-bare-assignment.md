@@ -1,6 +1,6 @@
 ---
 title: "Converge limit! to Rails' bare assignment, dropping the eager validation"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
