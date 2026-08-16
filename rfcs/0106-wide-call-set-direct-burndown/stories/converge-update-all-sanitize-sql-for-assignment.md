@@ -1,6 +1,6 @@
 ---
 title: "update_all's string/array arms route through sanitize_sql_for_assignment + Arel.sql (relation.rb:604)"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null

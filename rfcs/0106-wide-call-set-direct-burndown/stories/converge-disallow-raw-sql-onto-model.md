@@ -1,6 +1,6 @@
 ---
 title: "Move disallowRawSqlBang onto the model, as Rails' disallow_raw_sql! (calculations.rb:315)"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
