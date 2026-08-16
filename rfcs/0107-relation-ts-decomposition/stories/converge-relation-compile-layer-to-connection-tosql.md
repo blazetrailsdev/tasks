@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-compile-layer-to-connection-tosql"
-status: ready
+status: closed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of converge-relation-to-sql-compile-layer, which pre-dates it, is estimated (400 LOC), already deps on converge-relation-build-arel-single-builder, and enumerates a strictly larger member list. Filed before I spotted the existing story; consolidating there."
 ---
 
 ## Context
