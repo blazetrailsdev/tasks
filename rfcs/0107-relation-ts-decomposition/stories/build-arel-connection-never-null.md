@@ -1,6 +1,6 @@
 ---
 title: "buildArel's connection is never null — retire the sanitize_limit fallback ternary (query_methods.rb:1595,1757)"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T20:13:32Z"
+assignee: "collection-proxy-mutation-terminals-through-scope"
 blocked-by: null
 closed-reason: null
 ---
