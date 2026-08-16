@@ -1,6 +1,6 @@
 ---
 title: "PG exec_insert inlines last_insert_id_result and skips internal_exec_query"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T01:15:07Z"
+assignee: "finder-methods-residue-find-with-ids-find-one-raise"
 blocked-by: null
 closed-reason: null
 ---
