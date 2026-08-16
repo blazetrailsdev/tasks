@@ -1,6 +1,6 @@
 ---
 title: "explain-payload-binds-carry-query-attributes"
-status: claimed
+status: ready
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-16T17:52:42Z"
-assignee: "converge-build-arel-limit-offset-cast-value"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
