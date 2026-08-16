@@ -1,6 +1,6 @@
 ---
 title: "converge-references-values-to-sql-literals"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6611
 claim: "2026-08-16T20:53:32Z"
 assignee: "converge-references-values-to-sql-literals"
 blocked-by: null
