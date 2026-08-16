@@ -1,6 +1,6 @@
 ---
 title: "converge-build-arel-connection-threading"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6601
 claim: "2026-08-16T17:45:07Z"
 assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null
