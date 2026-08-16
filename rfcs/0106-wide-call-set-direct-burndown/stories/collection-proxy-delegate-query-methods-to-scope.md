@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy delegates QueryMethods/SpawnMethods to scope, retiring _finderScope"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T13:15:03Z"
+assignee: "collection-proxy-delegate-query-methods-to-scope"
 blocked-by: null
 closed-reason: null
 ---
