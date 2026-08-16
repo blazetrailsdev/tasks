@@ -1,7 +1,7 @@
 ---
 title: "Retire _namedInnerJoins: converge its last three readers and delete the getter"
-status: in-progress
-updated: 2026-08-15
+status: done
+updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
