@@ -1,6 +1,6 @@
 ---
 title: "route-to-array-through-exec-queries"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6604
 claim: "2026-08-16T19:43:25Z"
 assignee: "burn-down-in-closure-inflections-and-descendants-tracker"
 blocked-by: null
