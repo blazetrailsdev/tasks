@@ -1,6 +1,6 @@
 ---
 title: "Inline _excludingArgs/_countMatching/_patternMatcher/_whereMatchesUnscopedBaseline"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T23:19:58Z"
+assignee: "converge-ordered-options-constructor-and-dup"
 blocked-by: null
 closed-reason: null
 ---
