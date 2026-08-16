@@ -1,6 +1,6 @@
 ---
 title: "Retire _clone/_newRelation for initializeCopy + spawn; converge equals and _isEmptyRelation"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T23:00:00Z"
+assignee: "converge-arel-column-with-table-schema-qualified-guard"
 blocked-by: null
 closed-reason: null
 ---
