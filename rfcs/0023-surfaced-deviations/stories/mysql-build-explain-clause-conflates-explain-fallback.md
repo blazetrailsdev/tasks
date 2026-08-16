@@ -61,6 +61,36 @@ Note PostgreSQL has the same shape at
 `packages/activerecord/src/connection-adapters/postgresql-adapter.ts:2458`, so
 whatever separation is chosen should apply to both adapters.
 
+### Update (2026-08-15, PR #6581)
+
+The PostgreSQL half is **done**. #6581 converged
+`PostgreSQLAdapter#buildExplainClause` onto
+`postgresql/database_statements.rb:96-100` — it returns bare `"EXPLAIN"` /
+`"EXPLAIN (...)"` with no `" for:"` — and deleted the invented
+`_explainStatementClause` twin that existed only because the header and the
+executed statement had drifted apart once the suffix was baked in. `explain`
+now composes its SQL from `buildExplainClause` + `toSql` exactly as
+`postgresql/database_statements.rb:8` does. PG keeps `_validateExplainOptions`,
+so the "option validation has no Rails counterpart" half of this story is still
+open on both adapters.
+
+That leaves MySQL as the only remaining `" for:"` emitter among adapters that
+define `build_explain_clause`, at
+`abstract-mysql-adapter.ts:1303-1306`, with its `_explainClause` /
+`_explainStatementClause` twin at `:1321` and `:1369`.
+
+Also surfaced while fixing PG: **`AbstractAdapter#buildExplainClause`
+(`connection-adapters/abstract-adapter.ts:939-951`) is itself invented
+surface.** Rails' `AbstractAdapter` defines no `build_explain_clause` at all —
+which is precisely why `explain.rb:56-61` probes with
+`respond_to?(:build_explain_clause, true)`. Because trails' abstract defines
+one, _every_ adapter answers the probe, the `"EXPLAIN for:"` fallback in
+`packages/activerecord/src/explain.ts:96` is unreachable, and SQLite produces
+the Rails-correct header only by accident rather than by taking the fallback.
+Retiring the abstract member is what makes the third acceptance criterion below
+("the `\" for:\"` header lives only in explain.ts") actually true rather than
+nominally true.
+
 ## Acceptance criteria
 
 - `AbstractMysqlAdapter#buildExplainClause` is the Rails method: no `" for:"`
@@ -73,6 +103,9 @@ whatever separation is chosen should apply to both adapters.
 - The single module-level `buildExplainClause` in
   `connection-adapters/mysql/database-statements.ts` is the only body; the
   adapter delegates, as `write_query?` / `returning_column_values` already do.
+- `AbstractAdapter#buildExplainClause` is removed so `explain.rb`'s
+  `respond_to?` probe means what it means in Rails, and SQLite reaches the
+  fallback by the Rails path; `parity:api:extra --package activerecord` falls.
 - Both `build_explain_clause` entries drop out of the wide exclude file;
   `pnpm parity:api:calls` baseline strictly shrinks.
 - `Relation#explain` output is unchanged on MySQL and MariaDB (the
