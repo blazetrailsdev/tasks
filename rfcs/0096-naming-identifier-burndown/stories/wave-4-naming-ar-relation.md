@@ -1,6 +1,6 @@
 ---
 title: "Burn down the naming call-argument rows in activerecord relation, scoping and statement-cache"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6619
 claim: "2026-08-16T22:56:16Z"
 assignee: "activemodel-instance-validates-with"
 blocked-by: null
