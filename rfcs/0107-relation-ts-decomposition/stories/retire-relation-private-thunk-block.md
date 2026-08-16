@@ -1,6 +1,6 @@
 ---
 title: "Retire the ~330-line private thunk block in relation.ts"
-status: draft
+status: ready
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
