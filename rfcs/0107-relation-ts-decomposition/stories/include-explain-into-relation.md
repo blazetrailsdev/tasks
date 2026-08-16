@@ -1,6 +1,6 @@
 ---
 title: "Include Explain into Relation (relation.rb:68), not just extend it onto Base"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
