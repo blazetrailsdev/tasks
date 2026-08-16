@@ -1,6 +1,6 @@
 ---
 title: "Move ids/pluck/pick and the async readers into relation/calculations.ts"
-status: draft
+status: ready
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
