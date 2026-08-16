@@ -1,6 +1,6 @@
 ---
 title: "Move ids/pluck/pick and the async readers into relation/calculations.ts"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T13:45:03Z"
+assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null
 closed-reason: null
 ---
