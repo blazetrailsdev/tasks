@@ -1,6 +1,6 @@
 ---
 title: "Move sum/calculate to calculations.rb's source order in relation/calculations.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6599
 claim: "2026-08-16T15:15:06Z"
 assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null
