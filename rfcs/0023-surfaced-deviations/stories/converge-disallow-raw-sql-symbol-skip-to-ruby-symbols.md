@@ -48,5 +48,5 @@ Converging the skip to `isRubySymbol(arg)` removes that pre-map and makes the
 - [ ] `preprocessOrderArgs`' `symbolToName` pre-map over `flattenedArgs` is
       deleted — `disallow_raw_sql!` does the skipping, as in Rails.
 - [ ] `unsafe-raw-sql.test.ts` and `with.test.ts` stay green; the `order(foo:
-  :asc)` and `pluck(:id)` symbol paths are covered.
+:asc)` and `pluck(:id)` symbol paths are covered.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
