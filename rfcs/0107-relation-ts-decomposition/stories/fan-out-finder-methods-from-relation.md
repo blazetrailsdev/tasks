@@ -1,6 +1,6 @@
 ---
 title: "Move the finder_methods.rb members out of relation.ts into finder-methods.ts"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T18:52:31Z"
+assignee: "converge-execute-grouped-calculation-body-to-rails-source-order"
 blocked-by: null
 closed-reason: null
 ---

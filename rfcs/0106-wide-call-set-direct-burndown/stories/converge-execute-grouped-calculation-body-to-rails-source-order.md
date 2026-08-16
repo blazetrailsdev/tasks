@@ -1,6 +1,6 @@
 ---
 title: "converge-execute-grouped-calculation-body-to-rails-source-order"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T18:52:31Z"
+assignee: "converge-execute-grouped-calculation-body-to-rails-source-order"
 blocked-by: null
 closed-reason: null
 ---
