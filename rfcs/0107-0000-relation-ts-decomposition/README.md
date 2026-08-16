@@ -1,5 +1,5 @@
 ---
-rfc: "0000-0000-relation-ts-decomposition"
+rfc: "0107-0000-relation-ts-decomposition"
 title: "relation.ts decomposition and invented-machinery burndown"
 status: draft
 created: 2026-08-16
