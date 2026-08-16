@@ -1,5 +1,5 @@
 ---
-title: "converge-clear-cache-lock-mysql-sqlite"
+title: "clear_cache! mutates the statement pool outside the connection lock on mysql2/sqlite3"
 status: draft
 updated: 2026-08-16
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
