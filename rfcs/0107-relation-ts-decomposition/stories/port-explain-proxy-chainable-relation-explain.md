@@ -1,6 +1,6 @@
 ---
 title: "Port ExplainProxy so Relation#explain returns the chainable proxy Rails does"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
