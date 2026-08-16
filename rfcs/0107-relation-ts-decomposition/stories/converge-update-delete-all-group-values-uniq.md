@@ -1,6 +1,6 @@
 ---
 title: "converge-update-delete-all-group-values-uniq"
-status: ready
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6599
 claim: null
 assignee: null
 blocked-by: null
