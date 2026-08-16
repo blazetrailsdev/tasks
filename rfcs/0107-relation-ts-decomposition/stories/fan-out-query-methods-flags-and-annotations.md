@@ -1,6 +1,6 @@
 ---
 title: "Move the flag/annotation/scope-shaping members into query-methods.ts"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T22:53:03Z"
+assignee: "converge-relation-select-and-join-residue"
 blocked-by: null
 closed-reason: null
 ---
