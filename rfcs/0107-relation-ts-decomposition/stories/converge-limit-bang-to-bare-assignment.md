@@ -1,6 +1,6 @@
 ---
 title: "Converge limit! to Rails' bare assignment, dropping the eager validation"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6610
 claim: "2026-08-16T20:13:32Z"
 assignee: "collection-proxy-mutation-terminals-through-scope"
 blocked-by: null
