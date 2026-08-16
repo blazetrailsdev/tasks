@@ -1,6 +1,6 @@
 ---
 title: "Converge OrderedOptions/InheritableOptions constructors and dup to Hash's shape"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6618
 claim: "2026-08-16T23:19:58Z"
 assignee: "converge-ordered-options-constructor-and-dup"
 blocked-by: null
