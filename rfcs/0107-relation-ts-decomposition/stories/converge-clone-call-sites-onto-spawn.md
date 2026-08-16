@@ -1,6 +1,6 @@
 ---
 title: "converge-clone-call-sites-onto-spawn"
-status: ready
+status: closed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of retire-relation-parallel-spawn-and-clone-path (in-progress), which already owns retiring _clone/_newRelation in favour of spawn (spawn_methods.rb:9-11) + initializeCopy (relation.rb:97). The ten methods PR #6616 moved into relation/query-methods.ts use the same this._clone() idiom and are covered by that story's call-site sweep."
 ---
 
 ## Context
