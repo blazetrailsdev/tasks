@@ -73,6 +73,23 @@ Note the interaction with the trails-only `@take`-memo host: Rails keeps
 `@take` on the proxy and only the query on the scope. Converging the delegation
 restores that split for free.
 
+## Scope split (PR #6595)
+
+The four acceptance criteria below are met by delegating the NON-bang half of
+`QueryMethods` / `SpawnMethods`, which is all `_finderScope()` stood in for. Two
+items from "Converged shape" above move out of this story:
+
+- The `_cpMutated` / `_seededNoneNewOwner` rebase machinery does NOT delete
+  here. Rails delegates the bang builders too (`where!`, `limit!`, `none!` are
+  in `QueryMethods.public_instance_methods(false)`), but trails'
+  `CollectionProxy` ctor seeds its own inherited `Relation` state through
+  `noneBang` / `extendingBang` / `_copyStateFrom`, and `toArray` / `deleteAll` /
+  the calculation overrides read that state back through `_cpMutated` —
+  delegating the bangs means deleting all of it, past this story's LOC ceiling.
+  Tracked as `collection-proxy-delegate-query-method-bangs-to-scope`.
+- `#first` stays, as this story already notes: it is blocked on the
+  `_isEmptyRelation` story.
+
 ## Acceptance criteria
 
 - [ ] `CollectionProxy` delegates the `QueryMethods` / `SpawnMethods` builder
