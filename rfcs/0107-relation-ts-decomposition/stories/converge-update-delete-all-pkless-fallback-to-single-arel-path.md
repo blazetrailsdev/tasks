@@ -1,6 +1,6 @@
 ---
 title: "converge-update-delete-all-pkless-fallback-to-single-arel-path"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
