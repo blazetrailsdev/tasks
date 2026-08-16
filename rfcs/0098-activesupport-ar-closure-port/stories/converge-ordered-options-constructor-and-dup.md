@@ -73,5 +73,5 @@ signature tweak.
 - [ ] `new InheritableOptions(parent).dup()` is an `InheritableOptions` and still reads
       through to `parent`.
 - [ ] Both `OrderedOptionsTest` files keep their Rails test names and pass; `pnpm
-  parity:api:extra --package activesupport` does not grow for `ordered-options.ts`.
+parity:api:extra --package activesupport` does not grow for `ordered-options.ts`.
 - [ ] `pnpm parity:api:calls` / `:args` green.
