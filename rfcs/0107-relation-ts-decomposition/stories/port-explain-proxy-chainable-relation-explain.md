@@ -1,6 +1,6 @@
 ---
 title: "Port ExplainProxy so Relation#explain returns the chainable proxy Rails does"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6603
 claim: "2026-08-16T18:12:21Z"
 assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
