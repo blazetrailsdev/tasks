@@ -1,6 +1,6 @@
 ---
 title: "Enroll load_async_test.rb's test_notification_forwarding now that lock_wait reaches the payload"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null

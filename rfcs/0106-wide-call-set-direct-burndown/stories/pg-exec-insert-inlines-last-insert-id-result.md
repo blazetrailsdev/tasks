@@ -1,6 +1,6 @@
 ---
 title: "PG exec_insert inlines last_insert_id_result and skips internal_exec_query"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null

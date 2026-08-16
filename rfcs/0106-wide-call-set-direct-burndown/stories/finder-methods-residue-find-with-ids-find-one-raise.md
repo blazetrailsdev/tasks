@@ -1,6 +1,6 @@
 ---
 title: "Burn down the last 5 finder-methods.ts call rows: find_with_ids, find_one, raise_record_not_found_exception!"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
