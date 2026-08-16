@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#scope memoizes as @scope ||= @association.scope, with Rails' two reset_scope callers (collection_proxy.rb:949-950)"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6609
 claim: "2026-08-16T19:53:31Z"
 assignee: "collection-proxy-calculations-to-two-overrides"
 blocked-by: null
