@@ -1,6 +1,6 @@
 ---
 title: "wave-2c-grouped-calculation-and-query-method-stores"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T12:45:04Z"
+assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
 closed-reason: null
 ---

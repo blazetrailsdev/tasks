@@ -1,6 +1,6 @@
 ---
 title: "Include Explain into Relation (relation.rb:68), not just extend it onto Base"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T12:45:04Z"
+assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
 closed-reason: null
 ---
