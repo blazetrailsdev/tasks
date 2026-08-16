@@ -1,6 +1,6 @@
 ---
 title: "djar-eager-chain-ids-drop-disable-joins-arms"
-status: claimed
+status: ready
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-16T21:13:33Z"
-assignee: "djar-eager-chain-ids-drop-disable-joins-arms"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
