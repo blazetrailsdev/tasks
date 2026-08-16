@@ -1,6 +1,6 @@
 ---
 title: "Move the query_methods.rb members out of relation.ts into query-methods.ts"
-status: ready
+status: closed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: measured 794 lines / 70 members against its 600-LOC estimate. Split on query_methods.rb source-order groupings into fan-out-query-methods-{where-family,order-and-projection,flags-and-annotations,joins-eager-and-cte}, which together cover the same population with no overlap."
 ---
 
 ## Context
