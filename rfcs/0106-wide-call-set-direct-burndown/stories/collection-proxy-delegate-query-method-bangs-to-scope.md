@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delegate-query-method-bangs-to-scope"
-status: claimed
+status: ready
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-16T15:15:06Z"
-assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
