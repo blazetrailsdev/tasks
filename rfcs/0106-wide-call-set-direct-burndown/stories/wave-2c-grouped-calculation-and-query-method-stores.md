@@ -63,6 +63,14 @@ Measured after #6587, over
   (see the host-interface comment in `relation/query-methods.ts`). Converging
   the store retires the row.
 
+- `relation/calculations.ts` `type_cast_pluck_values` count-mismatch branch —
+  when `result.columns.size != columns.size` Rails passes `model.attribute_types`
+  wholesale (calculations.rb:609-610); the port instead builds a per-column
+  `overrides` map through `pluckCastTypeForKnownColumn`. Raised as an
+  out-of-scope observation on PR #6587 (which converged the OTHER branch of the
+  same method) and left untouched there. No baseline row names it today —
+  converging it is fidelity work, not row burndown.
+
 ## Acceptance criteria
 
 - [ ] `execute_grouped_calculation` ports calculations.rb:512-586 directly;
