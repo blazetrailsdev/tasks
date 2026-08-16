@@ -1,7 +1,7 @@
 ---
 title: "Burn down the naming call-argument rows in arel, i18n, globalid and did-you-mean"
-status: in-progress
-updated: 2026-08-15
+status: done
+updated: 2026-08-16
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["arel", "i18n", "globalid"]
