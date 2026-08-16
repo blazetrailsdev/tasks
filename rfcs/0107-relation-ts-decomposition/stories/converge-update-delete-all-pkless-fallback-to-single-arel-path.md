@@ -1,6 +1,6 @@
 ---
 title: "converge-update-delete-all-pkless-fallback-to-single-arel-path"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6602
 claim: "2026-08-16T17:52:42Z"
 assignee: "converge-build-arel-limit-offset-cast-value"
 blocked-by: null
