@@ -1,6 +1,6 @@
 ---
 title: "Move the residual spawn/predicate-builder/from-clause/delegation members out of relation.ts"
-status: draft
+status: ready
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
