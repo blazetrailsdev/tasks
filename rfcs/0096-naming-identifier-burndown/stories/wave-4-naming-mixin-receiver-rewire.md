@@ -1,7 +1,7 @@
 ---
 title: "Rewire the module-mixin-receiver naming rows to the this-typed mixin idiom"
-status: in-progress
-updated: 2026-08-15
+status: done
+updated: 2026-08-16
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord", "activesupport", "activemodel"]
