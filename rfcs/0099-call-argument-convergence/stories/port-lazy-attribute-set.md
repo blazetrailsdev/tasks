@@ -1,7 +1,7 @@
 ---
 title: "port-lazy-attribute-set"
-status: in-progress
-updated: 2026-08-15
+status: done
+updated: 2026-08-16
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
