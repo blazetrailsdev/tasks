@@ -1,5 +1,5 @@
 ---
-title: "djar-eager-chain-ids-drop-disable-joins-arms"
+title: "DisableJoinsAssociationScope plucks chain ids eagerly; drop CollectionProxy's disableJoins arms"
 status: ready
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
