@@ -1,6 +1,6 @@
 ---
 title: "activesupport Array / Enumerable / Range / Numeric assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: null
+pr: 6620
 claim: "2026-08-16T22:55:44Z"
 assignee: "assertions-activemodel-length-numericality-comparison"
 blocked-by: null
