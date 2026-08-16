@@ -1,6 +1,6 @@
 ---
 title: "Move the flag/annotation/scope-shaping members into query-methods.ts"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
