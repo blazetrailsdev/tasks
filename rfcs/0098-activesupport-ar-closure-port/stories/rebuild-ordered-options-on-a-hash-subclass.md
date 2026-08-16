@@ -1,6 +1,6 @@
 ---
 title: "Rebuild OrderedOptions on a Hash subclass instead of a Map wrapper"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 320
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T20:53:32Z"
+assignee: "converge-references-values-to-sql-literals"
 blocked-by: null
 closed-reason: null
 ---
