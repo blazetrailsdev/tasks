@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' @values hash and generate the VALUE_METHODS accessors"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T02:00:26Z"
+assignee: "restore-relation-values-hash"
 blocked-by: null
 closed-reason: null
 ---
