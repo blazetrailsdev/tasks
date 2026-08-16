@@ -1,6 +1,6 @@
 ---
 title: "Rebuild OrderedOptions on a Hash subclass instead of a Map wrapper"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
