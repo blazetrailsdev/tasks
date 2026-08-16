@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delegate-query-method-bangs-to-scope"
-status: claimed
+status: blocked
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-16T13:45:03Z"
 assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
-blocked-by: null
+blocked-by: "Prerequisite PR #6595 (collection-proxy-delegate-query-methods-to-scope, the NON-bang half) is still OPEN, not merged into main. This story's context assumes _finderScope/findTake/findTakeWithLimit are already deleted; on main they still exist (collection-proxy.ts:824, :2400, :2409). Building the bang half now would require stacking on #6595 and would conflict file-for-file. Unblock once #6595 merges."
 closed-reason: null
 ---
 
