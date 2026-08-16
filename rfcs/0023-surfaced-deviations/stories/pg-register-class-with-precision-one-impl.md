@@ -1,5 +1,5 @@
 ---
-title: "pg-register-class-with-precision-one-impl"
+title: "One register_class_with_precision, not two"
 status: draft
 updated: 2026-08-15
 rfc: "0023-surfaced-deviations"
