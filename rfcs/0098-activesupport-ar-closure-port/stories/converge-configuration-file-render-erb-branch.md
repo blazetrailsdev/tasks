@@ -1,6 +1,6 @@
 ---
 title: "Converge ConfigurationFile#render and parse's ERB branch"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
