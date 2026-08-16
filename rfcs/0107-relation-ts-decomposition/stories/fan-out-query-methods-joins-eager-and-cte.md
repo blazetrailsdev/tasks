@@ -1,6 +1,6 @@
 ---
 title: "Move the joins/eager/CTE members and shared Arel helpers into query-methods.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 6621
 claim: "2026-08-16T23:40:00Z"
 assignee: "make-transliterate-raise-on-non-strings"
 blocked-by: null
