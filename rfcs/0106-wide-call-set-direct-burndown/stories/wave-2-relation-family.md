@@ -1,7 +1,7 @@
 ---
 title: "Wave 2: the relation family — query-methods, calculations, finder-methods (94 rows)"
-status: in-progress
-updated: 2026-08-15
+status: done
+updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: api-compare
 packages: []
