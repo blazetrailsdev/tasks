@@ -1,6 +1,6 @@
 ---
 title: "Retire the ~330-line private thunk block in relation.ts"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T01:45:03Z"
+assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
 closed-reason: null
 ---
