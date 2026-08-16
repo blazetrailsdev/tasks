@@ -1,6 +1,6 @@
 ---
 title: "route-to-array-through-exec-queries"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
