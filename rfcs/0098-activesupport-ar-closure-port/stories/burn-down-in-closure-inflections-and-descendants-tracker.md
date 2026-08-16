@@ -1,6 +1,6 @@
 ---
 title: "burn-down-in-closure-inflections-and-descendants-tracker"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6604
 claim: "2026-08-16T18:32:19Z"
 assignee: "burn-down-in-closure-inflections-and-descendants-tracker"
 blocked-by: null
