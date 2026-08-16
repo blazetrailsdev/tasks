@@ -1,6 +1,6 @@
 ---
 title: "wave-2b-query-methods-calculations"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
