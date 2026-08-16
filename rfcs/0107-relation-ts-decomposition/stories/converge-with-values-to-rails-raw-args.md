@@ -1,6 +1,6 @@
 ---
 title: "converge-with-values-to-rails-raw-args"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6607
 claim: "2026-08-16T20:17:36Z"
 assignee: "converge-query-method-stores-with-values-and-references"
 blocked-by: null
