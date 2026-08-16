@@ -1,6 +1,6 @@
 ---
 title: "Burn down ParameterFilter's Regexp-flag, class.new and block-return deviations"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
