@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delegate-query-method-value-readers-to-scope"
-status: ready
+status: claimed
 updated: 2026-08-16
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-16T20:33:34Z"
+assignee: "collection-proxy-delegate-query-method-value-readers-to-scope"
 blocked-by: null
 closed-reason: null
 ---
