@@ -1,6 +1,6 @@
 ---
 title: "Converge Merger#merge_multi_values order/extensions arms, drop qualifyOrderForOther"
-status: in-progress
+status: done
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
