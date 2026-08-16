@@ -75,5 +75,5 @@ the story.
       `@scope ||= @association.scope`.
 - [ ] `HasManyAssociationsTest > update all respects association scope`
       and the `mutation terminals invoked on the proxy itself on stale
-  new-owner seed` covers stay green.
+new-owner seed` covers stay green.
 - [ ] Green on SQLite, PostgreSQL and MySQL/MariaDB.

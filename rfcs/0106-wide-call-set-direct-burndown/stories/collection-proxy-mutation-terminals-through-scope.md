@@ -66,6 +66,6 @@ terminals, not the seed itself.
       `CollectionProxy#_isEmptyRelation` override are deleted.
 - [ ] `HasManyAssociationsTest > update all respects association scope`
       stays green, as do the `mutation terminals invoked on the proxy
-  itself on stale new-owner seed` covers (rewrite them against the
+itself on stale new-owner seed` covers (rewrite them against the
       converged shape if the route changes, do not delete them).
 - [ ] Green on SQLite, PostgreSQL and MySQL/MariaDB.
