@@ -1,6 +1,6 @@
 ---
 title: "Move findEach/findInBatches/inBatches into relation/batches.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-16
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["retire-relation-private-thunk-block"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6594
 claim: "2026-08-16T12:45:04Z"
 assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null
