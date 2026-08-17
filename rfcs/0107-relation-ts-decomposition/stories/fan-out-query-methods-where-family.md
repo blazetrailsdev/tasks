@@ -1,7 +1,7 @@
 ---
 title: "Move the where/or/and/excluding family into query-methods.ts"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T23:22:08Z"
+assignee: "fan-out-query-methods-where-family"
 blocked-by: null
 closed-reason: null
 ---
