@@ -1,7 +1,7 @@
 ---
 title: "call-arg descriptors: cover aref, regexp and ... instead of falling through to ?"
-status: draft
-updated: 2026-08-09
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by complete-call-arg-descriptor-grammar-both-sides (2026-08-17 sweep): merged with call-args-braced-hash-kwargs-split-pinned-both-sides because the extractor-skew vocabulary pin forces any descriptor change onto both extractors in one PR. Citations carried forward."
 ---
 
 ## Context
