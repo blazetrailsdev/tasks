@@ -18,6 +18,7 @@ related-rfcs:
   - "0084-wide-call-set-burndown"
   - "0095-call-argument-parity"
   - "0107-relation-ts-decomposition"
+priority: 2
 ---
 
 ## Summary
