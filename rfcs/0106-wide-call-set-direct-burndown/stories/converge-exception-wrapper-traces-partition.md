@@ -1,6 +1,6 @@
 ---
 title: "converge-exception-wrapper-traces-partition"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6669
 claim: "2026-08-17T21:02:59Z"
 assignee: "converge-exception-wrapper-traces-partition"
 blocked-by: null
