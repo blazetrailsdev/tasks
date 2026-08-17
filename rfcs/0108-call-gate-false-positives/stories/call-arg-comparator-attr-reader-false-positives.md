@@ -1,6 +1,6 @@
 ---
 title: "Stop the call-arg comparator counting Ruby attr_reader reads as calls"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6657
 claim: "2026-08-17T16:56:50Z"
 assignee: "call-arg-comparator-attr-reader-false-positives"
 blocked-by: null
