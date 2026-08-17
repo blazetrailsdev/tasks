@@ -1,6 +1,6 @@
 ---
 title: "converge-accessor-surfaced-call-set-rows-wave-2"
-status: draft
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6667
 claim: null
 assignee: null
 blocked-by: null
