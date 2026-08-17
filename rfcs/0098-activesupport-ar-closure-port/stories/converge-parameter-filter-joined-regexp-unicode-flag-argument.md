@@ -1,6 +1,6 @@
 ---
 title: "Converge ParameterFilter's joined-group Regexp onto Rails' one-argument Regexp.new"
-status: claimed
+status: blocked
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-17T01:22:52Z"
 assignee: "admit-index-by-and-compact-blank-to-receiver-as-first-arg"
-blocked-by: null
+blocked-by: "Blocked on a JS language shortcoming, verified on Node 24 (v24.16.0). Ruby needs no second argument because Regexp#to_s embeds each member's flags inline — patterns.join('|') yields '(?-mix:foo)|(?i:bar)' — and its engine is Unicode-aware unconditionally. JS has no such spelling for the Unicode flag: 'new RegExp(\"(?u:\\\\p{Lu})\")' throws 'Invalid regular expression: Invalid group', and the ES2025 modifiers proposal V8 does ship covers i/m/s only ('(?i:a)'.test('A') is true), never u. Since \\p{...} is a property escape only under u/v — 'new RegExp(\"\\\\p{Lu}\").test(\"A\")' is false, and it matches the literal text 'p{Lu}' instead — a joined group containing any member written with u must carry the flag, and in JS the flag is a constructor argument. Candidate 1 from the story (rewrite \\p{...} into a u-free equivalent during the case-flag expansion) does not close it either: a u-free equivalent of an arbitrary Unicode property is its full code-point range table, which JS exposes no API to obtain, and the flag is needed for a member copied verbatim (non-ignoreCase) just as much as for an expanded one. Criterion 3 is coupled to the same fact and is unreachable while any group can carry u: 'new RegExp(\"\\\\-\", \"u\")' and the v form both throw 'Invalid escape', so escapeRegexp cannot restore the '-' escape. Unblocks if trails drops support for caller-supplied u/v-flagged filters, or if a future modifier syntax admits u."
 closed-reason: null
 ---
 
