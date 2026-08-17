@@ -1,6 +1,6 @@
 ---
 title: "Ruby Array#first has no TS call spelling — compute_cache_version carries a @missingRailsCall tag for it"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6670
 claim: "2026-08-17T21:28:00Z"
 assignee: "converge-request-method-onto-methodoverride-original-method"
 blocked-by: null
