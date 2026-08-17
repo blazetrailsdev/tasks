@@ -1,6 +1,6 @@
 ---
 title: "Give the call-gate row key owner/static/accessor precision"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: 6659
 claim: "2026-08-17T17:01:13Z"
 assignee: "precise-call-pairing-key-for-owner-static-and-accessor"
 blocked-by: null
