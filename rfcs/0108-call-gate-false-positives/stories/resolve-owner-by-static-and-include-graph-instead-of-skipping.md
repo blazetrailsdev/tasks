@@ -1,6 +1,6 @@
 ---
 title: "resolve-owner-by-static-and-include-graph-instead-of-skipping"
-status: claimed
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6665
 claim: "2026-08-17T21:02:59Z"
 assignee: "converge-exception-wrapper-traces-partition"
 blocked-by: null
