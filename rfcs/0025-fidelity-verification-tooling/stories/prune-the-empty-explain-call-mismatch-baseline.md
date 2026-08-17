@@ -1,6 +1,6 @@
 ---
 title: "Empty call-mismatch baseline file makes every local reseed report spurious drift"
-status: draft
+status: closed
 updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of empty-baseline-shard-makes-reseed-drift-check-lie (0108-call-gate-false-positives), claimed and in flight. Same file (call-mismatches-exclude/activerecord/explain.json, still committed as a bare []), same root cause; the 0108 body additionally names the consequence this one omits — CI's Ratchet baseline drift step fails on any diff, so the reseed-drift check reports a false positive to every author who runs it before adding a row. Verified 2026-08-17 the file is still empty."
 ---
 
 ## Context
