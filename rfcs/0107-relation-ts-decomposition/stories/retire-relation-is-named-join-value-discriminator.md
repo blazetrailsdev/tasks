@@ -4,10 +4,10 @@ status: ready
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
