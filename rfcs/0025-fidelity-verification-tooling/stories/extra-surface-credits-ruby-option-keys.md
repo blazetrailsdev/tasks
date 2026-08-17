@@ -1,7 +1,7 @@
 ---
 title: "Ruby option-hash keys count as Ruby-side names for extra-surface"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by credit-ruby-hash-and-option-keys-as-ruby-surface (2026-08-17 sweep): same root cause as extra-surface-scores-ruby-hash-keys-as-novel. json/encoding.ts re-measured at exactly 1 novel (escapeHtmlEntities); citations carried forward."
 ---
 
 ## Context
