@@ -1,6 +1,6 @@
 ---
 title: "Move validations_test.rb trails-only extras to validations.trails.test.ts"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T17:16:12Z"
+assignee: "activemodel-validations-test-trails-extras-split"
 blocked-by: null
 closed-reason: null
 ---
