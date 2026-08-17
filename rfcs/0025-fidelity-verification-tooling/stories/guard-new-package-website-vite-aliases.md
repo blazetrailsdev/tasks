@@ -1,7 +1,7 @@
 ---
 title: "New workspace package needs three website vite aliases and nothing guards it"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by make-new-package-registration-self-maintaining (2026-08-17 sweep): merged with guides-typecheck-package-coverage-self-maintaining. All three website vite config files verified still hand-maintained; citations carried forward."
 ---
 
 ## Context
