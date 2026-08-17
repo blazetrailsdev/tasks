@@ -74,6 +74,24 @@ Rails side or reseed the mark upward.
 If the cluster is larger than one PR, ship the files that fit and file the rest
 as a sibling story under this RFC rather than growing the PR.
 
+## Progress
+
+PR #6640 converged 8 of the 20 files: `gzip_test.rb`,
+`callback_inheritance_test.rb`, `configuration_file_test.rb`,
+`deep_mergeable_test.rb`, `option_merger_test.rb`, `digest_test.rb`,
+`xml_mini/xml_mini_engine_test.rb`, `environment_inquirer_test.rb` — each now at
+0 assertion-count / 0 kind / 0 value.
+
+The other 12 (`test_case_test.rb`, `callbacks_test.rb`, `xml_mini_test.rb`,
+`number_helper_test.rb`, `current_attributes_test.rb`,
+`testing/method_call_assertions_test.rb`, `json/encoding_test.rb`,
+`parameter_filter_test.rb`, `configurable_test.rb`, `array_inquirer_test.rb`,
+`string_inquirer_test.rb`, `json/decoding_test.rb`) are untouched and are owned
+by `assertions-activesupport-cluster-tail`, which records the specific blocker
+per file — four of them need an implementation convergence rather than a test
+edit. Whoever claims this next only has those 12 left; measure first, since the
+8 above already report clean.
+
 ## Acceptance criteria
 
 - Every file listed above reports 0 assertion-count, 0 assertion-kind and 0
