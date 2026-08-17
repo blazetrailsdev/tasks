@@ -1,6 +1,6 @@
 ---
 title: "Keep one excluding body across the without alias without a __callee__ helper"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6627
 claim: "2026-08-17T02:22:52Z"
 assignee: "converge-parameter-filter-ignore-case-onto-inline-group"
 blocked-by: null
