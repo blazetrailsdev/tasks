@@ -56,3 +56,30 @@ this story.
 - [ ] `pnpm parity:api:calls` clean with no new baseline row for `root=`.
 - [ ] The stored root still expands a relative value against the working
       directory (existing trailties engine/configuration tests stay green).
+
+## Second consumer: `FileStore`'s cache_dir (added by PR #6652)
+
+`FileStoreTest#setup` builds a third store from a `Pathname` cache dir
+specifically to pin that `FileStore` accepts one:
+
+```ruby
+# vendor/rails/activesupport/test/cache/stores/file_store_test.rb:21
+@cache_with_pathname = lookup_store(cache_dir: Pathname.new(cache_dir), expires_in: 60)
+```
+
+which `test_key_transformation_with_pathname` (file_store_test.rb:67-71) then
+exercises. `FileStore#initialize` is `@cache_path = cache_path.to_s`
+(`vendor/rails/activesupport/lib/active_support/cache/file_store.rb:20-23`), so
+the Pathname arm is the whole point of that test.
+
+With no `Pathname` class to construct, PR #6652 ported the test building the
+store from the same directory as a String, and said so at the call site in
+`packages/activesupport/src/cache/stores/file-store.test.ts`
+(`key transformation with pathname`). The assertions converged, so that file is
+at 0/0/0 — but the Pathname coverage the Rails test exists for is absent.
+
+When this story lands, rebuild `cacheWithPathname` from a real `Pathname` and
+delete that note.
+
+- [ ] `key transformation with pathname` constructs its store from a `Pathname`,
+      and the deviation note in `file-store.test.ts` is deleted.
