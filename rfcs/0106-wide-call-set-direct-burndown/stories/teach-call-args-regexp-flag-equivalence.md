@@ -1,7 +1,7 @@
 ---
 title: "Teach the call-arg normalizer Ruby's Regexp flag boolean is JS's flag string"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T00:00:01Z"
+assignee: "teach-call-args-regexp-flag-equivalence"
 blocked-by: null
 closed-reason: null
 ---

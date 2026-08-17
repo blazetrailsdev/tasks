@@ -1,7 +1,7 @@
 ---
 title: "Make ParameterFilter's case-flag expansion total so every group emits one Regexp"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T00:00:01Z"
+assignee: "teach-call-args-regexp-flag-equivalence"
 blocked-by: null
 closed-reason: null
 ---
