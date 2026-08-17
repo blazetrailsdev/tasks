@@ -1,6 +1,6 @@
 ---
 title: "Call-order comparison should follow Ruby argument-evaluation order, not TS token order"
-status: claimed
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6404
 claim: "2026-08-17T16:56:50Z"
 assignee: "call-arg-comparator-attr-reader-false-positives"
 blocked-by: null
