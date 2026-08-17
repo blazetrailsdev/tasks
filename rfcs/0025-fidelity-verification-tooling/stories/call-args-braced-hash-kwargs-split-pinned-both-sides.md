@@ -1,7 +1,7 @@
 ---
 title: "pin the keyword-shaped-hash vs opaque-hash split across both call-arg extractors"
-status: draft
-updated: 2026-08-09
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by complete-call-arg-descriptor-grammar-both-sides (2026-08-17 sweep): merged with call-args-descriptor-grammar-aref-regexp-forward. Citations carried forward."
 ---
 
 ## Context
