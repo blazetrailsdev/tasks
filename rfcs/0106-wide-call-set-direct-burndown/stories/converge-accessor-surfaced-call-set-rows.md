@@ -1,6 +1,6 @@
 ---
 title: "Converge the 73 call-set rows surfaced by recording accessor call sets"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: null
+pr: 6666
 claim: "2026-08-17T19:47:58Z"
 assignee: "class-for-adapter-extracts-resolve-task"
 blocked-by: null
