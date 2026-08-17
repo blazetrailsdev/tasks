@@ -70,6 +70,30 @@ Rails side or reseed the mark upward.
 If the cluster is larger than one PR, ship the files that fit and file the rest
 as a sibling story under this RFC rather than growing the PR.
 
+## Progress
+
+PR #6640 converged 8 of the 16 files: `cache/cache_store_namespace_test.rb`,
+`cache/stores/memory_store_test.rb`, `cache/stores/null_store_test.rb`
+(every test but the two `local_store_*` ones),
+`security_utils_test.rb`, `message_pack/cache_serializer_test.rb`,
+`secure_compare_rotator_test.rb`, `message_verifier_test.rb`,
+`messages/serializer_with_fallback_test.rb` — each now at 0 assertion-count /
+0 kind / 0 value.
+
+Still unconverged, and owned by `assertions-activesupport-cluster-tail`, which
+records the specific blocker per file: `cache/stores/file_store_test.rb`,
+`cache/cache_store_setting_test.rb`, `encrypted_file_test.rb`,
+`key_generator_test.rb`, `cache/behaviors/cache_store_behavior.rb`,
+`cache/behaviors/cache_instrumentation_behavior.rb`,
+`cache/behaviors/cache_store_coder_behavior.rb`,
+`cache/behaviors/cache_delete_matched_behavior.rb`, plus
+`null_store_test.rb`'s `local_store_strategy` / `local_store_repeated_reads`
+(they need `Cache::Strategy::LocalCache#with_local_cache`, unported).
+`key_generator_test.rb` likewise needs an implementation convergence
+(`KeyGenerator.hash_digest_class` + the Rails `inspect`) rather than a test edit.
+Whoever picks this up should measure first, since the 8 above already report
+clean.
+
 ## Acceptance criteria
 
 - Every file listed above reports 0 assertion-count, 0 assertion-kind and 0
