@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 4
 pr: null
 claim: "2026-08-17T18:08:11Z"
 assignee: "compute-cache-version-makes-rails-calls"
