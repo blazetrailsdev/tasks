@@ -1,6 +1,6 @@
 ---
 title: "Ruby Array#first has no TS call spelling — compute_cache_version carries a @missingRailsCall tag for it"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
