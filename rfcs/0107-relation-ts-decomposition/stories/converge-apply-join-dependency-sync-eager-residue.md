@@ -1,6 +1,6 @@
 ---
 title: "converge-apply-join-dependency-sync-eager-residue"
-status: claimed
+status: ready
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: "2026-08-17T12:10:23Z"
-assignee: "converge-batches-order-validation-kernel-array"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
