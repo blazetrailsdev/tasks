@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-parse-heuristic-remainder"
-status: claimed
+status: ready
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-17T18:14:01Z"
-assignee: "port-test-date-parse-formats-iso8601-family"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
