@@ -1,7 +1,7 @@
 ---
 title: "Unbuilt worktree silently measures a smaller parity:api:extra surface than a built one"
-status: ready
-updated: 2026-07-30
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done, verified 2026-08-17: acceptance option (b) is implemented. Running pnpm parity:api in a worktree with unbuilt packages now refuses to emit totals, listing each NotBuilt package and stating 'An unbuilt package does not resolve to nothing harmlessly ... the totals change on the next run purely because a build happened in between', with API_COMPARE_ALLOW_STALE_BUILD=1 as the explicit opt-out. Confirmed by hitting it directly during this sweep (14 packages with no dist). build-freshness.ts carries the guard and build-freshness.test.ts covers it. If docs/infrastructure/api-compare-baselining.md still documents the no-dist exemption as intended, that doc bullet is a small follow-up, not a reason to hold this open."
 ---
 
 ## Context
