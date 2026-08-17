@@ -1,7 +1,7 @@
 ---
 title: "pair a Ruby writer with setX rather than the reader in the call gates"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by precise-call-pairing-key-for-owner-static-and-accessor (2026-08-17 sweep): all five are one root cause — the <package,tsFile,rubyName> row key cannot name the member on either side. Every citation and baselined row from this story is carried into that body as an acceptance criterion."
 ---
 
 ## Context
