@@ -1,6 +1,6 @@
 ---
 title: "Same-file closure resolves calls on a foreign receiver as same-file methods"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T19:08:15Z"
+assignee: "closure-resolves-foreign-receiver-calls-as-same-file-methods"
 blocked-by: null
 closed-reason: null
 ---
