@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-17T13:10:28Z"
 assignee: "assertions-activesupport-cluster-tail-2"
-blocked-by: "Verified again on 2026-08-17: moving `length` into RECORD_DELEGATES/DelegationMethods (typecheck + relation, relation/delegation, collection-proxy suites all green) still reds `pnpm parity:api:calls` with two spurious rows in UNRELATED relation.ts methods — `create_or_find_by with_connection` and `to_sql with_connection`. Neither TS body calls withConnection or ever did; the credit leaked from length's presence in the class body. Baselining them would ratify pre-existing divergence in methods this story does not touch, so this stays blocked on call-credit-leaks-across-sibling-methods-in-a-class (0025-fidelity-verification-tooling)."
+blocked-by: "Verified again on 2026-08-17: moving `length` into RECORD_DELEGATES/DelegationMethods (typecheck + relation, relation/delegation, collection-proxy suites all green) still reds `pnpm parity:api:calls` with two spurious rows in UNRELATED relation.ts methods — `create_or_find_by with_connection` and `to_sql with_connection`. Neither TS body calls withConnection or ever did; the credit leaked from length's presence in the class body. Baselining them would ratify pre-existing divergence in methods this story does not touch, so this stays blocked on precise-call-pairing-key-for-owner-static-and-accessor (0025-fidelity-verification-tooling; the merged story that now owns this, after the 2026-08-17 draft sweep closed call-credit-leaks-across-sibling-methods-in-a-class into it)."
 closed-reason: null
 ---
 
