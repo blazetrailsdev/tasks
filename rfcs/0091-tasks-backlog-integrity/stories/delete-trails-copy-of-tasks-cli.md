@@ -39,7 +39,7 @@ duplicate that still costs CI time and will silently drift from the live one:
 the reason once written here: it has **moved into this repo** as
 `scripts/refine-done.sh` (tasks#64), along with its never-merged sibling
 `rfc-refine-done.sh`. The old rationale — "invoked by trails refine agents" —
-was simply wrong: refine agents run in a *tasks* worktree (btwhooks spawns them
+was simply wrong: refine agents run in a _tasks_ worktree (btwhooks spawns them
 with `RepoDir=<tasks checkout>`), so the script was in trails only by accident
 of where it was first written. trails#6658 deletes the trails copy.
 
