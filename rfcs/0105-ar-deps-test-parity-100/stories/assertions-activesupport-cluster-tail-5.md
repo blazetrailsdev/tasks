@@ -53,9 +53,18 @@ values. Do not reword test names, and never reseed
 
 - Each file above reports 0 assertion-count, 0 assertion-kind and 0
   assertion-value mismatches in
-  `pnpm parity:test -- --assertions --package activesupport`, except
-  `xml_mini_test.rb`, whose five remaining rows are the vacuous `Date.new`
-  arity assertion above — leave them and cite the comment.
+  `pnpm parity:test -- --assertions --package activesupport`, except:
+  - `xml_mini_test.rb`, whose five remaining rows are the vacuous `Date.new`
+    arity assertion above — leave them and cite the comment.
+  - `json/encoding_test.rb`'s `utf8 string encoded properly`, which follows each
+    of its two `assert_equal` result checks with
+    `assert_equal(Encoding::UTF_8, result.encoding)` (encoding_test.rb:74-82).
+    A JS string is a UTF-16 code-unit sequence with no `Encoding` object to name
+    — the same language shortcoming `SKIP_GROUPS` already cites for
+    `Multibyte::Chars` (docs/ruby-ts-conventions.md) — so 2 of the 4 assertions
+    have no counterpart. Port the two value assertions and leave the row at
+    1 count / 1 kind; the drop is documented at encoding.test.ts's
+    `utf8 string encoded properly`.
 - `scripts/test-compare/assertion-mismatch-mark.json` lowered by this story's
   contribution (activesupport is at 955 / 1308 / 114).
 - No test name changes; the activesupport `pnpm parity:test` percent does not
