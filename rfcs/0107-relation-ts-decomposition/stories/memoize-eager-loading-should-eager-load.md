@@ -1,6 +1,6 @@
 ---
 title: "Memoize eager_loading? as @should_eager_load and clear it in reset"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
