@@ -1,6 +1,6 @@
 ---
 title: "Date's builder seats answer Date, not rb_obj_class(self)"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
