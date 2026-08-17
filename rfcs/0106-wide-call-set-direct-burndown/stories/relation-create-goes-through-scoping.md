@@ -1,7 +1,7 @@
 ---
 title: "Relation#create/#create! should route through scoping and current_scope_restoring_block"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: the scoping rows are no longer baselined. origin/main relation.json has no 'create -> current_scope_restoring_block', no 'create -> scoping', and no create! rows at all. The single surviving row 'create -> relation_class_for' now carries a reviewed per-site verdict: it is a homonym — relation_class_for is called by Relation::ClassMethods.create (delegation.rb:139-141), while relation.ts's create ports Relation#create (relation.rb:154-161), which makes no such call. No convergence available."
 ---
 
 # `Relation#create` / `#create!` should go through `scoping` and `current_scope_restoring_block`
