@@ -1,7 +1,7 @@
 ---
 title: "Inline _excludingArgs/_countMatching/_patternMatcher/_whereMatchesUnscopedBaseline"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: ["activerecord"]
