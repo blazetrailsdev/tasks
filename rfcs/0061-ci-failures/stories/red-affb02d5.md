@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc Tests, Active Record SQLite :memory: Tests failing on main @affb02d5"
-status: claimed
+status: closed
 updated: 2026-08-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: "2026-08-17T15:14:17Z"
-assignee: "red-affb02d5"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "GitHub Actions infra: both jobs failed downloading pnpm/action-setup (503/429 from codeload) before any code ran"
 ---
 
 ## Context
