@@ -1,7 +1,7 @@
 ---
 title: "Extract methods from literal-array .each/class_eval codegen"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by extract-ruby-metaprogrammed-member-definitions (2026-08-17 sweep): merged with api-compare-cannot-see-struct-and-define-method-members. time-with-zone.ts re-measured at 15 novel incl. min/mon/msec; citations carried forward."
 ---
 
 ## Context
