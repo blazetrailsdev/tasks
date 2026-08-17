@@ -82,3 +82,62 @@ Anything it cannot resolve stays novel, as today.
 - `scripts/api-compare` unit tests cover all three shapes, including a
   `define_method` whose name source is NOT a literal constant (still novel).
 - No package's novel count rises.
+
+## Correction and re-scope — 2026-08-17
+
+**The premise as originally written is wrong and is withdrawn.** This body says
+`extract-ruby-api.rb` "only sees members written as `def`". It does not, and has
+not for some time — `grep -c define_method` returns **37**. The extractor already
+carries `process_define_method_block` / `process_define_method` (`:1541`,
+`:1547`) for literal-name `define_method`, `process_each_metaprogramming`
+(`:1579`) which unrolls a **literal-array** `.each` loop metaprogramming
+interpolated names, and `process_each_codegen` (`:1748`) for the
+`CONST.each … class_eval "def #{name}…"` shape, plus `process_define_column_methods`,
+`process_alias_method`, `process_delegate`, `process_scope`, `process_mattr` and
+`process_attr`. Two RFC 0025 stories that predate all of that
+(`ruby-extractor-records-define-method-names`,
+`extractor-capture-define-method-loop-surface`) were closed as done in the same
+sweep on this evidence.
+
+The two gaps this story cites are still real — both re-measured 2026-08-17 —
+but they are **narrower than the body claims**:
+
+1. **`Struct.new`** — `locale/tag/rfc4646.ts` still reports 5 novel. No
+   `Struct` handling exists in the extractor.
+2. **Literal-array receiver for the `.each … class_eval` codegen** —
+   `time-with-zone.ts` still reports 15 novel including `min`, `mon`, `msec`.
+   `process_each_codegen` resolves a **constant** receiver via
+   `resolve_const_symbol_array` but rejects a literal array, while
+   `process_each_metaprogramming` handles a literal array but only for the
+   `define_method` template, not `class_eval`. The two recorders each cover one
+   axis of a 2x2 and the `%w(...).each { class_eval }` corner falls between them.
+
+## Also absorbs `extractor-unrolls-const-driven-define-method-loops`
+
+That story is the **fourth corner of the same 2x2**: a **constant** receiver
+driving a `define_method` loop. Its own body diagnoses it exactly —
+"`resolve_const_symbol_array` already resolves a symbol-array constant to its
+members across files, and `process_each_codegen` already uses it — but only for
+the `class_eval "def #{name}…"` template shape ... The `CONST.each { define_method … }`
+combination falls between the two recorders." Closed into this story, since
+fixing one corner without the other leaves the same seam.
+
+The real shape of the work, then, is: make receiver kind (literal array vs
+resolved constant) and template kind (`define_method` vs `class_eval`)
+**independent** in one recorder, rather than two recorders each hard-wired to
+one pair — plus `Struct.new` as a separate, smaller addition.
+
+## Revised acceptance criteria
+
+- All four receiver x template combinations are recorded by one code path:
+  literal-array/`define_method` (works today), constant/`class_eval` (works
+  today), literal-array/`class_eval` (gap), constant/`define_method` (gap).
+- `Struct.new(*CONST)` / `Struct.new(:a, :b)` members are recorded as readers
+  and `new` as a constructor.
+- `pnpm parity:api:extra --package i18n` reports 0 novel for
+  `locale/tag/rfc4646.ts`; `time-with-zone.ts`'s delegated readers stop
+  appearing in the activesupport report and `parity:api`'s activesupport method
+  count moves up.
+- A `define_method` whose name source is neither a literal nor a resolvable
+  constant stays novel — covered by a unit test.
+- No package's novel count rises.
