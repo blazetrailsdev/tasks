@@ -1,7 +1,7 @@
 ---
 title: "make-transliterate-raise-on-non-strings"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
