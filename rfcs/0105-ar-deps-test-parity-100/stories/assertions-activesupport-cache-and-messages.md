@@ -1,7 +1,7 @@
 ---
 title: "activesupport Cache / MessageVerifier / key-generation assertion parity"
-status: ready
-updated: 2026-08-14
+status: claimed
+updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T10:49:51Z"
+assignee: "assertions-activesupport-cache-and-messages"
 blocked-by: null
 closed-reason: null
 ---
