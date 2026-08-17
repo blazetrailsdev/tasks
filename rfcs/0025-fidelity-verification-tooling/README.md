@@ -3,11 +3,13 @@ rfc: "0025-fidelity-verification-tooling"
 title: "Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules"
 status: postponed
 created: 2026-06-12
-updated: 2026-08-09
+updated: 2026-08-17
 owner: "@deanmarano"
 packages:
   - activerecord
   - arel
+  - activesupport
+  - activemodel
 clusters:
   - api-compare
   - lint

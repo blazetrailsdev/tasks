@@ -29,7 +29,7 @@
 | [0022-singular-association-holder](rfcs/0022-singular-association-holder/README.md) | Singular-association holder & _cachedAssociations deletion | closed | @deanmarano | activerecord, activemodel |
 | [0023-surfaced-deviations](rfcs/0023-surfaced-deviations/README.md) | Surfaced deviations & follow-ups — standing backlog for port-discovered work | postponed | @deanmarano | — |
 | [0024-tasks-cli-coverage](rfcs/0024-tasks-cli-coverage/README.md) | tasks CLI full coverage — no hand-editing the tasks repo | closed | @deanmarano | — |
-| [0025-fidelity-verification-tooling](rfcs/0025-fidelity-verification-tooling/README.md) | Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules | postponed | @deanmarano | activerecord, arel |
+| [0025-fidelity-verification-tooling](rfcs/0025-fidelity-verification-tooling/README.md) | Fidelity verification tooling — options-key/constants/deprecation parity, error-class + raw-SQL lint rules | postponed | @deanmarano | activerecord, arel, activesupport, activemodel |
 | [0026-adapter-layout-fidelity](rfcs/0026-adapter-layout-fidelity/README.md) | Adapter layout fidelity — adapter classes hold only what their Rails counterpart holds | closed | @deanmarano | activerecord |
 | [0027-join-dependency-fidelity](rfcs/0027-join-dependency-fidelity/README.md) | JoinDependency fidelity — converge internal state model to Rails' build-once walk/construct shape | closed | @deanmarano | activerecord |
 | [0028-ci-cost-optimization](rfcs/0028-ci-cost-optimization/README.md) | CI cost optimization — cut billed Actions minutes and time-to-green | closed | @deanmarano | — |
