@@ -9,6 +9,7 @@ packages:
   - activerecord
   - arel
   - activesupport
+  - "actionview"
 clusters:
   - "api-compare"
 related-rfcs:

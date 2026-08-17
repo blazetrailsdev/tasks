@@ -1,13 +1,15 @@
 ---
-title: "converge-constructor-closure-unmasked-call-omissions"
+title: "Converge the four call omissions unmasked by the constructor-closure fix"
 status: draft
 updated: 2026-08-14
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0084-wide-call-set-burndown"
 cluster: null
-packages: []
+packages:
+  - "activesupport"
+  - "actionview"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -44,3 +46,7 @@ porting the call, not by the gate going quiet.
 - Each of the four bodies calls what Rails calls.
 - The four baseline rows are deleted (only-shrink), and the resulting stale
   high-water marks tightened with `pnpm parity:api:calls:tighten`.
+
+_Re-filed from RFC 0025 in the 2026-08-17 draft sweep: this is a convergence
+story (four baselined bodies to port), not verification tooling. It was
+surfaced by a 0025 extractor fix, which is why it was originally filed there._
