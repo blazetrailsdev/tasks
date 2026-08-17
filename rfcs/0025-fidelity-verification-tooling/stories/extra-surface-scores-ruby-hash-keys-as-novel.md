@@ -1,7 +1,7 @@
 ---
 title: "api:extra counts ported Ruby Hash constant keys as invented surface"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by credit-ruby-hash-and-option-keys-as-ruby-surface (2026-08-17 sweep): same root cause as extra-surface-credits-ruby-option-keys — Ruby Symbol/String hash keys never enter the allowed set. xml-mini.ts re-measured at 11 novel; citations carried forward."
 ---
 
 ## Context
