@@ -1,6 +1,6 @@
 ---
 title: "Route Time#to_fs and Date#to_fs through the DATE_FORMATS registry, deleting time-ext.ts's hand-rolled switch"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
