@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: run the allowlist gate in CI so stale entries can't rot"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done, verified 2026-08-17: every acceptance criterion is met. .github/workflows/ci.yml:1397 runs 'pnpm exec tsx scripts/api-compare/extra-surface.ts' in the Rails API/Test Comparison job, after the step that writes the manifests, and the step comment records deliberately passing no --exclude-glob ('an exclusion disarms the stale gate'). The report is unchanged, so the stats pipeline is unaffected. The 2026-08-17 run reports 149 tags, 149 matched, 0 unclassified. Note the allowlist itself (extra-surface-allow.json) was retired by RFC 0080 in favour of @noRailsEquivalent tags, which the gate now enforces instead. Duplicate coverage with wire-extra-surface-into-ci, which has been narrowed to the one piece neither story delivered: a per-package only-shrink NOVEL high-water mark."
 ---
 
 ## Context
