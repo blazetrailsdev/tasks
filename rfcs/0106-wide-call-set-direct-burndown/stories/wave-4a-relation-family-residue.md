@@ -5,7 +5,11 @@ updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: ["activerecord"]
-deps: []
+deps:
+  - ruby-empty-predicate-has-no-ts-call-spelling
+  - compute-cache-version-makes-rails-calls
+  - relation-arel-build-arel-routing
+  - converge-execute-grouped-calculation-body-to-rails-source-order
 deps-rfc: []
 est-loc: 600
 priority: 6
