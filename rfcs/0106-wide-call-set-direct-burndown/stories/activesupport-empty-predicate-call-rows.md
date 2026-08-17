@@ -1,6 +1,6 @@
 ---
 title: "activesupport-empty-predicate-call-rows"
-status: claimed
+status: blocked
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: 2
 pr: null
 claim: "2026-08-17T18:48:11Z"
 assignee: "activesupport-empty-predicate-call-rows"
-blocked-by: null
+blocked-by: "Depends on the isEmpty helper added by unmerged PR #6660 (ruby-empty-predicate-has-no-ts-call-spelling); packages/activerecord/src/ruby-empty.ts does not exist in origin/main, so the 'move it to activesupport' work cannot be done without stacking on that branch. Unblock once #6660 merges."
 closed-reason: null
 ---
 
