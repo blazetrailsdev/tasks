@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version should call quote_column_name, type_for_attribute, to_fs and first"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T18:08:11Z"
+assignee: "compute-cache-version-makes-rails-calls"
 blocked-by: null
 closed-reason: null
 ---
