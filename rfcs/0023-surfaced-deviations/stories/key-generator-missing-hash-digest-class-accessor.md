@@ -1,6 +1,6 @@
 ---
 title: "KeyGenerator lacks the class-level hash_digest_class accessor and ships a bespoke inspect"
-status: draft
+status: done
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6641
 claim: null
 assignee: null
 blocked-by: null
