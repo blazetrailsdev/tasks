@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-array-extract-enumerator-arm"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6637
 claim: "2026-08-17T10:25:53Z"
 assignee: "assertions-activesupport-array-extract-enumerator-arm"
 blocked-by: null
