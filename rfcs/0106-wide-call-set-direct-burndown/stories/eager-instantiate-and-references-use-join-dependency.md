@@ -1,7 +1,7 @@
 ---
 title: "instantiate_records and references_eager_loaded_tables? should use the join dependency / build_joins"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: both cited rows are absent from origin/main scripts/api-compare/call-mismatches-exclude/activerecord/relation.json. 'instantiate_records -> instantiate' and 'references_eager_loaded_tables? -> build_joins, order:map,flatMap' no longer appear in the 18-entry baseline (retired during the wave-1/wave-2 PRs #6563/#6584). The only references_eager_loaded_tables? row left is '-> empty?', which carries a reviewed per-site reason (Ruby Array#- + Array#empty? has no TS callee) and belongs to ruby-empty-predicate-has-no-ts-call-spelling."
 ---
 
 # `instantiate_records` and `references_eager_loaded_tables?` should use the join dependency Rails uses
