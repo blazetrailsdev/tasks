@@ -1,7 +1,7 @@
 ---
 title: "activesupport Time / Date / DateTime / Duration core_ext assertion parity"
-status: ready
-updated: 2026-08-14
+status: claimed
+updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T11:25:49Z"
+assignee: "assertions-activesupport-core-ext-date-time-duration"
 blocked-by: null
 closed-reason: null
 ---
