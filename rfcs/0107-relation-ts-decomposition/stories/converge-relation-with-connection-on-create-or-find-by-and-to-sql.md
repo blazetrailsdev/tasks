@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-with-connection-on-create-or-find-by-and-to-sql"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T22:06:05Z"
+assignee: "converge-lock-value-stores-locks-not-clause-string"
 blocked-by: null
 closed-reason: null
 ---
