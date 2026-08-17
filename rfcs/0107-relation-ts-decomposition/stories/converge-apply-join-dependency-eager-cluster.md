@@ -1,6 +1,6 @@
 ---
 title: "Converge the eager-load limit/distinct-PK cluster onto apply_join_dependency"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["retire-relation-parallel-join-resolver"]
 deps-rfc: []
 est-loc: 575
 priority: null
-pr: null
+pr: 6634
 claim: "2026-08-17T09:26:07Z"
 assignee: "converge-apply-join-dependency-eager-cluster"
 blocked-by: null
