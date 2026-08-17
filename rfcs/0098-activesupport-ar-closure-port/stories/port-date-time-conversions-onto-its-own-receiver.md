@@ -1,6 +1,6 @@
 ---
 title: "Port date_time/conversions.rb onto the DateTime receiver; port to_i / to_f"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
