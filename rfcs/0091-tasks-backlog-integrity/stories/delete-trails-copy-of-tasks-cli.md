@@ -1,6 +1,6 @@
 ---
 title: "delete-trails-copy-of-tasks-cli"
-status: draft
+status: blocked
 updated: 2026-08-17
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocked on blazetrailsdev/tasks#63 (the CLI move) and trails#6653 (the pnpm tasks shim). Both must merge before the trails copy can be deleted."
 closed-reason: null
 ---
 
