@@ -39,7 +39,7 @@ import {
   writeFileSync,
 } from "node:fs";
 import { homedir, tmpdir } from "node:os";
-import { join, resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 
@@ -52,29 +52,61 @@ const envDir = (v: string | undefined): string | undefined => {
   return t ? t : undefined;
 };
 
+export const CANONICAL_TASKS_DIR = join(homedir(), "github", "blazetrailsdev", "tasks");
+
+// A git working tree with this repo's shape at its root.
+function isTasksCheckout(dir: string): boolean {
+  return (
+    existsSync(join(dir, ".git")) &&
+    existsSync(join(dir, "scripts", "cli.ts")) &&
+    existsSync(join(dir, "rfcs"))
+  );
+}
+
+// Nearest enclosing tasks checkout, walking up from cwd.
+export function enclosingTasksCheckout(cwd: string): string | undefined {
+  let dir = resolve(cwd);
+  for (;;) {
+    if (isTasksCheckout(dir)) return dir;
+    const parent = dirname(dir);
+    if (parent === dir) return undefined;
+    dir = parent;
+  }
+}
+
 // Resolution order:
 //   1. $TASKS_DIR env var (explicit user override)
 //   2. $RFCS_DIR env var (transition fallback)
 //   3. <cwd>/tasks if that directory has a .git entry (per-worktree symlink
 //      created by start-worktree.sh)
-//   4. ~/github/blazetrailsdev/tasks (canonical fallback)
+//   4. the tasks checkout enclosing cwd, so running the CLI from inside a
+//      tasks worktree acts on THAT worktree. Without this arm it fell through
+//      to the canonical checkout — shared by every agent, and trunk-only, so
+//      the mutation landed on main from a tree the caller never chose.
+//   5. ~/github/blazetrailsdev/tasks (canonical fallback)
 export function resolveTasksDir(cwd = process.cwd()): string {
   const explicit = envDir(process.env.TASKS_DIR) ?? envDir(process.env.RFCS_DIR);
   if (explicit) return explicit;
   const local = join(cwd, "tasks");
   if (existsSync(join(local, ".git"))) return local;
-  return join(homedir(), "github", "blazetrailsdev", "tasks");
+  return enclosingTasksCheckout(cwd) ?? CANONICAL_TASKS_DIR;
 }
 
 export const TASKS_DIR = resolveTasksDir();
 
-// True when TASKS_DIR resolved to the per-worktree symlink (not from env
-// var and not the canonical fallback). Read commands sync from origin/main
-// before loading the index so a per-worktree checkout never serves stale data.
-const TASKS_DIR_IS_SYMLINK =
-  TASKS_DIR !== join(homedir(), "github", "blazetrailsdev", "tasks") &&
-  !envDir(process.env.TASKS_DIR) &&
-  !envDir(process.env.RFCS_DIR);
+// True when TASKS_DIR is a checkout the caller reached implicitly and which is
+// not the canonical one — the per-worktree symlink (arm 3) or an enclosing
+// tasks worktree (arm 4). Such a checkout sits on its own branch or a detached
+// HEAD, so mutations push `HEAD:main` rather than `main`, and read commands
+// sync from origin/main first so it never serves stale data.
+export function tasksDirIsNonCanonical(
+  tasksDir: string,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  return tasksDir !== CANONICAL_TASKS_DIR && !envDir(env.TASKS_DIR) && !envDir(env.RFCS_DIR);
+}
+
+const TASKS_DIR_IS_NON_CANONICAL = tasksDirIsNonCanonical(TASKS_DIR);
 
 export type StoryStatus =
   | "draft"
@@ -1428,7 +1460,7 @@ function flip(
     // branch name. Canonical checkout: bare "main" preserves the branch
     // guard so a stray-branch checkout fails loudly rather than pushing
     // stale content to origin/main.
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     mutator: () => {
       const written = mutate(targets) ?? targets.map((t) => t.file);
       for (const file of written) editFrontmatter(file, { updated: today() });
@@ -2051,7 +2083,7 @@ function rfc(
     fileToStage: file,
     raceMessage: RETRY_MSG(slug),
     raceExitCode: 4,
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     mutator: () => {
       if (status !== undefined) {
         const scalar: Record<string, string> = { status };
@@ -2374,7 +2406,7 @@ function edit(idOrSlug: string): void {
     fileToStage: file,
     raceMessage: RETRY_MSG(idOrSlug),
     raceExitCode: 4,
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     mutator: () => {
       writeFileSync(file, edited);
       editFrontmatter(file, { updated: today() });
@@ -2722,7 +2754,7 @@ export function newStory(
     raceMessage: `failed to create ${storySlug} after retry — pull manually and retry`,
     raceExitCode: 4,
     cwd: tasksDir,
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     createdPath: storyFile,
   });
   console.log(`created ${rfcSlug}/stories/${storySlug}.md`);
@@ -2888,7 +2920,7 @@ export function finalize(slug: string, dryRun: boolean, tasksDir = TASKS_DIR): v
     raceMessage: `lost finalize race on ${slug} — pull manually and retry`,
     raceExitCode: 4,
     cwd: tasksDir,
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     mutator: () => {
       // Re-check after the pull: a concurrent finalize may have already numbered
       // and renamed this dir away, in which case there is nothing left to do.
@@ -3089,7 +3121,7 @@ export function newRfc(
     raceMessage: `failed to create ${rfcId} after retry — pull manually and retry`,
     raceExitCode: 4,
     cwd: tasksDir,
-    pushRefspec: TASKS_DIR_IS_SYMLINK ? "HEAD:main" : "main",
+    pushRefspec: TASKS_DIR_IS_NON_CANONICAL ? "HEAD:main" : "main",
     createdPath: rfcDir,
   });
   console.log(`created rfcs/${rfcId}/README.md`);

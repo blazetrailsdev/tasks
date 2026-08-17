@@ -83,6 +83,9 @@ import {
   rfcStatusError,
   setFrontmatterList,
   resolveTasksDir,
+  enclosingTasksCheckout,
+  tasksDirIsNonCanonical,
+  CANONICAL_TASKS_DIR,
   closeEdits,
   closeError,
   isDepResolved,
@@ -3564,6 +3567,81 @@ describe("resolveTasksDir (TASKS_DIR resolution order)", () => {
     withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
       expect(resolveTasksDir(cwd)).toBe(join(homedir(), "github", "blazetrailsdev", "tasks"));
     });
+  });
+
+  function tasksCheckout(prefix: string): string {
+    const dir = mkdtempSync(join(tmpdir(), prefix));
+    writeFileSync(join(dir, ".git"), "gitdir: ../../tasks/.git/worktrees/x\n");
+    mkdirSync(join(dir, "scripts"));
+    writeFileSync(join(dir, "scripts", "cli.ts"), "");
+    mkdirSync(join(dir, "rfcs"));
+    return dir;
+  }
+
+  it("uses the enclosing tasks checkout when cwd is inside one", () => {
+    const checkout = tasksCheckout("tasks-wt-");
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(checkout)).toBe(checkout);
+    });
+  });
+
+  it("finds the enclosing tasks checkout from a nested subdirectory", () => {
+    const checkout = tasksCheckout("tasks-wt-nested-");
+    const nested = join(checkout, "rfcs", "0001-x", "stories");
+    mkdirSync(nested, { recursive: true });
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(nested)).toBe(checkout);
+    });
+  });
+
+  it("does not mistake a directory that merely looks partly like a checkout", () => {
+    const dir = mkdtempSync(join(tmpdir(), "not-tasks-"));
+    mkdirSync(join(dir, "scripts"));
+    writeFileSync(join(dir, "scripts", "cli.ts"), "");
+    expect(enclosingTasksCheckout(dir)).toBeUndefined();
+  });
+
+  it("prefers the <cwd>/tasks symlink over the enclosing checkout", () => {
+    const checkout = tasksCheckout("tasks-wt-both-");
+    const inner = join(checkout, "tasks");
+    mkdirSync(inner);
+    writeFileSync(join(inner, ".git"), "gitdir: elsewhere\n");
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(checkout)).toBe(inner);
+    });
+  });
+
+  it("explicit $TASKS_DIR still wins over the enclosing checkout", () => {
+    const checkout = tasksCheckout("tasks-wt-env-");
+    withEnv({ TASKS_DIR: "/custom/tasks", RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(checkout)).toBe("/custom/tasks");
+    });
+  });
+});
+
+// The refspec this selects is the whole reason arm 4 has to be careful: a
+// checkout reached implicitly sits on its own branch or a detached HEAD, so
+// pushing bare `main` from it would either fail or carry the wrong commits.
+describe("tasksDirIsNonCanonical (push refspec selection)", () => {
+  const noEnv = {} as NodeJS.ProcessEnv;
+
+  it("is false for the canonical checkout, which is on branch main", () => {
+    expect(tasksDirIsNonCanonical(CANONICAL_TASKS_DIR, noEnv)).toBe(false);
+  });
+
+  it("is true for a per-worktree checkout reached implicitly", () => {
+    expect(tasksDirIsNonCanonical("/home/x/github/blazetrailsdev/tasks-worktrees/y", noEnv)).toBe(
+      true,
+    );
+  });
+
+  it("is false whenever $TASKS_DIR or $RFCS_DIR named the directory", () => {
+    expect(tasksDirIsNonCanonical("/anywhere", { TASKS_DIR: "/anywhere" })).toBe(false);
+    expect(tasksDirIsNonCanonical("/anywhere", { RFCS_DIR: "/anywhere" })).toBe(false);
+  });
+
+  it("treats a whitespace-only env var as unset, matching resolveTasksDir", () => {
+    expect(tasksDirIsNonCanonical("/anywhere", { TASKS_DIR: "  " })).toBe(true);
   });
 });
 

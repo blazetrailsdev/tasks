@@ -15,8 +15,10 @@ runnable as `pnpm tasks` from either this repo or a trails worktree, and as
 plain `tasks` once `scripts/install-bin.sh` has put it on your PATH.
 
 `bin/tasks` locates the checkout whose CLI _code_ runs; which working tree the
-CLI _acts on_ is resolved separately, from your cwd — so `pnpm tasks` inside a
-trails worktree operates on that worktree's own `tasks/` checkout.
+CLI _acts on_ is resolved separately, from your cwd. `pnpm tasks` inside a
+trails worktree operates on that worktree's own `tasks/` checkout, and run from
+inside a tasks checkout it operates on _that_ one — never silently on the
+shared canonical clone.
 
 ## Quick start
 
