@@ -1,7 +1,7 @@
 ---
 title: "Re-enable the Website CI job now its build is fixed"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-08-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "closed from dashboard"
 ---
 
 ## Context
