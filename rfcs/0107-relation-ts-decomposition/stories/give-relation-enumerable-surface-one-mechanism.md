@@ -1,6 +1,6 @@
 ---
 title: "Give Relation's Enumerable surface one mechanism instead of three @noRailsEquivalent tags"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
