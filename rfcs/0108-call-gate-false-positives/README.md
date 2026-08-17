@@ -1,5 +1,5 @@
 ---
-rfc: "0000-call-gate-false-positives"
+rfc: "0108-call-gate-false-positives"
 title: "Call-gate false positives — comparator reports a mismatch where the port is faithful"
 status: draft
 created: 2026-08-17
