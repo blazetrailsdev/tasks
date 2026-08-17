@@ -1,6 +1,6 @@
 ---
 title: "BigIntegerType#castValue should follow String#to_i, and inherit Integer#serialize"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6660
 claim: "2026-08-17T17:48:13Z"
 assignee: "call-mismatches-partial-regen-invents-phantom-rows"
 blocked-by: null
