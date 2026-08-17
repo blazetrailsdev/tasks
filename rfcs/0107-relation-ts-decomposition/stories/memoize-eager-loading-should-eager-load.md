@@ -1,6 +1,6 @@
 ---
 title: "Memoize eager_loading? as @should_eager_load and clear it in reset"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6656
 claim: "2026-08-17T16:57:56Z"
 assignee: "extractor-object-literal-keys-are-not-ported-methods"
 blocked-by: null
