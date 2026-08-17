@@ -5,7 +5,8 @@ updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - comparison-validator-check-validity-message-and-temporal-pairs
 deps-rfc: []
 est-loc: 500
 priority: null
