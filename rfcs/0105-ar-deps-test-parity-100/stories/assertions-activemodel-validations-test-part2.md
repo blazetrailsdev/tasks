@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-validations-test-part2"
-status: claimed
+status: ready
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-17T10:37:49Z"
-assignee: "assertions-activemodel-validations-test-part2"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
