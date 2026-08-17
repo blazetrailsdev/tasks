@@ -33,6 +33,34 @@ exists (its cases skipped), and `Cache::Store#instrument` already emits the
 `store` payload the behavior's first case asserts against the local cache's own
 class name.
 
+## Additional evidence (2026-08-17, from PR #6640)
+
+The recorded blocker says NullStore "swallows every write so the 29 behavior
+cases cannot run against it". That holds for `LocalCacheBehavior`, but there are
+**two** tests outside that module which need only `with_local_cache` against
+NullStore and which _expect_ the swallow — so they are reachable without porting
+MemCacheStore or RedisCacheStore:
+
+- `test_local_store_strategy`
+  (`vendor/rails/activesupport/test/cache/stores/null_store_test.rb:63-71`) — 1
+  `assert_equal` + 2 `assert_nil`: inside the block a write is readable and a
+  delete nils it, and after the block the write has _not_ survived. The
+  post-block `assert_nil` is precisely NullStore's swallow.
+- `test_local_store_repeated_reads` (:73-81) — 2 assertions: a repeated `read`
+  is nil and a repeated `read_multi` is `{}`.
+
+Rails reaches them because `null_store.rb:15` prepends the strategy, which the
+blocker already notes. These two are the only assertion-parity residue left in
+`null_store_test.rb` after PR #6640 converged the other ten tests, and they are
+tracked from the test side in
+`0105-ar-deps-test-parity-100/assertions-activesupport-cluster-tail`.
+
+This does not clear the blocker — acceptance criterion 2 (the 29
+`LocalCacheBehavior` cases) still needs a host store, and the `prepend`/`super`
+spelling question is untouched. It does mean a narrower slice exists if the
+blocker is ever re-triaged: `with_local_cache` + `LocalStore` over NullStore,
+without the full behavior suite.
+
 ## Converged shape
 
 Port `Strategy::LocalCache` — `with_local_cache`, `middleware`,
