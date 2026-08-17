@@ -1,21 +1,32 @@
 {
   "name": "@blazetrails/tasks",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "description": "RFCs and structured work tracking for blazetrailsdev/trails",
+  "bin": {
+    "tasks": "./bin/tasks"
+  },
   "scripts": {
+    "tasks": "./bin/tasks",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "typecheck": "tsc --noEmit",
     "validate": "node scripts/validate.mjs",
-    "test": "node scripts/validate-lib.test.mjs",
+    "test": "node scripts/validate-lib.test.mjs && tsc --noEmit && vitest run",
     "build-index": "node scripts/build-index.mjs",
     "verify": "pnpm validate && pnpm build-index && git diff --exit-code index.md || (echo 'committed index.md is stale — run pnpm build-index and recommit' >&2; exit 1)",
     "prepare": "git rev-parse --git-dir > /dev/null 2>&1 && git config core.hooksPath .husky || true"
   },
   "devDependencies": {
+    "@types/node": "^25.3.5",
     "js-yaml": "^4.1.1",
     "markdownlint-cli2": "^0.18.0",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0",
+    "yaml": "^2.8.3"
   }
 }

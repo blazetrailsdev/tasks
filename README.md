@@ -9,7 +9,14 @@ This repo is the source of truth for:
 - **Stories** — discrete units of work, machine-readable via YAML frontmatter
 - **Indices** — `index.md` / `index.json` / `search.json`, auto-generated on commit
 
-The trails repo holds the CLI (`pnpm tasks`) that consumes this repo's contents.
+The CLI that consumes this repo's contents lives here, in
+[`scripts/cli.ts`](scripts/cli.ts), behind [`bin/tasks`](bin/tasks). It is
+runnable as `pnpm tasks` from either this repo or a trails worktree, and as
+plain `tasks` once `scripts/install-bin.sh` has put it on your PATH.
+
+`bin/tasks` locates the checkout whose CLI _code_ runs; which working tree the
+CLI _acts on_ is resolved separately, from your cwd — so `pnpm tasks` inside a
+trails worktree operates on that worktree's own `tasks/` checkout.
 
 ## Quick start
 
@@ -18,7 +25,10 @@ The trails repo holds the CLI (`pnpm tasks`) that consumes this repo's contents.
 cd ~/github/blazetrailsdev
 git clone git@github.com:blazetrailsdev/tasks.git
 
-# In the trails repo
+# Put `tasks` on your PATH (also run by scripts/start-worktree.sh)
+./scripts/install-bin.sh
+
+# From this repo or a trails worktree
 pnpm tasks ready        # list unblocked stories
 pnpm tasks next-bundle  # next cluster bundle ≤ 250 LOC
 pnpm tasks claim <id>   # atomically claim a story
