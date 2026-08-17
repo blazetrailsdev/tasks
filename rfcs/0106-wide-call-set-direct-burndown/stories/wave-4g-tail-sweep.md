@@ -1,6 +1,6 @@
 ---
 title: "Wave 4g: the <=3-row tail sweep"
-status: draft
+status: blocked
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -20,7 +20,7 @@ priority: 12
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Capstone: must not be scheduled until waves 4a-4f are done. The sweep's whole value is that it inherits their class dispositions (first/new/empty?/fetch/any?/merge/map/include?) instead of re-deriving them per site; running it early would produce exactly the per-site reason churn the RFC's non-goals forbid. Deps edge encodes the same constraint. Unblock when the six cluster stories are done."
 closed-reason: null
 ---
 
