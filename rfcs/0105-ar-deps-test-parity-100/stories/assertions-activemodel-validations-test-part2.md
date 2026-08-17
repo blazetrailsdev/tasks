@@ -5,7 +5,8 @@ updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - assertions-activemodel-validations-test
 deps-rfc: []
 est-loc: null
 priority: null
