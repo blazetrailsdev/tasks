@@ -1,7 +1,7 @@
 ---
 title: "Burn down the naming call-argument rows in the activerecord PostgreSQL adapter and its OID types"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: api-compare
 packages: ["activerecord"]

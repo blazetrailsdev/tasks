@@ -1,7 +1,7 @@
 ---
 title: "naming-taxonomy-arel-i18n-globalid-classes"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
