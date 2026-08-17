@@ -5,7 +5,8 @@ updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-model-validates-onto-rails-generic-lookup
 deps-rfc: []
 est-loc: 400
 priority: null
