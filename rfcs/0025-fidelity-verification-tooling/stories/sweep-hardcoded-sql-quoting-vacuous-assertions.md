@@ -1,7 +1,7 @@
 ---
 title: "Sweep test SQL assertions that hardcode double-quoted identifiers and pass vacuously on MySQL"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Already satisfied, verified 2026-08-17: zero hardcoded double-quoted SQL identifiers remain in packages/activerecord/src/**/*.test.ts (grep for FROM "/JOIN "/SELECT-with-escaped-quote returns 0 matches), against 288 uses of quoteTableName/quoteColumnName/quote-regex in those files. The sweep landed organically across the adapter-parity work. No reintroduction guard exists — if one is wanted, that is a separate lint story, not this sweep.'
 ---
 
 ## Context
