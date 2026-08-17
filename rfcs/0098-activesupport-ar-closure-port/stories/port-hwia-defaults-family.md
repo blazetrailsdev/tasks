@@ -1,7 +1,7 @@
 ---
 title: "port-hwia-defaults-family"
-status: ready
-updated: 2026-08-15
+status: claimed
+updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T01:42:50Z"
+assignee: "port-hwia-defaults-family"
 blocked-by: null
 closed-reason: null
 ---
