@@ -1,6 +1,6 @@
 ---
 title: "converge-sync-eager-builders-async-to-sql"
-status: claimed
+status: blocked
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-17T22:06:05Z"
 assignee: "converge-lock-value-stores-locks-not-clause-string"
-blocked-by: null
+blocked-by: "Blocked on an async Relation#toSql (or an async `where`), which cannot ship inside this RFC's 700 LOC PR ceiling: relation.rb:1210-1222 renders through with_connection and apply_join_dependency, whose distinct_relation_for_primary_key branch EXECUTES a query (schema_statements.rb:1429-1452), so trails' applyJoinDependency is async while toSql is consumed synchronously by 412 test and 16 source call sites. The invented sync builders (_applyEagerJoinDependency, _buildEagerIdSubquery, _buildEagerOperandManager, the deferred distinct-PK marker cluster and relation/predicate-builder/deferred-distinct-pk-in.ts) also cover a real MySQL/MariaDB regression -- MySQL rejects IN (SELECT ... LIMIT n) -- so they cannot be deleted before the async path exists. Needs its own PR and its own three-lane adapter run. The sibling toSql with_connection omission is now stated at the call site as a @missingRailsCall tag (relation.ts#toSql) instead of a baseline row."
 closed-reason: null
 ---
 
