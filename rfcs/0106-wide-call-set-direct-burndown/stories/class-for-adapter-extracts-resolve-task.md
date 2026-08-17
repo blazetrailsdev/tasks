@@ -1,6 +1,6 @@
 ---
 title: "class_for_adapter extracts resolveTask where Rails inlines detect"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T19:47:58Z"
+assignee: "class-for-adapter-extracts-resolve-task"
 blocked-by: null
 closed-reason: null
 ---
