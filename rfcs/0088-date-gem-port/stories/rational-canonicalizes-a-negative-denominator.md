@@ -1,6 +1,6 @@
 ---
 title: "Rational() canonicalizes the sign onto the numerator, as nurat_s_canonicalize_internal does"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6635
 claim: "2026-08-17T09:37:51Z"
 assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
 blocked-by: null
