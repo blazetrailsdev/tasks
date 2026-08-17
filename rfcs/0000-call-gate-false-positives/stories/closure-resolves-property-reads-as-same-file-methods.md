@@ -1,8 +1,8 @@
 ---
 title: "Same-file closure resolves receiver-blind property reads as methods"
-status: draft
+status: ready
 updated: 2026-08-14
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
@@ -54,3 +54,7 @@ Still valid. `scripts/api-compare/compare.ts:701` still reads
 `const SYNTHETIC_CALL_NAMES: ReadonlySet<string> = new Set(["constructor"])` — the
 The #6542 fix covers constructors only, and receiver-blind property reads still
 resolve against same-file methods.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._

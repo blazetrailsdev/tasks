@@ -1,8 +1,8 @@
 ---
 title: "Call-order comparison should follow Ruby argument-evaluation order, not TS token order"
-status: draft
+status: ready
 updated: 2026-08-09
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
@@ -79,3 +79,7 @@ including `activerecord/relation/query-methods.json`,
 Re-derive which of those are Ruby-argument-evaluation-order artifacts (the
 interpolated-argument shape the original four had) versus genuine order
 divergence — that triage is now the first task of this story.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._

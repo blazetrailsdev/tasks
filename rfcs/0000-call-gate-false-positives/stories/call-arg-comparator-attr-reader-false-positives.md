@@ -1,8 +1,8 @@
 ---
 title: "Stop the call-arg comparator counting Ruby attr_reader reads as calls"
-status: draft
+status: ready
 updated: 2026-08-11
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
@@ -94,3 +94,7 @@ refresh before starting:
 
 The Ruby-side citations (`association_scope.rb:52`/`:78`, `branch.rb:7`/`:84`/`:93`)
 are unchanged and still the anchor.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._

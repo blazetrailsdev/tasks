@@ -1,8 +1,8 @@
 ---
 title: "parity:api:calls treats object-literal keys as ported methods, so a DEFAULT_BEHAVIORS :raise key reds 67 files"
-status: draft
+status: ready
 updated: 2026-08-09
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
@@ -63,3 +63,7 @@ Still valid, and the deviation is still being carried: `DEFAULT_BEHAVIORS` at
 `ReadonlyMap<DeprecationBehavior, DeprecationBehaviorCallable>` rather than the
 object literal the Ruby Hash naturally maps to. `significantMissingCalls` has
 moved from `compare.ts:300-360` to **`compare.ts:403`** — refresh that citation.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._

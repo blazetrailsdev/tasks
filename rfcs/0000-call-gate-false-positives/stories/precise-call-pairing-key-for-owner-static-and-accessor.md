@@ -1,8 +1,8 @@
 ---
 title: "Give the call-gate row key owner/static/accessor precision"
-status: draft
+status: ready
 updated: 2026-08-17
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: ["activerecord"]
 deps: []
@@ -133,3 +133,7 @@ wrongly (the `ownerRecordsNothing` precedent in `compare.ts`).
   regression test.
 - `scripts/api-compare` unit tests cover all five shapes.
 - No package's call-mismatch row count rises.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._

@@ -1,8 +1,8 @@
 ---
 title: "extract-ts-api records no call set for get accessors, hiding every getter-shaped port from the call gate"
-status: draft
+status: ready
 updated: 2026-08-11
-rfc: "0025-fidelity-verification-tooling"
+rfc: "0000-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
@@ -60,3 +60,7 @@ Still valid, verbatim. `extract-ts-api.ts:2118` — the get-accessor branch — 
 records only `callArgs`, with no `calls`, `callSeq` or `skeleton`, while the
 set-accessor branch immediately below it (`:2136`) has the same gap. Every method
 trails ports as a getter is still invisible to the call-set gate.
+
+_Moved from RFC 0025 in the 2026-08-17 scoping split: RFC 0025 had grown to 262
+stories. This story is a call-gate **false positive** — the tool reports a
+mismatch where the port is faithful — which is the whole scope of the new RFC._
