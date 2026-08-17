@@ -1,6 +1,6 @@
 ---
 title: "isEmptyScope compares values against model.unscoped.values"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T02:22:52Z"
+assignee: "converge-parameter-filter-ignore-case-onto-inline-group"
 blocked-by: null
 closed-reason: null
 ---

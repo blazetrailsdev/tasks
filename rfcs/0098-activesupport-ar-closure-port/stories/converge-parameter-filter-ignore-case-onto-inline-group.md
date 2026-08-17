@@ -1,6 +1,6 @@
 ---
 title: "Converge ParameterFilter's case expansion onto Ruby's inline (?i:...) group"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T02:22:52Z"
+assignee: "converge-parameter-filter-ignore-case-onto-inline-group"
 blocked-by: null
 closed-reason: null
 ---
