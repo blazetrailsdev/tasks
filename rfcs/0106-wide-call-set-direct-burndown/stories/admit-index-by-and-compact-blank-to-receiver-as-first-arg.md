@@ -1,6 +1,6 @@
 ---
 title: "Admit index_by and compact_blank to RECEIVER_AS_FIRST_ARG alongside group_by"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
