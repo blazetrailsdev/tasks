@@ -67,3 +67,11 @@ correct signal), and the fix belongs in the ports.
       rather than converted — the rule is scoped to sync readers.
 - [ ] Confirm the extra-surface totals move only in the intended direction and
       no unrelated Rails reader starts matching a name that was never its port.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Related to the writer-pairing bug closed into
+`precise-call-pairing-key-for-owner-static-and-accessor` in the draft sweep the
+same day: that story fixes which member a Ruby writer pairs with, this one
+decides whether readers gain a `get`-prefixed candidate at all. Sequence this
+after it — the pairing fix may remove the motivating asymmetry.

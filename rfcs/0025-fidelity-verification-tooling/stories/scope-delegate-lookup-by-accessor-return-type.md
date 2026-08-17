@@ -60,3 +60,17 @@ slips through, or it is speculative machinery.
 - Extend the `delegation transparency` describe block in `compare.test.ts` with a
   case where two same-named methods live on unrelated classes and only the
   resolved one may satisfy the call.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/types.ts` -> `scripts/parity/types.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`scripts/api-compare/types.ts` moved to `scripts/parity/types.ts`;
+`compare.ts` stayed put and `isDelegatingWrapper` / `effectiveTsCalls` are
+unchanged.

@@ -60,3 +60,14 @@ limitation. Fixing the resolver is the prerequisite for taking that name back.
   `packages/actionpack/src/action-dispatch/http/content-security-policy.ts`
   back to the Rails name `Request`, and confirm `testing/test_request.rb`
   holds at 13 matched.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations spot-checked against the current tree and still resolve; no path or
+mechanism in this body has been retired. Carried forward unchanged.
+
+General note from the sweep, applies to every `scripts/api-compare/` story: RFC 0092
+moved `conventions.ts`, `types.ts`, `shared-cache.ts` and `write-json-manifest.ts`
+to `scripts/parity/`, and RFC 0084 folded `call-mismatches-wide-exclude/` and
+`lint-call-mismatches-wide.ts` into the single `call-mismatches-exclude/` tree.
+Re-check any such reference before starting.

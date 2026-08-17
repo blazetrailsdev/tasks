@@ -53,3 +53,11 @@ behaviour.
 - Honour `API_COMPARE_ALLOW_STALE_BUILD=1`, consistent with the existing guards.
 - Regression test covering a stale `rails-api.json` and the CI cache-restore
   state that must NOT fire.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid. `scripts/api-compare/build-freshness.ts` exists and carries the
+TS-side guard (plus `API_COMPARE_ALLOW_STALE_BUILD`), but `grep -c 'rails-api'`
+over it returns **0** — the Ruby manifest still has no staleness check. Note the
+sibling story `unbuilt-worktree-measures-reduced-api-surface` was closed as done
+in this sweep; this one is the remaining half.

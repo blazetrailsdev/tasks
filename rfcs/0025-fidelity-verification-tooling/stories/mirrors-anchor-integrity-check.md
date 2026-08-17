@@ -70,3 +70,14 @@ already builds can resolve those: a `Mirrors:` citing
 - Cross-check against `project_rails_name_is_real_path_not_divergent_alias` and
   `project_api_compare_method_must_stay_in_rails_layout_file` — a wrong-file
   `Mirrors:` is the same failure mode those record.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations spot-checked against the current tree and still resolve; no path or
+mechanism in this body has been retired. Carried forward unchanged.
+
+General note from the sweep, applies to every `scripts/api-compare/` story: RFC 0092
+moved `conventions.ts`, `types.ts`, `shared-cache.ts` and `write-json-manifest.ts`
+to `scripts/parity/`, and RFC 0084 folded `call-mismatches-wide-exclude/` and
+`lint-call-mismatches-wide.ts` into the single `call-mismatches-exclude/` tree.
+Re-check any such reference before starting.

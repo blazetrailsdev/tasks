@@ -57,3 +57,9 @@ Not urgent and not a fidelity issue: the function is pure and well covered by
 - [ ] No behavior change: `pnpm parity:api:calls` and the narrow
       `lint-call-mismatches.ts` gate both stay green with unchanged baseline
       counts, and `scripts/api-compare/` tests pass.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+**Line reference stale**: `significantMissingCalls` is now at
+`scripts/api-compare/compare.ts:403` (cited as `:245`). The eight-positional-parameter
+shape is unchanged, so the story holds.

@@ -43,3 +43,11 @@ either side accounts for them today.
 - If they join, state the headline coverage delta in the PR body — these
   outputs feed the stats DB.
 - Tests in `scripts/api-compare/compare.test.ts` pin the chosen rule.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still open and worth prioritising: it is the one story here that moves the
+headline parity number rather than a baseline row count. Re-verify the
+`compare.ts` line range before starting — the file has moved considerably
+(`significantMissingCalls` alone drifted from :245/:300 to :403), so
+`:1321-1339` is almost certainly stale even though the behaviour is not.

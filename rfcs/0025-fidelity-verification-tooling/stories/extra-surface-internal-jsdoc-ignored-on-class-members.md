@@ -80,3 +80,19 @@ delete the invention, or justify an `@internal` at the declaration site. Only
 names that are faithful-but-unmappable (e.g. genuine Ruby file constants or
 nested class names present in the matched Rails file) belong in the allow-set;
 any other allowlisted entry must cite the filed fidelity story next to it.
+
+## Mechanism retired — 2026-08-17
+
+**`scripts/api-compare/extra-surface-allow.json` no longer exists.** RFC 0080
+retired the sidecar allowlist; the `@noRailsEquivalent <reason>` JSDoc tag is now
+the only suppression source, and its reason must open PERMANENT or CONVERGEABLE.
+Any acceptance criterion here phrased as an allowlist entry must be re-expressed
+against the tag before this story is claimed.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid, verbatim — and the premise it corrects is still uncorrected in the
+code. `memberVisibility` is now at **`scripts/api-compare/extract-ts-api.ts:3394`**
+(was cited as `:2052`) and still derives visibility purely from TS modifiers:
+`PrivateKeyword`, `ProtectedKeyword`, `ts.isPrivateIdentifier`, else public.
+No `@internal` JSDoc is read for class members.

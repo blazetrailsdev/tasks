@@ -45,3 +45,22 @@ churn it silently.
 - Note in `write-json-manifest.ts` (or `baseline-json.ts`) that the repo has TWO
   canonical JSON forms on purpose and which files belong to each — today a
   reader has to infer it from which writer a file goes through.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/write-json-manifest.ts` -> `scripts/parity/write-json-manifest.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations spot-checked against the current tree and still resolve; no path or
+mechanism in this body has been retired. Carried forward unchanged.
+
+General note from the sweep, applies to every `scripts/api-compare/` story: RFC 0092
+moved `conventions.ts`, `types.ts`, `shared-cache.ts` and `write-json-manifest.ts`
+to `scripts/parity/`, and RFC 0084 folded `call-mismatches-wide-exclude/` and
+`lint-call-mismatches-wide.ts` into the single `call-mismatches-exclude/` tree.
+Re-check any such reference before starting.

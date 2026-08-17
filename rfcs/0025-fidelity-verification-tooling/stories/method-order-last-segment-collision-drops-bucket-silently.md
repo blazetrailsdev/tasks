@@ -47,3 +47,12 @@ fail) means any future collision is equally silent.
 - Confirm the ordered-name count in
   `eslint/rails-file-structure-method-order.json` grows by the recovered
   bucket (baseline: 1045 files, 14779 ordered names).
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid, verbatim — the warning still prints on every run. Captured from the
+2026-08-17 `pnpm parity:api`:
+`[build-rails-file-structure-manifest] last-segment collision in
+actiondispatch/journey/scanner.rb: 'Scanner' shared by
+ActionDispatch::Journey::Scanner, ActionDispatch::Journey::Scanner::Scanner —
+bucket DROPPED (no order enforced).` One collision, same file as filed.

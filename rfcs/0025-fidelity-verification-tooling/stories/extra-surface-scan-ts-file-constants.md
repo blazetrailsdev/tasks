@@ -70,3 +70,14 @@ delete the invention, or justify an `@internal` at the declaration site. Only
 names that are faithful-but-unmappable (e.g. genuine Ruby file constants or
 nested class names present in the matched Rails file) belong in the allow-set;
 any other allowlisted entry must cite the filed fidelity story next to it.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations spot-checked against the current tree and still resolve; no path or
+mechanism in this body has been retired. Carried forward unchanged.
+
+General note from the sweep, applies to every `scripts/api-compare/` story: RFC 0092
+moved `conventions.ts`, `types.ts`, `shared-cache.ts` and `write-json-manifest.ts`
+to `scripts/parity/`, and RFC 0084 folded `call-mismatches-wide-exclude/` and
+`lint-call-mismatches-wide.ts` into the single `call-mismatches-exclude/` tree.
+Re-check any such reference before starting.

@@ -59,3 +59,8 @@ match, so the extractor needs to union the literals.
       `packages/activerecord/src/migration/change-schema.test.ts` can be
       rewritten back to `currentAdapter(...)` with 0 gate-mismatch.
 - [ ] parity:test gate-mismatch stays at 0 repo-wide.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`scripts/test-compare/gates.ts` still matches only the `adapterType` idiom;
+`currentAdapter(...)` is still unrecognised.

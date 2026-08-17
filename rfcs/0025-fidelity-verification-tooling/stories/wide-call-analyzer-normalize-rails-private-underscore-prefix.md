@@ -65,3 +65,9 @@ contributing the same false entries.
   `_foo` that is genuinely distinct from `foo`. Add a test for both
   directions.
 - No change to `parity:api` method match counts.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Re-express against the merged `call-mismatches-exclude/` tree and
+`lint-call-mismatches.ts` (RFC 0084 folded the wide analyzer in). The
+underscore-normalisation question itself is unaffected by the fold.

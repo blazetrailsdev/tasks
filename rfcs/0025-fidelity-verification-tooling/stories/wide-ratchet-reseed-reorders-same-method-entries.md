@@ -50,3 +50,17 @@ noise into the baseline diff.
       change, produces no diff on the second run and no diff on the first.
 - [ ] A regression test asserts reseed idempotence on a fixture containing two
       entries that share a `rubyName` and differ only in `call`.
+
+## Mechanism retired — 2026-08-17
+
+**The `call-mismatches-wide-exclude/` tree no longer exists** — RFC 0084 folded it
+into `call-mismatches-exclude/`. Re-express against the merged tree.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still worth confirming, but **the reproduction case is gone**: the cited file
+`call-mismatches-wide-exclude/activerecord-test-support/load-schema-helper.json`
+no longer exists (RFC 0084 folded the tree). Re-run `pnpm parity:api:calls --write`
+on a clean tree against `call-mismatches-exclude/` and check whether same-`rubyName`
+entries still reorder; if the merged writer sorts deterministically the story
+closes on that evidence.

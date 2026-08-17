@@ -49,3 +49,14 @@ unverifiable for any file with sibling classes.
       (the currently-collapsed `test_foreign_key_exists` counted once per class).
 - [ ] `--gates --check` still exits 0; totals move only by the de-collapsed
       entries.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations spot-checked against the current tree and still resolve; no path or
+mechanism in this body has been retired. Carried forward unchanged.
+
+General note from the sweep, applies to every `scripts/api-compare/` story: RFC 0092
+moved `conventions.ts`, `types.ts`, `shared-cache.ts` and `write-json-manifest.ts`
+to `scripts/parity/`, and RFC 0084 folded `call-mismatches-wide-exclude/` and
+`lint-call-mismatches-wide.ts` into the single `call-mismatches-exclude/` tree.
+Re-check any such reference before starting.

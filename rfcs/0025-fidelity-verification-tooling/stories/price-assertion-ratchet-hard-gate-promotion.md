@@ -36,3 +36,32 @@ Nothing has measured the rate yet: the mark was seeded on 2026-07-31 at
   and if so under what per-PR convergence budget.
 - Record the answer where the release estimate is maintained; file the
   promotion itself as a separate story if the numbers support it.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+**The spike this story asks for is now answerable — data below, measured
+2026-08-17 from `git log` on `scripts/test-compare/assertion-mismatch-mark.json`.**
+
+activerecord `assertionCount / kind / value`:
+
+| date       | mark             |
+| ---------- | ---------------- |
+| 2026-08-01 | 1987 / 4069 / 54 |
+| 2026-08-05 | 1987 / 4069 / 54 |
+| 2026-08-14 | 1977 / 4066 / 49 |
+| 2026-08-16 | 1977 / 4066 / 49 |
+| 2026-08-17 | 1965 / 4008 / 39 |
+
+Over 16 days: assertionCount -22 (~9.6/week), kind -61 (~26.7/week),
+value -15 (~6.6/week).
+
+Projected to zero at that rate: **assertionCount ~205 weeks (~3.9 years)**,
+**kind ~150 weeks (~2.9 years)**, **value ~6 weeks**.
+
+So the answer to "is hard-zero promotion reachable inside the release scope"
+is almost certainly **no for assertionCount and kind, and yes for value**.
+That asymmetry is the finding: promoting `value` alone to a hard gate is
+cheap and defensible; promoting the other two is not, at any plausible
+per-PR budget. Remaining work is to sanity-check the trend over more points
+(five marks, three distinct values, is thin) and record the decision where the
+release estimate lives.

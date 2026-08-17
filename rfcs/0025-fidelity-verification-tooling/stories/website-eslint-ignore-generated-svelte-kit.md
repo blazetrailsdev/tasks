@@ -48,3 +48,8 @@ belongs in the same list.
   errors from generated files.
 - Hand-written website sources still lint (verify the count of linted files does
   not drop for `packages/website/src/**`).
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid — no eslint config in the repo ignores `.svelte-kit`, so a checkout
+that has run `svelte-kit sync` still lints generated output.

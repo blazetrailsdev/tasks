@@ -22,3 +22,19 @@ PR #5121 removed the MySQL concurrency exclusions from `scripts/api-compare/unpo
 
 - Every unported-files.ts exclusion whose tests are actually ported is removed; genuinely unported ones stay with accurate reasons.
 - parity:test and parity:api deltas non-negative.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/unported-files.ts` -> `scripts/parity/unported-files/`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`scripts/api-compare/unported-files.ts` is now the directory
+`scripts/parity/unported-files/` (per-package `.ts` files plus `baseline.json`).
+The exclusion entries this story prunes live in the per-package files there —
+re-locate the PG transaction entries before starting; the claim that the tests
+are ported still needs the same file-by-file check the body describes.

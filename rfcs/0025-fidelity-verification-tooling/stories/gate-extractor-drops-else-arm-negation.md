@@ -76,3 +76,8 @@ correctly in the first place.
       `[wrong-gate]` — do this, and drop the workaround comment, to prove the fix.
 - [ ] `pnpm parity:test --gates --check` stays at exit 0; no regression in the
       overall gate-mismatch count.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Citations verified against `scripts/test-compare/extract-ruby-tests.rb`; the
+ungated else-branch walk is unchanged.

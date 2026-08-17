@@ -22,3 +22,9 @@ The whole-activerecord `parity:api:build` shakeout (PR #5229) left 18 of 3,960 e
 
 - A full `pnpm parity:api:build --package activerecord` run prints zero `unmatched` lines (each former case either tagged at its real declaration or covered by a documented, tested skip rule).
 - Regression tests for the prototype-assignment and mixin-duplicate cases.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Sequencing note: this is the shakeout tail of `parity:api:build` and is
+independent of the other three `api-build-*` stories — the 18 unmatched tags are
+an attribution question, not a phase.

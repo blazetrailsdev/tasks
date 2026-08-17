@@ -59,3 +59,16 @@ scripts but not edits confined to a consumer such as `extra-surface.ts`.
   `declaredIn`.
 - Either way, remove the pointer to this story from the
   `EXTRACTOR_OUTPUT_FIELDS` JSDoc once resolved.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/types.ts` -> `scripts/parity/types.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`scripts/api-compare/types.ts` moved to `scripts/parity/types.ts`;
+`extractor-schema.ts` stayed in `scripts/api-compare/`.

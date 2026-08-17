@@ -23,3 +23,18 @@ closed-reason: null
 - `--emit-baselines` regenerates byte-identical baselines for migrated files; untouched files' JSON unchanged.
 - `--check` exits non-zero on drift; wired into CI for migrated packages.
 - `@internal`/private members' tags are skipped (gates are full-surface only).
+
+## Mechanism retired — 2026-08-17
+
+**`scripts/api-compare/lint-call-mismatches-wide.ts` no longer exists.** RFC 0084
+folded the wide ratchet into `lint-call-mismatches.ts` over a single
+`call-mismatches-exclude/` tree; `call-mismatches-wide-exclude/` is gone too.
+Re-express against the merged gate.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Sequencing note: this is phase 3 of
+`docs/infrastructure/api-build-stub-generation-plan.md`. `parity:api:build` and
+`scripts/api-compare/build.ts` both still exist, so the plan is live — but the
+baseline layout it targets changed under RFC 0084, so the `writeSplitBaseline`
+and wide/narrow routing details need re-deriving against the merged tree.

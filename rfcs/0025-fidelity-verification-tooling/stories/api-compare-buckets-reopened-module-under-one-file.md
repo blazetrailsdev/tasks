@@ -64,3 +64,16 @@ from the entity's own, to size the blast radius before changing the grouping.
   `docs/ruby-ts-conventions.md` regenerated.
 - No package's method total regresses — check the full `parity:api` summary
   before/after, since re-bucketing moves methods between files repo-wide.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/conventions.ts` -> `scripts/parity/conventions.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Behaviour unchanged. Note `scripts/api-compare/conventions.ts` moved to
+`scripts/parity/conventions.ts` (RFC 0092); `compare.ts` stayed put.

@@ -57,3 +57,18 @@ this story exists mainly so the decision is recorded rather than re-derived.
   allowlist entries are deleted.
 - If not automated: the story is closed won't-do with the reasoning, and the
   existing allowlist reasons are left as the record.
+
+## Mechanism retired — 2026-08-17
+
+**`scripts/api-compare/extra-surface-allow.json` no longer exists.** RFC 0080
+retired the sidecar allowlist; the `@noRailsEquivalent <reason>` JSDoc tag is now
+the only suppression source, and its reason must open PERMANENT or CONVERGEABLE.
+Any acceptance criterion here phrased as an allowlist entry must be re-expressed
+against the tag before this story is claimed.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid and still reproducing: `statementLimit` is still reported novel on
+activerecord (alongside `poolKey`, `pragmas`, `retries`). The decision the story
+asks for is unchanged; only the instrument moved, from an allowlist entry to a
+`@noRailsEquivalent` tag or a real extractor rule for `config[:key]` reads.

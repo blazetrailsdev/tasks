@@ -23,3 +23,8 @@ Phase 3 of `docs/infrastructure/api-build-stub-generation-plan.md` (PR #5229): o
 - `pnpm parity:api:build --package <p> --file <f> --stubs` (opt-in, no build-everything default) generates ordered stubs with full `@missingRailsCall` blocks.
 - Stub pairs reported in a "stubbed" column, excluded from matched %, excluded from `body-pins --pin-all`.
 - New stubs do not fail `parity:api:calls` (baseline rows emitted in the same change).
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Sequencing note: phase 3 of the plan and the largest of the four `api-build-*`
+stories. Depends on the reconcile phases landing first.

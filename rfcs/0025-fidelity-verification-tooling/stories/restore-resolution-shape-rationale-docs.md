@@ -41,3 +41,17 @@ an import the compiler can resolve cannot fall outside the closure.
   as its neighbours (`ReadSet`, `dependencyKey`, `pruneSharedCache`).
 - WHY only — no comments restating what a line does (CLAUDE.md).
 - No behaviour change; `shared-cache.test.ts` still passes untouched.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/shared-cache.ts` -> `scripts/parity/shared-cache.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`shared-cache.ts` moved to `scripts/parity/shared-cache.ts`. The undocumented
+`ResolutionShape` region is unchanged — this remains a small, self-contained
+docs-in-code story.

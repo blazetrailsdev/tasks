@@ -61,3 +61,13 @@ stories. Do not attempt the convergence here.
   already captured.
 - Report the `NoCntrp` delta per package before/after, and state how much of the
   remainder is (b) awaiting its own stories.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid; population re-measured 2026-08-17 (full build, all packages).
+`NoCntrp` totals now: activesupport 428, activerecord 599, actiondispatch 235,
+trailties 288, activerecord-test-support 197, arel 86, actionview 66,
+activemodel 43, rack 10, actioncontroller 13, globalid 4, i18n 2,
+abstractcontroller 0. That is **1,971 across the tree**, up from the 1,119 this
+story was filed against — the untriaged population has grown ~76%, so the
+triage is more overdue, not less.

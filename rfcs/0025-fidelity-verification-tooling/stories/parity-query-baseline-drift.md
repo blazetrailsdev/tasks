@@ -56,3 +56,9 @@ not a per-PR gate, which is how the drift accumulated unnoticed.
   regression is visible.
 - Split if it balloons: the 20 retirements are mechanical and can ship
   separately from the 8 diagnoses.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Re-run `pnpm parity:query` before starting: the counts in this body
+(169/204, 7 known gaps, 20 unexpected passes, 8 failures) are a snapshot and the
+bookkeeping bugs are what matter, not the numbers.

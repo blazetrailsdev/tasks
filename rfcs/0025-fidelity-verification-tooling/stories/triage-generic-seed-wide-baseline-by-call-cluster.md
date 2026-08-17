@@ -81,3 +81,18 @@ verification): …" in
   churn outside the story's scope.
 - Remaining cluster sizes recorded so the next agent can pick up without
   re-deriving the inventory.
+
+## Mechanism retired — 2026-08-17
+
+**The `call-mismatches-wide-exclude/` tree no longer exists** — RFC 0084 folded it
+into `call-mismatches-exclude/`. Re-express against the merged tree.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Still valid, and **materially better than filed**. RFC 0084 folded
+`call-mismatches-wide-exclude/` into the single `call-mismatches-exclude/` tree, so the
+population is now measurable in one place. Re-counted 2026-08-17:
+**1,637 rows total, of which 1,115 (68%) still carry the generic
+"Baseline (RFC 0047)" seed reason** — down from the 5,101 / 4,871 (95%) this
+story was filed against. The triage is still unstarted but the job is roughly
+a third the size. Re-scope the clustering against the merged tree.

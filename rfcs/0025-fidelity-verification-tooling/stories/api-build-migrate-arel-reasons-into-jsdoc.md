@@ -23,3 +23,14 @@ PR #5229 landed `pnpm parity:api:build` (`scripts/api-compare/build.ts`), the re
 - `pnpm parity:api:build --package arel` output committed; second run is a no-op (0 files).
 - Any `harvested`/`unmatched` stdout lines from the run are triaged in the PR body.
 - Tree typechecks; arel tests untouched/passing.
+
+## Mechanism retired — 2026-08-17
+
+**The `call-mismatches-wide-exclude/` tree no longer exists** — RFC 0084 folded it
+into `call-mismatches-exclude/`. Re-express against the merged tree.
+
+## Re-verified 2026-08-17 (ready sweep)
+
+Sequencing note: phase 1 of the same plan, and the cheapest of the four
+`api-build-*` stories — arel's baseline is the smallest. Re-run the dry run
+before starting; the '15 arel files change' figure predates RFC 0084's fold.

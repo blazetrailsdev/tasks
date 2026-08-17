@@ -44,3 +44,17 @@ which also aliases `member?` → `key?` at :157), plus `ActionController::Parame
 - [ ] If no, record the reasoning as a comment at the map so the question isn't
       re-derived a third time.
 - [ ] parity:api delta non-negative; `pnpm parity:api:calls` green.
+
+## Path refresh — 2026-08-17
+
+Citations in this body predate the RFC 0092 `parity:*` consolidation, which moved
+several modules out of `scripts/api-compare/` into `scripts/parity/`. Verified
+current locations:
+
+- `scripts/api-compare/conventions.ts` -> `scripts/parity/conventions.ts`
+
+## Re-verified 2026-08-17 (ready sweep)
+
+`conventions.ts` moved to `scripts/parity/conventions.ts` — that file is also now
+the generator behind `docs/ruby-ts-conventions.md`, so any candidate added here
+changes a CI-verified doc. Factor that into the acceptance criteria.
