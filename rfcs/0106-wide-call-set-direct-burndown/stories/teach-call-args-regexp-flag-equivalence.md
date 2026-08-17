@@ -48,8 +48,14 @@ A global `bool:true` ≡ `str:i` equivalence in `normalizeArg`
 Teach the argument normalizer a receiver-scoped equivalence rather than a global
 one: when the call is a Regexp construction (`Regexp.new` on the Ruby side, `new
 RegExp` on the TS side), normalize Ruby's flag argument (`true`,
-`Regexp::IGNORECASE`, `Regexp::MULTILINE`, and their ORs) and JS's flag string to
-one canonical descriptor, so equivalent flag spellings compare equal. Then delete
+`Regexp::IGNORECASE`, `Regexp::MULTILINE`) and JS's flag string to
+one canonical descriptor, so equivalent flag spellings compare equal. An OR of
+two option constants is deliberately NOT in scope: extract-ruby-api.rb:2580
+describes any `|` expression as the bare operator (`binop:|`) with its operands
+discarded, and `binop:` is an OPAQUE descriptor, so the site is skipped as
+uncomparable before the normalizer sees it — covering it would mean widening the
+extractor's descriptor grammar for every consumer, and no vendored Rails call
+site spells the flag that way. Then delete
 the `parameter-filter.json` row by hand (only-shrink, no reseed) and tighten the
 mark shard if it goes stale.
 
