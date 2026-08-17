@@ -1,6 +1,6 @@
 ---
 title: "Port Request::Session.set / Session::Options.set and route the writers through them"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 6675
 claim: "2026-08-17T23:07:59Z"
 assignee: "admit-first-to-receiver-as-first-arg"
 blocked-by: null
