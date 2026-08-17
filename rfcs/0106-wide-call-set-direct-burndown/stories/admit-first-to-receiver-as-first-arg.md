@@ -1,6 +1,6 @@
 ---
 title: "Admit `first` to RECEIVER_AS_FIRST_ARG and converge the last two @missingRailsCall first tags"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T23:07:59Z"
+assignee: "admit-first-to-receiver-as-first-arg"
 blocked-by: null
 closed-reason: null
 ---
