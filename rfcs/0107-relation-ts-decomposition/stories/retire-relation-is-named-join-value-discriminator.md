@@ -1,6 +1,6 @@
 ---
 title: "retire-relation-is-named-join-value-discriminator"
-status: claimed
+status: blocked
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-08-17T09:37:51Z"
 assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
-blocked-by: null
+blocked-by: "Blocked on sweep-joins-call-sites-onto-the-colon-symbol-spelling. The Rails discriminator (query_methods.rb:1852 'String === join', :1814 'when Hash, Symbol, Array') reads Symbol-ness, which in trails is the leading colon. 286 of 389 .joins() call sites in packages/activerecord/src still pass a bare association-name string; flipping the discriminator before they are swept turns each into an Arel::Nodes::StringJoin over a bare table word (wrong SQL on all three adapters), and sweeping them inside this story is ~400 changed lines, past the PR ceiling."
 closed-reason: null
 ---
 
