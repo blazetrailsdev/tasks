@@ -1,7 +1,7 @@
 ---
 title: "converge-execute-grouped-calculation-body-to-rails-source-order"
-status: blocked
-updated: 2026-08-16
+status: ready
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-16T18:52:31Z"
-assignee: "converge-execute-grouped-calculation-body-to-rails-source-order"
-blocked-by: "Blocked on unmerged PR #6603 (wave-2c-grouped-calculation-and-query-method-stores), which makes executeGroupedCalculation the Rails body outright. On origin/main executeGroupedCalculation is still a thin wrapper over the bespoke groupedAggregate helper and all 14 execute_grouped_calculation call-set baseline rows are live, so this follow-up (with_connection position, type_for block, inlining qualifiedGroupFieldForModel/resolveGroupAssociation, source order) cannot be done without redoing #6603's diff and conflicting with it. Re-ready once #6603 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
