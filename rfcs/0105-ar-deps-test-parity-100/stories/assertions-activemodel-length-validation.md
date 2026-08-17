@@ -1,6 +1,6 @@
 ---
 title: "activemodel length_validation_test assertion parity"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T09:27:13Z"
+assignee: "assertions-activemodel-length-validation"
 blocked-by: null
 closed-reason: null
 ---
