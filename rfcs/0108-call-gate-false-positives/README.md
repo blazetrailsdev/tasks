@@ -97,3 +97,50 @@ as the object literal it is in Ruby.
 - Widening any baseline. Every row this RFC touches is deleted, not re-reasoned.
 - New gate dimensions. This RFC only makes existing gates stop lying.
 - The rest of RFC 0025.
+
+## Stop rule (added 2026-08-17, after the first six landed)
+
+The first wave delivered: the exclude tree went **1,637 -> 1,407 rows (-230)**,
+and three of the four named done-condition rows are gone (`persistence.json`
+`_update_record | attributes_for_update`, the four `ExplainProxy` rows in
+`relation.json`, `association-scope.json` `transform_value`); the PG mixin-seam
+shard went 15 -> 9.
+
+It also produced four follow-ups, one of which — `resolve-owner-by-static-and-include-graph-instead-of-skipping`
+— exists because `precise-call-pairing-key-for-owner-static-and-accessor`
+(PR #6659) fixed the row key in the **negative** direction only. At
+`scripts/api-compare/compare.ts:2812-2813` both ambiguity checks are a bare
+`return`:
+
+```ts
+if (ambiguousTsOwner(tsOwners, tsClass)) return;
+if (ambiguousRubyOwner(rubyOwnersByName.get(rubyName), tsOwners)) return;
+```
+
+That converted ~107 false positives into ~107 **silently dropped comparisons**.
+A dropped comparison is worse than a false positive for this RFC's purpose: a
+false positive is visible and annoying, a dropped comparison is invisible and
+nothing counts it.
+
+So, for every remaining story here:
+
+**A story may not close by suppressing a comparison.** If the tool cannot
+resolve a pair, it records the pair and the row is baselined with a reviewed
+reason — it is never silently skipped. `ownerRecordsNothing` is the one
+sanctioned exception and it is named, counted and reported; a bare `return` is
+not.
+
+**Every PR reports the suppressed-comparison count** in its body, alongside the
+row count. The row count going down while the suppressed count goes up is not
+progress and will not be accepted as closing a story.
+
+## Scope is closed
+
+The population is the six original stories plus the four follow-ups they
+produced. **No further stories are admitted to this RFC.** Anything else the
+work surfaces goes to its natural owner — port convergence to
+`0106-wide-call-set-direct-burndown` (which is where
+`converge-accessor-surfaced-call-set-rows` and
+`converge-pg-lookup-cast-type-from-column-onto-quoting-module` correctly went),
+measurement holes and ungated dimensions back to
+`0025-fidelity-verification-tooling`.
