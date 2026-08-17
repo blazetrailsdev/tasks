@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess#delete returns the removed value, not a boolean"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6629
 claim: "2026-08-17T02:42:54Z"
 assignee: "converge-hwia-delete-returns-the-removed-value"
 blocked-by: null
