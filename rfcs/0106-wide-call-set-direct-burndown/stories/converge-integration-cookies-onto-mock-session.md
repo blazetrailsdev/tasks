@@ -1,6 +1,6 @@
 ---
 title: "Converge Integration#cookies onto the mock session's cookie_jar"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6674
 claim: "2026-08-17T22:43:01Z"
 assignee: "converge-collection-association-size-counted-arms"
 blocked-by: null
