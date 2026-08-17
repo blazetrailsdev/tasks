@@ -1,6 +1,6 @@
 ---
 title: "Move the where/or/and/excluding family into query-methods.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
+pr: 6677
 claim: "2026-08-17T23:22:08Z"
 assignee: "fan-out-query-methods-where-family"
 blocked-by: null
