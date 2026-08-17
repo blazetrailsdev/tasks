@@ -1,6 +1,6 @@
 ---
 title: "Give Relation's Enumerable surface one mechanism instead of three @noRailsEquivalent tags"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6639
 claim: "2026-08-17T10:01:56Z"
 assignee: "assertions-activemodel-remainder-second-pass"
 blocked-by: null
