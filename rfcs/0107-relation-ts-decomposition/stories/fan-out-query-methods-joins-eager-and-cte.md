@@ -1,7 +1,7 @@
 ---
 title: "Move the joins/eager/CTE members and shared Arel helpers into query-methods.ts"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: ["activerecord"]
