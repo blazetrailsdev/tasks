@@ -1,6 +1,6 @@
 ---
 title: "Converge CollectionAssociation#reader onto reload + CollectionProxy.create"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6673
 claim: "2026-08-17T22:18:04Z"
 assignee: "converge-collection-association-reader-reload-and-proxy"
 blocked-by: null
