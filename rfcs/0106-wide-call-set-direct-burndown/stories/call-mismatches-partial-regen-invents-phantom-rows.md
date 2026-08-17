@@ -1,6 +1,6 @@
 ---
 title: "parity:api:calls gates a partially-regenerated artifact — invents rows and hides real ones"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6660
 claim: "2026-08-17T17:48:13Z"
 assignee: "call-mismatches-partial-regen-invents-phantom-rows"
 blocked-by: null
