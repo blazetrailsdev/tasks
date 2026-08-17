@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-parse-formats-iso8601-family"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6661
 claim: "2026-08-17T18:14:01Z"
 assignee: "port-test-date-parse-formats-iso8601-family"
 blocked-by: null
