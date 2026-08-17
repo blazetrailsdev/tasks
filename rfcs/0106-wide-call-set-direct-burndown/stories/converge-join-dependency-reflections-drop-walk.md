@@ -1,6 +1,6 @@
 ---
 title: "Converge JoinDependency#reflections onto join_root.drop(1)"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
