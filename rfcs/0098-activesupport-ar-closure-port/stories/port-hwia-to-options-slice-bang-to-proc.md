@@ -1,6 +1,6 @@
 ---
 title: "Port HashWithIndifferentAccess's last six members (to_options family, transform_keys!, slice!, to_proc)"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
