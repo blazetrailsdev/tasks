@@ -1,7 +1,7 @@
 ---
 title: "Move the order/limit/offset and select/group/having families into query-methods.ts"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T02:42:54Z"
+assignee: "converge-hwia-delete-returns-the-removed-value"
 blocked-by: null
 closed-reason: null
 ---
