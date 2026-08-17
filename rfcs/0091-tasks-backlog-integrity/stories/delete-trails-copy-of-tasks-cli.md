@@ -35,12 +35,17 @@ duplicate that still costs CI time and will silently drift from the live one:
 - `.github/workflows/ci.yml:592` — `scripts/tasks` in the `pnpm vitest run`
   argument list for the unit-tests job
 
-`scripts/tasks/refine-done.sh` is **not** part of this: it is a btwhooks
-integration script invoked by trails refine agents, unrelated to the CLI, and
-stays where it is. So `scripts/tasks/` keeps existing (holding `refine-done.sh`
-and `tasks.sh`) and the ci.yml path filter that names it stays valid — but the
-`pnpm vitest run scripts/tasks` _argument_ must go, or the job fails with "no
-test files found".
+`scripts/tasks/refine-done.sh` is not part of this either, but no longer for
+the reason once written here: it has **moved into this repo** as
+`scripts/refine-done.sh` (tasks#64), along with its never-merged sibling
+`rfc-refine-done.sh`. The old rationale — "invoked by trails refine agents" —
+was simply wrong: refine agents run in a *tasks* worktree (btwhooks spawns them
+with `RepoDir=<tasks checkout>`), so the script was in trails only by accident
+of where it was first written. trails#6658 deletes the trails copy.
+
+So `scripts/tasks/` keeps existing only for `tasks.sh`, and the ci.yml path
+filter that names it stays valid — but the `pnpm vitest run scripts/tasks`
+_argument_ must go, or the job fails with "no test files found".
 
 `scripts/ci-suite-coverage.test.ts` mentions `scripts/tasks` in three comments
 (lines 15, 265, 322) describing which suites ride the unit-tests gate; those
@@ -58,5 +63,5 @@ need a pass to stay accurate.
 - `pnpm tasks ready`, `next-bundle`, `claim`, and `new` still work from a
   trails worktree via `scripts/tasks/tasks.sh`, operating on that worktree's
   own `tasks/` checkout (not the canonical one).
-- `scripts/tasks/refine-done.sh` is untouched.
+- `scripts/tasks/refine-done.sh` is already gone (trails#6658); do not expect it.
 - Blocked until tasks#63 is merged.
