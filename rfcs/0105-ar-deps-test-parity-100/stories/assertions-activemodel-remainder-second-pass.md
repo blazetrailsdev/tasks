@@ -1,7 +1,7 @@
 ---
 title: "assertions-activemodel-remainder-second-pass"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T10:01:56Z"
+assignee: "assertions-activemodel-remainder-second-pass"
 blocked-by: null
 closed-reason: null
 ---
