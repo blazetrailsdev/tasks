@@ -1,6 +1,6 @@
 ---
 title: "Rational() takes a Float on either side; DateTime#since drops its nanosecond widening"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
