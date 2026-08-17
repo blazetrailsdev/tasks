@@ -1,6 +1,6 @@
 ---
 title: "Move the order/limit/offset and select/group/having families into query-methods.ts"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
