@@ -1,6 +1,6 @@
 ---
 title: "Port date_time/conversions.rb onto the DateTime receiver; port to_i / to_f"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T02:02:56Z"
+assignee: "port-date-time-conversions-onto-its-own-receiver"
 blocked-by: null
 closed-reason: null
 ---
