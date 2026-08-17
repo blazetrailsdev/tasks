@@ -1,7 +1,7 @@
 ---
 title: "guides-typecheck package coverage is hand-maintained and reds main on every new package"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by make-new-package-registration-self-maintaining (2026-08-17 sweep): merged with guard-new-package-website-vite-aliases. validatePackageCoverage verified still at scripts/guides-typecheck/check.ts:147; citations carried forward."
 ---
 
 ## Context
