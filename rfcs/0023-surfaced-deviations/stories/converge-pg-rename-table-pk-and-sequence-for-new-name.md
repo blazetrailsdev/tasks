@@ -54,7 +54,7 @@ second, related divergence (Rails does not rescue here).
 - [ ] `pkAndSequenceFor` resolves a schema-qualified or bare name the way
       Rails' `regclass` lookup does, so callers need no pre-qualification.
 - [ ] `renameTable` calls `pkAndSequenceFor(newName)`, and the `.catch(() =>
-  null)` is removed or justified against a Rails rescue.
+null)` is removed or justified against a Rails rescue.
 - [ ] Both `renameTable` naming rows clear in
       `pnpm parity:api:calls:args:report`, with no new `shape` row.
 - [ ] PostgreSQL lane green, including a rename of a table in a non-default

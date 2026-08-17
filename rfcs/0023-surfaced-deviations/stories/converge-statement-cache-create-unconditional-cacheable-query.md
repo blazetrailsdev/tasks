@@ -48,7 +48,7 @@ against Rails' `BindMap.new(binds)`.
 ## Acceptance criteria
 
 - [ ] `StatementCache.create` calls `connection.cacheableQuery(StatementCache,
-  relation.arel)` unconditionally and the `cacheableQuery?` optionality is
+relation.arel)` unconditionally and the `cacheableQuery?` optionality is
       gone from the parameter type.
 - [ ] The dead else arm (`new Query(sql)` / `binds = []`) is deleted, not
       guarded.
