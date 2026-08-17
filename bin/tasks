@@ -47,8 +47,38 @@ if [[ -z "$CODE_DIR" ]]; then
 fi
 
 TSX="$CODE_DIR/node_modules/.bin/tsx"
+PNPM_STAMP="$CODE_DIR/node_modules/.modules.yaml"
+
+# Two stats on the hot path: this runs before every `tasks` invocation, and
+# every agent runs `tasks` constantly. A checkout is out of date when tsx is
+# absent, or when pnpm's install stamp is older than the lockfile — which is
+# what a toolchain bump looks like to a checkout that was installed before it.
+needs_install() {
+  [[ -x "$TSX" ]] || return 0
+  [[ -f "$PNPM_STAMP" ]] || return 0
+  [[ "$CODE_DIR/pnpm-lock.yaml" -nt "$PNPM_STAMP" ]]
+}
+
+if needs_install; then
+  LOCK="${TMPDIR:-/tmp}/tasks-install-$(printf %s "$CODE_DIR" | cksum | cut -d' ' -f1).lock"
+  exec 9>"$LOCK"
+  if flock -w 180 9; then
+    # Re-check under the lock: a concurrent agent may have just installed, and
+    # a second pnpm run against the same checkout would be pure waste.
+    if needs_install; then
+      echo "tasks: dependencies in $CODE_DIR are missing or stale — installing" >&2
+      # stdout is the CLI's data channel (`--json` consumers parse it), so
+      # pnpm's chatter must never land there.
+      pnpm install --dir "$CODE_DIR" --silent 1>&2 || true
+    fi
+    flock -u 9
+  fi
+  exec 9>&-
+fi
+
 if [[ ! -x "$TSX" ]]; then
-  echo "tasks: $TSX is missing — run 'pnpm install' in $CODE_DIR." >&2
+  echo "tasks: $TSX is still missing after an install attempt." >&2
+  echo "       Run 'pnpm install' in $CODE_DIR by hand to see why." >&2
   exit 1
 fi
 
