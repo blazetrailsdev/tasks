@@ -1,6 +1,6 @@
 ---
 title: "activemodel numericality_validation_test assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: 6636
 claim: "2026-08-17T09:49:51Z"
 assignee: "assertions-activemodel-numericality-validation"
 blocked-by: null
