@@ -1,6 +1,6 @@
 ---
 title: "converge-response-cookies-onto-set-cookie-header"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6671
 claim: "2026-08-17T21:52:58Z"
 assignee: "converge-response-cookies-onto-set-cookie-header"
 blocked-by: null
