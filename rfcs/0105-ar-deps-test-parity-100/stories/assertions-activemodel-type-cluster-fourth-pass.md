@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-type-cluster-fourth-pass"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6643
 claim: "2026-08-17T11:37:51Z"
 assignee: "assertions-activemodel-type-cluster-fourth-pass"
 blocked-by: null
