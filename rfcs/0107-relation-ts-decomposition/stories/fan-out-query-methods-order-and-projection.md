@@ -1,6 +1,6 @@
 ---
 title: "Move the order/limit/offset and select/group/having families into query-methods.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6629
 claim: "2026-08-17T02:42:54Z"
 assignee: "converge-hwia-delete-returns-the-removed-value"
 blocked-by: null
