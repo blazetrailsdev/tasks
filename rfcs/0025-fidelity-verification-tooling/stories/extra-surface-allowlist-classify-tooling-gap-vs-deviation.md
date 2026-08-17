@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: allowlist entries need kind (tooling-gap vs deviation) and a story id"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0080, verified 2026-08-17: scripts/api-compare/extra-surface-allow.json no longer exists, so the 'kind' field this story proposed adding to its entries has nothing to attach to. The intent — separating 'the comparator cannot see it' from 'a deviation we owe a fix' — shipped as the permanence claim on @noRailsEquivalent: a reason must open PERMANENT or CONVERGEABLE or the run fails, and the totals are reported separately (2026-08-17: 139 PERMANENT / 10 CONVERGEABLE / 0 unclassified). The 'story required when kind is deviation' bullet did not ship; if that link is still wanted, file it against the tag rather than the retired allowlist."
 ---
 
 ## Context
