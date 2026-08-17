@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-oid-array-encoder-data"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6633
 claim: "2026-08-17T09:26:50Z"
 assignee: "converge-batches-kernel-array-locals"
 blocked-by: null
