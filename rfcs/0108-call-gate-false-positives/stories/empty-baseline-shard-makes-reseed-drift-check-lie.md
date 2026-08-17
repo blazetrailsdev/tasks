@@ -1,6 +1,6 @@
 ---
 title: "An empty committed shard makes the reseed-drift check report a false diff"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6665
 claim: "2026-08-17T19:08:15Z"
 assignee: "closure-resolves-foreign-receiver-calls-as-same-file-methods"
 blocked-by: null
