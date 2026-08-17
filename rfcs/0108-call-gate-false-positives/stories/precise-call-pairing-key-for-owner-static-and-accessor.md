@@ -1,6 +1,6 @@
 ---
 title: "Give the call-gate row key owner/static/accessor precision"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
