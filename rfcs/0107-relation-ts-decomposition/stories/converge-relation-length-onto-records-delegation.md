@@ -1,6 +1,6 @@
 ---
 title: "Move Relation#length onto the to: :records delegation mechanism"
-status: blocked
+status: claimed
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-17T13:10:28Z"
 assignee: "assertions-activesupport-cluster-tail-2"
-blocked-by: "Verified again on 2026-08-17: moving `length` into RECORD_DELEGATES/DelegationMethods (typecheck + relation, relation/delegation, collection-proxy suites all green) still reds `pnpm parity:api:calls` with two spurious rows in UNRELATED relation.ts methods — `create_or_find_by with_connection` and `to_sql with_connection`. Neither TS body calls withConnection or ever did; the credit leaked from length's presence in the class body. Baselining them would ratify pre-existing divergence in methods this story does not touch, so this stays blocked on precise-call-pairing-key-for-owner-static-and-accessor (0025-fidelity-verification-tooling; the merged story that now owns this, after the 2026-08-17 draft sweep closed call-credit-leaks-across-sibling-methods-in-a-class into it)."
+blocked-by: null
 closed-reason: null
 ---
 
@@ -63,3 +63,41 @@ delegation / collection-proxy suites pass; only the call-set rows above block.
 
 Blocked on `call-credit-leaks-across-sibling-methods-in-a-class`
 (0025-fidelity-verification-tooling).
+
+## UNBLOCKED — verified end-to-end 2026-08-17
+
+The blocker is gone. `precise-call-pairing-key-for-owner-static-and-accessor`
+(PR #6659, merged 17:45 UTC) fixed the sibling-credit leak; this story's
+`blocked-by` note was last written at 15:20 UTC and had never been re-checked
+against it.
+
+Re-ran the exact experiment the blocker described, on `main` at `origin/main`:
+
+- moved `Relation#length` out of `relation.ts`'s class body into
+  `RECORD_DELEGATES` in `relation/delegation.ts`
+  (`length: (records) => records.length`), its faithful home per
+  `vendor/rails/activerecord/lib/active_record/relation/delegation.rb:101`'s
+  `delegate :to_xml, :encode_with, :length, :each, … to: :records`
+- declared `length(): Promise<number>` in the delegate declaration-merge block
+  alongside `each` / `join` / `isIntersect`
+- dropped the now-invalid `override` on `CollectionProxy#length`
+  (`associations/collection-proxy.ts:382`) — the base no longer declares it as a
+  class member. Rails overrides it there too (`load_target.length`), so the
+  override itself stays, only the modifier goes.
+
+Results, after a full `pnpm build` + `API_COMPARE_FORCE=1 pnpm parity:api --calls`:
+
+- `pnpm typecheck` — clean
+- **`call-mismatches ratchet: OK`** (1245 baselined, 910 unreviewed, 288 marks
+  totalling 910 tight)
+- **`call-args ratchet: OK`** (162 baselined shape rows)
+- **`relation.ts` x `with_connection` rows in the fresh artifact: 0** — the three
+  spurious rows this story was blocked on (`apply_join_dependency`,
+  `create_or_find_by`, `to_sql`) do not appear
+- `pnpm vitest run` over `relation.test.ts` + `src/relation/**`: 61 files,
+  1203 passed / 36 skipped
+- `relation/delegation.test.ts`, `relation/delegation.trails.test.ts`,
+  `associations/collection-proxy.test.ts`: 3 files, 164 passed
+
+The working tree was reverted after measuring — this story is claimed elsewhere
+and the diff above is the whole change, reproduced from this note.
