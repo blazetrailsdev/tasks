@@ -1,7 +1,7 @@
 ---
 title: "Unroll CONST.each define_method loops in the Ruby extractor"
-status: ready
-updated: 2026-07-30
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by extract-ruby-metaprogrammed-member-definitions (2026-08-17 sweep). Both are corners of one 2x2 over receiver kind (literal array vs resolved constant) x template kind (define_method vs class_eval): this story is constant/define_method, the successor carries literal-array/class_eval plus Struct.new. process_each_metaprogramming and process_each_codegen each hard-wire one pair, which is the seam both stories describe; fixing one corner without the other leaves it. This body's diagnosis is quoted in the successor."
 ---
 
 ## Context
