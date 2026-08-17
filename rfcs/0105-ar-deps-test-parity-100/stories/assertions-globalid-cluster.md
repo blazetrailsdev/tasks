@@ -1,6 +1,6 @@
 ---
 title: "globalid assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6651
 claim: "2026-08-17T13:25:28Z"
 assignee: "assertions-activesupport-hash-and-ordered-options"
 blocked-by: null
