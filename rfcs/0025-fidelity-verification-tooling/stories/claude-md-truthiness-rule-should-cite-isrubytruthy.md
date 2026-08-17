@@ -49,3 +49,9 @@ Rails reference for the semantics being ported: Ruby treats only `nil` and
   `activerecord` (arel, activemodel, activesupport) may import it; if they
   cannot, say what they should use instead rather than leaving it implicit.
 - No other CLAUDE.md rule is reworded in the same change.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim. `grep -c isRubyTruthy CLAUDE.md` = **0**, and
+`packages/activerecord/src/ruby-truthy.ts` still exists. The standing instruction
+still teaches the open-coded guard over the shared helper.

@@ -49,3 +49,11 @@ their credit.
 - [ ] `test__parse__2` and `test_parse__2` produce distinct normalized paths.
 - [ ] A unit test in `scripts/test-compare/` covers the colliding pair.
 - [ ] `pnpm parity:test` totals do not regress for any package.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid; **one line number drifted**. `normalize` is now at
+`scripts/test-compare/compare.ts:176` (was `:161`) and still reads
+`s.toLowerCase().replace(/\s+/g, " ").trim()`. The Ruby side is unchanged at
+`scripts/test-compare/extract-ruby-tests.rb:514`
+(`desc = name.sub(/^test_/, "").tr("_", " ")`).

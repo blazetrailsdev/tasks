@@ -58,3 +58,9 @@ Then confirm the two sides agree: a `--write` reseed on a clean checkout of
 - [ ] `pnpm parity:api:calls` / `:args` stay green, and no baseline row moves.
 - [ ] If any other emitter can leave an empty file behind, it is fixed too, so
       the invariant is "no empty baseline files", not a one-off deletion.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim.
+`scripts/api-compare/call-mismatches-exclude/activerecord/explain.json` is still
+committed as a bare `[]`, and is still the only empty file in the tree.

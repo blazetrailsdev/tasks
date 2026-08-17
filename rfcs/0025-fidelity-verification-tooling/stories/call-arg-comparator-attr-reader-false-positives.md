@@ -76,3 +76,21 @@ reader read.
 4. `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green; the
    comparator's own unit tests cover the reader-read and the
    reader-name-called-with-args cases.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, but **two of the three cited rows have moved and one changed shape** —
+refresh before starting:
+
+- `associations/association-scope.json` now carries the row as
+  `transform_value | call` (3 rows in that shard), not
+  `transform_value | value_transformation`. The extractor now records the `.call(value)`
+  invocation rather than the reader read, so the symptom shifted but the pairing is
+  still wrong.
+- `call-mismatches-exclude/activerecord/associations/preloader/branch.json` **no longer
+  exists** — that shard was split into `association.json`, `batch.json` and
+  `through-association.json`. Re-locate the two `branch.rb` rows there before
+  claiming they are converged.
+
+The Ruby-side citations (`association_scope.rb:52`/`:78`, `branch.rb:7`/`:84`/`:93`)
+are unchanged and still the anchor.

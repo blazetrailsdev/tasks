@@ -58,3 +58,9 @@ Relevant code:
       unchanged.
 - [ ] The `parity:test:assertions:reseed` script entry and any contributor doc
       that names it point at the scoped form as the default advice.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid. `scripts/test-compare/lint-assertion-mismatches.ts` has no
+`--package` flag (3 incidental `package` matches, none a CLI scope), so a reseed
+still rewrites every package's counters.

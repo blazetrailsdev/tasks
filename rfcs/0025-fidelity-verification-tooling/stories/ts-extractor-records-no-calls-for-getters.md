@@ -53,3 +53,10 @@ Once getters carry call sets, re-check whether `ownerRecordsNothing`'s
       converged; no `--write` reseed of the exclude tree.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green.
 - [ ] Extractor unit tests cover a getter body's call set.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim. `extract-ts-api.ts:2118` — the get-accessor branch — still
+records only `callArgs`, with no `calls`, `callSeq` or `skeleton`, while the
+set-accessor branch immediately below it (`:2136`) has the same gap. Every method
+trails ports as a getter is still invisible to the call-set gate.

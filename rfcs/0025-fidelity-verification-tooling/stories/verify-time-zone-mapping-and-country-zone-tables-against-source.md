@@ -75,3 +75,9 @@ check lands on a passing baseline.
 2. `countryZones` agreement with `TZInfo::Country#zone_identifiers` across all
    249 codes is verified by a checked-in script rather than an ad hoc one.
 3. Both are wired into CI, green on the current tree.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid — `packages/activesupport/src/values/time-zone.ts` still carries all
+three literal tables and nothing checks any of them against
+`activesupport/lib/active_support/values/time_zone.rb` or tzdata.

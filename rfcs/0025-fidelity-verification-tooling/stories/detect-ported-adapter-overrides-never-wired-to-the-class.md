@@ -71,3 +71,9 @@ supports most directly.
       further instances, which are then wired.
 - [ ] A regression fixture pins the failure: reverting the `export` +
       class-assignment of `validateIndexLengthBang` reds the check.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid — nothing detects an unwired override. See the note on
+`detect-dual-spelling-dead-overrides`: same failure class (dead ported body),
+different detector.

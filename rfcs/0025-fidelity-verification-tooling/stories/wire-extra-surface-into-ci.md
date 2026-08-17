@@ -1,5 +1,5 @@
 ---
-title: "wire-extra-surface-into-ci"
+title: "Gate the extra-surface novel count on an only-shrink high-water mark"
 status: draft
 updated: 2026-08-03
 rfc: "0025-fidelity-verification-tooling"
@@ -39,3 +39,28 @@ must not be gated. Gate tag hygiene and only-shrink marks instead.
   `scripts/api-compare/call-mismatches-wide-unreviewed/`).
 - Raw extra totals (novel+moved absolute counts) are NOT gated.
 - The one currently-unclassified tag is classified so the new gate lands green.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+**Narrowed — three of four acceptance criteria have landed.**
+
+What is done: `.github/workflows/ci.yml:1397` runs
+`pnpm exec tsx scripts/api-compare/extra-surface.ts` in the Rails API/Test
+Comparison job, after the API comparison step, with no `--exclude-glob` (an
+exclusion would disarm the stale gate). It fails on a stale `@noRailsEquivalent`
+tag, a reason stating neither PERMANENT nor CONVERGEABLE, and a refused
+file-level tag. The formerly-unclassified `NestedAttributesDisplacementError`
+tag is gone. The 2026-08-17 run reports 149 tags, 149 matched, 139 PERMANENT /
+10 CONVERGEABLE / **0 unclassified**.
+
+What remains, and is now the whole story: the **per-package NOVEL-count
+only-shrink high-water mark** was never built. Novel counts are ungated, so
+invented surface can still accumulate as long as it carries no tag. Current
+baseline to seed from (2026-08-17, full build): activerecord 548, activesupport
+373, actiondispatch 250, trailties 197, activemodel 132,
+activerecord-test-support 103, arel 84, actioncontroller 77, actionview 68,
+rack 49, abstractcontroller 13, i18n 6, globalid 4, did-you-mean 0.
+
+The original caveat stands and is why only the mark may be gated: raw totals
+move with BUILD state, not commit, so an unbuilt package silently drops members
+from the population. Title updated to match the narrowed scope.

@@ -47,3 +47,10 @@ declines to resolve names recorded from a non-`this` receiver.
   method named `foo`; a test asserts it.
 - Any rows the change unmasks are baselined with a Rails `file:line` citation
   or converged, and `pnpm parity:api:calls` / `:args` stay green.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid. `scripts/api-compare/compare.ts:701` still reads
+`const SYNTHETIC_CALL_NAMES: ReadonlySet<string> = new Set(["constructor"])` — the
+The #6542 fix covers constructors only, and receiver-blind property reads still
+resolve against same-file methods.

@@ -65,3 +65,17 @@ Related: `ts-extractor-emit-call-arguments` /
       `scripts/api-compare/call-mismatches-exclude/` by hand (only-shrink; no
       `--write` reseed) and `pnpm parity:api:calls` stays green.
 - [ ] No new ORDER-only rows appear elsewhere from the change.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid as a class, but **all four cited rows are gone** from
+`call-mismatches-exclude/activerecord/connection-adapters/abstract-mysql-adapter.json`
+(11 rows today, none of them `order:`). Do not start from those four.
+
+Fresh population measured 2026-08-17: **38 `order:` rows across 28 shards**,
+including `activerecord/relation/query-methods.json`,
+`connection-adapters/postgresql/oid/type-map-initializer.json`,
+`encryption/encryptable-record.json`, `actiondispatch/middleware/ssl.json`.
+Re-derive which of those are Ruby-argument-evaluation-order artifacts (the
+interpolated-argument shape the original four had) versus genuine order
+divergence — that triage is now the first task of this story.

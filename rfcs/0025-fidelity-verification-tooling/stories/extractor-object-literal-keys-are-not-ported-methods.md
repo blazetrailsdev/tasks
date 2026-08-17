@@ -55,3 +55,11 @@ extractor agrees, `DEFAULT_BEHAVIORS` reverts to an object literal and its
 - [ ] `DEFAULT_BEHAVIORS` (`packages/activesupport/src/deprecation.ts`) is an
       object literal again and its `Map` paragraph is removed.
 - [ ] `pnpm parity:api:calls` green with no baseline additions.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, and the deviation is still being carried: `DEFAULT_BEHAVIORS` at
+`packages/activesupport/src/deprecation.ts:49` is still spelled
+`ReadonlyMap<DeprecationBehavior, DeprecationBehaviorCallable>` rather than the
+object literal the Ruby Hash naturally maps to. `significantMissingCalls` has
+moved from `compare.ts:300-360` to **`compare.ts:403`** — refresh that citation.

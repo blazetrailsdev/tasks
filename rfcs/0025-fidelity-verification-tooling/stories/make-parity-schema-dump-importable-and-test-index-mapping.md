@@ -56,3 +56,11 @@ specifically the native-introspection-to-`NativeDump` mapping in `dump.ts`.
 Est. 60 LOC: an entry-point guard, two extracted functions, and a focused test
 file. No Rails-fidelity risk — this is parity harness code, not ported Rails
 behavior.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid; **path moved**. The module is now
+`scripts/parity/pipeline/schema/node/dump.ts` (188 lines), not
+`scripts/parity/schema/node/dump.ts`. It still calls `main()` at import
+(`:185`, with `main()` defined at `:64`), so it is still un-importable from a
+test and the `introspectIndexes` bug still has no regression test.

@@ -1,5 +1,5 @@
 ---
-title: "extract-ts-api.ts dispatches worker extraction before its own top-level consts initialize"
+title: "Guard against a new const below extract-ts-api's worker dispatch"
 status: draft
 updated: 2026-08-10
 rfc: "0025-fidelity-verification-tooling"
@@ -93,3 +93,19 @@ pnpm parity:api --calls` both produce byte-identical output to before.
    `extract-ts-api-worker.mjs` does.
 4. The `DESCRIPTOR_ESCAPES` table from PR #6316 is restored as a plain const map
    in place of the charCode arithmetic, as the proof the hazard is gone.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+**Re-scoped.** The two known-affected consts have been hoisted: `extract-ts-api.ts:163`
+now carries an explanatory comment — "Declared with the imports, above the
+`!isMainThread` block … a worker runs the whole extraction during module
+evaluation, so a `const` declared next to its reader further down the file is
+still in its temporal dead zone when that reader runs" — covering both
+`fileHasMissingRailsCallTag` and `TAGS_ALLOWED_AFTER_NO_RAILS_EQUIVALENT`.
+
+So the _instances_ are fixed and the _hazard_ is not: the dispatch still sits
+mid-module, and the next `const` added below it reintroduces the TDZ bug with no
+signal. This story is now about the guard, not the fix — either move the dispatch
+to the bottom of the module, or add a lint/test that fails when a module-level
+`const` reachable from `extractPackage` is declared after the `!isMainThread`
+block. Title updated to match.

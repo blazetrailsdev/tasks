@@ -67,3 +67,10 @@ reporting `[no Rails counterpart]` in `pnpm parity:api:extra`.
    `toTime` no longer reports as `moved` extra surface.
 3. `pnpm parity:api --package activesupport` method and file deltas are
    non-negative.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid. `scripts/parity/conventions.ts:249` (was `:243`) still maps
+`"activesupport:core_ext/date/conversions.rb": "time-ext.ts"`, and
+`packages/activesupport/src/core-ext/date/conversions.ts` still exists and is
+still orphaned by it.

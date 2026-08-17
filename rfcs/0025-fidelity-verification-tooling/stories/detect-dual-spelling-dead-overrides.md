@@ -68,3 +68,11 @@ to two unrelated classes that merely happen to use different spellings.
   `is`-prefixed `*_exists?` predicate and is tracked separately by
   `actionview-template-exists-still-is-prefixed`; this guard should surface it
   if a bare `templateExists` also exists.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid — no dual-spelling guard exists in `scripts/api-compare` or the
+generated ESLint manifests. Worth pairing with
+`detect-ported-adapter-overrides-never-wired-to-the-class`: both detect a ported
+body that no caller reaches, by different mechanisms. Kept separate because the
+detection differs (symbol-pair collision vs never-assigned export).

@@ -1,5 +1,5 @@
 ---
-title: "promote-arity-mismatches-to-ratchet"
+title: "Promote arity mismatches from advisory to an only-shrink ratchet"
 status: draft
 updated: 2026-08-03
 rfc: "0025-fidelity-verification-tooling"
@@ -43,3 +43,15 @@ partial-scope determinism guard.
   reason retained.
 - The partial-scope guard aborts gating/reseeding from a `--package`-filtered
   artifact, matching `lint-call-mismatches.ts`.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid; **numbers refreshed** against a full rebuild +
+`API_COMPARE_FORCE=1 pnpm parity:api` on 2026-08-17:
+
+- arity mismatches: **83 → 99** (8,415 compared)
+- `scripts/api-compare/arity-exclude.json`: **1 → 0** reasoned exclusions
+
+So the gap widened and the one exclusion that existed has been retired.
+`lint-arity-excludes.ts:9-10` still states explicitly that it is NOT a ratchet.
+Title was a slug placeholder; set to a real title.

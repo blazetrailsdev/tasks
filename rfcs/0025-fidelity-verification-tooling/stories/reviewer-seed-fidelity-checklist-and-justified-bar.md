@@ -77,3 +77,9 @@ section "Which agent does each change target?".
   `~/.btwhooks/data/github/blazetrailsdev/trails/<pr>/reviewer-seed.txt`.
 - Do NOT implement this by adding a `reviewer_prompt` key for trails in
   messages.json, for the reason above.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid. Note the edit target is outside this repo — the reviewer prompt is a
+Go string literal in `~/github/deanmarano/btwebooks/webhook/handler.go` — so this
+story cannot be closed by a trails PR and should be scheduled accordingly.

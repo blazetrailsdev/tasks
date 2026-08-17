@@ -64,3 +64,8 @@ hand, do not reseed).
       carrying the "fs-adapter's existsSync is the File.exist? analogue" reason
       are deleted.
 - [ ] `pnpm parity:api:calls` is green with a strictly smaller baseline row count.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim. `call-mismatches-exclude/activesupport/core-ext/file/atomic.json`
+still carries exactly **4 rows**.

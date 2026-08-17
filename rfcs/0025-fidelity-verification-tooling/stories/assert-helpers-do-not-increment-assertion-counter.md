@@ -72,3 +72,9 @@ lives beside `assert()` rather than on a receiver.
 - The counter resets per test — no leakage across tests in a file.
 - `pnpm vitest run packages/activesupport/src/testing/` green, including
   `test-without-assertions.test.ts` and `after-teardown-assertion.test.ts`.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim. `packages/activesupport/src/test-case.ts:172` still reads
+`assertions: expect.getState().assertionCalls ?? 0`, so helper-only tests still
+read as zero assertions.

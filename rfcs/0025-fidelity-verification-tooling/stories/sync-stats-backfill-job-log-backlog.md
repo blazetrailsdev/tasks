@@ -44,3 +44,11 @@ story.
 - Note the observed transient `dial tcp ... i/o timeout` failures from
   `gh api .../jobs` during the run — they are absorbed per-PR, but a long
   backfill should be re-run until the counts stop moving.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, and still a **verification chore rather than a code change**: the
+first task is to query `~/github/blazetrailsdev/stats.db` and establish whether
+`raw_job_logs` covers #5945→HEAD. If coverage is complete the story closes with
+that evidence and no diff. Kept separate from `sync-stats-compare-parse-hygiene`
+for that reason.

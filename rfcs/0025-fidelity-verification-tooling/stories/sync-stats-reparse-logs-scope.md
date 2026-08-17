@@ -35,3 +35,9 @@ pass. Re-running it to repair a known-bad window costs a full-history walk.
 - Unscoped `--reparse-logs` keeps today's behaviour (full unconditional
   re-parse) so the recovery guarantee is unchanged.
 - The chosen scope is echoed in the mode banner and the row count is reported.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid. Kept separate from `sync-stats-compare-parse-hygiene` (the merged
+parsing-hygiene story): this is a CLI ergonomics change to `--reparse-logs`, not a
+parser correctness fix.

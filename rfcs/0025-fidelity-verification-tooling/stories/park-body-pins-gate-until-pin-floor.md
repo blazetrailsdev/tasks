@@ -37,3 +37,9 @@ re-adoption depend on the digest plumbing.
   `body-hashes.json` is still written by `parity:api`; CONTRIBUTING.md "Body
   pins" section updated to match.
 - No change to `parity:api:drift`.
+
+## Re-verified 2026-08-17 (draft sweep)
+
+Still valid, verbatim. `scripts/api-compare/body-pins.json` is still 3 bytes
+(empty), and the "Body-pins gate" CI step is still present at
+`.github/workflows/ci.yml:1433` (was `:1513`) — refresh that line number.
