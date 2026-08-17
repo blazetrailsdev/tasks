@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -75,7 +75,16 @@ synchronously because Ruby can execute SQL synchronously:
 
 Both (2) and (3) currently call the new async `applyJoinDependency` and capture
 the yielded relation from the block, relying on everything before the
-`distinct_relation_for_primary_key` `await` being synchronous.
+`distinct_relation_for_primary_key` `await` being synchronous. When that branch
+IS entered they raise, so PR #6634 added two `@nie disposition=TODO`
+`NotImplementedError` sites that this story is also the elimination story for:
+
+- `relation/predicate-builder/relation-handler.ts` — `applyJoinDependency` shim
+  (reached only if the `deferDistinctPkMaterialization` marker misses).
+- `relation/query-methods.ts` — `buildFrom`, which has no marker equivalent, so
+  an eager-loading `from(rel)` with a limit over a collection raises today.
+
+Rails raises at neither site.
 
 ## Acceptance criteria
 
