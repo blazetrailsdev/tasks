@@ -1,6 +1,6 @@
 ---
 title: "Route joins() through JoinDependency; delete relation.ts's parallel join resolver"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
