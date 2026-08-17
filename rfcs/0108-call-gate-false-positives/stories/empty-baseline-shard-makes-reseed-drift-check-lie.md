@@ -1,6 +1,6 @@
 ---
 title: "An empty committed shard makes the reseed-drift check report a false diff"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
