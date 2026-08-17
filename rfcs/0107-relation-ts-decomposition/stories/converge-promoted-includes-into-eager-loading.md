@@ -1,7 +1,7 @@
 ---
 title: "converge-promoted-includes-into-eager-loading"
-status: ready
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6648
 claim: null
 assignee: null
 blocked-by: null
