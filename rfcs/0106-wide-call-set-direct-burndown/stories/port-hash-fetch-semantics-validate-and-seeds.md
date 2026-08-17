@@ -1,6 +1,6 @@
 ---
 title: "Port Hash#fetch semantics in validate? / seeds? (a stored nil is not the default)"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
