@@ -1,6 +1,6 @@
 ---
 title: "Route Time#to_fs and Date#to_fs through the DATE_FORMATS registry, deleting time-ext.ts's hand-rolled switch"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6645
 claim: "2026-08-17T11:49:49Z"
 assignee: "route-time-and-date-to-fs-through-date-formats"
 blocked-by: null
