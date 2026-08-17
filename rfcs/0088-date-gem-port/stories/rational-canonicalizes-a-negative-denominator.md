@@ -1,6 +1,6 @@
 ---
 title: "Rational() canonicalizes the sign onto the numerator, as nurat_s_canonicalize_internal does"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
