@@ -1,6 +1,6 @@
 ---
 title: "converge-exception-wrapper-traces-partition"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
