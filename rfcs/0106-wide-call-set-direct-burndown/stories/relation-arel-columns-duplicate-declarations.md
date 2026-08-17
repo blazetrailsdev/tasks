@@ -1,7 +1,7 @@
 ---
 title: "Relation redeclares arel_columns/arel_columns_from_hash instead of mixing them in"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: origin/main packages/activerecord/src/relation.ts no longer declares arelColumns/arelColumnsFromHash as wrapper methods and no longer imports _arelColumns/_arelColumnsFromHash — grep finds only the two Included<> interface declarations at relation.ts:3943/3945 plus two call sites (:1857, :1935). Both helpers now reach Relation through the QueryMethodBangs mixin, exactly the converged shape this story asked for."
 ---
 
 # `Relation` still redeclares `arel_columns` / `arel_columns_from_hash` instead of mixing them in
