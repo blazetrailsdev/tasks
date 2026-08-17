@@ -1,6 +1,6 @@
 ---
 title: "Model.validates resolves validator classes by name, not an if-chain"
-status: draft
+status: closed
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Duplicate of 0023-surfaced-deviations/converge-model-validates-onto-rails-generic-lookup (filed from PR #6625, draft, est-loc 400), which covers the same convergence: replacing Model.validates'' hardcoded if-chain with Rails'' generic const_get("#{key.camelize}Validator") lookup at validates.rb:105-133. That story is the one to work; nothing in mine is additive beyond the ''Unknown validator'' ArgumentError and custom-validator reachability, both implied by the generic lookup.'
 ---
 
 ## Context
