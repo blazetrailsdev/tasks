@@ -5,7 +5,8 @@ updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: ["activerecord"]
-deps: []
+deps:
+  - sweep-joins-call-sites-onto-the-colon-symbol-spelling
 deps-rfc: []
 est-loc: 150
 priority: null
