@@ -1,6 +1,6 @@
 ---
 title: "Port HashWithIndifferentAccess's last six members (to_options family, transform_keys!, slice!, to_proc)"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T09:37:51Z"
+assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
 blocked-by: null
 closed-reason: null
 ---
