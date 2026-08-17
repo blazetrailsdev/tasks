@@ -1,6 +1,6 @@
 ---
 title: "port-date-time-to-fs-onto-the-datetime-receiver"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6635
 claim: "2026-08-17T09:37:51Z"
 assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
 blocked-by: null
