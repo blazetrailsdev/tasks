@@ -1,6 +1,6 @@
 ---
 title: "resolveTasksDir silently falls back to canonical when run from inside a tasks worktree"
-status: draft
+status: claimed
 updated: 2026-08-17
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T16:29:30Z"
+assignee: "resolve-tasks-dir-from-inside-a-tasks-checkout"
 blocked-by: null
 closed-reason: null
 ---
