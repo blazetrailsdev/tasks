@@ -43,17 +43,15 @@ only one of a pair makes the compare matcher greedily pair Rails' `test__iso8601
 `pnpm parity:test:assertions --package date`. Landing both makes the path shared
 and the pairing correct, exactly as the already-ported `rfc2822` pair does.
 
-`it("length limit")` also still omits the `_iso8601` / `_xmlschema` /
-`_jisx0301` arms of Ruby's `test_length_limit` (`:1277-1303`) for the same
-reason — the parsers exist, so those arms can be restored in the same PR.
+`it("length limit")` is DONE — that PR landed all 22 of Ruby's arms
+(`:1277-1303`) at once, since every parser it exercises now exists. Do not
+touch it.
 
 ## Acceptance criteria
 
 - [ ] The three `test__X` / `test_X` pairs and `test_given_string` land in
       `packages/date/src/test-date-parse.test.ts` under their Ruby names,
       taking `test_date_parse.rb` from 17/26 to 26/26.
-- [ ] `it("length limit")` carries all 22 of Ruby's assertions, in Ruby's order
-      (Ruby has NO `httpdate` arm — do not re-add one).
 - [ ] `pnpm parity:test --package date` credits every added test and
       `pnpm parity:test:assertions --package date` stays green.
 - [ ] Split across PRs if the LOC ceiling requires — but never split a pair.
