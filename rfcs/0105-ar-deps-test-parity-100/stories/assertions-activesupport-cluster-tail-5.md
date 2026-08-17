@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-cluster-tail-5"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
