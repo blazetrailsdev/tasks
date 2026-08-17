@@ -1,7 +1,7 @@
 ---
 title: "readonly? and locked? return their values, not booleans"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T01:02:54Z"
+assignee: "port-hwia-bang-forms-and-to-options"
 blocked-by: null
 closed-reason: null
 ---

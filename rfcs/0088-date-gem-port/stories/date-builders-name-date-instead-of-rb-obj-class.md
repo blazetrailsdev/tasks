@@ -1,7 +1,7 @@
 ---
 title: "Date's builder seats answer Date, not rb_obj_class(self)"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-17
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T01:02:54Z"
+assignee: "port-hwia-bang-forms-and-to-options"
 blocked-by: null
 closed-reason: null
 ---
