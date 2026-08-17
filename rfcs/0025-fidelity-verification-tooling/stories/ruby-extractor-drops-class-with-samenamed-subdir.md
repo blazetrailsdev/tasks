@@ -1,7 +1,7 @@
 ---
 title: "Ruby extractor drops ActiveRecord::Encryption::Cipher (class whose file has a same-named subdirectory)"
-status: ready
-updated: 2026-07-30
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done, verified 2026-08-17: ActiveRecord::Encryption::Cipher is present in scripts/api-compare/output/rails-api.json alongside ActiveRecord::Encryption::Cipher::Aes256Gcm, on a full rebuild + API_COMPARE_FORCE=1 pnpm parity:api. The same-named-subdir drop no longer reproduces."
 ---
 
 ## Context
