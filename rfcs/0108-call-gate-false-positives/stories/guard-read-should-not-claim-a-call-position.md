@@ -1,6 +1,6 @@
 ---
 title: "A respond_to? guard's TS property read should not claim a call position"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 6667
 claim: "2026-08-17T20:12:59Z"
 assignee: "converge-accessor-surfaced-call-set-rows-wave-2"
 blocked-by: null
