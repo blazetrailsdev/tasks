@@ -1,6 +1,6 @@
 ---
 title: "Move Relation#length onto the to: :records delegation mechanism"
-status: claimed
+status: blocked
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-17T13:10:28Z"
 assignee: "assertions-activesupport-cluster-tail-2"
-blocked-by: null
+blocked-by: "Verified again on 2026-08-17: moving `length` into RECORD_DELEGATES/DelegationMethods (typecheck + relation, relation/delegation, collection-proxy suites all green) still reds `pnpm parity:api:calls` with two spurious rows in UNRELATED relation.ts methods — `create_or_find_by with_connection` and `to_sql with_connection`. Neither TS body calls withConnection or ever did; the credit leaked from length's presence in the class body. Baselining them would ratify pre-existing divergence in methods this story does not touch, so this stays blocked on call-credit-leaks-across-sibling-methods-in-a-class (0025-fidelity-verification-tooling)."
 closed-reason: null
 ---
 
