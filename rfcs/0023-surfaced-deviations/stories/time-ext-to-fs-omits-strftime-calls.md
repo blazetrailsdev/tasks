@@ -1,6 +1,6 @@
 ---
 title: "Time#to_fs / formatted_offset omit Rails' strftime and utc calls — reds parity:api:calls on main"
-status: draft
+status: closed
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Filed on false evidence, same cause as oid-array-constructor-omits-new-call: the 4 time-ext.ts rows were a STALE api-compare artifact. Verified on origin/main (b4b9fb144) with API_COMPARE_FORCE=1 pnpm parity:api --calls: 'call-mismatches ratchet: OK', zero NEW rows. Nothing to converge in time-ext.ts."
 ---
 
 ## Context
