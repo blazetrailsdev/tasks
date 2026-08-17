@@ -1,6 +1,6 @@
 ---
 title: "Converge ComparisonValidator's check_validity! message and mixed-Temporal comparison"
-status: draft
+status: done
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6626
 claim: null
 assignee: null
 blocked-by: null
