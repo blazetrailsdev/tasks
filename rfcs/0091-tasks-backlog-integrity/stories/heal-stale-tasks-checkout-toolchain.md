@@ -1,6 +1,6 @@
 ---
 title: "bin/tasks: recover checkouts whose node_modules predates a toolchain bump"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 65
 claim: "2026-08-17T16:26:39Z"
 assignee: "heal-stale-tasks-checkout-toolchain"
 blocked-by: null
