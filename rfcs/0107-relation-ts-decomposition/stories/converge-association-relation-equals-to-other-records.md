@@ -1,6 +1,6 @@
 ---
 title: "AssociationRelation#== is 'other == records' (association_relation.rb:14)"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6624
 claim: "2026-08-17T01:02:54Z"
 assignee: "port-hwia-bang-forms-and-to-options"
 blocked-by: null
