@@ -1,6 +1,6 @@
 ---
 title: "AssociationRelation#== is 'other == records' (association_relation.rb:14)"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
