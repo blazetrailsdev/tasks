@@ -1,6 +1,6 @@
 ---
 title: "A respond_to? guard's TS property read should not claim a call position"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
