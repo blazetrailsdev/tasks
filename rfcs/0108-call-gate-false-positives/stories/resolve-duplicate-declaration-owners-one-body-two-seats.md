@@ -1,6 +1,6 @@
 ---
 title: "resolve-duplicate-declaration-owners-one-body-two-seats"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6676
 claim: "2026-08-17T23:20:47Z"
 assignee: "resolve-duplicate-declaration-owners-one-body-two-seats"
 blocked-by: null
