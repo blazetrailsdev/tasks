@@ -1,6 +1,6 @@
 ---
 title: "converge-batches-order-validation-kernel-array"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6646
 claim: "2026-08-17T12:10:23Z"
 assignee: "converge-batches-order-validation-kernel-array"
 blocked-by: null
