@@ -1,6 +1,6 @@
 ---
 title: "resolve-owner-by-static-and-include-graph-instead-of-skipping"
-status: claimed
+status: ready
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-08-17T19:08:15Z"
-assignee: "closure-resolves-foreign-receiver-calls-as-same-file-methods"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
