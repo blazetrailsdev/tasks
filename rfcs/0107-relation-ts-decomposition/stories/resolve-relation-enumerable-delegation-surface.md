@@ -1,6 +1,6 @@
 ---
 title: "Resolve relation.ts's Enumerable/ActiveSupport delegation surface"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6622
 claim: "2026-08-17T00:00:01Z"
 assignee: "teach-call-args-regexp-flag-equivalence"
 blocked-by: null
