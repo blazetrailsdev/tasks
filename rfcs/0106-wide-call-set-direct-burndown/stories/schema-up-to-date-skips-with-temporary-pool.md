@@ -1,6 +1,6 @@
 ---
 title: "schema-up-to-date-skips-with-temporary-pool"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6678
 claim: "2026-08-17T23:32:58Z"
 assignee: "schema-up-to-date-skips-with-temporary-pool"
 blocked-by: null
