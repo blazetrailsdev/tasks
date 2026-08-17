@@ -1,6 +1,6 @@
 ---
 title: "Move validations_test.rb trails-only extras to validations.trails.test.ts"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
