@@ -110,4 +110,4 @@
 | [0105-ar-deps-test-parity-100](rfcs/0105-ar-deps-test-parity-100/README.md) | ActiveRecord + dependencies to 100% on the test-compare gate | active | @deanmarano | activerecord, activesupport, activemodel, date, i18n, arel, globalid, did-you-mean |
 | [0106-wide-call-set-direct-burndown](rfcs/0106-wide-call-set-direct-burndown/README.md) | Wide call-set direct burndown (activerecord, arel, activesupport) | active | @deanmarano | activerecord, arel, activesupport |
 | [0107-relation-ts-decomposition](rfcs/0107-relation-ts-decomposition/README.md) | relation.ts decomposition and invented-machinery burndown | active | @deanmarano | activerecord |
-| [0108-call-gate-false-positives](rfcs/0108-call-gate-false-positives/README.md) | Call-gate false positives — comparator reports a mismatch where the port is faithful | draft | @deanmarano | activerecord, activesupport, activemodel, actionview, arel |
+| [0108-call-gate-false-positives](rfcs/0108-call-gate-false-positives/README.md) | Call-gate false positives — comparator reports a mismatch where the port is faithful | active | @deanmarano | activerecord, activesupport, activemodel, actionview, arel |
