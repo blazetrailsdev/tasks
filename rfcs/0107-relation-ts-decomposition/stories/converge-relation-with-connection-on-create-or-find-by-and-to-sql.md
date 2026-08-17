@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-with-connection-on-create-or-find-by-and-to-sql"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
