@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-lookup-cast-type-from-column-onto-quoting-module"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6663
 claim: "2026-08-17T18:08:11Z"
 assignee: "compute-cache-version-makes-rails-calls"
 blocked-by: null
