@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#to_fs must resolve through Time::DATE_FORMATS, not a hand-rolled switch"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
