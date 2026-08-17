@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 1
 pr: 6660
 claim: "2026-08-17T17:48:13Z"
 assignee: "call-mismatches-partial-regen-invents-phantom-rows"
