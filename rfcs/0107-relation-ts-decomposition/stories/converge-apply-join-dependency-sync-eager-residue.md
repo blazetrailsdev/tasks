@@ -28,6 +28,15 @@ of that name (`connection-adapters/abstract/schema-statements.ts:1729`, mirrorin
 and the four inline re-implementations in `exec_main_query`, `pluck`, `ids` and
 `compute_cache_version` are gone, and composite-PK eager limit/offset now works.
 
+**Scope carve-out (2026-08-17).** This story now owns only the `eager_loading?`
+half of that residue — the promotion-helper split, the `exec_queries` preload
+list, and the composite-PK arm of the bypass guard. Deleting the synchronous
+eager builders and the deferred distinct-PK marker cluster needs an async
+`toSql`/`where` (412 test call sites plus 16 in source for `toSql` alone) and a
+MySQL decision about `IN (SELECT … LIMIT n)`; that is its own PR and is owned by
+`converge-sync-eager-builders-async-to-sql`, which carries the full helper list
+and both `@nie` sites. The inventory below is kept for context.
+
 What did NOT converge is the SYNCHRONOUS half, which is why these invented
 helpers still live in `relation.ts`:
 
@@ -88,20 +97,22 @@ Rails raises at neither site.
 
 ## Acceptance criteria
 
-- Decide and implement the convergence for the synchronous entry points: either
-  an async `toSql`/`where` path, or a documented, single-sited language-shortcoming
-  deviation that lets every helper above be deleted.
-- The invented helpers listed above are deleted from `relation.ts`.
-- `_eagerLoadBypassesJoinDependency`'s composite-PK arm is retired — the composite
-  PK case now works through `distinctRelationForPrimaryKey`.
+- `eagerLoading?` / `joinedIncludesValues` converge onto `relation.rb:1237-1242`
+  and `:1247-1249`, replacing the `_promotedIncludes` /
+  `_includesToPromoteFromReferences` / `_includesToPromoteFromJoins` /
+  `_joinedIncludesValues` / `_eagerLoadingForSql` split, with every call site
+  reading the Rails reader.
 - `exec_queries`' preload list derives from `eager_loading?` as Rails does
   (`preload += includes_values unless eager_loading?`, relation.rb:1321-1322)
   rather than from `_promotedIncludes`. Today the Preloader's already-loaded
   skip masks the difference (no extra SQL is emitted), but the list itself is
   not the Rails one.
-- Also converge `eagerLoading?` / `joinedIncludesValues` onto `relation.rb:1238`
-  and `:1248` (trails splits them across `_promotedIncludes`,
-  `_includesToPromoteFromReferences`, `_includesToPromoteFromJoins`,
-  `_joinedIncludesValues`, `_eagerLoadingForSql`).
+- `_eagerLoadBypassesJoinDependency`'s composite-PK arm is retired — the composite
+  PK case now works through `distinctRelationForPrimaryKey`. Any residue is
+  confined to the one synchronous builder that cannot execute that query.
 - `pnpm parity:api:calls` / `:args` clean; `parity:api` / `parity:test` deltas
   non-negative.
+
+Deleting the synchronous eager builders, the deferred distinct-PK marker cluster
+and the two `@nie` `NotImplementedError` sites is NOT in this story's bar — see
+`converge-sync-eager-builders-async-to-sql`.
