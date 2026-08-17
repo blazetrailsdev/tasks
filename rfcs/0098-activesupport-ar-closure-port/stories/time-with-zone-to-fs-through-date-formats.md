@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#to_fs must resolve through Time::DATE_FORMATS, not a hand-rolled switch"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T21:28:00Z"
+assignee: "converge-request-method-onto-methodoverride-original-method"
 blocked-by: null
 closed-reason: null
 ---
