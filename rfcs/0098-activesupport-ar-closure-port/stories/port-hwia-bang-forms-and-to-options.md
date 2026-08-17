@@ -1,6 +1,6 @@
 ---
 title: "port-hwia-bang-forms-and-to-options"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6624
 claim: "2026-08-17T01:02:54Z"
 assignee: "port-hwia-bang-forms-and-to-options"
 blocked-by: null
