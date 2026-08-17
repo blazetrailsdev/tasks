@@ -1,7 +1,7 @@
 ---
 title: "api-compare extractor: capture define_method loops and define_column_methods (15 allowlist entries)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done, verified 2026-08-17: same evidence as ruby-extractor-records-define-method-names — process_each_metaprogramming (extract-ruby-api.rb:1579) unrolls the literal-array .each define_method loop and names abstract_controller/callbacks.rb:230 as its worked case. abstractcontroller callbacks.ts now scores beforeAction/afterAction/aroundAction as moved, not novel. Note scripts/api-compare/extra-surface-allow.json no longer exists (RFC 0080 replaced it with @noRailsEquivalent tags), so the entry-count acceptance criteria are moot."
 ---
 
 ## Context
