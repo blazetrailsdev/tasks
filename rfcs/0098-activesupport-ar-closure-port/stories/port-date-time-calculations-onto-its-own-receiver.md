@@ -1,6 +1,6 @@
 ---
 title: "port-date-time-calculations-onto-its-own-receiver"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6623
 claim: "2026-08-17T00:32:24Z"
 assignee: "port-date-time-calculations-onto-its-own-receiver"
 blocked-by: null
