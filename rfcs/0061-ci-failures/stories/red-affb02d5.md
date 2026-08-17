@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc Tests, Active Record SQLite :memory: Tests failing on main @affb02d5"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T15:14:17Z"
+assignee: "red-affb02d5"
 blocked-by: null
 closed-reason: null
 ---
