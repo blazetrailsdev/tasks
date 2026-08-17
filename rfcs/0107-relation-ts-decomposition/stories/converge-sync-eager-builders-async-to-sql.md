@@ -64,6 +64,16 @@ The marker cluster additionally exists because MySQL/MariaDB reject
 emits, so deleting it without an async path is a real MySQL regression, not a
 tidy-up. That decision needs its own PR and its own adapter-lane run.
 
+Added by #6648: `_buildEagerOperandManager` also now carries the last
+composite-PK residue. #6648 retired the composite-PK arm of
+`_eagerLoadBypassesJoinDependency` (the async path handles a composite key via
+the adapter's `distinct_relation_for_primary_key`,
+`schema_statements.rb:1429-1452`), but this synchronous builder substitutes an
+inline `pk IN (SELECT DISTINCT …)` for the executed limited-ids query and a
+composite key has no single column to nest that under, so it returns null and
+falls back to the plain arel. Deleting the builder deletes that residue too —
+there is no separate story for it.
+
 ## Acceptance criteria
 
 - Decide and implement the convergence for the three synchronous entry points:
