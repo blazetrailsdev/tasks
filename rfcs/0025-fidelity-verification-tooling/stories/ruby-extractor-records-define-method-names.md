@@ -1,7 +1,7 @@
 ---
 title: "ruby-extractor-records-define-method-names"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done, verified 2026-08-17: extract-ruby-api.rb now has full define_method handling (37 matches) — process_define_method_block/process_define_method for literal names, and process_each_metaprogramming which unrolls literal-array .each loops, citing abstract_controller/callbacks.rb:230 (this story's exact case) in its own comment. Measured: pnpm parity:api:extra --package abstractcontroller reports callbacks.ts at 3 novel (if/prototype/unless — parser noise), with beforeAction/afterAction/aroundAction scoring as MOVED. The 12 allowlist entries this story existed to remove are gone, along with the allowlist itself."
 ---
 
 ## Context
