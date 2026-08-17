@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api records no call set for get accessors, hiding every getter-shaped port from the call gate"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
