@@ -1,7 +1,7 @@
 ---
 title: "exec_explain should render binds through render_bind"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Row gone: 'exec_explain -> render_bind' is absent from origin/main scripts/api-compare/call-mismatches-exclude/activerecord/relation.json (18 entries, no exec_explain row at all). Retired by the wave-1b remainder work; nothing left to converge."
 ---
 
 # `exec_explain` should render binds through `render_bind`
