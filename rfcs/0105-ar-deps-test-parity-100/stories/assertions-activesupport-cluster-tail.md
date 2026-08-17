@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-cluster-tail"
-status: ready
+status: claimed
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T11:13:56Z"
+assignee: "assertions-activesupport-cluster-tail"
 blocked-by: null
 closed-reason: null
 ---
