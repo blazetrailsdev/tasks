@@ -46,13 +46,10 @@ at all — the behaviour the Rails test exists for — but not Rails' actual val
 That substitution is called out at the call site in
 `packages/activemodel/src/type.test.ts`.
 
-Also in `registry.rb` and worth taking with it: `lookup`'s not-found message is
-`"Unknown type #{symbol.inspect}"` — `Unknown type :foo`, the colon coming from
-Symbol#inspect. trails raises `Unknown type: foo` (a colon after the word, no
-Symbol rendering). Per CLAUDE.md a Ruby Symbol keeps its leading colon in the
-string, so the faithful message is `Unknown type :${name}`. `registry_test.rb`'s
-"a reasonable error is given when no type is found" asserts on it, which is why
-that file is listed in `assertions-activemodel-type-cluster-fourth-pass`.
+The sibling half of this — `lookup`'s not-found message, which Rails builds as
+`"Unknown type #{symbol.inspect}"` (registry.rb:26) — was converged by #6643 and is
+already `Unknown type :${name}` in `registry.ts`. Nothing left to do there; only the
+variadic forwarding below remains.
 
 ## Acceptance criteria
 
@@ -60,7 +57,6 @@ that file is listed in `assertions-activemodel-type-cluster-fourth-pass`.
   variadic argument list, matching `registry.rb:19-27` and `type.rb:31-36`.
 - The 12 built-in registrations in `registry.ts`'s constructor, and AR's own
   registrations, are updated to the forwarded shape.
-- `lookup`'s not-found message is `Unknown type :<name>`.
 - `type_test.rb`'s "registering a new type" asserts Rails' own positional
   arguments; the option-object substitution note in `type.test.ts` is deleted.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative; `pnpm parity:api:calls`
