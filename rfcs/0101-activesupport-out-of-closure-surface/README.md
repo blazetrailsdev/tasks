@@ -1,9 +1,9 @@
 ---
 rfc: "0101-activesupport-out-of-closure-surface"
 title: "activesupport out-of-closure surface: cache stores and XmlMini"
-status: active
+status: postponed
 created: 2026-08-12
-updated: 2026-08-13
+updated: 2026-08-17
 owner: "@your-handle"
 packages:
   - "activesupport"
