@@ -65,6 +65,11 @@ the yielded relation from the block, relying on everything before the
 - The invented helpers listed above are deleted from `relation.ts`.
 - `_eagerLoadBypassesJoinDependency`'s composite-PK arm is retired — the composite
   PK case now works through `distinctRelationForPrimaryKey`.
+- `exec_queries`' preload list derives from `eager_loading?` as Rails does
+  (`preload += includes_values unless eager_loading?`, relation.rb:1321-1322)
+  rather than from `_promotedIncludes`. Today the Preloader's already-loaded
+  skip masks the difference (no extra SQL is emitted), but the list itself is
+  not the Rails one.
 - Also converge `eagerLoading?` / `joinedIncludesValues` onto `relation.rb:1238`
   and `:1248` (trails splits them across `_promotedIncludes`,
   `_includesToPromoteFromReferences`, `_includesToPromoteFromJoins`,
