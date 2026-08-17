@@ -1,7 +1,7 @@
 ---
 title: "parity:api reports a faithful port of a Struct or define_method member as novel surface"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by extract-ruby-metaprogrammed-member-definitions (2026-08-17 sweep): merged with api-compare-literal-array-class-eval-codegen — both are the Ruby extractor only seeing 'def'. rfc4646.ts re-measured at 5 novel; citations carried forward."
 ---
 
 ## Context
