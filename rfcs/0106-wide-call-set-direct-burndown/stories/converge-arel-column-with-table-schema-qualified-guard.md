@@ -1,7 +1,7 @@
 ---
 title: "Retire arel_column_with_table's schema-qualified guard so the body is Rails' two arms"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
