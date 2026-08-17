@@ -1,6 +1,6 @@
 ---
 title: "parity:api:calls gates a partially-regenerated artifact — invents rows and hides real ones"
-status: ready
+status: draft
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
