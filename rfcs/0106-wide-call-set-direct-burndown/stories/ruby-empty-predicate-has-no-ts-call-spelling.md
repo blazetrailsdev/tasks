@@ -1,6 +1,6 @@
 ---
 title: "Ruby empty? has no TS call spelling — six relation.ts rows cannot converge without one"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
