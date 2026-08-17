@@ -82,6 +82,9 @@ trap cleanup_partial_worktree EXIT
 echo "==> Running pnpm install"
 ( cd "$TARGET" && pnpm install )
 
+echo "==> Ensuring \`tasks\` is on the PATH"
+"$SCRIPT_DIR/install-bin.sh" || true
+
 WORKTREE_CREATED=0  # success — disable EXIT-trap cleanup
 
 echo

@@ -7,8 +7,13 @@ see [README.md](README.md) and
 
 This repo holds **design documents and structured work tracking** for
 [`blazetrailsdev/trails`](https://github.com/blazetrailsdev/trails). It runs
-**loose rules** compared to trails: no LOC ceiling, no code-style gate. The CLI
-(`pnpm tasks`) that consumes this repo lives in trails.
+**loose rules** compared to trails: no LOC ceiling, no code-style gate.
+
+It also holds the `tasks` CLI itself — [`scripts/cli.ts`](scripts/cli.ts) plus
+its vitest suite in `scripts/cli.test.ts`, entered through
+[`bin/tasks`](bin/tasks). trails delegates its `pnpm tasks` script here. When
+you change the CLI, run `pnpm typecheck` and `pnpm test`; the loose-rules
+carve-out above is about the markdown, not about the TypeScript.
 
 ## Working in this repo
 

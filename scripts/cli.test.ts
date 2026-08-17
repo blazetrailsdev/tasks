@@ -1,0 +1,4378 @@
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  utimesSync,
+  writeFileSync,
+} from "node:fs";
+import { homedir, tmpdir } from "node:os";
+import { join } from "node:path";
+import { afterEach, describe, expect, it, vi } from "vitest";
+
+// commitAndPush() shells out to git via execFileSync. Mock the whole
+// child_process module so the retry/success/failure paths are testable
+// without a real git repo. Pure tests in this file don't call
+// execFileSync, so the mock is inert for them. Use vi.hoisted so the
+// mock fn is available inside vi.mock's hoisted factory.
+const { execFileSyncMock } = vi.hoisted(() => ({
+  execFileSyncMock: vi.fn<(file: string, args: string[]) => string>(),
+}));
+vi.mock("node:child_process", () => ({ execFileSync: execFileSyncMock }));
+
+afterEach(() => {
+  execFileSyncMock.mockReset();
+  vi.restoreAllMocks();
+});
+
+import {
+  bestBundle,
+  isIndexStale,
+  __setLockDirForTest,
+  __setLockWaitForTest,
+  acquireTasksLock,
+  assertCleanWorktree,
+  buildRfcContent,
+  buildStoryContent,
+  MutatorEarlyExit,
+  readRfcStatus,
+  isEffectivelyEmptyBody,
+  checkCheckboxesDone,
+  checkPrNotOpen,
+  claimState,
+  claimBatch,
+  findStoryFile,
+  prLocDelta,
+  uncheckedCheckboxes,
+  commitAndPush,
+  extractMarkdownlintViolations,
+  depCyclePath,
+  editFrontmatter,
+  finalize,
+  findDuplicateRfcDirs,
+  migrateDuplicateRfcDir,
+  reconcileDuplicateRfcDirs,
+  rewriteRfcRefs,
+  parseCsv,
+  setDepsError,
+  packagesError,
+  formatFiles,
+  formatRows,
+  gitCommonDir,
+  PRIORITY_LEGEND,
+  renderStoryView,
+  Index,
+  LOCK_TIMEOUT_EXIT,
+  releaseTasksLock,
+  listFiltered,
+  newRfc,
+  newStory,
+  emptyBundleReason,
+  formatEmptyBundle,
+  nextBundle,
+  summarizeBundle,
+  numberFlag,
+  parseFlags,
+  ready,
+  resolveEditTarget,
+  editorArgv,
+  orphanedStories,
+  removeFrontmatterKey,
+  rfcRefError,
+  rfcStatusError,
+  setFrontmatterList,
+  resolveTasksDir,
+  closeEdits,
+  closeError,
+  isDepResolved,
+  statusEdits,
+  statusOf,
+  prOf,
+  trackingSkip,
+  releaseError,
+  RELEASE_EDITS,
+  statusTransitionError,
+  STORY_STATUSES,
+  stringFlag,
+  StoryEntry,
+  TASKS_DIR,
+  dirtyWorktreeLines,
+  buildIndexFromOriginMain,
+  readIndexSource,
+  readWorkingTreeIndex,
+  readIndexedFile,
+  claimAgeHours,
+  isStaleClaim,
+  staleClaims,
+  formatStaleClaims,
+  DEFAULT_STALE_HOURS,
+  RfcEntry,
+  comparePriority,
+  priorityContext,
+  remainingStoryCounts,
+  applyRfcPriorities,
+  effectivePriority,
+  parseRfcPriority,
+  readRfcPriority,
+  rfcPriorityFlag,
+  rfcPriorityMap,
+} from "./cli.js";
+
+function story(over: Partial<StoryEntry>): StoryEntry {
+  return {
+    id: "x",
+    rfc: "0001-r",
+    title: null,
+    status: "ready",
+    cluster: "c1",
+    deps: [],
+    deps_rfc: [],
+    est_loc: 100,
+    updated: null,
+    pr: null,
+    priority: null,
+    claim: null,
+    assignee: null,
+    blocked_by: null,
+    closed_reason: null,
+    file_path: "0001-r/stories/x.md",
+    ...over,
+  };
+}
+
+function index(stories: StoryEntry[]): Index {
+  return {
+    generated_at: "now",
+    rfcs: [
+      {
+        id: "0001-r",
+        title: "R",
+        status: "active",
+        owner: "@x",
+        packages: [],
+        clusters: ["c1", "c2"],
+        file_path: "0001-r/README.md",
+      },
+      {
+        id: "0002-r",
+        title: "R2",
+        status: "closed",
+        owner: "@x",
+        packages: [],
+        clusters: ["c3"],
+        file_path: "0002-r/README.md",
+      },
+    ],
+    stories,
+  };
+}
+
+describe("ready", () => {
+  it("filters out non-ready, unmet story deps, and unmet rfc deps", () => {
+    const idx = index([
+      story({ id: "a", status: "ready" }),
+      story({ id: "b", status: "draft" }),
+      story({ id: "c", status: "ready", deps: ["b"] }),
+      story({ id: "d", status: "ready", deps_rfc: ["0001-r"] }), // 0001-r is active, not closed
+      story({ id: "e", status: "ready", deps_rfc: ["0002-r"] }), // 0002-r is closed → ok
+    ]);
+    expect(
+      ready(idx)
+        .map((s) => s.id)
+        .sort(),
+    ).toEqual(["a", "e"]);
+  });
+
+  it("treats a closed dep as resolved (same as done)", () => {
+    const idx = index([
+      story({ id: "doneDep", status: "done" }),
+      story({ id: "closedDep", status: "closed", closed_reason: '"superseded"' }),
+      story({ id: "a", status: "ready", deps: ["doneDep"] }),
+      story({ id: "b", status: "ready", deps: ["closedDep"] }),
+      story({ id: "c", status: "ready", deps: ["closedDep", "doneDep"] }),
+    ]);
+    expect(
+      ready(idx)
+        .map((s) => s.id)
+        .sort(),
+    ).toEqual(["a", "b", "c"]);
+  });
+
+  it("excludes ready stories whose own RFC is not active", () => {
+    const idx = index([
+      story({ id: "active", rfc: "0001-r" }), // 0001-r active → included
+      story({ id: "draft", rfc: "0003-r" }), // draft RFC → excluded
+      story({ id: "postponed", rfc: "0004-r" }), // postponed → excluded
+      story({ id: "superseded", rfc: "0005-r" }), // superseded → excluded
+      story({ id: "closed", rfc: "0002-r", cluster: "c3" }), // closed → excluded
+    ]);
+    idx.rfcs.push(
+      {
+        id: "0003-r",
+        title: "R3",
+        status: "draft",
+        owner: "@x",
+        packages: [],
+        clusters: ["c1"],
+        file_path: "0003-r/README.md",
+      },
+      {
+        id: "0004-r",
+        title: "R4",
+        status: "postponed",
+        owner: "@x",
+        packages: [],
+        clusters: ["c1"],
+        file_path: "0004-r/README.md",
+      },
+      {
+        id: "0005-r",
+        title: "R5",
+        status: "superseded",
+        owner: "@x",
+        packages: [],
+        clusters: ["c1"],
+        file_path: "0005-r/README.md",
+      },
+    );
+    expect(ready(idx).map((s) => s.id)).toEqual(["active"]);
+  });
+
+  it("never surfaces a story build-index downgraded under a postponed RFC", () => {
+    // build-index.mjs (tasks repo) emits effective status: a `ready` story
+    // under a non-active RFC arrives here as `draft` with the authored value
+    // in raw_status. Pin that neither ready() nor listFiltered's status
+    // filter resurrects it as claimable from the raw value.
+    const idx = index([
+      story({ id: "active", rfc: "0001-r", raw_status: "ready" }),
+      story({ id: "downgraded", rfc: "0004-r", status: "draft", raw_status: "ready" }),
+    ]);
+    idx.rfcs.push({
+      id: "0004-r",
+      title: "R4",
+      status: "postponed",
+      owner: "@x",
+      packages: [],
+      clusters: ["c1"],
+      file_path: "0004-r/README.md",
+    });
+    expect(ready(idx).map((s) => s.id)).toEqual(["active"]);
+    expect(listFiltered(idx, { status: "ready" }).map((s) => s.id)).toEqual(["active"]);
+  });
+
+  it("excludes a ready story whose RFC is null-status or absent from the index", () => {
+    const idx = index([
+      story({ id: "active", rfc: "0001-r" }), // active → included
+      story({ id: "nullStatus", rfc: "0006-r" }), // RFC present but status null → excluded
+      story({ id: "danglingRfc", rfc: "0099-r" }), // rfc absent from index.rfcs → excluded
+    ]);
+    idx.rfcs.push({
+      id: "0006-r",
+      title: "R6",
+      status: null,
+      owner: "@x",
+      packages: [],
+      clusters: ["c1"],
+      file_path: "0006-r/README.md",
+    });
+    expect(ready(idx).map((s) => s.id)).toEqual(["active"]);
+  });
+
+  it("honors --rfc filter", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0001-r" }),
+      story({ id: "b", rfc: "0002-r", cluster: "c3" }),
+    ]);
+    expect(ready(idx, { rfc: "0001-r" }).map((s) => s.id)).toEqual(["a"]);
+  });
+
+  it("orders by priority (lower N first), unprioritized last, ties stable", () => {
+    const idx = index([
+      story({ id: "none1" }),
+      story({ id: "p5", priority: 5 }),
+      story({ id: "none2" }),
+      story({ id: "p1", priority: 1 }),
+    ]);
+    // p1 < p5 < the two unprioritized, which keep their index order.
+    expect(ready(idx).map((s) => s.id)).toEqual(["p1", "p5", "none1", "none2"]);
+  });
+});
+
+describe("resolveEditTarget", () => {
+  it("resolves a story id to its repo-relative file path", () => {
+    const idx = index([story({ id: "a", file_path: "0001-r/stories/a.md" })]);
+    expect(resolveEditTarget(idx, "a")).toBe("0001-r/stories/a.md");
+  });
+
+  it("resolves an RFC slug to its README path", () => {
+    const idx = index([]);
+    expect(resolveEditTarget(idx, "0002-r")).toBe("0002-r/README.md");
+  });
+
+  it("returns null when neither a story id nor an RFC slug matches", () => {
+    expect(resolveEditTarget(index([]), "nope")).toBeNull();
+  });
+});
+
+describe("editorArgv", () => {
+  it("prefers $VISUAL over $EDITOR", () => {
+    expect(editorArgv({ VISUAL: "emacs", EDITOR: "vim" })).toEqual(["emacs"]);
+  });
+
+  it("falls back to $EDITOR then vi, and splits args", () => {
+    expect(editorArgv({ EDITOR: "code --wait" })).toEqual(["code", "--wait"]);
+    expect(editorArgv({})).toEqual(["vi"]);
+    expect(editorArgv({ VISUAL: "  ", EDITOR: "" })).toEqual(["vi"]);
+  });
+});
+
+describe("bestBundle (0/1 knapsack)", () => {
+  it("picks the optimal subset, not just the greedy largest-first", () => {
+    const items = [
+      story({ id: "big", est_loc: 200 }),
+      story({ id: "a", est_loc: 100 }),
+      story({ id: "b", est_loc: 80 }),
+      story({ id: "c", est_loc: 70 }),
+    ];
+    // Greedy desc would pick [200]; optimum is [100,80,70] = 250.
+    const result = bestBundle(items, 250)
+      .map((s) => s.id)
+      .sort();
+    expect(result).toEqual(["a", "b", "c"]);
+  });
+
+  it("returns [] for empty input or zero budget", () => {
+    expect(bestBundle([], 100)).toEqual([]);
+    expect(bestBundle([story({ id: "x", est_loc: 50 })], 0)).toEqual([]);
+  });
+});
+
+describe("nextBundle", () => {
+  it("picks the best-filling cluster", () => {
+    const idx = index([
+      story({ id: "a1", cluster: "c1", est_loc: 100 }),
+      story({ id: "a2", cluster: "c1", est_loc: 100 }),
+      story({ id: "b1", cluster: "c2", est_loc: 240 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    // c1 bundles 200, c2 bundles 240 → c2 wins
+    expect(bundle.map((s) => s.id)).toEqual(["b1"]);
+  });
+
+  it("excludes stories with null est_loc", () => {
+    const idx = index([story({ id: "a", est_loc: null }), story({ id: "b", est_loc: 50 })]);
+    expect(nextBundle(idx, { maxLoc: 250 }).map((s) => s.id)).toEqual(["b"]);
+  });
+
+  it("leads with the highest-priority story, overriding cluster-LOC packing", () => {
+    // c2 packs more LOC (240 > 200), but a1 carries a priority while the c2
+    // stories don't — the prioritized story must be the head (the loop's pick).
+    const idx = index([
+      story({ id: "a1", cluster: "c1", est_loc: 100, priority: 3 }),
+      story({ id: "a2", cluster: "c1", est_loc: 100 }),
+      story({ id: "b1", cluster: "c2", est_loc: 240 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(bundle[0].id).toBe("a1");
+    // Fill comes from a1's own cluster within the remaining budget.
+    expect(bundle.map((s) => s.id).sort()).toEqual(["a1", "a2"]);
+  });
+
+  it("leads with a prioritized story even when it has no est_loc", () => {
+    // A prioritized story is an explicit "do this" — a missing estimate must
+    // not exclude it the way it does for the unprioritized knapsack path.
+    const idx = index([
+      story({ id: "p", cluster: "c1", est_loc: null, priority: 1 }),
+      story({ id: "f", cluster: "c1", est_loc: 80 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(bundle[0].id).toBe("p");
+    expect(bundle.map((s) => s.id)).toEqual(["p", "f"]);
+  });
+
+  it("leads with a prioritized story whose est_loc exceeds the budget, flagged as over-budget", () => {
+    const idx = index([
+      story({ id: "big", cluster: "c1", est_loc: 450, priority: 2 }),
+      story({ id: "f", cluster: "c1", est_loc: 80 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(bundle.map((s) => s.id)).toEqual(["big"]);
+    expect(summarizeBundle(bundle, 250)).toEqual({ total: 450, leadExceedsBudget: true });
+  });
+
+  it("does not flag a bundle whose total fits the budget", () => {
+    const idx = index([
+      story({ id: "p", cluster: "c1", est_loc: null, priority: 1 }),
+      story({ id: "f", cluster: "c1", est_loc: 80 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(summarizeBundle(bundle, 250)).toEqual({ total: 80, leadExceedsBudget: false });
+  });
+
+  it("orders multiple prioritized stories by ascending priority (lower N first)", () => {
+    const idx = index([
+      story({ id: "lo", cluster: "c1", est_loc: 50, priority: 9 }),
+      story({ id: "hi", cluster: "c1", est_loc: 50, priority: 1 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(bundle.map((s) => s.id)).toEqual(["hi", "lo"]);
+  });
+
+  it("never mixes a real cluster named '_none' with unclustered stories", () => {
+    // A story with cluster: null must stay separate from a story whose
+    // cluster literally equals "_none" — bundles are same-cluster only.
+    // Patch the parent RFC's clusters so the literal "_none" passes validation.
+    const idx = index([
+      story({ id: "u", cluster: null, est_loc: 100 }),
+      story({ id: "n", cluster: "_none", est_loc: 100 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    // Both clusters tie at 100; either may win, but never both together.
+    expect(bundle.length).toBe(1);
+  });
+
+  it("returns [] when the filters select no ready story", () => {
+    const idx = index([story({ id: "a", cluster: "c1", est_loc: 100, priority: 1 })]);
+    expect(nextBundle(idx, { maxLoc: 250, cluster: "nope" })).toEqual([]);
+  });
+
+  it("returns [] when in-scope stories exist but none fit the budget", () => {
+    // No priorities anywhere, so the knapsack path runs and nothing packs:
+    // one story has no estimate, the other is over budget.
+    const idx = index([
+      story({ id: "a", cluster: "c1", est_loc: null }),
+      story({ id: "b", cluster: "c1", est_loc: 900 }),
+    ]);
+    expect(nextBundle(idx, { maxLoc: 250 })).toEqual([]);
+  });
+
+  it("never returns [] once any in-scope story is prioritized", () => {
+    const idx = index([story({ id: "a", cluster: "c1", est_loc: 900, priority: 1 })]);
+    expect(nextBundle(idx, { maxLoc: 250 }).map((s) => s.id)).toEqual(["a"]);
+  });
+});
+
+describe("emptyBundleReason", () => {
+  it("reports no-matching-stories when the filters select nothing", () => {
+    const idx = index([story({ id: "a", cluster: "c1", est_loc: 100 })]);
+    expect(emptyBundleReason(idx, { cluster: "nope" })).toBe("no-matching-stories");
+  });
+
+  it("reports none-within-budget when the selection is non-empty", () => {
+    const idx = index([story({ id: "a", cluster: "c1", est_loc: 900 })]);
+    expect(emptyBundleReason(idx, {})).toBe("none-within-budget");
+  });
+});
+
+describe("formatEmptyBundle", () => {
+  it("omits the LOC budget when nothing matched the filters", () => {
+    expect(formatEmptyBundle("no-matching-stories", 250, { rfc: "0024-tasks-cli-coverage" })).toBe(
+      "no ready stories matching rfc 0024-tasks-cli-coverage",
+    );
+  });
+
+  it("names both filters when both are set", () => {
+    expect(formatEmptyBundle("no-matching-stories", 250, { rfc: "0024", cluster: "c1" })).toBe(
+      "no ready stories matching rfc 0024 + cluster c1",
+    );
+  });
+
+  it("reports the budget when the selection was non-empty", () => {
+    expect(formatEmptyBundle("none-within-budget", 250)).toBe("no ready stories within 250 LOC");
+    expect(formatEmptyBundle("none-within-budget", 250, { cluster: "c1" })).toBe(
+      "no ready stories matching cluster c1 within 250 LOC",
+    );
+  });
+});
+
+describe("isIndexStale", () => {
+  // Lay out a minimal tasks checkout: rfcs/0001-r/{README.md,stories/s.md},
+  // scripts/build-index.mjs, and index.json, all with controlled mtimes so
+  // each staleness trigger can be exercised independently.
+  function checkout(): { dir: string; index: string; setAge: (rel: string, sec: number) => void } {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-stale-"));
+    mkdirSync(join(dir, "rfcs", "0001-r", "stories"), { recursive: true });
+    mkdirSync(join(dir, "scripts"), { recursive: true });
+    for (const rel of [
+      "rfcs/0001-r/README.md",
+      "rfcs/0001-r/stories/s.md",
+      "scripts/build-index.mjs",
+      "index.json",
+    ]) {
+      writeFileSync(join(dir, rel), "x");
+    }
+    const setAge = (rel: string, sec: number): void => {
+      // utimes takes seconds; positive sec = newer than the epoch base below.
+      utimesSync(join(dir, rel), 1_000_000 + sec, 1_000_000 + sec);
+    };
+    // Baseline: everything older than the index → fresh.
+    for (const rel of [
+      "rfcs/0001-r/README.md",
+      "rfcs/0001-r/stories/s.md",
+      "scripts/build-index.mjs",
+    ])
+      setAge(rel, 0);
+    setAge("index.json", 100);
+    return { dir, index: join(dir, "index.json"), setAge };
+  }
+
+  it("reports fresh when the index is newest", () => {
+    const { dir, index } = checkout();
+    expect(isIndexStale(index, dir)).toBe(false);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it("detects a story file newer than the index (rfcs/ layout, not repo root)", () => {
+    const { dir, index, setAge } = checkout();
+    setAge("rfcs/0001-r/stories/s.md", 200);
+    expect(isIndexStale(index, dir)).toBe(true);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it("detects an RFC README newer than the index (status flips live there)", () => {
+    const { dir, index, setAge } = checkout();
+    setAge("rfcs/0001-r/README.md", 200);
+    expect(isIndexStale(index, dir)).toBe(true);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it("detects edits under a legacy draft-slug RFC dir (indexed by RFC_DIR_RE too)", () => {
+    const { dir, index, setAge } = checkout();
+    mkdirSync(join(dir, "rfcs", "draft-r", "stories"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "draft-r", "stories", "s.md"), "x");
+    setAge("rfcs/draft-r/stories/s.md", 200);
+    expect(isIndexStale(index, dir)).toBe(true);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it("ignores 0000-template (excluded from the index, so it can't stale it)", () => {
+    const { dir, index, setAge } = checkout();
+    mkdirSync(join(dir, "rfcs", "0000-template", "stories"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "0000-template", "README.md"), "x");
+    setAge("rfcs/0000-template/README.md", 200);
+    expect(isIndexStale(index, dir)).toBe(false);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it("detects a build script newer than the index (derivation changes must reindex)", () => {
+    const { dir, index, setAge } = checkout();
+    setAge("scripts/build-index.mjs", 200);
+    expect(isIndexStale(index, dir)).toBe(true);
+    rmSync(dir, { recursive: true, force: true });
+  });
+});
+
+describe("listFiltered", () => {
+  it("composes rfc + status + cluster filters", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0001-r", status: "draft", cluster: "c1" }),
+      story({ id: "b", rfc: "0001-r", status: "ready", cluster: "c1" }),
+      story({ id: "c", rfc: "0001-r", status: "ready", cluster: "c2" }),
+    ]);
+    const rows = listFiltered(idx, { rfc: "0001-r", status: "ready", cluster: "c2" });
+    expect(rows.map((s) => s.id)).toEqual(["c"]);
+  });
+});
+
+describe("formatRows", () => {
+  it("renders est_loc from a numeric value and shows a priority column", () => {
+    const out = formatRows([story({ id: "a", est_loc: 90, priority: 30 })]);
+    expect(out).toContain("priority");
+    expect(out).toContain("est_loc");
+    const dataLine = out.split("\n").find((l) => l.startsWith("a"))!;
+    expect(dataLine).toContain("90");
+    expect(dataLine).toContain("30");
+  });
+
+  it("renders null priority and null est_loc as an em dash", () => {
+    const out = formatRows([story({ id: "a", est_loc: null, priority: null })]);
+    const dataLine = out.split("\n").find((l) => l.startsWith("a"))!;
+    expect(dataLine).toContain("—");
+  });
+
+  it("documents the priority direction in a legend above the table", () => {
+    const out = formatRows([story({ id: "a" })]);
+    expect(out.split("\n")[0]).toBe(PRIORITY_LEGEND);
+    expect(PRIORITY_LEGEND).toMatch(/lower/i);
+  });
+
+  it("returns (none) for an empty row set", () => {
+    expect(formatRows([])).toBe("(none)");
+  });
+
+  it("marks stale rows with a ! suffix in the status column", () => {
+    const out = formatRows([story({ id: "a", status: "claimed" })], new Set(["a"]));
+    const dataLine = out.split("\n").find((l) => l.startsWith("a"))!;
+    expect(dataLine).toContain("claimed!");
+  });
+});
+
+describe("stale claims", () => {
+  // Fixed clock: 100h after the epoch-ish reference so ages are exact.
+  const NOW = Date.parse("2026-06-13T00:00:00Z");
+  const hoursAgo = (h: number) => new Date(NOW - h * 3_600_000).toISOString();
+
+  it("defaults the threshold to 48 hours", () => {
+    expect(DEFAULT_STALE_HOURS).toBe(48);
+  });
+
+  it("computes claim age in hours and returns null for a missing/bad claim", () => {
+    expect(claimAgeHours(hoursAgo(10), NOW)).toBeCloseTo(10);
+    expect(claimAgeHours(null, NOW)).toBeNull();
+    expect(claimAgeHours("not-a-date", NOW)).toBeNull();
+  });
+
+  it("does not flag a fresh claim", () => {
+    const s = story({ status: "claimed", pr: null, claim: hoursAgo(1) });
+    expect(isStaleClaim(s, NOW, 48)).toBe(false);
+  });
+
+  it("flags a claim older than the threshold", () => {
+    const s = story({ status: "claimed", pr: null, claim: hoursAgo(72) });
+    expect(isStaleClaim(s, NOW, 48)).toBe(true);
+  });
+
+  it("does not flag a stale claim that already has a PR", () => {
+    const s = story({ status: "claimed", pr: 123, claim: hoursAgo(72) });
+    expect(isStaleClaim(s, NOW, 48)).toBe(false);
+  });
+
+  it("does not flag in-progress stories", () => {
+    // pr: null so only the status guard can exempt this — isolates that
+    // in-progress is excluded by status, not incidentally by having a PR.
+    const s = story({ status: "in-progress", pr: null, claim: hoursAgo(72) });
+    expect(isStaleClaim(s, NOW, 48)).toBe(false);
+  });
+
+  it("honors a custom threshold", () => {
+    const s = story({ status: "claimed", pr: null, claim: hoursAgo(72) });
+    expect(isStaleClaim(s, NOW, 96)).toBe(false);
+  });
+
+  it("staleClaims selects only the stale, PR-less, claimed stories", () => {
+    const idx = index([
+      story({ id: "fresh", status: "claimed", pr: null, claim: hoursAgo(1) }),
+      story({ id: "stale", status: "claimed", pr: null, claim: hoursAgo(72) }),
+      story({ id: "stalePr", status: "claimed", pr: 9, claim: hoursAgo(72) }),
+      story({ id: "ready", status: "ready", pr: null, claim: null }),
+    ]);
+    expect(staleClaims(idx, NOW, 48).map((s) => s.id)).toEqual(["stale"]);
+  });
+
+  it("orders stale claims oldest first", () => {
+    const idx = index([
+      story({ id: "newer", status: "claimed", pr: null, claim: hoursAgo(60) }),
+      story({ id: "older", status: "claimed", pr: null, claim: hoursAgo(200) }),
+    ]);
+    expect(staleClaims(idx, NOW, 48).map((s) => s.id)).toEqual(["older", "newer"]);
+  });
+
+  it("formatStaleClaims renders id, assignee, and age; empty when none", () => {
+    expect(formatStaleClaims([], NOW)).toBe("");
+    const out = formatStaleClaims(
+      [story({ id: "orphan", status: "claimed", assignee: "bot", claim: hoursAgo(72) })],
+      NOW,
+    );
+    expect(out).toContain("stale claims");
+    expect(out).toContain("orphan");
+    expect(out).toContain("bot");
+    expect(out).toContain("72");
+  });
+});
+
+describe("renderStoryView", () => {
+  it("prints the file path then the full story text", () => {
+    const text = `---\ntitle: "X"\nstatus: ready\n---\n\n## Context\nbody\n`;
+    const out = renderStoryView("0001-r/stories/x.md", text);
+    expect(out.split("\n")[0]).toBe("0001-r/stories/x.md");
+    expect(out).toContain(`title: "X"`);
+    expect(out).toContain("## Context");
+  });
+});
+
+describe("editFrontmatter", () => {
+  function writeStory(body: string): string {
+    const dir = mkdtempSync(join(tmpdir(), "rfcs-cli-"));
+    const file = join(dir, "story.md");
+    writeFileSync(file, body);
+    return file;
+  }
+
+  it("updates an existing scalar key in place", () => {
+    const file = writeStory(`---\nstatus: ready\nclaim: null\n---\nbody\n`);
+    editFrontmatter(file, { status: "claimed", claim: `"2026-01-01T00:00:00Z"` });
+    const out = readFileSync(file, "utf8");
+    expect(out).toContain(`status: claimed`);
+    expect(out).toContain(`claim: "2026-01-01T00:00:00Z"`);
+    expect(out).toContain(`body`);
+  });
+
+  it("appends a key that is not yet present (e.g. first-time priority)", () => {
+    const file = writeStory(`---\nstatus: ready\n---\nbody\n`);
+    editFrontmatter(file, { priority: "3" });
+    expect(readFileSync(file, "utf8")).toContain(`priority: 3`);
+  });
+
+  it("refuses to edit a list-valued key", () => {
+    const file = writeStory(`---\ndeps:\n  - a\n  - b\nstatus: ready\n---\nbody\n`);
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    expect(() => editFrontmatter(file, { deps: "[a, b, c]" })).toThrow(/exit 1/);
+    expect(errSpy.mock.calls[0]?.[0]).toMatch(/refusing to edit list-valued/);
+    // afterEach restores all mocks; no manual restore needed.
+  });
+});
+
+describe("claimState (idempotent re-claim discriminator)", () => {
+  it("reports an unclaimed story as available", () => {
+    expect(claimState(`---\nstatus: ready\nclaim: null\nassignee: null\n---\n`, "dean")).toBe(
+      "available",
+    );
+  });
+
+  it("treats a re-claim by the same assignee as owned (idempotent)", () => {
+    const fm = `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "dean"\n---\n`;
+    expect(claimState(fm, "dean")).toBe("owned");
+  });
+
+  it("treats a claim held by someone else as taken (a real race)", () => {
+    const fm = `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "alice"\n---\n`;
+    expect(claimState(fm, "dean")).toBe("taken");
+  });
+
+  it("matches an assignee value that contains spaces", () => {
+    const fm = `---\nclaim: "2026-01-01T00:00:00Z"\nassignee: "Dean Marano"\n---\n`;
+    expect(claimState(fm, "Dean Marano")).toBe("owned");
+  });
+
+  it("falls back to taken when a claimed story has no assignee line", () => {
+    expect(claimState(`---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\n---\n`, "dean")).toBe(
+      "taken",
+    );
+  });
+
+  it("ignores a `claim: null` line in the Markdown body", () => {
+    const fm =
+      `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "alice"\n---\n` +
+      `Reset with \`claim: null\` if needed.\n`;
+    expect(claimState(fm, "dean")).toBe("taken");
+  });
+
+  it("ignores an `assignee:` line in the Markdown body", () => {
+    const fm =
+      `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "alice"\n---\n` +
+      `assignee: "dean"\n`;
+    expect(claimState(fm, "dean")).toBe("taken");
+  });
+});
+
+describe("findStoryFile (lenient id resolution)", () => {
+  it("resolves a known id to its file path", () => {
+    const idx = index([story({ id: "a", file_path: "rfcs/0005-gaps/stories/a.md" })]);
+    expect(findStoryFile(idx, "a")).toMatch(/rfcs\/0005-gaps\/stories\/a\.md$/);
+  });
+
+  // The per-id-resilient verbs (`done`, `in-progress`) must be able to report an
+  // unknown id and keep going: resolving it strictly would exit the process and
+  // abort the whole bundle, leaving the known ids unmarked behind a merged PR.
+  it("returns null for an unknown id instead of exiting", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(findStoryFile(idx, "nope")).toBeNull();
+  });
+});
+
+describe("claimBatch (multi-id claim partitioning)", () => {
+  const unclaimed = `---\nstatus: ready\nclaim: null\nassignee: null\n---\n`;
+  const mine = `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "dean"\n---\n`;
+  const theirs = `---\nstatus: claimed\nclaim: "2026-01-01T00:00:00Z"\nassignee: "alice"\n---\n`;
+
+  it("partitions a whole batch of unclaimed stories as available", () => {
+    const batch = claimBatch(
+      [
+        { id: "a", text: unclaimed },
+        { id: "b", text: unclaimed },
+        { id: "c", text: unclaimed },
+      ],
+      "dean",
+    );
+    expect(batch).toEqual({ available: ["a", "b", "c"], owned: [], taken: [] });
+  });
+
+  // Atomicity: the caller refuses the ENTIRE batch when `taken` is non-empty, so
+  // a bundle that loses the race on one story never leaves the others claimed
+  // with no worker behind them (invisible to `ready` AND to the merge sweep).
+  it("reports the taken ids so one lost race refuses the whole batch", () => {
+    const batch = claimBatch(
+      [
+        { id: "a", text: unclaimed },
+        { id: "b", text: theirs },
+        { id: "c", text: unclaimed },
+      ],
+      "dean",
+    );
+    expect(batch.taken).toEqual(["b"]);
+    expect(batch.available).toEqual(["a", "c"]);
+  });
+
+  it("separates ids this assignee already holds (idempotent re-claim)", () => {
+    const batch = claimBatch(
+      [
+        { id: "a", text: mine },
+        { id: "b", text: unclaimed },
+      ],
+      "dean",
+    );
+    expect(batch).toEqual({ available: ["b"], owned: ["a"], taken: [] });
+  });
+});
+
+describe("trackingSkip (per-id resilience for done / in-progress)", () => {
+  it("skips an id already marked done for this exact PR", () => {
+    expect(trackingSkip(`---\nstatus: done\npr: 42\n---\n`, "done", 42)).toBe(true);
+  });
+
+  it("re-marks an id recorded against a different PR", () => {
+    expect(trackingSkip(`---\nstatus: done\npr: 41\n---\n`, "done", 42)).toBe(false);
+  });
+
+  it("marks an id that is still in-progress", () => {
+    expect(trackingSkip(`---\nstatus: in-progress\npr: 42\n---\n`, "done", 42)).toBe(false);
+  });
+
+  it("marks an id with no pr recorded", () => {
+    expect(trackingSkip(`---\nstatus: claimed\npr: null\n---\n`, "done", 42)).toBe(false);
+  });
+});
+
+describe("prOf", () => {
+  it("reads a numeric pr from frontmatter", () => {
+    expect(prOf(`---\nstatus: done\npr: 6062\n---\n`)).toBe(6062);
+  });
+
+  it("returns null for an unset pr", () => {
+    expect(prOf(`---\nstatus: ready\npr: null\n---\n`)).toBeNull();
+  });
+
+  it("ignores a `pr:` line in the Markdown body", () => {
+    expect(prOf(`---\nstatus: ready\n---\npr: 99 in the prose\n`)).toBeNull();
+  });
+});
+
+describe("releaseError (claimed → ready inverse of claim)", () => {
+  it("allows releasing a claimed story", () => {
+    expect(releaseError("claimed")).toBeNull();
+  });
+
+  it("treats an already-ready story as a clean no-op", () => {
+    expect(releaseError("ready")).toBeNull();
+  });
+
+  it("refuses a story with work behind it", () => {
+    expect(releaseError("in-progress")).toMatch(/only a claimed story can be released/);
+    expect(releaseError("done")).toMatch(/only a claimed story can be released/);
+  });
+
+  it("refuses an unreadable status", () => {
+    expect(releaseError(null)).toBe("cannot read current status");
+  });
+});
+
+describe("release round-trips a claim", () => {
+  it("returns a claimed story to the unclaimed ready shape", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    const file = join(dir, "s.md");
+    writeFileSync(file, `---\nstatus: ready\nclaim: null\nassignee: null\n---\nbody\n`);
+    editFrontmatter(file, {
+      status: "claimed",
+      claim: `"2026-01-01T00:00:00Z"`,
+      assignee: `"dean"`,
+    });
+    expect(claimState(readFileSync(file, "utf8"), "alice")).toBe("taken");
+
+    editFrontmatter(file, RELEASE_EDITS);
+    const out = readFileSync(file, "utf8");
+    expect(statusOf(out)).toBe("ready");
+    // Any non-null claim reads as taken, so both keys must clear or the readied
+    // story would be unclaimable by the next agent.
+    expect(claimState(out, "alice")).toBe("available");
+  });
+});
+
+describe("statusOf", () => {
+  it("reads the status scalar from frontmatter", () => {
+    expect(statusOf(`---\nstatus: draft\npriority: 30\n---\nbody\n`)).toBe("draft");
+  });
+
+  it("reads a quoted status value", () => {
+    expect(statusOf(`---\nstatus: "ready"\n---\n`)).toBe("ready");
+  });
+
+  it("ignores a `status:` line in the Markdown body", () => {
+    expect(statusOf(`---\nstatus: draft\n---\nleave the status: ready field alone\n`)).toBe(
+      "draft",
+    );
+  });
+
+  it("returns null when there is no status line", () => {
+    expect(statusOf(`---\npriority: 30\n---\n`)).toBeNull();
+  });
+
+  it("resolves YAML comment/quote semantics rather than the raw line", () => {
+    expect(statusOf(`---\nstatus: ready # filed then readied\n---\n`)).toBe("ready");
+  });
+
+  it("returns null on malformed frontmatter instead of throwing", () => {
+    expect(statusOf(`---\nstatus: "unterminated\n  bad: : :\n---\n`)).toBeNull();
+  });
+});
+
+describe("statusEdits", () => {
+  it("sets only the status for a draft → ready flip", () => {
+    expect(statusEdits("draft", "ready")).toEqual({ status: "ready" });
+  });
+
+  it("clears blocked-by, claim, assignee, and pr when unblocking to ready", () => {
+    expect(statusEdits("blocked", "ready")).toEqual({
+      status: "ready",
+      "blocked-by": "null",
+      claim: "null",
+      assignee: "null",
+      pr: "null",
+    });
+  });
+
+  it("clears closed-reason, claim, assignee, and pr when reopening to ready", () => {
+    expect(statusEdits("closed", "ready")).toEqual({
+      status: "ready",
+      "closed-reason": "null",
+      claim: "null",
+      assignee: "null",
+      pr: "null",
+    });
+  });
+});
+
+describe("closeError", () => {
+  it("allows closing from any pre-done state", () => {
+    for (const from of ["draft", "ready", "claimed", "in-progress", "blocked"]) {
+      expect(closeError(from)).toBeNull();
+    }
+  });
+
+  it("refuses to close a done story", () => {
+    expect(closeError("done")).toMatch(/completed story cannot be closed/);
+  });
+
+  it("refuses when the current status cannot be read", () => {
+    expect(closeError(null)).toMatch(/cannot read current status/);
+  });
+});
+
+describe("closeEdits", () => {
+  it("stamps the terminal status + reason and clears claim/assignee/blocked-by", () => {
+    expect(closeEdits("superseded by 0042")).toEqual({
+      status: "closed",
+      "closed-reason": '"superseded by 0042"',
+      "blocked-by": "null",
+      claim: "null",
+      assignee: "null",
+    });
+  });
+
+  it("leaves pr untouched (a closed story may cite the superseding PR)", () => {
+    expect(closeEdits("won't do")).not.toHaveProperty("pr");
+  });
+});
+
+describe("isDepResolved", () => {
+  it("treats done and closed as resolved, everything else as open", () => {
+    expect(isDepResolved("done")).toBe(true);
+    expect(isDepResolved("closed")).toBe(true);
+    expect(isDepResolved("ready")).toBe(false);
+    expect(isDepResolved("blocked")).toBe(false);
+    expect(isDepResolved(null)).toBe(false);
+    expect(isDepResolved(undefined)).toBe(false);
+  });
+});
+
+describe("statusTransitionError", () => {
+  it("allows draft → ready", () => {
+    expect(statusTransitionError("draft", "ready")).toBeNull();
+  });
+
+  it("allows ready → draft", () => {
+    expect(statusTransitionError("ready", "draft")).toBeNull();
+  });
+
+  it("treats a same-status move as a legal no-op", () => {
+    expect(statusTransitionError("draft", "draft")).toBeNull();
+  });
+
+  it("allows blocked → ready (the documented unblock path has no dedicated verb)", () => {
+    expect(statusTransitionError("blocked", "ready")).toBeNull();
+  });
+
+  it("allows closed → ready (reopen path, mirroring unblock)", () => {
+    expect(statusTransitionError("closed", "ready")).toBeNull();
+  });
+
+  it("redirects status-set to closed at the dedicated close verb", () => {
+    const err = statusTransitionError("draft", "closed");
+    expect(err).toMatch(/won't set status closed/);
+    expect(err).toMatch(/close <id> --reason <text>/);
+  });
+
+  it("rejects an unrecognized current status instead of throwing", () => {
+    expect(statusTransitionError("typo", "ready")).toMatch(/unrecognized current status "typo"/);
+  });
+
+  it("rejects draft → done and points at the dedicated verb", () => {
+    const err = statusTransitionError("draft", "done");
+    expect(err).toMatch(/won't set status done/);
+    expect(err).toMatch(/done <id> --pr <N>/);
+  });
+
+  it("points draft → claimed at the claim verb", () => {
+    expect(statusTransitionError("draft", "claimed")).toMatch(/pnpm tasks claim <id>/);
+  });
+
+  it("rejects moves out of work-tracking statuses and points at the dedicated verb", () => {
+    expect(statusTransitionError("done", "ready")).toMatch(
+      /has no transitions; use the dedicated verb/,
+    );
+  });
+
+  it("rejects when the current status cannot be read", () => {
+    expect(statusTransitionError(null, "ready")).toMatch(/cannot read current status/);
+  });
+});
+
+describe("rfcStatusError", () => {
+  it("accepts a valid status with no supersede", () => {
+    expect(rfcStatusError("active", undefined)).toBeNull();
+  });
+
+  it("accepts no status at all (array-only edit)", () => {
+    expect(rfcStatusError(undefined, undefined)).toBeNull();
+  });
+
+  it("rejects a status outside the allowed set", () => {
+    expect(rfcStatusError("archived", undefined)).toMatch(/invalid status "archived"/);
+  });
+
+  it("requires --supersede when status is superseded", () => {
+    expect(rfcStatusError("superseded", undefined)).toMatch(/requires --supersede/);
+  });
+
+  it("accepts superseded with a supersede target", () => {
+    expect(rfcStatusError("superseded", "0001-other")).toBeNull();
+  });
+
+  it("treats --supersede with no status as implying superseded", () => {
+    expect(rfcStatusError(undefined, "0001-other")).toBeNull();
+  });
+
+  it("rejects --supersede combined with a non-superseded status", () => {
+    expect(rfcStatusError("active", "0001-other")).toMatch(/--supersede conflicts/);
+  });
+});
+
+describe("rfcRefError", () => {
+  it("accepts existing supersede and relate targets", () => {
+    expect(rfcRefError(index([]), "0001-r", "0002-r", ["0002-r"])).toBeNull();
+  });
+
+  it("accepts no references at all", () => {
+    expect(rfcRefError(index([]), "0001-r", undefined, undefined)).toBeNull();
+  });
+
+  it("rejects a supersede target that does not exist", () => {
+    expect(rfcRefError(index([]), "0001-r", "0099-nope", undefined)).toMatch(
+      /--supersede target "0099-nope" does not exist/,
+    );
+  });
+
+  it("rejects superseding the RFC itself", () => {
+    expect(rfcRefError(index([]), "0001-r", "0001-r", undefined)).toMatch(
+      /cannot be the RFC itself/,
+    );
+  });
+
+  it("reports every missing relate target", () => {
+    expect(rfcRefError(index([]), "0001-r", undefined, ["0002-r", "0099-x", "0098-y"])).toMatch(
+      /--relate target\(s\) do not exist: 0099-x, 0098-y/,
+    );
+  });
+});
+
+describe("orphanedStories", () => {
+  it("returns stories whose cluster is no longer declared", () => {
+    const idx = index([story({ id: "s1", rfc: "0001-r", cluster: "c2" })]);
+    const orphans = orphanedStories(idx, "0001-r", ["c1"]);
+    expect(orphans.map((s) => s.id)).toEqual(["s1"]);
+  });
+
+  it("ignores stories whose cluster is still declared", () => {
+    const idx = index([story({ id: "s1", rfc: "0001-r", cluster: "c1" })]);
+    expect(orphanedStories(idx, "0001-r", ["c1", "c2"])).toEqual([]);
+  });
+
+  it("ignores unclustered stories and stories of other RFCs", () => {
+    const idx = index([
+      story({ id: "s1", rfc: "0001-r", cluster: null }),
+      story({ id: "s2", rfc: "0002-r", cluster: "c3" }),
+    ]);
+    expect(orphanedStories(idx, "0001-r", [])).toEqual([]);
+  });
+});
+
+describe("removeFrontmatterKey (priority --clear)", () => {
+  function writeStory(body: string): string {
+    const dir = mkdtempSync(join(tmpdir(), "rfcs-cli-"));
+    const file = join(dir, "story.md");
+    writeFileSync(file, body);
+    return file;
+  }
+
+  it("deletes a scalar key, leaving the rest of the frontmatter intact", () => {
+    const file = writeStory(`---\nstatus: ready\npriority: 3\nest_loc: 80\n---\nbody\n`);
+    removeFrontmatterKey(file, "priority");
+    const out = readFileSync(file, "utf8");
+    expect(out).not.toContain("priority");
+    expect(out).toContain("status: ready");
+    expect(out).toContain("est_loc: 80");
+    expect(out).toContain("body");
+  });
+
+  it("is a no-op when the key is already absent", () => {
+    const body = `---\nstatus: ready\n---\nbody\n`;
+    const file = writeStory(body);
+    removeFrontmatterKey(file, "priority");
+    expect(readFileSync(file, "utf8")).toBe(body);
+  });
+
+  it("refuses to remove a list-valued key", () => {
+    const file = writeStory(`---\ndeps:\n  - a\n  - b\nstatus: ready\n---\nbody\n`);
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    expect(() => removeFrontmatterKey(file, "deps")).toThrow(/exit 1/);
+    expect(errSpy.mock.calls[0]?.[0]).toMatch(/refusing to remove list-valued/);
+  });
+});
+
+describe("setFrontmatterList", () => {
+  function writeStory(body: string): string {
+    const dir = mkdtempSync(join(tmpdir(), "rfcs-cli-"));
+    const file = join(dir, "story.md");
+    writeFileSync(file, body);
+    return file;
+  }
+
+  // Mirror of rfcs/0000-template/stories/template-story.md frontmatter,
+  // including the inline comment on `priority:`.
+  const TEMPLATE = `---
+title: "Short prose title"
+status: draft
+updated: 2026-06-04
+rfc: "0000-your-slug"
+cluster: cluster-name-1
+packages: [] # optional subset of the parent RFC's packages; empty inherits the RFC's list
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null # optional integer; LOWER = higher ready-queue priority (absent = unprioritized)
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+---
+
+## Context
+
+Body text.
+`;
+
+  it("converts an inline empty list to a block list", () => {
+    const file = writeStory(`---\ndeps: []\nstatus: ready\n---\nbody\n`);
+    setFrontmatterList(file, "deps", ["a", "b"]);
+    expect(readFileSync(file, "utf8")).toBe(`---\ndeps:\n  - a\n  - b\nstatus: ready\n---\nbody\n`);
+  });
+
+  it("converts a block list to an inline empty list", () => {
+    const file = writeStory(`---\ndeps:\n  - a\n  - b\nstatus: ready\n---\nbody\n`);
+    setFrontmatterList(file, "deps", []);
+    expect(readFileSync(file, "utf8")).toBe(`---\ndeps: []\nstatus: ready\n---\nbody\n`);
+  });
+
+  it("replaces an inline flow list", () => {
+    const file = writeStory(`---\ndeps: [a, b]\nstatus: ready\n---\nbody\n`);
+    setFrontmatterList(file, "deps", ["c"]);
+    expect(readFileSync(file, "utf8")).toBe(`---\ndeps:\n  - c\nstatus: ready\n---\nbody\n`);
+  });
+
+  it("inserts an absent key in its canonical position", () => {
+    const file = writeStory(`---\nstatus: ready\ndeps: []\npr: null\n---\nbody\n`);
+    setFrontmatterList(file, "deps-rfc", ["0024-x"]);
+    expect(readFileSync(file, "utf8")).toBe(
+      `---\nstatus: ready\ndeps: []\ndeps-rfc:\n  - 0024-x\npr: null\n---\nbody\n`,
+    );
+  });
+
+  it("preserves all non-target lines, including inline comments, on round-trip", () => {
+    const file = writeStory(TEMPLATE);
+    setFrontmatterList(file, "deps", ["alpha", "beta"]);
+    setFrontmatterList(file, "deps", []);
+    expect(readFileSync(file, "utf8")).toBe(TEMPLATE);
+  });
+
+  it("appends an absent key with no canonical position at the end of the block", () => {
+    // RFC-README keys like `clusters`/`packages` are not in the story key order;
+    // they fall back to an end-of-block append.
+    const file = writeStory(`---\ntitle: "R"\nstatus: active\n---\nbody\n`);
+    setFrontmatterList(file, "clusters", ["c1", "c2"]);
+    expect(readFileSync(file, "utf8")).toBe(
+      `---\ntitle: "R"\nstatus: active\nclusters:\n  - c1\n  - c2\n---\nbody\n`,
+    );
+  });
+
+  it("leaves a multi-line body untouched when replacing a key", () => {
+    const file = writeStory(`---\ndeps: []\nstatus: ready\n---\n# Heading\n\nline one\nline two\n`);
+    setFrontmatterList(file, "deps", ["a"]);
+    expect(readFileSync(file, "utf8")).toBe(
+      `---\ndeps:\n  - a\nstatus: ready\n---\n# Heading\n\nline one\nline two\n`,
+    );
+  });
+
+  it("refuses a nested/multi-level structure", () => {
+    const file = writeStory(`---\ndeps:\n  - name: a\n    version: 1\nstatus: ready\n---\nbody\n`);
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    expect(() => setFrontmatterList(file, "deps", ["x"])).toThrow(/exit 1/);
+    expect(errSpy.mock.calls[0]?.[0]).toMatch(/refusing to set nested\/multi-level/);
+  });
+});
+
+describe("parseCsv", () => {
+  it("trims and drops empty segments", () => {
+    expect(parseCsv(" a , b ,, c ")).toEqual(["a", "b", "c"]);
+  });
+
+  it("returns an empty array for an empty or whitespace csv", () => {
+    expect(parseCsv("")).toEqual([]);
+    expect(parseCsv("  ,  ")).toEqual([]);
+  });
+});
+
+describe("depCyclePath", () => {
+  it("returns null when the new deps introduce no cycle", () => {
+    const idx = index([story({ id: "a" }), story({ id: "b" })]);
+    expect(depCyclePath(idx, "a", ["b"])).toBeNull();
+  });
+
+  it("detects a direct self-dependency", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(depCyclePath(idx, "a", ["a"])).toEqual(["a", "a"]);
+  });
+
+  it("detects a cycle through an existing dep edge", () => {
+    // b already depends on a; making a depend on b closes the loop.
+    const idx = index([story({ id: "a" }), story({ id: "b", deps: ["a"] })]);
+    expect(depCyclePath(idx, "a", ["b"])).toEqual(["a", "b", "a"]);
+  });
+
+  it("ignores references to unknown stories", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(depCyclePath(idx, "a", ["nope"])).toBeNull();
+  });
+});
+
+describe("setDepsError", () => {
+  it("accepts existing story references with no cycle", () => {
+    const idx = index([story({ id: "a" }), story({ id: "b" })]);
+    expect(setDepsError(idx, "a", "deps", ["b"])).toBeNull();
+  });
+
+  it("rejects a missing story reference", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(setDepsError(idx, "a", "deps", ["ghost"])).toBe(`dep "ghost" does not exist`);
+  });
+
+  it("rejects a dep that would create a cycle", () => {
+    const idx = index([story({ id: "a" }), story({ id: "b", deps: ["a"] })]);
+    expect(setDepsError(idx, "a", "deps", ["b"])).toMatch(/dep cycle detected/);
+  });
+
+  it("accepts an existing rfc reference for deps-rfc", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(setDepsError(idx, "a", "deps-rfc", ["0002-r"])).toBeNull();
+  });
+
+  it("rejects a missing rfc reference for deps-rfc", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(setDepsError(idx, "a", "deps-rfc", ["9999-x"])).toBe(`deps-rfc "9999-x" does not exist`);
+  });
+
+  it("accepts an empty array (clearing the field)", () => {
+    const idx = index([story({ id: "a" })]);
+    expect(setDepsError(idx, "a", "deps", [])).toBeNull();
+    expect(setDepsError(idx, "a", "deps-rfc", [])).toBeNull();
+  });
+});
+
+describe("packagesError", () => {
+  const declared = ["activerecord", "arel"];
+
+  it("accepts packages the parent RFC declares", () => {
+    expect(packagesError(declared, ["arel"], "0013-pg")).toBeNull();
+    expect(packagesError(declared, ["activerecord", "arel"], "0013-pg")).toBeNull();
+  });
+
+  it("accepts an empty array (clearing the field)", () => {
+    expect(packagesError(declared, [], "0013-pg")).toBeNull();
+  });
+
+  it("rejects a package the parent RFC does not declare, listing the valid ones", () => {
+    const msg = packagesError(declared, ["actionview"], "0013-pg");
+    expect(msg).toMatch(/"actionview" not declared in 0013-pg\/README\.md/);
+    expect(msg).toMatch(/valid packages: activerecord, arel/);
+  });
+
+  it("names every undeclared package, not just the first", () => {
+    const msg = packagesError(declared, ["actionview", "arel", "rack"], "0013-pg");
+    expect(msg).toMatch(/"actionview", "rack"/);
+    expect(msg).not.toMatch(/"arel",/);
+  });
+
+  it("constrains nothing when the RFC declares no packages", () => {
+    expect(packagesError([], ["anything"], "0013-pg")).toBeNull();
+  });
+});
+
+describe("parseFlags", () => {
+  it("parses --key value, --bool, and positional args", () => {
+    const { flags, rest } = parseFlags(["foo", "--rfc", "0001-x", "--json", "bar"]);
+    expect(flags).toEqual({ rfc: "0001-x", json: true });
+    expect(rest).toEqual(["foo", "bar"]);
+  });
+
+  it("treats the next token as boolean when it starts with --", () => {
+    const { flags } = parseFlags(["--json", "--rfc", "0001-x"]);
+    expect(flags).toEqual({ json: true, rfc: "0001-x" });
+  });
+});
+
+describe("numberFlag / stringFlag (value-flag validation)", () => {
+  it("numberFlag returns null when value-flag was parsed as bare boolean", () => {
+    // `--pr` with no following value becomes `pr: true`; Number(true) === 1.
+    // numberFlag must reject this so callers don't silently dispatch as PR #1.
+    expect(numberFlag({ pr: true }, "pr")).toBeNull();
+    expect(numberFlag({}, "pr")).toBeNull();
+    expect(numberFlag({ pr: "abc" }, "pr")).toBeNull();
+    expect(numberFlag({ pr: "2552" }, "pr")).toBe(2552);
+  });
+
+  it("stringFlag returns undefined for bare boolean or missing", () => {
+    expect(stringFlag({ reason: true }, "reason")).toBeUndefined();
+    expect(stringFlag({}, "reason")).toBeUndefined();
+    expect(stringFlag({ reason: "broken" }, "reason")).toBe("broken");
+  });
+});
+
+describe("commitAndPush (git mutation flow)", () => {
+  // commitAndPush acquires the real shared lock — redirect it to a throwaway dir
+  // so these tests don't block behind a live agent. git itself stays mocked.
+  afterEach(() => {
+    __setLockDirForTest(null);
+    __setLockWaitForTest(null);
+  });
+  function setup() {
+    const lockDir = mkdtempSync(join(tmpdir(), "trails-cap-lock-"));
+    __setLockDirForTest(lockDir);
+    const exit = vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const seen: string[] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const sub = (args ?? []).find((a) => !a.startsWith("-") && a !== "git") ?? "";
+      // Use the first non-flag token after `-C <dir>` to label the call.
+      const label = args && args.length >= 3 ? args[2] : sub;
+      seen.push(label);
+      // The empty-commit guard diff-trees HEAD after every commit; a real
+      // commit is never empty in these flows, so report a file.
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    return { exit, seen, lockDir };
+  }
+
+  it("holds the lock while probing the dirty tree, so a waiter never sees a holder's staged file", () => {
+    const { lockDir } = setup();
+    const lockPath = join(lockDir, "tasks-cli.lock");
+    const heldAt: Record<string, boolean> = {};
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      heldAt[label] = existsSync(lockPath);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => {},
+      raceMessage: "unused",
+      raceExitCode: 99,
+    });
+    expect(heldAt.status).toBe(true);
+    expect(heldAt.checkout).toBe(true);
+    expect(heldAt.pull).toBe(true);
+  });
+
+  it("blocks on a live holder's lock instead of failing that holder's staged file", () => {
+    const { lockDir, exit, seen } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      seen.push(label);
+      if (label === "status") return "M  rfcs/0024/stories/held.md" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    __setLockWaitForTest(0);
+    const holder = acquireTasksLock(lockDir, { waitMs: 0, pollMs: 1 });
+    expect(holder).not.toBeNull();
+
+    expect(() =>
+      commitAndPush({
+        message: "second agent",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "unused",
+        raceExitCode: 99,
+      }),
+    ).toThrow(`exit ${LOCK_TIMEOUT_EXIT}`);
+    expect(exit).toHaveBeenCalledWith(LOCK_TIMEOUT_EXIT);
+    expect(exit).not.toHaveBeenCalledWith(1);
+    expect(seen).not.toContain("status");
+    releaseTasksLock(holder);
+  });
+
+  it("happy path: pull → add → commit → push, no retry", () => {
+    const { seen } = setup();
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "shouldn't be reached",
+      raceExitCode: 99,
+    });
+    expect(mutatorCalls).toBe(1);
+    // HEAD:main guard first probes origin/main (fetch + rev-list) to ensure HEAD
+    // carries no foreign commits, then one leading `checkout` per generated file
+    // restores loadIndex()'s regenerated artifacts, and a `status` probe refuses
+    // a dirty tree before pull --rebase runs clean.
+    expect(seen).toEqual([
+      "fetch",
+      "rev-list",
+      "checkout",
+      "status",
+      "pull",
+      "add",
+      "commit",
+      "diff-tree",
+      "push",
+    ]);
+  });
+
+  // A variadic verb (`claim a b c`) mutates N story files in ONE commit under
+  // ONE lock — the whole point of the multi-id verbs, since the tasks lock
+  // serializes every agent on the machine, not just the caller.
+  it("stages every file of a multi-id mutation in one add, one commit, one push", () => {
+    const { seen } = setup();
+    const added: string[][] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "add") added.push((args ?? []).slice(3));
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "claim: a, b, c",
+      fileToStage: ["/t/a.md", "/t/b.md", "/t/c.md"],
+      mutator: () => {},
+      raceMessage: "shouldn't be reached",
+      raceExitCode: 3,
+    });
+    expect(added).toEqual([["/t/a.md", "/t/b.md", "/t/c.md"]]);
+    expect(seen.filter((l) => l === "commit").length).toBe(1);
+    expect(seen.filter((l) => l === "push").length).toBe(1);
+  });
+
+  // Regression: a concurrent `reset --hard` in the shared canonical checkout
+  // (historically the CLI's own pre-read sync, since retired) could empty the
+  // index inside `git commit`'s pre-commit-hook window, producing a commit
+  // whose tree equals its parent — which then got PUSHED, landing the message
+  // on main with zero files (RFC 0063's stories, 2026-07-07). commitAndPush
+  // must diff-tree the fresh commit and never push an empty one.
+  it("drops an empty commit and retries the mutation instead of pushing it", () => {
+    const { seen, exit } = setup();
+    let diffTreeCalls = 0;
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      // First commit comes out empty (clobbered); the retry commits for real.
+      if (label === "diff-tree") return (diffTreeCalls++ === 0 ? "" : "story.md") as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "should not be reached",
+      raceExitCode: 3,
+    });
+    expect(exit).not.toHaveBeenCalled();
+    expect(mutatorCalls).toBe(2);
+    // The empty commit was reset away, never pushed; only the retry pushed.
+    expect(seen.filter((l) => l === "push").length).toBe(1);
+    expect(seen.filter((l) => l === "reset").length).toBe(1);
+    const firstPush = seen.indexOf("push");
+    const resetIdx = seen.indexOf("reset");
+    expect(resetIdx).toBeLessThan(firstPush);
+  });
+
+  it("exits with raceExitCode when the commit comes out empty twice, pushing nothing", () => {
+    const { seen, exit } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      // Every commit comes out empty — deterministic clobber.
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "lost race",
+        raceExitCode: 4,
+      }),
+    ).toThrow(/exit 4/);
+    expect(exit).toHaveBeenCalledWith(4);
+    expect(seen).not.toContain("push");
+    expect(seen.filter((l) => l === "reset").length).toBe(2);
+  });
+
+  it("fails open when the diff-tree probe itself errors: the push still runs", () => {
+    const { seen, exit } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      // Includes --root so a parentless first commit can't read as empty.
+      if (label === "diff-tree") {
+        expect(args).toContain("--root");
+        throw new Error("fatal: bad revision");
+      }
+      return "" as never;
+    });
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => {},
+      raceMessage: "should not be reached",
+      raceExitCode: 3,
+    });
+    // The guard must never block a push it cannot evaluate.
+    expect(exit).not.toHaveBeenCalled();
+    expect(seen.filter((l) => l === "push").length).toBe(1);
+    expect(seen).not.toContain("reset");
+  });
+
+  // The tasks repo's .husky/post-commit hook pushes main after every commit,
+  // racing commitAndPush's own explicit push (and capable of shipping an empty
+  // clobbered commit before the guard above can reset it).
+  // The CLI must commit with RFCS_NO_AUTOPUSH=1 so the hook stands down.
+  it("commits with RFCS_NO_AUTOPUSH=1 so the post-commit hook does not race the push", () => {
+    setup();
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => {},
+      raceMessage: "should not be reached",
+      raceExitCode: 3,
+    });
+    const commitCall = execFileSyncMock.mock.calls.find((c) => c[1].includes("commit")) as
+      | unknown[]
+      | undefined;
+    expect(commitCall).toBeDefined();
+    const opts = commitCall![2] as { env?: Record<string, string> } | undefined;
+    expect(opts?.env?.RFCS_NO_AUTOPUSH).toBe("1");
+  });
+
+  // End-to-end race repro through the mutation seam: a `new`-style mutator
+  // writes its story under a stale `0000-<slug>` dir (the author's slug
+  // predated a concurrent finalize that renamed it to `NNNN-<slug>` on main).
+  // commitAndPush must migrate the stranded story into the finalized dir and
+  // stage `-A` so main never carries two dirs for one RFC.
+  it("reconciles a stale 0000- dir the mutator recreated, staging -A", () => {
+    const { seen } = setup();
+    const cwd = mkdtempSync(join(tmpdir(), "tasks-cap-dup-"));
+    mkdirSync(join(cwd, "rfcs", "0031-foo"), { recursive: true });
+    writeFileSync(join(cwd, "rfcs", "0031-foo", "README.md"), "# foo\n");
+    let addArg = "";
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "add") addArg = args?.[3] ?? "";
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "new: 0000-foo/r1",
+      fileToStage: join(cwd, "rfcs", "0000-foo", "stories", "r1.md"),
+      cwd,
+      mutator: () => {
+        const storyDir = join(cwd, "rfcs", "0000-foo", "stories");
+        mkdirSync(storyDir, { recursive: true });
+        writeFileSync(join(storyDir, "r1.md"), `---\nrfc: "0000-foo"\n---\nbody 0000-foo\n`);
+      },
+      raceMessage: "no",
+      raceExitCode: 99,
+    });
+    // The migrated story is the staged set; the dead 0000- dir is gone.
+    expect(addArg).toBe("-A");
+    expect(existsSync(join(cwd, "rfcs", "0000-foo"))).toBe(false);
+    const moved = readFileSync(join(cwd, "rfcs", "0031-foo", "stories", "r1.md"), "utf8");
+    expect(moved).toContain(`rfc: "0031-foo"`);
+    expect(moved).not.toContain("0000-foo");
+  });
+
+  // A reconcile collision (a same-named story already in the finalized dir)
+  // fires inside the acquired lock. It must release the lock on the way out —
+  // migrateDuplicateRfcDir throws (rather than process.exit) so the throw
+  // unwinds through the mutator rollback and commitAndPush's `finally`.
+  it("releases the lock when a reconcile collision throws", () => {
+    const { lockDir } = setup();
+    const cwd = mkdtempSync(join(tmpdir(), "tasks-cap-collide-"));
+    for (const slug of ["0000-foo", "0031-foo"]) {
+      mkdirSync(join(cwd, "rfcs", slug, "stories"), { recursive: true });
+      writeFileSync(join(cwd, "rfcs", slug, "stories", "r1.md"), slug);
+    }
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        cwd,
+        mutator: () => {},
+        raceMessage: "no",
+        raceExitCode: 99,
+      }),
+    ).toThrow(/already exists/);
+    // The lock file is gone — `finally { releaseTasksLock }` ran, no leak.
+    expect(existsSync(join(lockDir, "tasks-cli.lock"))).toBe(false);
+  });
+
+  // A mutator that decided against the post-pull state to abort cleanly (the
+  // claim idempotent re-claim / setStatus already-in-target paths) throws
+  // MutatorEarlyExit rather than process.exit. commitAndPush must release the
+  // lock via its `finally` BEFORE honoring the exit code, so the benign abort
+  // can't leak the shared lock. exit 0 = idempotent success, exit 2 = conflict.
+  for (const code of [0, 2]) {
+    it(`releases the lock then exits ${code} when a mutator throws MutatorEarlyExit`, () => {
+      const { exit, lockDir } = setup();
+      expect(() =>
+        commitAndPush({
+          message: "test",
+          fileToStage: "/some/file.md",
+          mutator: () => {
+            throw new MutatorEarlyExit(code);
+          },
+          raceMessage: "no",
+          raceExitCode: 99,
+        }),
+      ).toThrow(`exit ${code}`);
+      // The lock file is gone — released by `finally` before the exit ran.
+      expect(existsSync(join(lockDir, "tasks-cli.lock"))).toBe(false);
+      expect(exit).toHaveBeenCalledWith(code);
+    });
+  }
+
+  // Mimic execFileSync's failure shape: attach .stderr to the error so
+  // commitAndPush's race-vs-real-failure discriminator can inspect it.
+  function pushError(stderr: string): Error {
+    const e = new Error("Command failed") as Error & { stderr?: string };
+    e.stderr = stderr;
+    return e;
+  }
+
+  it("rolls back the working tree when the mutator throws between write and commit", () => {
+    const { seen } = setup();
+    // Model the working tree as the set of untracked paths the mutator created,
+    // so the test asserts the tree is genuinely restored to clean — not merely
+    // that rollback issued some commands. `git clean -fdq -- <path>` removes the
+    // created path; `reset --hard` reverts tracked/staged edits (none here).
+    const NEW_FILE = "/some/new-story.md";
+    const worktree = new Set<string>();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "clean") worktree.delete(args[args.length - 1]);
+      return "" as never;
+    });
+    // A mutator that writes its file then crashes (e.g. a prettier failure in
+    // formatFiles) must not leave the partial write staged/untracked: the error
+    // propagates, but only after the tree is reset to HEAD and the created path
+    // is cleaned, so the next command isn't blocked by the uncommitted guard.
+    expect(() =>
+      commitAndPush({
+        message: "test",
+        fileToStage: NEW_FILE,
+        createdPath: NEW_FILE,
+        mutator: () => {
+          worktree.add(NEW_FILE); // the write that lands before the crash
+          throw new Error("formatFiles crashed");
+        },
+        raceMessage: "no",
+        raceExitCode: 99,
+      }),
+    ).toThrow(/formatFiles crashed/);
+    // Pre-command state restored: nothing left dirty for the next mutation.
+    expect(worktree.size).toBe(0);
+    // The mutation never reaches add/commit/push; rollback issues reset + clean.
+    expect(seen).not.toContain("add");
+    expect(seen).not.toContain("commit");
+    expect(seen).not.toContain("push");
+    expect(seen.filter((l) => l === "reset").length).toBe(1);
+    expect(seen.filter((l) => l === "clean").length).toBe(1);
+  });
+
+  const MARKDOWNLINT_STDERR = [
+    "markdownlint-cli2 v0.18.1 (markdownlint v0.38.0)",
+    "Finding: rfcs/0025-x/stories/s.md !node_modules/**",
+    "Linting: 1 file(s)",
+    'rfcs/0025-x/stories/s.md:31:1 MD018/no-missing-space-atx No space after hash on atx style heading [Context: "#4869 (which fixed"]',
+    'rfcs/0025-x/stories/s.md:44 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]',
+    "Summary: 2 error(s)",
+  ].join("\n");
+
+  it("extracts only the rule violations from markdownlint's chatter", () => {
+    expect(extractMarkdownlintViolations(MARKDOWNLINT_STDERR)).toEqual([
+      'rfcs/0025-x/stories/s.md:31:1 MD018/no-missing-space-atx No space after hash on atx style heading [Context: "#4869 (which fixed"]',
+      'rfcs/0025-x/stories/s.md:44 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]',
+    ]);
+  });
+
+  it("exits with the markdownlint violations, not a git commit stack trace", () => {
+    const { seen, exit, lockDir } = setup();
+    const errors: string[] = [];
+    vi.spyOn(console, "error").mockImplementation((...a: unknown[]) => {
+      errors.push(a.map(String).join(" "));
+    });
+    const NEW_FILE = "/some/new-story.md";
+    const worktree = new Set<string>();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "clean") worktree.delete(args[args.length - 1]);
+      if (label === "commit") throw pushError(MARKDOWNLINT_STDERR);
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "new: 0025-x/s",
+        fileToStage: NEW_FILE,
+        createdPath: NEW_FILE,
+        mutator: () => worktree.add(NEW_FILE),
+        raceMessage: "lost the race, retry",
+        raceExitCode: 99,
+      }),
+    ).toThrow("exit 1");
+    expect(exit).toHaveBeenCalledWith(1);
+    const last = errors[errors.length - 1];
+    expect(last).toContain("MD018/no-missing-space-atx");
+    expect(last).toContain("rfcs/0025-x/stories/s.md:31:1");
+    expect(last).toContain("MD040/fenced-code-language");
+    expect(last).toMatch(/NOT the transient push race/);
+    expect(last).not.toContain("lost the race, retry");
+    expect(seen).not.toContain("push");
+    expect(worktree.size).toBe(0);
+    expect(existsSync(join(lockDir, "tasks-cli.lock"))).toBe(false);
+  });
+
+  it("re-raises a commit failure that carries no markdownlint violations", () => {
+    const { seen } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "commit") throw pushError("validate: story frontmatter is invalid");
+      return "" as never;
+    });
+    let thrown: unknown;
+    try {
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "no",
+        raceExitCode: 99,
+      });
+    } catch (e) {
+      thrown = e;
+    }
+    expect((thrown as { stderr?: string })?.stderr).toContain("story frontmatter is invalid");
+    expect(seen).not.toContain("push");
+  });
+
+  it("surfaces the underlying error (with stack) when a mutator throws, never a bare exit", () => {
+    setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    // The thrown Error propagates out of commitAndPush intact (the top-level
+    // main() wrapper prints its .stack) rather than being swallowed into a bare
+    // `Node.js <version>` + exit 1.
+    let caught: unknown;
+    try {
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        mutator: () => {
+          throw new Error("boom");
+        },
+        raceMessage: "no",
+        raceExitCode: 99,
+      });
+    } catch (e) {
+      caught = e;
+    }
+    expect(caught).toBeInstanceOf(Error);
+    expect((caught as Error).stack).toBeTruthy();
+  });
+
+  it("retries once on push failure, succeeds on second attempt", () => {
+    const { seen } = setup();
+    let push = 0;
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "push" && push++ === 0) {
+        throw pushError("! [rejected]        main -> main (non-fast-forward)");
+      }
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 99,
+    });
+    expect(mutatorCalls).toBe(2);
+    // Pre-loop: HEAD:main guard (fetch, rev-list) then one checkout per
+    // generated file restores them.
+    // First attempt: pull, add, commit, push(throws), reset.
+    // Second attempt: pull, add, commit, push(ok).
+    expect(seen).toEqual([
+      "fetch",
+      "rev-list",
+      "checkout",
+      "status",
+      "pull",
+      "add",
+      "commit",
+      "diff-tree",
+      "push",
+      "reset",
+      "pull",
+      "add",
+      "commit",
+      "diff-tree",
+      "push",
+    ]);
+  });
+
+  it("exits with raceExitCode after two consecutive push failures", () => {
+    const { seen, exit } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "push") throw pushError("! [rejected] non-fast-forward");
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "lost race",
+        raceExitCode: 3,
+      }),
+    ).toThrow(/exit 3/);
+    expect(exit).toHaveBeenCalledWith(3);
+    // Two attempts, each: pull, add, commit, push(throws), reset.
+    expect(seen.filter((l) => l === "push").length).toBe(2);
+    expect(seen.filter((l) => l === "reset").length).toBe(2);
+  });
+
+  // "fetch first" used to be ambiguous — the post-commit hook could land our
+  // own commit — so the catch confirmed with rev-parse/fetch/rev-parse before
+  // deciding. With the hook silenced for CLI commits every rejection is a lost
+  // race, so the confirm round-trip must stay gone.
+  it("resets and retries a fetch-first rejection without a confirm round-trip", () => {
+    const { seen } = setup();
+    let push = 0;
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "push" && push++ === 0) {
+        throw pushError("! [rejected]        main -> main (fetch first)");
+      }
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 99,
+    });
+    expect(mutatorCalls).toBe(2);
+    // The rejected push is followed immediately by the reset — no rev-parse or
+    // fetch in between.
+    expect(seen.slice(seen.indexOf("push"), seen.indexOf("push") + 2)).toEqual(["push", "reset"]);
+  });
+
+  it("surfaces non-race push failures verbatim and exits 1 (no reset, no retry)", () => {
+    const { seen, exit } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "push") {
+        throw pushError("fatal: Authentication failed for 'https://...'");
+      }
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "test",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "should not be reached",
+        raceExitCode: 3,
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(seen.filter((l) => l === "push").length).toBe(1);
+    expect(seen.filter((l) => l === "reset").length).toBe(0);
+    expect(errSpy.mock.calls.at(-1)?.[0]).toMatch(/Authentication failed/);
+  });
+
+  // loadIndex() may rewrite the tracked index.md in the working tree; a dirty
+  // tree aborts `git pull --rebase`. commitAndPush must restore each generated
+  // file to HEAD, individually, before pulling. (index.json/search.json are
+  // gitignored, rebuilt-on-demand caches — they can't dirty the tree.)
+  it("restores each generated index file individually before the first pull", () => {
+    setup();
+    const fullArgs: string[][] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      if (args && args[2] === "symbolic-ref") return "main" as never;
+      fullArgs.push(args ?? []);
+      if (args && args.includes("diff-tree")) return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => {},
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    // One checkout per file (NOT a single multi-path checkout, which git fails
+    // atomically if any path is unknown), each preceding the pull. The HEAD:main
+    // guard's fetch + rev-list run first, so the checkout starts at index 2.
+    // `checkout HEAD --` (not bare `checkout --`) so a staged generated-file
+    // change is discarded from the index too, not just the worktree.
+    expect(fullArgs.slice(2, 3).map((a) => a.slice(2))).toEqual([
+      ["checkout", "HEAD", "--", "index.md"],
+    ]);
+    // The dirty-tree `status` probe sits between the restores and the pull.
+    expect(fullArgs[3]?.[2]).toBe("status");
+    expect(fullArgs[4]?.[2]).toBe("pull");
+  });
+
+  // Partial restore: an unknown path (e.g. a checkout predating index.md)
+  // must not block the mutation. This is why the restore is per-file, wrapped
+  // in try/catch — `git checkout -- a b c` would fail atomically.
+  it("restores the other files when one generated path is unknown to git", () => {
+    const { seen } = setup();
+    const restored: string[] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "checkout") {
+        const path = args[args.length - 1];
+        if (path === "index.md") throw new Error("pathspec 'index.md' did not match");
+        restored.push(path);
+        return "" as never;
+      }
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    // The unknown index.md is swallowed, restoring nothing...
+    expect(restored).toEqual([]);
+    // ...and the mutation proceeded normally (after the HEAD:main guard probe).
+    expect(mutatorCalls).toBe(1);
+    expect(seen).toEqual([
+      "fetch",
+      "rev-list",
+      "status",
+      "pull",
+      "add",
+      "commit",
+      "diff-tree",
+      "push",
+    ]);
+  });
+
+  // A bare-branch refspec (e.g. `pushRefspec: "main"`) pushes the LOCAL branch
+  // of that name — not HEAD. If the checkout is parked on another branch, that
+  // push is rejected forever and looks like a lost race. Guard it: bail with
+  // exit 1 before pulling/committing, never touching the tree.
+  it("refuses a bare-branch push when the checkout is on the wrong branch", () => {
+    const { seen, exit } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "rfc-some-feature" as never;
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    expect(() =>
+      commitAndPush({
+        message: "claim: x",
+        fileToStage: "/some/file.md",
+        mutator: () => mutatorCalls++,
+        raceMessage: "lost claim race",
+        raceExitCode: 3,
+        pushRefspec: "main", // explicit bare-branch to trigger guard
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    // The guard fires before the mutation loop: it never restores generated
+    // files, pulls, runs the mutator, commits, or pushes — the tree is untouched.
+    expect(seen).toEqual([]);
+    expect(mutatorCalls).toBe(0);
+    // And it exits 1 (a real config error), NOT the raceExitCode (a lost race) —
+    // the whole point is to stop masquerading a stuck checkout as a lost claim.
+    expect(exit).not.toHaveBeenCalledWith(3);
+    const msg = errSpy.mock.calls.at(-1)?.[0] as string;
+    expect(msg).toMatch(/is on branch "rfc-some-feature", not "main"/);
+    // The actionable recovery command is part of the contract — lock it so a
+    // refactor can't silently drop the one line an operator needs to copy.
+    expect(msg).toMatch(/checkout main && .*pull --ff-only origin main/);
+  });
+
+  it("reports a detached HEAD (symbolic-ref exits non-zero) and still exits 1", () => {
+    const { seen, exit } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      // `git symbolic-ref --quiet HEAD` exits non-zero on a detached HEAD; the
+      // git() helper surfaces that as a throw, which the guard must swallow.
+      if (label === "symbolic-ref") throw new Error("fatal: ref HEAD is not a symbolic ref");
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "claim: x",
+        fileToStage: "/some/file.md",
+        mutator: () => {},
+        raceMessage: "lost claim race",
+        raceExitCode: 3,
+        pushRefspec: "main", // explicit bare-branch to trigger guard
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(seen).toEqual([]);
+    expect(errSpy.mock.calls.at(-1)?.[0]).toMatch(/is on branch "\(detached HEAD\)", not "main"/);
+  });
+
+  // The HEAD:main path pushes every commit HEAD has that origin/main lacks.
+  // If the working checkout is parked on a feature branch with un-pushed work
+  // (e.g. a hand-authored RFC branch), that foreign commit would be shoved onto
+  // main. Guard it: bail with exit 1 before touching the tree.
+  it("refuses HEAD:main when HEAD is ahead of origin/main (foreign commits)", () => {
+    const { seen, exit } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "rev-list") return "2" as never; // HEAD is 2 commits ahead
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    expect(() =>
+      commitAndPush({
+        message: "claim: x",
+        fileToStage: "/some/file.md",
+        mutator: () => mutatorCalls++,
+        raceMessage: "lost claim race",
+        raceExitCode: 3,
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(exit).not.toHaveBeenCalledWith(3);
+    // The guard fires after the fetch probe but before the mutation loop: no
+    // checkout/pull/commit/push, the tree is untouched.
+    expect(seen).toEqual(["fetch"]);
+    expect(mutatorCalls).toBe(0);
+    expect(errSpy.mock.calls.at(-1)?.[0]).toMatch(/HEAD is 2 commit\(s\) ahead of origin\/main/);
+  });
+
+  // The guard is best-effort: an offline fetch leaves no baseline to compare
+  // against, so it must skip the check and let the mutation proceed rather than
+  // block all writes when origin is unreachable.
+  it("skips the HEAD:main guard when the fetch fails (offline) and proceeds", () => {
+    const { seen } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "fetch") throw new Error("fatal: unable to access origin");
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    // fetch threw inside the guard's try → guard skipped; mutation proceeds.
+    expect(mutatorCalls).toBe(1);
+    expect(seen).toEqual(["checkout", "status", "pull", "add", "commit", "diff-tree", "push"]);
+  });
+
+  // A hand edit left in a story file (e.g. the user edited frontmatter then ran
+  // `priority`) sits dirty in the tree. The leading pull --rebase would stash +
+  // reapply it, injecting conflict markers — so refuse before pulling and tell
+  // the user to commit, never running the mutator/pull/commit/push.
+  it("refuses to mutate when the working tree has uncommitted edits", () => {
+    const { seen, exit, lockDir } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "status") return " M rfcs/0001/stories/foo.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    expect(() =>
+      commitAndPush({
+        message: "priority: foo",
+        fileToStage: "/some/file.md",
+        mutator: () => mutatorCalls++,
+        raceMessage: "no",
+        raceExitCode: 4,
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(mutatorCalls).toBe(0);
+    // The guard fires right after `status`: no pull/add/commit/push.
+    expect(seen).not.toContain("pull");
+    expect(seen).not.toContain("commit");
+    const msg = errSpy.mock.calls.at(-1)?.[0] as string;
+    expect(msg).toMatch(/has uncommitted changes/);
+    expect(msg).toMatch(/foo\.md/);
+    // The refusal must NOT leak the shared lock: the dirty check runs before the
+    // lock is acquired, so no lock file is left behind for the next mutation.
+    expect(existsSync(join(lockDir, "tasks-cli.lock"))).toBe(false);
+  });
+
+  // A regenerated index file is throwaway (restoreGeneratedFiles reset it, the
+  // pre-commit hook rebuilds it) — it must NOT trip the dirty-tree guard, whether
+  // the change is unstaged (` M`) or staged (`M `). Both are filtered by path.
+  it("does not treat regenerated index files as a dirty tree", () => {
+    const { seen } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      // index.md changed both staged (`M  ...`) and unstaged (` M ...`).
+      if (label === "status") return "M  index.md\n M index.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    expect(mutatorCalls).toBe(1);
+    expect(seen).toContain("pull");
+    expect(seen).toContain("push");
+  });
+
+  // A divergent remote whose commits conflict makes `git pull --rebase` exit
+  // mid-rebase with a detached HEAD. commitAndPush must abort the rebase (to
+  // restore a clean tip) and exit 1 with a recoverable message — never leave the
+  // user stranded in a half-finished rebase.
+  it("aborts the rebase and exits 1 when pull --rebase conflicts", () => {
+    const { seen, exit } = setup();
+    const errSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      if (label === "pull") {
+        const e = new Error("Command failed") as Error & { stderr?: string };
+        e.stderr = "CONFLICT (content): Merge conflict in rfcs/0001/stories/foo.md";
+        throw e;
+      }
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    expect(() =>
+      commitAndPush({
+        message: "claim: foo",
+        fileToStage: "/some/file.md",
+        mutator: () => mutatorCalls++,
+        raceMessage: "no",
+        raceExitCode: 4,
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(mutatorCalls).toBe(0);
+    // The rebase was aborted; the mutation never committed or pushed.
+    expect(seen).toContain("rebase");
+    expect(seen).not.toContain("commit");
+    expect(seen).not.toContain("push");
+    const msg = errSpy.mock.calls.at(-1)?.[0] as string;
+    expect(msg).toMatch(/pull --rebase onto origin\/main failed/);
+    expect(msg).toMatch(/rebase aborted/);
+  });
+
+  // The healthy steady state: a freshly-synced checkout sits exactly at
+  // origin/main, so `rev-list --count` returns the literal "0". That must NOT
+  // be confused with the empty-string offline sentinel — it means "even with
+  // origin/main, safe to push", so the mutation proceeds.
+  it("proceeds on HEAD:main when HEAD is even with origin/main (rev-list 0)", () => {
+    const { seen } = setup();
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "rev-list") return "0" as never; // HEAD even with origin/main
+      seen.push(label);
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    let mutatorCalls = 0;
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => mutatorCalls++,
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    expect(mutatorCalls).toBe(1);
+    // rev-list is consumed by the guard (not pushed to seen); fetch precedes the
+    // restore checkouts and the mutation loop runs in full.
+    expect(seen).toEqual([
+      "fetch",
+      "checkout",
+      "status",
+      "pull",
+      "add",
+      "commit",
+      "diff-tree",
+      "push",
+    ]);
+  });
+
+  // The refine path passes an explicit `pushRefspec: "HEAD:main"` and a `cwd`
+  // (the agent's tasks worktree). The same guard must run there — probing
+  // origin/main *in that worktree* — so a refine agent that accidentally
+  // committed (rather than leaving working-tree edits) can't leak onto main.
+  it("applies the HEAD:main guard to the refine path (explicit cwd + refspec)", () => {
+    const { exit } = setup();
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const seenWithDir: Array<{ label: string; dir: string }> = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      const dir = args && args.length >= 2 ? args[1] : "";
+      if (label === "rev-list") {
+        seenWithDir.push({ label, dir });
+        return "1" as never; // the worktree carries a stray commit
+      }
+      if (label === "fetch") seenWithDir.push({ label, dir });
+      return "" as never;
+    });
+    expect(() =>
+      commitAndPush({
+        message: "refine: story-x",
+        fileToStage: "/wt/story.md",
+        mutator: () => {},
+        raceMessage: "no",
+        raceExitCode: 4,
+        cwd: "/wt",
+        pushRefspec: "HEAD:main",
+      }),
+    ).toThrow(/exit 1/);
+    expect(exit).toHaveBeenCalledWith(1);
+    // The probe ran against the worktree (`-C /wt`), not the canonical checkout.
+    expect(seenWithDir).toEqual([
+      { label: "fetch", dir: "/wt" },
+      { label: "rev-list", dir: "/wt" },
+    ]);
+  });
+
+  it("defaults to HEAD:main push refspec when no pushRefspec given", () => {
+    setup();
+    const fullArgs: string[][] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      fullArgs.push(args ?? []);
+      if (args && args.includes("diff-tree")) return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "test",
+      fileToStage: "/some/file.md",
+      mutator: () => {},
+      raceMessage: "no",
+      raceExitCode: 4,
+    });
+    const push = fullArgs.find((a) => a[2] === "push");
+    expect(push).toEqual(["-C", TASKS_DIR, "push", "--quiet", "origin", "HEAD:main"]);
+  });
+
+  // refine commits in an agent worktree (on a feature branch) and must push
+  // HEAD:main and run git in that worktree, not the canonical checkout.
+  it("honors cwd and pushRefspec overrides (the refine path)", () => {
+    setup();
+    const fullArgs: string[][] = [];
+    execFileSyncMock.mockImplementation((_file, args) => {
+      fullArgs.push(args ?? []);
+      if (args && args.includes("diff-tree")) return "story.md" as never;
+      return "" as never;
+    });
+    commitAndPush({
+      message: "refine: story-x",
+      fileToStage: "/wt/story.md",
+      mutator: () => {},
+      raceMessage: "no",
+      raceExitCode: 4,
+      cwd: "/wt",
+      pushRefspec: "HEAD:main",
+    });
+    // Every git call targets the worktree via `-C /wt`.
+    for (const a of fullArgs) {
+      expect(a.slice(0, 2)).toEqual(["-C", "/wt"]);
+    }
+    const push = fullArgs.find((a) => a[2] === "push");
+    expect(push).toEqual(["-C", "/wt", "push", "--quiet", "origin", "HEAD:main"]);
+  });
+});
+
+describe("buildStoryContent", () => {
+  it("generates minimal story with defaults", () => {
+    const content = buildStoryContent("0005-gaps", "my-story", { date: "2026-06-08" });
+    expect(content).toContain(`title: "my-story"`);
+    expect(content).toContain(`status: draft`);
+    expect(content).toContain(`rfc: "0005-gaps"`);
+    expect(content).toContain(`cluster: null`);
+    expect(content).toContain(`packages: []`);
+    expect(content).toContain(`deps: []`);
+    expect(content).toContain(`deps-rfc: []`);
+    expect(content).toContain(`est-loc: null`);
+    expect(content).toContain(`priority: null`);
+    expect(content).toContain(`updated: 2026-06-08`);
+    expect(content).toContain(`pr: null`);
+    expect(content).toContain(`claim: null`);
+    expect(content).toContain(`## Context`);
+    expect(content).toContain(`## Acceptance criteria`);
+    expect(content).toContain(`## Definition of done`);
+    expect(content).toContain(`## Verification`);
+  });
+
+  it("applies all flags", () => {
+    const content = buildStoryContent("0005-gaps", "my-story", {
+      title: "My custom title",
+      cluster: "type-system",
+      estLoc: 120,
+      deps: ["story-a", "story-b"],
+      priority: 5,
+      date: "2026-06-08",
+    });
+    expect(content).toContain(`title: "My custom title"`);
+    expect(content).toContain(`cluster: type-system`);
+    expect(content).toContain(`deps: ["story-a", "story-b"]`);
+    expect(content).toContain(`est-loc: 120`);
+    expect(content).toContain(`priority: 5`);
+  });
+
+  it("uses story slug as title when no title given", () => {
+    const content = buildStoryContent("0001-r", "add-foo-support", { date: "2026-06-08" });
+    expect(content).toContain(`title: "add-foo-support"`);
+  });
+
+  it("escapes double-quotes in title", () => {
+    const content = buildStoryContent("0005-gaps", "x", {
+      title: 'foo "bar" baz',
+      date: "2026-06-08",
+    });
+    expect(content).toContain(`title: "foo \\"bar\\" baz"`);
+  });
+
+  it("honors an explicit status", () => {
+    const content = buildStoryContent("0005-gaps", "x", { status: "draft", date: "2026-06-08" });
+    expect(content).toContain(`status: draft`);
+  });
+
+  it("substitutes a caller-supplied body for the empty skeleton", () => {
+    const content = buildStoryContent("0005-gaps", "x", {
+      body: "## Context\n\nReal context.\n\n## Acceptance criteria\n\n- [ ] done\n",
+      date: "2026-06-08",
+    });
+    expect(content).toContain("Real context.");
+    expect(content).toContain("- [ ] done");
+    // Exactly one blank line between the closing fence and the body, one
+    // trailing newline — regardless of the source file's surrounding whitespace.
+    expect(content.endsWith("- [ ] done\n")).toBe(true);
+    expect(content).toContain("---\n\n## Context");
+  });
+
+  it("normalizes leading/trailing whitespace around a supplied body", () => {
+    const content = buildStoryContent("0005-gaps", "x", {
+      body: "\n\n## Context\n\nbody\n\n\n",
+      date: "2026-06-08",
+    });
+    expect(content).toContain("---\n\n## Context\n\nbody\n");
+    expect(content.endsWith("body\n")).toBe(true);
+  });
+});
+
+describe("checkPrNotOpen (done merge-state guard)", () => {
+  function setupExit() {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+  }
+
+  it("succeeds silently when PR is merged", () => {
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({ state: "MERGED" }) as never);
+    expect(() => checkPrNotOpen(123)).not.toThrow();
+    expect(execFileSyncMock).toHaveBeenCalledWith(
+      "gh",
+      ["pr", "view", "123", "--json", "state"],
+      expect.objectContaining({ encoding: "utf8" }),
+    );
+  });
+
+  it("succeeds silently when PR is closed (spike / moot-audit)", () => {
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({ state: "CLOSED" }) as never);
+    expect(() => checkPrNotOpen(42)).not.toThrow();
+  });
+
+  it("exits 1 when PR is open (work unfinished)", () => {
+    setupExit();
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({ state: "OPEN" }) as never);
+    expect(() => checkPrNotOpen(42)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/still open/i));
+  });
+
+  it("exits 1 when gh fails (not authenticated / no network)", () => {
+    setupExit();
+    execFileSyncMock.mockImplementationOnce(() => {
+      throw Object.assign(new Error("Command failed"), {
+        stderr: "could not resolve to a Repository",
+      });
+    });
+    expect(() => checkPrNotOpen(42)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/could not query PR #42/));
+  });
+
+  it("exits 1 when gh returns JSON without a state field (API regression)", () => {
+    setupExit();
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({}) as never);
+    expect(() => checkPrNotOpen(42)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/could not read PR #42 state/),
+    );
+  });
+});
+
+describe("uncheckedCheckboxes", () => {
+  it("returns the text of each unchecked item", () => {
+    const body = "## Criteria\n\n- [ ] first thing\n- [ ] second thing\n";
+    expect(uncheckedCheckboxes(body)).toEqual(["first thing", "second thing"]);
+  });
+
+  it("ignores checked boxes (case-insensitive) and plain bullets", () => {
+    const body = "- [x] done lower\n- [X] done upper\n- plain bullet\n- [ ] still open\n";
+    expect(uncheckedCheckboxes(body)).toEqual(["still open"]);
+  });
+
+  it("returns empty for a body with no checkboxes", () => {
+    expect(uncheckedCheckboxes("# Title\n\nProse only, no boxes.\n")).toEqual([]);
+  });
+
+  it("recognizes `*` and `+` bullet markers and indented items", () => {
+    const body = "* [ ] star item\n+ [ ] plus item\n  - [ ] indented item\n";
+    expect(uncheckedCheckboxes(body)).toEqual(["star item", "plus item", "indented item"]);
+  });
+
+  it("counts a text-less `- [ ]` box as unchecked with empty text", () => {
+    // A bare checkbox is still an unfinished criterion, so it must block
+    // `done`; the empty string documents that it carries no label.
+    expect(uncheckedCheckboxes("- [ ]\n")).toEqual([""]);
+  });
+});
+
+describe("checkCheckboxesDone (done unchecked-checkbox guard)", () => {
+  it("is a no-op regardless of checkbox state", () => {
+    expect(() => checkCheckboxesDone("- [ ] a\n- [ ] b\n", false)).not.toThrow();
+    expect(() => checkCheckboxesDone("- [ ] a\n", true)).not.toThrow();
+    expect(() => checkCheckboxesDone("- [x] a\n- [X] b\n", false)).not.toThrow();
+  });
+});
+
+describe("prLocDelta (est-loc vs actual feedback)", () => {
+  it("formats a positive delta when actual exceeds the estimate", () => {
+    execFileSyncMock.mockReturnValueOnce(
+      JSON.stringify({ additions: 200, deletions: 50 }) as never,
+    );
+    expect(prLocDelta(7, 150)).toBe("est-loc 150 vs actual 250 (+100)");
+    expect(execFileSyncMock).toHaveBeenCalledWith(
+      "gh",
+      ["pr", "view", "7", "--json", "additions,deletions"],
+      expect.objectContaining({ encoding: "utf8" }),
+    );
+  });
+
+  it("formats a negative delta when actual is under the estimate", () => {
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({ additions: 40, deletions: 10 }) as never);
+    expect(prLocDelta(7, 150)).toBe("est-loc 150 vs actual 50 (-100)");
+  });
+
+  it("returns null (silence) when est-loc is absent", () => {
+    expect(prLocDelta(7, null)).toBeNull();
+    expect(execFileSyncMock).not.toHaveBeenCalled();
+  });
+
+  it("returns null (never throws) when gh fails", () => {
+    execFileSyncMock.mockImplementationOnce(() => {
+      throw new Error("Command failed");
+    });
+    expect(prLocDelta(7, 150)).toBeNull();
+  });
+
+  it("returns null when gh output lacks numeric fields", () => {
+    execFileSyncMock.mockReturnValueOnce(JSON.stringify({ additions: "x" }) as never);
+    expect(prLocDelta(7, 150)).toBeNull();
+  });
+});
+
+describe("newStory validation paths", () => {
+  function setupExit() {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+  }
+
+  it("exits 1 when rfcSlug contains path traversal characters", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newStory("../../outside", "my-story", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/rfcSlug.*lowercase slug/));
+  });
+
+  it("exits 1 when storySlug contains path traversal characters", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newStory("0005-gaps", "../../outside", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/storySlug.*lowercase slug/));
+  });
+
+  it("exits 1 when cluster contains YAML-significant characters", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newStory("0005-gaps", "my-story", { cluster: "type: system" }, dir)).toThrow(
+      /exit 1/,
+    );
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/cluster.*lowercase slug/));
+  });
+
+  it("exits 1 when tasksDir is not a git repo", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    // No .git dir — expect the git-repo guard to fire.
+    expect(() => newStory("0005-gaps", "my-story", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not a git repo/));
+  });
+
+  it("exits 1 when the RFC directory does not exist", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    // No rfcs/missing-rfc subdir — expect the RFC-not-found guard to fire.
+    expect(() => newStory("missing-rfc", "my-story", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not found/));
+  });
+
+  it("exits 1 when the story file already exists", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps", "stories"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "0005-gaps", "stories", "existing.md"), "---\ntitle: x\n---\n");
+    expect(() => newStory("0005-gaps", "existing", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/already exists/));
+  });
+});
+
+describe("newStory status default", () => {
+  // git stays mocked (execFileSyncMock returns ""), and the shared lock is
+  // redirected to a throwaway dir so these don't block behind a live agent.
+  // The mutator still runs for real, so the story file lands on disk and we can
+  // read back its frontmatter status.
+  afterEach(() => __setLockDirForTest(null));
+
+  function setupTasksDir(rfcSlug: string, rfcStatus: string): string {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", rfcSlug), { recursive: true });
+    writeFileSync(
+      join(dir, "rfcs", rfcSlug, "README.md"),
+      `---\nrfc: "${rfcSlug}"\ntitle: "R"\nstatus: ${rfcStatus}\n---\nbody\n`,
+    );
+    __setLockDirForTest(mkdtempSync(join(tmpdir(), "trails-cap-lock-")));
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(console, "log").mockImplementation(() => {});
+    // symbolic-ref must report a branch ("main"); returning "" reads as a
+    // detached HEAD and makes commitAndPush exit 1 on the non-symlink push path
+    // (which CI takes, where TASKS_DIR is not a symlink).
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    return dir;
+  }
+
+  function statusOfNewStory(rfcSlug: string, rfcStatus: string, opts = {}): string {
+    const dir = setupTasksDir(rfcSlug, rfcStatus);
+    newStory(rfcSlug, "s", { allowEmpty: true, ...opts }, dir);
+    const content = readFileSync(join(dir, "rfcs", rfcSlug, "stories", "s.md"), "utf8");
+    return content.match(/^status:\s*(\S+)/m)?.[1] ?? "";
+  }
+
+  it("defaults to ready under an active RFC", () => {
+    expect(statusOfNewStory("0005-gaps", "active")).toBe("ready");
+  });
+
+  it("falls back to draft under a draft RFC (would otherwise be claimable)", () => {
+    expect(statusOfNewStory("0005-gaps", "draft")).toBe("draft");
+  });
+
+  it("falls back to draft under a postponed/superseded RFC", () => {
+    expect(statusOfNewStory("0005-gaps", "postponed")).toBe("draft");
+    expect(statusOfNewStory("0005-gaps", "superseded")).toBe("draft");
+  });
+
+  it("honors an explicit --status regardless of RFC status", () => {
+    expect(statusOfNewStory("0005-gaps", "draft", { status: "ready" })).toBe("ready");
+    expect(statusOfNewStory("0005-gaps", "active", { status: "draft" })).toBe("draft");
+  });
+});
+
+// A mutator refusal (the post-pull re-check that fires when a concurrent agent
+// won the race) runs INSIDE commitAndPush's acquired tasks lock. It must release
+// the lock on the way out — each refusal throws MutatorEarlyExit (rather than
+// process.exit, which would skip the lock's `finally`), so commitAndPush releases
+// the lock before honoring the exit-4 race code. The `pull` mock mutates the tree
+// to recreate the concurrent-agent collision the pre-flight check could not have
+// seen, so the re-check inside the mutator fires.
+describe("mutator refusals release the shared lock (no process.exit leak)", () => {
+  afterEach(() => __setLockDirForTest(null));
+
+  function setup(): string {
+    const lockDir = mkdtempSync(join(tmpdir(), "trails-cap-lock-"));
+    __setLockDirForTest(lockDir);
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(console, "log").mockImplementation(() => {});
+    return lockDir;
+  }
+
+  function lockFile(lockDir: string): string {
+    return join(lockDir, "tasks-cli.lock");
+  }
+
+  it("newStory: a story the pull surfaced after pre-flight throws, lock removed", () => {
+    const lockDir = setup();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps", "stories"), { recursive: true });
+    writeFileSync(
+      join(dir, "rfcs", "0005-gaps", "README.md"),
+      `---\nrfc: "0005-gaps"\ntitle: "R"\nstatus: active\n---\nbody\n`,
+    );
+    const storyFile = join(dir, "rfcs", "0005-gaps", "stories", "s.md");
+    // pull surfaces a concurrent agent's story under the same path; the mutator's
+    // post-pull existsSync re-check must throw rather than clobber it.
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "pull") writeFileSync(storyFile, "concurrent\n");
+      return "" as never;
+    });
+    expect(() => newStory("0005-gaps", "s", { allowEmpty: true }, dir)).toThrow(/exit 4/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/already exists \(created by concurrent agent\)/),
+    );
+    expect(existsSync(lockFile(lockDir))).toBe(false);
+  });
+
+  it("newRfc: an RFC dir the pull surfaced after pre-flight throws, lock removed", () => {
+    const lockDir = setup();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    const rfcDir = join(dir, "rfcs", "0000-my-rfc");
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "pull") mkdirSync(rfcDir, { recursive: true });
+      return "" as never;
+    });
+    expect(() => newRfc("my-rfc", {}, dir)).toThrow(/exit 4/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/already exists \(created by concurrent agent\)/),
+    );
+    expect(existsSync(lockFile(lockDir))).toBe(false);
+  });
+
+  it("finalize: a dir the pull renamed away throws, lock removed", () => {
+    const lockDir = setup();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    const placeholder = join(dir, "rfcs", "0000-foo");
+    mkdirSync(placeholder, { recursive: true });
+    // A concurrent finalize numbered + renamed the dir away during the pull, so
+    // the mutator's post-pull existsSync re-check must throw rather than re-run
+    // finalize-rfc.mjs against a vanished dir.
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "pull") rmSync(placeholder, { recursive: true, force: true });
+      return "" as never;
+    });
+    expect(() => finalize("0000-foo", false, dir)).toThrow(/exit 4/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/no longer exists/));
+    expect(existsSync(lockFile(lockDir))).toBe(false);
+  });
+});
+
+describe("readRfcStatus", () => {
+  it("reads the status scalar from an RFC README", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "0005-gaps", "README.md"), `---\nstatus: active\n---\nbody\n`);
+    expect(readRfcStatus(dir, "0005-gaps")).toBe("active");
+  });
+
+  it("returns null when the README is missing", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(readRfcStatus(dir, "0005-gaps")).toBeNull();
+  });
+
+  it("returns null for an unrecognized status value", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "0005-gaps", "README.md"), `---\nstatus: bogus\n---\nbody\n`);
+    expect(readRfcStatus(dir, "0005-gaps")).toBeNull();
+  });
+});
+
+describe("finalize validation paths", () => {
+  function setupExit() {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+  }
+
+  it("exits 1 when tasksDir is not a git repo", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => finalize("0000-foo", false, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not a git repo/));
+  });
+
+  it("exits 1 when the slug is not a placeholder prefix", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    expect(() => finalize("0007-foo", false, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not a placeholder RFC/));
+  });
+
+  it("exits 1 when the placeholder slug has no body (prefix only)", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    expect(() => finalize("0000-", false, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not a placeholder RFC/));
+  });
+
+  it("exits 1 when the placeholder RFC dir is absent", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    expect(() => finalize("0000-missing", false, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/no such placeholder RFC dir/),
+    );
+  });
+
+  it("accepts the legacy draft- prefix", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    // draft- is a valid placeholder prefix, so it passes the prefix guard and
+    // fails on the dir-absent guard instead (a different message).
+    expect(() => finalize("draft-legacy", false, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/no such placeholder RFC dir/),
+    );
+  });
+
+  it("--dry-run forwards to finalize-rfc.mjs without committing", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0000-foo"), { recursive: true });
+    finalize("0000-foo", true, dir);
+    expect(execFileSyncMock).toHaveBeenCalledWith(
+      process.execPath,
+      ["scripts/finalize-rfc.mjs", "0000-foo", "--dry-run"],
+      expect.objectContaining({ cwd: dir }),
+    );
+    // No git invocation — only the dry-run script call.
+    expect(execFileSyncMock).toHaveBeenCalledTimes(1);
+  });
+});
+
+// Paths to the linting tools in the tasks repo. The integration test below
+// is skipped when they are absent (e.g. in a fresh CI clone without the
+// sibling tasks checkout).
+const ML_BIN = join(TASKS_DIR, "node_modules", ".bin", "markdownlint-cli2");
+const PR_BIN = join(TASKS_DIR, "node_modules", ".bin", "prettier");
+
+// The canonical templates in the tasks repo. These are the source of truth the
+// scaffold generators (buildRfcContent / buildStoryContent) must mirror. They
+// are only reachable when the sibling tasks tree is present — every trails
+// worktree has a `tasks/` symlink, so dev/agent runs exercise the guard; a bare
+// CI clone without the checkout skips it (same precedent as the lint
+// integration tests above). See the byte-fidelity guard below for the
+// repo-ownership rationale.
+const RFC_TEMPLATE = join(TASKS_DIR, "rfcs", "0000-template", "README.md");
+const STORY_TEMPLATE = join(TASKS_DIR, "rfcs", "0000-template", "stories", "template-story.md");
+
+// Extract one `## Heading` section (the heading line through to the line before
+// the next `## ` heading), with trailing blank lines trimmed. Returns null when
+// the heading is absent. Assumes H2 headings are unique within a template (true
+// for both 0000-template files) — it matches the FIRST equal line, so a
+// duplicate heading would silently compare only the first occurrence's body.
+function markdownSection(md: string, heading: string): string | null {
+  const lines = md.split("\n");
+  const start = lines.indexOf(heading);
+  if (start < 0) return null;
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^## /.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+  return lines.slice(start, end).join("\n").replace(/\n+$/, "");
+}
+
+function markdownHeadings(md: string): string[] {
+  return [...md.matchAll(/^## .*/gm)].map((m) => m[0]);
+}
+
+// Integration test: closes the mocked-git gap. buildStoryContent output is
+// written to a real temp file and run through the tasks-repo's actual linting
+// tools — no git involved, no mock needed for the lint step.
+describe.skipIf(!existsSync(ML_BIN) || !existsSync(PR_BIN))(
+  "buildStoryContent — integration (markdownlint + prettier)",
+  () => {
+    it("output passes markdownlint-cli2, prettier --check, and frontmatter validation", async () => {
+      // Use vi.importActual to bypass the execFileSync mock and get the real spawnSync.
+      const { spawnSync } =
+        await vi.importActual<typeof import("node:child_process")>("node:child_process");
+      const content = buildStoryContent("0005-gaps", "my-story", {
+        title: "My Story",
+        cluster: "scaffold",
+        estLoc: 100,
+        date: "2026-06-08",
+      });
+      const dir = mkdtempSync(join(tmpdir(), "cli-integration-"));
+      const file = join(dir, "my-story.md");
+      writeFileSync(file, content);
+
+      // Run from TASKS_DIR so .markdownlint-cli2.jsonc and .prettierrc are picked up.
+      const ml = spawnSync(ML_BIN, [file], { cwd: TASKS_DIR, encoding: "utf8" });
+      expect(ml.status, `markdownlint-cli2 failed:\n${ml.stdout}${ml.stderr}`).toBe(0);
+
+      const pr = spawnSync(PR_BIN, ["--check", file], { cwd: TASKS_DIR, encoding: "utf8" });
+      expect(pr.status, `prettier --check failed:\n${pr.stdout}${pr.stderr}`).toBe(0);
+
+      // Frontmatter field validation — mirrors validate.mjs story-frontmatter checks.
+      const fm = content.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
+      for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc"]) {
+        expect(fm, `missing required frontmatter field: ${key}`).toMatch(
+          new RegExp(`^${key}:`, "m"),
+        );
+      }
+      const status = fm.match(/^status:\s*(\S+)/m)?.[1];
+      expect(STORY_STATUSES, `invalid status: ${status}`).toContain(status);
+      const estLoc = fm.match(/^est-loc:\s*(.+)$/m)?.[1]?.trim();
+      expect(estLoc === "null" || /^\d+$/.test(estLoc ?? ""), `invalid est-loc: ${estLoc}`).toBe(
+        true,
+      );
+    });
+  },
+);
+
+describe("newStory cluster validation", () => {
+  function setupExit() {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+  }
+
+  function makeRfcDir(dir: string, rfcSlug: string, clusters: string[]) {
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", rfcSlug, "stories"), { recursive: true });
+    const clustersYaml = clusters.map((c) => `  - ${c}`).join("\n");
+    writeFileSync(
+      join(dir, "rfcs", rfcSlug, "README.md"),
+      `---\nrfc: "${rfcSlug}"\ntitle: "test"\nstatus: active\nclusters:\n${clustersYaml}\n---\n`,
+    );
+  }
+
+  it("accepts a cluster declared in the RFC README and proceeds to commitAndPush", () => {
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    makeRfcDir(dir, "0005-gaps", ["scaffold", "conversion"]);
+    expect(() =>
+      newStory("0005-gaps", "my-story", { cluster: "scaffold", allowEmpty: true }, dir),
+    ).not.toThrow();
+  });
+
+  it("exits 1 for an undeclared cluster and lists the valid clusters", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    makeRfcDir(dir, "0005-gaps", ["scaffold", "conversion"]);
+    expect(() => newStory("0005-gaps", "my-story", { cluster: "tooling" }, dir)).toThrow(/exit 1/);
+    const msg = vi.mocked(console.error).mock.calls[0]?.[0] as string;
+    expect(msg).toMatch(/tooling/);
+    expect(msg).toMatch(/scaffold/);
+    expect(msg).toMatch(/conversion/);
+  });
+
+  it("validates clusters declared as a YAML flow sequence", () => {
+    // Codex review: regex parsing misses `clusters: [scaffold, conversion]`.
+    // The fix uses the `yaml` package to parse all valid YAML forms.
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps", "stories"), { recursive: true });
+    writeFileSync(
+      join(dir, "rfcs", "0005-gaps", "README.md"),
+      `---\nrfc: "0005-gaps"\ntitle: "test"\nstatus: active\nclusters: [scaffold, conversion]\n---\n`,
+    );
+    expect(() => newStory("0005-gaps", "my-story", { cluster: "tooling" }, dir)).toThrow(/exit 1/);
+    const msg = vi.mocked(console.error).mock.calls[0]?.[0] as string;
+    expect(msg).toMatch(/scaffold/);
+    expect(msg).toMatch(/conversion/);
+  });
+});
+
+describe("newStory packages validation", () => {
+  function makeRfcDir(dir: string, rfcSlug: string, packages: string[]) {
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", rfcSlug, "stories"), { recursive: true });
+    const pkgsYaml = packages.map((p) => `  - ${p}`).join("\n");
+    writeFileSync(
+      join(dir, "rfcs", rfcSlug, "README.md"),
+      `---\nrfc: "${rfcSlug}"\ntitle: "test"\nstatus: active\npackages:\n${pkgsYaml}\n---\n`,
+    );
+  }
+
+  it("writes packages declared by the parent RFC into the story frontmatter", () => {
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    makeRfcDir(dir, "0005-gaps", ["activerecord", "arel"]);
+    newStory("0005-gaps", "my-story", { packages: ["arel"], allowEmpty: true }, dir);
+    const out = readFileSync(join(dir, "rfcs", "0005-gaps", "stories", "my-story.md"), "utf8");
+    expect(out).toContain(`packages: ["arel"]`);
+  });
+
+  it("exits 1 for a package the parent RFC does not declare", () => {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    makeRfcDir(dir, "0005-gaps", ["activerecord", "arel"]);
+    expect(() => newStory("0005-gaps", "my-story", { packages: ["actionview"] }, dir)).toThrow(
+      /exit 1/,
+    );
+    const msg = vi.mocked(console.error).mock.calls[0]?.[0] as string;
+    expect(msg).toMatch(/actionview/);
+    expect(msg).toMatch(/activerecord, arel/);
+  });
+});
+
+describe("newStory --status / --body-file (one-call authoring)", () => {
+  function makeRepo(): string {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0005-gaps", "stories"), { recursive: true });
+    return dir;
+  }
+
+  it("writes a complete story (status + body) in one call", () => {
+    // git is mocked; the mutator still runs and writes the real file, so we can
+    // assert the on-disk content a single `new` call produces.
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = makeRepo();
+    const bodyFile = join(dir, "body.md");
+    writeFileSync(bodyFile, "## Context\n\nReal context.\n\n## Acceptance criteria\n\n- [ ] x\n");
+    newStory("0005-gaps", "my-story", { title: "My Story", status: "ready", bodyFile }, dir);
+    const out = readFileSync(join(dir, "rfcs", "0005-gaps", "stories", "my-story.md"), "utf8");
+    expect(out).toContain(`title: "My Story"`);
+    expect(out).toContain(`status: ready`);
+    expect(out).toContain("Real context.");
+    expect(out).toContain("- [ ] x");
+  });
+
+  it("exits 1 when --body-file is missing or unreadable", () => {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const dir = makeRepo();
+    expect(() =>
+      newStory("0005-gaps", "my-story", { bodyFile: join(dir, "nope.md") }, dir),
+    ).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/--body-file.*not found/));
+  });
+
+  it("refuses an empty-body story without --allow-empty", () => {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const dir = makeRepo();
+    expect(() => newStory("0005-gaps", "my-story", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(/empty body[\s\S]*--allow-empty/),
+    );
+    // No file is written when creation is refused.
+    expect(existsSync(join(dir, "rfcs", "0005-gaps", "stories", "my-story.md"))).toBe(false);
+  });
+
+  it("refuses a --body-file that is blank or only the section skeleton", () => {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const dir = makeRepo();
+    // Blank file.
+    const blank = join(dir, "blank.md");
+    writeFileSync(blank, "   \n\n\t\n");
+    expect(() => newStory("0005-gaps", "blank-story", { bodyFile: blank }, dir)).toThrow(/exit 1/);
+    // Skeleton-only file (the exact default scaffold + an empty checkbox) — the
+    // bypass this guard must close.
+    const skeleton = join(dir, "skeleton.md");
+    writeFileSync(skeleton, "## Context\n\n## Acceptance criteria\n\n- [ ]\n");
+    expect(() => newStory("0005-gaps", "skeleton-story", { bodyFile: skeleton }, dir)).toThrow(
+      /exit 1/,
+    );
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/skeleton-only body/));
+    expect(existsSync(join(dir, "rfcs", "0005-gaps", "stories", "skeleton-story.md"))).toBe(false);
+  });
+
+  it("accepts a --body-file with real prose under the skeleton", () => {
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = makeRepo();
+    const bodyFile = join(dir, "real.md");
+    writeFileSync(
+      bodyFile,
+      "## Context\n\nA real deviation.\n\n## Acceptance criteria\n\n- [ ] fix\n",
+    );
+    expect(() => newStory("0005-gaps", "real-story", { bodyFile }, dir)).not.toThrow();
+    expect(existsSync(join(dir, "rfcs", "0005-gaps", "stories", "real-story.md"))).toBe(true);
+  });
+
+  it("scaffolds an empty-skeleton story when --allow-empty is passed", () => {
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = makeRepo();
+    newStory("0005-gaps", "my-story", { allowEmpty: true }, dir);
+    const out = readFileSync(join(dir, "rfcs", "0005-gaps", "stories", "my-story.md"), "utf8");
+    expect(out).toContain("## Context");
+    expect(out).toContain("## Acceptance criteria");
+  });
+});
+
+describe("isEffectivelyEmptyBody", () => {
+  it("treats blank / whitespace-only bodies as empty", () => {
+    expect(isEffectivelyEmptyBody("")).toBe(true);
+    expect(isEffectivelyEmptyBody("   \n\n\t\n")).toBe(true);
+  });
+
+  it("treats heading-only / empty-checkbox skeletons as empty", () => {
+    expect(isEffectivelyEmptyBody("## Context\n\n## Acceptance criteria\n")).toBe(true);
+    expect(isEffectivelyEmptyBody("## Context\n\n## Acceptance criteria\n\n- [ ]\n")).toBe(true);
+    expect(isEffectivelyEmptyBody("# A\n## B\n### C\n")).toBe(true);
+  });
+
+  it("treats any real prose or a filled checkbox as non-empty", () => {
+    expect(isEffectivelyEmptyBody("## Context\n\nReal context.\n")).toBe(false);
+    expect(isEffectivelyEmptyBody("## Acceptance criteria\n\n- [ ] do the thing\n")).toBe(false);
+    expect(isEffectivelyEmptyBody("just a sentence, no headings")).toBe(false);
+  });
+});
+
+describe("buildRfcContent", () => {
+  it("generates a placeholder RFC with defaults", () => {
+    const content = buildRfcContent("my-rfc", { date: "2026-06-13" });
+    expect(content).toContain(`rfc: "0000-my-rfc"`);
+    expect(content).toContain(`title: "my-rfc"`);
+    expect(content).toContain(`status: draft`);
+    expect(content).toContain(`created: 2026-06-13`);
+    expect(content).toContain(`updated: 2026-06-13`);
+    expect(content).toContain(`owner: "@your-handle"`);
+    expect(content).toContain(`packages: []`);
+    expect(content).toContain(`clusters: []`);
+    // Number-free H1 — cli-finalize-rfc assigns the number at merge.
+    expect(content).toContain(`# RFC — my-rfc`);
+    expect(content).not.toMatch(/^# RFC \d/m);
+    // related-rfcs is omitted entirely when no --related is given.
+    expect(content).not.toContain("related-rfcs");
+  });
+
+  it("default body includes the full 0000-template sections", () => {
+    const content = buildRfcContent("my-rfc", { date: "2026-06-13" });
+    expect(content).toContain("## Alternatives considered");
+    expect(content).toContain("## Rollout");
+    expect(content).toContain("## Open questions");
+    // Sections appear in the same order as the 0000-template README.
+    const order = [
+      "## Summary",
+      "## Motivation",
+      "## Design",
+      "## Non-goals",
+      "## Alternatives considered",
+      "## Rollout",
+      "## Verification",
+      "## Open questions",
+      "## Stories",
+      "## Changelog",
+    ].map((h) => content.indexOf(h));
+    expect(order).toEqual([...order].sort((a, b) => a - b));
+    expect(order.every((i) => i >= 0)).toBe(true);
+    // The scaffold prose must stay byte-identical to the 0000-template README so a
+    // freshly created RFC matches the canonical structure. The Stories/Changelog
+    // sections deliberately differ (the table is regenerated on commit), so this
+    // pins the structural sections plus their placeholder prose.
+    expect(content).toContain(
+      "## Alternatives considered\n\n- **Name:** what it is, why it was not chosen.",
+    );
+    expect(content).toContain(
+      "## Rollout\n\nOrdered phases, referencing story IDs for each phase.\n\n1. Phase 1 — story IDs\n2. Phase 2 — story IDs",
+    );
+    expect(content).toContain(
+      "## Non-goals\n\nDeliberately descoped work, each with a one-line reason. This is where an\nRFC-level descoping decision lives canonically — don't leave it only in\nsession memory or a story comment.\n\n- **Name:** what it is, why it's out of scope.",
+    );
+    expect(content).toContain(
+      '## Verification\n\nHow we\'ll know the RFC worked — a concrete metric, count, or burndown target\n(e.g. "exclude list reaches zero entries", "parity:test delta ≥ +40"). State\nthe number, not a vibe.',
+    );
+    // The open-questions note must sit between the heading and the first question.
+    expect(content).toContain(
+      "## Open questions\n\n<!-- Every question here must be resolved or explicitly deferred (to a named\n     follow-up RFC/story) before this RFC moves to `status: active`. -->\n\n1. **Question.** Options and recommendation.",
+    );
+  });
+
+  it("applies title, owner, packages, and clusters", () => {
+    const content = buildRfcContent("my-rfc", {
+      title: "My prose title",
+      owner: "@deanmarano",
+      packages: ["arel", "activerecord"],
+      clusters: ["scaffold", "tooling"],
+      date: "2026-06-13",
+    });
+    expect(content).toContain(`title: "My prose title"`);
+    expect(content).toContain(`owner: "@deanmarano"`);
+    expect(content).toContain(`packages:\n  - "arel"\n  - "activerecord"`);
+    expect(content).toContain(`clusters:\n  - "scaffold"\n  - "tooling"`);
+    expect(content).toContain(`# RFC — My prose title`);
+  });
+
+  it("renders related-rfcs only when --related is non-empty", () => {
+    const content = buildRfcContent("my-rfc", {
+      related: ["0001-task-system", "0007-foo"],
+      date: "2026-06-13",
+    });
+    expect(content).toContain(`related-rfcs:\n  - "0001-task-system"\n  - "0007-foo"`);
+  });
+
+  it("substitutes a caller-supplied body for the placeholder prose", () => {
+    const content = buildRfcContent("x", {
+      body: "# RFC — Hand authored\n\n## Summary\n\nReal summary.\n",
+      date: "2026-06-13",
+    });
+    expect(content).toContain("Real summary.");
+    expect(content).not.toContain("No stories registered yet.");
+    expect(content.endsWith("Real summary.\n")).toBe(true);
+    expect(content).toContain("---\n\n# RFC — Hand authored");
+  });
+
+  // The mutator runs formatFiles (prettier) but NOT markdownlint, so the default
+  // placeholder body must pass markdownlint on its own or the tasks pre-commit
+  // hook rejects the new-rfc commit. Guard the default body against regressions.
+  it.skipIf(!existsSync(ML_BIN))("default placeholder body passes markdownlint-cli2", async () => {
+    const { spawnSync } =
+      await vi.importActual<typeof import("node:child_process")>("node:child_process");
+    const content = buildRfcContent("my-rfc", { title: "My RFC", date: "2026-06-13" });
+    const file = join(mkdtempSync(join(tmpdir(), "cli-rfc-")), "README.md");
+    writeFileSync(file, content);
+    const ml = spawnSync(ML_BIN, [file], { cwd: TASKS_DIR, encoding: "utf8" });
+    expect(ml.status, `markdownlint-cli2 failed:\n${ml.stdout}${ml.stderr}`).toBe(0);
+  });
+});
+
+// Byte-fidelity guard: the scaffold generators embed the 0000-template prose as
+// string literals, but the templates themselves live in the separate tasks repo
+// — trails' own cli.test.ts otherwise only pins the scaffold against itself, so
+// a drift in rfcs/0000-template/README.md or stories/template-story.md would
+// silently break the "every author is prompted for these sections" goal.
+//
+// Repo ownership: the guard is owned by *trails* and lives here in cli.test.ts.
+// It reads the canonical templates through the worktree's `tasks/` symlink, so
+// every trails dev/agent run (which always has the symlink) executes it, and a
+// bare CI clone without the sibling checkout skips it — identical to the
+// markdownlint/prettier integration tests above. The tasks repo can't own it
+// (it has no copy of the scaffold generators), and pinning it to trails CI
+// alone would require vendoring the templates; the symlink-or-skip model keeps
+// a single source of truth and still catches drift on every real run.
+describe.skipIf(!existsSync(RFC_TEMPLATE) || !existsSync(STORY_TEMPLATE))(
+  "scaffold byte-fidelity to 0000-template",
+  () => {
+    // Sections the scaffold deliberately diverges from, so they're excluded from
+    // the byte-fidelity comparison: the `## Stories` table is regenerated from
+    // story frontmatter on commit (scaffold emits a "No stories registered yet."
+    // placeholder), and `## Changelog` carries a parameterized date. Everything
+    // else — Summary, Motivation, Design, Non-goals, Alternatives considered,
+    // Rollout, Verification, Open questions — must stay byte-identical.
+    //
+    // This is DERIVED from the template, not a hardcoded allowlist: the guarded
+    // set is "every template `##` heading minus these two". So a NEW section
+    // added to the template (the exact silent-drift case this story targets)
+    // fails the test until buildRfcContent is updated to match.
+    const RFC_EXCLUDED_SECTIONS = ["## Stories", "## Changelog"];
+    const guardedRfcSections = (md: string) =>
+      markdownHeadings(md).filter((h) => !RFC_EXCLUDED_SECTIONS.includes(h));
+
+    it("buildRfcContent body is byte-identical to every guarded template README section", () => {
+      const template = readFileSync(RFC_TEMPLATE, "utf8");
+      const generated = buildRfcContent("my-rfc", { date: "2026-06-13" });
+      const guarded = guardedRfcSections(template);
+      // Sanity: the template still has sections to guard, so an accidentally
+      // empty list can't make this test vacuously pass.
+      expect(guarded.length, "no guarded sections found in the template README").toBeGreaterThan(0);
+      for (const heading of guarded) {
+        const generatedSection = markdownSection(generated, heading);
+        expect(
+          generatedSection,
+          `buildRfcContent is missing ${heading} (present in rfcs/0000-template/README.md — add it to the scaffold)`,
+        ).not.toBeNull();
+        expect(
+          generatedSection,
+          `${heading} drifted between buildRfcContent and rfcs/0000-template/README.md`,
+        ).toBe(markdownSection(template, heading));
+      }
+    });
+
+    it("buildRfcContent preserves the template guarded-section ordering", () => {
+      const template = readFileSync(RFC_TEMPLATE, "utf8");
+      const generated = buildRfcContent("my-rfc", { date: "2026-06-13" });
+      expect(guardedRfcSections(generated)).toEqual(guardedRfcSections(template));
+    });
+
+    // The story scaffold is deliberately headings-only (no placeholder prose),
+    // so byte-comparing section bodies is wrong here. Instead the guard pins the
+    // scaffold's headings to a prefix of the template's headings, in order: a new
+    // mandatory section added to the template (that authors should be prompted
+    // for) must also be added to buildStoryContent's default body.
+    it("buildStoryContent headings are an in-order prefix of the template headings", () => {
+      const template = readFileSync(STORY_TEMPLATE, "utf8");
+      const generated = buildStoryContent("0005-gaps", "my-story", { date: "2026-06-08" });
+      const generatedHeadings = markdownHeadings(generated);
+      const templateHeadings = markdownHeadings(template);
+      // Every scaffold heading must appear in the template, in the same order.
+      expect(templateHeadings.slice(0, generatedHeadings.length)).toEqual(generatedHeadings);
+      // And the scaffold must carry the mandatory sections (Notes is optional and
+      // omitted from the headings-only scaffold).
+      for (const heading of ["## Context", "## Acceptance criteria"]) {
+        expect(generatedHeadings).toContain(heading);
+      }
+    });
+  },
+);
+
+describe("newRfc", () => {
+  function setupExit() {
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+  }
+
+  it("exits 1 when the slug is not a lowercase slug", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newRfc("../../outside", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/slug.*lowercase slug/));
+  });
+
+  it("exits 1 when a packages entry is not a slug", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newRfc("my-rfc", { packages: ["type: bad"] }, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/packages.*lowercase slug/));
+  });
+
+  it("exits 1 when tasksDir is not a git repo", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    expect(() => newRfc("my-rfc", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/not a git repo/));
+  });
+
+  it("exits 1 when the RFC directory already exists", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    mkdirSync(join(dir, "rfcs", "0000-my-rfc"), { recursive: true });
+    expect(() => newRfc("my-rfc", {}, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/already exists/));
+  });
+
+  it("exits 1 when --body-file is missing or unreadable", () => {
+    setupExit();
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    expect(() => newRfc("my-rfc", { bodyFile: join(dir, "nope.md") }, dir)).toThrow(/exit 1/);
+    expect(console.error).toHaveBeenCalledWith(expect.stringMatching(/--body-file.*not found/));
+  });
+
+  it("writes a placeholder README under 0000-<slug> and commits", () => {
+    execFileSyncMock.mockImplementation((_file, args) => {
+      const label = args && args.length >= 3 ? args[2] : "";
+      if (label === "symbolic-ref") return "main" as never;
+      if (label === "diff-tree") return "story.md" as never;
+      return "" as never;
+    });
+    const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+    mkdirSync(join(dir, ".git"));
+    newRfc("my-rfc", { title: "My RFC", owner: "@deanmarano" }, dir);
+    const out = readFileSync(join(dir, "rfcs", "0000-my-rfc", "README.md"), "utf8");
+    expect(out).toContain(`rfc: "0000-my-rfc"`);
+    expect(out).toContain(`title: "My RFC"`);
+    expect(out).toContain(`owner: "@deanmarano"`);
+    expect(out).toContain(`# RFC — My RFC`);
+  });
+});
+
+describe("formatFiles", () => {
+  it("is a no-op for an empty file list (never spawns prettier)", () => {
+    formatFiles([], TASKS_DIR);
+    expect(execFileSyncMock).not.toHaveBeenCalled();
+  });
+
+  it("skips silently when the prettier binary is absent (fresh clone)", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-noprettier-"));
+    formatFiles([join(dir, "x.md")], dir);
+    expect(execFileSyncMock).not.toHaveBeenCalled();
+  });
+
+  it("runs prettier --write against the tasks repo when the binary exists", () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-prettier-"));
+    mkdirSync(join(dir, "node_modules", ".bin"), { recursive: true });
+    writeFileSync(join(dir, "node_modules", ".bin", "prettier"), "#!/bin/sh\n");
+    formatFiles(["rfcs/0001/stories/x.md"], dir);
+    expect(execFileSyncMock).toHaveBeenCalledWith(
+      join(dir, "node_modules", ".bin", "prettier"),
+      ["--write", "rfcs/0001/stories/x.md"],
+      expect.objectContaining({ cwd: dir }),
+    );
+  });
+});
+
+describe("resolveTasksDir (TASKS_DIR resolution order)", () => {
+  function withEnv(vars: Record<string, string | undefined>, fn: () => void): void {
+    const orig: Record<string, string | undefined> = {};
+    for (const k of Object.keys(vars)) orig[k] = process.env[k];
+    try {
+      for (const [k, v] of Object.entries(vars)) {
+        if (v === undefined) delete process.env[k];
+        else process.env[k] = v;
+      }
+      fn();
+    } finally {
+      for (const [k, v] of Object.entries(orig)) {
+        if (v === undefined) delete process.env[k];
+        else process.env[k] = v;
+      }
+    }
+  }
+
+  it("explicit $TASKS_DIR env wins over symlink and canonical", () => {
+    withEnv({ TASKS_DIR: "/custom/tasks", RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir("/any/cwd")).toBe("/custom/tasks");
+    });
+  });
+
+  it("$RFCS_DIR is honored as transition fallback when $TASKS_DIR is unset", () => {
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: "/rfcs/path" }, () => {
+      expect(resolveTasksDir("/any/cwd")).toBe("/rfcs/path");
+    });
+  });
+
+  it("$TASKS_DIR takes precedence over $RFCS_DIR when both are set", () => {
+    withEnv({ TASKS_DIR: "/tasks/wins", RFCS_DIR: "/rfcs/loses" }, () => {
+      expect(resolveTasksDir("/any/cwd")).toBe("/tasks/wins");
+    });
+  });
+
+  it("uses <cwd>/tasks when its .git entry exists (the per-worktree symlink)", () => {
+    const cwd = mkdtempSync(join(tmpdir(), "trails-wt-"));
+    mkdirSync(join(cwd, "tasks"));
+    // A tasks worktree has .git as a file (gitdir pointer), not a directory.
+    writeFileSync(join(cwd, "tasks", ".git"), "gitdir: ../../tasks-worktrees/x/.git\n");
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(cwd)).toBe(join(cwd, "tasks"));
+    });
+  });
+
+  it("falls back to canonical ~/github/blazetrailsdev/tasks when <cwd>/tasks has no .git", () => {
+    const cwd = mkdtempSync(join(tmpdir(), "trails-no-tasks-"));
+    withEnv({ TASKS_DIR: undefined, RFCS_DIR: undefined }, () => {
+      expect(resolveTasksDir(cwd)).toBe(join(homedir(), "github", "blazetrailsdev", "tasks"));
+    });
+  });
+});
+
+describe("tasks-CLI critical-section lock", () => {
+  function repo(): string {
+    const dir = mkdtempSync(join(tmpdir(), "trails-lock-"));
+    mkdirSync(join(dir, ".git"));
+    return dir;
+  }
+
+  it("resolves the common git dir for a main checkout and a linked worktree", () => {
+    const main = repo();
+    expect(gitCommonDir(main)).toBe(join(main, ".git"));
+    // Linked worktree: `.git` is a pointer file; `commondir` names the shared dir.
+    const wt = mkdtempSync(join(tmpdir(), "trails-lock-wt-"));
+    const gitdir = join(wt, "gitdir");
+    mkdirSync(gitdir);
+    writeFileSync(join(wt, ".git"), `gitdir: ${gitdir}\n`);
+    writeFileSync(join(gitdir, "commondir"), "../shared\n");
+    expect(gitCommonDir(wt)).toBe(join(wt, "shared"));
+  });
+
+  // Core guarantee: while A holds the lock B can't enter (fails loud), then lands.
+  it("two concurrent mutations both land instead of one being silently dropped", () => {
+    const dir = repo();
+    const lockPath = join(dir, ".git", "tasks-cli.lock");
+    const exit = vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+
+    const a = acquireTasksLock(dir); // A holds (a live pid).
+    expect(existsSync(lockPath)).toBe(true);
+    // B can't enter while A is alive (a live holder is never reclaimed): it
+    // times out loudly rather than silently entering.
+    expect(() => acquireTasksLock(dir, { waitMs: 0, pollMs: 1 })).toThrow(
+      `exit ${LOCK_TIMEOUT_EXIT}`,
+    );
+    expect(exit).toHaveBeenCalledWith(LOCK_TIMEOUT_EXIT);
+    releaseTasksLock(a); // Only now can B acquire and land its edit.
+    expect(existsSync(lockPath)).toBe(false);
+    const b = acquireTasksLock(dir, { waitMs: 0, pollMs: 1 });
+    expect(b).not.toBeNull();
+    releaseTasksLock(b);
+  });
+
+  // A dead holder's lock is auto-reclaimed: it can never be released, so we
+  // steal it and proceed rather than forcing a manual `rm`.
+  it("auto-reclaims a dead holder's lock and acquires it", () => {
+    const dir = repo();
+    const lockPath = join(dir, ".git", "tasks-cli.lock");
+    writeFileSync(lockPath, "2147483646.0.0\n"); // pid far above any live process → ESRCH
+    const exit = vi.spyOn(process, "exit").mockImplementation(((c?: number) => {
+      throw new Error(`exit ${c}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const h = acquireTasksLock(dir, { waitMs: 0, pollMs: 1 });
+    expect(exit).not.toHaveBeenCalled(); // no loud failure, no manual rm needed
+    expect(h).not.toBeNull();
+    expect(existsSync(lockPath)).toBe(true); // reclaimed — now carries our token
+    expect(readFileSync(lockPath, "utf8").trim()).toBe(h?.token);
+    releaseTasksLock(h);
+    expect(existsSync(lockPath)).toBe(false);
+  });
+
+  // Reclaiming a dead lock leaves a single live owner: after A reclaims and
+  // holds, a dead-pid lock written "underneath" is not what A returned, and a
+  // second acquirer waits on A rather than stealing A's live lock.
+  it("does not let a reclaim steal a live lock", () => {
+    const dir = repo();
+    const lockPath = join(dir, ".git", "tasks-cli.lock");
+    writeFileSync(lockPath, "2147483646.0.0\n"); // dead holder
+    vi.spyOn(process, "exit").mockImplementation(((c?: number) => {
+      throw new Error(`exit ${c}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const a = acquireTasksLock(dir, { waitMs: 0, pollMs: 1 }); // reclaims, now live
+    expect(a).not.toBeNull();
+    // A live holder is never reclaimed — B times out instead of stealing it.
+    expect(() => acquireTasksLock(dir, { waitMs: 0, pollMs: 1 })).toThrow(
+      `exit ${LOCK_TIMEOUT_EXIT}`,
+    );
+    expect(readFileSync(lockPath, "utf8").trim()).toBe(a?.token); // still A's
+    releaseTasksLock(a);
+  });
+
+  // Release removes the lock only while it carries our token.
+  it("release only removes a lock that still carries our token", () => {
+    const dir = repo();
+    const lockPath = join(dir, ".git", "tasks-cli.lock");
+    const a = acquireTasksLock(dir);
+    writeFileSync(lockPath, "someone-else\n"); // content no longer ours
+    releaseTasksLock(a); // no-op
+    expect(existsSync(lockPath)).toBe(true);
+    writeFileSync(lockPath, `${a?.token}\n`); // ours again
+    releaseTasksLock(a);
+    expect(existsSync(lockPath)).toBe(false);
+  });
+
+  it("returns null (proceeds unlocked) when no git dir is resolvable", () => {
+    const dir = mkdtempSync(join(tmpdir(), "trails-nogit-"));
+    expect(acquireTasksLock(dir)).toBeNull();
+    expect(() => releaseTasksLock(null)).not.toThrow();
+  });
+});
+
+describe("duplicate RFC-dir reconciliation", () => {
+  // Build a real rfcs/ tree: each entry is `dirName -> { readme?, stories }`.
+  function makeTasks(
+    layout: Record<string, { readme?: boolean; stories?: Record<string, string> }>,
+  ): string {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-dup-"));
+    for (const [name, spec] of Object.entries(layout)) {
+      const rfcDir = join(dir, "rfcs", name);
+      mkdirSync(rfcDir, { recursive: true });
+      if (spec.readme)
+        writeFileSync(join(rfcDir, "README.md"), `---\nstatus: active\n---\n# ${name}\n`);
+      for (const [story, body] of Object.entries(spec.stories ?? {})) {
+        mkdirSync(join(rfcDir, "stories"), { recursive: true });
+        writeFileSync(join(rfcDir, "stories", story), body);
+      }
+    }
+    return dir;
+  }
+
+  it("rewriteRfcRefs rewrites both frontmatter and body mentions", () => {
+    const text = `---\nrfc: "0000-foo"\n---\nSee rfcs/0000-foo/README.md for 0000-foo.\n`;
+    expect(rewriteRfcRefs(text, "0000-foo", "0031-foo")).toBe(
+      `---\nrfc: "0031-foo"\n---\nSee rfcs/0031-foo/README.md for 0031-foo.\n`,
+    );
+  });
+
+  it("findDuplicateRfcDirs flags only placeholder dirs with a finalized twin", () => {
+    const dir = makeTasks({
+      "0000-foo": { stories: { "r1.md": "x" } }, // duplicate: 0031-foo exists
+      "0031-foo": { readme: true },
+      "0000-bar": { readme: true }, // lone placeholder — no twin, NOT flagged
+      "0030-baz": { readme: true }, // finalized, no placeholder — NOT flagged
+    });
+    const dups = findDuplicateRfcDirs(dir);
+    expect(dups).toEqual([{ draftSlug: "0000-foo", finalSlug: "0031-foo", bareSlug: "foo" }]);
+  });
+
+  it("also matches legacy draft- placeholder prefix", () => {
+    const dir = makeTasks({
+      "draft-foo": { stories: { "r1.md": "x" } },
+      "0031-foo": { readme: true },
+    });
+    expect(findDuplicateRfcDirs(dir)).toEqual([
+      { draftSlug: "draft-foo", finalSlug: "0031-foo", bareSlug: "foo" },
+    ]);
+  });
+
+  // The race: a story added to 0000-<slug> survives a rebase onto a main that
+  // already finalized it to NNNN-<slug>, leaving two dirs for one RFC.
+  it("reconcile migrates stranded stories into the finalized dir and removes the placeholder", () => {
+    const dir = makeTasks({
+      "0000-schema-cache": {
+        stories: { "r1.md": `---\nrfc: "0000-schema-cache"\n---\nbody refs 0000-schema-cache\n` },
+      },
+      "0031-schema-cache": { readme: true },
+    });
+    expect(reconcileDuplicateRfcDirs(dir)).toBe(true);
+    // Single dir for the RFC: placeholder gone, story moved with corrected refs.
+    expect(existsSync(join(dir, "rfcs", "0000-schema-cache"))).toBe(false);
+    const moved = join(dir, "rfcs", "0031-schema-cache", "stories", "r1.md");
+    expect(existsSync(moved)).toBe(true);
+    const text = readFileSync(moved, "utf8");
+    expect(text).toContain(`rfc: "0031-schema-cache"`);
+    expect(text).toContain("body refs 0031-schema-cache");
+    expect(text).not.toContain("0000-schema-cache");
+  });
+
+  it("reconcile is a no-op (false) when there is no duplicate pair", () => {
+    const dir = makeTasks({ "0031-foo": { readme: true }, "0000-bar": { readme: true } });
+    expect(reconcileDuplicateRfcDirs(dir)).toBe(false);
+    expect(existsSync(join(dir, "rfcs", "0000-bar"))).toBe(true);
+  });
+
+  // Refuses by THROWING (not process.exit) so the shared tasks lock held by
+  // commitAndPush is released via its `finally` rather than leaked.
+  it("throws when a story of the same name already exists in the finalized dir", () => {
+    const dir = makeTasks({
+      "0000-foo": { stories: { "r1.md": "placeholder" } },
+      "0031-foo": { readme: true, stories: { "r1.md": "finalized" } },
+    });
+    expect(() =>
+      migrateDuplicateRfcDir(dir, {
+        draftSlug: "0000-foo",
+        finalSlug: "0031-foo",
+        bareSlug: "foo",
+      }),
+    ).toThrow(/already exists/);
+    // Pre-flight refusal: both dirs untouched — nothing migrated, nothing removed.
+    expect(readFileSync(join(dir, "rfcs", "0031-foo", "stories", "r1.md"), "utf8")).toBe(
+      "finalized",
+    );
+    expect(existsSync(join(dir, "rfcs", "0000-foo", "stories", "r1.md"))).toBe(true);
+  });
+});
+
+describe("assertCleanWorktree releases the lock it refuses under", () => {
+  function lockDir(): string {
+    const dir = mkdtempSync(join(tmpdir(), "trails-clean-"));
+    mkdirSync(join(dir, ".git"));
+    return dir;
+  }
+  function statusReturns(porcelain: string) {
+    execFileSyncMock.mockImplementation(
+      (_file, args) => (args && args[2] === "status" ? porcelain : "") as never,
+    );
+  }
+
+  it("passes a clean tree through and leaves the lock held", () => {
+    const dir = lockDir();
+    statusReturns("");
+    const lock = acquireTasksLock(dir);
+    expect(existsSync(lock!.path)).toBe(true);
+    assertCleanWorktree(dir, lock);
+    expect(existsSync(lock!.path)).toBe(true);
+    releaseTasksLock(lock);
+  });
+
+  it("releases the lock before exiting on a genuinely dirty tree", () => {
+    const dir = lockDir();
+    vi.spyOn(process, "exit").mockImplementation(((code?: number) => {
+      throw new Error(`exit ${code}`);
+    }) as never);
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    statusReturns("M  rfcs/0024/stories/x.md");
+
+    const lock = acquireTasksLock(dir);
+    expect(existsSync(lock!.path)).toBe(true);
+    expect(() => assertCleanWorktree(dir, lock)).toThrow("exit 1");
+    expect(existsSync(lock!.path)).toBe(false);
+
+    const next = acquireTasksLock(dir, { waitMs: 0, pollMs: 1 });
+    expect(next).not.toBeNull();
+    releaseTasksLock(next);
+  });
+});
+
+describe("dirtyWorktreeLines", () => {
+  it("reports tracked edits and ignores untracked + generated index files", () => {
+    const porcelain = [
+      " M rfcs/0024/stories/x.md", // tracked, unstaged edit
+      "A  rfcs/0024/stories/y.md", // staged add
+      "?? rfcs/0024/stories/new.md", // untracked — survives a rebase
+      " M index.md", // generated — rebuilt + re-staged on demand
+    ].join("\n");
+    expect(dirtyWorktreeLines(porcelain)).toEqual([
+      "M rfcs/0024/stories/x.md",
+      "A  rfcs/0024/stories/y.md",
+    ]);
+  });
+
+  it("treats an empty porcelain as clean", () => {
+    expect(dirtyWorktreeLines("")).toEqual([]);
+  });
+});
+
+const emptyIdx: Index = { generated_at: "2026-01-01", rfcs: [], stories: [] };
+
+describe("buildIndexFromOriginMain (read path serves the origin/main tree)", () => {
+  const SHA = "a".repeat(40);
+  const emptyIndex = emptyIdx;
+
+  // The cache lives in the shared git common dir — the same seam the lock uses.
+  afterEach(() => __setLockDirForTest(null));
+  function setup(opts: { onFetch?: () => void } = {}) {
+    const gitDir = mkdtempSync(join(tmpdir(), "trails-read-index-"));
+    __setLockDirForTest(gitDir);
+    const seen: string[] = [];
+    execFileSyncMock.mockImplementation(((file: string, args: string[], o: { cwd?: string }) => {
+      if (file === "git") {
+        const label = args[2];
+        seen.push(label);
+        if (label === "fetch") opts.onFetch?.();
+        if (label === "rev-parse") return SHA as never;
+        return "" as never;
+      }
+      seen.push(file === "tar" ? "tar" : "build-index");
+      // Stand in for build-index.mjs: it writes index.json into the exported tree.
+      if (file !== "tar" && o?.cwd)
+        writeFileSync(join(o.cwd, "index.json"), JSON.stringify(emptyIndex));
+      return "" as never;
+    }) as never);
+    return { gitDir, seen };
+  }
+
+  it("never resets the working tree", () => {
+    const { seen } = setup();
+    buildIndexFromOriginMain();
+    expect(seen).not.toContain("reset");
+    expect(seen).not.toContain("status");
+  });
+
+  it("serves a cached index for the current origin/main sha without re-exporting", () => {
+    const { gitDir, seen } = setup();
+    const cacheDir = join(gitDir, "trails-tasks-read-index");
+    mkdirSync(cacheDir, { recursive: true });
+    const cached = { ...emptyIndex, generated_at: "cached" };
+    writeFileSync(join(cacheDir, `${SHA}.v2.json`), JSON.stringify(cached));
+    const got = buildIndexFromOriginMain();
+    expect(got?.sha).toBe(SHA);
+    expect(got?.index.generated_at).toBe("cached");
+    expect(seen).toEqual(["fetch", "rev-parse"]);
+  });
+
+  it("ignores a pre-v2 entry for the same sha (it carries no RFC priorities)", () => {
+    const { gitDir, seen } = setup();
+    const cacheDir = join(gitDir, "trails-tasks-read-index");
+    mkdirSync(cacheDir, { recursive: true });
+    writeFileSync(
+      join(cacheDir, `${SHA}.json`),
+      JSON.stringify({ ...emptyIndex, generated_at: "v1-cached" }),
+    );
+    const got = buildIndexFromOriginMain();
+    expect(got?.index.generated_at).toBe("2026-01-01");
+    expect(seen).toContain("build-index");
+  });
+
+  it("exports the tree, builds the index there, and caches it by sha", () => {
+    const { gitDir, seen } = setup();
+    const cacheDir = join(gitDir, "trails-tasks-read-index");
+    mkdirSync(cacheDir, { recursive: true });
+    const stale = join(cacheDir, `${"b".repeat(40)}.json`);
+    const otherAgentInFlight = join(cacheDir, `${"c".repeat(40)}.999.staging`);
+    writeFileSync(stale, "{}");
+    writeFileSync(otherAgentInFlight, "{}");
+    const got = buildIndexFromOriginMain();
+    expect(got?.index.generated_at).toBe("2026-01-01");
+    expect(seen).toEqual(["fetch", "rev-parse", "archive", "tar", "build-index"]);
+    // Cached for the next reader, and the superseded sha is pruned.
+    expect(existsSync(join(gitDir, "trails-tasks-read-index", `${SHA}.v2.json`))).toBe(true);
+    expect(existsSync(stale)).toBe(false);
+    // Another agent's half-written entry is not a superseded index — pruning it
+    // would break its rename.
+    expect(existsSync(otherAgentInFlight)).toBe(true);
+  });
+
+  it("returns null when the fetch fails so the caller can fall back", () => {
+    setup({
+      onFetch: () => {
+        throw new Error("offline");
+      },
+    });
+    expect(buildIndexFromOriginMain()).toBeNull();
+  });
+
+  it("serves the read index however TASKS_DIR resolved", () => {
+    const { seen } = setup();
+    const got = readIndexSource();
+    expect(got.sha).toBe(SHA);
+    expect(got.index.generated_at).toBe("2026-01-01");
+    expect(seen).not.toContain("reset");
+  });
+
+  // Regression: the offline fallback used to fetch + `reset --hard origin/main`
+  // in the ONE shared canonical checkout — a read discarding tracked edits and
+  // contending on the mutation lock. Unreachable origin means there is nothing
+  // fresher to sync to, so degrade to the working-tree index plus a warning.
+  it("degrades to the working-tree index with a staleness warning when origin is unreachable", () => {
+    const { seen } = setup({
+      onFetch: () => {
+        throw new Error("offline");
+      },
+    });
+    const err = vi.spyOn(console, "error").mockImplementation(() => {});
+    // The fallback hands off to the working-tree index, which lives in the REAL
+    // TASKS_DIR checkout — absent on CI runners. What this test owns is the
+    // degradation itself: warn, then serve the working tree, without ever
+    // touching the shared checkout. Let the handoff fail; the assertions below
+    // still fail on the baseline, which fetched + reset --hard instead.
+    try {
+      expect(readIndexSource().sha).toBeNull();
+    } catch {
+      /* no working-tree index here — the handoff is all we needed to observe */
+    }
+    // `reset` is the whole invariant. A `status` probe may or may not appear
+    // depending on whether this machine's TASKS_DIR has an index.json to serve
+    // (the no-index rebuild branch probes index.md's cleanliness first), and it
+    // is read-only either way — asserting on it just couples the test to the
+    // runner's checkout.
+    expect(seen).not.toContain("reset");
+    expect(String(err.mock.calls[0][0])).toMatch(/could not reach origin\/main.*may be stale/s);
+  });
+});
+
+describe("readWorkingTreeIndex (the offline fallback never rebuilds)", () => {
+  // Regression: the fallback used to go through loadIndex(), which rebuilds a
+  // stale index by running build-index.mjs — and that rewrites the TRACKED
+  // index.md in the shared canonical checkout. A read must not mutate it; a
+  // stale index is exactly what the caller's staleness warning announces.
+  it("serves the on-disk index.json as-is without spawning a rebuild", () => {
+    const dir = mkdtempSync(join(tmpdir(), "trails-wt-index-"));
+    writeFileSync(join(dir, "index.json"), JSON.stringify({ ...emptyIdx, generated_at: "stale" }));
+    const got = readWorkingTreeIndex(dir);
+    expect(got?.generated_at).toBe("stale");
+    expect(execFileSyncMock).not.toHaveBeenCalled();
+  });
+
+  it("returns null when there is no index.json to serve", () => {
+    const dir = mkdtempSync(join(tmpdir(), "trails-wt-index-"));
+    expect(readWorkingTreeIndex(dir)).toBeNull();
+  });
+
+  it("returns null for an index.json a crashed writer truncated", () => {
+    const dir = mkdtempSync(join(tmpdir(), "trails-wt-index-"));
+    writeFileSync(join(dir, "index.json"), '{"stories":[');
+    expect(readWorkingTreeIndex(dir)).toBeNull();
+  });
+});
+
+describe("readIndexedFile (body comes from the index's own source)", () => {
+  it("reads the body out of the origin/main commit the index was built from", () => {
+    const sha = "c".repeat(40);
+    const seen: string[][] = [];
+    execFileSyncMock.mockImplementation(((_file: string, args: string[]) => {
+      seen.push(args);
+      return "---\ntitle: x\n---\n" as never;
+    }) as never);
+    expect(readIndexedFile({ index: emptyIdx, sha }, "rfcs/0025-x/stories/y.md")).toContain(
+      "title: x",
+    );
+    expect(seen[0].slice(2)).toEqual(["show", `${sha}:rfcs/0025-x/stories/y.md`]);
+  });
+
+  it("returns null when the path is absent from that commit", () => {
+    execFileSyncMock.mockImplementation((() => {
+      throw new Error("path does not exist");
+    }) as never);
+    expect(readIndexedFile({ index: emptyIdx, sha: "d".repeat(40) }, "gone.md")).toBeNull();
+  });
+
+  it("falls back to the working tree when the index came from there", () => {
+    const dir = mkdtempSync(join(tmpdir(), "trails-read-body-"));
+    expect(readIndexedFile({ index: emptyIdx, sha: null }, join(dir, "missing.md"))).toBeNull();
+    expect(execFileSyncMock).not.toHaveBeenCalled();
+  });
+});
+
+describe("RFC-level priority", () => {
+  function idxWith(stories: StoryEntry[], priorities: Record<string, number> = {}): Index {
+    const idx = index(stories);
+    idx.rfcs.push({
+      id: "0003-r",
+      title: "R3",
+      status: "active",
+      owner: "@x",
+      packages: [],
+      clusters: ["c1", "c2"],
+      file_path: "0003-r/README.md",
+    });
+    for (const r of idx.rfcs) r.priority = priorities[r.id] ?? null;
+    return idx;
+  }
+
+  describe("effectivePriority", () => {
+    it("uses the story's own priority when it sets one", () => {
+      const m = new Map([["0001-r", 5]]);
+      expect(effectivePriority(story({ priority: 2 }), m)).toBe(2);
+    });
+
+    it("falls back to the story's RFC priority when the story sets none", () => {
+      const m = new Map([["0001-r", 5]]);
+      expect(effectivePriority(story({ priority: null }), m)).toBe(5);
+    });
+
+    it("is Infinity when neither the story nor its RFC sets a priority", () => {
+      expect(effectivePriority(story({ priority: null }), new Map())).toBe(Infinity);
+    });
+
+    it("takes a story priority of 0 literally rather than inheriting", () => {
+      const m = new Map([["0001-r", 5]]);
+      expect(effectivePriority(story({ priority: 0 }), m)).toBe(0);
+    });
+  });
+
+  describe("rfcPriorityMap", () => {
+    it("maps only the RFCs that declare a priority", () => {
+      const idx = idxWith([], { "0001-r": 4 });
+      expect([...rfcPriorityMap(idx)]).toEqual([["0001-r", 4]]);
+    });
+  });
+
+  describe("ready ordering", () => {
+    it("orders a story with no priority of its own by its RFC's priority", () => {
+      const idx = idxWith(
+        [story({ id: "plain", rfc: "0003-r" }), story({ id: "inherits", rfc: "0001-r" })],
+        { "0001-r": 5 },
+      );
+      expect(ready(idx).map((s) => s.id)).toEqual(["inherits", "plain"]);
+    });
+
+    it("treats a story-set priority as absolute, never clamped to its RFC's band", () => {
+      const idx = idxWith(
+        [
+          story({ id: "high", rfc: "0001-r", priority: null }),
+          story({ id: "low", rfc: "0003-r", priority: 2 }),
+        ],
+        { "0001-r": 3, "0003-r": 9 },
+      );
+      expect(ready(idx).map((s) => s.id)).toEqual(["low", "high"]);
+    });
+
+    it("lets a story's own priority sort it BELOW its RFC's inherited default", () => {
+      const idx = idxWith(
+        [story({ id: "own", rfc: "0001-r", priority: 8 }), story({ id: "inh", rfc: "0001-r" })],
+        { "0001-r": 1 },
+      );
+      expect(ready(idx).map((s) => s.id)).toEqual(["inh", "own"]);
+    });
+
+    it("leaves ordering byte-identical to index order when no RFC sets a priority", () => {
+      const ids = ["z", "m", "a", "q"];
+      const idx = idxWith(ids.map((id) => story({ id })));
+      expect(ready(idx).map((s) => s.id)).toEqual(ids);
+    });
+
+    it("still honors story priority alone when no RFC sets a priority", () => {
+      const idx = idxWith([story({ id: "b", priority: 9 }), story({ id: "a", priority: 1 })]);
+      expect(ready(idx).map((s) => s.id)).toEqual(["a", "b"]);
+    });
+  });
+
+  describe("equal-priority RFC tie-break (fewer stories remaining wins)", () => {
+    it("counts only stories that are neither done nor closed as remaining", () => {
+      const idx = idxWith([
+        story({ id: "a", rfc: "0001-r", status: "ready" }),
+        story({ id: "b", rfc: "0001-r", status: "in-progress" }),
+        story({ id: "c", rfc: "0001-r", status: "done" }),
+        story({ id: "d", rfc: "0001-r", status: "closed" }),
+        story({ id: "e", rfc: "0003-r", status: "blocked" }),
+      ]);
+      expect([...remainingStoryCounts(idx)]).toEqual([
+        ["0001-r", 2],
+        ["0003-r", 1],
+      ]);
+    });
+
+    it("orders the RFC with fewer stories left first when priorities are equal", () => {
+      const idx = idxWith(
+        [
+          story({ id: "big1", rfc: "0001-r" }),
+          story({ id: "big2", rfc: "0001-r" }),
+          story({ id: "big3", rfc: "0001-r" }),
+          story({ id: "small1", rfc: "0003-r" }),
+        ],
+        { "0001-r": 2, "0003-r": 2 },
+      );
+      expect(ready(idx)[0].id).toBe("small1");
+    });
+
+    it("ignores shipped work: an RFC with many done stories still counts as near-empty", () => {
+      const idx = idxWith(
+        [
+          story({ id: "lean1", rfc: "0001-r", status: "done" }),
+          story({ id: "lean2", rfc: "0001-r", status: "done" }),
+          story({ id: "lean3", rfc: "0001-r", status: "ready" }),
+          story({ id: "fat1", rfc: "0003-r" }),
+          story({ id: "fat2", rfc: "0003-r" }),
+        ],
+        { "0001-r": 1, "0003-r": 1 },
+      );
+      expect(ready(idx)[0].id).toBe("lean3");
+    });
+
+    it("breaks a tie between two stories that set the same priority themselves", () => {
+      const idx = idxWith(
+        [
+          story({ id: "fromBig", rfc: "0001-r", priority: 4 }),
+          story({ id: "fromBigB", rfc: "0001-r" }),
+          story({ id: "fromSmall", rfc: "0003-r", priority: 4 }),
+        ],
+        { "0001-r": 7, "0003-r": 7 },
+      );
+      expect(ready(idx)[0].id).toBe("fromSmall");
+    });
+
+    it("does not apply when the two RFC priorities differ", () => {
+      const idx = idxWith(
+        [
+          story({ id: "bigRfcFirst", rfc: "0001-r", priority: 4 }),
+          story({ id: "bigRfcSecond", rfc: "0001-r", priority: 4 }),
+          story({ id: "smallRfc", rfc: "0003-r", priority: 4 }),
+        ],
+        { "0001-r": 1, "0003-r": 2 },
+      );
+      expect(ready(idx).map((s) => s.id)).toEqual(["bigRfcFirst", "bigRfcSecond", "smallRfc"]);
+    });
+
+    it("does not reshuffle unprioritized RFCs by size", () => {
+      const idx = idxWith([
+        story({ id: "big1", rfc: "0001-r" }),
+        story({ id: "big2", rfc: "0001-r" }),
+        story({ id: "small1", rfc: "0003-r" }),
+      ]);
+      expect(ready(idx).map((s) => s.id)).toEqual(["big1", "big2", "small1"]);
+    });
+
+    it("leaves stories of one RFC in index order", () => {
+      const idx = idxWith(
+        [
+          story({ id: "s1", rfc: "0001-r" }),
+          story({ id: "s2", rfc: "0001-r" }),
+          story({ id: "s3", rfc: "0001-r" }),
+        ],
+        { "0001-r": 1 },
+      );
+      expect(ready(idx).map((s) => s.id)).toEqual(["s1", "s2", "s3"]);
+    });
+
+    it("returns 0 for two unprioritized stories rather than NaN", () => {
+      const idx = idxWith([story({ id: "a" }), story({ id: "b", rfc: "0003-r" })]);
+      const ctx = priorityContext(idx);
+      expect(comparePriority(idx.stories[0], idx.stories[1], ctx)).toBe(0);
+    });
+  });
+
+  describe("nextBundle", () => {
+    it("leads the bundle with the nearer-to-done of two equal-priority RFCs", () => {
+      const idx = idxWith(
+        [
+          story({ id: "big1", rfc: "0001-r", cluster: "c1", est_loc: 100 }),
+          story({ id: "big2", rfc: "0001-r", cluster: "c1", est_loc: 100 }),
+          story({ id: "small1", rfc: "0003-r", cluster: "c2", est_loc: 100 }),
+        ],
+        { "0001-r": 3, "0003-r": 3 },
+      );
+      expect(nextBundle(idx, { maxLoc: 250 })[0].id).toBe("small1");
+    });
+
+    it("leads with a story that inherits its RFC's priority, overriding LOC packing", () => {
+      const idx = idxWith(
+        [
+          story({ id: "a1", rfc: "0001-r", cluster: "c1", est_loc: 100 }),
+          story({ id: "a2", rfc: "0001-r", cluster: "c1", est_loc: 100 }),
+          story({ id: "b1", rfc: "0003-r", cluster: "c2", est_loc: 240 }),
+        ],
+        { "0001-r": 2 },
+      );
+      const bundle = nextBundle(idx, { maxLoc: 250 });
+      expect(bundle[0].id).toBe("a1");
+      expect(bundle.map((s) => s.id).sort()).toEqual(["a1", "a2"]);
+    });
+
+    it("packs by cluster LOC exactly as before when no RFC sets a priority", () => {
+      const idx = idxWith([
+        story({ id: "a1", cluster: "c1", est_loc: 100 }),
+        story({ id: "a2", cluster: "c1", est_loc: 100 }),
+        story({ id: "b1", cluster: "c2", est_loc: 240 }),
+      ]);
+      expect(nextBundle(idx, { maxLoc: 250 }).map((s) => s.id)).toEqual(["b1"]);
+    });
+  });
+
+  describe("parseRfcPriority / readRfcPriority / applyRfcPriorities", () => {
+    function rfcDir(readme?: string): string {
+      const dir = mkdtempSync(join(tmpdir(), "tasks-test-"));
+      mkdirSync(join(dir, "rfcs", "0005-gaps"), { recursive: true });
+      if (readme !== undefined) {
+        writeFileSync(join(dir, "rfcs", "0005-gaps", "README.md"), readme);
+      }
+      return dir;
+    }
+
+    it("reads the priority scalar from an RFC README", () => {
+      expect(
+        readRfcPriority(rfcDir(`---\nstatus: active\npriority: 3\n---\nbody\n`), "0005-gaps"),
+      ).toBe(3);
+    });
+
+    it("reads 0 as a real priority, not as absent", () => {
+      expect(parseRfcPriority(`---\npriority: 0\n---\nbody\n`)).toBe(0);
+    });
+
+    it("returns null for an absent, malformed, negative, or non-integer priority", () => {
+      expect(parseRfcPriority(`---\nstatus: active\n---\nbody\n`)).toBeNull();
+      expect(parseRfcPriority(`---\npriority: high\n---\n`)).toBeNull();
+      expect(parseRfcPriority(`---\npriority: -1\n---\n`)).toBeNull();
+      expect(parseRfcPriority(`---\npriority: 1.5\n---\n`)).toBeNull();
+      expect(parseRfcPriority(`no frontmatter here\n`)).toBeNull();
+    });
+
+    it("returns null when the README is missing", () => {
+      expect(readRfcPriority(rfcDir(), "0005-gaps")).toBeNull();
+    });
+
+    function idxOf(...rfcs: Partial<RfcEntry>[]): Index {
+      return {
+        generated_at: "now",
+        rfcs: rfcs.map((r) => ({
+          id: "0005-gaps",
+          title: "G",
+          status: "active",
+          owner: "@x",
+          packages: [],
+          clusters: [],
+          file_path: `rfcs/${r.id ?? "0005-gaps"}/README.md`,
+          ...r,
+        })),
+        stories: [],
+      };
+    }
+
+    it("fills rfcs[].priority from each README, leaving unreadable ones null", () => {
+      const dir = rfcDir(`---\nstatus: active\npriority: 7\n---\nbody\n`);
+      const idx = idxOf({ id: "0005-gaps" }, { id: "0006-missing" });
+      applyRfcPriorities(idx, dir);
+      expect(idx.rfcs.map((r) => r.priority)).toEqual([7, null]);
+    });
+
+    it("does not re-read an RFC whose priority is already populated", () => {
+      const idx = idxOf({ id: "0005-gaps", priority: 2 });
+      applyRfcPriorities(idx, mkdtempSync(join(tmpdir(), "tasks-test-")));
+      expect(idx.rfcs[0].priority).toBe(2);
+    });
+
+    const REAL_README = [
+      "---",
+      'rfc: "0005-gaps"',
+      'title: "Gaps"',
+      "status: active",
+      "created: 2026-07-04",
+      "updated: 2026-07-25",
+      'owner: "@your-handle"',
+      "packages: []",
+      "clusters: []",
+      "---",
+      "",
+      "# RFC 0005 — Gaps",
+      "",
+    ].join("\n");
+
+    it("round-trips a set then a clear on a real-shaped RFC README", () => {
+      const dir = rfcDir(REAL_README);
+      const readme = join(dir, "rfcs", "0005-gaps", "README.md");
+      editFrontmatter(readme, { priority: "4" });
+      expect(readRfcPriority(dir, "0005-gaps")).toBe(4);
+      removeFrontmatterKey(readme, "priority");
+      expect(readRfcPriority(dir, "0005-gaps")).toBeNull();
+      expect(readFileSync(readme, "utf8")).toBe(REAL_README);
+    });
+
+    it("leaves the RFC's other frontmatter keys untouched by a priority set", () => {
+      const dir = rfcDir(REAL_README);
+      const readme = join(dir, "rfcs", "0005-gaps", "README.md");
+      editFrontmatter(readme, { priority: "0" });
+      const out = readFileSync(readme, "utf8");
+      for (const line of REAL_README.split("\n")) expect(out).toContain(line);
+      expect(out).toContain("priority: 0");
+      expect(out).toContain("# RFC 0005 — Gaps");
+    });
+  });
+
+  describe("rfcPriorityFlag (rfc --priority argument)", () => {
+    const parse = (args: string[]) => rfcPriorityFlag(parseFlags(args).flags);
+
+    it("returns undefined when --priority is absent (the RFC is left untouched)", () => {
+      expect(parse(["0001-r", "--status", "active"])).toBeUndefined();
+    });
+
+    it("parses --priority <N>", () => {
+      expect(parse(["0001-r", "--priority", "3"])).toBe(3);
+      expect(parse(["0001-r", "--priority", "0"])).toBe(0);
+    });
+
+    it("returns null for --priority --clear", () => {
+      expect(parse(["0001-r", "--priority", "--clear"])).toBeNull();
+    });
+
+    it("rejects a non-integer or negative N, a valueless --priority, and <N> --clear", () => {
+      expect(parse(["0001-r", "--priority", "high"])).toBe("invalid");
+      expect(parse(["0001-r", "--priority", "1.5"])).toBe("invalid");
+      expect(parse(["0001-r", "--priority", "-2"])).toBe("invalid");
+      expect(parse(["0001-r", "--priority"])).toBe("invalid");
+      expect(parse(["0001-r", "--priority", "3", "--clear"])).toBe("invalid");
+    });
+  });
+
+  describe("formatRows surface", () => {
+    it("marks an inherited priority with a trailing *", () => {
+      const out = formatRows(
+        [story({ id: "a", priority: null })],
+        new Set(),
+        new Map([["0001-r", 6]]),
+      );
+      expect(out.split("\n").find((l) => l.startsWith("a"))!).toContain("6*");
+    });
+
+    it("shows a story's own priority unmarked, even under a prioritized RFC", () => {
+      const out = formatRows(
+        [story({ id: "a", priority: 2 })],
+        new Set(),
+        new Map([["0001-r", 6]]),
+      );
+      const dataLine = out.split("\n").find((l) => l.startsWith("a"))!;
+      expect(dataLine).toContain("2");
+      expect(dataLine).not.toContain("*");
+    });
+
+    it("renders an em dash when neither the story nor its RFC is prioritized", () => {
+      const out = formatRows([story({ id: "a", priority: null })]);
+      expect(out.split("\n").find((l) => l.startsWith("a"))!).toContain("—");
+    });
+
+    it("documents the inherited marker in the legend", () => {
+      expect(PRIORITY_LEGEND).toContain("N* = inherited");
+    });
+  });
+});

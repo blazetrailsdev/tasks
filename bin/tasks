@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# tasks — entrypoint for the tasks CLI (scripts/cli.ts).
+#
+# This script locates the tasks *checkout whose CLI code should run*. It
+# deliberately does NOT set $TASKS_DIR: which working tree the CLI acts on is
+# resolved by resolveTasksDir() in scripts/cli.ts from the caller's cwd, and
+# setting the env var here would suppress that — including the
+# TASKS_DIR_IS_SYMLINK branch that makes a per-worktree checkout push
+# `HEAD:main` instead of `main`. Code location and data location are separate
+# questions; this script answers only the first.
+#
+# Code-dir resolution order:
+#   1. $TASKS_DIR / $RFCS_DIR, when that checkout carries scripts/cli.ts
+#   2. <cwd>/tasks, when it is a git checkout carrying scripts/cli.ts (the
+#      per-worktree symlink trails' start-worktree.sh creates)
+#   3. the checkout this script itself lives in (covers ~/.local/bin/tasks
+#      symlinks and `pnpm tasks` run from inside the tasks repo)
+#   4. ~/github/blazetrailsdev/tasks (canonical fallback)
+set -euo pipefail
+
+has_cli() { [[ -n "${1:-}" && -f "$1/scripts/cli.ts" ]]; }
+
+CODE_DIR=""
+for candidate in "${TASKS_DIR:-}" "${RFCS_DIR:-}"; do
+  if has_cli "$candidate"; then CODE_DIR="$candidate"; break; fi
+done
+
+if [[ -z "$CODE_DIR" && -e "$PWD/tasks/.git" ]] && has_cli "$PWD/tasks"; then
+  CODE_DIR="$PWD/tasks"
+fi
+
+if [[ -z "$CODE_DIR" ]]; then
+  # Follow symlinks so an installed ~/.local/bin/tasks lands in the real repo.
+  SELF="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+  if has_cli "$SELF/.."; then CODE_DIR="$(cd "$SELF/.." && pwd)"; fi
+fi
+
+if [[ -z "$CODE_DIR" ]] && has_cli "$HOME/github/blazetrailsdev/tasks"; then
+  CODE_DIR="$HOME/github/blazetrailsdev/tasks"
+fi
+
+if [[ -z "$CODE_DIR" ]]; then
+  echo "tasks: could not locate a tasks checkout containing scripts/cli.ts." >&2
+  echo "       Set \$TASKS_DIR to one, or clone blazetrailsdev/tasks to" >&2
+  echo "       ~/github/blazetrailsdev/tasks and run 'pnpm install' there." >&2
+  exit 1
+fi
+
+TSX="$CODE_DIR/node_modules/.bin/tsx"
+if [[ ! -x "$TSX" ]]; then
+  echo "tasks: $TSX is missing — run 'pnpm install' in $CODE_DIR." >&2
+  exit 1
+fi
+
+exec "$TSX" "$CODE_DIR/scripts/cli.ts" "$@"
