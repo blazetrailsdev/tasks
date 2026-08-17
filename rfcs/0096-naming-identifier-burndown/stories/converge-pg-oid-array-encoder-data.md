@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-oid-array-encoder-data"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null

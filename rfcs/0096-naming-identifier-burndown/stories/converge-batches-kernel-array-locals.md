@@ -1,6 +1,6 @@
 ---
 title: "converge-batches-kernel-array-locals"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null
