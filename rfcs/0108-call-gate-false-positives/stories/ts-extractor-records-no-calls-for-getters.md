@@ -1,7 +1,7 @@
 ---
 title: "extract-ts-api records no call set for get accessors, hiding every getter-shaped port from the call gate"
-status: ready
-updated: 2026-08-11
+status: claimed
+updated: 2026-08-17
 rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-17T16:57:56Z"
+assignee: "extractor-object-literal-keys-are-not-ported-methods"
 blocked-by: null
 closed-reason: null
 ---
