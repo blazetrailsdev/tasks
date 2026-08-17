@@ -1,7 +1,7 @@
 ---
 title: "sync-stats: warn when an api_compare step log parses zero packages"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-17
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by sync-stats-compare-parse-hygiene (2026-08-17 sweep): merged with sync-stats-test-compare-parse-isolated-step — both are parsing hygiene in syncCompareStats. Citations carried forward."
 ---
 
 ## Context
