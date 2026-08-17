@@ -2,7 +2,7 @@
 title: "parity:api:calls treats object-literal keys as ported methods, so a DEFAULT_BEHAVIORS :raise key reds 67 files"
 status: ready
 updated: 2026-08-09
-rfc: "0000-call-gate-false-positives"
+rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []

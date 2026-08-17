@@ -2,7 +2,7 @@
 title: "Same-file closure resolves receiver-blind property reads as methods"
 status: ready
 updated: 2026-08-14
-rfc: "0000-call-gate-false-positives"
+rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []

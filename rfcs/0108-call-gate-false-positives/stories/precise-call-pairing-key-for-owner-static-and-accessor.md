@@ -2,7 +2,7 @@
 title: "Give the call-gate row key owner/static/accessor precision"
 status: ready
 updated: 2026-08-17
-rfc: "0000-call-gate-false-positives"
+rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: ["activerecord"]
 deps: []

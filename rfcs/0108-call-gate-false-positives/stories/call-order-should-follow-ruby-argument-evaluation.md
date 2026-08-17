@@ -2,7 +2,7 @@
 title: "Call-order comparison should follow Ruby argument-evaluation order, not TS token order"
 status: ready
 updated: 2026-08-09
-rfc: "0000-call-gate-false-positives"
+rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
 deps: []
