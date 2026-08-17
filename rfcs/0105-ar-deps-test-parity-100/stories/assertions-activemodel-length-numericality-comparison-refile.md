@@ -1,6 +1,6 @@
 ---
 title: "activemodel length / numericality / comparison / validates assertion parity"
-status: claimed
+status: closed
 updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-08-17T01:22:52Z"
-assignee: "admit-index-by-and-compact-blank-to-receiver-as-first-arg"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by one story per file (PR #6625 measurement): assertions-activemodel-comparison-validation, assertions-activemodel-length-validation, assertions-activemodel-numericality-validation, assertions-activemodel-validations-test, assertions-activemodel-validates-test. Each of the five trails files matches Rails by test name only — every body is an invented scenario over an ad-hoc inline model — so convergence is a re-port of the Rails file, not an assertion edit, and the smallest of them (comparison-validation.test.ts, 567 lines to delete plus ~200 to add) already exceeds the 700-LOC PR ceiling on its own; validations.test.ts is 2,474 lines with 146 trails-only extras. Two implementation blockers were also surfaced and filed: Model.validates has no Rails-style validator lookup by option key (converge-model-validates-onto-rails-generic-lookup), and ComparisonValidator#compare throws on a PlainDate/PlainDateTime pair Ruby compares fine."
 ---
 
 ## Why this story exists
