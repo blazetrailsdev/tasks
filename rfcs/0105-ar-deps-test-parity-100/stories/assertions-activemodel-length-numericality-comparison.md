@@ -1,7 +1,7 @@
 ---
 title: "activemodel length / numericality / comparison / validates assertion parity"
-status: ready
-updated: 2026-08-16
+status: done
+updated: 2026-08-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["activemodel"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6620
 claim: null
 assignee: null
 blocked-by: null
