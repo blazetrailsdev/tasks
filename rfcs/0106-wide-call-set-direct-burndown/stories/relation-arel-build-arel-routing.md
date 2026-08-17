@@ -1,7 +1,7 @@
 ---
 title: "Route to_sql/delete_all/update_all/arel through build_arel and apply_join_dependency"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-08-17
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
