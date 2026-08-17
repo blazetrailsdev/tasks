@@ -1,6 +1,6 @@
 ---
 title: "converge-batches-order-validation-kernel-array"
-status: in-progress
+status: done
 updated: 2026-08-17
 rfc: "0096-naming-identifier-burndown"
 cluster: null
