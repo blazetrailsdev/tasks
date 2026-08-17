@@ -1,6 +1,6 @@
 ---
 title: "Route joins() through JoinDependency; delete relation.ts's parallel join resolver"
-status: claimed
+status: in-progress
 updated: 2026-08-17
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["converge-relation-build-arel-single-builder"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: 6630
 claim: "2026-08-17T03:02:54Z"
 assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
 blocked-by: null
