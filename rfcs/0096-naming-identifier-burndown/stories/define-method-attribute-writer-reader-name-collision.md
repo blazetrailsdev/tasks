@@ -1,6 +1,6 @@
 ---
 title: "define_method_attribute= and define_method_attribute collide on one TS name"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6717
 claim: "2026-08-18T19:47:46Z"
 assignee: "port-date-sub-today-now-receiver-class"
 blocked-by: null
