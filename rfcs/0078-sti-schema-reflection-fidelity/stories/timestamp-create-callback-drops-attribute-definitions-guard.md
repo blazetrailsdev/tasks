@@ -1,6 +1,6 @@
 ---
 title: "Timestamp create callback adds a non-Rails _attributeDefinitions guard"
-status: done
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6412
+pr: 6704
 claim: "2026-08-18T15:00:51Z"
 assignee: "sweep-joins-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
