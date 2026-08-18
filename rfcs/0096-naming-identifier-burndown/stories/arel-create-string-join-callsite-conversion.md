@@ -1,6 +1,6 @@
 ---
 title: "createStringJoin wraps its argument where Rails passes it through"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:14:58Z"
+assignee: "port-test-date-strftime-different-format"
 blocked-by: null
 closed-reason: null
 ---

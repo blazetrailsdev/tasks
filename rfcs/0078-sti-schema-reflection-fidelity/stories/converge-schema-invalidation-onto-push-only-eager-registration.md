@@ -1,6 +1,6 @@
 ---
 title: "Converge schema invalidation onto Rails' push-only DescendantsTracker model (eager subclass registration, delete the per-read pull fallback)"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:14:58Z"
+assignee: "port-test-date-strftime-different-format"
 blocked-by: null
 closed-reason: null
 ---
