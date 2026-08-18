@@ -2,7 +2,7 @@
 title: "Ruby raise Class, msg should pair with the TS throw new Class(msg)"
 status: draft
 updated: 2026-08-18
-rfc: "0108-call-gate-false-positives"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
 deps: []
@@ -70,3 +70,10 @@ Check `raise` with no message (`raise SomeError`) and the re-raise forms
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green; the
       change does not surface new rows elsewhere (re-run with
       `API_COMPARE_FORCE=1 pnpm parity:api --calls` and diff the artifact).
+
+
+_Moved from RFC 0108 on 2026-08-18. 0108 is closing: it delivered its four named
+done-conditions (exclude tree 1,637 -> 1,266 rows) and is finishing only the
+stories already in flight. This one had not started, so it returns to 0025, the
+parent tooling backlog, where the remaining call-gate false-positive classes
+live. It is unchanged otherwise — the finding and its citations stand._

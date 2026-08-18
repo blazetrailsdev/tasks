@@ -2,7 +2,7 @@
 title: "Drop or block the chain-receiver core call in XmlMini_Nokogiri#parse"
 status: blocked
 updated: 2026-08-18
-rfc: "0108-call-gate-false-positives"
+rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
 deps: []
@@ -47,3 +47,10 @@ calls like `relation.where(...).first` across activerecord.
   `pnpm tasks block` with the specific reason why no such verdict exists.
 - `pnpm parity:api:calls` / `pnpm parity:api:calls:args` stay green; no new
   baseline row.
+
+
+_Moved from RFC 0108 on 2026-08-18. 0108 is closing: it delivered its four named
+done-conditions (exclude tree 1,637 -> 1,266 rows) and is finishing only the
+stories already in flight. This one had not started, so it returns to 0025, the
+parent tooling backlog, where the remaining call-gate false-positive classes
+live. It is unchanged otherwise — the finding and its citations stand._

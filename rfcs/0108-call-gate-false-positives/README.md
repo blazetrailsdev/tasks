@@ -144,3 +144,66 @@ work surfaces goes to its natural owner — port convergence to
 `converge-pg-lookup-cast-type-from-column-onto-quoting-module` correctly went),
 measurement holes and ungated dimensions back to
 `0025-fidelity-verification-tooling`.
+
+## CLOSING — 2026-08-18
+
+**This RFC is closed to new stories. It is finishing only what is already in
+flight, and closes when the last of those merges.**
+
+### What it delivered
+
+The exclude tree went **1,637 -> 1,266 rows (-371)**, the generic RFC 0047 seed
+population **1,115 -> 808**, and all four named done-conditions were met:
+
+- `persistence.json` `_update_record | attributes_for_update` — deleted
+- the four `ExplainProxy` rows in `relation.json` — deleted
+- `association-scope.json` `transform_value` — deleted
+- `explain.json`'s empty shard — deleted
+
+Plus the headline unblock: RFC 0107's `converge-relation-length-onto-records-delegation`
+was verified unblocked end-to-end on 2026-08-17 (both ratchets OK, zero
+`relation.ts` x `with_connection` rows, 61 test files green).
+
+Coverage went up as well as noise down: comparisons 5,583 -> 5,761 pairs.
+
+### Why it is closing rather than continuing
+
+It grew 6 -> 10 -> 18 -> 24 stories. The work was real — nearly every story
+carries a measured false positive and a PR — but the RFC had become the general
+call-gate work queue rather than a bounded burndown. Three signals made that
+concrete:
+
+1. **Generational chaining.** `resolve-owner` -> `resolve-duplicate-declaration-owners`
+   -> `core-receiver-calls-in-core-ext` -> `constant-and-module-eval-receivers` +
+   `fully-weak-ruby-body`. Four generations, each fix revealing the next.
+2. **A fix that made the tool worse.** `core-receiver-calls-in-core-ext` (#6680)
+   moved the compared population 5,762 -> 5,649, losing 113 pairs by widening
+   `weak`. The row count improved while coverage silently shrank — the exact
+   trade the stop rule above was written against, recurring anyway.
+3. **Scope drift into undeclared packages.** `chain-receiver-core-call-in-nokogiri-parse`
+   (nokogiri), `request-env-by-reference` and
+   `request-forgery-protection-this-typed-mixin` (actionpack) are outside this
+   RFC's declared package list, and passed validation only because they declared
+   `packages: []`.
+
+The prose stop rule did not hold, and would not have: what drives filing is that
+this RFC exists, is visible, and was priority 1. Priority is now 3 and the RFC
+closes on the last in-flight merge.
+
+### Where the remaining work goes
+
+- **Call-gate false positives** -> `0025-fidelity-verification-tooling`, the
+  parent backlog. `raise-class-message-pairs-with-throw-new`,
+  `value-equivalent-constant-spellings` and
+  `chain-receiver-core-call-in-nokogiri-parse` moved there on 2026-08-18.
+- **Port convergence** (a real divergence a gate fix stopped hiding) ->
+  `0106-wide-call-set-direct-burndown`.
+
+### Known gap carried out
+
+`precise-call-pairing-key-for-owner-static-and-accessor` merged five separately
+filed bugs and closed `done` having delivered four. The fifth — a Ruby writer
+pairing with the reader rather than `setX` — re-emerged as
+`pair-ruby-writer-with-ts-set-accessor-not-its-reader`, which is in flight here.
+When merging N stories into one, give the body a per-arm checklist so `done` is
+falsifiable per arm; a merged body without one can close with an arm undelivered.
