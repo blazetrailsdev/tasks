@@ -50,3 +50,23 @@ through them.
       `relations.test.ts` stay green (including `group with subquery in from
 does not use original table name`, which depends on the resolved nodes
       being stored).
+
+## Update from the 2026-08-18 RFC 0023 triage pass
+
+**The main half is converged.** `_selectColumns` and `_groupColumns` no longer
+exist anywhere in `packages/` or `scripts/`. `Relation` now exposes public
+`selectValues` / `groupValues` writers and the calculation arms assign through
+them, matching `calculations.rb:484` and `:552-553`:
+
+- `relation/calculations.ts:446-447` — `relation.groupValues = groupNodes`,
+  `relation.selectValues = selectValues`
+- and at `:771`, `:911`, `:1002`, `:1307`, `:1313`, `:1379`.
+
+**What remains is the typing half only.** `groupValues` is still declared
+`string[]` (`relation/query-methods.ts:303`, and the mirroring host interface at
+`relation/calculations.ts:158`) while Rails stores the `arel_columns`-resolved
+nodes, so `calculations.ts:446` still has to launder them through
+`as unknown as string[]`.
+
+Scope this story to widening the `selectValues` / `groupValues` element type to
+hold Arel nodes and deleting the resulting casts.
