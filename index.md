@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-one-rails-thing-n-trails-things](rfcs/0000-one-rails-thing-n-trails-things/README.md) | One Rails thing, N trails things — duplicate bodies and split stores | draft | @deanmarano | activerecord, activemodel, activesupport, actionpack, arel, date, globalid, trailties |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -115,3 +114,4 @@
 | [0109-story-file-lookup](rfcs/0109-story-file-lookup/README.md) | Forward file→story lookup for the tasks CLI | closed | @deanmarano | — |
 | [0110-parity-skip-register-correctness](rfcs/0110-parity-skip-register-correctness/README.md) | Skip registers suppress ported surface instead of crediting it | draft | @deanmarano | activerecord, activesupport |
 | [0111-error-class-message-parity](rfcs/0111-error-class-message-parity/README.md) | Error-class and message parity burndown | draft | @deanmarano | activerecord, activemodel, activesupport, actionpack, arel, date, i18n, rack |
+| [0112-one-rails-thing-n-trails-things](rfcs/0112-one-rails-thing-n-trails-things/README.md) | One Rails thing, N trails things — duplicate bodies and split stores | draft | @deanmarano | activerecord, activemodel, activesupport, actionpack, arel, date, globalid, trailties |
