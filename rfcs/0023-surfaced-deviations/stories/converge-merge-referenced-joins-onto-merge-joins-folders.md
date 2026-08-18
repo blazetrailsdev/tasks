@@ -55,3 +55,31 @@ one `Merger`.
   (`association-scope.ts:1067-1077`) is either kept with a justification at the
   call site or converged; it has no merger.rb counterpart.
 - Ported association / through-scope tests pass unchanged, no test renames.
+
+## Update from the 2026-08-18 RFC 0023 triage pass — the convergence TARGET moved
+
+`packages/activerecord/src/relation/merge-joins.ts` no longer exists, and with
+it `foldMergeJoins`, `foldMergeOuterJoins` and `joinsUnionEq`. Do **not** go
+looking for that file.
+
+The Rails-faithful bodies now live on `Merger` itself, in
+`packages/activerecord/src/relation/merger.ts`:
+
+- `Merger#mergeJoins` (`merger.ts:145-178`) — the same-model branch is now one
+  `structuralUnionEq` union over the whole `joinsValues` store
+  (`merger.rb:121`), and the cross-model branch partitions into
+  `associations` / `others` and calls
+  `QueryMethodBangs.joinsBang(rel, joinDependency, ...others)`
+  (`merger.rb:123-137`).
+- `Merger#mergeOuterJoins` (`merger.ts:181-`) — same shape for
+  `leftOuterJoinsValues` (`merger.rb:140-152`).
+
+`AssociationScope#_mergeReferencedJoins` (`association-scope.ts:971-1050`,
+called from `:914`) still hand-reimplements both, including its own
+`item._model === target._model` same-klass test and its own
+`namedInner`/`others` partition. **Converge it onto the `Merger` methods above**
+rather than onto the deleted folders.
+
+Note the one genuinely trails-only piece it also carries — copying
+`item._joinClauses` across — which is the separate
+`fold-join-clauses-into-joins-values` story; leave that side-channel alone here.

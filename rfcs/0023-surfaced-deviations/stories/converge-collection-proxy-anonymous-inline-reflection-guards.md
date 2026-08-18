@@ -58,3 +58,26 @@ An inline/anonymous association registers a reflection like every other, so
 - [ ] `CollectionProxy#reflection` returns the registered reflection with no
       `?? this._assocDef` arm, or that arm is shown unreachable.
 - [ ] AR association suites green on all three adapter lanes.
+
+## Update from the 2026-08-18 RFC 0023 triage pass
+
+**AC 1 is already met.** Neither `_djarForCount` nor `_foreignKeyPresent` exists
+anywhere in `packages/` or `scripts/` any more, and `collection-proxy.ts` carries
+no `reflection.klass == null` guard.
+
+**AC 2 is what remains.** `CollectionProxy#reflection`
+(`collection-proxy.ts:315-320`) still ends in the fallback arm:
+
+```ts
+const ctor = this._record.constructor as typeof Base;
+return (
+  (ctor._reflectOnAssociation?.(this._assocName) as AssociationDefinition | null) ?? this._assocDef
+);
+```
+
+and `_assocDef` is still a field (`:190`), also read by `_callbackHost` (`:330`).
+Rails' `Association#reflection` (`association.rb:16`) is handed the rich
+reflection at `associations.rb:290-296` and has no fallback.
+
+Scope this story to removing the `?? this._assocDef` arm (or demonstrating it
+unreachable) and retiring the `_assocDef` field with it.
