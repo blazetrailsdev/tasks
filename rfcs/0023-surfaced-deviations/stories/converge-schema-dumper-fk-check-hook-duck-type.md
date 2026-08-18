@@ -1,7 +1,7 @@
 ---
 title: "Converge SchemaDumper FK/check-constraint hook duck-type onto Rails' supports_* gate"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into adapter-schema-source-column-flag-duck-typing — same deviation class in the same file: schema-dumper.ts duck-types where Rails gates on supports_* and passes real Column objects"
 ---
 
 ## Context
