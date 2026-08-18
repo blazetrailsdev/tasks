@@ -1,7 +1,7 @@
 ---
 rfc: "0108-call-gate-false-positives"
 title: "Call-gate false positives — comparator reports a mismatch where the port is faithful"
-status: active
+status: closed
 created: 2026-08-17
 updated: 2026-08-18
 owner: "@deanmarano"
