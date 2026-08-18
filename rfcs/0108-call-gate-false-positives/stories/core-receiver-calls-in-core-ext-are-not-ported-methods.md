@@ -1,7 +1,7 @@
 ---
 title: "Drop Ruby core/stdlib receiver calls in core_ext bodies from the call gate"
-status: ready
-updated: 2026-08-17
+status: claimed
+updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T00:23:01Z"
+assignee: "port-request-session-options-instance"
 blocked-by: null
 closed-reason: null
 ---
