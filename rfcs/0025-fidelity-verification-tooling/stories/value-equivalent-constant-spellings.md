@@ -64,7 +64,6 @@ is the natural home.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green, and
       the change surfaces no new rows elsewhere.
 
-
 _Moved from RFC 0108 on 2026-08-18. 0108 is closing: it delivered its four named
 done-conditions (exclude tree 1,637 -> 1,266 rows) and is finishing only the
 stories already in flight. This one had not started, so it returns to 0025, the

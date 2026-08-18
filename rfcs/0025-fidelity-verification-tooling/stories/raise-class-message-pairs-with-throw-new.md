@@ -71,7 +71,6 @@ Check `raise` with no message (`raise SomeError`) and the re-raise forms
       change does not surface new rows elsewhere (re-run with
       `API_COMPARE_FORCE=1 pnpm parity:api --calls` and diff the artifact).
 
-
 _Moved from RFC 0108 on 2026-08-18. 0108 is closing: it delivered its four named
 done-conditions (exclude tree 1,637 -> 1,266 rows) and is finishing only the
 stories already in flight. This one had not started, so it returns to 0025, the

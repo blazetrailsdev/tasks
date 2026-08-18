@@ -48,7 +48,6 @@ calls like `relation.where(...).first` across activerecord.
 - `pnpm parity:api:calls` / `pnpm parity:api:calls:args` stay green; no new
   baseline row.
 
-
 _Moved from RFC 0108 on 2026-08-18. 0108 is closing: it delivered its four named
 done-conditions (exclude tree 1,637 -> 1,266 rows) and is finishing only the
 stories already in flight. This one had not started, so it returns to 0025, the

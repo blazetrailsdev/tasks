@@ -51,12 +51,7 @@ test("caps at 20 entries", () => {
 
 test("orders stably across runs", () => {
   const body = "scripts/z.ts packages/a/src/b.ts scripts/a.mjs packages/a/src/a.tsx\n";
-  const expected = [
-    "packages/a/src/a.tsx",
-    "packages/a/src/b.ts",
-    "scripts/a.mjs",
-    "scripts/z.ts",
-  ];
+  const expected = ["packages/a/src/a.tsx", "packages/a/src/b.ts", "scripts/a.mjs", "scripts/z.ts"];
   assertEqual(extractStoryPaths(body), expected, "sorted");
   assertEqual(extractStoryPaths(body), extractStoryPaths(body), "stable");
 });
