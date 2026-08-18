@@ -1,6 +1,6 @@
 ---
 title: "Credit or rename the Q-suffixed predicate spellings (conventions.ts has no Q rule)"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6728
 claim: "2026-08-18T21:16:54Z"
 assignee: "wave-4c-ar-core-residue-attributes-remainder"
 blocked-by: null
