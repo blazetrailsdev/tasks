@@ -72,6 +72,13 @@ JavaScript and cannot import `cli.ts`; `loadAll()` already returns each story's
 deduped, and capped, because the origin/main read path caches a built index by
 commit sha (`scripts/cli.ts:259-266`) and depends on byte-identical rebuilds.
 
+Cost, measured over all 6,202 stories rather than estimated: **+527 KiB on
+`index.json`, +11.7%** (4.5 MiB → 5.0 MiB). Path counts are median 1, p90 3,
+p99 6, max 31, so the 20-entry cap touches **4 stories (0.06%)** — it bounds a
+pathological body without truncating anything real. Both `index.json` and
+`search.json` are gitignored caches, so this is memory and cache-write cost,
+never repo size.
+
 What lands in `index.json`, per story — derived, sorted, deduped, capped at 20:
 
 ```json

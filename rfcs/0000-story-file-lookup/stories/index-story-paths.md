@@ -36,8 +36,10 @@ Two registrations are load-bearing and silently no-op if missed:
   commit sha as `<sha>.<version>.json` (`scripts/cli.ts:261`). Every existing
   entry predates `story_paths`, so without the bump the new field reads as
   absent for any already-cached sha and the feature looks broken.
-- **`vitest.config.ts` includes only `scripts/**/\*.test.ts`**, so a new `.mjs`test file is not collected.`scripts/validate-lib.test.mjs`is the precedent:
-it runs because`package.json`'s `test` script invokes it directly.
+- **A new `.mjs` test file must be registered in `package.json`.** The vitest
+  config collects only `scripts/**/*.test.ts`, so an `.mjs` test is never picked
+  up. `scripts/validate-lib.test.mjs` is the precedent: it runs because
+  `package.json`'s `test` script invokes it directly.
 
 ## Acceptance criteria
 
@@ -46,7 +48,9 @@ it runs because`package.json`'s `test` script invokes it directly.
       `vendor/` (those are Rails anchors, not trails work surface).
 - [ ] Output is deduped, sorted, and capped at 20 entries — `index.json` must
       rebuild byte-identically for a given tree, because the read path caches it
-      by commit sha.
+      by commit sha. Measured over all 6,202 stories: median 1 path, p90 3,
+      p99 6, max 31, and only **4 stories (0.06%) exceed 20** — the cap bounds a
+      pathological body without truncating real data.
 - [ ] `scripts/build-index.mjs` emits `story_paths` on each story record
       (`:70-95`) and appends the paths to the `search.json` story `terms`
       (`:117-119`).
@@ -83,3 +87,9 @@ Cases worth covering in `lib.test.mjs`: a backticked path inside a `## Context`
 bullet; a path with a trailing `:line` citation; a `vendor/rails/...` path
 (excluded); the same path cited twice (deduped); a body with no paths (`[]`); a
 body with more than 20 (capped); stable ordering across runs.
+
+**Citations are line-accurate as of tasks `def67d896`.** Anchor on the symbol
+names — `loadAll()`, `READ_INDEX_CACHE_VERSION`, `StoryEntry`, the `story()`
+fixture — rather than the line numbers. This RFC's own first draft was authored
+against a tree 319 commits behind main and every number in it had drifted; the
+same will happen here before the story is claimed.

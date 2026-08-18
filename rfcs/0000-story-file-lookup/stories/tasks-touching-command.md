@@ -88,3 +88,9 @@ pnpm test
 is not mistaken for the trails repo — that is the bug most likely to be
 reintroduced, and it fails silently (churn simply reads as zero) rather than
 loudly.
+
+**Citations are line-accurate as of tasks `def67d896`.** Anchor on the symbol
+names — `listFiltered()`, `formatRows()`, `valueFlags`, `usage()`, `case
+"list"`, `resolveTasksDir()` — rather than the line numbers. This RFC's own
+first draft was authored against a tree 319 commits behind main and every number
+in it had drifted; the same will happen here before the story is claimed.
