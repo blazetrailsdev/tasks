@@ -1,7 +1,7 @@
 ---
 title: "activemodel-date-cast-value-string-coercion"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: neither type/date.ts nor type/date-time.ts builds a String(value).trim() local any more. date.ts:61 is date.rb:38-46's branch shape (String -> empty check -> fastStringToDate ?? fallbackStringToDate; PlainDate/PlainDateTime/Date conversions; else passthrough) and date-time.ts:56 is the same for date_time.rb, both passing value through unmodified. No .trim() remains in either file."
 ---
 
 ## Context
