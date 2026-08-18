@@ -1,14 +1,13 @@
 ---
 title: "Wave 4d: the associations residue"
 status: ready
-updated: 2026-08-17
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: 9
 pr: null
 claim: null
 assignee: null
