@@ -1,6 +1,6 @@
 ---
 title: "Converge Request::Session's own body onto request/session.rb"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
