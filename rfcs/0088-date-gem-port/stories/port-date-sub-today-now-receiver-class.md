@@ -1,6 +1,6 @@
 ---
 title: "port-date-sub-today-now-receiver-class"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T19:47:46Z"
+assignee: "port-date-sub-today-now-receiver-class"
 blocked-by: null
 closed-reason: null
 ---
