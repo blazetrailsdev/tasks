@@ -1,7 +1,7 @@
 ---
 title: "createStringJoin wraps its argument where Rails passes it through"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
