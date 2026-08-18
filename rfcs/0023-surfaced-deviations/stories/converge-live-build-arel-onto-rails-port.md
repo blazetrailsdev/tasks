@@ -1,7 +1,7 @@
 ---
 title: "One build_arel on the live path: _buildArel vs the unreachable query-methods port"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: Relation#_buildArel is gone; relation.ts:1435, :1508 and :1781 all call the query-methods.ts buildArel port (query-methods.ts:3172) directly, so there is one build_arel on the live path."
 ---
 
 ## Context
