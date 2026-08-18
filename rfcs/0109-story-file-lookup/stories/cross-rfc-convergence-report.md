@@ -1,6 +1,6 @@
 ---
 title: "Report cross-RFC file convergence"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0109-story-file-lookup"
 cluster: file-lookup
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 40
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T16:04:41Z"
+assignee: "cross-rfc-convergence-report"
 blocked-by: null
 ---
 
