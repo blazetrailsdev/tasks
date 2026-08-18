@@ -1,7 +1,7 @@
 ---
 title: "MySQL/PostgreSQL TypeMetadata bypass the Deduplicable registry"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into column-bypasses-deduplicable-registry — one mechanism (deduplicable.rb:13-18 registry[self] ||= deduplicated); Column needs the deduplicateKey the TypeMetadata overrides ride on, so they converge together"
 ---
 
 ## Context
