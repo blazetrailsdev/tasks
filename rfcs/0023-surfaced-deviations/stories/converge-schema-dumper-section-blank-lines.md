@@ -1,7 +1,7 @@
 ---
 title: "Emit Rails' inter-table and pre-foreign-key blank lines instead of table()'s trailing push"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-schema-dumper-tables-single-body — both rewrite SchemaDumper#tables/table() onto Rails' single body at schema_dumper.rb:134-155, where the explicit inter-section blank lines live"
 ---
 
 ## Context
