@@ -1,6 +1,6 @@
 ---
 title: "Give ActiveRecord its own instance_method_already_implemented? instead of inlining an arm in ActiveModel"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "retire-relation-is-named-join-value-discriminator"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null

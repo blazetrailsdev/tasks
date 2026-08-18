@@ -1,6 +1,6 @@
 ---
 title: "WhereChain#associated/#missing key the where hash with a bare string, erasing Rails' Symbol-vs-String discriminator"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
