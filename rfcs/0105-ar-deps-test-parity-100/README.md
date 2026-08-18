@@ -3,7 +3,7 @@ rfc: "0105-ar-deps-test-parity-100"
 title: "ActiveRecord + dependencies to 100% on the test-compare gate"
 status: active
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-08-18
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -26,7 +26,7 @@ related-rfcs:
   - "0088-date-gem-port"
   - "0025-fidelity-verification-tooling"
   - "0023-surfaced-deviations"
-priority: 2
+priority: 10
 ---
 
 # ActiveRecord + dependencies to 100% on the test-compare gate
