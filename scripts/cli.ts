@@ -3669,10 +3669,22 @@ function main(): void {
     case "touching": {
       const query = pos[0];
       if (flags.conflicts === true) {
+        // A stray path alongside --conflicts is a usage error, not something to
+        // ignore: the report is backlog-wide, so silently dropping the argument
+        // would answer a question the caller did not ask.
+        if (query) usage();
         const idx = readIndexSource().index;
+        const excludeRfc = stringFlag(flags, "exclude-rfc");
+        // A typo'd slug excludes nothing, and the unfiltered report looks like a
+        // valid answer — the same fabricated-verdict trap resolveTrailsRepo
+        // guards against. Refuse instead.
+        if (excludeRfc !== undefined && !idx.rfcs.some((r) => r.id === excludeRfc)) {
+          console.error(`error: RFC "${excludeRfc}" not found in index`);
+          process.exit(1);
+        }
         const rows = crossRfcConvergences(idx, {
           all: flags.all === true,
-          excludeRfc: stringFlag(flags, "exclude-rfc"),
+          excludeRfc,
         });
         if (flags.json) console.log(JSON.stringify(rows, null, 2));
         else console.log(formatConvergences(rows));
