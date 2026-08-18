@@ -1,6 +1,6 @@
 ---
 title: "did-you-mean assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6692
 claim: "2026-08-18T12:28:47Z"
 assignee: "assertions-activesupport-hash-and-ordered-options"
 blocked-by: null
