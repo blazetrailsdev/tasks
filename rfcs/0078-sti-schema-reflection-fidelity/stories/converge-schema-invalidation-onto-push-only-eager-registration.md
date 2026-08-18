@@ -1,6 +1,6 @@
 ---
 title: "Converge schema invalidation onto Rails' push-only DescendantsTracker model (eager subclass registration, delete the per-read pull fallback)"
-status: claimed
+status: blocked
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-18T18:14:58Z"
 assignee: "port-test-date-strftime-different-format"
-blocked-by: null
+blocked-by: "The eager-registration hook the story asks for does not exist in the JS object model, so the pull apparatus cannot be deleted. `class X extends Y {}` performs exactly two observable operations: it reads `Y.prototype` (ClassDefinitionEvaluation step 6) and it sets X's [[Prototype]] to Y. Neither is a hook on Y that receives X: [[SetPrototypeOf]] fires on X, which does not exist yet as a value the base can see, and a `get` trap for `prototype` on a proxied Base fires BEFORE the class object is created, so it has no X to pass to registerSubclass (packages/activerecord/src/inheritance.ts:398). The only receiver-bearing hook is a `get` trap firing on the first inherited STATIC read (receiver === X) — which is still a pull, fires later than Ruby's `inherited`, and would mean proxying Base, an invention with no Rails counterpart and a cost on every static access. The remaining candidates are the ones #6705 already rejected: a decorator or an explicit registerSubclass call, both of which the acceptance criteria forbid. So schemaStaleAgainstAncestors / _staleCheck / _schemaRevision (model-schema.ts:47-102) cannot be deleted without leaving reloadSchemaFromCache's recursive push (model-schema.ts:920-922) partial, and blazetrails/schema-memo-read-through-guard stays load-bearing. Needs an RFC 0078 owner decision on which second-best shape to take (proxied-Base get trap, a codegen/lint-enforced registration call at every `extends`, or ratifying the pull fallback as a TS language shortcoming)."
 closed-reason: null
 ---
 
