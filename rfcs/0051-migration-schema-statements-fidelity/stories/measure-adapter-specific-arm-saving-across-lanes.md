@@ -94,3 +94,46 @@ gate that only re-reads its own input.
       state the boot decided on — see the reverted `3be2d49c7` above.
 - [ ] `move-adapter-specific-snapshot-off-ar-internal-metadata`'s AC4, shipped
       as `[~]`, is closed out by the result.
+
+## Measurement (2026-08-18)
+
+Method, per the "Converged shape" sketch — from **outside** a single boot, not
+from a bit the boot computed for itself. `test-setup-dy.ts`'s fast-path arm was
+temporarily wrapped in a `performance.now()` pair around
+`if (!intact) await loadAdapterSpecificSchema(conn)` and the elapsed ms logged
+per boot; the same 24 `packages/activerecord/src/*.test.ts` files were then run
+twice per lane, once normally and once with the memo forced off by a one-line
+`return null` at the top of `adapterSpecificTables`
+(`support/canonical-schema-stamp.ts:103`). Both edits were reverted; nothing was
+shipped. 24 files produced 24 fast-path boots on every lane that has one, so the
+per-boot mean scales by the boot count of a full run (~782 AR files).
+
+| lane          | memo on                                                          | memo off | saving per boot | extrapolated per run |
+| ------------- | ---------------------------------------------------------------- | -------- | --------------- | -------------------- |
+| sqlite (file) | 0.0 ms                                                           | 20.5 ms  | 20.5 ms         | ~16 s                |
+| `sqlite3_mem` | no boot takes the fast path at all                               | —        | n/a             | n/a                  |
+| PostgreSQL 17 | 0.0 ms                                                           | 174.7 ms | 174.7 ms        | ~2.3 min             |
+| MariaDB       | not measured — no MariaDB/MySQL server is available on this host |          |                 |                      |
+
+### What this says about the #6121 claim
+
+- **"sqlite ~0 ms for the arm" is wrong, mildly.** The arm is ~20 ms per boot on
+  the sqlite file lane, not ~0 — the memo saves ~16 s across a full run there.
+  The claim reads as if there were nothing to save on sqlite; there is, it is
+  just small next to the server lanes.
+- **"~2.5 min per run" holds in order of magnitude, measured on PG rather than
+  MariaDB:** 174.7 ms per boot, ~2.3 min extrapolated over a full run. The memo
+  is doing what #6121 said it does on a server lane.
+- **`sqlite3_mem` has no fast path to save on.** Each worker's `:memory:`
+  database is fresh, so `canonicalSchemaUpToDate` is false on every boot and the
+  full-load arm runs unconditionally. The memo is structurally inapplicable
+  there — neither a saving nor a regression. This was not previously recorded
+  and is the one genuinely new finding.
+
+Nothing is shipped: no observability was added, so AC3 (do not re-derive the
+assertion from the state the boot decided on) is satisfied vacuously, and the
+reverted `3be2d49c7` shape was not re-attempted.
+
+`move-adapter-specific-snapshot-off-ar-internal-metadata`'s AC4 is closed by the
+three lanes above; the MariaDB lane is carried by
+[[measure-adapter-specific-arm-saving-on-mariadb]].
