@@ -1,6 +1,6 @@
 ---
 title: "Measure the #6121 adapter-specific-arm saving on all four lanes (AC4 of the snapshot story, shipped unverified)"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6705
 claim: "2026-08-18T15:10:51Z"
 assignee: "port-test-date-parse-formats-iso8601-tests"
 blocked-by: null
