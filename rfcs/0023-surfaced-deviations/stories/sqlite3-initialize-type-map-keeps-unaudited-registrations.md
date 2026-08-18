@@ -1,7 +1,7 @@
 ---
 title: "SQLite initializeTypeMap keeps unaudited registrations after super"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into sqlite3-native-type-map-converges-onto-type-map (same method / same subsystem; all Rails file:line citations carried into the surviving body)"
 ---
 
 ## Context
