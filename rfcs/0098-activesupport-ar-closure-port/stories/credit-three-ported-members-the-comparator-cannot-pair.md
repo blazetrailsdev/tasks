@@ -1,6 +1,6 @@
 ---
 title: "Credit three ported in-closure members the comparator cannot pair"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T21:06:56Z"
+assignee: "converge-references-eager-loaded-tables-symbol-to-s"
 blocked-by: null
 closed-reason: null
 ---
