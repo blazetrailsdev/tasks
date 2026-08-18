@@ -1,6 +1,6 @@
 ---
 title: "suppressed-call-lets-sibling-claim-ts-candidate"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6729
 claim: "2026-08-18T22:11:19Z"
 assignee: "suppressed-call-lets-sibling-claim-ts-candidate"
 blocked-by: null
