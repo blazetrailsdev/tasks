@@ -1,6 +1,6 @@
 ---
 title: "Derive story_paths into the index"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0109-story-file-lookup"
 cluster: file-lookup
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: null
+pr: 68
 claim: "2026-08-18T14:36:27Z"
 assignee: "index-story-paths"
 blocked-by: null
