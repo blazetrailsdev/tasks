@@ -1,7 +1,7 @@
 ---
 title: "Measure the #6121 adapter-specific-arm saving on all four lanes (AC4 of the snapshot story, shipped unverified)"
-status: ready
-updated: 2026-08-10
+status: claimed
+updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T15:10:51Z"
+assignee: "port-test-date-parse-formats-iso8601-tests"
 blocked-by: null
 closed-reason: null
 ---
