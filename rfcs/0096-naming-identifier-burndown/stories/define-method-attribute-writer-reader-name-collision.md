@@ -1,6 +1,6 @@
 ---
 title: "define_method_attribute= and define_method_attribute collide on one TS name"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
