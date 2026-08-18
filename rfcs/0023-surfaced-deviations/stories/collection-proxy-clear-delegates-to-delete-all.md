@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#clear should be delete_all + self"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into collection-proxy-delete-destroy-delegate-to-association — same mechanism (proxy method delegates to @association, collection_proxy.rb:620-622, 692-694, 1066-1069), adjacent methods, one read of the file"
 ---
 
 ## Context
