@@ -1,7 +1,7 @@
 ---
 title: "Drop the ensureSchemaLoaded / deferred-distinct-PK preludes from ids' and pluck's read arms"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into hoist-schema-load-and-deferred-pk-materialization-out-of-ported-bodies (identical converged shape: hoist ensureSchemaLoaded + _materializeDeferredDistinctPkPredicates out of ids/pluck)"
 ---
 
 ## Context
