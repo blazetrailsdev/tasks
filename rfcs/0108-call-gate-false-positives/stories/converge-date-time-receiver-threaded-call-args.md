@@ -1,6 +1,6 @@
 ---
 title: "converge-date-time-receiver-threaded-call-args"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6681
 claim: "2026-08-18T00:47:59Z"
 assignee: "converge-date-time-receiver-threaded-call-args"
 blocked-by: null
