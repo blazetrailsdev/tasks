@@ -1,7 +1,7 @@
 ---
 title: "naming-burndown-3-ar-structural-residue"
-status: claimed
-updated: 2026-08-13
+status: ready
+updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-13T15:45:44Z"
-assignee: "naming-burndown-3-ar-structural-residue"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
