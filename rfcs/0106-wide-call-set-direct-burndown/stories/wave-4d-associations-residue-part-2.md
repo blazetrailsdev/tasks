@@ -20,73 +20,103 @@ closed-reason: null
 
 ## Context
 
-Follow-up to `wave-4d-associations-residue`, which shipped the first slice
-(PR to be linked). That story measured **94 `kind: "set"` rows across 20
-association shards**; the first slice converged three of them and left the rest
-untouched rather than exceeding the LOC ceiling (the story's own last
-acceptance criterion: "ship the first slice and file the rest").
+Follow-up to `wave-4d-associations-residue`, whose first slice merged as
+**PR #6727**. That story measured **94 `kind: "set"` rows across 20 association
+shards**; #6727 converged **14** and left 80, per the parent's own last
+acceptance criterion ("ship the first slice and file the rest").
 
-### What the first slice converged
+NOTE: an earlier revision of this story described a different, three-row slice
+(PR #6725, opened concurrently against the same story id and still open at the
+time of writing). Two of that PR's three rows — `association.ts`'s `scope` and
+`target_scope` `merge!` — are the same rows #6727 merged, so #6725 needs a
+rebase and a recomputed baseline delta before it can land. The counts below are
+measured against `origin/main` AFTER #6727.
 
-- `associations/association.ts` `scope` / `target_scope` — `merge!`.
-  `targetScope()` now ends `arFactory(klass, this).mergeBang(sfa)`, mirroring
-  `AssociationRelation.create(klass, self).merge!(klass.scope_for_association)`
-  (`activerecord/lib/active_record/associations/association.rb:313`). Both
-  `merge!` rows retired.
-- `associations/has-one-association.ts` `delete` — `update_columns`. The
-  `:nullify` arm is now
-  `target.updateColumns(nullifiedOwnerAttributes(this))`, mirroring
-  `target.update_columns(nullified_owner_attributes) if target.persisted?`
-  (`has_one_association.rb:52`), instead of an in-memory nullify + `save()`.
-- `associations/belongs-to-association.ts` `update_counters_via_scope` —
-  `where!`. Now `klass.unscoped().whereBang(conditions)`, mirroring
-  `klass.unscoped.where!(primary_key(klass) => foreign_key)`
-  (`belongs_to_association.rb:120`).
+### What #6727 converged
 
-### What is left, and what was learned
+- `associations.ts` — `belongs_to` / `has_one` / `has_many` call
+  `Reflection.addReflection` themselves; `Builder::Association.createReflection`
+  no longer does (`associations.rb:1304`, `builder/association.rb:39-50`).
+- `associations/association.ts` — `scope` and `target_scope` use `mergeBang`
+  in Rails' branch order (`association.rb:107-117`, `:312-314`).
+- `associations/belongs-to-polymorphic-association.ts` — the three dirty-check
+  overrides call `owner.attributeChanged` / `attributePreviouslyChanged` /
+  `savedChangeToAttribute` directly (`belongs_to_polymorphic_association.rb`
+  :12-23); the `ownerXxx` wrappers in `belongs-to-association.ts` are deleted.
+- `associations/builder/has-and-belongs-to-many.ts` — `middleReflection` calls
+  `HasMany.createReflection` plus a `middleOptions` private, `throughModel`
+  calls a `belongsToOptions` private using activesupport's `foreignKey()`
+  (`has_and_belongs_to_many.rb:59-67`, `:70-77`, `:89-102`).
+- `associations/has-many-association.ts` — the `setOwnerAttributes` override
+  that only re-guarded `options[:through]` is deleted (the shared collection
+  body carries the guard, `foreign_association.rb:22-23`).
+- `associations/has-one-association.ts` — `setOwnerAttributes` writes the
+  polymorphic type column off `reflection.type` (`foreign_association.rb:35`),
+  and gained the missing `return if options[:through]` guard, which was a real
+  bug: `Member has_one :club, through: :current_membership` raised
+  ``can't write unknown attribute `club_id` ``.
 
-Measured with `API_COMPARE_FORCE=1 pnpm parity:api --calls` on the slice branch:
+### Two traps an earlier revision recorded that are now RESOLVED
 
-    associations/has-one-association.ts   delete                      primary_key, id, klass, fetch, enqueue_destroy_association
-    associations/has-one-association.ts   nullify_owner_attributes    foreign_key, primary_key
-    associations/has-one-association.ts   set_owner_attributes        type
-    associations/belongs-to-association.ts handle_dependency          foreign_key, map, klass, id, fetch, enqueue_destroy_association
-    associations/belongs-to-association.ts update_counters            require_counter_update?, update_counters_via_scope
-    associations/association.ts            scope / target_scope       create
-    associations/association.ts            skip_statement_cache?      any?
-    associations/has-many-through-association.ts  delete_records / distribution / find_target / target_scope / stale_state / build_record
-    associations/has-one-through-association.ts   replace / target_scope / stale_state / foreign_key_present?
-    + the remaining 13 shards listed in the parent story
+1. `set_owner_attributes` / `type` is NOT blocked on `AssociationDefinition#type`
+   being the macro. Resolve the rich reflection first —
+   `ctor._reflectOnAssociation?.(this.reflection.name)?.type` — which is what
+   #6727 shipped. Do not re-litigate it.
+2. `Association#scope`'s `merge!` is NOT blocked on the AssociationRelation
+   class lacking named scopes. The cause was that `wrapWithScopeProxy` was only
+   applied by `spawn()`, so a non-spawning `merge!` handed back an unwrapped
+   relation and red `AssociationsExtensionsTest > extension with scopes`. #6727
+   moved the wrap into the `setAssociationRelationFactory` callback, which is
+   where Rails' `AssociationRelation.create` produces a relation that answers
+   named scopes via `method_missing`. Both `merge!` rows are retired.
 
-Three traps found while measuring, worth carrying forward:
+One trap that still stands: **never trust a `parity:api --calls` reading over a
+stale `dist`.** Run `pnpm build` before every
+`API_COMPARE_FORCE=1 pnpm parity:api --calls`.
 
-1. **`AssociationDefinition#type` is the MACRO, not the polymorphic column.**
-   The `set_owner_attributes` / `type` row looks like a one-line fix
-   (`record._write_attribute(reflection.type, ...)`,
-   `foreign_association.rb:36`) but `this.reflection` inside an `Association`
-   is the lightweight `AssociationDefinition`, whose `type` field is
-   `"hasOne"` / `"belongsTo"` (`associations.ts:162`, and see the `macro`
-   JSDoc at :178-186). Only the _rich_ reflection spells `type` as Rails does.
-   Converging this needs the rich reflection resolved first.
+### What is left — 80 rows
 
-2. **`Association#scope`'s `merge!` cannot converge until the
-   AssociationRelation class carries named scopes.** Replacing
-   `target.merge(associationScope)` with `mergeBang` (which is what
-   `association.rb:113-115` does) reds
-   `AssociationsExtensionsTest > extension with scopes` —
-   `this.scope()[name] is not a function` at
-   `collection-proxy.ts:2211`. The relation `associationRelationClassFor(klass)`
-   builds does not carry the model's named scopes; the old `merge` masked that
-   because `merge` is `spawn().mergeBang()` and the `spawn()` upgraded the
-   class. The measured consequence is that a `scope()` mergeBang is blocked on
-   fixing that wiring, which is a separate (real) bug.
+    associations/has-many-through-association.json    10
+    associations/belongs-to-association.json           9
+    associations/has-one-through-association.json      8
+    associations/has-one-association.json              8
+    associations/association.json                      5
+    associations.json                                  5
+    associations/has-many-association.json             5
+    associations/join-dependency.json                  4
+    associations/preloader/through-association.json    3
+    associations/preloader/association.json            3
+    associations/collection-association.json           3
+    associations/builder/has-and-belongs-to-many.json  2
+    associations/disable-joins-association-scope.json  2
+    associations/builder/belongs-to.json               2
+    associations/association-scope.json                2
+    associations/alias-tracker.json                    2
+    associations/singular-association.json             1
+    associations/preloader/batch.json                  1
+    associations/join-dependency/join-association.json 1
 
-3. **Never trust a `parity:api --calls` reading over a stale `dist`.** The
-   extractor throws on a stale build only when it notices; with
-   `API_COMPARE_FORCE=1` and an unbuilt edit, a `scope` ordering row
-   (`order:mergeBang,globalCurrentScope`) appeared and persisted across two
-   edits that should have changed it, and vanished after `pnpm build`. Run
-   `pnpm build` before every measurement.
+Leads for whoever picks this up:
+
+- The `handle_dependency` / `delete` `destroy_async` rows across belongs-to,
+  has-many and has-one (`enqueue_destroy_association`, `fetch`, `id`, `klass`,
+  `map`, `first`, `primary_key`, `update_columns`) are one cluster — the
+  `:destroy_async` arm is not ported in those three bodies. Converge together
+  against `belongs_to_association.rb:20-49`, `has_many_association.rb:20-56`
+  and `has_one_association.rb:26-55`.
+- `has-one-association.ts`'s `nullify_owner_attributes` rows retire with
+  `0023-surfaced-deviations/has-one-nullify-owner-attributes-diverges-from-rails`,
+  which already owns the behavioural half (Rails' missing
+  `unless foreign_key_column.in?(Array(record.class.primary_key))` guard, plus
+  our extra type-column nullify). Coordinate rather than duplicating it.
+- `associations.json`'s `has_and_belongs_to_many -> add_reflection` retires with
+  `0023-surfaced-deviations/converge-habtm-builder-to-rails-macro-sequence`:
+  `HabtmBuilder._build` registers both reflections itself and returns nothing,
+  so the macro has none to pass on.
+- `alias-tracker.json`'s two rows are the lazy `_getCount` restructuring
+  (`create` no longer calls `initial_count_for`) and Ruby `Array#size` vs JS
+  `.length`; the second may be noise and wants a per-site reason, not a
+  conversion.
 
 ## Acceptance criteria
 
