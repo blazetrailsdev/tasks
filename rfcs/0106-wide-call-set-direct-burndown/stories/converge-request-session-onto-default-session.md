@@ -1,6 +1,6 @@
 ---
 title: "Converge Request#session onto Rack's fetch_header … default_session"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T13:16:49Z"
+assignee: "converge-request-session-onto-default-session"
 blocked-by: null
 closed-reason: null
 ---
