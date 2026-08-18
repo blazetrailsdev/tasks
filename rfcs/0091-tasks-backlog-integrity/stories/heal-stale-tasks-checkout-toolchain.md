@@ -1,7 +1,7 @@
 ---
 title: "bin/tasks: recover checkouts whose node_modules predates a toolchain bump"
-status: in-progress
-updated: 2026-08-17
+status: done
+updated: 2026-08-18
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []
