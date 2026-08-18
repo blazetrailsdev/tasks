@@ -1,6 +1,6 @@
 ---
 title: "sweep-remaining-includes-preload-call-sites-onto-the-colon-symbol-spelling"
-status: ready
+status: closed
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: superseded by the pre-existing converge-includes-preload-colon-sweep-* cluster family (associations-eager-test, associations-remainder, src-top-level, relation-and-preloader), which was filed first and already covers the same call-site inventory."
 ---
 
 ## Context
