@@ -1,6 +1,6 @@
 ---
 title: "widen-limit-offset-value-read-declarations"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
