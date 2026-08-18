@@ -50,3 +50,108 @@ neither of which the trails reader-side check models.
       non-reader path and asserts it raises; verified failing on the baseline.
 - [ ] `strict-loading-sync-reader.test.ts` still passes (the reader-side
       behavior is preserved, not relocated out from under it).
+
+## Absorbed: `collection-strict-loading-gate-cannot-see-skip-flag`
+
+Merged in during the RFC 0023 triage pass (2026-08-18). Original title: "Collection strict-loading gate lives in a loader that cannot see @skip_strict_loading"
+
+### Context
+
+Rails puts the strict-loading gate on the association instance:
+`Association#find_target` calls `violates_strict_loading?`
+(`vendor/rails/activerecord/lib/active_record/associations/association.rb:248-251`,
+guard at `:284-291`), which reads the instance's `@skip_strict_loading`.
+`Association#skip_strict_loading` (`association.rb:276-282`) raises that flag
+for the duration of a block.
+
+trails has BOTH: an instance-level `isViolatesStrictLoading()` on
+`Association` (`packages/activerecord/src/associations/association.ts`, which
+does honor `_skipStrictLoading`) and a second, independent check inside the
+_functional_ has_many loader
+(`packages/activerecord/src/associations/has-many-association.ts:~550`,
+`_violatesStrictLoading(record, options) && _findTargetReachable(...)`). The
+functional loader takes the trails-only `(owner, assocName, options)` triple
+rather than an association instance, so it cannot see `_skipStrictLoading` — and
+the instance-level check is not the one that fires on the collection load path.
+
+PR #5767 hit this porting `concat`'s `skip_strict_loading { load_target }`:
+wrapping the call and widening `skipStrictLoading` to `protected` was NOT
+enough, because the raise came from the functional loader. The fix threaded the
+flag through as a 5th positional parameter
+(`has-many-association.ts:169-174` → `:517` → `:550`). That parameter is pure
+trails surface with no Rails counterpart, and it only covers the one caller that
+remembered to pass it — every other functional-loader entry point still bypasses
+`@skip_strict_loading` silently.
+
+Related but distinct from
+[[strict-loading-check-in-reader-not-find-target]], which covers the _singular_
+side (check in the reader instead of `find_target`). This one is the collection
+side: the check exists in a loader that structurally cannot see the association
+instance's flag.
+
+### Acceptance criteria
+
+- [ ] The collection strict-loading gate consults the association instance's
+      `_skipStrictLoading` without a threaded parameter — either by moving the
+      check onto `HasManyAssociation#findTarget` (the Rails-shaped entry point)
+      or by giving the functional loader access to the holder.
+- [ ] The trails-only `skipStrictLoading` parameter on the functional
+      `findTarget` (`has-many-association.ts:517`) is deleted, not merely
+      defaulted.
+- [ ] `strict-loading.test.ts` still passes in full, including
+      `strict loading with new record on concat is ignored` (the #5767
+      regression) — verified failing on a baseline that drops the param.
+- [ ] Any other functional-loader entry point that should honor
+      `skip_strict_loading` is covered by the same mechanism rather than
+      case-by-case.
+
+## Absorbed: `audit-collection-proxy-strict-loading-call-sites`
+
+Merged in during the RFC 0023 triage pass (2026-08-18). Original title: "Audit CollectionProxy.\_checkStrictLoading call sites against Rails find_target"
+
+### Context
+
+`CollectionProxy._checkStrictLoading()` (`collection-proxy.ts:1130`) raises
+`StrictLoadingViolationError` from ~13 proxy methods (1766, 1851, 1867, 1883,
+1899, 3141, 3151, 3163, 3175, 3489, 3512, 4009 and, until PR #5910, `find`).
+
+Rails raises strict-loading violations from exactly one place on this path:
+`Association#find_target` (`activerecord/lib/active_record/associations/association.rb`),
+which checks `violates_strict_loading?` before querying. Methods that go
+through `scope.<something>` rather than `find_target` — `scope.find`,
+`scope.pluck`, `scope.pick`, and friends — do NOT raise in Rails.
+
+PR #5910 removed the `find` call site while converging `CollectionProxy#find`
+into Rails' one-line delegation to `@association.find`: Rails' `find` reaches
+`scope.find(*args)`, never `find_target`, and neither Rails' nor trails' test
+suite covered `proxy.find` under strict loading (checked `strict_loading_test.rb`
+and all of `strict-loading*.test.ts`). The remaining call sites were out of
+that PR's scope and are unexamined — each is either a genuine Rails path
+through `find_target` or the same invention `find` had.
+
+### Acceptance criteria
+
+- Each remaining `_checkStrictLoading()` call site in `collection-proxy.ts` is
+  audited against Rails: either the Rails method reaches `find_target` (keep,
+  and note which Rails frame does the raising), or it does not (remove).
+- Any site whose removal changes observable behaviour is covered by a test
+  named after the Rails test that pins it, if one exists; if Rails has no test,
+  the behaviour follows the Rails source and the trails-only assertion says so.
+- If the audit finds the checks are load-bearing for a trails-specific reason
+  (e.g. a sync reader with no Rails analogue), that reason is recorded at the
+  call site rather than left implicit.
+
+## Triage note (2026-08-18)
+
+Merged story (~300 LOC est.). The three absorbed rows are one deviation seen
+from three angles: the gate belongs on `Association#find_target`
+(`association.rb:247-273`, `violates_strict_loading?` at `:284-291`), reading
+the instance's `@skip_strict_loading` (`:276-282`).
+
+**Prerequisite, not part of this story:**
+`inline-has-many-module-private-find-target-loader` (0023, ~350 LOC) folds the
+module-private `findTarget(record, assocName, options, queryExecutor,
+violatesStrictLoading)` loader into `HasManyAssociation#findTarget`. That
+trails-only owner/name/options calling convention is _why_ the gate cannot see
+`@skip_strict_loading` today. Land it first; this story then becomes a move plus
+the deletion of `CollectionProxy._checkStrictLoading`'s ~13 call sites.
