@@ -5,7 +5,7 @@ updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["i18n"]
-deps: []
+deps: [assertion-extractor-counts-mocha-expects]
 deps-rfc: []
 est-loc: 60
 priority: null
@@ -63,6 +63,23 @@ Rails side or reseed the mark upward.
 
 If the cluster is larger than one PR, ship the files that fit and file the rest
 as a sibling story under this RFC rather than growing the PR.
+
+## Progress (2026-08-18, PR #6692)
+
+56 of the 60 divergences converged: all 6 assertion-value rows, all 32
+assertion-kind rows, and 12 of the 18 assertion-count rows. Eight of the ten
+files above are at 0/0/0. The mark is down to `i18n: {assertionCount: 6, kind:
+0, value: 0}`.
+
+The 6 that remain are all one shape, in `i18n_test.rb` (5) and
+`backend/chain_test.rb` (1): the Rails test verifies the call with mocha's
+`expects`, which is a mock expectation verified at teardown and therefore counts
+as **zero** minitest assertions, while the port spells the same check as an
+explicit `expect(spy).toHaveBeenCalledWith(...)` — one assertion. Dropping the
+trails assertion would leave those tests verifying nothing, so the fix is on the
+Rails-extractor side and is owned by `assertion-extractor-counts-mocha-expects`.
+
+This story stays open until that sibling lands and these two files reach 0.
 
 ## Acceptance criteria
 
