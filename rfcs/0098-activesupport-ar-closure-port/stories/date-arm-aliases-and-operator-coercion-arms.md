@@ -1,7 +1,7 @@
 ---
 title: "Port date-ext.ts's remaining aliases and the Date operator coercion arms"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages:
