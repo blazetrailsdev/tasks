@@ -1,6 +1,6 @@
 ---
 title: "split-load-records-out-of-exec-queries"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
