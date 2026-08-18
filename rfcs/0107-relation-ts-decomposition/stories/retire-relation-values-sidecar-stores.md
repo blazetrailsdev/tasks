@@ -5,7 +5,8 @@ updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
-deps: []
+deps:
+  - drop-relation-distinct-on-invented-surface
 deps-rfc: []
 est-loc: 250
 priority: 7
