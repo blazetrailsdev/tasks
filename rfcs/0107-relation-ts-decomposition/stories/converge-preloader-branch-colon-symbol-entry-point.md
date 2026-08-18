@@ -1,6 +1,6 @@
 ---
 title: "Strip the leading colon in Preloader::Branch, unblocking the includes/preload sweep"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
