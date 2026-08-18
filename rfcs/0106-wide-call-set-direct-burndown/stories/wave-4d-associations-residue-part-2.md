@@ -25,12 +25,55 @@ Follow-up to `wave-4d-associations-residue`, whose first slice merged as
 shards**; #6727 converged **14** and left 80, per the parent's own last
 acceptance criterion ("ship the first slice and file the rest").
 
-NOTE: an earlier revision of this story described a different, three-row slice
-(PR #6725, opened concurrently against the same story id and still open at the
-time of writing). Two of that PR's three rows — `association.ts`'s `scope` and
-`target_scope` `merge!` — are the same rows #6727 merged, so #6725 needs a
-rebase and a recomputed baseline delta before it can land. The counts below are
-measured against `origin/main` AFTER #6727.
+NOTE: PR #6725 was opened concurrently against the same story id. It has since
+been rescoped to be **disjoint** from #6727 — it reverted the overlapping
+`association.ts` / `association.json` `merge!` work entirely and now carries
+only two rows that #6727 never touched:
+
+- `associations/has-one-association.ts` `delete` — `update_columns`. The
+  `:nullify` arm is `target.updateColumns(nullifiedOwnerAttributes(this))`,
+  mirroring `target.update_columns(nullified_owner_attributes) if
+target.persisted?` (`has_one_association.rb:52`). This uses
+  `ForeignAssociation#nullified_owner_attributes` (plural,
+  `foreign_association.rb:13-18`) — NOT the private
+  `HasOneAssociation#nullifyOwnerAttributes` whose own divergence is tracked by
+  `has-one-nullify-owner-attributes-diverges-from-rails` (RFC 0113).
+- `associations/belongs-to-association.ts` `update_counters_via_scope` —
+  `where!`. Now `klass.unscoped().whereBang(conditions)`, mirroring
+  `klass.unscoped.where!(primary_key(klass) => foreign_key)`
+  (`belongs_to_association.rb:120`).
+
+**Do not plan from "94 − 14 − 2".** Re-measured on `main` at `04d77c15a` —
+after PR #6729 ("a suppressed call consumes the TS spelling it ports") changed
+extraction — the association shards carry **94 `kind: "set"` rows again**: the
+extractor change resurfaced roughly as many rows as the two PRs retired. Fresh
+per-file counts, missing calls per file:
+
+    14  associations/has-many-through-association.ts
+     9  associations/has-many-association.ts
+     8  associations.ts
+     8  associations/belongs-to-association.ts
+     8  associations/has-one-association.ts
+     8  associations/has-one-through-association.ts
+     7  associations/association.ts
+     5  associations/builder/has-and-belongs-to-many.ts
+     4  associations/join-dependency.ts
+     3  associations/belongs-to-polymorphic-association.ts
+     3  associations/collection-association.ts
+     3  associations/preloader/association.ts
+     3  associations/preloader/through-association.ts
+     2  associations/alias-tracker.ts
+     2  associations/association-scope.ts
+     2  associations/builder/belongs-to.ts
+     2  associations/disable-joins-association-scope.ts
+     1  associations/join-dependency/join-association.ts
+     1  associations/preloader/batch.ts
+     1  associations/singular-association.ts
+
+Always `pnpm build && API_COMPARE_FORCE=1 pnpm parity:api --calls` and read
+`scripts/api-compare/output/call-mismatches.json` (`mismatches[].missing`)
+before planning a slice — every count in this RFC goes stale as soon as a
+tooling PR lands.
 
 ### What #6727 converged
 
