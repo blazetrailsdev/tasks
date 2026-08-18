@@ -1,6 +1,6 @@
 ---
 title: "Credit three ported in-closure members the comparator cannot pair"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
