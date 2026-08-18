@@ -129,6 +129,7 @@ function story(over: Partial<StoryEntry>): StoryEntry {
     title: null,
     status: "ready",
     cluster: "c1",
+    story_paths: [],
     deps: [],
     deps_rfc: [],
     est_loc: 100,
@@ -3944,7 +3945,7 @@ describe("buildIndexFromOriginMain (read path serves the origin/main tree)", () 
     const cacheDir = join(gitDir, "trails-tasks-read-index");
     mkdirSync(cacheDir, { recursive: true });
     const cached = { ...emptyIndex, generated_at: "cached" };
-    writeFileSync(join(cacheDir, `${SHA}.v2.json`), JSON.stringify(cached));
+    writeFileSync(join(cacheDir, `${SHA}.v3.json`), JSON.stringify(cached));
     const got = buildIndexFromOriginMain();
     expect(got?.sha).toBe(SHA);
     expect(got?.index.generated_at).toBe("cached");
@@ -3976,7 +3977,7 @@ describe("buildIndexFromOriginMain (read path serves the origin/main tree)", () 
     expect(got?.index.generated_at).toBe("2026-01-01");
     expect(seen).toEqual(["fetch", "rev-parse", "archive", "tar", "build-index"]);
     // Cached for the next reader, and the superseded sha is pruned.
-    expect(existsSync(join(gitDir, "trails-tasks-read-index", `${SHA}.v2.json`))).toBe(true);
+    expect(existsSync(join(gitDir, "trails-tasks-read-index", `${SHA}.v3.json`))).toBe(true);
     expect(existsSync(stale)).toBe(false);
     // Another agent's half-written entry is not a superseded index — pruning it
     // would break its rename.

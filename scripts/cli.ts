@@ -158,6 +158,10 @@ export interface StoryEntry {
   raw_status?: string | null;
   cluster: string | null;
   packages?: string[];
+  // The trails files this story's body cites, derived at index-build time by
+  // extractStoryPaths (lib.mjs). Optional: absent from an index.json built
+  // before the field existed.
+  story_paths?: string[];
   deps: string[];
   deps_rfc: string[];
   est_loc: number | null;
@@ -197,7 +201,7 @@ export function loadIndex(): Index {
 
 const READ_INDEX_CACHE_DIRNAME = "trails-tasks-read-index";
 
-const READ_INDEX_CACHE_VERSION = "v2";
+const READ_INDEX_CACHE_VERSION = "v3";
 
 export interface ReadIndex {
   index: Index;
