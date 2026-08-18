@@ -1,7 +1,7 @@
 ---
 title: "activesupport Hash / HashWithIndifferentAccess / OrderedOptions assertion parity"
-status: ready
-updated: 2026-08-17
+status: claimed
+updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 320
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T12:28:47Z"
+assignee: "assertions-activesupport-hash-and-ordered-options"
 blocked-by: null
 closed-reason: null
 ---
