@@ -1,6 +1,6 @@
 ---
 title: "Converge SchemaDumper#table's emitTable split and the _run/_crc32 callees"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6698
 claim: "2026-08-18T13:36:45Z"
 assignee: "schema-dumper-emit-table-and-underscored-callee-convergence"
 blocked-by: null
