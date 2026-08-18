@@ -1,7 +1,7 @@
 ---
 title: "converge _createThrough's join-row insert onto saveThroughRecord"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: CollectionProxy._createThrough and its insertJoinRecord closure are gone repo-wide, along with the _throughRecordsCaches persisted-check. The single join-row path is now buildThroughRecord (has-many-through-association.ts:619) + saveThroughRecord (:692), reached from insertRecord at :285, as Rails does (has_many_through_association.rb:58-88)."
 ---
 
 ## Context
