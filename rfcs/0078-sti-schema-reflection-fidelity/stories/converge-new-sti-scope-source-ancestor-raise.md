@@ -1,6 +1,6 @@
 ---
 title: "Drop the scope-source STI-ancestor escape in subclassFromAttributesForNew; raise SubclassNotFound as find_sti_class does"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6720
 claim: "2026-08-18T20:31:56Z"
 assignee: "wave-4c-ar-core-residue-attributes"
 blocked-by: null
