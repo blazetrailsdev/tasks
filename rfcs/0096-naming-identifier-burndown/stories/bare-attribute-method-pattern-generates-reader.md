@@ -1,6 +1,6 @@
 ---
 title: "Let the bare attribute_method_pattern generate the reader instead of skipping it"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
