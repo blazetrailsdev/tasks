@@ -1,6 +1,6 @@
 ---
 title: "Derive story_paths into the index"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0109-story-file-lookup"
 cluster: file-lookup
