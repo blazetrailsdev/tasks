@@ -1,6 +1,6 @@
 ---
 title: "wave-4e-schema-dumper-migration-residue"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6689
 claim: "2026-08-18T12:07:58Z"
 assignee: "wave-4e-schema-dumper-migration-residue"
 blocked-by: null
