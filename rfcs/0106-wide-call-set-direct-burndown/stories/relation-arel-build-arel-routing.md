@@ -1,7 +1,7 @@
 ---
 title: "Route to_sql/delete_all/update_all/arel through build_arel and apply_join_dependency"
-status: ready
-updated: 2026-08-17
+status: closed
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by other merged work. On origin/main (a85bbef35) the trails-only _toSql/_buildArel/_compileSelectSql indirection is gone: buildArel is a real export in relation/query-methods.ts:3175 and relation.ts routes through it (toArel :1781, deleteAll :1508, updateAll :1435, with the eager arms calling applyJoinDependency). All the listed baseline rows except the two to_sql ones are gone from call-mismatches-exclude/activerecord/relation.json, which is down from 17 rows to 9; the surviving 'to_sql -> apply_join_dependency' and 'to_sql -> arel' rows carry reviewed RFC 0047 reasons ('Confirmed equivalent' / seeded baseline), not open work."
 ---
 
 # Route `to_sql`, `delete_all`, `update_all` and `arel` through `build_arel` / `apply_join_dependency`
