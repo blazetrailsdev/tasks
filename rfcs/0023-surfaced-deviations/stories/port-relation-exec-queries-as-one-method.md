@@ -1,7 +1,7 @@
 ---
 title: "Port Relation#exec_queries as a single method instead of spreading it across load paths"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation.ts:1121 now has execQueries as a single method (skipQueryCacheIfNecessary -> execMainQuery -> instantiateRecords -> preloadAssociations -> readonly/strictLoading flags, per relation.rb:1417-1418), _executeEagerLoad and _preloadAssociationsForRecords are gone, and the exec_queries -> preload_associations call-set exclude row is gone. A separate 'args' row for the extra preload-spec parameter remains as its own tracked deviation."
 ---
 
 ## Context
