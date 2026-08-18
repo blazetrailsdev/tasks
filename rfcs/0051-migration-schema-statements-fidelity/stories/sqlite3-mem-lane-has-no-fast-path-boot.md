@@ -1,6 +1,6 @@
 ---
 title: "sqlite3_mem takes the full-load boot arm every time — the canonical-schema stamp cannot apply to a per-boot :memory: database"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
