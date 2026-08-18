@@ -1,6 +1,6 @@
 ---
 title: "Converge Request::Session's own body onto request/session.rb"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6695
 claim: "2026-08-18T13:06:46Z"
 assignee: "converge-request-session-initialize-and-options-readers"
 blocked-by: null
