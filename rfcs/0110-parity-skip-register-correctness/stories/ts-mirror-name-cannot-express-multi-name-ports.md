@@ -2,7 +2,7 @@
 title: "tsMirrorName takes one string, so an accessor pair or a keyed-table port cannot be credited"
 status: draft
 updated: 2026-08-18
-rfc: "0000-parity-skip-register-correctness"
+rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activesupport", "activerecord"]
 deps: []

@@ -2,7 +2,7 @@
 title: "The ARTest config.rb skip hides four ported members behind a known bucketing bug"
 status: draft
 updated: 2026-08-18
-rfc: "0000-parity-skip-register-correctness"
+rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activerecord"]
 deps: ["api-compare-buckets-reopened-module-under-one-file"]

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-skip-register-correctness"
+rfc: "0110-parity-skip-register-correctness"
 title: "Skip registers suppress ported surface instead of crediting it"
 status: draft
 created: 2026-08-18
@@ -17,7 +17,7 @@ related-rfcs:
 priority: 2
 ---
 
-# RFC — Skip registers suppress ported surface instead of crediting it
+# RFC 0110 — Skip registers suppress ported surface instead of crediting it
 
 ## Summary
 

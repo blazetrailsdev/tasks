@@ -2,7 +2,7 @@
 title: "Scoped skip suppresses build_count_subquery, which is already extracted at the Rails name"
 status: draft
 updated: 2026-08-18
-rfc: "0000-parity-skip-register-correctness"
+rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activerecord"]
 deps: []
