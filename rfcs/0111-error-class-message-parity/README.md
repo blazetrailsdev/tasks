@@ -1,5 +1,5 @@
 ---
-rfc: "0000-error-class-message-parity"
+rfc: "0111-error-class-message-parity"
 title: "Error-class and message parity burndown"
 status: draft
 created: 2026-08-18
@@ -24,7 +24,7 @@ related-rfcs:
   - "0082-ruby-ts-idiom-conversion-classes"
 ---
 
-# RFC — Error-class and message parity burndown
+# RFC 0111 — Error-class and message parity burndown
 
 ## Summary
 
