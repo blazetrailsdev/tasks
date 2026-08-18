@@ -1,7 +1,7 @@
 ---
 title: "file-store-delete-entry-path-conversion-and-rescue"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: cache/file-store.ts:199-214 deleteEntry is file_store.rb:131-145 line for line (existsSync -> unlinkSync -> deleteEmptyDirectories(dirname) -> true; rescue: rethrow if the file still exists, else false), and keyToPath no longer exists repo-wide."
 ---
 
 ## Context
