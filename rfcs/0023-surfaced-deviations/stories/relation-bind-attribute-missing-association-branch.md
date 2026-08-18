@@ -1,7 +1,7 @@
 ---
 title: "Relation#bind_attribute is missing the _reflect_on_association branch"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation.ts bindAttribute now has the _reflectOnAssociation/foreignKey/associationPrimaryKey branch per relation.rb:102-110, and no bind_attribute/model row remains in the call-mismatch baselines."
 ---
 
 ## Context
