@@ -1,7 +1,7 @@
 ---
 title: "Converge _attributeDefinitions onto Rails' _default_attributes (drops STI overlay machinery)"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T15:00:51Z"
+assignee: "sweep-joins-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---
