@@ -1,7 +1,7 @@
 ---
 title: "flattened_args port drops hash direction values from disallow_raw_sql!"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: flattenedOrderKeysForRawSqlCheck is gone; query-methods.ts:2210 now has flattenedArgs as Rails' recursive flat_map over toA(e) (query_methods.rb:2077-2079), and preprocessOrderArgs:2534 feeds its full result — Hash keys AND direction values — to disallowRawSqlBang."
 ---
 
 ## Context
