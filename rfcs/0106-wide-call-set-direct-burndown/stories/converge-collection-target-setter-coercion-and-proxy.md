@@ -1,6 +1,6 @@
 ---
 title: "Drop target='s array coercion and proxy materialization"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6683
 claim: "2026-08-18T00:44:19Z"
 assignee: "converge-collection-target-setter-coercion-and-proxy"
 blocked-by: null
