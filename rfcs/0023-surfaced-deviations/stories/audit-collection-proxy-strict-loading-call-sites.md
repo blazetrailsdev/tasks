@@ -1,7 +1,7 @@
 ---
 title: "Audit CollectionProxy._checkStrictLoading call sites against Rails find_target"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into strict-loading-check-in-reader-not-find-target — auditing the ~13 CollectionProxy._checkStrictLoading call sites IS the deletion that follows moving the gate onto find_target"
 ---
 
 ## Context
