@@ -1,7 +1,7 @@
 ---
 title: "Converge CollectionProxy#size / #empty? onto the association"
-status: claimed
-updated: 2026-08-17
+status: in-progress
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6679
 claim: "2026-08-17T23:58:00Z"
 assignee: "converge-collection-proxy-size-onto-association"
 blocked-by: null
