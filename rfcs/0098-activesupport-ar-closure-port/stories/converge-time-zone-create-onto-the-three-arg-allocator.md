@@ -1,6 +1,6 @@
 ---
 title: "Converge TimeZone.create onto Rails' (name, utc_offset, tzinfo) allocator"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6730
 claim: "2026-08-18T23:11:21Z"
 assignee: "order-check-ignores-suppressed-call-claims"
 blocked-by: null
