@@ -17,23 +17,23 @@ blocked-by: null
 
 ## Context
 
-Story bodies already cite the trails files they concern — 1,048 of the 1,164
+Story bodies already cite the trails files they concern — 1,075 of the 1,198
 open stories (90%) name at least one `packages/…` or `scripts/…` path, resolving
-to 748 distinct files. Nothing reads them. This story extracts those paths at
+to 770 distinct files. Nothing reads them. This story extracts those paths at
 index-build time so the query in `tasks-touching-command` has something to
 consume.
 
 The extractor must live in `scripts/lib.mjs`: `scripts/build-index.mjs` is ESM
 JavaScript and cannot import `scripts/cli.ts`, and `loadAll()`
-(`scripts/lib.mjs:51`) already returns each story's `body`, so no loader change
+(`scripts/lib.mjs:50`) already returns each story's `body`, so no loader change
 is needed. `scripts/cli.ts` never needs the extractor — it reads `story_paths`
 back out of `index.json`.
 
 Two registrations are load-bearing and silently no-op if missed:
 
-- **`READ_INDEX_CACHE_VERSION` (`scripts/cli.ts:201`) must go `"v2"` → `"v3"`.**
+- **`READ_INDEX_CACHE_VERSION` (`scripts/cli.ts:200`) must go `"v2"` → `"v3"`.**
   Read commands serve an index built from the origin/main tree, cached per
-  commit sha as `<sha>.<version>.json` (`scripts/cli.ts:250`). Every existing
+  commit sha as `<sha>.<version>.json` (`scripts/cli.ts:261`). Every existing
   entry predates `story_paths`, so without the bump the new field reads as
   absent for any already-cached sha and the feature looks broken.
 - **`vitest.config.ts` includes only `scripts/**/\*.test.ts`**, so a new `.mjs`test file is not collected.`scripts/validate-lib.test.mjs`is the precedent:
@@ -48,9 +48,9 @@ it runs because`package.json`'s `test` script invokes it directly.
       rebuild byte-identically for a given tree, because the read path caches it
       by commit sha.
 - [ ] `scripts/build-index.mjs` emits `story_paths` on each story record
-      (`:69-93`) and appends the paths to the `search.json` story `terms`
-      (`:110-120`).
-- [ ] `StoryEntry` in `scripts/cli.ts` (`:145-170`) gains
+      (`:70-95`) and appends the paths to the `search.json` story `terms`
+      (`:117-119`).
+- [ ] `StoryEntry` in `scripts/cli.ts` (`:147-172`) gains
       `story_paths?: string[]` — optional, matching the `raw_status?` /
       `packages?` precedent, so an older `index.json` still parses.
 - [ ] `READ_INDEX_CACHE_VERSION` bumped to `"v3"`.

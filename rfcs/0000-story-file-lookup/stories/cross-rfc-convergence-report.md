@@ -22,10 +22,10 @@ The per-path query in `tasks-touching-command` answers "is _this_ file already
 triaged?". This story adds the standing inverse: **which files have open stories
 from more than one RFC**, i.e. where triage has already split across epics.
 
-Measured on the current backlog: **150 files carry open stories from ≥2
-distinct RFCs**, and **123 of them (82%) involve `0023-surfaced-deviations`** —
+Measured on the current backlog: **157 files carry open stories from ≥2
+distinct RFCs**, and **129 of them (82%) involve `0023-surfaced-deviations`** —
 the catch-all. Those are findings dumped into the junk drawer while a named epic
-already owned the file, and re-homing them is the payoff. The remaining 27 are
+already owned the file, and re-homing them is the payoff. The remaining 28 are
 epic-vs-epic and are the genuinely surprising ones, e.g.
 `scripts/api-compare/lint-call-mismatches.ts` (0025, 0097, 0106),
 `packages/globalid/src/signed-global-id.ts` (0025, 0069, 0097),
@@ -56,9 +56,9 @@ however convenient the 82% figure makes it look.
 ## Verification
 
 ```bash
-pnpm tasks touching --conflicts | wc -l                       # ~150 rows
+pnpm tasks touching --conflicts | wc -l                       # ~157 rows
 pnpm tasks touching --conflicts --exclude-rfc 0023-surfaced-deviations
-# ~27 epic-vs-epic rows, including lint-call-mismatches.ts and signed-global-id.ts
+# ~28 epic-vs-epic rows, including lint-call-mismatches.ts and signed-global-id.ts
 pnpm test
 ```
 
