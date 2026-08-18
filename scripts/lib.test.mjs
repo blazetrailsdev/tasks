@@ -70,6 +70,16 @@ test("matches every supported extension", () => {
   );
 });
 
+test("ignores a Ruby anchor path", () => {
+  const body = "Rails does this in activerecord/lib/active_record/relation.rb:120.\n";
+  assertEqual(extractStoryPaths(body), [], "no .rb");
+});
+
+test("picks the repo-relative tail out of a longer path", () => {
+  const body = "https://github.com/o/r/blob/main/packages/a/b.ts\n";
+  assertEqual(extractStoryPaths(body), ["packages/a/b.ts"], "tail");
+});
+
 if (failures.length > 0) {
   throw new Error(`${failures.length} lib.mjs test failure(s):\n  ${failures.join("\n  ")}`);
 }
