@@ -1,7 +1,7 @@
 ---
 title: "verify-four-scorer-triage-candidates"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "All four candidates dissolved or re-homed: has_include? is now verbatim calculations.rb:430-432; find_last is now verbatim finder_methods.rb:636-638; type_cast_calculated_value now dispatches on operation+type.deserialize and its residual shim is tracked separately; references_eager_loaded_tables? has its own story (references-eager-loaded-tables-builds-joins). The prism-codegen scorer baseline this story reported into was retired in #6168."
 ---
 
 ## Context
