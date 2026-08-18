@@ -668,8 +668,12 @@ export function resolveTrailsRepo(
   flag?: string,
   env: NodeJS.ProcessEnv = process.env,
 ): string | null {
+  // An explicit --repo/$TRAILS_DIR that isn't a checkout returns null rather
+  // than being handed to git: measuring churn in a non-repo yields zero, which
+  // renders as `cold` — the verdict that tells the caller to file a story. A
+  // typo'd flag must not manufacture that answer.
   const explicit = envDir(flag) ?? envDir(env.TRAILS_DIR);
-  if (explicit) return explicit;
+  if (explicit) return existsSync(join(explicit, ".git")) ? resolve(explicit) : null;
   let dir = resolve(cwd);
   for (;;) {
     if (existsSync(join(dir, ".git")) && existsSync(join(dir, "packages"))) return dir;
@@ -687,10 +691,12 @@ export function churnVerdict(commits90d: number): ChurnVerdict {
   return "cold";
 }
 
-// Commits in the last 90 days touching `path`. A path git knows nothing about
-// yields 0, which reads as `cold` — the same answer a genuinely untouched file
-// gets, and the honest one either way.
-export function pathChurn90d(repo: string, path: string): number {
+// Commits in the last 90 days touching `path`, or null when git could not be
+// asked at all. Null and 0 are deliberately distinct: 0 means "measured, and
+// nothing touched it" (a genuine `cold`, which tells the caller to file a
+// story), while a swallowed failure reported as 0 would fabricate that same
+// verdict from no evidence. A path git simply doesn't know is a real 0.
+export function pathChurn90d(repo: string, path: string): number | null {
   try {
     const out = execFileSync(
       "git",
@@ -699,7 +705,7 @@ export function pathChurn90d(repo: string, path: string): number {
     ).trim();
     return out === "" ? 0 : out.split("\n").length;
   } catch {
-    return 0;
+    return null;
   }
 }
 
@@ -721,7 +727,7 @@ export function formatChurnBanner(
   verdict: ChurnVerdict | null,
 ): string {
   return churn === null || verdict === null
-    ? `${query} — churn unavailable (no trails checkout found; pass --repo or set $TRAILS_DIR)`
+    ? `${query} — churn unavailable (no trails checkout resolved; pass --repo or set $TRAILS_DIR)`
     : `${query} — ${churn} commits/90d (${verdict} — ${CHURN_GLOSS[verdict]})`;
 }
 

@@ -69,6 +69,7 @@ import {
   storiesTouching,
   resolveTrailsRepo,
   churnVerdict,
+  pathChurn90d,
   formatChurnBanner,
   formatTouchingCount,
   newRfc,
@@ -652,8 +653,10 @@ describe("resolveTrailsRepo", () => {
 
   it("prefers the flag, then $TRAILS_DIR, then the enclosing checkout", () => {
     const root = mkTrails();
-    expect(resolveTrailsRepo(root, "/flag", {})).toBe("/flag");
-    expect(resolveTrailsRepo(root, undefined, { TRAILS_DIR: "/env" })).toBe("/env");
+    const flagged = mkTrails();
+    const fromEnv = mkTrails();
+    expect(resolveTrailsRepo(root, flagged, { TRAILS_DIR: fromEnv })).toBe(flagged);
+    expect(resolveTrailsRepo(root, undefined, { TRAILS_DIR: fromEnv })).toBe(fromEnv);
     expect(resolveTrailsRepo(join(root, "packages"), undefined, {})).toBe(root);
   });
 
@@ -666,6 +669,15 @@ describe("resolveTrailsRepo", () => {
     const tasksWorktree = join(outer, "tasks-worktrees", "w");
     mkdirSync(join(tasksWorktree, ".git"), { recursive: true });
     expect(resolveTrailsRepo(tasksWorktree, undefined, {})).toBe(null);
+  });
+
+  it("rejects an explicit repo that is not a checkout instead of measuring zero churn", () => {
+    // A typo'd --repo would otherwise yield 0 commits, which renders as
+    // `cold` — the verdict that tells the caller to file a story.
+    const notARepo = mkdtempSync(join(tmpdir(), "notrepo-"));
+    roots.push(notARepo);
+    expect(resolveTrailsRepo(notARepo, notARepo, {})).toBe(null);
+    expect(resolveTrailsRepo(notARepo, undefined, { TRAILS_DIR: notARepo })).toBe(null);
   });
 
   it("returns null when no enclosing checkout has both .git and packages/", () => {
@@ -683,6 +695,25 @@ describe("churnVerdict", () => {
     expect(churnVerdict(2)).toBe("moderate");
     expect(churnVerdict(1)).toBe("cold");
     expect(churnVerdict(0)).toBe("cold");
+  });
+});
+
+describe("pathChurn90d", () => {
+  it("counts the commit lines git prints", () => {
+    execFileSyncMock.mockReturnValue("abc one\ndef two\n");
+    expect(pathChurn90d("/repo", "a.ts")).toBe(2);
+  });
+
+  it("reports zero for a path git knows nothing about", () => {
+    execFileSyncMock.mockReturnValue("");
+    expect(pathChurn90d("/repo", "a.ts")).toBe(0);
+  });
+
+  it("returns null when git cannot be asked, rather than a fabricated zero", () => {
+    execFileSyncMock.mockImplementation(() => {
+      throw new Error("not a git repository");
+    });
+    expect(pathChurn90d("/repo", "a.ts")).toBe(null);
   });
 });
 
