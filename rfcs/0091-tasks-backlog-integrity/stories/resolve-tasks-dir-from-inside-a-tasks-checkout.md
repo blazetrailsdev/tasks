@@ -1,7 +1,7 @@
 ---
 title: "resolveTasksDir silently falls back to canonical when run from inside a tasks worktree"
-status: in-progress
-updated: 2026-08-17
+status: done
+updated: 2026-08-18
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []
