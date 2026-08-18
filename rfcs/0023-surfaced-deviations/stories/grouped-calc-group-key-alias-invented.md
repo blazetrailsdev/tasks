@@ -1,7 +1,7 @@
 ---
 title: "groupedAggregate group_key/val aliases are invented; converge onto ColumnAliasTracker names"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into drop-bigint-cast-val-alias-from-calculations — same deviation class in the same file: relation/calculations.ts projects invented aliases (group_key/val) where Rails projects the bare select_value (calculations.rb:484) or column_alias_for (:537)"
 ---
 
 ## Context
