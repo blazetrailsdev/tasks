@@ -1,7 +1,7 @@
 ---
 title: "batches :order message hand-rolls Symbol#inspect because ActiveSupport's Object#inspect is unreachable"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into retire-remaining-ruby-inspect-copies-onto-the-activesupport-port — this is one of the private partial Object#inspect copies that story retires onto core-ext/object/inspect.ts; retiring the copy IS the fix"
 ---
 
 ## Context
