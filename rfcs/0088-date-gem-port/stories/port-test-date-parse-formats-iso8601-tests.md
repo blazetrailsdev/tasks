@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-parse-formats-iso8601-tests"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
