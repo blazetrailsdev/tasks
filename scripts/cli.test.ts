@@ -67,6 +67,8 @@ import {
   releaseTasksLock,
   listFiltered,
   storiesTouching,
+  crossRfcConvergences,
+  formatConvergences,
   resolveTrailsRepo,
   churnVerdict,
   pathChurn90d,
@@ -635,6 +637,75 @@ describe("storiesTouching", () => {
     delete (stale as { story_paths?: string[] }).story_paths;
     const idx = index([stale, paths({ id: "new", story_paths: ["a.ts"] })]);
     expect(storiesTouching(idx, "a.ts").map((s) => s.id)).toEqual(["new"]);
+  });
+});
+
+describe("crossRfcConvergences", () => {
+  it("keeps only paths whose open stories span two or more RFCs, most stories first", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0001-r", story_paths: ["shared.ts", "solo.ts"] }),
+      story({ id: "b", rfc: "0002-r", story_paths: ["shared.ts"] }),
+      story({ id: "c", rfc: "0003-r", story_paths: ["shared.ts", "pair.ts"] }),
+      story({ id: "d", rfc: "0004-r", story_paths: ["pair.ts"] }),
+      story({ id: "e", rfc: "0001-r", story_paths: ["solo.ts"] }),
+    ]);
+    const rows = crossRfcConvergences(idx);
+    expect(rows.map((r) => r.path)).toEqual(["shared.ts", "pair.ts"]);
+    expect(rows[0].rfcs).toEqual(["0001-r", "0002-r", "0003-r"]);
+    expect(rows[0].stories.map((s) => s.id)).toEqual(["a", "b", "c"]);
+  });
+
+  it("excludes done and closed stories unless --all", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0001-r", status: "draft", story_paths: ["x.ts"] }),
+      story({ id: "b", rfc: "0002-r", status: "done", story_paths: ["x.ts"] }),
+    ]);
+    expect(crossRfcConvergences(idx)).toEqual([]);
+    expect(crossRfcConvergences(idx, { all: true }).map((r) => r.path)).toEqual(["x.ts"]);
+  });
+
+  it("applies --exclude-rfc before the two-RFC threshold", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0023-junk", story_paths: ["x.ts", "y.ts"] }),
+      story({ id: "b", rfc: "0002-r", story_paths: ["x.ts"] }),
+      story({ id: "c", rfc: "0003-r", story_paths: ["y.ts"] }),
+      story({ id: "d", rfc: "0004-r", story_paths: ["y.ts"] }),
+    ]);
+    expect(crossRfcConvergences(idx).map((r) => r.path)).toEqual(["y.ts", "x.ts"]);
+    const kept = crossRfcConvergences(idx, { excludeRfc: "0023-junk" });
+    expect(kept.map((r) => r.path)).toEqual(["y.ts"]);
+    expect(kept[0].rfcs).toEqual(["0003-r", "0004-r"]);
+  });
+
+  it("counts a path cited twice by one story once", () => {
+    const idx = index([
+      story({ id: "a", rfc: "0001-r", story_paths: ["x.ts", "x.ts"] }),
+      story({ id: "b", rfc: "0002-r", story_paths: ["x.ts"] }),
+    ]);
+    expect(crossRfcConvergences(idx)[0].stories.map((s) => s.id)).toEqual(["a", "b"]);
+  });
+
+  it("skips stories from an older index with no story_paths", () => {
+    const stale = story({ id: "old", rfc: "0009-r" });
+    delete (stale as { story_paths?: string[] }).story_paths;
+    const idx = index([stale, story({ id: "n", rfc: "0001-r", story_paths: ["x.ts"] })]);
+    expect(crossRfcConvergences(idx)).toEqual([]);
+  });
+});
+
+describe("formatConvergences", () => {
+  it("says so when nothing converges", () => {
+    expect(formatConvergences([])).toBe("no paths carry open stories from more than one RFC");
+  });
+
+  it("renders one line per path with its story count and RFCs", () => {
+    const rows = crossRfcConvergences(
+      index([
+        story({ id: "a", rfc: "0001-r", story_paths: ["x.ts"] }),
+        story({ id: "b", rfc: "0002-r", story_paths: ["x.ts"] }),
+      ]),
+    );
+    expect(formatConvergences(rows)).toBe("x.ts — 2 stories across 0001-r, 0002-r");
   });
 });
 

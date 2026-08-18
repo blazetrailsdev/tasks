@@ -659,6 +659,49 @@ export function storiesTouching(
   return tier((p) => p.includes(q));
 }
 
+// One path whose open stories span more than one RFC: triage for this file has
+// already split across epics, so whoever picks up either side is working half
+// the file. `--exclude-rfc` drops an RFC's stories *before* the >=2 threshold is
+// re-evaluated, so a path shared only by the excluded RFC and one other stops
+// being a convergence rather than lingering as a one-RFC row. No slug is
+// special-cased here: the catch-all epic is the caller's argument, not ours.
+export interface CrossRfcConvergence {
+  path: string;
+  rfcs: string[];
+  stories: StoryEntry[];
+}
+
+export function crossRfcConvergences(
+  index: Index,
+  opts: { all?: boolean; excludeRfc?: string } = {},
+): CrossRfcConvergence[] {
+  const byPath = new Map<string, StoryEntry[]>();
+  for (const s of index.stories) {
+    if (!opts.all && !(s.status !== null && OPEN_STORY_STATUSES.includes(s.status))) continue;
+    if (opts.excludeRfc && s.rfc === opts.excludeRfc) continue;
+    for (const path of new Set(s.story_paths ?? [])) {
+      const bucket = byPath.get(path);
+      if (bucket) bucket.push(s);
+      else byPath.set(path, [s]);
+    }
+  }
+  const rows: CrossRfcConvergence[] = [];
+  for (const [path, stories] of byPath) {
+    const rfcs = [...new Set(stories.map((s) => s.rfc))].sort();
+    if (rfcs.length < 2) continue;
+    rows.push({ path, rfcs, stories });
+  }
+  rows.sort((a, b) => b.stories.length - a.stories.length || a.path.localeCompare(b.path));
+  return rows;
+}
+
+export function formatConvergences(rows: CrossRfcConvergence[]): string {
+  if (rows.length === 0) return "no paths carry open stories from more than one RFC";
+  return rows
+    .map((r) => `${r.path} — ${r.stories.length} stories across ${r.rfcs.join(", ")}`)
+    .join("\n");
+}
+
 // The trails checkout to measure churn in. Deliberately NOT derived from
 // TASKS_DIR: the per-worktree `tasks` symlink resolves to a *sibling* tree
 // under tasks-worktrees/, so its parent is not the trails repo. cwd is the
@@ -3561,6 +3604,7 @@ function main(): void {
     "packages",
     "stale-hours",
     "repo",
+    "exclude-rfc",
   ];
   const rfcPriorityClear = cmd === "rfc" && flags.priority === true && flags.clear === true;
   for (const k of valueFlags) {
@@ -3624,6 +3668,28 @@ function main(): void {
     }
     case "touching": {
       const query = pos[0];
+      if (flags.conflicts === true) {
+        // A stray path alongside --conflicts is a usage error, not something to
+        // ignore: the report is backlog-wide, so silently dropping the argument
+        // would answer a question the caller did not ask.
+        if (query) usage();
+        const idx = readIndexSource().index;
+        const excludeRfc = stringFlag(flags, "exclude-rfc");
+        // A typo'd slug excludes nothing, and the unfiltered report looks like a
+        // valid answer — the same fabricated-verdict trap resolveTrailsRepo
+        // guards against. Refuse instead.
+        if (excludeRfc !== undefined && !idx.rfcs.some((r) => r.id === excludeRfc)) {
+          console.error(`error: RFC "${excludeRfc}" not found in index`);
+          process.exit(1);
+        }
+        const rows = crossRfcConvergences(idx, {
+          all: flags.all === true,
+          excludeRfc,
+        });
+        if (flags.json) console.log(JSON.stringify(rows, null, 2));
+        else console.log(formatConvergences(rows));
+        break;
+      }
       if (!query) usage();
       const idx = readIndexSource().index;
       const rows = storiesTouching(idx, query, { all: flags.all === true });
@@ -3876,6 +3942,9 @@ function usage(): never {
   touching <path> [--all] [--repo <trails checkout>] [--json]
                                                (stories citing a path, plus its 90-day churn;
                                                 --all includes done/closed)
+  touching --conflicts [--exclude-rfc <slug>] [--all] [--json]
+                                               (paths whose open stories span >=2 RFCs, most
+                                                stories first; <path> is not required)
   status
 
   claim <id...> [--assignee <name>]            (all-or-nothing across ids: one commit, one lock)
