@@ -1,7 +1,7 @@
 ---
 title: "activemodel numericality_validation_test assertion parity"
-status: in-progress
-updated: 2026-08-17
+status: done
+updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
