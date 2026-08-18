@@ -1,7 +1,7 @@
 ---
 title: "assert_queries_count omits lease_connection.materialize_transactions"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into query-assertions-keyword-arg-and-materialize-transactions — duplicate story describing the same deviation; the surviving body carries both sets of Rails and trails file:line citations"
 ---
 
 ## Context
