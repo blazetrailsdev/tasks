@@ -1,5 +1,5 @@
 ---
-title: "chain-receiver-core-call-in-nokogiri-parse"
+title: "Drop or block the chain-receiver core call in XmlMini_Nokogiri#parse"
 status: ready
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
