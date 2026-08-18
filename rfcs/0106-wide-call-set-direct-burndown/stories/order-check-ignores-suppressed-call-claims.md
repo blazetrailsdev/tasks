@@ -1,6 +1,6 @@
 ---
 title: "The call-ORDER check still lets a sibling claim a suppressed call's TS position"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6730
 claim: "2026-08-18T23:11:21Z"
 assignee: "order-check-ignores-suppressed-call-claims"
 blocked-by: null
