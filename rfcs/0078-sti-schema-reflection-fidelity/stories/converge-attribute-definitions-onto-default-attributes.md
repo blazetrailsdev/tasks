@@ -1,6 +1,6 @@
 ---
 title: "Converge _attributeDefinitions onto Rails' _default_attributes (drops STI overlay machinery)"
-status: claimed
+status: ready
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-08-18T21:11:48Z"
-assignee: "wave-4b-adapters-residue-remainder"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
