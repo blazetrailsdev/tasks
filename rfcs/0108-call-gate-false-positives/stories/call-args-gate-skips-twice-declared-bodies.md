@@ -1,7 +1,7 @@
 ---
 title: "Call-argument gate drops a twice-declared body before consulting the resolved owner"
-status: claimed
-updated: 2026-08-17
+status: in-progress
+updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6679
 claim: "2026-08-17T23:58:00Z"
 assignee: "converge-collection-proxy-size-onto-association"
 blocked-by: null
