@@ -1,7 +1,7 @@
 ---
 title: "build-with-value-from-hash-node-and-arg-order"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into build-with-expression-nested-arg-and-invented-cte-name-guard — both are divergences inside the same two ported bodies at relation/query-methods.ts:2359-2394 (build_with_value_from_hash / build_with_expression_from_value, query_methods.rb:1923-1950)"
 ---
 
 ## Context
