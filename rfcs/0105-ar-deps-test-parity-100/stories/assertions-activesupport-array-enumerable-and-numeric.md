@@ -1,7 +1,7 @@
 ---
 title: "activesupport Array / Enumerable / Range / Numeric assertion parity"
-status: in-progress
-updated: 2026-08-16
+status: done
+updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["activesupport"]
