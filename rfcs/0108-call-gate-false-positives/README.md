@@ -3,7 +3,7 @@ rfc: "0108-call-gate-false-positives"
 title: "Call-gate false positives — comparator reports a mismatch where the port is faithful"
 status: active
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -18,7 +18,7 @@ related-rfcs:
   - "0084-wide-call-set-burndown"
   - "0095-call-argument-parity"
   - "0107-relation-ts-decomposition"
-priority: 2
+priority: 1
 ---
 
 ## Summary
