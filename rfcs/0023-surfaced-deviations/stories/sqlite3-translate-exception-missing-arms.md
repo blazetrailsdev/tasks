@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 translate_exception: restore the BusyException arm, drop the invented one, delegate the else to super"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into sqlite3-translate-exception-branch-set (same method / same subsystem; all Rails file:line citations carried into the surviving body)"
 ---
 
 ## Context
