@@ -207,3 +207,27 @@ pairing with the reader rather than `setX` — re-emerged as
 `pair-ruby-writer-with-ts-set-accessor-not-its-reader`, which is in flight here.
 When merging N stories into one, give the body a per-arm checklist so `done` is
 falsifiable per arm; a merged body without one can close with an arm undelivered.
+
+## CLOSED — 2026-08-18
+
+All 21 stories are `done`. Nothing is in flight.
+
+Two stories arrived after the closing note above was written and were moved out
+rather than worked here, both for the reasons that note already gave:
+
+- `converge-reset-and-commit-csrf-token-onto-this-typed-mixin` -> `0023-surfaced-deviations`.
+  Port convergence (a body change), in **actionpack** — outside this RFC's
+  declared packages. Split out of `request-forgery-protection-this-typed-mixin`.
+- the three not-started stories -> `0025-fidelity-verification-tooling`.
+
+That both arrivals were the same two categories the closing note predicted is
+the useful signal here: the leak was structural, not a lapse of judgement by any
+one agent. A live RFC named after a subsystem collects everything filed about
+that subsystem, whatever its charter says. The fix is to close it, which is now
+done.
+
+**Final measures.** Exclude tree **1,637 -> 1,266 rows (-371)**. Generic RFC 0047
+seed population **1,115 -> 808**. Compared pairs **5,583 -> 5,761** — coverage up
+while noise fell, which was the point. All four named done-conditions met, and
+RFC 0107's `converge-relation-length-onto-records-delegation` verified unblocked
+end-to-end.
