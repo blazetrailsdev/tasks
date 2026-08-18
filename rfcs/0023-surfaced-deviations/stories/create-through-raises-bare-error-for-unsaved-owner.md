@@ -1,7 +1,7 @@
 ---
 title: "Raise RecordNotSaved, not a bare Error, for the unsaved owner in _createThrough"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: _createThrough and _ensurePersistedOwnerForCreate no longer exist; collection-association.ts:498 (and has-one-association.ts:395) now throw RecordNotSaved('You cannot call create unless the parent is saved', this.owner), matching Rails' raise class and owner argument."
 ---
 
 ## Context
