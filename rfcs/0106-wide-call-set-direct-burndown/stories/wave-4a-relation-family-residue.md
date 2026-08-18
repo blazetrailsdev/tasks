@@ -11,7 +11,6 @@ deps:
   - converge-execute-grouped-calculation-body-to-rails-source-order
 deps-rfc: []
 est-loc: 600
-priority: 6
 pr: null
 claim: null
 assignee: null
