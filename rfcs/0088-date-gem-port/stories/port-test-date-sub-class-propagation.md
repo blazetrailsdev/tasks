@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-sub-class-propagation"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6710
 claim: "2026-08-18T18:37:42Z"
 assignee: "port-test-date-sub-class-propagation"
 blocked-by: null
