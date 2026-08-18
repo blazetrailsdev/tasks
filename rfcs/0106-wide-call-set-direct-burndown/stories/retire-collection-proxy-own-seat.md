@@ -1,6 +1,6 @@
 ---
 title: "Retire CollectionProxy#_ownSeat — the last non-association target seat"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6685
 claim: "2026-08-18T02:03:08Z"
 assignee: "port-duration-sum-so-since-and-ago-call-it"
 blocked-by: null
