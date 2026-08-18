@@ -1,6 +1,6 @@
 ---
 title: "Cast the STI type value through base_class on the new/attributes path"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6702
 claim: "2026-08-18T14:29:41Z"
 assignee: "pair-ruby-writer-with-ts-set-accessor-not-its-reader"
 blocked-by: null
