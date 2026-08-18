@@ -1,6 +1,6 @@
 ---
 title: "Value-equivalent constant spellings should not count as argument divergence"
-status: ready
+status: draft
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
