@@ -1,6 +1,6 @@
 ---
 title: "Sweep joins/leftOuterJoins association-name call sites onto the colon Symbol spelling (~400 LOC)"
-status: claimed
+status: ready
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-18T02:31:51Z"
-assignee: "invert-where-chain-trio-onto-wherechain"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
