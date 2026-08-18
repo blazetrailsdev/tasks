@@ -1,7 +1,7 @@
 ---
 title: "Decide: re-merge trails' three joins stores, or pin build_join_buckets' missing base_klass guard"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: query-methods.ts:3390-3400 now keeps ONE joinsValues store and ports the discriminator literally (joins.last instanceof JoinDependency && lastJoinValue.baseKlass === this.model -> pop), with the cross-klass JD explicitly left in the stream for selectNamedJoins as Rails does (query_methods.rb:1847-1850). _eagerLoadAssociations, _namedInnerJoinDeps and _leftOuterJoinDeps are gone repo-wide."
 ---
 
 ## Context
