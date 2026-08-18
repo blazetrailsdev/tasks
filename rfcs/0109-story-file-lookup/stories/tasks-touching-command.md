@@ -1,6 +1,6 @@
 ---
 title: "Add pnpm tasks touching <path>"
-status: claimed
+status: done
 updated: 2026-08-18
 rfc: "0109-story-file-lookup"
 cluster: file-lookup
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: null
+pr: 69
 claim: "2026-08-18T14:50:47Z"
 assignee: "tasks-touching-command"
 blocked-by: null
