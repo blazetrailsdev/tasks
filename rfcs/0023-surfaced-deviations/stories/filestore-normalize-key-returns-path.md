@@ -1,7 +1,7 @@
 ---
 title: "FileStore#normalize_key returns the file path; drop the invented keyToPath helper"
-status: draft
-updated: 2026-08-10
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: cache/file-store.ts:239 overrides normalizeKey to return the full file path (super.normalizeKey -> encodeWwwFormComponent -> FILEPATH_MAX_SIZE split -> joined under cachePath), matching file_store.rb:162-172, so the *_entry methods receive a path directly; keyToPath is gone repo-wide."
 ---
 
 ## Context
