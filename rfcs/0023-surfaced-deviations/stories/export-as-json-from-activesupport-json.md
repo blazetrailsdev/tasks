@@ -1,7 +1,7 @@
 ---
 title: "Export Object#as_json from activesupport json.ts instead of per-caller encode/decode round-trips"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: asJson is now a public export of @blazetrails/activesupport (Rails' Object#as_json, core_ext/object/json.rb:58) and token-for.ts:138 uses it directly instead of the local decode(encode(...)) helper."
 ---
 
 ## Context
