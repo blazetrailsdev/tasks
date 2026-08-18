@@ -1,7 +1,7 @@
 ---
 title: "Converge mergeJoins same-model branch onto Rails plain joins_values union"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: merger.ts:154-162's same-model branch is now one structuralUnionEq union over the whole joinsValues store (merger.rb:121), named and raw alike; _namedInnerJoins and _joinValues are gone. The remaining _joinClauses side-channel is the separate fold-join-clauses-into-joins-values story, as this one anticipated."
 ---
 
 ## Context
