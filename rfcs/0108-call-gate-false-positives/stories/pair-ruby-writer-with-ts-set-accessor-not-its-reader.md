@@ -1,6 +1,6 @@
 ---
 title: "Pair a Ruby name= writer with the TS set accessor, not its same-named reader"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T14:29:41Z"
+assignee: "pair-ruby-writer-with-ts-set-accessor-not-its-reader"
 blocked-by: null
 closed-reason: null
 ---

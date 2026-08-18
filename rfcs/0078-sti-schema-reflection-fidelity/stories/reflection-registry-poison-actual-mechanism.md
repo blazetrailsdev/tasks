@@ -1,7 +1,7 @@
 ---
 title: "Establish the real cross-file reflection-memo poison mechanism (zero rebinds observed; documented cause is wrong)"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T14:29:41Z"
+assignee: "pair-ruby-writer-with-ts-set-accessor-not-its-reader"
 blocked-by: null
 closed-reason: null
 ---
