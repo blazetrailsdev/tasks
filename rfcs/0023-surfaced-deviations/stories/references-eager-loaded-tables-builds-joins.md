@@ -1,7 +1,7 @@
 ---
 title: "references_eager_loaded_tables? should read tables off built join nodes"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation.ts:1238 now calls this.buildJoins(arel) on a throwaway SelectManager and derives joinedTables from the returned join nodes (StringJoin -> tablesInString(join.left), else join.left.name), then pushes table.name, downcases and compares against referencesValues — relation.rb:1475-1489 line for line. _resolveAssocTables is gone."
 ---
 
 ## Context
