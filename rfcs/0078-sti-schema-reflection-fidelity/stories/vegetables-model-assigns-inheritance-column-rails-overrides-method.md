@@ -1,6 +1,6 @@
 ---
 title: "vegetables.ts assigns inheritanceColumn where vegetables.rb overrides the class method"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T23:11:21Z"
+assignee: "order-check-ignores-suppressed-call-claims"
 blocked-by: null
 closed-reason: null
 ---
