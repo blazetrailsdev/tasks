@@ -1,7 +1,7 @@
 ---
 title: "Rack::Logger should pass started_request_message as a block, not an eager string"
 status: draft
-updated: 2026-08-14
+updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -60,3 +60,14 @@ argument only after the level check, as `Logger#add` does.
       declines the message.
 - [ ] `pnpm parity:api:calls:args:report` shows the `rack/logger.ts`
       `call_app` -> `info` `naming` row retired, with no new `shape` row.
+
+## Parked — out of the AR closure (2026-08-18)
+
+Deliberately left `draft` by the RFC 0096 re-scope. `packages/trailties/src/rack/logger.ts`
+is not in the AR require-closure (`scripts/api-compare/ar-closure.ts`), so this
+row is one of the 173 out-of-scope naming rows the re-scope hands off rather
+than burns down — see `naming-gate-flip` `## Re-scope (2026-08-18)`.
+
+It is not abandoned: `pnpm parity:api:calls:args:report` still measures it, and
+it does not gate. Re-home it into an actionpack-family naming RFC when one
+exists; do not flip it `ready` under RFC 0096, which now scopes to the closure.
