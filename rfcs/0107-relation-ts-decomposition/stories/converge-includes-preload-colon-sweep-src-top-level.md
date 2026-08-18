@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: activerecord/src top level"
-status: claimed
+status: blocked
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-18T19:32:44Z"
 assignee: "converge-includes-preload-colon-sweep-src-top-level"
-blocked-by: null
+blocked-by: "Blocked on converge-preloader-branch-colon-symbol-entry-point, which is unmerged in draft PR #6713. main's Preloader::Branch#_normalizeAssociationName (associations/preloader/branch.ts:305-322) still returns the name without stripping a leading colon, so colon-spelled includes/preload values would not resolve. No stacking; re-claim once #6713 lands."
 closed-reason: null
 ---
 
