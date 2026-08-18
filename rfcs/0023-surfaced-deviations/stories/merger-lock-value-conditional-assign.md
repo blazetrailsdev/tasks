@@ -1,7 +1,7 @@
 ---
 title: "merger-lock-value-conditional-assign"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation/merger.ts:228 is now 'if (this.other.lockValue) rel.lockValue ||= this.other.lockValue', matching merger.rb:169's 'relation.lock_value ||= other.lock_value if other.lock_value'."
 ---
 
 ## Context
