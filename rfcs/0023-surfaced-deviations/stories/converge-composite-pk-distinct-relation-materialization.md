@@ -1,7 +1,7 @@
 ---
 title: "converge-composite-pk-distinct-relation-materialization"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into route-apply-join-dependency-through-distinct-relation-for-primary-key (its AC 3 already subsumes the composite-PK arm; the adapter distinctRelationForPrimaryKey handles Array(primary_key) natively)"
 ---
 
 ## Context
