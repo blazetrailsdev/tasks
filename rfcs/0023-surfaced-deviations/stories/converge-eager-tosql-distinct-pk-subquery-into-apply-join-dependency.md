@@ -1,7 +1,7 @@
 ---
 title: "Converge or record the toSql eager distinct-pk inline subquery deviation"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-relation-subquery-distinct-pk-materialization (both are the sync-path-cannot-execute half of distinct_relation_for_primary_key)"
 ---
 
 ## Context
