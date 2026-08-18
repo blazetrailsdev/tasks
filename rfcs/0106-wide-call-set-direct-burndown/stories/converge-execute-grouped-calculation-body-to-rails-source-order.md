@@ -1,7 +1,7 @@
 ---
 title: "converge-execute-grouped-calculation-body-to-rails-source-order"
-status: ready
-updated: 2026-08-17
+status: claimed
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T00:44:19Z"
+assignee: "converge-collection-target-setter-coercion-and-proxy"
 blocked-by: null
 closed-reason: null
 ---
