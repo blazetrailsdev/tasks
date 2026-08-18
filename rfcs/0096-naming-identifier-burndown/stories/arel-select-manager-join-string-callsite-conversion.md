@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#join wraps a String relation where Rails passes it through"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6714
 claim: "2026-08-18T19:32:44Z"
 assignee: "converge-includes-preload-colon-sweep-src-top-level"
 blocked-by: null
