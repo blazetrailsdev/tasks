@@ -1,6 +1,6 @@
 ---
 title: "Port Duration#sum as a method so since/ago call it"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T02:03:08Z"
+assignee: "port-duration-sum-so-since-and-ago-call-it"
 blocked-by: null
 closed-reason: null
 ---
