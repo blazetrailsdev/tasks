@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: associations/eager.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 340
 priority: null
-pr: null
+pr: 6713
 claim: "2026-08-18T19:22:39Z"
 assignee: "converge-includes-preload-colon-sweep-associations-eager-test"
 blocked-by: null
