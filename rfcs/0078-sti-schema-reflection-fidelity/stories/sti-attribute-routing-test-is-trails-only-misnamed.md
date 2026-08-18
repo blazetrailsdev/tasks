@@ -1,6 +1,6 @@
 ---
 title: "sti-attribute-routing.test.ts is a trails-only invention test under a non-.trails name"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6704
 claim: "2026-08-18T15:00:51Z"
 assignee: "sweep-joins-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
