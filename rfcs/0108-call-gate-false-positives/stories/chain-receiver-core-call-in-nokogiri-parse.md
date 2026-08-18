@@ -1,6 +1,6 @@
 ---
 title: "Drop or block the chain-receiver core call in XmlMini_Nokogiri#parse"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T13:06:46Z"
+assignee: "converge-request-session-initialize-and-options-readers"
 blocked-by: null
 closed-reason: null
 ---
