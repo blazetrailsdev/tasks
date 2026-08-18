@@ -1,6 +1,6 @@
 ---
 title: "converge-surfaced-call-arg-shape-rows"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T01:38:00Z"
+assignee: "association-target-setter-must-call-loaded-bang"
 blocked-by: null
 closed-reason: null
 ---
