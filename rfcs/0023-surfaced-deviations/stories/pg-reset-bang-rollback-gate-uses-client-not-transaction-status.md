@@ -1,7 +1,7 @@
 ---
 title: "resetBang gates ROLLBACK on _client, Rails gates on transaction_status"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into pg-reset-bang-no-connection-branch-should-connect (same method / same subsystem; all Rails file:line citations carried into the surviving body)"
 ---
 
 ## Context
