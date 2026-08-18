@@ -1,7 +1,7 @@
 ---
 title: "Port settable Notifications.notifier + instrumenter registry (or skip-group the static deviation)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: notifications.ts now has a settable static notifier (attr_accessor, notifications.rb:198) and a private per-notifier registry backed by an isolated-execution-state Map (notifications.rb:274-276); notifications.test.ts has 'subscribing to instrumentation while inside it'."
 ---
 
 ## Context
