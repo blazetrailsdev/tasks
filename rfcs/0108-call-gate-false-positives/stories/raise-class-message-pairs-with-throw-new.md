@@ -1,6 +1,6 @@
 ---
 title: "Ruby raise Class, msg should pair with the TS throw new Class(msg)"
-status: ready
+status: draft
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
