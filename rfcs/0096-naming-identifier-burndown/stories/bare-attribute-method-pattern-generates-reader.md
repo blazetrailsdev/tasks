@@ -1,6 +1,6 @@
 ---
 title: "Let the bare attribute_method_pattern generate the reader instead of skipping it"
-status: claimed
+status: ready
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-18T18:37:42Z"
-assignee: "port-test-date-sub-class-propagation"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
