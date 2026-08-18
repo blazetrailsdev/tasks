@@ -1,6 +1,6 @@
 ---
 title: "STI stale-schema invalidation for unregistered subclasses rests on an unenforced read-through-ownSchemaMemo invariant"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6705
 claim: "2026-08-18T15:10:51Z"
 assignee: "port-test-date-parse-formats-iso8601-tests"
 blocked-by: null
