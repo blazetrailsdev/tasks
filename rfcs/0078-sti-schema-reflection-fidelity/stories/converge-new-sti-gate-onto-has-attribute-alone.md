@@ -1,6 +1,6 @@
 ---
 title: "Collapse the new() STI dispatch gate onto Rails' _has_attribute? alone (drop the descendants-count stand-in)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
