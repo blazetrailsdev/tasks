@@ -1,6 +1,6 @@
 ---
 title: "Retire test-date-strftime's dateRange helper once Date#succ lands"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-test-date-arith-iteration"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 6714
 claim: "2026-08-18T19:32:44Z"
 assignee: "converge-includes-preload-colon-sweep-src-top-level"
 blocked-by: null
