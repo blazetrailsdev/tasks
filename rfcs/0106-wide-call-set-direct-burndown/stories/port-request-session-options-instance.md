@@ -1,6 +1,6 @@
 ---
 title: "port-request-session-options-instance"
-status: blocked
+status: ready
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-18T00:23:01Z"
-assignee: "port-request-session-options-instance"
-blocked-by: "Premise unlanded: the story builds on PR #6675 (fix(parity): converge Array#first, CollectionAssociation#target= and Request session writers), which ports Session::Options.set and routes create/disabled through it. #6675 is still OPEN, so main's create/disabled still write req.env[ENV_SESSION_OPTIONS_KEY] directly and packages/actionpack/src/action-dispatch/request/session.ts has no Options class at all. Implementing here would duplicate #6675's diff in the same file (stacked/conflicting PR). Unblock once #6675 merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
