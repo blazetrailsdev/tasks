@@ -1,7 +1,7 @@
 ---
 title: "DatabaseTasks.forEach takes a built DatabaseConfigurations instead of constructing one"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into database-tasks-configuration-registry-split-from-base-configurations — both are the DatabaseTasks-vs-Base.configurations registry split (database_tasks.rb:141-154, :552); one read of tasks/database-tasks.ts"
 ---
 
 # DatabaseTasks.forEach takes a built DatabaseConfigurations instead of constructing one
