@@ -1,6 +1,6 @@
 ---
 title: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6715
 claim: "2026-08-18T19:42:42Z"
 assignee: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
