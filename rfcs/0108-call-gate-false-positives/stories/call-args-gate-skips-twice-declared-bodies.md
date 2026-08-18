@@ -1,6 +1,6 @@
 ---
 title: "Call-argument gate drops a twice-declared body before consulting the resolved owner"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
