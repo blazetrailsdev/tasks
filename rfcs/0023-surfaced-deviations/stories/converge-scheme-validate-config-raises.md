@@ -1,7 +1,7 @@
 ---
 title: "Scheme#validate_config! has a fifth raise and five reworded messages"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-scheme-key-provider-guard — both are leftovers from PR #6368 in encryption/scheme.ts (scheme.rb:56-58 and validate_config!), same file, same read"
 ---
 
 ## Context
