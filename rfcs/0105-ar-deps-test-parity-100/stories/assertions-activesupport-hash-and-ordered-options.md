@@ -31,16 +31,15 @@ its siblings; this one burns down the `activesupport` files below.
 Measured 2026-08-14 (`pnpm parity:test -- --assertions --package activesupport`),
 against `vendor/rails/activesupport/test/`:
 
-| Rails test file                          | count | kind | value |
-| ---------------------------------------- | ----: | ---: | ----: |
-| `hash_with_indifferent_access_test.rb`   |    60 |   74 |     3 |
-| `core_ext/hash_ext_test.rb`              |    30 |   33 |     0 |
-| `ordered_options_test.rb`                |    21 |   27 |     2 |
-| `ordered_hash_test.rb`                   |    19 |   25 |     0 |
-| `core_ext/hash/transform_values_test.rb` |     0 |    0 |     1 |
+| Rails test file           | count | kind | value |
+| ------------------------- | ----: | ---: | ----: |
+| `ordered_options_test.rb` |    21 |   27 |     2 |
 
 **295 divergences** (130 assertion-count, 159 assertion-kind, 6
-assertion-value). Expand per test with
+assertion-value) when filed. Scoped down 2026-08-18 to `ordered_options_test.rb`
+alone (50 of those); the four Hash files moved to the sibling story
+`assertions-activesupport-hash-cluster` because the two halves together blow the
+PR LOC ceiling. Expand per test with
 `pnpm parity:test -- --assertions --missing --package activesupport` and grep for the
 file; each line prints `rails N vs trails M`, and the kind lines print the
 per-kind delta. The trails counterparts are at the convention TS path the same
