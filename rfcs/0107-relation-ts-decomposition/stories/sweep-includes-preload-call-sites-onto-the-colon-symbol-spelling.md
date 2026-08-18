@@ -1,6 +1,6 @@
 ---
 title: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
-status: claimed
+status: blocked
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-18T15:49:44Z"
 assignee: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
-blocked-by: null
+blocked-by: "Depends on PR #6704 (sweep joins call sites onto the colon Symbol spelling), still open/unmerged: the joinedIncludesValues colon-stripping normalization this story deletes exists only on that branch, and sweeping the ~470 includes/preload call sites would conflict with it wholesale. Unblock once #6704 lands."
 closed-reason: null
 ---
 
