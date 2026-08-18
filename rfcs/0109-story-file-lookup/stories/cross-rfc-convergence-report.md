@@ -1,6 +1,6 @@
 ---
 title: "Report cross-RFC file convergence"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0109-story-file-lookup"
 cluster: file-lookup
