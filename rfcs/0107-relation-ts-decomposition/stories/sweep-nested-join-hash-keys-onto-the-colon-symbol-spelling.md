@@ -1,6 +1,6 @@
 ---
 title: "Nested joins hash KEYS still use the bare spelling where Rails has Symbols"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6720
 claim: "2026-08-18T20:31:56Z"
 assignee: "wave-4c-ar-core-residue-attributes"
 blocked-by: null
