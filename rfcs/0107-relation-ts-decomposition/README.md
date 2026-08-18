@@ -3,7 +3,7 @@ rfc: "0107-relation-ts-decomposition"
 title: "relation.ts decomposition and invented-machinery burndown"
 status: active
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -13,6 +13,7 @@ related-rfcs:
   - "0022-relation-arel-ast-convergence"
   - "0027-join-dependency-fidelity"
   - "0084-wide-call-set-burndown"
+priority: 1
 ---
 
 ## Summary
