@@ -1,6 +1,6 @@
 ---
 title: "spell Kernel#Array as Array in batches.ts via the aliased import"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:32:42Z"
+assignee: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---
