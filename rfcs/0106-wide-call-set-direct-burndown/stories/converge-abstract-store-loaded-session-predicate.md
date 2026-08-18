@@ -1,6 +1,6 @@
 ---
 title: "Converge SessionObject#loaded_session? onto Session#loaded?"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6700
 claim: "2026-08-18T13:56:52Z"
 assignee: "converge-abstract-store-loaded-session-predicate"
 blocked-by: null
