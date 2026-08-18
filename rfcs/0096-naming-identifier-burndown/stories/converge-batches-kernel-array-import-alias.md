@@ -1,7 +1,7 @@
 ---
 title: "spell Kernel#Array as Array in batches.ts via the aliased import"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
