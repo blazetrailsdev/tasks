@@ -1,6 +1,6 @@
 ---
 title: "invert-where-chain-trio-onto-wherechain"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6686
 claim: "2026-08-18T02:31:51Z"
 assignee: "invert-where-chain-trio-onto-wherechain"
 blocked-by: null
