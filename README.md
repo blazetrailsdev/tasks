@@ -33,6 +33,7 @@ git clone git@github.com:blazetrailsdev/tasks.git
 # From this repo or a trails worktree
 pnpm tasks ready        # list unblocked stories
 pnpm tasks next-bundle  # next cluster bundle ≤ 250 LOC
+pnpm tasks touching <path>  # open stories citing a trails path, + its 90d churn
 pnpm tasks claim <id>   # atomically claim a story
 pnpm tasks done <id> --pr <n>
 ```

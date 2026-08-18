@@ -70,6 +70,7 @@ import {
   resolveTrailsRepo,
   churnVerdict,
   formatChurnBanner,
+  formatTouchingCount,
   newRfc,
   newStory,
   emptyBundleReason,
@@ -686,9 +687,27 @@ describe("churnVerdict", () => {
 });
 
 describe("formatChurnBanner", () => {
-  it("names the churn verdict, or says churn is unavailable", () => {
-    expect(formatChurnBanner("a.ts", 14, "hot")).toBe("a.ts: 14 commits in 90d — hot");
+  it("names the churn verdict and what it means, or says churn is unavailable", () => {
+    expect(formatChurnBanner("a.ts", 14, "hot")).toBe(
+      "a.ts — 14 commits/90d (hot — likely touched anyway)",
+    );
+    expect(formatChurnBanner("a.ts", 0, "cold")).toBe(
+      "a.ts — 0 commits/90d (cold — rarely touched)",
+    );
     expect(formatChurnBanner("a.ts", null, null)).toContain("churn unavailable");
+  });
+});
+
+describe("formatTouchingCount", () => {
+  it("states the no-match case rather than printing an empty table", () => {
+    expect(formatTouchingCount(0, false)).toBe("no open stories cite this path");
+    expect(formatTouchingCount(0, true)).toBe("no stories cite this path");
+  });
+
+  it("agrees in number and scopes the count to open stories by default", () => {
+    expect(formatTouchingCount(1, false)).toBe("1 open story cites this path:");
+    expect(formatTouchingCount(46, false)).toBe("46 open stories cite this path:");
+    expect(formatTouchingCount(46, true)).toBe("46 stories cite this path:");
   });
 });
 

@@ -703,14 +703,32 @@ export function pathChurn90d(repo: string, path: string): number {
   }
 }
 
+// What each verdict means for the caller's actual decision: file a story, or
+// note it as a driveby on work that is coming anyway.
+const CHURN_GLOSS: Record<ChurnVerdict, string> = {
+  hot: "likely touched anyway",
+  moderate: "occasional edits",
+  cold: "rarely touched",
+};
+
+// The churn line prints whether or not any story matched — a cold path with no
+// open stories is the combination that means "file it now", and it is the
+// answer a caller most needs. With no trails checkout the column is omitted
+// with one note and the command still succeeds.
 export function formatChurnBanner(
   query: string,
   churn: number | null,
   verdict: ChurnVerdict | null,
 ): string {
-  return churn === null
-    ? `${query}: churn unavailable (no trails checkout found; pass --repo or set $TRAILS_DIR)`
-    : `${query}: ${churn} commits in 90d — ${verdict}`;
+  return churn === null || verdict === null
+    ? `${query} — churn unavailable (no trails checkout found; pass --repo or set $TRAILS_DIR)`
+    : `${query} — ${churn} commits/90d (${verdict} — ${CHURN_GLOSS[verdict]})`;
+}
+
+export function formatTouchingCount(count: number, all: boolean): string {
+  const scope = all ? "" : "open ";
+  if (count === 0) return `no ${scope}stories cite this path`;
+  return `${count} ${scope}${count === 1 ? "story cites" : "stories cite"} this path:`;
 }
 
 // ──────────────────── mutations ────────────────────
@@ -3622,8 +3640,9 @@ function main(): void {
         );
       } else {
         console.log(formatChurnBanner(query, churn, verdict));
-        if (rows.length === 0) console.log("no stories cite this path");
-        else fmt(rows, undefined, rfcPriorityMap(idx));
+        console.log("");
+        console.log(formatTouchingCount(rows.length, flags.all === true));
+        if (rows.length > 0) fmt(rows, undefined, rfcPriorityMap(idx));
       }
       break;
     }
