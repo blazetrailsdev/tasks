@@ -1,5 +1,5 @@
 ---
-rfc: "0000-0000-probe-scoped-skip"
+rfc: "0109-0000-probe-scoped-skip"
 title: "probe"
 status: draft
 created: 2026-08-18
@@ -9,7 +9,7 @@ packages: []
 clusters: []
 ---
 
-# RFC — probe
+# RFC 0109 — probe
 
 ## Summary
 
