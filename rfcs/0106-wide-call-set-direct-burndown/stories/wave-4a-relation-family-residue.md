@@ -1,6 +1,6 @@
 ---
 title: "Wave 4a: the relation-family residue (94 rows)"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -11,7 +11,7 @@ deps:
   - converge-execute-grouped-calculation-body-to-rails-source-order
 deps-rfc: []
 est-loc: 600
-pr: null
+pr: 6721
 claim: "2026-08-18T20:46:48Z"
 assignee: "wave-4a-relation-family-residue"
 blocked-by: null
