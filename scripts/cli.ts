@@ -622,6 +622,97 @@ export function listFiltered(
   });
 }
 
+// ──────────────────── path lookup (`touching`) ────────────────────
+
+// Statuses that mean "someone still intends to do this". Drafts count: most
+// open stories are drafts, and a draft story is exactly the triage record
+// `touching` exists to surface.
+export const OPEN_STORY_STATUSES: readonly StoryStatus[] = [
+  "draft",
+  "ready",
+  "claimed",
+  "in-progress",
+  "blocked",
+];
+
+// Stories whose body cites `query`, matched in tiers: an exact path hit wins,
+// else a directory-prefix hit, else a substring hit. Only the first tier that
+// matches anything is returned, so a precise query is never diluted by the
+// loose fallbacks. Stories from an index built before `story_paths` existed
+// have no paths to match and are skipped.
+export function storiesTouching(
+  index: Index,
+  query: string,
+  opts: { all?: boolean } = {},
+): StoryEntry[] {
+  const q = query.replace(/^\.\//, "");
+  const dir = q.endsWith("/") ? q : `${q}/`;
+  const scoped = index.stories.filter(
+    (s) => opts.all || (s.status !== null && OPEN_STORY_STATUSES.includes(s.status)),
+  );
+  const tier = (match: (p: string) => boolean) =>
+    scoped.filter((s) => (s.story_paths ?? []).some(match));
+  const exact = tier((p) => p === q);
+  if (exact.length) return exact;
+  const prefixed = tier((p) => p.startsWith(dir));
+  if (prefixed.length) return prefixed;
+  return tier((p) => p.includes(q));
+}
+
+// The trails checkout to measure churn in. Deliberately NOT derived from
+// TASKS_DIR: the per-worktree `tasks` symlink resolves to a *sibling* tree
+// under tasks-worktrees/, so its parent is not the trails repo. cwd is the
+// reliable anchor — `pnpm tasks` runs from inside the trails worktree.
+export function resolveTrailsRepo(
+  cwd: string,
+  flag?: string,
+  env: NodeJS.ProcessEnv = process.env,
+): string | null {
+  const explicit = envDir(flag) ?? envDir(env.TRAILS_DIR);
+  if (explicit) return explicit;
+  let dir = resolve(cwd);
+  for (;;) {
+    if (existsSync(join(dir, ".git")) && existsSync(join(dir, "packages"))) return dir;
+    const parent = dirname(dir);
+    if (parent === dir) return null;
+    dir = parent;
+  }
+}
+
+export type ChurnVerdict = "hot" | "moderate" | "cold";
+
+export function churnVerdict(commits90d: number): ChurnVerdict {
+  if (commits90d >= 12) return "hot";
+  if (commits90d >= 2) return "moderate";
+  return "cold";
+}
+
+// Commits in the last 90 days touching `path`. A path git knows nothing about
+// yields 0, which reads as `cold` — the same answer a genuinely untouched file
+// gets, and the honest one either way.
+export function pathChurn90d(repo: string, path: string): number {
+  try {
+    const out = execFileSync(
+      "git",
+      ["-C", repo, "log", "--oneline", "--since=90.days", "--", path],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
+    ).trim();
+    return out === "" ? 0 : out.split("\n").length;
+  } catch {
+    return 0;
+  }
+}
+
+export function formatChurnBanner(
+  query: string,
+  churn: number | null,
+  verdict: ChurnVerdict | null,
+): string {
+  return churn === null
+    ? `${query}: churn unavailable (no trails checkout found; pass --repo or set $TRAILS_DIR)`
+    : `${query}: ${churn} commits in 90d — ${verdict}`;
+}
+
 // ──────────────────── mutations ────────────────────
 
 // Today's date (UTC, YYYY-MM-DD) for the `updated:` frontmatter stamp. Every
@@ -3445,6 +3536,7 @@ function main(): void {
     "clusters",
     "packages",
     "stale-hours",
+    "repo",
   ];
   const rfcPriorityClear = cmd === "rfc" && flags.priority === true && flags.clear === true;
   for (const k of valueFlags) {
@@ -3504,6 +3596,35 @@ function main(): void {
       );
       if (flags.json) console.log(JSON.stringify(rows, null, 2));
       else fmt(rows, staleIds, rfcPriorityMap(idx));
+      break;
+    }
+    case "touching": {
+      const query = pos[0];
+      if (!query) usage();
+      const idx = readIndexSource().index;
+      const rows = storiesTouching(idx, query, { all: flags.all === true });
+      const repo = resolveTrailsRepo(process.cwd(), stringFlag(flags, "repo"));
+      const churn = repo === null ? null : pathChurn90d(repo, query);
+      const verdict = churn === null ? null : churnVerdict(churn);
+      if (flags.json) {
+        console.log(
+          JSON.stringify(
+            {
+              query,
+              path_churn_90d: churn,
+              churn_verdict: verdict,
+              trails_repo: repo,
+              stories: rows,
+            },
+            null,
+            2,
+          ),
+        );
+      } else {
+        console.log(formatChurnBanner(query, churn, verdict));
+        if (rows.length === 0) console.log("no stories cite this path");
+        else fmt(rows, undefined, rfcPriorityMap(idx));
+      }
       break;
     }
     case "show": {
@@ -3727,6 +3848,9 @@ function usage(): never {
                                                 banner and --json flag the overrun)
   list [--rfc <slug>] [--status <v>] [--cluster <n>] [--json]
   show <id>
+  touching <path> [--all] [--repo <trails checkout>] [--json]
+                                               (stories citing a path, plus its 90-day churn;
+                                                --all includes done/closed)
   status
 
   claim <id...> [--assignee <name>]            (all-or-nothing across ids: one commit, one lock)

@@ -66,6 +66,10 @@ import {
   LOCK_TIMEOUT_EXIT,
   releaseTasksLock,
   listFiltered,
+  storiesTouching,
+  resolveTrailsRepo,
+  churnVerdict,
+  formatChurnBanner,
   newRfc,
   newStory,
   emptyBundleReason,
@@ -576,6 +580,115 @@ describe("listFiltered", () => {
     ]);
     const rows = listFiltered(idx, { rfc: "0001-r", status: "ready", cluster: "c2" });
     expect(rows.map((s) => s.id)).toEqual(["c"]);
+  });
+});
+
+describe("storiesTouching", () => {
+  const paths = (over: Partial<StoryEntry> & { story_paths: string[] }) => story(over);
+
+  it("prefers an exact path match over prefix and substring matches", () => {
+    const idx = index([
+      paths({ id: "exact", story_paths: ["packages/activerecord/src/relation.ts"] }),
+      paths({ id: "prefix", story_paths: ["packages/activerecord/src/relation.ts/x.ts"] }),
+      paths({ id: "substr", story_paths: ["a/packages/activerecord/src/relation.ts.bak"] }),
+    ]);
+    expect(storiesTouching(idx, "packages/activerecord/src/relation.ts").map((s) => s.id)).toEqual([
+      "exact",
+    ]);
+  });
+
+  it("matches a directory prefix when no exact path matches", () => {
+    const idx = index([
+      paths({ id: "a", story_paths: ["packages/activerecord/src/associations/builder.ts"] }),
+      paths({ id: "b", story_paths: ["packages/activerecord/src/relation.ts"] }),
+    ]);
+    expect(
+      storiesTouching(idx, "packages/activerecord/src/associations/").map((s) => s.id),
+    ).toEqual(["a"]);
+  });
+
+  it("falls back to a substring match", () => {
+    const idx = index([paths({ id: "a", story_paths: ["packages/arel/src/nodes/binary.ts"] })]);
+    expect(storiesTouching(idx, "nodes/binary").map((s) => s.id)).toEqual(["a"]);
+  });
+
+  it("includes drafts and other open statuses but excludes done and closed", () => {
+    const idx = index([
+      paths({ id: "d", status: "draft", story_paths: ["a.ts"] }),
+      paths({ id: "b", status: "blocked", story_paths: ["a.ts"] }),
+      paths({ id: "done", status: "done", story_paths: ["a.ts"] }),
+      paths({ id: "closed", status: "closed", story_paths: ["a.ts"] }),
+    ]);
+    expect(storiesTouching(idx, "a.ts").map((s) => s.id)).toEqual(["d", "b"]);
+    expect(storiesTouching(idx, "a.ts", { all: true }).map((s) => s.id)).toEqual([
+      "d",
+      "b",
+      "done",
+      "closed",
+    ]);
+  });
+
+  it("skips stories from an older index with no story_paths", () => {
+    const stale = story({ id: "old" });
+    delete (stale as { story_paths?: string[] }).story_paths;
+    const idx = index([stale, paths({ id: "new", story_paths: ["a.ts"] })]);
+    expect(storiesTouching(idx, "a.ts").map((s) => s.id)).toEqual(["new"]);
+  });
+});
+
+describe("resolveTrailsRepo", () => {
+  const roots: string[] = [];
+  const mkTrails = () => {
+    const root = mkdtempSync(join(tmpdir(), "trails-"));
+    roots.push(root);
+    mkdirSync(join(root, ".git"));
+    mkdirSync(join(root, "packages"));
+    return root;
+  };
+  afterEach(() => {
+    for (const r of roots.splice(0)) rmSync(r, { recursive: true, force: true });
+  });
+
+  it("prefers the flag, then $TRAILS_DIR, then the enclosing checkout", () => {
+    const root = mkTrails();
+    expect(resolveTrailsRepo(root, "/flag", {})).toBe("/flag");
+    expect(resolveTrailsRepo(root, undefined, { TRAILS_DIR: "/env" })).toBe("/env");
+    expect(resolveTrailsRepo(join(root, "packages"), undefined, {})).toBe(root);
+  });
+
+  it("does not mistake a tasks symlink's parent for the trails repo", () => {
+    // The per-worktree `tasks` symlink resolves under tasks-worktrees/, a
+    // sibling tree — resolving from there must not find a trails checkout,
+    // which would otherwise fail silently as a churn count of zero.
+    const outer = mkdtempSync(join(tmpdir(), "sibling-"));
+    roots.push(outer);
+    const tasksWorktree = join(outer, "tasks-worktrees", "w");
+    mkdirSync(join(tasksWorktree, ".git"), { recursive: true });
+    expect(resolveTrailsRepo(tasksWorktree, undefined, {})).toBe(null);
+  });
+
+  it("returns null when no enclosing checkout has both .git and packages/", () => {
+    const bare = mkdtempSync(join(tmpdir(), "bare-"));
+    roots.push(bare);
+    mkdirSync(join(bare, "packages"));
+    expect(resolveTrailsRepo(bare, undefined, {})).toBe(null);
+  });
+});
+
+describe("churnVerdict", () => {
+  it("splits at 12 and 2 commits", () => {
+    expect(churnVerdict(12)).toBe("hot");
+    expect(churnVerdict(11)).toBe("moderate");
+    expect(churnVerdict(2)).toBe("moderate");
+    expect(churnVerdict(1)).toBe("cold");
+    expect(churnVerdict(0)).toBe("cold");
+  });
+});
+
+describe("formatChurnBanner", () => {
+  it("names the churn verdict, or says churn is unavailable", () => {
+    expect(formatChurnBanner("a.ts", 14, "hot")).toBe("a.ts: 14 commits in 90d — hot");
+    expect(formatChurnBanner("a.ts", null, null)).toContain("churn unavailable");
   });
 });
 
