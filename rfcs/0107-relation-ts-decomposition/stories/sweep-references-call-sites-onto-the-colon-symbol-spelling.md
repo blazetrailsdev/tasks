@@ -1,6 +1,6 @@
 ---
 title: "sweep-references-call-sites-onto-the-colon-symbol-spelling"
-status: ready
+status: closed
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: the converge-includes-preload-colon-sweep-* cluster stories already scope references call sites alongside includes/preload/eagerLoad. The one finding it carried that they do not — referencesEagerLoadedTables needing Rails' map(&:to_s) — is refiled as converge-references-eager-loaded-tables-symbol-to-s."
 ---
 
 ## Context
