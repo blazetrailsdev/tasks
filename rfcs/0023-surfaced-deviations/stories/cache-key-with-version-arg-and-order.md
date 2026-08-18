@@ -1,7 +1,7 @@
 ---
 title: "cache-key-with-version-arg-and-order"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation.ts:3094 cacheKeyWithVersion takes no argument and evaluates cacheVersion first, returning `${cacheKey()}-${version}` or bare cacheKey(), matching relation.rb:519-525."
 ---
 
 ## Context
