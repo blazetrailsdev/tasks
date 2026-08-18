@@ -37,10 +37,10 @@ native JS spelling; for a predicate whose Ruby file ALSO defines the bare name
 
 This is not two stray methods. Measured 2026-08-18:
 
-````text
+```text
 grep -rhoE '\b[a-z][a-zA-Z0-9]*Q\s*\(' packages/*/src --include='*.ts'
   → 17 distinct names, 27 files in activerecord (+2 rack, +2 actionview)
-```text
+```
 
 `connectedToQ` (30 uses), `primaryClassQ` (23), `applicationRecordClassQ` (15),
 `isConnectedQ` (11), `activeConnectionsQ` (11), `readonlyAttributeQ`,
@@ -81,4 +81,3 @@ outcome here: the members are ported, so a skip would hide real, credited work.
 - [ ] `pnpm parity:api:extra` clean; no new baseline rows, no new SKIP_GROUPS
       entry standing in for the decision.
 - [ ] `scripts/parity/conventions.test.ts` covers the chosen rule.
-````
