@@ -1,7 +1,7 @@
 ---
 title: "Inline attributes.except(*UNASSIGNABLE_KEYS) instead of the assignableNestedAttributes helper"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: assignableNestedAttributes is gone; nested-attributes.ts:478 and :832 now inline except(attributes, ...UNASSIGNABLE_KEYS) at each call site as Rails does (nested_attributes.rb:408, 444, 525, 577)."
 ---
 
 ## Context
