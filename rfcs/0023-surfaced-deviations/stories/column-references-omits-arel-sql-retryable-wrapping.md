@@ -1,7 +1,7 @@
 ---
 title: "column_references returns bare strings, not Arel.sql(ref, retryable: true)"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: query-methods.ts:2463 columnReferences now returns Nodes.SqlLiteral[] and ends in refs.map((ref) => Arel.sql(ref, { retryable: true })) at :2511, matching query_methods.rb:2146's filter_map { Arel.sql(ref, retryable: true) }; the retryable marking is also carried at :2867 and :2913."
 ---
 
 ## Context
