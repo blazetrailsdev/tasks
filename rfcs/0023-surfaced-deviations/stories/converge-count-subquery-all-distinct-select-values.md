@@ -1,7 +1,7 @@
 ---
 title: "build_count_subquery :all+distinct must keep select_values, not project the PK"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into count-select-for-count-full-convergence — both are the count projection path, select_for_count and build_count_subquery (calculations.rb:645-670); one read of relation/calculations.ts"
 ---
 
 ## Context
