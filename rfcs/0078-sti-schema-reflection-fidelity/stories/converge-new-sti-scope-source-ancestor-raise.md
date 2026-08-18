@@ -1,6 +1,6 @@
 ---
 title: "Drop the scope-source STI-ancestor escape in subclassFromAttributesForNew; raise SubclassNotFound as find_sti_class does"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
