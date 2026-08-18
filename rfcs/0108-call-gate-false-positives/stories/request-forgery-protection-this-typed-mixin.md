@@ -1,6 +1,6 @@
 ---
 title: "request-forgery-protection-this-typed-mixin"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6703
 claim: "2026-08-18T14:40:54Z"
 assignee: "request-forgery-protection-this-typed-mixin"
 blocked-by: null
