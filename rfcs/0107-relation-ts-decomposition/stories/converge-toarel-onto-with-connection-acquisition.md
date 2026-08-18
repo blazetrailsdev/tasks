@@ -1,7 +1,7 @@
 ---
 title: "toArel acquires through a with_connection port, retiring the { sanitizeLimit } stand-in (query_methods.rb:1595)"
-status: draft
-updated: 2026-08-16
+status: ready
+updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
