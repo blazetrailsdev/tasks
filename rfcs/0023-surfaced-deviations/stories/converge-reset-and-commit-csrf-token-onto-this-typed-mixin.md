@@ -2,7 +2,7 @@
 title: "converge-reset-and-commit-csrf-token-onto-this-typed-mixin"
 status: ready
 updated: 2026-08-18
-rfc: "0108-call-gate-false-positives"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
@@ -76,3 +76,10 @@ free.
       is deleted by hand (only-shrink, no reseed) and the mark tightened with
       `pnpm parity:api:calls:tighten`.
 - [ ] `pnpm parity:api:calls` / `:args` green; actionpack tests pass.
+
+_Moved from RFC 0108 on 2026-08-18, which is closed. Two reasons, both of which
+0108's closing note names explicitly: this is **port convergence** (a body
+change, as the context above says outright) rather than a call-gate false
+positive, and it is **actionpack**, outside 0108's declared package list. It
+lands in 0023 per CLAUDE.md — a surfaced deviation with no better-fit active
+RFC; 0106 is the convergence home only for activerecord/arel/activesupport._
