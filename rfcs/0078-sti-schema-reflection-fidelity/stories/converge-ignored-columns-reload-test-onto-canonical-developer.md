@@ -1,6 +1,6 @@
 ---
 title: "Converge the ignored-columns reload test onto Rails' canonical Developer"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T15:49:44Z"
+assignee: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---
