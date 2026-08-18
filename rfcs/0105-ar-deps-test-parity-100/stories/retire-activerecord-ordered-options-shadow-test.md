@@ -1,6 +1,6 @@
 ---
 title: "retire-activerecord-ordered-options-shadow-test"
-status: ready
+status: closed
 updated: 2026-08-18
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of 0023-surfaced-deviations/dedupe-ordered-options-test-across-packages (filed 2026-08-16 from #6611), which now carries this story's post-#6692 context."
 ---
 
 ## Context
