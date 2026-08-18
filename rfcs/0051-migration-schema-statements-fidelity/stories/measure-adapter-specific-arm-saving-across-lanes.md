@@ -1,6 +1,6 @@
 ---
 title: "Measure the #6121 adapter-specific-arm saving on all four lanes (AC4 of the snapshot story, shipped unverified)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
