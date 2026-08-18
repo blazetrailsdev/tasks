@@ -1,7 +1,7 @@
 ---
 title: "Retire selectListColumns / buildProjections onto build_select"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: selectListColumns and buildProjections no longer exist anywhere in packages/ or scripts/; relation/query-methods.ts:3048 has buildSelect as the sole projection reader (query_methods.rb:1903-1911)."
 ---
 
 ## Context
