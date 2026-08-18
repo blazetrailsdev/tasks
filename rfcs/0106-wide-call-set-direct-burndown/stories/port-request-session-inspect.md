@@ -1,6 +1,6 @@
 ---
 title: "Port Session#inspect's not-yet-loaded arm"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T13:56:52Z"
+assignee: "converge-abstract-store-loaded-session-predicate"
 blocked-by: null
 closed-reason: null
 ---
