@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 140
 priority: null
 pr: null
 claim: null
@@ -50,3 +50,56 @@ Two divergences in the neighbouring ported bodies
       default, and both `Relation` arms.
 - [ ] No invented `ArgumentError` remains in `buildWithValueFromHash`.
 - [ ] `relation/with.test.ts` green on all three adapters.
+
+## Absorbed: `build-with-value-from-hash-node-and-arg-order`
+
+Merged in during the RFC 0023 triage pass (2026-08-18). Original title: "build-with-value-from-hash-node-and-arg-order"
+
+### Context
+
+Surfaced while burning down RFC 0096 wave-2 naming rows.
+
+`QueryMethods#build_with_value_from_hash`
+(`vendor/rails/activerecord/lib/active_record/relation/query_methods.rb:1923-1927`):
+
+```ruby
+def build_with_value_from_hash(hash)
+  hash.map do |name, value|
+    Arel::Nodes::TableAlias.new(build_with_expression_from_value(value), name)
+  end
+end
+```
+
+trails (`packages/activerecord/src/relation/query-methods.ts:2380-2394`)
+builds `new Nodes.Cte(name, expr)` — a different Arel node class **and** the
+reversed argument order. That makes the RFC 0096 row
+(`new`: Ruby `ref:buildWithExpressionFromValue, ref:name` → TS
+`ref:name, ref:expr`) an a1 finding, not a rename, so wave 2 leaves it
+standing.
+
+The TS body also raises an invented `ArgumentError` on a CTE name that is not
+a bare SQL identifier (`query-methods.ts:2386-2390`); Rails has no such check.
+
+### Acceptance criteria
+
+- [ ] `buildWithValueFromHash` constructs the Rails node
+      (`Arel::Nodes::TableAlias`) with Rails' argument order
+      `(buildWithExpressionFromValue(value), name)`, or the divergence is
+      justified at the call site with the Arel-side reason.
+- [ ] The invented identifier validation is removed or traced to a Rails
+      raise site.
+- [ ] `pnpm parity:api:calls:args` stays green and the `query-methods.ts`
+      `build_with_value_from_hash` naming row is gone.
+- [ ] `with(...)` / CTE tests pass.
+
+## Triage note (2026-08-18)
+
+Merged story; `est-loc` raised to ~140. All three divergences live in the same
+two ported bodies at `relation/query-methods.ts:2359-2394`, so they are one
+read and one PR.
+
+Sequencing: `with-clause-uses-bespoke-ctes-not-with-values` (0023, ~300 LOC) is
+the larger sibling that retires the bespoke `_ctes` array and puts these two
+bodies on the live path via `with_values` + `build_with`
+(`query_methods.rb:1908-1921`). Land THIS story first — it is the cheaper fix
+and leaves that one a pure routing change — and do not fold the two together.
