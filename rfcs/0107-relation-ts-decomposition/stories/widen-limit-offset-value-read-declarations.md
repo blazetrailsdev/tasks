@@ -1,7 +1,7 @@
 ---
 title: "widen-limit-offset-value-read-declarations"
-status: ready
-updated: 2026-08-16
+status: claimed
+updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T02:31:51Z"
+assignee: "invert-where-chain-trio-onto-wherechain"
 blocked-by: null
 closed-reason: null
 ---
