@@ -1,7 +1,7 @@
 ---
 title: "array-utils-renamed-access-and-split-methods"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: arrayFrom/arrayTo are now Array.from/Array.to in core-ext/array/access.ts (Rails names, access.rb:35/47), splitArray is now split() in array-utils.ts, and the ArrayUtils namespace is gone repo-wide."
 ---
 
 ## Context
