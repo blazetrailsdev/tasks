@@ -5,7 +5,7 @@
 // safe to run repeatedly; output is deterministic.
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { firstHeading, loadAll, relPath, REPO_ROOT } from "./lib.mjs";
+import { extractStoryPaths, firstHeading, loadAll, relPath, REPO_ROOT } from "./lib.mjs";
 import { effectiveStoryStatus } from "./validate-lib.mjs";
 
 const { rfcs, stories } = loadAll();
@@ -90,6 +90,9 @@ const indexJson = {
       assignee: fm.assignee ?? null,
       blocked_by: fm["blocked-by"] ?? null,
       closed_reason: fm["closed-reason"] ?? null,
+      // Derived from the body, never authored — the trails files this story
+      // cites, for the reverse file→story lookup.
+      story_paths: extractStoryPaths(s.body),
       file_path: relPath(s.file),
     };
   }),
@@ -116,7 +119,15 @@ const haystack = [
       id: s.id,
       type: "story",
       title: fm.title ?? "",
-      terms: [s.id, fm.title, fm.cluster, ...(fm.packages ?? []), s.rfc, firstHeading(s.body)]
+      terms: [
+        s.id,
+        fm.title,
+        fm.cluster,
+        ...(fm.packages ?? []),
+        s.rfc,
+        firstHeading(s.body),
+        ...extractStoryPaths(s.body),
+      ]
         .filter(Boolean)
         .join(" ")
         .toLowerCase(),
