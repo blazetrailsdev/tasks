@@ -1,6 +1,6 @@
 ---
 title: "CallbackChain#compile drops Rails' type arm and its per-type memo"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
