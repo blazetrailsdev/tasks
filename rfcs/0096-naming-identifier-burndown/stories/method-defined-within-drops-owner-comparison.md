@@ -1,6 +1,6 @@
 ---
 title: "method_defined_within? drops Rails' owner comparison when both classes define the name"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6730
 claim: "2026-08-18T23:11:21Z"
 assignee: "order-check-ignores-suppressed-call-claims"
 blocked-by: null
