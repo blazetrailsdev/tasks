@@ -1,6 +1,6 @@
 ---
 title: "Delete WhereChain#exists — invented surface with no Rails counterpart and no callers"
-status: ready
+status: draft
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
