@@ -1,6 +1,6 @@
 ---
 title: "association-target-setter-must-call-loaded-bang"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6684
 claim: "2026-08-18T01:38:00Z"
 assignee: "association-target-setter-must-call-loaded-bang"
 blocked-by: null
