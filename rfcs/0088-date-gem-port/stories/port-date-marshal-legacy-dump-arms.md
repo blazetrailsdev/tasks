@@ -1,6 +1,6 @@
 ---
 title: "port-date-marshal-legacy-dump-arms"
-status: ready
+status: closed
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded: the case 2 / case 3 arms and old_to_new / decode_day / div_day / div_df landed in PR #6710 alongside the rest of marshalLoad, so there is nothing left to carry."
 ---
 
 ## Context
