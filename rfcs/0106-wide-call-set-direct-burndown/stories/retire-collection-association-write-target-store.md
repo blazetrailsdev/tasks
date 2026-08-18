@@ -1,6 +1,6 @@
 ---
 title: "Retire CollectionAssociation#_writeTargetStore — one @target seat"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
