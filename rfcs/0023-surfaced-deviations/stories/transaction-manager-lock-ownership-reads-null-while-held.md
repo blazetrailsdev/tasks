@@ -1,7 +1,7 @@
 ---
 title: "TransactionManager#synchronize reads _currentLockOwner as null inside a holder's chain"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise no longer in the tree: TransactionManager#synchronize, _currentLockOwner, _lockChain and isLockHeldByCurrentChain are all gone; the lock is now Rails' @connection.lock.synchronize via activesupport/concurrency/monitor.ts, whose synchronize runs the block inside storage.run(owner, ...) so a holding chain always reads as the owner. Re-file with fresh evidence if the ownership read misbehaves under the new monitor."
 ---
 
 ## Context
