@@ -66,6 +66,12 @@ import {
   LOCK_TIMEOUT_EXIT,
   releaseTasksLock,
   listFiltered,
+  storiesTouching,
+  resolveTrailsRepo,
+  churnVerdict,
+  pathChurn90d,
+  formatChurnBanner,
+  formatTouchingCount,
   newRfc,
   newStory,
   emptyBundleReason,
@@ -576,6 +582,163 @@ describe("listFiltered", () => {
     ]);
     const rows = listFiltered(idx, { rfc: "0001-r", status: "ready", cluster: "c2" });
     expect(rows.map((s) => s.id)).toEqual(["c"]);
+  });
+});
+
+describe("storiesTouching", () => {
+  const paths = (over: Partial<StoryEntry> & { story_paths: string[] }) => story(over);
+
+  it("prefers an exact path match over prefix and substring matches", () => {
+    const idx = index([
+      paths({ id: "exact", story_paths: ["packages/activerecord/src/relation.ts"] }),
+      paths({ id: "prefix", story_paths: ["packages/activerecord/src/relation.ts/x.ts"] }),
+      paths({ id: "substr", story_paths: ["a/packages/activerecord/src/relation.ts.bak"] }),
+    ]);
+    expect(storiesTouching(idx, "packages/activerecord/src/relation.ts").map((s) => s.id)).toEqual([
+      "exact",
+    ]);
+  });
+
+  it("matches a directory prefix when no exact path matches", () => {
+    const idx = index([
+      paths({ id: "a", story_paths: ["packages/activerecord/src/associations/builder.ts"] }),
+      paths({ id: "b", story_paths: ["packages/activerecord/src/relation.ts"] }),
+    ]);
+    expect(
+      storiesTouching(idx, "packages/activerecord/src/associations/").map((s) => s.id),
+    ).toEqual(["a"]);
+  });
+
+  it("falls back to a substring match", () => {
+    const idx = index([paths({ id: "a", story_paths: ["packages/arel/src/nodes/binary.ts"] })]);
+    expect(storiesTouching(idx, "nodes/binary").map((s) => s.id)).toEqual(["a"]);
+  });
+
+  it("includes drafts and other open statuses but excludes done and closed", () => {
+    const idx = index([
+      paths({ id: "d", status: "draft", story_paths: ["a.ts"] }),
+      paths({ id: "b", status: "blocked", story_paths: ["a.ts"] }),
+      paths({ id: "done", status: "done", story_paths: ["a.ts"] }),
+      paths({ id: "closed", status: "closed", story_paths: ["a.ts"] }),
+    ]);
+    expect(storiesTouching(idx, "a.ts").map((s) => s.id)).toEqual(["d", "b"]);
+    expect(storiesTouching(idx, "a.ts", { all: true }).map((s) => s.id)).toEqual([
+      "d",
+      "b",
+      "done",
+      "closed",
+    ]);
+  });
+
+  it("skips stories from an older index with no story_paths", () => {
+    const stale = story({ id: "old" });
+    delete (stale as { story_paths?: string[] }).story_paths;
+    const idx = index([stale, paths({ id: "new", story_paths: ["a.ts"] })]);
+    expect(storiesTouching(idx, "a.ts").map((s) => s.id)).toEqual(["new"]);
+  });
+});
+
+describe("resolveTrailsRepo", () => {
+  const roots: string[] = [];
+  const mkTrails = () => {
+    const root = mkdtempSync(join(tmpdir(), "trails-"));
+    roots.push(root);
+    mkdirSync(join(root, ".git"));
+    mkdirSync(join(root, "packages"));
+    return root;
+  };
+  afterEach(() => {
+    for (const r of roots.splice(0)) rmSync(r, { recursive: true, force: true });
+  });
+
+  it("prefers the flag, then $TRAILS_DIR, then the enclosing checkout", () => {
+    const root = mkTrails();
+    const flagged = mkTrails();
+    const fromEnv = mkTrails();
+    expect(resolveTrailsRepo(root, flagged, { TRAILS_DIR: fromEnv })).toBe(flagged);
+    expect(resolveTrailsRepo(root, undefined, { TRAILS_DIR: fromEnv })).toBe(fromEnv);
+    expect(resolveTrailsRepo(join(root, "packages"), undefined, {})).toBe(root);
+  });
+
+  it("does not mistake a tasks symlink's parent for the trails repo", () => {
+    // The per-worktree `tasks` symlink resolves under tasks-worktrees/, a
+    // sibling tree — resolving from there must not find a trails checkout,
+    // which would otherwise fail silently as a churn count of zero.
+    const outer = mkdtempSync(join(tmpdir(), "sibling-"));
+    roots.push(outer);
+    const tasksWorktree = join(outer, "tasks-worktrees", "w");
+    mkdirSync(join(tasksWorktree, ".git"), { recursive: true });
+    expect(resolveTrailsRepo(tasksWorktree, undefined, {})).toBe(null);
+  });
+
+  it("rejects an explicit repo that is not a checkout instead of measuring zero churn", () => {
+    // A typo'd --repo would otherwise yield 0 commits, which renders as
+    // `cold` — the verdict that tells the caller to file a story.
+    const notARepo = mkdtempSync(join(tmpdir(), "notrepo-"));
+    roots.push(notARepo);
+    expect(resolveTrailsRepo(notARepo, notARepo, {})).toBe(null);
+    expect(resolveTrailsRepo(notARepo, undefined, { TRAILS_DIR: notARepo })).toBe(null);
+  });
+
+  it("returns null when no enclosing checkout has both .git and packages/", () => {
+    const bare = mkdtempSync(join(tmpdir(), "bare-"));
+    roots.push(bare);
+    mkdirSync(join(bare, "packages"));
+    expect(resolveTrailsRepo(bare, undefined, {})).toBe(null);
+  });
+});
+
+describe("churnVerdict", () => {
+  it("splits at 12 and 2 commits", () => {
+    expect(churnVerdict(12)).toBe("hot");
+    expect(churnVerdict(11)).toBe("moderate");
+    expect(churnVerdict(2)).toBe("moderate");
+    expect(churnVerdict(1)).toBe("cold");
+    expect(churnVerdict(0)).toBe("cold");
+  });
+});
+
+describe("pathChurn90d", () => {
+  it("counts the commit lines git prints", () => {
+    execFileSyncMock.mockReturnValue("abc one\ndef two\n");
+    expect(pathChurn90d("/repo", "a.ts")).toBe(2);
+  });
+
+  it("reports zero for a path git knows nothing about", () => {
+    execFileSyncMock.mockReturnValue("");
+    expect(pathChurn90d("/repo", "a.ts")).toBe(0);
+  });
+
+  it("returns null when git cannot be asked, rather than a fabricated zero", () => {
+    execFileSyncMock.mockImplementation(() => {
+      throw new Error("not a git repository");
+    });
+    expect(pathChurn90d("/repo", "a.ts")).toBe(null);
+  });
+});
+
+describe("formatChurnBanner", () => {
+  it("names the churn verdict and what it means, or says churn is unavailable", () => {
+    expect(formatChurnBanner("a.ts", 14, "hot")).toBe(
+      "a.ts — 14 commits/90d (hot — likely touched anyway)",
+    );
+    expect(formatChurnBanner("a.ts", 0, "cold")).toBe(
+      "a.ts — 0 commits/90d (cold — rarely touched)",
+    );
+    expect(formatChurnBanner("a.ts", null, null)).toContain("churn unavailable");
+  });
+});
+
+describe("formatTouchingCount", () => {
+  it("states the no-match case rather than printing an empty table", () => {
+    expect(formatTouchingCount(0, false)).toBe("no open stories cite this path");
+    expect(formatTouchingCount(0, true)).toBe("no stories cite this path");
+  });
+
+  it("agrees in number and scopes the count to open stories by default", () => {
+    expect(formatTouchingCount(1, false)).toBe("1 open story cites this path:");
+    expect(formatTouchingCount(46, false)).toBe("46 open stories cite this path:");
+    expect(formatTouchingCount(46, true)).toBe("46 stories cite this path:");
   });
 });
 

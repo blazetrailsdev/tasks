@@ -622,6 +622,121 @@ export function listFiltered(
   });
 }
 
+// ──────────────────── path lookup (`touching`) ────────────────────
+
+// Statuses that mean "someone still intends to do this". Drafts count: most
+// open stories are drafts, and a draft story is exactly the triage record
+// `touching` exists to surface.
+export const OPEN_STORY_STATUSES: readonly StoryStatus[] = [
+  "draft",
+  "ready",
+  "claimed",
+  "in-progress",
+  "blocked",
+];
+
+// Stories whose body cites `query`, matched in tiers: an exact path hit wins,
+// else a directory-prefix hit, else a substring hit. Only the first tier that
+// matches anything is returned, so a precise query is never diluted by the
+// loose fallbacks. Stories from an index built before `story_paths` existed
+// have no paths to match and are skipped.
+export function storiesTouching(
+  index: Index,
+  query: string,
+  opts: { all?: boolean } = {},
+): StoryEntry[] {
+  const q = query.replace(/^\.\//, "");
+  const dir = q.endsWith("/") ? q : `${q}/`;
+  const scoped = index.stories.filter(
+    (s) => opts.all || (s.status !== null && OPEN_STORY_STATUSES.includes(s.status)),
+  );
+  const tier = (match: (p: string) => boolean) =>
+    scoped.filter((s) => (s.story_paths ?? []).some(match));
+  const exact = tier((p) => p === q);
+  if (exact.length) return exact;
+  const prefixed = tier((p) => p.startsWith(dir));
+  if (prefixed.length) return prefixed;
+  return tier((p) => p.includes(q));
+}
+
+// The trails checkout to measure churn in. Deliberately NOT derived from
+// TASKS_DIR: the per-worktree `tasks` symlink resolves to a *sibling* tree
+// under tasks-worktrees/, so its parent is not the trails repo. cwd is the
+// reliable anchor — `pnpm tasks` runs from inside the trails worktree.
+export function resolveTrailsRepo(
+  cwd: string,
+  flag?: string,
+  env: NodeJS.ProcessEnv = process.env,
+): string | null {
+  // An explicit --repo/$TRAILS_DIR that isn't a checkout returns null rather
+  // than being handed to git: measuring churn in a non-repo yields zero, which
+  // renders as `cold` — the verdict that tells the caller to file a story. A
+  // typo'd flag must not manufacture that answer.
+  const explicit = envDir(flag) ?? envDir(env.TRAILS_DIR);
+  if (explicit) return existsSync(join(explicit, ".git")) ? resolve(explicit) : null;
+  let dir = resolve(cwd);
+  for (;;) {
+    if (existsSync(join(dir, ".git")) && existsSync(join(dir, "packages"))) return dir;
+    const parent = dirname(dir);
+    if (parent === dir) return null;
+    dir = parent;
+  }
+}
+
+export type ChurnVerdict = "hot" | "moderate" | "cold";
+
+export function churnVerdict(commits90d: number): ChurnVerdict {
+  if (commits90d >= 12) return "hot";
+  if (commits90d >= 2) return "moderate";
+  return "cold";
+}
+
+// Commits in the last 90 days touching `path`, or null when git could not be
+// asked at all. Null and 0 are deliberately distinct: 0 means "measured, and
+// nothing touched it" (a genuine `cold`, which tells the caller to file a
+// story), while a swallowed failure reported as 0 would fabricate that same
+// verdict from no evidence. A path git simply doesn't know is a real 0.
+export function pathChurn90d(repo: string, path: string): number | null {
+  try {
+    const out = execFileSync(
+      "git",
+      ["-C", repo, "log", "--oneline", "--since=90.days", "--", path],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
+    ).trim();
+    return out === "" ? 0 : out.split("\n").length;
+  } catch {
+    return null;
+  }
+}
+
+// What each verdict means for the caller's actual decision: file a story, or
+// note it as a driveby on work that is coming anyway.
+const CHURN_GLOSS: Record<ChurnVerdict, string> = {
+  hot: "likely touched anyway",
+  moderate: "occasional edits",
+  cold: "rarely touched",
+};
+
+// The churn line prints whether or not any story matched — a cold path with no
+// open stories is the combination that means "file it now", and it is the
+// answer a caller most needs. With no trails checkout the column is omitted
+// with one note and the command still succeeds.
+export function formatChurnBanner(
+  query: string,
+  churn: number | null,
+  verdict: ChurnVerdict | null,
+): string {
+  return churn === null || verdict === null
+    ? `${query} — churn unavailable (no trails checkout resolved; pass --repo or set $TRAILS_DIR)`
+    : `${query} — ${churn} commits/90d (${verdict} — ${CHURN_GLOSS[verdict]})`;
+}
+
+export function formatTouchingCount(count: number, all: boolean): string {
+  const scope = all ? "" : "open ";
+  if (count === 0) return `no ${scope}stories cite this path`;
+  return `${count} ${scope}${count === 1 ? "story cites" : "stories cite"} this path:`;
+}
+
 // ──────────────────── mutations ────────────────────
 
 // Today's date (UTC, YYYY-MM-DD) for the `updated:` frontmatter stamp. Every
@@ -3445,6 +3560,7 @@ function main(): void {
     "clusters",
     "packages",
     "stale-hours",
+    "repo",
   ];
   const rfcPriorityClear = cmd === "rfc" && flags.priority === true && flags.clear === true;
   for (const k of valueFlags) {
@@ -3504,6 +3620,36 @@ function main(): void {
       );
       if (flags.json) console.log(JSON.stringify(rows, null, 2));
       else fmt(rows, staleIds, rfcPriorityMap(idx));
+      break;
+    }
+    case "touching": {
+      const query = pos[0];
+      if (!query) usage();
+      const idx = readIndexSource().index;
+      const rows = storiesTouching(idx, query, { all: flags.all === true });
+      const repo = resolveTrailsRepo(process.cwd(), stringFlag(flags, "repo"));
+      const churn = repo === null ? null : pathChurn90d(repo, query);
+      const verdict = churn === null ? null : churnVerdict(churn);
+      if (flags.json) {
+        console.log(
+          JSON.stringify(
+            {
+              query,
+              path_churn_90d: churn,
+              churn_verdict: verdict,
+              trails_repo: repo,
+              stories: rows,
+            },
+            null,
+            2,
+          ),
+        );
+      } else {
+        console.log(formatChurnBanner(query, churn, verdict));
+        console.log("");
+        console.log(formatTouchingCount(rows.length, flags.all === true));
+        if (rows.length > 0) fmt(rows, undefined, rfcPriorityMap(idx));
+      }
       break;
     }
     case "show": {
@@ -3727,6 +3873,9 @@ function usage(): never {
                                                 banner and --json flag the overrun)
   list [--rfc <slug>] [--status <v>] [--cluster <n>] [--json]
   show <id>
+  touching <path> [--all] [--repo <trails checkout>] [--json]
+                                               (stories citing a path, plus its 90-day churn;
+                                                --all includes done/closed)
   status
 
   claim <id...> [--assignee <name>]            (all-or-nothing across ids: one commit, one lock)
