@@ -1,6 +1,6 @@
 ---
 title: "converge-actiondispatch-request-env-clone-to-rack-shared-env"
-status: draft
+status: closed
 updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of 0108-call-gate-false-positives/request-env-by-reference, which was filed the same day for the same Request env clone (http/request.ts:157) and is already claimed."
 ---
 
 ## Context
