@@ -70,3 +70,17 @@ to `true` if the window closes.
       `subclassFromAttributesForNew` is deleted, not reworded.
 - [ ] Existing STI-at-new and STI-at-instantiate suites stay green;
       `parity:api` / `parity:test` deltas non-negative.
+
+## Evidence from `vegetables-model-assigns-inheritance-column-rails-overrides-method` (PR pending, 2026-08-18)
+
+`vegetables.ts` was converged onto Rails' `def self.inheritance_column` spelling
+(vegetables.rb:6) — a `static override get inheritanceColumn()` — which leaves
+`_inheritanceColumn` unset, so `stiEnabled(Vegetable)` is now **false** for that
+tree while `Vegetable.inheritanceColumn` still answers `"custom_type"`.
+
+STI dispatch was UNCHANGED: `inheritance.test.ts` stays green, including
+`Vegetable.find(1) instanceof Cucumber` / `Vegetable.find(2) instanceof Cabbage`
+(inheritance.test.ts:208-211) and the `becomes`/`becomesBang` cases. So the
+database-row dispatch paths this tree exercises do NOT in fact depend on the
+`stiEnabled` sentinel, which is direct evidence that the disjunct is reading a
+trails-invented signal rather than a load-bearing one.
