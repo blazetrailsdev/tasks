@@ -1,7 +1,7 @@
 ---
 title: "Model.moduleName carries no @noRailsEquivalent receipt"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into model-name-use-relative-model-naming-detection — both are about the namespace Model.modelName passes to Name.new (naming.rb:271-276); moduleName is the carrier that story replaces or documents, so it is one 90-LOC change"
 ---
 
 # `Model.moduleName` carries no `@noRailsEquivalent` receipt
