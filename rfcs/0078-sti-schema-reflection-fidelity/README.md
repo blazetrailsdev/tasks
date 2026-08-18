@@ -1,9 +1,9 @@
 ---
 rfc: "0078-sti-schema-reflection-fidelity"
 title: "STI / schema-reflection attribute-definition fidelity"
-status: draft
+status: active
 created: 2026-07-26
-updated: 2026-07-27
+updated: 2026-08-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
