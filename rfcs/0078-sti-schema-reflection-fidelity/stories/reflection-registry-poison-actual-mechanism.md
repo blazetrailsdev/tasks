@@ -1,6 +1,6 @@
 ---
 title: "Establish the real cross-file reflection-memo poison mechanism (zero rebinds observed; documented cause is wrong)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null

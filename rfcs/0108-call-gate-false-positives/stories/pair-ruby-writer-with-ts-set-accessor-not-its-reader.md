@@ -1,6 +1,6 @@
 ---
 title: "Pair a Ruby name= writer with the TS set accessor, not its same-named reader"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null

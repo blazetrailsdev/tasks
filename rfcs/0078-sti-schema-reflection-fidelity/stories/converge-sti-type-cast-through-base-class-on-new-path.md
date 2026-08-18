@@ -1,6 +1,6 @@
 ---
 title: "Cast the STI type value through base_class on the new/attributes path"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
