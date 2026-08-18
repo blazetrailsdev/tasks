@@ -1,6 +1,6 @@
 ---
 title: "Converge referencesEagerLoadedTables onto Rails' references_values.map(&:to_s)"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6726
 claim: "2026-08-18T21:06:56Z"
 assignee: "converge-references-eager-loaded-tables-symbol-to-s"
 blocked-by: null
