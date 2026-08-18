@@ -1,7 +1,7 @@
 ---
 title: "Stop caching ad-hoc non-Association holders in _associationInstances"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into association-cache-holds-only-association-instances — duplicate story describing the same deviation; the surviving body carries both sets of Rails and trails file:line citations"
 ---
 
 ## Context
