@@ -1,7 +1,7 @@
 ---
 title: "Let the bare attribute_method_pattern generate the reader instead of skipping it"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
