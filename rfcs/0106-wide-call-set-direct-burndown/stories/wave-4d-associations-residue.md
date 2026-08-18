@@ -1,6 +1,6 @@
 ---
 title: "Wave 4d: the associations residue"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 600
-pr: null
+pr: 6725
 claim: "2026-08-18T20:58:55Z"
 assignee: "wave-4d-associations-residue"
 blocked-by: null
