@@ -1,7 +1,7 @@
 ---
 title: "structurally_compatible? carries a same-model guard Rails does not have"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: structurallyCompatible now lives in relation/query-methods.ts:1573 as the one-line structurallyIncompatibleValuesFor(other).length === 0 body; the this._model !== other._model guard is gone."
 ---
 
 # `structurally_compatible?` carries a model check Rails does not have
