@@ -1,7 +1,7 @@
 ---
 title: "flattened-args-drops-rails-hash-arm"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: query-methods.ts:2210 flattenedArgs now ports both arms — 'isPlainObject(e) || e instanceof Map || Array.isArray(e) ? flattenedArgs(toA(e)) : e' — recursing through the to_a pair form, matching query_methods.rb:2077-2079. The ratifying call-site comment is gone."
 ---
 
 ## Context
