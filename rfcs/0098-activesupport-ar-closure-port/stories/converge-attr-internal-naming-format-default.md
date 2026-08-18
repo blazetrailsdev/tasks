@@ -1,6 +1,6 @@
 ---
 title: 'Converge attr_internal_naming_format default to Rails'' "_%s"'
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6703
 claim: "2026-08-18T14:40:54Z"
 assignee: "request-forgery-protection-this-typed-mixin"
 blocked-by: null
