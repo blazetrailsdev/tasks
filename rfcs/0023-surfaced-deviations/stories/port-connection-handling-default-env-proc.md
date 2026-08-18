@@ -1,7 +1,7 @@
 ---
 title: "port-connection-handling-default-env-proc"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-establish-connection-default-env-funnel — that story's scope IS porting DEFAULT_ENV (connection_handling.rb:7) and funnelling every resolver through it"
 ---
 
 # Port `ConnectionHandling::DEFAULT_ENV` so the three `.call` sites converge
