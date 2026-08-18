@@ -1,7 +1,7 @@
 ---
 title: "Merger#qualifyOrderForOther rewrites bare-string orders Rails leaves untouched"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: qualifyOrderForOther and bareColumn are gone from relation/merger.ts; merger.ts:212-217 now copies other.orderValues verbatim through reorderBang/orderBang, so a bare-string order arg stays bare across a cross-model merge."
 ---
 
 ## Context
