@@ -1,7 +1,7 @@
 ---
 title: "Route insert_all's scalar VALUES quoting through the adapter and delete quoteSqlValue"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: quoteSqlValue and _registerQuoteSqlValue no longer exist anywhere in packages/ or scripts/; insert-all.ts renders VALUES through the adapter path."
 ---
 
 ## Context
