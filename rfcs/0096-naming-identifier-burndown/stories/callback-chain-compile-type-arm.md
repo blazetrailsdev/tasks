@@ -1,6 +1,6 @@
 ---
 title: "CallbackChain#compile drops Rails' type arm and its per-type memo"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:37:42Z"
+assignee: "port-test-date-sub-class-propagation"
 blocked-by: null
 closed-reason: null
 ---
