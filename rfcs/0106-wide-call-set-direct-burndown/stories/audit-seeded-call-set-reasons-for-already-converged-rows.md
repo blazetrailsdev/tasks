@@ -1,6 +1,6 @@
 ---
 title: "Audit the seeded call-set baseline reasons for rows whose divergence is already gone"
-status: ready
+status: draft
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
