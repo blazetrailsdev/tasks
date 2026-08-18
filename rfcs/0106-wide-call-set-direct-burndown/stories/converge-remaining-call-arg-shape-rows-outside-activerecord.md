@@ -2,7 +2,7 @@
 title: "converge-remaining-call-arg-shape-rows-outside-activerecord"
 status: ready
 updated: 2026-08-18
-rfc: "0108-call-gate-false-positives"
+rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
 deps: []
@@ -73,3 +73,10 @@ them silently:
       otherwise leave the row with a reason that names the TypeScript
       shortcoming precisely.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green.
+
+_Moved from RFC 0108 on 2026-08-18. 0108's charter is call-gate **false
+positives** — the tool reporting a mismatch where the port is faithful — and its
+stop rule routes port convergence to this RFC. These rows are the opposite case:
+real ports passing something other than what Rails passes, which a 0108 tooling
+fix stopped hiding. `converge-accessor-surfaced-call-set-rows` (already here) is
+the same shape and set the precedent._
