@@ -1,7 +1,7 @@
 ---
 title: 'Converge attr_internal_naming_format default to Rails'' "_%s"'
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
