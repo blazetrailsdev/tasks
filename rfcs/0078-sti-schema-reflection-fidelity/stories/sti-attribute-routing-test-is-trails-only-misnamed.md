@@ -1,6 +1,6 @@
 ---
 title: "sti-attribute-routing.test.ts is a trails-only invention test under a non-.trails name"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null

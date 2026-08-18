@@ -1,6 +1,6 @@
 ---
 title: "Sweep joins/leftOuterJoins association-name call sites onto the colon Symbol spelling (~400 LOC)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
