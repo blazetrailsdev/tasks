@@ -1,6 +1,6 @@
 ---
 title: "ThroughReflection#source_reflection_name swallows NameError where Rails lets it propagate"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
