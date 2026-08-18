@@ -2,7 +2,7 @@
 title: "Add pnpm tasks touching <path>"
 status: ready
 updated: 2026-08-18
-rfc: "0000-story-file-lookup"
+rfc: "0109-story-file-lookup"
 cluster: file-lookup
 packages: []
 deps:

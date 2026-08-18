@@ -1,5 +1,5 @@
 ---
-rfc: "0000-story-file-lookup"
+rfc: "0109-story-file-lookup"
 title: "Forward file→story lookup for the tasks CLI"
 status: active
 created: 2026-08-18
@@ -15,7 +15,7 @@ clusters:
   - file-lookup
 ---
 
-# RFC — Forward file→story lookup for the tasks CLI
+# RFC 0109 — Forward file→story lookup for the tasks CLI
 
 ## Summary
 
