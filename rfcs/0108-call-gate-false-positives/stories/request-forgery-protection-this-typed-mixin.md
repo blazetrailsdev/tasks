@@ -58,6 +58,30 @@ Scope: ~30 signatures in the source file plus ~63 call sites across
 `metal/request-forgery-protection.test.ts` (323 lines) and
 `controller/request-forgery-protection.test.ts` (831 lines).
 
+## Also in scope: the module's own `handle_unverified_request`
+
+`request_forgery_protection.rb:401-409` is the module-level dispatcher:
+
+    def handle_unverified_request
+      protection_strategy = forgery_protection_strategy.new(self)
+
+      if protection_strategy.respond_to?(:warning_message)
+        protection_strategy.warning_message = unverified_request_warning_message
+      end
+
+      protection_strategy.handle_unverified_request
+    end
+
+It is not ported anywhere in the TS file — the three strategy classes define
+`handleUnverifiedRequest` and nothing calls them, and
+`unverifiedRequestWarningMessage` (request-forgery-protection.ts:307) is a free
+function with no caller into a strategy. PR #6699 gave
+`ProtectionMethods::Exception` its Rails `warning_message` accessor
+(rb:307,314) so the raised `InvalidAuthenticityToken` carries the explanation,
+but with no dispatcher to set it the field has no production writer yet. That
+dispatcher is a module instance method taking implicit `self`, so it belongs to
+this story rather than to a separate one.
+
 ## Acceptance criteria
 
 - [ ] Every module member in `request-forgery-protection.ts` that Rails defines
@@ -69,5 +93,10 @@ Scope: ~30 signatures in the source file plus ~63 call sites across
       are DELETED by hand (only-shrink; no `--write` reseed), and the matching
       `call-mismatches-unreviewed` mark is tightened with
       `pnpm parity:api:calls:tighten`.
+- [ ] `handle_unverified_request` (rb:401-409) is ported, so
+      `Exception#warningMessage` is set from `unverifiedRequestWarningMessage`
+      on the real request path and the Rails-named
+      `raised exception message explains why it occurred` test can assert it
+      end to end against the metal port.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green;
       actionpack tests pass.
