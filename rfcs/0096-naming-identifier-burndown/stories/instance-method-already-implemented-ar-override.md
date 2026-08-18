@@ -1,6 +1,6 @@
 ---
 title: "Give ActiveRecord its own instance_method_already_implemented? instead of inlining an arm in ActiveModel"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:27:43Z"
+assignee: "retire-relation-is-named-join-value-discriminator"
 blocked-by: null
 closed-reason: null
 ---

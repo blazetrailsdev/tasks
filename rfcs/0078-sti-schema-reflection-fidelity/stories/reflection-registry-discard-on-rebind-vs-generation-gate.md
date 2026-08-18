@@ -1,7 +1,7 @@
 ---
 title: "Converge reflection memo invalidation onto Zeitwerk discard semantics (drop the trails-invented generation gate)"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 deps: ["reflection-registry-poison-actual-mechanism"]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T18:27:43Z"
+assignee: "retire-relation-is-named-join-value-discriminator"
 blocked-by: null
 closed-reason: null
 ---
