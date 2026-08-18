@@ -1,6 +1,6 @@
 ---
 title: "Converge referencesEagerLoadedTables onto Rails' references_values.map(&:to_s)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
