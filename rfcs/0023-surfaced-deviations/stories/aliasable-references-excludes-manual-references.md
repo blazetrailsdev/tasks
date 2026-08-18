@@ -1,7 +1,7 @@
 ---
 title: "Relation#_aliasableReferences excludes manual .references() from join aliasing"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Already converged: relation/query-methods.ts:3535 now passes the full referencesValues into jd.joinConstraints(stashedJoins, tracker, references) as Rails' build_joins does (query_methods.rb:1881-1897); _aliasableReferences and _manualReferences no longer exist repo-wide."
 ---
 
 ## Context
