@@ -1,6 +1,6 @@
 ---
 title: "Drop Ruby core/stdlib receiver calls in core_ext bodies from the call gate"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
