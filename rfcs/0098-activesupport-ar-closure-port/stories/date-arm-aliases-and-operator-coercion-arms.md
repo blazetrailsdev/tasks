@@ -1,6 +1,6 @@
 ---
 title: "Port date-ext.ts's remaining aliases and the Date operator coercion arms"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T14:40:54Z"
+assignee: "request-forgery-protection-this-typed-mixin"
 blocked-by: null
 closed-reason: null
 ---
