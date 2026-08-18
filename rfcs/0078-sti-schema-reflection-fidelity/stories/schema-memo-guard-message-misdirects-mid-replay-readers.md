@@ -1,6 +1,6 @@
 ---
 title: "schema-memo-read-through-guard's message sends mid-replay readers to ownSchemaMemo, which reds the suite"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
