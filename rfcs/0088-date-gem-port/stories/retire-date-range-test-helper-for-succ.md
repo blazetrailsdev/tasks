@@ -1,6 +1,6 @@
 ---
 title: "Retire test-date-strftime's dateRange helper once Date#succ lands"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null

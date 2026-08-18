@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#join wraps a String relation where Rails passes it through"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
