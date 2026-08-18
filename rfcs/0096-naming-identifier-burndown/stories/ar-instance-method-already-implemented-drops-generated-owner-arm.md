@@ -1,6 +1,6 @@
 ---
 title: "AR instance_method_already_implemented? collapses the superclass/GeneratedAttributeMethods branch into a prototype probe"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 6720
 claim: "2026-08-18T20:31:56Z"
 assignee: "wave-4c-ar-core-residue-attributes"
 blocked-by: null
