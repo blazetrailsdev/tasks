@@ -1,7 +1,7 @@
 ---
 title: "Time#change ports Rational sub-second arithmetic as lossy float division"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into time-change-local-and-utc-offset-arms-conflated — both are divergences inside the single Time#change body (core_ext/time/calculations.rb:130-176)"
 ---
 
 ## Context
