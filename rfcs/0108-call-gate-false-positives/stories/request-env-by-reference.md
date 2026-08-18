@@ -1,6 +1,6 @@
 ---
 title: "request-env-by-reference"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6701
 claim: "2026-08-18T14:06:53Z"
 assignee: "request-env-by-reference"
 blocked-by: null
