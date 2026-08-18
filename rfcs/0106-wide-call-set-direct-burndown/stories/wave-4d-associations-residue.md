@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 600
-pr: 6725
+pr: 6727
 claim: "2026-08-18T20:58:55Z"
 assignee: "wave-4d-associations-residue"
 blocked-by: null
