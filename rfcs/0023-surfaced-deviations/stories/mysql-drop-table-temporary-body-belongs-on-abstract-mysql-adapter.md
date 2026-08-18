@@ -1,7 +1,7 @@
 ---
 title: "Move MySQL dropTable TEMPORARY body to AbstractMysqlAdapter so the mixed-in companion dropTable isn't dead"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into handle-warnings-body-belongs-on-abstract-mysql-adapter — same deviation class across the same file pair: a body defined on the concrete Mysql2Adapter that Rails defines on AbstractMysqlAdapter, leaving the mixed-in companion dead"
 ---
 
 ## Context
