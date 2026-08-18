@@ -1,6 +1,6 @@
 ---
 title: "OrderedOptions#to_s renders values with JSON.stringify, not Ruby #inspect"
-status: draft
+status: closed
 updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into retire-remaining-ruby-inspect-copies-onto-the-activesupport-port — this is one of the private partial Object#inspect copies that story retires onto core-ext/object/inspect.ts; retiring the copy IS the fix"
 ---
 
 ## Context
