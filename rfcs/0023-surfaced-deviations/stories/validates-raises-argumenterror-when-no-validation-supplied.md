@@ -1,7 +1,7 @@
 ---
 title: "validates raises ArgumentError when no validation is supplied"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-model-validates-onto-rails-generic-lookup — Rails' 'You need to supply at least one validation' ArgumentError (validates.rb:106) falls out of that rewrite"
 ---
 
 ## Context
