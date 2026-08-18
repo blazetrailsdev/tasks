@@ -1,6 +1,6 @@
 ---
 title: "AR instance_method_already_implemented? collapses the superclass/GeneratedAttributeMethods branch into a prototype probe"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0096-naming-identifier-burndown"
 cluster: null
