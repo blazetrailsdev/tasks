@@ -1,6 +1,6 @@
 ---
 title: "Drop whereBang's nil short-circuit — where! has no guard"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6681
 claim: "2026-08-18T00:47:59Z"
 assignee: "converge-date-time-receiver-threaded-call-args"
 blocked-by: null
