@@ -1,6 +1,6 @@
 ---
 title: "Wave 4c: the activerecord core residue"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 700
-pr: null
+pr: 6719
 claim: "2026-08-18T20:02:44Z"
 assignee: "wave-4c-ar-core-residue"
 blocked-by: null
