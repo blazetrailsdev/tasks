@@ -1,6 +1,6 @@
 ---
 title: "port-test-date-strftime-different-format"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6708
 claim: "2026-08-18T18:14:58Z"
 assignee: "port-test-date-strftime-different-format"
 blocked-by: null
