@@ -1,6 +1,6 @@
 ---
 title: "ThroughReflection#source_reflection_name swallows NameError where Rails lets it propagate"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6723
 claim: "2026-08-18T20:36:49Z"
 assignee: "wave-4c-ar-core-residue-config"
 blocked-by: null
