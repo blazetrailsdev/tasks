@@ -56,3 +56,20 @@ Baseline entry carrying this finding:
 - Tests mirror the Rails cases verbatim (check
   `vendor/rails/activerecord/test/cases/` first).
 - The `destroy` / `model` wide-baseline entry is removed.
+
+## Triage note (2026-08-18): the baseline path in this body is stale
+
+This story cites `scripts/api-compare/call-mismatches-wide-exclude/…`. **That
+tree no longer exists.** RFC 0084 folded the narrow RFC 0044 ratchet and the
+wide one into a single gate over a single baseline:
+`scripts/api-compare/call-mismatches-exclude/<package>/<tsFile .ts→.json>`,
+gated by `pnpm parity:api:calls` (call-set rows) and `pnpm parity:api:calls:args`
+(`kind: "args"` rows, RFC 0095).
+
+Look for the row there, under the same `rubyName` / `call` pair. Everything else
+in this story — the Rails and trails `file:line` citations, the described
+divergence — is unaffected; only the path to the baseline row changed.
+
+Remember the baseline is only-shrink: on converging, delete the one row by hand
+(via `serializeBaseline`, sorted — never `--write`/reseed), then
+`pnpm parity:api:calls:tighten <package>/<file>.json` for the stale high-water mark.
