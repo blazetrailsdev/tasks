@@ -1,7 +1,7 @@
 ---
 title: "time-with-zone-residue-structural-blockers"
 status: blocked
-updated: 2026-08-14
+updated: 2026-08-18
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -16,134 +16,54 @@ blocked-by: "Sections A, B-collision and D remain, each on its own undecided str
 closed-reason: null
 ---
 
-## Context
+## Re-scope (2026-08-18)
 
-Remainder of `time-with-zone-and-duration-residue` after PR #6465, which landed
-27 of the 48 members `pnpm parity:api --package activesupport` reported missing
-across that story's 11 files (3 new files created; activesupport overall
-1294 → 1321 matched, AR closure 687 → 714).
+This story carried three independent arms. Two have been split out and are no
+longer blocked; **this story is now arm (D) only** — where the `acts_like`
+markers live.
 
-The story estimated ~45 members / ~250 LOC. The real figure was 48 members over
-11 files, and the LOC ceiling was waived by the maintainer mid-flight. The 21
-below were left out because each has a **structural blocker**, not because of
-volume — they should not be picked up as a straight "port the rest" task
-without deciding the questions named here first.
+| arm                                                                          | disposition                                                                                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| (A) `TimeWithZone` four-arg ctor + `TimeZone` period lookups                 | **Split out.** Its blocking premise was stale: `TimezonePeriod` (`values/time-zone.ts:543`) and `periodForUtc` (`:1076`) already landed, so "does TimeZone grow a Period type" is answered — it did. Now `port-time-zone-local-period-lookups` (ready) + `widen-time-with-zone-ctor-onto-rails-four-argument-shape` (deps on it). 9 members. |
+| (B) `to_formatted_s` / `readable_inspect` / `default_inspect` collision      | **Split out** as `split-time-ext-by-receiver-onto-the-rails-layout` (ready). Not a judgement call: `parity:api` matches on the Rails layout and `time-ext.ts` hosts four Rails files across three receivers. 2 members.                                                                                                                      |
+| (C) `preserve_timezone` / `system_local_time?` / `active_support_local_zone` | Already landed in #6547.                                                                                                                                                                                                                                                                                                                     |
+| (D) `acts_like` markers                                                      | **Stays here, still blocked.** 1 member (`acts_like_time?`).                                                                                                                                                                                                                                                                                 |
 
-### A. TZInfo `Period` cluster — `time_with_zone.rb` (5)
+## The remaining question
 
-`period`, `incorporate_utc_offset`, `get_period_and_ensure_valid_local_time`,
-`transfer_time_values_to_utc_constructor`, `wrap_with_time_zone`
-(`vendor/rails/activesupport/lib/active_support/time_with_zone.rb:72-74`,
-`:562-602`).
+`Date#acts_like_date?` / `Time#acts_like_time?` are markers Rails defines by
+reopening `Date` and `Time`. trails cannot reopen its equivalents: `DateTime.parse`
+returns `Temporal.PlainDateTime | Temporal.ZonedDateTime`, never an instance of
+a class activesupport owns. PR #6465 put the marker on a class at the Rails
+path, which was inert — nothing the parser returns is an instance of it.
 
-All five hinge on Rails' four-argument constructor
-`TimeWithZone.new(utc_time, time_zone, local_time = nil, period = nil)`
-(`time_with_zone.rb:56`) and on a `TZInfo::TimezonePeriod` object.
-`packages/activesupport/src/time-with-zone.ts:93` is `constructor(instant:
-Temporal.Instant, timeZone: TimeZone)` and delegates all period/DST logic to
-`Temporal.ZonedDateTime`, so there is no `Period` value for `period` to return
-and no third/fourth constructor seat for the others to fill.
+Two admissible resolutions, neither obviously right:
 
-Decide first: does `TimeZone` grow `period_for_utc` / `periods_for_local` and a
-`Period` type (converging toward Rails), or is the Temporal delegation ratified
-with call-site cites? The former is the CLAUDE.md-preferred direction and is a
-much larger job than the member count suggests.
+1. **Install the markers on the Temporal polyfill prototypes at import time.**
+   Keeps the Rails file path, so `parity:api` credits the member where Rails
+   defines it. Costs a global side effect on a third-party package, and
+   overstates the mapping — a `PlainDateTime` is not only ever a `DateTime`.
+2. **Move the markers into `@blazetrails/date`,** where the values are
+   constructed. Honest about ownership and side-effect-free, but gives up the
+   Rails file path, so the member is credited at a path Rails does not have —
+   or not credited at all.
 
-`marshal_dump` / `marshal_load` (`time_with_zone.rb:529-535`) are the reasoned
-SKIP — Ruby `Marshal` has no JS counterpart. They should go into a `SKIP_GROUPS`
-entry in `scripts/parity/conventions.ts` with that reason rather than be left as
-bare missing rows.
-
-### B. `to_formatted_s` / `readable_inspect` / `default_inspect` collision (12)
-
-`core_ext/date_time/conversions.rb` (8: `to_formatted_s`, `readable_inspect`,
-`default_inspect`, `usec`, `nsec`, `offset_in_seconds`,
-`seconds_since_unix_epoch`, `civil_from_format`), `core_ext/date/conversions.rb`
-(3) and `core_ext/time/conversions.rb` (1) all map onto the **single** shared
-`packages/activesupport/src/time-ext.ts`.
-
-`to_formatted_s`, `readable_inspect` and `default_inspect` are three _different_
-Ruby methods on three different classes that would collapse onto one TS function
-name each. `time-ext.ts` is a module of free functions taking the receiver as
-the first parameter, so one `toFormattedS(receiver, format)` would have to
-dispatch on receiver type for all three — which is what
-`core-ext/date-and-time/calculations.ts` already does for its mixin, but here
-the three Ruby bodies genuinely differ.
-
-Decide first: one dispatching function per name, or split `time-ext.ts` so each
-Rails conversions file gets its own TS file at its own path. The latter matches
-the Rails layout `parity:api` matches on and is probably right, but it moves a
-large existing file.
-
-The five non-colliding members (`usec`, `nsec`, `offset_in_seconds`,
-`seconds_since_unix_epoch`, `civil_from_format`) can land without resolving
-that, and are the cheapest part of this story.
-
-### C. `ENV["TZ"]` — `core_ext/time/compatibility.rb` (3)
-
-`preserve_timezone`, `system_local_time?`, `active_support_local_zone`
-(`core_ext/time/compatibility.rb:13-39`).
-
-`active_support_local_zone` memoizes `Time.new.zone` and invalidates the memo
-when `ENV["TZ"]` changes (`compatibility.rb:33-36`). The RFC 0098 task prompts
-forbid `process.*`, so `ENV["TZ"]` is not readable directly.
-`Intl.DateTimeFormat().resolvedOptions().timeZone` is the obvious substitute and
-also gives a value to key the memo on, but that is a deviation that needs a
-call-site justification — confirm it is acceptable before writing it.
-
-`preserve_timezone` here is `system_local_time? || super`, where `super` is
-`DateAndTime::Compatibility#preserve_timezone` — already ported by #6465 at
-`packages/activesupport/src/core-ext/date-and-time/compatibility.ts`.
-
-### D. acts_like markers — `core_ext/{time,date,date_time}/acts_like.rb` (5)
-
-`Time#acts_like_time?` (`core_ext/time/acts_like.rb:7`), `Date#acts_like_date?`
-(`core_ext/date/acts_like.rb`), and `DateTime#acts_like_date?` /
-`#acts_like_time?` (`core_ext/date_time/acts_like.rb:6`, `:13`).
-
-**PR #6465 attempted `date_time/acts_like.rb` and reverted it — read this before
-retrying.** The attempt put the two markers in
-`packages/activesupport/src/core-ext/date-time/acts-like.ts` as members of a
-`DateTime` class at the Rails path. `parity:api` credited it 4/4, but it was
-inert, and instance-vs-static was not the reason. Measured against the built
-dist:
-
-```js
-DateTime.parse("2013-11-12T02:11:00Z").constructor.name; // => "PlainDateTime"
-Object.actsLike(v, "date"); // => false
-Object.actsLike(v, "time"); // => false
-```
-
-`packages/activesupport/src/core-ext/object/acts-like.ts:38-44` discovers a
-duck-type by looking for the marker METHOD on the value itself, and
-`@blazetrails/date`'s `DateTime.parse` (`packages/date/src/date.ts:8318`)
-returns `Temporal.PlainDateTime | Temporal.ZonedDateTime` — never an instance of
-any class activesupport can reopen. So no class-shaped port at the Rails path
-can work; the marker has to reach the value's actual prototype.
-
-That is the decision this story owes: either activesupport installs markers onto
-the Temporal polyfill prototypes at import time (the literal analogue of Ruby's
-core_ext reopening, but a global side effect on a third-party package's
-prototypes, and `PlainDateTime` is not only ever a "DateTime"), or the markers
-move into `@blazetrails/date` itself and give up the Rails file path
-`parity:api` matches on. Do not re-land a class at the Rails path that only
-satisfies the name matcher.
-
-The only working precedent in the repo is
-`packages/activesupport/src/time-with-zone.ts` `actsLikeTime()` — an instance
-method on the class whose values actually flow.
-
-### Not in scope here
-
-`core_ext/time/zones.rb`'s `zone` / `zone_default` are covered by
-[[converge-time-zone-reader-names]].
+A third option worth pricing before choosing either: **decide the marker has no
+faithful trails counterpart** and record it in `SCOPED_SKIP_GROUPS` with that
+reason. That is only admissible if `acts_like?` genuinely cannot be answered —
+not merely because both ports are awkward — and it lowers 0098's reachable
+ceiling by 1 member, which must be stated in the RFC rather than absorbed.
 
 ## Acceptance criteria
 
-- Each of A–D either lands or is `pnpm tasks block`ed with the specific blocker;
-  "it would be a bigger diff" is not one.
-- `marshal_dump` / `marshal_load` recorded as a reasoned SKIP in
-  `scripts/parity/conventions.ts`, not left as bare missing rows.
-- The `zones.json` call-mismatch row above is deleted when D lands.
-- `pnpm parity:api` / `pnpm parity:test` deltas non-negative;
-  `pnpm parity:api:calls` and `pnpm parity:api:calls:args` clean.
+- [ ] One of the three resolutions above is chosen and recorded in RFC 0098,
+      with the reason at the call site if code lands.
+- [ ] `Time#acts_like_time?` is either credited by `pnpm parity:api` or carries
+      a reasoned `SCOPED_SKIP_GROUPS` entry naming this decision.
+- [ ] Whatever ships is exercised through a value the parser actually returns —
+      not through a class instance nothing constructs, which is how #6465 came
+      to be inert.
+- [ ] If option 1: the import-time side effect is confined to one module and
+      documented as a deliberate global, and the `PlainDateTime`-is-not-a-
+      `DateTime` overstatement is stated where the marker is installed.
+- [ ] `pnpm parity:api:extra` clean; no new baseline rows.
