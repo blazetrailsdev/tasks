@@ -1,7 +1,7 @@
 ---
 title: "converge-query-attribute-type-cast-to-rails-no-op"
-status: draft
-updated: 2026-08-14
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into query-attribute-type-cast-is-a-no-op — duplicate story describing the same deviation; the surviving body carries both sets of Rails and trails file:line citations"
 ---
 
 ## Context
