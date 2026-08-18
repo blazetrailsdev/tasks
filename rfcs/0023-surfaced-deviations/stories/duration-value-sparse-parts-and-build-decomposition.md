@@ -61,3 +61,33 @@ Two notes from the PR that ported `Duration#_parts`:
   div/mod loop) and `parts`/`variable` match Rails for built durations;
   `modulo` inherits the fix via build.
 - DurationTest ports covering `build`/`parts` pass unchanged names.
+
+## Update from the 2026-08-18 RFC 0023 triage pass
+
+Two of the three deviations are now converged in `packages/activesupport/src/duration.ts`:
+
+- **`@value` — DONE.** `readonly value: number` exists at duration.ts:102 with the
+  `attr_reader :value` cite (duration.rb:133), and the constructor is
+  `constructor(value, parts = {}, variable = null)` (duration.ts:106), matching
+  Rails' `initialize(value, parts, variable = nil)`. Every factory
+  (`Duration.seconds`/`minutes`/`hours`/…) fills it through that seat.
+- **Sparse `parts` — DONE** (already recorded above from #6465); `_partKeys` at
+  duration.ts:122 does the `value == 0` guard plus the zero-rejection.
+  `_givenParts` and `_transformValues` no longer exist repo-wide.
+
+**Only the `build` decomposition remains.** `Duration.build`
+(duration.ts:618-624) is still:
+
+```ts
+static build(value: unknown): Duration {
+  if (typeof value !== "number") { /* TypeError */ }
+  return new Duration(value, { seconds: value });
+}
+```
+
+Rails' `build` (duration.rb:191-214) splits the seconds into
+years/months/weeks/days/hours/minutes/seconds and derives `variable` from the
+nonzero parts. Because Rails' `%` goes through `build`
+(duration.rb:311-319), `modulo` inherits the seconds-only shape here too.
+
+Scope this story to that one method plus `modulo`.
