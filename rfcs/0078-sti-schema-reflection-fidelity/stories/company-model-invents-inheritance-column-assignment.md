@@ -1,6 +1,6 @@
 ---
 title: 'Company sets inheritance_column = "type", which Rails'' company.rb does not'
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T22:11:19Z"
+assignee: "suppressed-call-lets-sibling-claim-ts-candidate"
 blocked-by: null
 closed-reason: null
 ---
