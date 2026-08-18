@@ -1,6 +1,6 @@
 ---
 title: "Count a pair whose Ruby calls are all weak instead of dropping it from the call population"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null
