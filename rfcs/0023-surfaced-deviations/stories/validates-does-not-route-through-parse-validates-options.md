@@ -1,7 +1,7 @@
 ---
 title: "validates-does-not-route-through-parse-validates-options"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into converge-model-validates-onto-rails-generic-lookup — routing every rule value through _parse_validates_options (validates.rb:107-115) IS the generic-lookup rewrite that story specifies"
 ---
 
 ## Context
