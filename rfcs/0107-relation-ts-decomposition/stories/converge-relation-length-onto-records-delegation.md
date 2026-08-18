@@ -1,6 +1,6 @@
 ---
 title: "Move Relation#length onto the to: :records delegation mechanism"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
