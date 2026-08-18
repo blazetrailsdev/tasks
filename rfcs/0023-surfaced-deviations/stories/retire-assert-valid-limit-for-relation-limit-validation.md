@@ -1,7 +1,7 @@
 ---
 title: "Delete CollectionProxy's assertValidLimit; validate limits at Rails' limit!/sanitize_limit site"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: assertValidLimit no longer exists anywhere in packages/ or scripts/; findNthWithLimit and findTakeWithLimit (finder-methods.ts:590, :1113) both end in relation.limit(limit), inheriting the single limit!/sanitize_limit validation site as Rails does (finder_methods.rb:590, 603-615)."
 ---
 
 ## Context
