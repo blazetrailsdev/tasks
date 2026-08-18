@@ -1,7 +1,7 @@
 ---
 title: "Numeric#changed? must pass new_value_before_type_cast to equal_nan?"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into activemodel-numeric-changed-passes-cast-value-to-equal-nan — same defect in the same body (numeric.rb:30-34: equal_nan? must receive new_value_before_type_cast)"
 ---
 
 ## Context
