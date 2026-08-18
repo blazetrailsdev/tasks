@@ -1,6 +1,6 @@
 ---
 title: "converge-remaining-call-arg-shape-rows-outside-activerecord"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6688
 claim: "2026-08-18T12:16:46Z"
 assignee: "converge-remaining-call-arg-shape-rows-outside-activerecord"
 blocked-by: null
