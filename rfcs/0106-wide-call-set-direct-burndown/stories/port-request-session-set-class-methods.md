@@ -1,7 +1,7 @@
 ---
 title: "Port Request::Session.set / Session::Options.set and route the writers through them"
-status: in-progress
-updated: 2026-08-17
+status: done
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
