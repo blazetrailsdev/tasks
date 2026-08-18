@@ -1,14 +1,13 @@
 ---
 title: "Wave 4f: the activesupport residue"
 status: ready
-updated: 2026-08-17
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 700
-priority: 11
 pr: null
 claim: null
 assignee: null
