@@ -1,7 +1,7 @@
 ---
 title: "Wave 4g: the <=3-row tail sweep"
 status: blocked
-updated: 2026-08-17
+updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: ["activerecord", "activesupport"]
@@ -16,7 +16,6 @@ deps:
   ]
 deps-rfc: []
 est-loc: 700
-priority: 12
 pr: null
 claim: null
 assignee: null
