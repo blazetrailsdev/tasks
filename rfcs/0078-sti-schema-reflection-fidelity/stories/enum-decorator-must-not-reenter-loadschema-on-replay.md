@@ -1,6 +1,6 @@
 ---
 title: "Enum decorator re-enters loadSchema during replay (needs WeakSet guard; Rails does not)"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
