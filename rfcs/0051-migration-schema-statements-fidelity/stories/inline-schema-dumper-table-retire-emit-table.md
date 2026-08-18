@@ -1,5 +1,5 @@
 ---
-title: "inline-schema-dumper-table-retire-emit-table"
+title: "Inline SchemaDumper#table's column half, retiring emitTable"
 status: draft
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 600
 priority: null
 pr: null
 claim: null

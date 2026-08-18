@@ -1,5 +1,5 @@
 ---
-title: "migration-run-takes-migration-classes-variadic"
+title: "Migration#run takes one instance where Rails takes migration classes"
 status: draft
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null

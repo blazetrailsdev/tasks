@@ -1,5 +1,5 @@
 ---
-title: "index-parts-include-before-nulls-not-distinct"
+title: "SchemaDumper#index_parts emits nullsNotDistinct before include"
 status: draft
 updated: 2026-08-18
 rfc: "0051-migration-schema-statements-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
