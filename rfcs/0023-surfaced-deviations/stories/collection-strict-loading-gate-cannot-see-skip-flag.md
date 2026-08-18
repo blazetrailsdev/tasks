@@ -1,7 +1,7 @@
 ---
 title: "Collection strict-loading gate lives in a loader that cannot see @skip_strict_loading"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into strict-loading-check-in-reader-not-find-target — one deviation: the strict-loading gate belongs on Association#find_target (association.rb:247-273, violates_strict_loading? at :284-291) reading @skip_strict_loading (:276-282)"
 ---
 
 ## Context
