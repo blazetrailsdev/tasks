@@ -38,7 +38,8 @@ Rails passes `relation` straight through
 
 ```ruby
 def join(relation, klass = Nodes::InnerJoin)
-  return self if Nodes::SqlLiteral === relation && relation.blank?
+  return self unless relation
+
   case relation
   when String, Nodes::SqlLiteral
     raise EmptyJoinError if relation.empty?
