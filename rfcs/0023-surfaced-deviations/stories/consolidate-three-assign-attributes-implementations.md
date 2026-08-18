@@ -62,3 +62,18 @@ inlines `extract`/`execute` rather than calling
 - [ ] Existing suites (nested-attributes, multiparameter-attributes, dirty,
       forbidden-attributes-protection, base, persistence) stay green.
 - [ ] `pnpm parity:api` / `pnpm parity:test` deltas non-negative.
+
+## Triage note (2026-08-18): sequencing against the ActiveModel copy
+
+`activemodel-assign-attribute-still-writes-through-write-attribute` (0023,
+~140 LOC) converges the **ActiveModel** `_assignAttribute` arm onto
+`attribute_assignment.rb:67-75` (send the setter; stop writing through
+`writeAttribute` and sniffing error classes). PR #6216 already did the same for
+the ActiveRecord copy.
+
+These were deliberately NOT merged in the 2026-08-18 triage pass — 140 + 350 is
+well over the PR LOC ceiling.
+
+Land the ActiveModel one first. It leaves all three copies on the same _shape_,
+which turns this story from "reconcile three divergent bodies" into "delete two
+of three", and materially lowers its 350 estimate. Re-estimate before claiming.
