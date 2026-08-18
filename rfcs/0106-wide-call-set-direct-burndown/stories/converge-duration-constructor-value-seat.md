@@ -1,6 +1,6 @@
 ---
 title: "converge-duration-constructor-value-seat"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6693
 claim: "2026-08-18T12:46:51Z"
 assignee: "converge-duration-constructor-value-seat"
 blocked-by: null
