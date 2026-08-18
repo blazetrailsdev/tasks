@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: associations remainder"
-status: claimed
+status: blocked
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-18T19:27:39Z"
 assignee: "converge-includes-preload-colon-sweep-associations-remainder"
-blocked-by: null
+blocked-by: "Blocked on converge-preloader-branch-colon-symbol-entry-point, which is claimed (by converge-includes-preload-colon-sweep-associations-eager-test) but not yet merged to main. Verified empirically on 426be277f: flipping one call site to the colon spelling (cascaded-eager-loading.test.ts:399 preload({':author': {':comments': ':post'}})) raises AssociationNotFoundError from Branch.groupedRecords (branch.ts:166) because Branch#_normalizeAssociationName (branch.ts:305-322) still passes the string through unchanged. Every includes/preload site in both clusters routes through that entry point, so no part of the sweep can land first without stacking. Re-schedule once the entry-point story merges. Note also: the two clusters together are 393 literal call sites across associations/, relation/ and test-helpers/ (~786 LOC add+del), so they should be scheduled as separate PRs, not one bundle."
 closed-reason: null
 ---
 
