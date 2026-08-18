@@ -1,7 +1,7 @@
 ---
 rfc: "0109-story-file-lookup"
 title: "Forward file→story lookup for the tasks CLI"
-status: active
+status: closed
 created: 2026-08-18
 updated: 2026-08-18
 owner: "@deanmarano"

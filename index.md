@@ -111,4 +111,4 @@
 | [0106-wide-call-set-direct-burndown](rfcs/0106-wide-call-set-direct-burndown/README.md) | Wide call-set direct burndown (activerecord, arel, activesupport) | active | @deanmarano | activerecord, arel, activesupport |
 | [0107-relation-ts-decomposition](rfcs/0107-relation-ts-decomposition/README.md) | relation.ts decomposition and invented-machinery burndown | active | @deanmarano | activerecord |
 | [0108-call-gate-false-positives](rfcs/0108-call-gate-false-positives/README.md) | Call-gate false positives — comparator reports a mismatch where the port is faithful | active | @deanmarano | activerecord, activesupport, activemodel, actionview, arel |
-| [0109-story-file-lookup](rfcs/0109-story-file-lookup/README.md) | Forward file→story lookup for the tasks CLI | active | @deanmarano | — |
+| [0109-story-file-lookup](rfcs/0109-story-file-lookup/README.md) | Forward file→story lookup for the tasks CLI | closed | @deanmarano | — |
