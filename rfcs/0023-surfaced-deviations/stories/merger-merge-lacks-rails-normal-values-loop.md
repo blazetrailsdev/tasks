@@ -1,7 +1,7 @@
 ---
 title: "Merger#merge dispatches four bespoke helpers where Rails runs one NORMAL_VALUES loop"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already converged: relation/merger.ts:68-92 now runs Rails' single NORMAL_VALUES loop with the verbatim 'value.nil? || (value.blank? && false != value)' guard (merger.rb:58-68); mergeUnscope/mergeExtending/mergeCtes/mergeEagerLoad no longer exist repo-wide."
 ---
 
 ## Context
