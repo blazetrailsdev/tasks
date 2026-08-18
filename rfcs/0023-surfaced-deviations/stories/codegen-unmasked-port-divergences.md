@@ -1,7 +1,7 @@
 ---
 title: "codegen-unmasked-port-divergences"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Invalid premise: prism-codegen was retired in #6168 — scripts/prism-codegen/, convergence-baseline.json and 'pnpm codegen:score' no longer exist, so there is no baseline to burn down. The flagship example converged anyway: includes! is now 'this.includesValues = unionAppend(this.includesValues, associations)' with the includesAssociations accessor and unionAppendAssociations gone; unionAppend is a private local spelling of Ruby's Array#| and is not exported surface."
 ---
 
 # 23 port divergences unmasked by the codegen operator-longtail images
