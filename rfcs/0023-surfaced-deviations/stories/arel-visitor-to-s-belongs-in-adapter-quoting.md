@@ -1,7 +1,7 @@
 ---
 title: "arel-visitor-to-s-belongs-in-adapter-quoting"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into to-sql-quote-name-routes-through-invented-rubytos — duplicate: both are the same two naming rows on packages/arel/src/visitors/to-sql.ts (quote_table_name / quote_column_name passing through the invented rubyToS helper)"
 ---
 
 ## Context
