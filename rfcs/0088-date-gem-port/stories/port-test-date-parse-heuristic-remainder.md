@@ -1,7 +1,7 @@
 ---
 title: "port-test-date-parse-heuristic-remainder"
-status: ready
-updated: 2026-08-17
+status: claimed
+updated: 2026-08-18
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T15:20:49Z"
+assignee: "port-test-date-parse-heuristic-remainder"
 blocked-by: null
 closed-reason: null
 ---
