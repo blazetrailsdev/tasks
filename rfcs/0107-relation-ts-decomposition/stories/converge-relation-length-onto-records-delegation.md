@@ -1,6 +1,6 @@
 ---
 title: "Move Relation#length onto the to: :records delegation mechanism"
-status: ready
+status: claimed
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-18T19:07:41Z"
+assignee: "red-5b0c3890"
 blocked-by: null
 closed-reason: null
 ---
