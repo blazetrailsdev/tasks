@@ -1,7 +1,7 @@
 ---
 title: "activemodel and activesupport define separate ArgumentError classes, breaking instanceof"
-status: draft
-updated: 2026-08-04
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into two-argumenterror-classes-for-rubys-one — duplicate story describing the same deviation; the surviving body carries both sets of Rails and trails file:line citations"
 ---
 
 ## Context
