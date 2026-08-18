@@ -1,7 +1,7 @@
 ---
 title: "create/drop/purge no-op where Rails raises NoMethodError"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-08-18
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "merged into database-tasks-registry-holds-singletons-not-task-classes — the guards exist BECAUSE the @tasks registry holds singletons instead of classes; converting it to classes is what lets create/drop/purge send bare as Rails does (database_tasks.rb:117, 212, 349)"
 ---
 
 ## Context
