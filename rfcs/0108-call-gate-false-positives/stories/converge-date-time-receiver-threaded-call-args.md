@@ -1,6 +1,6 @@
 ---
 title: "converge-date-time-receiver-threaded-call-args"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0108-call-gate-false-positives"
 cluster: null

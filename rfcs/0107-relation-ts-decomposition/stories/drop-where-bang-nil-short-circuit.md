@@ -1,6 +1,6 @@
 ---
 title: "Drop whereBang's nil short-circuit — where! has no guard"
-status: in-progress
+status: done
 updated: 2026-08-18
 rfc: "0107-relation-ts-decomposition"
 cluster: null
