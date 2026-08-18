@@ -1,6 +1,6 @@
 ---
 title: "Converge the remaining call-argument shape rows in actiondispatch and actioncontroller"
-status: claimed
+status: in-progress
 updated: 2026-08-18
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6697
 claim: "2026-08-18T13:26:57Z"
 assignee: "converge-remaining-call-arg-shape-rows-actiondispatch-actioncontroller"
 blocked-by: null
