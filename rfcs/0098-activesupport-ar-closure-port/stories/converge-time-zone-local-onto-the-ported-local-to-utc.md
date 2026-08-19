@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#local hand-rolls the DST search the ported local_to_utc now does"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6735
 claim: "2026-08-19T11:35:05Z"
 assignee: "wave-4c-ar-core-residue-model-c"
 blocked-by: null
