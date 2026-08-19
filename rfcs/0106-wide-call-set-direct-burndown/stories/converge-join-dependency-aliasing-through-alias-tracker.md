@@ -1,6 +1,6 @@
 ---
 title: "Route JoinDependency#makeConstraints alias resolution through AliasTracker#aliasedTableFor"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T23:31:49Z"
+assignee: "converge-join-dependency-aliasing-through-alias-tracker"
 blocked-by: null
 closed-reason: null
 ---
