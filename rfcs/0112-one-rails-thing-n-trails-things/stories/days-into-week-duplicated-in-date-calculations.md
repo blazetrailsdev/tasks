@@ -1,7 +1,7 @@
 ---
 title: "DAYS_INTO_WEEK is declared twice; the Date arm should read the mixin's constant"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
