@@ -1,9 +1,9 @@
 ---
 rfc: "0088-date-gem-port"
 title: "Port the ruby/date gem as its own package, returning Temporal by default"
-status: active
+status: closed
 created: 2026-08-05
-updated: 2026-08-18
+updated: 2026-08-19
 owner: "@deanmarano"
 packages:
   - "date"

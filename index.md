@@ -91,7 +91,7 @@
 | [0085-pg-cancel-query-rails-convergence](rfcs/0085-pg-cancel-query-rails-convergence/README.md) | Converge PG query cancellation and serialization on Rails | draft | @deanmarano | activerecord |
 | [0086-prism-codegen-productionization](rfcs/0086-prism-codegen-productionization/README.md) | Prism codegen productionization: convergence guard + generation fidelity | closed | @deanmarano | activerecord |
 | [0087-awaitable-association-writers-only](rfcs/0087-awaitable-association-writers-only/README.md) | Awaitable association writers only: delete the synchronous property setters | draft | @deanmarano | activerecord |
-| [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | active | @deanmarano | date, i18n, activesupport, activemodel, activerecord |
+| [0088-date-gem-port](rfcs/0088-date-gem-port/README.md) | Port the ruby/date gem as its own package, returning Temporal by default | closed | @deanmarano | date, i18n, activesupport, activemodel, activerecord |
 | [0089-corelib-primitives](rfcs/0089-corelib-primitives/README.md) | corelib: a home for the Ruby interpreter primitives trails emulates | postponed | @deanmarano | corelib, activesupport, activemodel, activerecord |
 | [0091-tasks-backlog-integrity](rfcs/0091-tasks-backlog-integrity/README.md) | Tasks backlog integrity | draft | @deanmarano | — |
 | [0092-parity-tools-consolidation](rfcs/0092-parity-tools-consolidation/README.md) | Compare-tooling consolidation: @blazetrails/parity | closed | @deanmarano | — |
