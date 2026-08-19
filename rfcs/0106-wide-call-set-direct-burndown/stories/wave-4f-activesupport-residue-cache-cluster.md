@@ -1,5 +1,5 @@
 ---
-title: "wave-4f-activesupport-residue-cache-cluster"
+title: "Wave 4f (cont. 2): the activesupport cache, encrypted-file and callbacks call-set residue"
 status: ready
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
