@@ -1,6 +1,6 @@
 ---
 title: "Resolve Time#acts_like_time?, the last member left unpaired in time-ext.ts"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T23:52:33Z"
+assignee: "restore-transaction-record-state-composite-pk-arm"
 blocked-by: null
 closed-reason: null
 ---

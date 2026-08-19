@@ -1,6 +1,6 @@
 ---
 title: "replace and its five private helpers are a second copy of CollectionAssociation#replace"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T23:52:33Z"
+assignee: "restore-transaction-record-state-composite-pk-arm"
 blocked-by: null
 closed-reason: null
 ---
