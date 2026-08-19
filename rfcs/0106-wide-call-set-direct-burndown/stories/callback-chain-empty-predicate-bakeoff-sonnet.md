@@ -1,6 +1,6 @@
 ---
 title: "Port CallbackChain#empty? so has_transactional_callbacks? stops counting entries"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
