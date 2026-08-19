@@ -1,14 +1,14 @@
 ---
 title: "Port the skip_preloading_value guard — skipPreloading! is write-only and inert (relation.rb:1414)"
 status: ready
-updated: 2026-08-18
+updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
