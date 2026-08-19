@@ -1,13 +1,13 @@
 ---
 title: "HashConfig#primary? should read the global configurations registry, not a _primaryChecker global"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null
