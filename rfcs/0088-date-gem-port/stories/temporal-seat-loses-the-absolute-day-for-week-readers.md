@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 40
 priority: 2
 pr: null
 claim: null
