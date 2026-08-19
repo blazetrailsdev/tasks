@@ -139,6 +139,73 @@ the ledger entry; this RFC is the burndown.
 
 ## Design
 
+### F0 — the mixin idiom activemodel never adopted
+
+Rails' ActiveModel is built almost entirely out of `ActiveSupport::Concern`:
+**12 files `extend ActiveSupport::Concern`, 10 declare `module ClassMethods`,
+and 8 carry an `included do` block** (`api.rb:65`, `attribute_methods.rb:70`,
+`attributes.rb:35`, `conversion.rb:27`, `dirty.rb:127`, `serializers/json.rb:12`,
+`validations.rb:40`, `validations/callbacks.rb:25`). Those blocks do exactly
+three things: `extend` a sibling module, declare a `class_attribute`, and call
+`define_callbacks`.
+
+Every TS mechanism for all three is already ported and exported. activemodel
+uses essentially none of them:
+
+| mechanism                         | defined at                                | activemodel | activerecord |
+| --------------------------------- | ----------------------------------------- | ----------- | ------------ |
+| `include()` / `Included<>`        | `activesupport/src/include.ts:184`        | **3**       | 144          |
+| `extend()` / `Extended<>`         | `activesupport/src/include.ts:335`        | **0**       | 65           |
+| `[included]` / `[extended]` hooks | `include.ts:193`, `:272`, `:371`          | **0**       | —            |
+| `classAttribute()`                | `activesupport/src/class-attribute.ts:70` | **0**       | 0            |
+
+The three real `include()` call sites (`model.ts:2814`, `naming.ts:457`,
+`serializers/json.ts:214`) are the same one-liner — pulling `toJSON` off
+`ToJsonWithActiveSupportEncoder`. Everything else is hand-rolled, and the
+package carries **82 `.call(this, …)` thunks** (`attribute-methods.ts` 25,
+`model.ts` 18, `attributes.ts` 12, `dirty.ts` 9, `attribute-registration.ts` 6,
+`attribute-set/builder.ts` 5) — the shape RFC 0107 retired wholesale from
+`relation.ts` as its F5.
+
+This is the _mechanism_ behind F1–F6, not a seventh finding alongside them:
+
+- **`extend ClassMethods` → 22 `static X = X` lines.** `model.ts:312-319`,
+  `:373` and `:1571-1591` assign class methods onto `Model` by hand. Rails
+  `extend`s seven times inside `included do` (`validations.rb:41-45` extends
+  `Naming`, `Callbacks`, `Translation` and `HelperMethods`; `api.rb:66-67`;
+  `serializers/json.rb:13`). `extend()` has existed the whole time and has zero
+  callers here.
+- **`class_attribute` → five hand-rolled copy-on-first-write helpers.** Rails
+  declares `attribute_aliases` and `attribute_method_patterns`
+  (`attribute_methods.rb:71-72`), `param_delimiter` (`conversion.rb:32`),
+  `include_root_in_json` (`serializers/json.rb:15`) and `_validators`
+  (`validations.rb:50`) as one-line `class_attribute`s. trails reimplements
+  those semantics five times: `_ensureOwnValidators` (`model.ts:1453`),
+  `ensureOwnPatterns` and `ensureOwnAliases` (`attribute-methods.ts:735`,
+  `:741`, six call sites) and `registerWithSuperclass`
+  (`attribute-registration.ts:402`). `classAttribute()`'s own contract is
+  _"reads walk the constructor chain; writes are local to the class"_ — the
+  same thing, ported, with zero callers. This is the RFC 0112 pattern: one
+  Rails construct, five trails spellings, and at least one of them
+  (`_ensureOwnValidators`) admits in its JSDoc that it is behaviourally wrong.
+- **`included do` → hard-coded static initializers.** `model.ts:278-290` bakes
+  the two `AttributeMethodPattern`s and the empty alias map into `Model`'s
+  static state, where `attribute_methods.rb:70-73` and `attributes.rb:35-37`
+  declare them on include.
+
+**A note on the hooks**, because the register looks like it forbids them:
+CLAUDE.md's "Module mixins" section says Ruby lifecycle hooks (`extended`,
+`included`, `inherited`) have "no TS equivalent — don't stub them", and
+`scripts/parity/conventions.ts:444` skips those names with
+`tsMirrorIsDrift: true`. That is stale for two of the three. `include.ts`
+fires `included` and `extended` callbacks keyed by
+`Symbol.for("@blazetrails/activesupport:included")` — so they never appear as
+string-named public members, never surface to `parity:api:extra`, and do not
+collide with the `SKIP_GROUPS` ban, which is about a string-named TS method.
+Only `inherited` genuinely has no equivalent. Fixing that CLAUDE.md wording is
+tracked separately; it is very likely why this idiom was never reached for
+here.
+
 ### F1 — the callback macro block: 316 lines standing in for `define_model_callbacks`
 
 `packages/activemodel/src/callbacks.ts:34-200` already contains a **faithful
@@ -348,6 +415,14 @@ touches that file.
 
 ## Rollout
 
+F0 is not a phase of its own — it is the idiom every other story is
+expected to use. Five stories name it explicitly in their acceptance
+criteria: `converge-attribute-methods-copy-on-write-and-alias-helpers`,
+`converge-attribute-registration-pending-modification-helpers`,
+`fan-out-model-validation-runner-surface-to-validations`,
+`fan-out-model-attribute-methods-and-registration-surface` and
+`converge-attributes-define-method-attribute-and-defaults`.
+
 **Phase 1 — `model.ts` redistribution.** Nothing else can be reviewed locally
 until the funnel is emptied, because every leaf file's members are shadowed by
 a `Model` static. Each story moves one destination-file's worth of members and
@@ -412,6 +487,9 @@ Measured with the same tooling and the same code-line rule, off a fresh
   ≤ 40 novel / ≤ 30 moved**, with `model.ts` at 0/0.
 - **`@noRailsEquivalent` PERMANENT claims 181 → ≤ 60**, CONVERGEABLE claims
   11 → 0.
+- **The five hand-rolled copy-on-first-write helpers → 0**, replaced by
+  `classAttribute()`; `extend()` call sites in activemodel **0 → ≥ 1**; the
+  82 `.call(this, …)` thunks → ≤ 20.
 - **`call-mismatches-exclude/activemodel` 54 rows → ≤ 20**, only-shrink at
   every step; `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green
   with no reseed on any PR.
@@ -451,3 +529,6 @@ Measured with the same tooling and the same code-line rule, off a fresh
 ## Changelog
 
 - 2026-08-19: initial RFC
+- 2026-08-19: add F0 — the `include()` / `extend()` / `[included]` /
+  `classAttribute()` idiom activemodel never adopted; five story bodies
+  updated to name it
