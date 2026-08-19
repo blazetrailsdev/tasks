@@ -1,6 +1,6 @@
 ---
 title: "Move decimal significant-digit and half-up rounding into ActiveSupport's BigDecimal"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
