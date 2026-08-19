@@ -1,6 +1,6 @@
 ---
 title: "Delete WhereChain#exists — invented surface with no Rails counterpart and no callers"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
+pr: 6733
 claim: "2026-08-19T00:11:25Z"
 assignee: "wave-4c-ar-core-residue-model-c"
 blocked-by: null
