@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Cluster 1 of the `wave-4d-associations-residue-part-4` split (part 4 shipped as PR
+Cluster 1 of the `wave-4d-associations-residue-part-4` split (part 4 shipped as
 PR 6739 and took only the tractable half of cluster 4). The `:destroy_async`
 `dependent:` arm is missing from three association bodies, which is ~17 open
 `kind: "set"` rows across three shards. The TS bodies handle `:destroy` and the
