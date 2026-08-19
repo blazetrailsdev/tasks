@@ -1,13 +1,13 @@
 ---
 title: "Event.children nesting is a non-Rails invention — triage keep vs remove"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null
