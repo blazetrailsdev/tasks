@@ -1,7 +1,7 @@
 ---
 title: "vegetables.ts assigns inheritanceColumn where vegetables.rb overrides the class method"
-status: in-progress
-updated: 2026-08-18
+status: done
+updated: 2026-08-19
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 packages: []

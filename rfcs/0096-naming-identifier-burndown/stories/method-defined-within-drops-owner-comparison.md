@@ -1,7 +1,7 @@
 ---
 title: "method_defined_within? drops Rails' owner comparison when both classes define the name"
-status: in-progress
-updated: 2026-08-18
+status: done
+updated: 2026-08-19
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []

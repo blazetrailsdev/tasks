@@ -1,7 +1,7 @@
 ---
 title: "Converge TimeZone.create onto Rails' (name, utc_offset, tzinfo) allocator"
-status: in-progress
-updated: 2026-08-18
+status: done
+updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []

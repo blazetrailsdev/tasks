@@ -1,7 +1,7 @@
 ---
 title: "The call-ORDER check still lets a sibling claim a suppressed call's TS position"
-status: in-progress
-updated: 2026-08-18
+status: done
+updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
