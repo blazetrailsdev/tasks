@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel's define_method_attribute reader hook is invented surface"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0096-naming-identifier-burndown"
 cluster: null

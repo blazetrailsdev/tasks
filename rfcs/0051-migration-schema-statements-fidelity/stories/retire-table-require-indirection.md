@@ -1,6 +1,6 @@
 ---
 title: "Retire Table#_require: call the schema statement directly, as Rails does"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
