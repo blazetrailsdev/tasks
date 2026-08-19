@@ -7,7 +7,7 @@ cluster: dead-mixin-companions
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null
