@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#initialize seeds Relation state Rails never has; delegate to scope instead"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6745
 claim: "2026-08-19T17:00:23Z"
 assignee: "collection-proxy-initialize-is-five-lines"
 blocked-by: null
