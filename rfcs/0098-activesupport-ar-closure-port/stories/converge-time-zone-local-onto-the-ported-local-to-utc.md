@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#local hand-rolls the DST search the ported local_to_utc now does"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
