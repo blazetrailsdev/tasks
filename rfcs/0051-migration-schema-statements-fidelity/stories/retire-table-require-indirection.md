@@ -1,7 +1,7 @@
 ---
 title: "Retire Table#_require: call the schema statement directly, as Rails does"
-status: ready
-updated: 2026-08-18
+status: claimed
+updated: 2026-08-19
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T12:59:17Z"
+assignee: "wave-4c-ar-core-residue-transactions-and-core"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port the skip_preloading_value guard — skipPreloading! is write-only and inert (relation.rb:1414)"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T12:59:17Z"
+assignee: "wave-4c-ar-core-residue-transactions-and-core"
 blocked-by: null
 closed-reason: null
 ---
