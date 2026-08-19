@@ -1,14 +1,14 @@
 ---
 title: "Route the eager limited-ids subquery's limit/offset through build_arel's sanitizers"
 status: ready
-updated: 2026-08-18
+updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 3
+priority: 4
 pr: null
 claim: null
 assignee: null
