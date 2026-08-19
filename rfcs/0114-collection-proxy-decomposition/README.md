@@ -13,6 +13,7 @@ related-rfcs:
   - "0107-relation-ts-decomposition"
   - "0075-collection-association-target-fidelity"
   - "0112-one-rails-thing-n-trails-things"
+priority: 1
 ---
 
 ## Summary
