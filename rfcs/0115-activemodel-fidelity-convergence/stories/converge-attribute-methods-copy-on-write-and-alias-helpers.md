@@ -49,11 +49,37 @@ the "must not shadow an inherited method" guard are settled and are **not** to
 be re-litigated here. This story converges the _pattern/alias bookkeeping_
 around them.
 
+## The mixin idiom to use (RFC finding F0)
+
+All three mechanisms this story needs are already ported and exported, and
+activemodel currently uses none of them — see this RFC's F0. Do not hand-roll a
+fourth spelling:
+
+- **`classAttribute()`** — `packages/activesupport/src/class-attribute.ts:70`,
+  exported from the package index (`:387`). Its contract is exactly Rails'
+  `class_attribute`: _"reads walk the constructor chain; writes are local to the
+  class"_. It has **zero** callers in activemodel today.
+- **`extend()` / `Extended<>`** — `packages/activesupport/src/include.ts:335`.
+  The TS spelling of `extend SomeModule`, i.e. the `ClassMethods` half of a
+  Concern. **Zero** callers in activemodel; 65 in activerecord.
+- **`include()` / `Included<>`** — `include.ts:184`, plus the symbol-keyed
+  `[included]` / `[extended]` hooks fired at `include.ts:193,272,371`, which are
+  the TS spelling of an `included do` block. The hooks are keyed by
+  `Symbol.for(...)`, so they never surface to `parity:api:extra` and do not
+  collide with the `SKIP_GROUPS` ban on a string-named `included` member
+  (`scripts/parity/conventions.ts:444`, `tsMirrorIsDrift: true`). CLAUDE.md's
+  "Module mixins" section still says these hooks have no TS equivalent; that is
+  stale for `included`/`extended` and true only for `inherited`.
+
 ## Acceptance criteria
 
-- `ensureOwnPatterns` / `ensureOwnAliases` are replaced by `class_attribute`
-  semantics from `@blazetrails/activesupport`, matching
-  `attribute_methods.rb:72,74`.
+- `ensureOwnPatterns` / `ensureOwnAliases` are replaced by
+  `classAttribute()` from `@blazetrails/activesupport`, matching
+  `attribute_methods.rb:71-72`'s
+  `class_attribute :attribute_aliases, instance_writer: false, default: {}`
+  and `:attribute_method_patterns`. All six call sites go.
+- No new copy-on-first-write helper is introduced under any name; this story
+  removes two of the package's five spellings of that mechanism (F0).
 - One alias-resolution method survives, at the Rails name
   `resolveAttributeName`.
 - `defineDirtyAttributeMethods` is folded into the Rails generation path via

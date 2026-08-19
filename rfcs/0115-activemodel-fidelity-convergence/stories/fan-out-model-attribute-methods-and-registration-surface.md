@@ -58,11 +58,40 @@ shape CLAUDE.md's "Module mixins" section says to replace with `include()` /
 `matchedAttributeMethod` and the `attribute=` alias on `Model`. Branch from
 `main` after it merges.
 
+## The mixin idiom to use (RFC finding F0)
+
+All three mechanisms this story needs are already ported and exported, and
+activemodel currently uses none of them — see this RFC's F0. Do not hand-roll a
+fourth spelling:
+
+- **`classAttribute()`** — `packages/activesupport/src/class-attribute.ts:70`,
+  exported from the package index (`:387`). Its contract is exactly Rails'
+  `class_attribute`: _"reads walk the constructor chain; writes are local to the
+  class"_. It has **zero** callers in activemodel today.
+- **`extend()` / `Extended<>`** — `packages/activesupport/src/include.ts:335`.
+  The TS spelling of `extend SomeModule`, i.e. the `ClassMethods` half of a
+  Concern. **Zero** callers in activemodel; 65 in activerecord.
+- **`include()` / `Included<>`** — `include.ts:184`, plus the symbol-keyed
+  `[included]` / `[extended]` hooks fired at `include.ts:193,272,371`, which are
+  the TS spelling of an `included do` block. The hooks are keyed by
+  `Symbol.for(...)`, so they never surface to `parity:api:extra` and do not
+  collide with the `SKIP_GROUPS` ban on a string-named `included` member
+  (`scripts/parity/conventions.ts:444`, `tsMirrorIsDrift: true`). CLAUDE.md's
+  "Module mixins" section still says these hooks have no TS equivalent; that is
+  stale for `included`/`extended` and true only for `inherited`.
+
 ## Acceptance criteria
 
-- `model.ts` defines none of the 25; `Model` reaches them through `include()` /
-  `Included<>` and the `static X = X` assignment block at `model.ts:311-320`
-  is gone.
+- `model.ts` defines none of the 25; `Model` reaches the instance half through
+  `include()` / `Included<>` and the **class** half through `extend()` /
+  `Extended<>`. The `static X = X` assignment block at `model.ts:312-319`,
+  `:373` and `:1571-1591` — 22 lines that are a hand-rolled
+  `extend ClassMethods` — is gone (F0). `extend()` currently has zero callers
+  in activemodel and 65 in activerecord.
+- `attribute_methods.rb:70-73`'s `included do class_attribute … end` is issued
+  from the `[included]` hook with `classAttribute()`, not as hard-coded static
+  state on `Model` (`model.ts:278-290` `_attributeMethodPatterns`,
+  `_attributeAliases`).
 - `typeForAttribute` keeps the "never raises, returns the nil type" behaviour
   pinned by the existing tests (`type_for_attribute` does not raise in Rails).
 - Where the `Model` wrapper diverged from the destination body, the destination
