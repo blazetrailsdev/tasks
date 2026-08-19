@@ -1,6 +1,6 @@
 ---
 title: "Port TimeZone's local-side period lookups and UTC conversions"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: 6733
 claim: "2026-08-19T00:11:25Z"
 assignee: "wave-4c-ar-core-residue-model-c"
 blocked-by: null
