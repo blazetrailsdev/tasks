@@ -1,7 +1,7 @@
 ---
 title: "Consolidate the duplicated ThroughAssociation module into one mixin"
-status: draft
-updated: 2026-08-11
+status: ready
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
