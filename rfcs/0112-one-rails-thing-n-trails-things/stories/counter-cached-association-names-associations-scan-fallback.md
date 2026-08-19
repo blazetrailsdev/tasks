@@ -1,13 +1,13 @@
 ---
 title: "counter-cache: counterCachedAssociationNames falls back to scanning _associations"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null
