@@ -1,7 +1,7 @@
 ---
 title: "temporal-seat-loses-the-absolute-day-for-week-readers"
 status: blocked
-updated: 2026-08-18
+updated: 2026-08-19
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -46,60 +46,100 @@ This is why `test_commercial` and `test_fractional` in
 `toString` rather than through `yearOfWeek` / `weekOfYear` / `dayOfWeek`:
 asserting the seat's values would have enshrined the wrong weekday.
 
-## Decision (2026-08-18, RFC 0088 owner)
+## Decision (2026-08-18, RFC 0088 owner) — supersedes the 2026-08-18 raise
 
-**The seat raises rather than answering a wrong day.** Temporal has no Julian
-calendar — `@js-temporal/polyfill` rejects `calendar: "julian"` and CLDR ships
-only `gregory`/`iso8601` — so a `PlainDate` cannot carry a Julian-side absolute
-day at all. Rather than pick which of the two acceptance criteria to violate,
-`Date#toDate` refuses the spelling.
+**Answer the gem-shaped `Date` for the spellings Temporal cannot represent.**
+`toDate()` returns a `Temporal.PlainDate` for a Gregorian-side day and the
+Ruby-shaped `Date` itself for a Julian-side one. This is option 2 of this
+story's original `## Converged shape`, and it is the RFC's own documented Ruby
+opt-in (`date-temporal-default-return-and-ruby-opt-in`, PR #6264).
 
-This **generalizes an already-shipped precedent** rather than inventing one:
-`date-to-date-seat-raises-on-julian-only-spellings` (PR #6272) already made the
-seat raise `Date::Error "invalid date"` for a Julian-only civil spelling ISO
-rejects outright (`Date.civil(1500, 2, 29)`). That raise fires today only when
-`Temporal.PlainDate.from(..., { overflow: "reject" })` happens to throw. The
-decision extends it to **every** day the receiver's `sg` puts on the Julian
-side, so the seat is never silently wrong about a weekday or a yday.
+### Why the earlier raise decision was withdrawn
+
+The first ruling was "raise `Date::Error` for any day the receiver's `sg` puts
+on the Julian side", generalizing `date-to-date-seat-raises-on-julian-only-spellings`
+(PR #6272). Implemented as `if (rjd < sg) throw` in `plainDateFromJd`, it **reds
+30 ported gem tests across 6 files** — because `Date.jd()` / `Date.ordinal()` /
+`Date.commercial()` all default to jd 0 = `-4712-01-01`, which is Julian-side
+under the default `ITALY` reform (`date.ts:3851`, `ITALY = 2299161`). It is the
+BASE CASE of `test-date-new`, `test-date-parse`, `test-date-strptime`,
+`test-date-conv` and `date.trails.test`, not an exotic spelling. Converting
+those to `expect().toThrow()` would drop their MRI-matching assertions and take
+`parity:test` assertion deltas negative — a hard gate.
+
+The narrower raise from #6272 stands: a Julian-only CIVIL spelling ISO rejects
+outright (`Date.civil(1500, 2, 29)`) still raises. This decision governs the
+much larger set of days that ISO _can_ spell but reads on the wrong absolute day.
+
+### Not a reversal of the headline decision
+
+This story's own `## Converged shape` forbids converging a Temporal return back
+to a Ruby-shaped one **wholesale** — that would reverse RFC 0088's headline
+commitment (`vendor/sources.ts:212-221`). This is not wholesale: it is the
+provable subset Temporal has no calendar for. Gregorian-side days — every date
+a normal caller constructs — are unaffected and still answer `Temporal`.
 
 ## Converged shape
 
-`plainDateFromJd` (`packages/date/src/date.ts:4641`) gains the Julian-side
-guard, using the **same discriminator `cJdToCivil` already uses one line
-later** — `jd < sg` (`date.ts:4107`):
+The Ruby-shaped object **already exists at the conversion site**, so this is a
+narrow change, not a re-architecture. `Date.jd` (`date.ts:6599-6604`):
 
 ```ts
-function plainDateFromJd(jd: number | bigint, sg = DEFAULT_SG): Temporal.PlainDate {
-  const [nth, rjd] = decodeJd(jd);
-  if (nth !== 0n) throw new DateError("invalid date");
-  if (rjd < sg) throw new DateError("invalid date"); // Julian side: no Temporal calendar can hold it
-  const [y, m, d] = cJdToCivil(rjd, sg);
-  ...
+const ret = new Date(SEAT, nth, rjd, val2sg(start));
+return addFracTo(ret, fr2).toDate(); // <- the only conversion
+```
+
+Widen the seat and let the statics inherit it:
+
+```ts
+toDate(): Temporal.PlainDate | Date {
+  const [nth, rjd] = decodeJd(encodeJd(this.nth, this.mLocalJd()));
+  if (rjd < this.sg) return this;   // Julian side: carries jd, so cwday/yday are MRI's
+  return plainDateFromJd(encodeJd(this.nth, this.mLocalJd()), this.sg);
 }
 ```
 
-Verify the guard against `cJdToCivil`'s own test rather than a hand-derived
-reform constant, so `GREGORIAN` (never Julian) and `JULIAN` (always Julian)
-fall out of the same comparison.
+`Date.jd` / `ordinal` / `civil` / `commercial` (`:6599`, `:6613`, `:6639`,
+`:6656`) and the `DateTime` statics all end in `.toDate()`, so they inherit the
+union with no other edit. Use the same `jd < sg` test `cJdToCivil` uses
+(`date.ts:4107`) rather than a hand-derived constant.
 
-Do NOT "fix" this by converging a `Temporal` return back to a Ruby-shaped one
-wholesale — that reverses RFC 0088's headline decision
-(`vendor/sources.ts:212-221`).
+### The 30 tests should need no churn — verify, don't assume
+
+The readers those tests use exist on **both** shapes:
+
+- `test-date-new.test.ts:19` defines `ymd` structurally as
+  `{ year: number; month: number; day: number }`. The gem-shaped `Date` carries
+  `year` (`:7034`), `mon` (`:7042`), `month` (`:7046`), `day` (`:7050`) and
+  `mday` (`:7060`) — Ruby's `mon`/`month` aliases are both ported.
+- `equals` exists on the gem-shaped `Date` (`:5770`), which is what
+  `d.equals(d2)` needs.
+- Precedent that the union is already an anticipated shape:
+  `date.trails.test.ts:33`'s `ymd` helper is typed
+  `RubyDate | Temporal.PlainDate` and branches `date instanceof RubyDate`.
+
+One known friction: `Date#year` returns `number | bigint` while
+`Temporal.PlainDate#year` returns `number`, so the structural helper's type may
+need widening even though the runtime values match. Fix the type, not the test's
+assertions.
 
 ## Acceptance criteria
 
-- [ ] `Date.commercial(-4712, 1, 1)`'s seat **raises** `Date::Error`
-      `"invalid date"` under a reform setting that puts it on the Julian side,
-      rather than answering a commercial triple that disagrees with MRI's
-      `#cwyear` / `#cweek` / `#cwday`.
-- [ ] `Date.ordinal(1900, -2, Date::JULIAN)`'s seat **raises** rather than
-      answering a `#yday` that disagrees with MRI's.
-- [ ] A Gregorian-side day is unaffected: `toDate()` still answers, and its
+- [ ] `toDate()` returns `Temporal.PlainDate | Date` — the gem-shaped receiver
+      for a Julian-side day, `Temporal.PlainDate` otherwise — using the same
+      `jd < sg` discriminator `cJdToCivil` uses.
+- [ ] `Date.commercial(-4712, 1, 1)`'s value answers the commercial triple MRI's
+      `#cwyear` / `#cweek` / `#cwday` answer, for both reform settings.
+- [ ] `Date.ordinal(1900, -2, Date::JULIAN)`'s value answers MRI's `#yday`.
+- [ ] A Gregorian-side day still answers `Temporal.PlainDate`, and its
       `dayOfWeek` / `dayOfYear` still match MRI.
-- [ ] `test_commercial` / `test_fractional` in `test-switch-hitter.test.ts`
-      assert the raise for the Julian-side cases and the readers Ruby asserts
-      for the Gregorian-side ones — neither stays on `toString`.
-- [ ] RFC 0088's mapping table records that a Julian-side day has no Temporal
-      seat, extending the row `date-to-date-seat-raises-on-julian-only-spellings`
-      added.
+- [ ] `test_commercial` / `test_fractional` in `test-switch-hitter.test.ts` move
+      back onto the readers Ruby asserts, off `toString`.
+- [ ] **`parity:test` for `date` stays at 137/137 (100%, measured 2026-08-18 on
+      `dcffeff21`) and its assertion deltas are non-negative.** No test converts
+      to `expect().toThrow()` to accommodate this change.
+- [ ] The #6272 raise still fires for a Julian-only civil spelling ISO rejects
+      (`Date.civil(1500, 2, 29)`); this change does not widen or narrow it.
+- [ ] RFC 0088's mapping table records which spellings answer the gem-shaped
+      `Date`, extending the row #6272 added.
 - [ ] `pnpm parity:api:extra --package date` clean; no new baseline rows.
