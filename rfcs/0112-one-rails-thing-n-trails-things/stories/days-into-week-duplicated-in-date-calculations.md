@@ -1,6 +1,6 @@
 ---
 title: "DAYS_INTO_WEEK is declared twice; the Date arm should read the mixin's constant"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
