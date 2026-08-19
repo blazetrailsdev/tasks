@@ -1,6 +1,6 @@
 ---
 title: "Route the eager limited-ids subquery's limit/offset through build_arel's sanitizers"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T00:11:25Z"
+assignee: "wave-4c-ar-core-residue-model-c"
 blocked-by: null
 closed-reason: null
 ---
