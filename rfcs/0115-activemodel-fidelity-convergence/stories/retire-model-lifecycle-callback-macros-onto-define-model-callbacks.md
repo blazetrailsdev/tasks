@@ -1,6 +1,6 @@
 ---
 title: "Retire model.ts's lifecycle callback macros onto define_model_callbacks"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
