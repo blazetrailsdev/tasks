@@ -5,7 +5,8 @@ updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
-deps: []
+deps:
+  - converge-dirty-tracker-onto-rails-mutation-trackers
 deps-rfc: []
 est-loc: 320
 priority: null
