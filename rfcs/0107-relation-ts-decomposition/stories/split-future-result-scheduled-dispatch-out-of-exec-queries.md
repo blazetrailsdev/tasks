@@ -1,6 +1,6 @@
 ---
 title: "Split @future_result/scheduled? out of execQueries so loadAsync calls execMainQuery directly"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6750
 claim: "2026-08-19T23:26:39Z"
 assignee: "split-future-result-scheduled-dispatch-out-of-exec-queries"
 blocked-by: null
