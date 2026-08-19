@@ -5,7 +5,8 @@ updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel", "activerecord"]
-deps: []
+deps:
+  - move-ar-save-side-dirty-surface-out-of-model
 deps-rfc: []
 est-loc: 380
 priority: null
