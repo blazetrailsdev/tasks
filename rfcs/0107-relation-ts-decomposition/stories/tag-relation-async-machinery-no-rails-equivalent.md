@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
@@ -100,7 +100,7 @@ three unexplained ones.
 ## Acceptance criteria
 
 - [ ] `_loadAsyncPromise` and `_loadToken` each carry a `@noRailsEquivalent
-  PERMANENT` tag whose reason names the Rails counterpart (or states there is
+PERMANENT` tag whose reason names the Rails counterpart (or states there is
       none) with file and line, and says what about the JS runtime makes it
       permanent.
 - [ ] `_asyncLoad` is either converged to a parameter threaded through
