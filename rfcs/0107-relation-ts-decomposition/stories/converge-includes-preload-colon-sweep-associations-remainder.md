@@ -1,14 +1,14 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: associations remainder"
 status: ready
-updated: 2026-08-18
+updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 6
+priority: 7
 pr: null
 claim: null
 assignee: null
