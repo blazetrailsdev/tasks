@@ -5,7 +5,10 @@ updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
-deps: []
+deps:
+  - converge-attribute-methods-copy-on-write-and-alias-helpers
+  - converge-attribute-set-builder-residue
+  - converge-dirty-tracker-onto-rails-mutation-trackers
 deps-rfc: []
 est-loc: 300
 priority: null
