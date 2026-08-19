@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#match drops match?'s MAPPING and Regexp arms; dst? has an invented default"
-status: ready
+status: claimed
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T13:36:07Z"
+assignee: "converge-time-zone-match-and-dst-predicates"
 blocked-by: null
 closed-reason: null
 ---

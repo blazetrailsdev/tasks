@@ -1,7 +1,7 @@
 ---
 title: "Split time-ext.ts by receiver onto the Rails file layout"
-status: ready
-updated: 2026-08-18
+status: claimed
+updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 320
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-19T13:36:07Z"
+assignee: "converge-time-zone-match-and-dst-predicates"
 blocked-by: null
 closed-reason: null
 ---
