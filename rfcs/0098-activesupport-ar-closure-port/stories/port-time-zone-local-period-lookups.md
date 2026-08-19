@@ -1,6 +1,6 @@
 ---
 title: "Port TimeZone's local-side period lookups and UTC conversions"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
