@@ -1,6 +1,6 @@
 ---
 title: "insert*/upsert* overrides and the invented bulk-insert guard shadow the delegate-to-scope table"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
