@@ -1,6 +1,6 @@
 ---
 title: "port-parts-to-time-behind-time-at"
-status: claimed
+status: blocked
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-19T13:36:07Z"
 assignee: "converge-time-zone-match-and-dst-predicates"
-blocked-by: null
+blocked-by: "Blocked on @blazetrails/date gaining Time.at (time-helpers-stub-date-and-datetime-clock): parts_to_time's body needs Time.at(parts[:seconds]) and Time.new(y,m,d,h,min,sec,offset), and Rails reaches it only from parse/strptime, which in trails are bespoke component scanners that never build a parts hash — porting it without first converging parse/strptime onto Date._parse/DateTime._strptime would add a body nothing calls. That convergence plus Time.at is a PR of its own, well past this bundle's 700 LOC ceiling."
 closed-reason: null
 ---
 
