@@ -1,6 +1,6 @@
 ---
 title: "include? is !!@association.include?(record), not 46 lines of re-derived guard + scan"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
