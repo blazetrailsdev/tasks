@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel _assignAttribute writes through writeAttribute and sniffs error classes where Rails only sends the setter"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 12
-pr: null
+pr: 6738
 claim: "2026-08-19T12:59:52Z"
 assignee: "days-into-week-duplicated-in-date-calculations"
 blocked-by: null
