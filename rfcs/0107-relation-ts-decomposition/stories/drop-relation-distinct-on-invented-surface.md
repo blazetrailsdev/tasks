@@ -1,14 +1,14 @@
 ---
 title: "Delete Relation#distinctOn and _distinctOnColumns — Arel-only name behind a false Relation Mirrors tag"
 status: ready
-updated: 2026-08-18
+updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 4
+priority: 5
 pr: null
 claim: null
 assignee: null
