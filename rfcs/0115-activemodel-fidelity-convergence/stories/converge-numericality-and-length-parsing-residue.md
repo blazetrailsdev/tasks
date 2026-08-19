@@ -1,6 +1,6 @@
 ---
 title: "Converge numericality and length parsing residue"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
