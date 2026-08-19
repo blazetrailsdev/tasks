@@ -1,6 +1,6 @@
 ---
 title: "wave-4c-ar-core-residue-transactions-and-core"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6737
 claim: "2026-08-19T12:59:17Z"
 assignee: "wave-4c-ar-core-residue-transactions-and-core"
 blocked-by: null
