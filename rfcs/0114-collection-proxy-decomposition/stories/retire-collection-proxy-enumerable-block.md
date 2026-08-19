@@ -1,6 +1,6 @@
 ---
 title: "Retire CollectionProxy's Enumerable block onto RECORD_DELEGATES (relation/delegation.rb:99-102)"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
