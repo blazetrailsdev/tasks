@@ -1,6 +1,6 @@
 ---
 title: "Thread async through execMainQuery as Rails' argument instead of holding it in _asyncLoad"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6744
 claim: "2026-08-19T16:59:58Z"
 assignee: "thread-async-through-exec-main-query-argument"
 blocked-by: null
