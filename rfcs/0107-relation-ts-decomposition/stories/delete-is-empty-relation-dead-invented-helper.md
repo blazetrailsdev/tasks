@@ -1,6 +1,6 @@
 ---
 title: "Delete _isEmptyRelation — dead invented alias for Rails' null_relation? (isNullRelation)"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
