@@ -1,6 +1,6 @@
 ---
 title: "temporal-seat-loses-the-absolute-day-for-week-readers"
-status: blocked
+status: ready
 updated: 2026-08-19
 rfc: "0088-date-gem-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-18T18:14:58Z"
-assignee: "port-test-date-strftime-different-format"
-blocked-by: 'Implementing the decided raise (plainDateFromJd guard `if (rjd < sg) throw new DateError("invalid date")` at packages/date/src/date.ts:4644) reds 30 ported gem tests across 6 files, not just test_commercial/test_fractional: Date.jd()/Date.ordinal()/Date.commercial() all default to jd 0 = -4712-01-01, which is Julian-side under the default ITALY sg, so it is the BASE CASE of test-date-new.test.ts (jd, civil, civil neg, commercial, ordinal, ordinal neg, weeknum, nth kday), test-date-parse.test.ts (parse, iso8601, xmlschema, jisx0301, rfc2822, rfc3339, httpdate), test-date-strptime.test.ts, test-date-conv.test.ts and date.trails.test.ts. Converting those to expect().toThrow() would drop each test''s MRI-matching assertions and take parity:test assertion deltas NEGATIVE, which is a hard gate (CLAUDE.md ''Before you open the PR'' step 5). The dilemma is real and unresolvable as specified: a Temporal seat can carry either the Julian civil triple (what those tests assert via ymd()) or the correct absolute day, never both, and the story''s chosen horn costs more ported assertions than it buys. Needs an RFC-0088-owner decision on the wider blast radius (e.g. scope the raise to the week/yday readers only, or accept the parity:test regression explicitly) before it can land.'
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
