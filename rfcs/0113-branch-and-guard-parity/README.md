@@ -3,7 +3,7 @@ rfc: "0113-branch-and-guard-parity"
 title: "Branch and guard parity — the axis the call gates cannot see"
 status: draft
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-19
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -36,7 +36,7 @@ A ported body can call everything Rails calls, with exactly the right arguments,
 and still drop an `elsif`. Both existing call gates stay green. **Control flow is
 the axis nothing measures**, and it is where behaviour actually lives.
 
-71 open `0023-surfaced-deviations` stories describe a missing arm, an invented
+59 stories in this RFC describe a missing arm, an invented
 arm, a wrong arm order, or a guard Rails does not have — roughly 7,500 estimated
 LOC across ten packages. This RFC proposes a report-only arm-signature
 comparison, then a burndown.
@@ -89,17 +89,47 @@ which is the argument for tooling rather than vigilance.
 
 ## Design
 
-### Arm signatures
+### The extraction already exists — this RFC promotes it
 
-The Ruby side is already an AST. `scripts/api-compare/extract-ruby-api.rb` is a
-Ripper walker; conditional nodes — `if` / `elsif` / `unless` /
-`case`-`when` / `rescue` / guard-style early `return` — are already in the tree
-it walks and are simply not recorded.
+**Correction (2026-08-19).** This RFC originally proposed building an arm
+extractor on both sides. That was wrong: RFC 0084 already shipped it, and an
+earlier draft of this section sent readers to build something that is in the
+tree today.
 
-Emit, per method, an ordered **arm signature**: the sequence of arm kinds, plus
-the predicate's shape where it normalises cheaply (a bare truth test, a type
-test, a comparison). Do the same on the TS side. Compare, and report a mismatch
-in arm **count** or arm **order**.
+| Piece                                  | Where                                                                                                                                                               | Delivered by                                                 |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Ruby ordered control+call skeleton     | `extract-ruby-api.rb:2119` `collect_method_skeleton`, attached at `:684`, `:742`                                                                                    | `ordered-call-skeleton-stream-in-extractors`, PR #6161       |
+| TS equivalent                          | `extract-ts-api.ts:2662` `extractSkeleton(node.body)` — `if` / `loop` / `try` / `throw` plus normalized call and property reaches, over the TypeScript compiler API | same story, PR #6161                                         |
+| Ruby↔JS construct folding              | `compare.ts:303` `foldSkeletonTokens` — folds Ruby block-iteration onto `loop`                                                                                      | `fold-ruby-block-iteration-onto-loop-in-skeletons`, PR #6163 |
+| Paired artifact, every compared method | `compare.ts:3905` → `output/call-skeletons{mode}.json`                                                                                                              | `call-sequence-parity-in-wide-ratchet`, PR #6152             |
+
+`compare.ts:894-904` records the deliberate stopping point, and names what is
+missing:
+
+> Recorded for every compared pair, not just the flagged ones: this is the
+> population call-sequence-parity seeds from, not a mismatch list. **Signal only
+> (RFC 0084)** … and **nothing gates on it yet**. […] Those are set operations by
+> construction; **a sequence needs its own merge rule**, and until
+> call-sequence-parity decides what it is, carrying the body's own stream and
+> nothing else is the honest shape.
+
+So the tooling work here is **one decision and its consequences**: pick the
+sequence merge rule, surface it as a report, measure the noise, then gate or
+don't. It is carried by three stories in the `arm-parity-tooling` cluster
+(`promote-call-skeletons-to-an-arms-report` →
+`measure-arm-mismatch-noise-floor` → `seed-arm-parity-ratchet-or-record-ungated`),
+and it runs over ~1,462 (package, file, method) rows across 12 packages — not
+the 10-file population the retired prism-codegen scorer had.
+
+Two consequences worth stating, because they cut the risk this RFC was written
+against:
+
+- **The population is already wide.** No sampling decision is needed to get
+  coverage; the artifact covers every name-matched pair the compare walks.
+- **One artefact class is already handled.** `foldSkeletonTokens` folds Ruby
+  block-iteration onto `loop`, so that spelling difference should not appear in
+  the report at all. If it does, that is an extraction bug in RFC 0084's
+  tooling, not a false positive to baseline.
 
 ### What the gate deliberately does not do
 
@@ -160,22 +190,24 @@ that this class is currently being rediscovered rather than tracked.
 
 ## Rollout
 
-Story IDs are assigned when the RFC moves to `active` and the 71 stories
-re-home.
+Story IDs below are the `arm-parity-tooling` cluster; the 59 burndown stories
+re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
+`missing-arm` / `invented-arm` / `arm-order` / `guard-parity` clusters.
 
-1. **Phase 1 — Ruby-side extraction.** Record conditional nodes in
-   `extract-ruby-api.rb`. Output only; nothing consumes it yet.
-2. **Phase 2 — TS-side extraction and the comparison report.** A
-   `parity:api:arms:report` command, mirroring
-   `parity:api:calls:args:report`. **Measure the false-positive rate on a
-   hand-audited sample before writing a single convergence story.**
-3. **Phase 3 — decision gate.** If the noise floor is acceptable, seed a
-   baseline and promote to gating on the RFC 0084 only-shrink contract. If it is
-   not, stop here and run Phases 4-5 ungated, recording the measured rate in this
-   RFC's changelog.
-4. **Phase 4 — the specified methods.** Stories like
-   `sqlite3-translate-exception-branch-set` that already name the exact arm list
-   and order. No investigation needed, only the edit.
+1. **Phase 1 — decide the merge rule and ship the report.**
+   `promote-call-skeletons-to-an-arms-report`. Reads the existing
+   `output/call-skeletons.json`; no extractor work. Report-only.
+2. **Phase 2 — measure the noise floor.**
+   `measure-arm-mismatch-noise-floor`. A reproducible hand-audited sample
+   classified real / lowering artefact / extraction bug, against the one-third
+   tripwire below.
+3. **Phase 3 — gate, or decide not to.**
+   `seed-arm-parity-ratchet-or-record-ungated`. Both outcomes close the story;
+   only one of them adds a baseline.
+4. **Phase 4 — the specified methods.** Burndown stories that already name the
+   exact arm list and order — `sqlite3-translate-exception-branch-set` is the
+   model. No investigation needed, only the edit. **Not blocked on Phases 1-3**:
+   these are correct fixes whether or not a gate ever lands.
 5. **Phase 5 — the rest**, prioritised by whether the missing arm is a _raise_.
    A dropped raise is a silent wrong answer; a dropped fast path is a
    performance note. They are not the same severity and should not be worked in
@@ -183,38 +215,56 @@ re-home.
 
 ## Verification
 
-- `parity:api:arms:report` exists and runs in CI.
+- `pnpm parity:api:arms:report` exists and runs in CI, reading the existing
+  `output/call-skeletons.json`.
 - **The Phase 3 decision is recorded with its number** — the measured
-  false-positive rate on the audited sample, whichever way it goes. A "we tried
-  and it was too noisy" outcome with a figure attached is a successful RFC; one
-  without a figure is not.
-- If gated: the arms baseline is only-shrink and reaches 0 rows for the 71
+  artefact rate on the audited sample, whichever way it goes. A "we tried and it
+  was too noisy" outcome with a figure attached is a successful RFC; one without
+  a figure is not.
+- If gated: the arms baseline is only-shrink and reaches 0 rows for the 59
   in-scope stories' methods.
-- If ungated: all 71 stories reach `done`, and the Phase 4 subset is verified by
+- If ungated: all 59 stories reach `done`, and the Phase 4 subset is verified by
   arm-for-arm diff against the cited Rails `file:line` in review.
 - No story converges by adding a baseline row.
 
 ## Open questions
 
-1. **What false-positive rate is acceptable?** **Recommendation:** set the
-   tripwire before measuring, not after — if more than roughly one third of
-   reported mismatches are lowering artefacts rather than real divergences,
-   take the ungated path. Writing the threshold down first is what stops the
-   gate being tuned until it agrees with us.
-2. **Does the TS side need a real parser or will the existing extraction do?**
-   The api-compare TS extraction already walks a TypeScript AST for definitions
-   and calls. **Recommendation:** confirm in Phase 2 that it exposes statement
-   bodies, not just signatures — if it does not, that is a larger Phase 1 than
-   this RFC assumes and the estimate needs revising before adoption.
-3. **Should `rescue` / `catch` arms count?** Rails' `translate_exception`
+1. **What artefact rate is acceptable?** **Recommendation:** set the tripwire
+   before measuring, not after — if more than roughly one third of reported
+   mismatches are lowering artefacts rather than real divergences, take the
+   ungated path. Writing the threshold down first is what stops the gate being
+   tuned until it agrees with us. Carried by
+   `measure-arm-mismatch-noise-floor`.
+2. ~~**Does the TS side need a real parser or will the existing extraction
+   do?**~~ **Resolved 2026-08-19.** `extract-ts-api.ts` imports the TypeScript
+   compiler API directly (`import * as ts from "typescript"`) and already calls
+   `extractSkeleton(node.body)` alongside `extractCalls` / `extractCallSeq` /
+   `extractCallArgs` (`:703-706`). Statement bodies are fully reachable and the
+   skeleton is already emitted. No parser work, and Phase 1 is smaller than this
+   RFC originally estimated.
+3. **What is the sequence merge rule?** This is the one genuinely open design
+   question, and `compare.ts:894-904` flags it as the reason nothing gates yet.
+   Options are strict sequence equality, multiset equality plus a separate
+   `reordered` verdict (the retired prism-codegen scorer's `matched` /
+   `reordered` split), or control-token subsequence ignoring interleaved call
+   reaches. **Recommendation:** decide it in
+   `promote-call-skeletons-to-an-arms-report` and document why the other two
+   were rejected, rather than deferring it into the gate.
+4. **Should `rescue` / `catch` arms count?** Rails' `translate_exception`
    family makes them load-bearing, but TS `try/catch` shapes differ more than
    `if/else` does. **Recommendation:** include them in the report, exclude them
    from any gate until Phase 3 has data.
-4. **Severity split.** Phase 5 proposes ordering by whether the missing arm
+5. **Severity split.** Phase 5 proposes ordering by whether the missing arm
    raises. **Recommendation:** confirm that split is derivable from the story
-   bodies; if it needs a human read of all 71, it is not worth the ordering.
+   bodies; if it needs a human read of all 59, it is not worth the ordering.
 
 ## Changelog
 
 - 2026-08-18: initial RFC, carved out of `0023-surfaced-deviations` by the
-  backlog triage pass.
+  backlog triage pass; 59 burndown stories re-homed.
+- 2026-08-19: **corrected a false premise.** The RFC proposed building an arm
+  extractor; RFC 0084 had already shipped one (PRs #6152, #6161, #6163) and the
+  paired skeleton artifact is written for every compared pair today, signal-only.
+  Design and Rollout rewritten around promoting it; open question 2 resolved;
+  the sequence merge rule promoted to an open question in its own right; three
+  `arm-parity-tooling` stories filed for the work that actually remains.
