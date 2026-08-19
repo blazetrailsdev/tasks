@@ -1,6 +1,6 @@
 ---
 title: "Port Time#rfc3339 (conversions.rb's xmlschema alias) past its collision with Time.rfc3339"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6751
 claim: "2026-08-19T23:31:49Z"
 assignee: "converge-join-dependency-aliasing-through-alias-tracker"
 blocked-by: null
