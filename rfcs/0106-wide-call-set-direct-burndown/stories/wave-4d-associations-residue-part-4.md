@@ -1,6 +1,6 @@
 ---
 title: "Wave 4d part 4: the associations call-set residue (destroy_async, ThroughAssociation, helper decompositions)"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6739
 claim: "2026-08-19T13:26:32Z"
 assignee: "wave-4d-associations-residue-part-4"
 blocked-by: null
