@@ -1,6 +1,6 @@
 ---
 title: "Port CallbackChain#empty? so has_transactional_callbacks? stops counting entries"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6742
 claim: "2026-08-19T14:38:06Z"
 assignee: "callback-chain-empty-predicate-bakeoff-haiku"
 blocked-by: null
