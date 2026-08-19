@@ -4,7 +4,6 @@
 
 | RFC | Title | Status | Owner | Packages |
 |-----|-------|--------|-------|----------|
-| [0000-collection-proxy-decomposition](rfcs/0000-collection-proxy-decomposition/README.md) | collection-proxy.ts decomposition: converge the proxy back onto its association | draft | @deanmarano | activerecord |
 | [0001-task-system](rfcs/0001-task-system/README.md) | Task system (RFCs + story files + fast index) | closed | @deanmarano | — |
 | [0002-bootstrap-databasetasks](rfcs/0002-bootstrap-databasetasks/README.md) | Drop bootstrap-test-handler, route test setup through DatabaseTasks | closed | @deanmarano | activerecord |
 | [0003-activerecord-cli](rfcs/0003-activerecord-cli/README.md) | Standalone ActiveRecord DX + activerecord-cli package | closed | @deanmarano | activerecord, activerecord-cli, trails-tsc, trailties |
@@ -117,3 +116,4 @@
 | [0111-error-class-message-parity](rfcs/0111-error-class-message-parity/README.md) | Error-class and message parity burndown | draft | @deanmarano | activerecord, activemodel, activesupport, actionpack, arel, date, i18n, rack |
 | [0112-one-rails-thing-n-trails-things](rfcs/0112-one-rails-thing-n-trails-things/README.md) | One Rails thing, N trails things — duplicate bodies and split stores | active | @deanmarano | activerecord, activemodel, activesupport, actionpack, arel, date, globalid, trailties |
 | [0113-branch-and-guard-parity](rfcs/0113-branch-and-guard-parity/README.md) | Branch and guard parity — the axis the call gates cannot see | draft | @deanmarano | activerecord, activemodel, activesupport, actionpack, actionview, arel, date, trailties |
+| [0114-collection-proxy-decomposition](rfcs/0114-collection-proxy-decomposition/README.md) | collection-proxy.ts decomposition: converge the proxy back onto its association | draft | @deanmarano | activerecord |

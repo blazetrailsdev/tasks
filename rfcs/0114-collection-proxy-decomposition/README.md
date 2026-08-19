@@ -1,5 +1,5 @@
 ---
-rfc: "0000-collection-proxy-decomposition"
+rfc: "0114-collection-proxy-decomposition"
 title: "collection-proxy.ts decomposition: converge the proxy back onto its association"
 status: draft
 created: 2026-08-19
