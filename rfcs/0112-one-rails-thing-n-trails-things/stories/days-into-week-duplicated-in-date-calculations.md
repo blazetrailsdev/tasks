@@ -1,6 +1,6 @@
 ---
 title: "DAYS_INTO_WEEK is declared twice; the Date arm should read the mixin's constant"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
+pr: 6738
 claim: "2026-08-19T12:59:52Z"
 assignee: "days-into-week-duplicated-in-date-calculations"
 blocked-by: null
