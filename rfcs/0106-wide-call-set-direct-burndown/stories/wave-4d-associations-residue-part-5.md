@@ -78,5 +78,5 @@ Remaining rows and their Rails sources:
 - [ ] Rows deleted by hand via `serializeBaseline`, marks tightened per shard.
       No `--write`, no reseed, no widened allowlist.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` shows no new novel surface.
+activerecord` shows no new novel surface.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.

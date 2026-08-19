@@ -59,7 +59,7 @@ duplicate it.
 - [ ] The `make_constraints -> aliased_table_for` row is converged (deleted by
       hand via `serializeBaseline`) and the shard's mark tightened. No reseed.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` shows no new novel surface.
+activerecord` shows no new novel surface.
 - [ ] The join-dependency alias suites stay green — `join-dependency-alias-tracker`,
       `join-dependency-alias-length.trails`, `join-dependency-through-aliasing`,
       `join-dependency-belongs-to-dedup`, `join-dependency-duplicate-objects`,

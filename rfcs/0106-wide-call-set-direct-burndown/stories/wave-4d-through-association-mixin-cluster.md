@@ -70,5 +70,5 @@ is only acceptable for a proven language shortcoming.
 - [ ] All six rows converged (deleted by hand via `serializeBaseline`) or
       reasoned. No reseed, no widened allowlist.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` shows no new novel surface; marks tightened per shard.
+activerecord` shows no new novel surface; marks tightened per shard.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
