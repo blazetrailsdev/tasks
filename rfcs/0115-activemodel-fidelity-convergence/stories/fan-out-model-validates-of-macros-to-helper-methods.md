@@ -1,6 +1,6 @@
 ---
 title: "Fan out the validates_*_of macros from model.ts to their validator files"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
