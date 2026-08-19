@@ -1,6 +1,6 @@
 ---
 title: "Fan out the attribute-methods and attribute-registration surface from model.ts"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
