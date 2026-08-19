@@ -5,7 +5,8 @@ updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
-deps: []
+deps:
+  - fan-out-model-attribute-methods-and-registration-surface
 deps-rfc: []
 est-loc: 280
 priority: null
