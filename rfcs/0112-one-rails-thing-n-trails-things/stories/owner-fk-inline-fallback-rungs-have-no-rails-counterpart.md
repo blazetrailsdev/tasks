@@ -1,7 +1,7 @@
 ---
 title: "Remove the no-reflection fallback rungs from ownerForeignKeyColumns"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 deps: []
