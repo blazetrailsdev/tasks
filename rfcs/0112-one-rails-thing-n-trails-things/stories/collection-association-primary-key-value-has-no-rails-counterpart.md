@@ -1,6 +1,6 @@
 ---
 title: "primaryKeyValue has no Rails counterpart and returns a tuple no call site wants"
-status: ready
+status: draft
 updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
