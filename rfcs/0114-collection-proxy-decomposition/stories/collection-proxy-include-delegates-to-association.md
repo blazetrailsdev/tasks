@@ -1,6 +1,6 @@
 ---
 title: "include? is !!@association.include?(record), not 46 lines of re-derived guard + scan"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6743
 claim: "2026-08-19T14:30:05Z"
 assignee: "collection-proxy-clear-delegates-to-delete-or-nullify-all-records"
 blocked-by: null
