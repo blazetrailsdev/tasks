@@ -1,7 +1,7 @@
 ---
 title: "Date._parse's year fragment loses exactness past MAX_SAFE_INTEGER, where Ruby's String#to_i is exact"
-status: draft
-updated: 2026-08-09
+status: closed
+updated: 2026-08-19
 rfc: "0088-date-gem-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Won't-do (RFC 0088 owner, 2026-08-18): accepted divergence, not a converged one. Date._parse builds its :year/:cwyear fragments with Number(...) in five places (date.ts ~:1337 ISO arm, :1644 cwyear, :1712, :1810, :1902), so a year past Number.MAX_SAFE_INTEGER arrives as an inexact double where MRI's String#to_i answers an exact Integer at any width. Closed on reachability and cost, not on correctness: (1) no gate measures it — date is at 137/137 (100%) on parity:test as of dcffeff21, and no ported gem test exercises a 17+ digit year; (2) the 140 est-loc is understated — the story body records that widening DateParts.year surfaces six call sites feeding the ordinal/commercial/week-number helpers whose valid_ordinal_p / valid_commercial_p decode arms (date_core.c:2200-2245) are NOT ported, so doing it faithfully means porting that surface first. Reopen if a real input ever needs a year past 2^53, or if the valid_*_p decode arms get ported for another reason — at that point the fragment widening is nearly free. NOTE: the divergence is not currently recorded at any of the five call sites; the existing MAX_SAFE_INTEGER comments in date.ts (:363, :1205, :1246) cover Rational's numerator, a different path. A one-line note at the parse site would stop this being rediscovered and re-filed."
 ---
 
 ## Context
