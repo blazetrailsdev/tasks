@@ -5,7 +5,8 @@ updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
-deps: []
+deps:
+  - retire-model-set-callback-skip-callback-run-callbacks-passthrough
 deps-rfc: []
 est-loc: 300
 priority: null
