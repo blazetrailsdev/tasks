@@ -1,6 +1,6 @@
 ---
 title: "Strict-loading violation check lives in the singular reader, not find_target"
-status: claimed
+status: blocked
 updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
@@ -11,7 +11,7 @@ priority: 14
 pr: null
 claim: "2026-08-19T12:59:52Z"
 assignee: "days-into-week-duplicated-in-date-calculations"
-blocked-by: null
+blocked-by: "Prerequisite inline-has-many-module-private-find-target-loader (0023, est 350 LOC, status draft, unclaimed as of 2026-08-19) is unlanded. Its triage note says land it first: the trails-only module-private findTarget(record, assocName, options, queryExecutor, violatesStrictLoading) calling convention is why the collection gate cannot see the association instance's _skipStrictLoading, so moving the gate onto Association#findTarget and deleting CollectionProxy._checkStrictLoading's ~13 call sites cannot be done until that loader is folded in. Bundled with days-into-week-duplicated-in-date-calculations; the other four stories shipped without it."
 closed-reason: null
 ---
 
