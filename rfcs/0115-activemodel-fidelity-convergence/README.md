@@ -1,7 +1,7 @@
 ---
 rfc: "0115-activemodel-fidelity-convergence"
 title: "activemodel package-wide fidelity convergence and line-bloat burndown"
-status: draft
+status: active
 created: 2026-08-19
 updated: 2026-08-19
 owner: "@deanmarano"
