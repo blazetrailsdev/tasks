@@ -1,13 +1,13 @@
 ---
 title: "Un-fuse loadHasMany so association.scope replaces the three bypass helpers"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
