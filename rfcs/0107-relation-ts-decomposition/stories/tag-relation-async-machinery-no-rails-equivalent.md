@@ -1,6 +1,6 @@
 ---
 title: "Tag the async relation state @noRailsEquivalent PERMANENT, and converge or downgrade _asyncLoad"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
