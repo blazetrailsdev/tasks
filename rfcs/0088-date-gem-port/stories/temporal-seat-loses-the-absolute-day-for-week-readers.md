@@ -1,6 +1,6 @@
 ---
 title: "temporal-seat-loses-the-absolute-day-for-week-readers"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0088-date-gem-port"
 cluster: null
