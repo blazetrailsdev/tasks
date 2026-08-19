@@ -1,6 +1,6 @@
 ---
 title: "Wave 4f (cont. 2): the activesupport cache, encrypted-file and callbacks call-set residue"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6735
 claim: "2026-08-19T11:35:05Z"
 assignee: "wave-4c-ar-core-residue-model-c"
 blocked-by: null
