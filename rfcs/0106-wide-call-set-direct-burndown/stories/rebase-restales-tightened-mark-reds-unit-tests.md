@@ -1,6 +1,6 @@
 ---
 title: "A rebase can re-stale an already-tightened mark, and it reds Unit Tests"
-status: ready
+status: draft
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
