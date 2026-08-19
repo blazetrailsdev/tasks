@@ -1,6 +1,6 @@
 ---
 title: "Delete Relation#distinctOn and _distinctOnColumns — Arel-only name behind a false Relation Mirrors tag"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
+pr: 6744
 claim: "2026-08-19T16:59:58Z"
 assignee: "thread-async-through-exec-main-query-argument"
 blocked-by: null
