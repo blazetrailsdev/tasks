@@ -1,6 +1,6 @@
 ---
 title: "replace and its five private helpers are a second copy of CollectionAssociation#replace"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
