@@ -1,6 +1,6 @@
 ---
 title: "wave-4d-associations-residue-part-2"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
