@@ -1,7 +1,7 @@
 ---
 rfc: "0114-collection-proxy-decomposition"
 title: "collection-proxy.ts decomposition: converge the proxy back onto its association"
-status: draft
+status: active
 created: 2026-08-19
 updated: 2026-08-19
 owner: "@deanmarano"
