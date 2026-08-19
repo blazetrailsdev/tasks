@@ -1,6 +1,6 @@
 ---
 title: "Converge accepts-multiparameter-time's cast_from_multiparameter_hash"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
