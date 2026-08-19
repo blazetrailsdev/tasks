@@ -1,6 +1,6 @@
 ---
 title: "wave-4c-ar-core-residue-model-c"
-status: claimed
+status: ready
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-19T00:11:25Z"
-assignee: "wave-4c-ar-core-residue-model-c"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
