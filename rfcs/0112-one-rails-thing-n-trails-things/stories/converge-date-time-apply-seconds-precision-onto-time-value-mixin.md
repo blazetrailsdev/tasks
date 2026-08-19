@@ -1,7 +1,7 @@
 ---
 title: "Converge DateTimeType#applySecondsPrecision onto the Helpers::TimeValue mixin"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
