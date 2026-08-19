@@ -1,6 +1,6 @@
 ---
 title: "Fan out the validation-runner surface from model.ts to validations.ts"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
