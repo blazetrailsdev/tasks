@@ -1,6 +1,6 @@
 ---
 title: "assertion parity tail: adapters files, batch 3c"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
+pr: 6736
 claim: "2026-08-19T13:00:37Z"
 assignee: "assertions-tail-adapters-3c"
 blocked-by: null
