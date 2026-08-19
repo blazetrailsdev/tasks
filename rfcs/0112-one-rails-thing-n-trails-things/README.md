@@ -1,9 +1,9 @@
 ---
 rfc: "0112-one-rails-thing-n-trails-things"
 title: "One Rails thing, N trails things — duplicate bodies and split stores"
-status: draft
+status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-19
 owner: "@deanmarano"
 packages:
   - "activerecord"
