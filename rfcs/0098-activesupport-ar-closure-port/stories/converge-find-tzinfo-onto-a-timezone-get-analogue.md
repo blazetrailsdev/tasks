@@ -1,6 +1,6 @@
 ---
 title: "findTzinfo probes Intl where Rails calls TZInfo::Timezone.get"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
