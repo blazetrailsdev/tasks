@@ -1,6 +1,6 @@
 ---
 title: "Wave 4f (cont. 2): the activesupport cache, encrypted-file and callbacks call-set residue"
-status: in-progress
+status: done
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
