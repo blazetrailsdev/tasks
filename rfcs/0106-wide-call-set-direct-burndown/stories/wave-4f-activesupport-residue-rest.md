@@ -1,6 +1,6 @@
 ---
 title: "wave-4f-activesupport-residue-rest"
-status: claimed
+status: in-progress
 updated: 2026-08-19
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6734
 claim: "2026-08-19T01:18:03Z"
 assignee: "wave-4d-associations-residue-part-3"
 blocked-by: null
