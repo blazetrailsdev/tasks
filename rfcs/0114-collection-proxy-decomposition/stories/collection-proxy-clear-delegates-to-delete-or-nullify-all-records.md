@@ -1,6 +1,6 @@
 ---
 title: "clear/delete_all: delegate to the association instead of reimplementing delete_or_nullify_all_records"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
