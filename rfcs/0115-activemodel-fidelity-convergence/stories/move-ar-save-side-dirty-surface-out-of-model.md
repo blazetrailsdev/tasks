@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord save-side dirty surface out of activemodel/model.ts"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
