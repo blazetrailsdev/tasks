@@ -1,6 +1,6 @@
 ---
 title: "Converge error.ts's options equality and dupWithBase"
-status: draft
+status: ready
 updated: 2026-08-19
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
