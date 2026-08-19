@@ -1,7 +1,7 @@
 ---
 title: "handle_warnings body sits on Mysql2Adapter while its warning_ignored? guard sits on AbstractMysqlAdapter, where Rails puts both"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-08-19
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
