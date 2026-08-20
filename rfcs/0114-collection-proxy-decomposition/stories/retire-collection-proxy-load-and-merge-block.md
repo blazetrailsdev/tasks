@@ -1,6 +1,6 @@
 ---
 title: "Retire the proxy's load/merge block; load_target and merge_target_lists belong to the association"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
