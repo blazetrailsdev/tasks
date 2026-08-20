@@ -1,6 +1,6 @@
 ---
 title: "Make Helpers::TimeValue a real mixin instead of instance-field assignments and a duplicated serializeCastValue"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6788
 claim: "2026-08-20T19:50:09Z"
 assignee: "attribute-method-generation-driven-from-schema-reflection"
 blocked-by: null
