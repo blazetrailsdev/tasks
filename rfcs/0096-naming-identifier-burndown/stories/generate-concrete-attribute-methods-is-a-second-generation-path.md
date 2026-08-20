@@ -1,7 +1,7 @@
 ---
 title: "generateConcreteAttributeMethods is a second, bespoke accessor-generation path"
-status: ready
-updated: 2026-08-18
+status: claimed
+updated: 2026-08-20
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T17:15:01Z"
+assignee: "retire-join-part-arel-join"
 blocked-by: null
 closed-reason: null
 ---
