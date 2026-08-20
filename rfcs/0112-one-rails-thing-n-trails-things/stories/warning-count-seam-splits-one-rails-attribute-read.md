@@ -1,6 +1,6 @@
 ---
 title: "handle_warnings' @raw_connection.warning_count read became a trails-only warningCount method"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T18:15:06Z"
+assignee: "converge-assign-attribute-writer-ladder-onto-public-send"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "converge-assign-attribute-writer-ladder-onto-public-send"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T18:15:06Z"
+assignee: "converge-assign-attribute-writer-ladder-onto-public-send"
 blocked-by: null
 closed-reason: null
 ---
