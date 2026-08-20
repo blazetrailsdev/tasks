@@ -65,7 +65,7 @@ before deleting.
 - [ ] `function transaction` no longer exists in `through-association.ts`.
 - [ ] No new `@noRailsEquivalent` tag and no new baseline row.
 - [ ] `pnpm parity:api:calls` / `:args` add zero rows; `pnpm parity:api:extra
-  --package activerecord` gains nothing.
+--package activerecord` gains nothing.
 - [ ] `has-many-through-associations.test.ts`,
       `has-one-through-associations.test.ts`,
       `nested-through-associations.test.ts` pass unchanged. No test renamed.
