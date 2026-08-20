@@ -1,6 +1,6 @@
 ---
 title: "issue-attribute-method-suffix-from-the-included-hook"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T22:43:51Z"
+assignee: "issue-attribute-method-suffix-from-the-included-hook"
 blocked-by: null
 closed-reason: null
 ---
