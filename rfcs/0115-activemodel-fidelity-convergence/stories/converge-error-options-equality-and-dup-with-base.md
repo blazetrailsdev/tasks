@@ -1,6 +1,6 @@
 ---
 title: "Converge error.ts's options equality and dupWithBase"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6780
 claim: "2026-08-20T17:45:03Z"
 assignee: "converge-attribute-assignment-hash-guards"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge attribute-assignment.ts's hash guards onto attribute_assignment.rb"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6780
 claim: "2026-08-20T17:45:03Z"
 assignee: "converge-attribute-assignment-hash-guards"
 blocked-by: null
