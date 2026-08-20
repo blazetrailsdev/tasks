@@ -1,6 +1,6 @@
 ---
 title: "Retire the revision-stamped attribute_names memo for Rails' nil-on-reload"
-status: ready
+status: draft
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: api-compare
