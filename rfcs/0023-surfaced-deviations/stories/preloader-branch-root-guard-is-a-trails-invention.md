@@ -65,5 +65,5 @@ same path Rails walks, not through a bespoke `Error`.
       before it fails the way Rails fails rather than through a trails-only
       error string.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` does not grow; the preloader suites pass with no test
+activerecord` does not grow; the preloader suites pass with no test
       renames.

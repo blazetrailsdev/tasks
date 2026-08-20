@@ -76,5 +76,5 @@ forcing is the reader's own contract again, as it is in Ruby.
       `ThroughAssociation#recordsByOwner` is removed — the merge helpers force
       their own children.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` does not grow; the through/preloader suites pass with no
+activerecord` does not grow; the through/preloader suites pass with no
       test renames.
