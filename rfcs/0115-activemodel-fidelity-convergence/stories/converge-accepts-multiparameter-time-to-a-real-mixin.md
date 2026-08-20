@@ -1,6 +1,6 @@
 ---
 title: "Mix AcceptsMultiparameterTime in via include() instead of a per-call wrapper"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
