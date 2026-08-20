@@ -1,6 +1,6 @@
 ---
 title: "Retire the proxy's three strict-loading helpers; the check lives in find_target"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
