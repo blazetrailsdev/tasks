@@ -1,6 +1,6 @@
 ---
 title: "Inline _buildValidateConditions into validate — Rails has no such helper"
-status: ready
+status: draft
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
