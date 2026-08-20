@@ -1,7 +1,7 @@
 ---
 title: "abstract/database-statements.ts defines each method twice (free function + mixin object); only the mixin copy is live and they drift"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T01:54:44Z"
+assignee: "handle-warnings-body-belongs-on-abstract-mysql-adapter"
 blocked-by: null
 closed-reason: null
 ---
