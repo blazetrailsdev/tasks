@@ -1,6 +1,6 @@
 ---
 title: "Consolidate the duplicated ThroughAssociation module into one mixin"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 17
-pr: null
+pr: 6757
 claim: "2026-08-20T01:56:44Z"
 assignee: "consolidate-duplicated-through-association-module"
 blocked-by: null
