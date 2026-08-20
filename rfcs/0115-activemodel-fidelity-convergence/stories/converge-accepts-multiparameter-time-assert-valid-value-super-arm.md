@@ -1,6 +1,6 @@
 ---
 title: "Restore assert_valid_value's else super(value) arm in Date/DateTime/Time"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6774
 claim: "2026-08-20T15:22:34Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
 blocked-by: null
