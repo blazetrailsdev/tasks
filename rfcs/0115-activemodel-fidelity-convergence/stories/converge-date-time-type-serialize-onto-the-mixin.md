@@ -1,6 +1,6 @@
 ---
 title: "Drop the DateType/DateTimeType/TimeType serialize copies the AcceptsMultiparameterTime mixin already provides"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T19:05:09Z"
+assignee: "converge-date-time-type-serialize-onto-the-mixin"
 blocked-by: null
 closed-reason: null
 ---
