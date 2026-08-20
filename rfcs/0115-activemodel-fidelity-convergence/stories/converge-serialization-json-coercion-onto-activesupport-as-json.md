@@ -1,6 +1,6 @@
 ---
 title: "Converge serialization's JSON coercion onto ActiveSupport's Object#as_json"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6787
 claim: "2026-08-20T19:35:09Z"
 assignee: "converge-model-name-constructor-and-comparable-surface"
 blocked-by: null
