@@ -1,6 +1,6 @@
 ---
 title: "Mix ThroughAssociation into both through classes instead of per-class wrappers"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
