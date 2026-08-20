@@ -1,6 +1,6 @@
 ---
 title: "destroy-async-test-port-and-model-flip"
-status: ready
+status: draft
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
