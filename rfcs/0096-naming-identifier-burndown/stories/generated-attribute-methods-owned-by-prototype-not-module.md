@@ -1,6 +1,6 @@
 ---
 title: "Dirty/attribute accessors are generated onto the class prototype, not into GeneratedAttributeMethods"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0096-naming-identifier-burndown"
 cluster: null
