@@ -1,6 +1,6 @@
 ---
 title: "Retire the three safeKlass wrappers and read reflection.klass directly"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T13:52:33Z"
+assignee: "converge-preloader-preloaded-records-onto-load-records"
 blocked-by: null
 closed-reason: null
 ---
