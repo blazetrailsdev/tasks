@@ -1,6 +1,6 @@
 ---
 title: "Converge Preloader::Association#preloaded_records onto load_records"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
