@@ -1,6 +1,6 @@
 ---
 title: "Inline normalizeIncludes into serializable_add_includes"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 6768
 claim: "2026-08-20T12:52:31Z"
 assignee: "converge-accepts-multiparameter-time-cast-from-multiparameter"
 blocked-by: null
