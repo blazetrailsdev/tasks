@@ -1,6 +1,6 @@
 ---
 title: "Retire the _joinClauses sidecar and merged-join-alias-tracker.ts — orphaned when #6630 retired only the resolver"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 9
-pr: null
+pr: 6773
 claim: "2026-08-20T14:52:33Z"
 assignee: "unify-record-delegate-loader-across-rails-and-js-spellings"
 blocked-by: null
