@@ -1,6 +1,6 @@
 ---
 title: "Return ThroughAssociation#recordsByOwner's loaded? guard to Rails' per-owner arm"
-status: claimed
+status: blocked
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-08-20T16:43:10Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
-blocked-by: null
+blocked-by: "Blocked on converge-through-preloader-records-by-owner-onto-public-reader (status: ready, unclaimed). That story removes the unconditional pre-fetch in recordsByOwner (the two 'await Promise.all(...recordsByOwner())' lines above the loop, through-association.ts) by making the merge helpers force their own children. Until it lands, the per-owner 'loaded?' -> continue arm of through_association.rb:12-15 cannot replace the hoisted whole-loop early return: the pre-fetch still runs unconditionally, so unhoisting would issue queries for a fully-loaded owners list that Rails never issues. This story's own acceptance criteria name that ordering."
 closed-reason: null
 ---
 
