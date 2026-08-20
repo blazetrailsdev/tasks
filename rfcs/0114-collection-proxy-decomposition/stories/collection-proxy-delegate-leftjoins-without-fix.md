@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-delegate-leftjoins-without-fix"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
