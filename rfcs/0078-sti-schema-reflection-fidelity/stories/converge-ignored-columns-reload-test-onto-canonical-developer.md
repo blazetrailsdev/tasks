@@ -1,7 +1,7 @@
 ---
 title: "Converge the ignored-columns reload test onto Rails' canonical Developer"
-status: in-progress
-updated: 2026-08-18
+status: done
+updated: 2026-08-20
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 packages: []
