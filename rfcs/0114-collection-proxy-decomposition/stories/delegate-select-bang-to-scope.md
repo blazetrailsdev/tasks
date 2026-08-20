@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy does not delegate _select! to scope"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T10:52:33Z"
+assignee: "delegate-select-bang-to-scope"
 blocked-by: null
 closed-reason: null
 ---

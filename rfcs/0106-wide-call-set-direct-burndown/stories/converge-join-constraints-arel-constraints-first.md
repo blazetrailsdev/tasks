@@ -1,6 +1,6 @@
 ---
 title: "joinConstraints reads whereClause.ast instead of Rails' arel.constraints.first"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T10:52:33Z"
+assignee: "delegate-select-bang-to-scope"
 blocked-by: null
 closed-reason: null
 ---
