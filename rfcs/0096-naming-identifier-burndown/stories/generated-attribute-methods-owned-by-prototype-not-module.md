@@ -1,7 +1,7 @@
 ---
 title: "Dirty/attribute accessors are generated onto the class prototype, not into GeneratedAttributeMethods"
-status: ready
-updated: 2026-08-18
+status: claimed
+updated: 2026-08-20
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T03:52:32Z"
+assignee: "port-with-connection-acquisition-seam-for-the-arel-reader"
 blocked-by: null
 closed-reason: null
 ---
