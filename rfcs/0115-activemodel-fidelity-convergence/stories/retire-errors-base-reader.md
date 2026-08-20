@@ -1,6 +1,6 @@
 ---
 title: "Retire Errors#base — errors.rb declares no reader for @base"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
