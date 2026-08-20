@@ -1,6 +1,6 @@
 ---
 title: "activerecord hand-rolls class_attribute semantics; classAttribute() has zero callers"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
