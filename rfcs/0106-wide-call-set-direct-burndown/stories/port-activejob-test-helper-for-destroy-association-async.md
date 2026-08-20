@@ -1,6 +1,6 @@
 ---
 title: "Port the ActiveJob enqueue/perform test helpers destroy_association_async_test.rb needs"
-status: claimed
+status: blocked
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-20T16:43:10Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
-blocked-by: null
+blocked-by: "Not deliverable under the 700 LOC single-PR ceiling: trails has no activejob package at all (packages/ confirmed 2026-08-20), so this needs ActiveJob::Base, QueueAdapter/QueueAdapters registry, Execution, ConfiguredJob, Arguments serialization, TestAdapter (activejob/lib/active_job/queue_adapters/test_adapter.rb, 86 lines) and TestHelper (activejob/lib/active_job/test_helper.rb, 770 lines) plus a new workspace package, before ActiveRecord::DestroyAssociationAsyncJob and the _afterCommitJobs drain can be ported. The story body itself says 'Splitting this into its own RFC/epic is fine and probably right'. Needs a maintainer-scoped activejob RFC broken into per-file stories; unblock once that epic exists."
 closed-reason: null
 ---
 
