@@ -1,6 +1,6 @@
 ---
 title: "Converge check_validity! onto Hash#include?/#slice, retiring three baseline rows"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6792
 claim: "2026-08-20T21:03:53Z"
 assignee: "converge-check-validity-hash-readers"
 blocked-by: null
