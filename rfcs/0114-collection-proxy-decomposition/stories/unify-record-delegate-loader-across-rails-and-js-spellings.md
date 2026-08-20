@@ -1,6 +1,6 @@
 ---
 title: "One to: :records list, one loader — the Rails-name half reads toArray() while the JS-name half reads loadTarget()"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6773
 claim: "2026-08-20T14:52:33Z"
 assignee: "unify-record-delegate-loader-across-rails-and-js-spellings"
 blocked-by: null
