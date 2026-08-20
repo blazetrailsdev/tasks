@@ -1,6 +1,6 @@
 ---
 title: "converge-resolve-alias-name-in-onto-resolve-attribute-name"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T21:53:51Z"
+assignee: "converge-resolve-alias-name-in-onto-resolve-attribute-name"
 blocked-by: null
 closed-reason: null
 ---
