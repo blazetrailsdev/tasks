@@ -1,6 +1,6 @@
 ---
 title: "Preload writeback belongs on Association#target=, not a proxy hook"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6765
 claim: "2026-08-20T10:52:33Z"
 assignee: "delegate-select-bang-to-scope"
 blocked-by: null
