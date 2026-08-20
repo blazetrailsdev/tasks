@@ -1,6 +1,6 @@
 ---
 title: "define_attribute_methods omits load_schema because reflection drives generation"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T19:50:09Z"
+assignee: "attribute-method-generation-driven-from-schema-reflection"
 blocked-by: null
 closed-reason: null
 ---
