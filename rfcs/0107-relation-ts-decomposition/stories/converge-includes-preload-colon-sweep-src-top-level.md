@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: activerecord/src top level"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 380
 priority: 6
-pr: null
+pr: 6775
 claim: "2026-08-20T16:43:10Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
 blocked-by: null
