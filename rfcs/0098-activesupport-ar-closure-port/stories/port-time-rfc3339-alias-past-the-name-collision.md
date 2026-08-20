@@ -1,7 +1,7 @@
 ---
 title: "Port Time#rfc3339 (conversions.rb's xmlschema alias) past its collision with Time.rfc3339"
-status: in-progress
-updated: 2026-08-19
+status: done
+updated: 2026-08-20
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
