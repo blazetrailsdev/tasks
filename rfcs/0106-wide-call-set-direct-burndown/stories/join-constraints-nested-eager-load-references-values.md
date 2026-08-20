@@ -1,6 +1,6 @@
 ---
 title: "joinConstraints skips Rails' references_values nested construct_join_dependency block"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6760
 claim: "2026-08-20T03:22:31Z"
 assignee: "join-constraints-nested-eager-load-references-values"
 blocked-by: null
