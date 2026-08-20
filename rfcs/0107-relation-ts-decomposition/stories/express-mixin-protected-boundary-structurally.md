@@ -1,6 +1,6 @@
 ---
 title: "Express the QueryMethods protected boundary too, dropping the five protected names from CollectionProxy's delegate list"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6770
 claim: "2026-08-20T13:22:33Z"
 assignee: "proxy-record-delegates-read-through-merging-load-target"
 blocked-by: null
