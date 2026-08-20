@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: activerecord/src scoping and adapters trees"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 6778
 claim: "2026-08-20T17:30:03Z"
 assignee: "converge-includes-preload-colon-sweep-scoping-and-adapters"
 blocked-by: null
