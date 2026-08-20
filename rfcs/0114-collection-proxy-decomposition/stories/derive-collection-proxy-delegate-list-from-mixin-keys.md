@@ -70,13 +70,29 @@ those are the faithful part.
 
 ## Acceptance criteria
 
-- `SPAWN_METHODS_PUBLIC_INSTANCE_METHODS` is gone, replaced by
-  `Object.keys(SpawnMethods)`; the bang half of
-  `QUERY_METHODS_PUBLIC_INSTANCE_METHODS` is replaced by
-  `Object.keys(QueryMethodBangs)`.
+- `SPAWN_METHODS_PUBLIC_INSTANCE_METHODS` and
+  `QUERY_METHODS_PUBLIC_INSTANCE_METHODS` are both gone, replaced by
+  `Object.keys(SpawnMethods)` and `Object.keys(QueryMethodBangs)`. (Revised
+  during PR #6756: the story expected a residual non-bang hand-list, on the
+  premise that those members still lived on `Relation` itself. They do not —
+  `QueryMethodBangs` already carries the whole module and `relation.ts` mixes it
+  in with `include()`, so the non-bang half was derivable in this story too and
+  no residual remains. The subtraction that DOES need naming is Ruby's `private`
+  keyword, `query_methods.rb:1677` / `spawn_methods.rb:71`, which a JS object
+  literal cannot express.)
 - A new test in `collection-proxy.test.ts` (or a `.trails.test.ts` sibling)
-  asserts the residual hand-list intersects no exported mixin's keys, and that
-  the resulting delegate set is unchanged from before this story (pin the set).
-- The delegated set is byte-identical to today's: no name gained, none lost.
+  asserts no hand-transcribed name remains — every delegated name is a key of an
+  exported mixin — and that no private mixin member is delegated.
+- The delegated set changes only where the hand-list diverged from Rails, and
+  every delta cites `query_methods.rb`. (Revised during PR #6756: the criterion
+  read "byte-identical to today's", but deriving the list surfaced three
+  hand-list errors, all of which converge by changing the set. Gained
+  `asyncBang` — `async!` is defined at `query_methods.rb:1656`, before the
+  `private` at `:1677`, so Rails delegates it. Gained `arelColumns`,
+  `buildSubquery`, `buildWhereClause`, `buildHavingClause`, `leftJoins`,
+  `without` and `_selectBang` for the same reason — all public in
+  `query_methods.rb`, all delegated by Rails. Lost `rewhereBang` and `nullBang`:
+  neither `rewhere!` nor `null!` exists in Rails or in trails, so their
+  descriptors delegated to an undefined `scope` member.)
 - `pnpm parity:api:calls` / `:args` add zero rows for this file.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative.
