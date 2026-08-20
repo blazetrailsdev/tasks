@@ -1,6 +1,6 @@
 ---
 title: "Mix ThroughAssociation into both through classes instead of per-class wrappers"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: 6766
 claim: "2026-08-20T11:52:30Z"
 assignee: "wave-4d-through-association-mixin-cluster"
 blocked-by: null
