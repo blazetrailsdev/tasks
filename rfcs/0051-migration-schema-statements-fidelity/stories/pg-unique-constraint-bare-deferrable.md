@@ -1,6 +1,6 @@
 ---
 title: "PG visit_UniqueConstraintDefinition emits a bare DEFERRABLE Rails never emits"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
