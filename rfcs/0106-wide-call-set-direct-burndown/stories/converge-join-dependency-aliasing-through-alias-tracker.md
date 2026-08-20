@@ -1,7 +1,7 @@
 ---
 title: "Route JoinDependency#makeConstraints alias resolution through AliasTracker#aliasedTableFor"
-status: in-progress
-updated: 2026-08-19
+status: done
+updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
