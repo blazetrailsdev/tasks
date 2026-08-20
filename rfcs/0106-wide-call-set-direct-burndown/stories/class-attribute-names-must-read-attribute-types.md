@@ -1,6 +1,6 @@
 ---
 title: "class attribute_names must read attribute_types, not columnNames + _attributeDefinitions"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null

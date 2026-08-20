@@ -1,6 +1,6 @@
 ---
 title: "Retire AttributeDefinition's stored provenance flag in favour of Rails' Attribute subclass distinction"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
