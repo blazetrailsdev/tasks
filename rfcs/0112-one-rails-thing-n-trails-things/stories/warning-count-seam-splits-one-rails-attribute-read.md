@@ -1,6 +1,6 @@
 ---
 title: "handle_warnings' @raw_connection.warning_count read became a trails-only warningCount method"
-status: claimed
+status: blocked
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-20T18:15:06Z"
 assignee: "converge-assign-attribute-writer-ladder-onto-public-send"
-blocked-by: null
+blocked-by: "mysql2 npm 3.19.0 exposes no warning_count on the connection: lib/connection.js has no 'warning' at all, and the protocol count is parsed only into ResultSetHeader.warningStatus (lib/packets/resultset_header.js:34), which no command in lib/commands/ hands to the caller — a SELECT resolves as [rows, fields] and the header is discarded. So handleWarnings cannot read the count off the raw connection the way abstract_mysql_adapter.rb:771/773 does without patching the driver or wrapping every command to capture the header. Blocked on mysql2 surfacing warningStatus on the connection or per result; until then the SHOW COUNT(*) WARNINGS fallback is the only read, and being a round-trip it forces the async, read-once shape."
 closed-reason: null
 ---
 
