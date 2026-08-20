@@ -85,14 +85,13 @@ those are the faithful part.
   exported mixin — and that no private mixin member is delegated.
 - The delegated set changes only where the hand-list diverged from Rails, and
   every delta cites `query_methods.rb`. (Revised during PR #6756: the criterion
-  read "byte-identical to today's", but deriving the list surfaced three
-  hand-list errors, all of which converge by changing the set. Gained
-  `asyncBang` — `async!` is defined at `query_methods.rb:1656`, before the
-  `private` at `:1677`, so Rails delegates it. Gained `arelColumns`,
-  `buildSubquery`, `buildWhereClause`, `buildHavingClause`, `leftJoins`,
-  `without` and `_selectBang` for the same reason — all public in
-  `query_methods.rb`, all delegated by Rails. Lost `rewhereBang` and `nullBang`:
-  neither `rewhere!` nor `null!` exists in Rails or in trails, so their
-  descriptors delegated to an undefined `scope` member.)
+  read "byte-identical to today's", but deriving the list surfaced hand-list
+  errors that converge only by changing the set. As merged the delta is purely
+  additive — `asyncBang` (`query_methods.rb:1656`), `arelColumns` (`:1662`),
+  `buildSubquery` (`:1605`), `buildWhereClause` (`:1613`), `buildHavingClause`
+  (alias) and `_selectBang` (`:428`), every one defined before the `private` at
+  `:1677` and therefore delegated by Rails. The phantom entries the derivation
+  also removed — `rewhereBang`, `nullBang`, `selectBang` — were deleted on `main`
+  independently before this PR landed.)
 - `pnpm parity:api:calls` / `:args` add zero rows for this file.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative.
