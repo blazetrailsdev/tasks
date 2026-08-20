@@ -1,6 +1,6 @@
 ---
 title: "Converge Error#optionsEqual's identity arm onto Ruby value equality for Date/Time/Range"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T21:03:53Z"
+assignee: "converge-check-validity-hash-readers"
 blocked-by: null
 closed-reason: null
 ---
