@@ -1,6 +1,6 @@
 ---
 title: "PG visit_UniqueConstraintDefinition emits a bare DEFERRABLE Rails never emits"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6762
 claim: "2026-08-20T09:22:33Z"
 assignee: "wave-4c-ar-core-residue-core-find-by"
 blocked-by: null
