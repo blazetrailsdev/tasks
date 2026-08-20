@@ -1,6 +1,6 @@
 ---
 title: "joinConstraints skips Rails' references_values nested construct_join_dependency block"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
