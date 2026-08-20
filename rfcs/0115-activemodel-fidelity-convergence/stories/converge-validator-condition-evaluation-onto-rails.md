@@ -1,6 +1,6 @@
 ---
 title: "Converge validator.ts's condition evaluation onto validator.rb"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
