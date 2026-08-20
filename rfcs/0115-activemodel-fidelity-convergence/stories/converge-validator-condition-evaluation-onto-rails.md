@@ -1,6 +1,6 @@
 ---
 title: "Converge validator.ts's condition evaluation onto validator.rb"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6786
 claim: "2026-08-20T19:20:08Z"
 assignee: "converge-errors-enumerable-delegation-onto-rails"
 blocked-by: null
