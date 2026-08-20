@@ -1,6 +1,6 @@
 ---
 title: "Resolve Time#acts_like_time?, the last member left unpaired in time-ext.ts"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
