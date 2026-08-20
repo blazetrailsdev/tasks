@@ -1,6 +1,6 @@
 ---
 title: "Wave 4d part 5: the sync/async-blocked association helper rows"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6763
 claim: "2026-08-20T09:52:30Z"
 assignee: "wave-4d-associations-residue-part-5"
 blocked-by: null
