@@ -1,7 +1,7 @@
 ---
 title: "activerecord hand-rolls class_attribute semantics; classAttribute() has zero callers"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T16:23:13Z"
+assignee: "converge-join-dependency-through-aliasing-test-to-canonical-models"
 blocked-by: null
 closed-reason: null
 ---

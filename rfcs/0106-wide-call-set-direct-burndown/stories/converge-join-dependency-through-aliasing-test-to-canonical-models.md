@@ -1,6 +1,6 @@
 ---
 title: "Move the join-dependency through-aliasing wiring tests onto canonical models and fixtures"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T16:23:13Z"
+assignee: "converge-join-dependency-through-aliasing-test-to-canonical-models"
 blocked-by: null
 closed-reason: null
 ---
