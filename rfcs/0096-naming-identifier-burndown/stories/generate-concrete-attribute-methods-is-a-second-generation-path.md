@@ -1,6 +1,6 @@
 ---
 title: "generateConcreteAttributeMethods is a second, bespoke accessor-generation path"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0096-naming-identifier-burndown"
 cluster: null
