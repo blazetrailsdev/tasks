@@ -1,6 +1,6 @@
 ---
 title: "port-time-value-type-cast-for-schema"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6797
 claim: "2026-08-20T23:08:51Z"
 assignee: "port-time-value-type-cast-for-schema"
 blocked-by: null
