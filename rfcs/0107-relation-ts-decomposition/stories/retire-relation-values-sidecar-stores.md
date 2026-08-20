@@ -1,6 +1,6 @@
 ---
 title: "Retire the @values sidecar stores (_rawOrderClauses, _distinctOnColumns, _manualReferences)"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
