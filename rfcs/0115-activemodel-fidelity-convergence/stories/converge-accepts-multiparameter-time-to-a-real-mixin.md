@@ -1,6 +1,6 @@
 ---
 title: "Mix AcceptsMultiparameterTime in via include() instead of a per-call wrapper"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T17:30:03Z"
+assignee: "converge-includes-preload-colon-sweep-scoping-and-adapters"
 blocked-by: null
 closed-reason: null
 ---
