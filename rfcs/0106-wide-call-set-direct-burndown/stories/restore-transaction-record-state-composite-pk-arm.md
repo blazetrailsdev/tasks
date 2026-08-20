@@ -1,6 +1,6 @@
 ---
 title: "Port restore_transaction_record_state's attribute map and its missing composite-PK arm"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
