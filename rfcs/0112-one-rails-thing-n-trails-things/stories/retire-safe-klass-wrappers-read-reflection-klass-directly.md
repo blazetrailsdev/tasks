@@ -1,6 +1,6 @@
 ---
 title: "Retire the three safeKlass wrappers and read reflection.klass directly"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
