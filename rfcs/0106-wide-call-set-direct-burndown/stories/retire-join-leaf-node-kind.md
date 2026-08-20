@@ -1,6 +1,6 @@
 ---
 title: "Retire the JoinLeaf node kind — Rails' join tree holds only JoinBase and JoinAssociation"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6774
 claim: "2026-08-20T15:22:34Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
 blocked-by: null
