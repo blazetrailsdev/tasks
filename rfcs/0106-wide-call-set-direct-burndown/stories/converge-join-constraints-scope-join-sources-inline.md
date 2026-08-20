@@ -1,6 +1,6 @@
 ---
 title: "JoinAssociation#joinConstraints returns scope join sources inline, not via side-channel accumulators"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T02:22:31Z"
+assignee: "collapse-collection-proxy-toarray-onto-load"
 blocked-by: null
 closed-reason: null
 ---
