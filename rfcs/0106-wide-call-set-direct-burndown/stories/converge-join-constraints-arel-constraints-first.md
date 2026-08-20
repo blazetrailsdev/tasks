@@ -1,6 +1,6 @@
 ---
 title: "joinConstraints reads whereClause.ast instead of Rails' arel.constraints.first"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
