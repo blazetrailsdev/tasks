@@ -1,6 +1,6 @@
 ---
 title: "collapse-user-provided-and-source-onto-the-rails-kwarg"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6783
 claim: "2026-08-20T18:35:07Z"
 assignee: "collapse-user-provided-and-source-onto-the-rails-kwarg"
 blocked-by: null
