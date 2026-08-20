@@ -1,6 +1,6 @@
 ---
 title: "Return ThroughAssociation#recordsByOwner's loaded? guard to Rails' per-owner arm"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T16:43:10Z"
+assignee: "port-activejob-test-helper-for-destroy-association-async"
 blocked-by: null
 closed-reason: null
 ---
