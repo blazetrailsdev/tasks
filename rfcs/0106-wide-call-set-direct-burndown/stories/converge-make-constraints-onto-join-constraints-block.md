@@ -65,7 +65,7 @@ joinType, aliasTracker, block)` once, with the block doing the memo lookup +
 - [ ] `_rebuildChildJoin` is deleted; no emit-time `rebindTableReferences` pass
       remains for the alias case.
 - [ ] `pnpm parity:api:calls` / `:args` green; `parity:api:extra --package
-  activerecord` shows `associations/join-dependency.ts` novel count reduced.
+activerecord` shows `associations/join-dependency.ts` novel count reduced.
 - [ ] Alias suites green on SQLite, PostgreSQL and MySQL/MariaDB:
       `join-dependency-alias-tracker`, `join-dependency-through-aliasing`,
       `join-dependency-belongs-to-dedup`, `join-dependency-duplicate-objects`,
