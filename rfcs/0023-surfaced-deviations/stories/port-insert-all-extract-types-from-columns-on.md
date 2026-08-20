@@ -75,4 +75,4 @@ it did.
 - [ ] `verifyAttributeNamesAreKnown` is either deleted or justified at its call site
       with a Rails cite.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` shows no new surface; SQLite, PostgreSQL and MySQL lanes green.
+activerecord` shows no new surface; SQLite, PostgreSQL and MySQL lanes green.
