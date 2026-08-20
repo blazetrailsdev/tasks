@@ -105,5 +105,5 @@ tracker still keys on a `Map` would leave the snapshot with no baseline at all.
 - [ ] `transactions.test.ts` rollback-dirty coverage
       (`rollback dirty changes`, `rollback dirty changes multiple saves`,
       `rollback dirty changes then retry save`, and the `restore composite id
-  after rollback` / `restore id after rollback` pair) stays green.
+after rollback` / `restore id after rollback` pair) stays green.
 - [ ] `pnpm parity:api:calls` adds zero rows for `transactions.ts`.
