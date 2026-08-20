@@ -5,7 +5,8 @@ updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-through-preloader-records-by-owner-onto-public-reader
 deps-rfc: []
 est-loc: 120
 priority: null
