@@ -1,7 +1,7 @@
 ---
 title: "toArel acquires through a with_connection port, retiring the { sanitizeLimit } stand-in (query_methods.rb:1595)"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T01:52:31Z"
+assignee: "derive-collection-proxy-delegate-list-from-mixin-keys"
 blocked-by: null
 closed-reason: null
 ---
