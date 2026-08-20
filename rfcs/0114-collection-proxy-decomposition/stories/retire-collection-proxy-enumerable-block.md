@@ -1,7 +1,7 @@
 ---
 title: "Retire CollectionProxy's Enumerable block onto RECORD_DELEGATES (relation/delegation.rb:99-102)"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T02:52:30Z"
+assignee: "retire-collection-proxy-enumerable-block"
 blocked-by: null
 closed-reason: null
 ---
