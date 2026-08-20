@@ -1,5 +1,5 @@
 ---
-title: "trailties-lacks-active-record-initialize-database-initializer"
+title: "trailties has no active_record.initialize_database initializer"
 status: draft
 updated: 2026-08-20
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
