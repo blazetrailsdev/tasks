@@ -1,6 +1,6 @@
 ---
 title: "Express the QueryMethods/SpawnMethods private boundary in the mixin files, retiring the hand-transcribed PRIVATE_MIXIN_INSTANCE_METHODS set"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T12:22:28Z"
+assignee: "express-mixin-private-boundary-structurally"
 blocked-by: null
 closed-reason: null
 ---
