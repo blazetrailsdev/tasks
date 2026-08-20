@@ -1,6 +1,6 @@
 ---
 title: "Move the proxy's through owner-attribute derivation into ThroughAssociation/AssociationScope"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6753
 claim: "2026-08-20T00:22:32Z"
 assignee: "load-async-sets-loaded-so-loaded-readers-drain-the-future"
 blocked-by: null
