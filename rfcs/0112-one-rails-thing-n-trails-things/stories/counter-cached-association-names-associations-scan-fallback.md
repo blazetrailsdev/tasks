@@ -1,7 +1,7 @@
 ---
 title: "counter-cache: counterCachedAssociationNames falls back to scanning _associations"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: 22
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T17:22:15Z"
+assignee: "converge-event-children-invention"
 blocked-by: null
 closed-reason: null
 ---
