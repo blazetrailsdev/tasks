@@ -1,6 +1,6 @@
 ---
 title: "destroy-async-test-port-and-model-flip"
-status: claimed
+status: ready
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-20T10:22:32Z"
-assignee: "destroy-async-test-port-and-model-flip"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
