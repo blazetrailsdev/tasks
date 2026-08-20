@@ -1,6 +1,6 @@
 ---
 title: "converge-enum-undeclared-type-check-to-subtype"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T21:29:07Z"
+assignee: "converge-enum-undeclared-type-check-to-subtype"
 blocked-by: null
 closed-reason: null
 ---
