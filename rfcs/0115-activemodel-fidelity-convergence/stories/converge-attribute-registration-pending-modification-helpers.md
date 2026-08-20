@@ -1,6 +1,6 @@
 ---
 title: "Converge attribute-registration.ts's pending-modification helpers"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6781
 claim: "2026-08-20T18:00:06Z"
 assignee: "converge-attribute-methods-copy-on-write-and-alias-helpers"
 blocked-by: null
