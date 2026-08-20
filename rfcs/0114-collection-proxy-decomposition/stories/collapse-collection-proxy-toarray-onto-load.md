@@ -1,6 +1,6 @@
 ---
 title: "collapse-collection-proxy-toarray-onto-load"
-status: claimed
+status: blocked
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-20T02:22:31Z"
 assignee: "collapse-collection-proxy-toarray-onto-load"
-blocked-by: null
+blocked-by: "Verified on branch: Rails' literal load_target shape (toArray => load(); load() guards the query with find_target?/!isNullScope(), collection_association.rb:272-279) FIXES the autosave 'parent should save children record with foreign key validation set in before save callback' arm, and reds exactly one test: has-many-through-associations.test.ts 'nested has many through association with unpersisted parent instance' (:2337). That test has no Rails counterpart (no 'unpersisted parent' in vendor/rails/activerecord/test) and asserts behaviour Rails does not have: for post.subscriptions (through :books, itself through :author) ThroughAssociation#foreign_key_present? is false (through_association.rb:90-94, through_reflection.belongs_to? false) and owner.new_record? is true, so find_target? (association.rb:320-322) is false and Rails returns []. The only thing keeping that test green is the cache-bypassing toArray arm this story deletes. Unblocked by RFC 0075's retire-collection-proxy-query-executor-flag (draft) + hoist-mid-load-guard-to-doasyncfindtarget-callers (ready), so the null-scope path stops querying, plus a decision on that trails-only test. Sibling stories retire-collection-proxy-bang-finder-and-first-or-overrides and converge-join-constraints-scope-join-sources-inline shipped in the same PR without it."
 closed-reason: null
 ---
 
