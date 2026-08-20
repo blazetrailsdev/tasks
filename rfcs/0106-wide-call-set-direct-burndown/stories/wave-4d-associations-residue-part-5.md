@@ -1,6 +1,6 @@
 ---
 title: "Wave 4d part 5: the sync/async-blocked association helper rows"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
