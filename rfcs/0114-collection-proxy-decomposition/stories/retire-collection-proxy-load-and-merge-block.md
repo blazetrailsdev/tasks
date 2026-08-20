@@ -1,7 +1,7 @@
 ---
 title: "Retire the proxy's load/merge block; load_target and merge_target_lists belong to the association"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T01:22:34Z"
+assignee: "collection-proxy-delegate-leftjoins-without-fix"
 blocked-by: null
 closed-reason: null
 ---
