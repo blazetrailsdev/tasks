@@ -1,6 +1,6 @@
 ---
 title: "Build JoinDependency joins through one child.joinConstraints block, not build-then-rebuild"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
