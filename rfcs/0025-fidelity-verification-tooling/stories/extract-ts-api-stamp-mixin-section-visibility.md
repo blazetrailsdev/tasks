@@ -5,7 +5,8 @@ updated: 2026-08-20
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: ["activerecord"]
-deps: []
+deps:
+  - converge-public-instance-methods-onto-one-helper
 deps-rfc: []
 est-loc: 200
 priority: null
