@@ -1,6 +1,6 @@
 ---
 title: "Retire _eagerBypassPreloads: JOIN the eager loads that degrade to preload, dropping the preload_associations arg-shape row"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 12
-pr: null
+pr: 6764
 claim: "2026-08-20T10:22:32Z"
 assignee: "destroy-async-test-port-and-model-flip"
 blocked-by: null
