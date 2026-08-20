@@ -1,6 +1,6 @@
 ---
 title: "Move the join-dependency through-aliasing wiring tests onto canonical models and fixtures"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
