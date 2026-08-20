@@ -1,7 +1,7 @@
 ---
 title: "numericality-round-calls-rounding-helper"
-status: draft
-updated: 2026-08-14
+status: done
+updated: 2026-08-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6790
 claim: null
 assignee: null
 blocked-by: null
