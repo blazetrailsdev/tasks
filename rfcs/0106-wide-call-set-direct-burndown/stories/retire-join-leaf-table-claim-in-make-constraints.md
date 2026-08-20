@@ -1,6 +1,6 @@
 ---
 title: "Delete makeConstraints' non-JoinAssociation leaf table-claim arm (JoinLeaf has no Rails counterpart)"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6759
 claim: "2026-08-20T02:52:30Z"
 assignee: "retire-collection-proxy-enumerable-block"
 blocked-by: null
