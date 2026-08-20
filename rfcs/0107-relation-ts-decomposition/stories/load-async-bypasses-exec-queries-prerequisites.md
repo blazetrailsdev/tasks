@@ -1,6 +1,6 @@
 ---
 title: "loadAsync issues its query before execQueries' trails-only prerequisites"
-status: ready
+status: draft
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
