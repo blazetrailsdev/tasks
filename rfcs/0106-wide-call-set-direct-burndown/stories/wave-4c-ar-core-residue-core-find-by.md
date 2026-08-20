@@ -1,6 +1,6 @@
 ---
 title: "wave-4c-ar-core-residue-core-find-by"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
