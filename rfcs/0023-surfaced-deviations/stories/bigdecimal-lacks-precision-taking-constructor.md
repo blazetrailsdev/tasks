@@ -1,7 +1,7 @@
 ---
 title: "BigDecimal has no precision-taking constructor; decimal.ts carries three bespoke rounding helpers"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-08-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6790
 claim: null
 assignee: null
 blocked-by: null
