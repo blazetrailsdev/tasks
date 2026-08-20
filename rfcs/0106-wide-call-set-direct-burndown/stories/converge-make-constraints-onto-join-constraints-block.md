@@ -1,6 +1,6 @@
 ---
 title: "Build JoinDependency joins through one child.joinConstraints block, not build-then-rebuild"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T00:52:31Z"
+assignee: "converge-make-constraints-onto-join-constraints-block"
 blocked-by: null
 closed-reason: null
 ---
