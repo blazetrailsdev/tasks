@@ -1,6 +1,6 @@
 ---
 title: "Retire _eagerBypassPreloads: JOIN the eager loads that degrade to preload, dropping the preload_associations arg-shape row"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Delete _buildEagerIdSubquery — a second arel-building path Rails does not have"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
