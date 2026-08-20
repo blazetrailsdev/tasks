@@ -1,6 +1,6 @@
 ---
 title: "Retire the @values sidecar stores (_rawOrderClauses, _distinctOnColumns, _manualReferences)"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: null
+pr: 6761
 claim: "2026-08-20T03:52:32Z"
 assignee: "port-with-connection-acquisition-seam-for-the-arel-reader"
 blocked-by: null
