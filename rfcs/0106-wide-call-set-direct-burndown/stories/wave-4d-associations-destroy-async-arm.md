@@ -1,7 +1,7 @@
 ---
 title: "Port the :destroy_async dependent arm on belongs_to, has_many and has_one"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T09:22:33Z"
+assignee: "wave-4c-ar-core-residue-core-find-by"
 blocked-by: null
 closed-reason: null
 ---
