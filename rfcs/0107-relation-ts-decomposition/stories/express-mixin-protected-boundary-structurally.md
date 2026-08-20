@@ -1,6 +1,6 @@
 ---
 title: "Express the QueryMethods protected boundary too, dropping the five protected names from CollectionProxy's delegate list"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null

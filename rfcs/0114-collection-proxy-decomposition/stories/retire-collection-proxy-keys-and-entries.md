@@ -1,6 +1,6 @@
 ---
 title: "Retire CollectionProxy's keys/entries — JS-only index iterators Rails' to: :records list has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
