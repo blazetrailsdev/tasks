@@ -1,6 +1,6 @@
 ---
 title: "databaseConfiguration() does not port the shared-key reverse-merge"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6782
 claim: "2026-08-20T18:15:06Z"
 assignee: "converge-assign-attribute-writer-ladder-onto-public-send"
 blocked-by: null
