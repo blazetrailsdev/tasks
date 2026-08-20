@@ -1,6 +1,6 @@
 ---
 title: "_buildThroughScope is dead after the seeding removal; delete the trails-only IN-subquery through builder"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
