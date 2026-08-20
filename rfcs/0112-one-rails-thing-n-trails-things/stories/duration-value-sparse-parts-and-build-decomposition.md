@@ -1,6 +1,6 @@
 ---
 title: "Duration: port @value, zero-rejected sparse parts, and build decomposition"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
