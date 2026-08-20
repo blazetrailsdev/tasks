@@ -1,6 +1,6 @@
 ---
 title: "Port the :destroy_async dependent arm on belongs_to, has_many and has_one"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
