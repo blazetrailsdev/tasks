@@ -1,7 +1,7 @@
 ---
 title: "load-async-sets-loaded-so-loaded-readers-drain-the-future"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T00:22:32Z"
+assignee: "load-async-sets-loaded-so-loaded-readers-drain-the-future"
 blocked-by: null
 closed-reason: null
 ---

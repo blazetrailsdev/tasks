@@ -1,7 +1,7 @@
 ---
 title: "Move the proxy's through owner-attribute derivation into ThroughAssociation/AssociationScope"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T00:22:32Z"
+assignee: "load-async-sets-loaded-so-loaded-readers-drain-the-future"
 blocked-by: null
 closed-reason: null
 ---
