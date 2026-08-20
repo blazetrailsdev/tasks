@@ -1,6 +1,6 @@
 ---
 title: "class attribute_names must read attribute_types, not columnNames + _attributeDefinitions"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6789
 claim: "2026-08-20T20:05:07Z"
 assignee: "class-attribute-names-must-read-attribute-types"
 blocked-by: null
