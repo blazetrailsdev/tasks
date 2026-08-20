@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: associations remainder"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 7
-pr: null
+pr: 6760
 claim: "2026-08-20T03:22:31Z"
 assignee: "join-constraints-nested-eager-load-references-values"
 blocked-by: null
