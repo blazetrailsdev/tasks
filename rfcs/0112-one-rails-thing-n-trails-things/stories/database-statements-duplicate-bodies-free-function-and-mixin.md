@@ -1,6 +1,6 @@
 ---
 title: "abstract/database-statements.ts defines each method twice (free function + mixin object); only the mixin copy is live and they drift"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
