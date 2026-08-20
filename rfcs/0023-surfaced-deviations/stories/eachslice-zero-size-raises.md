@@ -1,5 +1,5 @@
 ---
-title: "eachslice-zero-size-raises"
+title: "eachSlice spins on a zero slice size where Ruby's each_slice raises"
 status: draft
 updated: 2026-08-20
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "has-one-nullify-owner-attributes-converge"
+title: "Converge HasOneAssociation#nullify_owner_attributes onto the Rails body"
 status: draft
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null

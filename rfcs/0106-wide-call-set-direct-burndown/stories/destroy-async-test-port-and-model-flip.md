@@ -1,5 +1,5 @@
 ---
-title: "destroy-async-test-port-and-model-flip"
+title: "Port destroy_association_async_test.rb and flip the canonical models to dependent: :destroy_async"
 status: draft
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 260
 priority: null
 pr: null
 claim: null
