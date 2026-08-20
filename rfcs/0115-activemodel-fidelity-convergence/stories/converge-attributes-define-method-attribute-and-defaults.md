@@ -1,6 +1,6 @@
 ---
 title: "Converge attributes.ts's define_method_attribute and default-building residue"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
