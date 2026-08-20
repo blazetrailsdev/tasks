@@ -1,6 +1,6 @@
 ---
 title: "Port the ActiveJob enqueue/perform test helpers destroy_association_async_test.rb needs"
-status: claimed
+status: ready
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-20T11:22:33Z"
-assignee: "port-activejob-test-helper-for-destroy-association-async"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
