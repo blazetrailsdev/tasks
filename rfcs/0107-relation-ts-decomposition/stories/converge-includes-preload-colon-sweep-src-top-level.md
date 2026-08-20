@@ -1,6 +1,6 @@
 ---
 title: "Sweep includes/preload call sites onto the colon spelling: activerecord/src top level"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
