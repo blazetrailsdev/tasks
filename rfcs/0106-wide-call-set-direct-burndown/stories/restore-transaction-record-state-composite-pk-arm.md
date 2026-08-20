@@ -1,7 +1,7 @@
 ---
 title: "Port restore_transaction_record_state's attribute map and its missing composite-PK arm"
-status: claimed
-updated: 2026-08-19
+status: in-progress
+updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6752
 claim: "2026-08-19T23:52:33Z"
 assignee: "restore-transaction-record-state-composite-pk-arm"
 blocked-by: null
