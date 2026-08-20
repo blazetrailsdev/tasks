@@ -1,7 +1,7 @@
 ---
 title: "Delete _buildEagerIdSubquery — a second arel-building path Rails does not have"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T10:22:32Z"
+assignee: "destroy-async-test-port-and-model-flip"
 blocked-by: null
 closed-reason: null
 ---
