@@ -1,6 +1,6 @@
 ---
 title: "ensure_mutable belongs on HasManyThroughAssociation, not as a proxy-side guard"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6755
 claim: "2026-08-20T01:22:34Z"
 assignee: "collection-proxy-delegate-leftjoins-without-fix"
 blocked-by: null
