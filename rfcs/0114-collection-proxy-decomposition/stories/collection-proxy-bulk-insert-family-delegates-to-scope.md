@@ -1,7 +1,7 @@
 ---
 title: "insert*/upsert* overrides and the invented bulk-insert guard shadow the delegate-to-scope table"
-status: in-progress
-updated: 2026-08-19
+status: done
+updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: ["activerecord"]

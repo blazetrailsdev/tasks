@@ -1,7 +1,7 @@
 ---
 title: "Split @future_result/scheduled? out of execQueries so loadAsync calls execMainQuery directly"
-status: in-progress
-updated: 2026-08-19
+status: done
+updated: 2026-08-20
 rfc: "0107-relation-ts-decomposition"
 cluster: null
 packages: []
