@@ -1,6 +1,6 @@
 ---
 title: "Move the proxy's through owner-attribute derivation into ThroughAssociation/AssociationScope"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
