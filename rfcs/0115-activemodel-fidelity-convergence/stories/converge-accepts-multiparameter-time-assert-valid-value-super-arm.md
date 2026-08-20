@@ -1,6 +1,6 @@
 ---
 title: "Restore assert_valid_value's else super(value) arm in Date/DateTime/Time"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
