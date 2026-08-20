@@ -1,6 +1,6 @@
 ---
 title: "One to: :records list, one loader — the Rails-name half reads toArray() while the JS-name half reads loadTarget()"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
