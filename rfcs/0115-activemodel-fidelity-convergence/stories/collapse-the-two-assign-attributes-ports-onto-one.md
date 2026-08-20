@@ -1,6 +1,6 @@
 ---
 title: "Collapse trails' two assign_attributes ports onto the single ActiveModel one"
-status: ready
+status: claimed
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T20:35:14Z"
+assignee: "collapse-the-two-assign-attributes-ports-onto-one"
 blocked-by: null
 closed-reason: null
 ---
