@@ -1,6 +1,6 @@
 ---
 title: "destroy_all/delete_all replay association state by hand; _invalidateAssociationIds has no Rails counterpart"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6756
 claim: "2026-08-20T01:52:31Z"
 assignee: "derive-collection-proxy-delegate-list-from-mixin-keys"
 blocked-by: null
