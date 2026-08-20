@@ -1,6 +1,6 @@
 ---
 title: "Retire AttributeDefinition's stored provenance flag in favour of Rails' Attribute subclass distinction"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
+pr: 6789
 claim: "2026-08-20T20:05:07Z"
 assignee: "class-attribute-names-must-read-attribute-types"
 blocked-by: null
