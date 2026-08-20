@@ -1,6 +1,6 @@
 ---
 title: "Converge AR define_attribute onto define_default_attribute + Attribute::UserProvidedDefault"
-status: ready
+status: draft
 updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: api-compare
