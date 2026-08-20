@@ -71,7 +71,7 @@ have the same number of columns ...`), which has no Rails raise site.
 ## Acceptance criteria
 
 - [ ] `joinConstraints` reads its predicates from `scope.arel(aliasTracker)
-  .constraints[0]`, built once, mirroring join_association.rb:56-58.
+.constraints[0]`, built once, mirroring join_association.rb:56-58.
 - [ ] The hand-built key-equality fallback and its bespoke Error are gone.
 - [ ] `pnpm parity:api:extra --package activerecord` novel count for
       `associations/join-dependency/join-association.ts` does not rise.
