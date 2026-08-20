@@ -1,6 +1,6 @@
 ---
 title: "Converge Preloader::Association#preloaded_records onto load_records"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6771
 claim: "2026-08-20T13:52:33Z"
 assignee: "converge-preloader-preloaded-records-onto-load-records"
 blocked-by: null
