@@ -1,6 +1,6 @@
 ---
 title: "Preload writeback belongs on Association#target=, not a proxy hook"
-status: in-progress
+status: done
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
