@@ -1,6 +1,6 @@
 ---
 title: "Delete the nine finder overrides Rails inherits unchanged (first!/last!/take!/many?/one?/exists?/first_or_*)"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["collection-proxy-initialize-is-five-lines"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 6758
 claim: "2026-08-20T02:22:31Z"
 assignee: "collapse-collection-proxy-toarray-onto-load"
 blocked-by: null
