@@ -1,6 +1,6 @@
 ---
 title: "Give HABTM a real belongs_to source reflection and drop ensureMutable's macro arm"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6771
 claim: "2026-08-20T13:52:33Z"
 assignee: "converge-preloader-preloaded-records-onto-load-records"
 blocked-by: null
