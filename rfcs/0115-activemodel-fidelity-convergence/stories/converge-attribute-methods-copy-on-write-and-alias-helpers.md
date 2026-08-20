@@ -1,7 +1,7 @@
 ---
 title: "Converge attribute-methods.ts's copy-on-write and alias helpers"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-20
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-20T18:00:06Z"
+assignee: "converge-attribute-methods-copy-on-write-and-alias-helpers"
 blocked-by: null
 closed-reason: null
 ---
