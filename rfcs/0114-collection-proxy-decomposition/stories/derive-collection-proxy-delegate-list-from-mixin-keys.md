@@ -1,6 +1,6 @@
 ---
 title: "Derive the delegate-to-scope list from the mixin objects' keys, not two hand-transcribed arrays"
-status: claimed
+status: in-progress
 updated: 2026-08-20
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6756
 claim: "2026-08-20T01:52:31Z"
 assignee: "derive-collection-proxy-delegate-list-from-mixin-keys"
 blocked-by: null
