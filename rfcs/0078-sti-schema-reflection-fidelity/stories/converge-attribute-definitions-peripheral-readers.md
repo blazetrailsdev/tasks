@@ -1,7 +1,7 @@
 ---
 title: "converge-attribute-definitions-peripheral-readers"
-status: ready
-updated: 2026-08-18
+status: claimed
+updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T10:40:22Z"
+assignee: "converge-attribute-definitions-peripheral-readers"
 blocked-by: null
 closed-reason: null
 ---
