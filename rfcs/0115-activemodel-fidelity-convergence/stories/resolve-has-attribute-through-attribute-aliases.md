@@ -65,8 +65,24 @@ class-level `hasAttribute` (`packages/activerecord/src/base.ts:4350`) against
 
 - [ ] Both `hasAttribute` bodies resolve through `attributeAliases`, mirroring
       `attribute_methods.rb:316-320` / `:254-258`.
-- [ ] A test covers `hasAttribute` on an aliased attribute (Rails'
-      `AttributeMethodsTest` alias coverage in
-      `vendor/rails/activerecord/test/cases/attribute_methods_test.rb`) and
-      fails on the pre-fix baseline.
+- [x] A test covers `hasAttribute` on an aliased attribute at BOTH levels —
+      `attribute-methods.trails.test.ts`'s
+      `returns true for alias_attribute names on instances` (pre-existing) and
+      `... on the class` (added in trails#6818) — plus Rails' own
+      `has attribute` / `has attribute with symbol`
+      (`vendor/rails/activerecord/test/cases/base_test.rb:1600-1631`, which
+      asserts on Company's `new_name` alias).
+      **The "fails on the pre-fix baseline" half is struck as misspecified.**
+      The Context above asserts `resolveAttributeName` is
+      `AttributeRegistration::ClassMethods#resolve_attribute_name`
+      (`attribute_registration.rb:101-103`, `name.to_s`, identity in trails).
+      It is not: trails' single `resolveAttributeName` is the
+      `AttributeMethods::ClassMethods` override
+      (`attribute_methods.rb:394-396`, `attribute_aliases.fetch(super, &:itself)`),
+      which already resolves aliases. Verified on the pre-fix baseline —
+      `Topic.hasAttribute("heading")` and `topic.hasAttribute("heading")` both
+      returned `true`. So there was no behavioural bug and no test can fail on
+      the baseline; this story is a pure fidelity convergence of the body onto
+      `attribute_aliases[attr_name] || attr_name`.
+
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.

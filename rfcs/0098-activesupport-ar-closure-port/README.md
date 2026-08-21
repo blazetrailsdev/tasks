@@ -3,7 +3,7 @@ rfc: "0098-activesupport-ar-closure-port"
 title: "activesupport AR-closure porting"
 status: active
 created: 2026-08-10
-updated: 2026-08-13
+updated: 2026-08-21
 owner: "@your-handle"
 packages:
   - "activesupport"
@@ -40,6 +40,37 @@ Direct AR/AM call-site evidence (grep of vendor AR/AM lib): `blank?/present?` 64
 - testing-helpers-for-ar-test-parity (Slot H)
 
 (Slot I of the audit — SKIP_GROUPS triage — already filed under RFC 0072.)
+
+## Changelog
+
+### 2026-08-21 — the four in-closure XML conversions (option 1)
+
+`resolve-the-in-closure-xml-conversions` asked which of three dispositions
+resolves the contradiction between this RFC's measurement and RFC 0101's
+"XmlMini is out-of-closure" framing. **Option 1 — port the minimum XmlMini
+slice, inside 0098 — was chosen** (owner decision, backlog triage, recorded on
+the story). Option 3 (re-deriving the closure) was not taken: the four members
+really are reached by `scripts/api-compare/ar-closure.ts`'s transitive `require`
+walk from `activerecord/lib` + `activemodel/lib`, so editing the closure would
+have moved the denominator without a require-graph justification — which the
+story explicitly forbids.
+
+Landed in trails#6818. The four members are `Hash#to_xml`, `Hash.from_xml`,
+`Hash.from_trusted_xml` (→ `hash-utils.ts`) and `Array#to_xml` (→
+`array-utils.ts`). The XmlMini surface pulled in with them, and the boundary
+this RFC now owns, is exactly:
+
+- `XmlBuilder.instruct()` / `.target()` — the `Builder::XmlMarkup#instruct!` /
+  `#target!` roles `Hash#to_xml` and `Array#to_xml` call directly
+  (`core_ext/hash/conversions.rb:83`, `core_ext/array/conversions.rb:199`).
+- An indent width on `IndentedXmlStringBuilder`, so `indent: 0` reproduces
+  Builder's unformatted output.
+- `ActiveSupport::XMLConverter` and its `DisallowedType` / `DISALLOWED_TYPES`
+  (`core_ext/hash/conversions.rb:140-262`), which is `Hash.from_xml`'s whole
+  body.
+
+Nothing else in `xml_mini.rb` was touched; the backend/parsing half stays RFC
+0101's. AR closure moved 8917/8943 → 8940/8948.
 
 ## Done means
 
