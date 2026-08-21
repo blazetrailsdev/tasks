@@ -21,9 +21,10 @@ closed-reason: null
 ## Context
 
 Found while reading the canonical models for
-`destroy-async-test-port-and-model-flip` (PR #6764's bundle; that story is
-blocked on PR #6762 and on ActiveJob, but these two gaps are independent of
-both and are pure model-fidelity misses).
+`destroy-async-test-port-and-model-flip` (PR #6764's bundle; that story was
+closed on 2026-08-21 when ActiveJob was descoped, and its work now lives in
+`port-destroy-association-async-test-and-flip-models` — but these two gaps are
+independent of it and are pure model-fidelity misses).
 
 `vendor/rails/activerecord/test/models/book_destroy_async.rb`:
 
