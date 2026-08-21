@@ -3,7 +3,7 @@ rfc: "0114-collection-proxy-decomposition"
 title: "collection-proxy.ts decomposition: converge the proxy back onto its association"
 status: active
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -113,6 +113,84 @@ private `_`-prefixed helpers (`_buildThroughScope`, `_throughOwnerCols`,
 from bodies whose Rails counterpart makes no such call — an omission the call-set
 gate scores as green because it only ratchets _missing_ Rails calls, never extra
 trails ones.
+
+## The re-measurement (2026-08-21)
+
+Same method, same commands (`pnpm build`, `API_COMPARE_FORCE=1 pnpm parity:api
+--calls`, `pnpm parity:api:extra --package activerecord`), against `origin/main`
+at `fc521e1b3`:
+
+```console
+$ wc -l packages/activerecord/src/associations/collection-proxy.ts
+1520
+$ grep -vcE '^\s*(//|/\*|\*|$)' packages/activerecord/src/associations/collection-proxy.ts
+675
+```
+
+**1,556 → 675 code lines: a 57% burndown.** Per matched method the ratio against
+`collection_proxy.rb`'s 148 code lines is now **~4.6x**, down from 10.5x — inside
+the band `relation.ts` sat in after RFC 0107 finished with it.
+
+| bucket                                                               | 2026-08-19 | 2026-08-21 | retired by                                                                                                                                                           |
+| -------------------------------------------------------------------- | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| E — mutation terminals duplicated from `CollectionAssociation`       | 408        | **158**    | `clear`/`include`/`replace`/bulk-insert/target-replay stories (F1)                                                                                                   |
+| H — finder / `delegate ... to: :scope` overrides                     | 210        | **157**    | `retire-collection-proxy-bang-finder-and-first-or-overrides`, `delegate-select-bang-to-scope`                                                                        |
+| PREAMBLE — types, thenable interface, slot setter, helpers           | 112        | 86         | partial                                                                                                                                                              |
+| J — fields and `target`/`owner`/`reflection` accessors               | 74         | 85         | not in scope (grew as bodies moved onto the shared accessors)                                                                                                        |
+| G — the delegate table + module tail                                 | 139        | 60         | `derive-collection-proxy-delegate-list-from-mixin-keys` (F7, #6756)                                                                                                  |
+| C — construction and eager scope seeding                             | 114        | 51         | `collection-proxy-initialize-is-five-lines` (F5, #6745)                                                                                                              |
+| I — `null_scope?` / `find_from_target?` / `inspect` / `pretty_print` | 31         | 31         | not in scope (~1:1 with Rails)                                                                                                                                       |
+| D — load / target-merge machinery                                    | 95         | 29         | `retire-collection-proxy-load-and-merge-block` (F6, #6773)                                                                                                           |
+| B — `:through` machinery                                             | 285        | **11**     | `move-through-owner-attribute-helpers-to-through-association`, `delete-dead-collection-proxy-build-through-scope`, `retire-collection-proxy-ensure-through-writable` |
+| A — Enumerable / array-likeness block                                | 62         | 6          | `retire-collection-proxy-enumerable-block` (F4, #6759)                                                                                                               |
+| **total**                                                            | **1,556**  | **675**    |                                                                                                                                                                      |
+
+`parity:api:extra` now scores the file **1 novel / 7 moved** (was 6 novel /
+32 moved / 4 allowlisted). The single novel name is `new` — Rails'
+`alias_method :new, :build` (`collection_proxy.rb:321`), which is a real Rails
+member the matcher cannot see through an alias, not invented surface.
+
+### The standing constraint still holds — with one finding
+
+`output/call-mismatches.json` carries **0 rows** for this `tsFile`, and there is
+still no `call-mismatches-exclude/.../collection-proxy.json` shard.
+
+`output/call-arg-mismatches.json` carried **one** row, and per this RFC's own
+rule that is a finding rather than a baseline: `replace` was declared
+`replace(records: T[])` against Rails' `def replace(other_array)`
+(`collection_proxy.rb:391`). Ported parameters keep the Rails identifier, so the
+parameter was renamed to `otherArray` in the re-measurement PR and the row is
+gone. Both artifacts are now empty for this file.
+
+### What is left, and is it worth a campaign?
+
+Yes — but a short one. Buckets B, A, D, G and C have converged or are within a
+story of it; F2 is down to `_pushThrough` (11 lines, already owned by
+`0023-surfaced-deviations/retire-push-through-for-association-concat`). Two
+buckets still hold real residue, and neither is large:
+
+- **E, 158 lines** — but most of it is now genuine delegation plus TypeScript
+  overload signatures on `build`/`new`/`create`/`create!`, which is irreducible.
+  The re-implementations that survive are `_raiseOnTypeMismatch` (15 lines, a
+  second copy of `Association#raise_on_type_mismatch!`, `association.rb:257` —
+  Rails' `<<` does not type-check at the proxy at all), `appendBang` (17),
+  `_wireInverseTarget` (6), and `push`'s `:through` arm (the F2 remnant).
+- **H, 157 lines** — `transaction` (10; Rails has no `CollectionProxy#transaction`
+  — it is `CollectionAssociation#transaction`), `clone` (12), `equals` (11),
+  `load`/`reload`/`reset`/`toArray` (37), and the `calculate`/`pluck`
+  `disable_joins` arms (already owned by
+  `0106-wide-call-set-direct-burndown/djar-eager-chain-ids-drop-disable-joins-arms`).
+
+Three stories are filed for the residue
+(`retire-collection-proxy-raise-on-type-mismatch`,
+`retire-collection-proxy-append-bang-and-wire-inverse-target`,
+`move-collection-proxy-transaction-and-clone-to-their-rails-seats`). When those
+land the file is ~600 lines at ~4x, dominated by PREAMBLE + J + I — the part
+this RFC declared out of scope on day one — and **0114 should close** rather
+than chase the remainder.
+
+The buckets below are the 2026-08-19 findings as originally written, kept for
+provenance.
 
 ## Findings
 

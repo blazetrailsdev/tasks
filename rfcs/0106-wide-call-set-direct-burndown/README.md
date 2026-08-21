@@ -3,7 +3,7 @@ rfc: "0106-wide-call-set-direct-burndown"
 title: "Wide call-set direct burndown (activerecord, arel, activesupport)"
 status: active
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-21
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -126,6 +126,59 @@ larger than the row — not as the default disposition.
   for them here.
 - Out: tooling changes to the ratchet, the sharding or the unreviewed marks.
   RFC 0083 owned those and is closed; a genuinely new tooling need is a new RFC.
+
+## Seeded-reason audit (measured 2026-08-21)
+
+`audit-seeded-call-set-reasons-for-already-converged-rows` asked how many of the
+baselined `kind: "set"` rows still carrying the bulk-seeded RFC 0047 string are
+retirable by deletion alone, the way four of the eight rows PR #6728 touched
+were. Measured after a fresh `pnpm build` +
+`API_COMPARE_FORCE=1 pnpm parity:api --calls`:
+
+| population                                          | rows    |
+| --------------------------------------------------- | ------- |
+| exclude-tree rows, all kinds                        | 1,061   |
+| `kind: "set"` rows                                  | 892     |
+| …of those, carrying the bulk-seeded RFC 0047 reason | **414** |
+| live `(package, tsFile, rubyName, call)` mismatches | **892** |
+| baselined set rows the gate no longer reports       | **0**   |
+
+**The exclude tree and the live mismatch set are exactly congruent: 892 = 892.**
+No baselined set row has silently converged out from under its reason. The
+zero-code-change slice, measured this way, is empty — so the remaining 0106
+waves should _not_ be re-sized downward on the expectation of free retirements.
+
+That is not, however, the mechanism PR #6728 found. Those rows were **live on the
+gate** while the body was already converged: the TS body made the call under a
+spelling `scripts/parity/conventions.ts` does not offer as a candidate. Measured
+directly against `output/ts-api.json` — for each seeded row, does the matched TS
+body's call set contain the camelised Ruby call name under a leading-underscore
+spelling? — **18 of the 414 seeded rows (4.3%)** are held open that way:
+
+| shard                                           | rows | example                                                           |
+| ----------------------------------------------- | ---- | ----------------------------------------------------------------- |
+| `actioncontroller/metal/strong-parameters.json` | 14   | `permit` → `permit_filters`, called as `_permitFilters`           |
+| `activemodel/model.json`                        | 1    | `initialize` → `assign_attributes`, called as `_assignAttributes` |
+| `activemodel/attribute-methods.json`            | 1    | `attribute_method?` → `attributes`, called as `_attributes`       |
+| `activerecord/type/type-map.json`               | 1    | `fetch` → `perform_fetch`, called as `_performFetch`              |
+| `activerecord/type/serialized.json`             | 1    | `encoded` → `default_value?`, called as `_defaultValue`           |
+
+### The conventions rule that retires them
+
+`snakeToCamel` candidates in `scripts/parity/conventions.ts` preserve a Ruby
+name's _own_ leading underscore (`:83`) and special-case an underscore-prefixed
+writer (`:1524`), but nothing offers `"_" + camel` as a candidate for a bare Ruby
+name. trails prefixes a private helper with `_` to keep it off the public
+surface — the convention `eslint/rails-private-methods.json` is built from — so
+`convert_value_to_parameters` legitimately ports as `_convertValueToParameters`
+and the call-set matcher cannot see it.
+
+The rule: **offer `"_" + camel` as a trailing candidate for every Ruby name**,
+after the existing candidates, exactly as the `Q` suffix is offered last for
+predicates. It is trailing so no existing match is displaced. Filed as
+`add-leading-underscore-call-candidate-to-conventions` — it is a
+conventions-table change that re-matches every package's manifest, so it belongs
+in its own PR with its own `parity:api` delta, not folded into a burndown wave.
 
 ## Rollout
 
