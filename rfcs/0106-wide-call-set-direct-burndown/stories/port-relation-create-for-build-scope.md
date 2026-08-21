@@ -54,5 +54,5 @@ constructing relations by hand.
       `serializeBaseline` and
       `pnpm parity:api:calls:tighten activerecord/reflection.json` run.
 - [ ] `pnpm parity:api:calls` green; `pnpm parity:api:extra --package
-  activerecord` shows one fewer novel name and no new one.
+activerecord` shows one fewer novel name and no new one.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
