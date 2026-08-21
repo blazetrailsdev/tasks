@@ -1,7 +1,7 @@
 ---
 title: "Move the ActiveRecord attribute read/write surface out of activemodel/model.ts"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel", "activerecord"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 280
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T23:08:30Z"
+assignee: "move-ar-attribute-read-write-surface-out-of-model"
 blocked-by: null
 closed-reason: null
 ---
