@@ -16,56 +16,60 @@ blocked-by: null
 closed-reason: null
 ---
 
-# Converge the AR dirty generics onto `attribute-methods/dirty.ts`
+# Converge the AR dirty predicate names onto `attribute-methods/dirty.ts`
 
 ## Context
 
-`ar-only-dirty-generics-live-on-activemodel-model` (PR pending) moved
-`savedChangeToAttribute`, `savedChangeToAttributeValues`,
-`willSaveChangeToAttribute` and `willSaveChangeToAttributeValues` off
-`packages/activemodel/src/model.ts` and onto `Base`
-(`packages/activerecord/src/base.ts`), beside the
-`attribute_method_affix` / `attribute_method_suffix` declarations PR #6814 put
-in `Base`'s `attributeMethodPatterns` static block.
+PR #6821 moved the ActiveRecord-only dirty generics off `ActiveModel::Model`
+and collapsed their bodies onto the ports in
+`packages/activerecord/src/attribute-methods/dirty.ts`. What is left is the
+NAME.
 
-They belong in `packages/activerecord/src/attribute-methods/dirty.ts`, the file
-mirroring `activerecord/lib/active_record/attribute_methods/dirty.rb:150-240`.
-They could not land there in that PR because the file already exports
-record-taking functions under the SAME names with DIFFERENT return types:
+`Base` (`packages/activerecord/src/base.ts`) still carries
+`savedChangeToAttribute` and `willSaveChangeToAttribute` as boolean predicates,
+while `attribute-methods/dirty.ts` carries the same predicates correctly named
+`isSavedChangeToAttribute` / `isWillSaveChangeToAttribute` (Rails
+`saved_change_to_attribute?` / `will_save_change_to_attribute?`,
+`attribute_methods/dirty.rb:86-88`, `138-140`). After #6821 the `Base` methods
+are thin — alias resolution plus the enum `type_cast` Rails does inside
+`AttributeMutationTracker#changed?` (`attribute_mutation_tracker.rb:44-48`) —
+and delegate to the ports, so this is now purely a naming and call-site job.
 
-- `savedChangeToAttribute(record, attr)` returns `[old, new] | null`
-  (`dirty.rb:157-159`, the non-`?` reader); the method that moved onto `Base`
-  returns a boolean and is really `saved_change_to_attribute?`
-  (`dirty.rb:150-152`), which the file already ports as
-  `isSavedChangeToAttribute`.
-- The `*Values` spellings (`savedChangeToAttributeValues`,
-  `willSaveChangeToAttributeValues`) have no Rails counterpart at all — Rails
-  spells them `saved_change_to_attribute` and `attribute_change_to_be_saved`
-  (`dirty.rb:157-159`, `193-195`), both of which the file already ports.
+The name is currently FORCED by the generated half. A generated
+`savedChangeToName` reaches its target through `AttributeMethodPattern`'s
+derived `${prefix}Attribute${suffix}` join (`attribute_methods.rb:552`,
+`packages/activemodel/src/attribute-methods.ts:101`). Ruby distinguishes the
+predicate `saved_change_to_attribute?` from the value reader
+`saved_change_to_attribute` by a TRAILING `?`; TypeScript's predicate
+convention is a LEADING `is`, which no prefix/suffix join can produce. So
+`Base` must expose a boolean under the un-prefixed name for the pattern to
+find, and that is the blocker to remove.
 
-So the blocker is a NAMING divergence, not a layout one, and converging the
-names is what unblocks the co-location.
-
-`attributeBeforeLastSave` / `attributeInDatabase` are already correct: they live
-in `attribute-methods/dirty.ts` and are mixed onto `Base.prototype` via the
-include block at `base.ts:4880-4910`. A class-body definition in `base.ts` wins
-over that mixin (`include()` never replaces a class-body method,
-`activesupport/src/include.ts:273`) and silently displaces the correct AR
-semantics — measured: it reds
-`has-many-associations.test.ts` "counter cache updates in memory after update
-with inverse of enabled", because AR's `attribute_in_database` reads
-`attribute_change_to_be_saved`, not `attribute_was`. Whatever this story does
-must not reintroduce that shadow.
+This is the same root cause as
+[[saved-change-to-attribute-values-generated-half]], which owns the other half
+(both `saved_change_to_name` and `saved_change_to_name?` camelize to
+`savedChangeToName`, so only the predicate is declared today —
+`base.ts`'s `attributeMethodPatterns` static block).
 
 ## Acceptance criteria
 
-- [ ] `savedChangeToAttributeValues` / `willSaveChangeToAttributeValues` are
-      retired in favour of the Rails names (`savedChangeToAttribute` returning
-      the pair, `attributeChangeToBeSaved`), with every call site updated.
-- [ ] The boolean reader is spelled `isSavedChangeToAttribute` /
-      `isWillSaveChangeToAttribute`, matching the existing ports.
-- [ ] All four definitions live in
-      `packages/activerecord/src/attribute-methods/dirty.ts`, and `base.ts`
-      carries no class-body copy that would shadow the mixin.
+- [ ] `AttributeMethodPattern` can name a proxy target the prefix/suffix join
+      does not derive (or the equivalent), so the pattern can dispatch to
+      `isSavedChangeToAttribute`.
+- [ ] `Base` carries no `savedChangeToAttribute` / `willSaveChangeToAttribute`
+      predicate; the alias + enum `type_cast` step lands wherever the ports can
+      reach the class.
+- [ ] Production call sites move to the `is…` spellings —
+      `autosave-association.ts`, `store.ts`, `timestamp.ts`, `persistence.ts`,
+      `belongs-to-association.ts`, `belongs-to-polymorphic-association.ts`,
+      `base.ts` (optimistic lock), `test-helpers/models/topic.ts`.
+- [ ] The unwired `savedChangeToAttribute` value-reader port
+      (`attribute-methods/dirty.ts:34`, wrapped at `attribute-methods.ts:968`)
+      is either mixed onto `Base.prototype` or deleted — today it is reachable
+      from neither, on `main` or on #6821.
+- [ ] The shared `changed()` helper in `attribute-methods/dirty.ts` moves onto
+      the mutation tracker (`packages/activemodel/src/dirty.ts`), where Rails
+      puts `changed?`, so `Model.attributeChanged` /
+      `Model.attributePreviouslyChanged` stop repeating the from/to compare.
 - [ ] `parity:api` / `parity:test` deltas non-negative; `parity:api:calls` /
       `:args` add zero rows.
