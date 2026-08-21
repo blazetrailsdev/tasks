@@ -8,14 +8,14 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
 clusters:
-  - "api-compare"
+  - "rails-deviation"
 related-rfcs:
   - "0106-wide-call-set-direct-burndown"
   - "0023-surfaced-deviations"
-priority: 6
+priority: 10
 ---
 
-# ActiveJob-dependent ActiveRecord work: the `dependent: :destroy_async` closure
+# RFC — ActiveJob-dependent ActiveRecord work: the `dependent: :destroy_async` closure
 
 ## Summary
 
@@ -26,7 +26,7 @@ ActiveJob port itself.
 
 It is filed `draft` deliberately. ActiveJob is **not being ported yet** (owner
 decision, 2026-08-21). Nothing here becomes `ready` until an ActiveJob RFC
-exists and lands its `TestHelper` slice; see `## Rollout`.
+exists and lands its `TestHelper` slice; that is Rollout step 0.
 
 ## Motivation
 
@@ -51,11 +51,11 @@ not exist — but it leaves the work untracked. This RFC is where it goes.
 `packages/activerecord/src/associations/builder/association.ts:284`:
 
 ```ts
-  static addAfterCommitJobsCallback(_model: any, _dependent: string): void {
-    // Rails registers an after_commit that runs _after_commit_jobs for
-    // dependent: :destroy_async. Requires after_commit infrastructure
-    // which is not yet wired to the callback chain — skip until then.
-  }
+static addAfterCommitJobsCallback(_model: any, _dependent: string): void {
+  // Rails registers an after_commit that runs _after_commit_jobs for
+  // dependent: :destroy_async. Requires after_commit infrastructure
+  // which is not yet wired to the callback chain — skip until then.
+}
 ```
 
 against `associations/builder/association.rb:145-162`, which registers an
@@ -94,10 +94,45 @@ an enqueue/perform runtime to execute
 
 ### F3 — the canonical models are not flipped
 
-`book-destroy-async.ts` / `essay-destroy-async.ts` still declare the non-async
-dependent option. Flipping them is now **safe** — #6762 shipped the arm — but
-pointless while nothing drains the queue and no test observes it, so it belongs
-here rather than as a standalone change.
+Six canonical models — `book-destroy-async.ts`, `essay-destroy-async.ts`,
+`destroy-async-parent.ts`, `destroy-async-parent-soft-delete.ts`,
+`dl-keyed-belongs-to.ts`, `dl-keyed-belongs-to-soft-delete.ts` — still declare
+the non-async dependent option, each behind a comment claiming
+`AssociationOptions.dependent`'s type union "doesn't include it yet".
+
+**That comment is stale twice over.** The union at `associations.ts:92-98`
+already carries `"destroyAsync"`, and the runtime arm landed in #6762. Nothing
+blocks the flip today except that, with no drain (F1) and no job (F2), it would
+be an unobserved behaviour change. It belongs here rather than as a standalone
+change — and the six stale comments come out with it.
+
+## Design
+
+Nothing here is a new mechanism. Every piece is a Rails body trails already has
+a seat for, waiting on one ActiveJob method:
+
+```text
+Model#destroy
+  → Association#handle_dependency             (ported, #6762)
+  → Association#enqueue_destroy_association    (ported, association.ts:1067)
+        owner._after_commit_jobs << [job_class, options]
+  → after_commit { _after_commit_jobs.each { |k, a| k.perform_later(**a) } }
+        ^^^^^ THE GAP: builder/association.ts:284 is an empty stub
+  → DestroyAssociationAsyncJob#perform         (27 Ruby lines, unported)
+        owner_class.find(owner_id) … association_class.where(...).find_each(&:destroy)
+```
+
+The chain is intact up to the drain and absent after it. So the design is: port
+`add_after_commit_jobs_callback` verbatim (story 1), port the 27-line job
+(story 2), then port the Rails tests that observe the whole chain and flip the
+canonical models so they exercise it (story 3). No trails-only seam is
+introduced at any step, and the trails-only cover written while ActiveJob was
+absent (`destroy-async-dependent-arm.trails.test.ts`) is retired by story 3 in
+favour of the Rails tests.
+
+The one open design question — whether `_after_commit_jobs` needs Rails'
+`generated_association_methods` mixin placement — is in `## Open questions` and
+is settled at story 1, not here.
 
 ## The ActiveJob port this depends on (sizing, measured 2026-08-21)
 
@@ -117,9 +152,10 @@ ActiveModel's lib, 13% of ActiveSupport's, 5.3% of ActiveRecord's:
 The subset this RFC's closure actually needs is ~**1,135 Ruby code lines**:
 `test_helper.rb` 272, `serializers/**` 182, `arguments.rb` 149, `core.rb` 102,
 `enqueuing.rb` 71, `test_adapter.rb` 61, `queue_adapter.rb` 52,
-`serializers.rb` 47, `execution.rb` 38, plus `base/callbacks/queue_name/
-queue_priority/queue_adapters/configured_job` 161. The ten real backend adapters
-(sidekiq, resque, delayed_job, …) total ~350 lines and are **not** in it.
+`serializers.rb` 47, `execution.rb` 38, plus `base` / `callbacks` /
+`queue_name` / `queue_priority` / `queue_adapters` / `configured_job` 161. The
+ten real backend adapters (sidekiq, resque, delayed_job, …) total ~350 lines and
+are **not** in it.
 
 At trails' measured Ruby→TS line ratio for ported packages (activemodel 2.36x,
 activesupport 1.55x, activerecord 2.68x) that subset is ~**2,500 TS lines**, or
@@ -142,44 +178,79 @@ heavily specified thing in the package, so a faithful port of the subset is
   closure. File it here if it turns out to share the drain path; otherwise it is
   its own thing.
 
+## Alternatives considered
+
+- **Port a trails-only "job runner" seam instead of ActiveJob.** A minimal
+  enqueue/perform shim under `activerecord/` would unblock the drain and the
+  tests without a new package. Rejected: it is invented surface with no Ruby
+  counterpart (`parity:api:extra` would flag every name), the Rails tests assert
+  through `ActiveJob::TestHelper`'s API, and it would have to be deleted the day
+  ActiveJob lands. This is the "a documented deviation is debt" rule applied
+  before the debt is written.
+- **Roll the ActiveJob port into this RFC.** Rejected: it annexes a whole
+  framework package into an RFC named for its consumer, and ActiveJob is not
+  being ported yet (owner decision, 2026-08-21). The sizing above is recorded
+  here precisely so that RFC can be written from it later.
+- **Leave the work untracked until ActiveJob exists.** The status quo before
+  this RFC. Rejected: the two RFC 0106 stories closed on 2026-08-21 already
+  carried the analysis, and dropping it means re-deriving `test/activejob/`'s
+  contents, the stale-stub finding, and the sizing from scratch.
+- **Delete the half-landed `:destroy_async` arm until it can be finished.**
+  Rejected: #6762's arm is faithful and green; removing it would be a
+  convergence regression, and the models simply do not use it yet.
+
 ## Rollout
 
 0. **Prerequisite (not owned here):** an ActiveJob RFC exists and has landed
    `Arguments`, `Core`, `Enqueuing`, `Execution`, `QueueAdapter`, `TestAdapter`
-   and `TestHelper`. Until then every story below stays `draft`.
-1. `add_after_commit_jobs_callback` — replace the empty stub with the Rails body
-   (F1). Depends only on `perform_later` existing.
-2. Port `destroy_association_async_job_test.rb` (5 tests) and
-   `job_runtime_test.rb` (2 tests) — the small half of F2.
-3. Port `destroy_association_async_test.rb` (21 tests) and flip
-   `book-destroy-async.ts` / `essay-destroy-async.ts` (F2 + F3).
+   and `TestHelper`. Until then every story below stays `draft`; promoting one
+   before that is what this RFC exists to prevent.
+1. `port-after-commit-jobs-callback` — replace the empty stub with the Rails
+   body (F1). Depends only on `perform_later` existing.
+2. `port-destroy-association-async-job` — the 27-line job plus its 5-test and
+   2-test Rails files (the small half of F2).
+3. `port-destroy-association-async-test-and-flip-models` — the 21-test file and
+   the canonical model flip (F2 + F3). Depends on 1 and 2.
+
+## Stories
+
+- `port-after-commit-jobs-callback` (F1)
+- `port-destroy-association-async-job` (F2, small half)
+- `port-destroy-association-async-test-and-flip-models` (F2 + F3)
+
+All three are `draft` and stay that way until Rollout step 0 is satisfied.
 
 ## Verification
 
-- `parity:test` credits all 28 tests in `vendor/rails/activerecord/test/activejob/`.
+- `parity:test` credits all **28** tests in
+  `vendor/rails/activerecord/test/activejob/` — 21 + 5 + 2, the number, not a
+  subset.
 - `associations/builder/association.ts` carries no empty-bodied
-  `addAfterCommitJobsCallback`; `parity:api:calls` shows it calling what
-  `association.rb:145-162` calls.
+  `addAfterCommitJobsCallback`; `pnpm parity:api:calls` shows it calling what
+  `association.rb:145-162` calls, with **no new baseline row** in
+  `call-mismatches-exclude/activerecord/associations/builder/association.json`.
 - A destroyed parent with a `dependent: :destroy_async` association enqueues
   `DestroyAssociationAsyncJob` on commit, observable through
   `assert_enqueued_with`, and the children are gone after
   `perform_enqueued_jobs`.
 - `destroy-async-dependent-arm.trails.test.ts` — the trails-only cover written
-  while ActiveJob was absent — is retired or reduced to whatever the Rails tests
-  do not cover, per the "TS-only extras" convention.
+  while ActiveJob was absent — is retired, or reduced to whatever the Rails
+  tests do not cover, per the TS-only-extras convention.
+- SQLite, PostgreSQL and MySQL/MariaDB lanes green on every story.
 
 ## Open questions
 
 1. **Does `_after_commit_jobs` need the generated-methods mixin?** Rails defines
    the reader on `model.generated_association_methods` and guards on
    `mixin.method_defined?`. trails parks the array directly on the owner
-   instance (`association.ts:1071`). Decide at story 1 whether the mixin
-   placement is observable; if it is not, say so at the call site rather than
-   porting the `class_eval`.
+   instance (`association.ts:1071`). Settled at story 1: if the placement is not
+   observable, say so at the call site rather than porting the `class_eval`;
+   if it is, port it. Deferred to that story, not to `active`.
 2. **Is `AsyncAdapter` in scope for the prerequisite?** `TestAdapter` alone
    satisfies every test above. Including `AsyncAdapter` (68 lines) is what makes
    `:destroy_async` usable by an actual trails app, which may or may not be a
-   goal at that point.
+   goal at that point. Deferred to the ActiveJob RFC — it is that RFC's scope
+   decision, not this one's.
 
 ## Changelog
 
