@@ -1,6 +1,6 @@
 ---
 title: "Read and converge the remaining data-layer argument-shape rows"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: api-compare
