@@ -73,3 +73,14 @@ go up would invalidate every AR-closure figure this RFC is measured by.
 - [ ] RFC 0101's scope statement is updated either way, so "XmlMini is
       out-of-closure" and this measurement stop contradicting each other.
 - [ ] `pnpm parity:api:extra` clean; no new baseline rows.
+
+## Decision (2026-08-21, backlog triage)
+
+**Port a minimal XmlMini slice under this RFC.** Owner decision: the four
+members stay in the AR require-closure and RFC 0098 keeps its "rollup reads
+100%" exit — do not reclassify them out, and do not block on RFC 0101
+(`postponed`). Port only as much of
+`vendor/rails/activesupport/lib/active_support/xml_mini.rb` (plus the default
+REXML-equivalent backend seam) as `Hash#to_xml` / `Hash.from_xml` /
+`Hash.from_trusted_xml` / `Array#to_xml` actually reach; everything else in
+XmlMini stays 0101's.

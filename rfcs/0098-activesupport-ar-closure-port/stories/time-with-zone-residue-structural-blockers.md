@@ -67,3 +67,13 @@ ceiling by 1 member, which must be stated in the RFC rather than absorbed.
       documented as a deliberate global, and the `PlainDateTime`-is-not-a-
       `DateTime` overstatement is stated where the marker is installed.
 - [ ] `pnpm parity:api:extra` clean; no new baseline rows.
+
+## Decision (2026-08-21, backlog triage)
+
+**Arm (D): move the `acts_like?` markers into `@blazetrails/date`.** Owner
+decision among the three options the blocker names. Honest ownership — the
+markers describe `@blazetrails/date`'s own types — and it explicitly gives up
+the Rails file path for that member, so 0098's reachable ceiling drops by 1;
+state that in the RFC changelog. Do NOT install markers on the Temporal
+polyfill prototypes at import time (global side effect on a third-party
+package), and do not seed a SCOPED_SKIP_GROUPS entry instead.
