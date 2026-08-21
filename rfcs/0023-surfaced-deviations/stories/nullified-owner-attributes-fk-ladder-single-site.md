@@ -1,7 +1,7 @@
 ---
 title: "Converge the two nullifiedOwnerAttributes FK ladders onto ownerForeignKeyColumns"
 status: draft
-updated: 2026-07-30
+updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -40,11 +40,44 @@ is four lines reading `reflection.foreign_key` and `reflection.type` directly.
 These are exactly the copies that drift — the has_one FK copy PR 5636 deleted had
 drifted for as long as it existed.
 
+## Correction (2026-08-21, from PR #6815)
+
+**The converged target named below — "resolve through `ownerForeignKeyColumns`"
+— is the wrong one, and this story should not be closed by hitting it.**
+
+PR #6815 converged `HasOneAssociation#nullifyOwnerAttributes` (a _different_
+method, `has_one_association.rb:119-123`) and established that the rich
+reflection's own `foreignKey` getter
+(`packages/activerecord/src/reflection.ts:795-817`) already handles the
+`options[:foreign_key]` rung and the `queryConstraints` rung. So
+`ownerForeignKeyColumns`' extra options rung is redundant with it, and routing
+through that helper substitutes one trails-invented indirection for another
+rather than converging.
+
+The Rails-faithful shape is to read `reflection.foreign_key` and
+`reflection.type` **directly in the body**, exactly as
+`foreign_association.rb:13-18` does:
+
+```ruby
+def nullified_owner_attributes
+  Hash.new.tap do |attrs|
+    Array(reflection.foreign_key).each { |foreign_key| attrs[foreign_key] = nil }
+    attrs[reflection.type] = nil if reflection.type.present?
+  end
+end
+```
+
+In trails that is `_reflectOnAssociation(ownerClass, name)?.foreignKey` /
+`?.foreignType` — the spelling PR #6815 shipped in `nullifyOwnerAttributes`.
+Note also that reading the call under a private helper's name is what kept a
+`foreign_key` call-mismatch row alive on the ratchet for that method; reading it
+directly retired the row.
+
 ## Acceptance criteria
 
-- Both `nullifiedOwnerAttributes` free functions resolve the FK through
-  `ownerForeignKeyColumns` and the type column through one shared helper; no
-  per-call-site rungs remain.
+- Both `nullifiedOwnerAttributes` free functions read `reflection.foreignKey`
+  and `reflection.foreignType` directly, per the Correction above; no
+  per-call-site rungs remain, and no new helper is introduced in their place.
 - `ForeignAssociation.nullifiedOwnerAttributes` keeps its current signature and
   Rails-faithful body.
 - `dependent: :nullify` coverage still passes (has-one, has-many,
