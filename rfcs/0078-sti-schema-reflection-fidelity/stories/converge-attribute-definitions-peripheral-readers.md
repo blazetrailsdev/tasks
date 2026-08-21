@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-peripheral-readers"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6807
 claim: "2026-08-21T10:40:22Z"
 assignee: "converge-attribute-definitions-peripheral-readers"
 blocked-by: null
