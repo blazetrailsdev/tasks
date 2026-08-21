@@ -1,7 +1,7 @@
 ---
 title: "Port CallbackChain#empty? so has_transactional_callbacks? stops counting entries"
-status: claimed
-updated: 2026-08-19
+status: closed
+updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-08-19T14:16:52Z"
-assignee: "callback-chain-empty-predicate-for-has-transactional-callbacks"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Work landed: hasTransactionalCallbacks reads chain.isEmpty on main via PR #6741 (credited to the sibling bakeoff story callback-chain-empty-predicate-bakeoff-sonnet); this duplicate claim has no PR."
 ---
 
 # `has_transactional_callbacks?` counts chain entries instead of asking `empty?`
