@@ -1,6 +1,6 @@
 ---
 title: "converge-through-reflection-association-primary-key-body"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port attribute_registration_test.rb's six decorate_attributes tests verbatim"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

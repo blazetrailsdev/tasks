@@ -1,6 +1,6 @@
 ---
 title: "Declare PrimaryKey#id? — the ID_ATTRIBUTE_METHODS member trails never defined"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
