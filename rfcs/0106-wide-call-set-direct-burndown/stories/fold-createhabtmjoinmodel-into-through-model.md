@@ -1,6 +1,6 @@
 ---
 title: "Route Builder::HasAndBelongsToMany#_build through throughModel/middleReflection instead of createHabtmJoinModel"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6836
 claim: "2026-08-21T19:20:36Z"
 assignee: "converge-enumerable-min-receiver-call-shape"
 blocked-by: null
