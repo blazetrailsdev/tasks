@@ -1,7 +1,7 @@
 ---
 title: "Retire activemodel's 82 this-rebinding thunks onto include()/extend()"
-status: claimed
-updated: 2026-08-20
+status: in-progress
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: api-compare
 packages: ["activemodel"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 380
 priority: null
-pr: null
+pr: 6798
 claim: "2026-08-20T23:33:52Z"
 assignee: "retire-activemodel-this-rebinding-thunks"
 blocked-by: null
