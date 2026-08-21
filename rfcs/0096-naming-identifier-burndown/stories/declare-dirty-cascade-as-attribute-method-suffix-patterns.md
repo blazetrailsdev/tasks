@@ -1,7 +1,7 @@
 ---
 title: "declare-dirty-cascade-as-attribute-method-suffix-patterns"
-status: ready
-updated: 2026-08-20
+status: claimed
+updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T11:39:43Z"
+assignee: "came-from-user-suffix-pattern-is-unregistered"
 blocked-by: null
 closed-reason: null
 ---
