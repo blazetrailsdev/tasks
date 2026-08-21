@@ -62,7 +62,7 @@ several. Ship them as sequential non-overlapping PRs from `main`, never stacked.
       register.
 - [ ] Rows deleted by hand via `serializeBaseline`; a shard left empty is
       deleted, not committed as `[]`. Then `pnpm parity:api:calls:tighten
-  <shard>` for each shard touched. No `--write`, no reseed, ever.
+<shard>` for each shard touched. No `--write`, no reseed, ever.
 - [ ] **RFC 0106 exit condition met**: `call-mismatches-exclude/**` reports 0
       rows with `kind: "set"` for `activerecord`, `arel` and `activesupport`.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green.
