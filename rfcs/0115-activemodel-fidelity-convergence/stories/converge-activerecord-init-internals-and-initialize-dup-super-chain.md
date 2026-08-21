@@ -1,6 +1,6 @@
 ---
 title: "Converge ActiveRecord's init_internals / initialize_dup onto the prepend super chain"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 6812
 claim: "2026-08-21T11:40:28Z"
 assignee: "converge-activerecord-init-internals-and-initialize-dup-super-chain"
 blocked-by: null
