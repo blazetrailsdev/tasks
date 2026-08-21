@@ -1,6 +1,6 @@
 ---
 title: "Wave 4g: the <=3-row tail sweep"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -16,7 +16,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 700
-pr: null
+pr: 6845
 claim: "2026-08-21T23:20:34Z"
 assignee: "wave-4g-tail-sweep"
 blocked-by: null
