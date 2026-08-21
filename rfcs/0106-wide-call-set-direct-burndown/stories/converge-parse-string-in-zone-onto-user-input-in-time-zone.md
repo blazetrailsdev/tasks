@@ -1,6 +1,6 @@
 ---
 title: "converge-parse-string-in-zone-onto-user-input-in-time-zone"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T23:50:30Z"
+assignee: "converge-parse-string-in-zone-onto-user-input-in-time-zone"
 blocked-by: null
 closed-reason: null
 ---
