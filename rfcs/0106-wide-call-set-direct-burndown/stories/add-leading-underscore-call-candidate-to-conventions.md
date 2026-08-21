@@ -1,6 +1,6 @@
 ---
 title: "add-leading-underscore-call-candidate-to-conventions"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6825
 claim: "2026-08-21T14:50:39Z"
 assignee: "add-leading-underscore-call-candidate-to-conventions"
 blocked-by: null
