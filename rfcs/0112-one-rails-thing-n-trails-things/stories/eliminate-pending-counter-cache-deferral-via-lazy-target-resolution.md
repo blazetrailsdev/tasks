@@ -1,6 +1,6 @@
 ---
 title: "Eliminate the pending counter-cache deferral by resolving the belongs_to target lazily"
-status: claimed
+status: blocked
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-21T11:40:36Z"
 assignee: "hash-config-primary-resolves-via-global-configurations"
-blocked-by: null
+blocked-by: 'Lazy resolution needs a reverse index the class_attribute cannot carry. `_counter_cache_columns` is unioned onto the TARGET class from the OWNER''s belongs_to (belongs_to.rb:39-40); the only reads are `counter_cache_column?` (counter_cache.rb:182-184) and counter-cache.ts:272, both plain reads of the class_attribute declared at counter_cache.rb:9. Deferring the union to first read therefore requires scanning every entry of `modelRegistry` (associations.ts) for a belongs_to whose `className` names the reader — turning a class_attribute read into a full-registry computation, which is strictly MORE invented machinery than the single documented ESM deferral in counter-cache-state.ts it would replace. Concrete ordering case: CpkBook is declared before CpkOrder in test-helpers/models/cpk.ts, so `safeConstantize("CpkOrder")` returns nothing at builder time and nothing in CpkOrder''s own definition can see the pending column. Rails'' reflection.klass memo (reflection.rb:422-423) does not help: it resolves the OWNER''s view of the target, not the target''s view of its owners.'
 closed-reason: null
 ---
 
