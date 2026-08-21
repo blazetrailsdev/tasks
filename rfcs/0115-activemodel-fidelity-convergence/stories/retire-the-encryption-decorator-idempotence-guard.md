@@ -1,6 +1,6 @@
 ---
 title: "Retire the encryption decorator's idempotence guard and its registerEncryptedType seed"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
