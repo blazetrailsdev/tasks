@@ -1,6 +1,6 @@
 ---
 title: "Retire the encryption decorator's idempotence guard and its registerEncryptedType seed"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 6803
 claim: "2026-08-21T02:40:24Z"
 assignee: "retire-the-encryption-decorator-idempotence-guard"
 blocked-by: null
