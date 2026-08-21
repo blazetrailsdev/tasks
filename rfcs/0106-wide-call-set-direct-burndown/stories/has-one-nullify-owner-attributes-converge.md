@@ -1,6 +1,6 @@
 ---
 title: "Converge HasOneAssociation#nullify_owner_attributes onto the Rails body"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 6815
 claim: "2026-08-21T12:20:33Z"
 assignee: "remeasure-collection-proxy-residue-after-the-burndown"
 blocked-by: null
