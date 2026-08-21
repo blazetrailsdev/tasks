@@ -1,6 +1,6 @@
 ---
 title: "Port Attributes#initialize_dup into Model's dup chain"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
