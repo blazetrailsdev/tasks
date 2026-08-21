@@ -1,6 +1,6 @@
 ---
 title: "Port TimeWithZone#method_missing so the ported wrap_with_time_zone has its Rails caller"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
