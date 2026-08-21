@@ -1,6 +1,6 @@
 ---
 title: "wave-4c-ar-core-residue-attributes-remainder-part-3"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6838
 claim: "2026-08-21T20:20:32Z"
 assignee: "wave-4c-ar-core-residue-attributes-remainder-part-3"
 blocked-by: null
