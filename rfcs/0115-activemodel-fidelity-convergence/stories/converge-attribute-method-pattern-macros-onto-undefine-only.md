@@ -62,5 +62,5 @@ section, not three undocumented ones.
       mirror `attribute_methods.rb:120-123,140-143,175-178` statement for
       statement.
 - [ ] No regression in AM attribute-method generation: `pnpm vitest run
-  packages/activemodel` green, plus AR `dirty` / `attribute-methods`.
+packages/activemodel` green, plus AR `dirty` / `attribute-methods`.
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.
