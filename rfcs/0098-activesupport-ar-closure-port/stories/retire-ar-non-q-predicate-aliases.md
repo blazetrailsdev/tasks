@@ -1,7 +1,7 @@
 ---
 title: "Retire the non-Q duplicate aliases of the AR Q-spelled predicates (isConnected, isReadonlyAttribute)"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
