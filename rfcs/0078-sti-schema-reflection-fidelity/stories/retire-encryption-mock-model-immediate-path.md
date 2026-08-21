@@ -1,6 +1,6 @@
 ---
 title: "retire-encryption-mock-model-immediate-path"
-status: ready
+status: done
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6803
 claim: null
 assignee: null
 blocked-by: null
