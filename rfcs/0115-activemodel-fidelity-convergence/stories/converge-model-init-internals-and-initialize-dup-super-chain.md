@@ -1,6 +1,6 @@
 ---
 title: "Converge Model#initInternals / #initializeDup onto a real mixin super chain"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T02:10:29Z"
+assignee: "converge-duration-equals-non-duration-arm-to-a-ruby-send"
 blocked-by: null
 closed-reason: null
 ---
