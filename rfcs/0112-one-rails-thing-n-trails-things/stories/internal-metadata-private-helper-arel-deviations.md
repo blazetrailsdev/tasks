@@ -1,6 +1,6 @@
 ---
 title: "InternalMetadata private helpers: bare .eq vs BindParam, memoized currentTime, dead _q"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies

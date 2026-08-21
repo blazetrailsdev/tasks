@@ -1,6 +1,6 @@
 ---
 title: "scoping should delegate to _scoping, and _scoping should handle all_queries"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
