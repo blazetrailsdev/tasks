@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaFromAdapter duplicates load_schema!'s body and dispatches the chain over an empty anchor"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6802
 claim: "2026-08-21T02:10:29Z"
 assignee: "converge-duration-equals-non-duration-arm-to-a-ruby-send"
 blocked-by: null
