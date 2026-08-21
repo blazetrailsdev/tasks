@@ -1,6 +1,6 @@
 ---
 title: "Converge associationPrimaryKeyFor onto Rails' association_primary_key(klass = nil)"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
