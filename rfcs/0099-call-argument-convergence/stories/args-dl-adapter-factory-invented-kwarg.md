@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented adapterFactory kwarg from PoolConfig construction"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: api-compare
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T14:48:15Z"
+assignee: "args-dl-adapter-factory-invented-kwarg"
 blocked-by: null
 closed-reason: null
 ---
