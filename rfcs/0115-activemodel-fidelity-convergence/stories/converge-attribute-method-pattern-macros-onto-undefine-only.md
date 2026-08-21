@@ -1,6 +1,6 @@
 ---
 title: "Converge attribute_method_prefix/suffix/affix onto Rails' undefine-only bodies"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 6818
 claim: "2026-08-21T13:20:34Z"
 assignee: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
 blocked-by: null
