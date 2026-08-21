@@ -1,6 +1,6 @@
 ---
 title: "Widen TimeWithZone's constructor onto Rails' four-argument shape and port its helpers"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-time-zone-local-period-lookups"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6825
 claim: "2026-08-21T14:50:39Z"
 assignee: "add-leading-underscore-call-candidate-to-conventions"
 blocked-by: null
