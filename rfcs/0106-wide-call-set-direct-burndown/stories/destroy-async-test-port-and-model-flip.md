@@ -1,6 +1,6 @@
 ---
 title: "Port destroy_association_async_test.rb and flip the canonical models to dependent: :destroy_async"
-status: blocked
+status: closed
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Half (1) is UNBLOCKED as of 2026-08-20: PR #6762 (the destroy_async dependent arm) merged, so the canonical model flip to dependent: 'destroyAsync' is now safe. Half (2) still blocks the story as written: destroy_association_async_test.rb needs ActiveJob::TestHelper (assert_enqueued_jobs, perform_enqueued_jobs, assert_enqueued_with, assert_no_enqueued_jobs) and an enqueue/perform runtime, and trails has no activejob package — tracked by port-activejob-test-helper-for-destroy-association-async, itself blocked pending a maintainer-scoped activejob RFC. If the model flip is wanted sooner, split it out as its own story; do not un-block this one without the test half."
-closed-reason: null
+blocked-by: null
+closed-reason: "ActiveJob is not being ported yet (owner decision, 2026-08-21), so destroy_association_async_test.rb is unreachable — it needs ActiveJob::TestHelper and an enqueue/perform runtime. Note for whoever revives this: the model-flip half is already unblocked (PR #6762 merged 2026-08-20 shipped the destroy_async dependent arm), so only the test port is waiting on the activejob epic."
 ---
 
 # Port `activejob/destroy_association_async_test.rb` and flip the canonical models to `dependent: :destroy_async`
