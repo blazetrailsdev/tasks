@@ -1,6 +1,6 @@
 ---
 title: "Move the attributes= alias to ActiveModel, next to assign_attributes"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
