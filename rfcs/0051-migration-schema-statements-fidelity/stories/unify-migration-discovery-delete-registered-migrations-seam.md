@@ -1,6 +1,6 @@
 ---
 title: "Unify the two migration discovery paths and delete the registeredMigrations seam"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,8 +8,8 @@ deps: []
 deps-rfc: []
 est-loc: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T12:10:41Z"
+assignee: "measure-adapter-specific-arm-saving-on-mariadb"
 blocked-by: null
 closed-reason: null
 ---
