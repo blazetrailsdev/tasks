@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6810
+pr: 6563
 claim: "2026-08-21T11:39:15Z"
 assignee: "measure-adapter-specific-arm-saving-on-mariadb"
 blocked-by: null
