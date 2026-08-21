@@ -1,6 +1,6 @@
 ---
 title: "Converge ActiveRecord's init_internals / initialize_dup onto the prepend super chain"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
