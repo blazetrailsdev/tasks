@@ -1,7 +1,7 @@
 ---
 title: "Delete model.ts's XML serialization and nullify_blanks invented surface"
-status: claimed
-updated: 2026-08-20
+status: in-progress
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6813
 claim: "2026-08-20T22:18:55Z"
 assignee: "delete-model-xml-serialization-and-nullify-blanks"
 blocked-by: null
