@@ -1,5 +1,5 @@
 ---
-title: "close-jsdoc-bypass-in-no-freeform-comments"
+title: "no-freeform-comments: JSDoc is an unconditional bypass of the autofix"
 status: draft
 updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

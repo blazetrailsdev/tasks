@@ -1,5 +1,5 @@
 ---
-title: "converge-sql-literal-yaml-onto-encode-with"
+title: "SqlLiteral#toYAML is invented surface; Rails' encode_with dumps a plain scalar"
 status: draft
 updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
