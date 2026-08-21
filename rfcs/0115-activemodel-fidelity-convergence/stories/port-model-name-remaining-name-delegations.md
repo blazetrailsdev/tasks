@@ -1,7 +1,7 @@
 ---
 title: "Port ModelName's remaining delegate-to-name members (===, =~, !~, eql?) and accept a String in match"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
