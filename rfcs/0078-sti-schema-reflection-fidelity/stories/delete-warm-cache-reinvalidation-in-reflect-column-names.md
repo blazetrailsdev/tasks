@@ -1,6 +1,6 @@
 ---
 title: "Delete reflectColumnNames' warm-cache re-invalidation — Rails has one column view"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
