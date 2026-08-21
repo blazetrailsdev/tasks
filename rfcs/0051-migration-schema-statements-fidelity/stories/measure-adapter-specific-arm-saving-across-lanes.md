@@ -108,12 +108,12 @@ twice per lane, once normally and once with the memo forced off by a one-line
 shipped. 24 files produced 24 fast-path boots on every lane that has one, so the
 per-boot mean scales by the boot count of a full run (~782 AR files).
 
-| lane          | memo on                                                          | memo off | saving per boot | extrapolated per run |
-| ------------- | ---------------------------------------------------------------- | -------- | --------------- | -------------------- |
-| sqlite (file) | 0.0 ms                                                           | 20.5 ms  | 20.5 ms         | ~16 s                |
-| `sqlite3_mem` | no boot takes the fast path at all                               | —        | n/a             | n/a                  |
-| PostgreSQL 17 | 0.0 ms                                                           | 174.7 ms | 174.7 ms        | ~2.3 min             |
-| MariaDB       | not measured — no MariaDB/MySQL server is available on this host |          |                 |                      |
+| lane          | memo on                            | memo off | saving per boot | extrapolated per run |
+| ------------- | ---------------------------------- | -------- | --------------- | -------------------- |
+| sqlite (file) | 0.0 ms                             | 20.5 ms  | 20.5 ms         | ~16 s                |
+| `sqlite3_mem` | no boot takes the fast path at all | —        | n/a             | n/a                  |
+| PostgreSQL 17 | 0.0 ms                             | 174.7 ms | 174.7 ms        | ~2.3 min             |
+| MariaDB 11    | 0.0 ms                             | 57.0 ms  | 57.0 ms         | ~45 s                |
 
 ### What this says about the #6121 claim
 
@@ -134,6 +134,22 @@ Nothing is shipped: no observability was added, so AC3 (do not re-derive the
 assertion from the state the boot decided on) is satisfied vacuously, and the
 reverted `3be2d49c7` shape was not re-attempted.
 
-`move-adapter-specific-snapshot-off-ar-internal-metadata`'s AC4 is closed by the
-three lanes above; the MariaDB lane is carried by
-[[measure-adapter-specific-arm-saving-on-mariadb]].
+### MariaDB (2026-08-21, [[measure-adapter-specific-arm-saving-on-mariadb]])
+
+Same method, on `mariadb:11` with a tmpfs data dir (the CI service container's
+image and mount, `.github/workflows/ci.yml:1213-1222`), reached over TCP with
+`ARCONN=mysql2`. The bounded set was 7 `packages/activerecord/src/*.test.ts`
+files (`active-record-schema`, `aggregations`, `annotate`, `association-cache`,
+`attributes`, `base`, `batches`), each producing one fast-path boot; both edits
+were reverted and nothing shipped. Memo on: 0.0 ms on all 7 boots, twice.
+Memo off: 47.8-69.6 ms, mean 57.0 ms.
+
+**#6121's "MariaDB ~2.5 min per run" is corrected, not confirmed.** The arm
+costs ~57 ms per boot on MariaDB, which extrapolates to ~45 s of cumulative
+boot time over a full ~782-file run — about a third of what the claim states,
+and about a third of the PG lane's 174.7 ms/boot. The memo is real and worth
+keeping on this lane; the original figure was roughly 3x optimistic. With the
+MariaDB lane sharded 2 ways in CI, the wall-clock effect per shard is ~23 s.
+
+`move-adapter-specific-snapshot-off-ar-internal-metadata`'s AC4 is now closed by
+all four lanes.
