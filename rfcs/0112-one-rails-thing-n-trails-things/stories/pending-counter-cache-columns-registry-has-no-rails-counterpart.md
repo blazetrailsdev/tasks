@@ -1,6 +1,6 @@
 ---
 title: "pendingCounterCacheColumns staging map + thunks + three-way key matching have no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
