@@ -1,7 +1,7 @@
 ---
 rfc: "0099-call-argument-convergence"
 title: "Call-argument convergence burndown (activerecord + deps)"
-status: closed
+status: active
 created: 2026-08-10
 updated: 2026-08-21
 owner: "@deanmarano"

@@ -101,7 +101,7 @@
 | [0096-naming-identifier-burndown](rfcs/0096-naming-identifier-burndown/README.md) | Local/parameter identifier burndown (call-argument `naming` class) | active | @your-handle | activerecord, arel, activesupport, activemodel, i18n, trailties, globalid, did-you-mean |
 | [0097-parity-output-sharding](rfcs/0097-parity-output-sharding/README.md) | Per-source-file sharding for parity registers and artifacts | draft | @deanmarano | — |
 | [0098-activesupport-ar-closure-port](rfcs/0098-activesupport-ar-closure-port/README.md) | activesupport AR-closure porting | active | @your-handle | activesupport |
-| [0099-call-argument-convergence](rfcs/0099-call-argument-convergence/README.md) | Call-argument convergence burndown (activerecord + deps) | closed | @deanmarano | activerecord, arel, activemodel, activesupport, i18n, globalid |
+| [0099-call-argument-convergence](rfcs/0099-call-argument-convergence/README.md) | Call-argument convergence burndown (activerecord + deps) | active | @deanmarano | activerecord, arel, activemodel, activesupport, i18n, globalid |
 | [0100-package-size-and-publish-shape](rfcs/0100-package-size-and-publish-shape/README.md) | Package size and publish shape | draft | @deanmarano | activerecord, activemodel, activesupport, arel, date, i18n, globalid, did-you-mean |
 | [0101-activesupport-out-of-closure-surface](rfcs/0101-activesupport-out-of-closure-surface/README.md) | activesupport out-of-closure surface: cache stores and XmlMini | postponed | @your-handle | activesupport |
 | [0102-adapter-version-reader-fidelity](rfcs/0102-adapter-version-reader-fidelity/README.md) | Adapter version and column-reflection reader fidelity | closed | @your-handle | activerecord |
