@@ -1,6 +1,6 @@
 ---
 title: "converge-preloader-association-key-name-klass-argument"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6831
+pr: 6825
 claim: "2026-08-21T18:20:30Z"
 assignee: "converge-preloader-association-key-name-klass-argument"
 blocked-by: null
