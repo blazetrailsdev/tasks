@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord-only dirty generics off ActiveModel::Model onto Base"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
