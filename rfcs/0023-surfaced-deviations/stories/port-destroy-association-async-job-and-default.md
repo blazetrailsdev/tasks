@@ -1,7 +1,7 @@
 ---
 title: "Port DestroyAssociationAsyncJob and restore Rails' _destroy_association_async_job default"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Superseded by story port-destroy-association-async-job in the ActiveJob-dependent ActiveRecord work RFC (tasks PR #75), which absorbs this story''s detail verbatim: the core.rb:24 default of "ActiveRecord::DestroyAssociationAsyncJob", DestroyAssociationAsyncError, the unported-files pin (now at scripts/parity/unported-files/unscoped.ts:153, not the scripts/api-compare/unported-files.ts:147 this story cites — the file moved), and the deferred autoload test case from #5711.'
 ---
 
 ## Context
