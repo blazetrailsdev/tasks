@@ -5,7 +5,8 @@ updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - resolve-the-in-closure-xml-conversions
 deps-rfc: []
 est-loc: 120
 priority: null
