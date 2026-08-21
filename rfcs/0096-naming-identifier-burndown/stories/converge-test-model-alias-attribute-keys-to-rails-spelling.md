@@ -1,6 +1,6 @@
 ---
 title: "Converge test-model alias_attribute keys to Rails' snake_case spelling"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T15:20:36Z"
+assignee: "wave-4c-ar-core-residue-attributes-remainder-part-2"
 blocked-by: null
 closed-reason: null
 ---
