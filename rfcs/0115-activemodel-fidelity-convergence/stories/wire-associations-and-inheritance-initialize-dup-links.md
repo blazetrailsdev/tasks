@@ -1,6 +1,6 @@
 ---
 title: "Wire Associations and Inheritance into the initialize_dup chain"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
