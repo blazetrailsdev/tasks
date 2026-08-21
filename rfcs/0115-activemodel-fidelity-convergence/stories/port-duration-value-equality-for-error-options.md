@@ -1,6 +1,6 @@
 ---
 title: "Port Duration#== so Error option values compare by value"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

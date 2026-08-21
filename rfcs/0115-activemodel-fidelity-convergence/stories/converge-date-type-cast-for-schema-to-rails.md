@@ -1,6 +1,6 @@
 ---
 title: "Converge Type::Date#type_cast_for_schema to the Rails one-liner"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
