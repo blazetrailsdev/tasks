@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLAdapter#buildExplainClause invents option validation Rails does not have"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
