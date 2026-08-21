@@ -5,7 +5,12 @@ updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-attribute-definitions-activemodel-readers
+  - converge-attribute-definitions-activerecord-core-readers
+  - converge-attribute-definitions-core-readers
+  - converge-attribute-definitions-leaf-membership-readers
+  - converge-attribute-definitions-peripheral-readers
 deps-rfc: []
 est-loc: null
 priority: null
