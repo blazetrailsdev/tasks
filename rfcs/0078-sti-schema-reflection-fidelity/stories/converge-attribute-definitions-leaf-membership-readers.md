@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-leaf-membership-readers"
-status: claimed
+status: done
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6769
 claim: "2026-08-21T10:10:23Z"
 assignee: "converge-attribute-definitions-leaf-membership-readers"
 blocked-by: null
