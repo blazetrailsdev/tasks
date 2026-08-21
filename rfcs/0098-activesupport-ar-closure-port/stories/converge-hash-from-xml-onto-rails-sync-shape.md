@@ -1,6 +1,6 @@
 ---
 title: "Converge Hash.from_xml and XMLConverter onto Rails' synchronous shape"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null

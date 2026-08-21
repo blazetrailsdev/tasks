@@ -1,6 +1,6 @@
 ---
 title: "Give the call-argument gate a call-site JSDoc receipt"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
