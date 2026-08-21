@@ -1,6 +1,6 @@
 ---
 title: "Retire ActiveRecord's second _assign_attribute and send Rails' one to self"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 6801
 claim: "2026-08-21T01:13:06Z"
 assignee: "converge-model-name-match-raise-onto-string-match"
 blocked-by: null
