@@ -1,6 +1,6 @@
 ---
 title: "JoinDependency#makeConstraints re-walks joinConstraints' output to redistribute per-link arelJoin; Rails just concatenates"
-status: claimed
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 6779
 claim: "2026-08-21T12:50:30Z"
 assignee: "alert-on-stats-sync-failure"
 blocked-by: null
