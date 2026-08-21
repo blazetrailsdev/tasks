@@ -1,6 +1,6 @@
 ---
 title: "Converge Preloader::ThroughAssociation#records_by_owner control flow"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T15:50:42Z"
+assignee: "wave-4c-ar-core-residue-attributes-remainder-part-3"
 blocked-by: null
 closed-reason: null
 ---
