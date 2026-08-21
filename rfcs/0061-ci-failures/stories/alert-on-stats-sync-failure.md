@@ -1,6 +1,6 @@
 ---
 title: "Alert when the nightly stats sync fails instead of only logging it"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0061-ci-failures"
 cluster: null
