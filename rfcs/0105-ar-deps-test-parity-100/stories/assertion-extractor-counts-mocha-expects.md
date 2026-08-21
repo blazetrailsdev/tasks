@@ -1,6 +1,6 @@
 ---
 title: "assertion-extractor-counts-mocha-expects"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6847
 claim: "2026-08-21T23:10:30Z"
 assignee: "assertions-tail-root-6a"
 blocked-by: null
