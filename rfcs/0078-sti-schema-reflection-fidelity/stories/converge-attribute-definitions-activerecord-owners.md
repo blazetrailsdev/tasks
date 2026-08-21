@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-activerecord-owners"
-status: claimed
+status: blocked
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: "2026-08-21T09:10:24Z"
 assignee: "converge-attribute-definitions-activerecord-owners"
-blocked-by: null
+blocked-by: 'Blocked on the reader splits and on sync schema reflection. (1) Ordering: this story is the map''s OWNER — converging it removes the writes into `_attributeDefinitions`, but 3 of the 4 reader splits are not started (converge-attribute-definitions-core-readers, -leaf-membership-readers, -peripheral-readers are all `ready`; -activemodel-readers #6804 and -activerecord-core-readers #6805 are still in review). model-schema.ts (columnsHash synthesized fallback :354-368, applyColumnsHash :1265-1331, reconcileVirtualAttributes :1564-1572), persistence.ts, enum.ts, fixtures.ts, encryption.ts:142, nested-attributes.ts and type-caster/map.ts all still read the map on main, so dropping the writes now is a correctness break, not a convergence. (2) Root blocker for AC1/AC2 measured, not assumed: seeding `_defaultAttributes` phase 1 from columnsHash alone (attributes.rb:241-245) reds 3 DefaultAttributesTest/DefineAttributeTest cases in packages/activerecord/src/attributes.test.ts ("_defaultAttributes seeds schema columns via fromDatabase then replays user pending queue", "attribute() overriding only type preserves the schema default", "define_attribute with userProvidedDefault false uses database cast") because trails'' adapter feeds reflected columns through `defineAttribute(..., userProvidedDefault: false)` into the defs map instead of a synchronously-resolvable `columns_hash`. Converging `defineAttribute` onto Rails'' `attribute_types[name] = cast_type; define_default_attribute(..., from_user:)` (attributes.rb:231-238) drops those seeds on the next `attribute()` reset, because Rails survives that reset via the column seed and trails'' connection-free `cachedColumnsHash` misses on the bare `new Model()` path. AC3 has the same root: `ensureSchemaLoaded` exists only because trails'' reflection is async, so the three readers cannot go until columns_hash is synchronously available. Unblock after all five reader stories land, and pair AC1/AC3 with the sync-reflection work rather than shipping them piecemeal.'
 closed-reason: null
 ---
 
