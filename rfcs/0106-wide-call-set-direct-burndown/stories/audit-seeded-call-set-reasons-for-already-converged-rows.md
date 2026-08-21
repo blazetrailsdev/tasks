@@ -1,6 +1,6 @@
 ---
 title: "Audit the seeded call-set baseline reasons for rows whose divergence is already gone"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T12:20:33Z"
+assignee: "remeasure-collection-proxy-residue-after-the-burndown"
 blocked-by: null
 closed-reason: null
 ---
