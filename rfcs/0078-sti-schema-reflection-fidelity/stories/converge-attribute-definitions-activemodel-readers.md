@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-activemodel-readers"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6804
 claim: "2026-08-21T03:10:24Z"
 assignee: "converge-attribute-definitions-activemodel-readers"
 blocked-by: null
