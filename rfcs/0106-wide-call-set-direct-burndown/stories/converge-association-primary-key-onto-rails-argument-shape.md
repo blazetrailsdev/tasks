@@ -1,6 +1,6 @@
 ---
 title: "Converge associationPrimaryKeyFor onto Rails' association_primary_key(klass = nil)"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6832
 claim: "2026-08-21T18:50:32Z"
 assignee: "converge-association-primary-key-onto-rails-argument-shape"
 blocked-by: null
