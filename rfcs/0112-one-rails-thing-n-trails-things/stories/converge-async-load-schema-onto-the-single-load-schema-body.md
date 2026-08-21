@@ -1,6 +1,6 @@
 ---
 title: "loadSchemaFromAdapter duplicates load_schema!'s body and dispatches the chain over an empty anchor"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
