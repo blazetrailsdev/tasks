@@ -1,6 +1,6 @@
 ---
 title: "Declare PrimaryKey#id? — the ID_ATTRIBUTE_METHODS member trails never defined"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T20:50:32Z"
+assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port attribute_registration_test.rb's six decorate_attributes tests verbatim"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T20:50:32Z"
+assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null
 closed-reason: null
 ---
