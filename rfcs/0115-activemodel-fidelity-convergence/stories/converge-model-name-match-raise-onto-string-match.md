@@ -1,6 +1,6 @@
 ---
 title: "Converge ModelName#match's raise onto Ruby String#match?'s TypeError"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
