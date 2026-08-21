@@ -1,6 +1,6 @@
 ---
 title: "Port Core#init_internals' four missing assignments"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
