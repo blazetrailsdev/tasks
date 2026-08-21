@@ -96,3 +96,31 @@ attribute methods, encryption, enum/provenance) as the inventory dictates.
 - [ ] The STI guards in `normalized-attribute.trails.test.ts` still pass.
 - [ ] No regression in `inheritance`, `attributes`, `model-schema`, `enum`,
       `dirty`, `sti/`, and the `encryption/` suite.
+
+## Progress
+
+**Tranche 2 (encryption cluster) — PR #6806.** Scope item 1's `encryption/*`
+half, plus the `columnsHash` re-entrancy that blocked it:
+
+- `encrypt_attribute` / `validate_column_size` read `columns_hash`
+  (`encryptable_record.rb:91,138-142`); `columnDefaultFor`,
+  `cachedColumnDefaultFor` and the `NOT_CACHED` schema-cache peek are deleted.
+- `registerEncryptedType` and `encrypt_attribute`'s invented "immediate path"
+  branch are deleted.
+- `getAttributeType`, `isEncryptedAttribute` and the test-helper `ciphertextFor`
+  resolve through `typeForAttribute`.
+- `columnsHash` is guarded on its own memo — `load_schema unless @columns_hash`
+  (`model_schema.rb:428`) — which is what lets a `columns_hash` read from inside
+  `load_schema!` resolve instead of re-entering the load.
+- Three call-mismatch baseline rows converged and were deleted.
+
+**Still open** (the story's own split, minus the cluster above): the
+schema/columns readers (`model-schema.ts`, `base.ts`, `attributes.ts`,
+`inheritance.ts`, `persistence.ts`, `nested-attributes.ts`, `fixtures.ts`), the
+attribute-methods readers (`activemodel/attribute-methods.ts`,
+`activerecord/attribute-methods.ts`, `activemodel/model.ts`,
+`activemodel/serialization.ts`), scope items 2 and 3
+(`_schemaRevision` / `schemaStaleAgainstAncestors` / `ownSchemaMemo` /
+`scrubSchemaSourcedDefinitions`), and scope item 5 (`enum.ts` provenance,
+`secure-password.ts`). Scope item 4 (`replayOwnPendingDecorators`) is already
+gone from `activemodel/src/attribute-registration.ts`.
