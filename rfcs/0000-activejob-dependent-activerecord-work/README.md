@@ -199,6 +199,28 @@ heavily specified thing in the package, so a faithful port of the subset is
   Rejected: #6762's arm is faithful and green; removing it would be a
   convergence regression, and the models simply do not use it yet.
 
+## Supersedes
+
+This RFC is the single owner of the `:destroy_async` closure, which means three
+RFC 0023 stories that predate it are superseded — closed with `closed-reason`
+pointers to the successor story ids (ids, not RFC numbers: this RFC is
+unnumbered until merge, and `finalize-rfc.mjs` rewrites references only inside
+its own directory, so a `0000-` reference written into 0023 would go stale
+permanently).
+
+| superseded 0023 story                                 | successor                                             | why not simply reused                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `converge-dependent-destroy-async-arms-and-drain`     | `port-after-commit-jobs-callback`                     | Two of its three parts **landed in #6762** (the three `:destroy_async` arms, and real callers for `enqueueDestroyAssociation`). Its opening claim — "`enqueueDestroyAssociation` … definition only — ZERO callers" — is stale. Only the drain survives, which is the successor story. |
+| `port-destroy-association-async-job-and-default`      | `port-destroy-association-async-job`                  | Same scope; its detail (the `core.rb:24` default, `DestroyAssociationAsyncError`, the unported-files pin, the deferred autoload case) is absorbed verbatim into the successor, with the moved file path corrected.                                                                    |
+| `converge-destroy-async-test-models-to-destroy-async` | `port-destroy-association-async-test-and-flip-models` | Same six-model flip. Its stated blocker ("depends on a default job existing") is now this RFC's story 2, so the dependency is expressible here and was not there.                                                                                                                     |
+
+Two adjacent 0023 stories are **not** superseded and stay where they are:
+`book-destroy-async-model-drops-scope-and-published-override` (a reflection
+scope and an enum bang override, correct on either `dependent:` arm) and
+`eachslice-zero-size-raises` (a Ruby-idiom fix surfaced by #6762's review).
+The first one's prose pointed at `destroy-async-test-port-and-model-flip`, a
+story closed on 2026-08-21; it is repointed at this RFC's capstone.
+
 ## Rollout
 
 0. **Prerequisite (not owned here):** an ActiveJob RFC exists and has landed

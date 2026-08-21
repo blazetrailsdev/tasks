@@ -7,7 +7,7 @@ cluster: null
 packages: ["activerecord"]
 deps: ["port-after-commit-jobs-callback"]
 deps-rfc: []
-est-loc: 240
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -31,6 +31,30 @@ trails already has the config seam it hangs off —
 error message verbatim ("A valid destroyAssociationAsyncJob is required to use
 dependent: destroyAsync on associations") when it is unset. There is nothing for that config to point at.
 
+### Absorbed from `0023/port-destroy-association-async-job-and-default` (superseded)
+
+That story carried three details this one must not lose:
+
+- **Rails' default is not `null`.** `core.rb:24` declares
+  `class_attribute :_destroy_association_async_job, instance_accessor: false,
+default: "ActiveRecord::DestroyAssociationAsyncJob"`. trails leaves
+  `_destroyAssociationAsyncJob = null` (`base.ts:4023`) precisely because the
+  job is unported; once it exists, the default is restored and the
+  omitted-default note in `base.ts` comes out.
+- **`DestroyAssociationAsyncError`** (`destroy_association_async_job.rb:4`) is
+  part of the port — `perform` raises it with `"owner record not destroyed"`
+  (`:25`).
+- **The unported-files entry** must come out:
+  `scripts/parity/unported-files/unscoped.ts:153` pins
+  `pattern: "destroy_association_async_job.rb"`. (The superseded story cited
+  `scripts/api-compare/unported-files.ts:147`; the file moved — use the path
+  above.)
+- **One deferred test case**, from PR #5711: "destroy_association_async_job
+  error shows a missing parent job class, as if ActiveJob were missing", which
+  needs Ruby `autoload` semantics via `test/activejob/unloadable_base_job.rb`.
+  If that case cannot be ported faithfully, block or descope it explicitly —
+  do not quietly drop it from the file.
+
 Two Rails test files cover the job directly:
 
 | file                                                                | code lines | tests |
@@ -43,6 +67,11 @@ the directory's support files and are ported with them.
 
 ## Acceptance criteria
 
+- `_destroyAssociationAsyncJob` defaults to
+  `"ActiveRecord::DestroyAssociationAsyncJob"` per `core.rb:24`, the `base.ts`
+  omitted-default note is gone, and
+  `scripts/parity/unported-files/unscoped.ts:153` no longer pins the file.
+- `DestroyAssociationAsyncError` ported alongside the job.
 - `DestroyAssociationAsyncJob` ported at the Rails path, subclassing the trails
   ActiveJob base, with Rails' names for every keyword argument
   (`owner_model_name`, `owner_id`, `association_class`, `association_ids`,
