@@ -1,6 +1,6 @@
 ---
 title: "Give the call-argument gate a call-site JSDoc receipt"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 6827
 claim: "2026-08-21T16:20:37Z"
 assignee: "converge-habtm-through-model-lazy-table-name"
 blocked-by: null
