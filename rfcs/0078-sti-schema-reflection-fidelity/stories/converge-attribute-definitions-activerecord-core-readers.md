@@ -39,12 +39,28 @@ Classify each as "could read `attribute_types`" (most of the `.has(name)` /
 `.keys()` readers) vs "genuinely needs schema column metadata" (which should go
 to `columnsHash`, not to a parallel map).
 
+## Scope split (2026-08-21)
+
+The classification above landed as two stories. This one takes the **readers**;
+the map's **owners** — `attributes.ts`'s `defineAttribute` /
+`_defaultAttributes` phase-1 seed, and `base.ts#ensureSchemaLoaded`, which reads
+per-definition metadata (`reflectedTable`, `virtual`, `source`) that
+`attribute_types` does not carry and which converges by deleting the method —
+move to [[converge-attribute-definitions-activerecord-owners]]. Converging an
+owner means deleting `_attributeDefinitions` itself, which is a different (and
+larger) change from re-pointing a reader. `base.ts:1204`'s `attribute()` re-hook
+is converged separately by trails#6800.
+
 ## Acceptance criteria
 
-- [ ] Every `_attributeDefinitions` reader in `base.ts`, `attributes.ts`,
+- [ ] Every `_attributeDefinitions` _reader_ in `base.ts`,
       `attribute-methods.ts` and `inheritance.ts` resolves through
       `_default_attributes` / `attribute_types` (or `columnsHash` where the
-      reader genuinely wants column metadata).
+      reader genuinely wants column metadata — `descends_from_active_record?`
+      is that case: `inheritance.rb:88` asks `columns_hash.include?`, so a
+      declared-but-virtual `type` must not read as an STI subclass).
+- [ ] The owner sites are registered as
+      [[converge-attribute-definitions-activerecord-owners]], not silently left.
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.
 - [ ] No regression in `inheritance`, `attributes`, `model-schema`, `dirty`,
       `sti/` and `attribute-methods` suites.
