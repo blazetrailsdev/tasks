@@ -1,6 +1,6 @@
 ---
 title: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6818
 claim: "2026-08-21T13:20:34Z"
 assignee: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
 blocked-by: null
