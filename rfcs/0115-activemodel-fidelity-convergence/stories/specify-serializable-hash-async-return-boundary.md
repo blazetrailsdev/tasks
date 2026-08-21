@@ -1,7 +1,7 @@
 ---
 title: "Specify the serializableHash async-return boundary"
-status: claimed
-updated: 2026-08-20
+status: in-progress
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel", "activerecord", "actionview"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6813
 claim: "2026-08-20T22:18:55Z"
 assignee: "delete-model-xml-serialization-and-nullify-blanks"
 blocked-by: null
