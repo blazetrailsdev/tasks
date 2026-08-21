@@ -1,7 +1,7 @@
 ---
 title: "databaseConfiguration() does not port the shared-key reverse-merge"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
