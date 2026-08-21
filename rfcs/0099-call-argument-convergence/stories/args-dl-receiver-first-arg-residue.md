@@ -1,6 +1,6 @@
 ---
 title: "Converge the receiver-as-first-argument residue"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: api-compare
