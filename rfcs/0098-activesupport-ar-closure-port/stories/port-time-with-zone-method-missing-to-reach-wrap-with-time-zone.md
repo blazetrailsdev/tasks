@@ -1,6 +1,6 @@
 ---
 title: "Port TimeWithZone#method_missing so the ported wrap_with_time_zone has its Rails caller"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T18:50:32Z"
+assignee: "converge-association-primary-key-onto-rails-argument-shape"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Delete the callerless composite-primary-key duplicate of the PrimaryKey id readers"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T18:50:32Z"
+assignee: "converge-association-primary-key-onto-rails-argument-shape"
 blocked-by: null
 closed-reason: null
 ---
