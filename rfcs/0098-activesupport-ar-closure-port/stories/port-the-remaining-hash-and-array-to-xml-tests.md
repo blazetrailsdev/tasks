@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining Rails HashToXmlTest / ToXmlTest cases"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6826
 claim: "2026-08-21T15:50:42Z"
 assignee: "wave-4c-ar-core-residue-attributes-remainder-part-3"
 blocked-by: null
