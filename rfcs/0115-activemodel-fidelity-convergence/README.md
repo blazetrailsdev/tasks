@@ -498,21 +498,58 @@ Measured with the same tooling and the same code-line rule, off a fresh
 
 ## Open questions
 
-1. **Is `thenableHash` a genuine TypeScript shortcoming?**
-   (`serialization.ts:473`.) Ruby's `as_json` is synchronous because
-   association reads are synchronous; in trails an `include:`-bearing
-   `serializable_hash` must read associations, which are async. The current
-   answer is a `Proxy` that is both a plain hash and a thenable — 67 lines with
-   no Rails counterpart, and a shape a Rails dev would not recognize.
-   Story 19 is filed **blocked** rather than ratified: the alternatives are
-   (a) `serializableHash` returns `Promise` unconditionally and every sync
-   caller is converged (large, cross-package, and the precedent
-   `feedback_trails_validations_are_sync_only` records that RFC 0063 already
-   made `isValid()` return a `Promise`), or (b) the thenable stays and is
-   tagged `@noRailsEquivalent PERMANENT` with the async-boundary evidence.
-   **Recommendation: (a)**, consistent with RFC 0063, but it needs its own RFC
-   and must not be decided inside a bloat-burndown story. Resolve before this
-   RFC moves to `active`.
+1. **Is `thenableHash` a genuine TypeScript shortcoming?** — **RESOLVED
+   (2026-08-21, `specify-serializable-hash-async-return-boundary`): (a), with a
+   documented exception for the `JSON.stringify` seam.**
+
+   `serializableHash` / `asJson` return `Promise` unconditionally and every
+   caller is converged, following RFC 0063's `isValid()` precedent — **except**
+   `toJSON`, which cannot be converged and does not need to be.
+
+   ### Call-site inventory (non-test, `packages/{activemodel,activerecord,actionview}`)
+
+   | Call site                                                                                    | Can it `await`?                        | Cost of an unconditional `Promise`                                                                                                                       |
+   | -------------------------------------------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `activemodel/serialization.ts:39` `serializableHash` (definition)                            | n/a                                    | Body becomes `async`; the `sync` re-entry flag and both `thenableHash` arms (`:46`, `:51`) collapse into one straight-line `await preloadIncludes(...)`. |
+   | `activemodel/serialization.ts:119,129` nested include recursion                              | yes (already inside an `async` helper) | `await` / `Promise.all` — `:119` already maps over `serializableHash`.                                                                                   |
+   | `activemodel/serialization.ts:145` `SerializableHash` interface member                       | n/a                                    | Return type becomes `Promise<Record<string, unknown>>`.                                                                                                  |
+   | `activemodel/serializers/json.ts:164` `serializableHash` (JSON mixin delegator)              | yes                                    | One `await`.                                                                                                                                             |
+   | `activemodel/serializers/json.ts:85` `asJson`                                                | yes                                    | One `await`; `asJsonThenable` (`serialization.ts:449`) is deleted, its root-wrap `finalize` inlined.                                                     |
+   | `activemodel/model.ts:2303` `Model#serializableHash`                                         | yes                                    | One `await`.                                                                                                                                             |
+   | `activemodel/model.ts:2307` `Model#asJson`                                                   | yes                                    | One `await`.                                                                                                                                             |
+   | `activerecord/serialization.ts:11` STI `except`-union wrapper                                | yes                                    | One `await` on the tail call.                                                                                                                            |
+   | `activerecord/attribute-methods.ts:822` `serializableHash` forwarder                         | yes                                    | One `await`.                                                                                                                                             |
+   | `activerecord/base.ts:4669` `serializableHash` static assignment                             | n/a                                    | Type only.                                                                                                                                               |
+   | `activerecord/relation/delegation.ts:969,1101` `Relation#asJson`                             | yes — **already `async`**              | `RECORD_DELEGATES.asJson` maps records; becomes `Promise.all`. Net simplification: the relation half is already a promise.                               |
+   | `activesupport/core-ext/object/json.ts:47` **`toJSON`**                                      | **NO**                                 | `JSON.stringify` invokes `toJSON(key)` and consumes the return value synchronously; there is no awaiting form.                                           |
+   | `activerecord/token-for.ts:138`, `connection-adapters/{column,schema-cache,mysql/column}.ts` | n/a                                    | Different methods — activesupport's free `Object#as_json` and plain column `toJSON`. Unaffected.                                                         |
+
+   `fromJson` (`json.ts:110`, `model.ts:2335`) is `JSON.parse` + `assignAttributes`
+   and never touches associations; it stays synchronous and is out of scope.
+
+   ### Why `toJSON` is not a counter-example
+
+   `toJSON` is the only site that cannot await, and by construction it never
+   needs to: it calls `this.asJson()` **with no arguments**
+   (`core-ext/object/json.ts:55`), so `options.include` is always nil and the
+   association-reading branch — the sole reason `thenableHash` exists — is
+   unreachable. The async boundary is entirely inside the `include:`-bearing
+   path, and the one sync-only caller never enters it.
+
+   So `toJSON` keeps a synchronous path by calling the sync internal builder
+   directly (today's `serializableHash(record, options, /* sync */ true)`),
+   which is sound precisely because it passes no `include`. That is one narrow,
+   provable seam with a Rails-shaped public surface around it, versus 67 lines
+   of `Proxy` on the main path.
+
+   ### Consequence
+
+   `resolve-serialization-thenable-hash-async-return` is unblocked and set
+   `ready`: it deletes `thenableHash` (`:473`), `asJsonThenable` (`:449`), the
+   `sync` re-entry parameter's dual contract, and `isSerializableCollection` /
+   `sendAssociation`'s thenable-specific handling, and converges the eleven
+   awaitable call sites above.
+
 2. **Where do the ActiveRecord bodies land — `activerecord`, or a
    `Model`-hosted mixin?** Stories 2–7 move bodies into
    `packages/activerecord/src/{normalization,callbacks,attribute-methods/*}.ts`,
