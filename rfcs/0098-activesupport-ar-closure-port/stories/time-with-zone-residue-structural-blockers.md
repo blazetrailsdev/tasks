@@ -1,7 +1,7 @@
 ---
 title: "time-with-zone-residue-structural-blockers"
-status: blocked
-updated: 2026-08-18
+status: ready
+updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-14T22:49:42Z"
-assignee: "retire-time-zone-config-test-only-zone-seams"
-blocked-by: "Re-scoped 2026-08-18 to arm (D) only — where the acts_like markers live. Arms (A) and (B) are split out and no longer blocked: (A) became port-time-zone-local-period-lookups (ready) + widen-time-with-zone-ctor-onto-rails-four-argument-shape (deps on it), because its premise was STALE — TimezonePeriod (values/time-zone.ts:543) and periodForUtc (:1076) already landed, so 'does TimeZone grow a Period type' is answered; (B) became split-time-ext-by-receiver-onto-the-rails-layout (ready), which is not a judgement call since parity:api matches on the Rails layout and time-ext.ts hosts four Rails files across three receivers. (C) landed in #6547. What remains needs an owner decision between: installing acts_like markers on the Temporal polyfill prototypes at import time (keeps the Rails path, costs a global side effect on a third-party package and overstates PlainDateTime-as-DateTime), moving them into @blazetrails/date (honest ownership, gives up the Rails file path), or a reasoned SCOPED_SKIP_GROUPS entry that lowers 0098's reachable ceiling by 1 member and must be stated in the RFC. Worth 1 member of the 26-method AR-closure gap."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
