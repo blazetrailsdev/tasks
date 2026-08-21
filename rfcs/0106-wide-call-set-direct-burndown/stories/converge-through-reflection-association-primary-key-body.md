@@ -1,6 +1,6 @@
 ---
 title: "converge-through-reflection-association-primary-key-body"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6832
 claim: "2026-08-21T19:50:35Z"
 assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null
