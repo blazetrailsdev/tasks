@@ -1,6 +1,6 @@
 ---
 title: "Retire ActiveRecord's second _assign_attribute and send Rails' one to self"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
