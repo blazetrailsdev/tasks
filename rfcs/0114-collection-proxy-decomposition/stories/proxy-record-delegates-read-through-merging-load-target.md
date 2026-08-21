@@ -1,7 +1,7 @@
 ---
 title: "to: :records delegates on a proxy with built-but-unsaved records must merge via load_target, not requery"
-status: blocked
-updated: 2026-08-20
+status: closed
+updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-08-20T13:22:33Z"
-assignee: "proxy-record-delegates-read-through-merging-load-target"
-blocked-by: "The stated defect does not reproduce on main: the unloaded-proxy delegate path routes through CollectionProxy#load() which already does '@target = merge_target_lists(find_target, target)' (collection_association.rb:270-278 / collection-proxy.ts load()), so every to: :records delegate on a proxy holding built-but-unsaved records already reports them. Verified empirically across the whole delegate surface (map/each/filter/slice/at/asJson/sort/partition/toFs/... plus the null-scope new-owner arm): all include the built record. No regression test can be written that FAILS on baseline, so acceptance criterion 1 is unsatisfiable as written. The only residue is acceptance criterion 2 — removing the two awaits added by #6759 in has-many-through-associations.test.ts. Rails' load_target is synchronous because Ruby has blocking IO; trails' delegate must query the DB on an unloaded proxy, so the call cannot be synchronous. Returning the in-memory target instead would drop the find_target query Rails performs and be strictly LESS faithful. This is the ratified no-blocking-IO language shortcoming, so the awaits are the settled trails spelling and cannot come out. PR #PENDING lands the one genuine convergence the story names: the wrapCollectionProxy async delegate now reads through target.loadTarget(), naming Rails' load_target seam at the call site."
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "Stale: the one genuine convergence it named (wrapCollectionProxy's async delegate reading through load_target) landed in PR #6773; the stated defect does not reproduce on main and criterion 1 is unsatisfiable (no test can fail on baseline), per the recorded blocker."
 ---
 
 ## Context
