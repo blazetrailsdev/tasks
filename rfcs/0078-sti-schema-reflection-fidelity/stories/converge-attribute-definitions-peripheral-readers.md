@@ -35,8 +35,17 @@ Rails anchor: `vendor/rails/activemodel/lib/active_model/attribute_registration.
 
 ## Acceptance criteria
 
-- [ ] No `_attributeDefinitions` reader remains outside `model-schema.ts`
-      (whose machinery is slice 4).
+- [ ] No `_attributeDefinitions` reader remains in **this slice's files** (the
+      list above). The readers in `base.ts`, `attributes.ts`,
+      `attribute-methods.ts` and `inheritance.ts` belong to slice 2,
+      `converge-attribute-definitions-activerecord-core-readers`, and
+      `model-schema.ts`'s machinery to slice 4 — this slice must not touch them,
+      since slice 2 is worked in parallel on the same files.
+- [ ] The one carve-out is `encryption/encryptable-record.ts`'s plain-object
+      mock arm (`registerEncryptedType`, `getAttributeType`'s fallback):
+      retiring it means migrating the mock models in five `encryption/` test
+      files onto real `Base` subclasses, tracked separately as
+      `retire-encryption-mock-model-immediate-path`.
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.
 - [ ] No regression in `persistence`, `nested-attributes`, `insert-all`,
       `fixtures`, `enum`, `calculations` and the `encryption/` suites.
