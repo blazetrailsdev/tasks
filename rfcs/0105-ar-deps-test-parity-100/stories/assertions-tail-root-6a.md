@@ -1,7 +1,7 @@
 ---
 title: "assertion parity tail: root files, batch 6a"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-21
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T23:10:30Z"
+assignee: "assertions-tail-root-6a"
 blocked-by: null
 closed-reason: null
 ---
