@@ -1,6 +1,6 @@
 ---
 title: "Delete the callerless composite-primary-key duplicate of the PrimaryKey id readers"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
