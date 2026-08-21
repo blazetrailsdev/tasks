@@ -1,6 +1,6 @@
 ---
 title: "mysql-structure-load-pipes-stdin-instead-of-execute"
-status: claimed
+status: done
 updated: 2026-08-21
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6563
 claim: "2026-08-21T11:39:15Z"
 assignee: "measure-adapter-specific-arm-saving-on-mariadb"
 blocked-by: null
