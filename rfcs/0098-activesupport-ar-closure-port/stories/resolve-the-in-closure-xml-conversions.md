@@ -1,6 +1,6 @@
 ---
 title: "Resolve the four in-closure XML conversions against XmlMini's out-of-closure classification"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T13:20:34Z"
+assignee: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
 blocked-by: null
 closed-reason: null
 ---

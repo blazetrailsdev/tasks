@@ -1,6 +1,6 @@
 ---
 title: "Resolve has_attribute? through attribute_aliases, not resolve_attribute_name"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T13:20:34Z"
+assignee: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
 blocked-by: null
 closed-reason: null
 ---
