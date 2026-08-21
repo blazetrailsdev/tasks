@@ -1,7 +1,7 @@
 ---
 title: "Converge destroy_async test-helper models from dependent: destroy to destroyAsync"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by story port-destroy-association-async-test-and-flip-models in the ActiveJob-dependent ActiveRecord work RFC (tasks PR #75), which owns the same six-model flip plus the Rails tests that observe it. This story's stated blocker ('depends on a default job existing') is that RFC's story port-destroy-association-async-job, so the dependency is now expressible; it was not here."
 ---
 
 ## Context
