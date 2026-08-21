@@ -1,6 +1,6 @@
 ---
 title: "Retire _reapplyNestedAttrSetters and let the Base constructor assign nested attributes on one pass"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T13:50:33Z"
+assignee: "retire-collection-proxy-append-bang-and-wire-inverse-target"
 blocked-by: null
 closed-reason: null
 ---
