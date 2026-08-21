@@ -1,6 +1,6 @@
 ---
 title: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null

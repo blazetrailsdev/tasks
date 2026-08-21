@@ -1,6 +1,6 @@
 ---
 title: "Resolve the four in-closure XML conversions against XmlMini's out-of-closure classification"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null

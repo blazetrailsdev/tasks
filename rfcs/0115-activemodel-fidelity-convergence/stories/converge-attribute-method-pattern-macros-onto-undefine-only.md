@@ -1,6 +1,6 @@
 ---
 title: "Converge attribute_method_prefix/suffix/affix onto Rails' undefine-only bodies"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
