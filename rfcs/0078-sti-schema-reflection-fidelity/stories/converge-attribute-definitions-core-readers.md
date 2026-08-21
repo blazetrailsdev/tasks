@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-core-readers"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6806
 claim: "2026-08-21T09:40:24Z"
 assignee: "converge-attribute-definitions-core-readers"
 blocked-by: null
