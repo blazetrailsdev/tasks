@@ -1,7 +1,7 @@
 ---
 title: "Converge check_validity! onto Hash#include?/#slice, retiring three baseline rows"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
