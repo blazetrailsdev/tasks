@@ -1,6 +1,6 @@
 ---
 title: "serializeTimeValue is invented surface with no Rails member and no caller"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:17:06Z"
+assignee: "converge-date-type-cast-for-schema-to-rails"
 blocked-by: null
 closed-reason: null
 ---

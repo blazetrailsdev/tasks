@@ -1,6 +1,6 @@
 ---
 title: "trails has no load_schema! super chain, so CounterCache and EncryptableRecord's hooks hang off the wrong seam (or none)"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:17:06Z"
+assignee: "converge-date-type-cast-for-schema-to-rails"
 blocked-by: null
 closed-reason: null
 ---

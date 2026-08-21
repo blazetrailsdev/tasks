@@ -1,7 +1,7 @@
 ---
 title: "Converge Type::Date#type_cast_for_schema to the Rails one-liner"
-status: ready
-updated: 2026-08-20
+status: claimed
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:17:06Z"
+assignee: "converge-date-type-cast-for-schema-to-rails"
 blocked-by: null
 closed-reason: null
 ---
