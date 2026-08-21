@@ -1,7 +1,7 @@
 ---
 title: "Make Helpers::TimeValue a real mixin instead of instance-field assignments and a duplicated serializeCastValue"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []

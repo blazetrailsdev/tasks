@@ -1,7 +1,7 @@
 ---
 title: "define_attribute_methods omits load_schema because reflection drives generation"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
