@@ -1,6 +1,6 @@
 ---
 title: "Alert when the nightly stats sync fails instead of only logging it"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T12:50:30Z"
+assignee: "alert-on-stats-sync-failure"
 blocked-by: null
 closed-reason: null
 ---
