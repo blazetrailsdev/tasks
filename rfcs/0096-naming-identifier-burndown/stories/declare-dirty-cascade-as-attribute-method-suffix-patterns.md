@@ -1,6 +1,6 @@
 ---
 title: "declare-dirty-cascade-as-attribute-method-suffix-patterns"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
