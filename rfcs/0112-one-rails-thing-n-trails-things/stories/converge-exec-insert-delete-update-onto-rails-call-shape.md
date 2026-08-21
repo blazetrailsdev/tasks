@@ -1,6 +1,6 @@
 ---
 title: "converge-exec-insert-delete-update-onto-rails-call-shape"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6835
 claim: "2026-08-21T19:04:41Z"
 assignee: "converge-exec-insert-delete-update-onto-rails-call-shape"
 blocked-by: null
