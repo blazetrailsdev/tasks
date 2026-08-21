@@ -1,6 +1,6 @@
 ---
 title: "port-relation-create-for-build-scope"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6840
 claim: "2026-08-21T21:20:33Z"
 assignee: "port-relation-create-for-build-scope"
 blocked-by: null
