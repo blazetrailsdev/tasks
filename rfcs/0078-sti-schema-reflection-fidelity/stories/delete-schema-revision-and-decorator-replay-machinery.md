@@ -1,6 +1,6 @@
 ---
 title: "delete-schema-revision-and-decorator-replay-machinery"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
