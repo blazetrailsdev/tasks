@@ -1,6 +1,6 @@
 ---
 title: "Re-measure collection-proxy.ts after the 57% burndown and re-cut the residue into stories"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
