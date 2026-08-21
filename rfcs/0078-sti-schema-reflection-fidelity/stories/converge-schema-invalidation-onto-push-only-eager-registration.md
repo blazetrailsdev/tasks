@@ -65,16 +65,49 @@ cannot be solved in the JS object model, `pnpm tasks block` this with the
 specific blocker at a trails `file:line`; do NOT close it by re-justifying the
 pull fallback.
 
+## Superseded in part by PR #6809 (2026-08-21)
+
+The blocker below concluded the pull apparatus "cannot be deleted" without an
+eager-registration hook. That is now falsified: #6809 deleted
+`schemaStaleAgainstAncestors`, `_staleCheck`, the `_schemaRevision` epoch, `ownProp`
+and the eslint rule, via a route the analysis did not consider — trails has a
+**second** subclass registry, the `ActiveSupport::DescendantsTracker` that
+`_defaultAttributes` registers into (`packages/activemodel/src/attribute-registration.ts`),
+which covers classes `Inheritance`'s `_subclasses` misses. `Inheritance#subclasses`
+(`packages/activerecord/src/inheritance.ts:90`) now reads both, so
+`reloadSchemaFromCache`'s recursive push reaches them and the per-read prototype
+walk is gone from the `new Model()` hot path.
+
+What remains is the deviation #6809 shipped in its place, and it is what this
+story should now converge:
+
+**Rails has exactly ONE registry.** Ruby's `Class#subclasses` is VM-maintained,
+so `DescendantsTracker.subclasses(klass)` is a plain delegation to it
+(`vendor/rails/activesupport/lib/active_support/descendants_tracker.rb:97-100`),
+and `inherited` fills it the moment `class X < Y` is evaluated. trails fills two
+by hand and unions them at read time. The union is a bridge, not a mirror: it is
+still lazy (both registries are filled by later calls, not by `extends`), so a
+subclass that never triggers either one is still invisible to the push.
+
+The converged shape is unchanged — one registry, eagerly filled — and the
+eager-registration hook is still the open problem. The blocker analysis below
+remains accurate about `class X extends Y {}` offering no receiver-bearing hook;
+it is only its conclusion about the pull apparatus that #6809 overtook.
+
 ## Acceptance criteria
 
 - [ ] STI subclass registration is eager, so `reloadSchemaFromCache`'s recursive
       push reaches every descendant without an explicit `registerSubclass` call.
-- [ ] `schemaStaleAgainstAncestors`, `_staleCheck` and the `_schemaRevision`
+- [x] `schemaStaleAgainstAncestors`, `_staleCheck` and the `_schemaRevision`
       epoch are deleted; per-read prototype walking is gone from the
-      `new Model()` hot path.
-- [ ] `blazetrails/schema-memo-read-through-guard` and its test are deleted, and
-      the `eslint.config.mjs` block with them.
+      `new Model()` hot path. (#6809)
+- [x] `blazetrails/schema-memo-read-through-guard` and its test are deleted, and
+      the `eslint.config.mjs` block with them. (#6809)
 - [ ] `model-schema-sync-load.test.ts`'s "resetting the STI base propagates to
       subclasses" no longer needs its explicit `registerSubclass(Circle)` call —
       that call is the visible symptom of the push side being partial.
+      (Unverified after #6809: the two-registry union may already have made it
+      redundant. Check before assuming work is needed.)
+- [ ] `Inheritance#subclasses` reads ONE registry, not a union of two
+      (`inheritance.ts:90`), and `descendants` recurses through it.
 - [ ] parity:api and parity:test deltas non-negative.
