@@ -1,7 +1,7 @@
 ---
 title: "counter_cached_association_names is a hand-rolled Set + register helper, not classAttribute()"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
