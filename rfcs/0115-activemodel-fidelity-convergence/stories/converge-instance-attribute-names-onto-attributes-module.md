@@ -1,6 +1,6 @@
 ---
 title: "Converge Model's instance attributeNames() onto ActiveModel::Attributes#attribute_names"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6799
 claim: "2026-08-21T00:17:06Z"
 assignee: "converge-date-type-cast-for-schema-to-rails"
 blocked-by: null
