@@ -1,6 +1,6 @@
 ---
 title: "Auto-tighten the unreviewed marks a PR's own diff already modifies"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6821
 claim: "2026-08-21T14:20:44Z"
 assignee: "retire-collection-proxy-raise-on-type-mismatch"
 blocked-by: null
