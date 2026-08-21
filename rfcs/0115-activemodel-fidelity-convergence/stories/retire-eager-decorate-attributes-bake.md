@@ -1,7 +1,7 @@
 ---
 title: "Retire decorateAttributes' eager _attributeDefinitions bake and the isDecoratorReplay counter"
-status: in-progress
-updated: 2026-08-20
+status: done
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
