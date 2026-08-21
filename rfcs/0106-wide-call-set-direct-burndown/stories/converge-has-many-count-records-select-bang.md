@@ -1,6 +1,6 @@
 ---
 title: "converge-has-many-count-records-select-bang"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6829
 claim: "2026-08-21T17:20:33Z"
 assignee: "converge-has-many-count-records-select-bang"
 blocked-by: null
