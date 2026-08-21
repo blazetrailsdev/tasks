@@ -1,6 +1,6 @@
 ---
 title: "delete-schema-revision-and-decorator-replay-machinery"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6809
 claim: "2026-08-21T11:10:23Z"
 assignee: "delete-schema-revision-and-decorator-replay-machinery"
 blocked-by: null
