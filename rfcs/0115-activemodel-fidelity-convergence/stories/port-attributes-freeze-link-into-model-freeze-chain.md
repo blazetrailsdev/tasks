@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveModel::Attributes#freeze into Model's flattened freeze chain"
-status: ready
-updated: 2026-08-20
+status: claimed
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:42:06Z"
+assignee: "apply-hook-attribute-type-inside-activemodel-attribute"
 blocked-by: null
 closed-reason: null
 ---

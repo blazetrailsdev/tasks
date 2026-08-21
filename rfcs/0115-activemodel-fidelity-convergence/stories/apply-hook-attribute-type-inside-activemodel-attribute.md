@@ -1,6 +1,6 @@
 ---
 title: "apply-hook-attribute-type-inside-activemodel-attribute"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:42:06Z"
+assignee: "apply-hook-attribute-type-inside-activemodel-attribute"
 blocked-by: null
 closed-reason: null
 ---

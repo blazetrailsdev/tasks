@@ -1,6 +1,6 @@
 ---
 title: "registerModel accepts non-Base stand-ins, forcing every ported class_attribute reader to re-supply Rails' default"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T00:42:06Z"
+assignee: "apply-hook-attribute-type-inside-activemodel-attribute"
 blocked-by: null
 closed-reason: null
 ---
