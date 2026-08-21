@@ -1,6 +1,6 @@
 ---
 title: "Retire activemodel's 82 this-rebinding thunks onto include()/extend()"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: api-compare
