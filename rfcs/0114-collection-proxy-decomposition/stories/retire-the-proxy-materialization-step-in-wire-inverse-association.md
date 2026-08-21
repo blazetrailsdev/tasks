@@ -1,6 +1,6 @@
 ---
 title: "Retire the proxy-materialization step in _wireInverseAssociation"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T16:50:31Z"
+assignee: "retire-the-proxy-materialization-step-in-wire-inverse-association"
 blocked-by: null
 closed-reason: null
 ---
