@@ -1,6 +1,6 @@
 ---
 title: "Re-measure collection-proxy.ts after the 57% burndown and re-cut the residue into stories"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6815
 claim: "2026-08-21T12:20:33Z"
 assignee: "remeasure-collection-proxy-residue-after-the-burndown"
 blocked-by: null
