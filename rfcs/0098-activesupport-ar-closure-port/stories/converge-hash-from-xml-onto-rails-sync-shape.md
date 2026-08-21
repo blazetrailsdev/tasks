@@ -58,6 +58,6 @@ path allows and keep the residue to one tagged seat rather than three.
 - [ ] `Hash.from_xml` / `Hash.from_trusted_xml` mirror conversions.rb:128-135,
       returning the Hash (not a Promise), for the default backend.
 - [ ] `XMLConverter`'s constructor mirrors conversions.rb:151-154; `static
-  create` and its `@noRailsEquivalent` tag are gone.
+create` and its `@noRailsEquivalent` tag are gone.
 - [ ] Callers updated; `pnpm parity:api:extra` clean.
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.
