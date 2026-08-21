@@ -1,6 +1,6 @@
 ---
 title: "Delete model.ts's XML serialization and nullify_blanks invented surface"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
