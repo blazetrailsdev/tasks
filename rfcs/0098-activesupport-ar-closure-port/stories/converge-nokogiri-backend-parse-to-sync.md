@@ -1,6 +1,6 @@
 ---
 title: "Load the Nokogiri parser at backend-selection time so every XmlMini backend parses synchronously"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T19:50:35Z"
+assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null
 closed-reason: null
 ---
