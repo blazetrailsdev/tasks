@@ -1,6 +1,6 @@
 ---
 title: "Run the XmlMini engine and Hash.from_xml suites under each backend, as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6839
 claim: "2026-08-21T20:50:32Z"
 assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null
