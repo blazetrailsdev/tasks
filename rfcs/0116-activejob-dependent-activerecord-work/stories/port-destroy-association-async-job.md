@@ -2,7 +2,7 @@
 title: "Port ActiveRecord::DestroyAssociationAsyncJob and its two Rails test files"
 status: draft
 updated: 2026-08-21
-rfc: "0000-activejob-dependent-activerecord-work"
+rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: ["activerecord"]
 deps: ["port-after-commit-jobs-callback"]

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activejob-dependent-activerecord-work"
+rfc: "0116-activejob-dependent-activerecord-work"
 title: "ActiveJob-dependent ActiveRecord work: the dependent: :destroy_async closure"
 status: draft
 created: 2026-08-21
@@ -15,7 +15,7 @@ related-rfcs:
 priority: 10
 ---
 
-# RFC — ActiveJob-dependent ActiveRecord work: the `dependent: :destroy_async` closure
+# RFC 0116 — ActiveJob-dependent ActiveRecord work: the `dependent: :destroy_async` closure
 
 ## Summary
 
