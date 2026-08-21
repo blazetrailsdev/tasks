@@ -1,7 +1,7 @@
 ---
 title: "Rack::Logger should pass started_request_message as a block, not an eager string"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Re-homed to 0023-surfaced-deviations/rack-logger-info-takes-a-block: rack/logger.ts is outside the AR require-closure RFC 0096 re-scoped to on 2026-08-18, so 0096 will never schedule it."
 ---
 
 ## Context
