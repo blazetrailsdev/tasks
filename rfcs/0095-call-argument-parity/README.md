@@ -1,9 +1,9 @@
 ---
 rfc: "0095-call-argument-parity"
 title: "Call-argument parity (parity:api:calls:args)"
-status: closed
+status: active
 created: 2026-08-09
-updated: 2026-08-10
+updated: 2026-08-21
 owner: "@deanmarano"
 packages:
   - "activerecord"
