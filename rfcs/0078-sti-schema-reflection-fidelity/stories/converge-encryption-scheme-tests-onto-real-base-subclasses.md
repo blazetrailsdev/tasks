@@ -18,30 +18,25 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/src/encryption/encryption-schemes.test.ts` declares
-`encrypts` on `class extends Model` — an **ActiveModel** class. Rails'
-`encryption_schemes_test.rb:120-133` and `:166-180` use a real ActiveRecord
-model (`Class.new(Author) { self.table_name = "authors"; encrypts :name, ... }`)
-and assert through `create!` / `find_by_name`, not through
-`type_for_attribute(...).previousTypes`.
+Rails' `encryption_schemes_test.rb:120-133` and `:166-180` declare `encrypts` on
+a real ActiveRecord model (`Class.new(Author) { self.table_name = "authors";
+encrypts :name, ... }`) and assert through the record round-trip — `create!`
+then `find_by_name` — not through the resolved type.
 
-The divergence has a cost at the source: `EncryptableRecord` is mixed into
-`ActiveRecord::Base` alone (`base.rb:313`), so Rails' decorator can call
-`columns_hash` unconditionally (`encryptable_record.rb:91`). trails must spell
-that `modelClass.columnsHash?.()` because an `ActiveModel::Model` host has no
-`columns_hash` — an optional call that exists only for these test mocks. See the
-call site in `encryption/encryptable-record.ts` (`pushEncryptionDecorator`).
-
-Also affected: the two trails-only cases in the same file under
-`describe("global previous schemes wiring — config.previous → EncryptableRecord.encrypts")`.
+PR #6807 moved the four affected cases in
+`packages/activerecord/src/encryption/encryption-schemes.test.ts` off
+`ActiveModel::Model` onto real `Base` subclasses over `authors`, which let the
+`encrypts` decorator call `columns_hash` unconditionally as Rails does
+(`encryptable_record.rb:91`; the concern is mixed into `ActiveRecord::Base`
+alone, `base.rb:313`). What remains is the assertion shape: the two
+Rails-named cases still assert on `typeForAttribute(...).previousTypes` and
+`deserialize`, where Rails asserts a persisted round-trip.
 
 ## Acceptance criteria
 
-- [ ] The affected cases declare `encrypts` on a real `Base` subclass over a
-      canonical table, mirroring Rails' `Class.new(Author)`.
-- [ ] The Rails-named cases assert through the record round-trip Rails asserts
-      through (`create!` / `find_by_name`), not through the resolved type's
-      `previousTypes`.
-- [ ] `pushEncryptionDecorator` calls `columnsHash()` unconditionally, as Rails
-      does; the `?.()` optional call is deleted.
-- [ ] `encryption/` suites pass.
+- [ ] `don't use global previous schemes with a different deterministic nature`
+      asserts `create!`/`name` round-trip as Rails does
+      (encryption_schemes_test.rb:131-132).
+- [ ] `... when performing queries` asserts `find_by_name` hits and misses as
+      Rails does (encryption_schemes_test.rb:178-179).
+- [ ] Test names unchanged; `encryption/` suites pass.
