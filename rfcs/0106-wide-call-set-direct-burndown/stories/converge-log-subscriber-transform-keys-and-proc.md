@@ -1,6 +1,6 @@
 ---
 title: "converge-log-subscriber-transform-keys-and-proc"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6830
 claim: "2026-08-21T17:50:30Z"
 assignee: "converge-log-subscriber-transform-keys-and-proc"
 blocked-by: null
