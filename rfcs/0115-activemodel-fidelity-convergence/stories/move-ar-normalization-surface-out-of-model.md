@@ -1,7 +1,7 @@
 ---
 title: "Move the ActiveRecord normalization surface out of activemodel/model.ts"
-status: ready
-updated: 2026-08-19
+status: claimed
+updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel", "activerecord"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T19:04:05Z"
+assignee: "move-ar-normalization-surface-out-of-model"
 blocked-by: null
 closed-reason: null
 ---
