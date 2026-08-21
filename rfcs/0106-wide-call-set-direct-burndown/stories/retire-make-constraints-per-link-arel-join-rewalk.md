@@ -1,7 +1,7 @@
 ---
 title: "JoinDependency#makeConstraints re-walks joinConstraints' output to redistribute per-link arelJoin; Rails just concatenates"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
