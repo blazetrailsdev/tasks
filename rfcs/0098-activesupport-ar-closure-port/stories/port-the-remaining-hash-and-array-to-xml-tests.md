@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining Rails HashToXmlTest / ToXmlTest cases"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
