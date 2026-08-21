@@ -1,6 +1,6 @@
 ---
 title: "SQLite removeIndex emits an unqualified DROP INDEX, so an ATTACHed-schema drop can hit the wrong catalog"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

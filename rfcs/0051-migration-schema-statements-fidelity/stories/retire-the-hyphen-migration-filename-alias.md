@@ -1,6 +1,6 @@
 ---
 title: "Retire the pre-1.12c hyphen migration filename alias and the dedupe it forces"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

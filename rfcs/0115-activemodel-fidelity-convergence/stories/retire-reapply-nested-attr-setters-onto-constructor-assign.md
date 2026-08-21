@@ -1,6 +1,6 @@
 ---
 title: "Retire _reapplyNestedAttrSetters and let the Base constructor assign nested attributes on one pass"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
