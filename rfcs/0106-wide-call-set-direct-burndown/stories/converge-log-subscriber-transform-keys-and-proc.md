@@ -16,35 +16,39 @@ blocked-by: null
 closed-reason: null
 ---
 
-# `LogSubscriber.set_event_levels` / `Subscriber.add_event_subscriber` diverge on the Hash and the Proc
+# `Subscriber.add_event_subscriber` passes a lambda where Rails passes the Subscriber
 
 ## Context
 
-Two rows surfaced by the leading-underscore call candidate (PR #6825), both in
-the same cluster.
+Surfaced by the leading-underscore call candidate (PR #6825). The sibling half
+of this cluster — `LogSubscriber.set_event_levels` calling `transform_keys`
+(`log_subscriber.rb:123`) — converged in that PR by teaching `transformKeys`
+(`hash-utils.ts`) the `Map` spelling of a Ruby Hash, so only the Proc question
+is left.
 
-1. `set_event_levels` (`activesupport/lib/active_support/log_subscriber.rb:121-125`)
-   is `subscriber.event_levels = log_levels.transform_keys { |k| "#{k}.#{namespace}" }`.
-   trails (`packages/activesupport/src/log-subscriber.ts:161-173`) rebuilds the
-   collection in a loop because `logLevels` is a JS `Map` and trails'
-   `transformKeys` (`hash-utils.ts:217`) is object-only. Either `logLevels`
-   becomes a plain object (which is what Ruby's `class_attribute` Hash is), or
-   `transformKeys` grows the Map arm.
-2. `add_event_subscriber` (`activesupport/lib/active_support/subscriber.rb:86-95`)
-   is `notifier.subscribe(pattern, subscriber)` — Notifications invokes the
-   Subscriber object through `#call`. trails passes `(e) => sub.call(e)`, the
-   same Proc-vs-callable substitution already baselined for
-   `log-subscriber.ts silenced? -> call`. This one may be a genuine language
-   shortcoming; the story is to decide that deliberately rather than by default.
+Rails (`activesupport/lib/active_support/subscriber.rb:94`):
 
-Baselined meanwhile in
-`scripts/api-compare/call-mismatches-exclude/activesupport/log-subscriber.json`
-and `.../activesupport/subscriber.json`.
+```ruby
+subscriber.patterns[pattern] = notifier.subscribe(pattern, subscriber)
+```
+
+Notifications invokes the Subscriber OBJECT through Ruby's `#call` protocol.
+trails (`packages/activesupport/src/subscriber.ts:163`) passes
+`(e) => sub.call(e)` because a JS notifier takes a callable and JS has no
+object-answers-to-`call` protocol.
+
+This is a language shortcoming with precedent — the same substitution is already
+ratified for `log-subscriber.ts silenced? -> call` — and it is baselined that way
+in `scripts/api-compare/call-mismatches-exclude/activesupport/subscriber.json`.
+The story is to rule on it ONCE for the cluster rather than leaving two rows
+each carrying their own local argument: either make trails' Notifications accept
+an object with a `call` method (which is what Ruby's contract actually is, and
+would converge both rows), or ratify the substitution deliberately at both call
+sites.
 
 ## Acceptance criteria
 
-- [ ] `set_event_levels` calls `transform_keys`, by whichever of the two routes
-      above is the faithful one.
-- [ ] The Proc substitution in `add_event_subscriber` is either converged or
-      ratified once, at the call site, for the whole cluster.
-- [ ] Both baseline rows are deleted and the shard marks tightened.
+- [ ] One ruling covering both `subscriber.ts add_event_subscriber -> subscribe`
+      and `log-subscriber.ts silenced? -> call`.
+- [ ] If Notifications grows the object-call contract, both baseline rows are
+      deleted and the shard marks tightened.
