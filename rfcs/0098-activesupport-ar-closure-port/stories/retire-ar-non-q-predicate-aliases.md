@@ -1,6 +1,6 @@
 ---
 title: "Retire the non-Q duplicate aliases of the AR Q-spelled predicates (isConnected, isReadonlyAttribute)"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 6819
 claim: "2026-08-21T13:50:33Z"
 assignee: "retire-collection-proxy-append-bang-and-wire-inverse-target"
 blocked-by: null
