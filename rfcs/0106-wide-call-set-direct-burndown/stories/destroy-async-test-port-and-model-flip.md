@@ -1,7 +1,7 @@
 ---
 title: "Port destroy_association_async_test.rb and flip the canonical models to dependent: :destroy_async"
 status: blocked
-updated: 2026-08-20
+updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Both halves are blocked on unlanded work. (1) The :destroy_async arm the story presumes has NOT merged: it is open in PR #6762 (branch wave-4c-ar-core-residue-core-find-by-9656), which adds the destroyAsync case to BelongsToAssociation#handleDependency / HasManyAssociation#handleDependency / HasOneAssociation#delete plus destroy-async-dependent-arm.trails.test.ts. On origin/main, Association#enqueueDestroyAssociation (associations/association.ts:1061) has no callers, so flipping book-destroy-async.ts / essay-destroy-async.ts to dependent: 'destroyAsync' today would silently route has_many through the else (delete_all) arm and belongs_to/has_one through no arm at all. Re-ready once #6762 merges. (2) destroy_association_async_test.rb needs ActiveJob::TestHelper (assert_enqueued_jobs, perform_enqueued_jobs, assert_enqueued_with, assert_no_enqueued_jobs) and an ActiveJob enqueue/perform runtime to execute ActiveRecord::DestroyAssociationAsyncJob; trails has no activejob package at all (packages/ has none), only Base.destroyAssociationAsyncJob config and _afterCommitJobs payload parking. Filed as its own blocker story: port-activejob-test-helper-for-destroy-association-async under 0106."
+blocked-by: "Half (1) is UNBLOCKED as of 2026-08-20: PR #6762 (the destroy_async dependent arm) merged, so the canonical model flip to dependent: 'destroyAsync' is now safe. Half (2) still blocks the story as written: destroy_association_async_test.rb needs ActiveJob::TestHelper (assert_enqueued_jobs, perform_enqueued_jobs, assert_enqueued_with, assert_no_enqueued_jobs) and an enqueue/perform runtime, and trails has no activejob package — tracked by port-activejob-test-helper-for-destroy-association-async, itself blocked pending a maintainer-scoped activejob RFC. If the model flip is wanted sooner, split it out as its own story; do not un-block this one without the test half."
 closed-reason: null
 ---
 
