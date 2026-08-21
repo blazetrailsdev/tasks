@@ -1,6 +1,6 @@
 ---
 title: "The ID_ATTRIBUTE_METHODS readers are methods where the ratified rule makes them properties"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T14:50:39Z"
+assignee: "add-leading-underscore-call-candidate-to-conventions"
 blocked-by: null
 closed-reason: null
 ---
