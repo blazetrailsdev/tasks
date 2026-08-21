@@ -60,5 +60,5 @@ Check `parity:api` before and after: `composite_primary_key.rb` currently scores
       `composite_primary_key?` / `super` shape.
 - [ ] `primary-key.ts` readers carry only the scalar arm.
 - [ ] `parity:api` AR-closure rollup gains; `parity:api:extra --package
-  activerecord` does not gain names.
+activerecord` does not gain names.
 - [ ] `primary-keys.test.ts` and the composite-PK suites pass on all three adapters.

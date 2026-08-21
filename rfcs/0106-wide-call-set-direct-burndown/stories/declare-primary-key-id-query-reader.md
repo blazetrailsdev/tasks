@@ -65,4 +65,4 @@ drop the workaround comment.
       arms, as a property.
 - [ ] `primary-keys.test.ts`'s `id?` case asserts through the real reader.
 - [ ] `parity:api` AR-closure rollup gains; `parity:api:extra --package
-  activerecord` does not gain names.
+activerecord` does not gain names.
