@@ -1,6 +1,6 @@
 ---
 title: "Retire the composite-PK id deferral from the Base constructor"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
