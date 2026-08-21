@@ -1,5 +1,5 @@
 ---
-title: "remove-pool-config-adapter-factory"
+title: "Remove the PoolConfig adapterFactory field"
 status: ready
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 180
 priority: null
 pr: null
 claim: null

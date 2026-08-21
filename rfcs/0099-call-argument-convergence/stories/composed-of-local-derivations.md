@@ -1,5 +1,5 @@
 ---
-title: "composed-of-local-derivations"
+title: "Port composed_of's local derivations and reader/writer argument lists"
 status: ready
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
