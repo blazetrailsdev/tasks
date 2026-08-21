@@ -1,6 +1,6 @@
 ---
 title: "converge-strict-loading-violation-message-klass"
-status: ready
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6825
 claim: null
 assignee: null
 blocked-by: null

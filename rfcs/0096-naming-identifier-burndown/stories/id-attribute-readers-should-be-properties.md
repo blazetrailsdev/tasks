@@ -1,6 +1,6 @@
 ---
 title: "The ID_ATTRIBUTE_METHODS readers are methods where the ratified rule makes them properties"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "converge-habtm-through-model-lazy-table-name"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6827
+pr: 6825
 claim: "2026-08-21T16:20:37Z"
 assignee: "converge-habtm-through-model-lazy-table-name"
 blocked-by: null

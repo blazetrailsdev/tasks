@@ -1,6 +1,6 @@
 ---
 title: "Widen TimeWithZone's constructor onto Rails' four-argument shape and port its helpers"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
