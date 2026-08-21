@@ -1,6 +1,6 @@
 ---
 title: "Sweep free-form comments out of activerecord (slice 1: relation/)"
-status: draft
+status: claimed
 updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T22:32:56Z"
+assignee: "strip-freeform-comments-activerecord"
 ---
 
 ## Context
