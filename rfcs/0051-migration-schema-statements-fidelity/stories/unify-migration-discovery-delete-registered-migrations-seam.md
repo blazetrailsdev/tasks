@@ -64,3 +64,34 @@ reach `MigrationContext` at all.
 
 Hard rules: no `node:*` imports, no `process.*`, async fs only, no new runtime
 deps, the LOC ceiling, single PR from main.
+
+## Progress (2026-08-21)
+
+The **discovery half** landed: `packages/trailties/src/migration-loader.ts` and
+its test are deleted, its two extra filename spellings (the pre-1.12c hyphen
+alias, and the `.ts`-over-`.js` / underscore-over-hyphen dedupe) moved into
+`MigrationContext#migrationFiles` / `#parseMigrationFilename` where they are
+documented on `migrationFiles`, and every caller — trailties `db.ts`,
+`db.test.ts`, activerecord-cli `db-helpers.ts` — now discovers through
+`MigrationContext#migrations`. The four spelling cases moved to
+`packages/activerecord/src/migration-context.trails.test.ts` verbatim, and
+`db.test.ts`'s anonymous `MigrationContext` subclass is gone with them.
+
+Also already true before this story was written, so its ACs need no work:
+`MigrationContext`'s constructor is Rails' three-argument one
+(`migration.rb:1214`) — the `registeredMigrations` fourth argument and its
+DEVIATION JSDoc are gone, `#migrations` has one source, and there is no
+registered-list test to delete.
+
+**What remains** is AC2 alone: `DatabaseTasks.registerMigrations` /
+`_migrationsFor` / `_migrationsByConfig` (`tasks/database-tasks.ts:316-354`)
+and the anonymous `MigrationContext` subclass in `_migrationContextFor`
+(`database-tasks.ts:361-380`). Removing it means the AR tests that register
+in-memory `MigrationProxy` objects with closure side effects
+(`tasks/database-tasks-rollback.trails.test.ts`,
+`tasks/database-tasks-migrate-all-metadata.trails.test.ts`,
+`tasks/database-tasks.test.ts:982-1218`, plus
+`activerecord-cli/src/__e2e__/helpers.ts`) have to move onto real migration
+files under a per-config `migrationsPaths`, which did not fit the PR ceiling
+alongside the discovery half. The seam is now a pure transport for an already
+unified list, so nothing else blocks it.
