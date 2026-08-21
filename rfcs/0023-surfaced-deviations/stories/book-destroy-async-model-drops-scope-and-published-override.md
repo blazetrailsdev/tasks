@@ -63,9 +63,13 @@ both:
   generation with no override.
 
 The `dependent:` values are deliberately left alone here — flipping those to
-`"destroyAsync"` is `destroy-async-test-port-and-model-flip`'s job and is
-blocked; this story is only the scope and the override, which are correct to
-add regardless of which `dependent:` arm the models end up on.
+`"destroyAsync"` is `port-destroy-association-async-test-and-flip-models`'s job
+(the ActiveJob-dependent ActiveRecord work RFC, tasks PR #75) and is blocked on
+trails having ActiveJob; this story is only the scope and the override, which
+are correct to add regardless of which `dependent:` arm the models end up on.
+
+(Repointed 2026-08-21: this previously named `destroy-async-test-port-and-model-flip`
+under RFC 0106, closed on 2026-08-21 when ActiveJob was descoped.)
 
 ## Converged shape
 
