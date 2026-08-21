@@ -1,7 +1,7 @@
 ---
 title: "Converge dependent: destroy_async — the arms and the after_commit drain are both missing"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-08-21
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by story port-after-commit-jobs-callback in the ActiveJob-dependent ActiveRecord work RFC (tasks PR #75). Two of this story's three parts already LANDED in trails #6762 (merged 2026-08-20) — the three dependent: :destroy_async arms on BelongsTo/HasMany/HasOne, and real callers for enqueueDestroyAssociation — so its opening measurement ('definition only — ZERO callers') is stale. Only the after_commit drain survives, and that is the successor story, which cannot be scheduled until trails has ActiveJob's perform_later."
 ---
 
 # Converge `dependent: :destroy_async` — the arms and the drain are both missing
