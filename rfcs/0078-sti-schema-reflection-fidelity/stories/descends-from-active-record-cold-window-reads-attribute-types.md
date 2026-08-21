@@ -39,6 +39,22 @@ be closed from the reader:
   `define_attribute_methods` (`attribute_methods.rb:104-125`) builds no relation.
   The trails-only re-entry is the defect, and it lives in the load path.
 
+Two fixes were attempted inside trails#6805 and both failed, which is what
+scopes this story to the load path rather than the reader:
+
+1. Calling `columnsHash()` directly — the CI overflow above.
+2. Adding a re-entrancy guard to `loadSchema` (`model-schema.ts`) so the nested
+   call bails, then calling `columnsHash()` unconditionally. The recursion moved
+   rather than stopped: with a per-class guard the overflow reappeared in
+   `loadSchemaBangAnchor` → `tableName` → `resolveTableName`, and with a global
+   depth counter it reappeared in `underscore`/`resolveTableName` with the
+   reader no longer on the cycle at all. A per-class early return also broke
+   `columnsHash()` memo identity (`base.trails.test.ts:348`, "an STI subclass's
+   own ignoredColumns memoizes per class and reloads with the base"). The
+   re-entrancy is therefore not a single edge to guard — the load path calls
+   back into itself through table-name resolution as well — and untangling it is
+   this story's actual work.
+
 Measured 2026-08-21: a cold `columnsHash()` on a concrete model whose only `type`
 is `attribute("type", "string", { virtual: true })` returns `[]` — so once the
 re-entry is gone the reader can call `columnsHash()` unconditionally and the
@@ -57,6 +73,9 @@ at the call site.
       the load path grows the guard Rails does not need).
 - [ ] `isDescendsFromActiveRecord` calls `columnsHash()` unconditionally, and the
       `@missingRailsCall columns_hash` tag on it is deleted.
-- [ ] A regression test covers a concrete, unreflected model whose only `type` is
-      a virtual declared attribute: it must not be treated as an STI subclass.
-      The test must fail on the baseline.
+- [ ] A regression test covers a concrete, **unreflected** model whose only
+      `type` is a virtual declared attribute: it must not be treated as an STI
+      subclass. The test must fail on the baseline. The reflected half of that
+      case already ships in trails#6805 as
+      `inheritance.trails.test.ts` → "a virtual type attribute is not an
+      inheritance column"; this story adds the cold twin.
