@@ -1,6 +1,6 @@
 ---
 title: "Converge Model#initInternals / #initializeDup onto a real mixin super chain"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
