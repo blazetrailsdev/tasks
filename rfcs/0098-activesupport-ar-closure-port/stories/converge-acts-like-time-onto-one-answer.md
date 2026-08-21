@@ -1,6 +1,6 @@
 ---
 title: "Answer acts_like?(:time) once, for the Temporal receivers that stand in for Ruby Time"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 6840
 claim: "2026-08-21T21:20:33Z"
 assignee: "port-relation-create-for-build-scope"
 blocked-by: null
