@@ -5,7 +5,8 @@ updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: ["activemodel"]
-deps: []
+deps:
+  - api-compare-bodyless-declaration-outranks-real-body
 deps-rfc: []
 est-loc: 420
 priority: null
