@@ -1,6 +1,6 @@
 ---
 title: "Require a permanence claim on @missingRailsCall reasons"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T21:20:33Z"
+assignee: "port-relation-create-for-build-scope"
 blocked-by: null
 closed-reason: null
 ---
