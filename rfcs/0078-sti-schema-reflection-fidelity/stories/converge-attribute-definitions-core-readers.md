@@ -99,20 +99,23 @@ attribute methods, encryption, enum/provenance) as the inventory dictates.
 
 ## Progress
 
-**Tranche 2 (encryption cluster) — PR #6806.** Scope item 1's `encryption/*`
-half, plus the `columnsHash` re-entrancy that blocked it:
+**Tranche 2 (encryption cluster) — PR #6806.** Rebased after PRs #6803, #6804
+and #6805 landed and independently converged `registerEncryptedType`,
+`encrypt_attribute`'s "immediate path" branch, the decorator's idempotence
+guard, `getAttributeType`, and most of the encryption test mocks. What #6806
+carries on top:
 
-- `encrypt_attribute` / `validate_column_size` read `columns_hash`
+- `encrypt_attribute`'s decorator and `validate_column_size` read `columns_hash`
   (`encryptable_record.rb:91,138-142`); `columnDefaultFor`,
-  `cachedColumnDefaultFor` and the `NOT_CACHED` schema-cache peek are deleted.
-- `registerEncryptedType` and `encrypt_attribute`'s invented "immediate path"
-  branch are deleted.
-- `getAttributeType`, `isEncryptedAttribute` and the test-helper `ciphertextFor`
-  resolve through `typeForAttribute`.
+  `cachedColumnDefaultFor` and the `NOT_CACHED` schema-cache peek are deleted,
+  as is the already-registered-LengthValidator scan. `encrypts` no longer runs
+  the length validation eagerly — that is `load_schema!`'s (`:126-130`).
 - `columnsHash` is guarded on its own memo — `load_schema unless @columns_hash`
   (`model_schema.rb:428`) — which is what lets a `columns_hash` read from inside
-  `load_schema!` resolve instead of re-entering the load.
-- Three call-mismatch baseline rows converged and were deleted.
+  `load_schema!` resolve instead of re-entering the load. Without it the two
+  reads above recurse; this is why the deviation existed.
+- `isEncryptedAttribute` drops its `_attributeDefinitions` arm.
+- Three call-mismatch baseline rows converged and were deleted (6 → 3).
 
 **Still open** (the story's own split, minus the cluster above): the
 schema/columns readers (`model-schema.ts`, `base.ts`, `attributes.ts`,
