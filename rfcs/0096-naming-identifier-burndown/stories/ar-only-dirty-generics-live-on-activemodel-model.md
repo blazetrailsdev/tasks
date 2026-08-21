@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord-only dirty generics off ActiveModel::Model onto Base"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T14:20:44Z"
+assignee: "retire-collection-proxy-raise-on-type-mismatch"
 blocked-by: null
 closed-reason: null
 ---

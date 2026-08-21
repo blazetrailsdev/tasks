@@ -1,6 +1,6 @@
 ---
 title: "Abstract classes: table_name inheritance and the load_schema! guard"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T14:20:44Z"
+assignee: "retire-collection-proxy-raise-on-type-mismatch"
 blocked-by: null
 closed-reason: null
 ---
