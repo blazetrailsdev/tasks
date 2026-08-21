@@ -1,6 +1,6 @@
 ---
 title: "Retire the proxy-materialization step in _wireInverseAssociation"
-status: ready
+status: draft
 updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
