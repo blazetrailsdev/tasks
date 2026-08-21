@@ -1,6 +1,6 @@
 ---
 title: "ensure_proper_type's membership guard has no Rails counterpart"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T11:40:28Z"
+assignee: "converge-activerecord-init-internals-and-initialize-dup-super-chain"
 blocked-by: null
 closed-reason: null
 ---
