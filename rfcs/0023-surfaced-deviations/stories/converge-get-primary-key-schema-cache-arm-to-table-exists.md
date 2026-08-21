@@ -79,7 +79,7 @@ residue-only scope.
       removed from `getPrimaryKey` in
       `packages/activerecord/src/attribute-methods/primary-key.ts`.
 - [ ] `ConnectionHandlingTest > common APIs don't permanently hold a connection
-  when permanent checkout is deprecated or disallowed` stays green — no
+when permanent checkout is deprecated or disallowed` stays green — no
       `leaseConnectionSync` on the `primary_key` read path.
 - [ ] `pnpm parity:api:calls` green with no new baseline row.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
