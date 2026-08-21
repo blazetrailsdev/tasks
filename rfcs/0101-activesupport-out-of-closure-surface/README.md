@@ -39,15 +39,23 @@ The three cache stories and two XmlMini stories moved here from RFC 0072 when
 0072 closed. Nothing else in the out-of-closure remainder is filed yet; new
 out-of-closure activesupport work belongs here rather than in 0098.
 
-**Correction (2026-08-21).** "XmlMini is out-of-closure" was too broad. Four
-members that route through XmlMini — `Hash#to_xml`, `Hash.from_xml`,
-`Hash.from_trusted_xml`, `Array#to_xml` — ARE inside the AR require-closure per
-`scripts/api-compare/ar-closure.ts`, so they and the XmlMini surface they reach
-(`instruct!` / `target!`, the builder indent width, and `XMLConverter`) were
-ported under RFC 0098 in trails#6818 rather than waiting on this RFC. What
-remains here is the rest of `xml_mini.rb`: the backend selection and parsing
-half, and NokogiriSAX's module-scope hash builder. See 0098's changelog entry
-of the same date for the boundary.
+**Correction (2026-08-21).** "XmlMini is out-of-closure" stays true of
+`xml_mini.rb` itself, but four members that route through it were scored against
+the AR-closure gap and have been ported under RFC 0098 (trails#6818) rather than
+left waiting on this postponed RFC: `Hash#to_xml`, `Hash.from_xml`,
+`Hash.from_trusted_xml`, `Array#to_xml`, plus the XmlMini surface they reach
+(`instruct!` / `target!`, the builder indent width, and `XMLConverter`).
+
+Only `Array#to_xml` is in the require-closure on its own
+(`activemodel/lib/active_model/errors.rb:3`); the three `Hash` members are
+scored in-closure by file attribution, because `parity:api` anchors
+`hash-utils.ts` on the in-closure `core_ext/array/extract_options.rb`. Neither
+`core_ext/hash/conversions.rb` nor `xml_mini.rb` appears in
+`output/ar-closure.json`. See 0098's changelog entry of the same date for the
+full walk and the boundary.
+
+What remains this RFC's: the rest of `xml_mini.rb` — backend selection and the
+parsing half — and NokogiriSAX's module-scope hash builder.
 
 Explicitly NOT in scope: any member inside the AR closure (that is RFC 0098), and
 a general "port all of activesupport" campaign — this RFC covers the two clusters

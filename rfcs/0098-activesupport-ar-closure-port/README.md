@@ -49,11 +49,29 @@ Direct AR/AM call-site evidence (grep of vendor AR/AM lib): `blank?/present?` 64
 resolves the contradiction between this RFC's measurement and RFC 0101's
 "XmlMini is out-of-closure" framing. **Option 1 — port the minimum XmlMini
 slice, inside 0098 — was chosen** (owner decision, backlog triage, recorded on
-the story). Option 3 (re-deriving the closure) was not taken: the four members
-really are reached by `scripts/api-compare/ar-closure.ts`'s transitive `require`
-walk from `activerecord/lib` + `activemodel/lib`, so editing the closure would
-have moved the denominator without a require-graph justification — which the
-story explicitly forbids.
+the story). **The require path, read off `ar-closure.ts`'s walk** (`output/ar-closure.json`,
+`files.activesupport`), and it does not say quite what the story assumed:
+
+- `core_ext/array/conversions.rb` **is** in the closure, reached in one hop from
+  `activemodel/lib/active_model/errors.rb:3`,
+  `require "active_support/core_ext/array/conversions"`. So `Array#to_xml` is
+  genuinely in-closure.
+- `core_ext/hash/conversions.rb` is **not** in the closure. Nothing under
+  `activerecord/lib` or `activemodel/lib` requires it, directly or transitively
+  — the only requirers anywhere are `core_ext/hash.rb` and
+  `core_ext/object/conversions.rb`, neither of which AR/AM pulls. The in-closure
+  `core_ext/hash/*` files are just `deep_merge`, `except`, `indifferent_access`,
+  `keys`, `reverse_merge`, `slice`.
+- `xml_mini.rb` itself is **not** in the closure either, consistent with RFC
+  0101's framing for the rest of it.
+
+The three `Hash` members nevertheless counted against the AR-closure gap because
+`parity:api` maps every Hash core_ext member onto `hash-utils.ts`, whose Ruby
+anchor is the in-closure `core_ext/array/extract_options.rb`. That is a
+file-attribution artifact of the compare, not a closure bug — which is exactly
+why **option 3 was not taken**: `ar-closure.ts` is not wrong, so editing it
+would have moved the denominator with no require-graph justification, the one
+thing the story forbids.
 
 Landed in trails#6818. The four members are `Hash#to_xml`, `Hash.from_xml`,
 `Hash.from_trusted_xml` (→ `hash-utils.ts`) and `Array#to_xml` (→

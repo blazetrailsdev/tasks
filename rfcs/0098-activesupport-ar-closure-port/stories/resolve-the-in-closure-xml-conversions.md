@@ -63,16 +63,21 @@ go up would invalidate every AR-closure figure this RFC is measured by.
 
 ## Acceptance criteria
 
-- [ ] The disposition above is chosen and recorded in RFC 0098's changelog,
-      with the require path that justifies it quoted from `ar-closure.ts`'s walk.
-- [ ] If option 1 or 2: the four members are ported and credited by
-      `pnpm parity:api`, and the XmlMini surface pulled in is listed explicitly.
-- [ ] If option 3: `ar-closure.ts` is corrected, the AR-closure denominator
-      moves, and the change is justified by the require graph — never by the
-      resulting percentage.
-- [ ] RFC 0101's scope statement is updated either way, so "XmlMini is
-      out-of-closure" and this measurement stop contradicting each other.
-- [ ] `pnpm parity:api:extra` clean; no new baseline rows.
+- [x] Option 1 chosen; recorded in RFC 0098's changelog (2026-08-21) with the
+      require path quoted from `ar-closure.ts`'s walk. That walk corrects the
+      Context above: only `core_ext/array/conversions.rb` is in the closure
+      (`activemodel/lib/active_model/errors.rb:3`);
+      `core_ext/hash/conversions.rb` and `xml_mini.rb` are not, and the three
+      `Hash` members score in-closure by file attribution through
+      `core_ext/array/extract_options.rb`. Option 3 is therefore wrong —
+      `ar-closure.ts` is accurate.
+- [x] The four members are ported and credited by `pnpm parity:api` (all three
+      Ruby files report matched N/N; AR closure 8917/8943 -> 8940/8948), and the
+      XmlMini surface pulled in is listed explicitly in 0098's changelog.
+- [x] N/A — option 3 not taken; `ar-closure.ts` is unchanged and correct.
+- [x] RFC 0101's scope statement carries a dated correction reconciling the two.
+- [x] `pnpm parity:api:extra` clean (0 novel names added); both call ratchets
+      unchanged, no new baseline rows.
 
 ## Decision (2026-08-21, backlog triage)
 
