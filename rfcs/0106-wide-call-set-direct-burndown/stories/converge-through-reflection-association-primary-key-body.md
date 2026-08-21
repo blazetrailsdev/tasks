@@ -1,6 +1,6 @@
 ---
 title: "converge-through-reflection-association-primary-key-body"
-status: blocked
+status: ready
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6832
-claim: "2026-08-21T19:50:35Z"
-assignee: "converge-through-reflection-association-primary-key-body"
-blocked-by: "Depends on unmerged PR #6832: the story's premise (associationPrimaryKeyFor(klass) and the JSDoc deviation note it asks to remove) exists only on that branch, and it touches the same files (reflection.ts, has-many-through-association.ts, collection-association.ts, has-many-through-associations.test.ts). Re-ready once #6832 merges."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
