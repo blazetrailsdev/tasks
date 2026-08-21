@@ -1,7 +1,7 @@
 ---
 title: "Derive the delegate-to-scope list from the mixin objects' keys, not two hand-transcribed arrays"
-status: in-progress
-updated: 2026-08-19
+status: closed
+updated: 2026-08-21
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: 6748
-claim: "2026-08-19T17:26:50Z"
-assignee: "delegate-list-from-mixin-keys-bakeoff-sonnet"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Bakeoff superseded: the convergence landed as derive-collection-proxy-delegate-list-from-mixin-keys (PR #6756, merged); this variant's PR #6748 was closed unmerged."
 ---
 
 ## Context
