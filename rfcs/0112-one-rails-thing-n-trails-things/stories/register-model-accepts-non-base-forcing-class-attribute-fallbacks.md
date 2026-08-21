@@ -1,6 +1,6 @@
 ---
 title: "registerModel accepts non-Base stand-ins, forcing every ported class_attribute reader to re-supply Rails' default"
-status: in-progress
+status: done
 updated: 2026-08-21
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
