@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-definitions-activerecord-owners"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0078-sti-schema-reflection-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T09:10:24Z"
+assignee: "converge-attribute-definitions-activerecord-owners"
 blocked-by: null
 closed-reason: null
 ---
