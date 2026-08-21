@@ -1,6 +1,6 @@
 ---
 title: "Report @missingRailsArgs / @missingRailsCall suppressions grouped by permanence claim"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T19:20:36Z"
+assignee: "converge-enumerable-min-receiver-call-shape"
 blocked-by: null
 closed-reason: null
 ---

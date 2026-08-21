@@ -1,6 +1,6 @@
 ---
 title: "Converge Ruby's receiver-form Enumerable#min against JS Math.min(...values)"
-status: ready
+status: claimed
 updated: 2026-08-21
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-21T19:20:36Z"
+assignee: "converge-enumerable-min-receiver-call-shape"
 blocked-by: null
 closed-reason: null
 ---
