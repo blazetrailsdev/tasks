@@ -1,6 +1,6 @@
 ---
 title: "Port composed_of's local derivations and reader/writer argument lists"
-status: claimed
+status: in-progress
 updated: 2026-08-21
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 6828
 claim: "2026-08-21T16:50:31Z"
 assignee: "retire-the-proxy-materialization-step-in-wire-inverse-association"
 blocked-by: null
