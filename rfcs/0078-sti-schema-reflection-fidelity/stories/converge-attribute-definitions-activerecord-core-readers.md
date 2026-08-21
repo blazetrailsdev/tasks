@@ -58,7 +58,17 @@ is converged separately by trails#6800.
       `_default_attributes` / `attribute_types` (or `columnsHash` where the
       reader genuinely wants column metadata — `descends_from_active_record?`
       is that case: `inheritance.rb:88` asks `columns_hash.include?`, so a
-      declared-but-virtual `type` must not read as an STI subclass).
+      declared-but-virtual `type` must not read as an STI subclass), **for a
+      model whose schema has reflected**, with a regression test that fails on
+      the baseline.
+- [ ] The unreflected window of `descends_from_active_record?` is registered as
+      [[descends-from-active-record-cold-window-reads-attribute-types]], not
+      silently left. It is out of scope here because no change to the reader
+      closes it: `columnsHash()` there re-enters `load_schema` from inside it,
+      which overflowed the stack on all four adapter lanes, and guarding the
+      re-entry only moved the recursion into table-name resolution (both
+      attempts measured on trails#6805 — see that story). Closing it is work on
+      the load path, not on this reader.
 - [ ] The owner sites are registered as
       [[converge-attribute-definitions-activerecord-owners]], not silently left.
 - [ ] `pnpm parity:api:calls` / `:args` green with no new baseline rows.
