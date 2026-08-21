@@ -1,7 +1,7 @@
 ---
 title: "Converge test-model alias_attribute keys to Rails' snake_case spelling"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-08-21
 rfc: "0096-naming-identifier-burndown"
 cluster: null
 packages: []
