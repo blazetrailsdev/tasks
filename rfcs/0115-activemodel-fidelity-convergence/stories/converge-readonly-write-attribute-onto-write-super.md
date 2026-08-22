@@ -1,7 +1,7 @@
 ---
 title: "Converge HasReadonlyAttributes#write_attribute onto Write#write_attribute via super"
-status: ready
-updated: 2026-08-21
+status: claimed
+updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T01:20:38Z"
+assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
 closed-reason: null
 ---

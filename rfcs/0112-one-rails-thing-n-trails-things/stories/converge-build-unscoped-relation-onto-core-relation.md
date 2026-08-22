@@ -1,6 +1,6 @@
 ---
 title: "Base._buildUnscopedRelation is a trails seat for Rails' relation()"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T01:20:38Z"
+assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
 closed-reason: null
 ---

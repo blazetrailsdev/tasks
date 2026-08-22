@@ -1,6 +1,6 @@
 ---
 title: "A comma-separated @missingRailsCall tag parses as nothing at all"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0099-call-argument-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T01:20:38Z"
+assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
 closed-reason: null
 ---
