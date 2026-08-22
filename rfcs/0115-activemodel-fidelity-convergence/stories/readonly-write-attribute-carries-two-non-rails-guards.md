@@ -1,6 +1,6 @@
 ---
 title: "HasReadonlyAttributes#write_attribute carries a frozen guard and a raise flag Rails does not"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
