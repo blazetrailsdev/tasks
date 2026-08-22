@@ -1,6 +1,6 @@
 ---
 title: "Map Arel::Math operator methods to their TS spellings in conventions.ts"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T12:20:33Z"
+assignee: "arel-operator-spellings-in-conventions"
 blocked-by: null
 closed-reason: null
 ---

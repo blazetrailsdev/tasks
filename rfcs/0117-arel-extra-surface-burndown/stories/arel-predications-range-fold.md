@@ -1,6 +1,6 @@
 ---
 title: "Fold predications-range.ts back into predications.ts and delete it"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T12:20:33Z"
+assignee: "arel-operator-spellings-in-conventions"
 blocked-by: null
 closed-reason: null
 ---
