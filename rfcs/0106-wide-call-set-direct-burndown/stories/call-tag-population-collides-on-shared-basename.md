@@ -1,6 +1,6 @@
 ---
 title: "call-tag-population-collides-on-shared-basename"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6871
 claim: "2026-08-22T18:35:23Z"
 assignee: "call-tag-population-collides-on-shared-basename"
 blocked-by: null
