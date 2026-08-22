@@ -1,6 +1,6 @@
 ---
 title: "arel-to-sql-compile-unification"
-status: claimed
+status: ready
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-22T12:50:36Z"
-assignee: "arel-to-sql-compile-unification"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
