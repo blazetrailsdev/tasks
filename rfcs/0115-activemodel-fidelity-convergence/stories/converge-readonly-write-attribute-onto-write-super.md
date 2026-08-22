@@ -1,6 +1,6 @@
 ---
 title: "Converge HasReadonlyAttributes#write_attribute onto Write#write_attribute via super"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
