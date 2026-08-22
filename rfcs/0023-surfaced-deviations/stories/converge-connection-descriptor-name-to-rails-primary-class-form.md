@@ -100,3 +100,32 @@ spelling is decided — as in Rails.
       [[converge-preventing-writes-name-compare-drop-primary-class-promotion]].
 - [ ] Connection-handling, sharding, prevent-writes and database-selector suites
       green on sqlite, PostgreSQL and MySQL. No test names change.
+- [ ] `multi_db_migrator_test.rb` reports 0 assertion-value mismatches in
+      `pnpm parity:test -- --assertions --package activerecord`, and
+      `scripts/test-compare/assertion-mismatch-mark.json` is lowered
+      accordingly (activerecord value is at 38).
+
+## Also blocks (added on PR #6847)
+
+This is now the last assertion-VALUE row in `multi_db_migrator_test.rb`, so the
+RFC 0105 assertion-parity campaign is blocked on it too:
+
+```text
+multi_db_migrator_test.rb › schema migration is different for different connections
+  equal rails [s:ARUnit2Model, s:ActiveRecord::Base]
+    vs trails [s:ARUnit2Model, s:Base]
+```
+
+Rails asserts the literal at
+`vendor/rails/activerecord/test/cases/multi_db_migrator_test.rb:74-75`:
+
+```ruby
+assert_equal "ActiveRecord::Base", @pool_a.pool_config.connection_descriptor.name
+assert_equal "ARUnit2Model", @pool_b.pool_config.connection_descriptor.name
+```
+
+The trails port at `packages/activerecord/src/multi-db-migrator.test.ts:116-117`
+asserts `"Base"` for the primary owner. That expectation is _correct for the
+current implementation_ and must NOT be "fixed" in the test — it converges only
+when `ConnectionDescriptor#name` starts answering the Rails primary-class form,
+i.e. by this story. Left as-is deliberately on #6847.
