@@ -1,7 +1,7 @@
 ---
 title: "Move the ActiveRecord attribute read/write surface out of activemodel/model.ts"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel", "activerecord"]
