@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope#eval_scope omits Rails' || relation fallback"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
