@@ -1,5 +1,5 @@
 ---
-rfc: "0000-arel-extra-surface-burndown"
+rfc: "0117-arel-extra-surface-burndown"
 title: "arel extra TS surface burndown to zero"
 status: active
 created: 2026-08-22
