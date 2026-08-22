@@ -1,6 +1,6 @@
 ---
 title: "filter_attributes pretty_print test renders through inspect(), not the ported PrettyPrinter"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null

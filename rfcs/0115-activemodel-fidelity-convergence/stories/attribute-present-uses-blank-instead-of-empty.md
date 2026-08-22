@@ -1,6 +1,6 @@
 ---
 title: "attribute_present? must use empty?, not ActiveSupport blank?"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
