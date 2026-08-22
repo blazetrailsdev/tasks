@@ -28,16 +28,29 @@ becomes a story, not a better comment):
 > WHERE clause.
 
 Rails switches an `includes` to an eager JOIN whenever the relation references
-an included table — `references_eager_loaded_tables?` /
-`eager_loading?` in
-`vendor/rails/activerecord/lib/active_record/relation.rb` (see
-`activerecord/lib/active_record/relation/finder_methods.rb` `construct_join_dependency`),
-so `Pet.includes(:toys).where(toys: { name: "Bone" }).update_all(...)` compiles
+an included table, and `update_all` is one of the call sites that acts on that
+decision:
+
+- `activerecord/lib/active_record/relation.rb:1238` — `eager_loading?`:
+  `includes_values.any? && (joined_includes_values.any? ||
+references_eager_loaded_tables?)`.
+- `activerecord/lib/active_record/relation.rb:1474` —
+  `references_eager_loaded_tables?`, which is what makes a `where` naming the
+  included table (via `references_values`) flip the relation to eager loading.
+- `activerecord/lib/active_record/relation.rb:605` — `update_all` branches on
+  it: `arel = eager_loading? ? apply_join_dependency.arel : build_arel(c)`.
+- `activerecord/lib/active_record/relation/finder_methods.rb:457` —
+  `apply_join_dependency`, which constructs the `Arel::Nodes::OuterJoin`
+  JoinDependency and `joins!`es it after `except(:includes, :eager_load,
+:preload)`.
+
+So `Pet.includes(:toys).where(toys: { name: "Bone" }).update_all(...)` compiles
 one joined statement. trails' `includes` runs a separate preload SELECT, so the
 `toys.name` predicate is not available to the `UPDATE`.
 
 trails: `packages/activerecord/src/relation/update-all.test.ts:137`
-(`it("update all with includes")`).
+(`it("update all with includes")`); the strategy decision would live in
+`packages/activerecord/src/relation.ts` (`updateAll`, relation.ts:1273).
 
 ## Acceptance criteria
 
