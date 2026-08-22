@@ -1,7 +1,7 @@
 ---
 title: "assertion parity tail: root files, batch 6b"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages:
