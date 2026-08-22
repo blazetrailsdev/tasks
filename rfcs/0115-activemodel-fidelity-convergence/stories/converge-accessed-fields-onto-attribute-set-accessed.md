@@ -1,7 +1,7 @@
 ---
 title: "Converge accessed_fields onto AttributeSet#accessed and delete _accessedFields"
-status: ready
-updated: 2026-08-21
+status: claimed
+updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: ["activemodel", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:14:36Z"
+assignee: "call-set-migrator-skips-non-body-bearing-declarations"
 blocked-by: null
 closed-reason: null
 ---

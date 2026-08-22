@@ -1,6 +1,6 @@
 ---
 title: "call-set-migrator-skips-non-body-bearing-declarations"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:14:36Z"
+assignee: "call-set-migrator-skips-non-body-bearing-declarations"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "filter_attributes pretty_print test renders through inspect(), not the ported PrettyPrinter"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:14:36Z"
+assignee: "call-set-migrator-skips-non-body-bearing-declarations"
 blocked-by: null
 closed-reason: null
 ---
