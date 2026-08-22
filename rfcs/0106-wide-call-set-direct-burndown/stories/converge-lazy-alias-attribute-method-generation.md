@@ -97,12 +97,12 @@ it is this story. It additionally moves two behaviours that trails tests
 currently pin to declaration time:
 
 - `attribute-methods.trails.test.ts > aliasing an attribute onto an Active
-  Record method raises DangerousAttributeError` — in Rails that raise comes
+Record method raises DangerousAttributeError` — in Rails that raise comes
   from `instance_method_already_implemented?` during
   `define_attribute_methods` (`attribute_methods.rb:165-179`), not from
   `alias_attribute`.
 - `attribute-methods.trails.test.ts > an inherited generated attribute method
-  does not suppress the subclass's own generation`.
+does not suppress the subclass's own generation`.
 
 Both need re-basing onto the lazy timing as part of this work.
 
@@ -112,7 +112,7 @@ Both need re-basing onto the lazy timing as part of this work.
       clears `attributeMethodPatternsCache()`, mirroring
       `attribute_methods.rb:80-85`.
 - [ ] `aliasAttributeMethodDefinition` takes `(codeGenerator, pattern,
-      newName, oldName)` and routes through `defineAttributeMethodPattern`
+  newName, oldName)` and routes through `defineAttributeMethodPattern`
       with `override: true`, mirroring `attribute_methods.rb:87-96`.
 - [ ] No alias is generated twice (the `generates once when the schema load
-      drives generation first` invariant holds).
+  drives generation first` invariant holds).
