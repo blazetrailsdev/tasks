@@ -5,7 +5,8 @@ updated: 2026-08-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mysql-native-type-map-converges-onto-type-map
 deps-rfc: []
 est-loc: 30
 priority: null
