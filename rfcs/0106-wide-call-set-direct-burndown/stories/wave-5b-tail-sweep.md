@@ -57,7 +57,8 @@ Two activesupport tail rows are explicitly NOT in this list:
 
 ## Acceptance criteria
 
-- [ ] Each row above leaves as a `@missingRailsCall` tag at the call site carrying its existing reviewed reason, via `pnpm parity:api:build --package activesupport --file <f> --call <c>`. Never `--write`, never a reseed.
-- [ ] Emptied shards deleted, not committed as `[]`.
-- [ ] `pnpm parity:api:calls`, `pnpm parity:api:calls:args`, `pnpm parity:api:reasons`, `pnpm parity:api:detached` all green.
-- [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
+- [x] Each row above leaves as a `@missingRailsCall` tag at the call site carrying its existing reviewed reason, via `pnpm parity:api:build --package activesupport --file <f> --call <c>`. Never `--write`, never a reseed. — 14 of 15 in #6869. Each reason additionally gained the `PERMANENT` / `CONVERGEABLE` prefix `suppressedCallsIn` requires (`scripts/api-compare/missing-rails-call-tags.ts:219-231`); the two `CONVERGEABLE` ones name new stories rather than ratifying the deviation (`benchmarkable-should-mix-in-logger-reader`, `travel-to-should-stub-rails-time-receivers`).
+- [ ] `gem-version.ts` `new` — DEFERRED, not migrated. Minting its tag reds the ratchet with a STALE row under `actionpackversion`: `compare.ts` keys the tag population by relative `tsFile` alone (`compare.ts:2602`, `recordTaggedCalls` :2722) across a package AND its deps, and both packages ship a `gem-version.ts`. Row left baselined; tracked by `call-tag-population-collides-on-shared-basename`, which owns the migration.
+- [x] Emptied shards deleted, not committed as `[]`. — 12 shards deleted; `number-helper/rounding-helper.json` and `testing/time-helpers.json` keep their out-of-scope rows (`digit_count`, two `kind: "args"`).
+- [x] `pnpm parity:api:calls`, `pnpm parity:api:calls:args`, `pnpm parity:api:reasons`, `pnpm parity:api:detached` all green.
+- [x] SQLite, PostgreSQL and MySQL/MariaDB lanes green. — JSDoc-only diff, no method body touched; CI green on #6869.
