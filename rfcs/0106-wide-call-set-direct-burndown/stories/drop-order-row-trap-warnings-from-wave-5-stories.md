@@ -1,6 +1,6 @@
 ---
 title: "Drop the now-false order:-row migration warning from the six wave-5 follow-up stories"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T14:49:29Z"
+assignee: "retire-postgresql-with-binds-onto-postgresql-bind-block"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "retire-postgresql-with-binds-onto-postgresql-bind-block"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T14:49:29Z"
+assignee: "retire-postgresql-with-binds-onto-postgresql-bind-block"
 blocked-by: null
 closed-reason: null
 ---

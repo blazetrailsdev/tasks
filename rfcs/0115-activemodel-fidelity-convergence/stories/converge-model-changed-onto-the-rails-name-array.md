@@ -1,6 +1,6 @@
 ---
 title: "Model#changed returns a boolean where Rails returns the changed-attribute-name array"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T14:49:29Z"
+assignee: "retire-postgresql-with-binds-onto-postgresql-bind-block"
 blocked-by: null
 closed-reason: null
 ---
