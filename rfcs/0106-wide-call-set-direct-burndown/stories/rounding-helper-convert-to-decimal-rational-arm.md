@@ -1,6 +1,6 @@
 ---
 title: "rounding-helper convert_to_decimal drops the Rational arm and its digit_count call"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 6881
 claim: "2026-08-22T20:35:01Z"
 assignee: "parity-api-build-must-not-drop-harvested-tags"
 blocked-by: null
