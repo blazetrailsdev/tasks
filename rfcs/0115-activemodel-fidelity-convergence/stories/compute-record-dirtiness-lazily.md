@@ -1,13 +1,13 @@
 ---
-title: "compute-record-dirtiness-lazily"
-status: ready
+title: "Compute new-record dirtiness lazily and delete withoutMarkingRead"
+status: draft
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null

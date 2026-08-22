@@ -1,13 +1,13 @@
 ---
-title: "port-ruby-array-drop-for-chain-call-sites"
-status: ready
+title: "Port Ruby's Array#drop for the two reflection-chain call sites"
+status: draft
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
