@@ -1,6 +1,6 @@
 ---
 title: "Converge in_batches' ignored-order guard onto the arel reader"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
