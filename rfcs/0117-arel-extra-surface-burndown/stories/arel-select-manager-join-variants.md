@@ -1,6 +1,6 @@
 ---
 title: "Fold select-manager's join/union convenience methods into their Rails shapes"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
+pr: 6860
 claim: "2026-08-22T15:47:08Z"
 assignee: "converge-lazy-alias-attribute-method-generation"
 blocked-by: null
