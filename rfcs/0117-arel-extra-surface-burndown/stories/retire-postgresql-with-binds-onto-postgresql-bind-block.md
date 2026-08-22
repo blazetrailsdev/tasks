@@ -1,6 +1,6 @@
 ---
 title: "retire-postgresql-with-binds-onto-postgresql-bind-block"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6859
 claim: "2026-08-22T14:49:29Z"
 assignee: "retire-postgresql-with-binds-onto-postgresql-bind-block"
 blocked-by: null
