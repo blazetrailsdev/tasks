@@ -1,6 +1,6 @@
 ---
 title: "struct-members-not-extracted-as-ruby-methods"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6878
 claim: "2026-08-22T20:05:01Z"
 assignee: "struct-members-not-extracted-as-ruby-methods"
 blocked-by: null
