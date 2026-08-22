@@ -1,6 +1,6 @@
 ---
 title: "pnpm lint is red on main: redundant type assertion in postgresql-adapter.exec-query.test.ts"
-status: done
+status: in-progress
 updated: 2026-08-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 6844
+pr: 6852
 claim: "2026-08-22T01:20:38Z"
 assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
