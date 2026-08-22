@@ -1,6 +1,6 @@
 ---
 title: "Base.relation() takes a table argument Rails' relation does not"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
