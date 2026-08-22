@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#at scales nanoseconds itself where Rails delegates to Time.at"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
