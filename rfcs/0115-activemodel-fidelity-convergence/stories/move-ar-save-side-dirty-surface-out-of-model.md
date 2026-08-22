@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord save-side dirty surface out of activemodel/model.ts"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
+pr: 6858
 claim: "2026-08-22T14:02:53Z"
 assignee: "move-ar-save-side-dirty-surface-out-of-model"
 blocked-by: null
