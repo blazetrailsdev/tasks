@@ -1,6 +1,6 @@
 ---
 title: "Audit existing @missingRailsCall tags for PERMANENT claims that describe convergeable work"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:50:41Z"
+assignee: "api-build-order-row-tag-key-mismatch"
 blocked-by: null
 closed-reason: null
 ---
