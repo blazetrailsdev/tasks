@@ -1,6 +1,6 @@
 ---
 title: "Delete Arel::Nodes::CrossJoin — Rails has no such node"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6862
 claim: "2026-08-22T16:35:04Z"
 assignee: "wave-5b-head-sweep"
 blocked-by: null
