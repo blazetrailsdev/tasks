@@ -130,7 +130,7 @@ in #6838**, not here:
   clears `attribute_method_patterns_cache` (`:80-85`).
 - `alias_attribute_method_definition` routes through
   `define_attribute_method_pattern(pattern, old_name, owner:, as: new_name,
-  override: true)` (`:87-96`).
+override: true)` (`:87-96`).
 - The two trails tests that pinned the eager timing were re-based onto the lazy
   one.
 
