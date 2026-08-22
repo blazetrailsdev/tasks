@@ -1,5 +1,5 @@
 ---
-title: "AssociationScope#eval_scope omits Rails'  fallback"
+title: "AssociationScope#eval_scope omits Rails' || relation fallback"
 status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
