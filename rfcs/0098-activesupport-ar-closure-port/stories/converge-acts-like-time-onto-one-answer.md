@@ -1,7 +1,7 @@
 ---
 title: "Answer acts_like?(:time) once, for the Temporal receivers that stand in for Ruby Time"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
 packages: []

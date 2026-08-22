@@ -1,7 +1,7 @@
 ---
 title: "Require a permanence claim on @missingRailsCall reasons"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0099-call-argument-convergence"
 cluster: null
 packages: []
