@@ -1,6 +1,6 @@
 ---
 title: "fold-to-arel-into-the-arel-reader"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0107-relation-ts-decomposition"
 cluster: null
