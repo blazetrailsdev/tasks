@@ -1,6 +1,6 @@
 ---
 title: "Time carries no instant, so Time.at round-trips through the local wall clock"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
