@@ -1,6 +1,6 @@
 ---
 title: "restore_attribute! guards on the assignment map, so an in-place mutation is never restored"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
