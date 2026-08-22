@@ -1,6 +1,6 @@
 ---
 title: "Fold select-manager's join/union convenience methods into their Rails shapes"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
