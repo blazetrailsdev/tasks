@@ -1,6 +1,6 @@
 ---
 title: "CI's changed-files lint scope cannot see a cross-file type-driven lint break"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0061-ci-failures"
 cluster: null
