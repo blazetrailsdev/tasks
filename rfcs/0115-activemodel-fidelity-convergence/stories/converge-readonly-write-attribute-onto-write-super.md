@@ -1,13 +1,13 @@
 ---
-title: "converge-readonly-write-attribute-onto-write-super"
+title: "Converge HasReadonlyAttributes#write_attribute onto Write#write_attribute via super"
 status: ready
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

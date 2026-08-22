@@ -1,13 +1,13 @@
 ---
-title: "attribute-present-uses-blank-instead-of-empty"
+title: "attribute_present? must use empty?, not ActiveSupport blank?"
 status: ready
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null

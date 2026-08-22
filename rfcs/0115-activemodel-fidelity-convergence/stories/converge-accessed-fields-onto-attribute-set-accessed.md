@@ -1,13 +1,13 @@
 ---
-title: "converge-accessed-fields-onto-attribute-set-accessed"
+title: "Converge accessed_fields onto AttributeSet#accessed and delete _accessedFields"
 status: ready
 updated: 2026-08-21
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
-packages: []
+packages: ["activemodel", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
