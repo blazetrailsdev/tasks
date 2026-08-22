@@ -1,6 +1,6 @@
 ---
 title: "A comma-separated @missingRailsCall tag parses as nothing at all"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0099-call-argument-convergence"
 cluster: null
