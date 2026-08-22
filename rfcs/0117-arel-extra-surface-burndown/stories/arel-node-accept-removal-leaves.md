@@ -1,6 +1,6 @@
 ---
 title: "Delete invented per-node accept from the leaf Arel node classes"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 2
-pr: null
+pr: 6857
 claim: "2026-08-22T12:50:36Z"
 assignee: "arel-to-sql-compile-unification"
 blocked-by: null
