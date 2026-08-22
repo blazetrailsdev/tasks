@@ -52,8 +52,23 @@ builds a `FromUser` attribute whose `@value` is not yet computed, leaving
 `has_been_read?` false — which is why `attribute_methods_test.rb:1308`'s
 `assert_equal [], model.accessed_fields` holds after a `new`.
 
-So this story is really two: stop `_writeAttribute` from forcing the read, then
-delete `_accessedFields`.
+**Second blocker, measured:** moving the marker one level up — into
+`_readAttribute`, where the `fetchValue` call lives — so that every read path
+feeds it the way Rails does, reds
+`packages/activerecord/src/relations.test.ts > RelationTest > loading with one
+association`. That test ends in
+`expect(postWithLastComment.lastComment).toEqual(directLastComment)`, and
+`toEqual` walks own enumerable properties, so `_accessedFields` is part of
+structural equality: two records holding the same row but reached by different
+read paths stop comparing equal. Rails' counterpart
+(`relations_test.rb:751`, `assert_equal Post.find(1).last_comment,
+post.last_comment`) compares with `AR::Core#==`, which is `comparison_object.id
+== id` — ivars never enter it. So widening the marker needs the record
+comparison to stop being structural first, or `_accessedFields` to stop being an
+own enumerable field.
+
+So this story is really three: stop `_writeAttribute` from forcing the read,
+stop `_accessedFields` leaking into structural equality, then delete it.
 
 ## Acceptance criteria
 
