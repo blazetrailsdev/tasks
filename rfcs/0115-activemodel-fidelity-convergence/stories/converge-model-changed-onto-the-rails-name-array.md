@@ -1,6 +1,6 @@
 ---
 title: "Model#changed returns a boolean where Rails returns the changed-attribute-name array"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
