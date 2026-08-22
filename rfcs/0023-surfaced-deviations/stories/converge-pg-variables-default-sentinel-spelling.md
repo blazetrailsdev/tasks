@@ -1,5 +1,5 @@
 ---
-title: "converge-pg-variables-default-sentinel-spelling"
+title: 'Accept Rails'' ":default" sentinel spelling for PG session variables'
 status: draft
 updated: 2026-08-22
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
