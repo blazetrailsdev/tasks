@@ -61,6 +61,6 @@ whatever `Rational` seat that package settles on rather than inventing a second.
       `scripts/api-compare/call-mismatches-exclude/activesupport/number-helper/rounding-helper.json`
       (the shard is then empty and the file removed), not migrated to a tag and
       not reworded. If the row is the only one left, `pnpm parity:api:calls:tighten
-  activesupport/number-helper/rounding-helper.json` clears the resulting stale mark.
+activesupport/number-helper/rounding-helper.json` clears the resulting stale mark.
 - [ ] `pnpm parity:api:calls`, `parity:api:calls:args`, `parity:api:reasons`,
       `parity:api:detached` green.
