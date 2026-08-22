@@ -1,6 +1,6 @@
 ---
 title: "pnpm lint is red on main: redundant type assertion in postgresql-adapter.exec-query.test.ts"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0061-ci-failures"
 cluster: null
