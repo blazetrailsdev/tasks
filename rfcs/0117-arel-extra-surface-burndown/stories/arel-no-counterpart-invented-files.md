@@ -1,6 +1,6 @@
 ---
 title: "Decide and execute the disposition of arel's five trails-only files"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
