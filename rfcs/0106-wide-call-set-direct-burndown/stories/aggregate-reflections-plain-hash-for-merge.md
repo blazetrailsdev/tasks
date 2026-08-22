@@ -1,6 +1,6 @@
 ---
 title: "Port aggregate_reflections from a Map to a plain hash so add_aggregate_reflection can call merge"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
