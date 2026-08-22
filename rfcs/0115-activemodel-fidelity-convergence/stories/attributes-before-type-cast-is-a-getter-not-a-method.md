@@ -1,6 +1,6 @@
 ---
 title: "attributes_before_type_cast is a getter where Rails has a plain method"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
