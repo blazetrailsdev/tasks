@@ -1,6 +1,6 @@
 ---
 title: "fold-arel-table-ref-into-callers"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T16:49:57Z"
+assignee: "fold-arel-table-ref-into-callers"
 blocked-by: null
 closed-reason: null
 ---
