@@ -1,6 +1,6 @@
 ---
 title: "struct-members-not-extracted-as-ruby-methods"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
