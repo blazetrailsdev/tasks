@@ -8,6 +8,7 @@ owner: "@your-handle"
 packages:
   - "arel"
 clusters: []
+priority: 1
 ---
 
 ## Summary
