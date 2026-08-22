@@ -1,6 +1,6 @@
 ---
 title: "Converge HasReadonlyAttributes#write_attribute onto Write#write_attribute via super"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6852
 claim: "2026-08-22T01:20:38Z"
 assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
