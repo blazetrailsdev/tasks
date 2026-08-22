@@ -1,6 +1,6 @@
 ---
 title: "Port the three remaining Hash.new default-block sites to the settled Proxy idiom"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6870
 claim: "2026-08-22T18:19:59Z"
 assignee: "benchmarkable-should-mix-in-logger-reader"
 blocked-by: null
