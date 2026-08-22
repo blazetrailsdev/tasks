@@ -1,6 +1,6 @@
 ---
 title: "port-parts-to-time-behind-time-at"
-status: ready
+status: done
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6848
 claim: null
 assignee: null
 blocked-by: null
