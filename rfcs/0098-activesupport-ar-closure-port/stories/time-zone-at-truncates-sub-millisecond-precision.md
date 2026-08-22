@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#at truncates sub-millisecond precision Time.at preserves"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
