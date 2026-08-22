@@ -1,7 +1,7 @@
 ---
 title: "Sweep free-form comments out of activerecord (slice 1: relation/)"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
