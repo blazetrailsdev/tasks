@@ -99,5 +99,5 @@ actually produces. Do not change the test NAME.
       `inherited` reset at `activemodel/attribute_methods.rb:387-394`.
 - [ ] A subclass no longer re-generates an inherited alias.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activerecord` and `--package activemodel` show no new NOVEL surface.
+activerecord` and `--package activemodel` show no new NOVEL surface.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
