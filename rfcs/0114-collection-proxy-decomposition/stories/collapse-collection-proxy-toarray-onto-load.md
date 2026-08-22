@@ -1,11 +1,13 @@
 ---
 title: "collapse-collection-proxy-toarray-onto-load"
 status: blocked
-updated: 2026-08-20
+updated: 2026-08-22
 rfc: "0114-collection-proxy-decomposition"
 cluster: null
 packages: []
-deps: []
+deps:
+  - retire-collection-proxy-query-executor-flag
+  - hoist-mid-load-guard-to-doasyncfindtarget-callers
 deps-rfc: []
 est-loc: null
 priority: null
