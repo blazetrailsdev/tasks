@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope#_buildEntryScope branches where Rails always calls build_scope"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 6860
 claim: "2026-08-22T15:47:08Z"
 assignee: "converge-lazy-alias-attribute-method-generation"
 blocked-by: null
