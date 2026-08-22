@@ -1,6 +1,6 @@
 ---
 title: "Decide and execute the disposition of arel's five trails-only files"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T16:20:03Z"
+assignee: "module-ext-delegate-should-call-delegation-generate"
 blocked-by: null
 closed-reason: null
 ---

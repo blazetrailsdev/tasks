@@ -1,6 +1,6 @@
 ---
 title: "Reset aliases_by_attribute_name per subclass, mirroring Rails' inherited hook"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T16:20:03Z"
+assignee: "module-ext-delegate-should-call-delegation-generate"
 blocked-by: null
 closed-reason: null
 ---

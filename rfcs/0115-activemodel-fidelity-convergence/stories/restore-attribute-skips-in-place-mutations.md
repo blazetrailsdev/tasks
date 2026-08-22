@@ -1,6 +1,6 @@
 ---
 title: "restore_attribute! guards on the assignment map, so an in-place mutation is never restored"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T16:20:03Z"
+assignee: "module-ext-delegate-should-call-delegation-generate"
 blocked-by: null
 closed-reason: null
 ---
