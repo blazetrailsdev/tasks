@@ -68,3 +68,51 @@ Rails would be looking at.
       `pnpm parity:api:calls:tighten activerecord/attribute-methods.json`.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
+
+## Also blocked on this: `generate_alias_attribute_methods`' pattern loop
+
+Reviewer finding on PR #6838: `packages/activerecord/src/attribute-methods.ts`
+does not mirror `generate_alias_attribute_methods`
+(`attribute_methods.rb:80-85`) — it calls one custom descriptor helper instead
+of looping every `attribute_method_patterns` entry, and never clears
+`attribute_method_patterns_cache`.
+
+That cannot be fixed independently of the eager/lazy flip above. Porting the
+loop faithfully means routing each pattern through
+`define_attribute_method_pattern(pattern, old_name, owner:, as: new_name,
+override: true)` — which is what ActiveModel's own
+`aliasAttributeMethodDefinition` already does
+(`packages/activemodel/src/attribute-methods.ts:354-366`). Doing that in
+ActiveRecord generates every alias **twice**, because ActiveModel's EAGER
+`eagerlyGenerateAliasAttributeMethods` still runs at `alias_attribute` time:
+trails never assigns ActiveRecord's no-op override
+(`attribute-methods.ts:309`, Rails `attribute_methods.rb:76-78`) onto `Base`,
+so `alias_attribute` reaches ActiveModel's arm. Measured on
+`attribute-methods.trails.test.ts > generates once when the schema load drives
+generation first`: `id|id_value` is emitted by both
+`activemodel/attribute-methods.ts:340` and the ActiveRecord pass.
+
+Wiring the override (making AR aliases lazy, as Rails has them) is the fix, and
+it is this story. It additionally moves two behaviours that trails tests
+currently pin to declaration time:
+
+- `attribute-methods.trails.test.ts > aliasing an attribute onto an Active
+  Record method raises DangerousAttributeError` — in Rails that raise comes
+  from `instance_method_already_implemented?` during
+  `define_attribute_methods` (`attribute_methods.rb:165-179`), not from
+  `alias_attribute`.
+- `attribute-methods.trails.test.ts > an inherited generated attribute method
+  does not suppress the subclass's own generation`.
+
+Both need re-basing onto the lazy timing as part of this work.
+
+### Additional acceptance criteria
+
+- [ ] `generateAliasAttributeMethods` loops `attributeMethodPatterns` and
+      clears `attributeMethodPatternsCache()`, mirroring
+      `attribute_methods.rb:80-85`.
+- [ ] `aliasAttributeMethodDefinition` takes `(codeGenerator, pattern,
+      newName, oldName)` and routes through `defineAttributeMethodPattern`
+      with `override: true`, mirroring `attribute_methods.rb:87-96`.
+- [ ] No alias is generated twice (the `generates once when the schema load
+      drives generation first` invariant holds).
