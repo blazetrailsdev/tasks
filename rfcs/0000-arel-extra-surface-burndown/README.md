@@ -1,7 +1,7 @@
 ---
 rfc: "0000-arel-extra-surface-burndown"
 title: "arel extra TS surface burndown to zero"
-status: draft
+status: active
 created: 2026-08-22
 updated: 2026-08-22
 owner: "@your-handle"
