@@ -1,6 +1,6 @@
 ---
 title: "attributes_before_type_cast is a getter where Rails has a plain method"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 6852
 claim: "2026-08-22T01:20:38Z"
 assignee: "lint-red-on-main-unnecessary-type-assertion-pg-exec-query"
 blocked-by: null
