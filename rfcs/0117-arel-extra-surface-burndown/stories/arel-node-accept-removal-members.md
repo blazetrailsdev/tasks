@@ -1,6 +1,6 @@
 ---
 title: "Delete per-node accept from the remaining nodes and retire NodeVisitor"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["arel-node-accept-removal-leaves"]
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: null
+pr: 6861
 claim: "2026-08-22T16:05:06Z"
 assignee: "aggregate-reflections-plain-hash-for-merge"
 blocked-by: null
