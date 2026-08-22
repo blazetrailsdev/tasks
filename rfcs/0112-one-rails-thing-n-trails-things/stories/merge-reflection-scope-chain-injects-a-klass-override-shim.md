@@ -1,6 +1,6 @@
 ---
 title: "add_constraints' source_type chain entry needs an Object.create klass shim (association_scope.rb:131-156)"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
