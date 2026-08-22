@@ -1,6 +1,6 @@
 ---
 title: "Generate alias attributes from aliases_by_attribute_name, not the inverse attribute_aliases"
-status: ready
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6838
 claim: null
 assignee: null
 blocked-by: null
