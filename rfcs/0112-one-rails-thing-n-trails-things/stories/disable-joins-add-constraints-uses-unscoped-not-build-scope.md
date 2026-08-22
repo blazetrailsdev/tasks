@@ -1,6 +1,6 @@
 ---
 title: "DisableJoinsAssociationScope#add_constraints opens with klass.unscoped where Rails calls build_scope"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T16:35:04Z"
+assignee: "wave-5b-head-sweep"
 blocked-by: null
 closed-reason: null
 ---
