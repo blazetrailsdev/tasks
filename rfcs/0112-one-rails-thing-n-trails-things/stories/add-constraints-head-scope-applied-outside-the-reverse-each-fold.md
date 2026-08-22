@@ -1,6 +1,6 @@
 ---
 title: "add_constraints applies the chain head's scope outside the reverse_each fold (association_scope.rb:131-156)"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T20:35:01Z"
+assignee: "parity-api-build-must-not-drop-harvested-tags"
 blocked-by: null
 closed-reason: null
 ---
