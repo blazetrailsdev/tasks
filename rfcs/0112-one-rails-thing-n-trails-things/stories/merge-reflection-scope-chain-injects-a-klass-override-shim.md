@@ -1,6 +1,6 @@
 ---
 title: "add_constraints' source_type chain entry needs an Object.create klass shim (association_scope.rb:131-156)"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T18:35:23Z"
+assignee: "call-tag-population-collides-on-shared-basename"
 blocked-by: null
 closed-reason: null
 ---
