@@ -1,6 +1,6 @@
 ---
 title: "Delete per-node accept from the remaining nodes and retire NodeVisitor"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
