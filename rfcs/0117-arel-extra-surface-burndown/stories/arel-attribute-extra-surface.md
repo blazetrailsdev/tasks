@@ -1,6 +1,6 @@
 ---
 title: "Retire the extra surface on attributes/attribute.ts"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 130
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T19:48:21Z"
+assignee: "arel-attribute-extra-surface"
 blocked-by: null
 closed-reason: null
 ---
