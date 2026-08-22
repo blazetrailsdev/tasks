@@ -1,6 +1,6 @@
 ---
 title: "Relocate And/Or into nary.ts and retire the nodes/* novel tail"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["arel-node-accept-removal-members"]
 deps-rfc: []
 est-loc: 200
 priority: 9
-pr: null
+pr: 6867
 claim: "2026-08-22T17:05:00Z"
 assignee: "query-methods-order-only-call-inversions"
 blocked-by: null
