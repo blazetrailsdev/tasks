@@ -1,6 +1,6 @@
 ---
 title: "Time carries no instant, so Time.at round-trips through the local wall clock"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T17:05:00Z"
+assignee: "query-methods-order-only-call-inversions"
 blocked-by: null
 closed-reason: null
 ---
