@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope#eval_scope carries a trails-only klassOverride param and undefined guard (association_scope.rb:169-172)"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T17:50:03Z"
+assignee: "port-delegation-generate-module-and-reserved-receivers"
 blocked-by: null
 closed-reason: null
 ---
