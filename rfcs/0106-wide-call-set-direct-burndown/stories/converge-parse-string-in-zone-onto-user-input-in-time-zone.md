@@ -1,6 +1,6 @@
 ---
 title: "converge-parse-string-in-zone-onto-user-input-in-time-zone"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
