@@ -1,6 +1,6 @@
 ---
 title: "Port aggregate_reflections from a Map to a plain hash so add_aggregate_reflection can call merge"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 6861
 claim: "2026-08-22T16:05:06Z"
 assignee: "aggregate-reflections-plain-hash-for-merge"
 blocked-by: null
