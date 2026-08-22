@@ -1,6 +1,6 @@
 ---
 title: "query-methods-order-only-call-inversions"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6867
 claim: "2026-08-22T17:05:00Z"
 assignee: "query-methods-order-only-call-inversions"
 blocked-by: null
