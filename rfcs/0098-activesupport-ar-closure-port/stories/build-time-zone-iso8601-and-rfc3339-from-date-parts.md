@@ -1,6 +1,6 @@
 ---
 title: "Build TimeZone#iso8601 and #rfc3339 from Date._iso8601/_rfc3339 parts"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T12:50:36Z"
+assignee: "arel-to-sql-compile-unification"
 blocked-by: null
 closed-reason: null
 ---
