@@ -1,6 +1,6 @@
 ---
 title: "Build TimeZone#iso8601 and #rfc3339 from Date._iso8601/_rfc3339 parts"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0098-activesupport-ar-closure-port"
 cluster: null
