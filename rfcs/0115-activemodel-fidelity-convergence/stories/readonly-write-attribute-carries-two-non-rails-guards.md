@@ -1,6 +1,6 @@
 ---
 title: "HasReadonlyAttributes#write_attribute carries a frozen guard and a raise flag Rails does not"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:20:34Z"
+assignee: "ci-lint-scope-misses-cross-file-type-driven-breaks"
 blocked-by: null
 closed-reason: null
 ---

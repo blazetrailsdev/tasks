@@ -1,6 +1,6 @@
 ---
 title: "CI's changed-files lint scope cannot see a cross-file type-driven lint break"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T11:20:34Z"
+assignee: "ci-lint-scope-misses-cross-file-type-driven-breaks"
 blocked-by: null
 closed-reason: null
 ---
