@@ -46,11 +46,10 @@ The settled disposition procedure, applied per file:
 4. `pnpm parity:api:calls` and `pnpm parity:api:calls:args` must be green. A
    shard left with no rows is **deleted**, not committed as `[]`.
 
-Known trap found in wave-5: an `order:` flag is keyed on the **Ruby** name
-(`copy_table`) while `parity:api:build` writes the tag keyed on the camelCased
-declaration (`copyTable`), so a migrated `order:` row reads back as a STALE tag
-AND a NEW mismatch. Keep `order:` rows as baseline rows (with a reviewed
-reason) rather than migrating them, or fix the migrator's key.
+The `order:`-row migration trap wave-5 hit was fixed in PR #6855 —
+`applyCallTags` now applies a declaration's tags to every flag its pair raised,
+so an `order:` row migrates to a `@missingRailsCall` receipt like any other row.
+Do not skip one.
 
 Also note **54 rows repo-wide still carry the RFC 0047/0084 seed placeholder**
 (`Baseline (RFC 0084) …pending per-body control-flow convergence review`) and
