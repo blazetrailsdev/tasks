@@ -1,6 +1,6 @@
 ---
 title: "fold-to-arel-into-the-arel-reader"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0107-relation-ts-decomposition"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6865
 claim: "2026-08-22T17:19:56Z"
 assignee: "fold-to-arel-into-the-arel-reader"
 blocked-by: null
