@@ -1,6 +1,6 @@
 ---
 title: "travel-to-should-stub-rails-time-receivers"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6872
 claim: "2026-08-22T18:49:58Z"
 assignee: "travel-to-should-stub-rails-time-receivers"
 blocked-by: null
