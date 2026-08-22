@@ -67,4 +67,4 @@ story; delete that pointer when it lands.
       Rails consults it (`delegation.rb:58`).
 - [ ] The JSDoc pointer in `Delegation.generate` is removed, not reworded.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
-  activesupport` shows no new untagged surface.
+activesupport` shows no new untagged surface.
