@@ -1,6 +1,6 @@
 ---
 title: "Converge in_batches' ignored-order guard onto the arel reader"
-status: ready
+status: claimed
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-22T18:19:59Z"
+assignee: "benchmarkable-should-mix-in-logger-reader"
 blocked-by: null
 closed-reason: null
 ---
