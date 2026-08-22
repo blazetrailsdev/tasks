@@ -1,6 +1,6 @@
 ---
 title: "Drop the now-false order:-row migration warning from the six wave-5 follow-up stories"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
