@@ -1,7 +1,7 @@
 ---
 title: "assertion-extractor-counts-mocha-expects"
-status: in-progress
-updated: 2026-08-21
+status: done
+updated: 2026-08-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
