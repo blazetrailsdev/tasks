@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope#eval_scope carries a trails-only klassOverride param and undefined guard (association_scope.rb:169-172)"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
