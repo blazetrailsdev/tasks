@@ -116,3 +116,39 @@ newName, oldName)` and routes through `defineAttributeMethodPattern`
       with `override: true`, mirroring `attribute_methods.rb:87-96`.
 - [ ] No alias is generated twice (the `generates once when the schema load
 drives generation first` invariant holds).
+
+## Resolution (PR #6838)
+
+The lazy flip and the `generate_alias_attribute_methods` pattern loop **landed
+in #6838**, not here:
+
+- `eagerly_generate_alias_attribute_methods` is now Rails' empty override
+  (`attribute_methods.rb:76-78`) and is wired onto `Base`, so ActiveModel's
+  eager arm no longer runs for Active Record and the AR pass is an alias' only
+  generator.
+- `generate_alias_attribute_methods` loops `attribute_method_patterns` and
+  clears `attribute_method_patterns_cache` (`:80-85`).
+- `alias_attribute_method_definition` routes through
+  `define_attribute_method_pattern(pattern, old_name, owner:, as: new_name,
+  override: true)` (`:87-96`).
+- The two trails tests that pinned the eager timing were re-based onto the lazy
+  one.
+
+**The `has_attribute?` guard remains unported, and is now understood to be
+language-forced rather than pending work** — so this story does not carry it.
+
+Ruby defers generation to the first call via `method_missing`, so a model that
+is only introspected never reaches `alias_attribute_method_definition`. That is
+why `vendor/rails/activerecord/test/cases/attributes_test.rb:54` can
+`alias_attribute :overloaded_float, :x` against a column `overloaded_types`
+does not have (`schema.rb:1408-1415`), call only `type_for_attribute`, and
+pass. A JS property must exist before it is read, so trails generates at the
+end of every schema load (`defineAttributeMethodsAfterLoad`,
+`model-schema.ts:1159`, tagged `@noRailsEquivalent` against CLAUDE.md's
+"Generated attribute readers are properties"). `type_for_attribute` loads the
+schema, so trails reaches the method there and the guard raises on a Rails test
+Rails passes — verified by porting it.
+
+The omission is documented at the call site and carries a reviewed row in
+`call-mismatches-exclude/activerecord/attribute-methods.json`. Nothing further
+is actionable unless the property-generation rule itself changes.
