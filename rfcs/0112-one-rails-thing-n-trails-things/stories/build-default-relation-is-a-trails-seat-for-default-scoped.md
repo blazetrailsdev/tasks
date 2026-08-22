@@ -1,6 +1,6 @@
 ---
 title: "Base._buildDefaultRelation is a trails seat for Rails' default_scoped"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 6853
 claim: "2026-08-22T11:20:34Z"
 assignee: "ci-lint-scope-misses-cross-file-type-driven-breaks"
 blocked-by: null
