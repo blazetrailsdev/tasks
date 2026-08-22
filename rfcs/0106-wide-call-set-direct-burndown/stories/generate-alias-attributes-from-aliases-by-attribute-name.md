@@ -101,3 +101,16 @@ actually produces. Do not change the test NAME.
 - [ ] `pnpm parity:api:calls` / `:args` green; `pnpm parity:api:extra --package
 activerecord` and `--package activemodel` show no new NOVEL surface.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
+
+## Resolution (PR #6838)
+
+**Done.** `generate_alias_attributes` now walks `aliasesByAttributeName` grouped
+`old_name => [new_names]`, mirroring `attribute_methods.rb:132-137`, and
+`aliasesByAttributeName` is exported from `@blazetrails/activemodel` (a real
+Rails name — `aliases_by_attribute_name`). The `attributeAliases` deviation
+comment is gone.
+
+The registry's INHERITANCE semantics are still trails-specific — it
+copy-on-writes the parent's entries where Rails' `inherited` hook resets the
+ivar to nil — so a subclass still re-generates inherited aliases. That half is
+split out as `reset-aliases-by-attribute-name-per-subclass`.
