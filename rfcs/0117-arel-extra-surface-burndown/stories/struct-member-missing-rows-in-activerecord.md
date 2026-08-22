@@ -1,6 +1,6 @@
 ---
 title: "struct-member-missing-rows-in-activerecord"
-status: claimed
+status: in-progress
 updated: 2026-08-22
 rfc: "0117-arel-extra-surface-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 6879
 claim: "2026-08-22T20:19:57Z"
 assignee: "struct-member-missing-rows-in-activerecord"
 blocked-by: null
