@@ -1,6 +1,6 @@
 ---
 title: "wave-5c-head-sweep"
-status: in-progress
+status: done
 updated: 2026-08-22
 rfc: "0106-wide-call-set-direct-burndown"
 cluster: null
