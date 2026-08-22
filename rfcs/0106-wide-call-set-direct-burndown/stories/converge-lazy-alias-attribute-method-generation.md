@@ -112,7 +112,7 @@ Both need re-basing onto the lazy timing as part of this work.
       clears `attributeMethodPatternsCache()`, mirroring
       `attribute_methods.rb:80-85`.
 - [ ] `aliasAttributeMethodDefinition` takes `(codeGenerator, pattern,
-  newName, oldName)` and routes through `defineAttributeMethodPattern`
+newName, oldName)` and routes through `defineAttributeMethodPattern`
       with `override: true`, mirroring `attribute_methods.rb:87-96`.
 - [ ] No alias is generated twice (the `generates once when the schema load
-  drives generation first` invariant holds).
+drives generation first` invariant holds).
