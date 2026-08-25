@@ -14,7 +14,13 @@
  * every dep resolved). Conflating them would hand agents unclaimable stories.
  */
 export type StoryStatus =
-  "draft" | "ready" | "claimed" | "in-progress" | "done" | "blocked" | "closed";
+  | "draft"
+  | "ready"
+  | "claimed"
+  | "in-progress"
+  | "done"
+  | "blocked"
+  | "closed";
 export type RfcStatus = "draft" | "active" | "closed" | "postponed" | "superseded";
 export const STORY_STATUSES: readonly StoryStatus[] = [
   "draft",

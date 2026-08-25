@@ -38,7 +38,7 @@ exit 1.
 24 simultaneous claims of one story, 20 from the host and 4 from inside the
 btwhooks container:
 
-```
+```text
 1  × exit 0   winner (a container agent won the race)
 23 × exit 2   "already claimed"
 0  × errors
@@ -97,7 +97,7 @@ The tasks CLI depends on trails, and the agents it dispatches are the ones
 editing trails. Drill: rename `packages/activerecord/dist` away so every trails
 import fails, then use the CLI.
 
-```
+```text
 tasks ready    → 320 ready, exit 0
 tasks claim    → succeeded (a full transaction)
 tasks ingest   → succeeded
