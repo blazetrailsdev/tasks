@@ -13,8 +13,10 @@
     "format:check": "prettier --check .",
     "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "db:migrate": "tsx scripts/migrate.ts"
+    "test": "node scripts/validate-lib.test.mjs && node scripts/lib.test.mjs && tsc --noEmit && vitest run",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "validate": "node scripts/validate.mjs",
+    "build-index": "node scripts/build-index.mjs"
   },
   "dependencies": {
     "@blazetrails/activerecord": "file:vendor/blazetrails-activerecord-0.1.0.tgz",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.3.5",
+    "js-yaml": "^4.3.1",
     "markdownlint-cli2": "^0.18.0",
     "prettier": "^3.8.1",
     "tsx": "^4.19.0",
