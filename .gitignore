@@ -7,3 +7,4 @@ events.json
 *.db
 *.db-shm
 *.db-wal
+.rfcs-sync-sha

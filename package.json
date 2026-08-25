@@ -16,7 +16,10 @@
     "test": "node scripts/validate-lib.test.mjs && node scripts/lib.test.mjs && tsc --noEmit && vitest run",
     "db:migrate": "tsx scripts/migrate.ts",
     "validate": "node scripts/validate.mjs",
-    "build-index": "node scripts/build-index.mjs"
+    "build-index": "node scripts/build-index.mjs",
+    "import": "tsx scripts/import.ts",
+    "gate": "tsx scripts/equivalence.ts && tsx scripts/equivalence-ranking.ts",
+    "sync-rfcs": "scripts/sync-rfcs.sh"
   },
   "dependencies": {
     "@blazetrails/activerecord": "file:vendor/blazetrails-activerecord-0.1.0.tgz",
