@@ -29,7 +29,7 @@ database names carry no per-run discriminator:
 - `packages/activerecord/src/support/template-global-setup.ts:~185` (PG) and
   `:~245` (MySQL) name each slot DB `slot === 1 ? settings.database :
 `${settings.database}_${slot}``— i.e.`activerecord_unittest`,
-`activerecord_unittest_2`, … with no run token.
+  `activerecord_unittest_2`, … with no run token.
 - Both loops issue `DROP DATABASE IF EXISTS` immediately followed by
   `CREATE DATABASE` for **every** slot in `1..slotCount()`.
 - `packages/activerecord/src/support/config.ts:143-152` (`applySlot`) derives

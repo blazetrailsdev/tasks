@@ -40,8 +40,8 @@ trails has three separate implementations of that pair:
 - `packages/activerecord/src/explain.ts` `execExplain` / `buildExplainClause`
   — the class-level pair, wired onto `Base` at `base.ts:2024-2035,4548-4551`.
   `execExplain` there is a thunk that calls `modelClass.all().execExplain(...)`.
-- `packages/activerecord/src/relation.ts` `execExplain` (~:2906) and the
-  private `buildExplainClause` (~:3062) — a second, much larger pair, with its
+- `packages/activerecord/src/relation.ts` `execExplain` (~~:2906) and the
+  private `buildExplainClause` (~~:3062) — a second, much larger pair, with its
   own `_renderExplainBinds` / `_normalizeExplainBindValue` helpers that
   re-derive `render_bind`'s binary branch rather than calling `renderBind`.
 

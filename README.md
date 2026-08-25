@@ -19,9 +19,9 @@ Frontmatter fields are partitioned into two sets with **exactly one authority
 each**, and the sets are disjoint — so this is not bidirectional sync and
 cannot conflict.
 
-| Owner        | Fields                                                                                       | Written by            |
-| ------------ | -------------------------------------------------------------------------------------------- | --------------------- |
-| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `priority`, `packages`, body prose | humans/agents via PR   |
+| Owner        | Fields                                                                                       | Written by               |
+| ------------ | -------------------------------------------------------------------------------------------- | ------------------------ |
+| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `priority`, `packages`, body prose | humans/agents via PR     |
 | **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`                | the CLI's mutation verbs |
 
 - **`tasks ingest`** (git → DB) upserts only markdown-owned columns. It is the

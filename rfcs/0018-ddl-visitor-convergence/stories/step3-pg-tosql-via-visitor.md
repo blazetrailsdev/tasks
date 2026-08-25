@@ -41,7 +41,7 @@ the `DEFAULT`/`NOT NULL` order. Routing through the visitor fixes both.
 - [ ] `postgresql/schema-definitions.ts:PgTableDefinition.toSql()` is rewritten to:
       `typescript
 override toSql(): string {
-    return new PgSchemaCreation(this._adapter).accept(this);
+  return new PgSchemaCreation(this._adapter).accept(this);
 }
 `
       Verify `this._adapter` is the correct field name for the quoting adapter stored
@@ -58,7 +58,7 @@ override toSql(): string {
 - [ ] PG adapter-dir validation at `AR_DB_FORKS=1`:
       `bash
 PG_TEST_URL=... TEST_ADAPTER=postgresql AR_DB_FORKS=1 RUN_ADAPTER_DIRS=1 \
-  pnpm vitest run packages/activerecord/src/connection-adapters/adapters/postgresql/schema.test.ts
+pnpm vitest run packages/activerecord/src/connection-adapters/adapters/postgresql/schema.test.ts
 `
       (adjust path to the PG schema adapter dir test — verify against CI config)
 - [ ] Verify `PgSchemaCreation.typeToSql`'s `primary_key` case: it calls `super.typeToSql`

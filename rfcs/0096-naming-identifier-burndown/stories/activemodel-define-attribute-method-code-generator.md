@@ -36,10 +36,10 @@ still unthreaded:
   `owner:`/`as:`, computes `canonical_method_name` vs `public_method_name`,
   guards on `instance_method_already_implemented?(public_method_name)`, and
   dispatches to `define_method*#{pattern.proxy_target}`when the class
-defines one, else`define_proxy_call(owner, …)`. The port
-(attribute-methods.ts:427-443) has no `owner`/`as`, guards on
-`host.prototype[methodName] !== undefined`, and defines straight onto
-`generatedAttributeMethods`.
+  defines one, else`define_proxy_call(owner, …)`. The port
+  (attribute-methods.ts:427-443) has no `owner`/`as`, guards on
+  `host.prototype[methodName] !== undefined`, and defines straight onto
+  `generatedAttributeMethods`.
 
 Two `shape` rows in `call-arg-mismatches` stand on this
 (`define_attribute_methods` → `define_attribute_method`,

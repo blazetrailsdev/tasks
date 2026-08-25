@@ -388,7 +388,7 @@ touches that file.
 - **Reseeding any baseline.** Rows shrink only as bodies converge; CLAUDE.md's
   hand-delete-then-`tighten` rule applies unchanged.
 - **The `type/**` casters that already measure ≈1:1** (`type/value.rb`,
-`type/boolean.rb`, `type/string.rb`, `type/integer.rb`, `type/float.rb`) —
+  `type/boolean.rb`, `type/string.rb`, `type/integer.rb`, `type/float.rb`) —
   healthy, out of scope.
 - **The 14 already-clean files.** They are the reference, not the work.
 - **Rewriting the `validations/<kind>.rb` validator bodies.** Only the
