@@ -1,0 +1,9 @@
+node_modules/
+.scratch/
+index.json
+index.md
+search.json
+events.json
+*.db
+*.db-shm
+*.db-wal
