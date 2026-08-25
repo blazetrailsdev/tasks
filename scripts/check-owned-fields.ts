@@ -14,7 +14,11 @@
 import { execFileSync } from "node:child_process";
 import { DB_OWNED } from "../src/ingest.js";
 
-const BASE = process.env.GITHUB_BASE_REF ? `origin/${process.env.GITHUB_BASE_REF}` : "origin/main";
+// TASKS_DIFF_BASE lets this be exercised locally and in tests against any ref;
+// CI supplies GITHUB_BASE_REF and the default matches the usual PR shape.
+const BASE =
+  process.env.TASKS_DIFF_BASE ??
+  (process.env.GITHUB_BASE_REF ? `origin/${process.env.GITHUB_BASE_REF}` : "origin/main");
 
 const VERB_FOR: Record<string, string> = {
   status: "tasks status-set <id> <status> (or claim/done/block/close)",

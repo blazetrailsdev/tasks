@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Already satisfied, verified 2026-08-17: zero hardcoded double-quoted SQL identifiers remain in packages/activerecord/src/**/*.test.ts (grep for FROM \"/JOIN \"/SELECT-with-escaped-quote returns 0 matches), against 288 uses of quoteTableName/quoteColumnName/quote-regex in those files. The sweep landed organically across the adapter-parity work. No reintroduction guard exists — if one is wanted, that is a separate lint story, not this sweep."
+closed-reason: 'Already satisfied, verified 2026-08-17: zero hardcoded double-quoted SQL identifiers remain in packages/activerecord/src/**/*.test.ts (grep for FROM "/JOIN "/SELECT-with-escaped-quote returns 0 matches), against 288 uses of quoteTableName/quoteColumnName/quote-regex in those files. The sweep landed organically across the adapter-parity work. No reintroduction guard exists — if one is wanted, that is a separate lint story, not this sweep.'
 ---
 
 ## Context

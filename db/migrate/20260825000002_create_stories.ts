@@ -18,7 +18,13 @@ export default class CreateStories extends Migration {
       t.string("assignee");
       t.string("blocked_by");
       t.text("closed_reason");
-      t.datetime("claim_at");
+      // TEXT, not datetime, deliberately. The exact string is the contract:
+      // btwhooks parses `claim` out of index.json for stale-claim detection and
+      // the repo's 5,131 existing values are ISO-seconds-Z. A datetime column
+      // makes the adapter normalize writes to "YYYY-MM-DD HH:MM:SS", which
+      // silently changed the format of the first story claimed through the new
+      // CLI. Keep the text opaque so nothing can reformat it.
+      t.string("claim_at");
 
       t.timestamps();
 

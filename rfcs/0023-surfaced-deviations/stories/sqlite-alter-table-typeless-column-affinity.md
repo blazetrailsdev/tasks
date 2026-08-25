@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Already done: the `?? \"TEXT\"` colDefs builder no longer exists — alterTable (sqlite3-adapter.ts:2293) is now Rails' two-move_table/copy_table rebuild, which re-derives each column through the table definition exactly as copy_table does, so a typeless column round-trips typeless."
+closed-reason: 'Already done: the `?? "TEXT"` colDefs builder no longer exists — alterTable (sqlite3-adapter.ts:2293) is now Rails'' two-move_table/copy_table rebuild, which re-derives each column through the table definition exactly as copy_table does, so a typeless column round-trips typeless.'
 ---
 
 ## Context
