@@ -9,6 +9,7 @@
  * Every mutation republishes index.json/events.json, because btwhooks' Go side
  * reads those files rather than calling this CLI.
  */
+import { readFileSync } from "node:fs";
 import { Base } from "@blazetrails/activerecord";
 import { connect, publishReadModels, VerbExit } from "./db.js";
 import { buildIndex } from "./readmodel.js";
@@ -27,6 +28,7 @@ import {
   type StoryEntry,
 } from "./ranking.js";
 import { block, claim, close, markTracking, release, setPriority, statusSet } from "./verbs.js";
+import { newStory } from "./authoring.js";
 import type { StoryStatus } from "./models/index.js";
 
 const USAGE = `tasks — RFC/story tracking
@@ -37,6 +39,11 @@ Read:
   list [--status S] [--rfc R] [--json]
   show <id>
   touching <path>
+
+Author:
+  new <rfc> <slug> [--title T] [--status S] [--cluster C] [--est-loc N]
+                   [--body-file F]
+                   [--deps a,b] [--packages a,b] [--priority N] [--no-commit]
 
 Mutate:
   claim <id...> [--assignee NAME]
@@ -180,6 +187,40 @@ async function main(): Promise<number> {
       if (json) console.log(JSON.stringify(rows, null, 2));
       else for (const s of rows) console.log(row(s));
       return 0;
+    }
+
+    // ── authoring ──
+    case "new": {
+      if (pos.length < 2) return usage();
+      const csv = (k: string): string[] | undefined => {
+        const v = str(flags, k);
+        return v
+          ? v
+              .split(",")
+              .map((x) => x.trim())
+              .filter(Boolean)
+          : undefined;
+      };
+      const bodyFile = str(flags, "body-file");
+      const r = await newStory(pos[0], pos[1], {
+        body: bodyFile ? readFileSync(bodyFile, "utf8") : undefined,
+        title: str(flags, "title") ?? undefined,
+        status: (str(flags, "status") as StoryStatus | null) ?? undefined,
+        cluster: str(flags, "cluster"),
+        estLoc: num(flags, "est-loc"),
+        priority: num(flags, "priority"),
+        deps: csv("deps"),
+        packages: csv("packages"),
+        commit: flags["no-commit"] !== true,
+      });
+      console.log(`created ${r.path}${r.committed ? " (committed)" : " (uncommitted)"}`);
+      // Ingest creates the ROW — authoring never inserts directly. Running it
+      // here is what makes `tasks new X && tasks claim X` work.
+      if (r.committed) {
+        const ing = await ingest();
+        console.log(`  ingest: ${ing.created} created, ${ing.updated} updated`);
+      }
+      break;
     }
 
     // ── mutations ──
