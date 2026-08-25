@@ -104,6 +104,23 @@ export async function exportState(
   const git = (args: string[]): string =>
     execFileSync("git", args, { cwd: tasksDir, encoding: "utf8" }).trim();
 
+  // Format what we just wrote, before committing.
+  //
+  // editFrontmatter does raw line edits, which prettier often wants to
+  // reformat — so an unformatted export commit turns CI's format:check red and
+  // waits for the autoformat Action to chase it with a follow-up commit. Two
+  // commits and a transient red for every hourly sync. Formatting here means
+  // the export lands already-canonical. Best-effort: a prettier failure must
+  // not lose the state write, which is the part that matters.
+  try {
+    execFileSync("./node_modules/.bin/prettier", ["--write", "--log-level", "warn", ...changed], {
+      cwd: tasksDir,
+      encoding: "utf8",
+    });
+  } catch (e) {
+    console.error(`warning: prettier failed on exported files: ${(e as Error).message}`);
+  }
+
   // Stage exactly the files we rewrote — never `git add -A`, which would sweep
   // up an agent's in-flight edits sitting in the same worktree.
   for (let i = 0; i < changed.length; i += 200) {
