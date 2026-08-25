@@ -41,7 +41,7 @@ the `DEFAULT`/`NOT NULL` order. Routing through the visitor fixes both.
 - [ ] `postgresql/schema-definitions.ts:PgTableDefinition.toSql()` is rewritten to:
       `typescript
 override toSql(): string {
-  return new PgSchemaCreation(this._adapter).accept(this);
+return new PgSchemaCreation(this._adapter).accept(this);
 }
 `
       Verify `this._adapter` is the correct field name for the quoting adapter stored

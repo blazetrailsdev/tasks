@@ -47,7 +47,7 @@ This story wires them together.
       that calls the visitor:
       `typescript
 override toSql(): string {
-  return new SQLite3SchemaCreation("sqlite", this._adapter).accept(this);
+return new SQLite3SchemaCreation("sqlite", this._adapter).accept(this);
 }
 `
       `this._adapter` is the `SchemaQuoter` stored by `AbstractTableDefinition`'s

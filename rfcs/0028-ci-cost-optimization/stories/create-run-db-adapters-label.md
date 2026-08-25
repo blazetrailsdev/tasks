@@ -36,7 +36,7 @@ and the PR was unmerged at the time.
 - [ ] Label created, description and colour consistent with the `run-*` siblings:
 
       gh label create run-db-adapters \
-            --description "Run the PG + MariaDB AR suites on a draft PR" --color 0E8A16
+                --description "Run the PG + MariaDB AR suites on a draft PR" --color 0E8A16
 
 - [ ] Applying it to a draft PR that touches no adapter path starts both suites,
       and the `ci` aggregate reports success rather than "unexpectedly skipped".
