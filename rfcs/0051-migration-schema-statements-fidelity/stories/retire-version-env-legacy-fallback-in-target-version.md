@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: 'Obsolete: PR #6980 converged targetVersion() to read ENV["VERSION"] only (maintainer decision, Rails database_tasks.rb:317-325 over BC-2''s TRAILS_ prefix for this variable). There is no TRAILS_MIGRATION_VERSION read left to retire the fallback from.'
+closed-reason: "Obsolete: PR #6980 converged targetVersion() to read ENV[\"VERSION\"] only (maintainer decision, Rails database_tasks.rb:317-325 over BC-2's TRAILS_ prefix for this variable). There is no TRAILS_MIGRATION_VERSION read left to retire the fallback from."
 ---
 
 ## Context

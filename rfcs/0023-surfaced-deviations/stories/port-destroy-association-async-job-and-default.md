@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: 'Superseded by story port-destroy-association-async-job in the ActiveJob-dependent ActiveRecord work RFC (tasks PR #75), which absorbs this story''s detail verbatim: the core.rb:24 default of "ActiveRecord::DestroyAssociationAsyncJob", DestroyAssociationAsyncError, the unported-files pin (now at scripts/parity/unported-files/unscoped.ts:153, not the scripts/api-compare/unported-files.ts:147 this story cites — the file moved), and the deferred autoload test case from #5711.'
+closed-reason: "Superseded by story port-destroy-association-async-job in the ActiveJob-dependent ActiveRecord work RFC (tasks PR #75), which absorbs this story's detail verbatim: the core.rb:24 default of \"ActiveRecord::DestroyAssociationAsyncJob\", DestroyAssociationAsyncError, the unported-files pin (now at scripts/parity/unported-files/unscoped.ts:153, not the scripts/api-compare/unported-files.ts:147 this story cites — the file moved), and the deferred autoload test case from #5711."
 ---
 
 ## Context

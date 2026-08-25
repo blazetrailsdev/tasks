@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Converged. Re-verified 2026-08-25: collectors/substitute-binds.ts:15-23 reassigns the `bind` local in place after the valueForDatabase unwrap, matching substitute_binds.rb:20-23 \u2014 the module-level extractValue helper and its BindParam recursion are gone. factory-methods.ts:74-75 is `createStringJoin(to) { return this.createJoin(to, null, StringJoin) }`, passing `to` through as factory_methods.rb:23-25 does; the SqlLiteral wrap is gone. Both named naming rows are retired."
+closed-reason: "Converged. Re-verified 2026-08-25: collectors/substitute-binds.ts:15-23 reassigns the `bind` local in place after the valueForDatabase unwrap, matching substitute_binds.rb:20-23 — the module-level extractValue helper and its BindParam recursion are gone. factory-methods.ts:74-75 is `createStringJoin(to) { return this.createJoin(to, null, StringJoin) }`, passing `to` through as factory_methods.rb:23-25 does; the SqlLiteral wrap is gone. Both named naming rows are retired."
 ---
 
 ## Context
