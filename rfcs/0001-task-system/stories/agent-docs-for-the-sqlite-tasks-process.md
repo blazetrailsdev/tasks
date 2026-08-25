@@ -4,7 +4,7 @@ status: ready
 updated: 2026-08-25
 rfc: "0001-task-system"
 cluster: null
-packages: ["railties"]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
