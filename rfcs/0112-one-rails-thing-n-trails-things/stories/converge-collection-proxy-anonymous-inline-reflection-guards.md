@@ -1,16 +1,16 @@
 ---
 title: "Retire the anonymous-inline reflection fallback and its two klass==null guards"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-pr: null
-claim: null
-assignee: null
+pr: 7048
+claim: "2026-08-25T16:50:30Z"
+assignee: "converge-collection-proxy-anonymous-inline-reflection-guards"
 blocked-by: null
 closed-reason: null
 ---

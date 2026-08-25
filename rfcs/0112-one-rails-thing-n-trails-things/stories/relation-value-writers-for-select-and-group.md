@@ -1,16 +1,16 @@
 ---
 title: "Port Relation's select_values / group_values writers so calculations stop assigning the backing fields"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: null
-claim: null
-assignee: null
+pr: 7049
+claim: "2026-08-25T16:58:47Z"
+assignee: "converge-duplicate-url-options-and-url-for"
 blocked-by: null
 closed-reason: null
 ---

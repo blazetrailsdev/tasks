@@ -1,16 +1,16 @@
 ---
 title: "LengthValidator :in/:within duck-types a range and re-derives max instead of calling Range#max"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-pr: null
-claim: null
-assignee: null
+pr: 6632
+claim: "2026-08-25T16:42:34Z"
+assignee: "converge-clear-cache-lock-mysql-sqlite"
 blocked-by: null
 closed-reason: null
 ---

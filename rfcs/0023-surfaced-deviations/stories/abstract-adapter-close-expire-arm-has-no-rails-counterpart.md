@@ -1,7 +1,7 @@
 ---
 title: "Converge AbstractAdapter#close onto Rails' bare pool.checkin"
 status: draft
-updated: 2026-08-25
+updated: 2026-08-02
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:

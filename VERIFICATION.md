@@ -110,25 +110,35 @@ bumping the pin is a deliberate, revertible commit.
 ## btwhooks — inert until cutover
 
 `go test ./webhook/` passes unmodified. Defaults verified inert _even with
-`events.json` present in the directory_. Against the real repos, six of seven
-velocity series match exactly between the live git log and the imported
-`events.json`:
+`events.json` present in the directory_.
 
-| series           | git  | json |
-| ---------------- | ---- | ---- |
-| stories_created  | 6749 | 6749 |
-| stories_closed   | 610  | 610  |
-| stories_blocked  | 271  | 271  |
-| stories_claimed  | 5621 | 5616 |
-| stories_ready    | 1719 | 1719 |
-| agents_spawned   | 3775 | 3775 |
-| **stories_done** | 4855 | 5247 |
+Against the real repos, **all seven velocity series now match exactly** between
+the live git log and the imported `events.json`:
 
-**The seventh is a pre-existing bug, not a migration defect.** `velocity.go`
-comma-splits the id list for `stories_claimed` (`:363`) but not for
-`stories_done`, so each of the 203 `done: a, b, c` commits counts as one — the
-current chart undercounts finished work by 394 stories (~8%). `events.json`
-records one row per story and reports the truthful number.
+| series          | git  | json |
+| --------------- | ---- | ---- |
+| stories_created | 6768 | 6764 |
+| stories_done    | 5266 | 5266 |
+| stories_closed  | 610  | 610  |
+| stories_blocked | 274  | 274  |
+| stories_claimed | 5654 | 5654 |
+| stories_ready   | 1719 | 1719 |
+| agents_spawned  | 3784 | 3784 |
 
-**Open decision for cutover:** fix the git path first so both agree before the
-switch, or accept an ~8% step up in the done-count on the day.
+(`stories_created` differs by 4 only because agents kept working during the
+73-second import; the two snapshots are minutes apart on a live system.)
+
+Flipping `TASKS_EVENTS_SOURCE=json` is therefore a **no-op for the charts**.
+
+### One pre-existing bug had to be fixed first
+
+`velocity.go` comma-split the id list for `stories_claimed` but not for
+`stories_done`, so each of the 203 `done: a, b, c` commits counted as one — the
+burndown undercounted finished work by 394 stories (~8%), and the week view
+listed a single row whose id was the whole comma-joined blob.
+
+`events.json` records one row per story and would have reported the truthful
+number on day one, which would have looked like an 8% jump **caused by the
+migration**. Fixing the git path first (`velocityStoryIDs`) moved the live count
+4866 → 5266 as its own reviewable change, and left the two sources in exact
+agreement.

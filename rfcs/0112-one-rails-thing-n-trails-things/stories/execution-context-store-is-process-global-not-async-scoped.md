@@ -1,16 +1,16 @@
 ---
 title: "ExecutionContext's store is a process-global Map, not per-execution-context via IsolatedExecutionState"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: null
-claim: null
-assignee: null
+pr: 6734
+claim: "2026-08-25T17:06:37Z"
+assignee: "converge-no-touching-block-onto-apply-to"
 blocked-by: null
 closed-reason: null
 ---

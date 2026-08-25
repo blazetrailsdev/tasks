@@ -1,16 +1,16 @@
 ---
 title: "InsertAll defers its constructor tail (@returning, unique_by, ensure_valid_options) to execute"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-pr: null
-claim: null
-assignee: null
+pr: 7053
+claim: "2026-08-25T16:34:34Z"
+assignee: "converge-association-relation-through-scope-onto-scoping"
 blocked-by: null
 closed-reason: null
 ---

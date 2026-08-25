@@ -1,7 +1,7 @@
 ---
 title: "converge-test-fixtures-class-attribute-stores"
-status: ready
-updated: 2026-08-22
+status: blocked
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-25T17:14:37Z"
+assignee: "converge-test-fixtures-class-attribute-stores"
+blocked-by: "Premise does not hold: none of test_fixtures.rb:31-38's eight class_attributes exist in trails. packages/activerecord/src/test-fixtures.ts is the bespoke fixtures() DSL, not a port of ActiveRecord::TestFixtures, and a repo-wide grep finds no fixtureTableNames / fixtureClassNames / fixtureSets / useTransactionalTests / preLoadedFixtures / lockThreads / fixturePaths store, nor any hasOwnProperty copy-on-first-write helper for them. There is nothing to converge; declaring the eight would be new surface (a port of the module), which is a different story."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Hoist ensureSchemaLoaded and deferred distinct-PK materialization out of ids/pluck/calculation bodies"
 status: ready
-updated: 2026-08-22
+updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []

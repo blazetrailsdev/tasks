@@ -21,8 +21,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-25T16:18:38Z"
-assignee: "collection-proxy-association-seat-is-degenerate-for-singular-names"
+claim: "2026-08-25T17:14:37Z"
+assignee: "converge-test-fixtures-class-attribute-stores"
 blocked-by: null
 closed-reason: null
 ---
