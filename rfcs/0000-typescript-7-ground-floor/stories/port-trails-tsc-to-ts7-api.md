@@ -29,7 +29,7 @@ is roadmap-stage (ActionView 8.2% of API surface, P3). The user-facing
 This is **the** blocker described in RFC `0000-typescript-7-ground-floor`.
 `trails-tsc` is the single package that forces a split TS 5.x + TS 7
 environment, which is the shape the maintainer rejected on
-[tasks PR #59](https://github.com/blazetrailsdev/tasks/pull/59) (2026-07-22:
+[tasks PR #59](https://github.com/blazetrailsdev/tasks-legacy/pull/59) (2026-07-22:
 _"Not interested in the split env, will wait for native APIs in v7."_).
 
 Per-module status from the RFC's API-surface mapping (verified 2026-08-25

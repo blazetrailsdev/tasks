@@ -7,12 +7,12 @@ cluster: build-infra
 packages: ["trails-tsc", "activerecord-cli"]
 deps: []
 deps-rfc: []
-est-loc: 0
+est-loc: 30
 priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "TypeScript 7.1 beta — scheduled 2026-09-09 (microsoft/TypeScript#63703). Not yet released as of 2026-08-25; latest is 7.0.2 and 7.1 exists only as nightlies."
+blocked-by: "TypeScript 7.1 stable — scheduled 2026-11-10 (microsoft/TypeScript#63703). As of 2026-08-25 the latest release is 7.0.2 and 7.1 exists only as nightlies, so neither half of this story is actionable: there is no stable 7.1 to move the pin onto, and the API surface does not settle until 7.1 beta on 2026-09-09."
 ---
 
 ## Context
@@ -32,7 +32,7 @@ blocked" — this story exists so that is a lookup rather than a re-derivation.
 RFC `0000-typescript-7-ground-floor` recommends waiting on TS 7.1 and names
 exactly two gaps that keep `trails-tsc` on TypeScript 5.x — and therefore keep
 any TS 7 adoption a "split env", which the maintainer rejected on
-[tasks PR #59](https://github.com/blazetrailsdev/tasks/pull/59) (2026-07-22):
+[tasks PR #59](https://github.com/blazetrailsdev/tasks-legacy/pull/59) (2026-07-22):
 
 1. **Programmatic `--build`** — `src/build.ts` drives `createSolutionBuilder`,
    `createSolutionBuilderHost`, `createEmitAndSemanticDiagnosticsBuilderProgram`.

@@ -8,9 +8,12 @@ packages:
   ["activerecord", "activesupport", "activemodel", "trailties", "trails-tsc", "activerecord-cli"]
 deps:
   [
-    "port-trails-tsc-to-ts7-api",
-    "port-tsc-wrapper-to-ts7-api",
+    "fix-yaml-inferred-type-portability",
     "fix-anonymous-class-declaration-emit",
+    "declare-typescript-7-peer-ranges",
+    "port-tsc-wrapper-to-ts7-api",
+    "port-type-virtualization-to-ts7-api",
+    "port-trailties-parsets-to-ts7-api",
   ]
 deps-rfc: []
 est-loc: 60

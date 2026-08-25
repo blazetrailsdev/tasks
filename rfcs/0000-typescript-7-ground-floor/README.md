@@ -14,7 +14,6 @@ packages:
   - "activemodel"
 clusters:
   - "build-infra"
-  - "developer-experience"
 ---
 
 <!-- Unnumbered until merge: dir stays `0000-typescript-7-ground-floor`,
@@ -91,16 +90,6 @@ Neither is a TypeScript regression. `TS2883` is a real portability defect that
 5.9.3 was silently tolerating while emitting a declaration file — arguably worth
 fixing on its own merits.
 
-### The published contract
-
-Three published packages declare `typescript` peers, and all three are wrong for
-a TS 7 user: `@blazetrails/trails-tsc` and `@blazetrails/trailties` at `^5.0.0`
-(which excludes TS 7 outright), and `@blazetrails/activerecord` at `>=5.0.0`
-(which admits TS 7 and then fails, because `./type-virtualization/*` needs
-`ts.createSourceFile`-from-text). With no external dependents this harms nobody
-today — it is a correctness item, not an urgency — but it is the literal
-declaration of the floor, so it is the first story.
-
 ### A correction worth surfacing
 
 `packages/trails-tsc/src/cli.ts:6-10` says `activerecord` publishes the
@@ -114,11 +103,10 @@ is what obscured it.
 ## Motivation — pick the baseline while it is still free
 
 trails is pre-release software with no external dependents. That is the whole
-motivation, and it cuts against the way both this RFC and [#59][pr59] were
-originally framed: there is no compatibility cost to amortise, no users to
-break, and no migration window to negotiate. There is only a question of which
-TypeScript we build the next several years of this codebase on, asked at the one
-moment when the answer costs nothing.
+motivation: there is no compatibility cost to amortise, no users to break, and
+no migration window to negotiate. There is only a question of which TypeScript
+we build the next several years of this codebase on, asked at the one moment
+when the answer costs nothing.
 
 The measured facts say the newest answer is also the cheapest one. TS 7.1 builds
 this repo **10.8× faster** than 5.9.3, its declaration output differs from
@@ -126,24 +114,28 @@ this repo **10.8× faster** than 5.9.3, its declaration output differs from
 **two defects of our own** — one of which (`TS2883`) is a real portability bug
 5.9.3 was hiding while emitting a `.d.ts` that should not have emitted.
 
-The secondary case — what staying on 5.x costs us in CI and local build time —
-follows below. It is included because #59 asserted it without measuring and a
-future reader deserves the real numbers. It is **not** the argument for this
-RFC, and on its own it would not carry one.
+### The published contract is wrong today
 
-### What we actually pay for not upgrading### What we actually pay for not upgrading
+Three published packages declare `typescript` peers, and all three are wrong for
+a TS 7 user: `@blazetrails/trails-tsc` and `@blazetrails/trailties` at `^5.0.0`
+(which excludes TS 7 outright), and `@blazetrails/activerecord` at `>=5.0.0`
+(which admits TS 7 and then fails, because `./type-virtualization/*` needs
+`ts.createSourceFile`-from-text). With no external dependents this harms nobody
+today — it is a correctness item, not an urgency — but it is the literal
+declaration of the floor, so it is an early story.
 
-RFC #59 asserted that typecheck is "the CI long pole" and that the cold
-pre-commit path costs "~60s". **Both claims are wrong.** They were never
-measured — Phase 0 was the measuring step and never ran. Here are the
-measurements.
+### The secondary case: what staying on 5.x costs
 
-Every number below records its method so it can be re-run. Numbers marked
-_(contended)_ were taken on a host at load average 41–59 on 24 cores, because
-the agent fleet was live; they are **upper bounds** on the trails side and the
-TS 5 / TS 7 ratio is the trustworthy figure, not the absolute.
+Recorded because the superseded RFC asserted two costs — that typecheck is "the
+CI long pole" and that the cold pre-commit path costs "~60s" — without ever
+measuring them. Both turn out to be wrong. This is **not** the argument for the
+RFC and on its own would not carry one, but a future re-evaluation deserves real
+numbers with reproducible methods rather than a second round of assertions.
 
-### CI is not the case for this migration
+Every number below records its method so it can be re-run, and states the host
+load average it was taken under.
+
+### CI cost
 
 Method: `gh api repos/blazetrailsdev/trails/actions/workflows/242258170/runs`
 over the 500 most recent completed `pull_request` runs (spanning 15 days,
@@ -187,7 +179,7 @@ At GitHub-hosted `ubuntu-latest` list pricing ($0.008/min for a 2-core runner),
 hosted or self-hosted runners, and the actual runner SKU. If self-hosted, the
 dollar figure is zero and the saving is purely host capacity.)_
 
-### Local compile cost — the "~60s" claim is wrong
+### Local compile cost
 
 Method: in a clean worktree at `origin/main`, `find … -name '*.tsbuildinfo'
 -delete && rm -rf packages/*/dist scripts/dist` before each cold run, then
@@ -196,13 +188,13 @@ TS 7 builds use `typescript@7.0.2` and `typescript@7.1.0-dev.20260825.1`
 installed in throwaway directories outside the tree and invoked by absolute
 path.
 
-**All numbers below were taken on a quiet host (load average 3–5 on 24 cores).**
-An earlier revision of this RFC measured the same things at load 41–59 with the
-agent fleet live and reported cold full-monorepo `tsc --build` as 215s; the true
-uncontended figure is **91.75s**. Contention inflated the absolute by ~2.3×
-while leaving the compiler ratio broadly intact (10.3× contended vs 9.4× clean),
-which is why the ratio was flagged as the trustworthy figure at the time. Quote
-the clean numbers.
+**All numbers below were taken on a quiet host (load average 3–5 on 24 cores),
+and anyone re-running them should do the same.** Host contention badly distorts
+the absolutes: the same cold full-monorepo build measures **215s** at load 41–59
+with the agent fleet live, against **91.75s** quiet — a ~2.3× inflation. The
+compiler _ratio_ survives contention largely intact (10.3× loaded vs 9.4×
+quiet), so a contended run can still be trusted for comparison, but never for
+an absolute.
 
 | Scenario                                                                        | 5.9.3                    | 7.0.2               | 7.1.0-dev           |
 | ------------------------------------------------------------------------------- | ------------------------ | ------------------- | ------------------- |
@@ -247,11 +239,12 @@ on each worktree's `.git` file, 2026-08-25.
 At 91.75s per cold build, ~2.1 new worktrees/day is **≈3.2 min/day ≈ 0.4
 hours/week** of cold-build CPU, serial-equivalent. The number is small; the
 problem is that it is not serial. These builds land concurrently on a 24-core
-host that CLAUDE.md already warns is saturated by parallel agents — the load
-average during this RFC's own measurements was **41–59**, which is why every
-local number here is a contended upper bound. TS 7 would cut peak cold-build
-CPU-seconds by ~10× and shrink that contention window from ~3.5 minutes to ~20
-seconds per worktree bootstrap.
+host that CLAUDE.md already warns is saturated by parallel agents. The effect is
+measurable on this RFC's own numbers: an earlier round taken at load 41–59
+reported the same cold build as 215s against the 91.75s measured on a quiet
+host — a ~2.3× inflation. TS 7 would cut peak cold-build CPU-seconds by ~10× and
+shrink that contention window from ~1.5 minutes to under 10 seconds per worktree
+bootstrap.
 
 **Unmeasured:** aggregate incremental-typecheck cost across the fleet. Commits
 to `origin/main` run ~55/day over the last 30 days (`git log --oneline
@@ -260,7 +253,7 @@ pays the incremental path, but there is no instrumentation recording hook
 invocations (including the ones that never reach a commit), so multiplying
 55 × 8s would be a fabricated number rather than a measured one.
 
-### Summary: the secondary case
+### Summary of the secondary case
 
 | Axis              | Cost of staying on TS 5.9.3                                 |
 | ----------------- | ----------------------------------------------------------- |
@@ -276,7 +269,7 @@ anything. It is not why this RFC recommends proceeding — the published contrac
 being wrong is (§ Motivation). Read this section as the answer to "what do we
 also get", not "why do this".
 
-## Design — what shipped since 2026-07-08
+## Design
 
 Every claim below is dated and sourced. Assume it has a shelf life; the last
 version of this RFC had a 13-month one and its central fact went stale.
@@ -312,7 +305,7 @@ The plan's "Language and Compiler" section names three APIs for stabilization:
 **not** list plugin hosting, solution-builder/`--build` driving, or config
 parsing as distinct objectives.
 
-### TS 7.0.2 already ships an `unstable/` API — RFC #59's central fact is stale
+### TypeScript 7.0.2 ships a programmatic API under `unstable/`
 
 The [TypeScript 7.0 GA post][ga] (2026-07-08) says TS 7.0 "does not yet ship
 with an API." That is true of the _stable_ API and of the `import ts from
@@ -509,7 +502,7 @@ Packages declaring a `typescript` dependency: root (`^5.9.3` devDep),
 `activerecord` (`>=5.0.0` peer), `trails-tsc` (`^5.0.0`),
 `activerecord-cli` (`^5.9.3`), `trailties` (`^5.0.0` + peer meta).
 
-### The spike: TS 7.0.2 actually run over this repo
+### The spike: TS 7 run over this repo
 
 This is the finding RFC #59 deferred to a Phase 0 that never happened. Method:
 `typescript@7.0.2` installed in a scratch directory outside the tree, its
@@ -718,7 +711,7 @@ stable on 2026-11-10. Every story branches from `main` and stands alone.
 
 - **tasks PR #59** — "docs(rfc): migrate to TypeScript 7 (native Go compiler)",
   opened 2026-07-08, closed unmerged 2026-07-22:
-  <https://github.com/blazetrailsdev/tasks/pull/59>
+  <https://github.com/blazetrailsdev/tasks-legacy/pull/59>
 - **Announcing TypeScript 7.0** — devblogs.microsoft.com, published 2026-07-08,
   fetched 2026-08-25:
   <https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/>
@@ -735,49 +728,19 @@ dist-tags time`, queried 2026-08-25.
   242258170, 500 `pull_request` runs spanning 2026-08-10 → 2026-08-24, jobs
   resolved for the 170 most recent; sampled 2026-08-25.
 
-[pr59]: https://github.com/blazetrailsdev/tasks/pull/59
 [ga]: https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/
 [iter]: https://github.com/microsoft/TypeScript/issues/63703
 
 ## Changelog
 
-- 2026-08-25: moved from `blazetrailsdev/tasks-legacy` to this repo. Authored
-  and reviewed as tasks-legacy PR #76 while the RFC/story repo was being
-  migrated to the SQLite-backed successor; that PR is closed in favour of this
-  one. Content is unchanged by the move — the `rfcs/` markdown layout and story
-  frontmatter are identical across the two systems.
-- 2026-08-25: retargeted from 7.0.2 to the **7.1 line** — trails is
-  pre-release with no external dependents, so the baseline choice is free and
-  the newest target is also the cheapest (7.1 restores `transpileModule` and
-  adds emit/config APIs, removing shims 7.0.2 would need). Re-measured every
-  local number on a quiet host: cold full-monorepo `tsc --build` is **91.75s**
-  on 5.9.3, not the 215s reported under load — 9.73s on 7.0.2, 8.47s on 7.1-dev.
-  Found that the 7.1 build's 10 diagnostics reduce to **2 root causes**, the
-  larger being a `TS2883` portability defect in `activesupport/src/yaml.ts` that
-  silently suppresses `yaml.d.ts` emit and cascades into 7. Re-confirmed against
-  the nightly that no solution-builder, build, or watch API exists in 7.1
-  either, so `trails-tsc` stays deferred.
-- 2026-08-25: reframed from "should we migrate the build" to "make TS 7 the
-  ground floor". Renamed from `0000-typescript-7-reevaluation`. Recommendation
-  flipped from **wait** to **proceed on 7.0.2**: the three published
-  `typescript` peer ranges are wrong for TS 7 today, and every user-facing
-  surface is either already TS 7-clean or migratable on 7.0.2 (`parseTs()`
-  reimplemented and verified). Established that the `trails-tsc` blocker serves
-  `trails-tsc-views` / the roadmap-stage TSE pipeline, not shipped DX — and that
-  the user-facing `trails-tsc` bin belongs to `activerecord-cli`, not
-  `@blazetrails/trails-tsc` as `cli.ts:6-10` claims. Editor/LS work postponed
-  with the views pipeline.
-- 2026-08-25: revised after probing `typescript/unstable/fs`. Corrected the
-  consumer count (four packages, not one — `activerecord`'s published
-  `type-virtualization` and `trailties` were missed); corrected the
-  `createSourceFile` row from a hard gap to a verified rework, which moves two
-  packages to "migratable today on 7.0.2"; added measured parse/walk numbers and
-  the overlay result; recorded that shelling out to `tsc --build` cannot replace
-  the virtualizing solution builder, so `trails-tsc` is blocked by measurement
-  rather than by inference.
 - 2026-08-25: initial RFC. Supersedes the closed
-  `0000-typescript-7-native-compiler` (tasks PR #59). Re-verified every dated
-  claim; corrected the "CI long pole" and "~60s cold pre-commit" premises with
-  measurements; narrowed the split-env blocker from two packages to one
-  (`trails-tsc`); recorded the TS 7.0.2 `unstable/` API, which did not exist as
-  a known fact when #59 was written.
+  `0000-typescript-7-native-compiler` (tasks-legacy PR #59, closed 2026-07-22).
+  Authored in `blazetrailsdev/tasks-legacy` as PR #76 and moved here when that
+  repo was superseded mid-review; content is unchanged by the move, since the
+  `rfcs/` layout and story frontmatter are identical across the two systems.
+
+  Every dated claim inherited from #59 was re-verified rather than carried over,
+  and three of them did not survive: typecheck is not the CI long pole, the cold
+  pre-commit path is not a recurring ~60s cost, and TypeScript 7.0 does ship a
+  programmatic API (under `unstable/`) despite the GA post's wording. The
+  compiler-API consumer count is four packages, not the two #59 named.
