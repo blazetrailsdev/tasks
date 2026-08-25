@@ -26,7 +26,7 @@ the old model and now describe a workflow that will silently not work.
 The dangerous case is not an agent that gets an error. It is an agent that
 hand-edits `status: done` in a story file, opens a PR, gets it merged, and
 believes the story is finished. Ingest deliberately ignores DB-owned fields, so
-that edit changes nothing. CI rejects such a PR today, but nothing yet *tells*
+that edit changes nothing. CI rejects such a PR today, but nothing yet _tells_
 an agent the rule before it writes the file.
 
 Everything an agent reads about tasks needs to state the ownership split and
@@ -37,9 +37,9 @@ name the verb to use instead.
 Frontmatter fields have exactly one authority each, and the two sets are
 disjoint — which is why ingest and export cannot conflict.
 
-| Owner        | Fields                                                                                       | Changed by                    |
-| ------------ | -------------------------------------------------------------------------------------------- | ----------------------------- |
-| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `priority`, `packages`, body prose | edit the file, open a PR      |
+| Owner        | Fields                                                                                       | Changed by                     |
+| ------------ | -------------------------------------------------------------------------------------------- | ------------------------------ |
+| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `priority`, `packages`, body prose | edit the file, open a PR       |
 | **Database** | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`                | a `tasks` verb — never by hand |
 
 Rules of thumb worth stating explicitly in each doc:
@@ -49,11 +49,11 @@ Rules of thumb worth stating explicitly in each doc:
   commit, open a PR. Ingest picks it up when the PR merges.
 - **Recording what HAPPENED to the work** — claimed, in progress, done, blocked,
   closed — is a verb. `tasks claim`, `tasks in-progress --pr N`, `tasks done
-  --pr N`, `tasks block`, `tasks close`. Never edit those fields by hand.
+--pr N`, `tasks block`, `tasks close`. Never edit those fields by hand.
 - **Creating a story** is authoring, so it is markdown: `tasks new <rfc> <slug>`
   writes the file, commits it, and runs ingest to create the row. Do not insert
   rows any other way.
-- `status` in a *new* file is honored as a birth seed on insert only, and
+- `status` in a _new_ file is honored as a birth seed on insert only, and
   ignored on every later ingest. "Seed value, not a sync value."
 
 ## Acceptance criteria

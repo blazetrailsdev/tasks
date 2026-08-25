@@ -32,7 +32,7 @@ kind:
   joined via a plain `leftOuterJoins` instead, because trails' eager-load can't
   join that reflection: `includes("<habtm belongs_to>").references("developers")`
   on the anonymous `HABTM*\*`join model returns`\_eagerLoadingForSql() === true`but`\_executeEagerLoad`falls back to preload (no JOIN), leaving the copied`where("developers.name = ?")`against an unjoined table →`no such column`.
-  Reproduced by `EagerAssociationTest > preloading has many through with custom
+Reproduced by `EagerAssociationTest > preloading has many through with custom
   scope` (`developersNamedDavidWithHashConditions`).
 
 Results are correct today (the to-one join adds no rows; `_dedupByPrimaryKey`
