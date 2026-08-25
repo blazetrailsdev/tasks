@@ -144,7 +144,25 @@ async function main(): Promise<number> {
       const index = await loadIndex();
       const rows = nextBundle(index, opts);
       if (json) {
-        console.log(JSON.stringify(rows, null, 2));
+        // The OBJECT shape is a contract with btwhooks, which unmarshals it
+        // into bundleResult (spawnloop.go:706). Emitting a bare array made
+        // every spawn attempt fail with "cannot unmarshal array into Go value
+        // of type webhook.bundleResult" — the loop stayed enabled, tried, and
+        // silently never spawned. Keep the old CLI's keys exactly.
+        const summary = summarizeBundle(rows, maxLoc);
+        console.log(
+          JSON.stringify(
+            {
+              stories: rows,
+              bundle_total_loc: summary.total,
+              max_loc: maxLoc,
+              lead_exceeds_budget: summary.leadExceedsBudget,
+              empty_reason: rows.length === 0 ? emptyBundleReason(index, opts) : null,
+            },
+            null,
+            2,
+          ),
+        );
         return 0;
       }
       if (rows.length === 0) {
