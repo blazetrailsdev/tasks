@@ -212,10 +212,16 @@ const EVENT_VERBS = new Set([
   "finalize",
 ]);
 
+/** Verbs that accept several ids in one invocation (`claim a b c`). */
+const VARIADIC_VERBS = new Set(["claim", "done", "in-progress", "release"]);
+
 interface ParsedSubject {
   verb: string;
   arg: string | null;
+  /** First id — kept for the RFC-shaped verbs that only ever name one. */
   target: string;
+  /** Every id the subject names; length > 1 only for VARIADIC_VERBS. */
+  targets: string[];
   pr: number | null;
   note: string | null;
 }
@@ -247,7 +253,14 @@ function parseSubject(subject: string): ParsedSubject | null {
   // "rfc 0077-quoting-binds-fidelity: priority 3". Handle before the generic
   // path, which would otherwise read the target as the literal word "status".
   if (verb === "rfc" && argWords.length === 1) {
-    return { verb: "rfc", arg: rest, target: argWords[0], pr: null, note: null };
+    return {
+      verb: "rfc",
+      arg: rest,
+      target: argWords[0],
+      targets: [argWords[0]],
+      pr: null,
+      note: null,
+    };
   }
 
   if (!EVENT_VERBS.has(verb)) return null;
@@ -258,14 +271,34 @@ function parseSubject(subject: string): ParsedSubject | null {
   const head = dash === -1 ? rest : rest.slice(0, dash);
   const note = dash === -1 ? null : rest.slice(dash + 3).trim();
 
-  const target = head.split(/\s+/)[0];
-  if (!target) return null;
-
   const prMatch = /(?:^|\s)#(\d+)(?:\s|$)/.exec(head);
+  // Strip the trailing " #1234" before splitting, so it can't land on the last id.
+  const idClause = prMatch ? head.slice(0, prMatch.index) : head;
+
+  // `claim`/`done`/`in-progress`/`release` are VARIADIC: one commit can name
+  // several stories comma-separated —
+  //   "claim: story-a, story-b, story-c"
+  // 602 such commits exist, naming 829 extra stories. Taking only the first
+  // token drops the rest AND leaves a trailing comma on the id it does keep,
+  // which silently undercounts the claim/done history the burndown charts read.
+  // (btwhooks' git-log collector already splits on commas — velocity.go:363.)
+  //
+  // The non-variadic verbs take one id followed by prose (`edit: <id> title and
+  // est-loc`), so they must NOT be comma-split; take their first word.
+  const targets = VARIADIC_VERBS.has(verb)
+    ? idClause
+        .split(",")
+        .map((t) => t.trim().split(/\s+/)[0])
+        .filter(Boolean)
+    : [idClause.trim().split(/\s+/)[0]].filter(Boolean);
+
+  if (targets.length === 0) return null;
+
   return {
     verb,
     arg: argWords.length ? argWords.join(" ") : null,
-    target,
+    target: targets[0],
+    targets,
     pr: prMatch ? Number(prMatch[1]) : null,
     note,
   };
@@ -279,6 +312,8 @@ const SEP = "\u001f";
 async function importHistory(): Promise<{
   events: number;
   scanned: number;
+  matched: number;
+  skippedCount: number;
   skipped: [string, number][];
 }> {
   const log = execFileSync(
@@ -290,6 +325,10 @@ async function importHistory(): Promise<{
   const lines = log.split("\n");
   const rows: Record<string, unknown>[] = [];
   const skipped = new Map<string, number>();
+  // Commits, not rows: one variadic `claim: a, b, c` is 1 commit and 3 events,
+  // so events-minus-commits is not a skip count (it went negative once this
+  // fanout landed).
+  let matched = 0;
 
   for (const line of lines) {
     const [at, actor, subject] = line.split(SEP);
@@ -302,31 +341,37 @@ async function importHistory(): Promise<{
       skipped.set(head, (skipped.get(head) ?? 0) + 1);
       continue;
     }
-    const { verb, arg, target, pr, note } = parsed;
+    matched++;
+    const { verb, arg, targets, pr, note } = parsed;
 
     // `new:` and `edit:` record a path-ish "<rfc>/<id>" or "<rfc>/stories/<id>";
     // the other story verbs record a bare id. `new-rfc:`/`finalize:` name an RFC.
     const isRfcVerb = verb === "new-rfc" || verb === "finalize" || verb === "rfc";
-    const storyId = isRfcVerb ? null : target.includes("/") ? target.split("/").pop()! : target;
-    const rfcId = isRfcVerb ? target : target.includes("/") ? target.split("/")[0] : null;
 
-    rows.push({
-      at,
-      verb,
-      story_id: storyId,
-      rfc_id: rfcId,
-      pr,
-      actor,
-      // `arg` is the status value / priority number; `note` is the close/block
-      // rationale. Both matter — the close reason is the only record of WHY a
-      // story was abandoned, and it is not in the story file after deletion.
-      detail: arg || note ? JSON.stringify({ arg, note }) : null,
-    });
+    // One row per named story: a variadic `claim: a, b, c` is three claims.
+    for (const target of targets) {
+      const storyId = isRfcVerb ? null : target.includes("/") ? target.split("/").pop()! : target;
+      const rfcId = isRfcVerb ? target : target.includes("/") ? target.split("/")[0] : null;
+      rows.push({
+        at,
+        verb,
+        story_id: storyId,
+        rfc_id: rfcId,
+        pr,
+        actor,
+        // `arg` is the status value / priority number; `note` is the close/block
+        // rationale. Both matter — the close reason is the only record of WHY a
+        // story was abandoned, and it is not in the story file after deletion.
+        detail: arg || note ? JSON.stringify({ arg, note }) : null,
+      });
+    }
   }
 
   await insertChunked(Event as never, rows);
   const topSkipped = [...skipped.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
-  return { events: rows.length, scanned: lines.length, skipped: topSkipped };
+  let skippedCount = 0;
+  for (const n of skipped.values()) skippedCount += n;
+  return { events: rows.length, scanned: lines.length, matched, skippedCount, skipped: topSkipped };
 }
 
 async function main(): Promise<void> {
@@ -348,12 +393,15 @@ async function main(): Promise<void> {
   );
 
   const t1 = Date.now();
-  const { events, scanned, skipped } = (await Base.transaction(async () => importHistory()))!;
+  const { events, scanned, matched, skippedCount, skipped } = (await Base.transaction(async () =>
+    importHistory(),
+  ))!;
   console.log(
-    `backfilled ${events} events from ${scanned} commits in ${OLD_REPO} (${Date.now() - t1}ms)`,
+    `backfilled ${events} events from ${matched}/${scanned} commits in ${OLD_REPO} ` +
+      `(${Date.now() - t1}ms)`,
   );
   console.log(
-    `  skipped ${scanned - events} non-event commits; top: ` +
+    `  skipped ${skippedCount} non-event commits; top: ` +
       skipped.map(([k, n]) => `${k}=${n}`).join(" "),
   );
 
