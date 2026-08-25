@@ -4,10 +4,10 @@ status: draft
 updated: 2026-08-25
 rfc: "0001-task-system"
 cluster: null
-packages: []
+packages: ["railties"]
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 90
 priority: null
 pr: null
 claim: null
