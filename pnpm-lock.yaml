@@ -22,6 +22,9 @@ importers:
       '@blazetrails/activerecord':
         specifier: file:vendor/blazetrails-activerecord-0.1.0.tgz
         version: file:vendor/blazetrails-activerecord-0.1.0.tgz(typescript@5.9.3)
+      '@blazetrails/date':
+        specifier: file:vendor/blazetrails-date-0.1.0.tgz
+        version: file:vendor/blazetrails-date-0.1.0.tgz
     devDependencies:
       '@types/node':
         specifier: ^25.3.5
@@ -48,11 +51,11 @@ importers:
 packages:
 
   '@blazetrails/activemodel@file:vendor/blazetrails-activemodel-0.1.0.tgz':
-    resolution: {integrity: sha512-XjIj1kD69lFLpiDaNKF5q/jedDBlMkKOuViokfV2V0G9/fMXNAlEkJ6cS1vx703C1C8IDrbZxxxA+ktbKU7hFA==, tarball: file:vendor/blazetrails-activemodel-0.1.0.tgz}
+    resolution: {integrity: sha512-MFJymv5Tul2fnTYCOqjSql2AJENNnUiyZKiaZHqCLLZdEHN9yF3YeMh65o8VZb2gxiB+O4De7m8u5jGwGIga3g==, tarball: file:vendor/blazetrails-activemodel-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/activerecord@file:vendor/blazetrails-activerecord-0.1.0.tgz':
-    resolution: {integrity: sha512-hhv3DuOo/70bW+/Fct86WwVmUVLBiYb2r9FFlH3ELhCOQ6IROFvuWpbMnCuIPJEccirzeOFuhIdR99NrhF3ZrQ==, tarball: file:vendor/blazetrails-activerecord-0.1.0.tgz}
+    resolution: {integrity: sha512-mUBpTo0oi7zKm6cSGCbKehDKF5KcsgF/iwJ/qBAOuKi+y6jCsBd8q3SjZEQ84JuPTpB6I1eGzafRIK9iPxuNyQ==, tarball: file:vendor/blazetrails-activerecord-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       better-sqlite3: ^12.6.2
@@ -74,7 +77,7 @@ packages:
         optional: true
 
   '@blazetrails/activesupport@file:vendor/blazetrails-activesupport-0.1.0.tgz':
-    resolution: {integrity: sha512-iYWCFWzTWyFsxBnsE8mznS4qpnh/4LQ5FR3XpkbPnTAr2a+Y6yvf+R9sHPcmiB+sR2WYldYBNfhe0wXTAoHSGQ==, tarball: file:vendor/blazetrails-activesupport-0.1.0.tgz}
+    resolution: {integrity: sha512-q/myCAD0W7FBUG68Zu74v/4d7gMCGJ+5BGTdOmnB7nQf5Qqcjm+hII6LO2tpsJWwEJZH+aHu+pkD+GyPPSUNDg==, tarball: file:vendor/blazetrails-activesupport-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       '@blazetrails/nokogiri': 0.1.0
@@ -83,7 +86,7 @@ packages:
         optional: true
 
   '@blazetrails/arel@file:vendor/blazetrails-arel-0.1.0.tgz':
-    resolution: {integrity: sha512-LzVqZIhs3uGJ/vAd8qfqNg0V3c82mVGkLL3G/jdvn++KgYP3dfya9jJaHKQQl/ZTYRHDoz3cheOx/YShsf7vAw==, tarball: file:vendor/blazetrails-arel-0.1.0.tgz}
+    resolution: {integrity: sha512-FNUPOAH29mhby8aKC543D4VMxXlvLB33s8COBeLeD9AqZaxbsiSVo+YnX76Q4E0asCWVy6BnJFYszd1JyOcMJQ==, tarball: file:vendor/blazetrails-arel-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/date@file:vendor/blazetrails-date-0.1.0.tgz':

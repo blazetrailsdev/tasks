@@ -58,7 +58,11 @@ for(const f of fs.readdirSync(vendor).filter(f=>f.endsWith(".tgz")).sort()){
 }
 const pkg=JSON.parse(fs.readFileSync(pkgPath,"utf8"));
 pkg.pnpm={...pkg.pnpm,overrides};
-pkg.dependencies["@blazetrails/activerecord"]=overrides["@blazetrails/activerecord"].replace("file:./","file:");
+// Direct deps: activerecord for the models, date for the Temporal types the
+// column declarations reference. Everything else stays transitive.
+for(const n of ["@blazetrails/activerecord","@blazetrails/date"]){
+  pkg.dependencies[n]=overrides[n].replace("file:./","file:");
+}
 fs.writeFileSync(pkgPath,JSON.stringify(pkg,null,2)+"\n");
 console.log("  overrides -> "+Object.keys(overrides).length+" packages");
 ' "$VENDOR" "$HERE/package.json"
