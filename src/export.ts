@@ -15,6 +15,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
+import { parse as parseYaml } from "yaml";
 import { join } from "node:path";
 import { Story } from "./models/index.js";
 import { resolveTasksDir } from "./db-path.js";
@@ -64,6 +65,16 @@ export async function exportState(
     const abs = join(tasksDir, s.file_path);
     if (!existsSync(abs)) continue;
 
+    // The VALUES the DB holds, for comparison; `desired` is their rendering.
+    const values: Record<string, unknown> = {
+      status: s.status,
+      pr: s.pr,
+      claim: s.claim_at,
+      assignee: s.assignee,
+      "blocked-by": s.blocked_by,
+      "closed-reason": s.closed_reason,
+      updated: s.updated_on,
+    };
     const desired: Record<string, string> = {
       status: render("status", s.status),
       pr: render("pr", s.pr),
@@ -75,7 +86,23 @@ export async function exportState(
     };
 
     const text = readFileSync(abs, "utf8");
-    const fm = text.match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? "";
+    const fmText = text.match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? "";
+    // Compare against the PARSED value, not the rendered text.
+    //
+    // Textual comparison made this loop forever: ~12 stories carry YAML
+    // single-quoted reasons, export rewrote them double-quoted, prettier
+    // converted them straight back, the net diff was zero, and nothing
+    // committed — so every hourly run rewrote the same 12 files and reported
+    // "12 stories (no commit)". Quoting style is prettier's business. Export
+    // only cares whether the VALUE changed.
+    const current = (parseYaml(fmText) ?? {}) as Record<string, unknown>;
+    const sameValue = (key: string, want: unknown): boolean => {
+      const have = current[key] ?? null;
+      if (have === null || want === null) return have === null && want === null;
+      // `updated` parses to a Date; compare on the date-only string.
+      if (have instanceof Date) return have.toISOString().slice(0, 10) === String(want);
+      return String(have) === String(want);
+    };
 
     // Only write a key that is ALREADY PRESENT, or whose new value is
     // non-null. Optional keys are omitted from these files rather than set to
@@ -85,10 +112,10 @@ export async function exportState(
     // real state changes.
     const writes: Record<string, string> = {};
     for (const [k, v] of Object.entries(desired)) {
-      const line = fm.match(new RegExp(`^${k}:\\s*(.*)$`, "m"));
-      const present = line !== null;
-      if (!present && v === "null") continue;
-      if (present && line[1].trim() === v) continue;
+      const present = new RegExp(`^${k}:`, "m").test(fmText);
+      const want = values[k];
+      if (!present && want === null) continue;
+      if (present && sameValue(k, want)) continue;
       writes[k] = v;
     }
     if (Object.keys(writes).length === 0) continue;
