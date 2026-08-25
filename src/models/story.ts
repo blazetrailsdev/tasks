@@ -75,11 +75,18 @@ export class Story extends Base {
     this.hasMany("paths", { className: "StoryPath", foreignKey: "story_id" });
     this.hasMany("packages", { className: "StoryPackage", foreignKey: "story_id" });
     this.hasMany("events", { foreignKey: "story_id" });
+    // Labels are IDENTICAL to stored values, including the hyphen in
+    // "in-progress". Rails' enum getter returns the LABEL, while raw SQL
+    // returns the stored value — so a label of `inProgress` mapping to
+    // "in-progress" makes `story.status` and `SELECT status` disagree, and
+    // whichever one a given code path happens to use decides what it writes.
+    // That shipped as `status: inProgress` into 21 story files before this
+    // was caught. Identity mapping means there is nothing to translate.
     this.enum("status", {
       draft: "draft",
       ready: "ready",
       claimed: "claimed",
-      inProgress: "in-progress",
+      "in-progress": "in-progress",
       done: "done",
       blocked: "blocked",
       closed: "closed",

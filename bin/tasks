@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Entry point. Resolves this checkout's tsx so the CLI runs against the
+# vendored trails pin, not whatever happens to be on PATH.
+HERE="$(cd "$(dirname "$0")/.." && pwd)"
+exec "$HERE/node_modules/.bin/tsx" "$HERE/src/cli.ts" "$@"
