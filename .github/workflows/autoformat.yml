@@ -1,0 +1,87 @@
+name: autoformat
+
+# `main` takes direct pushes from the `pnpm tasks` CLI (claim/done/status-set,
+# etc.), which bypass PR CI entirely. A commit authored with the pre-commit hook
+# uninstalled or `--no-verify` can therefore land unformatted on main and red the
+# `ci` `format:check` for every open PR's merge-check (see #35/#36). The
+# pre-commit hook only helps contributors who actually run it; this job is the
+# hard guarantee: it self-heals main's formatting no matter how the commit
+# arrived.
+
+on:
+  push:
+    branches: [main]
+
+# Deliberately NO `concurrency:` group. A concurrency group makes GitHub
+# auto-cancel superseded *pending* runs whenever the `pnpm tasks` CLI lands a
+# burst of pushes on main seconds apart (cancel-in-progress only protects the
+# running job, never the queued ones). Those cancellations surface as red ✗ on
+# the commit / Actions status even though nothing failed. Instead, each run
+# guards itself below ("skip if superseded"): older runs in a burst exit green
+# without touching main, and only the run building main's current tip formats
+# and pushes. The reformat is whole-tree idempotent, so the tip run subsumes
+# every commit in the burst — "every landed commit is checked" still holds.
+
+permissions:
+  contents: write
+
+jobs:
+  autoformat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Skip if superseded by a newer push to main
+        id: tip
+        run: |
+          set -euo pipefail
+          git fetch --quiet origin main
+          if [ "$(git rev-parse origin/main)" != "${{ github.sha }}" ]; then
+            echo "origin/main has advanced past ${GITHUB_SHA}; a newer run owns the tip — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - run: pnpm install --frozen-lockfile
+        if: steps.tip.outputs.skip != 'true'
+      - name: Prettier-format main and push any fixes
+        if: steps.tip.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Format the *current* tip of main each attempt, never a stale checkout:
+          # reset to origin/main, reformat, push. The push only fast-forwards if
+          # main hasn't advanced since the reset — so a successful push always
+          # lands the format fix on the exact tree it formatted, leaving main
+          # provably prettier-clean. If main advanced (lost the race, or a
+          # bot-token push doesn't re-trigger us), reset to the new tip and
+          # reformat — this is what closes the gap where a rebase could otherwise
+          # carry unformatted commits past the formatter.
+          # .prettierignore already excludes index.md, lockfile, caches, and
+          # node_modules; generated README tables are prettier-stable so this is
+          # a no-op on them.
+          for i in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --hard origin/main
+            pnpm exec prettier --write .
+            if [ -z "$(git status --porcelain)" ]; then
+              echo "main is already prettier-clean"
+              exit 0
+            fi
+            git add -A
+            git commit -m "style: auto-format main (prettier)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push rejected (main advanced); re-formatting the new tip"
+            sleep 3
+          done
+          echo "::error::could not push autoformat commit after retries" >&2
+          exit 1

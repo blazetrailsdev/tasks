@@ -35,6 +35,7 @@ export class Story extends Base {
   declare priority: number | null;
   declare est_loc: number | null;
   declare file_path: string | null;
+  declare updated_on: string | null;
 
   // ── DB-owned: written only by the mutation verbs ──
   declare status: StoryStatus;

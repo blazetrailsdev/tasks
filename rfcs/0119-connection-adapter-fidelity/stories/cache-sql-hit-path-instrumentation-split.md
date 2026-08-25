@@ -1,0 +1,42 @@
+---
+title: "cacheSql: hit-path instrumentation and dup split out of Rails' single cache_sql"
+status: claimed
+updated: 2026-08-25
+rfc: "0119-connection-adapter-fidelity"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 60
+priority: null
+pr: null
+claim: "2026-08-25T15:54:32Z"
+assignee: "converge-association-check-klass-onto-reflection-check-validity"
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Rails' `cache_sql` (`vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb`, `def cache_sql(sql, name, binds)`) is a single method that does four things inside one `@lock.synchronize`: computes the key, calls `@query_cache.compute_if_absent` with a bare `yield` for the miss path, instruments `sql.active_record` with `cache_notification_info_result` on the _hit_ path, and returns `result.dup`.
+
+trails splits this across two functions in `packages/activerecord/src/connection-adapters/abstract/query-cache.ts`:
+
+- `lookupSqlCache(sql, name, binds)` — synchronous, does the hit lookup **and** owns the hit-path `Notifications.instrument` call.
+- `cacheSql(sql, name, binds, block)` — async, only handles the miss path (`qc.computeIfAbsent(key, block)`), plus a `if (!qc) return block()` guard Rails has no analogue for. It emits no instrumentation and does no `.dup` (the copy happens inside `Store.computeIfAbsent`'s row spread).
+
+The split is deliberate and has an in-file rationale (`query-cache.ts` ~line 496-514): the caller must not `await` between the lookup and the miss-execute, so the hit path was pulled into a sync function. It is nonetheless a shape deviation from Rails, and neither the `@lock.synchronize` nor `result.dup` has a direct counterpart.
+
+Surfaced during PR #5633 (story `arity-cache-sql-ported-block-param`), which only renamed the trailing block param and did not touch the split.
+
+## Acceptance criteria
+
+- `cacheSql` absorbs the hit path, the instrumentation and the result copy, so
+  it is Rails' single `cache_sql` (`abstract/query_cache.rb`). `lookupSqlCache`
+  either disappears or becomes a pure lookup with no notification side effect.
+- Callers in `query-cache.ts` updated; `query-cache.test.ts` and
+  `query-cache.trails.test.ts` stay green.
+- If the split cannot be removed, the blocker is the documented no-`await`
+  invariant between `lookupSqlCache` and `cacheSql` (query-cache.ts:514-523).
+  Establish whether that invariant genuinely forces two functions; if it does,
+  `pnpm tasks block` this story naming it. Do NOT close by rewording the
+  existing rationale comment — a better justification is not convergence.

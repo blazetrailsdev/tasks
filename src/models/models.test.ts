@@ -52,9 +52,7 @@ describe("models", () => {
   it("walks hasMany paths", async () => {
     const s = await Story.findBy({ id: "dependent" });
     const paths = await s!.paths.toArray();
-    expect(paths.map((p) => p.path)).toEqual([
-      "packages/activerecord/src/relation.ts",
-    ]);
+    expect(paths.map((p) => p.path)).toEqual(["packages/activerecord/src/relation.ts"]);
   });
 
   it("resolves the atomic claim by affected-row count", async () => {

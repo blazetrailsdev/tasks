@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm validate
+      - name: index builds + index.md up-to-date
+        run: |
+          # Smoke: a malformed story makes build-index throw. index.json /
+          # search.json are gitignored caches (not diffed); only index.md
+          # (the tracked human registry) must be fresh.
+          pnpm build-index
+          git diff --exit-code index.md || {
+            echo "::error::committed index.md is stale — run 'pnpm build-index' locally and recommit" >&2
+            exit 1
+          }

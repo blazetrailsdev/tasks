@@ -1,0 +1,38 @@
+---
+title: "habtm: namespaced/symbol className resolution"
+status: done
+updated: 2026-06-23
+rfc: "0030-ar-test-compare-residual-burndown"
+cluster: associations
+deps: []
+deps-rfc: []
+est-loc: 100
+priority: 30
+pr: 3936
+claim: "2026-06-22T22:51:16Z"
+assignee: "habtm-namespaced-classname"
+blocked-by: null
+---
+
+## Context
+
+Part of RFC 0030 parity:test residual burndown, split out of `a4-habtm-join-aliasing`.
+Four HABTM tests in
+`packages/activerecord/src/associations/has-and-belongs-to-many-associations.test.ts`
+need className resolution work the aliasing fix did not cover:
+
+- `has and belongs to many in a namespaced model pointing to a namespaced model` (~1208)
+- `has and belongs to many in a namespaced model pointing to a non namespaced model` (~1214)
+- `habtm with reflection using class name and fixtures` (~1248)
+- `with symbol class name` (~1254)
+
+ROOT-CAUSE (from skip tags): className resolution for namespaced models
+(e.g. "MyModule::Project") and cross-namespace (namespaced owner → top-level target)
+not handled in habtm lookup; the reflection/fixtures variants depend on the same
+resolution path. Fix in `associations/builder/has-and-belongs-to-many.ts` className
+resolution (and the join-model registry key).
+
+## Acceptance criteria
+
+- [x] All four tests un-skipped and green against canonical SQLite (and PG/MySQL per gate).
+- [x] No new gate-mismatches for this file.

@@ -14,13 +14,7 @@
  * every dep resolved). Conflating them would hand agents unclaimable stories.
  */
 export type StoryStatus =
-  | "draft"
-  | "ready"
-  | "claimed"
-  | "in-progress"
-  | "done"
-  | "blocked"
-  | "closed";
+  "draft" | "ready" | "claimed" | "in-progress" | "done" | "blocked" | "closed";
 export type RfcStatus = "draft" | "active" | "closed" | "postponed" | "superseded";
 export const STORY_STATUSES: readonly StoryStatus[] = [
   "draft",
@@ -285,7 +279,6 @@ export function formatEmptyBundle(
     ? `no ready stories${scope}`
     : `no ready stories${scope} within ${maxLoc} LOC`;
 }
-
 
 // ── list / touching / convergence / churn formatting (cli.ts:613-708, 729-789) ──
 export function listFiltered(

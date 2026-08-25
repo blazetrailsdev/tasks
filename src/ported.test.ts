@@ -36,7 +36,6 @@ import {
 } from "./ranking.js";
 import { editFrontmatter, removeFrontmatterKey, setFrontmatterList } from "./frontmatter.js";
 
-
 function story(over: Partial<StoryEntry>): StoryEntry {
   return {
     id: "x",

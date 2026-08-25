@@ -1,0 +1,54 @@
+---
+title: "Converge MySQL/MariaDB adapter DDL tests to ride one-schema"
+status: done
+updated: 2026-06-30
+rfc: "0048-one-schema-no-drop-tests"
+cluster: "rails-deviation"
+deps: []
+deps-rfc: []
+est-loc: 450
+priority: 5
+pr: 4330
+claim: "2026-06-30T16:08:43Z"
+assignee: "converge-mysql-adapter-ddl-one-schema"
+blocked-by: null
+---
+
+## Context
+
+Per the RFC 0048 re-spec (2026-06-30), this story is a **faithful Rails test
+port**, not a canonical-table rename. The earlier framing ("ride canonical
+`TEST_SCHEMA`, match table/column names") let agents satisfy the letter with
+shallow find-replace renames while keeping trails-invented test names and
+assertions. That is rejected. Read the **Convergence contract** in the RFC 0048
+README before starting — it is binding on this story.
+
+Drop all `AR_ONE_SCHEMA` / `one-schema-exclude.json` framing: the no-`DROP TABLE`
+performance mechanism moved to RFC `0000-one-schema-no-drop-perf`. This story is
+fidelity-only.
+
+## Acceptance criteria
+
+- [ ] For each file below, the trails test mirrors its named Rails source
+      **word-for-word as closely as TS allows**: same `describe`/`it` names,
+      same setup/fixtures, same assertions. Test names are how `parity:test`
+      maps to Rails — never invent or reword them.
+- [ ] Ride canonical `TEST_SCHEMA` + official `test-helpers/models/*` + real
+      fixtures only. No bespoke tables, no invented columns, and **no
+      `_tableName` hack** to paint a canonical name onto a bespoke suite. If the
+      canonical schema lacks something Rails' schema.rb has, add it to
+      `TEST_SCHEMA`.
+- [ ] Where a faithful port surfaces a trails impl gap, fix the impl to match
+      Rails or file a deviation under `0023-surfaced-deviations` and mark the
+      case tracked-pending-convergence. Do not bend the test to pass; a
+      temporary `parity:test` regression is acceptable (record the un-skip).
+- [ ] Confirm against the Rails source, not prior trails behavior. Split across
+      PRs by file under the 500-LOC ceiling; each file converts all-or-nothing.
+
+### Files → Rails source
+
+- `packages/activerecord/src/adapters/mysql2/mysql2-adapter.test.ts` → mirror `vendor/rails/activerecord/test/cases/adapters/mysql2/mysql2_adapter_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
+- `packages/activerecord/src/connection-adapters/mysql2-adapter.test.ts` → mirror `vendor/rails/activerecord/test/cases/connection_adapters/mysql2_adapter_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
+- `packages/activerecord/src/adapters/abstract-mysql-adapter/schema.test.ts` → mirror `vendor/rails/activerecord/test/cases/adapters/abstract_mysql_adapter/schema_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
+- `packages/activerecord/src/adapters/abstract-mysql-adapter/schema-migrations.test.ts` → mirror `vendor/rails/activerecord/test/cases/adapters/abstract_mysql_adapter/schema_migrations_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)
+- `packages/activerecord/src/adapters/abstract-mysql-adapter/adapter-prevent-writes.test.ts` → mirror `vendor/rails/activerecord/test/cases/adapters/abstract_mysql_adapter/adapter_prevent_writes_test.rb` (confirm it exists; if no 1:1 Rails file, the trails file is bespoke — delete it and port the Rails test cases that cover this behavior)

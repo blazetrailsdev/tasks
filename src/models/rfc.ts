@@ -17,6 +17,11 @@ export class Rfc extends Base {
   declare superseded_by: string | null;
   declare priority: number | null;
   declare file_path: string | null;
+  declare created_on: string | null;
+  declare updated_on: string | null;
+  declare packages: string | null; // JSON array
+  declare clusters: string | null; // JSON array
+  declare related_rfcs: string | null; // JSON array
   declare stories: AssociationProxy<Story>;
 
   declare isActive: () => boolean;

@@ -1,0 +1,40 @@
+---
+title: "activesupport: port remaining Cache::Coder surface + SerializerWithFallback"
+status: done
+updated: 2026-06-19
+rfc: "0023-surfaced-deviations"
+cluster: null
+deps: []
+deps-rfc: []
+est-loc: 200
+priority: null
+pr: 3661
+claim: "2026-06-19T17:24:31Z"
+assignee: "cache-coder-full-surface-serializer-fallback"
+blocked-by: null
+---
+
+## Context
+
+`cache-serialization-marshal-vs-json` (PR #3648) implemented the fidelity
+`dump`/`load` core but only the minimal surface. `parity:api` shows
+`cache/coder.ts` at 2/9 and `cache/serializer_with_fallback.ts` at 0/7.
+
+Rails' `Cache::Coder` (vendor/rails/activesupport/lib/active_support/cache/coder.rb)
+additionally provides: `dump_compressed(entry, threshold)`, the binary signature
+framing (SIGNATURE, type/expires_at/version_length packing), `LazyEntry`
+(lazy deserialize/decompress), string-encoding fast paths, and version packing.
+`cache/serializer_with_fallback.rb` (the multi-format loader with graceful
+fallback on unrecognized payloads) is still a stub —
+`serializer-with-fallback.test.ts` is entirely `it.skip`.
+
+## Acceptance criteria
+
+- [x] Port the remaining `Cache::Coder` surface (dump_compressed, LazyEntry,
+      signature/version framing) atop the fidelity serializer, or document the
+      portions that are deliberately N/A for the trails (non-Ruby-wire) format.
+      Done in PR #3661 (cache/coder.ts parity:api 2/9 → 9/9).
+- [x] Implement `SerializerWithFallback` and un-skip its tests, or convert the
+      skips to real coverage matching the Rails test names. Split out to stay
+      under the 500-LOC ceiling and tracked by the follow-up story
+      `cache-serializer-with-fallback-port`.

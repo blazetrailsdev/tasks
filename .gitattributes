@@ -1,0 +1,14 @@
+# Auto-generated indices (rebuilt by scripts/build-index.mjs on every commit).
+# Suppress diff noise in PR review without breaking merges or the CI staleness
+# check (`git diff --exit-code` still detects changes under `-diff`).
+#
+# index.json / search.json: large machine blobs — render as "binary" on GitHub
+# (-diff) and mark generated (collapsed + excluded from language stats).
+# index.md: small human-readable RFC registry — keep diffable/loadable, just
+# flag as generated so PRs collapse it by default.
+#
+# NOTE: `-diff`, NOT the `binary` macro — `binary` also sets `-merge`, which
+# would turn every concurrent index change into a manual merge conflict.
+index.json  -diff linguist-generated
+search.json -diff linguist-generated
+index.md    linguist-generated
