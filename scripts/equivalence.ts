@@ -60,8 +60,10 @@ function compare(
 
   const dbById = new Map(dbRows.map((r) => [String(r.id), r]));
   const gitById = new Map(gitRows.map((r) => [String(r.id), r]));
-  for (const id of gitById.keys()) if (!dbById.has(id)) problems.push(`${label}: missing in db: ${id}`);
-  for (const id of dbById.keys()) if (!gitById.has(id)) problems.push(`${label}: extra in db: ${id}`);
+  for (const id of gitById.keys())
+    if (!dbById.has(id)) problems.push(`${label}: missing in db: ${id}`);
+  for (const id of dbById.keys())
+    if (!gitById.has(id)) problems.push(`${label}: extra in db: ${id}`);
 
   let mismatched = 0;
   for (const [id, gitRow] of gitById) {
@@ -70,7 +72,8 @@ function compare(
     const fields = diffRow(gitRow, dbRow, keys);
     if (fields.length) {
       mismatched++;
-      if (problems.length < MAX_REPORT) problems.push(`${label} ${id}\n    ${fields.join("\n    ")}`);
+      if (problems.length < MAX_REPORT)
+        problems.push(`${label} ${id}\n    ${fields.join("\n    ")}`);
     }
   }
   if (mismatched) problems.push(`${label}: ${mismatched}/${gitById.size} rows differ`);

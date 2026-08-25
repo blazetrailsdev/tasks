@@ -113,6 +113,11 @@ export async function exportState(
   if (!git(["diff", "--cached", "--name-only"])) {
     return { changed, committed: false, sha: null };
   }
-  git(["commit", "-q", "-m", `state: sync ${changed.length} stor${changed.length === 1 ? "y" : "ies"}`]);
+  git([
+    "commit",
+    "-q",
+    "-m",
+    `state: sync ${changed.length} stor${changed.length === 1 ? "y" : "ies"}`,
+  ]);
   return { changed, committed: true, sha: git(["rev-parse", "HEAD"]) };
 }

@@ -27,7 +27,16 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Base } from "@blazetrails/activerecord";
 import { parse as parseYaml } from "yaml";
-import { Event, Meta, Rfc, Story, StoryDep, StoryPackage, StoryPath, StoryRfcDep } from "./models/index.js";
+import {
+  Event,
+  Meta,
+  Rfc,
+  Story,
+  StoryDep,
+  StoryPackage,
+  StoryPath,
+  StoryRfcDep,
+} from "./models/index.js";
 import { headSha, resolveTasksDir } from "./db-path.js";
 // @ts-expect-error — ported JS module, no type declarations
 import { extractStoryPaths, RFC_DIR_RE } from "../scripts/lib.mjs";
@@ -102,11 +111,19 @@ function changedPaths(tasksDir: string, from: string | null, to: string): string
   const args = from
     ? ["diff", "--name-only", `${from}..${to}`, "--", "rfcs/"]
     : ["ls-tree", "-r", "--name-only", to, "--", "rfcs/"];
-  const out = execFileSync("git", args, { cwd: tasksDir, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+  const out = execFileSync("git", args, {
+    cwd: tasksDir,
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+  });
   return out.split("\n").filter(Boolean);
 }
 
-async function replaceJoins(storyId: string, fm: Record<string, unknown>, body: string): Promise<void> {
+async function replaceJoins(
+  storyId: string,
+  fm: Record<string, unknown>,
+  body: string,
+): Promise<void> {
   await StoryDep.where({ story_id: storyId }).deleteAll();
   await StoryRfcDep.where({ story_id: storyId }).deleteAll();
   await StoryPackage.where({ story_id: storyId }).deleteAll();
@@ -173,7 +190,12 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
           await StoryPackage.where({ story_id: storyId }).deleteAll();
           await StoryPath.where({ story_id: storyId }).deleteAll();
           await Story.where({ id: storyId }).deleteAll();
-          await Event.create({ at: new Date().toISOString(), verb: "delete", story_id: storyId, rfc_id: rfcId });
+          await Event.create({
+            at: new Date().toISOString(),
+            verb: "delete",
+            story_id: storyId,
+            rfc_id: rfcId,
+          });
           result.deleted++;
         }
         continue;
@@ -212,7 +234,12 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
           closed_reason: str(fm["closed-reason"]),
           updated_on: new Date().toISOString().slice(0, 10),
         });
-        await Event.create({ at: new Date().toISOString(), verb: "new", story_id: storyId, rfc_id: rfcId });
+        await Event.create({
+          at: new Date().toISOString(),
+          verb: "new",
+          story_id: storyId,
+          rfc_id: rfcId,
+        });
         result.created++;
       }
       await replaceJoins(storyId, fm, body);

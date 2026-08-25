@@ -33,9 +33,7 @@ async function main(): Promise<void> {
   // markdown reader, for a fresh one every time.
   execFileSync("node", ["scripts/build-index.mjs"], { cwd: process.cwd(), stdio: "ignore" });
 
-  const gitIndex = JSON.parse(
-    readFileSync(join(process.cwd(), "index.json"), "utf8"),
-  ) as Index;
+  const gitIndex = JSON.parse(readFileSync(join(process.cwd(), "index.json"), "utf8")) as Index;
 
   await Base.establishConnection(config[ENV]);
   const dbIndex = (await buildIndex()) as unknown as Index;

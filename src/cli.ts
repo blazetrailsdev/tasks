@@ -81,7 +81,8 @@ function parseArgs(argv: string[]): { cmd: string; pos: string[]; flags: Flags }
   return { cmd, pos, flags };
 }
 
-const str = (f: Flags, k: string): string | null => (typeof f[k] === "string" ? (f[k] as string) : null);
+const str = (f: Flags, k: string): string | null =>
+  typeof f[k] === "string" ? (f[k] as string) : null;
 const num = (f: Flags, k: string): number | null => {
   const v = str(f, k);
   return v === null ? null : Number.isFinite(Number(v)) ? Number(v) : null;
@@ -144,7 +145,9 @@ async function main(): Promise<number> {
         return 0;
       }
       const { total, leadExceedsBudget } = summarizeBundle(rows, maxLoc);
-      console.log(`${rows.length} stories, ${total} loc${leadExceedsBudget ? " (over budget)" : ""}`);
+      console.log(
+        `${rows.length} stories, ${total} loc${leadExceedsBudget ? " (over budget)" : ""}`,
+      );
       for (const s of rows) console.log(row(s));
       return 0;
     }

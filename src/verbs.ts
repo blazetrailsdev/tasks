@@ -215,7 +215,9 @@ export async function setPriority(id: string, priority: number | null): Promise<
     const [s] = await findAll([id]);
     requireFound([id], s ? [s] : []);
     await Story.where({ id }).updateAll({ priority, updated_on: today() });
-    await record("priority", id, { detail: { arg: priority === null ? "(clear)" : String(priority) } });
+    await record("priority", id, {
+      detail: { arg: priority === null ? "(clear)" : String(priority) },
+    });
     console.log(`priority ${priority === null ? "(clear)" : priority}: ${id}`);
   });
 }
