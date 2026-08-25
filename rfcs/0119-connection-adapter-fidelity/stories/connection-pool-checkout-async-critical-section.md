@@ -1,6 +1,6 @@
 ---
 title: "connection-pool-checkout-async-critical-section"
-status: ready
+status: done
 updated: 2026-08-25
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7060
+claim: "2026-08-25T18:47:56Z"
+assignee: "converge-association-check-klass-onto-reflection-check-validity"
 blocked-by: null
 closed-reason: null
 ---

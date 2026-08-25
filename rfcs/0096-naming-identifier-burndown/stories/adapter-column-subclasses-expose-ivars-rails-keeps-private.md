@@ -1,6 +1,6 @@
 ---
 title: "PG Column#generated and SQLite3 Column#autoIncrement are public where Rails keeps ivars behind predicates"
-status: ready
+status: done
 updated: 2026-08-25
 rfc: "0096-naming-identifier-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7058
+claim: "2026-08-25T17:43:38Z"
+assignee: "adapter-column-subclasses-expose-ivars-rails-keeps-private"
 blocked-by: null
 closed-reason: null
 ---

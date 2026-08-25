@@ -21,6 +21,7 @@ import { execFileSync } from "node:child_process";
 import { Base } from "@blazetrails/activerecord";
 import config from "../config/database.js";
 import { migrate } from "../src/migrator.js";
+import { publishReadModels } from "../src/db.js";
 import {
   Event,
   Meta,
@@ -408,6 +409,15 @@ async function main(): Promise<void> {
   const head = execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
   await Meta.set("last_ingested_sha", head);
   console.log(`watermark last_ingested_sha=${head.slice(0, 9)}`);
+
+  // Republish index.json AND events.json from the freshly loaded DB.
+  //
+  // Skipping this leaves the read-models stale, and the failure is quiet: the
+  // charts keep rendering, just from whatever events.json happened to be on
+  // disk. It bit exactly once — a final cutover import left events.json 131
+  // rows behind, which showed up only as an unexplained gap in a parity check.
+  await publishReadModels();
+  console.log("republished index.json + events.json");
 }
 
 await main();
