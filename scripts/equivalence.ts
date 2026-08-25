@@ -14,6 +14,7 @@
  * Reports the first N differing fields rather than a boolean, because "which
  * field drifted" is the only useful output when it fails.
  */
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Base } from "@blazetrails/activerecord";
@@ -77,6 +78,13 @@ function compare(
 }
 
 async function main(): Promise<void> {
+  // REBUILD the git-derived index first. Every mutation republishes index.json
+  // FROM THE DATABASE (db.ts publishReadModels), so whatever sits on disk is
+  // normally the DB's own output — reading it without rebuilding turns this
+  // into a DB-vs-DB self-comparison that CANNOT FAIL. Ask build-index.mjs, the
+  // markdown reader, for a fresh one every time.
+  execFileSync("node", ["scripts/build-index.mjs"], { cwd: process.cwd(), stdio: "ignore" });
+
   const gitIndexPath = join(process.cwd(), "index.json");
   const gitIndex = JSON.parse(readFileSync(gitIndexPath, "utf8")) as {
     rfcs: Row[];

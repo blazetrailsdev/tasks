@@ -30,7 +30,7 @@ import { parse as parseYaml } from "yaml";
 import { Event, Meta, Rfc, Story, StoryDep, StoryPackage, StoryPath, StoryRfcDep } from "./models/index.js";
 import { headSha, resolveTasksDir } from "./db-path.js";
 // @ts-expect-error — ported JS module, no type declarations
-import { extractStoryPaths } from "../scripts/lib.mjs";
+import { extractStoryPaths, RFC_DIR_RE } from "../scripts/lib.mjs";
 
 export const MARKDOWN_OWNED = [
   "title",
@@ -84,6 +84,14 @@ function str(v: unknown): string | null {
 }
 function int(v: unknown): number | null {
   return Number.isInteger(v) ? (v as number) : null;
+}
+
+/**
+ * Shares lib.mjs's RFC_DIR_RE rather than restating it: the exclusion list is
+ * exactly the kind of rule that drifts when copied.
+ */
+function isRealRfcDir(dir: string): boolean {
+  return (RFC_DIR_RE as RegExp).test(dir);
 }
 
 /** Story files live at rfcs/<rfc>/stories/<id>.md. */
@@ -141,7 +149,7 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   await Base.transaction(async () => {
     for (const rel of paths) {
       const rfcMatch = RFC_PATH.exec(rel);
-      if (rfcMatch) {
+      if (rfcMatch && isRealRfcDir(rfcMatch[1])) {
         await ingestRfc(tasksDir, rel, rfcMatch[1]);
         result.rfcsTouched++;
         continue;
@@ -149,6 +157,11 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
       const storyMatch = STORY_PATH.exec(rel);
       if (!storyMatch) continue;
       const [, rfcId, storyId] = storyMatch;
+      // Apply build-index.mjs's own directory filter, which excludes
+      // `0000-template/` — the literal copy-this starter, not a real RFC.
+      // Without it ingest creates a phantom `template-story` row that no
+      // markdown-derived index contains, and the two silently drift.
+      if (!isRealRfcDir(rfcId)) continue;
       const abs = join(tasksDir, rel);
 
       if (!existsSync(abs)) {

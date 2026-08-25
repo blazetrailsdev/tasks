@@ -21,7 +21,7 @@ export const RFCS_ROOT = join(REPO_ROOT, "rfcs");
 // `finalize-rfc.mjs` swaps `0000` for the assigned number (`0000-slug` →
 // `NNNN-slug`) at merge time. Legacy `draft-slug` is still accepted so any
 // in-flight pre-convention PR keeps working until it finalizes.
-const RFC_DIR_RE = /^(?!0000-template$)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
+export const RFC_DIR_RE = /^(?!0000-template$)(?:\d{4}|draft)-[a-z0-9][a-z0-9-]*$/;
 const STORY_FILE_RE = /^[a-z0-9][a-z0-9-]*\.md$/;
 
 export const RFC_STATUSES = ["draft", "active", "closed", "postponed", "superseded"];

@@ -7,7 +7,7 @@ cluster: cluster-name-1
 packages: [] # optional subset of the parent RFC's packages; empty inherits the RFC's list
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 5
 priority: null # optional integer; LOWER = higher ready-queue priority (absent = unprioritized)
 pr: null
 claim: null
