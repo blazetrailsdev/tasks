@@ -1,6 +1,6 @@
 ---
 title: "Retire the PostgreSQL clear_cache! override — Rails has no adapter override"
-status: ready
+status: claimed
 updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-25T23:35:45Z"
+assignee: "abstract-statements-field-typed-structurally"
 blocked-by: null
 closed-reason: null
 ---

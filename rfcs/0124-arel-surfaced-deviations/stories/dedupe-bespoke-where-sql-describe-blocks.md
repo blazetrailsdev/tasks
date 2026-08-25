@@ -1,6 +1,6 @@
 ---
 title: "Remove bespoke duplicate where_sql describe blocks in select-manager.test.ts"
-status: ready
+status: claimed
 updated: 2026-08-25
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-25T23:38:27Z"
+assignee: "attribute-type-caster-delegations-cast-name-to-string"
 blocked-by: null
 closed-reason: null
 ---
