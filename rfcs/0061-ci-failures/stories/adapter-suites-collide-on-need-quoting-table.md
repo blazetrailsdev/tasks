@@ -6,7 +6,7 @@ rfc: "0061-ci-failures"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 123
+est-loc: 50
 priority: null
 pr: 4593
 claim: "2026-07-27T18:29:56Z"
