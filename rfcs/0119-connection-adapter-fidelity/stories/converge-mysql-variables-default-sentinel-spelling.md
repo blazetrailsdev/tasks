@@ -1,5 +1,5 @@
 ---
-title: "converge-mysql-variables-default-sentinel-spelling"
+title: "Accept only Rails' \":default\" sentinel for MySQL session variables"
 status: draft
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
