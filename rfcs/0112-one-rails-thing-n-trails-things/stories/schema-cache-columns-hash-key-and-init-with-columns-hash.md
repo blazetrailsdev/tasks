@@ -1,5 +1,5 @@
 ---
-title: "columns_hash skips deep_deduplicate on its key and init_with drops coder[\"columns_hash\"]"
+title: 'columns_hash skips deep_deduplicate on its key and init_with drops coder["columns_hash"]'
 status: draft
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
@@ -38,7 +38,7 @@ onto `deep_deduplicate` (`schema_cache.rb:440-446`, `:367`). Two smaller
 
 2. **`initWith` drops `coder["columns_hash"]`.** Rails' `init_with`
    (`schema_cache.rb:281-292`) reads all five members, `@columns_hash =
-   coder["columns_hash"]` among them, before the `unless coder["deduplicated"]`
+coder["columns_hash"]` among them, before the `unless coder["deduplicated"]`
    guard. trails reads `columns`, `primary_keys`, `data_sources`, `indexes` and
    `version` but never `columns_hash`, so a dump that declares itself
    `deduplicated` loads with an empty `_columnsHash` — the derive step that

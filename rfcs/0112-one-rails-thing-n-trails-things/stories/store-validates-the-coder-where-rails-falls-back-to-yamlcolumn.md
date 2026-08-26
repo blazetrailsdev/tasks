@@ -35,7 +35,7 @@ if (
 Rails has no such guard. `ClassMethods#store` (`store.rb:105-109`) is three
 lines — `build_column_serializer`, then `serialize store_attribute, coder:
 IndifferentCoder.new(store_attribute, coder)` — and the respond_to? test lives
-inside `IndifferentCoder#initialize` (`store.rb:265-271`) as a *fallback*, not a
+inside `IndifferentCoder#initialize` (`store.rb:265-271`) as a _fallback_, not a
 raise:
 
 ```ruby
@@ -49,7 +49,7 @@ def initialize(attr_name, coder_or_class_name)
 end
 ```
 
-So Rails treats a non-coder argument as a *class name for YAMLColumn* —
+So Rails treats a non-coder argument as a _class name for YAMLColumn_ —
 `store :settings, coder: SomeClass` is a supported spelling — where trails
 raises `ConfigurationError` on the same input. The invented raise both adds
 surface Rails does not have and rejects a working Rails API.
