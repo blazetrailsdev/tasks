@@ -44,7 +44,19 @@ function main(): void {
 
   let diff: string;
   try {
-    diff = git(["diff", "-U0", base, "HEAD", "--", "rfcs/"]);
+    // --diff-filter=M: MODIFICATIONS ONLY.
+    //
+    // A newly added story is entirely added lines, and the template ships
+    // `status:`, `pr:`, `claim:`, `assignee:`, `blocked-by:` and
+    // `closed-reason:` — all of them. Those are birth seeds: ingest honors
+    // frontmatter status ON INSERT, so authoring them in a new file is correct
+    // and required. Without this filter the guard fired on every new RFC (11
+    // files, ~60 lines, all legitimate) while catching nothing real.
+    //
+    // The violation this exists to stop is narrower: changing a DB-owned field
+    // on a story that ALREADY EXISTS, where ingest ignores the edit and the PR
+    // merges having done nothing.
+    diff = git(["diff", "-U0", "--diff-filter=M", base, "HEAD", "--", "rfcs/"]);
   } catch (e) {
     console.error(`could not diff against ${base}: ${(e as Error).message}`);
     process.exit(0); // Don't fail the build on a diff we can't compute.
