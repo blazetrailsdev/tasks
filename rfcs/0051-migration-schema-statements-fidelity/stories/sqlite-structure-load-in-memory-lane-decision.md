@@ -68,7 +68,7 @@ drifted into:
    documented, permanent trails extension for a lane Rails does not have,
    with a `@noRailsEquivalent PERMANENT` receipt. Note CLAUDE.md: a
    deviation story does not close by writing a better justification — so
-   choosing this means the *lane* is the ratified thing, and that argument
+   choosing this means the _lane_ is the ratified thing, and that argument
    has to be made on its own merits, not as a way to retire this story.
 3. **Drop the in-memory lane from the CLI surface entirely**, so the config
    never reaches a task class. Largest blast radius; check what depends on

@@ -46,7 +46,7 @@ rather than feeding it to the sqlite3 shell:
 
 - Rails orders `ORDER BY tbl_name, type DESC, name`; the fallback orders by a
   bespoke `CASE type WHEN 'table' THEN 0 WHEN 'view' THEN 1 WHEN 'index' THEN 2
-  WHEN 'trigger' THEN 3 ELSE 4 END` first, because `db.exec` applies statements
+WHEN 'trigger' THEN 3 ELSE 4 END` first, because `db.exec` applies statements
   strictly in order where the shell resolves forward-referenced triggers lazily.
 - Rails' `.schema --nosys` omits SQLite internals implicitly; the fallback adds
   `AND name NOT LIKE 'sqlite_%'` by hand, or it would emit reserved-name CREATE
@@ -91,8 +91,8 @@ needs.
 - [ ] `packages/trailties/src/commands/db.test.ts`'s "db schema:dump
       --format=sql works against ':memory:' sqlite" still passes — it is the
       test that caught the unconditional shell-out in #6231.
-- [ ] The in-memory *dump* test in `sqlite-database-tasks.test.ts` still passes
+- [ ] The in-memory _dump_ test in `sqlite-database-tasks.test.ts` still passes
       or is replaced by an equivalent on the converged path. The in-memory
-      *load* test is untouched.
+      _load_ test is untouched.
 - [ ] The temp file is removed after the dump, including on failure.
 - [ ] Green on sqlite (file lane) and `sqlite3_mem`.
