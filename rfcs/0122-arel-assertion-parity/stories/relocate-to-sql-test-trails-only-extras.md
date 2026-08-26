@@ -1,7 +1,7 @@
 ---
 title: "Relocate to-sql.test.ts's trails-only extras to to-sql.trails.test.ts"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7065
+claim: "2026-08-26T00:03:39Z"
+assignee: "db-warnings-log-arm-console-fallback"
 blocked-by: null
 closed-reason: null
 ---

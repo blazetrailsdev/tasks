@@ -1,7 +1,7 @@
 ---
 title: "Store a SelectManager in Cte.relation so visit_Arel_Nodes_Cte drops its invented paren branch"
-status: claimed
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7064
 claim: "2026-08-25T23:38:27Z"
 assignee: "attribute-type-caster-delegations-cast-name-to-string"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "BoundSqlLiteral defaults its bind collections where Rails requires them and passes nil"
-status: claimed
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7064
 claim: "2026-08-25T23:38:27Z"
 assignee: "attribute-type-caster-delegations-cast-name-to-string"
 blocked-by: null

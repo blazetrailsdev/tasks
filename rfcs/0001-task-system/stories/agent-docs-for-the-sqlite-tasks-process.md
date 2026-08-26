@@ -1,7 +1,7 @@
 ---
 title: "Update agent-facing docs and skills for the SQLite tasks process"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0001-task-system"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T00:23:02Z"
+assignee: "agent-docs-for-the-sqlite-tasks-process"
 blocked-by: null
 closed-reason: null
 ---

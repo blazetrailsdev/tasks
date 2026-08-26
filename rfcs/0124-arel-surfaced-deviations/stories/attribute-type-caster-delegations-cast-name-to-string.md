@@ -1,7 +1,7 @@
 ---
 title: "Attribute's type-caster delegations cast name back to string; Rails passes it untyped"
-status: claimed
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7064
 claim: "2026-08-25T23:38:27Z"
 assignee: "attribute-type-caster-delegations-cast-name-to-string"
 blocked-by: null

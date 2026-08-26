@@ -1,7 +1,7 @@
 ---
 title: "validates_uniqueness_of is _merge_attributes + validates_with, with no third call"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7065
+claim: "2026-08-26T00:03:39Z"
+assignee: "db-warnings-log-arm-console-fallback"
 blocked-by: null
 closed-reason: null
 ---

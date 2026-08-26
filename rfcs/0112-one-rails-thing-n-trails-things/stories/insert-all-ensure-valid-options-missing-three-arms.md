@@ -1,7 +1,7 @@
 ---
 title: "InsertAll#ensure_valid_options_for_connection! ports only 1 of Rails' 4 guards"
-status: claimed
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7063
 claim: "2026-08-25T23:35:45Z"
 assignee: "abstract-statements-field-typed-structurally"
 blocked-by: null
