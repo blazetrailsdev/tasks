@@ -69,7 +69,7 @@ Two deviations:
    separately-constructed type instances are not `===`; the Rails-faithful fix
    is for the type objects to answer `==` (`ActiveModel::Type::Value#==` is
    `self.class == other.class && precision == other.precision && scale ==
-   other.scale && limit == other.limit`,
+other.scale && limit == other.limit`,
    `activemodel/lib/active_model/type/value.rb:113-118`), not for the caller to
    compare constructors.
 
