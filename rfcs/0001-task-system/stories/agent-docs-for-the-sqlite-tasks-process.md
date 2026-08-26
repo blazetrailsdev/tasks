@@ -1,6 +1,6 @@
 ---
 title: "Update agent-facing docs and skills for the SQLite tasks process"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0001-task-system"
 cluster: null
