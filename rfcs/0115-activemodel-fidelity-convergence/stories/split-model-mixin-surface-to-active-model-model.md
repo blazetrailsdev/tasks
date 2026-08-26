@@ -1,6 +1,6 @@
 ---
 title: "split-model-mixin-surface-to-active-model-model"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

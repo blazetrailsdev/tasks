@@ -1,6 +1,6 @@
 ---
 title: "Arel.arel_node? is missing; its three arms are inlined as a bare instanceof Node"
-status: ready
+status: claimed
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T20:10:48Z"
+assignee: "arel-node-predicate-inlined-at-three-call-sites"
 blocked-by: null
 closed-reason: null
 ---
