@@ -1,6 +1,6 @@
 ---
 title: "Fragments inherits the generic Node eql/hash and has no initialize_copy"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7102
 claim: "2026-08-26T20:10:48Z"
 assignee: "arel-node-predicate-inlined-at-three-call-sites"
 blocked-by: null

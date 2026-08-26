@@ -1,6 +1,6 @@
 ---
 title: "relocate-active-record-shaped-mixins-off-active-model-model"
-status: draft
+status: blocked
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Umbrella, already decomposed — do not schedule as its own PR. Its own body says 'split it per mixin ... and file one story per mixin off this one rather than opening a stack', and those slices now exist and are ready: move-serialization-mixins-off-active-model-model (p1), move-attribute-mixins-off-active-model-model (p2), trim-active-model-model-to-api-and-access (p3), whose combined acceptance criteria are identical to this story's (model.ts at 0 novel / 0 moved, <=200 code lines). Premise re-verified against origin/main 2026-08-26: model.ts is 814 lines and still does include(Model, Serialization)/:728, include(Model, SerializersJSON)/:729, include(Model, AttributeMethods.InstanceMethods)/:702, include(Model, Attributes)/:709, include(Model, Dirty)/:743, extend(Model, ValidationsCallbacksClassMethods)/:758 — so the deviation is live, it is just owned by the three slices. Close this once the slices land rather than claiming it."
 closed-reason: null
 ---
 
