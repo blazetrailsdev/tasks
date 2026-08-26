@@ -1,6 +1,6 @@
 ---
 title: "FileHandler serves files itself instead of delegating to Rack::Files"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies

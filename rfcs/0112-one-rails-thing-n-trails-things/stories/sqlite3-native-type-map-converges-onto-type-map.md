@@ -1,6 +1,6 @@
 ---
 title: "Converge SQLite3's _nativeTypeMap/lookup_cast_type onto the inherited type_map path"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies

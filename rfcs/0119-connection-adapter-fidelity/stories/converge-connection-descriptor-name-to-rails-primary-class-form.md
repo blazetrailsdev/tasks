@@ -1,6 +1,6 @@
 ---
 title: 'ConnectionDescriptor#name is a plain field; Rails answers "ActiveRecord::Base" for a primary class'
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

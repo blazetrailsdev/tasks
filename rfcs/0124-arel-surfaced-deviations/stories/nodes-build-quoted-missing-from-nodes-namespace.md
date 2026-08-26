@@ -1,6 +1,6 @@
 ---
 title: "Nodes.buildQuoted is missing from the Nodes namespace re-export"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

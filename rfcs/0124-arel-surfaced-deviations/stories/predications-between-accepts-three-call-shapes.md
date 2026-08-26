@@ -1,6 +1,6 @@
 ---
 title: "between/notBetween take three call shapes where Rails takes one Range"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

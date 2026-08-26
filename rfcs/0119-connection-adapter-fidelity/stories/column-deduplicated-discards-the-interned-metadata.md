@@ -1,6 +1,6 @@
 ---
 title: "Column#deduplicated discards the interned sqlTypeMetadata, and SqlTypeMetadata#deduplicated never freezes"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
