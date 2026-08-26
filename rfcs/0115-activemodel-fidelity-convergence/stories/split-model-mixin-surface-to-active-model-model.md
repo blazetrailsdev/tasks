@@ -1,6 +1,6 @@
 ---
 title: "split-model-mixin-surface-to-active-model-model"
-status: ready
+status: claimed
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T15:58:10Z"
+assignee: "retire-virtual-attribute-reconciliation"
 blocked-by: null
 closed-reason: null
 ---

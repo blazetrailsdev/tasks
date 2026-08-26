@@ -1,6 +1,6 @@
 ---
 title: "Gate Closes-story citations at PR time, not after the merge"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
+pr: 7087
 claim: "2026-08-26T14:41:07Z"
 assignee: "gate-closing-story-citations-at-pr-time"
 blocked-by: null

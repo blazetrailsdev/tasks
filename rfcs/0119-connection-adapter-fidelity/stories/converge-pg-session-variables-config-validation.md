@@ -1,7 +1,7 @@
 ---
 title: "Drop the invented :variables config validation from PostgreSQLAdapter"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T15:41:47Z"
+assignee: "retire-explicit-target-and-loaded-from-preload-fields"
 blocked-by: null
 closed-reason: null
 ---

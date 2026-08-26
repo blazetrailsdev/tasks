@@ -1,6 +1,6 @@
 ---
 title: "Correct the pnpm validate, ingest-mitigation and story-authoring claims in CLAUDE.md"
-status: draft
+status: closed
 updated: 2026-08-26
 rfc: "0001-task-system"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "closed from dashboard"
 ---
 
 ## Context

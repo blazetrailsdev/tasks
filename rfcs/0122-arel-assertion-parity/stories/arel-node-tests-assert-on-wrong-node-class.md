@@ -1,7 +1,7 @@
 ---
 title: "arel node tests assert on the wrong node class (copy-pasted bodies)"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on origin/main: all 8 listed files now construct their own node class and mirror Rails' uniq.size shape via test-helpers/uniq.ts (landed in #7057 and #7079, a499ff3d8). e.g. nodes/count.test.ts:39-44 builds [new Nodes.Count('foo'), new Nodes.Count('foo!')] and asserts uniq(array).length === 2; same for sum/extract/grouping/comment/attributes/distinct/true. No remaining a.name !== b.name field probes or wrong-node bodies."
 ---
 
 ## Context

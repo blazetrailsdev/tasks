@@ -1,6 +1,6 @@
 ---
 title: "enroll-activesupport-in-unbacked-internal-receipt-lint"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0121-internal-tag-accounting"
 cluster: null

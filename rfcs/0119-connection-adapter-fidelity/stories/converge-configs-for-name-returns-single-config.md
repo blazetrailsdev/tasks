@@ -1,6 +1,6 @@
 ---
 title: "configs_for(name:) returns a single DatabaseConfig, not an array"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7087
 claim: "2026-08-26T14:41:07Z"
 assignee: "gate-closing-story-citations-at-pr-time"
 blocked-by: null

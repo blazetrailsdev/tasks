@@ -1,16 +1,16 @@
 ---
 title: "Retire model._associations in favour of the reflection registry"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: null
-claim: null
-assignee: null
+pr: 7089
+claim: "2026-08-26T15:11:44Z"
+assignee: "reference-definition-polymorphic-options-forwards-first-and-after"
 blocked-by: null
 closed-reason: null
 ---
