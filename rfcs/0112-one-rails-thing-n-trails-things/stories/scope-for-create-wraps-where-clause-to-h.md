@@ -1,16 +1,16 @@
 ---
 title: "scopeForCreate calls a trails-only _scopeAttributes wrapper where Rails inlines where_clause.to_h"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-pr: null
-claim: null
-assignee: null
+pr: 7077
+claim: "2026-08-26T12:15:01Z"
+assignee: "mysql-native-type-map-converges-onto-type-map"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SqlLiteral#eql must compare by SQL text, not Node#eql's serialized fields"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

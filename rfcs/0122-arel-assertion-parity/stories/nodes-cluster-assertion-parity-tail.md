@@ -1,7 +1,7 @@
 ---
 title: "nodes-cluster-assertion-parity-tail"
-status: ready
-updated: 2026-08-24
+status: claimed
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T12:44:26Z"
+assignee: "arel-assertion-residue-to-zero"
 blocked-by: null
 closed-reason: null
 ---

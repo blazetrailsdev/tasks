@@ -1,6 +1,6 @@
 ---
 title: "Retire the remaining _attributeDefinitions registry (user declarations live in the pending queue)"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
+pr: 7076
 claim: "2026-08-26T11:41:28Z"
 assignee: "retire-remaining-attribute-definitions-registry"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "arel hosts PostgreSQL::Utils.extract_schema_qualified_name (postgresql/utils.rb:60)"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

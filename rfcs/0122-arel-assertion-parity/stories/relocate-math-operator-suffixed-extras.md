@@ -1,7 +1,7 @@
 ---
 title: "relocate-math-operator-suffixed-extras"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: []

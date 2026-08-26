@@ -1,6 +1,6 @@
 ---
 title: "SelectCore#froms is a misplaced SelectManager method (arel/select_manager.rb:98)"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

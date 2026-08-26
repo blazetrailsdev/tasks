@@ -1,6 +1,6 @@
 ---
 title: "Type Attribute#name for the nil Table#[] accepts, dropping the Table#get cast"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

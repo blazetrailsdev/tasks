@@ -1,7 +1,7 @@
 ---
 title: "Port core_ext/time/calculations.rb onto the Time class, not free functions"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T12:44:08Z"
+assignee: "activesupport-core-ext-time-calculations-on-time-class"
 blocked-by: null
 closed-reason: null
 ---

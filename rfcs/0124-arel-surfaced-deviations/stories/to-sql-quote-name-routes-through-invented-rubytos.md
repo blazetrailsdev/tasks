@@ -1,6 +1,6 @@
 ---
 title: "ToSql#quoteTableName/quoteColumnName route the name through an invented rubyToS helper"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

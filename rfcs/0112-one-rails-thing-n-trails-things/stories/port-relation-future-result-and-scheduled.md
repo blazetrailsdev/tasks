@@ -1,16 +1,16 @@
 ---
 title: "Relation keeps promise bookkeeping where Rails keeps @future_result/scheduled?"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: null
-claim: null
-assignee: null
+pr: 6918
+claim: "2026-08-26T12:15:01Z"
+assignee: "mysql-native-type-map-converges-onto-type-map"
 blocked-by: null
 closed-reason: null
 ---
