@@ -363,6 +363,12 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
     clusters: JSON.stringify(fm.clusters ?? []),
     related_rfcs: JSON.stringify(fm["related-rfcs"] ?? []),
     file_path: rel,
+    // An RFC's dates are markdown-owned like the rest of its frontmatter, so
+    // they belong in the UPDATE too. They used to be set on insert only, which
+    // meant a README whose `updated:` moved never synced and the equivalence
+    // gate reported a permanent one-row difference.
+    created_on: str(fm.created)?.slice(0, 10) ?? null,
+    updated_on: str(fm.updated)?.slice(0, 10) ?? null,
   };
 
   const existing = await Rfc.findBy({ id: rfcId });
@@ -376,8 +382,6 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
       id: rfcId,
       ...fields,
       status: str(fm.status) ?? "draft",
-      created_on: str(fm.created)?.slice(0, 10) ?? null,
-      updated_on: str(fm.updated)?.slice(0, 10) ?? null,
     });
   }
 }
