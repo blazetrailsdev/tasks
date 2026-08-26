@@ -38,36 +38,43 @@ surface `ActiveRecord::Base` composes in Rails, hoisted onto `ActiveModel::Model
 every relocatable member body out of `model.ts`; what is left is the constructor,
 `dup`, `isPersisted`, `isAttributeMethod`, 156 lines of type-only `declare` /
 `interface Model` members, and the `include()` / `extend()` / `prepend()` calls.
-That story's original `0 moved` and `<= 200 code lines` criteria were re-scoped
-here, because neither moves by relocating bodies:
 
-- `extra-surface` scores a NAME against the allow-set `model.rb` + its Ruby
-  include chain builds. `model.ts`'s 61 `moved` names are exactly the mixins
-  above. They are counted whether spelled as a `declare static`, an
-  `interface Model extends Dirty`, or only as an `include(Model, Dirty)` call —
-  `include()` of a class module pushes the module onto the host's `extends`
-  (`scripts/api-compare/extract-ts-api.ts:1191-1227`), and interface-`extends`
-  members carry no `declaredIn`, so they are counted
-  (`extract-ts-api.ts:14-27`).
-- The type-only lines exist because TypeScript cannot type a runtime
-  `include(Model, X)` without a declaration. Deleting them does not shrink the
-  mixin set; it makes `Model.validates` untyped for every caller.
+`extra-surface` scores a NAME against the allow-set `model.rb` + its Ruby
+include chain builds, and `model.ts` scored 61 `moved` against it. That number
+was two populations, not one, and this story is the half that separates them:
 
-So both numbers are one question: should `ActiveModel::Model` carry the
-ActiveRecord-shaped mixin set at all, and if not, where does each mixin move —
-`ActiveRecord::Base`, or a documented trails host that `Base` extends?
+1. **The allow-set was not following `ActiveSupport::Concern`.** `include M`
+   where `M extend ActiveSupport::Concern` also runs `base.extend M::ClassMethods`
+   and the `included` block (activesupport/lib/active_support/concern.rb:139-143).
+   The static Ruby extractor files `M::ClassMethods` as a separate entity and
+   flattens `included do extend X end` into `M`'s `extends`, so neither reached
+   the host — `validates`, `validators`, `modelName`, `i18nScope`,
+   `humanAttributeName` and friends scored `moved` on a class whose Ruby
+   counterpart genuinely answers them. `ActiveModel::Callbacks.extended(base)`
+   (activemodel/lib/active_model/callbacks.rb:66-70) is the same blind spot one
+   level in, and it is what gives `Model` `run_callbacks` / `set_callback`.
+2. **The rest is the real deviation** — the ActiveRecord-shaped mixin set —
+   and it is tracked by
+   `relocate-active-record-shaped-mixins-off-active-model-model`, which carries
+   the full per-mixin inventory and the relocation targets. It is large: ~55
+   files under `packages/activemodel/src/**` declare `class X extends Model` and
+   read those members off the inherited surface, where Rails' activemodel tests
+   compose the mixins per test class.
 
 ## Acceptance criteria
 
-- A decision on `Model`'s mixin set, applied: each mixin trails' `Model`
-  includes that `ActiveModel::Model` does not either moves to the Rails host
-  that includes it, or is ratified once, centrally, with the reason.
-- `pnpm parity:api:extra --package activemodel` reports `model.ts` at
-  0 novel / 0 moved, and `model.ts` is <= 200 code lines.
-- The activemodel and activerecord suites stay green; parity deltas
-  non-negative; `pnpm parity:api:calls` / `:args` clean.
+- The extra-surface allow-set follows Ruby's `ActiveSupport::Concern` hook —
+  `M::ClassMethods` and the `included do extend X end` block reach the includer
+  — and the `self.extended` body of `ActiveModel::Callbacks`.
+- `model.ts`'s `moved` count falls to exactly the ActiveRecord-shaped mixin set,
+  with no `packages/**` change: the residue is the relocation, not a
+  measurement artifact.
+- The residue is filed as its own story with the per-mixin inventory and the
+  Rails host each mixin belongs to.
+- `pnpm parity:api:extra:gate` stays green (the marks narrow, never widen), and
+  parity deltas are non-negative.
 
 ## Definition of done
 
-`model.ts` reads as the port of `model.rb` + `api.rb` + `access.rb`, and nothing
-else.
+Every `moved` name left on `model.ts` is one trails' `Model` really mixes in and
+`ActiveModel::Model` really does not, and the work to relocate them is scheduled.
