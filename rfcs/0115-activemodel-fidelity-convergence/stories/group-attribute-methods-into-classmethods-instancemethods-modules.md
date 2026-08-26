@@ -1,6 +1,6 @@
 ---
 title: "Group attribute-methods.ts into real ClassMethods / InstanceMethods module objects"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps:
   - api-compare-bodyless-declaration-outranks-real-body
 deps-rfc: []
 est-loc: 420
-pr: null
+pr: 7103
 claim: "2026-08-26T20:28:08Z"
 assignee: "group-attribute-methods-into-classmethods-instancemethods-modules"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Burn down the ~126 @internal tags the entity-keyed manifest no longer requires"
-status: ready
+status: claimed
 updated: 2026-08-26
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T21:48:02Z"
+assignee: "move-serialization-mixins-off-active-model-model"
 blocked-by: null
 closed-reason: null
 ---
