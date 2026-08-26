@@ -1,6 +1,6 @@
 ---
 title: "A leading colon is stripped from string writes once the model's types are loaded"
-status: draft
+status: in-progress
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7085
 claim: null
 assignee: null
 blocked-by: null

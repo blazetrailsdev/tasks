@@ -1,6 +1,6 @@
 ---
 title: "Visit an ActiveModel::Attribute directly in the Arel ToSql visitor"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: null
+pr: 7080
 claim: "2026-08-26T13:15:03Z"
 assignee: "mysql2-handle-warnings-report-arm"
 blocked-by: null

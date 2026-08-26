@@ -1,6 +1,6 @@
 ---
 title: "enroll-activerecord-in-unbacked-internal-receipt-lint"
-status: claimed
+status: ready
 updated: 2026-08-26
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-26T13:07:06Z"
-assignee: "burn-down-internal-tags-unbacked-after-entity-keying"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
