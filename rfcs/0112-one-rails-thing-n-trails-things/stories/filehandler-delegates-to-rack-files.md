@@ -1,7 +1,7 @@
 ---
 title: "FileHandler serves files itself instead of delegating to Rack::Files"
-status: ready
-updated: 2026-08-22
+status: claimed
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: 220
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T00:33:41Z"
+assignee: "filehandler-delegates-to-rack-files"
 blocked-by: null
 closed-reason: null
 ---

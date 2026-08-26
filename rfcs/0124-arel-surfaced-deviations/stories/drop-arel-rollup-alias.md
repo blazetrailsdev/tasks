@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented Rollup alias beside Rails' RollUp"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

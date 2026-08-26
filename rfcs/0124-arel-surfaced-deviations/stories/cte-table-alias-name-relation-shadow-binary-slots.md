@@ -1,6 +1,6 @@
 ---
 title: "Cte/TableAlias name and relation shadow Binary's left/right instead of aliasing them"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Attribute's type-caster delegations cast name back to string; Rails passes it untyped"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

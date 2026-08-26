@@ -1,7 +1,7 @@
 ---
 title: "between's degenerate-range arm uses JS === where Ruby == is value equality"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7067
+claim: "2026-08-26T00:30:12Z"
+assignee: "nodes-build-quoted-missing-from-nodes-namespace"
 blocked-by: null
 closed-reason: null
 ---

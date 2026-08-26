@@ -1,7 +1,7 @@
 ---
 title: "mysql-purge-does-not-call-recreate-database"
-status: ready
-updated: 2026-08-24
+status: claimed
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T00:59:17Z"
+assignee: "mysql-purge-does-not-call-recreate-database"
 blocked-by: null
 closed-reason: null
 ---
