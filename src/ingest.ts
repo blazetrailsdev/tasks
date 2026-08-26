@@ -228,6 +228,28 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   const paths = changedPaths(tasksDir, from, to);
   result.scanned = paths.length;
 
+  // Chunked transactions, NOT one big one.
+  //
+  // A full re-scan touches 7,000+ stories. Wrapped in a single transaction it
+  // holds SQLite's write lock for minutes, and busy_timeout is 10s — so every
+  // other writer fails outright. That is not theoretical: a re-scan running in
+  // the background made a live post-merge hook fail with "database is locked"
+  // and very likely broke the worker's own `tasks done` at the same time.
+  //
+  // Chunking keeps each lock hold to well under the busy_timeout, so concurrent
+  // claims and closes just wait their turn. The cost is that a crashed re-scan
+  // leaves partial progress — which is fine, because the watermark is only
+  // advanced at the end, so the next run redoes it.
+  const CHUNK = 200;
+  for (let i = 0; i < paths.length; i += CHUNK) {
+    await ingestChunk(paths.slice(i, i + CHUNK), tasksDir, result);
+  }
+  await Meta.set("last_ingested_sha", to);
+
+  return result;
+}
+
+async function ingestChunk(paths: string[], tasksDir: string, result: IngestResult): Promise<void> {
   await Base.transaction(async () => {
     for (const rel of paths) {
       const rfcMatch = RFC_PATH.exec(rel);
@@ -322,11 +344,7 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
       }
       await replaceJoins(storyId, fm, body);
     }
-
-    await Meta.set("last_ingested_sha", to);
   });
-
-  return result;
 }
 
 async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<void> {
