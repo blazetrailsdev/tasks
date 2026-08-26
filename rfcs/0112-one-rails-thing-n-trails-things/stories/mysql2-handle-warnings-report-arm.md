@@ -1,16 +1,16 @@
 ---
 title: "mysql2-handle-warnings-report-arm"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-pr: null
-claim: null
-assignee: null
+pr: 7055
+claim: "2026-08-26T13:15:03Z"
+assignee: "mysql2-handle-warnings-report-arm"
 blocked-by: null
 closed-reason: null
 ---

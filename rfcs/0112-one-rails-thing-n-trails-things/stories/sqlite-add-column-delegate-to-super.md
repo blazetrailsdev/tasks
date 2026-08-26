@@ -1,15 +1,15 @@
 ---
 title: "SQLite addColumn reimplements the ALTER instead of calling super"
-status: ready
-updated: 2026-08-22
+status: claimed
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T13:15:03Z"
+assignee: "mysql2-handle-warnings-report-arm"
 blocked-by: null
 closed-reason: null
 ---

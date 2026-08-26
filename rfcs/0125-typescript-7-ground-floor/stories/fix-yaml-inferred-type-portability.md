@@ -1,6 +1,6 @@
 ---
 title: "Fix TS2883 in activesupport/yaml.ts — yaml.d.ts is silently not emitting"
-status: ready
+status: claimed
 updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 15
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T13:21:55Z"
+assignee: "fix-yaml-inferred-type-portability"
 blocked-by: null
 ---
 

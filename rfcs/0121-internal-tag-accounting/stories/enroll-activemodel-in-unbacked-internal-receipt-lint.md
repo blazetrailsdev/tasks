@@ -1,7 +1,7 @@
 ---
 title: "enroll-activemodel-in-unbacked-internal-receipt-lint"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T13:07:06Z"
+assignee: "burn-down-internal-tags-unbacked-after-entity-keying"
 blocked-by: null
 closed-reason: null
 ---

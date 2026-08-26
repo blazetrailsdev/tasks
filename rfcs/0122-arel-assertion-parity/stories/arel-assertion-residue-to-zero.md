@@ -1,6 +1,6 @@
 ---
 title: "arel-assertion-residue-to-zero"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7079
 claim: "2026-08-26T12:44:26Z"
 assignee: "arel-assertion-residue-to-zero"
 blocked-by: null

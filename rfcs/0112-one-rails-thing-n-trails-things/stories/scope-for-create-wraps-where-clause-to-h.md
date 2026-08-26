@@ -1,6 +1,6 @@
 ---
 title: "scopeForCreate calls a trails-only _scopeAttributes wrapper where Rails inlines where_clause.to_h"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores

@@ -1,16 +1,16 @@
 ---
 title: "apply_join_dependency delegates to the adapter's distinct_relation_for_primary_key instead of the bespoke _materializeLimitedIds"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-pr: null
-claim: null
-assignee: null
+pr: 6634
+claim: "2026-08-26T13:15:03Z"
+assignee: "mysql2-handle-warnings-report-arm"
 blocked-by: null
 closed-reason: null
 ---
