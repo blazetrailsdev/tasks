@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTasks.forEach is callerless while trailties hand-rolls its own multi-db fan-out"
-status: in-progress
+status: claimed
 updated: 2026-08-25
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7063
+pr: null
 claim: "2026-08-25T23:35:45Z"
 assignee: "abstract-statements-field-typed-structurally"
 blocked-by: null
