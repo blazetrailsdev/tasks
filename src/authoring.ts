@@ -15,7 +15,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { Rfc } from "./models/index.js";
-import { resolveTasksDir } from "./db-path.js";
+import { currentBranch, mainWorktree } from "./db-path.js";
 import { VerbExit } from "./db.js";
 import type { StoryStatus } from "./models/index.js";
 
@@ -91,7 +91,25 @@ export async function newStory(
   storySlug: string,
   opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean } = {},
 ): Promise<NewStoryResult> {
-  const tasksDir = resolveTasksDir();
+  // Author into the MAIN working tree, never the caller's worktree.
+  //
+  // Workers run `tasks new` from a trails worktree to file findings after their
+  // PR merges (the post-merge-findings flow). Committing that into the worktree
+  // puts the story on a feature branch that has ALREADY merged and never will
+  // again — the finding is stranded, and ingest either misses it or, worse,
+  // publishes an unmerged row into the shared DB.
+  //
+  // The old CLI avoided this by refusing to run outside main. Same intent here,
+  // achieved by writing where the story actually belongs.
+  const tasksDir = mainWorktree();
+  const branch = currentBranch(tasksDir);
+  if (branch !== "main") {
+    console.error(
+      `error: ${tasksDir} is on ${branch ?? "a detached HEAD"}, not main — refusing to author.\n` +
+        `  New stories must land on main or they are stranded on a dead branch.`,
+    );
+    throw new VerbExit(1);
+  }
 
   const rfc = await Rfc.findBy({ id: rfcSlug });
   if (!rfc) {

@@ -312,7 +312,7 @@ async function main(): Promise<number> {
       const r = await ingest();
       console.log(
         `ingest ${r.from ? r.from.slice(0, 9) : "(initial)"}..${r.to.slice(0, 9)}: ` +
-          `${r.created} created, ${r.updated} updated, ${r.deleted} deleted, ` +
+          `${r.created} created, ${r.updated} updated, ${r.closed} closed, ` +
           `${r.rfcsTouched} rfcs (${r.scanned} paths)`,
       );
       break;

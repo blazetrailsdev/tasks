@@ -47,7 +47,11 @@ function compare(
   const problems: string[] = [];
 
   const gitIds = gitRows.map((r) => String(r.id));
-  const dbIds = dbRows.map((r) => String(r.id));
+  // Compare order over the rows git ALSO has: closed rows whose file is gone
+  // are legitimately db-only (see below), and counting them here would report a
+  // spurious ordering break at the first one.
+  const gitIdSet = new Set(gitIds);
+  const dbIds = dbRows.map((r) => String(r.id)).filter((id) => gitIdSet.has(id));
   // Order is part of the contract: the spawn loop consumes index.json in order,
   // so a reordered index is a behavior change even if every row matches.
   const ordered = JSON.stringify(gitIds) === JSON.stringify(dbIds);
@@ -62,8 +66,15 @@ function compare(
   const gitById = new Map(gitRows.map((r) => [String(r.id), r]));
   for (const id of gitById.keys())
     if (!dbById.has(id)) problems.push(`${label}: missing in db: ${id}`);
-  for (const id of dbById.keys())
-    if (!gitById.has(id)) problems.push(`${label}: extra in db: ${id}`);
+  for (const [id, row] of dbById) {
+    if (gitById.has(id)) continue;
+    // A CLOSED row with no file is expected, not drift. Deleting a story file
+    // CLOSES the row rather than removing it — the row carries the history and
+    // the closed_reason, which is the only record of why work was abandoned.
+    // So the invariant is DB ⊇ markdown, with every extra row closed.
+    if (row.status === "closed") continue;
+    problems.push(`${label}: extra in db: ${id} (status=${String(row.status)})`);
+  }
 
   let mismatched = 0;
   for (const [id, gitRow] of gitById) {
