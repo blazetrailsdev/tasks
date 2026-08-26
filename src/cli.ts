@@ -13,7 +13,7 @@ import { readFileSync } from "node:fs";
 import { Base } from "@blazetrails/activerecord";
 import { connect, publishReadModels, VerbExit } from "./db.js";
 import { buildIndex } from "./readmodel.js";
-import { resolveDbPath, resolveTasksDir } from "./db-path.js";
+import { currentBranch, mainWorktree, resolveDbPath, resolveTasksDir } from "./db-path.js";
 import { ingest } from "./ingest.js";
 import { exportState } from "./export.js";
 import {
@@ -115,8 +115,30 @@ async function main(): Promise<number> {
   }
 
   if (cmd === "where") {
-    console.log(`tasks dir: ${resolveTasksDir()}`);
+    // Say out loud that these two can disagree, and what that means.
+    //
+    // A worktree's `.git` is a POINTER FILE into the main checkout, so
+    // `.git/tasks.db` there is the SHARED database, not a local one. Reporting
+    // the two paths side by side without comment reads as "my worktree, my
+    // db" — an agent drew exactly that conclusion, ran `ingest` from a PR
+    // branch, and published 10 unmerged stories to every agent on the host.
+    const dir = resolveTasksDir();
+    const main = mainWorktree();
+    console.log(`tasks dir: ${dir}`);
     console.log(`database:  ${resolveDbPath()}`);
+    console.log(`  the database is SHARED by every worktree of this clone,`);
+    console.log(`  and it mirrors main at ${main}`);
+    if (dir !== main) {
+      const branch = currentBranch(dir);
+      console.log("");
+      console.log(
+        `  NOTE: you are in a worktree on ${branch ?? "a detached HEAD"}, not the main checkout.`,
+      );
+      console.log(`  Read verbs (ready/list/show/touching) answer from the SHARED db —`);
+      console.log(`  they do NOT reflect this branch's markdown.`);
+      console.log(`  \`ingest\` deliberately reads main, never this branch.`);
+      console.log(`  To check this branch's stories parse, use: pnpm validate`);
+    }
     return 0;
   }
 
