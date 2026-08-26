@@ -1,7 +1,7 @@
 ---
 title: "dirties_query_cache is wired on exec_insert/update/delete, not Rails' public insert/update/delete — leaving PG's non-returning arm uncleared"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T14:41:07Z"
+assignee: "gate-closing-story-citations-at-pr-time"
 blocked-by: null
 closed-reason: null
 ---

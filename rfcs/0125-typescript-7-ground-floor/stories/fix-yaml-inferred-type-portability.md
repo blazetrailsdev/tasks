@@ -1,6 +1,6 @@
 ---
 title: "Fix TS2883 in activesupport/yaml.ts — yaml.d.ts is silently not emitting"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra

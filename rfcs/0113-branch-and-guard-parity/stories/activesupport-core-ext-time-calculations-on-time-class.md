@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/time/calculations.rb onto the Time class, not free functions"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

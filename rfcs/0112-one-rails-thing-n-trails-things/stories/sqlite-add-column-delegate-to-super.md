@@ -1,6 +1,6 @@
 ---
 title: "SQLite addColumn reimplements the ALTER instead of calling super"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies

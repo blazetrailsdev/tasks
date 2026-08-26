@@ -1,7 +1,7 @@
 ---
 title: "SelectManager has no clone, so the two Rails clone tests can't be mirrored"
-status: draft
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7079
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Fix TS4094 declaration emit on Application's anonymous executor/reloader classes"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra

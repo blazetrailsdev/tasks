@@ -1,7 +1,7 @@
 ---
 title: "cacheDumpFilename adds a fourth fallback and any-casts Rails does not have"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T14:41:07Z"
+assignee: "gate-closing-story-citations-at-pr-time"
 blocked-by: null
 closed-reason: null
 ---
