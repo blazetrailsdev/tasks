@@ -1,7 +1,7 @@
 ---
 title: "Sweep the arel assertion residue and tighten the mark to zero"
-status: in-progress
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
 packages: ["arel"]
