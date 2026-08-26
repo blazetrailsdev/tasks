@@ -77,5 +77,5 @@ converging halfway.
 - [ ] The block's inverses still land before the `transaction` command, and
       `invertible-migration.test.ts` > `migrate revert transaction` and
       `command-recorder.test.ts` > `invert transaction with irreversible inside
-  is irreversible` both still pass.
+is irreversible` both still pass.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
