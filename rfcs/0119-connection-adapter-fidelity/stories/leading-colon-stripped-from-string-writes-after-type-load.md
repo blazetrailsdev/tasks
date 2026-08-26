@@ -22,7 +22,7 @@ Once a model's types are loaded, writing a string that **starts with a colon**
 silently drops exactly one leading colon. Mid-string colons are unaffected.
 
 ```ts
-await Story.findBy({ id });                      // loads the model's types
+await Story.findBy({ id }); // loads the model's types
 await Story.where({ id }).updateAll({ title: "::Alpha" });
 // stored: ":Alpha"
 ```
