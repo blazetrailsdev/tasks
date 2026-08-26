@@ -26,11 +26,17 @@ carries branches with no Ruby counterpart:
 ```ts
 const exec = this.execute ?? execute;
 const doTruncate = async () => {
-  if (this.executeBatch) { await this.executeBatch(statements, "Truncate Tables"); }
-  else { for (const stmt of statements) await exec.call(this, stmt); }
+  if (this.executeBatch) {
+    await this.executeBatch(statements, "Truncate Tables");
+  } else {
+    for (const stmt of statements) await exec.call(this, stmt);
+  }
 };
-if (this.disableReferentialIntegrity) { await this.disableReferentialIntegrity(doTruncate); }
-else { await doTruncate(); }
+if (this.disableReferentialIntegrity) {
+  await this.disableReferentialIntegrity(doTruncate);
+} else {
+  await doTruncate();
+}
 ```
 
 Rails has no fallback arm at any of the three sites:

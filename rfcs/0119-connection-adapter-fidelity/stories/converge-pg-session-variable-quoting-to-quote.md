@@ -62,7 +62,7 @@ way postgresql_adapter.rb:986 does, and delete the `on`/`off` mapping.
 Note the execution route must stay a direct `client.query` on the raw client
 passed into `_maybeConfigureConnection` — routing configure-time queries back
 through `execute`/`withRawConnection` deadlocks against the acquire/reset
-barrier. Only the *quoting* converges here, not the call.
+barrier. Only the _quoting_ converges here, not the call.
 
 ## Acceptance criteria
 
