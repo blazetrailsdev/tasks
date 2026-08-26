@@ -1,5 +1,5 @@
 ---
-title: "Accept only Rails' \":default\" sentinel for MySQL session variables"
+title: 'Accept only Rails'' ":default" sentinel for MySQL session variables'
 status: draft
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
