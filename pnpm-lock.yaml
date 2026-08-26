@@ -54,11 +54,11 @@ importers:
 packages:
 
   '@blazetrails/activemodel@file:vendor/blazetrails-activemodel-0.1.0.tgz':
-    resolution: {integrity: sha512-MFJymv5Tul2fnTYCOqjSql2AJENNnUiyZKiaZHqCLLZdEHN9yF3YeMh65o8VZb2gxiB+O4De7m8u5jGwGIga3g==, tarball: file:vendor/blazetrails-activemodel-0.1.0.tgz}
+    resolution: {integrity: sha512-l5OJRaPBL6cZ74c31vqzYcn0Tj1F33frgc92f1lnASxIAiHW5MnQBCugmWJQ1sE6DcxKekuHjSS2VqVFI0mC8w==, tarball: file:vendor/blazetrails-activemodel-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/activerecord@file:vendor/blazetrails-activerecord-0.1.0.tgz':
-    resolution: {integrity: sha512-mUBpTo0oi7zKm6cSGCbKehDKF5KcsgF/iwJ/qBAOuKi+y6jCsBd8q3SjZEQ84JuPTpB6I1eGzafRIK9iPxuNyQ==, tarball: file:vendor/blazetrails-activerecord-0.1.0.tgz}
+    resolution: {integrity: sha512-e+hf6KGxmnzWAJHZJrsiQdaefynZpojp+Kk2IZFaF6wZnF5hCxPkz7h912nl8+zxcwaOm8KFrSkAgrDg7l9IVw==, tarball: file:vendor/blazetrails-activerecord-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       better-sqlite3: ^12.6.2
@@ -80,7 +80,7 @@ packages:
         optional: true
 
   '@blazetrails/activesupport@file:vendor/blazetrails-activesupport-0.1.0.tgz':
-    resolution: {integrity: sha512-q/myCAD0W7FBUG68Zu74v/4d7gMCGJ+5BGTdOmnB7nQf5Qqcjm+hII6LO2tpsJWwEJZH+aHu+pkD+GyPPSUNDg==, tarball: file:vendor/blazetrails-activesupport-0.1.0.tgz}
+    resolution: {integrity: sha512-1uOSCQaJCtTV6kDJSmWKTZQ1DpSpNHvaoIB9rTbvamcsseeSaUEHM3fNVbShIGibusVwdmJJcD38Zbh1owJOOA==, tarball: file:vendor/blazetrails-activesupport-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       '@blazetrails/nokogiri': 0.1.0
@@ -89,11 +89,11 @@ packages:
         optional: true
 
   '@blazetrails/arel@file:vendor/blazetrails-arel-0.1.0.tgz':
-    resolution: {integrity: sha512-FNUPOAH29mhby8aKC543D4VMxXlvLB33s8COBeLeD9AqZaxbsiSVo+YnX76Q4E0asCWVy6BnJFYszd1JyOcMJQ==, tarball: file:vendor/blazetrails-arel-0.1.0.tgz}
+    resolution: {integrity: sha512-DrtdoxIhy69DK9YpOLigqmLcD5mN0AFgYzoJAAAnmK7zm96/ayetkR9rW/Kav6q0rcJJqPFtd7A1Pr8cjIgjEw==, tarball: file:vendor/blazetrails-arel-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/date@file:vendor/blazetrails-date-0.1.0.tgz':
-    resolution: {integrity: sha512-/hh9RQ5lp3Px4FUAqJ2W6iDG/gs37hDR6l75JCzMWtKBqeD61L+b+EJSJUDD1KODmlrP1fepK0w3c06FAzbDsQ==, tarball: file:vendor/blazetrails-date-0.1.0.tgz}
+    resolution: {integrity: sha512-vNzrBUokm7zTZOezGOIhDik+4vLTDN8JsfBsPBHa6fTjntrPfZMyj1wsKrDpeSVGqX1L6CDyRC2K1Gj/l4tIeA==, tarball: file:vendor/blazetrails-date-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/did-you-mean@file:vendor/blazetrails-did-you-mean-0.1.0.tgz':
@@ -101,11 +101,11 @@ packages:
     version: 0.1.0
 
   '@blazetrails/globalid@file:vendor/blazetrails-globalid-0.1.0.tgz':
-    resolution: {integrity: sha512-ifGT8EWMJsWhy80ygk6NVPq13/pG4YZlATFCbjfGmwtZ2YwUItUAtQOQL66tfYUbMYBLtD8zem3zPdCtHQdYNw==, tarball: file:vendor/blazetrails-globalid-0.1.0.tgz}
+    resolution: {integrity: sha512-Gj7ukPuu9uLcr8k2U/H5tM2DYLETXKd2wJtv8beeEcCCnybKNU294O++EVMn8erJ8Lb5O+Ys7GdXpIWiPxWTIw==, tarball: file:vendor/blazetrails-globalid-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/i18n@file:vendor/blazetrails-i18n-0.1.0.tgz':
-    resolution: {integrity: sha512-Y9PVgV0O+sJ08xC58gmO7wO7/LMQ2KRBFtwasfuK4LEGkt0Rlk1r7VBa3kVH6NP7cCjcLVMVOOfhckn360M2nQ==, tarball: file:vendor/blazetrails-i18n-0.1.0.tgz}
+    resolution: {integrity: sha512-Ace889o5AI6h8sb1KmBrwJznKLAcMiXW6RzOFFZ9neZxCSPzEJ5fdTk6EeVq6xOMf9/f1Ad7jZMRAq5EBhvx6w==, tarball: file:vendor/blazetrails-i18n-0.1.0.tgz}
     version: 0.1.0
 
   '@blazetrails/tse-compiler@file:vendor/blazetrails-tse-compiler-0.1.0.tgz':

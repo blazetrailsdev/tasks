@@ -1,55 +1,36 @@
-import { readdirSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { Base, Migration, MigrationRunner } from "@blazetrails/activerecord";
-
-const MIGRATE_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..", "db", "migrate");
-const MIGRATION_FILE = /^(\d{14})_([a-z0-9_]+)\.ts$/;
+import { MigrationContext } from "@blazetrails/activerecord";
 
 /**
- * Load every `db/migrate/<version>_<name>.ts` in version order. The 14-digit
- * filename prefix is stamped onto the class so MigrationRunner records it in
- * `schema_migrations`.
+ * Migrations, through Rails' own entry point.
+ *
+ * `MigrationContext` discovers `db/migrate/<version>_<name>.ts` itself, so the
+ * hand-rolled loader this file used to carry is gone — along with the bug it
+ * needed: MigrationRunner read the version off the INSTANCE, so passing it as a
+ * static (as trails' own example once did) silently recorded the class name in
+ * schema_migrations instead of the timestamp.
+ *
+ * MigrationRunner was dropped in trails#7069 as a trails-only invention; this is
+ * the converged shape.
  */
-export async function loadMigrations(): Promise<Migration[]> {
-  const files = readdirSync(MIGRATE_DIR)
-    .filter((f) => MIGRATION_FILE.test(f))
-    .sort();
+const MIGRATE_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..", "db", "migrate");
 
-  const migrations: Migration[] = [];
-  for (const file of files) {
-    const match = MIGRATION_FILE.exec(file);
-    if (!match) continue;
-    const mod = (await import(join(MIGRATE_DIR, file))) as {
-      default?: new (name?: string, version?: number) => Migration;
-    };
-    if (!mod.default) throw new Error(`${file} must \`export default\` a Migration subclass`);
-    // Migration's constructor is `(name?, version?)` and `version` is a
-    // read-only getter over the private field it sets. Assigning a static on
-    // the class instead — as trails' examples/twitter-clone/src/migrator.ts
-    // does — leaves the instance getter undefined, so MigrationRunner's
-    // `String(m.version ?? m.constructor.name)` (migrator.ts:36) silently
-    // records the CLASS NAME in schema_migrations. A later class rename then
-    // re-runs an applied migration. Pass it through the constructor.
-    migrations.push(new mod.default(match[2], Number(match[1])));
-  }
-  return migrations;
-}
-
-async function runner(): Promise<MigrationRunner> {
-  return new MigrationRunner(Base.connection, await loadMigrations());
+function context(): MigrationContext {
+  return new MigrationContext([MIGRATE_DIR]);
 }
 
 export async function migrate(): Promise<void> {
-  await (await runner()).migrate();
+  await context().migrate();
 }
 
 export async function rollback(steps = 1): Promise<void> {
-  await (await runner()).rollback(steps);
+  await context().rollback(steps);
 }
 
 export async function status(): Promise<{ status: string; version: string; name: string }[]> {
-  return (await runner()).status();
+  const rows = await context().migrationsStatus();
+  return rows.map((r) => ({ status: r.status, version: String(r.version), name: r.name }));
 }
 
 export async function hasPendingMigrations(): Promise<boolean> {

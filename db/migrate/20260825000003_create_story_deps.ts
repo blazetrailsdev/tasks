@@ -1,6 +1,6 @@
 import { Migration } from "@blazetrails/activerecord";
 
-export default class CreateStoryDeps extends Migration {
+export class CreateStoryDeps extends Migration {
   async change() {
     // Self-referential join: story_id depends on depends_on_id. This is the
     // dep graph the ready-queue walks.

@@ -8,6 +8,12 @@
 # revertible commit.
 #
 # Usage: scripts/vendor-trails.sh [trails-checkout] [git-ref]
+#
+# NOTE: the ref is used to RECORD the pin and to verify the checkout is on it —
+# packing reads the WORKING TREE, not the ref. Passing an old ref while the
+# checkout sits on main used to relabel the pin file without changing a single
+# byte of vendored code, so the pin lied about what was installed. It now
+# refuses rather than mislabel.
 set -euo pipefail
 TRAILS="${1:-$HOME/github/blazetrailsdev/trails}"
 REF="${2:-HEAD}"
@@ -36,6 +42,16 @@ console.log([...seen].map(n=>byName[n].dir).sort().join("\n"));
 ')
 
 SHA="$(git -C "$TRAILS" rev-parse "$REF")"
+HEAD_SHA="$(git -C "$TRAILS" rev-parse HEAD)"
+if [ "$SHA" != "$HEAD_SHA" ]; then
+  echo "refusing to vendor: checkout is at ${HEAD_SHA:0:9} but you asked for ${SHA:0:9}." >&2
+  echo "  Packing reads the working tree, so the pin would not match the code." >&2
+  echo "  Check the ref out first:  git -C $TRAILS checkout $REF" >&2
+  exit 1
+fi
+if [ -n "$(git -C "$TRAILS" status --porcelain)" ]; then
+  echo "warning: trails checkout is dirty — vendored code will include uncommitted changes" >&2
+fi
 echo "vendoring ${#PKGS[@]} packages from trails @ ${SHA:0:9}"
 
 rm -f "$VENDOR"/*.tgz

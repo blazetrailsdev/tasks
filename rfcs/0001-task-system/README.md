@@ -1,9 +1,9 @@
 ---
 rfc: "0001-task-system"
 title: "Task system (RFCs + story files + fast index)"
-status: active
+status: closed
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-08-26
 owner: "@deanmarano"
 clusters:
   - scaffold
