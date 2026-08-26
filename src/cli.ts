@@ -103,6 +103,23 @@ function row(s: StoryEntry): string {
   return `  ${bits.join("  ")}`;
 }
 
+/** How long `tasks new` waits on its follow-up ingest before giving up on it. */
+const NEW_INGEST_TIMEOUT_MS = 45_000;
+
+/**
+ * Bound a promise. Used so a busy shared database turns into a clear message
+ * about which half landed, rather than a silent multi-minute hang that reads as
+ * a failure and invites a duplicating retry.
+ */
+function withTimeout<T>(p: Promise<T>, ms: number): Promise<T> {
+  return Promise.race([
+    p,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error(`timed out after ${ms / 1000}s`)), ms).unref(),
+    ),
+  ]);
+}
+
 async function loadIndex(): Promise<Index> {
   return (await buildIndex()) as unknown as Index;
 }
@@ -254,11 +271,35 @@ async function main(): Promise<number> {
         commit: flags["no-commit"] !== true,
       });
       console.log(`created ${r.path}${r.committed ? " (committed)" : " (uncommitted)"}`);
-      // Ingest creates the ROW — authoring never inserts directly. Running it
-      // here is what makes `tasks new X && tasks claim X` work.
+
+      // The file and its commit are the DURABLE artifact; the index refresh is
+      // derived and can be redone at any time. So a failing or slow ingest must
+      // not report the whole command as failed — an agent that sees a non-zero
+      // exit re-runs, and a re-run duplicates the story or collides on the slug.
+      //
+      // Bound it, and say plainly which half landed. Exit 0 either way: the
+      // story exists, which is the opposite of what exit 1 communicates.
       if (r.committed) {
-        const ing = await ingest();
-        console.log(`  ingest: ${ing.created} created, ${ing.updated} updated`);
+        try {
+          const ing = await withTimeout(ingest(), NEW_INGEST_TIMEOUT_MS);
+          if (ing.created === 0 && ing.updated === 0) {
+            console.log(
+              `  note: index unchanged — the commit is not on main yet, so the story is not\n` +
+                `  queryable. Push it to main (or re-run \`tasks ingest\` once it lands).`,
+            );
+          } else {
+            console.log(`  ingest: ${ing.created} created, ${ing.updated} updated`);
+          }
+        } catch (e) {
+          const why = (e as Error).message.includes("timed out")
+            ? "the shared tasks database was busy"
+            : (e as Error).message;
+          console.error(
+            `\nwarning: story file created and committed, but the index was NOT updated (${why}).\n` +
+              `  DO NOT re-run \`tasks new\` — it would duplicate the story or collide on the slug.\n` +
+              `  Reconcile with:  tasks ingest`,
+          );
+        }
       }
       break;
     }
