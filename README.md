@@ -61,6 +61,18 @@ pnpm install
 
 Never replace these with a `link:`/`file:` pointer at the working checkout.
 
+## Editing this checkout
+
+btwhooks fast-forwards this checkout whenever the repo is pushed, so it is not a
+quiet place to work. It stashes a dirty tree before pulling and pops it after —
+but a pop that conflicts is left in the stash, and an edit that vanishes
+mid-keystroke reads as "nothing to commit, working tree clean" rather than as an
+error.
+
+Prefer a worktree (`scripts/start-worktree.sh <name>`) for anything non-trivial.
+If you do edit here, commit in the same breath, and check `git stash list` if a
+change seems to have evaporated.
+
 ## Requirements
 
 Node 22.5+ for `node:sqlite` (pinned to 24.16.0 in `.tool-versions`). The
