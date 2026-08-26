@@ -56,10 +56,10 @@ silent no-op into a raise. CLAUDE.md's error rule — "same error class, same
 message string, same raise site" — has no counterpart to point at here, which
 is the tell: the raise site itself is invented.
 
-Note the guard is load-bearing for the *TS* argument parse in a way it is not in
+Note the guard is load-bearing for the _TS_ argument parse in a way it is not in
 Ruby: because TS spells `**options` and `&block` as trailing positional
 arguments, `dropTable(options)` with no name at all parses to zero names. That
-is an argument for keeping *some* behaviour there, not for keeping a raise Rails
+is an argument for keeping _some_ behaviour there, not for keeping a raise Rails
 does not have — check what Ruby actually does with `drop_table(if_exists: true)`
 (kwargs never land in `table_names`, so it is a no-op) before choosing the
 converged arm.

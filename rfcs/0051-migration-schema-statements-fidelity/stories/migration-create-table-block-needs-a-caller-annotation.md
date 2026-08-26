@@ -50,7 +50,7 @@ will run against — the adapter is resolved at runtime from the config, so ther
 is nothing for `TableDefinitionOf<A>`
 (`connection-adapters/abstract/schema-definitions.ts:1061-1065`) to resolve
 against. PR #7024 solved the adapter-level half precisely because the adapter
-*is* the receiver there.
+_is_ the receiver there.
 
 `changeTable` is the untouched sibling: it yields `Table` (the alter-table
 proxy), a different type family with its own per-adapter subclasses, and carries
