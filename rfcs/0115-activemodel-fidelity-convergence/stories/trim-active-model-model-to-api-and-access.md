@@ -34,6 +34,6 @@ What is left in `packages/activemodel/src/model.ts` at that point:
 - `pnpm parity:api:extra --package activemodel` reports `model.ts` at
   **0 novel / 0 moved**.
 - `model.ts` is <= 200 code lines and reads as the port of `model.rb` + `api.rb`
-  + `access.rb`, and nothing else.
+  - `access.rb`, and nothing else.
 - activemodel + activerecord suites green; `pnpm parity:api:calls` / `:args`
   clean; parity deltas non-negative.

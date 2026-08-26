@@ -68,7 +68,7 @@ the file is open.
       backs it there.
 - [ ] The `module-ext.ts` receipt citing `configurable.rb:111-128` is deleted and
       `pnpm exec eslint --no-inline-config -c eslint/rails-private-jsdoc.config.mjs
-    "packages/activesupport/src/**/*.ts"` is clean.
+  "packages/activesupport/src/**/*.ts"` is clean.
 - [ ] The body mirrors `configurable.rb:111-128` — same names, same kwargs and
       defaults, same `NameError` message on an invalid attribute name.
 - [ ] `pnpm exec tsx scripts/api-compare/extra-surface.ts` exits 0 and
