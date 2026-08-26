@@ -2,7 +2,7 @@
 title: "Move trailties' parseTs() onto the TS 7 API"
 status: ready
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trailties"]
 deps: []
@@ -40,7 +40,7 @@ follows is the 7.0.2 fallback, retained in case the pin lands on 7.0.2 instead.
 `transpileModule` does not exist in TS 7.0.2 (it arrives in the 7.1 nightly).
 But the function's actual need — syntactic diagnostics from a source string —
 is served on 7.0.2 by a `Project` over `createVirtualFileSystem` plus
-`Program.getSyntacticDiagnostics`. RFC `0000-typescript-7-ground-floor`
+`Program.getSyntacticDiagnostics`. RFC `0125-typescript-7-ground-floor`
 verified this by reimplementing it:
 
 | input                         | 7.0.2 reimplementation                         |

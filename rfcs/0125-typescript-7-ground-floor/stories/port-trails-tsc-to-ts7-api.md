@@ -2,7 +2,7 @@
 title: "Port trails-tsc to the TS 7 API (the split-env blocker)"
 status: blocked
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc"]
 deps: ["recheck-ts7-api-surface"]
@@ -26,7 +26,7 @@ is roadmap-stage (ActionView 8.2% of API surface, P3). The user-facing
 
 ## Original context
 
-This is **the** blocker described in RFC `0000-typescript-7-ground-floor`.
+This is **the** blocker described in RFC `0125-typescript-7-ground-floor`.
 `trails-tsc` is the single package that forces a split TS 5.x + TS 7
 environment, which is the shape the maintainer rejected on
 [tasks PR #59](https://github.com/blazetrailsdev/tasks-legacy/pull/59) (2026-07-22:

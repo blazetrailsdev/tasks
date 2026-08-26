@@ -2,7 +2,7 @@
 title: "Declare TypeScript 7 as the supported floor in published peer ranges"
 status: ready
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc", "trailties", "activerecord"]
 deps: []
@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-The headline change of RFC `0000-typescript-7-ground-floor`. Three of trails'
+The headline change of RFC `0125-typescript-7-ground-floor`. Three of trails'
 17 published packages declare a `typescript` peer dependency, and all three are
 wrong for a TypeScript 7 user (verified 2026-08-25):
 

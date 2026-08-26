@@ -2,7 +2,7 @@
 title: "Flip the pinned typescript to 7.x and drop TypeScript 5.x"
 status: draft
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages:
   ["activerecord", "activesupport", "activemodel", "trailties", "trails-tsc", "activerecord-cli"]
@@ -26,7 +26,7 @@ blocked-by: null
 
 ## Context
 
-The terminal story of RFC `0000-typescript-7-ground-floor`. Once no package
+The terminal story of RFC `0125-typescript-7-ground-floor`. Once no package
 needs the TypeScript 5.x programmatic API, the migration is a **single-compiler
 swap with no split env** — which is the only form the maintainer has not
 rejected.

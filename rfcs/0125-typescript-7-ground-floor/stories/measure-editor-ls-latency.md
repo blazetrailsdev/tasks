@@ -2,7 +2,7 @@
 title: "Measure editor language-service latency on activerecord (TS 5.9.3 vs TS 7)"
 status: draft
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: ["activerecord"]
 deps: []
@@ -25,7 +25,7 @@ this body is retained so the measurement is cheap to pick up when it matters.
 
 ## Original context
 
-RFC `0000-typescript-7-ground-floor` measured every cost axis of staying on
+RFC `0125-typescript-7-ground-floor` measured every cost axis of staying on
 TypeScript 5.9.3 except one, and labelled it **unmeasured** rather than guessing:
 editor latency. It is also the axis with the largest plausible upside, because
 `packages/activerecord/src` is 165,308 non-test LOC — 4× the next package.

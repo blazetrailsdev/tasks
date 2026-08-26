@@ -2,7 +2,7 @@
 title: "Move the pin to 7.1 stable and re-check the trails-tsc gaps"
 status: blocked
 updated: 2026-08-25
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc", "activerecord-cli"]
 deps: []
@@ -29,7 +29,7 @@ blocked" — this story exists so that is a lookup rather than a re-derivation.
 
 ## Original context
 
-RFC `0000-typescript-7-ground-floor` recommends waiting on TS 7.1 and names
+RFC `0125-typescript-7-ground-floor` recommends waiting on TS 7.1 and names
 exactly two gaps that keep `trails-tsc` on TypeScript 5.x — and therefore keep
 any TS 7 adoption a "split env", which the maintainer rejected on
 [tasks PR #59](https://github.com/blazetrailsdev/tasks-legacy/pull/59) (2026-07-22):

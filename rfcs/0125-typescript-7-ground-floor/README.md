@@ -1,5 +1,5 @@
 ---
-rfc: "0000-typescript-7-ground-floor"
+rfc: "0125-typescript-7-ground-floor"
 title: "Make TypeScript 7 the ground-floor version for trails"
 status: draft
 created: 2026-08-25
@@ -16,11 +16,7 @@ clusters:
   - "build-infra"
 ---
 
-<!-- Unnumbered until merge: dir stays `0000-typescript-7-ground-floor`,
-     `rfc:` stays `0000-...`, H1 stays number-free.
-     `scripts/finalize-rfc.mjs` assigns the number at merge. -->
-
-# RFC — Make TypeScript 7 the ground-floor version for trails
+# RFC 0125 — Make TypeScript 7 the ground-floor version for trails
 
 ## Recommendation
 
