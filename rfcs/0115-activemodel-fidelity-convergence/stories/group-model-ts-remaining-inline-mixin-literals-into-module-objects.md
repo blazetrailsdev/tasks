@@ -28,13 +28,13 @@ left out to keep that PR reviewable and are registered here.
 Three literals remain at the bottom of `model.ts`:
 
 - `extend(Model, { decorateAttributes, attributeTypes, typeForAttribute,
-  _defaultAttributes, pendingAttributeModifications, resetDefaultAttributesBang,
-  resolveTypeName, hookAttributeType })` — Ruby
+_defaultAttributes, pendingAttributeModifications, resetDefaultAttributesBang,
+resolveTypeName, hookAttributeType })` — Ruby
   `ActiveModel::AttributeRegistration::ClassMethods`
   (attribute_registration.rb:10-…), whose members live in
   `attribute-registration.ts` as bare top-level `export function`s.
 - `include(Model, { contextForValidation, runValidationsBang,
-  raiseValidationError, readAttributeForValidation, freeze, … })` — the
+raiseValidationError, readAttributeForValidation, freeze, … })` — the
   instance half of `ActiveModel::Validations` (validations.rb:52).
 - `sanitizeForMassAssignment` / `sanitizeForbiddenAttributes` in that same
   literal — `ActiveModel::ForbiddenAttributesProtection`
