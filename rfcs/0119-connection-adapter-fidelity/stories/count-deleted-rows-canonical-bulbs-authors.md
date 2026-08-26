@@ -1,7 +1,7 @@
 ---
 title: "count_deleted_rows_with_lock port uses bespoke test_bulbs/test_authors tables"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7061
+claim: "2026-08-26T22:18:03Z"
+assignee: "move-attribute-mixins-off-active-model-model"
 blocked-by: null
 closed-reason: null
 ---

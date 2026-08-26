@@ -1,7 +1,7 @@
 ---
 title: "structureDump branches to a trails-only in-memory path Rails does not have"
-status: blocked
-updated: 2026-08-08
+status: ready
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

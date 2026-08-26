@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL's dropTable override has no Rails counterpart"
-status: blocked
+status: closed
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-08-26T16:41:51Z"
 assignee: "table-type-caster-delegations-cast-away-the-null-name"
 blocked-by: "Premise falsified: Rails DOES define PostgreSQL#drop_table at vendor/rails/activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb:57-60 (one statement for all table_names, plus ' CASCADE' if options[:force] == :cascade). The story's grep only covered connection_adapters/postgresql*.rb, missing the postgresql/ subdirectory. trails' override at connection-adapters/postgresql/schema-statements-class.ts mirrors that body; deleting it would drop CASCADE support on PG and diverge from Rails. Rails has three drop_table bodies (abstract/schema_statements.rb:540, postgresql/schema_statements.rb:57, abstract_mysql_adapter.rb:354) and trails has three. The residual TS-only duplication is the *args/**options/&block parse, which Ruby gets free from the signature."
-closed-reason: null
+closed-reason: "Premise falsified — there is no deviation to converge. Rails DOES define PostgreSQL#drop_table (vendor/rails/activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb:57-60): one DROP TABLE for all table_names, plus ' CASCADE' when options[:force] == :cascade. The story's grep covered connection_adapters/postgresql*.rb and missed the postgresql/ subdirectory. Rails has exactly three adapter-level drop_table bodies (abstract/schema_statements.rb:540, postgresql/schema_statements.rb:57, abstract_mysql_adapter.rb:354) and trails mirrors all three (abstract/schema-statements.ts:455, postgresql/schema-statements-class.ts:117, abstract-mysql-adapter.ts:1532). Deleting the PG override would drop CASCADE and diverge FROM Rails. The only residual TS-only text is the *table_names/**options parse that Ruby gets free from the signature, which is not a deviation."
 ---
 
 # PostgreSQL's `dropTable` override has no Rails counterpart

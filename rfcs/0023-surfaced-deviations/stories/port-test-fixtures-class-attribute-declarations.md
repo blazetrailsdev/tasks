@@ -1,6 +1,6 @@
 ---
 title: "Port test_fixtures.rb's eight class_attribute declarations"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0023-surfaced-deviations"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "create_schema_dumper takes (source, options) where Rails takes (options) and passes self"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7014
+claim: "2026-08-26T22:18:03Z"
+assignee: "move-attribute-mixins-off-active-model-model"
 blocked-by: null
 closed-reason: null
 ---
