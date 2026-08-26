@@ -29,7 +29,7 @@ own over its OWN fields, and aliases `==` to it:
 
 - `nodes/binary.rb:20-28` — `hash` is `[self.class, @left, @right].hash`;
   `eql?` is `self.class == other.class && self.left == other.left &&
-  self.right == other.right`; `alias :== :eql?`.
+self.right == other.right`; `alias :== :eql?`.
 - `nodes/unary.rb:14-22` — the same shape over `@expr`.
 - `nodes/casted.rb:25-33` — `[self.class, value, attribute].hash`, and
   `eql?` over `value` / `attribute`.
