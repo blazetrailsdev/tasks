@@ -1,15 +1,15 @@
 ---
 title: "Retire the trails-only _joinClauses store: raw SQL / Arel joins belong in joins_values"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: null
-claim: null
-assignee: null
+pr: 6773
+claim: "2026-08-26T11:05:45Z"
+assignee: "fold-join-clauses-into-joins-values"
 blocked-by: null
 closed-reason: null
 ---

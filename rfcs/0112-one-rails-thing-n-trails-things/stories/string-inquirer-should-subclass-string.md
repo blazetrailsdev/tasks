@@ -1,16 +1,16 @@
 ---
 title: "StringInquirer wraps a _value where Rails subclasses String"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: wrapper-vs-subclass
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: 7073
+claim: "2026-08-26T11:14:59Z"
+assignee: "globalid-uri-reader-is-a-string-not-a-uri-gid"
 blocked-by: null
 closed-reason: null
 ---

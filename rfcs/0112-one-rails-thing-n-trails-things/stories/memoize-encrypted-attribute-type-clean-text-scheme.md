@@ -1,16 +1,16 @@
 ---
 title: "memoize EncryptedAttributeType#clean_text_scheme"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-pr: null
-claim: null
-assignee: null
+pr: 7071
+claim: "2026-08-26T11:05:45Z"
+assignee: "fold-join-clauses-into-joins-values"
 blocked-by: null
 closed-reason: null
 ---

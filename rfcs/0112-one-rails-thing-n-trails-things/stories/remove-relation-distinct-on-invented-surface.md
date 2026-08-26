@@ -1,16 +1,16 @@
 ---
 title: "Remove Relation#distinctOn — Rails has distinct_on only on Arel::SelectManager"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: null
-claim: null
-assignee: null
+pr: 6744
+claim: "2026-08-26T11:05:45Z"
+assignee: "fold-join-clauses-into-joins-values"
 blocked-by: null
 closed-reason: null
 ---

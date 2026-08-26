@@ -1,6 +1,6 @@
 ---
 title: "MigrationRunner is a Rails-less duplicate of Migrator + SchemaMigration"
-status: claimed
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 53
-pr: null
+pr: 7069
 claim: "2026-08-26T00:59:17Z"
 assignee: "mysql-purge-does-not-call-recreate-database"
 blocked-by: null

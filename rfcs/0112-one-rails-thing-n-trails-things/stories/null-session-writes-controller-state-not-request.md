@@ -1,7 +1,7 @@
 ---
 title: "NullSession#handle_unverified_request writes controller state instead of the request"
-status: ready
-updated: 2026-08-22
+status: claimed
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: 250
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T11:45:00Z"
+assignee: "hoist-schema-load-and-deferred-pk-materialization-out-of-ported-bodies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port dirty_test.rb's DirtyModel as Rails builds it, so the file exercises ForcedMutationTracker"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 260
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7072
+claim: "2026-08-26T11:07:41Z"
+assignee: "port-dirty-test-model-as-rails-builds-it"
 blocked-by: null
 closed-reason: null
 ---

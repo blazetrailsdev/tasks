@@ -1,7 +1,7 @@
 ---
 title: "SelectCore#froms is a misplaced SelectManager method (arel/select_manager.rb:98)"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7074
+claim: "2026-08-26T11:06:14Z"
+assignee: "schema-qualified-name-helpers-belong-in-postgresql-utils"
 blocked-by: null
 closed-reason: null
 ---
