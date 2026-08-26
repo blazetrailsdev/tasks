@@ -84,7 +84,7 @@ only at the declaring file:
 - [ ] The six `@noRailsEquivalent` receipts naming "the manifest keys private
       names by the .rb the member is DECLARED in" are deleted, and
       `pnpm exec eslint --no-inline-config -c eslint/rails-private-jsdoc.config.mjs
-      "packages/activemodel/src/**/*.ts" "packages/activesupport/src/**/*.ts"`
+    "packages/activemodel/src/**/*.ts" "packages/activesupport/src/**/*.ts"`
       is still clean.
 - [ ] `pnpm exec tsx scripts/api-compare/extra-surface.ts` exits 0 — no tag goes
       STALE as a result.
