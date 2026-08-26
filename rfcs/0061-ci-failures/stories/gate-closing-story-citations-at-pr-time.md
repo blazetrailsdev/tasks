@@ -1,5 +1,5 @@
 ---
-title: "gate-closing-story-citations-at-pr-time"
+title: "Gate Closes-story citations at PR time, not after the merge"
 status: draft
 updated: 2026-08-26
 rfc: "0061-ci-failures"
@@ -7,8 +7,8 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 120
+priority: 1
 pr: null
 claim: null
 assignee: null
