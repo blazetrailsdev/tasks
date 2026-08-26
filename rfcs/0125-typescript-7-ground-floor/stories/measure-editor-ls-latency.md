@@ -1,7 +1,7 @@
 ---
 title: "Measure editor language-service latency on activerecord (TS 5.9.3 vs TS 7)"
 status: draft
-updated: 2026-08-25
+updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: ["activerecord"]

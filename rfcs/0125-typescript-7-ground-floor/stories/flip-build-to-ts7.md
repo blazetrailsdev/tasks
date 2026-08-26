@@ -1,7 +1,7 @@
 ---
 title: "Flip the pinned typescript to 7.x and drop TypeScript 5.x"
 status: draft
-updated: 2026-08-25
+updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages:

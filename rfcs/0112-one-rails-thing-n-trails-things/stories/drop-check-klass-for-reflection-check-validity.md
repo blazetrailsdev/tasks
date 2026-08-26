@@ -1,6 +1,6 @@
 ---
 title: "Association#initialize makes one check_validity! call, not check_klass + validateReflectionValidity"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

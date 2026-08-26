@@ -1,7 +1,7 @@
 ---
 title: "Move trailties' parseTs() onto the TS 7 API"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trailties"]

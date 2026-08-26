@@ -1,6 +1,6 @@
 ---
 title: "Relocate to-sql.test.ts's trails-only extras to to-sql.trails.test.ts"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null

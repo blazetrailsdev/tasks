@@ -1,7 +1,7 @@
 ---
 title: 'ConnectionDescriptor#name is a plain field; Rails answers "ActiveRecord::Base" for a primary class'
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7070
+claim: "2026-08-26T01:05:34Z"
+assignee: "find-collection-target-inline-fallback-skips-find-target-gate"
 blocked-by: null
 closed-reason: null
 ---

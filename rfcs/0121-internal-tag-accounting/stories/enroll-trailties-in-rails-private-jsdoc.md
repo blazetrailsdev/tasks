@@ -1,7 +1,7 @@
 ---
 title: "trailties has 1277 manifest-backed private names and is in neither rails-private-jsdoc glob"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7070
+claim: "2026-08-26T01:05:34Z"
+assignee: "find-collection-target-inline-fallback-skips-find-target-gate"
 blocked-by: null
 closed-reason: null
 ---

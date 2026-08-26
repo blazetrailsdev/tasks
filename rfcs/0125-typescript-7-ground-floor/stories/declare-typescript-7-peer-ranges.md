@@ -1,7 +1,7 @@
 ---
 title: "Declare TypeScript 7 as the supported floor in published peer ranges"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-26
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc", "trailties", "activerecord"]

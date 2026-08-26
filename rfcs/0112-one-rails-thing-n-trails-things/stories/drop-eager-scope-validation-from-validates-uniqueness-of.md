@@ -1,6 +1,6 @@
 ---
 title: "validates_uniqueness_of is _merge_attributes + validates_with, with no third call"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
