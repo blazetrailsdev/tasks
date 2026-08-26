@@ -154,6 +154,32 @@ function changedPaths(tasksDir: string, from: string | null, to: string): string
   return out.split("\n").filter(Boolean);
 }
 
+/**
+ * Work around a trails bug: once a model's types are loaded (any findBy on it),
+ * writing a string that STARTS WITH ':' silently drops that one colon —
+ * `::DateTime` stores as `:DateTime`, `:Alpha` as `Alpha`. Mid-string colons are
+ * fine. It reads like symbol-style coercion in the string caster.
+ *
+ * It corrupted 8 story titles here, and a re-scan re-corrupted them every time,
+ * which is what made this look like "the update silently does not apply".
+ *
+ * Raw SQL bypasses the caster. Narrow on purpose — only values that start with
+ * a colon, only after the ORM has already written. Remove this once the trails
+ * story lands; the test in verbs.test.ts will fail loudly if it is removed too
+ * early.
+ */
+async function fixLeadingColon(storyId: string, title: string | null): Promise<void> {
+  if (!title || !title.startsWith(":")) return;
+  await Base.connection.execute(
+    `UPDATE stories SET title = ${sqlQuote(title)} WHERE id = ${sqlQuote(storyId)}`,
+  );
+}
+
+/** Single-quote a SQL string literal, doubling embedded quotes. */
+function sqlQuote(v: string): string {
+  return `'${v.replace(/'/g, "''")}'`;
+}
+
 async function replaceJoins(
   storyId: string,
   fm: Record<string, unknown>,
@@ -320,6 +346,7 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
         // hand-edits `status:` changes nothing here — which is why CI rejects
         // such a PR outright rather than letting it look like it worked.
         await Story.where({ id: storyId }).updateAll(markdownFields);
+        await fixLeadingColon(storyId, markdownFields.title);
         result.updated++;
       } else {
         await Story.create({
