@@ -34,8 +34,8 @@ if (
 
 Rails has no such guard. `ClassMethods#store` (`store.rb:105-109`) is three
 lines — `build_column_serializer`, then `serialize store_attribute, coder:
-IndifferentCoder.new(store_attribute, coder)` — and the respond_to? test lives
-inside `IndifferentCoder#initialize` (`store.rb:265-271`) as a _fallback_, not a
+IndifferentCoder.new(store_attribute, coder)` — and the respond*to? test lives
+inside `IndifferentCoder#initialize` (`store.rb:265-271`) as a \_fallback*, not a
 raise:
 
 ```ruby
