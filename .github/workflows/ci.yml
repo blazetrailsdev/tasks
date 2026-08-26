@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          # The guard below diffs against the merge base, which needs history.
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -25,6 +28,16 @@ jobs:
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm validate
+      - name: DB-owned frontmatter fields not hand-edited
+        # status/pr/claim/assignee/blocked-by/closed-reason/updated live in the
+        # database. Ingest ignores edits to them on an EXISTING story, so such a
+        # PR merges cleanly and changes nothing — silent, and indistinguishable
+        # from success. This turns it into a loud red naming the verb to use.
+        #
+        # Only modifications are checked: a NEW story is all added lines and the
+        # template ships every one of those keys as birth seeds, which ingest
+        # honors on insert.
+        run: pnpm tsx scripts/check-owned-fields.ts
       - name: index builds + index.md up-to-date
         run: |
           # Smoke: a malformed story makes build-index throw. index.json /

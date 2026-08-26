@@ -19,7 +19,8 @@
     "build-index": "node scripts/build-index.mjs",
     "import": "tsx scripts/import.ts",
     "gate": "tsx scripts/equivalence.ts && tsx scripts/equivalence-ranking.ts",
-    "sync-rfcs": "scripts/sync-rfcs.sh"
+    "sync-rfcs": "scripts/sync-rfcs.sh",
+    "check:owned-fields": "tsx scripts/check-owned-fields.ts"
   },
   "dependencies": {
     "@blazetrails/activerecord": "file:vendor/blazetrails-activerecord-0.1.0.tgz",
