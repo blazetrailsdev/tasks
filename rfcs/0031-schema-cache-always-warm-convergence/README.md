@@ -1,7 +1,7 @@
 ---
 rfc: "0031-schema-cache-always-warm-convergence"
 title: "Schema cache always-warm convergence (sync columnsHash; remove synthesize + sibling-borrow)"
-status: closed
+status: active
 created: 2026-06-16
 updated: 2026-06-24
 owner: "@deanmarano"

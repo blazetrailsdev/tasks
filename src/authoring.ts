@@ -118,6 +118,23 @@ export async function newStory(
     throw new VerbExit(1);
   }
 
+  // A terminal RFC cannot take new work. validate() rejects a closed RFC that
+  // holds an unfinished story, so filing one here does not just look odd — it
+  // turns main's CI red for everyone. This happened: post-merge-findings picked
+  // a "best-fit" RFC that had already been auto-closed, and the resulting draft
+  // story broke validate on main.
+  //
+  // Reopen the RFC first if the work genuinely belongs to it, or pick another.
+  if (rfc.status === "closed" || rfc.status === "superseded") {
+    console.error(
+      `error: RFC ${rfcSlug} is ${rfc.status} — it cannot take new stories.\n` +
+        `  A ${rfc.status} RFC holding an unfinished story fails \`pnpm validate\`, which is a\n` +
+        `  CI failure on main. Reopen it if this work belongs there, or file under\n` +
+        `  another active RFC (0023-surfaced-deviations is the catch-all).`,
+    );
+    throw new VerbExit(1);
+  }
+
   const status: StoryStatus = opts.status ?? "draft";
   if (status === "ready" && rfc.status !== "active") {
     console.error(
