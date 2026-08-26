@@ -56,6 +56,37 @@ predates that PR's merge on `main`, and all three write paths this test uses
 `c.update` at `relation.ts:1380`, `deleteAll` -> `c.delete` at
 `relation.ts:1459`) already routed through the public methods before it.
 
+Ruled out as the cause: a missing `dirties_query_cache` wiring. Rails wires
+twelve methods (`abstract/query_cache.rb:12-16`: `exec_query`, `execute`,
+`create`, `insert`, `update`, `delete`, `truncate`, `truncate_tables`,
+`rollback_to_savepoint`, `rollback_db_transaction`, `restart_db_transaction`,
+`exec_insert_all`) and trails wires all twelve — just split across two sites, so
+a grep of the adapter files alone finds only three of them:
+
+- `abstract-adapter.ts:2863-2874` — `execQuery`, `create`, `insert`, `update`,
+  `delete`, `execInsertAll`, `truncate`, `truncateTables`, `restartDbTransaction`.
+  They live on `AbstractAdapter` because no concrete adapter overrides them
+  (see the sqlite3/postgresql/mysql2 comments at `sqlite3-adapter.ts:3009`,
+  `postgresql-adapter.ts:4522`, `mysql2-adapter.ts:1818`).
+- `sqlite3-adapter.ts:3016-3017` (and the PG/MySQL twins) — `execute`,
+  `rollbackDbTransaction`, `rollbackToSavepoint`, the three each adapter
+  overrides, wired per-adapter so the override is the wrapped method.
+
+`insertAll` bottoms out in `connection.execInsertAll` (`insert-all.ts:231`),
+which IS in the AbstractAdapter list, so the write does dirty the cache.
+
+Independently, the query cache is not even enabled in the AR test lanes: it is
+turned on only by `QueryCache.run` (`query-cache.ts:73-82`) via the executor
+hooks, and those are installed only by the trailtie (`trailtie.ts:243`), which
+the AR suite does not boot. A stale cached read cannot be the mechanism.
+
+Seen a third time on `main` @ `a0a368888` (run 33015202121, job 98331573514,
+Active Record SQLite Tests). On that commit the SQLite `:memory:`, PostgreSQL
+(1,2) and MariaDB (1,2) lanes were all green, the file passes locally on
+repeated runs (alone, and with the whole `packages/activerecord/src/relation`
+directory), and a bare re-run of the same commit with no code change was fully
+green.
+
 ## Acceptance criteria
 
 - Root cause identified — a stale query-cache read, a fixture/transaction
