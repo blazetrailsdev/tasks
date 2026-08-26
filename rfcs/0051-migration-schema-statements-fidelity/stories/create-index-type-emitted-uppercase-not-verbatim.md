@@ -1,7 +1,7 @@
 ---
 title: "visit_CreateIndexDefinition uppercases index.type where Rails emits it verbatim"
-status: draft
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7092
+claim: "2026-08-26T16:11:48Z"
+assignee: "arel-nodes-node-is-abstract-but-rails-instantiates-it"
 blocked-by: null
 closed-reason: null
 ---

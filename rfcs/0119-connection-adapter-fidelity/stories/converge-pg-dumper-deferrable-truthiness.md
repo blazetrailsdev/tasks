@@ -1,6 +1,6 @@
 ---
 title: "Gate dumped deferrable: on truthiness like Rails, not !== undefined"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 7090
 claim: "2026-08-26T15:41:47Z"
 assignee: "retire-explicit-target-and-loaded-from-preload-fields"
 blocked-by: null

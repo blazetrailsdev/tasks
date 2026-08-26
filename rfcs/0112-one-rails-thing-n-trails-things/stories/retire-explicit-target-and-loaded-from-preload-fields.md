@@ -1,6 +1,6 @@
 ---
 title: "retire-explicit-target-and-loaded-from-preload-fields"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7090
 claim: "2026-08-26T15:41:47Z"
 assignee: "retire-explicit-target-and-loaded-from-preload-fields"
 blocked-by: null

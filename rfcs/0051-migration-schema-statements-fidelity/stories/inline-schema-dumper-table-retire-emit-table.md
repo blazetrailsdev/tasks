@@ -1,7 +1,7 @@
 ---
 title: "Inline SchemaDumper#table's column half, retiring emitTable"
 status: ready
-updated: 2026-08-24
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

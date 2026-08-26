@@ -1,6 +1,6 @@
 ---
 title: "visit_Arel_Nodes_BoundSqlLiteral re-validates binds Rails validates only in the constructor"
-status: draft
+status: in-progress
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7093
+claim: "2026-08-26T16:41:51Z"
+assignee: "table-type-caster-delegations-cast-away-the-null-name"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Fragments inherits the generic Node eql/hash and has no initialize_copy"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

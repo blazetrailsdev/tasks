@@ -1,7 +1,7 @@
 ---
 title: "website-frontiers-runtime-dbmigrate-and-sandbox-sw-tests-red"
 status: ready
-updated: 2026-08-24
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

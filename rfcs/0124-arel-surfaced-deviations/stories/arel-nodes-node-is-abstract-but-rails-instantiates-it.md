@@ -1,6 +1,6 @@
 ---
 title: "Nodes::Node is declared abstract, so Rails' Node.new test bodies need a cast"
-status: draft
+status: in-progress
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7092
+claim: "2026-08-26T16:11:48Z"
+assignee: "arel-nodes-node-is-abstract-but-rails-instantiates-it"
 blocked-by: null
 closed-reason: null
 ---

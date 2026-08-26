@@ -1,7 +1,7 @@
 ---
 title: "trailties db migrate:status re-implements DatabaseTasks.migrateStatus instead of calling it"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: 56
-pr: null
-claim: null
-assignee: null
+pr: 7093
+claim: "2026-08-26T16:41:51Z"
+assignee: "table-type-caster-delegations-cast-away-the-null-name"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Retire model._associations in favour of the reflection registry"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores

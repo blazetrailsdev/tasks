@@ -1,6 +1,6 @@
 ---
 title: "Arel clones build a fresh instance instead of copying every ivar like Object#clone"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

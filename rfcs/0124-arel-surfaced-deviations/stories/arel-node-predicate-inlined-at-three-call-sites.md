@@ -1,6 +1,6 @@
 ---
 title: "Arel.arel_node? is missing; its three arms are inlined as a bare instanceof Node"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

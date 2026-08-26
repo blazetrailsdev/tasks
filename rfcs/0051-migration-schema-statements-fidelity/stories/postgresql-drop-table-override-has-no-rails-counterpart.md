@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL's dropTable override has no Rails counterpart"
-status: draft
-updated: 2026-08-25
+status: blocked
+updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-26T16:41:51Z"
+assignee: "table-type-caster-delegations-cast-away-the-null-name"
+blocked-by: "Premise falsified: Rails DOES define PostgreSQL#drop_table at vendor/rails/activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb:57-60 (one statement for all table_names, plus ' CASCADE' if options[:force] == :cascade). The story's grep only covered connection_adapters/postgresql*.rb, missing the postgresql/ subdirectory. trails' override at connection-adapters/postgresql/schema-statements-class.ts mirrors that body; deleting it would drop CASCADE support on PG and diverge from Rails. Rails has three drop_table bodies (abstract/schema_statements.rb:540, postgresql/schema_statements.rb:57, abstract_mysql_adapter.rb:354) and trails has three. The residual TS-only duplication is the *args/**options/&block parse, which Ruby gets free from the signature."
 closed-reason: null
 ---
 
