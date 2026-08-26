@@ -17,6 +17,7 @@ import { dirname, join } from "node:path";
 import { Rfc } from "./models/index.js";
 import { currentBranch, mainWorktree } from "./db-path.js";
 import { VerbExit } from "./db.js";
+import { pushMain } from "./export.js";
 import type { StoryStatus } from "./models/index.js";
 
 /** Escape for a YAML double-quoted scalar: backslash first, then quote. */
@@ -150,6 +151,9 @@ export async function newStory(
     // agent's in-flight edits sitting in the same worktree.
     git(["add", "--", rel]);
     git(["commit", "-q", "-m", `new: ${rfcSlug}/${storySlug}`]);
+    // Push, or the story exists only on this host: invisible on github.com, and
+    // the local/origin drift eventually orphans the ingest watermark.
+    pushMain(git, "tasks new");
     committed = true;
   }
 

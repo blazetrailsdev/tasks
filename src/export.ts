@@ -163,5 +163,36 @@ export async function exportState(
     "-m",
     `state: sync ${changed.length} stor${changed.length === 1 ? "y" : "ies"}`,
   ]);
+  pushMain(git, "export");
   return { changed, committed: true, sha: git(["rev-parse", "HEAD"]) };
+}
+
+/**
+ * Push main, rebasing once if origin moved.
+ *
+ * Without this, commits pile up locally: github.com never sees them (which
+ * defeats the point of exporting state back to markdown at all), and local main
+ * drifts ahead until the next agent push makes the two genuinely diverge —
+ * which then orphans the ingest watermark and forces a full re-scan.
+ *
+ * Measured before this existed: 12 unpushed commits, 10 of them agent-authored
+ * stories that existed only on this host.
+ *
+ * Best-effort — the commit is the durable part, so a failed push warns rather
+ * than throwing.
+ */
+export function pushMain(git: (args: string[]) => string, who: string): void {
+  try {
+    git(["push", "--quiet", "origin", "HEAD:main"]);
+  } catch {
+    try {
+      git(["pull", "--rebase", "--autostash", "--quiet", "origin", "main"]);
+      git(["push", "--quiet", "origin", "HEAD:main"]);
+    } catch (e) {
+      console.error(
+        `warning: ${who} committed locally but could not push: ${(e as Error).message}\n` +
+          `  the work is on local main; push it or the next run will.`,
+      );
+    }
+  }
 }
