@@ -1,6 +1,6 @@
 ---
 title: "retire api.ts's re-export wrappers and raiseOnMissingTranslations"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

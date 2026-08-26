@@ -1,6 +1,6 @@
 ---
 title: "Retire declaredAttributeNames — its @noRailsEquivalent receipt names a gate that no longer exists"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
