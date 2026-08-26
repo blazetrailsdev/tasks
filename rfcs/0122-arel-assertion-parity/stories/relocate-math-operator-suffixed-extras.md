@@ -1,6 +1,6 @@
 ---
 title: "relocate-math-operator-suffixed-extras"
-status: ready
+status: in-progress
 updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7100
+claim: "2026-08-26T19:54:34Z"
+assignee: "relocate-math-operator-suffixed-extras"
 blocked-by: null
 closed-reason: null
 ---

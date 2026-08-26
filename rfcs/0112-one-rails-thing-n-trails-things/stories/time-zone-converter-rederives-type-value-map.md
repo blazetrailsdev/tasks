@@ -1,16 +1,16 @@
 ---
 title: "TimeZoneConverter re-derives Type::Value#map with isRangeLike/mapRange instead of calling map"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 130
-pr: null
-claim: null
-assignee: null
+pr: 7097
+claim: "2026-08-26T19:30:13Z"
+assignee: "time-zone-converter-rederives-type-value-map"
 blocked-by: null
 closed-reason: null
 ---

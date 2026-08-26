@@ -1,6 +1,6 @@
 ---
 title: "Converge DatabaseConfigurations build entry points onto Rails' single constructor"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

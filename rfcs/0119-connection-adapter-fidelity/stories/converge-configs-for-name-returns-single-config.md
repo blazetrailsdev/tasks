@@ -1,6 +1,6 @@
 ---
 title: "configs_for(name:) returns a single DatabaseConfig, not an array"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

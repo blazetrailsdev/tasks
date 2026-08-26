@@ -1,6 +1,6 @@
 ---
 title: "Gate Closes-story citations at PR time, not after the merge"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0061-ci-failures"
 cluster: null

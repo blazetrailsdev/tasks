@@ -1,6 +1,6 @@
 ---
 title: "cacheDumpFilename adds a fourth fallback and any-casts Rails does not have"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

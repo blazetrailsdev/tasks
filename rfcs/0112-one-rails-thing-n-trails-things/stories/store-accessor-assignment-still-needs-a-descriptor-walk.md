@@ -1,15 +1,15 @@
 ---
 title: "findPrototypeSetter's last caller: store accessors aren't reachable by name like Rails' define_method ones"
-status: ready
-updated: 2026-08-22
+status: done
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: null
-claim: null
-assignee: null
+pr: 6801
+claim: "2026-08-26T19:28:52Z"
+assignee: "schema-cache-derive-step-skips-deep-deduplicate"
 blocked-by: null
 closed-reason: null
 ---

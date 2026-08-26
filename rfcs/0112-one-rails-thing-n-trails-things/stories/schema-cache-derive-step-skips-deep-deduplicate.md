@@ -1,15 +1,15 @@
 ---
 title: "SchemaCache derive step never calls deepDeduplicate"
-status: ready
-updated: 2026-08-22
+status: in-progress
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 70
-pr: null
-claim: null
-assignee: null
+pr: 7098
+claim: "2026-08-26T19:28:52Z"
+assignee: "schema-cache-derive-step-skips-deep-deduplicate"
 blocked-by: null
 closed-reason: null
 ---

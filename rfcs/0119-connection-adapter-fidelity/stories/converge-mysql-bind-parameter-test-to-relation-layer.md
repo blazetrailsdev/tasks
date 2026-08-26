@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL bind-parameter test to Rails' canonical fixtures and relation-layer quoting"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
