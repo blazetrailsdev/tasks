@@ -1,6 +1,6 @@
 ---
 title: "store_accessor_for resolves through the attribute type only, not a side coder registry"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores

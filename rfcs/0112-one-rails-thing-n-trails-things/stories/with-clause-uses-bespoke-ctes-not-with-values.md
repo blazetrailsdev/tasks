@@ -1,7 +1,7 @@
 ---
 title: "Relation#with builds a bespoke _ctes array instead of with_values + build_with"
-status: ready
-updated: 2026-08-22
+status: claimed
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T20:00:17Z"
+assignee: "time-zone-converter-serialize-rederives-container-walk"
 blocked-by: null
 closed-reason: null
 ---
