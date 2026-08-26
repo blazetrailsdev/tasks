@@ -27,7 +27,16 @@ import {
   type Index,
   type StoryEntry,
 } from "./ranking.js";
-import { block, claim, close, markTracking, release, setPriority, statusSet } from "./verbs.js";
+import {
+  block,
+  claim,
+  close,
+  markTracking,
+  recordSpawn,
+  release,
+  setPriority,
+  statusSet,
+} from "./verbs.js";
 import { newStory } from "./authoring.js";
 import type { StoryStatus } from "./models/index.js";
 
@@ -50,6 +59,7 @@ Mutate:
   release <id...>
   in-progress <id...> --pr N
   done <id...> [--pr N]
+  record-spawn <id...> --source S [--branch B] [--pane P]
   block <id> <reason>
   close <id> <reason>
   status-set <id> <status>
@@ -324,6 +334,16 @@ async function main(): Promise<number> {
       if (!ids.length) return usage();
       if (cmd === "in-progress" && pr === null) return usage();
       await markTracking(ids, cmd, pr);
+      break;
+    }
+    case "record-spawn": {
+      const ids = [...new Set(pos)];
+      const source = str(flags, "source");
+      if (!ids.length || !source) return usage();
+      await recordSpawn(ids, source, {
+        branch: str(flags, "branch"),
+        pane: str(flags, "pane"),
+      });
       break;
     }
     case "block": {

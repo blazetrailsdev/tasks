@@ -161,6 +161,36 @@ export async function markTracking(
   });
 }
 
+/**
+ * Append a `spawn` event recording WHERE a dispatch came from.
+ *
+ * Spawn provenance was invisible: the loop, the story-page button, the RFC
+ * batch button and the CI-fixer all called the same spawner, and nothing
+ * recorded which. btwhooks' own Spawn registry is pruned once the PR opens, so
+ * even that could not answer the question a week later.
+ *
+ * This lands in `events`, which is append-only and already what the velocity
+ * and burndown charts read — so provenance is durable and chartable for free.
+ *
+ * Does NOT touch story state: a spawn is something that happened TO a story,
+ * not a state transition. The claim that follows is the state change.
+ */
+export async function recordSpawn(
+  ids: string[],
+  source: string,
+  opts: { branch?: string | null; pane?: string | null } = {},
+): Promise<void> {
+  await Base.transaction(async () => {
+    for (const id of ids) {
+      await record("spawn", id, {
+        actor: source,
+        detail: { source, branch: opts.branch ?? null, pane: opts.pane ?? null },
+      });
+    }
+  });
+  console.log(`recorded spawn (${source}) for ${ids.length} stor${ids.length === 1 ? "y" : "ies"}`);
+}
+
 export async function block(id: string, reason: string): Promise<void> {
   await Base.transaction(async () => {
     const [s] = await findAll([id]);
