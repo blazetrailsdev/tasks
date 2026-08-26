@@ -21,7 +21,7 @@ closed-reason: null
 `scripts/stale-story-references.ts` reds `Unit Tests` on main when a comment
 promises work to a story that has already landed. Its input is the story's
 `status:` frontmatter in the **tasks** repo, and that status flips to `done`
-only *after* the merge — `.claude/skills/post-merge-findings/run.sh:110-125`
+only _after_ the merge — `.claude/skills/post-merge-findings/run.sh:110-125`
 parses the `Closes-story:` trailers out of the PR body and runs `pnpm tasks
 done` once the PR is merged.
 
@@ -67,7 +67,7 @@ carry no pending citation of `<id>` anywhere in the tree.
    `scripts/*.test.ts` glob in `vitest.config.ts:445`, so no vitest or `ci.yml`
    registration is needed. Cases: case-insensitive trailer parse; several
    trailers (a bundle PR closes more than one); a citation of a story the PR
-   does *not* close is left alone; the #7077 comment as a verbatim fixture. The
+   does _not_ close is left alone; the #7077 comment as a verbatim fixture. The
    new test file must add itself to `SKIP_FILES` the way
    `stale-story-references.test.ts` does, or the line-based scan reads its own
    fixture as a real comment.
