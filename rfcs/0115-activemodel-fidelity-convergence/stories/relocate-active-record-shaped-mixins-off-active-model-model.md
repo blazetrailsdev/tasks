@@ -5,7 +5,7 @@ updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
-deps: []
+deps: [move-serialization-mixins-off-active-model-model, move-attribute-mixins-off-active-model-model, trim-active-model-model-to-api-and-access]
 deps-rfc: []
 est-loc: null
 priority: null
