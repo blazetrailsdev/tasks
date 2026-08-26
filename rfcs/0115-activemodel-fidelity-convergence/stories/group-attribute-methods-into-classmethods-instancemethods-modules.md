@@ -85,10 +85,16 @@ hook issues `attributeMethodSuffix("=", …)` (attributes.rb:35-37).
   `Included<>`; no hand-maintained parallel list of member signatures.
 - `model.ts` wires them with one `extend()` and one `include()`, and the
   per-name `declare static` block collapses accordingly.
-- The four rows in
+- The rows in
   `scripts/api-compare/call-mismatches-exclude/activemodel/attribute-methods.json`
+  are still reported — proof the bodies are still being measured. As of
+  2026-08-26 that file holds two rows, `define_call`/`match?` and
+  `resolve_attribute_name`/`fetch`; the four this criterion originally named
   (`resolve_attribute_name`/`fetch`, `attribute_method_patterns_cache`/`new`,
-  `attribute_method?`/`attributes`, `attribute_method?`/`respond_to_without_attributes?`)
-  are still reported — proof the bodies are still being measured.
+  `attribute_method?`/`attributes`,
+  `attribute_method?`/`respond_to_without_attributes?`) were never all present
+  — read the file, not this list. A row that appears BECAUSE the grouping
+  restored a pairing a bodyless declaration had been winning is expected, and
+  converges or is baselined with a real reason like any other.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative;
   `pnpm parity:api:extra --package activemodel` does not rise.
