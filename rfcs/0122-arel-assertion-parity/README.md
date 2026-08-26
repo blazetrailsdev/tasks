@@ -1,9 +1,9 @@
 ---
 rfc: "0122-arel-assertion-parity"
 title: "arel assertion parity to zero"
-status: active
+status: closed
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 owner: "@deanmarano"
 packages:
   - "arel"
