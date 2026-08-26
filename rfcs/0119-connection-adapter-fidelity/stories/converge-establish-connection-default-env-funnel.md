@@ -1,6 +1,6 @@
 ---
 title: "Port DEFAULT_ENV and collapse establishConnection's trails-only autoConnect arm"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

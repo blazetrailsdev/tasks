@@ -1,6 +1,6 @@
 ---
 title: "invert_transaction throws where Rails reverts the block through a sub-recorder"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

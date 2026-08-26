@@ -1,6 +1,6 @@
 ---
 title: "Inline SchemaDumper#table's column half, retiring emitTable"
-status: ready
+status: in-progress
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: 55
-pr: null
-claim: null
-assignee: null
+pr: 7094
+claim: "2026-08-26T17:11:41Z"
+assignee: "inline-schema-dumper-table-retire-emit-table"
 blocked-by: null
 closed-reason: null
 ---

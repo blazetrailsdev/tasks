@@ -1,6 +1,6 @@
 ---
 title: "SelectManager#as rejects a SqlLiteral where Rails' SqlLiteral.new accepts one"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null

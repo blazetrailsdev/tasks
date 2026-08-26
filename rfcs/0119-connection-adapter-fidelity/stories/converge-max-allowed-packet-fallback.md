@@ -1,6 +1,6 @@
 ---
 title: "Drop the 16 MiB max_allowed_packet fallback and receiver-dispatch branch"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

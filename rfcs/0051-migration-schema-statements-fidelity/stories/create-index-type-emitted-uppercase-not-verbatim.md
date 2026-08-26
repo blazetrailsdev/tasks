@@ -1,6 +1,6 @@
 ---
 title: "visit_CreateIndexDefinition uppercases index.type where Rails emits it verbatim"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

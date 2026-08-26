@@ -1,7 +1,7 @@
 ---
 title: "rename_table passes new_name to pk_and_sequence_for, which resolves the schema itself"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7026
+claim: "2026-08-26T17:54:27Z"
+assignee: "sqlite-indexes-sorts-index-info-rows-rails-does-not"
 blocked-by: null
 closed-reason: null
 ---

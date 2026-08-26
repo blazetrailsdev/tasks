@@ -1,6 +1,6 @@
 ---
 title: "CommandRecorder#commands returns a defensive copy where Rails' attr_accessor is live"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

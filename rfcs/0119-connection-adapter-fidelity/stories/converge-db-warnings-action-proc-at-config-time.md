@@ -1,6 +1,6 @@
 ---
 title: "Bake db_warnings_action into a callable at config time instead of branching in handle_warnings"
-status: claimed
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 7055
 claim: "2026-08-26T15:41:47Z"
 assignee: "retire-explicit-target-and-loaded-from-preload-fields"
 blocked-by: null

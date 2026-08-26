@@ -1,6 +1,6 @@
 ---
 title: "select-manager.test.ts duplicates 12 Rails test names with weaker trails-only copies"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0122-arel-assertion-parity"
 cluster: null
