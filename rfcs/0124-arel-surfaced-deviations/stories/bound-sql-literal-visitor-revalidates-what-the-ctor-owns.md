@@ -1,6 +1,6 @@
 ---
 title: "visit_Arel_Nodes_BoundSqlLiteral re-validates binds Rails validates only in the constructor"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

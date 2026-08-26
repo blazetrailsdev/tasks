@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests failing on main @691f6a0c"
-status: claimed
+status: closed
 updated: 2026-08-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: 7096
 claim: "2026-08-26T17:38:40Z"
 assignee: "red-691f6a0c"
 blocked-by: null
-closed-reason: null
+closed-reason: "Fixed on main by a since-merged PR: #7093 (7ca77fde) landed changes to type-caster/connection.ts, type-caster/map.ts and arel to-sql.ts; the Active Record SQLite lane is green at 7ca77fde and later, and a main+no-op branch also passed the full unsharded SQLite lane. No code change needed for this red."
 ---
 
 ## Context

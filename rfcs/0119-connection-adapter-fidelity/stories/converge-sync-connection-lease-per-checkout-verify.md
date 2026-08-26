@@ -1,6 +1,6 @@
 ---
 title: "converge-sync-connection-lease-per-checkout-verify"
-status: claimed
+status: blocked
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-26T17:54:27Z"
 assignee: "sqlite-indexes-sorts-index-info-rows-rails-does-not"
-blocked-by: null
+blocked-by: "Cannot converge without flipping the sync surfaces async. trails' verifyBang (abstract-adapter.ts:1379) is async because ActiveModel-side active() is a real backend round-trip, where Rails' verify! (abstract_adapter.rb:759) is sync; the three residual sites are structurally synchronous — Ruby's deprecated .connection getter (connection-handling.ts:430-450), Arel::Nodes::Node#to_sql (arel/src/nodes/node.ts:46-64, sync at 600+ call sites) and leaseConnectionSync itself (connection-pool.ts:701) — so neither arm of the acceptance criteria is reachable: the self-heal cannot run synchronously, and the sites cannot await. The named owner retire-connection-pool-async-resolution-shims already landed as #6095 without covering this; needs a new epic that makes to_sql/.connection async before this residual can close."
 closed-reason: null
 ---
 

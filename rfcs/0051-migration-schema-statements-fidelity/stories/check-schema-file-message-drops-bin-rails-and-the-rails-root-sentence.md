@@ -1,6 +1,6 @@
 ---
 title: "check_schema_file's abort message drops `bin/rails` and the conditional Rails.root sentence"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

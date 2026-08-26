@@ -1,6 +1,6 @@
 ---
 title: "Migration#createTable callback is typed as the abstract TableDefinition, not the connection's"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

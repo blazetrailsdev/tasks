@@ -1,7 +1,7 @@
 ---
 title: "Route protect_from_forgery / verify_authenticity_token through the metal CSRF port"
-status: ready
-updated: 2026-08-22
+status: closed
+updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 packages: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "closed from dashboard"
 ---
 
 # Route `protect_from_forgery` / `verify_authenticity_token` through the metal CSRF port

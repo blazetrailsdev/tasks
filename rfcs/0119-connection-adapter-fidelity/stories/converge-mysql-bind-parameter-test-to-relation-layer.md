@@ -1,6 +1,6 @@
 ---
 title: "Converge MySQL bind-parameter test to Rails' canonical fixtures and relation-layer quoting"
-status: claimed
+status: in-progress
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7095
 claim: "2026-08-26T17:54:27Z"
 assignee: "sqlite-indexes-sorts-index-info-rows-rails-does-not"
 blocked-by: null
