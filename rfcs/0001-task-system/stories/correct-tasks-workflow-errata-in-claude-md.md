@@ -75,7 +75,7 @@ load-bearing rather than historical.
 
 Replace the `tasks ingest` bullet with:
 
-```
+```markdown
 - **`tasks ingest` is a sync verb, not an inspection verb.** Do not reach for it
   to check that a branch's stories parse — that is `pnpm tasks show` /
   `pnpm tasks list`, or `(cd tasks && pnpm validate)` (there is no `validate`
@@ -89,7 +89,7 @@ Replace the `tasks ingest` bullet with:
 
 Replace the opening of the story-authoring paragraph with:
 
-```
+```markdown
 **Creating a story is authoring, so it is markdown**: `pnpm tasks new <rfc>
 <slug> --body-file <path>` writes the file, commits it, and runs ingest — which
 is what creates the row, since authoring never inserts one directly. Do not
