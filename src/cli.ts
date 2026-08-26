@@ -60,6 +60,7 @@ Mutate:
   in-progress <id...> --pr N
   done <id...> [--pr N]
   record-spawn <id...> --source S [--branch B] [--pane P]
+  record-spawn --rfc R --source S [--pane P]      (RFC-scoped, e.g. a refine)
   block <id> <reason>
   close <id> <reason>
   status-set <id> <status>
@@ -339,10 +340,12 @@ async function main(): Promise<number> {
     case "record-spawn": {
       const ids = [...new Set(pos)];
       const source = str(flags, "source");
-      if (!ids.length || !source) return usage();
+      const rfc = str(flags, "rfc");
+      if (!source || (!ids.length && !rfc)) return usage();
       await recordSpawn(ids, source, {
         branch: str(flags, "branch"),
         pane: str(flags, "pane"),
+        rfc,
       });
       break;
     }

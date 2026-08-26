@@ -178,14 +178,30 @@ export async function markTracking(
 export async function recordSpawn(
   ids: string[],
   source: string,
-  opts: { branch?: string | null; pane?: string | null } = {},
+  opts: { branch?: string | null; pane?: string | null; rfc?: string | null } = {},
 ): Promise<void> {
+  const detail = { source, branch: opts.branch ?? null, pane: opts.pane ?? null };
+
+  // An RFC-scoped dispatch (a refine agent) names no story: it grooms a whole
+  // RFC's backlog. Record it against rfc_id so the provenance is still there,
+  // rather than dropping it for want of a story id.
+  if (opts.rfc && ids.length === 0) {
+    await Event.create({
+      at: nowIso(),
+      verb: "spawn",
+      story_id: null,
+      rfc_id: opts.rfc,
+      pr: null,
+      actor: source,
+      detail: JSON.stringify(detail),
+    });
+    console.log(`recorded spawn (${source}) for rfc ${opts.rfc}`);
+    return;
+  }
+
   await Base.transaction(async () => {
     for (const id of ids) {
-      await record("spawn", id, {
-        actor: source,
-        detail: { source, branch: opts.branch ?? null, pane: opts.pane ?? null },
-      });
+      await record("spawn", id, { actor: source, detail });
     }
   });
   console.log(`recorded spawn (${source}) for ${ids.length} stor${ids.length === 1 ? "y" : "ies"}`);
