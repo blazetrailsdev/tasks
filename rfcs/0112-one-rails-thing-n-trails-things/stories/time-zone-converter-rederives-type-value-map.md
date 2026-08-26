@@ -1,6 +1,6 @@
 ---
 title: "TimeZoneConverter re-derives Type::Value#map with isRangeLike/mapRange instead of calling map"
-status: in-progress
+status: done
 updated: 2026-08-26
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: split-stores
