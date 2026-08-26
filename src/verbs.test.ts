@@ -111,6 +111,18 @@ describe("release", () => {
 });
 
 describe("close", () => {
+  // btwhooks calls `close <id> --reason <text>` (spawnloop.go) while agents type
+  // `close <id> <text>`. The rewrite accepted only the positional form, so the
+  // dashboard's close button failed with a bare usage dump and exit 1. Both
+  // forms are a contract; this is the second CLI signature the rewrite broke
+  // (next-bundle --json was the first), so it gets a test.
+  it("accepts a reason either positionally or via --reason", async () => {
+    await close("s1", "positional reason");
+    expect((await Story.findBy({ id: "s1" }))!.closed_reason).toBe("positional reason");
+    await close("s2", "flag reason");
+    expect((await Story.findBy({ id: "s2" }))!.closed_reason).toBe("flag reason");
+  });
+
   it("requires a reason — it is the only record of why work was abandoned", async () => {
     await expect(close("s1", "   ")).rejects.toMatchObject({ code: 1 });
   });

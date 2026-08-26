@@ -61,8 +61,8 @@ Mutate:
   done <id...> [--pr N]
   record-spawn <id...> --source S [--branch B] [--pane P]
   record-spawn --rfc R --source S [--pane P]      (RFC-scoped, e.g. a refine)
-  block <id> <reason>
-  close <id> <reason>
+  block <id> <reason|--reason R>
+  close <id> <reason|--reason R>
   status-set <id> <status>
   priority <id> <n|clear>
 
@@ -349,14 +349,16 @@ async function main(): Promise<number> {
       });
       break;
     }
-    case "block": {
-      if (pos.length < 2) return usage();
-      await block(pos[0], pos.slice(1).join(" "));
-      break;
-    }
+    // `--reason` is preferred and positional is the fallback, matching the old
+    // CLI exactly: btwhooks calls `close <id> --reason <text>` (spawnloop.go),
+    // while agents type `close <id> <text>`. Accepting only the positional form
+    // broke the dashboard's close button, which failed with a bare usage dump.
+    case "block":
     case "close": {
-      if (pos.length < 2) return usage();
-      await close(pos[0], pos.slice(1).join(" "));
+      const id = pos[0];
+      const reason = str(flags, "reason") ?? (pos.length > 1 ? pos.slice(1).join(" ") : null);
+      if (!id || !reason) return usage();
+      await (cmd === "block" ? block(id, reason) : close(id, reason));
       break;
     }
     case "status-set": {
