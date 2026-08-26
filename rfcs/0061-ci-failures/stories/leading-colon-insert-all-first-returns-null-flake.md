@@ -19,6 +19,7 @@ closed-reason: null
 ## Context
 
 `packages/activerecord/src/relation/leading-colon-string-writes.trails.test.ts`
+
 > `leading-colon string writes` > `create and insert_all store a leading colon
 verbatim` fails intermittently with:
 
