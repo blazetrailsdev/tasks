@@ -1,7 +1,7 @@
 ---
 title: "enroll-actionview-in-unbacked-internal-receipt-lint"
-status: ready
-updated: 2026-08-26
+status: closed
+updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "closed from dashboard"
 ---
 
 ## Context

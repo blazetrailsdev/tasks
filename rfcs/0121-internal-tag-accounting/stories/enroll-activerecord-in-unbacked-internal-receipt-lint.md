@@ -1,7 +1,7 @@
 ---
 title: "enroll-activerecord-in-unbacked-internal-receipt-lint"
-status: ready
-updated: 2026-08-26
+status: blocked
+updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-27T02:06:24Z"
+assignee: "enroll-activerecord-in-unbacked-internal-receipt-lint"
+blocked-by: "11 names cannot carry a receipt with today's extra-surface tooling, so parity:api:extra:gate goes +6 novel/+10 total (mark 370/1168 -> 376/1178). (a) 7 fabricated file-module names (KeyNormalization, PgDatetimeConfig, EncodingHelpers, RubyFirst, RubyTruthy, SqliteUri, StatementReader): receipting their functions flips internal=false, which fabricates the file module (extract-ts-api.ts:1057), and the only cover is a file-level tag that fileLevelNoRailsEquivalentReason (extract-ts-api.ts:1853) refuses on a file whose first statement is not an import -- blocked on file-level-no-rails-equivalent-cannot-cover-import-less-files. (b) 4 inherited interface members in schema-statements.ts (asyncEnabled, caseInsensitiveComparison, lookupCastTypeFromColumn, returnValueAfterInsert) -- blocked on extra-surface-inherited-interface-members-are-uncoverable. Everything else is done and pushed on branch enroll-activerecord-in-unbacked-internal-receipt-lint-35d9 (118 files, 644+/330-): both files lists enrolled, 165 unbacked tags deleted, 259 reviewed receipts written, eslint reports ZERO unbacked-internal-needs-receipt violations, and parity:api:extra reports no STALE tag."
 closed-reason: null
 ---
 

@@ -1,16 +1,16 @@
 ---
 title: "Ratchet the rebuildCanonicalTables caller list: no new call sites"
-status: ready
-updated: 2026-07-26
+status: in-progress
+updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7112
+claim: "2026-08-27T02:01:16Z"
+assignee: "ratchet-rebuild-canonical-tables-callers"
 blocked-by: null
 closed-reason: null
 ---

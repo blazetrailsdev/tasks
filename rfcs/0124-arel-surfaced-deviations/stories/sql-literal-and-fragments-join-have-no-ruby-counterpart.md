@@ -1,6 +1,6 @@
 ---
 title: "SqlLiteral#join and Fragments#join have no counterpart in their Ruby files"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

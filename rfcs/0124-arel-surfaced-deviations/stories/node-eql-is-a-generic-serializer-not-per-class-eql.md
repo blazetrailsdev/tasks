@@ -1,6 +1,6 @@
 ---
 title: "Node#eql/#hash is one generic serializer where Rails defines eql?/hash per node class"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
