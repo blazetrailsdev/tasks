@@ -1,6 +1,6 @@
 ---
 title: 'Accept Rails'' ":default" sentinel spelling for PG session variables'
-status: claimed
+status: done
 updated: 2026-08-26
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7105
 claim: "2026-08-26T21:48:02Z"
 assignee: "move-serialization-mixins-off-active-model-model"
 blocked-by: null

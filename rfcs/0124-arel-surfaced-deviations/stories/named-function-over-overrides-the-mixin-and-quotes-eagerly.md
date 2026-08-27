@@ -1,6 +1,6 @@
 ---
 title: "NamedFunction#over overrides a mixin Rails doesn't override and quotes the window name eagerly"
-status: draft
+status: ready
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

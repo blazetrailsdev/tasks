@@ -1,6 +1,6 @@
 ---
 title: "move-serialization-mixins-off-active-model-model"
-status: claimed
+status: done
 updated: 2026-08-26
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7105
 claim: "2026-08-26T21:48:02Z"
 assignee: "move-serialization-mixins-off-active-model-model"
 blocked-by: null

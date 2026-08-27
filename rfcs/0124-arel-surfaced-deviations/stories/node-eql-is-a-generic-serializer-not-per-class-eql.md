@@ -1,6 +1,6 @@
 ---
 title: "Node#eql/#hash is one generic serializer where Rails defines eql?/hash per node class"
-status: ready
+status: claimed
 updated: 2026-08-26
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-26T23:55:46Z"
+assignee: "node-eql-is-a-generic-serializer-not-per-class-eql"
 blocked-by: null
 closed-reason: null
 ---
