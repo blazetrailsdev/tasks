@@ -1,6 +1,6 @@
 ---
 title: "lint: TS-only tests in Rails-named test files — per-file only-shrink ratchet, arel first"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: lint-enrollment

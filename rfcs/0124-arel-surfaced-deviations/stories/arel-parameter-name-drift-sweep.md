@@ -1,6 +1,6 @@
 ---
 title: "arel: 12 parameter names and Table#name writability drift from Rails"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: rails-deviation
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7123
 claim: "2026-08-27T15:57:56Z"
 assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null

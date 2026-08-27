@@ -1,6 +1,6 @@
 ---
 title: "arel: enroll unbacked-internal-needs-receipt, rails-error-parity (with arel in the manifest) and no-explicit-any-disable"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: lint-enrollment

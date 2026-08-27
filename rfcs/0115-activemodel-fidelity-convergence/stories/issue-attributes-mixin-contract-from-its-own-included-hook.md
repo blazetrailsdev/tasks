@@ -1,6 +1,6 @@
 ---
 title: "issue-attributes-mixin-contract-from-its-own-included-hook"
-status: draft
+status: in-progress
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7124
 claim: null
 assignee: null
 blocked-by: null

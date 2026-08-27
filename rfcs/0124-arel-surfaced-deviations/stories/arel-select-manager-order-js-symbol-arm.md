@@ -1,6 +1,6 @@
 ---
 title: "arel: SelectManager#order and visitor dispatch model Ruby Symbol as JS Symbol"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: invented-arm
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 7123
 claim: "2026-08-27T15:57:56Z"
 assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null
