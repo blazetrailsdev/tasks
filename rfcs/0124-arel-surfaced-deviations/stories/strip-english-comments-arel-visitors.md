@@ -41,19 +41,19 @@ volume was never in scope.
 Measured 2026-08-27 over `packages/arel/src` excluding tests — 2,711 comment
 lines:
 
-| class | lines | disposition |
-| --- | ---: | --- |
-| **prose** | **1,384** | **delete** |
-| citation (`Mirrors`, a `.rb` path) | 538 | keep |
-| block delimiters (`/**`, `*/`) | 477 | keep/collapse with their block |
-| blank `*` lines inside blocks | 192 | collapse |
-| JSDoc tags | 94 | keep |
-| tool directives | 26 | keep |
+| class                              |     lines | disposition                    |
+| ---------------------------------- | --------: | ------------------------------ |
+| **prose**                          | **1,384** | **delete**                     |
+| citation (`Mirrors`, a `.rb` path) |       538 | keep                           |
+| block delimiters (`/**`, `*/`)     |       477 | keep/collapse with their block |
+| blank `*` lines inside blocks      |       192 | collapse                       |
+| JSDoc tags                         |        94 | keep                           |
+| tool directives                    |        26 | keep                           |
 
 **Keep** — a comment must be one of:
 
 - A JSDoc tag: `@internal`, `@noRailsEquivalent`, `@missingRailsCall`,
-  `@missingRailsArgs`, `@nie disposition=`. The *reason argument* these tags
+  `@missingRailsArgs`, `@nie disposition=`. The _reason argument_ these tags
   require is not prose and stays — `parity:api:extra` and
   `lint-missing-rails-call-reasons` read it, and it is reviewed.
 - A Rails citation: a `Mirrors:` line or a `<file>.rb:<lines>` reference,
@@ -68,7 +68,7 @@ lines:
 - prose attached to a citation (`Mirrors: X — this is why we do Y`; keep the
   `Mirrors: X`, drop the clause),
 - descriptive JSDoc summaries (`/** Add GROUP BY. */`, `/** Set the FROM
-  table. */`) — these are the exact form the maintainer named. TypeDoc loses
+table. */`) — these are the exact form the maintainer named. TypeDoc loses
   them; that is accepted, the signature and the citation carry it.
 
 Deleting the 1,384 prose lines takes **14% of the package** out and is roughly
@@ -79,13 +79,13 @@ half the measured gap to Ruby.
 1,384 deleted lines will not fit one PR. Ship per subtree, largest first, and
 file one sibling story per remaining slice off this one:
 
-| slice | prose lines |
-| --- | ---: |
-| `visitors/` | 460 |
-| `src/*.ts` (root) | 420 |
-| `nodes/` | 333 |
-| `test-helpers/` | 143 |
-| `attributes/` + `collectors/` | 28 |
+| slice                         | prose lines |
+| ----------------------------- | ----------: |
+| `visitors/`                   |         460 |
+| `src/*.ts` (root)             |         420 |
+| `nodes/`                      |         333 |
+| `test-helpers/`               |         143 |
+| `attributes/` + `collectors/` |          28 |
 
 **This story is the `visitors/` slice**, and it also establishes the
 keep/delete definition above for the siblings to follow. `visitors/visitor.ts`
@@ -96,8 +96,8 @@ file restating the dispatch design.
 
 `0023-surfaced-deviations/close-jsdoc-bypass-in-no-freeform-comments` changes
 `blazetrails/no-freeform-comments` so keep-rule 1 stops keeping JSDoc
-unconditionally. That rule change is the *mechanism* that stops the prose
-coming back; this story is the arel *sweep*. They are separable and this one
+unconditionally. That rule change is the _mechanism_ that stops the prose
+coming back; this story is the arel _sweep_. They are separable and this one
 does not wait: a sweep with no rule regresses, and a rule with no sweep cannot
 be enrolled. Sequence them by whichever lands first — if the rule lands first,
 its arel enrollment covers this slice and the sweep is its autofix output.
