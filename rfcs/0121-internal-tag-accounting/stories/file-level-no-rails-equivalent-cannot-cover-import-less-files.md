@@ -54,16 +54,10 @@ Do NOT resolve this by raising the mark, by an `--exclude-glob` (an exclusion
 disarms the STALE gate — see `extra-surface.ts` `main()`), or by adding a no-op
 `import type {}` to anchor the tag.
 
-A second, independent blocker rides the same story and needs its own diagnosis:
-un-`@internal`-ing `SqlLiteral#plus` and `SelectManager#taken` — both genuinely
-PUBLIC in Rails (`activerecord/lib/arel/nodes/sql_literal.rb`'s `def +(other)`;
-`activerecord/lib/arel/select_manager.rb:22`'s `alias :taken :limit`) — moves
-`total` 62 -> 64 because both score as **moved**, i.e. the comparer attributes
-the Ruby name to a different `.rb` than the TS file maps onto. `taken` is
-declared in `select_manager.rb`, the very file `select-manager.ts` maps to, so
-the `moved` verdict there looks like a real mapping bug rather than a misplaced
-port. (Re-measured after #7079 named operator symbols in the Ruby extractor:
-arel still `0/62`, so #7079 did not resolve the `plus` half.)
+The second blocker that used to ride this story — `SqlLiteral#plus` and
+`SelectManager#taken` scoring `moved` against their own `.rb` — is split out
+as `arel-plus-and-taken-score-moved-against-their-own-rb`, since it shares
+nothing with the file-level tag but the package it blocks.
 
 ## Converged shape
 
@@ -76,8 +70,6 @@ current docblock protects is preserved exactly. Read it via
 `ts.getLeadingCommentRanges` and keep the existing empty-reason and
 truncated-prose hard errors.
 
-Then, separately, diagnose the `moved` verdict on `taken` / `plus` and fix the
-mapping (or the port's location) rather than tagging around it.
 
 ## Acceptance criteria
 
@@ -88,7 +80,7 @@ mapping (or the port's location) rather than tagging around it.
 - [ ] `packages/arel/src/temporal-tag.ts` carries the file-level receipt, its two
       `@internal` tags are resolved, and `pnpm parity:api:extra:gate` stays green
       with arel's marks moving DOWN or not at all.
-- [ ] Root cause named for `SqlLiteral#plus` and `SelectManager#taken` scoring
-      `moved`, and fixed at the mapping.
 - [ ] `pnpm exec tsx scripts/api-compare/extra-surface.ts` exits 0.
-- [ ] `enroll-arel-in-unbacked-internal-receipt-lint` is unblocked.
+- [ ] `enroll-arel-in-unbacked-internal-receipt-lint` no longer blocks on the
+      file-level form (it still blocks on
+      `arel-plus-and-taken-score-moved-against-their-own-rb`).
