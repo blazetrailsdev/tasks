@@ -1,13 +1,13 @@
 ---
-title: "pg-bigserial-pk-reflects-as-big-integer-not-integer"
+title: "A PostgreSQL bigserial primary key reflects as big_integer where Rails says integer"
 status: draft
 updated: 2026-08-27
 rfc: "0023-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
