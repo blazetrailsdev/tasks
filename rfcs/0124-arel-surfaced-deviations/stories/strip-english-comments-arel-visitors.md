@@ -1,6 +1,6 @@
 ---
 title: "Strip English-language comments from arel (visitors slice)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
