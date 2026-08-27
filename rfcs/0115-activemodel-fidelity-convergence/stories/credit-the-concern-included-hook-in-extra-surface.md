@@ -50,7 +50,7 @@ hook being the one name). It also puts standing backwards pressure on every
 remaining Concern port in this RFC: adding the hook Rails has raises the novel
 count.
 
-Note `SKIP_GROUPS` in `scripts/parity/conventions.ts` marks the *string-named*
+Note `SKIP_GROUPS` in `scripts/parity/conventions.ts` marks the _string-named_
 `included` / `extended` / `inherited` methods `tsMirrorIsDrift: true` — that
 entry is about a TS method literally spelled `included`, which IS drift. The
 symbol-keyed hook is a different thing and is deliberately not a public

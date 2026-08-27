@@ -32,9 +32,10 @@ half out of `model.ts` and into `API.[included]`
 statements a Ruby includer never writes:
 
 ```ts
-extend(base, ValidationsClassMethods);   // validations.rb:57-307
-extend(base, WithClassMethods);          // validations/with.rb:87
-extend(base, {                           // validations/validates.rb:110-178
+extend(base, ValidationsClassMethods); // validations.rb:57-307
+extend(base, WithClassMethods); // validations/with.rb:87
+extend(base, {
+  // validations/validates.rb:110-178
   validates: Validates.validates,
   validatesBang: Validates.validatesBang,
   _validatesDefaultKeys: Validates._validatesDefaultKeys,
@@ -42,8 +43,12 @@ extend(base, {                           // validations/validates.rb:110-178
 });
 include(base, Validations);
 include(base, {
-  contextForValidation, runValidationsBang, raiseValidationError,
-  readAttributeForValidation, freeze, validatesWith: withValidatesWith,
+  contextForValidation,
+  runValidationsBang,
+  raiseValidationError,
+  readAttributeForValidation,
+  freeze,
+  validatesWith: withValidatesWith,
 });
 ```
 
