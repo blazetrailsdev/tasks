@@ -31,7 +31,7 @@ still sitting in a Rails-named file, invisible to the gate that is supposed
 to detect exactly that:
 
 - `describe("value-class visitors aliased to unsupported")` — `for (const name
-  of aliasNames) { it(`${name} raises UnsupportedVisitError`, ...) }`
+of aliasNames) { it(`${name} raises UnsupportedVisitError`, ...) }`
 - the nested `describe("raw values reaching visit dispatch on their class")` —
   `for (const [label, value] of [...]) { it(`raises UnsupportedVisitError for
   ${label}`, ...) }`
@@ -45,7 +45,7 @@ carry the same blind spot, and a purely mechanical audit will not see it.
   `test()`, with whatever name form it can recover (the template's static
   skeleton with a placeholder for each `${}`, e.g.
   `` `${name} raises UnsupportedVisitError` `` → `"<expr> raises
-  UnsupportedVisitError"`), rather than dropping the test.
+UnsupportedVisitError"`), rather than dropping the test.
 - A recovered name never spuriously matches a Rails test: it can be counted as
   extra, but the matcher must not credit a Rails test against a placeholder.
 - A one-line audit exists (a compare flag or a report line) naming files that
