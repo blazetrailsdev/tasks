@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `vendor/rails/activerecord/test/schema/schema.rb` declares its two foreign keys
-as *standalone statements after* the tables they join:
+as _standalone statements after_ the tables they join:
 
 - `schema.rb:100` — `add_foreign_key :authors, :author_addresses, deferrable: :immediate`
 - `schema.rb:715-726` — `create_table :lessons_students`, then
@@ -29,7 +29,7 @@ as *standalone statements after* the tables they join:
 The canonical registry
 (`packages/activerecord/src/support/canonical-schema.ts`,
 `buildCanonicalRegistry`) has no statement form at all: a `define(name, meta,
-fn)` entry is the only thing it can record, so every FK has to ride *inline*
+fn)` entry is the only thing it can record, so every FK has to ride _inline_
 inside a `create_table` block via `t.foreignKey`. That forces the referenced
 table to be created first, which is why PR #7129 had to hoist
 `define("students", ...)` **above** `define("lessons_students", ...)` —

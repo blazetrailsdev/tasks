@@ -25,7 +25,7 @@ file's two standalone foreign keys:
 add_foreign_key :authors, :author_addresses, deferrable: :immediate
 ```
 
-PR #7129 (`lessons-students-canonical-foreign-key`) landed the *second* one
+PR #7129 (`lessons-students-canonical-foreign-key`) landed the _second_ one
 (schema.rb:726, `lessons_students -> students`) into both transcriptions and
 taught `ForeignKeySpec` / `schema-file-generator.ts` / `describeForeignKey` the
 `onDelete` and `deferrable` fields it needed. This one is still absent:

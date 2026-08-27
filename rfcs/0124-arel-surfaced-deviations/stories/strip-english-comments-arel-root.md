@@ -25,7 +25,7 @@ established the keep/delete definition and shipped the `visitors/` slice.
 The only comments that survive are our JSDoc flags and the tool directives the
 toolchain reads — with no narrative prose around them.
 
-This slice is **packages/arel/src/*.ts (root)**, measured 2026-08-27 at **420 prose lines**.
+This slice is **packages/arel/src/\*.ts (root)**, measured 2026-08-27 at **420 prose lines**.
 
 **Keep** — a comment must be one of:
 
