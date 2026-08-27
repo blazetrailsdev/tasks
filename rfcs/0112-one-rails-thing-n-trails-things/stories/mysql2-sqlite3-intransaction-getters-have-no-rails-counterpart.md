@@ -1,7 +1,7 @@
 ---
 title: "mysql2/sqlite3 carry a materialized-only inTransaction getter Rails defines only on PG"
-status: draft
-updated: 2026-08-25
+status: ready
+updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []

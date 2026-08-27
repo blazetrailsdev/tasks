@@ -1,7 +1,7 @@
 ---
 title: "time-at-with-coercion-onto-time-class"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "OID::Range#map carries null/block guards Rails does not have"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []

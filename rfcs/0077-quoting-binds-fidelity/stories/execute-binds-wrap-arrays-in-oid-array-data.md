@@ -1,7 +1,7 @@
 ---
 title: "Wrap raw execute() array binds in OID::Array::Data so PG type_cast needs no bare-Array arm"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T14:06:48Z"
+assignee: "mysql2-raw-execute-preparable-is-a-bind-count-approximation"
 blocked-by: null
 closed-reason: null
 ---

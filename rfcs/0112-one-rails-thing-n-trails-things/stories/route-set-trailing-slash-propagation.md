@@ -1,7 +1,7 @@
 ---
 title: "RouteSet does not propagate :trailing_slash or :original_script_name to Http::URL"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope for this refine pass: entirely packages/actionpack (RouteSet url/path generation, action-dispatch/http/url.ts, action-controller url-for tests). RFC 0112's actionable surface here is activerecord + its workspace deps. Premise unchanged on origin/main; re-file under an actionpack RFC if that lane reopens."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "excluding defers relations.flat_map(&:ids) to load time instead of materializing eagerly"
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

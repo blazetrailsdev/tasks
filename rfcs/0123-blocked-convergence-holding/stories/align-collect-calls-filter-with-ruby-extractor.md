@@ -1,7 +1,7 @@
 ---
 title: "collectCalls records _private()/Klass() names the Ruby extractor drops"
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: api-compare
 packages: []

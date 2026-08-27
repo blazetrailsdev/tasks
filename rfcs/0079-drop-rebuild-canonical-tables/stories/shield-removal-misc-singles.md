@@ -1,6 +1,6 @@
 ---
 title: "Remove the single-table shields (professors, comments, children, authors/books, numeric_data, posts, reserved words, cpk)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null

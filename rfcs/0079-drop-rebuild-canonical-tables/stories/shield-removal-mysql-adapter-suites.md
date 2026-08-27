@@ -1,6 +1,6 @@
 ---
 title: "Remove the MySQL adapter-suite shields (mysql2-adapter, abstract-mysql schema)"
-status: claimed
+status: in-progress
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 7120
 claim: "2026-08-27T13:43:45Z"
 assignee: "arel-table-extends-node-but-rails-table-is-standalone"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "indexes/exclusion/unique in-create emitters write after the createTable block, not inside it"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

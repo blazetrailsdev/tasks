@@ -1,7 +1,7 @@
 ---
 title: "Delete the callerless warningMessage(origin, baseUrl) free function"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope for this RFC's refine: actionpack/actiondispatch surface. Focus is activerecord + its dependency packages (activemodel/activesupport/arel/date). The cited file still exists on origin/main, so the finding is real but not in scope here — refile under an actionpack RFC if actionpack porting resumes."
 ---
 
 # Delete the callerless `warningMessage(origin, baseUrl)` free function

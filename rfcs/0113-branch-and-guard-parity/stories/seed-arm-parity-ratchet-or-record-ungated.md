@@ -1,7 +1,7 @@
 ---
 title: "Seed the arm-parity ratchet, or record the ungated decision"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []

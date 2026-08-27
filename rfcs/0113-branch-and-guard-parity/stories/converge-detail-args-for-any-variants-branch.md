@@ -1,7 +1,7 @@
 ---
 title: "detailArgsForAny drops Rails' variants: :any loop arm, which also blocks the details_cache_key call"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-order
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope for this RFC's refine: actionview surface (lookup-context.ts). Same rationale as the actionpack closures — focus is activerecord + its dependency packages. File still exists on origin/main; finding is real but not in scope here."
 ---
 
 ## Context

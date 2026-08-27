@@ -1,7 +1,7 @@
 ---
 title: "adapterName conflates Rails' ADAPTER_NAME with the type-registry key"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
 packages: []

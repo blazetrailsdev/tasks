@@ -1,7 +1,7 @@
 ---
 title: "ActionController::UrlFor#url_options is a two-line invention beside a free urlOptionsFromRequest"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of scope for this refine pass: the story is entirely packages/actionpack (action-controller/metal/url-for.ts, ActionController::UrlFor#url_options). RFC 0112's actionable surface here is activerecord and its workspace deps (activemodel, activesupport, arel, date, did-you-mean, globalid, i18n). Premise still factually true on origin/main (urlOptionsFromRequest + two-line urlOptions survive), so re-file under an actionpack RFC if the actionpack lane reopens."
 ---
 
 ## Context

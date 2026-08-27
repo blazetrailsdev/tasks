@@ -1,7 +1,7 @@
 ---
 title: "website-src-tests-run-in-no-ci-job"
 status: ready
-updated: 2026-08-26
+updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

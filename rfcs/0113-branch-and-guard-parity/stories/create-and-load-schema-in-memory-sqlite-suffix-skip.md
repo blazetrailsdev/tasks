@@ -1,7 +1,7 @@
 ---
 title: "Remove the invented :memory: suffix skip from create_and_load_schema"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 deps: []

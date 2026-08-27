@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Blocked on the wave-5 band (wave-5-naming-activesupport / -ar-model-core / -ar-adapters / -ar-associations / -ar-relation / -tail), which splits the 107 convergeable naming rows still standing inside the AR require-closure as of the 2026-08-21 parity artifact. Supersedes the 2026-08-18 reason: that re-scope to the AR closure still holds (out-of-closure rows stay report-only and want an actionpack-family RFC), but its wave-4 dep list is all done while the in-closure convergeable count is 107, not 0 - repo-wide burndown 244 + module-mixin-receiver 11, of which 107 are in-closure across 67 files. Unblocks when this band drives the in-closure convergeable count to zero."
+blocked-by: "Re-measured 2026-08-27 against origin/main (53c3f0a) with pnpm build && API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api:calls:args:report. The wave-5 dep band (wave-5-naming-activesupport / -ar-model-core / -ar-adapters / -ar-associations / -ar-relation / -tail) is ALL DONE, so the dep-list half of the old reason is satisfied — but the gate's real precondition is a measured count, and it is NOT zero. Repo-wide naming residue is now burndown 193 + module-mixin-receiver 9 = 202 (was 244 + 11). Filtered to the AR require-closure (ar-closure.json, data-layer packages whole), the convergeable in-closure count is 50 rows across 34 files (was 107 across 67): activerecord burndown 35 + module-mixin-receiver 2, activesupport burndown 9 + module-mixin-receiver 2, arel burndown 1, activemodel burndown 1. So the burndown has drained 53% since the 2026-08-21 artifact but has 50 rows to go, all now inside activerecord/activesupport/arel/activemodel. Unblocks when that count reaches zero — needs a new naming wave over those 34 files, which wants its home in 0096 (still active), not here."
 closed-reason: null
 priority: 20
 ---

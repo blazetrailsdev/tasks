@@ -1,6 +1,6 @@
 ---
 title: "Adapter quotedDate overrides reimplement the abstract body instead of refining super"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

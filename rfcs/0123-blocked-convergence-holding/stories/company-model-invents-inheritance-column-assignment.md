@@ -1,7 +1,7 @@
 ---
 title: 'Company sets inheritance_column = "type", which Rails'' company.rb does not'
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

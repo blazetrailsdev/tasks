@@ -1,7 +1,7 @@
 ---
 title: "Converge schema invalidation onto Rails' push-only DescendantsTracker model (eager subclass registration, delete the per-read pull fallback)"
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

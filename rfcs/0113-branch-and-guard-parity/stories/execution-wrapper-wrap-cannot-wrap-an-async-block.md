@@ -1,7 +1,7 @@
 ---
 title: "ExecutionWrapper.wrap is sync-only, so async units of work hand-spell run!/complete!"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
 packages: []

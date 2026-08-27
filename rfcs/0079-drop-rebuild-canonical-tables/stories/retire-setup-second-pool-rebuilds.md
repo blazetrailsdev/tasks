@@ -1,6 +1,6 @@
 ---
 title: "Retire the setup-second-pool rebuild calls (the only non-test callers)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null

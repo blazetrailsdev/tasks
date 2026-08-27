@@ -1,7 +1,7 @@
 ---
 title: "MySQL schemaCollation reads a tableOptions-prefilled cache, forcing table() to call tableOptions early"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

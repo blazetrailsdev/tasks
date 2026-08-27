@@ -1,7 +1,7 @@
 ---
 title: "Measure the arm-mismatch noise floor against the one-third tripwire"
 status: ready
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []

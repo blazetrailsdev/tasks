@@ -1,7 +1,7 @@
 ---
 title: "Column coder carries a class tag and subclass state where Rails' writes seven keys"
 status: blocked
-updated: 2026-08-25
+updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
