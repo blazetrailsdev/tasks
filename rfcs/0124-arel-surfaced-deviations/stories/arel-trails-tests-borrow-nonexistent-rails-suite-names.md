@@ -1,6 +1,6 @@
 ---
 title: "arel trails-only describes borrow Rails suite names that do not exist upstream"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

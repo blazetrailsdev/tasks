@@ -1,6 +1,6 @@
 ---
 title: "Remove the schema-dumper booleans shield"
-status: ready
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7126
+claim: "2026-08-27T18:10:33Z"
+assignee: "shield-removal-schema-dumper-booleans"
 blocked-by: null
 closed-reason: null
 ---

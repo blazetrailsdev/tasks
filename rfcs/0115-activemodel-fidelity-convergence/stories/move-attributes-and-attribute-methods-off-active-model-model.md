@@ -1,6 +1,6 @@
 ---
 title: "move-attributes-and-attribute-methods-off-active-model-model"
-status: ready
+status: claimed
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T18:08:24Z"
+assignee: "move-attributes-and-attribute-methods-off-active-model-model"
 blocked-by: null
 closed-reason: null
 ---

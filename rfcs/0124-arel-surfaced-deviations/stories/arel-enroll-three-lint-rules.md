@@ -1,6 +1,6 @@
 ---
 title: "arel: enroll unbacked-internal-needs-receipt, rails-error-parity (with arel in the manifest) and no-explicit-any-disable"
-status: ready
+status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: lint-enrollment
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T18:46:13Z"
+assignee: "arel-enroll-three-lint-rules"
 blocked-by: null
 closed-reason: null
 ---

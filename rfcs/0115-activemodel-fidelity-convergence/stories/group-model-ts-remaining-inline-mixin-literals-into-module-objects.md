@@ -1,6 +1,6 @@
 ---
 title: "group-model-ts-remaining-inline-mixin-literals-into-module-objects"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7127
+claim: "2026-08-27T18:13:52Z"
+assignee: "group-model-ts-remaining-inline-mixin-literals-into-module-objects"
 blocked-by: null
 closed-reason: null
 ---

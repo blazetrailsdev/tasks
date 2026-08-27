@@ -1,6 +1,6 @@
 ---
 title: "invert_transaction's block run lives in the transaction forwarder, splitting one Rails method in two"
-status: ready
+status: blocked
 updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-27T18:13:52Z"
+assignee: "group-model-ts-remaining-inline-mixin-literals-into-module-objects"
+blocked-by: "Converged shape costs more fidelity than it buys. Rails' record (command_recorder.rb:94-100) and inverse_of (:114-123) are both SYNC; the only route to running the block inside invertTransaction (:186-194) is to make both async, which de-converges two Rails-sync methods and every generated forwarder (:125-132) into promise-returning ones. Blast radius measured on main: 154 .record()/.inverseOf() call sites outside command-recorder.ts, 84 of them synchronous expect(recorder.inverseOf(...)) assertions in command-recorder.test.ts alone — over the 700 LOC PR ceiling by itself, and test names cannot be reworded. The current split (invertTransaction builds the tuple, the transaction forwarder at :854 owns the sole await point) keeps record/inverseOf Rails-sync and both halves are documented at their call sites; observable behaviour and command order already match Rails. Blocking rather than converging halfway, per the story's own weighing clause."
 closed-reason: null
 ---
 

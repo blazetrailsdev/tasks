@@ -1,6 +1,6 @@
 ---
 title: "trailties db version omits the database: header and both blank lines"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7130
+claim: "2026-08-27T18:43:45Z"
+assignee: "delete-rebuild-canonical-tables"
 blocked-by: null
 closed-reason: null
 ---

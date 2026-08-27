@@ -1,6 +1,6 @@
 ---
 title: "Delete rebuildCanonicalTables and its FK-scan machinery once callers hit zero"
-status: ready
+status: blocked
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -19,9 +19,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-27T18:43:45Z"
+assignee: "delete-rebuild-canonical-tables"
+blocked-by: "Capstone precondition unmet: rebuildCanonicalTables still has 2 live call sites (packages/activerecord/src/migration/exclusion-constraint.test.ts:34, unique-constraint.test.ts:26), both owned by the draft sibling story shield-removal-pg-constraint-suites. eslint/rebuild-canonical-tables-callers.json still carries those 2 rows. Unblock once shield-removal-pg-constraint-suites lands and the manifest is empty."
 closed-reason: null
 ---
 
