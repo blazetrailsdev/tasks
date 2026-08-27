@@ -246,11 +246,30 @@ export async function close(id: string, reason: string): Promise<void> {
   });
 }
 
+/**
+ * Set a story's status directly.
+ *
+ * Clears the fields the OLD status owned, because leaving them behind produces
+ * a row that contradicts itself and stops agents cold. A story moved off
+ * `blocked` kept its `blocked_by` text, which `export` then wrote into the
+ * markdown frontmatter — so the first thing an agent read on a `ready` story
+ * was a blocker saying the work could not be done. Six spawns bounced off
+ * `sqlite-structure-tasks-in-memory-branch-has-no-rails-counterpart` that way,
+ * two of them branching and committing nothing. Moving to `ready` likewise
+ * drops a stale `claim`/`assignee`, which otherwise reads as "someone else
+ * already owns this".
+ */
 export async function statusSet(id: string, status: StoryStatus): Promise<void> {
   await Base.transaction(async () => {
     const [s] = await findAll([id]);
     requireFound([id], s ? [s] : []);
-    await Story.where({ id }).updateAll({ status, updated_on: today() });
+    const fields: Record<string, unknown> = { status, updated_on: today() };
+    if (status !== "blocked") fields.blocked_by = null;
+    if (status === "ready") {
+      fields.assignee = null;
+      fields.claim_at = null;
+    }
+    await Story.where({ id }).updateAll(fields);
     await record("status", id, { detail: { arg: status } });
     console.log(`status ${status}: ${id}`);
   });

@@ -7,7 +7,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { Base } from "@blazetrails/activerecord";
 import { migrate } from "./migrator.js";
 import { Event, Rfc, Story } from "./models/index.js";
-import { claim, markTracking, release, close } from "./verbs.js";
+import { claim, markTracking, release, close, block, statusSet } from "./verbs.js";
 import { VerbExit } from "./db.js";
 
 async function reset(): Promise<void> {
@@ -131,5 +131,35 @@ describe("close", () => {
     await close("s1", "superseded by s2");
     const e = await Event.findBy({ story_id: "s1", verb: "close" });
     expect(String(e!.detail)).toContain("superseded by s2");
+  });
+});
+
+describe("statusSet clears the fields the old status owned", () => {
+  it("drops blocked_by when a story is moved off blocked", async () => {
+    await block("s1", "the premise was wrong");
+    expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("the premise was wrong");
+
+    await statusSet("s1", "ready");
+
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.status).toBe("ready");
+    // Left behind, `export` wrote it into the markdown frontmatter and every
+    // agent that claimed the story read a blocker telling it to stop.
+    expect(s!.blocked_by).toBeNull();
+  });
+
+  it("keeps blocked_by when the status stays blocked", async () => {
+    await block("s1", "waiting on the seam");
+    await statusSet("s1", "blocked");
+    expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("waiting on the seam");
+  });
+
+  it("drops a stale claim when a story is moved to ready", async () => {
+    await claim(["s2"], "someone-else");
+    await statusSet("s2", "ready");
+
+    const s = await Story.findBy({ id: "s2" });
+    expect(s!.assignee).toBeNull();
+    expect(s!.claim_at).toBeNull();
   });
 });
