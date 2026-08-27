@@ -32,19 +32,19 @@ even though each is a faithful port sitting one file away from where it belongs.
 
 The twelve, with the Rails line each is a port of:
 
-| TS name | Rails |
-| --- | --- |
-| `validateConstraint` | `postgresql/schema_statements.rb:893` |
-| `assertValidDeferrable` | `:1031` |
-| `extractForeignKeyAction` | `:1023` |
-| `extractConstraintDeferrable` | `:1037` |
-| `exclusionConstraintName` | `:1078` |
-| `exclusionConstraintFor` | `:1088` |
-| `exclusionConstraintForBang` | `:1093` |
-| `uniqueConstraintName` | `:1098` |
-| `uniqueConstraintFor` | `:1108` |
-| `uniqueConstraintForBang` | `:1113` |
-| `sequenceNameFromParts` | `:301` (`default_sequence_name`) |
+| TS name                       | Rails                                 |
+| ----------------------------- | ------------------------------------- |
+| `validateConstraint`          | `postgresql/schema_statements.rb:893` |
+| `assertValidDeferrable`       | `:1031`                               |
+| `extractForeignKeyAction`     | `:1023`                               |
+| `extractConstraintDeferrable` | `:1037`                               |
+| `exclusionConstraintName`     | `:1078`                               |
+| `exclusionConstraintFor`      | `:1088`                               |
+| `exclusionConstraintForBang`  | `:1093`                               |
+| `uniqueConstraintName`        | `:1098`                               |
+| `uniqueConstraintFor`         | `:1108`                               |
+| `uniqueConstraintForBang`     | `:1113`                               |
+| `sequenceNameFromParts`       | `:301` (`default_sequence_name`)      |
 
 (`sequenceNameFromParts` is also a rename — it is the interpolation inside
 `default_sequence_name`, not a Rails method of its own.)

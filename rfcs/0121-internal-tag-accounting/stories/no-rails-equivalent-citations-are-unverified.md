@@ -46,7 +46,7 @@ A check, runnable next to `pnpm parity:api:extra`, over every written
 2. **In range** — the line exists.
 3. **Method membership** — when the reason names a Ruby method as `Klass#meth`
    or `Klass.meth`, the cited line is inside that method's body, OR the reason
-   describes a *use* site and says so ("Rails reads it in `retryable_query_error?`",
+   describes a _use_ site and says so ("Rails reads it in `retryable_query_error?`",
    "the `|=` at ..."). #7115 proved the naive "symbol appears within N lines"
    proxy is too weak — `reflection.rb:507`'s window contains the word `klass`.
 
