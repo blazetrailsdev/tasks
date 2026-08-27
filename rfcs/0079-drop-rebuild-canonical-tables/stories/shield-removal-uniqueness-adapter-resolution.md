@@ -1,6 +1,6 @@
 ---
 title: "Remove the rebuildCanonicalTables shield from the uniqueness adapter-resolution test"
-status: draft
+status: closed
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Premise gone: PR #7114 (e4889f2cb, 2026-08-27) gave UniquenessCoveredByUniqueIndexAdapterResolutionTest its own bespoke direct_subscribers table on the raw pool instead of the rebuildCanonicalTables(adapter, ["subscribers"]) call #7111 had added. Verified on origin/main: git grep -n rebuildCanonicalTables packages/activerecord/src/validations/uniqueness-validation.trails.test.ts returns nothing, and the file is absent from eslint/rebuild-canonical-tables-callers.json. The raw checkoutRawTestAdapter pool survives at :104 by design (the story''s own AC allows it); retiring that resolution arm is tracked by uniqueness-table-indexes-resolves-a-class-assigned-adapter under RFC 0023.'
 ---
 
 ## Context

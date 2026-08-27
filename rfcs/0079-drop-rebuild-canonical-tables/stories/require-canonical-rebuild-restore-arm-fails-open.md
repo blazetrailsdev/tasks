@@ -1,6 +1,6 @@
 ---
 title: "require-canonical-rebuild: a non-literal restore list exempts every drop in the file"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null

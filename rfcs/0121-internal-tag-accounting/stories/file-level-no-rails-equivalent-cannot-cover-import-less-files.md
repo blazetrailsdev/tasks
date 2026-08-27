@@ -1,6 +1,6 @@
 ---
 title: "File-level @noRailsEquivalent is unreachable for a file with no imports, blocking the arel @internal burndown"
-status: claimed
+status: in-progress
 updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7115
 claim: "2026-08-27T11:49:13Z"
 assignee: "enroll-activerecord-in-unbacked-internal-receipt-lint"
 blocked-by: null
