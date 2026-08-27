@@ -1,5 +1,5 @@
 ---
-title: "Spell PendingDefault's member , not "
+title: "Spell PendingDefault's member default, not default_"
 status: draft
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
