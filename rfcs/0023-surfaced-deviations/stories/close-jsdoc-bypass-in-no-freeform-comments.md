@@ -1,6 +1,6 @@
 ---
 title: "no-freeform-comments: require a tag or a Rails citation on JSDoc"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0023-surfaced-deviations"
 cluster: null

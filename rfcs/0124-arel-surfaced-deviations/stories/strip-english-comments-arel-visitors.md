@@ -1,6 +1,6 @@
 ---
 title: "Strip English-language comments from arel (visitors slice)"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 460
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7132
+claim: "2026-08-27T19:00:30Z"
+assignee: "strip-english-comments-arel-visitors"
 blocked-by: null
 closed-reason: null
 ---

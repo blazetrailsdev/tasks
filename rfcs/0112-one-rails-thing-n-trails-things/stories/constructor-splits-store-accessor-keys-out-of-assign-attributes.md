@@ -1,6 +1,6 @@
 ---
 title: "Base's constructor splits store-accessor keys out of assign_attributes"
-status: ready
+status: claimed
 updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T19:43:44Z"
+assignee: "migration-create-table-block-needs-a-caller-annotation"
 blocked-by: null
 closed-reason: null
 ---

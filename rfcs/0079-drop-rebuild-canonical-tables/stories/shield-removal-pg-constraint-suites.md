@@ -1,6 +1,6 @@
 ---
 title: "shield-removal-pg-constraint-suites"
-status: draft
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7133
+claim: "2026-08-27T19:19:55Z"
+assignee: "shield-removal-pg-constraint-suites"
 blocked-by: null
 closed-reason: null
 ---

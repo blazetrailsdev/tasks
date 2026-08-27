@@ -1,6 +1,6 @@
 ---
 title: "ban-arunit2-canonical-loader-in-tests"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null

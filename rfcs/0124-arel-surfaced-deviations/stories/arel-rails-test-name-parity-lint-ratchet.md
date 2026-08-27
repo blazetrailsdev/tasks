@@ -1,6 +1,6 @@
 ---
 title: "lint: TS-only tests in Rails-named test files — per-file only-shrink ratchet, arel first"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: lint-enrollment
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 7131
 claim: "2026-08-27T18:46:13Z"
 assignee: "arel-enroll-three-lint-rules"
 blocked-by: null
