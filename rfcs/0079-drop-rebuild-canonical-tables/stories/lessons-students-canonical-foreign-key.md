@@ -59,7 +59,7 @@ pass.
 clears every `lessons_students` foreign key in `clearLessonsStudentsForeignKeys()`
 (`:72-76`) and asserts `expect(await adapter.foreignKeys("lessons_students")).toEqual([])`
 (`:37`) after a `rebuildCanonicalTables(adapter, ["authors"])`. That test is
-about a rebuild dropping an *inbound* FK; once the canonical schema lays a
+about a rebuild dropping an _inbound_ FK; once the canonical schema lays a
 real FK on that table, its setup and its `toEqual([])` need reworking (and its
 `finally` needs to restore the canonical FK rather than leave the table bare).
 
@@ -72,7 +72,7 @@ main consumer.
 
 - [ ] `canonical-schema.ts` and `test-helpers/test-schema.ts` lay
       `add_foreign_key :lessons_students, :students, on_delete: :cascade,
-      deferrable: :immediate`, mirroring `schema.rb:726`.
+    deferrable: :immediate`, mirroring `schema.rb:726`.
 - [ ] `"foreign keys method with ansi quotes"` reverts to a bare read, with no
       `addForeignKey`/`removeForeignKey` around it — matching
       `schema_test.rb:125-128`.
