@@ -30,6 +30,18 @@ across 23 files) in a checked-in manifest and fail lint when a file outside it c
 `rebuildCanonicalTables` — new suites must use `fixtures({ ... })` or fix their
 contamination source instead. The list only shrinks as burndown stories land.
 
+## Phase-1 attribution (2026-08-26)
+
+Confirmed as the highest-value first landing. All three sites that appeared
+after this story was written — `migration/exclusion-constraint.test.ts:34`,
+`migration/rename-table.test.ts:44`, `migration/unique-constraint.test.ts:26` —
+are group A: each `force`-creates or renames a canonical table and was then
+*required* by `require-canonical-rebuild` to add the call. The mandate is the
+growth mechanism, exactly as the story argues.
+
+Baseline for the frozen manifest is the 26-site table in the RFC README
+inventory (23 files, current line numbers as of `07c7924f1`).
+
 ## Acceptance criteria
 
 - A lint (or manifest-diff check wired into CI) fails on any new

@@ -40,6 +40,37 @@ was written and are folded in here.
 Split across PRs if the fixes exceed the LOC ceiling; per-site removals
 are independent. Use the Phase-1 inventory to fix each culprit at the source.
 
+## Phase-1 attribution (2026-08-26)
+
+Current lines: `delegated-type.test.ts:55`, `associations/required.test.ts:21`,
+`view.test.ts:47`, `enum.trails.test.ts:425`, `unsafe-raw-sql.test.ts:28`,
+`reserved-word.test.ts:105`, `primary-keys.test.ts:563`,
+`migration/exclusion-constraint.test.ts:34`, `migration/rename-table.test.ts:44`,
+`migration/unique-constraint.test.ts:26`.
+
+**Group A (self-drops — fix the drop, not the shield):**
+
+- `associations/required.test.ts:21` — its own `beforeAll:14-17` `force`-creates
+  `parents`/`children`, `afterAll:20` drops them. Move onto bespoke names.
+- `reserved-word.test.ts:105` — its own `afterAll:102` drops `values`, `group`,
+  `distinct_select`, `distinct`, `select`, `order`. Converge onto
+  `fixtures({ ... })`.
+- `migration/exclusion-constraint.test.ts:34` — own `beforeEach:26`
+  `force`-creates bespoke `invoices(start_date, end_date)`.
+- `migration/unique-constraint.test.ts:26` — own `beforeEach:19` `force`-creates
+  bespoke `sections(position)`.
+- `migration/rename-table.test.ts:44` — own `:53-54` renames canonical
+  `references` → `old_references`. Rails renames only its own
+  `octopi`/`test_models`; the `references` arm is trails-added.
+
+**Group B (no attributable culprit — strongest deletion candidates):**
+`delegated-type.test.ts:55`, `view.test.ts:47`, `enum.trails.test.ts:425`,
+`unsafe-raw-sql.test.ts:28`, and the cpk prelude at `primary-keys.test.ts:563`.
+The repo-wide scan found **no** schema-mutating call on `entries`, `messages`,
+`recipients`, `accounts`, `cpk_books`, `cpk_orders` or `cpk_authors`, and the
+`posts`/`books` culprits these comments describe are `defineSchema` sites
+extinct since RFC 0059.
+
 ## Acceptance criteria
 
 - The listed `rebuildCanonicalTables` call site(s) are deleted, and the suites stay green when co-scheduled with the full AR suite on sqlite + PG + MySQL/MariaDB (the shield must be unnecessary, not just removed).

@@ -31,6 +31,25 @@ helper-loop shape means the suite depends on rebuild as a fixture mechanism,
 not a shield - converge it onto `fixtures({ ... })` / the canonical loader
 instead.
 
+## Phase-1 attribution (2026-08-26)
+
+Current lines: `mysql2-adapter.test.ts:186`,
+`mysql2-adapter.trails.test.ts:244`, `abstract-mysql-adapter/schema.test.ts:16`
+(the `restoreCanonicalTables` helper, called at `:25` with `["posts"]`).
+
+- `mysql2-adapter.test.ts:186` is **group A**: its own `beforeEach` at
+  `:183-185` raw-`DROP TABLE IF EXISTS`es `people`, `cars`, `old_cars`,
+  `subscribers`, `engines` (and `foos`) under `FOREIGN_KEY_CHECKS=0`. Converge
+  onto `fixtures({ ... })` and delete the drop loop.
+- `abstract-mysql-adapter/schema.test.ts` is **group A**: `:71` `force`-creates
+  a bespoke `posts`, `:99` drops it. **Newly found gap** — `:202` and `:228` do
+  the same to canonical `topics`, which the `afterAll` `["posts"]` list does NOT
+  restore. Fix both by moving onto bespoke names.
+- `mysql2-adapter.trails.test.ts:244` is group B and is fixture provisioning by
+  its own admission ("this suite does not bootstrap the canonical schema");
+  converge onto `fixtures(["subscribers"])`. No mutator of `subscribers` exists
+  anywhere in the tree.
+
 ## Acceptance criteria
 
 - The listed `rebuildCanonicalTables` call site(s) are deleted, and the suites stay green when co-scheduled with the full AR suite on sqlite + PG + MySQL/MariaDB (the shield must be unnecessary, not just removed).

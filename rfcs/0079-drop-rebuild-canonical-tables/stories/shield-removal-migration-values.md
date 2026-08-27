@@ -25,6 +25,19 @@ sites likely shield the file against ITS OWN earlier describe blocks. The fix
 is intra-file: make the reshaping blocks restore the canonical shape (or run
 on scratch tables), then drop both shields.
 
+## Phase-1 attribution (2026-08-26)
+
+Current lines are `:1678` and `:1703`, not `:1652`/`:1677`. **Confirmed group
+A, and the story's prediction is right**: each shield sits in the `finally` of
+the block two lines below a `createTable("values", { force: true })` in the same
+`it` — `ReservedWordsMigrationTest` and `ExplicitlyNamedIndexMigrationTest`. It
+is intra-file, but intra-*test*, not "against its own earlier describes".
+
+Caveat for the fix: Rails writes this bespoke `values(value)` table verbatim
+(`activerecord/test/cases/migration_test.rb`), so renaming it is a fidelity
+break. Isolate the block instead (private adapter, or transactional DDL where
+the lane supports it).
+
 ## Acceptance criteria
 
 - The listed `rebuildCanonicalTables` call site(s) are deleted, and the suites stay green when co-scheduled with the full AR suite on sqlite + PG + MySQL/MariaDB (the shield must be unnecessary, not just removed).

@@ -28,6 +28,17 @@ the blocked converge-secondary-pool/one-schema work. The second pool should
 lay its schema through the canonical loader (`loadCanonicalSchema`) or
 fixtures provisioning at pool setup, not through the drop+recreate shield.
 
+## Phase-1 attribution (2026-08-26)
+
+Confirmed at `:81` and `:105`, both `rebuildCanonicalTables(arunit2,
+ARUNIT2_TABLES)` (`colleges`, `courses`, `professors`, `courses_professors`).
+Neither is a shield: `:81` lays the arunit2 schema on a cold second database
+(behind the `canonicalSchemaUpToDate` + `tables()` fast path), and `:105`
+re-lays it per boot so rows a sibling suite left behind cannot reach
+`College.count`. So the story's "lay it through `loadCanonicalSchema` /
+fixtures provisioning" framing is the correct one — there is no contaminating
+sibling to fix here, only a provisioning path to converge.
+
 ## Acceptance criteria
 
 - `support/setup-second-pool.ts` no longer imports `rebuildCanonicalTables`.

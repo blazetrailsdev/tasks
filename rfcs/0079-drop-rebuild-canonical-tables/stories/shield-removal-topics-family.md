@@ -31,6 +31,26 @@ Re-verified on `origin/main` 2026-08-09 — all four still present:
 `topics` is one of the most-shared canonical tables; the uniqueness suite's own
 addIndex is a contamination source in this very list, so fix that first.
 
+## Phase-1 attribution (2026-08-26)
+
+Current lines: `bind-parameter.test.ts:89`, `date.test.ts:29`,
+`primary-keys.test.ts:32`, `validations/uniqueness-validation.trails.test.ts:99`.
+**Add `dirty.trails.test.ts:21` (topics)** — a fifth `topics` site no story
+listed.
+
+All four original sites are group B (no same-file drop). Every culprit their
+comments name — `coders/json.test.ts`'s `SerializedTopic`,
+`attribute-methods.test.ts` / `finder.test.ts`' bespoke `topics` — is a
+`defineSchema` call site and **extinct** since RFC 0059; those files contain no
+schema DDL today.
+
+The story's instruction to fix the uniqueness suite's own `topics_direct_index`
+first is confirmed: it is the only live `topics` *shape* mutator. Before
+deleting, rule out the residual column-cache drift from
+`transactions.test.ts:1685-1700`, `persistence.test.ts:381-390` and
+`support/schema-cache-dump.trails.test.ts:73-115`, which `addColumn` +
+`removeColumn` canonical `topics` in place — see the RFC README inventory.
+
 ## Acceptance criteria
 
 - The listed `rebuildCanonicalTables` call site(s) are deleted, and the suites stay green when co-scheduled with the full AR suite on sqlite + PG + MySQL/MariaDB (the shield must be unnecessary, not just removed).
