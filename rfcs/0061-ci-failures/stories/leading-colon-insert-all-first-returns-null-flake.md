@@ -87,48 +87,76 @@ repeated runs (alone, and with the whole `packages/activerecord/src/relation`
 directory), and a bare re-run of the same commit with no code change was fully
 green.
 
-## Root cause (mechanism proven 2026-08-27)
+## Evidence so far (2026-08-27)
 
-The instrumentation from trails#7106 fired on its first CI run, on PostgreSQL
-and MariaDB simultaneously (run 33026062066, both shard 1/2). PostgreSQL:
+**A stale primary-key sequence was proposed and is now REFUTED.** The refutation
+is recorded in full because it is the useful part: an earlier revision of this
+story claimed the mechanism was "proven". It was not. Do not re-derive it.
+
+The instrumentation from trails#7106 has fired three times. PostgreSQL (run
+33026062066, shard 1/2):
 
 ```
-  iteration:        0 (sent "::Alpha")
   returning:        []
   openTransactions: 1
   topics rows:      [[1,"seed",null],[2,"::Alpha",null]]
 ```
 
-`returning: []` plus the absent row means **the INSERT wrote nothing** — the read
-was never at fault. `insert_all` emits `ON CONFLICT DO NOTHING` (Rails-faithful:
-`insert_all` is `on_duplicate: :skip`), and the only unique index on `topics` is
-`topics_pkey` on `id`, so the skipped insert is a PRIMARY KEY collision: the
-sequence handed out an id the table already holds.
+MariaDB, same run: `returning: [[4]]` with `topics rows`
+`[[3,"seed",null],[4,"::Alpha",null]]` — id 4 is the `create` row, i.e.
+`LAST_INSERT_ID()` echoing the previous insert rather than a new one.
 
-Reproduced exactly, locally on PostgreSQL, by forcing the sequence behind
-(`setval('topics_id_seq', 1, false)`) after the test's two `create`s — output is
-byte-for-byte identical to the CI diagnostic above, including the `topics rows`
-dump. In a healthy run the sequence traces `(1,false)` → creates take 1 and 2 →
-`(2,true)` → `insert_all` takes 3.
+Those say the INSERT wrote nothing, and the read was never at fault
+(`openTransactions: 1` is the test's own pinned connection: `leaseConnection` →
+`checkout` → `_resolvePinnedConnection`, `connection-pool.ts:883`, `:1542`).
+`insert_all` is `on_duplicate: :skip`, so it emits `ON CONFLICT DO NOTHING` and a
+uniqueness conflict is swallowed silently. The only unique index on `topics` is
+the PK, so a stale sequence looked like the answer, and forcing one locally
+(`setval('topics_id_seq', 1, false)`) reproduced the PostgreSQL output
+byte-for-byte.
 
-MariaDB shows the same skipped write with its own idiom: `returning: [[4]]` while
-`topics rows` is `[[3,"seed",null],[4,"::Alpha",null]]` — id 4 is the `create`
-row, i.e. `LAST_INSERT_ID()` echoing the previous insert rather than a new row.
+**A follow-up probe killed that theory.** The diagnostic now attempts a plain
+`Topic.create` on the failing path — `create` carries no ON CONFLICT clause, so a
+stale sequence must raise. SQLite (run 33027617100, job 98372576941):
 
-So the remaining question is narrowed to one thing: **what leaves the PK sequence
-behind the table's max id mid-test.** The fixture loader caps it
-(`fixtures.ts:710` → `resetPkSequence`, Rails' `reset_pk_sequence!`,
-`fixtures.rb:688-690`) with `setval(seq, GREATEST(COALESCE(MAX(id),0),1),
-COALESCE(MAX(id),0) <> 0)`, which on a committed-empty table sets "next nextval
-= 1". That is correct at load time, so for the failure the cap has to be landing
-_after_ the test's own `create`s — i.e. a fixture load running while another
-test is mid-flight against the same database. Worth checking the per-worker DB
-slot isolation first (`test-setup-worker-db.ts` advisory-lock slots): two workers
-sharing one slot DB would produce exactly this, and would also explain why it
-only ever appears in full/sharded suite runs and never in a single file.
+```
+  returning:        []
+  topics rows:      [[2,"seed",null],[3,"::Alpha",null]]
+  next insert:      inserted id 5
+```
 
-Note this makes it NOT a rare flake in sharded runs: it hit two lanes in one run
-at iteration 0.
+The create SUCCEEDED. No collision, healthy sequence. The ids are load-bearing:
+rows 2 and 3 exist and the next insert took 5, so **`insert_all` consumed id 4
+and persisted nothing** — with 4 unoccupied there was no uniqueness conflict for
+`ON CONFLICT DO NOTHING` to act on, yet the row was skipped.
+
+State of knowledge:
+
+- The write is skipped — not lost afterwards, not misread. (three sightings)
+- The connection is correct. (`openTransactions: 1` every time)
+- It is NOT a primary-key collision and NOT a stale sequence. (refuted)
+- The INSERT reaches the database far enough to allocate an id.
+
+Also ruled out, by measurement rather than reading:
+
+- **Cross-worker database sharing.** Twelve worker processes reporting
+  `current_database()` plus `count(DISTINCT pid) FROM pg_stat_activity` for their
+  own database showed slots reused strictly sequentially and one backend
+  throughout. Worker isolation is sound.
+- **Tests interleaving inside a worker.** No global `concurrent` in
+  `vitest.config.ts`, and the only two `resetPkSequence` callers are the two
+  `beforeEach` hooks (`test-fixtures.ts:259`, `:471`).
+- **A stale query cache** (see Context above).
+
+Next question: why does an `ON CONFLICT DO NOTHING` insert skip when no
+constraint can be violated? Capture the exact SQL and binds as executed, plus
+`changes()`/rowcount rather than only the RETURNING payload, and check whether
+the statement executes against the same connection the ids came from.
+
+Local reproduction has failed at every scale tried: 200 back-to-back cycles, the
+file alone, the whole `relation/` directory, a 70-file PostgreSQL slice (1,397
+tests). Only CI reproduces it, and only intermittently — commit `f33d21be7`
+produced one green run and one red run of the same tree.
 
 ## Tracking
 
