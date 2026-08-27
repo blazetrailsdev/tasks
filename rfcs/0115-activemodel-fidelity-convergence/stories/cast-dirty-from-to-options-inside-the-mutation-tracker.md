@@ -1,6 +1,6 @@
 ---
 title: "Type-cast dirty from:/to: options inside AttributeMutationTracker, not at three Base call sites"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: 7122
 claim: "2026-08-27T14:43:53Z"
 assignee: "cast-dirty-from-to-options-inside-the-mutation-tracker"
 blocked-by: null

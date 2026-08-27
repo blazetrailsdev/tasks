@@ -1,6 +1,6 @@
 ---
 title: "Wrap raw execute() byte binds so type_cast needs no byte-view arm"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

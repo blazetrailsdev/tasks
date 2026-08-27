@@ -1,6 +1,6 @@
 ---
 title: "Retire the synthesized columns_hash fallback (columns_hash is a pure DB read in Rails)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

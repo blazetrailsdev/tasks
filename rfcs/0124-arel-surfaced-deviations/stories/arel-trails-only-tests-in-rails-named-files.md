@@ -1,6 +1,6 @@
 ---
 title: "arel: 300 TS-only tests live inside Rails-named test files; one Rails-named body is weaker than Rails"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: test-placement

@@ -1,6 +1,6 @@
 ---
 title: "arel: Case#when quotes its expression where Rails stores it raw"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: invented-arm
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T15:57:56Z"
+assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null
 closed-reason: null
 ---

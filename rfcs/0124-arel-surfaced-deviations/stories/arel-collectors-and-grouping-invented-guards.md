@@ -1,6 +1,6 @@
 ---
 title: "arel: SQLString/Composite/Grouping/quotedNode carry guards and fallbacks Rails does not have"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: guard-parity
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T15:57:56Z"
+assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null
 closed-reason: null
 ---

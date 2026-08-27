@@ -1,6 +1,6 @@
 ---
 title: "Remove the MySQL adapter-suite shields (mysql2-adapter, abstract-mysql schema)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null

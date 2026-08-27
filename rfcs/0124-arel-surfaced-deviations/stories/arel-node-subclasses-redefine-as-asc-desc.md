@@ -1,6 +1,6 @@
 ---
 title: "arel: six node subclasses redefine as/asc/desc the NodeExpression mixins already supply"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: duplicate-bodies
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T15:57:56Z"
+assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null
 closed-reason: null
 ---

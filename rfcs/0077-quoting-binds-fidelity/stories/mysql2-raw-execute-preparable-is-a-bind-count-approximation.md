@@ -1,6 +1,6 @@
 ---
 title: "mysql2-raw-execute-preparable-is-a-bind-count-approximation"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
