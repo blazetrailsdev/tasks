@@ -9,8 +9,6 @@ packages:
   - "activerecord"
   - "activemodel"
   - "activesupport"
-  - "actionpack"
-  - "actionview"
   - "arel"
   - "date"
   - "trailties"
