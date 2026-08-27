@@ -36,7 +36,7 @@ Confirmed as the highest-value first landing. All three sites that appeared
 after this story was written — `migration/exclusion-constraint.test.ts:34`,
 `migration/rename-table.test.ts:44`, `migration/unique-constraint.test.ts:26` —
 are group A: each `force`-creates or renames a canonical table and was then
-*required* by `require-canonical-rebuild` to add the call. The mandate is the
+_required_ by `require-canonical-rebuild` to add the call. The mandate is the
 growth mechanism, exactly as the story argues.
 
 Baseline for the frozen manifest is the 26-site table in the RFC README

@@ -33,7 +33,7 @@ its own drops, not a sibling.** The deferred `SchemaDumperTest` cases
 shared per-worker DB; the `afterAll` at `:982-1001` drops all 20 tables, and the
 rebuild at `:1005` puts the 7 canonical ones back.
 
-Fix at the source: those cases assert on dump *text*, not on canonical shape, so
+Fix at the source: those cases assert on dump _text_, not on canonical shape, so
 move them onto bespoke table names. Both the canonical half of the drop list and
 the rebuild then go. Note this file is also the drift source cited (wrongly, as
 of today) by the `enum.trails.test.ts` and `unsafe-raw-sql.test.ts` shields.

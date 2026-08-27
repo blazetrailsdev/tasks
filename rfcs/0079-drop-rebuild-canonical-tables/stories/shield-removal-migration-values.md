@@ -31,7 +31,7 @@ Current lines are `:1678` and `:1703`, not `:1652`/`:1677`. **Confirmed group
 A, and the story's prediction is right**: each shield sits in the `finally` of
 the block two lines below a `createTable("values", { force: true })` in the same
 `it` — `ReservedWordsMigrationTest` and `ExplicitlyNamedIndexMigrationTest`. It
-is intra-file, but intra-*test*, not "against its own earlier describes".
+is intra-file, but intra-_test_, not "against its own earlier describes".
 
 Caveat for the fix: Rails writes this bespoke `values(value)` table verbatim
 (`activerecord/test/cases/migration_test.rb`), so renaming it is a fidelity

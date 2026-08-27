@@ -45,7 +45,7 @@ comments name — `coders/json.test.ts`'s `SerializedTopic`,
 schema DDL today.
 
 The story's instruction to fix the uniqueness suite's own `topics_direct_index`
-first is confirmed: it is the only live `topics` *shape* mutator. Before
+first is confirmed: it is the only live `topics` _shape_ mutator. Before
 deleting, rule out the residual column-cache drift from
 `transactions.test.ts:1685-1700`, `persistence.test.ts:381-390` and
 `support/schema-cache-dump.trails.test.ts:73-115`, which `addColumn` +
