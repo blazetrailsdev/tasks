@@ -1,7 +1,7 @@
 ---
 title: "relocate-active-record-shaped-mixins-off-active-model-model"
 status: blocked
-updated: 2026-08-26
+updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Umbrella, already decomposed — do not schedule as its own PR. Its own body says 'split it per mixin ... and file one story per mixin off this one rather than opening a stack', and those slices now exist and are ready: move-serialization-mixins-off-active-model-model (p1), move-attribute-mixins-off-active-model-model (p2), trim-active-model-model-to-api-and-access (p3), whose combined acceptance criteria are identical to this story's (model.ts at 0 novel / 0 moved, <=200 code lines). Premise re-verified against origin/main 2026-08-26: model.ts is 814 lines and still does include(Model, Serialization)/:728, include(Model, SerializersJSON)/:729, include(Model, AttributeMethods.InstanceMethods)/:702, include(Model, Attributes)/:709, include(Model, Dirty)/:743, extend(Model, ValidationsCallbacksClassMethods)/:758 — so the deviation is live, it is just owned by the three slices. Close this once the slices land rather than claiming it."
+blocked-by: "Umbrella, already decomposed — do not schedule as its own PR; close it when the slices land. Re-verified against origin/main 2026-08-27: two of the three slices are DONE (move-serialization-mixins-off-active-model-model #7105, move-attribute-mixins-off-active-model-model #7113) and the third, trim-active-model-model-to-api-and-access, is still blocked behind move-attributes-and-attribute-methods-off-active-model-model (ready, p3). The anchors in the previous reason have drifted: model.ts is now 613 lines (was 814) and include(Model, Serialization)/:728, include(Model, SerializersJSON)/:729 and include(Model, Dirty)/:743 are GONE. What remains live is the attribute stack — :546 extend(Model, {decorateAttributes, ...}), :561 extend(Model, AttributeMethods.ClassMethods), :564 include(Model, AttributeMethods.InstanceMethods), :569-573 the Attributes block — plus :577 extend(Model, ValidationsCallbacksClassMethods). So the deviation is narrower than filed but still live, and still owned by the slices."
 closed-reason: null
 ---
 

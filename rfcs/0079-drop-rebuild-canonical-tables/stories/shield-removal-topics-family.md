@@ -1,6 +1,6 @@
 ---
 title: "Remove the topics-family shields (bind-parameter, date, primary-keys, uniqueness)"
-status: ready
+status: claimed
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T13:43:45Z"
+assignee: "arel-table-extends-node-but-rails-table-is-standalone"
 blocked-by: null
 closed-reason: null
 ---

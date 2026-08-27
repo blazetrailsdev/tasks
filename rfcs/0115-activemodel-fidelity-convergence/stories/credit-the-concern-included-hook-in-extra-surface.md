@@ -1,6 +1,6 @@
 ---
 title: "credit the symbol-keyed [included]/[extended] Concern hook in parity:api:extra"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T13:56:47Z"
+assignee: "credit-the-concern-included-hook-in-extra-surface"
 blocked-by: null
 closed-reason: null
 ---

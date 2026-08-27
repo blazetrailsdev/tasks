@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-26T23:54:56Z"
 assignee: "trim-active-model-model-to-api-and-access"
-blocked-by: "Depends on move-attribute-mixins-off-active-model-model (still ready, unclaimed): 46 of model.ts's 46 moved names are the Attributes / AttributeRegistration / AttributeMethods / Dirty surface that story removes from Model. 0 moved and the <=200-line target are unreachable until it lands. The API half — api.ts as a real includable Concern, and model.ts reaching its surface through it — shipped in this bundle's PR."
+blocked-by: "Blocker refreshed 2026-08-27. The previously named dep move-attribute-mixins-off-active-model-model HAS LANDED (done, PR #7113) — but it shipped only the ActiveModel::Dirty slice. The remainder is now move-attributes-and-attribute-methods-off-active-model-model (this RFC, flipped ready 2026-08-27, priority 3), which still has to remove Attributes / AttributeRegistration / AttributeMethods from Model. Verified against origin/main: model.ts is down to 613 lines (was 814) and the serialization and Dirty includes are gone, but :546 still does extend(Model, {decorateAttributes, attributeTypes, typeForAttribute, _defaultAttributes, pendingAttributeModifications, resetDefaultAttributesBang, resolveTypeName, hookAttributeType}), :561 extend(Model, AttributeMethods.ClassMethods), :564 include(Model, AttributeMethods.InstanceMethods), :569-573 the Attributes block. Those own the remaining moved names, so 0 moved and the <=200-line target stay unreachable. The CLI has no set-deps verb, so the ordering is carried by priority (group-model-ts-remaining-inline-mixin-literals p2 -> move-attributes-and-attribute-methods p3 -> this)."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Retire the setup-second-pool rebuild calls (the only non-test callers)"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7118
+claim: "2026-08-27T13:28:57Z"
+assignee: "require-canonical-rebuild-restore-arm-fails-open"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Table extends Node, but Rails' Arel::Table is a standalone class"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T13:43:45Z"
+assignee: "arel-table-extends-node-but-rails-table-is-standalone"
 blocked-by: null
 closed-reason: null
 ---

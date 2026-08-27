@@ -1,6 +1,6 @@
 ---
 title: "enroll-activerecord-in-unbacked-internal-receipt-lint"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null

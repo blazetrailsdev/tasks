@@ -1,7 +1,7 @@
 ---
 title: "Retire the synthesized columns_hash fallback (columns_hash is a pure DB read in Rails)"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7117
+claim: "2026-08-27T13:26:59Z"
+assignee: "retire-the-synthesized-columns-hash-fallback"
 blocked-by: null
 closed-reason: null
 ---

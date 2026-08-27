@@ -1,7 +1,7 @@
 ---
 title: "Resolve serialization's thenableHash dual sync/async return"
 status: blocked
-updated: 2026-08-23
+updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-08-23T14:27:28Z"
 assignee: "resolve-serialization-thenable-hash-async-return"
-blocked-by: "Blocked on 0023-surfaced-deviations/serializable-hash-async-return-boundary: removing thenableHash/asJsonThenable requires serializableHash and asJson to return Promise unconditionally, a cross-package async-boundary decision (activemodel, activerecord, activesupport, actionview) that also has to answer JSON.stringify's synchronous toJSON contract. Per CLAUDE.md the story cannot close by ratifying the deviation, and the alternative exceeds a bloat-burndown story's scope — it needs its own decision the way RFC 0063 got one for isValid()."
+blocked-by: "Re-verified against origin/main 2026-08-27: blocker still live. The dep 0023-surfaced-deviations/serializable-hash-async-return-boundary is still an UNCLAIMED DRAFT (no PR), so the cross-package async-boundary decision has not been made. thenableHash / asJsonThenable are both still present (4 hits in packages/activemodel/src/serialization.ts, 3 in packages/activemodel/src/serializers/json.ts), so removing them still requires serializableHash and asJson to return Promise unconditionally and still has to answer JSON.stringify's synchronous toJSON contract. Note the sibling story specify-serializable-hash-async-return-boundary (this RFC, PR #6813) is the survey/decision-scoping story and is done — it did NOT settle the boundary; the 0023 story is the one that must."
 closed-reason: null
 ---
 

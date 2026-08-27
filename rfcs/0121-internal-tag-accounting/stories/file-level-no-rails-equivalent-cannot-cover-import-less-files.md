@@ -1,6 +1,6 @@
 ---
 title: "File-level @noRailsEquivalent is unreachable for a file with no imports, blocking the arel @internal burndown"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
