@@ -1,6 +1,6 @@
 ---
 title: "strip-english-comments-arel-root"
-status: draft
+status: closed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by strip-english-comments-enrolled-packages (PR #7132): the rule-driven sweep re-swept every enrolled tree at once, so the per-directory slicing table does not apply"
 ---
 
 ## Context

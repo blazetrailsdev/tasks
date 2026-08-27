@@ -1,6 +1,6 @@
 ---
 title: "Adapter quotedDate overrides reimplement the abstract body instead of refining super"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7136
+claim: "2026-08-27T20:13:47Z"
+assignee: "sqlite-structure-load-in-memory-lane-decision"
 blocked-by: null
 closed-reason: null
 ---

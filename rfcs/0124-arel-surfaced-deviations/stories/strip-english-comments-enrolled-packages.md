@@ -1,6 +1,6 @@
 ---
 title: "strip-english-comments-enrolled-packages"
-status: draft
+status: in-progress
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7132
 claim: null
 assignee: null
 blocked-by: null

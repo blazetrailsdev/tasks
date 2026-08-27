@@ -1,6 +1,6 @@
 ---
 title: "Migration#createTable's block still needs a caller annotation and a contravariance cast"
-status: claimed
+status: in-progress
 updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 7135
 claim: "2026-08-27T19:43:44Z"
 assignee: "migration-create-table-block-needs-a-caller-annotation"
 blocked-by: null

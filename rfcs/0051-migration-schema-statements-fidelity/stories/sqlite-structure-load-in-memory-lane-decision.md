@@ -1,7 +1,7 @@
 ---
 title: "Decide what db schema:load --format=sql does for a :memory: config"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: ["activerecord", "trailties"]
@@ -9,9 +9,9 @@ deps: ["sqlite-structure-tasks-in-memory-branch-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7136
+claim: "2026-08-27T20:13:47Z"
+assignee: "sqlite-structure-load-in-memory-lane-decision"
 blocked-by: null
 closed-reason: null
 ---
