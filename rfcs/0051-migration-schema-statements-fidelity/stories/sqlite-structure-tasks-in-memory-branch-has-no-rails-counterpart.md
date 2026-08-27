@@ -1,7 +1,7 @@
 ---
 title: "structureDump branches to a trails-only in-memory path Rails does not have"
 status: ready
-updated: 2026-08-26
+updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-08-08T17:15:57Z"
-assignee: "enroll-sqlite-rake-test-in-test-compare"
-blocked-by: "Neither converged route in the story body reaches the acceptance criteria, which require BOTH inMemoryStructureDump and inMemoryStructureLoad to be deleted while packages/trailties/src/commands/db.test.ts's ':memory:' schema:dump test keeps passing. VACUUM INTO (the story's preferred route) materialises a readable file and so converges structureDump only. structureLoad has no CLI-reachable route at all: a child 'sqlite3' process fed the dump writes into a ':memory:' database it creates and discards at exit, and SQLite has no inverse of VACUUM INTO to pull a file's schema back into the live in-memory connection — the only way to apply the script to the connection that owns the database is the adapter exec that inMemoryStructureLoad already is. So converging structureLoad requires route (b), retiring the in-memory lane's use of these task methods, which means deciding what 'db schema:dump/load --format=sql' does for a ':memory:' config (Rails' honest answer is an empty dump) and rewriting the trailties regression test — a scope and product call outside this story. Needs a respec choosing route (b) explicitly, or splitting structureDump (convergeable now via VACUUM INTO) from structureLoad."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
