@@ -1,7 +1,7 @@
 ---
 title: "Converge model-schema's async raw-cache reads onto the bound handle"
-status: draft
-updated: 2026-08-02
+status: done
+updated: 2026-08-27
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7135
 claim: null
 assignee: null
 blocked-by: null
