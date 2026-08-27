@@ -42,9 +42,12 @@ Current lines: `mysql2-adapter.test.ts:186`,
   `subscribers`, `engines` (and `foos`) under `FOREIGN_KEY_CHECKS=0`. Converge
   onto `fixtures({ ... })` and delete the drop loop.
 - `abstract-mysql-adapter/schema.test.ts` is **group A**: `:71` `force`-creates
-  a bespoke `posts`, `:99` drops it. **Newly found gap** — `:202` and `:228` do
-  the same to canonical `topics`, which the `afterAll` `["posts"]` list does NOT
-  restore. Fix both by moving onto bespoke names.
+  a bespoke `posts`, `:99` drops it, and `:202`/`:228` do the same to canonical
+  `topics`. Both ARE restored — the outer `afterAll` handles `["posts"]` and the
+  inner describe's own `afterAll` handles
+  `["students", "lessons_students", "topics"]`. (A first pass of this inventory
+  reported an unrestored `topics` gap here; that was wrong — it missed the inner
+  `afterAll`. Corrected 2026-08-27.) Fix by moving both onto bespoke names.
 - `mysql2-adapter.trails.test.ts:244` is group B and is fixture provisioning by
   its own admission ("this suite does not bootstrap the canonical schema");
   converge onto `fixtures(["subscribers"])`. No mutator of `subscribers` exists
