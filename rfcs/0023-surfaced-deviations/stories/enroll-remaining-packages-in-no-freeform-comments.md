@@ -29,21 +29,21 @@ activerecord trees).
 not reach them and the prose keeps accruing. Comment lines measured on
 `origin/main` at 9415a63a9:
 
-| package | comment lines |
-| --- | ---: |
-| activesupport | 13,131 |
-| actionpack | 9,113 |
-| date | 5,246 |
-| trailties | 2,180 |
-| i18n | 1,461 |
-| actionview | 1,440 |
-| activerecord-cli | 696 |
-| globalid | 582 |
-| rack | 493 |
-| trails-tsc | 332 |
-| html-sanitizer | 177 |
-| tse-compiler | 89 |
-| nokogiri | 10 |
+| package          | comment lines |
+| ---------------- | ------------: |
+| activesupport    |        13,131 |
+| actionpack       |         9,113 |
+| date             |         5,246 |
+| trailties        |         2,180 |
+| i18n             |         1,461 |
+| actionview       |         1,440 |
+| activerecord-cli |           696 |
+| globalid         |           582 |
+| rack             |           493 |
+| trails-tsc       |           332 |
+| html-sanitizer   |           177 |
+| tse-compiler     |            89 |
+| nokogiri         |            10 |
 
 Enrollment is **only-grow** by construction, and the sweep is the rule's own
 `--fix` output, so each package is: add its glob to the
@@ -59,7 +59,7 @@ each far past any PR ceiling and want splitting by subtree the way
 **Before sweeping a package, check what reads its comments.** PR #7132 found
 four separate directive classes the hard way — a deleted `drift-ok:` waiver
 (`scripts/mixin-declaration-drift.ts`'s `WAIVER`) red every AR lane while
-reporting a *type* mismatch, and 17 `eslint-disable` blocks were destroyed by
+reporting a _type_ mismatch, and 17 `eslint-disable` blocks were destroyed by
 an earlier rule bug. The current keep-set is `@internal`,
 `@noRailsEquivalent`, `@missingRailsCall`, `@missingRailsArgs`, `@deprecated`,
 `@empty`, `boundary:` / `@boundary-file:`, `@nie disposition=`, `drift-ok:`,

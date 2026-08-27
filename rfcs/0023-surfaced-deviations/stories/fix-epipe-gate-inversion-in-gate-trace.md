@@ -22,7 +22,7 @@ PR #7132 fixed a latent CI bug: `.github/workflows/ci.yml`'s changed-path
 gates computed with `echo "$files" | grep -q …` under `set -o pipefail`.
 `grep -q` exits on its first match, so on a large diff `echo` is still writing
 when the reader vanishes and takes **EPIPE**; `pipefail` then reports the
-pipeline as failed *because the regex matched*, and the gate silently inverts
+pipeline as failed _because the regex matched_, and the gate silently inverts
 to false.
 
 Measured on that PR's own diff:
