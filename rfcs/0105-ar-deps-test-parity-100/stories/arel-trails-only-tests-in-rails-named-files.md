@@ -23,17 +23,17 @@ tests. 1,404 TS tests exist against 707 Rails ones, and most of the surplus
 sits inside the Rails-named files rather than the `.trails.test.ts` twins the
 package already has for exactly this purpose:
 
-| Rails-named TS file | Rails tests | TS-only tests in it | `.trails` twin exists |
-| --- | --- | --- | --- |
-| `visitors/to-sql.test.ts` | 131 | 112 | yes (29 tests) |
-| `select-manager.test.ts` | 113 | 42 | yes (10) |
-| `visitors/dot.test.ts` | 16 | 35 | yes (6) |
-| `table.test.ts` | 25 | 25 | yes (4) |
-| `nodes/node.test.ts` | 2 | 21 | no |
-| `nodes/casted.test.ts` | 1 | 18 | no |
-| `nodes/homogeneous-in.test.ts` | 2 | 14 | no |
-| `nodes/bound-sql-literal.test.ts` | 2 | 13 | no |
-| `nodes/binary.test.ts` | 2 | 12 | no |
+| Rails-named TS file               | Rails tests | TS-only tests in it | `.trails` twin exists |
+| --------------------------------- | ----------- | ------------------- | --------------------- |
+| `visitors/to-sql.test.ts`         | 131         | 112                 | yes (29 tests)        |
+| `select-manager.test.ts`          | 113         | 42                  | yes (10)              |
+| `visitors/dot.test.ts`            | 16          | 35                  | yes (6)               |
+| `table.test.ts`                   | 25          | 25                  | yes (4)               |
+| `nodes/node.test.ts`              | 2           | 21                  | no                    |
+| `nodes/casted.test.ts`            | 1           | 18                  | no                    |
+| `nodes/homogeneous-in.test.ts`    | 2           | 14                  | no                    |
+| `nodes/bound-sql-literal.test.ts` | 2           | 13                  | no                    |
+| `nodes/binary.test.ts`            | 2           | 12                  | no                    |
 
 Nine further files have no Rails counterpart at all but lack the `.trails`
 suffix: `attribute-alignment.test.ts`, `expression-mixins.test.ts`,

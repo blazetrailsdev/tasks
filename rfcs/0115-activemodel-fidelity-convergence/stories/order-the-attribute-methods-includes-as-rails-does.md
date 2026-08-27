@@ -44,10 +44,10 @@ end
 `packages/activerecord/src/base.ts:4625-4643` runs a different order:
 
 ```ts
-include(Base, _BeforeTypeCast);   // 4625
-include(Base, AMDirty);           // 4634 — ActiveModel::Dirty, via AR Dirty
-include(Base, _Dirty);            // 4637 — AR AttributeMethods::Dirty
-include(Base, _PrimaryKey);       // 4638
+include(Base, _BeforeTypeCast); // 4625
+include(Base, AMDirty); // 4634 — ActiveModel::Dirty, via AR Dirty
+include(Base, _Dirty); // 4637 — AR AttributeMethods::Dirty
+include(Base, _PrimaryKey); // 4638
 include(Base, _CompositePrimaryKey); // 4643
 ```
 
