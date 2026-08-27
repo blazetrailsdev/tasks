@@ -121,7 +121,7 @@ behind the table's max id mid-test.** The fixture loader caps it
 `fixtures.rb:688-690`) with `setval(seq, GREATEST(COALESCE(MAX(id),0),1),
 COALESCE(MAX(id),0) <> 0)`, which on a committed-empty table sets "next nextval
 = 1". That is correct at load time, so for the failure the cap has to be landing
-*after* the test's own `create`s — i.e. a fixture load running while another
+_after_ the test's own `create`s — i.e. a fixture load running while another
 test is mid-flight against the same database. Worth checking the per-worker DB
 slot isolation first (`test-setup-worker-db.ts` advisory-lock slots): two workers
 sharing one slot DB would produce exactly this, and would also explain why it
