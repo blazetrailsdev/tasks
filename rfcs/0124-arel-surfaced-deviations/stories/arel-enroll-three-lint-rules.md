@@ -1,5 +1,5 @@
 ---
-title: "arel: enroll unbacked-internal-needs-receipt, rails-error-parity (with arel in the manifest) and no-explicit-any-disable"
+title: "arel: enroll rails-error-parity (with arel in the manifest) and no-explicit-any-disable"
 status: claimed
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
@@ -18,16 +18,17 @@ closed-reason: null
 
 ## Context
 
-Three custom ESLint rules run on other packages but not on `packages/arel`,
+Two custom ESLint rules run on other packages but not on `packages/arel`,
 and each reports zero (or one) violation there today, so enrollment is a
-free tightening:
+free tightening.
 
-1. `blazetrails/unbacked-internal-needs-receipt` (RFC 0121) — enrollment set
-   at `eslint.config.mjs:377-390` (must stay in sync with
-   `eslint/rails-private-jsdoc.config.mjs`). With the rule's own ignores
-   (`**/*.test.ts`, `**/test-helpers/**`) a dry run on `packages/arel/src`
-   reports 0. activerecord joined in #7115; arel is the next package.
-2. `blazetrails/rails-error-parity` — enrollment at `eslint.config.mjs:404-411`.
+(A third, `blazetrails/unbacked-internal-needs-receipt`, was originally part of
+this story. Its "reports 0" premise was measured against an empty
+`eslint/rails-private-methods.json`; with the real manifest arel has 9
+violations that collide with the RFC 0117 extra-surface ratchet, so it moved to
+`arel-enroll-unbacked-internal-receipt`.)
+
+1. `blazetrails/rails-error-parity` — enrollment at `eslint.config.mjs:404-411`.
    The manifest builder `scripts/build-rails-error-manifest.ts:24` has
    `PACKAGES = ["activerecord","activemodel","activesupport"]` and its `PKG_NS`
    comment explicitly leaves `lib/arel` out, so `eslint/rails-error-classes.json`
@@ -37,7 +38,7 @@ free tightening:
    `packages/arel/src/**/*.ts`. The audit verified all 15 `raise` sites in
    `lib/arel/` already throw the matching class from `packages/arel/src/errors.ts`,
    so this should land green.
-3. `blazetrails/no-explicit-any-disable` — activerecord-only at
+2. `blazetrails/no-explicit-any-disable` — activerecord-only at
    `eslint.config.mjs:762`. arel has one file-level
    `/* eslint-disable @typescript-eslint/no-explicit-any */` at
    `packages/arel/src/node-slots.ts:21`; narrow the slot ctor types to
@@ -46,10 +47,9 @@ free tightening:
 
 ## Acceptance criteria
 
-- `packages/arel/src/**/*.ts` is in the `files` list for all three rules (and
-  in `eslint/rails-private-jsdoc.config.mjs` for rule 1).
+- `packages/arel/src/**/*.ts` is in the `files` list for both rules.
 - `scripts/build-rails-error-manifest.ts` scans `arel` and
-  `eslint/rails-error-classes.json` lists its three classes.
+  `eslint/rails-error-classes.json` lists its error classes.
 - `node-slots.ts` has no `no-explicit-any` disable.
 - `pnpm eslint packages/arel/src --max-warnings 0` exits 0; no baseline or
   exclude row added.
