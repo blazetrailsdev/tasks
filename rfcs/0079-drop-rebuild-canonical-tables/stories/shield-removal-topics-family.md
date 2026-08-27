@@ -55,7 +55,7 @@ schema DDL today.
 
 The story's instruction to fix the uniqueness suite's own `topics_direct_index`
 first is confirmed — and has now happened, ahead of this story. With it gone
-there is no live `topics` *shape* mutator left in the tree. Before
+there is no live `topics` _shape_ mutator left in the tree. Before
 deleting the remaining four, rule out the residual column-cache drift from
 `transactions.test.ts:1685-1700`, `persistence.test.ts:381-390` and
 `support/schema-cache-dump.trails.test.ts:73-115`, which `addColumn` +
