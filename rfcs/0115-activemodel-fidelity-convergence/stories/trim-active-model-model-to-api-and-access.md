@@ -1,7 +1,7 @@
 ---
 title: "trim-active-model-model-to-api-and-access"
-status: claimed
-updated: 2026-08-26
+status: blocked
+updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-26T23:54:56Z"
 assignee: "trim-active-model-model-to-api-and-access"
-blocked-by: null
+blocked-by: "Depends on move-attribute-mixins-off-active-model-model (still ready, unclaimed): 46 of model.ts's 46 moved names are the Attributes / AttributeRegistration / AttributeMethods / Dirty surface that story removes from Model. 0 moved and the <=200-line target are unreachable until it lands. The API half — api.ts as a real includable Concern, and model.ts reaching its surface through it — shipped in this bundle's PR."
 closed-reason: null
 ---
 

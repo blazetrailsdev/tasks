@@ -1,7 +1,7 @@
 ---
 title: "Make ActiveModel::API an includable module, not a Model-only assembly"
-status: claimed
-updated: 2026-08-26
+status: in-progress
+updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 7108
 claim: "2026-08-26T23:54:56Z"
 assignee: "trim-active-model-model-to-api-and-access"
 blocked-by: null
