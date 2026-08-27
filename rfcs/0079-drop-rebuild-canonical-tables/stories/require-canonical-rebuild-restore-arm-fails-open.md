@@ -34,8 +34,8 @@ canonical drop in the file, not just the ones actually restored.
 So a non-literal name list disables the check file-wide:
 
 ```ts
-await rebuildCanonicalTables(adapter, names);        // parameter
-await rebuildCanonicalTables(adapter, TABLES);       // module const
+await rebuildCanonicalTables(adapter, names); // parameter
+await rebuildCanonicalTables(adapter, TABLES); // module const
 await rebuildCanonicalTables(adapter, [...a, ...b]); // spread
 ```
 
