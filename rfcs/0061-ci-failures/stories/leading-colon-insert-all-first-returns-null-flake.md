@@ -192,6 +192,35 @@ file alone, the whole `relation/` directory, a 70-file PostgreSQL slice (1,397
 tests). Only CI reproduces it, and only intermittently — commit `f33d21be7`
 produced one green run and one red run of the same tree.
 
+## Root cause — CONFIRMED, fixed by trails#7109
+
+`uniqueness-validation.trails.test.ts` (`UniquenessCoveredByUniqueIndexAdapterResolutionTest`)
+checked out a raw adapter on its own pool in `beforeAll`, ran
+`rebuildCanonicalTables(adapter, ["topics"])` and then
+`addIndex("topics", "title", { unique: true })` through it. A raw pool sits
+outside every fixture transaction, so that DDL was committed to the worker's
+shared database, and `afterAll` only disconnected the pool — the **unique index
+on `topics.title` outlived the file**. Every later file in the same worker then
+ran against it.
+
+That is exactly what this test tripped over: each iteration does
+`create({ title: X })` and then `insert_all([{ title: X, ... }])`, so with a unique
+`title` the second write is a genuine uniqueness conflict, and `insert_all` is
+`on_duplicate: :skip` → `ON CONFLICT DO NOTHING` swallows it silently. Every
+probe reading fits — write skipped, same connection, no PK collision, the
+differently-titled probe `create` succeeding, and on SQLite the rowid still
+consumed (the sequence is bumped before the constraint check).
+
+Reproduced deterministically: the two files in one worker with the uniqueness
+file first (`vitest run --no-file-parallelism ...`) fail identically to CI.
+Intermittent on CI only because it needs that file to precede this one in the
+same worker without a table rebuild in between.
+
+Fix (#7109, `f5d2641f6`): the test now runs against `subscribers`, whose
+canonical schema already carries `t.index :nick, unique: true`, and issues no
+DDL at all — no index to leak and no table rebuild.
+
+
 ## Tracking
 
 Instrumentation for this story landed separately in **trails#7106**
