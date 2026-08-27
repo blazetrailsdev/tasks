@@ -87,6 +87,22 @@ repeated runs (alone, and with the whole `packages/activerecord/src/relation`
 directory), and a bare re-run of the same commit with no code change was fully
 green.
 
+## Tracking
+
+Instrumentation for this story landed separately in **trails#7106**
+(`packages/activerecord/src/relation/leading-colon-string-writes.trails.test.ts`):
+when the read comes back empty it now reports the `insert_all` RETURNING ids,
+the live contents of `topics`, and `openTransactions`, which splits the
+remaining hypotheses on the first line of the failure — write never happened,
+row removed in between, or the read is at fault. That PR is diagnostic-only and
+does NOT meet the acceptance criteria below.
+
+This story is deliberately left unclaimed with no `pr:` stamp: #7106 does not fix
+the flake, and a story that is `in-progress` with a PR number is eligible for the
+merge sweep to mark done, which would close this out unfixed. Whoever fixes it
+claims it fresh — the eliminations above are the starting point, and the next CI
+sighting should carry the diagnostic output.
+
 ## Acceptance criteria
 
 - Root cause identified — a stale query-cache read, a fixture/transaction
