@@ -1,7 +1,7 @@
 ---
 title: "Flake: leading-colon insert_all then where().first() returns null on SQLite and MariaDB"
-status: draft
-updated: 2026-08-26
+status: done
+updated: 2026-08-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: 7109
 claim: null
 assignee: null
 blocked-by: null

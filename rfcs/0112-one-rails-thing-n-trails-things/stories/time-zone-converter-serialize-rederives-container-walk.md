@@ -1,7 +1,7 @@
 ---
 title: "TimeZoneConverter#serialize re-derives the container walk instead of delegating"
-status: in-progress
-updated: 2026-08-26
+status: done
+updated: 2026-08-27
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []

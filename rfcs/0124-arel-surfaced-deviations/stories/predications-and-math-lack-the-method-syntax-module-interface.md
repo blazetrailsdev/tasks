@@ -1,7 +1,7 @@
 ---
 title: "Predications/Math have no module interface, so a node subclass can't override a mixed-in member"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7110
+claim: "2026-08-27T01:22:35Z"
+assignee: "named-function-over-overrides-the-mixin-and-quotes-eagerly"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,16 +1,16 @@
 ---
 title: 'defaultEnv terminal literal is "default"/"development", not Rails'' "default_env"'
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7110
+claim: "2026-08-27T01:22:35Z"
+assignee: "named-function-over-overrides-the-mixin-and-quotes-eagerly"
 blocked-by: null
 closed-reason: null
 ---

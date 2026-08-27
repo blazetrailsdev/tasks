@@ -1,7 +1,7 @@
 ---
 title: "Phase 1: attribute every rebuildCanonicalTables shield to its contaminating sibling"
-status: ready
-updated: 2026-07-26
+status: done
+updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T01:44:07Z"
+assignee: "inventory-attribute-rebuild-call-sites"
 blocked-by: null
 closed-reason: null
 ---

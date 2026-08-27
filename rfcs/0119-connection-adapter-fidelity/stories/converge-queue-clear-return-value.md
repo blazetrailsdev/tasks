@@ -1,7 +1,7 @@
 ---
 title: "Queue#clear returns removed elements; Rails' Array#clear does not"
-status: in-progress
-updated: 2026-08-26
+status: done
+updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

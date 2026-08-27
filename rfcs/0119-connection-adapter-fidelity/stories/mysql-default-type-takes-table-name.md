@@ -1,7 +1,7 @@
 ---
 title: "mysql-default-type-takes-table-name"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6483
+claim: "2026-08-27T01:22:35Z"
+assignee: "named-function-over-overrides-the-mixin-and-quotes-eagerly"
 blocked-by: null
 closed-reason: null
 ---

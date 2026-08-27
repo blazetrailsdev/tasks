@@ -1,7 +1,7 @@
 ---
 title: "Converge unpinConnectionBang's tear-down statement order with Rails"
-status: in-progress
-updated: 2026-08-26
+status: done
+updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
