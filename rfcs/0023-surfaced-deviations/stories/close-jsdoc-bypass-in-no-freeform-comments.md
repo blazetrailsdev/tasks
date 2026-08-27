@@ -63,12 +63,12 @@ activemodel. Re-measured 2026-08-27 with the same tag-or-citation predicate
 (`@\w` or `RAILS_REF_RE`), across all 402 files currently enrolled in the rule
 in `eslint.config.mjs:790-806`, `:816`, `:829`:
 
-| package | flagged blocks | lines |
-| --- | ---: | ---: |
-| arel | 27 | 61 |
-| activemodel | 49 | 109 |
-| activerecord (enrolled slices) | 347 | 1,578 |
-| **total** | **423** | **1,748** |
+| package                        | flagged blocks |     lines |
+| ------------------------------ | -------------: | --------: |
+| arel                           |             27 |        61 |
+| activemodel                    |             49 |       109 |
+| activerecord (enrolled slices) |            347 |     1,578 |
+| **total**                      |        **423** | **1,748** |
 
 4,318 JSDoc blocks are enrolled in total, so ~90% already carry a tag or a
 citation and are untouched. arel + activemodel together are 76 blocks / 170
