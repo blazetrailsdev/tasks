@@ -1,9 +1,9 @@
 ---
 rfc: "0079-drop-rebuild-canonical-tables"
 title: "Drive rebuildCanonicalTables call sites to zero, then delete it"
-status: draft
+status: active
 created: 2026-07-26
-updated: 2026-07-27
+updated: 2026-08-27
 owner: "@deanmarano"
 packages:
   - "activerecord"
