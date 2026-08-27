@@ -25,9 +25,14 @@ unconditionally — `eslint/no-freeform-comments.mjs`, keep-rule 1. Reformatting
 a doomed `//` comment as `/** ... */` bypasses the autofix by changing two
 characters, and the rule's own header documents this as a known limitation.
 
-**Decision, 2026-08-27 (maintainer): trails needs no comments at all outside
-JSDoc the toolchain reads and Rails line references.** That settles the
-question this story was filed to ask. Descriptive API prose — `/** Add GROUP
+**Decision, 2026-08-27 (maintainer): trails carries no English-language
+comments — only our JSDoc flags and the tool directives the toolchain reads,
+with no narrative prose around them, swept package by package starting with
+arel.** That settles the question this story was filed to ask, and it is
+STRICTER than the tag-or-citation predicate this story was first rewritten
+around: prose is deleted wherever it lives, including inside a JSDoc block that
+also carries a tag. A block is not saved by having one tag in it; the tag
+survives and the paragraph around it does not. Descriptive API prose — `/** Add GROUP
 BY. */`, `/** Set the FROM table. */` — is not an exception to the rule; it is
 the thing the rule exists to delete. The Ruby is vendored at `vendor/rails/`
 and every ported file carries a `Mirrors:` line, so a reader who wants to know
@@ -90,9 +95,19 @@ condition applies only to enrolled paths, the set is **only-grow**, and no
 package is ever removed to turn a red run green. Without that, tightening the
 rule reds all 402 enrolled files at once and forces a 1,748-line PR.
 
-Seed the set with **arel and activemodel** and sweep their 76 blocks in the same
-PR. File one story per activerecord slice for the remaining 347; do not fan them
-out from this PR.
+Seed the set with **activemodel** and sweep its 49 blocks in the same PR.
+**arel is out of scope here** — its sweep is owned by
+`0124-arel-surfaced-deviations/strip-english-comments-arel-visitors` and its
+four sibling slices, which run against the stricter policy above (1,384 prose
+lines, not the 27 bare blocks the tag-or-citation predicate alone would catch).
+Enrol arel in the rule once those land. File one story per activerecord slice
+for the remaining 347 blocks; do not fan them out from this PR.
+
+Note the two counts measure different things and both are right: the
+tag-or-citation predicate flags whole blocks that carry NEITHER a tag nor a
+citation (27 in arel), while the policy deletes prose LINES wherever they sit
+(1,384 in arel). The rule is the ratchet that stops regression; the sweeps are
+what actually removes the volume.
 
 ## Acceptance criteria
 
@@ -101,8 +116,8 @@ out from this PR.
       kept-with-citation, deleted-bare, and a non-enrolled path still keeping a
       bare block.
 - [ ] The enrollment set is declared once and documented as only-grow.
-- [ ] arel and activemodel are enrolled and their 76 flagged blocks are gone in
-      the same PR (61 + 109 lines).
+- [ ] activemodel is enrolled and its 49 flagged blocks are gone in the same
+      PR (109 lines). arel is enrolled only after its 0124 slices land.
 - [ ] `pnpm lint` clean; no new eslint-disable, no allowlist widening.
 - [ ] The rule's header doc drops the KNOWN LIMITATION paragraph and states the
       new contract, including that Rails' own comments are still not copied.
