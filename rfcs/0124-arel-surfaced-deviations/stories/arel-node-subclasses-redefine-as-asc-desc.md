@@ -2,7 +2,7 @@
 title: "arel: six node subclasses redefine as/asc/desc the NodeExpression mixins already supply"
 status: draft
 updated: 2026-08-27
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0124-arel-surfaced-deviations"
 cluster: duplicate-bodies
 packages: ["arel"]
 deps: []

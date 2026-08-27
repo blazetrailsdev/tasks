@@ -2,7 +2,7 @@
 title: "arel: 300 TS-only tests live inside Rails-named test files; one Rails-named body is weaker than Rails"
 status: draft
 updated: 2026-08-27
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0124-arel-surfaced-deviations"
 cluster: test-placement
 packages: ["arel"]
 deps: []

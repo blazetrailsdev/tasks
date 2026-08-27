@@ -2,7 +2,7 @@
 title: "arel: SQLString/Composite/Grouping/quotedNode carry guards and fallbacks Rails does not have"
 status: draft
 updated: 2026-08-27
-rfc: "0113-branch-and-guard-parity"
+rfc: "0124-arel-surfaced-deviations"
 cluster: guard-parity
 packages: ["arel"]
 deps: []

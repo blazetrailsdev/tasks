@@ -2,7 +2,7 @@
 title: "arel: Case#when quotes its expression where Rails stores it raw"
 status: draft
 updated: 2026-08-27
-rfc: "0113-branch-and-guard-parity"
+rfc: "0124-arel-surfaced-deviations"
 cluster: invented-arm
 packages: ["arel"]
 deps: []

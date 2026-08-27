@@ -2,7 +2,7 @@
 title: "arel: Attribute hand-copies Expressions/Math/AliasPredication/OrderPredications instead of include()"
 status: draft
 updated: 2026-08-27
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0124-arel-surfaced-deviations"
 cluster: duplicate-bodies
 packages: ["arel"]
 deps: []
