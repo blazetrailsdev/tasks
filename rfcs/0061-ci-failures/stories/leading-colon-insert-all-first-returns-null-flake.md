@@ -220,7 +220,6 @@ Fix (#7109, `f5d2641f6`): the test now runs against `subscribers`, whose
 canonical schema already carries `t.index :nick, unique: true`, and issues no
 DDL at all — no index to leak and no table rebuild.
 
-
 ## Tracking
 
 Instrumentation for this story landed separately in **trails#7106**
