@@ -1,7 +1,7 @@
 ---
 title: "parity:api:extra:gate passes silently on a mark above its measurement, so forgotten :tighten runs rot the ratchet"
-status: draft
-updated: 2026-08-26
+status: closed
+updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered on origin/main. lint-extra-surface-ratchet.ts:91,126-131 already calls staleMarks() (extra-surface-mark.ts:117) and prints, per package and dimension, 'X novel mark 376 is above the current 374 - narrow it with pnpm parity:api:extra:tighten' - exactly the story's AC 1 in the warn-not-fail form it permits. The above-the-mark failure path (exceedances, lines 120-133) is unchanged, :tighten still refuses to raise a mark (lines 93-100) and no :reseed path exists. Both directions are tested in scripts/api-compare/extra-surface-mark.test.ts:47,72. The outstanding tightening also landed: extra-surface-mark.json on origin/main now reads activerecord 370/1168 and arel 0/58, below the story's cited 376/1324 and 62."
 ---
 
 ## Context

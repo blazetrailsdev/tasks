@@ -1,7 +1,7 @@
 ---
 title: "A name private on one entity and public on another in one .rb folds to not-private, publishing Attributes#attribute"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []

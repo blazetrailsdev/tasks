@@ -1,7 +1,7 @@
 ---
 title: "rails-private-methods.json misses mixin re-declaration sites, forcing @noRailsEquivalent receipts on Rails-private members"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []

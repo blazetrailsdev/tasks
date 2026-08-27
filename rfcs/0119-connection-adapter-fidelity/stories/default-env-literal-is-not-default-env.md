@@ -1,6 +1,6 @@
 ---
 title: 'defaultEnv terminal literal is "default"/"development", not Rails'' "default_env"'
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

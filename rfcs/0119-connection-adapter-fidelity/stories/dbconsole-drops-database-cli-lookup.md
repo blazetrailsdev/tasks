@@ -1,6 +1,6 @@
 ---
 title: "dbconsole never reads ActiveRecord.databaseCli (find_cmd_and_exec unported)"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

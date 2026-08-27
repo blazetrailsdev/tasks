@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-inherited-interface-members-are-uncoverable"
-status: draft
+status: claimed
 updated: 2026-08-27
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-27T11:49:17Z"
+assignee: "enroll-activerecord-in-unbacked-internal-receipt-lint"
 blocked-by: null
 closed-reason: null
 ---
