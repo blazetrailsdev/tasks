@@ -72,7 +72,7 @@ main consumer.
 
 - [ ] `canonical-schema.ts` and `test-helpers/test-schema.ts` lay
       `add_foreign_key :lessons_students, :students, on_delete: :cascade,
-    deferrable: :immediate`, mirroring `schema.rb:726`.
+  deferrable: :immediate`, mirroring `schema.rb:726`.
 - [ ] `"foreign keys method with ansi quotes"` reverts to a bare read, with no
       `addForeignKey`/`removeForeignKey` around it — matching
       `schema_test.rb:125-128`.
