@@ -18,60 +18,78 @@ closed-reason: null
 
 ## Context
 
-`blazetrails/no-freeform-comments` (RFC 0124) permits only "the repo's JSDoc
-flags with their permanence token, and tool directives". CLAUDE.md's fidelity
-rules require the opposite in one specific place: **"Every deviation you do ship
-is justified AT THE CALL SITE, not in the PR body."** A call-site receipt naming
-the Rails reader a deviation answers for is prose, so in an enrolled directory
-it is now a lint error.
+`no-freeform-comments`' autofix strips the **reason text off the repo's own
+deviation tags**, leaving a bare permanence token. PR #7132 (`9415a63a9`) did
+this to **244 tags across 757 files**:
 
-This already fired once. PR #7135 (RFC 0112,
-`burn-down-internal-schema-cache-readers-onto-the-bound-handle`) added six
-call-site receipts, each citing the synchronous Rails reader the site answers
-for and the async `BoundSchemaReflection` method that cannot serve it. The one
-in `packages/activerecord/src/support/schema-cache-dump.ts` had to be **deleted**
-on rebase — `packages/activerecord/src/support/**` is enrolled (eslint.config.mjs)
-and the post-rebase lint failed on it. The fact it recorded (Rails puts
-`marshal_dump` on `SchemaCache` alone, schema_cache.rb:416-418;
-`BoundSchemaReflection`, schema_cache.rb:150-200, has no counterpart, so there is
-no one-arg form to converge onto in either language) now lives nowhere in-tree.
+```
+- * @noRailsEquivalent CONVERGEABLE the adapter-name normalization Ruby does inline in ConnectionAdapters.resolve (connection_adapters.rb:34-39).
++ * @noRailsEquivalent CONVERGEABLE
+-   * @missingRailsCall build_statement_pool — CONVERGEABLE (story abstract-adapter-constructor-drops-rails-config-arg): RFC 0106: the base ctor takes no
++   * @missingRailsCall build_statement_pool — CONVERGEABLE
+```
 
-The other five receipts in that PR — `model-schema.ts` (4) and
-`attribute-methods/primary-key.ts` (1) — are legal only because their slices are
-not enrolled yet. The enrollment set is only-grow by construction, so they will
-become errors when their slice lands, and the reasoning will be deleted the same
-way unless this is settled first.
+The maintainer decision recorded in `close-jsdoc-bypass-in-no-freeform-comments`
+("the tag survives and the paragraph around it does not") is what the rule
+implements, and for descriptive API prose it is right. But a tag's reason is not
+prose around a tag — it is the reviewed artifact several gates are specified in
+terms of, and CLAUDE.md states the requirement four times:
 
-The two escape hatches that ARE tag-shaped (`@noRailsEquivalent
-PERMANENT|CONVERGEABLE`, `@missingRailsCall`) do not cover this case: they attach
-to a declaration, not to a read inside a body, and in `src/support/**` — outside
-both compare populations — a `@noRailsEquivalent` tag is inert and risks tripping
-the stale-tag gate.
+- `@noRailsEquivalent <reason>` — "that tag is the only sanctioned exception and
+  **the reason is reviewed**".
+- Baselining "costs a **reviewed one-line `reason`** for the row you add — never
+  leave the seeded placeholder there."
+- `unbacked-internal-needs-receipt` (RFC 0121) requires a public `@internal`
+  declaration to "ALSO carry a `@noRailsEquivalent PERMANENT|CONVERGEABLE`
+  **reason**".
+- The call-argument gate: "Its **reason** must open with `PERMANENT` or
+  `CONVERGEABLE` … a reason claiming neither is an error, not an assumed
+  PERMANENT."
+
+After the strip, every one of those reads as satisfied by a bare token, so the
+"reviewed reason" requirement is now vacuous — a receipt can no longer be judged,
+only counted. The strip also deleted the `(story <id>)` back-references that link
+a deviation to the story that will converge it, which is the burndown's own
+index.
+
+Two consequences already observed in PR #7135 (RFC 0112):
+
+1. Its six Rails-cited call-site receipts had to be justified as bare prose, and
+   the one in `packages/activerecord/src/support/schema-cache-dump.ts` — an
+   enrolled directory — was **deleted** on rebase. The fact it held (Rails puts
+   `marshal_dump` on `SchemaCache` alone, schema_cache.rb:416-418;
+   `BoundSchemaReflection`, schema_cache.rb:150-200, has no counterpart, so there
+   is no one-arg form to converge onto in either language) now lives nowhere
+   in-tree.
+2. Five surviving receipts in `model-schema.ts` and
+   `attribute-methods/primary-key.ts` are legal only because their slices are not
+   enrolled. Enrollment is only-grow, so they are queued for the same deletion.
 
 ## Converged shape
 
-Decide which convention wins for an in-body deviation receipt, and make the rule
-express it. Options, in rough order of preference:
+Keep a tag's reason; delete only the prose around it. Concretely:
 
-1. Extend `no-freeform-comments` to keep a comment carrying a recognised
-   permanence token (`PERMANENT` / `CONVERGEABLE`) plus a `gem/path.rb:LINE`
-   cite — the same shape the JSDoc flags already use, so the keep-rule stays
-   mechanical rather than judgemental.
-2. Define an in-body tag directive (e.g. `// @railsCite <gem/path.rb:LINE> —
-PERMANENT|CONVERGEABLE <reason>`) and add it to the rule's directive
-   allowlist.
-3. Rule that in-body receipts move to the enclosing declaration's JSDoc, and
-   document that in CLAUDE.md so the fidelity rule and the lint rule agree.
+1. Teach the rule that everything on a tag's own line (and its hanging
+   continuation lines) is **part of the tag**, not narrative — so
+   `@noRailsEquivalent CONVERGEABLE <reason>` and
+   `@missingRailsCall <call> — <PERMANENT|CONVERGEABLE> <reason>` survive intact,
+   while a free paragraph beside them still goes.
+2. Give an in-body deviation receipt a tag-shaped form the rule keeps (e.g.
+   `// @railsCite <gem/path.rb:LINE> — PERMANENT|CONVERGEABLE <reason>`), so
+   CLAUDE.md's "every deviation is justified AT THE CALL SITE" can be satisfied
+   inside an enrolled directory at all. Today it cannot.
+3. Restore the 244 stripped reasons from `9415a63a9`'s parent, and the
+   `schema-cache-dump.ts` receipt, in the kept shape.
 
-Whichever is chosen, restore the `schema-cache-dump.ts` receipt in the new shape
-and re-file the five surviving `model-schema.ts` / `primary-key.ts` receipts
-before those slices enroll.
+Note the tension is only with the REASON, not with the decision: no step here
+re-admits descriptive API prose, which stays deleted.
 
 ## Acceptance criteria
 
-- [ ] CLAUDE.md and `no-freeform-comments` agree on where an in-body deviation
-      receipt lives; neither rule silently deletes the other's output.
-- [ ] The `schema-cache-dump.ts` `marshal_dump` receipt is back in-tree in the
-      sanctioned shape.
-- [ ] Enrolling a new slice does not require deleting an existing Rails-cited
-      call-site receipt.
+- [ ] `no-freeform-comments` preserves the reason text and `(story <id>)`
+      back-reference on `@noRailsEquivalent` / `@missingRailsCall`, with a test
+      pinning both the keep and the surrounding-prose delete.
+- [ ] An in-body call-site deviation receipt has a sanctioned shape that survives
+      the rule, and CLAUDE.md names it.
+- [ ] The 244 reasons stripped by `9415a63a9` are restored.
+- [ ] Enrolling a new slice never requires deleting a Rails-cited receipt.
