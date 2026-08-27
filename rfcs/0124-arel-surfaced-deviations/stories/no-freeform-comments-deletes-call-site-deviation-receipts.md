@@ -58,7 +58,7 @@ express it. Options, in rough order of preference:
    cite — the same shape the JSDoc flags already use, so the keep-rule stays
    mechanical rather than judgemental.
 2. Define an in-body tag directive (e.g. `// @railsCite <gem/path.rb:LINE> —
-   PERMANENT|CONVERGEABLE <reason>`) and add it to the rule's directive
+PERMANENT|CONVERGEABLE <reason>`) and add it to the rule's directive
    allowlist.
 3. Rule that in-body receipts move to the enclosing declaration's JSDoc, and
    document that in CLAUDE.md so the fidelity rule and the lint rule agree.
