@@ -32,7 +32,7 @@ const cols =
   typeof index.columns === "string"
     ? JSON.stringify(index.columns)
     : index.columns.length === 1
-      ? JSON.stringify(index.columns[0])   // <- the deviation
+      ? JSON.stringify(index.columns[0]) // <- the deviation
       : `[${index.columns.map((c) => JSON.stringify(c)).join(", ")}]`;
 ```
 
