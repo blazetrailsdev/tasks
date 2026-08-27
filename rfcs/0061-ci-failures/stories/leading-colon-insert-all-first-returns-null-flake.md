@@ -148,10 +148,44 @@ Also ruled out, by measurement rather than reading:
   `beforeEach` hooks (`test-fixtures.ts:259`, `:471`).
 - **A stale query cache** (see Context above).
 
-Next question: why does an `ON CONFLICT DO NOTHING` insert skip when no
-constraint can be violated? Capture the exact SQL and binds as executed, plus
-`changes()`/rowcount rather than only the RETURNING payload, and check whether
-the statement executes against the same connection the ids came from.
+**A split write/read connection was proposed and is also REFUTED.** Both
+`pool.withConnection` (`connection-pool.ts:981-984`) and `leaseConnection`
+(`:673-679`) consult `checkout()` — and so the fixture pin — only when the
+execution context's lease is empty, so a context already holding a non-pinned
+connection keeps it. Note that shape is Rails-faithful
+(`connection_pool.rb:405-424` is the same `if lease.connection ... else checkout`),
+so it is not a defect in itself. A probe capturing the write lease through the
+exact path `InsertAll.execute` uses (`insert-all.ts:141`) reported, on the next
+SQLite sighting (run 33028588004, job 98375630699):
+
+```
+  returning:        []
+  topics rows:      [[2,"seed",null],[3,"::Alpha",null]]
+  next insert:      inserted id 5
+  same connection:  true
+  colon rows via write lease: []
+```
+
+`same connection: true`, and the row is absent through the write lease too. The
+write and the read are on one connection and the row is on neither.
+
+One deviation was noticed while tracing this and is worth a look on its own
+merits, though it is NOT implicated by the evidence above: for the fixture slot
+`pinConnectionBang` seats the pin from `this._connections[0]`
+(`connection-pool.ts:748`) where Rails uses
+`connection_lease&.connection || checkout` (`connection_pool.rb:326`). With more
+than one connection in the pool those need not be the same connection.
+
+So the question is now very narrow, and both cheap explanations are dead:
+
+**An `INSERT ... ON CONFLICT DO NOTHING RETURNING id` executes on the test's own
+connection, allocates a rowid, returns no row, and persists nothing — while the
+id it allocated is unoccupied and no uniqueness constraint can be violated.**
+
+The next datum to capture is the statement itself: the exact SQL text as
+executed, its bind values, and the driver's reported changes/rowcount (not just
+the RETURNING payload) — plus whether re-running the identical insert in place
+succeeds, which separates a transient condition from a deterministic one.
 
 Local reproduction has failed at every scale tried: 200 back-to-back cycles, the
 file alone, the whole `relation/` directory, a 70-file PostgreSQL slice (1,397
