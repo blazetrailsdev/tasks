@@ -2,7 +2,7 @@
 title: "CLAUDE.md zero-import-slot inventory omits arel/src/node-slots.ts"
 status: draft
 updated: 2026-08-27
-rfc: "0023-surfaced-deviations"
+rfc: "0124-arel-surfaced-deviations"
 cluster: followup
 packages: ["arel"]
 deps: []

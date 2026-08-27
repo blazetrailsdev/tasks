@@ -2,7 +2,7 @@
 title: "arel: 12 parameter names and Table#name writability drift from Rails"
 status: draft
 updated: 2026-08-27
-rfc: "0023-surfaced-deviations"
+rfc: "0124-arel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["arel"]
 deps: []
