@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md zero-import-slot inventory omits arel/src/node-slots.ts"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: followup
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: 7125
 claim: "2026-08-27T16:40:07Z"
 assignee: "arel-trails-only-tests-in-rails-named-files"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "arel: 300 TS-only tests live inside Rails-named test files; one Rails-named body is weaker than Rails"
-status: claimed
+status: done
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: test-placement
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 7125
 claim: "2026-08-27T16:40:07Z"
 assignee: "arel-trails-only-tests-in-rails-named-files"
 blocked-by: null
