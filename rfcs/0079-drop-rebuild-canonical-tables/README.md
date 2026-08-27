@@ -44,7 +44,10 @@ plain ban on dropping canonical tables outside the helper's own file.
 `scanInbound` arm at `:109-128`, `bulkInboundFkHost` at `:192`), so every
 `test-helpers/…` path in the stories below reads `support/…` today.
 
-**26 call sites across 23 files** (down from the 2026-07-26 count of 32/23).
+**26 call sites across 22 files**, measured mechanically on `origin/main` at
+`f5d2641f6` (2026-08-26) — see the correction note below; the earlier
+"26 across 23" was off by one on the site count. Down from the 2026-07-26
+count of 32/23.
 Production-helper callers: `support/setup-second-pool.ts` — **2** sites (`:81`,
 `:105`), not 3. Self-coverage that dies with the helper:
 `support/canonical-table-rebuild.test.ts`,
@@ -127,7 +130,7 @@ lanes confirms it**, and group (A) is the real remaining work.
 | 2     | `dirty.trails.test.ts:21`                                                                                            | topics                                                                                                                                             | B          | None found; inherits `dirty.test.ts`'s shield rationale                                                                                                                                         | Delete                                                                                                                                                                                     |
 | 3     | `bind-parameter.test.ts:89`                                                                                          | topics, authors, author_addresses, posts                                                                                                           | B          | Comment names `coders/json.test.ts`'s `SerializedTopic` — **extinct**                                                                                                                           | Delete                                                                                                                                                                                     |
 | 4     | `primary-keys.test.ts:32`                                                                                            | topics, subscribers, movies, dashboards, non_primary_keys, developers, developers_projects, cpk_books, countries                                   | B          | No mutator found for any of the 9 tables                                                                                                                                                        | Delete                                                                                                                                                                                     |
-| 5     | ~~`validations/uniqueness-validation.trails.test.ts:99`~~                                                            | topics                                                                                                                                             | A          | Self: the suite added `topics_direct_index` to canonical `topics` after rebuilding                                                                                                              | **LANDED — PR #7109 (`f5d2641f6`), 2026-08-26.** Moved onto `Subscriber`/`subscribers` and deleted the `topics` rebuild. Call-site count is now **25**.                                    |
+| 5     | ~~`validations/uniqueness-validation.trails.test.ts:99`~~                                                            | topics                                                                                                                                             | A          | Self: the suite added `topics_direct_index` to canonical `topics` after rebuilding                                                                                                              | **LANDED — PR #7109 (`f5d2641f6`), 2026-08-26.** Moved onto `Subscriber`/`subscribers` and deleted the `topics` rebuild. Call-site count is now **26** (see the count correction below).   |
 | 6     | `dirty.test.ts:124`                                                                                                  | people, topics, pirates, parrots, aircraft, numeric_data                                                                                           | B          | Comment names `callbacks.test.ts`, `clone.test.ts`, `reflection.test.ts` — **all extinct**                                                                                                      | Delete; keep the `loadSchema` warm-up, which is independent                                                                                                                                |
 | 7     | `locking.test.ts:70`                                                                                                 | people, references, legacy_things, string_key_objects, ships, lock_without_defaults(+\_cust), treasures, peoples_treasures, cars, wheels, bulbs, … | B          | Comment names `autosave-association.test.ts`'s `people: { name, first_name }` — **extinct**                                                                                                     | Delete                                                                                                                                                                                     |
 | 8     | `locking.test.ts:677`                                                                                                | people, legacy_things, personal_legacy_things, lock_without_defaults(+\_cust)                                                                      | B          | Same as #7; second `describe`, same rationale                                                                                                                                                   | Delete                                                                                                                                                                                     |
@@ -149,6 +152,29 @@ lanes confirms it**, and group (A) is the real remaining work.
 | 24    | `adapters/mysql2/mysql2-adapter.trails.test.ts:244`                                                                  | subscribers                                                                                                                                        | B          | No mutator; the comment says the suite "does not bootstrap the canonical schema" and lays the table on purpose                                                                                  | Converge onto `fixtures(["subscribers"])`                                                                                                                                                  |
 | 25    | `adapters/abstract-mysql-adapter/schema.test.ts:16` (via `restoreCanonicalTables`, called at `:25` with `["posts"]`) | posts                                                                                                                                              | **A**      | Self: `:71` `force`-creates a bespoke `posts`, `:99` drops it; `:202`/`:228` do the same to `topics` (unrestored — `topics` is not in the `afterAll` list)                                      | Move both onto bespoke names; note the `topics` drop is an **unattributed gap** the `afterAll` does not cover                                                                              |
 | 26–27 | `support/setup-second-pool.ts:81`, `:105`                                                                            | colleges, courses, professors, courses_professors                                                                                                  | **A**      | Provisioning, not a shield: `:81` lays the arunit2 schema on a cold second database; `:105` re-lays it per boot so sibling rows cannot reach `College.count`                                    | Per `retire-setup-second-pool-rebuilds`: lay the second pool through `loadCanonicalSchema` + fixtures provisioning                                                                         |
+
+### Count correction
+
+The "26 call sites across 23 files" baseline above was off by one on the site
+count, and this inventory inherited it. Counting call EXPRESSIONS mechanically
+(excluding the helper's own declaration in
+`support/canonical-table-rebuild.ts:248` and its two self-coverage files,
+`support/canonical-table-rebuild.trails.test.ts` (4 sites) and
+`support/canonical-table-rebuild-bulk-inbound-fk.trails.test.ts` (2 sites)):
+
+|                          | Sites  | Files  |
+| ------------------------ | ------ | ------ |
+| Before PR #7109          | 27     | 23     |
+| After PR #7109 (current) | **26** | **22** |
+
+The per-call-site table above is correct as written — it has 27 rows for the
+pre-#7109 tree (rows 1–25, plus row "26–27" covering the two
+`setup-second-pool.ts` sites). Only the prose count was wrong. The frozen
+manifest `eslint/rebuild-canonical-tables-callers.json` is keyed to the
+post-#7109 measurement of **26 sites across 22 files**.
+
+Note also that the two self-coverage files are `*.trails.test.ts`, not
+`*.test.ts` as the baseline section spells them.
 
 ### Genuinely unattributable
 

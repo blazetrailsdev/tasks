@@ -25,8 +25,9 @@ caller count can only grow — and it has: three new sites appeared after this
 story was written (`migration/exclusion-constraint.test.ts:34`,
 `migration/rename-table.test.ts:44`, `migration/unique-constraint.test.ts:26`),
 which is the concrete case for landing this before the burndown. Freeze the
-current caller list (RFC README baseline, re-verified 2026-08-09: 26 sites
-across 23 files) in a checked-in manifest and fail lint when a file outside it calls
+current caller list (RFC README baseline; measured mechanically against
+`origin/main` at `f5d2641f6`: 26 sites across 22 files) in a checked-in
+manifest and fail lint when a file outside it calls
 `rebuildCanonicalTables` — new suites must use `fixtures({ ... })` or fix their
 contamination source instead. The list only shrinks as burndown stories land.
 
@@ -40,7 +41,10 @@ _required_ by `require-canonical-rebuild` to add the call. The mandate is the
 growth mechanism, exactly as the story argues.
 
 Baseline for the frozen manifest is the 26-site table in the RFC README
-inventory (23 files, current line numbers as of `07c7924f1`).
+inventory: **26 sites across 22 files**, measured against `origin/main` at
+`f5d2641f6`. The earlier "26 across 23" conflated the pre- and post-#7109
+trees — it was 27/23 before #7109 removed the uniqueness-suite site, and 26/22
+after. See the count-correction note in the RFC README.
 
 ## Acceptance criteria
 
