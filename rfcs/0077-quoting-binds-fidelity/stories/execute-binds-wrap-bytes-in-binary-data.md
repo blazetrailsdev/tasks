@@ -1,6 +1,6 @@
 ---
 title: "Wrap raw execute() byte binds so type_cast needs no byte-view arm"
-status: claimed
+status: in-progress
 updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
+pr: 7121
 claim: "2026-08-27T14:06:48Z"
 assignee: "mysql2-raw-execute-preparable-is-a-bind-count-approximation"
 blocked-by: null
