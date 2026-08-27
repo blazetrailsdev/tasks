@@ -87,6 +87,49 @@ repeated runs (alone, and with the whole `packages/activerecord/src/relation`
 directory), and a bare re-run of the same commit with no code change was fully
 green.
 
+## Root cause (mechanism proven 2026-08-27)
+
+The instrumentation from trails#7106 fired on its first CI run, on PostgreSQL
+and MariaDB simultaneously (run 33026062066, both shard 1/2). PostgreSQL:
+
+```
+  iteration:        0 (sent "::Alpha")
+  returning:        []
+  openTransactions: 1
+  topics rows:      [[1,"seed",null],[2,"::Alpha",null]]
+```
+
+`returning: []` plus the absent row means **the INSERT wrote nothing** — the read
+was never at fault. `insert_all` emits `ON CONFLICT DO NOTHING` (Rails-faithful:
+`insert_all` is `on_duplicate: :skip`), and the only unique index on `topics` is
+`topics_pkey` on `id`, so the skipped insert is a PRIMARY KEY collision: the
+sequence handed out an id the table already holds.
+
+Reproduced exactly, locally on PostgreSQL, by forcing the sequence behind
+(`setval('topics_id_seq', 1, false)`) after the test's two `create`s — output is
+byte-for-byte identical to the CI diagnostic above, including the `topics rows`
+dump. In a healthy run the sequence traces `(1,false)` → creates take 1 and 2 →
+`(2,true)` → `insert_all` takes 3.
+
+MariaDB shows the same skipped write with its own idiom: `returning: [[4]]` while
+`topics rows` is `[[3,"seed",null],[4,"::Alpha",null]]` — id 4 is the `create`
+row, i.e. `LAST_INSERT_ID()` echoing the previous insert rather than a new row.
+
+So the remaining question is narrowed to one thing: **what leaves the PK sequence
+behind the table's max id mid-test.** The fixture loader caps it
+(`fixtures.ts:710` → `resetPkSequence`, Rails' `reset_pk_sequence!`,
+`fixtures.rb:688-690`) with `setval(seq, GREATEST(COALESCE(MAX(id),0),1),
+COALESCE(MAX(id),0) <> 0)`, which on a committed-empty table sets "next nextval
+= 1". That is correct at load time, so for the failure the cap has to be landing
+*after* the test's own `create`s — i.e. a fixture load running while another
+test is mid-flight against the same database. Worth checking the per-worker DB
+slot isolation first (`test-setup-worker-db.ts` advisory-lock slots): two workers
+sharing one slot DB would produce exactly this, and would also explain why it
+only ever appears in full/sharded suite runs and never in a single file.
+
+Note this makes it NOT a rare flake in sharded runs: it hit two lanes in one run
+at iteration 0.
+
 ## Tracking
 
 Instrumentation for this story landed separately in **trails#7106**
