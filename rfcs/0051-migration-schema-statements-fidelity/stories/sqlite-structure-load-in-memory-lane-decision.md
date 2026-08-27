@@ -77,6 +77,28 @@ drifted into:
 Option 1 is the one the original blocker leaned toward. It is a scope and
 product call, not a port — which is why this is its own story.
 
+## Decision
+
+**Option 1.** `structureLoad` is Rails' three-liner
+(`sqlite_database_tasks.rb:60-63`) unconditionally; `inMemoryStructureLoad` and
+the `:memory:` branch are deleted. The `:memory:` lane gets Rails' behaviour: the
+child `sqlite3` opens its own throwaway in-memory database, applies the script
+to that, and exits, so `db schema:load --format=sql` is not a meaningful
+operation against a `:memory:` config — in trails as it would be in Rails.
+
+Option 2 was rejected because it ratifies a trails-only adapter path in a
+three-line ported body, and CLAUDE.md's "converge, never ratify" rule makes the
+lane itself the thing that would have to be argued. Option 3 was rejected as
+out of proportion: `sqlite3_mem` is a first-class CI lane and dropping it from
+the CLI surface is a far larger change than this gap warrants.
+
+The reason is recorded at the call site on `structureLoad`, and pinned by
+`sqlite-database-tasks.trails.test.ts` — "leaves the live in-memory connection
+untouched, as Rails' child process does". The dump half is unaffected:
+`structureDump` keeps its `VACUUM INTO` materialisation, and its in-memory
+tests now lay their schema through the live connection rather than seeding
+through `structureLoad`.
+
 ## Acceptance criteria
 
 - [ ] One of the options above is chosen, with the reason recorded in the
