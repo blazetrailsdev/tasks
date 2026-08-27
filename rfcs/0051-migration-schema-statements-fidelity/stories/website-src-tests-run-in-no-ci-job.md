@@ -60,6 +60,10 @@ the CI job or the alias, which are infrastructure outside its five stories.
 - [ ] `packages/website/src/**/*.test.ts` runs in some CI job, or the decision
       not to run it is recorded where the exclusion lives rather than being
       implicit in three separate configs.
-- [ ] Re-enabling the `Website` job (dropping the `false &&`) is either done or
-      superseded by a narrower job that runs the unit tests without the slow
-      SvelteKit + typedoc + VitePress build.
+- [ ] ~~Re-enabling the `Website` job (dropping the `false &&`) is either done
+      or superseded by a narrower job that runs the unit tests without the slow
+      SvelteKit + typedoc + VitePress build.~~ **Withdrawn.** A narrower
+      `Website Tests` job was built and reviewed on PR #7138, then dropped on
+      the maintainer's direction: the website is to stay out of CI entirely,
+      tests included. The `false &&` therefore stays, and the criterion above
+      is discharged by recording the decision rather than by adding a job.
