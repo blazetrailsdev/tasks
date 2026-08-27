@@ -29,8 +29,8 @@ neither chain. Rails' `attributes_test.rb` model spells
 Still mixed into `Model` in `packages/activemodel/src/model.ts`:
 
 - the `extend(Model, { decorateAttributes, attributeTypes, typeForAttribute,
-  _defaultAttributes, pendingAttributeModifications, resetDefaultAttributesBang,
-  resolveTypeName, hookAttributeType })` block — `ActiveModel::AttributeRegistration`
+_defaultAttributes, pendingAttributeModifications, resetDefaultAttributesBang,
+resolveTypeName, hookAttributeType })` block — `ActiveModel::AttributeRegistration`
 - `extend(Model, AttributeMethods.ClassMethods)` +
   `include(Model, AttributeMethods.InstanceMethods)`
 - `extend(Model, AttributesClassMethods)`, `extend(Model, { defineMethodAttribute })`,
@@ -68,7 +68,7 @@ the `attributeMethod*` / `defineAttributeMethod*` family.
   `_resurrectAttributeMethods`. TS constructors cannot be chained by `include()`
   the way Ruby's `super` chains `initialize`, and `Base` cannot set
   `this._attributes` before its own `super(attrs)` call. `packages/activemodel/
-  src/attributes.ts:236-240` already has the in-repo precedent for the
+src/attributes.ts:236-240` already has the in-repo precedent for the
   workaround (`ctor._defaultAttributes ? ... : new AttributeSet()`): the presence
   of the class half the module installs IS the dispatch Ruby gets from method
   lookup. Decide and justify that at the call site.
