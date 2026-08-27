@@ -54,8 +54,13 @@ three edits again.
 - MySQL's keeps only what is genuinely MySQL — Rails has no
   `AbstractMysqlAdapter#quoted_date` at all; the microsecond bound belongs in
   the formatter it shares, not in a parallel branch table.
-- SQLite3's override stays a pass-through but stops re-declaring the parameter
-  union, taking the abstract `TemporalDateLike` instead.
+- SQLite3's goes away entirely. Rails' `SQLite3::Quoting` declares no
+  `quoted_date` at all (it overrides only `quoted_time`, sqlite3/quoting.rb:74),
+  and once `AbstractMysqlAdapter`'s is gone the "give the inherited dispatch a
+  receiver-local method to land on" reason its `@noRailsEquivalent CONVERGEABLE`
+  cited is disproved — `AbstractAdapter#quotedDate` is that receiver. Deleting
+  it is strictly more converged than keeping a pass-through that re-declares
+  the parameter union.
 
 ## Acceptance criteria
 
