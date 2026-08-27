@@ -70,7 +70,6 @@ current docblock protects is preserved exactly. Read it via
 `ts.getLeadingCommentRanges` and keep the existing empty-reason and
 truncated-prose hard errors.
 
-
 ## Acceptance criteria
 
 - [ ] A file with no import declarations can carry a file-level
