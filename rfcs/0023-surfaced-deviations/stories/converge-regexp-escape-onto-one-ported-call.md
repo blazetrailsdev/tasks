@@ -26,14 +26,14 @@ That surfaced seven PRE-EXISTING divergences: Ruby bodies calling
 the call-set gate scores the Rails call as omitted. All seven were baselined by
 #7166 with a shared reason; the rows are the debt.
 
-| baseline row | Ruby call site | TS spelling |
-| --- | --- | --- |
-| `activesupport/cache.json` `key_matcher` | `cache.rb:1027` | `escapeRegExp` (`cache/store.ts:173`) |
-| `activesupport/inflector.json` `const_regexp` | `inflector/methods.rb:360` | `regexpEscape` (`inflector.ts:386`) |
-| `activesupport/number-helper/number-to-rounded-converter.json` `format_number` | `number_helper/number_to_rounded_converter.rb` | `escapeRegExp` (`number-to-rounded-converter.ts:63`) |
-| `activesupport/parameter-filter.json` `compile_filters!` / `precompile_filters` | `parameter_filter.rb` | `escapeRegexp` (`parameter-filter.ts:261`) |
-| `activesupport/testing/deprecation.json` `assert_deprecated` | `testing/deprecation.rb:40` | `escapeRegExp` (`testing/deprecation.ts:38`) |
-| `activesupport/transliterate.json` `parameterize` | `inflector/transliterate.rb:135` | inline `.replace(/[.*+?^${}()|[\]\\\-#\s]/g, "\\$&")` (`transliterate.ts:75`) |
+| baseline row                                                                    | Ruby call site                                 | TS spelling                                          |
+| ------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------- |
+| `activesupport/cache.json` `key_matcher`                                        | `cache.rb:1027`                                | `escapeRegExp` (`cache/store.ts:173`)                |
+| `activesupport/inflector.json` `const_regexp`                                   | `inflector/methods.rb:360`                     | `regexpEscape` (`inflector.ts:386`)                  |
+| `activesupport/number-helper/number-to-rounded-converter.json` `format_number`  | `number_helper/number_to_rounded_converter.rb` | `escapeRegExp` (`number-to-rounded-converter.ts:63`) |
+| `activesupport/parameter-filter.json` `compile_filters!` / `precompile_filters` | `parameter_filter.rb`                          | `escapeRegexp` (`parameter-filter.ts:261`)           |
+| `activesupport/testing/deprecation.json` `assert_deprecated`                    | `testing/deprecation.rb:40`                    | `escapeRegExp` (`testing/deprecation.ts:38`)         |
+| `activesupport/transliterate.json` `parameterize`                               | `inflector/transliterate.rb:135`               | inline `.replace(/[.\*+?^${}()                       | [\]\\\-#\s]/g, "\\$&")` (`transliterate.ts:75`) |
 
 Each site is a real, correct escape — the divergence is that four file-local
 helpers and one inline replace stand where Ruby has one core call, so no ported
