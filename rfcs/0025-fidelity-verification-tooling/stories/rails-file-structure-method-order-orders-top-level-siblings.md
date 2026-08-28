@@ -1,6 +1,6 @@
 ---
 title: "rails-file-structure-method-order-orders-top-level-siblings"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null

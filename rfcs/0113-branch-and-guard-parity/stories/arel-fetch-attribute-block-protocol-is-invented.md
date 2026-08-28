@@ -1,7 +1,7 @@
 ---
 title: "Arel fetchAttribute's boolean-returning block protocol is a trails invention"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-28
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T11:42:16Z"
+assignee: "adapter-name-getter-conflates-rails-adapter-name-with-type-registry-key"
 blocked-by: null
 closed-reason: null
 ---

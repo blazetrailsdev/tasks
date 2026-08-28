@@ -1,7 +1,7 @@
 ---
 title: "adapterName conflates Rails' ADAPTER_NAME with the type-registry key"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-28
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T11:42:16Z"
+assignee: "adapter-name-getter-conflates-rails-adapter-name-with-type-registry-key"
 blocked-by: null
 closed-reason: null
 ---

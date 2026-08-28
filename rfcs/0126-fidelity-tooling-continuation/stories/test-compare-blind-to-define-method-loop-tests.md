@@ -1,6 +1,6 @@
 ---
 title: "test-compare-blind-to-define-method-loop-tests"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

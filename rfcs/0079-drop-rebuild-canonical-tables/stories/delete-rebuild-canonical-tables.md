@@ -1,6 +1,6 @@
 ---
 title: "Delete rebuildCanonicalTables and its FK-scan machinery once callers hit zero"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -18,9 +18,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7149
+claim: "2026-08-28T11:35:08Z"
+assignee: "delete-rebuild-canonical-tables"
 blocked-by: null
 closed-reason: null
 ---

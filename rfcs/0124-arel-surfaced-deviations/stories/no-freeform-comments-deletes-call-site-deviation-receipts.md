@@ -1,6 +1,6 @@
 ---
 title: "no-freeform-comments drops the story id off CONVERGEABLE receipts"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T11:31:08Z"
+assignee: "arel-dot-test-drops-define-method-cases-and-namespaced-labels"
 blocked-by: null
 closed-reason: null
 ---

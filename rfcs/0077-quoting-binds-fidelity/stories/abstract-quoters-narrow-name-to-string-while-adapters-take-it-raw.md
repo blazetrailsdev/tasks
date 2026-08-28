@@ -1,6 +1,6 @@
 ---
 title: "Abstract quoteTableName/quoteColumnName narrow name to string while the adapters take it raw"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7152
+claim: "2026-08-28T11:40:17Z"
+assignee: "abstract-quote-default-expression-has-non-rails-undefined-and-proc-arms"
 blocked-by: null
 closed-reason: null
 ---

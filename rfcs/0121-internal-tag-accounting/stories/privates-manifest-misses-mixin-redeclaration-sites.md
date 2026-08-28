@@ -1,7 +1,7 @@
 ---
 title: "rails-private-methods.json misses mixin re-declaration sites, forcing @noRailsEquivalent receipts on Rails-private members"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7150
+claim: "2026-08-28T11:37:09Z"
+assignee: "privates-manifest-misses-mixin-redeclaration-sites"
 blocked-by: null
 closed-reason: null
 ---
