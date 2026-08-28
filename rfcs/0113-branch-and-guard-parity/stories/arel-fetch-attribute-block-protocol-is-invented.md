@@ -1,5 +1,5 @@
 ---
-title: "Arel fetchAttribute's boolean-returning block protocol is a trails invention"
+title: "Type Arel fetchAttribute's block protocol explicitly (the protocol itself is Rails')"
 status: claimed
 updated: 2026-08-28
 rfc: "0113-branch-and-guard-parity"
@@ -41,14 +41,44 @@ that forgets to return `true` silently halts traversal after the first
 attribute — a latent bug for any multi-child `Nary` / `HomogeneousIn`
 predicate.
 
+## The audit result (2026-08-28) — the premise above is wrong
+
+The first acceptance criterion was the audit, and the audit disproves the
+Context. The boolean protocol is load-bearing AND it is Rails', not a trails
+invention:
+
+- `nary.rb:22` is
+  `children.any? && children.all? { |child| child.fetch_attribute(&block) }`.
+  `all?` tests what the block returns, so a Ruby block that returns a falsy
+  value stops the traversal exactly as trails' `false` does. The Context cites
+  `nary.rb:21` — the `def` line — and reads the body as a plain `each`.
+- Two Rails callers use `fetch_attribute`'s own return value directly:
+  `join_association.rb:61`
+  (`!Arel.fetch_attribute(node) { |attr| attr.relation.name == table.name }`)
+  and `where_clause.rb:181`
+  (`... || Arel.fetch_attribute(node) { |attr| attrs.include?(attr) || ... }`).
+
+So there is no convention to remove and no deviation to receipt. What was real
+is the second half of the finding: the contract was invisible in
+`(attr: Node) => unknown` returning `unknown`.
+
 ## Acceptance criteria
 
-- Audit whether the boolean protocol is load-bearing or whether the node-level
-  `fetchAttribute` ports can carry Rails' semantics directly (traverse all
-  children; let the caller accumulate), removing the convention.
-- If the protocol stays, type it explicitly (`=> boolean`, not `=> unknown`)
-  across `Arel.fetchAttribute`, the node implementations, and every caller, and
-  document it once at the `Node#fetchAttribute` declaration site.
+- ~~Audit whether the boolean protocol is load-bearing~~ — done above; it is,
+  and it is Rails'.
+- Type the protocol explicitly (`=> boolean`, not `=> unknown`) across
+  `Arel.fetchAttribute`, the node implementations, and every caller.
+- ~~Document it once at the `Node#fetchAttribute` declaration site.~~ Dropped,
+  for two independent reasons: there is no deviation left to document, and
+  since 2026-08-27 the repo forbids the note. `blazetrails/no-freeform-comments`
+  (`eslint/no-freeform-comments.mjs`) deletes English comments *and* Rails
+  citations — its header retires `Mirrors:` lines and `.rb:LINE` references by
+  name — keeping only `@internal` / `@noRailsEquivalent` / `@missingRailsCall` /
+  `@missingRailsArgs` / `@empty` / `@deprecated` and their permanence token.
+  A `@noRailsEquivalent` receipt is not the substitute: `Node#fetchAttribute`
+  HAS a Rails counterpart (`node.rb:155`), so the tag never flags and
+  `extra-surface.ts` scores it STALE. The rule's own rationale is that the
+  signature carries it, and the explicit `=> boolean` now does.
 - No behaviour change: `where-clause`, `merging`, `or`, `and`, `where-chain`,
   and `join-dependency` suites stay green.
 
