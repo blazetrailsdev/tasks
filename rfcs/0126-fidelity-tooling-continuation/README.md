@@ -14,7 +14,7 @@ clusters:
   - api-compare
   - lint
 related-rfcs:
-  - "0000-fidelity-tooling-signals-and-hygiene"
+  - "0127-fidelity-tooling-signals-and-hygiene"
   - "0025-fidelity-verification-tooling"
   - "0108-call-gate-false-positives"
   - "0110-parity-skip-register-correctness"
@@ -38,7 +38,7 @@ schedule against (86 stories, 10,235 est-LOC, no story-level priority).
 It was therefore split a second time, on **priority rather than subject**.
 This RFC keeps the higher-priority half: every story whose deliverable changes
 a verdict the tooling emits on today's `main`. The sibling
-`0000-fidelity-tooling-signals-and-hygiene` takes the rest.
+`0127-fidelity-tooling-signals-and-hygiene` takes the rest.
 
 Carried at the split: **44 stories, 5,415 est-LOC** (2 unsized), including the
 one in-flight story (`test-compare-blind-to-define-method-loop-tests`).
@@ -90,7 +90,7 @@ Package-agnostic: the fix lives in `scripts/api-compare/**`,
 ## Out of scope (and where it lives instead)
 
 - **Tooling work that changes no current verdict** —
-  `0000-fidelity-tooling-signals-and-hygiene`: new measurement dimensions
+  `0127-fidelity-tooling-signals-and-hygiene`: new measurement dimensions
   (visibility gate, raise-message signal, parameter-name parity, arity
   ratchet, `Mirrors:` integrity, the `detect-*` family, the deliberate-gate
   marker), guards against latent failures (manifest truncation and staleness,
@@ -160,6 +160,6 @@ re-derived before work starts:
   `postponed` with 32 open stories (port-convergence, infra, and slices owned by
   RFCs 0099/0110/0120/0121).
 - 2026-08-27: split on priority. 42 stories / 4,820 est-LOC moved to
-  `0000-fidelity-tooling-signals-and-hygiene` (new dimensions, guards, ratchet
+  `0127-fidelity-tooling-signals-and-hygiene` (new dimensions, guards, ratchet
   mechanics, hygiene, ergonomics); 44 / 5,415 kept here. Charter narrowed to
   measurement correctness; `priority` raised 2 → 1.
