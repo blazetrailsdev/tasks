@@ -1,6 +1,6 @@
 ---
 title: "Give Read / Query / TimeZoneConversion / Serialization real include() calls at their attribute_methods.rb seats"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7170
+claim: "2026-08-28T16:41:27Z"
+assignee: "give-the-remaining-attribute-methods-seats-real-include-calls"
 blocked-by: null
 closed-reason: null
 ---

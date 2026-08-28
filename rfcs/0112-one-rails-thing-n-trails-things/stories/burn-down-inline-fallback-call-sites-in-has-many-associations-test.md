@@ -1,6 +1,6 @@
 ---
 title: "The ~40 inline-options findHasManyTarget call sites still name undeclared associations"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
