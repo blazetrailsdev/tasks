@@ -30,14 +30,14 @@ packages. Their `0/0/0` rows in `assertion-mismatch-mark.json` were therefore
 0 by construction, never a measurement. #7159 wrote each up to its first real
 measurement (`--write` only lowers, so this could not be a reseed):
 
-| package | assertionCount | kind | value |
-| --- | --- | --- | --- |
-| abstractcontroller | 5 | 18 | 0 |
-| actioncontroller | 286 | 473 | 76 |
-| actiondispatch | 364 | 519 | 74 |
-| actionview | 41 | 96 | 2 |
-| rack | 372 | 471 | 61 |
-| trailties | 46 | 72 | 4 |
+| package            | assertionCount | kind | value |
+| ------------------ | -------------- | ---- | ----- |
+| abstractcontroller | 5              | 18   | 0     |
+| actioncontroller   | 286            | 473  | 76    |
+| actiondispatch     | 364            | 519  | 74    |
+| actionview         | 41             | 96   | 2     |
+| rack               | 372            | 471  | 61    |
+| trailties          | 46             | 72   | 4     |
 
 None of it is new debt — the ports diverged from their Rails counterparts before
 the measurement existed. This story owns retiring it. The mark is only-shrink
