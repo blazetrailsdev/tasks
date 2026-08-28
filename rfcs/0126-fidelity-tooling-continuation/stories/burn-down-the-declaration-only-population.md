@@ -24,18 +24,18 @@ name whose only declaration in the mirrored file is a bodyless signature — an
 to a function declared elsewhere. The new `DeclOnly` column measures the
 population for the first time: **275 methods**, spread as
 
-| package | declaration-only |
-| --- | --- |
-| activerecord | 202 |
-| activemodel | 14 |
-| abstractcontroller | 14 |
-| activesupport | 12 |
-| actiondispatch | 9 |
-| trailties | 7 |
-| arel | 5 |
-| rack | 5 |
-| actioncontroller | 4 |
-| actionview | 3 |
+| package            | declaration-only |
+| ------------------ | ---------------- |
+| activerecord       | 202              |
+| activemodel        | 14               |
+| abstractcontroller | 14               |
+| activesupport      | 12               |
+| actiondispatch     | 9                |
+| trailties          | 7                |
+| arel               | 5                |
+| rack               | 5                |
+| actioncontroller   | 4                |
+| actionview         | 3                |
 
 The two largest single files:
 
