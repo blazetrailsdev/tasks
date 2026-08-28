@@ -1,6 +1,6 @@
 ---
 title: "Type Arel fetchAttribute's block protocol explicitly (the protocol itself is Rails')"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

@@ -1,7 +1,7 @@
 ---
 title: "perform_query's prepare: is still optional outside mysql2"
 status: in-progress
-updated: 2026-08-28T13:54:01.606241379Z
+updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []

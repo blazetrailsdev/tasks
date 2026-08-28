@@ -1,6 +1,6 @@
 ---
 title: "indexParts emits a bare column where Rails always inspects the array"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T14:07:26Z"
+assignee: "db-schema-load-sql-reports-success-for-memory-noop"
 blocked-by: null
 closed-reason: null
 ---

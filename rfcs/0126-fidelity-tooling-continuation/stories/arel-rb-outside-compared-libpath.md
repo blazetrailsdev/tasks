@@ -1,7 +1,7 @@
 ---
 title: "activerecord/lib/arel.rb is outside every package's libPath, so Arel.sql/star score as extra surface"
-status: done
-updated: 2026-08-28T13:35:08.71710846Z
+status: in-progress
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 7155
+pr: 7159
 claim: "2026-08-28T13:31:22Z"
 assignee: "parity-api-credits-declaration-only-and-inlined-module-bodies"
 blocked-by: null

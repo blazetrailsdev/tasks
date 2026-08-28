@@ -1,6 +1,6 @@
 ---
 title: "Assertion metrics are computed for activerecord only, so the other eleven marks are unmeasured zeros"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 2
-pr: null
+pr: 7159
 claim: "2026-08-28T13:31:22Z"
 assignee: "parity-api-credits-declaration-only-and-inlined-module-bodies"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "compare.ts should credit operators with a pinned TS spelling as matched methods"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 2
-pr: null
+pr: 7159
 claim: "2026-08-28T13:31:22Z"
 assignee: "parity-api-credits-declaration-only-and-inlined-module-bodies"
 blocked-by: null
