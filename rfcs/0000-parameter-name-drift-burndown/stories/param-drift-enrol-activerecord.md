@@ -1,5 +1,5 @@
 ---
-title: "Enrol activerecord in the parameter-name gate once its five slices land"
+title: "Enrol activerecord in the parameter-name gate once its six slices land"
 status: draft
 updated: 2026-08-28
 rfc: "0000-parameter-name-drift-burndown"

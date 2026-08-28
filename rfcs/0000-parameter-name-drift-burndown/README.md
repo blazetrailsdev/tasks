@@ -116,7 +116,7 @@ initial_table → joins, joins → aliases, aliases → quoter` is one dropped
 ## Rollout
 
 Each story converges one package or one slice of `activerecord` (302 rows, split
-five ways so no PR exceeds the LOC ceiling), verifying with
+six ways so no PR exceeds the LOC ceiling), verifying with
 
 ```bash
 API_COMPARE_FORCE=1 pnpm parity:api --package <pkg> --params
@@ -127,7 +127,7 @@ API_COMPARE_FORCE=1 pnpm parity:api --package <pkg> --params
 at `{ total: 0, byFile: {} }`. That is the only sanctioned way the set grows —
 never to make a red run green, exactly as RFC 0117's extra-surface mark and RFC
 0121's `@internal` enrollment set say. `activerecord` enrols in its own story
-once all five of its slices land.
+once all six of its slices land.
 
 Story order is by rows-per-file density, not package size: the packages whose
 rows cluster in a handful of files (globalid, abstractcontroller, actionview)
