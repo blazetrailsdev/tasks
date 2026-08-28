@@ -1,13 +1,13 @@
 ---
-title: "dispatch-reload-schema-from-cache-through-the-ar-override"
+title: "Dispatch reload_schema_from_cache through the ActiveRecord::Attributes override"
 status: draft
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
