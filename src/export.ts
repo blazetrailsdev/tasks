@@ -17,7 +17,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { parse as parseYaml } from "yaml";
 import { join } from "node:path";
-import { Story } from "./models/index.js";
+import { Rfc, Story } from "./models/index.js";
 import { resolveTasksDir } from "./db-path.js";
 import { editFrontmatter } from "./frontmatter.js";
 
@@ -124,6 +124,35 @@ export async function exportState(
     changed.push(s.file_path);
   }
 
+  // RFCs: `status`, and only the closed direction.
+  //
+  // An RFC's status is otherwise markdown-owned — it moves draft → active
+  // through PR review, and ingest carries the file's value into the DB. The
+  // auto-close (see rfc-close.ts) is the one write that starts in the DB, so
+  // it is the one thing export has to carry back out; without this the RFC
+  // reads `active` on github.com forever while every view of the DB says
+  // closed. Nothing else about an RFC is written here, so the two directions
+  // still cannot fight over the same field in both directions at once.
+  const rfcsChanged: string[] = [];
+  for (const r of await Rfc.closed().toArray()) {
+    if (!r.file_path) continue;
+    const abs = join(tasksDir, r.file_path);
+    if (!existsSync(abs)) continue;
+    const text = readFileSync(abs, "utf8");
+    const fmText = text.match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? "";
+    const current = (parseYaml(fmText) ?? {}) as Record<string, unknown>;
+    if (String(current.status ?? "") === "closed") continue;
+    // `updated` goes with it, matching what scripts/auto-close.mjs wrote: the
+    // DB stamped `updated_on` when it closed, and leaving the file's older
+    // date behind means the next ingest reads it back and the two disagree
+    // forever.
+    const edits: Record<string, string> = { status: render("status", "closed") };
+    if (r.updated_on) edits.updated = render("updated", r.updated_on);
+    editFrontmatter(abs, edits);
+    rfcsChanged.push(r.file_path);
+  }
+  changed.push(...rfcsChanged);
+
   if (changed.length === 0 || !doCommit) {
     return { changed, committed: false, sha: null };
   }
@@ -157,12 +186,11 @@ export async function exportState(
   if (!git(["diff", "--cached", "--name-only"])) {
     return { changed, committed: false, sha: null };
   }
-  git([
-    "commit",
-    "-q",
-    "-m",
-    `state: sync ${changed.length} stor${changed.length === 1 ? "y" : "ies"}`,
-  ]);
+  const storiesChanged = changed.length - rfcsChanged.length;
+  const parts = [`${storiesChanged} stor${storiesChanged === 1 ? "y" : "ies"}`];
+  if (rfcsChanged.length)
+    parts.push(`${rfcsChanged.length} rfc${rfcsChanged.length === 1 ? "" : "s"}`);
+  git(["commit", "-q", "-m", `state: sync ${parts.join(", ")}`]);
   pushMain(git, "export");
   return { changed, committed: true, sha: git(["rev-parse", "HEAD"]) };
 }

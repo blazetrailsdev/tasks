@@ -39,6 +39,7 @@ import {
   StoryRfcDep,
 } from "./models/index.js";
 import { currentBranch, headSha, mainWorktree } from "./db-path.js";
+import { closeRfcIfComplete } from "./rfc-close.js";
 // @ts-expect-error — ported JS module, no type declarations
 import { extractStoryPaths, RFC_DIR_RE } from "../scripts/lib.mjs";
 
@@ -282,7 +283,9 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
         // of the generic one synthesized here.
         const existing = await Story.findBy({ id: storyId });
         if (existing && existing.status !== "closed") {
-          await Story.where({ id: storyId }).updateAll({
+          // Saved, not `updateAll`: this is a landing like any other, and the
+          // RFC auto-close hangs off the model callback (see rfc-close.ts).
+          await existing.update({
             status: "closed",
             closed_reason:
               existing.closed_reason ??
@@ -377,6 +380,13 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
     // through PR review (draft → active → closed), not through a CLI verb, so
     // the file is its source of truth and ingest must carry it across.
     await Rfc.where({ id: rfcId }).updateAll({ ...fields, status: str(fm.status) ?? "draft" });
+    // Carrying the file's status across can put an auto-closed RFC back to
+    // `active` — on a full re-scan the file has not been exported yet, so it
+    // still says active while the DB has already closed it. Re-applying the
+    // rule right here is what makes that self-healing: if the backlog really
+    // is finished, it closes again; if a human reopened the RFC by adding
+    // work, there is an open story and it stays active.
+    await closeRfcIfComplete(rfcId);
   } else {
     await Rfc.create({
       id: rfcId,

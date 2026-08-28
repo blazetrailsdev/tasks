@@ -16,6 +16,12 @@
  *   2  benign conflict — "someone else holds it, pick another story"
  *   3  lost claim race
  *   1  real error
+ *
+ * SAVES, NOT `updateAll`, for anything that lands a story. `Relation#updateAll`
+ * is one statement and skips callbacks, so a verb written that way is invisible
+ * to the model callbacks in rfc-close.ts and the RFC never auto-closes. The one
+ * deliberate exception is `claim` below, where the conditional update's
+ * affected-row count IS the race resolution.
  */
 import { Base } from "@blazetrails/activerecord";
 import { Event, Story, type StoryStatus } from "./models/index.js";
@@ -154,7 +160,7 @@ export async function markTracking(
         console.log(`${status} ${s.id} (already, skipped)`);
         continue;
       }
-      await Story.where({ id: s.id }).updateAll({ status, pr, updated_on: today() });
+      await s.update({ status, pr, updated_on: today() });
       await record(status, s.id, { pr });
       console.log(`${status} ${s.id}${pr === null ? "" : ` #${pr}`}`);
     }
@@ -236,11 +242,7 @@ export async function close(id: string, reason: string): Promise<void> {
   await Base.transaction(async () => {
     const [s] = await findAll([id]);
     requireFound([id], s ? [s] : []);
-    await Story.where({ id }).updateAll({
-      status: "closed",
-      closed_reason: reason,
-      updated_on: today(),
-    });
+    await s.update({ status: "closed", closed_reason: reason, updated_on: today() });
     await record("close", id, { detail: { note: reason } });
     console.log(`closed ${id}`);
   });
@@ -269,7 +271,7 @@ export async function statusSet(id: string, status: StoryStatus): Promise<void> 
       fields.assignee = null;
       fields.claim_at = null;
     }
-    await Story.where({ id }).updateAll(fields);
+    await s.update(fields);
     await record("status", id, { detail: { arg: status } });
     console.log(`status ${status}: ${id}`);
   });
