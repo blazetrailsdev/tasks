@@ -1,6 +1,6 @@
 ---
 title: "Nothing verifies that a @noRailsEquivalent citation points at the method it names"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null

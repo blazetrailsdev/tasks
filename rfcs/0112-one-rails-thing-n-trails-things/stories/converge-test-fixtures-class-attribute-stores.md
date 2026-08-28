@@ -1,7 +1,7 @@
 ---
 title: "converge-test-fixtures-class-attribute-stores"
 status: closed
-updated: 2026-08-26
+updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -11,7 +11,7 @@ est-loc: null
 pr: null
 claim: "2026-08-25T17:14:37Z"
 assignee: "converge-test-fixtures-class-attribute-stores"
-blocked-by: "Premise does not hold: none of test_fixtures.rb:31-38's eight class_attributes exist in trails. packages/activerecord/src/test-fixtures.ts is the bespoke fixtures() DSL, not a port of ActiveRecord::TestFixtures, and a repo-wide grep finds no fixtureTableNames / fixtureClassNames / fixtureSets / useTransactionalTests / preLoadedFixtures / lockThreads / fixturePaths store, nor any hasOwnProperty copy-on-first-write helper for them. There is nothing to converge; declaring the eight would be new surface (a port of the module), which is a different story."
+blocked-by: null
 closed-reason: "Premise falsified for RFC 0112 — there is no split store to converge. 0112 is about one Rails thing existing as N trails things; none of test_fixtures.rb:30-37's eight class_attributes (fixture_paths, fixture_table_names, fixture_class_names, use_transactional_tests, use_instantiated_fixtures, pre_loaded_fixtures, lock_threads, fixture_sets) exists in trails at all. packages/activerecord/src/test-fixtures.ts contains zero classAttribute() calls; useTransactionalTests appears only as a per-call option on the fixtures() DSL (:569, :580), not as a class-level store, and there is no copy-on-first-write helper for any of them. So the work is porting absent surface, not deduplicating duplicated surface — filed as port-test-fixtures-class-attribute-declarations (0023-surfaced-deviations)."
 ---
 

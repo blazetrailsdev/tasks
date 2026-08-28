@@ -1,6 +1,6 @@
 ---
 title: "arel-plus-and-taken-score-moved-against-their-own-rb"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null

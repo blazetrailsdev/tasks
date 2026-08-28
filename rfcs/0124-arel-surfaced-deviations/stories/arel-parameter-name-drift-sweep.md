@@ -1,7 +1,7 @@
 ---
 title: "arel: 12 parameter names and Table#name writability drift from Rails"
 status: done
-updated: 2026-08-27
+updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["arel"]
@@ -13,7 +13,7 @@ pr: 7123
 claim: "2026-08-27T15:57:56Z"
 assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null
-closed-reason: "Story file removed from the repo (rfcs/0023-surfaced-deviations/stories/arel-parameter-name-drift-sweep.md). Closed by ingest; no reason was recorded — use `tasks close` to state one."
+closed-reason: null
 ---
 
 ## Context
