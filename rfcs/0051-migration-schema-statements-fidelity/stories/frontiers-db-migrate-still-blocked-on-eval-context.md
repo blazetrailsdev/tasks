@@ -1,6 +1,6 @@
 ---
 title: "db:migrate / db:rollback in the frontiers CLI are still blocked on the eval context"
-status: draft
+status: closed
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "not worried about website for now"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "register-the-query-suffix-pattern-at-its-included-do"
-status: draft
+status: closed
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "shipped in #7170 — the Query include's included do now registers the ? pattern"
 ---
 
 ## Context

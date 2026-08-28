@@ -1,7 +1,7 @@
 ---
 title: "activerecord extra-surface total mark is stale above the measurement"
 status: draft
-updated: 2026-08-28
+updated: 2026-08-24
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

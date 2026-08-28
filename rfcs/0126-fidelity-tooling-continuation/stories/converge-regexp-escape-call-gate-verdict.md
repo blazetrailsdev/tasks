@@ -1,6 +1,6 @@
 ---
 title: "Every faithful Regexp.escape port reads as a dropped call: one shared helper, one alias"
-status: draft
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 210
 priority: 2
-pr: null
+pr: 7169
 claim: null
 assignee: null
 blocked-by: null

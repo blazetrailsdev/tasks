@@ -1,6 +1,6 @@
 ---
 title: "Port Read's `alias :attribute :_read_attribute` so the empty-suffix pattern has a proxy target"
-status: draft
+status: claimed
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T17:49:38Z"
+assignee: "assert-boolean-attribute-tests-through-the-generated-predicate"
 blocked-by: null
 closed-reason: null
 ---

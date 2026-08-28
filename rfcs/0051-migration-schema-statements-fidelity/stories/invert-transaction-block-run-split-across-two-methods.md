@@ -1,6 +1,6 @@
 ---
 title: "invert_transaction's block run lives in the transaction forwarder, splitting one Rails method in two"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T17:46:26Z"
+assignee: "invert-transaction-block-run-split-across-two-methods"
 blocked-by: null
 closed-reason: null
 ---
@@ -104,5 +104,5 @@ but the overwhelming majority are `Reflection#inverse_of`
 - [ ] The block's inverses still land before the `transaction` command, and
       `invertible-migration.test.ts` > `migrate revert transaction` and
       `command-recorder.test.ts` > `invert transaction with irreversible inside
-  is irreversible` both still pass.
+is irreversible` both still pass.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.

@@ -1,16 +1,16 @@
 ---
 title: "parity:api excludes same-file-nested Rails classes from allRuby entirely"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 160
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7173
+claim: "2026-08-28T17:19:53Z"
+assignee: "compare-drops-nested-class-methods-from-coverage-denominator"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "enroll-arel-in-unbacked-internal-receipt-lint"
-status: blocked
-updated: 2026-08-26
+status: done
+updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7155
 claim: "2026-08-26T13:07:06Z"
 assignee: "burn-down-internal-tags-unbacked-after-entity-keying"
-blocked-by: "arel is gated at novel 0 / total 62 by parity:api:extra:gate, only-shrink on both. temporal-tag.ts cannot be burnt down without raising total: receipts re-enter its two functions as Allowed, which makes the synthesized module name TemporalTag a NEW novel name, and a file-level receipt cannot cover it because fileLevelNoRailsEquivalentReason reads the tag only from a block above the IMPORTS (extract-ts-api.ts:1853, documented design) and temporal-tag.ts has none. Separately, un-tagging the public SqlLiteral#plus (sql_literal.rb:25) and SelectManager#taken (select_manager.rb:22) pushes total 62 -> 64 as MOVED names, which converge by fixing the ruby-file mapping. Needs either a file-level-receipt mechanism for import-less files or the mapping fix first. See PR #7084."
+blocked-by: null
 closed-reason: null
 ---
 
