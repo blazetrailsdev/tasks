@@ -71,7 +71,7 @@ is the second half of the finding: the contract was invisible in
 - ~~Document it once at the `Node#fetchAttribute` declaration site.~~ Dropped,
   for two independent reasons: there is no deviation left to document, and
   since 2026-08-27 the repo forbids the note. `blazetrails/no-freeform-comments`
-  (`eslint/no-freeform-comments.mjs`) deletes English comments *and* Rails
+  (`eslint/no-freeform-comments.mjs`) deletes English comments _and_ Rails
   citations — its header retires `Mirrors:` lines and `.rb:LINE` references by
   name — keeping only `@internal` / `@noRailsEquivalent` / `@missingRailsCall` /
   `@missingRailsArgs` / `@empty` / `@deprecated` and their permanence token.
