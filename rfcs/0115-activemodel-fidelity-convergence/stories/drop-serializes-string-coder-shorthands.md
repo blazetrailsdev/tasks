@@ -51,7 +51,7 @@ then has nothing left to resolve and `serialize`'s body reads its kwargs
 directly, branch for branch with :183-205.
 
 `HashObject`'s fate is the open half: JS has no distinct hash class, so
-`type: Hash` needs *some* stand-in. Decide whether it stays as a receipted
+`type: Hash` needs _some_ stand-in. Decide whether it stays as a receipted
 permanent (the `instanceof` / `new` contract `Coders::ColumnSerializer` needs)
 or whether the two call sites that want it can pass `Object` and let
 `ColumnSerializer` do the array check itself.
