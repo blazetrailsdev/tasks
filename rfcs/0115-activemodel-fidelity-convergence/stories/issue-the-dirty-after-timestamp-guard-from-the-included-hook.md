@@ -1,6 +1,6 @@
 ---
 title: "Issue AttributeMethods::Dirty's 'cannot include Dirty after Timestamp' guard from its included hook"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

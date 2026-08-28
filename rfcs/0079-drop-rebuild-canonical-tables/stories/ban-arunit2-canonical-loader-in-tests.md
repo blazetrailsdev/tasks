@@ -1,6 +1,6 @@
 ---
 title: "ban-arunit2-canonical-loader-in-tests"
-status: ready
+status: done
 updated: 2026-08-27
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7137
+claim: "2026-08-27T23:27:03Z"
+assignee: "ban-arunit2-canonical-loader-in-tests"
 blocked-by: null
 closed-reason: null
 ---

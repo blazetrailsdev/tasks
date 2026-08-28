@@ -1,6 +1,6 @@
 ---
 title: "arel: Bind collector invents a retryable default and an optional block param"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7140
+claim: "2026-08-27T23:29:14Z"
+assignee: "alias-predication-as-return-widened-to-node"
 blocked-by: null
 closed-reason: null
 ---

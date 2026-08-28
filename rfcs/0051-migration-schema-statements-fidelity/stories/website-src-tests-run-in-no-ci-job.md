@@ -1,6 +1,6 @@
 ---
 title: "website-src-tests-run-in-no-ci-job"
-status: ready
+status: in-progress
 updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 60
-pr: null
-claim: null
-assignee: null
+pr: 7138
+claim: "2026-08-27T23:27:23Z"
+assignee: "website-src-tests-run-in-no-ci-job"
 blocked-by: null
 closed-reason: null
 ---

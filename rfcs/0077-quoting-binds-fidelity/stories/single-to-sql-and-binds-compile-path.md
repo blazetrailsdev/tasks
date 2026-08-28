@@ -1,7 +1,7 @@
 ---
 title: "One to_sql_and_binds compile path; retire exceedsBindParamsLimit and compileInlined"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7139
+claim: "2026-08-27T23:28:19Z"
+assignee: "single-to-sql-and-binds-compile-path"
 blocked-by: null
 closed-reason: null
 ---

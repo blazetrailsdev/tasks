@@ -1,7 +1,7 @@
 ---
 title: "MySQL quote_string uses a static JS escaper instead of the driver's connection-aware escape (unsafe under NO_BACKSLASH_ESCAPES and multi-byte charsets)"
-status: ready
-updated: 2026-08-25
+status: blocked
+updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 160
 priority: 8
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-27T23:28:19Z"
+assignee: "single-to-sql-and-binds-compile-path"
+blocked-by: "Rails' quote_string delegates to the driver's mysql_real_escape_string (abstract_mysql_adapter.rb:694-699), which is connection-aware. trails' driver is node mysql2, which is pure JS and has NO real_escape_string binding: Connection#escape (mysql2/lib/base/connection.js:562) delegates to sql-escaper's static CHARS_ESCAPE_MAP (sql-escaper@1.3.3/lib/index.js:15-25), which is no more connection-aware than trails' own mysql/quoting.ts#quoteString, ALSO adds surrounding quotes and ALSO escapes \\b and \\t (which mysql_real_escape_string does not) — so routing through it is a behavioural REGRESSION, not a convergence. The story's option 2 (cache charset + NO_BACKSLASH_ESCAPES at configureConnection and honour them in the sync escaper) remains available but the story body forbids closing on it without maintainer sign-off. Needs that sign-off, or a native escape binding."
 closed-reason: null
 ---
 

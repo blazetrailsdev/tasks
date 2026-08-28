@@ -1,6 +1,6 @@
 ---
 title: "Decide what db schema:load --format=sql does for a :memory: config"
-status: in-progress
+status: done
 updated: 2026-08-27
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

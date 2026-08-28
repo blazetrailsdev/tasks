@@ -1,6 +1,6 @@
 ---
 title: "Drop the _defaultAttributes presence guard in Attributes' constructor"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

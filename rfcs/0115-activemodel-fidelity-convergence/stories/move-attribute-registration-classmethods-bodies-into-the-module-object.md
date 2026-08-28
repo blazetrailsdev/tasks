@@ -1,6 +1,6 @@
 ---
 title: "move-attribute-registration-classmethods-bodies-into-the-module-object"
-status: draft
+status: ready
 updated: 2026-08-27
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
