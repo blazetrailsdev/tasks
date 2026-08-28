@@ -1,6 +1,6 @@
 ---
 title: "to_sql_and_binds' retry duplicates unprepared_statement instead of calling the adapter's port"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

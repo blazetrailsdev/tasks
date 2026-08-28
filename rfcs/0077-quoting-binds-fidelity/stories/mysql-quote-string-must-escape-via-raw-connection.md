@@ -1,6 +1,6 @@
 ---
 title: "MySQL quote_string uses a static JS escaper instead of the driver's connection-aware escape (unsafe under NO_BACKSLASH_ESCAPES and multi-byte charsets)"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

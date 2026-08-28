@@ -1,6 +1,6 @@
 ---
 title: "PG quote_default_expression has no super arm and an expanded array branch"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

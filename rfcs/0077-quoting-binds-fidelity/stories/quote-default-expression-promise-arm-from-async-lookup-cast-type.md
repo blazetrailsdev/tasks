@@ -1,6 +1,6 @@
 ---
 title: "quote_default_expression carries a Promise arm because PG's lookup_cast_type is async"
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7189
 claim: null
 assignee: null
 blocked-by: null
