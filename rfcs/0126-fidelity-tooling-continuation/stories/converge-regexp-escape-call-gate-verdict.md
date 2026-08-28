@@ -1,14 +1,14 @@
 ---
-title: "converge-regexp-escape-call-gate-verdict"
+title: "Every faithful Regexp.escape port reads as a dropped call: one shared helper, one alias"
 status: draft
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
-packages: []
+packages: ["activesupport", "actionpack", "actionview"]
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 210
+priority: 2
 pr: null
 claim: null
 assignee: null
