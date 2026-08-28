@@ -48,7 +48,7 @@ resolves story ids cited in code against the tasks DB, and
 
 ## Acceptance criteria
 
-- `classifyReason` (or a companion) validates the *whole* reason against the
+- `classifyReason` (or a companion) validates the _whole_ reason against the
   two shapes: `PERMANENT` followed by nothing (trailing punctuation/whitespace
   tolerated), or `CONVERGEABLE` followed by exactly one story id that exists
   in the tasks DB and is not `done`/`closed`. Anything else — a bare
