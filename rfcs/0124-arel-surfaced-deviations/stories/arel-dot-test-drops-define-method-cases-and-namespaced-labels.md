@@ -1,6 +1,6 @@
 ---
 title: "arel-dot-test-drops-define-method-cases-and-namespaced-labels"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

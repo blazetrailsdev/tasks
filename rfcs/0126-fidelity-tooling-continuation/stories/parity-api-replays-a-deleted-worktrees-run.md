@@ -1,6 +1,6 @@
 ---
 title: "parity:api can replay a deleted worktree's run, even under API_COMPARE_FORCE=1"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

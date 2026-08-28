@@ -1,7 +1,7 @@
 ---
 title: "to_sql_and_binds raises a TypeError where Rails' else arm never raises"
-status: ready
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-28T13:54:05.114244885Z
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7158
+claim: "2026-08-28T13:34:54Z"
+assignee: "perform-query-prepare-required-in-remaining-adapters"
 blocked-by: null
 closed-reason: null
 ---

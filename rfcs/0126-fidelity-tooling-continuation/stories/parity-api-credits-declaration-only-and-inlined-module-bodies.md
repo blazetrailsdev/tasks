@@ -1,6 +1,6 @@
 ---
 title: "parity-api-credits-declaration-only-and-inlined-module-bodies"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T13:31:22Z"
+assignee: "parity-api-credits-declaration-only-and-inlined-module-bodies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "lint: enroll a second package in the rails-test-name-parity ratchet"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

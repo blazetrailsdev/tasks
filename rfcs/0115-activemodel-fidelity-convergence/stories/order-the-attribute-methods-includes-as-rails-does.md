@@ -1,7 +1,7 @@
 ---
 title: "Include the attribute-methods submodules in attribute_methods.rb's order — PrimaryKey before Dirty"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7157
+claim: "2026-08-28T13:01:51Z"
+assignee: "move-attribute-registration-classmethods-bodies-into-the-module-object"
 blocked-by: null
 closed-reason: null
 ---

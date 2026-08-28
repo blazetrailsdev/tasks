@@ -1,6 +1,6 @@
 ---
 title: "arel-visitors-registerdispatch-table-replaces-rails-lazy-class-name-derivation"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

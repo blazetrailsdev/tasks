@@ -1,7 +1,7 @@
 ---
 title: "trim-active-model-model-to-api-and-access"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T13:55:21Z"
+assignee: "seed-ar-attributes-before-init-internals"
 blocked-by: null
 closed-reason: null
 ---
