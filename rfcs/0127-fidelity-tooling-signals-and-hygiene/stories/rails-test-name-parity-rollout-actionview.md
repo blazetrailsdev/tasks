@@ -1,6 +1,6 @@
 ---
 title: "rails-test-name-parity-rollout-actionview"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

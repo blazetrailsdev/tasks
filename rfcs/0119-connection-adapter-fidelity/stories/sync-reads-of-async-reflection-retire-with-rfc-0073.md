@@ -1,6 +1,6 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

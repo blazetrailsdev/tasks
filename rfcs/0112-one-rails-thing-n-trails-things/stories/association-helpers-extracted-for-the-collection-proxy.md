@@ -1,6 +1,6 @@
 ---
 title: "association-helpers-extracted-for-the-collection-proxy"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

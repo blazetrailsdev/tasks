@@ -1,6 +1,6 @@
 ---
 title: "async-overrides-of-synchronous-rails-adapter-methods"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

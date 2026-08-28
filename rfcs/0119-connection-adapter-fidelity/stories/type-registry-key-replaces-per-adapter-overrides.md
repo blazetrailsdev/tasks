@@ -1,6 +1,6 @@
 ---
 title: "type-registry-key-replaces-per-adapter-overrides"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "gate: a CONVERGEABLE receipt's story id is never checked against the tasks DB"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

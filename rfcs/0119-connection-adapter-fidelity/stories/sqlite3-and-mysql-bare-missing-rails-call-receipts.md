@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

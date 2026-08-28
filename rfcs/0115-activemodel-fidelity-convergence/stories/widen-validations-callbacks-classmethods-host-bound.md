@@ -1,6 +1,6 @@
 ---
 title: "Widen before_validation/after_validation off the typeof Model bound"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T16:04:58Z"
+assignee: "converge-activemodel-callbacks-extended-hook-to-append-features-order"
 blocked-by: null
 closed-reason: null
 ---

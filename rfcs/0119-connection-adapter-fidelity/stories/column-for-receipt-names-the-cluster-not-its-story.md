@@ -1,6 +1,6 @@
 ---
 title: "column_for's receipt names the cluster story, not mysql-mismatched-fk-details-omits-primary-key-column"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
