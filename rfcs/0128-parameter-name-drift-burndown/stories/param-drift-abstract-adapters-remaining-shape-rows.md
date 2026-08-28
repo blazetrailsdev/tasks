@@ -1,14 +1,15 @@
 ---
-title: "param-drift-abstract-adapters-remaining-shape-rows"
+title: "Parameter-name drift: the abstract-adapter rows that are a signature SHAPE, not a spelling"
 status: draft
 updated: 2026-08-28
 rfc: "0128-parameter-name-drift-burndown"
-cluster: null
-packages: []
+cluster: fidelity
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 180
+priority: 3
 pr: null
 claim: null
 assignee: null
