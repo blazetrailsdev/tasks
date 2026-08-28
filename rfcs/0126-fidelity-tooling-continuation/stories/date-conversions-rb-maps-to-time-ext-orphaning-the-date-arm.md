@@ -1,7 +1,7 @@
 ---
 title: "core_ext/date/conversions.rb maps to time-ext.ts, orphaning the Date-receiver conversions file"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

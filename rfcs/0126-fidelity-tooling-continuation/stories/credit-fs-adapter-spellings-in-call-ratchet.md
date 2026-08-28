@@ -1,7 +1,7 @@
 ---
 title: "Credit the fs-adapter's Node spellings as the File.exist?/stat/rename calls"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

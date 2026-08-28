@@ -1,7 +1,7 @@
 ---
 title: "Teach the Ruby extractor Struct.new, define_method and literal-array class_eval"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: ["activesupport"]

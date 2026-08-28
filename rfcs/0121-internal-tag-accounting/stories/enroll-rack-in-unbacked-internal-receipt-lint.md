@@ -1,6 +1,6 @@
 ---
 title: "Burn down rack's 18 unbacked @internal tags and enrol it in the receipt lint"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 7145
 claim: "2026-08-28T00:42:10Z"
 assignee: "enroll-rack-in-unbacked-internal-receipt-lint"
 blocked-by: null

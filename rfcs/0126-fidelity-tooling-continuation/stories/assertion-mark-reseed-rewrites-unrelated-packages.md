@@ -1,7 +1,7 @@
 ---
 title: "assertion-mismatch mark reseed silently ratchets packages the PR never touched"
-status: draft
-updated: 2026-08-06
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []

@@ -1,6 +1,6 @@
 ---
 title: "parity-api-compares-parameter-names-beside-arity"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

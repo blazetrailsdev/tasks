@@ -1,6 +1,6 @@
 ---
 title: "receipt-gates-reject-token-only-reasons"
-status: draft
+status: closed
 updated: 2026-08-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by receipt-gates-require-permanent-bare-or-convergeable-story: the wanted shape is bare PERMANENT / CONVERGEABLE <story-id>, not citations or word counts"
 ---
 
 ## Context

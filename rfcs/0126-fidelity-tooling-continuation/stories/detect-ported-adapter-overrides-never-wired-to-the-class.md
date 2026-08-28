@@ -1,7 +1,7 @@
 ---
 title: "A ported adapter override that is never exported/assigned is silently dead; nothing detects it"
-status: draft
-updated: 2026-08-10
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

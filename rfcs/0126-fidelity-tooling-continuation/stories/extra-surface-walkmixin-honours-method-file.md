@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: walkMixin ignores methodFile, widening a reopening file's allow-set"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

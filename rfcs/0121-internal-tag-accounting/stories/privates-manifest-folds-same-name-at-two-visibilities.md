@@ -1,6 +1,6 @@
 ---
 title: "A name private on one entity and public on another in one .rb folds to not-private, publishing Attributes#attribute"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 7145
 claim: "2026-08-28T00:42:10Z"
 assignee: "enroll-rack-in-unbacked-internal-receipt-lint"
 blocked-by: null

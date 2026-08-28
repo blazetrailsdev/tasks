@@ -1,7 +1,7 @@
 ---
 title: "Call-set extractor does not pair an AR method that overrides a same-named ActiveModel one"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

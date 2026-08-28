@@ -1,7 +1,7 @@
 ---
 title: "TS test extractor drops dynamically-named it() calls, hiding TS-only tests from the extra count"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

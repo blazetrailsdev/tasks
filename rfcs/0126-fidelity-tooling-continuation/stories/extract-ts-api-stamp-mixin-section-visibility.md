@@ -1,7 +1,7 @@
 ---
 title: "extract-ts-api: stamp visibility from defineModule sections"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: ["activerecord"]

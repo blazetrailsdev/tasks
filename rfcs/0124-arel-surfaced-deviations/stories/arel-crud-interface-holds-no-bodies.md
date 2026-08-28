@@ -1,6 +1,6 @@
 ---
 title: "arel-crud-interface-holds-no-bodies"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

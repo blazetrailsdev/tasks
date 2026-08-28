@@ -1,7 +1,7 @@
 ---
 title: "collection-reader-missing-reflection-raises-bare-error"
-status: in-progress
-updated: 2026-08-27
+status: done
+updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []

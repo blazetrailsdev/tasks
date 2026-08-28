@@ -1,7 +1,7 @@
 ---
 title: "Ruby raise Class, msg should pair with the TS throw new Class(msg)"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

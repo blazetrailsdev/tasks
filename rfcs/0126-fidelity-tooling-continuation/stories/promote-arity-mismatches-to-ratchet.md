@@ -1,7 +1,7 @@
 ---
 title: "Promote arity mismatches from advisory to an only-shrink ratchet"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []

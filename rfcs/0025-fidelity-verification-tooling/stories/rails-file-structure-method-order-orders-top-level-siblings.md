@@ -1,6 +1,6 @@
 ---
 title: "rails-file-structure-method-order-orders-top-level-siblings"
-status: draft
+status: claimed
 updated: 2026-08-28
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T01:45:27Z"
+assignee: "rails-file-structure-method-order-orders-top-level-siblings"
 blocked-by: null
 closed-reason: null
 ---

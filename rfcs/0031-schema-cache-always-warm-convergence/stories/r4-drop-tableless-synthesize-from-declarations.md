@@ -1,6 +1,6 @@
 ---
 title: "R4: drop the tableless synthesize-columnsHash-from-declarations fallback"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null

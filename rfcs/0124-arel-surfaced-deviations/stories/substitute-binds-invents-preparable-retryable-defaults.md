@@ -1,6 +1,6 @@
 ---
 title: "substitute-binds-invents-preparable-retryable-defaults"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

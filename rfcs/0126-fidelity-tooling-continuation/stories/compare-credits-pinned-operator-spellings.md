@@ -1,7 +1,7 @@
 ---
 title: "compare.ts should credit operators with a pinned TS spelling as matched methods"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

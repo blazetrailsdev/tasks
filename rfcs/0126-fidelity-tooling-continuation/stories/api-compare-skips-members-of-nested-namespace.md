@@ -1,7 +1,7 @@
 ---
 title: "api-compare misses members of a namespace nested in a namespace (Ruby module ClassMethods)"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Bodyless exported declarations outrank real bodies in call-parity pairing, silently retiring baselined rows"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []

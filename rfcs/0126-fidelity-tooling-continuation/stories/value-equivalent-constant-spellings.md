@@ -1,7 +1,7 @@
 ---
 title: "Value-equivalent constant spellings should not count as argument divergence"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
