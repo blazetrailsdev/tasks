@@ -1,6 +1,6 @@
 ---
 title: "LazilyDefineAttributes is a plain class, not Rails' lazy Module (no included/define_on/==)"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

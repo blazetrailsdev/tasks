@@ -1,6 +1,6 @@
 ---
 title: "Rehome store / store_accessor as class methods instead of modelClass-first free functions"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

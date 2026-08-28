@@ -1,6 +1,6 @@
 ---
 title: "Converge AttributeMethodsTest's first describe off makeTopic onto canonical topics fixtures"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

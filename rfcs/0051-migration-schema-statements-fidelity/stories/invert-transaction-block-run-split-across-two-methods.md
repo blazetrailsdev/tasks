@@ -1,6 +1,6 @@
 ---
 title: "invert_transaction's block run lives in the transaction forwarder, splitting one Rails method in two"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null

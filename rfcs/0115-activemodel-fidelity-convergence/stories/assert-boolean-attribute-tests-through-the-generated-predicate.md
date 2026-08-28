@@ -1,6 +1,6 @@
 ---
 title: "Assert the five boolean-attribute tests through the generated `approved?` predicate, restoring Rails' string-assignment arms"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

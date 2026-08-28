@@ -1,6 +1,6 @@
 ---
 title: "parity:api excludes same-file-nested Rails classes from allRuby entirely"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
