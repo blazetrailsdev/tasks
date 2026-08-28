@@ -6,6 +6,7 @@ rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
   - activerecord
+  - activemodel
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
@@ -54,6 +55,16 @@ a fourth variant — the two parameters are SWAPPED
 (`ignore_tables, pool` in Rails, `pool, ignoreTables` in the port), which is the
 one shape in this set that can be a live bug rather than a readability defect,
 since a positional caller passes them the wrong way round.
+
+Clearing the `with_raw_connection` rows needs `param-names.ts` to try the Ruby
+kwarg group collapsed into one options slot, the candidate form `arity.ts`
+already builds — otherwise a port following the settled trails kwargs idiom is
+charged a rename for every kwarg past the first. That collapse widens the
+aligned set, so it surfaces renames the check could not previously see, and one
+of them (`attribute_registration.rb#attribute`'s `type`, spelled `typeName`)
+lands in **activemodel**, a GATED package. A newly-gated row cannot be deferred
+to a sibling PR — it reds the PR that creates it — so converging it belongs to
+this story, which is why `packages:` carries activemodel.
 
 ## Acceptance criteria
 
