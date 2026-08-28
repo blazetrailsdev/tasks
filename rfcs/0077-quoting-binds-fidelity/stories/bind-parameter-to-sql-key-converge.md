@@ -1,5 +1,5 @@
 ---
-title: "bind-parameter-to-sql-key-converge"
+title: "bind_parameter_test to_sql_key is replaced by a notification-capture helper"
 status: draft
 updated: 2026-08-27
 rfc: "0077-quoting-binds-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "to-sql-and-binds-else-arm-never-raises"
+title: "to_sql_and_binds raises a TypeError where Rails' else arm never raises"
 status: draft
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
