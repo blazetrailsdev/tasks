@@ -75,11 +75,11 @@ through `revert`, `replay` and `method_missing`, all already async and awaited
 
 The whole conversion lands in two test files, ~96 lines:
 
-| site | count |
-| --- | --- |
-| `command-recorder.test.ts` — `inverseOf` | 84 |
-| `command-recorder.test.ts` — `record` | 5 |
-| `invertible-migration.test.ts` — `record` | 7 |
+| site                                      | count |
+| ----------------------------------------- | ----- |
+| `command-recorder.test.ts` — `inverseOf`  | 84    |
+| `command-recorder.test.ts` — `record`     | 5     |
+| `invertible-migration.test.ts` — `record` | 7     |
 
 Each is an `await` on an existing expression, or a
 `expect(...).rejects.toThrow(IrreversibleMigration)` where the assertion is
@@ -104,5 +104,5 @@ but the overwhelming majority are `Reflection#inverse_of`
 - [ ] The block's inverses still land before the `transaction` command, and
       `invertible-migration.test.ts` > `migrate revert transaction` and
       `command-recorder.test.ts` > `invert transaction with irreversible inside
-      is irreversible` both still pass.
+    is irreversible` both still pass.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
