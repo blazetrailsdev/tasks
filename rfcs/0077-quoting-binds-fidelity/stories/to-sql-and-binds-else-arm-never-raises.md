@@ -1,6 +1,6 @@
 ---
 title: "to_sql_and_binds raises a TypeError where Rails' else arm never raises"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

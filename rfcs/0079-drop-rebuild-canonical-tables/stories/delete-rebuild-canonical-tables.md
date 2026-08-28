@@ -1,7 +1,7 @@
 ---
 title: "Delete rebuildCanonicalTables and its FK-scan machinery once callers hit zero"
-status: blocked
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0079-drop-rebuild-canonical-tables"
 cluster: null
 deps:
@@ -19,9 +19,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-08-27T18:43:45Z"
-assignee: "delete-rebuild-canonical-tables"
-blocked-by: "Capstone precondition still unmet on origin/main (re-verified 2026-08-27 refine): rebuildCanonicalTables has 2 live call sites, packages/activerecord/src/migration/exclusion-constraint.test.ts:34 (invoices) and migration/unique-constraint.test.ts:26 (sections), and eslint/rebuild-canonical-tables-callers.json still carries exactly those 2 rows. Both are owned by shield-removal-pg-constraint-suites, now flipped ready (priority 3). Unblock once that lands and the manifest is empty. Note: set-deps is not a CLI verb, so the deps list does not yet name shield-removal-pg-constraint-suites or ban-arunit2-canonical-loader-in-tests."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

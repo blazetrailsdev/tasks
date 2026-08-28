@@ -1,7 +1,7 @@
 ---
 title: "Abstract quoteTableName/quoteColumnName narrow name to string while the adapters take it raw"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
 packages: []

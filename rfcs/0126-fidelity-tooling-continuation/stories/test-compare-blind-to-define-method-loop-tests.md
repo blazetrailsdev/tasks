@@ -1,6 +1,6 @@
 ---
 title: "test-compare-blind-to-define-method-loop-tests"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7147
 claim: "2026-08-28T01:43:26Z"
 assignee: "test-compare-blind-to-define-method-loop-tests"
 blocked-by: null
