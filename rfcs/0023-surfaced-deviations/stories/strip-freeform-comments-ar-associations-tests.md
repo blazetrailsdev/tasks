@@ -1,7 +1,7 @@
 ---
 title: "strip-freeform-comments-ar-associations-tests"
-status: draft
-updated: 2026-08-23
+status: in-progress
+updated: 2026-08-28
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7186
 claim: null
 assignee: null
 blocked-by: null

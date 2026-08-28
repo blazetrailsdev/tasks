@@ -1,6 +1,6 @@
 ---
 title: "Call extractor reads Ruby named-capture locals as method calls, manufacturing unconvergeable baseline rows"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "strip-freeform-comments-ar-connection-adapters-toplevel-tests"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

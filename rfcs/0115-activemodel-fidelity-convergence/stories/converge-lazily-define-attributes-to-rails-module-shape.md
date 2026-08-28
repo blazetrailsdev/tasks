@@ -1,6 +1,6 @@
 ---
 title: "LazilyDefineAttributes is a plain class, not Rails' lazy Module (no included/define_on/==)"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T21:25:34Z"
+assignee: "rehome-store-and-store-accessor-as-class-methods"
 blocked-by: null
 closed-reason: null
 ---

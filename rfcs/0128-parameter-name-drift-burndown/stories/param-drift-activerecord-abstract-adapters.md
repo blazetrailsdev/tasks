@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: activerecord abstract connection adapters"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
