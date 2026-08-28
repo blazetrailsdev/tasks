@@ -66,3 +66,13 @@ does not mirror.
 - No behaviour change and no test renamed; `parity:api` methods and arity
   unmoved, `parity:api:calls` / `parity:api:calls:args` / `parity:api:extra:gate`
   no new row.
+
+## Also worth folding in
+
+Reviewer note on PR #7182 (non-blocking there, real here):
+`Table#foreign_key_exists?` and `Table#remove_check_constraint`
+(`schema_definitions.rb:920,938`) are `(*args, **options)` too — the same shape
+as `check_constraint_exists?` — but their TS wrappers keep a two-slot
+`(args?, options)` union rather than a true rest parameter. PR #7182 converted
+only `check_constraint_exists?`, because that was the row its gate reported;
+the other two read as consistent-looking drift and belong in this burndown.
