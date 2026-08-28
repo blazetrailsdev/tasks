@@ -1,7 +1,7 @@
 ---
 title: "Seed _default_attributes' columns inside with_connection instead of a best-effort connection probe"
 status: blocked
-updated: 2026-08-27
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Re-verified against origin/main 2026-08-27: still gated, not shippable alone. The blocking seam, 0123-blocked-convergence-holding/port-with-connection-acquisition-seam-for-the-arel-reader, is itself still blocked (ConnectionPool#withConnection remains async; wants its own RFC). Premise still stands, anchors refreshed: packages/activerecord/src/attributes.ts:93 still opens _defaultAttributes with the !isSchemaLoaded eager columnsHash() probe (story body says :94) and :118 still falls back through connectionPool.call(cacheHost).activeConnection (body says :121). Removing the value-type fallback without the seam regresses the no-permanent-checkout guarantee. Unblock when the seam story lands or a sync schema load exists."
+blocked-by: "Re-verified against origin/main 2026-08-28: blocker STILL LIVE, anchors refreshed (they drifted a long way). The blocking seam, 0123-blocked-convergence-holding/port-with-connection-acquisition-seam-for-the-arel-reader, is itself still blocked (PR #6928; ConnectionPool#withConnection remains async, wants its own RFC). Premise stands: packages/activerecord/src/attributes.ts:44 still opens _defaultAttributes with the !isSchemaLoaded eager columnsHash() probe (story body says :94, prior note said :93) and :63 still falls back through connectionPool.call(cacheHost).activeConnection (body says :121, prior note said :118). Removing the value-type fallback without the seam regresses the no-permanent-checkout guarantee. Not resolved by any ready story in this RFC. Unblock when the seam story lands or a sync schema load exists. Candidate for the 0123 blocked epic; the tasks CLI has no move-between-RFCs verb, so flagged for manual reparent."
 closed-reason: null
 ---
 

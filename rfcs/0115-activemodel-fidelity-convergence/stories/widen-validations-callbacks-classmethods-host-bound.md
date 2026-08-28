@@ -1,6 +1,6 @@
 ---
 title: "Widen before_validation/after_validation off the typeof Model bound"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

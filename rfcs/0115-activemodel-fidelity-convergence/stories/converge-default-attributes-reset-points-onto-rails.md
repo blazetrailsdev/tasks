@@ -1,7 +1,7 @@
 ---
 title: "Converge the _default_attributes reset points onto Rails' reload_schema_from_cache"
 status: blocked
-updated: 2026-08-27
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: 6962
 claim: "2026-08-24T01:24:28Z"
 assignee: "anchor-jsdoc-tag-recognition-to-line-start"
-blocked-by: "Re-verified against origin/main 2026-08-27: blocker still live, anchors refreshed. loadSchemaFromAdapter is still 'export async function' (packages/activerecord/src/model-schema.ts:1246 — previous :1253 anchor drifted); applyColumnsHash is now :1164 (previous :1172 drifted). So a caller can still force _defaultAttributes before the columns land and latch a memo built without them; Ruby cannot, because _default_attributes (attributes.rb:241-252) reads columns_hash through the SYNCHRONOUS load_schema (model_schema.rb:530-546). Removing the trails-only reset in applyColumnsHash was tried in PR #6962 and reddened SQLite, PG and MariaDB; withholding the memo until isSchemaLoaded instead drops eager defineAttribute writes. Converging still needs a sync schema load or a recorded replay of the eager writes."
+blocked-by: "Re-verified against origin/main 2026-08-28: blocker STILL LIVE; anchors drifted hard and were refreshed. loadSchemaFromAdapter is still 'export async function' at packages/activerecord/src/model-schema.ts:1034 (note previously said :1246); applyColumnsHash is now :952 (previously :1164). So a caller can still force _defaultAttributes before the columns land and latch a memo built without them; Ruby cannot, because _default_attributes (attributes.rb:241-252) reads columns_hash through the SYNCHRONOUS load_schema (model_schema.rb:530-546). Removing the trails-only reset in applyColumnsHash was tried in PR #6962 and reddened SQLite, PG and MariaDB; withholding the memo until isSchemaLoaded instead drops eager defineAttribute writes. Converging still needs a sync schema load or a recorded replay of the eager writes — neither is delivered by any ready story in this RFC. NOT resolved by the sibling ready story install-ar-reset-default-attributes-override-on-base (priority 12), which owns WHAT an AR reset does, not WHERE the memo is dropped. Candidate for the 0123-blocked-convergence-holding epic; the tasks CLI has no move-between-RFCs verb, so flagged for manual reparent."
 closed-reason: null
 ---
 

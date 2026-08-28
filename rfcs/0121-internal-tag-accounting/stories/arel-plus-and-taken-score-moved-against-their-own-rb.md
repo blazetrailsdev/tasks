@@ -1,6 +1,6 @@
 ---
 title: "arel-plus-and-taken-score-moved-against-their-own-rb"
-status: done
+status: in-progress
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7155
+pr: 7165
 claim: "2026-08-28T15:18:31Z"
 assignee: "arel-plus-and-taken-score-moved-against-their-own-rb"
 blocked-by: null

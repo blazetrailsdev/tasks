@@ -1,6 +1,6 @@
 ---
 title: "The ~40 inline-options findHasManyTarget call sites still name undeclared associations"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 7167
 claim: "2026-08-28T15:22:55Z"
 assignee: "burn-down-inline-fallback-call-sites-in-has-many-associations-test"
 blocked-by: null

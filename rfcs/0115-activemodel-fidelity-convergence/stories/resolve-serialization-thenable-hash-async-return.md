@@ -1,7 +1,7 @@
 ---
 title: "Resolve serialization's thenableHash dual sync/async return"
 status: blocked
-updated: 2026-08-27
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: "api-compare"
 packages: ["activemodel"]
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-08-23T14:27:28Z"
 assignee: "resolve-serialization-thenable-hash-async-return"
-blocked-by: "Re-verified against origin/main 2026-08-27: blocker still live. The dep 0023-surfaced-deviations/serializable-hash-async-return-boundary is still an UNCLAIMED DRAFT (no PR), so the cross-package async-boundary decision has not been made. thenableHash / asJsonThenable are both still present (4 hits in packages/activemodel/src/serialization.ts, 3 in packages/activemodel/src/serializers/json.ts), so removing them still requires serializableHash and asJson to return Promise unconditionally and still has to answer JSON.stringify's synchronous toJSON contract. Note the sibling story specify-serializable-hash-async-return-boundary (this RFC, PR #6813) is the survey/decision-scoping story and is done — it did NOT settle the boundary; the 0023 story is the one that must."
+blocked-by: "Re-verified against origin/main 2026-08-28: blocker STILL LIVE. The dep 0023-surfaced-deviations/serializable-hash-async-return-boundary is confirmed still an UNCLAIMED DRAFT with no PR, so the cross-package async-boundary decision has not been made. thenableHash / asJsonThenable are both still present (4 hits in packages/activemodel/src/serialization.ts, 2 in packages/activemodel/src/serializers/json.ts — the prior note said 3 there, count drifted), so removing them still requires serializableHash and asJson to return Promise unconditionally and still has to answer JSON.stringify's synchronous toJSON contract. The sibling specify-serializable-hash-async-return-boundary (this RFC, PR #6813) is the survey/decision-scoping story and is done — it did NOT settle the boundary; the 0023 story is the one that must. Not resolved by any ready story in this RFC. Candidate for the 0123 blocked epic; the tasks CLI has no move-between-RFCs verb, so flagged for manual reparent."
 closed-reason: null
 ---
 

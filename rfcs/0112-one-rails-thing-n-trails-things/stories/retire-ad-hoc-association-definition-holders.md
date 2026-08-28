@@ -1,6 +1,6 @@
 ---
 title: "retire-ad-hoc-association-definition-holders"
-status: claimed
+status: ready
 updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-28T15:22:55Z"
-assignee: "burn-down-inline-fallback-call-sites-in-has-many-associations-test"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

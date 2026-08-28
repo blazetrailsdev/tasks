@@ -1,6 +1,6 @@
 ---
 title: "Install ActiveRecord's reset_default_attributes override on Base and chain reload_schema_from_cache"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

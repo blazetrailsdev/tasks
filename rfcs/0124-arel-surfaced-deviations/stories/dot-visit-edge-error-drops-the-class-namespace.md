@@ -1,6 +1,6 @@
 ---
 title: "Dot#visitEdge's NoMethodError analogue names the bare class, not Arel::Nodes::X"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

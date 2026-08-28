@@ -1,6 +1,6 @@
 ---
 title: "CheckPending has no FileUpdateChecker watcher"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps:
   - port-activesupport-file-update-checker
 deps-rfc: []
 est-loc: 180
-pr: null
+pr: 7166
 claim: "2026-08-28T15:18:13Z"
 assignee: "check-pending-has-no-file-update-checker-watcher"
 blocked-by: null
