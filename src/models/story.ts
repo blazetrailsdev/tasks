@@ -1,4 +1,5 @@
 import { Base } from "@blazetrails/activerecord";
+import { pinTimestampColumns } from "./timestamps.js";
 import type { AssociationProxy, Relation } from "@blazetrails/activerecord";
 import type { Rfc } from "./rfc.js";
 import type { StoryDep, StoryPackage, StoryPath, StoryRfcDep } from "./joins.js";
@@ -78,15 +79,7 @@ export class Story extends Base {
     // touch to the real timestamp column. (Assigning the resolved-columns
     // cache is the lever the library reads; the public static of the same name
     // is not consulted by its own internals.)
-    (
-      this as unknown as {
-        _timestampAttributesForCreateInModel?: string[];
-        _timestampAttributesForUpdateInModel?: string[];
-      }
-    )._timestampAttributesForCreateInModel = ["created_at", "updated_at"];
-    (
-      this as unknown as { _timestampAttributesForUpdateInModel?: string[] }
-    )._timestampAttributesForUpdateInModel = ["updated_at"];
+    pinTimestampColumns(this, { create: ["created_at", "updated_at"], update: ["updated_at"] });
 
     this.belongsTo("rfc", { foreignKey: "rfc_id" });
     this.hasMany("storyDeps", { foreignKey: "story_id", inverseOf: "story" });

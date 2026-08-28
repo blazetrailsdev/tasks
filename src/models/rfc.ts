@@ -1,4 +1,5 @@
 import { Base } from "@blazetrails/activerecord";
+import { pinTimestampColumns } from "./timestamps.js";
 import type { AssociationProxy, Relation } from "@blazetrails/activerecord";
 import type { Story } from "./story.js";
 
@@ -33,15 +34,7 @@ export class Rfc extends Base {
     // and `updated_on` are markdown's date-only `created:`/`updated:` fields;
     // `created_at`/`updated_at` are the real row timestamps (and NOT NULL), so
     // the touch has to keep those and let go of the other two.
-    (
-      this as unknown as {
-        _timestampAttributesForCreateInModel?: string[];
-        _timestampAttributesForUpdateInModel?: string[];
-      }
-    )._timestampAttributesForCreateInModel = ["created_at", "updated_at"];
-    (
-      this as unknown as { _timestampAttributesForUpdateInModel?: string[] }
-    )._timestampAttributesForUpdateInModel = ["updated_at"];
+    pinTimestampColumns(this, { create: ["created_at", "updated_at"], update: ["updated_at"] });
 
     this.hasMany("stories", { foreignKey: "rfc_id" });
     this.enum("status", {

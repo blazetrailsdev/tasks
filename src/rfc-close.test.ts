@@ -9,6 +9,7 @@ import { migrate } from "./migrator.js";
 import { Event, Rfc, Story } from "./models/index.js";
 import { block, close, markTracking, statusSet } from "./verbs.js";
 import { exportState } from "./export.js";
+import { buildIndex } from "./readmodel.js";
 import { mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -132,10 +133,46 @@ describe("date-only updated_on survives a record save", () => {
     expect(String(s!.updated_on)).toMatch(dateOnly);
   });
 
+  it("survives the library nilling its timestamp-column cache", async () => {
+    // reloadSchemaFromCache (model-schema.js:827) sets these to undefined
+    // whenever column information is loaded or reset. A plain static-block
+    // assignment is silently undone by that — which is exactly what happened
+    // in production twenty-six minutes after the first fix shipped, while this
+    // suite stayed green. Simulate the reset, then re-check.
+    (
+      Story as unknown as { _timestampAttributesForUpdateInModel?: string[] }
+    )._timestampAttributesForUpdateInModel = undefined;
+    (
+      Rfc as unknown as { _timestampAttributesForUpdateInModel?: string[] }
+    )._timestampAttributesForUpdateInModel = undefined;
+
+    const today = new Date().toISOString().slice(0, 10);
+    await Story.where({ id: "s1" }).updateAll({ updated_on: today });
+    await markTracking(["s1"], "done", 42);
+
+    expect(String((await Story.findBy({ id: "s1" }))!.updated_on)).toMatch(dateOnly);
+  });
+
   it("keeps an RFC's updated_on date-only when it auto-closes", async () => {
     await markTracking(["s1", "s2"], "done", 42);
     const rfc = await Rfc.findBy({ id: "0001-r" });
     expect(rfc!.status).toBe("closed");
     expect(String(rfc!.updated_on)).toMatch(dateOnly);
+  });
+});
+
+/**
+ * buildIndex runs on every read verb and after every mutation, so anything it
+ * throws on takes the whole CLI down for every user on the host — twice now,
+ * for the same reason. It must degrade instead.
+ */
+describe("buildIndex tolerates a malformed updated_on", () => {
+  it("does not take the whole index down for one bad row", async () => {
+    await Story.where({ id: "s1" }).updateAll({
+      updated_on: "2026-08-28T14:30:00.731400469Z",
+    });
+    const index = await buildIndex();
+    expect(index.stories.find((s) => s.id === "s1")).toBeTruthy();
+    expect(index.stories.find((s) => s.id === "s2")).toBeTruthy();
   });
 });

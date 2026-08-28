@@ -16,9 +16,21 @@ import { Event, Rfc, Story } from "./models/index.js";
 import { effectiveStoryStatus } from "../scripts/validate-lib.mjs";
 
 /** Frontmatter dates were parsed by js-yaml into Dates, so index.json carries
- * ISO midnight. Reproduce that exactly from the stored date-only string. */
+ * ISO midnight. Reproduce that exactly from the stored date-only string.
+ *
+ * Tolerates a value that carries a time component instead of being date-only.
+ * It should never be one — the models pin the timestamp touch off these
+ * columns (models/timestamps.ts) — but when it was, `new Date("<instant>T00:0
+ * 0:00.000Z")` threw RangeError, and because buildIndex runs on every read and
+ * after every mutation, ONE bad row took every verb down for everyone on the
+ * host with the bare message "error: Invalid time value". That blast radius is
+ * not worth defending a data-quality assertion: take the date part, and if it
+ * still will not parse, drop the field rather than the whole index. */
 function isoMidnight(d: string | null): string | null {
-  return d ? new Date(`${d}T00:00:00.000Z`).toISOString() : null;
+  if (!d) return null;
+  const day = d.slice(0, 10);
+  const at = new Date(`${day}T00:00:00.000Z`);
+  return Number.isNaN(at.getTime()) ? null : at.toISOString();
 }
 
 function parseJsonArray(v: string | null): string[] {
