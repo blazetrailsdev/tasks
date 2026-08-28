@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`scripts/stale-story-references.ts` checks that a story slug cited as *pending*
+`scripts/stale-story-references.ts` checks that a story slug cited as _pending_
 in a comment is not already `done`/`closed`. It does not check the **RFC or
 bucket name written next to the slug**, because it matches on the slug alone
 (`STORY_SLUG`, `scripts/stale-story-references.ts:16`).
