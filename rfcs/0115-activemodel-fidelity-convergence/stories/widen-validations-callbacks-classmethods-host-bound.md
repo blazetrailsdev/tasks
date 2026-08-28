@@ -48,7 +48,7 @@ regression test in
 `packages/activemodel/src/validations/callbacks.trails.test.ts` had to cast the
 class to a structural type to call `beforeValidation`, because a bare
 `class Dog {}` fails the constraint with "Type 'typeof Dog' is missing the
-following properties from type 'typeof Model': paramDelimiter, _modelName, …".
+following properties from type 'typeof Model': paramDelimiter, \_modelName, …".
 The runtime is correct; only the type lies.
 
 This also shows up on the AR side: `packages/activerecord/src/base.ts:831-833`
