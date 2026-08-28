@@ -83,6 +83,12 @@ function main(): void {
       continue;
     }
     if (!file.endsWith(".md")) continue;
+    // STORY files only. DB ownership is a statement about story rows; an RFC
+    // README's `status:` is markdown-owned (ingest carries it across, and
+    // editing it in a PR is the documented way to close an RFC), and its
+    // `priority:` is too — 60 READMEs carry one. Without this the guard
+    // rejected exactly the PRs it was meant to allow.
+    if (!file.includes("/stories/")) continue;
     if (!(line.startsWith("+") || line.startsWith("-"))) continue;
 
     const content = line.slice(1);

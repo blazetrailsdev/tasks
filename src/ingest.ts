@@ -3,10 +3,10 @@
  *
  * The field ownership split is what keeps this from being bidirectional sync:
  *
- *   markdown owns  title, rfc, cluster, deps, deps-rfc, est-loc, priority,
- *                  packages, body prose        (written by agents via PR)
+ *   markdown owns  title, rfc, cluster, deps, deps-rfc, est-loc, packages,
+ *                  body prose                  (written by agents via PR)
  *   DB owns        status, pr, claim, assignee, blocked-by, closed-reason,
- *                  updated                     (written by the mutation verbs)
+ *                  updated, priority           (written by the mutation verbs)
  *
  * The sets are DISJOINT, so ingest and export are two independent one-way
  * projections and cannot conflict. Every rule below exists to preserve that.
@@ -50,7 +50,6 @@ export const MARKDOWN_OWNED = [
   "deps",
   "deps-rfc",
   "est-loc",
-  "priority",
   "packages",
 ] as const;
 
@@ -66,6 +65,15 @@ export const DB_OWNED = [
   "blocked-by",
   "closed-reason",
   "updated",
+  // `priority` moved here from MARKDOWN_OWNED. `tasks priority` has always
+  // written it to the DB, but as a markdown-owned field export never carried
+  // it back out and the next ingest of that story reverted it — so every
+  // priority an agent set was silently temporary, and the ranking the queue
+  // used disagreed with the file it came from. Four stories were drifting this
+  // way when it was found. The verb exists and is used; make the ownership
+  // match it. Frontmatter `priority:` is still honored as a birth seed on
+  // insert, exactly like `status:`.
+  "priority",
 ] as const;
 
 export interface IngestResult {
@@ -312,7 +320,6 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
         rfc_id: rfcId,
         title: str(fm.title),
         cluster: str(fm.cluster),
-        priority: int(fm.priority),
         est_loc: int(fm["est-loc"]),
         file_path: rel,
       };
@@ -329,6 +336,7 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
           id: storyId,
           ...markdownFields,
           // Seed-on-insert only.
+          priority: int(fm.priority),
           status: str(fm.status) ?? "draft",
           pr: int(fm.pr),
           assignee: str(fm.assignee),

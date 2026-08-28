@@ -38,7 +38,7 @@ export interface ExportResult {
  * instead of the handful that actually changed, burying real state churn in a
  * 7k-file reformat and defeating the "quiet hour produces no commit" property.
  */
-const BARE_FIELDS = new Set(["status", "updated", "pr"]);
+const BARE_FIELDS = new Set(["status", "updated", "pr", "priority"]);
 
 function render(field: string, value: unknown): string {
   if (value === null || value === undefined) return "null";
@@ -68,6 +68,7 @@ export async function exportState(
     // The VALUES the DB holds, for comparison; `desired` is their rendering.
     const values: Record<string, unknown> = {
       status: s.status,
+      priority: s.priority,
       pr: s.pr,
       claim: s.claim_at,
       assignee: s.assignee,
@@ -77,6 +78,7 @@ export async function exportState(
     };
     const desired: Record<string, string> = {
       status: render("status", s.status),
+      priority: render("priority", s.priority),
       pr: render("pr", s.pr),
       claim: render("claim", s.claim_at),
       assignee: render("assignee", s.assignee),
