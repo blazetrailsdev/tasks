@@ -46,24 +46,47 @@ depends on transitively.
 
 ## Converged shape
 
-`quoteString` routes through the driver's `escape` on the checked-out
-connection, as Rails does. Options worth weighing before picking one:
+**Maintainer sign-off, 2026-08-28: take the charset/sql_mode caching approach.**
+Rails' own shape — routing `quote_string` through the driver's
+`escape` on the checked-out connection — is off the table, and not because it is
+inconvenient. node `mysql2` is pure JS and has no `mysql_real_escape_string`
+binding at all: `Connection#escape` (`mysql2/lib/base/connection.js:562`)
+delegates to `sql-escaper`'s static `CHARS_ESCAPE_MAP`
+(`sql-escaper@1.3.3/lib/index.js:15-25`), which is no more connection-aware than
+trails' own `mysql/quoting.ts#quoteString`, ALSO adds surrounding quotes, and
+ALSO escapes `\b` and `\t` where `mysql_real_escape_string` does not. Routing
+through it would be a behavioural regression wearing Rails' call shape, and it
+would additionally force the synchronous `Quoting` seam async across its whole
+transitive caller set to buy that regression.
 
-- Make the `Quoting` seam async where MySQL needs it (large blast radius —
-  measure the caller set first).
-- Cache the connection's charset and `NO_BACKSLASH_ESCAPES` flag at
-  `configure_connection` time and have the synchronous escaper honour both.
-  This is NOT Rails' shape but is the same OUTPUT; it would still need its own
-  justification and would not retire the baseline row.
+So the converged shape here is OUTPUT equivalence, reached synchronously:
 
-The first is the convergence; the second is a mitigation. Do not close this
-story with the second without maintainer sign-off.
+- Cache the connection's character set and whether `NO_BACKSLASH_ESCAPES` is in
+  `sql_mode` at `configure_connection` time, on the adapter.
+- Have `quoteString` read that cached state and escape accordingly — doubling
+  `'` and leaving backslash inert under `NO_BACKSLASH_ESCAPES`, and handling the
+  multi-byte charsets (big5/gbk/sjis and friends) where a naive byte-wise
+  backslash escape is unsafe.
+- Keep the Rails name and the Rails call shape everywhere it can be kept; the
+  divergence is confined to how the escaper learns the connection's state.
+
+This is a genuine driver shortcoming, so it is justified at the call site as a
+language/runtime shortcoming rather than converged away. The existing
+`@missingRailsCall … PERMANENT` receipt on `with_raw_connection`
+(`abstract-mysql-adapter.ts:1185`) is the right register for it, but its reason
+must be rewritten to say THIS — that mysql2 exposes no connection-aware escape —
+rather than the reason it carries now.
 
 ## Acceptance criteria
 
-- [ ] `quoteString` mirrors rb:694-699, or the divergence is reduced to a
-      documented language shortcoming with the escaping OUTPUT proven
-      equivalent under `NO_BACKSLASH_ESCAPES` and a multi-byte charset.
+- [ ] The adapter caches the connection character set and the
+      `NO_BACKSLASH_ESCAPES` `sql_mode` flag at `configure_connection` time.
+- [ ] `quoteString` honours both, with the escaping OUTPUT proven equivalent to
+      `mysql_real_escape_string` under `NO_BACKSLASH_ESCAPES` and under a
+      multi-byte charset.
+- [ ] The `@missingRailsCall` receipt at `abstract-mysql-adapter.ts:1185` keeps
+      its `PERMANENT` token and carries the mysql2-has-no-escape-binding reason,
+      citing `use-site:abstract_mysql_adapter.rb:694`.
 - [ ] Regression tests that FAIL on baseline for both conditions.
 - [ ] SQLite, PostgreSQL and MySQL/MariaDB lanes green.
 
@@ -73,8 +96,8 @@ story with the second without maintainer sign-off.
 **no longer exists**. The rows this story cites were retired from the baseline
 into `@missingRailsCall … PERMANENT` receipts at the call sites in
 `packages/activerecord/src/connection-adapters/abstract-mysql-adapter.ts`
-(`with_raw_connection` at :1185). Converging therefore deletes
-the **JSDoc receipt**, not a baseline row — and note the receipt currently reads
-`PERMANENT`, which this story disputes: it is the tag that has to go, not be
-reworded. Everything else here — the Rails and trails `file:line` citations and
+(`with_raw_connection` at :1185). There is therefore no baseline row to retire
+here — the work lands in that **JSDoc receipt**, whose `PERMANENT` token the
+2026-08-28 sign-off above ratifies and whose reason this story rewrites.
+Everything else here — the Rails and trails `file:line` citations and
 the described divergence — is unaffected and was re-verified live on 2026-08-25.
