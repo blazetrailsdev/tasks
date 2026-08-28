@@ -1,6 +1,6 @@
 ---
 title: "Migration's forwarders materialize a trailing undefined where Ruby passes nothing"
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7181
 claim: null
 assignee: null
 blocked-by: null

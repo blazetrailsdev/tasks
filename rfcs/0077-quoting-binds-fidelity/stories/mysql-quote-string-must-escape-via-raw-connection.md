@@ -1,6 +1,6 @@
 ---
 title: "MySQL quote_string uses a static JS escaper instead of the driver's connection-aware escape (unsafe under NO_BACKSLASH_ESCAPES and multi-byte charsets)"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 7185
+claim: "2026-08-28T20:25:29Z"
+assignee: "pg-quote-default-expression-lacks-super-arm"
 blocked-by: null
 closed-reason: null
 ---

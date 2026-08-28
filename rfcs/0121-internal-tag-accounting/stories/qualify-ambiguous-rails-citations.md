@@ -1,6 +1,6 @@
 ---
 title: "Burn down the 130 ambiguous Rails citations the cite ratchet is seeded at"
-status: draft
+status: closed
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "The cite ratchet it burns down is being deleted by no-freeform-comments-repo-wide-and-drop-cites-gate (RFC 0127). All 130 rows are ambiguous basenames inside receipt reasons, and the comment policy strips those citations outright — qualifying them first is work on text scheduled for deletion. Nothing in code cites this story."
 ---
 
 ## Context

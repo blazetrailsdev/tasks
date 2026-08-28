@@ -1,6 +1,6 @@
 ---
 title: "Enforce no-freeform-comments repo-wide by exclusion list, and remove the parity:api:cites gate"
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
+pr: 7184
 claim: null
 assignee: null
 blocked-by: null

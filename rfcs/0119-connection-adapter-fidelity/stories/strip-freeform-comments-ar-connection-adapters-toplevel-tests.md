@@ -1,7 +1,7 @@
 ---
 title: "strip-freeform-comments-ar-connection-adapters-toplevel-tests"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-28
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7183
+claim: "2026-08-28T20:35:54Z"
+assignee: "strip-freeform-comments-ar-connection-adapters-toplevel-tests"
 blocked-by: null
 closed-reason: null
 ---

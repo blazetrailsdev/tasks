@@ -1,7 +1,7 @@
 ---
 title: "Retarget the pre-existing minitest citations in assertions.ts to the pinned 5.27.0"
-status: draft
-updated: 2026-08-14
+status: closed
+updated: 2026-08-28
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Same as attribute-method-pattern-proxy-target-citation-wrong: retargets citation text scheduled for deletion by the comment policy, with the cite ratchet removed. Nothing in code cites this story."
 ---
 
 # Retarget the pre-existing minitest citations in assertions.ts to the pinned 5.27.0

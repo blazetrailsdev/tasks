@@ -1,6 +1,6 @@
 ---
 title: "Teach the Ruby extractor Struct.new, define_method and literal-array class_eval"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
+pr: 7179
 claim: "2026-08-28T19:54:27Z"
 assignee: "extract-ruby-metaprogrammed-member-definitions"
 blocked-by: null

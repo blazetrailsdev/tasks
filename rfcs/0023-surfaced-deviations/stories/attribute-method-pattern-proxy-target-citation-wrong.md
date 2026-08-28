@@ -1,7 +1,7 @@
 ---
 title: "Correct the attribute_methods.rb:552 proxy-target citation"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-08-28
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fixes a line number inside a receipt/comment that the no-freeform-comments repo-wide flip strips outright (no-freeform-comments-repo-wide-and-drop-cites-gate, RFC 0127), and the cite ratchet that would have caught it is being deleted in the same PR. Nothing in code cites this story."
 ---
 
 # Correct the `attribute_methods.rb:552` proxy-target citation

@@ -1,6 +1,6 @@
 ---
 title: "Join Timestamp's reload_schema_from_cache to the override chain — the body exists but nothing calls it"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 10
-pr: null
+pr: 7178
 claim: "2026-08-28T19:57:42Z"
 assignee: "timestamp-reload-schema-from-cache-is-never-dispatched"
 blocked-by: null

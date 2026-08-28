@@ -1,6 +1,6 @@
 ---
 title: "to_sql_and_binds' retry duplicates unprepared_statement instead of calling the adapter's port"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7185
+claim: "2026-08-28T20:25:29Z"
+assignee: "pg-quote-default-expression-lacks-super-arm"
 blocked-by: null
 closed-reason: null
 ---

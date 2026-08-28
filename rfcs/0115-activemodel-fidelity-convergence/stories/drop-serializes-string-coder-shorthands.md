@@ -1,6 +1,6 @@
 ---
 title: "Drop serialize's string coder/type shorthands so callers pass Rails' kwargs"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7178
 claim: "2026-08-28T19:57:42Z"
 assignee: "timestamp-reload-schema-from-cache-is-never-dispatched"
 blocked-by: null
