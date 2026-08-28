@@ -1,5 +1,19 @@
 #!/usr/bin/env sh
 # Entry point. Resolves this checkout's tsx so the CLI runs against the
 # vendored trails pin, not whatever happens to be on PATH.
-HERE="$(cd "$(dirname "$0")/.." && pwd)"
+#
+# Resolve symlinks first: install-bin.sh puts a link in ~/.local/bin, and $0 is
+# then the LINK's path, so a plain `dirname $0/..` looked for tsx under
+# ~/.local and every invocation through PATH died with
+# "/home/dean/.local/node_modules/.bin/tsx: not found". Hand-rolled rather than
+# `readlink -f`, which is GNU-only.
+SELF="$0"
+while [ -L "$SELF" ]; do
+  link="$(readlink "$SELF")"
+  case "$link" in
+  /*) SELF="$link" ;;
+  *) SELF="$(dirname "$SELF")/$link" ;;
+  esac
+done
+HERE="$(cd "$(dirname "$SELF")/.." && pwd)"
 exec "$HERE/node_modules/.bin/tsx" "$HERE/src/cli.ts" "$@"
