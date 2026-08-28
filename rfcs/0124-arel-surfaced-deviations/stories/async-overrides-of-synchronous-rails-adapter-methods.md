@@ -43,5 +43,5 @@ override existing only because the body became async:
 
 - Each override is folded back into the Rails method on the class Rails defines
   it on, and its `@noRailsEquivalent CONVERGEABLE
-  async-overrides-of-synchronous-rails-adapter-methods` receipt is deleted.
+async-overrides-of-synchronous-rails-adapter-methods` receipt is deleted.
 - Split across as many PRs as the LOC ceiling needs.

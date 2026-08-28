@@ -33,6 +33,6 @@ sweep:
 ## Acceptance criteria
 
 - Each call site makes the call Rails makes, and its `@missingRailsCall ... —
-  CONVERGEABLE sqlite3-and-mysql-bare-missing-rails-call-receipts` receipt comes
+CONVERGEABLE sqlite3-and-mysql-bare-missing-rails-call-receipts` receipt comes
   off; no baseline row is added in its place.
 - `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green.

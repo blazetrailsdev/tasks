@@ -52,7 +52,7 @@ each body off a real `Association` object.
 
 - The proxy path reaches the Rails bodies on the association object rather than
   through extracted free functions, and each `@noRailsEquivalent CONVERGEABLE
-  association-helpers-extracted-for-the-collection-proxy` receipt is deleted with
+association-helpers-extracted-for-the-collection-proxy` receipt is deleted with
   the helper it names.
 - Split across as many PRs as the LOC ceiling needs; one file per PR is a
   natural cut.

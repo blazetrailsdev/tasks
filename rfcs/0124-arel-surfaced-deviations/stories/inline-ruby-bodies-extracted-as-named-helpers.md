@@ -64,7 +64,7 @@ site:
 
 - Each helper is inlined at the Rails site, or folded into the ported method
   that owns the body, and its `@noRailsEquivalent CONVERGEABLE
-  inline-ruby-bodies-extracted-as-named-helpers` receipt is deleted with it.
+inline-ruby-bodies-extracted-as-named-helpers` receipt is deleted with it.
 - Split across as many PRs as the LOC ceiling needs; one file per PR is a
   natural cut.
 - `pnpm parity:api:extra --package activerecord` novel count strictly drops.
