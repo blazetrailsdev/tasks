@@ -21,7 +21,7 @@ closed-reason: null
 `classifyReason` (`scripts/api-compare/missing-rails-call-tags.ts:304-308`)
 reads only the leading `PERMANENT` / `CONVERGEABLE` token of a receipt's
 reason; everything after it is unexamined. `extra-surface.ts:2284-2295` hard-fails
-a tag with neither token ("0 unclassified"), but a tag that is *only* the token
+a tag with neither token ("0 unclassified"), but a tag that is _only_ the token
 passes every gate.
 
 PR #7132 (`9415a63a9`) proved the gap: `no-freeform-comments`' autofix stripped

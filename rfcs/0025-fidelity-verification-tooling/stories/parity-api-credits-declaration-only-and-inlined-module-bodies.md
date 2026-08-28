@@ -35,7 +35,7 @@ arel re-audit:
    `packages/arel/src/select-manager.ts:295-338`. Rails puts them in
    `crud.rb` and `include Crud`s them (`select_manager.rb:6`). The
    extra-surface report has a "moved" bucket for a TS name whose Ruby twin is
-   in a *different* `.rb`; there is no mirror bucket for a Ruby member whose TS
+   in a _different_ `.rb`; there is no mirror bucket for a Ruby member whose TS
    body is in a different `.ts` than the Rails file's twin, so decomposition
    drift of this shape (module bodies inlined onto the including class) is
    invisible. The first arel audit's biggest finding — `Attribute`
