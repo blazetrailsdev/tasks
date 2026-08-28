@@ -120,6 +120,42 @@ qualified-basename discipline it enforced become dead conventions — but do not
 go rewrite existing receipt reasons in this PR. The reasons themselves are
 prose that the repo-wide flip will strip on its own schedule.
 
+
+### Measured backlog (2026-08-28, `main` @ 9c3c95d82)
+
+Running the rule in `report` mode over `packages/*/src/**/*.ts` and
+`scripts/**/*.ts`: **3666 files scanned, 2317 with violations, 29665
+violations.** By tree:
+
+| violations | tree |
+| --- | --- |
+| 5524 | `scripts/test-compare/output/missing-activerecord-stubs.test.ts` |
+| 1862 | `packages/actionpack/src/action-dispatch` |
+| 997 | `packages/activerecord/src/associations` |
+| 859 | `packages/actionpack/src/action-controller` |
+| 771 | `packages/activesupport/src/core-ext` |
+| 730 | `scripts/test-compare/output/missing-activemodel-stubs.test.ts` |
+| 612 | `packages/activerecord/src/test-helpers` |
+| 565 | `scripts/test-compare/output/missing-arel-stubs.test.ts` |
+| 545 | `packages/date/src/date.ts` |
+| 444 | `packages/activerecord/src/encryption` |
+| 430 | `packages/activerecord/src/base.ts` |
+| 299 | `packages/activerecord/src/relation.ts` |
+| 264 | `scripts/api-compare/compare.ts` |
+| 263 | `packages/activesupport/src/cache` |
+| 261 | `packages/activerecord/src/connection-adapters` |
+| 228 | `scripts/tasks/cli.ts` |
+
+Note the top three: `scripts/test-compare/output/missing-*-stubs.test.ts` are
+**generated** files holding Rails test names verbatim. They are a permanent
+exclusion, not a sweep row — exclude them by their generator's output path and
+say so, rather than letting 6819 generated violations set the size of the
+burndown. That is the one exclusion row that never shrinks.
+
+The remaining ~22800 are the real backlog and belong to
+`enroll-remaining-packages-in-no-freeform-comments`, not to this PR. This PR
+adds no sweeping: it flips the default and writes the exclusion rows.
+
 ## Acceptance criteria
 
 - `blazetrails/no-freeform-comments` is configured `error` over the whole repo
